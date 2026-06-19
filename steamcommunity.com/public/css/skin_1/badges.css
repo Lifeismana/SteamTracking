@@ -836,6 +836,15 @@ img.gamecard {
 	margin-right: 2px;
 }
 
+.badge_gamecard_seasonalnotice {
+	padding: 5px;
+	background: #171d25;
+	border: 1px solid #FFEB3B;
+	color: #FFEB3B;
+	margin-bottom: 15px;
+
+}
+
 .badge_detail_tasks .badge_task {
 	width: 292px;
 	margin-right: 16px;
@@ -1213,7 +1222,7 @@ html.responsive.mobile .badge_title_playgame {
 		margin-left: 0;
 		display: inline-block;
 	}
-	
+
 	html.responsive .badge_progress_card {
 		width: auto;
 		height: auto;

@@ -240,58 +240,77 @@
         AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
       };
     },
+    65274: (s) => {
+      s.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
     91239: (s) => {
       s.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
     },
-    90534: (s, r, e) => {
+    90534: (s, e, r) => {
       "use strict";
-      e.d(r, { az: () => _ });
-      var p = e(7850),
-        o = e(44041),
-        i = e(39479),
-        a = e(64238),
-        t = e.n(a),
-        n = e(11526),
-        c = e(75659),
-        m = e(8527),
-        l = e(11820);
+      r.d(e, { az: () => _ });
+      var p = r(7850),
+        o = r(44041),
+        t = r(39479),
+        i = r(64238),
+        a = r.n(i),
+        n = r(11526),
+        c = r(75659),
+        m = r(8527),
+        l = r(11820);
       function _(s) {
-        const { as: r = "div", focusable: e, navProps: a, ref: c, ..._ } = s,
+        const { as: e = "div", focusable: r, navProps: i, ref: c, ..._ } = s,
           u = (0, n.mz)(
-            { ..._, className: t()(o.Box, (0, l.T)(), s.className) },
+            { ..._, className: a()(o.Box, (0, l.T)(), s.className) },
             d,
           ),
-          f = e ?? a?.focusable ?? !!_.onClick,
-          y = (0, p.jsx)(r, { ref: c, ...u });
-        return m.TS.IN_GAMEPADUI && (f || a)
-          ? (0, p.jsx)(i.J, { ...(a || {}), focusable: f, children: y })
+          f = r ?? i?.focusable ?? !!_.onClick,
+          y = (0, p.jsx)(e, { ref: c, ...u });
+        return m.TS.IN_GAMEPADUI && (f || i)
+          ? (0, p.jsx)(t.J, { ...(i || {}), focusable: f, children: y })
           : y;
       }
       const d = c.h;
     },
-    83392: (s, r, e) => {
+    83392: (s, e, r) => {
       "use strict";
-      e.d(r, { s: () => _ });
-      var p = e(7850),
-        o = e(39479),
-        i = e(64238),
-        a = e.n(i),
-        t = e(11526),
-        n = e(55348),
-        c = e(75659),
-        m = e(68875),
-        l = e(8527);
+      r.d(e, { s: () => _ });
+      var p = r(7850),
+        o = r(39479),
+        t = r(64238),
+        i = r.n(t),
+        a = r(11526),
+        n = r(55348),
+        c = r(75659),
+        m = r(68875),
+        l = r(8527);
       function _(s) {
-        const { as: r = "div", focusable: e, navProps: i, ref: c, ..._ } = s,
-          u = (0, t.mz)({ ..._, className: a()(s.className, m.Flex) }, d),
-          f = e ?? i?.focusable ?? !!_.onClick,
-          y = (0, p.jsx)(r, { ref: c, ...u }),
-          v = (0, n.n)(_.direction ?? "row");
+        const { as: e = "div", focusable: r, navProps: t, ref: c, ..._ } = s,
+          u = (0, a.mz)({ ..._, className: i()(s.className, m.Flex) }, d),
+          f = r ?? t?.focusable ?? !!_.onClick,
+          y = (0, p.jsx)(e, { ref: c, ...u }),
+          x = (0, n.n)(_.direction ?? "row");
         return l.TS.IN_GAMEPADUI
           ? (0, p.jsx)(o.J, {
-              ...(i || {}),
+              ...(t || {}),
               focusable: f,
-              "flow-children": v,
+              "flow-children": x,
               children: y,
             })
           : y;
@@ -346,12 +365,12 @@
         return /^(between|around|evenly)$/.test(s) ? `space-${s}` : s;
       }
     },
-    75659: (s, r, e) => {
+    75659: (s, e, r) => {
       "use strict";
-      e.d(r, { L: () => i, h: () => a });
-      var p = e(11526),
-        o = e(88122);
-      const i = [
+      r.d(e, { L: () => t, h: () => i });
+      var p = r(11526),
+        o = r(88122);
+      const t = [
           { prop: "margin", responsive: !0, className: (s) => o[`m-${s}`] },
           { prop: "marginX", responsive: !0, className: (s) => o[`mx-${s}`] },
           { prop: "marginY", responsive: !0, className: (s) => o[`my-${s}`] },
@@ -378,8 +397,8 @@
           },
           { prop: "marginEnd", responsive: !0, className: (s) => o[`me-${s}`] },
         ],
-        a = [
-          ...i,
+        i = [
+          ...t,
           { prop: "padding", responsive: !0, className: (s) => o[`p-${s}`] },
           { prop: "paddingX", responsive: !0, className: (s) => o[`px-${s}`] },
           { prop: "paddingY", responsive: !0, className: (s) => o[`py-${s}`] },
@@ -606,18 +625,29 @@
           },
         ];
     },
-    11526: (s, r, e) => {
+    80797: (s, e, r) => {
       "use strict";
-      e.d(r, {
+      r.d(e, { Q: () => t });
+      var p = r(90626);
+      function o(s, e, r) {
+        return "function" == typeof s ? s(e, r) : p.cloneElement(s, e);
+      }
+      function t(s, e, r, p) {
+        return o(s || e, r, p);
+      }
+    },
+    11526: (s, e, r) => {
+      "use strict";
+      r.d(e, {
         Fd: () => n,
-        ti: () => t,
+        ti: () => a,
         To: () => c,
         w7: () => m,
-        mz: () => a,
+        mz: () => i,
       });
-      var p = e(10430),
-        o = e(55348);
-      const i = {
+      var p = r(10430),
+        o = r(55348);
+      const t = {
         0: !0,
         1: !0,
         2: !0,
@@ -629,56 +659,56 @@
         8: !0,
         9: !0,
       };
-      function a(s, r) {
-        return (function (s, r, e) {
+      function i(s, e) {
+        return (function (s, e, r) {
           const p = [],
+            t = {},
             i = {},
-            a = {},
-            { extracted: t, remaining: n } = (function (s, r) {
-              const e = { remaining: { ...s }, extracted: {} };
-              for (const s of r) {
-                const r = s.prop;
-                r in e.remaining &&
-                  ((e.extracted[r] = e.remaining[r]), delete e.remaining[r]);
+            { extracted: a, remaining: n } = (function (s, e) {
+              const r = { remaining: { ...s }, extracted: {} };
+              for (const s of e) {
+                const e = s.prop;
+                e in r.remaining &&
+                  ((r.extracted[e] = r.remaining[e]), delete r.remaining[e]);
               }
-              return e;
-            })(s, r);
-          for (const n of r) {
-            if (!(n.prop in t)) continue;
-            let r = t[n.prop];
+              return r;
+            })(s, e);
+          for (const n of e) {
+            if (!(n.prop in a)) continue;
+            let e = a[n.prop];
             if (
-              void 0 !== r &&
-              (n.responsive && (r = (0, o.I)(r, e.formFactor)), void 0 !== r)
+              void 0 !== e &&
+              (n.responsive && (e = (0, o.I)(e, r.formFactor)), void 0 !== e)
             ) {
               if (n.className) {
                 if (
                   !n.cssProperty &&
                   !n.dataProperty &&
                   "string" == typeof n.className &&
-                  !r
+                  !e
                 )
                   continue;
                 const s =
                   "function" == typeof n.className
-                    ? n.className(r)
+                    ? n.className(e)
                     : n.className;
                 p.push(s);
               }
               if (n.cssProperty)
                 if ("function" == typeof n.cssProperty) {
-                  const p = n.cssProperty(r, s, e.formFactor);
+                  const p = n.cssProperty(e, s, r.formFactor);
                   if (p.length && Array.isArray(p[0]))
-                    p.forEach(([s, r]) => (i[s] = r));
+                    p.forEach(([s, e]) => (t[s] = e));
                   else {
                     const s = p;
-                    i[s[0]] = s[1];
+                    t[s[0]] = s[1];
                   }
-                } else i[n.cssProperty] = r;
+                } else t[n.cssProperty] = e;
               if (n.dataProperty)
                 if ("function" == typeof n.dataProperty) {
-                  const [s, e] = n.dataProperty(r);
-                  a[`data-${s}`] = e;
-                } else a[`data-${n.dataProperty}`] = r;
+                  const [s, r] = n.dataProperty(e);
+                  i[`data-${s}`] = r;
+                } else i[`data-${n.dataProperty}`] = e;
             }
           }
           return (
@@ -688,73 +718,143 @@
             "style" in n &&
               n.style &&
               "object" == typeof n.style &&
-              Object.assign(i, n.style),
-            { ...a, ...n, className: p.join(" "), style: i }
+              Object.assign(t, n.style),
+            { ...i, ...n, className: p.join(" "), style: t }
           );
-        })(s, r, { formFactor: (0, p.xC)() });
+        })(s, e, { formFactor: (0, p.xC)() });
       }
-      function t(s) {
+      function a(s) {
         return (function (s) {
-          return !!i[s];
+          return !!t[s];
         })(s)
           ? `var(--spacing-${s})`
           : s;
       }
       function n(s) {
         if (!("%" == s[s.length - 1])) return `var(--color-${s})`;
-        const [r, e] = s.split(" ");
-        return `rgb( from ${`var(--color-${r})`} r g b / ${e} )`;
+        const [e, r] = s.split(" ");
+        return `rgb( from ${`var(--color-${e})`} r g b / ${r} )`;
       }
-      function c(s, r) {
-        return s.startsWith("text") ? `var(--color-${s}-${r})` : n(s);
+      function c(s, e) {
+        return s.startsWith("text") ? `var(--color-${s}-${e})` : n(s);
       }
       function m(s) {
         return s.startsWith("text") ? `var(--color-${s})` : n(s);
       }
     },
-    55348: (s, r, e) => {
+    55348: (s, e, r) => {
       "use strict";
-      e.d(r, { I: () => i, n: () => a });
-      var p = e(10430);
-      const o = p.IE.reduce((s, r, e) => ((s[r] = e), s), {});
-      function i(s, r) {
+      r.d(e, { I: () => t, n: () => i });
+      var p = r(10430);
+      const o = p.IE.reduce((s, e, r) => ((s[e] = r), s), {});
+      function t(s, e) {
         if ("object" != typeof s) return s;
-        for (let e = o[r]; e >= 0; e--) if (p.IE[e] in s) return s[p.IE[e]];
+        for (let r = o[e]; r >= 0; r--) if (p.IE[r] in s) return s[p.IE[r]];
         return s.initial;
       }
-      function a(s) {
-        return i(s, (0, p.xC)());
+      function i(s) {
+        return t(s, (0, p.xC)());
       }
     },
-    11820: (s, r, e) => {
+    20187: (s, e, r) => {
       "use strict";
-      e.d(r, { T: () => o });
-      var p = e(91239);
+      r.d(e, { Ae: () => _, EY: () => m, U6: () => l });
+      var p = r(7850),
+        o = r(55348),
+        t = r(11526),
+        i = r(75659),
+        a = r(64238),
+        n = r.n(a),
+        c = r(65274);
+      function m(s) {
+        const { as: e = "span", ref: r, className: o, ...i } = s,
+          a = e;
+        return (0, p.jsx)(a, {
+          ref: r,
+          ...(0, t.mz)({ ...i, className: n()(c.Text, o) }, _),
+        });
+      }
+      const l = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: c.TextWeight,
+            cssProperty: (s) => ["--text-weight", `var(--font-weight-${s})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: c.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            responsive: !0,
+            cssProperty: (s, e, r) => [
+              "--text-color",
+              (0, t.To)(s, (0, o.I)(e.contrast, r) ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            responsive: !0,
+            cssProperty: (s, e, r) => [
+              "--text-color",
+              (0, t.To)((0, o.I)(e.color, r) ?? "text-body", s),
+            ],
+          },
+          { prop: "truncate", className: c.Truncate },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: c.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: c.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ...l,
+          ...i.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (s) => c[`TextSize-${s}`],
+          },
+        ];
+    },
+    11820: (s, e, r) => {
+      "use strict";
+      r.d(e, { T: () => o });
+      var p = r(91239);
       function o() {
         return p.Reset;
       }
     },
-    39479: (s, r, e) => {
+    39479: (s, e, r) => {
       "use strict";
-      e.d(r, { J: () => c });
-      var p = e(7850),
-        o = e(8871),
-        i = e(90626),
-        a = e(7745),
-        t = e(90665),
-        n = e(74882);
+      r.d(e, { J: () => c });
+      var p = r(7850),
+        o = r(8871),
+        t = r(90626),
+        i = r(7745),
+        a = r(90665),
+        n = r(74882);
       function c(s) {
-        const { children: r, "flow-children": e, ...c } = s,
-          { gamepadEvents: m } = (0, t.C7)(s);
-        e && (c.layout = (0, a.O)(e)),
+        const { children: e, "flow-children": r, ...c } = s,
+          { gamepadEvents: m } = (0, a.C7)(s);
+        r && (c.layout = (0, i.O)(r)),
           m.onOKButton ||
-            ("onClick" in r.props && r.props.onClick && (m.onOKButton = t._K));
-        const { ref: l, node: _ } = (0, t.qp)(c);
+            ("onClick" in e.props && e.props.onClick && (m.onOKButton = a._K));
+        const { ref: l, node: _ } = (0, a.qp)(c);
         (0, n.Ui)(m, l);
-        const d = (0, o.Ue)(l, r.props?.ref);
-        return (0, p.jsx)(t.TJ.Provider, {
+        const d = (0, o.Ue)(l, e.props?.ref);
+        return (0, p.jsx)(a.TJ.Provider, {
           value: _,
-          children: i.cloneElement(r, { ...r.props, ref: d }),
+          children: t.cloneElement(e, { ...e.props, ref: d }),
         });
       }
     },

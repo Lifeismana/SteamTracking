@@ -4117,7 +4117,8 @@
             _.BIsComingSoon() && _.push("Coming Soon"),
             _.BIsEarlyAccess() && _.push("Early Access");
           const _ = _.GetPlatforms();
-          _.steamos_linux && _.push("Linux"),
+          _ &&
+            (_.steamos_linux && _.push("Linux"),
             _.mac && _.push("Mac"),
             (null === (_ = _.vr_support) || void 0 === _ ? void 0 : _.vrhmd) &&
               _.push("VR"),
@@ -4128,7 +4129,7 @@
               _.steam_deck_compat_category != _._) ||
               _.push("Steam Deck Playable"),
             _.steam_deck_compat_category == _._ &&
-              _.push("Steam Deck Verified"),
+              _.push("Steam Deck Verified")),
             (((null === (_ = _.GetBestPurchaseOption()) || void 0 === _
               ? void 0
               : _.discount_pct) &&
@@ -19228,17 +19229,18 @@
         });
       }
       function _(_) {
-        const { answer: _, fnOnDirty: _, language: _ } = _,
-          _ = (0, _._)(() => _.correct);
+        const { answer: _, fnOnDirty: _, language: _, quiz_section: _ } = _,
+          [_, _] = (0, _._)(() => [_.correct, _.quiz_type]);
         return (0, _.jsxs)("div", {
           children: [
-            (0, _.jsx)(_._, {
-              label: (0, _._)("#Sale_Section_Quiz_CorrectAnswer"),
-              checked: _,
-              onChange: (_) => {
-                _.correct != _ && ((_.correct = _), __webpack_require__());
-              },
-            }),
+            "question_answer" == _ &&
+              (0, _.jsx)(_._, {
+                label: (0, _._)("#Sale_Section_Quiz_CorrectAnswer"),
+                checked: _,
+                onChange: (_) => {
+                  _.correct != _ && ((_.correct = _), __webpack_require__());
+                },
+              }),
             (0, _.jsx)(_, {
               item: _,
               fnOnDirty: _,
@@ -19307,21 +19309,23 @@
           [_, _, _] = (0, _._)(() => [
             _.quiz_type,
             _.reveal_question_id || null,
-            _.questions,
+            _.questions.filter((_) => _.internal_name),
           ]),
           _ = (0, _.useMemo)(() => {
-            const _ = _.filter((_) => _.internal_name).map((_) => ({
-              label: _.internal_name,
-              data: _.unique_id,
-            }));
+            let _ = [];
             return (
+              _.length > 0 &&
+                (_ = _.map((_) => ({
+                  label: _.internal_name,
+                  data: _.unique_id,
+                }))),
               _.push({
                 label: (0, _._)("#EventEditor_NoneLanguage"),
                 data: null,
               }),
               _.push({
                 label: (0, _._)("#Sale_Section_Quiz_AnswerTerminal"),
-                tooltip: (0, _._)("Sale_Section_Quiz_AnswerTerminal_ttip"),
+                tooltip: (0, _._)("#Sale_Section_Quiz_AnswerTerminal_ttip"),
                 data: _._,
               }),
               _
@@ -19331,6 +19335,9 @@
           ? (0, _.jsx)(_._, {
               strDropDownClassName: (0, _._)(_().DropDownScroll),
               label: (0, _._)("#Sale_Section_Quiz_Choose_Question_Branch"),
+              tooltip: (0, _._)(
+                "#Sale_Section_Quiz_Choose_Question_Branch_ttip",
+              ),
               selectedOption: _,
               rgOptions: _,
               onChange: (_) => {
@@ -28746,11 +28753,12 @@
       }
       function _(_) {
         const { editModel: _, reservation_layout: _, saleSection: _ } = _,
-          [_, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _] = (0, _._)(() => {
             var _;
             return [
               _.item_definition_flow || "horizontal",
               _.show_product_configs || !1,
+              _.show_product_configs_as_delta || !1,
               _.internal_section_data.reservation_options,
               (null === (_ = _.internal_section_data.reservation_options) ||
               void 0 === _
@@ -28769,20 +28777,44 @@
                   ((_.item_definition_flow = _), _());
               },
             }),
-            (0, _.jsx)(_._, {
+            (0, _.jsxs)(_._, {
               checked: _,
               onChange: (_) => {
                 _.show_product_configs != _ &&
                   ((_.show_product_configs = _), _());
               },
-              children: "Enable Displaying Product Config Grids?",
+              children: [
+                "Enable Displaying Product Config Grids?",
+                (0, _.jsx)(_._, {
+                  tooltip:
+                    "When enabled, this show only a single package's details, and lets the user explore other configurations",
+                }),
+              ],
             }),
             _ &&
-              (0, _.jsx)(_, {
-                fnOnDirty: _,
-                reservation_layout: _,
-                nReservationPackageCount: _,
-                rgReservationOptions: _,
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)(_._, {
+                    checked: _,
+                    onChange: (_) => {
+                      _.show_product_configs_as_delta != _ &&
+                        ((_.show_product_configs_as_delta = _), _());
+                    },
+                    children: [
+                      "Show Config Variations with Delta Pricing",
+                      (0, _.jsx)(_._, {
+                        tooltip:
+                          "From your current selection, do you go up or down in price to another selection.",
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    fnOnDirty: _,
+                    reservation_layout: _,
+                    nReservationPackageCount: _,
+                    rgReservationOptions: _,
+                  }),
+                ],
               }),
           ],
         });
@@ -29227,10 +29259,35 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return null == _ || "" === _ || /^[a-z0-9_-]+$/.test(_);
+      }
+      function _(_) {
+        var _;
+        const { strHash: _, setHash: _ } = _,
+          [_, _] = _.useState(_);
+        let _;
+        return (
+          _(_) ||
+            (_ = (0, _.jsx)("span", {
+              children: _._.Localize("#AnchorHashInputInvalid"),
+            })),
+          (0, _.jsx)(_._, {
+            clearable: !1,
+            value: null !== (_ = null != _ ? _ : _) && void 0 !== _ ? _ : "",
+            onValueChange: (_) => {
+              _(_) ? (_(_), _(void 0)) : _(_);
+            },
+            valueToString: (_) => _,
+            valueFromString: (_) => _,
+            afterContent: _,
+          })
+        );
+      }
       const _ = (0, _._)((_) => {
         const { saleSection: _, editModel: _ } = _,
           _ = __webpack_require__.GetCurEditLanguage(),
-          [_, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.default_label,
             _.localized_label,
             _.label_link,
@@ -29243,6 +29300,7 @@
             __webpack_require__.GetIncludedRealmList(),
             _.internal_section_title || "",
             _.section_type,
+            _.section_anchor,
           ]),
           _ = Boolean(_._.GetWithFallback(_, _)),
           _ = _ || _._.IsValidTitleOption(_, "label");
@@ -29432,6 +29490,30 @@
                   onChange: (_) => {
                     _.internal_section_title != _.currentTarget.value &&
                       ((_.internal_section_title = _.currentTarget.value),
+                      __webpack_require__.SetDirty(_._.jsondata_sales));
+                  },
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _.SectionSubtitleCtn,
+              children: [
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _._)("#Sale_Section_Anchor"),
+                    (0, _.jsx)(_._, {
+                      tooltip: (0, _._)("#Sale_Section_Anchor_ttip"),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Sale_Section_Anchor_dsec"),
+                }),
+                (0, _.jsx)(_, {
+                  strHash: _,
+                  setHash: (_) => {
+                    _.section_anchor != _ &&
+                      ((_.section_anchor = _),
                       __webpack_require__.SetDirty(_._.jsondata_sales));
                   },
                 }),

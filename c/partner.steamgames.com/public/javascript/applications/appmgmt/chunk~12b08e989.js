@@ -5853,6 +5853,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  ispublic: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -6109,6 +6114,7 @@
           return "CPlayer_GetUserAchievements_Response_Achievement";
         }
       }
+      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {

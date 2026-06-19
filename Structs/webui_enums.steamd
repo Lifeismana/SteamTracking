@@ -280,6 +280,13 @@ enum EButton
 	k_EButton_Max = 64;
 }
 
+enum ECartDisplayType
+{
+	k_ECartDisplayType_Unknown = 0;
+	k_ECartDisplayType_Modal = 1;
+	k_ECartDisplayType_FullPage = 2;
+}
+
 enum ECategoryButtonAction
 {
 	k_ECategoryButtonAction_None = 0;

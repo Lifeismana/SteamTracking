@@ -347,7 +347,7 @@ function AcceptRejectGiftCard( gidGiftCardID, bAccept )
 {
 	if ( bAccept != 1 )
 	{
-		ShowConfirmDialog( 'Decline Gift Card', 'Are you sure you want to decline this gift card?  These funds will be refunded to the friend who purchased it for you.', 'Decline gift card' )
+		ShowConfirmDialog( 'Decline Gift Card', 'Are you sure you want to decline this gift card?  These funds will be refunded to the person who purchased it for you.', 'Decline gift card' )
 		.done( function() {
 			AcceptRejectGiftCardInternal( gidGiftCardID, bAccept, null, null, null );
 		});

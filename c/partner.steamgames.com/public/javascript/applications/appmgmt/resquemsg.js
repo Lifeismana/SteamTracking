@@ -621,75 +621,75 @@
                 _.edistributor == _.edistributor &&
                 _.product_identifier == _.product_identifier,
             );
-          })(_);
-        if (!_)
-          return (0, _.jsxs)("div", {
-            children: [
-              "Unexpected: Could not find ProductID: ",
-              _.edistributor,
-              " : ",
-              _.product_identifier,
-            ],
-          });
-        const _ = _.product_description + " " + _.distributor,
+          })(_),
+          _ = _?.product_description + " " + _?.distributor,
           _ = (function (_) {
             const [_, _] = (0, _.useState)(() =>
               _.Get().GetPositionMessagingForProduct(_),
             );
             return (0, _._)(_.Get().GetPositionListChangeCallback(_), _), _;
           })(_);
-        return (0, _.jsxs)(_._, {
-          bStartMinimized: !1,
-          title: _,
-          tooltip: `distributor enum: ${_.edistributor}, part number: ${_.part_number}, product identifier: ${_.product_identifier}`,
-          children: [
-            (0, _.jsx)(_._, {
-              onClick: (_) =>
-                (0, _._)(
-                  (0, _.jsx)(_, {
-                    productID: _,
-                  }),
-                  (0, _._)(_),
-                ),
-              children: "Add new start position",
-            }),
-            (0, _.jsxs)("table", {
-              className: _.ItemTable,
+        return _
+          ? (0, _.jsxs)(_._, {
+              bStartMinimized: !1,
+              title: _,
+              tooltip: `distributor enum: ${_.edistributor}, part number: ${_.part_number}, product identifier: ${_.product_identifier}`,
               children: [
-                (0, _.jsx)("thead", {
-                  children: (0, _.jsxs)("tr", {
-                    children: [
-                      (0, _.jsx)("th", {
-                        children: "Starting Queue Position",
+                (0, _.jsx)(_._, {
+                  onClick: (_) =>
+                    (0, _._)(
+                      (0, _.jsx)(_, {
+                        productID: _,
                       }),
-                      (0, _.jsx)("th", {
-                        children: "Estimate Date Receive Invite",
-                      }),
-                      (0, _.jsx)("th", {
-                        children: "Localized Date",
-                      }),
-                      (0, _.jsx)("th", {
-                        children: "Entry Created By",
-                      }),
-                      (0, _.jsx)("th", {}),
-                    ],
-                  }),
-                }),
-                (0, _.jsx)("tbody", {
-                  children: _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        positionMsg: _,
-                      },
-                      _ + _.start_queue_position,
+                      (0, _._)(_),
                     ),
-                  ),
+                  children: "Add new start position",
+                }),
+                (0, _.jsxs)("table", {
+                  className: _.ItemTable,
+                  children: [
+                    (0, _.jsx)("thead", {
+                      children: (0, _.jsxs)("tr", {
+                        children: [
+                          (0, _.jsx)("th", {
+                            children: "Starting Queue Position",
+                          }),
+                          (0, _.jsx)("th", {
+                            children: "Estimate Date Receive Invite",
+                          }),
+                          (0, _.jsx)("th", {
+                            children: "Localized Date",
+                          }),
+                          (0, _.jsx)("th", {
+                            children: "Entry Created By",
+                          }),
+                          (0, _.jsx)("th", {}),
+                        ],
+                      }),
+                    }),
+                    (0, _.jsx)("tbody", {
+                      children: _.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            positionMsg: _,
+                          },
+                          _ + _.start_queue_position,
+                        ),
+                      ),
+                    }),
+                  ],
                 }),
               ],
-            }),
-          ],
-        });
+            })
+          : (0, _.jsxs)("div", {
+              children: [
+                "Unexpected: Could not find ProductID: ",
+                _.edistributor,
+                " : ",
+                _.product_identifier,
+              ],
+            });
       }
       function _(_) {
         const { positionMsg: _ } = _;

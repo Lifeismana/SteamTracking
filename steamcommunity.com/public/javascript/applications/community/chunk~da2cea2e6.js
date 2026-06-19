@@ -4,7 +4,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6377],
   {
-    77490: (e, n, t) => {
+    39832: (e, n, t) => {
       t.d(n, {
         cc: () => b,
         TW: () => u,
@@ -35,7 +35,7 @@
         (r.malay = () => t.e(580).then(t.t.bind(t, 60580, 19))),
         (r.norwegian = () => t.e(6884).then(t.t.bind(t, 36884, 19))),
         (r.polish = () => t.e(5269).then(t.t.bind(t, 15269, 19))),
-        (r.portuguese = () => t.e(9246).then(t.t.bind(t, 96865, 19))),
+        (r.portuguese = () => t.e(6865).then(t.t.bind(t, 96865, 19))),
         (r.romanian = () => t.e(1391).then(t.t.bind(t, 71391, 19))),
         (r.russian = () => t.e(4933).then(t.t.bind(t, 64933, 19))),
         (r.sc_schinese = () => t.e(7503).then(t.t.bind(t, 27503, 19))),

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [6814],
+  [36814],
   {
     37999: (e) => {
       e.exports = {
@@ -8638,7 +8638,7 @@
         });
       }
       var S = i(87873),
-        N = i(12711),
+        N = i(35092),
         B = i(71698),
         A = i(32150),
         D = i(63888),
@@ -10870,7 +10870,7 @@
         o = i(22580),
         l = i(78327),
         c = i(61859),
-        d = i(12711),
+        d = i(35092),
         m = i(99428),
         u = i(37621),
         p = i(20312),
@@ -11941,7 +11941,7 @@
         we = i(1035),
         ye = i(51006),
         Ie = i(22797),
-        Me = i(12711),
+        Me = i(35092),
         xe = i(64812);
       function Ce(e) {
         const { link: t, className: i, ...s } = e,
@@ -14481,7 +14481,7 @@
         });
       }
     },
-    12711: (e, t, i) => {
+    35092: (e, t, i) => {
       "use strict";
       i.d(t, {
         kn: () => H,
@@ -16254,7 +16254,7 @@
         ue = i(6708),
         pe = i(37085),
         he = i(17720),
-        _e = i(12711),
+        _e = i(35092),
         ge = i(37621);
       function fe(e) {
         const { steamid: t } = e,
@@ -17715,7 +17715,7 @@
       const F =
         i.p +
         "images/applications/store/MysterySticker.png?v=valveisgoodatcaching";
-      var O = i(12711),
+      var O = i(35092),
         U = i(37621),
         H = i(6519),
         W = i(74077),
@@ -17859,8 +17859,8 @@
         ie = i(55963),
         se = i(37085),
         re = i(44165);
-      const ne = r.lazy(() => i.e(5004).then(i.bind(i, 6959))),
-        ae = r.lazy(() => i.e(8685).then(i.bind(i, 91855)));
+      const ne = r.lazy(() => i.e(45004).then(i.bind(i, 6959))),
+        ae = r.lazy(() => i.e(68685).then(i.bind(i, 91855)));
       let oe = class extends r.Component {
         render() {
           return (0, n.jsxs)(n.Fragment, {
@@ -18764,38 +18764,38 @@
     },
     94719: (e, t, i) => {
       var s = {
-        "./loyalty_arabic.json": [74153, 9889],
-        "./loyalty_brazilian.json": [54981, 4039],
-        "./loyalty_bulgarian.json": [49838, 2960],
-        "./loyalty_czech.json": [9584, 7138],
-        "./loyalty_danish.json": [12676, 1216],
-        "./loyalty_dutch.json": [87729, 8639],
-        "./loyalty_english.json": [48903, 5961],
-        "./loyalty_finnish.json": [84523, 3730],
-        "./loyalty_french.json": [99565, 3449],
-        "./loyalty_german.json": [54847, 5831],
-        "./loyalty_greek.json": [24175, 3397],
-        "./loyalty_hungarian.json": [76042, 4156],
-        "./loyalty_indonesian.json": [19341, 5189],
-        "./loyalty_italian.json": [23415, 6417],
-        "./loyalty_japanese.json": [66714, 8718],
-        "./loyalty_koreana.json": [89964, 6958],
-        "./loyalty_latam.json": [54060, 7174],
-        "./loyalty_malay.json": [66995, 597],
-        "./loyalty_norwegian.json": [66103, 5397],
-        "./loyalty_polish.json": [35408, 4112],
-        "./loyalty_portuguese.json": [10592, 7772],
-        "./loyalty_romanian.json": [11514, 1998],
-        "./loyalty_russian.json": [12510, 516],
-        "./loyalty_sc_schinese.json": [66276, 5134],
-        "./loyalty_schinese.json": [67661, 1853],
-        "./loyalty_spanish.json": [81543, 4113],
-        "./loyalty_swedish.json": [76598, 6664],
-        "./loyalty_tchinese.json": [81414, 4150],
-        "./loyalty_thai.json": [85703, 651],
-        "./loyalty_turkish.json": [34471, 7929],
-        "./loyalty_ukrainian.json": [32005, 2575],
-        "./loyalty_vietnamese.json": [23434, 1838],
+        "./loyalty_arabic.json": [20242, 49889],
+        "./loyalty_brazilian.json": [24948, 34039],
+        "./loyalty_bulgarian.json": [81635, 42960],
+        "./loyalty_czech.json": [54545, 87138],
+        "./loyalty_danish.json": [99219, 41216],
+        "./loyalty_dutch.json": [69004, 18639],
+        "./loyalty_english.json": [13706, 35961],
+        "./loyalty_finnish.json": [30625, 43730],
+        "./loyalty_french.json": [98154, 63449],
+        "./loyalty_german.json": [38388, 75831],
+        "./loyalty_greek.json": [34310, 33397],
+        "./loyalty_hungarian.json": [53887, 44156],
+        "./loyalty_indonesian.json": [55190, 65189],
+        "./loyalty_italian.json": [17154, 46417],
+        "./loyalty_japanese.json": [57277, 8718],
+        "./loyalty_koreana.json": [1021, 86958],
+        "./loyalty_latam.json": [20341, 47174],
+        "./loyalty_malay.json": [44598, 10597],
+        "./loyalty_norwegian.json": [65014, 55397],
+        "./loyalty_polish.json": [68083, 34112],
+        "./loyalty_portuguese.json": [14079, 7772],
+        "./loyalty_romanian.json": [81453, 31998],
+        "./loyalty_russian.json": [63063, 10516],
+        "./loyalty_sc_schinese.json": [41693, 25134],
+        "./loyalty_schinese.json": [61118, 91853],
+        "./loyalty_spanish.json": [50178, 84113],
+        "./loyalty_swedish.json": [30251, 96664],
+        "./loyalty_tchinese.json": [45157, 24150],
+        "./loyalty_thai.json": [22296, 60651],
+        "./loyalty_turkish.json": [15642, 57929],
+        "./loyalty_ukrainian.json": [57948, 72575],
+        "./loyalty_vietnamese.json": [79037, 41838],
       };
       function r(e) {
         if (!i.o(s, e))
@@ -18811,38 +18811,38 @@
     },
     94114: (e, t, i) => {
       var s = {
-        "./loyalty_arabic.json": [74153, 9889],
-        "./loyalty_brazilian.json": [54981, 4039],
-        "./loyalty_bulgarian.json": [49838, 2960],
-        "./loyalty_czech.json": [9584, 7138],
-        "./loyalty_danish.json": [12676, 1216],
-        "./loyalty_dutch.json": [87729, 8639],
-        "./loyalty_english.json": [48903, 5961],
-        "./loyalty_finnish.json": [84523, 3730],
-        "./loyalty_french.json": [99565, 3449],
-        "./loyalty_german.json": [54847, 5831],
-        "./loyalty_greek.json": [24175, 3397],
-        "./loyalty_hungarian.json": [76042, 4156],
-        "./loyalty_indonesian.json": [19341, 5189],
-        "./loyalty_italian.json": [23415, 6417],
-        "./loyalty_japanese.json": [66714, 8718],
-        "./loyalty_koreana.json": [89964, 6958],
-        "./loyalty_latam.json": [54060, 7174],
-        "./loyalty_malay.json": [66995, 597],
-        "./loyalty_norwegian.json": [66103, 5397],
-        "./loyalty_polish.json": [35408, 4112],
-        "./loyalty_portuguese.json": [10592, 7772],
-        "./loyalty_romanian.json": [11514, 1998],
-        "./loyalty_russian.json": [12510, 516],
-        "./loyalty_sc_schinese.json": [66276, 5134],
-        "./loyalty_schinese.json": [67661, 1853],
-        "./loyalty_spanish.json": [81543, 4113],
-        "./loyalty_swedish.json": [76598, 6664],
-        "./loyalty_tchinese.json": [81414, 4150],
-        "./loyalty_thai.json": [85703, 651],
-        "./loyalty_turkish.json": [34471, 7929],
-        "./loyalty_ukrainian.json": [32005, 2575],
-        "./loyalty_vietnamese.json": [23434, 1838],
+        "./loyalty_arabic.json": [20242, 49889],
+        "./loyalty_brazilian.json": [24948, 34039],
+        "./loyalty_bulgarian.json": [81635, 42960],
+        "./loyalty_czech.json": [54545, 87138],
+        "./loyalty_danish.json": [99219, 41216],
+        "./loyalty_dutch.json": [69004, 18639],
+        "./loyalty_english.json": [13706, 35961],
+        "./loyalty_finnish.json": [30625, 43730],
+        "./loyalty_french.json": [98154, 63449],
+        "./loyalty_german.json": [38388, 75831],
+        "./loyalty_greek.json": [34310, 33397],
+        "./loyalty_hungarian.json": [53887, 44156],
+        "./loyalty_indonesian.json": [55190, 65189],
+        "./loyalty_italian.json": [17154, 46417],
+        "./loyalty_japanese.json": [57277, 8718],
+        "./loyalty_koreana.json": [1021, 86958],
+        "./loyalty_latam.json": [20341, 47174],
+        "./loyalty_malay.json": [44598, 10597],
+        "./loyalty_norwegian.json": [65014, 55397],
+        "./loyalty_polish.json": [68083, 34112],
+        "./loyalty_portuguese.json": [14079, 7772],
+        "./loyalty_romanian.json": [81453, 31998],
+        "./loyalty_russian.json": [63063, 10516],
+        "./loyalty_sc_schinese.json": [41693, 25134],
+        "./loyalty_schinese.json": [61118, 91853],
+        "./loyalty_spanish.json": [50178, 84113],
+        "./loyalty_swedish.json": [30251, 96664],
+        "./loyalty_tchinese.json": [45157, 24150],
+        "./loyalty_thai.json": [22296, 60651],
+        "./loyalty_turkish.json": [15642, 57929],
+        "./loyalty_ukrainian.json": [57948, 72575],
+        "./loyalty_vietnamese.json": [79037, 41838],
       };
       function r(e) {
         if (!i.o(s, e))

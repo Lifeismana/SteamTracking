@@ -477,7 +477,9 @@
         OptionsImgCtn: "_1vtqAjRDNjxQINwD5kgwdJ",
         ProductBox: "Lk8q8Uy8gxBLFRLhl3Qoa",
         Selected: "_2DjLRlJEcM1U34b41Q5nAY",
+        Reserved: "_2YgtWF6Ux_wURu2pJW2AZ0",
         DeltaPrice: "_19cEcW8racpIPjmEfKrMAt",
+        StaticPrice: "_1g6IBbR3A2XedjQnaIcG8x",
         BackgroundAnimation: "_3Rgx01F8-zIdFrK990U9SP",
         "ItemFocusAnim-darkerGrey-nocolor": "mRVbrH5MtUlWtFC3UGbM7",
         "ItemFocusAnim-darkerGrey": "_18AEYwk8ONaiyGDU91C0Pl",
@@ -6566,7 +6568,14 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       var _;
+      function _(_) {
+        return (
+          _ === _.k_EPurchaseReservationState_Reserved ||
+          _ === _.k_EPurchaseReservationState_Allocated
+        );
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       }),
         (function (_) {
@@ -19114,6 +19123,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19178,24 +19195,278 @@
                   }),
                 !0)
               : (console.log(
-                  `useUpdateReservationMutation Failed to update reservation for package: add ${_} | remove ${_}`,
+                  `useUpdateReservationMutation Failed to update reservation for package: add ${_} | remove ${_} error code ${_.GetEResult()}`,
                 ),
                 !1);
           },
+        });
+      }
+      function _(_) {
+        const { packageid: _, strAction: _, strDesc: _ } = _,
+          _ = _(void 0, _),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplayCancelReservationButton"),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              onClick: _,
+              disabled: _,
+              children: [
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    string: _._.Localize("#Saving"),
+                    size: "small",
+                  }),
+                _,
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().ErrorStylesWithIcon,
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                closeModal: _,
+                strTitle: _,
+                strDescription: _,
+                strOKButtonText: _._.Localize("#Button_Confirm"),
+                strCancelButtonText: _._.Localize("#Button_Dismiss"),
+                onOK: () => {
+                  _(!0),
+                    _.mutateAsync()
+                      .then((_) => {
+                        var _;
+                        (null === (_ = null == _ ? void 0 : _.token) ||
+                        void 0 === _
+                          ? void 0
+                          : _.reason) ||
+                          (_ ||
+                            _(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0));
+                      })
+                      .catch(() => {
+                        var _;
+                        (null === (_ = null == _ ? void 0 : _.token) ||
+                        void 0 === _
+                          ? void 0
+                          : _.reason) ||
+                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0));
+                      })
+                      .finally(() => _(!1));
+                },
+              }),
+            }),
+          ],
         });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { hardwareDetail: _ } = _,
+          _ = (0, _._)(_.packageid),
+          { data: _ } = (0, _._)(_);
+        if (_.time_reserved) {
+          const _ = (0, _.jsx)(_._, {
+            bSingleLine: !0,
+            dateAndTime: _.time_reserved,
+            bOnlyDate: !0,
+          });
+          return (0, _.jsx)("div", {
+            className: _.alreadyreserved,
+            children: (null == _ ? void 0 : _.name)
+              ? _._.LocalizeReact("#Sale_AlreadyReserved_WithName", _.name, _)
+              : _._.LocalizeReact("#Sale_AlreadyReserved", _),
+          });
+        }
+        return (0, _.jsx)("div", {
+          className: _.alreadyreserved,
+          children: (null == _ ? void 0 : _.name)
+            ? _._.Localize("#Sale_AlreadyReserved_WithName_NoDate", _.name)
+            : _._.Localize("#Sale_AlreadyReserved_NoDate"),
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _;
+        const { packageid: _, label: _, bInputDisabled: _ } = _,
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplyDirectReservation"),
+          _ = _(_, void 0),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(!0),
+                _.mutateAsync()
+                  .then((_) => {
+                    var _;
+                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+                      ? void 0
+                      : _.reason) ||
+                      (_ || _(_._.Localize("#Sale_Reservations_BusyServer")),
+                      _(!0));
+                  })
+                  .catch(() => {
+                    var _;
+                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+                      ? void 0
+                      : _.reason) ||
+                      (_(!0), _(_._.Localize("#Sale_Reservations_BusyServer")));
+                  })
+                  .finally(() => _(!1));
+            },
+            [
+              null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+                ? void 0
+                : _.reason,
+              _,
+            ],
+          );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.reserverow, "ReservationDirectAction"),
+          children: [
+            (0, _.jsxs)(_._, {
+              onClick: _,
+              disabled: _ || _,
+              children: [
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    string: _._.Localize("#Saving"),
+                    size: "small",
+                  }),
+                _,
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().ErrorStylesWithIcon,
+                children: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().reserverow, "ReservationUnavailable"),
+          children: (0, _.jsx)(_._, {
+            disabled: !0,
+            children: _._.Localize("#Sale_ReserveUnavailable"),
+          }),
+        });
+      }
+      function _(_) {
+        var _, _;
+        const { hardwareDetail: _, reservedHardwareDetail: _ } = _,
+          _ = _(_.packageid, null == _ ? void 0 : _.packageid),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplayCancelReservationButton"),
+          [_, _, _] = (0, _._)(),
+          _ = (0, _._)(null == _ ? void 0 : _.packageid),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_.packageid),
+          { data: _ } = (0, _._)(_);
+        let _ = _._.Localize("#Sale_ReserveNow_Change"),
+          _ = _._.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_2",
+            (0, _.jsx)("b", {
+              children:
+                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                  ? _
+                  : "",
+            }),
+          ),
+          _ = _._.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_1",
+            (0, _.jsx)("b", {
+              children:
+                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                  ? _
+                  : "",
+            }),
+          );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
+          children: [
+            (0, _.jsx)(_, {
+              hardwareDetail: _,
+            }),
+            (0, _.jsxs)(_._, {
+              onClick: _,
+              disabled: _,
+              children: [
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    string: _._.Localize("#Updating"),
+                    size: "small",
+                  }),
+                _,
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _.ErrorStylesWithIcon,
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsxs)(_._, {
+                closeModal: _,
+                strTitle: _,
+                strOKButtonText: _._.Localize("#Button_Yes"),
+                strCancelButtonText: _._.Localize("#Button_Dismiss"),
+                onOK: () => {
+                  _(!0),
+                    _.mutateAsync()
+                      .then((_) => {
+                        var _;
+                        (null === (_ = null == _ ? void 0 : _.token) ||
+                        void 0 === _
+                          ? void 0
+                          : _.reason) ||
+                          (_ ||
+                            _(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0));
+                      })
+                      .catch(() => {
+                        var _;
+                        (null === (_ = null == _ ? void 0 : _.token) ||
+                        void 0 === _
+                          ? void 0
+                          : _.reason) ||
+                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0));
+                      });
+                },
+                children: [
+                  (0, _.jsx)("p", {
+                    children: _,
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("p", {
+                    children: _,
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("p", {
+                    children: _._.Localize("#Dialog_AreYouSure"),
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19308,8 +19579,7 @@
           !_.allow_purchase_in_country ||
           _.account_restricted_from_purchasing ||
           !_.inventory_available ||
-          _.reservation_state == _._.k_EPurchaseReservationState_Allocated ||
-          _.reservation_state == _._.k_EPurchaseReservationState_Reserved
+          (0, _._)(_.reservation_state)
         );
       }
       function _(_) {
@@ -19493,93 +19763,11 @@
         });
       }
       function _(_) {
-        const { hardwareDetail: _ } = _,
-          _ = _(void 0, _.packageid),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplayCancelReservationButton"),
-          [_, _, _] = (0, _._)();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Saving"),
-                    size: "small",
-                  }),
-                _._.Localize("#Sale_CancelReservation"),
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_._, {
-                closeModal: _,
-                strTitle: _._.Localize("#Sale_CancelReservation"),
-                strDescription: _._.Localize(
-                  "#Sale_Reservation_CancelAreYouSure_NoDeposit",
-                ),
-                strOKButtonText: _._.Localize("#Button_Confirm"),
-                strCancelButtonText: _._.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  _(!0),
-                    __webpack_require__
-                      .mutateAsync()
-                      .then((_) => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_ ||
-                            _(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .catch(() => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      });
-                },
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { hardwareDetail: _ } = _,
-          _ = (0, _._)(_.packageid),
-          { data: _ } = (0, _._)(_);
-        if (_.time_reserved) {
-          const _ = (0, _.jsx)(_._, {
-            bSingleLine: !0,
-            dateAndTime: _.time_reserved,
-            bOnlyDate: !0,
-          });
-          return (0, _.jsx)("div", {
-            className: _.alreadyreserved,
-            children: (null == _ ? void 0 : _.name)
-              ? _._.LocalizeReact("#Sale_AlreadyReserved_WithName", _.name, _)
-              : _._.LocalizeReact("#Sale_AlreadyReserved", _),
-          });
-        }
-        return (0, _.jsx)("div", {
-          className: _.alreadyreserved,
-          children: (null == _ ? void 0 : _.name)
-            ? _._.Localize("#Sale_AlreadyReserved_WithName_NoDate", _.name)
-            : _._.Localize("#Sale_AlreadyReserved_NoDate"),
+        const { hardwareDetail: _ } = _;
+        return (0, _.jsx)(_, {
+          packageid: _.packageid,
+          strAction: _._.Localize("#Sale_CancelReservation"),
+          strDesc: _._.Localize("#Sale_Reservation_CancelAreYouSure_NoDeposit"),
         });
       }
       function _(_) {
@@ -19670,169 +19858,10 @@
         });
       }
       function _(_) {
+        const { hardwareDetail: _ } = _;
         return (0, _.jsx)(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        var _;
-        const { hardwareDetail: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplyDirectReservation"),
-          _ = _(_.packageid, void 0),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _(!0),
-                _.mutateAsync()
-                  .then((_) => {
-                    var _;
-                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                      ? void 0
-                      : _.reason) ||
-                      (_ || _(_._.Localize("#Sale_Reservations_BusyServer")),
-                      _(!0));
-                  })
-                  .catch(() => {
-                    var _;
-                    (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                      ? void 0
-                      : _.reason) ||
-                      (_(!0), _(_._.Localize("#Sale_Reservations_BusyServer")));
-                  });
-            },
-            [
-              null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                ? void 0
-                : _.reason,
-              _,
-            ],
-          );
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_.reserverow, "ReservationDirectAction"),
-          children: [
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              className: _.reservebutton,
-              disabled: _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Saving"),
-                    size: "small",
-                  }),
-                _._.Localize("#Sale_ReserveNow_NoDeposit"),
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        var _, _;
-        const { hardwareDetail: _, reservedHardwareDetail: _ } = _,
-          _ = _(_.packageid, null == _ ? void 0 : _.packageid),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplayCancelReservationButton"),
-          [_, _, _] = (0, _._)(),
-          _ = (0, _._)(null == _ ? void 0 : _.packageid),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_.packageid),
-          { data: _ } = (0, _._)(_);
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
-          children: [
-            (0, _.jsx)(_, {
-              hardwareDetail: _,
-            }),
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Updating"),
-                    size: "small",
-                  }),
-                _._.Localize("#Sale_ReserveNow_Change"),
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsxs)(_._, {
-                closeModal: _,
-                strTitle: _._.Localize("#Sale_ReserveNow_Change"),
-                strOKButtonText: _._.Localize("#Button_Yes"),
-                strCancelButtonText: _._.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  _(!0),
-                    _.mutateAsync()
-                      .then((_) => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_ ||
-                            _(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .catch(() => {
-                        var _;
-                        (null === (_ = null == _ ? void 0 : _.token) ||
-                        void 0 === _
-                          ? void 0
-                          : _.reason) ||
-                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      });
-                },
-                children: [
-                  (0, _.jsx)("p", {
-                    children: _._.LocalizeReact(
-                      "#Sale_Reservation_Change_NoDeposit_1",
-                      (0, _.jsx)("b", {
-                        children:
-                          null !== (_ = null == _ ? void 0 : _.name) &&
-                          void 0 !== _
-                            ? _
-                            : "",
-                      }),
-                    ),
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("p", {
-                    children: _._.LocalizeReact(
-                      "#Sale_Reservation_Change_NoDeposit_2",
-                      (0, _.jsx)("b", {
-                        children:
-                          null !== (_ = null == _ ? void 0 : _.name) &&
-                          void 0 !== _
-                            ? _
-                            : "",
-                      }),
-                    ),
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("p", {
-                    children: _._.Localize("#Dialog_AreYouSure"),
-                  }),
-                ],
-              }),
-            }),
-          ],
+          packageid: _.packageid,
+          label: _._.Localize("#Sale_ReserveNow_NoDeposit"),
         });
       }
       function _(_) {
@@ -19847,14 +19876,7 @@
               ..._,
             });
           case _._.k_EPurchaseReservationState_UnavailableRegion:
-            return (0, _.jsx)("div", {
-              className: (0, _._)(_.reserverow, "ReservationUnavailable"),
-              children: (0, _.jsx)(_._, {
-                className: _.reservebutton,
-                disabled: !0,
-                children: _._.Localize("#Sale_ReserveUnavailable"),
-              }),
-            });
+            return (0, _.jsx)(_, {});
           case _._.k_EPurchaseReservationState_CancelPendingRefund:
           case _._.k_EPurchaseReservationState_NotReserved:
           case _._.k_EPurchaseReservationState_Consumed:
@@ -19918,78 +19940,79 @@
         let _,
           _ = null,
           _ = !1;
-        if (_ == _._.k_LoadFailure)
-          _ = _._.Localize("#Sale_Reservations_BusyServer");
-        else if (_.some((_) => _.includes(_)) && _.includes(_._.country_code))
-          (_ = !0),
-            (_ =
-              _ === _
-                ? (0, _._)(
-                    "#Sale_Reservation_Komodo",
-                    (0, _.jsx)("a", {
-                      className: _.Link,
-                      href: "https://steamdeck.komodo.jp",
-                    }),
-                  )
-                : (0, _._)(
-                    "#Sale_Reservation_Komodo_Generic",
-                    null != _ ? _ : _._.Localize("#AppTypeLabel_hardware"),
-                    (0, _.jsx)("a", {
-                      className: _.Link,
-                      href: "https://komodostation.com/",
-                      children: "komodostation.com",
-                    }),
-                  ));
-        else if (_ && _.some((_) => !_.allow_purchase_in_country))
-          (_ = !0), (_ = _._.Localize("#Sale_Reservation_NotAvailableCountry"));
-        else if (_ && _.some((_) => _.account_restricted_from_purchasing)) {
-          if (_._.logged_in) {
-            const _ = _.some((_) => _.requires_reservation),
-              _ =
-                null ===
-                  (_ = _.find(
-                    (_) =>
-                      _.account_first_date_purchase_requirement &&
-                      _.account_first_date_purchase_requirement > 0,
-                  )) || void 0 === _
-                  ? void 0
-                  : _.account_first_date_purchase_requirement;
-            (_ = _
-              ? _
-                ? _._.Localize(
-                    "#Sale_Reservation_NotAvailale_PreDate",
-                    (0, _._)(_),
-                  )
-                : _._.Localize("#Sale_Reservation_NotAllowedAccount")
-              : _._.Localize("#Sale_Purchase_NotAllowedAccount")),
-              (_ = _().UserTooNew),
-              (_ = (0, _.jsx)(_, {
-                elReservationMessage: _,
+        if (_ != _._.k_LoadFailure && _)
+          if (_.some((_) => _.includes(_)) && _.includes(_._.country_code))
+            (_ = !0),
+              (_ =
+                _ === _
+                  ? (0, _._)(
+                      "#Sale_Reservation_Komodo",
+                      (0, _.jsx)("a", {
+                        className: _.Link,
+                        href: "https://steamdeck.komodo.jp",
+                      }),
+                    )
+                  : (0, _._)(
+                      "#Sale_Reservation_Komodo_Generic",
+                      null != _ ? _ : _._.Localize("#AppTypeLabel_hardware"),
+                      (0, _.jsx)("a", {
+                        className: _.Link,
+                        href: "https://komodostation.com/",
+                        children: "komodostation.com",
+                      }),
+                    ));
+          else if (_ && _.some((_) => !_.allow_purchase_in_country))
+            (_ = !0),
+              (_ = _._.Localize("#Sale_Reservation_NotAvailableCountry"));
+          else if (_ && _.some((_) => _.account_restricted_from_purchasing)) {
+            if (_._.logged_in) {
+              const _ = _.some((_) => _.requires_reservation),
+                _ =
+                  null ===
+                    (_ = _.find(
+                      (_) =>
+                        _.account_first_date_purchase_requirement &&
+                        _.account_first_date_purchase_requirement > 0,
+                    )) || void 0 === _
+                    ? void 0
+                    : _.account_first_date_purchase_requirement;
+              (_ = _
+                ? _
+                  ? _._.Localize(
+                      "#Sale_Reservation_NotAvailale_PreDate",
+                      (0, _._)(_),
+                    )
+                  : _._.Localize("#Sale_Reservation_NotAllowedAccount")
+                : _._.Localize("#Sale_Purchase_NotAllowedAccount")),
+                (_ = _().UserTooNew),
+                (_ = (0, _.jsx)(_, {
+                  elReservationMessage: _,
+                  strUrlLearnMoreLink: _,
+                }));
+            }
+          } else
+            _ &&
+              _.some(
+                (_) =>
+                  _.requires_reservation &&
+                  _.appid_ownership_not_allowed_to_reserve &&
+                  (_.not_allowed_to_reserved_because_already_owned ||
+                    _.has(_.appid_ownership_not_allowed_to_reserve)),
+              ) &&
+              _._.logged_in &&
+              ((_ = (0, _.jsx)(_, {
+                elReservationMessage: _
+                  ? _._.Localize(
+                      "#Sale_Reservation_CannotReserveDueToOwnership_Specific",
+                      _,
+                    )
+                  : _._.Localize(
+                      "#Sale_Reservation_CannotReserveDueToOwnership_Generic",
+                    ),
                 strUrlLearnMoreLink: _,
-              }));
-          }
-        } else
-          _ &&
-            _.some(
-              (_) =>
-                _.requires_reservation &&
-                _.appid_ownership_not_allowed_to_reserve &&
-                (_.not_allowed_to_reserved_because_already_owned ||
-                  _.has(_.appid_ownership_not_allowed_to_reserve)),
-            ) &&
-            _._.logged_in &&
-            ((_ = (0, _.jsx)(_, {
-              elReservationMessage: _
-                ? _._.Localize(
-                    "#Sale_Reservation_CannotReserveDueToOwnership_Specific",
-                    _,
-                  )
-                : _._.Localize(
-                    "#Sale_Reservation_CannotReserveDueToOwnership_Generic",
-                  ),
-              strUrlLearnMoreLink: _,
-            })),
-            (_ = _().AlreadyBought));
+              })),
+              (_ = _().AlreadyBought));
+        else _ = _._.Localize("#Sale_Reservations_BusyServer");
         return {
           elReservationSystemMessage: _,
           bHidePackageDisplay: _,
@@ -28211,7 +28234,33 @@
                           : _.BHasTrailers("blocked" == _);
                       }));
                   const _ = _.slice(_, _ + _).map((_) => _._),
-                    [_] = await Promise.all([
+                    [_, ..._] = await Promise.all([
+                      _._.Get().QueueMultipleAppRequests(_, _),
+                      ..._.map((_) =>
+                        _.fetchQuery(
+                          (0, _._)(_, {
+                            appid: _,
+                          }),
+                        ),
+                      ),
+                    ]),
+                    _ = [];
+                  _ == _._ &&
+                    _.push(
+                      ..._.flatMap((_) => {
+                        var _;
+                        return null === (_ = _._.Get().GetApp(_)) ||
+                          void 0 === _
+                          ? void 0
+                          : _.GetDemoStandaloneStorePageAppIDs();
+                      }).filter((_) => void 0 !== _),
+                    ),
+                    _.push(
+                      ..._.map((_) => _(_, _.prefer_demo_store_page)).filter(
+                        (_) => void 0 !== _,
+                      ),
+                    ),
+                    await Promise.all([
                       _._.Get().QueueMultipleAppRequests(_, _),
                       ..._.map((_) =>
                         _.prefetchQuery(
@@ -28220,15 +28269,9 @@
                           }),
                         ),
                       ),
-                    ]);
-                  if (_ == _._) {
-                    const _ = _.flatMap((_) =>
-                      _._.Get().GetApp(_).GetDemoStandaloneStorePageAppIDs(),
-                    );
-                    await _._.Get().QueueMultipleAppRequests(_, _);
-                  }
-                  _.signal.aborted ||
-                    (_((null != _ ? _ : []).concat(_)), _(!1));
+                    ]),
+                    _.signal.aborted ||
+                      (_((null != _ ? _ : []).concat(_)), _(!1));
                 };
               return (
                 _(),
@@ -28366,8 +28409,26 @@
           }),
         });
       }
-      function _(_) {
+      function _(_, _) {
         var _, _, _;
+        let _;
+        return (
+          _ &&
+            (null === (_ = null == _ ? void 0 : _.related_items) || void 0 === _
+              ? void 0
+              : _.demo_appid) &&
+            (null === (_ = null == _ ? void 0 : _.related_items) || void 0 === _
+              ? void 0
+              : _.demo_appid.length) > 0 &&
+            (_ =
+              null === (_ = null == _ ? void 0 : _.related_items) ||
+              void 0 === _
+                ? void 0
+                : _.demo_appid[0]),
+          _
+        );
+      }
+      function _(_) {
         const {
             appID: _,
             autoAdvanceMsec: _,
@@ -28390,18 +28451,7 @@
           _ = _.useRef(void 0),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        let _;
-        _ &&
-          (null === (_ = null == _ ? void 0 : _.related_items) || void 0 === _
-            ? void 0
-            : _.demo_appid) &&
-          (null === (_ = null == _ ? void 0 : _.related_items) || void 0 === _
-            ? void 0
-            : _.demo_appid.length) > 0 &&
-          (_ =
-            null === (_ = null == _ ? void 0 : _.related_items) || void 0 === _
-              ? void 0
-              : _.demo_appid[0]);
+        let _ = _(_, _);
         const _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)(),
@@ -28828,7 +28878,7 @@
         try {
           return null !==
             (_ = JSON.parse(
-              null !== (_ = localStorage.getItem(_)) && void 0 !== _ ? _ : "{}",
+              null !== (_ = localStorage.getItem(_)) && void 0 !== _ ? _ : "[]",
             )) && void 0 !== _
             ? _
             : [];
@@ -29340,6 +29390,14 @@
             })
           : null;
       }
+      function _(_) {
+        return null;
+      }
+      const _ = _;
+      function _(_) {
+        return null;
+      }
+      const _ = _;
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { hardwareDetail: _, storeItemReleaseInfo: _ } = _,
@@ -29394,62 +29452,92 @@
             });
       }
       function _(_) {
+        var _, _;
         const { reservationDef: _, section: _, reservedHardwareDetail: _ } = _,
           { data: _ } = (0, _._)(_.reservation_package),
           { data: _ } = (0, _._)(_.psu_less_package),
           _ = (0, _._)(_.reservation_package),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        return !_ || (_.psu_less_package && !_) || void 0 === _
-          ? (0, _.jsx)(_._, {
-              size: "medium",
-              position: "center",
-              string: _._.Localize("#Loading"),
+        if (!_ || (_.psu_less_package && !_) || void 0 === _)
+          return (0, _.jsx)(_._, {
+            size: "medium",
+            position: "center",
+            string: _._.Localize("#Loading"),
+          });
+        if (
+          _.reservation_state ==
+          _._.k_EPurchaseReservationState_CancelPendingRefund
+        )
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_.noreserve, "NoReserverMsg"),
+            children: _._.Localize("#Sale_Reservation_CanceledPendingRefund"),
+          });
+        if (
+          _.requires_reservation &&
+          !_.reservation_not_allowed &&
+          _.collection_time_active &&
+          _.collection_time_active > _._.NOW
+        )
+          return (0, _.jsx)("div", {
+            className: _.purchaseaction,
+            children: (0, _.jsx)(_, {
+              hardwareDetail: _,
+              reservationAdvancedSettings:
+                null === (_ = _.internal_section_data) || void 0 === _
+                  ? void 0
+                  : _.reservation_advanced,
+              storeItemReleaseInfo: _,
+            }),
+          });
+        if (_ && _.is_coming_soon)
+          return (0, _.jsx)("div", {
+            className: _.purchaseaction,
+            children: (0, _.jsx)(_, {
+              hardwareDetail: _,
+              storeItemReleaseInfo: _,
+            }),
+          });
+        const _ = (0, _._)(_.reservation_state);
+        return (_.requires_reservation && !_ && _.queue_in_waitlist) ||
+          (_ && _.position_is_waitlist)
+          ? (0, _.jsx)("div", {
+              className: _.purchaseaction,
+              children: (0, _.jsx)(_, {
+                hardwareDetail: _,
+                reservationAdvancedSettings:
+                  null === (_ = _.internal_section_data) || void 0 === _
+                    ? void 0
+                    : _.reservation_advanced,
+                reservedHardwareDetail: _,
+              }),
             })
-          : _.reservation_state ==
-              _._.k_EPurchaseReservationState_CancelPendingRefund
-            ? (0, _.jsx)("div", {
-                className: (0, _._)(_.noreserve, "NoReserverMsg"),
-                children: _._.Localize(
-                  "#Sale_Reservation_CanceledPendingRefund",
-                ),
-              })
-            : _ && _.is_coming_soon
-              ? (0, _.jsx)(_.Fragment, {
-                  children: (0, _.jsx)("div", {
-                    className: _.purchaseaction,
-                    children: (0, _.jsx)(_, {
+          : (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)("div", {
+                className: _.purchaseaction,
+                children: [
+                  (0, _.jsx)(_._, {
+                    reservationDef: _,
+                    hardwareDetail: _,
+                    bPSULessModel: !1,
+                    reservedHardwareDetail: _,
+                  }),
+                  (0, _.jsx)(_._, {
+                    section: _,
+                    reservationDef: _,
+                    hardwareDetail: _,
+                  }),
+                  _ &&
+                    !!_.allow_purchase_in_country &&
+                    (0, _.jsx)(_._, {
+                      reservationDef: _,
                       hardwareDetail: _,
-                      storeItemReleaseInfo: _,
+                      bPSULessModel: !0,
+                      reservedHardwareDetail: void 0,
                     }),
-                  }),
-                })
-              : (0, _.jsx)(_.Fragment, {
-                  children: (0, _.jsxs)("div", {
-                    className: _.purchaseaction,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        reservationDef: _,
-                        hardwareDetail: _,
-                        bPSULessModel: !1,
-                        reservedHardwareDetail: _,
-                      }),
-                      (0, _.jsx)(_._, {
-                        section: _,
-                        reservationDef: _,
-                        hardwareDetail: _,
-                      }),
-                      _ &&
-                        !!_.allow_purchase_in_country &&
-                        (0, _.jsx)(_._, {
-                          reservationDef: _,
-                          hardwareDetail: _,
-                          bPSULessModel: !0,
-                          reservedHardwareDetail: void 0,
-                        }),
-                    ],
-                  }),
-                });
+                ],
+              }),
+            });
       }
       function _(_) {
         var _, _;
@@ -29550,16 +29638,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return null;
+      }
+      const _ = _;
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             section: _,
             disabled: _,
             language: _,
             reservationLayout: _,
+            rgHardwareDetails: _,
           } = _,
           [_, _, _] = (0, _._)(() => {
             var _, _, _, _, _;
@@ -29656,15 +29750,22 @@
                   }),
                 ],
               }),
-              (0, _.jsx)("div", {
+              (0, _.jsxs)("div", {
                 className: _().OptionsCtn,
-                children: (0, _.jsx)(_, {
-                  rgPackageTuples: _,
-                  rgProductConfigs: _,
-                  language: _,
-                  selected: _,
-                  setSelected: _,
-                }),
+                children: [
+                  (0, _.jsx)(_, {
+                    rgPackageTuples: _,
+                    rgHardwareDetails: _,
+                    selectedProduct: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    rgPackageTuples: _,
+                    rgProductConfigs: _,
+                    language: _,
+                    selected: _,
+                    setSelected: _,
+                  }),
+                ],
               }),
               (0, _.jsx)("div", {
                 className: _().PurchaseBtnCtn,
@@ -29861,16 +29962,25 @@
                     _._.Option,
                     {
                       value: _,
-                      render: (_, { bSelected: _ }) =>
-                        (0, _.jsx)(_, {
+                      render: (_, { bSelected: _ }) => {
+                        var _;
+                        return (0, _.jsx)(_, {
                           ..._,
                           bSelected: _,
                           language: _,
                           selectedVariationID: _,
                           variation: _,
                           selected: _,
+                          packageID:
+                            null ===
+                              (_ = _.find(
+                                (_) => _.tuple_id == "" + _.unique_id,
+                              )) || void 0 === _
+                              ? void 0
+                              : _.package_id,
                           rgPackageTuples: _,
-                        }),
+                        });
+                      },
                     },
                     _.unique_id,
                   ),
@@ -29897,8 +30007,12 @@
             bSelected: _,
             selected: _,
             rgPackageTuples: _,
+            packageID: _,
+            selectedVariationID: _,
+            bShowDeltaPricing: _,
             ..._
           } = _,
+          { data: _ } = (0, _._)(_),
           _ = _._.GetELanguageFallback(_),
           _ =
             (null === (_ = _.localized_variation_name) || void 0 === _
@@ -29907,21 +30021,51 @@
             (null === (_ = _.localized_variation_name) || void 0 === _
               ? void 0
               : _[_]) ||
-            "";
+            "",
+          _ =
+            (null == _ ? void 0 : _.reservation_state) ===
+            _._.k_EPurchaseReservationState_Reserved;
         return (0, _.jsxs)("div", {
           className: (0, _._)({
             [_().ProductBox]: !0,
             [_().Selected]: _,
+            [_().Reserved]: _,
           }),
           ..._,
           children: [
+            _ && (0, _.jsx)(_.MGO, {}),
             _,
+            _ &&
+              !_ &&
+              (0, _.jsx)(_, {
+                ..._,
+              }),
             !_ &&
               (0, _.jsx)(_, {
                 ..._,
               }),
           ],
         });
+      }
+      function _(_) {
+        const {
+            selected: _,
+            selectedVariationID: _,
+            variation: _,
+            rgPackageTuples: _,
+          } = _,
+          _ = (0, _._)(_, _, _.unique_id),
+          _ = _.find((_) => _.tuple_id == _),
+          _ = (0, _._)(null == _ ? void 0 : _.package_id),
+          { data: _ } = (0, _._)(_);
+        if (_ && _.final_price_in_cents) {
+          const _ = (0, _._)(_._.country_code.toUpperCase());
+          return (0, _.jsx)("div", {
+            className: _().StaticPrice,
+            children: (0, _._)(Number(_.final_price_in_cents), _),
+          });
+        }
+        return null;
       }
       function _(_) {
         const {
@@ -30154,6 +30298,7 @@
                 children: (null == _ ? void 0 : _.show_product_configs)
                   ? (0, _.jsx)(_, {
                       ..._,
+                      rgHardwareDetails: _,
                       disabled: !!_,
                       reservationLayout: _,
                       reservedHardwareDetail: _,
@@ -37347,7 +37492,6 @@
           });
         };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {

@@ -102,6 +102,7 @@ message CStoreQueryFilters {
 	repeated .CStoreQueryFilters_TagFilter tagids_must_match = 10;
 	repeated int32 tagids_exclude = 11;
 	optional .CStoreQueryFilters_PriceFilters price_filters = 12;
+	optional .CStoreQueryFilters_ReleaseDateFilter release_date_filter = 13;
 	repeated int32 content_descriptors_must_match = 15 [(.description) = "enum"];
 	repeated int32 content_descriptors_excluded = 16 [(.description) = "enum"];
 	optional int32 regional_top_n_sellers = 40;
@@ -121,6 +122,12 @@ message CStoreQueryFilters_PriceFilters {
 	optional bool only_free_items = 1;
 	optional bool exclude_free_items = 2;
 	optional int32 min_discount_percent = 3;
+}
+
+message CStoreQueryFilters_ReleaseDateFilter {
+	optional int32 release_date_type = 1 [(.description) = "enum"];
+	optional int32 start_date = 2;
+	optional int32 end_date = 3;
 }
 
 message CStoreQueryFilters_TagFilter {

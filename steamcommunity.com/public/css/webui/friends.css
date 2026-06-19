@@ -1859,6 +1859,7 @@
   z-index: 2001;
 }
 .hoverposition_HoverPositionOuter_2_lmT {
+  all: initial;
   position: fixed;
   inset: 0;
   width: 100%;
@@ -11133,7 +11134,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   flex: 1;
   padding-top: 10px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (width < 700px) {
   .newlogindialog_Login_lat0M .newlogindialog_SideBySide_ZHRZ8 {
     flex-direction: column;
   }
@@ -11164,7 +11165,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   gap: 4px;
   margin-left: 40px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (width < 700px) {
   .newlogindialog_Login_lat0M .newlogindialog_QRSection_3wSeH {
     display: flex;
     flex-direction: column;
@@ -11239,7 +11240,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   padding: 12px 0px;
   cursor: pointer;
 }
-@media screen and (max-width: 700px) {
+@media screen and (width < 700px) {
   .newlogindialog_Login_lat0M
     .newlogindialog_QRSection_3wSeH
     .newlogindialog_MessagingContainer_mFCQS {
@@ -11285,7 +11286,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   width: 25px;
   margin: 8px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (width < 700px) {
   .newlogindialog_Login_lat0M
     .newlogindialog_QRSection_3wSeH
     .newlogindialog_QRCodeContainer_3ToZQ {
@@ -11590,7 +11591,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   font-weight: 500;
   padding-top: 6px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (width < 700px) {
   .newlogindialog_Login_lat0M
     .newlogindialog_ProtectingAccount_3JBYG
     .newlogindialog_Description_2o5mE {
@@ -11776,7 +11777,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   font-size: 28px;
   font-weight: 800;
 }
-@media screen and (max-width: 700px) {
+@media screen and (width < 700px) {
   .newlogindialog_Login_lat0M
     .newlogindialog_StandardLayout_2EuR6
     .newlogindialog_PrimaryHeader_g5L61 {
@@ -11792,7 +11793,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   flex: 1;
   min-width: 636px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (width < 700px) {
   .newlogindialog_Login_lat0M
     .newlogindialog_StandardLayout_2EuR6
     .newlogindialog_FormContainer_3XCnc {
@@ -11815,7 +11816,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   background: rgba(0, 0, 0, 0);
   padding: 14px 0px;
 }
-@media screen and (max-width: 796px) {
+@media screen and (width < 796px) {
   .newlogindialog_Login_lat0M
     .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2
     .newlogindialog_FormContainer_3XCnc {

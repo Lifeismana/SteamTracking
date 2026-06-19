@@ -4046,7 +4046,8 @@
             p.BIsComingSoon() && u.push("Coming Soon"),
             p.BIsEarlyAccess() && u.push("Early Access");
           const e = p.GetPlatforms();
-          e.steamos_linux && u.push("Linux"),
+          e &&
+            (e.steamos_linux && u.push("Linux"),
             e.mac && u.push("Mac"),
             (null === (t = e.vr_support) || void 0 === t ? void 0 : t.vrhmd) &&
               u.push("VR"),
@@ -4057,7 +4058,7 @@
               e.steam_deck_compat_category != i.I2) ||
               u.push("Steam Deck Playable"),
             e.steam_deck_compat_category == i.I2 &&
-              u.push("Steam Deck Verified"),
+              u.push("Steam Deck Verified")),
             (((null === (l = p.GetBestPurchaseOption()) || void 0 === l
               ? void 0
               : l.discount_pct) &&
@@ -12777,15 +12778,15 @@
         );
       };
     },
-    92290: (e, t, a) => {
+    10844: (e, t, a) => {
       "use strict";
       a.d(t, {
-        vx: () => xr,
-        sq: () => yr,
-        ke: () => Ir,
-        m: () => Cr,
-        gB: () => Tr,
-        sL: () => Dr,
+        vx: () => Tr,
+        sq: () => xr,
+        ke: () => Er,
+        m: () => jr,
+        gB: () => Ir,
+        sL: () => Mr,
       });
       var n = a(7850),
         i = a(22837),
@@ -18027,17 +18028,18 @@
         });
       }
       function Aa(e) {
-        const { answer: t, fnOnDirty: a, language: i } = e,
-          o = (0, d.q3)(() => t.correct);
+        const { answer: t, fnOnDirty: a, language: i, quiz_section: o } = e,
+          [s, l] = (0, d.q3)(() => [t.correct, o.quiz_type]);
         return (0, n.jsxs)("div", {
           children: [
-            (0, n.jsx)(m.Yh, {
-              label: (0, M.we)("#Sale_Section_Quiz_CorrectAnswer"),
-              checked: o,
-              onChange: (e) => {
-                t.correct != e && ((t.correct = e), a());
-              },
-            }),
+            "question_answer" == l &&
+              (0, n.jsx)(m.Yh, {
+                label: (0, M.we)("#Sale_Section_Quiz_CorrectAnswer"),
+                checked: s,
+                onChange: (e) => {
+                  t.correct != e && ((t.correct = e), a());
+                },
+              }),
             (0, n.jsx)(Ba, { item: t, fnOnDirty: a }),
             (0, n.jsx)(ka, { ...e }),
             (0, n.jsx)(Ga, { ...e }),
@@ -18099,20 +18101,23 @@
           [o, s, l] = (0, d.q3)(() => [
             t.quiz_type,
             a.reveal_question_id || null,
-            t.questions,
+            t.questions.filter((e) => e.internal_name),
           ]),
           r = (0, c.useMemo)(() => {
-            const e = l
-              .filter((e) => e.internal_name)
-              .map((e) => ({ label: e.internal_name, data: e.unique_id }));
+            let e = [];
             return (
+              l.length > 0 &&
+                (e = l.map((e) => ({
+                  label: e.internal_name,
+                  data: e.unique_id,
+                }))),
               e.push({
                 label: (0, M.we)("#EventEditor_NoneLanguage"),
                 data: null,
               }),
               e.push({
                 label: (0, M.we)("#Sale_Section_Quiz_AnswerTerminal"),
-                tooltip: (0, M.we)("Sale_Section_Quiz_AnswerTerminal_ttip"),
+                tooltip: (0, M.we)("#Sale_Section_Quiz_AnswerTerminal_ttip"),
                 data: ma.b2,
               }),
               e
@@ -18122,6 +18127,9 @@
           ? (0, n.jsx)(m.m, {
               strDropDownClassName: (0, E.A)(g().DropDownScroll),
               label: (0, M.we)("#Sale_Section_Quiz_Choose_Question_Branch"),
+              tooltip: (0, M.we)(
+                "#Sale_Section_Quiz_Choose_Question_Branch_ttip",
+              ),
               selectedOption: s,
               rgOptions: r,
               onChange: (e) => {
@@ -25622,7 +25630,7 @@
         ol = a(48906),
         sl = a(39777),
         ll = a(35380),
-        rl = a(32469);
+        rl = a(67936);
       function dl(e) {
         const { value: t, onValueChange: a, type: i, label: o, tooltip: s } = e,
           l = (0, ll.zl)(t, i),
@@ -25659,7 +25667,7 @@
         );
       }
       var cl = a(24570),
-        ul = a(16261);
+        ul = a(78686);
       const _l = (e) => null;
       function pl(e) {
         const { fnOnDirty: t, saleSection: a, event: i } = e,
@@ -26906,11 +26914,12 @@
       }
       function er(e) {
         const { editModel: t, reservation_layout: a, saleSection: i } = e,
-          [s, l, r, c] = (0, d.q3)(() => {
+          [s, l, r, c, u] = (0, d.q3)(() => {
             var e;
             return [
               a.item_definition_flow || "horizontal",
               a.show_product_configs || !1,
+              a.show_product_configs_as_delta || !1,
               i.internal_section_data.reservation_options,
               (null === (e = i.internal_section_data.reservation_options) ||
               void 0 === e
@@ -26918,7 +26927,7 @@
                 : e.length) || 0,
             ];
           }),
-          u = () => t.SetDirty(o.IQ.jsondata_sales);
+          _ = () => t.SetDirty(o.IQ.jsondata_sales);
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(Vl.z, {
@@ -26926,23 +26935,47 @@
               value: s,
               onValueChange: (e) => {
                 a.item_definition_flow != e &&
-                  ((a.item_definition_flow = e), u());
+                  ((a.item_definition_flow = e), _());
               },
             }),
-            (0, n.jsx)(al.S, {
+            (0, n.jsxs)(al.S, {
               checked: l,
               onChange: (e) => {
                 a.show_product_configs != e &&
-                  ((a.show_product_configs = e), u());
+                  ((a.show_product_configs = e), _());
               },
-              children: "Enable Displaying Product Config Grids?",
+              children: [
+                "Enable Displaying Product Config Grids?",
+                (0, n.jsx)(J.o, {
+                  tooltip:
+                    "When enabled, this show only a single package's details, and lets the user explore other configurations",
+                }),
+              ],
             }),
             l &&
-              (0, n.jsx)(tr, {
-                fnOnDirty: u,
-                reservation_layout: a,
-                nReservationPackageCount: c,
-                rgReservationOptions: r,
+              (0, n.jsxs)(n.Fragment, {
+                children: [
+                  (0, n.jsxs)(al.S, {
+                    checked: r,
+                    onChange: (e) => {
+                      a.show_product_configs_as_delta != e &&
+                        ((a.show_product_configs_as_delta = e), _());
+                    },
+                    children: [
+                      "Show Config Variations with Delta Pricing",
+                      (0, n.jsx)(J.o, {
+                        tooltip:
+                          "From your current selection, do you go up or down in price to another selection.",
+                      }),
+                    ],
+                  }),
+                  (0, n.jsx)(tr, {
+                    fnOnDirty: _,
+                    reservation_layout: a,
+                    nReservationPackageCount: u,
+                    rgReservationOptions: c,
+                  }),
+                ],
               }),
           ],
         });
@@ -27351,10 +27384,35 @@
         ur = a.n(cr),
         _r = a(17098),
         pr = a(60860);
-      const mr = (0, r.PA)((e) => {
+      function mr(e) {
+        return null == e || "" === e || /^[a-z0-9_-]+$/.test(e);
+      }
+      function hr(e) {
+        var t;
+        const { strHash: a, setHash: i } = e,
+          [o, s] = c.useState(a);
+        let l;
+        return (
+          mr(o) ||
+            (l = (0, n.jsx)("span", {
+              children: rl.F5.Localize("#AnchorHashInputInvalid"),
+            })),
+          (0, n.jsx)(ol.I, {
+            clearable: !1,
+            value: null !== (t = null != o ? o : a) && void 0 !== t ? t : "",
+            onValueChange: (e) => {
+              mr(e) ? (i(e), s(void 0)) : s(e);
+            },
+            valueToString: (e) => e,
+            valueFromString: (e) => e,
+            afterContent: l,
+          })
+        );
+      }
+      const gr = (0, r.PA)((e) => {
         const { saleSection: t, editModel: a } = e,
           s = a.GetCurEditLanguage(),
-          [r, c, u, _, p, h, v, S, f, y, w, x] = (0, d.q3)(() => [
+          [r, c, u, _, p, h, v, S, f, y, w, x, C] = (0, d.q3)(() => [
             t.default_label,
             t.localized_label,
             t.label_link,
@@ -27367,22 +27425,23 @@
             a.GetIncludedRealmList(),
             t.internal_section_title || "",
             t.section_type,
+            t.section_anchor,
           ]),
-          C = Boolean(M.NT.GetWithFallback(c, s)),
-          T = C || _r.a.IsValidTitleOption(r, "label");
-        let j = 0;
+          T = Boolean(M.NT.GetWithFallback(c, s)),
+          j = T || _r.a.IsValidTitleOption(r, "label");
+        let I = 0;
         null == _ ||
           _.forEach((e) => {
-            j += e ? 1 : 0;
+            I += e ? 1 : 0;
           });
-        const I = (0, pr.yD)(),
-          E =
-            !!(0, Fe.s0)(t, a.GetEventModel(), I.eLocation) ||
+        const E = (0, pr.yD)(),
+          A =
+            !!(0, Fe.s0)(t, a.GetEventModel(), E.eLocation) ||
             "title_image" == t.section_type,
-          A = "crosspromotesalepage" === x;
+          k = "crosspromotesalepage" === x;
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            !E &&
+            !A &&
               (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)("p", {
@@ -27420,8 +27479,8 @@
                   }),
                 ],
               }),
-            !E &&
-              C &&
+            !A &&
+              T &&
               (0, n.jsxs)(D.E, {
                 clanSteamID: a.GetClanSteamID(),
                 className: b.CustomImageTitle,
@@ -27466,18 +27525,18 @@
                           );
                       },
                       children:
-                        j > 0
+                        I > 0
                           ? (0, M.Yp)(
                               "#selectimage_managing_n_existing_title",
-                              j,
+                              I,
                             )
                           : (0, M.we)("#selectimage_uploading_title"),
                     }),
                   }),
                 ],
               }),
-            !E &&
-              T &&
+            !A &&
+              j &&
               (0, n.jsxs)(D.E, {
                 clanSteamID: a.GetClanSteamID(),
                 children: [
@@ -27491,10 +27550,10 @@
                     },
                     value: u,
                   }),
-                  (0, n.jsx)(hr, { saleSection: t, editModel: a }),
+                  (0, n.jsx)(vr, { saleSection: t, editModel: a }),
                 ],
               }),
-            (!E || A) &&
+            (!A || k) &&
               (0, n.jsxs)("div", {
                 className: b.SectionSubtitleCtn,
                 children: [
@@ -27528,7 +27587,7 @@
                   }),
                 ],
               }),
-            E &&
+            A &&
               (0, n.jsx)("p", {
                 className: g().InstructionText,
                 children: (0, M.we)("#Sale_Section_ForcedTitle"),
@@ -27556,10 +27615,33 @@
                 }),
               ],
             }),
+            (0, n.jsxs)("div", {
+              className: b.SectionSubtitleCtn,
+              children: [
+                (0, n.jsxs)(m.JU, {
+                  children: [
+                    (0, M.we)("#Sale_Section_Anchor"),
+                    (0, n.jsx)(J.o, {
+                      tooltip: (0, M.we)("#Sale_Section_Anchor_ttip"),
+                    }),
+                  ],
+                }),
+                (0, n.jsx)("p", {
+                  children: (0, M.we)("#Sale_Section_Anchor_dsec"),
+                }),
+                (0, n.jsx)(hr, {
+                  strHash: C,
+                  setHash: (e) => {
+                    t.section_anchor != e &&
+                      ((t.section_anchor = e), a.SetDirty(o.IQ.jsondata_sales));
+                  },
+                }),
+              ],
+            }),
           ],
         });
       });
-      function hr(e) {
+      function vr(e) {
         const { saleSection: t, editModel: a } = e,
           [i] = (0, d.q3)(() => [t.label_link_style]);
         if (!t.label_link) return null;
@@ -27576,7 +27658,7 @@
           }),
         });
       }
-      function gr(e) {
+      function Sr(e) {
         const { saleSection: t, editModel: a, visible: i } = e,
           [s, l, r] = (0, ae.uD)(),
           [d, u] = c.useState(void 0);
@@ -27605,24 +27687,24 @@
                     Object.assign(t, d), a.SetDirty(o.IQ.jsondata_sales), r();
                   },
                   closeModal: r,
-                  children: (0, n.jsx)(mr, { editModel: a, saleSection: t }),
+                  children: (0, n.jsx)(gr, { editModel: a, saleSection: t }),
                 }),
               }),
             }),
           ],
         });
       }
-      var vr = a(86927),
-        Sr = a(50607),
-        br = a(98924),
-        fr = a(27939);
-      function yr(e, t, a) {
+      var br = a(86927),
+        fr = a(50607),
+        yr = a(98924),
+        wr = a(27939);
+      function xr(e, t, a) {
         return e.disable_background
           ? { background: "transparent" }
           : (0, w.Vb)(e, t, a);
       }
-      const wr = ["tabs", "social_share"];
-      function xr(e) {
+      const Cr = ["tabs", "social_share"];
+      function Tr(e) {
         return [
           "broadcast",
           "sale_item_browser",
@@ -27635,7 +27717,7 @@
           "social_share",
         ].includes(e);
       }
-      const Cr = (0, r.PA)((e) => {
+      const jr = (0, r.PA)((e) => {
         var t, a;
         const {
             saleSection: i,
@@ -27677,7 +27759,7 @@
           L = ((N = !0), (0, s.Nx)((0, s.LY)(i), N));
         var N;
         const O = c.useRef(void 0),
-          P = (0, vr.BZ)(O),
+          P = (0, br.BZ)(O),
           [R, F] = c.useState(!1),
           H = (0, f.cv)(),
           { bHighlighted: z, fnJumpTo: U } = (function (e, t, a) {
@@ -27697,7 +27779,7 @@
               F(!0);
           }),
           [q, V] = (0, d.q3)(() => [r.GetClanSteamID(), r.GetEventType()]),
-          W = (0, Sr.q)(q, V),
+          W = (0, fr.q)(q, V),
           {
             sale_font: $,
             sale_section_font_size: X,
@@ -27707,7 +27789,7 @@
           Z =
             "event_schedule" !== i.section_type &&
             "broadcast" !== i.section_type,
-          ee = r.GetClanSteamID().GetAccountID() == fr.bv,
+          ee = r.GetClanSteamID().GetAccountID() == wr.bv,
           te =
             "unselected_empty" != (ne = i.section_type) && "tab_buttons" != ne;
         var ne;
@@ -27716,7 +27798,7 @@
             (null === (t = null == ie ? void 0 : ie.tabs) || void 0 === t
               ? void 0
               : t.length) > 0,
-          se = !wr.includes(i.section_type),
+          se = !Cr.includes(i.section_type),
           re = (function (e, t) {
             return "vo_internal" == e
               ? "reservation_widget" == t
@@ -27881,7 +27963,7 @@
                     "coverBlur" == i.background_repeat ? h.Blur : "",
                   ),
                   style: {
-                    ...yr(i, r.GetEventModel(), !1),
+                    ...xr(i, r.GetEventModel(), !1),
                     opacity: I ? 0 : 1,
                     transition: "opacity 500ms",
                   },
@@ -27910,7 +27992,7 @@
                             eventModel: r.GetEventModel(),
                             index: g,
                           }),
-                          (0, n.jsx)(gr, {
+                          (0, n.jsx)(Sr, {
                             saleSection: i,
                             editModel: r,
                             visible: !L,
@@ -27953,7 +28035,7 @@
                       expanded: !L,
                     }),
                   }),
-                (0, n.jsx)(jr, {
+                (0, n.jsx)(Dr, {
                   editModel: r,
                   section: i,
                   tabSection: ie,
@@ -27966,7 +28048,7 @@
                         placeholderHeight: "300px",
                         rootMargin: "0px 0px 100% 0px",
                         className: b.SectionTypePicker,
-                        children: (0, n.jsx)(Tr, {
+                        children: (0, n.jsx)(Ir, {
                           rgSectionTypeInfos: W,
                           sectionType: J,
                           fnSetSectionType: (e) => {
@@ -27989,7 +28071,7 @@
               ],
             });
       });
-      function Tr(e) {
+      function Ir(e) {
         const {
             rgSectionTypeInfos: t,
             sectionType: a,
@@ -28034,13 +28116,13 @@
           ],
         });
       }
-      const jr = (e) => {
+      const Dr = (e) => {
           const { editModel: t, section: a, tabSection: o, minimized: s } = e,
             l = (0, d.q3)(() =>
               (function (e, t) {
                 let a = "";
-                (0, br.lf)(e) && t && t.tabs && t.tabs.length > 0
-                  ? (0, br.bq)(e, t.tabs).forEach((e) => {
+                (0, yr.lf)(e) && t && t.tabs && t.tabs.length > 0
+                  ? (0, yr.bq)(e, t.tabs).forEach((e) => {
                       a.length > 0 && (a += ", ");
                       let n = t.tabs.find((t) => t.unique_id == e);
                       a += n
@@ -28128,7 +28210,7 @@
               (0, n.jsx)("div", { className: b.SectionSummaryCtn, children: c })
           );
         },
-        Ir = (0, r.PA)((e) => {
+        Er = (0, r.PA)((e) => {
           var t, a;
           const { editModel: i } = e,
             [s, l] = (0, c.useState)(!1),
@@ -28196,7 +28278,7 @@
                           };
                           (i.GetEventModel().jsondata.source_content_hub = e),
                             i.GetEventModel().jsondata
-                              .bAutoUpdateVanityURLForContentHub && Dr(e, i);
+                              .bAutoUpdateVanityURLForContentHub && Mr(e, i);
                         }
                         i.SetDirty(o.IQ.jsondata_sales);
                       },
@@ -28206,7 +28288,7 @@
               : (0, n.jsx)(T.t, { size: "medium", position: "center" }),
           });
         });
-      function Dr(e, t) {
+      function Mr(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -28511,7 +28593,7 @@
         W = a(78327),
         Y = a(84140),
         $ = a(63872),
-        X = a(92290),
+        X = a(10844),
         K = a(10206),
         J = a(95186),
         Z = a(60860),
@@ -39273,7 +39355,7 @@
         f = a(12424),
         y = a(96006),
         w = a(8893),
-        x = a(16261),
+        x = a(78686),
         C = a(5309),
         T = a(14987),
         j = a(60014),

@@ -105,6 +105,7 @@ message CMarketingMessages_FindMarketingMessages_Request {
 	optional int32 message_type = 3 [(.description) = "enum"];
 	repeated fixed64 gidlist = 4;
 	optional string title = 5;
+	optional uint32 associated_id = 6;
 }
 
 message CMarketingMessages_FindMarketingMessages_Response {

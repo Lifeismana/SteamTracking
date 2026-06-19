@@ -1,0 +1,23 @@
+{
+    "language": "italian",
+    "LoginRedirect_Dialog_Title": "Accedi",
+    "LoginRedirect_Dialog_Description": "Accedi per aggiungere questo articolo alla tua Lista dei desideri, seguirlo o contrassegnarlo come ignorato. Cliccando su OK tornerai alla pagina di accesso.",
+    "Wishlist_NotSignedIn": "Accedi o apri questa pagina nell'applicazione di Steam per aggiungere alla Lista dei desideri, seguire o acquistare.",
+    "VerifiedProgram_DeckTitle": "%1$s è %2$s su Steam Deck",
+    "VerifiedProgram_DeckTitle_Verified": "Verificato",
+    "VerifiedProgram_DeckSubTitle": "Questo gioco, insieme a molti altri titoli, è stato testato completamente ed è %1$s.",
+    "VerifiedProgram_GreatOnDeck": "Perfetto per il Deck",
+    "VerifiedProgram_DeckAlt": "Segno di spunta Verificato",
+    "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
+    "VerifiedProgram_DeckShopBannerAlt": "Banner di Steam Deck: \"I tuoi giochi, ovunque\"",
+    "VerifiedProgram_DeckDisclaimer": "Il trailer potrebbe non rappresentare il gameplay effettivo su Steam Deck",
+    "StoreItemFound": "%1$s Trovati (%2$s)",
+    "StoreItemNotFound": "Non trovati (%1$s)",
+    "SteamURLAccepted": "URL accettato (%1$s)",
+    "SteamURLInvalid": "URL non valido per una proprietà di Steam (Negozio/Comunità)",
+    "AnchorHashInputInvalid": "Invalid Input",
+    "PriceGrid_NormalPrice": "NORMALE",
+    "PriceGrid_RecentPrice": "MINIMO DEGLI ULTIMI 30 GIORNI",
+    "PriceGrid_CurrentPrice": "ORA",
+    "Dummy": "dummy"
+}

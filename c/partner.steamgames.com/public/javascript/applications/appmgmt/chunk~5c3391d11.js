@@ -218,6 +218,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -628,6 +629,59 @@
         });
       }
       function _(_) {
+        const { _: _, category: _, appName: _, descriptionToken: _ } = _;
+        if (_ == _._)
+          return (0, _.jsx)("div", {
+            className: _().CompatibilityDetailRatingSummary,
+            children: _
+              ? _._.LocalizeReact(
+                  "#SteamFrameVerified_DescriptionHeader_Unknown_WithAppName",
+                  (0, _.jsx)("b", {
+                    children: (0, _._)(_),
+                  }),
+                )
+              : _._.Localize("#SteamFrameVerified_DescriptionHeader_Unknown"),
+          });
+        let _ = "",
+          _ = null;
+        switch (_) {
+          case _._:
+            (_ = "#SteamFrameVerified_DescriptionHeader_Verified"),
+              (_ = _().Verified);
+            break;
+          case _._:
+            (_ = "#SteamFrameVerified_DescriptionHeader_Playable"),
+              (_ = _().Playable);
+            break;
+          case _._:
+            (_ = "#SteamFrameVerified_DescriptionHeader_Unsupported"),
+              (_ = _().Unsupported);
+        }
+        const _ = (0, _.jsx)("span", {
+            className: _,
+            children: _._.Localize(_(_)),
+          }),
+          _ = (0, _.jsx)("span", {
+            className: _().CompatibilityDetailRatingSummary,
+            children: _._.Localize(_ || _),
+          }),
+          _ = _
+            ? _._.LocalizeReact(
+                "#SteamFrameVerified_DescriptionHeader_WithAppName",
+                (0, _.jsx)("b", {
+                  children: (0, _._)(_),
+                }),
+                _,
+                _,
+              )
+            : _._.LocalizeReact("#SteamFrameVerified_DescriptionHeader", _, _);
+        return (0, _.jsx)("div", {
+          _: _,
+          className: _().CompatibilityDetailRatingSummary,
+          children: _,
+        });
+      }
+      function _(_) {
         switch (_) {
           case _._:
             return "#SteamDeckVerified_Category_Verified";
@@ -655,6 +709,7 @@
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           SteamDeckCompatibilityTabContent: () => _,
+          SteamFrameCompatibilityTabContent: () => _,
           SteamMachineCompatibilityTabContent: () => _,
           SteamOSCompatibilityTabContent: () => _,
           default: () => _,
@@ -2816,7 +2871,10 @@
                             displaytype: _.display_type,
                           }),
                           (0, _.jsx)("span", {
-                            children: _._.Localize(_.loc_token),
+                            children:
+                              "#" != _.loc_token.charAt(0)
+                                ? _._.Localize("#" + _.loc_token)
+                                : _._.Localize(_.loc_token),
                           }),
                         ],
                       },
@@ -2900,6 +2958,77 @@
                 (0, _.jsx)("div", {
                   className: _().CompatibilityNotes,
                   children: _.machine_resolved_items
+                    .filter((_) => _.display_type == _)
+                    .map((_) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _().CompatibilityDetailsNoteRow,
+                          children: (0, _.jsx)("span", {
+                            children: _._.Localize(_.loc_token),
+                          }),
+                        },
+                        _.loc_token + _.display_type,
+                      ),
+                    ),
+                }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
+          _ =
+            -1 !==
+            _.frame_resolved_items?.findIndex((_) => _.display_type == _),
+          _ = (0, _.jsx)(_._, {
+            _: _,
+            category: _.frame_resolved_category,
+            appName: _,
+          }),
+          _ = (0, _.jsx)(_._, {
+            category: _.frame_resolved_category,
+          }),
+          _ = _.frame_resolved_items && _.frame_resolved_items?.length > 0;
+        return (0, _.jsx)(_, {
+          titleId: _,
+          title: _._.Localize(
+            "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          ratingIcon: _,
+          ratingSummary: _,
+          ..._,
+          children: (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().CompatibilityDetailsSeparator,
+                }),
+              _.frame_resolved_items &&
+                _.frame_resolved_items
+                  .filter((_) => _.display_type !== _)
+                  .map((_) =>
+                    (0, _.jsxs)(
+                      "div",
+                      {
+                        className: _().CompatibilityDetailsRow,
+                        children: [
+                          (0, _.jsx)(_, {
+                            displaytype: _.display_type,
+                          }),
+                          (0, _.jsx)("span", {
+                            children: _._.Localize(_.loc_token),
+                          }),
+                        ],
+                      },
+                      _.loc_token + _.display_type,
+                    ),
+                  ),
+              _ &&
+                _.frame_resolved_items &&
+                (0, _.jsx)("div", {
+                  className: _().CompatibilityNotes,
+                  children: _.frame_resolved_items
                     .filter((_) => _.display_type == _)
                     .map((_) =>
                       (0, _.jsx)(

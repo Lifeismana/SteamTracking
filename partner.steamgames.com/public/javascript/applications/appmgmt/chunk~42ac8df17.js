@@ -4013,56 +4013,56 @@
         };
       })(m || (m = {}));
     },
-    54459: (e, t, r) => {
+    69620: (e, t, r) => {
       "use strict";
-      r.d(t, { E: () => p });
+      r.d(t, { lS: () => p });
       var i = r(7850),
         n = r(64753),
         a = r(8527),
-        s = r(47911),
+        s = r(78686),
         o = r(78395),
         l = r(21869),
         c = r(13843);
       const u = {};
-      (u.arabic = () => r.e(3695).then(r.t.bind(r, 93695, 19))),
-        (u.brazilian = () => r.e(1091).then(r.t.bind(r, 41091, 19))),
-        (u.bulgarian = () => r.e(9180).then(r.t.bind(r, 89180, 19))),
-        (u.czech = () => r.e(1514).then(r.t.bind(r, 21514, 19))),
-        (u.danish = () => r.e(5598).then(r.t.bind(r, 45598, 19))),
-        (u.dutch = () => r.e(5971).then(r.t.bind(r, 55971, 19))),
-        (u.english = () => r.e(7217).then(r.t.bind(r, 67217, 19))),
-        (u.finnish = () => r.e(7686).then(r.t.bind(r, 27686, 19))),
-        (u.french = () => r.e(7623).then(r.t.bind(r, 7623, 19))),
-        (u.german = () => r.e(7757).then(r.t.bind(r, 97757, 19))),
-        (u.greek = () => r.e(6345).then(r.t.bind(r, 46345, 19))),
-        (u.hungarian = () => r.e(5600).then(r.t.bind(r, 5600, 19))),
-        (u.indonesian = () => r.e(1163).then(r.t.bind(r, 51163, 19))),
-        (u.italian = () => r.e(1913).then(r.t.bind(r, 71913, 19))),
-        (u.japanese = () => r.e(9872).then(r.t.bind(r, 79872, 19))),
-        (u.koreana = () => r.e(2322).then(r.t.bind(r, 12322, 19))),
-        (u.latam = () => r.e(4954).then(r.t.bind(r, 94954, 19))),
-        (u.malay = () => r.e(4753).then(r.t.bind(r, 87134, 19))),
-        (u.norwegian = () => r.e(8341).then(r.t.bind(r, 48341, 19))),
-        (u.polish = () => r.e(7890).then(r.t.bind(r, 97890, 19))),
-        (u.portuguese = () => r.e(1810).then(r.t.bind(r, 21810, 19))),
-        (u.romanian = () => r.e(5500).then(r.t.bind(r, 75500, 19))),
-        (u.russian = () => r.e(2268).then(r.t.bind(r, 72268, 19))),
-        (u.schinese = () => r.e(5951).then(r.t.bind(r, 85951, 19))),
-        (u.spanish = () => r.e(8265).then(r.t.bind(r, 28265, 19))),
-        (u.swedish = () => r.e(2248).then(r.t.bind(r, 82248, 19))),
-        (u.tchinese = () => r.e(2020).then(r.t.bind(r, 62020, 19))),
-        (u.thai = () => r.e(7841).then(r.t.bind(r, 67841, 19))),
-        (u.turkish = () => r.e(4921).then(r.t.bind(r, 94921, 19))),
-        (u.ukrainian = () => r.e(1667).then(r.t.bind(r, 11667, 19))),
-        (u.vietnamese = () => r.e(4528).then(r.t.bind(r, 74528, 19)));
+      (u.arabic = () => r.e(2940).then(r.t.bind(r, 22940, 19))),
+        (u.brazilian = () => r.e(9990).then(r.t.bind(r, 59990, 19))),
+        (u.bulgarian = () => r.e(8573).then(r.t.bind(r, 38573, 19))),
+        (u.czech = () => r.e(975).then(r.t.bind(r, 40975, 19))),
+        (u.danish = () => r.e(8721).then(r.t.bind(r, 38721, 19))),
+        (u.dutch = () => r.e(354).then(r.t.bind(r, 354, 19))),
+        (u.english = () => r.e(9768).then(r.t.bind(r, 49768, 19))),
+        (u.finnish = () => r.e(2931).then(r.t.bind(r, 12931, 19))),
+        (u.french = () => r.e(6064).then(r.t.bind(r, 6064, 19))),
+        (u.german = () => r.e(2942).then(r.t.bind(r, 62942, 19))),
+        (u.greek = () => r.e(3924).then(r.t.bind(r, 13924, 19))),
+        (u.hungarian = () => r.e(9441).then(r.t.bind(r, 99441, 19))),
+        (u.indonesian = () => r.e(2584).then(r.t.bind(r, 42584, 19))),
+        (u.italian = () => r.e(7688).then(r.t.bind(r, 97688, 19))),
+        (u.japanese = () => r.e(5407).then(r.t.bind(r, 5407, 19))),
+        (u.koreana = () => r.e(5815).then(r.t.bind(r, 65815, 19))),
+        (u.latam = () => r.e(4287).then(r.t.bind(r, 44287, 19))),
+        (u.malay = () => r.e(8160).then(r.t.bind(r, 58160, 19))),
+        (u.norwegian = () => r.e(3648).then(r.t.bind(r, 33648, 19))),
+        (u.polish = () => r.e(2649).then(r.t.bind(r, 22649, 19))),
+        (u.portuguese = () => r.e(3629).then(r.t.bind(r, 23629, 19))),
+        (u.romanian = () => r.e(1555).then(r.t.bind(r, 81555, 19))),
+        (u.russian = () => r.e(1809).then(r.t.bind(r, 11809, 19))),
+        (u.schinese = () => r.e(9004).then(r.t.bind(r, 79004, 19))),
+        (u.spanish = () => r.e(7760).then(r.t.bind(r, 97760, 19))),
+        (u.swedish = () => r.e(6881).then(r.t.bind(r, 86881, 19))),
+        (u.tchinese = () => r.e(8183).then(r.t.bind(r, 28183, 19))),
+        (u.thai = () => r.e(950).then(r.t.bind(r, 10950, 19))),
+        (u.turkish = () => r.e(2568).then(r.t.bind(r, 22568, 19))),
+        (u.ukrainian = () => r.e(7038).then(r.t.bind(r, 17038, 19))),
+        (u.vietnamese = () => r.e(2327).then(r.t.bind(r, 62327, 19)));
       const d = (0, c.l)(async function (e) {
         if (u[e]) return u[e]();
       });
       function m(e) {
-        const { closeModal: t } = e;
+        const { closeModal: t, strDescOverride: r } = e;
         return (0, i.jsx)(o.o0, {
           strTitle: d.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: d.Localize("#LoginRedirect_Dialog_Description"),
+          strDescription: r || d.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: t,
           strOKButtonText: s.Z.Localize("#Button_OK"),
           onOK: () => {
@@ -4074,14 +4074,14 @@
           },
         });
       }
-      function p() {
-        const [e, t, r] = (0, n.uD)();
+      function p(e) {
+        const [t, r, a] = (0, n.uD)();
         return {
           elDialogElement: (0, i.jsx)(l.E, {
-            active: e,
-            children: (0, i.jsx)(m, { closeModal: r }),
+            active: t,
+            children: (0, i.jsx)(m, { closeModal: a, strDescOverride: e }),
           }),
-          fnShowLogonDialog: t,
+          fnShowLogonDialog: r,
         };
       }
     },
@@ -4185,7 +4185,7 @@
         T = r(78327),
         j = r(39722),
         A = r.n(j),
-        O = r(54459),
+        O = r(69620),
         F = r(76217),
         W = r(42024),
         x = r(99838),
@@ -4196,7 +4196,7 @@
         const { id: t, snr: r, classOverride: n } = e,
           [a, s] = (0, C.useState)(!1),
           o = (0, z.m)("GameHoverIgnoreButton"),
-          { elDialogElement: l, fnShowLogonDialog: c } = (0, O.E)(),
+          { elDialogElement: l, fnShowLogonDialog: c } = (0, O.lS)(),
           u = t && "appid" in t ? t.appid : void 0,
           d = (0, W.BD)(u),
           { mutateAsync: p } = (function (e, t, r, i = q.RI.$m) {
@@ -4743,7 +4743,7 @@
         m = r(52038),
         p = r(64769),
         _ = r.n(p),
-        g = r(47911),
+        g = r(78686),
         B = r(8527);
       function f(e) {
         const { id: t, bTruncateTotalReviews: r, bShowTooltip: p } = e,
@@ -4856,7 +4856,7 @@
       var i = r(7850),
         n = r(76217),
         a = r(96171),
-        s = r(54459),
+        s = r(69620),
         o = r(39777),
         l = r(58918),
         c = r(17376),
@@ -4869,7 +4869,7 @@
         B = r(78327),
         f = r(64769),
         y = r.n(f),
-        w = r(47911);
+        w = r(78686);
       function b(e) {
         const {
             id: t,
@@ -4879,7 +4879,7 @@
             bShowInGamepadUI: h,
           } = e,
           { data: S } = (0, o.J$)(t),
-          { elDialogElement: M, fnShowLogonDialog: C } = (0, s.E)(),
+          { elDialogElement: M, fnShowLogonDialog: C } = (0, s.lS)(),
           [I, v] = (0, d.useState)(() =>
             S &&
             (S.type == a.uE.ue || S.type == a.uE.Vi) &&
@@ -7556,7 +7556,7 @@
           ],
         });
       }
-      var Ur = r(47911);
+      var Ur = r(78686);
       function Lr(e) {
         const { id: t, className: r } = e,
           { data: d } = (0, a.J$)(t);
@@ -7602,7 +7602,7 @@
       "use strict";
       r.d(t, { Q: () => d });
       var i = r(7850),
-        n = r(47911),
+        n = r(78686),
         a = r(39777),
         s = r(18654),
         o = r.n(s),
@@ -7708,7 +7708,7 @@
         d = r(12155),
         m = r(32754),
         p = r(52038),
-        _ = r(47911),
+        _ = r(78686),
         g = r(8527),
         B = r(72255),
         f = r(70484),
@@ -7983,7 +7983,7 @@
         o = r.n(s),
         l = r(90595),
         c = r(52038),
-        u = r(47911),
+        u = r(78686),
         d = r(8527);
       function m(e) {
         const {
@@ -8282,7 +8282,7 @@
     5309: (e, t, r) => {
       "use strict";
       r.d(t, { CC: () => o });
-      var i = r(67361),
+      var i = r(39832),
         n = r(3049),
         a = r(63369);
       function s(e) {
@@ -12101,7 +12101,7 @@
         we = r(22797),
         be = r(82080),
         he = r.n(be),
-        Se = r(47911);
+        Se = r(78686);
       function Me(e) {
         const { id: t, className: r } = e,
           n = (0, l.n9)(),
@@ -12244,7 +12244,7 @@
         n = r(45699),
         a = r(64753),
         s = r(8527),
-        o = r(54459),
+        o = r(69620),
         l = r(60014),
         c = r(3578),
         u = r(20194),
@@ -12357,7 +12357,7 @@
             onFollowClick: c,
             followType: u,
           } = e,
-          { elDialogElement: d, fnShowLogonDialog: m } = (0, o.E)();
+          { elDialogElement: d, fnShowLogonDialog: m } = (0, o.lS)();
         if (!(0, S.xU)()) return null;
         let p = null;
         switch (u) {
@@ -12654,7 +12654,7 @@
       "use strict";
       r.d(t, { Dq: () => s, NO: () => o, dm: () => a });
       var i = r(3049),
-        n = r(47911);
+        n = r(78686);
       function a(e, t, r, a) {
         let s = t;
         s =

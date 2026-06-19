@@ -349,7 +349,7 @@
         NavLinks: "_2hZemvW0chMhSn36Vr0RF9",
       };
     },
-    2425: (e, s, r) => {
+    83403: (e, s, r) => {
       "use strict";
       r.r(s), r.d(s, { GlobalFooter: () => Oe });
       var t = r(7850),
@@ -393,7 +393,7 @@
         8: !0,
         9: !0,
       };
-      function u(e, s) {
+      function f(e, s) {
         return (function (e, s, r) {
           const t = [],
             n = {},
@@ -457,7 +457,7 @@
           );
         })(e, s, { formFactor: (0, d.xC)() });
       }
-      function f(e) {
+      function u(e) {
         return (function (e) {
           return !!_[e];
         })(e)
@@ -610,7 +610,7 @@
             prop: "inset",
             responsive: !0,
             className: v.Inset,
-            cssProperty: (e) => ["--inset", f(e)],
+            cssProperty: (e) => ["--inset", u(e)],
           },
           {
             prop: "gridColumn",
@@ -731,7 +731,7 @@
         y = r(8527);
       function b(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
-          a = u({ ...i, className: h()(e.className, w.Flex) }, S),
+          a = f({ ...i, className: h()(e.className, w.Flex) }, S),
           c = r ?? n?.focusable ?? !!i.onClick,
           p = (0, t.jsx)(s, { ref: o, ...a }),
           C = m(i.direction ?? "row", (0, d.xC)());
@@ -800,7 +800,7 @@
           i = s;
         return (0, t.jsx)(i, {
           ref: r,
-          ...u({ ...o, className: h()(V.Text, n) }, M),
+          ...f({ ...o, className: h()(V.Text, n) }, M),
         });
       }
       const z = [
@@ -877,7 +877,7 @@
             return "h" + r;
           })(s, (0, o.useContext)(R).depth);
         return (0, t.jsx)(i, {
-          ...u({ ...e, className: h()(A(), N.Heading, r) }, E),
+          ...f({ ...e, className: h()(A(), N.Heading, r) }, E),
         });
       }
       const E = [
@@ -894,7 +894,7 @@
       function I(e) {
         const { underline: s = "auto", focusable: r, navProps: n, ...o } = e,
           i = r ?? n?.focusable ?? !!o.href,
-          a = u({ ...o, underline: s, className: Z.TextLink }, B);
+          a = f({ ...o, underline: s, className: Z.TextLink }, B);
         return y.TS.IN_GAMEPADUI && (i || n)
           ? (0, t.jsx)(U.Ii, { ...a, ...(n || {}), focusable: i })
           : (0, t.jsx)("a", { ...a });
@@ -908,7 +908,7 @@
         W = r(44041);
       function D(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
-          a = u({ ...i, className: h()(W.Box, e.className) }, O),
+          a = f({ ...i, className: h()(W.Box, A(), e.className) }, O),
           c = r ?? n?.focusable ?? !!i.onClick,
           p = (0, t.jsx)(s, { ref: o, ...a });
         return y.TS.IN_GAMEPADUI && (c || n)
@@ -949,7 +949,7 @@
           : (0, t.jsx)(Y, { size: s, color: o, variant: i, ...a });
       }
       function Y(e) {
-        const { className: s, color: r, ...n } = u(e, Q);
+        const { className: s, color: r, ...n } = f(e, Q);
         return (0, t.jsx)("div", {
           "data-accent-color": r,
           className: h()(s, F.Spinner),
@@ -1005,10 +1005,10 @@
                 })
               : a,
             _ = i ? void 0 : c,
-            f = p ?? d?.focusable ?? !!_,
+            u = p ?? d?.focusable ?? !!_,
             x = {
               type: "button",
-              ...u(
+              ...f(
                 {
                   ...C,
                   variant: s,
@@ -1022,8 +1022,8 @@
               ),
               children: m,
             };
-          return y.TS.IN_GAMEPADUI && (f || d)
-            ? (0, t.jsx)(U.fu, { ...x, ...(d || {}), focusable: f })
+          return y.TS.IN_GAMEPADUI && (u || d)
+            ? (0, t.jsx)(U.fu, { ...x, ...(d || {}), focusable: u })
             : (0, t.jsx)("button", { ...x });
         },
         $ = function (e) {
@@ -1037,7 +1037,7 @@
               navProps: c,
               ...l
             } = e,
-            p = u(
+            p = f(
               {
                 onClick: o ? J : void 0,
                 ...l,
@@ -1056,7 +1056,7 @@
         se = r(75180);
       function re(e) {
         const { as: s = "div", ref: r, focusable: n, navProps: o, ...i } = e,
-          a = u({ ...i, className: h()(se.Grid, e.className) }, te),
+          a = f({ ...i, className: h()(se.Grid, e.className) }, te),
           c = n ?? o?.focusable ?? !!i.onClick,
           p = (0, t.jsx)(s, { ref: r, ...a });
         return y.TS.IN_GAMEPADUI
@@ -1205,8 +1205,8 @@
         Ce = r(28505),
         me = r(94621),
         _e = r(85585),
-        ue = r(7445),
-        fe = r(81393);
+        fe = r(7445),
+        ue = r(81393);
       const xe = (0, o.createContext)(null);
       function ge(e) {
         return y.TS.IN_GAMEPADUI
@@ -1216,7 +1216,7 @@
       function ve(e) {
         const { children: s } = e,
           r = (0, o.useContext)(xe);
-        (0, fe.wT)(
+        (0, ue.wT)(
           !!r,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
@@ -1230,7 +1230,7 @@
             navTreeRef: n,
             children: (0, t.jsx)("div", {
               style: { display: "contents" },
-              children: (0, t.jsx)(ue.q, { children: s }),
+              children: (0, t.jsx)(fe.q, { children: s }),
             }),
           })
         );
@@ -1239,7 +1239,7 @@
         const { children: s } = e,
           r = (0, o.useContext)(xe);
         return (
-          (0, fe.wT)(
+          (0, ue.wT)(
             !!r,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
@@ -1396,15 +1396,8 @@
             ((c = o.Children.only(c.props.children)), (l = ge));
           const p = (0, o.cloneElement)(c, {
             ref: a,
-            style: {
-              ...i.floating.floatingStyles,
-              inset: "unset",
-              border: "none",
-              background: "transparent",
-              color: "inherit",
-              padding: 0,
-            },
-            className: r,
+            style: { ...i.floating.floatingStyles },
+            className: h()(A(), r),
             popover: "manual",
             ...i.getFloatingProps(),
           });
@@ -1713,37 +1706,37 @@
       }
       var Me = r(4038);
       const Re = {};
-      (Re.arabic = () => r.e(6939).then(r.t.bind(r, 36939, 19))),
-        (Re.brazilian = () => r.e(3095).then(r.t.bind(r, 83095, 19))),
-        (Re.bulgarian = () => r.e(864).then(r.t.bind(r, 864, 19))),
-        (Re.czech = () => r.e(3910).then(r.t.bind(r, 73910, 19))),
-        (Re.danish = () => r.e(7098).then(r.t.bind(r, 27098, 19))),
-        (Re.dutch = () => r.e(4847).then(r.t.bind(r, 84847, 19))),
-        (Re.english = () => r.e(3621).then(r.t.bind(r, 53621, 19))),
-        (Re.finnish = () => r.e(9058).then(r.t.bind(r, 29058, 19))),
-        (Re.french = () => r.e(2683).then(r.t.bind(r, 82683, 19))),
-        (Re.german = () => r.e(9209).then(r.t.bind(r, 49209, 19))),
-        (Re.greek = () => r.e(2933).then(r.t.bind(r, 42933, 19))),
-        (Re.hungarian = () => r.e(6740).then(r.t.bind(r, 66740, 19))),
-        (Re.indonesian = () => r.e(4631).then(r.t.bind(r, 4631, 19))),
-        (Re.italian = () => r.e(517).then(r.t.bind(r, 10517, 19))),
-        (Re.japanese = () => r.e(4788).then(r.t.bind(r, 24788, 19))),
-        (Re.koreana = () => r.e(3838).then(r.t.bind(r, 83838, 19))),
-        (Re.latam = () => r.e(1990).then(r.t.bind(r, 91990, 19))),
-        (Re.malay = () => r.e(7141).then(r.t.bind(r, 97141, 19))),
-        (Re.norwegian = () => r.e(8953).then(r.t.bind(r, 18953, 19))),
-        (Re.polish = () => r.e(8766).then(r.t.bind(r, 58766, 19))),
-        (Re.portuguese = () => r.e(3110).then(r.t.bind(r, 93110, 19))),
-        (Re.romanian = () => r.e(7384).then(r.t.bind(r, 67384, 19))),
-        (Re.russian = () => r.e(8928).then(r.t.bind(r, 28928, 19))),
-        (Re.schinese = () => r.e(8787).then(r.t.bind(r, 98787, 19))),
-        (Re.spanish = () => r.e(6421).then(r.t.bind(r, 96421, 19))),
-        (Re.swedish = () => r.e(7524).then(r.t.bind(r, 17524, 19))),
-        (Re.tchinese = () => r.e(7248).then(r.t.bind(r, 67248, 19))),
-        (Re.thai = () => r.e(6085).then(r.t.bind(r, 46085, 19))),
-        (Re.turkish = () => r.e(7997).then(r.t.bind(r, 37997, 19))),
-        (Re.ukrainian = () => r.e(7247).then(r.t.bind(r, 47247, 19))),
-        (Re.vietnamese = () => r.e(3092).then(r.t.bind(r, 3092, 19)));
+      (Re.arabic = () => r.e(2560).then(r.t.bind(r, 42560, 19))),
+        (Re.brazilian = () => r.e(5061).then(r.t.bind(r, 37442, 19))),
+        (Re.bulgarian = () => r.e(9945).then(r.t.bind(r, 39945, 19))),
+        (Re.czech = () => r.e(5059).then(r.t.bind(r, 55059, 19))),
+        (Re.danish = () => r.e(9605).then(r.t.bind(r, 19605, 19))),
+        (Re.dutch = () => r.e(3366).then(r.t.bind(r, 13366, 19))),
+        (Re.english = () => r.e(4468).then(r.t.bind(r, 74468, 19))),
+        (Re.finnish = () => r.e(1655).then(r.t.bind(r, 31655, 19))),
+        (Re.french = () => r.e(1580).then(r.t.bind(r, 21580, 19))),
+        (Re.german = () => r.e(5666).then(r.t.bind(r, 5666, 19))),
+        (Re.greek = () => r.e(2936).then(r.t.bind(r, 22936, 19))),
+        (Re.hungarian = () => r.e(2173).then(r.t.bind(r, 52173, 19))),
+        (Re.indonesian = () => r.e(412).then(r.t.bind(r, 80412, 19))),
+        (Re.italian = () => r.e(9468).then(r.t.bind(r, 29468, 19))),
+        (Re.japanese = () => r.e(2811).then(r.t.bind(r, 52811, 19))),
+        (Re.koreana = () => r.e(6139).then(r.t.bind(r, 76139, 19))),
+        (Re.latam = () => r.e(7267).then(r.t.bind(r, 77267, 19))),
+        (Re.malay = () => r.e(8844).then(r.t.bind(r, 88844, 19))),
+        (Re.norwegian = () => r.e(5964).then(r.t.bind(r, 85964, 19))),
+        (Re.polish = () => r.e(6509).then(r.t.bind(r, 26509, 19))),
+        (Re.portuguese = () => r.e(8233).then(r.t.bind(r, 58233, 19))),
+        (Re.romanian = () => r.e(8727).then(r.t.bind(r, 48727, 19))),
+        (Re.russian = () => r.e(8973).then(r.t.bind(r, 98973, 19))),
+        (Re.schinese = () => r.e(9720).then(r.t.bind(r, 49720, 19))),
+        (Re.spanish = () => r.e(1924).then(r.t.bind(r, 31924, 19))),
+        (Re.swedish = () => r.e(7925).then(r.t.bind(r, 17925, 19))),
+        (Re.tchinese = () => r.e(9259).then(r.t.bind(r, 89259, 19))),
+        (Re.thai = () => r.e(5474).then(r.t.bind(r, 25474, 19))),
+        (Re.turkish = () => r.e(2164).then(r.t.bind(r, 12164, 19))),
+        (Re.ukrainian = () => r.e(2626).then(r.t.bind(r, 52626, 19))),
+        (Re.vietnamese = () => r.e(6515).then(r.t.bind(r, 66515, 19)));
       const Te = (0, Me.l)(async function (e) {
         if (Re[e]) return Re[e]();
       });

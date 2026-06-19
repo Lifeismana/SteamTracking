@@ -4310,7 +4310,7 @@
         wa = a(60860),
         Ca = a(30294),
         fa = a(56654),
-        ya = a(92290),
+        ya = a(10844),
         Da = a(16989);
       function Ta(e) {
         const { editModel: t } = e,
@@ -7129,7 +7129,7 @@
         (zn.MapPubRights = zn.ConstructPubRightsMap());
       var Un = a(56330),
         Hn = a(55263),
-        qn = a(16261),
+        qn = a(78686),
         Vn = a(15761);
       function Wn(e) {
         const { editModel: t } = e,
@@ -18263,7 +18263,7 @@
         Hr = a(6878),
         qr = a(1090),
         Vr = a(53807),
-        Wr = a(37474);
+        Wr = a(30207);
       const Qr = n.Fragment;
       function Yr(e) {
         const {
@@ -18398,7 +18398,7 @@
         const { appID: t, classOverride: a, styleOverride: s } = e,
           [o, l] = (0, n.useState)(!1),
           r = (0, ua.m)("GameHoverFollowButton"),
-          { elDialogElement: d, fnShowLogonDialog: c } = (0, _d.E)(),
+          { elDialogElement: d, fnShowLogonDialog: c } = (0, _d.lS)(),
           _ = (0, dd.Fh)(t),
           { mutateAsync: u } = (0, cd.L)(t, !_, void 0);
         return (0, i.jsxs)(rd.Z, {
@@ -18530,7 +18530,7 @@
         fd = a(99487),
         yd = a(38677),
         Dd = a(39199),
-        Td = a(47162),
+        Td = a(46772),
         Id = a(40353);
       function Gd(e) {
         const { eventModel: t, nEventBadgeID: a } = e,

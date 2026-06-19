@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    719: (e, t, r) => {
+    60: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => an });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(359),
+        a = r(543),
         o = r(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -84,10 +84,10 @@
         );
       }
       var _ = r(629),
-        h = r(212),
-        b = r(351),
-        f = r(972),
-        p = r(403);
+        h = r(798),
+        b = r(249),
+        f = r(702),
+        p = r(453);
       class B {
         m_NavigationController;
         m_postMessage;
@@ -224,16 +224,16 @@
         return !!window.document;
       }
       let C;
-      function R() {
-        if (!M()) return C || (C = T()), C;
+      function T() {
+        if (!M()) return C || (C = R()), C;
         let e = (function (e) {
           if (!M() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         })("sessionid");
-        return e || (e = T()), e;
+        return e || (e = R()), e;
       }
-      function T() {
+      function R() {
         const e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += S(0, 35).toString(36);
@@ -313,7 +313,7 @@
         FROM_WEB: !1,
         WEBSITE_ID: "Unknown",
         get SESSIONID() {
-          return R();
+          return T();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
@@ -323,7 +323,7 @@
         FORCED_DISPLAY_MODE: void 0,
         ON_DECK: !1,
         ON_FRAME: !1,
-        ON_STEAMOS: !1,
+        IS_STEAMOS_MANAGEMENT_ENABLED: !1,
         ON_STEAMOS_CLIENT_BRANCH: !1,
         IN_GAMESCOPE: !1,
         IN_LOGIN: !1,
@@ -488,8 +488,8 @@
         (0, _.Cg)([h.o], F.prototype, "OnKeyUp", null),
         (0, _.Cg)([h.o], F.prototype, "Reset", null);
       var A,
-        E = r(917),
-        N = r(363);
+        E = r(119),
+        N = r(413);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -500,8 +500,8 @@
       }
       (0, _.Cg)([h.o], O.prototype, "SyncStore", null),
         (0, _.Cg)([h.o], O.prototype, "GetValue", null);
-      class z extends O {}
-      class D extends z {
+      class D extends O {}
+      class z extends D {
         m_callbacks;
         m_currentValue;
         m_fnEquals;
@@ -528,7 +528,7 @@
         }
       }
       function P(e, t) {
-        return new D(e, t);
+        return new z(e, t);
       }
       class W extends O {
         m_fnMap;
@@ -538,7 +538,7 @@
         constructor(e, t, r) {
           super(),
             (this.m_originalSubscribableValue = e),
-            (this.m_mappedSubscribableValue = new D(t(e.Value), r)),
+            (this.m_mappedSubscribableValue = new z(t(e.Value), r)),
             (this.m_fnMap = t),
             this.m_originalSubscribableValue.Subscribe(() => {
               this.m_mappedSubscribableValue.SubscriberCount > 0
@@ -1155,32 +1155,32 @@
         return i < n.min ? n.min - i : i > n.max ? i - n.max : 0;
       }
       function le(e) {
-        if (!e) return De.NONE;
+        if (!e) return ze.NONE;
         const t = e.ownerDocument.defaultView,
           r = t.getComputedStyle(e);
         if ("flex" == r.display)
           switch (r.flexDirection) {
             case "row":
-              return "wrap" == r.flexWrap ? De.GRID : De.ROW;
+              return "wrap" == r.flexWrap ? ze.GRID : ze.ROW;
             case "row-reverse":
-              return De.ROW_REVERSE;
+              return ze.ROW_REVERSE;
             case "column":
-              return De.COLUMN;
+              return ze.COLUMN;
             case "column-reverse":
-              return De.COLUMN_REVERSE;
+              return ze.COLUMN_REVERSE;
           }
         else {
           if ("grid" == r.display)
-            return "none" !== r.gridTemplateAreas ? De.GEOMETRIC : De.GRID;
+            return "none" !== r.gridTemplateAreas ? ze.GEOMETRIC : ze.GRID;
           if (e.childElementCount > 0) {
             const r = t.getComputedStyle(e.firstElementChild);
-            if ("left" === r.float) return De.ROW;
-            if ("right" === r.float) return De.ROW_REVERSE;
+            if ("left" === r.float) return ze.ROW;
+            if ("right" === r.float) return ze.ROW_REVERSE;
             if ("inline" === r.display || "inline-block" === r.display)
-              return De.GRID;
+              return ze.GRID;
           }
         }
-        return De.COLUMN;
+        return ze.COLUMN;
       }
       function ce(e) {
         switch (e) {
@@ -1516,10 +1516,10 @@
           bottom: Math.max(0, t.bottom - r.bottom),
         };
       }
-      function Re(e) {
+      function Te(e) {
         return e > -1 && e < 1;
       }
-      function Te(e, t, r, i, n) {
+      function Re(e, t, r, i, n) {
         fe(
           "----------------------------------------------------------------------------------",
         ),
@@ -1582,13 +1582,13 @@
         }
         let c = !1;
         for (let e of s) {
-          if (Re(e.left) && Re(e.top)) continue;
+          if (Te(e.left) && Te(e.top)) continue;
           let t = Ee(e.element),
             i = t.scrollTop + e.top,
             n = t.scrollLeft + e.left;
           (n = v(n, 0, t.MaxScrollLeft())),
             (i = v(i, 0, t.MaxScrollTop())),
-            (Re(t.scrollLeft - n) && Re(t.scrollTop - i)) ||
+            (Te(t.scrollLeft - n) && Te(t.scrollTop - i)) ||
               (t.scrollTo({ left: n, top: i, behavior: r }),
               c || (fe("Scrolling:"), (c = !0)),
               fe(
@@ -1729,8 +1729,8 @@
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
       const Oe = new x("FocusNavigationMovement"),
-        ze = Oe.Debug;
-      var De, Pe, We, Ge;
+        De = Oe.Debug;
+      var ze, Pe, We, Ge;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -1739,7 +1739,7 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(De || (De = {})),
+      })(ze || (ze = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
@@ -1950,7 +1950,7 @@
             (this.m_bMounted = !1);
           const e = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.BHasFocus() || e) &&
-            (ze(
+            (De(
               `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? "will transfer to retain focus ancestor" : "will blur"}.`,
             ),
             e && this.Tree.DeferredFocus.RequestFocus(null),
@@ -1967,7 +1967,7 @@
           !this.m_rgNavigationHandlers.length &&
             this.m_element &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties?.layout != De.NONE ||
+              this.m_Properties?.layout != ze.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -2058,7 +2058,7 @@
               const e = this.FindFocusableDescendant();
               if (e && e !== this)
                 return (
-                  ze(
+                  De(
                     "Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.",
                     this.m_element,
                     e.m_element,
@@ -2147,8 +2147,8 @@
               (this.IsValidChildIndex(a) ||
                 (a =
                   a >= this.m_rgChildren.length ||
-                  o == De.ROW_REVERSE ||
-                  o == De.COLUMN_REVERSE ||
+                  o == ze.ROW_REVERSE ||
+                  o == ze.COLUMN_REVERSE ||
                   n == Pe.LAST
                     ? this.m_rgChildren.length - 1
                     : 0),
@@ -2156,7 +2156,7 @@
                 ? (c = "x")
                 : n == Pe.MAINTAIN_Y
                   ? (c = "y")
-                  : o == De.GEOMETRIC && r && (c = Q[r]),
+                  : o == ze.GEOMETRIC && r && (c = Q[r]),
               (c || t) && r)
             ) {
               const i = this.m_Tree.GetLastFocusedNode();
@@ -2167,13 +2167,13 @@
                     i.GetBoundingRect(),
                     r,
                   );
-                ze(
+                De(
                   `Taking focus while preserving ${n && Pe[n]} preserved: ${c} movement: ${r}, node:`,
                   s,
                 ),
                   (l = this.FindClosestFocusableNodeToRect(e, s));
               } else if (c != Q[r]) {
-                const t = this.ComputeRelativeDirection(e, De.GRID),
+                const t = this.ComputeRelativeDirection(e, ze.GRID),
                   r = t == Ge.BACKWARD ? this.m_rgChildren.length : -1;
                 l = this.FindNextFocusableChildInDirection(r, t, e);
               }
@@ -2223,7 +2223,7 @@
               bottom: t.innerHeight,
             });
           return (
-            ze(
+            De(
               `Focusing visible child, best child match is ${r?.child?.Element?.className} - ${JSON.stringify(r?.visibility)}`,
             ),
             !!r && r.child.BTakeFocus(e)
@@ -2231,7 +2231,7 @@
         }
         GetLayout() {
           if (this.m_Properties?.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return De.NONE;
+          if (this.m_rgChildren.length < 2) return ze.NONE;
           return le(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -2268,22 +2268,22 @@
           let n,
             s = this.ComputeRelativeDirection(e, r);
           if (
-            (ze(
-              `Handling navigation event ${a.pR[e]} - ${De[r]} - ${Ge[s]}`,
+            (De(
+              `Handling navigation event ${a.pR[e]} - ${ze[r]} - ${Ge[s]}`,
               this.m_element,
             ),
             s == Ge.INVALID)
           )
             return !1;
           if (this.m_Properties?.focusable && this.BHasFocus())
-            return ze("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), r == De.GRID))
+            return De("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), r == ze.GRID))
             n = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               s,
               e,
             );
-          else if (r == De.GEOMETRIC)
+          else if (r == ze.GEOMETRIC)
             n = this.FindNextFocusableChildGeometric(s, e);
           else {
             let t = this.GetActiveChildIndex();
@@ -2318,8 +2318,8 @@
                   o)
                 )
                   return (
-                    ze(`Element too far away, scrolling ${i} on ${r} axis `),
-                    Te(n.Element, n.Element, "smooth", r, i),
+                    De(`Element too far away, scrolling ${i} on ${r} axis `),
+                    Re(n.Element, n.Element, "smooth", r, i),
                     !0
                   );
               }
@@ -2340,10 +2340,10 @@
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let r = t == De.ROW_REVERSE || t == De.COLUMN_REVERSE;
+          let r = t == ze.ROW_REVERSE || t == ze.COLUMN_REVERSE;
           switch (t) {
-            case De.ROW:
-            case De.ROW_REVERSE:
+            case ze.ROW:
+            case ze.ROW_REVERSE:
               switch (e) {
                 case a.pR.DIR_LEFT:
                   return r ? Ge.FORWARD : Ge.BACKWARD;
@@ -2352,8 +2352,8 @@
                 default:
                   return Ge.INVALID;
               }
-            case De.COLUMN:
-            case De.COLUMN_REVERSE:
+            case ze.COLUMN:
+            case ze.COLUMN_REVERSE:
               switch (e) {
                 case a.pR.DIR_UP:
                   return r ? Ge.FORWARD : Ge.BACKWARD;
@@ -2362,8 +2362,8 @@
                 default:
                   return Ge.INVALID;
               }
-            case De.GRID:
-            case De.GEOMETRIC:
+            case ze.GRID:
+            case ze.GEOMETRIC:
               switch (e) {
                 case a.pR.DIR_LEFT:
                 case a.pR.DIR_UP:
@@ -2502,7 +2502,7 @@
           return null;
         }
         FindClosetChildInDirection(e, t, r, i) {
-          ze(
+          De(
             `Find child closest to rect, rect is at left ${t.left} top ${t.top} right ${t.right} bottom ${t.bottom}`,
           );
           const n = ae(e, t),
@@ -2533,7 +2533,7 @@
                 ({ dist: e, overlap: t, child: r }) =>
                   `[ node: ${r.m_element?.className} dist: ${e} overlap: ${t} ]`,
               );
-            ze(`Found nodes on axis, top 3 (of ${s.length}: ${e.join(", ")}`);
+            De(`Found nodes on axis, top 3 (of ${s.length}: ${e.join(", ")}`);
           }
           for (const { child: e } of s) {
             const r = e.FindFocusableNode(i, t);
@@ -2609,7 +2609,7 @@
                 ),
                 this.m_element?.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                ze(
+                De(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
             this.m_Tree.BIsActive() &&
@@ -2665,7 +2665,7 @@
                     r && (Be = performance.now()),
                       e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
                       c
-                        ? Te(0, l, s)
+                        ? Re(0, l, s)
                         : (fe(
                             "Scrolling Into View (via browser scrollIntoView):",
                             l,
@@ -2674,7 +2674,7 @@
                   } else
                     fe("No previous element for scrolling, will jump"),
                       c
-                        ? Te(0, l, "auto")
+                        ? Re(0, l, "auto")
                         : (fe(
                             "Scrolling Into View (via browser scrollIntoView):",
                             l,
@@ -2892,7 +2892,7 @@
             (this.m_ID = r),
             (this.m_ParentNavTree = i),
             (this.m_Root = new Ue(this, null, null)),
-            this.m_Root.SetProperties({ layout: De.COLUMN }),
+            this.m_Root.SetProperties({ layout: ze.COLUMN }),
             (this.m_Properties = n);
         }
         get id() {
@@ -4420,20 +4420,20 @@
           return "UserSystemInformation";
         }
       }
-      class Rt extends it.Message {
+      class Tt extends it.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Rt.prototype.setting || mt(Rt.M()),
+            Tt.prototype.setting || mt(Tt.M()),
             it.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Rt.sm_m ||
-              (Rt.sm_m = {
-                proto: Rt,
+            Tt.sm_m ||
+              (Tt.sm_m = {
+                proto: Tt,
                 fields: {
                   setting: { n: 1, br: st.readEnum, bw: at.writeEnum },
                   game_resolution_width: {
@@ -4445,67 +4445,6 @@
                     n: 3,
                     br: st.readUint32,
                     bw: at.writeUint32,
-                  },
-                },
-              }),
-            Rt.sm_m
-          );
-        }
-        static MBF() {
-          return Rt.sm_mbf || (Rt.sm_mbf = ot(Rt.M())), Rt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Rt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return ct(Rt.M(), e, t);
-        }
-        static fromObject(e) {
-          return lt(Rt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (nt().BinaryReader)(e),
-            r = new Rt();
-          return Rt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return ut(Rt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (nt().BinaryWriter)();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          dt(Rt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (nt().BinaryWriter)();
-          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "GamePerformanceSettings";
-        }
-      }
-      class Tt extends it.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Tt.prototype.raw_version || mt(Tt.M()),
-            it.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Tt.sm_m ||
-              (Tt.sm_m = {
-                proto: Tt,
-                fields: {
-                  raw_version: { n: 1, br: st.readString, bw: at.writeString },
-                  requested_interface_type: {
-                    n: 2,
-                    br: st.readString,
-                    bw: at.writeString,
                   },
                 },
               }),
@@ -4542,6 +4481,67 @@
         serializeBase64String() {
           var e = new (nt().BinaryWriter)();
           return Tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "GamePerformanceSettings";
+        }
+      }
+      class Rt extends it.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Rt.prototype.raw_version || mt(Rt.M()),
+            it.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Rt.sm_m ||
+              (Rt.sm_m = {
+                proto: Rt,
+                fields: {
+                  raw_version: { n: 1, br: st.readString, bw: at.writeString },
+                  requested_interface_type: {
+                    n: 2,
+                    br: st.readString,
+                    bw: at.writeString,
+                  },
+                },
+              }),
+            Rt.sm_m
+          );
+        }
+        static MBF() {
+          return Rt.sm_mbf || (Rt.sm_mbf = ot(Rt.M())), Rt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Rt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return ct(Rt.M(), e, t);
+        }
+        static fromObject(e) {
+          return lt(Rt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (nt().BinaryReader)(e),
+            r = new Rt();
+          return Rt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return ut(Rt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (nt().BinaryWriter)();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          dt(Rt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (nt().BinaryWriter)();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_AppInterfaceCreation";
@@ -4629,7 +4629,7 @@
                     br: st.readUint64String,
                     bw: at.writeUint64String,
                   },
-                  interfaces_created: { n: 2, c: Tt, r: !0, q: !0 },
+                  interfaces_created: { n: 2, c: Rt, r: !0, q: !0 },
                   methods_called: { n: 3, c: It, r: !0, q: !0 },
                   session_length_seconds: {
                     n: 4,
@@ -4821,8 +4821,8 @@
                   product: { n: 1, br: st.readString, bw: at.writeString },
                   version: { n: 2, br: st.readString, bw: at.writeString },
                   routes: { n: 3, c: Ot, r: !0, q: !0 },
-                  components: { n: 4, c: zt, r: !0, q: !0 },
-                  actions: { n: 5, c: Dt, r: !0, q: !0 },
+                  components: { n: 4, c: Dt, r: !0, q: !0 },
+                  actions: { n: 5, c: zt, r: !0, q: !0 },
                 },
               }),
             Nt.sm_m
@@ -4920,68 +4920,11 @@
           return "CClientMetrics_ReportReactUsage_Notification_RouteData";
         }
       }
-      class zt extends it.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            zt.prototype.component || mt(zt.M()),
-            it.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            zt.sm_m ||
-              (zt.sm_m = {
-                proto: zt,
-                fields: {
-                  component: { n: 1, br: st.readString, bw: at.writeString },
-                  count: { n: 2, br: st.readUint32, bw: at.writeUint32 },
-                },
-              }),
-            zt.sm_m
-          );
-        }
-        static MBF() {
-          return zt.sm_mbf || (zt.sm_mbf = ot(zt.M())), zt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return zt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return ct(zt.M(), e, t);
-        }
-        static fromObject(e) {
-          return lt(zt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (nt().BinaryReader)(e),
-            r = new zt();
-          return zt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return ut(zt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (nt().BinaryWriter)();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          dt(zt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (nt().BinaryWriter)();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientMetrics_ReportReactUsage_Notification_ComponentData";
-        }
-      }
       class Dt extends it.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Dt.prototype.action || mt(Dt.M()),
+            Dt.prototype.component || mt(Dt.M()),
             it.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -4992,7 +4935,7 @@
               (Dt.sm_m = {
                 proto: Dt,
                 fields: {
-                  action: { n: 1, br: st.readString, bw: at.writeString },
+                  component: { n: 1, br: st.readString, bw: at.writeString },
                   count: { n: 2, br: st.readUint32, bw: at.writeUint32 },
                 },
               }),
@@ -5029,6 +4972,63 @@
         serializeBase64String() {
           var e = new (nt().BinaryWriter)();
           return Dt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_ReportReactUsage_Notification_ComponentData";
+        }
+      }
+      class zt extends it.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            zt.prototype.action || mt(zt.M()),
+            it.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            zt.sm_m ||
+              (zt.sm_m = {
+                proto: zt,
+                fields: {
+                  action: { n: 1, br: st.readString, bw: at.writeString },
+                  count: { n: 2, br: st.readUint32, bw: at.writeUint32 },
+                },
+              }),
+            zt.sm_m
+          );
+        }
+        static MBF() {
+          return zt.sm_mbf || (zt.sm_mbf = ot(zt.M())), zt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return zt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return ct(zt.M(), e, t);
+        }
+        static fromObject(e) {
+          return lt(zt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (nt().BinaryReader)(e),
+            r = new zt();
+          return zt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return ut(zt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (nt().BinaryWriter)();
+          return zt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          dt(zt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (nt().BinaryWriter)();
+          return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_ReportReactUsage_Notification_ActionData";
@@ -6178,7 +6178,7 @@
                     br: st.readUint32,
                     bw: at.writeUint32,
                   },
-                  game_settings: { n: 5, c: Rt },
+                  game_settings: { n: 5, c: Tt },
                 },
               }),
             Xt.sm_m
@@ -7224,7 +7224,7 @@
       function Cr(e, t) {
         return t instanceof Mr ? t : Mr.InitFromObject(e, t);
       }
-      const Rr = new (class {
+      const Tr = new (class {
         m_transport = null;
         m_registry = null;
         SetDefaultTransport(e) {
@@ -7248,8 +7248,8 @@
           return this.m_registry;
         }
       })();
-      function Tr() {
-        return Rr;
+      function Rr() {
+        return Tr;
       }
       class Ir extends it.Message {
         static ImplementsStaticInterface() {}
@@ -7724,79 +7724,6 @@
           return "CSteamInputService_ControllerAxesStateChange_Notification";
         }
       }
-      class zr extends it.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            zr.prototype.controller_index || mt(zr.M()),
-            it.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            zr.sm_m ||
-              (zr.sm_m = {
-                proto: zr,
-                fields: {
-                  controller_index: {
-                    n: 1,
-                    br: st.readUint32,
-                    bw: at.writeUint32,
-                  },
-                  imu_index: { n: 2, br: st.readUint32, bw: at.writeUint32 },
-                  gyro_raw_quaternion: { n: 3, c: Er },
-                  gyro_filtered_quaternion: { n: 4, c: Er },
-                  imu_sensor_delta_time: {
-                    n: 5,
-                    br: st.readUint32,
-                    bw: at.writeUint32,
-                  },
-                  estimated_packet_rate: {
-                    n: 6,
-                    br: st.readUint32,
-                    bw: at.writeUint32,
-                  },
-                },
-              }),
-            zr.sm_m
-          );
-        }
-        static MBF() {
-          return zr.sm_mbf || (zr.sm_mbf = ot(zr.M())), zr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return zr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return ct(zr.M(), e, t);
-        }
-        static fromObject(e) {
-          return lt(zr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (nt().BinaryReader)(e),
-            r = new zr();
-          return zr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return ut(zr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (nt().BinaryWriter)();
-          return zr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          dt(zr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (nt().BinaryWriter)();
-          return zr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamInputService_GyroQuaternionChanged_Notification";
-        }
-      }
       class Dr extends it.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -7818,8 +7745,18 @@
                     bw: at.writeUint32,
                   },
                   imu_index: { n: 2, br: st.readUint32, bw: at.writeUint32 },
-                  gyro_raw_speed: { n: 3, c: Nr },
-                  gyro_filtered_speed: { n: 4, c: Nr },
+                  gyro_raw_quaternion: { n: 3, c: Er },
+                  gyro_filtered_quaternion: { n: 4, c: Er },
+                  imu_sensor_delta_time: {
+                    n: 5,
+                    br: st.readUint32,
+                    bw: at.writeUint32,
+                  },
+                  estimated_packet_rate: {
+                    n: 6,
+                    br: st.readUint32,
+                    bw: at.writeUint32,
+                  },
                 },
               }),
             Dr.sm_m
@@ -7855,6 +7792,69 @@
         serializeBase64String() {
           var e = new (nt().BinaryWriter)();
           return Dr.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamInputService_GyroQuaternionChanged_Notification";
+        }
+      }
+      class zr extends it.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            zr.prototype.controller_index || mt(zr.M()),
+            it.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            zr.sm_m ||
+              (zr.sm_m = {
+                proto: zr,
+                fields: {
+                  controller_index: {
+                    n: 1,
+                    br: st.readUint32,
+                    bw: at.writeUint32,
+                  },
+                  imu_index: { n: 2, br: st.readUint32, bw: at.writeUint32 },
+                  gyro_raw_speed: { n: 3, c: Nr },
+                  gyro_filtered_speed: { n: 4, c: Nr },
+                },
+              }),
+            zr.sm_m
+          );
+        }
+        static MBF() {
+          return zr.sm_mbf || (zr.sm_mbf = ot(zr.M())), zr.sm_mbf;
+        }
+        toObject(e = !1) {
+          return zr.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return ct(zr.M(), e, t);
+        }
+        static fromObject(e) {
+          return lt(zr.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (nt().BinaryReader)(e),
+            r = new zr();
+          return zr.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return ut(zr.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (nt().BinaryWriter)();
+          return zr.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          dt(zr.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (nt().BinaryWriter)();
+          return zr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamInputService_GyroSpeedChanged_Notification";
@@ -10382,20 +10382,20 @@
           return "CSteamInputService_TritonQos_Notification";
         }
       }
-      class Ri extends it.Message {
+      class Ti extends it.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ri.prototype.controller_index || mt(Ri.M()),
+            Ti.prototype.controller_index || mt(Ti.M()),
             it.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Ri.sm_m ||
-              (Ri.sm_m = {
-                proto: Ri,
+            Ti.sm_m ||
+              (Ti.sm_m = {
+                proto: Ti,
                 fields: {
                   controller_index: {
                     n: 1,
@@ -10405,57 +10405,20 @@
                   enable: { n: 2, br: st.readBool, bw: at.writeBool },
                 },
               }),
-            Ri.sm_m
+            Ti.sm_m
           );
         }
         static MBF() {
-          return Ri.sm_mbf || (Ri.sm_mbf = ot(Ri.M())), Ri.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ri.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return ct(Ri.M(), e, t);
-        }
-        static fromObject(e) {
-          return lt(Ri.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (nt().BinaryReader)(e),
-            r = new Ri();
-          return Ri.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return ut(Ri.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (nt().BinaryWriter)();
-          return Ri.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          dt(Ri.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (nt().BinaryWriter)();
-          return Ri.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamInputService_EnableQosStatus_Request";
-        }
-      }
-      class Ti extends it.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), it.Message.initialize(this, e, 0, -1, void 0, null);
+          return Ti.sm_mbf || (Ti.sm_mbf = ot(Ti.M())), Ti.sm_mbf;
         }
         toObject(e = !1) {
           return Ti.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return ct(Ti.M(), e, t);
         }
         static fromObject(e) {
-          return new Ti();
+          return lt(Ti.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (nt().BinaryReader)(e),
@@ -10463,16 +10426,53 @@
           return Ti.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return ut(Ti.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (nt().BinaryWriter)();
           return Ti.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          dt(Ti.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (nt().BinaryWriter)();
           return Ti.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamInputService_EnableQosStatus_Request";
+        }
+      }
+      class Ri extends it.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), it.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Ri.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Ri();
+        }
+        static deserializeBinary(e) {
+          let t = new (nt().BinaryReader)(e),
+            r = new Ri();
+          return Ri.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (nt().BinaryWriter)();
+          return Ri.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (nt().BinaryWriter)();
+          return Ri.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamInputService_EnableQosStatus_Response";
@@ -10551,7 +10551,7 @@
           request: Ir,
         }),
           (e.RegisterForNotifyButtonStateChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10562,7 +10562,7 @@
                 );
           }),
           (e.NotifyButtonStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10574,7 +10574,7 @@
                 );
           }),
           (e.SendMsgNotifyButtonStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10590,7 +10590,7 @@
             request: Or,
           }),
           (e.RegisterForNotifyAxesStateChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10601,7 +10601,7 @@
                 );
           }),
           (e.NotifyAxesStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10613,7 +10613,7 @@
                 );
           }),
           (e.SendMsgNotifyAxesStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10626,10 +10626,10 @@
           }),
           (e.NotifyGyroQuaternionStateChangedHandler = {
             name: "SteamInputManager.NotifyGyroQuaternionStateChanged#1",
-            request: zr,
+            request: Dr,
           }),
           (e.RegisterForNotifyGyroQuaternionStateChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10640,35 +10640,35 @@
                 );
           }),
           (e.NotifyGyroQuaternionStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamInputManager.NotifyGyroQuaternionStateChanged#1",
-                  Cr(zr, e),
+                  Cr(Dr, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgNotifyGyroQuaternionStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamInputManager.NotifyGyroQuaternionStateChanged#1",
-                  Cr(zr, e),
+                  Cr(Dr, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.NotifyGyroSpeedStateChangedHandler = {
             name: "SteamInputManager.NotifyGyroSpeedStateChanged#1",
-            request: Dr,
+            request: zr,
           }),
           (e.RegisterForNotifyGyroSpeedStateChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10679,26 +10679,26 @@
                 );
           }),
           (e.NotifyGyroSpeedStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamInputManager.NotifyGyroSpeedStateChanged#1",
-                  Cr(Dr, e),
+                  Cr(zr, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgNotifyGyroSpeedStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
                 !1)
               : t.SendNotification(
                   "SteamInputManager.NotifyGyroSpeedStateChanged#1",
-                  Cr(Dr, e),
+                  Cr(zr, e),
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -10707,7 +10707,7 @@
             request: Pr,
           }),
           (e.RegisterForNotifyGyroAccelerometerStateChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10718,7 +10718,7 @@
                 );
           }),
           (e.NotifyGyroAccelerometerStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10730,7 +10730,7 @@
                 );
           }),
           (e.SendMsgNotifyGyroAccelerometerStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10746,7 +10746,7 @@
             request: Wr,
           }),
           (e.RegisterForNotifyGyroCalibrationStateChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10757,7 +10757,7 @@
                 );
           }),
           (e.NotifyGyroCalibrationStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10769,7 +10769,7 @@
                 );
           }),
           (e.SendMsgNotifyGyroCalibrationStateChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10785,7 +10785,7 @@
             request: ai,
           }),
           (e.RegisterForNotifyControllerPowerMenu = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10796,7 +10796,7 @@
                 );
           }),
           (e.NotifyControllerPowerMenu = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10808,7 +10808,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerPowerMenu = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10824,7 +10824,7 @@
             request: Vr,
           }),
           (e.RegisterForNotifyUnpairedTritonPluggedIn = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10835,7 +10835,7 @@
                 );
           }),
           (e.NotifyUnpairedTritonPluggedIn = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10847,7 +10847,7 @@
                 );
           }),
           (e.SendMsgNotifyUnpairedTritonPluggedIn = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10863,7 +10863,7 @@
             request: qr,
           }),
           (e.RegisterForNotifyUnpairedTritonDocked = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10874,7 +10874,7 @@
                 );
           }),
           (e.NotifyUnpairedTritonDocked = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10886,7 +10886,7 @@
                 );
           }),
           (e.SendMsgNotifyUnpairedTritonDocked = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10902,7 +10902,7 @@
             request: Kr,
           }),
           (e.RegisterForNotifyTritonUndocked = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10913,7 +10913,7 @@
                 );
           }),
           (e.NotifyTritonUndocked = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10925,7 +10925,7 @@
                 );
           }),
           (e.SendMsgNotifyTritonUndocked = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10941,7 +10941,7 @@
             request: Hr,
           }),
           (e.RegisterForNotifySteamDonglesChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10952,7 +10952,7 @@
                 );
           }),
           (e.NotifySteamDonglesChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10964,7 +10964,7 @@
                 );
           }),
           (e.SendMsgNotifySteamDonglesChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -10980,7 +10980,7 @@
             request: oi,
           }),
           (e.RegisterForNotifyControllerDisconnected = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -10991,7 +10991,7 @@
                 );
           }),
           (e.NotifyControllerDisconnected = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11003,7 +11003,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerDisconnected = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11019,7 +11019,7 @@
             request: $r,
           }),
           (e.RegisterForNotifyControllerPairingChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -11030,7 +11030,7 @@
                 );
           }),
           (e.NotifyControllerPairingChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11042,7 +11042,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerPairingChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11058,7 +11058,7 @@
             request: wi,
           }),
           (e.RegisterForNotifyControllerListChanged = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -11069,7 +11069,7 @@
                 );
           }),
           (e.NotifyControllerListChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11081,7 +11081,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerListChanged = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11097,7 +11097,7 @@
             request: Ii,
           }),
           (e.RegisterForNotifyControllerBatteryState = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -11108,7 +11108,7 @@
                 );
           }),
           (e.NotifyControllerBatteryState = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11120,7 +11120,7 @@
                 );
           }),
           (e.SendMsgNotifyControllerBatteryState = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11136,7 +11136,7 @@
             request: vi,
           }),
           (e.RegisterForNotifyFirstSteamControllerConnection = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -11147,7 +11147,7 @@
                 );
           }),
           (e.NotifyFirstSteamControllerConnection = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11159,7 +11159,7 @@
                 );
           }),
           (e.SendMsgNotifyFirstSteamControllerConnection = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11175,7 +11175,7 @@
             request: Ci,
           }),
           (e.RegisterForNotifyTritonQos = function (t, r) {
-            return null == (r = r || Tr().GetDefaultHandlerRegistry())
+            return null == (r = r || Rr().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -11186,7 +11186,7 @@
                 );
           }),
           (e.NotifyTritonQos = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11198,7 +11198,7 @@
                 );
           }),
           (e.SendMsgNotifyTritonQos = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11215,7 +11215,7 @@
             response: Ur,
           }),
           (e.StartControllerStateFlow = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11230,7 +11230,7 @@
                 );
           }),
           (e.SendMsgStartControllerStateFlow = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11250,7 +11250,7 @@
             response: Ur,
           }),
           (e.EndControllerStateFlow = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11265,7 +11265,7 @@
                 );
           }),
           (e.SendMsgEndControllerStateFlow = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11285,7 +11285,7 @@
             response: si,
           }),
           (e.GetControllerAccessibilityStrings = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11300,7 +11300,7 @@
                 );
           }),
           (e.SendMsgGetControllerAccessibilityStrings = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11320,7 +11320,7 @@
             response: Lr,
           }),
           (e.StartGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11335,7 +11335,7 @@
                 );
           }),
           (e.SendMsgStartGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11355,7 +11355,7 @@
             response: Lr,
           }),
           (e.CancelGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11370,7 +11370,7 @@
                 );
           }),
           (e.SendMsgCancelGyroSoftwareCalibration = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11390,7 +11390,7 @@
             response: jr,
           }),
           (e.PairDongleTritonConnected = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11405,7 +11405,7 @@
                 );
           }),
           (e.SendMsgPairDongleTritonConnected = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11425,7 +11425,7 @@
             response: Yr,
           }),
           (e.GetDongles = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11438,7 +11438,7 @@
                 });
           }),
           (e.SendMsgGetDongles = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11456,7 +11456,7 @@
             response: ti,
           }),
           (e.ShouldTritonPairInOobe = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11471,7 +11471,7 @@
                 );
           }),
           (e.SendMsgShouldTritonPairInOobe = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11491,7 +11491,7 @@
             response: ei,
           }),
           (e.WaitInitialControllerStateEnumerated = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11506,7 +11506,7 @@
                 );
           }),
           (e.SendMsgWaitInitialControllerStateEnumerated = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11526,7 +11526,7 @@
             response: ci,
           }),
           (e.GetTritonPairingInfo = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11541,7 +11541,7 @@
                 );
           }),
           (e.SendMsgGetTritonPairingInfo = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11561,7 +11561,7 @@
             response: mi,
           }),
           (e.ForgetTritonPairingBond = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11576,7 +11576,7 @@
                 );
           }),
           (e.SendMsgForgetTritonPairingBond = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11596,7 +11596,7 @@
             response: _i,
           }),
           (e.ForgetDonglePairingBond = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11611,7 +11611,7 @@
                 );
           }),
           (e.SendMsgForgetDonglePairingBond = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11631,7 +11631,7 @@
             response: bi,
           }),
           (e.GetControllerName = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11646,7 +11646,7 @@
                 );
           }),
           (e.SendMsgGetControllerName = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11666,7 +11666,7 @@
             response: Si,
           }),
           (e.GetControllerList = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11681,7 +11681,7 @@
                 );
           }),
           (e.SendMsgGetControllerList = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11701,7 +11701,7 @@
             response: pi,
           }),
           (e.EnableDockedInput = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11716,7 +11716,7 @@
                 );
           }),
           (e.SendMsgEnableDockedInput = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11732,11 +11732,11 @@
           }),
           (e.EnableQosStatusHandler = {
             name: "SteamInputManager.EnableQosStatus#1",
-            request: Ri,
-            response: Ti,
+            request: Ti,
+            response: Ri,
           }),
           (e.EnableQosStatus = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11745,13 +11745,13 @@
                 })
               : t.SendMsg(
                   "SteamInputManager.EnableQosStatus#1",
-                  Cr(Ri, e),
-                  Ti,
+                  Cr(Ti, e),
+                  Ri,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
           (e.SendMsgEnableQosStatus = function (e, t) {
-            return null == (t = t || Tr().GetDefaultTransport())
+            return null == (t = t || Rr().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11760,8 +11760,8 @@
                 })
               : t.SendMsg(
                   "SteamInputManager.EnableQosStatus#1",
-                  Cr(Ri, e),
-                  Ti,
+                  Cr(Ti, e),
+                  Ri,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           });
@@ -11927,8 +11927,8 @@
       })(Ei || (Ei = {}));
       const Ni = new x("FocusNavigation").Debug,
         Oi = new x("FocusNavigation").Assert,
-        zi = "focus-nav-show-debug-focus-ring";
-      function Di(e, t) {
+        Di = "focus-nav-show-debug-focus-ring";
+      function zi(e, t) {
         return (
           e?.eActivationSourceType === t?.eActivationSourceType &&
           e?.nActiveGamepadIndex === t?.nActiveGamepadIndex &&
@@ -11950,7 +11950,7 @@
             nActiveGamepadIndex: -1,
             nLastActiveGamepadIndex: -1,
           },
-          Di,
+          zi,
         );
         m_navigationSourceSupportsFocus = (function (e, t, r) {
           return new W(e, t, r);
@@ -11968,7 +11968,7 @@
           window.FocusNavController = this;
         }
         Init() {
-          this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(zi));
+          this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(Di));
         }
         CreateContext(e, t, r) {
           const i = new rt(this, e, t, r);
@@ -12036,8 +12036,8 @@
           this.m_bShowDebugFocusRing.Set(e),
             (function (e) {
               e
-                ? sessionStorage.setItem(zi, "shown")
-                : sessionStorage.removeItem(zi);
+                ? sessionStorage.setItem(Di, "shown")
+                : sessionStorage.removeItem(Di);
             })(e);
         }
         GetShowDebugFocusRing() {
@@ -12372,26 +12372,26 @@
         }
       }
       function Wi(e) {
-        if (!e) return De.NONE;
+        if (!e) return ze.NONE;
         switch (e) {
           case "column":
-            return De.COLUMN;
+            return ze.COLUMN;
           case "column-reverse":
-            return De.COLUMN_REVERSE;
+            return ze.COLUMN_REVERSE;
           case "row":
-            return De.ROW;
+            return ze.ROW;
           case "row-reverse":
-            return De.ROW_REVERSE;
+            return ze.ROW_REVERSE;
           case "grid":
-            return De.GRID;
+            return ze.GRID;
           case "geometric":
-            return De.GEOMETRIC;
+            return ze.GEOMETRIC;
           default:
             return (
               (function (e, t, ...r) {
                 j(!1, t, ...r);
               })(0, `Unhandled flow-children: ${e}`),
-              De.NONE
+              ze.NONE
             );
         }
       }
@@ -12795,9 +12795,9 @@
               case "TEXTAREA":
                 return !0;
               case "DIV":
-                if (le(e) != De.COLUMN) return !0;
+                if (le(e) != ze.COLUMN) return !0;
                 const t = le(e.parentElement);
-                return t == De.ROW || t == De.ROW_REVERSE;
+                return t == ze.ROW || t == ze.ROW_REVERSE;
               default:
                 return !1;
             }
@@ -12883,25 +12883,25 @@
             onMenuActionDescription: v,
             actionDescriptionMap: M,
             onOKButton: C,
-            onCancelButton: R,
-            onSecondaryButton: T,
+            onCancelButton: T,
+            onSecondaryButton: R,
             onOptionsButton: I,
             onMenuButton: F,
             onMoveUp: A,
             onMoveRight: E,
             onMoveDown: N,
             onMoveLeft: O,
-            onGamepadDirection: z,
-            bFocusRingRoot: D,
+            onGamepadDirection: D,
+            bFocusRingRoot: z,
             type: P,
             ...W
           } = o,
           G = qi(C),
-          U = qi(R),
-          x = qi(T),
+          U = qi(T),
+          x = qi(R),
           L = qi(I),
           k = qi(F),
-          j = qi(z);
+          j = qi(D);
         P || (P = "Panel"),
           "PanelGroup" == P &&
             ({ onOKButtonHandler: G, onCancelButtonHandler: U } = (function (
@@ -12984,8 +12984,8 @@
               n
             );
           })(A, E, N, O),
-          V = d ? Wi(d) : De.NONE;
-        V != De.NONE && (W.layout = V),
+          V = d ? Wi(d) : ze.NONE;
+        V != ze.NONE && (W.layout = V),
           h
             ? (W.navEntryPreferPosition = Pe.MAINTAIN_X)
             : b
@@ -13012,7 +13012,7 @@
             })),
           W.focusable && void 0 === t.attr("tabIndex") && t.attr("tabIndex", 0),
           W.focusable && a.SubscribableHasFocus.Subscribe((t) => Xi(e, t)),
-          D &&
+          z &&
             ((a.m_FocusRing = ji(t)),
             "static" == t.css("position") && t.css("position", "relative"));
         const q = {
@@ -13084,7 +13084,7 @@
         },
       };
     },
-    351: (e, t, r) => {
+    249: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13097,12 +13097,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    403: (e, t, r) => {
+    453: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(212),
-        s = r(351);
+        n = r(798),
+        s = r(249);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

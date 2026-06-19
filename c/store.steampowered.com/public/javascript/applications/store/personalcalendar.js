@@ -1,5 +1,5 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7701],
+  [27701],
   {
     chunkid: (module) => {
       module.exports = {
@@ -532,6 +532,20 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
+          nSlideIndex: _,
+          nStartingSlideIndex: _,
+          ref: _,
+          children: _,
+        } = _;
+        return void 0 === _
+          ? _
+          : (0, _.jsx)("div", {
+              ref: _ === _ ? _ : void 0,
+              children: _,
+            });
+      }
+      function _(_) {
+        const {
             padded: _,
             gap: _,
             children: _,
@@ -541,7 +555,8 @@
             startingSlide: _,
           } = _,
           _ = _.useRef(null),
-          _ = _.useRef(null);
+          _ = _.useRef(null),
+          _ = (0, _._)();
         _.useLayoutEffect(() => {
           _.current &&
             _.current &&
@@ -549,36 +564,50 @@
               _.current.getBoundingClientRect().left -
               _.current.getBoundingClientRect().left);
         }, [_]);
-        const _ = (0, _.jsxs)(_._, {
-          "flow-children": "row",
-          style: {
-            gap: _ ? _ + "px" : void 0,
-          },
-          className: (0, _._)(
-            {
-              SaleSectionCarouselPadding: _,
-            },
-            "ScrollSnapCarousel",
-            "SaleSectionCarousel",
-            _.ScrollSnapCarousel,
-            _.className,
-          ),
-          ref: _,
-          children: [
-            _ &&
-              _.Children.map(_, (_, _) =>
-                (0, _.jsx)("div", {
-                  ref: _ == _ ? _ : void 0,
+        const _ = _.Children.map(_, (_, _) =>
+            _
+              ? (0, _.jsx)(_._, {
+                  rootMargin: "0px 50% 0px 50%",
+                  horizontal: !0,
+                  placeholderWidth: _ ?? 1,
+                  placeholderHeight: 1,
+                  holdGamepadFocus: _,
+                  children: (0, _.jsx)(_, {
+                    nSlideIndex: _,
+                    nStartingSlideIndex: _,
+                    ref: _,
+                    children: _,
+                  }),
+                })
+              : (0, _.jsx)(_, {
+                  nSlideIndex: _,
+                  nStartingSlideIndex: _,
+                  ref: _,
                   children: _,
                 }),
-              ),
-            !_ && _,
-          ],
-        });
+          ),
+          _ = (0, _.jsx)(_._, {
+            "flow-children": "row",
+            style: {
+              gap: _ ? _ + "px" : void 0,
+            },
+            className: (0, _._)(
+              {
+                SaleSectionCarouselPadding: _,
+              },
+              "ScrollSnapCarousel",
+              "SaleSectionCarousel",
+              _.ScrollSnapCarousel,
+              _.className,
+            ),
+            ref: _,
+            children: _,
+          });
         return _
           ? (0, _.jsx)(_._, {
+              rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
-              placeholderWidth: _ ?? 1,
+              placeholderWidth: 1,
               placeholderHeight: _ ?? 1,
               children: _,
             })
@@ -684,16 +713,16 @@
         visibleSlides: _.visibleSlides,
       }));
       function _(_) {
-        const { bPreventSnapCarousel: _ } = _,
+        const { bForceSimpleCarousel: _, screenIsWide: _, children: _ } = _,
           _ = (0, _._)();
-        return _ || ((_.screenIsWide || _) && !_.bForceSimpleCarousel)
+        return (!_ && !_) || _
           ? (0, _.jsx)(_, {
               ..._,
-              children: _.children,
+              children: _,
             })
           : (0, _.jsx)(_, {
               ..._,
-              children: _.children,
+              children: _,
             });
       }
       function _(_) {

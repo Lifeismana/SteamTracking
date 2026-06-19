@@ -25,10 +25,11 @@ function OnAddNewHardware()
 function ShowSavedHardwareDialog( rgSavedHardware, funcOnHardwareSelected )
 {
 	var content = $J( "<div>", { class: 'saved_hardware_list' } );
+	const strPanelAttr = '{"focusable":true,"clickOnActivate":true}';
 	for ( var i = 0; i < rgSavedHardware.length; ++i )
 	{
 		var hw = rgSavedHardware[i];
-		var hwDiv = $J( "<div>", { class: 'saved_hardware', text: hw.friendly_name } );
+		var hwDiv = $J( "<div>", { class: 'saved_hardware', text: hw.friendly_name, 'data-panel': strPanelAttr } );
 		hwDiv.data( 'saved_hardware_id', hw.hardware_id );
 		hwDiv.click( function( event ) {
 			var el = $J( event.target );
@@ -45,7 +46,7 @@ function ShowSavedHardwareDialog( rgSavedHardware, funcOnHardwareSelected )
 
 	// new
 	{
-		var hwDiv = $J( "<div>", { class: 'saved_hardware', text: 'Add new PC configuration' } );
+		var hwDiv = $J( "<div>", { class: 'saved_hardware', text: 'Add new PC configuration', 'data-panel': strPanelAttr } );
 		hwDiv.click( function() {
 			OnAddNewHardware();
 		} );

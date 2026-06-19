@@ -5344,6 +5344,7 @@
                     bw: n.gp.writeBool,
                   },
                   order: { n: 6, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  ispublic: { n: 7, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             xe.sm_m
@@ -5587,6 +5588,7 @@
           return "CPlayer_GetUserAchievements_Response_Achievement";
         }
       }
+      s.Message;
       class Ae extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {

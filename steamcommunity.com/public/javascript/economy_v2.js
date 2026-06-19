@@ -588,6 +588,7 @@ function CInventory( owner, appid, contextid, rgContextData )
 	this.m_rgCurrencies = [];
 	this.m_rgDescriptions = {};
 	this.m_rgAssetProperties = {};
+	this.m_rgAssetAccessories = {};
 
 	this.m_strCompositeID = this.m_steamid + '_' + this.appid + '_' + this.contextid;
 
@@ -791,6 +792,10 @@ CInventory.prototype.AddInventoryData = function( data )
 			{
 				this.m_rgAssetProperties[ key ] = asset_properties.asset_properties;
 			}
+			if ( !this.m_rgAssetAccessories[ key ] )
+			{
+				this.m_rgAssetAccessories[ key ] = asset_properties.asset_accessories;
+			}
 		}
 	}
 
@@ -837,6 +842,10 @@ CInventory.prototype.AddInventoryData = function( data )
 			if ( this.m_rgAssetProperties[ asset.assetid ] )
 			{
 				asset.asset_properties = this.m_rgAssetProperties[ asset.assetid ];
+			}
+			if ( this.m_rgAssetAccessories[ asset.assetid ] )
+			{
+				asset.asset_accessories = this.m_rgAssetAccessories[ asset.assetid ];
 			}
 
 			if ( asset.is_currency )
@@ -1943,6 +1952,7 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 			missing: rgItem.missing,
 			est_usd: rgItem.est_usd,
 			asset_properties: rgItem.asset_properties,
+			asset_accessories: rgItem.asset_accessories,
 		};
 		RenderItemInfo( sNewInfo, rgItem.description, asset );
 	}

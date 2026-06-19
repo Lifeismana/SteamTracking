@@ -1972,9 +1972,6 @@ html:not(.touch)
   color: #95a6b2;
   margin-bottom: 4px;
 }
-._2L6sVk9vOgKcXO6DgZHpJ9 {
-  width: 100px;
-}
 .NLpQmAPIbG71U6eWdaOa1,
 .T3A9t1mjAR00ljJGlBapl {
   top: unset;
@@ -3079,6 +3076,9 @@ html.responsive.touch .fiveElementEightGap {
   flex-grow: 2;
   flex-basis: 0;
   margin-bottom: 12px;
+}
+._2L6sVk9vOgKcXO6DgZHpJ9 {
+  width: 100px;
 }
 ._861OI3fFcj_3yxoWXG_5_ {
   display: flex;

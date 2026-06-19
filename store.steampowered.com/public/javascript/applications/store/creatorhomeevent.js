@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [3276],
+  [83276],
   {
     21895: (e) => {
       e.exports = {
@@ -330,34 +330,35 @@
             ref: d,
             variant: m = "default",
             color: p,
-            ..._
+            align: _ = "center",
+            ...h
           } = e,
-          h = "indeterminate" === n,
-          x = h ? u : i,
-          v = () => {
-            r || (t && t(!!h || !n));
+          x = "indeterminate" === n,
+          v = x ? u : i,
+          b = () => {
+            r || (t && t(!!x || !n));
           };
         return (0, a.jsxs)(o.s, {
-          align: "center",
+          align: _,
           ref: d,
           role: "checkbox",
-          "aria-checked": h ? "mixed" : n,
+          "aria-checked": x ? "mixed" : n,
           "data-state": g(n),
           className: c()(s.Root, s[`Variant-${m}`], r && s.Disabled),
-          onClick: v,
+          onClick: b,
           tabIndex: 0,
           onKeyDown: (e) => {
             r ||
-              (" " === e.key && (v(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (b(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": r,
           "data-accent-color": p,
-          ..._,
+          ...h,
           children: [
             (0, a.jsx)("div", {
               className: s.Checkbox,
-              children: n && (0, a.jsx)(x, { className: s.Icon }),
+              children: n && (0, a.jsx)(v, { className: s.Icon }),
             }),
             l,
           ],
@@ -1125,7 +1126,7 @@
       function O(e) {
         return ["useEventUserPermissions", T.iA.accountid, e];
       }
-      var F = t(55672),
+      var F = t(78686),
         z = t(50909),
         H = t.n(z);
       function q(e) {
@@ -4752,7 +4753,7 @@
         });
       }
       var Kt = t(77021),
-        Qt = t(76647);
+        Qt = t(75263);
       function Jt(e) {
         const {
             promotionName: n,

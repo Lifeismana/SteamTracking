@@ -591,7 +591,7 @@
       function ge(e) {
         const { eventModel: n, calendarEvent: t } = e,
           o = (0, pe.eT)(n.clanSteamID.GetAccountID()),
-          { elDialogElement: s, fnShowLogonDialog: i } = (0, he.E)(),
+          { elDialogElement: s, fnShowLogonDialog: i } = (0, he.lS)(),
           l = f.useCallback(async () => {
             d.iA.logged_in
               ? (await se.Fm.Get().UpdateFollowOrIgnoreCurator(

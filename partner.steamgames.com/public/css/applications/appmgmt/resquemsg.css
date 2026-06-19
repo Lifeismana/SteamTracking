@@ -423,6 +423,15 @@
   width: 20px;
   height: 20px;
 }
+[data-checkbox] {
+  gap: 0 !important;
+  --bg-default: white !important;
+  --bg-focus: white !important;
+  --border-color: #111 !important;
+}
+[data-checkbox] [class*="checkbox_Checkbox"] {
+  margin-right: 5px;
+}
 @media screen and (max-width: 940px) {
   ._1oXNiM3xAFJRy_Ze38gkG3 {
     padding-left: 1em;

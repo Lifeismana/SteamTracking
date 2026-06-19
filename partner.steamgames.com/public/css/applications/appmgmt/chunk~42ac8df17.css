@@ -5203,7 +5203,7 @@ html.touch ._3FAid_cwwxW8-9Sp6pSPqS ._2GqXfP0dBAJl9ozuBV3Jqh,
   mix-blend-mode: normal;
   backdrop-filter: blur(10px);
   position: relative;
-  z-index: 1;
+  z-index: 4;
   transition: transform 0.25s ease-in-out;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
   color: #fff;

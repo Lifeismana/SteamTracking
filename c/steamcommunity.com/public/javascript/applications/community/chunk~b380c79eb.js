@@ -94,6 +94,7 @@
             ref: _,
             variant: _ = "default",
             color: _,
+            align: _ = "center",
             ..._
           } = _,
           _ = "indeterminate" === _,
@@ -102,7 +103,7 @@
             _ || (_ && __webpack_require__(!!_ || !_));
           };
         return (0, _.jsxs)(_._, {
-          align: "center",
+          align: _,
           ref: _,
           role: "checkbox",
           "aria-checked": _ ? "mixed" : _,
@@ -1449,16 +1450,20 @@
           null !== (_ = (0, _._)(_.args)) && void 0 !== _
             ? _
             : (0, _._)(_.args, "href");
-        return _ && __webpack_require__.match(/^https?:\/\//)
-          ? ((0, _._)(_) && (_ = (0, _._)(_)),
-            (0, _.jsx)(_._, {
-              target: "_blank",
-              href: _,
-              underline: "auto",
-              contrast: "title",
-              children: _.children,
-            }))
-          : _.children;
+        return (
+          __webpack_require__.startsWith("steamcommunity.com/") &&
+            (_ = "https://" + _),
+          _ && __webpack_require__.match(/^https?:\/\//)
+            ? ((0, _._)(_) && (_ = (0, _._)(_)),
+              (0, _.jsx)(_._, {
+                target: "_blank",
+                href: _,
+                underline: "auto",
+                contrast: "title",
+                children: _.children,
+              }))
+            : _.children
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

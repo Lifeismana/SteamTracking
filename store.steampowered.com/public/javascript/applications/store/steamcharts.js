@@ -730,34 +730,35 @@
             ref: d,
             variant: p = "default",
             color: g,
-            ..._
+            align: _ = "center",
+            ...h
           } = e,
-          h = "indeterminate" === t,
-          x = h ? m : o,
-          S = () => {
-            s || (a && a(!!h || !t));
+          x = "indeterminate" === t,
+          S = x ? m : o,
+          C = () => {
+            s || (a && a(!!x || !t));
           };
         return (0, n.jsxs)(r.s, {
-          align: "center",
+          align: _,
           ref: d,
           role: "checkbox",
-          "aria-checked": h ? "mixed" : t,
+          "aria-checked": x ? "mixed" : t,
           "data-state": u(t),
           className: c()(i.Root, i[`Variant-${p}`], s && i.Disabled),
-          onClick: S,
+          onClick: C,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (S(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (C(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
           "data-accent-color": g,
-          ..._,
+          ...h,
           children: [
             (0, n.jsx)("div", {
               className: i.Checkbox,
-              children: t && (0, n.jsx)(x, { className: i.Icon }),
+              children: t && (0, n.jsx)(S, { className: i.Icon }),
             }),
             l,
           ],
@@ -1553,7 +1554,7 @@
       function O(e) {
         return ["useEventUserPermissions", B.iA.accountid, e];
       }
-      var F = a(55672),
+      var F = a(78686),
         H = a(50909),
         W = a.n(H);
       function z(e) {
@@ -5180,7 +5181,7 @@
         });
       }
       var Za = a(77021),
-        Ka = a(76647);
+        Ka = a(75263);
       function Qa(e) {
         const {
             promotionName: t,

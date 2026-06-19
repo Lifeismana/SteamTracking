@@ -1,11 +1,11 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10740322";
+var CLSTAMP = "10748202";
 (() => {
   "use strict";
   var e,
     t = {
-      74456: (e, t, n) => {
+      42118: (e, t, n) => {
         function i(e, t) {
           return (
             (e = Math.ceil(e)),
@@ -21,7 +21,7 @@ var CLSTAMP = "10740322";
         function s() {
           return !!window.document;
         }
-        var r = n(62514);
+        var r = n(49211);
         const c = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -75,9 +75,9 @@ var CLSTAMP = "10740322";
             WEBSITE_ID: "Unknown",
             get SESSIONID() {
               return (function () {
-                if (!s()) return S || (S = m()), S;
+                if (!s()) return S || (S = E()), S;
                 let e = o("sessionid");
-                e || (e = m());
+                e || (e = E());
                 return e;
               })();
             },
@@ -89,7 +89,7 @@ var CLSTAMP = "10740322";
             FORCED_DISPLAY_MODE: void 0,
             ON_DECK: !1,
             ON_FRAME: !1,
-            ON_STEAMOS: !1,
+            IS_STEAMOS_MANAGEMENT_ENABLED: !1,
             ON_STEAMOS_CLIENT_BRANCH: !1,
             IN_GAMESCOPE: !1,
             IN_LOGIN: !1,
@@ -132,7 +132,7 @@ var CLSTAMP = "10740322";
           l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
           d = "webui_config";
         let S;
-        function m() {
+        function E() {
           const e = (function () {
             let e = "";
             for (let t = 0; t < 24; t++) e += i(0, 35).toString(36);
@@ -159,7 +159,7 @@ var CLSTAMP = "10740322";
             e
           );
         }
-        function E(e = d) {
+        function m(e = d) {
           const t = {},
             n = p("config", e);
           n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
@@ -178,9 +178,9 @@ var CLSTAMP = "10740322";
           r && (Object.assign(a, r), (t.broadcastConfig = !0));
           const S = p("community", e);
           S && (Object.assign(u, S), (t.communityConfig = !0));
-          const m = p("event", e);
+          const E = p("event", e);
           return (
-            m && (Object.assign(l, m), (t.eventConfig = !0)),
+            E && (Object.assign(l, E), (t.eventConfig = !0)),
             (C = !0),
             h.forEach((e) => e()),
             t
@@ -430,7 +430,7 @@ var CLSTAMP = "10740322";
         })();
         (window.ClientConnectionAPI = f),
           document.addEventListener("DOMContentLoaded", function () {
-            E(), (window.ClientConnectionAPI = f);
+            m(), (window.ClientConnectionAPI = f);
           });
       },
     },
@@ -501,6 +501,6 @@ var CLSTAMP = "10740322";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var o = i.O(void 0, [9489], () => i(74456));
+  var o = i.O(void 0, [9489], () => i(42118));
   o = i.O(o);
 })();

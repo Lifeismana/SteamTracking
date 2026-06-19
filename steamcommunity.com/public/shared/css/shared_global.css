@@ -1781,6 +1781,7 @@ div#global_header .menuitem.supernav_active {
 	flex-direction: row;
 	align-items: center;
 	gap: 4px;
+	flex-wrap: wrap;
 }
 
 .pagebtn, a.pagebtn, .page_current, .pagelink {

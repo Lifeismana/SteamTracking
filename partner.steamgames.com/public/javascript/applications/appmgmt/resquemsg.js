@@ -433,7 +433,7 @@
         L = i(92825),
         N = i.n(L),
         E = i(44165),
-        B = i(47911),
+        B = i(78686),
         G = (i(78327), i(78603), i(6866)),
         F = i(12842),
         U = i.n(F);
@@ -610,62 +610,64 @@
                 t.edistributor == e.edistributor &&
                 t.product_identifier == e.product_identifier,
             );
-          })(t);
-        if (!i)
-          return (0, n.jsxs)("div", {
-            children: [
-              "Unexpected: Could not find ProductID: ",
-              t.edistributor,
-              " : ",
-              t.product_identifier,
-            ],
-          });
-        const o = i.product_description + " " + i.distributor,
+          })(t),
+          o = i?.product_description + " " + i?.distributor,
           a = (function (e) {
             const [t, i] = (0, s.useState)(() =>
               f.Get().GetPositionMessagingForProduct(e),
             );
             return (0, p.hL)(f.Get().GetPositionListChangeCallback(e), i), t;
           })(t);
-        return (0, n.jsxs)(C.qx, {
-          bStartMinimized: !1,
-          title: o,
-          tooltip: `distributor enum: ${i.edistributor}, part number: ${i.part_number}, product identifier: ${i.product_identifier}`,
-          children: [
-            (0, n.jsx)(j.$n, {
-              onClick: (e) =>
-                (0, P.pg)((0, n.jsx)(J, { productID: t }), (0, k.uX)(e)),
-              children: "Add new start position",
-            }),
-            (0, n.jsxs)("table", {
-              className: M.ItemTable,
+        return i
+          ? (0, n.jsxs)(C.qx, {
+              bStartMinimized: !1,
+              title: o,
+              tooltip: `distributor enum: ${i.edistributor}, part number: ${i.part_number}, product identifier: ${i.product_identifier}`,
               children: [
-                (0, n.jsx)("thead", {
-                  children: (0, n.jsxs)("tr", {
-                    children: [
-                      (0, n.jsx)("th", { children: "Starting Queue Position" }),
-                      (0, n.jsx)("th", {
-                        children: "Estimate Date Receive Invite",
-                      }),
-                      (0, n.jsx)("th", { children: "Localized Date" }),
-                      (0, n.jsx)("th", { children: "Entry Created By" }),
-                      (0, n.jsx)("th", {}),
-                    ],
-                  }),
+                (0, n.jsx)(j.$n, {
+                  onClick: (e) =>
+                    (0, P.pg)((0, n.jsx)(J, { productID: t }), (0, k.uX)(e)),
+                  children: "Add new start position",
                 }),
-                (0, n.jsx)("tbody", {
-                  children: a.map((e) =>
-                    (0, n.jsx)(
-                      K,
-                      { positionMsg: e },
-                      o + e.start_queue_position,
-                    ),
-                  ),
+                (0, n.jsxs)("table", {
+                  className: M.ItemTable,
+                  children: [
+                    (0, n.jsx)("thead", {
+                      children: (0, n.jsxs)("tr", {
+                        children: [
+                          (0, n.jsx)("th", {
+                            children: "Starting Queue Position",
+                          }),
+                          (0, n.jsx)("th", {
+                            children: "Estimate Date Receive Invite",
+                          }),
+                          (0, n.jsx)("th", { children: "Localized Date" }),
+                          (0, n.jsx)("th", { children: "Entry Created By" }),
+                          (0, n.jsx)("th", {}),
+                        ],
+                      }),
+                    }),
+                    (0, n.jsx)("tbody", {
+                      children: a.map((e) =>
+                        (0, n.jsx)(
+                          K,
+                          { positionMsg: e },
+                          o + e.start_queue_position,
+                        ),
+                      ),
+                    }),
+                  ],
                 }),
               ],
-            }),
-          ],
-        });
+            })
+          : (0, n.jsxs)("div", {
+              children: [
+                "Unexpected: Could not find ProductID: ",
+                t.edistributor,
+                " : ",
+                t.product_identifier,
+              ],
+            });
       }
       function K(e) {
         const { positionMsg: t } = e;

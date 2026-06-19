@@ -220,6 +220,7 @@ message CPlayer_GetGameAchievements_Response_Group {
 	optional bool archived = 4;
 	optional bool developeronly = 5;
 	optional uint32 order = 6;
+	optional bool ispublic = 7;
 }
 
 message CPlayer_GetGameBadgeLevels_Request {

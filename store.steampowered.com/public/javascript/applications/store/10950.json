@@ -1,0 +1,23 @@
+{
+    "language": "thai",
+    "LoginRedirect_Dialog_Title": "เข้าสู่ระบบ",
+    "LoginRedirect_Dialog_Description": "เข้าสู่ระบบเพื่อเพิ่มผลิตภัณฑ์นี้ลงในสิ่งที่อยากได้ของคุณ ติดตาม หรือทำเครื่องหมายเป็นถูกละเว้น การคลิก \"ตกลง\" จะเปลี่ยนเส้นทางไปยังหน้าเข้าสู่ระบบ",
+    "Wishlist_NotSignedIn": "เข้าสู่ระบบหรือเปิดหน้านี้ในแอป Steam เพื่อเพิ่มลงในสิ่งที่อยากได้ ติดตาม หรือสั่งซื้อ",
+    "VerifiedProgram_DeckTitle": "%1$s %2$sบน Steam Deck",
+    "VerifiedProgram_DeckTitle_Verified": "เล่นได้ดี",
+    "VerifiedProgram_DeckSubTitle": "เกมนี้และเกมอื่น ๆ อีกมากมายได้รับการทดสอบอย่างเต็มรูปแบบแล้ว และ%1$s",
+    "VerifiedProgram_GreatOnDeck": "เล่นได้ดีบน Steam Deck",
+    "VerifiedProgram_DeckAlt": "เครื่องหมายแสดงว่าเล่นได้ดี",
+    "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
+    "VerifiedProgram_DeckShopBannerAlt": "แบนเนอร์ของ Steam Deck: \"เกมของคุณ ไม่ว่าจะอยู่ที่ไหน\"",
+    "VerifiedProgram_DeckDisclaimer": "ตัวอย่างโฆษณาอาจไม่แสดงให้เห็นเกมเพลย์จริงบน Steam Deck",
+    "StoreItemFound": "%1$s พบแล้ว (%2$s)",
+    "StoreItemNotFound": "ไม่พบ (%1$s)",
+    "SteamURLAccepted": "%1$s URL ได้รับการยอมรับ",
+    "SteamURLInvalid": "URL ที่ไม่ถูกต้องไม่นำไปยังคุณสมบัติ Steam (ร้านค้า/ชุมชน)",
+    "AnchorHashInputInvalid": "Invalid Input",
+    "PriceGrid_NormalPrice": "ปกติ",
+    "PriceGrid_RecentPrice": "ต่ำสุดใน 30 วัน",
+    "PriceGrid_CurrentPrice": "ปัจจุบัน",
+    "Dummy": "dummy"
+}

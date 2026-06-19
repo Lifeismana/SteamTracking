@@ -15155,19 +15155,20 @@
     },
     84547: (e, t, r) => {
       "use strict";
-      r.d(t, { E: () => u });
+      r.d(t, { lS: () => u });
       var i = r(7850),
         n = r(64753),
         a = r(8527),
-        s = r(16261),
+        s = r(78686),
         o = r(78395),
         l = r(21869),
-        c = r(32469);
+        c = r(67936);
       function d(e) {
-        const { closeModal: t } = e;
+        const { closeModal: t, strDescOverride: r } = e;
         return (0, i.jsx)(o.o0, {
           strTitle: c.F5.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: c.F5.Localize("#LoginRedirect_Dialog_Description"),
+          strDescription:
+            r || c.F5.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: t,
           strOKButtonText: s.Z.Localize("#Button_OK"),
           onOK: () => {
@@ -15179,14 +15180,14 @@
           },
         });
       }
-      function u() {
-        const [e, t, r] = (0, n.uD)();
+      function u(e) {
+        const [t, r, a] = (0, n.uD)();
         return {
           elDialogElement: (0, i.jsx)(l.E, {
-            active: e,
-            children: (0, i.jsx)(d, { closeModal: r }),
+            active: t,
+            children: (0, i.jsx)(d, { closeModal: a, strDescOverride: e }),
           }),
-          fnShowLogonDialog: t,
+          fnShowLogonDialog: r,
         };
       }
     },
@@ -15218,7 +15219,7 @@
         const { id: t, snr: r, classOverride: n } = e,
           [a, s] = (0, u.useState)(!1),
           o = (0, g.m)("GameHoverIgnoreButton"),
-          { elDialogElement: l, fnShowLogonDialog: c } = (0, f.E)(),
+          { elDialogElement: l, fnShowLogonDialog: c } = (0, f.lS)(),
           d = t && "appid" in t ? t.appid : void 0,
           h = (0, S.BD)(d),
           { mutateAsync: v } = (0, M.Q)(d, !h, r),
@@ -15979,7 +15980,7 @@
         m = r(52038),
         p = r(64769),
         g = r.n(p),
-        _ = r(16261),
+        _ = r(78686),
         B = r(8527);
       function b(e) {
         const { id: t, bTruncateTotalReviews: r, bShowTooltip: p } = e,
@@ -16105,7 +16106,7 @@
         B = r(78327),
         b = r(64769),
         h = r.n(b),
-        y = r(16261);
+        y = r(78686);
       function f(e) {
         const {
             id: t,
@@ -16115,7 +16116,7 @@
             bShowInGamepadUI: w,
           } = e,
           { data: S } = (0, o.J$)(t),
-          { elDialogElement: M, fnShowLogonDialog: v } = (0, s.E)(),
+          { elDialogElement: M, fnShowLogonDialog: v } = (0, s.lS)(),
           [C, R] = (0, u.useState)(() => {
             var e, r;
             return S &&
@@ -16289,42 +16290,42 @@
         });
       }
     },
-    32469: (e, t, r) => {
+    67936: (e, t, r) => {
       "use strict";
       r.d(t, { F5: () => a });
       var i = r(13843);
       const n = {};
-      (n.arabic = () => r.e(3695).then(r.t.bind(r, 93695, 19))),
-        (n.brazilian = () => r.e(1091).then(r.t.bind(r, 41091, 19))),
-        (n.bulgarian = () => r.e(9180).then(r.t.bind(r, 89180, 19))),
-        (n.czech = () => r.e(1514).then(r.t.bind(r, 21514, 19))),
-        (n.danish = () => r.e(5598).then(r.t.bind(r, 45598, 19))),
-        (n.dutch = () => r.e(5971).then(r.t.bind(r, 55971, 19))),
-        (n.english = () => r.e(7217).then(r.t.bind(r, 67217, 19))),
-        (n.finnish = () => r.e(7686).then(r.t.bind(r, 27686, 19))),
-        (n.french = () => r.e(7623).then(r.t.bind(r, 7623, 19))),
-        (n.german = () => r.e(7757).then(r.t.bind(r, 97757, 19))),
-        (n.greek = () => r.e(6345).then(r.t.bind(r, 46345, 19))),
-        (n.hungarian = () => r.e(5600).then(r.t.bind(r, 5600, 19))),
-        (n.indonesian = () => r.e(1163).then(r.t.bind(r, 51163, 19))),
-        (n.italian = () => r.e(1913).then(r.t.bind(r, 71913, 19))),
-        (n.japanese = () => r.e(9872).then(r.t.bind(r, 79872, 19))),
-        (n.koreana = () => r.e(2322).then(r.t.bind(r, 12322, 19))),
-        (n.latam = () => r.e(4954).then(r.t.bind(r, 94954, 19))),
-        (n.malay = () => r.e(4753).then(r.t.bind(r, 87134, 19))),
-        (n.norwegian = () => r.e(8341).then(r.t.bind(r, 48341, 19))),
-        (n.polish = () => r.e(7890).then(r.t.bind(r, 97890, 19))),
-        (n.portuguese = () => r.e(1810).then(r.t.bind(r, 21810, 19))),
-        (n.romanian = () => r.e(5500).then(r.t.bind(r, 75500, 19))),
-        (n.russian = () => r.e(2268).then(r.t.bind(r, 72268, 19))),
-        (n.schinese = () => r.e(5951).then(r.t.bind(r, 85951, 19))),
-        (n.spanish = () => r.e(8265).then(r.t.bind(r, 28265, 19))),
-        (n.swedish = () => r.e(2248).then(r.t.bind(r, 82248, 19))),
-        (n.tchinese = () => r.e(2020).then(r.t.bind(r, 62020, 19))),
-        (n.thai = () => r.e(7841).then(r.t.bind(r, 67841, 19))),
-        (n.turkish = () => r.e(4921).then(r.t.bind(r, 94921, 19))),
-        (n.ukrainian = () => r.e(1667).then(r.t.bind(r, 11667, 19))),
-        (n.vietnamese = () => r.e(4528).then(r.t.bind(r, 74528, 19)));
+      (n.arabic = () => r.e(2940).then(r.t.bind(r, 22940, 19))),
+        (n.brazilian = () => r.e(9990).then(r.t.bind(r, 59990, 19))),
+        (n.bulgarian = () => r.e(8573).then(r.t.bind(r, 38573, 19))),
+        (n.czech = () => r.e(975).then(r.t.bind(r, 40975, 19))),
+        (n.danish = () => r.e(8721).then(r.t.bind(r, 38721, 19))),
+        (n.dutch = () => r.e(354).then(r.t.bind(r, 354, 19))),
+        (n.english = () => r.e(9768).then(r.t.bind(r, 49768, 19))),
+        (n.finnish = () => r.e(2931).then(r.t.bind(r, 12931, 19))),
+        (n.french = () => r.e(6064).then(r.t.bind(r, 6064, 19))),
+        (n.german = () => r.e(2942).then(r.t.bind(r, 62942, 19))),
+        (n.greek = () => r.e(3924).then(r.t.bind(r, 13924, 19))),
+        (n.hungarian = () => r.e(9441).then(r.t.bind(r, 99441, 19))),
+        (n.indonesian = () => r.e(2584).then(r.t.bind(r, 42584, 19))),
+        (n.italian = () => r.e(7688).then(r.t.bind(r, 97688, 19))),
+        (n.japanese = () => r.e(5407).then(r.t.bind(r, 5407, 19))),
+        (n.koreana = () => r.e(5815).then(r.t.bind(r, 65815, 19))),
+        (n.latam = () => r.e(4287).then(r.t.bind(r, 44287, 19))),
+        (n.malay = () => r.e(8160).then(r.t.bind(r, 58160, 19))),
+        (n.norwegian = () => r.e(3648).then(r.t.bind(r, 33648, 19))),
+        (n.polish = () => r.e(2649).then(r.t.bind(r, 22649, 19))),
+        (n.portuguese = () => r.e(3629).then(r.t.bind(r, 23629, 19))),
+        (n.romanian = () => r.e(1555).then(r.t.bind(r, 81555, 19))),
+        (n.russian = () => r.e(1809).then(r.t.bind(r, 11809, 19))),
+        (n.schinese = () => r.e(9004).then(r.t.bind(r, 79004, 19))),
+        (n.spanish = () => r.e(7760).then(r.t.bind(r, 97760, 19))),
+        (n.swedish = () => r.e(6881).then(r.t.bind(r, 86881, 19))),
+        (n.tchinese = () => r.e(8183).then(r.t.bind(r, 28183, 19))),
+        (n.thai = () => r.e(950).then(r.t.bind(r, 10950, 19))),
+        (n.turkish = () => r.e(2568).then(r.t.bind(r, 22568, 19))),
+        (n.ukrainian = () => r.e(7038).then(r.t.bind(r, 17038, 19))),
+        (n.vietnamese = () => r.e(2327).then(r.t.bind(r, 62327, 19)));
       const a = (0, i.l)(async function (e) {
         if (n[e]) return n[e]();
       });
@@ -18847,7 +18848,7 @@
           ],
         });
       }
-      var Or = r(16261);
+      var Or = r(78686);
       function Ur(e) {
         var t;
         const { id: r, className: u } = e,
@@ -18896,7 +18897,7 @@
       "use strict";
       r.d(t, { Q: () => u });
       var i = r(7850),
-        n = r(16261),
+        n = r(78686),
         a = r(39777),
         s = r(18654),
         o = r.n(s),
@@ -19006,7 +19007,7 @@
         u = r(12155),
         m = r(32754),
         p = r(52038),
-        g = r(16261),
+        g = r(78686),
         _ = r(8527),
         B = r(72255),
         b = r(70484),
@@ -19276,7 +19277,7 @@
       r.d(t, { V: () => S });
       var i = r(7850),
         n = r(8527),
-        a = r(16261),
+        a = r(78686),
         s = r(88942),
         o = r(29385),
         l = r(24484),
@@ -19741,7 +19742,7 @@
         o = r.n(s),
         l = r(90595),
         c = r(52038),
-        d = r(16261),
+        d = r(78686),
         u = r(8527);
       function m(e) {
         const {
@@ -20214,9 +20215,9 @@
     5309: (e, t, r) => {
       "use strict";
       r.d(t, { CC: () => d, VM: () => o });
-      var i = r(77490),
+      var i = r(39832),
         n = r(3049),
-        a = r(16261),
+        a = r(78686),
         s = r(63369);
       function o(e) {
         return (null == e ? void 0 : e.is_coming_soon)
@@ -20331,7 +20332,7 @@
         s = r(61593),
         o = r.n(s),
         l = r(44566),
-        c = r(16261);
+        c = r(78686);
       const d = 0,
         u = 1,
         m = 2;
@@ -20829,43 +20830,43 @@
         return ["AccountWishlistApps", null != e ? e : 0];
       }
     },
-    67169: (e, t, r) => {
+    37523: (e, t, r) => {
       "use strict";
       r.d(t, { n: () => a });
       var i = r(13843);
       const n = {};
-      (n.arabic = () => r.e(9764).then(r.t.bind(r, 19764, 19))),
-        (n.brazilian = () => r.e(8110).then(r.t.bind(r, 38110, 19))),
-        (n.bulgarian = () => r.e(4245).then(r.t.bind(r, 24245, 19))),
-        (n.czech = () => r.e(3527).then(r.t.bind(r, 83527, 19))),
-        (n.danish = () => r.e(8713).then(r.t.bind(r, 38713, 19))),
-        (n.dutch = () => r.e(8602).then(r.t.bind(r, 38602, 19))),
-        (n.english = () => r.e(2640).then(r.t.bind(r, 32640, 19))),
-        (n.finnish = () => r.e(7803).then(r.t.bind(r, 37803, 19))),
-        (n.french = () => r.e(8968).then(r.t.bind(r, 38968, 19))),
-        (n.german = () => r.e(8678).then(r.t.bind(r, 28678, 19))),
-        (n.greek = () => r.e(9596).then(r.t.bind(r, 19596, 19))),
-        (n.hungarian = () => r.e(2521).then(r.t.bind(r, 72521, 19))),
-        (n.indonesian = () => r.e(9008).then(r.t.bind(r, 39008, 19))),
-        (n.italian = () => r.e(8096).then(r.t.bind(r, 98096, 19))),
-        (n.japanese = () => r.e(1748).then(r.t.bind(r, 39367, 19))),
-        (n.koreana = () => r.e(7903).then(r.t.bind(r, 27903, 19))),
-        (n.latam = () => r.e(7140).then(r.t.bind(r, 4759, 19))),
-        (n.malay = () => r.e(1800).then(r.t.bind(r, 31800, 19))),
-        (n.norwegian = () => r.e(4936).then(r.t.bind(r, 84936, 19))),
-        (n.polish = () => r.e(5937).then(r.t.bind(r, 95937, 19))),
-        (n.portuguese = () => r.e(9797).then(r.t.bind(r, 49797, 19))),
-        (n.romanian = () => r.e(7323).then(r.t.bind(r, 37323, 19))),
-        (n.russian = () => r.e(2489).then(r.t.bind(r, 42489, 19))),
-        (n.sc_schinese = () => r.e(1427).then(r.t.bind(r, 31427, 19))),
-        (n.schinese = () => r.e(5572).then(r.t.bind(r, 15572, 19))),
-        (n.spanish = () => r.e(1208).then(r.t.bind(r, 51208, 19))),
-        (n.swedish = () => r.e(5465).then(r.t.bind(r, 65465, 19))),
-        (n.tchinese = () => r.e(5119).then(r.t.bind(r, 75119, 19))),
-        (n.thai = () => r.e(1390).then(r.t.bind(r, 21390, 19))),
-        (n.turkish = () => r.e(6032).then(r.t.bind(r, 46032, 19))),
-        (n.ukrainian = () => r.e(6534).then(r.t.bind(r, 76534, 19))),
-        (n.vietnamese = () => r.e(8159).then(r.t.bind(r, 78159, 19)));
+      (n.arabic = () => r.e(7389).then(r.t.bind(r, 27389, 19))),
+        (n.brazilian = () => r.e(5697).then(r.t.bind(r, 65697, 19))),
+        (n.bulgarian = () => r.e(9530).then(r.t.bind(r, 59530, 19))),
+        (n.czech = () => r.e(6436).then(r.t.bind(r, 6436, 19))),
+        (n.danish = () => r.e(7336).then(r.t.bind(r, 37336, 19))),
+        (n.dutch = () => r.e(7093).then(r.t.bind(r, 77093, 19))),
+        (n.english = () => r.e(115).then(r.t.bind(r, 40115, 19))),
+        (n.finnish = () => r.e(1212).then(r.t.bind(r, 41212, 19))),
+        (n.french = () => r.e(2185).then(r.t.bind(r, 42185, 19))),
+        (n.german = () => r.e(8899).then(r.t.bind(r, 88899, 19))),
+        (n.greek = () => r.e(7763).then(r.t.bind(r, 87763, 19))),
+        (n.hungarian = () => r.e(5766).then(r.t.bind(r, 75766, 19))),
+        (n.indonesian = () => r.e(2609).then(r.t.bind(r, 12609, 19))),
+        (n.italian = () => r.e(7179).then(r.t.bind(r, 97179, 19))),
+        (n.japanese = () => r.e(6390).then(r.t.bind(r, 46390, 19))),
+        (n.koreana = () => r.e(4400).then(r.t.bind(r, 44400, 19))),
+        (n.latam = () => r.e(9472).then(r.t.bind(r, 89472, 19))),
+        (n.malay = () => r.e(2623).then(r.t.bind(r, 82623, 19))),
+        (n.norwegian = () => r.e(1411).then(r.t.bind(r, 31411, 19))),
+        (n.polish = () => r.e(5508).then(r.t.bind(r, 55508, 19))),
+        (n.portuguese = () => r.e(8380).then(r.t.bind(r, 38380, 19))),
+        (n.romanian = () => r.e(7742).then(r.t.bind(r, 57742, 19))),
+        (n.russian = () => r.e(2282).then(r.t.bind(r, 42282, 19))),
+        (n.sc_schinese = () => r.e(8896).then(r.t.bind(r, 18896, 19))),
+        (n.schinese = () => r.e(9942).then(r.t.bind(r, 7561, 19))),
+        (n.spanish = () => r.e(8347).then(r.t.bind(r, 88347, 19))),
+        (n.swedish = () => r.e(6266).then(r.t.bind(r, 96266, 19))),
+        (n.tchinese = () => r.e(8042).then(r.t.bind(r, 58042, 19))),
+        (n.thai = () => r.e(2995).then(r.t.bind(r, 2995, 19))),
+        (n.turkish = () => r.e(1043).then(r.t.bind(r, 21043, 19))),
+        (n.ukrainian = () => r.e(2249).then(r.t.bind(r, 52249, 19))),
+        (n.vietnamese = () => r.e(3958).then(r.t.bind(r, 93958, 19)));
       const a = (0, i.l)(async function (e) {
         if (n[e]) return n[e]();
       });
@@ -20873,7 +20874,7 @@
     44566: (e, t, r) => {
       "use strict";
       r.d(t, { e: () => a });
-      var i = r(67169),
+      var i = r(37523),
         n = r(96171);
       function a(e) {
         switch (e) {
@@ -21653,7 +21654,7 @@
         re = r(32754),
         ie = r(91675),
         ne = r(44566),
-        ae = r(67169),
+        ae = r(37523),
         se = r(72739),
         oe = r(12155),
         le = r(84666),
@@ -27060,6 +27061,7 @@
         });
         return s
           ? (0, i.jsx)(m.K, {
+              rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
               placeholderWidth: null != c ? c : 1,
               placeholderHeight: null != d ? d : 1,
@@ -27154,11 +27156,11 @@
         visibleSlides: e.visibleSlides,
       }));
       function w(e) {
-        const { bPreventSnapCarousel: t } = e,
-          r = (0, d.Qn)();
-        return t || ((e.screenIsWide || r) && !e.bForceSimpleCarousel)
-          ? (0, i.jsx)(S, { ...e, children: e.children })
-          : (0, i.jsx)(g, { ...e, children: e.children });
+        const { bForceSimpleCarousel: t, screenIsWide: r, children: n } = e,
+          a = (0, d.Qn)();
+        return (!r && !a) || t
+          ? (0, i.jsx)(g, { ...e, children: n })
+          : (0, i.jsx)(S, { ...e, children: n });
       }
       function S(e) {
         var t;
@@ -27518,7 +27520,7 @@
         U = r(35111),
         A = r.n(U),
         N = r(44986),
-        k = r(16261),
+        k = r(78686),
         P = r(84811),
         D = r(38135),
         q = r(56545),
@@ -30153,7 +30155,7 @@
         ye = r(22797),
         fe = r(82080),
         we = r.n(fe),
-        Se = r(16261);
+        Se = r(78686);
       function Me(e) {
         const { id: t, className: r } = e,
           n = (0, l.n9)(),
@@ -38187,7 +38189,7 @@
         I = r(17720),
         T = r(44165),
         F = r(6083),
-        W = r(77490);
+        W = r(39832);
       function O(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
@@ -41344,7 +41346,7 @@
             onFollowClick: c,
             followType: d,
           } = e,
-          { elDialogElement: u, fnShowLogonDialog: m } = (0, l.E)();
+          { elDialogElement: u, fnShowLogonDialog: m } = (0, l.lS)();
         if (!(0, g.xU)()) return null;
         let p = null;
         switch (d) {
@@ -43049,7 +43051,7 @@
           : null;
       }
       var w = r(24267),
-        S = r(16261),
+        S = r(78686),
         M = r(42834),
         v = r(52541),
         C = r(58918),
@@ -43957,7 +43959,7 @@
     72860: (e, t, r) => {
       "use strict";
       r.d(t, { S: () => d });
-      var i = r(16261),
+      var i = r(78686),
         n = r(71420),
         a = r(55963),
         s = r(70300),
@@ -44054,7 +44056,7 @@
           { bIsOwned: z } = (0, o.ZJ)(R),
           j = (0, l.bB)(a),
           { mutateAsync: x } = (0, c.s)(a, !j, (0, m.L3)(n)),
-          { elDialogElement: I, fnShowLogonDialog: T } = (0, w.E)();
+          { elDialogElement: I, fnShowLogonDialog: T } = (0, w.lS)();
         if (z || (!S && p))
           return p ? (0, i.jsx)(v, { possibleDemoAppID: a }) : null;
         let F = null;

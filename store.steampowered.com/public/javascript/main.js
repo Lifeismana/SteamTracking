@@ -2884,12 +2884,13 @@ CUsabilityTracker.prototype.Init = function( strEndpoint )
 	this.ResetStats();
 
 	var _this = this;
-	$Window = $J( window );
-	$Window.unload( function()
+
+	window.addEventListener( 'pagehide', function()
 	{
 		_this.OnWindowUnload();
 	});
 
+	$Window = $J( window );
 	$Window.on( 'scroll', function()
 	{
 		_this.SetScrollPosition();

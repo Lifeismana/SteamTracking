@@ -1,6 +1,6 @@
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [8987, 5894],
+  [58987, 55894],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports),

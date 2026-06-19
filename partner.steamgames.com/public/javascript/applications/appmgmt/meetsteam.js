@@ -2112,7 +2112,7 @@ License: MIT
           },
         });
       }
-      var Ye = n(67361),
+      var Ye = n(39832),
         Ve = n(29233),
         Je = n(30603),
         Qe = n.n(Je);

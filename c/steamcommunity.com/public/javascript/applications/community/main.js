@@ -3,38 +3,38 @@
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./main_arabic.json": [1825, 1602],
-        "./main_brazilian.json": [52333, 2446],
-        "./main_bulgarian.json": [21334, 3589],
-        "./main_czech.json": [26312, 9515],
-        "./main_danish.json": [23260, 831],
-        "./main_dutch.json": [17273, 9914],
-        "./main_english.json": [67519, 5052],
-        "./main_finnish.json": [20704, 8547],
-        "./main_french.json": [83413, 4694],
-        "./main_german.json": [75559, 8724],
-        "./main_greek.json": [64407, 3140],
-        "./main_hungarian.json": [29378, 7345],
-        "./main_indonesian.json": [71189, 4102],
-        "./main_italian.json": [54991, 6428],
-        "./main_japanese.json": [90114, 9857],
-        "./main_koreana.json": [79476, 759],
-        "./main_latam.json": [92548, 9783],
-        "./main_malay.json": [41723, 664],
-        "./main_norwegian.json": [71759, 5388],
-        "./main_polish.json": [63832, 3867],
-        "./main_portuguese.json": [58456, 9387],
-        "./main_romanian.json": [58258, 7553],
-        "./main_russian.json": [93558, 8021],
-        "./main_sc_schinese.json": [64348, 5103],
-        "./main_schinese.json": [86149, 198],
-        "./main_spanish.json": [48431, 60],
-        "./main_swedish.json": [65710, 9453],
-        "./main_tchinese.json": [66206, 8749],
-        "./main_thai.json": [88719, 7724],
-        "./main_turkish.json": [22191, 1724],
-        "./main_ukrainian.json": [25389, 286],
-        "./main_vietnamese.json": [51074, 833],
+        "./main_arabic.json": [12316, 1602],
+        "./main_brazilian.json": [42134, 2446],
+        "./main_bulgarian.json": [20717, 3589],
+        "./main_czech.json": [34959, 9515],
+        "./main_danish.json": [28097, 831],
+        "./main_dutch.json": [94338, 9914],
+        "./main_english.json": [53800, 5052],
+        "./main_finnish.json": [16963, 8547],
+        "./main_french.json": [95440, 4694],
+        "./main_german.json": [68670, 8724],
+        "./main_greek.json": [7908, 3140],
+        "./main_hungarian.json": [81585, 7345],
+        "./main_indonesian.json": [23992, 4102],
+        "./main_italian.json": [1720, 6428],
+        "./main_japanese.json": [60479, 9857],
+        "./main_koreana.json": [69847, 759],
+        "./main_latam.json": [54623, 9783],
+        "./main_malay.json": [52144, 664],
+        "./main_norwegian.json": [15792, 5388],
+        "./main_polish.json": [28377, 3867],
+        "./main_portuguese.json": [5037, 9387],
+        "./main_romanian.json": [20275, 7553],
+        "./main_russian.json": [15841, 8021],
+        "./main_sc_schinese.json": [34699, 5103],
+        "./main_schinese.json": [17724, 198],
+        "./main_spanish.json": [1792, 60],
+        "./main_swedish.json": [7265, 9453],
+        "./main_tchinese.json": [66903, 8749],
+        "./main_thai.json": [14406, 7724],
+        "./main_turkish.json": [26600, 1724],
+        "./main_ukrainian.json": [82830, 286],
+        "./main_vietnamese.json": [43735, 833],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -52,38 +52,38 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./main_arabic.json": [1825, 1602],
-        "./main_brazilian.json": [52333, 2446],
-        "./main_bulgarian.json": [21334, 3589],
-        "./main_czech.json": [26312, 9515],
-        "./main_danish.json": [23260, 831],
-        "./main_dutch.json": [17273, 9914],
-        "./main_english.json": [67519, 5052],
-        "./main_finnish.json": [20704, 8547],
-        "./main_french.json": [83413, 4694],
-        "./main_german.json": [75559, 8724],
-        "./main_greek.json": [64407, 3140],
-        "./main_hungarian.json": [29378, 7345],
-        "./main_indonesian.json": [71189, 4102],
-        "./main_italian.json": [54991, 6428],
-        "./main_japanese.json": [90114, 9857],
-        "./main_koreana.json": [79476, 759],
-        "./main_latam.json": [92548, 9783],
-        "./main_malay.json": [41723, 664],
-        "./main_norwegian.json": [71759, 5388],
-        "./main_polish.json": [63832, 3867],
-        "./main_portuguese.json": [58456, 9387],
-        "./main_romanian.json": [58258, 7553],
-        "./main_russian.json": [93558, 8021],
-        "./main_sc_schinese.json": [64348, 5103],
-        "./main_schinese.json": [86149, 198],
-        "./main_spanish.json": [48431, 60],
-        "./main_swedish.json": [65710, 9453],
-        "./main_tchinese.json": [66206, 8749],
-        "./main_thai.json": [88719, 7724],
-        "./main_turkish.json": [22191, 1724],
-        "./main_ukrainian.json": [25389, 286],
-        "./main_vietnamese.json": [51074, 833],
+        "./main_arabic.json": [12316, 1602],
+        "./main_brazilian.json": [42134, 2446],
+        "./main_bulgarian.json": [20717, 3589],
+        "./main_czech.json": [34959, 9515],
+        "./main_danish.json": [28097, 831],
+        "./main_dutch.json": [94338, 9914],
+        "./main_english.json": [53800, 5052],
+        "./main_finnish.json": [16963, 8547],
+        "./main_french.json": [95440, 4694],
+        "./main_german.json": [68670, 8724],
+        "./main_greek.json": [7908, 3140],
+        "./main_hungarian.json": [81585, 7345],
+        "./main_indonesian.json": [23992, 4102],
+        "./main_italian.json": [1720, 6428],
+        "./main_japanese.json": [60479, 9857],
+        "./main_koreana.json": [69847, 759],
+        "./main_latam.json": [54623, 9783],
+        "./main_malay.json": [52144, 664],
+        "./main_norwegian.json": [15792, 5388],
+        "./main_polish.json": [28377, 3867],
+        "./main_portuguese.json": [5037, 9387],
+        "./main_romanian.json": [20275, 7553],
+        "./main_russian.json": [15841, 8021],
+        "./main_sc_schinese.json": [34699, 5103],
+        "./main_schinese.json": [17724, 198],
+        "./main_spanish.json": [1792, 60],
+        "./main_swedish.json": [7265, 9453],
+        "./main_tchinese.json": [66903, 8749],
+        "./main_thai.json": [14406, 7724],
+        "./main_turkish.json": [26600, 1724],
+        "./main_ukrainian.json": [82830, 286],
+        "./main_vietnamese.json": [43735, 833],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -824,38 +824,38 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./sales_arabic.json": [38822, 3003],
-        "./sales_brazilian.json": [5856, 537],
-        "./sales_bulgarian.json": [76671, 6466],
-        "./sales_czech.json": [15237, 1880],
-        "./sales_danish.json": [84903, 926],
-        "./sales_dutch.json": [5152, 8541],
-        "./sales_english.json": [78598, 9743],
-        "./sales_finnish.json": [51141, 2588],
-        "./sales_french.json": [80054, 7639],
-        "./sales_german.json": [11419, 297],
-        "./sales_greek.json": [22250, 5651],
-        "./sales_hungarian.json": [56715, 4278],
-        "./sales_indonesian.json": [86570, 9367],
-        "./sales_italian.json": [53369, 1783],
-        "./sales_japanese.json": [95849, 8064],
-        "./sales_koreana.json": [22417, 5184],
-        "./sales_latam.json": [56969, 2744],
-        "./sales_malay.json": [27874, 4759],
-        "./sales_norwegian.json": [71890, 4055],
-        "./sales_polish.json": [97431, 7958],
-        "./sales_portuguese.json": [29627, 1410],
-        "./sales_romanian.json": [36497, 8732],
-        "./sales_russian.json": [19123, 5366],
-        "./sales_sc_schinese.json": [78137, 2780],
-        "./sales_schinese.json": [37002, 5043],
-        "./sales_spanish.json": [41942, 1951],
-        "./sales_swedish.json": [9263, 7326],
-        "./sales_tchinese.json": [56441, 6528],
-        "./sales_thai.json": [40052, 4009],
-        "./sales_turkish.json": [23366, 8239],
-        "./sales_ukrainian.json": [69296, 7097],
-        "./sales_vietnamese.json": [5961, 3976],
+        "./sales_arabic.json": [1869, 3003],
+        "./sales_brazilian.json": [39377, 537],
+        "./sales_bulgarian.json": [13850, 6466],
+        "./sales_czech.json": [17652, 1880],
+        "./sales_danish.json": [54632, 926],
+        "./sales_dutch.json": [26805, 8541],
+        "./sales_english.json": [87939, 9743],
+        "./sales_finnish.json": [21260, 2588],
+        "./sales_french.json": [71833, 7639],
+        "./sales_german.json": [23123, 297],
+        "./sales_greek.json": [61923, 5651],
+        "./sales_hungarian.json": [23878, 4278],
+        "./sales_indonesian.json": [28081, 9367],
+        "./sales_italian.json": [78443, 1783],
+        "./sales_japanese.json": [96262, 8064],
+        "./sales_koreana.json": [46688, 5184],
+        "./sales_latam.json": [83504, 2744],
+        "./sales_malay.json": [18671, 4759],
+        "./sales_norwegian.json": [44835, 4055],
+        "./sales_polish.json": [70660, 7958],
+        "./sales_portuguese.json": [86556, 1410],
+        "./sales_romanian.json": [79294, 8732],
+        "./sales_russian.json": [22874, 5366],
+        "./sales_sc_schinese.json": [61312, 2780],
+        "./sales_schinese.json": [48793, 5043],
+        "./sales_spanish.json": [27211, 1951],
+        "./sales_swedish.json": [75994, 7326],
+        "./sales_tchinese.json": [53226, 6528],
+        "./sales_thai.json": [45283, 4009],
+        "./sales_turkish.json": [19331, 8239],
+        "./sales_ukrainian.json": [43849, 7097],
+        "./sales_vietnamese.json": [33206, 3976],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -873,38 +873,38 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./sales_arabic.json": [38822, 3003],
-        "./sales_brazilian.json": [5856, 537],
-        "./sales_bulgarian.json": [76671, 6466],
-        "./sales_czech.json": [15237, 1880],
-        "./sales_danish.json": [84903, 926],
-        "./sales_dutch.json": [5152, 8541],
-        "./sales_english.json": [78598, 9743],
-        "./sales_finnish.json": [51141, 2588],
-        "./sales_french.json": [80054, 7639],
-        "./sales_german.json": [11419, 297],
-        "./sales_greek.json": [22250, 5651],
-        "./sales_hungarian.json": [56715, 4278],
-        "./sales_indonesian.json": [86570, 9367],
-        "./sales_italian.json": [53369, 1783],
-        "./sales_japanese.json": [95849, 8064],
-        "./sales_koreana.json": [22417, 5184],
-        "./sales_latam.json": [56969, 2744],
-        "./sales_malay.json": [27874, 4759],
-        "./sales_norwegian.json": [71890, 4055],
-        "./sales_polish.json": [97431, 7958],
-        "./sales_portuguese.json": [29627, 1410],
-        "./sales_romanian.json": [36497, 8732],
-        "./sales_russian.json": [19123, 5366],
-        "./sales_sc_schinese.json": [78137, 2780],
-        "./sales_schinese.json": [37002, 5043],
-        "./sales_spanish.json": [41942, 1951],
-        "./sales_swedish.json": [9263, 7326],
-        "./sales_tchinese.json": [56441, 6528],
-        "./sales_thai.json": [40052, 4009],
-        "./sales_turkish.json": [23366, 8239],
-        "./sales_ukrainian.json": [69296, 7097],
-        "./sales_vietnamese.json": [5961, 3976],
+        "./sales_arabic.json": [1869, 3003],
+        "./sales_brazilian.json": [39377, 537],
+        "./sales_bulgarian.json": [13850, 6466],
+        "./sales_czech.json": [17652, 1880],
+        "./sales_danish.json": [54632, 926],
+        "./sales_dutch.json": [26805, 8541],
+        "./sales_english.json": [87939, 9743],
+        "./sales_finnish.json": [21260, 2588],
+        "./sales_french.json": [71833, 7639],
+        "./sales_german.json": [23123, 297],
+        "./sales_greek.json": [61923, 5651],
+        "./sales_hungarian.json": [23878, 4278],
+        "./sales_indonesian.json": [28081, 9367],
+        "./sales_italian.json": [78443, 1783],
+        "./sales_japanese.json": [96262, 8064],
+        "./sales_koreana.json": [46688, 5184],
+        "./sales_latam.json": [83504, 2744],
+        "./sales_malay.json": [18671, 4759],
+        "./sales_norwegian.json": [44835, 4055],
+        "./sales_polish.json": [70660, 7958],
+        "./sales_portuguese.json": [86556, 1410],
+        "./sales_romanian.json": [79294, 8732],
+        "./sales_russian.json": [22874, 5366],
+        "./sales_sc_schinese.json": [61312, 2780],
+        "./sales_schinese.json": [48793, 5043],
+        "./sales_spanish.json": [27211, 1951],
+        "./sales_swedish.json": [75994, 7326],
+        "./sales_tchinese.json": [53226, 6528],
+        "./sales_thai.json": [45283, 4009],
+        "./sales_turkish.json": [19331, 8239],
+        "./sales_ukrainian.json": [43849, 7097],
+        "./sales_vietnamese.json": [33206, 3976],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -922,38 +922,38 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./shared_arabic.json": [8476, 1721],
-        "./shared_brazilian.json": [99574, 3594],
-        "./shared_bulgarian.json": [43789, 2481],
-        "./shared_czech.json": [815, 1423],
-        "./shared_danish.json": [4289, 8291],
-        "./shared_dutch.json": [54978, 6430],
-        "./shared_english.json": [33800, 2664],
-        "./shared_finnish.json": [3907, 2199],
-        "./shared_french.json": [45040, 8674],
-        "./shared_german.json": [94750, 6888],
-        "./shared_greek.json": [69668, 8872],
-        "./shared_hungarian.json": [45233, 9053],
-        "./shared_indonesian.json": [90200, 8522],
-        "./shared_italian.json": [31864, 7696],
-        "./shared_japanese.json": [7263, 1389],
-        "./shared_koreana.json": [30295, 139],
-        "./shared_latam.json": [50559, 5803],
-        "./shared_malay.json": [61136, 4516],
-        "./shared_norwegian.json": [86512, 6120],
-        "./shared_polish.json": [52889, 2959],
-        "./shared_portuguese.json": [72269, 823],
-        "./shared_romanian.json": [34419, 2021],
-        "./shared_russian.json": [75777, 6577],
-        "./shared_sc_schinese.json": [23723, 8443],
-        "./shared_schinese.json": [85436, 7442],
-        "./shared_spanish.json": [76736, 6752],
-        "./shared_swedish.json": [94625, 129],
-        "./shared_tchinese.json": [15191, 5553],
-        "./shared_thai.json": [4230, 4952],
-        "./shared_turkish.json": [34792, 6472],
-        "./shared_ukrainian.json": [27246, 9298],
-        "./shared_vietnamese.json": [59863, 9869],
+        "./shared_arabic.json": [10361, 1721],
+        "./shared_brazilian.json": [71714, 3594],
+        "./shared_bulgarian.json": [9854, 2481],
+        "./shared_czech.json": [23296, 1423],
+        "./shared_danish.json": [38356, 8291],
+        "./shared_dutch.json": [54401, 6430],
+        "./shared_english.json": [11031, 2664],
+        "./shared_finnish.json": [27688, 2199],
+        "./shared_french.json": [42589, 8674],
+        "./shared_german.json": [41359, 6888],
+        "./shared_greek.json": [54175, 8872],
+        "./shared_hungarian.json": [42330, 9053],
+        "./shared_indonesian.json": [51229, 8522],
+        "./shared_italian.json": [12711, 7696],
+        "./shared_japanese.json": [68010, 1389],
+        "./shared_koreana.json": [40764, 139],
+        "./shared_latam.json": [30684, 5803],
+        "./shared_malay.json": [8515, 4516],
+        "./shared_norwegian.json": [25319, 6120],
+        "./shared_polish.json": [92736, 2959],
+        "./shared_portuguese.json": [83248, 823],
+        "./shared_romanian.json": [54122, 2021],
+        "./shared_russian.json": [69998, 6577],
+        "./shared_sc_schinese.json": [40020, 8443],
+        "./shared_schinese.json": [99965, 7442],
+        "./shared_spanish.json": [29431, 6752],
+        "./shared_swedish.json": [67046, 129],
+        "./shared_tchinese.json": [40662, 5553],
+        "./shared_thai.json": [3428, 4952],
+        "./shared_turkish.json": [75319, 6472],
+        "./shared_ukrainian.json": [93301, 9298],
+        "./shared_vietnamese.json": [92378, 9869],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -971,38 +971,38 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
-        "./shared_arabic.json": [8476, 1721],
-        "./shared_brazilian.json": [99574, 3594],
-        "./shared_bulgarian.json": [43789, 2481],
-        "./shared_czech.json": [815, 1423],
-        "./shared_danish.json": [4289, 8291],
-        "./shared_dutch.json": [54978, 6430],
-        "./shared_english.json": [33800, 2664],
-        "./shared_finnish.json": [3907, 2199],
-        "./shared_french.json": [45040, 8674],
-        "./shared_german.json": [94750, 6888],
-        "./shared_greek.json": [69668, 8872],
-        "./shared_hungarian.json": [45233, 9053],
-        "./shared_indonesian.json": [90200, 8522],
-        "./shared_italian.json": [31864, 7696],
-        "./shared_japanese.json": [7263, 1389],
-        "./shared_koreana.json": [30295, 139],
-        "./shared_latam.json": [50559, 5803],
-        "./shared_malay.json": [61136, 4516],
-        "./shared_norwegian.json": [86512, 6120],
-        "./shared_polish.json": [52889, 2959],
-        "./shared_portuguese.json": [72269, 823],
-        "./shared_romanian.json": [34419, 2021],
-        "./shared_russian.json": [75777, 6577],
-        "./shared_sc_schinese.json": [23723, 8443],
-        "./shared_schinese.json": [85436, 7442],
-        "./shared_spanish.json": [76736, 6752],
-        "./shared_swedish.json": [94625, 129],
-        "./shared_tchinese.json": [15191, 5553],
-        "./shared_thai.json": [4230, 4952],
-        "./shared_turkish.json": [34792, 6472],
-        "./shared_ukrainian.json": [27246, 9298],
-        "./shared_vietnamese.json": [59863, 9869],
+        "./shared_arabic.json": [10361, 1721],
+        "./shared_brazilian.json": [71714, 3594],
+        "./shared_bulgarian.json": [9854, 2481],
+        "./shared_czech.json": [23296, 1423],
+        "./shared_danish.json": [38356, 8291],
+        "./shared_dutch.json": [54401, 6430],
+        "./shared_english.json": [11031, 2664],
+        "./shared_finnish.json": [27688, 2199],
+        "./shared_french.json": [42589, 8674],
+        "./shared_german.json": [41359, 6888],
+        "./shared_greek.json": [54175, 8872],
+        "./shared_hungarian.json": [42330, 9053],
+        "./shared_indonesian.json": [51229, 8522],
+        "./shared_italian.json": [12711, 7696],
+        "./shared_japanese.json": [68010, 1389],
+        "./shared_koreana.json": [40764, 139],
+        "./shared_latam.json": [30684, 5803],
+        "./shared_malay.json": [8515, 4516],
+        "./shared_norwegian.json": [25319, 6120],
+        "./shared_polish.json": [92736, 2959],
+        "./shared_portuguese.json": [83248, 823],
+        "./shared_romanian.json": [54122, 2021],
+        "./shared_russian.json": [69998, 6577],
+        "./shared_sc_schinese.json": [40020, 8443],
+        "./shared_schinese.json": [99965, 7442],
+        "./shared_spanish.json": [29431, 6752],
+        "./shared_swedish.json": [67046, 129],
+        "./shared_tchinese.json": [40662, 5553],
+        "./shared_thai.json": [3428, 4952],
+        "./shared_turkish.json": [75319, 6472],
+        "./shared_ukrainian.json": [93301, 9298],
+        "./shared_vietnamese.json": [92378, 9869],
       };
       function _(_) {
         if (!__webpack_require__._(_, _))
@@ -15599,67 +15599,67 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 70333, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 58090, 19))),
         (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 55201, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 77244, 19))),
         (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 48042, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 92139, 19))),
         (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 18212, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89545, 19))),
         (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 60376, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 72395, 19))),
         (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 37285, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 56532, 19))),
         (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 39187, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 25442, 19))),
         (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 88924, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46377, 19))),
         (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 22697, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 80306, 19))),
         (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 5987, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 8540, 19))),
         (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 73203, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98670, 19))),
         (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 26998, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 17111, 19))),
         (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 18241, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 52126, 19))),
         (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 40667, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75226, 19))),
         (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75056, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 90213, 19))),
         (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 59184, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83045, 19))),
         (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 91456, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1613, 19))),
         (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7103, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 30398, 19))),
         (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1779, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75118, 19))),
         (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 92276, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 9659, 19))),
         (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 67308, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 16196, 19))),
         (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 15374, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 25829, 19))),
         (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1098, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97967, 19))),
         (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 32361, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 32950, 19))),
         (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 28731, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40490, 19))),
         (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 51850, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 85635, 19))),
         (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75130, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 8605, 19))),
         (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1235, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 5568, 19))),
         (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 20115, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 16194, 19))),
         (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 46265, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 45124, 19))),
         (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94182, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 35733, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -15672,69 +15672,69 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 61970, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 26531, 19))),
         (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 80308, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 50911, 19))),
         (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 51715, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 19976, 19))),
         (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 66865, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 30126, 19))),
         (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 18579, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 16754, 19))),
         (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 46220, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 96439, 19))),
         (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3818, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 29453, 19))),
         (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 79841, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 25226, 19))),
         (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 4586, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94563, 19))),
         (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 80916, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 12865, 19))),
         (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 98150, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89565, 19))),
         (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 63839, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 812, 19))),
         (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 2934, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 62335, 19))),
         (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 20738, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 39405, 19))),
         (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 96509, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 29084, 19))),
         (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 87261, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 86214, 19))),
         (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 37429, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1006, 19))),
         (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 86806, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 50781, 19))),
         (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 41814, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 7617, 19))),
         (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 83187, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 58966, 19))),
         (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3519, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 10542, 19))),
         (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 10765, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 76112, 19))),
         (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62391, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 16696, 19))),
         (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 2525, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 6162, 19))),
         (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 99774, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 60571, 19))),
         (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 42082, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 12653, 19))),
         (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 52747, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71724, 19))),
         (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 56997, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27784, 19))),
         (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 90392, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 25037, 19))),
         (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 27194, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 68501, 19))),
         (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38396, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 20823, 19))),
         (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 88157, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 98636, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -32508,18 +32508,386 @@
           return "CContentModeration_GetReporterStats_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subject_type: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  moderator_level: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ClaimBatch_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subjects || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subjects: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ClaimBatch_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetClaimedSubjects_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subjects || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subjects: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetClaimedSubjects_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subjects_to_release || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subjects_to_release: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ReleaseSubjects_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ReleaseSubjects_Response";
+        }
+      }
       var _;
       !(function (_) {
-        (_.CreateContentReport = function (_, _) {
+        (_.ClaimBatch = function (_, _) {
           return _.SendMsg(
-            "ContentModeration.CreateContentReport#1",
+            "ContentModeration.ClaimBatch#1",
             (0, _._)(_, _),
             _,
             {
-              ePrivilege: 1,
+              ePrivilege: 5,
             },
           );
         }),
+          (_.GetClaimedSubjects = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.GetClaimedSubjects#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.ReleaseSubjects = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.ReleaseSubjects#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.CreateContentReport = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.CreateContentReport#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
           (_.CancelContentReport = function (_, _) {
             return _.SendMsg(
               "ContentModeration.CancelContentReport#1",
@@ -40628,6 +40996,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  ispublic: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -40878,6 +41251,7 @@
           return "CPlayer_GetUserAchievements_Response_Achievement";
         }
       }
+      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -46425,6 +46799,74 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  header_text: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  description_text: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_RelatedF2P";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.parent_appid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6], null);
         }
@@ -46472,6 +46914,10 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  related_f2p: {
+                    _: 7,
+                    _: _,
                   },
                 },
               }),
@@ -47241,6 +47687,11 @@
                     _: 22,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  advance_access_date: {
+                    _: 23,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -50446,8 +50897,23 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  nonpreferred_product_type: {
-                    _: 20,
+                  nonpreferred_product_early_access: {
+                    _: 22,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  nonpreferred_product_prepurchase: {
+                    _: 23,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  nonpreferred_product_software: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  nonpreferred_product_vr: {
+                    _: 25,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -50671,6 +51137,10 @@
                   },
                   price_filters: {
                     _: 12,
+                    _: _,
+                  },
+                  release_date_filter: {
+                    _: 13,
                     _: _,
                   },
                   content_descriptors_must_match: {
@@ -51072,6 +51542,74 @@
         }
         getClassName() {
           return "CStoreQueryFilters_PriceFilters";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.release_date_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  release_date_type: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  start_date: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  end_date: {
+                    _: 3,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQueryFilters_ReleaseDateFilter";
         }
       }
       class _ extends _.Message {
@@ -53387,69 +53925,69 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 8476, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 10361, 19))),
         (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 99574, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71714, 19))),
         (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 43789, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 9854, 19))),
         (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 815, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 23296, 19))),
         (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 4289, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 38356, 19))),
         (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 54978, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 54401, 19))),
         (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 33800, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 11031, 19))),
         (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3907, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27688, 19))),
         (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 45040, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 42589, 19))),
         (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94750, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 41359, 19))),
         (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 69668, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 54175, 19))),
         (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 45233, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 42330, 19))),
         (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 90200, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51229, 19))),
         (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 31864, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 12711, 19))),
         (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7263, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 68010, 19))),
         (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 30295, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40764, 19))),
         (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 50559, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 30684, 19))),
         (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 61136, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 8515, 19))),
         (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 86512, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 25319, 19))),
         (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 52889, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 92736, 19))),
         (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 72269, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83248, 19))),
         (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 34419, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 54122, 19))),
         (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75777, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69998, 19))),
         (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 23723, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40020, 19))),
         (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 85436, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 99965, 19))),
         (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 76736, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 29431, 19))),
         (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94625, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67046, 19))),
         (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 15191, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40662, 19))),
         (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 4230, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 3428, 19))),
         (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 34792, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75319, 19))),
         (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 27246, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 93301, 19))),
         (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 59863, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 92378, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -60341,7 +60879,11 @@
             if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
-            _.showPopover();
+            (_.style.display = "flex"),
+              requestAnimationFrame(() => {
+                _.style.display = "block";
+              }),
+              _.showPopover();
             const _ = _.querySelector(".hover_arrow.left"),
               _ = _.querySelector(".hover_arrow.right"),
               _ = _.querySelector(".hover_arrow.top"),
@@ -64428,6 +64970,11 @@
                     _: 5,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  associated_id: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -86123,6 +86670,7 @@
         K6w: () => _,
         K9I: () => _,
         LSz: () => _,
+        MGO: () => _,
         Maz: () => _,
         O7b: () => _,
         OMN: () => _,
@@ -86809,6 +87357,19 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
+          }),
+        });
+      }
+      function _(_) {
+        const { color: _ = "currentColor", ..._ } = _;
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: (0, _.jsx)("path", {
+            _: "M31.09 4.38L13 22.46L5.41 14.88L1.88 18.41L13 29.54L34.62 7.91L31.09 4.38Z",
+            fill: _,
           }),
         });
       }
@@ -90054,7 +90615,7 @@
       }
       function _(_) {
         const { instance: _, browserInfo: _, children: _ } = _,
-          _ = _.useRef(null),
+          [_, _] = _.useState(),
           _ = (0, _._)().ownerWindow,
           _ = _.SteamClient.Browser.GetBrowserID(),
           _ = _.useCallback(
@@ -90116,8 +90677,7 @@
           (0, _.useEffect)(() => {
             if (_)
               if (_.visible) {
-                _.current && _.current.PositionMenu(),
-                  _.current && _.current.PositionPopupWindow();
+                _ && (_.PositionMenu(), _.PositionPopupWindow());
                 let _ = _.options.bNoFocusWhenShown
                   ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
                   : _.iEc.k_EWindowBringToFrontAndForceOS;
@@ -90130,7 +90690,7 @@
                       void 0 === _ ||
                       _.SteamClient.Window.HideWindow();
                   }, 30);
-          }, [_, _, _.visible]),
+          }, [_, _, _.visible, _]),
           _(_.window),
           _.useEffect(() => {
             _.SetPopup(_);
@@ -98896,7 +99456,7 @@
         return _._.IN_CHROMEOS;
       }
       function _() {
-        return _._.ON_STEAMOS;
+        return _._.IS_STEAMOS_MANAGEMENT_ENABLED;
       }
       function _(_, _) {
         return 0 != _.length && _.startsWith(_);
@@ -99005,7 +99565,7 @@
           FORCED_DISPLAY_MODE: void 0,
           ON_DECK: !1,
           ON_FRAME: !1,
-          ON_STEAMOS: !1,
+          IS_STEAMOS_MANAGEMENT_ENABLED: !1,
           ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,

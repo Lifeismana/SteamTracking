@@ -32,6 +32,12 @@
         ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        Option: "_3a3fNdwhCItYEc1SsUNP",
+        RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -1367,6 +1373,158 @@
                 ..._,
               });
         };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsxs)(_._, {
+          cursor: "default",
+          gap: "2",
+          className: _.Option,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.RadioCircle,
+            }),
+            (0, _.jsx)(_._, {
+              children: _,
+            }),
+          ],
+        });
+      }
+      const _ = Object.assign(
+          function (_) {
+            const {
+              value: _,
+              onValueChange: _,
+              options: _,
+              getOptionLabel: _,
+              ..._
+            } = _;
+            return (0, _.jsx)(_.Root, {
+              value: _,
+              onValueChange: _,
+              ..._,
+              children: _.map((_) => {
+                const _ = _ ? _(_) : _;
+                return (0, _.jsx)(
+                  _.Option,
+                  {
+                    value: _,
+                    children: _,
+                  },
+                  _,
+                );
+              }),
+            });
+          },
+          {
+            Root: function (_) {
+              const { value: _, onValueChange: _, render: _, ..._ } = _,
+                _ = (0, _.useRef)(null),
+                _ = (0, _.useCallback)((_, _) => {
+                  if (!_.current) return;
+                  const _ = [..._.current.querySelectorAll("[data-radio-id]")];
+                  if (0 !== _.length)
+                    for (let _ = 0; _ < _.length; _++) {
+                      const _ = _[_];
+                      if (!_.dataset.radioId) continue;
+                      if (_.dataset.radioId === _) {
+                        const _ = _[(_ + _ + _.length) % _.length];
+                        _.click(), _.focus();
+                      }
+                    }
+                }, []),
+                _ = (0, _.useCallback)((_) => _(_, 1), [_]),
+                _ = (0, _.useCallback)((_) => _(_, -1), [_]),
+                _ = (0, _.useMemo)(
+                  () => ({
+                    value: _,
+                    onValueChange: _,
+                    onSelectNext: _,
+                    onSelectPrev: _,
+                  }),
+                  [_, _, _, _],
+                ),
+                _ = {
+                  role: "radiogroup",
+                  ref: _,
+                  ..._,
+                },
+                _ = (0, _.jsx)(_._, {
+                  direction: "column",
+                  gap: "2",
+                  role: "radiogroup",
+                  ..._,
+                }),
+                _ = (0, _._)(_, _, _);
+              return (0, _.jsx)(_, {
+                value: _,
+                children: _,
+              });
+            },
+            Option: function (_) {
+              const { value: _, ref: _, children: _, render: _ } = _,
+                _ = (0, _.useContext)(_),
+                _ = (0, _.useId)();
+              if (!_)
+                return (
+                  console.error(
+                    "<RadioGroup.Option> must be rendered within a <RadioGroup.Root>",
+                  ),
+                  null
+                );
+              const {
+                  value: _,
+                  onValueChange: _,
+                  onSelectNext: _,
+                  onSelectPrev: _,
+                } = _,
+                _ = _ === _,
+                _ = () => {
+                  _ || _(_);
+                },
+                _ = {
+                  role: "radio",
+                  "aria-checked": _,
+                  "data-radio-id": _,
+                  onClick: _,
+                  onKeyDown: (_) => {
+                    switch (_.key) {
+                      case " ":
+                        _(), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowRight":
+                      case "ArrowDown":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowLeft":
+                      case "ArrowUp":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                    }
+                  },
+                  tabIndex: _ ? 0 : -1,
+                  ref: _,
+                  children: _,
+                },
+                _ = (0, _.jsx)(_, {});
+              return (0, _._)(_, _, _, {
+                bSelected: _,
+              });
+            },
+          },
+        ),
+        _ = (0, _.createContext)(null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

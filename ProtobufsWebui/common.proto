@@ -3079,6 +3079,14 @@ message CVRGamepadUI_Message_ReportVRPanelErrorBoundaryError_Request {
 message CVRGamepadUI_Message_ReportVRPanelErrorBoundaryError_Response {
 }
 
+message CVRGamepadUI_Message_RequestAppQuit_Request {
+	optional uint32 app_id = 1;
+}
+
+message CVRGamepadUI_Message_RequestAppQuit_Response {
+	optional int32 result = 1 [(.description) = "enum"];
+}
+
 message CVRGamepadUI_Message_ResetHMDSettings_Request {
 }
 
@@ -3423,6 +3431,10 @@ message StoreBrowseFilterFailure {
 	optional bool dlc_for_unowned_game = 13;
 	optional bool nonpreferred_product_type = 20;
 	repeated uint32 excluded_tagids = 21;
+	optional bool nonpreferred_product_early_access = 22;
+	optional bool nonpreferred_product_prepurchase = 23;
+	optional bool nonpreferred_product_software = 24;
+	optional bool nonpreferred_product_vr = 25;
 	repeated int32 excluded_content_descriptorids = 30 [(.description) = "enum"];
 }
 
@@ -3671,6 +3683,13 @@ message StoreItem_PurchaseOption_RecurrenceInfo {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_RelatedF2P {
+	optional uint32 appid = 1;
+	optional string header_text = 2;
+	optional string description_text = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreItem_RelatedItems {
 	optional uint32 parent_appid = 1;
 	repeated uint32 demo_appid = 2;
@@ -3678,6 +3697,7 @@ message StoreItem_RelatedItems {
 	repeated .StoreItem_Demo demos = 4;
 	repeated .StoreItem_Demo standalone_demos = 5;
 	repeated .StoreItem_Playtest playtests = 6;
+	optional .StoreItem_RelatedF2P related_f2p = 7;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3696,6 +3716,7 @@ message StoreItem_ReleaseInfo {
 	optional uint32 mac_release_date = 20;
 	optional uint32 linux_release_date = 21;
 	optional bool limited_launch_active = 22;
+	optional uint32 advance_access_date = 23;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

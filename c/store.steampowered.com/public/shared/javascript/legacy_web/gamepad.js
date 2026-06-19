@@ -334,7 +334,7 @@
         FORCED_DISPLAY_MODE: void 0,
         ON_DECK: !1,
         ON_FRAME: !1,
-        ON_STEAMOS: !1,
+        IS_STEAMOS_MANAGEMENT_ENABLED: !1,
         ON_STEAMOS_CLIENT_BRANCH: !1,
         IN_GAMESCOPE: !1,
         IN_LOGIN: !1,

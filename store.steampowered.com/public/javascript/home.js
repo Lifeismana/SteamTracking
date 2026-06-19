@@ -3869,7 +3869,6 @@ GHomepage = {
 		if ( !GHomepage.rgBackgroundDef )
 			return;
 
-		const $AlternateBackgroundDef = GHomepage.rgBackgroundDef.alternate;
 		const $DefaultBackgroundDef = GHomepage.rgBackgroundDef.default;
 
 		const fnUpdateTakeover = ( strPageBackgroundURL, strBackgroundWebm, strPageBackgroundMobileURL ) =>
@@ -3906,14 +3905,24 @@ GHomepage = {
 			}
 		}
 
-		if ( !V_GetCookie( 'enable_home_alt_takeover' ) )
+		const AltBackgroundIdx = V_GetCookie( 'home_alt_bg_index' );
+		if ( !AltBackgroundIdx )
 		{
-			V_SetCookie('enable_home_alt_takeover', 1, 14 );
+			V_SetCookie('home_alt_bg_index', 1, 14 );
+
+			const $AlternateBackgroundDef = GHomepage.rgBackgroundDef.alternate_1;
 			fnUpdateTakeover( $AlternateBackgroundDef.strPageBackgroundURL, $AlternateBackgroundDef.strPageBackgroundWebM, $AlternateBackgroundDef.strPageBackgroundMobileURL );
+		}
+		else if ( AltBackgroundIdx === 1 && GHomepage.rgBackgroundDef.alternate_2 )
+		{
+			V_SetCookie('home_alt_bg_index', 2, -1 );
+
+			const $AlternateBackgroundDef = GHomepage.rgBackgroundDef.alternate_2;
+			fnUpdateTakeover( $DefaultBackgroundDef.strPageBackgroundURL, $DefaultBackgroundDef.strPageBackgroundWebM, $DefaultBackgroundDef.strPageBackgroundMobileURL );
 		}
 		else
 		{
-			V_SetCookie('enable_home_alt_takeover', 0, -1 );
+			V_SetCookie('home_alt_bg_index', 0, -1 );
 			fnUpdateTakeover( $DefaultBackgroundDef.strPageBackgroundURL, $DefaultBackgroundDef.strPageBackgroundWebM, $DefaultBackgroundDef.strPageBackgroundMobileURL );
 		}
 	},
@@ -5107,6 +5116,7 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 				bFirstRender = false;
 		}
 
+		$TabItems.find('.tab_row_item').first().trigger('mouseenter');
 		GDynamicStore.DecorateDynamicItems( $TabItems );
 	};
 

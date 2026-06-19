@@ -3878,6 +3878,15 @@ html.responsive.touch
   width: 20px;
   height: 20px;
 }
+[data-checkbox] {
+  gap: 0 !important;
+  --bg-default: white !important;
+  --bg-focus: white !important;
+  --border-color: #111 !important;
+}
+[data-checkbox] [class*="checkbox_Checkbox"] {
+  margin-right: 5px;
+}
 @media screen and (max-width: 940px) {
   ._1oXNiM3xAFJRy_Ze38gkG3 {
     padding-left: 1em;
@@ -4468,10 +4477,11 @@ html.responsive.touch ._1YM-FunhvDNQK9Fpw7MzTT {
   align-items: center;
   justify-content: center;
   width: 150px;
-  height: 75px;
+  height: 85px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   box-sizing: border-box;
   border: 3px solid var(--product-config-override-unselect-color);
-  background: var(--product-config-override-unselect-bgcolor);
   color: #000;
   cursor: pointer;
   text-align: center;
@@ -4490,7 +4500,19 @@ html.responsive.touch ._1YM-FunhvDNQK9Fpw7MzTT {
   box-sizing: border-box;
   background: var(--color-blue-12);
 }
+._2YgtWF6Ux_wURu2pJW2AZ0 {
+  border-color: #000;
+  padding-top: 0px;
+}
+._2YgtWF6Ux_wURu2pJW2AZ0 svg {
+  width: 15px;
+  color: #1a9fff;
+}
 ._19cEcW8racpIPjmEfKrMAt {
+  font-size: 12px;
+  font-weight: 400;
+}
+._1g6IBbR3A2XedjQnaIcG8x {
   font-size: 12px;
   font-weight: 400;
 }

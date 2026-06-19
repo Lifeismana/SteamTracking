@@ -16,6 +16,15 @@ message CContentModeration_CancelContentReport_Request {
 message CContentModeration_CancelContentReport_Response {
 }
 
+message CContentModeration_ClaimBatch_Request {
+	optional int32 subject_type = 1 [(.description) = "enum"];
+	optional int32 moderator_level = 2 [(.description) = "enum"];
+}
+
+message CContentModeration_ClaimBatch_Response {
+	repeated .ContentReportSubject subjects = 1;
+}
+
 message CContentModeration_ClaimBatchForModeration_Request {
 	repeated int32 accepted_subject_types = 1 [(.description) = "enum"];
 	optional uint32 support_company = 2;
@@ -109,6 +118,14 @@ message CContentModeration_GetClaimed_Request {
 
 message CContentModeration_GetClaimed_Response {
 	repeated .ContentReportSubject subject = 2;
+}
+
+message CContentModeration_GetClaimedSubjects_Request {
+	optional uint64 steamid = 1;
+}
+
+message CContentModeration_GetClaimedSubjects_Response {
+	repeated .ContentReportSubject subjects = 1;
 }
 
 message CContentModeration_GetContentReportSubject_Request {
@@ -277,6 +294,13 @@ message CContentModeration_ReleaseSubject_Request {
 }
 
 message CContentModeration_ReleaseSubject_Response {
+}
+
+message CContentModeration_ReleaseSubjects_Request {
+	repeated .ContentReportSubjectKey subjects_to_release = 1;
+}
+
+message CContentModeration_ReleaseSubjects_Response {
 }
 
 message CContentModeration_ResolveDisputedSubject_Request {
@@ -455,6 +479,8 @@ service ContentModeration {
 	// ePrivilege=1
 	rpc CancelContentReport (.CContentModeration_CancelContentReport_Request) returns (.CContentModeration_CancelContentReport_Response);
 	// ePrivilege=5
+	rpc ClaimBatch (.CContentModeration_ClaimBatch_Request) returns (.CContentModeration_ClaimBatch_Response);
+	// ePrivilege=5
 	rpc ClaimBatchForModeration (.CContentModeration_ClaimBatchForModeration_Request) returns (.CContentModeration_ClaimBatchForModeration_Response);
 	// ePrivilege=5
 	rpc ClaimSubject (.CContentModeration_ClaimSubject_Request) returns (.CContentModeration_ClaimSubject_Response);
@@ -470,6 +496,8 @@ service ContentModeration {
 	rpc GetAuditLog (.CContentModeration_GetAuditLog_Request) returns (.CContentModeration_GetAuditLog_Response);
 	// bConstMethod=true, ePrivilege=5
 	rpc GetClaimed (.CContentModeration_GetClaimed_Request) returns (.CContentModeration_GetClaimed_Response);
+	// bConstMethod=true, ePrivilege=5
+	rpc GetClaimedSubjects (.CContentModeration_GetClaimedSubjects_Request) returns (.CContentModeration_GetClaimedSubjects_Response);
 	// ePrivilege=1
 	rpc GetContentReportSubject (.CContentModeration_GetContentReportSubject_Request) returns (.CContentModeration_GetContentReportSubject_Response);
 	// ePrivilege=5
@@ -498,6 +526,8 @@ service ContentModeration {
 	rpc ReleaseClaimed (.CContentModeration_ReleaseClaimed_Request) returns (.CContentModeration_ReleaseClaimed_Response);
 	// ePrivilege=5
 	rpc ReleaseSubject (.CContentModeration_ReleaseSubject_Request) returns (.CContentModeration_ReleaseSubject_Response);
+	// ePrivilege=5
+	rpc ReleaseSubjects (.CContentModeration_ReleaseSubjects_Request) returns (.CContentModeration_ReleaseSubjects_Response);
 	// ePrivilege=5
 	rpc ResolveDisputedSubject (.CContentModeration_ResolveDisputedSubject_Request) returns (.CContentModeration_ResolveDisputedSubject_Response);
 	// ePrivilege=5

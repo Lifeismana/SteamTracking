@@ -968,18 +968,31 @@ function SetAchievement( appid, destRow, achievement )
 
 	addCell( row, ( achievement[ "hidden" ] != 0 ) ? "Yes" : "" );
 
-	// TODO jqueryize the rest here
-	var newImg = document.createElement( "img" );
-	newImg.src = achievement[ "icon" ];
-	newImg.height = 64;
-	newImg.width = 64;
-	addCell( row, "" ).append( newImg );
+	if ( achievement[ "icon" ] )
+	{
+		var newImg = document.createElement( "img" );
+		newImg.src = achievement[ "icon" ];
+		newImg.height = 64;
+		newImg.width = 64;
+		addCell( row, "" ).append( newImg );
+	}
+	else
+	{
+		addCell( row, "" );
+	}
 
-	newImg = document.createElement( "img" );
-	newImg.src = achievement[ "icon_gray" ];
-	newImg.height = 64;
-	newImg.width = 64;
-	addCell( row, "" ).append( newImg );
+	if ( achievement[ "icon_gray" ] )
+	{
+		newImg = document.createElement( "img" );
+		newImg.src = achievement[ "icon_gray" ];
+		newImg.height = 64;
+		newImg.width = 64;
+		addCell( row, "" ).append( newImg );
+	}
+	else
+	{
+		addCell( row, "" );
+	}
 
 	var btnCell = destRow.insertCell( -1 );
 
@@ -2675,7 +2688,7 @@ function LoadScreens( appid )
 // Given the hash + suffix portion, return the URL
 function AvatarURL( fn )
 {
-    return 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + fn.substring( 0, 2 ) + '/' + fn + '.jpg';
+    return 'https://shared.fastly.steamstatic.com/community_assets/images/avatars/' + fn.substring( 0, 2 ) + '/' + fn + '.jpg';
 }
 
 // populate document from set of avatars

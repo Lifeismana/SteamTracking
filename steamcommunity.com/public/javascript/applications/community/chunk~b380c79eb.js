@@ -92,34 +92,35 @@
             ref: h,
             variant: f = "default",
             color: p,
-            ...x
+            align: x = "center",
+            ...g
           } = e,
-          g = "indeterminate" === n,
-          v = g ? d : i.i,
-          m = () => {
-            s || (t && t(!!g || !n));
+          v = "indeterminate" === n,
+          m = v ? d : i.i,
+          C = () => {
+            s || (t && t(!!v || !n));
           };
         return (0, r.jsxs)(o.s, {
-          align: "center",
+          align: x,
           ref: h,
           role: "checkbox",
-          "aria-checked": g ? "mixed" : n,
+          "aria-checked": v ? "mixed" : n,
           "data-state": u(n),
           className: c()(l.Root, l[`Variant-${f}`], s && l.Disabled),
-          onClick: m,
+          onClick: C,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (m(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (C(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
           "data-accent-color": p,
-          ...x,
+          ...g,
           children: [
             (0, r.jsx)("div", {
               className: l.Checkbox,
-              children: n && (0, r.jsx)(v, { className: l.Icon }),
+              children: n && (0, r.jsx)(m, { className: l.Icon }),
             }),
             a,
           ],
@@ -391,13 +392,13 @@
           {
             getFloatingProps: O,
             getReferenceProps: w,
-            getItemProps: V,
+            getItemProps: y,
           } = (0, i.bv)([k, g, v, m, I, S]);
         return {
           floating: x,
           getFloatingProps: O,
           getReferenceProps: w,
-          getItemProps: V,
+          getItemProps: y,
           open: p,
           activeIndex: r,
           selectedIndex: c,
@@ -829,8 +830,8 @@
               onItemSelectionChange: k,
               onFocusedIndexChange: O,
               refPopover: w,
-              placeholder: V,
-              maxSelected: y,
+              placeholder: y,
+              maxSelected: V,
               ...L
             } = S("<SelectTrigger>"),
             P = {
@@ -1008,8 +1009,8 @@
             inputRef: k,
             ref: O,
             disabled: w,
-            gamepadFocusable: V = !0,
-            ...y
+            gamepadFocusable: y = !0,
+            ...V
           } = t,
           L = {
             ...n,
@@ -1031,7 +1032,7 @@
             disabled: w,
           },
           P = (0, o.useRef)(null),
-          _ = V && p.TS.IN_GAMEPADUI ? f.BA : "input";
+          _ = y && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
           ...L,
@@ -1048,7 +1049,7 @@
             onChange: (e) => {
               w || (x(e.target.value), m && m(e));
             },
-            ...y,
+            ...V,
           }),
         });
       }
@@ -1264,16 +1265,19 @@
           null !== (n = (0, l.P)(e.args)) && void 0 !== n
             ? n
             : (0, l.P)(e.args, "href");
-        return t && t.match(/^https?:\/\//)
-          ? ((0, o.p)(t) && (t = (0, o.E)(t)),
-            (0, r.jsx)(i.Y, {
-              target: "_blank",
-              href: t,
-              underline: "auto",
-              contrast: "title",
-              children: e.children,
-            }))
-          : e.children;
+        return (
+          t.startsWith("steamcommunity.com/") && (t = "https://" + t),
+          t && t.match(/^https?:\/\//)
+            ? ((0, o.p)(t) && (t = (0, o.E)(t)),
+              (0, r.jsx)(i.Y, {
+                target: "_blank",
+                href: t,
+                underline: "auto",
+                contrast: "title",
+                children: e.children,
+              }))
+            : e.children
+        );
       }
     },
     60869: (e, n, t) => {

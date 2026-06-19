@@ -2364,6 +2364,7 @@ function RenderHover( rgItem, owner )
 			missing: rgItem.missing,
 			est_usd: rgItem.est_usd,
 			asset_properties: rgItem.asset_properties,
+			asset_accessories: rgItem.asset_accessories,
 		};
 		if ( typeof rgItem.descriptions == 'string' )
 			rgItem.descriptions = [];
@@ -4143,6 +4144,15 @@ function ContinueFullInventoryRequestIfNecessary( transport, mergedResponse, str
 						if ( transport.responseJSON.rgAssetProperties[rgItem.id] )
 						{
 							mergedResponse.rgInventory[itemid].asset_properties = transport.responseJSON.rgAssetProperties[rgItem.id].slice();
+						}
+					}
+
+					// Merge asset accessories into the inventory
+					if ( transport.responseJSON.rgAssetAccessories )
+					{
+						if ( transport.responseJSON.rgAssetAccessories[rgItem.id] )
+						{
+							mergedResponse.rgInventory[itemid].asset_accessories = transport.responseJSON.rgAssetAccessories[rgItem.id].slice();
 						}
 					}
 				}

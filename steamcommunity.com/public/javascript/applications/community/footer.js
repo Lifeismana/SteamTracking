@@ -160,7 +160,7 @@
         },
       ];
     },
-    2917: (e, s, t) => {
+    21423: (e, s, t) => {
       "use strict";
       t.r(s), t.d(s, { GlobalFooter: () => J });
       var n = t(7850),
@@ -492,37 +492,37 @@
       }
       var y = t(13843);
       const Z = {};
-      (Z.arabic = () => t.e(6939).then(t.t.bind(t, 36939, 19))),
-        (Z.brazilian = () => t.e(3095).then(t.t.bind(t, 83095, 19))),
-        (Z.bulgarian = () => t.e(864).then(t.t.bind(t, 864, 19))),
-        (Z.czech = () => t.e(3910).then(t.t.bind(t, 73910, 19))),
-        (Z.danish = () => t.e(7098).then(t.t.bind(t, 27098, 19))),
-        (Z.dutch = () => t.e(4847).then(t.t.bind(t, 84847, 19))),
-        (Z.english = () => t.e(3621).then(t.t.bind(t, 53621, 19))),
-        (Z.finnish = () => t.e(9058).then(t.t.bind(t, 29058, 19))),
-        (Z.french = () => t.e(2683).then(t.t.bind(t, 82683, 19))),
-        (Z.german = () => t.e(9209).then(t.t.bind(t, 49209, 19))),
-        (Z.greek = () => t.e(2933).then(t.t.bind(t, 42933, 19))),
-        (Z.hungarian = () => t.e(6740).then(t.t.bind(t, 66740, 19))),
-        (Z.indonesian = () => t.e(4631).then(t.t.bind(t, 4631, 19))),
-        (Z.italian = () => t.e(517).then(t.t.bind(t, 10517, 19))),
-        (Z.japanese = () => t.e(4788).then(t.t.bind(t, 24788, 19))),
-        (Z.koreana = () => t.e(3838).then(t.t.bind(t, 83838, 19))),
-        (Z.latam = () => t.e(1990).then(t.t.bind(t, 91990, 19))),
-        (Z.malay = () => t.e(7141).then(t.t.bind(t, 97141, 19))),
-        (Z.norwegian = () => t.e(8953).then(t.t.bind(t, 18953, 19))),
-        (Z.polish = () => t.e(8766).then(t.t.bind(t, 58766, 19))),
-        (Z.portuguese = () => t.e(3110).then(t.t.bind(t, 93110, 19))),
-        (Z.romanian = () => t.e(7384).then(t.t.bind(t, 67384, 19))),
-        (Z.russian = () => t.e(8928).then(t.t.bind(t, 28928, 19))),
-        (Z.schinese = () => t.e(8787).then(t.t.bind(t, 98787, 19))),
-        (Z.spanish = () => t.e(8802).then(t.t.bind(t, 96421, 19))),
-        (Z.swedish = () => t.e(7524).then(t.t.bind(t, 17524, 19))),
-        (Z.tchinese = () => t.e(7248).then(t.t.bind(t, 67248, 19))),
-        (Z.thai = () => t.e(6085).then(t.t.bind(t, 46085, 19))),
-        (Z.turkish = () => t.e(7997).then(t.t.bind(t, 37997, 19))),
-        (Z.ukrainian = () => t.e(7247).then(t.t.bind(t, 47247, 19))),
-        (Z.vietnamese = () => t.e(3092).then(t.t.bind(t, 3092, 19)));
+      (Z.arabic = () => t.e(2560).then(t.t.bind(t, 42560, 19))),
+        (Z.brazilian = () => t.e(5061).then(t.t.bind(t, 37442, 19))),
+        (Z.bulgarian = () => t.e(9945).then(t.t.bind(t, 39945, 19))),
+        (Z.czech = () => t.e(5059).then(t.t.bind(t, 55059, 19))),
+        (Z.danish = () => t.e(9605).then(t.t.bind(t, 19605, 19))),
+        (Z.dutch = () => t.e(3366).then(t.t.bind(t, 13366, 19))),
+        (Z.english = () => t.e(4468).then(t.t.bind(t, 74468, 19))),
+        (Z.finnish = () => t.e(1655).then(t.t.bind(t, 31655, 19))),
+        (Z.french = () => t.e(1580).then(t.t.bind(t, 21580, 19))),
+        (Z.german = () => t.e(5666).then(t.t.bind(t, 5666, 19))),
+        (Z.greek = () => t.e(2936).then(t.t.bind(t, 22936, 19))),
+        (Z.hungarian = () => t.e(2173).then(t.t.bind(t, 52173, 19))),
+        (Z.indonesian = () => t.e(412).then(t.t.bind(t, 80412, 19))),
+        (Z.italian = () => t.e(9468).then(t.t.bind(t, 29468, 19))),
+        (Z.japanese = () => t.e(2811).then(t.t.bind(t, 52811, 19))),
+        (Z.koreana = () => t.e(6139).then(t.t.bind(t, 76139, 19))),
+        (Z.latam = () => t.e(7267).then(t.t.bind(t, 77267, 19))),
+        (Z.malay = () => t.e(8844).then(t.t.bind(t, 88844, 19))),
+        (Z.norwegian = () => t.e(5964).then(t.t.bind(t, 85964, 19))),
+        (Z.polish = () => t.e(6509).then(t.t.bind(t, 26509, 19))),
+        (Z.portuguese = () => t.e(8233).then(t.t.bind(t, 58233, 19))),
+        (Z.romanian = () => t.e(8727).then(t.t.bind(t, 48727, 19))),
+        (Z.russian = () => t.e(8973).then(t.t.bind(t, 98973, 19))),
+        (Z.schinese = () => t.e(9720).then(t.t.bind(t, 49720, 19))),
+        (Z.spanish = () => t.e(1924).then(t.t.bind(t, 31924, 19))),
+        (Z.swedish = () => t.e(7925).then(t.t.bind(t, 17925, 19))),
+        (Z.tchinese = () => t.e(9259).then(t.t.bind(t, 89259, 19))),
+        (Z.thai = () => t.e(5474).then(t.t.bind(t, 25474, 19))),
+        (Z.turkish = () => t.e(2164).then(t.t.bind(t, 12164, 19))),
+        (Z.ukrainian = () => t.e(2626).then(t.t.bind(t, 52626, 19))),
+        (Z.vietnamese = () => t.e(6515).then(t.t.bind(t, 66515, 19)));
       const k = (0, y.l)(async function (e) {
         if (Z[e]) return Z[e]();
       });

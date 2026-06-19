@@ -187,69 +187,69 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 18558, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 11992, 19))),
         (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58120, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 92087, 19))),
         (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 25799, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 41472, 19))),
         (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 12189, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 17430, 19))),
         (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 9407, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 37498, 19))),
         (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 71016, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 16847, 19))),
         (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 30494, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 87093, 19))),
         (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 83053, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 610, 19))),
         (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 50814, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84731, 19))),
         (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 66832, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 3385, 19))),
         (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 74162, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 6389, 19))),
         (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 78979, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 34100, 19))),
         (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 16626, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21559, 19))),
         (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 24094, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 22965, 19))),
         (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58225, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 19732, 19))),
         (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 97273, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 76766, 19))),
         (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 77281, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40182, 19))),
         (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 77194, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 88597, 19))),
         (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 64042, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 5353, 19))),
         (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 93887, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 58926, 19))),
         (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 60435, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 8374, 19))),
         (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 74729, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 77752, 19))),
         (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 43563, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 28128, 19))),
         (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 55473, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 55610, 19))),
         (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 96802, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 62787, 19))),
         (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 96158, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 28549, 19))),
         (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 56455, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 56052, 19))),
         (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 37809, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 2352, 19))),
         (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 55804, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 19365, 19))),
         (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38670, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 90125, 19))),
         (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 44088, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 61071, 19))),
         (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 25345, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 61716, 19)));
       const _ = (0, _._)(async function (_) {
           if (_[_]) return _[_]();
         }),
@@ -313,6 +313,14 @@
           : void 0 !== _.string_value
             ? _.string_value
             : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { icon_url: _, icon_url_large: _ } = _;
+        return (_ = _ || _), `${_._.COMMUNITY_CDN_URL}economy/image/${_}`;
+        var _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -436,6 +444,7 @@
                       (0, _.jsx)(_.Name, {}),
                       (0, _.jsx)(_.GameInfo, {}),
                       (0, _.jsx)(_.Descriptions, {}),
+                      (0, _.jsx)(_.AssetAccessories, {}),
                       (0, _.jsx)(_.OwnerDescriptions, {}),
                       (0, _.jsx)(_.Tags, {}),
                       (0, _.jsx)(_.AssetProperties, {}),
@@ -446,6 +455,84 @@
               }),
             })
           : null;
+      }
+      function _(_) {
+        const { appid: _, accessory: _ } = _,
+          { data: _ } = _(_, {
+            classid: _.classid,
+            instanceid: _.instanceid || "0",
+          }),
+          _ = _.description || _;
+        if (!_) return null;
+        const _ = _.parent_relationship_properties || [],
+          _ = _.standalone_properties || [];
+        return (0, _.jsx)(_, {
+          description: _,
+          children: (0, _.jsx)("a", {
+            className: (0, _._)(),
+            href: _._.Item(_, _.market_bucket_group_id || _.market_hash_name),
+            children: (0, _.jsxs)(_._, {
+              align: "center",
+              gap: {
+                initial: "1",
+                _: "3",
+              },
+              padding: "2",
+              background: "dull-7",
+              minWidth: "0",
+              cursor: "pointer",
+              "border-radius": "2",
+              children: [
+                (0, _.jsx)(_._, {
+                  maxWidth: "48px",
+                  maxHeight: "48px",
+                  objectFit: "contain",
+                  src: _(_),
+                  alt: "",
+                }),
+                (0, _.jsxs)(_._, {
+                  minWidth: "0",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      lineClamp: 3,
+                      children: _.name,
+                    }),
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          appid: _,
+                          property: _,
+                        },
+                        _.propertyid,
+                      ),
+                    ),
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          appid: _,
+                          property: _,
+                        },
+                        _.propertyid,
+                      ),
+                    ),
+                  ],
+                }),
+              ],
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)(_, {
+          ..._,
+          size: {
+            initial: "1",
+            _: "2",
+          },
+          contrast: "note",
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -486,7 +573,6 @@
           children: _(_, _),
         });
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
         const _ = _.context.itemDescription;
@@ -657,9 +743,20 @@
         if (!_) return null;
         return new Date(1e3 * _).toLocaleString((0, _._)());
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { description: _, type: _ = "descriptions", ..._ } = _,
-          _ = _[_];
+        const { description: _, type: _ = "descriptions", ..._ } = _;
+        let _ = _[_];
+        if ((0, _._)(_.appid) && _) {
+          let _ = !1;
+          _ = _.filter(
+            (_) =>
+              "keychain_info" !== _.name &&
+              "sticker_info" !== _.name &&
+              ("blank" !== _.name || !_) &&
+              ((_ = "blank" === _.name), !0),
+          );
+        }
         return (0, _.jsx)(_._, {
           direction: "column",
           children:
@@ -1067,8 +1164,7 @@
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _() {
         return (0, _.jsxs)(_._, {
           position: "relative",
@@ -1368,6 +1464,33 @@
               })
             : null;
         },
+        AssetAccessories: function () {
+          const _ = _(),
+            _ = _();
+          return _ && _.asset_accessories && 0 != _.asset_accessories.length
+            ? (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "1",
+                children: [
+                  (0, _.jsx)(_._, {
+                    _: "div",
+                    size: "4",
+                    children: _("#ItemDescription_AccessoriesList_Title"),
+                  }),
+                  _.asset_accessories.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        appid: _.appid,
+                        accessory: _,
+                      },
+                      _,
+                    ),
+                  ),
+                ],
+              })
+            : null;
+        },
         SellOnMarket: function () {
           const _ = _(),
             _ = _(),
@@ -1409,6 +1532,7 @@
                   (0, _.jsx)(_.FraudWarnings, {}),
                   (0, _.jsx)(_.GameInfo, {}),
                   (0, _.jsx)(_.Descriptions, {}),
+                  (0, _.jsx)(_.AssetAccessories, {}),
                   (0, _.jsx)(_.Actions, {}),
                   (0, _.jsx)(_.OwnerDescriptions, {}),
                   (0, _.jsx)(_.OwnerActions, {}),
@@ -1575,6 +1699,7 @@
                   (0, _.jsx)(_.FraudWarnings, {}),
                   (0, _.jsx)(_.GameInfo, {}),
                   (0, _.jsx)(_.Descriptions, {}),
+                  (0, _.jsx)(_.AssetAccessories, {}),
                   (0, _.jsx)(_.Actions, {}),
                   (0, _.jsx)(_.OwnerDescriptions, {}),
                   (0, _.jsx)(_.OwnerActions, {}),
@@ -1648,6 +1773,7 @@
                     hrefGame: `${_._.COMMUNITY_BASE_URL}market/search?appid=${null !== (_ = _.appid) && void 0 !== _ ? _ : 0}`,
                   }),
                   (0, _.jsx)(_.Descriptions, {}),
+                  (0, _.jsx)(_.AssetAccessories, {}),
                   _ && (0, _.jsx)(_.MarketActions, {}),
                 ],
               }),
@@ -1826,399 +1952,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(
-          {
-            ..._,
-            className: _.className,
-          },
-          _,
-        );
-        return (0, _.jsx)("img", {
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "objectFit",
-          className: _.ObjectFit,
-          cssProperty: "--object-fit",
-        },
-        {
-          prop: "objectPosition",
-          className: _.ObjectPosition,
-          cssProperty: "--object-position",
-        },
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          ..._,
-          className: _.Skeleton,
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { orientation: _ = "horizontal", size: _ = "1", ..._ } = _;
-        return (0, _.jsx)("div", {
-          role: "separator",
-          "aria-orientation": _,
-          ...(0, _._)(
-            {
-              ..._,
-              size: _,
-              className: _.Separator,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          className: (_) => _[`Size-${_}`],
-          responsive: !0,
-        },
-        {
-          prop: "color",
-          cssProperty: (_) => ["--separator-color", (0, _._)(_)],
-        },
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        var _;
-        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Grid, _.className),
-            },
-            _,
-          ),
-          _ =
-            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
-            void 0 !== _
-              ? _
-              : !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          });
-        return _._.IN_GAMEPADUI
-          ? (0, _.jsx)(_._, {
-              "flow-children": "grid",
-              ...(_ || {}),
-              focusable: _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "display",
-          responsive: !0,
-          className: _.Display,
-          cssProperty: "--grid-display",
-        },
-        {
-          prop: "columns",
-          responsive: !0,
-          className: _.Columns,
-          cssProperty: "--grid-columns",
-        },
-        {
-          prop: "rows",
-          responsive: !0,
-          className: _.Rows,
-          cssProperty: "--grid-rows",
-        },
-        {
-          prop: "autoColumns",
-          responsive: !0,
-          className: _.AutoColumns,
-          cssProperty: "--grid-auto-columns",
-        },
-        {
-          prop: "autoRows",
-          responsive: !0,
-          className: _.AutoRows,
-          cssProperty: "--grid-auto-rows",
-        },
-        {
-          prop: "autoFlow",
-          responsive: !0,
-          className: _.AutoFlow,
-          cssProperty: "--grid-auto-flow",
-        },
-        {
-          prop: "areas",
-          responsive: !0,
-          className: _.Areas,
-          cssProperty: "--grid-areas",
-        },
-        {
-          prop: "flow",
-          responsive: !0,
-          className: _.Flow,
-          cssProperty: "--grid-flow",
-        },
-        {
-          prop: "alignContent",
-          responsive: !0,
-          className: _.AlignContent,
-          cssProperty: "--grid-align-content",
-        },
-        {
-          prop: "justifyContent",
-          responsive: !0,
-          className: _.JustifyContent,
-          cssProperty: "--grid-justify-content",
-        },
-        {
-          prop: "alignItems",
-          responsive: !0,
-          className: _.AlignItems,
-          cssProperty: "--grid-align-items",
-        },
-        {
-          prop: "justifyItems",
-          responsive: !0,
-          className: _.JustifyItems,
-          cssProperty: "--grid-justify-items",
-        },
-        {
-          prop: "gap",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--grid-gap", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapX",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--grid-gap-x", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapY",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--grid-gap-y", `var(--spacing-${_})`],
-        },
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_, _) {
-        return new (_())(
-          async (_) => {
-            const _ = [..._],
-              _ = await _.xtC.GetPlayerLinkDetails(_, {
-                steamids: _,
-              }),
-              _ = new Map();
-            return (
-              _.Body()
-                .accounts()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  _.set(_.public_data.steamid, _);
-                }),
-              __webpack_require__.map((_) => {
-                var _;
-                return null !== (_ = _.get(_)) && void 0 !== _ ? _ : null;
-              })
-            );
-          },
-          {
-            maxBatchSize: 100,
-            cache: !1,
-            ..._,
-          },
-        );
-      }
-      function _(_) {
-        return (0, _._)("PlayerLinkDetails", () => _(_));
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return ["PlayerLinkDetails", _];
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(_);
-        return (0, _._)(
-          (function (_, _) {
-            const _ =
-              "number" == typeof _
-                ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
-                : _;
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                var _, _, _, _, _;
-                if (_) {
-                  const _ = await _.load(_);
-                  return (
-                    null === (_ = null == _ ? void 0 : _.private_data) ||
-                      void 0 === _ ||
-                      delete _.account_name,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.account_flags,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.ban_expires_time,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.privacy_state,
-                    1 !==
-                      (null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _
-                        ? void 0
-                        : _.profile_state) &&
-                      (null == _ || delete _.private_data),
-                    _
-                  );
-                }
-                return null;
-              },
-              enabled: !!_,
-            };
-          })(_, _),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.toLocaleString((0, _._)());
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        return (0, _._)().languages.map((_) => {
-          return 2 == (_ = _.strISOCode).length && _._.COUNTRY
-            ? `${_}-${_._.COUNTRY}`
-            : _;
-          var _;
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        let _ = _.toLowerCase().replace(/[^\p{L}\p{N}\p{Z}]/gu, "");
-        const _ = _[_];
-        return (
-          _ && (_ = __webpack_require__.replace(_, "")),
-          __webpack_require__.trim()
-        );
-      }
-      function _(_, _) {
-        const _ = (0, _._)().languages[0].strLanguage,
-          _ = _.map((_) => ({
-            item: _,
-            strSort: _(_ ? _(_) : _, _),
-          })),
-          _ = new Intl.Collator((0, _._)(), {
-            numeric: !0,
-          });
-        return (
-          _.sort((_, _) => _.compare(_.strSort, _.strSort)),
-          _.map(({ item: _ }) => _)
-        );
-      }
-      const _ = {
-        english: /^(the |a |an )/,
-        brazilian: /^(o |os |a |as |um |uns |uma |umas )/,
-        danish: /^(en |et |den |det |de )/,
-        dutch: /^(de |het |een )/,
-        french: /^(le |la |l'|les |un |une |des )/,
-        german: /^(der |die |das |ein |eine )/,
-        greek: /^(ο |η |το |οι |τα |ένας |μια |μία |ένα )/,
-        hungarian: /^(a |az |egy )/,
-        italian: /^(il |lo |la |l'|i |gli |le |un |uno |una |un')/,
-        portuguese: /^(o |a |os |as |um |uma |uns |umas )/,
-        romanian: /^(un |o |unii |unele )/,
-        spanish: /^(el |la |los |las |un |una |unos |unas )/,
-        latam: /^(el |la |los |las |un |una |unos |unas )/,
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2232,162 +1965,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { onTextChange: _, suggestions: _, onSuggestionSelected: _ } = _,
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _ ? (_(!0), _(null)) : _(!1), _(_);
-            },
-            [_],
-          );
-        return {
-          activeIndex: _,
-          setActiveIndex: _,
-          open: _,
-          onOpenChange: _,
-          onTextChange: _,
-          suggestions: _,
-          onSuggestionSelected: _,
-        };
-      }
-      const _ = Object.assign(
-          function (_) {
-            const {
-                suggestions: _,
-                onTextChange: _,
-                onSuggestionSelected: _,
-                ..._
-              } = _,
-              _ = _({
-                onTextChange: _,
-                suggestions: _,
-                onSuggestionSelected: _,
-              });
-            return (0, _.jsxs)(_.Root, {
-              state: _,
-              children: [
-                (0, _.jsx)(_.TextInput, {
-                  ..._,
-                }),
-                (0, _.jsx)(_.Suggestions, {
-                  children: _.map((_, _) =>
-                    (0, _.jsx)(
-                      _.Suggestion,
-                      {
-                        value: _,
-                        children: _,
-                      },
-                      _ + _,
-                    ),
-                  ),
-                }),
-              ],
-            });
-          },
-          {
-            Root: function (_) {
-              const {
-                  children: _,
-                  placement: _ = "bottom-end",
-                  popoverWidth: _ = "dropdown",
-                  ..._
-                } = _,
-                _ = (0, _._)({
-                  ..._.state,
-                  width: _,
-                  placement: _,
-                  gutter: "4",
-                  interactions: {
-                    virtualItemFocus: !0,
-                    focus: !0,
-                  },
-                  role: "combobox",
-                  scroll: !0,
-                });
-              return (0, _.jsx)(_.Provider, {
-                value: _,
-                children: (0, _.jsx)(_._.Root, {
-                  state: _,
-                  children: _,
-                }),
-              });
-            },
-            TextInput: function (_) {
-              const {
-                  state: {
-                    onTextChange: _,
-                    activeIndex: _,
-                    onOpenChange: _,
-                    setActiveIndex: _,
-                    suggestions: _,
-                    onSuggestionSelected: _,
-                  },
-                } = _("<Autocomplete.TextInput>"),
-                _ = (0, _.useRef)(null);
-              return (0, _.jsx)(_._.Anchor, {
-                children: (0, _.jsx)(_._, {
-                  ..._,
-                  inputRef: _,
-                  onTextChange: _,
-                  "aria-autocomplete": "list",
-                  onKeyDown: (_) => {
-                    "Enter" === _.key &&
-                      null !== _ &&
-                      _[_] &&
-                      (_ && _(_[_], _),
-                      _.defaultPrevented || _(_[_]),
-                      _(null),
-                      _(!1),
-                      _.preventDefault(),
-                      _.stopPropagation());
-                  },
-                  onKeyDownCapture: (_) => {
-                    ("Home" !== _.key && "End" !== _.key) ||
-                      _.stopPropagation();
-                  },
-                  role: "combobox",
-                }),
-              });
-            },
-            Suggestions: function (_) {
-              return (0, _.jsx)(_._.Positioner, {
-                ..._,
-                returnFocus: !1,
-              });
-            },
-            Suggestion: function (_) {
-              const { value: _, children: _, ..._ } = _,
-                {
-                  state: {
-                    onTextChange: _,
-                    onOpenChange: _,
-                    setActiveIndex: _,
-                    onSuggestionSelected: _,
-                  },
-                } = _("<Autocomplete.TextInput>");
-              return (0, _.jsx)(_._.Item, {
-                onSelect: (_) => {
-                  _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
-                },
-                ..._,
-                children: _,
-              });
-            },
-          },
-        ),
-        _ = (0, _.createContext)(null);
-      function _(_) {
-        const _ = (0, _.useContext)(_);
-        return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2924,138 +2501,96 @@
         const _ = (0, _.useContext)(_);
         return _ || console.error(`${_} must be used within a <Combobox>!`), _;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(null),
-        _ = Object.assign(
-          function (_) {
-            const {
-                selected: _,
-                onSelectedChange: _ = () => {},
-                onItemChange: _ = () => {},
-                disabled: _,
-                direction: _ = "column",
-                ..._
-              } = _,
-              _ = {
-                selected: _.reduce(
-                  (_, _) => ({
-                    ..._,
-                    [_]: !0,
-                  }),
-                  {},
-                ),
-                onChange: (_, _) => {
-                  if ((_(_, _), _)) __webpack_require__(_.concat(_));
-                  else {
-                    const _ = _.indexOf(_);
-                    __webpack_require__(_.slice(0, _).concat(_.slice(_ + 1)));
-                  }
-                },
-                disabled: _,
-              },
-              _ = "row" === _;
-            return (0, _.jsx)(_.Provider, {
-              value: _,
-              children: (0, _.jsx)(_._, {
-                direction: _,
-                wrap: _ ? "wrap" : void 0,
-                gap: "column" === _ ? "1" : "4",
-                role: "group",
-                ..._,
-              }),
-            });
-          },
+      function _(_) {
+        const _ = (0, _._)(
           {
-            Item: function (_) {
-              const { value: _, children: _ } = _,
-                _ = (0, _.useContext)(_);
-              if (!_)
-                return (
-                  console.error(
-                    "<CheckboxGroup.Item> must be used within a <CheckboxGroup>",
-                  ),
-                  null
-                );
-              const { selected: _, onChange: _, disabled: _ } = _;
-              return (0, _.jsx)(_._, {
-                checked: !!_[_],
-                disabled: _,
-                onChange: (_) => _(_, _),
-                children:
-                  !!_ &&
-                  (0, _.jsx)(_._, {
-                    children: _,
-                  }),
-              });
-            },
+            ..._,
+            className: _.className,
           },
+          _,
         );
+        return (0, _.jsx)("img", {
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "objectFit",
+          className: _.ObjectFit,
+          cssProperty: "--object-fit",
+        },
+        {
+          prop: "objectPosition",
+          className: _.ObjectPosition,
+          cssProperty: "--object-position",
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = Object.assign(
-          function (_) {
-            return (0, _.jsxs)(_.Root, {
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          ..._,
+          className: _.Skeleton,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { orientation: _ = "horizontal", size: _ = "1", ..._ } = _;
+        return (0, _.jsx)("div", {
+          role: "separator",
+          "aria-orientation": _,
+          ...(0, _._)(
+            {
               ..._,
-              children: [(0, _.jsx)(_.Track, {}), (0, _.jsx)(_.Handle, {})],
-            });
-          },
-          {
-            Root: function (_) {
-              const {
-                value: _,
-                onChange: _,
-                size: _ = "2",
-                color: _,
-                ref: _,
-              } = _;
-              return (0, _.jsx)("div", {
-                ref: _,
-                role: "switch",
-                "aria-checked": !!_,
-                onClick: () => __webpack_require__(!_),
-                onKeyDown: (_) => {
-                  (" " !== _.key && "Enter" !== _.key) ||
-                    (__webpack_require__(!_),
-                    _.preventDefault(),
-                    _.stopPropagation());
-                },
-                tabIndex: 0,
-                "data-accent-color": _,
-                ...(0, _._)(
-                  {
-                    size: _,
-                    className: _.Root,
-                  },
-                  _,
-                ),
-                children: _.children,
-              });
+              size: _,
+              className: _.Separator,
             },
-            Track: function (_) {
-              return (0, _.jsx)("div", {
-                className: _.Track,
-                ..._,
-              });
-            },
-            Handle: function (_) {
-              return (0, _.jsx)("div", {
-                className: _.Handle,
-                ..._,
-              });
-            },
-          },
-        ),
-        _ = [
-          ..._._,
-          {
-            prop: "size",
-            className: (_) => _[`Size-${_}`],
-            responsive: !0,
-          },
-        ];
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          className: (_) => _[`Size-${_}`],
+          responsive: !0,
+        },
+        {
+          prop: "color",
+          cssProperty: (_) => ["--separator-color", (0, _._)(_)],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       function _(_) {
         const { bActive: _, onActiveChange: _, ..._ } = _;
         return {
@@ -3072,1111 +2607,1950 @@
           ..._,
         };
       }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 404, 19))),
-        (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94174, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 46421, 19))),
-        (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1287, 19))),
-        (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 40569, 19))),
-        (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94794, 19))),
-        (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 39808, 19))),
-        (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38667, 19))),
-        (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 44952, 19))),
-        (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 60262, 19))),
-        (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 98220, 19))),
-        (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 39945, 19))),
-        (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 71456, 19))),
-        (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62416, 19))),
-        (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 15975, 19))),
-        (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 18303, 19))),
-        (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 64375, 19))),
-        (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 37144, 19))),
-        (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94843, 19))),
-        (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 21825, 19))),
-        (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 23717, 19))),
-        (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 15979, 19))),
-        (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 40249, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 83107, 19))),
-        (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 23860, 19))),
-        (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 59656, 19))),
-        (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 36217, 19))),
-        (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 46543, 19))),
-        (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 51342, 19))),
-        (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 98160, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 54486, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58831, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = 10;
       function _(_) {
-        return _.rgOptions.length >= _
-          ? (0, _.jsx)(_, {
+        var _;
+        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(
+            {
               ..._,
+              className: _()(_.Grid, _.className),
+            },
+            _,
+          ),
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.onClick,
+          _ = (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          });
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_._, {
+              "flow-children": "grid",
+              ...(_ || {}),
+              focusable: _,
+              children: _,
             })
-          : (0, _.jsx)(_, {
-              ..._,
-            });
+          : _;
       }
+      const _ = [
+        ..._._,
+        {
+          prop: "display",
+          responsive: !0,
+          className: _.Display,
+          cssProperty: "--grid-display",
+        },
+        {
+          prop: "columns",
+          responsive: !0,
+          className: _.Columns,
+          cssProperty: "--grid-columns",
+        },
+        {
+          prop: "rows",
+          responsive: !0,
+          className: _.Rows,
+          cssProperty: "--grid-rows",
+        },
+        {
+          prop: "autoColumns",
+          responsive: !0,
+          className: _.AutoColumns,
+          cssProperty: "--grid-auto-columns",
+        },
+        {
+          prop: "autoRows",
+          responsive: !0,
+          className: _.AutoRows,
+          cssProperty: "--grid-auto-rows",
+        },
+        {
+          prop: "autoFlow",
+          responsive: !0,
+          className: _.AutoFlow,
+          cssProperty: "--grid-auto-flow",
+        },
+        {
+          prop: "areas",
+          responsive: !0,
+          className: _.Areas,
+          cssProperty: "--grid-areas",
+        },
+        {
+          prop: "flow",
+          responsive: !0,
+          className: _.Flow,
+          cssProperty: "--grid-flow",
+        },
+        {
+          prop: "alignContent",
+          responsive: !0,
+          className: _.AlignContent,
+          cssProperty: "--grid-align-content",
+        },
+        {
+          prop: "justifyContent",
+          responsive: !0,
+          className: _.JustifyContent,
+          cssProperty: "--grid-justify-content",
+        },
+        {
+          prop: "alignItems",
+          responsive: !0,
+          className: _.AlignItems,
+          cssProperty: "--grid-align-items",
+        },
+        {
+          prop: "justifyItems",
+          responsive: !0,
+          className: _.JustifyItems,
+          cssProperty: "--grid-justify-items",
+        },
+        {
+          prop: "gap",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapX",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap-x", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapY",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap-y", `var(--spacing-${_})`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_, _) {
-        return (
-          !!_[_.facet] &&
-          ("string" == typeof _.tag
-            ? _[_.facet][_.tag]
-            : _.tag.every((_) => _[_.facet][_]))
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => {
+                var _;
+                return null !== (_ = _.get(_)) && void 0 !== _ ? _ : null;
+              })
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
         );
       }
       function _(_) {
-        const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
-          _ = (0, _.useMemo)(() => _.filter((_) => _(_, _)), [_, _]),
-          _ = (0, _._)({
-            rgOptions: _,
-            selectedValue: _,
-            onSelectionChange: (_) => _(_, _),
-          }),
-          _ = _.length > 0;
+        return (0, _._)("PlayerLinkDetails", () => _(_));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return ["PlayerLinkDetails", _];
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_);
+        return (0, _._)(
+          (function (_, _) {
+            const _ =
+              "number" == typeof _
+                ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
+                : _;
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                var _, _, _, _, _;
+                if (_) {
+                  const _ = await _.load(_);
+                  return (
+                    null === (_ = null == _ ? void 0 : _.private_data) ||
+                      void 0 === _ ||
+                      delete _.account_name,
+                    null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _ ||
+                      delete _.account_flags,
+                    null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _ ||
+                      delete _.ban_expires_time,
+                    null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _ ||
+                      delete _.privacy_state,
+                    1 !==
+                      (null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _
+                        ? void 0
+                        : _.profile_state) &&
+                      (null == _ || delete _.private_data),
+                    _
+                  );
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_, _),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.toLocaleString((0, _._)());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)().languages.map((_) => {
+          return 2 == (_ = _.strISOCode).length && _._.COUNTRY
+            ? `${_}-${_._.COUNTRY}`
+            : _;
+          var _;
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        let _ = _.toLowerCase().replace(/[^\p{L}\p{N}\p{Z}]/gu, "");
+        const _ = _[_];
+        return (
+          _ && (_ = __webpack_require__.replace(_, "")),
+          __webpack_require__.trim()
+        );
+      }
+      function _(_, _) {
+        const _ = (0, _._)().languages[0].strLanguage,
+          _ = _.map((_) => ({
+            item: _,
+            strSort: _(_ ? _(_) : _, _),
+          })),
+          _ = new Intl.Collator((0, _._)(), {
+            numeric: !0,
+          });
+        return (
+          _.sort((_, _) => _.compare(_.strSort, _.strSort)),
+          _.map(({ item: _ }) => _)
+        );
+      }
+      const _ = {
+        english: /^(the |a |an )/,
+        brazilian: /^(o |os |a |as |um |uns |uma |umas )/,
+        danish: /^(en |et |den |det |de )/,
+        dutch: /^(de |het |een )/,
+        french: /^(le |la |l'|les |un |une |des )/,
+        german: /^(der |die |das |ein |eine )/,
+        greek: /^(ο |η |το |οι |τα |ένας |μια |μία |ένα )/,
+        hungarian: /^(a |az |egy )/,
+        italian: /^(il |lo |la |l'|i |gli |le |un |uno |una |un')/,
+        portuguese: /^(o |a |os |as |um |uma |uns |umas )/,
+        romanian: /^(un |o |unii |unele )/,
+        spanish: /^(el |la |los |las |un |una |unos |unas )/,
+        latam: /^(el |la |los |las |un |una |unos |unas )/,
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { onTextChange: _, suggestions: _, onSuggestionSelected: _ } = _,
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _ ? (_(!0), _(null)) : _(!1), _(_);
+            },
+            [_],
+          );
+        return {
+          activeIndex: _,
+          setActiveIndex: _,
+          open: _,
+          onOpenChange: _,
+          onTextChange: _,
+          suggestions: _,
+          onSuggestionSelected: _,
+        };
+      }
+      const _ = Object.assign(
+          function (_) {
+            const {
+                suggestions: _,
+                onTextChange: _,
+                onSuggestionSelected: _,
+                ..._
+              } = _,
+              _ = _({
+                onTextChange: _,
+                suggestions: _,
+                onSuggestionSelected: _,
+              });
+            return (0, _.jsxs)(_.Root, {
+              state: _,
+              children: [
+                (0, _.jsx)(_.TextInput, {
+                  ..._,
+                }),
+                (0, _.jsx)(_.Suggestions, {
+                  children: _.map((_, _) =>
+                    (0, _.jsx)(
+                      _.Suggestion,
+                      {
+                        value: _,
+                        children: _,
+                      },
+                      _ + _,
+                    ),
+                  ),
+                }),
+              ],
+            });
+          },
+          {
+            Root: function (_) {
+              const {
+                  children: _,
+                  placement: _ = "bottom-end",
+                  popoverWidth: _ = "dropdown",
+                  ..._
+                } = _,
+                _ = (0, _._)({
+                  ..._.state,
+                  width: _,
+                  placement: _,
+                  gutter: "4",
+                  interactions: {
+                    virtualItemFocus: !0,
+                    focus: !0,
+                  },
+                  role: "combobox",
+                  scroll: !0,
+                });
+              return (0, _.jsx)(_.Provider, {
+                value: _,
+                children: (0, _.jsx)(_._.Root, {
+                  state: _,
+                  children: _,
+                }),
+              });
+            },
+            TextInput: function (_) {
+              const {
+                  state: {
+                    onTextChange: _,
+                    activeIndex: _,
+                    onOpenChange: _,
+                    setActiveIndex: _,
+                    suggestions: _,
+                    onSuggestionSelected: _,
+                  },
+                } = _("<Autocomplete.TextInput>"),
+                _ = (0, _.useRef)(null);
+              return (0, _.jsx)(_._.Anchor, {
+                children: (0, _.jsx)(_._, {
+                  ..._,
+                  inputRef: _,
+                  onTextChange: _,
+                  "aria-autocomplete": "list",
+                  onKeyDown: (_) => {
+                    "Enter" === _.key &&
+                      null !== _ &&
+                      _[_] &&
+                      (_ && _(_[_], _),
+                      _.defaultPrevented || _(_[_]),
+                      _(null),
+                      _(!1),
+                      _.preventDefault(),
+                      _.stopPropagation());
+                  },
+                  onKeyDownCapture: (_) => {
+                    ("Home" !== _.key && "End" !== _.key) ||
+                      _.stopPropagation();
+                  },
+                  role: "combobox",
+                }),
+              });
+            },
+            Suggestions: function (_) {
+              return (0, _.jsx)(_._.Positioner, {
+                ..._,
+                returnFocus: !1,
+              });
+            },
+            Suggestion: function (_) {
+              const { value: _, children: _, ..._ } = _,
+                {
+                  state: {
+                    onTextChange: _,
+                    onOpenChange: _,
+                    setActiveIndex: _,
+                    onSuggestionSelected: _,
+                  },
+                } = _("<Autocomplete.TextInput>");
+              return (0, _.jsx)(_._.Item, {
+                onSelect: (_) => {
+                  _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
+                },
+                ..._,
+                children: _,
+              });
+            },
+          },
+        ),
+        _ = (0, _.createContext)(null);
+      function _(_) {
+        const _ = (0, _.useContext)(_);
+        return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { showSteamItems: _, onShowSteamItemsChange: _ } = _;
         return (0, _.jsxs)(_._.Root, {
-          state: _,
-          variant: "highlight",
-          radius: "sm",
-          clearable: !0,
+          value: _ ? "on" : "off",
+          onValueChange: (_) => __webpack_require__("on" === _),
+          variant: "inset",
+          radius: "full",
           children: [
-            (0, _.jsxs)(_._.Trigger, {
-              children: [
-                !_ &&
-                  (0, _.jsx)(_._.Value, {
-                    children: _,
-                  }),
-                _ &&
-                  (0, _.jsxs)(_._.Value, {
-                    children: [
-                      _,
-                      ": ",
-                      (0, _.jsx)(_._, {
-                        color: "accent-8",
-                        children: _(_),
-                      }),
-                    ],
-                  }),
-              ],
+            (0, _.jsx)(_._.Item, {
+              value: "off",
+              children: _._.Localize("#AdvancedSearch_TypeSwitch_InGame"),
             }),
-            (0, _.jsx)(_._.Options, {
-              children: _.map((_) =>
-                (0, _.jsx)(
-                  _._.Option,
-                  {
-                    value: _,
-                    disabled: !_ && 0 === _.matches,
-                    children: (0, _.jsx)(_, {
-                      color: _.color,
-                      matches: _.matches,
-                      children: _.strLabel,
-                    }),
-                  },
-                  ((_) => `${_.facet}_${_.tag}`)(_),
-                ),
-              ),
+            (0, _.jsx)(_._.Item, {
+              value: "on",
+              children: _._.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
             }),
           ],
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 2;
+      function _(_, _, _) {
+        return (0, _.useMemo)(() => {
+          if (!_) return [];
+          const _ = _[_];
+          return _ ? _(_, _) : _(_, void 0, _);
+        }, [_, _, _]);
+      }
+      const _ = 753,
+        _ = {
+          [_]: (_, _) => _(_, 3, _),
+        };
+      function _(_, _, _) {
+        const _ = "number" == typeof _ ? _ : _,
+          _ = [],
+          _ = [];
+        if (!_) return [];
+        for (const _ of Object.keys(_)) {
+          const _ = _[_];
+          if (!_.tags) continue;
+          const _ = Object.keys(_.tags).length < _,
+            _ = (0, _._)(_, _ ? "checkbox" : "select", !0, void 0, _);
+          _ && (_ ? _.push(_) : _.push(_));
+        }
+        return [_, _].filter((_) => _.length > 0);
+      }
       function _(_) {
-        const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
-          _ = (0, _.useMemo)(() => _.filter((_) => _(_, _)), [_, _]),
-          _ = _({
-            rgOptions: _,
-            selectedValue: _,
-            onSelectionChange: (_) => _(_, _),
-            filterPlaceholder: _.Localize(
-              "#AdvancedSearch_FilterGeneric_Placeholder",
+        const { facets: _, state: _, onStateChange: _ } = _;
+        return (0, _.jsx)(_.Fragment, {
+          children: _.flatMap((_, _) => [
+            (0, _.jsxs)(
+              _._,
+              {
+                children: [
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _._,
+                      {
+                        facet: _,
+                        state: _,
+                        onStateChange: _,
+                      },
+                      _.strLabel,
+                    ),
+                  ),
+                  _ === _.length - 1 &&
+                    (0, _.jsx)(_._, {
+                      state: _,
+                      onStateChange: _,
+                    }),
+                ],
+              },
+              `facets_${_}`,
             ),
-          }),
-          _ = _.length > 0;
-        return (0, _.jsxs)(_.Root, {
-          state: _,
-          variant: "highlight",
-          radius: "sm",
-          clearable: !0,
-          children: [
-            (0, _.jsxs)(_.Trigger, {
-              children: [
-                !_ &&
-                  (0, _.jsx)(_.Value, {
-                    children: _,
-                  }),
-                _ &&
-                  (0, _.jsxs)(_.Value, {
-                    children: [
-                      _,
-                      ": ",
-                      (0, _.jsx)(_._, {
-                        color: "accent-8",
-                        children: _(_),
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-            (0, _.jsx)(_.Options, {
-              children: _.rgFilteredOptions.map((_) =>
-                (0, _.jsx)(
-                  _.Option,
+            _ < _.length - 1
+              ? (0, _.jsx)(
+                  _._,
                   {
-                    value: _,
-                    disabled: !_ && 0 === _.matches,
-                    children: (0, _.jsx)(_, {
-                      color: _.color,
-                      matches: _.matches,
-                      children: _.strLabel,
-                    }),
+                    color: "dull-9",
+                    size: "4",
+                    marginTop: "4",
                   },
-                  ((_) => `${_.facet}_${_.tag}`)(_),
-                ),
-              ),
-            }),
-          ],
+                  `sep_${_}`,
+                )
+              : null,
+          ]),
         });
       }
+      const _ = 753,
+        _ = `${_}_item_class`,
+        _ = `${_}_Event`;
       function _(_) {
-        const { color: _, matches: _, children: _ } = _;
+        const {
+            facets: _,
+            state: _,
+            onStateChange: _,
+            facetingInfo: _,
+            ..._
+          } = _,
+          _ = {
+            ..._,
+          },
+          _ = _[_];
+        delete _[_];
+        !_.app || delete _[_];
+        const _ = _(_, _, _);
         return (0, _.jsxs)(_._, {
-          gap: "2",
-          align: "center",
+          ..._,
           children: [
             _ &&
               (0, _.jsx)(_, {
-                color: _,
+                facet: _,
+                state: _,
+                onStateChange: _,
               }),
-            (0, _.jsxs)(_._, {
-              children: [
-                _,
-                " ",
-                void 0 !== _ && _ >= 1
-                  ? (0, _.jsxs)(_._, {
-                      contrast: "description",
-                      children: ["(", Intl.NumberFormat().format(_), ")"],
-                    })
-                  : void 0,
-              ],
+            (0, _.jsx)(_, {
+              facets: _,
+              state: _,
+              onStateChange: _,
             }),
           ],
         });
       }
-      function _(_) {
-        return _.map((_) => _.strLabel).join(", ");
-      }
-      function _(_) {
-        const { color: _ } = _;
-        return (0, _.jsx)(_._, {
-          width: "6px",
-          height: "6px",
-          radius: "full",
-          style: {
-            backgroundColor: _,
+      const _ = ["item_class_10", "item_class_6"],
+        _ = {
+          item_class_2: function (_) {
+            return (0, _.jsxs)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M24 31H3V5H24V31ZM6 8H21V24H6V8Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  _: "M33 27H28V22H31V11H28V9H33V27Z",
+                }),
+              ],
+            });
           },
-        });
-      }
+          item_class_3: function (_) {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
+                _: "M2 6.05005V30.05H34V6.05005H2ZM25 10.05C25.5933 10.05 26.1734 10.226 26.6667 10.5556C27.1601 10.8853 27.5446 11.3538 27.7716 11.902C27.9987 12.4502 28.0581 13.0534 27.9424 13.6353C27.8266 14.2173 27.5409 14.7518 27.1213 15.1714C26.7018 15.5909 26.1672 15.8766 25.5853 15.9924C25.0033 16.1082 24.4001 16.0488 23.8519 15.8217C23.3038 15.5946 22.8352 15.2101 22.5056 14.7168C22.1759 14.2234 22 13.6434 22 13.05C22 12.2544 22.3161 11.4913 22.8787 10.9287C23.4413 10.3661 24.2044 10.05 25 10.05ZM23 26.05H6L14.5 15.05L19.4 21.39L22 18.05L28.22 26.05H23Z",
+                fill: "currentColor",
+              }),
+            });
+          },
+          item_class_4: function (_) {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M9.66645 5.52796C12.1332 3.87973 15.0333 3 18 3C19.9698 3 21.9204 3.38799 23.7403 4.14181C25.5601 4.89563 27.2137 6.00052 28.6066 7.3934C29.9995 8.78628 31.1044 10.4399 31.8582 12.2597C32.612 14.0796 33 16.0302 33 18C33 20.9667 32.1203 23.8668 30.472 26.3336C28.8238 28.8003 26.4811 30.7229 23.7403 31.8582C20.9994 32.9935 17.9834 33.2906 15.0737 32.7118C12.1639 32.133 9.49119 30.7044 7.3934 28.6066C5.29562 26.5088 3.86701 23.8361 3.28823 20.9264C2.70945 18.0166 3.0065 15.0006 4.14181 12.2597C5.27713 9.51886 7.19972 7.17618 9.66645 5.52796ZM9.5056 13.3333C9.17595 13.8266 9.00001 14.4067 9.00001 15C9.00001 15.7956 9.31608 16.5587 9.87869 17.1213C10.4413 17.6839 11.2044 18 12 18C12.5934 18 13.1734 17.8241 13.6667 17.4944C14.1601 17.1648 14.5446 16.6962 14.7716 16.1481C14.9987 15.5999 15.0581 14.9967 14.9424 14.4147C14.8266 13.8328 14.5409 13.2982 14.1213 12.8787C13.7018 12.4591 13.1672 12.1734 12.5853 12.0576C12.0033 11.9419 11.4001 12.0013 10.852 12.2284C10.3038 12.4554 9.83524 12.8399 9.5056 13.3333ZM22.3333 17.4944C22.8266 17.8241 23.4067 18 24 18C24.7957 18 25.5587 17.6839 26.1213 17.1213C26.6839 16.5587 27 15.7956 27 15C27 14.4067 26.8241 13.8266 26.4944 13.3333C26.1648 12.8399 25.6962 12.4554 25.1481 12.2284C24.5999 12.0013 23.9967 11.9419 23.4147 12.0576C22.8328 12.1734 22.2982 12.4591 21.8787 12.8787C21.4591 13.2982 21.1734 13.8328 21.0576 14.4147C20.9419 14.9967 21.0013 15.5999 21.2284 16.1481C21.4554 16.6962 21.8399 17.1648 22.3333 17.4944ZM23 22C23 23.3261 22.4732 24.5979 21.5355 25.5355C20.5979 26.4732 19.3261 27 18 27C16.6739 27 15.4021 26.4732 14.4645 25.5355C13.5268 24.5979 13 23.3261 13 22H23Z",
+                fill: "currentColor",
+              }),
+            });
+          },
+          item_class_5: function (_) {
+            return (0, _.jsxs)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  _: "M29 31H6V5H29V31ZM9 8H26V24H9V8Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  _: "M14.7451 16.9935L12 14.19L15.7965 14.125L17.5 10L19.2035 14.125L23 14.19L20.2549 16.9935L20.8973 20.9694L17.5 19.1242L14.1027 21L14.7451 16.9935Z",
+                }),
+              ],
+            });
+          },
+          item_class_10: function (_) {
+            return (0, _.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              children: (0, _.jsx)("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M13 7H34V29H13V25H10V29H2V21C3.65685 21 5 19.6569 5 18C5 16.3431 3.65685 15 2 15V7H10V11H13V7ZM13 23H10V19H13V23ZM10 17H13V13H10V17ZM21 15C21 15.5523 20.5523 16 20 16C19.4477 16 19 15.5523 19 15C19 14.4477 19.4477 14 20 14C20.5523 14 21 14.4477 21 15ZM23 15C23 16.6569 21.6569 18 20 18C18.3431 18 17 16.6569 17 15C17 13.3431 18.3431 12 20 12C21.6569 12 23 13.3431 23 15ZM28 23C28.5523 23 29 22.5523 29 22C29 21.4477 28.5523 21 28 21C27.4477 21 27 21.4477 27 22C27 22.5523 27.4477 23 28 23ZM28 25C29.6569 25 31 23.6569 31 22C31 20.3431 29.6569 19 28 19C26.3431 19 25 20.3431 25 22C25 23.6569 26.3431 25 28 25ZM27.1679 11.9453L19.1679 23.9453L20.832 25.0547L28.832 13.0547L27.1679 11.9453Z",
+              }),
+            });
+          },
+        };
       function _(_) {
-        const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
-          _ = (_) => `${_.facet}_${_.tag}`,
-          _ = _.filter((_) => _(_, _)).map(_);
-        return (0, _.jsxs)(_._, {
-          marginBottom: "4",
+        const {
+            facet: { localized_name: _, name: _, tags: _ = {} },
+            state: _,
+            onStateChange: _,
+          } = _,
+          _ = Object.keys(_).filter((_) => _.indexOf(_) < 1),
+          _ = _.facets[_] || {};
+        return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
               weight: "medium",
+              size: "3",
               contrast: "title",
-              children: _,
+              children: _._.Localize("#AdvancedSearch_SteamItems_TypeLabel"),
             }),
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
+              columns: "repeat( auto-fit, minmax( 230px, 1fr ) )",
+              gap: "2",
               marginTop: "2",
-              selected: _,
-              onItemChange: (_, _) => {
-                const _ = _.find((_) => _(_) === _);
-                _ && _(_.facet, _.tag, _);
-              },
-              direction: "row",
               children: _.map((_) =>
                 (0, _.jsx)(
-                  _,
+                  _._,
                   {
-                    value: _(_),
-                    checked: _(_, _),
-                    children: _.strLabel,
+                    active: _[_],
+                    onActiveChange: (_) =>
+                      ((_, _) => {
+                        if (_.includes(_)) {
+                          let _ = _;
+                          for (const _ of _) _ = (0, _._)(_, _, _, _);
+                          _(_, !0);
+                        } else _((0, _._)(_, _, _, _), !0);
+                      })(_, _),
+                    label: _[_].localized_name,
+                    icon: _[_],
                   },
-                  _(_),
+                  _,
                 ),
               ),
             }),
           ],
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "4",
+        _ = (0, _.createContext)({});
       function _(_) {
-        const { value: _, checked: _, children: _ } = _;
-        return (0, _.jsx)(_.Item, {
+        const {
+            filter: _,
+            onFilterChange: _,
+            config: _,
+            preload: _ = {},
+            debugMode: _,
+            onSearch: _,
+            ..._
+          } = _,
+          _ = _.bSteamItems,
+          _ = (0, _._)("sm"),
+          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app,
+          _ = _(_);
+        return (0, _.jsx)(_._.Provider, {
+          value: !!_,
+          children: (0, _.jsx)(_._.Provider, {
+            value: _,
+            children: (0, _.jsx)(_.Provider, {
+              value: _,
+              children: (0, _.jsx)(_._, {
+                minWidth: {
+                  initial: void 0,
+                  _: "min( 75vw, 800px )",
+                },
+                children: (0, _.jsxs)("form", {
+                  onSubmit: (_) => {
+                    _.preventDefault(), _.stopPropagation();
+                  },
+                  children: [
+                    !_.bNewMarket &&
+                      (0, _.jsx)(_._, {
+                        size: "7",
+                        weight: "heavy",
+                        children: _._.Localize("#AdvancedSearch_Heading"),
+                      }),
+                    (0, _.jsxs)(_._, {
+                      gap: "2",
+                      align: {
+                        initial: "stretch",
+                        _: "start",
+                      },
+                      marginY: _,
+                      direction: {
+                        initial: "column",
+                        _: "row",
+                      },
+                      children: [
+                        (0, _.jsx)(_._, {
+                          flexGrow: "0",
+                          children: (0, _.jsx)(_, {
+                            showSteamItems: _,
+                            onShowSteamItemsChange: (_) =>
+                              __webpack_require__({
+                                ..._,
+                                bSteamItems: _,
+                              }),
+                          }),
+                        }),
+                        _ &&
+                          (0, _.jsx)(_._, {
+                            style: {
+                              marginTop: "10px",
+                            },
+                            children: (0, _.jsx)(_._, {
+                              size: "1",
+                              orientation: "vertical",
+                              color: "dull-9",
+                            }),
+                          }),
+                        (0, _.jsxs)(_._, {
+                          direction: "column",
+                          flexGrow: "1",
+                          gap: "2",
+                          children: [
+                            (0, _.jsx)(_, {
+                              app: _ || void 0,
+                              value: _.strSearch || "",
+                              onTextChange: (_) =>
+                                __webpack_require__({
+                                  ..._,
+                                  strSearch: _,
+                                }),
+                            }),
+                            _ &&
+                              (0, _.jsx)(_._, {
+                                marginLeft: "4",
+                                checked: !!_.bSearchDescriptions,
+                                onChange: (_) =>
+                                  __webpack_require__({
+                                    ..._,
+                                    bSearchDescriptions: _,
+                                  }),
+                                title: _._.Localize(
+                                  "#AdvancedSearch_IncludeDescriptions_Tooltip",
+                                ),
+                                children: (0, _.jsx)(_._, {
+                                  contrast: "description",
+                                  children: _._.Localize(
+                                    "#AdvancedSearch_IncludeDescriptions",
+                                  ),
+                                }),
+                              }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_, {
+                      children: [
+                        !_ &&
+                          (0, _.jsx)(_, {
+                            ..._,
+                            filter: _.filterInGame,
+                            onFilterChange: (_) =>
+                              __webpack_require__({
+                                ..._,
+                                filterInGame: _,
+                              }),
+                            suggestedInitialApp: _.filterSteam.app,
+                          }),
+                        _ &&
+                          (0, _.jsx)(_, {
+                            ..._,
+                            filter: _.filterSteam,
+                            onFilterChange: (_) =>
+                              __webpack_require__({
+                                ..._,
+                                filterSteam: _,
+                              }),
+                            suggestedInitialApp: _.filterInGame.app,
+                          }),
+                      ],
+                    }),
+                    (0, _.jsx)(_, {
+                      filter: _,
+                      onFilterChange: _,
+                      config: _,
+                      onSearch: _,
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        return !!_;
+      }
+      function _(_) {
+        const { filter: _, onFilterChange: _, config: _, onSearch: _ } = _,
+          _ = _.bSteamItems,
+          [_, _] = (0, _.useState)(!1),
+          _ = _ ? _.filterSteam : _.filterInGame,
+          _ =
+            0 !== _.price[0] ||
+            _.price[1] !== _.maxPrice ||
+            Object.keys(_.facets).length > 0,
+          _ =
+            !_.strSearch &&
+            !_.app &&
+            !Object.keys(_.facets).length &&
+            0 === _.price[0] &&
+            _.price[1] === _.maxPrice,
+          _ = (0, _._)("sm"),
+          _ = (0, _.jsx)(_._, {
+            type: "submit",
+            onClick: () => {
+              _(!0), _(_, _);
+            },
+            disabled: _ || _,
+            children: _._.Localize("#AdvancedSearch_Search"),
+          });
+        return (0, _.jsxs)(_._, {
+          justify: _ ? "between" : void 0,
+          marginTop: _,
+          direction: _ ? "row" : "column",
+          gap: "2",
+          children: [
+            _.bNewMarket
+              ? (0, _.jsx)("div", {})
+              : (0, _.jsx)(_._, {
+                  gap: "2",
+                  align: "center",
+                  justify: "between",
+                  children: (0, _.jsx)("a", {
+                    href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
+                    className: _.BetaLink,
+                    children: _._.Localize("#AdvancedSearch_BetaTag"),
+                  }),
+                }),
+            _ &&
+              (0, _.jsxs)(_._, {
+                gap: _,
+                justify: "end",
+                children: [
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      color: "dull",
+                      variant: "ghost",
+                      onClick: () => {
+                        __webpack_require__(
+                          _
+                            ? {
+                                ..._,
+                                strSearch: "",
+                                filterSteam: {
+                                  ..._.filterSteam,
+                                  facets: {},
+                                  price: [0, _.maxPrice],
+                                },
+                              }
+                            : {
+                                ..._,
+                                strSearch: "",
+                                filterInGame: {
+                                  ..._.filterInGame,
+                                  facets: {},
+                                  price: [0, _.maxPrice],
+                                },
+                              },
+                        );
+                      },
+                      disabled: !_,
+                      children: _._.Localize("#AdvancedSearch_Reset"),
+                    }),
+                  _,
+                ],
+              }),
+            !_ && _,
+          ],
+        });
+      }
+      function _(_) {
+        const { value: _, onTextChange: _, app: _ } = _,
+          [_, _] = (0, _.useState)(!0);
+        return (0, _.jsx)(_, {
+          radius: "full",
+          variant: "inset",
+          app: _ ? _ : void 0,
+          onClearApp: () => _(!1),
           value: _,
+          onTextChange: _,
+        });
+      }
+      function _(_) {
+        var _, _;
+        const {
+            value: _,
+            onTextChange: _,
+            app: _,
+            onClearApp: _,
+            popoverWidth: _,
+            ..._
+          } = _,
+          _ = (0, _._)(),
+          _ = null == _ ? void 0 : _.appid,
+          _ = !!_ && _.length > 2,
+          _ = (0, _._)({
+            queryKey: ["market_search_suggestions", _, _],
+            queryFn: async () => {
+              const _ = await fetch(
+                `/market/searchsuggestionsresults?q=${_}${_ ? `&appid=${_}` : ""}${_ ? "&debug=1" : ""}`,
+              );
+              return await _.json();
+            },
+            placeholderData: (_) => _,
+            enabled: _,
+            staleTime: _ ? 0 : 1 / 0,
+          }),
+          _ = (null === (_ = _.data) || void 0 === _ ? void 0 : _.apps) || [],
+          _ = (
+            (null === (_ = _.data) || void 0 === _ ? void 0 : _.results) || []
+          ).slice(0, 10),
+          _ = _({
+            onTextChange: _,
+            suggestions: _.map((_) => `app|${_.appid}`).concat(
+              _.map((_) => `item|${_.market_hash_name}`),
+            ),
+            onSuggestionSelected: (_, _) => {
+              _.preventDefault();
+              const _ = _.indexOf("|");
+              if (-1 === _) return;
+              const _ = _.slice(0, _),
+                _ = _.slice(_ + 1);
+              if ("item" === _) {
+                const _ = _.find((_) => _.market_hash_name === _);
+                _ &&
+                  (window.location.href = _._.Item(
+                    _.app_id,
+                    _.market_hash_name,
+                  ));
+              } else if ("app" === _) {
+                const _ = _.find((_) => _.appid === Number(_));
+                _ &&
+                  (window.location.href = _._.Search({
+                    search: `appid=${_.appid}`,
+                  }));
+              }
+            },
+          }),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          _ = _ || !_,
+          _ = (0, _._)(
+            (0, _.useCallback)((_) => {
+              const _ = _.contentRect.width < 300;
+              _(_);
+            }, []),
+          ),
+          _ = _
+            ? (0, _.jsxs)(_._, {
+                cursor: "pointer",
+                radius: _.radius || "sm",
+                background: "dull-6",
+                paddingY: "1",
+                paddingX: "2",
+                align: "center",
+                gap: "1",
+                role: "button",
+                maxWidth: "24ch",
+                onMouseDown: _,
+                children: [
+                  (0, _.jsx)(_._, {
+                    height: "20px",
+                    objectFit: "contain",
+                    src: _.icon,
+                    alt: "",
+                  }),
+                  (0, _.jsx)(_, {
+                    visible: !_,
+                    children: _.name,
+                  }),
+                  (0, _.jsx)(_._, {}),
+                ],
+              })
+            : null,
+          _ =
+            _ && !_
+              ? _._.Localize(
+                  "#AdvancedSearch_TextSearch_PlaceholderWithApp",
+                  _.name,
+                )
+              : _._.Localize("#AdvancedSearch_TextSearch_Placeholder");
+        return (0, _.jsxs)(_.Root, {
+          state: _,
+          popoverWidth: _,
+          children: [
+            (0, _.jsx)(_.TextInput, {
+              value: _,
+              placeholder: _,
+              ..._,
+              title: _._.Localize("#AdvancedSearch_TextSearch_Tooltip"),
+              beforeContent: _,
+              ref: _,
+              onFocus: () => _(!0),
+              onBlur: () => _(!1),
+              maxLength: 90,
+              clearable: !0,
+            }),
+            (0, _.jsxs)(_.Suggestions, {
+              children: [
+                _ &&
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        ..._,
+                      },
+                      _.appid,
+                    ),
+                  ),
+                _ &&
+                  _.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        name: _.market_name,
+                        hashName: _.market_hash_name,
+                        appName: _.app_name,
+                        appid: _.app_id,
+                        img: _.icon_url,
+                        searchScore: _.search_score,
+                      },
+                      _.market_hash_name + _,
+                    ),
+                  ),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { visible: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.Collapse,
+          "data-visible": !!_,
           children: (0, _.jsx)(_._, {
-            color: _ ? "accent-11" : void 0,
-            contrast: _ ? void 0 : "title",
+            truncate: !0,
             children: _,
           }),
         });
       }
       function _(_) {
-        const { label: _, active: _, onActiveChange: _ } = _;
-        return (0, _.jsxs)(_._, {
-          gap: "4",
-          align: "center",
-          paddingX: "2",
-          paddingY: "2",
-          children: [
-            (0, _.jsx)(_._, {
-              weight: "medium",
-              children: _,
-            }),
+        const {
+            name: _,
+            hashName: _,
+            img: _,
+            appName: _,
+            searchScore: _,
+            appid: _,
+          } = _,
+          _ = (0, _._)();
+        return (0, _.jsxs)(_.Suggestion, {
+          value: `item|${_}`,
+          render: (_, _) =>
             (0, _.jsx)(_, {
-              value: _,
-              onChange: _,
+              focused: _.focused,
+              link: _._.Item(_, _),
+              ..._,
+            }),
+          children: [
+            (0, _.jsx)("img", {
+              style: {
+                margin: "8px",
+                height: "60px",
+                width: "60px",
+                objectFit: "contain",
+                filter: "drop-shadow( 0 0 1px rgba( 0, 0, 0, .5) )",
+              },
+              src: _,
+              alt: "",
+            }),
+            (0, _.jsxs)(_._, {
+              direction: "column",
+              gap: "1",
+              minWidth: "0",
+              children: [
+                (0, _.jsx)(_._, {
+                  size: "3",
+                  weight: "medium",
+                  truncate: !0,
+                  contrast: "title",
+                  children: _,
+                }),
+                (0, _.jsx)(_._, {
+                  size: "1",
+                  truncate: !0,
+                  children: _,
+                }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_.Fragment, {
+                children:
+                  _ > 0
+                    ? (0, _.jsx)(_._, {
+                        size: "1",
+                        children: _,
+                      })
+                    : null,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { name: _, icon: _, appid: _ } = _;
+        return (0, _.jsxs)(_.Suggestion, {
+          value: `app|${_}`,
+          render: (_, _) =>
+            (0, _.jsx)(_, {
+              focused: _.focused,
+              link: _._.Search({
+                search: `appid=${_}`,
+              }),
+              ..._,
+            }),
+          children: [
+            (0, _.jsx)("img", {
+              style: {
+                margin: "8px",
+                height: "24px",
+                width: "24px",
+                objectFit: "contain",
+                filter: "drop-shadow( 0 0 1px rgba( 0, 0, 0, .5) )",
+              },
+              src: _,
+              alt: "",
+            }),
+            (0, _.jsx)(_._, {
+              direction: "column",
+              gap: "1",
+              minWidth: "0",
+              children: (0, _.jsx)(_._, {
+                size: "2",
+                weight: "medium",
+                truncate: !0,
+                contrast: "title",
+                children: _,
+              }),
             }),
           ],
         });
       }
       function _(_) {
-        const { label: _, icon: _, active: _, onActiveChange: _ } = _,
-          _ = _({
-            bActive: _,
-            onActiveChange: _,
+        const { focused: _, link: _, ..._ } = _;
+        return (0, _.jsx)("a", {
+          href: _,
+          className: _.UndecoratedLink,
+          children: (0, _.jsx)(_._, {
+            align: "center",
+            gap: "2",
+            className: _.SearchSuggestion,
+            radius: "sm",
+            margin: "2",
+            "data-focused": _,
+            paddingLeft: "2",
+            ..._,
+          }),
+        });
+      }
+      function _(_) {
+        var _;
+        const {
+            rgApps: _ = [],
+            rgAppData: _ = {},
+            filter: _,
+            onFilterChange: _,
+            suggestedInitialApp: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1);
+        (0, _.useEffect)(() => {
+          _ ||
+            (_(!0),
+            _ &&
+              _[_.appid] &&
+              _({
+                ..._,
+                app: _[_.appid],
+              }));
+        }, [_, _, _, _, _]);
+        const _ = !_.app && _,
+          _ = _(_),
+          _ = (0, _.useMemo)(
+            () =>
+              __webpack_require__
+                .filter((_) => _ !== _ && _[_])
+                .map((_) => _[_]),
+            [_, _],
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              apps: _,
+              selectedApp: _.app,
+              onSelectionChange: (_) =>
+                _({
+                  ..._,
+                  app: _,
+                  facets: {},
+                }),
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                loading: _.isLoading,
+                apps:
+                  null === (_ = _.data) || void 0 === _ ? void 0 : _.rgInGame,
+                filterBy: _,
+                onSelect: (_) =>
+                  _({
+                    ..._,
+                    app: _[_] || null,
+                    facets: {},
+                  }),
+              }),
+            !!_.app &&
+              (0, _.jsx)(_, {
+                appid: _.app.appid,
+                state: _,
+                onStateChange: _,
+              }),
+          ],
+        });
+      }
+      const _ = 753,
+        _ = `${_}_Game`;
+      function _(_) {
+        var _, _, _;
+        const { filter: _, onFilterChange: _, suggestedInitialApp: _ } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = !_.app && _,
+          _ = _(_),
+          _ = (0, _._)(
+            ((_ = _),
+            {
+              queryKey: ["marketfilters", _],
+              queryFn: async () => {
+                const _ = await _(_);
+                if (!_)
+                  throw new Error(
+                    "Failed to load market facets for Steam Inventory items",
+                  );
+                const _ = _[_];
+                if ((delete _[_], !_.tags))
+                  return {
+                    rgApps: [],
+                    facets: {},
+                    mapAppIDs: {},
+                  };
+                const _ = {},
+                  _ = [];
+                for (const _ of Object.keys(_.tags)) {
+                  const _ = _.tags[_],
+                    _ = parseInt(_.slice(_.indexOf("_") + 1));
+                  isNaN(_) ||
+                    ((_[_] = !0),
+                    _.push({
+                      appid: _,
+                      name: _.localized_name,
+                      icon: `${_._.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${_}`,
+                    }));
+                }
+                return {
+                  rgApps: (0, _._)(_, (_) => _.name),
+                  mapAppIDs: _,
+                  facets: _,
+                };
+              },
+            }),
+          );
+        var _;
+        const { facets: _ = {}, rgApps: _, mapAppIDs: _ } = _.data || {},
+          _ = !_.facets.Event || 0 === Object.keys(_.facets).length;
+        if (
+          ((0, _.useEffect)(() => {
+            !_ &&
+              _ &&
+              (_(!0),
+              _ &&
+                _[_.appid] &&
+                _({
+                  ..._,
+                  app: _,
+                }));
+          }, [_, _, _, _, _]),
+          _.isLoading)
+        )
+          return (0, _.jsx)(_, {});
+        if (_.isError || !_.data || !_ || !_)
+          return (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
+              size: "4",
+              children: _._.Localize("#AdvancedSearch_FacetLoadError"),
+            }),
           });
-        return (0, _.jsxs)(_._, {
-          gap: "2",
-          radius: "sm",
-          paddingX: "5",
-          paddingY: "4",
-          align: "center",
-          className: _.TagButton,
-          ..._,
+        const _ = (
+          null === (_ = _.data) || void 0 === _
+            ? void 0
+            : _.rgPlaytime.length
+        )
+          ? null === (_ = _.data) || void 0 === _
+            ? void 0
+            : _.rgPlaytime
+          : null === (_ = _.data) || void 0 === _
+            ? void 0
+            : _.rgInGame;
+        return (0, _.jsxs)(_.Fragment, {
           children: [
             _ &&
               (0, _.jsx)(_, {
-                className: _.Icon,
+                apps: _,
+                selectedApp: _.app,
+                onSelectionChange: (_) =>
+                  _({
+                    ..._,
+                    app: _,
+                    facets: {},
+                  }),
               }),
-            (0, _.jsx)(_._, {
-              weight: "medium",
-              contrast: "title",
-              children: _,
+            _ &&
+              _ &&
+              (0, _.jsx)(_, {
+                loading: _.isLoading,
+                apps: _,
+                filterBy: _,
+                onSelect: (_) =>
+                  _({
+                    ..._,
+                    app: _.find((_) => _.appid === _) || null,
+                    facets: {},
+                  }),
+              }),
+            (0, _.jsx)(_, {
+              marginTop: "3",
+              facets: _,
+              state: _,
+              onStateChange: _,
             }),
           ],
         });
       }
       function _(_) {
-        const {
-          rgToggles: _,
-          onChange: _,
-          state: _,
-          computeNext: _ = (_, _) => _,
-        } = _;
-        return (0, _.jsx)(_._, {
-          gap: "4",
-          align: "center",
-          children: _.filter((_) => !_.condition || _.condition(_)).map((_) =>
-            (0, _.jsx)(
-              _,
-              {
-                active: _.facets[_.facet] && _.facets[_.facet][_.tag],
-                onActiveChange: (_) =>
-                  ((_, _, _) => {
-                    const _ = _(_, _, _, _);
-                    __webpack_require__(
-                      {
-                        ..._,
-                        facets: _(_.facets, _.facets),
-                      },
-                      !0,
-                    );
-                  })(_.facet, _.tag, _),
-                label: _.strLabel,
-              },
-              `${_.facet}_${_.tag}`,
-            ),
+        const { apps: _ = [], filterBy: _ = {}, onSelect: _, loading: _ } = _,
+          _ = !(0, _._)("sm"),
+          _ = (0, _.useMemo)(
+            () =>
+              Array.isArray(_)
+                ? __webpack_require__.reduce(
+                    (_, _) => ({
+                      ..._,
+                      [_]: !0,
+                    }),
+                    {},
+                  )
+                : _,
+            [_],
           ),
+          _ = _.filter(({ appid: _ }) => _[_]).slice(0, 8);
+        let _ = [];
+        if (_)
+          for (let _ = 0; _ < 20; _++)
+            _.push(
+              (0, _.jsx)(
+                _._,
+                {
+                  width: "92px",
+                  height: "138px",
+                },
+                _,
+              ),
+            );
+        const _ = _._.logged_in,
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)(_);
+        let _ = _;
+        if (!_) {
+          const _ = _ ? Math.floor((_.contentRect.width - 10) / 104) : 0;
+          (_ = _.slice(0, _)), (_ = _.slice(0, _));
+        }
+        return (0, _.jsxs)(_._, {
+          direction: "column",
+          marginTop: "3",
+          marginBottom: "2",
+          children: [
+            (0, _.jsx)(_._, {
+              weight: "medium",
+              size: "3",
+              contrast: "title",
+              children: _
+                ? _._.Localize("#AdvancedSearch_AppSelect_YourGames")
+                : _._.Localize("#AdvancedSearch_AppSelect_PopularGames"),
+            }),
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_.TruncatingPortraitRow, _ && _.Compact),
+              ref: _,
+              children: [
+                !_ &&
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _._,
+                      {
+                        onClick: () => _(_.appid),
+                        tabIndex: 0,
+                        onKeyDown: (_) => {
+                          return (
+                            (_ = _.key),
+                            (_ = _.appid),
+                            void ((" " !== _ && "Enter" !== _) || _(_))
+                          );
+                          var _, _;
+                        },
+                        role: "button",
+                        width: "92px",
+                        height: "138px",
+                        flexGrow: "1",
+                        flexBasis: "92px",
+                        children: (0, _.jsx)("img", {
+                          src: _.img,
+                          alt: _.name,
+                          style: {
+                            width: "92px",
+                          },
+                        }),
+                      },
+                      _.appid,
+                    ),
+                  ),
+                _ && _,
+              ],
+            }),
+          ],
         });
       }
       function _(_) {
+        return (0, _.jsx)(_._, {
+          minHeight: "min(400px, 30vh)",
+          direction: "column",
+          children: _.children,
+        });
+      }
+      function _(_) {
+        const _ = {
+          strSearch: "",
+          bSearchDescriptions: _.bSearchDescriptions,
+          filterInGame: {
+            app: null,
+            facets: {},
+            accessories: {},
+            properties: {},
+            price: [0, _.config.maxPrice],
+          },
+          filterSteam: {
+            app: null,
+            facets: {},
+            accessories: {},
+            properties: {},
+            price: [0, _.config.maxPrice],
+          },
+          bSteamItems: !1,
+        };
+        let _ = _.filterInGame;
         const {
-            rgToggles: _,
-            onChange: _,
-            state: _,
-            computeNext: _ = (_, _) => _,
+          strQuery: _,
+          unFilterApp: _,
+          rgFilterData: _,
+          rgAppData: _ = {},
+        } = _;
+        "number" == typeof _ &&
+          _[_] &&
+          (_ === _
+            ? ((_.bSteamItems = !0), (_ = _.filterSteam))
+            : (_.app = _[_])),
+          "string" == typeof _ && (_.strSearch = _);
+        const _ = (function (_) {
+          if (!_ || "object" != typeof _) return null;
+          const _ = {};
+          for (const _ of Object.keys(_)) {
+            const _ = _[_];
+            if (_ && "object" == typeof _)
+              for (const _ of Object.keys(_.tags)) {
+                const _ = _.tags[_];
+                _ &&
+                  "object" == typeof _ &&
+                  !0 === _.selected &&
+                  (_[_.name] || (_[_.name] = {}), (_[_.name][_] = !0));
+              }
+          }
+          return _;
+        })(_);
+        if (
+          (_ && (_.facets = _),
+          "number" == typeof _.unFilterMinPrice &&
+            _.unFilterMinPrice > 0 &&
+            (_.price[0] = _.unFilterMinPrice),
+          "number" == typeof _.unFilterMaxPrice &&
+            _.unFilterMaxPrice < _.config.maxPrice &&
+            (_.price[1] = _.unFilterMaxPrice),
+          _.bSteamItems && _ && _[_] && _.facets.Game)
+        ) {
+          const _ = Object.keys(_.facets.Game)[0],
+            _ = _[_].tags;
+          if (_ && _) {
+            const _ = _[_];
+            if (_) {
+              const _ = parseInt(_.slice(_.indexOf("_") + 1));
+              isNaN(_) ||
+                ((_.app = {
+                  appid: _,
+                  name: _.localized_name,
+                  icon: "",
+                }),
+                delete _.facets.Game);
+            }
+          }
+        }
+        return {
+          state: _,
+          config: _.config,
+        };
+      }
+      function _(_, _) {
+        const {
+            strSearch: _,
+            bSearchDescriptions: _,
+            bSteamItems: _,
+            filterInGame: _,
+            filterSteam: _,
           } = _,
-          _ = _.every(
-            ({ facet: _, tag: _ }) => !_.facets[_] || !_.facets[_][_],
-          );
-        return (0, _.jsxs)(_._, {
-          columns: "1fr 1fr",
-          gap: "1",
-          padding: "1",
-          background: "dull-6",
-          children: [
-            (0, _.jsx)(_._, {
-              color: _ ? "accent" : "dull",
-              onClick: () => {
+          _ = _
+            ? (function (_) {
                 let _ = {
                   ..._,
                   facets: {
                     ..._.facets,
                   },
                 };
-                for (const _ of _) _ = _(_, _.facet, _.tag, !1);
-                __webpack_require__(
-                  {
-                    ..._,
-                    facets: _(_.facets, _.facets),
-                  },
-                  !0,
+                return (
+                  _.app &&
+                    (_.facets.Game = {
+                      [`app_${_.app.appid}`]: !0,
+                    }),
+                  (_.app = {
+                    appid: _,
+                    name: "",
+                    icon: "",
+                  }),
+                  _
                 );
-              },
-              children: "All",
-            }),
-            _.filter((_) => !_.condition || _.condition(_)).map((_) =>
-              (0, _.jsx)(
-                _,
-                {
-                  active: _.facets[_.facet] && _.facets[_.facet][_.tag],
-                  onActiveChange: (_) =>
-                    ((_, _, _) => {
-                      const _ = _(_, _, _, _);
-                      __webpack_require__(
-                        {
-                          ..._,
-                          facets: _(_.facets, _.facets),
-                        },
-                        !0,
-                      );
-                    })(_.facet, _.tag, _),
-                  label: _.strLabel,
-                },
-                `${_.facet}_${_.tag}`,
-              ),
-            ),
-          ],
-        });
-      }
-      function _(_) {
-        const { label: _, active: _, onActiveChange: _ } = _;
-        return (0, _.jsx)(_._, {
-          color: _ ? "accent" : "dull",
-          onClick: () => _(!_),
-          children: _,
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          gapY: "2",
-          gapX: "2",
-          marginTop: "4",
-          columns: {
-            initial: "1fr",
-            _: `repeat( auto-fit, minmax( ${_.minWidth || "300px"}, 1fr ) )`,
-          },
-          ..._,
-        });
-      }
-      function _(_, _, _, _) {
-        const _ = {
-            ..._,
-            facets: {
-              ..._.facets,
-              [_]: {
-                ..._.facets[_],
-              },
-            },
-          },
-          _ = "string" == typeof _ ? [_] : _;
-        for (const _ of _) _.facets[_][_] = !0;
-        if (!_)
-          if (1 === Object.keys(_.facets[_]).length) delete _.facets[_];
-          else for (const _ of _) delete _.facets[_][_];
-        return _;
-      }
-      function _(_) {
-        const { facet: _, state: _, onStateChange: _ } = _;
-        switch (_.fieldType) {
-          case "checkbox": {
-            const _ = (_, _, _) => _(_(_, _, _, _), !0);
-            return (0, _.jsx)(_, {
-              ..._,
-              value: _.facets,
-              onChange: _,
-            });
-          }
-          case "select": {
-            const _ = (_ = [], _ = []) => {
-              const _ = {};
-              let _ = {
-                ..._,
-                facets: {
-                  ..._.facets,
-                },
-              };
-              for (const _ of _) {
-                const _ = "string" == typeof _.tag ? [_.tag] : _.tag;
-                for (const _ of _)
-                  _[`${_.facet}_${_}`] = {
-                    facet: _.facet,
-                    tag: _,
-                  };
-              }
-              for (const _ of _)
-                _[`${_.facet}_${_.tag}`] || (_ = _(_, _.facet, _.tag, !0)),
-                  delete _[`${_.facet}_${_.tag}`];
-              for (const _ of Object.values(_)) _ = _(_, _.facet, _.tag, !1);
-              _(_, !0);
-            };
-            return (0, _.jsx)(_, {
-              ..._,
-              value: _.facets,
-              onChange: _,
-            });
-          }
-          case "toggle":
-          case "togglebutton": {
-            const _ = (_) => _(_(_, _.facet, _.tag, _), !0),
-              _ = _.facets[_.facet] && _.facets[_.facet][_.tag];
-            return "toggle" === _.fieldType
-              ? (0, _.jsx)(_, {
-                  active: _,
-                  onActiveChange: _,
-                  label: _.strLabel,
-                })
-              : (0, _.jsx)(_, {
-                  active: _,
-                  onActiveChange: _,
-                  label: _.strLabel,
-                });
-          }
-          case "togglegroup":
-            return (0, _.jsx)(_, {
-              ..._,
-              onChange: _,
-              state: _,
-            });
-          case "togglegrid":
-            return (0, _.jsx)(_, {
-              ..._,
-              onChange: _,
-              state: _,
-            });
-          default:
-            return (
-              (0, _._)(_, `Unhandled facet field type: "${_.fieldType}"`), null
-            );
-        }
-      }
-      function _(_, _, _, _, _) {
-        var _, _, _;
-        let _ = [],
-          _ = 0,
-          _ = 2;
-        const _ = {},
-          _ = _.tags || {};
-        for (const _ of Object.keys(_)) {
-          let _;
-          _ &&
-            (_ =
-              null !== (_ = _.counts[_.name] && _.counts[_.name][_]) &&
-              void 0 !== _
-                ? _
-                : 0),
-            (_ += null != _ ? _ : 0);
-          const _ = _(_.name, _, _[_], _);
-          if (_)
-            if (_[_.strLabel])
-              if (_) {
-                const _ = _[_.strLabel],
-                  _ = "string" == typeof _.tag ? [_.tag] : _.tag,
-                  _ = "string" == typeof _.tag ? [_.tag] : _.tag;
-                (_.tag = _.concat(..._)),
-                  void 0 !== _.matches &&
-                    void 0 !== _.matches &&
-                    (_.matches =
-                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) +
-                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)),
-                  void 0 === _.color && _.color && (_.color = _.color);
-              } else {
-                let _;
-                do {
-                  (_ = `${_.strLabel} (?${_}?)`), _++;
-                } while (_[_]);
-                (0, _._)(
-                  !1,
-                  "Forced to assign a unique label to option",
-                  _,
-                  _,
-                  _[_.strLabel],
-                );
-                const _ = {
-                  ..._,
-                  strLabel: _,
-                };
-                _.push(_), (_[_.strLabel] = _);
-              }
-            else _.push(_), (_[_.strLabel] = _);
-        }
-        if (_) _.sort(_);
-        else {
-          if ("select" === _) {
-            _.sort((_, _) => {
-              var _, _;
-              return (
-                (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) -
-                (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)
-              );
-            });
-            let _ = -1;
-            for (let _ = _.length - 1; _ >= 0 && 0 === _[_].matches; _--) _ = _;
-            if (-1 === _) _ = (0, _._)(_, (_) => _.strLabel);
-            else {
-              const _ = (0, _._)(_.slice(0, _), (_) => _.strLabel),
-                _ = (0, _._)(_.slice(_), (_) => _.strLabel);
-              _ = [..._, ..._];
-            }
-          } else _ = (0, _._)(_, (_) => _.strLabel);
-        }
-        if (_ && 0 === _) return null;
-        if (_ && _.total === _ && 1 === Object.keys(_.counts[_.name]).length)
-          return null;
-        return {
-          strLabel: _.localized_name,
-          rgOptions: _,
-          fieldType: _,
-        };
-      }
-      function _(_, _, _, _) {
-        const _ = {
-          facet: _,
-          tag: _,
-          strLabel: _.localized_name,
-          matches: _,
-        };
-        return _.color && (_.color = `#${_.color}`), _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      Object.assign(
-        function (_) {
-          const {
-              value: _,
-              onValueChange: _,
-              onValueSettled: _,
-              min: _,
-              ..._
-            } = _,
-            _ = [_],
-            _ = (0, _.useCallback)((_) => __webpack_require__(_[0]), [_]),
-            _ = (0, _.useCallback)((_) => (null == _ ? void 0 : _(_[0])), [_]);
-          return (0, _.jsxs)(_, {
-            ..._,
-            min: _,
-            onValueChange: _,
-            onValueSettled: _,
-            value: _,
-            children: [
-              (0, _.jsx)(_, {
-                children: (0, _.jsx)(_, {
-                  start: _,
-                  end: _,
-                }),
-              }),
-              (0, _.jsx)(_, {}),
-            ],
-          });
-        },
-        {
-          Root: _,
-          Track: _,
-          Range: _,
-          Handle: _,
-        },
-      );
-      function _(_) {
-        const { value: _ } = _;
-        return (0, _.jsxs)(_, {
-          ..._,
-          children: [
-            (0, _.jsx)(_, {
-              children: (0, _.jsx)(_, {
-                start: _[0],
-                end: _[1],
-              }),
-            }),
-            (0, _.jsx)(_, {}),
-            (0, _.jsx)(_, {}),
-          ],
-        });
-      }
-      const _ = (0, _.createContext)(null);
-      function _(_) {
-        const { children: _, color: _, ..._ } = _,
+              })(_)
+            : _,
           {
-            min: _,
-            max: _,
-            onValueChange: _,
-            value: _,
-            step: _ = 1,
-            onValueSettled: _,
+            app: _,
+            facets: _,
+            accessories: _,
+            price: [_, _],
           } = _,
-          _ = (0, _.useRef)(null),
-          _ = (0, _.useRef)(null),
-          [_] = (0, _.useState)(() => new Set()),
-          [_, _] = (0, _.useState)(!1);
-        return (0, _.jsx)(_.Provider, {
-          value: {
-            ..._,
-            handles: _,
-            bDragActive: _,
-          },
-          children: (0, _.jsx)("div", {
-            className: _.SliderRoot,
-            "data-accent-color": _,
-            ref: _,
-            onPointerDown: (_) => {
-              if (_.current) {
-                if (
-                  (_.target.setPointerCapture(_.pointerId),
-                  "number" != typeof _)
-                ) {
-                  const _ = _.current.getBoundingClientRect(),
-                    _ = _(_.clientX - _.left, [0, _.width], [_, _]);
-                  _.current = {
-                    activeValueIndex: _(_, _),
-                    bMoved: !1,
-                  };
-                } else
-                  _.current = {
-                    activeValueIndex: 0,
-                    bMoved: !1,
-                  };
-                _(!0);
-              }
-            },
-            onPointerUp: (_) => {
-              var _;
-              const _ = _.target;
-              __webpack_require__.hasPointerCapture(_.pointerId) &&
-                (__webpack_require__.releasePointerCapture(_.pointerId),
-                _ &&
-                  (null === (_ = _.current) || void 0 === _
-                    ? void 0
-                    : _.bMoved) &&
-                  _(_),
-                _(!1));
-            },
-            onPointerMove: (_) => {
-              if (
-                _.target.hasPointerCapture(_.pointerId) &&
-                _.current &&
-                _.current
-              ) {
-                const _ = _.current.getBoundingClientRect(),
-                  _ = _({
-                    value: _(_.clientX - _.left, [0, _.width], [_, _]),
-                    min: _,
-                    max: _,
-                    step: _,
-                  }),
-                  _ = [..._];
-                (_[_.current.activeValueIndex] = _),
-                  _.sort((_, _) => _ - _),
-                  (_.current.activeValueIndex = _.indexOf(_)),
-                  (_.current.bMoved = !0),
-                  _(_);
-              }
-            },
-            onClick: (_) => {
-              var _;
-              if (
-                !_.current ||
-                (null === (_ = _.current) || void 0 === _ ? void 0 : _.bMoved)
-              )
-                return;
-              const _ = _.current.getBoundingClientRect(),
-                _ = _(_.clientX - _.left, [0, _.width], [_, _]),
-                _ = _({
-                  value: _,
-                  min: _,
-                  max: _,
-                  step: _,
-                }),
-                _ = _(_, _),
-                _ = [..._];
-              (_[_] = _), _(_), _ && _(_);
-            },
-            children: (0, _.jsx)("div", {
-              className: _.Inner,
-              children: _,
-            }),
-          }),
-        });
-      }
-      function _(_, _) {
-        if (_.length <= 1) return _.length - 1;
-        let _ = 0,
-          _ = Math.abs(_ - _[0]);
-        for (let _ = 1; _ < _.length; _++) {
-          const _ = Math.abs(_[_] - _);
-          _ < _ && ((_ = _), (_ = _));
-        }
-        return _;
-      }
-      function _(_) {
-        const { render: _, ..._ } = _;
-        return (0, _._)(
-          _,
-          (0, _.jsx)("div", {
-            className: _.SliderTrack,
-          }),
-          _,
-          void 0,
-        );
-      }
-      function _(_) {
-        const { start: _, end: _, render: _ } = _,
-          _ = (0, _.useContext)(_);
-        (0, _._)(_, "SliderRange must be used within a SliderRoot!");
-        const { min: _, max: _ } = _,
-          _ = _(_, _, _),
-          _ = 100 - _(_, _, _);
-        return (0, _._)(
-          _,
-          (0, _.jsx)("div", {
-            className: _.SliderRange,
-            style: {
-              "--pct-left": `${_}%`,
-              "--pct-right": `${_}%`,
-            },
-          }),
-          {},
-          void 0,
-        );
-      }
-      function _(_) {
-        const { render: _ } = _,
-          _ = (0, _.useContext)(_);
-        (0, _._)(_, "SliderHandle must be used within a SliderRoot!");
-        const {
-            min: _,
-            max: _,
-            handles: _,
-            value: _,
-            step: _ = 1,
-            onValueChange: _,
-            onValueSettled: _,
-          } = _,
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(-1);
-        (0, _.useEffect)(
-          () => (_ ? (_.add(_), _(_.size - 1), () => _.delete(_)) : () => {}),
-          [_, _],
-        );
-        const _ = _ > -1,
-          _ = {
-            "--handle-pct": `${_(_ ? _[_] : _, _, _)}%`,
-          };
-        _ || (_.display = "none");
-        const _ = {
-          ref: _,
-          role: "slider",
-          "aria-valuenow": _[_],
-          "aria-valuemin": _,
-          "aria-valuemax": _,
-          tabIndex: 0,
-          onKeyDown: (_) => {
-            switch (_.key) {
-              case "ArrowRight":
-              case "ArrowUp":
-              case "ArrowLeft":
-              case "ArrowDown": {
-                const _ = "ArrowRight" === _.key || "ArrowUp" === _.key,
-                  _ = _ * (_ ? 1 : -1),
-                  _ = _({
-                    value: _[_] + _,
-                    min: _,
-                    max: _,
-                    step: _,
-                  }),
-                  _ = [..._];
-                (_[_] = _),
-                  _(_),
-                  _ && _(_),
-                  _.preventDefault(),
-                  _.stopPropagation();
-                break;
-              }
-              case "PageUp":
-              case "PageDown": {
-                const _ = "PageUp" === _.key,
-                  _ = Math.round((_ - _) / 10) * (_ ? 1 : -1),
-                  _ = _({
-                    value: _[_] + _,
-                    min: _,
-                    max: _,
-                    step: _,
-                  }),
-                  _ = [..._];
-                (_[_] = _),
-                  _(_),
-                  _ && _(_),
-                  _.preventDefault(),
-                  _.stopPropagation();
-                break;
-              }
-            }
-          },
-        };
-        return (0, _._)(
-          _,
-          (0, _.jsx)("span", {
-            className: _.SliderHandle,
-            style: _,
-          }),
-          _,
-          {
-            value: _[_],
-            bDragActive: _.bDragActive,
-          },
-        );
-      }
-      function _(_, _, _) {
-        if (_[0] === _[1] || _[0] === _[1]) return _[0];
-        const _ = ((_[1] - _[0]) / (_[1] - _[0])) * (_ - _[0]) + _[0];
-        return _._(_, _[0], _[1]);
-      }
-      function _(_) {
-        const { value: _, min: _, max: _, step: _ } = _,
-          _ = Math.round((_ - _) / _) / (1 / _);
-        return _._(_ + _, _, _);
-      }
-      function _(_, _, _) {
-        return ((_ - _) / (_ - _)) * 100;
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { defaultValue: _ = 0, currency: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          valueToString: (_) =>
-            (function (_, _) {
-              return void 0 === _
-                ? ""
-                : _ === 1 / 0
-                  ? _
-                  : _
-                    ? Math.round(_ / 100).toString()
-                    : (_ / 100).toFixed(2);
-            })(_, _.bWholeUnitsOnly),
-          valueFromString: (_) =>
-            (function (_, _, _) {
-              return _ === _
-                ? 1 / 0
-                : "" === _
-                  ? _
-                  : _
-                    ? 100 * parseInt(_)
-                    : Math.round(100 * parseFloat(_));
-            })(_, _, _.bWholeUnitsOnly),
-          checkValidText: (_, _) => !_ || (_ !== _._ && !isNaN(_)),
-          beforeContent: _.bSuffixSymbol ? void 0 : _.strSymbol,
-          afterContent: _.bSuffixSymbol ? _.strSymbol : void 0,
-          ..._,
-        });
-      }
-      const _ = "∞";
-      const _ = (0, _.createContext)(null);
-      function _(_) {
-        const { state: _, onStateChange: _ } = _;
-        return (0, _.jsx)(_, {
-          price: _.price,
-          onPriceChange: (_) =>
-            __webpack_require__(
-              {
-                ..._,
-                price: _,
-              },
-              !1,
-            ),
-          onPriceSettled: (_) =>
-            __webpack_require__(
-              {
-                ..._,
-                price: _,
-              },
-              !0,
-            ),
-        });
-      }
-      function _(_) {
-        const { price: _, onPriceChange: _, onPriceSettled: _ } = _,
-          { maxPrice: _, currency: _ } = (function () {
-            const _ = (0, _.useContext)(_);
-            return (0, _._)(_, "No filter config provider found!"), _;
-          })(),
-          [_, _] = (0, _.useState)(!1),
-          _ = [0, _],
-          _ = (_) => (_) => {
-            const _ = [..._];
-            (_[_] = _._(_, _[0], _[1])),
-              __webpack_require__(_),
-              _ && _(_),
-              _(!0);
-          },
-          {
-            checkMin: _,
-            checkMax: _,
-            props: _,
-          } = (function (_) {
-            const {
-                value: _,
-                onValueChange: _,
-                onValueSettled: _,
-                max: _,
-                min: _,
-                step: _ = 1,
-                ..._
-              } = _,
-              _ = Math.floor(100 * _(_)) / 100,
-              _ = Math.floor(100 * _(_)) / 100,
-              _ = _(_, _),
-              _ = (0, _.useCallback)((_) => __webpack_require__(_(_, _)), [_]),
-              _ = (0, _.useCallback)((_) => _ && _(_(_, _)), [_]);
-            return {
-              checkMax: (_) => Math.abs(_ - _) < 100,
-              checkMin: (_) => Math.abs(_ - _) < 1,
-              props: {
-                value: _,
-                onValueChange: _,
-                onValueSettled: _,
-                max: _,
-                min: _,
-                step: 0.01,
-                ..._,
-              },
-            };
-          })({
-            value: [_[0], _[1]],
-            min: _[0],
-            max: _[1],
-            onValueChange: (_) => {
-              _(!0);
-              const [_, _] = _,
-                _ = [_(_) ? 0 : _, _(_) ? _ : _];
-              __webpack_require__(_);
-            },
-            onValueSettled: _,
-          }),
-          _ = _(_[0]),
-          _ = _(_[1]),
-          _ = _ && _ && !_,
-          _ = _ && !_ ? void 0 : _[0];
-        let _ = _[1];
+          _ = new FormData();
+        _ && _.set("appid", _.appid.toString()),
+          _ && _.set("q", _),
+          _ && _ && _(_.app) && _.set("descriptions", "1");
+        for (const _ of Object.keys(_))
+          if (_[_])
+            for (const _ of Object.keys(_[_]))
+              _[_][_] && _.append(`category_${_.appid}_${_}[]`, `tag_${_}`);
+        for (const _ of Object.keys(_))
+          if (_[_])
+            for (const _ of Object.keys(_[_]))
+              _[_][_] && _.append(`accessory_${_}[]`, _);
         return (
-          _ && (_ = _ ? 1 / 0 : void 0),
-          _ <= 0
-            ? null
-            : (0, _.jsxs)(_._, {
-                direction: "column",
-                gap: "2",
-                paddingBottom: "2",
-                children: [
-                  (0, _.jsxs)(_._, {
-                    gap: "2",
-                    align: "center",
-                    children: [
-                      (0, _.jsx)(_, {
-                        currency: _,
-                        value: _,
-                        onValueChange: _(0),
-                        placeholder: _.Localize(
-                          "#AdvancedSearch_MinPricePlaceholder",
-                        ),
-                      }),
-                      (0, _.jsx)(_._, {
-                        size: "4",
-                        weight: "medium",
-                        children: "-",
-                      }),
-                      (0, _.jsx)(_, {
-                        currency: _,
-                        value: _,
-                        onValueChange: _(1),
-                        placeholder: _.Localize(
-                          "#AdvancedSearch_MaxPricePlaceholder",
-                        ),
-                        defaultValue: _[1],
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)(_, {
-                    ..._,
-                    color: _ ? "dull" : void 0,
-                  }),
-                ],
-              })
+          _ > 0 && _.append("price_min", _.toString()),
+          _ > _ && _ < _.maxPrice && _.append("price_max", _.toString()),
+          _._.Search({
+            search: new URLSearchParams(_),
+          })
         );
       }
       function _(_) {
         return (0, _.jsx)(_._, {
           flexGrow: "1",
-          children: (0, _.jsx)(_, {
-            variant: "inset-focus",
-            ..._,
+          radius: "sm",
+          direction: "column",
+          align: "center",
+          justify: "center",
+          marginTop: "2",
+          className: _.NoFilters,
+          children: (0, _.jsx)(_._, {
+            align: "center",
+            _: "div",
+            marginTop: _,
+            children: _.children,
           }),
         });
       }
-      const _ = 3;
-      function _(_, _) {
-        return _.map(_);
+      function _(_) {
+        const { appid: _, ..._ } = _,
+          _ = (function (_) {
+            return (0, _._)({
+              queryKey: ["marketfilters", _],
+              queryFn: () => _(_),
+              enabled: !!_,
+            });
+          })(_);
+        if (_.isLoading) return (0, _.jsx)(_, {});
+        if (_.isError || !_.data)
+          return (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
+              size: "4",
+              children: _._.Localize("#AdvancedSearch_FacetLoadError"),
+            }),
+          });
+        const _ = (function (_) {
+          return (0, _._)(_) && _._.EUNIVERSE === _.wLO ? _._ : _;
+        })(_);
+        return (0, _.jsx)(_, {
+          appid: _,
+          facets: _.data,
+          ..._,
+        });
       }
       function _(_) {
-        return Math.pow(_, 1 / _);
+        const { appid: _, facets: _, ..._ } = _,
+          _ = _(_, _);
+        return 0 === _.length
+          ? (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    align: "center",
+                    _: "div",
+                    marginTop: _,
+                    size: "7",
+                    weight: "heavy",
+                    children: _._.Localize("#AdvancedSearch_NoFacetsSearch"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    align: "center",
+                    _: "div",
+                    marginTop: _,
+                    size: "4",
+                    children: _._.Localize("#AdvancedSearch_NoFacets"),
+                  }),
+                ],
+              }),
+            })
+          : (0, _.jsx)(_, {
+              facets: _,
+              ..._,
+            });
+      }
+      async function _(_) {
+        const _ = await fetch(
+          `${_._.COMMUNITY_BASE_URL}market/appfilters/${_}`,
+        );
+        if (!_ || !_._)
+          throw new Error(`Failed to load market filters for app ${_}`);
+        const _ = await _.json();
+        if (!_.success || !_.facets)
+          throw new Error(`Loaded malformed market filters for app ${_}`);
+        return _.facets;
+      }
+      function _(_ = !0) {
+        const { suggestedApps: _ } = (0, _.useContext)(_);
+        return (0, _._)({
+          queryKey: ["marketsuggestedapps"],
+          queryFn: async () => {
+            const _ = await fetch(
+              `${_._.COMMUNITY_BASE_URL}market/suggestedapps`,
+            );
+            if (!_ || !_._)
+              throw new Error("Failed to load suggseted market apps");
+            return await _.json();
+          },
+          retry: !1,
+          enabled: _,
+          initialData: _,
+        });
       }
       function _(_) {
-        return Math.round(Math.pow(_, _));
+        const {
+            selectedApp: _,
+            apps: _,
+            onSelectionChange: _,
+            size: _ = "3",
+            clearable: _ = !0,
+          } = _,
+          _ = (0, _._)({
+            rgOptions: _,
+            selectedValue: _ || null,
+            onSelectionChange: _,
+            filter: (_, _) =>
+              _ && _.name.toLocaleLowerCase().includes(_.toLocaleLowerCase()),
+            filterPlaceholder: _._.Localize(
+              "#AdvancedSearch_AppSelect_FilterPlaceholder",
+            ),
+          });
+        return (0, _.jsxs)(_._.Root, {
+          state: _,
+          size: _,
+          radius: "sm",
+          marginBottom: "2",
+          clearable: _,
+          children: [
+            (0, _.jsxs)(_._.Trigger, {
+              children: [
+                _ &&
+                  (0, _.jsx)(_, {
+                    app: _,
+                    size: _,
+                  }),
+                !_ &&
+                  (0, _.jsx)(_._.Placeholder, {
+                    weight: "medium",
+                    contrast: "title",
+                    children: _._.Localize(
+                      "#AdvancedSearch_AppSelect_Placeholder",
+                    ),
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_._.VirtualizedOptions, {
+              estimateSize: () => 48,
+              items: _.rgFilteredOptions,
+              renderItem: (_, _) =>
+                (0, _.jsx)(
+                  _._.VirtualizedOption,
+                  {
+                    value: _,
+                    virtualItem: _,
+                    children: (0, _.jsx)(_, {
+                      app: _,
+                      active: _ === _,
+                      size: _,
+                    }),
+                  },
+                  _.appid,
+                ),
+            }),
+          ],
+        });
       }
+      function _(_) {
+        const {
+          app: { icon: _, name: _ },
+          active: _,
+          size: _,
+        } = _;
+        return (0, _.jsxs)(_._, {
+          align: "center",
+          gap: "2",
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                icon: _,
+                size: _,
+              }),
+            (0, _.jsx)(_._, {
+              color: _ ? "accent-8" : void 0,
+              contrast: _ ? void 0 : "title",
+              children: _,
+            }),
+          ],
+        });
+      }
+      const _ = {};
+      function _(_) {
+        const { icon: _, size: _ } = _,
+          [_, _] = (0, _.useState)(!!_[_]);
+        (0, _.useEffect)(() => {
+          let _ = !0;
+          return (
+            setTimeout(() => {
+              _ && _(!0);
+            }, 100),
+            () => {
+              _ = !1;
+            }
+          );
+        }, []),
+          _ && (_[_] = !0);
+        const _ = (0, _._)(_),
+          _ = `var(--spacing-${parseInt(_) + 3})`;
+        return _
+          ? (0, _.jsx)("img", {
+              src: _,
+              style: {
+                width: _,
+                height: _,
+                visibility: _ ? void 0 : "hidden",
+              },
+              alt: "",
+            })
+          : (0, _.jsx)(_._, {
+              width: _,
+              height: _,
+              background: "dull-10",
+            });
+      }
+      function _() {
+        return (0, _.jsx)(_._, {
+          justify: "center",
+          align: "center",
+          marginTop: "6",
+          children: (0, _.jsx)(_._, {
+            size: "4",
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ =
           __webpack_require__._ +
           "images/applications/community/knife.png?v=valveisgoodatcaching",
@@ -4418,6 +4792,7 @@
           bayonet: (0, _._)(_),
         };
       }
+      var _ = __webpack_require__("chunkid");
       const _ = {
         ak47: function (_) {
           return (0, _.jsx)("svg", {
@@ -5026,7 +5401,11 @@
         },
       };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _._.EUNIVERSE === _._ ? 710 === _ : 730 === _;
+      }
       const _ = [
           "weapon_knife_push",
           "weapon_knife_survival_bowie",
@@ -5611,7 +5990,7 @@
             });
           } else {
             const _ = _[_.facet],
-              _ = _(_, "select", !1);
+              _ = (0, _._)(_, "select", !1);
             (0, _._)(
               _.rgOptions.every((_) => "string" == typeof _.tag),
               `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.strLabel}" facet.`,
@@ -5642,7 +6021,7 @@
         const _ = {
             fieldType: "select",
             rgOptions: [],
-            strLabel: _.Localize("#AdvancedSearch_CustomFilter_Other"),
+            strLabel: _._.Localize("#AdvancedSearch_CustomFilter_Other"),
           },
           _ = {
             ..._,
@@ -5680,7 +6059,7 @@
                 for (const _ of _.rarities) {
                   const _ = _.tags[_];
                   if (!_) continue;
-                  const _ = _(_.name, _, _);
+                  const _ = (0, _._)(_.name, _, _);
                   (0, _._)(
                     "string" == typeof _.tag,
                     `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.name}" facet.`,
@@ -5717,7 +6096,7 @@
                       : _ - _;
               };
             }
-            const _ = _(_, "select", !1, _);
+            const _ = (0, _._)(_, "select", !1, _);
             if (!_) return null;
             return {
               facet: _,
@@ -5755,7 +6134,7 @@
           );
       }
       function _(_, _) {
-        if ("string" == typeof _) return _.Localize(_);
+        if ("string" == typeof _) return _._.Localize(_);
         const _ = _[_.facet];
         return _ && _.tags && _.tags[_.tag]
           ? _.tags[_.tag].localized_name
@@ -5827,7 +6206,7 @@
                         ..._.facets,
                       },
                     }),
-                  (_ = _(_, _, _, !1)));
+                  (_ = (0, _._)(_, _, _, !1)));
           _(_), _ && _(_, !0);
         }, [_, _, _, _, _, _]);
         const _ = (_ = [], _ = []) => {
@@ -5877,7 +6256,7 @@
           ].some((_) => _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
               minWidth: _,
               children: _.map(({ facet: _, img: _, toggle: _ }) =>
                 (0, _.jsx)(
@@ -5939,7 +6318,7 @@
                         _ && !(_.facets[_.facet] && _.facets[_.facet][_.tag]),
                       title:
                         "CSGO_Type_WeaponCase" === _.tag
-                          ? _.Localize("#AdvancedSearch_CSContainers_Tooltip")
+                          ? _._.Localize("#AdvancedSearch_CSContainers_Tooltip")
                           : void 0,
                       mini: _,
                       children: _.strLabel,
@@ -5961,11 +6340,11 @@
               color: "dull-9",
               marginTop: "4",
             }),
-            (0, _.jsxs)(_, {
+            (0, _.jsxs)(_._, {
               minHeight: "88px",
               minWidth: _,
               children: [
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   ..._,
                 }),
                 (0, _.jsx)(_._, {
@@ -5973,7 +6352,7 @@
                   direction: "column",
                   children: _.map((_) =>
                     (0, _.jsx)(
-                      _,
+                      _._,
                       {
                         facet: _.facet,
                         ..._,
@@ -5996,7 +6375,7 @@
             title: _,
             mini: _,
           } = _,
-          _ = _({
+          _ = (0, _._)({
             bActive: _,
             onActiveChange: _,
             title: _,
@@ -6372,7 +6751,7 @@
           gap: "1",
           children: [
             (0, _.jsx)(_._, {}),
-            _.Localize("#AdvancedSearch_AppSelect_Clear"),
+            _._.Localize("#AdvancedSearch_AppSelect_Clear"),
           ],
         });
       }
@@ -6413,7 +6792,7 @@
             _ = _();
           _ in _ && (_ = _[_]);
         }
-        const _ = _({
+        const _ = (0, _._)({
             rgOptions: _,
             selectedValue: _,
             onSelectionChange: (_) => _(_, _),
@@ -6429,13 +6808,13 @@
               ? new Intl.ListFormat((0, _._)().strISOCode).format(_)
               : _.join(", ");
         }
-        return (0, _.jsxs)(_.Root, {
+        return (0, _.jsxs)(_._.Root, {
           state: _,
           variant: "highlight",
           radius: "sm",
           clearable: !0,
           children: [
-            (0, _.jsxs)(_.Trigger, {
+            (0, _.jsxs)(_._.Trigger, {
               render: (0, _.jsx)(_, {
                 img: _,
                 active: _,
@@ -6446,7 +6825,7 @@
               }),
               children: [
                 !_ &&
-                  (0, _.jsx)(_.Value, {
+                  (0, _.jsx)(_._.Value, {
                     children: _,
                   }),
                 _ &&
@@ -6474,10 +6853,10 @@
                   }),
               ],
             }),
-            (0, _.jsx)(_.Options, {
+            (0, _.jsx)(_._.Options, {
               children: _.rgFilteredOptions.map((_) =>
                 (0, _.jsx)(
-                  _.Option,
+                  _._.Option,
                   {
                     value: _,
                     children: _
@@ -6538,1432 +6917,1299 @@
           }
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { showSteamItems: _, onShowSteamItemsChange: _ } = _;
-        return (0, _.jsxs)(_._.Root, {
-          value: _ ? "on" : "off",
-          onValueChange: (_) => __webpack_require__("on" === _),
-          variant: "inset",
-          radius: "full",
-          children: [
-            (0, _.jsx)(_._.Item, {
-              value: "off",
-              children: _.Localize("#AdvancedSearch_TypeSwitch_InGame"),
-            }),
-            (0, _.jsx)(_._.Item, {
-              value: "on",
-              children: _.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
-            }),
-          ],
-        });
-      }
-      const _ = 2;
-      function _(_, _, _) {
-        return (0, _.useMemo)(() => {
-          if (!_) return [];
-          const _ = _[_];
-          return _ ? _(_, _) : _(_, void 0, _);
-        }, [_, _, _]);
-      }
-      const _ = 753,
-        _ = {
-          [_]: (_, _) => _(_, 3, _),
-        };
-      function _(_, _, _) {
-        const _ = "number" == typeof _ ? _ : _,
-          _ = [],
-          _ = [];
-        if (!_) return [];
-        for (const _ of Object.keys(_)) {
-          const _ = _[_];
-          if (!_.tags) continue;
-          const _ = Object.keys(_.tags).length < _,
-            _ = _(_, _ ? "checkbox" : "select", !0, void 0, _);
-          _ && (_ ? _.push(_) : _.push(_));
-        }
-        return [_, _].filter((_) => _.length > 0);
-      }
-      function _(_) {
-        const { facets: _, state: _, onStateChange: _ } = _;
-        return (0, _.jsx)(_.Fragment, {
-          children: _.flatMap((_, _) => [
-            (0, _.jsxs)(
-              _,
-              {
-                children: [
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        facet: _,
-                        state: _,
-                        onStateChange: _,
-                      },
-                      _.strLabel,
-                    ),
-                  ),
-                  _ === _.length - 1 &&
-                    (0, _.jsx)(_, {
-                      state: _,
-                      onStateChange: _,
-                    }),
-                ],
+      const _ = (0, _.createContext)(null),
+        _ = Object.assign(
+          function (_) {
+            const {
+                selected: _,
+                onSelectedChange: _ = () => {},
+                onItemChange: _ = () => {},
+                disabled: _,
+                direction: _ = "column",
+                ..._
+              } = _,
+              _ = {
+                selected: _.reduce(
+                  (_, _) => ({
+                    ..._,
+                    [_]: !0,
+                  }),
+                  {},
+                ),
+                onChange: (_, _) => {
+                  if ((_(_, _), _)) __webpack_require__(_.concat(_));
+                  else {
+                    const _ = _.indexOf(_);
+                    __webpack_require__(_.slice(0, _).concat(_.slice(_ + 1)));
+                  }
+                },
+                disabled: _,
               },
-              `facets_${_}`,
-            ),
-            _ < _.length - 1
-              ? (0, _.jsx)(
-                  _._,
+              _ = "row" === _;
+            return (0, _.jsx)(_.Provider, {
+              value: _,
+              children: (0, _.jsx)(_._, {
+                direction: _,
+                wrap: _ ? "wrap" : void 0,
+                gap: "column" === _ ? "1" : "4",
+                role: "group",
+                ..._,
+              }),
+            });
+          },
+          {
+            Item: function (_) {
+              const { value: _, children: _ } = _,
+                _ = (0, _.useContext)(_);
+              if (!_)
+                return (
+                  console.error(
+                    "<CheckboxGroup.Item> must be used within a <CheckboxGroup>",
+                  ),
+                  null
+                );
+              const { selected: _, onChange: _, disabled: _ } = _;
+              return (0, _.jsx)(_._, {
+                checked: !!_[_],
+                disabled: _,
+                onChange: (_) => _(_, _),
+                children:
+                  !!_ &&
+                  (0, _.jsx)(_._, {
+                    children: _,
+                  }),
+              });
+            },
+          },
+        );
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.assign(
+          function (_) {
+            return (0, _.jsxs)(_.Root, {
+              ..._,
+              children: [(0, _.jsx)(_.Track, {}), (0, _.jsx)(_.Handle, {})],
+            });
+          },
+          {
+            Root: function (_) {
+              const {
+                value: _,
+                onChange: _,
+                size: _ = "2",
+                color: _,
+                ref: _,
+              } = _;
+              return (0, _.jsx)("div", {
+                ref: _,
+                role: "switch",
+                "aria-checked": !!_,
+                onClick: () => __webpack_require__(!_),
+                onKeyDown: (_) => {
+                  (" " !== _.key && "Enter" !== _.key) ||
+                    (__webpack_require__(!_),
+                    _.preventDefault(),
+                    _.stopPropagation());
+                },
+                tabIndex: 0,
+                "data-accent-color": _,
+                ...(0, _._)(
                   {
-                    color: "dull-9",
-                    size: "4",
-                    marginTop: "4",
+                    size: _,
+                    className: _.Root,
                   },
-                  `sep_${_}`,
-                )
-              : null,
-          ]),
-        });
-      }
-      const _ = 753,
-        _ = `${_}_item_class`,
-        _ = `${_}_Event`;
+                  _,
+                ),
+                children: _.children,
+              });
+            },
+            Track: function (_) {
+              return (0, _.jsx)("div", {
+                className: _.Track,
+                ..._,
+              });
+            },
+            Handle: function (_) {
+              return (0, _.jsx)("div", {
+                className: _.Handle,
+                ..._,
+              });
+            },
+          },
+        ),
+        _ = [
+          ..._._,
+          {
+            prop: "size",
+            className: (_) => _[`Size-${_}`],
+            responsive: !0,
+          },
+        ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 10;
       function _(_) {
-        const {
-            facets: _,
-            state: _,
-            onStateChange: _,
-            facetingInfo: _,
-            ..._
-          } = _,
-          _ = {
-            ..._,
-          },
-          _ = _[_];
-        delete _[_];
-        !_.app || delete _[_];
-        const _ = _(_, _, _);
-        return (0, _.jsxs)(_._, {
-          ..._,
-          children: [
-            _ &&
-              (0, _.jsx)(_, {
-                facet: _,
-                state: _,
-                onStateChange: _,
-              }),
-            (0, _.jsx)(_, {
-              facets: _,
-              state: _,
-              onStateChange: _,
-            }),
-          ],
-        });
+        return _.rgOptions.length >= _
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+            });
       }
-      const _ = ["item_class_10", "item_class_6"],
-        _ = {
-          item_class_2: function (_) {
-            return (0, _.jsxs)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              children: [
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  _: "M24 31H3V5H24V31ZM6 8H21V24H6V8Z",
-                }),
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  _: "M33 27H28V22H31V11H28V9H33V27Z",
-                }),
-              ],
-            });
-          },
-          item_class_3: function (_) {
-            return (0, _.jsx)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              children: (0, _.jsx)("path", {
-                _: "M2 6.05005V30.05H34V6.05005H2ZM25 10.05C25.5933 10.05 26.1734 10.226 26.6667 10.5556C27.1601 10.8853 27.5446 11.3538 27.7716 11.902C27.9987 12.4502 28.0581 13.0534 27.9424 13.6353C27.8266 14.2173 27.5409 14.7518 27.1213 15.1714C26.7018 15.5909 26.1672 15.8766 25.5853 15.9924C25.0033 16.1082 24.4001 16.0488 23.8519 15.8217C23.3038 15.5946 22.8352 15.2101 22.5056 14.7168C22.1759 14.2234 22 13.6434 22 13.05C22 12.2544 22.3161 11.4913 22.8787 10.9287C23.4413 10.3661 24.2044 10.05 25 10.05ZM23 26.05H6L14.5 15.05L19.4 21.39L22 18.05L28.22 26.05H23Z",
-                fill: "currentColor",
-              }),
-            });
-          },
-          item_class_4: function (_) {
-            return (0, _.jsx)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              children: (0, _.jsx)("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M9.66645 5.52796C12.1332 3.87973 15.0333 3 18 3C19.9698 3 21.9204 3.38799 23.7403 4.14181C25.5601 4.89563 27.2137 6.00052 28.6066 7.3934C29.9995 8.78628 31.1044 10.4399 31.8582 12.2597C32.612 14.0796 33 16.0302 33 18C33 20.9667 32.1203 23.8668 30.472 26.3336C28.8238 28.8003 26.4811 30.7229 23.7403 31.8582C20.9994 32.9935 17.9834 33.2906 15.0737 32.7118C12.1639 32.133 9.49119 30.7044 7.3934 28.6066C5.29562 26.5088 3.86701 23.8361 3.28823 20.9264C2.70945 18.0166 3.0065 15.0006 4.14181 12.2597C5.27713 9.51886 7.19972 7.17618 9.66645 5.52796ZM9.5056 13.3333C9.17595 13.8266 9.00001 14.4067 9.00001 15C9.00001 15.7956 9.31608 16.5587 9.87869 17.1213C10.4413 17.6839 11.2044 18 12 18C12.5934 18 13.1734 17.8241 13.6667 17.4944C14.1601 17.1648 14.5446 16.6962 14.7716 16.1481C14.9987 15.5999 15.0581 14.9967 14.9424 14.4147C14.8266 13.8328 14.5409 13.2982 14.1213 12.8787C13.7018 12.4591 13.1672 12.1734 12.5853 12.0576C12.0033 11.9419 11.4001 12.0013 10.852 12.2284C10.3038 12.4554 9.83524 12.8399 9.5056 13.3333ZM22.3333 17.4944C22.8266 17.8241 23.4067 18 24 18C24.7957 18 25.5587 17.6839 26.1213 17.1213C26.6839 16.5587 27 15.7956 27 15C27 14.4067 26.8241 13.8266 26.4944 13.3333C26.1648 12.8399 25.6962 12.4554 25.1481 12.2284C24.5999 12.0013 23.9967 11.9419 23.4147 12.0576C22.8328 12.1734 22.2982 12.4591 21.8787 12.8787C21.4591 13.2982 21.1734 13.8328 21.0576 14.4147C20.9419 14.9967 21.0013 15.5999 21.2284 16.1481C21.4554 16.6962 21.8399 17.1648 22.3333 17.4944ZM23 22C23 23.3261 22.4732 24.5979 21.5355 25.5355C20.5979 26.4732 19.3261 27 18 27C16.6739 27 15.4021 26.4732 14.4645 25.5355C13.5268 24.5979 13 23.3261 13 22H23Z",
-                fill: "currentColor",
-              }),
-            });
-          },
-          item_class_5: function (_) {
-            return (0, _.jsxs)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              children: [
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  _: "M29 31H6V5H29V31ZM9 8H26V24H9V8Z",
-                }),
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  _: "M14.7451 16.9935L12 14.19L15.7965 14.125L17.5 10L19.2035 14.125L23 14.19L20.2549 16.9935L20.8973 20.9694L17.5 19.1242L14.1027 21L14.7451 16.9935Z",
-                }),
-              ],
-            });
-          },
-          item_class_10: function (_) {
-            return (0, _.jsx)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              children: (0, _.jsx)("path", {
-                fill: "currentColor",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M13 7H34V29H13V25H10V29H2V21C3.65685 21 5 19.6569 5 18C5 16.3431 3.65685 15 2 15V7H10V11H13V7ZM13 23H10V19H13V23ZM10 17H13V13H10V17ZM21 15C21 15.5523 20.5523 16 20 16C19.4477 16 19 15.5523 19 15C19 14.4477 19.4477 14 20 14C20.5523 14 21 14.4477 21 15ZM23 15C23 16.6569 21.6569 18 20 18C18.3431 18 17 16.6569 17 15C17 13.3431 18.3431 12 20 12C21.6569 12 23 13.3431 23 15ZM28 23C28.5523 23 29 22.5523 29 22C29 21.4477 28.5523 21 28 21C27.4477 21 27 21.4477 27 22C27 22.5523 27.4477 23 28 23ZM28 25C29.6569 25 31 23.6569 31 22C31 20.3431 29.6569 19 28 19C26.3431 19 25 20.3431 25 22C25 23.6569 26.3431 25 28 25ZM27.1679 11.9453L19.1679 23.9453L20.832 25.0547L28.832 13.0547L27.1679 11.9453Z",
-              }),
-            });
-          },
-        };
+      function _(_, _) {
+        return (
+          !!_[_.facet] &&
+          ("string" == typeof _.tag
+            ? _[_.facet][_.tag]
+            : _.tag.every((_) => _[_.facet][_]))
+        );
+      }
       function _(_) {
-        const {
-            facet: { localized_name: _, name: _, tags: _ = {} },
-            state: _,
-            onStateChange: _,
-          } = _,
-          _ = Object.keys(_).filter((_) => _.indexOf(_) < 1),
-          _ = _.facets[_] || {};
-        return (0, _.jsxs)(_.Fragment, {
+        const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
+          _ = (0, _.useMemo)(() => _.filter((_) => _(_, _)), [_, _]),
+          _ = (0, _._)({
+            rgOptions: _,
+            selectedValue: _,
+            onSelectionChange: (_) => _(_, _),
+          }),
+          _ = _.length > 0;
+        return (0, _.jsxs)(_._.Root, {
+          state: _,
+          variant: "highlight",
+          radius: "sm",
+          clearable: !0,
           children: [
-            (0, _.jsx)(_._, {
-              weight: "medium",
-              size: "3",
-              contrast: "title",
-              children: _.Localize("#AdvancedSearch_SteamItems_TypeLabel"),
+            (0, _.jsxs)(_._.Trigger, {
+              children: [
+                !_ &&
+                  (0, _.jsx)(_._.Value, {
+                    children: _,
+                  }),
+                _ &&
+                  (0, _.jsxs)(_._.Value, {
+                    children: [
+                      _,
+                      ": ",
+                      (0, _.jsx)(_._, {
+                        color: "accent-8",
+                        children: _(_),
+                      }),
+                    ],
+                  }),
+              ],
             }),
-            (0, _.jsx)(_._, {
-              columns: "repeat( auto-fit, minmax( 230px, 1fr ) )",
-              gap: "2",
-              marginTop: "2",
+            (0, _.jsx)(_._.Options, {
               children: _.map((_) =>
                 (0, _.jsx)(
-                  _,
+                  _._.Option,
                   {
-                    active: _[_],
-                    onActiveChange: (_) =>
-                      ((_, _) => {
-                        if (_.includes(_)) {
-                          let _ = _;
-                          for (const _ of _) _ = _(_, _, _, _);
-                          _(_, !0);
-                        } else _(_(_, _, _, _), !0);
-                      })(_, _),
-                    label: _[_].localized_name,
-                    icon: _[_],
+                    value: _,
+                    disabled: !_ && 0 === _.matches,
+                    children: (0, _.jsx)(_, {
+                      color: _.color,
+                      matches: _.matches,
+                      children: _.strLabel,
+                    }),
                   },
-                  _,
+                  ((_) => `${_.facet}_${_.tag}`)(_),
                 ),
               ),
             }),
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
-      const _ = "4",
-        _ = (0, _.createContext)({});
       function _(_) {
-        const {
-            filter: _,
-            onFilterChange: _,
-            config: _,
-            preload: _ = {},
-            debugMode: _,
-            onSearch: _,
-            ..._
-          } = _,
-          _ = _.bSteamItems,
-          _ = (0, _._)("sm"),
-          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app,
-          _ = _(_);
-        return (0, _.jsx)(_._.Provider, {
-          value: !!_,
-          children: (0, _.jsx)(_.Provider, {
-            value: _,
-            children: (0, _.jsx)(_.Provider, {
-              value: _,
-              children: (0, _.jsx)(_._, {
-                minWidth: {
-                  initial: void 0,
-                  _: "min( 75vw, 800px )",
-                },
-                children: (0, _.jsxs)("form", {
-                  onSubmit: (_) => {
-                    _.preventDefault(), _.stopPropagation();
-                  },
-                  children: [
-                    !_.bNewMarket &&
-                      (0, _.jsx)(_._, {
-                        size: "7",
-                        weight: "heavy",
-                        children: _.Localize("#AdvancedSearch_Heading"),
-                      }),
-                    (0, _.jsxs)(_._, {
-                      gap: "2",
-                      align: {
-                        initial: "stretch",
-                        _: "start",
-                      },
-                      marginY: _,
-                      direction: {
-                        initial: "column",
-                        _: "row",
-                      },
-                      children: [
-                        (0, _.jsx)(_._, {
-                          flexGrow: "0",
-                          children: (0, _.jsx)(_, {
-                            showSteamItems: _,
-                            onShowSteamItemsChange: (_) =>
-                              __webpack_require__({
-                                ..._,
-                                bSteamItems: _,
-                              }),
-                          }),
-                        }),
-                        _ &&
-                          (0, _.jsx)(_._, {
-                            style: {
-                              marginTop: "10px",
-                            },
-                            children: (0, _.jsx)(_._, {
-                              size: "1",
-                              orientation: "vertical",
-                              color: "dull-9",
-                            }),
-                          }),
-                        (0, _.jsxs)(_._, {
-                          direction: "column",
-                          flexGrow: "1",
-                          gap: "2",
-                          children: [
-                            (0, _.jsx)(_, {
-                              app: _ || void 0,
-                              value: _.strSearch || "",
-                              onTextChange: (_) =>
-                                __webpack_require__({
-                                  ..._,
-                                  strSearch: _,
-                                }),
-                            }),
-                            _ &&
-                              (0, _.jsx)(_._, {
-                                marginLeft: "4",
-                                checked: !!_.bSearchDescriptions,
-                                onChange: (_) =>
-                                  __webpack_require__({
-                                    ..._,
-                                    bSearchDescriptions: _,
-                                  }),
-                                title: _.Localize(
-                                  "#AdvancedSearch_IncludeDescriptions_Tooltip",
-                                ),
-                                children: (0, _.jsx)(_._, {
-                                  contrast: "description",
-                                  children: _.Localize(
-                                    "#AdvancedSearch_IncludeDescriptions",
-                                  ),
-                                }),
-                              }),
-                          ],
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)(_, {
-                      children: [
-                        !_ &&
-                          (0, _.jsx)(_, {
-                            ..._,
-                            filter: _.filterInGame,
-                            onFilterChange: (_) =>
-                              __webpack_require__({
-                                ..._,
-                                filterInGame: _,
-                              }),
-                            suggestedInitialApp: _.filterSteam.app,
-                          }),
-                        _ &&
-                          (0, _.jsx)(_, {
-                            ..._,
-                            filter: _.filterSteam,
-                            onFilterChange: (_) =>
-                              __webpack_require__({
-                                ..._,
-                                filterSteam: _,
-                              }),
-                            suggestedInitialApp: _.filterInGame.app,
-                          }),
-                      ],
-                    }),
-                    (0, _.jsx)(_, {
-                      filter: _,
-                      onFilterChange: _,
-                      config: _,
-                      onSearch: _,
-                    }),
-                  ],
-                }),
-              }),
-            }),
+        const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
+          _ = (0, _.useMemo)(() => _.filter((_) => _(_, _)), [_, _]),
+          _ = (0, _._)({
+            rgOptions: _,
+            selectedValue: _,
+            onSelectionChange: (_) => _(_, _),
+            filterPlaceholder: _._.Localize(
+              "#AdvancedSearch_FilterGeneric_Placeholder",
+            ),
           }),
-        });
-      }
-      function _(_) {
-        return !!_;
-      }
-      function _(_) {
-        const { filter: _, onFilterChange: _, config: _, onSearch: _ } = _,
-          _ = _.bSteamItems,
-          [_, _] = (0, _.useState)(!1),
-          _ = _ ? _.filterSteam : _.filterInGame,
-          _ =
-            0 !== _.price[0] ||
-            _.price[1] !== _.maxPrice ||
-            Object.keys(_.facets).length > 0,
-          _ =
-            !_.strSearch &&
-            !_.app &&
-            !Object.keys(_.facets).length &&
-            0 === _.price[0] &&
-            _.price[1] === _.maxPrice,
-          _ = (0, _._)("sm"),
-          _ = (0, _.jsx)(_._, {
-            type: "submit",
-            onClick: () => {
-              _(!0), _(_, _);
-            },
-            disabled: _ || _,
-            children: _.Localize("#AdvancedSearch_Search"),
-          });
-        return (0, _.jsxs)(_._, {
-          justify: _ ? "between" : void 0,
-          marginTop: _,
-          direction: _ ? "row" : "column",
-          gap: "2",
+          _ = _.length > 0;
+        return (0, _.jsxs)(_._.Root, {
+          state: _,
+          variant: "highlight",
+          radius: "sm",
+          clearable: !0,
           children: [
-            _.bNewMarket
-              ? (0, _.jsx)("div", {})
-              : (0, _.jsx)(_._, {
-                  gap: "2",
-                  align: "center",
-                  justify: "between",
-                  children: (0, _.jsx)("a", {
-                    href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
-                    className: _.BetaLink,
-                    children: _.Localize("#AdvancedSearch_BetaTag"),
+            (0, _.jsxs)(_._.Trigger, {
+              children: [
+                !_ &&
+                  (0, _.jsx)(_._.Value, {
+                    children: _,
                   }),
-                }),
-            _ &&
-              (0, _.jsxs)(_._, {
-                gap: _,
-                justify: "end",
-                children: [
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      color: "dull",
-                      variant: "ghost",
-                      onClick: () => {
-                        __webpack_require__(
-                          _
-                            ? {
-                                ..._,
-                                strSearch: "",
-                                filterSteam: {
-                                  ..._.filterSteam,
-                                  facets: {},
-                                  price: [0, _.maxPrice],
-                                },
-                              }
-                            : {
-                                ..._,
-                                strSearch: "",
-                                filterInGame: {
-                                  ..._.filterInGame,
-                                  facets: {},
-                                  price: [0, _.maxPrice],
-                                },
-                              },
-                        );
-                      },
-                      disabled: !_,
-                      children: _.Localize("#AdvancedSearch_Reset"),
+                _ &&
+                  (0, _.jsxs)(_._.Value, {
+                    children: [
+                      _,
+                      ": ",
+                      (0, _.jsx)(_._, {
+                        color: "accent-8",
+                        children: _(_),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_._.Options, {
+              children: _.rgFilteredOptions.map((_) =>
+                (0, _.jsx)(
+                  _._.Option,
+                  {
+                    value: _,
+                    disabled: !_ && 0 === _.matches,
+                    children: (0, _.jsx)(_, {
+                      color: _.color,
+                      matches: _.matches,
+                      children: _.strLabel,
                     }),
-                  _,
-                ],
-              }),
-            !_ && _,
+                  },
+                  ((_) => `${_.facet}_${_.tag}`)(_),
+                ),
+              ),
+            }),
           ],
         });
       }
       function _(_) {
-        const { value: _, onTextChange: _, app: _ } = _,
-          [_, _] = (0, _.useState)(!0);
-        return (0, _.jsx)(_, {
-          radius: "full",
-          variant: "inset",
-          app: _ ? _ : void 0,
-          onClearApp: () => _(!1),
-          value: _,
-          onTextChange: _,
-        });
-      }
-      function _(_) {
-        var _, _;
-        const {
-            value: _,
-            onTextChange: _,
-            app: _,
-            onClearApp: _,
-            popoverWidth: _,
-            ..._
-          } = _,
-          _ = (0, _._)(),
-          _ = null == _ ? void 0 : _.appid,
-          _ = !!_ && _.length > 2,
-          _ = (0, _._)({
-            queryKey: ["market_search_suggestions", _, _],
-            queryFn: async () => {
-              const _ = await fetch(
-                `/market/searchsuggestionsresults?q=${_}${_ ? `&appid=${_}` : ""}${_ ? "&debug=1" : ""}`,
-              );
-              return await _.json();
-            },
-            placeholderData: (_) => _,
-            enabled: _,
-            staleTime: _ ? 0 : 1 / 0,
-          }),
-          _ = (null === (_ = _.data) || void 0 === _ ? void 0 : _.apps) || [],
-          _ = (
-            (null === (_ = _.data) || void 0 === _ ? void 0 : _.results) || []
-          ).slice(0, 10),
-          _ = _({
-            onTextChange: _,
-            suggestions: _.map((_) => `app|${_.appid}`).concat(
-              _.map((_) => `item|${_.market_hash_name}`),
-            ),
-            onSuggestionSelected: (_, _) => {
-              _.preventDefault();
-              const _ = _.indexOf("|");
-              if (-1 === _) return;
-              const _ = _.slice(0, _),
-                _ = _.slice(_ + 1);
-              if ("item" === _) {
-                const _ = _.find((_) => _.market_hash_name === _);
-                _ &&
-                  (window.location.href = _._.Item(
-                    _.app_id,
-                    _.market_hash_name,
-                  ));
-              } else if ("app" === _) {
-                const _ = _.find((_) => _.appid === Number(_));
-                _ &&
-                  (window.location.href = _._.Search({
-                    search: `appid=${_.appid}`,
-                  }));
-              }
-            },
-          }),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          _ = _ || !_,
-          _ = (0, _._)(
-            (0, _.useCallback)((_) => {
-              const _ = _.contentRect.width < 300;
-              _(_);
-            }, []),
-          ),
-          _ = _
-            ? (0, _.jsxs)(_._, {
-                cursor: "pointer",
-                radius: _.radius || "sm",
-                background: "dull-6",
-                paddingY: "1",
-                paddingX: "2",
-                align: "center",
-                gap: "1",
-                role: "button",
-                maxWidth: "24ch",
-                onMouseDown: _,
-                children: [
-                  (0, _.jsx)(_._, {
-                    height: "20px",
-                    objectFit: "contain",
-                    src: _.icon,
-                    alt: "",
-                  }),
-                  (0, _.jsx)(_, {
-                    visible: !_,
-                    children: _.name,
-                  }),
-                  (0, _.jsx)(_._, {}),
-                ],
-              })
-            : null,
-          _ =
-            _ && !_
-              ? _.Localize(
-                  "#AdvancedSearch_TextSearch_PlaceholderWithApp",
-                  _.name,
-                )
-              : _.Localize("#AdvancedSearch_TextSearch_Placeholder");
-        return (0, _.jsxs)(_.Root, {
-          state: _,
-          popoverWidth: _,
+        const { color: _, matches: _, children: _ } = _;
+        return (0, _.jsxs)(_._, {
+          gap: "2",
+          align: "center",
           children: [
-            (0, _.jsx)(_.TextInput, {
-              value: _,
-              placeholder: _,
-              ..._,
-              title: _.Localize("#AdvancedSearch_TextSearch_Tooltip"),
-              beforeContent: _,
-              ref: _,
-              onFocus: () => _(!0),
-              onBlur: () => _(!1),
-              maxLength: 90,
-              clearable: !0,
-            }),
-            (0, _.jsxs)(_.Suggestions, {
+            _ &&
+              (0, _.jsx)(_, {
+                color: _,
+              }),
+            (0, _.jsxs)(_._, {
               children: [
-                _ &&
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        ..._,
-                      },
-                      _.appid,
-                    ),
-                  ),
-                _ &&
-                  _.map((_, _) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        name: _.market_name,
-                        hashName: _.market_hash_name,
-                        appName: _.app_name,
-                        appid: _.app_id,
-                        img: _.icon_url,
-                        searchScore: _.search_score,
-                      },
-                      _.market_hash_name + _,
-                    ),
-                  ),
+                _,
+                " ",
+                void 0 !== _ && _ >= 1
+                  ? (0, _.jsxs)(_._, {
+                      contrast: "description",
+                      children: ["(", Intl.NumberFormat().format(_), ")"],
+                    })
+                  : void 0,
               ],
             }),
           ],
         });
       }
       function _(_) {
-        const { visible: _, children: _ } = _;
+        return _.map((_) => _.strLabel).join(", ");
+      }
+      function _(_) {
+        const { color: _ } = _;
         return (0, _.jsx)(_._, {
-          className: _.Collapse,
-          "data-visible": !!_,
+          width: "6px",
+          height: "6px",
+          radius: "full",
+          style: {
+            backgroundColor: _,
+          },
+        });
+      }
+      function _(_) {
+        const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
+          _ = (_) => `${_.facet}_${_.tag}`,
+          _ = _.filter((_) => _(_, _)).map(_);
+        return (0, _.jsxs)(_._, {
+          marginBottom: "4",
+          children: [
+            (0, _.jsx)(_._, {
+              weight: "medium",
+              contrast: "title",
+              children: _,
+            }),
+            (0, _.jsx)(_, {
+              marginTop: "2",
+              selected: _,
+              onItemChange: (_, _) => {
+                const _ = _.find((_) => _(_) === _);
+                _ && _(_.facet, _.tag, _);
+              },
+              direction: "row",
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    value: _(_),
+                    checked: _(_, _),
+                    children: _.strLabel,
+                  },
+                  _(_),
+                ),
+              ),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { value: _, checked: _, children: _ } = _;
+        return (0, _.jsx)(_.Item, {
+          value: _,
           children: (0, _.jsx)(_._, {
-            truncate: !0,
+            color: _ ? "accent-11" : void 0,
+            contrast: _ ? void 0 : "title",
             children: _,
           }),
         });
       }
       function _(_) {
-        const {
-            name: _,
-            hashName: _,
-            img: _,
-            appName: _,
-            searchScore: _,
-            appid: _,
-          } = _,
-          _ = (0, _._)();
-        return (0, _.jsxs)(_.Suggestion, {
-          value: `item|${_}`,
-          render: (_, _) =>
-            (0, _.jsx)(_, {
-              focused: _.focused,
-              link: _._.Item(_, _),
-              ..._,
-            }),
+        const { label: _, active: _, onActiveChange: _ } = _;
+        return (0, _.jsxs)(_._, {
+          gap: "4",
+          align: "center",
+          paddingX: "2",
+          paddingY: "2",
           children: [
-            (0, _.jsx)("img", {
-              style: {
-                margin: "8px",
-                height: "60px",
-                width: "60px",
-                objectFit: "contain",
-                filter: "drop-shadow( 0 0 1px rgba( 0, 0, 0, .5) )",
-              },
-              src: _,
-              alt: "",
+            (0, _.jsx)(_._, {
+              weight: "medium",
+              children: _,
             }),
-            (0, _.jsxs)(_._, {
-              direction: "column",
-              gap: "1",
-              minWidth: "0",
-              children: [
-                (0, _.jsx)(_._, {
-                  size: "3",
-                  weight: "medium",
-                  truncate: !0,
-                  contrast: "title",
-                  children: _,
-                }),
-                (0, _.jsx)(_._, {
-                  size: "1",
-                  truncate: !0,
-                  children: _,
-                }),
-              ],
+            (0, _.jsx)(_, {
+              value: _,
+              onChange: _,
             }),
-            _ &&
-              (0, _.jsx)(_.Fragment, {
-                children:
-                  _ > 0
-                    ? (0, _.jsx)(_._, {
-                        size: "1",
-                        children: _,
-                      })
-                    : null,
-              }),
           ],
         });
       }
       function _(_) {
-        const { name: _, icon: _, appid: _ } = _;
-        return (0, _.jsxs)(_.Suggestion, {
-          value: `app|${_}`,
-          render: (_, _) =>
-            (0, _.jsx)(_, {
-              focused: _.focused,
-              link: _._.Search({
-                search: `appid=${_}`,
-              }),
-              ..._,
-            }),
+        const { label: _, icon: _, active: _, onActiveChange: _ } = _,
+          _ = (0, _._)({
+            bActive: _,
+            onActiveChange: _,
+          });
+        return (0, _.jsxs)(_._, {
+          gap: "2",
+          radius: "sm",
+          paddingX: "5",
+          paddingY: "4",
+          align: "center",
+          className: _.TagButton,
+          ..._,
           children: [
-            (0, _.jsx)("img", {
-              style: {
-                margin: "8px",
-                height: "24px",
-                width: "24px",
-                objectFit: "contain",
-                filter: "drop-shadow( 0 0 1px rgba( 0, 0, 0, .5) )",
-              },
-              src: _,
-              alt: "",
-            }),
+            _ &&
+              (0, _.jsx)(_, {
+                className: _.Icon,
+              }),
             (0, _.jsx)(_._, {
-              direction: "column",
-              gap: "1",
-              minWidth: "0",
+              flexGrow: "1",
               children: (0, _.jsx)(_._, {
-                size: "2",
                 weight: "medium",
-                truncate: !0,
                 contrast: "title",
                 children: _,
               }),
             }),
+            _ && (0, _.jsx)(_._, {}),
           ],
         });
       }
       function _(_) {
-        const { focused: _, link: _, ..._ } = _;
-        return (0, _.jsx)("a", {
-          href: _,
-          className: _.UndecoratedLink,
-          children: (0, _.jsx)(_._, {
-            align: "center",
-            gap: "2",
-            className: _.SearchSuggestion,
-            radius: "sm",
-            margin: "2",
-            "data-focused": _,
-            paddingLeft: "2",
-            ..._,
-          }),
-        });
-      }
-      function _(_) {
-        var _;
         const {
-            rgApps: _ = [],
-            rgAppData: _ = {},
-            filter: _,
-            onFilterChange: _,
-            suggestedInitialApp: _,
-          } = _,
-          [_, _] = (0, _.useState)(!1);
-        (0, _.useEffect)(() => {
-          _ ||
-            (_(!0),
-            _ &&
-              _[_.appid] &&
-              _({
-                ..._,
-                app: _[_.appid],
-              }));
-        }, [_, _, _, _, _]);
-        const _ = !_.app && _,
-          _ = _(_),
-          _ = (0, _.useMemo)(
-            () =>
-              __webpack_require__
-                .filter((_) => _ !== _ && _[_])
-                .map((_) => _[_]),
-            [_, _],
-          );
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              apps: _,
-              selectedApp: _.app,
-              onSelectionChange: (_) =>
-                _({
-                  ..._,
-                  app: _,
-                  facets: {},
-                }),
-            }),
-            _ &&
-              (0, _.jsx)(_, {
-                loading: _.isLoading,
-                apps:
-                  null === (_ = _.data) || void 0 === _ ? void 0 : _.rgInGame,
-                filterBy: _,
-                onSelect: (_) =>
-                  _({
-                    ..._,
-                    app: _[_] || null,
-                    facets: {},
-                  }),
-              }),
-            !!_.app &&
-              (0, _.jsx)(_, {
-                appid: _.app.appid,
-                state: _,
-                onStateChange: _,
-              }),
-          ],
-        });
-      }
-      const _ = 753,
-        _ = `${_}_Game`;
-      function _(_) {
-        var _, _, _;
-        const { filter: _, onFilterChange: _, suggestedInitialApp: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          _ = !_.app && _,
-          _ = _(_),
-          _ = (0, _._)(
-            ((_ = _),
-            {
-              queryKey: ["marketfilters", _],
-              queryFn: async () => {
-                const _ = await _(_);
-                if (!_)
-                  throw new Error(
-                    "Failed to load market facets for Steam Inventory items",
-                  );
-                const _ = _[_];
-                if ((delete _[_], !_.tags))
-                  return {
-                    rgApps: [],
-                    facets: {},
-                    mapAppIDs: {},
-                  };
-                const _ = {},
-                  _ = [];
-                for (const _ of Object.keys(_.tags)) {
-                  const _ = _.tags[_],
-                    _ = parseInt(_.slice(_.indexOf("_") + 1));
-                  isNaN(_) ||
-                    ((_[_] = !0),
-                    _.push({
-                      appid: _,
-                      name: _.localized_name,
-                      icon: `${_._.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${_}`,
-                    }));
-                }
-                return {
-                  rgApps: (0, _._)(_, (_) => _.name),
-                  mapAppIDs: _,
-                  facets: _,
-                };
+          rgToggles: _,
+          onChange: _,
+          state: _,
+          computeNext: _ = (_, _) => _,
+        } = _;
+        return (0, _.jsx)(_._, {
+          gap: "4",
+          align: "center",
+          children: _.filter((_) => !_.condition || _.condition(_)).map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                active: _.facets[_.facet] && _.facets[_.facet][_.tag],
+                onActiveChange: (_) =>
+                  ((_, _, _) => {
+                    const _ = _(_, _, _, _);
+                    __webpack_require__(
+                      {
+                        ..._,
+                        facets: _(_.facets, _.facets),
+                      },
+                      !0,
+                    );
+                  })(_.facet, _.tag, _),
+                label: _.strLabel,
               },
-            }),
-          );
-        var _;
-        const { facets: _ = {}, rgApps: _, mapAppIDs: _ } = _.data || {},
-          _ = !_.facets.Event || 0 === Object.keys(_.facets).length;
-        if (
-          ((0, _.useEffect)(() => {
-            !_ &&
-              _ &&
-              (_(!0),
-              _ &&
-                _[_.appid] &&
-                _({
-                  ..._,
-                  app: _,
-                }));
-          }, [_, _, _, _, _]),
-          _.isLoading)
-        )
-          return (0, _.jsx)(_, {});
-        if (_.isError || !_.data || !_ || !_)
-          return (0, _.jsx)(_, {
-            children: (0, _.jsx)(_._, {
-              size: "4",
-              children: _.Localize("#AdvancedSearch_FacetLoadError"),
-            }),
-          });
-        const _ = (
-          null === (_ = _.data) || void 0 === _
-            ? void 0
-            : _.rgPlaytime.length
-        )
-          ? null === (_ = _.data) || void 0 === _
-            ? void 0
-            : _.rgPlaytime
-          : null === (_ = _.data) || void 0 === _
-            ? void 0
-            : _.rgInGame;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _ &&
-              (0, _.jsx)(_, {
-                apps: _,
-                selectedApp: _.app,
-                onSelectionChange: (_) =>
-                  _({
-                    ..._,
-                    app: _,
-                    facets: {},
-                  }),
-              }),
-            _ &&
-              _ &&
-              (0, _.jsx)(_, {
-                loading: _.isLoading,
-                apps: _,
-                filterBy: _,
-                onSelect: (_) =>
-                  _({
-                    ..._,
-                    app: _.find((_) => _.appid === _) || null,
-                    facets: {},
-                  }),
-              }),
-            (0, _.jsx)(_, {
-              marginTop: "3",
-              facets: _,
-              state: _,
-              onStateChange: _,
-            }),
-          ],
+              `${_.facet}_${_.tag}`,
+            ),
+          ),
         });
       }
       function _(_) {
-        const { apps: _ = [], filterBy: _ = {}, onSelect: _, loading: _ } = _,
-          _ = !(0, _._)("sm"),
-          _ = (0, _.useMemo)(
-            () =>
-              Array.isArray(_)
-                ? __webpack_require__.reduce(
-                    (_, _) => ({
-                      ..._,
-                      [_]: !0,
-                    }),
-                    {},
-                  )
-                : _,
-            [_],
-          ),
-          _ = _.filter(({ appid: _ }) => _[_]).slice(0, 8);
-        let _ = [];
-        if (_)
-          for (let _ = 0; _ < 20; _++)
-            _.push(
-              (0, _.jsx)(
-                _._,
-                {
-                  width: "92px",
-                  height: "138px",
-                },
-                _,
-              ),
-            );
-        const _ = _._.logged_in,
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)(_);
-        let _ = _;
-        if (!_) {
-          const _ = _ ? Math.floor((_.contentRect.width - 10) / 104) : 0;
-          (_ = _.slice(0, _)), (_ = _.slice(0, _));
-        }
+        const {
+            rgToggles: _,
+            onChange: _,
+            state: _,
+            computeNext: _ = (_, _) => _,
+          } = _,
+          _ = _.every(
+            ({ facet: _, tag: _ }) => !_.facets[_] || !_.facets[_][_],
+          );
         return (0, _.jsxs)(_._, {
-          direction: "column",
-          marginTop: "3",
-          marginBottom: "2",
+          columns: "1fr 1fr",
+          gap: "1",
+          padding: "1",
+          background: "dull-6",
           children: [
             (0, _.jsx)(_._, {
-              weight: "medium",
-              size: "3",
-              contrast: "title",
-              children: _
-                ? _.Localize("#AdvancedSearch_AppSelect_YourGames")
-                : _.Localize("#AdvancedSearch_AppSelect_PopularGames"),
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_.TruncatingPortraitRow, _ && _.Compact),
-              ref: _,
-              children: [
-                !_ &&
-                  _.map((_) =>
-                    (0, _.jsx)(
-                      _._,
-                      {
-                        onClick: () => _(_.appid),
-                        tabIndex: 0,
-                        onKeyDown: (_) => {
-                          return (
-                            (_ = _.key),
-                            (_ = _.appid),
-                            void ((" " !== _ && "Enter" !== _) || _(_))
-                          );
-                          var _, _;
-                        },
-                        role: "button",
-                        width: "92px",
-                        height: "138px",
-                        flexGrow: "1",
-                        flexBasis: "92px",
-                        children: (0, _.jsx)("img", {
-                          src: _.img,
-                          alt: _.name,
-                          style: {
-                            width: "92px",
-                          },
-                        }),
-                      },
-                      _.appid,
-                    ),
-                  ),
-                _ && _,
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          minHeight: "min(400px, 30vh)",
-          direction: "column",
-          children: _.children,
-        });
-      }
-      function _(_) {
-        const _ = {
-          strSearch: "",
-          bSearchDescriptions: _.bSearchDescriptions,
-          filterInGame: {
-            app: null,
-            facets: {},
-            accessories: {},
-            properties: {},
-            price: [0, _.config.maxPrice],
-          },
-          filterSteam: {
-            app: null,
-            facets: {},
-            accessories: {},
-            properties: {},
-            price: [0, _.config.maxPrice],
-          },
-          bSteamItems: !1,
-        };
-        let _ = _.filterInGame;
-        const {
-          strQuery: _,
-          unFilterApp: _,
-          rgFilterData: _,
-          rgAppData: _ = {},
-        } = _;
-        "number" == typeof _ &&
-          _[_] &&
-          (_ === _
-            ? ((_.bSteamItems = !0), (_ = _.filterSteam))
-            : (_.app = _[_])),
-          "string" == typeof _ && (_.strSearch = _);
-        const _ = (function (_) {
-          if (!_ || "object" != typeof _) return null;
-          const _ = {};
-          for (const _ of Object.keys(_)) {
-            const _ = _[_];
-            if (_ && "object" == typeof _)
-              for (const _ of Object.keys(_.tags)) {
-                const _ = _.tags[_];
-                _ &&
-                  "object" == typeof _ &&
-                  !0 === _.selected &&
-                  (_[_.name] || (_[_.name] = {}), (_[_.name][_] = !0));
-              }
-          }
-          return _;
-        })(_);
-        if (
-          (_ && (_.facets = _),
-          "number" == typeof _.unFilterMinPrice &&
-            _.unFilterMinPrice > 0 &&
-            (_.price[0] = _.unFilterMinPrice),
-          "number" == typeof _.unFilterMaxPrice &&
-            _.unFilterMaxPrice < _.config.maxPrice &&
-            (_.price[1] = _.unFilterMaxPrice),
-          _.bSteamItems && _ && _[_] && _.facets.Game)
-        ) {
-          const _ = Object.keys(_.facets.Game)[0],
-            _ = _[_].tags;
-          if (_ && _) {
-            const _ = _[_];
-            if (_) {
-              const _ = parseInt(_.slice(_.indexOf("_") + 1));
-              isNaN(_) ||
-                ((_.app = {
-                  appid: _,
-                  name: _.localized_name,
-                  icon: "",
-                }),
-                delete _.facets.Game);
-            }
-          }
-        }
-        return {
-          state: _,
-          config: _.config,
-        };
-      }
-      function _(_, _) {
-        const {
-            strSearch: _,
-            bSearchDescriptions: _,
-            bSteamItems: _,
-            filterInGame: _,
-            filterSteam: _,
-          } = _,
-          _ = _
-            ? (function (_) {
+              color: _ ? "accent" : "dull",
+              onClick: () => {
                 let _ = {
                   ..._,
                   facets: {
                     ..._.facets,
                   },
                 };
-                return (
-                  _.app &&
-                    (_.facets.Game = {
-                      [`app_${_.app.appid}`]: !0,
-                    }),
-                  (_.app = {
-                    appid: _,
-                    name: "",
-                    icon: "",
-                  }),
-                  _
+                for (const _ of _) _ = _(_, _.facet, _.tag, !1);
+                __webpack_require__(
+                  {
+                    ..._,
+                    facets: _(_.facets, _.facets),
+                  },
+                  !0,
                 );
-              })(_)
-            : _,
+              },
+              children: "All",
+            }),
+            _.filter((_) => !_.condition || _.condition(_)).map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  active: _.facets[_.facet] && _.facets[_.facet][_.tag],
+                  onActiveChange: (_) =>
+                    ((_, _, _) => {
+                      const _ = _(_, _, _, _);
+                      __webpack_require__(
+                        {
+                          ..._,
+                          facets: _(_.facets, _.facets),
+                        },
+                        !0,
+                      );
+                    })(_.facet, _.tag, _),
+                  label: _.strLabel,
+                },
+                `${_.facet}_${_.tag}`,
+              ),
+            ),
+          ],
+        });
+      }
+      function _(_) {
+        const { label: _, active: _, onActiveChange: _ } = _;
+        return (0, _.jsx)(_._, {
+          color: _ ? "accent" : "dull",
+          onClick: () => _(!_),
+          children: _,
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          gapY: "2",
+          gapX: "2",
+          marginTop: "4",
+          columns: {
+            initial: "1fr",
+            _: `repeat( auto-fit, minmax( ${_.minWidth || "300px"}, 1fr ) )`,
+          },
+          ..._,
+        });
+      }
+      function _(_, _, _, _) {
+        const _ = {
+            ..._,
+            facets: {
+              ..._.facets,
+              [_]: {
+                ..._.facets[_],
+              },
+            },
+          },
+          _ = "string" == typeof _ ? [_] : _;
+        for (const _ of _) _.facets[_][_] = !0;
+        if (!_)
+          if (1 === Object.keys(_.facets[_]).length) delete _.facets[_];
+          else for (const _ of _) delete _.facets[_][_];
+        return _;
+      }
+      function _(_) {
+        const { facet: _, state: _, onStateChange: _ } = _;
+        switch (_.fieldType) {
+          case "checkbox": {
+            const _ = (_, _, _) => _(_(_, _, _, _), !0);
+            return (0, _.jsx)(_, {
+              ..._,
+              value: _.facets,
+              onChange: _,
+            });
+          }
+          case "select": {
+            const _ = (_ = [], _ = []) => {
+              const _ = {};
+              let _ = {
+                ..._,
+                facets: {
+                  ..._.facets,
+                },
+              };
+              for (const _ of _) {
+                const _ = "string" == typeof _.tag ? [_.tag] : _.tag;
+                for (const _ of _)
+                  _[`${_.facet}_${_}`] = {
+                    facet: _.facet,
+                    tag: _,
+                  };
+              }
+              for (const _ of _)
+                _[`${_.facet}_${_.tag}`] || (_ = _(_, _.facet, _.tag, !0)),
+                  delete _[`${_.facet}_${_.tag}`];
+              for (const _ of Object.values(_)) _ = _(_, _.facet, _.tag, !1);
+              _(_, !0);
+            };
+            return (0, _.jsx)(_, {
+              ..._,
+              value: _.facets,
+              onChange: _,
+            });
+          }
+          case "toggle":
+          case "togglebutton": {
+            const _ = (_) => _(_(_, _.facet, _.tag, _), !0),
+              _ = _.facets[_.facet] && _.facets[_.facet][_.tag];
+            return "toggle" === _.fieldType
+              ? (0, _.jsx)(_, {
+                  active: _,
+                  onActiveChange: _,
+                  label: _.strLabel,
+                })
+              : (0, _.jsx)(_, {
+                  active: _,
+                  onActiveChange: _,
+                  label: _.strLabel,
+                });
+          }
+          case "togglegroup":
+            return (0, _.jsx)(_, {
+              ..._,
+              onChange: _,
+              state: _,
+            });
+          case "togglegrid":
+            return (0, _.jsx)(_, {
+              ..._,
+              onChange: _,
+              state: _,
+            });
+          default:
+            return (
+              (0, _._)(_, `Unhandled facet field type: "${_.fieldType}"`), null
+            );
+        }
+      }
+      function _(_, _, _, _, _) {
+        var _, _, _;
+        let _ = [],
+          _ = 0,
+          _ = 2;
+        const _ = {},
+          _ = _.tags || {};
+        for (const _ of Object.keys(_)) {
+          let _;
+          _ &&
+            (_ =
+              null !== (_ = _.counts[_.name] && _.counts[_.name][_]) &&
+              void 0 !== _
+                ? _
+                : 0),
+            (_ += null != _ ? _ : 0);
+          const _ = _(_.name, _, _[_], _);
+          if (_)
+            if (_[_.strLabel])
+              if (_) {
+                const _ = _[_.strLabel],
+                  _ = "string" == typeof _.tag ? [_.tag] : _.tag,
+                  _ = "string" == typeof _.tag ? [_.tag] : _.tag;
+                (_.tag = _.concat(..._)),
+                  void 0 !== _.matches &&
+                    void 0 !== _.matches &&
+                    (_.matches =
+                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) +
+                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)),
+                  void 0 === _.color && _.color && (_.color = _.color);
+              } else {
+                let _;
+                do {
+                  (_ = `${_.strLabel} (?${_}?)`), _++;
+                } while (_[_]);
+                (0, _._)(
+                  !1,
+                  "Forced to assign a unique label to option",
+                  _,
+                  _,
+                  _[_.strLabel],
+                );
+                const _ = {
+                  ..._,
+                  strLabel: _,
+                };
+                _.push(_), (_[_.strLabel] = _);
+              }
+            else _.push(_), (_[_.strLabel] = _);
+        }
+        if (_) _.sort(_);
+        else {
+          if ("select" === _) {
+            _.sort((_, _) => {
+              var _, _;
+              return (
+                (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) -
+                (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)
+              );
+            });
+            let _ = -1;
+            for (let _ = _.length - 1; _ >= 0 && 0 === _[_].matches; _--) _ = _;
+            if (-1 === _) _ = (0, _._)(_, (_) => _.strLabel);
+            else {
+              const _ = (0, _._)(_.slice(0, _), (_) => _.strLabel),
+                _ = (0, _._)(_.slice(_), (_) => _.strLabel);
+              _ = [..._, ..._];
+            }
+          } else _ = (0, _._)(_, (_) => _.strLabel);
+        }
+        if (_ && 0 === _) return null;
+        if (_ && _.total === _ && 1 === Object.keys(_.counts[_.name]).length)
+          return null;
+        return {
+          strLabel: _.localized_name,
+          rgOptions: _,
+          fieldType: _,
+        };
+      }
+      function _(_, _, _, _) {
+        const _ = {
+          facet: _,
+          tag: _,
+          strLabel: _.localized_name,
+          matches: _,
+        };
+        return _.color && (_.color = `#${_.color}`), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _() {
+        const _ = (0, _.useContext)(_);
+        return (0, _._)(_, "No filter config provider found!"), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      Object.assign(
+        function (_) {
+          const {
+              value: _,
+              onValueChange: _,
+              onValueSettled: _,
+              min: _,
+              ..._
+            } = _,
+            _ = [_],
+            _ = (0, _.useCallback)((_) => __webpack_require__(_[0]), [_]),
+            _ = (0, _.useCallback)((_) => (null == _ ? void 0 : _(_[0])), [_]);
+          return (0, _.jsxs)(_, {
+            ..._,
+            min: _,
+            onValueChange: _,
+            onValueSettled: _,
+            value: _,
+            children: [
+              (0, _.jsx)(_, {
+                children: (0, _.jsx)(_, {
+                  start: _,
+                  end: _,
+                }),
+              }),
+              (0, _.jsx)(_, {}),
+            ],
+          });
+        },
+        {
+          Root: _,
+          Track: _,
+          Range: _,
+          Handle: _,
+        },
+      );
+      function _(_) {
+        const { value: _ } = _;
+        return (0, _.jsxs)(_, {
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              children: (0, _.jsx)(_, {
+                start: _[0],
+                end: _[1],
+              }),
+            }),
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)(_, {}),
+          ],
+        });
+      }
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { children: _, color: _, ..._ } = _,
           {
-            app: _,
-            facets: _,
-            accessories: _,
-            price: [_, _],
+            min: _,
+            max: _,
+            onValueChange: _,
+            value: _,
+            step: _ = 1,
+            onValueSettled: _,
           } = _,
-          _ = new FormData();
-        _ && _.set("appid", _.appid.toString()),
-          _ && _.set("q", _),
-          _ && _ && _(_.app) && _.set("descriptions", "1");
-        for (const _ of Object.keys(_))
-          if (_[_])
-            for (const _ of Object.keys(_[_]))
-              _[_][_] && _.append(`category_${_.appid}_${_}[]`, `tag_${_}`);
-        for (const _ of Object.keys(_))
-          if (_[_])
-            for (const _ of Object.keys(_[_]))
-              _[_][_] && _.append(`accessory_${_}[]`, _);
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useRef)(null),
+          [_] = (0, _.useState)(() => new Set()),
+          [_, _] = (0, _.useState)(!1);
+        return (0, _.jsx)(_.Provider, {
+          value: {
+            ..._,
+            handles: _,
+            bDragActive: _,
+          },
+          children: (0, _.jsx)("div", {
+            className: _.SliderRoot,
+            "data-accent-color": _,
+            ref: _,
+            onPointerDown: (_) => {
+              if (_.current) {
+                if (
+                  (_.target.setPointerCapture(_.pointerId),
+                  "number" != typeof _)
+                ) {
+                  const _ = _.current.getBoundingClientRect(),
+                    _ = _(_.clientX - _.left, [0, _.width], [_, _]);
+                  _.current = {
+                    activeValueIndex: _(_, _),
+                    bMoved: !1,
+                  };
+                } else
+                  _.current = {
+                    activeValueIndex: 0,
+                    bMoved: !1,
+                  };
+                _(!0);
+              }
+            },
+            onPointerUp: (_) => {
+              var _;
+              const _ = _.target;
+              __webpack_require__.hasPointerCapture(_.pointerId) &&
+                (__webpack_require__.releasePointerCapture(_.pointerId),
+                _ &&
+                  (null === (_ = _.current) || void 0 === _
+                    ? void 0
+                    : _.bMoved) &&
+                  _(_),
+                _(!1));
+            },
+            onPointerMove: (_) => {
+              if (
+                _.target.hasPointerCapture(_.pointerId) &&
+                _.current &&
+                _.current
+              ) {
+                const _ = _.current.getBoundingClientRect(),
+                  _ = _({
+                    value: _(_.clientX - _.left, [0, _.width], [_, _]),
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = [..._];
+                (_[_.current.activeValueIndex] = _),
+                  _.sort((_, _) => _ - _),
+                  (_.current.activeValueIndex = _.indexOf(_)),
+                  (_.current.bMoved = !0),
+                  _(_);
+              }
+            },
+            onClick: (_) => {
+              var _;
+              if (
+                !_.current ||
+                (null === (_ = _.current) || void 0 === _ ? void 0 : _.bMoved)
+              )
+                return;
+              const _ = _.current.getBoundingClientRect(),
+                _ = _(_.clientX - _.left, [0, _.width], [_, _]),
+                _ = _({
+                  value: _,
+                  min: _,
+                  max: _,
+                  step: _,
+                }),
+                _ = _(_, _),
+                _ = [..._];
+              (_[_] = _), _(_), _ && _(_);
+            },
+            children: (0, _.jsx)("div", {
+              className: _.Inner,
+              children: _,
+            }),
+          }),
+        });
+      }
+      function _(_, _) {
+        if (_.length <= 1) return _.length - 1;
+        let _ = 0,
+          _ = Math.abs(_ - _[0]);
+        for (let _ = 1; _ < _.length; _++) {
+          const _ = Math.abs(_[_] - _);
+          _ < _ && ((_ = _), (_ = _));
+        }
+        return _;
+      }
+      function _(_) {
+        const { render: _, ..._ } = _;
+        return (0, _._)(
+          _,
+          (0, _.jsx)("div", {
+            className: _.SliderTrack,
+          }),
+          _,
+          void 0,
+        );
+      }
+      function _(_) {
+        const { start: _, end: _, render: _ } = _,
+          _ = (0, _.useContext)(_);
+        (0, _._)(_, "SliderRange must be used within a SliderRoot!");
+        const { min: _, max: _ } = _,
+          _ = _(_, _, _),
+          _ = 100 - _(_, _, _);
+        return (0, _._)(
+          _,
+          (0, _.jsx)("div", {
+            className: _.SliderRange,
+            style: {
+              "--pct-left": `${_}%`,
+              "--pct-right": `${_}%`,
+            },
+          }),
+          {},
+          void 0,
+        );
+      }
+      function _(_) {
+        const { render: _ } = _,
+          _ = (0, _.useContext)(_);
+        (0, _._)(_, "SliderHandle must be used within a SliderRoot!");
+        const {
+            min: _,
+            max: _,
+            handles: _,
+            value: _,
+            step: _ = 1,
+            onValueChange: _,
+            onValueSettled: _,
+          } = _,
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(-1);
+        (0, _.useEffect)(
+          () => (_ ? (_.add(_), _(_.size - 1), () => _.delete(_)) : () => {}),
+          [_, _],
+        );
+        const _ = _ > -1,
+          _ = {
+            "--handle-pct": `${_(_ ? _[_] : _, _, _)}%`,
+          };
+        _ || (_.display = "none");
+        const _ = {
+          ref: _,
+          role: "slider",
+          "aria-valuenow": _[_],
+          "aria-valuemin": _,
+          "aria-valuemax": _,
+          tabIndex: 0,
+          onKeyDown: (_) => {
+            switch (_.key) {
+              case "ArrowRight":
+              case "ArrowUp":
+              case "ArrowLeft":
+              case "ArrowDown": {
+                const _ = "ArrowRight" === _.key || "ArrowUp" === _.key,
+                  _ = _ * (_ ? 1 : -1),
+                  _ = _({
+                    value: _[_] + _,
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = [..._];
+                (_[_] = _),
+                  _(_),
+                  _ && _(_),
+                  _.preventDefault(),
+                  _.stopPropagation();
+                break;
+              }
+              case "PageUp":
+              case "PageDown": {
+                const _ = "PageUp" === _.key,
+                  _ = Math.round((_ - _) / 10) * (_ ? 1 : -1),
+                  _ = _({
+                    value: _[_] + _,
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = [..._];
+                (_[_] = _),
+                  _(_),
+                  _ && _(_),
+                  _.preventDefault(),
+                  _.stopPropagation();
+                break;
+              }
+            }
+          },
+        };
+        return (0, _._)(
+          _,
+          (0, _.jsx)("span", {
+            className: _.SliderHandle,
+            style: _,
+          }),
+          _,
+          {
+            value: _[_],
+            bDragActive: _.bDragActive,
+          },
+        );
+      }
+      function _(_, _, _) {
+        if (_[0] === _[1] || _[0] === _[1]) return _[0];
+        const _ = ((_[1] - _[0]) / (_[1] - _[0])) * (_ - _[0]) + _[0];
+        return _._(_, _[0], _[1]);
+      }
+      function _(_) {
+        const { value: _, min: _, max: _, step: _ } = _,
+          _ = Math.round((_ - _) / _) / (1 / _);
+        return _._(_ + _, _, _);
+      }
+      function _(_, _, _) {
+        return ((_ - _) / (_ - _)) * 100;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { defaultValue: _ = 0, currency: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          valueToString: (_) =>
+            (function (_, _) {
+              return void 0 === _
+                ? ""
+                : _ === 1 / 0
+                  ? _
+                  : _
+                    ? Math.round(_ / 100).toString()
+                    : (_ / 100).toFixed(2);
+            })(_, _.bWholeUnitsOnly),
+          valueFromString: (_) =>
+            (function (_, _, _) {
+              return _ === _
+                ? 1 / 0
+                : "" === _
+                  ? _
+                  : _
+                    ? 100 * parseInt(_)
+                    : Math.round(100 * parseFloat(_));
+            })(_, _, _.bWholeUnitsOnly),
+          checkValidText: (_, _) => !_ || (_ !== _._ && !isNaN(_)),
+          beforeContent: _.bSuffixSymbol ? void 0 : _.strSymbol,
+          afterContent: _.bSuffixSymbol ? _.strSymbol : void 0,
+          ..._,
+        });
+      }
+      const _ = "∞";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { state: _, onStateChange: _ } = _;
+        return (0, _.jsx)(_, {
+          price: _.price,
+          onPriceChange: (_) =>
+            __webpack_require__(
+              {
+                ..._,
+                price: _,
+              },
+              !1,
+            ),
+          onPriceSettled: (_) =>
+            __webpack_require__(
+              {
+                ..._,
+                price: _,
+              },
+              !0,
+            ),
+        });
+      }
+      function _(_) {
+        const { price: _, onPriceChange: _, onPriceSettled: _ } = _,
+          { maxPrice: _, currency: _ } = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = [0, _],
+          _ = (_) => (_) => {
+            const _ = [..._];
+            (_[_] = _._(_, _[0], _[1])),
+              __webpack_require__(_),
+              _ && _(_),
+              _(!0);
+          },
+          {
+            checkMin: _,
+            checkMax: _,
+            props: _,
+          } = (function (_) {
+            const {
+                value: _,
+                onValueChange: _,
+                onValueSettled: _,
+                max: _,
+                min: _,
+                step: _ = 1,
+                ..._
+              } = _,
+              _ = Math.floor(100 * _(_)) / 100,
+              _ = Math.floor(100 * _(_)) / 100,
+              _ = _(_, _),
+              _ = (0, _.useCallback)((_) => __webpack_require__(_(_, _)), [_]),
+              _ = (0, _.useCallback)((_) => _ && _(_(_, _)), [_]);
+            return {
+              checkMax: (_) => Math.abs(_ - _) < 100,
+              checkMin: (_) => Math.abs(_ - _) < 1,
+              props: {
+                value: _,
+                onValueChange: _,
+                onValueSettled: _,
+                max: _,
+                min: _,
+                step: 0.01,
+                ..._,
+              },
+            };
+          })({
+            value: [_[0], _[1]],
+            min: _[0],
+            max: _[1],
+            onValueChange: (_) => {
+              _(!0);
+              const [_, _] = _,
+                _ = [_(_) ? 0 : _, _(_) ? _ : _];
+              __webpack_require__(_);
+            },
+            onValueSettled: _,
+          }),
+          _ = _(_[0]),
+          _ = _(_[1]),
+          _ = _ && _ && !_,
+          _ = _ && !_ ? void 0 : _[0];
+        let _ = _[1];
         return (
-          _ > 0 && _.append("price_min", _.toString()),
-          _ > _ && _ < _.maxPrice && _.append("price_max", _.toString()),
-          _._.Search({
-            search: new URLSearchParams(_),
-          })
+          _ && (_ = _ ? 1 / 0 : void 0),
+          _ <= 0
+            ? null
+            : (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "2",
+                paddingBottom: "2",
+                children: [
+                  (0, _.jsxs)(_._, {
+                    gap: "2",
+                    align: "center",
+                    children: [
+                      (0, _.jsx)(_, {
+                        currency: _,
+                        value: _,
+                        onValueChange: _(0),
+                        placeholder: _._.Localize(
+                          "#AdvancedSearch_MinPricePlaceholder",
+                        ),
+                      }),
+                      (0, _.jsx)(_._, {
+                        size: "4",
+                        weight: "medium",
+                        children: "-",
+                      }),
+                      (0, _.jsx)(_, {
+                        currency: _,
+                        value: _,
+                        onValueChange: _(1),
+                        placeholder: _._.Localize(
+                          "#AdvancedSearch_MaxPricePlaceholder",
+                        ),
+                        defaultValue: _[1],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                    color: _ ? "dull" : void 0,
+                  }),
+                ],
+              })
         );
       }
       function _(_) {
         return (0, _.jsx)(_._, {
           flexGrow: "1",
-          radius: "sm",
-          direction: "column",
-          align: "center",
-          justify: "center",
-          marginTop: "2",
-          className: _.NoFilters,
-          children: (0, _.jsx)(_._, {
-            align: "center",
-            _: "div",
-            marginTop: _,
-            children: _.children,
+          children: (0, _.jsx)(_, {
+            variant: "inset-focus",
+            ..._,
           }),
         });
       }
-      function _(_) {
-        const { appid: _, ..._ } = _,
-          _ = (function (_) {
-            return (0, _._)({
-              queryKey: ["marketfilters", _],
-              queryFn: () => _(_),
-              enabled: !!_,
-            });
-          })(_);
-        if (_.isLoading) return (0, _.jsx)(_, {});
-        if (_.isError || !_.data)
-          return (0, _.jsx)(_, {
-            children: (0, _.jsx)(_._, {
-              size: "4",
-              children: _.Localize("#AdvancedSearch_FacetLoadError"),
-            }),
-          });
-        const _ = (function (_) {
-          return (function (_) {
-            return _._.EUNIVERSE === _._ ? 710 === _ : 730 === _;
-          })(_) && _._.EUNIVERSE === _.wLO
-            ? _
-            : _;
-        })(_);
-        return (0, _.jsx)(_, {
-          appid: _,
-          facets: _.data,
-          ..._,
-        });
+      const _ = 3;
+      function _(_, _) {
+        return _.map(_);
       }
       function _(_) {
-        const { appid: _, facets: _, ..._ } = _,
-          _ = _(_, _);
-        return 0 === _.length
-          ? (0, _.jsx)(_.Fragment, {
-              children: (0, _.jsxs)(_, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    align: "center",
-                    _: "div",
-                    marginTop: _,
-                    size: "7",
-                    weight: "heavy",
-                    children: _.Localize("#AdvancedSearch_NoFacetsSearch"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    align: "center",
-                    _: "div",
-                    marginTop: _,
-                    size: "4",
-                    children: _.Localize("#AdvancedSearch_NoFacets"),
-                  }),
-                ],
-              }),
-            })
-          : (0, _.jsx)(_, {
-              facets: _,
-              ..._,
-            });
-      }
-      async function _(_) {
-        const _ = await fetch(
-          `${_._.COMMUNITY_BASE_URL}market/appfilters/${_}`,
-        );
-        if (!_ || !_._)
-          throw new Error(`Failed to load market filters for app ${_}`);
-        const _ = await _.json();
-        if (!_.success || !_.facets)
-          throw new Error(`Loaded malformed market filters for app ${_}`);
-        return _.facets;
-      }
-      function _(_ = !0) {
-        const { suggestedApps: _ } = (0, _.useContext)(_);
-        return (0, _._)({
-          queryKey: ["marketsuggestedapps"],
-          queryFn: async () => {
-            const _ = await fetch(
-              `${_._.COMMUNITY_BASE_URL}market/suggestedapps`,
-            );
-            if (!_ || !_._)
-              throw new Error("Failed to load suggseted market apps");
-            return await _.json();
-          },
-          retry: !1,
-          enabled: _,
-          initialData: _,
-        });
+        return Math.pow(_, 1 / _);
       }
       function _(_) {
-        const {
-            selectedApp: _,
-            apps: _,
-            onSelectionChange: _,
-            size: _ = "3",
-            clearable: _ = !0,
-          } = _,
-          _ = _({
-            rgOptions: _,
-            selectedValue: _ || null,
-            onSelectionChange: _,
-            filter: (_, _) =>
-              _ && _.name.toLocaleLowerCase().includes(_.toLocaleLowerCase()),
-            filterPlaceholder: _.Localize(
-              "#AdvancedSearch_AppSelect_FilterPlaceholder",
-            ),
-          });
-        return (0, _.jsxs)(_.Root, {
-          state: _,
-          size: _,
-          radius: "sm",
-          marginBottom: "2",
-          clearable: _,
-          children: [
-            (0, _.jsxs)(_.Trigger, {
-              children: [
-                _ &&
-                  (0, _.jsx)(_, {
-                    app: _,
-                    size: _,
-                  }),
-                !_ &&
-                  (0, _.jsx)(_.Placeholder, {
-                    weight: "medium",
-                    contrast: "title",
-                    children: _.Localize(
-                      "#AdvancedSearch_AppSelect_Placeholder",
-                    ),
-                  }),
-              ],
-            }),
-            (0, _.jsx)(_.VirtualizedOptions, {
-              estimateSize: () => 48,
-              items: _.rgFilteredOptions,
-              renderItem: (_, _) =>
-                (0, _.jsx)(
-                  _.VirtualizedOption,
-                  {
-                    value: _,
-                    virtualItem: _,
-                    children: (0, _.jsx)(_, {
-                      app: _,
-                      active: _ === _,
-                      size: _,
-                    }),
-                  },
-                  _.appid,
-                ),
-            }),
-          ],
-        });
+        return Math.round(Math.pow(_, _));
       }
-      function _(_) {
-        const {
-          app: { icon: _, name: _ },
-          active: _,
-          size: _,
-        } = _;
-        return (0, _.jsxs)(_._, {
-          align: "center",
-          gap: "2",
-          children: [
-            _ &&
-              (0, _.jsx)(_, {
-                icon: _,
-                size: _,
-              }),
-            (0, _.jsx)(_._, {
-              color: _ ? "accent-8" : void 0,
-              contrast: _ ? void 0 : "title",
-              children: _,
-            }),
-          ],
-        });
-      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       const _ = {};
-      function _(_) {
-        const { icon: _, size: _ } = _,
-          [_, _] = (0, _.useState)(!!_[_]);
-        (0, _.useEffect)(() => {
-          let _ = !0;
-          return (
-            setTimeout(() => {
-              _ && _(!0);
-            }, 100),
-            () => {
-              _ = !1;
-            }
-          );
-        }, []),
-          _ && (_[_] = !0);
-        const _ = (0, _._)(_),
-          _ = `var(--spacing-${parseInt(_) + 3})`;
-        return _
-          ? (0, _.jsx)("img", {
-              src: _,
-              style: {
-                width: _,
-                height: _,
-                visibility: _ ? void 0 : "hidden",
-              },
-              alt: "",
-            })
-          : (0, _.jsx)(_._, {
-              width: _,
-              height: _,
-              background: "dull-10",
-            });
-      }
-      function _() {
-        return (0, _.jsx)(_._, {
-          justify: "center",
-          align: "center",
-          marginTop: "6",
-          children: (0, _.jsx)(_._, {
-            size: "4",
-          }),
-        });
-      }
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 94519, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 61163, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 59620, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 23394, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 46998, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 58187, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 23145, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 62286, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 52111, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 51397, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 31697, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 26424, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 14275, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 68334, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 44648, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 55914, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 8546, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 39993, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 7949, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 50762, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 10442, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 81892, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 19556, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 18366, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 13783, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 57873, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 79411, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 46812, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 3369, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 47505, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94075, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 24024, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

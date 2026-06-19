@@ -10816,17 +10816,20 @@
             null
           );
         }
-        async Search(_, _) {
+        async Search(_, _, _) {
           let _ = null;
           try {
             const _ = _._.Init(_._);
-            _.Body().set_lookup_type(_._._),
-              _.Body().set_message_type(_),
-              _?.trim().length > 0
-                ? ("%" != _.charAt(0) && (_ = "%" + _),
-                  "%" != _.charAt(_.length - 1) && (_ += "%"),
-                  _.Body().set_title(_.trim()))
-                : _.Body().set_title("%");
+            _.Body().set_message_type(_),
+              void 0 === _
+                ? (_.Body().set_lookup_type(_._._),
+                  _?.trim().length > 0
+                    ? ("%" != _.charAt(0) && (_ = "%" + _),
+                      "%" != _.charAt(_.length - 1) && (_ += "%"),
+                      _.Body().set_title(_.trim()))
+                    : _.Body().set_title("%"))
+                : (_.Body().set_lookup_type(_._._),
+                  _.Body().set_associated_id(_));
             let _ = await _._.FindMarketingMessages(
               this.m_steamInterface.GetServiceTransport(),
               _,
@@ -11079,7 +11082,7 @@
         }
         async InternalLoadDictionary() {
           const [_] = await Promise.all([
-            __webpack_require__._("chunkid").then(_._.bind(_, 72022, 19)),
+            __webpack_require__._("chunkid").then(_._.bind(_, 18723, 19)),
           ]);
           return (this.m_marketingTokens = _), this.m_marketingTokens;
         }
@@ -59043,7 +59046,8 @@
               })
           : null;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)(_());
       function _(_) {
         const [_, _] = (0, _._)("filter_account", 0),
@@ -59345,6 +59349,7 @@
       }
       function _(_) {
         const [_, _] = (0, _.useState)(""),
+          [_, _] = (0, _.useState)(void 0),
           [_, _] = (0, _.useState)(_._._),
           _ = [
             {
@@ -59359,7 +59364,8 @@
           });
         const _ = (0, _._)(),
           [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(!1);
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)("title");
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("h2", {
@@ -59382,16 +59388,35 @@
             }),
             (0, _.jsx)("br", {}),
             (0, _.jsx)(_._, {
-              type: "text",
-              label: "Filter by Title",
-              placeholder: "type here",
+              options: ["title", "associatedid"],
               value: _,
-              onChange: (_) => __webpack_require__(_.currentTarget.value),
+              onValueChange: _,
+              getOptionLabel: (_) =>
+                "title" == _
+                  ? "Search By Title"
+                  : "Search by Associate ID (appid/packageid/bundleid)",
             }),
+            "title" === _
+              ? (0, _.jsx)(_._, {
+                  type: "text",
+                  label: "Filter by Title",
+                  placeholder: "type here",
+                  value: _,
+                  onChange: (_) => __webpack_require__(_.currentTarget.value),
+                })
+              : (0, _.jsx)(_._, {
+                  type: "number",
+                  label: "Search by Associated ID (Appid/PackageID/BundleID",
+                  tooltip:
+                    "We do not search for a partial id, we need the entire ID specified",
+                  value: _,
+                  onChange: (_) =>
+                    _(Number.parseInt(_.currentTarget.value ?? "0")),
+                }),
             (0, _.jsx)(_._, {
               onClick: () => {
                 _(!0),
-                  _(_, _).then((_) => {
+                  _(_, _, "associatedid" == _ ? _ : void 0).then((_) => {
                     _(!1), _(_);
                   });
               },
@@ -67920,9 +67945,16 @@
           }),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)("important" == _),
-          [_, _] = _.useState("important" == _);
+          [_, _] = _.useState("important" == _),
+          [_, _] = _.useState("#spotlight_midweek_deal");
         (0, _.useEffect)(() => {
-          _("important" == _), _("important" == _);
+          _("important" == _),
+            _("important" == _),
+            _(
+              "midweek" == _
+                ? "#spotlight_midweek_deal"
+                : "#spotlight_weekend_deal",
+            );
         }, [_]);
         const [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(!1),
@@ -68022,9 +68054,7 @@
                   "Weekend Deal",
                   _,
                   _,
-                  "midweek" == _
-                    ? "#spotlight_midweek_madness"
-                    : "#spotlight_weekend_deal",
+                  _,
                   "#promo_ends_custom",
                   _
                     ? {
@@ -68261,6 +68291,11 @@
                                     onChange: _,
                                     checked: _,
                                   }),
+                                  _ &&
+                                    (0, _.jsx)(_._, {
+                                      selected: _,
+                                      fnSetSelected: _,
+                                    }),
                                   (0, _.jsx)(_._, {
                                     label: "Create Marketing Message",
                                     tooltip:
@@ -74208,10 +74243,19 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = ["Weekend Deal", "Now Available", "Pre-Purchase", ""];
+      const _ = ["Weekend Deal", "Now Available", "Pre-Purchase", ""],
+        _ = [
+          "#spotlight_weekend_deal",
+          "#spotlight_midweek_deal",
+          "#label_free_weekend",
+          "#msg_publisher_sale",
+          "#spotlight_franchise_sale",
+          "#spotlight_thirdparty_event",
+        ];
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -74320,7 +74364,7 @@
           [_, _] = (0, _.useState)(_.BHasSpotlightIDs(_)),
           [_, _] = (0, _.useState)(
             "midweek" == _
-              ? "#spotlight_midweek_madness"
+              ? "#spotlight_midweek_deal"
               : "#spotlight_weekend_deal",
           ),
           [_, _] = (0, _.useState)("#promo_ends_custom"),
@@ -74424,13 +74468,8 @@
         const { selected: _, fnSetSelected: _ } = _,
           _ = (0, _.useMemo)(
             () =>
-              [
-                "#spotlight_weekend_deal",
-                "#spotlight_midweek_madness",
-                "#spotlight_weeklong_sale",
-                "#spotlight_weeklong_header1",
-              ].map((_) => ({
-                value: _,
+              _.map((_) => ({
+                data: _,
                 label: (0, _._)(_),
               })),
             [],
@@ -74441,10 +74480,9 @@
               children: "Spotlight Title:",
             }),
             (0, _.jsx)(_._, {
-              options: _,
-              value: _.find((_) => _.value === _),
-              onChange: (_) => __webpack_require__(_.value),
-              isSearchable: !0,
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => __webpack_require__(_.data),
             }),
           ],
         });

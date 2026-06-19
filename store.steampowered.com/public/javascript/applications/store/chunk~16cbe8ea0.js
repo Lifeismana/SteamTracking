@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [3337],
+  [53337],
   {
     17009: (e) => {
       e.exports = {
@@ -630,27 +630,26 @@
         J = n(23310);
       const $ = i.lazy(() =>
         Promise.all([
-          n.e(6597),
-          n.e(8970),
-          n.e(7937),
-          n.e(9197),
+          n.e(36597),
+          n.e(56589),
+          n.e(87937),
+          n.e(29197),
           n.e(4796),
-          n.e(6226),
-          n.e(4781),
-          n.e(9008),
-          n.e(7326),
-          n.e(2389),
-          n.e(1215),
-          n.e(7262),
+          n.e(76226),
+          n.e(94781),
+          n.e(29008),
+          n.e(57326),
+          n.e(52389),
+          n.e(51215),
+          n.e(17262),
           n.e(5289),
-          n.e(3089),
+          n.e(63089),
           n.e(1703),
-          n.e(3884),
-          n.e(3524),
-          n.e(4867),
-          n.e(5860),
-          n.e(177),
-          n.e(8396),
+          n.e(33884),
+          n.e(14867),
+          n.e(55860),
+          n.e(10177),
+          n.e(68396),
         ]).then(n.bind(n, 49850)),
       );
       function ee(e) {
@@ -1987,7 +1986,7 @@
       });
       var M = n(64753);
       const F = d.lazy(() =>
-        Promise.all([n.e(8954), n.e(5860), n.e(482), n.e(581)]).then(
+        Promise.all([n.e(28954), n.e(55860), n.e(20482), n.e(40581)]).then(
           n.bind(n, 20482),
         ),
       );

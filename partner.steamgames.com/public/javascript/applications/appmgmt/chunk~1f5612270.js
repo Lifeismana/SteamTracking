@@ -77,7 +77,7 @@
         t = r(78327),
         c = r(14578),
         d = r.n(c),
-        P = r(47184);
+        P = r(7929);
       function u(e) {
         const { closeModal: i, fnOnApply: r, singlePackage: c } = e,
           u = (0, s._A)();

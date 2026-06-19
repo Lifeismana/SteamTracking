@@ -1,5 +1,5 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9672],
+  [89672],
   {
     chunkid: (module) => {
       module.exports = {
@@ -257,18 +257,68 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+          name: "trailerPrefs",
+          options: {
+            path: "/",
+            secure: !0,
+            maxAge: 2592e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        },
+        _ = {
+          flVolume: 0.8,
+          bMuted: !0,
+        };
+      function _(_) {
+        !(function (_) {
+          return _.flVolume === _.flVolume && _.bMuted === _.bMuted;
+        })(_) && 0 != Object.keys(_).length
+          ? (0, _._)(_, JSON.stringify(_))
+          : (0, _._)(_);
+      }
       function _(_) {
         let { children: _ } = _;
-        const [_, _] = (0, _.useState)(0.8),
-          [_, _] = (0, _.useState)(!0);
-        return (0, _.jsx)(_._, {
-          playerVolume: _,
-          setPlayerVolume: _,
-          audioMuted: _,
-          setAudioMuted: _,
-          children: _,
-        });
+        const [_, _] = (0, _.useState)(() =>
+          (function () {
+            try {
+              const _ = (0, _._)(_);
+              if (!_) return _;
+              const _ = JSON.parse(_);
+              return {
+                flVolume:
+                  "number" == typeof _.flVolume ? _.flVolume : _.flVolume,
+                bMuted: "boolean" == typeof _.bMuted ? _.bMuted : _.bMuted,
+              };
+            } catch (_) {
+              return _;
+            }
+          })(),
+        );
+        return (
+          (0, _.useEffect)(() => {
+            _(_);
+          }, [_]),
+          (0, _.jsx)(_._, {
+            playerVolume: _.flVolume,
+            setPlayerVolume: (_) =>
+              _((_) => ({
+                ..._,
+                flVolume: _,
+              })),
+            audioMuted: _.bMuted,
+            setAudioMuted: (_) =>
+              _((_) => ({
+                ..._,
+                bMuted: _,
+              })),
+            children: _,
+          })
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -357,7 +407,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
-          _ = (0, _._)(_, _, !0),
+          _ = (0, _._)(_, _, !0, _),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(_),

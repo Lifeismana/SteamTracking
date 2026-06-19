@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2287],
+  [12287],
   {
     32545: (e) => {
       e.exports = {
@@ -413,7 +413,7 @@
         S = t(62490),
         k = t(84811),
         N = t(22797),
-        G = t(37474);
+        G = t(30207);
       const B = s.Fragment;
       function T(e) {
         const {
@@ -549,7 +549,7 @@
         const { appID: n, classOverride: t, styleOverride: o } = e,
           [r, a] = (0, s.useState)(!1),
           i = (0, K.m)("GameHoverFollowButton"),
-          { elDialogElement: l, fnShowLogonDialog: _ } = (0, J.E)(),
+          { elDialogElement: l, fnShowLogonDialog: _ } = (0, J.lS)(),
           m = (0, Z.Fh)(n),
           { mutateAsync: g } = (0, X.L)(n, !m, void 0);
         return (0, d.jsxs)(V.Z, {
@@ -685,7 +685,7 @@
         pe = t(7193),
         he = t(39199),
         Ie = t(60860),
-        fe = t(76647),
+        fe = t(75263),
         ye = t(40353);
       function De(e) {
         const { eventModel: n, nEventBadgeID: t } = e,

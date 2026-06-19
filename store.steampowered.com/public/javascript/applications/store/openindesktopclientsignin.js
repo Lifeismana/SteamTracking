@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [1349, 8843],
+  [21349, 38843],
   {
     69041: (e) => {
       e.exports = {
@@ -35,6 +35,19 @@
     },
     44041: (e) => {
       e.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
+    },
+    68875: (e) => {
+      e.exports = {
+        Flex: "_3nHL7awgK1Qei1XivGvHMK",
+        Direction: "_3JCkAyd9cnB90tRcDLPp4W",
+        Justify: "_12ampOcrpRamy1y301kEaK",
+        Align: "_1SxQuUnaM-MXeF5UfssWve",
+        Gap: "ja5o2GZTopxfGJArsZgFh",
+        GapX: "_3KiTPfFvdkPH6ixij56nVM",
+        GapY: "_38cfDT7owcq-7PHlx-Bx2j",
+        Wrap: "dB7ipW28YN-_GytLR4EuE",
+        Inline: "LOeaKjPDMbdcAB54IFgyX",
+      };
     },
     65274: (e) => {
       e.exports = {
@@ -85,7 +98,7 @@
     },
     53965: (e, n, t) => {
       "use strict";
-      t.d(n, { $: () => g, v: () => x });
+      t.d(n, { $: () => x, v: () => C });
       var i = t(7850),
         s = t(64238),
         o = t.n(s),
@@ -93,10 +106,10 @@
         a = t(75659),
         c = t(11526),
         l = t(11820),
-        d = t(73406),
-        p = t(90534),
-        h = t(83392);
-      function u(e) {
+        p = t(73406),
+        d = t(90534),
+        u = t(83392);
+      function h(e) {
         const {
           size: n = "3",
           loading: t = !0,
@@ -106,18 +119,18 @@
           ...a
         } = e;
         return s || !t
-          ? (0, i.jsxs)(p.az, {
+          ? (0, i.jsxs)(d.az, {
               position: "relative",
               ...a,
               width: "fit-content",
               children: [
                 (0, i.jsx)("div", {
                   "data-visibility": !t,
-                  className: d.ChildContainer,
+                  className: p.ChildContainer,
                   children: s,
                 }),
                 t &&
-                  (0, i.jsx)(h.s, {
+                  (0, i.jsx)(u.s, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
@@ -132,21 +145,21 @@
         const { className: n, color: t, ...s } = (0, c.mz)(e, _);
         return (0, i.jsx)("div", {
           "data-accent-color": t,
-          className: o()(n, d.Spinner),
+          className: o()(n, p.Spinner),
           ...s,
         });
       }
       const _ = [
         ...a.L,
-        { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
-        { prop: "variant", className: (e) => d[`Variant-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => p[`Size-${e}`] },
+        { prop: "variant", className: (e) => p[`Variant-${e}`] },
       ];
       var f = t(45699),
         b = t(8527);
-      function S(e) {
+      function g(e) {
         e.preventDefault();
       }
-      const C = [
+      const S = [
           ...a.L,
           { prop: "size", responsive: !0, className: (e) => r[`Size-${e}`] },
           { prop: "variant", className: (e) => r[`Variant-${e}`] },
@@ -164,81 +177,81 @@
             responsive: !0,
           },
         ],
-        g = function (e) {
+        x = function (e) {
           const {
               variant: n = "default",
               size: t = "2",
               minWidth: s = "fit-content",
               color: a,
               loading: l,
-              children: d,
-              onClick: p,
-              icon: h,
+              children: p,
+              onClick: d,
+              icon: u,
               focusable: m,
               navProps: _,
-              ...S
+              ...g
             } = e,
-            g = l
-              ? (0, i.jsx)(u, {
+            x = l
+              ? (0, i.jsx)(h, {
                   size: t,
                   color: a,
                   variant: "bright",
-                  children: d,
+                  children: p,
                 })
-              : d,
-            x = l ? void 0 : p,
-            v = m ?? _?.focusable ?? !!x,
+              : p,
+            C = l ? void 0 : d,
+            v = m ?? _?.focusable ?? !!C,
             w = {
               type: "button",
               ...(0, c.mz)(
                 {
-                  ...S,
+                  ...g,
                   variant: n,
                   size: t,
                   minWidth: s,
                   color: a,
-                  className: o()(r.Button, h && r.Icon),
-                  onClick: x,
+                  className: o()(r.Button, u && r.Icon),
+                  onClick: C,
                 },
-                C,
+                S,
               ),
-              children: g,
+              children: x,
             };
           return b.TS.IN_GAMEPADUI && (v || _)
             ? (0, i.jsx)(f.fu, { ...w, ...(_ || {}), focusable: v })
             : (0, i.jsx)("button", { ...w });
         },
-        x = function (e) {
+        C = function (e) {
           const {
               variant: n = "default",
               size: t = "2",
               minWidth: s = "fit-content",
               disabled: a,
-              icon: d,
-              focusable: p,
-              navProps: h,
-              ...u
+              icon: p,
+              focusable: d,
+              navProps: u,
+              ...h
             } = e,
-            m = a ? S : void 0,
+            m = a ? g : void 0,
             _ = (0, c.mz)(
               {
                 onClick: m,
-                ...u,
+                ...h,
                 variant: n,
                 size: t,
                 minWidth: s,
-                className: o()(r.Button, d && r.Icon, (0, l.T)()),
+                className: o()(r.Button, p && r.Icon, (0, l.T)()),
               },
-              C,
+              S,
             );
-          return b.TS.IN_GAMEPADUI && (p || h)
-            ? (0, i.jsx)(f.Ii, { ..._, ...(h || {}), focusable: p })
+          return b.TS.IN_GAMEPADUI && (d || u)
+            ? (0, i.jsx)(f.Ii, { ..._, ...(u || {}), focusable: d })
             : (0, i.jsx)("a", { ..._ });
         };
     },
     90534: (e, n, t) => {
       "use strict";
-      t.d(n, { az: () => h });
+      t.d(n, { az: () => u });
       var i = t(7850),
         s = t(44041),
         o = t(39479),
@@ -246,25 +259,102 @@
         a = t.n(r),
         c = t(11526),
         l = t(75659),
-        d = t(8527),
-        p = t(11820);
-      function h(e) {
-        const { as: n = "div", focusable: t, navProps: r, ref: l, ...h } = e,
+        p = t(8527),
+        d = t(11820);
+      function u(e) {
+        const { as: n = "div", focusable: t, navProps: r, ref: l, ...u } = e,
           m = (0, c.mz)(
-            { ...h, className: a()(s.Box, (0, p.T)(), e.className) },
-            u,
+            { ...u, className: a()(s.Box, (0, d.T)(), e.className) },
+            h,
           ),
-          _ = t ?? r?.focusable ?? !!h.onClick,
+          _ = t ?? r?.focusable ?? !!u.onClick,
           f = (0, i.jsx)(n, { ref: l, ...m });
-        return d.TS.IN_GAMEPADUI && (_ || r)
+        return p.TS.IN_GAMEPADUI && (_ || r)
           ? (0, i.jsx)(o.J, { ...(r || {}), focusable: _, children: f })
           : f;
       }
-      const u = l.h;
+      const h = l.h;
+    },
+    83392: (e, n, t) => {
+      "use strict";
+      t.d(n, { s: () => u });
+      var i = t(7850),
+        s = t(39479),
+        o = t(64238),
+        r = t.n(o),
+        a = t(11526),
+        c = t(55348),
+        l = t(75659),
+        p = t(68875),
+        d = t(8527);
+      function u(e) {
+        const { as: n = "div", focusable: t, navProps: o, ref: l, ...u } = e,
+          m = (0, a.mz)({ ...u, className: r()(e.className, p.Flex) }, h),
+          _ = t ?? o?.focusable ?? !!u.onClick,
+          f = (0, i.jsx)(n, { ref: l, ...m }),
+          b = (0, c.n)(u.direction ?? "row");
+        return d.TS.IN_GAMEPADUI
+          ? (0, i.jsx)(s.J, {
+              ...(o || {}),
+              focusable: _,
+              "flow-children": b,
+              children: f,
+            })
+          : f;
+      }
+      const h = [
+        ...l.h,
+        {
+          prop: "direction",
+          responsive: !0,
+          className: p.Direction,
+          cssProperty: "--direction",
+        },
+        {
+          prop: "justify",
+          responsive: !0,
+          className: p.Justify,
+          cssProperty: (e) => ["--justify", m(e)],
+        },
+        {
+          prop: "align",
+          responsive: !0,
+          className: p.Align,
+          cssProperty: "--align",
+        },
+        {
+          prop: "gap",
+          responsive: !0,
+          className: p.Gap,
+          cssProperty: (e) => ["--gap", `var(--spacing-${e})`],
+        },
+        {
+          prop: "gapX",
+          responsive: !0,
+          className: p.GapX,
+          cssProperty: (e) => ["--gap-x", `var(--spacing-${e})`],
+        },
+        {
+          prop: "gapY",
+          responsive: !0,
+          className: p.GapY,
+          cssProperty: (e) => ["--gap-y", `var(--spacing-${e})`],
+        },
+        {
+          prop: "wrap",
+          responsive: !0,
+          className: p.Wrap,
+          cssProperty: "--wrap",
+        },
+        { prop: "inline", responsive: !0, className: p.Inline },
+      ];
+      function m(e) {
+        return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
+      }
     },
     20187: (e, n, t) => {
       "use strict";
-      t.d(n, { Ae: () => h, EY: () => d, U6: () => p });
+      t.d(n, { Ae: () => u, EY: () => p, U6: () => d });
       var i = t(7850),
         s = t(55348),
         o = t(11526),
@@ -272,15 +362,15 @@
         a = t(64238),
         c = t.n(a),
         l = t(65274);
-      function d(e) {
+      function p(e) {
         const { as: n = "span", ref: t, className: s, ...r } = e,
           a = n;
         return (0, i.jsx)(a, {
           ref: t,
-          ...(0, o.mz)({ ...r, className: c()(l.Text, s) }, h),
+          ...(0, o.mz)({ ...r, className: c()(l.Text, s) }, u),
         });
       }
-      const p = [
+      const d = [
           {
             prop: "weight",
             responsive: !0,
@@ -322,8 +412,8 @@
             cssProperty: "--white-space",
           },
         ],
-        h = [
-          ...p,
+        u = [
+          ...d,
           ...r.L,
           {
             prop: "size",
@@ -343,13 +433,13 @@
         c = t(45699);
       function l(e) {
         const { underline: n = "auto", focusable: t, navProps: o, ...l } = e,
-          p = t ?? o?.focusable ?? !!l.href,
-          h = (0, r.mz)({ ...l, underline: n, className: s.TextLink }, d);
-        return a.TS.IN_GAMEPADUI && (p || o)
-          ? (0, i.jsx)(c.Ii, { ...h, ...(o || {}), focusable: p })
-          : (0, i.jsx)("a", { ...h });
+          d = t ?? o?.focusable ?? !!l.href,
+          u = (0, r.mz)({ ...l, underline: n, className: s.TextLink }, p);
+        return a.TS.IN_GAMEPADUI && (d || o)
+          ? (0, i.jsx)(c.Ii, { ...u, ...(o || {}), focusable: d })
+          : (0, i.jsx)("a", { ...u });
       }
-      const d = [
+      const p = [
         ...o.Ae,
         { prop: "underline", className: (e) => s[`Underline-${e}`] },
       ];
@@ -364,77 +454,78 @@
     },
     84547: (e, n, t) => {
       "use strict";
-      t.d(n, { E: () => p, l: () => h });
+      t.d(n, { lS: () => d, lh: () => u });
       var i = t(7850),
         s = t(64753),
         o = t(8527),
-        r = t(55672),
+        r = t(78686),
         a = t(78395),
         c = t(21869),
-        l = t(62151);
-      function d(e) {
-        const { closeModal: n } = e;
+        l = t(67936);
+      function p(e) {
+        const { closeModal: n, strDescOverride: t } = e;
         return (0, i.jsx)(a.o0, {
           strTitle: l.F5.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: l.F5.Localize("#LoginRedirect_Dialog_Description"),
+          strDescription:
+            t || l.F5.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: n,
           strOKButtonText: r.Z.Localize("#Button_OK"),
           onOK: () => {
-            h(), n();
+            u(), n();
           },
         });
       }
-      function p() {
-        const [e, n, t] = (0, s.uD)();
+      function d(e) {
+        const [n, t, o] = (0, s.uD)();
         return {
           elDialogElement: (0, i.jsx)(c.E, {
-            active: e,
-            children: (0, i.jsx)(d, { closeModal: t }),
+            active: n,
+            children: (0, i.jsx)(p, { closeModal: o, strDescOverride: e }),
           }),
-          fnShowLogonDialog: n,
+          fnShowLogonDialog: t,
         };
       }
-      function h() {
+      function u() {
         const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
       }
     },
-    62151: (e, n, t) => {
+    67936: (e, n, t) => {
       "use strict";
       t.d(n, { F5: () => o });
       var i = t(13843);
       const s = {};
-      (s.arabic = () => t.e(3695).then(t.t.bind(t, 93695, 19))),
-        (s.brazilian = () => t.e(1091).then(t.t.bind(t, 41091, 19))),
-        (s.bulgarian = () => t.e(9180).then(t.t.bind(t, 89180, 19))),
-        (s.czech = () => t.e(1514).then(t.t.bind(t, 21514, 19))),
-        (s.danish = () => t.e(3217).then(t.t.bind(t, 45598, 19))),
-        (s.dutch = () => t.e(5971).then(t.t.bind(t, 55971, 19))),
-        (s.english = () => t.e(7217).then(t.t.bind(t, 67217, 19))),
-        (s.finnish = () => t.e(7686).then(t.t.bind(t, 27686, 19))),
-        (s.french = () => t.e(7623).then(t.t.bind(t, 7623, 19))),
-        (s.german = () => t.e(7757).then(t.t.bind(t, 97757, 19))),
-        (s.greek = () => t.e(6345).then(t.t.bind(t, 46345, 19))),
-        (s.hungarian = () => t.e(5600).then(t.t.bind(t, 5600, 19))),
-        (s.indonesian = () => t.e(1163).then(t.t.bind(t, 51163, 19))),
-        (s.italian = () => t.e(1913).then(t.t.bind(t, 71913, 19))),
-        (s.japanese = () => t.e(9872).then(t.t.bind(t, 79872, 19))),
-        (s.koreana = () => t.e(2322).then(t.t.bind(t, 12322, 19))),
-        (s.latam = () => t.e(4954).then(t.t.bind(t, 94954, 19))),
-        (s.malay = () => t.e(4753).then(t.t.bind(t, 87134, 19))),
-        (s.norwegian = () => t.e(8341).then(t.t.bind(t, 48341, 19))),
-        (s.polish = () => t.e(7890).then(t.t.bind(t, 97890, 19))),
-        (s.portuguese = () => t.e(1810).then(t.t.bind(t, 21810, 19))),
-        (s.romanian = () => t.e(5500).then(t.t.bind(t, 75500, 19))),
-        (s.russian = () => t.e(2268).then(t.t.bind(t, 72268, 19))),
-        (s.schinese = () => t.e(5951).then(t.t.bind(t, 85951, 19))),
-        (s.spanish = () => t.e(8265).then(t.t.bind(t, 28265, 19))),
-        (s.swedish = () => t.e(2248).then(t.t.bind(t, 82248, 19))),
-        (s.tchinese = () => t.e(2020).then(t.t.bind(t, 62020, 19))),
-        (s.thai = () => t.e(7841).then(t.t.bind(t, 67841, 19))),
-        (s.turkish = () => t.e(4921).then(t.t.bind(t, 94921, 19))),
-        (s.ukrainian = () => t.e(1667).then(t.t.bind(t, 11667, 19))),
-        (s.vietnamese = () => t.e(4528).then(t.t.bind(t, 74528, 19)));
+      (s.arabic = () => t.e(22940).then(t.t.bind(t, 22940, 19))),
+        (s.brazilian = () => t.e(59990).then(t.t.bind(t, 59990, 19))),
+        (s.bulgarian = () => t.e(38573).then(t.t.bind(t, 38573, 19))),
+        (s.czech = () => t.e(40975).then(t.t.bind(t, 40975, 19))),
+        (s.danish = () => t.e(38721).then(t.t.bind(t, 38721, 19))),
+        (s.dutch = () => t.e(354).then(t.t.bind(t, 354, 19))),
+        (s.english = () => t.e(49768).then(t.t.bind(t, 49768, 19))),
+        (s.finnish = () => t.e(12931).then(t.t.bind(t, 12931, 19))),
+        (s.french = () => t.e(6064).then(t.t.bind(t, 6064, 19))),
+        (s.german = () => t.e(62942).then(t.t.bind(t, 62942, 19))),
+        (s.greek = () => t.e(13924).then(t.t.bind(t, 13924, 19))),
+        (s.hungarian = () => t.e(99441).then(t.t.bind(t, 99441, 19))),
+        (s.indonesian = () => t.e(42584).then(t.t.bind(t, 42584, 19))),
+        (s.italian = () => t.e(97688).then(t.t.bind(t, 97688, 19))),
+        (s.japanese = () => t.e(5407).then(t.t.bind(t, 5407, 19))),
+        (s.koreana = () => t.e(65815).then(t.t.bind(t, 65815, 19))),
+        (s.latam = () => t.e(44287).then(t.t.bind(t, 44287, 19))),
+        (s.malay = () => t.e(58160).then(t.t.bind(t, 35779, 19))),
+        (s.norwegian = () => t.e(33648).then(t.t.bind(t, 33648, 19))),
+        (s.polish = () => t.e(22649).then(t.t.bind(t, 22649, 19))),
+        (s.portuguese = () => t.e(23629).then(t.t.bind(t, 23629, 19))),
+        (s.romanian = () => t.e(81555).then(t.t.bind(t, 81555, 19))),
+        (s.russian = () => t.e(11809).then(t.t.bind(t, 11809, 19))),
+        (s.schinese = () => t.e(79004).then(t.t.bind(t, 79004, 19))),
+        (s.spanish = () => t.e(97760).then(t.t.bind(t, 97760, 19))),
+        (s.swedish = () => t.e(86881).then(t.t.bind(t, 86881, 19))),
+        (s.tchinese = () => t.e(28183).then(t.t.bind(t, 28183, 19))),
+        (s.thai = () => t.e(10950).then(t.t.bind(t, 10950, 19))),
+        (s.turkish = () => t.e(22568).then(t.t.bind(t, 22568, 19))),
+        (s.ukrainian = () => t.e(17038).then(t.t.bind(t, 17038, 19))),
+        (s.vietnamese = () => t.e(62327).then(t.t.bind(t, 62327, 19)));
       const o = (0, i.l)(async function (e) {
         if (s[e]) return s[e]();
       });
@@ -651,13 +742,13 @@
       "use strict";
       t.d(n, {
         mt: () => l,
-        o0: () => p.o0,
-        eV: () => h.eV,
-        KG: () => p.KG,
-        Ee: () => p.Ee,
+        o0: () => d.o0,
+        eV: () => u.eV,
+        KG: () => d.KG,
+        Ee: () => d.Ee,
         x_: () => a.x_,
-        of: () => d,
-        pY: () => p.pY,
+        of: () => p,
+        pY: () => d.pY,
         EN: () => r.E,
       });
       var i = t(7850),
@@ -680,12 +771,12 @@
             onDismiss: t,
             className: s,
             modalClassName: l,
-            children: d,
-            ...p
+            children: p,
+            ...d
           } = e,
-          { headerId: h, context: u } = c({ labelledBy: e["aria-labelledby"] });
+          { headerId: u, context: h } = c({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(o.t6.Provider, {
-          value: u,
+          value: h,
           children: (0, i.jsx)(r.E, {
             active: n,
             children: (0, i.jsx)(a.x_, {
@@ -693,16 +784,16 @@
               className: l,
               children: (0, i.jsx)(o.UC, {
                 role: "dialog",
-                "aria-labelledby": h,
+                "aria-labelledby": u,
                 className: s,
-                ...p,
-                children: d,
+                ...d,
+                children: p,
               }),
             }),
           }),
         });
       }
-      function d(e) {
+      function p(e) {
         const { className: n, children: t } = e;
         return (0, i.jsx)(r.E, {
           active: !0,
@@ -710,13 +801,13 @@
         });
       }
       t(81194);
-      var p = t(78395),
-        h = t(10411);
+      var d = t(78395),
+        u = t(10411);
       t(76222);
     },
     37049: (e, n, t) => {
       "use strict";
-      t.d(n, { w: () => S });
+      t.d(n, { w: () => g });
       var i = t(7850),
         s = t(90626),
         o = t(72739),
@@ -724,10 +815,10 @@
         a = t(60155),
         c = t(25118),
         l = t(84933),
-        d = t(52745),
-        p = t(13871),
-        h = t(21869),
-        u = t(78327),
+        p = t(52745),
+        d = t(13871),
+        u = t(21869),
+        h = t(78327),
         m = t(66703),
         _ = t(52038),
         f = t(28460);
@@ -764,10 +855,10 @@
               })
         );
       }
-      const S = (e) =>
+      const g = (e) =>
         (function (e) {
-          const n = (0, p.R7)().ownerWindow,
-            t = (0, u.Qn)(),
+          const n = (0, d.R7)().ownerWindow,
+            t = (0, h.Qn)(),
             [o, r] = s.useState(() =>
               t ||
               (!0 === e.onlyPopoutIfNeeded &&
@@ -778,39 +869,39 @@
                 : "popout",
             );
           return "inline" === o
-            ? (0, i.jsx)(h.E, { active: !0, children: e.children })
+            ? (0, i.jsx)(u.E, { active: !0, children: e.children })
             : "popout" === o
-              ? (0, i.jsx)(C, { ...e })
+              ? (0, i.jsx)(S, { ...e })
               : null;
         })({ modal: !0, ...e });
-      function C(e) {
+      function S(e) {
         const {
             strName: n,
             strTitle: t,
-            popupWidth: h,
-            popupHeight: u,
+            popupWidth: u,
+            popupHeight: h,
             browserType: m,
             onDismiss: _,
             refPopup: f,
-            children: S,
-            titleBarClassName: C,
-            saveDimensionsKey: x,
+            children: g,
+            titleBarClassName: S,
+            saveDimensionsKey: C,
           } = e,
-          v = (0, p.R7)(),
+          v = (0, d.R7)(),
           w = v?.ownerWindow,
-          I = (0, d.yk)(),
-          z = { ...(0, r.h3)(x), onClose: _ };
+          I = (0, p.yk)(),
+          N = { ...(0, r.h3)(C), onClose: _ };
         let j = 0;
-        e.resizable && (j |= p.Wf.Resizable),
+        e.resizable && (j |= d.Wf.Resizable),
           (e.minWidth || e.minHeight) &&
-            (j |= p.Wf.ApplyBrowserScaleToDimensions),
-          e.fullscreen && (j |= p.Wf.FullScreen);
-        const O = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
-          { popup: N, element: W } = (0, r.OJ)(
-            O,
+            (j |= d.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (j |= d.Wf.FullScreen);
+        const y = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
+          { popup: z, element: O } = (0, r.OJ)(
+            y,
             {
               title: t,
-              dimensions: { width: h, height: u },
+              dimensions: { width: u, height: h },
               html_class: "client_chat_frame fullheight ModalDialogPopup",
               body_class: "fullheight ModalDialogBody",
               popup_class: "fullheight",
@@ -822,62 +913,62 @@
               eCreationFlags: j,
               target_browser: I?.GetBrowserInfo(),
             },
-            z,
+            N,
           );
         if (
           (s.useEffect(
-            () => ((0, l.cZ)(f, N), () => (0, l.cZ)(f, void 0)),
-            [f, N],
+            () => ((0, l.cZ)(f, z), () => (0, l.cZ)(f, void 0)),
+            [f, z],
           ),
           s.useEffect(() => {
-            N && (N.document.title = t ?? n);
-          }, [N, t, n]),
-          !W)
+            z && (z.document.title = t ?? n);
+          }, [z, t, n]),
+          !O)
         )
           return null;
-        const R = e.modal ?? e.onlyPopoutIfNeeded,
-          k = !e.resizable;
+        const W = e.modal ?? e.onlyPopoutIfNeeded,
+          R = !e.resizable;
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            R && (0, i.jsx)(g, { popup: N }),
+            W && (0, i.jsx)(x, { popup: z }),
             o.createPortal(
-              (0, i.jsxs)(p.kc, {
-                ownerWindow: N,
+              (0, i.jsxs)(d.kc, {
+                ownerWindow: z,
                 children: [
                   (0, i.jsxs)("div", {
                     className: "PopupFullWindow",
                     onContextMenu: a.aE,
                     children: [
                       (0, i.jsx)(c.c, {
-                        className: C,
-                        hideMin: k,
-                        hideMax: k,
-                        popup: N,
+                        className: S,
+                        hideMin: R,
+                        hideMax: R,
+                        popup: z,
                         hideActions: !_,
                       }),
-                      (0, i.jsx)(d.EO, {
+                      (0, i.jsx)(p.EO, {
                         bCenterPopupsOnWindow: I?.BCenterPopupsOnWindow(),
                         browserInfo: I?.GetBrowserInfo(),
-                        children: S,
+                        children: g,
                       }),
                     ],
                   }),
-                  e.resizable && (0, i.jsx)(b, { popup: N }),
+                  e.resizable && (0, i.jsx)(b, { popup: z }),
                 ],
               }),
-              W,
+              O,
             ),
           ],
         });
       }
-      function g(e) {
+      function x(e) {
         const { popup: n } = e,
           t = s.useCallback(() => {
             n?.SteamClient.Window.BringToFront();
           }, [n]);
         return (
           s.useEffect(t, [t]),
-          (0, i.jsx)(h.E, {
+          (0, i.jsx)(u.E, {
             active: !0,
             children: (0, i.jsx)("div", {
               style: {
@@ -897,7 +988,7 @@
       "use strict";
       t.r(n),
         t.d(n, {
-          OpenInDesktopClient: () => u,
+          OpenInDesktopClient: () => h,
           default: () => _,
           useOpenWebInSteamClient: () => m,
         });
@@ -908,10 +999,10 @@
         a = t(84811),
         c = t(62381),
         l = t(97824),
-        d = t(78327),
-        p = t(2627),
-        h = t(61859);
-      const u = (0, a.Nr)(function (e) {
+        p = t(78327),
+        d = t(2627),
+        u = t(61859);
+      const h = (0, a.Nr)(function (e) {
         const { fnOpenInSteamClient: n } = m();
         return (0, i.jsx)("div", {
           className: l.OpenInBannerContainer,
@@ -923,7 +1014,7 @@
                 children: (0, i.jsx)("div", {
                   onClick: n,
                   className: l.BannerButton,
-                  children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  children: (0, u.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
               }),
               (0, i.jsx)("div", {
@@ -932,12 +1023,12 @@
                   className: l.BannerTitle,
                   children: [
                     (0, i.jsx)("b", {
-                      children: (0, h.we)(
+                      children: (0, u.we)(
                         "#OpenInDesktopAppBanner_NotSignedIn",
                       ),
                     }),
                     (0, i.jsx)("br", {}),
-                    (0, h.we)("#OpenInDesktopAppBanner_Body"),
+                    (0, u.we)("#OpenInDesktopAppBanner_Body"),
                   ],
                 }),
               }),
@@ -956,8 +1047,8 @@
             });
         }, []);
         const t = o.useCallback(() => {
-          let n = `${(0, d.yl)()}//openurl/`;
-          const t = (0, p.VY)("browserid");
+          let n = `${(0, p.yl)()}//openurl/`;
+          const t = (0, d.VY)("browserid");
           if (t) {
             const e = new URL(window.location.href),
               i = new URLSearchParams(e.search);
@@ -968,7 +1059,7 @@
         }, [e]);
         return { eClientConnectedState: e, fnOpenInSteamClient: t };
       }
-      const _ = u;
+      const _ = h;
     },
     26240: (e, n, t) => {
       "use strict";
@@ -979,41 +1070,41 @@
         r = t(20187),
         a = t(28491),
         c = t(37085),
-        l = t(62151),
-        d = t(84547),
-        p = t(55672),
-        h = t(84811),
-        u = t(74568),
+        l = t(67936),
+        p = t(84547),
+        d = t(78686),
+        u = t(84811),
+        h = t(74568),
         m = t(71009),
         _ = t(32754),
         f = t(61859),
         b = t(84933),
-        S = t(30470),
-        C = t(11131),
-        g = t.n(C),
-        x = t(90626),
+        g = t(30470),
+        S = t(11131),
+        x = t.n(S),
+        C = t(90626),
         v = t(92724);
-      const w = (0, h.Nr)(function (e) {
+      const w = (0, u.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
             m.useOpenWebInSteamClient)(),
-            h = t == c.R,
-            [C, w, I] = (0, b.uD)();
+            u = t == c.R,
+            [S, w, I] = (0, b.uD)();
           return (
-            (0, x.use)((0, v.u)()),
+            (0, C.use)((0, v.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(_.Gq, {
-                  toolTipContent: p.Z.Localize("#AddToWishlist_ttip"),
+                  toolTipContent: d.Z.Localize("#AddToWishlist_ttip"),
                   children: (0, i.jsx)(s.$, {
                     onClick: w,
                     children: (0, f.we)("#AddToYourWishlist"),
                   }),
                 }),
-                (0, i.jsx)(u.EN, {
-                  active: C,
-                  children: (0, i.jsxs)(u.o0, {
+                (0, i.jsx)(h.EN, {
+                  active: S,
+                  children: (0, i.jsxs)(h.o0, {
                     strTitle: (0, f.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                    className: g().WishlistModalOverride,
+                    className: x().WishlistModalOverride,
                     strDescription: l.F5.Localize("#Wishlist_NotSignedIn"),
                     closeModal: I,
                     bAlertDialog: !0,
@@ -1032,18 +1123,18 @@
                           }),
                           (0, i.jsx)(s.$, {
                             color: "dull",
-                            onClick: d.l,
-                            children: p.Z.Localize("#Login_SignIn"),
+                            onClick: p.lh,
+                            children: d.Z.Localize("#Login_SignIn"),
                           }),
                         ],
                       }),
-                      !h &&
+                      !u &&
                         (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(r.EY, {
                             children: (0, f.oW)(
                               "#GotSteam_NeedSteam",
                               (0, i.jsx)(a.Y, {
-                                href: `${S.TS.STORE_BASE_URL}about`,
+                                href: `${g.TS.STORE_BASE_URL}about`,
                               }),
                             ),
                           }),

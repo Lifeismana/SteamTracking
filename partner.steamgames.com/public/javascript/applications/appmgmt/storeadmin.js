@@ -17989,7 +17989,7 @@
         b = s(52038),
         f = s(61859),
         A = s(78327),
-        S = s(54459);
+        S = s(69620);
       function C(e) {
         const { appid: t, className: s, bTextMode: a } = e,
           i = (0, u.$5)(t),
@@ -18017,7 +18017,7 @@
           { bIsOwned: k } = (0, o.ZJ)(y),
           P = (0, l.bB)(r),
           { mutateAsync: I } = (0, c.s)(r, !P, (0, p.L3)(a)),
-          { elDialogElement: D, fnShowLogonDialog: T } = (0, S.E)();
+          { elDialogElement: D, fnShowLogonDialog: T } = (0, S.lS)();
         if (k || (!C && m))
           return m ? (0, n.jsx)(w, { possibleDemoAppID: r }) : null;
         let N = null;

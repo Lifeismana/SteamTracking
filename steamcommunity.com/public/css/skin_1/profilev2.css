@@ -503,9 +503,12 @@ body.Steam3000Theme .profile_comment_area {
 /* End Steam 3000 custom overrides */
 
 div.profile_page {
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
 	min-width: 950px;
 	padding-bottom: 200px;
+	position: relative;
 }
 
 body.profile_page,
@@ -588,14 +591,16 @@ body.profile_page.flat_page #footer_spacer {
 	}
 }
 
-
+body.profile_page .responsive_page_template_content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
 
 .profile_header_bg {
 	position: relative;
-	max-width: 1018px;
 	min-height: 224px;
 	padding-bottom: 0px;
-	margin: 0 auto;
 
 	background-repeat: no-repeat;
 	background-position: center bottom;
@@ -967,7 +972,6 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .profile_content {
-	position: relative;
 	background:
     radial-gradient(
       farthest-side at top right,
@@ -991,13 +995,14 @@ body.profile_page.flat_page #footer_spacer {
 	);
 	background-color: var(--gradient-background);
 	background-repeat: no-repeat;
-	padding: 12px 12px 64px 12px;
-	width: 952px;
-	margin: 0 auto;
-
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
 	font-size: 13px;
-
-	min-height: calc( 100vh - 511px );
+	padding: 12px 12px 64px 12px;
+	position: relative;
+	margin: 0 auto;
+	width: 952px;
 }
 
 .private_profile .profile_content {

@@ -5,7 +5,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [9150],
   {
-    67361: (e, n, t) => {
+    39832: (e, n, t) => {
       t.d(n, {
         TW: () => u,
         KC: () => d,
@@ -19,7 +19,7 @@
         (r.brazilian = () => t.e(8906).then(t.t.bind(t, 58906, 19))),
         (r.bulgarian = () => t.e(3473).then(t.t.bind(t, 53473, 19))),
         (r.czech = () => t.e(3899).then(t.t.bind(t, 83899, 19))),
-        (r.danish = () => t.e(4925).then(t.t.bind(t, 84925, 19))),
+        (r.danish = () => t.e(9687).then(t.t.bind(t, 84925, 19))),
         (r.dutch = () => t.e(9902).then(t.t.bind(t, 69902, 19))),
         (r.english = () => t.e(716).then(t.t.bind(t, 80716, 19))),
         (r.finnish = () => t.e(1663).then(t.t.bind(t, 81663, 19))),

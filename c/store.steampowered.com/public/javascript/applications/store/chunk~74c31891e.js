@@ -1,5 +1,5 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2287],
+  [12287],
   {
     chunkid: (module) => {
       module.exports = {

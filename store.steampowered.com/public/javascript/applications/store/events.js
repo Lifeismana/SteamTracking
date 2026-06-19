@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [4268],
+  [74268],
   {
     63292: (e) => {
       e.exports = {
@@ -2693,7 +2693,7 @@
       function Ft(e) {
         const { eventModel: t, calendarEvent: n } = e,
           a = (0, st.eT)(t.clanSteamID.GetAccountID()),
-          { elDialogElement: r, fnShowLogonDialog: o } = (0, Dt.E)(),
+          { elDialogElement: r, fnShowLogonDialog: o } = (0, Dt.lS)(),
           i = u.useCallback(async () => {
             R.iA.logged_in
               ? (await xe.Fm.Get().UpdateFollowOrIgnoreCurator(

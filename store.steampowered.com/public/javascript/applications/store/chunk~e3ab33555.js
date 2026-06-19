@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [3318],
+  [53318],
   {
     2108: (e) => {
       e.exports = { BreadContainer: "YaL4BAoqywnKnb5jbU_il" };
@@ -1095,27 +1095,26 @@
         Ie = a(23310);
       const Ne = _.lazy(() =>
           Promise.all([
-            a.e(6597),
-            a.e(8970),
-            a.e(7937),
-            a.e(9197),
+            a.e(36597),
+            a.e(56589),
+            a.e(87937),
+            a.e(29197),
             a.e(4796),
-            a.e(6226),
-            a.e(4781),
-            a.e(9008),
-            a.e(7326),
-            a.e(2389),
-            a.e(1215),
-            a.e(7262),
+            a.e(76226),
+            a.e(94781),
+            a.e(29008),
+            a.e(57326),
+            a.e(52389),
+            a.e(51215),
+            a.e(17262),
             a.e(5289),
-            a.e(3089),
+            a.e(63089),
             a.e(1703),
-            a.e(3884),
-            a.e(3524),
-            a.e(4867),
-            a.e(5860),
-            a.e(177),
-            a.e(8396),
+            a.e(33884),
+            a.e(14867),
+            a.e(55860),
+            a.e(10177),
+            a.e(68396),
           ]).then(a.bind(a, 49850)),
         ),
         Be = (0, d.PA)((e) => {
