@@ -185,6 +185,7 @@ $ORIGIN
 -- Summary --\n
 -chromeos
 -debugbreak
+-deckard
 -holo
 -hometest
 -noassert
@@ -193,6 +194,7 @@ $ORIGIN
 -steamconsole
 -steamdeck
 -steamframe
+-steamos
 -steamos3
 -tesla
 /bin/sh
@@ -217,19 +219,21 @@ $ORIGIN
 /data/src/vstdlib/strtools.cpp
 /data/src/vstdlib/strtools_unicode.cpp
 /dev/urandom
+/etc/os-release
 /etc/steamos-oobe-image
 /proc/%d/status
 /proc/meminfo
 /proc/self/exe
 /proc/self/fd
+/run/host/etc/os-release
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:54:04
-00:54:06
 0123456789ABCDEF
 0123456789abcdef
 12CStdMemAlloc
+15:29:26
+15:29:30
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
@@ -313,7 +317,7 @@ Invalid thread id during thread Start()
 IsSpewActive
 JArray
 Jobs/Coroutines
-Jun  9 2026
+Jun 24 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -749,6 +753,8 @@ pchFileName
 pchHaystack != NULL
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
+pchString != nullptr
 pipe2
 posix_memalign
 ppFrames[iFrame] != NULL
@@ -860,6 +866,7 @@ steam://openurl/
 steam://openurl_external/
 steam_monitor
 steamclient.so
+steamos
 steamservice.so
 steamui.so
 steamwebhelper

@@ -312,6 +312,7 @@
         LoginQR: "xlEVpBeYO1h2tOqErt9fj",
         NonPublic: "_39rmYMz2NhzK3kuX7QQoz8",
         QRLoginDeck: "J3DO-HZVloRroBWQ4LcSK",
+        QRLoginVR: "_1Drp2pvGZ46_F0XaPI7EM1",
         Blur: "_1rteFtfW8qmD6imQgrH-XM",
         Overlay: "_464mFQmvIW2e9TQypXX7W",
         Box: "_2ltn2BK4fnrPEGzNwxx6bx",
@@ -979,6 +980,20 @@
         Active: "_19WwgHXljoThfByC7B-MLW",
         ActivatableStroke: "_2Jn2RR1yUV9GJ6u9HN1dER",
         ActivatableGradient: "cIR7HWORR4OnuhH8CsVvr",
+        VRLink: "_1dYQELEFBNFH0IYvXkMftN",
+        Off: "_127biiI7_uwVm-W_19FgJp",
+        InnerArc: "_21GOsrHjWqo70iIxGr-ds3",
+        MiddleArc: "_1FDt0er0XaGOLFzzfp-7Q8",
+        OuterArc: "_1Q4DgIEGKtDwXf8mWbYxKN",
+        Dot: "QSXPssIFxIIPQy5pSPIUR",
+        HMD: "fZ4HR_XqSs8jBXWyeSNmk",
+        SignalLow: "lgt4jn3n3i_TC14MNsjfZ",
+        SignalMedium: "_2yGzWPU6NsqFSAEkvwIF4c",
+        Searching: "ccU_YGs5TgZ5tFm4QkvOd",
+        VRLinkBar1Anim: "WdIUI58OZ2M8ChR9xVnyn",
+        VRLinkBar2Anim: "_1Z_SQ03m0DmkwdI5azEgnK",
+        VRLinkBar3Anim: "_1rVd9nWlALxedt2GKN3ISH",
+        VRLinkBar4Anim: "_8npUohpwuztM69MHcA53a",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -5403,7 +5418,8 @@
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 1,
+                bConstMethod: !0,
+                ePrivilege: 5,
               },
             );
           }),
@@ -5413,7 +5429,7 @@
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 1,
+                ePrivilege: 5,
               },
             );
           });
@@ -6379,18 +6395,17 @@
           return this.m_rgParams;
         }
         Focus(_ = _.iEc.k_EWindowBringToFrontAndForceOS) {
-          _ != _.iEc.k_EWindowBringToFrontInvalid &&
-            (this.m_popup &&
-            void 0 !== this.m_popup.SteamClient &&
-            void 0 !== this.m_popup.SteamClient.Window
+          this.m_popup &&
+            _ != _.iEc.k_EWindowBringToFrontInvalid &&
+            ((0, _._)(this.m_popup, "Window.BringToFront")
               ? this.m_popup.SteamClient.Window.BringToFront(_)
-              : this.m_popup && this.m_popup.focus());
+              : this.m_popup.focus());
         }
         Close() {
           this.m_popup &&
-            ((0, _._)(this.m_popup.window, "Window.Close")
-              ? this.m_popup.window.SteamClient.Window.Close()
-              : this.m_popup.window.close());
+            ((0, _._)(this.m_popup, "Window.Close")
+              ? this.m_popup.SteamClient.Window.Close()
+              : this.m_popup.close());
         }
         GetName() {
           return this.m_strName;
@@ -6458,6 +6473,21 @@
         OnBeforeUnload() {}
         OnFocus() {}
         OnBlur() {}
+        m_rgChildBrowserViews = [];
+        get childBrowserViews() {
+          return this.m_rgChildBrowserViews;
+        }
+        RegisterChildBrowserView(_) {
+          return (
+            this.m_rgChildBrowserViews.push(_),
+            {
+              Unregister: () =>
+                (this.m_rgChildBrowserViews = this.m_rgChildBrowserViews.filter(
+                  (_) => _ != _,
+                )),
+            }
+          );
+        }
       }
       (0, _._)([_._], _.prototype, "m_bFocused", void 0),
         (0, _._)([_._], _.prototype, "OnMessage", null),
@@ -6581,13 +6611,15 @@
                 _.BIsValid() && !_.BIsClosed() && _.push(_);
               });
               for (let _ of _)
-                _.window?.SteamClient.Browser
-                  ?.SetShouldExitSteamOnBrowserClosed &&
+                (0, _._)(
+                  _.window,
+                  "Browser.SetShouldExitSteamOnBrowserClosed",
+                ) &&
                   _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                     !1,
                   ),
-                  _.window?.SteamClient.Window.SetHideOnClose &&
-                    _.window?.SteamClient.Window.SetHideOnClose(!1),
+                  (0, _._)(_.window, "Window.SetHideOnClose") &&
+                    _.window.SteamClient.Window.SetHideOnClose(!1),
                   _.Close();
               this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                 this.m_mapPopups.clear();
@@ -7083,11 +7115,13 @@
           (0, _.useEffect)(() => {
             if (_)
               if (_.visible) {
-                _ && (_.PositionMenu(), _.PositionPopupWindow());
-                let _ = _.options.bNoFocusWhenShown
-                  ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                  : _.iEc.k_EWindowBringToFrontAndForceOS;
-                _.TakeFocus(_);
+                if (_) {
+                  _.PositionMenu(), _.PositionPopupWindow();
+                  let _ = _.options.bNoFocusWhenShown
+                    ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
+                    : _.iEc.k_EWindowBringToFrontAndForceOS;
+                  _.TakeFocus(_);
+                }
               } else
                 _.options.bRetainOnHide &&
                   window.setTimeout(() => {
@@ -8398,7 +8432,11 @@
             if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
-            _.showPopover();
+            (_.style.display = "flex"),
+              requestAnimationFrame(() => {
+                _.style.display = "block";
+              }),
+              _.showPopover();
             const _ = _.querySelector(".hover_arrow.left"),
               _ = _.querySelector(".hover_arrow.right"),
               _ = _.querySelector(".hover_arrow.top"),
@@ -28798,7 +28836,7 @@
             onComplete: _,
             onStatusChange: _,
             platform: _,
-            deckStyling: _,
+            styling: _ = "default",
             activeBitValue: _ = 255,
           } = _,
           _ = _._.IN_STEAMUI ? _ : _,
@@ -28872,7 +28910,8 @@
                 quality: _(_),
                 className: (0, _._)(
                   _().LoginQR,
-                  _ && _().QRLoginDeck,
+                  "deck" == _ && _().QRLoginDeck,
+                  "vr" == _ && _().QRLoginVR,
                   _ && _().Blur,
                   _ && _().NonPublic,
                 ),
@@ -34810,6 +34849,7 @@
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
+            focusRingSizeElementID: _,
             focusable: _,
             navRef: _,
             actionDescriptionMap: _,
@@ -34837,6 +34877,7 @@
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
+            focusRingSizeElementID: _,
             focusable: _,
             navRef: _,
             onMoveUp: _,
@@ -35140,7 +35181,7 @@
             return (
               (0, _.useEffect)(() => {
                 if (_ && _) {
-                  let _ = _.GetBoundingRect(),
+                  let _ = _.GetBoundingRectForFocusRing(),
                     _ = _.Element;
                   const _ = _.ownerDocument.defaultView,
                     _ = (_) =>
@@ -35170,7 +35211,7 @@
           })(_, _),
           _ = _.useCallback(() => {
             if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
-            let _ = _.GetBoundingRect();
+            let _ = _.GetBoundingRectForFocusRing();
             const _ = _.getBoundingClientRect(),
               _ = {
                 left: _._ - _._,
@@ -36588,6 +36629,17 @@
         GetBoundingRect() {
           return this.m_element?.getBoundingClientRect();
         }
+        GetBoundingRectForFocusRing() {
+          let _ = this.m_element;
+          return (
+            this.m_Properties?.focusRingSizeElementID &&
+              (_ =
+                _?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? this.m_element),
+            _?.getBoundingClientRect()
+          );
+        }
         SetHasFocus(_) {
           this.m_Focused.Set(_);
         }
@@ -37504,7 +37556,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       function _(_, _, _) {
-        if (_ >= 0 || _ >= 0) {
+        if (_ >= 0 && _ >= 0) {
           const _ = _.splice(_, 1)[0];
           _ >= _.length ? (_[_] = _) : _.splice(_, 0, _);
         }
@@ -54929,6 +54981,16 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  total_achievements: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  completion_achievements: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -55039,7 +55101,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.achievements || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
+            _.Message.initialize(this, _, 0, -1, [1, 4], null);
         }
         static sm_m;
         static sm_mbf;
@@ -55064,6 +55126,12 @@
                     _: 3,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  groups: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -55185,7 +55253,71 @@
           return "CPlayer_GetUserAchievements_Response_Achievement";
         }
       }
-      _.Message;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.groupid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  groupid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  completion_achievements: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserAchievements_Response_Group";
+        }
+      }
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -61731,6 +61863,11 @@
                   },
                   steam_os_compat_category: {
                     _: 12,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  steam_frame_compat_category: {
+                    _: 13,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -81814,9 +81951,8 @@
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
-          ON_DECK: !1,
           ON_FRAME: !1,
-          IS_STEAMOS_MANAGEMENT_ENABLED: !1,
+          IS_STEAMOS: !1,
           ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,

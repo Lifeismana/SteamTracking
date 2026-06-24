@@ -574,7 +574,7 @@
 ""\n SiteServerUI_LoginStatus_Request"}\n!SiteServerUI_LoginStatus_Response
 "#\n!CAudio_SendHdmiCecVolume_Response"3\n CAudio_ToggleHdmiCecMute_Request
 "#\n!CAudio_SetHdmiCecEnabled_Response"?\n CAudio_SendHdmiCecVolume_Request
-"#\n!CAudio_ToggleHdmiCecMute_Response">\n'CAudio_PlaySpeakerTestOnChannel_Request
+"#\n!CAudio_ToggleHdmiCecMute_Response"
 "#\n!CBroadcast_WebRTCStopped_Response"l\n"CBroadcast_WebRTCSetAnswer_Request
 "#\n!CChatRoom_DeleteChatRoom_Response"X\n CChatRoom_RenameChatRoom_Request
 "#\n!CChatRoom_LeaveVoiceChat_Response"
@@ -598,12 +598,11 @@
 "%\n#CPublishedFile_Unsubscribe_Response">\n#CPublishedFile_CanSubscribe_Request
 "%s" = "%s"\n
 "&\n$CAudio_GetMonoDownmixEnabled_Request"8\n%CAudio_GetMonoDownmixEnabled_Response
-"&\n$CAudio_GetUseBluetoothForMic_Request"8\n%CAudio_GetUseBluetoothForMic_Response
 "&\n$CRemoteClient_CancelPairing_Response">\n(CRemoteClient_CancelPairing_Notification
 "&\n$CShader_ReportExternalBuild_Response"f\n.CShader_ReportBucketProcessingComplete_Request
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
-"'\n%CAudio_SetMonoDownmixEnabled_Response"+\n)CAudio_SupportsUseBluetoothForMic_Request"=\n*CAudio_SupportsUseBluetoothForMic_Response
+"'\n%CAudio_SetMonoDownmixEnabled_Response"&\n$CAudio_GetUseBluetoothForMic_Request"8\n%CAudio_GetUseBluetoothForMic_Response
 "'\n%CAudio_SetUseBluetoothForMic_Response"1\n
 "'\n%CBluetoothManager_SetTrusted_Response2
 "'\n%CChatRoom_DeleteRoleFromUser_Response"b\n#CChatRoom_JoinChatRoomGroup_Request
@@ -918,6 +917,7 @@
 "R\n$CBroadcast_InviteToBroadcast_Request
 "R\n'CParties_OnReservationCompleted_Request
 "S\n%CSteamTV_GetFollowedChannels_Response
+"S\n&CStoreBrowse_GetHardwareItems_Response
 "S\n'CCloud_AppCloudStateChange_Notification
 "S\n)CPartnerApps_GetDepotBuildResult_Response
 "S\n9CChatUsability_RequestClientUsabilityMetrics_Notification
@@ -1079,7 +1079,6 @@
 "~\n;CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response
 #!/bin/sh\nexit 0\n
 #,6AMZhw
-#.CAudio_SupportsMonoDownmix_Request
 #.CBluetoothManager_Connect_Response
 #.CBluetoothManager_GetState_Request
 #.CBroadcast_GetClipDetails_Response"
@@ -1477,7 +1476,7 @@ $%&'()*+,-./0123456789:;<=
 $'24A
 $)$=$A$C$M$_$g$k$y$}$
 $-6?HAZSle~w
-$.CAudio_SupportsMonoDownmix_Response
+$.CAudio_GetSupportedFeatures_Request
 $.CBluetoothManager_GetState_Response
 $.CBroadcast_PostChatMessage_Response"
 $.CBroadcast_WebRTCSetAnswer_Response"
@@ -1747,6 +1746,7 @@ ${LANGUAGE}
 %.1fdB
 %.4X_%.8X_%.5X
 %.CAudio_GetMonoDownmixEnabled_Request
+%.CAudio_GetSupportedFeatures_Response
 %.CAudio_GetUseBluetoothForMic_Request
 %.CAudio_SetMonoDownmixEnabled_Request
 %.CAudio_SetUseBluetoothForMic_Request
@@ -2282,6 +2282,7 @@ ${LANGUAGE}
 %s: forcing gamepadui for steamdeck + gamescope\n
 %s: forcing gamepadui via %s\n
 %s: forcing gamepadui, overriding tenfoot/bigpicture\n
+%s: found device: %s
 %s: found registry default startup mode: %d\n
 %s: found registry override startup mode: %d\n
 %s: ignoring gamepadui request via registry for SteamOS\n
@@ -2306,6 +2307,7 @@ ${LANGUAGE}
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: skipping, current value already matches
 %s: starting
+%s: starting enumerate devices
 %s: starting update check
 %s: starting update: %s
 %s: switching to desktop via SteamOSManager
@@ -2463,10 +2465,10 @@ ${LANGUAGE}
 &IN_CLIENT=true&USE_POPUPS=true&IN_STEAMUI_SHARED_CONTEXT=true
 &IN_GAMEPADUI=true
 &IN_GAMESCOPE=true
+&IS_STEAMOS=true
 &IY6
 &Lj&6lZ6?~A?
 &ON_FRAME=true
-&ON_STEAMOS=true
 &ON_STEAMOS_CLIENT_BRANCH=true
 &OzJ
 &PLATFORM=%s
@@ -3044,6 +3046,7 @@ ${LANGUAGE}
 (\n input_activate_stick_or_trackpad
 (\n is_adaptive_brightness_available
 (\n is_available_on_current_platform
+(\n nonpreferred_product_prepurchase
 (\n offset_detection_min_clean_chunk
 (\n remove_from_download_list_app_id
 (\n#k_EMsgAMCheckClanInviteRateLimiting
@@ -3324,7 +3327,6 @@ ${LANGUAGE}
 (\r"R\n'CFamilyGroups_ForceAcceptInvite_Request
 (\r"R\n6CSteamInputService_ControllerDisconnected_Notification
 (\r"R\n\fCAudioFormat
-(\r"S\n&CStoreBrowse_GetHardwareItems_Response
 (\r"S\n.CMsgClientSiteLicenseGetAvailableSeatsResponse
 (\r"T\n8CSteamInputService_ControllerPairingChanged_Notification
 (\r"U\n"CTimedTrial_ResetPlaytime_Response
@@ -3345,10 +3347,10 @@ ${LANGUAGE}
 (\r"]\n&CClientMetrics_IPv6Connectivity_Result
 (\r"]\n'CCommunity_VerifyClanMembership_Request
 (\r"]\n)CClientNotificationControllerDisconnected
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
 (\r"^\n,CParental_GetSignedParentalSettings_Response
 (\r"^\n,CStore_SetReservationPositionMessage_Request
+(\r"^\n1CMarketingMessages_FindMarketingMessages_Response
 (\r"_\n%CCloud_CompleteAppUploadBatch_Request
 (\r"_\n%CRemoteClient_GetPairingInfo_Response
 (\r"`\n%CStoreBrowse_GetHardwareItems_Request
@@ -3414,7 +3416,7 @@ ${LANGUAGE}
 (\t"&\n$CSteamTV_GetFollowedChannels_Request"
 (\t"&\n$CTransportAuth_Authenticate_Response"+\n)CTransportAuth_StartShutdown_Notification2
 (\t"(\n&CFriendMessages_ReportMessage_Response"
-(\t"(\n&CHardwareUpdate_PrepForUpdate_Response*
+(\t"(\n&CHardwareUpdate_PrepForUpdate_Response"*\n(CHardwareUpdate_EnumerateDevices_Request"
 (\t"(\n&CInventory_GetUserPurchaseInfo_Request"<\n'CInventory_GetUserPurchaseInfo_Response
 (\t"(\n&CSiteLicense_LCSAssociateUser_Response"]\n'CSiteLicense_ClientSeatCheckout_Request
 (\t")\n'CPlayer_GetPerFriendPreferences_Request"
@@ -3516,7 +3518,6 @@ ${LANGUAGE}
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"]\n"CShader_GetBucketManifest_Response
 (\t"^\n"CMsgRemoteClientPairWifiAPResponse
-(\t"^\n1CMarketingMessages_FindMarketingMessages_Response
 (\t"_\n\rGameListEntry
 (\t"`\n(CBroadcast_MuteBroadcastChatUser_Request
 (\t"a\n,CBroadcast_WebRTCHaveTURNServer_Notification
@@ -3706,6 +3707,7 @@ ${LANGUAGE}
 (\v2+.CHIDMessageToRemote.DeviceGetProductStringH
 (\v2+.CMsgDraggableRegionsChanged.DraggableRects
 (\v2+.CPlayer_GetGameAchievements_Response.Group
+(\v2+.CPlayer_GetUserAchievements_Response.Group
 (\v2+.CPublishedFile_QueryFiles_Request.TagGroup
 (\v2+.CSteamInputService_RawControllerDetailItem"@\n>CSteamInputService_FirstSteamControllerConnection_Notification"
 (\v2+.SiteServerUI_ClientStatus_Response.Payment
@@ -3757,6 +3759,7 @@ ${LANGUAGE}
 (\v20.CStoreBrowse_GetDLCForAppsSolr_Response.DLCList
 (\v20.CSupportRefreshTokenDescription.TokenUsageEvent
 (\v21.CChatRoom_GetMessageHistory_Response.ChatMessage
+(\v21.CHardwareUpdate_EnumerateDevices_Response.Device
 (\v21.CMsgRemoteDeviceStreamingRequest.ReservedGamepad
 (\v21.CPlayer_GetCommunityBadgeProgress_Response.Quest
 (\v21.CPlayer_GetGameAchievements_Response.Achievement
@@ -3999,6 +4002,7 @@ ${LANGUAGE}
 ).CGamescope_ReArmMuraCalibration_Response
 ).CGamescope_SetDisplayPowerState_Response
 ).CHardwareUpdate_CheckForUpdates_Response
+).CHardwareUpdate_EnumerateDevices_Request
 ).CLEDManager_SetStartupBrightness_Request
 ).CParental_EnableParentalSettings_Request
 ).CParties_OnReservationCompleted_Response"
@@ -4049,6 +4053,7 @@ ${LANGUAGE}
 )Music\DownloadHighQualityAudioSoundtracks
 )TpH
 )Urz
+)\n!nonpreferred_product_early_access
 )\n!offset_detection_blast_radius_pre
 )\n!offset_detection_max_distance_pre
 )\n!ownership_restrictions_overridden
@@ -4201,7 +4206,6 @@ ${LANGUAGE}
 *%*/*O*U*_*e*k*m*s*
 *&2>NBVZ~rfj."6:
 **qXU
-*.CAudio_SupportsUseBluetoothForMic_Request
 *.CBluetoothManager_SetDiscovering_Response
 *.CBluetoothManager_SetWakeAllowed_Response
 *.CBroadcast_BeginBroadcastSession_Response"
@@ -4244,6 +4248,7 @@ ${LANGUAGE}
 *.CGameRecording_GetTimelinesForApp_Request
 *.CGameRecording_SetPerGameSettings_Request
 *.CGameRecording_UploadClipToSteam_Response
+*.CHardwareUpdate_EnumerateDevices_Response
 *.CHardwareUpdate_StateChanged_Notification
 *.CLEDManager_SetStartupBrightness_Response
 *.CParental_DisableParentalSettings_Request
@@ -4306,19 +4311,19 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN22CScreensaverController10InitializeEvE34CWebUIScreensaverGetActiveStateJob35CScreensaver_GetActiveState_Request36CScreensaver_GetActiveState_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSteamOSControllerStub10InitializeEvE27CWebUISteamOSSLSGetStateJob28CSteamOSSLS_GetState_Request29CSteamOSSLS_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSteamOSControllerStub10InitializeEvE31CWebUISteamOSManagerGetStateJob32CSteamOSManager_GetState_Request33CSteamOSManager_GetState_ResponseE
+*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE25CWebUIAudioResetConfigJob26CAudio_ResetConfig_Request27CAudio_ResetConfig_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE29CWebUIAudioSupportsHdmiCecJob30CAudio_SupportsHdmiCec_Request31CAudio_SupportsHdmiCec_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE31CWebUIAudioGetHdmiCecEnabledJob32CAudio_GetHdmiCecEnabled_Request33CAudio_GetHdmiCecEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE31CWebUIAudioSendHdmiCecVolumeJob32CAudio_SendHdmiCecVolume_Request33CAudio_SendHdmiCecVolume_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE31CWebUIAudioSetHdmiCecEnabledJob32CAudio_SetHdmiCecEnabled_Request33CAudio_SetHdmiCecEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE31CWebUIAudioToggleHdmiCecMuteJob32CAudio_ToggleHdmiCecMute_Request33CAudio_ToggleHdmiCecMute_ResponseE
-*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE33CWebUIAudioSupportsMonoDownmixJob34CAudio_SupportsMonoDownmix_Request35CAudio_SupportsMonoDownmix_ResponseE
+*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE34CWebUIAudioGetSupportedFeaturesJob35CAudio_GetSupportedFeatures_Request36CAudio_GetSupportedFeatures_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE35CWebUIAudioGetMonoDownmixEnabledJob36CAudio_GetMonoDownmixEnabled_Request37CAudio_GetMonoDownmixEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE35CWebUIAudioGetUseBluetoothForMicJob36CAudio_GetUseBluetoothForMic_Request37CAudio_GetUseBluetoothForMic_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE35CWebUIAudioSetMonoDownmixEnabledJob36CAudio_SetMonoDownmixEnabled_Request37CAudio_SetMonoDownmixEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE35CWebUIAudioSetUseBluetoothForMicJob36CAudio_SetUseBluetoothForMic_Request37CAudio_SetUseBluetoothForMic_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE37CWebUIAudioSetSpeakerConfigurationJob38CAudio_SetSpeakerConfiguration_Request39CAudio_SetSpeakerConfiguration_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE38CWebUIAudioPlaySpeakerTestOnChannelJob39CAudio_PlaySpeakerTestOnChannel_Request40CAudio_PlaySpeakerTestOnChannel_ResponseE
-*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE40CWebUIAudioSupportsUseBluetoothForMicJob41CAudio_SupportsUseBluetoothForMic_Request42CAudio_SupportsUseBluetoothForMic_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE31CWebUISteamOSManagerGetStateJob32CSteamOSManager_GetState_Request33CSteamOSManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE35CWebUISteamOSManagerFactoryResetJob36CSteamOSManager_FactoryReset_Request37CSteamOSManager_FactoryReset_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE37CWebUISteamOSManagerSetSteamVRPathJob38CSteamOSManager_SetSteamVRPath_Request39CSteamOSManager_SetSteamVRPath_ResponseE
@@ -4375,6 +4380,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE31CWebUIHardwareUpdateGetStateJob32CHardwareUpdate_GetState_Request33CHardwareUpdate_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE36CWebUIHardwareUpdatePrepForUpdateJob37CHardwareUpdate_PrepForUpdate_Request38CHardwareUpdate_PrepForUpdate_ResponseE
 *18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE38CWebUIHardwareUpdateCheckForUpdatesJob39CHardwareUpdate_CheckForUpdates_Request40CHardwareUpdate_CheckForUpdates_ResponseE
+*18CWebUIMsgLambdaJobIZN25CHardwareUpdateController10InitializeEvE39CWebUIHardwareUpdateEnumerateDevicesJob40CHardwareUpdate_EnumerateDevices_Request41CHardwareUpdate_EnumerateDevices_ResponseE
 *18CWebUIMsgLambdaJobIZN26CSteamUISharedJSController10InitializeEvE48CWebUISharedJSContextGetDesiredSteamUIWindowsJob49CSharedJSContext_GetDesiredSteamUIWindows_Request50CSharedJSContext_GetDesiredSteamUIWindows_ResponseE
 *18CWebUIMsgLambdaJobIZN30CSystemBluetoothControllerStub10InitializeEvE33CWebUIBluetoothManagerGetStateJob34CBluetoothManager_GetState_Request35CBluetoothManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN30CTransportValidationController10InitializeEvE38CWebUITransportValidationAddNumbersJob39CTransportValidation_AddNumbers_Request40CTransportValidation_AddNumbers_ResponseE
@@ -4490,6 +4496,7 @@ ${LANGUAGE}
 *ZL7profilePvR9ConParamsR10ConCommandEUlvE_
 *ZN11CHTMLWindow21BrowserFileLoadDialogEPK18CMsgFileLoadDialogEUlRKN11IHTMLWindow24OpenFileDialogResponse_tEE_
 *ZN11CLoginUsers10SaveAvatarE8CSteamIDEUlvE_
+*ZN11CLoginUsers23RegisterForUsersChangedE9CSmartPtrI15CJSCallbackFuncEEUlvE_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
 *ZN13CSteamStartup12ExecSteamURLE19EShellExecuteSourcePKcEUl7EResultS2_E_
@@ -4549,7 +4556,6 @@ ${LANGUAGE}
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlvE_
 *ZN19CSettingsController29SetForeignDefaultValueHandlerE10StringViewOSt8functionIFvP18CMsgSettingVariantEEEUlvE_
 *ZN19CStreamTransportSDR22BHandleTransportSignalERK19CTransportSignalMsgE33CStreamTransportSDR_SignalContext
-*ZN20CUserLoginController13GetLoginUsersE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN20CUserLoginController20ResumeSuspendedGamesEb9CSmartPtrI18CJSCallbackPromiseEEUlP19ResumeGamesResult_tbS2_E_
 *ZN20CUserLoginController23PrepareForSystemSuspendE9CSmartPtrI18CJSCallbackPromiseEEUlP22SystemReadyToSuspend_tbS2_E_
 *ZN21CScreenshotController21DeleteLocalScreenshotE7CGameIDj9CSmartPtrI18CJSCallbackPromiseEEUlP25ScreenshotBatchComplete_tbS3_E_
@@ -4568,34 +4574,36 @@ ${LANGUAGE}
 *ZN22CSteamOSControllerStub10InitializeEvE31CWebUISteamOSManagerGetStateJob
 *ZN22CSteamOSControllerStub10InitializeEvEUlRK28CSteamOSSLS_GetState_RequestR29CSteamOSSLS_GetState_ResponseE0_
 *ZN22CSteamOSControllerStub10InitializeEvEUlRK32CSteamOSManager_GetState_RequestR33CSteamOSManager_GetState_ResponseE_
+*ZN22CSystemAudioController10InitializeEvE25CWebUIAudioResetConfigJob
 *ZN22CSystemAudioController10InitializeEvE29CWebUIAudioSupportsHdmiCecJob
 *ZN22CSystemAudioController10InitializeEvE31CWebUIAudioGetHdmiCecEnabledJob
 *ZN22CSystemAudioController10InitializeEvE31CWebUIAudioSendHdmiCecVolumeJob
 *ZN22CSystemAudioController10InitializeEvE31CWebUIAudioSetHdmiCecEnabledJob
 *ZN22CSystemAudioController10InitializeEvE31CWebUIAudioToggleHdmiCecMuteJob
-*ZN22CSystemAudioController10InitializeEvE33CWebUIAudioSupportsMonoDownmixJob
+*ZN22CSystemAudioController10InitializeEvE34CWebUIAudioGetSupportedFeaturesJob
 *ZN22CSystemAudioController10InitializeEvE35CWebUIAudioGetMonoDownmixEnabledJob
 *ZN22CSystemAudioController10InitializeEvE35CWebUIAudioGetUseBluetoothForMicJob
 *ZN22CSystemAudioController10InitializeEvE35CWebUIAudioSetMonoDownmixEnabledJob
 *ZN22CSystemAudioController10InitializeEvE35CWebUIAudioSetUseBluetoothForMicJob
 *ZN22CSystemAudioController10InitializeEvE37CWebUIAudioSetSpeakerConfigurationJob
 *ZN22CSystemAudioController10InitializeEvE38CWebUIAudioPlaySpeakerTestOnChannelJob
-*ZN22CSystemAudioController10InitializeEvE40CWebUIAudioSupportsUseBluetoothForMicJob
-*ZN22CSystemAudioController10InitializeEvEUlRK30CAudio_SupportsHdmiCec_RequestR31CAudio_SupportsHdmiCec_ResponseE9_
-*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_GetHdmiCecEnabled_RequestR33CAudio_GetHdmiCecEnabled_ResponseE10_
-*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_SendHdmiCecVolume_RequestR33CAudio_SendHdmiCecVolume_ResponseE12_
-*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_SetHdmiCecEnabled_RequestR33CAudio_SetHdmiCecEnabled_ResponseE11_
-*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_ToggleHdmiCecMute_RequestR33CAudio_ToggleHdmiCecMute_ResponseE13_
-*ZN22CSystemAudioController10InitializeEvEUlRK34CAudio_SupportsMonoDownmix_RequestR35CAudio_SupportsMonoDownmix_ResponseE3_
+*ZN22CSystemAudioController10InitializeEvEUlRK26CAudio_ResetConfig_RequestR27CAudio_ResetConfig_ResponseE13_
+*ZN22CSystemAudioController10InitializeEvEUlRK30CAudio_SupportsHdmiCec_RequestR31CAudio_SupportsHdmiCec_ResponseE8_
+*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_GetHdmiCecEnabled_RequestR33CAudio_GetHdmiCecEnabled_ResponseE9_
+*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_SendHdmiCecVolume_RequestR33CAudio_SendHdmiCecVolume_ResponseE11_
+*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_SetHdmiCecEnabled_RequestR33CAudio_SetHdmiCecEnabled_ResponseE10_
+*ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_ToggleHdmiCecMute_RequestR33CAudio_ToggleHdmiCecMute_ResponseE12_
+*ZN22CSystemAudioController10InitializeEvEUlRK35CAudio_GetSupportedFeatures_RequestR36CAudio_GetSupportedFeatures_ResponseE3_
 *ZN22CSystemAudioController10InitializeEvEUlRK36CAudio_GetMonoDownmixEnabled_RequestR37CAudio_GetMonoDownmixEnabled_ResponseE4_
-*ZN22CSystemAudioController10InitializeEvEUlRK36CAudio_GetUseBluetoothForMic_RequestR37CAudio_GetUseBluetoothForMic_ResponseE7_
+*ZN22CSystemAudioController10InitializeEvEUlRK36CAudio_GetUseBluetoothForMic_RequestR37CAudio_GetUseBluetoothForMic_ResponseE6_
 *ZN22CSystemAudioController10InitializeEvEUlRK36CAudio_SetMonoDownmixEnabled_RequestR37CAudio_SetMonoDownmixEnabled_ResponseE5_
-*ZN22CSystemAudioController10InitializeEvEUlRK36CAudio_SetUseBluetoothForMic_RequestR37CAudio_SetUseBluetoothForMic_ResponseE8_
+*ZN22CSystemAudioController10InitializeEvEUlRK36CAudio_SetUseBluetoothForMic_RequestR37CAudio_SetUseBluetoothForMic_ResponseE7_
 *ZN22CSystemAudioController10InitializeEvEUlRK38CAudio_SetSpeakerConfiguration_RequestR39CAudio_SetSpeakerConfiguration_ResponseE15_
 *ZN22CSystemAudioController10InitializeEvEUlRK39CAudio_PlaySpeakerTestOnChannel_RequestR40CAudio_PlaySpeakerTestOnChannel_ResponseE14_
-*ZN22CSystemAudioController10InitializeEvEUlRK41CAudio_SupportsUseBluetoothForMic_RequestR42CAudio_SupportsUseBluetoothForMic_ResponseE6_
 *ZN22CSystemAudioController10InitializeEvEUlbE0_
 *ZN22CSystemAudioController10InitializeEvEUlbE2_
+*ZN22CSystemAudioController10InitializeEvEUljE16_
+*ZN22CSystemAudioController10InitializeEvEUljE17_
 *ZN22CSystemAudioController10InitializeEvEUlvE1_
 *ZN22CSystemAudioController10InitializeEvEUlvE_
 *ZN22CSystemAudioController27YldPlaySpeakerTestOnChannelERK39CAudio_PlaySpeakerTestOnChannel_RequestR40CAudio_PlaySpeakerTestOnChannel_ResponseEUlbE_
@@ -4827,10 +4835,12 @@ ${LANGUAGE}
 *ZN25CHardwareUpdateController10InitializeEvE31CWebUIHardwareUpdateGetStateJob
 *ZN25CHardwareUpdateController10InitializeEvE36CWebUIHardwareUpdatePrepForUpdateJob
 *ZN25CHardwareUpdateController10InitializeEvE38CWebUIHardwareUpdateCheckForUpdatesJob
+*ZN25CHardwareUpdateController10InitializeEvE39CWebUIHardwareUpdateEnumerateDevicesJob
 *ZN25CHardwareUpdateController10InitializeEvEUlRK30CHardwareUpdate_Update_RequestR31CHardwareUpdate_Update_ResponseE2_
 *ZN25CHardwareUpdateController10InitializeEvEUlRK32CHardwareUpdate_GetState_RequestR33CHardwareUpdate_GetState_ResponseE0_
 *ZN25CHardwareUpdateController10InitializeEvEUlRK37CHardwareUpdate_PrepForUpdate_RequestR38CHardwareUpdate_PrepForUpdate_ResponseE3_
 *ZN25CHardwareUpdateController10InitializeEvEUlRK39CHardwareUpdate_CheckForUpdates_RequestR40CHardwareUpdate_CheckForUpdates_ResponseE1_
+*ZN25CHardwareUpdateController10InitializeEvEUlRK40CHardwareUpdate_EnumerateDevices_RequestR41CHardwareUpdate_EnumerateDevices_ResponseE4_
 *ZN25CHardwareUpdateController10InitializeEvEUlvE_
 *ZN26CSteamUISharedJSController10InitializeEvE48CWebUISharedJSContextGetDesiredSteamUIWindowsJob
 *ZN26CSteamUISharedJSController10InitializeEvEUlRK49CSharedJSContext_GetDesiredSteamUIWindows_RequestR50CSharedJSContext_GetDesiredSteamUIWindows_ResponseE_
@@ -4899,6 +4909,7 @@ ${LANGUAGE}
 *ZN32CSystemStorageDeviceManagerLinux10InitializeEvEUlRK38CStorageDeviceManager_GetState_RequestR39CStorageDeviceManager_GetState_ResponseE2_
 *ZN32CSystemStorageDeviceManagerLinux19RunScheduledTrimAllEvEUlvE_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
+*ZNK11CLoginUsers8GetUsersE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
@@ -5043,6 +5054,7 @@ ${LANGUAGE}
 *\n\rdisplay_state
 *\n\vHTTPHeaders
 *\n\vpreferences
+*\n\vrelated_f2p
 *^\n\fELogFileType
 *d\n\fEAudioFormat
 *hbJ1
@@ -5069,7 +5081,6 @@ ${LANGUAGE}
 +$5:o`q~S\MB
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
-+.CAudio_SupportsUseBluetoothForMic_Response
 +.CAuthenticationSupport_RevokeToken_Request
 +.CAuthentication_GetAuthSessionInfo_Request
 +.CBluetoothManager_GetDeviceDetails_Request
@@ -5208,10 +5219,12 @@ ${LANGUAGE}
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EControllerElementTypeMagnifyingGlass
 +\n'k_EGameSearchResult_SearchFailedNoHosts
 +\n'k_EMarketingMessageClickLocation_Button
++\n'k_EMarketingMessageLookupByAssociatedID
 +\n'k_EMarketingMessagePublisherAssociation
 +\n'k_EPartnerEventDisplayLocation_StoreHub
 +\n'k_EPressOutletMemberPendingState_Member
@@ -5527,6 +5540,7 @@ ${LANGUAGE}
 --error
 --prep-by-serial
 --redirect=vhui.log --control="%s"
+--show-all-devices
 --title
 --type
 --update-all
@@ -5785,12 +5799,10 @@ ${LANGUAGE}
 -sls-skip-version-check
 -steam_game %d
 -steamconsole
--steamdeck
 -steamdeckdisplay
 -steamid
 -steaminstaller
 -steammachinedisplay
--steamos
 -system-composer
 -system\SteamFrameWirelessAdapterPairingDialog
 -tenfoot
@@ -5915,6 +5927,8 @@ ${LANGUAGE}
 .CAchievements_GetInfo_Response
 .CAppOverview_PerClientData
 .CAppOverview_PerClientData"
+.CAudio_ResetConfig_Request
+.CAudio_ResetConfig_Response
 .CAudio_SupportsHdmiCec_Request
 .CAuthentication_DeviceDetails
 .CBluetoothManager_Pair_Request
@@ -6116,7 +6130,7 @@ ${LANGUAGE}
 .CMsgNetworkDeviceIP6Config
 .CMsgNetworkDevicesData.Device
 .CMsgShortcutInfo"$\n
-.CMsgSleepManagerState")\n'CSleepManager_StateChanged_Notification"a\n)CSleepManager_RequestSuspend_Notification
+.CMsgSleepManagerState")\n'CSleepManager_StateChanged_Notification"
 .CMsgSteamUIBrowserWindow2
 .CMsgStorageDevicesData.Drive
 .CMsgSystemAudioManagerDevice
@@ -6388,6 +6402,7 @@ ${LANGUAGE}
 .EHIDDeviceDisconnectMethod
 .EHIDDeviceLocation
 .EHardwareUpdateDeviceType
+.EHardwareUpdatePriority
 .EJSRegisterMethodType"
 .EKeyEscrowUsage
 .ELEDManagerMode"%\n#CLEDManager_SetManagerMode_Response*
@@ -6570,6 +6585,7 @@ ${LANGUAGE}
 .StoreItem.Platforms.VRSupport
 .StoreItem.Playtest
 .StoreItem.PurchaseOption
+.StoreItem.RelatedF2P
 .StoreItem.RelatedItems
 .StoreItem.ReleaseInfo
 .StoreItem.Reviews
@@ -7169,14 +7185,16 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/vrstreamthread.cpp
 /data/src/steamUI/gamestream/x264wrapper.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp
-/data/src/steamUI/hardwareupdatecontroller.cpp:156
-/data/src/steamUI/hardwareupdatecontroller.cpp:249
-/data/src/steamUI/hardwareupdatecontroller.cpp:293
+/data/src/steamUI/hardwareupdatecontroller.cpp:233
+/data/src/steamUI/hardwareupdatecontroller.cpp:340
+/data/src/steamUI/hardwareupdatecontroller.cpp:384
+/data/src/steamUI/hardwareupdatecontroller.cpp:411
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
-/data/src/steamUI/ledcontroller.cpp:1660
+/data/src/steamUI/ledcontroller.cpp:1661
 /data/src/steamUI/ledcontroller.cpp:448
 /data/src/steamUI/libraryassetcache.cpp
+/data/src/steamUI/loginusers.cpp
 /data/src/steamUI/modmanager.cpp
 /data/src/steamUI/remoteplaycontroller.cpp
 /data/src/steamUI/remotesteamapp.cpp
@@ -7193,7 +7211,7 @@ ${LANGUAGE}
 /data/src/steamUI/shutdowncontroller.cpp
 /data/src/steamUI/startupmodemanager.cpp
 /data/src/steamUI/steamoscontroller.cpp
-/data/src/steamUI/steamosmanager.cpp:302
+/data/src/steamUI/steamosmanager.cpp:303
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -7510,9 +7528,13 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 00000000
 0000
+000000001532
+00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
+0123456789
+0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7682,11 +7704,7 @@ ${LANGUAGE}
 100-continue
 1000
 1024
-000000001532
-00003333
 10000
-0123456789
-0123456789.
 107F-BB20-FB5A-1CE4
 10Audio_Stub
 10BlankImage
@@ -8987,7 +9005,6 @@ ${LANGUAGE}
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI21CMsgBrowserSetMinSizeE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
@@ -9298,7 +9315,6 @@ ${LANGUAGE}
 19CMsgComboNeedsPaint
 19CMsgControllerInput
 19CMsgFinishedRequest
-19CMsgFocusedNodeText
 19CMsgFunctionalCurve
 19CMsgGetZoomResponse
 19CMsgIPAddressBucket
@@ -9659,6 +9675,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbPKcEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJbbEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbjEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJiEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
@@ -9875,7 +9892,6 @@ ${LANGUAGE}
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
 20CMsgLEDManagerDevice
-20CMsgLoadLocalization
 20CMsgRemoteClientPing
 20CMsgRestartJSContext
 20CMsgScalePageToValue
@@ -9935,6 +9951,7 @@ ${LANGUAGE}
 20SharedJSContext_Stub
 20StorageDeviceManager
 20StoreItem_Categories
+20StoreItem_RelatedF2P
 20TabCatchingTextEntry
 20TestServerFromClient
 20TestSteamClient_Stub
@@ -10212,7 +10229,6 @@ ${LANGUAGE}
 24CMsgSteamUIBrowserWindow
 24CMsgSystemPerfSettingsV1
 24CMsgSystemUpdateProgress
-24CMsgZoomToFocusedElement
 24CNegotiationSetConfigMsg
 24CParentalSettingsManager
 24CPauseControllerInputMsg
@@ -10332,6 +10348,7 @@ ${LANGUAGE}
 26CActivationCodePackageInfo
 26CAddFavoriteServersByIPJob
 26CAppOverview_PerClientData
+26CAudio_ResetConfig_Request
 26CAuthenticationResponseMsg
 26CChatRoom_GetRoles_Request
 26CChatRoom_KickUser_Request
@@ -10398,6 +10415,7 @@ ${LANGUAGE}
 26TestExternalPrivilege_Stub
 278=&#,)JO@E^[TQbghmvs|y
 27;C
+27CAudio_ResetConfig_Response
 27CBroadcast_WebRTC_Candidate
 27CChatRoom_GetRoles_Response
 27CChatRoom_KickUser_Response
@@ -10426,8 +10444,6 @@ ${LANGUAGE}
 27CMsgClientSetPlayerNickname
 27CMsgControllerConfiguration
 27CMsgDraggableRegionsChanged
-27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgGCRoutingProtoBufHeader
 27CMsgGameServerPingQueryData
 27CMsgHorizontalScrollBarSize
@@ -10436,7 +10452,6 @@ ${LANGUAGE}
 27CMsgNetworkDeviceIP4Address
 27CMsgNetworkDeviceIP6Address
 27CMsgNetworkDeviceSetOptions
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
 27CMsgRenderProcessTerminated
@@ -10446,7 +10461,6 @@ ${LANGUAGE}
 27CMsgSystemUpdateApplyParams
 27CMsgSystemUpdateApplyResult
 27CMsgSystemUpdateCheckResult
-27CMsgZoomToElementAtPosition
 27COffline_OfflineLogonTicket
 27CParties_JoinParty_Response
 27CPlayer_GetPlayNext_Request
@@ -10500,7 +10514,6 @@ ${LANGUAGE}
 28CMsgRemoteClientUploadStatus
 28CMsgRemoteClientWifiAPStatus
 28CMsgRemoteDeviceProofRequest
-28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
@@ -11088,7 +11101,6 @@ ${LANGUAGE}
 33SiteServerUI_SetLanguage_Response
 33StoreItem_PurchaseOption_Discount
 33fU
-34CAudio_SupportsMonoDownmix_Request
 34CBluetoothManager_Connect_Response
 34CBluetoothManager_GetState_Request
 34CBroadcast_GetClipDetails_Response
@@ -11172,7 +11184,7 @@ ${LANGUAGE}
 34SiteServerUI_ClientStatus_Response
 34StoreItem_Trailers_AdaptiveTrailer
 35CAchievements_GetInfo_Response_Info
-35CAudio_SupportsMonoDownmix_Response
+35CAudio_GetSupportedFeatures_Request
 35CAuthentication_AllowedConfirmation
 35CBluetoothManager_GetState_Response
 35CBroadcast_PostChatMessage_Response
@@ -11213,7 +11225,6 @@ ${LANGUAGE}
 35CMsgRemoteClientGetControllerConfig
 35CMsgRemoteClientRestrictAutoUpdates
 35CMsgRemoteClientStartStreamResponse
-35CMsgZoomToElementAtPositionResponse
 35CParental_ParentalLock_Notification
 35CParental_PlaytimeUsed_Notification
 35CParental_ValidatePassword_Response
@@ -11266,6 +11277,7 @@ ${LANGUAGE}
 35StoreItem_BasicInfo_CreatorHomeLink
 360opf
 36CAudio_GetMonoDownmixEnabled_Request
+36CAudio_GetSupportedFeatures_Response
 36CAudio_GetUseBluetoothForMic_Request
 36CAudio_SetMonoDownmixEnabled_Request
 36CAudio_SetUseBluetoothForMic_Request
@@ -11748,6 +11760,7 @@ ${LANGUAGE}
 40CGamescope_SetDisplayPowerState_Response
 40CHIDMessageFromRemote_DeviceInputReports
 40CHardwareUpdate_CheckForUpdates_Response
+40CHardwareUpdate_EnumerateDevices_Request
 40CInventory_PurchaseInit_Request_LineItem
 40CLEDManager_SetStartupBrightness_Request
 40CMsgChildProcessQueryGpuTopology_GpuInfo
@@ -11804,7 +11817,6 @@ ${LANGUAGE}
 40GameServerClient_QueryServerData_Request
 40SiteServerUI_ContentCacheConfig_Response
 40SiteServerUI_ContentCacheStatus_Response
-41CAudio_SupportsUseBluetoothForMic_Request
 41CBluetoothManager_SetDiscovering_Response
 41CBluetoothManager_SetWakeAllowed_Response
 41CBroadcast_BeginBroadcastSession_Response
@@ -11852,6 +11864,7 @@ ${LANGUAGE}
 41CGameRecording_UploadClipToSteam_Response
 41CHIDMessageToRemote_DeviceGetVendorString
 41CHTTPDefaultRedirectEnableHandlerInternal
+41CHardwareUpdate_EnumerateDevices_Response
 41CHardwareUpdate_StateChanged_Notification
 41CLEDManager_SetStartupBrightness_Response
 41CMsgBrowserViewPostMessageToParentRequest
@@ -11903,7 +11916,6 @@ ${LANGUAGE}
 41CUserAccount_GetAccountLinkStatus_Request
 41CValveHWSurvey_GetSurveySchedule_Response
 41GameServerClient_QueryServerData_Response
-42CAudio_SupportsUseBluetoothForMic_Response
 42CAuthenticationSupport_RevokeToken_Request
 42CAuthentication_GetAuthSessionInfo_Request
 42CBluetoothManager_GetDeviceDetails_Request
@@ -11971,6 +11983,7 @@ ${LANGUAGE}
 42CPlayer_GetGameAchievements_Response_Group
 42CPlayer_GetProfileThemesAvailable_Response
 42CPlayer_GetTopAchievementsForGames_Request
+42CPlayer_GetUserAchievements_Response_Group
 42CPlayer_RecordDisconnectedPlaytime_Request
 42CPublishedFile_AddAppRelationship_Response
 42CPublishedFile_FileSubscribed_Notification
@@ -12358,6 +12371,7 @@ ${LANGUAGE}
 48CGameRecording_AudioSessionsChanged_Notification
 48CGameRecording_TimelineEntryChanged_Notification
 48CGameRecording_TimelineEntryRemoved_Notification
+48CHardwareUpdate_EnumerateDevices_Response_Device
 48CMarketingMessages_FindMarketingMessages_Request
 48CMarketingMessages_PartnerPublishMessage_Request
 48CMsgClientSiteLicenseGetContentCacheInfoResponse
@@ -12468,7 +12482,6 @@ ${LANGUAGE}
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_ESharedLibrary_PackageExcluded_NoShareableApps
@@ -12816,7 +12829,6 @@ ${LANGUAGE}
 5\n\fmicrotrailer
 5\n\fplayers_data
 5\n\rtemplate_type
-5\n\tStoreItem
 5\n\vFriendGroup
 5\n\vStoreFilter
 5\n\vnested_type
@@ -12858,8 +12870,6 @@ ${LANGUAGE}
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
 60CAccountHardware_CompleteSteamControllerRegistration_Request
-6144
-60000000
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
 60CMarketingMessages_GetPartnerReadyToPublishMessages_Response
@@ -12868,6 +12878,8 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13085,6 +13097,7 @@ ${LANGUAGE}
 7\n3k_EStreamControlSetControllerPairingResult_OBSOLETE
 7\n\nactionsets
 7\n\ninput_mode
+7\n\tStoreItem
 7\n\tap_custom
 7\n\tdeveloper
 7\n\tenum_type
@@ -13282,6 +13295,7 @@ ${LANGUAGE}
 9CCallbackI24CSteamParentalController35ParentalLockChangeAttemptComplete_tLb0EE
 9CCallbackI25CHardwareUpdateController19ControllerDetails_tLb0EE
 9CCallbackI25CHardwareUpdateController24ControllerDisconnected_tLb0EE
+9CCallbackI25CHardwareUpdateController27ControllerDongleConnected_tLb0EE
 9CCallbackI25CHardwareUpdateController31ControllerBootloaderConnected_tLb0EE
 9CCallbackI26CSteamUISharedJSController19AppLifetimeNotice_tLb0EE
 9CCallbackI27CGameBroadcastRecordSession23BroadcastUploadConfig_tLb0EE
@@ -13670,7 +13684,6 @@ ${LANGUAGE}
 ?WAYLAND_DISPLAY
 ?[libprotobuf %s %s:%d] %s\n
 ?\fYjvE
-?\n gpu_performance_levels_available
 ?\n:k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
@@ -13773,6 +13786,7 @@ ${LANGUAGE}
 @net_loopback
 @sBroadcastPreset
 @sBroadcastTune
+@sHardwareUpdateForceRequiredPriorityTS
 @type
 @unMinimumShaderDownloadSizeInUI
 @valvesoftware.com
@@ -13823,6 +13837,7 @@ ACCEPT
 ACCESS_DESCRIPTION
 ACHIEVEMENTS
 ACTIVE
+ACU-
 AD Time Stamping
 ADH-AES128-GCM-SHA256
 ADH-AES128-SHA
@@ -14674,10 +14689,12 @@ Apps.SetControllerRumblePreference
 Apps.SetCustomArtworkForApp
 Apps.SetCustomLogoPositionForApp
 Apps.SetDLCEnabled
-Apps.SetDisableSteamDeckAutoDetection
+Apps.SetFDMEnable
+Apps.SetForceIdentAsSteamDeck
 Apps.SetLocalScreenshotCaption
 Apps.SetLocalScreenshotPrivacy
 Apps.SetLocalScreenshotSpoiler
+Apps.SetRPOEnable
 Apps.SetShortcutExe
 Apps.SetShortcutIcon
 Apps.SetShortcutIsVR
@@ -14686,6 +14703,7 @@ Apps.SetShortcutName
 Apps.SetShortcutSortAs
 Apps.SetShortcutStartDir
 Apps.SetStreamingClientForApp
+Apps.SetTSOEnable
 Apps.SetThirdPartyControllerConfiguration
 Apps.SetWorkshopItemsDisabledLocally
 Apps.SetWorkshopItemsLoadOrder
@@ -14758,6 +14776,7 @@ Atlantic/Azores
 Atlantic/Cape_Verde
 Attempt to create persistent logs with no end date!
 Attempt to schedule '%s' %lldusec in the past
+Attempted to access intermediate certificate at index %d. Total intermediates: %d
 Attempted to change replicated CVar when you are not the GM\n
 Attempted to force startup mode after it was already set
 Attempted to set an invalid startup mode
@@ -14783,16 +14802,16 @@ Audio source [%s]: Signal levels:
 Audio source [%s]: init=%lld, adjustment=%lld, through=%lld, last_start=%lld, mixed=%lld, drop_before=%lld, drop_after=%lld
 Audio.GetHdmiCecEnabled#1
 Audio.GetMonoDownmixEnabled#1
+Audio.GetSupportedFeatures#1
 Audio.GetUseBluetoothForMic#1
 Audio.PlaySpeakerTestOnChannel#1
+Audio.ResetConfig#1
 Audio.SendHdmiCecVolume#1
 Audio.SetHdmiCecEnabled#1
 Audio.SetMonoDownmixEnabled#1
 Audio.SetSpeakerConfiguration#1
 Audio.SetUseBluetoothForMic#1
 Audio.SupportsHdmiCec#1
-Audio.SupportsMonoDownmix#1
-Audio.SupportsUseBluetoothForMic#1
 Audio.ToggleHdmiCecMute#1
 Audio/Sink
 Audio/Source
@@ -14851,6 +14870,7 @@ Auto Moderation
 Auto-Registering controller: %s, %s\n
 Auto-detected proxy settings: auto-detect(%s), proxy(%s), proxy-https(%s), exclude:\n
 AutoDeny
+AutoLogin
 AutoLoginUser
 AutoResize
 Autoclear
@@ -15567,6 +15587,8 @@ CAsyncFileWriteJob
 CAudioController::ServiceMiles
 CAudioController::SetMilesMixFragmentMilliseconds
 CAudio_GetHdmiCecActive_Request
+CAudio_ResetConfig_Request"
+CAudio_ResetConfig_Response">\n'CAudio_PlaySpeakerTestOnChannel_Request
 CAudio_SupportsHdmiCec_Request
 CAudio_SupportsHdmiCec_Response
 CAuthenticationRequestMsg
@@ -15924,12 +15946,14 @@ CDesktopCapturePipeWire: Failed to start main PipeWire loop\n
 CDesktopCapturePipeWire: Failed to start the screen cast session.\n
 CDesktopCapturePipeWire: Failed to start the screen cast session: %s\n
 CDesktopCapturePipeWire: Failed to synchronize DMA buffer: %s\n
+CDesktopCapturePipeWire: Finished obtaining persistent permissions, exiting PipeWire until streaming or recording.
 CDesktopCapturePipeWire: Opening DRM render node %s\n
 CDesktopCapturePipeWire: PipeWire core error: %s\n
 CDesktopCapturePipeWire: PipeWire stream format changed (size: %dx%d, format %d, stride %d, size %d, dmabuf: %d)\n
 CDesktopCapturePipeWire: PipeWire stream state changed to %s\n
 CDesktopCapturePipeWire: PipeWire stream state error: %s\n
 CDesktopCapturePipeWire: Start signal received.\n
+CDesktopCapturePipeWire: Stopping capture session
 CDesktopCapturePipeWire: Unknown buffer type: %d\n
 CDesktopCapturePipeWire: Unknown pixel format %d\n
 CDesktopCapturePipeWire: Video frame size does not match provided data!\n
@@ -16602,6 +16626,7 @@ CHardwareUpdateController::OnAppLifetimeNotice
 CHardwareUpdateController::OnControllerBootloaderConnected
 CHardwareUpdateController::OnControllerDetails
 CHardwareUpdateController::OnControllerDisconnected
+CHardwareUpdateController::OnControllerDongleConnected
 CHardwareUpdate_Update_Request
 CHardwareUpdate_Update_Response"?\n+CHardwareUpdate_UpdateProgress_Notification
 CHideCursorMsg""\n\rCSetCursorMsg
@@ -16975,9 +17000,6 @@ CMsgFileLoadDialog
 CMsgFileLoadDialogResponse
 CMsgFind
 CMsgFinishedRequest
-CMsgFocusedNodeText
-CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgFunctionalCurve
 CMsgGCRoutingProtoBufHeader
@@ -17020,7 +17042,6 @@ CMsgLinearCurve
 CMsgLinearListCurve
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -17048,7 +17069,6 @@ CMsgPauseRepaint
 CMsgPersonaChangeResponse
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgPowerCurve
 CMsgProcessInfoNotification
 CMsgProtoBufHeader
@@ -17077,7 +17097,6 @@ CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
-CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSelectOSBranchParams
@@ -17173,8 +17192,6 @@ CMsgVideoGameRecordingDef
 CMsgViewSource
 CMsgWebUITransportFailure
 CMsgWebUITransportInfo
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 CNegotiatedConfig
 CNegotiationCompleteMsg"
 CNegotiationInitMsg
@@ -17470,6 +17487,8 @@ CRemotePlayController::OnRemoteClientVRStreamingInvitation
 CRemotePlayController::OnRemoteDeviceAuthorizationCancelled
 CRemotePlayController::OnRemoteDeviceAuthorizationRequested
 CRemotePlayController::OnRemoteDevicePairingPINChanged
+CRemotePlayController::OnRemoteDeviceSpectatePermissionCanceled
+CRemotePlayController::OnRemoteDeviceSpectatePermissionRequested
 CRemotePlayController::OnRemoteDevicesChanged
 CRemotePlayController::OnRemotePlayInviteResult
 CRemotePlayController::OnRemotePlaySessionStopped
@@ -18056,7 +18075,6 @@ CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
 CUtlSymbolTable
-CV4L2Accel: Found device %s for %c%c%c%c, flags = 0x%x\n
 CVGUIApplicationSteamUI::RunFrame
 CVProfLabel
 CVProfPanel
@@ -18659,6 +18677,7 @@ Comma separated list of metrics catalogs to disable.  This is the last check.
 Comma separated list of metrics operations that are disabled.  This setting has highest priority
 Comma separated list of metrics operations.  Overrides disabled catalogs
 Command
+Command line is already escaped: %s
 Command output: %s
 Command: %s\n
 CommandLine static
@@ -19297,6 +19316,7 @@ Define Huffman Table 0x%02x
 Define Quantization Table %d  precision %d
 Define Restart Interval %u
 Degraded
+Delay-ing global binding registration until manager becomes available: %s
 DelayLaunch
 Delaying request for http%s://%s%s\n, http request cache too busy\n
 Delete
@@ -19354,6 +19374,7 @@ Desktop Stream Thread
 Desktop Text
 Desktop X11 RGB
 Desktop state changed: desktop: %s primary: %s\n
+DesktopCaptureRestoreToken
 DesktopHeightInPixels
 DesktopShortcutCheck
 DesktopWidthInPixels
@@ -19425,7 +19446,6 @@ Disable client beta filtering
 DisableAllToasts
 DisableHttpProxy
 DisableParentalSettings
-DisableSteamDeckAutoDetection
 DisableStreaming
 DisableToastsInGame
 Disabled
@@ -19881,6 +19901,7 @@ EHTTPMethod
 EHTTPStatusCode
 EHTTPStatusCode %d does not allow a body in response, not sending
 EHardwareUpdateDeviceType
+EHardwareUpdatePriority
 EHostIPFamilies
 EINPROGRESS
 EINTR
@@ -20299,6 +20320,7 @@ EnumValueDescriptorProto
 EnumValueOptions
 Enumerate all sysfs LED devices
 Enumerate audio sessions
+EnumerateDevices
 EnumerateLEDDevices
 EnumerateSessions
 EnumerateTokens
@@ -20323,7 +20345,6 @@ Error reading from datastream
 Error reading from stream
 Error reporting not implemented.
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.AmbientLightSensor1: %s (%s, %d)
-Error setting property '%s' on interface com.steampowered.SteamOSManager1.Audio1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.BatteryChargeLimit1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.CpuBoost1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.CpuScaling1: %s (%s, %d)
@@ -20427,6 +20448,7 @@ Error: %s: failed to prepare system report for upload
 Error: %s: failed to prepare wifi trace file upload
 Error: %s: failed to read screenshot file: %s
 Error: %s: failed to register agent
+Error: %s: failed to register pending binding: %s
 Error: %s: failed to remove device: %s
 Error: %s: failed to remove directory: %s
 Error: %s: failed to retrieve diagnostic info state
@@ -20644,6 +20666,7 @@ FCVAR_NEVER_AS_STRING
 FCZ&
 FCtD}
 FDA~i
+FDMEnable
 FF!w
 FILE pointer
 FILT
@@ -20900,6 +20923,7 @@ Failed: invalid callback parameter
 FailedToAdd
 Fails the current game stream session
 Failure
+Fakes a system suspend event
 False
 Family Group
 FamilyGroupFormerMember
@@ -21048,6 +21072,7 @@ Force show stage1 oobe
 Force show stage2 oobe
 Force the use of the system browser composer
 ForceAcceptInvite
+ForceIdentAsSteamDeck
 ForceOOBE
 ForceOOBEStage2
 ForceQuit
@@ -22343,7 +22368,6 @@ GetLocStream
 GetLocStream - Init Stream
 GetLocalHostname
 GetLocalizedNameForTags
-GetLoginUsers
 GetManifestRequestCode
 GetMarketingMessage
 GetMarketingMessageClickedStats
@@ -22452,6 +22476,7 @@ GetString
 GetStringReference
 GetSubSectionData
 GetSubscribedChannels
+GetSupportedFeatures
 GetSurveySchedule
 GetSystemInfo
 GetSystemVersionDetails
@@ -22484,6 +22509,7 @@ GetUserPartnerEventNews
 GetUserPartnerEventViewStatus
 GetUserPurchaseInfo
 GetUserVoteSummary
+GetUsers
 GetUsersSharingDevice
 GetVParent()
 GetVRDeviceInfo
@@ -22767,6 +22793,7 @@ H\n\fGetInventory
 H\n\tCandidate
 H\n\tJoinParty
 H\n\vMonitorInfo
+H\n\vResetConfig
 H\n\vmemberships
 H^dr
 Ha4\n
@@ -22799,6 +22826,7 @@ HardwareReg: failed to query product serial number
 HardwareReg: failed to send request: %d
 HardwareUpdate
 HardwareUpdate.CheckForUpdates#1
+HardwareUpdate.EnumerateDevices#1
 HardwareUpdate.GetState#1
 HardwareUpdate.NotifyStateChanged#1
 HardwareUpdate.NotifyUpdateStateChanged#1
@@ -23054,6 +23082,7 @@ INVALID
 INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_HSOCKETOWNER != m_hSocketOwner
+INVALID_KEY_SYMBOL
 INVALID_SOCKET != hSocket
 INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
@@ -23768,6 +23797,7 @@ JZJ{.
 J\fp
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
+J\n\nRelatedF2P
 J\n\tsummaries
 J\rS%H
 January
@@ -23812,7 +23842,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun  9 2026 00:54:26
+Jun 24 2026 15:29:51
 June
 K'iche'
 K(\f]C15
@@ -24804,6 +24834,7 @@ Method EndBroadcastSession() not implemented.
 Method EndControllerStateFlow() not implemented.
 Method EndGame() not implemented.
 Method EndMiniGameForChatRoomGroup() not implemented.
+Method EnumerateDevices() not implemented.
 Method EnumerateSessions() not implemented.
 Method EnumerateTokens() not implemented.
 Method EnumerateUserFiles() not implemented.
@@ -25038,6 +25069,7 @@ Method GetStoreCategories() not implemented.
 Method GetStorePreferences() not implemented.
 Method GetSubSectionData() not implemented.
 Method GetSubscribedChannels() not implemented.
+Method GetSupportedFeatures() not implemented.
 Method GetSurveySchedule() not implemented.
 Method GetTagList() not implemented.
 Method GetTags() not implemented.
@@ -25317,6 +25349,7 @@ Method RequestPurchase() not implemented.
 Method RequestRecoveryCode() not implemented.
 Method RequestSleep() not implemented.
 Method ResendInvitationToFamilyGroup() not implemented.
+Method ResetConfig() not implemented.
 Method ResetPlaytime() not implemented.
 Method ResolveReport() not implemented.
 Method RespondToRequestedPurchase() not implemented.
@@ -25438,8 +25471,6 @@ Method SubmitPlayerResult() not implemented.
 Method Subscribe() not implemented.
 Method SubscribeBroadcastChannel() not implemented.
 Method SupportsHdmiCec() not implemented.
-Method SupportsMonoDownmix() not implemented.
-Method SupportsUseBluetoothForMic() not implemented.
 Method SuspendAppSession() not implemented.
 Method SwitchBackgroundRecordingGame() not implemented.
 Method SwitchToDesktop() not implemented.
@@ -25925,6 +25956,8 @@ N21CRemotePlayController56CCallbackInternal_OnRemoteClientRemotePlayUpdateComple
 N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayBitrateOverrideE
 N21CRemotePlayController57CCallbackInternal_OnRemoteClientRemotePlayQualityOverrideE
 N21CRemotePlayController58CCallbackInternal_OnRemoteClientRemotePlayClearControllersE
+N21CRemotePlayController58CCallbackInternal_OnRemoteDeviceSpectatePermissionCanceledE
+N21CRemotePlayController59CCallbackInternal_OnRemoteDeviceSpectatePermissionRequestedE
 N21CRemotePlayController60CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSetE
 N21CRemotePlayController69CCallbackInternal_OnRemoteClientStreamSessionUpdateNetworkUtilizationE
 N21CSteamUIAppController16AppDetailsData_tE
@@ -26114,6 +26147,7 @@ N25CGamescopeControllerLinux54CCallbackInternal_OnFramerateReportingFrequencyCha
 N25CHardwareUpdateController29CCallback_OnControllerDetailsE
 N25CHardwareUpdateController34CCallback_OnControllerDisconnectedE
 N25CHardwareUpdateController37CCallbackInternal_OnAppLifetimeNoticeE
+N25CHardwareUpdateController37CCallback_OnControllerDongleConnectedE
 N25CHardwareUpdateController41CCallback_OnControllerBootloaderConnectedE
 N25CSteamUINetworkController36CCallbackInternal_OnAppSummaryUpdateE
 N25CSteamUINetworkController41CCallbackInternal_OnConnectionStateUpdateE
@@ -28021,8 +28055,9 @@ Plat_IsGamescope()
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
 Plat_IsSteamOS3FactoryImage
+Plat_IsSteamOSGameMode
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_IsWSL
 Plat_MSTime
@@ -28224,6 +28259,7 @@ PurchaseRequest
 PurchaseStatus
 PurchasedCustomization
 PutInternal: Not enough space for put when locked\n
+Pyrowave
 Q$By5
 Q/xtJ2
 Q0\nk
@@ -28408,6 +28444,7 @@ RMls
 RNjv">
 ROMod.ini
 ROhu
+RPOEnable
 RRvM;;
 RSA Data Security, Inc.
 RSA Data Security, Inc. PKCS
@@ -28648,6 +28685,7 @@ RegisterApplication
 RegisterBatteryProvider
 RegisterCompatTool
 RegisterEndpoint
+RegisterForUsersChanged
 RegisterGamescopeControl
 RegisterListeners
 RegisterPlayer
@@ -28740,6 +28778,8 @@ RemotePlay.RegisterForRemoteClientStopped
 RemotePlay.RegisterForRemoteDeviceAuthorizationCancelled
 RemotePlay.RegisterForRemoteDeviceAuthorizationRequested
 RemotePlay.RegisterForRemoteDevicePairingPINChanged
+RemotePlay.RegisterForRemoteDeviceSpectatePermissionCanceled
+RemotePlay.RegisterForRemoteDeviceSpectatePermissionRequested
 RemotePlay.RegisterForRestrictedSessionChanges
 RemotePlay.RegisterForSessionJoined
 RemotePlay.RegisterForSessionStarted
@@ -28757,6 +28797,7 @@ RemotePlay.SetPerUserMouseInputEnabled
 RemotePlay.SetPerUserMouseInputEnabledWithGuestID
 RemotePlay.SetRemoteDeviceAuthorized
 RemotePlay.SetRemoteDevicePIN
+RemotePlay.SetRemoteDeviceSpectateAllowed
 RemotePlay.SetRemotePlayEnabled
 RemotePlay.SetStreamingClientConfig
 RemotePlay.SetStreamingClientConfigEnabled
@@ -28889,6 +28930,7 @@ RequestingLicense
 Require
 Require Explicit Policy
 RequirePostHandshake
+Required
 Required fields are not allowed in proto3.
 Requires 64bit operating system
 RequiresCachedPmtMethod
@@ -28905,6 +28947,7 @@ Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
 ReservedGamepad
 Reset Content
+ResetConfig
 ResetData
 ResizeColumnToContents
 ResolutionOverride
@@ -28992,6 +29035,7 @@ Rs$c~B
 RuPay
 Rule
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 RunGame
 RunGameEngine007
@@ -29432,7 +29476,6 @@ STEAMVIDEOTOKEN
 STEAM_
 STEAM_ALLOW_DRIVE_ADOPT
 STEAM_ALLOW_DRIVE_UNMOUNT
-STEAM_BASE_FOLDER
 STEAM_CLIENT_LOG_FOLDER
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_ENABLE_STATUS_LED_BRIGHTNESS
@@ -30195,7 +30238,6 @@ SkipDiscoveryQueueItem
 SkipOfflineModeWarning
 Skipped at least 1 frame while encoding video\n
 Skipping adding audio track to segment writer
-Skipping global binding registration: feature unsupported: %s
 Skipping in-progress or failed download for %u, asset type %s
 Skipping js method registration, already exists: %s
 Skipping usage report for controller: %s\n
@@ -30626,8 +30668,6 @@ SteamOSManager.SetUserPassword#1
 SteamOSManager.SwitchToDesktop#1
 SteamOSManager1AmbientLightSensor1
 SteamOSManager1AmbientLightSensor1Proxy
-SteamOSManager1Audio1
-SteamOSManager1Audio1Proxy
 SteamOSManager1BatteryChargeLimit1
 SteamOSManager1BatteryChargeLimit1Proxy
 SteamOSManager1CpuBoost1
@@ -31021,6 +31061,7 @@ StringAfterPrefixCaseSensitive
 StringCompare
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 StringPrintfVector currently only supports up to
 Strong Extranet ID
 StyleFlagFilter
@@ -31062,14 +31103,13 @@ SupportedUUIDs
 SupportsCDKeyCopyToClipboard
 SupportsHdmiCec
 SupportsHdmiCec: %u
-SupportsMonoDownmix
 SupportsMonoDownmix: %u
 SupportsOSVR
 SupportsOculusVR
 SupportsOpenVROverlay
 SupportsOpenVRScene
 SupportsOpenXR
-SupportsUseBluetoothForMic
+SupportsResetConfig: %u
 SupportsUseBluetoothForMic: %u
 SuppressAutoRun
 SurveyDate
@@ -31478,6 +31518,7 @@ TSListBase_Pop
 TSListBase_Push
 TSListBase_SwapList
 TSListBase_UnsafePeek
+TSOEnable
 TSQueueBase_Init
 TSQueueBase_Pop
 TSQueueBase_Push
@@ -31947,6 +31988,7 @@ UI Request: forget password %s
 UI Request: go offline
 UI Request: go online
 UI Request: reconnect
+UI Request: remove all users
 UI Request: remove user %s
 UI Request: sign out and restart
 UI Request: starting login refresh
@@ -32377,6 +32419,7 @@ User.Reconnect
 User.RegisterForConnectionAttemptsThrottled
 User.RegisterForCurrentUserChanges
 User.RegisterForLoginStateChange
+User.RegisterForLoginUsersChanged
 User.RegisterForPrepareForSystemSuspendProgress
 User.RegisterForResumeSuspendedGamesProgress
 User.RegisterForShowHardwareSurvey
@@ -32385,6 +32428,7 @@ User.RegisterForShutdownFailed
 User.RegisterForShutdownStart
 User.RegisterForShutdownState
 User.RegisterShowSaveHardwareDialog
+User.RemoveAllUsers
 User.RemoveUser
 User.RequestSupportSystemReport
 User.ResumeSuspendedGames
@@ -32392,8 +32436,8 @@ User.RunSurvey
 User.SaveHardwareInfo#1
 User.SendSurvey
 User.SetAsyncNotificationEnabled
+User.SetCheckForUpdatesOnRestart
 User.SetLoginCredentials
-User.ShouldShowUserChooser
 User.ShowSaveHardwareDialog
 User.SignOutAndRestart
 User.StartLogin
@@ -33876,9 +33920,11 @@ Zulu
 \n)CFamilyGroups_GetPlaytimeSummary_Response
 \n)CFamilyGroups_InviteToFamilyGroup_Request
 \n)CFriendMessages_GetRecentMessages_Request
+\n)CHardwareUpdate_EnumerateDevices_Response
 \n)CPublishedFile_RefreshVotingQueue_Request
 \n)CQueuedMatchmaking_SearchForGame_Response
 \n)CSiteManagerClient_IncomingClient_Request
+\n)CSleepManager_RequestSuspend_Notification
 \n)CSteamTV_SetBroadcastChannelImage_Request
 \n)CStoreBrowse_GetContentHubConfig_Response
 \n)CStore_GetRecommendedTagsForUser_Response
@@ -34247,6 +34293,7 @@ Zulu
 \n\fis_bluetooth
 \n\fis_completed
 \n\fis_connected
+\n\fis_downgrade
 \n\fis_ejectable
 \n\fis_extension
 \n\fis_off_panel
@@ -34298,6 +34345,7 @@ Zulu
 \n\fmicroseconds
 \n\fmin_progress
 \n\fminutes_used
+\n\fmono_downmix
 \n\fmouse_button
 \n\fmusic_volume
 \n\fneeds_action
@@ -34336,6 +34384,7 @@ Zulu
 \n\frelease_date
 \n\frequired_age
 \n\frequiredtags
+\n\freset_config
 \n\fresolution_x
 \n\fresolution_y
 \n\freview_count
@@ -34921,6 +34970,7 @@ Zulu
 \n\tStatsInfo
 \n\tTwoFactor
 \n\tVideoClip
+\n\t\tChain Certificate %d:\n
 \n\t\t{\n\t\t\t"position": { "x": %d, "y": %d },\n\t\t\t"monitorLeft": %d,\n\t\t\t"monitorTop": %d,\n\t\t\t"monitorRight": %d,\n\t\t\t"monitorBottom": %d,\n\t\t\t"scaleToMonitor": %f,\n\t\t\t"elementZoom": %f\n\t\t}\n\t
 \n\taccountid
 \n\tadminonly
@@ -35238,6 +35288,7 @@ Zulu
 \n\vgidfeature2
 \n\vhardware_id
 \n\vhas_upvoted
+\n\vheader_text
 \n\vhost_gameid
 \n\vhttp_method
 \n\vhwnd_parent
@@ -35433,6 +35484,7 @@ Zulu
 \r\n\tJS_NUMBER
 \r\n\tJS_STRING
 \r\n\tSUCCEEDED
+\r\n\tSuggested
 \r\n\tTYPE_BOOL
 \r\n\tTYPE_ENUM
 \r\n\tTriton_BL
@@ -35571,7 +35623,7 @@ Zulu
 \v\vTSG
 \venums.proto
 \venums.proto"
-\venums.proto"$\n"CAudio_SupportsMonoDownmix_Request"6\n#CAudio_SupportsMonoDownmix_Response
+\venums.proto"%\n#CAudio_GetSupportedFeatures_Request"q\n$CAudio_GetSupportedFeatures_Response
 \venums.proto"*\n(CChat_RequestFriendPersonaStates_Request"+\n)CChat_RequestFriendPersonaStates_Response"
 \venums.proto"0\n\vParentalApp
 \venums.proto">\n
@@ -36016,6 +36068,7 @@ adopt-drive: returned %d
 adopt-drive: starting: %s
 adult_content_sex
 adult_content_violence
+advance_access_date
 advertisement
 aes key setup failed
 aes-128-cbc
@@ -36462,7 +36515,6 @@ audio send
 audio.channels
 audio.format
 audio.samplerate
-audio1
 audioSamplingRate
 audio_channel_config
 audio_channel_count
@@ -36604,7 +36656,6 @@ bDPadRight
 bDPadUp
 bDesktopShortcut
 bDeveloper
-bDisableSteamDeckAutoDetection
 bDisableUserMediaUpload
 bDisplayIsExternal
 bDisplayIsUsingAutoScale
@@ -36619,11 +36670,12 @@ bEnabled
 bEnterDismissesKeyboard
 bExpectedThisThread && !m_QueueCallbackMsg.IsEmpty()
 bExternalProcessForVOD
+bFDMEnable
 bForVR || eVideoSource == k_EVideoSourceNone || eVideoSource != m_eVideoSource[ !bForVR ]
+bForceIdentAsSteamDeck
 bForceRequeue || m_unThreadBytesToRead == 0 || m_eResultRunSSL != k_EResultOK
 bFreeRemovableLicense
 bGameQueryDone
-bGameSuspended
 bGamepadRequired
 bGu\r
 bGyroMouse
@@ -36729,6 +36781,7 @@ bProgenitorRecommended
 bPromptToChangePassword
 bPublic == false
 bQuickAccessButton
+bRPOEnable
 bReceivedSomething
 bRecommended
 bRefreshComplete
@@ -37819,6 +37872,7 @@ cofactor
 col < m_CurrentColumns.Count()
 collect-enabled
 collect_data
+collection_time_active
 collection_type
 color
 color map overflow (BAD internal error)
@@ -37834,7 +37888,6 @@ com.steampowered.SteamOSLogSubmitter.Helper
 com.steampowered.SteamOSLogSubmitter.Manager
 com.steampowered.SteamOSManager1
 com.steampowered.SteamOSManager1.AmbientLightSensor1
-com.steampowered.SteamOSManager1.Audio1
 com.steampowered.SteamOSManager1.BatteryChargeLimit1
 com.steampowered.SteamOSManager1.CpuBoost1
 com.steampowered.SteamOSManager1.CpuScaling1
@@ -37909,6 +37962,7 @@ complete
 completed
 completed_time
 completed_update
+completion_achievements
 complex
 component
 component_code
@@ -38606,6 +38660,7 @@ currencies
 currency
 currentAppID
 currentConfig
+currentFriendCount
 currentTestStep
 currentUsers
 current_build_id
@@ -39379,9 +39434,9 @@ dx_driver_version
 dy != NULL
 dynamic
 dynamic_cast
-dynamicbitrate: data loss, bw %0.02f -> %0.02f\n
+dynamicbitrate: data loss\n
 dynamicbitrate: ignore early data loss (%0.03f < %0.03f)\n
-dynamicbitrate: link %f Mbit/s lp %f Mbit/s meas %f Mbit/s pflags %d %d\n
+dynamicbitrate: tgt:%0.02f link:%0.02f lp:%0.02f meas:%0.02f inst:%0.02f dr_p:%0.02f dr_d:%0.02f pflags:(%d %d) pavg:%0.01f pmax:%0.01f\n
 e exp master
 e+ZQT
 e60c
@@ -39448,6 +39503,7 @@ eState
 eState = %d for nAppID = %d\n
 eSteamGuardState
 eSteamInputControllerMask
+eTSOEnable
 eTouchGesture
 eType
 eUIMode
@@ -40033,6 +40089,7 @@ fcntl
 fd-cl-
 fd-srv-
 fdatasync
+fdm_enable
 fdopen
 fe80::/10
 feature
@@ -40085,11 +40142,9 @@ file doesn't exist: %s
 file error
 file:
 file://
-file://%s/%s
 file://%s\r\n
 file://{images}
 file://{images}/library/controller/binding_icons/%s
-file://{images}/login/user_login.png
 file_committed
 file_ctrl
 file_description
@@ -40245,7 +40300,6 @@ force display of SSA
 force overlay based audio capture (disable MF based audio capture path)
 force_alphabetic_friend_sorting
 force_deck_perf_tab
-force_direct_hwnd_popups
 force_emit_message
 force_emit_service
 force_fake_mandatory_update
@@ -40266,6 +40320,7 @@ formatted_amount
 formatted_balance
 formatted_delayed_balance
 formatted_final_price
+formatted_lowest_recent_price
 formatted_original_price
 formatted_renewal_price
 former_members
@@ -43628,9 +43683,7 @@ gpu-trace --stop
 gpu_compositing
 gpu_desc
 gpu_performance_level
-gpu_performance_manual_max_mhz
 gpu_performance_manual_mhz
-gpu_performance_manual_min_mhz
 gpu_webview_regkey_disabled
 gpus
 gqr<
@@ -43881,7 +43934,6 @@ haptic_strength_right
 haptics_enabled
 hardware
 hardware_cluster_id
-hardware_id
 hardware_updater_enabled
 hasPin
 has_adult_content
@@ -45177,6 +45229,7 @@ isbundle
 isevcert
 isinbundle
 ispageload
+ispublic
 isredirect
 isspace
 issuer
@@ -46802,7 +46855,6 @@ k_EMsgSCIDRequest
 k_EMsgSCIDResponse
 k_EMsgSMExpensiveReport
 k_EMsgSMHourlyReport
-k_EMsgSMMonitorSpace
 k_EMsgSMPartitionRenames
 k_EMsgSecretsBase
 k_EMsgServerSecretChanged
@@ -46978,6 +47030,7 @@ k_ESharedLibrary_FreeGame
 k_ESharedLibrary_Included
 k_ESharedLibrary_LicensePrivate
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -47202,8 +47255,7 @@ k_EStreamVideoCodecAV1
 k_EStreamVideoCodecH264
 k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
-k_EStreamVideoCodecORBX1
-k_EStreamVideoCodecORBX2
+k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
 k_EStreamVideoCodecVP8
 k_EStreamVideoCodecVP9
@@ -47806,7 +47858,6 @@ localhost
 localhost/
 localityName
 localization
-localization_path
 localization_token
 localized_category_name
 localized_desc
@@ -48937,6 +48988,7 @@ m_vecCallbacksStreamingLaunchComplete
 m_vecCallbacksStreamingPrelaunchCheck
 m_vecCallbacksStreamingShowEula
 m_vecCallbacksStreamingShowLaunchOptions
+m_vecCallbacksUsersChanged
 m_vecCompletedAndWaiting
 m_vecConfigSelectionChangedCallbacks
 m_vecConnectPingResults
@@ -49093,6 +49145,7 @@ m_vecUninstallApps
 m_vecUnlockPromise
 m_vecUserProxyExcludedHosts
 m_vecUsers
+m_vecUsers.IsEmpty()
 m_vecVRHardwareDetected
 m_vecVRModeChange
 m_vecVRSceneAppChange
@@ -49196,7 +49249,6 @@ manage_signing
 manager
 manager2
 mandatory
-mandatory_update
 manifest
 manifest_request_code
 manifest_requests
@@ -49243,6 +49295,7 @@ maskGenFunc
 master secret
 master_key
 master_sub
+master_sub_appid
 mastersub_appid
 mastersub_includedwith_logo
 match_all_tags
@@ -49754,6 +49807,7 @@ nTargetLength > 0
 nTotal
 nTotalDisks
 nTotalSize <= bigBuffer.SizeAllocated()
+nTritonGyroHWCalValue
 nTurnOffSound
 nTurnOnSound
 nUploadKbps
@@ -50205,7 +50259,8 @@ nonce
 nonce mismatch
 nonce not returned
 none
-nonpreferred_product_type
+nonpreferred_product_software
+nonpreferred_product_vr
 nonsegmentedvideo
 nopqrs(
 normal
@@ -51188,6 +51243,7 @@ permitted
 permitted subtree violation
 permittedSubtrees
 persian
+persist_mode
 persona
 personaName
 persona_name_added
@@ -51880,7 +51936,6 @@ preload
 preloaded
 preloading
 preloadonly
-prepare_for_suspend
 prepend
 prerelease
 prerelease-
@@ -52560,9 +52615,9 @@ res binder
 res master
 reseed error
 reservation_country_code
+reservation_not_allowed
 reservation_state
 reservation_status
-reservation_type
 reserved
 reserved_range
 reset
@@ -52626,6 +52681,7 @@ response_time
 response_time_ms
 responses
 restart
+restore_token
 restrict_auto_updates
 restrict_auto_updates_end
 restrict_auto_updates_start
@@ -52636,7 +52692,6 @@ result too small
 resulting_array
 resulting_device
 results
-resume_suspended_games
 resumption
 ret <= sizeof( m_rgchPeeked ) - m_unBytesPeeked
 retcode
@@ -52741,6 +52796,7 @@ row_stride == (int)( nImageWidth * jpegInfo.output_components )
 row_stride_out >= row_stride
 rowheight
 rows
+rpo_enable
 rq7x;P
 rsa operations not supported
 rsa routines
@@ -52951,7 +53007,6 @@ saved_snapshot
 sbgp-autonomousSysNum
 sbgp-ipAddrBlock
 sbgp-routerIdentifier
-sc_force_fw_update
 sc_schinese
 scale
 scale <= 32768
@@ -54104,6 +54159,7 @@ steam_deck_keyboard_skin
 steam_deck_keyboard_skins
 steam_deck_startup_movies
 steam_dev.cfg
+steam_frame_compat_category
 steam_hw_compat_category_packed
 steam_icon_
 steam_id
@@ -54119,8 +54175,6 @@ steam_oslog_submitter_manager_proxy_get_property
 steam_oslog_submitter_manager_proxy_set_property
 steam_osmanager1_ambient_light_sensor1_proxy_get_property
 steam_osmanager1_ambient_light_sensor1_proxy_set_property
-steam_osmanager1_audio1_proxy_get_property
-steam_osmanager1_audio1_proxy_set_property
 steam_osmanager1_battery_charge_limit1_proxy_get_property
 steam_osmanager1_battery_charge_limit1_proxy_set_property
 steam_osmanager1_cpu_boost1_proxy_get_property
@@ -54691,6 +54745,7 @@ supports_speed
 supports_startup_brightness
 supports_touch_input
 supports_video_hevc_OBSOLETE
+suppress_actual_suspend
 suppress_gpu_chrome
 suppress_notifications
 suppressims
@@ -54857,11 +54912,10 @@ terminate called without an active exception\n
 tesa
 test
 test on resume from suspend
-test resuming all games
-test suspending all games
 test_loc_token
 test_result
 test_resume_from_suspend
+test_suspend
 testnotification
 testonly
 tests
@@ -55495,6 +55549,7 @@ tooltipdelay
 tooltiptext
 topGrip
 total
+totalFriendCount
 total_achievements
 total_bytes_downloaded
 total_bytes_patched
@@ -55555,6 +55610,7 @@ tree_init
 triggered
 triggergetsysteminfo
 trim-command: %s
+triton_gyro_hw_cal
 true
 true"v\n+CClanChatRooms_GetClanChatRoomInfo_Response
 truncated
@@ -55587,6 +55643,7 @@ ts_get_status_text
 ts_verify_cert
 tsa name mismatch
 tsa untrusted
+tso_enable
 tst info setup error
 tswana
 turkish
@@ -56146,6 +56203,7 @@ use srtp not negotiated
 use24hour_clock
 use_account_cart
 use_action_block
+use_bluetooth_for_mic
 use_certificate_chain_file
 use_qos
 use_unique_filename

@@ -177,6 +177,7 @@ $ORIGIN
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapIPKcii22CDefCaselessStringLessE
 9IValidate
+:X5\tod
 :done\n
 :error\n
 @echo off\n
@@ -461,6 +462,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 Sunday
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for

@@ -716,6 +716,20 @@
         Active: "_19WwgHXljoThfByC7B-MLW",
         ActivatableStroke: "_2Jn2RR1yUV9GJ6u9HN1dER",
         ActivatableGradient: "cIR7HWORR4OnuhH8CsVvr",
+        VRLink: "_1dYQELEFBNFH0IYvXkMftN",
+        Off: "_127biiI7_uwVm-W_19FgJp",
+        InnerArc: "_21GOsrHjWqo70iIxGr-ds3",
+        MiddleArc: "_1FDt0er0XaGOLFzzfp-7Q8",
+        OuterArc: "_1Q4DgIEGKtDwXf8mWbYxKN",
+        Dot: "QSXPssIFxIIPQy5pSPIUR",
+        HMD: "fZ4HR_XqSs8jBXWyeSNmk",
+        SignalLow: "lgt4jn3n3i_TC14MNsjfZ",
+        SignalMedium: "_2yGzWPU6NsqFSAEkvwIF4c",
+        Searching: "ccU_YGs5TgZ5tFm4QkvOd",
+        VRLinkBar1Anim: "WdIUI58OZ2M8ChR9xVnyn",
+        VRLinkBar2Anim: "_1Z_SQ03m0DmkwdI5azEgnK",
+        VRLinkBar3Anim: "_1rVd9nWlALxedt2GKN3ISH",
+        VRLinkBar4Anim: "_8npUohpwuztM69MHcA53a",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -2361,11 +2375,7 @@
             )),
             (this.m_navigationSourceSupportsFocus = (0, _._)(
               this.m_navigationSource,
-              (_) =>
-                (null == _ ? void 0 : _.eActivationSourceType) ===
-                  _._.GAMEPAD ||
-                (null == _ ? void 0 : _.eActivationSourceType) ===
-                  _._.KEYBOARD_SIMULATOR,
+              (_) => (0, _._)(null == _ ? void 0 : _.eActivationSourceType),
             )),
             (this.m_bShowDebugFocusRing = (0, _._)(!1)),
             (this.m_glyphInfo = (0, _._)({
@@ -2511,7 +2521,7 @@
         get NavigationSourceGlyphInfo() {
           return this.m_glyphInfo;
         }
-        DispatchVirtualButtonClick(_, _) {
+        DispatchVirtualButtonClick(_, _, _) {
           var _;
           let _;
           _ &&
@@ -2521,7 +2531,7 @@
                 : this.FindAnActiveContext()),
             this.OnButtonDown(
               _,
-              _._.GAMEPAD,
+              null != _ ? _ : _._.GAMEPAD,
               -1,
               void 0,
               void 0,
@@ -2532,7 +2542,7 @@
             ),
             this.OnButtonUp(
               _,
-              _._.GAMEPAD,
+              null != _ ? _ : _._.GAMEPAD,
               -1,
               void 0,
               void 0,
@@ -2577,15 +2587,13 @@
                         : _.Value) || void 0 === _
                     ? void 0
                     : _.eActivationSourceType),
-              !(
-                _.m_LastActiveNavTree.GetLastFocusedNode() ||
-                (_ != _._.GAMEPAD && _ != _._.KEYBOARD_SIMULATOR) ||
+              !_.m_LastActiveNavTree.GetLastFocusedNode() &&
+                (0, _._)(_) &&
                 (_(
                   `GetEventTarget: Context ${_.LogName()} tree ${_.m_LastActiveNavTree._} has no focused node, ${_ ? "finding one" : "will not find one"}`,
                 ),
                 _ && _.m_LastActiveNavTree.TakeFocus(_._.GAMEPAD, !0),
-                this.BGlobalGamepadButton(_))
-              ))
+                !this.BGlobalGamepadButton(_)))
             )
               return [void 0, _];
             _.m_LastActiveNavTree.GetLastFocusedNode()
@@ -3308,6 +3316,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -3378,7 +3387,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -3391,12 +3399,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3410,7 +3416,6 @@
         _ = _.lazy(async () => ({
           default: (
             await Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -8241,10 +8246,10 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
-                  use_gyro_sw_biases: {
+                  triton_gyro_hw_cal: {
                     _: 48,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
                   },
                 },
               }),
@@ -10477,6 +10482,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -10484,33 +10490,33 @@
         const _ = document.cookie.match("(^|; )" + _.name + "=([^;]*)");
         return _ && _[2] ? decodeURIComponent(_[2]) : void 0;
       }
+      function _(_, _) {
+        var _, _, _, _, _;
+        if (!document.cookie) return;
+        if (!(0, _._)(_)) return void 0;
+        const _ =
+          null !==
+            (_ = null === (_ = _.options) || void 0 === _ ? void 0 : _.path) &&
+          void 0 !== _
+            ? _
+            : "/";
+        let _ = "";
+        (null === (_ = _.options) || void 0 === _ ? void 0 : _.expires)
+          ? (_ += ";expires=" + _.options.expires.toUTCString())
+          : (null === (_ = _.options) || void 0 === _ ? void 0 : _.maxAge) &&
+            (_ += ";max-age=" + Math.floor(_.options.maxAge / 1e3)),
+          (null === (_ = _.options) || void 0 === _ ? void 0 : _.secure) &&
+            (_ += ";secure"),
+          (document.cookie =
+            encodeURIComponent(_.name) +
+            "=" +
+            encodeURIComponent(_) +
+            _ +
+            ";path=" +
+            _);
+      }
       function _(_) {
-        return (function (_, _) {
-          var _, _, _, _, _;
-          if (!document.cookie) return;
-          if (!(0, _._)(_)) return;
-          const _ =
-            null !==
-              (_ =
-                null === (_ = _.options) || void 0 === _ ? void 0 : _.path) &&
-            void 0 !== _
-              ? _
-              : "/";
-          let _ = "";
-          (null === (_ = _.options) || void 0 === _ ? void 0 : _.expires)
-            ? (_ += ";expires=" + _.options.expires.toUTCString())
-            : (null === (_ = _.options) || void 0 === _ ? void 0 : _.maxAge) &&
-              (_ += ";max-age=" + Math.floor(_.options.maxAge / 1e3)),
-            (null === (_ = _.options) || void 0 === _ ? void 0 : _.secure) &&
-              (_ += ";secure"),
-            (document.cookie =
-              encodeURIComponent(_.name) +
-              "=" +
-              encodeURIComponent(_) +
-              _ +
-              ";path=" +
-              _);
-        })(
+        return _(
           {
             ..._,
             options: {
@@ -11029,6 +11035,7 @@
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
+            focusRingSizeElementID: _,
             focusable: _,
             navRef: _,
             actionDescriptionMap: _,
@@ -11056,6 +11063,7 @@
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
+            focusRingSizeElementID: _,
             focusable: _,
             navRef: _,
             onMoveUp: _,
@@ -11369,7 +11377,7 @@
             return (
               (0, _.useEffect)(() => {
                 if (_ && _) {
-                  let _ = _.GetBoundingRect(),
+                  let _ = _.GetBoundingRectForFocusRing(),
                     _ = _.Element;
                   const _ = _.ownerDocument.defaultView,
                     _ = (_) =>
@@ -11402,7 +11410,7 @@
           })(_, _),
           _ = _.useCallback(() => {
             if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
-            let _ = _.GetBoundingRect();
+            let _ = _.GetBoundingRectForFocusRing();
             const _ = _.getBoundingClientRect(),
               _ = {
                 left: _._ - _._,
@@ -12009,7 +12017,11 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       var _, _;
+      function _(_) {
+        return _ === _.GAMEPAD || _ === _.KEYBOARD_SIMULATOR;
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       }),
@@ -13179,6 +13191,27 @@
           return null === (_ = this.m_element) || void 0 === _
             ? void 0
             : _.getBoundingClientRect();
+        }
+        GetBoundingRectForFocusRing() {
+          var _, _, _;
+          let _ = this.m_element;
+          return (
+            (null === (_ = this.m_Properties) || void 0 === _
+              ? void 0
+              : _.focusRingSizeElementID) &&
+              (_ =
+                null !==
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.ownerDocument) ||
+                    void 0 === _
+                      ? void 0
+                      : _.getElementById(
+                          this.m_Properties.focusRingSizeElementID,
+                        )) && void 0 !== _
+                  ? _
+                  : this.m_element),
+            null == _ ? void 0 : _.getBoundingClientRect()
+          );
         }
         SetHasFocus(_) {
           this.m_Focused.Set(_);
@@ -14505,7 +14538,7 @@
         return _;
       }
       function _(_, _, _) {
-        if (_ >= 0 || _ >= 0) {
+        if (_ >= 0 && _ >= 0) {
           const _ = _.splice(_, 1)[0];
           _ >= _.length ? (_[_] = _) : _.splice(_, 0, _);
         }
@@ -15245,16 +15278,11 @@
       }
       function _(_) {
         if (0 == _.length) return !1;
-        for (let _ = 0; _ < _.length; _++)
-          if (_[_] < "0" || _[_] > "9") return !1;
+        for (let _ = 0; _ < _.length; _++) {
+          const _ = _.charCodeAt(_);
+          if (_ < 48 || _ > 57) return !1;
+        }
         return !0;
-      }
-      function _(_) {
-        return (
-          "string" == typeof _ &&
-          !Number.isNaN(_) &&
-          !Number.isNaN(Number.parseFloat(_))
-        );
       }
       function _(_) {
         if (!/^-?\d+$/.test(_)) return !1;
@@ -15274,7 +15302,6 @@
         return [_ * _, _ * _];
       }
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -16365,7 +16392,7 @@
           case _._:
             return _._.Localize("#moderationaction_sanctioned");
           case _._:
-            return _._.Localize("#moderationaction_sustainedondispute");
+            return _._.Localize("#moderationaction_sustained");
           case _._:
             return _._.Localize("#moderationaction_unresolved");
           case _._:
@@ -27601,7 +27628,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = {};
       __webpack_require__._(_),
@@ -28504,26 +28530,6 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  dispute_resolved_time: {
-                    _: 20,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  dispute_resolver_steamid: {
-                    _: 21,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  dispute_resolved: {
-                    _: 22,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  dispute_resolved_reason: {
-                    _: 23,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
                   owner_dispute_time: {
                     _: 24,
                     _: _._.readUint32,
@@ -28572,6 +28578,11 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  decision_reversed: {
+                    _: 33,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -30077,6 +30088,21 @@
                     _: 2,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  subject_type: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  subject_group_id: {
+                    _: 4,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  subject_id: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -32845,6 +32871,113 @@
           return "CContentModeration_ReleaseSubjects_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subject_type: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  subject_group_id: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  subject_id: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_SustainModeration_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_SustainModeration_Response";
+        }
+      }
       var _;
       !(function (_) {
         (_.ClaimBatch = function (_, _) {
@@ -33189,6 +33322,17 @@
           (_.GetReporterStats = function (_, _) {
             return _.SendMsg(
               "ContentModeration.GetReporterStats#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.SustainModeration = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.SustainModeration#1",
               (0, _._)(_, _),
               _,
               {
@@ -41001,6 +41145,16 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  total_achievements: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  completion_achievements: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -41109,7 +41263,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.achievements || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
+            _.Message.initialize(this, _, 0, -1, [1, 4], null);
         }
         static M() {
           return (
@@ -41132,6 +41286,12 @@
                     _: 3,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  groups: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -41251,7 +41411,69 @@
           return "CPlayer_GetUserAchievements_Response_Achievement";
         }
       }
-      _.Message;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.groupid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  groupid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  completion_achievements: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserAchievements_Response_Group";
+        }
+      }
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -47775,6 +47997,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  steam_frame_compat_category: {
+                    _: 13,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -54243,16 +54470,16 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
+      function _(_, _) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
         if (void 0 === _) return;
         if (null === _) return null;
         const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ ? _.filter((_) => !!_.all_ages) : _;
+        return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
       }
-      function _(_, _, _) {
-        const _ = _(_);
+      function _(_, _, _, _) {
+        const _ = _(_, _);
         if (_ && 0 != _.length)
           return _ ? _.find((_) => _.trailer_base_id === _) : _ ? _[0] : void 0;
       }
@@ -59718,6 +59945,7 @@
           (this.m_bCreated = !1),
             (this.m_onCreateRender = null),
             (this.m_bFocused = !1),
+            (this.m_rgChildBrowserViews = []),
             (0, _._)(this),
             (0, _._)(
               _,
@@ -59919,18 +60147,17 @@
           return this.m_rgParams;
         }
         Focus(_ = _.iEc.k_EWindowBringToFrontAndForceOS) {
-          _ != _.iEc.k_EWindowBringToFrontInvalid &&
-            (this.m_popup &&
-            void 0 !== this.m_popup.SteamClient &&
-            void 0 !== this.m_popup.SteamClient.Window
+          this.m_popup &&
+            _ != _.iEc.k_EWindowBringToFrontInvalid &&
+            ((0, _._)(this.m_popup, "Window.BringToFront")
               ? this.m_popup.SteamClient.Window.BringToFront(_)
-              : this.m_popup && this.m_popup.focus());
+              : this.m_popup.focus());
         }
         Close() {
           this.m_popup &&
-            ((0, _._)(this.m_popup.window, "Window.Close")
-              ? this.m_popup.window.SteamClient.Window.Close()
-              : this.m_popup.window.close());
+            ((0, _._)(this.m_popup, "Window.Close")
+              ? this.m_popup.SteamClient.Window.Close()
+              : this.m_popup.close());
         }
         GetName() {
           return this.m_strName;
@@ -60009,6 +60236,20 @@
         OnBeforeUnload() {}
         OnFocus() {}
         OnBlur() {}
+        get childBrowserViews() {
+          return this.m_rgChildBrowserViews;
+        }
+        RegisterChildBrowserView(_) {
+          return (
+            this.m_rgChildBrowserViews.push(_),
+            {
+              Unregister: () =>
+                (this.m_rgChildBrowserViews = this.m_rgChildBrowserViews.filter(
+                  (_) => _ != _,
+                )),
+            }
+          );
+        }
       }
       (0, _._)([_._], _.prototype, "m_bFocused", void 0),
         (0, _._)([_._], _.prototype, "OnMessage", null),
@@ -60122,7 +60363,6 @@
             }.MOBILE_BUILD && "addEventListener" in window)
           ) {
             window.addEventListener("beforeunload", (_) => {
-              var _, _, _, _;
               this.m_bShuttingDown = !0;
               for (let _ of this.m_rgShutdownCallbacks) _();
               let _ = [];
@@ -60130,22 +60370,15 @@
                 _.BIsValid() && !_.BIsClosed() && _.push(_);
               });
               for (let _ of _)
-                (null ===
-                  (_ =
-                    null === (_ = _.window) || void 0 === _
-                      ? void 0
-                      : _.SteamClient.Browser) || void 0 === _
-                  ? void 0
-                  : _.SetShouldExitSteamOnBrowserClosed) &&
+                (0, _._)(
+                  _.window,
+                  "Browser.SetShouldExitSteamOnBrowserClosed",
+                ) &&
                   _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                     !1,
                   ),
-                  (null === (_ = _.window) || void 0 === _
-                    ? void 0
-                    : _.SteamClient.Window.SetHideOnClose) &&
-                    (null === (_ = _.window) ||
-                      void 0 === _ ||
-                      _.SteamClient.Window.SetHideOnClose(!1)),
+                  (0, _._)(_.window, "Window.SetHideOnClose") &&
+                    _.window.SteamClient.Window.SetHideOnClose(!1),
                   _.Close();
               this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                 this.m_mapPopups.clear();
@@ -63679,6 +63912,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -66488,80 +66722,6 @@
         }
       }
       var _, _;
-      function _(_) {
-        return "app" == _ ? _._._ : "sub" == _ ? _._._ : _._._;
-      }
-      function _(_) {
-        switch (_) {
-          case _._._:
-            return "app";
-          case _._._:
-            return "bundle";
-          case _._._:
-            return "package";
-          case _._._:
-            return "mtx";
-        }
-        return "invalid";
-      }
-      function _(_) {
-        switch (_) {
-          case "sub":
-            return _._._;
-          case "bundle":
-            return _._._;
-          default:
-            return _._._;
-        }
-      }
-      function _(_, _) {
-        switch (_) {
-          case _._._:
-            return "bundle";
-          case _._._:
-            return "sub";
-          default:
-            switch (_) {
-              case _._._:
-                return "game";
-              case _._._:
-                return "beta";
-              case _._._:
-                return "dlc";
-              case _._._:
-                return "demo";
-              case _._._:
-                return "software";
-              case _._._:
-              case _._._:
-                return "video";
-              case _._._:
-                return "hardware";
-              case _._._:
-                return "music";
-              case _._._:
-                return "tool";
-              case _._._:
-                return "mod";
-              case _._._:
-                return "episode";
-              case _._._:
-                return "series";
-              default:
-                return "game";
-            }
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case _._._:
-            return "bundle";
-          case _._._:
-            return "sub";
-          default:
-            return "app";
-        }
-      }
       !(function (_) {
         (_.GetActiveMarketingMessages = function (_, _) {
           return _.SendMsg(
@@ -66825,6 +66985,84 @@
             (_[(_.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
             (_[(_.k_RejectAO = 19)] = "k_RejectAO");
         })(_ || (_ = {}));
+      const _ = ["app", "sub", "bundle"];
+      function _(_) {
+        return "app" == _ ? _._._ : "sub" == _ ? _._._ : _._._;
+      }
+      function _(_) {
+        return _.includes(_);
+      }
+      function _(_) {
+        switch (_) {
+          case _._._:
+            return "app";
+          case _._._:
+            return "bundle";
+          case _._._:
+            return "package";
+          case _._._:
+            return "mtx";
+        }
+        return "invalid";
+      }
+      function _(_) {
+        switch (_) {
+          case "sub":
+            return _._._;
+          case "bundle":
+            return _._._;
+          default:
+            return _._._;
+        }
+      }
+      function _(_, _) {
+        switch (_) {
+          case _._._:
+            return "bundle";
+          case _._._:
+            return "sub";
+          default:
+            switch (_) {
+              case _._._:
+                return "game";
+              case _._._:
+                return "beta";
+              case _._._:
+                return "dlc";
+              case _._._:
+                return "demo";
+              case _._._:
+                return "software";
+              case _._._:
+              case _._._:
+                return "video";
+              case _._._:
+                return "hardware";
+              case _._._:
+                return "music";
+              case _._._:
+                return "tool";
+              case _._._:
+                return "mod";
+              case _._._:
+                return "episode";
+              case _._._:
+                return "series";
+              default:
+                return "game";
+            }
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _._._:
+            return "bundle";
+          case _._._:
+            return "sub";
+          default:
+            return "app";
+        }
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -90677,11 +90915,13 @@
           (0, _.useEffect)(() => {
             if (_)
               if (_.visible) {
-                _ && (_.PositionMenu(), _.PositionPopupWindow());
-                let _ = _.options.bNoFocusWhenShown
-                  ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                  : _.iEc.k_EWindowBringToFrontAndForceOS;
-                _.TakeFocus(_);
+                if (_) {
+                  _.PositionMenu(), _.PositionPopupWindow();
+                  let _ = _.options.bNoFocusWhenShown
+                    ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
+                    : _.iEc.k_EWindowBringToFrontAndForceOS;
+                  _.TakeFocus(_);
+                }
               } else
                 _.options.bRetainOnHide &&
                   window.setTimeout(() => {
@@ -96734,19 +96974,19 @@
       function _(_, _, _ = {}) {
         const { bForceExternal: _, unPID: _, bUseLinkFilter: _ } = _;
         let _;
-        (_ =
-          "currentTarget" in _ ? _.currentTarget.ownerDocument.defaultView : _),
-          "undefined" != typeof SteamClient && void 0 !== SteamClient.WebChat
-            ? SteamClient.WebChat.OpenURLInClient(_, _ || 0, !!_)
-            : 0 == _.indexOf("steam://") &&
-                0 != _.indexOf("steam://remoteplay/connect")
-              ? (_.location.href = _)
-              : _.open(
-                  _,
-                  void 0,
-                  "menubar,location,resizable,scrollbars,status,noopener" +
-                    (_ ? ",noreferrer" : ""),
-                );
+        _ =
+          "currentTarget" in _ ? _.currentTarget.ownerDocument.defaultView : _;
+        (0, _._)("WebChat.OpenURLInClient")
+          ? SteamClient.WebChat.OpenURLInClient(_, _ || 0, !!_)
+          : 0 == _.indexOf("steam://") &&
+              0 != _.indexOf("steam://remoteplay/connect")
+            ? (_.location.href = _)
+            : _.open(
+                _,
+                void 0,
+                "menubar,location,resizable,scrollbars,status,noopener" +
+                  (_ ? ",noreferrer" : ""),
+              );
       }
       const _ = (_) =>
         (0, _.jsx)(_.Fragment, {
@@ -99456,7 +99696,7 @@
         return _._.IN_CHROMEOS;
       }
       function _() {
-        return _._.IS_STEAMOS_MANAGEMENT_ENABLED;
+        return _._.IS_STEAMOS;
       }
       function _(_, _) {
         return 0 != _.length && _.startsWith(_);
@@ -99563,9 +99803,8 @@
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
-          ON_DECK: !1,
           ON_FRAME: !1,
-          IS_STEAMOS_MANAGEMENT_ENABLED: !1,
+          IS_STEAMOS: !1,
           ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,

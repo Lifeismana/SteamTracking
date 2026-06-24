@@ -192,7 +192,7 @@
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Jugar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "Ejecutar acceso directo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Jugar"
-"SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jugar a la demo"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jugar la demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Iniciar herramienta"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Reproducir"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Reproducir"
@@ -583,10 +583,10 @@
 
 "Steam_PleaseVisitSupportPage"		"Para obtener soporte técnico o ayuda, visita:"
 "Steam_SteamPoweredURL"			"http://www.steampowered.com"
-"Steam_PurchaseCDKeySuccess"		"Enhorabuena.  Tu copia de %subscription% se ha activado con éxito en la cuenta %account%.\n\nPara poder jugar a %game%, tendrás que iniciar sesión en Steam con esta misma cuenta."
+"Steam_PurchaseCDKeySuccess"		"Enhorabuena.  Tu copia de %subscription% se ha activado con éxito en la cuenta %account%.\n\nPara poder jugar %game%, tendrás que iniciar sesión en Steam con esta misma cuenta."
 "Steam_PurchaseAccount"			"%account%"
 
-"Steam_PurchaseCDKeyIncomplete"		"Tu suscripción no se pudo activar completamente debido al alto número de solicitudes de %subscription% existentes. Podrás jugar a %game% mientras completamos la operación."
+"Steam_PurchaseCDKeyIncomplete"		"Tu suscripción no se pudo activar completamente debido al alto número de solicitudes de %subscription% existentes. Podrás jugar %game% mientras completamos la operación."
 
 "Steam_PreLoadingDescription"	"Has elegido presolicitar %game%. Steam gestiona las reservas a través de tres sencillos pasos:"
 "Steam_PreLoading1"				"1. Precarga el contenido de juego."
@@ -841,6 +841,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español (Latinoamérica)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamita)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonesio)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malayo)"
 
 
 
@@ -1220,7 +1221,7 @@
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "La clave de producto que has introducido requiere que tengas otro producto antes de activarla.\n\nSi estás intentando activar una expansión o un contenido descargable, activa primero el juego original para poder activar el contenido adicional."
 
 "Steam_SubscriptionCancelled_CDKey_MustLoginPS3_Headline" "No has jugado a %gamename% con tu cuenta en la PlayStation®3"
-"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Debes jugar a %gamename% en la PlayStation®3 antes de poder registrar la clave de producto que has introducido.\n\nSigue estos pasos:\n\n- Inicia %gamename% en tu PlayStation®3.\n\n- Vincula tu cuenta de Steam a tu cuenta de PlayStation®3 Network.\n\n- Conéctate a Steam mientras juegas a %gamename% en la PlayStation®3.\n\n- Registra esta clave de producto en Steam."
+"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Debes jugar %gamename% en la PlayStation®3 antes de poder registrar la clave de producto que has introducido.\n\nSigue estos pasos:\n\n- Inicia %gamename% en tu PlayStation®3.\n\n- Vincula tu cuenta de Steam a tu cuenta de PlayStation®3 Network.\n\n- Conéctate a Steam mientras juegas a %gamename% en la PlayStation®3.\n\n- Registra esta clave de producto en Steam."
 
 "Steam_SubscriptionSuccess_Headline" "Gracias, tu transacción se ha completado."
 "Steam_SubscriptionSuccess$purchasetype=regular" "Se ha completado correctamente tu suscripción a %subscription%. Tu suscripción está registrada en esta cuenta de Steam: %accountName%. A partir de ahora, deberás conectarte a esta cuenta para poder acceder a tus juegos. ¡Gracias por el pedido!"
@@ -1258,7 +1259,7 @@
 "Steam_Subscription_ContactSupport" "Se produjo un error inesperado. No se ha completado la suscripción a %subscription%.\n\nPor favor, ponte en contacto con el Soporte de Steam a través del siguiente enlace."
 
 "Steam_SubscriptionFailure_Timeout_Headline" "Suscripción pendiente"
-"Steam_SubscriptionFailure_Timeout" "No se completado la suscripción a %subscription% porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.  \n\nSin embargo, puedes jugar a %subscription% mientras esperas. Nos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
+"Steam_SubscriptionFailure_Timeout" "No se completado la suscripción a %subscription% porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.  \n\nSin embargo, puedes jugar %subscription% mientras esperas. Nos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
 
 "Steam_Subscription_RestrictedCountry_Headline" "No disponible"
 "Steam_Subscription_RestrictedCountry" "Lo sentimos, pero no puedes adquirir %subscription% en este país. Se ha cancelado la compra."
@@ -1331,7 +1332,7 @@
 
 "Steam_ContentServersBusy_Title"	"Steam - Error"
 "Steam_ContentServersBusy_Info"		"Los servidores de Steam están muy ocupados en estos momentos y no se puede procesar tu solicitud.\nVuelve a intentarlo dentro de unos minutos."
-"Steam_NoContentServers_Info"		"No hay ningún servidor de Steam configurado actualmente para jugar a este título.\nIntentaremos subsanar la anomalía en breve. Vuelve a intentarlo dentro de unos minutos."
+"Steam_NoContentServers_Info"		"No hay ningún servidor de Steam configurado actualmente para jugar este título.\nIntentaremos subsanar la anomalía en breve. Vuelve a intentarlo dentro de unos minutos."
 
 "Steam_UpdateNewsButton"		"Ver actualizaciones"
 
@@ -1371,12 +1372,12 @@
 "Steam_SubscriptionCancelled_PaymentCardAlert_Info" 		"Esta transacción no se procesó porque el banco de tu tarjeta de crédito ha indicado que el uso de esta tarjeta quizás no sea legítimo.\n\nActuaremos contra el delito de fraude en la medida en la que nos lo permita la legislación vigente."
 
 "Steam_InstallDirectXDialog_Title"	"Steam - Necesaria última versión de DirectX"
-"Steam_InstallDirextX_Info"		"Necesitas instalar la última versión de Microsoft DirectX(r) para jugar a %game%."
+"Steam_InstallDirextX_Info"		"Necesitas instalar la última versión de Microsoft DirectX(r) para jugar %game%."
 "Steam_InstallDirextX_Link"		"Sitio web de descarga de Microsoft DirectX(r)"
 
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Ya tienes todos estos juegos.\nPuedes acceder a ellos en tu biblioteca de productos de Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Activación de producto"
-"Steam_Install_AutoLaunchGame"		"Jugar a %game%"
+"Steam_Install_AutoLaunchGame"		"Jugar %game%"
 
 "Steam_UnableToPreload" "Los servidores de Steam están muy ocupados en estos momentos y no pueden procesar más precargas de %game%.\nVuelve a intentarlo dentro de unas horas."
 "Steam_Error_Preload_Title" "Error al precargar"
@@ -1531,13 +1532,13 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Start_Server_FSMount_Error_Title"	"Servidor dedicado - Error del sistema de archivos"
 "Start_Server_FSMount_Error" 		"Error al montar el sistema de archivos de Steam."
 
-"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"Se ha completado correctamente tu suscripción a %subscription%.\n\nPuedes jugar a cualquiera de los juegos que ya están disponibles con solo hacer clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por email tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por tu pedido!"
+"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"Se ha completado correctamente tu suscripción a %subscription%.\n\nPuedes jugar cualquiera de los juegos que ya están disponibles con solo hacer clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por email tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por tu pedido!"
 "Steam_Subscription_Success_WithShipping$purchasetype=gift"	"Tu regalo de %subscription% se ha enviado a %giftee%. Recibirás una confirmación por email tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
 "Steam_Subscription_Success_WithShipping$purchasetype=unknown"	"La compra de %subscription% se ha completado con éxito. Recibirás una confirmación por email tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
 "Steam_Subscription_Success_WithShipping_Headline"	"Gracias, tu transacción se ha completado."
 
 "Steam_SubscriptionFailure_Timeout_CantPlay_Headline"	"Suscripción pendiente"
-"Steam_SubscriptionFailure_Timeout_CantPlay"	"No se completado la suscripción a %subscription% porque los servidores de Steam no pueden procesar la transacción en este momento.\n\nNo podrás jugar a %subscription% mientras no se complete el proceso de suscripción. Te pedimos disculpas por este inconveniente. El equipo de Steam está trabajando para corregir el problema y te avisará tan pronto se haya completado la transacción."
+"Steam_SubscriptionFailure_Timeout_CantPlay"	"No se completado la suscripción a %subscription% porque los servidores de Steam no pueden procesar la transacción en este momento.\n\nNo podrás jugar %subscription% mientras no se complete el proceso de suscripción. Te pedimos disculpas por este inconveniente. El equipo de Steam está trabajando para corregir el problema y te avisará tan pronto se haya completado la transacción."
 
 "Steam_CannotStartSecondPurchase"	"Hay una compra en curso, por lo que en estos momentos no puedes iniciar otra. Completa o cancela la compra en curso."
 
@@ -2318,7 +2319,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_P2P_Graph_Duration30"		"30 minutos"
 "Steam_P2P_Graph_Duration60"		"1 hora"
 "Steam_P2P_OfflineWithoutAllData_Title"	"Modo desconectado"
-"Steam_P2P_OfflineWithoutAllData_Message" "No se puede jugar a '%game%', no se descargaron todos los datos antes de la desconexión"
+"Steam_P2P_OfflineWithoutAllData_Message" "No se puede jugar '%game%', no se descargaron todos los datos antes de la desconexión"
 "Steam_RightClick_StopSharing"		"Dejar de compartir"
 "Steam_RightClick_ResumeSharing"	"Volver a compartir"
 "Steam_RightClick_StopChecking"		"Detener comprobación"
@@ -2479,7 +2480,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_Games"								"Juegos"
 
 "Steam_RegionRestricted_Title"			"Steam - Juego no disponible"
-"Steam_RegionRestrictedPurchase_Info"				"Este juego se activó con una clave de producto que solo es válida en una región geográfica específica. Al no encontrarte actualmente en esa región, no podrás jugar a %game%."
+"Steam_RegionRestrictedPurchase_Info"				"Este juego se activó con una clave de producto que solo es válida en una región geográfica específica. Al no encontrarte actualmente en esa región, no podrás jugar %game%."
 "Steam_RegionRestricted_SupportLink"		"Visita el sitio web del Soporte de Steam para más información"
 "Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/?l=spanish"
 "Steam_RegionRestricted_Info"				"%game% no está disponible en tu territorio."
@@ -2966,7 +2967,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_LaunchEULA_Info"			"Acuerdo de Licencia para el Usuario Final de %game%"
 "Steam_LaunchEULA_Agree"			"Acepto"
 "Steam_LaunchEULA_Decline"		"Cancelar"
-"Steam_LaunchEULA_Text"			"Por favor, lee este acuerdo en su totalidad. Debes aceptar las condiciones del Acuerdo de Licencia para el Usuario Final para poder jugar a %game%."
+"Steam_LaunchEULA_Text"			"Por favor, lee este acuerdo en su totalidad. Debes aceptar las condiciones del Acuerdo de Licencia para el Usuario Final para poder jugar %game%."
 
 "Steam_GuestPasses_LinkText"		"Más información sobre Regalos y Pases de Invitado"
 "Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/?l=spanish"
@@ -3339,7 +3340,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_SendGuestPass_AlreadyOwnsGame"		"%s1 ya tiene este juego"
 
 "Steam_GiftRevoked_Title"			"Steam - Regalo anulado"
-"Steam_GiftRevoked"					"Tu reciente regalo de %loteage% de parte de %gifter% ha sido anulado a causa de un problema de procesamiento del pago de este artículo.\n\nComo resultado, no podrás jugar a los juegos incluidos en este regalo. Si deseas comprar este artículo, visita la tienda de Steam. De lo contrario, puedes eliminar los contenidos relacionados con este juego de tu unidad local."
+"Steam_GiftRevoked"					"Tu reciente regalo de %loteage% de parte de %gifter% ha sido anulado a causa de un problema de procesamiento del pago de este artículo.\n\nComo resultado, no podrás jugar los juegos incluidos en este regalo. Si deseas comprar este artículo, visita la tienda de Steam. De lo contrario, puedes eliminar los contenidos relacionados con este juego de tu unidad local."
 "Steam_GiftRevoked_SupportLink"		"Visita el sitio web del Soporte de Steam para más información"
 
 "Steam_ExternalSignupButton" "Ir al sitio web de %s1"
@@ -3396,7 +3397,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_SubscriptionSuccessCart$purchasetype=gift" "Tu regalo de los siguientes artículos se ha enviado a %giftee%. ¡Gracias por el pedido!"
 "Steam_SubscriptionSuccessCart$purchasetype=unknown" "Tu compra de los siguientes artículos se ha completado correctamente. ¡Gracias por el pedido!"
 "Steam_Subscription_Preorder_CcardSuccessCart" "Hace poco, hiciste una reserva de los siguientes artículos. Estos artículos ya están oficialmente a la venta, de modo que se ha procesado la transacción y se ha cargado el importe en tu tarjeta de crédito. ¡Gracias por el pedido!"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"Tu suscripción a los siguientes artículos se ha completado correctamente.\n\nPuedes jugar a cualquiera de los juegos que ya estén disponibles haciendo clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por email tan pronto se hayan enviado los artículos físicos de tu pedido. ¡Gracias por tu compra!"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"Tu suscripción a los siguientes artículos se ha completado correctamente.\n\nPuedes jugar cualquiera de los juegos que ya estén disponibles haciendo clic en ellos en tu biblioteca de productos de Steam. Recibirás también una confirmación por email tan pronto se hayan enviado los artículos físicos de tu pedido. ¡Gracias por tu compra!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"Tu regalo de los siguientes artículos se ha enviado a %giftee%. Recibirás una confirmación por email tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"Se ha completado tu compra de los siguientes artículos. Recibirás una confirmación por email tan pronto se hayan enviado los artículos de tu pedido. ¡Gracias por el pedido!"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"Esta transacción no se pudo procesar porque la tarjeta de crédito se ha usado demasiadas veces en Steam.\n\nEsta política se ha puesto en práctica para proteger a nuestros clientes contra el fraude en el uso de las tarjetas de crédito. Actuamos activamente para perseguir el fraude con todo el peso de la ley."
@@ -3411,7 +3412,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_Subscription_RestrictedCountryCart" "Los siguientes artículos no están disponibles para su compra en tu país. Se ha cancelado la compra."
 "Steam_SubscriptionCancelled_ServerFailedCart" "No se ha completado tu suscripción a los siguientes artículos. Los servidores de Steam están muy ocupados en estos momentos y no puede procesarse tu solicitud.  \n\nTe pedimos disculpas por las molestias. Vuelve a intentarlo dentro de unas horas."
 "Steam_SubscriptionCancelled_RegionNotSupportedCart" "Tu compra de los siguientes artículos no se ha completado.\n\nEl método de pago que has elegido no está disponible actualmente en tu país. Prueba a realizar tu compra de nuevo con un método de pago distinto."
-"Steam_SubscriptionFailure_Timeout_CantPlayCart"	"Tu suscripción a los siguientes artículos no se ha completado porque los servidores de Steam no pueden procesar la transacción en este momento.\n\nNo podrás jugar a estos juegos hasta que se complete el proceso de suscripción. Te pedimos disculpas por este inconveniente. El equipo de Steam está trabajando para corregir el problema y te avisará tan pronto se haya completado la transacción."
+"Steam_SubscriptionFailure_Timeout_CantPlayCart"	"Tu suscripción a los siguientes artículos no se ha completado porque los servidores de Steam no pueden procesar la transacción en este momento.\n\nNo podrás jugar estos juegos hasta que se complete el proceso de suscripción. Te pedimos disculpas por este inconveniente. El equipo de Steam está trabajando para corregir el problema y te avisará tan pronto se haya completado la transacción."
 
 "Steam_GuestPasses_Status_Unsent"	"No enviado"
 "Steam_GuestPasses_Status_Sent"	"Enviado"
@@ -3744,7 +3745,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "steam_downloads_currentrate"	"Velocidad actual: %download_rate%"
 "steam_downloads_gamename"	"%name%"
 
-"steam_downloads_launch"		"Jugar a %name%      "
+"steam_downloads_launch"		"Jugar %name%      "
 "steam_downloads_launch_app"	"Iniciar %app%   "
 "steam_downloads_updatenews"	"Ver noticias"
 "steam_downloads_showinlibrary"	"Ver detalles"
@@ -4279,7 +4280,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 
 "Steam_Settings_Family_Sharing_Title" "Préstamo familiar"
 "Steam_Settings_Family_Sharing_ManageSharing" "Administrar otros equipos"
-"Steam_Settings_Family_Sharing_Info" "El préstamo familiar te permite compartir tu biblioteca de Steam en este equipo. Una vez autorizados, los usuarios de Steam en equipos compartidos pueden acceder, descargar y jugar a los títulos disponibles en tu biblioteca de Steam mientras tú no estés jugando."
+"Steam_Settings_Family_Sharing_Info" "El préstamo familiar te permite compartir tu biblioteca de Steam en este equipo. Una vez autorizados, los usuarios de Steam en equipos compartidos pueden acceder, descargar y jugar los títulos disponibles en tu biblioteca de Steam mientras tú no estés jugando."
 "Steam_Settings_Family_Sharing_AuthorizedDevice" "Autorizar el préstamo familiar en este equipo"
 "Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip" "Puedes autorizar hasta diez equipos."
 
@@ -5053,6 +5054,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "DownloadRegion_br_manaus"			"Brasil - Manaus"
 "DownloadRegion_br_belem"			"Brasil - Belém"
 "DownloadRegion_br_salvador"			"Brasil - Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Configuración del control"
 "ControllerBinding_Offline_Save"	"[Autoguardado sin conexión]"

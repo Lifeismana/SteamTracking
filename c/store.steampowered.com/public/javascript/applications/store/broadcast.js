@@ -24424,85 +24424,105 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          bRenderChildren: !1,
-          nPrevRenderWidth: 0,
-          nPrevRenderHeight: 0,
-        };
-        m_refContainer = _.createRef();
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(_) {
-          let _ = this.state.bRenderChildren;
-          if (_ == _) return;
-          if (_ && !this.BLoadAndUnload()) return;
-          let _ = 0,
-            _ = 0;
-          if (this.m_refContainer.current) {
-            const _ = this.m_refContainer.current.getBoundingClientRect();
-            _ && ((_ = _.width), (_ = _.height));
-          }
-          this.setState({
-            bRenderChildren: _,
-            nPrevRenderWidth: _,
-            nPrevRenderHeight: _,
-          }),
-            _ && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const {
-              placeholderWidth: _,
-              placeholderHeight: _,
-              holdGamepadFocus: _,
-              onRender: _,
-              style: _,
-              mode: _,
-              ..._
-            } = this.props,
-            _ = this.state.bRenderChildren;
-          let _ = _;
-          if (!_) {
-            const _ = this.state.nPrevRenderWidth || _,
-              _ = this.state.nPrevRenderHeight || _;
-            (void 0 === _ && void 0 === _) ||
-              (_ = {
-                ..._,
-                minHeight: _,
-                minWidth: _,
-              });
-          }
-          const _ = this.BLoadAndUnload() ? "repeated" : "once";
-          let _ = (0, _.jsx)(_._, {
-            containerRef: this.m_refContainer,
-            style: _,
-            ..._,
-            onVisibilityChange: this.OnVisibilityChange,
-            trigger: _,
-            children: _ && this.props.children,
-          });
-          return (
-            _ &&
-              (_ = (0, _.jsx)(_._, {
-                focusableIfEmpty: !0,
-                style: {
-                  height: "100%",
-                },
-                children: _,
-              })),
-            _
+      const _ = _.createContext({
+        enabled: !0,
+      });
+      function _(_) {
+        const { enabled: _, children: _ } = _,
+          _ = _.useMemo(
+            () => ({
+              enabled: _,
+            }),
+            [_],
           );
-        }
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
-      (0, _._)([_._], _.prototype, "OnVisibilityChange", null);
+      function _(_) {
+        const {
+            placeholderWidth: _,
+            placeholderHeight: _,
+            holdGamepadFocus: _ = !1,
+            onRender: _,
+            style: _,
+            mode: _ = "JustLoad",
+            children: _,
+            ..._
+          } = _,
+          [_, _] = _.useState({
+            bRenderChildren: !1,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
+          }),
+          _ = _.useContext(_),
+          _ = _.useRef(null),
+          _ = "LoadAndUnload" === _ && _.enabled,
+          _ = _.useCallback(
+            (_) => {
+              _((_) => {
+                if (_.bRenderChildren === _ || (_.bRenderChildren && !_))
+                  return _;
+                let _ = 0,
+                  _ = 0;
+                if (_.current) {
+                  const _ = _.current.getBoundingClientRect();
+                  _ && ((_ = _.width), (_ = _.height));
+                }
+                return (
+                  _ && _ && _(),
+                  {
+                    bRenderChildren: _,
+                    nPrevRenderWidth: _,
+                    nPrevRenderHeight: _,
+                  }
+                );
+              });
+            },
+            [_, _],
+          );
+        _.useEffect(() => {
+          _.enabled || _(!0);
+        }, [_.enabled, _]);
+        let _ = _;
+        if (!_.bRenderChildren) {
+          const _ = _.nPrevRenderWidth || _,
+            _ = _.nPrevRenderHeight || _;
+          (void 0 === _ && void 0 === _) ||
+            (_ = {
+              ..._,
+              minHeight: _,
+              minWidth: _,
+            });
+        }
+        const _ = _ ? "repeated" : "once";
+        let _ = (0, _.jsx)(_._, {
+          containerRef: _,
+          style: _,
+          ..._,
+          onVisibilityChange: _,
+          trigger: _,
+          children: _.bRenderChildren && _,
+        });
+        return (
+          _ &&
+            (_ = (0, _.jsx)(_._, {
+              focusableIfEmpty: !0,
+              style: {
+                height: "100%",
+              },
+              children: _,
+            })),
+          _
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

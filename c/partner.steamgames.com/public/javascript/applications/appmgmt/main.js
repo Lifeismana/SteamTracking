@@ -634,6 +634,20 @@
         Active: "_19WwgHXljoThfByC7B-MLW",
         ActivatableStroke: "_2Jn2RR1yUV9GJ6u9HN1dER",
         ActivatableGradient: "cIR7HWORR4OnuhH8CsVvr",
+        VRLink: "_1dYQELEFBNFH0IYvXkMftN",
+        Off: "_127biiI7_uwVm-W_19FgJp",
+        InnerArc: "_21GOsrHjWqo70iIxGr-ds3",
+        MiddleArc: "_1FDt0er0XaGOLFzzfp-7Q8",
+        OuterArc: "_1Q4DgIEGKtDwXf8mWbYxKN",
+        Dot: "QSXPssIFxIIPQy5pSPIUR",
+        HMD: "fZ4HR_XqSs8jBXWyeSNmk",
+        SignalLow: "lgt4jn3n3i_TC14MNsjfZ",
+        SignalMedium: "_2yGzWPU6NsqFSAEkvwIF4c",
+        Searching: "ccU_YGs5TgZ5tFm4QkvOd",
+        VRLinkBar1Anim: "WdIUI58OZ2M8ChR9xVnyn",
+        VRLinkBar2Anim: "_1Z_SQ03m0DmkwdI5azEgnK",
+        VRLinkBar3Anim: "_1rVd9nWlALxedt2GKN3ISH",
+        VRLinkBar4Anim: "_8npUohpwuztM69MHcA53a",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -6798,10 +6812,10 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
-                  use_gyro_sw_biases: {
+                  triton_gyro_hw_cal: {
                     _: 48,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
                   },
                 },
               }),
@@ -9360,6 +9374,7 @@
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
+            focusRingSizeElementID: _,
             focusable: _,
             navRef: _,
             actionDescriptionMap: _,
@@ -9387,6 +9402,7 @@
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
+            focusRingSizeElementID: _,
             focusable: _,
             navRef: _,
             onMoveUp: _,
@@ -9690,7 +9706,7 @@
             return (
               (0, _.useEffect)(() => {
                 if (_ && _) {
-                  let _ = _.GetBoundingRect(),
+                  let _ = _.GetBoundingRectForFocusRing(),
                     _ = _.Element;
                   const _ = _.ownerDocument.defaultView,
                     _ = (_) =>
@@ -9720,7 +9736,7 @@
           })(_, _),
           _ = _.useCallback(() => {
             if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
-            let _ = _.GetBoundingRect();
+            let _ = _.GetBoundingRectForFocusRing();
             const _ = _.getBoundingClientRect(),
               _ = {
                 left: _._ - _._,
@@ -11237,6 +11253,17 @@
         GetBoundingRect() {
           return this.m_element?.getBoundingClientRect();
         }
+        GetBoundingRectForFocusRing() {
+          let _ = this.m_element;
+          return (
+            this.m_Properties?.focusRingSizeElementID &&
+              (_ =
+                _?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? this.m_element),
+            _?.getBoundingClientRect()
+          );
+        }
         SetHasFocus(_) {
           this.m_Focused.Set(_);
         }
@@ -12411,7 +12438,7 @@
         );
       }
       function _(_, _, _) {
-        if (_ >= 0 || _ >= 0) {
+        if (_ >= 0 && _ >= 0) {
           const _ = _.splice(_, 1)[0];
           _ >= _.length ? (_[_] = _) : _.splice(_, 0, _);
         }
@@ -13129,16 +13156,11 @@
       }
       function _(_) {
         if (0 == _.length) return !1;
-        for (let _ = 0; _ < _.length; _++)
-          if (_[_] < "0" || _[_] > "9") return !1;
+        for (let _ = 0; _ < _.length; _++) {
+          const _ = _.charCodeAt(_);
+          if (_ < 48 || _ > 57) return !1;
+        }
         return !0;
-      }
-      function _(_) {
-        return (
-          "string" == typeof _ &&
-          !Number.isNaN(_) &&
-          !Number.isNaN(Number.parseFloat(_))
-        );
       }
       function _(_, _, _, _) {
         let _ = _ / _,
@@ -13147,7 +13169,6 @@
         return [_ * _, _ * _];
       }
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -25397,6 +25418,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  steam_frame_compat_category: {
+                    _: 13,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -33449,18 +33475,17 @@
           return this.m_rgParams;
         }
         Focus(_ = _.iEc.k_EWindowBringToFrontAndForceOS) {
-          _ != _.iEc.k_EWindowBringToFrontInvalid &&
-            (this.m_popup &&
-            void 0 !== this.m_popup.SteamClient &&
-            void 0 !== this.m_popup.SteamClient.Window
+          this.m_popup &&
+            _ != _.iEc.k_EWindowBringToFrontInvalid &&
+            ((0, _._)(this.m_popup, "Window.BringToFront")
               ? this.m_popup.SteamClient.Window.BringToFront(_)
-              : this.m_popup && this.m_popup.focus());
+              : this.m_popup.focus());
         }
         Close() {
           this.m_popup &&
-            ((0, _._)(this.m_popup.window, "Window.Close")
-              ? this.m_popup.window.SteamClient.Window.Close()
-              : this.m_popup.window.close());
+            ((0, _._)(this.m_popup, "Window.Close")
+              ? this.m_popup.SteamClient.Window.Close()
+              : this.m_popup.close());
         }
         GetName() {
           return this.m_strName;
@@ -33528,6 +33553,21 @@
         OnBeforeUnload() {}
         OnFocus() {}
         OnBlur() {}
+        m_rgChildBrowserViews = [];
+        get childBrowserViews() {
+          return this.m_rgChildBrowserViews;
+        }
+        RegisterChildBrowserView(_) {
+          return (
+            this.m_rgChildBrowserViews.push(_),
+            {
+              Unregister: () =>
+                (this.m_rgChildBrowserViews = this.m_rgChildBrowserViews.filter(
+                  (_) => _ != _,
+                )),
+            }
+          );
+        }
       }
       (0, _._)([_._], _.prototype, "m_bFocused", void 0),
         (0, _._)([_._], _.prototype, "OnMessage", null),
@@ -33651,13 +33691,15 @@
                 _.BIsValid() && !_.BIsClosed() && _.push(_);
               });
               for (let _ of _)
-                _.window?.SteamClient.Browser
-                  ?.SetShouldExitSteamOnBrowserClosed &&
+                (0, _._)(
+                  _.window,
+                  "Browser.SetShouldExitSteamOnBrowserClosed",
+                ) &&
                   _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                     !1,
                   ),
-                  _.window?.SteamClient.Window.SetHideOnClose &&
-                    _.window?.SteamClient.Window.SetHideOnClose(!1),
+                  (0, _._)(_.window, "Window.SetHideOnClose") &&
+                    _.window.SteamClient.Window.SetHideOnClose(!1),
                   _.Close();
               this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                 this.m_mapPopups.clear();
@@ -34772,6 +34814,20 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
+          nSlideIndex: _,
+          nStartingSlideIndex: _,
+          ref: _,
+          children: _,
+        } = _;
+        return void 0 === _
+          ? _
+          : (0, _.jsx)("div", {
+              ref: _ === _ ? _ : void 0,
+              children: _,
+            });
+      }
+      function _(_) {
+        const {
             padded: _,
             gap: _,
             children: _,
@@ -34781,7 +34837,8 @@
             startingSlide: _,
           } = _,
           _ = _.useRef(null),
-          _ = _.useRef(null);
+          _ = _.useRef(null),
+          _ = (0, _._)();
         _.useLayoutEffect(() => {
           _.current &&
             _.current &&
@@ -34789,37 +34846,50 @@
               _.current.getBoundingClientRect().left -
               _.current.getBoundingClientRect().left);
         }, [_]);
-        const _ = (0, _.jsxs)(_._, {
-          "flow-children": "row",
-          style: {
-            gap: _ ? _ + "px" : void 0,
-          },
-          className: (0, _._)(
-            {
-              SaleSectionCarouselPadding: _,
-            },
-            "ScrollSnapCarousel",
-            "SaleSectionCarousel",
-            _.ScrollSnapCarousel,
-            _.className,
-          ),
-          ref: _,
-          children: [
-            _ &&
-              _.Children.map(_, (_, _) =>
-                (0, _.jsx)("div", {
-                  ref: _ == _ ? _ : void 0,
+        const _ = _.Children.map(_, (_, _) =>
+            _
+              ? (0, _.jsx)(_._, {
+                  rootMargin: "0px 50% 0px 50%",
+                  horizontal: !0,
+                  placeholderWidth: _ ?? 1,
+                  placeholderHeight: 1,
+                  holdGamepadFocus: _,
+                  children: (0, _.jsx)(_, {
+                    nSlideIndex: _,
+                    nStartingSlideIndex: _,
+                    ref: _,
+                    children: _,
+                  }),
+                })
+              : (0, _.jsx)(_, {
+                  nSlideIndex: _,
+                  nStartingSlideIndex: _,
+                  ref: _,
                   children: _,
                 }),
-              ),
-            !_ && _,
-          ],
-        });
+          ),
+          _ = (0, _.jsx)(_._, {
+            "flow-children": "row",
+            style: {
+              gap: _ ? _ + "px" : void 0,
+            },
+            className: (0, _._)(
+              {
+                SaleSectionCarouselPadding: _,
+              },
+              "ScrollSnapCarousel",
+              "SaleSectionCarousel",
+              _.ScrollSnapCarousel,
+              _.className,
+            ),
+            ref: _,
+            children: _,
+          });
         return _
           ? (0, _.jsx)(_._, {
               rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
-              placeholderWidth: _ ?? 1,
+              placeholderWidth: 1,
               placeholderHeight: _ ?? 1,
               children: _,
             })
@@ -43156,81 +43226,87 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          bRenderChildren: !1,
-          nPrevRenderWidth: 0,
-          nPrevRenderHeight: 0,
-        };
-        m_refContainer = _.createRef();
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(_) {
-          let _ = this.state.bRenderChildren;
-          if (_ == _) return;
-          if (_ && !this.BLoadAndUnload()) return;
-          let _ = 0,
-            _ = 0;
-          if (this.m_refContainer.current) {
-            const _ = this.m_refContainer.current.getBoundingClientRect();
-            _ && ((_ = _.width), (_ = _.height));
-          }
-          this.setState({
-            bRenderChildren: _,
-            nPrevRenderWidth: _,
-            nPrevRenderHeight: _,
-          }),
-            _ && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const {
-              placeholderWidth: _,
-              placeholderHeight: _,
-              holdGamepadFocus: _,
-              onRender: _,
-              style: _,
-              mode: _,
-              ..._
-            } = this.props,
-            _ = this.state.bRenderChildren;
-          let _ = _;
-          if (!_) {
-            const _ = this.state.nPrevRenderWidth || _,
-              _ = this.state.nPrevRenderHeight || _;
-            (void 0 === _ && void 0 === _) ||
-              (_ = {
-                ..._,
-                minHeight: _,
-                minWidth: _,
-              });
-          }
-          const _ = this.BLoadAndUnload() ? "repeated" : "once";
-          let _ = (0, _.jsx)(_._, {
-            containerRef: this.m_refContainer,
+      const _ = _.createContext({
+        enabled: !0,
+      });
+      function _(_) {
+        const {
+            placeholderWidth: _,
+            placeholderHeight: _,
+            holdGamepadFocus: _ = !1,
+            onRender: _,
             style: _,
-            ..._,
-            onVisibilityChange: this.OnVisibilityChange,
-            trigger: _,
-            children: _ && this.props.children,
-          });
-          return (
-            _ &&
-              (_ = (0, _.jsx)(_._, {
-                focusableIfEmpty: !0,
-                style: {
-                  height: "100%",
-                },
-                children: _,
-              })),
-            _
+            mode: _ = "JustLoad",
+            children: _,
+            ..._
+          } = _,
+          [_, _] = _.useState({
+            bRenderChildren: !1,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
+          }),
+          _ = _.useContext(_),
+          _ = _.useRef(null),
+          _ = "LoadAndUnload" === _ && _.enabled,
+          _ = _.useCallback(
+            (_) => {
+              _((_) => {
+                if (_.bRenderChildren === _ || (_.bRenderChildren && !_))
+                  return _;
+                let _ = 0,
+                  _ = 0;
+                if (_.current) {
+                  const _ = _.current.getBoundingClientRect();
+                  _ && ((_ = _.width), (_ = _.height));
+                }
+                return (
+                  _ && _ && _(),
+                  {
+                    bRenderChildren: _,
+                    nPrevRenderWidth: _,
+                    nPrevRenderHeight: _,
+                  }
+                );
+              });
+            },
+            [_, _],
           );
+        _.useEffect(() => {
+          _.enabled || _(!0);
+        }, [_.enabled, _]);
+        let _ = _;
+        if (!_.bRenderChildren) {
+          const _ = _.nPrevRenderWidth || _,
+            _ = _.nPrevRenderHeight || _;
+          (void 0 === _ && void 0 === _) ||
+            (_ = {
+              ..._,
+              minHeight: _,
+              minWidth: _,
+            });
         }
+        const _ = _ ? "repeated" : "once";
+        let _ = (0, _.jsx)(_._, {
+          containerRef: _,
+          style: _,
+          ..._,
+          onVisibilityChange: _,
+          trigger: _,
+          children: _.bRenderChildren && _,
+        });
+        return (
+          _ &&
+            (_ = (0, _.jsx)(_._, {
+              focusableIfEmpty: !0,
+              style: {
+                height: "100%",
+              },
+              children: _,
+            })),
+          _
+        );
       }
-      (0, _._)([_._], _.prototype, "OnVisibilityChange", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -44221,11 +44297,13 @@
           (0, _.useEffect)(() => {
             if (_)
               if (_.visible) {
-                _ && (_.PositionMenu(), _.PositionPopupWindow());
-                let _ = _.options.bNoFocusWhenShown
-                  ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                  : _.iEc.k_EWindowBringToFrontAndForceOS;
-                _.TakeFocus(_);
+                if (_) {
+                  _.PositionMenu(), _.PositionPopupWindow();
+                  let _ = _.options.bNoFocusWhenShown
+                    ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
+                    : _.iEc.k_EWindowBringToFrontAndForceOS;
+                  _.TakeFocus(_);
+                }
               } else
                 _.options.bRetainOnHide &&
                   window.setTimeout(() => {
@@ -48618,19 +48696,19 @@
       function _(_, _, _ = {}) {
         const { bForceExternal: _, unPID: _, bUseLinkFilter: _ } = _;
         let _;
-        (_ =
-          "currentTarget" in _ ? _.currentTarget.ownerDocument.defaultView : _),
-          "undefined" != typeof SteamClient && void 0 !== SteamClient.WebChat
-            ? SteamClient.WebChat.OpenURLInClient(_, _ || 0, !!_)
-            : 0 == _.indexOf("steam://") &&
-                0 != _.indexOf("steam://remoteplay/connect")
-              ? (_.location.href = _)
-              : _.open(
-                  _,
-                  void 0,
-                  "menubar,location,resizable,scrollbars,status,noopener" +
-                    (_ ? ",noreferrer" : ""),
-                );
+        _ =
+          "currentTarget" in _ ? _.currentTarget.ownerDocument.defaultView : _;
+        (0, _._)("WebChat.OpenURLInClient")
+          ? SteamClient.WebChat.OpenURLInClient(_, _ || 0, !!_)
+          : 0 == _.indexOf("steam://") &&
+              0 != _.indexOf("steam://remoteplay/connect")
+            ? (_.location.href = _)
+            : _.open(
+                _,
+                void 0,
+                "menubar,location,resizable,scrollbars,status,noopener" +
+                  (_ ? ",noreferrer" : ""),
+              );
       }
       const _ = (_) =>
         (0, _.jsx)(_.Fragment, {
@@ -51348,7 +51426,7 @@
         return _._.IN_CHROMEOS;
       }
       function _() {
-        return _._.IS_STEAMOS_MANAGEMENT_ENABLED;
+        return _._.IS_STEAMOS;
       }
       function _(_, _) {
         return 0 != _.length && _.startsWith(_);
@@ -51455,9 +51533,8 @@
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
-          ON_DECK: !1,
           ON_FRAME: !1,
-          IS_STEAMOS_MANAGEMENT_ENABLED: !1,
+          IS_STEAMOS: !1,
           ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,

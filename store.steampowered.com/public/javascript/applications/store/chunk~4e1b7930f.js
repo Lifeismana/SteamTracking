@@ -18768,8 +18768,8 @@
         K = r.n($),
         Y = r(13699),
         Q = r(4434),
-        Z = r(68797);
-      const X = (e) => /^\d+$/.test(e);
+        Z = r(68797),
+        X = r(25489);
       function J(e) {
         const { sharedFileID: t } = e,
           r = (0, Q.m)("SharedFileSnippet"),
@@ -18789,7 +18789,7 @@
               const e = await Y.R.LoadSharedFileDynamicData([t], r);
               if (!r.token.reason && e.length > 0) {
                 const t = e[0];
-                X(t.url) &&
+                (0, X.TG)(t.url) &&
                   (t.url =
                     x.TS.COMMUNITY_BASE_URL +
                     "sharedfiles/filedetails/?id=" +
@@ -19532,6 +19532,7 @@
             r.e(87937),
             r.e(29197),
             r.e(4796),
+            r.e(53965),
             r.e(76226),
             r.e(94781),
             r.e(29008),
@@ -23196,79 +23197,88 @@
     },
     96236: (e, t, r) => {
       "use strict";
-      r.d(t, { K: () => c });
-      var i = r(34629),
-        s = r(7850),
-        a = r(90626),
-        n = r(84933),
-        o = r(60383),
-        l = r(76217);
-      class c extends a.Component {
-        state = {
-          bRenderChildren: !1,
-          nPrevRenderWidth: 0,
-          nPrevRenderHeight: 0,
-        };
-        m_refContainer = a.createRef();
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(e) {
-          let t = this.state.bRenderChildren;
-          if (t == e) return;
-          if (t && !this.BLoadAndUnload()) return;
-          let r = 0,
-            i = 0;
-          if (this.m_refContainer.current) {
-            const e = this.m_refContainer.current.getBoundingClientRect();
-            e && ((r = e.width), (i = e.height));
-          }
-          this.setState({
-            bRenderChildren: e,
-            nPrevRenderWidth: r,
-            nPrevRenderHeight: i,
-          }),
-            e && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const {
-              placeholderWidth: e,
-              placeholderHeight: t,
-              holdGamepadFocus: r,
-              onRender: i,
-              style: a,
-              mode: n,
-              ...c
-            } = this.props,
-            d = this.state.bRenderChildren;
-          let m = a;
-          if (!d) {
-            const r = this.state.nPrevRenderWidth || e,
-              i = this.state.nPrevRenderHeight || t;
-            (void 0 === i && void 0 === r) ||
-              (m = { ...a, minHeight: i, minWidth: r });
-          }
-          const u = this.BLoadAndUnload() ? "repeated" : "once";
-          let _ = (0, s.jsx)(o.J, {
-            containerRef: this.m_refContainer,
-            style: m,
-            ...c,
-            onVisibilityChange: this.OnVisibilityChange,
-            trigger: u,
-            children: d && this.props.children,
-          });
-          return (
-            r &&
-              (_ = (0, s.jsx)(l.Z, {
-                focusableIfEmpty: !0,
-                style: { height: "100%" },
-                children: _,
-              })),
-            _
-          );
-        }
+      r.d(t, { K: () => c, _: () => l });
+      var i = r(7850),
+        s = r(90626),
+        a = r(60383),
+        n = r(76217);
+      const o = s.createContext({ enabled: !0 });
+      function l(e) {
+        const { enabled: t, children: r } = e,
+          a = s.useMemo(() => ({ enabled: t }), [t]);
+        return (0, i.jsx)(o.Provider, { value: a, children: r });
       }
-      (0, i.Cg)([n.oI], c.prototype, "OnVisibilityChange", null);
+      function c(e) {
+        const {
+            placeholderWidth: t,
+            placeholderHeight: r,
+            holdGamepadFocus: l = !1,
+            onRender: c,
+            style: d,
+            mode: m = "JustLoad",
+            children: u,
+            ..._
+          } = e,
+          [p, g] = s.useState({
+            bRenderChildren: !1,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
+          }),
+          b = s.useContext(o),
+          B = s.useRef(null),
+          h = "LoadAndUnload" === m && b.enabled,
+          f = s.useCallback(
+            (e) => {
+              g((t) => {
+                if (t.bRenderChildren === e || (t.bRenderChildren && !h))
+                  return t;
+                let r = 0,
+                  i = 0;
+                if (B.current) {
+                  const e = B.current.getBoundingClientRect();
+                  e && ((r = e.width), (i = e.height));
+                }
+                return (
+                  e && c && c(),
+                  {
+                    bRenderChildren: e,
+                    nPrevRenderWidth: r,
+                    nPrevRenderHeight: i,
+                  }
+                );
+              });
+            },
+            [h, c],
+          );
+        s.useEffect(() => {
+          b.enabled || f(!0);
+        }, [b.enabled, f]);
+        let y = d;
+        if (!p.bRenderChildren) {
+          const e = p.nPrevRenderWidth || t,
+            i = p.nPrevRenderHeight || r;
+          (void 0 === i && void 0 === e) ||
+            (y = { ...d, minHeight: i, minWidth: e });
+        }
+        const w = h ? "repeated" : "once";
+        let S = (0, i.jsx)(a.J, {
+          containerRef: B,
+          style: y,
+          ..._,
+          onVisibilityChange: f,
+          trigger: w,
+          children: p.bRenderChildren && u,
+        });
+        return (
+          l &&
+            (S = (0, i.jsx)(n.Z, {
+              focusableIfEmpty: !0,
+              style: { height: "100%" },
+              children: S,
+            })),
+          S
+        );
+      }
     },
     76684: (e, t, r) => {
       "use strict";

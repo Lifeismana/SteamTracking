@@ -2344,11 +2344,8 @@ message CMsgSystemPerfLimits {
 	optional int32 cpu_governor_manual_max_mhz = 2;
 	optional int32 fsr_sharpness_min = 3;
 	optional int32 fsr_sharpness_max = 4;
-	optional int32 gpu_performance_manual_min_mhz = 5;
-	optional int32 gpu_performance_manual_max_mhz = 6;
 	optional bool perf_overlay_is_standalone = 7;
 	optional bool is_manual_display_refresh_rate_available = 9;
-	repeated int32 gpu_performance_levels_available = 10 [(.description) = "enum"];
 	optional int32 display_refresh_manual_hz_min = 11;
 	optional int32 display_refresh_manual_hz_max = 12;
 	repeated int32 fps_limit_options = 13;
@@ -2398,7 +2395,6 @@ message CMsgSystemPerfSettingsGlobal {
 
 // Used by: common.proto
 message CMsgSystemPerfSettingsPerApp {
-	optional int32 gpu_performance_manual_mhz = 1;
 	optional int32 fps_limit = 2;
 	optional bool is_variable_resolution_enabled = 3;
 	optional bool is_dynamic_refresh_rate_enabled = 4;
@@ -2412,7 +2408,6 @@ message CMsgSystemPerfSettingsPerApp {
 	optional bool is_low_latency_mode_enabled = 12;
 	optional int32 display_refresh_manual_hz = 13;
 	optional bool is_game_perf_profile_enabled = 14;
-	optional int32 gpu_performance_level = 15 [(.description) = "enum"];
 	optional int32 display_external_refresh_manual_hz = 17;
 	optional int32 fps_limit_external = 18;
 	optional bool is_tearing_enabled = 19;
@@ -2524,6 +2519,18 @@ message CSteamVR_AudioSettings_SettingsChanged_Notification {
 message CSteamVR_Header {
 	optional int32 type = 1 [(.description) = "enum"];
 	optional uint32 id = 2;
+}
+
+// Used by: common.proto
+message CSteamVR_LinkInfo {
+	optional int32 type = 1 [(.description) = "enum"];
+	optional int32 quality = 2 [(.description) = "enum"];
+	optional float p100 = 3;
+	optional float loss_ratio = 4;
+}
+
+message CSteamVR_MultiLinkStatusUpdate_Message {
+	repeated .CSteamVR_LinkInfo links = 1;
 }
 
 message CSteamVR_OverlayInputFocusChanged_Message {
@@ -2948,6 +2955,8 @@ message CVRGamepadUI_Frame {
 	optional bool is_vrlink_remote = 5;
 	optional .CVRGamepadUI_Frame_FrameActions frame_actions = 6;
 	repeated string steamui_page_overlay_keys = 7;
+	optional bool is_streaming_client = 8;
+	optional int32 dock_location = 9 [(.description) = "enum"];
 	optional string tmp_title = 1000;
 }
 
@@ -3035,6 +3044,12 @@ message CVRGamepadUI_Message_ExecuteSteamURL_Request {
 message CVRGamepadUI_Message_ExecuteSteamURL_Response {
 }
 
+message CVRGamepadUI_Message_FocusDashboardBar_Request {
+}
+
+message CVRGamepadUI_Message_FocusDashboardBar_Response {
+}
+
 message CVRGamepadUI_Message_GetAppIcon_Request {
 	optional uint32 app_id = 1;
 }
@@ -3061,6 +3076,14 @@ message CVRGamepadUI_Message_InitFrameSystem_Request {
 }
 
 message CVRGamepadUI_Message_InitFrameSystem_Response {
+}
+
+message CVRGamepadUI_Message_NavigateInstance_Request {
+	optional uint32 navigate_overlay_for_app_id = 1;
+	optional int32 location = 2 [(.description) = "enum"];
+}
+
+message CVRGamepadUI_Message_NavigateInstance_Response {
 }
 
 message CVRGamepadUI_Message_RemoteVideoStream_Request {
@@ -3262,6 +3285,12 @@ message CVRGamepadUIShared_Icon {
 	optional uint32 hwnd = 4;
 }
 
+message CVRGamepadUIShared_PathProperty_ClientUserInfo {
+	optional bool logged_in = 1;
+	optional bool valve_email = 2;
+	optional bool developer_mode_enabled = 3;
+}
+
 message CVRGamepadUIShared_PathProperty_DashboardBarActions {
 	repeated .CVRGamepadUIShared_DEPRECATED_DashboardBarAction deprecated_actions = 1;
 	repeated .CVRGamepadUIShared_Action defined_actions = 2;
@@ -3282,6 +3311,11 @@ message CVRGamepadUIShared_PathProperty_DashboardBarActions_BarMenuItem {
 	optional int32 type = 1 [(.description) = "enum"];
 	optional uint32 parent_menu_action_id = 2;
 	optional uint32 action_id = 3;
+}
+
+message CVRGamepadUIShared_PathProperty_DashboardState {
+	optional bool dashboard_bar_visible = 1;
+	optional bool dashboard_bar_focused = 2;
 }
 
 message CVRGamepadUIShared_PathProperty_DashboardTabs {
@@ -3331,6 +3365,7 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	optional string performance_profile_value = 50;
 	optional bool perf_graph_in_hmd_value = 51;
 	optional bool record_vr_stats_value = 52;
+	optional bool record_tracking_value = 53;
 }
 
 message CVRGamepadUIShared_PathProperty_PowerOptions {
@@ -3612,6 +3647,7 @@ message StoreItem_Platforms {
 	optional .StoreItem_Platforms_VRSupport vr_support = 10;
 	optional int32 steam_deck_compat_category = 11 [(.description) = "enum"];
 	optional int32 steam_os_compat_category = 12 [(.description) = "enum"];
+	optional int32 steam_frame_compat_category = 13 [(.description) = "enum"];
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

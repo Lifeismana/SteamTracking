@@ -6,6 +6,7 @@
       module.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
+        Loading: "_6exjsiWCk6IgWiQenqfQH",
         UseHidingBottomHalf: "_3707obuB-7wD8GDUYRaLH4",
         TrailerAnchorStoreLink: "_1VNyOcfe2cBKY52VedXjyc",
         TrailerCtn: "_3ANIAZhTtXLvORlbv-Du-N",
@@ -5117,41 +5118,41 @@
             bShowIgnoreButton: _ = !1,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return void 0 === _ && void 0 === _
-          ? null
-          : (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().GameHoverCapsuleCtn,
-                _().InGameHover,
-                _ && _().UseHidingBottomHalf,
-              ),
+          { data: _ } = (0, _._)(_),
+          _ = void 0 === _ && void 0 === _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().GameHoverCapsuleCtn,
+            _ && _().Loading,
+            _().InGameHover,
+            _ && _().UseHidingBottomHalf,
+          ),
+          children: [
+            (0, _.jsxs)("a", {
+              href: _,
+              className: _().TrailerAnchorStoreLink,
               children: [
-                (0, _.jsxs)("a", {
-                  href: _,
-                  className: _().TrailerAnchorStoreLink,
-                  children: [
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_._, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                      }),
-                  ],
-                }),
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                  }),
               ],
-            });
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -5577,8 +5578,8 @@
             _: !0,
             appear: !0,
             classNames: {
-              appearActive: _().Opening,
-              enterDone: _().Open,
+              appearActive: (0, _._)(_().Opening, _().Opening),
+              enterDone: (0, _._)(_().Open, _().Open),
             },
             children: (_) =>
               (0, _.jsx)("div", {
@@ -8415,13 +8416,14 @@
             strPriceFormattedClassName: _,
             bPreferWholeNumbers: _,
             bSelfPurchaseOption: _,
+            bHideNewTag: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = _,
-          _ = (0, _._)(_, _),
+          _ = !_ && (0, _._)(_, _),
           _ = (0, _._)({
             [_().StoreSalePriceWidgetContainer]: !0,
             [_().SingleLineMode]: _,
@@ -9169,8 +9171,9 @@
                 if (!_) return new Set();
                 const _ = await (async function (_, _) {
                   const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgIgnoredApps || [];
+                    _ = await fetch(_),
+                    _ = await _.json();
+                  return Object.keys(_.rgIgnoredApps).map(Number) || [];
                 })(0, _);
                 return new Set(_);
               },
@@ -9544,6 +9547,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -9572,6 +9576,28 @@
               }
             })(_),
           [_?._, _?.type],
+        );
+      }
+      function _(_, _) {
+        return (0, _.useMemo)(
+          () =>
+            (function (_, _) {
+              switch (_) {
+                case "sub":
+                  return {
+                    packageid: _,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _,
+                  };
+                default:
+                  return {
+                    appid: _,
+                  };
+              }
+            })(_, _),
+          [_, _],
         );
       }
       function _(_, _) {

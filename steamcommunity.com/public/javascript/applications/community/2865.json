@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Beschluss angefochten",
     "moderationaction_escalated": "An höherer Stelle gemeldet",
     "moderationaction_sanctioned": "Maßnahmen ergriffen",
-    "moderationaction_sustainedondispute": "Anfechtung abgewiesen",
+    "moderationaction_sustained": "Moderation aufrechterhalten",
     "moderationaction_unresolved": "Themenstatus auf „Ungelöst“ geändert",
     "moderationaction_updated": "Themendetails aktualisiert",
     "moderationaction_locked": "Gesperrt",

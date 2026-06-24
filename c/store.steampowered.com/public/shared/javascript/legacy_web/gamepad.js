@@ -332,9 +332,8 @@
         IN_STEAMUI: !1,
         IN_GAMEPADUI: !1,
         FORCED_DISPLAY_MODE: void 0,
-        ON_DECK: !1,
         ON_FRAME: !1,
-        IS_STEAMOS_MANAGEMENT_ENABLED: !1,
+        IS_STEAMOS: !1,
         ON_STEAMOS_CLIENT_BRANCH: !1,
         IN_GAMESCOPE: !1,
         IN_LOGIN: !1,
@@ -1949,6 +1948,17 @@
         }
         GetBoundingRect() {
           return this.m_element?.getBoundingClientRect();
+        }
+        GetBoundingRectForFocusRing() {
+          let _ = this.m_element;
+          return (
+            this.m_Properties?.focusRingSizeElementID &&
+              (_ =
+                _?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? this.m_element),
+            _?.getBoundingClientRect()
+          );
         }
         SetHasFocus(_) {
           this.m_Focused.Set(_);
@@ -11103,10 +11113,10 @@
                     _: _.readInt32,
                     _: _.writeInt32,
                   },
-                  use_gyro_sw_biases: {
+                  triton_gyro_hw_cal: {
                     _: 48,
-                    _: _.readBool,
-                    _: _.writeBool,
+                    _: _.readInt32,
+                    _: _.writeInt32,
                   },
                 },
               }),
@@ -13221,12 +13231,7 @@
         );
         m_navigationSourceSupportsFocus = (function (_, _, _) {
           return new _(_, _, _);
-        })(
-          this.m_navigationSource,
-          (_) =>
-            _?.eActivationSourceType === _._.GAMEPAD ||
-            _?.eActivationSourceType === _._.KEYBOARD_SIMULATOR,
-        );
+        })(this.m_navigationSource, (_) => (0, _._)(_?.eActivationSourceType));
         m_bShowDebugFocusRing = _(!1);
         m_glyphInfo = _({
           nControllerType: 4,
@@ -13352,12 +13357,12 @@
         get NavigationSourceGlyphInfo() {
           return this.m_glyphInfo;
         }
-        DispatchVirtualButtonClick(_, _) {
+        DispatchVirtualButtonClick(_, _, _) {
           let _;
           _ && (_ = this.GetActiveContext() ?? this.FindAnActiveContext()),
             this.OnButtonDown(
               _,
-              _._.GAMEPAD,
+              _ ?? _._.GAMEPAD,
               -1,
               void 0,
               void 0,
@@ -13368,7 +13373,7 @@
             ),
             this.OnButtonUp(
               _,
-              _._.GAMEPAD,
+              _ ?? _._.GAMEPAD,
               -1,
               void 0,
               void 0,
@@ -13401,15 +13406,13 @@
           if (_?.m_LastActiveNavTree) {
             if (
               (_ || (_ = this.m_navigationSource?.Value?.eActivationSourceType),
-              !(
-                _.m_LastActiveNavTree.GetLastFocusedNode() ||
-                (_ != _._.GAMEPAD && _ != _._.KEYBOARD_SIMULATOR) ||
+              !_.m_LastActiveNavTree.GetLastFocusedNode() &&
+                (0, _._)(_) &&
                 (_(
                   `GetEventTarget: Context ${_.LogName()} tree ${_.m_LastActiveNavTree._} has no focused node, ${_ ? "finding one" : "will not find one"}`,
                 ),
                 _ && _.m_LastActiveNavTree.TakeFocus(_.GAMEPAD, !0),
-                this.BGlobalGamepadButton(_))
-              ))
+                !this.BGlobalGamepadButton(_)))
             )
               return [void 0, _];
             _.m_LastActiveNavTree.GetLastFocusedNode()
@@ -13803,7 +13806,7 @@
           _ = 0;
         _.prepend(_);
         const _ = (_) => {
-            const _ = _.GetBoundingRect(),
+            const _ = _.GetBoundingRectForFocusRing(),
               _ = _[0].getBoundingClientRect();
             return {
               left: _._ - _._ - 0,

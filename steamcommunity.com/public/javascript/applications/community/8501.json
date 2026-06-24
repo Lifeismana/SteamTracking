@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Çözüme itiraz edildi",
     "moderationaction_escalated": "Üst birime iletildi",
     "moderationaction_sanctioned": "Yaptırım uygulandı",
-    "moderationaction_sustainedondispute": "İtiraz geçersiz sayıldı",
+    "moderationaction_sustained": "Moderasyon kararı uygun görüldü",
     "moderationaction_unresolved": "Konu çözülmemiş hâle geldi",
     "moderationaction_updated": "Konu detayları güncellendi",
     "moderationaction_locked": "Kilitlendi",

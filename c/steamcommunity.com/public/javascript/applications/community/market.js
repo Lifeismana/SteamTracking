@@ -3,13 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        FilterBorder: "_3xFYpKNlOZ6xjQ529ZgRbr",
-        Top: "_310cGk80jWCZr6LxeueX_5",
-        Bottom: "nLYMJhpffeKLN_8VkTcD_",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ObjectFit: "_NIZ2fYFBu6WSnEE1H6i3",
         ObjectPosition: "_3OZ4rrlKzwAYOKP9HdqUrq",
       };
@@ -539,38 +532,55 @@
       function _(_, _) {
         return _.name_color ? `#${_.name_color}` : _;
       }
-      function _(_, _) {
+      function _(_, _, _) {
         const _ =
-          "string" == typeof (null == _ ? void 0 : _.amount)
-            ? parseInt(_.amount)
-            : null == _
-              ? void 0
-              : _.amount;
-        return (_ && _ > 1 ? `${(0, _._)(_)} ` : "") + _.name;
+            "string" == typeof (null == _ ? void 0 : _.amount)
+              ? parseInt(_.amount)
+              : null == _
+                ? void 0
+                : _.amount,
+          _ = _ || _.name;
+        return (_ && _ > 1 ? `${(0, _._)(_)} ` : "") + _;
       }
       function _(_) {
-        const { description: _, asset: _, style: _ = {}, ..._ } = _;
+        const {
+            description: _,
+            asset: _,
+            nameOverride: _,
+            colorOverride: _,
+            style: _ = {},
+            ..._
+          } = _,
+          _ = _ || _(_);
         return (0, _.jsx)(_._, {
           contrast: "note",
           ..._,
           style: {
             ...(null != _ ? _ : {}),
-            color: _(_),
+            color: _,
           },
-          children: _(_, _),
+          children: _(_, _, _),
         });
       }
       function _(_) {
-        const { description: _, asset: _, style: _ = {}, ..._ } = _;
+        const {
+            description: _,
+            asset: _,
+            nameOverride: _,
+            colorOverride: _,
+            style: _ = {},
+            ..._
+          } = _,
+          _ = _ || _(_);
         return (0, _.jsx)(_._, {
           contrast: "note",
           underline: "hover",
           ..._,
           style: {
             ...(null != _ ? _ : {}),
-            color: _(_),
+            color: _,
           },
-          children: _(_, _),
+          children: _(_, _, _),
         });
       }
       function _(_) {
@@ -598,7 +608,7 @@
         });
       }
       function _(_) {
-        var _;
+        var _, _;
         const _ = _.context.itemDescription,
           _ = parseInt(_.args.index || "-1");
         let _;
@@ -609,16 +619,31 @@
           _ < _.container_properties.contained_items.length &&
           (_ = _.container_properties.contained_items[_]);
         const _ = _.appid,
+          _ =
+            null === (_ = _.children) || void 0 === _
+              ? void 0
+              : __webpack_require__.toString(),
+          _ = _.context.line.color && `#${_.context.line.color}`,
           { data: _ } = _(_, _);
-        return _ && _
-          ? (0, _.jsx)(
-              _,
-              {
-                appid: _,
-                description: _,
-              },
-              _,
-            )
+        return _
+          ? _
+            ? (0, _.jsx)(
+                _,
+                {
+                  appid: _,
+                  description: _,
+                  nameOverride: _,
+                  colorOverride: _,
+                },
+                _,
+              )
+            : _
+              ? (0, _.jsx)(_, {
+                  description: {},
+                  nameOverride: _,
+                  colorOverride: _,
+                })
+              : null
           : null;
       }
       function _(_) {
@@ -634,7 +659,12 @@
           : null;
       }
       function _(_) {
-        const { appid: _, description: _ } = _;
+        const {
+          appid: _,
+          description: _,
+          nameOverride: _,
+          colorOverride: _,
+        } = _;
         return (0, _.jsx)(_, {
           description: _,
           children:
@@ -645,9 +675,13 @@
                     _,
                     _.market_bucket_group_id || _.market_hash_name,
                   ),
+                  nameOverride: _,
+                  colorOverride: _,
                 })
               : (0, _.jsx)(_, {
                   description: _,
+                  nameOverride: _,
+                  colorOverride: _,
                 }),
         });
       }
@@ -697,7 +731,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { itemDescription: _, bbcode: _ = "" } = _,
+        const { itemDescription: _, line: _, bbcode: _ = "" } = _,
           _ = _.useMemo(() => {
             const _ = {
               ..._._,
@@ -724,8 +758,9 @@
           _ = _.useMemo(
             () => ({
               itemDescription: _,
+              line: _,
             }),
-            [_],
+            [_, _],
           );
         return _.useMemo(() => _.ParseBBCode(_, _), [_, _, _]);
       }
@@ -744,82 +779,6 @@
         return new Date(1e3 * _).toLocaleString((0, _._)());
       }
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { description: _, type: _ = "descriptions", ..._ } = _;
-        let _ = _[_];
-        if ((0, _._)(_.appid) && _) {
-          let _ = !1;
-          _ = _.filter(
-            (_) =>
-              "keychain_info" !== _.name &&
-              "sticker_info" !== _.name &&
-              ("blank" !== _.name || !_) &&
-              ((_ = "blank" === _.name), !0),
-          );
-        }
-        return (0, _.jsx)(_._, {
-          direction: "column",
-          children:
-            null == _
-              ? void 0
-              : _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      line: _,
-                      description: _,
-                      ..._,
-                    },
-                    _,
-                  ),
-                ),
-        });
-      }
-      function _(_) {
-        var _, _;
-        const { line: _, description: _, ..._ } = _,
-          _ = {
-            _: "div",
-            ..._,
-            whiteSpace: "pre-line",
-            style: {
-              color: _.color ? `#${_.color}` : void 0,
-            },
-          };
-        let _ =
-          null !==
-            (_ = null === (_ = _.value) || void 0 === _ ? void 0 : _.trim()) &&
-          void 0 !== _
-            ? _
-            : "";
-        switch ((_ || (_ = " "), _.type)) {
-          case "html":
-            return (0, _.jsx)(_._, {
-              ..._,
-              children: (0, _.jsx)("span", {
-                style: {
-                  display: "contents",
-                },
-                dangerouslySetInnerHTML: {
-                  __html: _,
-                },
-              }),
-            });
-          case "bbcode":
-            return (0, _.jsx)(_._, {
-              ..._,
-              children: (0, _.jsx)(_, {
-                itemDescription: _,
-                bbcode: _,
-              }),
-            });
-          default:
-            return (0, _.jsx)(_._, {
-              ..._,
-              children: _,
-            });
-        }
-      }
       const _ = _.createContext(void 0);
       function _() {
         return _.useContext(_).description;
@@ -1008,34 +967,7 @@
             ownerSteamID: _,
             listingID: _,
           } = _,
-          _ = (function (_, _, _, _, _) {
-            var _, _;
-            let _ = _.replace(
-              /%assetid%/,
-              null !== (_ = null == _ ? void 0 : _.assetid) && void 0 !== _
-                ? _
-                : "",
-            )
-              .replace(
-                /%contextid%/,
-                null !== (_ = null == _ ? void 0 : _.contextid) && void 0 !== _
-                  ? _
-                  : "",
-              )
-              .replace(/%owner_steamid%/, null != _ ? _ : "")
-              .replace(/%listingid%/, null != _ ? _ : "");
-            (null == _ ? void 0 : _.asset_properties) &&
-              _.asset_properties.forEach((_) => {
-                let _ = "";
-                void 0 !== _.float_value
-                  ? (_ = _.float_value.toString())
-                  : void 0 !== _.int_value
-                    ? (_ = _.int_value.toString())
-                    : void 0 !== _.string_value && (_ = _.string_value),
-                  (_ = _.replace(`%propid:${_.propertyid}%`, _));
-              });
-            return (_ = _.replace(/%propid:[0-9]+%/, "")), _;
-          })(_.link, 0, _, _, _);
+          _ = _(_.link, _, _, _, _);
         if (_.startsWith("javascript:")) {
           const _ = _.substring(11),
             _ = new Function(_);
@@ -1052,6 +984,115 @@
           color: "dull",
           children: _.name,
         });
+      }
+      function _(_, _, _, _, _) {
+        var _, _;
+        let _ = _.replace(
+          /%assetid%/,
+          null !== (_ = null == _ ? void 0 : _.assetid) && void 0 !== _
+            ? _
+            : "",
+        )
+          .replace(
+            /%contextid%/,
+            null !== (_ = null == _ ? void 0 : _.contextid) && void 0 !== _
+              ? _
+              : "",
+          )
+          .replace(/%owner_steamid%/, null != _ ? _ : "")
+          .replace(/%listingid%/, null != _ ? _ : "");
+        return (
+          (null == _ ? void 0 : _.asset_properties) &&
+            _.asset_properties.forEach((_) => {
+              let _ = "";
+              void 0 !== _.float_value
+                ? (_ = _.float_value.toString())
+                : void 0 !== _.int_value
+                  ? (_ = _.int_value.toString())
+                  : void 0 !== _.string_value && (_ = _.string_value),
+                (_ = _.replace(`%propid:${_.propertyid}%`, _));
+            }),
+          (_ = _.replace(/%propid:[0-9]+%/, "")),
+          _
+        );
+      }
+      function _(_) {
+        const { description: _, asset: _, type: _ = "descriptions", ..._ } = _;
+        let _ = _[_];
+        if ((0, _._)(_.appid) && _) {
+          let _ = !1;
+          _ = _.filter(
+            (_) =>
+              "keychain_info" !== _.name &&
+              "sticker_info" !== _.name &&
+              ("blank" !== _.name || !_) &&
+              ((_ = "blank" === _.name), !0),
+          );
+        }
+        return (0, _.jsx)(_._, {
+          direction: "column",
+          children:
+            null == _
+              ? void 0
+              : _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      line: _,
+                      description: _,
+                      asset: _,
+                      ..._,
+                    },
+                    _,
+                  ),
+                ),
+        });
+      }
+      function _(_) {
+        var _, _;
+        const { line: _, description: _, asset: _, ..._ } = _,
+          _ = {
+            _: "div",
+            ..._,
+            whiteSpace: "pre-line",
+            style: {
+              color: _.color ? `#${_.color}` : void 0,
+            },
+          };
+        let _ =
+          null !==
+            (_ = null === (_ = _.value) || void 0 === _ ? void 0 : _.trim()) &&
+          void 0 !== _
+            ? _
+            : "";
+        switch ((_ || (_ = " "), (_ = _(_, 0, _)), _.type)) {
+          case "html":
+            return (0, _.jsx)(_._, {
+              ..._,
+              children: (0, _.jsx)("span", {
+                style: {
+                  display: "contents",
+                },
+                dangerouslySetInnerHTML: {
+                  __html: _,
+                },
+              }),
+            });
+          case "bbcode":
+            return (0, _.jsx)(_._, {
+              ..._,
+              children: (0, _.jsx)(_, {
+                itemDescription: _,
+                line: _,
+                bbcode: _,
+              }),
+            });
+          default:
+            return (0, _.jsx)(_._, {
+              ..._,
+              children: _,
+            });
+        }
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1378,10 +1419,12 @@
         },
         GameName: _,
         Descriptions: function () {
-          const _ = _();
+          const _ = _(),
+            _ = _();
           return (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(_, {
               description: _,
+              asset: _,
               contrast: "body",
               size: "3",
             }),
@@ -1399,9 +1442,11 @@
             : null;
         },
         OwnerDescriptions: function () {
-          const _ = _();
+          const _ = _(),
+            _ = _();
           return (0, _.jsx)(_, {
             description: _,
+            asset: _,
             type: "owner_descriptions",
             contrast: "body",
             size: "3",
@@ -1946,560 +1991,6 @@
             }),
           }),
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            refPopover: _,
-            inputValue: _,
-            onInputChange: _,
-            activeIndex: _,
-            popoverPlacement: _,
-            multiselect: _,
-            setActiveIndex: _,
-            setOpen: _,
-            filterPlaceholder: _,
-            onIndexSelected: _,
-            refScrollElement: _,
-          } = _("<Combobox.Options>"),
-          _ = _.startsWith("top"),
-          _ = (0, _.jsx)(_._, {
-            overflow: "auto",
-            ref: _,
-            style: {
-              overscrollBehavior: "contain",
-            },
-            children: _.children,
-          });
-        return (0, _.jsx)(_._.Positioner, {
-          ref: _,
-          children: (0, _.jsxs)(_._, {
-            direction: "column",
-            maxHeight: "var(--popover-max-height)",
-            children: [
-              _ && _,
-              (0, _.jsx)(_._, {
-                flexShrink: "0",
-                className: (0, _._)(_.FilterBorder, _ ? _.Top : _.Bottom),
-                children: (0, _.jsx)(_._, {
-                  margin: "3",
-                  variant: "inset",
-                  radius: "sm",
-                  value: _,
-                  onTextChange: _,
-                  onKeyDown: (_) => {
-                    "Enter" === _.key &&
-                      null !== _ &&
-                      (_(_),
-                      _ || (_(null), _(!1)),
-                      _.preventDefault(),
-                      _.stopPropagation());
-                  },
-                  onKeyDownCapture: (_) => {
-                    ("Home" !== _.key && "End" !== _.key) ||
-                      _.stopPropagation();
-                  },
-                  placeholder: _,
-                  inputRef: (_) => {
-                    _ &&
-                      _.focus({
-                        preventScroll: !0,
-                      });
-                  },
-                  autoComplete: "off",
-                }),
-              }),
-              !_ && _,
-            ],
-          }),
-        });
-      }
-      const _ = (0, _.createContext)(null);
-      function _(_) {
-        const { value: _, children: _, disabled: _ } = _,
-          {
-            onItemSelectionChange: _,
-            selectedValue: _,
-            multiselect: _,
-            maxSelected: _,
-          } = _("<ComboboxTrigger>");
-        let _ = !1,
-          _ = !1;
-        _
-          ? ((_ = Array.isArray(_) && _.includes(_)),
-            (_ = !!_ && Array.isArray(_) && _.length >= _))
-          : (_ = _ === _);
-        const _ = _ || (_ && !_);
-        return (0, _.jsxs)(_._.Item, {
-          onSelect: () => _(_),
-          selected: _,
-          disabled: _,
-          children: [
-            _ &&
-              (0, _.jsxs)(_._, {
-                gap: "2",
-                align: "center",
-                children: [
-                  (0, _.jsx)(_._, {
-                    checked: _,
-                    variant: "dark",
-                  }),
-                  _,
-                ],
-              }),
-            !_ && _,
-          ],
-        });
-      }
-      function _(_, _) {
-        if ("string" == typeof _)
-          return _.toLocaleLowerCase().includes(_.toLocaleLowerCase());
-        try {
-          return JSON.stringify(_)
-            .toLocaleLowerCase()
-            .includes(_.toLocaleLowerCase());
-        } catch (_) {}
-        return (
-          console.error(
-            "Could not use default option filter on provided Comboxbox option. Custom filter function required.",
-          ),
-          !1
-        );
-      }
-      function _(_) {
-        return _(_, !1);
-      }
-      function _(_, _) {
-        const {
-            rgOptions: _,
-            filter: _ = _,
-            filterPlaceholder: _,
-            selectedValue: _,
-            onSelectionChange: _,
-            maxSelected: _,
-          } = _,
-          [_, _] = (0, _.useState)(""),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _.useMemo)(
-            () => __webpack_require__.filter((_) => _(_, _)),
-            [_, _, _],
-          ),
-          _ = "number" == typeof _,
-          _ = _.length > 0,
-          _ = (0, _.useCallback)(
-            (_) => {
-              _ && !_ && _ && _(0), _(_);
-            },
-            [_, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _ || _(""), _(_);
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _(_), _ || _(!1);
-            },
-            [_, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              if (_)
-                if (_) {
-                  const _ = _,
-                    _ = _.indexOf(_);
-                  if (-1 !== _) return _(_.slice(0, _).concat(_.slice(_ + 1)));
-                  _(_.concat(_));
-                } else _([_]);
-              else _(_);
-            },
-            [_, _, _],
-          );
-        return {
-          activeIndex: _,
-          setActiveIndex: _,
-          rgFilteredOptions: _,
-          selectedValue: _,
-          onSelectionChange: _,
-          onItemSelectionChange: _,
-          onClear: (_) => {
-            _(_ ? [] : null), _.stopPropagation(), _.preventDefault();
-          },
-          inputValue: _,
-          onInputChange: _,
-          bOpen: _,
-          setOpen: _,
-          filterPlaceholder: _,
-          multiselect: _,
-          maxSelected: _,
-        };
-      }
-      const _ = {
-        Root: function (_) {
-          const {
-              children: _,
-              state: _,
-              placement: _ = "bottom-end",
-              popoverWidth: _ = "dropdown",
-              popoverMaxHeight: _,
-              ..._
-            } = _,
-            [_, _] = (0, _.useState)(void 0);
-          (0, _.useEffect)(() => _(void 0), [_.bOpen]);
-          const _ = (0, _.useRef)(null),
-            _ = (0, _.useRef)(null),
-            _ = (0, _.useMemo)(
-              () => _.rgFilteredOptions.findIndex((_) => _ === _.selectedValue),
-              [_.selectedValue, _.rgFilteredOptions],
-            ),
-            _ = (0, _._)({
-              open: _.bOpen,
-              onOpenChange: _.setOpen,
-              width: _,
-              maxHeight: _,
-              placement: _,
-              gutter: "4",
-              activeIndex: _.activeIndex,
-              setActiveIndex: _.setActiveIndex,
-              selectedIndex: _,
-              setSelectedIndex: (_) =>
-                __webpack_require__.onItemSelectionChange(
-                  _.rgFilteredOptions[_],
-                ),
-              interactions: {
-                click: !0,
-                virtualItemFocus: !_._.IN_GAMEPADUI,
-              },
-              role: "combobox",
-              scroll: !1,
-            }),
-            _ = {
-              ..._,
-              ..._,
-              focusedValue: _,
-              onFocusChange: _,
-              refPopover: _,
-              refScrollElement: _,
-              setOpen: (_) => {
-                if (_) {
-                  let _ = null;
-                  (_ = _.multiselect
-                    ? Array.isArray(_.selectedValue)
-                      ? _.selectedValue[0]
-                      : null
-                    : _.selectedValue),
-                    _(_),
-                    __webpack_require__.onInputChange("");
-                }
-                __webpack_require__.setOpen(_);
-              },
-              onIndexSelected: (_) => {
-                const _ = _.elementsRef.current;
-                if (_ && _[_]) {
-                  _[_].click();
-                }
-              },
-              popoverPlacement: _.floating.placement,
-            };
-          return (0, _.jsx)(_.Provider, {
-            value: _,
-            children: (0, _.jsx)(_._.Root, {
-              state: _,
-              children: _,
-            }),
-          });
-        },
-        Option: _,
-        Options: _,
-        VirtualizedOptions: function (_) {
-          const { items: _, renderItem: _, overscan: _ = 5, ..._ } = _,
-            {
-              bOpen: _,
-              refPopover: _,
-              refScrollElement: _,
-            } = _("<ComboboxVirtualizedOptions>"),
-            [_, _] = (0, _.useState)(!1),
-            _ = _ && !!_.current && !!_.current;
-          (0, _.useEffect)(() => {
-            _ !== _ && _(_);
-          }, [_, _]);
-          const _ = (0, _._)({
-            count: _ ? _.length : Math.min(_.length, 3),
-            getScrollElement: () => _.current,
-            enabled: _,
-            measureElement: _._,
-            ..._,
-          });
-          return (0, _.jsx)(_, {
-            children: (0, _.jsx)(_, {
-              value: _,
-              children: (0, _.jsx)(_._, {
-                height: `${_.getTotalSize()}px`,
-                position: "relative",
-                width: "100%",
-                children: _.getVirtualItems().map((_) =>
-                  __webpack_require__(_[_.index], _, _),
-                ),
-              }),
-            }),
-          });
-        },
-        VirtualizedOption: function (_) {
-          const { virtualItem: _, ..._ } = _,
-            _ = (0, _.useContext)(_);
-          return (
-            (0, _._)(_, "Virtual item rendered outside of a virtualizer!"),
-            (0, _.jsx)(_._, {
-              position: "absolute",
-              width: "100%",
-              style: {
-                top: 0,
-                left: 0,
-                transform: `translateY(${_.start}px)`,
-              },
-              ref: _.measureElement,
-              "data-index": _.index,
-              children: (0, _.jsx)(_, {
-                ..._,
-              }),
-            })
-          );
-        },
-        Trigger: function (_) {
-          const { children: _, beforeContent: _, render: _ } = _,
-            {
-              bOpen: _,
-              setOpen: _,
-              inputValue: _,
-              onInputChange: _,
-              selectedValue: _,
-              focusedValue: _,
-              refScrollElement: _,
-              onItemSelectionChange: _,
-              activeIndex: _,
-              setActiveIndex: _,
-              onFocusChange: _,
-              rgFilteredOptions: _,
-              onSelectionChange: _,
-              multiselect: _,
-              onClear: _,
-              refPopover: _,
-              clearable: _,
-              filterPlaceholder: _,
-              onIndexSelected: _,
-              popoverPlacement: _,
-              maxSelected: _,
-              ..._
-            } = _("<ComboboxTrigger>"),
-            _ = {
-              tabIndex: 0,
-              children: _,
-            },
-            _ = _ ? Array.isArray(_) && _.length > 0 : !!_,
-            _ =
-              _ && _
-                ? (0, _.jsx)(_._, {
-                    onClick: _,
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : (0, _.jsx)(_._, {}),
-            _ = (0, _.jsx)(_._, {
-              beforeContent: _,
-              afterContent: _,
-              hasValue: _,
-              cursor: "pointer",
-              tabIndex: 0,
-              ..._,
-            }),
-            _ = (0, _._)(_, _, _, void 0);
-          return (0, _.jsx)(_._.Anchor, {
-            children: _,
-          });
-        },
-        DefaultOptionFilter: _,
-        Value: function (_) {
-          return (0, _.jsx)(_._, {
-            weight: "medium",
-            truncate: !0,
-            contrast: "title",
-            ..._,
-          });
-        },
-        Placeholder: function (_) {
-          return (0, _.jsx)(_._, {
-            contrast: "description",
-            truncate: !0,
-            ..._,
-          });
-        },
-      };
-      function _(_) {
-        return _
-          ? "string" == typeof _
-            ? _
-            : "number" == typeof _
-              ? _.toString()
-              : (console.error(
-                  "Could not use default option labeler on Combobox option value. Custom labeler requried",
-                  _,
-                ),
-                "")
-          : "";
-      }
-      const _ = Object.assign(function (_) {
-        const {
-            selectedValue: _,
-            onSelectionChange: _,
-            options: _,
-            filter: _,
-            filterPlaceholder: _,
-            placeholder: _,
-            getOptionLabel: _ = _,
-            ..._
-          } = _,
-          _ = _({
-            onSelectionChange: _,
-            selectedValue: _,
-            rgOptions: _,
-            filter: (0, _.useCallback)(
-              (_, _) => (_ ? _(_, _) : _(_, _(_))),
-              [_, _],
-            ),
-            filterPlaceholder: _,
-          }),
-          _ = null != _;
-        return (0, _.jsxs)(_.Root, {
-          state: _,
-          ..._,
-          children: [
-            (0, _.jsxs)(_.Trigger, {
-              children: [
-                _ &&
-                  (0, _.jsx)(_.Value, {
-                    children: _(_),
-                  }),
-                !_ &&
-                  (0, _.jsx)(_.Placeholder, {
-                    children: _,
-                  }),
-              ],
-            }),
-            (0, _.jsx)(_.Options, {
-              children: _.rgFilteredOptions.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    value: _,
-                    children: _(_),
-                  },
-                  _(_),
-                ),
-              ),
-            }),
-          ],
-        });
-      }, _);
-      function _(_) {
-        return _(_, !0);
-      }
-      const _ = Object.assign(function (_) {
-          const {
-              selectedValue: _,
-              onSelectionChange: _,
-              options: _,
-              filter: _,
-              filterPlaceholder: _,
-              placeholder: _,
-              getOptionLabel: _ = _,
-              maxSelected: _,
-              ..._
-            } = _,
-            _ = _({
-              onSelectionChange: _,
-              selectedValue: _,
-              rgOptions: _,
-              filter: (0, _.useCallback)(
-                (_, _) => (_ ? _(_, _) : _(_, _(_))),
-                [_, _],
-              ),
-              filterPlaceholder: _,
-              maxSelected: _,
-            }),
-            _ = Array.isArray(_) && _.length > 0;
-          let _ = "";
-          if (_) {
-            const _ = _.map((_) => _(_));
-            _ =
-              "ListFormat" in Intl
-                ? new Intl.ListFormat((0, _._)().strISOCode).format(_)
-                : _.join(", ");
-          }
-          return (0, _.jsxs)(_.Root, {
-            state: _,
-            ..._,
-            children: [
-              (0, _.jsxs)(_.Trigger, {
-                children: [
-                  _ &&
-                    (0, _.jsx)(_.Value, {
-                      children: _,
-                    }),
-                  !_ &&
-                    (0, _.jsx)(_.Placeholder, {
-                      children: _,
-                    }),
-                ],
-              }),
-              (0, _.jsx)(_.Options, {
-                children: _.rgFilteredOptions.map((_) =>
-                  (0, _.jsx)(
-                    _.Option,
-                    {
-                      value: _,
-                      children: _(_),
-                    },
-                    _(_),
-                  ),
-                ),
-              }),
-            ],
-          });
-        }, _),
-        _ = (0, _.createContext)(null);
-      function _(_) {
-        const _ = (0, _.useContext)(_);
-        return _ || console.error(`${_} must be used within a <Combobox>!`), _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3103,7 +2594,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { showSteamItems: _, onShowSteamItemsChange: _ } = _;
@@ -3128,18 +2618,18 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 2;
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         return (0, _.useMemo)(() => {
           if (!_) return [];
           const _ = _[_];
-          return _ ? _(_, _) : _(_, void 0, _);
+          return _ ? _(_, _, _) : _(_, void 0, _, _);
         }, [_, _, _]);
       }
       const _ = 753,
         _ = {
-          [_]: (_, _) => _(_, 3, _),
+          [_]: (_, _, _) => _(_, 3, _, _),
         };
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         const _ = "number" == typeof _ ? _ : _,
           _ = [],
           _ = [];
@@ -3148,7 +2638,7 @@
           const _ = _[_];
           if (!_.tags) continue;
           const _ = Object.keys(_.tags).length < _,
-            _ = (0, _._)(_, _ ? "checkbox" : "select", !0, void 0, _);
+            _ = (0, _._)(_, _ ? "checkbox" : "select", !0, void 0, _, _);
           _ && (_ ? _.push(_) : _.push(_));
         }
         return [_, _].filter((_) => _.length > 0);
@@ -3196,8 +2686,8 @@
         });
       }
       const _ = 753,
-        _ = `${_}_item_class`,
-        _ = `${_}_Event`;
+        _ = "item_class",
+        _ = "Event";
       function _(_) {
         const {
             facets: _,
@@ -3357,7 +2847,71 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: ["market", "app_facets", _],
+              enabled: !!_,
+              queryFn: async () => _(_),
+            };
+          })(_),
+        );
+      }
+      async function _(_) {
+        const _ = await fetch(`${_._.COMMUNITY_BASE_URL}market/appfacets/${_}`);
+        if (!_ || !_._)
+          throw new Error(`Failed to load market filters for app ${_}`);
+        const _ = await _.json();
+        if (!_.success || !_.facets)
+          throw new Error(`Loaded malformed market filters for app ${_}`);
+        return _.facets;
+      }
+      const _ = 753,
+        _ = "Game";
+      function _() {
+        return (0, _._)(
+          ((_ = _),
+          {
+            queryKey: ["marketfilters", _],
+            queryFn: async () => {
+              const _ = await _(_);
+              if (!_)
+                throw new Error(
+                  "Failed to load market facets for Steam Inventory items",
+                );
+              const _ = _[_];
+              if ((delete _[_], !_.tags))
+                return {
+                  rgApps: [],
+                  facets: {},
+                  mapAppIDs: {},
+                };
+              const _ = {},
+                _ = [];
+              for (const _ of Object.keys(_.tags)) {
+                const _ = _.tags[_],
+                  _ = parseInt(_.slice(_.indexOf("_") + 1));
+                isNaN(_) ||
+                  ((_[_] = !0),
+                  _.push({
+                    appid: _,
+                    name: _.localized_name,
+                    icon: `${_._.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${_}`,
+                  }));
+              }
+              return {
+                rgApps: (0, _._)(_, (_) => _.name),
+                mapAppIDs: _,
+                facets: _,
+              };
+            },
+          }),
+        );
+        var _;
+      }
       const _ = "4",
         _ = (0, _.createContext)({});
       function _(_) {
@@ -3945,53 +3499,15 @@
         });
       }
       const _ = 753,
-        _ = `${_}_Game`;
+        _ = "Game";
       function _(_) {
         var _, _, _;
         const { filter: _, onFilterChange: _, suggestedInitialApp: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = !_.app && _,
           _ = _(_),
-          _ = (0, _._)(
-            ((_ = _),
-            {
-              queryKey: ["marketfilters", _],
-              queryFn: async () => {
-                const _ = await _(_);
-                if (!_)
-                  throw new Error(
-                    "Failed to load market facets for Steam Inventory items",
-                  );
-                const _ = _[_];
-                if ((delete _[_], !_.tags))
-                  return {
-                    rgApps: [],
-                    facets: {},
-                    mapAppIDs: {},
-                  };
-                const _ = {},
-                  _ = [];
-                for (const _ of Object.keys(_.tags)) {
-                  const _ = _.tags[_],
-                    _ = parseInt(_.slice(_.indexOf("_") + 1));
-                  isNaN(_) ||
-                    ((_[_] = !0),
-                    _.push({
-                      appid: _,
-                      name: _.localized_name,
-                      icon: `${_._.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${_}`,
-                    }));
-                }
-                return {
-                  rgApps: (0, _._)(_, (_) => _.name),
-                  mapAppIDs: _,
-                  facets: _,
-                };
-              },
-            }),
-          );
-        var _;
-        const { facets: _ = {}, rgApps: _, mapAppIDs: _ } = _.data || {},
+          _ = _(),
+          { facets: _ = {}, rgApps: _, mapAppIDs: _ } = _.data || {},
           _ = !_.facets.Event || 0 === Object.keys(_.facets).length;
         if (
           ((0, _.useEffect)(() => {
@@ -4281,9 +3797,7 @@
           _ && _.set("q", _),
           _ && _ && _(_.app) && _.set("descriptions", "1");
         for (const _ of Object.keys(_))
-          if (_[_])
-            for (const _ of Object.keys(_[_]))
-              _[_][_] && _.append(`category_${_.appid}_${_}[]`, `tag_${_}`);
+          if (_[_]) for (const _ of Object.keys(_[_])) 0;
         for (const _ of Object.keys(_))
           if (_[_])
             for (const _ of Object.keys(_[_]))
@@ -4315,15 +3829,39 @@
       }
       function _(_) {
         const { appid: _, ..._ } = _,
+          _ = _(_),
           _ = (function (_) {
-            return (0, _._)({
-              queryKey: ["marketfilters", _],
-              queryFn: () => _(_),
-              enabled: !!_,
-            });
+            return (0, _._)(
+              (function (_) {
+                return {
+                  queryKey: ["marketaccessories", _],
+                  queryFn: async () => {
+                    const _ = await fetch(
+                      `${_._.COMMUNITY_BASE_URL}market/appaccessories/${_}`,
+                    );
+                    if (!_ || !_._)
+                      throw new Error(
+                        `Failed to load market filters for app ${_}`,
+                      );
+                    const _ = await _.json();
+                    if (!_.success || !_.facets)
+                      throw new Error(
+                        `Loaded malformed market filters for app ${_}`,
+                      );
+                    return _.facets.map((_) => ({
+                      facets: [],
+                      internal_type: "",
+                      localized_type: "",
+                      ..._,
+                    }));
+                  },
+                  enabled: !!_,
+                };
+              })(_),
+            );
           })(_);
-        if (_.isLoading) return (0, _.jsx)(_, {});
-        if (_.isError || !_.data)
+        if (_.isLoading || _.isLoading) return (0, _.jsx)(_, {});
+        if (_.isError || !_.data || _.isError || !_.data)
           return (0, _.jsx)(_, {
             children: (0, _.jsx)(_._, {
               size: "4",
@@ -4336,6 +3874,7 @@
         return (0, _.jsx)(_, {
           appid: _,
           facets: _.data,
+          accessories: _.data,
           ..._,
         });
       }
@@ -4368,17 +3907,6 @@
               facets: _,
               ..._,
             });
-      }
-      async function _(_) {
-        const _ = await fetch(
-          `${_._.COMMUNITY_BASE_URL}market/appfilters/${_}`,
-        );
-        if (!_ || !_._)
-          throw new Error(`Failed to load market filters for app ${_}`);
-        const _ = await _.json();
-        if (!_.success || !_.facets)
-          throw new Error(`Loaded malformed market filters for app ${_}`);
-        return _.facets;
       }
       function _(_ = !0) {
         const { suggestedApps: _ } = (0, _.useContext)(_);
@@ -4535,6 +4063,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5400,9 +4929,181 @@
           });
         },
       };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      const _ = "$any$",
+        _ = "$none$";
+      function _(_) {
+        const { matches: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          gap: "2",
+          align: "center",
+          children: (0, _.jsxs)(_._, {
+            children: [
+              _,
+              " ",
+              void 0 !== _ && _ >= 1
+                ? (0, _.jsxs)(_._, {
+                    contrast: "description",
+                    children: ["(", Intl.NumberFormat().format(_), ")"],
+                  })
+                : void 0,
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            facets: _,
+            localized_type: _,
+            internal_type: _,
+            value: _ = {},
+            onChange: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () => _.filter((_) => _[_] && _[_][_.internal_facet]),
+            [_, _, _],
+          ),
+          _ = _.some((_) => _.is_artificial),
+          _ = (0, _._)({
+            rgOptions: _,
+            selectedValue: _,
+            onSelectionChange: (_) => _(_, _),
+            filter: (_, _) =>
+              _ &&
+              _.localized_facet
+                .toLocaleLowerCase()
+                .includes(_.toLocaleLowerCase()),
+            filterPlaceholder: _._.Localize(
+              "#AdvancedSearch_FilterGeneric_Placeholder",
+            ),
+          }),
+          _ = _.length > 0;
+        return (0, _.jsxs)(_._.Root, {
+          state: _,
+          variant: "highlight",
+          radius: "sm",
+          clearable: !0,
+          popoverMaxHeight: 500,
+          children: [
+            (0, _.jsxs)(_._.Trigger, {
+              children: [
+                !_ &&
+                  (0, _.jsx)(_._.Value, {
+                    children: _._.Localize(
+                      "#AccessorySearch_AttachedAccessoryType",
+                      _,
+                    ),
+                  }),
+                _ &&
+                  (0, _.jsxs)(_._.Value, {
+                    children: [
+                      _._.Localize("#AccessorySearch_AttachedAccessoryType", _),
+                      ": ",
+                      (0, _.jsx)(_._, {
+                        color: "accent-8",
+                        children:
+                          ((_ = _), _.map((_) => _.localized_facet).join(", ")),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_._.VirtualizedOptions, {
+              estimateSize: () => 36,
+              items: _.rgFilteredOptions,
+              renderItem: (_, _) =>
+                (0, _.jsxs)(
+                  _.Fragment,
+                  {
+                    children: [
+                      !_.is_separator &&
+                        (0, _.jsx)(_._.VirtualizedOption, {
+                          value: _,
+                          virtualItem: _,
+                          disabled:
+                            _ &&
+                            !_.some(
+                              (_) => _.internal_facet === _.internal_facet,
+                            ),
+                          children: (0, _.jsx)(_, {
+                            matches: void 0,
+                            children: _.localized_facet,
+                          }),
+                        }),
+                      _.is_separator &&
+                        (0, _.jsx)(_._.VirtualizedContent, {
+                          virtualItem: _,
+                          children: (0, _.jsx)(_._, {
+                            size: "4",
+                          }),
+                        }),
+                    ],
+                  },
+                  _.localized_facet,
+                ),
+            }),
+          ],
+        });
+        var _;
+      }
+      function _(_) {
+        const { facet: _, state: _, onStateChange: _ } = _,
+          _ = (0, _.useMemo)(() => {
+            const _ = [
+              {
+                localized_facet: _._.Localize("#Accessories_AnyFilter"),
+                internal_facet: _,
+                matches: 0,
+                is_artificial: !0,
+              },
+              {
+                localized_facet: _._.Localize("#Accessories_NoneFilter"),
+                internal_facet: _,
+                matches: 0,
+                is_artificial: !0,
+              },
+              {
+                localized_facet: "separator",
+                internal_facet: "$sep$",
+                matches: 0,
+                is_artificial: !0,
+                is_separator: !0,
+              },
+            ];
+            return {
+              ..._,
+              facets: _.concat(
+                _.facets.map((_) => ({
+                  internal_facet: _.localized_facet,
+                  ..._,
+                })),
+              ),
+            };
+          }, [_]);
+        return (0, _.jsx)(_, {
+          ..._,
+          value: _.accessories,
+          onChange: (_ = [], _ = []) => {
+            let _ = {
+              ..._.accessories,
+            };
+            if (_.length > 0) {
+              let _ = _.some((_) => _.is_artificial);
+              (_[_.internal_type] = {}),
+                _.forEach((_) => {
+                  (_ && !_.is_artificial) ||
+                    (_[_.internal_type][_.internal_facet] = !0);
+                });
+            } else delete _[_.internal_type];
+            const _ = {
+              ..._,
+              accessories: _,
+            };
+            _(_, !0);
+          },
+        });
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return _._.EUNIVERSE === _._ ? 710 === _ : 730 === _;
       }
@@ -5825,6 +5526,22 @@
           },
         ];
       const _ = {
+          facet: "",
+          trigger: [
+            {
+              facet: "Weapon",
+              exclude: _,
+            },
+            {
+              facet: "Type",
+              tag: _,
+            },
+            {
+              facet: "ItemSet",
+            },
+          ],
+        },
+        _ = {
           Exterior: [
             "WearCategory0",
             "WearCategory1",
@@ -5926,12 +5643,6 @@
           },
         ];
       function _(_) {
-        const _ = {};
-        for (const [_, _] of Object.entries(_)) {
-          const _ = __webpack_require__.indexOf("_"),
-            _ = _ > -1 ? __webpack_require__.slice(_ + 1) : _;
-          _[_] = _;
-        }
         const _ = {},
           _ = (_, _) => {
             _[_] || (_[_] = []), _[_].push(_);
@@ -5953,7 +5664,7 @@
                 strLabel: _(_.label, _),
                 rgOptions: _.options.map(
                   ({ facet: _, tag: _, label: _ }) => (
-                    _(_, _),
+                    __webpack_require__(_, _),
                     {
                       facet: _,
                       tag: _,
@@ -5999,12 +5710,13 @@
                 facet: _,
                 img: "",
               });
-            for (const _ of Object.keys(_.tags || {})) _(_.name, _);
+            for (const _ of Object.keys(_.tags || {}))
+              __webpack_require__(_.name, _);
           }
         const _ = [];
         for (const _ of _) {
           const { facet: _, tag: _ } = _;
-          _(_, _),
+          __webpack_require__(_, _),
             _.push({
               fieldType: "togglebutton",
               facet: _,
@@ -6113,25 +5825,27 @@
           _.some((_) =>
             (function (_, _) {
               const _ = _.facets[_.facet];
-              if (!_) return !1;
-              for (const [_, _] of Object.entries(_))
-                if (_) {
-                  if ("exclude" in _) {
-                    return (
-                      !(!("string" != typeof _.exclude) && _.exclude === _) &&
-                      !_.exclude.includes(_)
-                    );
-                  }
-                  {
-                    if (!_.tag) return !0;
-                    const _ = "string" != typeof _.tag;
-                    if (!_ && _.tag === _) return !0;
-                    if (_ && _.tag.includes(_)) return !0;
-                  }
-                }
-              return !1;
+              return !!_ && _(_, _);
             })(_, _),
           );
+      }
+      function _(_, _) {
+        for (const [_, _] of Object.entries(_))
+          if (_) {
+            if ("exclude" in _) {
+              return (
+                !(!("string" != typeof _.exclude) && _.exclude === _) &&
+                !_.exclude.includes(_)
+              );
+            }
+            {
+              if (!_.tag) return !0;
+              const _ = "string" != typeof _.tag;
+              if (!_ && _.tag === _) return !0;
+              if (_ && _.tag.includes(_)) return !0;
+            }
+          }
+        return !1;
       }
       function _(_, _) {
         if ("string" == typeof _) return _._.Localize(_);
@@ -6141,7 +5855,7 @@
           : (console.error("Could not find tag for label!", _), _.tag);
       }
       function _(_) {
-        const { facets: _, minWidth: _, mini: _, ..._ } = _,
+        const { facets: _, accessories: _, minWidth: _, mini: _, ..._ } = _,
           { state: _, onStateChange: _ } = _,
           {
             rgGroups: _,
@@ -6150,7 +5864,8 @@
             otherFacet: _,
             rgFacetsWithCustomDisplay: _,
           } = (0, _.useMemo)(() => _(_.facets), [_.facets]),
-          [_, _] = (0, _.useState)(() => _.filter((_) => _.condition(_)));
+          [_, _] = (0, _.useState)(() => _.filter((_) => _.condition(_))),
+          _ = (0, _.useMemo)(() => _(_.trigger), []);
         (0, _.useEffect)(() => {
           let _ = null;
           const _ = _.filter((_) => _.condition(_)),
@@ -6347,19 +6062,32 @@
                 (0, _.jsx)(_._, {
                   ..._,
                 }),
-                (0, _.jsx)(_._, {
+                (0, _.jsxs)(_._, {
                   gap: "2",
                   direction: "column",
-                  children: _.map((_) =>
-                    (0, _.jsx)(
-                      _._,
-                      {
-                        facet: _.facet,
-                        ..._,
-                      },
-                      _.facet.strLabel,
+                  children: [
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          facet: _.facet,
+                          ..._,
+                        },
+                        _.facet.strLabel,
+                      ),
                     ),
-                  ),
+                    _(_) &&
+                      __webpack_require__.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            facet: _,
+                            ..._,
+                          },
+                          _.internal_type,
+                        ),
+                      ),
+                  ],
                 }),
               ],
             }),
@@ -7541,7 +7269,7 @@
             );
         }
       }
-      function _(_, _, _, _, _) {
+      function _(_, _, _, _, _, _) {
         var _, _, _;
         let _ = [],
           _ = 0,
@@ -7612,8 +7340,12 @@
           } else _ = (0, _._)(_, (_) => _.strLabel);
         }
         if (_ && 0 === _) return null;
-        if (_ && _.total === _ && 1 === Object.keys(_.counts[_.name]).length)
-          return null;
+        if (_) {
+          const _ = _.total === _,
+            _ = 1 === Object.keys(_.counts[_.name]).length,
+            _ = _ && !!_[_.name];
+          if (_ && _ && !_) return null;
+        }
         return {
           strLabel: _.localized_name,
           rgOptions: _,

@@ -10,6 +10,7 @@
       module.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
+        Loading: "_6exjsiWCk6IgWiQenqfQH",
         UseHidingBottomHalf: "_3707obuB-7wD8GDUYRaLH4",
         TrailerAnchorStoreLink: "_1VNyOcfe2cBKY52VedXjyc",
         TrailerCtn: "_3ANIAZhTtXLvORlbv-Du-N",
@@ -16436,8 +16437,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16473,6 +16476,19 @@
           }),
           fnShowLogonDialog: _,
         };
+      }
+      function _(_) {
+        const { label: _, strDialogDesc: _ } = _,
+          { elDialogElement: _, fnShowLogonDialog: _ } = _(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: _ || _._.Localize("#Login_SignIn"),
+            }),
+            _,
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -16919,8 +16935,8 @@
             _: !0,
             appear: !0,
             classNames: {
-              appearActive: _().Opening,
-              enterDone: _().Open,
+              appearActive: (0, _._)(_().Opening, _().Opening),
+              enterDone: (0, _._)(_().Open, _().Open),
             },
             children: (_) =>
               (0, _.jsx)("div", {
@@ -17144,41 +17160,41 @@
             bShowIgnoreButton: _ = !1,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return void 0 === _ && void 0 === _
-          ? null
-          : (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().GameHoverCapsuleCtn,
-                _().InGameHover,
-                _ && _().UseHidingBottomHalf,
-              ),
+          { data: _ } = (0, _._)(_),
+          _ = void 0 === _ && void 0 === _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().GameHoverCapsuleCtn,
+            _ && _().Loading,
+            _().InGameHover,
+            _ && _().UseHidingBottomHalf,
+          ),
+          children: [
+            (0, _.jsxs)("a", {
+              href: _,
+              className: _().TrailerAnchorStoreLink,
               children: [
-                (0, _.jsxs)("a", {
-                  href: _,
-                  className: _().TrailerAnchorStoreLink,
-                  children: [
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_._, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                      }),
-                  ],
-                }),
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                  }),
               ],
-            });
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         var _;
@@ -20636,13 +20652,14 @@
             strPriceFormattedClassName: _,
             bPreferWholeNumbers: _,
             bSelfPurchaseOption: _,
+            bHideNewTag: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = _,
-          _ = (0, _._)(_, _),
+          _ = !_ && (0, _._)(_, _),
           _ = (0, _._)({
             [_().StoreSalePriceWidgetContainer]: !0,
             [_().SingleLineMode]: _,
@@ -22359,8 +22376,9 @@
                 if (!_) return new Set();
                 const _ = await (async function (_, _) {
                   const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgIgnoredApps || [];
+                    _ = await fetch(_),
+                    _ = await _.json();
+                  return Object.keys(_.rgIgnoredApps).map(Number) || [];
                 })(0, _);
                 return new Set(_);
               },
@@ -25658,6 +25676,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -25686,6 +25705,28 @@
               }
             })(_),
           [null == _ ? void 0 : _._, null == _ ? void 0 : _.type],
+        );
+      }
+      function _(_, _) {
+        return (0, _.useMemo)(
+          () =>
+            (function (_, _) {
+              switch (_) {
+                case "sub":
+                  return {
+                    packageid: _,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _,
+                  };
+                default:
+                  return {
+                    appid: _,
+                  };
+              }
+            })(_, _),
+          [_, _],
         );
       }
       function _(_, _) {
@@ -29362,6 +29403,20 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
+          nSlideIndex: _,
+          nStartingSlideIndex: _,
+          ref: _,
+          children: _,
+        } = _;
+        return void 0 === _
+          ? _
+          : (0, _.jsx)("div", {
+              ref: _ === _ ? _ : void 0,
+              children: _,
+            });
+      }
+      function _(_) {
+        const {
             padded: _,
             gap: _,
             children: _,
@@ -29371,7 +29426,8 @@
             startingSlide: _,
           } = _,
           _ = _.useRef(null),
-          _ = _.useRef(null);
+          _ = _.useRef(null),
+          _ = (0, _._)();
         _.useLayoutEffect(() => {
           _.current &&
             _.current &&
@@ -29379,37 +29435,50 @@
               _.current.getBoundingClientRect().left -
               _.current.getBoundingClientRect().left);
         }, [_]);
-        const _ = (0, _.jsxs)(_._, {
-          "flow-children": "row",
-          style: {
-            gap: _ ? _ + "px" : void 0,
-          },
-          className: (0, _._)(
-            {
-              SaleSectionCarouselPadding: _,
-            },
-            "ScrollSnapCarousel",
-            "SaleSectionCarousel",
-            _.ScrollSnapCarousel,
-            _.className,
-          ),
-          ref: _,
-          children: [
-            _ &&
-              _.Children.map(_, (_, _) =>
-                (0, _.jsx)("div", {
-                  ref: _ == _ ? _ : void 0,
+        const _ = _.Children.map(_, (_, _) =>
+            _
+              ? (0, _.jsx)(_._, {
+                  rootMargin: "0px 50% 0px 50%",
+                  horizontal: !0,
+                  placeholderWidth: null != _ ? _ : 1,
+                  placeholderHeight: 1,
+                  holdGamepadFocus: _,
+                  children: (0, _.jsx)(_, {
+                    nSlideIndex: _,
+                    nStartingSlideIndex: _,
+                    ref: _,
+                    children: _,
+                  }),
+                })
+              : (0, _.jsx)(_, {
+                  nSlideIndex: _,
+                  nStartingSlideIndex: _,
+                  ref: _,
                   children: _,
                 }),
-              ),
-            !_ && _,
-          ],
-        });
+          ),
+          _ = (0, _.jsx)(_._, {
+            "flow-children": "row",
+            style: {
+              gap: _ ? _ + "px" : void 0,
+            },
+            className: (0, _._)(
+              {
+                SaleSectionCarouselPadding: _,
+              },
+              "ScrollSnapCarousel",
+              "SaleSectionCarousel",
+              _.ScrollSnapCarousel,
+              _.className,
+            ),
+            ref: _,
+            children: _,
+          });
         return _
           ? (0, _.jsx)(_._, {
               rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
-              placeholderWidth: null != _ ? _ : 1,
+              placeholderWidth: 1,
               placeholderHeight: null != _ ? _ : 1,
               children: _,
             })
@@ -30473,7 +30542,10 @@
                             displaytype: _.display_type,
                           }),
                           (0, _.jsx)("span", {
-                            children: _._.Localize(_.loc_token),
+                            children:
+                              "#" != _.loc_token.charAt(0)
+                                ? _._.Localize("#" + _.loc_token)
+                                : _._.Localize(_.loc_token),
                           }),
                         ],
                       },
@@ -43995,13 +44067,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (_) => /^\d+$/.test(_);
       function _(_) {
         const { sharedFileID: _ } = _,
           _ = (0, _._)("SharedFileSnippet"),
@@ -44021,7 +44095,7 @@
               const _ = await _._.LoadSharedFileDynamicData([_], _);
               if (!_.token.reason && _.length > 0) {
                 const _ = _[0];
-                _(_.url) &&
+                (0, _._)(_.url) &&
                   (_.url =
                     _._.COMMUNITY_BASE_URL +
                     "sharedfiles/filedetails/?id=" +
@@ -44087,7 +44161,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -44381,6 +44454,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { defid: _, url: _ } = _,
@@ -44405,6 +44479,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
@@ -44594,31 +44669,66 @@
         if (_(_)) {
           let _ = new RegExp(_).exec(_);
           if (_ && _.length > 2) {
-            let _ = _[1],
+            let _ = _[1].toLowerCase(),
               _ = Number(_[2]);
-            if (_ > 0 && (!_ || _(_.event, _)))
-              return (0, _.jsx)(_._, {
-                _: _,
+            if (_ > 0 && (0, _._)(_)) {
+              (0, _._)(_);
+              return (0, _.jsx)(_, {
+                eventModel: null == _ ? void 0 : _.event,
+                inputID: _,
                 inputType: _,
-                bApplyUserContentPref: !0,
+                fallbackUrl: _,
               });
+            }
           }
         }
         return (0, _._)(_, null == _ ? void 0 : _.event);
       }
+      function _(_) {
+        var _;
+        const { inputID: _, inputType: _, eventModel: _, fallbackUrl: _ } = _,
+          _ = (0, _._)(_, _),
+          { data: _ } = (0, _._)(_);
+        let _;
+        if (_ && _(_)) {
+          if (_) {
+            _ = _(
+              _,
+              _.appid
+                ? [_.appid]
+                : null !== (_ = _.included_appids) && void 0 !== _
+                  ? _
+                  : [],
+            );
+          }
+        } else _ = !0;
+        return void 0 === _
+          ? null
+          : _
+            ? (0, _.jsx)(_._, {
+                _: _,
+                inputType: _,
+                bApplyUserContentPref: !0,
+              })
+            : (0, _._)(_, _);
+      }
+      function _(_) {
+        if (!_ || (_.GetEventType() != _.ajI && _.GetEventType() != _.HRy))
+          return !1;
+        const _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID());
+        if (!_._.GetCreatorHome(_.clanSteamID) || !_) return !1;
+        return !!(0, _._)(_, _);
+      }
       function _(_, _) {
         var _;
-        if (!_ || (_.GetEventType() != _.ajI && _.GetEventType() != _.HRy))
-          return !0;
-        const _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID()),
-          _ = _._.GetCreatorHome(_.clanSteamID);
-        if (!_ || !_) return !0;
-        if (!(0, _._)(_, _)) return !0;
-        const _ =
-          null !== (_ = null == _ ? void 0 : _.GetAppIDList()) && void 0 !== _
-            ? _
-            : [];
-        return !_ || _.includes(_);
+        const _ = _._.GetCreatorHome(_.clanSteamID),
+          _ =
+            null !== (_ = null == _ ? void 0 : _.GetAppIDList()) && void 0 !== _
+              ? _
+              : [];
+        return (
+          _.length > 0 && _.filter((_) => _.includes(_)).length === _.length
+        );
       }
       function _(_, _) {
         if (_(_)) {
@@ -44648,7 +44758,8 @@
                 ? (_ = _[2])
                 : isNaN(+_[2])
                   ? (_ = _[2])
-                  : ((_ = Number(_[2])), (_ = _(_.event, _) ? _ : 0));
+                  : ((_ = Number(_[2])),
+                    (_ = !_ || (_(_.event) && _(_.event, [_])) ? _ : 0));
             const _ = _[3];
             if (
               ((void 0 !== _ && _ > 0) ||
@@ -44719,7 +44830,8 @@
                   ? (_ = _[2])
                   : isNaN(+_[2])
                     ? (_ = _[2])
-                    : ((_ = Number(_[2])), (_ = _(_.event, _) ? _ : 0));
+                    : ((_ = Number(_[2])),
+                      (_ = !_ || (_(_.event) && _(_.event, [_])) ? _ : 0));
             const _ = _[3];
             if (
               ((void 0 !== _ && _ > 0) ||
@@ -49969,88 +50081,105 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              bRenderChildren: !1,
-              nPrevRenderWidth: 0,
-              nPrevRenderHeight: 0,
+      const _ = _.createContext({
+        enabled: !0,
+      });
+      function _(_) {
+        const { enabled: _, children: _ } = _,
+          _ = _.useMemo(
+            () => ({
+              enabled: _,
             }),
-            (this.m_refContainer = _.createRef());
-        }
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(_) {
-          let _ = this.state.bRenderChildren;
-          if (_ == _) return;
-          if (_ && !this.BLoadAndUnload()) return;
-          let _ = 0,
-            _ = 0;
-          if (this.m_refContainer.current) {
-            const _ = this.m_refContainer.current.getBoundingClientRect();
-            _ && ((_ = _.width), (_ = _.height));
-          }
-          this.setState({
-            bRenderChildren: _,
-            nPrevRenderWidth: _,
-            nPrevRenderHeight: _,
-          }),
-            _ && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const {
-              placeholderWidth: _,
-              placeholderHeight: _,
-              holdGamepadFocus: _,
-              onRender: _,
-              style: _,
-              mode: _,
-              ..._
-            } = this.props,
-            _ = this.state.bRenderChildren;
-          let _ = _;
-          if (!_) {
-            const _ = this.state.nPrevRenderWidth || _,
-              _ = this.state.nPrevRenderHeight || _;
-            (void 0 === _ && void 0 === _) ||
-              (_ = {
-                ..._,
-                minHeight: _,
-                minWidth: _,
-              });
-          }
-          const _ = this.BLoadAndUnload() ? "repeated" : "once";
-          let _ = (0, _.jsx)(_._, {
-            containerRef: this.m_refContainer,
-            style: _,
-            ..._,
-            onVisibilityChange: this.OnVisibilityChange,
-            trigger: _,
-            children: _ && this.props.children,
-          });
-          return (
-            _ &&
-              (_ = (0, _.jsx)(_._, {
-                focusableIfEmpty: !0,
-                style: {
-                  height: "100%",
-                },
-                children: _,
-              })),
-            _
+            [_],
           );
-        }
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
       }
-      (0, _._)([_._], _.prototype, "OnVisibilityChange", null);
+      function _(_) {
+        const {
+            placeholderWidth: _,
+            placeholderHeight: _,
+            holdGamepadFocus: _ = !1,
+            onRender: _,
+            style: _,
+            mode: _ = "JustLoad",
+            children: _,
+            ..._
+          } = _,
+          [_, _] = _.useState({
+            bRenderChildren: !1,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
+          }),
+          _ = _.useContext(_),
+          _ = _.useRef(null),
+          _ = "LoadAndUnload" === _ && _.enabled,
+          _ = _.useCallback(
+            (_) => {
+              _((_) => {
+                if (_.bRenderChildren === _ || (_.bRenderChildren && !_))
+                  return _;
+                let _ = 0,
+                  _ = 0;
+                if (_.current) {
+                  const _ = _.current.getBoundingClientRect();
+                  _ && ((_ = _.width), (_ = _.height));
+                }
+                return (
+                  _ && _ && _(),
+                  {
+                    bRenderChildren: _,
+                    nPrevRenderWidth: _,
+                    nPrevRenderHeight: _,
+                  }
+                );
+              });
+            },
+            [_, _],
+          );
+        _.useEffect(() => {
+          _.enabled || _(!0);
+        }, [_.enabled, _]);
+        let _ = _;
+        if (!_.bRenderChildren) {
+          const _ = _.nPrevRenderWidth || _,
+            _ = _.nPrevRenderHeight || _;
+          (void 0 === _ && void 0 === _) ||
+            (_ = {
+              ..._,
+              minHeight: _,
+              minWidth: _,
+            });
+        }
+        const _ = _ ? "repeated" : "once";
+        let _ = (0, _.jsx)(_._, {
+          containerRef: _,
+          style: _,
+          ..._,
+          onVisibilityChange: _,
+          trigger: _,
+          children: _.bRenderChildren && _,
+        });
+        return (
+          _ &&
+            (_ = (0, _.jsx)(_._, {
+              focusableIfEmpty: !0,
+              style: {
+                height: "100%",
+              },
+              children: _,
+            })),
+          _
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

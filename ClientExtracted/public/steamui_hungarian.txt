@@ -841,6 +841,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español - Latinoamérica (latin-amerikai spanyol)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnámi)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonéz)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (maláj)"
 
 
 
@@ -5034,6 +5035,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "DownloadRegion_br_manaus"			"Brazília - Manaus"
 "DownloadRegion_br_belem"			"Brazília - Belém"
 "DownloadRegion_br_salvador"			"Brazília - Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Játékvezérlő-konfiguráció"
 "ControllerBinding_Offline_Save"	"[Offline automatikus mentés]"

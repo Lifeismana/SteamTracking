@@ -849,6 +849,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español — Latinoamérica (Испански — Латинска Америка)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Виетнамски)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Индонезийски)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Малайски)"
 
 
 
@@ -5063,6 +5064,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "DownloadRegion_br_manaus"			"Бразилия — Манаус"
 "DownloadRegion_br_belem"			"Бразилия — Белен"
 "DownloadRegion_br_salvador"			"Бразилия — Салвадор"
+"DownloadRegion_guam"			"Гуам"
 
 "SettingsController_AutosaveName"	"Конфигурация за контролер"
 "ControllerBinding_Offline_Save"	"[Авт. запазване извън линия]"

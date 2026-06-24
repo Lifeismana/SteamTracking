@@ -2521,7 +2521,8 @@
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 1,
+                bConstMethod: !0,
+                ePrivilege: 5,
               },
             );
           }),
@@ -2531,7 +2532,7 @@
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 1,
+                ePrivilege: 5,
               },
             );
           });

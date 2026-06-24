@@ -14,6 +14,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        FilterBorder: "_3xFYpKNlOZ6xjQ529ZgRbr",
+        Top: "_310cGk80jWCZr6LxeueX_5",
+        Bottom: "nLYMJhpffeKLN_8VkTcD_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -72,6 +79,50 @@
         "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
         "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
         HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Heading: "_12ldq1_X5RuLWAAs_ODwt7",
+        "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
+        "HeadingSize-2": "_20m6yPkrPwQ8XwlhPdMtqu",
+        "HeadingSize-3": "_2jvih9p3Mc3zUn2nnxzDv7",
+        "HeadingSize-4": "_1zvMJY9dUjwMSI0j5QoEdq",
+        "HeadingSize-5": "_1196Oisy8jDA4szPu-KrKP",
+        "HeadingSize-6": "R1W-zMFN4WGw9JK48Yqez",
+        "HeadingSize-7": "Ena8Nl7MJg7YAYsWql_jo",
+        "HeadingSize-8": "jyf9-rlT4iFrHQOAVn298",
+        "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
+        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
+        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
+        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
+        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
+        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -198,6 +249,574 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            refPopover: _,
+            inputValue: _,
+            onInputChange: _,
+            activeIndex: _,
+            popoverPlacement: _,
+            multiselect: _,
+            setActiveIndex: _,
+            setOpen: _,
+            filterPlaceholder: _,
+            onIndexSelected: _,
+            refScrollElement: _,
+          } = _("<Combobox.Options>"),
+          _ = _.startsWith("top"),
+          _ = (0, _.jsx)(_._, {
+            overflow: "auto",
+            ref: _,
+            style: {
+              overscrollBehavior: "contain",
+            },
+            children: _.children,
+          });
+        return (0, _.jsx)(_._.Positioner, {
+          ref: _,
+          children: (0, _.jsxs)(_._, {
+            direction: "column",
+            maxHeight: "var(--popover-max-height)",
+            children: [
+              _ && _,
+              (0, _.jsx)(_._, {
+                flexShrink: "0",
+                className: (0, _._)(_.FilterBorder, _ ? _.Top : _.Bottom),
+                children: (0, _.jsx)(_._, {
+                  margin: "3",
+                  variant: "inset",
+                  radius: "sm",
+                  value: _,
+                  onTextChange: _,
+                  onKeyDown: (_) => {
+                    "Enter" === _.key &&
+                      null !== _ &&
+                      (_(_),
+                      _ || (_(null), _(!1)),
+                      _.preventDefault(),
+                      _.stopPropagation());
+                  },
+                  onKeyDownCapture: (_) => {
+                    ("Home" !== _.key && "End" !== _.key) ||
+                      _.stopPropagation();
+                  },
+                  placeholder: _,
+                  inputRef: (_) => {
+                    _ &&
+                      _.focus({
+                        preventScroll: !0,
+                      });
+                  },
+                  autoComplete: "off",
+                }),
+              }),
+              !_ && _,
+            ],
+          }),
+        });
+      }
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { virtualItem: _, children: _ } = _,
+          _ = (0, _.useContext)(_);
+        return (
+          (0, _._)(_, "Virtual item rendered outside of a virtualizer!"),
+          (0, _.jsx)(_._, {
+            position: "absolute",
+            width: "100%",
+            style: {
+              top: 0,
+              left: 0,
+              transform: `translateY(${_.start}px)`,
+            },
+            ref: _.measureElement,
+            "data-index": _.index,
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const { value: _, children: _, disabled: _ } = _,
+          {
+            onItemSelectionChange: _,
+            selectedValue: _,
+            multiselect: _,
+            maxSelected: _,
+          } = _("<ComboboxTrigger>");
+        let _ = !1,
+          _ = !1;
+        _
+          ? ((_ = Array.isArray(_) && _.includes(_)),
+            (_ = !!_ && Array.isArray(_) && _.length >= _))
+          : (_ = _ === _);
+        const _ = _ || (_ && !_);
+        return (0, _.jsxs)(_._.Item, {
+          onSelect: () => _(_),
+          selected: _,
+          disabled: _,
+          children: [
+            _ &&
+              (0, _.jsxs)(_._, {
+                gap: "2",
+                align: "center",
+                children: [
+                  (0, _.jsx)(_._, {
+                    checked: _,
+                    variant: "dark",
+                  }),
+                  _,
+                ],
+              }),
+            !_ && _,
+          ],
+        });
+      }
+      function _(_, _) {
+        if ("string" == typeof _)
+          return _.toLocaleLowerCase().includes(_.toLocaleLowerCase());
+        try {
+          return JSON.stringify(_)
+            .toLocaleLowerCase()
+            .includes(_.toLocaleLowerCase());
+        } catch (_) {}
+        return (
+          console.error(
+            "Could not use default option filter on provided Comboxbox option. Custom filter function required.",
+          ),
+          !1
+        );
+      }
+      function _(_) {
+        return _(_, !1);
+      }
+      function _(_, _) {
+        const {
+            rgOptions: _,
+            filter: _ = _,
+            filterPlaceholder: _,
+            selectedValue: _,
+            onSelectionChange: _,
+            maxSelected: _,
+          } = _,
+          [_, _] = (0, _.useState)(""),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _.useMemo)(
+            () => __webpack_require__.filter((_) => _(_, _)),
+            [_, _, _],
+          ),
+          _ = "number" == typeof _,
+          _ = _.length > 0,
+          _ = (0, _.useCallback)(
+            (_) => {
+              _ && !_ && _ && _(0), _(_);
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _ || _(""), _(_);
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(_), _ || _(!1);
+            },
+            [_, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (_)
+                if (_) {
+                  const _ = _,
+                    _ = _.indexOf(_);
+                  if (-1 !== _) return _(_.slice(0, _).concat(_.slice(_ + 1)));
+                  _(_.concat(_));
+                } else _([_]);
+              else _(_);
+            },
+            [_, _, _],
+          );
+        return {
+          activeIndex: _,
+          setActiveIndex: _,
+          rgFilteredOptions: _,
+          selectedValue: _,
+          onSelectionChange: _,
+          onItemSelectionChange: _,
+          onClear: (_) => {
+            _(_ ? [] : null), _.stopPropagation(), _.preventDefault();
+          },
+          inputValue: _,
+          onInputChange: _,
+          bOpen: _,
+          setOpen: _,
+          filterPlaceholder: _,
+          multiselect: _,
+          maxSelected: _,
+        };
+      }
+      const _ = {
+        Root: function (_) {
+          const {
+              children: _,
+              state: _,
+              placement: _ = "bottom-end",
+              popoverWidth: _ = "dropdown",
+              popoverMaxHeight: _,
+              ..._
+            } = _,
+            [_, _] = (0, _.useState)(void 0);
+          (0, _.useEffect)(() => _(void 0), [_.bOpen]);
+          const _ = (0, _.useRef)(null),
+            _ = (0, _.useRef)(null),
+            _ = (0, _.useMemo)(
+              () => _.rgFilteredOptions.findIndex((_) => _ === _.selectedValue),
+              [_.selectedValue, _.rgFilteredOptions],
+            ),
+            _ = (0, _._)({
+              open: _.bOpen,
+              onOpenChange: _.setOpen,
+              width: _,
+              maxHeight: _,
+              placement: _,
+              gutter: "4",
+              activeIndex: _.activeIndex,
+              setActiveIndex: _.setActiveIndex,
+              selectedIndex: _,
+              setSelectedIndex: (_) =>
+                __webpack_require__.onItemSelectionChange(
+                  _.rgFilteredOptions[_],
+                ),
+              interactions: {
+                click: !0,
+                virtualItemFocus: !_._.IN_GAMEPADUI,
+              },
+              role: "combobox",
+              scroll: !1,
+            }),
+            _ = {
+              ..._,
+              ..._,
+              focusedValue: _,
+              onFocusChange: _,
+              refPopover: _,
+              refScrollElement: _,
+              setOpen: (_) => {
+                if (_) {
+                  let _ = null;
+                  (_ = _.multiselect
+                    ? Array.isArray(_.selectedValue)
+                      ? _.selectedValue[0]
+                      : null
+                    : _.selectedValue),
+                    _(_),
+                    __webpack_require__.onInputChange("");
+                }
+                __webpack_require__.setOpen(_);
+              },
+              onIndexSelected: (_) => {
+                const _ = _.elementsRef.current;
+                if (_ && _[_]) {
+                  _[_].click();
+                }
+              },
+              popoverPlacement: _.floating.placement,
+            };
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_._.Root, {
+              state: _,
+              children: _,
+            }),
+          });
+        },
+        Option: _,
+        Options: _,
+        VirtualizedOptions: function (_) {
+          const { items: _, renderItem: _, overscan: _ = 5, ..._ } = _,
+            {
+              bOpen: _,
+              refPopover: _,
+              refScrollElement: _,
+            } = _("<ComboboxVirtualizedOptions>"),
+            [_, _] = (0, _.useState)(!1),
+            _ = _ && !!_.current && !!_.current;
+          (0, _.useEffect)(() => {
+            _ !== _ && _(_);
+          }, [_, _]);
+          const _ = (0, _._)({
+            count: _ ? _.length : Math.min(_.length, 3),
+            getScrollElement: () => _.current,
+            enabled: _,
+            measureElement: _._,
+            ..._,
+          });
+          return (0, _.jsx)(_, {
+            children: (0, _.jsx)(_, {
+              value: _,
+              children: (0, _.jsx)(_._, {
+                height: `${_.getTotalSize()}px`,
+                position: "relative",
+                width: "100%",
+                children: _.getVirtualItems().map((_) =>
+                  __webpack_require__(_[_.index], _, _),
+                ),
+              }),
+            }),
+          });
+        },
+        VirtualizedOption: function (_) {
+          const { virtualItem: _, ..._ } = _;
+          return (0, _.jsx)(_, {
+            virtualItem: _,
+            children: (0, _.jsx)(_, {
+              ..._,
+            }),
+          });
+        },
+        VirtualizedContent: function (_) {
+          const { virtualItem: _, children: _ } = _;
+          return (0, _.jsx)(_, {
+            virtualItem: _,
+            children: _,
+          });
+        },
+        Trigger: function (_) {
+          const { children: _, beforeContent: _, render: _ } = _,
+            {
+              bOpen: _,
+              setOpen: _,
+              inputValue: _,
+              onInputChange: _,
+              selectedValue: _,
+              focusedValue: _,
+              refScrollElement: _,
+              onItemSelectionChange: _,
+              activeIndex: _,
+              setActiveIndex: _,
+              onFocusChange: _,
+              rgFilteredOptions: _,
+              onSelectionChange: _,
+              multiselect: _,
+              onClear: _,
+              refPopover: _,
+              clearable: _,
+              filterPlaceholder: _,
+              onIndexSelected: _,
+              popoverPlacement: _,
+              maxSelected: _,
+              ..._
+            } = _("<ComboboxTrigger>"),
+            _ = {
+              tabIndex: 0,
+              children: _,
+            },
+            _ = _ ? Array.isArray(_) && _.length > 0 : !!_,
+            _ =
+              _ && _
+                ? (0, _.jsx)(_._, {
+                    onClick: _,
+                    cursor: "pointer",
+                    hitSlop: !0,
+                  })
+                : (0, _.jsx)(_._, {}),
+            _ = (0, _.jsx)(_._, {
+              beforeContent: _,
+              afterContent: _,
+              hasValue: _,
+              cursor: "pointer",
+              tabIndex: 0,
+              ..._,
+            }),
+            _ = (0, _._)(_, _, _, void 0);
+          return (0, _.jsx)(_._.Anchor, {
+            children: _,
+          });
+        },
+        DefaultOptionFilter: _,
+        Value: function (_) {
+          return (0, _.jsx)(_._, {
+            weight: "medium",
+            truncate: !0,
+            contrast: "title",
+            ..._,
+          });
+        },
+        Placeholder: function (_) {
+          return (0, _.jsx)(_._, {
+            contrast: "description",
+            truncate: !0,
+            ..._,
+          });
+        },
+      };
+      function _(_) {
+        return _
+          ? "string" == typeof _
+            ? _
+            : "number" == typeof _
+              ? _.toString()
+              : (console.error(
+                  "Could not use default option labeler on Combobox option value. Custom labeler requried",
+                  _,
+                ),
+                "")
+          : "";
+      }
+      const _ = Object.assign(function (_) {
+        const {
+            selectedValue: _,
+            onSelectionChange: _,
+            options: _,
+            filter: _,
+            filterPlaceholder: _,
+            placeholder: _,
+            getOptionLabel: _ = _,
+            ..._
+          } = _,
+          _ = _({
+            onSelectionChange: _,
+            selectedValue: _,
+            rgOptions: _,
+            filter: (0, _.useCallback)(
+              (_, _) => (_ ? _(_, _) : _(_, _(_))),
+              [_, _],
+            ),
+            filterPlaceholder: _,
+          }),
+          _ = null != _;
+        return (0, _.jsxs)(_.Root, {
+          state: _,
+          ..._,
+          children: [
+            (0, _.jsxs)(_.Trigger, {
+              children: [
+                _ &&
+                  (0, _.jsx)(_.Value, {
+                    children: _(_),
+                  }),
+                !_ &&
+                  (0, _.jsx)(_.Placeholder, {
+                    children: _,
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_.Options, {
+              children: _.rgFilteredOptions.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    value: _,
+                    children: _(_),
+                  },
+                  _(_),
+                ),
+              ),
+            }),
+          ],
+        });
+      }, _);
+      function _(_) {
+        return _(_, !0);
+      }
+      const _ = Object.assign(function (_) {
+          const {
+              selectedValue: _,
+              onSelectionChange: _,
+              options: _,
+              filter: _,
+              filterPlaceholder: _,
+              placeholder: _,
+              getOptionLabel: _ = _,
+              maxSelected: _,
+              ..._
+            } = _,
+            _ = _({
+              onSelectionChange: _,
+              selectedValue: _,
+              rgOptions: _,
+              filter: (0, _.useCallback)(
+                (_, _) => (_ ? _(_, _) : _(_, _(_))),
+                [_, _],
+              ),
+              filterPlaceholder: _,
+              maxSelected: _,
+            }),
+            _ = Array.isArray(_) && _.length > 0;
+          let _ = "";
+          if (_) {
+            const _ = _.map((_) => _(_));
+            _ =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat((0, _._)().strISOCode).format(_)
+                : _.join(", ");
+          }
+          return (0, _.jsxs)(_.Root, {
+            state: _,
+            ..._,
+            children: [
+              (0, _.jsxs)(_.Trigger, {
+                children: [
+                  _ &&
+                    (0, _.jsx)(_.Value, {
+                      children: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_.Placeholder, {
+                      children: _,
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_.Options, {
+                children: _.rgFilteredOptions.map((_) =>
+                  (0, _.jsx)(
+                    _.Option,
+                    {
+                      value: _,
+                      children: _(_),
+                    },
+                    _(_),
+                  ),
+                ),
+              }),
+            ],
+          });
+        }, _),
+        _ = (0, _.createContext)(null);
+      function _(_) {
+        const _ = (0, _.useContext)(_);
+        return _ || console.error(`${_} must be used within a <Combobox>!`), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -269,6 +888,271 @@
           ],
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+            });
+      }
+      function _(_) {
+        const { children: _ } = _,
+          _ = (0, _.useContext)(_);
+        (0, _._)(
+          !!_,
+          "<Popover.Positioner> must be a child of <Popover.Root>.",
+        );
+        const _ = _.useRef(void 0);
+        return (
+          (0, _._)(_, !!_.current, !1),
+          (0, _.jsx)(_._, {
+            navID: "Popover",
+            onCancelButton: () => _.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: _,
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+              },
+              children: (0, _.jsx)(_._, {
+                children: _,
+              }),
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { children: _ } = _,
+          _ = (0, _.useContext)(_);
+        return (
+          (0, _._)(
+            !!_,
+            "<Popover.Positioner> must be a child of <Popover.Root>.",
+          ),
+          (0, _.jsx)(_._, {
+            context: _.floating.context,
+            initialFocus: -1,
+            returnFocus: !1,
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const { gutter: _ = 0, placement: _ } = _,
+          _ = [],
+          _ = _ && "object" == typeof _;
+        return (
+          _ && _.offset
+            ? _.push((0, _._)(_.offset))
+            : (_ && void 0 !== _.offset) || _.push((0, _._)(2)),
+          _ && _.flip
+            ? _.push((0, _._)(_.flip))
+            : (_ && void 0 !== _.flip) || _.push((0, _._)()),
+          _ && _.shift
+            ? _.push((0, _._)(_.shift))
+            : (_ && void 0 !== _.shift) || _.push((0, _._)()),
+          _.push(
+            (0, _._)({
+              apply: (_) => {
+                const { rects: _, elements: _, availableHeight: _ } = _,
+                  _ = {
+                    boxSizing: "border-box",
+                    zIndex: "1",
+                  };
+                switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
+                  case "target":
+                    _.width = `${_.reference.width}px`;
+                    break;
+                  case "content":
+                    _.width = `${_.floating.width}px`;
+                    break;
+                  case "dropdown": {
+                    let _ = _.reference.width;
+                    _.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                      (_.width = `${_}px`);
+                  }
+                }
+                "function" == typeof _.width &&
+                  (_.width = _.width({
+                    unContentWidth: _.floating.width,
+                    unTargetWidth: _.reference.width,
+                  }));
+                const _ =
+                  "number" == typeof _ ? `${_}px` : `var(--spacing-${_})`;
+                "function" == typeof _.maxHeight
+                  ? (_.maxHeight = _.maxHeight({
+                      unAvailableHeight: _,
+                      gutter: _,
+                    }))
+                  : "number" == typeof _.maxHeight
+                    ? (_.maxHeight = `min( calc( ${_}px - ${_} ), ${_.maxHeight}px )`)
+                    : (_.maxHeight =
+                        "number" == typeof _
+                          ? _ - _ + "px"
+                          : `calc( ${_}px - var(--spacing-${_}) )`),
+                  Object.assign(_.floating.style, _),
+                  _.floating.style.setProperty(
+                    "--popover-max-height",
+                    _.maxHeight,
+                  );
+              },
+            }),
+          ),
+          _
+        );
+      }
+      const _ = {
+        Root: function (_) {
+          const { children: _, ..._ } = _,
+            _ = (function (_) {
+              const {
+                open: _,
+                onOpenChange: _,
+                placement: _,
+                interactions: _ = {},
+              } = _;
+              let _ = _;
+              0;
+              const _ = (0, _._)({
+                  open: _,
+                  onOpenChange: _,
+                  middleware: _(_),
+                  whileElementsMounted: _._,
+                  placement: _ && "object" == typeof _ ? _.initial : _,
+                  strategy: "fixed",
+                  platform: {
+                    ..._._,
+                    getOffsetParent: (_) => {
+                      var _, _;
+                      return null !==
+                        (_ =
+                          null === (_ = null == _ ? void 0 : _.ownerDocument) ||
+                          void 0 === _
+                            ? void 0
+                            : _.defaultView) && void 0 !== _
+                        ? _
+                        : window;
+                    },
+                  },
+                }),
+                _ = {
+                  enabled: !!_.click,
+                },
+                _ = "function" == typeof _.click ? _.click(_) : _,
+                _ = (0, _._)(_.context, _),
+                _ = {
+                  enabled: !!_.focus,
+                },
+                _ = "function" == typeof _.focus ? _.focus(_) : _,
+                _ = (0, _._)(_.context, _),
+                _ = {
+                  handleClose: (0, _._)(),
+                },
+                _ = "function" == typeof _.hover ? _.hover(_) : _,
+                _ = (0, _._)(_.context, {
+                  enabled: !!_.hover,
+                  ..._,
+                }),
+                _ = (0, _._)(_.context),
+                { getFloatingProps: _, getReferenceProps: _ } = (0, _._)([
+                  _,
+                  _,
+                  _,
+                  _,
+                ]);
+              return {
+                floating: _,
+                getFloatingProps: _,
+                getReferenceProps: _,
+                open: _,
+              };
+            })(_);
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: _,
+          });
+        },
+        Anchor: function (_) {
+          const { children: _ } = _,
+            _ = _.Children.only(_),
+            _ = (0, _.useContext)(_);
+          return _
+            ? _
+              ? (0, _.cloneElement)(_, {
+                  ..._.getReferenceProps(_.props),
+                  ref: (0, _._)(_.props.ref, _.floating.refs.setReference),
+                })
+              : (console.error(
+                  "<PopoverAnchor> must be a child of <PopoverRoot>.",
+                ),
+                null)
+            : null;
+        },
+        Positioner: function (_) {
+          const { children: _, className: _, ref: _ } = _,
+            _ = (0, _.useContext)(_),
+            _ = (0, _._)([
+              _,
+              null == _ ? void 0 : _.floating.refs.setFloating,
+              (_) => {
+                var _;
+                return null === (_ = null == _ ? void 0 : _.showPopover) ||
+                  void 0 === _
+                  ? void 0
+                  : _.call(_);
+              },
+            ]);
+          if (!_)
+            return (
+              console.error(
+                "<Popover.Positioner> must be a child of <Popover.Root>.",
+              ),
+              null
+            );
+          if (!_.open) return null;
+          let _ = _.Children.only(_),
+            _ = _.Fragment;
+          _.type == _.FocusManager &&
+            ((_ = _.Children.only(_.props.children)), (_ = _));
+          const _ = (0, _.cloneElement)(_, {
+            ref: _,
+            style: {
+              ..._.floating.floatingStyles,
+            },
+            className: _()((0, _._)(), _),
+            popover: "manual",
+            ..._.getFloatingProps(),
+          });
+          return (0, _.jsx)(_, {
+            children: _,
+          });
+        },
+        FocusManager: _,
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1307,6 +2191,204 @@
       function _(_, _, _, _) {
         return _(_ || _, _, _);
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        depth: 0,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { level: _ = "auto", className: _, color: _ } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
+        return (0, _.jsx)(_, {
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()((0, _._)(), _.Heading, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "span", ref: _, className: _, ..._ } = _,
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: _,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            responsive: !0,
+            cssProperty: (_, _, _) => {
+              var _;
+              return [
+                "--text-color",
+                (0, _._)(
+                  _,
+                  null !== (_ = (0, _._)(_.contrast, _)) && void 0 !== _
+                    ? _
+                    : "body",
+                ),
+              ];
+            },
+          },
+          {
+            prop: "contrast",
+            responsive: !0,
+            cssProperty: (_, _, _) => {
+              var _;
+              return [
+                "--text-color",
+                (0, _._)(
+                  null !== (_ = (0, _._)(_.color, _)) && void 0 !== _
+                    ? _
+                    : "text-body",
+                  _,
+                ),
+              ];
+            },
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ..._,
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`TextSize-${_}`],
+          },
+        ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _;
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.href,
+          _ = (0, _._)(
+            {
+              ..._,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          );
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ..._,
+              ...(_ || {}),
+              focusable: _,
+            })
+          : (0, _.jsx)("a", {
+              ..._,
+            });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

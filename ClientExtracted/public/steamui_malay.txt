@@ -848,6 +848,7 @@ Proses ini akan mengambil masa kurang dari satu minit."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Bahasa Sepanyol-Amerika Latin)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Bahasa Vietnam)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malay)"
 
 
 
@@ -5064,6 +5065,7 @@ Tetapkan kategori bagi permainan ini untuk membantu anda mencari kategori terseb
 "DownloadRegion_br_manaus"			"Brazil – Manaus"
 "DownloadRegion_br_belem"			"Brazil – Belém"
 "DownloadRegion_br_salvador"			"Brazil – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Konfigurasi Alat Kawalan"
 "ControllerBinding_Offline_Save"	"[AutoSimpan Luar Talian]"

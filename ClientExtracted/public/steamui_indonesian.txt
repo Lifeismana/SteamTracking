@@ -849,6 +849,7 @@ Mohon tunggu sebentar."
 "SteamUI_Selection_Latam_Spanish"	"Español - Latinoamérica (Bahasa Spanyol - Amerika Latin)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Bahasa Vietnam)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Bahasa Melayu)"
 
 
 
@@ -3426,7 +3427,7 @@ Buat Teman baru di Steam dengan mengirimkan hadiah ke kenalanmu."
 
 "Steam_GuestPasses_Status_Unsent"	"Tidak Terkirim"
 "Steam_GuestPasses_Status_Sent"	"Terkirim"
-"Steam_GuestPasses_Status_Redeemed"	"Ditukar"
+"Steam_GuestPasses_Status_Redeemed"	"Ditukarkan"
 "Steam_GuestPasses_Status_Incoming"	"Belum diterima"
 
 "Steam_SendGuestPass_SendInfo$type=gift"		"Bagaimana kamu ingin mengirimkan %package% sebagai hadiah?"
@@ -5066,6 +5067,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "DownloadRegion_br_manaus"			"Brasil - Manaus"
 "DownloadRegion_br_belem"			"Brasil - Belém"
 "DownloadRegion_br_salvador"			"Brasil - Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Konfigurasi Kontroler"
 "ControllerBinding_Offline_Save"	"[Penyimpanan Otomatis Offline]"

@@ -184,7 +184,7 @@
     "moderationaction_disputed": "已對解決方式提出爭議",
     "moderationaction_escalated": "已升級處理",
     "moderationaction_sanctioned": "已受處罰",
-    "moderationaction_sustainedondispute": "爭議已駁回",
+    "moderationaction_sustained": "維持原先處理結果",
     "moderationaction_unresolved": "主題變成未解決",
     "moderationaction_updated": "主題詳情已更新",
     "moderationaction_locked": "已鎖定",

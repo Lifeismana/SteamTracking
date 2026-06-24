@@ -3,8 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
@@ -31,18 +29,6 @@
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
-        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
-        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
-        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
-        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
-        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
-        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
-        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
-        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
-        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
-        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
-        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     chunkid: (module) => {

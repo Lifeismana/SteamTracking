@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Omstridd lösning",
     "moderationaction_escalated": "Eskalerad",
     "moderationaction_sanctioned": "Sanktionerad",
-    "moderationaction_sustainedondispute": "Tvist åsidosatt",
+    "moderationaction_sustained": "Moderering upprätthållen",
     "moderationaction_unresolved": "Ärendet löstes inte",
     "moderationaction_updated": "Ärendeinformation uppdaterad",
     "moderationaction_locked": "Låst",

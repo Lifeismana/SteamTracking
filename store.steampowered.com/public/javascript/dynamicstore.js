@@ -390,7 +390,7 @@ GDynamicStore = {
 
 		// find our horizontal scrollers and add tracking to them
 
-		$J('.store_horizontal_autoslider' ).each(function(i, elTarget ){
+		$J('.store_horizontal_autoslider, .responsive_scroll_snap_ctn' ).each(function(i, elTarget ){
 			GDynamicStore.s_ImpressionTracker.RegisterScrollEvent( elTarget );
 		});
 

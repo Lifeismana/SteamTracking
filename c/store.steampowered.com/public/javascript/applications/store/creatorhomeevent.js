@@ -234,32 +234,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        storeMenuResponsiveModeWidth: "730px",
-        SuppressScrollOnBody: "_2H6nBXGQnWeZJ_k8tK-qeO",
-        SubMenuOuterCtn: "XRxbVx8hEC64irIt5ETl6",
-        isOpen: "H_vE_5qGWaDCAgxbzcWbG",
-        SubMenuCtn: "_1QP7mh3IZ6mkLZFarqOI6K",
-        SubMenuImage: "LPOLldAKahIuzg0JArLRU",
-        SubMenuItemCtn: "_3l8xeoR-wEUYEFOd8iTVOY",
-        SubMenuItemText: "_31NjlVCoc_kJqU4O6T3GaQ",
-        ImageWrapper: "_1b0D6GwIr3uJX-bYaBWXuU",
-        BackgroundAnimation: "_3CxKZ4N0RhDFwPqdzAtrMl",
-        "ItemFocusAnim-darkerGrey-nocolor": "_3pZA6QmunSvkjmZI9Ndmcu",
-        "ItemFocusAnim-darkerGrey": "_3BffASPCHFV0VAgmPVl_kc",
-        "ItemFocusAnim-darkGreySettings": "qkh264Vz9Pv5rr6YfKhh1",
-        "ItemFocusAnim-darkGrey": "qD2mZ6w2eEWm1PhMc6xb6",
-        "ItemFocusAnim-grey": "_2mW-vk-aE8tlHuAW0uXkit",
-        "ItemFocusAnim-translucent-white-10": "_2b2eos74MIDM6zKt-lSfM4",
-        "ItemFocusAnim-translucent-white-20": "_1SYQ3QCW-iVm5eavl1lcD4",
-        "ItemFocusAnimBorder-darkGrey": "owLhAm1zN4SxTDUzDAzAc",
-        "ItemFocusAnim-green": "_1EuR8NR_c4-zx1TryKcZ2Q",
-        focusAnimation: "uz9ci2kXU2o-q-PstyP5_",
-        hoverAnimation: "_1_iqutzmsp1osmwqWLLqoV",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         narrowWidth: "500px",
         "duration-app-launch": "800ms",
         ReadMoreLink: "_2mvgc6dpEDHRJlTWhGDz7h",
@@ -926,105 +900,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { event: _, subMenu: _, language: _ } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useRef)(null);
-        return (0, _.jsx)(_._, {
-          className: (0, _._)({
-            [_().SubMenuOuterCtn]: !0,
-            [_().isOpen]: _,
-          }),
-          onMouseEnter: () => {
-            _.current && window.clearTimeout(_.current), _(!0);
-          },
-          onMouseLeave: () => {
-            _.current && window.clearTimeout(_.current),
-              (_.current = window.setTimeout(() => _(!1), 180));
-          },
-          children: (0, _.jsx)("div", {
-            className: _().SubMenuCtn,
-            style: {
-              ...(0, _._)(_, _, _),
-            },
-            children: _.menu_items.map((_) =>
-              (0, _.jsx)(
-                "div",
-                {
-                  className: _().SubMenuItemCtn,
-                  children: (0, _.jsx)(_, {
-                    language: _,
-                    mainItem: _,
-                    subMenu: _,
-                    clanAccountID: _.clanSteamID.GetAccountID(),
-                  }),
-                },
-                "submenuitem" + _.unique_id,
-              ),
-            ),
-          }),
-        });
-      }
-      function _(_) {
-        const { language: _, mainItem: _, subMenu: _, clanAccountID: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          [_, _, _, _] = (0, _._)(() => [
-            _.sub_menu_url,
-            _(_.sub_menu_url, _),
-            _.localized_sub_menu_name?.[_] ||
-              _.localized_sub_menu_name?.[_.Bhc] ||
-              "unknown",
-            _.sub_menu_icon?.localized_media?.[_]?.image ||
-              _.sub_menu_icon?.localized_media?.[_.Bhc]?.image ||
-              void 0,
-          ]);
-        let _ = _.label_color || "#DBDFE2";
-        return (
-          _
-            ? (_ = _.selected_label_color || _)
-            : _ && (_ = _.hover_label_color || _),
-          (0, _.jsxs)(_._, {
-            className: _().SubMenuItemText,
-            style: {
-              color: _,
-            },
-            href: _,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-            children: [
-              (0, _.jsx)("div", {
-                className: _().TextLabel,
-                children: _,
-              }),
-              Boolean(_) &&
-                (0, _.jsx)("span", {
-                  className: _().ImageWrapper,
-                  children: (0, _.jsx)("img", {
-                    src: (0, _._)(_, _),
-                    alt: _,
-                    className: _().SubMenuImage,
-                  }),
-                }),
-            ],
-          })
-        );
-      }
-      function _(_, _) {
-        try {
-          const _ = window.location.pathname.toLowerCase(),
-            _ = new URL(_ || ""),
-            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
-          return _.pathname.toLocaleLowerCase() === _ || _ === _;
-        } catch {
-          return !1;
-        }
-      }
-      var _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, bIsPreview: _ } = _;
         let _ = _.jsondata.sale_background_video_webm,
@@ -1090,11 +966,12 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _
-              ? (0, _.jsx)(_, {
+              ? (0, _.jsx)(_._, {
                   event: _,
                   language: _,
                   bIsPreview: _,
                   subMenu: _,
+                  styleVariation: _._.k_SubMenu,
                 })
               : (0, _.jsx)(_, {
                   strURL: _,
@@ -1728,6 +1605,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { color: _, onChange: _, strTitle: _, disableAlpha: _ } = _,
@@ -2290,7 +2168,6 @@
           (_[(_.k_eInsertVideo = 4)] = "k_eInsertVideo");
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -5301,6 +5178,12 @@
           }),
         });
       }
+      function _() {
+        if (window?.location?.hash)
+          return decodeURIComponent(
+            window.location.hash.substring(1).toLowerCase(),
+          );
+      }
       const _ = (0, _._)(function (_) {
         const {
             event: _,
@@ -5319,7 +5202,28 @@
             () => window.removeEventListener("resize", _)
           ),
           [_],
-        );
+        ),
+          _.useEffect(() => {
+            let _ = "";
+            const _ = () => {
+                const _ = _();
+                if (_ && _ != _) {
+                  const _ = document.getElementById(_);
+                  _ &&
+                    ((_ = _),
+                    __webpack_require__.scrollIntoView({
+                      block: "start",
+                    }));
+                }
+              },
+              _ = setTimeout(() => _(), 150);
+            return (
+              window.addEventListener("hashchange", _),
+              () => {
+                clearTimeout(_), window.removeEventListener("hashchange", _);
+              }
+            );
+          }, []);
         const _ = (0, _._)(),
           _ = (_, _) => {
             (0, _._)(_, {
@@ -5348,7 +5252,13 @@
         ];
         let _ = null;
         const _ = (0, _._)(),
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = _.useMemo(() => {
+            const _ = _();
+            if (!_) return;
+            const _ = _.findIndex((_) => _.section_anchor === _);
+            return _ > -1 ? _ : void 0;
+          }, [_]);
         _.forEach((_, _) => {
           const _ = _[_.length - 1].activeTab;
           if (_ && !_.ShouldShowSection(_)) return;
@@ -5408,7 +5318,10 @@
               salePageBackgroundDerivedConfig: _,
               backgroundImageEditModel: _,
               bExpanded: _,
-              children: _,
+              children: (0, _.jsx)(_._, {
+                enabled: !_ || _ > _,
+                children: _,
+              }),
             },
             "SaleSectionIndex_" + _.unique_id + "_" + _,
           );
@@ -5504,7 +5417,7 @@
             bExpanded: _,
             children: _,
           } = _,
-          _ = _._ + (_.unique_id || _),
+          _ = _.section_anchor ? _.section_anchor : _._ + (_.unique_id || _),
           _ = "tabs" != _.section_type,
           [_, _] = (0, _.useState)(!0);
         return _

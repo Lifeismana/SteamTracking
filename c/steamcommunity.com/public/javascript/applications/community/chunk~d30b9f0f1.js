@@ -62,6 +62,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Ctn: "KpCRX3EpVySkwPrzJWf8H",
+        TabContents: "_1L_nTm1MYScrbD9JpPutxs",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TitleSplit: "_7qZN_D3j8zauSVGraPezw",
         ReorderButtons: "_3Kt9sOV54pFtE5sITKC1r5",
         DisplayOrder: "_3YuVj2MWsdb9QrFB3N9hlZ",
@@ -7936,6 +7942,425 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _ } = _,
+          [_, _] = (0, _._)(() => [
+            _.GetEventModel().jsondata.sale_sub_menu,
+            Boolean(_.GetEventModel().jsondata.sale_sub_menu),
+          ]),
+          _ = (0, _.useCallback)(() => _.SetDirty(_._.jsondata_sales), [_]),
+          _ = (0, _.useCallback)(() => {
+            (_.GetEventModel().jsondata.sale_sub_menu = void 0), _();
+          }, [_, _]),
+          _ = (0, _.useCallback)(() => {
+            _.GetEventModel().jsondata.sale_sub_menu ||
+              ((_.GetEventModel().jsondata.sale_sub_menu = {
+                menu_items: [],
+              }),
+              _());
+          }, [_, _]);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("p", {
+              children: (0, _._)("#Sale_SubMenu_Desc"),
+            }),
+            (0, _.jsx)(_, {
+              subMenuContainer: _,
+              fnClearSubMenu: _,
+              fnEnableSubMenu: _,
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                subMenuSection: _,
+                fnOnDirty: _,
+                bEnableImageIcons: !0,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            subMenuSection: _,
+            fnOnDirty: _,
+            strTokenName: _,
+            strTokenNoItem: _,
+            strTokenAddItem: _,
+            mapHashToName: _,
+            strTokenPlaceholder: _,
+            bEnableImageIcons: _,
+          } = _,
+          _ = [
+            {
+              name: (0, _._)("#EventDisplay_Edit"),
+              key: "submenu_editor",
+              contents: (0, _.jsx)(_, {
+                fnOnDirty: _,
+                subMenuContainer: _,
+                mapHashToName: _,
+                strTokenName: _,
+                strTokenAddItem: _,
+                strTokenNoItem: _,
+                strTokenPlaceholder: _,
+                bEnableImageIcons: _,
+              }),
+            },
+            {
+              name: (0, _._)("#Sale_Section_EditTab_Background"),
+              key: "submenu_back",
+              contents: (0, _.jsx)(_._, {
+                section: _,
+                fnOnSetDirty: () => _,
+                elAdditionalLabelSettings: (0, _.jsx)(_, {
+                  fnOnSetDirty: _,
+                  subMenuSection: _,
+                }),
+                fnOnClearSettings: () => {
+                  (_.selected_label_color = void 0),
+                    (_.hover_label_color = void 0);
+                },
+              }),
+            },
+          ];
+        return (
+          _._.is_support &&
+            _.push({
+              name: "(VO) Debug",
+              key: "submenu_debug",
+              contents: (0, _.jsx)(_._, {
+                saleSection: _,
+              }),
+            }),
+          (0, _.jsx)("div", {
+            className: _().TabContents,
+            children: (0, _.jsx)(_._, {
+              tabs: _,
+              bDisableRouting: !0,
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { fnOnSetDirty: _, subMenuSection: _ } = _,
+          [_, _] = (0, _._)(() => [
+            _.selected_label_color,
+            _.hover_label_color,
+          ]),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: _,
+            property: "selected_label_color",
+            color: _,
+          }),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: _,
+            property: "hover_label_color",
+            color: _,
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: _,
+              className: _.EventEditorTextTitle,
+              style: {
+                color: _,
+              },
+              children: (0, _._)("#Sale_SubMenu_SelectedColor"),
+            }),
+            (0, _.jsx)(_._, {
+              onClick: _,
+              className: _.EventEditorTextTitle,
+              style: {
+                color: _,
+              },
+              children: (0, _._)("#Sale_SubMenu_HoverColor"),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            fnOnDirty: _,
+            subMenuContainer: _,
+            strTokenName: _,
+            strTokenNoItem: _,
+            strTokenAddItem: _,
+            mapHashToName: _,
+            strTokenPlaceholder: _,
+            bEnableImageIcons: _,
+          } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = null == _ ? void 0 : _.menu_items) || void 0 === _
+                ? void 0
+                : _.length) || 0,
+              (null == _ ? void 0 : _.menu_items) || [],
+            ];
+          }),
+          [_, _] = (0, _.useState)(void 0),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            Boolean(_ > 0)
+              ? (0, _.jsx)(_._, {
+                  items: _,
+                  onDelete: (_) => {
+                    _(_), _();
+                  },
+                  onReorder: _,
+                  render: (_) =>
+                    (0, _.jsx)(_, {
+                      fnOnDirty: _,
+                      menuItem: _,
+                      strTokenName: _,
+                      mapHashToName: _,
+                      strTokenPlaceholder: _,
+                      bEnableImageIcons: _,
+                    }),
+                })
+              : (0, _.jsx)("p", {
+                  children: (0, _._)(null != _ ? _ : "#Sale_SubMenu_NoItems"),
+                }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#Button_Delete"),
+                strDescription: (0, _._)("#Dialog_AreYouSure"),
+                onOK: () => {
+                  void 0 !== _ && (_.splice(_, 1), _(), _());
+                },
+                onCancel: () => _(void 0),
+                closeModal: _,
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              onClick: (_) => {
+                let _ = Math.floor(1e6 * Math.random());
+                for (; _.menu_items.find((_) => _.unique_id == _); )
+                  _ = Math.floor(1e6 * Math.random());
+                _.menu_items.push({
+                  unique_id: _,
+                  sub_menu_icon: {
+                    media_type: _._.k_MediaImage,
+                  },
+                }),
+                  _(),
+                  _();
+              },
+              children: (0, _._)(null != _ ? _ : "#Sale_SubMenu_AddItems"),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            fnOnDirty: _,
+            menuItem: _,
+            strTokenName: _,
+            mapHashToName: _,
+            strTokenPlaceholder: _,
+            bEnableImageIcons: _,
+          } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = _.localized_sub_menu_name) || void 0 === _
+                ? void 0
+                : _[_]) || "",
+              _.sub_menu_url || "",
+            ];
+          });
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_._, {
+              type: "text",
+              value: _,
+              label: (0, _._)(null != _ ? _ : "#Sale_SubMenu_Name"),
+              placeholder: (0, _._)(
+                null != _ ? _ : "#Sale_SubMenu_Placeholder",
+              ),
+              onChange: (_) => {
+                const _ = _.currentTarget.value;
+                _ !== _ &&
+                  ((!_.localized_sub_menu_name ||
+                    _.localized_sub_menu_name.length < _.bP9) &&
+                    (_.localized_sub_menu_name = (0, _._)(
+                      _.localized_sub_menu_name || [],
+                      _.bP9,
+                      null,
+                    )),
+                  (_.localized_sub_menu_name[_] = _),
+                  _());
+              },
+            }),
+            _
+              ? (0, _.jsx)(_, {
+                  ..._,
+                })
+              : (0, _.jsx)(_._, {
+                  type: "url",
+                  value: _,
+                  label: (0, _._)("#Sale_SubMenu_Link"),
+                  tooltip: (0, _._)("#Sale_SubMenu_Link_ttip"),
+                  onChange: (_) => {
+                    const _ = _.currentTarget.value;
+                    _ !== _ && ((_.sub_menu_url = _), _());
+                  },
+                }),
+            _ &&
+              (0, _.jsx)(_, {
+                fnOnDirty: _,
+                menuItem: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { menuItem: _, fnOnDirty: _, mapHashToName: _ } = _,
+          [_] = (0, _._)(() => [_.sub_menu_url || ""]),
+          _ = (0, _.useMemo)(() => Array.from(_.keys()), [_]);
+        return (0, _.jsx)(_._, {
+          selectedValue: _ ? _.substring(1) : null,
+          onSelectionChange: (_) => {
+            const _ = "#" + _;
+            _ != _ && ((_.sub_menu_url = _), __webpack_require__());
+          },
+          options: _,
+          placeholder: "...",
+          filterPlaceholder: "...",
+          getOptionLabel: (_) => `#${_} @ ${_.get(_)}`,
+        });
+      }
+      function _(_) {
+        const {
+            subMenuContainer: _,
+            fnClearSubMenu: _,
+            fnEnableSubMenu: _,
+            strTokenEnable: _,
+            strTokenClear: _,
+            strTokenCancelWarning: _,
+          } = _,
+          _ = !!_,
+          [_, _] = (0, _.useState)(!1),
+          [_, _, _] = (0, _._)(),
+          _ = _.useRef(void 0);
+        return (
+          (0, _.useEffect)(() => {
+            _ && (__webpack_require__(), _(!1));
+          }, [_, _]),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                ref: _,
+                onChange: () => {
+                  var _;
+                  _
+                    ? (null === (_ = null == _ ? void 0 : _.current) ||
+                        void 0 === _ ||
+                        _.setState({
+                          checked: !0,
+                        }),
+                      _())
+                    : _();
+                },
+                label: (0, _._)(null != _ ? _ : "#Sale_SubMenu_Enable"),
+                checked: _,
+              }),
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_._, {
+                  strTitle: (0, _._)(null != _ ? _ : "#Sale_SubMenu_Clear"),
+                  strDescription: (0, _._)(
+                    null != _ ? _ : "#Sale_SubMenu_warning",
+                  ),
+                  onOK: () => {
+                    var _;
+                    null === (_ = null == _ ? void 0 : _.current) ||
+                      void 0 === _ ||
+                      _.setState({
+                        checked: !1,
+                      }),
+                      _(!0);
+                  },
+                  closeModal: _,
+                }),
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        var _, _;
+        const { fnOnDirty: _, menuItem: _ } = _,
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: (0, _._)("#Sale_SubMenu_Icon"),
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                strTitle: (0, _._)("#Sale_SubMenu_Icon_title"),
+                strDescription: (0, _._)(
+                  "#Sale_SubMenu_Icon_desc",
+                  null !==
+                    (_ =
+                      null ===
+                        (_ = null == _ ? void 0 : _.localized_sub_menu_name) ||
+                      void 0 === _
+                        ? void 0
+                        : _[_.Bhc]) && void 0 !== _
+                    ? _
+                    : "",
+                ),
+                bAlertDialog: !0,
+                closeModal: _,
+                children: (0, _.jsx)(_._, {
+                  fnOnDirty: _,
+                  localizedMedia: _.sub_menu_icon,
+                }),
+              }),
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         SetFilterTab(_) {
@@ -9102,7 +9527,8 @@
           return (0, _.jsx)("div", {
             children: (0, _._)("#EventEditor_InvalidCapsuleItem"),
           });
-        const _ = (0, _._)("#AppType_" + _.type);
+        const _ = (0, _._)("#AppType_" + _.type),
+          _ = null === _ || (_ && !_.visible);
         return (0, _.jsxs)(_._, {
           className: _().FlexCenter,
           url: _,
@@ -9115,7 +9541,7 @@
               children: ["(", _, ")"],
             }),
             _,
-            null === _ &&
+            _ &&
               (0, _.jsxs)("div", {
                 className: _.SaleCapsuleConflict,
                 children: [
@@ -9137,6 +9563,7 @@
               }),
             _ &&
               _ &&
+              !_ &&
               (0, _.jsxs)("div", {
                 className: _.SaleCapsuleConflict,
                 children: [
@@ -11369,9 +11796,112 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { tab: _, editModel: _ } = _,
+          _ = (0, _._)(),
+          [_, _, _] = (0, _._)(() => [
+            _.tab_jump_list,
+            !!_.tab_jump_list,
+            __webpack_require__.GetEventModel().jsondata.sale_sections,
+          ]),
+          _ = (0, _.useCallback)(() => {
+            __webpack_require__.SetDirty(_._.jsondata_sales);
+          }, [_]),
+          _ = (0, _.useCallback)(() => {
+            (_.tab_jump_list = void 0), _();
+          }, [_, _]),
+          _ = (0, _.useCallback)(() => {
+            _.tab_jump_list ||
+              ((_.tab_jump_list = {
+                menu_items: [],
+              }),
+              _());
+          }, [_, _]),
+          _ = _.unique_id,
+          [_, _] = (0, _.useMemo)(() => {
+            let _ = 0;
+            const _ = new Map();
+            return (
+              _.forEach((_) => {
+                if (
+                  (0, _._)(_, _) &&
+                  ((_ += 1),
+                  _.section_anchor && _.section_anchor.trim().length > 0)
+                ) {
+                  const _ = (0, _._)(
+                    _,
+                    __webpack_require__.GetEventModel(),
+                    _,
+                    __webpack_require__.GetClanAccountID(),
+                    _._,
+                    !0,
+                  );
+                  _.set(_.section_anchor, _.toString());
+                }
+              }),
+              [_, _]
+            );
+          }, [_, _, _, _]);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              size: "3",
+              children: (0, _._)("#Sale_Tabs_Jumplist"),
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              children: (0, _._)("#Sale_Tabs_Jumplist_Desc"),
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _._)(
+                "#Sale_Tabs_Jumplist_VislbleSections",
+                _,
+                _.size,
+              ),
+            }),
+            0 == _.size
+              ? (0, _.jsx)("div", {
+                  className: _().WarningStyles,
+                  children: (0, _.jsx)(_._, {
+                    children: (0, _._)("#Sale_Tabs_Jumplist_RequireHash"),
+                  }),
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      subMenuContainer: _,
+                      fnClearSubMenu: _,
+                      fnEnableSubMenu: _,
+                      strTokenEnable: "#Sale_Tabs_Jumplist_Enable",
+                      strTokenClear: "#Sale_Tabs_Jumplist_Clear",
+                      strTokenCancelWarning: "#Sale_Tabs_Jumplist_warning",
+                    }),
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        subMenuSection: _,
+                        fnOnDirty: _,
+                        strTokenName: "#Sale_Tabs_Jumplist_Name",
+                        strTokenAddItem: "#Sale_Tabs_Jumplist_AddItems",
+                        strTokenNoItem: "#Sale_Tabs_Jumplist_NoItems",
+                        strTokenPlaceholder: "#Sale_Tabs_Jumplist_placeholder",
+                        mapHashToName: _,
+                        bEnableImageIcons: !1,
+                      }),
+                  ],
+                }),
+          ],
+        });
+      }
       const _ = (0, _._)((_) => {
         const { saleSection: _, editModel: _ } = _;
         _.useEffect(() => {
@@ -11681,6 +12211,10 @@
             }),
             (0, _.jsx)(_, {
               ..._,
+            }),
+            (0, _.jsx)(_, {
+              tab: _,
+              editModel: _,
             }),
             (0, _.jsx)(_, {
               tab: _,
@@ -27371,7 +27905,21 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (_) => null;
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : (_) => null;
       function _(_) {
         const { fnOnDirty: _, saleSection: _, event: _ } = _,
           [_, _, _, _] = (0, _._)(() => {
@@ -27637,6 +28185,12 @@
               },
               children: "Use Package Description?",
             }),
+            _ &&
+              _ &&
+              (0, _.jsx)("a", {
+                href: `${_._.PARTNER_BASE_URL}admin/store/package/${null != _ ? _ : 0}?activetab=tab_description`,
+                children: "Open Package Description Editor",
+              }),
             !_ &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
@@ -34455,7 +35009,7 @@
         return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
       }
       function _(_, _, _) {
-        if (_.disable_background && !_)
+        if (_.disable_background)
           return {
             paddingLeft: 0,
             paddingRight: 0,
@@ -40321,6 +40875,7 @@
           }),
         });
       }
+      const _ = 240;
       function _(_) {
         let _ = !1;
         const _ = (0, _._)(_);
@@ -40718,6 +41273,7 @@
             padded: !Boolean(_),
             screenIsWide: _,
             navKey: _,
+            lazyRenderPlaceholderWidth: _,
             children: _(_, 0, _.length, _, _(0, _)),
           });
         else {
@@ -40797,6 +41353,7 @@
                 className: "SaleSectionCarousel",
                 useTestScrollbar: !0,
                 bLazyRenderChildren: !0,
+                lazyRenderPlaceholderWidth: _,
                 hidePips: _,
                 onSlide: (_) => _._.Get().AddInteraction(_, _ * _),
                 screenIsWide: _,
@@ -41230,7 +41787,7 @@
             : 0) > 0
         ) {
           if (_ == _._ || _ == _._)
-            return 0 == (null == _ ? void 0 : _.trim().length)
+            return 0 == (null == _ ? void 0 : _.trim().length) || _
               ? _
               : (0, _.jsxs)(_.Fragment, {
                   children: [
@@ -41246,7 +41803,7 @@
                   ],
                 });
           if (_ == _._)
-            return 0 == (null == _ ? void 0 : _.trim().length)
+            return 0 == (null == _ ? void 0 : _.trim().length) || _
               ? _
               : (0, _.jsxs)(_.Fragment, {
                   children: [

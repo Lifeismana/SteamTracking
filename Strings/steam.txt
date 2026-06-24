@@ -1874,6 +1874,7 @@ $ffn
 /proc/self/fd
 /proc/self/maps
 /proc/version
+/run/host/etc/os-release
 /sbin/lsof
 /steamrtarm64
 /sys/bus/iio/devices
@@ -1951,9 +1952,6 @@ $ffn
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:54:04
-00:54:14
-00:54:19
 01/01/00
 0123456789
 0123456789.
@@ -2341,10 +2339,12 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
-172.16
 1536
 15000
 155.133.240.0/23
+15:29:26
+15:29:36
+15:29:41
 15CBaseFileSystem
 15CChatMemberInfo
 15CEC25519KeyBase
@@ -2371,6 +2371,7 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
+172.16
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -3342,6 +3343,7 @@ AtomID
 AtomID 0x%x
 Attempt to create persistent logs with no end date!
 Attempt to schedule '%s' %lldusec in the past
+Attempted to access intermediate certificate at index %d. Total intermediates: %d
 Attempted to change replicated CVar when you are not the GM\n
 Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
@@ -4803,6 +4805,7 @@ Collections
 Comma separated list of metrics catalogs to disable.  This is the last check.
 Comma separated list of metrics operations that are disabled.  This setting has highest priority
 Comma separated list of metrics operations.  Overrides disabled catalogs
+Command line is already escaped: %s
 Command line options:\n
 CommandLine
 CommentCount
@@ -6522,6 +6525,7 @@ INVALID
 INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_HSOCKETOWNER != m_hSocketOwner
+INVALID_KEY_SYMBOL
 INVALID_SOCKET != hSocket
 INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
@@ -6875,7 +6879,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun  9 2026
+Jun 24 2026
 June
 K'iche'
 K(\f]C15
@@ -8636,6 +8640,7 @@ Rs$c~B
 RuPay
 RunCallbacks
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 RunFrame - UserCanceled: %d
 RunOnce
@@ -8915,7 +8920,6 @@ SSLv3/TLS write server hello
 SSLv3/TLS write session ticket
 STEAMVIDEOTOKEN
 STEAM_
-STEAM_BASE_FOLDER
 STEAM_BIGPICTURE
 STEAM_BOOTSTRAP_LOG_VERBOSE
 STEAM_CLIENT_CONFIG_FILE
@@ -9213,7 +9217,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun  9 2026 00:54:14
+Startup - updater built Jun 24 2026 15:29:36
 State
 StaticFileWriterThread()
 Steam
@@ -10777,6 +10781,7 @@ Zulu
 \n\rwebsite_title
 \n\tIPSec/IKE/Oakley curve #3 over a 155 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tIPSec/IKE/Oakley curve #4 over a 185 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
+\n\t\tChain Certificate %d:\n
 \n\tbase_name
 \n\tbeta_name
 \n\tclass_100
@@ -12091,6 +12096,7 @@ coefficient%d:
 coefficient:
 cofactor
 collect_data
+collection_time_active
 color map overflow (BAD internal error)
 color-map index out of range
 com.google.protobufB
@@ -15888,7 +15894,6 @@ k_EMsgSCIDRequest
 k_EMsgSCIDResponse
 k_EMsgSMExpensiveReport
 k_EMsgSMHourlyReport
-k_EMsgSMMonitorSpace
 k_EMsgSMPartitionRenames
 k_EMsgSecretsBase
 k_EMsgServerSecretChanged
@@ -17522,6 +17527,7 @@ overflow error
 owner
 p is not prime
 p not prime
+p#Nyd
 p+"\tHr9
 p.char_two
 p.onBasis
@@ -17774,7 +17780,9 @@ pchMsg
 pchName
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
 pchSteam2ID
+pchString != nullptr
 pchTLSServerName == NULL
 pchVar
 pchVar && pchValue
@@ -18754,7 +18762,6 @@ res master
 reseed error
 reservation_country_code
 reservation_state
-reservation_type
 reserved
 reserved_range
 resizeNumBits >= 0
@@ -19634,6 +19641,7 @@ steamglobal
 steamhdl
 steamid
 steammessages_base.proto
+steamos
 steamos-update: using duplicate detection: %d\n
 steampal_
 steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d
@@ -19740,7 +19748,6 @@ support locked group
 support unlocked group
 supportedAlgorithms
 supportedApplicationContext
-supported_languages
 surname
 svRegPath
 sv_SE

@@ -70,7 +70,7 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 	}
 	else if ( oHashParams && BValidateHashParams( oHashParams ) )
 	{
-		ShowItemInventory( oHashParams.appid, oHashParams.contextid, oHashParams.assetid );
+		ShowItemInventory( oHashParams.appid, oHashParams.contextid, oHashParams.assetid, undefined, { query: oHashParams.query } );
 	}
 	else if ( showAppId != -1 )
 	{
@@ -149,13 +149,15 @@ function ReadInventoryHash( hash )
 	if ( hash && hash.length > 1 )
 	{
 		var rgHashElements = hash.substring(1).split('_');
-		if ( rgHashElements.length >= 1 && rgHashElements.length < 4 )
+		if ( rgHashElements.length >= 1 && rgHashElements.length < 5 )
 		{
 			var oLocation = { appid: parseInt( rgHashElements[0] ) };
 			if ( rgHashElements.length >= 2 )
 				oLocation.contextid = rgHashElements[1];
 			if ( rgHashElements.length == 3 )
 				oLocation.assetid = rgHashElements[2];
+			if ( rgHashElements.length == 4 )
+				oLocation.query = decodeURIComponent( rgHashElements[3] );
 			return oLocation;
 		}
 	}
@@ -2959,7 +2961,7 @@ function ShowPendingGifts()
 	UserYou.SetActiveAppId(null);
 }
 
-function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
+function ShowItemInventory( appid, contextid, assetid, bLoadCompleted, options )
 {
 	if ( g_ActiveUser == null )
 	{
@@ -2978,6 +2980,8 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	{
 		contextid = g_ActiveUser.rgContextIdsByApp[appid][0];
 	}
+
+	var initialQuery = options && options.query;
 
 	var lastAppId = g_ActiveInventory ? g_ActiveInventory.appid : null;
 	var lastContextID = g_ActiveInventory ? g_ActiveInventory.contextid : null;
@@ -2999,6 +3003,11 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 	if ( lastAppId != appid || contextid != lastContextID )
 	{
 		Filter.ClearFilter();
+	}
+
+	if ( initialQuery )
+	{
+		Filter.elFilter.value = initialQuery;
 	}
 
 	if ( SelectInventoryFromUser( g_ActiveUser, appid, contextid, bLoadCompleted ) )
@@ -4694,8 +4703,7 @@ var Filter = {
 	elFilter: null,
 	rgLastTags: {},
 	rgCurrentTags: {},
-	FILTER_ASSETS_PER_LOAD: 5000,
-
+	FILTER_ASSETS_PER_LOAD: 2500, 
 	InitFilter: function( elFilter )
 	{
 		this.strLastFilter = '';

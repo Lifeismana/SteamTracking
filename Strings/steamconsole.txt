@@ -179,8 +179,6 @@ $\nY8O
 -nodebug
 -quicklogin
 -sitelicense
--steamdeckdisplay
--steammachinedisplay
 ./depotscripts
 ./obj_steamconsole_steamrtarm64/release/steamconsole.so
 .cpl
@@ -233,8 +231,6 @@ $\nY8O
 /dev/
 /dev/disk/by-uuid
 /etc/mtab
-/proc/device-tree/compatible
-/proc/device-tree/model
 /proc/mounts
 /proc/self/maps
 /steamrtarm64
@@ -250,11 +246,11 @@ $\nY8O
 0000000000000000000000000000000000000000
 00:00:00
 01/01/00
-0123456789ABCDEF
 0123456789abcdef
 0F`8
 1000
 0123456789
+0123456789ABCDEF
 10CSteamUser
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI20ModuleAddressRange_tE
@@ -351,6 +347,7 @@ $\nY8O
 18CUtlCharConversion
 19CConsoleInputThread
 19CUtlNoEscConversion
+1d\f5!
 20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
@@ -375,10 +372,6 @@ $\nY8O
 7CUtlSetI10CUtlStringi8CDefLessE
 7CUtlSetIyi8CDefLessE
 7~8A
-83L3
-83N6
-83Q2
-83Q3
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CLogFile
@@ -1310,7 +1303,6 @@ GetInt64FromString() did not get correct peCS parameter
 GetIntFromString() did not get correct peCS parameter
 GetInts()
 GetOSType
-GetPlatformFromOS
 GetShaderBucketForGraphicsAPI success: appID: GPUDesc: %s DriverDesc: %s\n
 GetSpewOutputFunc
 GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu GPUDesc: %s DriverDesc: %s\n
@@ -1369,6 +1361,7 @@ Hung transaction cancelled
 Hungarian
 I/O Operation Failed
 INVALID
+INVALID_KEY_SYMBOL
 IP Address Banned
 IP Address Not Found
 IP Login Restriction Failed
@@ -1453,7 +1446,6 @@ InviteOnly
 Invited
 Irish
 Is Bank
-Is64BitOS
 IsPowerOfTwo( nNewCapacity )
 IsText()
 IsValidIndex( elem )
@@ -1894,8 +1886,6 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamOS
-Plat_IsTesla
 Plat_MSTime
 Plat_OutputDebugString
 Plat_OutputDebugStringRaw
@@ -2048,7 +2038,6 @@ Russian
 SET NULL
 SITE_SERVER_GUI
 SKyu
-SM8650
 SMS code failed
 SPEI
 STEAM_
@@ -2287,6 +2276,7 @@ StringAfterPrefixCaseSensitive
 StringCompare
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 Subscribed
 Subscribers
 Succeeded
@@ -3296,7 +3286,6 @@ fread
 fread() failed\n
 free
 freeaddrinfo
-fremont
 french
 freopen
 friends
@@ -3323,7 +3312,6 @@ g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
 g_vecTempTextBuffer
 galician
-galileo
 game
 gameoverlayrenderer.so
 gamepad+mouse.vdf
@@ -3486,7 +3474,6 @@ java Class for
 java resource
 joined the group
 json
-jupiter
 k2U\v
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 k_EIPTypeV4 == addr.GetType()
@@ -3517,7 +3504,6 @@ lchown
 ld-linux-aarch64.so.1
 left the group
 len > 0 || HasError()
-lenovo
 level3
 libaudio.so
 libc.so.6
@@ -3885,7 +3871,6 @@ pwrd_telecom
 pwrd_unicom
 pwrite64
 qR5FE%
-qcom
 quantil
 quechua
 quit

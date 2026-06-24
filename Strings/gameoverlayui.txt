@@ -536,7 +536,6 @@ $\nY8O
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -691,6 +690,7 @@ $\nY8O
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
@@ -1048,7 +1048,6 @@ $\nY8O
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:54:25
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -1341,6 +1340,7 @@ $\nY8O
 14IHTMLResponses
 14IHWMonitorImpl
 14IRunGameEngine
+15:29:46
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 15CChatMemberInfo
@@ -1392,7 +1392,6 @@ $\nY8O
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
 16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
@@ -1474,7 +1473,6 @@ $\nY8O
 19CMsgClearAllCookies
 19CMsgComboNeedsPaint
 19CMsgFinishedRequest
-19CMsgFocusedNodeText
 19CMsgGetZoomResponse
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
@@ -1515,7 +1513,6 @@ $\nY8O
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgLoadLocalization
 20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
@@ -1565,7 +1562,6 @@ $\nY8O
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CMsgZoomToFocusedElement
 24CProportionalIntProperty
 25CIngameFPSPresentationFPS
 25CMsgAckSharedPaintBuffers
@@ -1586,21 +1582,16 @@ $\nY8O
 26CProportionalFloatProperty
 27CLinuxSystemHWMonitorThread
 27CMsgDraggableRegionsChanged
-27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
-27CMsgZoomToElementAtPosition
 27CScreenshotProcessingThread
 27ListPanelColumnSelectButton
 28CMsgGetCookiesForURLResponse
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
-28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
@@ -1632,7 +1623,6 @@ $\nY8O
 3333UUUU
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
-35CMsgZoomToElementAtPositionResponse
 38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
@@ -1651,7 +1641,6 @@ $\nY8O
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
@@ -2403,9 +2392,6 @@ CMsgFileLoadDialog
 CMsgFileLoadDialogResponse
 CMsgFind
 CMsgFinishedRequest
-CMsgFocusedNodeText
-CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -2429,7 +2415,6 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -2448,7 +2433,6 @@ CMsgPageSecurity
 CMsgPauseRepaint
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgRenderProcessTerminated
 CMsgRequestFullScreen
@@ -2458,7 +2442,6 @@ CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
-CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
@@ -2497,8 +2480,6 @@ CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgVerticalScrollBarSize
 CMsgViewSource
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 COMMIT
 CONFIG
 CORD
@@ -2752,6 +2733,7 @@ ComboBoxHost
 ComboBtn
 ComboMenu
 Command
+Command line is already escaped: %s
 CommentCount
 Comments by user
 Committing
@@ -3752,6 +3734,7 @@ INTERNAL
 INVALID
 INVALID_ARGUMENT
 INVALID_CPPTYPE
+INVALID_KEY_SYMBOL
 IP Address Banned
 IP Address Not Found
 IP Login Restriction Failed
@@ -4002,7 +3985,7 @@ Javanese
 JoinedGroup
 Joystick
 July
-Jun  9 2026
+Jun 24 2026
 June
 K'iche'
 KEY_0
@@ -5161,7 +5144,7 @@ Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_MSTime
 Plat_MSTime64
@@ -5393,6 +5376,7 @@ Romanian
 Row has too many bytes to allocate in memory
 RuPay
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 RunGameEngine007
 Runic
@@ -5763,6 +5747,7 @@ StringAfterPrefixCaseSensitive
 StringCompare
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 StringPrintfVector currently only supports up to
 StyleFlagFilter
 Styles
@@ -7291,7 +7276,6 @@ dual_stack
 dulltext
 duplicate
 duplicate sRGB information ignored
-duration
 durationcontrolinit
 dutch
 dynamic_cast
@@ -7443,7 +7427,6 @@ font
 fopen
 fopen tmpfile failed\n
 fopen64
-force_direct_hwnd_popups
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 forever
 format
@@ -8195,6 +8178,7 @@ k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -8303,7 +8287,6 @@ lEd/
 label
 labelText
 labeltext
-language
 languages_tab
 last_directory
 latam
@@ -8381,7 +8364,6 @@ local
 locale::facet::_S_create_c_locale name not valid
 localeconv
 localization
-localization_path
 location
 log_files_always_flush
 login

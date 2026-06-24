@@ -2927,9 +2927,10 @@
                       className: _.SectionTitle,
                       children: (0, _._)("#FAQDashboard_LocalizationSection"),
                     }),
-                    (0, _.jsx)(_, {
-                      draft: _,
-                    }),
+                    _._.is_support &&
+                      (0, _.jsx)(_, {
+                        draft: _,
+                      }),
                     (0, _.jsxs)("div", {
                       className: _.SectionContents,
                       children: [
@@ -3021,19 +3022,19 @@
                   },
                 });
               })(_.GetFAQID()),
-              (function (_) {
+              (function (_, _) {
                 const _ = (0, _._)();
                 return (0, _._)({
-                  queryKey: ["get_faq_crowdin_metadata", _],
+                  queryKey: ["get_faq_crowdin_metadata", _, _],
                   queryFn: async () => {
                     const _ = _._.Init(_._);
-                    __webpack_require__.Body().set_faq_id(_);
+                    _.Body().set_faq_id(_), _.Body().set_steamid(_);
                     return (await _._.GetCrowdInMetadata(_, _))
                       .Body()
                       .toObject();
                   },
                 });
-              })(_.GetFAQID())),
+              })(_._.CLANSTEAMID, _.GetFAQID())),
             [_, _] = (0, _.useState)(_.xPp);
           let _ = "";
           return (

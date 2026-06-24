@@ -848,6 +848,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (İspanyolca-Latin Amerika)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamca)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Endonezce)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malayca)"
 
 
 
@@ -3275,7 +3276,7 @@ Beta şimdi sona erdi - lütfen Steam'i yeniden başlatarak geçerli yayınlanma
 "Steam_GuestPassRedeemed_TitleFailed$type=gift"	"Hediye Etkinleştirme Başarısız"
 
 "Steam_GuestPassRedeemed_HeadlineFailed$type=gift"	"Geçersiz Hediye"
-"Steam_GuestPassRedeemed_TextFailed$type=gift"	"Aldığınız hediye artık geçerli değil. Bu hediye belki başkaları tarafından kullanılmış, süresi dolmuş ya da kullanıcı tarafından iptal edilmiş olabilir."
+"Steam_GuestPassRedeemed_TextFailed$type=gift"	"Kullanmaya çalıştığınız hediye artık geçerli değil. Bu hediye başka bir kullanıcı tarafından kullanılmış, süresi dolmuş ya da gönderici tarafından iptal edilmiş olabilir."
 
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=gift"	"Hediye etkinleştirme başarısız"
 
@@ -4983,7 +4984,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "DownloadRegion_in_kolkata"     "Hindistan - Kolkata"
 "DownloadRegion_us_honolulu"    "ABD - Honolulu"
 "DownloadRegion_us_anchorage"   "ABD - Anchorage"
-"DownloadRegion_cn_guangzhou"   "Çin - Guangzhou"
+"DownloadRegion_cn_guangzhou"   "Çin - Guanco"
 "DownloadRegion_ru_stpetersburg""Rusya - St. Petersburg"
 "DownloadRegion_ru_rostov"      "Rusya - Rostov-Na-Donu"
 "DownloadRegion_ru_kazan"       "Rusya - Kazan"
@@ -5061,6 +5062,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "DownloadRegion_br_manaus"			"Brezilya - Manaus"
 "DownloadRegion_br_belem"			"Brezilya - Belém"
 "DownloadRegion_br_salvador"			"Brezilya - Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Kontrolcü Yapılandırması"
 "ControllerBinding_Offline_Save"	"[Çevrimdışı Otomatik Kayıt]"

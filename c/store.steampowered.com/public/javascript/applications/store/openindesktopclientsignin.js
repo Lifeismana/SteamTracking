@@ -3,54 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        Button: "_0BH1ydyFmSnUvoVK2hIc",
-        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
-        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
-        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
-        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
-        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
-        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
-        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
-        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
-        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
-        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
-        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
-        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
-        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
-        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
-        "Size-3": "_389OPmdZoebw42_AlsUFxi",
-        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
-        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
-        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
-        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
-        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Box: "_2YzOLNBx6TonKU0Zmp20l4",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Flex: "_3nHL7awgK1Qei1XivGvHMK",
-        Direction: "_3JCkAyd9cnB90tRcDLPp4W",
-        Justify: "_12ampOcrpRamy1y301kEaK",
-        Align: "_1SxQuUnaM-MXeF5UfssWve",
-        Gap: "ja5o2GZTopxfGJArsZgFh",
-        GapX: "_3KiTPfFvdkPH6ixij56nVM",
-        GapY: "_38cfDT7owcq-7PHlx-Bx2j",
-        Wrap: "dB7ipW28YN-_GytLR4EuE",
-        Inline: "LOeaKjPDMbdcAB54IFgyX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Text: "f6hU22EA7Z8peFWZVBJU",
         Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
         "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
@@ -81,11 +33,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         OpenInBannerContainer: "_1EQpm6hAsghyCST7W04m-E",
         OpenInBannerContent: "_13oFTFTjvz0YaOVnWZxyqr",
         ValveOnly: "_3jg5qxP4_hiZYa6-GJDCOp",
@@ -99,330 +46,6 @@
       module.exports = {
         WishlistModalOverride: "_3zojRjiXppBm0x5n5HgAZ1",
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          size: _ = "3",
-          loading: _ = !0,
-          children: _,
-          color: _,
-          variant: _,
-          ..._
-        } = _;
-        return _ || !_
-          ? (0, _.jsxs)(_._, {
-              position: "relative",
-              ..._,
-              width: "fit-content",
-              children: [
-                (0, _.jsx)("div", {
-                  "data-visibility": !_,
-                  className: _.ChildContainer,
-                  children: _,
-                }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, _.jsx)(_, {
-                      size: _,
-                      color: _,
-                      variant: _,
-                    }),
-                  }),
-              ],
-            })
-          : (0, _.jsx)(_, {
-              size: _,
-              color: _,
-              variant: _,
-              ..._,
-            });
-      }
-      function _(_) {
-        const { className: _, color: _, ..._ } = (0, _._)(_, _);
-        return (0, _.jsx)("div", {
-          "data-accent-color": _,
-          className: _()(_, _.Spinner),
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`Size-${_}`],
-        },
-        {
-          prop: "variant",
-          className: (_) => _[`Variant-${_}`],
-        },
-      ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        _.preventDefault();
-      }
-      const _ = [
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`Size-${_}`],
-          },
-          {
-            prop: "variant",
-            className: (_) => _[`Variant-${_}`],
-          },
-          {
-            prop: "color",
-            dataProperty: (_) => ["accent-color", `${_}`],
-          },
-          {
-            prop: "width",
-            className: _.Width,
-            cssProperty: "--width",
-            responsive: !0,
-          },
-          {
-            prop: "minWidth",
-            className: _.MinWidth,
-            cssProperty: "--min-width",
-            responsive: !0,
-          },
-        ],
-        _ = function (_) {
-          const {
-              variant: _ = "default",
-              size: _ = "2",
-              minWidth: _ = "fit-content",
-              color: _,
-              loading: _,
-              children: _,
-              onClick: _,
-              icon: _,
-              focusable: _,
-              navProps: _,
-              ..._
-            } = _,
-            _ = _
-              ? (0, _.jsx)(_, {
-                  size: _,
-                  color: _,
-                  variant: "bright",
-                  children: _,
-                })
-              : _,
-            _ = _ ? void 0 : _,
-            _ = _ ?? _?.focusable ?? !!_,
-            _ = {
-              type: "button",
-              ...(0, _._)(
-                {
-                  ..._,
-                  variant: _,
-                  size: _,
-                  minWidth: _,
-                  color: _,
-                  className: _()(_.Button, _ && _.Icon),
-                  onClick: _,
-                },
-                _,
-              ),
-              children: _,
-            };
-          return _._.IN_GAMEPADUI && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("button", {
-                ..._,
-              });
-        },
-        _ = function (_) {
-          const {
-              variant: _ = "default",
-              size: _ = "2",
-              minWidth: _ = "fit-content",
-              disabled: _,
-              icon: _,
-              focusable: _,
-              navProps: _,
-              ..._
-            } = _,
-            _ = _ ? _ : void 0,
-            _ = (0, _._)(
-              {
-                onClick: _,
-                ..._,
-                variant: _,
-                size: _,
-                minWidth: _,
-                className: _()(_.Button, _ && _.Icon, (0, _._)()),
-              },
-              _,
-            );
-          return _._.IN_GAMEPADUI && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
-        };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, (0, _._)(), _.className),
-            },
-            _,
-          ),
-          _ = _ ?? _?.focusable ?? !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          });
-        return _._.IN_GAMEPADUI && (_ || _)
-          ? (0, _.jsx)(_._, {
-              ...(_ || {}),
-              focusable: _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = _._;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.className, _.Flex),
-            },
-            _,
-          ),
-          _ = _ ?? _?.focusable ?? !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          }),
-          _ = (0, _._)(_.direction ?? "row");
-        return _._.IN_GAMEPADUI
-          ? (0, _.jsx)(_._, {
-              ...(_ || {}),
-              focusable: _,
-              "flow-children": _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "direction",
-          responsive: !0,
-          className: _.Direction,
-          cssProperty: "--direction",
-        },
-        {
-          prop: "justify",
-          responsive: !0,
-          className: _.Justify,
-          cssProperty: (_) => ["--justify", _(_)],
-        },
-        {
-          prop: "align",
-          responsive: !0,
-          className: _.Align,
-          cssProperty: "--align",
-        },
-        {
-          prop: "gap",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapX",
-          responsive: !0,
-          className: _.GapX,
-          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapY",
-          responsive: !0,
-          className: _.GapY,
-          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
-        },
-        {
-          prop: "wrap",
-          responsive: !0,
-          className: _.Wrap,
-          cssProperty: "--wrap",
-        },
-        {
-          prop: "inline",
-          responsive: !0,
-          className: _.Inline,
-        },
-      ];
-      function _(_) {
-        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -551,19 +174,11 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        return _.Reset;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -599,6 +214,19 @@
       function _() {
         const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = _;
+      }
+      function _(_) {
+        const { label: _, strDialogDesc: _ } = _,
+          { elDialogElement: _, fnShowLogonDialog: _ } = _(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: _ || _._.Localize("#Login_SignIn"),
+            }),
+            _,
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

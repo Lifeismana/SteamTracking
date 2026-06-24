@@ -1914,68 +1914,45 @@ GHomepage = {
 
 		$RecommendedCreators.hide();
 
-		const k_nMinCapsules = $RecommendedCreators.hasClass( 'v2' ) ? 5 : 4;
+		const k_nMinCapsules = 5;
 
-        var rgCapsules = GHomepage.FilterItemsForDisplay(
+        let rgCapsules = GHomepage.FilterItemsForDisplay(
 			rgRecommendedAppsByCreators, 'home', k_nMinCapsules, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 
-		let rgCapsulesToRender = [];
+		let rgFirstRow = [];
 		let rgDisplayedCreators = [];
-		let rgDisplayedAppIds = [];
-
-		// filter this to one app per creator
-		for ( var i = 0; i < rgCapsules.length; i++ )
+		let rgAdditionalRows = [];
+		for ( let i = 0;i < rgCapsules.length; i++ )
 		{
-			if ( rgDisplayedCreators.indexOf( rgCapsules[i].creatorid ) == -1 )
+			if ( rgFirstRow.length < 5 && rgDisplayedCreators.indexOf( rgCapsules[i].creatorid ) === -1 )
 			{
 				rgDisplayedCreators.push( rgCapsules[i].creatorid );
-				rgDisplayedAppIds.push( rgCapsules[i].appid );
-				rgCapsulesToRender.push( rgCapsules[i] );
+				rgFirstRow.push( rgCapsules[i] );
 			}
-		}
-
-		// if not enough creators, just fill in the rest
-		if ( rgCapsulesToRender.length < k_nMinCapsules )
-		{
-			for ( var i = 0; i < rgCapsules.length; i++ )
+			else
 			{
-				if ( rgDisplayedAppIds.indexOf( rgCapsules[i].appid ) == -1 )
-				{
-					rgCapsulesToRender.push( rgCapsules[i] );
-				}
-
-				if ( rgCapsulesToRender.length == k_nMinCapsules )
-					break;
+				rgAdditionalRows.push( rgCapsules[i] )
 			}
-
 		}
-		if ( rgCapsulesToRender.length >= k_nMinCapsules )
+
+		let rgCarouselCapsules =  [...rgFirstRow, ...rgAdditionalRows];
+
+		if ( rgCarouselCapsules.length >= k_nMinCapsules )
 			$RecommendedCreators.show();
 		else
 			return;
 
-		GHomepage.FillPagedCapsuleCarousel( rgCapsulesToRender, $RecommendedCreators,
+		GHomepage.FillPagedCapsuleCarousel( rgCarouselCapsules, $RecommendedCreators,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
-				let $CapCtn = null;
-				if ( $RecommendedCreators.hasClass( 'v2' ) )
-				{
-					$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', { 'disable_autosizer': true });
-					GHomepage.AddCuratorToCapsule( $CapCtn, oItem.avatar_sha, oItem.name );
-				}
-				else
-				{
-					let nAppId = oItem.appid;
-					$CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, null, null, rgOptions, nDepth );
-					$CapCtn.append( BuildCreatorCapsuleToAppend( oItem ) );
-				}
-
+				let $CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', { 'disable_autosizer': true });
+				GHomepage.AddCuratorToCapsule( $CapCtn, oItem.avatar_sha, oItem.name );
 				return $CapCtn;
 			},	'creator_recommendations', k_nMinCapsules
 		);
 
-		GDynamicStore.MarkAppDisplayed( rgCapsulesToRender, k_nMinCapsules );
+		GDynamicStore.MarkAppDisplayed( rgCarouselCapsules, k_nMinCapsules );
 	},
 
 	RenderRecommendedByDeepDiveCarousel: function()
@@ -3147,7 +3124,7 @@ GHomepage = {
 		if ( !strAvatar || !strCuratorName )
 			return;
 
-		let $Curator = $J( '<img/>', { 'class': 'sale_capsule_curator', 'src': GetAvatarURL( strAvatar, '_full' ), 'alt': strCuratorName, "data-tooltip-text": strCuratorName } );
+		let $Curator = $J( '<img/>', { 'class': 'sale_capsule_curator', 'src': GetAvatarURL( strAvatar, '_full' ), 'alt': V_EscapeHTML( strCuratorName ) } );
 
 		$CapCtn.append( $Curator );
 	},
@@ -3813,7 +3790,7 @@ GHomepage = {
 				bIsTakeoverVisible = e.isIntersecting;
 				if ( bIsTakeoverVisible )
 				{
-					fnResetInteractionTimeoutAndPlay();
+					fnPlayVideoIfVisible();
 				}
 				else
 				{
@@ -3824,26 +3801,15 @@ GHomepage = {
 			intersectionObserver.observe( elTakeoverVideoCtn );
 		}
 
-		const k_strVideoSelector = 'video[data-video-pause-on-blur],video.fullscreen-bg__video,video.fullscreen-bg__video_mobile';
+		const k_strVideoSelector = 'video.fullscreen-bg__video,video.fullscreen-bg__video_mobile';
 		const k_msActivityTimeout = 30000;
-		let nActivityTimeoutID = undefined;
 
-		const fnResetInteractionTimeoutAndPlay = function()
+		const fnPlayVideoIfVisible = function()
 		{
-			if ( nActivityTimeoutID )
-			{
-				window.clearTimeout( nActivityTimeoutID );
-			}
-
 			if ( bIsTakeoverVisible )
 			{
 				GHomepage.PlayTakeoverVideo();
-			}
-
-			$J( 'video[data-video-pause-on-blur]' ).trigger( 'play' );
-
-			
-			nActivityTimeoutID = window.setTimeout( fnPauseVideo, k_msActivityTimeout );
+							}
 		}
 
 		const fnPauseVideo = function()
@@ -3852,24 +3818,28 @@ GHomepage = {
 			$J( k_strVideoSelector ).trigger( 'pause' );
 		}
 
-		const fnStartInteractionTimeout = function()
-		{
-			if ( !nActivityTimeoutID )
-			{
-								nActivityTimeoutID = window.setTimeout( fnPauseVideo, k_msActivityTimeout );
-			}
-		}
+		let timeLastActive = Date.now();
+		let bIsUserInactive = false;
+		['mousemove', 'scroll', 'touchstart', 'vgp_onfocus', 'resize' ].forEach(event =>
+			window.addEventListener(event, () => {
+				if ( bIsUserInactive )
+					fnPlayVideoIfVisible();
 
-		$J( window ).on( 'mouseover click scroll focus touchstart vgp_onfocus resize', fnResetInteractionTimeoutAndPlay );
+				bIsUserInactive = false;
+				timeLastActive = Date.now();
+			}, { passive: true } )
+		);
 
-		fnStartInteractionTimeout();
+		setInterval(() => {
+			bIsUserInactive = ( Date.now() - timeLastActive ) > k_msActivityTimeout;
+			if ( bIsUserInactive )
+				fnPauseVideo();
+		}, 5000 );
 	},
 	ToggleAlternateTakeover: function()
 	{
 		if ( !GHomepage.rgBackgroundDef )
 			return;
-
-		const $DefaultBackgroundDef = GHomepage.rgBackgroundDef.default;
 
 		const fnUpdateTakeover = ( strPageBackgroundURL, strBackgroundWebm, strPageBackgroundMobileURL ) =>
 		{
@@ -3880,8 +3850,6 @@ GHomepage = {
 			}
 			else
 			{
-				$J('.page_background_holder').css('background-image', 'url(' + strPageBackgroundURL + ')');
-
 				if ( strBackgroundWebm && !GDynamicStore.s_preferences.disable_animated_marketing )
 				{
 					let elVideo = $J('.fullscreen-bg__video')[0];
@@ -3889,6 +3857,7 @@ GHomepage = {
 					{
 						let $HomeBody = $J('.home_page_body_ctn');
 						$HomeBody.addClass('transition_header');
+						elStaticBackgroundHolder.css('background-image', 'url(' + strPageBackgroundURL + ')');
 						elVideo.addEventListener("transitionend", function fnLoadData()
 						{
 							elVideo.src = strBackgroundWebm;
@@ -3902,29 +3871,39 @@ GHomepage = {
 						}, { once: true });
 					}
 				}
+				else
+				{
+					elStaticBackgroundHolder.css('background-image', 'url(' + strPageBackgroundURL + ')');
+				}
 			}
 		}
 
+		let $BackgroundDef = GHomepage.rgBackgroundDef.default;
+		let elAltClick = $J( '.click_for_alt' );
+
 		const AltBackgroundIdx = V_GetCookie( 'home_alt_bg_index' );
-		if ( !AltBackgroundIdx )
+		if ( AltBackgroundIdx === null && GHomepage.rgBackgroundDef.alternate_1 )
 		{
 			V_SetCookie('home_alt_bg_index', 1, 14 );
 
-			const $AlternateBackgroundDef = GHomepage.rgBackgroundDef.alternate_1;
-			fnUpdateTakeover( $AlternateBackgroundDef.strPageBackgroundURL, $AlternateBackgroundDef.strPageBackgroundWebM, $AlternateBackgroundDef.strPageBackgroundMobileURL );
+			elAltClick.addClass("alternate_1");
+			$BackgroundDef = GHomepage.rgBackgroundDef.alternate_1;
 		}
-		else if ( AltBackgroundIdx === 1 && GHomepage.rgBackgroundDef.alternate_2 )
+		else if ( AltBackgroundIdx === "1" && GHomepage.rgBackgroundDef.alternate_2 )
 		{
-			V_SetCookie('home_alt_bg_index', 2, -1 );
+			V_SetCookie('home_alt_bg_index', 2, 14 );
 
-			const $AlternateBackgroundDef = GHomepage.rgBackgroundDef.alternate_2;
-			fnUpdateTakeover( $DefaultBackgroundDef.strPageBackgroundURL, $DefaultBackgroundDef.strPageBackgroundWebM, $DefaultBackgroundDef.strPageBackgroundMobileURL );
+			elAltClick.removeClass("alternate_1");
+			elAltClick.addClass("alternate_2");
+			$BackgroundDef = GHomepage.rgBackgroundDef.alternate_2;
 		}
 		else
 		{
 			V_SetCookie('home_alt_bg_index', 0, -1 );
-			fnUpdateTakeover( $DefaultBackgroundDef.strPageBackgroundURL, $DefaultBackgroundDef.strPageBackgroundWebM, $DefaultBackgroundDef.strPageBackgroundMobileURL );
+			elAltClick.removeClass( "alternate_1 alternate_2" );
 		}
+
+		fnUpdateTakeover( $BackgroundDef.strPageBackgroundURL, $BackgroundDef.strPageBackgroundWebM, $BackgroundDef.strPageBackgroundMobileURL );
 	},
 };
 

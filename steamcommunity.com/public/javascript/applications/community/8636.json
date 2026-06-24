@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Quyết định bị phản đối",
     "moderationaction_escalated": "Đã chuyển lên cấp cao",
     "moderationaction_sanctioned": "Đã phạt",
-    "moderationaction_sustainedondispute": "Phản đối bị bác bỏ",
+    "moderationaction_sustained": "Duy trì quyết định điều hành",
     "moderationaction_unresolved": "Chủ đề chưa được giải quyết",
     "moderationaction_updated": "Chi tiết chủ đề đã cập nhật",
     "moderationaction_locked": "Đã khóa",

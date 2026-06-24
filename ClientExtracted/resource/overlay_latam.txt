@@ -272,6 +272,6 @@
 "SteamChina_Overlay_DurationControl_MessageD"		"You've been playing for over five hours.\nYour XP / progress has been reduced to zero."
 "SteamChina_Overlay_DurationControl_ExitSoon_3h"	"Alcanzaste el límite de tiempo de conexión para hoy.\nHaz un descanso y vuelve a intentarlo mañana después de las 8 a. m."
 "SteamChina_Overlay_DurationControl_ExitSoon_5h"	"Alcanzaste el límite de tiempo de conexión para hoy.\nHaz un descanso y vuelve a intentarlo mañana después de las 8 a. m."
-"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Los menores de 18 años no pueden jugar a este juego entre\nlas 10 p. m. y las 8 a. m. del día siguiente. Toma un descanso."
+"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Los menores de 18 años no pueden jugar este juego entre\nlas 10 p. m. y las 8 a. m. del día siguiente. Toma un descanso."
 }
 }  

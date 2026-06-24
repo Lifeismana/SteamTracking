@@ -30,12 +30,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Ctn: "KpCRX3EpVySkwPrzJWf8H",
-        TabContents: "_1L_nTm1MYScrbD9JpPutxs",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SearchResults: "_26iJ3c5EI_arYCNqRvcLNX",
       };
     },
@@ -673,7 +667,8 @@
         _ = "mediacontent_alt_text_",
         _ = "mediacontent_title_alt_text_",
         _ = "userpoll_",
-        _ = "userpoll_option_";
+        _ = "userpoll_option_",
+        _ = "tabs_jumplist_";
       function _(_, _, _, _) {
         var _, _, _, _, _;
         let _ = new _._();
@@ -897,7 +892,32 @@
                           _ + _.unique_id + "_" + _.unique_id,
                           _,
                           _.localized_label[_],
-                        );
+                        ),
+                        _.tab_jump_list &&
+                          _.tab_jump_list.menu_items &&
+                          _.tab_jump_list.menu_items.length > 0 &&
+                          _.tab_jump_list.menu_items
+                            .filter((_) => {
+                              var _;
+                              return (
+                                (null === (_ = _.localized_sub_menu_name) ||
+                                void 0 === _
+                                  ? void 0
+                                  : _.length) > 0
+                              );
+                            })
+                            .map((_) => {
+                              for (let _ = _.Bhc; _ < _.bP9; ++_)
+                                _.localized_sub_menu_name &&
+                                  Boolean(
+                                    _._.Get(_.localized_sub_menu_name, _),
+                                  ) &&
+                                  _.SetLocalization(
+                                    _ + _.unique_id + "_" + _.unique_id,
+                                    _,
+                                    _.localized_sub_menu_name[_],
+                                  );
+                            });
                   if (
                     (_.enable_faceted_browsing &&
                       (_.facets.forEach((_) => {
@@ -1633,6 +1653,8 @@
                           _,
                           _,
                           _,
+                          _,
+                          _,
                           _;
                         const _ = _.GetSaleSectionIndexByID(_.unique_id, !1);
                         if (
@@ -1660,7 +1682,51 @@
                             _ === _ + _.unique_id + "_" + _.unique_id &&
                               (_ || _.BHasSaleSectionTabName(_, _)) &&
                               _.SetSaleSectionTabName(_, _, _) &&
-                              (_ = !0);
+                              (_ = !0),
+                              (null ===
+                                (_ =
+                                  null === (_ = _.tab_jump_list) || void 0 === _
+                                    ? void 0
+                                    : _.menu_items) || void 0 === _
+                                ? void 0
+                                : _.length) > 0 &&
+                                _.sale_sub_menu.menu_items
+                                  .filter((_) => {
+                                    var _;
+                                    return (
+                                      (null ===
+                                        (_ = _.localized_sub_menu_name) ||
+                                      void 0 === _
+                                        ? void 0
+                                        : _.length) > 0
+                                    );
+                                  })
+                                  .map((_) => {
+                                    if (
+                                      _ ===
+                                      _ + _.unique_id + "_" + _.unique_id
+                                    ) {
+                                      (_ ||
+                                        Boolean(
+                                          _._.Get(_.localized_sub_menu_name, _),
+                                        )) &&
+                                        _._.Get(_.localized_sub_menu_name, _) !=
+                                          _ &&
+                                        ((_.localized_sub_menu_name = _._.Set(
+                                          _.localized_sub_menu_name || [],
+                                          _,
+                                          _,
+                                        )),
+                                        _.SetDirty(_._.jsondata_sales),
+                                        (_ = !0));
+                                      const _ = _.localized_sub_menu_name[_];
+                                      _.SetLocalization(
+                                        _ + _.unique_id + "_" + _.unique_id,
+                                        _,
+                                        _,
+                                      );
+                                    }
+                                  });
                         if (
                           (_.BHasSaleSectionTextLocalization(_) &&
                             _ === _ + _.unique_id &&
@@ -10383,324 +10449,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { editModel: _ } = _,
-          [_] = (0, _._)(() => [
-            Boolean(_.GetEventModel().jsondata.sale_sub_menu),
-          ]);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              editModel: _,
-            }),
-            _ &&
-              (0, _.jsx)(_, {
-                editModel: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const { editModel: _ } = _,
-          [_] = (0, _._)(() => [_.GetEventModel().jsondata.sale_sub_menu]),
-          _ = (0, _.useCallback)(() => _.SetDirty(_._.jsondata_sales), [_]),
-          _ = [
-            {
-              name: "Editor",
-              key: "submenu_editor",
-              contents: (0, _.jsx)(_, {
-                ..._,
-              }),
-            },
-            {
-              name: "Background",
-              key: "submenu_back",
-              contents: (0, _.jsx)(_._, {
-                section: _,
-                fnOnSetDirty: () => _,
-                elAdditionalLabelSettings: (0, _.jsx)(_, {
-                  fnOnSetDirty: _,
-                  subMenuSection: _,
-                }),
-                fnOnClearSettings: () => {
-                  (_.selected_label_color = void 0),
-                    (_.hover_label_color = void 0);
-                },
-              }),
-            },
-            {
-              name: "Debug",
-              key: "debug",
-              contents: (0, _.jsx)(_._, {
-                saleSection: _,
-              }),
-            },
-          ];
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("p", {
-              children:
-                "Sub Menu appear below the main menu on this sale page. They are useful for organizing related items that exists on other pages in the store.",
-            }),
-            (0, _.jsx)("div", {
-              className: _().TabContents,
-              children: (0, _.jsx)(_._, {
-                tabs: _,
-                bDisableRouting: !0,
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { fnOnSetDirty: _, subMenuSection: _ } = _,
-          [_, _] = (0, _._)(() => [
-            _.selected_label_color,
-            _.hover_label_color,
-          ]),
-          _ = (0, _._)({
-            fnOnSetDirty: _,
-            section: _,
-            property: "selected_label_color",
-            color: _,
-          }),
-          _ = (0, _._)({
-            fnOnSetDirty: _,
-            section: _,
-            property: "hover_label_color",
-            color: _,
-          });
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_._, {
-              onClick: _,
-              className: _.EventEditorTextTitle,
-              style: {
-                color: _,
-              },
-              children: "Selected Label Color",
-            }),
-            (0, _.jsx)(_._, {
-              onClick: _,
-              className: _.EventEditorTextTitle,
-              style: {
-                color: _,
-              },
-              children: "Hover Label Color",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { editModel: _ } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _._)(() => {
-            var _, _, _;
-            return [
-              (null ===
-                (_ =
-                  null === (_ = _.GetEventModel().jsondata.sale_sub_menu) ||
-                  void 0 === _
-                    ? void 0
-                    : _.menu_items) || void 0 === _
-                ? void 0
-                : _.length) || 0,
-              (null === (_ = _.GetEventModel().jsondata.sale_sub_menu) ||
-              void 0 === _
-                ? void 0
-                : _.menu_items) || [],
-            ];
-          });
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            Boolean(_ > 0)
-              ? (0, _.jsx)(_._, {
-                  items: _,
-                  onDelete: (_) => {
-                    _.splice(_, 1),
-                      _.SetDirty(_._.jsondata_sales),
-                      __webpack_require__();
-                  },
-                  onReorder: () => _.SetDirty(_._.jsondata_sales),
-                  render: (_) =>
-                    (0, _.jsx)(_, {
-                      fnOnDirty: () => _.SetDirty(_._.jsondata_sales),
-                      menuItem: _,
-                    }),
-                })
-              : (0, _.jsx)("p", {
-                  children: "No sub menu items",
-                }),
-            (0, _.jsx)(_._, {
-              onClick: (_) => {
-                let _ = Math.floor(1e6 * Math.random());
-                for (
-                  ;
-                  _.GetEventModel().jsondata.sale_sub_menu.menu_items.find(
-                    (_) => _.unique_id == _,
-                  );
-                )
-                  _ = Math.floor(1e6 * Math.random());
-                _.GetEventModel().jsondata.sale_sub_menu.menu_items.push({
-                  unique_id: _,
-                  sub_menu_icon: {
-                    media_type: _._.k_MediaImage,
-                  },
-                }),
-                  _.SetDirty(_._.jsondata_sales),
-                  __webpack_require__();
-              },
-              children: "Add Sub Menu",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { fnOnDirty: _, menuItem: _ } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _._)(() => {
-            var _;
-            return [
-              (null === (_ = _.localized_sub_menu_name) || void 0 === _
-                ? void 0
-                : _[_]) || "",
-              _.sub_menu_url || "",
-            ];
-          });
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsx)(_._, {
-              type: "text",
-              value: _,
-              label: "Menu Item Name",
-              onChange: (_) => {
-                const _ = _.currentTarget.value;
-                _ !== _ &&
-                  ((!_.localized_sub_menu_name ||
-                    _.localized_sub_menu_name.length < _.bP9) &&
-                    (_.localized_sub_menu_name = (0, _._)(
-                      _.localized_sub_menu_name || [],
-                      _.bP9,
-                      null,
-                    )),
-                  (_.localized_sub_menu_name[_] = _),
-                  _());
-              },
-            }),
-            (0, _.jsx)(_._, {
-              type: "url",
-              value: _,
-              label: "Store URL",
-              tooltip:
-                "Selection of the active one will happen automatically when the current URL match this URL entered",
-              onChange: (_) => {
-                const _ = _.currentTarget.value;
-                _ !== _ && ((_.sub_menu_url = _), _());
-              },
-            }),
-            (0, _.jsx)(_, {
-              fnOnDirty: _,
-              menuItem: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { editModel: _ } = _,
-          [_] = (0, _._)(() => [
-            Boolean(_.GetEventModel().jsondata.sale_sub_menu),
-          ]),
-          [_, _] = (0, _.useState)(!1),
-          [_, _, _] = (0, _._)(),
-          _ = _.useRef(void 0);
-        return (
-          (0, _.useEffect)(() => {
-            _ &&
-              ((_.GetEventModel().jsondata.sale_sub_menu = void 0),
-              _.SetDirty(_._.jsondata_sales),
-              _(!1));
-          }, [_, _]),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_._, {
-                ref: _,
-                onChange: () => {
-                  var _;
-                  _
-                    ? (null === (_ = null == _ ? void 0 : _.current) ||
-                        void 0 === _ ||
-                        _.setState({
-                          checked: !0,
-                        }),
-                      _())
-                    : ((_.GetEventModel().jsondata.sale_sub_menu = {
-                        menu_items: [],
-                      }),
-                      _.SetDirty(_._.jsondata_sales));
-                },
-                label: "Enable Sub Menu",
-                checked: _,
-              }),
-              (0, _.jsx)(_._, {
-                active: _,
-                children: (0, _.jsx)(_._, {
-                  strTitle: "Clear Sub Menu",
-                  strDescription:
-                    "Sub Menu will be cleared from the model and this is not undo-able without reload the editor?",
-                  onOK: () => {
-                    var _;
-                    null === (_ = null == _ ? void 0 : _.current) ||
-                      void 0 === _ ||
-                      _.setState({
-                        checked: !1,
-                      }),
-                      _(!0);
-                  },
-                  closeModal: _,
-                }),
-              }),
-            ],
-          })
-        );
-      }
-      function _(_) {
-        var _;
-        const { fnOnDirty: _, menuItem: _ } = _,
-          [_, _, _] = (0, _._)();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_._, {
-              onClick: _,
-              children: "Open Icon Uploader",
-            }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_._, {
-                strTitle: "Sub Menu Icon Uploader",
-                strDescription:
-                  "Upload a localizeable icon for this submenu item: " +
-                  (null ===
-                    (_ = null == _ ? void 0 : _.localized_sub_menu_name) ||
-                  void 0 === _
-                    ? void 0
-                    : _[_.Bhc]),
-                bAlertDialog: !0,
-                closeModal: _,
-                children: (0, _.jsx)(_._, {
-                  fnOnDirty: _,
-                  localizedMedia: _.sub_menu_icon,
-                }),
-              }),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12115,7 +11863,7 @@
                         strTitle: "(VO) Sub Menu Editor",
                         valveOnlyClanSteamID: _.GetClanSteamID(),
                         dataToCopy: _._.k_EventData_SubMenu,
-                        children: (0, _.jsx)(_, {
+                        children: (0, _.jsx)(_._, {
                           editModel: _,
                         }),
                       }),
@@ -17616,7 +17364,9 @@
         }
         Init() {}
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
         const { editModel: _ } = _,

@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Решение оспорено",
     "moderationaction_escalated": "Передано выше",
     "moderationaction_sanctioned": "Наложены санкции",
-    "moderationaction_sustainedondispute": "Оспаривание отклонено",
+    "moderationaction_sustained": "Решение модератора подтверждено",
     "moderationaction_unresolved": "Тема перенесена в категорию нерассмотренных",
     "moderationaction_updated": "Информация по теме была обновлена",
     "moderationaction_locked": "Заблокировано",

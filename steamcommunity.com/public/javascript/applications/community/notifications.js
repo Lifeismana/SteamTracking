@@ -159,7 +159,7 @@
               const e = this.k_rgFilterCheckboxes.findIndex((e) => e.hash == t);
               -1 !== e
                 ? this.rgFilterState.set(this.k_rgFilterCheckboxes[e].type, !0)
-                : (0, x.TT)(t) &&
+                : (0, x.TG)(t) &&
                   this.rgFilterState.has(r.Vv.v_) &&
                   this.commentFilter.setItemTypes.add(parseInt(t));
             });
@@ -435,7 +435,7 @@
         const { filterOptions: e } = t,
           { filters: i } = w();
         return e.type == r.Vv.v_
-          ? (0, n.jsx)(G, { filterOptions: e, checked: i.get(e.type) })
+          ? (0, n.jsx)(Y, { filterOptions: e, checked: i.get(e.type) })
           : (0, n.jsx)(
               p.Yh,
               {
@@ -479,7 +479,7 @@
           ),
         });
       }
-      function Y(t) {
+      function G(t) {
         const { expanded: e, children: i } = t,
           [s, r] = (0, o.useState)(void 0),
           a = (0, A.wY)((t) => {
@@ -492,7 +492,7 @@
           children: (0, n.jsx)("div", { ref: a, children: i }),
         });
       }
-      function G(t) {
+      function Y(t) {
         const { filterOptions: e, checked: i } = t,
           s = (function () {
             const t = (0, g.LH)();
@@ -529,7 +529,7 @@
             m &&
               (0, n.jsx)("div", {
                 className: (0, L.A)(y().CommentFilterCtn, i && y().Expanded),
-                children: (0, n.jsx)(Y, {
+                children: (0, n.jsx)(G, {
                   expanded: i,
                   children: (0, n.jsx)("div", {
                     className: y().CommentFilters,

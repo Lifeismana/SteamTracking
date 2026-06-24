@@ -7,6 +7,7 @@
       e.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
+        Loading: "_6exjsiWCk6IgWiQenqfQH",
         UseHidingBottomHalf: "_3707obuB-7wD8GDUYRaLH4",
         TrailerAnchorStoreLink: "_1VNyOcfe2cBKY52VedXjyc",
         TrailerCtn: "_3ANIAZhTtXLvORlbv-Du-N",
@@ -1584,15 +1585,16 @@
     },
     84547: (e, t, n) => {
       "use strict";
-      n.d(t, { lS: () => d, lh: () => m });
+      n.d(t, { lS: () => m, lh: () => p, vU: () => C });
       var r = n(7850),
         a = n(64753),
         o = n(8527),
         i = n(78686),
         s = n(78395),
         l = n(21869),
-        c = n(67936);
-      function u(e) {
+        c = n(67936),
+        u = n(53965);
+      function d(e) {
         const { closeModal: t, strDescOverride: n } = e;
         return (0, r.jsx)(s.o0, {
           strTitle: c.F5.Localize("#LoginRedirect_Dialog_Title"),
@@ -1601,23 +1603,36 @@
           onCancel: t,
           strOKButtonText: i.Z.Localize("#Button_OK"),
           onOK: () => {
-            m(), t();
+            p(), t();
           },
         });
       }
-      function d(e) {
+      function m(e) {
         const [t, n, o] = (0, a.uD)();
         return {
           elDialogElement: (0, r.jsx)(l.E, {
             active: t,
-            children: (0, r.jsx)(u, { closeModal: o, strDescOverride: e }),
+            children: (0, r.jsx)(d, { closeModal: o, strDescOverride: e }),
           }),
           fnShowLogonDialog: n,
         };
       }
-      function m() {
+      function p() {
         const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
+      }
+      function C(e) {
+        const { label: t, strDialogDesc: n } = e,
+          { elDialogElement: a, fnShowLogonDialog: o } = m(n);
+        return (0, r.jsxs)(r.Fragment, {
+          children: [
+            (0, r.jsx)(u.$, {
+              onClick: o,
+              children: t || i.Z.Localize("#Login_SignIn"),
+            }),
+            a,
+          ],
+        });
       }
     },
     29008: (e, t, n) => {
@@ -2204,29 +2219,28 @@
             bShowIgnoreButton: l = !1,
           } = e,
           { data: c } = (0, H.Yo)(t),
-          { data: d } = (0, H.j4)(t);
-        return void 0 === c && void 0 === d
-          ? null
-          : (0, r.jsxs)("div", {
-              className: (0, _.A)(
-                E().GameHoverCapsuleCtn,
-                ge().InGameHover,
-                o && E().UseHidingBottomHalf,
-              ),
+          { data: d } = (0, H.j4)(t),
+          m = void 0 === c && void 0 === d;
+        return (0, r.jsxs)("div", {
+          className: (0, _.A)(
+            E().GameHoverCapsuleCtn,
+            m && E().Loading,
+            ge().InGameHover,
+            o && E().UseHidingBottomHalf,
+          ),
+          children: [
+            (0, r.jsxs)("a", {
+              href: a,
+              className: E().TrailerAnchorStoreLink,
               children: [
-                (0, r.jsxs)("a", {
-                  href: a,
-                  className: E().TrailerAnchorStoreLink,
-                  children: [
-                    Boolean(s && !i) &&
-                      (0, r.jsx)(u.E, { id: n, snr: e.strSNR }),
-                    Boolean(l && !i) && (0, r.jsx)(v, { id: n, snr: e.strSNR }),
-                    t && (0, r.jsx)(K, { id: t }),
-                  ],
-                }),
-                (0, r.jsx)(we, { ...e }),
+                Boolean(s && !i) && (0, r.jsx)(u.E, { id: n, snr: e.strSNR }),
+                Boolean(l && !i) && (0, r.jsx)(v, { id: n, snr: e.strSNR }),
+                t && (0, r.jsx)(K, { id: t }),
               ],
-            });
+            }),
+            (0, r.jsx)(we, { ...e }),
+          ],
+        });
       }
       function Le(e) {
         const {
@@ -3084,56 +3098,57 @@
             strPriceFormattedClassName: L,
             bPreferWholeNumbers: j,
             bSelfPurchaseOption: B,
+            bHideNewTag: A,
           } = e,
-          A = _.TS.NOW,
-          { data: k } = (0, s.by)(c),
-          { data: H } = (0, s.J$)(c);
-        if (!H) return null;
-        const D = d,
-          I = (0, i.fk)(k, A),
-          T = (0, p.A)({
+          k = _.TS.NOW,
+          { data: H } = (0, s.by)(c),
+          { data: D } = (0, s.J$)(c);
+        if (!D) return null;
+        const I = d,
+          T = !A && (0, i.fk)(H, k),
+          N = (0, p.A)({
             [u().StoreSalePriceWidgetContainer]: !0,
             [u().SingleLineMode]: t,
             StoreSalePriceWidgetContainer: !0,
-            [u().NewItem]: I,
+            [u().NewItem]: T,
             [u().PurchaseOption]: x,
             [y ?? ""]: !!y,
           });
         if (e.bShowInLibrary)
           return (0, r.jsx)("div", {
-            className: T,
+            className: N,
             children: (0, r.jsx)("div", {
               className: u().StoreSalePriceBox,
               children: C.Z.Localize("#EventDisplay_CallToAction_InLibrary"),
             }),
           });
-        if (k && k.is_coming_soon && (!D || !D.packageid)) {
+        if (H && H.is_coming_soon && (!I || !I.packageid)) {
           if (S) return null;
           const e =
-            k.coming_soon_display &&
-            ["text_comingsoon", "text_tba"].includes(k.coming_soon_display)
-              ? (0, l.d)(k)
+            H.coming_soon_display &&
+            ["text_comingsoon", "text_tba"].includes(H.coming_soon_display)
+              ? (0, l.d)(H)
               : C.Z.Localize(
                   "#EventDisplay_CallToAction_ComingSoon_Date",
-                  (0, o.CC)(k),
+                  (0, o.CC)(H),
                 );
           return (0, r.jsx)("div", {
-            className: T,
+            className: N,
             children: (0, r.jsx)("div", {
               className: u().StoreSalePriceBox,
               children: e,
             }),
           });
         }
-        if (H.is_free) {
-          if (!H.is_free_temporarily)
-            return H.item_type == a.c6.qI && H.type == a.uE.ue
+        if (D.is_free) {
+          if (!D.is_free_temporarily)
+            return D.item_type == a.c6.qI && D.type == a.uE.ue
               ? b
                 ? null
                 : (0, r.jsxs)("div", {
-                    className: T,
+                    className: N,
                     children: [
-                      I &&
+                      T &&
                         (0, r.jsx)("div", {
                           className: u().StoreSaleNewItem,
                           children: C.Z.Localize("#Flag_New"),
@@ -3147,9 +3162,9 @@
                     ],
                   })
               : (0, r.jsxs)("div", {
-                  className: T,
+                  className: N,
                   children: [
-                    I &&
+                    T &&
                       (0, r.jsx)("div", {
                         className: u().StoreSaleNewItem,
                         children: C.Z.Localize("#Flag_New"),
@@ -3162,37 +3177,37 @@
                     }),
                   ],
                 });
-          if (D && D.is_free_to_keep && !D.formatted_original_price)
+          if (I && I.is_free_to_keep && !I.formatted_original_price)
             return (0, r.jsx)("div", {
-              className: T,
+              className: N,
               children: (0, r.jsx)("div", {
                 className: u().StoreSalePriceBox,
                 children: C.Z.Localize("#EventDisplay_CallToAction_Free"),
               }),
             });
         }
-        if (!D || !D.formatted_final_price) return null;
-        let N = D.discount_pct || 0,
-          R = n || H.item_type != a.c6.xO ? 0 : D.bundle_discount_pct || 0,
-          M = D.formatted_final_price;
+        if (!I || !I.formatted_final_price) return null;
+        let R = I.discount_pct || 0,
+          M = n || D.item_type != a.c6.xO ? 0 : I.bundle_discount_pct || 0,
+          V = I.formatted_final_price;
         if (j) {
           const e = (0, h.rt)(_.iA.country_code.toUpperCase()),
             t = { ...(0, g.J)(e), bWholeUnitsOnly: !0 };
-          M = (0, f.d)(Number.parseInt(D.final_price_in_cents || "0"), t);
+          V = (0, f.d)(Number.parseInt(I.final_price_in_cents || "0"), t);
         }
-        const V = (0, i.Nq)(k, D);
+        const F = (0, i.Nq)(H, I);
         return (0, r.jsx)(w, {
           bSingleLineMode: Boolean(t),
-          nBaseDiscountPercentage: R,
-          nDiscountPercentage: N,
-          bIsPrePurchase: V,
+          nBaseDiscountPercentage: M,
+          nDiscountPercentage: R,
+          bIsPrePurchase: F,
           strBestPurchaseOriginalPriceFormatted:
-            D.formatted_original_price || "",
-          strBestPurchasePriceFormatted: M,
+            I.formatted_original_price || "",
+          strBestPurchasePriceFormatted: V,
           bHideDiscountPercentForCompliance: Boolean(
-            D.hide_discount_pct_for_compliance,
+            I.hide_discount_pct_for_compliance,
           ),
-          bShowNewFlag: I,
+          bShowNewFlag: T,
           bHidePrePurchase: Boolean(m),
           strDiscountAndPriceClassName: v,
           strPriceFormattedClassName: L,
@@ -3858,8 +3873,9 @@
                       t,
                       i.iA.country_code,
                     ),
-                    r = await fetch(n);
-                  return (await r.json()).rgIgnoredApps || [];
+                    r = await fetch(n),
+                    a = await r.json();
+                  return Object.keys(a.rgIgnoredApps).map(Number) || [];
                 })(0, t);
                 return new Set(e);
               },

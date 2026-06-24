@@ -128,7 +128,7 @@
     "Voice_LeftIdleVoiceChat_Body": "انقطع اتصالك الصوتي بعد مرور أكثر من ساعة دون نشاط.",
     "Voice_LeftIdleVoiceChat_OK": "حسنًا",
     "VoiceChat_DeniedMicrophoneAccess": "عذرًا، يبدو أن إعدادات المتصفح لديك تمنع وصولنا إلى الميكروفون!",
-    "VoiceChat_ChromeSampleRateTooHighMicExplainer": "جهاز التشغيل الافتراضي لديك يدعم معدل أخذ عينات يزيد عن 48000 هرتز، وهذا لا يدعمه Chrome حاليًا. جرب تشغيله من خلال برنامج Steam!",
+    "VoiceChat_ChromeSampleRateTooHighMicExplainer": "جهاز التشغيل الافتراضي لديك يدعم معدل أخذ عينات يزيد عن 48000 هرتز، وهذا لا يدعمه Chrome حاليًا. جرب تشغيله من خلال برنامج تشغيل Steam!",
     "VoiceChat_MuteMic": "كتم صوت الميكروفون",
     "VoiceChat_UnmuteMic": "إلغاء كتم الميكروفون",
     "VoiceChat_MuteSpeaker": "تعطيل الصوت الوارد",

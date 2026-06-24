@@ -42596,11 +42596,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (_) => /^\d+$/.test(_);
       function _(_) {
         const { sharedFileID: _ } = _,
           _ = (0, _._)("SharedFileSnippet"),
@@ -42620,7 +42621,7 @@
               const _ = await _._.LoadSharedFileDynamicData([_], _);
               if (!_.token.reason && _.length > 0) {
                 const _ = _[0];
-                _(_.url) &&
+                (0, _._)(_.url) &&
                   (_.url =
                     _._.COMMUNITY_BASE_URL +
                     "sharedfiles/filedetails/?id=" +
@@ -42956,32 +42957,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { defid: _, url: _ } = _,
-          _ = (0, _._)(_);
-        if (!_ || !_.community_item_data) return null;
-        const _ = _.appid,
-          _ = _.community_item_data.item_image_large,
-          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            console.log("reward itemdef", (0, _._)(_)),
-          (0, _.jsx)("div", {
-            className: _().Ctn,
-            children: (0, _.jsx)(_._, {
-              toolTipContent: _.community_item_data.item_description,
-              children: (0, _.jsx)("img", {
-                src: _,
-                alt: _.community_item_data.item_title,
-              }),
-            }),
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
@@ -43027,6 +43002,33 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { defid: _, url: _ } = _,
+          _ = (0, _._)(_);
+        if (!_ || !_.community_item_data) return null;
+        const _ = _.appid,
+          _ = _.community_item_data.item_image_large,
+          _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
+        return (
+          "dev" == _._.WEB_UNIVERSE &&
+            console.log("reward itemdef", (0, _._)(_)),
+          (0, _.jsx)("div", {
+            className: _().Ctn,
+            children: (0, _.jsx)(_._, {
+              toolTipContent: _.community_item_data.item_description,
+              children: (0, _.jsx)("img", {
+                src: _,
+                alt: _.community_item_data.item_title,
+              }),
+            }),
+          })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
           /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
@@ -43218,27 +43220,54 @@
         if (_(_)) {
           let _ = new RegExp(_).exec(_);
           if (_ && _.length > 2) {
-            let _ = _[1],
+            let _ = _[1].toLowerCase(),
               _ = Number(_[2]);
-            if (_ > 0 && (!_ || _(_.event, _)))
+            if (_ > 0 && (0, _._)(_)) {
+              (0, _._)(_);
               return (0, _.jsx)(_, {
-                _: _,
+                eventModel: _?.event,
+                inputID: _,
                 inputType: _,
-                bApplyUserContentPref: !0,
+                fallbackUrl: _,
               });
+            }
           }
         }
         return (0, _._)(_, _?.event);
       }
-      function _(_, _) {
+      function _(_) {
+        const { inputID: _, inputType: _, eventModel: _, fallbackUrl: _ } = _,
+          _ = (0, _._)(_, _),
+          { data: _ } = (0, _._)(_);
+        let _;
+        if (_ && _(_)) {
+          if (_) {
+            _ = _(_, _.appid ? [_.appid] : (_.included_appids ?? []));
+          }
+        } else _ = !0;
+        return void 0 === _
+          ? null
+          : _
+            ? (0, _.jsx)(_, {
+                _: _,
+                inputType: _,
+                bApplyUserContentPref: !0,
+              })
+            : (0, _._)(_, _);
+      }
+      function _(_) {
         if (!_ || (_.GetEventType() != _.ajI && _.GetEventType() != _.HRy))
-          return !0;
-        const _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID()),
-          _ = _._.GetCreatorHome(_.clanSteamID);
-        if (!_ || !_) return !0;
-        if (!(0, _._)(_, _)) return !0;
-        const _ = _?.GetAppIDList() ?? [];
-        return !_ || _.includes(_);
+          return !1;
+        const _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID());
+        if (!_._.GetCreatorHome(_.clanSteamID) || !_) return !1;
+        return !!(0, _._)(_, _);
+      }
+      function _(_, _) {
+        const _ = _._.GetCreatorHome(_.clanSteamID),
+          _ = __webpack_require__?.GetAppIDList() ?? [];
+        return (
+          _.length > 0 && _.filter((_) => _.includes(_)).length === _.length
+        );
       }
       function _(_, _) {
         if (_(_)) {
@@ -43268,7 +43297,8 @@
                 ? (_ = _[2])
                 : isNaN(+_[2])
                   ? (_ = _[2])
-                  : ((_ = Number(_[2])), (_ = _(_.event, _) ? _ : 0));
+                  : ((_ = Number(_[2])),
+                    (_ = !_ || (_(_.event) && _(_.event, [_])) ? _ : 0));
             const _ = _[3];
             if (
               ((void 0 !== _ && _ > 0) ||
@@ -43339,7 +43369,8 @@
                   ? (_ = _[2])
                   : isNaN(+_[2])
                     ? (_ = _[2])
-                    : ((_ = Number(_[2])), (_ = _(_.event, _) ? _ : 0));
+                    : ((_ = Number(_[2])),
+                      (_ = !_ || (_(_.event) && _(_.event, [_])) ? _ : 0));
             const _ = _[3];
             if (
               ((void 0 !== _ && _ > 0) ||
@@ -43462,9 +43493,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),

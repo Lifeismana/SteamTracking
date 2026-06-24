@@ -2195,6 +2195,12 @@ html.responsive.touch
   flex-direction: column;
   justify-content: center;
 }
+.GamepadMode
+  ._3U5MYaJE0i8UYZ_pUzyNk7
+  ._1n4vpyqKJYF8lc1kW9fr8-
+  ._2NbubYs7clHa8InE5qSifq {
+  font: var(--gpText-BodySmall);
+}
 ._3U5MYaJE0i8UYZ_pUzyNk7 ._1n4vpyqKJYF8lc1kW9fr8- ._1HQl8PnDDWs3V4bob4bBNk {
   align-self: center;
   background-color: #444;

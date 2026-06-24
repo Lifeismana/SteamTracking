@@ -12,7 +12,7 @@
 "Overlay_SettingsDescriptionApp"	"Steam puede permanecer activo y ofrecerte notificaciones de mensajes de la Comunidad Steam, así como una completa interfaz de amigos, mientras estás dentro de tu aplicación."
 "Overlay_SettingsEnable"	"Habilitar la interfaz de Steam durante las partidas"
 "Overlay_SettingsEnableApp"	"Activar Comunidad Steam en la aplicación"
-"Overlay_SettingsSCTenfootEnable"	"Utilizar interfaz de Big Picture al usar un mando compat. con Steam Input desde el escritorio"
+"Overlay_SettingsSCTenfootEnable"	"Utilizar interfaz de Big Picture al usar un mando compat. con Steam Input desde el escritorio"
 "Overlay_SettingsHotKeyLabel"	"Teclas de acceso directo a la interfaz superpuesta"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Teclas de captura de pantalla"
 "Overlay_SettingsScreenshotActionLabel" "Cuando se capture una imagen"
@@ -128,7 +128,7 @@
 "Overlay_CDKeyNotification_Message_MultipleKeyApp" "Esta aplicación de Steam requiere varias claves de producto. Cuando la aplicación te pida una, pulsa %hotkey% para ver cuáles tienes."
 "Overlay_CDKeyNotification_CDKey"   "%cdkey%"
 "Overlay_CDKeyNotification_Hotkey"  "Pulsa %hotkey% para cerrar este mensaje"
-"Overlay_CDKeyNotification_Title"	"Clave de producto de %gamename%"
+"Overlay_CDKeyNotification_Title"	"Clave de producto de «%gamename%»"
 
 "Overlay_DontNotifyAgain"		"No avisarme sobre esto de nuevo"
 
@@ -218,7 +218,7 @@
 "Overlay_WontBeSharedToFacebook"	"No se pueden compartir múltiples capturas en Facebook."
 "Overlay_PrivateScreenshot"			"Esta aplicación todavía no ha sido publicada. Las capturas no pueden ser configuradas como públicas ni compartirse en Facebook."
 "Overlay_ScreenshotOnSteam"			"Mira esta captura en Steam"
-"Overlay_ScreenshotOnSteamNamed"	"Mira esta captura de %gamename% en Steam"
+"Overlay_ScreenshotOnSteamNamed"	"Mira esta captura de «%gamename%» en Steam"
 "Overlay_Taskbar_GameHub"		"Centro de la comunidad"
 
 "Overlay_Guides_Panel_Title" "Guías"

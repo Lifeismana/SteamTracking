@@ -847,6 +847,7 @@ Felkod (%error%)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (spanska - Latinamerika)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamesiska)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonesiska)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (malaysiska)"
 
 
 
@@ -5056,6 +5057,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "DownloadRegion_br_manaus"			"Brasilien – Manaus"
 "DownloadRegion_br_belem"			"Brasilien – Belém"
 "DownloadRegion_br_salvador"			"Brasilien – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Kontrollkonfiguration"
 "ControllerBinding_Offline_Save"	"[Automatiskt sparande offline]"

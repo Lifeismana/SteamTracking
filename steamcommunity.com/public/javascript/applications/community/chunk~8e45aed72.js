@@ -2365,7 +2365,7 @@
               "ClanFAQS.FetchLocalizationFromCrowdIn#1",
               (0, l.I8)(x, t),
               L,
-              { ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 5 },
             );
           }),
           (e.GetCrowdInMetadata = function (e, t) {
@@ -2373,7 +2373,7 @@
               "ClanFAQS.GetCrowdInMetadata#1",
               (0, l.I8)(P, t),
               k,
-              { ePrivilege: 1 },
+              { ePrivilege: 5 },
             );
           });
       })(i || (i = {}));

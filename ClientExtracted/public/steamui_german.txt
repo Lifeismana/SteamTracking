@@ -846,6 +846,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Lateinamerikanisches Spanisch)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamesisch)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonesisch)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malaiisch)"
 
 
 
@@ -4809,7 +4810,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "Steam_BLEControllerFirmware_Title" "Firmware-Aktualisierung – Bluetooth"
 "Steam_BLEControllerFirmware_Header" "Steam-Link-App"
-"Steam_BLEControllerFirmware_Body" "Erweitern Sie Ihr Steam-Spielerlebnis über Ihr lokales Netzwerk auf Smartphone, Tablet oder Fernseher.\n\nUm Ihren Steam Controller mit der Steam-Link-App zu verwenden, müssen Sie das neue Bluetooth-Firmwareupdate durchführen."
+"Steam_BLEControllerFirmware_Body" "Erweitern Sie Ihr Steam-Spielerlebnis über Ihr lokales Netzwerk auf Smartphone, Tablet oder Fernseher.\n\nUm Ihren Steam Controller mit der Steam-Link-App zu verwenden, müssen Sie die Bluetooth-Firmware aktualisieren."
 "Steam_BLEControllerFirmware_LearnMore" "Mehr erfahren"
 "Steam_BLEControllerFirmware_UpdateNow" "Firmware jetzt aktualisieren"
 
@@ -5057,6 +5058,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "DownloadRegion_br_manaus"			"Brasilien – Manaus"
 "DownloadRegion_br_belem"			"Brasilien – Belém"
 "DownloadRegion_br_salvador"			"Brasilien – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Controllerkonfiguration"
 "ControllerBinding_Offline_Save"	"[Autom. offline gespeichert]"

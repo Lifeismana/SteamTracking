@@ -846,6 +846,7 @@ Tämä kestää alle minuutin."
 "SteamUI_Selection_Latam_Spanish"	"Español – Latinoamérica (espanja – Lat. Am.)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnam)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonesia)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (malaiji)"
 
 
 
@@ -2815,10 +2816,10 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_Ubisoft_EmailPrompt"			"Pelin %subscription% julkaisija Ubisoft haluaa olla yhteydessä sinuun. Jos annat tietosi alla, saat ajoittain tietoja tulevista peleistä."
 "Steam_TellTale_EmailPrompt"			"Pelin %subscription% julkaisija Telltale haluaa olla yhteydessä sinuun. Antamalla sähköpostiosoitteesi alla voi tilata Telltalen uutiskirjeen, joka sisältää uusia pelijulkistuksia, katsauksia pelinkehittämisen kulissien taakse, sarjakuvia, ruoanlaitto- ja kyselypalstoja ja toisinaan erikoistarjouksia. Kannattaa ehdottomasti tilata!"
 
-"Steam_ManageGuestPasses"		"Lahjojen ja vierailulupien hallinta..."
-"Steam_GuestPasses_Title"		"Lahjat ja vierailuluvat"
-"Steam_GuestPasses_Description"		"Lahja on pelin täysi versio, jonka voit antaa kaverille.\n\nKun lähetät kaverillesi vierailuluvan, hän voi kokeilla peliä väliaikaisesti ja pelata kanssasi verkossa."
-"Steam_GuestPasses_NoneAvailable"	"Sinulla ei tällä hetkellä ole käytettävissä lahjoja tai vierailulupia."
+"Steam_ManageGuestPasses"		"Lahjojen ja vieraspassien hallinta"
+"Steam_GuestPasses_Title"		"Lahjat ja vieraspassit"
+"Steam_GuestPasses_Description"		"Lahja on pelin täysversio, jonka voit antaa kaverille.\n\nKun lähetät kaverillesi vieraspassin, hän voi kokeilla peliä väliaikaisesti ja pelata kanssasi verkossa."
+"Steam_GuestPasses_NoneAvailable"	"Sinulla ei tällä hetkellä ole lahjoja tai vieraspasseja."
 "Steam_GuestPasses_LoadingList"		"Steam lataa lahjaluetteloasi. Odota..."
 "Steam_GuestPasses_Offline"		"Lahjoja ei voi käyttää offline-tilassa."
 "Steam_GuestPasses_PackageNameColumn"	"Peli"
@@ -2833,77 +2834,77 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "steam_guestpass_ignore"				"Hylkää lahja"
 "steam_guestpass_dealwiththislater"		"Muistuta myöhemmin"
 
-"Steam_SendGuestPass_Title$type=guestpass"		"Lähetä vierailulupa"
+"Steam_SendGuestPass_Title$type=guestpass"		"Lähetä vieraspassi"
 
-"Steam_SendGuestPass_InvitationSentHeadline$type=guestpass" "Vierailuluvan lähettäminen onnistui!"
-"Steam_SendGuestPass_InvitationSent$type=guestpass"	"Henkilöä %search% on pyydetty sähköpostitse lunastamaan vieraspassisi %package%.\n\nKaverilistastasi voit tarkistaa, pelaako kaverisi tällä hetkellä verkossa."
+"Steam_SendGuestPass_InvitationSentHeadline$type=guestpass" "Vieraspassin lähettäminen onnistui."
+"Steam_SendGuestPass_InvitationSent$type=guestpass"	"Henkilöä %search% on pyydetty sähköpostitse lunastamaan pelin %package% vieraspassi.\n\nVoit tarkistaa kaverilistasta, pelaako kaverisi tällä hetkellä verkossa."
 
-"Steam_SendGuestPass_DefaultInviteErrorHeadline$type=guestpass"	"Vierailuluvan lähettäminen epäonnistui"
-"Steam_SendGuestPass_DefaultInviteError$type=guestpass"	"Vierailuluvan lähettäminen vastaanottajalle %search% epäonnistui."
-"Steam_SendGuestPass_AccountLockedError$type=guestpass"	"Tilisi on lukittu, jonka vuoksi et voi lähettää tai vastaanottaa vierailulupia."
+"Steam_SendGuestPass_DefaultInviteErrorHeadline$type=guestpass"	"Vieraspassin lähettäminen epäonnistui"
+"Steam_SendGuestPass_DefaultInviteError$type=guestpass"	"Vieraspassin lähettäminen vastaanottajalle %search% epäonnistui."
+"Steam_SendGuestPass_AccountLockedError$type=guestpass"	"Tilisi on lukittu, joten et voi lähettää tai vastaanottaa vieraspasseja."
 
-"Steam_SendGuestPass_DuplicateNameErrorHeadline$type=guestpass"	"Et voi antaa vierailulupaa itsellesi"
-"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"Yritit lähettää vierailuluvan itsellesi. Vierailulupien avulla pelin voi jakaa kaverien kanssa. Kutsu jokin tuttusi pelaamaan peliä %package% ilmaiseksi."
+"Steam_SendGuestPass_DuplicateNameErrorHeadline$type=guestpass"	"Et voi antaa vieraspassia itsellesi."
+"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"Yritit lähettää vieraspassin itsellesi. Vieraspassien avulla pelin voi jakaa kaverien kanssa. Kutsu tuttusi pelaamaan peliä %package% ilmaiseksi."
 
-"Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "Vierailulupa on jo lähetetty"
-"Steam_SendGuestPass_PendingError$type=guestpass"	"Olet jo lähettänyt vierailuluvan vastaanottajalle %search% edellisen 24 tunnin aikana. Samaan osoitteeseen ei voi lähettää vierailulupaa, ennen kuin edellisestä yrityksestä on kulunut 24 tuntia.\n\\Klikkaa alla olevaa Takaisin-painiketta, jos haluat kokeilla toista vastaanottajaa."
+"Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "Vieraspassi on jo lähetetty"
+"Steam_SendGuestPass_PendingError$type=guestpass"	"Olet jo lähettänyt vieraspassin vastaanottajalle %search% edellisen 24 tunnin aikana. Samaan osoitteeseen ei voi lähettää vieraspassia ennen kuin edellisestä yrityksestä on kulunut 24 tuntia.\n\\Klikkaa alla olevaa Takaisin-painiketta, jos haluat kokeilla toista vastaanottajaa."
 
-"Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "Vierailulupaa lähetetään..."
-"Steam_SendGuestPass_InvitingFriend$type=guestpass"	"Vierailulupaasi lähetetään vastaanottajalle %search%.\nOdota..."
+"Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "Vieraspassi lähetetään"
+"Steam_SendGuestPass_InvitingFriend$type=guestpass"	"Vieraspassi lähetetään vastaanottajalle %search%.\nOdota hetki."
 "Steam_SendGuestPass_NoFriends"			"Sinulla ei ole vielä kavereita Steam-yhteisössä!
 Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutullesi."
 
-"Steam_GuestPassAccept_TitleOK$type=guestpass"	"Vierailulupa on valmis"
-"Steam_GuestPassAccept_TitleFailed$type=guestpass"	"Vierailuluvan hyväksymisvirhe"
+"Steam_GuestPassAccept_TitleOK$type=guestpass"	"Vieraspassi saatavilla"
+"Steam_GuestPassAccept_TitleFailed$type=guestpass"	"Vieraspassin hyväksymisvirhe"
 
-"Steam_GuestPassAccept_HeadlineFailed$type=guestpass"	"Virheellinen vierailulupa"
-"Steam_GuestPassAccept_TextFailed$type=guestpass"	"Vierailulupa, jonka yritit hyväksyä, ei ole enää kelvollinen. Joku toinen käyttää ehkä lupaa. Lupa on myös voinut vanhentua, tai lähettäjä on voinut perua luvan."
+"Steam_GuestPassAccept_HeadlineFailed$type=guestpass"	"Virheellinen vieraspassi"
+"Steam_GuestPassAccept_TextFailed$type=guestpass"	"Vieraspassi, jonka yritit hyväksyä, ei ole enää kelvollinen. Toinen henkilö käyttää ehkä passia, se on voinut vanhentua tai lähettäjä on saattanut perua passin."
 
-"Steam_GuestPassAccept_HeadlineAlreadyRedeemed"	"Olet jo aktivoinut tämän vierailuluvan"
+"Steam_GuestPassAccept_HeadlineAlreadyRedeemed"	"Olet jo aktivoinut tämän vieraspassin"
 "Steam_GuestPassAccept_TextAlreadyRedeemed"	"Jos lupasi on vanhentunut ja haluat jatkaa pelin %package% pelaamista, voit ostaa sen."
 "Steam_GuestPassAccept_LinkTextAlreadyRedeemed"	"Siirry Steam-kauppaan klikkaamalla tätä."
 "Steam_GuestPassAccept_LinkURLAlreadyRedeemed"	"steam://store"
 
-"Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Vierailuluvan hyväksyminen epäonnistui"
+"Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Vieraspassin hyväksyminen epäonnistui"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Tietokoneesi ei voi tällä hetkellä luoda yhteyttä Steam-palvelimiin, tai palvelu on poistettu käytöstä väliaikaisesti. Yritä myöhemmin uudelleen."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Tietoja lahjojen vianmäärityksestä on tällä tukisivulla."
 "Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/?l=finnish"
 
-"Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Tämä vierailulupa on peruutettu"
-"Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Vierailuluvan sinulle lähettänyt henkilö on peruuttanut sen ja lähettänyt uudemman lunastuskoodin. Jos uusi koodi lähetettiin sinulle, saat sen pian sähköpostitse."
+"Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Vieraspassi on peruutettu"
+"Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Vieraspassin lähettäjä on perunut sen ja lähettänyt uudemman lunastuskoodin. Tässä tapauksessa saat uuden koodin pian sähköpostitse."
 
-"Steam_GuestPassAccept_HeadlineExpired"	"Tämä vierailulupa on vanhentunut"
-"Steam_GuestPassAccept_TextExpired"	"Et voi hyväksyä tätä vierailulupaa, koska sen vanhenemispäivämäärä on ohitettu."
+"Steam_GuestPassAccept_HeadlineExpired"	"Tämä vieraspassi on vanhentunut"
+"Steam_GuestPassAccept_TextExpired"	"Et voi hyväksyä tätä vieraspassia, koska se on vanhentunut."
 
-"Steam_GuestPassAccept_HeadlineSelfRedeem$type=guestpass"	"Et voi antaa vierailulupaa itsellesi"
-"Steam_GuestPassAccept_TextSelfRedeem$type=guestpass"	"Yrität hyväksyä lupaa, jonka lähetit itsellesi. Vierailulupien avulla pelin voi jakaa kaverien kanssa. Kutsu tuttusi pelaamaan peliä ilmaiseksi"
+"Steam_GuestPassAccept_HeadlineSelfRedeem$type=guestpass"	"Et voi antaa vieraspassia itsellesi."
+"Steam_GuestPassAccept_TextSelfRedeem$type=guestpass"	"Yrität hyväksyä itsellesi lähettämääsi passia. Vieraspassien avulla pelin voi jakaa kaverien kanssa. Kutsu tuttusi pelaamaan peliä ilmaiseksi"
 
-"Steam_GuestPassRedeemed_TitleFailed$type=guestpass"	"Vierailuluvan aktivointivirhe"
+"Steam_GuestPassRedeemed_TitleFailed$type=guestpass"	"Vieraspassin aktivointivirhe"
 
-"Steam_GuestPassRedeemed_HeadlineFailed$type=guestpass"	"Virheellinen vierailulupa"
-"Steam_GuestPassRedeemed_TextFailed$type=guestpass"	"Vierailulupa, jonka yritit lunastaa, ei ole enää voimassa. Joku toinen käyttää ehkä lupaa. Lupa on myös voinut vanhentua, tai lähettäjä on voinut perua luvan."
+"Steam_GuestPassRedeemed_HeadlineFailed$type=guestpass"	"Virheellinen vieraspassi"
+"Steam_GuestPassRedeemed_TextFailed$type=guestpass"	"Vieraspassi, jonka yritit lunastaa, ei ole enää kelvollinen. Toinen henkilö käyttää ehkä passia, se on voinut vanhentua tai lähettäjä on saattanut perua passin."
 
-"Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Vierailuluvan aktivoiminen epäonnistui"
+"Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Vieraspassin aktivoiminen epäonnistui"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Tietokoneesi ei voi tällä hetkellä luoda yhteyttä Steam-palvelimiin, tai palvelu on poistettu käytöstä väliaikaisesti. Yritä myöhemmin uudelleen."
-"Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Tietoja vierailulupien vianmäärityksestä on tällä tukisivulla."
+"Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Tietoja vieraspassien vianmäärityksestä on tällä tukisivulla."
 "Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/?l=finnish"
 
-"Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Olet jo käyttänyt tämän tuotteen vierailuluvan"
-"Steam_GuestPassRedeemed_TextLimitExceeded"	"Et voi hyväksyä pelin %package% vierailulupaa, koska olet aiemmin hyväksynyt sellaisen. Jos haluat jatkaa pelin pelaamista, voit ostaa sen."
+"Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Olet jo käyttänyt tämän tuotteen vieraspassin"
+"Steam_GuestPassRedeemed_TextLimitExceeded"	"Et voi hyväksyä pelin %package% vieraspassia, koska olet hyväksynyt sen aiemmin. Jos haluat jatkaa pelin pelaamista, voit ostaa sen."
 "Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Siirry Steam-kauppaan klikkaamalla tätä."
 "Steam_GuestPassRedeemed_LinkURLLimitExceeded"	"steam://store"
 
 "Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"Omistat jo tämän pelin"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"Et voi hyväksyä pelin %package% vierailulupaa, koska omistat jo pelin. Voit pelata peliä asentamalla sen ja käynnistämällä sen kirjastostasi."
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"Et voi hyväksyä pelin %package% vieraspassia, koska omistat jo pelin. Voit pelata peliä asentamalla ja käynnistämällä sen kirjastostasi."
 
-"Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"Tällä vierailuluvalla on lisävaatimuksia"
-"Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"Ennen kuin voit lunastaa vierailulupasi tuotteelle %package%, sinun täytyy omistaa peli %appname%. Kun omistat sen, yritä lunastaa vierailulupa uudelleen."
+"Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"Vieraspassiin liittyy lisävaatimuksia"
+"Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"Ennen kuin voit lunastaa pelin %package% vieraspassin, sinun täytyy omistaa %appname%. Kun omistat sen, yritä lunastaa passi uudelleen."
 
-"Steam_GuestPassRedeemed_HeadlineRevoked$type=guestpass"	"Tämä vierailulupa on peruutettu"
-"Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"Vierailuluvan sinulle lähettänyt henkilö on peruuttanut sen ja lähettänyt uudemman lunastuskoodin. Jos uusi koodi lähetettiin sinulle, saat sen pian sähköpostitse."
+"Steam_GuestPassRedeemed_HeadlineRevoked$type=guestpass"	"Tämä vieraspassi on peruttu"
+"Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"Vieraspassin lähettäjä on perunut sen ja lähettänyt uudemman lunastuskoodin. Tässä tapauksessa saat uuden koodin pian sähköpostitse."
 
-"Steam_GuestPassRedeemed_HeadlineExpired"	"Tämä vierailulupa on vanhentunut"
-"Steam_GuestPassRedeemed_TextExpired"	"Et voi hyväksyä tätä vierailulupaa, koska sen vanhenemispäivämäärä on ohitettu."
+"Steam_GuestPassRedeemed_HeadlineExpired"	"Tämä vieraspassi on vanhentunut"
+"Steam_GuestPassRedeemed_TextExpired"	"Et voi hyväksyä tätä vieraspassia, koska se on vanhentunut."
 
 
 "Steam_MinutesLeft"			"minuuttia jäljellä"
@@ -2926,9 +2927,9 @@ Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutulles
 
 "Steam_GuestPassesColumn" 		"Lahjat"
 "Steam_GuestPasses_LeftGift"		"Ylimääräinen kopio"
-"Steam_GuestPasses_LeftGuestPass"		"Vierailulupa"
+"Steam_GuestPasses_LeftGuestPass"		"Vieraspassi"
 
-"SteamUI_GamesDialog_RightClick_ActivateGuestPass" "Aktivoi vierailulupa"
+"SteamUI_GamesDialog_RightClick_ActivateGuestPass" "Aktivoi vieraspassi"
 "SteamUI_GamesDialog_RightClick_ActivateGift" "Aktivoi lahja"
 "Steam_ActivateGuestPass"		"Aktivoi"
 "Steam_GuestPassPending"		"Valmis aktivoitavaksi"
@@ -2973,7 +2974,7 @@ Voit saada kaverin nyt lähettämällä sähköpostitse lahjan jollekin tutulles
 "Steam_LaunchEULA_Decline"		"Peruuta"
 "Steam_LaunchEULA_Text"			"Lue sopimus kokonaisuudessaan. Sinun on hyväksyttävä käyttöoikeussopimus voidaksesi pelata peliä %game%."
 
-"Steam_GuestPasses_LinkText"		"Lisätietoja lahjoista ja vierailuluvista"
+"Steam_GuestPasses_LinkText"		"Lisätietoa lahjoista ja vieraspasseista"
 "Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/?l=finnish"
 
 "Steam_AlreadyRunningError_Title"			"Steam - käynnistäminen ei onnistu"
@@ -3289,7 +3290,7 @@ Betaversio on päättynyt - palaa nykyiseen versioon käynnistämällä Steam uu
 Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutullesi."
 
 "Steam_GuestPass_GiftSection"	"LAHJAT"
-"Steam_GuestPasses_GuestPassesSection"	"VIERAILULUVAT"
+"Steam_GuestPasses_GuestPassesSection"	"VIERASPASSIT"
 "Steam_GuestPasses_ExtraCopiesSection"	"YLIMÄÄRÄISET KOPIOT"
 
 "Steam_Purchase_Total"				"YHTEENSÄ"
@@ -3324,7 +3325,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_Purchase_Gift_AlreadyOwn"	"Tämä kohde on jo saatavilla Steam-tililläsi. Voit avata pelit Steamin pelikirjastostasi."
 "Steam_SendGuestPass_RecipientQuestion$type=gift" "Kenelle haluaisit antaa kohteen %package%?"
 
-"Steam_SendGuestPass_RecipientQuestion$type=guestpass" "Kenelle haluaisit antaa %package% -vierailuluvan?"
+"Steam_SendGuestPass_RecipientQuestion$type=guestpass" "Kenelle haluat antaa pelin %package% vieraspassin?"
 "SteamUI_Gift_RecipientName"		"Vastaanottajan nimi"
 "SteamUI_Gift_Message"				"Lahjoitusviestisi (enintään 160 merkkiä)"
 "Steam_SendGuestPass_GiftRecipientName" 	"Vastaanottajan nimi"
@@ -3421,26 +3422,26 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "Steam_GuestPasses_Status_Incoming"	"Hyväksymätön"
 
 "Steam_SendGuestPass_SendInfo$type=gift"		"Millä tavalla haluat lähettää lahjan %package%?"
-"Steam_SendGuestPass_SendInfo$type=guestpass"	"Millä tavalla haluat lähettää %package% -vierailuluvan?"
+"Steam_SendGuestPass_SendInfo$type=guestpass"	"Miten haluat lähettää pelin %package% vieraspassin?"
 
 "Steam_SendGuestPass_ResendTitle$type=gift"			"Peruuta lahja ja lähetä se uudelleen"
-"Steam_SendGuestPass_ResendTitle$type=guestpass"	"Peruuta vierailulupa ja lähetä se uudelleen"
+"Steam_SendGuestPass_ResendTitle$type=guestpass"	"Peru vieraspassi ja lähetä se uudelleen"
 
 "Steam_SendGuestPass_ResendInfo$type=gift"		"Kun lähetät tämän lahjan uudelleen, edellinen vastaanottaja ei voi hyväksyä sitä. Jos haluat jatkaa, anna %package% -lahjan uuden vastaanottajan kelvollinen sähköpostiosoite."
-"Steam_SendGuestPass_ResendInfo$type=guestpass" "Kun lähetät tämän vierailuluvan uudelleen, sen edellinen vastaanottaja ei voi lunastaa lupaa. Jos haluat jatkaa, anna pelin %package% vierailuluvan uuden vastaanottajan kelvollinen sähköpostiosoite."
+"Steam_SendGuestPass_ResendInfo$type=guestpass" "Kun lähetät vieraspassin uudelleen, edellinen vastaanottaja ei voi lunastaa sitä. Jatka antamalla kelvollinen sähköpostiosoite pelin %package% vieraspassin uudelle vastaanottajalle."
 
 "Steam_SendGuestPass_EmailRadio$type=gift"		"Lähetä lahja sähköpostissa"
-"Steam_SendGuestPass_EmailRadio$type=guestpass"	"Lähetä vierailulupa sähköpostissa"
+"Steam_SendGuestPass_EmailRadio$type=guestpass"	"Lähetä vieraspassi sähköpostilla"
 
 "Steam_SendGuestPass_EmailAddressLabel"	"Vastaanottajan sähköpostiosoite"
 
 "Steam_SendGuestPass_SendDirectRadio$type=gift"			"Lähetä lahja suoraan Steamin kautta"
-"Steam_SendGuestPass_SendDirectRadio$type=guestpass"	"Lähetä vierailulupa suoraan Steamin kautta"
+"Steam_SendGuestPass_SendDirectRadio$type=guestpass"	"Lähetä vieraspassi suoraan Steamissä"
 "Steam_SendGuestPass_SendDirectLabel$type=gift"			"Lähetä lahjasta ilmoittava viesti suoraan kaverin Steam-tiliin."
-"Steam_SendGuestPass_SendDirectLabel$type=guestpass"	"Lähetä vierailuluvasta ilmoittava viesti suoraan kaverin Steam-tiliin."
+"Steam_SendGuestPass_SendDirectLabel$type=guestpass"	"Lähetä vieraspassista kertova viesti suoraan kaverin Steam-tilille."
 
 "Steam_GuestPasses_LeftGiftPlural"		"Ylimääräiset kopiot"
-"Steam_GuestPasses_LeftGuestPassPlural"		"Vierailuluvat"
+"Steam_GuestPasses_LeftGuestPassPlural"		"Vieraspassit"
 
 "Steam_InstallAborted_Title"	"Steam - Asennus"
 
@@ -3921,7 +3922,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "steam_menu_friends_settings" "Näytä asetukset"
 "steam_menu_friends_players" "Pelaajat"
 "friends_searchOnline"	"Hae Steam-yhteisön jäseniä"
-"steam_send_guestpass"		"Lähetä vierailulupa"
+"steam_send_guestpass"		"Lähetä vieraspassi"
 "steam_stats"		"Tilastot"
 "steam_links"			"Linkit"
 "steam_achievements"		"Saavutukset"
@@ -5058,6 +5059,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "DownloadRegion_br_manaus"			"Brasilia – Manaus"
 "DownloadRegion_br_belem"			"Brasilia – Belém"
 "DownloadRegion_br_salvador"			"Brasilia – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Ohjainmääritykset"
 "ControllerBinding_Offline_Save"	"[Offline-tilan automaattitallennus]"

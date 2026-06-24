@@ -3650,6 +3650,7 @@ input.unlockcode_entry_input
 	height: 25vh;
 	resize: none;
 	font-size: 16px;
+	outline: none;
 }
 
 .help_request_textarea_ctn textarea.short {

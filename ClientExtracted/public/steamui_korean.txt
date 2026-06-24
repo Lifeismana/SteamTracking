@@ -848,6 +848,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica(스페인어 - 중남미)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt(베트남어)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia(인도네시아어)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu(말레이어)"
 
 
 
@@ -5059,6 +5060,7 @@ Windows에 관리자로 로그인해야 합니다.
 "DownloadRegion_br_manaus"			"브라질 - 마나우스"
 "DownloadRegion_br_belem"			"브라질 - 벨렝"
 "DownloadRegion_br_salvador"			"브라질 - 사우바도르"
+"DownloadRegion_guam"			"괌"
 
 "SettingsController_AutosaveName"	"컨트롤러 구성"
 "ControllerBinding_Offline_Save"	"[오프라인 자동 저장]"

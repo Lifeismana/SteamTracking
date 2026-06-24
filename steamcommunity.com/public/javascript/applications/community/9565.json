@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Η απόφαση αμφισβητήθηκε",
     "moderationaction_escalated": "Προωθήθηκε σε προϊστάμενο",
     "moderationaction_sanctioned": "Επιβλήθηκαν κυρώσεις",
-    "moderationaction_sustainedondispute": "Η αμφισβήτηση απορρίφθηκε",
+    "moderationaction_sustained": "Η ενέργεια επιτήρησης διατηρήθηκε",
     "moderationaction_unresolved": "Το θέμα δεν επιλύθηκε",
     "moderationaction_updated": "Οι λεπτομέρειες του θέματος ενημερώθηκαν",
     "moderationaction_locked": "Κλειδώθηκε",

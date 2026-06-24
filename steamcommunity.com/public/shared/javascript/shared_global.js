@@ -1727,76 +1727,45 @@ function ShowBannedDynamicLink( el )
 	}
 }
 
-
-
-function CScrollOffsetWatcher( el, fnCallback )
+CScrollOffsetWatcher.sm_WatchersMap = new Map();
+function CScrollOffsetWatcher( el, fnCallback, nBufferHeight )
 {
-	this.m_$Element = $J(el);
-	this.nOffsetTop = this.m_$Element.offset().top;
-	this.nBufferHeight = 500;
-
-	this.nOffsetTopTrigger = this.nOffsetTop - this.nBufferHeight;
-
+	this.m_$Element = $J( el );
+	this.nBufferHeight = nBufferHeight === undefined ? 500 : nBufferHeight;
 	this.fnOnHit = fnCallback;
+	this.observer = null;
 
-	CScrollOffsetWatcher.RegisterWatcher( this );
+	if ( !CScrollOffsetWatcher.sm_WatchersMap.has( this.m_$Element ) )
+	{
+		this.observer = new IntersectionObserver( this.fnCallback.bind( this ), {
+			rootMargin: '-' + this.nBufferHeight + 'px 0px 0px 0px',
+			threshold: 0
+		});
+
+		this.observer.observe( this.m_$Element.get(0) );
+		CScrollOffsetWatcher.sm_WatchersMap.set( this.m_$Element, this );
+	}
 }
 
-CScrollOffsetWatcher.prototype.SetBufferHeight = function( nHeight )
+CScrollOffsetWatcher.prototype.fnCallback = function( entries )
 {
-	this.nBufferHeight = nHeight;
-	this.Recalc();
-};
-
-CScrollOffsetWatcher.prototype.Recalc = function()
-{
-	this.nOffsetTop = this.m_$Element.offset().top;
-	this.nOffsetTopTrigger = this.nOffsetTop - this.nBufferHeight;
-};
-
-CScrollOffsetWatcher.sm_rgWatchers = [];
-CScrollOffsetWatcher.m_nTimeoutInitialLoad = 0;
-CScrollOffsetWatcher.RegisterWatcher = function( Watcher )
-{
-	var bHadWatchers = CScrollOffsetWatcher.sm_rgWatchers.length > 0;
-
-	// keep the list sorted by offset trigger
-	var iInsertionPoint;
-	for( iInsertionPoint = CScrollOffsetWatcher.sm_rgWatchers.length; iInsertionPoint > 0 ; iInsertionPoint-- )
+	entries.forEach( ( entry ) =>
 	{
-		if ( Watcher.nOffsetTopTrigger > CScrollOffsetWatcher.sm_rgWatchers[iInsertionPoint - 1].nOffsetTopTrigger )
-			break;
-	}
-	CScrollOffsetWatcher.sm_rgWatchers.splice( iInsertionPoint, 0, Watcher );
-
-	if ( !bHadWatchers )
-	{
-		$J(window).on( 'scroll.ScrollOffsetWatcher', CScrollOffsetWatcher.OnScroll );
-
-		var nRecalcTimer = 0;
-		$J(window).on( 'resize.ScrollOffsetWatcher', function() {
-			if ( nRecalcTimer )
-				window.clearTimeout( nRecalcTimer );
-			nRecalcTimer = window.setTimeout( CScrollOffsetWatcher.ForceRecalc, 500 );
-		} );
-	}
-
-	// use a 1ms timeout to roll these together as much as possible on page load
-	if ( !CScrollOffsetWatcher.m_nTimeoutInitialLoad )
-		CScrollOffsetWatcher.m_nTimeoutInitialLoad = window.setTimeout( function() { CScrollOffsetWatcher.OnScroll(); CScrollOffsetWatcher.m_nTimeoutInitialLoad = 0; }, 1 );
+		if ( entry.isIntersecting )
+		{
+			this.fnOnHit();
+			this.Deconstruct();
+		}
+	});
 };
 
-CScrollOffsetWatcher.ForceRecalc = function()
+CScrollOffsetWatcher.prototype.Deconstruct = function()
 {
-	for ( var i = 0; i < CScrollOffsetWatcher.sm_rgWatchers.length; i++ )
-	{
-		CScrollOffsetWatcher.sm_rgWatchers[i].Recalc();
-	}
-
-	CScrollOffsetWatcher.OnScroll();
+	this.observer.disconnect();
+	CScrollOffsetWatcher.sm_WatchersMap.delete( this.m_$Element );
 };
 
-CScrollOffsetWatcher.OnScroll = function()
+CScrollOffsetWatcher.prototype.ManualRecalcObserver = function()
 {
 	var supportPageOffset = window.pageYOffset !== undefined;
 	var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
@@ -1804,25 +1773,18 @@ CScrollOffsetWatcher.OnScroll = function()
 	var nScrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 	var nOffsetBottom = nScrollY + window.innerHeight;
 
-	for( let i = CScrollOffsetWatcher.sm_rgWatchers.length - 1; i >= 0; i-- )
+	const nOffsetTopTrigger = this.m_$Element.offset().top - this.nBufferHeight;
+	if ( nOffsetBottom > nOffsetTopTrigger )
 	{
-		var Watcher = CScrollOffsetWatcher.sm_rgWatchers[i];
-		if ( nOffsetBottom > Watcher.nOffsetTopTrigger )
-		{
-			// make sure the page hasn't changed and we really need to show content
-			Watcher.Recalc();
-			if ( nOffsetBottom > Watcher.nOffsetTopTrigger )
-			{
-				Watcher.fnOnHit();
-				CScrollOffsetWatcher.sm_rgWatchers.splice( i, 1 );
-			}
-		}
+		this.fnOnHit();
+		this.Deconstruct();
 	}
+};
 
-	if ( CScrollOffsetWatcher.sm_rgWatchers.length === 0 )
-	{
-		$J(window).off( 'scroll.ScrollOffsetWatcher' );
-		$J(window).off( 'resize.ScrollOffsetWatcher' );
+CScrollOffsetWatcher.ForceRecalc = function()
+{
+	for ( const [key, watcher] of CScrollOffsetWatcher.sm_WatchersMap ) {
+		watcher.ManualRecalcObserver();
 	}
 };
 
@@ -4994,15 +4956,13 @@ CAppearMonitor.prototype.RegisterScrollEvent = function( elTarget )
 {
 	var instance = this;
 
-	$J(elTarget).on('scroll', function()
-	{
-		if( instance.bRunning || instance.rgMonitoredElements.length == 0 )
+	elTarget.addEventListener( 'scroll', () => {
+		if( instance.bRunning || instance.rgMonitoredElements.length === 0 )
 			return;
 
 		instance.bRunning = true;
 		setTimeout( instance.CheckVisibilityInternal.bind(instance), instance.unTimerFrequency );
-
-	});
+	}, { passive: true } );
 }
 
 CAppearMonitor.prototype.CheckVisibility = function()
@@ -5077,8 +5037,11 @@ CAppearMonitor.prototype.RegisterElement = function( elTarget )
 	});
 
 	// Register the window scroll event ONLY after we have something to monitor
-	if( !this.bRegisteredWindowEvent)
+	if( !this.bRegisteredWindowEvent )
+	{
 		this.RegisterScrollEvent( window );
+		this.bRegisteredWindowEvent = true;
+	}
 };
 
 CAppearMonitor.prototype.TrackAppearanceIfVisible = function( elTarget )

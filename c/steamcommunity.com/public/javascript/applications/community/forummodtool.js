@@ -2361,10 +2361,7 @@
           _ = _(_.clanSteamId, _.forumId, _.topicId, _.subjectId),
           _ =
             _ &&
-            (_.unresolved_report_count > 0 ||
-              _.unresolved_dispute_count > 0 ||
-              (_.resolved === _._ && _.dispute_resolved !== _._) ||
-              _.dispute_resolved === _._);
+            (_.unresolved_report_count > 0 || _.unresolved_dispute_count > 0);
         return (0, _.jsxs)("button", {
           onClick: async () => {
             await __webpack_require__.mutateAsync(), _.onClose();
@@ -2380,15 +2377,20 @@
         });
       }
       function _(_) {
-        const { subject: _ } = _,
+        const { subject: _, topicId: _, subjectId: _ } = _,
           _ =
             _ &&
             _.resolved !== _._ &&
             (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0),
-          _ = (0, _._)(_._, _.topicId, _.subjectId);
+          _ = (0, _._)();
         return (0, _.jsx)("button", {
           onClick: async () => {
-            await _.mutateAsync({}), _.onClose();
+            await _.mutateAsync({
+              eSubjectType: _._,
+              ulSubjectGroupID: _,
+              ulSubjectID: _,
+            }),
+              _.onClose();
           },
           disabled: !_,
           children: _._.Localize("#moderation_actions_sustain"),
@@ -2777,34 +2779,21 @@
           },
         });
       }
-      function _(_, _, _) {
+      function _() {
         const _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: async (_) => {
             const _ = _._.Init(_._);
-            if (
-              (_.Body().set_subject_type(_),
-              _.Body().set_subject_group_id(_),
-              _.Body().set_subject_id(_),
-              _.eResolution && _.Body().set_updated_resolution(_.eResolution),
-              _.eReason && _.Body().set_updated_reason(_.eReason),
-              _.rgSanctions)
-            )
-              for (const _ of _.rgSanctions) {
-                const _ = new _._();
-                _.set_sanction(_.sanction),
-                  _.days && _.set_days(_.days),
-                  _.Body().add_updated_sanctions(_);
-              }
-            const _ = await _._.ResolveDisputedSubject(_, _);
-            if (!_.BSuccess())
-              throw new Error(
-                `Failed to resolve disputed subject (EResult ${_.GetEResult()})`,
-              );
+            __webpack_require__.Body().set_subject_type(_.eSubjectType),
+              __webpack_require__
+                .Body()
+                .set_subject_group_id(_.ulSubjectGroupID),
+              __webpack_require__.Body().set_subject_id(_.ulSubjectID);
+            await _._.SustainModeration(_, _);
           },
-          onSuccess: async () => {
-            await _(_, _, _, _);
+          onSuccess: async (_, _) => {
+            await _(_, _.eSubjectType, _.ulSubjectGroupID, _.ulSubjectID);
           },
         });
       }

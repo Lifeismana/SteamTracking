@@ -822,8 +822,8 @@
         k = i(68033),
         T = i(37085),
         M = i(56545),
-        O = i(34214);
-      class D {
+        D = i(34214);
+      class O {
         constructor(e) {
           (this.m_rgPreviousAvatars = []),
             (0, l.Gn)(this),
@@ -843,12 +843,12 @@
             (this.m_promiseLoading = this.LoadAvatarHistory());
         }
         async LoadAvatarHistory() {
-          const e = M.w.Init(O.Vc);
+          const e = M.w.Init(D.Vc);
           e.SetBodyFields({
             steamid: A.iA.steamid,
             filter_user_uploaded_only: !0,
           });
-          let t = await O.BE.GetAvatarHistory(
+          let t = await D.BE.GetAvatarHistory(
             this.m_SteamInterface.GetServiceTransport(),
             e,
           );
@@ -892,7 +892,7 @@
           return r == T.R && e.CommitAvatarHash(), r;
         }
       }
-      (0, s.Cg)([l.sH], D.prototype, "m_rgPreviousAvatars", void 0);
+      (0, s.Cg)([l.sH], O.prototype, "m_rgPreviousAvatars", void 0);
       class q {
         constructor() {
           (this.m_AvatarData = void 0), (0, l.Gn)(this);
@@ -2161,7 +2161,7 @@
               e.Privacy.PrivacySettings,
               e.Privacy.eCommentPermission,
             )),
-            (this.m_AvatarHistory = new D(this.m_WebAPI)),
+            (this.m_AvatarHistory = new O(this.m_WebAPI)),
             this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
               this.m_Profile.MiniProfileData.Reload(),
                 this.m_AvatarHistory.RefreshAvatarHistory();
@@ -2826,7 +2826,7 @@
             return (0, r.jsxs)("div", {
               className: Se.AvatarCollection,
               children: [
-                (0, r.jsx)(De, {
+                (0, r.jsx)(Oe, {
                   children: (0, _.we)("#Profile_Edit_Avatar_YourAvatars"),
                 }),
                 (0, r.jsx)(Ue, {
@@ -2844,7 +2844,7 @@
             return (0, r.jsxs)("div", {
               className: Se.AvatarCollection,
               children: [
-                (0, r.jsx)(De, {
+                (0, r.jsx)(Oe, {
                   children: (0, _.we)("#Profile_Edit_Avatar_YourAvatars"),
                 }),
                 (0, r.jsx)("div", {
@@ -2922,8 +2922,8 @@
         (0, s.Cg)([Pe.oI], Me.prototype, "SelectOGGAvatar", null),
         (0, s.Cg)([Pe.oI], Me.prototype, "SelectPreviousAvatar", null),
         (Me = (0, s.Cg)([h.PA], Me));
-      const Oe = Me,
-        De = ({ children: e }) =>
+      const De = Me,
+        Oe = ({ children: e }) =>
           (0, r.jsx)("div", {
             className: Se.AvatarCollectionHeader,
             children: (0, r.jsx)("div", {
@@ -3130,7 +3130,7 @@
             return (0, r.jsxs)("div", {
               className: Se.AvatarCollection,
               children: [
-                (0, r.jsx)(De, {
+                (0, r.jsx)(Oe, {
                   children: (0, _.we)("#Profile_Edit_Avatar_YourFrames"),
                 }),
                 (0, r.jsx)(je.tH, {
@@ -3149,7 +3149,7 @@
               className: Se.AvatarCollection,
               "flow-children": "column",
               children: [
-                (0, r.jsx)(De, {
+                (0, r.jsx)(Oe, {
                   children: (0, _.we)("#Profile_Edit_Avatar_YourFrames"),
                 }),
                 (0, r.jsx)("div", {
@@ -3478,7 +3478,7 @@
                             }),
                           !s &&
                             !n &&
-                            (0, r.jsx)(Oe, {
+                            (0, r.jsx)(De, {
                               ...d,
                               bExpanded: o,
                               fnOnExpand: this.OnShowAllAvatarsClicked,
@@ -4323,7 +4323,7 @@
                   onItemSelected: (t) => {
                     e.SetFavoriteBadge(t);
                   },
-                  ItemComponent: Ot,
+                  ItemComponent: Dt,
                 }),
                 (0, r.jsx)(Ge, {
                   onSave: this.CommitFavoriteBadge,
@@ -4389,7 +4389,7 @@
             ],
           }),
         Mt = (e) => [e.GetName(), e.GetGameName()],
-        Ot = ({ Item: e, onSelected: t }) => {
+        Dt = ({ Item: e, onSelected: t }) => {
           const i = e;
           return (0, r.jsxs)(xe.Z, {
             className: (0, v.A)(Rt.Badge, Rt.BadgeOption),
@@ -4416,7 +4416,7 @@
             ],
           });
         };
-      var Dt = i(53841);
+      var Ot = i(53841);
       let qt = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4482,16 +4482,16 @@
       const Ht = qt,
         Ut = ({ group: e, children: t }) =>
           (0, r.jsxs)("div", {
-            className: (0, v.A)(Dt.Group, Dt.FavoriteGroup),
+            className: (0, v.A)(Ot.Group, Ot.FavoriteGroup),
             children: [
               (0, r.jsx)("img", {
-                className: Dt.GroupAvatar,
+                className: Ot.GroupAvatar,
                 src: e.GetAvatarURL("full"),
               }),
               (0, r.jsx)("div", {
-                className: Dt.GroupDetails,
+                className: Ot.GroupDetails,
                 children: (0, r.jsx)("div", {
-                  className: Dt.GroupName,
+                  className: Ot.GroupName,
                   children: e.GetName(),
                 }),
               }),
@@ -4501,18 +4501,18 @@
         Kt = ({ Item: e, onSelected: t }) => {
           const i = e;
           return (0, r.jsxs)(xe.Z, {
-            className: (0, v.A)(Dt.Group, Dt.GroupOption),
+            className: (0, v.A)(Ot.Group, Ot.GroupOption),
             onActivate: t,
             children: [
               (0, r.jsx)("img", {
-                className: Dt.GroupAvatar,
+                className: Ot.GroupAvatar,
                 src: i.GetAvatarURL("full"),
                 loading: "lazy",
               }),
               (0, r.jsx)("div", {
-                className: Dt.GroupDetails,
+                className: Ot.GroupDetails,
                 children: (0, r.jsx)("div", {
-                  className: Dt.GroupName,
+                  className: Ot.GroupName,
                   children: i.GetName(),
                 }),
               }),
@@ -5832,8 +5832,8 @@
       (0, s.Cg)([Pe.oI], Mi.prototype, "ShowDialog", null),
         (0, s.Cg)([Pe.oI], Mi.prototype, "HideDialog", null),
         (Mi = (0, s.Cg)([h.PA], Mi));
-      const Oi = Mi,
-        Di = (0, h.PA)(({ ProfileItems: e }) => {
+      const Di = Mi,
+        Oi = (0, h.PA)(({ ProfileItems: e }) => {
           let t = e.GetProfileModifierCSSURL();
           return t
             ? (0, r.jsx)("link", {
@@ -6255,7 +6255,7 @@
           };
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(Di, { ProfileItems: d }),
+            (0, r.jsx)(Oi, { ProfileItems: d }),
             (0, r.jsx)(Nt, { Profile: l }),
             (0, r.jsx)(it, { Profile: l, ProfileItems: d }),
             (0, r.jsx)(Li, {
@@ -6297,7 +6297,7 @@
                   }),
                   (0, r.jsx)(ue.qh, {
                     path: `${o}${h.ProfileModifier()}`,
-                    children: (0, r.jsx)(Oi, { ProfileItems: d }),
+                    children: (0, r.jsx)(Di, { ProfileItems: d }),
                   }),
                   !(0, pe.nA)(A.TS.EREALM) &&
                     (0, r.jsx)(ue.qh, {
@@ -6555,9 +6555,9 @@
     90182: (e, t, i) => {
       "use strict";
       i.d(t, {
-        CS: () => _,
         KQ: () => P,
         Kt: () => p,
+        N8: () => _,
         iW: () => h,
         kZ: () => u,
         lY: () => v,
@@ -6641,34 +6641,19 @@
           },
         });
       }
-      function _(e, t, i) {
-        const o = (0, s.KV)(),
-          d = (0, n.jE)();
+      function _() {
+        const e = (0, s.KV)(),
+          t = (0, n.jE)();
         return (0, l.n)({
-          mutationFn: async (s) => {
-            const n = r.w.Init(a.oA);
-            if (
-              (n.Body().set_subject_type(e),
-              n.Body().set_subject_group_id(t),
-              n.Body().set_subject_id(i),
-              s.eResolution && n.Body().set_updated_resolution(s.eResolution),
-              s.eReason && n.Body().set_updated_reason(s.eReason),
-              s.rgSanctions)
-            )
-              for (const e of s.rgSanctions) {
-                const t = new a.bP();
-                t.set_sanction(e.sanction),
-                  e.days && t.set_days(e.days),
-                  n.Body().add_updated_sanctions(t);
-              }
-            const l = await a.fL.ResolveDisputedSubject(o, n);
-            if (!l.BSuccess())
-              throw new Error(
-                `Failed to resolve disputed subject (EResult ${l.GetEResult()})`,
-              );
+          mutationFn: async (t) => {
+            const i = r.w.Init(a.j);
+            i.Body().set_subject_type(t.eSubjectType),
+              i.Body().set_subject_group_id(t.ulSubjectGroupID),
+              i.Body().set_subject_id(t.ulSubjectID);
+            await a.fL.SustainModeration(e, i);
           },
-          onSuccess: async () => {
-            await h(d, e, t, i);
+          onSuccess: async (e, i) => {
+            await h(t, i.eSubjectType, i.ulSubjectGroupID, i.ulSubjectID);
           },
         });
       }

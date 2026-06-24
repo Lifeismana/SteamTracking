@@ -136,6 +136,24 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+AMD FSR4
+AMD FSR License
+
+Copyright (c) 2026 Advanced Micro Devices, Inc.
+
+AMD FSR4 Software ("Software")
+
+Use of this Software is subject to the following terms. This Software is subject to a restricted license and can only be used in conjunction with SteamOS.  You may not: (1) transfer or copy the Software; (2) modify or create derivative works of the Software; (3) decompile, reverse engineer, disassemble or otherwise reduce the Software in object code to a human-perceivable form (except as allowed by applicable law); (4) assign or otherwise transfer the Software; (5) alter or remove any copyright, trademark or patent notice(s) in the Software; or (6) use the Software to develop inventions directly derived from AMD's confidential information to seek patent protection.
+
+The Software including all Intellectual Property Rights therein is and remains the sole and exclusive property of AMD or its licensors.
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. AMD DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, THAT THE SOFTWARE WILL RUN UNINTERRUPTED OR ERROR-FREE OR WARRANTIES ARISING FROM CUSTOM OF TRADE OR COURSE OF USAGE.
+
+IN NO EVENT SHALL WILL AMD BE LIABLE FOR ANY CLAIM, DIRECT OR INCIDENTAL OR PUNITIVE DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+You must adhere to all applicable U.S. import/export laws and regulations including but not limited to the U.S. export Administration Regulations ("EAR") and U.S. Office of Foreign Assets Control ("OFAC"), as well as the applicable import/export control laws and regulations of other countries.
+
+
 axios
 MIT
 Copyright (c) 2014-present Matt Zabriskie

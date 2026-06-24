@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Прийняте рішення оспорено",
     "moderationaction_escalated": "Статус підвищено",
     "moderationaction_sanctioned": "Накладено санкції",
-    "moderationaction_sustainedondispute": "Оспорення відхилено",
+    "moderationaction_sustained": "Рішення модератора підтримано",
     "moderationaction_unresolved": "Скарга стала невирішеною",
     "moderationaction_updated": "Подробиці скарги оновлено",
     "moderationaction_locked": "Заблоковано",

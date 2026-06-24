@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <defs>
+    <linearGradient id="vr-link-multilink-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="var(--multilink-gradient-left)"/>
+      <stop offset="100%" stop-color="var(--multilink-gradient-right)"/>
+    </linearGradient>
+  </defs>
+</svg>

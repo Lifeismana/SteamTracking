@@ -1388,6 +1388,7 @@ CloseExternal
 Closing socket.\n
 Colors
 Command
+Command line is already escaped: %s
 CommentCount
 Compression buffer size cannot be changed because it is in use
 Compression buffer size cannot be reduced below 6
@@ -1794,6 +1795,7 @@ INFO
 INTERNAL
 INVALID_ARGUMENT
 INVALID_CPPTYPE
+INVALID_KEY_SYMBOL
 INotificationManager()->RunFrame()
 IVALIDATE001
 IceConnectionNumber
@@ -2426,7 +2428,7 @@ Plat_IsChromeOS
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_MSTime
 Plat_OutputDebugString
@@ -2508,6 +2510,7 @@ ResultDetail
 Romanian
 Row has too many bytes to allocate in memory
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 Russian
 SDL.display.HDR_enabled
@@ -2627,6 +2630,7 @@ Simplified_Chinese
 Sindhi
 Sinhala
 Size() == operand.Size()
+Skipping Virtual to VGUI translation for %s Key %d\n
 Slovak
 Slovenian
 Sm"\vg
@@ -2763,6 +2767,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 StringPrintfVector currently only supports up to
 Sunday
 SurfaceSetCursorPos needs to be implemented!\n

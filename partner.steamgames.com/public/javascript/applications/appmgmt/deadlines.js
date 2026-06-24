@@ -38,6 +38,7 @@
         SectionList: "_35PLZbKMt7K8FRHaavOsa9",
         ListItem: "_3N8ZtUMOp9ag0G28WBzOOg",
         NotificationButton: "_1ZCVYK700rSky9gR7H9vNv",
+        Freeform: "_3u0tm6rp89JYbrevwLvGk1",
         NotificationUpdate: "_39cJ7AQw3tqr75MieK0VHr",
         RequiredDocumentList: "_1hLKyqNiw3mmMbZf-ERCbA",
         MailingAddress: "_3Va0U3hw10-sJGSnBDs18Y",
@@ -835,7 +836,7 @@
         return (0, n.jsxs)("div", {
           className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
           children: [
-            (0, n.jsx)("div", { children: a }),
+            (0, n.jsx)("div", { className: l().Freeform, children: a }),
             (0, n.jsx)(T, { ...e }),
           ],
         });

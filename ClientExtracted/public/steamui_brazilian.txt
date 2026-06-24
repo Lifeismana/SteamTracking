@@ -843,6 +843,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Espanhol — América Latina)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamita)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonésio)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malaio)"
 
 
 
@@ -5053,6 +5054,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "DownloadRegion_br_manaus"			"Brasil — Manaus"
 "DownloadRegion_br_belem"			"Brasil — Belém"
 "DownloadRegion_br_salvador"			"Brasil — Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Configuração de controle"
 "ControllerBinding_Offline_Save"	"[Salvo auto. no modo off-line]"

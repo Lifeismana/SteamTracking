@@ -844,6 +844,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Tây Ban Nha cho Mỹ Latin)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamese)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Tiếng Indonesia)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (tiếng Mã Lai)"
 
 
 
@@ -5058,6 +5059,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "DownloadRegion_br_manaus"			"Brazil - Manaus"
 "DownloadRegion_br_belem"			"Brazil - Belém"
 "DownloadRegion_br_salvador"			"Brazil - Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Thiết lập tay cầm"
 "ControllerBinding_Offline_Save"	"[Bản tự lưu khi ngắt mạng]"

@@ -273,6 +273,7 @@ $ORIGIN
 -chromeosverbose
 -clientbeta
 -debugbreak
+-deckard
 -holo
 -hometest
 -noassert
@@ -281,6 +282,7 @@ $ORIGIN
 -steamconsole
 -steamdeck
 -steamframe
+-steamos
 -steamos3
 -tesla
 ./obj_crashhandler_steamrtarm64/release/crashhandler.so
@@ -331,6 +333,7 @@ $ORIGIN
 /dev/urandom
 /etc/lsb-release
 /etc/mtab
+/etc/os-release
 /etc/steamos-oobe-image
 /proc/
 /proc/%d/status
@@ -340,6 +343,7 @@ $ORIGIN
 /proc/self/cmdline
 /proc/self/exe
 /proc/self/fd
+/run/host/etc/os-release
 /steamerrorreporter
 /sys/devices/system/cpu/possible
 /sys/devices/system/cpu/present
@@ -349,7 +353,6 @@ $ORIGIN
 /tmp/dumps
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
-00:54:04
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
@@ -370,6 +373,7 @@ $ORIGIN
 13CCrashHandler
 13ICrashHandler
 14CUtlLinkedListI10CUtlStringiE
+15:29:26
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
@@ -561,7 +565,7 @@ JArray
 January
 Jobs/Coroutines
 July
-Jun  9 2026
+Jun 24 2026
 June
 LOCK_EX
 LOCK_SH
@@ -662,7 +666,6 @@ RunCallbacks
 SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAMVIDEOTOKEN
-STEAM_BASE_FOLDER
 STEAM_DESKTOP_APP_AFFINITY_LIST
 Saturday
 Seeking to a position not supported with async io
@@ -1392,6 +1395,8 @@ pchFileName
 pchHaystack != NULL
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
+pchString != nullptr
 pclose
 pipe2
 poll
@@ -1552,6 +1557,7 @@ steam://close/
 steam://openurl/
 steam://openurl_external/
 steamclient.so
+steamos
 steamservice.so
 steamui.so
 steamwebhelper

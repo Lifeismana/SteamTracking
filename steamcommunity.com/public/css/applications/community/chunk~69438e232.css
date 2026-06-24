@@ -4537,6 +4537,9 @@ html.touch ._2sdNOCzaF2AIAuenP19tA6 ._2hhNOdcC6yLwL_rugP3YLf,
   color: #fff;
   text-decoration: none;
 }
+._1isLDN8xbFyCDG5jtMO7J3._6exjsiWCk6IgWiQenqfQH {
+  visibility: hidden;
+}
 ._1isLDN8xbFyCDG5jtMO7J3:hover {
   color: #fff;
 }
@@ -5278,7 +5281,7 @@ html.responsive.touch:not(.GamepadMode) ._1cOoCFwafBlSkwllIMf3XM {
 .ItemCount_5 ._3r4Ny9tQdQZc50XDM5B2q2 {
   min-width: unset !important;
 }
-.ScrollSnapCarousel > ._3r4Ny9tQdQZc50XDM5B2q2 {
+.ScrollSnapCarousel ._3r4Ny9tQdQZc50XDM5B2q2 {
   width: 258px;
   min-width: 0;
   flex-shrink: 0;
@@ -7310,7 +7313,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   background-color: #23262e;
   border-radius: 2px;
 }
-._2LyGIHuQ8SFKb5T262YUvg.GamepadMode,
 .GamepadMode ._2LyGIHuQ8SFKb5T262YUvg {
   background-color: hsla(0, 0%, 100%, 0.15);
 }
@@ -7478,11 +7480,9 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 ._4ZTzGZ5TTgFyfw1DcXLXS._1oYSXGjBe7QctQ1ikLpCMm {
   margin-top: -2px;
 }
-._4ZTzGZ5TTgFyfw1DcXLXS.GamepadMode,
 .GamepadMode ._4ZTzGZ5TTgFyfw1DcXLXS {
   align-items: center;
 }
-._4ZTzGZ5TTgFyfw1DcXLXS.GamepadMode._1oYSXGjBe7QctQ1ikLpCMm,
 .GamepadMode ._4ZTzGZ5TTgFyfw1DcXLXS._1oYSXGjBe7QctQ1ikLpCMm {
   margin-top: 0;
 }
@@ -7499,9 +7499,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   font-size: 14px;
   transition: text-overflow 0s linear;
 }
-.nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .nOdcT-MoOaXGePXLyPe0H,
-._2saJTAocZ9TnYXTGvnqUMC.GamepadMode,
 .GamepadMode ._2saJTAocZ9TnYXTGvnqUMC {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -7529,7 +7527,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 ._3oDmKGyTBBm7i4DULjwYcC ._2saJTAocZ9TnYXTGvnqUMC {
   color: inherit;
 }
-._2saJTAocZ9TnYXTGvnqUMC.GamepadMode,
 .GamepadMode ._2saJTAocZ9TnYXTGvnqUMC {
   color: #67707b;
 }
@@ -7561,7 +7558,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   padding-inline-end: 6px;
   margin-inline-end: -6px;
 }
-.nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .nOdcT-MoOaXGePXLyPe0H {
   -webkit-mask: none;
   mask: none;
@@ -7580,8 +7576,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   display: flex;
   flex-direction: column;
 }
-._3sxE7F1LV2IcSX68YsH9dI.GamepadMode
-  ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN._1oYSXGjBe7QctQ1ikLpCMm,
 .GamepadMode
   ._3sxE7F1LV2IcSX68YsH9dI
   ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN._1oYSXGjBe7QctQ1ikLpCMm {
@@ -7629,14 +7623,10 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   line-height: 18px;
   font-size: 12px;
 }
-._1BbOegz8bYL7iPzgYpOgQI ._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode ._1BbOegz8bYL7iPzgYpOgQI ._2Ri005Wg_uXDTa71kdRbcN {
   line-height: 15px;
   height: 20px;
 }
-.RecentMessagesTabList.FriendsListTabPanel
-  ._1BbOegz8bYL7iPzgYpOgQI.GamepadMode
-  ._4ZTzGZ5TTgFyfw1DcXLXS,
 .GamepadMode
   .RecentMessagesTabList.FriendsListTabPanel
   ._1BbOegz8bYL7iPzgYpOgQI
@@ -7645,9 +7635,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   margin-top: -2px;
   margin-bottom: 1px;
 }
-.RecentMessagesTabList.FriendsListTabPanel
-  ._1BbOegz8bYL7iPzgYpOgQI.GamepadMode
-  ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode
   .RecentMessagesTabList.FriendsListTabPanel
   ._1BbOegz8bYL7iPzgYpOgQI
@@ -7666,7 +7653,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .ingame .nOdcT-MoOaXGePXLyPe0H {
   color: #e3ffc2;
 }
-.ingame .nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .ingame .nOdcT-MoOaXGePXLyPe0H {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -7691,24 +7677,17 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .ingame._1BbOegz8bYL7iPzgYpOgQI ._2Ri005Wg_uXDTa71kdRbcN {
   color: #91c257;
 }
-.ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode .ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN,
-.ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a.GamepadMode,
 .GamepadMode .ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a,
-.ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:hover.GamepadMode,
 .GamepadMode .ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:hover,
-.ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:active.GamepadMode,
 .GamepadMode .ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:active,
-.ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:visited.GamepadMode,
 .GamepadMode .ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:visited,
-.ingame._1BbOegz8bYL7iPzgYpOgQI ._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode .ingame._1BbOegz8bYL7iPzgYpOgQI ._2Ri005Wg_uXDTa71kdRbcN {
   color: #59bf40;
 }
 .ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN {
   font-size: 12px;
 }
-.ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode .ingame ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -7758,17 +7737,11 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .ingame ._2Ri005Wg_uXDTa71kdRbcN a:visited {
   color: #62813b;
 }
-.ingame.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode .ingame.awayOrSnooze ._2Ri005Wg_uXDTa71kdRbcN,
-.ingame ._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode .ingame ._2Ri005Wg_uXDTa71kdRbcN,
-.ingame ._2Ri005Wg_uXDTa71kdRbcN a.GamepadMode,
 .GamepadMode .ingame ._2Ri005Wg_uXDTa71kdRbcN a,
-.ingame ._2Ri005Wg_uXDTa71kdRbcN a:hover.GamepadMode,
 .GamepadMode .ingame ._2Ri005Wg_uXDTa71kdRbcN a:hover,
-.ingame ._2Ri005Wg_uXDTa71kdRbcN a:active.GamepadMode,
 .GamepadMode .ingame ._2Ri005Wg_uXDTa71kdRbcN a:active,
-.ingame ._2Ri005Wg_uXDTa71kdRbcN a:visited.GamepadMode,
 .GamepadMode .ingame ._2Ri005Wg_uXDTa71kdRbcN a:visited {
   color: #3e862d;
 }
@@ -7776,21 +7749,13 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .ingame .SVGIcon_DoNotDisturb line {
   stroke: #cf7f67;
 }
-.friend.gpfocus .labelHolder.GamepadMode .nOdcT-MoOaXGePXLyPe0H,
-.friend.gpfocus .labelHolder.GamepadMode ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode .friend.gpfocus .labelHolder .nOdcT-MoOaXGePXLyPe0H,
 .GamepadMode .friend.gpfocus .labelHolder ._2Ri005Wg_uXDTa71kdRbcN,
-.favoriteElement.gpfocus .labelHolder.GamepadMode .nOdcT-MoOaXGePXLyPe0H,
-.favoriteElement.gpfocus .labelHolder.GamepadMode ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode .favoriteElement.gpfocus .labelHolder .nOdcT-MoOaXGePXLyPe0H,
 .GamepadMode .favoriteElement.gpfocus .labelHolder ._2Ri005Wg_uXDTa71kdRbcN {
   text-shadow: 1px 1px 0 #0e141b;
 }
-.friend.gpfocus .labelHolder.GamepadMode.offline ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode .friend.gpfocus .labelHolder.offline ._2Ri005Wg_uXDTa71kdRbcN,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.offline
-  ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode
   .favoriteElement.gpfocus
   .labelHolder.offline
@@ -7798,12 +7763,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   color: #8b929a;
   text-shadow: 1px 1px 0 #0e141b;
 }
-.friend.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
-  .nOdcT-MoOaXGePXLyPe0H,
-.friend.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
-  ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode
   .friend.gpfocus
   .labelHolder.online.awayOrSnooze
@@ -7811,12 +7770,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .GamepadMode
   .friend.gpfocus
   .labelHolder.online.awayOrSnooze
-  ._2Ri005Wg_uXDTa71kdRbcN,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
-  .nOdcT-MoOaXGePXLyPe0H,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
   ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode
   .favoriteElement.gpfocus
@@ -7829,21 +7782,11 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   color: #4cb4ff;
   text-shadow: 1px 1px 0 #0e141b;
 }
-.friend.gpfocus
-  .labelHolder.GamepadMode.ingame.awayOrSnooze
-  .nOdcT-MoOaXGePXLyPe0H,
-.friend.gpfocus .labelHolder.GamepadMode.ingame ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode
   .friend.gpfocus
   .labelHolder.ingame.awayOrSnooze
   .nOdcT-MoOaXGePXLyPe0H,
 .GamepadMode .friend.gpfocus .labelHolder.ingame ._2Ri005Wg_uXDTa71kdRbcN,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.ingame.awayOrSnooze
-  .nOdcT-MoOaXGePXLyPe0H,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.ingame
-  ._2Ri005Wg_uXDTa71kdRbcN,
 .GamepadMode
   .favoriteElement.gpfocus
   .labelHolder.ingame.awayOrSnooze
@@ -7855,7 +7798,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   color: #59bf40;
   text-shadow: 1px 1px 0 #0e141b;
 }
-.awayOrSnooze .nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .awayOrSnooze .nOdcT-MoOaXGePXLyPe0H {
   color: #59bf40;
 }
@@ -7869,36 +7811,22 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .watchingbroadcast ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:visited {
   color: #8277b1;
 }
-.awayOrSnooze.online .nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .awayOrSnooze.online .nOdcT-MoOaXGePXLyPe0H {
   color: #4cb4ff;
 }
-.awayOrSnooze.online ._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode .awayOrSnooze.online ._2Ri005Wg_uXDTa71kdRbcN,
-.awayOrSnooze.online
-  ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
-  a.GamepadMode,
 .GamepadMode
   .awayOrSnooze.online
   ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
   a,
-.awayOrSnooze.online
-  ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
-  a:hover.GamepadMode,
 .GamepadMode
   .awayOrSnooze.online
   ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
   a:hover,
-.awayOrSnooze.online
-  ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
-  a:active.GamepadMode,
 .GamepadMode
   .awayOrSnooze.online
   ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
   a:active,
-.awayOrSnooze.online
-  ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
-  a:visited.GamepadMode,
 .GamepadMode
   .awayOrSnooze.online
   ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
@@ -7909,7 +7837,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   color: #ccccd5;
   color: #6dcff6;
 }
-.online .nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .online .nOdcT-MoOaXGePXLyPe0H {
   color: #b3dfff;
 }
@@ -7920,15 +7847,10 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:visited {
   color: #4c91ac;
 }
-.online ._2Ri005Wg_uXDTa71kdRbcN.GamepadMode,
 .GamepadMode .online ._2Ri005Wg_uXDTa71kdRbcN,
-.online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a.GamepadMode,
 .GamepadMode .online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a,
-.online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:hover.GamepadMode,
 .GamepadMode .online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:hover,
-.online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:active.GamepadMode,
 .GamepadMode .online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:active,
-.online ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN a:visited.GamepadMode,
 .GamepadMode
   .online
   ._1cB0qtF0paHWWyj1XNcnbG._2Ri005Wg_uXDTa71kdRbcN
@@ -7942,7 +7864,6 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .offline .nOdcT-MoOaXGePXLyPe0H {
   color: #a0a0a0;
 }
-.offline .nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .offline .nOdcT-MoOaXGePXLyPe0H {
   color: #b8bcbf;
 }
@@ -8595,13 +8516,13 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   color: #95a6b2;
   margin-bottom: 4px;
 }
-._2L6sVk9vOgKcXO6DgZHpJ9 {
-  width: 100px;
-}
 ._1-2t1NI3qbO2JgWmCss7AW {
   flex-grow: 2;
   flex-basis: 0;
   margin-bottom: 12px;
+}
+._2L6sVk9vOgKcXO6DgZHpJ9 {
+  width: 100px;
 }
 ._861OI3fFcj_3yxoWXG_5_ {
   display: flex;
@@ -10861,7 +10782,6 @@ body.v6.partner_events {
   position: absolute;
   filter: blur(32px) saturate(0.9);
 }
-.stsss-bTNuazY8FYtvTOX.GamepadMode,
 .GamepadMode .stsss-bTNuazY8FYtvTOX {
   filter: unset;
 }
@@ -11020,7 +10940,6 @@ body.v6.partner_events {
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-.ZHAfj0MPg1zDLXRnCzSsx.GamepadMode,
 .GamepadMode .ZHAfj0MPg1zDLXRnCzSsx {
   backdrop-filter: blur(32px);
 }
@@ -11162,7 +11081,6 @@ body.v6.partner_events {
   cursor: pointer;
   color: #fff;
 }
-._3_SEiDNs-lzwV7cTF6gcgt .TqEPC9bhvVpZ1rb3Z8Mbd.GamepadMode,
 .GamepadMode ._3_SEiDNs-lzwV7cTF6gcgt .TqEPC9bhvVpZ1rb3Z8Mbd {
   font-weight: 500;
 }
@@ -11310,7 +11228,6 @@ html.responsive.GamepadMode ._20f2sKS2M7PlPSnPCinT26 {
   overflow: hidden;
   min-height: 300px;
 }
-._32mHvRSmD7AVK9OIOPlaFu.GamepadMode,
 .GamepadMode ._32mHvRSmD7AVK9OIOPlaFu {
   backdrop-filter: blur(32px);
 }

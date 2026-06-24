@@ -3304,13 +3304,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
+      function _(_, _) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
         if (void 0 === _) return;
         if (null === _) return null;
         const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ ? _.filter((_) => !!_.all_ages) : _;
+        return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
       }
       function _(_) {
         let _ = _(_);
@@ -4536,12 +4536,41 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_NotRejected = -1)] = "k_NotRejected"),
+          (_[(_.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
+          (_[(_.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
+          (_[(_.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
+          (_[(_.k_RejectNoVR = 3)] = "k_RejectNoVR"),
+          (_[(_.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
+          (_[(_.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
+          (_[(_.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
+          (_[(_.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
+          (_[(_.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
+          (_[(_.k_RejectIgnoreContentDescriptors = 9)] =
+            "k_RejectIgnoreContentDescriptors"),
+          (_[(_.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
+          (_[(_.k_RejectSoftware = 11)] = "k_RejectSoftware"),
+          (_[(_.k_RejectDLC = 12)] = "k_RejectDLC"),
+          (_[(_.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
+          (_[(_.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
+          (_[(_.k_RejectVideo = 15)] = "k_RejectVideo"),
+          (_[(_.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
+          (_[(_.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
+          (_[(_.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
+          (_[(_.k_RejectAO = 19)] = "k_RejectAO");
+      })(_ || (_ = {}));
+      const _ = ["app", "sub", "bundle"];
       function _(_) {
         return "app" == _ ? _._._ : "sub" == _ ? _._._ : _._._;
+      }
+      function _(_) {
+        return _.includes(_);
       }
       function _(_, _ = _._._) {
         return _?.appid
@@ -4810,30 +4839,6 @@
               ? _._._
               : null;
       }
-      !(function (_) {
-        (_[(_.k_NotRejected = -1)] = "k_NotRejected"),
-          (_[(_.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
-          (_[(_.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
-          (_[(_.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
-          (_[(_.k_RejectNoVR = 3)] = "k_RejectNoVR"),
-          (_[(_.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
-          (_[(_.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
-          (_[(_.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
-          (_[(_.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
-          (_[(_.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
-          (_[(_.k_RejectIgnoreContentDescriptors = 9)] =
-            "k_RejectIgnoreContentDescriptors"),
-          (_[(_.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
-          (_[(_.k_RejectSoftware = 11)] = "k_RejectSoftware"),
-          (_[(_.k_RejectDLC = 12)] = "k_RejectDLC"),
-          (_[(_.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
-          (_[(_.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
-          (_[(_.k_RejectVideo = 15)] = "k_RejectVideo"),
-          (_[(_.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
-          (_[(_.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
-          (_[(_.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
-          (_[(_.k_RejectAO = 19)] = "k_RejectAO");
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {

@@ -1137,7 +1137,6 @@ html:not(.touch)
   margin-top: -1px;
   margin-left: 2px;
 }
-.KxAI_M9gWx3OnKSshHOs6.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6 {
   margin-top: 0;
   margin-left: 0;
@@ -1149,7 +1148,6 @@ html:not(.touch)
   margin-top: -2px;
   margin-left: -1px;
 }
-.KxAI_M9gWx3OnKSshHOs6._1iRFj5lJrMqMnRb3GZYPSw.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6._1iRFj5lJrMqMnRb3GZYPSw {
   margin-top: -4px;
   margin-left: 0;
@@ -1172,13 +1170,9 @@ html:not(.touch)
 .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_BigPicture path {
   fill: #80aa4d;
 }
-.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_SteamDeck path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_SteamDeck path,
-.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VRIcon path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VRIcon path,
-.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_MobilePhone path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_MobilePhone path,
-.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_BigPicture path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_BigPicture path {
   fill: #59bf40;
 }
@@ -1188,13 +1182,9 @@ html:not(.touch)
 .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_BigPicture path {
   fill: #4c91ac;
 }
-.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_SteamDeck path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_SteamDeck path,
-.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VRIcon path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VRIcon path,
-.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_MobilePhone path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_MobilePhone path,
-.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_BigPicture path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_BigPicture path {
   fill: #4cb4ff;
 }
@@ -1209,7 +1199,6 @@ html:not(.touch)
 ._1DsumfIa3MlkzUV9EXY5W9 ._2n0EiKMGRP-r_BI5tDtttu {
   font-size: 6px;
 }
-._1DsumfIa3MlkzUV9EXY5W9 ._2n0EiKMGRP-r_BI5tDtttu.GamepadMode,
 .GamepadMode ._1DsumfIa3MlkzUV9EXY5W9 ._2n0EiKMGRP-r_BI5tDtttu {
   font-size: 8px;
   font-weight: bold;
@@ -1253,14 +1242,12 @@ html:not(.touch)
 ._1DsumfIa3MlkzUV9EXY5W9.online ._2n0EiKMGRP-r_BI5tDtttu {
   color: #4c91ac;
 }
-._1DsumfIa3MlkzUV9EXY5W9.online ._2n0EiKMGRP-r_BI5tDtttu.GamepadMode,
 .GamepadMode ._1DsumfIa3MlkzUV9EXY5W9.online ._2n0EiKMGRP-r_BI5tDtttu {
   color: #4cb4ff;
 }
 ._1DsumfIa3MlkzUV9EXY5W9.watchingbroadcast ._2n0EiKMGRP-r_BI5tDtttu {
   color: #c9bdf7;
 }
-._1DsumfIa3MlkzUV9EXY5W9.watchingbroadcast ._2n0EiKMGRP-r_BI5tDtttu.GamepadMode,
 .GamepadMode
   ._1DsumfIa3MlkzUV9EXY5W9.watchingbroadcast
   ._2n0EiKMGRP-r_BI5tDtttu {
@@ -1269,15 +1256,12 @@ html:not(.touch)
 ._1DsumfIa3MlkzUV9EXY5W9.in-game ._2n0EiKMGRP-r_BI5tDtttu {
   color: #91c257;
 }
-._1DsumfIa3MlkzUV9EXY5W9.in-game ._2n0EiKMGRP-r_BI5tDtttu.GamepadMode,
 .GamepadMode ._1DsumfIa3MlkzUV9EXY5W9.in-game ._2n0EiKMGRP-r_BI5tDtttu {
   color: #3e862d;
 }
 ._1DsumfIa3MlkzUV9EXY5W9.online.rpZ9bKyFXYvNQvgtKn5GV ._2n0EiKMGRP-r_BI5tDtttu {
   color: #6dcff6;
 }
-._1DsumfIa3MlkzUV9EXY5W9.online.rpZ9bKyFXYvNQvgtKn5GV
-  ._2n0EiKMGRP-r_BI5tDtttu.GamepadMode,
 .GamepadMode
   ._1DsumfIa3MlkzUV9EXY5W9.online.rpZ9bKyFXYvNQvgtKn5GV
   ._2n0EiKMGRP-r_BI5tDtttu {
@@ -1287,8 +1271,6 @@ html:not(.touch)
   ._2n0EiKMGRP-r_BI5tDtttu {
   color: #a1f410;
 }
-._1DsumfIa3MlkzUV9EXY5W9.in-game.rpZ9bKyFXYvNQvgtKn5GV
-  ._2n0EiKMGRP-r_BI5tDtttu.GamepadMode,
 .GamepadMode
   ._1DsumfIa3MlkzUV9EXY5W9.in-game.rpZ9bKyFXYvNQvgtKn5GV
   ._2n0EiKMGRP-r_BI5tDtttu {
@@ -1363,11 +1345,9 @@ html:not(.touch)
     rgb(140, 214, 29) 100%
   );
 }
-.ingame ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .ingame ._3xUpb5DWXPFNcHHIcv-9pe {
   background: #59bf40;
 }
-.offline ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .offline ._3xUpb5DWXPFNcHHIcv-9pe {
   background: #67707b;
 }
@@ -1392,7 +1372,6 @@ html:not(.touch)
     rgb(109, 207, 246) 100%
   );
 }
-.online ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .online ._3xUpb5DWXPFNcHHIcv-9pe {
   background: #4cb4ff;
 }
@@ -1405,7 +1384,6 @@ html:not(.touch)
   mask-size: 5px 5px;
   opacity: 0.75;
 }
-.awayOrSnooze ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .awayOrSnooze ._3xUpb5DWXPFNcHHIcv-9pe {
   opacity: 1;
 }
@@ -1416,7 +1394,6 @@ html:not(.touch)
   inset-inline-end: 0;
   width: 2px;
 }
-._3xUpb5DWXPFNcHHIcv-9pe.right.GamepadMode,
 .GamepadMode ._3xUpb5DWXPFNcHHIcv-9pe.right {
   width: 3px;
   inset-inline-end: -3px;
@@ -1428,7 +1405,6 @@ html:not(.touch)
   inset-inline-end: 0;
   height: 2px;
 }
-._3xUpb5DWXPFNcHHIcv-9pe.bottom.GamepadMode,
 .GamepadMode ._3xUpb5DWXPFNcHHIcv-9pe.bottom {
   height: 3px;
   bottom: -3px;
@@ -1450,7 +1426,6 @@ html:not(.touch)
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
   transition: filter 0.24s ease-in-out;
 }
-._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {
   border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;
@@ -1983,7 +1958,6 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   flex-shrink: 1;
   width: 100%;
 }
-._113iuw_HlE_qSgt9cGWCSv.GamepadMode,
 .GamepadMode ._113iuw_HlE_qSgt9cGWCSv {
   box-shadow: none;
   font-size: 16px;
@@ -1993,7 +1967,6 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   height: 34px;
   transition: none;
 }
-._113iuw_HlE_qSgt9cGWCSv.GamepadMode.gpfocus,
 .GamepadMode ._113iuw_HlE_qSgt9cGWCSv.gpfocus {
   color: #fff;
 }
@@ -2066,13 +2039,9 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   background-color: #3d424b;
   color: #fff;
 }
-.RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):focus.GamepadMode,
 .GamepadMode .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):focus {
   background: #fff;
 }
-.RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy)
-  .SVGIcon_Button.SVGIcon_Submit
-  path.GamepadMode,
 .GamepadMode
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy)
   .SVGIcon_Button.SVGIcon_Submit
@@ -2090,23 +2059,14 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   path {
   fill: #fff;
 }
-.RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):focus
-  .SVGIcon_Button.SVGIcon_Submit
-  path.GamepadMode,
 .GamepadMode
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):focus
   .SVGIcon_Button.SVGIcon_Submit
   path,
-.RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):hover
-  .SVGIcon_Button.SVGIcon_Submit
-  path.GamepadMode,
 .GamepadMode
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):hover
   .SVGIcon_Button.SVGIcon_Submit
   path,
-.RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy)
-  .SVGIcon_Button.SVGIcon_Submit
-  path.GamepadMode,
 .GamepadMode
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy)
   .SVGIcon_Button.SVGIcon_Submit
@@ -2117,13 +2077,9 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
 .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):hover .SVGIcon_Button {
   fill: #f5ffd7;
 }
-.RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):focus
-  .SVGIcon_Button.GamepadMode,
 .GamepadMode
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):focus
   .SVGIcon_Button,
-.RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):hover
-  .SVGIcon_Button.GamepadMode,
 .GamepadMode
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy):hover
   .SVGIcon_Button {
@@ -2177,12 +2133,10 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   fill: #5f5f5f;
   stroke-width: 2px;
 }
-.RVIs84dAE6wHcjH9tkinc .SVGIcon_Submit path.GamepadMode,
 .GamepadMode .RVIs84dAE6wHcjH9tkinc .SVGIcon_Submit path {
   stroke-width: 0px;
   fill: #67707b;
 }
-.RVIs84dAE6wHcjH9tkinc .SVGIcon_Submit.GamepadMode,
 .GamepadMode .RVIs84dAE6wHcjH9tkinc .SVGIcon_Submit {
   margin-top: 4px;
   margin-left: 2px;
@@ -2258,7 +2212,6 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
     rgb(26, 159, 255) 60%
   );
 }
-._3Ule3rolhZJiBN4yNNtk1s .RVIs84dAE6wHcjH9tkinc.GamepadMode,
 .GamepadMode ._3Ule3rolhZJiBN4yNNtk1s .RVIs84dAE6wHcjH9tkinc {
   min-height: 0px;
   padding: 0;
@@ -2270,16 +2223,12 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   max-width: 44px;
   min-width: 0;
 }
-._3Ule3rolhZJiBN4yNNtk1s
-  .RVIs84dAE6wHcjH9tkinc.GamepadMode:not(.jaQN2IyN4P8LZXJ6P11qy),
 .GamepadMode
   ._3Ule3rolhZJiBN4yNNtk1s
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy) {
   background-color: #67707b;
   color: #fff;
 }
-._3Ule3rolhZJiBN4yNNtk1s
-  .RVIs84dAE6wHcjH9tkinc.GamepadMode:not(.jaQN2IyN4P8LZXJ6P11qy).gpfocus,
 .GamepadMode
   ._3Ule3rolhZJiBN4yNNtk1s
   .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy).gpfocus {

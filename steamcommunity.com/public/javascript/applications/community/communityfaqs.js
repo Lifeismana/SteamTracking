@@ -196,8 +196,8 @@ License: MIT
                     : {},
             i = !n.document && !!n.postMessage,
             a = n.IS_PAPA_WORKER || !1,
-            r = {},
-            s = 0,
+            s = {},
+            r = 0,
             o = {};
           function l(e) {
             (this._handle = null),
@@ -224,27 +224,27 @@ License: MIT
                 if (this.isFirstChunk && 0 < i) {
                   let t = this._config.newline;
                   t ||
-                    ((r = this._config.quoteChar || '"'),
-                    (t = this._handle.guessLineEndings(e, r))),
+                    ((s = this._config.quoteChar || '"'),
+                    (t = this._handle.guessLineEndings(e, s))),
                     (e = [...e.split(t).slice(i)].join(t));
                 }
                 this.isFirstChunk &&
                   A(this._config.beforeFirstChunk) &&
-                  void 0 !== (r = this._config.beforeFirstChunk(e)) &&
-                  (e = r),
+                  void 0 !== (s = this._config.beforeFirstChunk(e)) &&
+                  (e = s),
                   (this.isFirstChunk = !1),
                   (this._halted = !1),
                   (i = this._partialLine + e);
-                var r =
+                var s =
                   ((this._partialLine = ""),
                   this._handle.parse(i, this._baseIndex, !this._finished));
                 if (!this._handle.paused() && !this._handle.aborted()) {
                   if (
-                    ((e = r.meta.cursor),
+                    ((e = s.meta.cursor),
                     this._finished ||
                       ((this._partialLine = i.substring(e - this._baseIndex)),
                       (this._baseIndex = e)),
-                    r && r.data && (this._rowCount += r.data.length),
+                    s && s.data && (this._rowCount += s.data.length),
                     (i =
                       this._finished ||
                       (this._config.preview &&
@@ -252,37 +252,37 @@ License: MIT
                     a)
                   )
                     n.postMessage({
-                      results: r,
+                      results: s,
                       workerId: o.WORKER_ID,
                       finished: i,
                     });
                   else if (A(this._config.chunk) && !t) {
                     if (
-                      (this._config.chunk(r, this._handle),
+                      (this._config.chunk(s, this._handle),
                       this._handle.paused() || this._handle.aborted())
                     )
                       return void (this._halted = !0);
-                    this._completeResults = r = void 0;
+                    this._completeResults = s = void 0;
                   }
                   return (
                     this._config.step ||
                       this._config.chunk ||
                       ((this._completeResults.data =
-                        this._completeResults.data.concat(r.data)),
+                        this._completeResults.data.concat(s.data)),
                       (this._completeResults.errors =
-                        this._completeResults.errors.concat(r.errors)),
-                      (this._completeResults.meta = r.meta)),
+                        this._completeResults.errors.concat(s.errors)),
+                      (this._completeResults.meta = s.meta)),
                     this._completed ||
                       !i ||
                       !A(this._config.complete) ||
-                      (r && r.meta.aborted) ||
+                      (s && s.meta.aborted) ||
                       (this._config.complete(
                         this._completeResults,
                         this._input,
                       ),
                       (this._completed = !0)),
-                    i || (r && r.meta.paused) || this._nextChunk(),
-                    r
+                    i || (s && s.meta.paused) || this._nextChunk(),
+                    s
                   );
                 }
                 this._halted = !0;
@@ -489,8 +489,8 @@ License: MIT
               n,
               i,
               a,
-              r = Math.pow(2, 53),
-              s = -r,
+              s = Math.pow(2, 53),
+              r = -s,
               l = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
               d =
                 /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
@@ -553,7 +553,7 @@ License: MIT
                           (((e) => {
                             if (
                               l.test(e) &&
-                              ((e = parseFloat(e)), s < e && e < r)
+                              ((e = parseFloat(e)), r < e && e < s)
                             )
                               return 1;
                           })(n)
@@ -631,7 +631,7 @@ License: MIT
                           ? n.abort()
                           : ((x.data = x.data[0]), a(x, c))));
               })),
-              (this.parse = function (a, r, s) {
+              (this.parse = function (a, s, r) {
                 var l = e.quoteChar || '"';
                 return (
                   e.newline || (e.newline = this.guessLineEndings(a, l)),
@@ -640,9 +640,9 @@ License: MIT
                     ? A(e.delimiter) &&
                       ((e.delimiter = e.delimiter(a)),
                       (x.meta.delimiter = e.delimiter))
-                    : ((l = ((t, n, i, a, r) => {
-                        var s, l, d, c;
-                        r = r || [
+                    : ((l = ((t, n, i, a, s) => {
+                        var r, l, d, c;
+                        s = s || [
                           ",",
                           "\t",
                           "|",
@@ -650,10 +650,10 @@ License: MIT
                           o.RECORD_SEP,
                           o.UNIT_SEP,
                         ];
-                        for (var u = 0; u < r.length; u++) {
+                        for (var u = 0; u < s.length; u++) {
                           for (
                             var h,
-                              m = r[u],
+                              m = s[u],
                               g = 0,
                               f = 0,
                               p = 0,
@@ -679,11 +679,11 @@ License: MIT
                             (void 0 === l || g <= l) &&
                               (void 0 === c || c < f) &&
                               1.99 < f &&
-                              ((l = g), (s = m), (c = f));
+                              ((l = g), (r = m), (c = f));
                         }
                         return {
-                          successful: !!(e.delimiter = s),
-                          bestDelimiter: s,
+                          successful: !!(e.delimiter = r),
+                          bestDelimiter: r,
                         };
                       })(
                         a,
@@ -699,7 +699,7 @@ License: MIT
                   e.preview && e.header && l.preview++,
                   (t = a),
                   (n = new _(l)),
-                  (x = n.parse(t, r, s)),
+                  (x = n.parse(t, s, r)),
                   C(),
                   m ? { meta: { paused: !0 } } : x || { meta: { paused: !1 } }
                 );
@@ -751,8 +751,8 @@ License: MIT
               n = e.newline,
               i = e.comments,
               a = e.step,
-              r = e.preview,
-              s = e.fastMode,
+              s = e.preview,
+              r = e.fastMode,
               l = null,
               d = !1,
               c = null == e.quoteChar ? '"' : e.quoteChar,
@@ -784,7 +784,7 @@ License: MIT
                 E = [],
                 L = (h = 0);
               if (!o) return G();
-              if (s || (!1 !== s && -1 === o.indexOf(c))) {
+              if (r || (!1 !== r && -1 === o.indexOf(c))) {
                 for (var S = o.split(n), F = 0; F < S.length; F++) {
                   if (((E = S[F]), (h += E.length), F !== S.length - 1))
                     h += n.length;
@@ -793,7 +793,7 @@ License: MIT
                     if (C) {
                       if (((j = []), k(E.split(t)), P(), m)) return G();
                     } else k(E.split(t));
-                    if (r && r <= F) return (j = j.slice(0, r)), G(!0);
+                    if (s && s <= F) return (j = j.slice(0, s)), G(!0);
                   }
                 }
                 return G();
@@ -848,7 +848,7 @@ License: MIT
                           C && (P(), m))
                         )
                           return G();
-                        if (r && j.length >= r) return G(!0);
+                        if (s && j.length >= s) return G(!0);
                         break;
                       }
                       b.push({
@@ -870,7 +870,7 @@ License: MIT
                   if (-1 === y) break;
                   if ((E.push(o.substring(h, y)), B(y + v), C && (P(), m)))
                     return G();
-                  if (r && j.length >= r) return G(!0);
+                  if (s && j.length >= s) return G(!0);
                 }
               return R();
               function k(e) {
@@ -901,26 +901,26 @@ License: MIT
               function G(i) {
                 if (e.header && !_ && j.length && !d) {
                   var a = j[0],
-                    r = Object.create(null),
-                    s = new Set(a);
+                    s = Object.create(null),
+                    r = new Set(a);
                   let t = !1;
                   for (let n = 0; n < a.length; n++) {
                     let i = a[n];
                     if (
-                      r[
+                      s[
                         (i = A(e.transformHeader) ? e.transformHeader(i, n) : i)
                       ]
                     ) {
                       let e,
-                        o = r[i];
-                      for (; (e = i + "_" + o), o++, s.has(e); );
-                      s.add(e),
+                        o = s[i];
+                      for (; (e = i + "_" + o), o++, r.has(e); );
+                      r.add(e),
                         (a[n] = e),
-                        r[i]++,
+                        s[i]++,
                         (t = !0),
                         ((l = null === l ? {} : l)[e] = i);
-                    } else (r[i] = 1), (a[n] = i);
-                    s.add(i);
+                    } else (s[i] = 1), (a[n] = i);
+                    r.add(i);
                   }
                   t && console.warn("Duplicate headers found and renamed."),
                     (d = !0);
@@ -951,7 +951,7 @@ License: MIT
           }
           function f(e) {
             var t = e.data,
-              n = r[t.workerId],
+              n = s[t.workerId],
               i = !1;
             if (t.error) n.userError(t.error, t.file);
             else if (t.results && t.results.data) {
@@ -969,18 +969,18 @@ License: MIT
               };
               if (A(n.userStep)) {
                 for (
-                  var s = 0;
-                  s < t.results.data.length &&
+                  var r = 0;
+                  r < t.results.data.length &&
                   (n.userStep(
                     {
-                      data: t.results.data[s],
+                      data: t.results.data[r],
                       errors: t.results.errors,
                       meta: t.results.meta,
                     },
                     a,
                   ),
                   !i);
-                  s++
+                  r++
                 );
                 delete t.results;
               } else
@@ -990,8 +990,8 @@ License: MIT
             t.finished && !i && p(t.workerId, t.results);
           }
           function p(e, t) {
-            var n = r[e];
-            A(n.userComplete) && n.userComplete(t), n.terminate(), delete r[e];
+            var n = s[e];
+            A(n.userComplete) && n.userComplete(t), n.terminate(), delete s[e];
           }
           function x() {
             throw new Error("Not implemented.");
@@ -1057,8 +1057,8 @@ License: MIT
                     );
                   })()),
                   ((t = new n.Worker(t)).onmessage = f),
-                  (t.id = s++),
-                  (r[t.id] = t))
+                  (t.id = r++),
+                  (s[t.id] = t))
                 );
               })()).userStep = i.step),
                 (a.userChunk = i.chunk),
@@ -1075,9 +1075,9 @@ License: MIT
               var n = !1,
                 i = !0,
                 a = ",",
-                r = "\r\n",
-                s = '"',
-                l = s + s,
+                s = "\r\n",
+                r = '"',
+                l = r + r,
                 d = !1,
                 c = null,
                 u = !1,
@@ -1097,8 +1097,8 @@ License: MIT
                         ("boolean" != typeof t.skipEmptyLines &&
                           "string" != typeof t.skipEmptyLines) ||
                           (d = t.skipEmptyLines),
-                        "string" == typeof t.newline && (r = t.newline),
-                        "string" == typeof t.quoteChar && (s = t.quoteChar),
+                        "string" == typeof t.newline && (s = t.newline),
+                        "string" == typeof t.quoteChar && (r = t.quoteChar),
                         "boolean" == typeof t.header && (i = t.header),
                         Array.isArray(t.columns))
                       ) {
@@ -1106,7 +1106,7 @@ License: MIT
                           throw new Error("Option columns is empty");
                         c = t.columns;
                       }
-                      void 0 !== t.escapeChar && (l = t.escapeChar + s),
+                      void 0 !== t.escapeChar && (l = t.escapeChar + r),
                         t.escapeFormulae instanceof RegExp
                           ? (u = t.escapeFormulae)
                           : "boolean" == typeof t.escapeFormulae &&
@@ -1114,7 +1114,7 @@ License: MIT
                             (u = /^[=+\-@\t\r].*$/);
                     }
                   })(),
-                  new RegExp(g(s), "g"));
+                  new RegExp(g(r), "g"));
               if (
                 ("string" == typeof e && (e = JSON.parse(e)), Array.isArray(e))
               ) {
@@ -1139,7 +1139,7 @@ License: MIT
                 );
               throw new Error("Unable to serialize unrecognized input");
               function m(e, t, n) {
-                var s = "",
+                var r = "",
                   o =
                     ("string" == typeof e && (e = JSON.parse(e)),
                     "string" == typeof t && (t = JSON.parse(t)),
@@ -1147,8 +1147,8 @@ License: MIT
                   l = !Array.isArray(t[0]);
                 if (o && i) {
                   for (var d = 0; d < e.length; d++)
-                    0 < d && (s += a), (s += _(e[d], d));
-                  0 < t.length && (s += r);
+                    0 < d && (r += a), (r += _(e[d], d));
+                  0 < t.length && (r += s);
                 }
                 for (var c = 0; c < t.length; c++) {
                   var u = (o ? e : t[c]).length,
@@ -1171,29 +1171,29 @@ License: MIT
                   }
                   if (!h) {
                     for (var x = 0; x < u; x++) {
-                      0 < x && !m && (s += a);
+                      0 < x && !m && (r += a);
                       var v = o && l ? e[x] : x;
-                      s += _(t[c][v], x);
+                      r += _(t[c][v], x);
                     }
-                    c < t.length - 1 && (!n || (0 < u && !m)) && (s += r);
+                    c < t.length - 1 && (!n || (0 < u && !m)) && (r += s);
                   }
                 }
-                return s;
+                return r;
               }
               function _(e, t) {
-                var i, r;
+                var i, s;
                 return null == e
                   ? ""
                   : e.constructor === Date
                     ? JSON.stringify(e).slice(1, 25)
-                    : ((r = !1),
+                    : ((s = !1),
                       u &&
                         "string" == typeof e &&
                         u.test(e) &&
-                        ((e = "'" + e), (r = !0)),
+                        ((e = "'" + e), (s = !0)),
                       (i = e.toString().replace(h, l)),
-                      (r =
-                        r ||
+                      (s =
+                        s ||
                         !0 === n ||
                         ("function" == typeof n && n(e, t)) ||
                         (Array.isArray(n) && n[t]) ||
@@ -1205,7 +1205,7 @@ License: MIT
                         -1 < i.indexOf(a) ||
                         " " === i.charAt(0) ||
                         " " === i.charAt(i.length - 1))
-                        ? s + i + s
+                        ? r + i + r
                         : i);
               }
             }),
@@ -1238,22 +1238,22 @@ License: MIT
                       0 === this.files.length
                     )
                       return !0;
-                    for (var r = 0; r < this.files.length; r++)
+                    for (var s = 0; s < this.files.length; s++)
                       a.push({
-                        file: this.files[r],
+                        file: this.files[s],
                         inputElem: this,
                         instanceConfig: t.extend({}, i),
                       });
                   }),
-                  r(),
+                  s(),
                   this
                 );
-                function r() {
+                function s() {
                   if (0 === a.length) A(e.complete) && e.complete();
                   else {
                     var n,
                       i,
-                      r,
+                      s,
                       l,
                       d = a[0];
                     if (A(e.before)) {
@@ -1263,27 +1263,27 @@ License: MIT
                           return (
                             (n = "AbortError"),
                             (i = d.file),
-                            (r = d.inputElem),
+                            (s = d.inputElem),
                             (l = c.reason),
-                            void (A(e.error) && e.error({ name: n }, i, r, l))
+                            void (A(e.error) && e.error({ name: n }, i, s, l))
                           );
-                        if ("skip" === c.action) return void s();
+                        if ("skip" === c.action) return void r();
                         "object" == typeof c.config &&
                           (d.instanceConfig = t.extend(
                             d.instanceConfig,
                             c.config,
                           ));
-                      } else if ("skip" === c) return void s();
+                      } else if ("skip" === c) return void r();
                     }
                     var u = d.instanceConfig.complete;
                     (d.instanceConfig.complete = function (e) {
-                      A(u) && u(e, d.file, d.inputElem), s();
+                      A(u) && u(e, d.file, d.inputElem), r();
                     }),
                       o.parse(d.file, d.instanceConfig);
                   }
                 }
-                function s() {
-                  a.splice(0, 1), r();
+                function r() {
+                  a.splice(0, 1), s();
                 }
               }),
             a &&
@@ -1327,30 +1327,30 @@ License: MIT
       });
       var i = n(7850),
         a = n(37085),
-        r = n(56545),
-        s = n(88942),
+        s = n(56545),
+        r = n(88942),
         o = n(61739),
         l = n(23809),
         d = n(34214);
       function c(e, t) {
         const n = (0, l.KV)();
-        return (0, s.I)({
+        return (0, r.I)({
           queryKey: [
             "crowdin_metadata_for_clan_event",
             e.ConvertTo64BitString(),
             t,
           ],
           queryFn: async () => {
-            const i = r.w.Init(d.$5);
+            const i = s.w.Init(d.$5);
             i.Body().set_steamid(e.ConvertTo64BitString()),
               i.Body().set_itemid(t);
-            const s = await d.BE.GetClanEventCrowdInMetadata(n, i);
-            return s.GetEResult() != a.R ? null : s.Body().toObject();
+            const r = await d.BE.GetClanEventCrowdInMetadata(n, i);
+            return r.GetEResult() != a.R ? null : r.Body().toObject();
           },
         });
       }
       async function u(e, t) {
-        const n = r.w.Init(d.hA);
+        const n = s.w.Init(d.hA);
         n.Body().set_steamid(t);
         const i = await d.BE.GetClanCrowdInMetadata(e, n);
         if (i.GetEResult() === a.p)
@@ -1364,7 +1364,7 @@ License: MIT
       }
       function h(e) {
         const t = (0, l.KV)();
-        return (0, s.I)({
+        return (0, r.I)({
           queryKey: ["clan_crowdin_mapping", e],
           queryFn: async () => await u(t, e),
         });
@@ -1372,7 +1372,7 @@ License: MIT
       function m(e) {
         return (function (e) {
           const t = (0, l.KV)(),
-            n = (0, s.I)({
+            n = (0, r.I)({
               queryKey: e.queryKey,
               queryFn: async () => e.queryFn(t, ...e.args),
             });
@@ -1405,11 +1405,11 @@ License: MIT
           mutationKey: ["fetch_translation_for_clan_event", e, t, n],
           mutationFn: async function () {
             return await (async function (e, t, n, i) {
-              const s = r.w.Init(d.v7);
-              s.Body().set_language(i),
-                s.Body().set_steamid(t),
-                s.Body().set_itemid(n);
-              const o = await d.BE.FetchTranslationFromCrowdIn(e, s);
+              const r = s.w.Init(d.v7);
+              r.Body().set_language(i),
+                r.Body().set_steamid(t),
+                r.Body().set_itemid(n);
+              const o = await d.BE.FetchTranslationFromCrowdIn(e, r);
               if (o.GetEResult() != a.R)
                 throw new Error(
                   `Error from FetchLocalizationForClanEventFromCrowdIn: ${o.GetErrorMessage()} (${o.GetEResult()})`,
@@ -1426,8 +1426,8 @@ License: MIT
       n.r(t), n.d(t, { FAQRoutes: () => At, default: () => Ct });
       var i,
         a = n(7850),
-        r = n(75844),
-        s = n(90626),
+        s = n(75844),
+        r = n(90626),
         o = n(22837),
         l = n(87231),
         d = n(68255),
@@ -1518,18 +1518,18 @@ License: MIT
                     return (
                       (0, E.h5)(() => {
                         n.forEach((n) => {
-                          let r = !1;
+                          let s = !1;
                           a.forEach((i) => {
                             const a = t.GetLocalization(i, n) || "";
                             if (i === P) {
                               const t = e.GetDraftTitle(n);
                               (a || (t && t.length > 0)) &&
-                                (e.SetDraftTitle(n, a), (r = !0));
+                                (e.SetDraftTitle(n, a), (s = !0));
                             }
                             if (i === M) {
                               const t = e.GetDraftContent(n);
                               (a || (t && t.length > 0)) &&
-                                (e.SetDraftContent(n, a), (r = !0));
+                                (e.SetDraftContent(n, a), (s = !0));
                             }
                           }),
                             i.add(n);
@@ -1542,7 +1542,7 @@ License: MIT
             ],
           });
         },
-        O = (e) => {
+        U = (e) => {
           const { draft: t } = e;
           return (0, a.jsxs)("div", {
             className: y.FlexRowContainer,
@@ -1551,7 +1551,7 @@ License: MIT
                 className: y.EditPreviewButton,
                 onClick: (e) => {
                   (0, f.pg)(
-                    (0, a.jsx)(U, {
+                    (0, a.jsx)(O, {
                       direction: "export",
                       draft: t,
                       children: " ",
@@ -1565,7 +1565,7 @@ License: MIT
                 className: y.EditPreviewButton,
                 onClick: (e) => {
                   (0, f.pg)(
-                    (0, a.jsx)(U, {
+                    (0, a.jsx)(O, {
                       direction: "import",
                       draft: t,
                       children: " ",
@@ -1578,12 +1578,12 @@ License: MIT
             ],
           });
         },
-        U = (e) => {
+        O = (e) => {
           const { closeModal: t, direction: n, draft: i } = e,
-            [r, o] = s.useState(!1),
-            [d, c] = s.useState(new Array()),
+            [s, o] = r.useState(!1),
+            [d, c] = r.useState(new Array()),
             u =
-              (r || d.length,
+              (s || d.length,
               (0, A.we)(
                 "import" == n
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
@@ -1621,8 +1621,8 @@ License: MIT
               }
               o(!1);
             },
-            bOKDisabled: r,
-            children: r ? (0, a.jsx)(x.t, { position: "center" }) : m,
+            bOKDisabled: s,
+            children: s ? (0, a.jsx)(x.t, { position: "center" }) : m,
           });
         },
         z = (e) => {
@@ -1641,20 +1641,20 @@ License: MIT
                         (function (e, t) {
                           var n, i;
                           let a = new R.G();
-                          for (let r = o.Bhc; r < o.bP9; ++r)
-                            (e.BHasSomeTextForLanguage(r) || o.Bhc == t) &&
+                          for (let s = o.Bhc; s < o.bP9; ++s)
+                            (e.BHasSomeTextForLanguage(s) || o.Bhc == t) &&
                               (a.SetLocalization(
                                 P,
-                                r,
-                                null !== (n = e.GetDraftTitle(r)) &&
+                                s,
+                                null !== (n = e.GetDraftTitle(s)) &&
                                   void 0 !== n
                                   ? n
                                   : "",
                               ),
                               a.SetLocalization(
                                 M,
-                                r,
-                                null !== (i = e.GetDraftContent(r)) &&
+                                s,
+                                null !== (i = e.GetDraftContent(s)) &&
                                   void 0 !== i
                                   ? i
                                   : "",
@@ -1714,16 +1714,16 @@ License: MIT
               draft: t,
               rgAllLanguages: n,
               rgLanguagesSelected: i,
-              fnSelectLanguages: r,
+              fnSelectLanguages: s,
             } = e,
-            s = (e, t) => {
+            r = (e, t) => {
               const n = i.includes(t);
               if (e && !n) {
                 const e = i.slice();
-                e.push(t), r(e);
+                e.push(t), s(e);
               } else if (!e && n) {
                 const e = i.filter((e) => e !== t);
-                r(e);
+                s(e);
               }
             },
             o = n
@@ -1735,7 +1735,7 @@ License: MIT
                     draft: t,
                     eLang: e,
                     bInitialState: i.includes(e),
-                    fnOnChecked: s,
+                    fnOnChecked: r,
                   },
                   "langrow" + e + t.GetFAQID(),
                 ),
@@ -1759,7 +1759,7 @@ License: MIT
                 className: B.CheckAll,
                 label: (0, A.we)("#FAQCrowdin_SelectAllCheckboxes"),
                 onChange: (e) => {
-                  r(e ? n.slice() : []);
+                  s(e ? n.slice() : []);
                 },
               }),
               (0, a.jsx)("div", {
@@ -1776,7 +1776,7 @@ License: MIT
         },
         Z = (e) => {
           var t;
-          const { draft: n, eLang: i, bInitialState: r, fnOnChecked: s } = e,
+          const { draft: n, eLang: i, bInitialState: s, fnOnChecked: r } = e,
             l = n.GetLastSavedDraftVersion(i),
             c = l
               ? D.b.InitFromAccountID(Number.parseInt(l.author_account_id))
@@ -1807,18 +1807,18 @@ License: MIT
           return (0, a.jsx)(d.Yh, {
             className: B.LanguageCheckbox,
             label: m,
-            checked: r,
-            onChange: (e) => s(e, i),
+            checked: s,
+            onChange: (e) => r(e, i),
           });
         };
       function q(e) {
         const [t, n] = (0, l.cf)(),
-          [i, r] = s.useState(0),
-          [c, u] = s.useState(!1),
-          [h, m] = s.useState(!1),
-          [g, f] = s.useState(null),
+          [i, s] = r.useState(0),
+          [c, u] = r.useState(!1),
+          [h, m] = r.useState(!1),
+          [g, f] = r.useState(null),
           p = (0, N.m)("CrowdinImportDialog"),
-          x = s.useRef([]);
+          x = r.useRef([]);
         if (g)
           return (0, a.jsx)(_.o0, {
             strTitle: (0, A.we)("#FAQDashboard_CrowdinToolTitle"),
@@ -1860,7 +1860,7 @@ License: MIT
                     onClick: async () => {
                       u(!0);
                       for (let e = 0; e < t.length; e++) {
-                        r(e);
+                        s(e);
                         const n = t[e],
                           i = [],
                           a = 5;
@@ -1895,7 +1895,7 @@ License: MIT
                         const n = t[e],
                           i = x.current[e];
                         if ((null == i ? void 0 : i.length) > 0) {
-                          r(e);
+                          s(e);
                           const t = await l.pN
                             .Get()
                             .PublishDraftByLanguage(n.faq_id, i);
@@ -1951,7 +1951,7 @@ License: MIT
             t.map((e, t) => {
               const i = n[t];
               if (0 == e.length) return null;
-              const r = e.map((e) => (0, o.wwZ)(e)).join(",");
+              const s = e.map((e) => (0, o.wwZ)(e)).join(",");
               return (0, a.jsx)(
                 "div",
                 {
@@ -1966,12 +1966,12 @@ License: MIT
                         children: i.url_code + ": ",
                       }),
                       (0, a.jsx)(v.he, {
-                        toolTipContent: r,
+                        toolTipContent: s,
                         strTooltipClassname: F().HoverAboveModal,
                         nAllowOffscreenPx: 4e4,
                         direction: "left",
                         className: B.LanguageList,
-                        children: r,
+                        children: s,
                       }),
                     ],
                   }),
@@ -1995,17 +1995,17 @@ License: MIT
               children: (0, A.we)("#FAQDashboard_TimeNever"),
             });
           const i = Date.now() / 1e3 - t,
-            r = i < 86400 ? (0, A.Hq)(i, !1, !0) : (0, A.$z)(t);
+            s = i < 86400 ? (0, A.Hq)(i, !1, !0) : (0, A.$z)(t);
           return (0, a.jsx)(X.gS, {
             className: n && ne().Warning,
             rtFullDate: t,
             stylesmodule: ee(),
-            children: r,
+            children: s,
           });
         },
-        ae = (0, r.PA)((e) => {
+        ae = (0, s.PA)((e) => {
           const [t, n] = (0, l.cf)(),
-            [i, r] = s.useState(1),
+            [i, s] = r.useState(1),
             d = t
               .map((e) => {
                 const t = e.per_language_info.find((e) => e.language == o.Bhc),
@@ -2021,13 +2021,13 @@ License: MIT
                       (e) => e.last_update_timestamp < n,
                     ),
                   ).length,
-                  r = Array.from(
+                  s = Array.from(
                     e.per_language_info.filter(
                       (e) =>
                         e.last_publish_timestamp >= e.last_update_timestamp,
                     ),
                   ).length,
-                  s = Array.from(
+                  r = Array.from(
                     e.per_language_info.filter(
                       (e) => e.last_publish_timestamp < e.last_update_timestamp,
                     ),
@@ -2038,15 +2038,15 @@ License: MIT
                   n,
                   i,
                   a,
-                  r,
                   s,
+                  r,
                   e.visible_in_global_realm,
                   e.visible_in_china_realm,
                 ];
               })
               .sort((e, t) => (1 == i ? (0, C.lY)(e[1], t[1]) : t[i] - e[i]));
           return (
-            (0, s.useEffect)(() => {
+            (0, r.useEffect)(() => {
               l.pN.Get().RemoveAllDirtyDrafts();
             }, []),
             (0, a.jsx)("div", {
@@ -2054,8 +2054,8 @@ License: MIT
               children: (0, a.jsxs)("div", {
                 className: b().FAQDashboard,
                 children: [
-                  (0, a.jsx)(re, {}),
-                  (0, a.jsx)(oe, { eCurrentSortColumn: i, SetSortColumn: r }),
+                  (0, a.jsx)(se, {}),
+                  (0, a.jsx)(oe, { eCurrentSortColumn: i, SetSortColumn: s }),
                   0 == t.length &&
                     (0, a.jsx)("div", {
                       className: b().ErrorMsg,
@@ -2068,15 +2068,15 @@ License: MIT
             })
           );
         }),
-        re = (e) => {
-          const t = s.useCallback(
+        se = (e) => {
+          const t = r.useCallback(
               () =>
-                (0, f.mK)((0, a.jsx)(se, {}), window, {
+                (0, f.mK)((0, a.jsx)(re, {}), window, {
                   strTitle: (0, A.we)("#FAQDashboard_CreateFAQButton"),
                 }),
               [],
             ),
-            n = s.useCallback(
+            n = r.useCallback(
               () =>
                 (0, f.mK)(
                   (0, a.jsx)(q, { bDisableBackgroundDismiss: !0 }),
@@ -2108,8 +2108,8 @@ License: MIT
             ],
           });
         },
-        se = (e) => {
-          const [t, n] = s.useState("");
+        re = (e) => {
+          const [t, n] = r.useState("");
           return (0, a.jsxs)(_.o0, {
             onOK: () => {
               l.pN.Get().CreateFAQ(t);
@@ -2192,20 +2192,20 @@ License: MIT
               strLabelLocToken: t,
               bIsNameColumn: n,
               eThisColumn: i,
-              eCurrentSortColumn: r,
-              SetSortColumn: s,
+              eCurrentSortColumn: s,
+              SetSortColumn: r,
             } = e,
             o = (0, w.A)(
               b().EntryColumn,
               b().ClickableHeader,
               n ? b().NameCol : b().DataCol,
-              r == i && b().Selected,
+              s == i && b().Selected,
             );
           return (0, a.jsxs)(v.he, {
             toolTipContent: (0, A.we)(t + "_ttip"),
             direction: "top",
             className: o,
-            onClick: () => s(i),
+            onClick: () => r(i),
             children: [
               (0, A.we)(t),
               (0, a.jsx)("div", {
@@ -2232,9 +2232,9 @@ License: MIT
           });
         },
         ue = (e) => {
-          const [t, n, r, s, o, l, d, c, u] = e.rgColumns,
+          const [t, n, s, r, o, l, d, c, u] = e.rgColumns,
             h = l + d,
-            g = s + o;
+            g = r + o;
           return (0, a.jsxs)(m, {
             route: i.k_eCommunityEdit,
             faqid: t,
@@ -2249,11 +2249,11 @@ License: MIT
               }),
               (0, a.jsx)("div", {
                 className: (0, w.A)(b().EntryColumn, b().DataCol),
-                children: (0, a.jsx)(ie, { rtTimestamp: r }),
+                children: (0, a.jsx)(ie, { rtTimestamp: s }),
               }),
               (0, a.jsx)("div", {
                 className: (0, w.A)(b().EntryColumn, b().DataCol),
-                children: (0, a.jsx)(de, { nCount: s, nTotal: g, nGoal: g }),
+                children: (0, a.jsx)(de, { nCount: r, nTotal: g, nGoal: g }),
               }),
               (0, a.jsx)("div", {
                 className: (0, w.A)(b().EntryColumn, b().DataCol),
@@ -2279,7 +2279,7 @@ License: MIT
           });
         },
         he = (e) => {
-          s.useEffect(
+          r.useEffect(
             () => (
               (window.onbeforeunload = () => {
                 var e;
@@ -2350,13 +2350,13 @@ License: MIT
         Ee = (e) => {
           const { draft: t } = e,
             n = () => e.closeModal && e.closeModal(),
-            [r, o] = s.useState(!1),
-            [c, u] = s.useState(void 0);
+            [s, o] = r.useState(!1),
+            [c, u] = r.useState(void 0);
           let m = (0, a.jsx)("div", {
             children: (0, A.we)("#FAQEditor_DeleteDesc"),
           });
           return (
-            r
+            s
               ? (m = (0, a.jsx)(x.t, {
                   position: "center",
                   size: "medium",
@@ -2384,9 +2384,9 @@ License: MIT
                     (0, a.jsx)(d.wi, {
                       children: (0, a.jsx)(d.CB, {
                         onCancel: n,
-                        bOKDisabled: Boolean(r || c),
+                        bOKDisabled: Boolean(s || c),
                         strOKText: (0, A.we)("#FAQEditor_DeleteAction"),
-                        strCancelText: Boolean(r || c)
+                        strCancelText: Boolean(s || c)
                           ? (0, A.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
@@ -2424,7 +2424,7 @@ License: MIT
             })
           );
         },
-        Le = (0, r.PA)((e) => {
+        Le = (0, s.PA)((e) => {
           const { draft: t, bDisabled: n } = e,
             i = t.BNeedsSaving();
           return (0, a.jsx)(v.he, {
@@ -2454,14 +2454,14 @@ License: MIT
           var t;
           const { draft: n } = e,
             i = () => e.closeModal && e.closeModal(),
-            [r, o] = s.useState(!1),
-            [c, u] = s.useState(void 0),
-            [h, m] = s.useState(void 0),
+            [s, o] = r.useState(!1),
+            [c, u] = r.useState(void 0),
+            [h, m] = r.useState(void 0),
             [g, f] = (0, l.g5)(n.GetFAQID()),
-            [p, v] = s.useState(new Array());
+            [p, v] = r.useState(new Array());
           let w = null;
           if (f)
-            if (r)
+            if (s)
               w = (0, a.jsx)(x.t, {
                 position: "center",
                 size: "medium",
@@ -2532,9 +2532,9 @@ License: MIT
                   (0, a.jsx)(d.wi, {
                     children: (0, a.jsx)(d.CB, {
                       onCancel: i,
-                      bOKDisabled: Boolean(r || c || h || 0 == p.length),
+                      bOKDisabled: Boolean(s || c || h || 0 == p.length),
                       strOKText: (0, A.we)("#FAQPublish_Publish"),
-                      strCancelText: Boolean(r || c || h)
+                      strCancelText: Boolean(s || c || h)
                         ? (0, A.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
@@ -2576,12 +2576,12 @@ License: MIT
         De = (e) => {
           const { draft: t } = e,
             n = () => e.closeModal && e.closeModal(),
-            [i, r] = s.useState(!1),
-            [o, c] = s.useState(void 0),
-            [u, h] = s.useState(void 0),
+            [i, s] = r.useState(!1),
+            [o, c] = r.useState(void 0),
+            [u, h] = r.useState(void 0),
             m = l.pN.Get().GetFAQArticleSummary(t.GetFAQID()),
-            [g, f] = s.useState(m.visible_in_global_realm),
-            [p, v] = s.useState(m.visible_in_china_realm);
+            [g, f] = r.useState(m.visible_in_global_realm),
+            [p, v] = r.useState(m.visible_in_china_realm);
           let w = (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsx)("div", {
@@ -2639,7 +2639,7 @@ License: MIT
                           ? (0, A.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
-                          r(!0),
+                          s(!0),
                             l.pN
                               .Get()
                               .UpdateVisibility(t.GetFAQID(), g, p)
@@ -2655,7 +2655,7 @@ License: MIT
                                 ),
                                   h(L.zi);
                               })
-                              .finally(() => r(!1));
+                              .finally(() => s(!1));
                         },
                       }),
                     }),
@@ -2670,43 +2670,43 @@ License: MIT
         Ie = n(61739),
         Ne = n(88942),
         ke = n(56545);
-      const Qe = (0, r.PA)((e) => {
-          var t, n, i, r, s;
+      const Qe = (0, s.PA)((e) => {
+          var t, n, i, s, r;
           const { draft: d, eLanguage: c } = e,
             u = d.GetFAQID(),
-            [h, m] = (0, l.g5)(u);
-          if (!m) return null;
-          const g =
+            [m, g] = (0, l.g5)(u);
+          if (!g) return null;
+          const _ =
               null ===
                 (n =
-                  null === (t = null == h ? void 0 : h.per_language_info) ||
+                  null === (t = null == m ? void 0 : m.per_language_info) ||
                   void 0 === t
                     ? void 0
                     : t.find((e) => e.language == o.Bhc)) || void 0 === n
                 ? void 0
                 : n.last_update_timestamp,
-            _ =
-              null === (i = null == h ? void 0 : h.per_language_info) ||
+            f =
+              null === (i = null == m ? void 0 : m.per_language_info) ||
               void 0 === i
                 ? void 0
                 : i.some(
                     (e) => e.last_publish_timestamp < e.last_update_timestamp,
                   ),
-            f =
+            p =
               null ===
-                (s =
-                  null === (r = null == h ? void 0 : h.per_language_info) ||
-                  void 0 === r
+                (r =
+                  null === (s = null == m ? void 0 : m.per_language_info) ||
+                  void 0 === s
                     ? void 0
-                    : r
+                    : s
                         .slice()
                         .sort((e, t) => H[e.language] - H[t.language])) ||
-              void 0 === s
+              void 0 === r
                 ? void 0
-                : s.map((e) =>
+                : r.map((e) =>
                     (0, a.jsx)(
                       Be,
-                      { info: e, rtEnglishUpdateTime: g },
+                      { info: e, rtEnglishUpdateTime: _ },
                       e.language,
                     ),
                   );
@@ -2738,7 +2738,7 @@ License: MIT
                                 ),
                                 " ",
                                 (0, a.jsx)(ce, {
-                                  bIsVisible: h.visible_in_global_realm,
+                                  bIsVisible: m.visible_in_global_realm,
                                 }),
                               ],
                             }),
@@ -2750,7 +2750,7 @@ License: MIT
                                 ),
                                 " ",
                                 (0, a.jsx)(ce, {
-                                  bIsVisible: h.visible_in_china_realm,
+                                  bIsVisible: m.visible_in_china_realm,
                                 }),
                               ],
                             }),
@@ -2763,7 +2763,7 @@ License: MIT
                         (0, a.jsxs)("div", {
                           className: ye.PublishCtn,
                           children: [
-                            _
+                            f
                               ? (0, a.jsx)("div", {
                                   className: ye.PublishStatus,
                                   children: (0, A.we)(
@@ -2780,7 +2780,7 @@ License: MIT
                               className: ye.PublishBtn,
                               children: (0, a.jsx)(Le, {
                                 draft: d,
-                                bDisabled: !_,
+                                bDisabled: !f,
                               }),
                             }),
                           ],
@@ -2796,7 +2796,7 @@ License: MIT
                       className: ye.SectionTitle,
                       children: (0, A.we)("#FAQDashboard_LocalizationSection"),
                     }),
-                    (0, a.jsx)(Re, { draft: d }),
+                    h.iA.is_support && (0, a.jsx)(Re, { draft: d }),
                     (0, a.jsxs)("div", {
                       className: ye.SectionContents,
                       children: [
@@ -2818,7 +2818,7 @@ License: MIT
                             "#EventEditor_Loc_CrowdinIntegration_Desc",
                           ),
                         }),
-                        (0, a.jsx)(O, { draft: d }),
+                        (0, a.jsx)(U, { draft: d }),
                       ],
                     }),
                   ],
@@ -2850,7 +2850,7 @@ License: MIT
                             ],
                           }),
                         }),
-                        (0, a.jsx)("tbody", { children: f }),
+                        (0, a.jsx)("tbody", { children: p }),
                       ],
                     }),
                   ],
@@ -2863,7 +2863,7 @@ License: MIT
             }),
           });
         }),
-        Re = (0, r.PA)((e) => {
+        Re = (0, s.PA)((e) => {
           const { draft: t } = e,
             n =
               ((function (e) {
@@ -2879,32 +2879,32 @@ License: MIT
                   },
                 });
               })(t.GetFAQID()),
-              (function (e) {
-                const t = (0, Te.KV)();
+              (function (e, t) {
+                const n = (0, Te.KV)();
                 return (0, Ne.I)({
-                  queryKey: ["get_faq_crowdin_metadata", e],
+                  queryKey: ["get_faq_crowdin_metadata", e, t],
                   queryFn: async () => {
-                    const n = ke.w.Init(Ce.lk);
-                    n.Body().set_faq_id(e);
-                    return (await Ce.RD.GetCrowdInMetadata(t, n))
+                    const i = ke.w.Init(Ce.lk);
+                    i.Body().set_faq_id(t), i.Body().set_steamid(e);
+                    return (await Ce.RD.GetCrowdInMetadata(n, i))
                       .Body()
                       .toObject();
                   },
                 });
-              })(t.GetFAQID())),
-            [i, a] = (0, s.useState)(o.xPp);
-          let r = "";
+              })(h.UF.CLANSTEAMID, t.GetFAQID())),
+            [i, a] = (0, r.useState)(o.xPp);
+          let s = "";
           return (
             n.isSuccess &&
               n.data.crowdin_file_id &&
-              (r = `https://valve.crowdin.com/editor/${n.data.crowdin_project_id}/${n.data.crowdin_file_id}`),
+              (s = `https://valve.crowdin.com/editor/${n.data.crowdin_project_id}/${n.data.crowdin_file_id}`),
             null
           );
         }),
-        Be = (0, r.PA)((e) => {
+        Be = (0, s.PA)((e) => {
           const { info: t, rtEnglishUpdateTime: n } = e,
             i = !!n && n > t.last_update_timestamp,
-            r = t.last_update_timestamp > t.last_publish_timestamp;
+            s = t.last_update_timestamp > t.last_publish_timestamp;
           return (0, a.jsxs)("tr", {
             children: [
               (0, a.jsx)("td", {
@@ -2919,7 +2919,7 @@ License: MIT
               (0, a.jsx)("td", {
                 children: (0, a.jsx)(ie, {
                   rtTimestamp: t.last_publish_timestamp,
-                  bShowAsWarning: r,
+                  bShowAsWarning: s,
                 }),
               }),
             ],
@@ -2929,9 +2929,9 @@ License: MIT
         Pe = n(1909),
         Me = n(26759),
         Ve = n(54736),
-        Oe = n(59461),
-        Ue = n(51520);
-      const ze = (0, r.PA)((e) => {
+        Ue = n(59461),
+        Oe = n(51520);
+      const ze = (0, s.PA)((e) => {
           const { draft: t } = e,
             n = t.BNeedsSaving();
           return (0, a.jsx)("div", {
@@ -2941,7 +2941,7 @@ License: MIT
             children: (0, a.jsxs)("span", {
               children: [
                 !n &&
-                  (0, a.jsx)("img", { className: Ue.SavedImage, src: Oe.A }),
+                  (0, a.jsx)("img", { className: Oe.SavedImage, src: Ue.A }),
                 (0, A.we)(n ? "#Button_Save" : "#Button_Saved"),
               ],
             }),
@@ -2949,11 +2949,11 @@ License: MIT
         }),
         He = (e) => {
           const { draft: t, closeModal: n } = e,
-            [i, r] = s.useState(!0),
-            [o, l] = s.useState(void 0);
-          s.useEffect(() => {
+            [i, s] = r.useState(!0),
+            [o, l] = r.useState(void 0);
+          r.useEffect(() => {
             (async () => {
-              r(!0);
+              s(!0);
               try {
                 const e = await t.SaveDrafts();
                 l(e);
@@ -2964,11 +2964,11 @@ License: MIT
                       (0, je.H)(e).strErrorMsg,
                   );
               } finally {
-                r(!1);
+                s(!1);
               }
             })();
           }, [t]);
-          const c = s.useId();
+          const c = r.useId();
           return (0, a.jsxs)(_.eV, {
             "aria-labelledby": c,
             bAllowFullSize: !0,
@@ -3022,15 +3022,15 @@ License: MIT
         };
       var We = n(66444),
         Ye = n.n(We);
-      const Ze = (0, r.PA)((e) => {
+      const Ze = (0, s.PA)((e) => {
           const { draft: t, bPreview: n } = e,
-            r = t.BHasPublished();
+            s = t.BHasPublished();
           return (0, a.jsx)(xe.tH, {
             children: (0, a.jsxs)("div", {
               className: (0, w.A)({
                 [Ve.EventEditorTopBarContainer]: !0,
-                [Ve.EventUnPublished]: !n && !r,
-                [Ve.EventPublished]: !n && r,
+                [Ve.EventUnPublished]: !n && !s,
+                [Ve.EventPublished]: !n && s,
                 [Ye().FAQPreview]: n,
               }),
               children: [
@@ -3097,10 +3097,10 @@ License: MIT
         }),
         qe = (e) => {
           const { closeModal: t, draft: n } = e,
-            [i, r] = s.useState(n.GetFAQInternalName() || ""),
-            [o, c] = s.useState(!1),
-            [u, h] = s.useState(L.R),
-            [m, g] = s.useState(!1);
+            [i, s] = r.useState(n.GetFAQInternalName() || ""),
+            [o, c] = r.useState(!1),
+            [u, h] = r.useState(L.R),
+            [m, g] = r.useState(!1);
           return (0, a.jsxs)(_.eV, {
             title: (0, A.we)("#FAQEditor_ChangeInternalName"),
             bAllowFullSize: !0,
@@ -3117,7 +3117,7 @@ License: MIT
                     value: i,
                     placeholder: (0, A.we)("#FAQEditor_ChangeInternalName"),
                     onFocus: (e) => e.target.select(),
-                    onChange: (e) => r(e.currentTarget.value),
+                    onChange: (e) => s(e.currentTarget.value),
                     maxLength: 240,
                     disabled: o,
                   }),
@@ -3162,17 +3162,17 @@ License: MIT
             ],
           });
         },
-        Ke = (0, r.PA)((e) => {
+        Ke = (0, s.PA)((e) => {
           const { draft: t, eLanguage: n } = e,
             i = t.GetFAQID(),
-            [r, s] = (0, l.g5)(i),
-            o = s && r.per_language_info.find((e) => e.language == n),
+            [s, r] = (0, l.g5)(i),
+            o = r && s.per_language_info.find((e) => e.language == n),
             d =
-              s &&
+              r &&
               ((h.TS.EREALM == Ge.TU.k_ESteamRealmGlobal &&
-                r.visible_in_global_realm) ||
+                s.visible_in_global_realm) ||
                 (h.TS.EREALM == Ge.TU.k_ESteamRealmChina &&
-                  r.visible_in_china_realm)) &&
+                  s.visible_in_china_realm)) &&
               !!(null == o ? void 0 : o.last_publish_timestamp);
           return (0, a.jsx)(xe.tH, {
             children: (0, a.jsx)("div", {
@@ -3186,7 +3186,7 @@ License: MIT
                     (0, a.jsx)("div", {
                       className: T().EditPreviewButton,
                       children: (0, a.jsx)("a", {
-                        href: h.TS.HELP_BASE_URL + "faqs/view/" + r.url_code,
+                        href: h.TS.HELP_BASE_URL + "faqs/view/" + s.url_code,
                         children: (0, A.we)("#FAQEditir_ViewLiveFAQ"),
                       }),
                     }),
@@ -3196,10 +3196,10 @@ License: MIT
           });
         });
       var Je = n(91254);
-      const Xe = (0, r.PA)((e) => {
+      const Xe = (0, s.PA)((e) => {
           const { faqid: t } = e,
             [n, i] = (0, l.z5)(t),
-            r = s.useRef(void 0);
+            s = r.useRef(void 0);
           if (!i)
             return (0, a.jsx)(x.t, {
               position: "center",
@@ -3233,7 +3233,7 @@ License: MIT
                             children: [
                               (0, a.jsx)(et, { draft: n, eLanguage: o }),
                               (0, a.jsx)(tt, {
-                                bbcodeEditorRef: r,
+                                bbcodeEditorRef: s,
                                 draft: n,
                                 eLanguage: o,
                               }),
@@ -3241,7 +3241,7 @@ License: MIT
                           }),
                           (0, a.jsx)($e, {
                             draft: n,
-                            bbcodeEditorRef: r,
+                            bbcodeEditorRef: s,
                             className: (0, w.A)(T().RightCol, Ae().RightCol),
                           }),
                         ],
@@ -3255,7 +3255,7 @@ License: MIT
           });
         }),
         $e = (e) => {
-          const t = (0, s.useMemo)(() => new D.b(h.UF.CLANSTEAMID), []);
+          const t = (0, r.useMemo)(() => new D.b(h.UF.CLANSTEAMID), []);
           if (!Boolean(h.UF.CAN_UPLOAD_IMAGES)) return null;
           const { draft: n, bbcodeEditorRef: i } = e;
           return (0, a.jsx)(xe.tH, {
@@ -3288,7 +3288,7 @@ License: MIT
             }),
           });
         },
-        et = (0, r.PA)((e) => {
+        et = (0, s.PA)((e) => {
           const { draft: t, eLanguage: n } = e;
           return (0, a.jsxs)("div", {
             className: Ae().EditorTitleField,
@@ -3309,7 +3309,7 @@ License: MIT
             ],
           });
         }),
-        tt = (0, r.PA)((e) => {
+        tt = (0, s.PA)((e) => {
           const { draft: t, eLanguage: n, bbcodeEditorRef: i } = e;
           return (0, a.jsxs)("div", {
             className: Ae().EditorPane,
@@ -3350,17 +3350,17 @@ License: MIT
           });
       var it = n(17909),
         at = n(28735);
-      const rt = (e) => {
+      const st = (e) => {
           const {
               title: t,
               content: n,
               bIsPreview: i,
-              elSideBars: r,
+              elSideBars: s,
               version: o,
             } = e,
             l = (0, c.zy)();
           return (
-            s.useEffect(() => {
+            r.useEffect(() => {
               var e, t, n;
               const i =
                 null === (e = null == l ? void 0 : l.hash) || void 0 === e
@@ -3419,7 +3419,7 @@ License: MIT
                       className: at.RightCol,
                       children: (0, a.jsx)("div", {
                         className: at.SectionCtn,
-                        children: r,
+                        children: s,
                       }),
                     }),
                   ],
@@ -3428,7 +3428,7 @@ License: MIT
             })
           );
         },
-        st = (e) =>
+        rt = (e) =>
           (0, a.jsx)("div", {
             className: at.FAQViewPage,
             children: e.children,
@@ -3438,7 +3438,7 @@ License: MIT
         dt = n(66891);
       const ct = (e) => {
           const { faqContent: t } = e,
-            [n, r] = (0, l.W)(t.faq_id, t.version, t.language);
+            [n, s] = (0, l.W)(t.faq_id, t.version, t.language);
           return l.pN.Get().BHasFAQEdit()
             ? (0, a.jsxs)("div", {
                 className: (0, w.A)(dt.Section, y.ValveOnlyBackground),
@@ -3484,19 +3484,19 @@ License: MIT
             n.GetLastTimeLanguageUpdated(t.language) <= t.timestamp
           )
             return null;
-          const r = n.GetLastSavedDraftVersion(t.language);
+          const s = n.GetLastSavedDraftVersion(t.language);
           return (0, a.jsx)("div", {
             className: lt.InfoRow,
             children: (0, A.PP)(
               "#FAQViewer_DraftNewer",
               (0, a.jsx)(ot.p, {
-                accountID: Number.parseInt(r.author_account_id),
+                accountID: Number.parseInt(s.author_account_id),
               }),
               (0, a.jsx)("span", {
                 children:
-                  (0, A.TW)(r.timestamp) +
+                  (0, A.TW)(s.timestamp) +
                   "@" +
-                  (0, Q.KC)(r.timestamp, { bForce24HourClock: !1 }),
+                  (0, Q.KC)(s.timestamp, { bForce24HourClock: !1 }),
               }),
             ),
           });
@@ -3584,7 +3584,7 @@ License: MIT
             [n, i] = (0, l.Kv)(t, (0, o.sfN)(h.TS.LANGUAGE));
           return i
             ? n
-              ? (0, a.jsx)(rt, {
+              ? (0, a.jsx)(st, {
                   title: n.title,
                   content: n.content,
                   version: n.version,
@@ -3593,12 +3593,12 @@ License: MIT
                     (0, a.jsx)(ct, { faqContent: n }, "adminbar"),
                   ],
                 })
-              : (0, a.jsx)(st, {
+              : (0, a.jsx)(rt, {
                   children: (0, a.jsx)(ft, {
                     strError: (0, A.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
-            : (0, a.jsx)(st, {
+            : (0, a.jsx)(rt, {
                 children: (0, a.jsx)(x.t, {
                   position: "center",
                   size: "xlarge",
@@ -3629,29 +3629,29 @@ License: MIT
             ],
           });
         },
-        pt = (0, r.PA)((e) => {
+        pt = (0, s.PA)((e) => {
           const { faqid: t } = e,
             [n, i] = (0, l.z5)(t),
-            r = fe.O.Get().GetCurEditLanguage();
+            s = fe.O.Get().GetCurEditLanguage();
           return i
             ? n
               ? (0, a.jsxs)(a.Fragment, {
                   children: [
                     (0, a.jsx)(Ze, { draft: n, bPreview: !0 }),
-                    (0, a.jsx)(rt, {
-                      title: n.GetDraftTitleWithFallback(r, h.TS.EREALM),
-                      content: n.GetDraftContentWithFallback(r, h.TS.EREALM),
-                      version: "" + n.GetLastTimeLanguageUpdated(r),
+                    (0, a.jsx)(st, {
+                      title: n.GetDraftTitleWithFallback(s, h.TS.EREALM),
+                      content: n.GetDraftContentWithFallback(s, h.TS.EREALM),
+                      version: "" + n.GetLastTimeLanguageUpdated(s),
                     }),
-                    (0, a.jsx)(Ke, { draft: n, eLanguage: r }),
+                    (0, a.jsx)(Ke, { draft: n, eLanguage: s }),
                   ],
                 })
-              : (0, a.jsx)(st, {
+              : (0, a.jsx)(rt, {
                   children: (0, a.jsx)(ft, {
                     strError: (0, A.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
-            : (0, a.jsx)(st, {
+            : (0, a.jsx)(rt, {
                 children: (0, a.jsx)(x.t, {
                   position: "center",
                   size: "xlarge",
@@ -3668,10 +3668,10 @@ License: MIT
           DashboardFAQ: (e) => `/faqs/${e}/dashboard`,
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
         },
-        Ct = (0, r.PA)((e) => {
-          const [t, n] = s.useState(!0);
+        Ct = (0, s.PA)((e) => {
+          const [t, n] = r.useState(!0);
           return (
-            s.useEffect(() => {
+            r.useEffect(() => {
               (async () => {
                 await xt.KN.InitGlobal(), n(!1);
               })();
@@ -3754,9 +3754,9 @@ License: MIT
       n.d(t, { p: () => v, s: () => x });
       var i = n(7850),
         a = n(90626),
-        r = n(68255),
-        s = n(95695),
-        o = n.n(s),
+        s = n(68255),
+        r = n(95695),
+        o = n.n(r),
         l = n(64846),
         d = n(26408),
         c = n(61859),
@@ -3795,7 +3795,7 @@ License: MIT
                 (0, i.jsxs)("div", {
                   className: h().ValveCrowdInSyncCtn,
                   children: [
-                    (0, i.jsx)(r.J0, {
+                    (0, i.jsx)(s.J0, {
                       value: u.BPushUpdatesToCrowdInAutomatically(),
                       onChange: (e) => {
                         u.SetPushSourceToCrowdInAutomatically(e), F();
@@ -3818,7 +3818,7 @@ License: MIT
                           tooltip: (0, c.we)(
                             "#EventEditor_Localization_Tooltip",
                           ),
-                          className: s.tooltip_Ctn,
+                          className: r.tooltip_Ctn,
                         }),
                         (0, i.jsx)("br", {}),
                         (0, i.jsx)("span", {
@@ -3894,8 +3894,8 @@ License: MIT
       n.d(t, { Yg: () => A, t3: () => C });
       var i = n(7850),
         a = n(40323),
-        r = n.n(a),
-        s = n(90626),
+        s = n.n(a),
+        r = n(90626),
         o = n(22837),
         l = n(2160),
         d = n(69343),
@@ -3916,12 +3916,12 @@ License: MIT
             const {
                 fnGetLocData: i,
                 closeModal: a,
-                strFileNamePrefix: r,
-                lang: s,
+                strFileNamePrefix: s,
+                lang: r,
               } = e,
               l = i(),
               d = new x.s();
-            let c = r ? r + "_localization" : "localization";
+            let c = s ? s + "_localization" : "localization";
             switch (n) {
               case "csv_row":
                 d.WriteLocalizationData_CSV_LanguageRows(l, c + ".csv");
@@ -3938,8 +3938,8 @@ License: MIT
               case "xml":
                 d.WriteLocalizationData_XML_SingleLanguage(
                   l,
-                  s,
-                  c + "_" + (0, o.x6o)((0, o.LgB)(s)) + ".xml",
+                  r,
+                  c + "_" + (0, o.x6o)((0, o.LgB)(r)) + ".xml",
                 );
             }
             a && a();
@@ -3947,7 +3947,7 @@ License: MIT
           return (0, i.jsxs)(i.Fragment, {
             children: [
               Boolean(e.bShowCSV) &&
-                (0, i.jsxs)(s.Fragment, {
+                (0, i.jsxs)(r.Fragment, {
                   children: [
                     (0, i.jsx)(c.jn, {
                       onClick: (e) => t(e, "csv_row"),
@@ -3978,7 +3978,7 @@ License: MIT
           });
         },
         C = (e) => {
-          const [t, n] = (0, s.useState)(!1),
+          const [t, n] = (0, r.useState)(!1),
             a = (e, t) => {
               n(!1),
                 console.log(
@@ -4031,11 +4031,11 @@ License: MIT
               if (i && i.length > 0) {
                 n(!0);
                 let t = new Array(),
-                  s = new x.s();
+                  r = new x.s();
                 for (let n = 0; n < i.length; ++n)
                   if (i[n]) {
                     if (i[n].name.toLocaleLowerCase().endsWith(".csv"))
-                      return void r().parse(i[0], {
+                      return void s().parse(i[0], {
                         header: !0,
                         complete: (t) => {
                           let n = new x.s().DetectAndFormatCSV(t);
@@ -4049,14 +4049,14 @@ License: MIT
                           const i = p.A0.GetLanguageListForRealms([
                               l.TU.k_ESteamRealmGlobal,
                             ]),
-                            r = e.fnOnImportLocData(n, i);
-                          c(r);
+                            s = e.fnOnImportLocData(n, i);
+                          c(s);
                         },
                         error: a,
                       });
                     if (i[n].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let { language: r } = (0, d.jj)(i[n].name, o.xPp);
-                      if (null == r || r == o.xPp)
+                      let { language: s } = (0, d.jj)(i[n].name, o.xPp);
+                      if (null == s || s == o.xPp)
                         return void a({
                           code: "",
                           message: (0, p.we)(
@@ -4068,11 +4068,11 @@ License: MIT
                         });
                       try {
                         const a =
-                          await s.ReadLocalizationData_XML_SingleLanguage(
+                          await r.ReadLocalizationData_XML_SingleLanguage(
                             i[n],
-                            r,
+                            s,
                           );
-                        e.fnOnImportLocData(a, [r]).forEach((e) => {
+                        e.fnOnImportLocData(a, [s]).forEach((e) => {
                           -1 == t.indexOf(e) && t.push(e);
                         });
                       } catch (e) {
@@ -4133,10 +4133,10 @@ License: MIT
     },
     9161: (e, t, n) => {
       "use strict";
-      n.d(t, { g: () => r });
+      n.d(t, { g: () => s });
       var i = n(40323),
         a = n.n(i);
-      class r {
+      class s {
         static ParseCSVFile(e) {
           return new Promise((t, n) => {
             const i = {
@@ -4168,7 +4168,7 @@ License: MIT
         }
         static WriteCSVToFile(e, t) {
           const n = a().unparse(e, { header: !0 });
-          r.WriteFile(new Blob([n], { type: "text/csv:charset=utf-8;" }), t);
+          s.WriteFile(new Blob([n], { type: "text/csv:charset=utf-8;" }), t);
         }
         static WriteXMLToFile(e, t) {
           const n = () =>
@@ -4176,21 +4176,21 @@ License: MIT
           let i =
             "<" + n() + 'xml version="1.0" encoding="UTF-8" ' + n() + ">\n";
           (i += new XMLSerializer().serializeToString(e)),
-            r.WriteFile(
+            s.WriteFile(
               new Blob([i], { type: "application/xml:charset=utf-8;" }),
               t,
             );
         }
       }
-      r.m_DummyValueForQuestionHack = 0;
+      s.m_DummyValueForQuestionHack = 0;
     },
     87669: (e, t, n) => {
       "use strict";
       n.d(t, { G: () => l, s: () => d });
       var i = n(22837),
         a = n(2160),
-        r = n(62490),
-        s = n(9161),
+        s = n(62490),
+        r = n(9161),
         o = n(61859);
       class l {
         constructor() {
@@ -4202,7 +4202,7 @@ License: MIT
         }
         SetLocalization(e, t, n) {
           let a = this.m_mapTokens.get(e);
-          a || ((a = (0, r.$Y)([], i.bP9, null)), this.m_mapTokens.set(e, a)),
+          a || ((a = (0, s.$Y)([], i.bP9, null)), this.m_mapTokens.set(e, a)),
             (a[t] = n);
         }
         GetSortedTokenList() {
@@ -4248,7 +4248,7 @@ License: MIT
       }
       class d {
         DetectAndFormatCSV(e) {
-          var t, n, a, r, s, o;
+          var t, n, a, s, r, o;
           let l = null;
           return (
             (null ===
@@ -4263,20 +4263,20 @@ License: MIT
             "value" === e.meta.fields[2]
               ? (l = this.ReadLocalizationData_CSV_TokenLanguageList(e))
               : (null ===
-                    (r =
+                    (s =
                       null === (a = null == e ? void 0 : e.meta) || void 0 === a
                         ? void 0
-                        : a.fields) || void 0 === r
+                        : a.fields) || void 0 === s
                     ? void 0
-                    : r.length) >= 2 &&
+                    : s.length) >= 2 &&
                   "field" === e.meta.fields[0] &&
                   (0, i.sfN)(e.meta.fields[1], i.xPp) != i.xPp
                 ? (l = this.ReadLocalizationData_CSV_LanguageColumns(e))
                 : (null ===
                     (o =
-                      null === (s = null == e ? void 0 : e.meta) || void 0 === s
+                      null === (r = null == e ? void 0 : e.meta) || void 0 === r
                         ? void 0
-                        : s.fields) || void 0 === o
+                        : r.fields) || void 0 === o
                     ? void 0
                     : o.length) >= 2 &&
                   "language" === e.meta.fields[0] &&
@@ -4287,15 +4287,15 @@ License: MIT
         async ReadLocalizationData_XML_SingleLanguage(e, t) {
           let n = new l(),
             i = new DOMParser(),
-            a = await s.g.ReadFile(e),
-            r = i.parseFromString(a.toString(), "application/xml");
-          for (let e = 0; e < r.documentElement.children.length; ++e) {
-            const i = r.documentElement.children.item(e);
+            a = await r.g.ReadFile(e),
+            s = i.parseFromString(a.toString(), "application/xml");
+          for (let e = 0; e < s.documentElement.children.length; ++e) {
+            const i = s.documentElement.children.item(e);
             if (!i.getAttribute("id"))
               throw "Can not find id for element. Probably malformed XML";
             const a = i.getAttribute("id").toLocaleLowerCase(),
-              s = i.textContent;
-            n.SetLocalization(a, t, s);
+              r = i.textContent;
+            n.SetLocalization(a, t, r);
           }
           return n;
         }
@@ -4316,8 +4316,8 @@ License: MIT
             e.data.forEach((e) => {
               const n = e.field;
               for (let a = i.Bhc; a < i.bP9; ++a) {
-                const r = (0, i.x6o)((0, i.LgB)(a));
-                t.SetLocalization(n, a, e[r]);
+                const s = (0, i.x6o)((0, i.LgB)(a));
+                t.SetLocalization(n, a, e[s]);
               }
             }),
             t
@@ -4344,13 +4344,13 @@ License: MIT
           let n = new Array();
           e.GetSortedTokenList().forEach((t) => {
             for (const a of this.GetExportLanguages()) {
-              let r = { field: t };
-              (r.language = (0, i.x6o)((0, i.LgB)(a))),
-                (r.value = e.GetLocalization(t, a)),
-                n.push(r);
+              let s = { field: t };
+              (s.language = (0, i.x6o)((0, i.LgB)(a))),
+                (s.value = e.GetLocalization(t, a)),
+                n.push(s);
             }
           }),
-            s.g.WriteCSVToFile(n, t);
+            r.g.WriteCSVToFile(n, t);
         }
         WriteLocalizationData_CSV_LanguageColumns(e, t) {
           let n = new Array();
@@ -4360,7 +4360,7 @@ License: MIT
               a[(0, i.x6o)((0, i.LgB)(n))] = e.GetLocalization(t, n);
             n.push(a);
           }),
-            s.g.WriteCSVToFile(n, t);
+            r.g.WriteCSVToFile(n, t);
         }
         WriteLocalizationData_CSV_LanguageRows(e, t) {
           let n = new Array();
@@ -4373,7 +4373,7 @@ License: MIT
               n[i][t] = a;
             }
           }),
-            s.g.WriteCSVToFile(n, t);
+            r.g.WriteCSVToFile(n, t);
         }
         WriteLocalizationData_XML_SingleLanguage(e, t, n) {
           let i = document.implementation.createDocument(null, "content", null);
@@ -4383,7 +4383,7 @@ License: MIT
               a.appendChild(i.createTextNode(e.GetLocalization(n, t) || "")),
               i.documentElement.append(a);
           }),
-            s.g.WriteXMLToFile(i, n);
+            r.g.WriteXMLToFile(i, n);
         }
       }
     },

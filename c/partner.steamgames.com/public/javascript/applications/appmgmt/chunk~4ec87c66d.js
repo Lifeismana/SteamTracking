@@ -1466,8 +1466,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
@@ -1494,18 +1492,6 @@
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
-        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
-        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
-        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
-        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
-        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
-        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
-        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
-        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
-        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
-        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
-        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     chunkid: (module) => {
@@ -28325,7 +28311,7 @@
                   children: (0, _.jsx)("div", {
                     className: _().SectionBody,
                     children:
-                      "You can find a recap of your demo activity and wishlist additions here: https://partner.steamgames.com/recap/nextfest/<feb_2025>",
+                      "You can find a recap of your demo activity and wishlist additions here: https://partner.steamgames.com/recap/nextfest/<auto_fill_my_real_email_tech>",
                   }),
                 }));
               break;
@@ -44494,7 +44480,8 @@
                       value: _,
                       onChange: (_) =>
                         __webpack_require__(
-                          (0, _._)(_?.currentTarget?.value)
+                          _?.currentTarget?.value &&
+                            (0, _._)(_?.currentTarget?.value)
                             ? Number.parseInt(_.currentTarget.value)
                             : 0,
                         ),
@@ -44770,13 +44757,10 @@
           });
         }
         let _ = "?? ";
+        const _ = _?.GetBestPurchaseOption()?.final_price_in_cents;
         return (
-          (0, _._)(_?.GetBestPurchaseOption()?.final_price_in_cents)
-            ? (_ = (
-                Number.parseInt(
-                  _.GetBestPurchaseOption().final_price_in_cents,
-                ) / 100
-              ).toFixed(2))
+          _ && (0, _._)(_)
+            ? (_ = (Number.parseInt(_) / 100).toFixed(2))
             : _ && (_ = (_ / 100).toFixed(2)),
           (0, _.jsxs)(_.Fragment, {
             children: [
@@ -78062,36 +78046,41 @@
             _.heading_color,
             _.highlighted_facet_color,
           ]),
-          _ = (0, _._)(),
-          _ = (function (_, _, _) {
-            if (_.disable_background && !_)
-              return {
-                paddingLeft: 0,
-                paddingRight: 0,
-              };
-            let _ = "";
-            _.background_image &&
-              (_ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`);
-            return _.background_gradient_bottom ||
-              _.background_gradient_top ||
-              _.length > 0 ||
-              _.background_repeat ||
-              _.border_color ||
-              _.border_width
-              ? {
-                  backgroundImage:
-                    _(_.background_gradient_bottom, _.background_gradient_top) +
-                    _,
-                  backgroundRepeat: _.background_repeat,
-                  backgroundSize:
-                    "coverBlur" == _.background_repeat ? "cover" : "",
-                  outlineStyle:
-                    _.border_color && _.border_width ? "solid" : void 0,
-                  outlineColor: _.border_color,
-                  outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
-                }
-              : {};
-          })(_, _, _);
+          _ =
+            ((0, _._)(),
+            (function (_, _) {
+              if (_.disable_background)
+                return {
+                  paddingLeft: 0,
+                  paddingRight: 0,
+                };
+              let _ = "";
+              _.background_image &&
+                (_ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`);
+              return _.background_gradient_bottom ||
+                _.background_gradient_top ||
+                _.length > 0 ||
+                _.background_repeat ||
+                _.border_color ||
+                _.border_width
+                ? {
+                    backgroundImage:
+                      _(
+                        _.background_gradient_bottom,
+                        _.background_gradient_top,
+                      ) + _,
+                    backgroundRepeat: _.background_repeat,
+                    backgroundSize:
+                      "coverBlur" == _.background_repeat ? "cover" : "",
+                    outlineStyle:
+                      _.border_color && _.border_width ? "solid" : void 0,
+                    outlineColor: _.border_color,
+                    outlineWidth: _.border_width
+                      ? `${_.border_width}px`
+                      : void 0,
+                  }
+                : {};
+            })(_, _));
         return (0, _.jsx)(_, {
           labelColor: _,
           headingColor: _,
@@ -100354,7 +100343,7 @@
           _ = _.internal_section_title?.trim();
         if ((_?.length ?? 0) > 0) {
           if (_ == _._ || _ == _._)
-            return 0 == _?.trim().length
+            return 0 == _?.trim().length || _
               ? _
               : (0, _.jsxs)(_.Fragment, {
                   children: [
@@ -100370,7 +100359,7 @@
                   ],
                 });
           if (_ == _._)
-            return 0 == _?.trim().length
+            return 0 == _?.trim().length || _
               ? _
               : (0, _.jsxs)(_.Fragment, {
                   children: [

@@ -1448,8 +1448,6 @@
     },
     33924: (e) => {
       e.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
@@ -1476,18 +1474,6 @@
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
-        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
-        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
-        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
-        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
-        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
-        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
-        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
-        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
-        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
-        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
-        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     37768: (e) => {
@@ -27099,7 +27085,7 @@
                   children: (0, s.jsx)("div", {
                     className: ns().SectionBody,
                     children:
-                      "You can find a recap of your demo activity and wishlist additions here: https://partner.steamgames.com/recap/nextfest/<feb_2025>",
+                      "You can find a recap of your demo activity and wishlist additions here: https://partner.steamgames.com/recap/nextfest/<auto_fill_my_real_email_tech>",
                   }),
                 }));
               break;
@@ -42041,7 +42027,8 @@
                       value: t,
                       onChange: (e) =>
                         n(
-                          (0, x.TT)(e?.currentTarget?.value)
+                          e?.currentTarget?.value &&
+                            (0, x.TG)(e?.currentTarget?.value)
                             ? Number.parseInt(e.currentTarget.value)
                             : 0,
                         ),
@@ -42307,13 +42294,10 @@
           return (0, s.jsx)("div", { children: e });
         }
         let r = "?? ";
+        const o = t?.GetBestPurchaseOption()?.final_price_in_cents;
         return (
-          (0, S.TT)(t?.GetBestPurchaseOption()?.final_price_in_cents)
-            ? (r = (
-                Number.parseInt(
-                  t.GetBestPurchaseOption().final_price_in_cents,
-                ) / 100
-              ).toFixed(2))
+          o && (0, S.TG)(o)
+            ? (r = (Number.parseInt(o) / 100).toFixed(2))
             : i && (r = (i / 100).toFixed(2)),
           (0, s.jsxs)(s.Fragment, {
             children: [
@@ -44500,7 +44484,7 @@
           [b, j, w, I, C] = (0, h.useMemo)(() => {
             if (!c) return [f, y, D, _, g];
             const e = (e) => {
-              const t = (0, ie.TT)(c);
+              const t = (0, ie.TG)(c);
               if (e.hasOwnProperty("rtexpiretime")) {
                 const n = e;
                 if (n.appid) {
@@ -54299,7 +54283,7 @@
           n.trim().length > 0)
         ) {
           const t = n.toLowerCase(),
-            s = (0, je.TT)(n) ? Number.parseInt(n) : void 0;
+            s = (0, je.TG)(n) ? Number.parseInt(n) : void 0;
           e = e.filter(
             (e) =>
               e.title.toLowerCase().includes(t) ||
@@ -61367,7 +61351,7 @@
               ref: l,
               onChange: (e) =>
                 ((e) => {
-                  if ((o.current?.Hide(), !je.TT(e) && e.length < 2)) return;
+                  if ((o.current?.Hide(), !je.TG(e) && e.length < 2)) return;
                   const t = e.toLowerCase();
                   let n = p?.filter((e) => e.key.toLowerCase().includes(t));
                   0 != n.length &&
@@ -72855,41 +72839,44 @@
             t.heading_color,
             t.highlighted_facet_color,
           ]),
-          o = (0, w.Qn)(),
-          l = (function (e, t, n) {
-            if (e.disable_background && !n)
-              return { paddingLeft: 0, paddingRight: 0 };
-            let s = "";
-            e.background_image &&
-              (s += `,url(${Re.zU.GenerateURLFromHashAndExt(t.clanSteamID, e.background_image)})`);
-            return e.background_gradient_bottom ||
-              e.background_gradient_top ||
-              s.length > 0 ||
-              e.background_repeat ||
-              e.border_color ||
-              e.border_width
-              ? {
-                  backgroundImage:
-                    Ne(
-                      e.background_gradient_bottom,
-                      e.background_gradient_top,
-                    ) + s,
-                  backgroundRepeat: e.background_repeat,
-                  backgroundSize:
-                    "coverBlur" == e.background_repeat ? "cover" : "",
-                  outlineStyle:
-                    e.border_color && e.border_width ? "solid" : void 0,
-                  outlineColor: e.border_color,
-                  outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
-                }
-              : {};
-          })(t, n, o);
+          o =
+            ((0, w.Qn)(),
+            (function (e, t) {
+              if (e.disable_background)
+                return { paddingLeft: 0, paddingRight: 0 };
+              let n = "";
+              e.background_image &&
+                (n += `,url(${Re.zU.GenerateURLFromHashAndExt(t.clanSteamID, e.background_image)})`);
+              return e.background_gradient_bottom ||
+                e.background_gradient_top ||
+                n.length > 0 ||
+                e.background_repeat ||
+                e.border_color ||
+                e.border_width
+                ? {
+                    backgroundImage:
+                      Ne(
+                        e.background_gradient_bottom,
+                        e.background_gradient_top,
+                      ) + n,
+                    backgroundRepeat: e.background_repeat,
+                    backgroundSize:
+                      "coverBlur" == e.background_repeat ? "cover" : "",
+                    outlineStyle:
+                      e.border_color && e.border_width ? "solid" : void 0,
+                    outlineColor: e.border_color,
+                    outlineWidth: e.border_width
+                      ? `${e.border_width}px`
+                      : void 0,
+                  }
+                : {};
+            })(t, n));
         return (0, s.jsx)(Ke, {
           labelColor: a,
           headingColor: i,
           buttonColor: a,
           highlightedFacetColor: r,
-          background: l,
+          background: o,
           ...e,
         });
       }
@@ -93722,7 +93709,7 @@
           u = e.internal_section_title?.trim();
         if ((u?.length ?? 0) > 0) {
           if (i == l.W3 || i == l.Ay)
-            return 0 == p?.trim().length
+            return 0 == p?.trim().length || r
               ? u
               : (0, s.jsxs)(s.Fragment, {
                   children: [
@@ -93738,7 +93725,7 @@
                   ],
                 });
           if (i == l.uF)
-            return 0 == p?.trim().length
+            return 0 == p?.trim().length || r
               ? u
               : (0, s.jsxs)(s.Fragment, {
                   children: [

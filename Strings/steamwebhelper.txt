@@ -471,7 +471,6 @@ $d`D-laM
 %hu:%u:%u%c
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-%language%
 %ld%c
 %lld
 %llu
@@ -658,7 +657,6 @@ $d`D-laM
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -792,7 +790,6 @@ $d`D-laM
 *ZN19CCompositorGLThread15OnWindowRemovedEmEUlPK19ICompositorDrawableE_
 *ZN19CCompositorGLThread22OnStackingOrderChangedEmmEUlPK19ICompositorDrawableE_
 *ZN19CX11EventDispatcher23UnregisterEventListenerEP24ICompositorEventListenerEUlPKS0_E_
-*ZN21RenderProcessMessagesL20OnGetFocusedNodeTextERKNS_19RenderHandlerParamsEEUl13scoped_refptrI14CefDOMDocumentEE_
 *ZN23CV8ManagerRenderProcess30CreateCallbackUnregisterObjectER13scoped_refptrI10CefV8ValueES0_I10CefBrowserEyEUlvE_
 *ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListINS_12CallbackInfoEiEEUlvE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
@@ -846,6 +843,7 @@ $d`D-laM
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
@@ -1140,6 +1138,7 @@ $d`D-laM
 /data/src/webhelper/gpureport.cpp
 /data/src/webhelper/html_chrome.cpp
 /data/src/webhelper/ibus_v8_wrapper.cpp
+/data/src/webhelper/processmessages_browser.cpp
 /data/src/webhelper/webhelper.cpp
 /data/src/webhelper/webhelperv8.cpp
 /dev
@@ -1224,7 +1223,6 @@ $d`D-laM
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:54:18
 01/01/00
 0123456789
 0123456789.
@@ -1482,7 +1480,6 @@ $d`D-laM
 13CMsgWasHidden
 13CUIFontFilePB
 13CefBaseScoped
-13CefDOMVisitor
 13CefMediaRoute
 13CefStructBaseI15CefCookieTraitsE
 13CefStructBaseI17CefSettingsTraitsE
@@ -1499,7 +1496,6 @@ $d`D-laM
 13_cef_cookie_t
 14 (default)
 14CCBAccountInfo
-14CCefDOMVisitor
 14CChromePainter
 14CClanEventInfo
 14CClientHandler
@@ -1544,6 +1540,7 @@ $d`D-laM
 14CefValueCToCpp
 14ConCommandBase
 1536
+15:29:38
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 15CChatMemberInfo
@@ -1654,7 +1651,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI19CMsgClearAllCookiesE
 16CHTMLProtoBufMsgI19CMsgComboNeedsPaintE
 16CHTMLProtoBufMsgI19CMsgFinishedRequestE
-16CHTMLProtoBufMsgI19CMsgFocusedNodeTextE
 16CHTMLProtoBufMsgI19CMsgGetZoomResponseE
 16CHTMLProtoBufMsgI19CMsgLoadingResourceE
 16CHTMLProtoBufMsgI19CMsgPopupHTMLWindowE
@@ -1664,7 +1660,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI20CMsgJSExecutePromiseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI20CMsgRestartJSContextE
 16CHTMLProtoBufMsgI20CMsgScalePageToValueE
 16CHTMLProtoBufMsgI20CMsgSetSteamBetaNameE
@@ -1695,7 +1690,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI24CMsgNotifyUserActivationE
 16CHTMLProtoBufMsgI24CMsgSetProtocolBlockListE
 16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
-16CHTMLProtoBufMsgI24CMsgZoomToFocusedElementE
 16CHTMLProtoBufMsgI25CMsgAckSharedPaintBuffersE
 16CHTMLProtoBufMsgI25CMsgBrowserCreateResponseE
 16CHTMLProtoBufMsgI25CMsgMaximizeRestoreWindowE
@@ -1708,16 +1702,12 @@ $d`D-laM
 16CHTMLProtoBufMsgI26CMsgShowBrowserContextMenuE
 16CHTMLProtoBufMsgI26CMsgToggleFindInPageDialogE
 16CHTMLProtoBufMsgI27CMsgDraggableRegionsChangedE
-16CHTMLProtoBufMsgI27CMsgFocusedNodeTextResponseE
-16CHTMLProtoBufMsgI27CMsgForcePopupsToDirectHWNDE
 16CHTMLProtoBufMsgI27CMsgHorizontalScrollBarSizeE
 16CHTMLProtoBufMsgI27CMsgProcessInfoNotificationE
 16CHTMLProtoBufMsgI27CMsgRenderProcessTerminatedE
 16CHTMLProtoBufMsgI27CMsgSetVRKeyboardVisibilityE
-16CHTMLProtoBufMsgI27CMsgZoomToElementAtPositionE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
-16CHTMLProtoBufMsgI28CMsgScalePageToValueResponseE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI28CMsgSetAccessibilitySettingsE
 16CHTMLProtoBufMsgI28CMsgSetTouchGesturesToCancelE
@@ -1728,7 +1718,6 @@ $d`D-laM
 16CHTMLProtoBufMsgI31CMsgDisableBackgroundThrottlingE
 16CHTMLProtoBufMsgI33CMsgVerticalScrollBarSizeResponseE
 16CHTMLProtoBufMsgI35CMsgHorizontalScrollBarSizeResponseE
-16CHTMLProtoBufMsgI35CMsgZoomToElementAtPositionResponseE
 16CHTMLProtoBufMsgI38CMsgSetBrowserViewDomainRequestMappingE
 16CHTMLProtoBufMsgI41CMsgBrowserViewPostMessageToParentRequestE
 16CHTMLProtoBufMsgI8CMsgCopyE
@@ -1861,7 +1850,6 @@ $d`D-laM
 19CMsgComboNeedsPaint
 19CMsgControllerInput
 19CMsgFinishedRequest
-19CMsgFocusedNodeText
 19CMsgFunctionalCurve
 19CMsgGetZoomResponse
 19CMsgLinearListCurve
@@ -2032,7 +2020,6 @@ $d`D-laM
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgLoadLocalization
 20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
@@ -2136,7 +2123,6 @@ $d`D-laM
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CMsgZoomToFocusedElement
 24CefBrowserProcessHandler
 24CefDictionaryValueCToCpp
 24CefDownloadHandlerCppToC
@@ -2193,16 +2179,12 @@ $d`D-laM
 27;C
 27CMsgControllerConfiguration
 27CMsgDraggableRegionsChanged
-27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetControllerSourceMode
 27CMsgSetVRKeyboardVisibility
-27CMsgZoomToElementAtPosition
 27CV8RenderProcessFuncHandler
 27CefCompletionCallbackCppToC
 27CefContextMenuHandlerCppToC
@@ -2214,7 +2196,6 @@ $d`D-laM
 28CMsgGetCookiesForURLResponse
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
-28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
@@ -2295,7 +2276,6 @@ $d`D-laM
 35CMsgControllerActionSetMiscSettings
 35CMsgControllerInputModeShiftBinding
 35CMsgHorizontalScrollBarSizeResponse
-35CMsgZoomToElementAtPositionResponse
 36CMsgControllerInputGameActionBinding
 36CMsgControllerInputMouseWheelBinding
 36CMsgControllerVirtualMenuPreviewInfo
@@ -2336,6 +2316,7 @@ $d`D-laM
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 474E4U4W4c4i4m4
+4766605f244a2d18d26d0cfe222d25d6698cd5a0
 47CMsgControllerInputControllerActionMouseBinding
 49fN
 4@AA
@@ -2345,7 +2326,6 @@ $d`D-laM
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
@@ -2385,7 +2365,6 @@ $d`D-laM
 6-nn
 60CMsgControllerInputControllerActionChangePlayerNumberBinding
 60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
-60f040bf5dec848fb6a2538d690e60ddd0bfc114
 6144
 64CK\vH
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -3177,6 +3156,8 @@ Browser.InspectElement takes two arguments: <x: double> <y: double>
 Browser.NotifyUserActivation
 Browser.OpenDevTools
 Browser.Paste
+Browser.RemoveAllBackstackEntries
+Browser.RemoveAllBackstackEntries takes zero arguments
 Browser.ReplaceMisspelling
 Browser.RestartJSContext
 Browser.SetBackgroundThrottlingDisabled
@@ -3766,9 +3747,6 @@ CMsgFileLoadDialog
 CMsgFileLoadDialogResponse
 CMsgFind
 CMsgFinishedRequest
-CMsgFocusedNodeText
-CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgFunctionalCurve
 CMsgGameAction
@@ -3798,7 +3776,6 @@ CMsgLinearCurve
 CMsgLinearListCurve
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -3817,7 +3794,6 @@ CMsgPageSecurity
 CMsgPauseRepaint
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgPowerCurve
 CMsgProcessInfoNotification
 CMsgRenderProcessTerminated
@@ -3829,7 +3805,6 @@ CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
-CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
@@ -3878,8 +3853,6 @@ CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgVerticalScrollBarSize
 CMsgViewSource
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 COMPLEMENTOFALL
 COMPLEMENTOFDEFAULT
 CONF_dump_fp
@@ -4155,6 +4128,7 @@ Collection
 CollectionEligible
 CollectionPublished
 Collections
+Command line is already escaped: %s
 CommentCount
 Comments by user
 Committing
@@ -5319,6 +5293,7 @@ Force enable browser view underlays
 ForceUpdate
 Forced Off
 Forced create but already created for SharedObjectEvent\n
+ForwardToRenderer: failed sending message %d to invalid browser %d\n
 Found
 Found gamescope pid: %u
 Found invalid proto option data for:
@@ -6335,6 +6310,7 @@ INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_ENUM
 INVALID_FRAMEBUFFER_OPERATION
+INVALID_KEY_SYMBOL
 INVALID_OPERATION
 INVALID_VALUE
 IP Address
@@ -6657,7 +6633,7 @@ Japanese
 JoinedGroup
 Joystick
 July
-Jun  9 2026
+Jun 24 2026
 June
 K'iche'
 K-163
@@ -6935,7 +6911,6 @@ LineItemCount
 LinePay
 Linkaja
 Linux
-Linux; ChromeOS; CrOS
 LinuxHome
 LinuxXdgConfigHome
 LinuxXdgDataHome
@@ -6952,7 +6927,6 @@ LoadURL
 Loaded GL %d.%d
 Local file request not allowed for %s:%d
 LocalKeySet
-Localize
 Location
 Locked
 Locking Failed
@@ -8058,7 +8032,8 @@ Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
+Plat_IsSteamOSGameMode
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_MSTime
 Plat_MSTime64
@@ -8361,6 +8336,7 @@ Region Locked
 Region Restriction Expired
 Region not supported
 Region restricted
+RegisterJSMethod: invalid browser %d\n
 Registered ID
 Registered ID:
 Relay Failed
@@ -8373,6 +8349,7 @@ Reload
 Remote File Conflict
 Remote call failed
 Remove From CRL
+RemoveAllBackstackEntries: called without a valid browser
 RemoveLast
 Renew failed
 Renew next period
@@ -8436,6 +8413,7 @@ Routing Domain Identifiers
 Row has too many bytes to allocate in memory
 RuPay
 RunCommand
+RunCommand: %s\n
 RunCommandGetOutput
 Running Script
 Running Update
@@ -9056,8 +9034,6 @@ Steam ID does not pass strict parsing: '%s'
 Steam Video
 Steam client out of date
 Steam encountered an error (#%d) while rendering the page you were viewing. Click <a style="color: %s" href="%s">here</a> to reload.
-Steam.Localize() requires 1 string param
-Steam.Localize(): invalid browser
 Steam/Press Master
 Steam2 Migration Complete
 Steam2010 CD-Key
@@ -9136,6 +9112,8 @@ StringAfterPrefixCaseSensitive
 StringCompare
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfChar
+StringIndexOfString
 StringPrintfVector currently only supports up to
 Strong Extranet ID
 Subject Information Access
@@ -9737,12 +9715,10 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
-V_StripLastDir
 V_URLContainsDomain
 V_URLDecodeRaw
 V_URLParse
 V_UTF16ToUTF32
-V_UTF16ToUTF8
 V_UTF32ToUTF16
 V_UTF32ToUTF8
 V_UTF8ToUChar32
@@ -10324,7 +10300,6 @@ Zulu
 [M:%u:%u:%u]
 [TXN:%llu]
 [abi:
-[english]
 [from client]: %s
 [h1R
 [lazy = true] can only be specified for submessage fields.
@@ -10846,6 +10821,7 @@ alignof
 all elements of GVariant array must have same type
 allocator
 allotmswe
+allow_autoplay_without_user_activation
 allow_no_dhe_kex
 allowed in proto3.
 allowed_extensions
@@ -11095,7 +11071,6 @@ bOnlyAllowTrustedPopups
 bPreventCloseFromJavascript
 bS11*?
 bUnderlaySupported
-bValidHandle
 bV}TS
 b\fLM%
 b\fzUkm
@@ -11312,6 +11287,7 @@ browser_handle
 browser_hidecursoruntilmouseevent
 browser_inspectelement
 browser_opendevtools
+browser_removeallnavigationentries
 browser_replacemisspelling
 browser_restartjscontext
 browser_setbackgroundthrottlingdisabled
@@ -11320,11 +11296,11 @@ browser_settouchgesturestocancel
 browser_startdownload
 browserview
 browserview_create
-browserview_from_renderer
+browserview_fromrenderer
 browserview_postmessagetoparent
-browserview_process_message_from_parent_renderer
+browserview_processmessagefromparentrenderer
 browserview_to_renderer
-browserview_tunnel_htmlmessage_to_steam
+browserview_tunnelhtmlmessagetosteam
 browserviewpopup
 bsuccess
 btowc
@@ -12022,6 +11998,7 @@ countrycodes
 covalensolutions.com
 covariant return thunk to
 crBugs
+crashpad-handler
 crc32
 crc32_combine
 crc32_combine64
@@ -12465,7 +12442,7 @@ data too large for key size
 data too large for modulus
 data too small
 data too small for key size
-data.m_pSteamObject.get()
+data.m_pSteamObject
 data:text/html,%3Cbody%3E%3C%2Fbody%3E
 dataEncipherment
 data_ == other.data_
@@ -12783,7 +12760,6 @@ duplicate
 duplicate compression id
 duplicate sRGB information ignored
 duplicate zone id
-duration
 dutch
 dvcs
 dynamic_cast
@@ -13230,7 +13206,6 @@ focus_change
 focus_in
 focus_out
 focused
-focused_node_text
 fontFile.encrypted_contents().size() <= INT_MAX
 fontFileDecrypted.opentype_font_data().size() <= INT_MAX
 font_file_name
@@ -13242,7 +13217,6 @@ fopen64
 force-device-scale-factor
 force-opaque-background
 force-sandbox
-force_direct_hwnd_popups
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 forever
 form
@@ -13608,7 +13582,6 @@ get_disk_info
 get_engine
 get_engines_by_names
 get_entropy
-get_focused_node_text
 get_global_engine
 get_has_unapplied
 get_header_and_data
@@ -17251,9 +17224,9 @@ internal row size calculation error
 internal row width error
 internal sequential row size calculation error
 internal write transform logic error
-internal_bingpufallbackmode
 internal_disablegpu
 internal_getdisplayscalefactors
+internal_ingpufallbackmode
 internal_setdevmode
 internal_setforcedevicescalefactor
 internal_setrighttoleftmode
@@ -17721,6 +17694,7 @@ k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -17948,7 +17922,6 @@ librt.so.1
 libsteam.so
 libtier0_s.so
 libvstdlib_s.so
-libwidevinecdmadapter.so
 license
 like
 line
@@ -17959,7 +17932,6 @@ link
 link_at_position_response
 link_url
 linux
-linux-x64
 linux22
 linux24
 linux26
@@ -17996,7 +17968,6 @@ live.com
 llnw
 load-error
 load_iv
-load_localization
 loader incomplete
 loading cert dir
 loading defaults
@@ -18008,7 +17979,6 @@ localeconv
 localhost/
 localityName
 localization
-localization_path
 location
 locator
 log conf invalid
@@ -18139,7 +18109,6 @@ m_strConvertedDefaultValue
 m_strDirectory
 m_strFileName
 m_strFileNamePrevious
-m_strLastRedirectURL
 m_strLocalFileRequestDefaultPath
 m_strLocalFileRequestURL
 m_strLogLine
@@ -18421,6 +18390,8 @@ nBytes
 nBytes < (size_t)INT_MAX - curInsertPos - 1
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nCertBits
+nCommand > 0 && nCommand < eHTMLCommands_None
+nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_OverlayKeyboard
 nDay < 32
 nDay > 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
@@ -18436,6 +18407,7 @@ nMinCapacity >= nChars
 nMonth == 1 || nMonth == 3 || nMonth == 5 || nMonth == 7 || nMonth == 8 || nMonth == 10 || nMonth == 12
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 nPut + nPutDelta <= outBuf.TellMaxPut()
+nRequestId > 0
 nSRecord
 nSize != 0
 nSize >= 0
@@ -18737,7 +18709,6 @@ old_dsa_priv_decode
 old_ec_priv_decode
 old_rsa_priv_decode
 onBasis
-on_scroll_bars_changed
 only oneshot supported
 onlyAA
 onlyCA
@@ -19840,7 +19811,6 @@ requestExtensions
 requestList
 request_domain
 request_link_at_position
-request_link_at_position_response
 request_space %llu
 requested to join a private group
 requestid
@@ -20015,10 +19985,6 @@ sbgp-routerIdentifier
 sc_schinese
 scale
 scale_page
-scale_page_response
-scale_page_to_element_at
-scale_page_to_element_response
-scale_page_to_focused_element
 scandir64
 sched_yield
 scheme=
@@ -20029,6 +19995,7 @@ screenavailheight
 screenavailwidth
 script
 scroll
+scroll_bars_changed
 scrollx
 scrolly
 scrypt
@@ -20199,9 +20166,7 @@ set_horizontal_scroll
 set_icon
 set_label
 set_orientation
-set_page_scale_factor_limits
 set_page_size
-set_resize_grip
 set_round
 set_sensitive
 set_shutting_down
@@ -20656,6 +20621,7 @@ steam-chat.com
 steam-glcomposer%s-frame-%05lu.png
 steam.dev
 steam.pid
+steam.tv
 steam://
 steam://close/bigpicture
 steam://openexternalforpid/%u/%s
@@ -21699,6 +21665,19 @@ winME
 winNT
 winVista
 winXP
+window.postMessage( 'display_changed', '*' );
+window.postMessage( 'go_back', '*' );
+window.postMessage( 'go_forward', '*' );
+window.postMessage( 'popup-created', '*' );
+window.postMessage( 'steam_auth_completed', '*' );
+window.postMessage( 'window_details_changed', '*' );
+window.postMessage( 'window_enter_fullscreen', '*' );
+window.postMessage( 'window_exit_fullscreen', '*' );
+window.postMessage( 'window_gotfocus', '*' );
+window.postMessage( 'window_lostfocus', '*' );
+window.postMessage( 'window_moved', '*' );
+window.postMessage( 'window_resized', '*' );
+window.postMessage( 'window_restored', '*' );
 window_bringtofront
 window_close
 window_defaultmonitorhasfullscreenwindow
@@ -21724,6 +21703,7 @@ window_setkeyfocus
 window_setmaxsize
 window_setminsize
 window_setmodal
+window_setresizegrip
 window_setwindowicon
 window_show
 window_toggle_maximize

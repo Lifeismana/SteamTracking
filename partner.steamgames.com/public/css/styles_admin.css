@@ -1833,7 +1833,7 @@ a.detailrow:hover {
 
 .spotlight_preview_tab {
 	position: relative;
-	padding-right: 340px;
+	padding-right: 500px;
 }
 
 .spotlight_preview_holder {
@@ -1845,8 +1845,8 @@ a.detailrow:hover {
 }
 
 .spotlight_preview_holder, .spotlight_preview_holder iframe {
-	width: 308px;
-	height: 500px;
+	width: 360px;
+	height: 460px;
 }
 
 .spotlight_preview_holder iframe {

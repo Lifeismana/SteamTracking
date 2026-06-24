@@ -847,6 +847,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica（西班牙语 - 拉丁美洲）"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt（越南语）"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia（印度尼西亚语）"
+"SteamUI_Selection_Malay"		"Bahasa Melayu（马来语）"
 
 
 
@@ -5058,6 +5059,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "DownloadRegion_br_manaus"			"巴西 - 马瑙斯"
 "DownloadRegion_br_belem"			"巴西 - 贝伦"
 "DownloadRegion_br_salvador"			"巴西 - 萨尔瓦多"
+"DownloadRegion_guam"			"关岛"
 
 "SettingsController_AutosaveName"	"控制器配置"
 "ControllerBinding_Offline_Save"	"[离线自动存档]"

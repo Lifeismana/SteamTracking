@@ -847,6 +847,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (สเปน - ลาตินอเมริกา)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (เวียดนาม)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (อินโดนีเซีย)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (มาเลย์)"
 
 
 
@@ -5056,6 +5057,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "DownloadRegion_br_manaus"			"บราซิล - มาเนาซ์"
 "DownloadRegion_br_belem"			"บราซิล - เบเล็น"
 "DownloadRegion_br_salvador"			"บราซิล - ซัลวาดอร์"
+"DownloadRegion_guam"			"กวม"
 
 "SettingsController_AutosaveName"	"การกำหนดค่าคอนโทรลเลอร์"
 "ControllerBinding_Offline_Save"	"[บันทึกอัตโนมัติแบบออฟไลน์]"

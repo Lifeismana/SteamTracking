@@ -522,6 +522,11 @@
               (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
               (_ = "" + _.getFullYear());
             break;
+          case "#Sale_Reservation_BetweenNowAndLastDay":
+            (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
+              (_ = "" + new Date(_.getFullYear(), _.getMonth(), 0).getDate()),
+              (_ = "" + _.getFullYear());
+            break;
           case "#Sale_Reservation_RelativeWeekly":
             {
               const _ = _._.GetTimeNowWithOverride(),
@@ -799,7 +804,7 @@
                       (0, _.jsx)("i", {
                         children: "n",
                       }),
-                      ", show those users a date they can anticipate to recieve an invite to purchase.",
+                      ", show those users a date they can anticipate to recieve an invite to purchase. If we are choosing a display that shows the day, please account for the date is being shown to each user in their local time.",
                     ],
                   }),
                   (0, _.jsx)(_._, {
@@ -870,8 +875,8 @@
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: _
-              ? "Reloading..."
-              : "Reload send to server, safe to close dialog",
+              ? "Reload sent to server! Now safe to close dialog"
+              : "Reloading In Progress...",
             closeModal: _,
           })
         );
@@ -889,6 +894,7 @@
         "#Sale_Reservation_RelativeWeekly",
         "#Sale_Reservation_ByYear",
         "#Sale_Reservation_ByMonthYear",
+        "#Sale_Reservation_BetweenNowAndLastDay",
         "#Sale_Reservation_AvailabilityUnknown",
       ];
       function _(_) {

@@ -38474,7 +38474,7 @@
     },
     68770: (e, t, r) => {
       "use strict";
-      r.d(t, { fh: () => ii });
+      r.d(t, { fh: () => si });
       var i = r(7850),
         a = r(52967),
         s = r(42780),
@@ -39052,16 +39052,17 @@
         k = r(52038),
         D = r(70995),
         L = r(17720),
-        H = r(43070),
-        V = r(73662),
-        Q = r.n(V),
-        K = r(13699),
-        Y = r(4434),
-        $ = r(68797);
-      const J = (e) => /^\d+$/.test(e);
-      function Z(e) {
+        H = r(12493),
+        V = r(43070),
+        Q = r(73662),
+        K = r.n(Q),
+        Y = r(13699),
+        $ = r(4434),
+        J = r(68797),
+        Z = r(25489);
+      function X(e) {
         const { sharedFileID: t } = e,
-          r = (0, Y.m)("SharedFileSnippet"),
+          r = (0, $.m)("SharedFileSnippet"),
           [a, s] = (0, o.useState)(!1),
           [n, l] = (0, o.useState)(() => ({
             sharedfileid: t,
@@ -39075,10 +39076,10 @@
         (0, o.useEffect)(() => {
           (async () => {
             try {
-              const e = await K.R.LoadSharedFileDynamicData([t], r);
+              const e = await Y.R.LoadSharedFileDynamicData([t], r);
               if (!r.token.reason && e.length > 0) {
                 const t = e[0];
-                J(t.url) &&
+                (0, Z.TG)(t.url) &&
                   (t.url =
                     C.TS.COMMUNITY_BASE_URL +
                     "sharedfiles/filedetails/?id=" +
@@ -39088,7 +39089,7 @@
                   s(!0);
               }
             } catch (e) {
-              const t = (0, $.H)(e);
+              const t = (0, J.H)(e);
               console.error("SharedFileSnippet: " + t.strErrorMsg, t);
             }
           })();
@@ -39096,41 +39097,41 @@
         let c = void 0 !== n.personnaname && n.personnaname.length > 0;
         return (0, i.jsxs)("a", {
           href: n.url,
-          className: Q().DynamicLinkBox,
+          className: K().DynamicLinkBox,
           "data-modal-content-sizetofit": !!n.bSizeToFit,
           "data-appid": n.appid,
           "data-publishedfileid": t,
           children: [
             (0, i.jsx)("img", {
-              className: Q().DynamicLink_Preview,
+              className: K().DynamicLink_Preview,
               src: n.previewurl,
             }),
             (0, i.jsxs)("div", {
-              className: Q().DynamicLink_Content,
+              className: K().DynamicLink_Content,
               children: [
                 (0, i.jsx)("div", {
-                  className: Q().DynamicLink_Name,
+                  className: K().DynamicLink_Name,
                   children: n.title,
                 }),
                 (0, i.jsx)("div", {
                   children: (0, i.jsx)("span", {
-                    className: Q().DynamicLink_Type,
+                    className: K().DynamicLink_Type,
                     children: n.type,
                   }),
                 }),
                 c &&
                   (0, i.jsx)("div", {
-                    className: Q().DynamicLink_Author,
+                    className: K().DynamicLink_Author,
                     children: (0, T.PP)(
                       "#EventEditor_Author",
                       (0, i.jsx)("span", {
-                        className: Q().DynamicLink_AuthorName,
+                        className: K().DynamicLink_AuthorName,
                         children: n.personnaname,
                       }),
                     ),
                   }),
                 (0, i.jsx)("div", {
-                  className: Q().DynamicLink_Description,
+                  className: K().DynamicLink_Description,
                   children: n.description,
                 }),
               ],
@@ -39138,20 +39139,20 @@
           ],
         });
       }
-      var X = r(12155),
-        ee = r(75844),
-        te = r(7221),
-        re = r(4796),
-        ie = r(20587),
-        ae = r(22797),
-        se = r(3088),
-        ne = r(64610),
-        oe = r(4703);
-      let le = class extends o.Component {
+      var ee = r(12155),
+        te = r(75844),
+        re = r(7221),
+        ie = r(4796),
+        ae = r(20587),
+        se = r(22797),
+        ne = r(3088),
+        oe = r(64610),
+        le = r(4703);
+      let ce = class extends o.Component {
         state = {
           bLoading: this.props.announcementGID
-            ? !ie.O3.BHasClanAnnouncementGID(this.props.announcementGID)
-            : !ie.O3.BHasClanAnnouncementGID(this.props.eventGID),
+            ? !ae.O3.BHasClanAnnouncementGID(this.props.announcementGID)
+            : !ae.O3.BHasClanAnnouncementGID(this.props.eventGID),
           bFailedLoad: !1,
         };
         m_cancelSignal = z().CancelToken.source();
@@ -39170,11 +39171,11 @@
           try {
             if (this.state.bLoading) {
               if (void 0 !== t) {
-                s = (await re.ac.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
+                s = (await ie.ac.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
               } else if (void 0 !== a) {
-                s = (await re.ac.LoadOGGClanInfoForGroupVanity(a)).clanSteamID;
+                s = (await ie.ac.LoadOGGClanInfoForGroupVanity(a)).clanSteamID;
               }
-              const n = ie.O3.LoadPartnerEventGeneric(s, e, i, r, 0);
+              const n = ae.O3.LoadPartnerEventGeneric(s, e, i, r, 0);
               let o = await n;
               await Promise.all([
                 W.A.Get().QueueAppRequest(o.appid, {
@@ -39190,7 +39191,7 @@
           }
         }
         HandleError(e) {
-          let t = (0, $.H)(e);
+          let t = (0, J.H)(e);
           const {
             eventGID: r,
             announcementGID: i,
@@ -39224,30 +39225,30 @@
             fnImageFailureCallback: n,
           } = this.props;
           if (this.state.bFailedLoad) return (0, u.Pm)(a);
-          if (this.state.bLoading) return (0, i.jsx)(ae.t, {});
+          if (this.state.bLoading) return (0, i.jsx)(se.t, {});
           let o =
             void 0 !== t
-              ? ie.O3.GetClanEventFromAnnouncementGID(t)
-              : ie.O3.GetClanEventModel(r);
+              ? ae.O3.GetClanEventFromAnnouncementGID(t)
+              : ae.O3.GetClanEventModel(r);
           if (null == o) return (0, u.Pm)(a);
           const l = (0, b.sfN)(C.TS.LANGUAGE);
           let c = o.GetNameWithFallback(l),
             m = o.GetSubTitleWithSummaryFallback(l),
             d = W.A.Get().GetApp(e)?.GetName(),
             _ = (0, T.TW)(o.GetStartTimeAndDateUnixSeconds());
-          return (0, i.jsxs)(ne.tj, {
+          return (0, i.jsxs)(oe.tj, {
             eventModel: o,
-            route: ne.PH.k_eView,
-            className: Q().DynamicLinkBox,
+            route: oe.PH.k_eView,
+            className: K().DynamicLinkBox,
             "data-modal-content-sizetofit": !0,
             "data-appid": e,
             children: [
-              (0, i.jsx)(ce, { ...this.props, event: o }),
+              (0, i.jsx)(me, { ...this.props, event: o }),
               (0, i.jsxs)("div", {
-                className: Q().DynamicLink_Content,
+                className: K().DynamicLink_Content,
                 children: [
                   (0, i.jsxs)("div", {
-                    className: Q().DynamicLink_Author,
+                    className: K().DynamicLink_Author,
                     children: [
                       (0, T.we)(
                         o.type == b.uYK
@@ -39256,20 +39257,20 @@
                         d,
                       ),
                       (0, i.jsx)("span", {
-                        className: Q().DynamicLink_Date,
+                        className: K().DynamicLink_Date,
                         children: _,
                       }),
                     ],
                   }),
                   (0, i.jsx)("div", {
-                    className: Q().DynamicLink_Name,
+                    className: K().DynamicLink_Name,
                     children: (0, i.jsx)("div", {
-                      className: Q().DynamicLink_Type,
+                      className: K().DynamicLink_Type,
                       children: c,
                     }),
                   }),
                   (0, i.jsx)("div", {
-                    className: Q().DynamicLink_Description,
+                    className: K().DynamicLink_Description,
                     children: m,
                   }),
                 ],
@@ -39278,28 +39279,28 @@
           });
         }
       };
-      function ce(e) {
+      function me(e) {
         const {
           event: t,
           fnFilterImageURLsForKnownFailures: r,
           fnImageFailureCallback: a,
         } = e;
         let s = (0, b.sfN)(C.TS.LANGUAGE),
-          n = (0, oe.WC)(t, "capsule", s, te.wI.capsule_main) ?? [];
+          n = (0, le.WC)(t, "capsule", s, re.wI.capsule_main) ?? [];
         return (
           n && r && (n = r(n)),
-          (0, i.jsx)(se.c, {
-            className: Q().DynamicLink_Preview,
+          (0, i.jsx)(ne.c, {
+            className: K().DynamicLink_Preview,
             rgSources: n ?? [],
             onIncrementalError: (e, t, r) => a && a(t),
           })
         );
       }
-      le = (0, M.Cg)([ee.PA], le);
-      var me = r(39978),
-        ue = r.n(me),
-        de = r(73745);
-      let _e = class extends o.Component {
+      ce = (0, M.Cg)([te.PA], ce);
+      var ue = r(39978),
+        de = r.n(ue),
+        _e = r(73745);
+      let ge = class extends o.Component {
         state = { bSummaryMode: !0, bLoadedMetaData: !1 };
         async componentDidMount() {
           let e =
@@ -39311,7 +39312,7 @@
           } catch (e) {
             this.setState({ bError: !0 }),
               console.error(
-                "SketchFabEmbed failed to load: " + (0, $.H)(e).strErrorMsg,
+                "SketchFabEmbed failed to load: " + (0, J.H)(e).strErrorMsg,
               );
           }
         }
@@ -39322,7 +39323,7 @@
           const { modelID: e } = this.props;
           return this.state.bError
             ? (0, i.jsxs)("div", {
-                className: ue().dynamiclink_box,
+                className: de().dynamiclink_box,
                 onClick: this.OnSketchFabClick,
                 children: [
                   (0, i.jsx)("span", { children: e }),
@@ -39335,26 +39336,26 @@
               })
             : this.state.bSummaryMode
               ? (0, i.jsx)("div", {
-                  className: ue().dynamiclink_box,
+                  className: de().dynamiclink_box,
                   onClick: this.OnSketchFabClick,
                   children: Boolean(this.state.bLoadedMetaData)
                     ? (0, i.jsxs)(o.Fragment, {
                         children: [
                           (0, i.jsx)("img", {
-                            className: ue().dynamiclink_preview,
+                            className: de().dynamiclink_preview,
                             src: this.state.data.thumbnail_url,
                           }),
                           (0, i.jsx)("img", {
-                            className: ue().sketchfab_play_overlay_image,
+                            className: de().sketchfab_play_overlay_image,
                           }),
                           (0, i.jsxs)("div", {
-                            className: ue().dynamiclink_content,
+                            className: de().dynamiclink_content,
                             children: [
                               (0, i.jsxs)("div", {
-                                className: ue().dynamiclink_name,
+                                className: de().dynamiclink_name,
                                 children: [
                                   (0, i.jsx)("span", {
-                                    className: ue().dynamiclink_type,
+                                    className: de().dynamiclink_type,
                                     children: (0, T.we)(
                                       "#EventDisplay_Sketchfab",
                                     ),
@@ -39365,19 +39366,19 @@
                                 ],
                               }),
                               (0, i.jsx)("div", {
-                                className: ue().dynamiclink_author,
+                                className: de().dynamiclink_author,
                                 children: this.state.data.author_name,
                               }),
                             ],
                           }),
                         ],
                       })
-                    : (0, i.jsx)(ae.t, { size: "medium" }),
+                    : (0, i.jsx)(se.t, { size: "medium" }),
                 })
               : (0, i.jsx)("div", {
-                  className: ue().sketchfabmodelembedded,
+                  className: de().sketchfabmodelembedded,
                   children: (0, i.jsx)("iframe", {
-                    className: ue().sketchfabmodelembedded,
+                    className: de().sketchfabmodelembedded,
                     src:
                       "https://sketchfab.com/models/" +
                       this.props.modelID +
@@ -39388,43 +39389,17 @@
                 });
         }
       };
-      (0, M.Cg)([de.oI], _e.prototype, "OnSketchFabClick", null),
-        (_e = (0, M.Cg)([ee.PA], _e));
-      var ge = r(83059),
-        pe = r(32754),
-        Be = r(65835),
-        ye = r.n(Be);
-      function be(e) {
-        const { defid: t, url: r } = e,
-          a = (0, ge.w)(t);
-        if (!a || !a.community_item_data) return null;
-        const s = a.appid,
-          n = a.community_item_data.item_image_large,
-          o = `${C.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${s}/${n}`;
-        return (
-          "dev" == C.TS.WEB_UNIVERSE &&
-            console.log("reward itemdef", (0, v.HO)(a)),
-          (0, i.jsx)("div", {
-            className: ye().Ctn,
-            children: (0, i.jsx)(pe.he, {
-              toolTipContent: a.community_item_data.item_description,
-              children: (0, i.jsx)("img", {
-                src: o,
-                alt: a.community_item_data.item_title,
-              }),
-            }),
-          })
-        );
-      }
-      var fe = r(41399),
-        he = r(64502),
-        we = r(62792),
-        Me = r(30470),
-        Se = r(57876);
-      const ze = { ...Se.Xh, apply_user_filters: !0 };
-      function ve(e) {
+      (0, M.Cg)([_e.oI], ge.prototype, "OnSketchFabClick", null),
+        (ge = (0, M.Cg)([te.PA], ge));
+      var pe = r(41399),
+        Be = r(64502),
+        ye = r(62792),
+        be = r(30470),
+        fe = r(57876);
+      const he = { ...fe.Xh, apply_user_filters: !0 };
+      function we(e) {
         const { inputType: t, id: r, bApplyUserContentPref: a } = e,
-          [s] = (0, O.G6)(r, (0, we.SW)(t), a ? ze : Se.Xh);
+          [s] = (0, O.G6)(r, (0, ye.SW)(t), a ? he : fe.Xh);
         if (!s) return null;
         if (a) {
           const e = s.GetUserFilterFailure();
@@ -39439,13 +39414,13 @@
             }
             return (0, i.jsx)("div", {
               className: (0, k.A)(
-                he.AppSummaryWidgetCtn,
+                Be.AppSummaryWidgetCtn,
                 "AppSummaryWidgetCtn",
               ),
               children: (0, T.oW)(
                 e,
                 (0, i.jsx)("a", {
-                  href: Me.TS.STORE_BASE_URL + "account/preferences/",
+                  href: be.TS.STORE_BASE_URL + "account/preferences/",
                 }),
               ),
             });
@@ -39453,8 +39428,8 @@
         }
         let n = "bundle" == t ? "bundle" : "sub" == t ? "sub" : "game";
         return (0, i.jsx)("div", {
-          className: (0, k.A)(he.AppSummaryWidgetCtn, "AppSummaryWidgetCtn"),
-          children: (0, i.jsx)(fe.p, {
+          className: (0, k.A)(Be.AppSummaryWidgetCtn, "AppSummaryWidgetCtn"),
+          children: (0, i.jsx)(pe.p, {
             id: r,
             type: n,
             bShowDemoButton: s?.GetAppType() == h.uE.ue,
@@ -39463,88 +39438,115 @@
           }),
         });
       }
-      var Re = r(12493),
-        je = r(65944);
-      const Te =
-          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
-        Ce =
-          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
-        Ie =
-          /(?:steamcommunity\.com|valve\.org\/community|community\.\S+\.steam\.dev|steam\.dev\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
-        Fe =
-          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|steam\.dev\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
-        xe = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
-        Ue = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
-        We = /twitter\.com\/(\w+)(\/?)$/i,
-        Oe = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
-        Ee = /twitch\.tv\/(\w+)(\/?)$/i,
-        qe =
-          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i,
-        Ae =
-          /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store|store\.steamchina\.com)\/points\/shop\/.*reward\/(\d+)$/i;
-      let Pe = null;
-      function Ne() {
+      var Me = r(83059),
+        Se = r(32754),
+        ze = r(65835),
+        ve = r.n(ze);
+      function Re(e) {
+        const { defid: t, url: r } = e,
+          a = (0, Me.w)(t);
+        if (!a || !a.community_item_data) return null;
+        const s = a.appid,
+          n = a.community_item_data.item_image_large,
+          o = `${C.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${s}/${n}`;
         return (
-          null == Pe &&
-            (Pe = (0, C.Y2)()
+          "dev" == C.TS.WEB_UNIVERSE &&
+            console.log("reward itemdef", (0, v.HO)(a)),
+          (0, i.jsx)("div", {
+            className: ve().Ctn,
+            children: (0, i.jsx)(Se.he, {
+              toolTipContent: a.community_item_data.item_description,
+              children: (0, i.jsx)("img", {
+                src: o,
+                alt: a.community_item_data.item_title,
+              }),
+            }),
+          })
+        );
+      }
+      var je = r(65944),
+        Te = r(39777),
+        Ce = r(35380);
+      const Ie =
+          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|store\.steamchina\.com)\/(app|bundle|sub)\/(\d+)/i,
+        Fe =
+          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i,
+        xe =
+          /(?:steamcommunity\.com|valve\.org\/community|community\.\S+\.steam\.dev|steam\.dev\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
+        Ue =
+          /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|steam\.dev\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
+        We = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
+        Oe = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
+        Ee = /twitter\.com\/(\w+)(\/?)$/i,
+        qe = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
+        Ae = /twitch\.tv\/(\w+)(\/?)$/i,
+        Pe =
+          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i,
+        Ne =
+          /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store|store\.steamchina\.com)\/points\/shop\/.*reward\/(\d+)$/i;
+      let Ge = null;
+      function ke() {
+        return (
+          null == Ge &&
+            (Ge = (0, C.Y2)()
               ? [
-                  { urlRegExp: new RegExp(Te), fnBBComponent: Qe },
-                  { urlRegExp: new RegExp(Ie), fnBBComponent: Ze },
-                  { urlRegExp: new RegExp(Fe), fnBBComponent: Je },
-                  { urlRegExp: new RegExp(Ce), fnBBComponent: $e },
-                  { urlRegExp: new RegExp(qe), fnBBComponent: rt },
+                  { urlRegExp: new RegExp(Ie), fnBBComponent: Ye },
+                  { urlRegExp: new RegExp(xe), fnBBComponent: rt },
+                  { urlRegExp: new RegExp(Ue), fnBBComponent: tt },
+                  { urlRegExp: new RegExp(Fe), fnBBComponent: et },
+                  { urlRegExp: new RegExp(Pe), fnBBComponent: nt },
                 ]
               : [
                   {
                     urlRegExp: new RegExp(/youtu.be|youtube.com/i),
-                    fnBBComponent: ke,
+                    fnBBComponent: Le,
                   },
                   {
                     urlRegExp: new RegExp(
                       /community.+sharedfiles\/filedetails\/\?id=\d+/i,
                     ),
-                    fnBBComponent: He,
+                    fnBBComponent: Qe,
                   },
-                  { urlRegExp: new RegExp(Te), fnBBComponent: Qe },
-                  { urlRegExp: new RegExp(Ie), fnBBComponent: Ze },
-                  { urlRegExp: new RegExp(Fe), fnBBComponent: Je },
-                  { urlRegExp: new RegExp(Ce), fnBBComponent: $e },
-                  { urlRegExp: new RegExp(xe), fnBBComponent: De },
-                  { urlRegExp: new RegExp(Ue), fnBBComponent: Le },
-                  { urlRegExp: new RegExp(We), fnBBComponent: Xe },
-                  { urlRegExp: new RegExp(Oe), fnBBComponent: et },
-                  { urlRegExp: new RegExp(Ee), fnBBComponent: tt },
-                  { urlRegExp: new RegExp(qe), fnBBComponent: rt },
-                  { urlRegExp: new RegExp(Ae), fnBBComponent: Ye },
+                  { urlRegExp: new RegExp(Ie), fnBBComponent: Ye },
+                  { urlRegExp: new RegExp(xe), fnBBComponent: rt },
+                  { urlRegExp: new RegExp(Ue), fnBBComponent: tt },
+                  { urlRegExp: new RegExp(Fe), fnBBComponent: et },
+                  { urlRegExp: new RegExp(We), fnBBComponent: He },
+                  { urlRegExp: new RegExp(Oe), fnBBComponent: Ve },
+                  { urlRegExp: new RegExp(Ee), fnBBComponent: it },
+                  { urlRegExp: new RegExp(qe), fnBBComponent: at },
+                  { urlRegExp: new RegExp(Ae), fnBBComponent: st },
+                  { urlRegExp: new RegExp(Pe), fnBBComponent: nt },
+                  { urlRegExp: new RegExp(Ne), fnBBComponent: Xe },
                 ]),
-          Pe
+          Ge
         );
       }
-      function Ge(e) {
+      function De(e) {
         return o.useMemo(
           () =>
             (function (e) {
-              return Ne().find((t) => !!t.urlRegExp.exec(e));
+              return ke().find((t) => !!t.urlRegExp.exec(e));
             })(e),
           [e],
         );
       }
-      function ke(e, t) {
+      function Le(e, t) {
         if ((0, C.Y2)()) return null;
         const r = (0, D.XU)(e);
         return void 0 !== r?.strVideoID
-          ? (0, i.jsx)(H.A, {
+          ? (0, i.jsx)(V.A, {
               videoID: r.strVideoID,
               nStartSeconds: r.nStartSeconds,
               classNameAlign: "",
-              classNameSize: Q().sizeFull,
+              classNameSize: K().sizeFull,
               bShowVideoImmediately: !1,
             })
           : (0, u.Pm)(e, t?.event);
       }
-      function De(e, t) {
+      function He(e, t) {
         if ((0, C.Y2)()) return null;
-        const r = new RegExp(xe).exec(e);
+        const r = new RegExp(We).exec(e);
         if (r && r.length > 1) {
           const e = r[1];
           if (e?.length > 0) {
@@ -39563,15 +39565,15 @@
         }
         return (0, u.Pm)(e, t?.event);
       }
-      function Le(e, t) {
-        let r = new RegExp(Ue).exec(e);
+      function Ve(e, t) {
+        let r = new RegExp(Oe).exec(e);
         if (r && r.length > 1) {
           let e = r[1];
-          if (e && e.length > 1) return (0, i.jsx)(_e, { modelID: e });
+          if (e && e.length > 1) return (0, i.jsx)(ge, { modelID: e });
         }
         return (0, u.Pm)(e, t?.event);
       }
-      function He(e, t) {
+      function Qe(e, t) {
         const r = e.split("?");
         let a;
         if (2 == r.length) {
@@ -39579,10 +39581,10 @@
           e.has("id") && (a = e.get("id"));
         }
         return void 0 !== a
-          ? (0, i.jsx)(Z, { sharedFileID: a })
+          ? (0, i.jsx)(X, { sharedFileID: a })
           : (0, u.Pm)(e, t?.event);
       }
-      function Ve(e) {
+      function Ke(e) {
         let t = (0, m.wm)(e).toLocaleLowerCase(),
           r = (0, m.wm)(C.TS.STORE_BASE_URL),
           i = (0, m.wm)(C.TS.COMMUNITY_BASE_URL);
@@ -39598,51 +39600,74 @@
               t.includes("steamchina.com")))
         );
       }
-      function Qe(e, t) {
-        if (Ve(e)) {
-          let r = new RegExp(Te).exec(e);
+      function Ye(e, t) {
+        if (Ke(e)) {
+          let r = new RegExp(Ie).exec(e);
           if (r && r.length > 2) {
-            let e = r[1],
-              a = Number(r[2]);
-            if (a > 0 && (!t || Ke(t.event, a)))
-              return (0, i.jsx)(ve, {
-                id: a,
-                inputType: e,
-                bApplyUserContentPref: !0,
+            let a = r[1].toLowerCase(),
+              s = Number(r[2]);
+            if (s > 0 && (0, ye.nB)(a)) {
+              (0, ye.JK)(a);
+              return (0, i.jsx)($e, {
+                eventModel: t?.event,
+                inputID: s,
+                inputType: a,
+                fallbackUrl: e,
               });
+            }
           }
         }
         return (0, u.Pm)(e, t?.event);
       }
-      function Ke(e, t) {
-        if (!e || (e.GetEventType() != b.ajI && e.GetEventType() != b.HRy))
-          return !0;
-        const r = re.ac.GetClanInfoByClanAccountID(
-            e.clanSteamID.GetAccountID(),
-          ),
-          i = Re.pF.GetCreatorHome(e.clanSteamID);
-        if (!i || !r) return !0;
-        if (!(0, je.Ns)(e, r)) return !0;
-        const a = i?.GetAppIDList() ?? [];
-        return !a || a.includes(t);
+      function $e(e) {
+        const { inputID: t, inputType: r, eventModel: a, fallbackUrl: s } = e,
+          n = (0, Ce.dE)(t, r),
+          { data: o } = (0, Te.J$)(n);
+        let l;
+        if (a && Je(a)) {
+          if (o) {
+            l = Ze(a, o.appid ? [o.appid] : (o.included_appids ?? []));
+          }
+        } else l = !0;
+        return void 0 === l
+          ? null
+          : l
+            ? (0, i.jsx)(we, { id: t, inputType: r, bApplyUserContentPref: !0 })
+            : (0, u.Pm)(s, a);
       }
-      function Ye(e, t) {
-        if (Ve(e)) {
-          const t = new RegExp(Ae).exec(e);
+      function Je(e) {
+        if (!e || (e.GetEventType() != b.ajI && e.GetEventType() != b.HRy))
+          return !1;
+        const t = ie.ac.GetClanInfoByClanAccountID(
+          e.clanSteamID.GetAccountID(),
+        );
+        if (!H.pF.GetCreatorHome(e.clanSteamID) || !t) return !1;
+        return !!(0, je.Ns)(e, t);
+      }
+      function Ze(e, t) {
+        const r = H.pF.GetCreatorHome(e.clanSteamID),
+          i = r?.GetAppIDList() ?? [];
+        return (
+          t.length > 0 && t.filter((e) => i.includes(e)).length === t.length
+        );
+      }
+      function Xe(e, t) {
+        if (Ke(e)) {
+          const t = new RegExp(Ne).exec(e);
           if (t && t.length > 1) {
             const r = Number(t[1]);
             if (r > 0)
               return (0, i.jsx)("div", {
                 className: (0, k.A)(P.LoyaltyRewardCtn),
-                children: (0, i.jsx)(be, { defid: r, url: e }),
+                children: (0, i.jsx)(Re, { defid: r, url: e }),
               });
           }
         }
         return (0, u.Pm)(e, t?.event);
       }
-      function $e(e, t) {
-        if (Ve(e)) {
-          let r = new RegExp(Ce).exec(e);
+      function et(e, t) {
+        if (Ke(e)) {
+          let r = new RegExp(Fe).exec(e);
           if (r && r.length > 2) {
             let a, s, n, o;
             "gid" == r[1]
@@ -39651,7 +39676,8 @@
                 ? (o = r[2])
                 : isNaN(+r[2])
                   ? (n = r[2])
-                  : ((a = Number(r[2])), (a = Ke(t.event, a) ? a : 0));
+                  : ((a = Number(r[2])),
+                    (a = !t || (Je(t.event) && Ze(t.event, [a])) ? a : 0));
             const l = r[3];
             if (
               ((void 0 !== a && a > 0) ||
@@ -39661,7 +39687,7 @@
               null != l &&
               l.length > 0
             )
-              return (0, i.jsx)(le, {
+              return (0, i.jsx)(ce, {
                 appid: a,
                 clanSteamID: s,
                 strVanity: n,
@@ -39673,25 +39699,25 @@
         }
         return (0, u.Pm)(e, t?.event);
       }
-      function Je(e, t) {
-        return at(Fe, e, t);
-      }
-      function Ze(e, t) {
-        return at(Ie, e, t);
-      }
-      function Xe(e, t) {
-        return (0, C.Y2)() ? null : it(e, (0, i.jsx)(X.KKS, {}), "@", t);
-      }
-      function et(e, t) {
-        return (0, C.Y2)() ? null : it(e, (0, i.jsx)(X.KKS, {}), "#", t);
-      }
       function tt(e, t) {
-        return (0, C.Y2)() ? null : it(e, (0, i.jsx)(X.qcc, {}), void 0, t);
+        return lt(Ue, e, t);
       }
       function rt(e, t) {
-        return it(e, (0, i.jsx)(X.Qte, {}), void 0, t);
+        return lt(xe, e, t);
       }
-      function it(e, t, r, a) {
+      function it(e, t) {
+        return (0, C.Y2)() ? null : ot(e, (0, i.jsx)(ee.KKS, {}), "@", t);
+      }
+      function at(e, t) {
+        return (0, C.Y2)() ? null : ot(e, (0, i.jsx)(ee.KKS, {}), "#", t);
+      }
+      function st(e, t) {
+        return (0, C.Y2)() ? null : ot(e, (0, i.jsx)(ee.qcc, {}), void 0, t);
+      }
+      function nt(e, t) {
+        return ot(e, (0, i.jsx)(ee.Qte, {}), void 0, t);
+      }
+      function ot(e, t, r, a) {
         let s;
         const n = e.endsWith("/") ? e.length - 1 : e.length,
           o = e.lastIndexOf("/", n - 1);
@@ -39706,8 +39732,8 @@
           ],
         });
       }
-      function at(e, t, r) {
-        if (Ve(t)) {
+      function lt(e, t, r) {
+        if (Ke(t)) {
           let a = new RegExp(e).exec(t);
           if (a && a.length > 2) {
             let e, s, n, o;
@@ -39719,7 +39745,8 @@
                   ? (o = a[2])
                   : isNaN(+a[2])
                     ? (n = a[2])
-                    : ((e = Number(a[2])), (e = Ke(r.event, e) ? e : 0));
+                    : ((e = Number(a[2])),
+                      (e = !r || (Je(r.event) && Ze(r.event, [e])) ? e : 0));
             const l = a[3];
             if (
               ((void 0 !== e && e > 0) ||
@@ -39729,7 +39756,7 @@
               null != l &&
               l.length > 0
             )
-              return (0, i.jsx)(le, {
+              return (0, i.jsx)(ce, {
                 appid: e,
                 clanSteamID: s,
                 strVanity: n,
@@ -39741,8 +39768,8 @@
         }
         return (0, u.Pm)(t, r?.event);
       }
-      var st = r(90622);
-      function nt(e, t) {
+      var ct = r(90622);
+      function mt(e, t) {
         return (function (e) {
           if (!e) return !1;
           const t = new Option().style;
@@ -39751,16 +39778,16 @@
           ? e
           : t;
       }
-      var ot = r(45699);
-      function lt(e) {
-        let t = (0, st.J)((0, l.j$)(e.args) || (0, l.j$)(e.args, "href"));
+      var ut = r(45699);
+      function dt(e) {
+        let t = (0, ct.J)((0, l.j$)(e.args) || (0, l.j$)(e.args, "href"));
         const r = (0, l.j$)(e.args, "style"),
           a = (0, l.j$)(e.args, "id"),
-          s = nt(
+          s = mt(
             (0, l.j$)(e.args, "buttoncolor") || (0, l.j$)(e.args, "bgcolor"),
             void 0,
           ),
-          n = nt(
+          n = mt(
             (0, l.j$)(e.args, "labelcolor") || (0, l.j$)(e.args, "color"),
             void 0,
           ),
@@ -39799,7 +39826,7 @@
               C.TS.STORE_BASE_URL,
             )),
           "string" == typeof t && t.length > 0 && "#" == t[0]
-            ? (0, i.jsx)(ot.Ii, {
+            ? (0, i.jsx)(ut.Ii, {
                 className: o,
                 href: t,
                 style: _,
@@ -39821,36 +39848,34 @@
                 })
         );
       }
-      function ct(e) {
+      function _t(e) {
         const t = (0, l.j$)(e.args, "href"),
-          r = Ge(t);
+          r = De(t);
         return r
           ? r.fnBBComponent(t, {
               event: e.context.event,
-              partnerEventStore: ie.O3,
+              partnerEventStore: ae.O3,
             })
-          : (0, i.jsx)(lt, { ...e });
+          : (0, i.jsx)(dt, { ...e });
       }
-      var mt,
-        ut = r(52471),
-        dt = r(39777),
-        _t = r(47250),
-        gt = r(67523),
-        pt = r.n(gt),
-        Bt = r(35380),
-        yt = r(77078),
+      var gt,
+        pt = r(52471),
+        Bt = r(47250),
+        yt = r(67523),
         bt = r.n(yt),
-        ft = r(50881),
-        ht = r(91970),
-        wt = r.n(ht);
+        ft = r(77078),
+        ht = r.n(ft),
+        wt = r(50881),
+        Mt = r(91970),
+        St = r.n(Mt);
       !(function (e) {
         (e.k_TrailerAsButton = "button"),
           (e.k_TrailerAsPill = "pill"),
           (e.k_TrailerAsFull = "full"),
           (e.k_TrailerAsPoster = "poster"),
           (e.k_TrailerAsMicro = "micro");
-      })(mt || (mt = {}));
-      function Mt(e) {
+      })(gt || (gt = {}));
+      function zt(e) {
         const {
             embedStyle: t,
             appid: r,
@@ -39863,23 +39888,23 @@
           [m, u] = (0, o.useState)(!1),
           d = (0, o.useMemo)(() => ({ appid: r }), [r]);
         switch (t) {
-          case mt.k_TrailerAsButton:
-          case mt.k_TrailerAsPill:
+          case gt.k_TrailerAsButton:
+          case gt.k_TrailerAsPill:
             return (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsxs)("div", {
                   className: (0, k.A)({
-                    [bt().Pill]: t == mt.k_TrailerAsPill,
-                    [bt().Button]: t == mt.k_TrailerAsButton,
+                    [ht().Pill]: t == gt.k_TrailerAsPill,
+                    [ht().Button]: t == gt.k_TrailerAsButton,
                   }),
                   onClick: () => u(!0),
                   style: { color: a, backgroundColor: s },
                   children: [
-                    (0, i.jsx)(X.jGG, {}),
+                    (0, i.jsx)(ee.jGG, {}),
                     n || (0, T.we)("#EventEmail_WatchNow"),
                   ],
                 }),
-                (0, i.jsx)(ft.PE, {
+                (0, i.jsx)(wt.PE, {
                   id: d,
                   bShowModal: m,
                   trailerBaseID: l,
@@ -39888,18 +39913,18 @@
               ],
             });
           default:
-          case mt.k_TrailerAsFull:
-            return (0, i.jsx)(St, { ...e });
+          case gt.k_TrailerAsFull:
+            return (0, i.jsx)(vt, { ...e });
         }
       }
-      function St(e) {
+      function vt(e) {
         const { appid: t, trailerBaseID: r } = e,
-          a = (0, Bt.$5)(t),
-          { data: s } = (0, dt.J$)(a),
+          a = (0, Ce.$5)(t),
+          { data: s } = (0, Te.J$)(a),
           [n, l] = (0, o.useState)(() =>
             t && r ? null : (0, T.we)("#TrailerPlayer_ID_NotProvided"),
           ),
-          c = (0, ut.kB)(a),
+          c = (0, pt.kB)(a),
           m = (0, o.useMemo)(
             () => (c ? c.find((e) => e.trailer_base_id === r) : null),
             [c, r],
@@ -39928,55 +39953,55 @@
           ]),
           n
             ? e.bIsPreviewMode
-              ? (0, i.jsx)("div", { className: pt().ErrorDiv, children: n })
+              ? (0, i.jsx)("div", { className: bt().ErrorDiv, children: n })
               : null
             : m
-              ? (0, i.jsx)(zt, { trailerToPlay: m })
-              : (0, i.jsx)(ae.t, {
+              ? (0, i.jsx)(Rt, { trailerToPlay: m })
+              : (0, i.jsx)(se.t, {
                   string: (0, T.we)("#Loading"),
                   size: "small",
                 })
         );
       }
-      function zt(e) {
+      function Rt(e) {
         const { trailerToPlay: t } = e,
           {
             rgDashTrailers: r,
             rgHlsTrailers: a,
             strCaptionManufest: s,
           } = (0, o.useMemo)(() => {
-            const { rgDashTrailers: e, rgHlsTrailers: r } = (0, ut.hg)(t);
+            const { rgDashTrailers: e, rgHlsTrailers: r } = (0, pt.hg)(t);
             return {
               rgDashTrailers: e,
               rgHlsTrailers: r,
-              strCaptionManufest: (0, ut.Wv)(t),
+              strCaptionManufest: (0, pt.Wv)(t),
             };
           }, [t]);
         return 0 == r?.length
           ? null
           : (0, i.jsx)("div", {
-              className: wt().VideoPopupContainers,
-              children: (0, i.jsx)(_t.P, {
+              className: St().VideoPopupContainers,
+              children: (0, i.jsx)(Bt.P, {
                 dashManifests: r || [],
                 hlsManifest: (a.length > 0 && a?.[0]) || "",
-                screenshot: (0, ut.hl)(t),
+                screenshot: (0, pt.hl)(t),
                 altText: t.trailer_name,
                 muteWhenAutoplayBlocked: !0,
                 captionManifest: s,
               }),
             });
       }
-      var vt = r(1456),
-        Rt = r(19432),
-        jt = r(6469),
-        Tt = r(55815),
-        Ct = r(84811);
-      const It = o.lazy(() => r.e(8396).then(r.bind(r, 6313))),
-        Ft = (e) => {
+      var jt = r(1456),
+        Tt = r(19432),
+        Ct = r(6469),
+        It = r(55815),
+        Ft = r(84811);
+      const xt = o.lazy(() => r.e(8396).then(r.bind(r, 6313))),
+        Ut = (e) => {
           const t = (0, o.useRef)(null),
-            [r, a] = (0, o.useState)(jt.K.Get().GetVODForAppID(e.appid)),
+            [r, a] = (0, o.useState)(Ct.K.Get().GetVODForAppID(e.appid)),
             [s, n] = (0, o.useState)(
-              !Boolean(jt.K.Get().GetVODForAppID(e.appid)),
+              !Boolean(Ct.K.Get().GetVODForAppID(e.appid)),
             );
           return (
             (0, o.useEffect)(
@@ -39987,14 +40012,14 @@
               if (
                 (r &&
                   r.appid != e.appid &&
-                  (i = jt.K.Get().GetVODForAppID(e.appid)),
+                  (i = Ct.K.Get().GetVODForAppID(e.appid)),
                 !i)
               ) {
                 const r = async () => {
                   t.current && t.current();
                   const r = z().CancelToken.source();
                   (t.current = r.cancel),
-                    (i = await jt.K.Get().LoadVODForAppID(e.appid)),
+                    (i = await Ct.K.Get().LoadVODForAppID(e.appid)),
                     r.token.reason || a(i),
                     n(!1);
                 };
@@ -40010,13 +40035,13 @@
                   ),
                 })
               : (0, i.jsx)("div", {
-                  className: Rt.BroadcastCtn,
-                  children: (0, i.jsx)(Ct.tH, {
+                  className: Tt.BroadcastCtn,
+                  children: (0, i.jsx)(Ft.tH, {
                     children: (0, i.jsx)(o.Suspense, {
                       fallback: null,
-                      children: (0, i.jsx)(It, {
+                      children: (0, i.jsx)(xt, {
                         nAppIDVOD: e.appid,
-                        watchLocation: Tt.nn.TC,
+                        watchLocation: It.nn.TC,
                         bStartPaused: !0,
                       }),
                     }),
@@ -40024,14 +40049,14 @@
                 })
           );
         };
-      var xt = r(26296),
-        Ut = r(56011),
-        Wt = r(39362);
-      function Ot(e) {
+      var Wt = r(26296),
+        Ot = r(56011),
+        Et = r(39362);
+      function qt(e) {
         const { fileUploadManager: t } = e,
           r = (0, o.useRef)(void 0);
         return (0, i.jsxs)("div", {
-          className: Wt.Ctn,
+          className: Et.Ctn,
           children: [
             (0, i.jsx)("input", {
               type: "file",
@@ -40045,52 +40070,52 @@
                   (e.currentTarget.value = ""));
               },
             }),
-            (0, i.jsx)(ot.fu, {
+            (0, i.jsx)(ut.fu, {
               type: "button",
               title: (0, T.we)("#Button_Upload"),
               onOKActionDescription: (0, T.we)("#Button_Upload"),
               onClick: () => r.current.click(),
-              children: (0, i.jsx)(X.xv8, {}),
+              children: (0, i.jsx)(ee.xv8, {}),
             }),
           ],
         });
       }
-      var Et = r(65946),
-        qt = r(49333);
-      function At(e) {
+      var At = r(65946),
+        Pt = r(49333);
+      function Nt(e) {
         const { fileUploadManager: t } = e,
-          r = (0, Et.q3)(() => t.file_upload_props.eUploadState);
+          r = (0, At.q3)(() => t.file_upload_props.eUploadState);
         return 1 == r
-          ? (0, i.jsx)(Pt, { fileUploadManager: t })
+          ? (0, i.jsx)(Gt, { fileUploadManager: t })
           : 3 == r || 5 == r || 4 == r
-            ? (0, i.jsx)(Gt, { fileUploadManager: t })
+            ? (0, i.jsx)(Dt, { fileUploadManager: t })
             : 0 != r
-              ? (0, i.jsx)(Nt, { fileUploadManager: t })
+              ? (0, i.jsx)(kt, { fileUploadManager: t })
               : null;
       }
-      function Pt(e) {
+      function Gt(e) {
         const { fileUploadManager: t } = e,
           r = t.file;
         return (0, i.jsxs)("div", {
-          className: qt.UploadPreviewContainer,
+          className: Pt.UploadPreviewContainer,
           children: [
             Boolean(-1 != r.type.indexOf("image")) &&
               (0, i.jsx)("img", {
-                className: qt.UploadPreview,
+                className: Pt.UploadPreview,
                 src: t.file_upload_data_url,
               }),
-            Boolean(-1 != r.type.indexOf("video")) && (0, i.jsx)(X.CeX, {}),
+            Boolean(-1 != r.type.indexOf("video")) && (0, i.jsx)(ee.CeX, {}),
             (0, i.jsxs)("div", {
-              className: qt.FileUploadFileName,
+              className: Pt.FileUploadFileName,
               children: ["'", r.name, "'"],
             }),
             (0, i.jsx)("div", {
-              className: qt.FileUploadCancel,
+              className: Pt.FileUploadCancel,
               onClick: () => t.Reset(),
-              children: (0, i.jsx)(X.sED, {}),
+              children: (0, i.jsx)(ee.sED, {}),
             }),
             (0, i.jsx)(q.jn, {
-              className: qt.FileUploadBtn,
+              className: Pt.FileUploadBtn,
               onClick: async () => {
                 await t.BeginFileUpload(), t.Reset();
               },
@@ -40099,9 +40124,9 @@
           ],
         });
       }
-      function Nt(e) {
+      function kt(e) {
         const { fileUploadManager: t } = e,
-          [r, a, s] = (0, Et.q3)(() => [
+          [r, a, s] = (0, At.q3)(() => [
             t.file_upload_props.file,
             t.file_upload_props.displayFileName,
             t.file_upload_props.uploadProgress,
@@ -40109,15 +40134,15 @@
           n = r ? (0, T.we)("#Uploading_Item", a) : "",
           o = { width: s + "%" };
         return (0, i.jsxs)("div", {
-          className: qt.FileUploadProgressContainer,
+          className: Pt.FileUploadProgressContainer,
           children: [
             (0, i.jsx)("div", {
-              className: qt.FileUploadProgressName,
+              className: Pt.FileUploadProgressName,
               children: n,
             }),
             (0, i.jsx)("div", {
               className: (0, k.A)(
-                qt.FileUploadProgressBarContainer,
+                Pt.FileUploadProgressBarContainer,
                 "DialogProgressBar_ProgressBarContainer",
               ),
               children: (0, i.jsx)("div", {
@@ -40128,9 +40153,9 @@
           ],
         });
       }
-      function Gt(e) {
+      function Dt(e) {
         const { fileUploadManager: t } = e,
-          [r, a, s] = (0, Et.q3)(() => [
+          [r, a, s] = (0, At.q3)(() => [
             t.file_upload_props.strErrorDescription,
             t.file_upload_props.displayFileName,
             t.file_upload_props.eUploadState,
@@ -40138,18 +40163,18 @@
           n = a ? (0, T.we)("#Uploading_Item", a) : "",
           o = r || (0, T.we)("#Chat_Upload_ErrorCloud");
         return (0, i.jsxs)("div", {
-          className: qt.FileUploadProgressContainer,
+          className: Pt.FileUploadProgressContainer,
           children: [
             (0, i.jsx)("div", {
-              className: qt.FileUploadProgressName,
+              className: Pt.FileUploadProgressName,
               children: n,
             }),
             (0, i.jsx)("div", {
-              className: qt.FileUploadErrorDescription,
+              className: Pt.FileUploadErrorDescription,
               children: o,
             }),
             (0, i.jsx)("div", {
-              className: qt.FileUploadActions,
+              className: Pt.FileUploadActions,
               children: (0, i.jsxs)(q.dR, {
                 className: "DialogLayout_NoMinWidth",
                 children: [
@@ -40170,22 +40195,22 @@
           ],
         });
       }
-      var kt = r(41951),
-        Dt = r(9154),
-        Lt = r(738),
-        Ht = r(20194),
-        Vt = r(75233),
-        Qt = r(51614);
-      function Kt(e, t, r) {
+      var Lt = r(41951),
+        Ht = r(9154),
+        Vt = r(738),
+        Qt = r(20194),
+        Kt = r(75233),
+        Yt = r(51614);
+      function $t(e, t, r) {
         const i = (function (e, t) {
-          const r = (0, Ht.I)({
-            queryKey: $t(e, t),
+          const r = (0, Qt.I)({
+            queryKey: Zt(e, t),
             queryFn: async () => {
-              const r = await fetch(Jt(e, t, !1), {
+              const r = await fetch(Xt(e, t, !1), {
                 method: "GET",
                 credentials: "include",
               });
-              return Yt(await r.json());
+              return Jt(await r.json());
             },
             placeholderData: {
               results: [],
@@ -40214,7 +40239,7 @@
           };
         }, [i, r]);
       }
-      function Yt(e) {
+      function Jt(e) {
         return {
           ...e,
           bLoading: !1,
@@ -40225,14 +40250,14 @@
           },
         };
       }
-      function $t(e, t) {
+      function Zt(e, t) {
         return ["usePartnerEventUserPoll", e.ConvertTo64BitString(), t];
       }
-      function Jt(e, t, r) {
+      function Xt(e, t, r) {
         const i = `${C.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/${r ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, C.yK)()}`;
         return "dev" == C.TS.WEB_UNIVERSE ? i + "&debug=1" : i;
       }
-      function Zt(e, t) {
+      function er(e, t) {
         let r = 0;
         if (t.poll_end_time) r = t.poll_end_time;
         else {
@@ -40242,39 +40267,39 @@
         }
         return r;
       }
-      var Xt, er;
+      var tr, rr;
       !(function (e) {
         (e.k_EPollResult_NotVisible = "not_visible"),
           (e.k_EPollResult_Visible_After_Vote = "after_vote"),
           (e.k_EPollResult_Visible_After_End = "after_end"),
           (e.k_EPollResult_Visible_After_Vote_Or_End = "after_vote_or_end"),
           (e.k_EPollResult_Visible_On_Demand = "on_demand");
-      })(Xt || (Xt = {})),
+      })(tr || (tr = {})),
         (function (e) {
           (e.k_EPollVoter_AnyUser = "any_user"),
             (e.k_EPollVoter_UserGameInLibrary = "user_game_in_library"),
             (e.k_EPollVoter_MinPlayTime = "min_play_time"),
             (e.k_EPollVoter_MemberOfGroup = "member_of_group");
-        })(er || (er = {}));
-      var tr = r(56330);
-      function rr(e, t) {
+        })(rr || (rr = {}));
+      var ir = r(56330);
+      function ar(e, t) {
         return t
           ? t.startsWith("https://") || t.startsWith("http://")
             ? t
-            : `${Me.TS.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`
+            : `${be.TS.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`
           : t;
       }
-      var ir = r(33280),
-        ar = r.n(ir),
-        sr = r(44165),
-        nr = r(6083),
-        or = r(39832);
-      function lr(e) {
+      var sr = r(33280),
+        nr = r.n(sr),
+        or = r(44165),
+        lr = r(6083),
+        cr = r(39832);
+      function mr(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           a = (0, l.j$)(e.args, "poll_id"),
           s = Number.parseInt(a),
-          n = (0, Et.q3)(() =>
+          n = (0, At.q3)(() =>
             (function (e, t) {
               const r = e?.jsondata?.user_polls || [];
               return r?.find((e) => e.poll_id == t) || null;
@@ -40283,26 +40308,26 @@
         if (!n)
           return r
             ? (0, i.jsx)("div", {
-                className: tr.ErrorStylesWithIcon,
+                className: ir.ErrorStylesWithIcon,
                 children: (0, T.we)("#UserPolls_Editor_FailToFindModel", s),
               })
             : null;
-        const o = (0, b.sfN)(Me.TS.LANGUAGE);
-        return (0, i.jsx)(Ct.tH, {
-          children: (0, i.jsx)(cr, { userPollDef: n, lang: o, eventModel: t }),
+        const o = (0, b.sfN)(be.TS.LANGUAGE);
+        return (0, i.jsx)(Ft.tH, {
+          children: (0, i.jsx)(ur, { userPollDef: n, lang: o, eventModel: t }),
         });
       }
-      function cr(e) {
+      function ur(e) {
         const { eventModel: t, userPollDef: r, lang: a } = e,
-          { userPollData: s, ...n } = Kt(
+          { userPollData: s, ...n } = $t(
             t.clanSteamID,
             t.GID || "0",
             r.poll_id,
           ),
           l = Boolean(n.error_message && n.error_message?.length > 0),
           c = (function (e, t) {
-            const r = (0, Vt.jE)();
-            return (0, Qt.n)({
+            const r = (0, Kt.jE)();
+            return (0, Yt.n)({
               mutationKey: [
                 "useSetPartnerEventCastVoteUserPoll",
                 e.GetAccountID(),
@@ -40310,7 +40335,7 @@
               ],
               mutationFn: async (r) => {
                 const i = { votes: r.votes },
-                  a = await fetch(Jt(e, t, !0), {
+                  a = await fetch(Xt(e, t, !0), {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(i),
@@ -40320,16 +40345,16 @@
                 return await a.json();
               },
               onSuccess: (i, a) => {
-                if (i.success == R.R) r.setQueryData($t(e, t), () => Yt(i));
+                if (i.success == R.R) r.setQueryData(Zt(e, t), () => Jt(i));
                 else {
-                  const a = r.getQueryData($t(e, t));
+                  const a = r.getQueryData(Zt(e, t));
                   if (a) {
                     const s = {
                       ...a,
                       success: i.success,
                       error_message: i.error_message,
                     };
-                    r.setQueryData($t(e, t), () => s);
+                    r.setQueryData(Zt(e, t), () => s);
                   }
                 }
               },
@@ -40344,11 +40369,11 @@
           (0, o.useEffect)(() => {
             if (
               !g &&
-              r.results_visibility_settings != Xt.k_EPollResult_NotVisible &&
+              r.results_visibility_settings != tr.k_EPollResult_NotVisible &&
               B
             ) {
               const e = (function (e, t) {
-                return Zt(e, t) < Math.floor(Date.now() / 1e3);
+                return er(e, t) < Math.floor(Date.now() / 1e3);
               })(
                 {
                   rtime32_visibility_start:
@@ -40360,7 +40385,7 @@
               (e || y) && p(!0);
             }
           }, [B, y, g, t, r]),
-          (0, i.jsxs)(mr, {
+          (0, i.jsxs)(dr, {
             ...e,
             children: [
               r.options?.map((e) => {
@@ -40371,7 +40396,7 @@
                     s?.voted_option_id.includes(e.option_id || 0) ||
                     m === e.option_id;
                 return (0, i.jsx)(
-                  ur,
+                  _r,
                   {
                     lang: a,
                     pollOptionDef: e,
@@ -40405,7 +40430,7 @@
                   children: (0, T.we)("#Button_Submit"),
                 }),
               (d || n.bLoading) &&
-                (0, i.jsx)(ae.t, {
+                (0, i.jsx)(se.t, {
                   size: "small",
                   position: "center",
                   string: n.bLoading ? (0, T.we)("#Loading") : void 0,
@@ -40422,17 +40447,17 @@
                 }),
               l &&
                 (0, i.jsx)("div", {
-                  className: tr.ErrorStylesWithIcon,
+                  className: ir.ErrorStylesWithIcon,
                   children: n.error_message,
                 }),
             ],
           })
         );
       }
-      function mr(e) {
+      function dr(e) {
         const { userPollDef: t, lang: r, eventModel: a, children: s } = e,
-          n = (0, sr.f1)(),
-          [l, c] = (0, Et.q3)(() => [
+          n = (0, or.f1)(),
+          [l, c] = (0, At.q3)(() => [
             T.NT.GetWithFallback(t.localized_poll_description, r),
             t.user_poll_background,
           ]);
@@ -40440,14 +40465,14 @@
         const u = a.clanSteamID.GetAccountID();
         Boolean(c) &&
           (m = {
-            backgroundImage: `url('${rr(u, c)}')`,
+            backgroundImage: `url('${ar(u, c)}')`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
           });
         const d = (0, o.useMemo)(() => L.b.InitFromClanID(u), [u]),
-          { userPollData: _ } = Kt(d, a.GID || "0", t.poll_id),
-          g = Zt(
+          { userPollData: _ } = $t(d, a.GID || "0", t.poll_id),
+          g = er(
             {
               rtime32_visibility_start:
                 a.GetVisibilityStartTimeAndDateUnixSeconds(),
@@ -40456,20 +40481,20 @@
             t,
           );
         return (0, i.jsx)("div", {
-          className: ar().PollBackground,
+          className: nr().PollBackground,
           style: m,
           children: (0, i.jsxs)("div", {
-            className: ar().PollContainer,
+            className: nr().PollContainer,
             children: [
-              (0, i.jsx)("div", { className: ar().PollQuestion, children: l }),
-              (0, i.jsx)("div", { className: ar().PollOptions, children: s }),
+              (0, i.jsx)("div", { className: nr().PollQuestion, children: l }),
+              (0, i.jsx)("div", { className: nr().PollOptions, children: s }),
               (0, i.jsxs)("div", {
-                className: ar().PollStatus,
+                className: nr().PollStatus,
                 children: [
                   (0, i.jsx)("div", {
                     children: (0, T.Yp)(
                       "#UserPolls_status_N_Votes",
-                      (0, nr.D)(_?.total_votes || 0),
+                      (0, lr.D)(_?.total_votes || 0),
                     ),
                   }),
                   _?.display_message
@@ -40477,7 +40502,7 @@
                     : (0, i.jsx)("div", {
                         children: (0, T.PP)(
                           "#UserPolls_status_N_TimeRemaining",
-                          (0, or.R2)(g - n),
+                          (0, cr.R2)(g - n),
                         ),
                       }),
                 ],
@@ -40486,7 +40511,7 @@
           }),
         });
       }
-      function ur(e) {
+      function _r(e) {
         const {
             pollOptionDef: t,
             onClick: r,
@@ -40495,43 +40520,43 @@
             bSelected: n,
             nPercentage: o,
           } = e,
-          [l] = (0, Et.q3)(() => [T.NT.GetWithFallback(t.localized_option, a)]),
+          [l] = (0, At.q3)(() => [T.NT.GetWithFallback(t.localized_option, a)]),
           c = Math.round(100 * (o ?? 0));
         return (0, i.jsxs)("div", {
           className: (0, k.A)({
-            [ar().PollOption]: !0,
-            [ar().Selected]: n,
-            [ar().Disabled]: s,
+            [nr().PollOption]: !0,
+            [nr().Selected]: n,
+            [nr().Disabled]: s,
           }),
           onClick: s ? void 0 : r,
           children: [
-            (0, i.jsx)("div", { className: ar().BackgroundBar }),
+            (0, i.jsx)("div", { className: nr().BackgroundBar }),
             (0, i.jsx)("div", {
-              className: ar().ForegroundBar,
+              className: nr().ForegroundBar,
               style: { width: `${c}%` },
             }),
             (0, i.jsxs)("div", {
-              className: ar().ContentRow,
+              className: nr().ContentRow,
               children: [
-                (0, i.jsx)("div", { className: ar().PollVoteIcon }),
+                (0, i.jsx)("div", { className: nr().PollVoteIcon }),
                 void 0 !== o &&
                   (0, i.jsxs)("div", {
-                    className: ar().PctText,
+                    className: nr().PctText,
                     children: [c, "%"],
                   }),
-                (0, i.jsx)("span", { className: ar().OptionText, children: l }),
+                (0, i.jsx)("span", { className: nr().OptionText, children: l }),
               ],
             }),
           ],
         });
       }
-      var dr = r(75933),
-        _r = r(43568);
-      function gr(e) {
+      var gr = r(75933),
+        pr = r(43568);
+      function Br(e) {
         const t = (0, C.Qn)(),
-          r = (0, dr.a4)(dr.Wn),
+          r = (0, gr.a4)(gr.Wn),
           a = "true" === String((0, l.j$)(e.args, "autoadvance")).toLowerCase();
-        return (0, i.jsx)(_r.F, {
+        return (0, i.jsx)(pr.F, {
           hideArrows: !r,
           hidePips: t,
           visibleElements: 1,
@@ -40543,25 +40568,25 @@
           children: e.children,
         });
       }
-      var pr = r(65088),
-        Br = r.n(pr),
-        yr = r(52505);
-      function br(e) {
+      var yr = r(65088),
+        br = r.n(yr),
+        fr = r(52505);
+      function hr(e) {
         const { strURL: t, children: r } = e;
         return (
           "string" == typeof t
             ? !(0, m.ZF)(t)
             : t.some((e) => !(0, m.ZF)(e))
         )
-          ? (0, i.jsx)(fr, { children: r })
+          ? (0, i.jsx)(wr, { children: r })
           : (0, i.jsx)(i.Fragment, { children: r });
       }
-      function fr(e) {
+      function wr(e) {
         const { children: t } = e;
-        return (0, yr.Ey)()
+        return (0, fr.Ey)()
           ? (0, i.jsx)(i.Fragment, { children: t })
           : (0, i.jsx)("div", {
-              className: Br().ImageBlocked,
+              className: br().ImageBlocked,
               children: (0, T.oW)(
                 "#Image_Externally_Hosted_Hidden",
                 (0, i.jsx)("a", {
@@ -40570,12 +40595,12 @@
               ),
             });
       }
-      var hr = r(82477),
-        wr = r(56545),
-        Mr = r(96059),
-        Sr = r(58222),
-        zr = r(6144);
-      class vr {
+      var Mr = r(82477),
+        Sr = r(56545),
+        zr = r(96059),
+        vr = r(58222),
+        Rr = r(6144);
+      class jr {
         m_mapInventoryByApp = new Map();
         m_mapPromises = new Map();
         m_listChangeCallback = new Map();
@@ -40586,7 +40611,7 @@
         GetItemDefsChangeForAppID(e) {
           return (
             this.m_listChangeCallback.has(e) ||
-              this.m_listChangeCallback.set(e, new zr.lu()),
+              this.m_listChangeCallback.set(e, new Rr.lu()),
             this.m_listChangeCallback.get(e)
           );
         }
@@ -40609,11 +40634,11 @@
             : R.zi;
         }
         async InternalLoadCommunityInventory(e) {
-          const t = wr.w.Init(Sr.cU);
+          const t = Sr.w.Init(vr.cU);
           t.Body().set_filter_appids([e]);
           let r = null;
           try {
-            const i = await Sr.uy.GetCommunityInventory(
+            const i = await vr.uy.GetCommunityInventory(
               this.m_SteamInterface.GetServiceTransport(),
               t,
             );
@@ -40629,9 +40654,9 @@
                 R.R
               );
             }
-            r = (0, $.H)(i);
+            r = (0, J.H)(i);
           } catch (e) {
-            r = (0, $.H)(e);
+            r = (0, J.H)(e);
           }
           return (
             console.error(
@@ -40647,12 +40672,12 @@
         static s_Singleton;
         static Get() {
           return (
-            vr.s_Singleton ||
-              ((vr.s_Singleton = new vr()),
-              vr.s_Singleton.Init(),
+            jr.s_Singleton ||
+              ((jr.s_Singleton = new jr()),
+              jr.s_Singleton.Init(),
               "dev" == C.TS.WEB_UNIVERSE &&
-                (window.g_QuestCommunityInventoryStore = vr.s_Singleton)),
-            vr.s_Singleton
+                (window.g_QuestCommunityInventoryStore = jr.s_Singleton)),
+            jr.s_Singleton
           );
         }
         constructor() {}
@@ -40662,26 +40687,26 @@
             e,
             "CQuestCommunityInventoryStore: missing read_inventory:steam oauth permission",
           ),
-            (this.m_SteamInterface = new Mr.D(C.TS.WEBAPI_BASE_URL, e));
+            (this.m_SteamInterface = new zr.D(C.TS.WEBAPI_BASE_URL, e));
         }
       }
-      function Rr(e) {
-        const [t, r] = (0, o.useState)(vr.Get().GetInventoryForApp(e));
+      function Tr(e) {
+        const [t, r] = (0, o.useState)(jr.Get().GetInventoryForApp(e));
         return (
           (0, o.useEffect)(() => {
             e &&
-              !vr.Get().BHasLoadedDef(e) &&
-              vr.Get().LoadCommunityInventory(e);
+              !jr.Get().BHasLoadedDef(e) &&
+              jr.Get().LoadCommunityInventory(e);
           }, [e]),
-          (0, de.hL)(vr.Get().GetItemDefsChangeForAppID(e), r),
+          (0, _e.hL)(jr.Get().GetItemDefsChangeForAppID(e), r),
           t
         );
       }
-      (0, M.Cg)([de.oI], vr.prototype, "SetTestAppCommunityItems", null);
-      var jr = r(93973),
-        Tr = r(71298),
-        Cr = r(37341);
-      class Ir {
+      (0, M.Cg)([_e.oI], jr.prototype, "SetTestAppCommunityItems", null);
+      var Cr = r(93973),
+        Ir = r(71298),
+        Fr = r(37341);
+      class xr {
         m_mapAppToDefs = new Map();
         m_mapPromises = new Map();
         m_listChangeCallback = new Map();
@@ -40691,7 +40716,7 @@
         GetItemDefsChangeForEventID(e) {
           return (
             this.m_listChangeCallback.has(e) ||
-              this.m_listChangeCallback.set(e, new zr.lu()),
+              this.m_listChangeCallback.set(e, new Rr.lu()),
             this.m_listChangeCallback.get(e)
           );
         }
@@ -40740,9 +40765,9 @@
                 ),
                 R.R
               );
-            r = (0, $.H)(s);
+            r = (0, J.H)(s);
           } catch (e) {
-            r = (0, $.H)(e);
+            r = (0, J.H)(e);
           }
           return (
             console.error(
@@ -40760,27 +40785,27 @@
         static s_Singleton;
         static Get() {
           return (
-            Ir.s_Singleton ||
-              ((Ir.s_Singleton = new Ir()),
-              Ir.s_Singleton.Init(),
+            xr.s_Singleton ||
+              ((xr.s_Singleton = new xr()),
+              xr.s_Singleton.Init(),
               "dev" == C.TS.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = Ir.s_Singleton)),
-            Ir.s_Singleton
+                (window.g_SaleMiniGameItemDefStore = xr.s_Singleton)),
+            xr.s_Singleton
           );
         }
         constructor() {}
         Init() {}
       }
-      function Fr(e, t, r) {
+      function Ur(e, t, r) {
         const i = (function (e, t) {
-            const [r, i] = (0, o.useState)(Ir.Get().GetItemDefForAppID(e));
+            const [r, i] = (0, o.useState)(xr.Get().GetItemDefForAppID(e));
             return (
               (0, o.useEffect)(() => {
                 e &&
-                  !Ir.Get().BHasLoadedDef(e) &&
-                  Ir.Get().LoadAppCommunityItems(e, t);
+                  !xr.Get().BHasLoadedDef(e) &&
+                  xr.Get().LoadAppCommunityItems(e, t);
               }, [e, t]),
-              (0, de.hL)(Ir.Get().GetItemDefsChangeForEventID(e), i),
+              (0, _e.hL)(xr.Get().GetItemDefsChangeForEventID(e), i),
               r
             );
           })(e, r),
@@ -40797,7 +40822,7 @@
           a
         );
       }
-      function xr(e) {
+      function Wr(e) {
         const {
           appid: t,
           item_image_small: r,
@@ -40832,35 +40857,35 @@
           return (0, i.jsx)("img", { className: e.className, src: s, alt: o });
         }
       }
-      function Ur(e) {
+      function Or(e) {
         const { appid: t, community_item_type: r, bForEdit: a } = e,
-          s = Fr(t, r, a),
+          s = Ur(t, r, a),
           n =
             s && !s.active
               ? (0, i.jsx)("div", {
-                  className: tr.WarningStylesBackground,
+                  className: ir.WarningStylesBackground,
                   children: (0, T.we)(
                     "#Sale_Section_RewardShelf_ItemInActiveWarning",
                   ),
                 })
               : void 0;
         return s
-          ? (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(xr, { ...s }), n] })
-          : (0, i.jsx)(ae.t, { size: "small", string: (0, T.we)("#Loading") });
+          ? (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(Wr, { ...s }), n] })
+          : (0, i.jsx)(se.t, { size: "small", string: (0, T.we)("#Loading") });
       }
-      function Wr(e) {
-        const t = (0, jr.Oz)(),
+      function Er(e) {
+        const t = (0, Cr.Oz)(),
           { bLoading: r } = t,
           { className: a, bPreviewMode: s, rewardType: n } = e;
         return (0, i.jsx)(q.$n, {
           className: (0, k.A)("CSSClaimItemButton", a),
           onClick: (e) => {
             t.bCanClaimNewItem
-              ? (0, Lt.pg)((0, i.jsx)(Er, { rewardType: n }), (0, Ut.uX)(e))
+              ? (0, Vt.pg)((0, i.jsx)(Ar, { rewardType: n }), (0, Ot.uX)(e))
               : ("dev" == C.TS.WEB_UNIVERSE ||
                   "beta" == C.TS.WEB_UNIVERSE ||
                   s) &&
-                ((0, Lt.pg)((0, i.jsx)(Er, { rewardType: n }), (0, Ut.uX)(e)),
+                ((0, Vt.pg)((0, i.jsx)(Ar, { rewardType: n }), (0, Ot.uX)(e)),
                 console.log(
                   "Show dialog for debugging, since already claimed: ",
                   (0, v.HO)(t),
@@ -40868,17 +40893,17 @@
           },
           disabled: r,
           children: Boolean(r)
-            ? (0, i.jsx)(ae.t, { string: (0, T.we)("#Loading"), size: "small" })
-            : (0, i.jsx)(Or, { claimState: t }),
+            ? (0, i.jsx)(se.t, { string: (0, T.we)("#Loading"), size: "small" })
+            : (0, i.jsx)(qr, { claimState: t }),
         });
       }
-      function Or(e) {
+      function qr(e) {
         const { claimState: t, strButtonOverride: r, rewardType: a } = e;
         if (t.bAlreadyClaimedCurrentItem)
           return (0, i.jsxs)("div", {
-            className: (0, k.A)(Cr.CheckMark, "CSSClaimedState"),
+            className: (0, k.A)(Fr.CheckMark, "CSSClaimedState"),
             children: [
-              (0, i.jsx)(X.Jlk, {}),
+              (0, i.jsx)(ee.Jlk, {}),
               (0, i.jsxs)("span", {
                 children: [
                   " ",
@@ -40905,10 +40930,10 @@
           children: s,
         });
       }
-      function Er(e) {
+      function Ar(e) {
         const { closeModal: t, rewardType: r } = e,
-          { fnClaimItem: a } = (0, jr.CC)(),
-          s = (0, Tr.vs)(),
+          { fnClaimItem: a } = (0, Cr.CC)(),
+          s = (0, Ir.vs)(),
           [n, l] = o.useState(null);
         o.useEffect(() => {
           s.bLoading ||
@@ -40937,10 +40962,10 @@
                   s.fnSetStrSuccess("   "),
                     s.fnSetElSuccess(
                       (0, i.jsxs)("div", {
-                        className: Cr.DialogCtn,
+                        className: Fr.DialogCtn,
                         children: [
                           (0, i.jsx)("span", { children: t }),
-                          (0, i.jsx)(qr, {
+                          (0, i.jsx)(Pr, {
                             appid: e.appid,
                             community_item_type: e.community_item_type,
                             rewardType: a,
@@ -40965,33 +40990,33 @@
           case f.xw:
             c = (0, T.we)("#Sale_ClaimableReward_animatedavatar");
         }
-        return (0, i.jsx)(Tr.Hh, {
+        return (0, i.jsx)(Ir.Hh, {
           state: s,
           strDialogTitle: c,
           closeModal: t,
         });
       }
-      function qr(e) {
+      function Pr(e) {
         const { appid: t, community_item_type: r, rewardType: a } = e;
         return t && r
           ? (0, i.jsxs)(i.Fragment, {
               children: [
-                (0, i.jsx)(Ur, { appid: t, community_item_type: r }),
+                (0, i.jsx)(Or, { appid: t, community_item_type: r }),
                 Boolean(a == f.jE) &&
-                  (0, i.jsx)(Ar, { appid: t, community_item_type: r }),
+                  (0, i.jsx)(Nr, { appid: t, community_item_type: r }),
               ],
             })
           : null;
       }
-      function Ar(e) {
+      function Nr(e) {
         const { appid: t, community_item_type: r } = e,
-          a = Rr(t),
+          a = Tr(t),
           [s, n] = o.useState(!1);
         if (!a) return null;
         const l = a.find((e) => e.item_type == r);
         return l
           ? (0, i.jsxs)("div", {
-              className: Cr.EquipCtn,
+              className: Fr.EquipCtn,
               children: [
                 Boolean(s)
                   ? (0, i.jsx)("div", {
@@ -41001,7 +41026,7 @@
                     })
                   : (0, i.jsx)(q.$n, {
                       onClick: (e) => {
-                        (0, jr.ns)(l).then((e) => {
+                        (0, Cr.ns)(l).then((e) => {
                           e == R.R && n(!0);
                         });
                       },
@@ -41009,7 +41034,7 @@
                         "#Sale_ClaimableReward_profilemodifier_apply",
                       ),
                     }),
-                (0, i.jsx)(ot.Ii, {
+                (0, i.jsx)(ut.Ii, {
                   href: `${C.TS.COMMUNITY_BASE_URL}profiles/${C.iA.steamid}`,
                   children: (0, T.we)(
                     "#Sale_ClaimableReward_profilemodifier_view",
@@ -41019,13 +41044,13 @@
             })
           : (0, i.jsxs)("div", {
               children: [
-                (0, i.jsx)(ot.Ii, {
+                (0, i.jsx)(ut.Ii, {
                   href: `${C.TS.COMMUNITY_BASE_URL}profiles/${C.iA.steamid}/edit/goldenprofile`,
                   children: (0, T.we)(
                     "#Sale_ClaimableReward_profilemodifier_choose",
                   ),
                 }),
-                (0, i.jsx)(ot.Ii, {
+                (0, i.jsx)(ut.Ii, {
                   href: `${C.TS.COMMUNITY_BASE_URL}profiles/${C.iA.steamid}`,
                   children: (0, T.we)(
                     "#Sale_ClaimableReward_profilemodifier_view",
@@ -41034,15 +41059,15 @@
               ],
             });
       }
-      var Pr = r(33645),
-        Nr = r.n(Pr);
-      let Gr = null;
-      function kr() {
+      var Gr = r(33645),
+        kr = r.n(Gr);
+      let Dr = null;
+      function Lr() {
         return (
-          null == Gr &&
-            (Gr = new Map([
-              ["url", { Constructor: lt, autocloses: !1 }],
-              ["dynamiclink", { Constructor: ct, autocloses: !1 }],
+          null == Dr &&
+            (Dr = new Map([
+              ["url", { Constructor: dt, autocloses: !1 }],
+              ["dynamiclink", { Constructor: _t, autocloses: !1 }],
               [
                 "h1",
                 {
@@ -41083,37 +41108,37 @@
                 "*",
                 { Constructor: l.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Dr, autocloses: !1 }],
+              ["img", { Constructor: Hr, autocloses: !1 }],
               ["previewyoutube", { Constructor: E.gH, autocloses: !1 }],
               ["looping_media", { Constructor: w.$A, autocloses: !1 }],
               ["video", { Constructor: w.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: E.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: Hr, autocloses: !1 }],
-              ["vod", { Constructor: Vr, autocloses: !1 }],
+              ["trailer", { Constructor: Qr, autocloses: !1 }],
+              ["vod", { Constructor: Kr, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: Qr,
+                  Constructor: Yr,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Yr, autocloses: !1 }],
-              ["claimitem", { Constructor: $r, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: Jr, autocloses: !1 }],
-              ["actiondialog", { Constructor: Xr, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: ti, autocloses: !0 }],
-              ["docimg", { Constructor: Lr, autocloses: !1 }],
-              ["carousel", { Constructor: gr, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: Jr, autocloses: !1 }],
+              ["claimitem", { Constructor: Zr, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: Xr, autocloses: !1 }],
+              ["actiondialog", { Constructor: ti, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: ii, autocloses: !0 }],
+              ["docimg", { Constructor: Vr, autocloses: !1 }],
+              ["carousel", { Constructor: Br, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: A.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: A.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: lr, autocloses: !1 }],
+              ["userpolls", { Constructor: mr, autocloses: !1 }],
             ])),
-          Gr
+          Dr
         );
       }
-      function Dr(e) {
+      function Hr(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let a = (0, l.j$)(e.args, "src") || e.children?.toString();
         a || (a = (0, l.j$)(e.args));
@@ -41127,28 +41152,28 @@
             (e = !(0, m.ZF)(a)),
             r?.BHasTag("auto_rssfeed") && (e = !1),
             t
-              ? (0, i.jsx)(xt.i, {
-                  className: (0, k.A)({ [Nr().Image_Inline]: s }),
+              ? (0, i.jsx)(Wt.i, {
+                  className: (0, k.A)({ [kr().Image_Inline]: s }),
                   src: a,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
               : ((a = (0, m.L$)(a)),
-                (0, i.jsx)(br, {
+                (0, i.jsx)(hr, {
                   strURL: a,
-                  children: (0, i.jsx)(kt.o, {
-                    className: (0, k.A)({ [Nr().Image_Inline]: s }),
+                  children: (0, i.jsx)(Lt.o, {
+                    className: (0, k.A)({ [kr().Image_Inline]: s }),
                     src: a,
                     crossOrigin: e ? "anonymous" : void 0,
                   }),
                 }))
           );
         }
-        return (0, i.jsx)(br, {
+        return (0, i.jsx)(hr, {
           strURL: n,
-          children: (0, i.jsx)(se.c, { rgSources: n }),
+          children: (0, i.jsx)(ne.c, { rgSources: n }),
         });
       }
-      function Lr(e) {
+      function Vr(e) {
         const t = (0, l.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -41161,23 +41186,23 @@
             a.push(
               `${C.TS.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`,
             ),
-          (0, i.jsx)(se.c, { rgSources: a, alt: r })
+          (0, i.jsx)(ne.c, { rgSources: a, alt: r })
         );
       }
-      function Hr(e) {
-        const t = Kr(
+      function Qr(e) {
+        const t = $r(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = Kr(e.args, "trailerid", 0);
+          r = $r(e.args, "trailerid", 0);
         let a =
-          (0, l.j$)(e.args, "style")?.toLocaleLowerCase() ?? mt.k_TrailerAsFull;
-        a = Object.values(mt).includes(a) ? a : mt.k_TrailerAsFull;
-        const s = nt(e.args.color, "black"),
-          n = nt(e.args.bgcolor, "white"),
+          (0, l.j$)(e.args, "style")?.toLocaleLowerCase() ?? gt.k_TrailerAsFull;
+        a = Object.values(gt).includes(a) ? a : gt.k_TrailerAsFull;
+        const s = mt(e.args.color, "black"),
+          n = mt(e.args.bgcolor, "white"),
           o = (0, w.g4)(e.args);
-        return (0, i.jsx)(Mt, {
+        return (0, i.jsx)(zt, {
           appid: t,
           trailerBaseID: r,
           bIsPreviewMode: e.context.showErrorInfo,
@@ -41188,27 +41213,27 @@
           subtitles: o.rgVideoTracks,
         });
       }
-      function Vr(e) {
-        const t = Kr(e.args, "appid", 0);
-        return (0, i.jsx)(Ft, {
+      function Kr(e) {
+        const t = $r(e.args, "appid", 0);
+        return (0, i.jsx)(Ut, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Qr(e) {
+      function Yr(e) {
         const t = (0, l.j$)(e.args, "name"),
           r = (0, l.j$)(e.args, "title"),
           a = (0, l.j$)(e.args, "company"),
           s = (0, l.j$)(e.args, "photo");
         return e.context.bShowShortSpeakerInfo
-          ? (0, i.jsx)(vt.S8, {
+          ? (0, i.jsx)(jt.S8, {
               name: t,
               title: r,
               company: a,
               photo: s,
               bio: e.children,
             })
-          : (0, i.jsx)(vt.$k, {
+          : (0, i.jsx)(jt.$k, {
               name: t,
               title: r,
               company: a,
@@ -41216,11 +41241,11 @@
               bio: e.children,
             });
       }
-      function Kr(e, t, r) {
+      function $r(e, t, r) {
         const i = (0, l.j$)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function Yr(e) {
+      function Jr(e) {
         const t = (0, l.j$)(e.args, "name"),
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -41234,11 +41259,11 @@
           ? e.children
           : null;
       }
-      function $r(e) {
+      function Zr(e) {
         const t = e.context.showErrorInfo;
         if (!C.iA.logged_in)
           return (0, i.jsx)(q.$n, {
-            onClick: hr.vg,
+            onClick: Mr.vg,
             className: "CSSClaimItemLoginButton",
             children: (0, T.we)("#Sale_ClaimableReward_Login"),
           });
@@ -41252,9 +41277,9 @@
             case "sticker":
               a = f.Ed;
           }
-        return (0, i.jsx)(Wr, { bPreviewMode: t, rewardType: a });
+        return (0, i.jsx)(Er, { bPreviewMode: t, rewardType: a });
       }
-      function Jr(e) {
+      function Xr(e) {
         const t = Number.parseInt((0, l.j$)(e.args, "id")) || 0,
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -41272,7 +41297,7 @@
           (!o && !r) || (o && r) ? e.children : null
         );
       }
-      function Zr(e) {
+      function ei(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, U.h)(e),
             r = (0, U.Q)();
@@ -41298,12 +41323,12 @@
         }
         return { bInitialState: !0 };
       }
-      function Xr(e) {
+      function ti(e) {
         const t = (0, l.j$)(e.args, "action"),
           r = (0, l.j$)(e.args, "initialToken"),
           a = (0, l.j$)(e.args, "successToken"),
           s = (0, l.j$)(e.args, "failToken"),
-          n = Zr(t);
+          n = ei(t);
         if (!(t && r && a && s)) {
           return e.context.showErrorInfo
             ? (0, i.jsx)("div", {
@@ -41316,15 +41341,15 @@
           ? (0, i.jsxs)(q.$n, {
               className: "CSSActionDialogButton",
               onClick: (n) => {
-                (0, Lt.pg)(
-                  (0, i.jsx)(ei, {
+                (0, Vt.pg)(
+                  (0, i.jsx)(ri, {
                     strAction: t,
                     strInitialToken: r,
                     strSuccessToken: a,
                     strFailToken: s,
                     children: e.children,
                   }),
-                  (0, Ut.uX)(n),
+                  (0, Ot.uX)(n),
                 );
               },
               children: [
@@ -41335,11 +41360,11 @@
             })
           : (0, i.jsx)(q.$n, {
               className: "CSSActionDialogButton",
-              onClick: hr.vg,
+              onClick: Mr.vg,
               children: (0, T.we)("#Login_SignIn"),
             });
       }
-      function ei(e) {
+      function ri(e) {
         const {
             strAction: t,
             children: r,
@@ -41348,13 +41373,13 @@
             strSuccessToken: n,
             strFailToken: l,
           } = e,
-          c = Zr(t),
+          c = ei(t),
           [m, u] = o.useState(Boolean(c.fnAction));
         o.useEffect(() => {
           c.fnAction && (u(!0), c.fnAction().finally(() => u(!1)));
         }, [c]);
         const d = o.useId();
-        return (0, i.jsxs)(Dt.eV, {
+        return (0, i.jsxs)(Ht.eV, {
           bDisableBackgroundDismiss: !0,
           closeModal: a,
           onCancel: a,
@@ -41372,7 +41397,7 @@
             (0, i.jsx)(q.nB, {
               children: (0, i.jsx)(q.a3, {
                 children: m
-                  ? (0, i.jsx)(ae.t, {
+                  ? (0, i.jsx)(se.t, {
                       size: "medium",
                       position: "center",
                       string: (0, T.we)("#Loading"),
@@ -41383,7 +41408,7 @@
           ],
         });
       }
-      function ti(e) {
+      function ii(e) {
         const { showErrorInfo: t, event: r } = e.context,
           a = r.clanSteamID.GetAccountID(),
           [s] = o.useState(
@@ -41415,8 +41440,8 @@
           (C.TS.EUNIVERSE == b.wLO && a == y.Kd)
           ? (0, i.jsxs)("div", {
               children: [
-                (0, i.jsx)(Ot, { fileUploadManager: s }),
-                (0, i.jsx)(At, { fileUploadManager: s }),
+                (0, i.jsx)(qt, { fileUploadManager: s }),
+                (0, i.jsx)(Nt, { fileUploadManager: s }),
               ],
             })
           : t
@@ -41425,19 +41450,19 @@
               })
             : null;
       }
-      class ri {
+      class ai {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(l.W4.entries()),
-          ...Array.from(kr().entries()),
+          ...Array.from(Lr().entries()),
         ]);
         static AddDictionary(e) {
-          ri.sm_BBCodeDictionary = new Map([
-            ...Array.from(ri.sm_BBCodeDictionary.entries()),
+          ai.sm_BBCodeDictionary = new Map([
+            ...Array.from(ai.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function ii(e) {
+      function si(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -41450,7 +41475,7 @@
             (e) =>
               new p(
                 new g(
-                  new _(new s.OJ(new s.R8(), 0), e, Ne(), {
+                  new _(new s.OJ(new s.R8(), 0), e, ke(), {
                     partnerEventStore: r,
                     event: l,
                   }),
@@ -41461,7 +41486,7 @@
           );
         return o
           .useMemo(
-            () => new a.B(ri.sm_BBCodeDictionary, u, i || n.TS.LANGUAGE),
+            () => new a.B(ai.sm_BBCodeDictionary, u, i || n.TS.LANGUAGE),
             [u, i],
           )
           .ParseBBCode(t, {

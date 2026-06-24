@@ -18,8 +18,7 @@ message CPackageReservationStatus {
 	optional string user_waitlist_token = 14;
 	optional bool queue_in_waitlist = 15;
 	optional string queue_waitlist_token = 16;
-	optional bool reservation_type = 17;
-	//optional uint32 collection_time_active = 17;
+	optional uint32 collection_time_active = 17;
 }
 
 message CReservationPositionMessage {

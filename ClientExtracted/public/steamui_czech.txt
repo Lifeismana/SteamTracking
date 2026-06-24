@@ -847,6 +847,7 @@ Tato operace zabere jenom okamžik."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Latin. španělština)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamština)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonéština)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (malajština)"
 
 
 
@@ -5062,6 +5063,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "DownloadRegion_br_manaus"			"Brazílie – Manaus"
 "DownloadRegion_br_belem"			"Brazílie – Belém"
 "DownloadRegion_br_salvador"			"Brazílie – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Nastavení ovladače"
 "ControllerBinding_Offline_Save"	"[Auto. uložené offline nastavení]"

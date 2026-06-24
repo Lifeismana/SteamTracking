@@ -413,7 +413,7 @@
         S = t(62490),
         k = t(84811),
         N = t(22797),
-        G = t(30207);
+        G = t(77291);
       const B = s.Fragment;
       function T(e) {
         const {

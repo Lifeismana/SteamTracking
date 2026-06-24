@@ -125,8 +125,8 @@
 	"origin_SteamFrame_RightGrip_Pull"			"Pressione impugnatura destra"
 	"origin_SteamFrame_RightGrip_Click"			"Clic impugnatura destra"
 	"origin_SteamFrame_RightGrip_Touch"			"Tocco impugnatura destra"
-	"origin_SteamFrame_LeftThumbrest_Touch"		"Tocco levetta sinistra"
-	"origin_SteamFrame_RightThumbrest_Touch"	"Tocco levetta destra"
+	"origin_SteamFrame_LeftThumbrest_Touch"		"Tocco poggiadito sinistro"
+	"origin_SteamFrame_RightThumbrest_Touch"	"Tocco poggiadito destro"
 
 	"origin_horipad_m1"							"Pulsante M1"
 	"origin_horipad_m2"							"Pulsante M2"

@@ -59,11 +59,12 @@
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !,7BMM
 !6,@ZKe
-!= and not NULL
 !\n\finitial_left
 !is_large()
 !m_ChromeIPCClient.BInitialized()
 !m_data.HasError()
+!options.strHTMLCacheDir.IsEmpty()
+!options.strInstallDir.IsEmpty()
 !pszString || pszString[nChars] == '\0'
 " \n\rCMsgSetUIMode
 " because it is missing required fields:
@@ -282,8 +283,6 @@ $\n k_SystemAudioPortDirection_Input
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(DEPRECATED) Friends-of-friends-only
-(DEPRECATED) Logged-in users only
 (\n$k_EBroadcastPermissionFriendsAllowed
 (\n$k_EBroadcastPermissionFriendsApprove
 (\n$k_EBrowserFeatureStatus_EnabledForce
@@ -328,7 +327,6 @@ $\n k_SystemAudioPortDirection_Input
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -465,6 +463,7 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
@@ -749,8 +748,6 @@ $\n k_SystemAudioPortDirection_Input
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
 /\n+k_PublishedFileQueryType_RankedByTextSearch
 /data/src/common/callbacklist.h
-/data/src/common/clientdirectories.h
-/data/src/common/enum_names.cpp
 /data/src/common/environmentmanager.cpp
 /data/src/common/html/chrome_ipc_client.cpp
 /data/src/common/html/chrome_ipc_shared.cpp
@@ -941,19 +938,16 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI26CMsgShowBrowserContextMenuE
 16CHTMLProtoBufMsgI26CMsgToggleFindInPageDialogE
 16CHTMLProtoBufMsgI27CMsgDraggableRegionsChangedE
-16CHTMLProtoBufMsgI27CMsgFocusedNodeTextResponseE
 16CHTMLProtoBufMsgI27CMsgNeedsSharedTexturePaintE
 16CHTMLProtoBufMsgI27CMsgProcessInfoNotificationE
 16CHTMLProtoBufMsgI27CMsgRenderProcessTerminatedE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
-16CHTMLProtoBufMsgI28CMsgScalePageToValueResponseE
 16CHTMLProtoBufMsgI28CMsgSetAccessibilitySettingsE
 16CHTMLProtoBufMsgI30CMsgImeCompositionRangeChangedE
 16CHTMLProtoBufMsgI30CMsgSetForceDeviceScaleFactorsE
 16CHTMLProtoBufMsgI30CMsgSetNetFakeLocalSystemStateE
 16CHTMLProtoBufMsgI33CMsgVerticalScrollBarSizeResponseE
 16CHTMLProtoBufMsgI35CMsgHorizontalScrollBarSizeResponseE
-16CHTMLProtoBufMsgI35CMsgZoomToElementAtPositionResponseE
 16CHTMLProtoBufMsgI38CMsgSetBrowserViewDomainRequestMappingE
 16CHTMLProtoBufMsgI9CMsgCloseE
 16CMsgAckScreenDPI
@@ -999,7 +993,6 @@ $\n k_SystemAudioPortDirection_Input
 19CMsgClearAllCookies
 19CMsgComboNeedsPaint
 19CMsgFinishedRequest
-19CMsgFocusedNodeText
 19CMsgGetZoomResponse
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
@@ -1033,7 +1026,6 @@ $\n k_SystemAudioPortDirection_Input
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgLoadLocalization
 20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
@@ -1069,7 +1061,6 @@ $\n k_SystemAudioPortDirection_Input
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CMsgZoomToFocusedElement
 25CMsgAckSharedPaintBuffers
 25CMsgBrowserCreateResponse
 25CMsgFileLoadDialog_Filter
@@ -1083,19 +1074,14 @@ $\n k_SystemAudioPortDirection_Input
 26CMsgShowBrowserContextMenu
 26CMsgToggleFindInPageDialog
 27CMsgDraggableRegionsChanged
-27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
-27CMsgZoomToElementAtPosition
 28CMsgGetCookiesForURLResponse
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
-28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
@@ -1123,14 +1109,12 @@ $\n k_SystemAudioPortDirection_Input
 31CMsgDisableBackgroundThrottling
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
-35CMsgZoomToElementAtPositionResponse
 38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 3\n/k_PublishedFileQueryType_RankedByNumParentItems
-3pay
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgShowBrowserContextMenu_ContextCommand
 42CMsgDraggableRegionsChanged_DraggableRects
@@ -1141,7 +1125,6 @@ $\n k_SystemAudioPortDirection_Input
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
@@ -1208,18 +1191,13 @@ $\n k_SystemAudioPortDirection_Input
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
 :\v-2147483648
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
-< or is NULL
-<= or is NULL
 <\n/k_EChildProcessQueryExitCode_ErrorUnimplemented
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
-= or is NULL
 =\n9k_EAppTestType_SteamChinaPlatformOperator_StorePageReview
 =\n9k_EContentReportReason_FakedGenderedNonConsensualMaterial
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
-> or is NULL
->= or is NULL
 >\n:k_EContentReportReason_NoncomplianceWithPricingRegulations
 ?456789:;<=
 ???\f???????\n???\r?\t?\vN6google8protobuf2io14ErrorCollectorE
@@ -1227,46 +1205,15 @@ $\n k_SystemAudioPortDirection_Input
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than
-A reservation already exists
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABORTED
-ACHIEVEMENTS
 AKST
 ALREADY_EXISTS
-AMD OpenSource
-AMD RADV
 ASCII
 ASCII//TRANSLIT
-AUDIO
-AVGRATE
-AVS Failure
 A\n=k_EContentReportReason_OtherDataProtectionAndPrivacyViolation
 A\n\nannotation
-Abuse reporter's UGC Image
-Accepted
-AcceptedForGameRankedByAcceptanceDate
-Access Denied
-Account Disabled
-Account Locked Down
-Account Logon Denied
-Account Logon Denied Verified Email Required
-Account Logon Denied no mail sent
-Account Not Featured
-Account Not Found
-Account Termination
-Account associated with multiple players
-Account has an existing user cancelled license
-Account has been deleted
-Account is blocked
-Account is not allowed
-Account is restricted from purchasing adult content
-Account locked
-Account logon denied, need two-factor code
-Account not verified
-Accounts not friends
-AchievementUnlocked
-Active
 AddAllocatedMessage
 AddBool
 AddDouble
@@ -1278,70 +1225,22 @@ AddMessage
 AddString
 AddUInt32
 AddUInt64
-AddedGameToWishlist
 AdditionalRoute
-Address is invalid or contains invalid characters
-Admin
-Administrator OK
-Adult Content
-Advertisement
 Afrikaans
-Akbank
 Albanian
-Alfa-Click
-AliPay
-AliPayHK
-All Friends
-AllGuides
 Allow webhelper to create BrowserView underlays
-Allowed playtime exceeded
-Already Active
-Already Logged In Elsewhere
-Already Owned
-Already Purchased
-Already Redeemed
 Already saw decimal point or exponent; can't have another one.
-Always Blocked
-American Express
-Amex (BoaCompra)
 Amharic
-Android
-AndroidExternalData
-AndroidInternalData
-AndroidSteamPackageRoot
-Announcement
-Anonymous Game Server
-Anonymous User
-App Running
-AppendedSHA
-Application running
-Approved Friends
 April
 Arabic
 Armenian
-Artwork
-ArtworkPublished
-Ascending
 Asked to unlock memory for write.. but wasn't locked
 Assamese
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 Assertion failed: length > k_cchMaxString
-Attempting to purchase same app in different packages
-AttribCapabilityGroup
-Audio Behind
-Audio Init Failed
 August
-Aura
-Authorize
-Authorized Device
-Auto Grant
-Auto Moderation
-AutoDeny
-Avatar Image
-Away
 Azerbaijani
-BBVA Continental
 BCreateDirectory
 BDirectRendererBrowser( eBrowserType )
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
@@ -1354,62 +1253,22 @@ BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 BackUp() can only be called after a successful Next().
-Backup Running
 Bad Access flag on shared mem create: %s: %u\n
-Bad Gateway
-Bad Request
-Bad activation code
-Bad response
-Balota
-Banco Credito de Peru
-Banco Nacional de Costa Rica
-Banco Poplar
-Banco do Brasil Online
-Bandwidth Exceeded
 Bangla
-Bank Asya
-Bank Transfer (Degica)
-Banned
 Basque
-Beeline
 Belarusian
-Benchmark
-Beta
-Billing agreement cancelled
-Billing name is invalid because it looks like it contains credit card data
-BitCash
-Bitcoin
-Blik
 BlockPromptsIfIgnoredOften
-Blocked
-Blocked arguments
-Blocked because user is not a commercial partner
-Blocked by U.S. government regulations
-BoaCompra Gold
-Boleto Bancario
-Boleto Flash
-Book Voucher
 Boolean default must be true or false.
-Borrowed
 Bosnian
-Bounce
-Bradesco Online
 Brazilian
 Breaking '%s' in '%s'\n
-Broadcom
-Browser
 BrowserReady: handle:%u
 Bulgarian
-Business account not allowed to purchase
-Busy
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
 CANCELLED
-CASCADE
 CChromeIPCClient::PushCommand
 CChromeIPCClient::RunFrame
 CCookie
-CD Key
-CDNAuth
 CFileReader
 CFileReader::BOpenFile - %s
 CFileReader::Read
@@ -1664,7 +1523,6 @@ CHTMLController::RunFrame - Dispatch commands
 CHTMLController::RunFrame - IPC Client
 CHTMLPageSecurityInfo
 CLcx
-CLegacy
 CMsgAckPIDShuttingDown
 CMsgAckScreenDPI
 CMsgAckSharedPaintBuffers
@@ -1699,9 +1557,6 @@ CMsgFileLoadDialog
 CMsgFileLoadDialogResponse
 CMsgFind
 CMsgFinishedRequest
-CMsgFocusedNodeText
-CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -1725,7 +1580,6 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -1744,7 +1598,6 @@ CMsgPageSecurity
 CMsgPauseRepaint
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgRenderProcessTerminated
 CMsgRequestFullScreen
@@ -1754,7 +1607,6 @@ CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
-CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
@@ -1793,8 +1645,6 @@ CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgVerticalScrollBarSize
 CMsgViewSource
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 CORD
 CPPTYPE_BOOL
 CPPTYPE_DOUBLE
@@ -1819,7 +1669,6 @@ CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv called with no value
 CProcessEnvironmentManager::setenv invalid index %d\n
 CSHA1::Update
-CSPAuth
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
 CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
 CSharedMemStream::Clear()
@@ -1846,10 +1695,6 @@ CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 C\n#direct_rendering_display_compositor
 C\n?k_EContentReportReason_MisleadingInformationAboutConsumerRights
-Cabal
-Cached credential is invalid
-Cafe Funded
-Call Mismatch
 Call set methods to initialize MapKey.
 Caller should provide us with *buffer_ when buffer is non-empty
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
@@ -1860,273 +1705,81 @@ Can't get here: failed to get default value as string
 Can't happen
 Can't print proto content: proto type
 Can't reach
-Canceled
-Canceled by new transaction
-Cancelled by Admin
-Cancelled by Friendly Fraud Lock
-Cancelled by Partner
-Cancelled by User
-Cannot Use Old Password
 Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
 Cannot copy json_name to a proto of a different size.
 Cannot get here
-Cannot gift physical goods
-Cannot ship goods internationally
-Cannot ship to APO/FPO
-Cannot ship to PO Box
-Cannot ship to country because shipping is not defined
 Cannot skip field value, unexpected token:
-Cant remove item
-CaptivePortal
-CaptivePortal_InPlace
-CaptivePortal_Redirected
-Carnet
-Cart is not valid for purchase
-Carte Bleue
-Cash Card (Nodwin)
-Cash Options (Thailand)
-Cash on Delivery
-Cash-In CIS
-CashU
 Catalan
-Cencosud
-Chargedback
-Charger required
-Chat
-Cheat
-Cheating
 Cherokee
-China
 ChromeHTML_Controller_003
-Clan
 ClearField
-Click&Buy
-Client no longer supported
-Clip
-Closed
-CodeSignature
-Collection
-CollectionEligible
-CollectionPublished
-Collections
 Command stream from webhelper is corrupt, got larger than 128M command
 Command stream from webhelper is corrupt, got larger than 128M command (%d)
 Command stream from webhelper is corrupt, invalid read size
 Command stream from webhelper is corrupt, invalid read size %d/%d
-Comments by user
-Committing
-Community
-Compat tool failed
-CompatibleLobby
-Complete-the-set bundles cannot be gifted
-Complimentary
-Component In Use
-Computer
-Concept
-Concepts
-Config
-Conflict
-Connected
-Connecting
-Connection Failed
-Connection closed
-Connection timeout
-Console
-Console User
-Contact Support
-Content Server
-Content Version
-Content unavailable
 ContextCommand
-Continue
-Controller Binding
-ControllerBindings
-Convenient Store Voucher
-Copying
-Copyright Violation
-Corrupt depot cache
-Corrupt disk
-Corrupt download
-Corrupt file signature
-Corrupt game files
-Corrupt update files
-Corrupted or unrecoverable data error
 Could not create an instance of
 Could not find type "
 Couldn't parse default value "
 Couldn't write %s: %s\n
-Coupon has expired
-Create process failed
 CreateBrowser id:%u type:%d flags:%x (%d, %d) %dx%d
 CreateInterface
 CreateResponse: id:%u handle:%u
 CreateSimpleProcess
-Created
 Created mapping %s when set to fail if created\n
-CreatedByFollowedUsersRankedByPublicationDate
-CreatedByFriendsRankedByPublicationDate
-Credit Card
-Credit Card (Degica)
-Credit Card (Nodwin)
-Credit card number is invalid (does not pass LUHN checksum)
-Credit card number provided does not match the credit card type
-Credit would exceed max allowed wallet balance
 Croatian
-Crypto
-Culture Voucher
-CuratorRecommendedGame
-Currency Conversion
-Currency of purchase does not match currency of wallet
-Custom CSS
-Cyber cafe accounts can't purchase
 Czech
 DATA_LOSS
-DB Lookup CD-Key
 DBG_PATHMATCH
 DBG_STAT
 DEADLINE_EXCEEDED
-DELETE
 DLOPEN Error:%s\n
 DO NOT PARSE: fields may be stripped and missing.\n
 D\n@k_EContentReportReason_MisleadingInformationAboutGoodsOrServices
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
-Dana
 Danish
-Dankort
 Dari
-Data Exploit
 DcheckIsFatal
-Debit Card (Nodwin)
-Debug
 December
-Deckard
-Default
 Default value for an enum field must be an identifier.
 DefaultANGLEVulkan
-Deleted
-Denied by support
-Denied due to community cooldown
-DenizBank
-Deny
-Dependency failure
-Deploy
-Deposit is not required to purchase
-Depot
-Descending
 DescriptorProto
 DescriptorProtosH
 Destroying a held mutex\n
-DetectNow failed
-Device Corrupt
-Device Error
-Device Not Found
-Dialog
-Diner's Card (BoaCompra)
-Diners Club
 Disable GPU accelerated compositing in browsers
 Disable GPU usage in CEF (force software rendering/compositing)
 Disable auto-restart of renderer process for existing browsers
 Disable the glcomposer workaround applied to some video drivers
 Disable the usage of the safe browser shutdown workaround for Linux+NV
 Disable touch input browser focus workaround
-Disabled
-Disabled/Blocklist
-Disabled/ChildCommandLine
-Disabled/CommandLine
-Disabled/CompositingCommandLine
-Disabled/CrashCount
-Disabled/JSRequest
-Disabled/Off
-Disabled/OffOk
-Disabled/RuntimeDetect
-Disabled/Software
-Disabled/Unknown
 Disables hevc support
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
 Disables support for BrowserView underlays
-Disconnected By Remote Host
-Discover
-Discussion Posts
-Disk Full
-Disk read failure
-Disk write failure
-Distance
 Division or mod by zero: dividend.hi=
-Do Not Revive
-Does not own required app
 Don't know how to check filesystem type on POSIX!
 Don't lookup extension types if they aren't present (1).
 Don't lookup extension types if they aren't present (2).
-Doom3 CD-Key
-Down
-Download disabled
-Download failed
-Downloading
 DraggableRects
-Duplicate Name
-Duplicate activation code
-Duplicated Request
 Dutch
 EACState
-EAbuseReportType
 EAccessibilityContrastMode
-EAccountFlags
-EAccountServed
-EAccountType
-EActivationCodeClass
-EAppControllerSupport
-EAppDownloadQueuePlacement
-EAppInfoSection
-EAppInfoSectionPropagationType
-EAppOwnershipFlags
-EAppReleaseState
-EAppState
-EAppType
-EAppUpdateError
-EAppUpdateProgressType
-EAppUpdateState
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
-EAuthTokenPermission
 EBluetoothDeviceType
 EBroadcastEncoderSetting
 EBroadcastPermission
-EBroadcastUploadResult
 EBrowserFeatureStatus
 EBrowserGPUStatus
-ECDNPropertyType
-ECDNProviders
 EChildProcessQueryCommand
 EChildProcessQueryExitCode
-EClanAccountType
-EClanAction
-EClanEventType
-EClanPermission
-EClanRank
-EClanRelationship
-EClientDatacenterRoute
 ECloudGamingPlatform
-ECloudStorageActorTypes
 ECloudStoragePersistState
-ECloudStorageProviders
-EClub Points
 EColorGamutLabelSet
 ECommentDeleteReason
 ECommentThreadType
-ECommunityContentType
 ECommunityItemClass
-ECommunityPrivacyState
-ECommunityProfileState
-ECompare
 ECompromiseDetectionType
-EConnectionMode
-EConnectionState
-EConnectionType
-EConnectivityTestResult
 EContentCheckProvider
-EContentCorruptionType
-EContentDownloadSourceType
-EContentDownloadType
 EContentModerationSanction
 EContentModeratorLevel
 EContentReportReason
@@ -2134,96 +1787,40 @@ EContentReportResolution
 EContentReportSubjectAction
 EContentReportSubjectType
 EControlledLegalCategoryStatus
-EControllerConfigFeature
-EControllerType
-ECreditCardType
-ECurrencyCode
-EDRMWrapLocation
-EDownloadSourceHTTPSSupport
-EDurationControlProgress
 EEnhancedMarketAppearanceStatus
 EExternalSaleEventType
-EFileIOError
-EForeignKeyAction
-EFriendRelationship
-EGCAction
-EGCStatus
 EGPUPerformanceLevel
 EGRMode
 EGameRecordingType
 EGamescopeBlurMode
-EGamingDeviceType
-EGpuDriverId
 EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
 EHDRVisualization
-EHTTPMethod
-EHTTPStatusCode
-EHostIPFamilies
 EJSRegisterMethodType
-EKeyType
-ELanguage_ISO639
-ELaunchOptionType
-ELauncherType
-ELeaderboardDataRequest
-ELeaderboardDisplayType
-ELeaderboardSortMethod
-ELeaderboardUploadScoreMethod
 ELegacyEnvironmentVariable
-ELegacyKeyRegistrationMethod
-ELicenseFlags
-ELicenseType
-ELobbyFilter
-ELogonState
-EMicroTxnAuthResponse
 ENABLE_VK_LAYER_VALVE_steam_overlay_1
-ENetFakeLocalSystemState
-ENetQOSLevel
 ENewSteamAnnouncementState
-EOSType
-EParentalFeature
-EPassphrase
-EPaymentMethod
-EPersonaState
 EPersonaStateFlag
-EPersonalQuestion
-EPlatformType
 EPressOutletAction
 EPressOutletMemberPendingState
 EProfileCustomizationType
 EProvideDeckFeedbackPreference
-EPublishedFileInfoMatchingFileType
 EPublishedFileQueryType
 EPublishedFileStorageSystem
-EPurchaseResultDetail
-EPurchaseStatus
 ERROR
-ERegKeyRoot
-ERemoteStorageFileRoot
-ERemoteStoragePlatform
 EResolutionAutomation
-EResult
 ESDCardFormatStage
 ESessionPersistence
-EShellConfigUpdateSection
-ESignatureClass
 ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-ESteamControllerConfigTemplateWorkshopFileID
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
-ESteamIPv6ConnectivityProtocol
-ESteamIPv6ConnectivityState
 ESteamOSCompatibilityCategory
-ESteamRealm
-ESteamUserStatType
 EStorageBlockContentType
 EStorageBlockFileSystemType
 EStorageDriveMediaType
 EStorageFormatStage
-EStoreCategory
-ESupportCompanyDomain
 ESystemAudioChannel
 ESystemAudioDirection
 ESystemAudioPortDirection
@@ -2231,43 +1828,13 @@ ESystemAudioPortType
 ESystemDisplayCompatibilityMode
 ESystemFanControlMode
 ESystemServiceState
-ETimeUnit
-ETransportError
-EUFSFileFlags
-EUFSPartitionEnrollmentStatus
-EUFSPartitionSegmentStatus
-EUFSPartitionType
-EUniverse
-EUserNewsEventType
-EVideoEncryptionKeyTrackType
-EVideoFileFormat
-EVideoPermissions
-EVideoTrackContents
-EWUCriticalUpdateCountResult
-EWUInstallCriticalUpdatesResult
-EWURequiresRebootResult
-EWalletSource
 EWindowStackingOrder
 EWindowsUpdateRebootBehavior
-EWorkshopFileType
-EZipFormat
 E\n8k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform
-Editor
-Efecty
-Ekonomi Bank
 Element( i )
-Email Validated
-Email not validated
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
 Enable VA-API video decoding on Linux
 Enable sandbox logging in CEF
-Enabled
-Enabled/Force
-Enabled/ForceOn
-Enabled/On
-Enabled/Readback
-Encryption Failure
-End of File
 End-of-file inside block comment.
 English
 Entry
@@ -2293,13 +1860,9 @@ Error parsing text-format
 Error reporting not implemented.
 Error while parsing option value for "
 Estonian
-Event Text
 Execute: %s\n
-Existing cancelled license
-Exito
 Expanded map entry type
 Expect a decimal number, got:
-Expectation Failed
 Expected "
 Expected %lld but got %lld!
 Expected double, got:
@@ -2310,9 +1873,6 @@ Expected identifier, got:
 Expected integer or identifier, got:
 Expected integer, got:
 Expected string, got:
-Expired
-Expired Login Auth Code
-Expired card
 Explicit default values are not allowed in proto3.
 Extension "
 Extension conflicts with extension already in database: extend
@@ -2332,46 +1892,27 @@ ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
-External
-External Account is not linked to a Steam account
-External Account linked to another Steam account
 FAILED_PRECONDITION
 FATAL
 FILT
-FLOAT
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
-Facebook query returned an error
-Failed
-Failed Dependency
 Failed connecting to webhelper process
 Failed connecting to webhelper process, started %0.2f ago
 Failed creating file mapping %s\n
 Failed creating read event %s\n
 Failed creating view of file for %s\n
 Failed creating write event %s\n
-Failed setting downloads
-Failed setting updates
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
 Failed to bind client address for shared fd id: 0x%lx\n
 Failed to bind server addres for shared fd: %d\n
 Failed to create socket for shared fd id: 0x%lx\n
 Failed to create socket for shared fd: %d\n
-Failed to get IAutomaticUpdates
-Failed to get ISystemInformation
-Failed to get IUpdateDownloader
-Failed to get IUpdateInstallationResult
-Failed to get IUpdateInstaller
-Failed to get IUpdateSearcher
-Failed to get IUpdateSession
-Failed to get update result code
-Failed to init COM
 Failed to initialize client address for shared fd id: 0x%lx\n
 Failed to initialize server address for shared fd id: 0x%lx\n
 Failed to initialize server address for shared fd: %d\n
 Failed to load optional module %s\n
-Failed to parse input
 Failed to receive shared FD\n
 Failed to receive shared fd from server\n
 Failed to receive shared fd id: 0x%lx\n
@@ -2381,15 +1922,11 @@ Failed to signal shared fd server\n
 Failed to spawn share thread for shared fd: %d\n
 Failed to take mutex in GetInternal()\n
 Failed to wait for shared fd client\n
-Failure
 Failure pushing command to webhelper
 Failure pushing command to webhelper %d/%d
 False
-Family Group
 FastHexToBuffer() wants non-negative integers, not
 Fatal error: %s\n
-FavoritedByFriendsRankedByPublicationDate
-Feature Disabled
 February
 Feel free to add support for more if you need it.
 Field "
@@ -2418,86 +1955,39 @@ FieldSize
 Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
 Fields with proto3_optional set must be a member of a one-field oneof
-File Locked
-File Not Found
 File already exists in database:
 File appears to be in generated pool but wasn't registered:
 File change notification for %s but no file contents changed based on hash\n
 File is already registered:
-File locked
 File not found in database (unexpected):
 File recursively imports itself:
 FileDescriptorProto
 FileDescriptorSet
 FileOptions
-FilePublished_Screenshot_Tagged
-FileSystem
-Files Corrupt
-Files Missing
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 Filipino
 Filter
-Finansbank
 Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
-FiveHours
-Forbidden
-Force Bounce
-Force Password Change
-Force Run Restriction
-Force canceled while pending
 Force enable CEF accessibility features
 Force enable GPU acceleration
 Force enable GPU blocklist
 Force enable HW accelerated video decoding
 Force support for BrowserView underlays
 Force the usage of opaque backgrounds for CEF
-ForceUpdate
-Forced Off
 Forced create but already created for SharedObjectEvent\n
 Forcing secure cookie flag as samesite=none
-Found
 Found invalid proto option data for:
-Frame Failed
-Fraud Check Failed
-Free
-Free Weekend
 Free disk space for %s would overflow
-Fremont
 French
-FrenemyFilter
 Friday
-Friend
-Friend-only
-FriendAdded
-Friends
-Full
-Fully Installed
-GAME_
 GCC: (Debian 10.2.1-6) 10.2.1 20210110
 GCC: (Debian 9.3.0-22) 9.3.0
-GCash
 GLIBC_2.17
 G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 Galician
-Game
-Game Managed Item
-Game Release
-Game Server
-Game Voucher
-GameInstall
-GameManagedItems
-GameServer
-GameStop
-Gamepad
-Games
-Gameserver login token denied
-Gameserver login token expired
-Gameserver login token owner denied
-Garanti
-Gateway Time-out
 GeneratedCodeInfo
 Georgian
 German
@@ -2530,35 +2020,10 @@ GetString
 GetStringReference
 GetUInt32
 GetUInt64
-Gift
-Giropay
-Global Collect unknown error
-Global Moderator
-Gone
-Google Swiftshader
 Google.Protobuf.Reflection
-GpuTopology
-GrabPay
 Greek
-Greenlight Items
-GreenlightItems
-GroupCreated
-Groups
 Groups are not supported in proto3 syntax.
-Guest Account
-Guest Pass
-Guides
 Gujarati
-HEAD
-HKEY_CLASSES_ROOT
-HKEY_CLASSES_ROOT (force 32Bit)
-HKEY_CLASSES_ROOT (force 64Bit)
-HKEY_CURRENT_USER
-HKEY_CURRENT_USER (force 32Bit)
-HKEY_CURRENT_USER (force 64Bit)
-HKEY_LOCAL_MACHINE
-HKEY_LOCAL_MACHINE (force 32Bit)
-HKEY_LOCAL_MACHINE (force 64Bit)
 HOME
 HTMLController Commands
 HTML_MSG_FUNC eHTMLCommands_AckPIDShuttingDown
@@ -2572,7 +2037,6 @@ HTML_MSG_FUNC eHTMLCommands_ExitFullScreen
 HTML_MSG_FUNC eHTMLCommands_FileLoadDialog
 HTML_MSG_FUNC eHTMLCommands_FinishedRequest
 HTML_MSG_FUNC eHTMLCommands_GetCookiesForURLResponse
-HTML_MSG_FUNC eHTMLCommands_GetFocusedNodeValueResponse
 HTML_MSG_FUNC eHTMLCommands_GetZoomResponse
 HTML_MSG_FUNC eHTMLCommands_HidePopup
 HTML_MSG_FUNC eHTMLCommands_HideToolTip
@@ -2596,7 +2060,6 @@ HTML_MSG_FUNC eHTMLCommands_RenderProcessTerminated
 HTML_MSG_FUNC eHTMLCommands_RequestFullScreen
 HTML_MSG_FUNC eHTMLCommands_ResizeGripChanged
 HTML_MSG_FUNC eHTMLCommands_SavePageToJPEGResponse
-HTML_MSG_FUNC eHTMLCommands_ScaleToValueResponse
 HTML_MSG_FUNC eHTMLCommands_SearchResults
 HTML_MSG_FUNC eHTMLCommands_SetCursor
 HTML_MSG_FUNC eHTMLCommands_SetForegroundWindow
@@ -2614,129 +2077,50 @@ HTML_MSG_FUNC eHTMLCommands_TouchGesture
 HTML_MSG_FUNC eHTMLCommands_URLChanged
 HTML_MSG_FUNC eHTMLCommands_UpdateToolTip
 HTML_MSG_FUNC eHTMLCommands_VerticalScrollBarSizeResponse
-HTML_MSG_FUNC eHTMLCommands_ZoomToElementAtPositionResponse
-HTTP Version not supported
-HTTPMirror
-HWID Set
-Halkbank
-Handheld
-Handshake Failed
-Happymoney Voucher
-Harassment
-Hardware Promo
-Hardware not capable of IPT
-Has not logged in on PS3 with required app
 HasField
 Hausa
-Headphones
-Headset
 Hebrew
 Hex and octal numbers must be integers.
 Hindi
-Hipercard
-Hung transaction cancelled
 Hungarian
-I/O Operation Failed
 IDEMPOTENCY_UNKNOWN
 INFO
 INTERNAL
-INVALID
 INVALID_ARGUMENT
 INVALID_CPPTYPE
-IP Address Banned
-IP Address Not Found
-IP Login Restriction Failed
 IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
 IPC: recovering abandoned mutex %p\n
-IPT init error
 IVALIDATE001
 Icelandic
 IdempotencyLevel
 Igbo
-Ignored
-IgnoredFriend
 Ignoring extension "
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
-Illegal password
 Import
 Import "
-In dispute
-Inappropriate
-Incompatible
-IncompatibleCheat
-Incorrect Parameter
 Index must be -1 for non-repeated fields
 Index must be -1 for singular fields.
 Index must be in range of repeated field values.
 Index out-of-bounds (field is empty).
-Individual
 Indonesian
-Init
-Init Failed
 Input size too large:
-Install failed
-Install failed for one or more updates
-Install path removed
-Insufficient Funds
-Insufficient Privilege
-Insufficient Storage
-Insufficient battery charge
-Insufficient funds
 Integer out of range (
-Integrated Guide
-IntegratedGuides
-Intel
-Intel ANV
-Interac
-Internal
-Internal Error
-Internal Server Error
 Interpreting non ascii codepoint %d.
-Invalid
-Invalid CD-Key
-Invalid CEG Submission
-Invalid Data
-Invalid Driver
-Invalid Email
 Invalid FileWriterItem_t
-Invalid Handle
-Invalid Login Auth Code
-Invalid Name
-Invalid OS Type
-Invalid Package
-Invalid Parameter
-Invalid Passcode
-Invalid Password
-Invalid Payment Method
-Invalid Platform
-Invalid Protocol
-Invalid State
-Invalid Steam ID
-Invalid account
-Invalid application configuration
-Invalid backup path
-Invalid content configuration
 Invalid control characters encountered in text.
-Invalid coupon
 Invalid descriptor
 Invalid escape sequence in string literal.
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
-Invalid file system
 Invalid float number:
 Invalid index %u
-Invalid install path
-Invalid item type
 Invalid key for map field.
 Invalid message set extension.
 Invalid package name:
-Invalid platform
 Invalid proto descriptor for file "
 Invalid public dependency index.
-Invalid shipping address
 Invalid socket name parameters for shared fd\n
 Invalid strings::Substitute() format string: "
 Invalid symbol name:
-Invalid tax address
 Invalid value for boolean field "
 Invalid weak dependency index.
 Invalid wire type for CPPTYPE_INT32:
@@ -2744,118 +2128,48 @@ Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_MESSAGE:
 Invalid wire type for CPPTYPE_UINT32:
 Invalid wire type for CPPTYPE_UINT64:
-Invisible
-InviteOnly
-Invited
 Irish
-Is Bank
 IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 Italian
-Itau Online
-Item or entry has been deleted
-Items
-Items_Mtx
-Items_ReadyToUse
 JArray
 JSObjectProperty
 JSType
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 January
 Japanese
-JoinedGroup
-Joystick
 July
 June
 K'iche'
-KakaoPay
 Kannada
 Kazakh
-KeepBest
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
-Keyboard
 Khmer
-Kicked
-KickedAcknowledged
 Kinyarwanda
-Kiosk
-Konbini
 Konkani
 Korean
-Kuveyt Turk Bank
 Kyrgyz
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
-LANCache
-LANPeer
 LEZShnat7{
-LLVMPipe Mesa
 LOCK_EX
 LOCK_SH
 Label
-Language
-Laser
 Latam_Spanish
 Latvian
-Legacy Free Sub
-LegionGoS
-Length Required
-Library
-License Imported From Steam2
-License expired
-Licensed Site
-Lider
-Limit exceeded
-Limited User
-Limited User (forced)
-Limited use, delayed activation
-Limited user account
-LimitedLocal
-LinePay
-Linkaja
-Linux
-LinuxHome
-LinuxXdgConfigHome
-LinuxXdgDataHome
 Lithuanian
-Live Broadcast
 LoadFileRangeIntoBuffer_Internal
 Location
-Locked
-Locking Failed
-Logged In Elsewhere
-Logged Off
-Logged On
-Logging Off
-Logging On
 Logic problem? szsrc =
-Logon Extra Security
-Logon Extra Security Disabled
-Looking to Play
-Looking to Trade
-Loop Detected
-Low FPS
-Low Violence
 Lowered '%s' -> '%s'\n
 Luxembourgish
-MOL Points
-MacAppSupport
-MacCaches
-MacDocuments
-MacHome
-MacOS
 Macedonian
-Maestro
 Malay
 Malayalam
 Maltese
-MangirKart
-Manifest unavailable
-ManifestSignature
-Manual
 Maori
 MapKey::GetBoolValue
 MapKey::GetInt32Value
@@ -2887,26 +2201,8 @@ MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 Marathi
 March
-Master App Editor
-Master Subscription
-MasterCard
-Mastercard (BoaCompra)
 Matched '%s' -> '%s'\n
-MaxResults
-Maximum family size exceeded
 MaybeAllocateAligned cannot fail here.
-Meeting
-Member
-Members
-MerPay
-MercadoPago
-Merch
-Mesa Dozen
-Mesa HoneyKrisp
-Mesa NVK
-Mesa PanVK
-Mesa Turnip
-Mesa Venus
 Message class "
 Message does not support reflection (type
 Message is too deep, the parser exceeded the configured recursion limit of
@@ -2919,47 +2215,14 @@ MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
 Messages can't have default values!
 Messages can't have default values.
-Method Not Allowed
-Method Not Found
 MethodDescriptorProto
 MethodOptions
-Microtransaction
-Migrate
-MilliSeconds
-Mirror
-MirroredNotStriped
-Misdirected Request
-Missing Audio
-Missing Key Frames
 Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
-Missing configuration
-Missing decryption key
-Missing executable
 Missing field: FileDescriptorProto.name.
-Missing file permissions
-Missing game files
 Missing name.
-Missing update files
-Mobile (Degica)
-Mobile Wallet (Japan)
-Moderator
-Moderators
-MoltenVK
 Monday
-MoneyBookers
 Mongolian
-Mouse
-Moved Permanently
-Moving Folder
-MrCash
-Multibanco
-Multicaja
-Multiplayer
-Multiple Choices
 Multiple extension registrations for type "
-Multiseat
-Music And Arts
-Must agree to SSA
 MutableMessage
 MutableRawRepeatedField
 MutableRepeatedMessage
@@ -3082,7 +2345,6 @@ N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NO ACTION
 NOT_FOUND
 NO_SIDE_EFFECTS
 NSt3_V214error_categoryE
@@ -3106,189 +2368,41 @@ NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
-NVIDIA
 N[i4A
 NamePart
-Nanaco
-Naranja
-NaverPay
-NearRank
-NearValue
 Need space between identifier and decimal point.
 Need space between number and identifier.
-Needs SSA Next Logon
-Needs captcha
-Needs pre-approval
 Nepali
-Net Banking (Nodwin)
-NetCash
-Network Authentication Required
-Network send exceeded
-News
-Night
-No Connection
-No Content
-No Detail
-No Error
-No Result
-No account or email was specified to send the gift
-No billing agreement exists for recurring option
-No connection
-No connection to content servers
 No default value
 No field named "uninterpreted_option" in the Options proto.
-No launcher specified
-No match
-No matching URL
-No mobile device available
-No payment provider is configured to handle the transaction
-No site licenses found
-No subscription
-No verified phone number
-NoInternet
-NoLAN
-NoSteam
-Nobody
-Non Permanent
-Non-Authoritative Information
 Non-primitive types can't be packed.
 Non-repeated Any specified multiple times.
 Non-repeated field "
-NonMembers
 None
-Normal
 Norwegian
-Not Acceptable
-Not Extended
-Not Found
-Not Implemented
-Not Logged On
-Not Modified
-Not Supported
-Not activated
-Not allowed to play
-Not created
-Not enough disk quota
-Not enough disk space
-Not enough free disk space
 Not implemented field number
-Not installed
-Not released
 Not supported.
-NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 November
 Numbers starting with leading zero must be in octal.
-Numeric
-NumericalCompare
-OEM Ticket
-OPTIONS
 OUT_OF_RANGE
-OXXO
 O\n\nAnnotation
 October
 Odia
-Offensive Avatar
-Offensive Persona Name
-Offensive Profile
-Offensive UGC
-Officer
-Officers
-Official
-Offline
-Offline App Cache invalid
 OnProcessInfo: invalid request id
-OneCard
 Oneof must have at least one field.
 OneofDescriptorProto
 OneofOptions
-Online
-Online Banking (Thailand)
-Open
-OpenCache
-Operation failed due to parental control restrictions for current user
 Option "
 Option field "
 Option must have a name.
 Option must not use reserved name "uninterpreted_option".
-Option1
-Option2
-Option3
-Other
-Other abortable transaction in progress
-Other session playing
-OtherAudio
-Others In Progress
-Out of Resources
-Out of stock
-Over consumption limit
-Owner
-PATCH
 PERMISSION_DENIED
 PLACEHOLDER_VALUE
-POLi
-POSA code is not activated
-POST
 PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Label_IsValid(value)
 PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Type_IsValid(value)
-PSN Ticket is invalid
-Package requires an invitation for a reservation to purchase
-Pago Facil
-PagoEfectivo
-Pagseguro
-Parental Settings
-Parental control blocked
-ParentalSetup
-ParityStripe
-Partial Content
-Partial refund
-Partner Member
-Partner needs VAT ID set to purchase commercial licenses
-Party
-Password Set
-Password is not set
-Password reentry required
-Password required to kick session
-Paused
-Pay Easy (Degica)
-PayNow
-PayPal
-PayPal internal error
-PayPay
-PaySafeCard
-PayU
-Payco
-Payment Required
-Payment method allows multiple pending transactions, but there is an overlap of packages in both transactions
-Payment method is disabled
-Payment method is not allowed for this purchase
-Payment requires additional authentication step
-PaymentInfo
-Payshop
-Peer Server
-PeerServer
-Pending
-Pending (Invitee)
-Pending (Inviter)
-Pending Gift
-Pending Log Request Active
-Pending Refund
-PendingApproval
-Permanent
-Permanent Redirect
 Persian
-Persistence Failed
-Persona Name
-Persona Set
-Phone
-Phone number is Voice Over IP
-Physical product limit exceeded
-Pichincha
-Pichincha Cash
 Pid that we should be watching for
-PinValidda
-Ping
-Piracy or Cheats
 Plat_AbsoluteTime
 Plat_CommandLineParamExists
 Plat_CommandLineParamValue
@@ -3297,210 +2411,74 @@ Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
 Plat_IsSteamFrame_DoNotUse
-Plat_IsSteamOS3
+Plat_IsSteamOS
 Plat_IsSteamOS3FactoryImage
+Plat_IsSteamOSManagementEnabled
 Plat_MSTime
 Plat_OutputDebugString
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_localtime
 PlatformHEVCDecoderSupport
-Player Name History
 Polish
 PopupHTMLWindow: idx:%u handle:%u
 Portuguese
-PostedAnnouncement
-Preallocating
-Precondition Failed
-Precondition Required
-Preferred Owner
-Prefetch
-Prefetching Info
 PrepareBuffer( nNewLength ) == pstrNew
-Priority Auto Update
-Priority Down
-Priority First
-Priority Manual
-Priority None
-Priority Paused
-Priority Up
-Priority User Initiated
-Private
 Process %d failed to shm_open %s\n
-Profile
-Profile Showcases
-Profile Text
-Profile URL
-Prohibited
-PromotedNewAdmin
-ProtectedStore
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
-Provider doesn't support currency
-Proxy
-Proxy Authentication Required
-Przelewy24
-Public
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
-Purchase
-Purchase not yet settled
-Purchase pending
 PushCommand: Failed to send browser:%u cmd:%d %u/%u
 PushCommand: Restarting webhelper process due to IPC timeout
 PushCommand: Trying to push too large command: browser:%u cmd:%d size:%d
 PushCommand: Trying to push too small command: browser:%u cmd:%d size:%d
 PutInternal: Not enough space for put when locked\n
-QIWI
 QkkXa
-Qualcomm
 Quechua
 RESOURCE_EXHAUSTED
 RGh]
-RackSystem
-Raid
 Ran out of IPC SharedObjectManager entries!\n
-RankedByAveragePlaytimeTrend
-RankedByBanContentCheck
-RankedByInappropriateContentRating
-RankedByLastUpdatedDate
-RankedByLifetimeAveragePlaytime
-RankedByLifetimePlaytimeSessions
-RankedByNumParentCollections
-RankedByNumParentItems
-RankedByNumTimesReported
-RankedByPlaytimeSessionsTrend
-RankedByPlaytimeTrend
-RankedByPublicationDate
-RankedByTextSearch
-RankedByTotalPlaytime
-RankedByTotalUniqueSubscriptions
-RankedByTotalVotesAsc
-RankedByTrend
-RankedByVote
-RankedByVotesUp
-Rapipago
-Rate Limit Exceeded
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
-Read Failed
-Rebuild
-ReceivedNewGame
-ReceivesGroupComment
-RecommendedGame
-Reconfiguring
-Recurring
-Recurring Charge
-Recurring option does not allow gifting
-Recurring option does not allow stacking
-Recurring option is not valid for billing agreement
-Recurring option will stack time beyond our maximum limit
-Recurring payment option
 Recursion limit at end of parse should be
-Red Pagos
-RedCompra
 Reduce buffering requirements for live video playback
-Refunded
-Refunded to wallet
-Region Locked
-Region Restriction Expired
-Region not supported
-Region restricted
-Relay Failed
-Release State Override
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
 ReleaseMessage
-Remote File Conflict
-Remote call failed
 RemoveLast
-Renew failed
-Renew next period
 Repeated fields can't have default values.
-Request Entity Too Large
-Request Header Fields Too Large
-Request Not Sent
-Request Timeout
-Request has been canceled
-Request revoked
-Request suspended/paused
-Request-URI Too Large
-RequestAroundUser
-RequestDenied
-RequestFriends
-RequestGlobal
 Requested Force create but SharedObjectMutex already created\n
-Requested range not satisfiable
 Requested size is too large to fit into size_t.
 Required fields are not allowed in proto3.
-Requires 64bit operating system
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
-Reset Content
-Response Not Received
 Restart the renderer on UI mode changes
 Restart webhelper process, counter %d
-Restricted country
-Restricted device
-Retail
-Retired
-Retry later
 RetryCreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
-Reviews
-Revive
-Revoked
 Romanian
-RuPay
-Running Script
-Running Update
 Russian
-SET NULL
 SHMemStream header is corrupt in GetInternal()\n
 SHMemStream header is corrupt in PutInternal()\n
-SMS code failed
 SPEED
-SPEI
 STEAMVIDEOTOKEN
-STEAM_BASE_FOLDER
 STEAM_CEF_GPU_CMD_PREFIX
 STEAM_CEF_USE_AUTOMATIC_PROXY
 STEAM_DEBUGCEF
 STEAM_DEBUGCEF_FAKEUI
 STRING
-SafeMode
-SafetyPay
-Same as previous value
-Santander Rio
 Saturday
-Sberbank
-ScheduledEvent
 Scots
-Screenshot
-ScreenshotPublished
-Screenshots
 Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
-Seconds
-SecretServer
-See Other
-Seek Failed
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
-SelectedNewPOTW
-Self updating
-Sending of an email failed
 September
 Serbian
-Server
-Server Busy
-Server Shutdown
-Service Read Only
-Service Unavailable
 ServiceDescriptorProto
 ServiceOptions
-Session Replaced
 SetAllocatedMessage
 SetBool
 SetDouble
@@ -3521,48 +2499,20 @@ SetRepeatedUInt64
 SetString
 SetUInt32
 SetUInt64
-Settings
-Settings Changed
-Setup Error
-Shader
-Shared Only
-Shared library locked
-Shipping address failed validation
-ShopeePay
-Shopping Cart Not Found
 Should not reach here.
 Shutting down webhelper process %u
-Signature check failed
-Simple
 Simplified_Chinese
 Sindhi
-Single Purchase
-Single Purchase, Limited Use
 Sinhala
-Site License
-Site License locked
-SiteLicense
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-SlotsAvailable
 Slovak
 Slovenian
-Snooze
-Sofort
-Software
-Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Sorani
 Sotho
 SourceCodeInfo
-Spamming
 Spanish
 SpareRendererForSitePerProcess
-Speakers
-Special Cause
-Spending limit exceeded
-Split
-Spoofing
-Sports
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -3638,30 +2588,15 @@ St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
-Staging
-StandardPC
 Started webhelper process %u
-Startup
 StaticFileWriterThread()
-Steam
 Steam - DirWatcher
-Steam Video
-Steam client out of date
-Steam/Press Master
-Steam2 Migration Complete
-Steam2010 CD-Key
 Steam3Master
-SteamBox
-SteamCache
 SteamChina_SChinese
 SteamChrome_MasterStream
 SteamChrome_MasterStream_Event_uid%d_spid%u
 SteamChrome_MasterStream_uid%d_spid%u
-SteamCloudDocuments
-SteamDeck
-SteamOSGeneric
 SteamRealPath
-SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
 SteamStdLib::CommandLine()
@@ -3675,7 +2610,6 @@ SteamThreadTools::CThread::OnExit()
 SteamThreadTools::CThread::SetName(char const*)
 SteamThreadTools::CThread::Start(unsigned long)
 SteamThreadTools::CThread::Terminate(int)
-SteamThreadTools::CThread::Yield()
 SteamThreadTools::CThread::~CThread()
 SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 SteamThreadTools::CThreadEvent::Reset()
@@ -3685,45 +2619,22 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-SteamUniverse
 SteamUser
-SteamUserBaseStorage
 SteamVProf::CVProfile::MarkFrame(char const*)
-Steamworks Access Invite
-SteamworksAccessInvites
-Still busy
-Stopping
-Store
-Store / Billing country code mismatch
-Store / Business country code mismatch
-Store Promotion
 String field
 String literals cannot cross line boundaries.
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
-StringCompare
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 StringPrintfVector currently only supports up to
-Subscribed
-Subscribers
-Succeeded
-SuggestedFriend
 Sunday
-Supervisor
-Support
-Suspect
-Suspected Hijacker
-Suspended
 Swahili
 Swap
 Swedish
-Swish
-Switch
-Switching Protocols
 Symbol name "
 Synthetic oneofs must be after all other oneofs
-System
 TLS init function for
 TLS wrapper function for
 TMPDIR
@@ -3740,26 +2651,12 @@ Tajik
 Tamil
 Tatar
 Telugu
-Temporary Redirect
-Tenpay
-Terminating
-Tesla
-Test
-Test CD-Key
 Thai
 The JSON camel-case name of field "
 The [proto3_optional=true] option may only be set on proto3fields, not
-The current Steam realm does not match the requested resource
-The data being accessed is not supported by this API
 The extension
 The first enum value must be zero in proto3.
-The gift is not valid for the recipient's region
-The gift recipient already owns the gift
-The gift's price is significantly higher in the recipient's region, so the purchase is blocked
-The original purchase cannot be replayed
-The purchase is still in progress, but waiting for success status from provider
 The type parameter T in RepeatedFieldRef<T> API doesn't match
-The value of the cart in local currency is too high
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This program requires version
 This program was compiled against version
@@ -3768,7 +2665,6 @@ ThreadCloseProcess
 ThreadFindProcessByName
 ThreadGetCurrentProcessId
 ThreadGetProcessId
-ThreadInterlockedCompareExchange
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
 ThreadInterlockedExchangeAdd
@@ -3779,58 +2675,25 @@ ThreadIsProcessIdActive
 ThreadSleep
 ThreadTerminateProcessCode
 ThreadWaitForProcessExit
-ThreeHours
 Thursday
 Tigrinya
-Time is out of sync
-Timed Trial
 Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()\n
 Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
 Timed out waiting for mutex in GetInternal()\n
 Timed out waiting for mutex in PutInternal()\n
-TimedOut
-Timeout
-Tinkoff
-Todito Cash
-Too Early
-Too Far behind
-Too Many Requests
-Too many accounts access this resource
-Too many bad activation code attempts in period
-Too many changes to this account
-Too many changes to this phone number
-Too many logon attempts
-Too many pending
-Toss
-Touch'n Go
-Trade
-Trade Fee
-Trade Scam
-Trade Scam Old
-Trading
 Traditional_Chinese
-Transaction expired
-Transcode Behind
 Tried to merge messages of different types
 Tried to register a non-generated type with the generated type registry.
-Trip
 True
-TrueMoney
-Trustly
-Trustpay
-Try another CM
 Trying to push insane command size to steamwebhelper.exe (> 32MB)
 Trying to push too small command size to steamwebhelper.exe (< sizeof(uint32))
 Tswana
 Tuesday
 Turkish
 Turkmen
-Two-factor activation code mismatch
-Two-factor code mismatch
 Type
 Type appears to be in generated pool but wasn't
 Type is already registered:
-UGC Image
 UNAUTHENTICATED
 UNAVAILABLE
 UNIMPLEMENTED
@@ -3839,78 +2702,28 @@ UNKNOWN_ENUM_VALUE_%s_%d
 UTF-8
 UTF-8 data when
 Ukrainian
-Unable to get home directory
-Unauthorized
-Unavailable For Legal Reasons
-Unavailable/Off
-Unavailable/OffOk
-Unavailable/Software
-Unbannable
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unexpected end of string.
-Unexpected error
 Unexpected failure while serializing option submessage
 Unimplemented type:
-Uninitialized
-Uninstalled
-Uninstalling
 Uninterpreted option is missing name or value.
 UninterpretedOption
-UnionPay
 Unknown
-Unknown Driver
-Unknown HTTP 4xx
-Unknown HTTP 5xx
 Unknown enumeration value of "
 Unknown error
-UnlockedGroupAchievement
 Unmatched %s\n
-Unprocessable Content
 Unrecognized syntax:
-Unspecified
-Unspecified Error
 Unsupported
-Unsupported Media Type
 Unsupported: type mismatch
-Update Optional
-Update Paused
-Update Queued
-Update Required
-Update Running
-Update Started
-Update required
-Update search failed
-Updated Disabled by app
-Upgrade Required
-Upload Disconnected
-Upload Timeout
 Urdu
-UsableInGame
-Use Proxy
-Use other funding source
-Use other payment method
 Use vulkan ANGLE backend
-User already has an existing billing agreement for a package in this transaction
-User cannot complete purchase with provider because the amount is not supported
-User cannot purchase due to owning excluded app
-User cannot redeem this code from the steam client
-User does not have a cached payment method
-User does not have a wallet
-User has already recently changed their country via purchase
-User is associated with multiple cafes
-User is not associated with any cafes
-UserStatus
 Uyghur
 Uzbek
 V4L2VideoDecode
-VAC beta
 VALVE
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
-VTC Pay Cards
-VTC Pay Online Banking
-VTC Pay Wallet
 VTT for
 V_AppendSlash
 V_ComposeFileName
@@ -3929,7 +2742,6 @@ V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
 V_StripFilename
-V_StripLastDir
 V_UTF8ToUTF32
 V_UnqualifiedFileName
 V_atoi
@@ -3951,11 +2763,7 @@ V_vsnprintf
 V_vsnprintfRet
 VaapiIgnoreDriverChecks
 VaapiVideoDecodeLinuxGL
-Vakiflar Bank
 Valencian
-Valid
-Validated Valve Email
-Value is out of range
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
 Value must be identifier for enum-valued option "
@@ -3970,85 +2778,30 @@ Value of type "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
-Valve
-Valve CD-Key
 ValveFFmpegAllowLowDelayHEVC
-ValveOfficial
-Variants Also Negotiates
-Verifying Installed
-Verifying Staged
-Video
-Video Init Failed
-VideoPublished
-Videos
 Vietnamese
-Visa
-Visa (BoaCompra)
-Visa Electron (BoaCompra)
 Vulkan
 VulkanFromANGLE
 WARNING
-WON CD-Key
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
-Waiting for disk
 Waiting for shared fd client failed\n
-Wallet
-Wallet (Nodwin)
 Warning
 Warning parsing text-format
 Warning: Blocking wait on mutex failed in Clear: %d\n
 Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
 Warning: Memory was locked for put while destructing!\n
-WeChat
 WeakRandomInt
 WeakRandomUint32
-Web API key registration ban
-Web Guide
-Web Link Deprecated
-WebGuidePublished
-WebGuides
-WebMoney
-WebMoney (Degica)
-WebMoney Steam Card (Japan)
-WebMoney Steam Card Top Up (Japan)
-WebSocket
+WebUsbDeviceDetection
 Wednesday
 Welsh
-What city were you born in?
-What is the name of your pet?
-What is the name of your school?
-What is your favorite team?
-What is your mother's maiden name?
-Whitelist
-Who was your childhood hero?
-WifiDisabled
-WinAppDataLocal
-WinAppDataLocalLow
-WinAppDataRoaming
-WinMyDocuments
-WinProgramData
 WinRetrieveSuggestionsOnlyOnDemand
-WinSavedGames
-Windows
-WindowsHome
 Wolof
-Workshop
-Workshop Items
-WorkshopItemPublished
-WorkshopShowcase
-Write Failed
-Wrong Price
 XXXXXX
 Xhosa
-Yandex
-Yapi Kredi
-YooMoney
 Yoruba
-You must refund this transaction to wallet
 Z-google.golang.org/protobuf/types/descriptorpb
-Ziraat Bank
-Zong
 Zulu
 [Config]\n# Product information.\nProductName=cefwebhelper\nProductVersion=%u\n\n# Required to enable crash dump upload.\nServerURL=%s\n\n# Disable rate limiting so that all crashes are uploaded.\nRateLimitEnabled=true\nMaxUploadsPerDay=5\n\n[CrashKeys]\nVendor=small\nUserID=small\nBuildID=small\nPlatform=small\nSteamUniverse=small\n
 [abi:
@@ -4331,41 +3084,21 @@ _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
 abort
-absolute_mouse.vdf
 access
 accessor_ == other.accessor_
-account flags changed
 additional_includes
 afrikaans
 aggregate_value
-airtel
-akamai
 albanian
-albummetadata
-alicloud
 alignof
 allocator
-allotmswe
 allowed in proto3.
 allowed_extensions
 alnum
 alpha
 alphasort64
 alse
-amazon
 amharic
-android
-android32
-android6
-android64
-android7
-android8
-android9
-announcement created
-announcement deleted
-announcement failed content check
-announcement updated
-application
 ar_AE
 arabic
 args
@@ -4373,13 +3106,10 @@ argument
 armenian
 array
 assamese
-au PAY
-audio
 auto
 auto:
 availableSpace
 azerbaijani
-azure
 bAllow
 bHasMultipleInputs
 bInput
@@ -4387,9 +3117,7 @@ bNewNavigation
 bValidHandle == true
 bad_function_call
 bad_url
-baishancloud
 bangla
-banned from chat
 basic_ios::clear
 basic_iostream
 basic_istream
@@ -4414,9 +3142,6 @@ basic_string::substr
 basque
 begin
 belarusian
-bellcanada
-beta
-between
 bg_BG
 bgoback
 bind
@@ -4428,14 +3153,7 @@ bool
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 boolean
 bosnian
-bpcs.com
 brazilian
-broadcast
-broadcastchat
-broadcastgamedata
-broadcastmanifests
-broadcastorigin
-browser
 browserDetails.pBrowser && browserDetails.eBrowserType != EBrowserType_Unknown
 browser_handle
 bsuccess
@@ -4449,138 +3167,37 @@ bytes
 bytes.
 cActualReplacements == cReplacements
 can't reach here.
-canceled the join request
 cannot create shim for unknown locale::facet
 cannot create std::vector larger than max_size()
 canvas_oop_rasterization
 catalan
-category_1
-category_10
-category_11
-category_13
-category_14
-category_15
-category_16
-category_17
-category_18
-category_19
-category_2
-category_20
-category_21
-category_22
-category_23
-category_24
-category_25
-category_26
-category_27
-category_28
-category_29
-category_30
-category_31
-category_32
-category_33
-category_34
-category_35
-category_36
-category_37
-category_38
-category_39
-category_40
-category_41
-category_42
-category_43
-category_44
-category_45
-category_46
-category_47
-category_48
-category_49
-category_50
-category_51
-category_52
-category_53
-category_54
-category_55
-category_56
-category_57
-category_58
-category_59
-category_6
-category_60
-category_61
-category_62
-category_63
-category_64
-category_65
-category_66
-category_67
-category_68
-category_69
-category_7
-category_70
-category_71
-category_72
-category_73
-category_74
-category_75
-category_76
-category_77
-category_78
-category_79
-category_8
-category_80
-category_81
-category_82
-category_9
 cbActual < (uint32)nBufSizeWithTerminator
 cbData == sizeof(newConnection)
 cc_enable_arenas
 cc_generic_services
-cdkeyrestrictions
-cdninfo
 cef_log.previous.txt
 cef_log.txt
-cellmap
 certName
-changed the POTW
 char
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
 char16_t
 char32_t
 char8_t
 chdir
-checksum_error
 cherokee
-china
-chinacache
-chinatelecom
 chmod
 choose_directory
 chown
-client
 client_streaming
 clientui
-clientupdatehosts
 clock_gettime
 close
 close() failed:
 closedir
-cloud
 cntrl
-codeweavers.com
 com.google.protobufB
-comcast
-comcastoffnet
-comic
-common
-community
 complex
-computed
-config
-configstore
 connect
-connected
-connecting
 connection_problem
 const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
 const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
@@ -4589,54 +3206,11 @@ const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::inte
 const string& google::protobuf::UnknownField::length_delimited() const
 const_cast
 construction vtable for
-contenthubs
-contentregionsandsources
-contentserver
-controller_8bitdo
-controller_android
-controller_apple
-controller_front_panel_board
-controller_generic
-controller_hori_steam
-controller_keyboard_generic
-controller_legion_go
-controller_legion_go_s
-controller_mobile_touch
-controller_mouse_generic
-controller_native
-controller_neptune
-controller_none
-controller_ps3
-controller_ps4
-controller_ps5
-controller_ps5_edge
-controller_rog_ally
-controller_steamcontroller_gordon
-controller_steamcontroller_headcrab
-controller_steamcontroller_unknown
-controller_steamframe_pair
-controller_steamos_handheld
-controller_switch2_pro
-controller_switch_joycon_left
-controller_switch_joycon_pair
-controller_switch_joycon_right
-controller_switch_pro
-controller_switch_pro_generic
-controller_triton
-controller_unknown
-controller_wii
-controller_xbox360
-controller_xboxelite
-controller_xboxone
-controller_zotac_zone
 cookies
 coord_x
 coord_y
-countrycodes
-covalensolutions.com
 covariant return thunk to
 crash_reporter.cfg
-crc_header_mismatch
 creation_flags
 croatian
 cs_CZ
@@ -4645,7 +3219,6 @@ ctype
 cubBytesToRead < INT32_MAX
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
-currencies
 cursor
 custom_commands
 czech
@@ -4660,30 +3233,14 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-decompress_failed
-default
 default_local_path
-deflate_gzip
-deflate_raw
-deflate_zip
-deflate_zlib
 delete
 delete[]
 deltax
 deltay
-demo
-demoted from moderator
-demoted from officer
-depotdeltapatch
-depotingest
-depots
-derive
-dfxp
 dgettext
 digit
 disable
-disabled
-disabled group
 disables CEF gpu-process sandbox
 disables CEF seccomp-bpf sandbox on Linux
 disables Chromium window occlusion testing
@@ -4695,8 +3252,6 @@ disables loading winh264.dll
 disables logging from CEF
 disables per-process site-isolation
 disables sandboxing in CEF
-disconnected
-disk
 disk-free command failed\n
 diskSize
 display_height
@@ -4707,24 +3262,16 @@ dlmopen
 dlmopen %s failed: %s\n
 dlopen
 dlsym
-dns_failed
 domain
 domains
-done
 double
 dpi_horizontal
-driver
-dual_stack
-duration
 dutch
 dynamic_cast
 eCmd > 0 && eCmd < eHTMLCommands_None
-edgenext
-edgio
 edit_state_flags
 el_GR
 elementtagname
-embedded_unknown
 en-US
 en_US
 enables CEF usage of the Chromium keyring
@@ -4745,19 +3292,12 @@ es_419
 es_ES
 estackingorder
 estonian
-eurotransit
-event created
-event deleted
-event updated
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
 expires
-ext4
 extend .$0 {\n
-extended
 extendee
 extension_range
-external
 faccessat
 failed to generate a valid callback handler key
 fallocate64
@@ -4765,25 +3305,12 @@ false
 false"
 false"&\n\fCMsgStopFind
 false"M\n
-fastly
 fclose
 fcntl
 fd-cl-
 fd-srv-
 fdatasync
 fdopen
-feature_LEDColors
-feature_actionset
-feature_activator
-feature_gamepad
-feature_gyro
-feature_keboard
-feature_modeshift
-feature_mouse
-feature_mouseregion
-feature_none
-feature_radialmenu
-feature_touchmenu
 feof
 fflush
 fgets
@@ -4813,14 +3340,11 @@ fopen tmpfile failed\n
 fopen64
 force enable Chromium window occlusion testing
 force sandboxing in CEF
-force_direct_hwnd_popups
-forever
 fprintf
 fputc
 fputs
 fr-FR
 fr_FR
-franchise
 fread
 free
 french
@@ -4832,7 +3356,6 @@ fsync %s failed, errno = %d\n
 ftello64
 ftruncate
 ftruncate64
-full
 function_handle
 futex robust_list not initialized by pthreads
 futex robust_list not pthreads-compatible
@@ -4847,36 +3370,22 @@ g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
 galician
-game
-gamepad+mouse.vdf
-gamepad_flickstick.vdf
-gamepad_fps.vdf
-gamepad_joystick.vdf
-gamepad_platformer.vdf
-gameserver
-gcore
 generic
 georgian
 german
 gesture
 gestures
-get_Count failed
-get_RebootRequired failed
-get_Updates failed
 get_disk_info
 getc
 getcwd
 getenv
 getmntent
 getpid
-getpwuid
 gettext
 getuid
 getwc
 global constructors keyed to
 global destructors keyed to
-good
-google
 google.protobuf"G\n
 google.protobuf.
 google.protobuf.Any
@@ -4987,16 +3496,11 @@ gpu_compositing
 graph
 greek
 group
-group details changed
-group was created
 guard variable for
-guest
-guide
 gujarati
 gurmukhi
 half
 handle
-hardware
 hausa
 header
 headers
@@ -5004,22 +3508,15 @@ hebrew
 height
 hidden
 hidden alias for
-high
-highwinds
 hindi
 host
-hour
 htmlmessages.proto
-http
-httpclient
 httponly
 https://crash.steampowered.com/submit
 hu_HU
 hungarian
 hwnd
 i < length_
-iDEAL
-iPhoneOS
 iRet == 0
 i[mpppp
 icelandic
@@ -5040,37 +3537,22 @@ infind
 infinity
 info.m_pReplacementString == 0
 initial_height
-install
 int google::protobuf::CalculateBase64EscapedLen(int, bool)
 int32
 int64
-interaction.ie
 internal error in map key sorting
-internode
-invalid
-inventoryservicepricesheet
-inventoryvalvegcpricesheet
-invited user
 ioctl
-ios32
-ios64
 iostream
 iostream error
-ipv4_only
-ipv6_only
 irish
-is NULL
 is_array
 is_large()
 is_save
 isspace
 it_IT
 italian
-items
-ixaustralia
 ja_JP
 japanese
-jastel
 java Class for
 java resource
 java_generate_equals_and_hash
@@ -5078,8 +3560,6 @@ java_generic_services
 java_multiple_files
 java_outer_classname
 java_string_check_utf8
-joined the group
-json
 json_name = "
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
@@ -5269,6 +3749,7 @@ k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -5344,20 +3825,15 @@ k_SystemFanControlMode_Invalid
 kannada
 kazakh
 keyCode
-keywordsstudios.com
 khmer
 kiche
-kicked from chat
-kicked off the group
 kill
-kingsoftcloud
 kinyarwanda
 ko_KR
 konkani
 koreana
 kyrgyz
 label
-language
 latam
 latvian
 lazy
@@ -5365,11 +3841,9 @@ lchown
 ld-linux-aarch64.so.1
 leading_comments
 leading_detached_comments
-left the group
 len > 0 || HasError()
 len >= input_len
 length_ >= n
-level3
 libc.so.6
 libdl.so.2
 libm.so.6
@@ -5377,40 +3851,12 @@ libpthread.so.0
 librt.so.1
 libtier0_s.so
 libvstdlib_s.so
-like
 link
 link_url
-linux
-linux22
-linux24
-linux26
-linux310
-linux316
-linux318
-linux32
-linux35
-linux36
-linux3x
-linux41
-linux414
-linux419
-linux44
-linux49
-linux4x
-linux510
-linux54
-linux5x
-linux64
-linux6x
-linux7x
 list
 lithuanian
-llnw
-local
 locale::facet::_S_create_c_locale name not valid
 localeconv
-localization
-localization_path
 location
 logs
 long
@@ -5419,10 +3865,7 @@ long long
 lower
 lseek
 lseek64
-lumen
 luxembourgish
-lzma_dict_valve
-lzma_valve
 m_Buffer
 m_ChromeConnection
 m_ChromeIPCClient
@@ -5459,7 +3902,6 @@ m_pthreadWatcher
 m_queueItemsPending.Count() == 0
 m_sMasterEventName
 m_sMasterSharedMemoryName
-m_sWideVineDir
 m_strDirectory
 m_strFileName
 m_strFileNamePrevious
@@ -5470,53 +3912,10 @@ m_vecPendingCommands
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
 macedonian
-machine
-macos
-macos1010
-macos1011
-macos1012
-macos1013
-macos1014
-macos1015
-macos1016
-macos1017
-macos1018
-macos1019
-macos1020
-macos1021
-macos1022
-macos1023
-macos104
-macos105
-macos1058
-macos106
-macos1063
-macos1064_slgu
-macos1067
-macos1067_unused
-macos106_unused1
-macos106_unused2
-macos106_unused3
-macos107
-macos108
-macos109
-macos11
-macos11.1
-macos12
-macos13
-macos14
-macos15
-macos26
-macos27
-macos28
-made clan invite only and private
-made group private
-made group public
 malay
 malayalam
 malloc
 maltese
-mandatory
 maori
 map keys are not unique
 map<$0, $1>
@@ -5525,8 +3924,6 @@ marathi
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
-media
-medium
 memchr
 memcmp
 memcpy
@@ -5535,9 +3932,7 @@ memset
 message
 message_set_wire_format
 method
-mileweb
 minimum_font_size
-minute
 misspelled_word
 mkdir
 mkfifo
@@ -5545,20 +3940,13 @@ mkstemp
 mkstemp errno %d\n
 mmap
 mmap64
-mobile
-mobilechat
 modf
 mongolian
-month
-mopay
 mount
-mp4-single
 ms-MY
 msync
 multiple_raster_threads
 munmap
-music
-mustownapp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nGrowSize >= 0
 nMinCapacity <= k_nMaxStringSize
@@ -5573,28 +3961,22 @@ name
 native_dropdowns
 negative_int_value
 nepali
-netfilter
 new
 newConnection.m_eCmd != 0
 new[]
-nexon_dota2
-ngaa
 nl_NL
 no_NO
 no_standard_descriptor_accessor
 non-transaction clone for
 non-virtual thunk to
 none
-nonsegmentedvideo
 norwegian
 not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
-not in
 null
 nullptr output boolean given.
 num > 0
 numElements >= 0
 number
-oauthclient
 objc_class_prefix
 object
 object_properties
@@ -5608,16 +3990,11 @@ open
 open64
 opendir
 opengl
-openvroverlay
-openxr
 operator
 operator""
 option json_name is not allowed on extension fields.
 optional
 options
-oracle
-osvr
-othervr
 output specified is nullptr
 override_height
 override_width
@@ -5642,25 +4019,17 @@ page_url
 parent_popup_index
 parse
 parsing
-parsing_failed
-partial
 path
 patterns
 pclose
-peering
-perfectworld
-permissions changed
 persian
 php_class_prefix
 php_generic_services
 php_metadata_namespace
 pl_PL
 please implement MergeFrom for your type.
-plugin
-policies
 polish
 poll
-popconfig
 popen
 portuguese
 positive_int_value
@@ -5669,19 +4038,13 @@ post
 postData
 pread64
 preferred_contrast
-preloadonly
-prerelease
 print
 printf
 promise_handle
-promoted to moderator
-promoted to officer
-promoted to owner
 proto
 proto2
 proto3
 proto3_optional
-ps3os
 pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
@@ -5697,31 +4060,18 @@ pthread_mutex_unlock
 pthread_once
 pthread_self
 pthreads futex robust_list is corrupt
-public
 public_dependency
 punct
-purchase
 pure virtual method called\n
 putc
 putwc
-pw_csgo
-pw_dota2
-pwrd.com
-pwrd_telecom
-pwrd_unicom
 pwrite64
 py_generic_services
-quantil
 quechua
-qwest
-qwilt
-rack
-rackspace
 raw_draw
 read
 readdir64
 readlink
-ready
 realloc
 realpath
 rects
@@ -5731,27 +4081,19 @@ recvmsg
 reduced_motion_enabled
 reference temporary #
 referrer
-regions
 registered:
-registry
 reinterpret_cast
-relative_mouse.vdf
 release_space %llu
-released
-reliance
 rename
-renew
 repeated
 request_domain
 request_space %llu
-requested to join a private group
 requesting_url
 required
 res > 0
 reserved_range
 result
 results
-retn
 reverse
 rgba
 rmdir
@@ -5774,7 +4116,6 @@ scroll
 scrollx
 scrolly
 searchbuttontext
-second
 secure
 selection_text
 sendfile64
@@ -5783,11 +4124,7 @@ sendto
 serbian
 serialize
 serializing
-series
 server_streaming
-serverandwgonly
-serverondemand
-serveronly
 service
 service $0 {\n
 setenv
@@ -5796,18 +4133,14 @@ setmntent
 setvbuf
 sfixed32
 sfixed64
-sha_header_mismatch
-shaderserver
 shahmukhi
 shared_memory_handle
 shared_memory_size
 shm_open
 shm_unlink
 short
-shortcut
 signed char
 sindhi
-singleapp
 sinhala
 sint32
 sint64
@@ -5819,7 +4152,6 @@ slovak
 slovenian
 snprintf
 socket
-solrconfig
 sorani
 sotho
 source_code_info
@@ -5829,15 +4161,12 @@ spaceReleased
 span
 spanish
 sprintf
-stackpath
 start
 state
 statfs
 statfs64
 static_cast
 static_cast<Node_t*>(pNode)->elem
-staticvideo
-stats
 statvfs
 statvfs64
 statvfs64 failed for %s, errno %d %s
@@ -5864,19 +4193,8 @@ stddev_sum_frame_ms
 stderr
 stdin
 stdout
-steam
 steam_beta_name
 steam_id
-steambeta
-steamchina
-steamclient
-steamcmd
-steamglobal
-steamhdl
-steampipe
-steampipepeering
-steamworks_drm
-store
 strCustomCSS
 strHTMLCacheDir
 strInitialURL
@@ -5891,7 +4209,6 @@ strcmp
 strcpy
 strdup
 stream
-streaming_steamdesktop.vdf
 strerror
 strftime
 string
@@ -5913,13 +4230,8 @@ strtold_l
 strtoll
 strtoul
 strtoull
-subtitles
 subtype mismatch
 success
-support changed ownership
-support cleared content
-support locked group
-support unlocked group
 sv_SE
 swahili
 swedish
@@ -5928,21 +4240,15 @@ syntax
 syntax = "$0";\n\n
 syntax error at line %d near:
 syscall
-sysreqs
 system
 tajik
 tall
 tamil
 target
-taskus.com
-tata
 tatar
 tchinese
-teliasonera
 telugu
-telus
 template parameter object for
-tencent
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
@@ -5952,29 +4258,21 @@ th_TH
 thai
 the actual field type (for enums T should be the generated enum
 the global scope
-the join request was approved by a mod
-the join request was denied by a mod
-thirdparty
 this
 throw
 tigrinya
 time
-tinet
 title
-tool
-towerattack
 tr_TR
 trailing_comments
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
-transit
 true
 trusted_creator
 tswana
 turkish
 turkmen
-tvos64
 type
 type or int32).
 type() == TYPE_FIXED32
@@ -6007,15 +4305,11 @@ uint32
 uint64
 uk_UA
 ukrainian
-un-banned from chat
 unHostPid != 0
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unSize < 128 * 1024 * 1024
-unavailable
-unconnected
 unexpected BrowserCreateResponse for unknown browser 0x%x
-unexpected_size
 unfiltered_link_url
 ungetc
 ungetwc
@@ -6024,7 +4318,6 @@ uninitialized __any_string
 uninterpreted_option
 unknown
 unlink
-unset
 unsigned
 unsigned __int128
 unsigned char
@@ -6032,7 +4325,6 @@ unsigned int
 unsigned long
 unsigned long long
 unsigned short
-unspecified
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 upper
 urdu
@@ -6045,21 +4337,15 @@ uyghur
 uzbek
 valencian
 value
-valve
-valvesoftware.com
 vasprintf
 vector::_M_default_append
 vector::_M_range_insert
 vector::_M_realloc_insert
 vector::reserve
-vfat
 vi_VN
-video
-videomanager
 vietnamese
 virtual thunk to
 visible
-vmc.com
 void
 void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
 void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
@@ -6080,8 +4366,6 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 vulkan
-waiting
-wasd.vdf
 wchar_t
 wcrtomb
 wcscmp
@@ -6090,55 +4374,15 @@ wcsnrtombs
 wctob
 weak
 weak_dependency
-web links changed
-web:checkout
-web:community
-web:dev
-web:help
-web:internalstats
-web:ops
-web:partner
-web:stats
-web:steamtv
-web:store
-web:support
 webgl
 webgl2
 webgpu
 webhelper crashing too often, stopping restart
 webhelper crashing too often, stopping restart (%d times)
-webm
-webm-segmented
 webnn
-websocket
-websockets
-week
 welsh
 wide
 width
-win10
-win11
-win200
-win2003
-win2008
-win2012
-win2012R2
-win2016
-win2019
-win2022
-win311
-win32
-win64
-win7
-win8
-win8.1
-win95
-win98
-winME
-winNT
-winVista
-winXP
-windows
 with a type that does not implement MergeFrom. This is unsafe;
 wmemchr
 wmemcmp
@@ -6155,7 +4399,6 @@ xdigit
 xhosa
 xhotspot
 y_local
-year
 yhotspot
 yoruba
 zh-cn
@@ -6165,8 +4408,6 @@ zh_CN
 zh_TW
 zh_XC
 zoom
-zstd_dict_valve
-zstd_valve
 zulu
 {default arg#
 {lambda(

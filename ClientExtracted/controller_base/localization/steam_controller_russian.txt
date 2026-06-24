@@ -125,8 +125,8 @@
 	"origin_SteamFrame_RightGrip_Pull"			"Неполное нажатие правого хвата"
 	"origin_SteamFrame_RightGrip_Click"			"Полное нажатие правого хвата"
 	"origin_SteamFrame_RightGrip_Touch"			"Касание правого хвата"
-	"origin_SteamFrame_LeftThumbrest_Touch"		"Касание левой площадки для большого пальца"
-	"origin_SteamFrame_RightThumbrest_Touch"	"Касание правой площадки для большого пальца"
+	"origin_SteamFrame_LeftThumbrest_Touch"		"Касание левого упора большого пальца"
+	"origin_SteamFrame_RightThumbrest_Touch"	"Касание правого упора большого пальца"
 
 	"origin_horipad_m1"							"Кнопка M1"
 	"origin_horipad_m2"							"Кнопка M2"

@@ -1412,6 +1412,7 @@ var CLSTAMP = "steamdb";
           LoginQR: "qrlogin_LoginQR_xlEVp",
           NonPublic: "qrlogin_NonPublic_39rmY",
           QRLoginDeck: "qrlogin_QRLoginDeck_J3DO-",
+          QRLoginVR: "qrlogin_QRLoginVR_1Drp2",
           Blur: "qrlogin_Blur_1rteF",
           Overlay: "qrlogin_Overlay_464mF",
           Box: "qrlogin_Box_2ltn2",
@@ -2527,6 +2528,20 @@ var CLSTAMP = "steamdb";
           ActivatableStroke: "gamepadui_svg_library_ActivatableStroke_2Jn2R",
           ActivatableGradient:
             "gamepadui_svg_library_ActivatableGradient_cIR7H",
+          VRLink: "gamepadui_svg_library_VRLink_1dYQE",
+          Off: "gamepadui_svg_library_Off_127bi",
+          InnerArc: "gamepadui_svg_library_InnerArc_21GOs",
+          MiddleArc: "gamepadui_svg_library_MiddleArc_1FDt0",
+          OuterArc: "gamepadui_svg_library_OuterArc_1Q4Dg",
+          Dot: "gamepadui_svg_library_Dot_QSXPs",
+          HMD: "gamepadui_svg_library_HMD_fZ4HR",
+          SignalLow: "gamepadui_svg_library_SignalLow_lgt4j",
+          SignalMedium: "gamepadui_svg_library_SignalMedium_2yGzW",
+          Searching: "gamepadui_svg_library_Searching_ccU_Y",
+          VRLinkBar1Anim: "gamepadui_svg_library_VRLinkBar1Anim_WdIUI",
+          VRLinkBar2Anim: "gamepadui_svg_library_VRLinkBar2Anim_1Z_SQ",
+          VRLinkBar3Anim: "gamepadui_svg_library_VRLinkBar3Anim_1rVd9",
+          VRLinkBar4Anim: "gamepadui_svg_library_VRLinkBar4Anim_8npUo",
           ScootCursor: "gamepadui_svg_library_ScootCursor_3huKx",
         };
       },
@@ -3146,8 +3161,8 @@ var CLSTAMP = "steamdb";
           "./ar-ly.js": 64197,
           "./ar-ma": 62180,
           "./ar-ma.js": 62180,
-          "./ar-ps": 51724,
-          "./ar-ps.js": 51724,
+          "./ar-ps": 29343,
+          "./ar-ps.js": 29343,
           "./ar-sa": 50230,
           "./ar-sa.js": 50230,
           "./ar-tn": 72808,
@@ -3363,8 +3378,8 @@ var CLSTAMP = "steamdb";
           "./sw.js": 27104,
           "./ta": 47493,
           "./ta.js": 47493,
-          "./te": 57705,
-          "./te.js": 57705,
+          "./te": 80086,
+          "./te.js": 80086,
           "./tet": 94457,
           "./tet.js": 94457,
           "./tg": 22727,
@@ -3918,8 +3933,7 @@ var CLSTAMP = "steamdb";
               if (this.m_hSharedConnection) {
                 this.DEBUG_LogCMInterfaceActivity(_, "send");
                 let _ = _._(_.Serialize());
-                void 0 !==
-                SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse
+                (0, _._)("SharedConnection.SendMsgAndAwaitBinaryResponse")
                   ? SteamClient.SharedConnection.SendMsgAndAwaitBinaryResponse(
                       this.m_hSharedConnection,
                       _,
@@ -4053,8 +4067,7 @@ var CLSTAMP = "steamdb";
                 this.OnLogonInfoChanged(_),
                   _ ||
                     ((_ = !0),
-                    void 0 !==
-                    SteamClient.SharedConnection.RegisterOnBinaryMessageReceived
+                    (0, _._)("SharedConnection.RegisterOnBinaryMessageReceived")
                       ? SteamClient.SharedConnection.RegisterOnBinaryMessageReceived(
                           this.m_hSharedConnection,
                           this.OnMsgRecvd.bind(this),
@@ -13146,17 +13159,10 @@ var CLSTAMP = "steamdb";
           }
           m_cLastUnreadPriorityMessageCountPosted = void 0;
           UpdateUnreadMessagesGlobal() {
-            if (
-              void 0 !== window.SteamClient &&
-              null != window.SteamClient.WebChat &&
-              null !=
-                window.SteamClient.WebChat.SetNumChatsWithUnreadPriorityMessages
-            ) {
+            if ((0, _._)("WebChat.SetNumChatsWithUnreadPriorityMessages")) {
               let _ = _._.ChatStore.GetChatsWithUnreadPriorityMessages().length;
               this.m_cLastUnreadPriorityMessageCountPosted !== _ &&
-                (window.SteamClient.WebChat.SetNumChatsWithUnreadPriorityMessages(
-                  _,
-                ),
+                (SteamClient.WebChat.SetNumChatsWithUnreadPriorityMessages(_),
                 (this.m_cLastUnreadPriorityMessageCountPosted = _));
             }
           }
@@ -16281,6 +16287,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         let _ = class extends _.Component {
           constructor(_) {
@@ -16311,10 +16318,7 @@ var CLSTAMP = "steamdb";
               );
           }
           OnWatch(_) {
-            if (
-              "undefined" != typeof SteamClient &&
-              void 0 !== SteamClient.WebChat
-            ) {
+            if ((0, _._)("WebChat.OpenURLInClient")) {
               let _ =
                   "steam://broadcast/watch/" + this.props.broadcaster.steamid64,
                 _ = _(_);
@@ -16620,10 +16624,7 @@ var CLSTAMP = "steamdb";
               });
           }
           OnWatch(_) {
-            if (
-              "undefined" != typeof SteamClient &&
-              void 0 !== SteamClient.WebChat
-            ) {
+            if ((0, _._)("WebChat.OpenURLInClient")) {
               let _ =
                   "steam://broadcast/watch/" + this.props.broadcaster.steamid64,
                 _ = _(_);
@@ -24365,7 +24366,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         class _ {
@@ -24559,9 +24559,7 @@ var CLSTAMP = "steamdb";
             super(), (this.m_window = _);
           }
           BringToFront() {
-            null != this.m_window.SteamClient &&
-            null != this.m_window.SteamClient.Window &&
-            null != this.m_window.SteamClient.Window.BringToFront
+            (0, _._)(this.m_window, "Window.BringToFront")
               ? this.m_window.SteamClient.Window.BringToFront()
               : this.m_window.focus();
           }
@@ -24691,9 +24689,7 @@ var CLSTAMP = "steamdb";
           }
           m_setSteamClientListeners = new Set();
           RegisterListeners() {
-            "undefined" != typeof SteamClient &&
-            SteamClient.WebChat &&
-            SteamClient.WebChat.RegisterForFriendPostMessage
+            (0, _._)("WebChat.RegisterForFriendPostMessage")
               ? (this.m_setSteamClientListeners.add(
                   SteamClient.WebChat.RegisterForFriendPostMessage(
                     this.HandlePostMessage,
@@ -25004,7 +25000,7 @@ var CLSTAMP = "steamdb";
               _ && this.m_OverlayStore.Init(_),
               _._.IN_CLIENT &&
                 !this.m_FriendsUIApp.IsLoadedInClientSharedJSContext() &&
-                void 0 !== SteamClient.FriendSettings.GetEnabledFeatures &&
+                (0, _._)("FriendSettings.GetEnabledFeatures") &&
                 _.push([
                   "SteamClient.FriendSettings.GetEnabledFeatures",
                   () =>
@@ -25275,11 +25271,7 @@ var CLSTAMP = "steamdb";
           m_bLoadedInClientSharedJSContext;
           m_DesktopApp;
           constructor(_) {
-            super(
-              _._.IN_CLIENT && void 0 !== SteamClient.Storage
-                ? new _()
-                : new _._(),
-            ),
+            super(_._.IN_CLIENT && (0, _._)("Storage") ? new _() : new _._()),
               (this.m_bLoadedInClientSharedJSContext = _),
               _ &&
                 this.VoiceStore.RegisterForVoiceChatActiveStateChange(
@@ -25677,6 +25669,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           constructor() {
@@ -25691,15 +25684,11 @@ var CLSTAMP = "steamdb";
             (this.m_CMInterface = _),
               this.m_CMInterface.RunWhenLoggedOn(() => {
                 _._.IN_CLIENT &&
-                  (SteamClient &&
-                    SteamClient.Broadcast &&
-                    SteamClient.Broadcast.RegisterForBroadcastStatus &&
+                  ((0, _._)("Broadcast.RegisterForBroadcastStatus") &&
                     SteamClient.Broadcast.RegisterForBroadcastStatus(
                       this.OnBroadcastStatus,
                     ),
-                  SteamClient &&
-                    SteamClient.Broadcast &&
-                    SteamClient.Broadcast.RegisterForViewerRequests &&
+                  (0, _._)("Broadcast.RegisterForViewerRequests") &&
                     SteamClient.Broadcast.RegisterForViewerRequests(
                       this.OnViewerRequest,
                     ));
@@ -26097,7 +26086,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
           m_bReady = !1;
@@ -26441,9 +26429,7 @@ var CLSTAMP = "steamdb";
           }
           InternalInit() {
             this.m_bClientInitComplete ||
-              (SteamClient &&
-              SteamClient.FriendSettings &&
-              SteamClient.FriendSettings.RegisterForSettingsChanges
+              ((0, _._)("FriendSettings.RegisterForSettingsChanges")
                 ? (SteamClient.FriendSettings.RegisterForSettingsChanges(
                     this.OnClientSettingsChange.bind(this),
                   ),
@@ -26454,12 +26440,7 @@ var CLSTAMP = "steamdb";
             let _,
               _ = _._();
             if ("string" != typeof _) {
-              if (
-                ((_ = _.FriendsSettings),
-                SteamClient.FriendSettings &&
-                  SteamClient.FriendSettings.SetFriendSettings)
-              )
-                return void this.BUpdateSettings(_);
+              if (((_ = _.FriendsSettings), this.BUpdateSettings(_))) return;
             } else
               _ = JSON.parse(_, (_, _) =>
                 "b" == _.substring(0, 1) && "number" == typeof _ ? 0 != _ : _,
@@ -26467,7 +26448,8 @@ var CLSTAMP = "steamdb";
             Object.assign(_, _), this.m_fnFriendSettingsChanged(_);
           }
           BUpdateSettings(_) {
-            let _ = JSON.stringify(_);
+            if (!(0, _._)("FriendSettings.SetFriendSettings")) return !1;
+            const _ = JSON.stringify(_);
             return SteamClient.FriendSettings.SetFriendSettings(_), !0;
           }
         }
@@ -29422,9 +29404,7 @@ var CLSTAMP = "steamdb";
             let _ =
                 await _._.SettingsStore.GetObjectFromLocalStorageWhenReady(_),
               _ = !1;
-            "undefined" != typeof SteamClient &&
-              SteamClient.WebChat &&
-              SteamClient.WebChat.BSuppressPopupsInRestore &&
+            (0, _._)("WebChat.BSuppressPopupsInRestore") &&
               (_ = await SteamClient.WebChat.BSuppressPopupsInRestore()),
               this.RestoreFromStateObject(_, _),
               (this.m_bRestoringPopups = !1);
@@ -30390,7 +30370,7 @@ var CLSTAMP = "steamdb";
                     (_.nMaxTimeoutRetries < 0 ||
                       Number.isNaN(_.nMaxTimeoutRetries))) ||
                   (null != _.nTimeoutMS &&
-                    (_.nTimeoutMS <= 0 || Number.isNaN(_.nTimeoutMS))) ||
+                    (_.nTimeoutMS < 0 || Number.isNaN(_.nTimeoutMS))) ||
                   (null != _.nRetryDelayMS &&
                     (_.nRetryDelayMS <= 0 || Number.isNaN(_.nRetryDelayMS)))
                 );
@@ -30422,10 +30402,11 @@ var CLSTAMP = "steamdb";
                 (_.eState = 1),
                 (_.bTransmitted = !0),
                 window.clearTimeout(_.nTimeoutHandle),
-                (_.nTimeoutHandle = window.setTimeout(
-                  () => this.HandleSendTimeout(_),
-                  _.opts.nTimeoutMS,
-                )))
+                _.opts.nTimeoutMS > 0 &&
+                  (_.nTimeoutHandle = window.setTimeout(
+                    () => this.HandleSendTimeout(_),
+                    _.opts.nTimeoutMS,
+                  )))
               : this.ScheduleRequestMessageRetryOrFail(_, {
                   error_code: _._._,
                   origin: _._._,
@@ -31460,7 +31441,9 @@ var CLSTAMP = "steamdb";
             (_[(_.k_ENoiseGateLevel_Medium = 2)] = "k_ENoiseGateLevel_Medium"),
             (_[(_.k_ENoiseGateLevel_High = 3)] = "k_ENoiseGateLevel_High");
         })(_ || (_ = {}));
-        var _, _;
+        var _,
+          _,
+          _ = __webpack_require__("chunkid");
         !(function (_) {
           (_[(_.k_EAudioStreamType_Microphone = 1)] =
             "k_EAudioStreamType_Microphone"),
@@ -31825,16 +31808,9 @@ var CLSTAMP = "steamdb";
               this.GenerateVoicePositions();
           }
           DispatchSetVoiceChatActive(_) {
-            if (
-              (this.m_VoiceChatActiveStateChangeCallbacks.Dispatch(_),
-              "undefined" != typeof SteamClient &&
-                null != SteamClient &&
-                null != SteamClient.WebChat &&
-                null != SteamClient.WebChat.SetVoiceChatActive)
-            )
-              try {
+            this.m_VoiceChatActiveStateChangeCallbacks.Dispatch(_),
+              (0, _._)("WebChat.SetVoiceChatActive") &&
                 SteamClient.WebChat.SetVoiceChatActive(_);
-              } catch (_) {}
           }
           Init(_) {
             (this.m_CMInterface = _),
@@ -32198,9 +32174,7 @@ var CLSTAMP = "steamdb";
             return this.m_CMInterface.steamid.GetAccountID();
           }
           RefreshPushToTalkKeySettings() {
-            "undefined" != typeof SteamClient &&
-              null != SteamClient.WebChat &&
-              null != SteamClient.WebChat.GetPushToTalkEnabled &&
+            (0, _._)("WebChat.GetPushToTalkEnabled") &&
               SteamClient.WebChat.GetPushToTalkEnabled().then((_) => {
                 (this.m_bPushToTalkEnabled = _.bEnabled),
                   (this.m_VKPushToTalkHotKey = _.vkHotKey),
@@ -32210,8 +32184,7 @@ var CLSTAMP = "steamdb";
                   (this.m_strPushToTalkDisplayString = _.strKeyName || "None"),
                   this.m_bPushToTalkEnabled ||
                     this.m_bPushToMuteEnabled ||
-                    (null != SteamClient.WebChat &&
-                      null != SteamClient.WebChat.SetPushToTalkHotKey &&
+                    ((0, _._)("WebChat.SetPushToTalkHotKey") &&
                       ((0, _._)(
                         this.m_Settings.m_bSettingsLoaded,
                         "Settings not loaded but RefreshPushToTalkKeySettings hit",
@@ -32225,11 +32198,7 @@ var CLSTAMP = "steamdb";
                         SteamClient.WebChat.SetPushToTalkHotKey(0),
                         this.RefreshPushToTalkKeySettings())));
               }),
-              "undefined" != typeof SteamClient &&
-                null === this.m_hRegisterForPushToTalkStateChange &&
-                null != SteamClient &&
-                null != SteamClient.WebChat &&
-                null != SteamClient.WebChat.RegisterForPushToTalkStateChange &&
+              (0, _._)("WebChat.RegisterForPushToTalkStateChange") &&
                 (this.m_hRegisterForPushToTalkStateChange =
                   SteamClient.WebChat.RegisterForPushToTalkStateChange(
                     this.OnPushToTalkStateChange,
@@ -34451,9 +34420,7 @@ var CLSTAMP = "steamdb";
                 this.m_CMInterface.GetServiceTransport(),
                 _,
               ),
-              "undefined" != typeof SteamClient &&
-                null != SteamClient.WebChat &&
-                null != SteamClient.WebChat.SetVoiceChatStatus &&
+              (0, _._)("WebChat.SetVoiceChatStatus") &&
                 SteamClient.WebChat.SetVoiceChatStatus(_, _);
           }
           UpdateUserVoiceStatus(_) {
@@ -39765,6 +39732,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = _.lazy(() =>
           Promise.all([
@@ -40794,14 +40762,10 @@ var CLSTAMP = "steamdb";
         }
         function _(_) {
           let _ = [],
-            _ =
-              "undefined" != typeof SteamClient &&
-              void 0 !== SteamClient.Screenshots,
+            _ = (0, _._)("Screenshots"),
             _ = (function () {
-              let _ =
-                "undefined" != typeof SteamClient &&
-                void 0 !== SteamClient.Screenshots;
-              const [_, _] = _.useState(null);
+              const _ = (0, _._)("Screenshots.GetLastScreenshotTaken"),
+                [_, _] = _.useState(null);
               return (
                 _.useEffect(() => {
                   if (!_) return;
@@ -53472,6 +53436,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -53644,8 +53609,7 @@ var CLSTAMP = "steamdb";
           }
           SetHotKeyCaptureState(_) {
             0 == _
-              ? (null != SteamClient.WebChat &&
-                  null != SteamClient.WebChat.UnregisterForMouseXButtonDown &&
+              ? ((0, _._)("WebChat.UnregisterForMouseXButtonDown") &&
                   SteamClient.WebChat.UnregisterForMouseXButtonDown(),
                 this.setState({
                   hotkeyCapturing: !1,
@@ -53653,8 +53617,7 @@ var CLSTAMP = "steamdb";
               : (this.setState({
                   hotkeyCapturing: !0,
                 }),
-                null != SteamClient.WebChat &&
-                  null != SteamClient.WebChat.RegisterForMouseXButtonDown &&
+                (0, _._)("RegisterForMouseXButtonDown") &&
                   SteamClient.WebChat.RegisterForMouseXButtonDown(
                     this.OnXButtonDown,
                   ));
@@ -53662,18 +53625,13 @@ var CLSTAMP = "steamdb";
           OnXButtonDown(_) {
             _ > 0 &&
               this.state.hotkeyCapturing &&
-              (null != SteamClient.WebChat &&
-                null != SteamClient.WebChat.SetPushToTalkMouseButton &&
+              ((0, _._)("WebChat.SetPushToTalkMouseButton") &&
                 (SteamClient.WebChat.SetPushToTalkMouseButton(_),
                 _._.VoiceStore.RefreshPushToTalkKeySettings()),
               this.SetHotKeyCaptureState(!1));
           }
           OnTogglePushToTalk() {
-            if (
-              "undefined" != typeof SteamClient &&
-              null != SteamClient.WebChat &&
-              null != SteamClient.WebChat.SetPushToTalkEnabled
-            ) {
+            if ((0, _._)("WebChat.SetPushToTalkEnabled")) {
               let _ = _._.VoiceStore.GetPushToTalkEnabled();
               SteamClient.WebChat.SetPushToTalkEnabled(!_),
                 _._.VoiceStore.SetPushToTalkEnabled(!_);
@@ -53683,32 +53641,28 @@ var CLSTAMP = "steamdb";
             0 == this.state.hotkeyCapturing && this.SetHotKeyCaptureState(!0);
           }
           ClearHotKey() {
-            "undefined" != typeof SteamClient &&
-              null != SteamClient.WebChat &&
-              null != SteamClient.WebChat.SetPushToTalkHotKey &&
+            (0, _._)("WebChat.SetPushToTalkHotKey") &&
               (SteamClient.WebChat.SetPushToTalkHotKey(0),
               _._.VoiceStore.RefreshPushToTalkKeySettings());
           }
           OnTransmissionTypeChange(_) {
-            if ("undefined" != typeof SteamClient && SteamClient.WebChat)
-              if ("pushtomute" === _)
-                SteamClient.WebChat.SetPushToMuteEnabled &&
-                  (SteamClient.WebChat.SetPushToMuteEnabled(!0),
-                  _._.VoiceStore.SetPushToMuteEnabled(!0));
-              else if ("openmic" === _ || "pushtotalk" === _) {
-                const _ = "pushtotalk" === _;
-                SteamClient.WebChat.SetPushToTalkEnabled &&
-                  (SteamClient.WebChat.SetPushToTalkEnabled(_),
-                  _._.VoiceStore.SetPushToTalkEnabled(_));
-              }
+            if ("pushtomute" === _)
+              (0, _._)("WebChat.SetPushToMuteEnabled") &&
+                (SteamClient.WebChat.SetPushToMuteEnabled(!0),
+                _._.VoiceStore.SetPushToMuteEnabled(!0));
+            else if ("openmic" === _ || "pushtotalk" === _) {
+              const _ = "pushtotalk" === _;
+              (0, _._)("WebChat.SetPushToTalkEnabled") &&
+                (SteamClient.WebChat.SetPushToTalkEnabled(_),
+                _._.VoiceStore.SetPushToTalkEnabled(_));
+            }
           }
           onMouseDown(_) {
             0 != this.state.hotkeyCapturing && 0 != _.button && this.onClick(_);
           }
           onClick(_) {
             0 != this.state.hotkeyCapturing &&
-              (null != SteamClient.WebChat &&
-                null != SteamClient.WebChat.SetPushToTalkMouseButton &&
+              ((0, _._)("WebChat.SetPushToTalkMouseButton") &&
                 (SteamClient.WebChat.SetPushToTalkMouseButton(_.button),
                 _._.VoiceStore.RefreshPushToTalkKeySettings()),
               this.SetHotKeyCaptureState(!1),
@@ -53720,8 +53674,7 @@ var CLSTAMP = "steamdb";
           }
           onKeyDown(_) {
             0 != this.state.hotkeyCapturing &&
-              (null != SteamClient.WebChat &&
-                null != SteamClient.WebChat.SetPushToTalkHotKey &&
+              ((0, _._)("WebChat.SetPushToTalkHotKey") &&
                 (SteamClient.WebChat.SetPushToTalkHotKey(_.keyCode),
                 _._.VoiceStore.RefreshPushToTalkKeySettings()),
               this.SetHotKeyCaptureState(!1),
@@ -53756,10 +53709,7 @@ var CLSTAMP = "steamdb";
                 ),
                 _._.VoiceStore.IsLocalMicTestActive()),
               _ = _._.FriendStore.self;
-            "undefined" != typeof SteamClient &&
-              null != SteamClient.WebChat &&
-              null != SteamClient.WebChat.GetPushToTalkEnabled &&
-              (_ = !0),
+            (0, _._)("WebChat.GetPushToTalkEnabled") && (_ = !0),
               this.state.hotkeyCapturing &&
                 (_ = (0, _._)("#VoicePushToTalkPressHotKey"));
             const _ = _ ? "pushtomute" : _ ? "pushtotalk" : "openmic";
@@ -53880,9 +53830,7 @@ var CLSTAMP = "steamdb";
                       }),
                     ],
                   }),
-                  "undefined" != typeof SteamClient &&
-                  null != SteamClient.WebChat &&
-                  null != SteamClient.WebChat.SetPushToMuteEnabled
+                  (0, _._)("WebChat.SetPushToMuteEnabled")
                     ? (0, _.jsx)("div", {
                         className:
                           "_DialogSection pushToTalkSection" +
@@ -67715,6 +67663,7 @@ var CLSTAMP = "steamdb";
             })
           );
         }
+        var _ = __webpack_require__("chunkid");
         function _(_, _, _) {
           const _ = window,
             _ = (0, _._)(_);
@@ -68431,12 +68380,8 @@ var CLSTAMP = "steamdb";
           OnClose() {
             if (this.m_tabSet) {
               let _ = !1;
-              null != this.m_popup.window &&
-                this.m_popup.window.SteamClient &&
-                this.m_popup.window.SteamClient.Window &&
-                this.m_popup.window.SteamClient.Window.ProcessShuttingDown &&
-                (_ =
-                  this.m_popup.window.SteamClient.Window.ProcessShuttingDown()),
+              (0, _._)(this.m_popup, "Window.ProcessShuttingDown") &&
+                (_ = this.m_popup.SteamClient.Window.ProcessShuttingDown()),
                 this.m_tabSet.OnPopupClosed(_);
             }
             this.UnbindWindowHandlers(),
@@ -68791,6 +68736,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return "currentTarget" in _
@@ -68798,10 +68744,7 @@ var CLSTAMP = "steamdb";
             : _;
         }
         function _(_) {
-          if (
-            "undefined" != typeof SteamClient &&
-            void 0 !== SteamClient.SharedConnection
-          ) {
+          if ((0, _._)("SharedConnection")) {
             return (0, _._)(_(_)).m_unPID;
           }
           return 0;
@@ -70632,7 +70575,7 @@ var CLSTAMP = "steamdb";
             bHaptics: _.haptics_enabled ?? !1,
             bSWAntiDrift: _.gyro_sw_antidrift_enabled ?? !1,
             bIMUOneEuroFilter: _.gyro_one_euro_filter_enabled ?? !1,
-            bUseSWBiases: _.use_gyro_sw_biases ?? !0,
+            nTritonGyroHWCalValue: _.triton_gyro_hw_cal ?? 100,
             nLHapticStrength: _.haptic_strength_left ?? 0,
             nRHapticStrength: _.haptic_strength_right ?? 0,
             flLPadPressureCurve: _.pad_pressure_curve_left ?? 0,
@@ -75163,6 +75106,7 @@ var CLSTAMP = "steamdb";
               onFocusWithin: _,
               navKey: _,
               noFocusRing: _,
+              focusRingSizeElementID: _,
               focusable: _,
               navRef: _,
               actionDescriptionMap: _,
@@ -75190,6 +75134,7 @@ var CLSTAMP = "steamdb";
               onFocusWithin: _,
               navKey: _,
               noFocusRing: _,
+              focusRingSizeElementID: _,
               focusable: _,
               navRef: _,
               onMoveUp: _,
@@ -75495,7 +75440,7 @@ var CLSTAMP = "steamdb";
               return (
                 (0, _.useEffect)(() => {
                   if (_ && _) {
-                    let _ = _.GetBoundingRect(),
+                    let _ = _.GetBoundingRectForFocusRing(),
                       _ = _.Element;
                     const _ = _.ownerDocument.defaultView,
                       _ = (_) =>
@@ -75528,7 +75473,7 @@ var CLSTAMP = "steamdb";
             })(_, _),
             _ = _.useCallback(() => {
               if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
-              let _ = _.GetBoundingRect();
+              let _ = _.GetBoundingRectForFocusRing();
               const _ = _.getBoundingClientRect(),
                 _ = {
                   left: _._ - _._,
@@ -77365,6 +77310,17 @@ var CLSTAMP = "steamdb";
           GetBoundingRect() {
             return this.m_element?.getBoundingClientRect();
           }
+          GetBoundingRectForFocusRing() {
+            let _ = this.m_element;
+            return (
+              this.m_Properties?.focusRingSizeElementID &&
+                (_ =
+                  _?.ownerDocument?.getElementById(
+                    this.m_Properties.focusRingSizeElementID,
+                  ) ?? this.m_element),
+              _?.getBoundingClientRect()
+            );
+          }
           SetHasFocus(_) {
             this.m_Focused.Set(_);
           }
@@ -78446,7 +78402,7 @@ var CLSTAMP = "steamdb";
           return _;
         }
         function _(_, _, _) {
-          if (_ >= 0 || _ >= 0) {
+          if (_ >= 0 && _ >= 0) {
             const _ = _.splice(_, 1)[0];
             _ >= _.length ? (_[_] = _) : _.splice(_, 0, _);
           }
@@ -79113,8 +79069,10 @@ var CLSTAMP = "steamdb";
         }
         function _(_) {
           if (0 == _.length) return !1;
-          for (let _ = 0; _ < _.length; _++)
-            if (_[_] < "0" || _[_] > "9") return !1;
+          for (let _ = 0; _ < _.length; _++) {
+            const _ = _.charCodeAt(_);
+            if (_ < 48 || _ > 57) return !1;
+          }
           return !0;
         }
         function _(_, _, _, _) {
@@ -80644,13 +80602,13 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_) {
+        function _(_, _) {
           const { data: _ } = (0, _._)(_),
             _ = (0, _._)();
           if (void 0 === _) return;
           if (null === _) return null;
           const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-          return _ ? _.filter((_) => !!_.all_ages) : _;
+          return _ && !_ ? _.filter((_) => !!_.all_ages) : _;
         }
         function _(_) {
           let _ = _(_);
@@ -85216,7 +85174,7 @@ var CLSTAMP = "steamdb";
               onComplete: _,
               onStatusChange: _,
               platform: _,
-              deckStyling: _,
+              styling: _ = "default",
               activeBitValue: _ = 255,
             } = _,
             _ = _._.IN_STEAMUI ? _ : _,
@@ -85290,7 +85248,8 @@ var CLSTAMP = "steamdb";
                   quality: _(_),
                   className: (0, _._)(
                     _().LoginQR,
-                    _ && _().QRLoginDeck,
+                    "deck" == _ && _().QRLoginDeck,
+                    "vr" == _ && _().QRLoginVR,
                     _ && _().Blur,
                     _ && _().NonPublic,
                   ),
@@ -92793,18 +92752,17 @@ var CLSTAMP = "steamdb";
             return this.m_rgParams;
           }
           Focus(_ = _.iEc.k_EWindowBringToFrontAndForceOS) {
-            _ != _.iEc.k_EWindowBringToFrontInvalid &&
-              (this.m_popup &&
-              void 0 !== this.m_popup.SteamClient &&
-              void 0 !== this.m_popup.SteamClient.Window
+            this.m_popup &&
+              _ != _.iEc.k_EWindowBringToFrontInvalid &&
+              ((0, _._)(this.m_popup, "Window.BringToFront")
                 ? this.m_popup.SteamClient.Window.BringToFront(_)
-                : this.m_popup && this.m_popup.focus());
+                : this.m_popup.focus());
           }
           Close() {
             this.m_popup &&
-              ((0, _._)(this.m_popup.window, "Window.Close")
-                ? this.m_popup.window.SteamClient.Window.Close()
-                : this.m_popup.window.close());
+              ((0, _._)(this.m_popup, "Window.Close")
+                ? this.m_popup.SteamClient.Window.Close()
+                : this.m_popup.close());
           }
           GetName() {
             return this.m_strName;
@@ -92872,6 +92830,20 @@ var CLSTAMP = "steamdb";
           OnBeforeUnload() {}
           OnFocus() {}
           OnBlur() {}
+          m_rgChildBrowserViews = [];
+          get childBrowserViews() {
+            return this.m_rgChildBrowserViews;
+          }
+          RegisterChildBrowserView(_) {
+            return (
+              this.m_rgChildBrowserViews.push(_),
+              {
+                Unregister: () =>
+                  (this.m_rgChildBrowserViews =
+                    this.m_rgChildBrowserViews.filter((_) => _ != _)),
+              }
+            );
+          }
         }
         (0, _._)([_._], _.prototype, "m_bFocused", void 0),
           (0, _._)([_._], _.prototype, "OnMessage", null),
@@ -92992,13 +92964,15 @@ var CLSTAMP = "steamdb";
                   _.BIsValid() && !_.BIsClosed() && _.push(_);
                 });
                 for (let _ of _)
-                  _.window?.SteamClient.Browser
-                    ?.SetShouldExitSteamOnBrowserClosed &&
+                  (0, _._)(
+                    _.window,
+                    "Browser.SetShouldExitSteamOnBrowserClosed",
+                  ) &&
                     _.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                       !1,
                     ),
-                    _.window?.SteamClient.Window.SetHideOnClose &&
-                      _.window?.SteamClient.Window.SetHideOnClose(!1),
+                    (0, _._)(_.window, "Window.SetHideOnClose") &&
+                      _.window.SteamClient.Window.SetHideOnClose(!1),
                     _.Close();
                 this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                   this.m_mapPopups.clear();
@@ -96135,6 +96109,9 @@ var CLSTAMP = "steamdb";
         function _(_, _) {
           return !!_ && "object" == typeof _.SteamClient && _ in _.SteamClient;
         }
+        function _(_) {
+          return _(window, _);
+        }
         function _(_, _) {
           if (!_) return !1;
           const [_, _] = _.split(".", 2);
@@ -96144,6 +96121,7 @@ var CLSTAMP = "steamdb";
           return _(window, _);
         }
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
         });
@@ -123474,11 +123452,13 @@ var CLSTAMP = "steamdb";
             (0, _.useEffect)(() => {
               if (_)
                 if (_.visible) {
-                  _ && (_.PositionMenu(), _.PositionPopupWindow());
-                  let _ = _.options.bNoFocusWhenShown
-                    ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
-                    : _.iEc.k_EWindowBringToFrontAndForceOS;
-                  _.TakeFocus(_);
+                  if (_) {
+                    _.PositionMenu(), _.PositionPopupWindow();
+                    let _ = _.options.bNoFocusWhenShown
+                      ? _.iEc.k_EWindowBringToFrontWithoutForcingOS
+                      : _.iEc.k_EWindowBringToFrontAndForceOS;
+                    _.TakeFocus(_);
+                  }
                 } else
                   _.options.bRetainOnHide &&
                     window.setTimeout(() => {
@@ -129445,21 +129425,21 @@ var CLSTAMP = "steamdb";
         function _(_, _, _ = {}) {
           const { bForceExternal: _, unPID: _, bUseLinkFilter: _ } = _;
           let _;
-          (_ =
+          _ =
             "currentTarget" in _
               ? _.currentTarget.ownerDocument.defaultView
-              : _),
-            "undefined" != typeof SteamClient && void 0 !== SteamClient.WebChat
-              ? SteamClient.WebChat.OpenURLInClient(_, _ || 0, !!_)
-              : 0 == _.indexOf("steam://") &&
-                  0 != _.indexOf("steam://remoteplay/connect")
-                ? (_.location.href = _)
-                : _.open(
-                    _,
-                    void 0,
-                    "menubar,location,resizable,scrollbars,status,noopener" +
-                      (_ ? ",noreferrer" : ""),
-                  );
+              : _;
+          (0, _._)("WebChat.OpenURLInClient")
+            ? SteamClient.WebChat.OpenURLInClient(_, _ || 0, !!_)
+            : 0 == _.indexOf("steam://") &&
+                0 != _.indexOf("steam://remoteplay/connect")
+              ? (_.location.href = _)
+              : _.open(
+                  _,
+                  void 0,
+                  "menubar,location,resizable,scrollbars,status,noopener" +
+                    (_ ? ",noreferrer" : ""),
+                );
         }
         const _ = (_) =>
           (0, _.jsx)(_.Fragment, {
@@ -133635,7 +133615,7 @@ var CLSTAMP = "steamdb";
           return _._.IN_CHROMEOS;
         }
         function _() {
-          return _._.IS_STEAMOS_MANAGEMENT_ENABLED;
+          return _._.IS_STEAMOS;
         }
         function _(_, _) {
           return 0 != _.length && _.startsWith(_);
@@ -133742,9 +133722,8 @@ var CLSTAMP = "steamdb";
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
-            ON_DECK: !1,
             ON_FRAME: !1,
-            IS_STEAMOS_MANAGEMENT_ENABLED: !1,
+            IS_STEAMOS: !1,
             ON_STEAMOS_CLIENT_BRANCH: !1,
             IN_GAMESCOPE: !1,
             IN_LOGIN: !1,
@@ -135215,168 +135194,168 @@ var CLSTAMP = "steamdb";
       {
         43: "8170f2c895e19202cd65",
         133: "82545716ea1a8b82e4d9",
-        191: "7c724535791fc623d815",
-        277: "fd13a07a6644f30f9071",
+        191: "e6f67d1fb2c1a709f290",
+        277: "c41977447be06a7f35ad",
         316: "b4a4125ab8550ef83a0b",
-        382: "bd7c341d702783a6bb01",
+        382: "edee64095010d9d809e6",
         474: "6a9d0b4e2892dded462e",
-        496: "72ddd2aa005819b44b70",
+        496: "00d447361703a163d0e0",
         684: "305a3dbe70504b78d062",
         762: "da846d9434cb0fa053d0",
-        898: "e14858dccb179e0a8b1f",
-        902: "70fceaa5f59fcd5291e1",
+        852: "6e36c751fab7c5ee25d4",
+        898: "67195dccea0671f039cd",
+        902: "c56d4da3069bb284544a",
         947: "77123a0d43c051462d19",
-        975: "fa465b2569a9a02c20f0",
-        976: "81f76d287266f15ed3a5",
-        1087: "528474e24b1fe3b6964d",
-        1144: "5428b2998c7e72bb91d1",
-        1158: "546545e9a0cc3bc85573",
+        975: "dc9d5217418cde64914a",
+        976: "62af8b1f5e36c846de35",
+        1087: "72d2b3df2a9e3ac0d7f2",
+        1144: "d5491f042dda834f5074",
+        1158: "c49ed9a36111f3215f95",
         1224: "8cf7b28930c7b7c56321",
-        1225: "c6c8601a9e6abe184672",
-        1316: "95b56d32d13df1681194",
+        1225: "08fe5b6de8f6251654b8",
+        1316: "fa6b577fe95b73f13f43",
         1330: "d8ab1ac01d7f47e93aca",
-        1449: "245718266a7cc519216f",
+        1434: "7719e30d2e7d66a8fa1f",
+        1449: "1367fe0bdc0f43c0f31b",
         1499: "fac3c5fdc04308b95497",
         1571: "301c37a370bcf304422d",
-        1639: "6dc9b17169d724b33fb5",
-        1849: "1b16b0b7d7f543ac6d49",
-        1954: "cdb57476846154dcd34b",
-        1973: "a877203ae1007ab646d2",
-        1990: "56cf4bf4b24e7ef9a336",
-        2116: "ad0c39c52b924d3632f5",
-        2177: "33aa3dbd0b08adea4df1",
-        2256: "004d35481f20381e48e0",
-        2281: "432f4c82697651595a1b",
+        1639: "e49c6f71e615521bf76f",
+        1849: "e6f2ff342883c816882f",
+        1954: "0a7e5825c7a9f9f75ef0",
+        1973: "e1659222853901eb62f8",
+        1990: "7ad1115e21e059382469",
+        2116: "2089d06decc59bf16eed",
+        2177: "39a9472bf7922acdc24c",
+        2256: "52a13ef309e7739d3ec7",
+        2281: "03ce397cb6409816c7b8",
         2292: "2648171bbf7a4e541935",
-        2320: "fd11ddb4a03c8dfae672",
-        2435: "c8861d3816c4c0d59a3b",
-        2506: "38e75ee977b8871ca9ad",
-        2520: "7c5d5cf73ebae13e884c",
+        2320: "510bbdfeced4a455435d",
+        2435: "75b6398a7ac76b13a10f",
+        2506: "b22c3dae62dbf1b548fe",
+        2520: "ca3161f6f5ce03ee931b",
         2532: "740ae502ef03c9aca44b",
-        2632: "69a977cc2579d3f89e5e",
-        2687: "88cec42ebce5159a6c62",
-        2749: "834f73d43aa0072895d5",
+        2632: "ec150b3236df2e690317",
+        2687: "9b78fca378571aecda97",
+        2749: "69404acc6fa1b45b9861",
         2945: "e07e4818e2a0d4fcc6a4",
-        2954: "be32792023eda93331f1",
+        2954: "8efe7719788f5f88ef9b",
         2993: "e6827764a5e82e106259",
         3e3: "9d84323971dec0188c80",
         3016: "aa776518a1c8d05e2346",
         3159: "200991dd6114e56702ed",
-        3199: "613dfcb3f35cff683d3c",
-        3202: "ebb595d64cf640a027ea",
+        3199: "16f08efb41f95b3e6798",
+        3202: "411bdeb14ade5dd10dc7",
         3232: "7e18a3c2d3045e97050e",
-        3307: "a9981c85812b107ec3f7",
-        3382: "f6eaca86c29406e73ae6",
+        3307: "9ba56adf5cbd8164bff6",
+        3382: "a288ae776dd10b3297e6",
         3415: "f91b674a80d33488244d",
         3485: "c54eec1e659f8c59da85",
-        3514: "f288940945f8a22f0ecd",
-        3577: "7c2b2733e81e60278d9f",
-        3710: "c3d922ea241c5459ebea",
-        3778: "5ad02f9df50ec34a4519",
+        3577: "da8542a37c82f77275c9",
+        3710: "bbea31831ed9beb2fe01",
+        3778: "8798316aa57df3f0dac8",
         3789: "43b07ba659d8cbaa69f3",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
-        3898: "b55b89694b4499f15fa3",
-        3912: "a347cb3df9be272faf3c",
-        4006: "6a9edc709dead2505056",
+        3898: "2633c9c700cdfdffd414",
+        3912: "8ade0dffeccb2125472a",
+        4006: "79b02c0dcdeaa18c3799",
         4154: "94ca8cb2d2aa1f47d22a",
-        4227: "b0f7a046ca788f0378a2",
+        4227: "362b601541431bbb4853",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "26c6c68d68ef95ef5f8d",
         4352: "de92a58e851fd1f40a2a",
-        4421: "d5ba5045fb31ca10d0f4",
+        4421: "94bc4ea676750516f3fe",
         4434: "b76bcd1bc89404745cc8",
-        4473: "a209d4c4eed7ffcf9dfc",
+        4473: "42f945245403202c5a27",
         4488: "9b7902a9dcd57e5a8ac3",
         4776: "ef1dcbea9d59f8743bf8",
-        4777: "4bb0a391f7a78689a7fa",
+        4777: "dcac9008121c1935e27a",
         4779: "909f21776039059914ce",
         4787: "07b24eb37c9e0b433d0c",
         4844: "9b0a060abc338b33c9ea",
-        4976: "64302f81ca781929b15c",
-        5018: "490872e9df94ed12c5c0",
-        5094: "9b39a00e65506fa13c3b",
-        5110: "79325e808ded97e787f0",
-        5136: "c999114945df4aed60a0",
-        5241: "b4f9ae4d5bea90476bc4",
+        4976: "145feca95b31ba1d7542",
+        5018: "deaf385b0027de4bc7e8",
+        5094: "fb91a1669490a93c142a",
+        5110: "b6d91308dbed138a2376",
+        5136: "78b5bdf55f283ab3a605",
+        5241: "85abe55d560ef90d1dd8",
         5341: "671fa39c7d33a83df311",
-        5358: "9675b4823f0fba708fc4",
+        5358: "b0f55330c8199ef5ad72",
         5480: "fe1e2469122f1c0d37d0",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
-        5725: "9df6705c3295a6e2f4bf",
-        5893: "96383102d13b4093c331",
-        6031: "40199c163213017e50cc",
-        6059: "c2b108b5f425d8f997e7",
+        5725: "ea899ff033ecd4299e53",
+        5893: "c6d7ad8ab6221edf0bac",
+        6031: "020e61748b9171357081",
+        6059: "4807131c435c8ae36fc9",
         6127: "165f942ae61f710d7fe3",
-        6149: "12d0286432e695885906",
-        6165: "58603c391af6c7c3d751",
-        6196: "78fec0ba9a1dc917788a",
-        6208: "02967cd6852818826544",
-        6239: "cd4c8ed09120f0e3b238",
-        6305: "c044efd90090b19dbff0",
-        6332: "d2576b8487cb0b0c59e9",
+        6149: "2b0342ce11a26116fbba",
+        6165: "e893d5dc017d8b2d5c0d",
+        6196: "8ed4ff5f310077be1c28",
+        6208: "9a22ef60d3b43fccfbe6",
+        6239: "f227e1d9fb6339d487c8",
+        6305: "444d729817081109342c",
+        6332: "0dddb01f6059ba3b7d6f",
         6385: "7f9b40cc12e05621335e",
-        6447: "6f045cac304ca03dae04",
+        6447: "1e264b02cf4212e65e2a",
         6518: "dc5f6ae58364d09cceda",
-        6523: "68e74d73af1ab4519ff1",
-        6562: "740c619446c4e69cace1",
+        6523: "8edfd42eb445c6e26656",
+        6562: "3874fca0b34b7db1a93e",
         6609: "29f4e0907b3805eda2f2",
         6637: "bee05b6c76a9dd2fe06d",
         6888: "f5ebd78ad10b3118603c",
         6905: "d9316fc5a220e6b4c416",
-        6920: "f138dd8828bd6a19f281",
-        6950: "52b00f9a8a2f5a2c44bd",
+        6920: "4e3ea3c468488d526f5d",
+        6950: "3080b7ba93019e757916",
         6971: "39f358e2496a3d2a55c3",
         7247: "7021b7a5aaf6d7ee9806",
-        7279: "c4f9ba5cb2bffe95725a",
-        7365: "f987ca3985bf3429944e",
+        7279: "679dc7a3cb571358118e",
+        7365: "c0fa6ed66ef022026c7b",
         7418: "7680875bb68efceaf698",
-        7462: "d330b3e69c512f668e22",
-        7464: "4d9b87e17a35b4b6c79f",
+        7462: "fc7240c1b985fc34cef2",
+        7464: "bb095035baf998a9816c",
         7468: "53e0875c52dff3de164a",
         7487: "c0d8195dd6dab3975615",
-        7539: "dd49f82be147ae2e7392",
-        7591: "85dc493eb7f99f948fad",
-        7637: "0a39555983b2851e6e3e",
-        7653: "1b5d3132c609dd87cdca",
+        7539: "5e9acb4829c49e8f98d7",
+        7591: "8ce0cf3a5e90fb4ba20e",
+        7637: "3f8b1f9d6c22440ac29a",
+        7653: "d6e298767fab1a6bdadb",
         7673: "065a311d75b3213d4f15",
-        7786: "e12b6c818a761e190080",
-        7788: "50e0ef8b71f813e096c3",
+        7786: "e023852d3ba679e8036e",
+        7788: "897ff1f6c2fa9239f98d",
         7861: "46f4c386b3edcfa9f92b",
         7904: "116aefb93e005baea38e",
-        8016: "ea75dcfef51181b97e9e",
-        8025: "7f128b680c3df6163111",
-        8106: "c8c8b20aced0617e2917",
+        8016: "16682aff4da638be8856",
+        8025: "2352457a9b2341cbb996",
+        8106: "3d4d16c096180fc08c8b",
         8191: "7c71b0175a3b35434ec8",
         8194: "36f74d61aa3af730900f",
         8246: "d8dd4a47668b5bf225ab",
-        8306: "0125ccaf814904f3ecfa",
-        8311: "f1d390e58e14a2ac5c82",
+        8306: "4e40ce76dfe927e742b7",
+        8311: "89e988fbff65473e7854",
         8366: "fbd35ad496eb7892a424",
-        8532: "3a411db5f8168b32cb26",
         8566: "cd93e0bf03daf5972185",
-        8703: "67ac57b68d49d69b2571",
+        8703: "5278dd0a8667b78b8195",
         8759: "959f10c584a5ca3aac3b",
         8766: "33682347c9abfde5c73d",
-        8822: "f84bfffa8e6365645375",
+        8822: "8cbf20e3b2d43052809d",
         8833: "0db29dc3b45b31acb4a4",
-        8855: "c8a83af43e6778167e14",
-        8871: "9761ac1dbfa20310cb28",
-        8930: "09e9591229c2c4c1261b",
-        8967: "1ca597e299aba31f42ea",
-        9027: "c3ecf25b0d84cd1028c3",
-        9152: "f1e0ecebc58cfb71e2d2",
+        8855: "6ef9fd3b494b835bd36f",
+        8871: "6cd2823c6d4e392c8e69",
+        8930: "3011ae7d97c0e9fde9c7",
+        8967: "4d2e78cb419d797d8268",
+        9027: "99a11776d1c5b10911cd",
+        9152: "0cb7e3db4aa96b1db03a",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
-        9457: "ce41abf3a35616c14aab",
-        9712: "4f5d803e3c385485c825",
+        9457: "03ff4c6f7ee37e164af2",
+        9712: "5724bd2367a3c48e196d",
         9746: "793a8abfe2e6fc8551cb",
         9808: "942f6e1ad27af2af89a2",
-        9925: "f02a19e50b1a425314ae",
-        9930: "7a0aa23b877f8340135c",
-        9947: "a34e340ef27436623142",
+        9925: "12bce090bd4d22262f64",
+        9930: "99f32fcf561b911c9c6d",
+        9947: "01e067290895d7530632",
       }[_]),
     (_.miniCssF = (_) =>
       "css/webui/" +
@@ -135388,7 +135367,7 @@ var CLSTAMP = "steamdb";
       {
         3159: "75a6e9ff11215c0f2a0b",
         7462: "523990cc8b40094c4a05",
-        7653: "450f3b3b5930168f1985",
+        7653: "bb556f4e47cfbb781332",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -135623,6 +135602,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(32938));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(90749));
   _ = _._(_);
 })();

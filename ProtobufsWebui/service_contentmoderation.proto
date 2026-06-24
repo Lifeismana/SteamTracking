@@ -65,6 +65,9 @@ message CContentModeration_CreateContentReport_Response {
 message CContentModeration_DisputeModerationForReport_Request {
 	optional uint64 report_id = 1;
 	optional string details = 2;
+	optional int32 subject_type = 3 [(.description) = "enum"];
+	optional uint64 subject_group_id = 4;
+	optional uint64 subject_id = 5;
 }
 
 message CContentModeration_DisputeModerationForReport_Response {
@@ -355,6 +358,15 @@ message CContentModeration_SetModeratorPreferences_Request_SubjectTypeList {
 message CContentModeration_SetModeratorPreferences_Response {
 }
 
+message CContentModeration_SustainModeration_Request {
+	optional int32 subject_type = 1 [(.description) = "enum"];
+	optional uint64 subject_group_id = 2;
+	optional uint64 subject_id = 3;
+}
+
+message CContentModeration_SustainModeration_Response {
+}
+
 message CContentModeration_UpdateReporterCooldown_Request {
 	optional fixed64 steamid = 1;
 	optional uint32 rtime_cooldown_ends = 2;
@@ -449,10 +461,6 @@ message ContentReportSubject {
 	optional int32 content_moderated_reason = 17 [(.description) = "enum"];
 	optional uint32 unresolved_dispute_count = 18;
 	optional uint32 oldest_unresolved_dispute_time = 19;
-	optional uint32 dispute_resolved_time = 20;
-	optional uint64 dispute_resolver_steamid = 21;
-	optional uint32 dispute_resolved = 22;
-	optional uint32 dispute_resolved_reason = 23;
 	optional uint32 owner_dispute_time = 24;
 	optional uint32 owner_dispute_resolved_time = 25;
 	optional string owner_dispute_details = 26;
@@ -462,6 +470,7 @@ message ContentReportSubject {
 	optional int32 credible_threat_of_violence_status = 30 [(.description) = "enum"];
 	repeated .ContentReportSubjectSanction sanctions_applied = 31;
 	repeated .ContentReportSubjectSanction sanctions_applied_after_dispute = 32;
+	optional bool decision_reversed = 33;
 }
 
 message ContentReportSubjectKey {
@@ -536,6 +545,8 @@ service ContentModeration {
 	rpc ResolveSubjectGroup (.CContentModeration_ResolveSubjectGroup_Request) returns (.CContentModeration_ResolveSubjectGroup_Response);
 	// ePrivilege=5
 	rpc SetModeratorPreferences (.CContentModeration_SetModeratorPreferences_Request) returns (.CContentModeration_SetModeratorPreferences_Response);
+	// bConstMethod=true, ePrivilege=5
+	rpc SustainModeration (.CContentModeration_SustainModeration_Request) returns (.CContentModeration_SustainModeration_Response);
 	// ePrivilege=1
 	rpc UpdateReporterCooldown (.CContentModeration_UpdateReporterCooldown_Request) returns (.CContentModeration_UpdateReporterCooldown_Response);
 	// ePrivilege=5

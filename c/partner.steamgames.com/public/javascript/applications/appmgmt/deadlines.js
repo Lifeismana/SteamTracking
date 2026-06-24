@@ -36,6 +36,7 @@
         SectionList: "_35PLZbKMt7K8FRHaavOsa9",
         ListItem: "_3N8ZtUMOp9ag0G28WBzOOg",
         NotificationButton: "_1ZCVYK700rSky9gR7H9vNv",
+        Freeform: "_3u0tm6rp89JYbrevwLvGk1",
         NotificationUpdate: "_39cJ7AQw3tqr75MieK0VHr",
         RequiredDocumentList: "_1hLKyqNiw3mmMbZf-ERCbA",
         MailingAddress: "_3Va0U3hw10-sJGSnBDs18Y",
@@ -919,6 +920,7 @@
           className: (0, _._)(_().NotificationContainer, _().SectionCtn),
           children: [
             (0, _.jsx)("div", {
+              className: _().Freeform,
               children: _,
             }),
             (0, _.jsx)(_, {

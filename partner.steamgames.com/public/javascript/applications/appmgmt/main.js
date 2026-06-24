@@ -628,6 +628,20 @@
         Active: "_19WwgHXljoThfByC7B-MLW",
         ActivatableStroke: "_2Jn2RR1yUV9GJ6u9HN1dER",
         ActivatableGradient: "cIR7HWORR4OnuhH8CsVvr",
+        VRLink: "_1dYQELEFBNFH0IYvXkMftN",
+        Off: "_127biiI7_uwVm-W_19FgJp",
+        InnerArc: "_21GOsrHjWqo70iIxGr-ds3",
+        MiddleArc: "_1FDt0er0XaGOLFzzfp-7Q8",
+        OuterArc: "_1Q4DgIEGKtDwXf8mWbYxKN",
+        Dot: "QSXPssIFxIIPQy5pSPIUR",
+        HMD: "fZ4HR_XqSs8jBXWyeSNmk",
+        SignalLow: "lgt4jn3n3i_TC14MNsjfZ",
+        SignalMedium: "_2yGzWPU6NsqFSAEkvwIF4c",
+        Searching: "ccU_YGs5TgZ5tFm4QkvOd",
+        VRLinkBar1Anim: "WdIUI58OZ2M8ChR9xVnyn",
+        VRLinkBar2Anim: "_1Z_SQ03m0DmkwdI5azEgnK",
+        VRLinkBar3Anim: "_1rVd9nWlALxedt2GKN3ISH",
+        VRLinkBar4Anim: "_8npUohpwuztM69MHcA53a",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -6345,10 +6359,10 @@
                     br: a.qM.readInt32,
                     bw: a.gp.writeInt32,
                   },
-                  use_gyro_sw_biases: {
+                  triton_gyro_hw_cal: {
                     n: 48,
-                    br: a.qM.readBool,
-                    bw: a.gp.writeBool,
+                    br: a.qM.readInt32,
+                    bw: a.gp.writeInt32,
                   },
                 },
               }),
@@ -8634,23 +8648,24 @@
             onFocusWithin: o,
             navKey: l,
             noFocusRing: c,
-            focusable: u,
-            navRef: d,
-            actionDescriptionMap: m,
-            onMoveUp: p,
-            onMoveRight: g,
-            onMoveDown: h,
-            onMoveLeft: _,
-            navEntryPreferPosition: f,
-            scrollIntoViewWhenChildFocused: b,
-            fnScrollIntoViewHandler: w,
-            scrollIntoViewType: M,
-            resetNavOnEntry: C,
-            ...y
+            focusRingSizeElementID: u,
+            focusable: d,
+            navRef: m,
+            actionDescriptionMap: p,
+            onMoveUp: g,
+            onMoveRight: h,
+            onMoveDown: _,
+            onMoveLeft: f,
+            navEntryPreferPosition: b,
+            scrollIntoViewWhenChildFocused: w,
+            fnScrollIntoViewHandler: M,
+            scrollIntoViewType: C,
+            resetNavOnEntry: y,
+            ...S
           } = e,
-          { gamepadEvents: S, actionDescriptions: v, props: x } = B(y);
+          { gamepadEvents: v, actionDescriptions: x, props: I } = B(S);
         return {
-          elemProps: x,
+          elemProps: I,
           navOptions: {
             autoFocus: t,
             preferredFocus: r,
@@ -8661,20 +8676,21 @@
             onFocusWithin: o,
             navKey: l,
             noFocusRing: c,
-            focusable: u,
-            navRef: d,
-            onMoveUp: p,
-            onMoveRight: g,
-            onMoveDown: h,
-            onMoveLeft: _,
-            navEntryPreferPosition: f,
-            scrollIntoViewWhenChildFocused: b,
-            fnScrollIntoViewHandler: w,
-            scrollIntoViewType: M,
-            resetNavOnEntry: C,
-            actionDescriptionMap: { ...m, ...v },
+            focusRingSizeElementID: u,
+            focusable: d,
+            navRef: m,
+            onMoveUp: g,
+            onMoveRight: h,
+            onMoveDown: _,
+            onMoveLeft: f,
+            navEntryPreferPosition: b,
+            scrollIntoViewWhenChildFocused: w,
+            fnScrollIntoViewHandler: M,
+            scrollIntoViewType: C,
+            resetNavOnEntry: y,
+            actionDescriptionMap: { ...p, ...x },
           },
-          gamepadEvents: S,
+          gamepadEvents: v,
         };
       }
       function y(e) {
@@ -8918,7 +8934,7 @@
             return (
               (0, i.useEffect)(() => {
                 if (e && t) {
-                  let e = t.GetBoundingRect(),
+                  let e = t.GetBoundingRectForFocusRing(),
                     r = t.Element;
                   const i = r.ownerDocument.defaultView,
                     s = (t) =>
@@ -8947,7 +8963,7 @@
           })(o, n),
           S = i.useCallback(() => {
             if (!(n && n.BWantsFocusRing() && s && C)) return void u(null);
-            let e = n.GetBoundingRect();
+            let e = n.GetBoundingRectForFocusRing();
             const t = s.getBoundingClientRect(),
               r = {
                 left: e.x - t.x,
@@ -10336,6 +10352,17 @@
         GetBoundingRect() {
           return this.m_element?.getBoundingClientRect();
         }
+        GetBoundingRectForFocusRing() {
+          let e = this.m_element;
+          return (
+            this.m_Properties?.focusRingSizeElementID &&
+              (e =
+                e?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? this.m_element),
+            e?.getBoundingClientRect()
+          );
+        }
         SetHasFocus(e) {
           this.m_Focused.Set(e);
         }
@@ -11459,7 +11486,7 @@
         );
       }
       function n(e, t, r) {
-        if (t >= 0 || r >= 0) {
+        if (t >= 0 && r >= 0) {
           const i = e.splice(t, 1)[0];
           r >= e.length ? (e[r] = i) : e.splice(r, 0, i);
         }
@@ -12151,18 +12178,13 @@
       }
       function o(e) {
         if (0 == e.length) return !1;
-        for (let t = 0; t < e.length; t++)
-          if (e[t] < "0" || e[t] > "9") return !1;
+        for (let t = 0; t < e.length; t++) {
+          const r = e.charCodeAt(t);
+          if (r < 48 || r > 57) return !1;
+        }
         return !0;
       }
-      function l(e) {
-        return (
-          "string" == typeof e &&
-          !Number.isNaN(e) &&
-          !Number.isNaN(Number.parseFloat(e))
-        );
-      }
-      function c(e, t, r, i) {
+      function l(e, t, r, i) {
         let n = r / e,
           s = i / t,
           a = Math.min(n, s);
@@ -12172,10 +12194,9 @@
         Fu: () => s,
         OQ: () => n,
         TG: () => o,
-        TT: () => l,
         Tg: () => i,
         bT: () => a,
-        kf: () => c,
+        kf: () => l,
       });
     },
     42327: (e, t, r) => {
@@ -23229,6 +23250,11 @@
                     br: d.qM.readEnum,
                     bw: d.gp.writeEnum,
                   },
+                  steam_frame_compat_category: {
+                    n: 13,
+                    br: d.qM.readEnum,
+                    bw: d.gp.writeEnum,
+                  },
                 },
               }),
             Pe.sm_m
@@ -30428,18 +30454,17 @@
           return this.m_rgParams;
         }
         Focus(e = n.iEc.k_EWindowBringToFrontAndForceOS) {
-          e != n.iEc.k_EWindowBringToFrontInvalid &&
-            (this.m_popup &&
-            void 0 !== this.m_popup.SteamClient &&
-            void 0 !== this.m_popup.SteamClient.Window
+          this.m_popup &&
+            e != n.iEc.k_EWindowBringToFrontInvalid &&
+            ((0, m.Fj)(this.m_popup, "Window.BringToFront")
               ? this.m_popup.SteamClient.Window.BringToFront(e)
-              : this.m_popup && this.m_popup.focus());
+              : this.m_popup.focus());
         }
         Close() {
           this.m_popup &&
-            ((0, m.Fj)(this.m_popup.window, "Window.Close")
-              ? this.m_popup.window.SteamClient.Window.Close()
-              : this.m_popup.window.close());
+            ((0, m.Fj)(this.m_popup, "Window.Close")
+              ? this.m_popup.SteamClient.Window.Close()
+              : this.m_popup.close());
         }
         GetName() {
           return this.m_strName;
@@ -30507,6 +30532,21 @@
         OnBeforeUnload() {}
         OnFocus() {}
         OnBlur() {}
+        m_rgChildBrowserViews = [];
+        get childBrowserViews() {
+          return this.m_rgChildBrowserViews;
+        }
+        RegisterChildBrowserView(e) {
+          return (
+            this.m_rgChildBrowserViews.push(e),
+            {
+              Unregister: () =>
+                (this.m_rgChildBrowserViews = this.m_rgChildBrowserViews.filter(
+                  (t) => t != e,
+                )),
+            }
+          );
+        }
       }
       (0, i.Cg)([c.sH], z.prototype, "m_bFocused", void 0),
         (0, i.Cg)([b.o], z.prototype, "OnMessage", null),
@@ -30625,13 +30665,15 @@
                 e.BIsValid() && !e.BIsClosed() && t.push(e);
               });
               for (let e of t)
-                e.window?.SteamClient.Browser
-                  ?.SetShouldExitSteamOnBrowserClosed &&
+                (0, m.Fj)(
+                  e.window,
+                  "Browser.SetShouldExitSteamOnBrowserClosed",
+                ) &&
                   e.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
                     !1,
                   ),
-                  e.window?.SteamClient.Window.SetHideOnClose &&
-                    e.window?.SteamClient.Window.SetHideOnClose(!1),
+                  (0, m.Fj)(e.window, "Window.SetHideOnClose") &&
+                    e.window.SteamClient.Window.SetHideOnClose(!1),
                   e.Close();
               this.m_bSaveRequired && this.SaveSavedDimensionStore(),
                 this.m_mapPopups.clear();
@@ -31674,7 +31716,7 @@
     },
     43568: (e, t, r) => {
       "use strict";
-      r.d(t, { F: () => B });
+      r.d(t, { F: () => C });
       var i = r(7850),
         n = r(7445),
         s = r(76217),
@@ -31688,57 +31730,85 @@
         p = r(11279);
       function g(e) {
         const {
+          nSlideIndex: t,
+          nStartingSlideIndex: r,
+          ref: n,
+          children: s,
+        } = e;
+        return void 0 === r
+          ? s
+          : (0, i.jsx)("div", { ref: t === r ? n : void 0, children: s });
+      }
+      function h(e) {
+        const {
             padded: t,
             gap: r,
             children: n,
             bLazyRenderChildren: a,
             lazyRenderPlaceholderWidth: c,
-            lazyRenderPlaceholderHeight: u,
-            startingSlide: d,
+            lazyRenderPlaceholderHeight: d,
+            startingSlide: h,
           } = e,
-          g = o.useRef(null),
-          h = o.useRef(null);
+          _ = o.useRef(null),
+          f = o.useRef(null),
+          b = (0, u.Qn)();
         o.useLayoutEffect(() => {
-          g.current &&
-            h.current &&
-            (g.current.scrollLeft +=
-              h.current.getBoundingClientRect().left -
-              g.current.getBoundingClientRect().left);
-        }, [d]);
-        const _ = (0, i.jsxs)(s.Z, {
-          "flow-children": "row",
-          style: { gap: r ? r + "px" : void 0 },
-          className: (0, l.A)(
-            { SaleSectionCarouselPadding: t },
-            "ScrollSnapCarousel",
-            "SaleSectionCarousel",
-            p.ScrollSnapCarousel,
-            e.className,
+          _.current &&
+            f.current &&
+            (_.current.scrollLeft +=
+              f.current.getBoundingClientRect().left -
+              _.current.getBoundingClientRect().left);
+        }, [h]);
+        const w = o.Children.map(n, (e, t) =>
+            a
+              ? (0, i.jsx)(m.K, {
+                  rootMargin: "0px 50% 0px 50%",
+                  horizontal: !0,
+                  placeholderWidth: c ?? 1,
+                  placeholderHeight: 1,
+                  holdGamepadFocus: b,
+                  children: (0, i.jsx)(g, {
+                    nSlideIndex: t,
+                    nStartingSlideIndex: h,
+                    ref: f,
+                    children: e,
+                  }),
+                })
+              : (0, i.jsx)(g, {
+                  nSlideIndex: t,
+                  nStartingSlideIndex: h,
+                  ref: f,
+                  children: e,
+                }),
           ),
-          ref: g,
-          children: [
-            d &&
-              o.Children.map(n, (e, t) =>
-                (0, i.jsx)("div", { ref: t == d ? h : void 0, children: e }),
-              ),
-            !d && n,
-          ],
-        });
+          M = (0, i.jsx)(s.Z, {
+            "flow-children": "row",
+            style: { gap: r ? r + "px" : void 0 },
+            className: (0, l.A)(
+              { SaleSectionCarouselPadding: t },
+              "ScrollSnapCarousel",
+              "SaleSectionCarousel",
+              p.ScrollSnapCarousel,
+              e.className,
+            ),
+            ref: _,
+            children: w,
+          });
         return a
           ? (0, i.jsx)(m.K, {
               rootMargin: "50% 0px 50% 0px",
               horizontal: !1,
-              placeholderWidth: c ?? 1,
-              placeholderHeight: u ?? 1,
-              children: _,
+              placeholderWidth: 1,
+              placeholderHeight: d ?? 1,
+              children: M,
             })
-          : _;
+          : M;
       }
-      var h = r(60383),
-        _ = r(64238),
-        f = r.n(_),
-        b = r(26384);
-      class w extends o.Component {
+      var _ = r(60383),
+        f = r(64238),
+        b = r.n(f),
+        w = r(26384);
+      class M extends o.Component {
         render() {
           const { showArrows: e, arrowFill: t, arrowStyle: r } = this.props,
             n = this.props.visibleSlides,
@@ -31759,7 +31829,7 @@
                     d.left,
                     d.carouselNavButton,
                   ),
-                  children: (0, i.jsx)(b.m, {
+                  children: (0, i.jsx)(w.m, {
                     arrowFill: t,
                     arrowStyle: r,
                     direction: "left",
@@ -31805,7 +31875,7 @@
                     d.right,
                     d.carouselNavButton,
                   ),
-                  children: (0, i.jsx)(b.m, {
+                  children: (0, i.jsx)(w.m, {
                     arrowFill: t,
                     arrowStyle: r,
                     direction: "right",
@@ -31815,19 +31885,19 @@
           });
         }
       }
-      const M = (0, a.Yw)(w, (e) => ({
+      const B = (0, a.Yw)(M, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function B(e) {
+      function C(e) {
         const { bForceSimpleCarousel: t, screenIsWide: r, children: n } = e,
           s = (0, u.Qn)();
         return (!r && !s) || t
-          ? (0, i.jsx)(g, { ...e, children: n })
-          : (0, i.jsx)(C, { ...e, children: n });
+          ? (0, i.jsx)(h, { ...e, children: n })
+          : (0, i.jsx)(y, { ...e, children: n });
       }
-      function C(e) {
+      function y(e) {
         const t = (0, u.Qn)(),
           r = () => o.Children.count(e.children),
           n = r(),
@@ -31837,8 +31907,8 @@
           g = e.hideArrows || !p,
           h = !p || e.hidePips;
         let _ = 4 / 3,
-          b = !0;
-        e.slideAspectRatio && ((_ = e.slideAspectRatio), (b = !1));
+          f = !0;
+        e.slideAspectRatio && ((_ = e.slideAspectRatio), (f = !1));
         const w = `items_in_row_${e.visibleElements}`;
         return (0, i.jsx)(s.Z, {
           "flow-children": "row",
@@ -31851,7 +31921,7 @@
             naturalSlideHeight: 100,
             step: e.visibleElements,
             infinite: !e.disableEdgeWrap,
-            isIntrinsicHeight: b,
+            isIntrinsicHeight: f,
             dragEnabled: !1,
             touchEnabled: !1,
             lockOnWindowScroll: !0,
@@ -31859,7 +31929,7 @@
             disableKeyboard: !0,
             currentSlide: e.startingSlide,
             children: [
-              (0, i.jsx)(v, {
+              (0, i.jsx)(x, {
                 bHideArrows: g,
                 bAutoAdvance: e.bAutoAdvance && !t,
                 onSlide: e.onSlide,
@@ -31891,14 +31961,14 @@
               }),
               !h &&
                 (e.useTestScrollbar
-                  ? (0, i.jsx)(M, { showArrows: g, carouselStore: null })
+                  ? (0, i.jsx)(B, { showArrows: g, carouselStore: null })
                   : (0, i.jsx)("div", {
-                      className: f()({
+                      className: b()({
                         [d.breadcrumbContainer]: !0,
                         [d.breadcrumbContainerTemplate]:
                           e.className?.includes("template-carousel"),
                       }),
-                      children: (0, i.jsx)(y, {
+                      children: (0, i.jsx)(S, {
                         ...e,
                         nPageSize: c,
                         children: e.children,
@@ -31908,7 +31978,7 @@
           }),
         });
       }
-      function y(e) {
+      function S(e) {
         const { nPageSize: t } = e,
           r = o.useContext(a.Yc),
           [n, s] = o.useState(r.state.currentSlide);
@@ -31929,7 +31999,7 @@
                 {
                   slide: s,
                   className: d.pip,
-                  children: (0, i.jsx)(b.U, { ...e, bIsActive: o }),
+                  children: (0, i.jsx)(w.U, { ...e, bIsActive: o }),
                 },
                 s,
               );
@@ -31937,10 +32007,10 @@
           })
         );
       }
-      function S(e) {
+      function v(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function v(e) {
+      function x(e) {
         const {
             bHideArrows: t,
             bAutoAdvance: r,
@@ -31950,8 +32020,8 @@
             arrowStyle: p,
           } = e,
           g = o.useContext(a.Yc),
-          _ = o.useRef(g.state.currentSlide),
-          [f, w] = o.useState(null),
+          h = o.useRef(g.state.currentSlide),
+          [f, b] = o.useState(null),
           [M, B] = o.useState(!!r),
           C = o.useRef(null),
           y = o.useRef(null);
@@ -31959,7 +32029,7 @@
           const e = () => {
             C.current = window.setTimeout(() => {
               if (C.current) {
-                S(C);
+                v(C);
                 let e = 0;
                 g.state.currentSlide + g.state.visibleSlides <
                   g.state.totalSlides &&
@@ -31973,25 +32043,25 @@
           };
           M && e();
           const t = () => {
-            const t = _.current,
+            const t = h.current,
               r = g.state.currentSlide;
-            u && u(r), w(r > t ? "Right" : r < t ? "Left" : null), S(y);
+            u && u(r), b(r > t ? "Right" : r < t ? "Left" : null), v(y);
             (y.current = window.setTimeout(() => {
-              y.current && (w(null), S(y));
+              y.current && (b(null), v(y));
             }, 1e3)),
-              (_.current = r),
-              C.current ? (S(C), B(!1)) : M && e();
+              (h.current = r),
+              C.current ? (v(C), B(!1)) : M && e();
           };
           return (
             g.subscribe(t),
             () => {
-              g.unsubscribe(t), S(C), S(y);
+              g.unsubscribe(t), v(C), v(y);
             }
           );
         }, [g, M]);
-        const v = !!f && "CarouselSliding" + f;
+        const S = !!f && "CarouselSliding" + f;
         return (0, i.jsxs)("div", {
-          className: (0, l.A)(d.sliderBody, "SliderBody", v),
+          className: (0, l.A)(d.sliderBody, "SliderBody", S),
           children: [
             !t &&
               (0, i.jsx)(a._X, {
@@ -32002,14 +32072,14 @@
                   "CarouselBtnLeft",
                 ),
                 "aria-label": (0, c.we)("#Carousel_Prev"),
-                children: (0, i.jsx)(b.m, {
+                children: (0, i.jsx)(w.m, {
                   arrowFill: m,
                   arrowStyle: p,
                   direction: "left",
                 }),
               }),
             (0, i.jsx)(a.Ap, {
-              className: h.J.GetScrollableClassname(),
+              className: _.J.GetScrollableClassname(),
               classNameTray: d.slideTrayCustomize,
               classNameAnimation: d.DisableSliderMotion,
               role: "list",
@@ -32024,7 +32094,7 @@
                   "CarouselBtnRight",
                 ),
                 "aria-label": (0, c.we)("#Carousel_Next"),
-                children: (0, i.jsx)(b.m, {
+                children: (0, i.jsx)(w.m, {
                   arrowFill: m,
                   arrowStyle: p,
                   direction: "right",
@@ -39579,79 +39649,83 @@
     },
     96236: (e, t, r) => {
       "use strict";
-      r.d(t, { K: () => c });
-      var i = r(34629),
-        n = r(7850),
-        s = r(90626),
-        a = r(73745),
-        o = r(60383),
-        l = r(76217);
-      class c extends s.Component {
-        state = {
-          bRenderChildren: !1,
-          nPrevRenderWidth: 0,
-          nPrevRenderHeight: 0,
-        };
-        m_refContainer = s.createRef();
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(e) {
-          let t = this.state.bRenderChildren;
-          if (t == e) return;
-          if (t && !this.BLoadAndUnload()) return;
-          let r = 0,
-            i = 0;
-          if (this.m_refContainer.current) {
-            const e = this.m_refContainer.current.getBoundingClientRect();
-            e && ((r = e.width), (i = e.height));
-          }
-          this.setState({
-            bRenderChildren: e,
-            nPrevRenderWidth: r,
-            nPrevRenderHeight: i,
+      r.d(t, { K: () => l });
+      var i = r(7850),
+        n = r(90626),
+        s = r(60383),
+        a = r(76217);
+      const o = n.createContext({ enabled: !0 });
+      function l(e) {
+        const {
+            placeholderWidth: t,
+            placeholderHeight: r,
+            holdGamepadFocus: l = !1,
+            onRender: c,
+            style: u,
+            mode: d = "JustLoad",
+            children: m,
+            ...p
+          } = e,
+          [g, h] = n.useState({
+            bRenderChildren: !1,
+            nPrevRenderHeight: 0,
+            nPrevRenderWidth: 0,
           }),
-            e && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const {
-              placeholderWidth: e,
-              placeholderHeight: t,
-              holdGamepadFocus: r,
-              onRender: i,
-              style: s,
-              mode: a,
-              ...c
-            } = this.props,
-            u = this.state.bRenderChildren;
-          let d = s;
-          if (!u) {
-            const r = this.state.nPrevRenderWidth || e,
-              i = this.state.nPrevRenderHeight || t;
-            (void 0 === i && void 0 === r) ||
-              (d = { ...s, minHeight: i, minWidth: r });
-          }
-          const m = this.BLoadAndUnload() ? "repeated" : "once";
-          let p = (0, n.jsx)(o.J, {
-            containerRef: this.m_refContainer,
-            style: d,
-            ...c,
-            onVisibilityChange: this.OnVisibilityChange,
-            trigger: m,
-            children: u && this.props.children,
-          });
-          return (
-            r &&
-              (p = (0, n.jsx)(l.Z, {
-                focusableIfEmpty: !0,
-                style: { height: "100%" },
-                children: p,
-              })),
-            p
+          _ = n.useContext(o),
+          f = n.useRef(null),
+          b = "LoadAndUnload" === d && _.enabled,
+          w = n.useCallback(
+            (e) => {
+              h((t) => {
+                if (t.bRenderChildren === e || (t.bRenderChildren && !b))
+                  return t;
+                let r = 0,
+                  i = 0;
+                if (f.current) {
+                  const e = f.current.getBoundingClientRect();
+                  e && ((r = e.width), (i = e.height));
+                }
+                return (
+                  e && c && c(),
+                  {
+                    bRenderChildren: e,
+                    nPrevRenderWidth: r,
+                    nPrevRenderHeight: i,
+                  }
+                );
+              });
+            },
+            [b, c],
           );
+        n.useEffect(() => {
+          _.enabled || w(!0);
+        }, [_.enabled, w]);
+        let M = u;
+        if (!g.bRenderChildren) {
+          const e = g.nPrevRenderWidth || t,
+            i = g.nPrevRenderHeight || r;
+          (void 0 === i && void 0 === e) ||
+            (M = { ...u, minHeight: i, minWidth: e });
         }
+        const B = b ? "repeated" : "once";
+        let C = (0, i.jsx)(s.J, {
+          containerRef: f,
+          style: M,
+          ...p,
+          onVisibilityChange: w,
+          trigger: B,
+          children: g.bRenderChildren && m,
+        });
+        return (
+          l &&
+            (C = (0, i.jsx)(a.Z, {
+              focusableIfEmpty: !0,
+              style: { height: "100%" },
+              children: C,
+            })),
+          C
+        );
       }
-      (0, i.Cg)([a.oI], c.prototype, "OnVisibilityChange", null);
     },
     83882: (e, t, r) => {
       "use strict";
@@ -40511,11 +40585,13 @@
           (0, s.useEffect)(() => {
             if (f)
               if (t.visible) {
-                o && (o.PositionMenu(), o.PositionPopupWindow());
-                let e = t.options.bNoFocusWhenShown
-                  ? p.iEc.k_EWindowBringToFrontWithoutForcingOS
-                  : p.iEc.k_EWindowBringToFrontAndForceOS;
-                t.TakeFocus(e);
+                if (o) {
+                  o.PositionMenu(), o.PositionPopupWindow();
+                  let e = t.options.bNoFocusWhenShown
+                    ? p.iEc.k_EWindowBringToFrontWithoutForcingOS
+                    : p.iEc.k_EWindowBringToFrontAndForceOS;
+                  t.TakeFocus(e);
+                }
               } else
                 t.options.bRetainOnHide &&
                   window.setTimeout(() => {
@@ -44693,19 +44769,19 @@
       function b(e, t, r = {}) {
         const { bForceExternal: i, unPID: n, bUseLinkFilter: s } = r;
         let a;
-        (a =
-          "currentTarget" in e ? e.currentTarget.ownerDocument.defaultView : e),
-          "undefined" != typeof SteamClient && void 0 !== SteamClient.WebChat
-            ? SteamClient.WebChat.OpenURLInClient(t, n || 0, !!i)
-            : 0 == t.indexOf("steam://") &&
-                0 != t.indexOf("steam://remoteplay/connect")
-              ? (a.location.href = t)
-              : a.open(
-                  t,
-                  void 0,
-                  "menubar,location,resizable,scrollbars,status,noopener" +
-                    (s ? ",noreferrer" : ""),
-                );
+        a =
+          "currentTarget" in e ? e.currentTarget.ownerDocument.defaultView : e;
+        (0, c.Dp)("WebChat.OpenURLInClient")
+          ? SteamClient.WebChat.OpenURLInClient(t, n || 0, !!i)
+          : 0 == t.indexOf("steam://") &&
+              0 != t.indexOf("steam://remoteplay/connect")
+            ? (a.location.href = t)
+            : a.open(
+                t,
+                void 0,
+                "menubar,location,resizable,scrollbars,status,noopener" +
+                  (s ? ",noreferrer" : ""),
+              );
       }
       const w = (e) =>
         (0, n.jsx)(n.Fragment, {
@@ -47263,7 +47339,7 @@
         return a.TS.IN_CHROMEOS;
       }
       function b() {
-        return a.TS.IS_STEAMOS_MANAGEMENT_ENABLED;
+        return a.TS.IS_STEAMOS;
       }
       function w(e, t) {
         return 0 != t.length && e.startsWith(t);
@@ -47370,9 +47446,8 @@
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
-          ON_DECK: !1,
           ON_FRAME: !1,
-          IS_STEAMOS_MANAGEMENT_ENABLED: !1,
+          IS_STEAMOS: !1,
           ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,

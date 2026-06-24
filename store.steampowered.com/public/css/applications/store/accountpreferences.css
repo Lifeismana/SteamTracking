@@ -266,11 +266,9 @@
     rgb(140, 214, 29) 100%
   );
 }
-.ingame ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .ingame ._3xUpb5DWXPFNcHHIcv-9pe {
   background: #59bf40;
 }
-.offline ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .offline ._3xUpb5DWXPFNcHHIcv-9pe {
   background: #67707b;
 }
@@ -295,7 +293,6 @@
     rgb(109, 207, 246) 100%
   );
 }
-.online ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .online ._3xUpb5DWXPFNcHHIcv-9pe {
   background: #4cb4ff;
 }
@@ -308,7 +305,6 @@
   mask-size: 5px 5px;
   opacity: 0.75;
 }
-.awayOrSnooze ._3xUpb5DWXPFNcHHIcv-9pe.GamepadMode,
 .GamepadMode .awayOrSnooze ._3xUpb5DWXPFNcHHIcv-9pe {
   opacity: 1;
 }
@@ -319,7 +315,6 @@
   inset-inline-end: 0;
   width: 2px;
 }
-._3xUpb5DWXPFNcHHIcv-9pe.right.GamepadMode,
 .GamepadMode ._3xUpb5DWXPFNcHHIcv-9pe.right {
   width: 3px;
   inset-inline-end: -3px;
@@ -331,7 +326,6 @@
   inset-inline-end: 0;
   height: 2px;
 }
-._3xUpb5DWXPFNcHHIcv-9pe.bottom.GamepadMode,
 .GamepadMode ._3xUpb5DWXPFNcHHIcv-9pe.bottom {
   height: 3px;
   bottom: -3px;
@@ -353,7 +347,6 @@
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
   transition: filter 0.24s ease-in-out;
 }
-._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {
   border: 0px solid rgba(0, 0, 0, 0);
   height: 100%;

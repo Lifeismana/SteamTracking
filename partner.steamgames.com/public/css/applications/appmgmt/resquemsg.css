@@ -324,6 +324,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 6px;
 }
 ._10a9BMKHCowrtgelPrWPvh ._27GR40w6gCHGSSzOvM-6f6,
 ._10a9BMKHCowrtgelPrWPvh ._1DB5FQ_X8YXXb9MTrWamkY {
@@ -356,9 +357,6 @@
   border-radius: 24px;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
-._1DB5FQ_X8YXXb9MTrWamkY > div {
-  margin: 10px;
-}
 ._3I2SPz9E3c4Z9kizQ8Si8 {
   background: #fff;
 }
@@ -388,7 +386,9 @@
   text-align: center;
 }
 ._1Thj5rQmTc3_SU05H6yiSY {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 ._1vJHwybFjHBbNcBpxq2vJO {
   text-decoration: underline;
@@ -428,9 +428,6 @@
   --bg-default: white !important;
   --bg-focus: white !important;
   --border-color: #111 !important;
-}
-[data-checkbox] [class*="checkbox_Checkbox"] {
-  margin-right: 5px;
 }
 @media screen and (max-width: 940px) {
   ._1oXNiM3xAFJRy_Ze38gkG3 {

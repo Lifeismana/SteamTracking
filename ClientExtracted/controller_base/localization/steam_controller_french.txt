@@ -125,8 +125,8 @@
 	"origin_SteamFrame_RightGrip_Pull"			"Poignée droite : gâchette"
 	"origin_SteamFrame_RightGrip_Click"			"Poignée droite : clic"
 	"origin_SteamFrame_RightGrip_Touch"			"Poignée droite : toucher"
-	"origin_SteamFrame_LeftThumbrest_Touch"		"Stick analogique gauche : toucher"
-	"origin_SteamFrame_RightThumbrest_Touch"	"Stick analogique droit : toucher"
+	"origin_SteamFrame_LeftThumbrest_Touch"		"Repose-pouce gauche : toucher"
+	"origin_SteamFrame_RightThumbrest_Touch"	"Repose-pouce droit : toucher"
 
 	"origin_horipad_m1"							"Bouton M1"
 	"origin_horipad_m2"							"Bouton M2"

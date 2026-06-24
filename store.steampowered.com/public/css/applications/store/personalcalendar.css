@@ -534,7 +534,6 @@ html.responsive.touch .fiveElementEightGap {
   gap: 8px;
   min-height: clamp(150px, 30cqi, 408px);
 }
-._1rLdYDrWbYRcVNpPlFd225 .carousel__slider-tray-wrapper.GamepadMode,
 .GamepadMode ._1rLdYDrWbYRcVNpPlFd225 .carousel__slider-tray-wrapper {
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
@@ -542,7 +541,6 @@ html.responsive.touch .fiveElementEightGap {
   padding: 4px var(--gpSpace-Gutter) 8px;
   scroll-padding: var(--gpSpace-Gutter);
 }
-._1rLdYDrWbYRcVNpPlFd225 .carousel__slider.GamepadMode,
 .GamepadMode ._1rLdYDrWbYRcVNpPlFd225 .carousel__slider {
   overflow: visible;
 }

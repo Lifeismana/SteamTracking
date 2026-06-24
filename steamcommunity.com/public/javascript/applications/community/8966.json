@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Moderacja zakwestionowana",
     "moderationaction_escalated": "Eskalowano",
     "moderationaction_sanctioned": "Poddano moderacji",
-    "moderationaction_sustainedondispute": "Spór odrzucony",
+    "moderationaction_sustained": "Moderacja podtrzymana",
     "moderationaction_unresolved": "Sprawa została nierozstrzygnięta",
     "moderationaction_updated": "Szczegóły sprawy zaktualizowane",
     "moderationaction_locked": "Zablokowano",

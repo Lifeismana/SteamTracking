@@ -125,8 +125,8 @@
 	"origin_SteamFrame_RightGrip_Pull"			"Gatilho traseiro direito"
 	"origin_SteamFrame_RightGrip_Click"			"Clique do gatilho traseiro direito"
 	"origin_SteamFrame_RightGrip_Touch"			"Toque no gatilho traseiro direito"
-	"origin_SteamFrame_LeftThumbrest_Touch"		"Toque na alavanca esquerda"
-	"origin_SteamFrame_RightThumbrest_Touch"	"Toque na alavanca direita"
+	"origin_SteamFrame_LeftThumbrest_Touch"		"Toque na face esquerda"
+	"origin_SteamFrame_RightThumbrest_Touch"	"Toque na face direita"
 
 	"origin_horipad_m1"							"Botão M1"
 	"origin_horipad_m2"							"Botão M2"

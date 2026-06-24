@@ -842,6 +842,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (испанский — Латинская Америка)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (вьетнамский)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (индонезийский)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (малайский)"
 
 
 
@@ -5051,6 +5052,7 @@
 "DownloadRegion_br_manaus"			"Бразилия — Манаус"
 "DownloadRegion_br_belem"			"Бразилия — Белен"
 "DownloadRegion_br_salvador"			"Бразилия — Сальвадор"
+"DownloadRegion_guam"			"Гуам"
 
 "SettingsController_AutosaveName"	"Раскладка контроллера"
 "ControllerBinding_Offline_Save"	"[Автосохранение вне сети]"

@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Indsigelse mod løsning",
     "moderationaction_escalated": "Eskaleret",
     "moderationaction_sanctioned": "Sanktioneret",
-    "moderationaction_sustainedondispute": "Indsigelse underkendt",
+    "moderationaction_sustained": "Moderation opretholdt",
     "moderationaction_unresolved": "Emnet blev ikke løst",
     "moderationaction_updated": "Emneoplysninger opdateret",
     "moderationaction_locked": "Låst",

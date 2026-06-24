@@ -1506,12 +1506,16 @@
                       _?.ownerDocument?.defaultView ?? window,
                   },
                 }),
-                _ = (0, _._)(_.context, {
+                _ = {
                   enabled: !!_.click,
-                }),
-                _ = (0, _._)(_.context, {
+                },
+                _ = "function" == typeof _.click ? _.click(_) : _,
+                _ = (0, _._)(_.context, _),
+                _ = {
                   enabled: !!_.focus,
-                }),
+                },
+                _ = "function" == typeof _.focus ? _.focus(_) : _,
+                _ = (0, _._)(_.context, _),
                 _ = {
                   handleClose: (0, _._)(),
                 },

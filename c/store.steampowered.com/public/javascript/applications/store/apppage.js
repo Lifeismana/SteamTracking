@@ -9829,7 +9829,46 @@
         if (_[_]) return _[_]();
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { color: _, onClick: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          color: _,
+          onClick: (_) => {
+            _.stopPropagation(), _ && __webpack_require__(_);
+          },
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
+            onActivate: _,
+            onOKActionDescription: _,
+            onSecondaryButton: _,
+            onSecondaryActionDescription: _,
+          } = _,
+          _ = !1;
+        return _
+          ? (0, _.jsxs)(_._, {
+              direction: "row",
+              flexGrow: "0",
+              flexShrink: "0",
+              align: "end",
+              justify: "end",
+              gap: "2",
+              children: [
+                _,
+                _ &&
+                  (0, _.jsx)(_, {
+                    color: "storegreen",
+                    onClick: _,
+                    children: _,
+                  }),
+              ],
+            })
+          : null;
+      }
       function _(_) {
         const {
           className: _,
@@ -9844,7 +9883,13 @@
             className: (0, _._)(_().PurchaseOption, "green" == _ && _().Green),
             focusable: !0,
             ..._,
-            children: [_, !1],
+            children: [
+              _,
+              (0, _.jsx)(_, {
+                ..._,
+              }),
+              !1,
+            ],
           }),
         });
       }
@@ -9919,55 +9964,6 @@
           children: _,
         });
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { color: _, onClick: _, children: _ } = _,
-          _ = _.useCallback(
-            (_) => {
-              _.stopPropagation(), _ && __webpack_require__(_);
-            },
-            [_],
-          );
-        return (0, _.jsx)(_._, {
-          color: _,
-          onClick: _,
-          children: _,
-        });
-      }
-      function _(_) {
-        const { onPlay: _, onInfo: _, onAddToCart: _, onDownload: _ } = _;
-        return _ || _ || _ || _
-          ? (0, _.jsxs)(_._, {
-              direction: "row",
-              flexGrow: "0",
-              flexShrink: "0",
-              align: "end",
-              justify: "end",
-              gap: "2",
-              children: [
-                _ &&
-                  (0, _.jsx)(_, {
-                    color: "storegreen",
-                    onClick: _,
-                    children: _.Localize("#AppPage_PurchaseOption_PlayNow"),
-                  }),
-                !1,
-                _ &&
-                  (0, _.jsx)(_, {
-                    color: "storegreen",
-                    onClick: _,
-                    children: _.Localize("#AppPage_PurchaseOption_AddToCart"),
-                  }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    color: "storegreen",
-                    onClick: _,
-                    children: _.Localize("#AppPage_PurchaseOption_Download"),
-                  }),
-              ],
-            })
-          : null;
-      }
       function _(_) {
         const { option: _ } = _,
           _ = {
@@ -10017,9 +10013,6 @@
                     children: (0, _.jsx)(_._, {
                       children: _.label,
                     }),
-                  }),
-                  (0, _.jsx)(_, {
-                    onDownload: _,
                   }),
                 ],
               }),
@@ -10075,9 +10068,6 @@
                         ),
                       }),
                   ],
-                }),
-                (0, _.jsx)(_, {
-                  onPlay: _,
                 }),
               ],
             })
@@ -10281,9 +10271,6 @@
                       }),
                   ],
                 }),
-                (0, _.jsx)(_, {
-                  onPlay: _,
-                }),
               ],
             })
           : null;
@@ -10350,33 +10337,70 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { option: _ } = _,
+          _ = {
+            appid: _.appid,
+          },
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = _.useCallback(() => {
+            _ && (window.location.href = _);
+          }, [_]);
+        return _
+          ? (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsxs)(_, {
+                option: _,
+                onActivate: _,
+                onOKActionDescription: _.Localize(
+                  "#AppPage_PurchaseOption_MoreInfo",
+                ),
+                children: [
+                  (0, _.jsx)(_, {
+                    title: _.title,
+                  }),
+                  (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      children: _.description,
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = (0, _._)(
-          {
+        const {
+          active: _,
+          onOK: _,
+          closeModal: _,
+          bCloseOnOK: _,
+          children: _,
+          ..._
+        } = _;
+        if (!_) return null;
+        const _ =
+          ("string" == typeof _.strTitle && _.strTitle) ||
+          (0, _._)("#Steam_Platform");
+        return (0, _.jsx)(_._, {
+          onlyPopoutIfNeeded: !0,
+          popupHeight: 340,
+          popupWidth: 640,
+          strTitle: _,
+          children: (0, _.jsx)(_._, {
             ..._,
-            className: _.className,
-          },
-          _,
-        );
-        return (0, _.jsx)("img", {
-          ..._,
+            onCancel: _,
+            onOK: () => {
+              __webpack_require__(), _ && _();
+            },
+            children: _,
+          }),
         });
       }
-      const _ = [
-        ..._._,
-        {
-          prop: "objectFit",
-          className: _.ObjectFit,
-          cssProperty: "--object-fit",
-        },
-        {
-          prop: "objectPosition",
-          className: _.ObjectPosition,
-          cssProperty: "--object-position",
-        },
-      ];
       function _(_) {
         const { discount: _ } = _;
         (0, _._)({
@@ -10502,13 +10526,336 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { _: _ } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = _(),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)();
+        if (!(_ && _ && _ && _ && _)) return null;
+        const _ = "packageid" in _ && _.has(_.packageid),
+          _ = "bundleid" in _ && !_.must_purchase_as_set,
+          _ = _?.is_coming_soon && !!_?.advance_access_date;
+        let _,
+          _,
+          _ = null;
+        if (_)
+          (_ = "greyneutral-1"),
+            (_ = "storegreen-10"),
+            (_ = _.Localize("#AppPage_PurchaseOption_InLibrary"));
+        else if (_) {
+          (_.included_appids?.filter((_) => !_.has(_)) || []).length > 0 &&
+            ((_ = "slate-12"),
+            (_ = "blue-8"),
+            (_ = _.Localize("#AppPage_PurchaseOption_CompleteYourCollection")));
+        } else if (_) {
+          const _ = (0, _._)(_.advance_access_date, {
+            weekday: void 0,
+            month: "short",
+            day: "numeric",
+            year: void 0,
+          });
+          (_ = "slate-12"),
+            (_ = "blue-8"),
+            (_ = _.Localize("#AppPage_AdvanceAccess_Banner", _));
+        }
+        return _
+          ? (0, _.jsx)(_._, {
+              className: _().PurchaseOptionBanner,
+              paddingX: "1",
+              background: _,
+              children: (0, _.jsx)(_._, {
+                size: "1",
+                color: _,
+                contrast: "title",
+                whiteSpace: "nowrap",
+                truncate: !0,
+                children: _,
+              }),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(
+          {
+            ..._,
+            className: _.className,
+          },
+          _,
+        );
+        return (0, _.jsx)("img", {
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "objectFit",
+          className: _.ObjectFit,
+          cssProperty: "--object-fit",
+        },
+        {
+          prop: "objectPosition",
+          className: _.ObjectPosition,
+          cssProperty: "--object-position",
+        },
+      ];
+      function _(_) {
+        const { closeModal: _ } = _,
+          _ = _.useContext(_),
+          { data: _ } = (0, _._)({
+            appid: _.appid,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _.appid,
+          });
+        return (0, _.jsxs)(_._, {
+          direction: "column",
+          height: "90vh",
+          overflow: "hidden",
+          align: "center",
+          gap: "2",
+          children: [
+            (0, _.jsx)(_._, {
+              aspectRatio: "748 / 896",
+              flexGrow: "1",
+              flexShrink: "1",
+              flexBasis: "90%",
+              overflow: "hidden",
+              children:
+                _ &&
+                _ &&
+                (0, _.jsx)(_, {
+                  width: "100%",
+                  src:
+                    ((_ = _.asset_url_format),
+                    (_ = _.edition_comparison),
+                    _._.STORE_ITEM_BASE_URL + _.replace("${FILENAME}", _)),
+                  alt: _.name,
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              flexGrow: "0",
+              flexShrink: "0",
+              children: (0, _.jsx)(_._, {
+                onClick: _,
+                children: _._.Localize("#Button_Close"),
+              }),
+            }),
+          ],
+        });
+        var _, _;
+      }
+      const _ = new _._("PurchaseOptions");
+      function _(_) {
+        const { _: _ } = _,
+          { data: _ } = (0, _._)(_);
+        return _?.purchase_description_bbcode
+          ? (0, _.jsx)("div", {
+              children: (0, _.jsx)(_, {
+                text: _.purchase_description_bbcode,
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const { _: _ } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = _();
+        if (!(_ && _.advance_access_date && _.steam_release_date && _))
+          return null;
+        if (!_.is_coming_soon) return null;
+        const _ = "packageid" in _ && _.has(_.packageid),
+          _ = (0, _._)(),
+          _ = (0, _._)(_.advance_access_date - _),
+          _ = (0, _._)(_.steam_release_date - _.advance_access_date);
+        let _;
+        return (
+          (_ =
+            _ > _.advance_access_date
+              ? _
+                ? "#AppPage_AdvanceAccess_Now_Owned"
+                : "#AppPage_AdvanceAccess_Now"
+              : _
+                ? "#AppPage_AdvanceAccess_Starts_Owned"
+                : "#AppPage_AdvanceAccess_Starts"),
+          _
+            ? (0, _.jsx)(_._, {
+                size: "2",
+                color: "blue-10",
+                children: _.Localize(_, _, _),
+              })
+            : null
+        );
+      }
+      function _(_) {
+        const { _: _, option: _ } = _,
+          _ = _.useContext(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)({
+            appid: _.appid,
+          }),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = _(),
+          _ = _(_),
+          _ = _(_.appid, _?.name ?? "");
+        if (!_ || !_ || !_) return null;
+        const _ = "packageid" in _ && _.has(_.packageid);
+        _.Debug(_);
+        let _ = _.self_purchase_option?.packageid
+            ? _.self_purchase_option
+            : _.best_purchase_option,
+          _ = _.Localize("#AppPage_PurchaseOption_GetFreeToKeep", _.name);
+        const _ = _ && _?.is_free_to_keep;
+        let _ = _ ? _ : _,
+          _ = _.Localize(
+            _
+              ? "#AppPage_PurchaseOption_PlayNow"
+              : "#AppPage_PurchaseOption_AddToLibrary",
+          );
+        return (
+          _.Debug(_, _, _),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                _: _,
+              }),
+              (0, _.jsxs)(_, {
+                option: _,
+                onActivate: _,
+                onOKActionDescription: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    _: _,
+                    title: _,
+                    bPrepurchase: (0, _._)(_, _),
+                  }),
+                  (0, _.jsxs)(_, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        _: _,
+                        bSelfPurchaseOption:
+                          !!_.self_purchase_option?.packageid,
+                      }),
+                      (0, _.jsx)(_, {
+                        _: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        option: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        _: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { _: _, option: _ } = _,
+          _ = _.useContext(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)({
+            appid: _.appid,
+          }),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = _(),
+          _ = _(_),
+          _ = _(_.data),
+          [_, _, _] = (0, _._)(!1);
+        if (!_ || !_) return null;
+        _.Debug(_);
+        let _ = _.self_purchase_option?.packageid
+          ? _.self_purchase_option
+          : _.best_purchase_option;
+        if (_?.is_free_to_keep)
+          return (0, _.jsx)(_, {
+            ..._,
+          });
+        const _ =
+          _.bAvailableForFree && _.data.packageid && !_?.has(_.data.packageid);
+        let _, _, _, _;
+        return (
+          _.data.is_edition &&
+            ((_ = _),
+            (_ = _.Localize("#AppPage_PurchaseOption_CompareEditions"))),
+          _ &&
+            ((_ = _), (_ = _.Localize("#AppPage_PurchaseOption_AddToLibrary"))),
+          _.Debug(_, _, _),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_, {
+                _: _,
+              }),
+              (0, _.jsxs)(_, {
+                option: _,
+                onActivate: _,
+                onOKActionDescription: _.Localize(
+                  "#AppPage_PurchaseOption_AddToCart",
+                ),
+                onSecondaryButton: _,
+                onSecondaryActionDescription: _,
+                onOptionsButton: _,
+                onOptionsActionDescription: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    _: _,
+                    bPrepurchase: (0, _._)(_, _),
+                  }),
+                  (0, _.jsxs)(_, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        _: _,
+                        bSelfPurchaseOption:
+                          !!_.self_purchase_option?.packageid,
+                      }),
+                      (0, _.jsx)(_, {
+                        _: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        option: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        _: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              _ &&
+                _.data.is_edition &&
+                (0, _.jsx)(_.Root, {
+                  onClose: _,
+                  children: (0, _.jsx)(_, {
+                    closeModal: _,
+                  }),
+                }),
+            ],
+          })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = new _._("PurchaseOptions");
       function _(_) {
-        const { _: _, onAddToCart: _, onInfo: _ } = _,
+        const { _: _, option: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)();
+          { data: _ } = (0, _._)(),
+          _ = _(_.data),
+          _ = (0, _._)(_),
+          _ = _.useCallback(() => {
+            _ && (window.location.href = _);
+          }, [_]);
         if (!_ || !_) return console.warn("Not ready", _, _, _, _), null;
         const _ = _.included_appids?.length || 0,
           _ = _.included_appids?.filter((_) => !_.has(_)) || [];
@@ -10526,55 +10873,71 @@
             children: [
               (0, _.jsx)(_, {
                 _: _,
-                children: (0, _.jsxs)(_._, {
-                  size: "3",
-                  color: "blue-8",
-                  children: [" ", _.Localize("#AppPage_PurchaseOption_Bundle")],
-                }),
               }),
               (0, _.jsxs)(_, {
+                option: _,
+                onActivate: _,
+                onOKActionDescription: _.Localize(
+                  "#AppPage_PurchaseOption_AddToCart",
+                ),
+                onSecondaryButton: _,
+                onSecondaryActionDescription: _.Localize(
+                  "#AppPage_PurchaseOption_BundleInfo",
+                ),
                 children: [
                   (0, _.jsx)(_, {
                     _: _,
-                    bSelfPurchaseOption: !0,
+                    children: (0, _.jsxs)(_._, {
+                      size: "3",
+                      color: "blue-8",
+                      children: [
+                        " ",
+                        _.Localize("#AppPage_PurchaseOption_Bundle"),
+                      ],
+                    }),
                   }),
-                  (0, _.jsxs)(_._, {
-                    direction: "column",
-                    flexGrow: "1",
-                    flexShrink: "1",
-                    overflow: "hidden",
-                    gap: "1",
+                  (0, _.jsxs)(_, {
                     children: [
                       (0, _.jsx)(_, {
-                        option: _.best_purchase_option,
+                        _: _,
+                        bSelfPurchaseOption: !0,
                       }),
                       (0, _.jsxs)(_._, {
                         direction: "column",
                         flexGrow: "1",
+                        flexShrink: "1",
                         overflow: "hidden",
+                        gap: "1",
                         children: [
-                          (0, _.jsx)(_._, {
-                            size: "2",
-                            children: _.LocalizePlural(
-                              _,
-                              _,
-                              _.best_purchase_option?.discount_pct ||
-                                _.best_purchase_option?.bundle_discount_pct ||
-                                0,
-                            ),
-                          }),
                           (0, _.jsx)(_, {
-                            apps: _,
+                            option: _.best_purchase_option,
+                          }),
+                          (0, _.jsxs)(_._, {
+                            direction: "column",
+                            flexGrow: "1",
+                            overflow: "hidden",
+                            children: [
+                              (0, _.jsx)(_._, {
+                                size: "2",
+                                children: _.LocalizePlural(
+                                  _,
+                                  _,
+                                  _.best_purchase_option?.discount_pct ||
+                                    _.best_purchase_option
+                                      ?.bundle_discount_pct ||
+                                    0,
+                                ),
+                              }),
+                              (0, _.jsx)(_, {
+                                apps: _,
+                              }),
+                            ],
                           }),
                         ],
                       }),
                     ],
                   }),
                 ],
-              }),
-              (0, _.jsx)(_, {
-                onInfo: _,
-                onAddToCart: _,
               }),
             ],
           })
@@ -10644,333 +11007,6 @@
               }),
             })
           : null;
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = new _._("PurchaseOptions");
-      function _(_) {
-        const { _: _ } = _,
-          { data: _ } = (0, _._)(_);
-        return _?.purchase_description_bbcode
-          ? (0, _.jsx)("div", {
-              children: (0, _.jsx)(_, {
-                text: _.purchase_description_bbcode,
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const { _: _ } = _,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = _();
-        if (!(_ && _.advance_access_date && _.steam_release_date && _))
-          return null;
-        if (!_.is_coming_soon) return null;
-        const _ = "packageid" in _ && _.has(_.packageid),
-          _ = (0, _._)(),
-          _ = (0, _._)(_.advance_access_date - _),
-          _ = (0, _._)(_.steam_release_date - _.advance_access_date);
-        let _;
-        return (
-          (_ =
-            _ > _.advance_access_date
-              ? _
-                ? "#AppPage_AdvanceAccess_Now_Owned"
-                : "#AppPage_AdvanceAccess_Now"
-              : _
-                ? "#AppPage_AdvanceAccess_Starts_Owned"
-                : "#AppPage_AdvanceAccess_Starts"),
-          _
-            ? (0, _.jsx)(_._, {
-                size: "2",
-                color: "blue-10",
-                children: _.Localize(_, _, _),
-              })
-            : null
-        );
-      }
-      function _(_) {
-        const { _: _, onAddToCart: _, onInfo: _ } = _,
-          _ = _.useContext(_),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)({
-            appid: _.appid,
-          }),
-          { data: _ } = (0, _._)(_);
-        if (!_ || !_) return null;
-        _.Debug(_);
-        let _ = _.self_purchase_option?.packageid
-            ? _.self_purchase_option
-            : _.best_purchase_option,
-          _ = _?.is_free_to_keep
-            ? _.Localize("#AppPage_PurchaseOption_GetFreeToKeep", _.name)
-            : void 0;
-        return (
-          _.Debug(_, _, _),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                _: _,
-                title: _,
-                bPrepurchase: (0, _._)(_, _),
-              }),
-              (0, _.jsxs)(_, {
-                children: [
-                  (0, _.jsx)(_, {
-                    _: _,
-                    bSelfPurchaseOption: !!_.self_purchase_option?.packageid,
-                  }),
-                  (0, _.jsx)(_, {
-                    _: _,
-                  }),
-                  (0, _.jsx)(_, {
-                    option: _,
-                  }),
-                  (0, _.jsx)(_, {
-                    _: _,
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_, {
-                onAddToCart: _,
-                onInfo: _,
-              }),
-            ],
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { _: _ } = _,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = _(),
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)();
-        if (!(_ && _ && _ && _ && _)) return null;
-        const _ = "packageid" in _ && _.has(_.packageid),
-          _ = "bundleid" in _ && !_.must_purchase_as_set,
-          _ = _?.is_coming_soon && !!_?.advance_access_date;
-        let _,
-          _,
-          _ = null;
-        if (_)
-          (_ = "greyneutral-1"),
-            (_ = "storegreen-10"),
-            (_ = _.Localize("#AppPage_PurchaseOption_InLibrary"));
-        else if (_) {
-          (_.included_appids?.filter((_) => !_.has(_)) || []).length > 0 &&
-            ((_ = "slate-12"),
-            (_ = "blue-8"),
-            (_ = _.Localize("#AppPage_PurchaseOption_CompleteYourCollection")));
-        } else if (_) {
-          const _ = (0, _._)(_.advance_access_date, {
-            weekday: void 0,
-            month: "short",
-            day: "numeric",
-            year: void 0,
-          });
-          (_ = "slate-12"),
-            (_ = "blue-8"),
-            (_ = _.Localize("#AppPage_AdvanceAccess_Banner", _));
-        }
-        return _
-          ? (0, _.jsx)(_._, {
-              className: _().PurchaseOptionBanner,
-              paddingX: "1",
-              background: _,
-              children: (0, _.jsx)(_._, {
-                size: "1",
-                color: _,
-                contrast: "title",
-                whiteSpace: "nowrap",
-                truncate: !0,
-                children: _,
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const { closeModal: _ } = _,
-          _ = _.useContext(_),
-          { data: _ } = (0, _._)({
-            appid: _.appid,
-          }),
-          { data: _ } = (0, _._)({
-            appid: _.appid,
-          });
-        return (0, _.jsxs)(_._, {
-          direction: "column",
-          height: "90vh",
-          overflow: "hidden",
-          align: "center",
-          gap: "2",
-          children: [
-            (0, _.jsx)(_._, {
-              aspectRatio: "748 / 896",
-              flexGrow: "1",
-              flexShrink: "1",
-              flexBasis: "90%",
-              overflow: "hidden",
-              children:
-                _ &&
-                _ &&
-                (0, _.jsx)(_, {
-                  width: "100%",
-                  src:
-                    ((_ = _.asset_url_format),
-                    (_ = _.edition_comparison),
-                    _._.STORE_ITEM_BASE_URL + _.replace("${FILENAME}", _)),
-                  alt: _.name,
-                }),
-            }),
-            (0, _.jsx)(_._, {
-              flexGrow: "0",
-              flexShrink: "0",
-              children: (0, _.jsx)(_._, {
-                onClick: _,
-                children: _._.Localize("#Button_Close"),
-              }),
-            }),
-          ],
-        });
-        var _, _;
-      }
-      function _(_) {
-        const { _: _, option: _ } = _,
-          { data: _ } = (0, _._)(_),
-          _ = _(_),
-          [_, _] = _.useState(!1),
-          { data: _ } = _(),
-          _ = _.useCallback(() => {
-            _(!0);
-          }, []),
-          _ = _.useCallback(() => {
-            _(!1);
-          }, []),
-          _ = (0, _._)(_),
-          _ = _.useCallback(() => {
-            _ && (window.location.href = _);
-          }, [_]),
-          _ = _(_.data);
-        let _, _;
-        _?.item_type == _._._
-          ? ((_ = _), (_ = _.Localize("#AppPage_PurchaseOption_BundleInfo")))
-          : _?.item_type == _._._ &&
-            _.data.is_edition &&
-            ((_ = _),
-            (_ = _.Localize("#AppPage_PurchaseOption_CompareEditions")));
-        const _ =
-          _.bAvailableForFree && _.data.packageid && !_?.has(_.data.packageid);
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_, {
-                  _: _,
-                }),
-                (0, _.jsxs)(_, {
-                  option: _,
-                  onActivate: _,
-                  onOKActionDescription: _.Localize(
-                    "#AppPage_PurchaseOption_AddToCart",
-                  ),
-                  onSecondaryButton: _,
-                  onSecondaryActionDescription: _,
-                  onOptionsButton: _ ? _ : void 0,
-                  onOptionsActionDescription: _
-                    ? _.Localize("#AppPage_PurchaseOption_AddToLibrary")
-                    : void 0,
-                  children: [
-                    _.item_type == _._._ &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                        onAddToCart: _,
-                        onInfo: _,
-                      }),
-                    _.item_type == _._._ &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                        onAddToCart: _,
-                        onInfo: _,
-                      }),
-                  ],
-                }),
-                _ &&
-                  _.data.is_edition &&
-                  (0, _.jsx)(_.Root, {
-                    onClose: _,
-                    children: (0, _.jsx)(_, {
-                      closeModal: _,
-                    }),
-                  }),
-              ],
-            })
-          : (console.warn("Not ready", _), null);
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { option: _ } = _,
-          _ = {
-            appid: _.appid,
-          },
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = _.useCallback(() => {
-            _ && (window.location.href = _);
-          }, [_]);
-        return _
-          ? (0, _.jsx)(_.Fragment, {
-              children: (0, _.jsxs)(_, {
-                option: _,
-                onActivate: _,
-                onOKActionDescription: _.Localize(
-                  "#AppPage_PurchaseOption_MoreInfo",
-                ),
-                children: [
-                  (0, _.jsx)(_, {
-                    title: _.title,
-                  }),
-                  (0, _.jsx)(_, {
-                    children: (0, _.jsx)(_._, {
-                      size: "2",
-                      children: _.description,
-                    }),
-                  }),
-                ],
-              }),
-            })
-          : null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          active: _,
-          onOK: _,
-          closeModal: _,
-          bCloseOnOK: _,
-          children: _,
-          ..._
-        } = _;
-        if (!_) return null;
-        const _ =
-          ("string" == typeof _.strTitle && _.strTitle) ||
-          (0, _._)("#Steam_Platform");
-        return (0, _.jsx)(_._, {
-          onlyPopoutIfNeeded: !0,
-          popupHeight: 340,
-          popupWidth: 640,
-          strTitle: _,
-          children: (0, _.jsx)(_._, {
-            ..._,
-            onCancel: _,
-            onOK: () => {
-              __webpack_require__(), _ && _();
-            },
-            children: _,
-          }),
-        });
       }
       const _ = new _._("PurchaseOptions"),
         _ = !1;
@@ -11245,10 +11281,15 @@
         let _ = null;
         switch (_.type) {
           case "item":
-            _ = (0, _.jsx)(_, {
-              _: _(_.data),
-              option: _,
-            });
+            _ = _.data.packageid
+              ? (0, _.jsx)(_, {
+                  _: _(_.data),
+                  option: _,
+                })
+              : (0, _.jsx)(_, {
+                  _: _(_.data),
+                  option: _,
+                });
             break;
           case "dropdown":
             _ = (0, _.jsx)(_, {
@@ -11740,10 +11781,12 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

@@ -67,11 +67,11 @@
         r.d(t, {
           default: () => y,
           readAdditionalDataFromForumPost: () => S,
-          useCommentThread: () => x,
+          useCommentThread: () => g,
         });
       var o = r(7850),
-        s = r(90182),
-        c = r(43224),
+        c = r(90182),
+        s = r(43224),
         n = r(56545),
         i = r(34410),
         l = r(37226),
@@ -88,7 +88,7 @@
       function y(e) {
         var t, r;
         const n = "floatingforumreportedsubjectslist",
-          l = (0, s.kZ)(i.lN, e.gidTopic),
+          l = (0, c.kZ)(i.lN, e.gidTopic),
           [a, u] = (0, m.useState)(() => void 0 !== localStorage[n]);
         if (
           ((0, m.useMemo)(() => {
@@ -117,7 +117,7 @@
                   children: (0, o.jsxs)("span", {
                     className: h.SplitHeader,
                     children: [
-                      c.T.Localize("#reportedsubjectlist_header"),
+                      s.T.Localize("#reportedsubjectlist_header"),
                       " ",
                       (0, o.jsx)("button", {
                         className: h.PopoutButton,
@@ -153,7 +153,7 @@
                           ? void 0
                           : r.length
                       )
-                        ? (0, o.jsx)(g, { subject: e }, e.subject_id)
+                        ? (0, o.jsx)(x, { subject: e }, e.subject_id)
                         : (0, o.jsx)(
                             "div",
                             {
@@ -183,8 +183,8 @@
             if (e.length !== t.length) return e.length - t.length;
             for (let r = 0; r < e.length; r++) {
               const o = e.charCodeAt(r),
-                s = t.charCodeAt(r);
-              if (o !== s) return o - s;
+                c = t.charCodeAt(r);
+              if (o !== c) return o - c;
             }
             return 0;
           })(e.subject_id, t.subject_id)
@@ -198,20 +198,20 @@
         }
         return e.slice(0, 35);
       }
-      function g(e) {
+      function x(e) {
         var t, r;
-        const { subject: s } = e,
+        const { subject: c } = e,
           n = S(e.subject),
-          i = x(n.clanSteamId, l.Bv, n.forumId, s.subject_group_id);
+          i = g(n.clanSteamId, l.Bv, n.forumId, c.subject_group_id);
         let u = null;
-        "0" === s.subject_id && (u = "Topic");
+        "0" === c.subject_id && (u = "Topic");
         let d = "#NA";
         if (null === u && i.isSuccess) {
           let e = 1;
           for (const r of null !== (t = i.data.comments) && void 0 !== t
             ? t
             : []) {
-            if (r.gidcomment === s.subject_id) {
+            if (r.gidcomment === c.subject_id) {
               (u = v(r.text)), (d = `#${e}`);
               break;
             }
@@ -222,18 +222,18 @@
           for (const e of null !== (r = i.data.deleted_comments) && void 0 !== r
             ? r
             : [])
-            if (e.gidcomment === s.subject_id) {
+            if (e.gidcomment === c.subject_id) {
               u = v(e.text);
               break;
             }
         null === u && (u = "[Comment]");
         const f =
-            "0" === s.subject_id
-              ? `#forum_op_${s.subject_group_id}`
-              : `#c${s.subject_id}`,
-          b = s.unresolved_dispute_count > 0 || s.unresolved_report_count > 0,
-          m = s.required_moderator_level === a.PV,
-          p = s.required_moderator_level === a.lp;
+            "0" === c.subject_id
+              ? `#forum_op_${c.subject_group_id}`
+              : `#c${c.subject_id}`,
+          b = c.unresolved_dispute_count > 0 || c.unresolved_report_count > 0,
+          m = c.required_moderator_level === a.PV,
+          p = c.required_moderator_level === a.lp;
         return (0, o.jsxs)("div", {
           className: (0, j.A)("moderatorToolLink", h.ReportedSubjectRow),
           children: [
@@ -271,64 +271,64 @@
               className: h.SubjectReportSummary,
               children: [
                 " ",
-                c.T.Localize(
+                s.T.Localize(
                   "#forumsubjectlist_subjectreportsummary",
-                  s.unresolved_report_count,
-                  s.unresolved_dispute_count,
+                  c.unresolved_report_count,
+                  c.unresolved_dispute_count,
                 ),
               ],
             }),
           ],
         });
       }
-      function x(e, t, r, o) {
-        const s = (0, f.KV)();
+      function g(e, t, r, o) {
+        const c = (0, f.KV)();
         return (0, d.I)({
           queryKey: ["comment_thread", e, t, r, o],
           queryFn: async () => {
-            const c = n.w.Init(u.ZP);
-            c.Body().set_steamid(e),
-              c.Body().set_comment_thread_type(t),
-              c.Body().set_gidfeature(r),
-              c.Body().set_gidfeature2(o),
-              c.Body().set_include_deleted(!0),
-              c.Body().set_oldest_first(!0);
-            return (await u.BE.GetCommentThread(s, c)).Body().toObject();
+            const s = n.w.Init(u.ZP);
+            s.Body().set_steamid(e),
+              s.Body().set_comment_thread_type(t),
+              s.Body().set_gidfeature(r),
+              s.Body().set_gidfeature2(o),
+              s.Body().set_include_deleted(!0),
+              s.Body().set_oldest_first(!0);
+            return (await u.BE.GetCommentThread(c, s)).Body().toObject();
           },
         });
       }
       function S(e) {
         var t, r;
         let o = "",
-          s = "";
+          c = "";
         if (!e.additional_subject_data) return null;
-        for (const c of null !==
+        for (const s of null !==
           (r =
             null === (t = e.additional_subject_data) || void 0 === t
               ? void 0
               : t.data) && void 0 !== r
           ? r
           : [])
-          "clanSteamId" === c.key
-            ? (o = c.value)
-            : "forumId" === c.key
-              ? (s = c.value)
+          "clanSteamId" === s.key
+            ? (o = s.value)
+            : "forumId" === s.key
+              ? (c = s.value)
               : console.error(
-                  `Unknown additional data key ${c.key} in forum post.`,
+                  `Unknown additional data key ${s.key} in forum post.`,
                 );
         if ("" == o)
           return console.error("Missing clanSteamId in additional data."), null;
-        if ("" == s)
+        if ("" == c)
           return console.error("Missing forumId in additional data."), null;
-        return { clanSteamId: o, forumId: s };
+        return { clanSteamId: o, forumId: c };
       }
     },
     90182: (e, t, r) => {
       "use strict";
       r.d(t, {
-        CS: () => m,
         KQ: () => y,
         Kt: () => _,
+        N8: () => m,
         iW: () => f,
         kZ: () => b,
         lY: () => h,
@@ -336,8 +336,8 @@
         y4: () => p,
       });
       var o = r(56545),
-        s = r(99164),
-        c = r(23809),
+        c = r(99164),
+        s = r(23809),
         n = r(88942),
         i = r(29385),
         l = r(61739),
@@ -351,15 +351,15 @@
         ]);
       }
       function b(e, t) {
-        const r = (0, c.KV)();
+        const r = (0, s.KV)();
         return (0, n.I)(
           (function (e, t, r) {
             return {
               queryKey: [u, t, r],
               queryFn: async () => {
-                const c = o.w.Init(s.ge);
-                c.Body().set_subject_type(t), c.Body().set_subject_group_id(r);
-                const n = await s.fL.GetContentReportSubjectGroup(e, c);
+                const s = o.w.Init(c.ge);
+                s.Body().set_subject_type(t), s.Body().set_subject_group_id(r);
+                const n = await c.fL.GetContentReportSubjectGroup(e, s);
                 if (!n.BSuccess())
                   throw new Error(
                     "Failed in GetContentReportSubjectGroup, EResult: " +
@@ -372,19 +372,19 @@
         );
       }
       function _(e, t, r) {
-        const i = (0, c.KV)();
+        const i = (0, s.KV)();
         return (0, n.I)(
-          (function (e, t, r, c) {
+          (function (e, t, r, s) {
             return {
-              queryKey: [d, t, r, c],
+              queryKey: [d, t, r, s],
               queryFn: async () => {
-                if (void 0 === t || void 0 === r || void 0 === c) return;
-                const n = o.w.Init(s.Ru);
+                if (void 0 === t || void 0 === r || void 0 === s) return;
+                const n = o.w.Init(c.Ru);
                 return (
                   n.Body().set_subject_type(t),
                   n.Body().set_subject_group_id(r),
-                  n.Body().set_subject_id(c),
-                  (await s.fL.GetAuditLog(e, n)).Body().toObject()
+                  n.Body().set_subject_id(s),
+                  (await c.fL.GetAuditLog(e, n)).Body().toObject()
                 );
               },
             };
@@ -392,69 +392,54 @@
         );
       }
       function h(e, t, r) {
-        const n = (0, c.KV)(),
+        const n = (0, s.KV)(),
           u = (0, i.jE)();
         return (0, l.n)({
-          mutationFn: async (c) => {
-            const i = o.w.Init(s.u5);
+          mutationFn: async (s) => {
+            const i = o.w.Init(c.u5);
             i.Body().set_subject_type(e),
               i.Body().set_subject_group_id(t),
               i.Body().set_subject_id(r),
-              i.Body().set_required_level(c.eNewLevel),
-              c.eReason && i.Body().set_reason(c.eReason),
-              c.strNote && i.Body().set_note(c.strNote);
-            const l = await s.fL.EscalateSubject(n, i);
+              i.Body().set_required_level(s.eNewLevel),
+              s.eReason && i.Body().set_reason(s.eReason),
+              s.strNote && i.Body().set_note(s.strNote);
+            const l = await c.fL.EscalateSubject(n, i);
             if (l.GetEResult() !== a.R)
               throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);
           },
-          onSuccess: async (o, s) => {
+          onSuccess: async (o, c) => {
             await f(u, e, t, r);
           },
         });
       }
-      function m(e, t, r) {
-        const n = (0, c.KV)(),
-          a = (0, i.jE)();
+      function m() {
+        const e = (0, s.KV)(),
+          t = (0, i.jE)();
         return (0, l.n)({
-          mutationFn: async (c) => {
-            const i = o.w.Init(s.oA);
-            if (
-              (i.Body().set_subject_type(e),
-              i.Body().set_subject_group_id(t),
-              i.Body().set_subject_id(r),
-              c.eResolution && i.Body().set_updated_resolution(c.eResolution),
-              c.eReason && i.Body().set_updated_reason(c.eReason),
-              c.rgSanctions)
-            )
-              for (const e of c.rgSanctions) {
-                const t = new s.bP();
-                t.set_sanction(e.sanction),
-                  e.days && t.set_days(e.days),
-                  i.Body().add_updated_sanctions(t);
-              }
-            const l = await s.fL.ResolveDisputedSubject(n, i);
-            if (!l.BSuccess())
-              throw new Error(
-                `Failed to resolve disputed subject (EResult ${l.GetEResult()})`,
-              );
+          mutationFn: async (t) => {
+            const r = o.w.Init(c.j);
+            r.Body().set_subject_type(t.eSubjectType),
+              r.Body().set_subject_group_id(t.ulSubjectGroupID),
+              r.Body().set_subject_id(t.ulSubjectID);
+            await c.fL.SustainModeration(e, r);
           },
-          onSuccess: async () => {
-            await f(a, e, t, r);
+          onSuccess: async (e, r) => {
+            await f(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
           },
         });
       }
       function p(e, t, r, n, a) {
-        const u = (0, c.KV)(),
+        const u = (0, s.KV)(),
           d = (0, i.jE)();
         return (0, l.n)({
           mutationFn: async () => {
-            const c = o.w.Init(s.ZV);
-            c.Body().set_steamid(e),
-              c.Body().set_subject_type(t),
-              c.Body().set_subject_group_id(r),
-              c.Body().set_subject_id(n),
-              c.Body().set_details(a);
-            await s.fL.DisputeModerationForSubject(u, c);
+            const s = o.w.Init(c.ZV);
+            s.Body().set_steamid(e),
+              s.Body().set_subject_type(t),
+              s.Body().set_subject_group_id(r),
+              s.Body().set_subject_id(n),
+              s.Body().set_details(a);
+            await c.fL.DisputeModerationForSubject(u, s);
           },
           onSuccess: async () => {
             await f(d, t, r, n);
@@ -463,15 +448,15 @@
       }
       function j(e, t, r, n) {
         const a = (0, i.jE)(),
-          u = (0, c.KV)();
+          u = (0, s.KV)();
         return (0, l.n)({
           mutationFn: async () => {
-            const c = o.w.Init(s.zF);
-            c.Body().set_subject_type(e),
-              c.Body().set_subject_group_id(t),
-              c.Body().set_subject_id(r),
-              c.Body().set_owner_dispute_details(n);
-            const i = await s.fL.UpdateSubject(u, c);
+            const s = o.w.Init(c.zF);
+            s.Body().set_subject_type(e),
+              s.Body().set_subject_group_id(t),
+              s.Body().set_subject_id(r),
+              s.Body().set_owner_dispute_details(n);
+            const i = await c.fL.UpdateSubject(u, s);
             if (!i.BSuccess()) throw new Error("EResult " + i.GetEResult());
           },
           onSuccess: async () => {
@@ -480,17 +465,17 @@
         });
       }
       function y(e) {
-        const t = (0, c.KV)();
+        const t = (0, s.KV)();
         return (0, n.I)(
           (function (e, t) {
             return {
               queryKey: ["reporterstats", t],
               queryFn: async () => {
-                const r = o.w.Init(s.KD);
+                const r = o.w.Init(c.KD);
                 r.Body().set_steamid(t);
-                const c = await s.fL.GetReporterStats(e, r);
-                if (!c.BSuccess()) throw new Error("EResult " + c.GetEResult());
-                return c.Body().toObject();
+                const s = await c.fL.GetReporterStats(e, r);
+                if (!s.BSuccess()) throw new Error("EResult " + s.GetEResult());
+                return s.Body().toObject();
               },
             };
           })(t, e),
@@ -499,26 +484,26 @@
     },
     37226: (e, t, r) => {
       "use strict";
-      r.d(t, { Bv: () => s, Dq: () => o, Yd: () => c });
+      r.d(t, { Bv: () => c, Dq: () => o, Yd: () => s });
       const o = 5,
-        s = 7,
-        c = 10;
+        c = 7,
+        s = 10;
     },
     42248: (e, t, r) => {
       "use strict";
-      r.d(t, { q: () => c });
+      r.d(t, { q: () => s });
       var o = r(78327),
-        s = r(22837);
-      function c() {
-        return o.TS.IN_CLIENT && (0, s.DOG)(o.TS.LAUNCHER_TYPE);
+        c = r(22837);
+      function s() {
+        return o.TS.IN_CLIENT && (0, c.DOG)(o.TS.LAUNCHER_TYPE);
       }
     },
     22797: (e, t, r) => {
       "use strict";
       r.d(t, { t: () => d });
       var o = r(7850),
-        s = r(90626),
-        c = r(52038),
+        c = r(90626),
+        s = r(52038),
         n = r(20978),
         i = r.n(n);
       const l =
@@ -526,7 +511,7 @@
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var a = r(42248),
         u = r(8527);
-      const d = s.memo(function (e) {
+      const d = c.memo(function (e) {
         const {
           className: t,
           size: r,
@@ -536,10 +521,10 @@
           msDelayAppear: _,
         } = e;
         let h = [i().LoadingWrapper, "SteamLogoThrobber", f(r)];
-        const [m, p] = s.useState(!_),
+        const [m, p] = c.useState(!_),
           j = !(0, a.q)();
         return (
-          (0, s.useEffect)(() => {
+          (0, c.useEffect)(() => {
             if (m) return;
             const e = setTimeout(() => p(!0), _);
             return () => clearTimeout(e);
@@ -548,7 +533,7 @@
           t && h.push(t),
           b && h.push(i().Static),
           (0, o.jsxs)("div", {
-            className: (0, c.A)(
+            className: (0, s.A)(
               "center" == d && i().throbber_center_wrapper,
               !!_ && i().ThrobberDelayAppear,
               m && i().Visible,
@@ -569,7 +554,7 @@
           })
         );
       });
-      s.memo(function (e) {
+      c.memo(function (e) {
         const {
           className: t,
           size: r,
@@ -579,9 +564,9 @@
           msDelayAppear: u,
         } = e;
         let d = [i().LoadingWrapper, "SteamLogoThrobber", f(r)];
-        const [_, h] = s.useState(!u);
+        const [_, h] = c.useState(!u);
         return (
-          (0, s.useEffect)(() => {
+          (0, c.useEffect)(() => {
             if (_) return;
             const e = setTimeout(() => h(!0), u);
             return () => clearTimeout(e);
@@ -590,7 +575,7 @@
           t && d.push(t),
           a && d.push(i().Static),
           (0, o.jsxs)("div", {
-            className: (0, c.A)(
+            className: (0, s.A)(
               "center" == l && i().throbber_center_wrapper,
               !!u && i().ThrobberDelayAppear,
               _ && i().Visible,

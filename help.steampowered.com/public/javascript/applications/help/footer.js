@@ -727,15 +727,15 @@
             cssProperty: "--aspect-ratio",
           },
         ];
-      var w = r(68875),
-        y = r(8527);
+      var y = r(68875),
+        w = r(8527);
       function b(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
-          a = f({ ...i, className: h()(e.className, w.Flex) }, S),
+          a = f({ ...i, className: h()(e.className, y.Flex) }, S),
           c = r ?? n?.focusable ?? !!i.onClick,
           p = (0, t.jsx)(s, { ref: o, ...a }),
           C = m(i.direction ?? "row", (0, d.xC)());
-        return y.TS.IN_GAMEPADUI
+        return w.TS.IN_GAMEPADUI
           ? (0, t.jsx)(l, {
               ...(n || {}),
               focusable: c,
@@ -749,46 +749,46 @@
         {
           prop: "direction",
           responsive: !0,
-          className: w.Direction,
+          className: y.Direction,
           cssProperty: "--direction",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: w.Justify,
+          className: y.Justify,
           cssProperty: (e) => ["--justify", L(e)],
         },
         {
           prop: "align",
           responsive: !0,
-          className: w.Align,
+          className: y.Align,
           cssProperty: "--align",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: w.Gap,
+          className: y.Gap,
           cssProperty: (e) => ["--gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: w.GapX,
+          className: y.GapX,
           cssProperty: (e) => ["--gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: w.GapY,
+          className: y.GapY,
           cssProperty: (e) => ["--gap-y", `var(--spacing-${e})`],
         },
         {
           prop: "wrap",
           responsive: !0,
-          className: w.Wrap,
+          className: y.Wrap,
           cssProperty: "--wrap",
         },
-        { prop: "inline", responsive: !0, className: w.Inline },
+        { prop: "inline", responsive: !0, className: y.Inline },
       ];
       function L(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
@@ -895,7 +895,7 @@
         const { underline: s = "auto", focusable: r, navProps: n, ...o } = e,
           i = r ?? n?.focusable ?? !!o.href,
           a = f({ ...o, underline: s, className: Z.TextLink }, B);
-        return y.TS.IN_GAMEPADUI && (i || n)
+        return w.TS.IN_GAMEPADUI && (i || n)
           ? (0, t.jsx)(U.Ii, { ...a, ...(n || {}), focusable: i })
           : (0, t.jsx)("a", { ...a });
       }
@@ -911,7 +911,7 @@
           a = f({ ...i, className: h()(W.Box, A(), e.className) }, O),
           c = r ?? n?.focusable ?? !!i.onClick,
           p = (0, t.jsx)(s, { ref: o, ...a });
-        return y.TS.IN_GAMEPADUI && (c || n)
+        return w.TS.IN_GAMEPADUI && (c || n)
           ? (0, t.jsx)(l, { ...(n || {}), focusable: c, children: p })
           : p;
       }
@@ -1022,7 +1022,7 @@
               ),
               children: m,
             };
-          return y.TS.IN_GAMEPADUI && (u || d)
+          return w.TS.IN_GAMEPADUI && (u || d)
             ? (0, t.jsx)(U.fu, { ...x, ...(d || {}), focusable: u })
             : (0, t.jsx)("button", { ...x });
         },
@@ -1048,7 +1048,7 @@
               },
               q,
             );
-          return y.TS.IN_GAMEPADUI && (a || c)
+          return w.TS.IN_GAMEPADUI && (a || c)
             ? (0, t.jsx)(U.Ii, { ...p, ...(c || {}), focusable: a })
             : (0, t.jsx)("a", { ...p });
         };
@@ -1059,7 +1059,7 @@
           a = f({ ...i, className: h()(se.Grid, e.className) }, te),
           c = n ?? o?.focusable ?? !!i.onClick,
           p = (0, t.jsx)(s, { ref: r, ...a });
-        return y.TS.IN_GAMEPADUI
+        return w.TS.IN_GAMEPADUI
           ? (0, t.jsx)(l, {
               "flow-children": "grid",
               ...(o || {}),
@@ -1209,7 +1209,7 @@
         ue = r(81393);
       const xe = (0, o.createContext)(null);
       function ge(e) {
-        return y.TS.IN_GAMEPADUI
+        return w.TS.IN_GAMEPADUI
           ? (0, t.jsx)(ve, { ...e })
           : (0, t.jsx)(He, { ...e });
       }
@@ -1312,7 +1312,7 @@
           t
         );
       }
-      const we = {
+      const ye = {
         Root: function (e) {
           const { children: s, ...r } = e,
             n = (function (e) {
@@ -1337,22 +1337,26 @@
                       e?.ownerDocument?.defaultView ?? window,
                   },
                 }),
-                a = (0, de.kp)(i.context, { enabled: !!n.click }),
-                c = (0, de.iQ)(i.context, { enabled: !!n.focus }),
-                l = { handleClose: (0, de.iB)() },
-                p = "function" == typeof n.hover ? n.hover(l) : l,
-                h = (0, de.Mk)(i.context, { enabled: !!n.hover, ...p }),
-                d = (0, de.s9)(i.context),
-                { getFloatingProps: C, getReferenceProps: m } = (0, de.bv)([
-                  a,
-                  c,
-                  h,
+                a = { enabled: !!n.click },
+                c = "function" == typeof n.click ? n.click(a) : a,
+                l = (0, de.kp)(i.context, c),
+                p = { enabled: !!n.focus },
+                h = "function" == typeof n.focus ? n.focus(p) : p,
+                d = (0, de.iQ)(i.context, h),
+                C = { handleClose: (0, de.iB)() },
+                m = "function" == typeof n.hover ? n.hover(C) : C,
+                _ = (0, de.Mk)(i.context, { enabled: !!n.hover, ...m }),
+                f = (0, de.s9)(i.context),
+                { getFloatingProps: u, getReferenceProps: x } = (0, de.bv)([
+                  l,
                   d,
+                  _,
+                  f,
                 ]);
               return {
                 floating: i,
-                getFloatingProps: C,
-                getReferenceProps: m,
+                getFloatingProps: u,
+                getReferenceProps: x,
                 open: o,
               };
             })(r);
@@ -1392,7 +1396,7 @@
           if (!i.open) return null;
           let c = o.Children.only(s),
             l = o.Fragment;
-          c.type == we.FocusManager &&
+          c.type == ye.FocusManager &&
             ((c = o.Children.only(c.props.children)), (l = ge));
           const p = (0, o.cloneElement)(c, {
             ref: a,
@@ -1406,7 +1410,7 @@
         FocusManager: ge,
       };
       r(42327);
-      function ye(e) {
+      function we(e) {
         const {
             children: s,
             hoverContent: r,
@@ -1415,7 +1419,7 @@
             popoverProps: a,
           } = e,
           [c, l] = (0, o.useState)(!1);
-        return (0, t.jsxs)(we.Root, {
+        return (0, t.jsxs)(ye.Root, {
           open: c,
           onOpenChange: l,
           interactions: {
@@ -1426,8 +1430,8 @@
           },
           ...a,
           children: [
-            (0, t.jsx)(we.Anchor, { children: s }),
-            (0, t.jsx)(we.Positioner, {
+            (0, t.jsx)(ye.Anchor, { children: s }),
+            (0, t.jsx)(ye.Positioner, {
               children: (0, t.jsx)(D, { children: r }),
             }),
           ],
@@ -1522,7 +1526,7 @@
         let { href: s, ...r } = e;
         const n = (0, pe.n9)();
         return (
-          s?.startsWith(y.TS.STORE_BASE_URL) && (s = (0, pe.bV)(n, s)),
+          s?.startsWith(w.TS.STORE_BASE_URL) && (s = (0, pe.bV)(n, s)),
           (0, t.jsx)(I, {
             href: s,
             color: "dull-11",
@@ -1546,7 +1550,7 @@
                     justify: "between",
                     children: [
                       (0, t.jsx)(Pe, {
-                        href: y.TS.STORE_BASE_URL,
+                        href: w.TS.STORE_BASE_URL,
                         children: (0, t.jsx)(Le, {}),
                       }),
                       (0, t.jsxs)(D, {
@@ -1558,27 +1562,27 @@
                           }),
                           "  |  ",
                           (0, t.jsx)(Pe, {
-                            href: y.TS.STORE_BASE_URL + "about",
+                            href: w.TS.STORE_BASE_URL + "about",
                             children: "关于蒸汽平台",
                           }),
                           "  |  ",
                           (0, t.jsx)(Pe, {
-                            href: y.TS.STORE_BASE_URL + "steam_refunds",
+                            href: w.TS.STORE_BASE_URL + "steam_refunds",
                             children: "退款政策",
                           }),
                           "  |  ",
                           (0, t.jsx)(Pe, {
-                            href: y.TS.STORE_BASE_URL + "subscriber_agreement",
+                            href: w.TS.STORE_BASE_URL + "subscriber_agreement",
                             children: "软件许可服务协议",
                           }),
                           "  |  ",
                           (0, t.jsx)(Pe, {
-                            href: y.TS.STORE_BASE_URL + "privacy_agreement",
+                            href: w.TS.STORE_BASE_URL + "privacy_agreement",
                             children: "个人信息保护政策",
                           }),
                           "  |  ",
                           (0, t.jsx)(Pe, {
-                            href: y.TS.STORE_BASE_URL + "data_outbound",
+                            href: w.TS.STORE_BASE_URL + "data_outbound",
                             children: "个人信息出境告知书",
                           }),
                           "  |  ",
@@ -1622,11 +1626,11 @@
                       (0, t.jsxs)(b, {
                         gap: "5",
                         children: [
-                          (0, t.jsx)(ye, {
+                          (0, t.jsx)(we, {
                             hoverContent: (0, t.jsx)("img", {
                               alt: "",
                               src:
-                                y.TS.STORE_CDN_URL +
+                                w.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/Weibo-QR.png?v=2",
                             }),
                             children: (0, t.jsxs)(b, {
@@ -1635,18 +1639,18 @@
                                 (0, t.jsx)("img", {
                                   alt: "微博",
                                   src:
-                                    y.TS.STORE_CDN_URL +
+                                    w.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
                                 (0, t.jsx)(P, { children: "微博" }),
                               ],
                             }),
                           }),
-                          (0, t.jsx)(ye, {
+                          (0, t.jsx)(we, {
                             hoverContent: (0, t.jsx)("img", {
                               alt: "",
                               src:
-                                y.TS.STORE_CDN_URL +
+                                w.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/WeChat-QR.png?v=2",
                             }),
                             children: (0, t.jsxs)(b, {
@@ -1655,7 +1659,7 @@
                                 (0, t.jsx)("img", {
                                   alt: "微信",
                                   src:
-                                    y.TS.STORE_CDN_URL +
+                                    w.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
                                 (0, t.jsx)(P, { children: "微信" }),
@@ -1878,7 +1882,7 @@
         let { href: s, ...r } = e;
         const n = (0, pe.n9)();
         return (
-          s?.startsWith(y.TS.STORE_BASE_URL) && (s = (0, pe.bV)(n, s)),
+          s?.startsWith(w.TS.STORE_BASE_URL) && (s = (0, pe.bV)(n, s)),
           (0, t.jsx)(I, {
             href: s,
             color: "dull-11",
@@ -1901,7 +1905,7 @@
               align: "center",
               children: [
                 (0, t.jsx)(Fe, {
-                  href: y.TS.STORE_BASE_URL,
+                  href: w.TS.STORE_BASE_URL,
                   children: (0, t.jsx)(Ae, {}),
                 }),
                 (0, t.jsx)(Fe, {
@@ -1945,9 +1949,9 @@
               gap: "5",
               children: [
                 "initial" === e &&
-                  !y.TS.IN_MOBILE_WEBVIEW &&
+                  !w.TS.IN_MOBILE_WEBVIEW &&
                   (0, t.jsx)($, {
-                    href: y.TS.STORE_BASE_URL + "mobile/",
+                    href: w.TS.STORE_BASE_URL + "mobile/",
                     children: Te.Localize("#footer_link_get_mobile_apps"),
                   }),
                 ce() &&
@@ -1994,23 +1998,23 @@
                       children: Te.Localize("#footer_link_header_steam"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "about/",
+                      href: w.TS.STORE_BASE_URL + "about/",
                       children: Te.Localize("#footer_link_about_steam"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "subscriber_agreement/",
+                      href: w.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: Te.Localize("#footer_link_steam_ssa"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.PARTNER_BASE_URL,
+                      href: w.TS.PARTNER_BASE_URL,
                       children: Te.Localize("#footer_link_steamworks"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.PARTNER_BASE_URL + "steamdirect",
+                      href: w.TS.PARTNER_BASE_URL + "steamdirect",
                       children: Te.Localize("#footer_link_steam_distribution"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "digitalgiftcards/",
+                      href: w.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: Te.Localize("#footer_link_gift_cards"),
                     }),
                   ],
@@ -2030,11 +2034,11 @@
                       children: Te.Localize("#footer_link_jobs"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "hardware/",
+                      href: w.TS.STORE_BASE_URL + "hardware/",
                       children: Te.Localize("#footer_link_hardware"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "hardware_recycling/",
+                      href: w.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: Te.Localize("#footer_link_recycling"),
                     }),
                   ],
@@ -2046,7 +2050,7 @@
                       children: Te.Localize("#footer_link_header_legal"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "privacy_agreement/",
+                      href: w.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: Te.Localize("#footer_link_privacy"),
                     }),
                     (0, t.jsx)(Fe, {
@@ -2054,17 +2058,17 @@
                       children: Te.Localize("#footer_link_accessibility"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "legal/",
+                      href: w.TS.STORE_BASE_URL + "legal/",
                       children: Te.Localize(
                         "#footer_link_notices_and_policies",
                       ),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "account/cookiepreferences/",
+                      href: w.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: Te.Localize("#footer_link_cookies"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "steam_refunds/",
+                      href: w.TS.STORE_BASE_URL + "steam_refunds/",
                       children: Te.Localize("#footer_link_refunds"),
                     }),
                   ],
@@ -2076,19 +2080,19 @@
                       children: Te.Localize("#footer_link_header_more"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "about/",
+                      href: w.TS.STORE_BASE_URL + "about/",
                       children: Te.Localize("#footer_link_get_steam"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "mobile/",
+                      href: w.TS.STORE_BASE_URL + "mobile/",
                       children: Te.Localize("#footer_link_get_mobile_apps"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.HELP_BASE_URL,
+                      href: w.TS.HELP_BASE_URL,
                       children: Te.Localize("#footer_link_get_support"),
                     }),
                     (0, t.jsx)(Fe, {
-                      href: y.TS.STORE_BASE_URL + "account/",
+                      href: w.TS.STORE_BASE_URL + "account/",
                       children: Te.Localize("#footer_link_my_account"),
                     }),
                   ],
@@ -2099,8 +2103,8 @@
         );
       }
       function Oe(e) {
-        if (y.TS.IN_GAMEPADUI) return null;
-        const s = (0, ne.nA)(y.TS.EREALM)
+        if (w.TS.IN_GAMEPADUI) return null;
+        const s = (0, ne.nA)(w.TS.EREALM)
           ? (0, t.jsx)(ze, { ...e })
           : (0, t.jsx)(De, { ...e });
         return (0, t.jsx)(pe.nn, {

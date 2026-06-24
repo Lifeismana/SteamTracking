@@ -844,6 +844,7 @@ Te rugăm să reintroduci parola dorită."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Spaniolă - America Latină)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnameză)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indoneziană)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (malaeză)"
 
 
 
@@ -3410,7 +3411,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 
 "Steam_GuestPasses_Status_Unsent"	"Netrimis"
 "Steam_GuestPasses_Status_Sent"	"Trimis"
-"Steam_GuestPasses_Status_Redeemed"	"Revendicat"
+"Steam_GuestPasses_Status_Redeemed"	"Acceptat"
 "Steam_GuestPasses_Status_Incoming"	"Nu a fost acceptat încă"
 
 "Steam_SendGuestPass_SendInfo$type=gift"		"Cum dorești să fie trimis cadoul %package% tău?"
@@ -5049,6 +5050,7 @@ Artiști"
 "DownloadRegion_br_manaus"			"Brazilia – Manaus"
 "DownloadRegion_br_belem"			"Brazilia – Belém"
 "DownloadRegion_br_salvador"			"Brazilia – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Configurația controlerului"
 "ControllerBinding_Offline_Save"	"[Salvare automată offline]"

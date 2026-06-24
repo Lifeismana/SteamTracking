@@ -163,6 +163,7 @@ enum ESpeakerConfiguration {
 	k_ESpeakerConfiguration_Stereo = 1;
 	k_ESpeakerConfiguration_51 = 2;
 	k_ESpeakerConfiguration_71 = 3;
+	k_ESpeakerConfiguration_51_Ac3 = 4;
 }
 
 enum ESystemAudioDirection {
@@ -770,7 +771,7 @@ enum EContentReportSubjectAction {
 	k_EContentReportSubjectAction_Updated = 5;
 	k_EContentReportSubjectAction_Escalated = 6;
 	k_EContentReportSubjectAction_Disputed = 7;
-	k_EContentReportSubjectAction_SustainedOnDispute = 8;
+	k_EContentReportSubjectAction_Sustained = 8;
 	k_EContentReportSubjectAction_Locked = 9;
 	k_EContentReportSubjectAction_Unlocked = 10;
 	k_EContentReportSubjectAction_Deleted = 11;

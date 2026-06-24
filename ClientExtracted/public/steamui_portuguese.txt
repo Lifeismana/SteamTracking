@@ -841,6 +841,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Espanhol da América Latina)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamita)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonésio)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malaio)"
 
 
 
@@ -4067,7 +4068,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "Steam_EOLAlert"	"O Steam vai deixar de funcionar no %OsVer% daqui a %DaysUntilOSEndOfLife% dias."
 
-"Steam_SupportAlert"	"Tens um alerta da conta"
+"Steam_SupportAlert"	"Tens um alerta de conta"
 "steam_inventory"	"Inventário"
 "steam_inbox_item"	"1 item novo no teu inventário"
 "steam_inbox_items"	"%items% itens novos no teu inventário"
@@ -4574,7 +4575,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "Steam_Settings_Compat_Launch_Whitelisted"     "selecionado pela Valve"
 "Steam_Settings_Compat_Launch_Wildcard"     "selecionado por ti para todos os títulos"
-"Steam_Settings_Compat_Launch_Forced"     "selecionado por ti para este título"
+"Steam_Settings_Compat_Launch_Forced"     "selecionado por ti para esta aplicação"
 
 
 "Steam_Settings_StreamingTitle" "Remote Play"
@@ -5049,6 +5050,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "DownloadRegion_br_manaus"			"Brasil - Manaus"
 "DownloadRegion_br_belem"			"Brasil - Belém"
 "DownloadRegion_br_salvador"			"Brasil - Salvador"
+"DownloadRegion_guam"			"Guame"
 
 "SettingsController_AutosaveName"	"Configuração de comando"
 "ControllerBinding_Offline_Save"	"[Guardado autom. no modo offline]"

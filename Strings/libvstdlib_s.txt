@@ -663,6 +663,7 @@ INFO
 INSTITUTE
 INSURE
 INTERNATIONAL
+INVALID_KEY_SYMBOL
 INVESTMENTS
 IVALIDATE001
 Incorrect number of arguments.  %d arguments required, %d were given.\n
@@ -1066,6 +1067,8 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfChar
+StringIndexOfString
 Sunday
 TATTOO
 TECHNOLOGY
@@ -1975,7 +1978,9 @@ pchFileName
 pchHaystack != NULL
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
 pchStart
+pchString != nullptr
 pchURL != NULL
 pclose
 poll

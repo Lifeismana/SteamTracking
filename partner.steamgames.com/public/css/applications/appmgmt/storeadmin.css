@@ -2865,118 +2865,6 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
     filter: brightness(1);
   }
 }
-@keyframes Y16cvm8njUOPVd_PmpdA8 {
-  from {
-    background-position: 0 100%;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-@keyframes _1j1Zq1Q5uh95fjL8OT7yFq {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes UsqG3DdFgxSCGRuytTYuR {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes _3oEDNw_jLfiO2KEnzqXvWj {
-  from {
-    background: #23262e;
-    color: #8b929a;
-  }
-  to {
-    background: #383a41;
-    color: #fff;
-  }
-}
-@keyframes _2_svdWFQrIOwj-IleWJR6L {
-  from {
-    background: hsla(0, 0%, 100%, 0.25);
-    color: #8b929a;
-  }
-  to {
-    background: hsla(0, 0%, 100%, 0.15);
-    color: #fff;
-  }
-}
-@keyframes gRiBHgRbZcfRBpIsW5go- {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes _22QzVhsdgPza1cZNDWO-Ro {
-  from {
-    background: hsla(0, 0%, 100%, 0.3);
-    color: #fff;
-  }
-  to {
-    background: hsla(0, 0%, 100%, 0.1);
-    color: #fff;
-  }
-}
-@keyframes _3rSHMWnx0GUHozQy8Um38r {
-  from {
-    background: hsla(0, 0%, 100%, 0.5);
-    color: #fff;
-  }
-  to {
-    background: hsla(0, 0%, 100%, 0.2);
-    color: #fff;
-  }
-}
-@keyframes sY-qPtcI_nLtBk7YeEIXX {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes _5ZL-w9izP-Xp-Qbmnd0lR {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes _2cuFLB3zHIu7pq3jcknIIQ {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes F4ni-f-IW8RE49GOB7CLb {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
 ._9H6b5yfaxlmcnHvkqtwDK {
   margin-top: 8vw;
 }
@@ -3003,7 +2891,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
     scroll-snap-stop: always;
   }
 }
-.BasicUI ._16DzRvjcqFcYr0NYcWmTrg {
+.GamepadMode ._16DzRvjcqFcYr0NYcWmTrg {
   min-width: unset;
   scroll-snap-align: unset;
   scroll-snap-stop: unset;
@@ -3023,6 +2911,11 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   position: relative;
   container-name: event-item;
   container-type: inline-size;
+}
+@media screen and (max-width: 768px) {
+  ._16DzRvjcqFcYr0NYcWmTrg ._2JC5DEuXUeE50kjpb7Eeau:nth-child(n + 3) {
+    display: none;
+  }
 }
 ._1MwNf8slOG9lOvAeOshmuu {
   display: flex;
@@ -3045,10 +2938,15 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
 ._1MwNf8slOG9lOvAeOshmuu:not(:last-child) {
   margin-right: 8px;
 }
-.BasicUI ._1MwNf8slOG9lOvAeOshmuu {
+.GamepadMode ._1MwNf8slOG9lOvAeOshmuu {
   margin: unset;
   border-radius: unset;
   box-shadow: var(--gpShadow-Medium);
+}
+@media screen and (max-width: 500px) {
+  html.responsive.responsive ._1MwNf8slOG9lOvAeOshmuu {
+    min-width: 160px;
+  }
 }
 @container event-item (width > 500px) {
   ._1MwNf8slOG9lOvAeOshmuu {
@@ -3113,7 +3011,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
     margin: 0px 16px 0px 0px;
   }
 }
-.BasicUI .SaleSectionCarouselPadding ._1MwNf8slOG9lOvAeOshmuu {
+.GamepadMode .SaleSectionCarouselPadding ._1MwNf8slOG9lOvAeOshmuu {
   margin: unset;
 }
 ._2pPj9UWoWM6h318uBN0-8X {
@@ -3124,7 +3022,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   opacity: 0.4;
   filter: blur(10px) brightness(0.5);
 }
-.BasicUI ._2pPj9UWoWM6h318uBN0-8X {
+.GamepadMode ._2pPj9UWoWM6h318uBN0-8X {
   filter: unset;
 }
 ._2pPj9UWoWM6h318uBN0-8X::after {
@@ -3134,7 +3032,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   height: 100%;
   top: 0px;
 }
-.BasicUI ._2pPj9UWoWM6h318uBN0-8X::after {
+.GamepadMode ._2pPj9UWoWM6h318uBN0-8X::after {
   backdrop-filter: blur(32px);
 }
 ._22jEpNTfml-w_aRJV-fKDm {
@@ -3290,7 +3188,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
     left: -8px;
   }
 }
-.BasicUI ._16au-uWHggl6G731aw_eHt {
+.GamepadMode ._16au-uWHggl6G731aw_eHt {
   left: -8px;
 }
 .IeC3X0McKdGC79BsC3VvM {
@@ -3298,10 +3196,10 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   margin-right: -2px;
   z-index: 1;
 }
-.BasicUI .IeC3X0McKdGC79BsC3VvM {
+.GamepadMode .IeC3X0McKdGC79BsC3VvM {
   margin-right: unset;
 }
-.BasicUI .IeC3X0McKdGC79BsC3VvM a {
+.GamepadMode .IeC3X0McKdGC79BsC3VvM a {
   display: flex;
 }
 ._2-l2M5GPuxKFwV8h1tc_fH {
@@ -3323,7 +3221,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-.BasicUI ._2-l2M5GPuxKFwV8h1tc_fH span:first-child {
+.GamepadMode ._2-l2M5GPuxKFwV8h1tc_fH span:first-child {
   padding-top: unset;
   padding-left: 8px;
   padding-right: 8px;
@@ -3332,7 +3230,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   padding-bottom: 2px;
   padding-top: 2px;
 }
-.BasicUI ._2-l2M5GPuxKFwV8h1tc_fH span:last-child {
+.GamepadMode ._2-l2M5GPuxKFwV8h1tc_fH span:last-child {
   padding-bottom: unset;
   padding-left: 8px;
   padding-right: 8px;
@@ -5524,34 +5422,21 @@ div._36qS74l1tXSXwGdyfIFQ-G {
     font-size: 14px;
   }
 }
-._8DSX9d1ihrMSeZUFC9elD.GamepadMode .ny6hWVK6ii05H200KRhds,
 .GamepadMode ._8DSX9d1ihrMSeZUFC9elD .ny6hWVK6ii05H200KRhds {
   font-size: 14px;
   color: #1a9fff;
 }
-._8DSX9d1ihrMSeZUFC9elD.GamepadMode ._3sRe2CGQBgablPBz9Bc9c2,
 .GamepadMode ._8DSX9d1ihrMSeZUFC9elD ._3sRe2CGQBgablPBz9Bc9c2 {
   background: unset;
   font-size: 14px;
 }
-._8DSX9d1ihrMSeZUFC9elD.GamepadMode ._29jQMo9DGCmcSKyDIC3V7M,
 .GamepadMode ._8DSX9d1ihrMSeZUFC9elD ._29jQMo9DGCmcSKyDIC3V7M {
   background: unset;
 }
-._8DSX9d1ihrMSeZUFC9elD.GamepadMode .TwihVkmmqI5XLg6P4fpwF li a.gpfocus,
-._8DSX9d1ihrMSeZUFC9elD.GamepadMode ._1FCh_hPFNuwj9vrVDMOvMC.gpfocus,
 .GamepadMode ._8DSX9d1ihrMSeZUFC9elD .TwihVkmmqI5XLg6P4fpwF li a.gpfocus,
 .GamepadMode ._8DSX9d1ihrMSeZUFC9elD ._1FCh_hPFNuwj9vrVDMOvMC.gpfocus {
   background-color: rgba(59, 90, 114, 0.5019607843);
 }
-._8DSX9d1ihrMSeZUFC9elD.GamepadMode
-  .TwihVkmmqI5XLg6P4fpwF
-  li
-  a.gpfocus
-  .ny6hWVK6ii05H200KRhds,
-._8DSX9d1ihrMSeZUFC9elD.GamepadMode
-  ._1FCh_hPFNuwj9vrVDMOvMC.gpfocus
-  .ny6hWVK6ii05H200KRhds,
 .GamepadMode
   ._8DSX9d1ihrMSeZUFC9elD
   .TwihVkmmqI5XLg6P4fpwF

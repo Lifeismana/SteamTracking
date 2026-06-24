@@ -19,6 +19,7 @@
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 !s_bInRunFrame
+"AC3"
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
@@ -445,7 +446,7 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamOS3
+Plat_IsSteamOS
 Plat_OutputDebugString
 Plat_VirtualAccessFlags
 Plat_localtime
@@ -571,6 +572,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 Sunday
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for
@@ -802,7 +804,6 @@ boolean
 btowc
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 byte
-c>jvS
 cActualReplacements == cReplacements
 cannot create shim for unknown locale::facet
 card.profile.port
@@ -921,6 +922,7 @@ half
 handset
 handsfree
 hdmi
+hdmi-ac3-surround
 hdmi-stereo
 hdmi-surround
 hdmi-surround71
@@ -931,6 +933,7 @@ hifi
 iconv
 iconv_close
 iconv_open
+iec958.codecs.detected
 imaginary
 info.m_pReplacementString == 0
 ioctl
@@ -1033,7 +1036,6 @@ not enough space for format expansion (Please submit full bug report at https://
 null
 num > 0
 numElements >= 0
-oP 'K
 object
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
@@ -1310,6 +1312,8 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
+wpctl reset --all --yes
+wpctl reset --all --yes --dry-run
 wpctl settings bluetooth.autoswitch-to-headset-profile
 wpctl settings monitor.alsa.enable-external-volume-control
 wpctl settings node.features.audio.mono

@@ -988,6 +988,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static s_newsCuratorStore;
@@ -2213,21 +2215,22 @@
               children: (0, _.jsx)(_.i6V, {}),
             }),
             _ = _ ? Math.max(0, _) : 0,
-            _ = _
-              ? null
-              : (0, _.jsx)("div", {
-                  onClick: _,
-                  className: _().CollapseButton,
-                  children: (0, _.jsx)("div", {
-                    style: {
-                      marginTop: `${_}px`,
-                    },
-                    className: _().DesktopButton,
-                    children: (0, _.jsx)(_.F2T, {
-                      angle: _ ? 180 : 0,
+            _ =
+              _ || _._.IN_GAMEPADUI
+                ? null
+                : (0, _.jsx)("div", {
+                    onClick: _,
+                    className: _().CollapseButton,
+                    children: (0, _.jsx)("div", {
+                      style: {
+                        marginTop: `${_}px`,
+                      },
+                      className: _().DesktopButton,
+                      children: (0, _.jsx)(_.F2T, {
+                        angle: _ ? 180 : 0,
+                      }),
                     }),
                   }),
-                }),
             _ = _
               ? null
               : (0, _.jsx)("div", {
@@ -2266,12 +2269,13 @@
               });
           }
           return (0, _.jsx)(_.Fragment, {
-            children: (0, _.jsx)("div", {
+            children: (0, _.jsx)(_._, {
               className: (0, _._)(
                 _().SidebarContainer,
                 _ && _().SidebarCollapsed,
               ),
               style: _,
+              "flow-children": "column",
               children: _
                 ? _
                 : (0, _.jsxs)("div", {
@@ -2295,7 +2299,8 @@
         const { bShouldIncludeLegalFooter: _, bShowUpcoming: _ } = _,
           _ =
             "Responsive_RequestMobileView" in window &&
-            window.Responsive_RequestMobileView;
+            window.Responsive_RequestMobileView,
+          _ = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -2319,17 +2324,18 @@
             (0, _.jsx)(_, {
               bIsUpcoming: _,
             }),
-            (0, _.jsx)("div", {
-              className: _().FilterSettingsCtn,
-              children: (0, _.jsxs)("div", {
-                className: (0, _._)(_().FilterLink, _().OpenFilterSettings),
-                onClick: () => _.fnOpenFilterSettings(!0),
-                children: [
-                  (0, _.jsx)(_.wB_, {}),
-                  (0, _._)("#EventCalendar_EditFilters"),
-                ],
+            !_ &&
+              (0, _.jsx)("div", {
+                className: _().FilterSettingsCtn,
+                children: (0, _.jsxs)("div", {
+                  className: (0, _._)(_().FilterLink, _().OpenFilterSettings),
+                  onClick: () => _.fnOpenFilterSettings(!0),
+                  children: [
+                    (0, _.jsx)(_.wB_, {}),
+                    (0, _._)("#EventCalendar_EditFilters"),
+                  ],
+                }),
               }),
-            }),
             _ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(_().SidebarLink, _().ForceResponsiveLink),
@@ -2353,7 +2359,7 @@
               (0, _.jsx)(
                 _._,
                 {
-                  _: `/${(0, _._)()}/${_}/`,
+                  href: `/${(0, _._)()}/${_}/`,
                   children: _,
                 },
                 `suggestion-${_._}`,
@@ -2559,7 +2565,7 @@
         return !_._.is_support && _
           ? null
           : (0, _.jsx)(_._, {
-              _: "/" + _,
+              href: "/" + _,
               children: (0, _.jsxs)("div", {
                 className: (0, _._)({
                   [_().NewsChannel]: !0,
@@ -3722,9 +3728,10 @@
                     },
                     children: (0, _.jsx)(_.i6V, {}),
                   }),
-                (0, _.jsxs)("div", {
+                (0, _.jsxs)(_._, {
                   className: _().RowContainer,
                   ref: _,
+                  "flow-children": "row",
                   children: [
                     _ || (0, _.jsx)(_._, {}),
                     (0, _.jsx)("div", {
@@ -4111,7 +4118,8 @@
             _._.IN_MOBILE_WEBVIEW &&
               this.props.location &&
               0 == this.props.history.length &&
-              this.props.history.push(this.props.location);
+              this.props.history.push(this.props.location),
+            (0, _._)();
         }
         componentDidUpdate(_, _) {
           (_.bUserIsLoggedIn == this.state.bUserIsLoggedIn &&
@@ -4555,11 +4563,12 @@
               ? this.ResetAllFilters
               : null;
           return (0, _.jsx)(_.Fragment, {
-            children: (0, _.jsxs)("div", {
+            children: (0, _.jsxs)(_._, {
               className: (0, _._)(
                 _().EventCalendarContainer,
                 this.state.bControlBarIsCollapsed ? _().CollapsedMenu : "",
               ),
+              "flow-children": "row",
               children: [
                 (0, _.jsx)(_._, {
                   children: this.state.modalEvent
@@ -4588,11 +4597,12 @@
                   }),
                 }),
                 (0, _.jsx)(_._, {
-                  children: (0, _.jsxs)("div", {
+                  children: (0, _.jsxs)(_._, {
                     className: (0, _._)(
                       _().ReserveControlSpace,
                       !this.state.bControlBarIsCollapsed && _().WideLeftGutter,
                     ),
+                    "flow-children": "column",
                     children: [
                       (0, _.jsx)(_._, {
                         children:

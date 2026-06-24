@@ -240,7 +240,7 @@ ssa(sv)a(sa(sv))
 stderr
 stderr@GLIBC_2.17
 steam-app%s
-steam-launch-wrapper version 0.20241025.0-13-ge6bc415
+steam-launch-wrapper version 0.20241025.0-14-g77b0caf
 steam-launch-wrapper: AppId = %s, TU_DEBUG = %s\n
 steam-launch-wrapper: VK_INSTANCE_LAYERS=%s\n
 strchr

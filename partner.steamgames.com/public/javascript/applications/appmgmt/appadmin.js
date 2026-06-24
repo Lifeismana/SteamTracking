@@ -20010,7 +20010,7 @@
     },
     35380: (e, t, r) => {
       "use strict";
-      r.d(t, { $5: () => o, rt: () => n, zl: () => a });
+      r.d(t, { $5: () => l, dE: () => o, rt: () => n, zl: () => a });
       var i = r(90626),
         s = r(17690);
       function n(e) {
@@ -20047,7 +20047,23 @@
           [e, t],
         );
       }
-      function o(e) {
+      function o(e, t) {
+        return (0, i.useMemo)(
+          () =>
+            (function (e, t) {
+              switch (t) {
+                case "sub":
+                  return { packageid: e };
+                case "bundle":
+                  return { bundleid: e };
+                default:
+                  return { appid: e };
+              }
+            })(e, t),
+          [e, t],
+        );
+      }
+      function l(e) {
         return (0, i.useMemo)(() => {
           if (null != e && e != s.sc) return { appid: e };
         }, [e]);

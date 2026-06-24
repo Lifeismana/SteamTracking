@@ -1,22 +1,6 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [19388, 67865],
+  [19388],
   {
-    chunkid: (module) => {
-      module.exports = {
-        Button: "_0BH1ydyFmSnUvoVK2hIc",
-        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
-        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
-        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
-        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
-        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
-        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
-        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
-        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
-        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
-        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
-        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
-      };
-    },
     chunkid: (module) => {
       module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
@@ -44,20 +28,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
-        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
-        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
-        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
-        "Size-3": "_389OPmdZoebw42_AlsUFxi",
-        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
-        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
-        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
-        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
-        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
       };
@@ -76,24 +46,6 @@
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
         "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
         "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Box: "_2YzOLNBx6TonKU0Zmp20l4",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Flex: "_3nHL7awgK1Qei1XivGvHMK",
-        Direction: "_3JCkAyd9cnB90tRcDLPp4W",
-        Justify: "_12ampOcrpRamy1y301kEaK",
-        Align: "_1SxQuUnaM-MXeF5UfssWve",
-        Gap: "ja5o2GZTopxfGJArsZgFh",
-        GapX: "_3KiTPfFvdkPH6ixij56nVM",
-        GapY: "_38cfDT7owcq-7PHlx-Bx2j",
-        Wrap: "dB7ipW28YN-_GytLR4EuE",
-        Inline: "LOeaKjPDMbdcAB54IFgyX",
       };
     },
     chunkid: (module) => {
@@ -128,11 +80,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         narrowWidth: "500px",
         "duration-app-launch": "800ms",
         SaleBackgroundOverlay: "_1WrAYASFyV0qtWIbXSGoo6",
@@ -148,6 +95,26 @@
         "ItemFocusAnim-green": "py_GNxYoVsLhd_dl_9gET",
         focusAnimation: "_2A2n77Lo9bIUZQZPHboK--",
         hoverAnimation: "_3_yvF83bH1kD4VUltagePZ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        storeMenuResponsiveModeWidth: "730px",
+        SuppressScrollOnBody: "CnyoUreRJIClNp1eHmLJd",
+        JumpListOuterCtn: "_1qM3MD9Kxqxlpfh2enyaRn",
+        BackgroundAnimation: "_6jFajm5oSsDCakzmQUBjs",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2xLwduE60Jczb3eD7-16pM",
+        "ItemFocusAnim-darkerGrey": "_1v5uoyav_s6AkBtqSV_xsh",
+        "ItemFocusAnim-darkGreySettings": "_16d0zmD7HaTy00za_ZnEHI",
+        "ItemFocusAnim-darkGrey": "mJJnjMXQw_zqMgD2_vK5C",
+        "ItemFocusAnim-grey": "_138NxcZy8rSQtaF1A-9jcN",
+        "ItemFocusAnim-translucent-white-10": "aroDEq70mXeRS5UgTxaB1",
+        "ItemFocusAnim-translucent-white-20": "c3hjUgCd-crxQ_zLQASBU",
+        "ItemFocusAnimBorder-darkGrey": "_3Uo890w8blA9DaaWqRURZF",
+        "ItemFocusAnim-green": "_17fP3PJ-2fdBkLfYqfFUAM",
+        focusAnimation: "_2YX4gcYKNIrb-SVdV6eFla",
+        hoverAnimation: "_34Xcqw6oj_gW04qaO-AGR0",
       };
     },
     chunkid: (module) => {
@@ -913,6 +880,32 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        storeMenuResponsiveModeWidth: "730px",
+        SuppressScrollOnBody: "_2H6nBXGQnWeZJ_k8tK-qeO",
+        SubMenuOuterCtn: "XRxbVx8hEC64irIt5ETl6",
+        isOpen: "H_vE_5qGWaDCAgxbzcWbG",
+        SubMenuCtn: "_1QP7mh3IZ6mkLZFarqOI6K",
+        SubMenuImage: "LPOLldAKahIuzg0JArLRU",
+        SubMenuItemCtn: "_3l8xeoR-wEUYEFOd8iTVOY",
+        SubMenuItemText: "_31NjlVCoc_kJqU4O6T3GaQ",
+        ImageWrapper: "_1b0D6GwIr3uJX-bYaBWXuU",
+        BackgroundAnimation: "_3CxKZ4N0RhDFwPqdzAtrMl",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3pZA6QmunSvkjmZI9Ndmcu",
+        "ItemFocusAnim-darkerGrey": "_3BffASPCHFV0VAgmPVl_kc",
+        "ItemFocusAnim-darkGreySettings": "qkh264Vz9Pv5rr6YfKhh1",
+        "ItemFocusAnim-darkGrey": "qD2mZ6w2eEWm1PhMc6xb6",
+        "ItemFocusAnim-grey": "_2mW-vk-aE8tlHuAW0uXkit",
+        "ItemFocusAnim-translucent-white-10": "_2b2eos74MIDM6zKt-lSfM4",
+        "ItemFocusAnim-translucent-white-20": "_1SYQ3QCW-iVm5eavl1lcD4",
+        "ItemFocusAnimBorder-darkGrey": "owLhAm1zN4SxTDUzDAzAc",
+        "ItemFocusAnim-green": "_1EuR8NR_c4-zx1TryKcZ2Q",
+        focusAnimation: "uz9ci2kXU2o-q-PstyP5_",
+        hoverAnimation: "_1_iqutzmsp1osmwqWLLqoV",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
         TrailerCarouselCtn: "_30Yfh62g3YeDgzOL-z9BnJ",
         VideoRow: "zje61fgPER-HdQgXObOdD",
         AppContent: "f8yx9l20TjHQcxhdbRlpy",
@@ -1354,200 +1347,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          size: _ = "3",
-          loading: _ = !0,
-          children: _,
-          color: _,
-          variant: _,
-          ..._
-        } = _;
-        return _ || !_
-          ? (0, _.jsxs)(_._, {
-              position: "relative",
-              ..._,
-              width: "fit-content",
-              children: [
-                (0, _.jsx)("div", {
-                  "data-visibility": !_,
-                  className: _.ChildContainer,
-                  children: _,
-                }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, _.jsx)(_, {
-                      size: _,
-                      color: _,
-                      variant: _,
-                    }),
-                  }),
-              ],
-            })
-          : (0, _.jsx)(_, {
-              size: _,
-              color: _,
-              variant: _,
-              ..._,
-            });
-      }
-      function _(_) {
-        const { className: _, color: _, ..._ } = (0, _._)(_, _);
-        return (0, _.jsx)("div", {
-          "data-accent-color": _,
-          className: _()(_, _.Spinner),
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`Size-${_}`],
-        },
-        {
-          prop: "variant",
-          className: (_) => _[`Variant-${_}`],
-        },
-      ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        _.preventDefault();
-      }
-      const _ = [
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`Size-${_}`],
-          },
-          {
-            prop: "variant",
-            className: (_) => _[`Variant-${_}`],
-          },
-          {
-            prop: "color",
-            dataProperty: (_) => ["accent-color", `${_}`],
-          },
-          {
-            prop: "width",
-            className: _.Width,
-            cssProperty: "--width",
-            responsive: !0,
-          },
-          {
-            prop: "minWidth",
-            className: _.MinWidth,
-            cssProperty: "--min-width",
-            responsive: !0,
-          },
-        ],
-        _ = function (_) {
-          const {
-              variant: _ = "default",
-              size: _ = "2",
-              minWidth: _ = "fit-content",
-              color: _,
-              loading: _,
-              children: _,
-              onClick: _,
-              icon: _,
-              focusable: _,
-              navProps: _,
-              ..._
-            } = _,
-            _ = _
-              ? (0, _.jsx)(_, {
-                  size: _,
-                  color: _,
-                  variant: "bright",
-                  children: _,
-                })
-              : _,
-            _ = _ ? void 0 : _,
-            _ = _ ?? _?.focusable ?? !!_,
-            _ = {
-              type: "button",
-              ...(0, _._)(
-                {
-                  ..._,
-                  variant: _,
-                  size: _,
-                  minWidth: _,
-                  color: _,
-                  className: _()(_.Button, _ && _.Icon),
-                  onClick: _,
-                },
-                _,
-              ),
-              children: _,
-            };
-          return _._.IN_GAMEPADUI && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("button", {
-                ..._,
-              });
-        },
-        _ = function (_) {
-          const {
-              variant: _ = "default",
-              size: _ = "2",
-              minWidth: _ = "fit-content",
-              disabled: _,
-              icon: _,
-              focusable: _,
-              navProps: _,
-              ..._
-            } = _,
-            _ = _ ? _ : void 0,
-            _ = (0, _._)(
-              {
-                onClick: _,
-                ..._,
-                variant: _,
-                size: _,
-                minWidth: _,
-                className: _()(_.Button, _ && _.Icon, (0, _._)()),
-              },
-              _,
-            );
-          return _._.IN_GAMEPADUI && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ..._,
-                ...(_ || {}),
-                focusable: _,
-              })
-            : (0, _.jsx)("a", {
-                ..._,
-              });
-        };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1799,136 +1598,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, (0, _._)(), _.className),
-            },
-            _,
-          ),
-          _ = _ ?? _?.focusable ?? !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          });
-        return _._.IN_GAMEPADUI && (_ || _)
-          ? (0, _.jsx)(_._, {
-              ...(_ || {}),
-              focusable: _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = _._;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.className, _.Flex),
-            },
-            _,
-          ),
-          _ = _ ?? _?.focusable ?? !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          }),
-          _ = (0, _._)(_.direction ?? "row");
-        return _._.IN_GAMEPADUI
-          ? (0, _.jsx)(_._, {
-              ...(_ || {}),
-              focusable: _,
-              "flow-children": _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "direction",
-          responsive: !0,
-          className: _.Direction,
-          cssProperty: "--direction",
-        },
-        {
-          prop: "justify",
-          responsive: !0,
-          className: _.Justify,
-          cssProperty: (_) => ["--justify", _(_)],
-        },
-        {
-          prop: "align",
-          responsive: !0,
-          className: _.Align,
-          cssProperty: "--align",
-        },
-        {
-          prop: "gap",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapX",
-          responsive: !0,
-          className: _.GapX,
-          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapY",
-          responsive: !0,
-          className: _.GapY,
-          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
-        },
-        {
-          prop: "wrap",
-          responsive: !0,
-          className: _.Wrap,
-          cssProperty: "--wrap",
-        },
-        {
-          prop: "inline",
-          responsive: !0,
-          className: _.Inline,
-        },
-      ];
-      function _(_) {
-        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
@@ -2059,16 +1728,6 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        return _.Reset;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4164,6 +3823,133 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { hardwareDetail: _, reservedHardwareDetail: _ } = _,
+          _ = (0, _._)(_.packageid, _?.packageid),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplayCancelReservationButton"),
+          [_, _, _] = (0, _._)(),
+          _ = (0, _._)(_?.packageid),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_.packageid),
+          { data: _ } = (0, _._)(_);
+        let _ = _._.Localize("#Sale_ReserveNow_Change"),
+          _ = _._.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_2",
+            (0, _.jsx)("b", {
+              children: _?.name ?? "",
+            }),
+          ),
+          _ = _._.LocalizeReact(
+            "#Sale_Reservation_Change_NoDeposit_1",
+            (0, _.jsx)("b", {
+              children: _?.name ?? "",
+            }),
+          );
+        return (
+          _.queue_in_waitlist &&
+            ((_ = _._.Localize("#Reservation_Change_WaitList")),
+            (_ = _._.LocalizeReact(
+              "#Reservation_Change_WaitList_Desc2",
+              (0, _.jsx)("b", {
+                children: _?.name ?? "",
+              }),
+            ))),
+          _?.position_is_waitlist &&
+            (_ = _._.LocalizeReact(
+              "#Reservation_Change_WaitList_Desc1",
+              (0, _.jsx)("b", {
+                children: _?.name ?? "",
+              }),
+            )),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
+            children: [
+              (0, _.jsx)(_._, {
+                hardwareDetail: _,
+              }),
+              (0, _.jsxs)(_._, {
+                onClick: _,
+                disabled: _,
+                children: [
+                  Boolean(_ && !_) &&
+                    (0, _.jsx)(_._, {
+                      string: _._.Localize("#Updating"),
+                      size: "small",
+                    }),
+                  _,
+                ],
+              }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  className: _.ErrorStylesWithIcon,
+                  children: _,
+                }),
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsxs)(_._, {
+                  closeModal: _,
+                  strTitle: _,
+                  strOKButtonText: _._.Localize("#Button_Yes"),
+                  strCancelButtonText: _._.Localize("#Button_Dismiss"),
+                  onOK: () => {
+                    _(!0),
+                      _.mutateAsync()
+                        .then((_) => {
+                          _?.token?.reason ||
+                            (_ ||
+                              _(_._.Localize("#Sale_Reservations_BusyServer")),
+                            _(!0));
+                        })
+                        .catch(() => {
+                          _?.token?.reason ||
+                            (_(_._.Localize("#Sale_Reservations_BusyServer")),
+                            _(!0));
+                        });
+                  },
+                  children: [
+                    (0, _.jsx)("p", {
+                      children: _,
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("p", {
+                      children: _,
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("p", {
+                      children: _._.Localize("#Dialog_AreYouSure"),
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -4306,6 +4092,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4315,9 +4102,9 @@
           _._,
           _._.EUNIVERSE,
           _._,
-          _._.EUNIVERSE,
-          _._,
-          ["HK", "JP", "KR", "TW"]),
+          _._.EUNIVERSE == _._ ? 409860 : 4165910),
+        _ = ["HK", "JP", "KR", "TW"],
+        _ = ["HK", "JP", "TW"],
         _ =
           _._.EUNIVERSE == _._
             ? [
@@ -4328,8 +4115,11 @@
                 595603, 595604, 595605, 946113, 946114, 1558609, 1629447,
                 1629446, 1629458, 1629460, 1629484, 1629486,
               ];
-      function _(_) {
-        return _.some((_) => _.includes(_)) && _.includes(_._.country_code);
+      function _(_, _) {
+        return (
+          _.some((_) => _.includes(_)) &&
+          (_ == _ ? _ : _).includes(_._.country_code)
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4361,6 +4151,309 @@
             (_[(_.k_EPurchaseReservationState_UnavailableRegion = 6)] =
               "k_EPurchaseReservationState_UnavailableRegion");
         })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            packageid: _,
+            strAction: _,
+            strDesc: _,
+            onCancelSucceeded: _,
+          } = _,
+          _ = (0, _._)(void 0, _),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplayCancelReservationButton"),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.reserverow),
+          children: [
+            (0, _.jsxs)(_._, {
+              onClick: _,
+              disabled: _,
+              children: [
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    string: _._.Localize("#Saving"),
+                    size: "small",
+                  }),
+                _,
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().ErrorStylesWithIcon,
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                closeModal: _,
+                strTitle: _,
+                strDescription: _,
+                strOKButtonText: _._.Localize("#Button_Confirm"),
+                strCancelButtonText: _._.Localize("#Button_Dismiss"),
+                onOK: () => {
+                  _(!0),
+                    _.mutateAsync()
+                      .then((_) => {
+                        _?.token?.reason ||
+                          (_ ||
+                            _(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0),
+                          _ && _());
+                      })
+                      .catch(() => {
+                        _?.token?.reason ||
+                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
+                          _(!0));
+                      })
+                      .finally(() => _(!1));
+                },
+              }),
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().reserverow, "ReservationUnavailable"),
+          children: (0, _.jsx)(_._, {
+            disabled: !0,
+            children: _._.Localize("#Sale_ReserveUnavailable"),
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { packageid: _, label: _, bInputDisabled: _ } = _,
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _._)("DisplyDirectReservation"),
+          _ = (0, _._)(_, void 0),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(!0),
+                _.mutateAsync()
+                  .then((_) => {
+                    _?.token?.reason ||
+                      (_ || _(_._.Localize("#Sale_Reservations_BusyServer")),
+                      _(!0));
+                  })
+                  .catch(() => {
+                    _?.token?.reason ||
+                      (_(!0), _(_._.Localize("#Sale_Reservations_BusyServer")));
+                  })
+                  .finally(() => _(!1));
+            },
+            [_?.token?.reason, _],
+          );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.reserverow, "ReservationDirectAction"),
+          children: [
+            (0, _.jsxs)(_._, {
+              onClick: _,
+              disabled: _ || _,
+              children: [
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    string: _._.Localize("#Saving"),
+                    size: "small",
+                  }),
+                _,
+              ],
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("div", {
+                className: _().ErrorStylesWithIcon,
+                children: _,
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { hardwareDetail: _ } = _,
+          _ = (0, _._)(_.packageid),
+          { data: _ } = (0, _._)(_);
+        if (_.time_reserved) {
+          const _ = (0, _.jsx)(_._, {
+            bSingleLine: !0,
+            dateAndTime: _.time_reserved,
+            bOnlyDate: !0,
+          });
+          return _.position_is_waitlist
+            ? (0, _.jsx)("div", {
+                className: _.alreadyreserved,
+                children: _?.name
+                  ? _._.LocalizeReact(
+                      "#Reservation_In_Waitlist_WithName",
+                      _.name,
+                      _,
+                    )
+                  : _._.LocalizeReact("#Reservation_In_Waitlist", _),
+              })
+            : (0, _.jsx)("div", {
+                className: _.alreadyreserved,
+                children: _?.name
+                  ? _._.LocalizeReact(
+                      "#Sale_AlreadyReserved_WithName",
+                      _.name,
+                      _,
+                    )
+                  : _._.LocalizeReact("#Sale_AlreadyReserved", _),
+              });
+        }
+        return _.position_is_waitlist
+          ? (0, _.jsx)("div", {
+              className: _.alreadyreserved,
+              children: _?.name
+                ? _._.Localize(
+                    "#Reservation_In_Waitlist_WithName_NoDate",
+                    _.name,
+                  )
+                : _._.Localize("#Reservation_In_Waitlist_NoDate"),
+            })
+          : (0, _.jsx)("div", {
+              className: _.alreadyreserved,
+              children: _?.name
+                ? _._.Localize("#Sale_AlreadyReserved_WithName_NoDate", _.name)
+                : _._.Localize("#Sale_AlreadyReserved_NoDate"),
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            if (
+              (!_ && !_) ||
+              (!_ && !_) ||
+              (!_?.requires_reservation && !_?.requires_reservation)
+            )
+              return (
+                console.log(
+                  "useUpdateReservationMutation: package is not loaded or does not require reservations",
+                ),
+                !1
+              );
+            if (!_._.logged_in)
+              return (
+                console.log(
+                  "useUpdateReservationMutation: Cannot reserve when user is not logged in",
+                ),
+                !1
+              );
+            const _ = _._.Init(_._);
+            _ && _.Body().add_packages_to_reserve(_),
+              _ && _.Body().add_packages_to_unreserve(_),
+              _.Body().set_country_code(_._.country_code);
+            const _ = await _._.UpdatePackageReservations(_, _);
+            return _.GetEResult() == _._
+              ? ((0, _._)(
+                  _.Body().reservation_status().length <= 2,
+                  "We only expected 2 states reservation update states back",
+                ),
+                _.Body()
+                  .reservation_status()
+                  .forEach((_) => {
+                    let _ = _.packageid() == _?.packageid ? _ : _;
+                    const _ = {
+                      ..._,
+                    };
+                    (_.reservation_state = _.reservation_state()),
+                      (_.expired = _.expired()),
+                      (_.time_expires = _.time_expires()),
+                      (_.time_reserved = _.time_reserved()),
+                      (_.rtime_estimated_notification =
+                        _.rtime_estimated_notification()),
+                      (_.notificaton_token = _.notificaton_token()),
+                      _.setQueryData((0, _._)(_?.packageid), _);
+                  }),
+                !0)
+              : (console.log(
+                  `useUpdateReservationMutation Failed to update reservation for package: add ${_} | remove ${_} error code ${_.GetEResult()}`,
+                ),
+                !1);
+          },
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4472,6 +4565,173 @@
               : {}
           : {};
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, subMenu: _, language: _, styleVariation: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useMemo)(
+            () =>
+              _?.menu_items?.some(
+                (_) =>
+                  !(
+                    !_.sub_menu_icon?.localized_media?.[_]?.image &&
+                    !_.sub_menu_icon?.localized_media?.[_.Bhc]?.image
+                  ),
+              ),
+            [_, _?.menu_items],
+          ),
+          _ = (0, _.useCallback)(() => {
+            _ && (_.current && window.clearTimeout(_.current), _(!0));
+          }, [_]),
+          _ = (0, _.useCallback)(() => {
+            _ &&
+              (_.current && window.clearTimeout(_.current),
+              (_.current = window.setTimeout(() => _(!1), 180)));
+          }, [_]);
+        return (0, _.jsx)(_._, {
+          className: (0, _._)({
+            [_().SubMenuOuterCtn]: _ == _.k_SubMenu,
+            [_().isOpen]: _ && _ == _.k_SubMenu,
+            [_().HasImageIcons]: _ && _ == _.k_SubMenu,
+            [_().JumpListOuterCtn]: _ == _.k_JumpList,
+          }),
+          onMouseEnter: _,
+          onMouseLeave: _,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)({
+              [_().SubMenuCtn]: _ == _.k_SubMenu,
+            }),
+            style: {
+              ...(0, _._)(_, _, _),
+            },
+            children: _.menu_items.map((_) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  className: (0, _._)({
+                    [_().SubMenuItemCtn]: _ == _.k_SubMenu,
+                  }),
+                  children: (0, _.jsx)(_, {
+                    language: _,
+                    mainItem: _,
+                    subMenu: _,
+                    clanAccountID: _.clanSteamID.GetAccountID(),
+                    event: _,
+                    styleVariation: _,
+                  }),
+                },
+                "submenuitem" + _.unique_id,
+              ),
+            ),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            language: _,
+            mainItem: _,
+            subMenu: _,
+            clanAccountID: _,
+            event: _,
+            styleVariation: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(),
+          [_, _, _, _] = (0, _._)(() => {
+            const _ = _.sub_menu_url && _.sub_menu_url?.startsWith("#");
+            let _ =
+              _.localized_sub_menu_name?.[_] ||
+              _.localized_sub_menu_name?.[_.Bhc];
+            if (_ && (!_ || 0 == _.trim().length)) {
+              const _ = _.sub_menu_url?.substring(1),
+                _ = _.jsondata.sale_sections.find(
+                  (_) => _.section_anchor === _,
+                );
+              _ &&
+                ((_ = (0, _._)(_, _, _, _, _.eLocation, !0)?.toString()),
+                (_ && 0 != _.trim().length) || (_ = void 0));
+            }
+            return [
+              _.sub_menu_url,
+              !_ && _(_.sub_menu_url, _),
+              _ ?? "unknown",
+              _.sub_menu_icon?.localized_media?.[_]?.image ||
+                _.sub_menu_icon?.localized_media?.[_.Bhc]?.image ||
+                void 0,
+            ];
+          });
+        let _ = _.label_color || "#DBDFE2";
+        return (
+          _
+            ? (_ = _.selected_label_color || _)
+            : _ && (_ = _.hover_label_color || _),
+          (0, _.jsxs)(_._, {
+            className: (0, _._)({
+              [_().SubMenuItemText]: _ == _.k_SubMenu,
+            }),
+            style: {
+              color: _,
+            },
+            href: _,
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+            children: [
+              (0, _.jsx)("div", {
+                className: _().TextLabel,
+                children: _,
+              }),
+              Boolean(_) &&
+                (0, _.jsx)("span", {
+                  className: _().ImageWrapper,
+                  children: (0, _.jsx)("img", {
+                    src: (0, _._)(_, _),
+                    alt: _,
+                    className: _().SubMenuImage,
+                  }),
+                }),
+            ],
+          })
+        );
+      }
+      function _(_, _) {
+        try {
+          const _ = window.location.pathname.toLowerCase(),
+            _ = new URL(_ || ""),
+            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
+          return _.pathname.toLocaleLowerCase() === _ || _ === _;
+        } catch {
+          return !1;
+        }
+      }
+      !(function (_) {
+        (_[(_.k_SubMenu = 0)] = "k_SubMenu"),
+          (_[(_.k_JumpList = 1)] = "k_JumpList");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -10377,6 +10637,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = "broadcast-preroll-",
@@ -11152,308 +11413,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: async () => {
-            if (
-              (!_ && !_) ||
-              (!_ && !_) ||
-              (!_?.requires_reservation && !_?.requires_reservation)
-            )
-              return (
-                console.log(
-                  "useUpdateReservationMutation: package is not loaded or does not require reservations",
-                ),
-                !1
-              );
-            if (!_._.logged_in)
-              return (
-                console.log(
-                  "useUpdateReservationMutation: Cannot reserve when user is not logged in",
-                ),
-                !1
-              );
-            const _ = _._.Init(_._);
-            _ && _.Body().add_packages_to_reserve(_),
-              _ && _.Body().add_packages_to_unreserve(_),
-              _.Body().set_country_code(_._.country_code);
-            const _ = await _._.UpdatePackageReservations(_, _);
-            return _.GetEResult() == _._
-              ? ((0, _._)(
-                  _.Body().reservation_status().length <= 2,
-                  "We only expected 2 states reservation update states back",
-                ),
-                _.Body()
-                  .reservation_status()
-                  .forEach((_) => {
-                    let _ = _.packageid() == _?.packageid ? _ : _;
-                    const _ = {
-                      ..._,
-                    };
-                    (_.reservation_state = _.reservation_state()),
-                      (_.expired = _.expired()),
-                      (_.time_expires = _.time_expires()),
-                      (_.time_reserved = _.time_reserved()),
-                      (_.rtime_estimated_notification =
-                        _.rtime_estimated_notification()),
-                      (_.notificaton_token = _.notificaton_token()),
-                      _.setQueryData((0, _._)(_?.packageid), _);
-                  }),
-                !0)
-              : (console.log(
-                  `useUpdateReservationMutation Failed to update reservation for package: add ${_} | remove ${_} error code ${_.GetEResult()}`,
-                ),
-                !1);
-          },
-        });
-      }
-      function _(_) {
-        const { packageid: _, strAction: _, strDesc: _ } = _,
-          _ = _(void 0, _),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplayCancelReservationButton"),
-          [_, _, _] = (0, _._)();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Saving"),
-                    size: "small",
-                  }),
-                _,
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _().ErrorStylesWithIcon,
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_._, {
-                closeModal: _,
-                strTitle: _,
-                strDescription: _,
-                strOKButtonText: _._.Localize("#Button_Confirm"),
-                strCancelButtonText: _._.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  _(!0),
-                    _.mutateAsync()
-                      .then((_) => {
-                        _?.token?.reason ||
-                          (_ ||
-                            _(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .catch(() => {
-                        _?.token?.reason ||
-                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .finally(() => _(!1));
-                },
-              }),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { hardwareDetail: _ } = _,
-          _ = (0, _._)(_.packageid),
-          { data: _ } = (0, _._)(_);
-        if (_.time_reserved) {
-          const _ = (0, _.jsx)(_._, {
-            bSingleLine: !0,
-            dateAndTime: _.time_reserved,
-            bOnlyDate: !0,
-          });
-          return (0, _.jsx)("div", {
-            className: _.alreadyreserved,
-            children: _?.name
-              ? _._.LocalizeReact("#Sale_AlreadyReserved_WithName", _.name, _)
-              : _._.LocalizeReact("#Sale_AlreadyReserved", _),
-          });
-        }
-        return (0, _.jsx)("div", {
-          className: _.alreadyreserved,
-          children: _?.name
-            ? _._.Localize("#Sale_AlreadyReserved_WithName_NoDate", _.name)
-            : _._.Localize("#Sale_AlreadyReserved_NoDate"),
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { packageid: _, label: _, bInputDisabled: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplyDirectReservation"),
-          _ = _(_, void 0),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _(!0),
-                _.mutateAsync()
-                  .then((_) => {
-                    _?.token?.reason ||
-                      (_ || _(_._.Localize("#Sale_Reservations_BusyServer")),
-                      _(!0));
-                  })
-                  .catch(() => {
-                    _?.token?.reason ||
-                      (_(!0), _(_._.Localize("#Sale_Reservations_BusyServer")));
-                  })
-                  .finally(() => _(!1));
-            },
-            [_?.token?.reason, _],
-          );
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_.reserverow, "ReservationDirectAction"),
-          children: [
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _ || _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Saving"),
-                    size: "small",
-                  }),
-                _,
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _().ErrorStylesWithIcon,
-                children: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_().reserverow, "ReservationUnavailable"),
-          children: (0, _.jsx)(_._, {
-            disabled: !0,
-            children: _._.Localize("#Sale_ReserveUnavailable"),
-          }),
-        });
-      }
-      function _(_) {
-        const { hardwareDetail: _, reservedHardwareDetail: _ } = _,
-          _ = _(_.packageid, _?.packageid),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          _ = (0, _._)("DisplayCancelReservationButton"),
-          [_, _, _] = (0, _._)(),
-          _ = (0, _._)(_?.packageid),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_.packageid),
-          { data: _ } = (0, _._)(_);
-        let _ = _._.Localize("#Sale_ReserveNow_Change"),
-          _ = _._.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_2",
-            (0, _.jsx)("b", {
-              children: _?.name ?? "",
-            }),
-          ),
-          _ = _._.LocalizeReact(
-            "#Sale_Reservation_Change_NoDeposit_1",
-            (0, _.jsx)("b", {
-              children: _?.name ?? "",
-            }),
-          );
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
-          children: [
-            (0, _.jsx)(_, {
-              hardwareDetail: _,
-            }),
-            (0, _.jsxs)(_._, {
-              onClick: _,
-              disabled: _,
-              children: [
-                Boolean(_ && !_) &&
-                  (0, _.jsx)(_._, {
-                    string: _._.Localize("#Updating"),
-                    size: "small",
-                  }),
-                _,
-              ],
-            }),
-            Boolean(_) &&
-              (0, _.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsxs)(_._, {
-                closeModal: _,
-                strTitle: _,
-                strOKButtonText: _._.Localize("#Button_Yes"),
-                strCancelButtonText: _._.Localize("#Button_Dismiss"),
-                onOK: () => {
-                  _(!0),
-                    _.mutateAsync()
-                      .then((_) => {
-                        _?.token?.reason ||
-                          (_ ||
-                            _(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      })
-                      .catch(() => {
-                        _?.token?.reason ||
-                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
-                          _(!0));
-                      });
-                },
-                children: [
-                  (0, _.jsx)("p", {
-                    children: _,
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("p", {
-                    children: _,
-                  }),
-                  (0, _.jsx)("br", {}),
-                  (0, _.jsx)("p", {
-                    children: _._.Localize("#Dialog_AreYouSure"),
-                  }),
-                ],
-              }),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11532,6 +11496,11 @@
               (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
               (_ = "" + _.getFullYear());
             break;
+          case "#Sale_Reservation_BetweenNowAndLastDay":
+            (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
+              (_ = "" + new Date(_.getFullYear(), _.getMonth(), 0).getDate()),
+              (_ = "" + _.getFullYear());
+            break;
           case "#Sale_Reservation_RelativeWeekly":
             {
               const _ = _._.GetTimeNowWithOverride(),
@@ -11560,6 +11529,7 @@
           }),
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return !(
           _.requires_reservation ||
@@ -11742,7 +11712,7 @@
       }
       function _(_) {
         const { hardwareDetail: _ } = _;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           packageid: _.packageid,
           strAction: _._.Localize("#Sale_CancelReservation"),
           strDesc: _._.Localize("#Sale_Reservation_CancelAreYouSure_NoDeposit"),
@@ -11752,7 +11722,7 @@
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.reserverowReserved, "ReservationReserved"),
           children: [
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
               ..._,
             }),
             (0, _.jsx)(_, {
@@ -11837,7 +11807,7 @@
       }
       function _(_) {
         const { hardwareDetail: _ } = _;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           packageid: _.packageid,
           label: _._.Localize("#Sale_ReserveNow_NoDeposit"),
         });
@@ -11854,7 +11824,7 @@
               ..._,
             });
           case _._.k_EPurchaseReservationState_UnavailableRegion:
-            return (0, _.jsx)(_, {});
+            return (0, _.jsx)(_._, {});
           case _._.k_EPurchaseReservationState_CancelPendingRefund:
           case _._.k_EPurchaseReservationState_NotReserved:
           case _._.k_EPurchaseReservationState_Consumed:
@@ -11866,7 +11836,7 @@
                 `Unexpected reservation package matches me ${_?.packageid} == ${_.packageid}`,
               ),
               _
-                ? (0, _.jsx)(_, {
+                ? (0, _.jsx)(_._, {
                     ..._,
                   })
                 : (0, _.jsx)(_, {
@@ -11898,7 +11868,7 @@
           _ = null,
           _ = !1;
         if (_ != _._.k_LoadFailure && _)
-          if ((0, _._)(_))
+          if ((0, _._)(_, _))
             (_ = !0),
               (_ =
                 _ === _._
@@ -11909,15 +11879,25 @@
                         href: "https://steamdeck.komodo.jp",
                       }),
                     )
-                  : (0, _._)(
-                      "#Sale_Reservation_Komodo_Generic",
-                      _ ?? _._.Localize("#AppTypeLabel_hardware"),
-                      (0, _.jsx)("a", {
-                        className: _.Link,
-                        href: "https://komodostation.com/",
-                        children: "komodostation.com",
-                      }),
-                    ));
+                  : _ == _._
+                    ? (0, _._)(
+                        "#Sale_Reservation_Komodo_Generic_NoSk",
+                        _ ?? _._.Localize("#AppTypeLabel_hardware"),
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://komodostation.com/",
+                          children: "komodostation.com",
+                        }),
+                      )
+                    : (0, _._)(
+                        "#Sale_Reservation_Komodo_Generic",
+                        _ ?? _._.Localize("#AppTypeLabel_hardware"),
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://komodostation.com/",
+                          children: "komodostation.com",
+                        }),
+                      ));
           else if (_ && _.some((_) => !_.allow_purchase_in_country))
             (_ = !0),
               (_ = _._.Localize("#Sale_Reservation_NotAvailableCountry"));
@@ -12526,7 +12506,7 @@
           _ = _.internal_section_title?.trim();
         if ((_?.length ?? 0) > 0) {
           if (_ == _._ || _ == _._)
-            return 0 == _?.trim().length
+            return 0 == _?.trim().length || _
               ? _
               : (0, _.jsxs)(_.Fragment, {
                   children: [
@@ -12542,7 +12522,7 @@
                   ],
                 });
           if (_ == _._)
-            return 0 == _?.trim().length
+            return 0 == _?.trim().length || _
               ? _
               : (0, _.jsxs)(_.Fragment, {
                   children: [
@@ -19768,6 +19748,7 @@
                   bSingleLineMode: !0,
                   bHidePrePurchase: _.type == _._._,
                   bPreferWholeNumbers: _.type == _._._,
+                  bHideNewTag: _.type == _._._,
                   strContainerClassName: _().PriceCtn,
                   strDiscountAndPriceClassName: _().PriceDiscount,
                   strPriceFormattedClassName: _().PriceFormatted,
@@ -19822,6 +19803,7 @@
                           strDiscountAndPriceClassName: _().PriceDiscount,
                           bHidePrePurchase: _.type == _._._,
                           bPreferWholeNumbers: _.type == _._._,
+                          bHideNewTag: _.type == _._._,
                           strPriceFormattedClassName: _().PriceFormatted,
                         }),
                       ],
@@ -19838,14 +19820,40 @@
             })
           : null;
       }
-      function _(_) {
-        return null;
-      }
-      const _ = _;
-      function _(_) {
-        return null;
-      }
-      const _ = _;
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : function (_) {
+              return null;
+            };
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : function (_) {
+              return null;
+            };
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { hardwareDetail: _, storeItemReleaseInfo: _ } = _,
@@ -19921,11 +19929,14 @@
             className: (0, _._)(_.noreserve, "NoReserverMsg"),
             children: _._.Localize("#Sale_Reservation_CanceledPendingRefund"),
           });
+        const _ = !!_ && (0, _._)(_.reservation_state),
+          _ =
+            _.collection_time_active > 0 && _.collection_time_active < _._.NOW;
         if (
           _.requires_reservation &&
           !_.reservation_not_allowed &&
           _.collection_time_active &&
-          _.collection_time_active > _._.NOW
+          (!_ || _)
         )
           return (0, _.jsx)("div", {
             className: _.purchaseaction,
@@ -19934,6 +19945,8 @@
               reservationAdvancedSettings:
                 _.internal_section_data?.reservation_advanced,
               storeItemReleaseInfo: _,
+              bShuffleInProgress: _.collection_time_active < _._.NOW,
+              bHasSomeReservation: _,
             }),
           });
         if (_ && _.is_coming_soon)
@@ -19944,9 +19957,8 @@
               storeItemReleaseInfo: _,
             }),
           });
-        const _ = (0, _._)(_.reservation_state);
-        return (_.requires_reservation && !_ && _.queue_in_waitlist) ||
-          (_ && _.position_is_waitlist)
+        const _ = (!_ && _.queue_in_waitlist) || (_ && _.position_is_waitlist);
+        return _.requires_reservation && _
           ? (0, _.jsx)("div", {
               className: _.purchaseaction,
               children: (0, _.jsx)(_, {
@@ -19954,6 +19966,7 @@
                 reservationAdvancedSettings:
                   _.internal_section_data?.reservation_advanced,
                 reservedHardwareDetail: _,
+                bShuffleInProgress: _,
               }),
             })
           : (0, _.jsx)(_.Fragment, {
@@ -20212,11 +20225,25 @@
         ),
         _ = (0, _.createContext)(null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return null;
-      }
-      const _ = _;
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : function (_) {
+              return null;
+            };
       function _(_) {
         return _.sort().join("_");
       }
@@ -20379,6 +20406,8 @@
                   strDiscountAndPriceClassName: _().PriceDiscount,
                   bHidePrePurchase: !0,
                   strPriceFormattedClassName: _().PriceFormatted,
+                  bPreferWholeNumbers: _?.type == _._._,
+                  bHideNewTag: _?.type == _._._,
                 }),
               ],
             }),
@@ -20568,12 +20597,21 @@
           _ = _(_, _, _.unique_id),
           _ = _.find((_) => _.tuple_id == _),
           _ = (0, _._)(_?.package_id),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        if (_ && _.final_price_in_cents) {
-          const _ = (0, _._)(_._.country_code.toUpperCase());
+        if (_ && _.final_price_in_cents && _) {
+          let _ = _.formatted_final_price;
+          if (_.type == _._._) {
+            const _ = (0, _._)(_._.country_code.toUpperCase()),
+              _ = {
+                ...(0, _._)(_),
+                bWholeUnitsOnly: !0,
+              };
+            _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
+          }
           return (0, _.jsx)("div", {
             className: _().StaticPrice,
-            children: (0, _._)(Number(_.final_price_in_cents), _),
+            children: _,
           });
         }
         return null;
@@ -20587,20 +20625,29 @@
           } = _,
           _ = (0, _._)(_.package_id),
           { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = _(_, _, _.unique_id),
           _ = _.find((_) => _.tuple_id == _),
           _ = (0, _._)(_?.package_id),
           { data: _ } = (0, _._)(_);
-        if (_ && _) {
+        if (_ && _ && _) {
           const _ =
               Number(_.final_price_in_cents) - Number(_.final_price_in_cents),
             _ = (0, _._)(_._.country_code.toUpperCase());
+          let _ = "";
+          if (_.type == _._._) {
+            const _ = {
+              ...(0, _._)(_),
+              bWholeUnitsOnly: !0,
+            };
+            _ = (0, _._)(_, _);
+          } else _ = (0, _._)(_, _);
           return (0, _.jsxs)("div", {
             className: _().DeltaPrice,
             children: [
               "(",
-              (0, _.jsxs)("span", {
-                children: [_ > 0 ? "+" : "", (0, _._)(_, _)],
+              (0, _.jsx)("span", {
+                children: _ > 0 ? "+" : "",
               }),
               ")",
             ],
@@ -24262,6 +24309,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -24273,7 +24321,7 @@
             section: _,
             selected: _,
           } = _,
-          [_] = (0, _._)(() => [_.tab_highlight_label_color]);
+          [_] = (0, _._)(() => [_?.tab_highlight_label_color]);
         _.useEffect(() => {
           _ &&
             document.documentElement.style.setProperty(
@@ -24401,6 +24449,7 @@
               )
                 return !1;
               if (
+                _.package_allow_list &&
                 _.package_allow_list?.length > 0 &&
                 !_.package_allow_list.some((_) => _.BOwnsPackage(_))
               )
@@ -24415,7 +24464,7 @@
             })(_, _, _, _),
           ),
         );
-        return _;
+        return _ ?? [];
       }
       function _(_) {
         const {
@@ -24429,7 +24478,7 @@
           [_, _] = (0, _._)(),
           _ = _(_.tabs, _, _, _),
           _ = (0, _._)(),
-          _ = _.useRef(void 0);
+          _ = _.useRef(null);
         _.useEffect(() => {
           const _ = document.getElementById("Tab_" + _.unique_id);
           if (_ && _?.current?.parentElement) {
@@ -24461,14 +24510,19 @@
           return null;
         const _ = (0, _._)(_().SaleSectionTabsTab),
           _ = (0, _._)(_, _, _);
-        if (_?.tab_bar_bg_image?.length > 0) {
+        if (_ && _.tab_bar_bg_image && _.tab_bar_bg_image?.length > 0) {
           const _ = _._.GenerateURLFromHashAndExt(
             _.clanSteamID,
             _.tab_bar_bg_image,
           );
           _.background = `url(${_})`;
         }
-        return (0, _.jsx)("div", {
+        const _ =
+          _ &&
+          _.tab_jump_list &&
+          _.tab_jump_list.menu_items &&
+          _.tab_jump_list.menu_items.length > 0;
+        return (0, _.jsxs)("div", {
           className: (0, _._)({
             [_().SaleSection]: !0,
             [_().SaleSectionTabs]: !0,
@@ -24478,35 +24532,44 @@
           ref: _,
           style: _,
           _: _._ + _.unique_id,
-          children: (0, _.jsx)(_._, {
-            className: (0, _._)({
-              [_().SaleSectionTabContainer]: !0,
-            }),
-            children: (0, _.jsx)("div", {
+          children: [
+            (0, _.jsx)(_._, {
               className: (0, _._)({
-                [_().SaleSectionContainer]: !0,
-                [_().SaleSectionTabsRow]: !0,
+                [_().SaleSectionTabContainer]: !0,
               }),
-              ref: _,
-              children: _.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    section: _,
-                    selected: _ === _,
-                    tab: _,
-                    language: _,
-                    classNames: (0, _._)(
-                      _,
-                      _ === _ && _().SaleSectionTabsSelected,
-                    ),
-                    onTabSelected: _,
-                  },
-                  "Tab_" + _.unique_id,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)({
+                  [_().SaleSectionContainer]: !0,
+                  [_().SaleSectionTabsRow]: !0,
+                }),
+                ref: _,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      section: _,
+                      selected: _ === _,
+                      tab: _,
+                      language: _,
+                      classNames: (0, _._)(
+                        _,
+                        _ === _ && _().SaleSectionTabsSelected,
+                      ),
+                      onTabSelected: _,
+                    },
+                    "Tab_" + _.unique_id,
+                  ),
                 ),
-              ),
+              }),
             }),
-          }),
+            _ &&
+              (0, _.jsx)(_._, {
+                ..._,
+                subMenu: _.tab_jump_list,
+                bIsPreview: _,
+                styleVariation: _._.k_JumpList,
+              }),
+          ],
         });
       }
       const _ = (_) => {
@@ -24643,6 +24706,7 @@
                   activeTab: _,
                   onTabSelected: _,
                   hideActiveTab: !0,
+                  bIsPreview: _,
                 })
               : _
                 ? (0, _.jsx)("div", {

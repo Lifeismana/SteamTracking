@@ -85,9 +85,8 @@ var CLSTAMP = "steamdb";
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
-            ON_DECK: !1,
             ON_FRAME: !1,
-            IS_STEAMOS_MANAGEMENT_ENABLED: !1,
+            IS_STEAMOS: !1,
             ON_STEAMOS_CLIENT_BRANCH: !1,
             IN_GAMESCOPE: !1,
             IN_LOGIN: !1,
@@ -552,6 +551,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [9489], () => _(42118));
+  var _ = _._(void 0, [9489], () => _(13664));
   _ = _._(_);
 })();

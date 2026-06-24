@@ -1070,7 +1070,7 @@
     "ChatRoom_GameInvite_PartyMore": "+ %1$s más",
     "ChatRoom_GameInvite_Dismissed": "%1$s te invitó a jugar %2$s%3$s",
     "ChatRoom_GameInvite_YouInvited": "Invitaste a %1$s a jugar %2$s%3$s",
-    "ChatRoom_GameInvite_Accepted": "Has aceptado una invitación para jugar a %1$s%2$s",
+    "ChatRoom_GameInvite_Accepted": "Has aceptado una invitación para jugar %1$s%2$s",
     "ChatRoom_GameInvite_AcceptOnPC": "Puedes aceptar esta invitación desde tu PC.",
     "ChatRoom_GameInvite_UnreleasedGame": "Juego no publicado",
     "ChatRoom_PlayestInvite_ViewInvite": "Ver invitación",

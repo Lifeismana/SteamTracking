@@ -842,6 +842,7 @@
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Ισπανικά – Λατινική Αμερική)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Βιετναμικά)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Ινδονησιακά)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Μαλαϊκά)"
 
 
 
@@ -2812,7 +2813,7 @@
 "Steam_Ubisoft_EmailPrompt"			"Η Ubisoft, εκδότης του %subscription%, θα ήθελε να μείνει σε επαφή μαζί σας. Παρέχοντας τις πληροφορίες σας παρακάτω θα λαμβάνετε περιστασιακά πληροφορίες για επερχόμενα παιχνίδια."
 "Steam_TellTale_EmailPrompt"			"Η Telltale, η εκδότης του %subscription%, θα ήθελε να μείνει σε επαφή μαζί σας. Εισαγάγετε την ηλεκτρονική σας διεύθυνση αλληλογραφίας παρακάτω για να λαμβάνετε μηνύματα ηλεκτρονικού ταχυδρομείου της Telltale, το οποίο περιλαμβάνει νέες ανακοινώσεις παιχνιδιών, κρυφές ματιές στα παρασκήνια στη διαδικασία ανάπτυξης, κόμικ, στήλες μαγειρικής και συμβουλών και η περιστασιακή ειδική προσφορά. Θα είστε ευχαριστημένοι που το κάνατε!"
 
-"Steam_ManageGuestPasses"		"Διαχείριση δώρων και πάσων επισκεπτών..."
+"Steam_ManageGuestPasses"		"Διαχείριση δώρων και πάσων επισκεπτών…"
 "Steam_GuestPasses_Title"		"Δώρα και πάσο επισκεπτών"
 "Steam_GuestPasses_Description"		"Ένα δώρο είναι μια πλήρης έκδοση ενός παιχνιδιού που μπορείτε να δώσετε σε ένα φίλο.\n\nΤα πάσο επισκεπτών σας επιτρέπουν να στείλετε προσωρινά δοκιμαστικά παιχνιδιών στους φίλους σας, ώστε να δοκιμάσουν το παιχνίδι και να συνδεθούν μαζί σας διαδικτυακά στο παιχνίδι."
 "Steam_GuestPasses_NoneAvailable"	"Αυτή τη στιγμή δεν έχετε δώρα ή πάσο επισκεπτών διαθέσιμα."
@@ -5052,6 +5053,7 @@
 "DownloadRegion_br_manaus"			"Βραζιλία – Μανάους"
 "DownloadRegion_br_belem"			"Βραζιλία – Μπελέμ"
 "DownloadRegion_br_salvador"			"Βραζιλία – Σαλβαδόρ"
+"DownloadRegion_guam"			"Γκουάμ"
 
 "SettingsController_AutosaveName"	"Διαμόρφωση χειριστηρίου"
 "ControllerBinding_Offline_Save"	"[Αυτ. αποθήκευση εκτός σύνδεσης]"

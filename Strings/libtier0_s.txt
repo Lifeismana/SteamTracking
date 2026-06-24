@@ -89,19 +89,21 @@ $ORIGIN
 /data/src/tier0/validator.cpp
 /data/src/tier0/vprof.cpp
 /dev/urandom
+/etc/os-release
 /etc/steamos-oobe-image
 /proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
 /proc/self/exe
 /proc/self/fd
+/run/host/etc/os-release
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
-00:54:08
 0123456789ABCDEF
 12CStdMemAlloc
+15:29:31
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
@@ -288,7 +290,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jun  9 2026
+Jun 24 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -355,11 +357,11 @@ Plat_IsChromeOS
 Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsProcessWOW64
-Plat_IsSteamConsoleMode
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
-Plat_IsSteamOS3
 Plat_IsSteamOS3FactoryImage
+Plat_IsSteamOSGameMode
+Plat_IsSteamOSManagementEnabled
 Plat_IsTesla
 Plat_IsWOW64
 Plat_IsWSL
@@ -1041,6 +1043,7 @@ std::string
 stderr
 stdout
 steamclient.so
+steamos
 steamservice.so
 steamui.so
 steamwebhelper

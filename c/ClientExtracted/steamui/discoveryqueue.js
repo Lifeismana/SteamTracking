@@ -3,45 +3,74 @@
   {
     chunkid: (module) => {
       module.exports = {
-        TrailerTitle: "_2jWguvQbMj3mHe0ytRpzNm",
-        Category: "_3oxiEsdJdYRkKvYSWGAfih",
-        Visible: "_3afqMxr7HnEfdxJwBg6GRd",
+        "duration-app-launch": "800ms",
+        AppCarouselTrailerCtn: "_2O2oGi6d4q3fJxsg-26cll",
+        AutoplayCheckbox: "_1sEIT3Bh71g9JRzpjKvlIo",
+        AppVideo: "_2YG6k4pQ2z4jwoRGrdPhbv",
+        Microtrailer: "_2HvnbxzEFWWLlYvdP-FWFN",
+        PlayFullTrailer: "_1yr-ANb75ms4sc2qaXuCYM",
+        "microtrailer-trans-out": "_23fHbTINXOIsUypCFWMSTa",
+        PlayMicrotrailer: "_2X47xgnvmgTDpH69RCBkZ7",
+        "microtrailer-trans-in": "_25FSUgigrr0CQ9eVFmOuId",
+        NoTrailer: "c42wWAo7Lp6uTn6LjeaO1",
+        Trailer: "_27Hm281QxYE24wJqONIP0p",
+        "trailer-trans-in": "_1nwjQUxY2CTD6YmThf7xQG",
+        AppMainCap: "_1S2WeY58fI6yRef-8ArnWh",
+        AppMainCapFadeIn: "_3fHap4fl2kZ5StUjb1DwDJ",
+        PlayButton: "OsRdwk7Q3-sApCo2CDxtN",
+        PlayButtonCapFadeIn: "_2o5mPh-Zx9EWF_H-KforbU",
+        AutoplayCheckboxCtn: "_2J3J__8l3sk6LI4mpUfWDT",
+        AOWarning: "_2IxWvaCkHcMl0aL8NM8v6T",
+        Text: "_1r5F1Fy8uG639opEIjyS5Z",
+        BackgroundAnimation: "_1G9QIfwsMh2XRR-bMBE97j",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2bun2taA5e3StPJT3cs6jH",
+        "ItemFocusAnim-darkerGrey": "_39J4X61tugDHvSmGBzKD7p",
+        "ItemFocusAnim-darkGreySettings": "_13-B6AE59KUQ-ABnyKYXkP",
+        "ItemFocusAnim-darkGrey": "_2xXdz148UoxpJlfyVlUo0D",
+        "ItemFocusAnim-grey": "_3-Rh6nRz4sRZLRVEQKPefw",
+        "ItemFocusAnim-translucent-white-10": "_1b0mYc5KheDLRLQoHqAqhU",
+        "ItemFocusAnim-translucent-white-20": "_3WVHjFeBrJOv0Xsqd7X2Vp",
+        "ItemFocusAnimBorder-darkGrey": "_1TaBFa6F_r2oTJvni2yNqQ",
+        "ItemFocusAnim-green": "_1dPdL7c_2dvq8gAaWTSq04",
+        focusAnimation: "_3BX0kUvHLGH3mZJG4BP4cc",
+        hoverAnimation: "_1om-YMcnj-8DLjL_ek0CxW",
+        "capsule-trans-out": "YvTbl9XD-HkAs9W3pcEgp",
       };
     },
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
-        AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
-        AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
-        AppVideo: "_3sG-J5T8SrzM0Hjkda7sgL",
-        Microtrailer: "_24GFDabY2zeyuzhvACpldO",
-        PlayFullTrailer: "_115ZF6m0XsEieocbL7zjo-",
-        "microtrailer-trans-out": "HMoi7fPFNjxiHeyrfkgmO",
-        PlayMicrotrailer: "_2edFDJ0B9YjtlfqugPTxw0",
-        "microtrailer-trans-in": "_3D_pgT8sxFP3ieDxVt_1zp",
-        NoTrailer: "WtSN6aaEz7vEnRjVrq2hS",
-        Trailer: "_1_z8vE2vYRzSyf1HQIcm5O",
-        "trailer-trans-in": "_3kp7PkbzSVQPFoobA3Xx7N",
-        AppMainCap: "_3cc6kgsSpd-DeLRDHEM_lD",
-        AppMainCapFadeIn: "_2tGHq2pbqmrGJVCXoN5f0r",
-        PlayButton: "_1y11BvPq_nL5EZFF8GLuD9",
-        PlayButtonCapFadeIn: "_3Nk6pNRuMCIddyuE9mWS55",
-        AutoplayCheckboxCtn: "_2HvO_RKtxiyyhZsELjYyq5",
-        AOWarning: "_19l-UjQZVVGNK5SKnOrmJB",
-        Text: "VoAJhMdtQTylTg3G03nJo",
-        BackgroundAnimation: "_1BygdMVbHp4UClANjStGo9",
-        "ItemFocusAnim-darkerGrey-nocolor": "_3pIKV-kCrU2q99tCLoOD-6",
-        "ItemFocusAnim-darkerGrey": "OgzJ6LmEUtmpf0GQsD7Vo",
-        "ItemFocusAnim-darkGreySettings": "_41HuR0jEUjSpy915lvI0-",
-        "ItemFocusAnim-darkGrey": "_3GG7KC5ZHbAn80ZwU94AGH",
-        "ItemFocusAnim-grey": "_2vCJ0TzuZNRRjxTZxrTZgc",
-        "ItemFocusAnim-translucent-white-10": "_3LSZycr3qnPrQPVjt2oj-9",
-        "ItemFocusAnim-translucent-white-20": "_11GiQCMBciJ1pGPTXHvO8M",
-        "ItemFocusAnimBorder-darkGrey": "_91lIqOTiAbr65tckrg_vR",
-        "ItemFocusAnim-green": "_-5UaqlbdsHtfbyb7FWN_w",
-        focusAnimation: "_1IiLzess48eakf_rL9Akg5",
-        hoverAnimation: "_24-OSWrZDqPoBKHcbF0kAl",
-        "capsule-trans-out": "hckHU2LXCJNx0X37OqCsx",
+        AppVideoCtn: "_3ASFJGw8T9-hDikhxRScDI",
+        WishlistBadge: "_2LOILpLspWCbXnRmFuUbwx",
+        Active: "-iU7fWthqJgfmhzrdV74K",
+        DeckVerifiedLogo: "_2EVzMYr528F1dVAm4e88Sy",
+        VideoArea: "_1otwTolVlX9PfKD2myNigb",
+        IgnoredCtn: "_35ODHCvm13mJ5gOunwQzs9",
+        IgnoredInfo: "_2SriIWC_6CHPZkjggKoxjb",
+        IgnoredTitle: "_1D4RHomSRy25j1Qxl-dDPw",
+        IgnoredDescription: "_29zcmLd8LJQ2FR33D1_Ph6",
+        UndoIgnoreButton: "_1rPGVQftqLzqjH04tebuaT",
+        UndoButton: "_1nz7pkRvV4rRrybZrUZu0R",
+        Disabled: "_2JvEs3_qRtYncXG7WCALur",
+        BackgroundAnimation: "_64dUS3S7fOwtNFhEALHhx",
+        "ItemFocusAnim-darkerGrey-nocolor": "UXmjEpq-9pbtC7T5d0MPv",
+        "ItemFocusAnim-darkerGrey": "_1olTI2tKYS6IUSkIpca3Qo",
+        "ItemFocusAnim-darkGreySettings": "_3JjCik6ZoOCqrb2F2DUuI1",
+        "ItemFocusAnim-darkGrey": "_37RRjG54p7sk3Yvb-5BDVv",
+        "ItemFocusAnim-grey": "yOH4BAo3sriSZckG9yR1g",
+        "ItemFocusAnim-translucent-white-10": "_1USieHqb4yVt2P3Okqs7hF",
+        "ItemFocusAnim-translucent-white-20": "_2MtHgIAnILIt8d4PMuS5mi",
+        "ItemFocusAnimBorder-darkGrey": "_dHmntK-X7hqNpoiZplVM",
+        "ItemFocusAnim-green": "_3CT6dHnuA3SYWZrgk1Sf1Y",
+        focusAnimation: "_34YOI6hVEDmEAWHAHlUXon",
+        hoverAnimation: "_1UXiQtSunyxlP1LxWHXACi",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TrailerTitle: "_2jWguvQbMj3mHe0ytRpzNm",
+        Category: "_3oxiEsdJdYRkKvYSWGAfih",
+        Visible: "_3afqMxr7HnEfdxJwBg6GRd",
       };
     },
     chunkid: (module) => {
@@ -163,35 +192,6 @@
         "ItemFocusAnim-green": "_3mF4OtweD7vY2bcN6piLTq",
         focusAnimation: "rpa_zF1YXxbH3-m1-AI6Q",
         hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        AppVideoCtn: "_5T6C7ESpj4ynwbH8LS101",
-        WishlistBadge: "_1H947zVMI4eix33y6Vyrm0",
-        Active: "QO_OlPouxqbJBf7_YhDcB",
-        DeckVerifiedLogo: "_32nCthjo6y3PW8ly04ygbU",
-        VideoArea: "_1dktHf2Jq2wDCCvlx1tpMJ",
-        IgnoredCtn: "_1fmpWkA3raMRNRb2988jsO",
-        IgnoredInfo: "_12r_HcaLl4JO7AfMLMEZqE",
-        IgnoredTitle: "_2NLzxMudKrBejIZmxYz-Wu",
-        IgnoredDescription: "_3ViR4YrtH0a-mK6EiPgOSB",
-        UndoIgnoreButton: "_177VX9-0Tj1sNozNrm8bN1",
-        UndoButton: "_3HOpXzFuRFY1WwrPL-fxOi",
-        Disabled: "_3xyNp4rGNpDJtxvww4ZCOR",
-        BackgroundAnimation: "_3qHy0ZfVKo5p8TWje-jtAG",
-        "ItemFocusAnim-darkerGrey-nocolor": "_2ysW7cifFEEfft88AcXQ77",
-        "ItemFocusAnim-darkerGrey": "_1sDFTD6HQbSYSYfAeHxdfc",
-        "ItemFocusAnim-darkGreySettings": "VVWIBS9xCTuHNuOqAeZgl",
-        "ItemFocusAnim-darkGrey": "_3o-jWjx0jwVTFKTTeS0T03",
-        "ItemFocusAnim-grey": "_1hRqeCN67Ga45VdF6Q6cgA",
-        "ItemFocusAnim-translucent-white-10": "_2f5q2Audp6Dn4k8WoktvHn",
-        "ItemFocusAnim-translucent-white-20": "_2L4JhmA2KdmiV1hmrVpwNz",
-        "ItemFocusAnimBorder-darkGrey": "_2ro1AA5m-5Tf_VM-0cgpCg",
-        "ItemFocusAnim-green": "_3afkw6jZdesN7ExtcThnbC",
-        focusAnimation: "_1qzDlpOQ22S_QgdcDvd8p-",
-        hoverAnimation: "_2Gx-a0BFgKfjo6ksSg7G1d",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -790,33 +790,103 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        (0, _._)();
+        const _ = _._.accountid;
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                if (!_) return [];
+                const _ = await (async function (_, _) {
+                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+                    _ = await fetch(_);
+                  return (await _.json()).rgRecommendedTags || [];
+                })(0, _);
+                return _;
+              },
+              staleTime: 6e5,
+            };
+          })(0, _),
+        );
+      }
       function _(_) {
-        let { children: _ } = _;
-        const [_, _] = (0, _.useState)(0.8),
-          [_, _] = (0, _.useState)(!0);
-        return (0, _.jsx)(_._, {
-          playerVolume: _,
-          setPlayerVolume: _,
-          audioMuted: _,
-          setAudioMuted: _,
-          children: _,
-        });
+        return ["RecommendedTag", _ ?? 0];
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+          name: "trailerPrefs",
+          options: {
+            path: "/",
+            secure: !0,
+            maxAge: 2592e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        },
+        _ = {
+          flVolume: 0.8,
+          bMuted: !0,
+        };
+      function _(_) {
+        !(function (_) {
+          return _.flVolume === _.flVolume && _.bMuted === _.bMuted;
+        })(_) && 0 != Object.keys(_).length
+          ? (0, _._)(_, JSON.stringify(_))
+          : (0, _._)(_);
+      }
+      function _(_) {
+        let { children: _ } = _;
+        const [_, _] = (0, _.useState)(() =>
+          (function () {
+            try {
+              const _ = (0, _._)(_);
+              if (!_) return _;
+              const _ = JSON.parse(_);
+              return {
+                flVolume:
+                  "number" == typeof _.flVolume ? _.flVolume : _.flVolume,
+                bMuted: "boolean" == typeof _.bMuted ? _.bMuted : _.bMuted,
+              };
+            } catch (_) {
+              return _;
+            }
+          })(),
+        );
+        return (
+          (0, _.useEffect)(() => {
+            _(_);
+          }, [_]),
+          (0, _.jsx)(_._, {
+            playerVolume: _.flVolume,
+            setPlayerVolume: (_) =>
+              _((_) => ({
+                ..._,
+                flVolume: _,
+              })),
+            audioMuted: _.bMuted,
+            setAudioMuted: (_) =>
+              _((_) => ({
+                ..._,
+                bMuted: _,
+              })),
+            children: _,
+          })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -864,14 +934,21 @@
           ),
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      var _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled";
       function _(_) {
         const {
-            storeItem: _,
+            _: _,
             bCurrentlyActive: _,
             autoPlayCookieName: _,
-            bPlayWithBroadcastPlayer: _,
+            trailerBaseID: _,
             showScreenshotInsteadOfMainCap: _,
             autoplayCheckboxPosition: _,
             refTogglePlayPause: _,
@@ -881,16 +958,16 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
+          _ = (0, _._)(_, _, !0, _),
           { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
           _ = (_ ?? !0) && _ && !_.all_ages && "masked" == _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(_),
-          _ = _.useRef(void 0),
-          _ = _.useRef(void 0),
-          [_, _] = _.useState(),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
           { bCookieLoaded: _ } = (function (_, _, _) {
             const _ = _.useCallback(() => {
               const _ = (0, _._)(_ ?? _),
@@ -909,45 +986,48 @@
           })(_, _, _),
           _ = _;
         _.useEffect(() => {
-          _ && _ && (_ || _) && !_ && _(!0);
-        }, [_, _, _, _, _]),
+          _ && _ && _ && !_ && _(!0);
+        }, [_, _, _, _]),
           _.useEffect(() => {
             _ && _ && _ && _();
           }, [_, _, _, _]);
-        const _ = (function (_, _, _, _, _) {
+        const _ = (function (_, _, _, _) {
           return _.useCallback(() => {
             _ == _
               ? _(!0)
-              : _ == _ && _.current
-                ? _.current.paused
-                  ? _.current.play()
-                  : _.current.pause()
-                : _ == _ && _.current
-                  ? _.current.IsPaused()
-                    ? _.current.Play()
-                    : _.current.Pause()
-                  : _ == _ && _ && _.TogglePlayPause();
-          }, [_, _, _, _, _]);
-        })(_, _, _, _, _);
+              : _ == _ && _
+                ? _.paused
+                  ? __webpack_require__.play()
+                  : __webpack_require__.pause()
+                : _ == _ && _ && (_.IsPaused() ? _.Play() : _.Pause());
+          }, [_, _, _, _]);
+        })(_, _, _, _);
         _.useEffect(() => {
           _ && (_.current = _);
         }, [_, _]);
-        const _ = _.GetScreenshots("allowed" != _),
-          _ =
-            _ && _.length > 0 ? _[0] : _ ? (0, _._)(_, "main_capsule") : void 0;
+        const _ =
+          _ && _ && _.length > 0
+            ? (0, _._)(_[0], "600x338")
+            : _
+              ? (0, _._)(_, "main_capsule")
+              : void 0;
         return (0, _.jsxs)(_._, {
           className: _().AppCarouselTrailerCtn,
           onMouseEnter: () => _(!0),
           onMouseLeave: () => _(!1),
           children: [
-            (0, _.jsx)("img", {
-              className: (0, _._)(_().AppMainCap, _ != _ && _().Hidden),
-              src: _,
+            (0, _.jsx)("button", {
               onClick: _,
+              "aria-label": _._.Localize("#SaleTrailerCarousel_PlayPause"),
+              children: (0, _.jsx)("img", {
+                className: (0, _._)(_().AppMainCap, _ != _ && _().Hidden),
+                src: _,
+                alt: "",
+              }),
             }),
-            !_ &&
+            _ &&
               (0, _.jsx)(_, {
-                storeItem: _,
+                appID: _.appid,
                 bAutoplayVideos: _,
                 autoplayCheckboxPosition: _,
                 fnSetAutoPlayVideos: (_) => {
@@ -955,7 +1035,7 @@
                 },
               }),
             (0, _.jsx)(_, {
-              name: _.GetName(),
+              name: _?.name ?? "",
               trailerCategory: _?.trailer_category,
               trailerDisplay: _,
               mouseOver: _,
@@ -964,18 +1044,15 @@
               eTrailerDisplay: _,
               setTrailerDisplay: _,
               featuredTrailer: _,
-              refMicroTrailer: _,
-              refMainTrailer: _,
+              fnSetMainTrailer: _,
+              fnSetMicroTrailer: _,
               loadedAndActive: _ && _,
               setVideoShouldStart: _,
               bMouseOverVideo: _,
-              storeItem: _,
-              broadcastVideo: _,
-              fnSetBroadcastVideo: _,
+              _: _,
               fnTogglePlayPause: _,
               bAutoplayVideos: _,
               bVideoShouldStart: _,
-              bPlayWithBroadcastPlayer: _,
               ..._,
             }),
             _ &&
@@ -998,9 +1075,8 @@
       }
       function _(_) {
         const {
-            storeItem: _,
+            _: _,
             featuredTrailer: _,
-            bPlayWithBroadcastPlayer: _,
             bSkipMicroTrailer: _,
             nFadeRatio: _,
             fnPlayPause: _,
@@ -1008,12 +1084,10 @@
             fnComplete: _,
             eTrailerDisplay: _,
             setTrailerDisplay: _,
-            refMainTrailer: _,
-            refMicroTrailer: _,
+            fnSetMainTrailer: _,
+            fnSetMicroTrailer: _,
             loadedAndActive: _,
             setVideoShouldStart: _,
-            broadcastVideo: _,
-            fnSetBroadcastVideo: _,
             fnTogglePlayPause: _,
             bAutoplayVideos: _,
             bVideoShouldStart: _,
@@ -1022,11 +1096,10 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(),
-          _ = _?.GetMicroTrailer("blocked" == _),
           [_, _] = (0, _.useState)(null),
-          _ = !!_ || !!_;
+          [_, _] = (0, _.useState)(null),
+          { data: _ } = (0, _._)(_),
+          _ = !!_;
         _.useEffect(() => {
           let _ = !1;
           _ && _ && _ && (_ = _ === _ || (_ === _ && !_) || (_ === _ && !_)),
@@ -1035,16 +1108,15 @@
         }, [_, _, _, _, _, _, _, _]),
           (function (_, _) {
             _.useEffect(() => {
-              const _ = _.current;
               if (!_) return;
               const _ = () => _(!0),
                 _ = () => _(!1);
               return (
-                __webpack_require__.addEventListener("play", _),
-                __webpack_require__.addEventListener("pause", _),
+                _.addEventListener("play", _),
+                _.addEventListener("pause", _),
                 () => {
-                  __webpack_require__.removeEventListener("play", _),
-                    __webpack_require__.removeEventListener("pause", _);
+                  _.removeEventListener("play", _),
+                    _.removeEventListener("pause", _);
                 }
               );
             }, [_, _]);
@@ -1054,45 +1126,41 @@
               (_(_),
               _(!1),
               _(!1),
-              _.current && (_.current.pause(), (_.current.currentTime = 0)),
+              _ && (_.pause(), (_.currentTime = 0)),
               _ && (_.Pause(), _.SeekToStart()));
           }, [_, _, _, _]);
         const _ = _.useRef(!1);
-        return (
-          _.useEffect(() => {
-            if (_ && _ === _)
-              if ((_(!0), _))
-                if (_) {
-                  _.Debug("Starting microtrailer"), _(_);
-                  const _ = () =>
-                    (function (_, _, _) {
-                      if (_.current) return;
-                      (_.current = !0),
-                        _.Debug("Starting main trailer"),
-                        _(_),
-                        __webpack_require__.Play();
-                    })(_, _, _);
-                  _ || !_.current
-                    ? _()
-                    : (_(!0),
-                      (_.current.onended = _),
-                      (_ = _.current),
-                      (_ = "microtrailer"),
-                      (_ = () => _(!1)),
-                      _.play().catch((_) => {
-                        __webpack_require__(),
-                          _.Warning(`Failed to play ${_}: `, _);
-                      }));
-                } else
-                  _ && (_.Debug("Starting broadcast player"), _(_), _.Play());
-              else _.Debug("Showing image");
-            var _, _, _;
-          }, [_, _, _, _, _, _, _, _, _]),
+        _.useEffect(() => {
+          if (_ && _ === _)
+            if ((_(!0), _)) {
+              if (_) {
+                _.Debug("Starting microtrailer"), _(_);
+                const _ = () =>
+                  (function (_, _, _) {
+                    if (_.current) return;
+                    (_.current = !0),
+                      _.Debug("Starting main trailer"),
+                      _(_),
+                      __webpack_require__.Play();
+                  })(_, _, _);
+                _ || !_
+                  ? __webpack_require__()
+                  : (_(!0),
+                    (_.onended = _),
+                    (_ = "microtrailer"),
+                    (_ = () => _(!1)),
+                    _.play().catch((_) => {
+                      _(), _.Warning(`Failed to play ${_}: `, _);
+                    }));
+              }
+            } else _.Debug("Showing image");
+          var _, _;
+        }, [_, _, _, _, _, _, _, _]),
           (function (_, _) {
             _.useEffect(() => {
-              if (!_.current || !_.current.onended) return;
+              if (!_ || !_.onended) return;
               if (!_) return;
-              let _ = _.current.onended,
+              let _ = _.onended,
                 _ = setTimeout(() => {
                   __webpack_require__();
                 }, 6e3);
@@ -1102,93 +1170,62 @@
           _.useEffect(() => {
             _ || _(!1);
           }, [_, _]),
-          _.useEffect(() => {
-            const _ = (0, _._)(() => {
-              _(_?.GetUserInputNeeded()), _(!_?.IsPaused());
-            });
-            return () => _();
-          }, [_]),
-          (function (_, _, _, _, _, _, _) {
+          (function (_, _, _, _, _, _) {
             const [_, _] = _.useState(!1);
             _.useEffect(() => {
               _ && !_
                 ? _ == _ && _ && _
                   ? (__webpack_require__.pause(), _(!0))
-                  : _ == _ && _ && _
-                    ? (_.Pause(), _(!0))
-                    : _ == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
+                  : _ == _ && _ && _ && (_.Pause(), _(!0))
                 : !_ &&
                   _ &&
                   (_ == _ && _
                     ? __webpack_require__.play()
-                    : _ == _ && _
-                      ? _.Play()
-                      : _ == _ && _ && _.IsPaused() && _.Play(),
+                    : _ == _ && _ && _.Play(),
                   _(!1));
-            }, [_, _, _, _, _, _, _, _]);
-          })(_, _, _.current, _, _.current, _, _),
-          _ && _.BIsVisible()
-            ? (_ || _) &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  _ &&
-                    !_ &&
-                    (0, _.jsx)(_._, {
-                      focusable: !0,
-                      onClick: _,
-                      className: _().PlayButton,
-                      children: (0, _.jsx)(_.IOc, {}),
-                    }),
-                  _ &&
-                    (0, _.jsxs)("video", {
-                      className: _(!0, _),
-                      ref: _,
-                      preload: "auto",
-                      playsInline: !0,
-                      muted: !0,
-                      onClick: _,
-                      children: [
-                        (0, _.jsx)("source", {
-                          src: _.strWebMURL,
-                          type: "video/webm",
-                        }),
-                        Boolean(!_._.IN_CLIENT) &&
-                          (0, _.jsx)("source", {
-                            src: _.strMP4URL,
-                            type: "video/mp4",
-                          }),
-                      ],
-                    }),
-                  _ &&
-                    !_ &&
-                    (0, _.jsx)(_, {
-                      ref: _,
-                      onRefChange: _,
+            }, [_, _, _, _, _, _, _]);
+          })(!!_, _, _, _, _, _);
+        const _ = (0, _.useCallback)((_) => {
+          _(_), _(_);
+        }, []);
+        return _ && _.visible && _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                _ &&
+                  (0, _.jsx)(_._, {
+                    focusable: !0,
+                    onClick: _,
+                    className: _().PlayButton,
+                    children: (0, _.jsx)(_.IOc, {}),
+                  }),
+                _.microtrailer &&
+                  (0, _.jsx)("video", {
+                    className: _(!0, _),
+                    ref: _,
+                    preload: "auto",
+                    playsInline: !0,
+                    muted: !0,
+                    onClick: _,
+                    children: (0, _.jsx)(_._, {
                       trailer: _,
-                      eTrailerDisplay: _,
-                      fadeRatio: _,
-                      onPlayPauseChange: _,
-                      onPlaybackEnd: _,
                     }),
-                  _ &&
-                    (0, _.jsx)(_.default, {
-                      classes: _(!1, _),
-                      nAppIDVOD: _.GetAppID(),
-                      watchLocation: _._._,
-                      fnOnVideoEnd: _,
-                      fnVideoClick: _,
-                      fnSetBroadcastVideo: _,
-                      bStartWithSubtitles: !0,
-                      bStartMuted: !0,
-                    }),
-                ],
-              })
-            : null
-        );
+                  }),
+                (0, _.jsx)(_, {
+                  trailer: _,
+                  onRefChange: (_) => {
+                    _(_), _(_);
+                  },
+                  eTrailerDisplay: _,
+                  fadeRatio: _,
+                  onPlayPauseChange: _,
+                  onPlaybackEnd: _,
+                }),
+              ],
+            })
+          : null;
       }
       function _(_) {
         let {
-          ref: _,
           trailer: _,
           eTrailerDisplay: _,
           fadeRatio: _,
@@ -1196,19 +1233,23 @@
           onPlaybackEnd: _,
           onRefChange: _,
         } = _;
+        const [_, _] = (0, _.useState)(null);
         (0, _.useEffect)(() => {
-          if (void 0 !== _ && _.current) {
-            let _ = _.current.GetVolume() * _;
+          if (void 0 !== _ && _) {
+            let _ = _.GetVolume() * _;
             const _ = !0;
-            _.current.SetVolume(_, _);
+            _.SetVolume(_, _);
           }
         }, [_, _]);
         let _ = _ != _,
           _ = _(!1, _);
         const _ = (0, _.useMemo)(() => (0, _._)(_), [_]),
           _ = (0, _.useCallback)((_) => {
-            (_.current = _), _(_);
-          }, []);
+            _(_), _(_);
+          }, []),
+          _ = (0, _.useCallback)(() => {
+            _(!0);
+          }, [_]);
         return (0, _.jsx)(_, {
           children: (0, _.jsx)("div", {
             className: _,
@@ -1216,12 +1257,13 @@
               ref: _,
               dashManifests: _.rgDashTrailers,
               hlsManifest: _.rgHlsTrailers[0],
-              captionManifest: _.captions_manifest,
+              captionManifest: (0, _._)(_),
               screenshot: "",
               altText: _.trailer_name,
               forcePause: _,
               muteWhenAutoplayBlocked: !0,
               onPlaybackEnd: _,
+              onPlaybackStart: _,
               onPlayPauseChange: _,
             }),
           }),
@@ -1239,7 +1281,7 @@
       }
       function _(_) {
         const {
-            storeItem: _,
+            appID: _,
             bAutoplayVideos: _,
             fnSetAutoPlayVideos: _,
             autoplayCheckboxPosition: _,
@@ -1247,43 +1289,33 @@
           _ = {
             [_ || "top"]: 0,
           };
-        return (0, _.jsx)("div", {
-          onClick: (_) => {
-            _.preventDefault(), _.stopPropagation();
-          },
-          className: _().AutoplayCheckboxCtn,
-          children: (0, _.jsx)(
-            _._,
-            {
-              controlled: !0,
-              checked: _,
-              className: _().AutoplayCheckbox,
-              style: _,
-              label: _._.Localize("#StoreTrailer_AutoPlayVideos"),
-              onChange: _,
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsx)("div", {
+            onClick: (_) => {
+              _.preventDefault(), _.stopPropagation();
             },
-            _.GetAppID(),
-          ),
+            className: _().AutoplayCheckboxCtn,
+            children: (0, _.jsx)(
+              _._,
+              {
+                controlled: !0,
+                checked: _,
+                className: _().AutoplayCheckbox,
+                style: _,
+                label: _._.Localize("#StoreTrailer_AutoPlayVideos"),
+                onChange: _,
+              },
+              _,
+            ),
+          }),
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = {
-        include_assets: !0,
-        include_trailers: !0,
-        include_basic_info: !0,
-        include_tag_count: 20,
-        include_release: !0,
-        include_platforms: !0,
-        include_screenshots: !0,
-        include_reviews: !0,
-      };
       function _(_) {
         const {
             appID: _,
+            trailerBaseID: _,
             focused: _,
             skipMicroTrailer: _,
-            playWithBroadcastPlayer: _,
             autoPlayCookieName: _,
             showAOAutoPlayWarning: _,
             showScreenshotInsteadOfMainCap: _,
@@ -1293,10 +1325,12 @@
             bRequestPause: _,
             fnComplete: _,
           } = _,
-          [_] = (0, _._)(_, _),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { bIsIgnored: _ } = _(_),
           { bIsWishlisted: _ } = _(_),
-          { bIsWishlisted: _ } = _(_?.GetParentAppID()),
+          { bIsWishlisted: _ } = _(_?.related_items?.parent_appid),
           [_, _] = (0, _._)();
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().AppVideoCtn, "AppVideoCtn"),
@@ -1309,7 +1343,7 @@
               (0, _.jsx)(_._, {
                 eDisplay: _,
                 className: _().DeckVerifiedLogo,
-                storeItemPlatform: _?.GetPlatforms(),
+                storeItemPlatform: _,
               }),
             (0, _.jsxs)("div", {
               className: _().VideoArea,
@@ -1320,13 +1354,13 @@
                 (0, _.jsx)(
                   _,
                   {
-                    storeItem: _,
+                    _: _,
+                    trailerBaseID: _,
                     bCurrentlyActive: _ && !_,
                     autoplayCheckboxPosition: "top",
                     autoPlayCookieName: _,
                     bShowAOAutoPlayWarning: _,
                     bSkipMicroTrailer: _,
-                    bPlayWithBroadcastPlayer: _,
                     nFadeRatio: _,
                     showScreenshotInsteadOfMainCap: _,
                     fnPlayPause: _,
@@ -1342,11 +1376,9 @@
         });
       }
       function _(_) {
-        const _ = (0, _._)(() => _._.Get().BIsGameIgnored(_)),
+        const _ = (0, _._)(_),
           _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _._.Get().UpdateAppIgnore(_, !_, _);
-          }, [_, _, _]);
+          { mutateAsync: _ } = (0, _._)(_, !_, _);
         return {
           bIsIgnored: _,
           fnUpdateIgnored: _,
@@ -1395,8 +1427,17 @@
           fnUpdateWishlist: _,
         };
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+        include_trailers: !0,
+        include_basic_info: !0,
+        include_tag_count: 20,
+        include_release: !0,
+        include_platforms: !0,
+        include_screenshots: !0,
+        include_reviews: !0,
+      };
       new _._("DiscoveryQueueApp").Debug;
       function _(_) {
         const {
@@ -1663,8 +1704,12 @@
       function _(_) {
         const { rgTagIDs: _, ariaLabelID: _ } = _,
           _ = (function (_) {
-            const _ = _._.Get().GetRecommendedTags(),
-              _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]),
+            const { data: _ } = _(),
+              _ = _.useMemo(
+                () =>
+                  new Map((_ || []).map((_) => _.tagid).map((_, _) => [_, _])),
+                [_],
+              ),
               _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]);
             return _.useMemo(
               () =>
@@ -2131,6 +2176,7 @@
             appID: _[_],
             focused: _,
             showAOAutoPlayWarning: _,
+            fnComplete: void 0,
           }),
           elDetails: (0, _.jsx)(_, {
             appID: _[_],

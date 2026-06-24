@@ -184,7 +184,7 @@
     "moderationaction_disputed": "ยื่นข้อพิพาทเกี่ยวกับการแก้ไขปัญหาแล้ว",
     "moderationaction_escalated": "ได้รับการเร่งเรื่อง",
     "moderationaction_sanctioned": "ได้รับการลงโทษ",
-    "moderationaction_sustainedondispute": "ข้อพิพาทถูกพลิกคำตัดสิน",
+    "moderationaction_sustained": "ยืนยันผลการตรวจสอบเดิม",
     "moderationaction_unresolved": "หัวข้อนี้กลายเป็น \"ยังไม่ได้แก้ปัญหา\"",
     "moderationaction_updated": "รายละเอียดหัวข้อได้รับการอัปเดต",
     "moderationaction_locked": "ถูกล็อก",

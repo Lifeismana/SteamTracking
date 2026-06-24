@@ -548,7 +548,6 @@ $\nY8O
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
 (\r"]\n)CClientNotificationControllerDisconnected
-(\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"f\n%CClientNotificationGameRecordingError
 (\r"i\n:CClientNotificationFamilySharingDeviceAuthorizationChanged
 (\r"q\n\vCMsgKeyChar
@@ -759,6 +758,7 @@ $\nY8O
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
++\n'k_EContentReportSubjectAction_Sustained
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
@@ -871,8 +871,6 @@ $\nY8O
 -openoverlaydevtools
 -quicklogin
 -silent
--steamdeckdisplay
--steammachinedisplay
 -toggle-overlay-html-mode
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -1116,8 +1114,6 @@ $\nY8O
 /dev/
 /dev/disk/by-uuid
 /etc/mtab
-/proc/device-tree/compatible
-/proc/device-tree/model
 /proc/mounts
 /proc/self/maps
 /steamrtarm64
@@ -1507,7 +1503,6 @@ $\nY8O
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
-16CHTMLProtoBufMsgI20CMsgLoadLocalizationE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
 16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
@@ -1599,7 +1594,6 @@ $\nY8O
 19CMsgClearAllCookies
 19CMsgComboNeedsPaint
 19CMsgFinishedRequest
-19CMsgFocusedNodeText
 19CMsgGetZoomResponse
 19CMsgLoadingResource
 19CMsgPopupHTMLWindow
@@ -1690,7 +1684,6 @@ $\nY8O
 20CMsgJSExecutePromise
 20CMsgJSRaiseException
 20CMsgJSRegisterMethod
-20CMsgLoadLocalization
 20CMsgRestartJSContext
 20CMsgScalePageToValue
 20CMsgSetSteamBetaName
@@ -1760,7 +1753,6 @@ $\nY8O
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CMsgZoomToFocusedElement
 24CNegotiationSetConfigMsg
 24CParentalSettingsManager
 24CPauseControllerInputMsg
@@ -1795,22 +1787,17 @@ $\nY8O
 26CProportionalFloatProperty
 26CVirtualHereShareDeviceMsg
 27CMsgDraggableRegionsChanged
-27CMsgFocusedNodeTextResponse
-27CMsgForcePopupsToDirectHWND
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
-27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
-27CMsgZoomToElementAtPosition
 27CSharedConnectionController
 27CSteamUIMessagingController
 27ListPanelColumnSelectButton
 28CMsgGetCookiesForURLResponse
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
-28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
@@ -1874,7 +1861,6 @@ $\nY8O
 35CClientNotificationItemAnnouncement
 35CControllerPersonalizationUpdateMsg
 35CMsgHorizontalScrollBarSizeResponse
-35CMsgZoomToElementAtPositionResponse
 36CClientNotificationCloudSyncConflict
 36CClientNotificationDownloadCompleted
 36CClientNotificationGameRecordingStop
@@ -1931,7 +1917,6 @@ $\nY8O
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
-4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EStreamControlInputControllerAttached_OBSOLETE
@@ -2012,10 +1997,6 @@ $\nY8O
 7\n3k_EStreamControlSetControllerPairingResult_OBSOLETE
 7\n\tenum_type
 7~8A
-83L3
-83N6
-83Q2
-83Q3
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CJSArray
@@ -2620,9 +2601,6 @@ CMsgFileLoadDialog
 CMsgFileLoadDialogResponse
 CMsgFind
 CMsgFinishedRequest
-CMsgFocusedNodeText
-CMsgFocusedNodeTextResponse
-CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
@@ -2646,7 +2624,6 @@ CMsgJSRegisterMethod
 CMsgJSReleaseCallback
 CMsgLinkAtPosition
 CMsgLinkAtPositionResponse
-CMsgLoadLocalization
 CMsgLoadedRequest
 CMsgLoadingResource
 CMsgMaximizeRestoreWindow
@@ -2665,7 +2642,6 @@ CMsgPageSecurity
 CMsgPauseRepaint
 CMsgPopupCreated
 CMsgPopupHTMLWindow
-CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
 CMsgRenderProcessTerminated
 CMsgRequestFullScreen
@@ -2675,7 +2651,6 @@ CMsgRestartJSContext"
 CMsgSavePageToJPEG
 CMsgSavePageToJPEGResponse
 CMsgScalePageToValue
-CMsgScalePageToValueResponse
 CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetAccessibilitySettings
@@ -2714,8 +2689,6 @@ CMsgUnlockH264
 CMsgUpdateToolTip
 CMsgVerticalScrollBarSize
 CMsgViewSource
-CMsgZoomToElementAtPosition
-CMsgZoomToFocusedElement
 CNegotiatedConfig
 CNegotiationCompleteMsg"
 CNegotiationInitMsg
@@ -3366,7 +3339,6 @@ GetOSType
 GetPanelAnimationDictionary()
 GetPanelKeyBindingMapDictionary()
 GetPanelMessageMapDictionary()
-GetPlatformFromOS
 GetRawRepeatedField
 GetRepeatedBool
 GetRepeatedDouble
@@ -3441,6 +3413,7 @@ INFO
 INTERNAL
 INVALID_ARGUMENT
 INVALID_CPPTYPE
+INVALID_KEY_SYMBOL
 IVALIDATE001
 Icelandic
 IdempotencyLevel
@@ -3560,7 +3533,6 @@ Invalid wire type for CPPTYPE_UINT32:
 Invalid wire type for CPPTYPE_UINT64:
 Invalidate
 Irish
-Is64BitOS
 IsLabelEditingAllowed()
 IsPointInCaptureRegion
 IsPowerOfTwo( nNewCapacity )
@@ -4394,9 +4366,7 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamConsoleMode
-Plat_IsSteamOS
-Plat_IsTesla
+Plat_IsSteamOSGameMode
 Plat_MSTime
 Plat_MSTime64
 Plat_OutputDebugString
@@ -4492,7 +4462,6 @@ SHA1_Init( &c )
 SHA256_Init( &c )
 SKIN
 SKyu
-SM8650
 SPEED
 STEAM_
 STRING
@@ -4744,6 +4713,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+StringIndexOfString
 StringPrintfVector currently only supports up to
 SubTabPosition
 Sunday
@@ -5946,7 +5916,6 @@ dulltext
 dupKeyMap
 duplicate
 duplicate sRGB information ignored
-duration
 dutch
 dynamic_cast
 eBroadcastReady
@@ -6087,7 +6056,6 @@ font
 fopen
 fopen tmpfile failed\n
 fopen64
-force_direct_hwnd_popups
 force_to_foreground
 forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 format
@@ -6119,7 +6087,6 @@ frametitle
 fread
 free
 freeaddrinfo
-fremont
 french
 freopen
 frexp
@@ -6162,7 +6129,6 @@ g_pMemAllocSteam
 g_vecTempTextBuffer
 ga-alpha color-map: too few entries
 galician
-galileo
 gameID
 game_id
 gameid
@@ -6591,7 +6557,6 @@ joinparty/
 json_name = "
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
-jupiter
 k2U\v
 k\fC0123456789ABCDEFfixed point overflow in
 k_BluetoothDeviceType_Computer
@@ -6806,6 +6771,7 @@ k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
 k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_51_Ac3
 k_ESpeakerConfiguration_71
 k_ESpeakerConfiguration_Other
 k_ESpeakerConfiguration_Stereo
@@ -6954,8 +6920,7 @@ k_EStreamVideoCodecAV1
 k_EStreamVideoCodecH264
 k_EStreamVideoCodecHEVC
 k_EStreamVideoCodecNone
-k_EStreamVideoCodecORBX1
-k_EStreamVideoCodecORBX2
+k_EStreamVideoCodecPyrowave
 k_EStreamVideoCodecRaw
 k_EStreamVideoCodecVP8
 k_EStreamVideoCodecVP9
@@ -7054,7 +7019,6 @@ lEd/
 label
 labelText
 labeltext
-language
 last_directory
 latam
 latest_frame_id
@@ -7072,7 +7036,6 @@ len >= input_len
 length does not match profile
 length exceeds PNG maximum
 length_ >= n
-lenovo
 libaudio.so
 libc.so.6
 libdl.so.2
@@ -7100,7 +7063,6 @@ live.com
 local
 locale::facet::_S_create_c_locale name not valid
 localeconv
-localization_path
 location
 locked
 login
@@ -8096,7 +8058,6 @@ pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwrite64
 py_generic_services
 qR5FE%
-qcom
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 quality
 quechua
@@ -8682,7 +8643,6 @@ vQO+t
 vRQ>
 valencian
 value
-valve
 valvesoftware.com
 variable
 vasprintf

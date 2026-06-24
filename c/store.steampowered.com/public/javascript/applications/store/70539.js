@@ -3,11 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        Box: "_2YzOLNBx6TonKU0Zmp20l4",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Text: "f6hU22EA7Z8peFWZVBJU",
         Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
         "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
@@ -38,11 +33,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         strMaxCartPartResponsiveWidth: "840px",
         CartCard: "tVR7nCVynuzImpvF9viMI",
       };
@@ -54,7 +44,9 @@
         LineItemsCtn: "_3ypRUtQoOfOrCsyHlzfGm4",
         StoreSalePriceBox: "_5m_q0MLlnLkt_KBd7iMbO",
         StoreSaleDiscountedPriceCtn: "_1ZzX6NkuELfMhPL0SJCQSK",
+        Scrollable: "_2A58_XmT-KCSwE_kh-xntF",
         LineItemWrapper: "XjPmFc2t_i1DAuEXEbIX",
+        fadeIn: "xtUORpc8Xy9Hs_tdAIitT",
         LineItemCapsule: "_2Xz_WXO8PfREP4c9ZWAuNg",
         HeaderImg: "_37_1K2XQrVBwncWFXTcpMP",
         HeaderImgBlurred: "_3hT2r7Sb_Yx9PdYSB0rjpl",
@@ -70,6 +62,7 @@
         LineItemDetailsRow: "_1wLomHB2PWPNx7TsNYpdtm",
         Text: "_2aGDkEAUaGvF4KHHZRRkEj",
         NoWrap: "c0VFjXtN_fgP-PR6wQe66",
+        ComplianceLink: "_1Gqg5Ajp0R5LqzbJ4Wtecz",
         LineItemDetailsRowTop: "_1aXXp4afkXP3Ez03MjTY3D",
         LineItemSpaceBetween: "_3L6hUlrzXOezye2BqWz-T7",
         LineItemTitle: "EflKs0JjldhDSxbUBaiOp",
@@ -280,6 +273,7 @@
         CartCard: "_2w0ZEap3hR1c0K0_DxJDdN",
         ShoppingCartPage: "_22xtsolKcQit92o-LBeRWD",
         CartCheckboxNoMargin: "_1S9a0tZYJv0d4x3-DrxbuS",
+        CartPagePlaceholder: "_3Hr6r9HTC7jT51-4vf_X8B",
         ShoppingCartHeader: "bCGAC51za6R_thjPd7_vw",
         ShoppingCartCtn: "_1jqUY_WcPgZnIOE-d9x7wc",
         ShoppingCartLeftCol: "_17GFdSD2pc0BquZk5cejg8",
@@ -625,44 +619,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, (0, _._)(), _.className),
-            },
-            _,
-          ),
-          _ = _ ?? _?.focusable ?? !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          });
-        return _._.IN_GAMEPADUI && (_ || _)
-          ? (0, _.jsx)(_._, {
-              ...(_ || {}),
-              focusable: _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = _._;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -781,16 +737,6 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        return _.Reset;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -945,15 +891,26 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { scrollable: _ = !1, children: _ } = _,
+          _ = _ ? _._ : _._;
+        return (0, _.jsx)(_, {
+          className: _()(_().LineItemsCtn, _ && _().Scrollable),
+          focusableIfEmpty: !0,
+          children: _,
+        });
+      }
       function _(_) {
         const { text: _, children: _, className: _, noWrap: _ } = _;
         return (0, _.jsx)(_._, {
@@ -2639,9 +2596,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2672,14 +2629,14 @@
           lineItems: _ = [],
           cartValidation: _,
           LineItemContainer: _ = _,
+          scrollable: _ = !1,
         } = _;
         if (!_.length) return (0, _.jsx)(_, {});
         const _ = _?.cart_items
           ? _.cart_items.reduce((_, _) => ((_[_.line_item_id] = _), _), {})
           : {};
         return (0, _.jsx)(_._, {
-          className: _().LineItemsCtn,
-          focusableIfEmpty: !0,
+          scrollable: _,
           children:
             _ &&
             _.map((_, _) =>
@@ -2910,6 +2867,9 @@
                     (0, _.jsxs)(_, {
                       validatedItem: _,
                       children: [
+                        (0, _.jsx)(_, {
+                          item: _,
+                        }),
                         (0, _.jsx)(_, {
                           item: _,
                         }),
@@ -3148,6 +3108,25 @@
           ? (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
                 item: _,
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const { item: _ } = _;
+        if (!_.GetSelfPurchaseOption()?.requires_shipping) return null;
+        const _ = _._.country_code;
+        return ["GB"].includes(_)
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)("a", {
+                  className: (0, _._)(_().ComplianceLink),
+                  target: "_blank",
+                  href: "https://www.valvesoftware.com/legal/statement-of-compliance",
+                  children: (0, _._)(
+                    "#Cart_LineItem_Hardware_Compliance_Label",
+                  ),
+                }),
               }),
             })
           : null;
@@ -3885,6 +3864,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5949,9 +5930,12 @@
                   cartID: _,
                   ..._,
                 })
-            : (0, _.jsx)(_._, {
-                position: "center",
-                msDelayAppear: 250,
+            : (0, _.jsx)("div", {
+                className: _()(_().ShoppingCartPage, _().CartPagePlaceholder),
+                children: (0, _.jsx)(_._, {
+                  position: "center",
+                  msDelayAppear: 250,
+                }),
               })),
           (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(_, {}), _],

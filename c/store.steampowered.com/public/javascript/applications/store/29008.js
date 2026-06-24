@@ -5,6 +5,7 @@
       module.exports = {
         "duration-app-launch": "800ms",
         GameHoverCapsuleCtn: "_1isLDN8xbFyCDG5jtMO7J3",
+        Loading: "_6exjsiWCk6IgWiQenqfQH",
         UseHidingBottomHalf: "_3707obuB-7wD8GDUYRaLH4",
         TrailerAnchorStoreLink: "_1VNyOcfe2cBKY52VedXjyc",
         TrailerCtn: "_3ANIAZhTtXLvORlbv-Du-N",
@@ -1768,8 +1769,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1805,6 +1808,19 @@
       function _() {
         const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = _;
+      }
+      function _(_) {
+        const { label: _, strDialogDesc: _ } = _,
+          { elDialogElement: _, fnShowLogonDialog: _ } = _(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: _ || _._.Localize("#Login_SignIn"),
+            }),
+            _,
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2454,41 +2470,41 @@
             bShowIgnoreButton: _ = !1,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        return void 0 === _ && void 0 === _
-          ? null
-          : (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().GameHoverCapsuleCtn,
-                _().InGameHover,
-                _ && _().UseHidingBottomHalf,
-              ),
+          { data: _ } = (0, _._)(_),
+          _ = void 0 === _ && void 0 === _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().GameHoverCapsuleCtn,
+            _ && _().Loading,
+            _().InGameHover,
+            _ && _().UseHidingBottomHalf,
+          ),
+          children: [
+            (0, _.jsxs)("a", {
+              href: _,
+              className: _().TrailerAnchorStoreLink,
               children: [
-                (0, _.jsxs)("a", {
-                  href: _,
-                  className: _().TrailerAnchorStoreLink,
-                  children: [
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_._, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    Boolean(_ && !_) &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                        snr: _.strSNR,
-                      }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        _: _,
-                      }),
-                  ],
-                }),
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_._, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                Boolean(_ && !_) &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                    snr: _.strSNR,
+                  }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                  }),
               ],
-            });
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
       }
       function _(_) {
         const {
@@ -3432,13 +3448,14 @@
             strPriceFormattedClassName: _,
             bPreferWholeNumbers: _,
             bSelfPurchaseOption: _,
+            bHideNewTag: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = _,
-          _ = (0, _._)(_, _),
+          _ = !_ && (0, _._)(_, _),
           _ = (0, _._)({
             [_().StoreSalePriceWidgetContainer]: !0,
             [_().SingleLineMode]: _,
@@ -4265,8 +4282,9 @@
                 if (!_) return new Set();
                 const _ = await (async function (_, _) {
                   const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgIgnoredApps || [];
+                    _ = await fetch(_),
+                    _ = await _.json();
+                  return Object.keys(_.rgIgnoredApps).map(Number) || [];
                 })(0, _);
                 return new Set(_);
               },

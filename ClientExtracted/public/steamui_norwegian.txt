@@ -849,6 +849,7 @@ nødvendig for å kontakte deg via e-post."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (spansk – Latin-Amerika)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamesisk)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonesisk)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (malayisk)"
 
 
 
@@ -5058,6 +5059,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "DownloadRegion_br_manaus"			"Brasil – Manaus"
 "DownloadRegion_br_belem"			"Brasil – Belém"
 "DownloadRegion_br_salvador"			"Brasil – Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Kontrollerkonfigurasjon"
 "ControllerBinding_Offline_Save"	"[Frakoblet autolagring]"

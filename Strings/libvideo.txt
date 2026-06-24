@@ -1326,6 +1326,7 @@ $ffn
 -chromeosverbose
 -clientbeta
 -debugbreak
+-deckard
 -holo
 -hometest
 -inf
@@ -1335,6 +1336,7 @@ $ffn
 -steamconsole
 -steamdeck
 -steamframe
+-steamos
 -steamos3
 -tesla
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -1611,6 +1613,7 @@ $ffn
 /proc/self/fd
 /proc/self/maps
 /proc/version
+/run/host/etc/os-release
 /steamrtarm64
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
@@ -1654,7 +1657,6 @@ $ffn
 0.15
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:54:04
 01/01/00
 0123456789
 0123456789.
@@ -2047,6 +2049,7 @@ $ffn
 1536
 15000
 155.133.240.0/23
+15:29:26
 15CAudioResampler
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -2258,7 +2261,6 @@ $ffn
 3-WH
 30!]^JV
 3072
-30000
 30>9
 30CWorkItemNetFilterOnDisconnect
 31CAdHocValidation_SimpleCallback
@@ -2321,7 +2323,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2343,9 +2344,7 @@ $ffn
 6*Fc7
 6-nn
 6144
-60000000
 64CK\vH
-65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2395,6 +2394,10 @@ $ffn
 8/A0
 8000
 8192
+30000
+65536
+524288
+60000000
 82\n:XPH
 88n|
 88pH
@@ -2527,6 +2530,7 @@ $ffn
 >0PFJ
 >= or is NULL
 >I{TrEX
+>POn
 >ZF9
 >\n9k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages
 >\n9k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated
@@ -3162,6 +3166,7 @@ AsyncSocketWriteTo
 AsyncWrite
 Attempt to create persistent logs with no end date!
 Attempt to schedule '%s' %lldusec in the past
+Attempted to access intermediate certificate at index %d. Total intermediates: %d
 Attempted to change replicated CVar when you are not the GM\n
 Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
@@ -6220,6 +6225,7 @@ INVALID
 INVALID_ARGUMENT
 INVALID_CPPTYPE
 INVALID_HSOCKETOWNER != m_hSocketOwner
+INVALID_KEY_SYMBOL
 INVALID_SOCKET != hSocket
 INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
@@ -6506,7 +6512,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun  9 2026
+Jun 24 2026
 June
 K'iche'
 K(\f]C15
@@ -10506,6 +10512,7 @@ Zulu
 \n\rwebsite_title
 \n\tIPSec/IKE/Oakley curve #3 over a 155 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
 \n\tIPSec/IKE/Oakley curve #4 over a 185 bit binary field.\n\tNot suitable for ECDSA.\n\tQuestionable extension field!
+\n\t\tChain Certificate %d:\n
 \n\tavailabilityStartTime="%s"
 \n\tedit_info
 \n\tevent_gid
@@ -11875,6 +11882,7 @@ coefficient%d:
 coefficient:
 cofactor
 collect_data
+collection_time_active
 com.google.protobufB
 com.valvesoftware.steam
 comcast
@@ -15463,7 +15471,6 @@ k_EMsgSCIDRequest
 k_EMsgSCIDResponse
 k_EMsgSMExpensiveReport
 k_EMsgSMHourlyReport
-k_EMsgSMMonitorSpace
 k_EMsgSMPartitionRenames
 k_EMsgSecretsBase
 k_EMsgServerSecretChanged
@@ -17344,7 +17351,9 @@ pchMsg
 pchName
 pchNeedle != NULL
 pchOut
+pchSearch != nullptr
 pchSteam2ID
+pchString != nullptr
 pchTLSServerName == NULL
 pchTemplate[0] == '\0'
 pch[cub - 1] != '\0' && pch[cub] == '\0'
@@ -17871,7 +17880,6 @@ res master
 reseed error
 reservation_country_code
 reservation_state
-reservation_type
 reserved
 reserved_range
 resizeNumBits >= 0
@@ -18716,6 +18724,7 @@ steamglobal
 steamhdl
 steamid
 steammessages_base.proto
+steamos
 steampipe
 steampipepeering
 steamservice.so
@@ -18809,7 +18818,6 @@ support locked group
 support unlocked group
 supportedAlgorithms
 supportedApplicationContext
-supported_languages
 surname
 sv_SE
 svcm

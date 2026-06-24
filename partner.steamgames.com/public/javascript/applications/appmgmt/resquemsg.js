@@ -109,8 +109,8 @@
         h = i(81393),
         m = i(68797),
         _ = i(6144),
-        p = i(73745),
-        g = i(30470);
+        g = i(73745),
+        p = i(30470);
       class f {
         m_mapProductPositionMsgList = new Map();
         m_productListChangeCallback = new _.lu();
@@ -189,7 +189,7 @@
                 i = Math.floor(Date.now() / 1e3);
               return (
                 e.forEach((e) => {
-                  (e.accountid = g.iA.accountid), (e.rtime_created = i);
+                  (e.accountid = p.iA.accountid), (e.rtime_created = i);
                   const n = this.GetKey(e);
                   let s = this.m_mapProductPositionMsgList.get(n);
                   const o = s.findIndex(
@@ -272,7 +272,7 @@
             f.s_Singleton ||
               ((f.s_Singleton = new f()),
               f.s_Singleton.Init(),
-              "dev" == g.TS.WEB_UNIVERSE &&
+              "dev" == p.TS.WEB_UNIVERSE &&
                 (window.g_ReservationMessagingStore = f.s_Singleton)),
             f.s_Singleton
           );
@@ -284,12 +284,12 @@
             "application_config",
           );
           (0, h.wT)(Boolean(e), "require promotion_operation_token"),
-            "dev" == g.TS.WEB_UNIVERSE &&
+            "dev" == p.TS.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CReservationMessagingStore with access token ",
                 e,
               ),
-            (this.m_steamInterface = new d.D(g.TS.WEBAPI_BASE_URL, e));
+            (this.m_steamInterface = new d.D(p.TS.WEBAPI_BASE_URL, e));
           const t = (0, o.Tc)(
             "reservation_queue_position_messages",
             "application_config",
@@ -319,7 +319,7 @@
       }
       function v() {
         const [e, t] = (0, s.useState)(() => f.Get().GetAllProducts());
-        return (0, p.hL)(f.Get().GetProductListChangeCallback(), t), e;
+        return (0, g.hL)(f.Get().GetProductListChangeCallback(), t), e;
       }
       function S() {
         const e = f.Get();
@@ -331,11 +331,11 @@
             e.ReloadReservationPositionMessages,
         };
       }
-      (0, a.Cg)([p.oI], f.prototype, "AddProductID", null),
-        (0, a.Cg)([p.oI], f.prototype, "SetPositionMessages", null),
-        (0, a.Cg)([p.oI], f.prototype, "DeletePositionMessage", null),
+      (0, a.Cg)([g.oI], f.prototype, "AddProductID", null),
+        (0, a.Cg)([g.oI], f.prototype, "SetPositionMessages", null),
+        (0, a.Cg)([g.oI], f.prototype, "DeletePositionMessage", null),
         (0, a.Cg)(
-          [p.oI],
+          [g.oI],
           f.prototype,
           "ReloadReservationPositionMessages",
           null,
@@ -343,7 +343,7 @@
       var x = i(77411),
         M = i(65285),
         j = i(16676);
-      function T(e) {
+      function w(e) {
         const [t, i] = (0, s.useState)(null),
           { fnAddProductID: o } = S();
         return (
@@ -355,7 +355,7 @@
                 children:
                   "Select an item for which we want to communicate a reservation status.",
               }),
-              (0, n.jsx)(b, { selected: t, setSelected: i }),
+              (0, n.jsx)(T, { selected: t, setSelected: i }),
               (0, n.jsxs)(j.$n, {
                 disabled: !t,
                 onClick: () => {
@@ -371,7 +371,7 @@
           })
         );
       }
-      function b(e) {
+      function T(e) {
         const { selected: t, setSelected: i } = e,
           o = (0, s.useRef)(void 0),
           a = (function () {
@@ -421,7 +421,7 @@
           },
         });
       }
-      var w = i(71298),
+      var b = i(71298),
         R = i(99637),
         y = i(8905),
         A = i(9154),
@@ -516,6 +516,11 @@
               "#Sale_Reservation_AfterQuarter" + (Math.floor((a - 1) / 3) + 1)),
               (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
               (c = "" + r.getFullYear());
+            break;
+          case "#Sale_Reservation_BetweenNowAndLastDay":
+            (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
+              (c = "" + new Date(r.getFullYear(), r.getMonth(), 0).getDate()),
+              (u = "" + r.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
@@ -616,7 +621,7 @@
             const [t, i] = (0, s.useState)(() =>
               f.Get().GetPositionMessagingForProduct(e),
             );
-            return (0, p.hL)(f.Get().GetPositionListChangeCallback(e), i), t;
+            return (0, g.hL)(f.Get().GetPositionListChangeCallback(e), i), t;
           })(t);
         return i
           ? (0, n.jsxs)(C.qx, {
@@ -727,15 +732,15 @@
             i?.localization_token || "#Sale_Reservation_MonthYear",
           ),
           _ = i ? "Update Queue Range" : "Create Queue Range",
-          p = (0, w.vs)();
-        return p.bLoading
-          ? (0, n.jsx)(w.Hh, { state: p, strDialogTitle: _, closeModal: o })
+          g = (0, b.vs)();
+        return g.bLoading
+          ? (0, n.jsx)(b.Hh, { state: g, strDialogTitle: _, closeModal: o })
           : (0, n.jsx)(A.o0, {
               bDisableBackgroundDismiss: !0,
               strTitle: _,
               onCancel: o,
               onOK: () => {
-                p.fnSetLoading(!0);
+                g.fnSetLoading(!0);
                 const e = {
                   ...t,
                   start_queue_position: l,
@@ -744,10 +749,10 @@
                 };
                 r([e]).then((e) => {
                   e
-                    ? (p.fnSetSuccess(!0),
-                      p.fnSetStrSuccess("Successfully created position"))
-                    : (p.fnSetSuccess(!1),
-                      p.fnSetStrError(
+                    ? (g.fnSetSuccess(!0),
+                      g.fnSetStrSuccess("Successfully created position"))
+                    : (g.fnSetSuccess(!1),
+                      g.fnSetStrError(
                         "Failed, please check console logs and/or try again",
                       ));
                 });
@@ -759,7 +764,7 @@
                     children: [
                       "When we get to accepting reservation number ",
                       (0, n.jsx)("i", { children: "n" }),
-                      ", show those users a date they can anticipate to recieve an invite to purchase.",
+                      ", show those users a date they can anticipate to recieve an invite to purchase. If we are choosing a display that shows the day, please account for the date is being shown to each user in their local time.",
                     ],
                   }),
                   (0, n.jsx)(j.pd, {
@@ -793,9 +798,9 @@
         const { positionMsg: t, closeModal: i } = e,
           { fnDeletePositionMessage: s } = S(),
           o = `Delete Queue Position ${(0, W.D)(t.start_queue_position)}`,
-          r = (0, w.vs)();
+          r = (0, b.vs)();
         return r.bLoading
-          ? (0, n.jsx)(w.Hh, { state: r, strDialogTitle: o, closeModal: i })
+          ? (0, n.jsx)(b.Hh, { state: r, strDialogTitle: o, closeModal: i })
           : (0, n.jsx)(A.o0, {
               strTitle: o,
               strDescription: "Are you sure, this action is no undo'able?",
@@ -826,8 +831,8 @@
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: o
-              ? "Reloading..."
-              : "Reload send to server, safe to close dialog",
+              ? "Reload sent to server! Now safe to close dialog"
+              : "Reloading In Progress...",
             closeModal: t,
           })
         );
@@ -845,6 +850,7 @@
         "#Sale_Reservation_RelativeWeekly",
         "#Sale_Reservation_ByYear",
         "#Sale_Reservation_ByMonthYear",
+        "#Sale_Reservation_BetweenNowAndLastDay",
         "#Sale_Reservation_AvailabilityUnknown",
       ];
       function ee(e) {
@@ -917,7 +923,7 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: ne().SectionCtn,
-                      children: (0, n.jsx)(T, {}),
+                      children: (0, n.jsx)(w, {}),
                     }),
                     (0, n.jsx)("div", {
                       className: ne().SectionCtn,
@@ -943,7 +949,7 @@
                         (0, n.jsx)("ul", {
                           children: (0, n.jsx)("li", {
                             children: (0, n.jsx)("a", {
-                              href: `${g.TS.STATS_BASE_URL}steamdeck/reservations/`,
+                              href: `${p.TS.STATS_BASE_URL}steamdeck/reservations/`,
                               target: "_blank",
                               children: "Steam Hardware reservation stats page",
                             }),
@@ -961,7 +967,7 @@
     },
     27144: (e, t, i) => {
       "use strict";
-      i.d(t, { B3: () => T, CF: () => b, KM: () => S, KT: () => j });
+      i.d(t, { B3: () => w, CF: () => T, KM: () => S, KT: () => j });
       var n = i(41735),
         s = i.n(n),
         o = i(58632),
@@ -974,19 +980,19 @@
         h = i(68797),
         m = i(78327),
         _ = i(56545),
-        p = i(76176),
-        g = i(23809),
+        g = i(76176),
+        p = i(23809),
         f = i(7860);
       const v = "nicknames";
       function S(e) {
-        const t = (0, g.KV)(),
+        const t = (0, p.KV)(),
           { data: i, isLoading: n } = (0, l.I)({
             queryKey: [v],
             queryFn: async () => {
               const e = new Map();
               if (m.iA.logged_in) {
-                const i = _.w.Init(p.w_T),
-                  n = (await p.xtC.GetNicknameList(t, i)).Body().toObject();
+                const i = _.w.Init(g.w_T),
+                  n = (await g.xtC.GetNicknameList(t, i)).Body().toObject();
                 n?.nicknames &&
                   n.nicknames.length > 0 &&
                   n.nicknames.forEach((t) => {
@@ -1051,7 +1057,7 @@
         });
         return [t, i];
       }
-      function T(e) {
+      function w(e) {
         const t = (0, c.jE)(),
           { data: i, isLoading: n } = (0, l.I)({
             queryKey: [M, e],
@@ -1078,7 +1084,7 @@
           }, [i]);
         return n ? null : s;
       }
-      function b(e) {
+      function T(e) {
         return f.L.getQueryData([M, e]);
       }
     },
@@ -1097,9 +1103,9 @@
         h = i(61859),
         m = i(32754),
         _ = i(12916),
-        p = i.n(_),
-        g = i(87937),
-        f = i.n(g);
+        g = i.n(_),
+        p = i(87937),
+        f = i.n(p);
       const v = "hh:mm a",
         S = "HH:mm";
       function x(e) {
@@ -1109,10 +1115,10 @@
           fnGetTimeToUpdate: o,
           onError: c,
           strAlsoShowTimeZone: _,
-          disabled: g,
+          disabled: p,
           bNoDefaultDate: x,
-          className: b,
-          strDescToolTip: w,
+          className: T,
+          strDescToolTip: b,
           strDescription: R,
           bShowTimeZone: y,
           strInvalidDateTimeLocalizedMsg: A,
@@ -1135,7 +1141,7 @@
           Y = (function (e, t, i, n, o) {
             const r = n && n(),
               a = t && !j(t).isValid(),
-              l = e && !T(e).isValid();
+              l = e && !w(e).isValid();
             let c = null;
             (l || a || "string" == typeof r || !1 === r) &&
               ((c = (0, h.we)(
@@ -1176,7 +1182,7 @@
           } = M(
             j,
             (e) => {
-              if (g) return;
+              if (p) return;
               U(null);
               const t = o(),
                 i = f().unix(t || l.HD.GetTimeNowWithOverride());
@@ -1193,9 +1199,9 @@
             fnOnInputBlur: X,
             fnOnChange: $,
           } = M(
-            T,
+            w,
             (e) => {
-              if (g) return;
+              if (p) return;
               G(null);
               let t = o(),
                 n = 0;
@@ -1216,19 +1222,19 @@
             G,
           );
         return (0, n.jsxs)("div", {
-          className: (0, d.A)(p().EventTimeSection, b),
+          className: (0, d.A)(g().EventTimeSection, T),
           children: [
             (0, n.jsxs)("div", {
-              className: (0, d.A)(p().EventTimeTitle, "DialogLabel"),
+              className: (0, d.A)(g().EventTimeTitle, "DialogLabel"),
               children: [
                 (0, n.jsx)(m.he, {
-                  toolTipContent: w,
+                  toolTipContent: b,
                   direction: "top",
                   children: Boolean(R) && (0, n.jsx)("span", { children: R }),
                 }),
                 z &&
                   (0, n.jsxs)("span", {
-                    className: p().DateErrorCtn,
+                    className: g().DateErrorCtn,
                     children: [(0, n.jsx)("img", { src: a.A }), z],
                   }),
               ],
@@ -1237,14 +1243,14 @@
               className: u().FlexRowContainer,
               children: [
                 (0, n.jsxs)("div", {
-                  className: (0, d.A)(u().InputBorder, p().TimeBlock),
+                  className: (0, d.A)(u().InputBorder, g().TimeBlock),
                   children: [
                     (0, n.jsx)(r(), {
                       onChange: J,
                       timeFormat: !1,
                       value: null != F ? F : N,
                       isValidDate: (e) =>
-                        !g &&
+                        !p &&
                         (function (e, t, i, n) {
                           const s = f().unix(e).hour(0).seconds(0).minute(0);
                           let o = n.unix() >= s.unix();
@@ -1266,24 +1272,24 @@
                       inputProps: {
                         placeholder: (0, h.we)("#DateTimePicker_Enter_Date"),
                         className: (0, d.A)(
-                          p().DateWidth,
+                          g().DateWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
-                        disabled: g,
+                        disabled: p,
                         onChange: (e) => H(e.currentTarget.value),
                         onBlur: (e) => K(e.currentTarget.value),
                       },
                     }),
                     !!V &&
                       (0, n.jsx)("div", {
-                        className: p().PacificTimeHint,
+                        className: g().PacificTimeHint,
                         children: V.format("L"),
                       }),
                   ],
                 }),
                 (0, n.jsxs)("div", {
-                  className: (0, d.A)(u().InputBorder, p().TimeBlock),
+                  className: (0, d.A)(u().InputBorder, g().TimeBlock),
                   children: [
                     (0, n.jsx)(r(), {
                       onChange: $,
@@ -1294,18 +1300,18 @@
                       inputProps: {
                         placeholder: (0, h.we)("#DateTimePicker_Enter_Time"),
                         className: (0, d.A)(
-                          p().TimeWidth,
+                          g().TimeWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
-                        disabled: g,
+                        disabled: p,
                         onChange: (e) => Z(e.currentTarget.value),
                         onBlur: (e) => X(e.currentTarget.value),
                       },
                     }),
                     !!V &&
                       (0, n.jsx)("div", {
-                        className: p().PacificTimeHint,
+                        className: g().PacificTimeHint,
                         children: V.format("LT"),
                       }),
                   ],
@@ -1314,12 +1320,12 @@
                   (0, n.jsxs)("div", {
                     children: [
                       (0, n.jsx)("div", {
-                        className: p().TimeZone,
+                        className: g().TimeZone,
                         children: q.zoneAbbr(),
                       }),
                       !!V &&
                         (0, n.jsx)("div", {
-                          className: p().TimeZone,
+                          className: g().TimeZone,
                           children: V.zoneAbbr(),
                         }),
                     ],
@@ -1368,7 +1374,7 @@
           !1,
         );
       }
-      function T(e) {
+      function w(e) {
         return f()(e, [v, S], !1);
       }
     },
@@ -1392,13 +1398,13 @@
           h = (0, r.KM)(t),
           m = s.useMemo(() => o.b.InitFromAccountID(t), [t]),
           _ = `${l.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`,
-          p = u ? "a" : "span";
+          g = u ? "a" : "span";
         return (0, n.jsx)(n.Fragment, {
           children: Boolean(!d)
             ? (0, n.jsx)(n.Fragment, {
                 children: Boolean(!i) && (0, n.jsx)("span", { children: t }),
               })
-            : (0, n.jsxs)(p, {
+            : (0, n.jsxs)(g, {
                 href: u ? _ : void 0,
                 children: [
                   (0, n.jsx)("img", {
@@ -1417,7 +1423,7 @@
     },
     48479: (e, t, i) => {
       "use strict";
-      i.d(t, { AQ: () => _, pn: () => g, qx: () => p });
+      i.d(t, { AQ: () => _, pn: () => p, qx: () => g });
       var n = i(7850),
         s = i(16676),
         o = i(61859),
@@ -1439,7 +1445,7 @@
             children: a,
             elAdditionalButtons: _,
           } = e,
-          p = (0, h.q3)(() => s());
+          g = (0, h.q3)(() => s());
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
@@ -1461,16 +1467,16 @@
                   className: d.SectionTitleButtons,
                   children: [
                     _,
-                    (0, n.jsx)(g, { bIsMinimized: p, fnToggleMinimize: o }),
+                    (0, n.jsx)(p, { bIsMinimized: g, fnToggleMinimize: o }),
                   ],
                 }),
               ],
             }),
-            !p && (0, n.jsx)(u.tH, { children: a }),
+            !g && (0, n.jsx)(u.tH, { children: a }),
           ],
         });
       }
-      function p(e) {
+      function g(e) {
         const [t, i] = a.useState(Boolean(e.bStartMinimized));
         return (0, n.jsx)(_, {
           ...e,
@@ -1479,7 +1485,7 @@
           children: e.children,
         });
       }
-      function g(e) {
+      function p(e) {
         const { bIsMinimized: t, fnToggleMinimize: i } = e,
           a = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, n.jsx)(s.$n, {
