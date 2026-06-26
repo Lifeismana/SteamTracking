@@ -26,7 +26,7 @@
     "Reservation_JoinPool_ClickTerms": "Tutustu varausehtoihin alla.",
     "Reservation_Pool_NotSignedIn": "Liity listalle kirjautumalla sisään",
     "Reservation_Pool_NotSignedIn_Desc": "Liity listalle kirjautumalla sisään Steamiin. Voit siirtyä kirjautumissivulle valitsemalla OK.",
-    "Reservation_InPool_Message": "Voit liittyä listalle milloin vain ennen 25.6. kello 20 Suomen aikaa. Sen jälkeen lista suljetaan, järjestys arvotaan, ja saat pian sen jälkeen arvonnan tulokset sähköpostilla.",
+    "Reservation_InPool_Message": "Voit liittyä varauslistalle milloin vain ennen 25.6. kello 20 Suomen aikaa. Sen jälkeen lista suljetaan, järjestys arvotaan, ja saat tulokset sähköpostilla.",
     "Reservation_Pool_Closed": "",
     "Reservation_Pool_InProgress_Joined": "Listaa arvotaan parhaillaan. Saat tulokset pian sähköpostilla.",
     "Reservation_Pool_InProgress_NotJoined": "Listaa arvotaan parhaillaan. Voit liittyä listalle, kun arvonta on suoritettu.",

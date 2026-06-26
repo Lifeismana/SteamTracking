@@ -371,8 +371,8 @@
         L = n(83581),
         E = n.n(L);
       var W = n(44433),
-        M = n(78686);
-      const O = new B.wd("TrailerAppVideo"),
+        O = n(78686);
+      const M = new B.wd("TrailerAppVideo"),
         q = "bGameHighlightAutoplayDisabled";
       function V(e) {
         const {
@@ -399,7 +399,7 @@
           [R, Q] = g.useState(P.Tw),
           [F, B] = (0, g.useState)(null),
           [L, W] = (0, g.useState)(null),
-          { bCookieLoaded: O } = (function (e, t, n) {
+          { bCookieLoaded: M } = (function (e, t, n) {
             const a = g.useCallback(() => {
               const t = (0, G.VY)(e ?? q),
                 a = !(!t || "true" !== t.toLowerCase());
@@ -413,7 +413,7 @@
               );
             })(t, a);
           })(r, n, h),
-          V = O;
+          V = M;
         g.useEffect(() => {
           n && V && p && !b && y(!0);
         }, [p, V, n, b]),
@@ -447,7 +447,7 @@
           children: [
             (0, a.jsx)("button", {
               onClick: U,
-              "aria-label": M.Z.Localize("#SaleTrailerCarousel_PlayPause"),
+              "aria-label": O.Z.Localize("#SaleTrailerCarousel_PlayPause"),
               children: (0, a.jsx)("img", {
                 className: (0, C.A)(E().AppMainCap, R != P.Tw && E().Hidden),
                 src: Z,
@@ -566,12 +566,12 @@
           if (_ && d === P.Tw)
             if ((x(!0), S)) {
               if (j) {
-                O.Debug("Starting microtrailer"), m(P.g);
+                M.Debug("Starting microtrailer"), m(P.g);
                 const n = () =>
                   (function (e, t, n) {
                     if (e.current) return;
                     (e.current = !0),
-                      O.Debug("Starting main trailer"),
+                      M.Debug("Starting main trailer"),
                       t(P.Jh),
                       n.Play();
                   })(L, m, j);
@@ -582,10 +582,10 @@
                     (e = "microtrailer"),
                     (t = () => D(!1)),
                     R.play().catch((n) => {
-                      t(), O.Warning(`Failed to play ${e}: `, n);
+                      t(), M.Warning(`Failed to play ${e}: `, n);
                     }));
               }
-            } else O.Debug("Showing image");
+            } else M.Debug("Showing image");
           var e, t;
         }, [_, d, r, S, u, m, j, R]),
           (function (e, t) {
@@ -2070,7 +2070,7 @@
           n = t.map((e) => {
             if (!e.community_definition || !e.community_definition.item_name)
               return null;
-            const t = `${p.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
+            const t = `${p.TS.COMMUNITY_ASSETS_BASE_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
             return (0, a.jsx)(
               "div",
               {
@@ -2161,8 +2161,8 @@
         L = n(61336),
         E = n(20713),
         W = n(55509),
-        M = n(80902),
-        O = n(22837),
+        O = n(80902),
+        M = n(22837),
         q = n(1035),
         V = n(34181),
         H = n(17720),
@@ -2228,14 +2228,14 @@
           c = (0, oe.Nd)(t),
           u = (function (e) {
             const t = (0, d.KV)();
-            return (0, M.I)({
+            return (0, O.I)({
               queryKey: ["AppRelevanceStore", "FriendsRecommended", e],
               queryFn: () => ae.LoadFriendsRecommendedApp(t, e),
               enabled: w.iA.logged_in,
             });
           })(t),
           m = (function (e) {
-            return (0, M.I)({
+            return (0, O.I)({
               queryKey: ["AppRelevanceStore", "StoreRelevance", e],
               queryFn: () => ae.LoadStoreRelevanceData(e),
               enabled: w.iA.logged_in,
@@ -2249,7 +2249,7 @@
             });
             return e;
           })(),
-          h = (0, M.I)({
+          h = (0, O.I)({
             queryKey: ["SimilarPlayedAppsLoad", t],
             queryFn: () =>
               g.A.Get().QueueMultipleAppRequests(
@@ -2263,7 +2263,7 @@
               () => _.Fm.Get().GetRecommendingCuratorsForApp(e) || [],
               [e],
             );
-            return (0, M.I)({
+            return (0, O.I)({
               queryKey: ["RecommendingCurators", e],
               queryFn: () =>
                 Promise.all(
@@ -2297,7 +2297,7 @@
               e
             );
           }, [i]),
-          C = (0, M.I)({
+          C = (0, O.I)({
             queryKey: ["FollowedCreators", t],
             queryFn: () =>
               U.ac
@@ -2305,7 +2305,7 @@
                 .then((e) => ({ clanInfo: e, type: f[0].type })),
             enabled: !!l && f && f.length > 0,
           }),
-          S = (0, M.I)({
+          S = (0, O.I)({
             queryKey: ["PlayerSummaries", t, n],
             queryFn: async () => {
               let e = [],
@@ -2616,7 +2616,7 @@
                 (0, s.jsx)(V.D, {
                   className: ie().PersonaStatus,
                   persona: n,
-                  eFriendRelationship: O._UC,
+                  eFriendRelationship: M._UC,
                   bIsSelf: !1,
                   strNickname: null,
                   bParenthesizeNicknames: !1,
@@ -2985,7 +2985,7 @@
           (0, D.E)("Escape", () => n?.(), !0, !0),
           (0, D.E)("Esc", () => n?.(), !0, !0);
         const W = a.useMemo(() => Boolean(Q.innerWidth < Re), [Q]),
-          { fnGetDiscoveryQueue: M, rgAppIDs: O } = (function (e, t, n) {
+          { fnGetDiscoveryQueue: O, rgAppIDs: M } = (function (e, t, n) {
             const [s, i] = a.useState([]),
               r = (0, v.m)("DiscoveryQueueWizard"),
               o = async (a) => {
@@ -3003,34 +3003,34 @@
             return { fnGetDiscoveryQueue: o, rgAppIDs: s };
           })(t, c, o);
         a.useEffect(() => {
-          M(!0), _.Fm.Get().HintLoad();
+          O(!0), _.Fm.Get().HintLoad();
         }, []),
           a.useEffect(() => {
-            const e = O[g];
+            const e = M[g];
             e != x && (e && e != ke && E.AddImpression(e, F), j(e));
-          }, [E, g, x, O, F]);
+          }, [E, g, x, M, F]);
         const q = (e) => {
-          const t = b.OQ(g + (e ? 1 : -1), 0, O.length - 1);
+          const t = b.OQ(g + (e ? 1 : -1), 0, M.length - 1);
           t != g &&
             (f(t), Pe("New selected index: ", t, " Prev selected index: ", g));
         };
         a.useEffect(() => {
-          O?.length &&
-            O[g] !== ke &&
+          M?.length &&
+            M[g] !== ke &&
             (B((e) => e + 1),
             T.aI
               .Get()
-              .SkipDiscoveryQueueItem(O[g], t, c)
+              .SkipDiscoveryQueueItem(M[g], t, c)
               .then(() => B((e) => e - 1)));
-        }, [t, g, O, c]),
+        }, [t, g, M, c]),
           a.useEffect(() => {
-            O.length != N &&
-              (P(O.length), O.length > N && O[g] == ke && f(g + 1));
-          }, [N, g, O]);
+            M.length != N &&
+              (P(M.length), M.length > N && M[g] == ke && f(g + 1));
+          }, [N, g, M]);
         const [V] = a.useState(new Map()),
           H = (0, T.WX)(t, c),
           U = !(0, k.c5)() && g > 0,
-          Z = !(0, k.c5)() && g < O.length - 1,
+          Z = !(0, k.c5)() && g < M.length - 1,
           {
             refContainer: K,
             bIsDragging: z,
@@ -3072,12 +3072,12 @@
               handleTouchMove: p,
               handleTouchEnd: h,
             };
-          })((e) => f(e), O.length),
-          te = (e) => b.W(g + e, O) && (b.LA(e, -1, 1) || z),
+          })((e) => f(e), M.length),
+          te = (e) => b.W(g + e, M) && (b.LA(e, -1, 1) || z),
           ne = (0, p.aL)(w.TS.STORE_BASE_URL + "explore?dq=widget"),
           ae = !(0, w.Qn)() && !(0, Ne.$W)() && t === u.QV.qy,
           se = (0, p.aL)(w.TS.STORE_BASE_URL + "explore/next/" + u.QV.qy),
-          re = O[g] !== ke,
+          re = M[g] !== ke,
           { nQueueStart: oe, nCount: le } = (function (e, t) {
             let n = 0;
             for (let a = 0; a < e; a++) t[a] == ke && (n = a + 1);
@@ -3091,7 +3091,7 @@
             }
             const s = a - n;
             return { nQueueStart: n, nQueueEnd: a, nCount: s };
-          })(g, O);
+          })(g, M);
         return (0, s.jsx)(S.Ay, {
           feature: Qe,
           children: (0, s.jsx)(r.Z, {
@@ -3202,14 +3202,14 @@
                           (0, s.jsx)(Le, {
                             eStoreDiscoveryQueueType: t,
                             storePageFilter: c,
-                            rgAppIDs: O,
+                            rgAppIDs: M,
                             index: g + e,
                             bShowMinimizedDisplay: W,
                             selectedIndex: g,
                             bPreferDemoStorePage: Boolean(d),
                             mapViewedAppCount: V,
                             fnCloseModal: n,
-                            fnLoadNextQueue: () => M(!1),
+                            fnLoadNextQueue: () => O(!1),
                             fnAdvance: q,
                             bSkipAppRequestPending: Boolean(0 != G),
                             showAOAutoPlayWarning: Boolean(y),
@@ -3386,7 +3386,7 @@
                 !G &&
                   l &&
                   D.data?.definition &&
-                  (0, s.jsx)(Oe, {
+                  (0, s.jsx)(Me, {
                     bSkipAppRequestPending: C,
                     summaryCardIdx: i,
                   }),
@@ -3535,15 +3535,15 @@
           })
         );
       }
-      function Me() {
+      function Oe() {
         return (0, s.jsx)(r.Z, {
           className: ie().SaleRewardsCtn,
           children: (0, s.jsx)(P.t, { size: "large", position: "center" }),
         });
       }
-      function Oe(e) {
+      function Me(e) {
         const { bSkipAppRequestPending: t, summaryCardIdx: n } = e;
-        return t ? (0, s.jsx)(Me, {}) : (0, s.jsx)(qe, { summaryCardIdx: n });
+        return t ? (0, s.jsx)(Oe, {}) : (0, s.jsx)(qe, { summaryCardIdx: n });
       }
       function qe(e) {
         const { summaryCardIdx: t } = e,
@@ -3551,7 +3551,7 @@
           [a] = (0, f.t7)(n?.data?.current_def?.appid, {}),
           i = (0, w.Qn)();
         if (!n?.data?.current_def || !a?.GetName().length)
-          return (0, s.jsx)(Me, {});
+          return (0, s.jsx)(Oe, {});
         const o = n.data.num_items_earned,
           l = n.data.current_def.num_items_per_def,
           u = l - o,

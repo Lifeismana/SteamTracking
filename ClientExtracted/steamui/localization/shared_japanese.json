@@ -1990,7 +1990,7 @@
     "Sale_Reservation_YourExpectedDate": "お客様の注文受付開始予定：",
     "Sale_Reservation_Komodo": "Steam Deckは、日本、韓国、台湾、香港では、KOMODOのWebサイト（<1>steamdeck.komodo.jp</1>）で購入できます",
     "Sale_Reservation_Komodo_Generic": "%1$sは、日本、韓国、台湾、香港では、KOMODO経由（%2$s）で購入できます",
-    "Sale_Reservation_Komodo_Generic_NoSk": "%1$s is available in Japan, Taiwan, and Hong Kong via KOMODO at %2$s",
+    "Sale_Reservation_Komodo_Generic_NoSk": "%1$sは、日本、台湾、香港では、KOMODO経由（%2$s）で購入できます",
     "Sale_Reservation_Too_Busy": "予約サーバーが混雑しています。もう一度お試しください。",
     "Sale_Reservation_Available_Date": "%1$sに発売",
     "Sale_Reservation_AvailabilityUnknown": "在庫状況に関する情報はありません",

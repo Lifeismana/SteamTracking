@@ -177,7 +177,6 @@ $ORIGIN
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapIPKcii22CDefCaselessStringLessE
 9IValidate
-:X5\tod
 :done\n
 :error\n
 @echo off\n

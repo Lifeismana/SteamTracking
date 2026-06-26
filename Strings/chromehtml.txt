@@ -1983,6 +1983,7 @@ Found invalid proto option data for:
 Free disk space for %s would overflow
 French
 Friday
+G66KL^x
 GCC: (Debian 10.2.1-6) 10.2.1 20210110
 GCC: (Debian 9.3.0-22) 9.3.0
 GLIBC_2.17

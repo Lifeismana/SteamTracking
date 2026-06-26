@@ -32,7 +32,6 @@
             hardwareDetail: _,
             reservationAdvancedSettings: _,
             reservedHardwareDetail: _,
-            bShuffleInProgress: _,
           } = _,
           [_] = (0, _._)(() => [_?.waiting_learn_more_url]);
         return (0, _.jsxs)(_.Fragment, {
@@ -55,11 +54,7 @@
               className: (0, _._)(_.expecteddate_str),
               children: (0, _._)(_.reservation_state)
                 ? _._.LocalizeReact("#Reservation_In_Waitlist_Message")
-                : _._.LocalizeReact(
-                    _
-                      ? "#Reservation_Pool_InProgress_NotJoined"
-                      : "#Reservation_In_Waitlist_Message_NotJoin",
-                  ),
+                : _._.LocalizeReact("#Reservation_In_Waitlist_Message_NotJoin"),
             }),
             _ &&
               (0, _.jsx)("a", {

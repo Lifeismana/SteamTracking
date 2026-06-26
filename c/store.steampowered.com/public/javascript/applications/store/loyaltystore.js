@@ -6483,7 +6483,7 @@
           return this.m_config;
         }
         GetCurrentSeasonalAppID() {
-          return 4228010;
+          return 4844660;
         }
         async GetLoyaltyRewardsSummary() {
           if (!this.BIsLoggedIn()) return;

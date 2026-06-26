@@ -2236,7 +2236,7 @@
           _ = _.map((_) => {
             if (!_.community_definition || !_.community_definition.item_name)
               return null;
-            const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
+            const _ = `${_._.COMMUNITY_ASSETS_BASE_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
             return (0, _.jsx)(
               "div",
               {

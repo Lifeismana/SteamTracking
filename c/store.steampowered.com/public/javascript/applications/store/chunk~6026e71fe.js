@@ -4444,6 +4444,9 @@
                       (_.rtime_estimated_notification =
                         _.rtime_estimated_notification()),
                       (_.notificaton_token = _.notificaton_token()),
+                      (_.queue_waitlist_token = _.queue_waitlist_token()),
+                      (_.position_is_waitlist = _.position_is_waitlist()),
+                      (_.user_waitlist_token = _.user_waitlist_token()),
                       _.setQueryData((0, _._)(_?.packageid), _);
                   }),
                 !0)
@@ -19931,68 +19934,65 @@
           });
         const _ = !!_ && (0, _._)(_.reservation_state),
           _ =
-            _.collection_time_active > 0 && _.collection_time_active < _._.NOW;
-        if (
-          _.requires_reservation &&
-          !_.reservation_not_allowed &&
-          _.collection_time_active &&
-          (!_ || _)
-        )
-          return (0, _.jsx)("div", {
-            className: _.purchaseaction,
-            children: (0, _.jsx)(_, {
-              hardwareDetail: _,
-              reservationAdvancedSettings:
-                _.internal_section_data?.reservation_advanced,
-              storeItemReleaseInfo: _,
-              bShuffleInProgress: _.collection_time_active < _._.NOW,
-              bHasSomeReservation: _,
-            }),
-          });
-        if (_ && _.is_coming_soon)
-          return (0, _.jsx)("div", {
-            className: _.purchaseaction,
-            children: (0, _.jsx)(_, {
-              hardwareDetail: _,
-              storeItemReleaseInfo: _,
-            }),
-          });
-        const _ = (!_ && _.queue_in_waitlist) || (_ && _.position_is_waitlist);
-        return _.requires_reservation && _
-          ? (0, _.jsx)("div", {
+            _.collection_time_active > 0 && _.collection_time_active < _._.NOW,
+          _ = (!_ && _.queue_in_waitlist) || (_ && _.position_is_waitlist);
+        return !_.requires_reservation ||
+          _.reservation_not_allowed ||
+          !_.collection_time_active ||
+          (_ && _)
+          ? _ && _.is_coming_soon
+            ? (0, _.jsx)("div", {
+                className: _.purchaseaction,
+                children: (0, _.jsx)(_, {
+                  hardwareDetail: _,
+                  storeItemReleaseInfo: _,
+                }),
+              })
+            : _.requires_reservation && _
+              ? (0, _.jsx)("div", {
+                  className: _.purchaseaction,
+                  children: (0, _.jsx)(_, {
+                    hardwareDetail: _,
+                    reservationAdvancedSettings:
+                      _.internal_section_data?.reservation_advanced,
+                    reservedHardwareDetail: _,
+                  }),
+                })
+              : (0, _.jsx)(_.Fragment, {
+                  children: (0, _.jsxs)("div", {
+                    className: _.purchaseaction,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        reservationDef: _,
+                        hardwareDetail: _,
+                        bPSULessModel: !1,
+                        reservedHardwareDetail: _,
+                      }),
+                      (0, _.jsx)(_._, {
+                        section: _,
+                        reservationDef: _,
+                        hardwareDetail: _,
+                      }),
+                      _ &&
+                        !!_.allow_purchase_in_country &&
+                        (0, _.jsx)(_._, {
+                          reservationDef: _,
+                          hardwareDetail: _,
+                          bPSULessModel: !0,
+                          reservedHardwareDetail: void 0,
+                        }),
+                    ],
+                  }),
+                })
+          : (0, _.jsx)("div", {
               className: _.purchaseaction,
               children: (0, _.jsx)(_, {
                 hardwareDetail: _,
                 reservationAdvancedSettings:
                   _.internal_section_data?.reservation_advanced,
-                reservedHardwareDetail: _,
-                bShuffleInProgress: _,
-              }),
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: (0, _.jsxs)("div", {
-                className: _.purchaseaction,
-                children: [
-                  (0, _.jsx)(_._, {
-                    reservationDef: _,
-                    hardwareDetail: _,
-                    bPSULessModel: !1,
-                    reservedHardwareDetail: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    section: _,
-                    reservationDef: _,
-                    hardwareDetail: _,
-                  }),
-                  _ &&
-                    !!_.allow_purchase_in_country &&
-                    (0, _.jsx)(_._, {
-                      reservationDef: _,
-                      hardwareDetail: _,
-                      bPSULessModel: !0,
-                      reservedHardwareDetail: void 0,
-                    }),
-                ],
+                storeItemReleaseInfo: _,
+                bShuffleInProgress: _.collection_time_active < _._.NOW,
+                bHasSomeReservation: _,
               }),
             });
       }
@@ -31527,7 +31527,7 @@
           _ = _.map((_) => {
             if (!_.community_definition || !_.community_definition.item_name)
               return null;
-            const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
+            const _ = `${_._.COMMUNITY_ASSETS_BASE_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
             return (0, _.jsx)(
               "div",
               {

@@ -180,8 +180,6 @@ body.v6 .game_area_purchase h2.package_group {
 	overflow: hidden;
 	box-sizing: border-box;
 	max-height: unset;
-	width: calc( 100% + var(--gpSpace-Gutter) + 8px );
-	margin-left: calc( var(--gpSpace-Gutter)* -1 );
 	padding: 10px 0px 8px 0px;
 }
 
@@ -193,11 +191,14 @@ body.v6 .game_area_purchase h2.package_group {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
+
+	padding-left: calc( var( --gpSpace-Gutter ) + var( --gpSpace-FocusRingAffordance ) );
+	padding-right: calc( var( --gpSpace-Gutter ) + var( --gpSpace-FocusRingAffordance ) );
 }
 
 .gamehighlight_gamepadskeleton_item {
-	width: 60%;
-	min-width: 60%;
+	width: 60vw;
+	min-width: 60vw;
 	scroll-snap-align: center;
 	aspect-ratio: 16 / 9;
 

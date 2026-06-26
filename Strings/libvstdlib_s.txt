@@ -1217,6 +1217,7 @@ V_ReplaceBadFilenameCharactersInPlace
 V_SetCurrentDirectory
 V_SetExtension
 V_SetURLParam
+V_SkipFirstSubdomain
 V_SplitNumbers
 V_SplitNumbersUint
 V_SplitString3(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&)

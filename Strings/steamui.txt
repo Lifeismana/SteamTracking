@@ -697,6 +697,7 @@
 ".CCloud_GetSingleFileInfo_Response
 ".CGameRecording_DeleteClip_Request
 ".CGameRecording_ExportClip_Request
+".CGameServers_FriendsQuery_Request
 ".CGamescope_SetBlurParams_Response
 ".CHardwareUpdate_GetState_Response
 ".CInventory_DevSetNextDrop_Request
@@ -1101,6 +1102,7 @@
 #.CGameRecording_DeleteClip_Response
 #.CGameRecording_ExportClip_Response
 #.CGameRecording_QueryPhases_Request
+#.CGameServers_FriendsQuery_Response"
 #.CGameServers_QueryByFakeIP_Request
 #.CInventory_ConsumePlaytime_Request
 #.CInventory_GetItemDefMeta_Response"
@@ -3666,6 +3668,8 @@ ${LANGUAGE}
 (\v2'.CMsgClientPersonaState.Friend.ClanData
 (\v2'.CMsgNetworkDevicesData.Device.Wireless
 (\v2'.CMsgRemoteClientAppStatus.ShortcutInfo
+(\v2'.CMsgSystemDisplayManagerGameResolution
+(\v2'.CMsgSystemDisplayManagerGameResolution"s\n
 (\v2'.CPlayer_IncomingInviteMutualFriendList"
 (\v2'.CSteamTV_HomePageTemplate_ConveyorBelt
 (\v2'.CSteamTV_HomePageTemplate_QuickExplore
@@ -3689,6 +3693,7 @@ ${LANGUAGE}
 (\v2).CRemotePlayTogetherGroupUpdateMsg.Player
 (\v2).google.protobuf.EnumValueDescriptorProto
 (\v2*.CGameRecording_QueryPhases_Response.Phase
+(\v2*.CGameServers_FriendsQuery_Response.Player
 (\v2*.CHIDMessageToRemote.DeviceGetVendorStringH
 (\v2*.CMsgNetworkDevicesData.Device.Wireless.AP
 (\v2*.CMsgShowBrowserContextMenu.ContextCommand
@@ -6113,7 +6118,7 @@ ${LANGUAGE}
 .CMsgGCRoutingProtoBufHeader
 .CMsgGameServerPingQueryData
 .CMsgGameServerPlayersQueryData
-.CMsgGameServerRulesQueryData"
+.CMsgGameServerRulesQueryData"[\n!CGameServers_FriendsQuery_Request
 .CMsgGameServerRulesQueryData2
 .CMsgGamescopeState"&\n$CGamescope_StateChanged_Notification"o\n CGamescope_SetBlurParams_Request
 .CMsgIPAddress
@@ -6374,6 +6379,7 @@ ${LANGUAGE}
 .EControllerElementType
 .EDiskSpaceType">\n.CGameRecording_GetTotalDiskSpaceUsage_Response
 .EDisplayManagerRGBRange"
+.EDisplayManagerRGBRange"G\n&CMsgSystemDisplayManagerGameResolution
 .EDisplayPowerState"
 .EDisplayPowerState"*\n(CGamescope_SetDisplayPowerState_Response*q\n
 .EDisplayStatus
@@ -9460,7 +9466,7 @@ ${LANGUAGE}
 2 .ESteamDeckCompatibilityCategory
 2 .ESteamDeckCompatibilityFeedback
 2 .ESteamDeckCompatibilityFeedback"
-2 .ESystemDisplayCompatibilityMode"s\n
+2 .ESystemDisplayCompatibilityMode
 2 .ETimelineChangeNotificationType
 2 Mbps
 2!.EMarketingMessageAssociationType
@@ -11046,6 +11052,7 @@ ${LANGUAGE}
 33CControllerWorkshopBindingHandler
 33CGameRecording_DeleteClip_Request
 33CGameRecording_ExportClip_Request
+33CGameServers_FriendsQuery_Request
 33CGamescopeLegacyScreenshotManager
 33CGamescope_SetBlurParams_Response
 33CHIDMessageFromRemote_CloseDevice
@@ -11126,6 +11133,7 @@ ${LANGUAGE}
 34CGameRecording_ExportClip_Response
 34CGameRecording_ExportClip_Settings
 34CGameRecording_QueryPhases_Request
+34CGameServers_FriendsQuery_Response
 34CGameServers_QueryByFakeIP_Request
 34CGameStreamVideoStageUpdateBitRate
 34CInventory_ConsumePlaytime_Request
@@ -11516,6 +11524,7 @@ ${LANGUAGE}
 38CMsgRemoteDeviceStreamingCancelRequest
 38CMsgSetBrowserViewDomainRequestMapping
 38CMsgSetControllerInputActivatorEnabled
+38CMsgSystemDisplayManagerGameResolution
 38COffline_GetOfflineLogonTicket_Request
 38CParental_ApproveFeatureAccess_Request
 38CParental_GetParentalSettings_Response
@@ -11862,6 +11871,7 @@ ${LANGUAGE}
 41CGameRecording_QueryPhases_Response_Phase
 41CGameRecording_SetPerGameSettings_Request
 41CGameRecording_UploadClipToSteam_Response
+41CGameServers_FriendsQuery_Response_Player
 41CHIDMessageToRemote_DeviceGetVendorString
 41CHTTPDefaultRedirectEnableHandlerInternal
 41CHardwareUpdate_EnumerateDevices_Response
@@ -12869,6 +12879,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+60000000
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
@@ -12879,7 +12890,6 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -23842,7 +23852,7 @@ JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 24 2026 15:29:51
+Jun 26 2026 02:02:27
 June
 K'iche'
 K(\f]C15
@@ -24858,6 +24868,7 @@ Method Forget() not implemented.
 Method ForgetDonglePairingBond() not implemented.
 Method ForgetTritonPairingBond() not implemented.
 Method Format() not implemented.
+Method FriendsQuery() not implemented.
 Method GenerateAccessTokenForApp() not implemented.
 Method GetAccountAuthSecret() not implemented.
 Method GetAccountLinkStatus() not implemented.
@@ -28277,6 +28288,7 @@ QPeA~S
 QSeA~
 QVariantMap
 QXzc
+Q\n game_resolution_override_default
 Q\n\fCreateBeacon
 Q\n\fNotifyNumber
 Q\n\rpersona_names
@@ -33360,6 +33372,7 @@ YYYY
 Y\n steamos_manual_gpu_clock_enabled
 Y\n!gamerecording_export_limit_height
 Y\n!gamescope_disable_mura_correction
+Y\n\fFriendsQuery
 Y\n\fRequestSleep
 Y\n\rOtherGameData
 Y\trH5
@@ -33715,6 +33728,7 @@ Zulu
 \n"CContentServerDirectory_ServerInfo
 \n"CGameRecording_ExportClip_Settings
 \n"CGameRecording_QueryPhases_Request
+\n"CGameServers_FriendsQuery_Response
 \n"CGameServers_QueryByFakeIP_Request
 \n"CPublishedFile_GetItemInfo_Request
 \n"CRemotePlay_SessionStarted_Request
@@ -35140,6 +35154,7 @@ Zulu
 \n\tsearch_id
 \n\tsecret_id
 \n\tsectionid
+\n\tserver_ip
 \n\tsessionid
 \n\tshift_key
 \n\tsignature
@@ -40755,6 +40770,7 @@ game_notes_enable_spellcheck
 game_notification_settings
 game_played_app_id
 game_resolution_height
+game_resolution_override_native
 game_resolution_width
 game_server_appid
 game_server_ip

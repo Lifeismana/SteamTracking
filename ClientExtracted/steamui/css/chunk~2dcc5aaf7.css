@@ -3345,6 +3345,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 ._2tALpM7z8naXJ35Pp5fNAG {
   align-self: center;
   flex-grow: 1;
+  min-width: 0;
 }
 .eKmEXJCm_lgme24Fp_HWt:not(._37xzVt6arvEzyNdW5GxK8f).Jgod1QRim6eNfvia2_3Ac
   ._2tALpM7z8naXJ35Pp5fNAG {
@@ -60164,6 +60165,43 @@ div.ShortWindow
   flex-direction: column;
   padding-top: 10px;
 }
+._2__435pBk1dw4zM7mfS7Wg {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: start;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 16px;
+  padding-bottom: 16px;
+}
+.PaEmOnuqdZxDiLahV7xfi {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: start;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 6px;
+  color: #b8bcbf;
+  text-align: center;
+}
 ._1ZWPDGQZcKOaf-XBwiaQpY {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -62858,6 +62896,7 @@ button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled:active:hover:before {
 ._32_eHvhel2wlVKZjW9SLB2 {
   align-self: center;
   flex-grow: 1;
+  min-width: 0;
 }
 ._1LWDAthWNhS7CyjQqjbeoS:not(._7IoKbdITi2yxrZry2n8Ma)._2s0clJZnSVYsnPSIwaR13J
   ._32_eHvhel2wlVKZjW9SLB2 {
@@ -68622,6 +68661,7 @@ button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled:active:hover:before {
 ._19psc15lxwdOffzCuyUWuK {
   align-self: center;
   flex-grow: 1;
+  min-width: 0;
 }
 ._3m3_xgqnTKICMikWOA-NtG:not(.Q3dfm6FbGD8l1JnAPr7wh).oaKjh8PmR9jcXiWZegUjC
   ._19psc15lxwdOffzCuyUWuK {
@@ -70745,6 +70785,7 @@ button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled:active:hover:before {
 .e8io-h6UVefSpf9rUVOS6 {
   align-self: center;
   flex-grow: 1;
+  min-width: 0;
 }
 .CvwbUUfbX04pDRqpUvc_x:not(._3xiGcpB3jAz-KTx8n1XR7E).Zb9DyLOraQG_OZT1SjDKg
   .e8io-h6UVefSpf9rUVOS6 {

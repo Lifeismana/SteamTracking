@@ -1,5 +1,5 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [7084],
+  [87084],
   {
     chunkid: (module) => {
       module.exports = {

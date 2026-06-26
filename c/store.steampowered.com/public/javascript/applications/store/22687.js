@@ -179,7 +179,6 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -210,7 +209,6 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -271,7 +269,7 @@
           : null;
       }
       function _(_) {
-        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
+        const { creatorAccountID: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -284,7 +282,7 @@
         const _ = (0, _._)(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
+          className: (0, _._)(_().BottomCreatorRow, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -585,19 +583,16 @@
             strDoubleCapsuleMessage: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = _ && !_;
+          { bIsOwned: _ } = (0, _._)(_);
         if (_ && _ && _.item_type == _._._ && _.appid)
           return (0, _.jsx)(_._, {
             appid: _.appid,
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && _),
-          _ = Boolean(_);
+        const _ = Boolean(_ && _);
         return (0, _.jsx)(_._, {
           _: _,
-          bShowAsMuted: _,
           bHidePrice: _,
           bShowInLibraryInsteadOfPrice: _,
           bHidePlatforms: _,

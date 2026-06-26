@@ -465,7 +465,7 @@ GHomepage = {
 			// select the first item in the tabbed lists area
 			window.setTimeout( function() {
 				$J('.tab_item:visible').first().trigger('mouseenter');
-				$J('.tab_row_item :visible').first().trigger('mouseenter');
+				$J('.tab_row_item:visible').first().trigger('mouseenter');
 			}, 10 );
 
 		} catch( e ) { OnHomepageException(e); }
@@ -5095,7 +5095,9 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 				bFirstRender = false;
 		}
 
-		$TabItems.find('.tab_row_item').first().trigger('mouseenter');
+		if ( $J( '#tab_topsellers_content_trigger' ).hasClass( 'active' ) )
+			$TabItems.find('.tab_row_item').first().trigger('mouseenter');
+
 		GDynamicStore.DecorateDynamicItems( $TabItems );
 	};
 

@@ -1990,7 +1990,7 @@
     "Sale_Reservation_YourExpectedDate": "Приблизителна наличност на Вашата поръчка:",
     "Sale_Reservation_Komodo": "Steam Deck е достъпен за закупуване в Япония, Южна Корея, Тайван и Хонконг чрез KOMODO на <1>steamdeck.komodo.jp</1>",
     "Sale_Reservation_Komodo_Generic": "%1$s е достъпен в Япония, Южна Корея, Тайван и Хонконг чрез KOMODO на %2$s",
-    "Sale_Reservation_Komodo_Generic_NoSk": "%1$s is available in Japan, Taiwan, and Hong Kong via KOMODO at %2$s",
+    "Sale_Reservation_Komodo_Generic_NoSk": "%1$s — достъпно в Япония, Тайван и Хонконг чрез KOMODO на %2$s",
     "Sale_Reservation_Too_Busy": "Сървърите за резервация са заети. Моля, опитайте отново.",
     "Sale_Reservation_Available_Date": "Достъпен на %1$s",
     "Sale_Reservation_AvailabilityUnknown": "Не разполагаме с информация относно достъпност.",

@@ -67,7 +67,7 @@ function fnRenderHeroCapsule( oItem )
 
 	var HeroData = $J( '<div/>', {'class': 'hero_data' } );
 	var HeroContent = $J( '<div/>', {'class': 'hero_data_content' } )
-	HeroContent.append( $J( '<div/>', {'class': 'hero_name' } ).text( rgItemData.name ) );
+	HeroContent.append( $J( '<div/>', {'class': 'hero_name' } ).html( rgItemData.name ) );
 
 	if ( rgItemData.review_summary )
 	{

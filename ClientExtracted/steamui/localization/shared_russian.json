@@ -1961,7 +1961,7 @@
     "Sale_Purchase_NotAllowedAccount": "С вашего аккаунта нельзя совершать покупки.",
     "Sale_Reservation_NotAvailableCountry": "Этот продукт невозможно купить в вашем регионе",
     "Sale_Reservation_NotAvailableCountry_reservation": "Этот продукт невозможно забронировать в вашем регионе",
-    "Sale_Reservation_NotAvailale_PreDate": "В настоящее время услуга бронирования недоступна пользователям, не совершившим ни одной покупки в Steam до %1$s.",
+    "Sale_Reservation_NotAvailale_PreDate": "В настоящее время услуга бронирования недоступна пользователям, не совершившим ни одной покупки в Steam до %1$s",
     "Sale_Reservation_CannotReserveDueToOwnership_Generic": "В настоящее время услуга бронирования недоступна пользователям, которые уже приобрели этот продукт.",
     "Sale_Reservation_CannotReserveDueToOwnership_Specific": "В настоящее время услуга бронирования недоступна пользователям, которые уже приобрели %1$s.",
     "Sale_Reservation_CanceledPendingRefund": "Идёт отмена бронирования. Пожалуйста, подождите.",

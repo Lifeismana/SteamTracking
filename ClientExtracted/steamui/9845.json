@@ -184,7 +184,7 @@
     "moderationaction_disputed": "Päätös kiistautettu",
     "moderationaction_escalated": "Merkitty vakavaksi",
     "moderationaction_sanctioned": "Seuraamus langetettu",
-    "moderationaction_sustained": "Moderation sustained",
+    "moderationaction_sustained": "Moderointitoimi pysyy voimassa",
     "moderationaction_unresolved": "Ratkaisematon",
     "moderationaction_updated": "Tiedot päivitetty",
     "moderationaction_locked": "Lukittu",

@@ -280,6 +280,7 @@
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
+ Valid parameters\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
  [clone
@@ -947,6 +948,7 @@
 ".CCloud_GetSingleFileInfo_Response
 ".CGameRecording_DeleteClip_Request
 ".CGameRecording_ExportClip_Request
+".CGameServers_FriendsQuery_Request
 ".CGamescope_SetBlurParams_Response
 ".CHardwareUpdate_GetState_Response
 ".CInventory_DevSetNextDrop_Request
@@ -1334,6 +1336,7 @@
 #.CGameRecording_DeleteClip_Response
 #.CGameRecording_ExportClip_Response
 #.CGameRecording_QueryPhases_Request
+#.CGameServers_FriendsQuery_Response"
 #.CGameServers_QueryByFakeIP_Request
 #.CInventory_ConsumePlaytime_Request
 #.CInventory_GetItemDefMeta_Response"
@@ -2404,6 +2407,7 @@ $steammessages_parental_objects.proto"
 %s sent routing secret in msg 0x%02x.  Marking as fully trusted.  (Previous trust was %d)\n
 %s set to %s
 %s set to_virtual_port in rendezvous when connecting by FakeIP; ignored
+%s set-low-latency-mode %s
 %s should not be called
 %s wrong user type
 %s#%d (via %s %s)
@@ -4157,6 +4161,8 @@ $steammessages_parental_objects.proto"
 (\v2'.CMsgClientPersonaState.Friend.ClanData
 (\v2'.CMsgNetworkDevicesData.Device.Wireless
 (\v2'.CMsgRemoteClientAppStatus.ShortcutInfo
+(\v2'.CMsgSystemDisplayManagerGameResolution
+(\v2'.CMsgSystemDisplayManagerGameResolution"s\n
 (\v2'.CPlayer_IncomingInviteMutualFriendList"
 (\v2'.CSteamTV_HomePageTemplate_ConveyorBelt
 (\v2'.CSteamTV_HomePageTemplate_QuickExplore
@@ -4193,6 +4199,7 @@ $steammessages_parental_objects.proto"
 (\v2).CRemotePlayTogetherGroupUpdateMsg.Player
 (\v2).google.protobuf.EnumValueDescriptorProto
 (\v2*.CGameRecording_QueryPhases_Response.Phase
+(\v2*.CGameServers_FriendsQuery_Response.Player
 (\v2*.CHIDMessageToRemote.DeviceGetVendorStringH
 (\v2*.CMsgClientPICSProductInfoResponse.AppInfo
 (\v2*.CMsgNetworkDevicesData.Device.Wireless.AP
@@ -6536,7 +6543,7 @@ $steammessages_parental_objects.proto"
 .CMsgGameServerData.Player
 .CMsgGameServerPingQueryData
 .CMsgGameServerPlayersQueryData
-.CMsgGameServerRulesQueryData"
+.CMsgGameServerRulesQueryData"[\n!CGameServers_FriendsQuery_Request
 .CMsgGameServerRulesQueryData2
 .CMsgGamescopeState"&\n$CGamescope_StateChanged_Notification"o\n CGamescope_SetBlurParams_Request
 .CMsgICECandidate
@@ -6804,6 +6811,7 @@ $steammessages_parental_objects.proto"
 .EControllerElementType
 .EDiskSpaceType">\n.CGameRecording_GetTotalDiskSpaceUsage_Response
 .EDisplayManagerRGBRange"
+.EDisplayManagerRGBRange"G\n&CMsgSystemDisplayManagerGameResolution
 .EDisplayPowerState"
 .EDisplayPowerState"*\n(CGamescope_SetDisplayPowerState_Response*q\n
 .EFamilyGroupChangeLogType
@@ -7461,7 +7469,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/subscribedfilelistcache.cpp
 /data/src/clientdll/subscribedfilemanager.cpp
 /data/src/clientdll/systemaudiomanager_linux.cpp
-/data/src/clientdll/systemdisplaymanager.cpp:140
+/data/src/clientdll/systemdisplaymanager.cpp:208
 /data/src/clientdll/systemdisplaymanager_wayland.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp:337
@@ -7980,6 +7988,7 @@ $steammessages_parental_objects.proto"
 /user/hand/right
 /usr/bin/
 /usr/bin/crosdisk %s
+/usr/bin/holo-polkit-helpers/holo-realtek-firmware-toggles
 /usr/bin/lsof
 /usr/bin/steam-runtime-system-info >
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -11599,7 +11608,7 @@ $steammessages_parental_objects.proto"
 2 .ESteamDeckCompatibilityCategory
 2 .ESteamDeckCompatibilityFeedback
 2 .ESteamDeckCompatibilityFeedback"
-2 .ESystemDisplayCompatibilityMode"s\n
+2 .ESystemDisplayCompatibilityMode
 2 .ETimelineChangeNotificationType
 2 Mbps
 2!.EMarketingMessageAssociationType
@@ -11670,11 +11679,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
+2048
 20000
 2000000
-200M
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13816,6 +13825,7 @@ $steammessages_parental_objects.proto"
 33CGameRecording_DeleteClip_Request
 33CGameRecording_ExportClip_Request
 33CGameServerClient_QueryServerData
+33CGameServers_FriendsQuery_Request
 33CGamescope_SetBlurParams_Response
 33CGenericControllerProtocolHandler
 33CGetShaderBucketForGraphicsAPIJob
@@ -13957,6 +13967,7 @@ $steammessages_parental_objects.proto"
 34CGameRecording_ExportClip_Response
 34CGameRecording_ExportClip_Settings
 34CGameRecording_QueryPhases_Request
+34CGameServers_FriendsQuery_Response
 34CGameServers_QueryByFakeIP_Request
 34CGetWiredTritonPairingBondWorkItem
 34CHTTPStreamingResponseHandlerFuncs
@@ -14489,6 +14500,7 @@ $steammessages_parental_objects.proto"
 38CMsgSteamDatagramP2PSessionEstablished
 38CMsgSteamDatagramP2PSessionRequestBody
 38CMsgSteamDatagramSignedRelayAuthTicket
+38CMsgSystemDisplayManagerGameResolution
 38COffline_GetOfflineLogonTicket_Request
 38CParental_ApproveFeatureAccess_Request
 38CParental_GetParentalSettings_Response
@@ -14883,6 +14895,7 @@ $steammessages_parental_objects.proto"
 41CGameRecording_QueryPhases_Response_Phase
 41CGameRecording_SetPerGameSettings_Request
 41CGameRecording_UploadClipToSteam_Response
+41CGameServers_FriendsQuery_Response_Player
 41CHIDMessageToRemote_DeviceGetVendorString
 41CHTTPDefaultRedirectEnableHandlerInternal
 41CHardwareUpdate_EnumerateDevices_Response
@@ -21230,8 +21243,11 @@ CRemoteClientBroadcastHandler - status
 CRemoteClientBroadcastHandler::Process
 CRemoteClientDongle: Dongle app depot finished installing/updating. Starting driver update check.
 CRemoteClientDongle: Dongle detected for the first time this run.
+CRemoteClientDongle: Failed to set low latency mode %s! (%d)
 CRemoteClientDongle: NMDeviceAdded detected dongle.
+CRemoteClientDongle: No holo-realtek-firmware-toggles helper script found, low latency mode unavailable
 CRemoteClientDongle: Running post-application driver update check.
+CRemoteClientDongle: Successfully set low latency mode %s
 CRemoteClientDongle::OnRemoteClientUSBTriggerHotplug() valid
 CRemoteClientJobGetControllerConfig
 CRemoteClientJobHandleClientAuthorizationCancelRequest
@@ -29749,6 +29765,7 @@ Method Forget() not implemented.
 Method ForgetDonglePairingBond() not implemented.
 Method ForgetTritonPairingBond() not implemented.
 Method Format() not implemented.
+Method FriendsQuery() not implemented.
 Method GenerateAccessTokenForApp() not implemented.
 Method GetAccountAuthSecret() not implemented.
 Method GetAccountLinkStatus() not implemented.
@@ -33300,6 +33317,7 @@ QPeA~S
 QSeA~
 QVariantMap
 QXzc
+Q\n game_resolution_override_default
 Q\n\fCreateBeacon
 Q\n\fNotifyNumber
 Q\n\rpersona_names
@@ -39216,7 +39234,6 @@ Valencian
 Valid
 Valid palette required for paletted images
 Valid parameters:\n
-Valid parameters\n
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -40012,6 +40029,7 @@ YEAR
 YHb9l
 YU=E
 YYYY
+Y\n\fFriendsQuery
 Y\n\fRequestSleep
 Y\n\rOtherGameData
 Y\trH5
@@ -41032,6 +41050,7 @@ Zulu
 \n"CContentServerDirectory_ServerInfo
 \n"CGameRecording_ExportClip_Settings
 \n"CGameRecording_QueryPhases_Request
+\n"CGameServers_FriendsQuery_Response
 \n"CGameServers_QueryByFakeIP_Request
 \n"CMsgClientGetClientAppListResponse
 \n"CMsgClientGetClientDetailsResponse
@@ -42680,6 +42699,7 @@ Zulu
 \n\tsearch_id
 \n\tsecret_id
 \n\tsectionid
+\n\tserver_ip
 \n\tsessionid
 \n\tsignature
 \n\tsite_name
@@ -48658,6 +48678,7 @@ game_played_app_id
 game_port_local
 game_query_port
 game_resolution_height
+game_resolution_override_native
 game_resolution_width
 game_server_app_id
 game_server_appid
@@ -61319,7 +61340,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 24 2026 15:30:01
+steam Jun 26 2026 02:02:33
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -129,6 +129,7 @@ ${CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.pn
 ${CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png
 ${CLAN_CDN_ASSET_URL}images/clan/${}/${}
 ${CLAN_CDN_ASSET_URL}locimages/
+${COMMUNITY_ASSETS_BASE_URL}images/items/${appid}/${item_image_small}
 ${COMMUNITY_ASSETS_BASE_URL}images/items/${}/${}
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
@@ -848,6 +849,7 @@ ${IMG_URL}international2024/esports_site/footer_bg01.png
 ${IMG_URL}international2024/esports_site/logo_ti_gold.png
 ${IMG_URL}international2025/players/${nAccountID}.png
 ${IMG_URL}international2025/ti2025_logo.png
+${IMG_URL}international2026/ti2026_logo.png
 ${IMG_URL}items/${}.png
 ${IMG_URL}locked.png
 ${IMG_URL}logo.png
@@ -3051,6 +3053,7 @@ https://www.dota2.com/aghanim
 https://www.dota2.com/battlepass2022
 https://www.dota2.com/bladeformlegacy
 https://www.dota2.com/crownfall
+https://www.dota2.com/darkcarnival
 https://www.dota2.com/dawnbreaker
 https://www.dota2.com/deadreckoning
 https://www.dota2.com/diretide
@@ -3274,6 +3277,7 @@ url( ${IMG_URL}/pastupdates/bladeform_social.jpg )
 url( ${IMG_URL}/pastupdates/cleaning_social.jpg )
 url( ${IMG_URL}/pastupdates/compendium_social.jpg )
 url( ${IMG_URL}/pastupdates/crownfall_social.png )
+url( ${IMG_URL}/pastupdates/darkcarnival_social.png )
 url( ${IMG_URL}/pastupdates/darkrift_social.jpg )
 url( ${IMG_URL}/pastupdates/dawnbreaker_social.jpg )
 url( ${IMG_URL}/pastupdates/deadreckoning_social.png )
@@ -3448,6 +3452,7 @@ url( ${IMG_URL}international2022/reward_montage/ti11_small_trust.png )
 url( ${IMG_URL}international2022/wards.png )
 url( ${IMG_URL}international2025/players/${}.png )
 url( ${IMG_URL}international2025/teamlogos/${}.png )
+url( ${IMG_URL}international2026/teamlogos/${}.png )
 url( ${IMG_URL}items/${}.png
 url( ${IMG_URL}items/${}.png )
 url( ${IMG_URL}labyrinth/assistant_controller.jpg )
