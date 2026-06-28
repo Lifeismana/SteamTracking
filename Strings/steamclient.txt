@@ -8053,13 +8053,7 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
-0.0333
-0.050
-0.125
 0.13.15.106
-0.15
-0.65
-0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -8105,6 +8099,12 @@ $steammessages_parental_objects.proto"
 000000
 00000000
 0000000000000000000000000000000000000000
+0.0333
+0.050
+0.125
+0.15
+0.65
+0.75
 00000001
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -10298,6 +10298,7 @@ $steammessages_parental_objects.proto"
 12SteamTV_Stub
 12StringReader
 12StructReader
+1348857570
 13AppUpdateInfo
 13CAppInfoCache
 13CBackupAppJob
@@ -10544,10 +10545,8 @@ $steammessages_parental_objects.proto"
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
-16.0
 1536
 15000
-1348857570
 155.133.240.0/23
 15AccountHardware
 15BroadcastClient
@@ -10653,6 +10652,7 @@ $steammessages_parental_objects.proto"
 15TimedTrial_Stub
 15WebUINoResponse
 16 Mbps
+16.0
 16000
 162.254.192.71:27017
 162.254.192.74:27017
@@ -11667,11 +11667,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -24754,7 +24754,6 @@ E\rKDR>_
 E\r\f52
 E\tONW;_
 E]sv
-E_P5
 Each IPC call is being logged to %s.\n
 Easy Listening
 Econ
@@ -43047,7 +43046,6 @@ _xU`u
 `\n\vVoteSummary
 `fPw.\vM
 `tun%
-`wn}m
 `yNT
 a null shared library handle was used
 a numbered reference must not be zero
@@ -61173,7 +61171,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 26 2026 22:33:09
+steam Jun 28 2026 17:48:49
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
