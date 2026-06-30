@@ -106,7 +106,6 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123M
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -6424,7 +6423,7 @@ $steammessages_parental_objects.proto"
 ../clientdll/subscribedfilelistcache.cpp
 ../clientdll/subscribedfilemanager.cpp
 ../clientdll/systemaudiomanager_linux.cpp
-../clientdll/systemdisplaymanager.cpp:208
+../clientdll/systemdisplaymanager.cpp:156
 ../clientdll/systemdisplaymanager_wayland.cpp
 ../clientdll/systemdockmanager_linux.cpp
 ../clientdll/systemdockmanager_linux.cpp:337
@@ -8053,7 +8052,13 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+0.0333
+0.050
+0.125
 0.13.15.106
+0.15
+0.65
+0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -8099,20 +8104,14 @@ $steammessages_parental_objects.proto"
 000000
 00000000
 0000000000000000000000000000000000000000
-0.0333
-0.050
-0.125
-0.15
-0.65
-0.75
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11667,11 +11666,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+20000
+200M
 2019
 2048
-20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -61171,7 +61170,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 28 2026 17:48:49
+steam Jun 30 2026 00:25:41
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate

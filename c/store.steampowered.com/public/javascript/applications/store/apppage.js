@@ -11426,6 +11426,7 @@
             oCreatorLinks: _,
             reviewSummaryRecent: _,
             strIdForReviewSummary: _,
+            compatibility_tab: _,
           } = _,
           _ = new Map();
         for (const [_, _] of Object.entries(_)) _.set(_, _);
@@ -11449,6 +11450,7 @@
               }),
               (0, _.jsx)(_, {
                 appid: _,
+                compatibility_tab: _,
               }),
               (0, _.jsx)(_, {
                 appid: _,
@@ -11473,22 +11475,27 @@
         });
       }
       function _(_) {
-        const { appid: _ } = _,
+        const { appid: _, compatibility_tab: _ } = _,
           _ = _.useMemo(
             () => (0, _._)("deckcompatibility", "application_config"),
             [],
-          );
+          ),
+          _ =
+            "steamos" == _
+              ? _.Localize("#AppPage_SummaryBar_SteamOSCompat")
+              : _.Localize("#AppPage_SummaryBar_SteamDeckCompat");
         return _
           ? (0, _.jsxs)(_._, {
               className: (0, _._)(_().SummaryBarSection, _().SteamDeckCompat),
               children: [
                 (0, _.jsx)(_, {
-                  children: _.Localize("#AppPage_SummaryBar_SteamDeckCompat"),
+                  children: _,
                 }),
                 (0, _.jsx)(_, {
                   className: _().SteamDeckCompatContent,
                   appID: _,
                   results: _,
+                  tab: _,
                 }),
               ],
             })

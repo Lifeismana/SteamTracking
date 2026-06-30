@@ -11456,18 +11456,21 @@
           bInReservationQueue: _,
           bWaitlistIsActive: _,
           reservedHardwareDetail: _,
+          bHideLabel: _,
         } = _;
-        let _ = _._.Localize("#Sale_Reservation_Fallback_V2");
+        let _ = _._.Localize("#Sale_Reservation_Fallback_V2"),
+          _ = !1;
         if (
           (_
             ? (_ = _._.Localize("#Sale_Reservation_Fallback_user_V2"))
-            : _ && _ && !_.position_is_waitlist
-              ? (_ = _._.Localize(
-                  "#Reservation_Join_Waitlist_Cancel_Reservation",
-                ))
-              : _ &&
-                (_ = _._.Localize("#Reservation_In_Waitlist_Message_NotJoin")),
-          !_ || !_)
+            : _ &&
+              _ &&
+              !_.position_is_waitlist &&
+              ((_ = _._.Localize(
+                "#Reservation_Join_Waitlist_Cancel_Reservation",
+              )),
+              (_ = !0)),
+          !_ || !_ || _)
         )
           return (0, _.jsx)("div", {
             className: _().Ctn,
@@ -11542,12 +11545,24 @@
           default:
             _ = "#Sale_Reservation_Fallback";
         }
-        return (0, _.jsx)("div", {
+        return (0, _.jsxs)("div", {
           className: _().Ctn,
-          children: (0, _.jsx)(_._, {
-            elReservationMessage: _ ? (0, _._)(_, _, _, _, "") : _,
-            strUrlLearnMoreLink: _,
-          }),
+          children: [
+            (0, _.jsx)("div", {
+              children:
+                !_ &&
+                !!_ &&
+                (0, _._)(
+                  _
+                    ? "#Sale_Reservation_YourExpectedDate"
+                    : "#Sale_Reservation_ExpectedDate",
+                ),
+            }),
+            (0, _.jsx)(_._, {
+              elReservationMessage: _ ? (0, _._)(_, _, _, _, "") : _,
+              strUrlLearnMoreLink: _,
+            }),
+          ],
         });
       }
       var _ = __webpack_require__("chunkid");
@@ -11711,30 +11726,15 @@
               ? (0, _.jsx)(_._, {
                   text: _,
                 })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    _.notificaton_token &&
-                      _.rtime_estimated_notification &&
-                      "#Sale_Reservation_AvailabilityUnknown" !=
-                        _.notificaton_token &&
-                      (0, _.jsx)(_.Fragment, {
-                        children: _._.Localize(
-                          _
-                            ? "#Sale_Reservation_YourExpectedDate"
-                            : "#Sale_Reservation_ExpectedDate",
-                        ),
-                      }),
-                    (0, _.jsx)(_, {
-                      strUrlLearnMoreLink:
-                        _.internal_section_data?.reservation_learn_more_link,
-                      rtEstimatedNotifcationDate:
-                        _.rtime_estimated_notification,
-                      strToken: _.notificaton_token,
-                      bInReservationQueue: _,
-                      bWaitlistIsActive: _,
-                      reservedHardwareDetail: _,
-                    }),
-                  ],
+              : (0, _.jsx)(_, {
+                  strUrlLearnMoreLink:
+                    _.internal_section_data?.reservation_learn_more_link,
+                  rtEstimatedNotifcationDate: _.rtime_estimated_notification,
+                  strToken: _.notificaton_token,
+                  bInReservationQueue: _,
+                  bWaitlistIsActive: _,
+                  reservedHardwareDetail: _,
+                  bHideLabel: _ && _ && _?.packageid !== _.packageid,
                 }),
           }),
         });

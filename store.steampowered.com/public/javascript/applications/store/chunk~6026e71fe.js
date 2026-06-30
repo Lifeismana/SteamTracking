@@ -10667,73 +10667,76 @@
           bInReservationQueue: s,
           bWaitlistIsActive: i,
           reservedHardwareDetail: o,
+          bHideLabel: l,
         } = e;
-        let l = m.Z.Localize("#Sale_Reservation_Fallback_V2");
+        let c = m.Z.Localize("#Sale_Reservation_Fallback_V2"),
+          d = !1;
         if (
           (s
-            ? (l = m.Z.Localize("#Sale_Reservation_Fallback_user_V2"))
-            : i && o && !o.position_is_waitlist
-              ? (l = D.F5.Localize(
-                  "#Reservation_Join_Waitlist_Cancel_Reservation",
-                ))
-              : i &&
-                (l = D.F5.Localize("#Reservation_In_Waitlist_Message_NotJoin")),
-          !t || !a)
+            ? (c = m.Z.Localize("#Sale_Reservation_Fallback_user_V2"))
+            : i &&
+              o &&
+              !o.position_is_waitlist &&
+              ((c = D.F5.Localize(
+                "#Reservation_Join_Waitlist_Cancel_Reservation",
+              )),
+              (d = !0)),
+          !t || !a || d)
         )
           return (0, n.jsx)("div", {
             className: j().Ctn,
             children: (0, n.jsx)(B.Y, {
-              elReservationMessage: l,
+              elReservationMessage: c,
               strUrlLearnMoreLink: r,
             }),
           });
-        const c = new Date(1e3 * a),
-          d = c.getMonth() + 1;
-        let u = "",
-          _ = "",
-          p = "",
-          g = t;
+        const u = new Date(1e3 * a),
+          _ = u.getMonth() + 1;
+        let p = "",
+          g = "",
+          h = "",
+          S = t;
         switch (t) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
           case "#Sale_Reservation_ByYear":
-            u = "" + c.getFullYear();
+            p = "" + u.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
           case "#Sale_Reservation_ByMonthYear":
-            (u = (0, x.we)("#Sale_Reservation_MonthNoun_" + d)),
-              (_ = "" + c.getFullYear());
+            (p = (0, x.we)("#Sale_Reservation_MonthNoun_" + _)),
+              (g = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (u = (0, x.we)("#Sale_Reservation_MonthNoun_" + G(d, 1))),
-              (_ = (0, x.we)("#Sale_Reservation_MonthNoun_" + d)),
-              (p = "" + c.getFullYear());
+            (p = (0, x.we)("#Sale_Reservation_MonthNoun_" + G(_, 1))),
+              (g = (0, x.we)("#Sale_Reservation_MonthNoun_" + _)),
+              (h = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (u = (0, x.we)("#Sale_Reservation_MonthNoun_" + G(d, 2))),
-              (_ = (0, x.we)("#Sale_Reservation_MonthNoun_" + d)),
-              (p = "" + c.getFullYear());
+            (p = (0, x.we)("#Sale_Reservation_MonthNoun_" + G(_, 2))),
+              (g = (0, x.we)("#Sale_Reservation_MonthNoun_" + _)),
+              (h = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (u = (0, x.we)("#Sale_Reservation_MonthNoun_" + G(d, 3))),
-              (_ = (0, x.we)("#Sale_Reservation_MonthNoun_" + d)),
-              (p = "" + c.getFullYear());
+            (p = (0, x.we)("#Sale_Reservation_MonthNoun_" + G(_, 3))),
+              (g = (0, x.we)("#Sale_Reservation_MonthNoun_" + _)),
+              (h = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
-            (g = "#Sale_Reservation_Quarter" + (Math.floor((d - 1) / 3) + 1)),
-              (u = "" + c.getFullYear());
+            (S = "#Sale_Reservation_Quarter" + (Math.floor((_ - 1) / 3) + 1)),
+              (p = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
-            (g =
-              "#Sale_Reservation_AfterQuarter" + (Math.floor((d - 1) / 3) + 1)),
-              (u = (0, x.we)("#Sale_Reservation_MonthNoun_" + d)),
-              (_ = "" + c.getFullYear());
+            (S =
+              "#Sale_Reservation_AfterQuarter" + (Math.floor((_ - 1) / 3) + 1)),
+              (p = (0, x.we)("#Sale_Reservation_MonthNoun_" + _)),
+              (g = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_BetweenNowAndLastDay":
-            (u = (0, x.we)("#Sale_Reservation_MonthNoun_" + d)),
-              (_ = "" + new Date(c.getFullYear(), c.getMonth(), 0).getDate()),
-              (p = "" + c.getFullYear());
+            (p = (0, x.we)("#Sale_Reservation_MonthNoun_" + _)),
+              (g = "" + new Date(u.getFullYear(), u.getMonth(), 0).getDate()),
+              (h = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
@@ -10741,24 +10744,36 @@
                 t = Math.floor((a - e) / 86400);
               t < 7 ||
                 (t < 28
-                  ? ((g = "#Sale_Reservation_RelativeWeekly_Plural"),
-                    (u = "" + Math.floor(t / 7 + 1)))
-                  : ((g = "#Sale_Reservation_RelativeMonthly"),
-                    (u = "" + Math.floor(t / 28 + 1))));
+                  ? ((S = "#Sale_Reservation_RelativeWeekly_Plural"),
+                    (p = "" + Math.floor(t / 7 + 1)))
+                  : ((S = "#Sale_Reservation_RelativeMonthly"),
+                    (p = "" + Math.floor(t / 28 + 1))));
             }
             break;
           case "#Sale_Reservation_AvailabilityUnknown":
-            g = void 0;
+            S = void 0;
             break;
           default:
-            g = "#Sale_Reservation_Fallback";
+            S = "#Sale_Reservation_Fallback";
         }
-        return (0, n.jsx)("div", {
+        return (0, n.jsxs)("div", {
           className: j().Ctn,
-          children: (0, n.jsx)(B.Y, {
-            elReservationMessage: g ? (0, x.we)(g, u, _, p, "") : l,
-            strUrlLearnMoreLink: r,
-          }),
+          children: [
+            (0, n.jsx)("div", {
+              children:
+                !l &&
+                !!S &&
+                (0, x.we)(
+                  s
+                    ? "#Sale_Reservation_YourExpectedDate"
+                    : "#Sale_Reservation_ExpectedDate",
+                ),
+            }),
+            (0, n.jsx)(B.Y, {
+              elReservationMessage: S ? (0, x.we)(S, p, g, h, "") : c,
+              strUrlLearnMoreLink: r,
+            }),
+          ],
         });
       }
       var F = a(53965);
@@ -10914,30 +10929,15 @@
             className: (0, w.A)(T.expecteddate_str, "ReservationExpectedDate"),
             children: d
               ? (0, n.jsx)(o.o, { text: d })
-              : (0, n.jsxs)(n.Fragment, {
-                  children: [
-                    t.notificaton_token &&
-                      t.rtime_estimated_notification &&
-                      "#Sale_Reservation_AvailabilityUnknown" !=
-                        t.notificaton_token &&
-                      (0, n.jsx)(n.Fragment, {
-                        children: m.Z.Localize(
-                          _
-                            ? "#Sale_Reservation_YourExpectedDate"
-                            : "#Sale_Reservation_ExpectedDate",
-                        ),
-                      }),
-                    (0, n.jsx)(E, {
-                      strUrlLearnMoreLink:
-                        s.internal_section_data?.reservation_learn_more_link,
-                      rtEstimatedNotifcationDate:
-                        t.rtime_estimated_notification,
-                      strToken: t.notificaton_token,
-                      bInReservationQueue: _,
-                      bWaitlistIsActive: p,
-                      reservedHardwareDetail: l,
-                    }),
-                  ],
+              : (0, n.jsx)(E, {
+                  strUrlLearnMoreLink:
+                    s.internal_section_data?.reservation_learn_more_link,
+                  rtEstimatedNotifcationDate: t.rtime_estimated_notification,
+                  strToken: t.notificaton_token,
+                  bInReservationQueue: _,
+                  bWaitlistIsActive: p,
+                  reservedHardwareDetail: l,
+                  bHideLabel: _ && p && l?.packageid !== t.packageid,
                 }),
           }),
         });

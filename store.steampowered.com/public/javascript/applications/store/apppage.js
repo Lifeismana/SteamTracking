@@ -10100,11 +10100,12 @@
             oCreatorLinks: s,
             reviewSummaryRecent: i,
             strIdForReviewSummary: o,
+            compatibility_tab: l,
           } = e,
-          l = new Map();
-        for (const [e, t] of Object.entries(n)) l.set(e, t);
-        const c = new Map();
-        for (const [e, t] of Object.entries(s)) c.set(e, t);
+          c = new Map();
+        for (const [e, t] of Object.entries(n)) c.set(e, t);
+        const d = new Map();
+        for (const [e, t] of Object.entries(s)) d.set(e, t);
         return (
           a.useLayoutEffect(() => {
             const e = document.querySelector("#summaryBarTop");
@@ -10117,9 +10118,9 @@
             resetNavOnEntry: !0,
             children: [
               (0, r.jsx)(Mo, { appid: t, recent: i, strIdForReviewSummary: o }),
-              (0, r.jsx)(ko, { appid: t }),
-              (0, r.jsx)(Do, { appid: t, mapTags: l }),
-              (0, r.jsx)(Oo, { appid: t, mapCreatorLinks: c }),
+              (0, r.jsx)(ko, { appid: t, compatibility_tab: l }),
+              (0, r.jsx)(Do, { appid: t, mapTags: c }),
+              (0, r.jsx)(Oo, { appid: t, mapCreatorLinks: d }),
             ],
           })
         );
@@ -10132,22 +10133,25 @@
         });
       }
       function ko(e) {
-        const { appid: t } = e,
-          n = a.useMemo(
+        const { appid: t, compatibility_tab: n } = e,
+          s = a.useMemo(
             () => (0, k.Tc)("deckcompatibility", "application_config"),
             [],
-          );
-        return n
+          ),
+          i =
+            "steamos" == n
+              ? di.Localize("#AppPage_SummaryBar_SteamOSCompat")
+              : di.Localize("#AppPage_SummaryBar_SteamDeckCompat");
+        return s
           ? (0, r.jsxs)(p.Z, {
               className: (0, X.A)(Ro().SummaryBarSection, Ro().SteamDeckCompat),
               children: [
-                (0, r.jsx)(Eo, {
-                  children: di.Localize("#AppPage_SummaryBar_SteamDeckCompat"),
-                }),
+                (0, r.jsx)(Eo, { children: i }),
                 (0, r.jsx)(Zn, {
                   className: Ro().SteamDeckCompatContent,
                   appID: t,
-                  results: n,
+                  results: s,
+                  tab: n,
                 }),
               ],
             })

@@ -43,6 +43,7 @@
     "AppPage_PurchaseOption_AddedToLibrary": "%1$s has been added to your account. It is now available in your Steam Library.",
     "AppPage_PurchaseOption_AddToLibraryError": "Could not add %1$s to your account. (%2$s)",
     "AppPage_SummaryBar_SteamDeckCompat": "STEAM DECK COMPATIBILITY",
+    "AppPage_SummaryBar_SteamOSCompat": "STEAMOS COMPATIBILITY",
     "AppPage_SummaryBar_UserTags": "USER TAGS",
     "AppPage_SummaryBar_UserReviews": "REVIEWS",
     "AppPage_SummaryBar_GameInfo": "GAME INFO",
