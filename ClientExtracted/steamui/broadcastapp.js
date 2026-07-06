@@ -3,7 +3,7 @@
   [7653],
   {
     31711: (t, e, a) => {
-      a.r(e), a.d(e, { default: () => K });
+      a.r(e), a.d(e, { default: () => J });
       var o = a(34629),
         s = a(62540),
         n = a(63696),
@@ -47,7 +47,7 @@
           }),
         });
       };
-      class S extends n.Component {
+      class x extends n.Component {
         CreateWatchParty(t = !1) {
           const {
             browserContext: e,
@@ -186,9 +186,9 @@
           });
         }
       }
-      (0, o.Cg)([p.oI], S.prototype, "WatchAlone", null),
-        (0, o.Cg)([p.oI], S.prototype, "Close", null);
-      var x = a(63014),
+      (0, o.Cg)([p.oI], x.prototype, "WatchAlone", null),
+        (0, o.Cg)([p.oI], x.prototype, "Close", null);
+      var S = a(63014),
         I = a(89193),
         b = a(41230),
         f = a(7470),
@@ -206,8 +206,9 @@
         N = a(49412),
         P = a(21371),
         R = a(72476),
-        A = a(91435);
-      class E {
+        A = a(91435),
+        E = a(6863);
+      class G {
         constructor() {
           (0, I.Gn)(this);
         }
@@ -223,7 +224,7 @@
             (this.m_reactRoot = f.createRoot(
               document.getElementById("friendslist-container"),
             )),
-            this.m_reactRoot.render(n.createElement(G, { app: this })),
+            this.m_reactRoot.render(n.createElement(H, { app: this })),
             (this.m_iTimeoutLogin = window.setTimeout(() => {
               0 == this.m_eLogonState && (this.m_eLogonState = 1);
             }, 2500));
@@ -261,17 +262,17 @@
           let e = t.data;
           if (e)
             if ("OnLoginButtonClicked" == e.msg)
-              console.log("Login button clicked"), (window.location.href = Q());
+              console.log("Login button clicked"), (window.location.href = Z());
             else if ("LoginNeeded" == e.command) this.m_eLogonState = 2;
             else if ("LogonComplete" == e.command)
               return void this.LaunchChat();
         }
       }
-      (0, o.Cg)([I.sH], E.prototype, "m_eLogonState", void 0),
-        (0, o.Cg)([I.sH], E.prototype, "m_steamID", void 0),
-        (0, o.Cg)([I.XI], E.prototype, "LaunchChat", null),
-        (0, o.Cg)([I.XI.bound], E.prototype, "HandlePostMessage", null);
-      let G = class extends n.Component {
+      (0, o.Cg)([I.sH], G.prototype, "m_eLogonState", void 0),
+        (0, o.Cg)([I.sH], G.prototype, "m_steamID", void 0),
+        (0, o.Cg)([I.XI], G.prototype, "LaunchChat", null),
+        (0, o.Cg)([I.XI.bound], G.prototype, "HandlePostMessage", null);
+      let H = class extends n.Component {
         m_broadcastInfo = null;
         constructor(t) {
           super(t),
@@ -294,8 +295,8 @@
         render() {
           const t = this.props.app;
           let e = this.m_broadcastInfo,
-            a = $();
-          return (0, s.jsxs)(U, {
+            a = F();
+          return (0, s.jsxs)(k, {
             children: [
               t.BReadyToRender() &&
                 (0, s.jsxs)("div", {
@@ -326,10 +327,10 @@
                                   ? " ChatCollapsed"
                                   : ""),
                               children: [
-                                (0, s.jsx)(O, {
-                                  onClick: () => (window.location.href = Q()),
-                                }),
                                 (0, s.jsx)(V, {
+                                  onClick: () => (window.location.href = Z()),
+                                }),
+                                (0, s.jsx)($, {
                                   onClick: this.ToggleChat,
                                   hideIcon: this.state.bChatCollapsed,
                                 }),
@@ -337,7 +338,7 @@
                             }),
                           ],
                         }),
-                        (0, s.jsx)(z, {
+                        (0, s.jsx)(q, {
                           steamID: t.GetSteamIDWatched(),
                           watchLocation: a,
                           bHideChat: this.state.bChatCollapsed,
@@ -347,20 +348,20 @@
                     }),
                   ],
                 }),
-              (0, s.jsx)(k, { app: t }),
+              (0, s.jsx)(O, { app: t }),
             ],
           });
         }
       };
-      function H() {
+      function U() {
         const t = (0, R.Fd)("loyalty_webapi_token", "application_config");
         return new W.D(R.TS.WEBAPI_BASE_URL, t);
       }
-      function U(t) {
+      function k(t) {
         const { children: e } = t,
           a = n.useCallback(() => i.xm?.CMInterface, []),
           o = (0, p.bs)(n.useCallback(() => new L.A(), [])),
-          r = (0, p.bs)(H);
+          r = (0, p.bs)(U);
         return (0, s.jsx)(P.s, {
           children: (0, s.jsx)(R.ss, {
             children: (0, s.jsx)(A.EO, {
@@ -379,10 +380,10 @@
           }),
         });
       }
-      (0, o.Cg)([p.oI], G.prototype, "ToggleChat", null),
-        (0, o.Cg)([p.oI], G.prototype, "ToggleTheaterMode", null),
-        (G = (0, o.Cg)([b.PA], G));
-      let k = (0, b.PA)(({ app: t }) =>
+      (0, o.Cg)([p.oI], H.prototype, "ToggleChat", null),
+        (0, o.Cg)([p.oI], H.prototype, "ToggleTheaterMode", null),
+        (H = (0, o.Cg)([b.PA], H));
+      let O = (0, b.PA)(({ app: t }) =>
         t.BIsPerformingLogonCheck()
           ? (0, s.jsx)("div", {
               children: (0, s.jsx)("iframe", {
@@ -392,7 +393,7 @@
             })
           : null,
       );
-      function O(t) {
+      function V(t) {
         return (0, s.jsxs)("div", {
           className: "BroadcastButton WatchWithFriends",
           onClick: t.onClick,
@@ -402,7 +403,7 @@
           ],
         });
       }
-      function V(t) {
+      function $(t) {
         return (0, s.jsx)("div", {
           className: "ToggleBroadcastChat",
           title: (0, h.we)("#Broadcast_ToggleChat"),
@@ -410,10 +411,10 @@
           children: (0, s.jsx)(c.K7s, { showChat: t.hideIcon }),
         });
       }
-      function $() {
-        return R.TS.STEAM_TV ? x.nn.GN : x.nn.WR;
+      function F() {
+        return E.K.STEAM_TV ? S.nn.GN : S.nn.WR;
       }
-      let F = class extends n.Component {
+      let z = class extends n.Component {
         m_broadcastInfo = null;
         constructor(t) {
           super(t);
@@ -438,9 +439,9 @@
         render() {
           const { broadcastView: t, popup: e, style: a } = this.props,
             o = t.GetSteamID().ConvertTo64BitString();
-          let n = $();
+          let n = F();
           const r = t.m_bShowWatchPromptDialog
-            ? (0, s.jsx)(S, {
+            ? (0, s.jsx)(x, {
                 closeModal: () => t.HideWatchPromptDialog(),
                 broadcastAccountId: t.GetSteamID().GetAccountID(),
                 broadcastTabId: t.GetUniqueID(),
@@ -469,15 +470,15 @@
                         "BroadcastTab_HeaderRow" +
                         (this.state.bChatCollapsed ? " ChatCollapsed" : ""),
                       children: [
-                        (0, s.jsx)(O, { onClick: this.OnWatchWithFriends }),
-                        (0, s.jsx)(V, {
+                        (0, s.jsx)(V, { onClick: this.OnWatchWithFriends }),
+                        (0, s.jsx)($, {
                           onClick: this.ToggleChat,
                           hideIcon: this.state.bChatCollapsed,
                         }),
                       ],
                     }),
                   }),
-                  (0, s.jsx)(z, {
+                  (0, s.jsx)(q, {
                     steamID: o,
                     watchLocation: n,
                     bHideChat: this.state.bChatCollapsed,
@@ -490,11 +491,11 @@
           });
         }
       };
-      (0, o.Cg)([p.oI], F.prototype, "OnWatchWithFriends", null),
-        (0, o.Cg)([p.oI], F.prototype, "ToggleChat", null),
-        (0, o.Cg)([p.oI], F.prototype, "ToggleTheaterMode", null),
-        (F = (0, o.Cg)([b.PA], F));
-      let z = class extends n.Component {
+      (0, o.Cg)([p.oI], z.prototype, "OnWatchWithFriends", null),
+        (0, o.Cg)([p.oI], z.prototype, "ToggleChat", null),
+        (0, o.Cg)([p.oI], z.prototype, "ToggleTheaterMode", null),
+        (z = (0, o.Cg)([b.PA], z));
+      let q = class extends n.Component {
         m_strLocalSteamID = "";
         m_refBroadcastContainer = n.createRef();
         m_elMainContent;
@@ -575,7 +576,7 @@
             n = null;
           const r = this.CalculateBroadcastSectionStyles(!1);
           (r.flexGrow = this.props.bHideChat ? 1 : null),
-            v.td.bValid && (n = (0, s.jsx)(q, { info: v.td }));
+            v.td.bValid && (n = (0, s.jsx)(Q, { info: v.td }));
           const c = (0, s.jsx)("div", {
               className: "LoginDiv",
               children: (0, s.jsx)("a", {
@@ -651,32 +652,32 @@
           });
         }
       };
-      function q(t) {
+      function Q(t) {
         let e = `url( "${R.TS.CHAT_BASE_URL + t.info.offlineImage}" )`;
         return (0, s.jsx)("div", {
           style: { backgroundImage: e },
           className: "BroadcastOffline",
         });
       }
-      function Q() {
+      function Z() {
         return `${R.TS.STORE_BASE_URL}login?steamtv=1`;
       }
-      (0, o.Cg)([I.sH], z.prototype, "m_strLocalSteamID", void 0),
-        (0, o.Cg)([p.oI], z.prototype, "OnLocalStreamChange", null),
-        (0, o.Cg)([p.oI], z.prototype, "SetMainContentRef", null),
-        (0, o.Cg)([p.oI], z.prototype, "OnGrabberMouseDown", null),
-        (0, o.Cg)([p.oI], z.prototype, "HandleMouseMove", null),
-        (0, o.Cg)([p.oI], z.prototype, "UnregisterDragEvents", null),
-        (z = (0, o.Cg)([b.PA], z));
-      var Z = a(52003);
+      (0, o.Cg)([I.sH], q.prototype, "m_strLocalSteamID", void 0),
+        (0, o.Cg)([p.oI], q.prototype, "OnLocalStreamChange", null),
+        (0, o.Cg)([p.oI], q.prototype, "SetMainContentRef", null),
+        (0, o.Cg)([p.oI], q.prototype, "OnGrabberMouseDown", null),
+        (0, o.Cg)([p.oI], q.prototype, "HandleMouseMove", null),
+        (0, o.Cg)([p.oI], q.prototype, "UnregisterDragEvents", null),
+        (q = (0, o.Cg)([b.PA], q));
+      var K = a(52003);
       let X = class extends n.Component {
         render() {
           let t = this.props.broadcastView;
-          if (!(t && t instanceof Z.w)) return null;
+          if (!(t && t instanceof K.w)) return null;
           let e = {};
           return (
             this.props.isActive || (e.display = "none"),
-            (0, s.jsx)(F, {
+            (0, s.jsx)(z, {
               style: e,
               broadcastView: t,
               popup: this.props.popup,
@@ -685,7 +686,7 @@
         }
       };
       X = (0, o.Cg)([b.PA], X);
-      const K = X;
+      const J = X;
     },
     53694: (t, e, a) => {
       a.r(e), a.d(e, { default: () => i });

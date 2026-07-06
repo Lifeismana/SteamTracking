@@ -483,6 +483,7 @@
                       section: u,
                       reservationDef: g[0],
                       hardwareDetail: _,
+                      reservedHardwareDetail: v,
                     }),
                   m &&
                     m?.allow_purchase_in_country &&
@@ -503,8 +504,8 @@
         L = t(73371),
         O = t.n(L),
         P = t(52038),
-        M = t(94636),
-        H = t(20446),
+        H = t(94636),
+        M = t(20446),
         R = t(9202),
         W = t.n(R),
         U = t(35380);
@@ -515,7 +516,7 @@
           a = (0, E.L3)(s);
         return (0, d.jsx)("div", {
           className: W().WishlistHoverCtn,
-          children: (0, d.jsx)(M.E, {
+          children: (0, d.jsx)(H.E, {
             snr: a,
             id: r,
             classOverride: (0, P.A)(
@@ -531,8 +532,8 @@
       function $(e) {
         const n = Number(e.args.appid);
         if (!n) return null;
-        const t = (0, H.O)(e.args.color, "black"),
-          o = (0, H.O)(e.args.bgcolor, "white");
+        const t = (0, M.O)(e.args.color, "black"),
+          o = (0, M.O)(e.args.bgcolor, "white");
         return (0, d.jsx)(q, { appid: n, color: t, bgcolor: o });
       }
       var z = t(10026),
@@ -593,8 +594,8 @@
       function se(e) {
         const n = Number(e.args.appid);
         if (!n) return null;
-        const t = (0, H.O)(e.args.color, "black"),
-          o = (0, H.O)(e.args.bgcolor, "white");
+        const t = (0, M.O)(e.args.color, "black"),
+          o = (0, M.O)(e.args.bgcolor, "white");
         return (0, d.jsx)(oe, { appid: n, color: t, bgcolor: o });
       }
       var re = t(94057),
@@ -837,8 +838,8 @@
         const { event: n } = e.context,
           t = Number(e.args.groupid) || n.clanSteamID.GetAccountID();
         if (!t) return null;
-        const o = (0, H.O)(e.args.color, "black"),
-          s = (0, H.O)(e.args.bgcolor, "white");
+        const o = (0, M.O)(e.args.color, "black"),
+          s = (0, M.O)(e.args.bgcolor, "white");
         return (0, d.jsx)(Ae, { clanAccountID: t, color: o, bgcolor: s });
       }
       let Ee = null;
@@ -900,16 +901,16 @@
         }
         return (0, d.jsx)("span", { children: (0, ie.D)(Number(o)) });
       }
-      function Me(e) {
+      function He(e) {
         const n = Number.parseInt((0, m.j$)(e.args)),
           t =
             "hide" in e.args &&
             Boolean(Number.parseInt((0, m.j$)(e.args, "hide")));
         return n >= 0
-          ? (0, d.jsx)(He, { nDoorIndex: n, bHide: t, children: e.children })
+          ? (0, d.jsx)(Me, { nDoorIndex: n, bHide: t, children: e.children })
           : null;
       }
-      function He(e) {
+      function Me(e) {
         const { nDoorIndex: n, bHide: t, children: o } = e,
           s = (0, y.OM)(n);
         return null == s
@@ -1019,7 +1020,7 @@
                       ["pricesavings", { Constructor: ue.y7, autocloses: !1 }],
                       [
                         "eventdoorvisibility",
-                        { Constructor: Me, autocloses: !1 },
+                        { Constructor: He, autocloses: !1 },
                       ],
                       ["chooseaccount", { Constructor: Re, autocloses: !1 }],
                       [

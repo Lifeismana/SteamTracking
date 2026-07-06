@@ -1208,6 +1208,7 @@
 #SteamUI_StreamClient_Failed_Proto
 #SteamUI_StreamLaunch_AccessDenied
 #SteamUI_StreamLaunch_Broadcasting
+#SteamUI_StreamLaunch_CaptureBusy
 #SteamUI_StreamLaunch_Failed
 #SteamUI_StreamLaunch_InstallDrivers
 #SteamUI_StreamLaunch_InstallRequiresUI
@@ -2464,7 +2465,7 @@ ${LANGUAGE}
 &FORCED_DISPLAY_MODE=steammachine
 &GameRecording\BackgroundTimeResolution
 &IN_CHROMEOS=true
-&IN_CLIENT=true&USE_POPUPS=true&IN_STEAMUI_SHARED_CONTEXT=true
+&IN_CLIENT=true&USE_POPUPS=true
 &IN_GAMEPADUI=true
 &IN_GAMESCOPE=true
 &IS_STEAMOS=true
@@ -2570,7 +2571,6 @@ ${LANGUAGE}
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
-&\n"k_EContentReportSubjectType_Unused
 &\n"k_EDeviceDisconnectMethodBluetooth
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
@@ -4801,21 +4801,22 @@ ${LANGUAGE}
 *ZN25CGamescopeControllerLinux10InitializeEvE31CWebUIGamescopeSetBlurParamsJob
 *ZN25CGamescopeControllerLinux10InitializeEvE38CWebUIGamescopeReArmMuraCalibrationJob
 *ZN25CGamescopeControllerLinux10InitializeEvE38CWebUIGamescopeSetDisplayPowerStateJob
-*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE14_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE15_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK10CUtlStringE10_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK27CGamescope_GetState_RequestR28CGamescope_GetState_ResponseE_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK32CGamescope_SetBlurParams_RequestR33CGamescope_SetBlurParams_ResponseE0_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK39CGamescope_ReArmMuraCalibration_RequestR40CGamescope_ReArmMuraCalibration_ResponseE1_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK39CGamescope_SetDisplayPowerState_RequestR40CGamescope_SetDisplayPowerState_ResponseE2_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlbE11_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlbE12_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE4_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE5_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE6_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE8_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE9_
 *ZN25CGamescopeControllerLinux10InitializeEvEUliE3_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlvE12_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlvE11_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlvE13_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlvE14_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlvE7_
 *ZN25CGamescopeControllerLinux20SetQAMKeyboardHotkeyEPK10CMsgHotkeyEUljE_
 *ZN25CGamescopeControllerLinux21OnScreenshotTriggeredEP21ScreenshotTriggered_tEUlvE_
@@ -5673,6 +5674,7 @@ ${LANGUAGE}
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
+-\n)k_EContentReportSubjectType_CommentThread
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EControllerElementTypeButtonBumperRight
 -\n)k_EControllerElementTypeButtonTriggerLeft
@@ -5720,7 +5722,6 @@ ${LANGUAGE}
 -autoconfig
 -bigpicture
 -buildid
--cef-disable-chrome-runtime
 -chromeosdiskmanagement
 -chromeosnopreallocate
 -chromeosverbose
@@ -7534,6 +7535,8 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 00000000
 0000
+1000
+1024
 000000001532
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -7708,8 +7711,6 @@ ${LANGUAGE}
 10.0.0.0/8
 100 127.0.0.1 stale
 100-continue
-1000
-1024
 10000
 107F-BB20-FB5A-1CE4
 10Audio_Stub
@@ -11559,6 +11560,7 @@ ${LANGUAGE}
 38CUserAccount_GetWalletDetails_Response
 38CVirtualMenuCreateDestroy_TouchMenuKey
 38CWorkItemNetEncryptionHandshakeEncrypt
+38ISteamMatchmakingServerFriendsResponse
 39CAudio_PlaySpeakerTestOnChannel_Request
 39CAudio_SetSpeakerConfiguration_Response
 39CBroadcast_BroadcastStatus_Notification
@@ -14641,6 +14643,7 @@ Apps.GetFriendAchievementsForApp
 Apps.GetFriendsWhoPlay
 Apps.GetGameActionDetails
 Apps.GetGameActionForApp
+Apps.GetIsSubscribedApp
 Apps.GetLaunchOptionsForApp
 Apps.GetMyAchievementsForApp
 Apps.GetPlaytime
@@ -16728,6 +16731,7 @@ CJobMgr::TimeoutJob
 CJobMgr::m_WorkThreadPool
 CJobQueryMasterGameServer
 CJobQueryServerByFakeIP
+CJobQueryServerFriends
 CJobSendLogs
 CJobSetAsyncNotificationsEnabled
 CJobUploadDownloadRates
@@ -18656,6 +18660,7 @@ Closing quote expected in string.
 Cloud
 Cloud.ResolveAppSyncConflict
 Cloud.RetryAppSync
+CloudClient.NotifyAppStateChange#1
 CloudManager
 CloudManager\HintAppsToPreload
 CloudStorage.WriteKey
@@ -23847,12 +23852,12 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
+Jul  2 2026 02:18:50
 July
 JumpList
 Jumplist
 JumplistSettings
 JumplistSettingsKnown
-Jun 26 2026 02:02:27
 June
 K'iche'
 K(\f]C15
@@ -26793,6 +26798,7 @@ NameEntry
 NamePart
 Nanaco
 Naranja
+Native
 NaverPay
 NearRank
 NearValue
@@ -29881,10 +29887,12 @@ ServerBrowser.RegisterForFavorites
 ServerBrowser.RegisterForFriendGamePlayed
 ServerBrowser.RegisterForGameInfoDialogs
 ServerBrowser.RegisterForPlayerDetails
+ServerBrowser.RegisterForServerFriends
 ServerBrowser.RegisterForServerInfo
 ServerBrowser.RemoveFavoriteServer
 ServerBrowser.RemoveHistoryServer
 ServerBrowser.RequestPlayerDetails
+ServerBrowser.RequestServerFriends
 ServerBrowser.SetServerListPreferences
 ServerConfigEnabled
 ServerInfoFile
@@ -32389,7 +32397,6 @@ Usage: library_asset_cache_recheck <appid> [force]
 Usage: set_var <name> <value>
 Usage:\n\tfind <keyword>\n
 UsbOverCurrent
-Use CEF alloy runtime
 Use Proxy
 Use local dev websites
 Use longest string for each localization token
@@ -36662,6 +36669,7 @@ bCommunityMarketPresence
 bCompatEnabled
 bCompatEnabledForOtherTitles
 bConfigurationEnabled
+bConnected
 bConnectedViaWifiAP
 bControllerEnabled
 bControllerSurveyFilledOut
@@ -36795,6 +36803,7 @@ bProgenitorOfficial
 bProgenitorRecommended
 bPromptToChangePassword
 bPublic == false
+bPyrowaveDecodeAvailable
 bQuickAccessButton
 bRPOEnable
 bReceivedSomething
@@ -36854,6 +36863,7 @@ bUnderscanEnabled
 bUploaded
 bUseAsDefault
 bUseIOCP
+bUseSWBiases
 bUseSystemBrowserFor2DVOD
 bUsesGamepad
 bUsesKeyboard
@@ -39749,6 +39759,7 @@ enable_ui_sounds
 enable_unreliable_fec
 enable_video_av1
 enable_video_hevc
+enable_video_pyrowave
 enable_video_streaming
 enabled
 enabled_branches
@@ -40394,6 +40405,7 @@ freopen
 frequency
 freshestCRL
 frexp
+friendName
 friend_chat_tabs_opened
 friend_relationship
 friendactivity
@@ -44112,7 +44124,6 @@ htc_vive
 html
 html-findbar
 htmlcache
-htmlcache/Default
 htmlmessages.proto
 htmlpopupchild
 htonl
@@ -48199,6 +48210,7 @@ m_cbOverlayBrowserProtocol
 m_cbOverlayGameWindowFocusChanged
 m_cbOverlayNotificationPositionChanged
 m_cbPlayerDetails
+m_cbServerFriends
 m_cbServerInfo
 m_cbShowHWSurvey
 m_cbShowSaveHardwareDialog
@@ -52991,6 +53003,7 @@ s_hashMapServerTypeWatches
 s_hashMapSteamIDWatches
 s_hashMapTxnIDWatches
 s_instance
+s_mapClientJobNames
 s_pFileSystemInterface
 s_pInstance == this
 s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
@@ -53733,7 +53746,6 @@ sm_vecPublicKeys
 small_capsule_2x
 small_mode
 small_text
-smapClientJobNames
 smart-enabled
 smart-failing
 smart-num-attributes-failed-in-the-past
@@ -56221,6 +56233,7 @@ use_account_cart
 use_action_block
 use_bluetooth_for_mic
 use_certificate_chain_file
+use_gyro_sw_biases
 use_qos
 use_unique_filename
 usecTimeout >= 0

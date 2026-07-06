@@ -2666,7 +2666,6 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/5c9fb11
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/92a08788e62ec08c84036cacb60524e16d56d9ed.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a24229e0772b333e8e374c22cffd8619998bb19b.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/646570/a87d1ba5946edaba49f377f698d4a39af9f327f3.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/${appid}/${}
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/646570/85b510e2e164070a59947395ff91d250c010a5c9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_3.jpg

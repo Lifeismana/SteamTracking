@@ -26,8 +26,6 @@
 $ORIGIN
 %a %b %d %H:%M:%S %Y UTC
 %llu
-%s begin_ctx=%lld
-%s end_ctx=%lld
 %s: %d, %d, %d
 %s: '%s', '%s'
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -461,6 +459,8 @@ XWindowEvent
 XkbKeycodeToKeysym
 XlibMessage
 XwcLookupString
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [abi:
 _Accum
 _Fract

@@ -465,7 +465,7 @@
         }
         async DeleteClanImageByID(_, _) {
           let _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               imageid: _,
             },
             _ = _.GetAccountID(),
@@ -1984,7 +1984,7 @@
             _ = _.GetResizeDimension(),
             _ = new FormData();
           _.append("clanimage", _, _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
             _?.artworkType && _.append("arttype", _.artworkType),
             _ &&
@@ -2261,7 +2261,7 @@
           if ("" == this.state.formattingHelp.__html) {
             let _,
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               };
             (_ = await _().get(_.GetHelpURL(this.props.formatType, !0), {
               params: _,
@@ -3665,7 +3665,7 @@
                 const _ = new FormData();
                 __webpack_require__.append("appid", "" + _),
                   __webpack_require__.append("status_text", _),
-                  __webpack_require__.append("sessionid", _._.SESSIONID);
+                  __webpack_require__.append("sessionid", (0, _._)());
                 const _ = await _().post(_, _, {
                   withCredentials: !0,
                 });

@@ -1538,6 +1538,7 @@ var CLSTAMP = "steamdb";
               onGlobalButtonDown: _,
               disableFocusClasses: _,
               disabledRoot: _,
+              excludeFromScrollRegionSearch: _,
               "flow-children": _,
               ..._
             } = _,
@@ -1556,6 +1557,7 @@ var CLSTAMP = "steamdb";
                 onGlobalButtonDown: _,
                 disableFocusClasses: _,
                 disabledRoot: _,
+                excludeFromScrollRegionSearch: _,
                 "flow-children": _,
                 ..._,
                 ..._,
@@ -1584,6 +1586,7 @@ var CLSTAMP = "steamdb";
               onGlobalButtonDown: _,
               disableFocusClasses: _ = !1,
               disabledRoot: _ = !1,
+              excludeFromScrollRegionSearch: _ = !1,
               "flow-children": _,
               ..._
             } = _,
@@ -1593,6 +1596,7 @@ var CLSTAMP = "steamdb";
                   navID: _,
                   parentEmbeddedNavTree: _,
                   disabledRoot: _,
+                  excludeFromScrollRegionSearch: _,
                   enabled: _,
                   navTreeRef: _,
                   onGlobalButtonDown: _,
@@ -1616,6 +1620,9 @@ var CLSTAMP = "steamdb";
                 ),
                 _.useEffect(() => {
                   _.SetIsEnabled(_);
+                }, [_, _]),
+                _.useEffect(() => {
+                  _.SetExcludeFromScrollRegionSearch(_);
                 }, [_, _]),
                 _.useEffect(() => {
                   if (!_)
@@ -1643,6 +1650,7 @@ var CLSTAMP = "steamdb";
               virtualFocus: _,
               modal: _,
               historyMode: _,
+              excludeFromScrollRegionSearch: _,
             });
           (0, _._)(_.OnActivateCallbacks, _),
             (0, _._)(_.OnDeactivateCallbacks, _),
@@ -1934,6 +1942,7 @@ var CLSTAMP = "steamdb";
               fnScrollIntoViewHandler: _,
               scrollIntoViewType: _,
               resetNavOnEntry: _,
+              scrollRegionToStartOrEnd: _,
               ..._
             } = _,
             { gamepadEvents: _, actionDescriptions: _, props: _ } = _(_);
@@ -1961,6 +1970,7 @@ var CLSTAMP = "steamdb";
               fnScrollIntoViewHandler: _,
               scrollIntoViewType: _,
               resetNavOnEntry: _,
+              scrollRegionToStartOrEnd: _,
               actionDescriptionMap: {
                 ..._,
                 ..._,
@@ -2611,6 +2621,11 @@ var CLSTAMP = "steamdb";
             repeatInterval_ms: 50,
           });
           m_bGamepadDetected = !1;
+          Init(_) {
+            return {
+              Unregister: () => {},
+            };
+          }
           RegisterForGamepadDetected(_) {
             return this.m_OnGamepadDetectedCallbacks.Register(_);
           }
@@ -3237,6 +3252,16 @@ var CLSTAMP = "steamdb";
           get Parent() {
             return this.m_Parent;
           }
+          GetNavParentCrossingTrees() {
+            return this.m_Parent
+              ? this.m_Parent
+              : this.m_Tree.GetParentEmbeddedNavTree() && this.Element
+                ? (this.Element.__nav_wrapper ?? null)
+                : null;
+          }
+          GetWrappedTree() {
+            return null;
+          }
           SetProperties(_) {
             const _ = !(0, _._)(
                 this.m_Properties?.actionDescriptionMap,
@@ -3727,75 +3752,92 @@ var CLSTAMP = "steamdb";
             return _;
           }
           InternalFocusDescendant(_, _, _) {
-            return !!_ && (this.m_Tree.TransferFocus(_, _, (0, _._)(_)), !0);
+            return !!_ && (this.m_Tree.TransferFocus(_, _, _, !1), !0);
           }
-          BTryInternalNavigation(_, _) {
-            const _ = this.GetLayout();
-            let _,
+          BHasNavTargetInDirection(_, _) {
+            if (this.HasMovementHandler(_)) return !0;
+            let _ = this.FindNextFocusableChild(_);
+            if (_ && _) {
+              let _ = __webpack_require__.GetWrappedTree();
+              if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+            }
+            return !!_;
+          }
+          HasMovementHandler(_) {
+            switch (_) {
+              case _._.DIR_UP:
+                return !!this.m_Properties?.onMoveUp;
+              case _._.DIR_DOWN:
+                return !!this.m_Properties?.onMoveDown;
+              case _._.DIR_LEFT:
+                return !!this.m_Properties?.onMoveLeft;
+              case _._.DIR_RIGHT:
+                return !!this.m_Properties?.onMoveRight;
+            }
+            return !1;
+          }
+          FindNextFocusableChild(_) {
+            const _ = this.GetLayout(),
               _ = this.ComputeRelativeDirection(_, _);
-            if (
-              (_(
-                `Handling navigation event ${_._[_]} - ${_[_]} - ${_[_]}`,
-                this.m_element,
-              ),
-              _ == _.INVALID)
-            )
-              return !1;
-            if (this.m_Properties?.focusable && this.BHasFocus())
-              return _("Skipping navigation within focused element"), !1;
+            if (_ == _.INVALID) return null;
+            if (this.m_Properties?.focusable && this.BHasFocus()) return null;
             if ((this.EnsureChildrenSorted(!0), _ == _.GRID))
-              _ = this.FindNextFocusableChildInGrid(
+              return this.FindNextFocusableChildInGrid(
                 this.GetActiveChildIndex(),
                 _,
                 _,
               );
-            else if (_ == _.GEOMETRIC)
-              _ = this.FindNextFocusableChildGeometric(_, _);
-            else {
-              let _ = this.GetActiveChildIndex();
+            if (_ == _.GEOMETRIC)
+              return this.FindNextFocusableChildGeometric(_, _);
+            let _ = this.GetActiveChildIndex();
+            return (
               this.IsValidChildIndex(_) ||
                 (_ = _ == _.FORWARD ? -1 : this.m_rgChildren.length),
-                (_ = this.FindNextFocusableChildInDirection(_, _, _));
-            }
-            if (_) {
-              const _ = (0, _._)(_);
-              if (
-                this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
-                _.GetScrollIntoViewType() == _.NoTransformSparseContent
-              ) {
-                const _ = _.Element?.ownerDocument.defaultView;
-                if (_) {
-                  const _ =
-                      ("y" == _ ? _.innerHeight : _.innerWidth) /
-                      (_ ? 4.5 : 3.33),
-                    _ = (0, _._)(_.Element);
-                  let _ = !1;
-                  if (
-                    ("y" == _
-                      ? _ == _.FORWARD
+              this.FindNextFocusableChildInDirection(_, _, _)
+            );
+          }
+          BTryInternalNavigation(_, _) {
+            _(
+              `Handling navigation event ${_._[_]} - ${_[this.GetLayout()]}`,
+              this.m_element,
+            );
+            const _ = this.FindNextFocusableChild(_);
+            if (!_) return !1;
+            const _ = (0, _._)(_),
+              _ = this.ComputeRelativeDirection(_, this.GetLayout());
+            if (
+              this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
+              __webpack_require__.GetScrollIntoViewType() ==
+                _.NoTransformSparseContent
+            ) {
+              const _ = _.Element?.ownerDocument.defaultView;
+              if (_) {
+                const _ =
+                    ("y" == _ ? _.innerHeight : _.innerWidth) /
+                    (_ ? 4.5 : 3.33),
+                  _ = (0, _._)(_.Element);
+                let _ = !1;
+                if (
+                  ("y" == _
+                    ? _ == _.FORWARD
+                      ? (_ =
+                          _.top > _.innerHeight && _.bottom > _.innerHeight + _)
+                      : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
+                    : "x" == _ &&
+                      (_ == _.FORWARD
                         ? (_ =
-                            _.top > _.innerHeight &&
-                            _.bottom > _.innerHeight + _)
-                        : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
-                      : "x" == _ &&
-                        (_ == _.FORWARD
-                          ? (_ =
-                              _.left > _.innerWidth &&
-                              _.right > _.innerWidth + _)
-                          : _ == _.BACKWARD &&
-                            (_ = _.right < 0 && _.left < -_)),
-                    _)
-                  )
-                    return (
-                      _(`Element too far away, scrolling ${_} on ${_} axis `),
-                      (0, _._)(_.Element, _.Element, "smooth", _, _),
-                      !0
-                    );
-                }
+                            _.left > _.innerWidth && _.right > _.innerWidth + _)
+                        : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
+                  _)
+                )
+                  return (
+                    _(`Element too far away, scrolling ${_} on ${_} axis `),
+                    (0, _._)(_.Element, _.Element, "smooth", _, _),
+                    !0
+                  );
               }
-              return this.m_Tree.TransferFocus(_._.GAMEPAD, _, _), !0;
             }
-            return !1;
+            return this.m_Tree.TransferFocus(_._.GAMEPAD, _, _), !0;
           }
           GetScrollIntoViewType() {
             return void 0 !== this.m_Properties?.scrollIntoViewType &&
@@ -4091,7 +4133,7 @@ var CLSTAMP = "steamdb";
               bFocusDescendant: !0,
             });
           }
-          SetDOMFocusAndScroll(_, _) {
+          SetDOMFocusAndScroll(_, _, _, _) {
             this.UpdateParentActiveChild(),
               this.m_Tree.OnChildActivated(_),
               this.m_Tree.BIsActiveFocus()
@@ -4106,7 +4148,7 @@ var CLSTAMP = "steamdb";
                   _(
                     `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                   ),
-              this.m_Tree.BIsActive() && (0, _._)(this, _, _);
+              this.m_Tree.BIsActive() && (0, _._)(this, _, _, _, _);
           }
         }
         (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -4265,13 +4307,14 @@ var CLSTAMP = "steamdb";
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = new _._("ScrollSnap").Debug;
         let _ = !1;
-        const _ = 1.4;
         let _;
         const _ = 500;
-        function _(_, _, _) {
+        function _(_, _, _, _, _) {
           const _ = _.Element;
           if (!_) return;
           let _ = [
@@ -4312,24 +4355,27 @@ var CLSTAMP = "steamdb";
               _ =
                 _ == _._.NoTransform || _ == _._.NoTransformSparseContent || !_;
             if (_ || _ === _._.GAMEPAD) {
-              const _ = _ ? _(_) : _.getBoundingClientRect();
+              const _ = _ ? _(_) : _.getBoundingClientRect(),
+                _ = _.ownerDocument.defaultView.innerHeight,
+                _ = 40,
+                _ = _ ? _ : Math.max(0.4 * _, _);
               let _ = !1;
-              const _ = Math.max((_.bottom - _.top) * _, 40),
-                _ = _ && performance.now() - _ < _;
-              (_ ||
-                _.bottom < -_ ||
-                _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+              const _ = _ && performance.now() - _ < _;
+              (_ || _.bottom < -_ || _.top > _ + _) &&
                 ((_ = !0),
                 _ ||
                   _(
-                    `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                    `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_} + ${_} `,
                   ));
               let _ = _ ? "auto" : "smooth";
               _ && (_ = performance.now()),
                 _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
                 _
                   ? _(_, _, _)
-                  : (_("Scrolling Into View (via browser scrollIntoView):", _),
+                  : (_(
+                      `Scrolling Into View ('${_}' via browser scrollIntoView):`,
+                      _,
+                    ),
                     _.scrollIntoView({
                       behavior: _,
                       block: "nearest",
@@ -4338,12 +4384,60 @@ var CLSTAMP = "steamdb";
               _("No previous element for scrolling, will jump"),
                 _
                   ? _(_, _, "auto")
-                  : (_("Scrolling Into View (via browser scrollIntoView):", _),
+                  : (_(
+                      "Scrolling Into View ('auto' via browser scrollIntoView):",
+                      _,
+                    ),
                     _?.scrollIntoView({
                       behavior: "auto",
                       block: "nearest",
                       inline: "nearest",
                     }));
+          }
+          !(function (_, _) {
+            const _ = (0, _._)(_);
+            if (!_) return;
+            let _ = null;
+            for (let _ = _; _; _ = _.GetNavParentCrossingTrees())
+              _.m_Properties?.scrollRegionToStartOrEnd && (_ = _);
+            if (!_) return;
+            for (
+              let _ = _;
+              _ &&
+              !_.BHasNavTargetInDirection(_, !0) &&
+              (_ != _ &&
+                _.Element &&
+                _.m_Properties?.scrollRegionToStartOrEnd &&
+                _(_.Element, _, _),
+              _ != _);
+              _ = _.GetNavParentCrossingTrees()
+            );
+          })(_, _);
+        }
+        function _(_, _, _) {
+          let _ = _,
+            _ = _.ownerDocument;
+          if (
+            (_ == _.body &&
+              _.defaultView &&
+              !(0, _._)(_, _) &&
+              (_ = _.defaultView),
+            !(0, _._)(_, _))
+          )
+            return;
+          const _ = _(_);
+          if ("y" == _) {
+            const _ = _ == _._.DIR_DOWN ? _.MaxScrollTop() : 0;
+            _.scrollTo({
+              top: _,
+              behavior: "smooth",
+            });
+          } else {
+            const _ = _ == _._.DIR_RIGHT ? _.MaxScrollLeft() : 0;
+            _.scrollTo({
+              left: _,
+              behavior: "smooth",
+            });
           }
         }
         function _(_) {
@@ -5065,7 +5159,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         const _ = 1,
           _ = 2,
@@ -5081,7 +5174,6 @@ var CLSTAMP = "steamdb";
           _ = 15,
           _ = 16,
           _ = 17,
-          _ = 19,
           _ = 20,
           _ = 21,
           _ = 22,
@@ -17716,9 +17808,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 25 2026 : 18:59:06",
-                BUILD_TIME_UTC: "Jun 26 2026 : 01:59:06",
-                BUILD_RTIME_UTC: 1782439146,
+                BUILD_TIME_LOCAL: "Jul 1 2026 : 17:00:34",
+                BUILD_TIME_UTC: "Jul 2 2026 : 00:00:34",
+                BUILD_RTIME_UTC: 1782950434,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -30816,6 +30908,7 @@ var CLSTAMP = "steamdb";
           _: () => _._,
           _: () => _,
           _: () => _,
+          _: () => _._,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -30971,8 +31064,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         const _ = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -31024,12 +31116,6 @@ var CLSTAMP = "steamdb";
             PAGE_TIMESTAMP: 0,
             FROM_WEB: !1,
             WEBSITE_ID: "Unknown",
-            get SESSIONID() {
-              return (0, _._)();
-            },
-            FRIENDSUI_BETA: !1,
-            STEAM_TV: !1,
-            DEV_MODE: !1,
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
@@ -31041,6 +31127,7 @@ var CLSTAMP = "steamdb";
             IN_LOGIN_REFRESH: !1,
             USE_LONGEST_LOC_STRING: !1,
             SILENT_STARTUP: !1,
+            DEV_MODE: !1,
             CLIENT_SESSION: 0,
             NOW: 0,
           },
@@ -31134,9 +31221,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 25 2026 : 18:59:06",
-                    BUILD_TIME_UTC: "Jun 26 2026 : 01:59:06",
-                    BUILD_RTIME_UTC: 1782439146,
+                    BUILD_TIME_LOCAL: "Jul 1 2026 : 17:00:34",
+                    BUILD_TIME_UTC: "Jul 2 2026 : 00:00:34",
+                    BUILD_RTIME_UTC: 1782950434,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -31734,149 +31821,149 @@ var CLSTAMP = "steamdb";
       ".js?contenthash=" +
       {
         48: "e47e4f540b067a8b55df",
-        63: "f573fff04cbbadb7903c",
+        63: "5bc0a8f5ea40640c244c",
         89: "0679e3127b09597af700",
-        106: "7de00d8ca0004148eb65",
-        129: "955dd0b14e891215b13c",
-        139: "c93d38f8f1b4728f7125",
+        106: "3444a930cde738bd040b",
+        129: "3a00d71541d9b3d62298",
+        139: "43f4ea929f13e6d9aaf8",
         195: "f803e034cadfb1d61b19",
         218: "3fd52d93e5d68ce14112",
-        256: "4d455d2e1007baf83898",
-        297: "abb2e933fa9ecd3994fe",
-        342: "fa7e1b2e611c0d432aaf",
+        256: "ce06549b3f0401cebbe5",
+        297: "e2e8b28a620be5fdf86a",
+        342: "a662e8cdfa65ed225132",
         437: "d7e142ac3ecbcb6eb776",
-        499: "99d2e6cf2e3620d8e8c9",
+        499: "b84cdb8febc0beb6363c",
         548: "8b5ff9a20b9008edae42",
         580: "3e5a411a79374b95ccd3",
         699: "8307e24cd59263045d53",
         716: "666de33917d80425274c",
-        728: "fcf6e277d7f24af216d7",
-        740: "68ca4cdd94a79c6e28ec",
-        748: "7919a5066ecdce655278",
+        728: "8faeeabcf9586a48b728",
+        740: "893ff03b673bf66b1146",
+        748: "938f0b50da070bae609c",
         761: "cd266dcf9af8ce8be919",
-        766: "f93d988443e9d7850517",
+        766: "f23a32377bd3050c6400",
         786: "4bb1cffcda61cc74a96b",
         806: "fb3b7f7e9305749b125a",
-        823: "a3445db086c9428e1aef",
+        823: "6467c77e79b9413f4949",
         876: "25eede417d42c0cd26d1",
         884: "1e9d2523f65497feb69b",
-        901: "eb6be9aab4c44a8e14b6",
-        959: "cb125c085644b8c5e43d",
-        1005: "8657b8a4a4101716343e",
+        901: "7c61b7b7d2c7225395f6",
+        959: "36a2112db24626d40607",
+        1005: "3bd85d94354714e0e4f1",
         1012: "6449d3277e3245a235a7",
         1093: "9038f657966d3f7e10f4",
-        1133: "6a1aac7715a90f9746a8",
+        1133: "d2f912d9c2ab1427e863",
         1139: "462f892bdd11621e1239",
         1220: "49db0fc28c8ac9df9186",
         1242: "d540c2e46c3b19118e64",
         1275: "ddb9f0aa00a9c9bbf441",
         1325: "c752e6ae17746436bff0",
         1388: "315d0837be5086f0a826",
-        1389: "d233a93ef07a1b56b280",
+        1389: "d4e85db473017e7ea6d0",
         1391: "0e40d57987ac9fbef65e",
-        1423: "2a18c5827abf728a554e",
-        1463: "69505112fa32280a5e4c",
-        1478: "8ed484830e64e334ba99",
-        1502: "f55107b69b46f554b1b9",
+        1423: "0a80f5b8968559ace0b7",
+        1463: "57d2775f655e10309803",
+        1478: "a15e792d1d799fa4a485",
+        1502: "1935efb2461ad9bce662",
         1511: "b63d4421e78664b1b165",
         1545: "25215dde3dc3c457826b",
         1547: "6814f74596b44c58bf4e",
         1548: "9d8472e8ca52930267c3",
-        1549: "85223d119e6cf8d82c38",
+        1549: "f174d6a923e1b7a8a31c",
         1573: "577bb15708bfc059dd57",
-        1629: "a48d7de6f6e50afb7869",
+        1629: "53d32d373f7c0277067c",
         1648: "ae7888c22c818aa27a14",
         1651: "b7ec4ee5142468faf100",
         1663: "69583c6318b737ea4d67",
-        1709: "bd88f92d0bd2fb7b130c",
+        1709: "cd3695ef1d660e962a3c",
         1791: "7a4d0025acd50b0c8785",
         1792: "2741080f9fc7aecf93ec",
-        1800: "8a86bc75d67483e65fef",
-        1822: "af025818f4c85a53fb53",
+        1800: "c2e8891a18999978e407",
+        1822: "5b0ebd20c79b5a4ce429",
         1879: "e5a0394ea4f2fd2da944",
         1917: "32e7bc7d5cdaf7899bac",
         1922: "1f258438fbda46bf7fcc",
-        2021: "617b4ffbf5edcc23ea5b",
+        2021: "11f776f77c42b40baf87",
         2056: "b59b66100bf9f25fcdee",
         2101: "432742a8a4f0cce8eb12",
         2140: "b4f70f82ab73244977b8",
-        2160: "f5d5bab6ec521fff5d09",
+        2160: "3467baf861a5f7c39db4",
         2171: "1a6c2680f9f50b6ee647",
         2198: "71ffc190aa7b24262e88",
-        2199: "4857e078ec31bafc9ffd",
+        2199: "bb34733dd3cb6ea64e0d",
         2225: "e9549de91e74e24a5557",
-        2263: "922e9da68a1ff5ca7755",
+        2263: "34d5b8e0a47e4324ef7b",
         2266: "d4049da41b848707b218",
-        2294: "f3d7732619e85d2f9b76",
+        2294: "82b896449d9a586692a4",
         2320: "76cef2b5dd91f317cb3f",
-        2348: "6f27bc808afd5191886c",
+        2348: "2ceb7e2ff86556fca18b",
         2393: "7f676d56759c81a36d13",
         2397: "12e8de49bab168797894",
-        2438: "0b25aabc3eaae931f37a",
+        2438: "24be384d2b304cdf50e4",
         2448: "5cd57d315e0130e0e873",
-        2481: "e074cf563c1441409616",
-        2493: "2d742abb499c193924e5",
+        2481: "8c13aff7c832e786e605",
+        2493: "b2e6ee30f4d3af08ab6d",
         2515: "39384fb79ef15b7f53b5",
         2539: "0f9b65120876cd1969bc",
         2561: "ab555204d6f9f5c725de",
-        2563: "33a7c91aab8fb6378fc6",
+        2563: "517bc917cca527cc3f58",
         2576: "31176a0c9721961ab176",
         2600: "3ba4ddf1d7e6ba146d2c",
         2611: "f9524140f601be23197f",
         2640: "d9ded060cd6c4dc29609",
-        2646: "9c0e448f31e1e407de08",
-        2662: "3b7c335296c2a7ffc5c7",
-        2664: "da7d4b7d86d9f1d4f6c5",
-        2742: "6ca3eba291dea5e0f4fb",
+        2646: "e29546467596233a3523",
+        2662: "bd3f70e8039adc99634a",
+        2664: "fba6402d566e6638f698",
+        2742: "60d33391566fbd216cd7",
         2752: "ede88a82875229bb4a3a",
-        2761: "f7ba6ee229874e2f6563",
+        2761: "d10e19c276b0c2d8d401",
         2783: "f4c41c100afa2dbc4807",
         2834: "4d454a9d89e5afa2e62a",
-        2855: "9cc0b4c5b67620929ff1",
+        2855: "cf823e4958e12e5ef6c8",
         2862: "6a99372ffe2e960717da",
         2867: "3c6a175069489069b448",
         2871: "fb5cf9ee194794b6c42b",
-        2880: "31f7d55fac38b1372922",
-        2889: "a738c51973dbd9ee894f",
+        2880: "c86ee925129d6c94a44f",
+        2889: "1dfdc989ad95375759d5",
         2916: "ac9f0e39080834163a5e",
         2952: "dfba8734112ac661278e",
-        2959: "7d606cd926b7a6af138f",
+        2959: "842f3ee23092cf30ec6b",
         2982: "552bb7ba822785db03d2",
         2984: "d1fce728407839d54ab1",
-        3087: "1bfa307f1b6b23adbb90",
-        3124: "30b90100d0bf1d333040",
+        3087: "80c091990d573e07ce38",
+        3124: "20bc5f2fa654d2d5f599",
         3158: "eb811559de47f318e011",
-        3177: "db1975fb88e20bc79cef",
+        3177: "6a12458c9b500cafae0f",
         3180: "367ab241f4ef845293b6",
         3222: "70a1b6ded76f91a2c853",
         3263: "1d89c594059719a35fc9",
         3324: "a862a24aac95011ac5bd",
-        3334: "cc80c5e655a5fa0b68a9",
+        3334: "a4845ebf5538a8c9403b",
         3350: "f80a23c85667168bf911",
         3352: "f2ede16e80949a4d17c1",
-        3356: "8d67126d890e553d8669",
+        3356: "f1060d832dfd2513cd22",
         3366: "d7e43d3583690ec0e1f4",
         3473: "aa2e2c813e7588319881",
-        3569: "eeaaf043f88f432791b7",
+        3569: "d093f262bbc0f95fd9e5",
         3583: "22aaaa36100912e3ed08",
-        3585: "bb491205ae5d8ad6ed8d",
+        3585: "7848ae778b003c5839b0",
         3589: "fd66d8f7b977b24bb0d2",
-        3594: "7db2df1f41839ea1cb8d",
+        3594: "e0ed40c5de797633ca11",
         3645: "b21815a71721ebf30c86",
-        3675: "aa660c4ce79d5a895249",
+        3675: "31811efc3e57c33e20fc",
         3695: "f286c82598902f2e3840",
         3706: "948e81a3ef05a567717f",
         3714: "1992320fd3bb94fe7cd7",
         3744: "775ac7cdb21bac1fe37c",
         3834: "bf21f188fc4915ee14e0",
-        3869: "19aef701e738b3f552a5",
+        3869: "b75ea045d953b47b5817",
         3876: "84fa0241ab1adeec788e",
         3899: "5ffcf512ba617d848f61",
         3947: "5f24a36110afc8e0968a",
-        3961: "d3ff837fed8dae4731fb",
-        3962: "05a10551a1b0e310d27e",
+        3961: "67ed5e4556be6844e345",
+        3962: "51b9d32823275b203183",
         4026: "0a24c2b15af8d2ea87bf",
-        4057: "fe2a0fe439ac66af5693",
+        4057: "76e5ea1b2eae1203041b",
         4102: "71dcbcafea414d3603b0",
         4139: "79d7700eb0ce61e945e2",
         4175: "2e35904177f5886d7bdd",
@@ -31884,14 +31971,14 @@ var CLSTAMP = "steamdb";
         4259: "aa37b751e98aeca3b305",
         4291: "c7469793c19cc332e1f6",
         4309: "f994f7388aac0d4fe05c",
-        4321: "94f1a9ab0f419e88ab06",
+        4321: "86c52d8287cbbba94d36",
         4402: "0af03ab8e2a6e086efba",
         4475: "125e6435ae309d0db57e",
-        4481: "d692da8e6c70c17187ac",
+        4481: "6037845a06e43f4c1c36",
         4500: "492f845c5dd9461a737d",
-        4513: "8dc2b2e5f031c02ed246",
-        4515: "67f7f6bfa4b76f9251fa",
-        4516: "e45a196c4e2382f097f7",
+        4513: "5fb87340eba735948c6b",
+        4515: "0a0061ec8188e9c86123",
+        4516: "9c4f2d339035db94afd6",
         4572: "fdcefee7c5a076c1e2ab",
         4595: "a1cc551c2df7ac00aa37",
         4768: "17a7d7c4e34e0266ba4b",
@@ -31899,13 +31986,13 @@ var CLSTAMP = "steamdb";
         4839: "6acda41d1762102d43b7",
         4842: "b222206e7f49cb0d2b09",
         4912: "ae71f824d5e53fe3750c",
-        4922: "7ca53ed2033855f366e8",
+        4922: "85077b03323ead971850",
         4925: "ed69214de5d337886985",
         4933: "696e5de7324513db0a18",
-        4951: "d67c508811014525a8ae",
-        4952: "cc87e40e0c825074c227",
-        5019: "094a858f6b5a2b9b7fe4",
-        5045: "a5864cecb9aee1f4a726",
+        4951: "503c3206f456c350dfd8",
+        4952: "c781e47ba87f1201ff83",
+        5019: "de1e64999df9585b947f",
+        5045: "1ce6c9e66fd00cf272b7",
         5056: "8a07c0e63c0e839c947a",
         5073: "ca9541ea0b126c362d75",
         5173: "e680f814a22f2521dcef",
@@ -31914,48 +32001,48 @@ var CLSTAMP = "steamdb";
         5269: "60207428bd2868248c3a",
         5324: "567856d650d54988b214",
         5355: "1384e750c24f11d2af09",
-        5473: "cb5a15e4561b65a56880",
+        5473: "6665cc44dc9fac090d32",
         5497: "14bf3b92aea756b4a3f2",
         5501: "54702330033b5f61868a",
         5536: "1c7c649745bbc6d3b5f4",
-        5553: "a56ba5e4895cda9fb3b6",
-        5569: "3f2e21e58af6f2ab5f6f",
+        5553: "60e2779caa7b4516751a",
+        5569: "71b473e8c8592aa3d1dc",
         5575: "a1d9f5e992078b45427c",
-        5592: "7ddb188a0932cc6ba567",
+        5592: "d86f02d1c78dffa0ea98",
         5668: "fab72a3366cb3d606682",
         5704: "b9b1d9243a5999e04486",
-        5716: "9ef7fcf1d639c4521b78",
+        5716: "d8ec9e353ff8a48e7f86",
         5743: "0162c73a6eb4ab68b6fd",
         5752: "65a652a4cf8cb3c37607",
-        5803: "cf1138ebbd81f51da5f9",
-        5864: "23e85414669e843a848b",
+        5803: "70483c3c74100d66ecfe",
+        5864: "f2e5ec8effc5760c940c",
         5903: "270e7369ee63f73cf6f7",
-        5905: "ec0f4d90307ba5da7295",
+        5905: "4e37274fff725e948646",
         6034: "8687a98c16ba56b1dc05",
-        6120: "d6f15f20698ce53c9edd",
+        6120: "e1935abe50b12097267e",
         6197: "8af0717e4fcd0746d10b",
         6235: "ce98638999c6f5e08952",
         6345: "d77e54ee3f3a40eb2ebe",
         6350: "79c1e06f7c6253af3bcc",
         6381: "32a17fb20e9f52c3985a",
-        6391: "30b4f92a823216a31f21",
+        6391: "e91dfa796384dd5792a8",
         6409: "519909cf0cfb8e6cec43",
-        6430: "8b6ac179784dca005191",
-        6472: "41d6d7f81b659984d823",
+        6430: "4aca9e264221788118e6",
+        6472: "8d61ff049193cdfd31f0",
         6513: "9807f1b64c40a02b3c8f",
-        6577: "ec23ad504cc9ab820cad",
-        6643: "79005ea8c9b7bbbfe125",
+        6577: "78d4d3863631b0eb47c6",
+        6643: "6d901c48907c613ddcbc",
         6696: "bf0354bdfd3e79ba42f2",
-        6752: "2d804443ababcbc0a816",
-        6783: "74cfd5e56be977d5388c",
+        6752: "8133e857d4c0ed0d00a9",
+        6783: "09ced4f08bbf2a1a9873",
         6785: "b5feffbba32b8e3e4e54",
         6787: "d848461b204dcf445b61",
         6810: "891c059117c6b984347f",
         6865: "b48073424ca49ee76f2a",
         6879: "e0cfd74424a1d8c6165d",
         6884: "0f06d2665dc521b8f26a",
-        6888: "878d47afa1fac7ec8b34",
-        6890: "f2e1b8ba44082b6c84c5",
+        6888: "c4a54979d9cf8cf3ef75",
+        6890: "8fb40edb67cc114eb100",
         6896: "8911b02c243ec4c6b01a",
         6913: "c5986330980f0f66a5ef",
         6960: "fd233689ee3919f8a533",
@@ -31967,19 +32054,19 @@ var CLSTAMP = "steamdb";
         7316: "b433424133c7e0fe3ffa",
         7376: "5a64bf5d31340f560998",
         7386: "78d691bc1f52758abf36",
-        7442: "5e5571ef2972ec353b53",
+        7442: "c7115895985a4f87483e",
         7462: "af240d82974ceed87c7c",
         7503: "658123cceab17e7f1fa9",
-        7533: "3e467c6d0b37d4ed8afe",
+        7533: "84f7b46aea07d92f8434",
         7554: "f80856c048cd00abf719",
         7569: "7075d5c4f1fc4a72f4a3",
-        7627: "0a7e9ced06891ecfe38d",
-        7653: "f8a6d446d1d6dc0fbb90",
-        7656: "bdae9e2b8f98c14e23de",
-        7696: "8819da2420b981360f84",
+        7627: "3ba7d3f7f510449560a8",
+        7653: "3aa892cfd7fe9c912557",
+        7656: "c502b14ba8980f17f4c9",
+        7696: "de7a052d677f898c0b57",
         7770: "cada18dc5b7ebdaecb46",
         7824: "db32def3f61e834e4ddc",
-        7836: "8185ccbe21ebd844aa3f",
+        7836: "6460c1f8c85ad1cfc76d",
         7906: "e6d157e2bebe235d0fc3",
         7930: "5caa86d9f8d78ad8b032",
         7946: "993cc29facf976e15c24",
@@ -31987,19 +32074,19 @@ var CLSTAMP = "steamdb";
         7996: "4a4ce77e9c751bf1a989",
         8054: "66440e5efce14ce6dc87",
         8089: "3fde6feb10dd20d2988e",
-        8098: "fa3111d62cf5ce6540e6",
+        8098: "74a09d96a15a0ace9267",
         8159: "811015cf4d25ecd59862",
         8196: "ee017111e5c4141a225a",
-        8198: "95e3493e306e2e57a341",
+        8198: "5857f061f7d49b939f13",
         8219: "df98d1552e304c311d9e",
         8247: "ea40a2c1c95ebf6dc60e",
         8263: "b3dd7a358e5d482491aa",
         8280: "93936d356d8860f50169",
         8286: "3e4d91e8f8c1af50112e",
-        8291: "6199b2c4abe9c78b0eca",
-        8330: "6e0aa550ad634289b630",
-        8346: "b78f3e56774b498aa0f0",
-        8391: "8e0f09cfa43c55829e57",
+        8291: "f4fd59006b2f91befd5a",
+        8330: "ae4d5daab6a9107ae209",
+        8346: "3d8fccf6ac6adabd3012",
+        8391: "edd72c4c85056b0644d0",
         8396: "d946d4a735fe6c31e57c",
         8405: "177659c9fe8b2b7bf9a3",
         8443: "9a6a49c4fe8ee06033ba",
@@ -32008,61 +32095,61 @@ var CLSTAMP = "steamdb";
         8484: "90cf9e56abd4e4060277",
         8495: "2f2134218b04af3bda03",
         8497: "c5d5114bd970bc1129be",
-        8522: "64133b864c56d580c652",
-        8534: "e48d8b5d32117205315d",
-        8536: "2818f08908e8d09a5cda",
+        8522: "00f0067f8dab0c251b1c",
+        8534: "068bd0e7dc785e2cf478",
+        8536: "ad657fa3ed5909ff619a",
         8545: "174287b968f93bbb1564",
         8635: "50a0734be083bf704768",
-        8636: "53d455effabbd32daeac",
+        8636: "220c11c1d11253ca5fae",
         8646: "8adbef2817b2ecf6c439",
-        8674: "1294652f37d5fcaa1d4f",
+        8674: "7284dabdd6361855cec8",
         8699: "830f7e358e9dfc743b27",
         8700: "caca82602cc709a500f5",
         8732: "56c11dd88a12d7cb90d5",
         8780: "4b5f78ecc5d269cf0954",
-        8830: "0ceb137797149f174778",
+        8830: "758b6b54327d5c62ee5e",
         8839: "91b4a0584540a6cbe29c",
         8854: "98dc7189ba9957c84336",
-        8872: "a7ac32acbd18e3927039",
-        8882: "811131baa8f853bbfc83",
+        8872: "7e18fd5f23d34c23905b",
+        8882: "b2eb5aea31ad49acf6ae",
         8906: "12513bcd136de3092c2a",
         8935: "bbc1ebc120bef2c9799d",
         8948: "79956ac4e87cfd5cf067",
         8970: "c432673605747d241ec4",
-        9053: "e2d24d5eb5822657907e",
+        9053: "36e5131a2c31a525768f",
         9063: "258ca2a504162c0dac77",
         9108: "80ea95544df711f114ae",
-        9120: "0c2c48a7a76c7f5b9564",
+        9120: "794cf0040ac9b0c1d41f",
         9129: "7fc272526ac7acd75e07",
         9134: "5a7e04bb3d2d818f9f9d",
-        9171: "a67a1d9383c58303433b",
-        9183: "f7c87acf603cc8122d3e",
-        9266: "ee855d5e630c05f48876",
+        9171: "78b6924d7eca53900c37",
+        9183: "f500299272a34d576269",
+        9266: "a54477228b6f87d7091d",
         9268: "71a8661ed31f294a4fd2",
-        9298: "7f123a6624b2d95c8d26",
+        9298: "caec3c66131c85d84fd0",
         9365: "7efb27242c0037cefec5",
-        9368: "f43f4db45e386a5957f9",
+        9368: "4f425b6ed40eeaf849cf",
         9418: "516fbdc3d5df1d0006fd",
-        9441: "717aeb0e96f0c212d8e2",
+        9441: "9992b2f4c3ff8537d6c3",
         9458: "a45c27ba640b24015d65",
         9462: "7b977c4108a105f53e81",
         9465: "615728f503276e76658c",
-        9485: "ed97985f350594f036ac",
+        9485: "b4d52519addecd908178",
         9536: "4367f32b4c6562afa768",
         9558: "836324fb8d170325fbef",
         9637: "706882d30a629adc3ca3",
         9672: "9fb3af38898c0d62d118",
         9711: "c299e2fab8790c7c37d0",
-        9737: "8699ccb29869b5c21ccf",
+        9737: "4f8b3e58776fd31e6afb",
         9740: "b9f257ecbdd5ae10a47f",
         9779: "59ef76674166d4b9e52e",
-        9845: "3fdb3f1abb68cffbf3f0",
-        9853: "3ce8e5953ebd02bffc96",
-        9858: "e5dd97cc3d241d28470f",
-        9861: "85f75b7174bbced4073b",
-        9862: "eb5c2537d2fa689c6375",
-        9869: "513f796c9a5fdbcf25fd",
-        9887: "022850f0862153552d0f",
+        9845: "13b5b6656f416f517b33",
+        9853: "cb23ac97c5ef25298c13",
+        9858: "87aa8cedc48b41a058d9",
+        9861: "d075ad8e71f05bafe846",
+        9862: "51ef07edcc880ce94847",
+        9869: "87497576748f35eb5b06",
+        9887: "94ebd191cf19efff19b2",
         9902: "687ccd0d6e13cf864303",
       }[_]),
     (_.miniCssF = (_) =>

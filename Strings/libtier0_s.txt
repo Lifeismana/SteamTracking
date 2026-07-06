@@ -38,9 +38,7 @@ $ORIGIN
 %d frames sampled for %.2f seconds\n
 %d validator nodes, %d nodes larger than %s\n
 %d.%d.%d.%d:%d
-%s begin_ctx=%lld
 %s double claimed!\n
-%s end_ctx=%lld
 %s/.steam/steam
 %s: %d, %d, %d
 %s: '%s', '%s'
@@ -102,7 +100,7 @@ $ORIGIN
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
 0123456789ABCDEF
-02:02:03
+02:18:30
 12CStdMemAlloc
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
@@ -290,7 +288,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jun 26 2026
+Jul  2 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -685,6 +683,8 @@ Warning: thread priority outside allowed range %d\n
 WriteMiniDump
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [abi:
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n

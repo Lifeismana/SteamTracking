@@ -21657,8 +21657,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _.useMemo)(
@@ -21710,26 +21712,30 @@
         );
       }
       function _(_, _) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_, _) {
-              switch (_) {
-                case "sub":
-                  return {
-                    packageid: _,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _,
-                  };
-                default:
-                  return {
-                    appid: _,
-                  };
-              }
-            })(_, _),
-          [_, _],
+        return (0, _.useMemo)(() => _(_, _), [_, _]);
+      }
+      function _(_, _) {
+        let _ = "app";
+        return (
+          _ == _._._ ? (_ = "bundle") : _ == _._._ && (_ = "sub"),
+          (0, _.useMemo)(() => _(_, _), [_, _])
         );
+      }
+      function _(_, _) {
+        switch (_) {
+          case "sub":
+            return {
+              packageid: _,
+            };
+          case "bundle":
+            return {
+              bundleid: _,
+            };
+          default:
+            return {
+              appid: _,
+            };
+        }
       }
       function _(_) {
         return (0, _.useMemo)(() => {

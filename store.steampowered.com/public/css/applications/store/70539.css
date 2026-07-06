@@ -1661,19 +1661,8 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
   padding: 3px;
 }
 .XjPmFc2t_i1DAuEXEbIX {
-  position: relative;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.25);
-  animation: xtUORpc8Xy9Hs_tdAIitT 0.15s ease-in-out forwards;
-  z-index: 1;
-}
-@keyframes xtUORpc8Xy9Hs_tdAIitT {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 ._2Xz_WXO8PfREP4c9ZWAuNg {
   background-color: rgba(0, 0, 0, 0.2) 5;

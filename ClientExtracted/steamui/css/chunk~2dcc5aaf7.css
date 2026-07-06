@@ -73859,6 +73859,14 @@ svg.AoW9jceN6fqsnZKbjMid {
   display: flex;
   flex-direction: column;
 }
+._3XDZWExfwYiruIlKQes8lW {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.2em;
+  margin-bottom: 0.1em;
+  aspect-ratio: 1;
+  position: relative;
+}
 ._3p6Ys7cKTR_ylNc_wCCFEg {
   width: 600px;
 }
@@ -91418,13 +91426,6 @@ div.NarrowWindow .HruWVPwIDh2FFOOH7OiSs .gioyPMOZttYFcnmgLnsWf {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0, 0, 0, 0.8) 20%,
-    rgba(0, 0, 0, 0.8) 80%,
-    transparent 100%
-  );
 }
 ._3jc8cR663Yg_bhogtRsOAF ._2xXyzSK0EkZADZvzbttwky {
   transform: none;
@@ -118531,9 +118532,6 @@ html.responsive.GamepadMode ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
 }
 ._1UMFnczt69Ka8nOWKMzKJR {
   padding: 4px;
-}
-._1HVwzvj5dyBMgn_KprOcNN {
-  opacity: 0.3;
 }
 ._1JrUubE3c7FdJsMxYYxbt {
   display: flex;
@@ -199789,11 +199787,16 @@ button._3vbFnnANQWDkz5Zvq1-vYm svg {
   flex-direction: row;
   gap: 10px;
   justify-content: flex-end;
-  padding-inline-end: 20px;
   cursor: default;
   position: sticky;
   top: 0;
   z-index: 10;
+  padding-inline-end: 12px;
+}
+@media (min-width: 1500px) {
+  .HVw3CRf81mlOgayKXNIIB {
+    padding-inline-end: 20px;
+  }
 }
 .HVw3CRf81mlOgayKXNIIB._1t0fVZO9Sw-h1mjl2ROlMO {
   pointer-events: none;
@@ -204991,6 +204994,37 @@ a._1ApAAvLebqhw20EWJ8lPQD {
   padding: 5px;
 }
 ._3HOjFOu8W2UHP4m6q7OorG ._3s0LVYddVEc1fa7aGrAd9C {
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+._1FQ0ez0uS2BdoZGsI5hQ6G {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 10px;
+  background-color: #0e141b;
+}
+._1FQ0ez0uS2BdoZGsI5hQ6G .vATYv4EBNodEsN_HqvfJT {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: start;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+._1FQ0ez0uS2BdoZGsI5hQ6G ._3s0LVYddVEc1fa7aGrAd9C {
   border-bottom: 1px solid;
   padding: 5px;
 }

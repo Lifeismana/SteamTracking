@@ -663,10 +663,8 @@ $ffn
 %s Salt Length: 0x
 %s [%s]%-*s
 %s algorithm "%s" unsupported\n
-%s begin_ctx=%lld
 %s called
 %s double claimed!\n
-%s end_ctx=%lld
 %s has %i files
 %s is not a packfile
 %s needs at least %uMB of free disk space to update.
@@ -1959,10 +1957,9 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:02:00
-02:02:10
-02:02:14
-02:02:16
+02:18:27
+02:18:39
+02:18:43
 08bX
 0?0L
 0A/8
@@ -2697,11 +2694,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
+60000000
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -6879,8 +6876,8 @@ Jobs/Coroutines
 JoinedGroup
 Joystick
 JpL9=
+Jul  2 2026
 July
-Jun 26 2026
 June
 K'iche'
 K(\f]C15
@@ -9218,7 +9215,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jun 26 2026 02:02:09
+Startup - updater built Jul  2 2026 02:18:38
 State
 StaticFileWriterThread()
 Steam
@@ -10594,6 +10591,8 @@ Zulu
 [%3d%%] %s\n
 [%s] %.*s\r\n
 [%s] %s=%s\n
+[%s] tgid=%d begin_ctx=%lld
+[%s] tgid=%d end_ctx=%lld
 [%s][%0.6f] %.*s\r\n
 [----] !!! Fatal Error: %s\n
 [A:%u:%u:%u]

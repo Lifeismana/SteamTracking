@@ -268,7 +268,6 @@ $\nY8O
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
-&\n"k_EContentReportSubjectType_Unused
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -513,6 +512,7 @@ $\nY8O
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
+-\n)k_EContentReportSubjectType_CommentThread
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EProfileCustomizationTypeRecommendation

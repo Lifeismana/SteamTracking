@@ -48,7 +48,6 @@
         StoreSaleDiscountedPriceCtn: "_1ZzX6NkuELfMhPL0SJCQSK",
         Scrollable: "_2A58_XmT-KCSwE_kh-xntF",
         LineItemWrapper: "XjPmFc2t_i1DAuEXEbIX",
-        fadeIn: "xtUORpc8Xy9Hs_tdAIitT",
         LineItemCapsule: "_2Xz_WXO8PfREP4c9ZWAuNg",
         HeaderImg: "_37_1K2XQrVBwncWFXTcpMP",
         HeaderImgBlurred: "_3hT2r7Sb_Yx9PdYSB0rjpl",
@@ -1435,8 +1434,8 @@
             bMinimalDisplay: w,
           } = e,
           { creatorHome: S } = (0, r.FV)(t.clan_account_id),
-          [y] = (0, a.L2)();
-        if (y || !S)
+          [N] = (0, a.L2)();
+        if (N || !S)
           return (0, i.jsx)("div", {
             className: g.DevSummaryWidgetCtn,
             children: (0, i.jsx)(f.t, {
@@ -1445,14 +1444,14 @@
               position: "center",
             }),
           });
-        const N = t.type,
+        const y = t.type,
           b =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          D = S.GetCreatorHomeURL(N),
+          D = S.GetCreatorHomeURL(y),
           A = S.GetNumFollowers();
         return (0, i.jsx)(p.tH, {
           children: (0, i.jsx)(h.Ay, {
@@ -1791,8 +1790,8 @@
           disabled: f,
           bNoDefaultDate: C,
           className: S,
-          strDescToolTip: y,
-          strDescription: N,
+          strDescToolTip: N,
+          strDescription: y,
           bShowTimeZone: b,
           strInvalidDateTimeLocalizedMsg: D,
           fnIsValidDateTime: A,
@@ -1901,9 +1900,9 @@
               className: (0, u.A)(h().EventTimeTitle, "DialogLabel"),
               children: [
                 (0, i.jsx)(_.he, {
-                  toolTipContent: y,
+                  toolTipContent: N,
                   direction: "top",
-                  children: Boolean(N) && (0, i.jsx)("span", { children: N }),
+                  children: Boolean(y) && (0, i.jsx)("span", { children: y }),
                 }),
                 U &&
                   (0, i.jsxs)("span", {
@@ -2245,12 +2244,12 @@
         UI: () => x.UI,
         Vh: () => j,
         g7: () => I,
-        jY: () => N,
+        jY: () => y,
         lP: () => C,
         sI: () => b,
         uQ: () => w,
         xz: () => v,
-        zJ: () => y,
+        zJ: () => N,
       });
       var i = n(79443),
         s = n(8364),
@@ -2320,7 +2319,7 @@
           placeholderData: () => ({}),
         });
       }
-      function y() {
+      function N() {
         return (0, m.I)({
           queryKey: ["shopping_cart", "sale_drop_progress"],
           queryFn: async () => {
@@ -2337,7 +2336,7 @@
           enabled: f.iA.logged_in,
         });
       }
-      function N() {
+      function y() {
         const e = (0, r.j4)(),
           [t] = (0, _.fg)(),
           n = `${f.TS.STORE_CHECKOUT_BASE_URL}checkout/`;
@@ -2416,8 +2415,8 @@
         I = n(90626),
         w = n(14336),
         S = n(75279),
-        y = n(55263),
-        N = n(56283),
+        N = n(55263),
+        y = n(56283),
         b = n(84811),
         D = n(10962),
         A = n(70809),
@@ -2460,9 +2459,9 @@
       const R = {
         [m.KW.$B]: function (e) {
           const { item: t, validatedItem: n } = e,
-            [s, r] = (0, y.Gg)(t.packageid, {}),
-            [a, o] = (0, y.mZ)(t.packageid, _.c6.RD, C.lP),
-            c = (a && !a.BIsVisible()) || o === y.eR || r === y.eR,
+            [s, r] = (0, N.Gg)(t.packageid, {}),
+            [a, o] = (0, N.mZ)(t.packageid, _.c6.RD, C.lP),
+            c = (a && !a.BIsVisible()) || o === N.eR || r === N.eR,
             l = s?.GetSelfPurchaseOption();
           return c || (s && !l)
             ? (0, i.jsx)(M, {
@@ -2482,8 +2481,8 @@
         },
         [m.KW.XY]: function (e) {
           const { item: t, validatedItem: n } = e,
-            [s, r] = (0, y.G6)(t.bundleid, _.c6.xO, C.xz);
-          if ((s && !s.BIsVisible()) || r === y.eR)
+            [s, r] = (0, N.G6)(t.bundleid, _.c6.xO, C.xz);
+          if ((s && !s.BIsVisible()) || r === N.eR)
             return (0, i.jsx)(M, {
               lineItemID: t.line_item_id,
               validatedItem: n,
@@ -2623,8 +2622,8 @@
           v = I.useId();
         if (j || !o) return (0, i.jsx)(d.vF, {});
         const w = s.flags?.is_gift,
-          y = C.length === f.length,
-          N = !w && C.length > 0 && !y;
+          N = C.length === f.length,
+          y = !w && C.length > 0 && !N;
         return (0, i.jsxs)(c, {
           lineItem: s,
           storeItem: t,
@@ -2663,7 +2662,7 @@
                       ],
                     }),
                     (0, i.jsx)(te, { validatedItem: o }),
-                    N && (0, i.jsx)(ne, { appids: C }),
+                    y && (0, i.jsx)(ne, { appids: C }),
                     (0, i.jsxs)(d.UW, {
                       className: l().LineItemSpaceBetween,
                       children: [
@@ -2685,7 +2684,7 @@
                       storeItem: t,
                       purchaseOption: a,
                       validatedItem: o,
-                      bAllAppsPrivate: y,
+                      bAllAppsPrivate: N,
                       fnRemoveLineItem: _.mutate,
                       accessibilityId: v,
                     }),
@@ -2984,7 +2983,7 @@
         });
       }
       function ee(e) {
-        return (0, i.jsx)(N.m, {
+        return (0, i.jsx)(y.m, {
           strClassName: l().LineItemDropDown,
           strDropDownItemClassName: l().DropDownOptionItem,
           strDropDownClassName: l().DropDownOptionsCtnThin,
@@ -3075,7 +3074,7 @@
     53534: (e, t, n) => {
       "use strict";
       n.d(t, {
-        WA: () => N,
+        WA: () => y,
         Yz: () => b,
         LP: () => S,
         ZZ: () => I,
@@ -3209,12 +3208,12 @@
           ? (0, i.jsx)("div", {
               className: j().FooterNoticesCtn,
               children: Array.from(e).map(([e, t]) =>
-                (0, i.jsx)(y, { notice: t }, t.index),
+                (0, i.jsx)(N, { notice: t }, t.index),
               ),
             })
           : null;
       }
-      function y(e) {
+      function N(e) {
         const { notice: t } = e;
         return (0, i.jsxs)("div", {
           className: j().FooterNotice,
@@ -3230,12 +3229,12 @@
           ],
         });
       }
-      var N;
+      var y;
       function b(e) {
         const { lineItem: t } = e,
           n = (function () {
             const e = l.useContext(C);
-            return e?.eDisplayType ?? N.k_ECartDisplayType_Unknown;
+            return e?.eDisplayType ?? y.k_ECartDisplayType_Unknown;
           })();
         let s = [],
           r = !!t.gift_info?.accountid_giftee;
@@ -3382,7 +3381,7 @@
             ),
           s.push((0, i.jsx)(k, { lineItem: t }, "available_cheaper")),
           r &&
-            n === N.k_ECartDisplayType_Modal &&
+            n === y.k_ECartDisplayType_Modal &&
             s.push(
               (0, i.jsx)(
                 u,
@@ -3506,7 +3505,7 @@
           (e[(e.k_ECartDisplayType_Modal = 1)] = "k_ECartDisplayType_Modal"),
           (e[(e.k_ECartDisplayType_FullPage = 2)] =
             "k_ECartDisplayType_FullPage");
-      })(N || (N = {}));
+      })(y || (y = {}));
     },
     17798: (e, t, n) => {
       "use strict";
@@ -3538,11 +3537,11 @@
         I = n(2627),
         w = n(61859),
         S = n(30470),
-        y = n(52038),
-        N = n(34633);
+        N = n(52038),
+        y = n(34633);
       function b(e) {
         return (0, i.jsx)("div", {
-          className: (0, y.A)(N.CartCard, e.className),
+          className: (0, N.A)(y.CartCard, e.className),
           children: e.children,
         });
       }
@@ -3675,7 +3674,7 @@
                 ),
                 [e],
               ),
-              window.innerWidth < parseInt(N.strMaxCartPartResponsiveWidth)
+              window.innerWidth < parseInt(y.strMaxCartPartResponsiveWidth)
             );
           })();
         return (n && t) || (!n && !t) ? null : (0, i.jsx)(H, { ...e });
@@ -3827,7 +3826,7 @@
           : (0, i.jsx)(C.Ay, {
               feature: `upsell-${s}`,
               children: (0, i.jsx)(q, {
-                className: (0, y.A)(R.Specials),
+                className: (0, N.A)(R.Specials),
                 children: t
                   ?.slice(0, 3)
                   .map(({ item_id: e, item: t }) =>
@@ -3850,7 +3849,7 @@
         return (0, i.jsx)(r.Z, {
           "flow-children": "row",
           navEntryPreferPosition: G.iU.MAINTAIN_X,
-          className: (0, y.A)(R.UpsellRow, t),
+          className: (0, N.A)(R.UpsellRow, t),
           children: n,
         });
       }
@@ -4110,8 +4109,8 @@
         Ie = n(94076),
         we = n(80902),
         Se = n(23809),
-        ye = n(49451);
-      function Ne(e) {
+        Ne = n(49451);
+      function ye(e) {
         const t = (function (e) {
             const t = (0, Se.KV)(),
               n = (0, k.Je)(e.GetID(), e.GetStoreItemType());
@@ -4126,7 +4125,7 @@
               },
             });
           })(e),
-          n = (0, ye.d0)({ loadFavorites: !0, loadNicknames: !0 }),
+          n = (0, Ne.d0)({ loadFavorites: !0, loadNicknames: !0 }),
           i = t?.data?.ownership_info[0]?.friend_ownership,
           s = u.useMemo(
             () => new Map(i && i.map((e) => [e.accountid, e])),
@@ -4199,7 +4198,7 @@
           rgFriendsForGifting: t,
           isLoading: n,
           isError: s,
-        } = Ne(e.storeItem);
+        } = ye(e.storeItem);
         return (0, i.jsx)(ke, {
           ...e,
           rgFriendsForGifting: t,
@@ -4311,7 +4310,7 @@
             c || n(a.m_steamid.ConvertTo64BitString());
           }, [c, n, a]);
         return (0, i.jsxs)(r.Z, {
-          className: (0, y.A)(
+          className: (0, N.A)(
             oe().GiftPickerFriendBlock,
             t && oe().Selected,
             c && oe().Disabled,
@@ -4346,12 +4345,12 @@
           { already_owns: n, partial_owns_appids: s } = t;
         return n
           ? (0, i.jsx)("div", {
-              className: (0, y.A)(oe().OwnsGame),
+              className: (0, N.A)(oe().OwnsGame),
               children: (0, w.we)("#Cart_GiftRecipientModal_OwnsGameLabel"),
             })
           : s && s.length > 0
             ? (0, i.jsx)("div", {
-                className: (0, y.A)(oe().OwnsGame),
+                className: (0, N.A)(oe().OwnsGame),
                 children: (0, w.PP)(
                   "#Cart_GiftRecipientModal_PartialOwnsLabel",
                   (0, i.jsx)(Me, { rgAppList: s }),
@@ -4366,12 +4365,12 @@
           ? null
           : s
             ? (0, i.jsx)("div", {
-                className: (0, y.A)(oe().OnWishlist),
+                className: (0, N.A)(oe().OnWishlist),
                 children: (0, w.we)("#Cart_GiftRecipientModal_OnWishlist"),
               })
             : r && r.length > 0
               ? (0, i.jsx)("div", {
-                  className: (0, y.A)(oe().OnWishlist),
+                  className: (0, N.A)(oe().OnWishlist),
                   children: (0, w.PP)(
                     "#Cart_GiftRecipientModal_PartialWishlistLabel",
                     (0, i.jsx)(Me, { rgAppList: r }),
@@ -4882,7 +4881,7 @@
           l = !t && n,
           d = l ? void 0 : () => c(!s);
         return (0, i.jsxs)("div", {
-          className: (0, y.A)(lt.CouponListItem, l && lt.Disabled),
+          className: (0, N.A)(lt.CouponListItem, l && lt.Disabled),
           onClick: d,
           children: [
             (0, i.jsx)(jt, { checked: s, hidden: l }),
@@ -4916,7 +4915,7 @@
       function jt(e) {
         const { checked: t, hidden: n } = e;
         return (0, i.jsx)("div", {
-          className: (0, y.A)(lt.Checkbox, n && lt.Hidden),
+          className: (0, N.A)(lt.Checkbox, n && lt.Hidden),
           children: t && (0, i.jsx)(dt.Jl, {}),
         });
       }
@@ -4925,7 +4924,7 @@
         It = n.n(vt),
         wt = n(11543),
         St = n.n(wt);
-      function yt() {
+      function Nt() {
         const [e, t] = u.useState(null);
         return (
           u.useEffect(() => {
@@ -4933,7 +4932,7 @@
           }, []),
           e
             ? (0, i.jsxs)("div", {
-                className: (0, y.A)(
+                className: (0, N.A)(
                   St().EstimatedTotalFlex,
                   It().UserCountrySelector,
                 ),
@@ -4944,14 +4943,14 @@
                   }),
                   (0, i.jsx)("div", {
                     className: St().CartValueText,
-                    children: (0, i.jsx)(Nt, { rgCountryOptions: e }),
+                    children: (0, i.jsx)(yt, { rgCountryOptions: e }),
                   }),
                 ],
               })
             : null
         );
       }
-      function Nt(e) {
+      function yt(e) {
         const { rgCountryOptions: t } = e,
           [n, s] = u.useState(S.TS.COUNTRY),
           r = u.useMemo(
@@ -5065,7 +5064,7 @@
                   ],
                 }),
                 (0, i.jsx)(r.Z, {
-                  className: (0, y.A)(
+                  className: (0, N.A)(
                     St().ShoppingCartRightCol,
                     m?.length <= 2 && St().SmallCart,
                   ),
@@ -5119,9 +5118,9 @@
         return (0, i.jsxs)("div", {
           className: St().CartSummaryCtn,
           children: [
-            (0, i.jsx)(x.tH, { children: (0, i.jsx)(yt, {}) }),
+            (0, i.jsx)(x.tH, { children: (0, i.jsx)(Nt, {}) }),
             (0, i.jsxs)("div", {
-              className: (0, y.A)(
+              className: (0, N.A)(
                 St().EstimatedTotalFlex,
                 St().SummaryMarginBottom,
               ),
@@ -5137,7 +5136,7 @@
               ],
             }),
             (0, i.jsx)("div", {
-              className: (0, y.A)(St().CartNoteText, St().SummaryMarginBottom),
+              className: (0, N.A)(St().CartNoteText, St().SummaryMarginBottom),
               children: (0, w.we)("#Cart_Note_SalesTax"),
             }),
             (0, i.jsxs)(x.wC, {
@@ -5202,7 +5201,7 @@
                   ? (0, w.we)("#Cart_ContinueButton_Payment")
                   : ((0, ot.z_)(e, "unhandled step"), "");
           })(n),
-          p = (0, y.A)(
+          p = (0, N.A)(
             St().CartSummaryBtn,
             St().SummaryMarginBottom,
             St().Button,
@@ -5273,7 +5272,7 @@
         return r
           ? (0, i.jsx)(g.$n, {
               disabled: t,
-              className: (0, y.A)(
+              className: (0, N.A)(
                 St().CartSummaryBtn,
                 St().SummaryMarginBottom,
               ),
@@ -5297,14 +5296,14 @@
           [c, l] = u.useState(!1);
         return a || o == d.Mn.k_ENonGiftableItemPresent
           ? (0, i.jsxs)("div", {
-              className: (0, y.A)(
+              className: (0, N.A)(
                 St().RequestPurchaseCtn,
                 St().SummaryMarginBottom,
               ),
               children: [
                 (0, i.jsx)(g.jn, {
                   disabled: t || c || !a,
-                  className: (0, y.A)(St().CartSummaryBtn),
+                  className: (0, N.A)(St().CartSummaryBtn),
                   onClick: () => {
                     t ||
                       c ||

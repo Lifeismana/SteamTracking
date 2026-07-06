@@ -38225,7 +38225,7 @@
     },
     34585: (e, t, n) => {
       "use strict";
-      n.d(t, { dR: () => z, Kx: () => K, BO: () => J, Av: () => Y });
+      n.d(t, { dR: () => V, Kx: () => J, BO: () => Z, Av: () => X });
       var s = n(7850),
         a = n(92298),
         i = n.n(a),
@@ -38259,8 +38259,11 @@
         B = n(64399),
         R = n(70065),
         N = n(26408),
-        G = n(64753);
-      function M(e) {
+        G = n(64753),
+        M = n(39777),
+        L = n(35380),
+        O = n(96171);
+      function F(e) {
         const { oEditablePlan: t } = e,
           n = t.GetFeaturedItemType(),
           a = t.GetFeaturedItemID(),
@@ -38293,7 +38296,7 @@
                           disabled: m,
                           onClick: (e) =>
                             (0, j.pg)(
-                              (0, s.jsx)(L, { oEditablePlan: t }),
+                              (0, s.jsx)(U, { oEditablePlan: t }),
                               (0, I.uX)(e),
                             ),
                           children: "Send Email Request",
@@ -38356,7 +38359,7 @@
                 }),
               ],
             }),
-            (0, s.jsx)(O, { oEditablePlan: t }),
+            (0, s.jsx)(q, { oEditablePlan: t }),
             (0, s.jsx)(b.EN, {
               active: S,
               children: (0, s.jsx)(b.o0, {
@@ -38370,18 +38373,20 @@
                 closeModal: f,
               }),
             }),
-            (0, s.jsx)(U, {}),
+            (0, s.jsx)(H, {}),
           ],
         });
       }
-      function L(e) {
+      function U(e) {
         const { oEditablePlan: t, closeModal: n } = e,
           { fnCreatePromoInvite: a } = (0, y.kw)(),
           i = (0, k.vs)(),
           r = (0, c.bE)(),
           l = (0, o.OS)(r?.GetDueDate(), t.GetStartDate(), "partner"),
-          d = (0, A.te)(t.GetPartnerID()),
-          p = (0, h.useCallback)(async () => {
+          d = (0, L.K7)(t.GetFeaturedItemID(), t.GetFeaturedItemType()),
+          { data: p } = (0, M.J$)(d),
+          u = (0, A.te)(t.GetPartnerID()),
+          m = (0, h.useCallback)(async () => {
             i.fnSetLoading(!0);
             const e = {
               type: D.yB.R5,
@@ -38422,41 +38427,57 @@
                   );
               });
           }, [i, a, r, t, l]);
-        if (i.bLoading || d.bLoading)
+        if (i.bLoading || u.bLoading)
           return (0, s.jsx)(k.Hh, {
             state: i,
             strDialogTitle: "Send Email To Partner",
             closeModal: n,
           });
-        let u;
-        return (
-          t.GetStoreItemKey()
-            ? t.GetPartnerID() > 0 &&
-              t.GetFeaturedItemID() > 0 &&
-              -1 == d.rgAppIDs?.findIndex((e) => e == t.GetFeaturedItemID()) &&
-              (u =
-                "Promotion has a partner ID set and a featured store item but the partner doesn't have access to the store item.")
-            : (u =
-                "You must set a featured store item or advertiser app in order to send an email."),
-          u
-            ? (0, s.jsx)(b.o0, {
-                strTitle: "Can't Send Email",
-                strDescription: u,
-                onCancel: n,
-                onOK: n,
-                bAlertDialog: !0,
-              })
-            : (0, s.jsx)(R.Q, {
-                strTitle: "Send Email To Partner",
-                strDescription:
-                  "This will send an assets and discount event request to the partner",
-                onCancel: n,
-                onOK: p,
-                bSavePlanFirst: !0,
-              })
-        );
+        let _;
+        if (t.GetStoreItemKey()) {
+          if (t.GetPartnerID() > 0 && t.GetFeaturedItemID() > 0) {
+            const e = t.GetFeaturedItemType();
+            e == O.c6.qI &&
+            -1 == u.rgAppIDs?.findIndex((e) => e == t.GetFeaturedItemID())
+              ? (_ =
+                  "Promotion has a partner ID set and a featured app but the partner doesn't have access to the app.")
+              : (e == O.c6.xO || e == O.c6.RD) &&
+                  p &&
+                  u.rgAppIDs &&
+                  -1 ==
+                    u.rgAppIDs.findIndex((e) =>
+                      p.included_appids.some((t) => t == e),
+                    )
+                ? (_ =
+                    "Promotion has a partner ID set and a featured app but the partner doesn't have any app within the package/bundle.")
+                : p
+                  ? u.rgAppIDs ||
+                    (_ =
+                      "Failed to load partner visible app; Is the partner id correct?")
+                  : (_ =
+                      "Failed to load feature store item; its required to be visible");
+          }
+        } else
+          _ =
+            "You must set a featured store item or advertiser app in order to send an email.";
+        return _
+          ? (0, s.jsx)(b.o0, {
+              strTitle: "Can't Send Email",
+              strDescription: _,
+              onCancel: n,
+              onOK: n,
+              bAlertDialog: !0,
+            })
+          : (0, s.jsx)(R.Q, {
+              strTitle: "Send Email To Partner",
+              strDescription:
+                "This will send an assets and discount event request to the partner",
+              onCancel: n,
+              onOK: m,
+              bSavePlanFirst: !0,
+            });
       }
-      function O(e) {
+      function q(e) {
         const { oEditablePlan: t } = e,
           n = (0, y.tU)(t.GetID());
         return (0, s.jsxs)("div", {
@@ -38468,17 +38489,17 @@
                 Boolean(null == n) && (0, s.jsx)(w.t, { size: "medium" }),
                 Boolean(null != n && 0 == n.length) &&
                   (0, s.jsx)("div", { children: "No previous emails sent" }),
-                n?.map((e) => (0, s.jsx)(F, { email: e }, "eh_" + e.inviteid)),
+                n?.map((e) => (0, s.jsx)(z, { email: e }, "eh_" + e.inviteid)),
               ],
             }),
           ],
         });
       }
-      function F(e) {
+      function z(e) {
         const { email: t } = e;
         return (0, s.jsx)("div", { children: (0, S.TW)(t.rtinvitetime) });
       }
-      function U(e) {
+      function H(e) {
         const t = (0, c.bE)();
         return (0, s.jsxs)("div", {
           className: x().AltAssetCtn,
@@ -38500,8 +38521,8 @@
           ],
         });
       }
-      var q = n(56186);
-      function z(e) {
+      var W = n(56186);
+      function V(e) {
         const t = (0, d.ok)(),
           n = (0, c.bE)(),
           [a, i, r, o, l, u, m] = (0, p.q3)(() => [
@@ -38539,18 +38560,18 @@
             (0, s.jsxs)("div", {
               className: x().SetupRow,
               children: [
-                (0, s.jsx)(H, {}),
+                (0, s.jsx)(K, {}),
                 (0, s.jsxs)("div", {
                   children: [
-                    (0, s.jsx)(K, {
+                    (0, s.jsx)(J, {
                       strTitle: "Partner Due Date:",
                       rtDueDate: u,
                       fnSetDueDate: n.SetDueDate,
                       bPartnerDueDate: !0,
                     }),
-                    (0, s.jsx)($, {}),
+                    (0, s.jsx)(Q, {}),
                     (0, s.jsx)("br", {}),
-                    (0, s.jsx)(K, {
+                    (0, s.jsx)(J, {
                       strTitle: "Art Production Team Due Date:",
                       rtDueDate: m,
                       fnSetDueDate: t.SetArtworkProductionTeamDueDate,
@@ -38561,11 +38582,11 @@
               ],
             }),
             (0, s.jsx)("br", {}),
-            (0, s.jsx)(M, { oEditablePlan: t }),
+            (0, s.jsx)(F, { oEditablePlan: t }),
           ],
         });
       }
-      function H(e) {
+      function K(e) {
         const { bReviewApprovals: t } = e;
         return (0, s.jsxs)("div", {
           className: x().AssetNeedsColumn,
@@ -38592,27 +38613,27 @@
                   "div",
                   {
                     className: x().AssetTypeRow,
-                    children: (0, s.jsx)(Y, { bReviewApprovals: t, type: e }),
+                    children: (0, s.jsx)(X, { bReviewApprovals: t, type: e }),
                   },
                   e,
                 ),
               ),
-            (0, s.jsx)(V, {}),
+            (0, s.jsx)($, {}),
           ],
         });
       }
-      function W(e) {
-        const t = (0, q.c2)(e?.template_vars_json);
+      function Y(e) {
+        const t = (0, W.c2)(e?.template_vars_json);
         return "mm_auto_render" == t?.custom_display;
       }
-      function V(e) {
+      function $(e) {
         const { bReviewApprovals: t } = e,
           n = (0, d.ok)(),
           a = (0, l.dr)(n.GetMarketingMessageID(0)),
           i = (0, l.dr)(n.GetMarketingMessageID(1));
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            W(a)
+            Y(a)
               ? (0, s.jsxs)("div", {
                   className: x().TypeNotLinked,
                   children: [
@@ -38622,7 +38643,7 @@
                     }),
                   ],
                 })
-              : (0, s.jsx)(Y, {
+              : (0, s.jsx)(X, {
                   bReviewApprovals: t,
                   type:
                     a?.type == r.D4.W8
@@ -38630,7 +38651,7 @@
                       : "marketingmessage_art",
                   index: 0,
                 }),
-            W(i)
+            Y(i)
               ? (0, s.jsxs)("div", {
                   className: x().TypeNotLinked,
                   children: [
@@ -38640,7 +38661,7 @@
                     }),
                   ],
                 })
-              : (0, s.jsx)(Y, {
+              : (0, s.jsx)(X, {
                   bReviewApprovals: t,
                   type:
                     i?.type == r.D4.W8
@@ -38651,7 +38672,7 @@
           ],
         });
       }
-      function K(e) {
+      function J(e) {
         const {
             strTitle: t,
             rtDueDate: n,
@@ -38722,7 +38743,7 @@
                 (0, s.jsx)("h3", { children: t }),
                 (0, s.jsxs)("h2", {
                   children: [
-                    J(n, _, r ? "partner" : "artproduction"),
+                    Z(n, _, r ? "partner" : "artproduction"),
                     (0, s.jsx)("div", {
                       className: x().DateCustomizeCtn,
                       children: (0, s.jsx)("span", {
@@ -38738,7 +38759,7 @@
               ],
             });
       }
-      function Y(e) {
+      function X(e) {
         const {
             type: t,
             index: n,
@@ -38785,7 +38806,7 @@
               ],
             });
       }
-      function $(e) {
+      function Q(e) {
         const t = (0, c.bE)();
         return (0, s.jsxs)("div", {
           className: x().InstructionCtn,
@@ -38803,7 +38824,7 @@
           ],
         });
       }
-      function J(e, t, n) {
+      function Z(e, t, n) {
         return null != e
           ? e == o.db
             ? (0, S.we)("#AssetRequest_DueDate_ASAP")

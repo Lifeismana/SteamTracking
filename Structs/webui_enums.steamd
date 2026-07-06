@@ -906,6 +906,7 @@ enum ERemoteClientLaunch
 	k_ERemoteClientLaunchInvisible = 27;
 	k_ERemoteClientLaunchRestrictedCountry = 28;
 	k_ERemoteClientLaunchUnauthorized = 29;
+	k_ERemoteClientLaunchCaptureBusy = 30;
 }
 
 enum ESortFacets

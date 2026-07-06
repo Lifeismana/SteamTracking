@@ -46,7 +46,6 @@
         StoreSaleDiscountedPriceCtn: "_1ZzX6NkuELfMhPL0SJCQSK",
         Scrollable: "_2A58_XmT-KCSwE_kh-xntF",
         LineItemWrapper: "XjPmFc2t_i1DAuEXEbIX",
-        fadeIn: "xtUORpc8Xy9Hs_tdAIitT",
         LineItemCapsule: "_2Xz_WXO8PfREP4c9ZWAuNg",
         HeaderImg: "_37_1K2XQrVBwncWFXTcpMP",
         HeaderImgBlurred: "_3hT2r7Sb_Yx9PdYSB0rjpl",

@@ -1466,7 +1466,7 @@
         TeamTextContainer: "vPwn7qUCQPK36lNBhO3cM",
         TeamRegion: "VgZySySdbHZifFeWnTeQL",
         TeamName: "H-MfH1vgfcolosob4nk_y",
-        GoldTeamLogo: "_3y3ZzjsjZHCJzkrKTKcGyy",
+        EmbroideredTeamLogo: "_3ATBmUZ5ckE7Zu4vB3NbI0",
         DividerPronounced: "cmSXVqZG43aj8niWeGaj-",
         InternationalTeamList: "_1jeKRR5snTJNDT5h-Y01Jm",
         TeamGrid: "ZefQhEre8aSqoQ2Pbium0",
@@ -46354,9 +46354,9 @@
             _ =
               _.event == _._.INTERNATIONAL_2023 ||
               _.event == _._.INTERNATIONAL_2024 ||
-              _.event == _._.INTERNATIONAL_2025,
-            _ = _ && !_.is_event_upcoming,
-            _ = _.event == _._.INTERNATIONAL_2026 && _.is_event_upcoming;
+              _.event == _._.INTERNATIONAL_2025 ||
+              _.event == _._.INTERNATIONAL_2026,
+            _ = _ && !_.is_event_upcoming;
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _().DPCMenuBar,
@@ -46378,7 +46378,7 @@
                         className: (0, _._)(
                           _().SelectButton,
                           _ ? _().SelectButtonTI2024 : "",
-                          _ ? _().SelectButtonTI2026 : "",
+                          "",
                         ),
                         onClick: () => _(!0),
                         children: (0, _._)("#dpc_select_league"),
@@ -55760,7 +55760,7 @@
                       _().TextStyleOverline,
                       _().KeepUpHeader,
                     ),
-                    children: (0, _._)("#ti11_bp_social_title"),
+                    children: (0, _._)("#ti15_social_title"),
                   }),
                   (0, _.jsxs)("div", {
                     className: (0, _._)(_().SocialIcons),
@@ -55805,121 +55805,57 @@
                 ],
               });
         }),
-        _ =
-          ((0, _._)(() => {
-            const _ = _();
-            _._.Get().GetEventInfo(_);
-            return null;
-          }),
-          (0, _._)(() => {
-            const _ = _();
-            return _._.Get().GetEventInfo(_).event != _._.INTERNATIONAL_2026
-              ? null
-              : (0, _.jsx)(_.Fragment, {
-                  children: (0, _.jsxs)("div", {
-                    className: _().BPPlugImgContainer,
+        _ = (0, _._)(() => {
+          const _ = _(),
+            _ = _._.Get().GetEventInfo(_);
+          if (_.event != _._.INTERNATIONAL_2026) return null;
+          _._.Get().GetLeagueData(_, _.leagues[0].league_id);
+          const _ = _(_);
+          return (0, _.jsx)("div", {
+            className: (0, _._)(_().InternationalCountdownContainer),
+            children: (0, _.jsxs)("div", {
+              className: _().InternationalCountdown,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().SubDividerTop),
+                }),
+                !_ &&
+                  (0, _.jsxs)(_.Fragment, {
                     children: [
-                      (0, _.jsx)("img", {
-                        className: _().BPPlugImg,
-                        src: `${_._.IMG_URL}international2024/esports_site/footer_bg01.png`,
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().TextStyleOverline,
+                          _().CountdownPreHeader,
+                        ),
+                        children: (0, _._)("#ti15_countdown_preheader"),
                       }),
-                      (0, _.jsx)(_, {}),
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().TextStyleOverline,
+                          _().CountdownHeader,
+                        ),
+                        children: (0, _._)("#ti15_countdown_header"),
+                      }),
                     ],
                   }),
-                });
-          }),
-          (0, _._)(() => {
-            const _ = _(),
-              _ = _._.Get().GetEventInfo(_);
-            if (_.event != _._.INTERNATIONAL_2026) return null;
-            _._.Get().GetLeagueData(_, _.leagues[0].league_id);
-            const _ = _(_);
-            return (0, _.jsx)("div", {
-              className: (0, _._)(_().InternationalCountdownContainer),
-              children: (0, _.jsxs)("div", {
-                className: _().InternationalCountdown,
-                children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().TextStyleBody, _().CountdownDesc),
+                  children: (0, _._)("#ti15_countdown_desc"),
+                }),
+                !_ &&
                   (0, _.jsx)("div", {
-                    className: (0, _._)(_().SubDividerTop),
+                    className: (0, _._)(
+                      _().TextStyleDisplay,
+                      _().CountdownTimer,
+                    ),
+                    children: (0, _.jsx)(_, {
+                      timestampNoMs: _,
+                    }),
                   }),
-                  !_ &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(
-                            _().TextStyleOverline,
-                            _().CountdownPreHeader,
-                          ),
-                          children: (0, _._)("#ti15_countdown_preheader"),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(
-                            _().TextStyleOverline,
-                            _().CountdownHeader,
-                          ),
-                          children: (0, _._)("#ti15_countdown_header"),
-                        }),
-                      ],
-                    }),
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().TextStyleBody, _().CountdownDesc),
-                    children: (0, _._)("#ti15_countdown_desc"),
-                  }),
-                  !_ &&
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().TextStyleDisplay,
-                        _().CountdownTimer,
-                      ),
-                      children: (0, _.jsx)(_, {
-                        timestampNoMs: _,
-                      }),
-                    }),
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().SocialIcons),
-                      children: [
-                        (0, _.jsx)("a", {
-                          href: "https://twitter.com/dota2ti",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_twitter.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://facebook.com/dota2/",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_fb.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://instagram.com/dota2",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_insta.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://twitch.tv/directory/game/Dota%202",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_twitch.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://youtube.com/user/dota2",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_yt.png`,
-                          }),
-                        }),
-                      ],
-                    }),
-                ],
-              }),
-            });
-          })),
+              ],
+            }),
+          });
+        }),
         _ = (0, _._)(({ nTeamID: _, strName: _, strRegion: _ }) =>
           (0, _.jsxs)("div", {
             className: _().InternationalTeamListTeam,
@@ -55927,7 +55863,7 @@
             "data-aos-duration": "2500",
             children: [
               (0, _.jsx)("div", {
-                className: _().MagentaTeamLogo,
+                className: _().EmbroideredTeamLogo,
                 style: {
                   backgroundImage: `url( ${_._.IMG_URL}international2026/teamlogos/${_}.png )`,
                 },
@@ -55959,7 +55895,88 @@
           const _ = _();
           if (_._.Get().GetEventInfo(_).event != _._.INTERNATIONAL_2026)
             return null;
-          const _ = [];
+          const _ = [
+            {
+              nTeamID: 2163,
+              strTeamName: "Team Liquid",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 8255888,
+              strTeamName: "BoomBoys",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 8261500,
+              strTeamName: "Xtreme Gaming",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 9247354,
+              strTeamName: "Team Falcons",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 9467224,
+              strTeamName: "Aurora Gaming",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 9823272,
+              strTeamName: "Team Yandex",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 10150413,
+              strTeamName: "Iron Wing",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 726228,
+              strTeamName: "Vici Gaming",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 5017210,
+              strTeamName: "Team Resilience",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 10150538,
+              strTeamName: "LGD Gaming",
+              strTeamRegion: "#dpc_region_sa",
+            },
+            {
+              nTeamID: 2586976,
+              strTeamName: "OG",
+              strTeamRegion: "#dpc_region_sea",
+            },
+            {
+              nTeamID: 9964962,
+              strTeamName: "GamerLegion",
+              strTeamRegion: "#dpc_region_na",
+            },
+            {
+              nTeamID: 10136357,
+              strTeamName: "Nigma Galaxy",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 10149530,
+              strTeamName: "HULIGANI",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 9572001,
+              strTeamName: "TEAM VISION",
+              strTeamRegion: "#dpc_region_eu",
+            },
+            {
+              nTeamID: 7119388,
+              strTeamName: "Team Spirit",
+              strTeamRegion: "#dpc_region_eu",
+            },
+          ];
           return (
             (function (_) {
               for (let _ = _.length - 1; _ > 0; _--) {
@@ -55978,7 +55995,7 @@
                   children: [
                     _.length > 0 &&
                       (0, _.jsx)("div", {
-                        className: (0, _._)(_().TextStyleOverline, _().Title),
+                        className: (0, _._)(_().Title),
                         children: (0, _._)("#dpc_participating_teams"),
                       }),
                     _.length > 0 &&
@@ -55998,53 +56015,6 @@
                           ),
                         ),
                       }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().TextStyleOverline,
-                        _().KeepUpHeader,
-                      ),
-                      children: (0, _._)("#ti15_social_title"),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().SocialIcons),
-                      children: [
-                        (0, _.jsx)("a", {
-                          href: "https://twitter.com/dota2ti",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_twitter.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://facebook.com/dota2/",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_fb.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://instagram.com/dota2",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_insta.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://twitch.tv/directory/game/Dota%202",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_twitch.png`,
-                          }),
-                        }),
-                        (0, _.jsx)("a", {
-                          href: "https://youtube.com/user/dota2",
-                          children: (0, _.jsx)("img", {
-                            className: _().IconImg,
-                            src: `${_._.IMG_URL}international2023/icons/social_yt.png`,
-                          }),
-                        }),
-                      ],
-                    }),
                   ],
                 }),
               ],
@@ -56053,7 +56023,7 @@
         }),
         _ = (0, _._)(() =>
           (0, _.jsxs)(_.Fragment, {
-            children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+            children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
           }),
         );
       var _ = __webpack_require__("chunkid"),
@@ -58903,10 +58873,353 @@
                 }),
               }),
         ),
-        _ = (0, _._)(() => {
-          _();
-          return _._.INTERNATIONAL_2026, null;
-        }),
+        _ = (0, _._)(() =>
+          _() != _._.INTERNATIONAL_2026
+            ? null
+            : (0, _.jsx)("div", {
+                className: _().InternationalRulesPage,
+                style: {
+                  backgroundImage: `url( ${_._.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
+                },
+                children: (0, _.jsxs)("div", {
+                  className: _().Header,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}dpc/top_block.jpg )`,
+                  },
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().Title,
+                      children: `${(0, _._)("#dpc_event_ti15")}`,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Content,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().SubHeader,
+                          children: (0, _._)("#ti15_swiss_rules"),
+                        }),
+                        (0, _.jsxs)("ul", {
+                          children: [
+                            (0, _.jsx)("li", {
+                              children: (0, _.jsx)("div", {
+                                className: _().Description,
+                                children: (0, _._)("#ti15_swiss_rules1"),
+                              }),
+                            }),
+                            (0, _.jsxs)("ol", {
+                              children: [
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules1_1"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules1_2"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules1_3"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules1_4"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules1_5"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules1_6"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules1_7"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("li", {
+                              children: (0, _.jsx)("div", {
+                                className: _().Description,
+                                children: (0, _._)("#ti15_swiss_rules2"),
+                              }),
+                            }),
+                            (0, _.jsxs)("ul", {
+                              children: [
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules2_1"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules2_2"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules2_3"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("li", {
+                              children: (0, _.jsx)("div", {
+                                className: _().Description,
+                                children: (0, _._)("#ti15_swiss_rules3"),
+                              }),
+                            }),
+                            (0, _.jsxs)("ul", {
+                              children: [
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules3_1"),
+                                  }),
+                                }),
+                                (0, _.jsxs)("ul", {
+                                  children: [
+                                    (0, _.jsx)("li", {
+                                      children: (0, _.jsx)("div", {
+                                        className: _().Description,
+                                        children: (0, _._)(
+                                          "#ti15_swiss_rules3_1_1",
+                                        ),
+                                      }),
+                                    }),
+                                    (0, _.jsx)("li", {
+                                      children: (0, _.jsx)("div", {
+                                        className: _().Description,
+                                        children: (0, _._)(
+                                          "#ti15_swiss_rules3_1_2",
+                                        ),
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules3_2"),
+                                  }),
+                                }),
+                                (0, _.jsx)("ul", {
+                                  children: (0, _.jsx)("li", {
+                                    children: (0, _.jsx)("div", {
+                                      className: _().Description,
+                                      children: (0, _._)(
+                                        "#ti15_swiss_rules3_2_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules3_3"),
+                                  }),
+                                }),
+                                (0, _.jsx)("ul", {
+                                  children: (0, _.jsx)("li", {
+                                    children: (0, _.jsx)("div", {
+                                      className: _().Description,
+                                      children: (0, _._)(
+                                        "#ti15_swiss_rules3_3_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules3_4"),
+                                  }),
+                                }),
+                                (0, _.jsx)("ul", {
+                                  children: (0, _.jsx)("li", {
+                                    children: (0, _.jsx)("div", {
+                                      className: _().Description,
+                                      children: (0, _._)(
+                                        "#ti15_swiss_rules3_4_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules3_5"),
+                                  }),
+                                }),
+                                (0, _.jsx)("ul", {
+                                  children: (0, _.jsx)("li", {
+                                    children: (0, _.jsx)("div", {
+                                      className: _().Description,
+                                      children: (0, _._)(
+                                        "#ti15_swiss_rules3_5_1",
+                                      ),
+                                    }),
+                                  }),
+                                }),
+                                (0, _.jsx)("br", {}),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti15_swiss_rules3_6"),
+                                  }),
+                                }),
+                                (0, _.jsxs)("ul", {
+                                  children: [
+                                    (0, _.jsx)("li", {
+                                      children: (0, _.jsx)("div", {
+                                        className: _().Description,
+                                        children: (0, _._)(
+                                          "#ti15_swiss_rules3_6_1",
+                                        ),
+                                      }),
+                                    }),
+                                    (0, _.jsx)("li", {
+                                      children: (0, _.jsx)("div", {
+                                        className: _().Description,
+                                        children: (0, _._)(
+                                          "#ti15_swiss_rules3_6_2",
+                                        ),
+                                      }),
+                                    }),
+                                    (0, _.jsx)("li", {
+                                      children: (0, _.jsx)("div", {
+                                        className: _().Description,
+                                        children: (0, _._)(
+                                          "#ti15_swiss_rules3_6_3",
+                                        ),
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().SubHeader,
+                          children: (0, _._)("#ti14_seeding"),
+                        }),
+                        (0, _.jsx)("ul", {
+                          children: (0, _.jsx)("li", {
+                            children: (0, _.jsx)("div", {
+                              className: _().Description,
+                              children: (0, _._)("#ti14_seeding_1"),
+                            }),
+                          }),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().SubHeader,
+                          children: (0, _._)("#ti14_sp_rules"),
+                        }),
+                        (0, _.jsxs)("ul", {
+                          children: [
+                            (0, _.jsx)("li", {
+                              children: (0, _.jsx)("div", {
+                                className: _().Description,
+                                children: (0, _._)("#ti14_best_of_three"),
+                              }),
+                            }),
+                            (0, _.jsxs)("ul", {
+                              children: [
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo3_1"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo3_2"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo3_3"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo3_4"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("li", {
+                              children: (0, _.jsx)("div", {
+                                className: _().Description,
+                                children: (0, _._)("#ti14_best_of_five"),
+                              }),
+                            }),
+                            (0, _.jsxs)("ul", {
+                              children: [
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo5_1"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo5_2"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo5_3"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo5_4"),
+                                  }),
+                                }),
+                                (0, _.jsx)("li", {
+                                  children: (0, _.jsx)("div", {
+                                    className: _().Description,
+                                    children: (0, _._)("#ti14_sp_rules_bo5_5"),
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+        ),
         _ = (0, _._)(() =>
           (0, _.jsxs)(_.Fragment, {
             children: [

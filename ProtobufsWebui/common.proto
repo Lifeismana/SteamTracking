@@ -2827,6 +2827,7 @@ message CStreamingClientConfig {
 	optional int32 window_position_y = 32;
 	optional int32 window_frame_offset_x = 33;
 	optional int32 window_frame_offset_y = 34;
+	optional bool enable_video_pyrowave = 35 [default = false];
 }
 
 message CStreamingServerConfig {
@@ -3059,6 +3060,15 @@ message CVRGamepadUI_Message_FocusDashboardBar_Request {
 message CVRGamepadUI_Message_FocusDashboardBar_Response {
 }
 
+message CVRGamepadUI_Message_GamepadButtonAction_Request {
+	optional int32 button = 1 [(.description) = "enum"];
+	optional bool button_down = 2;
+	optional bool repeat = 3;
+}
+
+message CVRGamepadUI_Message_GamepadButtonAction_Response {
+}
+
 message CVRGamepadUI_Message_GetAppIcon_Request {
 	optional uint32 app_id = 1;
 }
@@ -3119,6 +3129,12 @@ message CVRGamepadUI_Message_RequestAppQuit_Response {
 	optional int32 result = 1 [(.description) = "enum"];
 }
 
+message CVRGamepadUI_Message_ResetHMDPerfSettings_Request {
+}
+
+message CVRGamepadUI_Message_ResetHMDPerfSettings_Response {
+}
+
 message CVRGamepadUI_Message_ResetHMDSettings_Request {
 }
 
@@ -3150,6 +3166,8 @@ message CVRGamepadUI_Message_SetHMDSettings_Request {
 	optional bool perf_graph_in_hmd = 8;
 	optional bool record_vr_stats = 9;
 	optional bool record_tracking = 10;
+	optional float env_brightness_construct_theater = 31;
+	optional float env_brightness_construct_nominal = 32;
 }
 
 message CVRGamepadUI_Message_SetHMDSettings_Response {
@@ -3330,7 +3348,9 @@ message CVRGamepadUIShared_PathProperty_DashboardBarActions_BarMenuItem {
 
 message CVRGamepadUIShared_PathProperty_DashboardState {
 	optional bool dashboard_bar_visible = 1;
-	optional bool dashboard_bar_focused = 2;
+	optional bool dashboard_bar_or_child_popup_focused = 2;
+	optional int32 vrlink_role = 3 [(.description) = "enum"];
+	optional bool vrlink_unified_dashboard = 4;
 }
 
 message CVRGamepadUIShared_PathProperty_DashboardTabs {
@@ -3377,6 +3397,9 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	repeated uint32 supersample_effective_resolution = 15;
 	optional uint32 frames_to_throttle_value = 20;
 	optional bool motion_smoothing_value = 21;
+	optional bool env_theater_active = 30;
+	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_theater = 31;
+	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_nominal = 32;
 	optional string performance_profile_value = 50;
 	optional bool perf_graph_in_hmd_value = 51;
 	optional bool record_vr_stats_value = 52;
@@ -3407,6 +3430,14 @@ message CVRGamepadUIShared_PathProperty_VRVersionInfo {
 	optional string version = 1;
 	optional uint32 webpack_build_timestamp = 2;
 	optional string hmd_tracking_info = 3;
+}
+
+// Used by: common.proto
+message CVRGamepadUIShared_RichFloat {
+	optional float value = 1;
+	optional float default = 2;
+	optional float min = 3;
+	optional float max = 4;
 }
 
 // Used by: common.proto

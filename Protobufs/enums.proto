@@ -704,7 +704,7 @@ enum EEnhancedMarketAppearanceStatus {
 enum EContentReportSubjectType {
 	k_EContentReportSubjectType_Invalid = 0;
 	k_EContentReportSubjectType_ForumPost = 1;
-	k_EContentReportSubjectType_Unused = 2;
+	k_EContentReportSubjectType_CommentThread = 2;
 	k_EContentReportSubjectType_UGCFile = 3;
 	k_EContentReportSubjectType_FriendChatMsg = 4;
 	k_EContentReportSubjectType_ChatRoomMsg = 5;

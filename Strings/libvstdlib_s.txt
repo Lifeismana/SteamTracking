@@ -1151,6 +1151,8 @@ V_BasicHtmlEntityEncodeBuffer
 V_BuildSortTitle
 V_CP437CharsToUTF8
 V_ComposeFileName
+V_ContainsBadFilenameCharacters
+V_ContainsBadPathCharacters
 V_ConvertStringToUUID
 V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
 V_ConvertStringToUUID(wchar_t const*, EUUIDStringFlags, V_UUID*)

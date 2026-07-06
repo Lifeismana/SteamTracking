@@ -4630,9 +4630,29 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
     line-height: 15px;
   }
 }
-._3gnQfZ3NUW9NFF3WllsQ6b {
-  position: relative;
-  max-width: 450px;
+._1K4QC6vZ61M5lcIvcCWMEP {
+  text-decoration: underline;
+  padding: 0 6px;
+}
+.ReservationExpectedDate ._1K4QC6vZ61M5lcIvcCWMEP {
+  color: #000;
+}
+._1K4QC6vZ61M5lcIvcCWMEP:hover {
+  text-decoration: underline;
+}
+._20i0fZO4jaOWCaVeAoB6KJ,
+.g1ayBmJ07JAYzenoRRpu5 {
+  background-color: #000;
+  max-width: 600px;
+  font-size: 14px;
+}
+._20i0fZO4jaOWCaVeAoB6KJ ._1K4QC6vZ61M5lcIvcCWMEP,
+.g1ayBmJ07JAYzenoRRpu5 ._1K4QC6vZ61M5lcIvcCWMEP {
+  color: #cfcfcf;
+}
+._20i0fZO4jaOWCaVeAoB6KJ ._1K4QC6vZ61M5lcIvcCWMEP:hover,
+.g1ayBmJ07JAYzenoRRpu5 ._1K4QC6vZ61M5lcIvcCWMEP:hover {
+  color: #fff;
 }
 @keyframes _1G9QIfwsMh2XRR-bMBE97j {
   from {
@@ -4906,29 +4926,9 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
   background-color: #e3d6d1;
   color: #000;
 }
-._1K4QC6vZ61M5lcIvcCWMEP {
-  text-decoration: underline;
-  padding: 0 6px;
-}
-.ReservationExpectedDate ._1K4QC6vZ61M5lcIvcCWMEP {
-  color: #000;
-}
-._1K4QC6vZ61M5lcIvcCWMEP:hover {
-  text-decoration: underline;
-}
-._20i0fZO4jaOWCaVeAoB6KJ,
-.g1ayBmJ07JAYzenoRRpu5 {
-  background-color: #000;
-  max-width: 600px;
-  font-size: 14px;
-}
-._20i0fZO4jaOWCaVeAoB6KJ ._1K4QC6vZ61M5lcIvcCWMEP,
-.g1ayBmJ07JAYzenoRRpu5 ._1K4QC6vZ61M5lcIvcCWMEP {
-  color: #cfcfcf;
-}
-._20i0fZO4jaOWCaVeAoB6KJ ._1K4QC6vZ61M5lcIvcCWMEP:hover,
-.g1ayBmJ07JAYzenoRRpu5 ._1K4QC6vZ61M5lcIvcCWMEP:hover {
-  color: #fff;
+._3gnQfZ3NUW9NFF3WllsQ6b {
+  position: relative;
+  max-width: 450px;
 }
 @keyframes _3B8qOyTqC7rzOP_X5kvWK- {
   from {

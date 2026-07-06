@@ -389,6 +389,7 @@ $\nY8O
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9a&g
+:lMm
 < or is NULL
 <= or is NULL
 <AppID> - Issue an appinfo request for the given appid. Does not wait for results from the server.

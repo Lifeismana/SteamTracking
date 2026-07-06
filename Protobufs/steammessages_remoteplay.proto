@@ -447,6 +447,7 @@ message CStreamingClientConfig {
 	optional int32 window_position_y = 32;
 	optional int32 window_frame_offset_x = 33;
 	optional int32 window_frame_offset_y = 34;
+	optional bool enable_video_pyrowave = 35 [default = false];
 }
 
 message CStreamingServerConfig {

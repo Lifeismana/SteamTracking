@@ -115,7 +115,7 @@
     },
     19441: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => Mt });
+      i.r(t), i.d(t, { default: () => St });
       var s = i(34629),
         n = i(62540),
         a = i(63696),
@@ -129,16 +129,16 @@
         d = i(51115),
         u = i(72476);
       var m = i(6367),
-        I = i(99447),
-        C = i(73674),
+        C = i(99447),
+        I = i(73674),
         L = i(10606),
         T = i(98995),
         w = i(43397),
         A = i(49946),
         x = i.n(A),
-        S = i(41230),
-        _ = i(28987),
-        M = i(89193),
+        _ = i(41230),
+        M = i(28987),
+        S = i(89193),
         D = i(53833),
         y = i(93960),
         b = i(90039);
@@ -185,15 +185,15 @@
           );
         }
         constructor() {
-          (0, M.Gn)(this);
+          (0, S.Gn)(this);
         }
       }
-      (0, s.Cg)([M.sH], v.prototype, "m_eCurLang", void 0),
-        (0, s.Cg)([M.sH], v.prototype, "m_rgHasData", void 0),
-        (0, s.Cg)([M.sH], v.prototype, "m_bHasLocalizationContext", void 0),
+      (0, s.Cg)([S.sH], v.prototype, "m_eCurLang", void 0),
+        (0, s.Cg)([S.sH], v.prototype, "m_rgHasData", void 0),
+        (0, s.Cg)([S.sH], v.prototype, "m_bHasLocalizationContext", void 0),
         (0, s.Cg)([y.o], v.prototype, "GetCurEditLanguage", null),
         (0, s.Cg)([y.o], v.prototype, "SetCurEditLanguage", null),
-        (0, s.Cg)([M.XI.bound], v.prototype, "SetHasLanguage", null),
+        (0, s.Cg)([S.XI.bound], v.prototype, "SetHasLanguage", null),
         (0, s.Cg)([y.o], v.prototype, "BHasLanguageData", null);
       var f = i(11010);
       let j = class extends a.Component {
@@ -217,7 +217,7 @@
               ),
             );
           let r = new Array();
-          const l = this.props.realms || [_.TU.k_ESteamRealmGlobal];
+          const l = this.props.realms || [M.TU.k_ESteamRealmGlobal];
           for (const e of g.A0.GetLanguageListForRealms(l)) {
             if (t && !t(e)) continue;
             const i = (0, o.LgB)(e),
@@ -300,7 +300,7 @@
         }
       };
       (0, s.Cg)([d.oI], j.prototype, "OnLanguageChange", null),
-        (j = (0, s.Cg)([S.PA], j));
+        (j = (0, s.Cg)([_.PA], j));
       var E = i(83957),
         N = i.n(E),
         k = i(72388),
@@ -317,7 +317,7 @@
         Q = i(79769);
       class V {
         constructor() {
-          (0, M.Gn)(this),
+          (0, S.Gn)(this),
             "dev" == u.TS.WEB_UNIVERSE && (window.g_ClanImageStore = this);
         }
         m_mapClanToImages = new Map();
@@ -389,7 +389,7 @@
               t)
             ) {
               for (let e of t.data.images) e.clanAccountID = s;
-              (0, M.h5)(() => {
+              (0, S.h5)(() => {
                 this.m_mapClanImageLoadState.set(s, { loaded: !0 }),
                   this.m_mapClanToImages.set(s, t.data.images),
                   this.GetImageListCallbackForClanAccountIDInternal(s).Dispatch(
@@ -447,7 +447,7 @@
           return s ? s.find((e) => e.image_hash == t) : void 0;
         }
         async DeleteClanImageByID(e, t) {
-          let i = { sessionid: u.TS.SESSIONID, imageid: t },
+          let i = { sessionid: (0, u.KC)(), imageid: t },
             s = e.GetAccountID(),
             n = await N().get(
               u.TS.COMMUNITY_BASE_URL +
@@ -472,8 +472,8 @@
           return this.DeleteClanImageByID(e, t.imageid);
         }
       }
-      (0, s.Cg)([M.sH], V.prototype, "m_mapClanToImages", void 0),
-        (0, s.Cg)([M.sH], V.prototype, "m_mapClanImageLoadState", void 0);
+      (0, s.Cg)([S.sH], V.prototype, "m_mapClanToImages", void 0),
+        (0, s.Cg)([S.sH], V.prototype, "m_mapClanImageLoadState", void 0);
       const Z = new V();
       var W = i(67687),
         J = i(7372),
@@ -726,8 +726,8 @@
         de = i(26853),
         ue = i(73902),
         me = i.n(ue),
-        Ie = i(7821);
-      function Ce(e) {
+        Ce = i(7821);
+      function Ie(e) {
         return Array.isArray(e) ? e[0] : e;
       }
       function Le(e) {
@@ -735,17 +735,17 @@
         return Math.min(...t);
       }
       function Te(e, t) {
-        return void 0 === t ? Ce(e) : Array.isArray(e) ? e[t] : e;
+        return void 0 === t ? Ie(e) : Array.isArray(e) ? e[t] : e;
       }
-      const we = [Ie.bg.iS, Ie.bg.dU, Ie.bg.CK, Ie.bg.wD],
-        Ae = [Ie.bg.iS, Ie.bg.dU, Ie.bg.CK],
-        xe = [Ie.bg.iS, Ie.bg.dU],
-        Se = [Ie.bg.pJ, Ie.bg.nn],
-        _e =
-          (Ie.bg.pi,
-          Ie.bg.k7,
-          [Ie.bg.iS, Ie.bg.dU, Ie.bg.CK, Ie.bg.wD, Ie.bg.pJ, Ie.bg.nn]),
-        Me = {
+      const we = [Ce.bg.iS, Ce.bg.dU, Ce.bg.CK, Ce.bg.wD],
+        Ae = [Ce.bg.iS, Ce.bg.dU, Ce.bg.CK],
+        xe = [Ce.bg.iS, Ce.bg.dU],
+        _e = [Ce.bg.pJ, Ce.bg.nn],
+        Me =
+          (Ce.bg.pi,
+          Ce.bg.k7,
+          [Ce.bg.iS, Ce.bg.dU, Ce.bg.CK, Ce.bg.wD, Ce.bg.pJ, Ce.bg.nn]),
+        Se = {
           capsule: { width: 800, height: 450, rgAcceptableTypes: xe },
           marketingmessage_art_2_eventcapsule: {
             width: 800,
@@ -888,33 +888,33 @@
           localized_marketingmessage_webm: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [Ie.bg.pJ],
+            rgAcceptableTypes: [Ce.bg.pJ],
           },
           localized_marketingmessage_mp4: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [Ie.bg.nn],
+            rgAcceptableTypes: [Ce.bg.nn],
           },
           localized_partnerevent_webm: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [Ie.bg.pJ],
+            rgAcceptableTypes: [Ce.bg.pJ],
           },
           localized_partnerevent_mp4: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [Ie.bg.nn],
+            rgAcceptableTypes: [Ce.bg.nn],
           },
           localized_subtitles: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [Ie.bg.k7, Ie.bg.pi],
+            rgAcceptableTypes: [Ce.bg.k7, Ce.bg.pi],
           },
           localized_marketingmessage_poster: {
             width: 528,
             height: 297,
-            rgAcceptableTypes: [Ie.bg.iS, Ie.bg.dU],
+            rgAcceptableTypes: [Ce.bg.iS, Ce.bg.dU],
           },
           localized_marketingmessage_background: {
             width: 570,
@@ -931,7 +931,7 @@
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _e,
+            rgAcceptableTypes: Me,
           },
           user_poll_background: {
             width: 0,
@@ -960,12 +960,12 @@
           takeover_webm_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [Ie.bg.pJ],
+            rgAcceptableTypes: [Ce.bg.pJ],
           },
           takeover_mp4_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [Ie.bg.nn],
+            rgAcceptableTypes: [Ce.bg.nn],
           },
           takeover_mobile_art: {
             width: 500,
@@ -975,12 +975,12 @@
           takeover_webm_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [Ie.bg.pJ],
+            rgAcceptableTypes: [Ce.bg.pJ],
           },
           takeover_mp4_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [Ie.bg.nn],
+            rgAcceptableTypes: [Ce.bg.nn],
           },
           takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: Ae },
           takeunder_mobile_art: {
@@ -1016,14 +1016,14 @@
         return !0;
       }
       function ye(e, t, i, s) {
-        const n = Me[i];
+        const n = Se[i];
         return (
           !!n &&
           (n.bDisableEnforceDimensions ? !!s : De(e, t, n.width, n.height))
         );
       }
       function be(e, t, i) {
-        const s = Me[i];
+        const s = Se[i];
         if (!s) return !1;
         if (s.bDisableEnforceDimensions) return !0;
         if (Array.isArray(s.width)) {
@@ -1039,7 +1039,7 @@
         return t.filter((t) => fe(e, t));
       }
       function fe(e, t) {
-        return Me[t].rgAcceptableTypes.includes(e);
+        return Se[t].rgAcceptableTypes.includes(e);
       }
       var je = i(29381),
         Ee = i(46300);
@@ -1068,7 +1068,7 @@
                 m?.drawImage(t, i, s, n, a, d, u, o, r),
                   g.toBlob((t) => {
                     const i = g.toDataURL(p);
-                    l !== Ie.bg.dU && i.startsWith("data:image/png")
+                    l !== Ce.bg.dU && i.startsWith("data:image/png")
                       ? h("Unable to encode into the requested file format")
                       : t
                         ? ((e.file = (0, le.pE)(t, e.filename)),
@@ -1103,16 +1103,16 @@
           if (t) return t.width;
           const i = e.GetCurrentImageOption();
           if (!i) return 0;
-          const s = Me[i.artworkType].width;
-          return i ? Ce(s) : 0;
+          const s = Se[i.artworkType].width;
+          return i ? Ie(s) : 0;
         }
         GetDestHeight() {
           const { uploadFile: e, forceResolution: t } = this.props;
           if (t) return t.width;
           const i = e.GetCurrentImageOption();
           if (!i) return 0;
-          const s = Me[i.artworkType].height;
-          return i ? Ce(s) : 0;
+          const s = Se[i.artworkType].height;
+          return i ? Ie(s) : 0;
         }
         GetLargestBoxThatFits(e, t, i, s) {
           let n = i,
@@ -1217,9 +1217,9 @@
       }
       function ke(e) {
         switch (e) {
-          case Ie.bg.dU:
+          case Ce.bg.dU:
             return "image/png";
-          case Ie.bg.iS:
+          case Ce.bg.iS:
             return "image/jpeg";
         }
       }
@@ -1389,10 +1389,10 @@
         uploadTime;
         fileType;
         constructor(e, t, i, s, n) {
-          (0, M.Gn)(this),
+          (0, S.Gn)(this),
             (this.file = e),
             (this.filename = t),
-            (this.fileType = (0, Fe.yh)(t) ?? Ie.bg.w3),
+            (this.fileType = (0, Fe.yh)(t) ?? Ce.bg.w3),
             (this.language = i),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -1409,18 +1409,18 @@
         }
         GetImageOptionLabel() {}
       }
-      (0, s.Cg)([M.sH], Ye.prototype, "dataUrl", void 0),
-        (0, s.Cg)([M.sH], Ye.prototype, "width", void 0),
-        (0, s.Cg)([M.sH], Ye.prototype, "height", void 0),
-        (0, s.Cg)([M.sH], Ye.prototype, "status", void 0),
-        (0, s.Cg)([M.sH.ref], Ye.prototype, "message", void 0),
-        (0, s.Cg)([M.sH], Ye.prototype, "language", void 0);
+      (0, s.Cg)([S.sH], Ye.prototype, "dataUrl", void 0),
+        (0, s.Cg)([S.sH], Ye.prototype, "width", void 0),
+        (0, s.Cg)([S.sH], Ye.prototype, "height", void 0),
+        (0, s.Cg)([S.sH], Ye.prototype, "status", void 0),
+        (0, s.Cg)([S.sH.ref], Ye.prototype, "message", void 0),
+        (0, s.Cg)([S.sH], Ye.prototype, "language", void 0);
       class Qe extends Ye {
         m_rgImageOptions;
         m_currentImageOption = void 0;
         m_currentImageOptionKey = void 0;
         constructor(e, t, i, s, n, a) {
-          super(e, t, i, n, a), (0, M.Gn)(this), (this.m_rgImageOptions = s);
+          super(e, t, i, n, a), (0, S.Gn)(this), (this.m_rgImageOptions = s);
         }
         IsValidAssetType(e, t) {
           let i = 0,
@@ -1434,7 +1434,7 @@
               );
           if (e) (i = e.width), (s = e.height), (n = !0);
           else if (this.GetCurrentImageOption()) {
-            const e = Me[this.GetCurrentImageOption().artworkType];
+            const e = Se[this.GetCurrentImageOption().artworkType];
             e &&
               ((i = e.width),
               (s = e.height),
@@ -1468,25 +1468,25 @@
                       ? !r && h
                         ? ((d = (0, g.we)(
                             "#ImageUpload_InvalidDimensions",
-                            Ce(i),
-                            Ce(s),
+                            Ie(i),
+                            Ie(s),
                           )),
                           (u = !0))
-                        : ((Array.isArray(i) && this.width != Ce(i)) ||
-                            (Array.isArray(s) && this.height != Ce(s))) &&
+                        : ((Array.isArray(i) && this.width != Ie(i)) ||
+                            (Array.isArray(s) && this.height != Ie(s))) &&
                           ((p = p ?? []),
                           p.push(
                             (0, g.we)(
                               "#ImageUpload_PreferredDimension",
-                              Ce(i),
-                              Ce(s),
+                              Ie(i),
+                              Ie(s),
                             ),
                           ))
-                      : (d = (0, g.we)("#ImageUpload_TooSmall", Ce(i), Ce(s)))
+                      : (d = (0, g.we)("#ImageUpload_TooSmall", Ie(i), Ie(s)))
                     : (d = (0, g.we)(
                         "#ImageUpload_InvalidResolution",
-                        Ce(i),
-                        Ce(s),
+                        Ie(i),
+                        Ie(s),
                       ))
               : (d = (0, g.we)("#ImageUpload_InvalidFormatSelected")),
             {
@@ -1533,15 +1533,15 @@
             (this.m_currentImageOptionKey = e?.sKey);
         }
       }
-      (0, s.Cg)([M.sH], Qe.prototype, "m_currentImageOption", void 0),
-        (0, s.Cg)([M.sH], Qe.prototype, "m_currentImageOptionKey", void 0);
+      (0, s.Cg)([S.sH], Qe.prototype, "m_currentImageOption", void 0),
+        (0, s.Cg)([S.sH], Qe.prototype, "m_currentImageOptionKey", void 0);
       class Ve extends Qe {
         bCropped = !1;
         localizedImageGroupPrimaryImage;
         media;
         constructor(e, t, i, s, n, a, o, r) {
           super(e, t, i, s, n, a),
-            (0, M.Gn)(this),
+            (0, S.Gn)(this),
             (this.media = o),
             (this.localizedImageGroupPrimaryImage = r);
         }
@@ -1565,7 +1565,7 @@
           return fe(this.fileType, e.artworkType);
         }
         BIsVideo() {
-          return Se.includes(this.fileType);
+          return _e.includes(this.fileType);
         }
         GetResizeDimension() {
           return (function (e) {
@@ -1576,11 +1576,11 @@
               ];
             if ("capsule" === e)
               return [
-                { width: Ce(Me[e].width) / 2, height: Ce(Me[e].height) / 2 },
+                { width: Ie(Se[e].width) / 2, height: Ie(Se[e].height) / 2 },
               ];
             if ("spotlight" === e)
               return [
-                { width: Ce(Me[e].width) / 2, height: Ce(Me[e].height) / 2 },
+                { width: Ie(Se[e].width) / 2, height: Ie(Se[e].height) / 2 },
               ];
             return;
           })(this.GetCurrentImageOption()?.artworkType);
@@ -1592,7 +1592,7 @@
             if (s ? be(e, t, n) : ye(e, t, n)) return n;
           }
       }
-      (0, s.Cg)([M.sH], Ve.prototype, "bCropped", void 0);
+      (0, s.Cg)([S.sH], Ve.prototype, "bCropped", void 0);
       class We {}
       function Je(e, t, i) {
         const s = e.filter((e) => {
@@ -1696,8 +1696,8 @@
         };
       }
       class $e extends Ke {
-        m_filesToUpload = M.sH.array();
-        m_filesCompleted = M.sH.array();
+        m_filesToUpload = S.sH.array();
+        m_filesCompleted = S.sH.array();
         m_clanImagesV2;
         m_clanSteamID;
         m_rgImageOptions;
@@ -1706,12 +1706,12 @@
         constructor(e, t, i, s) {
           var n;
           super(),
-            (0, M.Gn)(this),
+            (0, S.Gn)(this),
             (this.m_clanSteamID = e),
             (this.m_rgImageOptions =
               ((n = t),
               n?.flatMap((e) => {
-                const t = Me[e];
+                const t = Se[e];
                 if (
                   ((0, Y.wT)(Boolean(t), `Artwork Type not in Map ${e}`),
                   "number" == typeof t.width && "number" == typeof t.height)
@@ -1800,7 +1800,7 @@
           t >= 0 && this.DeleteUploadImageByIndex(t);
         }
         ClearImages() {
-          this.m_filesToUpload = M.sH.array();
+          this.m_filesToUpload = S.sH.array();
         }
         GetFilesUploaded() {
           return this.m_filesCompleted;
@@ -1847,7 +1847,7 @@
             o = e.GetResizeDimension(),
             r = new FormData();
           r.append("clanimage", n, t),
-            r.append("sessionid", u.TS.SESSIONID),
+            r.append("sessionid", (0, u.KC)()),
             this.m_clanImagesV2 && r.append("clan_images_v2", "1"),
             a?.artworkType && r.append("arttype", a.artworkType),
             o &&
@@ -1897,9 +1897,9 @@
           );
         }
       }
-      (0, s.Cg)([M.sH], $e.prototype, "m_filesToUpload", void 0),
-        (0, s.Cg)([M.sH], $e.prototype, "m_filesCompleted", void 0),
-        (0, s.Cg)([M.sH], $e.prototype, "m_lastError", void 0),
+      (0, s.Cg)([S.sH], $e.prototype, "m_filesToUpload", void 0),
+        (0, s.Cg)([S.sH], $e.prototype, "m_filesCompleted", void 0),
+        (0, s.Cg)([S.sH], $e.prototype, "m_lastError", void 0),
         (0, s.Cg)([y.o], $e.prototype, "AddImage", null),
         (0, s.Cg)([y.o], $e.prototype, "AddExistingClanImage", null),
         (0, s.Cg)([y.o], $e.prototype, "DeleteUploadImageByIndex", null),
@@ -1910,7 +1910,7 @@
           super(e, t, i, !1);
         }
       }
-      const tt = (0, S.PA)((e) => {
+      const tt = (0, _.PA)((e) => {
         const {
             clanSteamID: t,
             inputClanImage: i,
@@ -1921,7 +1921,7 @@
           c = a.useMemo(() => ({ width: s, height: r }), [s, r]),
           [h, p] = a.useState(void 0),
           [d, m] = a.useState(Boolean(i)),
-          [I, C] = a.useState(!1),
+          [C, I] = a.useState(!1),
           L = (function (e, t, i) {
             const s = (0, Ge.wm)(t instanceof Array ? t : [t]),
               n = e.ConvertTo64BitString();
@@ -1982,7 +1982,7 @@
                       ownerWin: t,
                       uploadFile: i,
                       forceResolution: { width: s, height: r },
-                      fileType: Ie.bg.dU,
+                      fileType: Ce.bg.dU,
                     }),
                     t,
                   );
@@ -1998,14 +1998,14 @@
                       w.status,
                     ),
                   }),
-                  I
+                  C
                     ? (0, n.jsx)(de.t, {
                         string: (0, g.we)("#Uploading"),
                         size: "small",
                       })
                     : (0, n.jsx)(se.$n, {
                         onClick: async () => {
-                          C(!0);
+                          I(!0);
                           try {
                             const e = await L.UploadAllImages(c),
                               i = Object.values(e);
@@ -2042,7 +2042,7 @@
                               p(a), l(a);
                             }
                           } finally {
-                            C(!1);
+                            I(!1);
                           }
                         },
                         children: (0, g.we)(
@@ -2106,7 +2106,7 @@
         async AjaxGetFormattingHelp() {
           if ("" == this.state.formattingHelp.__html) {
             let e,
-              t = { sessionid: u.TS.SESSIONID };
+              t = { sessionid: (0, u.KC)() };
             (e = await N().get(it.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
@@ -2142,7 +2142,7 @@
                 });
         }
       };
-      st = it = (0, s.Cg)([S.PA], st);
+      st = it = (0, s.Cg)([_.PA], st);
       var nt,
         at = i(24546),
         ot = i(34091),
@@ -2242,7 +2242,7 @@
         (0, s.Cg)([d.oI], lt.prototype, "onFocus", null),
         (0, s.Cg)([d.oI], lt.prototype, "OnTextAreaDropListener", null),
         (0, s.Cg)([d.oI], lt.prototype, "GetTextAreaRef", null),
-        (lt = (0, s.Cg)([S.PA], lt));
+        (lt = (0, s.Cg)([_.PA], lt));
       class ct {
         static BIsFireFox() {
           return Boolean(
@@ -2610,7 +2610,7 @@
         (0, s.Cg)([d.oI], ht.prototype, "OnOpenImageDialog", null),
         (0, s.Cg)([d.oI], ht.prototype, "OnOpenSpeakerDialog", null),
         (0, s.Cg)([d.oI], ht.prototype, "OnEmoticonSelected", null),
-        (ht = (0, s.Cg)([S.PA], ht));
+        (ht = (0, s.Cg)([_.PA], ht));
       let gt = class extends a.Component {
         state = { youtubeInput: "", alignment: ot.V2.left };
         OnYoutubeInsertLink() {
@@ -2803,7 +2803,7 @@
         (0, s.Cg)([d.oI], gt.prototype, "OnFullSelected", null),
         (0, s.Cg)([d.oI], gt.prototype, "OnSummarySelected", null),
         (0, s.Cg)([d.oI], gt.prototype, "OnOuterDivClickPassDown", null),
-        (gt = (0, s.Cg)([S.PA], gt));
+        (gt = (0, s.Cg)([_.PA], gt));
       let dt = class extends a.Component {
         static {
           nt = this;
@@ -2894,7 +2894,7 @@
       (0, s.Cg)([d.oI], dt.prototype, "onLinkTitleUpdate", null),
         (0, s.Cg)([d.oI], dt.prototype, "onLinkURLUpdate", null),
         (0, s.Cg)([d.oI], dt.prototype, "onInsertLink", null),
-        (dt = nt = (0, s.Cg)([S.PA], dt));
+        (dt = nt = (0, s.Cg)([_.PA], dt));
       let ut = class extends a.Component {
         refFirstInput;
         state = { imgURL: "", anchorURL: "" };
@@ -2989,15 +2989,15 @@
       (0, s.Cg)([d.oI], ut.prototype, "OnImageInsert", null),
         (0, s.Cg)([d.oI], ut.prototype, "OnImageURLChange", null),
         (0, s.Cg)([d.oI], ut.prototype, "OnAnchorURLChange", null),
-        (ut = (0, s.Cg)([S.PA], ut));
+        (ut = (0, s.Cg)([_.PA], ut));
       const mt = (e) => {
         const [t, i] = a.useState(""),
           [s, o] = a.useState(""),
           [r, l] = a.useState(""),
           [c, h] = a.useState(""),
           [p, d] = a.useState(void 0),
-          [m, I] = a.useState(void 0),
-          { data: C } = (0, ce.Dv)(),
+          [m, C] = a.useState(void 0),
+          { data: I } = (0, ce.Dv)(),
           { isLoading: w, data: A } = (0, he.js)(m?.GetAccountID()),
           x = 0 != t.trim().length && 0 != c.trim().length;
         return (0, n.jsx)(L.o0, {
@@ -3087,13 +3087,13 @@
                     className: me().AssociateRowCtn,
                     children: [
                       (0, n.jsx)(se.$n, {
-                        onClick: () => I(new U.b(u.iA.steamid)),
+                        onClick: () => C(new U.b(u.iA.steamid)),
                         children: (0, g.we)("#EventEditor_SteamAccount_addme"),
                       }),
                       (0, n.jsx)(se.$n, {
                         onClick: (e) =>
                           (0, G.lX)(
-                            (0, n.jsx)(It, { friends: C, setSteamID: I }),
+                            (0, n.jsx)(Ct, { friends: I, setSteamID: C }),
                             e,
                           ),
                         children: (0, g.we)(
@@ -3101,7 +3101,7 @@
                         ),
                       }),
                       (0, n.jsx)(se.$n, {
-                        onClick: () => I(void 0),
+                        onClick: () => C(void 0),
                         children: (0, g.we)("#EventEditor_SteamAccount_clear"),
                       }),
                     ],
@@ -3163,16 +3163,16 @@
           }),
         });
       };
-      function It(e) {
+      function Ct(e) {
         const { friends: t, setSteamID: i } = e;
         return (0, n.jsx)("div", {
           className: me().DropDownScroll,
           children: t.map((e) =>
-            (0, n.jsx)(Ct, { steamid: e, setSteamID: i }, e),
+            (0, n.jsx)(It, { steamid: e, setSteamID: i }, e),
           ),
         });
       }
-      function Ct(e) {
+      function It(e) {
         const { steamid: t, setSteamID: i } = e,
           { data: s } = (0, he.js)(t);
         return (0, n.jsx)(pe.kt, {
@@ -3367,18 +3367,18 @@
         (0, s.Cg)([d.oI], Lt.prototype, "OnConvertAndAppendHTML", null),
         (0, s.Cg)([d.oI], Lt.prototype, "OnCheckboxChange", null),
         (0, s.Cg)([d.oI], Lt.prototype, "OnTextAreaChange", null),
-        (Lt = (0, s.Cg)([S.PA], Lt));
+        (Lt = (0, s.Cg)([_.PA], Lt));
       var Tt = i(82918),
         wt = i(83450),
         At = i.n(wt);
-      const xt = (0, S.PA)((e) => {
+      const xt = (0, _.PA)((e) => {
         const { appid: t, eventLink: i } = e,
           s = a.useRef(null),
           { data: o } = (0, he.js)(u.iA.steamid),
           [r, l] = a.useState(""),
           [h, d] = a.useState(!1),
-          [m, I] = a.useState(""),
-          [C, T] = a.useState(!1);
+          [m, C] = a.useState(""),
+          [I, T] = a.useState(!1);
         a.useEffect(
           () => () =>
             s.current &&
@@ -3414,32 +3414,32 @@
                     s.GetEResult();
                   return (
                     console.error(t, !e.token.reason),
-                    void (e.token.reason || I(t))
+                    void (e.token.reason || C(t))
                   );
                 }
               } else {
                 const i = new FormData();
                 i.append("appid", "" + t),
                   i.append("status_text", n),
-                  i.append("sessionid", u.TS.SESSIONID);
+                  i.append("sessionid", (0, u.KC)());
                 const s = await N().post(a, i, { withCredentials: !0 });
                 if (200 != s.status || s?.data?.success != O.R) {
                   const t =
                     (0, g.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
                     s?.data?.message;
-                  return console.error(t), void (e.token.reason || I(t));
+                  return console.error(t), void (e.token.reason || C(t));
                 }
               }
               e.token.reason ||
-                (T(!0), I((0, g.we)("#EventDisplay_Share_Success")));
+                (T(!0), C((0, g.we)("#EventDisplay_Share_Success")));
             } catch (t) {
               const i = (0, He.H)(t),
                 s =
                   (0, g.we)("#EventDisplay_Share_Failure") +
                   "\n\n" +
                   i.strErrorMsg;
-              e.token.reason || I(s), console.error(s);
+              e.token.reason || C(s), console.error(s);
             }
           };
         return h
@@ -3463,7 +3463,7 @@
                       0 == m?.length
                         ? (0, n.jsx)(de.t, { position: "center" })
                         : (0, n.jsx)("div", { children: m }),
-                      Boolean(C) &&
+                      Boolean(I) &&
                         (0, n.jsx)("a", {
                           href:
                             u.TS.COMMUNITY_BASE_URL +
@@ -3540,8 +3540,8 @@
               }),
             });
       });
-      var St = i(30470);
-      const _t = (e) => {
+      var _t = i(30470);
+      const Mt = (e) => {
         const t = a.createRef(),
           [i, s] = a.useState(""),
           o = a.createRef(),
@@ -3585,7 +3585,7 @@
                       toolTipContent: (0, g.we)("#ToolTip_CopyLinkToClipboard"),
                       children: (0, n.jsx)("img", {
                         className: x().ClipboardIcon,
-                        src: St.A,
+                        src: _t.A,
                       }),
                     }),
                   }),
@@ -3599,7 +3599,7 @@
           ],
         });
       };
-      class Mt extends a.Component {
+      class St extends a.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {
           u.iA.logged_in
@@ -3652,7 +3652,7 @@
                 });
         }
       }
-      (0, s.Cg)([d.oI], Mt.prototype, "ShareOnSteamActivityFeed", null);
+      (0, s.Cg)([d.oI], St.prototype, "ShareOnSteamActivityFeed", null);
       const Dt = (e) => {
         const {
             eventLink: t,
@@ -3742,7 +3742,7 @@
                           className: x().ShareBtn,
                           children: (0, n.jsx)("img", {
                             className: (0, p.A)(c().Button),
-                            src: C.A,
+                            src: I.A,
                           }),
                         }),
                       }),
@@ -3755,7 +3755,7 @@
                           className: x().ShareBtn,
                           children: (0, n.jsx)("img", {
                             className: (0, p.A)(c().Button),
-                            src: I.A,
+                            src: C.A,
                           }),
                         }),
                       }),
@@ -3764,14 +3764,14 @@
                   (0, n.jsx)("div", { className: c().Divider }),
                 ],
               }),
-            (0, n.jsx)(_t, { eventLink: L }),
+            (0, n.jsx)(Mt, { eventLink: L }),
           ],
         });
       };
     },
     29381: (e, t, i) => {
       "use strict";
-      i.d(t, { I: () => I });
+      i.d(t, { I: () => C });
       var s,
         n = i(34629),
         a = i(62540),
@@ -3796,7 +3796,7 @@
           (e.bottom = "bottom"),
           (e.bottomright = "bottomright");
       })(s || (s = {}));
-      let I = class extends o.Component {
+      let C = class extends o.Component {
         m_rectLinkRegion;
         m_elLinkRegionBox;
         m_nLocalOffsetXPct;
@@ -4231,16 +4231,16 @@
           );
         }
       };
-      (0, n.Cg)([r.oI], I.prototype, "LinkRegionBoxRef", null),
-        (0, n.Cg)([r.oI], I.prototype, "OnMouseDown", null),
-        (0, n.Cg)([r.oI], I.prototype, "OnMouseMove", null),
-        (0, n.Cg)([r.oI], I.prototype, "OnMouseUp", null),
-        (0, n.Cg)([r.oI], I.prototype, "HandleDelete", null),
-        (0, n.Cg)([r.oI], I.prototype, "OnSetLinkURLChange", null),
-        (0, n.Cg)([r.oI], I.prototype, "OnSetLinkDescriptionChange", null),
-        (0, n.Cg)([r.oI], I.prototype, "OnSaveLink", null),
-        (0, n.Cg)([r.oI], I.prototype, "OnEditLink", null),
-        (I = (0, n.Cg)([l.PA], I));
+      (0, n.Cg)([r.oI], C.prototype, "LinkRegionBoxRef", null),
+        (0, n.Cg)([r.oI], C.prototype, "OnMouseDown", null),
+        (0, n.Cg)([r.oI], C.prototype, "OnMouseMove", null),
+        (0, n.Cg)([r.oI], C.prototype, "OnMouseUp", null),
+        (0, n.Cg)([r.oI], C.prototype, "HandleDelete", null),
+        (0, n.Cg)([r.oI], C.prototype, "OnSetLinkURLChange", null),
+        (0, n.Cg)([r.oI], C.prototype, "OnSetLinkDescriptionChange", null),
+        (0, n.Cg)([r.oI], C.prototype, "OnSaveLink", null),
+        (0, n.Cg)([r.oI], C.prototype, "OnEditLink", null),
+        (C = (0, n.Cg)([l.PA], C));
     },
     30470: (e, t, i) => {
       "use strict";

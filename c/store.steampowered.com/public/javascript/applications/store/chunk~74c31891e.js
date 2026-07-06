@@ -496,6 +496,7 @@
                       section: _,
                       reservationDef: _[0],
                       hardwareDetail: _,
+                      reservedHardwareDetail: _,
                     }),
                   _ &&
                     _?.allow_purchase_in_country &&

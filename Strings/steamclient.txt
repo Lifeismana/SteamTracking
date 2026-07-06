@@ -244,7 +244,7 @@
  ABORTING\n
  Accel Check Failed: ( %f ) >  ( %f )
  Acceleration Tolerance: %f\n
- Applied Gyroscope Drift Per Second: ( %f,  %f,  %f ).\n
+ Applied Gyroscope Drift Per Second: ( %f,  %f,  %f ). Was Previously: ( %f,  %f,  %f ). \n
  BackUp() can only be called after Next().
  Can't Dispatch to
  Can't Post to
@@ -275,12 +275,15 @@
  POST[ '%s' ]: %s\n
  Parameter to BackUp() can't be negative.
  ReadToken overflow
- Saving Gyroscope Drift Per Second: ( %f,  %f,  %f ).\n
+ Saved Acceleration Noise Tolerance: %f\n
+ Saved Gyroscope Drift Per Second: ( %f,  %f,  %f ).\n
+ Saved Gyroscope Noise Tolerance: %f\n
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
+ Tried to set new antidrift candidate, but we are using hardware calibration, so we're not analysing the raw gyro drift. Skip. ( %f,  %f,  %f ).\n
+ Tried to set runtime antidrift value, but we are using hardware calibration, so we're not analysing the raw gyro drift. Skip. ( %f,  %f,  %f ).\n
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
- Valid parameters\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
  [clone
@@ -3003,7 +3006,6 @@ $steammessages_parental_objects.proto"
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
-&\n"k_EContentReportSubjectType_Unused
 &\n"k_EDeviceDisconnectMethodBluetooth
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
@@ -6028,6 +6030,7 @@ $steammessages_parental_objects.proto"
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
+-\n)k_EContentReportSubjectType_CommentThread
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EControllerElementTypeButtonBumperRight
 -\n)k_EControllerElementTypeButtonTriggerLeft
@@ -6144,7 +6147,6 @@ $steammessages_parental_objects.proto"
 -disable-overlay-wait-for-cef-frame
 -disable-winh264
 -disable_broadcast_webrtc
--disable_chrome_runtime
 -disable_safe_shutdown_workaround
 -disablehighdpi
 -disablejslogging
@@ -7469,7 +7471,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/subscribedfilelistcache.cpp
 /data/src/clientdll/subscribedfilemanager.cpp
 /data/src/clientdll/systemaudiomanager_linux.cpp
-/data/src/clientdll/systemdisplaymanager.cpp:208
+/data/src/clientdll/systemdisplaymanager.cpp:156
 /data/src/clientdll/systemdisplaymanager_wayland.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp:337
@@ -10045,6 +10047,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI32SiteServerUI_SetLanguage_RequestE
 12CProtoBufMsgI33CCloud_AppSessionSuspend_ResponseE
 12CProtoBufMsgI33CCloud_GetSingleFileInfo_ResponseE
+12CProtoBufMsgI33CGameServers_FriendsQuery_RequestE
 12CProtoBufMsgI33CMsgClientAMGetPersonaNameHistoryE
 12CProtoBufMsgI33CMsgClientFSGetFriendsSteamLevelsE
 12CProtoBufMsgI33CMsgClientLBSGetLBEntriesResponseE
@@ -10062,6 +10065,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI33SiteServerUI_GetLanguage_ResponseE
 12CProtoBufMsgI33SiteServerUI_LoginStatus_ResponseE
 12CProtoBufMsgI34CCloud_BeginAppUploadBatch_RequestE
+12CProtoBufMsgI34CGameServers_FriendsQuery_ResponseE
 12CProtoBufMsgI34CGameServers_QueryByFakeIP_RequestE
 12CProtoBufMsgI34CMsgCREUpdateUserPublishedItemVoteE
 12CProtoBufMsgI34CMsgClientAddFriendToGroupResponseE
@@ -12032,6 +12036,7 @@ $steammessages_parental_objects.proto"
 22CGetTouchConfigDataMsg
 22CInputTouchFingerUpMsg
 22CJobCheckForTritonOobe
+22CJobQueryServerFriends
 22CJobSaveCacheDirectory
 22CMarketingMessageProto
 22CMsgAckPIDShuttingDown
@@ -13404,6 +13409,7 @@ $steammessages_parental_objects.proto"
 30CHIDMessageToRemote_DeviceOpen
 30CHIDMessageToRemote_DeviceRead
 30CHardwareUpdate_Update_Request
+30CInternalGameProcessCallResultI22CGameserverSimpleQuery26QueryServerFriendsResult_tE
 30CInternalGameProcessCallResultI22CGameserverSimpleQuery27QueryServerByFakeIPResult_tE
 30CInventory_ConsumeItem_Request
 30CInventory_InspectItem_Request
@@ -13928,6 +13934,7 @@ $steammessages_parental_objects.proto"
 34CAPIJobUpdateUserPublishedItemVote
 34CAdapterSteamMatchmakingServers001
 34CAdapterSteamMatchmakingServers002
+34CAdapterSteamMatchmakingServers003
 34CAdapterSteamNetworkingMessages002
 34CBluetoothManager_Connect_Response
 34CBluetoothManager_GetState_Request
@@ -20279,6 +20286,7 @@ CJobMgr::m_WorkThreadPool
 CJobQueryMasterGameServer
 CJobQueryMasterGameServer work item
 CJobQueryServerByFakeIP
+CJobQueryServerFriends
 CJobSaveCacheDirectory
 CJobSendLogs
 CJobSendLogs - Uploading logs for legacy request
@@ -22797,7 +22805,9 @@ Connection failed
 Connection failed %s
 Connection for %s re-entering pool\n
 Connection from: %s
+Connection has been idle for '%d' seconds, closing
 Connection is behind sending UDP packets (%d pending), closing\n
+Connection is idle, have %d chunk download failures, closing
 Connection list bookeeping corruption
 Connection map corruption!
 Connection pruned
@@ -25050,6 +25060,7 @@ FOZ entry name invalid hex, file corrupt?
 FOZ underflow, file truncated?
 FR19CNullMetricsFactoryvE
 FRAME_SIZE_ERROR
+FRESH Antidrift detected before saving: ( %f,  %f,  %f ).\n
 FSE_NCountWriteBound
 FSE_buildCTable_rle
 FSE_buildCTable_wksp
@@ -25380,6 +25391,7 @@ Failed to open local CS file "%s".
 Failed to parse %s value %s
 Failed to parse '%s'.  %s\n
 Failed to parse CGameNetworkingUI_ConnectionState
+Failed to parse CGameServers_FriendsQuery_Response
 Failed to parse CGameServers_GameServerQuery_Response
 Failed to parse JSON %s
 Failed to parse authorized client identity.  %s
@@ -25859,6 +25871,7 @@ FriendMessagesClient.SessionNotice#1
 FriendMsgEchoToSender
 FriendMsgIncoming
 Friends
+Friends query back from steam, without friends data\n
 FriendsGameplayInfo
 FriendsGroupsList
 FriendsList
@@ -26083,6 +26096,7 @@ GameServer property '%s' is too long; truncating!  Max length is %d chars\n
 GameServerClient
 GameServerClient.QueryServerData#1
 GameServerStats
+GameServers.FriendsQuery#1
 GameServers.GetServerIPsBySteamID#1
 GameServers.GetServerSteamIDsByIP#1
 GameServers.QueryByFakeIP#1
@@ -28636,6 +28650,7 @@ Job count bookkeeping error for job %s
 Job factory did not create CJob for message %d
 Job factory did not create CJob for message %s
 Job failed trying to release a CNetPacket it doesn't own
+Job is ending with status '%s (%d), closing
 Job passed lock it wasn't waiting for. Job: %s, Paused for %s\n
 Job terminating with an unbalanced Do Not Yield block at %s
 Job yielding despite declaring a Do Not Yield block at %s
@@ -29205,6 +29220,7 @@ LoadRemotePlayControllerPersonalizationVDF
 LoadShortcuts: rejecting attempt to load shortcuts: invalid account ID
 LoadTGA: Only type 2 and 10 targa RGB images supported\n
 Loaded %u apps from install folder "%s".
+Loaded Antidrift From Disc: %f, %f, %f.\n
 Loaded Steam library folders configuration: %s
 Loaded cached family info for account %u ( groupID=%llu, name="%s', role=%u)
 Loaded client id: %llu
@@ -33345,6 +33361,7 @@ QueryRefreshTokenByID
 QueryRefreshTokensByAccount
 QueryServerByFakeIP
 QueryServerData
+QueryServerFriends
 Quest
 Queue up multiple text filter changes to the UI
 Queue: Total: %d Current: %d\n--------- END\n
@@ -35625,6 +35642,7 @@ Set this to a non-zero App ID to test cloud sync failure. The next sync request 
 Set this to the machine name where a trusted local Steam download cache is hosted, and we'll use it if available.
 Set this to use HTTPS on supported download servers
 Set use dynamic refresh in steam: %d
+Set using software calibration: %d\n
 Set-Cookie
 Set2ndFactorAuthCode
 SetAPICallResultWithoutPostingCallback
@@ -36053,6 +36071,7 @@ SetWebUITransportWebhelperPID
 SetWifiEnabled
 SetWifiScanningEnabled
 SetWorkshopItemsDisabledLocally
+Setting Auto Apply of Gyro drift candidate: %d\n
 Setting MESA_GLSL_CACHE_DIR=%s MESA_DISK_CACHE_READ_ONLY_FOZ_DBS=%s
 Setting VR Path Registry config path to %s\n
 Setting VR Path Registry log path to %s\n
@@ -36207,6 +36226,7 @@ Skip streaming driver checks
 SkipDiscoveryQueueItem
 SkipShaderProcessing
 Skipped
+Skipped Loading Antidrift because it was already loaded: %f, %f, %f \n
 Skipping CSystemManager Init because we are in a game process
 Skipping FSR sharpness change as the current filter is %d, updating config only
 Skipping TDP setting as it is externally managed
@@ -37185,6 +37205,7 @@ SteamMatchMaking008
 SteamMatchMaking009
 SteamMatchMakingServers001
 SteamMatchMakingServers002
+SteamMatchMakingServers003
 SteamNetworkPingLocation lists not sorted!
 SteamNetworkPingLocation_t truncated while printing to string.  Use a bigger buffer!
 SteamNetworking001
@@ -38249,6 +38270,7 @@ Timed out waiting for game mapping!\n
 Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
 Timed out waiting for mutex in GetInternal()\n
 Timed out waiting for mutex in PutInternal()\n
+Timed out waiting for progress after '%d' seconds, closing
 TimedOut
 TimedTrial.GetTimeRemaining#1
 TimedTrial.RecordPlaytime#1
@@ -38294,6 +38316,7 @@ ToggleVideoRecording_t
 Token
 TokenUsageEvent
 Told peer to stop acking up to %lld, but latest packet we have sent is %lld
+Told to shut down, closing
 Told to unpair by %llu
 Too Early
 Too Far behind
@@ -39123,6 +39146,7 @@ V_AppendSlash
 V_BasicHtmlEntityEncode
 V_CP437CharsToUTF8
 V_ComposeFileName
+V_ContainsBadPathCharacters
 V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
 V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
 V_CopyAndFixSlashes
@@ -39234,6 +39258,7 @@ Valencian
 Valid
 Valid palette required for paletted images
 Valid parameters:\n
+Valid parameters\n
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -40719,6 +40744,7 @@ Zulu
 [AppID %u] Requested playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for all items
+[AppID %u] Resolved path contains invalid filename characters, failing (%s)
 [AppID %u] Resolved path is malformed UTF-8, failing (%s)
 [AppID %u] Resolving file %s from state %d - invalid, leaving
 [AppID %u] Resolving file %s from state %d - synchronized, leaving
@@ -43973,6 +43999,7 @@ anti_deadzone_buffer
 anti_replay
 antidrift_enabled_sw
 antidrift_set
+antidrift_use_sw_biases
 anyExtendedKeyUsage
 anyPolicy
 any_one_of_tags
@@ -47580,6 +47607,7 @@ enable_traffic_priority
 enable_unreliable_fec
 enable_video_av1
 enable_video_hevc
+enable_video_pyrowave
 enable_video_streaming
 enabled
 enabled_branches
@@ -53441,15 +53469,15 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:471
 low-pri yield - /data/src/clientdll/clientjob.cpp:780
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6938
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2039
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2290
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2557
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3228
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3285
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3298
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3350
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3950
-low-pri yield - /data/src/clientdll/csinterface.cpp:222
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2054
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2310
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2577
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3248
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3305
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3318
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3370
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3971
+low-pri yield - /data/src/clientdll/csinterface.cpp:223
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3066
 low-pri yield - /data/src/clientdll/peercontentserver.cpp:712
@@ -54605,6 +54633,7 @@ m_pFirst == pInsertAfter
 m_pFirst == pInsertBefore
 m_pFirstTask
 m_pFrameRateSystemInformation
+m_pFriendsResponseTarget
 m_pFromChromeStream
 m_pGameDataWrittenEvent
 m_pGameStats
@@ -55250,6 +55279,7 @@ m_strScheme
 m_strServiceMethodName
 m_strSource
 m_strSourceFolder
+m_strSourceGroup
 m_strSourceName
 m_strStagingDirectory
 m_strStagingFolder
@@ -55614,6 +55644,7 @@ m_vecRegisteredWriters.HasElement( pFile )
 m_vecRegistrations
 m_vecRegistrationsPendingDependencies
 m_vecRemoteLaunchJobs
+m_vecRepairedTools
 m_vecReplacementCharacters
 m_vecRequestProcessorJobs
 m_vecRequestedChunks
@@ -56529,6 +56560,7 @@ network_config_version
 network_ping_location
 networkmgr
 never
+never-default
 new
 newConnection.m_eCmd != 0
 newWorkshopItem.m_unManifestID != k_uManifestIdInvalid
@@ -56787,6 +56819,7 @@ nm_connection_diff
 nm_connection_dump
 nm_connection_get_id
 nm_connection_get_setting_connection
+nm_connection_get_setting_ip4_config
 nm_connection_get_setting_wireless
 nm_connection_get_setting_wireless_security
 nm_connection_get_type
@@ -57489,6 +57522,7 @@ p.prime
 p.second
 p.tpBasis
 p09Y
+p2p downloads suspended, closing
 p2p-%s.discovery.steamserver.net
 p2p-friends-voice
 p2p-steam-netapi
@@ -60123,6 +60157,7 @@ s_listFakeIPLRU
 s_listFakeIPLRU[ data.m_nLRUIndex ] == m_nHandle
 s_mapAppNetworkingSummary
 s_mapCachedSDRConfig
+s_mapClientJobNames
 s_mapFakeIPs
 s_mapOpenSteamNetworkingSocketsConnections
 s_mapPublicKeys
@@ -60941,7 +60976,6 @@ sm_pWorkThreadPool
 sm_vecLogListeners
 sm_vecPublicKeys
 small_capsule_2x
-smapClientJobNames
 smime text error
 smime.p7m
 smime.p7z
@@ -61340,7 +61374,7 @@ stderr
 stdin
 stdout
 steam
-steam Jun 26 2026 02:02:33
+steam Jul  2 2026 02:18:49
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -63435,6 +63469,7 @@ use24hour_clock
 use_account_cart
 use_bluetooth_for_mic
 use_certificate_chain_file
+use_gyro_sw_biases
 use_qos
 use_secret_question
 use_tool_subprocess_reaper

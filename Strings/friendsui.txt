@@ -425,7 +425,6 @@ $\nY8O
 &\n"k_EContentCheckProvider_SteamLearn
 &\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
-&\n"k_EContentReportSubjectType_Unused
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -843,6 +842,7 @@ $\nY8O
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
+-\n)k_EContentReportSubjectType_CommentThread
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EProfileCustomizationTypeRecommendation
@@ -1039,6 +1039,7 @@ $\nY8O
 /data/src/common/crypto_passwordhash.cpp
 /data/src/common/crypto_scrypt.cpp
 /data/src/common/crypto_textencode.cpp
+/data/src/common/environmentmanager.cpp
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/html_jstypes.cpp
 /data/src/common/language.cpp
@@ -2002,7 +2003,6 @@ $\nY8O
 8CJSArray
 8CMsgCopy
 8CMsgFind
-8VL56
 8\foQS
 8\n4k_EClientNotificationType_SteamInputActionSetChanged
 8\n4k_EContentReportReason_GenderedNonConsensualMaterial
@@ -2153,6 +2153,7 @@ BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsOpen()
+BREAKPAD_DUMP_LOCATION
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BResolveHostString - unexpected DNS lookup flag '%d'\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
@@ -2710,6 +2711,17 @@ CPanelKeyBindingMapDictionary
 CParentalCache::OnParentalLockChangeBegin
 CPathString
 CPauseControllerInputMsg"
+CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
+CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
+CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
+CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
+CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
+CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
+CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
+CProcessEnvironmentManager::InitFromDll trying to initialize twice
+CProcessEnvironmentManager::InitFromMain trying to initialize twice
+CProcessEnvironmentManager::setenv called with no value
+CProcessEnvironmentManager::setenv invalid index %d\n
 CRC error
 CRC32_ProcessBuffer
 CRYPTO_memcmp
@@ -3063,6 +3075,8 @@ EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
 EHDRVisualization
 EJSRegisterMethodType
+ELegacyEnvironmentVariable
+ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENewSteamAnnouncementState
 EPersonaStateFlag
 EPressOutletAction
@@ -3942,6 +3956,7 @@ Minimize
 MinimizeToSysTray
 Missing IHDR before IDAT
 Missing PLTE before IDAT
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 Missing field: FileDescriptorProto.name.
 Missing name.
 Monday
@@ -4464,6 +4479,7 @@ SHA256_Init( &c )
 SKIN
 SKyu
 SPEED
+STEAMVIDEOTOKEN
 STEAM_
 STRING
 Saturday
@@ -4662,6 +4678,7 @@ StaticFileWriterThread()
 StatusText
 Steam - DirWatcher
 Steam ID does not pass strict parsing: '%s'
+Steam3Master
 SteamChina_SChinese
 SteamID
 SteamRealPath
@@ -4694,6 +4711,7 @@ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamUIGames001
 SteamUIUIInterfaceV001
+SteamUser
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 SteamVProf::CVProfile::ExitScope()
 Steam_BGetCallback
@@ -5337,6 +5355,7 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
+_STEAM_SETENV_MANAGER
 _Sat
 _SpewMessageType
 __assert_fail
@@ -5956,6 +5975,7 @@ enable_traffic_priority
 enable_unreliable_fec
 enable_video_av1
 enable_video_hevc
+enable_video_pyrowave
 enable_video_streaming
 enabled
 enabled_features
@@ -8238,6 +8258,7 @@ server_streaming
 service
 service $0 {\n
 set to see debug vgiui2 messages
+setenv
 setlocale
 setmntent
 settings

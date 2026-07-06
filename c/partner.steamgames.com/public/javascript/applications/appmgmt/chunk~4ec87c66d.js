@@ -40489,6 +40489,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditablePlan: _ } = _,
@@ -40616,6 +40619,8 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(_?.GetDueDate(), _.GetStartDate(), "partner"),
+          _ = (0, _._)(_.GetFeaturedItemID(), _.GetFeaturedItemType()),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_.GetPartnerID()),
           _ = (0, _.useCallback)(async () => {
             _.fnSetLoading(!0);
@@ -40665,32 +40670,48 @@
             closeModal: _,
           });
         let _;
-        return (
-          _.GetStoreItemKey()
-            ? _.GetPartnerID() > 0 &&
-              _.GetFeaturedItemID() > 0 &&
-              -1 == _.rgAppIDs?.findIndex((_) => _ == _.GetFeaturedItemID()) &&
-              (_ =
-                "Promotion has a partner ID set and a featured store item but the partner doesn't have access to the store item.")
-            : (_ =
-                "You must set a featured store item or advertiser app in order to send an email."),
-          _
-            ? (0, _.jsx)(_._, {
-                strTitle: "Can't Send Email",
-                strDescription: _,
-                onCancel: _,
-                onOK: _,
-                bAlertDialog: !0,
-              })
-            : (0, _.jsx)(_._, {
-                strTitle: "Send Email To Partner",
-                strDescription:
-                  "This will send an assets and discount event request to the partner",
-                onCancel: _,
-                onOK: _,
-                bSavePlanFirst: !0,
-              })
-        );
+        if (_.GetStoreItemKey()) {
+          if (_.GetPartnerID() > 0 && _.GetFeaturedItemID() > 0) {
+            const _ = _.GetFeaturedItemType();
+            _ == _._._ &&
+            -1 == _.rgAppIDs?.findIndex((_) => _ == _.GetFeaturedItemID())
+              ? (_ =
+                  "Promotion has a partner ID set and a featured app but the partner doesn't have access to the app.")
+              : (_ == _._._ || _ == _._._) &&
+                  _ &&
+                  _.rgAppIDs &&
+                  -1 ==
+                    _.rgAppIDs.findIndex((_) =>
+                      _.included_appids.some((_) => _ == _),
+                    )
+                ? (_ =
+                    "Promotion has a partner ID set and a featured app but the partner doesn't have any app within the package/bundle.")
+                : _
+                  ? _.rgAppIDs ||
+                    (_ =
+                      "Failed to load partner visible app; Is the partner id correct?")
+                  : (_ =
+                      "Failed to load feature store item; its required to be visible");
+          }
+        } else
+          _ =
+            "You must set a featured store item or advertiser app in order to send an email.";
+        return _
+          ? (0, _.jsx)(_._, {
+              strTitle: "Can't Send Email",
+              strDescription: _,
+              onCancel: _,
+              onOK: _,
+              bAlertDialog: !0,
+            })
+          : (0, _.jsx)(_._, {
+              strTitle: "Send Email To Partner",
+              strDescription:
+                "This will send an assets and discount event request to the partner",
+              onCancel: _,
+              onOK: _,
+              bSavePlanFirst: !0,
+            });
       }
       function _(_) {
         const { oEditablePlan: _ } = _,

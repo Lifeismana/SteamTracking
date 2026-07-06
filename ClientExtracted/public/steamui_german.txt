@@ -2108,8 +2108,8 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "Darf Steam während der Verwendung von %game% andere Spiele und Anwendungen herunterladen?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "Darf Steam während der Verwendung von %game% andere Spiele und Anwendungen herunterladen?"
 
-"Steam_BackgroundDownloadsDefault_Allow"	"Nach Grundeinstellung richten (Downloads zulassen)"
-"Steam_BackgroundDownloadsDefault_Deny"	"Nach Grundeinstellung richten (Downloads anhalten)"
+"Steam_BackgroundDownloadsDefault_Allow"	"Nach globaler Einstellung richten (Downloads zulassen)"
+"Steam_BackgroundDownloadsDefault_Deny"	"Nach globaler Einstellung richten (Downloads anhalten)"
 "Steam_BackgroundDownloadsAllow"	"Downloads im Hintergrund immer zulassen"
 "Steam_BackgroundDownloadsDeny"	"Downloads im Hintergrund nie zulassen"
 
@@ -2122,7 +2122,7 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 
 "Steam_GameProperties_BPMOverlay_PerGameOptIn" "Spielspezifische Einstellung für BPM-Overlay bei aktiver Steam-Eingabe verwenden (Spiel-Neustart erforderlich)"
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOff" "\"Aus\" erzwingen"
-"Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Die vom Entwickler vorgeschlagene Einstellung oder Ihre Standardeinstellung verwenden."
+"Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Die vom Entwickler vorgeschlagenen Einstellungen oder Ihre globalen Einstellungen verwenden."
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOn" "\"An\" erzwingen"
 
 "Steam_GameProperties_SteamPlaySettings_Override" "Die Verwendung eines bestimmten Kompatibilitätswerkzeugs für Steam Play erzwingen"
