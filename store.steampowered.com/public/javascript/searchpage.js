@@ -681,11 +681,14 @@ function InitSearchPage()
 {
 	if ( g_bUseHistoryAPI )
 	{
-		$J(window).on('popstate', function( e ) {
-			var oState = e.originalEvent.state;
+		if ( !g_bUseNavigationAPI )
+		{
+			$J(window).on('popstate', function( e ) {
+				var oState = e.originalEvent.state;
 
-			FillFormFromNavigation( window.location.search ? window.location.search.substr(1) : '' );
-		});
+				FillFormFromNavigation( window.location.search ? window.location.search.substr(1) : '' );
+			});
+		}
 
 		if ( window.location.hash.length )
 		{
