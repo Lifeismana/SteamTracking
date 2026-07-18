@@ -587,23 +587,26 @@
       }
       var S;
       !(function (e) {
-        (e.RespondToClanInvite = function (e, t) {
-          return e.SendMsg("Clan.RespondToClanInvite#1", (0, l.I8)(b, t), M, {
-            ePrivilege: 1,
-          });
+        (e.RespondToClanInvite = function (e, t, r) {
+          return e.SendMsg(
+            "Clan.RespondToClanInvite#1",
+            (0, l.I8)(b, t, r),
+            M,
+            { ePrivilege: 1 },
+          );
         }),
-          (e.GetDraftAndRecentPartnerEventSnippet = function (e, t) {
+          (e.GetDraftAndRecentPartnerEventSnippet = function (e, t, r) {
             return e.SendMsg(
               "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, l.I8)(p, t),
+              (0, l.I8)(p, t, r),
               y,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetPartnerEventsByBuildIDRange = function (e, t) {
+          (e.GetPartnerEventsByBuildIDRange = function (e, t, r) {
             return e.SendMsg(
               "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, l.I8)(w, t),
+              (0, l.I8)(w, t, r),
               f,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );

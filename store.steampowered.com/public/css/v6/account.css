@@ -780,6 +780,22 @@ div.youraccount_history_home>div.account_wallet {
 	margin-bottom: 80px;
 }
 
+.license_paginator_ctn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: end;
+	gap: 18px;
+	padding-bottom: 12px;
+}
+
+.license_paginator_next {
+	display: inline-block;
+	background-color: #1A9FFF;
+	color: #fff;
+	padding: 4px 8px;
+}
+
 .account_table th {
 	text-align: left;
 	text-transform: uppercase;

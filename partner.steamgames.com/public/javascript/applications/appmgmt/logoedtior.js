@@ -203,8 +203,8 @@
         _ = "UpperCenter",
         x = "CenterCenter",
         B = "BottomCenter";
-      var I = o(20521),
-        C = o.n(I),
+      var C = o(20521),
+        I = o.n(C),
         v = o(48077),
         S = o.n(v),
         A = o(51272),
@@ -212,15 +212,15 @@
         y = o(10050),
         R = o(25489);
       const N = {
-          exit: C().FullscreenExitStart,
-          exitActive: C().FullscreenExitActive,
-          exitDone: C().FullscreenExitDone,
-          enter: C().FullscreenEnterStart,
-          enterDone: C().FullscreenEnterDone,
-          enterActive: C().FullscreenEnterActive,
+          exit: I().FullscreenExitStart,
+          exitActive: I().FullscreenExitActive,
+          exitDone: I().FullscreenExitDone,
+          enter: I().FullscreenEnterStart,
+          enterDone: I().FullscreenEnterDone,
+          enterActive: I().FullscreenEnterActive,
         },
-        O = (0, A.i_)(S()["duration-app-launch"]),
-        j = { pinnedPosition: f, nWidthPct: 50, nHeightPct: 50 },
+        j = (0, A.i_)(S()["duration-app-launch"]),
+        O = { pinnedPosition: f, nWidthPct: 50, nHeightPct: 50 },
         E = i.createContext({ bFullscreen: !1 });
       class T extends i.Component {
         m_refTopCapsule = i.createRef();
@@ -244,7 +244,7 @@
           );
         }
         GetLogoPosition() {
-          return this.state.logoPosition || this.props.logoPosition || j;
+          return this.state.logoPosition || this.props.logoPosition || O;
         }
         SetPinnedPosition(e) {
           this.setState(
@@ -297,22 +297,22 @@
               fnOnPositionChanged: this.OnPositionChanged,
               children: [
                 (0, n.jsx)("div", {
-                  className: `${C().PinBox} ${C().BottomLeft}`,
+                  className: `${I().PinBox} ${I().BottomLeft}`,
                   onClick: () => this.SetPinnedPosition(f),
                   title: "Pin to Bottom Left",
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().PinBox} ${C().UpperCenter}`,
+                  className: `${I().PinBox} ${I().UpperCenter}`,
                   onClick: () => this.SetPinnedPosition(_),
                   title: "Pin to Top Center",
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().PinBox} ${C().CenterCenter}`,
+                  className: `${I().PinBox} ${I().CenterCenter}`,
                   onClick: () => this.SetPinnedPosition(x),
                   title: "Pin to Center",
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().PinBox} ${C().BottomCenter}`,
+                  className: `${I().PinBox} ${I().BottomCenter}`,
                   onClick: () => this.SetPinnedPosition(B),
                   title: "Pin to Bottom Center",
                 }),
@@ -403,15 +403,15 @@
             { bHasLogoImage: l } = this.state,
             c = 1 == this.props.rgHeaderImages.length,
             d = (0, m.A)(
-              C().TopCapsule,
+              I().TopCapsule,
               s,
-              !this.state.bHasHeaderImage && C().NoArt,
-              (!this.props.hasHeroImage || c) && C().FallbackArt,
+              !this.state.bHasHeaderImage && I().NoArt,
+              (!this.props.hasHeroImage || c) && I().FallbackArt,
               !l && i,
             ),
             h = { "--header-height": null == a ? void 0 : a + "px" };
           return (0, n.jsx)(y.M, {
-            timeout: O,
+            timeout: j,
             appear: !0,
             in: this.props.bFullscreen,
             classNames: N,
@@ -438,14 +438,14 @@
                       {
                         strLogoImageURL: e[0],
                         editMode: t,
-                        logoPosition: o || j,
+                        logoPosition: o || O,
                         fnOnPositionChanged: t && r,
                         fullscreen: this.props.bFullscreen,
                         children: (0, n.jsx)(p.c, {
                           ref: this.m_refLogoImage,
                           className: (0, m.A)(
-                            C().TitleLogo,
-                            this.state.bLogoLoaded && C().Loaded,
+                            I().TitleLogo,
+                            this.state.bLogoLoaded && I().Loaded,
                           ),
                           rgSources: e,
                           onLoad: this.OnLogoLoad,
@@ -456,7 +456,7 @@
                       e[0],
                     ),
                   this.props.children,
-                  (0, n.jsx)("div", { className: C().TopGradient }),
+                  (0, n.jsx)("div", { className: I().TopGradient }),
                 ],
               }),
           });
@@ -543,9 +543,9 @@
                   (0, n.jsx)("img", {
                     src: this.props.rgBlurImages[this.state.nBlurImageIndex],
                     className: (0, m.A)(
-                      C().ImgSrc,
-                      C().ImgBlur,
-                      C().ImgBlurBackdrop,
+                      I().ImgSrc,
+                      I().ImgBlur,
+                      I().ImgBlurBackdrop,
                     ),
                     onError: this.OnBlurImageFailed,
                   }),
@@ -554,9 +554,9 @@
                   !this.props.bLowPerfMode &&
                   (0, n.jsx)(u.m, {
                     className: (0, m.A)(
-                      C().ImgSrc,
-                      C().ImgBlur,
-                      C().ImgBlurBackdrop,
+                      I().ImgSrc,
+                      I().ImgBlur,
+                      I().ImgBlurBackdrop,
                     ),
                     elementRef: this.m_refCanvasBlurImage,
                     updateRate: 0,
@@ -570,7 +570,7 @@
             (0, n.jsx)(E.Consumer, {
               children: (t) =>
                 (0, n.jsx)(y.M, {
-                  timeout: O,
+                  timeout: j,
                   appear: !0,
                   in: t.bFullscreen,
                   classNames: N,
@@ -578,8 +578,8 @@
                     (0, n.jsxs)("div", {
                       ref: t,
                       className: (0, m.A)(
-                        C().HeaderBackgroundImage,
-                        C().Glassy,
+                        I().HeaderBackgroundImage,
+                        I().Glassy,
                       ),
                       children: [
                         !this.state.bUseCanvasBlur &&
@@ -589,14 +589,14 @@
                             src: this.props.rgBlurImages[
                               this.state.nBlurImageIndex
                             ],
-                            className: (0, m.A)(C().ImgSrc, C().ImgBlur),
+                            className: (0, m.A)(I().ImgSrc, I().ImgBlur),
                             onError: this.OnBlurImageFailed,
                           }),
                         this.state.bUseCanvasBlur &&
                           this.state.bBackgroundLoaded &&
                           !this.props.bLowPerfMode &&
                           (0, n.jsx)(u.m, {
-                            className: (0, m.A)(C().ImgSrc, C().ImgBlur),
+                            className: (0, m.A)(I().ImgSrc, I().ImgBlur),
                             elementRef: this.m_refCanvasBlurImage,
                             updateRate: 0,
                             width: 192,
@@ -605,13 +605,13 @@
                             blurAmount: 3,
                           }),
                         (0, n.jsx)("div", {
-                          className: C().ImgContainer,
+                          className: I().ImgContainer,
                           children:
                             this.HasHeaderImages() &&
                             (0, n.jsx)(p.c, {
                               ref: this.m_refBackgroundImage,
                               rgSources: this.props.rgHeaderImages,
-                              className: C().ImgSrc,
+                              className: I().ImgSrc,
                               onLoad: this.OnHeaderLoad,
                               onIncrementalError: this.OnIncrementalError,
                               onError: this.props.onError,
@@ -647,25 +647,25 @@
               width: `${t.nWidthPct}%`,
               height: `${t.nHeightPct}%`,
             }),
-          g = (0, m.A)(C().BoxSizer, C()[t.pinnedPosition]);
+          g = (0, m.A)(I().BoxSizer, I()[t.pinnedPosition]);
         return (0, n.jsx)("div", {
-          className: C().BoxSizerContainer,
+          className: I().BoxSizerContainer,
           children: (0, n.jsxs)("div", {
-            className: C().BoxSizerValidRegion,
+            className: I().BoxSizerValidRegion,
             children: [
               !e.editMode &&
                 (0, n.jsx)("div", {
                   className: g,
                   style: p,
                   children: (0, n.jsx)(y.M, {
-                    timeout: O,
+                    timeout: j,
                     appear: !0,
                     in: a,
                     classNames: N,
                     children: (e) =>
                       (0, n.jsx)("div", {
                         ref: e,
-                        className: C().TitleImageContainer,
+                        className: I().TitleImageContainer,
                         children: s,
                       }),
                   }),
@@ -980,10 +980,10 @@
               bottom: this.state.curBottomPosPct + "%",
             },
             t = (0, m.A)(
-              C().BoxSizerDragBox,
+              I().BoxSizerDragBox,
               this.state.EdgeDown &&
-                (0, m.A)(C().EdgeDown, C()[this.state.EdgeDown]),
-              C()[this.props.pinType],
+                (0, m.A)(I().EdgeDown, I()[this.state.EdgeDown]),
+              I()[this.props.pinType],
             );
           return (0, n.jsx)("div", {
             className: t,
@@ -991,69 +991,69 @@
             ref: this.LinkRegionBoxRef,
             draggable: !1,
             children: (0, n.jsxs)("div", {
-              className: C().BoxSizerGridBox,
+              className: I().BoxSizerGridBox,
               children: [
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().TopLeft}`,
+                  className: `${I().BoxSizerEdge} ${I().TopLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.topleft);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().Top}`,
+                  className: `${I().BoxSizerEdge} ${I().Top}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.top);
                   },
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().TopRight}`,
+                  className: `${I().BoxSizerEdge} ${I().TopRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.topright);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().Left}`,
+                  className: `${I().BoxSizerEdge} ${I().Left}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.left);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().Middle}`,
+                  className: `${I().BoxSizerEdge} ${I().Middle}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.middle);
                   },
                   draggable: !1,
                   children: (0, n.jsx)("div", {
-                    className: C().TitleImageContainer,
+                    className: I().TitleImageContainer,
                     children: this.props.children,
                   }),
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().Right}`,
+                  className: `${I().BoxSizerEdge} ${I().Right}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.right);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().BottomLeft}`,
+                  className: `${I().BoxSizerEdge} ${I().BottomLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.bottomleft);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().Bottom}`,
+                  className: `${I().BoxSizerEdge} ${I().Bottom}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.bottom);
                   },
                   draggable: !1,
                 }),
                 (0, n.jsx)("div", {
-                  className: `${C().BoxSizerEdge} ${C().BottomRight}`,
+                  className: `${I().BoxSizerEdge} ${I().BottomRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, H.bottomright);
                   },
@@ -1076,7 +1076,7 @@
         t.length > 8 && (s = Math.max(s - (t.length - 5) / 2, 5.8));
         const [i, r] = (0, b.l)();
         return (0, n.jsxs)("svg", {
-          className: (0, m.A)(C().SVGTitle, o),
+          className: (0, m.A)(I().SVGTitle, o),
           viewBox: "0 0 300 14",
           children: [
             (0, n.jsx)("defs", {
@@ -1115,19 +1115,19 @@
           r = i.useRef(null);
         return (0, n.jsx)(d.A, {
           nodeRef: r,
-          timeout: O,
+          timeout: j,
           appear: !0,
           in: s.bFullscreen,
           classNames: N,
           children: (0, n.jsxs)("div", {
             ref: r,
-            className: (0, m.A)(C().TitleSection, t ? C().NoLogo : ""),
+            className: (0, m.A)(I().TitleSection, t ? I().NoLogo : ""),
             children: [
               (0, n.jsx)("div", {
-                className: C().TextNameSpace,
+                className: I().TextNameSpace,
                 children: !!t && (0, n.jsx)(G, { title: t }),
               }),
-              (0, n.jsx)("div", { className: C().Features, children: o }),
+              (0, n.jsx)("div", { className: I().Features, children: o }),
             ],
           }),
         });
@@ -1146,14 +1146,14 @@
             (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
             (this.m_unAppID = e.unAppID),
             (this.m_strAppName = e.strAppName),
-            (this.m_logoPosition = e.logoPosition || j),
+            (this.m_logoPosition = e.logoPosition || O),
             (this.m_strSaveURL = e.strSaveURL || null),
             this.m_logoPosition.pinnedPosition ||
-              (this.m_logoPosition.pinnedPosition = j.pinnedPosition),
+              (this.m_logoPosition.pinnedPosition = O.pinnedPosition),
             this.m_logoPosition.nHeightPct ||
-              (this.m_logoPosition.nHeightPct = j.nHeightPct),
+              (this.m_logoPosition.nHeightPct = O.nHeightPct),
             this.m_logoPosition.nWidthPct ||
-              (this.m_logoPosition.nWidthPct = j.nWidthPct);
+              (this.m_logoPosition.nWidthPct = O.nWidthPct);
         }
         GetHeroURL() {
           return this.m_strLibraryHeroURL;
@@ -1328,10 +1328,9 @@
       );
       function ne(e) {
         const { highlightedName: t } = e,
-          o = i.useCallback(
-            (e) => e && e.scrollIntoView({ block: "center" }),
-            [],
-          ),
+          o = i.useCallback((e) => {
+            e && e.scrollIntoView({ block: "center" });
+          }, []),
           s = i.useMemo(() => {
             if (-1 !== se.indexOf(t)) return se;
             {
@@ -1395,7 +1394,7 @@
               try {
                 let o = new FormData();
                 o.append("json", "1"),
-                  o.append("sessionid", re.TS.SESSIONID),
+                  o.append("sessionid", (0, re.KC)()),
                   o.append(
                     "app[assets][library_logo][logo_position][pinned_position]",
                     t.pinnedPosition,

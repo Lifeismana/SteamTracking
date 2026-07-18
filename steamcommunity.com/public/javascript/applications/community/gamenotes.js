@@ -261,6 +261,7 @@
       B.Message;
       B.Message;
       B.Message;
+      B.Message;
       class w extends B.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -3932,59 +3933,66 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.BeginHTTPUpload = function (e, t) {
-            return e.SendMsg("Cloud.BeginHTTPUpload#1", (0, g.I8)(y, t), _, {
+          (e.BeginHTTPUpload = function (e, t, r) {
+            return e.SendMsg("Cloud.BeginHTTPUpload#1", (0, g.I8)(y, t, r), _, {
               ePrivilege: 1,
             });
           }),
-          (e.CommitHTTPUpload = function (e, t) {
-            return e.SendMsg("Cloud.CommitHTTPUpload#1", (0, g.I8)(z, t), S, {
+          (e.CommitHTTPUpload = function (e, t, r) {
+            return e.SendMsg(
+              "Cloud.CommitHTTPUpload#1",
+              (0, g.I8)(z, t, r),
+              S,
+              { ePrivilege: 1 },
+            );
+          }),
+          (e.BeginUGCUpload = function (e, t, r) {
+            return e.SendMsg("Cloud.BeginUGCUpload#1", (0, g.I8)(C, t, r), R, {
               ePrivilege: 1,
             });
           }),
-          (e.BeginUGCUpload = function (e, t) {
-            return e.SendMsg("Cloud.BeginUGCUpload#1", (0, g.I8)(C, t), R, {
+          (e.CommitUGCUpload = function (e, t, r) {
+            return e.SendMsg("Cloud.CommitUGCUpload#1", (0, g.I8)(U, t, r), F, {
               ePrivilege: 1,
             });
           }),
-          (e.CommitUGCUpload = function (e, t) {
-            return e.SendMsg("Cloud.CommitUGCUpload#1", (0, g.I8)(U, t), F, {
-              ePrivilege: 1,
-            });
-          }),
-          (e.GetFileDetails = function (e, t) {
-            return e.SendMsg("Cloud.GetFileDetails#1", (0, g.I8)(v, t), T, {
+          (e.GetFileDetails = function (e, t, r) {
+            return e.SendMsg("Cloud.GetFileDetails#1", (0, g.I8)(v, t, r), T, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.GetSingleFileInfo = function (e, t) {
-            return e.SendMsg("Cloud.GetSingleFileInfo#1", (0, g.I8)(W, t), q, {
-              bConstMethod: !0,
+          (e.GetSingleFileInfo = function (e, t, r) {
+            return e.SendMsg(
+              "Cloud.GetSingleFileInfo#1",
+              (0, g.I8)(W, t, r),
+              q,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
+          }),
+          (e.ShareFile = function (e, t, r) {
+            return e.SendMsg("Cloud.ShareFile#1", (0, g.I8)(_e, t, r), he, {
               ePrivilege: 1,
             });
           }),
-          (e.ShareFile = function (e, t) {
-            return e.SendMsg("Cloud.ShareFile#1", (0, g.I8)(_e, t), he, {
+          (e.EnumerateUserFiles = function (e, t, r) {
+            return e.SendMsg(
+              "Cloud.EnumerateUserFiles#1",
+              (0, g.I8)(x, t, r),
+              O,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
+          }),
+          (e.Delete = function (e, t, r) {
+            return e.SendMsg("Cloud.Delete#1", (0, g.I8)(I, t, r), N, {
               ePrivilege: 1,
             });
           }),
-          (e.EnumerateUserFiles = function (e, t) {
-            return e.SendMsg("Cloud.EnumerateUserFiles#1", (0, g.I8)(x, t), O, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (e.Delete = function (e, t) {
-            return e.SendMsg("Cloud.Delete#1", (0, g.I8)(I, t), N, {
-              ePrivilege: 1,
-            });
-          }),
-          (e.GetClientEncryptionKey = function (e, t) {
+          (e.GetClientEncryptionKey = function (e, t, r) {
             return e.SendMsg(
               "Cloud.GetClientEncryptionKey#1",
-              (0, g.I8)(E, t),
+              (0, g.I8)(E, t, r),
               A,
               { ePrivilege: 1 },
             );
@@ -4001,10 +4009,10 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.BeginAppUploadBatch = function (e, t) {
+          (e.BeginAppUploadBatch = function (e, t, r) {
             return e.SendMsg(
               "Cloud.BeginAppUploadBatch#1",
-              (0, g.I8)(J, t),
+              (0, g.I8)(J, t, r),
               Z,
               { ePrivilege: 1 },
             );
@@ -4016,42 +4024,45 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.CompleteAppUploadBatchBlocking = function (e, t) {
+          (e.CompleteAppUploadBatchBlocking = function (e, t, r) {
             return e.SendMsg(
               "Cloud.CompleteAppUploadBatchBlocking#1",
-              (0, g.I8)(te, t),
+              (0, g.I8)(te, t, r),
               re,
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientBeginFileUpload = function (e, t) {
+          (e.ClientBeginFileUpload = function (e, t, r) {
             return e.SendMsg(
               "Cloud.ClientBeginFileUpload#1",
-              (0, g.I8)(ne, t),
+              (0, g.I8)(ne, t, r),
               se,
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientCommitFileUpload = function (e, t) {
+          (e.ClientCommitFileUpload = function (e, t, r) {
             return e.SendMsg(
               "Cloud.ClientCommitFileUpload#1",
-              (0, g.I8)(ae, t),
+              (0, g.I8)(ae, t, r),
               oe,
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientFileDownload = function (e, t) {
+          (e.ClientFileDownload = function (e, t, r) {
             return e.SendMsg(
               "Cloud.ClientFileDownload#1",
-              (0, g.I8)(le, t),
+              (0, g.I8)(le, t, r),
               ce,
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientDeleteFile = function (e, t) {
-            return e.SendMsg("Cloud.ClientDeleteFile#1", (0, g.I8)(de, t), me, {
-              ePrivilege: 1,
-            });
+          (e.ClientDeleteFile = function (e, t, r) {
+            return e.SendMsg(
+              "Cloud.ClientDeleteFile#1",
+              (0, g.I8)(de, t, r),
+              me,
+              { ePrivilege: 1 },
+            );
           }),
           (e.ClientConflictResolution = function (e, t) {
             return e.SendNotification(
@@ -4060,31 +4071,34 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.GetAppFileChangelist = function (e, t) {
+          (e.GetAppFileChangelist = function (e, t, r) {
             return e.SendMsg(
               "Cloud.GetAppFileChangelist#1",
-              (0, g.I8)(Q, t),
+              (0, g.I8)(Q, t, r),
               V,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.SuspendAppSession = function (e, t) {
+          (e.SuspendAppSession = function (e, t, r) {
             return e.SendMsg(
               "Cloud.SuspendAppSession#1",
-              (0, g.I8)(ge, t),
+              (0, g.I8)(ge, t, r),
               Be,
               { ePrivilege: 1 },
             );
           }),
-          (e.ResumeAppSession = function (e, t) {
-            return e.SendMsg("Cloud.ResumeAppSession#1", (0, g.I8)(be, t), fe, {
-              ePrivilege: 1,
-            });
+          (e.ResumeAppSession = function (e, t, r) {
+            return e.SendMsg(
+              "Cloud.ResumeAppSession#1",
+              (0, g.I8)(be, t, r),
+              fe,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.SignalAppLaunchIntent = function (e, t) {
+          (e.SignalAppLaunchIntent = function (e, t, r) {
             return e.SendMsg(
               "Cloud.SignalAppLaunchIntent#1",
-              (0, g.I8)(G, t),
+              (0, g.I8)(G, t, r),
               L,
               { ePrivilege: 1 },
             );
@@ -4096,10 +4110,10 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientGetAppQuotaUsage = function (e, t) {
+          (e.ClientGetAppQuotaUsage = function (e, t, r) {
             return e.SendMsg(
               "Cloud.ClientGetAppQuotaUsage#1",
-              (0, g.I8)($, t),
+              (0, g.I8)($, t, r),
               H,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -4825,7 +4839,7 @@
       }
       var It = r(58632),
         Nt = r.n(It),
-        Et = r(34214),
+        Et = r(43261),
         At = r(30470);
       let kt;
       const Pt = 864e5;

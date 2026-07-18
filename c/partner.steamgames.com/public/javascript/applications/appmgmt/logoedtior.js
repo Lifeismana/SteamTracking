@@ -1492,14 +1492,12 @@
 ]`);
       function _(_) {
         const { highlightedName: _ } = _,
-          _ = _.useCallback(
-            (_) =>
-              _ &&
+          _ = _.useCallback((_) => {
+            _ &&
               _.scrollIntoView({
                 block: "center",
-              }),
-            [],
-          ),
+              });
+          }, []),
           _ = _.useMemo(() => {
             if (-1 !== _.indexOf(_)) return _;
             {
@@ -1573,7 +1571,7 @@
                 try {
                   let _ = new FormData();
                   __webpack_require__.append("json", "1"),
-                    __webpack_require__.append("sessionid", _._.SESSIONID),
+                    __webpack_require__.append("sessionid", (0, _._)()),
                     __webpack_require__.append(
                       "app[assets][library_logo][logo_position][pinned_position]",
                       _.pinnedPosition,

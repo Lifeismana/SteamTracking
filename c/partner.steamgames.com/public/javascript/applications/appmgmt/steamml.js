@@ -238,7 +238,7 @@
             30,
             async () =>
               await _().get(
-                `${_._.PARTNER_BASE_URL}steamml/get_schemas?appid=${_}&includesteammlapp=${_}&sessionid=${_._.SESSIONID}`,
+                `${_._.PARTNER_BASE_URL}steamml/get_schemas?appid=${_}&includesteammlapp=${_}&sessionid=${(0, _._)()}`,
               ),
             (_) => _.data.schemas,
           );
@@ -248,7 +248,7 @@
             30,
             async () =>
               await _().get(
-                `${_._.PARTNER_BASE_URL}steamml/get_schema_details?appid=${_}&schemaid=${_}&sessionid=${_._.SESSIONID}`,
+                `${_._.PARTNER_BASE_URL}steamml/get_schema_details?appid=${_}&schemaid=${_}&sessionid=${(0, _._)()}`,
               ),
             (_) => JSON.parse(_.data.schema_description_json),
           );
@@ -258,7 +258,7 @@
             30,
             async () =>
               await _().get(
-                `${_._.PARTNER_BASE_URL}steamml/get_problems?sessionid=${_._.SESSIONID}`,
+                `${_._.PARTNER_BASE_URL}steamml/get_problems?sessionid=${(0, _._)()}`,
               ),
             (_) => _.data.problems,
           );
@@ -268,7 +268,7 @@
             30,
             async () =>
               await _().get(
-                `${_._.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${_}&sessionid=${_._.SESSIONID}`,
+                `${_._.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${_}&sessionid=${(0, _._)()}`,
               ),
             (_) => _.data.problem,
           );
@@ -276,7 +276,7 @@
         CreateProblem(_, _, _) {
           let _ = new FormData();
           return (
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("name", _),
             _.append("description", _),
             _.append("schemaids", __webpack_require__.join(",")),
@@ -302,7 +302,7 @@
         }
         EditProblem(_, _) {
           return (
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("problemid", _.toString()),
             _()
               .post(`${_._.PARTNER_BASE_URL}steamml/edit_problem`, _)
@@ -314,7 +314,7 @@
         DeleteProblem(_) {
           let _ = new FormData();
           return (
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("problemid", _.toString()),
             _()
               .post(`${_._.PARTNER_BASE_URL}steamml/delete_problem`, _)

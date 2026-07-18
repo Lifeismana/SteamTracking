@@ -904,7 +904,7 @@
           this.m_mapExistingEvents.has(_) &&
             (this.m_mapExistingEvents.get(_).deleteInProgress = !0);
           let _ = new URLSearchParams();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("bDelete", "1"),
             __webpack_require__.append("gid", _);
           const _ = await _().post(
@@ -1239,7 +1239,7 @@
           try {
             const _ = `${_._.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${_}`,
               _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("gidclanevent", _),
               _.append("json", JSON.stringify(_)),
               _.append("pageStyles", JSON.stringify(_));

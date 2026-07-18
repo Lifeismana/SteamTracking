@@ -1331,7 +1331,7 @@ License: MIT
         r = n(88942),
         o = n(61739),
         l = n(23809),
-        d = n(34214);
+        d = n(43261);
       function c(e, t) {
         const n = (0, l.KV)();
         return (0, r.I)({
@@ -2872,7 +2872,9 @@ License: MIT
                   mutationKey: ["fetch_faq_translation", e],
                   mutationFn: async (n) => {
                     const i = ke.w.Init(Ce.PS);
-                    i.Body().set_faq_id(e), i.Body().set_language(n);
+                    i.Body().set_faq_id(e),
+                      i.Body().set_language(n),
+                      i.Body().set_steamid(h.UF.CLANSTEAMID);
                     return (
                       await Ce.RD.FetchLocalizationFromCrowdIn(t, i)
                     ).GetEResult();
@@ -2892,12 +2894,13 @@ License: MIT
                   },
                 });
               })(h.UF.CLANSTEAMID, t.GetFAQID())),
-            [i, a] = (0, r.useState)(o.xPp);
-          let s = "";
+            [i, a] = (0, r.useState)(o.xPp),
+            [s, l] = (0, r.useState)(!1);
+          let d = "";
           return (
             n.isSuccess &&
               n.data.crowdin_file_id &&
-              (s = `https://valve.crowdin.com/editor/${n.data.crowdin_project_id}/${n.data.crowdin_file_id}`),
+              (d = `https://valve.crowdin.com/editor/${n.data.crowdin_project_id}/${n.data.crowdin_file_id}`),
             null
           );
         }),

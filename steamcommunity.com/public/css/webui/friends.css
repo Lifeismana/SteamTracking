@@ -163,6 +163,7 @@
   border-radius: 20px;
   align-items: center;
 }
+.shared_svg_library_SteamMachineCompatLogo_x5w70,
 .shared_svg_library_SteamDeckCompatLogo_1dzQL {
   width: 20px;
   height: 20px;
@@ -4125,6 +4126,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_FieldLeftColumn_2tALp {
   align-self: center;
   flex-grow: 1;
+  min-width: 0;
 }
 .gamepaddialog_Field_eKmEX:not(
     .gamepaddialog_WithChildrenBelow_37xzV
@@ -20213,14 +20215,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   transition: background-color 150ms ease-in;
 }
 .quickaccessvoicecontrolssteamdeck_GroupRoomContainer_2MbsP {
+  width: 100%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding: 8px;
-}
-#QuickAccess-Menu .quickaccessvoicecontrolssteamdeck_GroupRoomContainer_2MbsP {
-  min-width: 81vw;
 }
 .quickaccessvoicecontrolssteamdeck_GroupRoomContainer_2MbsP.quickaccessvoicecontrolssteamdeck_ActiveVoiceRoom_xHmjh.quickaccessvoicecontrolssteamdeck_UserInRoom_1hpKh
   .quickaccessvoicecontrolssteamdeck_RoomHeader_1lbdO
@@ -31920,7 +31920,7 @@ div:hover > .BBCodeCollapseControl {
 .trailerplayerdesktop_TitleRow_2WV2b {
   position: absolute;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   max-width: 80%;
   padding: 4px 8px;
   background: linear-gradient(
@@ -31988,7 +31988,7 @@ div:hover > .BBCodeCollapseControl {
   min-width: 84px;
 }
 .trailerplayerdesktop_VolumeSlider_HqVrl {
-  padding: 0 0 0 8px;
+  padding-inline-start: 8px;
   transform: translateX(0px);
 }
 .trailerplayerdesktop_VolumeSlider_HqVrl .SliderTrack {
@@ -40795,7 +40795,7 @@ button.DialogButton:enabled:active.gpfocus {
   }
 }
 button.DialogButton.Primary:hover,
-button.DialogButton.Primary.gpfocus {
+button.DialogButton.Primary.gpfocus:not(.Disabled) {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 0%;
   background-size: 330% 100%;
@@ -43614,6 +43614,18 @@ html.web_chat_frame body.ContextMenuPopupBody {
   height: 20px;
   margin-inline-end: 0;
   color: #67707b;
+}
+.friendsui-container .SVGIcon_ScratchPad,
+.friendsui-container .SVGIcon_Button.SVGIcon_ScratchPad {
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  color: #898989;
+}
+.GamepadMode .friendsui-container .SVGIcon_ScratchPad,
+.GamepadMode .friendsui-container .SVGIcon_Button.SVGIcon_ScratchPad {
+  margin-inline-start: 2px;
+  margin-inline-end: 6px;
 }
 .GamepadMode .friendsui-container .SVGIcon_TextRoom,
 .GamepadMode .friendsui-container .SVGIcon_Button.SVGIcon_TextRoom {

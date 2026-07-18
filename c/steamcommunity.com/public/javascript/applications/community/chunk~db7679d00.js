@@ -1978,7 +1978,7 @@
                   .preferences();
               } else {
                 let _ = {
-                  sessionid: _._.SESSIONID,
+                  sessionid: (0, _._)(),
                   origin: _(),
                 };
                 const _ = await _().get(
@@ -2007,7 +2007,7 @@
                     .words();
                 } else {
                   let _ = {
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                     origin: _(),
                   };
                   const _ = await _().get(
@@ -2236,7 +2236,7 @@
         if (!_) {
           const _ = new Set();
           let _ = {
-            sessionid: _._.SESSIONID,
+            sessionid: (0, _._)(),
             origin: _(),
           };
           _()

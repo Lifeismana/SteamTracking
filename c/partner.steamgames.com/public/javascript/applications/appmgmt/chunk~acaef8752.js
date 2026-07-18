@@ -4,9 +4,9 @@
   {
     chunkid: (module) => {
       module.exports = {
-        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
-        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
-        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
+        EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
+        EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
+        ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
       };
     },
     chunkid: (module) => {
@@ -111,6 +111,70 @@
         CropPreviewGroup: "_1RI-QM2ZjK9MaVjeCLE_LF",
         CropPreviewLabel: "_3_zyLDUyxZNyexfX3kNOPv",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { color: _, onChange: _, strTitle: _, disableAlpha: _ } = _,
+          [_, _] = (0, _.useState)(() => _ || "rgba(255, 255, 255, 1)"),
+          _ = (0, _.useCallback)(async () => {
+            if ("EyeDropper" in window)
+              try {
+                const _ = new window.EyeDropper(),
+                  _ = await _.open(),
+                  _ = (function (_) {
+                    const _ = parseInt(_.slice(1), 16);
+                    return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+                  })(_.sRGBHex);
+                _(_), __webpack_require__(_);
+              } catch (_) {
+                console.warn(_._.Localize("#Sale_EyeDropperFailed"), _);
+              }
+            else alert(_._.Localize("#Sale_EyeDropperError"));
+          }, [_]);
+        return (0, _.jsxs)("div", {
+          children: [
+            Boolean(_) &&
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              onChange: (_) => {
+                const _ = (function (_) {
+                  return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
+                })(_);
+                _(_), __webpack_require__(_);
+              },
+              color: _,
+              disableAlpha: _,
+              className: _().ColorPickerCtn,
+            }),
+            (0, _.jsx)("div", {
+              className: _().EyeDropperCtn,
+              children: (0, _.jsx)(_._, {
+                toolTipContent: _._.Localize("#Sale_BackgroundColorPicker"),
+                children: (0, _.jsx)(_._, {
+                  className: _().EyeDropperBtn,
+                  onClick: _,
+                  children: (0, _.jsx)(_.O7b, {}),
+                }),
+              }),
+            }),
+          ],
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1003,70 +1067,6 @@
                           ? _._._
                           : void 0
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { color: _, onChange: _, strTitle: _, disableAlpha: _ } = _,
-          [_, _] = (0, _.useState)(() => _ || "rgba(255, 255, 255, 1)"),
-          _ = (0, _.useCallback)(async () => {
-            if ("EyeDropper" in window)
-              try {
-                const _ = new window.EyeDropper(),
-                  _ = await _.open(),
-                  _ = (function (_) {
-                    const _ = parseInt(_.slice(1), 16);
-                    return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
-                  })(_.sRGBHex);
-                _(_), __webpack_require__(_);
-              } catch (_) {
-                console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
-              }
-            else alert((0, _._)("#Sale_EyeDropperError"));
-          }, [_]);
-        return (0, _.jsxs)("div", {
-          children: [
-            Boolean(_) &&
-              (0, _.jsx)(_._, {
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              onChange: (_) => {
-                const _ = (function (_) {
-                  return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
-                })(_);
-                _(_), __webpack_require__(_);
-              },
-              color: _,
-              disableAlpha: _,
-              className: _().ColorPickerCtn,
-            }),
-            (0, _.jsx)("div", {
-              className: _().EyeDropperCtn,
-              children: (0, _.jsx)(_._, {
-                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
-                children: (0, _.jsx)(_._, {
-                  className: _().EyeDropperBtn,
-                  onClick: _,
-                  children: (0, _.jsx)(_.O7b, {}),
-                }),
-              }),
-            }),
-          ],
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

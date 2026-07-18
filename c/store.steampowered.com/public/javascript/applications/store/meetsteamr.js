@@ -636,7 +636,7 @@
             (0, _._)({
               mutationFn: async ({ bIncludeSelf: _, rgGuests: _ }) => {
                 const _ = new FormData();
-                __webpack_require__.append("sessionid", _._.SESSIONID),
+                __webpack_require__.append("sessionid", (0, _._)()),
                   __webpack_require__.append("gid", _),
                   __webpack_require__.append("accountid", "" + _),
                   __webpack_require__.append("meetsteam_group_id", "" + _),
@@ -1143,7 +1143,7 @@
             (0, _._)({
               mutationFn: async ({ nCapacity: _ }) => {
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("gid", _),
                   _.append("meetsteam_group_id", "" + _),
                   _.append("meetsteam_session_id", "" + _),

@@ -2423,6 +2423,7 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	if( this.$elThumbs.length < 2 )
 	{
 		this.$elThumbs.parent().css({'visibility':'hidden'})
+		this.$elContainer.addClass( "no_paging" );
 	}
 
 	this.UpdateControls();
@@ -2573,64 +2574,18 @@ CGenericCarousel.prototype.UpdateNearbyItems = function()
 	this.$elItems.removeClass( 'next prev' );
 
 	const nNextIndex = this.GetNextValidIndex();
-	$J( this.$elItems[ nNextIndex ] ).addClass( 'next' );
+	if ( nNextIndex !== this.nIndex )
+		$J( this.$elItems[ nNextIndex ] ).addClass( 'next' );
 
 	const nPrevIndex = this.GetNextValidIndex( -1 );
-	$J( this.$elItems[ nPrevIndex ] ).addClass('prev');
+	if ( nPrevIndex !== this.nIndex )
+		$J( this.$elItems[ nPrevIndex ] ).addClass('prev');
 
 	if ( this.bPreloadNearbyItems )
 	{
 		PreloadImages( this.$elItems[ nPrevIndex ] );
 		PreloadImages( this.$elItems[ nNextIndex ] );
 	}
-}
-
-CGenericCarousel.prototype.WideModeTransition = function( nNewIndex )
-{
-		this.$elContainer.addClass( 'no_transition' );
-
-	this.fnOnBlur( this.nIndex );
-	this.nIndex = nNewIndex;
-	this.UpdateNearbyItems();
-	this.fnOnFocus( this.nIndex );
-	this.$elContainer.removeClass( 'go-next go-prev' );
-
-	this.$elContainer[0].offsetHeight;
-	this.$elContainer.removeClass( 'no_transition' );
-	this.bIsAnimating = false;
-
-	this.UpdateControls();
-}
-
-CGenericCarousel.prototype.WideModeAdvance = function( nNewIndex, bGoForward )
-{
-	if ( this.bIsAnimating )
-		return;
-
-	this.bIsAnimating = true;
-
-	if ( bGoForward )
-	{
-		this.$elContainer.addClass( 'go-next' );
-	}
-	else
-	{
-		this.$elContainer.addClass( 'go-prev' );
-	}
-
-	let instance = this;
-
-	let fnOnTransitionEnd = function( event )
-	{
-		if ( event.propertyName !== 'transform' )
-			return;
-
-		instance.WideModeTransition( nNewIndex );
-
-		instance.$elContainer[0].removeEventListener( "transitionend", fnOnTransitionEnd );
-	}
-
-	this.$elContainer[0].addEventListener( 'transitionend', fnOnTransitionEnd );
 }
 
 // Advance function may be (totally is) different in responsive mode

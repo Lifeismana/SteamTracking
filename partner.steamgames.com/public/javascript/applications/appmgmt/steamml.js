@@ -174,7 +174,7 @@
       }
       (0, o.Cg)([d.sH], u.prototype, "data", void 0),
         (0, o.Cg)([d.sH], u.prototype, "nExpirationTime", void 0);
-      class N {
+      class x {
         constructor() {
           (0, d.Gn)(this);
         }
@@ -208,21 +208,21 @@
         }
         m_mapKeyToDataWrapper = new Map();
       }
-      (0, o.Cg)([d.sH], N.prototype, "m_mapKeyToDataWrapper", void 0);
-      class x {
+      (0, o.Cg)([d.sH], x.prototype, "m_mapKeyToDataWrapper", void 0);
+      class N {
         constructor() {
           (0, d.Gn)(this);
         }
         static s_SteamMLStore;
-        m_asyncSchemaList = new N();
-        m_asyncSchemaDetails = new N();
+        m_asyncSchemaList = new x();
+        m_asyncSchemaDetails = new x();
         m_asyncProblemList = new u();
-        m_asyncProblemDetails = new N();
+        m_asyncProblemDetails = new x();
         static Get() {
           return (
-            x.s_SteamMLStore ||
-              ((x.s_SteamMLStore = new x()), x.s_SteamMLStore.Init()),
-            x.s_SteamMLStore
+            N.s_SteamMLStore ||
+              ((N.s_SteamMLStore = new N()), N.s_SteamMLStore.Init()),
+            N.s_SteamMLStore
           );
         }
         Init() {}
@@ -232,7 +232,7 @@
             30,
             async () =>
               await S().get(
-                `${h.TS.PARTNER_BASE_URL}steamml/get_schemas?appid=${e}&includesteammlapp=${a}&sessionid=${h.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_schemas?appid=${e}&includesteammlapp=${a}&sessionid=${(0, h.KC)()}`,
               ),
             (e) => e.data.schemas,
           );
@@ -242,7 +242,7 @@
             30,
             async () =>
               await S().get(
-                `${h.TS.PARTNER_BASE_URL}steamml/get_schema_details?appid=${e}&schemaid=${a}&sessionid=${h.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_schema_details?appid=${e}&schemaid=${a}&sessionid=${(0, h.KC)()}`,
               ),
             (e) => JSON.parse(e.data.schema_description_json),
           );
@@ -252,7 +252,7 @@
             30,
             async () =>
               await S().get(
-                `${h.TS.PARTNER_BASE_URL}steamml/get_problems?sessionid=${h.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_problems?sessionid=${(0, h.KC)()}`,
               ),
             (e) => e.data.problems,
           );
@@ -262,7 +262,7 @@
             30,
             async () =>
               await S().get(
-                `${h.TS.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${e}&sessionid=${h.TS.SESSIONID}`,
+                `${h.TS.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${e}&sessionid=${(0, h.KC)()}`,
               ),
             (e) => e.data.problem,
           );
@@ -270,7 +270,7 @@
         CreateProblem(e, a, t) {
           let s = new FormData();
           return (
-            s.append("sessionid", h.TS.SESSIONID),
+            s.append("sessionid", (0, h.KC)()),
             s.append("name", e),
             s.append("description", a),
             s.append("schemaids", t.join(",")),
@@ -295,7 +295,7 @@
         }
         EditProblem(e, a) {
           return (
-            a.append("sessionid", h.TS.SESSIONID),
+            a.append("sessionid", (0, h.KC)()),
             a.append("problemid", e.toString()),
             S()
               .post(`${h.TS.PARTNER_BASE_URL}steamml/edit_problem`, a)
@@ -307,7 +307,7 @@
         DeleteProblem(e) {
           let a = new FormData();
           return (
-            a.append("sessionid", h.TS.SESSIONID),
+            a.append("sessionid", (0, h.KC)()),
             a.append("problemid", e.toString()),
             S()
               .post(`${h.TS.PARTNER_BASE_URL}steamml/delete_problem`, a)
@@ -317,15 +317,15 @@
           );
         }
       }
-      (0, o.Cg)([d.sH], x.prototype, "m_asyncSchemaList", void 0),
-        (0, o.Cg)([d.sH], x.prototype, "m_asyncSchemaDetails", void 0),
-        (0, o.Cg)([d.sH], x.prototype, "m_asyncProblemList", void 0),
-        (0, o.Cg)([d.sH], x.prototype, "m_asyncProblemDetails", void 0),
-        (0, o.Cg)([d.XI], x.prototype, "Init", null);
-      var D = t(75844),
-        _ = t(52038),
-        v = t(6083);
-      const b = (0, D.PA)((e) => {
+      (0, o.Cg)([d.sH], N.prototype, "m_asyncSchemaList", void 0),
+        (0, o.Cg)([d.sH], N.prototype, "m_asyncSchemaDetails", void 0),
+        (0, o.Cg)([d.sH], N.prototype, "m_asyncProblemList", void 0),
+        (0, o.Cg)([d.sH], N.prototype, "m_asyncProblemDetails", void 0),
+        (0, o.Cg)([d.XI], N.prototype, "Init", null);
+      var _ = t(75844),
+        v = t(52038),
+        D = t(6083);
+      const b = (0, _.PA)((e) => {
         const a = "0" == (0, r.g)().schemaid,
           t = [
             { label: "816 - Dota Beta", value: "816" },
@@ -335,7 +335,7 @@
           ],
           [s, l] = (0, n.useState)(t[0].value);
         if (!a) return null;
-        const d = x.Get().GetSchemaList(parseInt(s), !0);
+        const d = N.Get().GetSchemaList(parseInt(s), !0);
         if (!d) return null;
         let o = [];
         for (const e of d)
@@ -392,7 +392,7 @@
                             children: "Keep Count:",
                           }),
                           " ",
-                          (0, v.D)(e.keep_count),
+                          (0, D.D)(e.keep_count),
                         ],
                       }),
                     ],
@@ -462,7 +462,7 @@
         return (
           e.structure
             ? (s = (0, i.jsxs)("div", {
-                className: (0, _.A)(
+                className: (0, v.A)(
                   m.SchemaDetailsElement,
                   m.SchemaDetailsStruct,
                 ),
@@ -479,7 +479,7 @@
                       },
                       children: [
                         (0, i.jsx)("div", {
-                          className: (0, _.A)(n && m.Collapsed, m.CollapseIcon),
+                          className: (0, v.A)(n && m.Collapsed, m.CollapseIcon),
                           children: "▼",
                         }),
                         (0, i.jsxs)("div", {
@@ -501,7 +501,7 @@
                     (0, i.jsx)(
                       "div",
                       {
-                        className: (0, _.A)(
+                        className: (0, v.A)(
                           n && m.IndentCollapsed,
                           m.StructIndent,
                         ),
@@ -514,12 +514,12 @@
               }))
             : e.array && e.array.primitive
               ? (s = (0, i.jsx)("div", {
-                  className: (0, _.A)(
+                  className: (0, v.A)(
                     m.SchemaDetailsElement,
                     m.SchemaDetailsArray,
                   ),
                   children: (0, i.jsxs)("div", {
-                    className: (0, _.A)(
+                    className: (0, v.A)(
                       m.SchemaDetailsElementBody,
                       P(e.array.primitive.type_info.type),
                     ),
@@ -542,7 +542,7 @@
                 }))
               : e.array && e.array.structure
                 ? (s = (0, i.jsxs)("div", {
-                    className: (0, _.A)(
+                    className: (0, v.A)(
                       m.SchemaDetailsElement,
                       m.SchemaDetailsArray,
                     ),
@@ -559,7 +559,7 @@
                           },
                           children: [
                             (0, i.jsx)("div", {
-                              className: (0, _.A)(
+                              className: (0, v.A)(
                                 n && m.Collapsed,
                                 m.CollapseIcon,
                               ),
@@ -588,7 +588,7 @@
                         (0, i.jsx)(
                           "div",
                           {
-                            className: (0, _.A)(
+                            className: (0, v.A)(
                               n && m.IndentCollapsed,
                               m.StructIndent,
                             ),
@@ -601,12 +601,12 @@
                   }))
                 : e.primitive &&
                   (s = (0, i.jsx)("div", {
-                    className: (0, _.A)(
+                    className: (0, v.A)(
                       m.SchemaDetailsElement,
                       m.SchemaDetailsArray,
                     ),
                     children: (0, i.jsxs)("div", {
-                      className: (0, _.A)(
+                      className: (0, v.A)(
                         m.SchemaDetailsElementBody,
                         P(e.primitive.type_info.type),
                       ),
@@ -625,12 +625,12 @@
           s
         );
       }
-      const L = (0, D.PA)((e) => {
+      const L = (0, _.PA)((e) => {
           const a = (0, r.g)(),
             t = "0" == a.schemaid,
             [s, l] = (0, n.useState)([]);
           if (t) return null;
-          const o = x.Get().GetSchemaDetails(parseInt(a.appid), a.schemaid);
+          const o = N.Get().GetSchemaDetails(parseInt(a.appid), a.schemaid);
           return o
             ? (console.log((0, d.HO)(o)),
               (0, i.jsxs)("div", {
@@ -665,15 +665,15 @@
               }))
             : null;
         }),
-        g = (0, D.PA)((e) =>
+        C = (0, _.PA)((e) =>
           (0, i.jsxs)("div", {
             className: m.SchemaPage,
             children: [(0, i.jsx)(b, {}), (0, i.jsx)(L, {})],
           }),
         ),
-        E = (e) =>
+        g = (e) =>
           (0, i.jsx)("div", {
-            className: (0, _.A)(
+            className: (0, v.A)(
               m.SteamMLButton,
               e.acceptStyle && m.AcceptButton,
               e.cancelStyle && m.CancelButton,
@@ -688,7 +688,7 @@
               children: e.children,
             }),
           }),
-        C = ({ problem: e }) => (
+        E = ({ problem: e }) => (
           console.log((0, d.HO)(e)),
           (0, i.jsxs)(c.N_, {
             to: w.SteamMLProblems(e.problemid),
@@ -734,19 +734,18 @@
             ],
           })
         ),
-        I = (e) => {
+        A = (e) => {
           const [a, t] = (0, n.useState)(!1),
             [s, l] = (0, n.useState)(""),
             [c, r] = (0, n.useState)(""),
             [d, o] = (0, n.useState)([]),
-            p = x
-              .Get()
+            p = N.Get()
               .GetSchemaList(0, !0)
               ?.sort((e, a) => (e.name < a.name ? -1 : 1)),
             S = p?.filter((e, a, t) => 0 == a || e.name != t[a - 1].name),
             u = s.length > 0 && c.length > 0 && d.length > 0;
           return (0, i.jsxs)("div", {
-            className: (0, _.A)(
+            className: (0, v.A)(
               m.AddNewProblem,
               !a && m.IsPrompt,
               a && m.IsHeader,
@@ -814,7 +813,7 @@
                             return (0, i.jsx)(
                               "div",
                               {
-                                className: (0, _.A)(
+                                className: (0, v.A)(
                                   m.SchemaOption,
                                   a && m.Selected,
                                 ),
@@ -835,14 +834,14 @@
                   (0, i.jsxs)("div", {
                     className: m.ButtonContainer,
                     children: [
-                      (0, i.jsx)(E, {
+                      (0, i.jsx)(g, {
                         acceptStyle: !0,
                         minWidth: 100,
                         disabled: !u,
-                        onClick: () => u && void x.Get().CreateProblem(s, c, d),
+                        onClick: () => u && void N.Get().CreateProblem(s, c, d),
                         children: "Create",
                       }),
-                      (0, i.jsx)(E, {
+                      (0, i.jsx)(g, {
                         cancelStyle: !0,
                         minWidth: 100,
                         onClick: () => t(!1),
@@ -855,8 +854,8 @@
             ],
           });
         },
-        T = (0, D.PA)(({ schemaid: e }) => {
-          const a = x.Get().GetSchemaList(0, !0);
+        T = (0, _.PA)(({ schemaid: e }) => {
+          const a = N.Get().GetSchemaList(0, !0);
           let t;
           if (a) {
             const s = a.filter((a) => a.schemaid == e);
@@ -869,30 +868,29 @@
               (0, i.jsx)("div", { className: m.SchemaName, children: t.name }),
           });
         }),
-        A = (0, D.PA)(({ problem: e }) => {
+        I = (0, _.PA)(({ problem: e }) => {
           const [a, t] = (0, n.useState)(!1),
             [s, l] = (0, n.useState)(e.name),
             [d, o] = (0, n.useState)(!1),
             [h, p] = (0, n.useState)(e.problem_description),
             [S, u] = (0, n.useState)(!1),
-            [N, D] = (0, n.useState)(e.schemaid),
-            v = (0, r.W6)(),
+            [x, _] = (0, n.useState)(e.schemaid),
+            D = (0, r.W6)(),
             b = (0, n.useRef)(null),
             j = (0, n.useRef)(null),
             P = parseInt(e.problemid),
-            y = x
-              .Get()
+            y = N.Get()
               .GetSchemaList(0, !0)
               ?.slice()
               .sort((e, a) => (e.name < a.name ? -1 : 1)),
             L = y?.filter((e, a, t) => 0 == a || e.name != t[a - 1].name);
-          var g;
-          (g = () => {
-            C(), I(), p(e.problem_description), o(!1);
+          var C;
+          (C = () => {
+            E(), A(), p(e.problem_description), o(!1);
           }),
             (0, n.useEffect)(() => {
               const e = (e) => {
-                27 === e.keyCode && g();
+                27 === e.keyCode && C();
               };
               return (
                 window.addEventListener("keydown", e),
@@ -900,15 +898,15 @@
                   window.removeEventListener("keydown", e);
                 }
               );
-            }, [g]);
-          const C = () => {
+            }, [C]);
+          const E = () => {
               l(e.name), t(!1);
             },
-            I = () => {
+            A = () => {
               p(e.problem_description), o(!1);
             },
-            A = () => {
-              D(e.schemaid), u(!1);
+            I = () => {
+              _(e.schemaid), u(!1);
             };
           return (
             a && b.current.focus(),
@@ -925,14 +923,14 @@
                   className: m.ProblemDetailsHeaderContainer,
                   children: [
                     (0, i.jsx)("div", {
-                      className: (0, _.A)(m.ProblemName, a && m.Hidden),
-                      onClick: (e) => (I(), A(), void t(!0)),
+                      className: (0, v.A)(m.ProblemName, a && m.Hidden),
+                      onClick: (e) => (A(), I(), void t(!0)),
                       children: e.name,
                     }),
                     (0, i.jsx)("form", {
                       className: a ? void 0 : m.Hidden,
                       onSubmit: (a) => {
-                        x.Get().EditProblemName(P, s),
+                        N.Get().EditProblemName(P, s),
                           (e.name = s),
                           t(!1),
                           a.preventDefault();
@@ -942,20 +940,20 @@
                         className: m.ProblemNameEditing,
                         type: "text",
                         value: s,
-                        onBlur: () => C(),
+                        onBlur: () => E(),
                         onFocus: (e) => e.target.select(),
                         onChange: (e) => l(e.target.value),
                       }),
                     }),
                     (0, i.jsx)("div", {
-                      className: (0, _.A)(m.ProblemDescription, d && m.Hidden),
-                      onClick: (e) => (C(), A(), void o(!0)),
+                      className: (0, v.A)(m.ProblemDescription, d && m.Hidden),
+                      onClick: (e) => (E(), I(), void o(!0)),
                       children: e.problem_description,
                     }),
                     (0, i.jsx)("form", {
                       className: d ? void 0 : m.Hidden,
                       onSubmit: (a) => {
-                        x.Get().EditProblemDesc(P, h),
+                        N.Get().EditProblemDesc(P, h),
                           (e.problem_description = h),
                           o(!1),
                           a.preventDefault();
@@ -965,7 +963,7 @@
                         className: m.ProblemDescEditing,
                         type: "text",
                         value: h,
-                        onBlur: () => I(),
+                        onBlur: () => A(),
                         onFocus: (e) => e.target.select(),
                         onChange: (e) => p(e.target.value),
                       }),
@@ -1008,36 +1006,36 @@
                     }),
                     (0, i.jsx)("div", {
                       className: m.SchemaListEdit,
-                      onClick: () => (C(), I(), void u(!0)),
+                      onClick: () => (E(), A(), void u(!0)),
                       children: "Edit",
                     }),
                     (0, i.jsx)("div", {
-                      className: (0, _.A)(m.SchemaList, S && m.Hidden),
+                      className: (0, v.A)(m.SchemaList, S && m.Hidden),
                       children: e.schemaid.map((e) =>
                         (0, i.jsx)(T, { schemaid: e }, e),
                       ),
                     }),
                     (0, i.jsx)("div", {
-                      className: (0, _.A)(
+                      className: (0, v.A)(
                         m.SchemaSelectList,
                         (!S || !L) && m.Hidden,
                       ),
                       children:
                         L &&
                         L.map((e) => {
-                          const a = -1 != N.indexOf(e.schemaid);
+                          const a = -1 != x.indexOf(e.schemaid);
                           return (0, i.jsx)(
                             "div",
                             {
-                              className: (0, _.A)(
+                              className: (0, v.A)(
                                 m.SchemaOption,
                                 a && m.Selected,
                               ),
                               onClick: () =>
-                                D(
+                                _(
                                   a
-                                    ? N.filter((a) => a != e.schemaid)
-                                    : N.concat(e.schemaid),
+                                    ? x.filter((a) => a != e.schemaid)
+                                    : x.concat(e.schemaid),
                                 ),
                               children: e.name,
                             },
@@ -1049,30 +1047,30 @@
                       (0, i.jsxs)("div", {
                         className: m.ButtonContainer,
                         children: [
-                          (0, i.jsx)(E, {
+                          (0, i.jsx)(g, {
                             minWidth: 100,
                             acceptStyle: !0,
-                            disabled: 0 == N.length,
+                            disabled: 0 == x.length,
                             onClick: () => (
-                              x.Get().EditProblemSchemas(P, N),
-                              (e.schemaid = N),
+                              N.Get().EditProblemSchemas(P, x),
+                              (e.schemaid = x),
                               void u(!1)
                             ),
                             children: "Accept",
                           }),
-                          (0, i.jsx)(E, {
+                          (0, i.jsx)(g, {
                             minWidth: 100,
                             cancelStyle: !0,
-                            onClick: () => A(),
+                            onClick: () => I(),
                             children: "Cancel",
                           }),
                         ],
                       }),
                     (0, i.jsx)("div", {
-                      className: (0, _.A)(m.DeleteLink, S && m.Hidden),
+                      className: (0, v.A)(m.DeleteLink, S && m.Hidden),
                       onClick: () => (
-                        x.Get().DeleteProblem(P),
-                        void v.push(w.SteamMLProblems(0))
+                        N.Get().DeleteProblem(P),
+                        void D.push(w.SteamMLProblems(0))
                       ),
                       children: "Delete Problem",
                     }),
@@ -1082,14 +1080,14 @@
             })
           );
         }),
-        f = (0, D.PA)((e) => {
+        f = (0, _.PA)((e) => {
           const a = (0, r.g)(),
             t = "0" == a.problemid;
           let s, l;
           return (
             t
-              ? (s = x.Get().GetProblemList())
-              : (l = x.Get().GetProblemDetails(parseInt(a.problemid))),
+              ? (s = N.Get().GetProblemList())
+              : (l = N.Get().GetProblemDetails(parseInt(a.problemid))),
             (0, i.jsxs)("div", {
               className: m.ProblemPage,
               children: [
@@ -1098,20 +1096,20 @@
                   (0, i.jsxs)("div", {
                     className: m.ProblemListContainer,
                     children: [
-                      s.map((e) => (0, i.jsx)(C, { problem: e }, e.problemid)),
+                      s.map((e) => (0, i.jsx)(E, { problem: e }, e.problemid)),
                       0 == s.length &&
                         (0, i.jsx)("div", {
                           className: m.NoProblems,
                           children: "No Existing Problems",
                         }),
-                      (0, i.jsx)(I, {}),
+                      (0, i.jsx)(A, {}),
                     ],
                   }),
                 !t &&
                   l &&
                   (0, i.jsx)("div", {
                     className: m.ProblemDetails,
-                    children: (0, i.jsx)(A, { problem: l }),
+                    children: (0, i.jsx)(I, { problem: l }),
                   }),
               ],
             })
@@ -1136,7 +1134,7 @@
                     (0, i.jsx)(r.qh, {
                       exact: !0,
                       path: w.SteamMLSchemas(":appid", ":schemaid"),
-                      component: g,
+                      component: C,
                     }),
                     (0, i.jsx)(r.qh, {
                       exact: !0,
@@ -1176,17 +1174,17 @@
             children: [
               (0, i.jsx)(c.N_, {
                 to: w.SteamMLSchemas(),
-                className: (0, _.A)(m.HeaderOption, t && m.Selected),
+                className: (0, v.A)(m.HeaderOption, t && m.Selected),
                 children: "SCHEMAS",
               }),
               (0, i.jsx)(c.N_, {
                 to: w.SteamMLModels(),
-                className: (0, _.A)(m.HeaderOption, s && m.Selected),
+                className: (0, v.A)(m.HeaderOption, s && m.Selected),
                 children: "MODELS",
               }),
               (0, i.jsx)(c.N_, {
                 to: w.SteamMLProblems(),
-                className: (0, _.A)(m.HeaderOption, l && m.Selected),
+                className: (0, v.A)(m.HeaderOption, l && m.Selected),
                 children: "PROBLEMS",
               }),
             ],

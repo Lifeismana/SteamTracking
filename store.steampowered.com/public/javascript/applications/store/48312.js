@@ -39,7 +39,7 @@
     },
     57757: (e, o, a) => {
       "use strict";
-      a.d(o, { S: () => d });
+      a.d(o, { S: () => _ });
       var n = a(7850),
         s = a(83392),
         r = a(40704);
@@ -55,54 +55,56 @@
       }
       var i = a(21895),
         c = a(64238),
-        l = a.n(c);
-      function d(e) {
+        l = a.n(c),
+        d = a(66922);
+      function _(e) {
         const {
             checked: o,
             onChange: a,
             disabled: r,
             children: c,
-            ref: d,
-            variant: h = "default",
-            color: v,
-            align: p = "center",
-            ...k
+            ref: _,
+            variant: v,
+            color: p,
+            align: k = "center",
+            ...x
           } = e,
-          x = "indeterminate" === o,
-          f = x ? u : t,
-          m = () => {
-            r || (a && a(!!x || !o));
-          };
+          f = "indeterminate" === o,
+          m = f ? h : t,
+          L = () => {
+            r || (a && a(!!f || !o));
+          },
+          S = (0, d.f)("Checkbox", v);
         return (0, n.jsxs)(s.s, {
-          align: p,
-          ref: d,
+          align: k,
+          ref: _,
           role: "checkbox",
-          "aria-checked": x ? "mixed" : o,
-          "data-state": _(o),
-          className: l()(i.Root, i[`Variant-${h}`], r && i.Disabled),
-          onClick: m,
+          "aria-checked": f ? "mixed" : o,
+          "data-state": u(o),
+          className: l()(i.Root, i[`Variant-${S}`], r && i.Disabled),
+          onClick: L,
           tabIndex: 0,
           onKeyDown: (e) => {
             r ||
-              (" " === e.key && (m(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (L(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": r,
-          "data-accent-color": v,
-          ...k,
+          "data-accent-color": p,
+          ...x,
           children: [
             (0, n.jsx)("div", {
               className: i.Checkbox,
-              children: o && (0, n.jsx)(f, { className: i.Icon }),
+              children: o && (0, n.jsx)(m, { className: i.Icon }),
             }),
             c,
           ],
         });
       }
-      function _(e) {
+      function u(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function u(e) {
+      function h(e) {
         return (0, n.jsx)("svg", {
           viewBox: "0 0 16 16",
           fill: "none",
@@ -214,8 +216,8 @@
             ],
           });
         const P = (0, p.k)(o.reservation_state),
-          w = !!a && !!a.collection_time_term_and_conditions_url,
-          C = z[o.packageid] ?? !w;
+          C = !!a && !!a.collection_time_term_and_conditions_url,
+          w = z[o.packageid] ?? !C;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
@@ -233,11 +235,11 @@
                   }),
               ],
             }),
-            w &&
+            C &&
               (0, n.jsx)(
                 s.S,
                 {
-                  checked: C || P,
+                  checked: w || P,
                   onChange: j,
                   "data-checkbox": "",
                   disabled: P,
@@ -261,7 +263,7 @@
             r.iA.logged_in
               ? (0, n.jsx)(b, {
                   hardwareDetail: o,
-                  bUserAcceptedTerms: !w || C,
+                  bUserAcceptedTerms: !C || w,
                   onLeaveShuffleList: () => j(!1),
                 })
               : (0, n.jsx)("div", {

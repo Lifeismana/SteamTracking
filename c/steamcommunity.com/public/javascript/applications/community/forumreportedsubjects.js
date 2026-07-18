@@ -63,8 +63,8 @@
       "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
+          ReadAdditionalDataFromForumPost: () => _,
           default: () => _,
-          readAdditionalDataFromForumPost: () => _,
           useCommentThread: () => _,
         });
       var _ = __webpack_require__("chunkid"),
@@ -347,8 +347,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -425,7 +428,15 @@
               throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);
           },
           onSuccess: async (_, _) => {
-            await _(_, _, _, _);
+            await Promise.all([
+              _(_, _, _, _),
+              _.invalidateQueries({
+                queryKey: ["get_claimed"],
+              }),
+              _.invalidateQueries({
+                queryKey: ["get_subject_overview"],
+              }),
+            ]);
           },
         });
       }
@@ -499,6 +510,56 @@
             };
           })(_, _),
         );
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => {
+            const _ = _._.Init(_._);
+            _.Body().set_steamid(_),
+              _.Body().set_comment_thread_id(_),
+              _.Body().set_gidcomment(_),
+              _.Body().set_reason(_.reason),
+              _.Body().set_note(_.message);
+            for (const _ of _.sanctions) {
+              const _ = new _._();
+              _.set_sanction(_.sanction),
+                _.days && _.set_days(_.days),
+                _.Body().add_sanctions(_);
+            }
+            const _ = await _._.SanctionComment(_, _);
+            if (!_.BSuccess())
+              throw new Error(
+                `SanctionComment failed. EResult: ${_.GetEResult()} (${_.GetErrorMessage()})`,
+              );
+          },
+          onSuccess: async () => {
+            await _.invalidateQueries({
+              queryKey: ["get_claimed"],
+            });
+          },
+        });
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_steamid(_),
+              _.Body().set_comment_thread_id(_),
+              _.Body().set_gidcomment(_),
+              _.Body().set_report_action(_._._),
+              _.Body().set_resolve(!0),
+              await _._.UpdateCommentReportState(_, _);
+          },
+          onSuccess: async () => {
+            await _.invalidateQueries({
+              queryKey: ["get_claimed"],
+            });
+          },
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

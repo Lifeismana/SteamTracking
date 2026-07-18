@@ -227,6 +227,27 @@ function SetAppUsesFrenemies( appid, frenemyState )
 		);
 }
 
+//
+// Set whether we allow the partner to self-retire their own app
+//
+function SetAppAllowDevRetirement( appid, checkState )
+{
+	AppsAjaxRequest( g_szBaseURL + '/apps/setappallowdevretirement/' + appid,
+		{ 'app_allow_dev_retirement' : checkState },
+		CommonSetHandler
+		);
+}
+
+//
+// Set whether we allow the partner to self-retire any DLC for a given game/application
+//
+function SetAppAllowDevRetirementAnyDLC( appid, checkState )
+{
+	AppsAjaxRequest( g_szBaseURL + '/apps/setappallowdevretirementanydlc/' + appid,
+		{ 'app_allow_dev_retirement_any_dlc' : checkState },
+		CommonSetHandler
+		);
+}
 
 //
 // Set whether refunds ignore playtime for the app

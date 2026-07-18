@@ -5,28 +5,26 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4226],
   {
-    34044: (l, e, n) => {
-      n.r(e), n.d(e, { default: () => u });
-      var t = n(7850),
-        s = n(39891);
+    34044: (l, n, e) => {
+      e.r(n), e.d(n, { default: () => u });
+      var t = e(7850),
+        s = e(39891);
       function u(l) {
-        const { dataprops: e, results: n } = l;
+        const { dataprops: n, results: e } = l;
         let u = null;
-        if (n && n.length > 0) {
-          const l = e.appid ?? null;
+        if (e && e.length > 0) {
+          const l = n.appid ?? null;
           if (l) {
-            let e = n.findIndex((e) => e.appid == l);
-            u = -1 != e ? n[e] : null;
+            let n = e.findIndex((n) => n.appid == l);
+            u = -1 != n ? e[n] : null;
           }
-          const t = e.search_id ?? null;
+          const t = n.search_id ?? null;
           if (!u && t) {
-            let l = n.findIndex((l) => l.search_id == t);
-            u = -1 != l ? n[l] : null;
+            let l = e.findIndex((l) => l.search_id == t);
+            u = -1 != l ? e[l] : null;
           }
         }
-        return u
-          ? (0, t.jsx)(s.default, { results: u, bIncludeSteamOS: !0 })
-          : null;
+        return u ? (0, t.jsx)(s.default, { results: u }) : null;
       }
     },
   },

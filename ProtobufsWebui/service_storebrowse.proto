@@ -27,6 +27,7 @@ message CHardwarePackageDetails {
 	optional string queue_waitlist_token = 25;
 	optional uint32 collection_time_active = 26;
 	optional bool reservation_not_allowed = 27;
+	optional bool requires_signature = 28;
 }
 
 message CStoreBrowse_GetContentHubConfig_Request {

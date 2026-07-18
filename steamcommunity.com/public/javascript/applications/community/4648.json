@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "この出品はご利用いただけません",
     "Listing_NotAvailable_Short": "ご利用いただけません",
     "Listing_NotAvailable_Long": "この出品はご購入いただけません",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "（あなたの出品）",
     "BuyOrderDialog_Header": "購入－%1$s",
     "BuyOrderDialog_Header_NoItem": "買い注文を出す",
     "BuyOrderDialog_BucketPicker_Label": "どのタイプのアイテムを購入しますか？",

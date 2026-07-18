@@ -5647,6 +5647,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_AppTypeGame = "Game"),
@@ -5671,7 +5672,7 @@
           mutationFn: async (_) => {
             const _ = `${_._.PARTNER_BASE_URL}apps/ajaxcreatenewapp/`,
               _ = new FormData();
-            __webpack_require__.append("sessionid", _._.SESSIONID),
+            __webpack_require__.append("sessionid", (0, _._)()),
               __webpack_require__.append("name", _.name),
               __webpack_require__.append("type", _.type),
               __webpack_require__.append("range", "" + (_.range || 10)),
@@ -5771,7 +5772,7 @@
                             for (; _.length > 0; ) {
                               const _ = new FormData(),
                                 _ = _.splice(0, 250);
-                              _.append("sessionid", _._.SESSIONID),
+                              _.append("sessionid", (0, _._)()),
                                 _.append("rgAppIDs", _.join(",")),
                                 _.append(
                                   "bExcludeExpired",
@@ -5920,7 +5921,7 @@
                     for (; _.length > 0; ) {
                       const _ = _.splice(0, 100),
                         _ = new FormData();
-                      _.append("sessionid", _._.SESSIONID),
+                      _.append("sessionid", (0, _._)()),
                         _.append("rgBundleIDs", _.join(",")),
                         _.append(
                           "bExcludeExpired",
@@ -7233,7 +7234,7 @@
         async Save(_) {
           let _ = _._.PARTNER_BASE_URL + "optin/ajaxadminupdate";
           const _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("pageid", this.m_model.pageid),
             __webpack_require__.append(
               "jsondata",
@@ -7280,7 +7281,7 @@
         async Delete(_) {
           let _ = _._.PARTNER_BASE_URL + "optin/ajaxadmindelete";
           const _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("pageid", this.m_model.pageid);
           try {
             let _ = await _().post(_, _, {
@@ -7523,7 +7524,7 @@
           if (!this.m_model) return null;
           let _ = _._.PARTNER_BASE_URL + "optin/ajaxrefreshoptinstats";
           const _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("pageids", this.m_model.pageid);
           try {
             let _ = await _().post(_, _, {
@@ -8347,7 +8348,7 @@
             const _ = `${_._.PARTNER_BASE_URL}optin/ajaxadmingetdefandstats`,
               _ = {
                 pageid: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,
@@ -8377,7 +8378,7 @@
               .toLowerCase()
               .replace(/^sale_/, ""),
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("action", "createsale"),
             _.append("id", _),
             _.append("is_optin", "true");
@@ -8862,6 +8863,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapCluster = new Map();
@@ -8897,7 +8899,7 @@
               _ = {
                 clustertype: (0, _._)(_),
                 clusterid: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,
@@ -8930,7 +8932,7 @@
             _.append("clustertype", (0, _._)(_)),
               _.append("clusterid", _),
               _.append("clusterdata", JSON.stringify(_)),
-              _.append("sessionid", _._.SESSIONID),
+              _.append("sessionid", (0, _._)()),
               _ && _.append("additional_params", JSON.stringify(_));
             const _ = await _().post(_, _);
             if (200 == _?.status && _.data?.success == _._ && _.data.cluster)
@@ -11139,7 +11141,7 @@
           try {
             const _ = {
                 partnerid: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 bIncludeManagePricingRights: !0,
               },
               _ =
@@ -12168,7 +12170,7 @@
           let _ = null;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.appid && _.append("nAppID", "" + _.appid),
               _.packageid && _.append("nPackageID", "" + _.packageid),
               _.bundleid && _.append("nBundleID", "" + _.bundleid),
@@ -14533,7 +14535,7 @@
           try {
             const _ = new FormData();
             __webpack_require__.append("rgAppIDs", _.join(",")),
-              __webpack_require__.append("sessionid", _._.SESSIONID);
+              __webpack_require__.append("sessionid", (0, _._)());
             const _ = _._.PARTNER_BASE_URL + "sales/ajaxgetsalerank",
               _ = await _().post(_, _, {
                 withCredentials: !0,
@@ -14610,6 +14612,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const {
@@ -14620,7 +14623,7 @@
           queryKey: ["useTopSalesRankGamesData"],
           queryFn: async () => {
             const _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = `${_._.PARTNER_BASE_URL}promotion/planning/ajaxgetsalerankdashboard`,
               _ = await _().get(_, {
@@ -14805,7 +14808,7 @@
                 _._.PARTNER_BASE_URL + "promotion/spotlights/ajaxloadspotlight",
               _ = {
                 spotlightid: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,
@@ -14839,7 +14842,7 @@
                 _._.PARTNER_BASE_URL +
                 "promotion/spotlights/ajaxcreatenewspotlight",
               _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("spotlight", JSON.stringify(_));
             const _ = _.association;
             _?.appid && "application" == _.association_type
@@ -14950,12 +14953,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         async CreateCluster(_, _, _, _, _, _, _) {
           const _ = `${_._.PARTNER_BASE_URL}cluster/ajaxcreatecluster`,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("pageid", (0, _._)(_)),
             _.append("name", _),
             _.append("layout", (0, _._)(_)),
@@ -15033,7 +15037,7 @@
                         for (; _.length > 0; ) {
                           const _ = new FormData(),
                             _ = _.splice(0, 20);
-                          _.append("sessionid", _._.SESSIONID),
+                          _.append("sessionid", (0, _._)()),
                             _.append("strPromotionIDs", _.join(",")),
                             _.nPartnerID &&
                               _.append("publisherid", _.nPartnerID.toString()),
@@ -15285,7 +15289,7 @@
         async CreateSalePartnerEvent(_, _, _, _, _, _) {
           let _ = _._.PARTNER_BASE_URL + "sales/ajaxcreatesalepartnerevent";
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clanAccountID", "" + _),
             _.append("eventName", _),
             _.append("vanity", _),
@@ -20363,6 +20367,13 @@
           }
           return _;
         }
+        if (_.row.original) {
+          let _ = _.row.original;
+          if ("no_planned_discount" in _ && !1 === _.no_planned_discount)
+            return (0, _.jsx)("span", {
+              children: "Possible Upcoming Discount",
+            });
+        }
         return null;
       }
     },
@@ -20571,7 +20582,7 @@
                 let _ = null;
                 try {
                   const _ = new FormData();
-                  _.append("sessionid", _._.SESSIONID),
+                  _.append("sessionid", (0, _._)()),
                     _.append(
                       _ ? "strSourceOptInName" : "strOldOptInName",
                       _.pageid,
@@ -22456,7 +22467,7 @@
                 ),
                 _._
               );
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("opt_in_name", _),
               _ && _.append("appids", JSON.stringify(_)),
               _.append("add", _ ? "1" : "0"),
@@ -22540,7 +22551,7 @@
             _._.COMMUNITY_BASE_URL + "invites/ajaxgetall",
             {
               params: {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
             },
           );
@@ -22555,7 +22566,7 @@
         }
         async OnCreateInviteLink() {
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("steamid_user", _._.steamid),
             _.append("duration", (2592e3).toString());
           const _ = await _().post(
@@ -22596,7 +22607,7 @@
         }
         async OnAddFriend(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0");
           try {
@@ -22807,7 +22818,7 @@
         }
         async OnActionClick(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0"),
             this.setState({
@@ -25287,7 +25298,10 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppToDemoAppID = new Map();
         m_mapPromises = new Map();
@@ -25327,7 +25341,7 @@
             return this.m_mapAppToDemoAppID.get(_);
           try {
             const _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 optInName: _,
               },
               _ = _._.PARTNER_BASE_URL + "optin/ajaxgetoptinappwithdemoid",
@@ -25372,10 +25386,6 @@
           (0, _._)(this);
         }
       }
-      (0, _._)([_._], _.prototype, "m_mapAppToDemoAppID", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
         const { tableRef: _, mapAppToDiscountInfo: _, oAllStats: _ } = _,
           _ = _._.Get(),
@@ -25388,6 +25398,7 @@
             _.BIsAdditionalFeaturingSectionEnabled() &&
               _.BIsCollectGameProfileIntent(),
           ]),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
@@ -25414,7 +25425,9 @@
                     return (
                       (!_ || _.trailers_opt_in) &&
                       (!_ || _.opt_in) &&
-                      (!_ || _.discount_info || (_ && !_.no_planned_discount))
+                      (!_ ||
+                        _.discount_info ||
+                        (_ && !_.no_planned_discount && !_))
                     );
                   }).map((_) => {
                     if (_) {
@@ -25450,7 +25463,7 @@
                     return _;
                   })
                 : null,
-            [_, _, _, _, _, _],
+            [_, _, _, _, _, _, _],
           );
         if (!_ || !_ || (_ && !_))
           return (0, _.jsx)(_._, {
@@ -25545,14 +25558,25 @@
                   (0, _.jsx)(_._, {
                     checked: _,
                     onChange: _,
-                    label: "Filter To Discount Entered",
+                    label: "Filter To Discount Entered or Planned",
+                    tooltip:
+                      "Includes entered discounts, overlapping discounts with event, and also planned but not entered discounts",
                   }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      checked: _,
+                      onChange: _,
+                      label: "Exclude Planned Discounts",
+                      tooltip:
+                        "Remove any without an explicit discount entered",
+                    }),
                 ],
               }),
             ],
           })
         );
       }
+      (0, _._)([_._], _.prototype, "m_mapAppToDemoAppID", void 0);
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { tableRef: _, mapAppToDiscountInfo: _, oAllStats: _ } = _,
@@ -25895,7 +25919,7 @@
         async FetchAllEligibleOptInApps(_) {
           const _ = _._.PARTNER_BASE_URL + "optin/ajaxgetalleligibleoptinapps",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               opt_in_name: _,
             },
             _ = await _().get(_, {
@@ -25969,7 +25993,7 @@
                 _.current = _.cancel;
                 try {
                   const _ = new FormData();
-                  __webpack_require__.append("sessionid", _._.SESSIONID),
+                  __webpack_require__.append("sessionid", (0, _._)()),
                     __webpack_require__.append("optInName", _.GetFullName()),
                     __webpack_require__.append("packageName", _);
                   const _ =
@@ -32953,7 +32977,7 @@
                 const _ =
                     _._.PARTNER_BASE_URL + "optin/ajaxgetspecialeventinfo",
                   _ = {
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                     opt_in_name: _,
                   },
                   _ = await _().get(_, {
@@ -33227,7 +33251,7 @@
         async InternalLoadDefForOptIn(_) {
           const _ = _._.PARTNER_BASE_URL + "optin/ajaxgetpointshopiteminfo",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               opt_in_name: _,
             };
           let _ = null;
@@ -33260,7 +33284,7 @@
         async FixPointShopItemForOptIn(_) {
           const _ = _._.PARTNER_BASE_URL + "optin/ajaxupdatepointshopiteminfo",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               opt_in_name: _,
             };
           let _ = null;
@@ -33968,7 +33992,7 @@
               fnSaveSurveyResults: async (_) => {
                 const _ = `${_._.PARTNER_BASE_URL}optin/ajaxsubmitsurvey/${_}/${_.appid}`,
                   _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("surveyjson", JSON.stringify(_));
                 const _ = await _().post(_, _, {
                   withCredentials: !0,
@@ -35556,8 +35580,31 @@
           children: [
             (0, _.jsx)("div", {
               className: "sub_category",
-              children: (0, _.jsx)("h3", {
-                children: (0, _._)("#OptIn_Collect_Trailer"),
+              children: (0, _.jsxs)("h3", {
+                children: [
+                  (0, _._)("#OptIn_Collect_Trailer"),
+                  (0, _.jsx)("span", {
+                    className: "required_optional1",
+                    children: Boolean(_.collect_demo_deadline)
+                      ? (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            "(",
+                            (0, _._)(
+                              "#OptIn_Collect_SuggestedBy",
+                              (0, _._)(_.collect_demo_deadline),
+                            ),
+                            ")",
+                          ],
+                        })
+                      : (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            "(",
+                            (0, _._)("#OptIn_Collect_Optional"),
+                            ")",
+                          ],
+                        }),
+                  }),
+                ],
               }),
             }),
             (0, _.jsx)("p", {
@@ -35569,7 +35616,7 @@
             (0, _.jsx)("p", {
               children: (0, _._)(
                 "#OptIn_Collect_Trailer_check_req_trailer",
-                (0, _._)(_.optin_deadline_date),
+                (0, _._)(_.collect_demo_deadline),
               ),
             }),
             _ &&
@@ -36078,7 +36125,7 @@
               queryFn: async () => {
                 const _ = {
                     appid: _,
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                   },
                   _ = `${_._.PARTNER_BASE_URL}freetokeep/ajaxgetdlcforapp/`,
                   _ = await _().get(_, {
@@ -36140,7 +36187,7 @@
               queryFn: async () => {
                 const _ = {
                     appid: _,
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                   },
                   _ = `${_._.PARTNER_BASE_URL}freetokeep/ajaxgetdlcfreetokeepreadiness/`,
                   _ = await _().get(_, {
@@ -36192,7 +36239,7 @@
               queryFn: async () => {
                 const _ = {
                     appid: _,
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                   },
                   _ = `${_._.PARTNER_BASE_URL}freetokeep/ajaxgetdlcrequirebaseapp/`,
                   _ = await _().get(_, {
@@ -36219,7 +36266,7 @@
             return (0, _._)({
               mutationFn: async (_) => {
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("appid", "" + _),
                   _.append("require", _ ? "1" : "0");
                 const _ = `${_._.PARTNER_BASE_URL}freetokeep/ajaxupdatedlcrequirebaseapp`;
@@ -36433,7 +36480,7 @@
           let _ = null;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appids", JSON.stringify(_)),
               _.append("opt_in_name", _),
               _.append("prune", _ ? "0" : "1");
@@ -36516,7 +36563,7 @@
           }
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appids", JSON.stringify(_)),
               _.append("opt_in_name", _),
               _.append("feature", _ ? "1" : "0");
@@ -37258,7 +37305,7 @@
               queryFn: () =>
                 (async function (_) {
                   const _ = {
-                      sessionid: _._.SESSIONID,
+                      sessionid: (0, _._)(),
                       opt_in_name: _,
                     },
                     _ = _._.PARTNER_BASE_URL + "optin/ajaxgetapplisttonotprune",
@@ -39732,7 +39779,7 @@
               ],
               queryFn: async () => {
                 const _ = {
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                     strSearchName: _.strName,
                     strSearchDescription: _.strDescription,
                     nSearchTagId: _.nTag,
@@ -43060,7 +43107,7 @@
                 else {
                   const _ = await (async function (_, _) {
                     const _ = new FormData();
-                    __webpack_require__.append("sessionid", _._.SESSIONID),
+                    __webpack_require__.append("sessionid", (0, _._)()),
                       __webpack_require__.append("gid_promotionplan", _);
                     const _ =
                       _._.PARTNER_BASE_URL +
@@ -43188,7 +43235,7 @@
                 _.fnSetLoading(!0);
                 const _ = await (async function (_, _) {
                   const _ = new FormData();
-                  __webpack_require__.append("sessionid", _._.SESSIONID),
+                  __webpack_require__.append("sessionid", (0, _._)()),
                     __webpack_require__.append("gid_promotionplan", _);
                   const _ =
                     _._.PARTNER_BASE_URL +
@@ -52475,7 +52522,7 @@
           try {
             const _ = _._.PARTNER_BASE_URL + "appsupport/ajaxgetassets/" + _,
               _ = new FormData();
-            _.append("sessionid", _._.SESSIONID);
+            _.append("sessionid", (0, _._)());
             const _ = await _().post(_, _, {
               withCredentials: !0,
             });
@@ -52510,7 +52557,7 @@
             const _ = _._.PARTNER_BASE_URL + "appsupport/ajaxpublishassets",
               _ = new FormData();
             _.append("appid", JSON.stringify(_)),
-              _.append("sessionid", _._.SESSIONID);
+              _.append("sessionid", (0, _._)());
             const _ = await _().post(_, _, {
               withCredentials: !0,
             });
@@ -76005,7 +76052,7 @@
           if (!_ || 0 == _.length) return !0;
           let _ = (0, _._)() + "actions/ajaxgetpartnereventsreport",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               clan_account_id: _.GetAccountID(),
               gidlist: _.join(","),
             };
@@ -78334,7 +78381,7 @@
         async InternalOpenDoor(_, _ = !0, _, _ = !1) {
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _ && _.append("datarecord", _),
             _ && _.append("fake_open", "" + _),
             _.append("door_index", "" + _),
@@ -78410,7 +78457,7 @@
         async CloseAllDoors(_) {
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
           const _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("clan_accountid", "" + _);
           let _ = null;
           try {
@@ -79196,7 +79243,7 @@
           const _ = _._.STORE_BASE_URL + "account/optoutappcommunication/",
             _ = new FormData();
           if (
-            (_.append("sessionid", _._.SESSIONID),
+            (_.append("sessionid", (0, _._)()),
             _.append("allowCommunication", _ ? "1" : "0"),
             _)
           ) {
@@ -81414,11 +81461,17 @@
                         "#Sale_BrowserSortOption_ContentHub_Popular_Controller"),
                       (_ =
                         "#Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip"))
-                    : "greatondeck" === this.props.event?.GetContentHubType() &&
-                      ((_ =
-                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
-                      (_ =
-                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))),
+                    : "greatondeck" === this.props.event?.GetContentHubType()
+                      ? ((_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
+                        (_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))
+                      : "greatonframe" ===
+                          this.props.event?.GetContentHubType() &&
+                        ((_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnFrame"),
+                        (_ =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnFrame_ttip"))),
                 (0, _.jsx)(
                   _._,
                   {
@@ -84997,36 +85050,56 @@
       }
       var _;
       !(function (_) {
-        (_.GetDailyDeals = function (_, _) {
-          return _.SendMsg("DailyDeal.GetDailyDeals#1", (0, _._)(_, _), _, {
+        (_.GetDailyDeals = function (_, _, _) {
+          return _.SendMsg("DailyDeal.GetDailyDeals#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
         }),
-          (_.CreateDailyDeal = function (_, _) {
-            return _.SendMsg("DailyDeal.CreateDailyDeal#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.CreateDailyDeal = function (_, _, _) {
+            return _.SendMsg(
+              "DailyDeal.CreateDailyDeal#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.UpdateDailyDeal = function (_, _) {
-            return _.SendMsg("DailyDeal.UpdateDailyDeal#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.UpdateDailyDeal = function (_, _, _) {
+            return _.SendMsg(
+              "DailyDeal.UpdateDailyDeal#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.DeleteDailyDeal = function (_, _) {
-            return _.SendMsg("DailyDeal.DeleteDailyDeal#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.DeleteDailyDeal = function (_, _, _) {
+            return _.SendMsg(
+              "DailyDeal.DeleteDailyDeal#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.CancelDailyDeal = function (_, _) {
-            return _.SendMsg("DailyDeal.CancelDailyDeal#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.CancelDailyDeal = function (_, _, _) {
+            return _.SendMsg(
+              "DailyDeal.CancelDailyDeal#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetDailyDealsForApps = function (_, _) {
+          (_.GetDailyDealsForApps = function (_, _, _) {
             return _.SendMsg(
               "DailyDeal.GetDailyDealsForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90441,50 +90514,50 @@
       }
       var _, _, _;
       !(function (_) {
-        (_.CreatePlan = function (_, _) {
+        (_.CreatePlan = function (_, _, _) {
           return _.SendMsg(
             "PromotionPlanning.CreatePlan#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.CreateTentativePlan = function (_, _) {
+          (_.CreateTentativePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.CreateTentativePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlan = function (_, _) {
+          (_.UpdatePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlanPartnerInfo = function (_, _) {
+          (_.UpdatePlanPartnerInfo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlanPartnerInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlanInputData = function (_, _) {
+          (_.UpdatePlanInputData = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlanInputData#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -90492,26 +90565,31 @@
               },
             );
           }),
-          (_.DeletePlan = function (_, _) {
+          (_.DeletePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.DeletePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPlan = function (_, _) {
-            return _.SendMsg("PromotionPlanning.GetPlan#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetPlan = function (_, _, _) {
+            return _.SendMsg(
+              "PromotionPlanning.GetPlan#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetAllActivePlan = function (_, _) {
+          (_.GetAllActivePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllActivePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90519,10 +90597,10 @@
               },
             );
           }),
-          (_.GetPlanCompletedInDateRange = function (_, _) {
+          (_.GetPlanCompletedInDateRange = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanCompletedInDateRange#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90530,10 +90608,10 @@
               },
             );
           }),
-          (_.GetPlanByAssociationID = function (_, _) {
+          (_.GetPlanByAssociationID = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByAssociationID#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90541,10 +90619,10 @@
               },
             );
           }),
-          (_.GetPlansUpdatedSince = function (_, _) {
+          (_.GetPlansUpdatedSince = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlansUpdatedSince#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90552,10 +90630,10 @@
               },
             );
           }),
-          (_.SearchPlan = function (_, _) {
+          (_.SearchPlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SearchPlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90563,10 +90641,10 @@
               },
             );
           }),
-          (_.GetAllPlansForApps = function (_, _) {
+          (_.GetAllPlansForApps = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllPlansForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90574,10 +90652,10 @@
               },
             );
           }),
-          (_.GetAllPlansForPartner = function (_, _) {
+          (_.GetAllPlansForPartner = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllPlansForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90586,10 +90664,10 @@
               },
             );
           }),
-          (_.GetPlanByInputAccessKey = function (_, _) {
+          (_.GetPlanByInputAccessKey = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByInputAccessKey#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90598,20 +90676,20 @@
               },
             );
           }),
-          (_.MarkLocalizationAssetComplete = function (_, _) {
+          (_.MarkLocalizationAssetComplete = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.MarkLocalizationAssetComplete#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SendNotification = function (_, _) {
+          (_.SendNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SendNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -90619,10 +90697,10 @@
               },
             );
           }),
-          (_.GetSentNotification = function (_, _) {
+          (_.GetSentNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetSentNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90630,30 +90708,30 @@
               },
             );
           }),
-          (_.ResendNotification = function (_, _) {
+          (_.ResendNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.ResendNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetPromotionEmailTarget = function (_, _) {
+          (_.SetPromotionEmailTarget = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SetPromotionEmailTarget#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPromotionPlanSalesDaily = function (_, _) {
+          (_.GetPromotionPlanSalesDaily = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPromotionPlanSalesDaily#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90661,10 +90739,10 @@
               },
             );
           }),
-          (_.GetPromotionPlanForSalePages = function (_, _) {
+          (_.GetPromotionPlanForSalePages = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPromotionPlanForSalePages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90672,20 +90750,20 @@
               },
             );
           }),
-          (_.CreateSalePageForPromo = function (_, _) {
+          (_.CreateSalePageForPromo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.CreateSalePageForPromo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUpcomingScheduledDiscounts = function (_, _) {
+          (_.GetUpcomingScheduledDiscounts = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetUpcomingScheduledDiscounts#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90693,10 +90771,10 @@
               },
             );
           }),
-          (_.GetSalePageCandidatesForPromo = function (_, _) {
+          (_.GetSalePageCandidatesForPromo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetSalePageCandidatesForPromo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90704,10 +90782,10 @@
               },
             );
           }),
-          (_.GetAdvertisingAppsForPartner = function (_, _) {
+          (_.GetAdvertisingAppsForPartner = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAdvertisingAppsForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -90717,20 +90795,20 @@
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.SetInvite = function (_, _) {
+          (_.SetInvite = function (_, _, _) {
             return _.SendMsg(
               "PromotionEventInvites.SetInvite#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-            (_.GetInvite = function (_, _) {
+            (_.GetInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.GetInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -90738,40 +90816,40 @@
                 },
               );
             }),
-            (_.AcceptInvite = function (_, _) {
+            (_.AcceptInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.AcceptInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CancelInvite = function (_, _) {
+            (_.CancelInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.CancelInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.ResendEmailInvite = function (_, _) {
+            (_.ResendEmailInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.ResendEmailInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.GetEmailTargets = function (_, _) {
+            (_.GetEmailTargets = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.GetEmailTargets#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
@@ -90780,10 +90858,10 @@
             });
         })(_ || (_ = {})),
         (function (_) {
-          _.GetOptInDemoStats = function (_, _) {
+          _.GetOptInDemoStats = function (_, _, _) {
             return _.SendMsg(
               "PromotionStats.GetOptInDemoStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -91115,7 +91193,7 @@
             _ = _.GetResizeDimension(),
             _ = new FormData();
           _.append("clanimage", _, _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
             _?.artworkType && _.append("arttype", _.artworkType),
             _ &&
@@ -91341,7 +91419,7 @@
         }
         async DeleteClanImageByID(_, _) {
           let _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               imageid: _,
             },
             _ = _.GetAccountID(),
@@ -91617,7 +91695,7 @@
           if (this.BIsEqual(_, this.m_mapOriginalJSON.get(_))) return _._;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("clanAccountID", "" + _.GetAccountID()),
               _.append("gidClanEvent", "" + _),
               _.append("jsonData", JSON.stringify(_));
@@ -93279,7 +93357,7 @@
           if ("" == this.state.formattingHelp.__html) {
             let _,
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               };
             (_ = await _().get(_.GetHelpURL(this.props.formatType, !0), {
               params: _,
@@ -94654,6 +94732,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_filesToUpload = _._.array();
@@ -94750,7 +94829,7 @@
         }
         async UploadSingleImage(_, _, _, _) {
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("elanguage", "" + _),
             _.append("originalname", _);
           const _ = _.GetCurrentImageOption();
@@ -94840,7 +94919,7 @@
           {
             const _ = (0, _._)(this.m_strUploadPath, "ajax", "status"),
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 requestid: _.data.requestID,
                 elanguage: _,
                 originalname: _,
@@ -94868,7 +94947,7 @@
         async HandleDirectUploadToTempFromBrowser(_, _) {
           const _ = new FormData();
           __webpack_require__.append("filesize", "" + _.file.size),
-            __webpack_require__.append("sessionid", _._.SESSIONID);
+            __webpack_require__.append("sessionid", (0, _._)());
           const _ =
               (0, _._)(this.m_strUploadPath, "ajax", "uploadurl") ||
               this.m_strUploadPath,
@@ -96492,7 +96571,7 @@
       class _ extends _._ {
         async DeleteOldAnnouncement(_, _) {
           let _ = new URLSearchParams();
-          __webpack_require__.append("sessionid", _._.SESSIONID);
+          __webpack_require__.append("sessionid", (0, _._)());
           let _ =
               _._.COMMUNITY_BASE_URL +
               "/gid/" +
@@ -96834,7 +96913,7 @@
             return this.m_mapSourceEventGIDToPostedClans.get(_);
           const _ = _._.STORE_BASE_URL + "events/ajaxgetrepostedevent",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               source_clan_accountid: _.GetAccountID(),
               source_event_gid: _,
             };
@@ -96870,7 +96949,7 @@
         async RepostEvent(_, _, _, _, _) {
           const _ = _._.STORE_BASE_URL + "events/ajaxrepostevent",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("source_clan_accountid", "" + _.GetAccountID()),
             _.append("source_event_gid", "" + _),
             _.append(
@@ -97866,7 +97945,7 @@
             return;
           const _ = _._.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
             _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("categoryid", _.toString()),
             _.append("appid", _.toString());
           try {
@@ -100777,7 +100856,6 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -100808,7 +100886,6 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -100869,7 +100946,7 @@
           : null;
       }
       function _(_) {
-        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
+        const { creatorAccountID: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -100918,7 +100995,7 @@
           })(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
+          className: (0, _._)(_().BottomCreatorRow, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -101197,19 +101274,16 @@
             strDoubleCapsuleMessage: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = _ && !_;
+          { bIsOwned: _ } = (0, _._)(_);
         if (_ && _ && _.item_type == _._._ && _.appid)
           return (0, _.jsx)(_._, {
             appid: _.appid,
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && _),
-          _ = Boolean(_);
+        const _ = Boolean(_ && _);
         return (0, _.jsx)(_, {
           _: _,
-          bShowAsMuted: _,
           bHidePrice: _,
           bShowInLibraryInsteadOfPrice: _,
           bHidePlatforms: _,

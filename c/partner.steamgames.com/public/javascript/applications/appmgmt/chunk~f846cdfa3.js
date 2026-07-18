@@ -224,7 +224,7 @@
                     mapAltText: _,
                   } = _,
                   _ = new FormData();
-                _.append("sessionid", _._.SESSIONID);
+                _.append("sessionid", (0, _._)());
                 const _ = Math.max(_.length, _.length);
                 for (let _ = 0; _ < _; _++)
                   _ >= _.length
@@ -1005,7 +1005,7 @@
                     } = _,
                     _ = `${_._.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${_}`,
                     _ = new FormData();
-                  _.append("sessionid", _._.SESSIONID),
+                  _.append("sessionid", (0, _._)()),
                     _ &&
                       _.append("release_date", __webpack_require__.toString());
                   _.append("coming_soon_display", _);

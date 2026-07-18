@@ -3053,10 +3053,10 @@
       }
       var _;
       !(function (_) {
-        (_.GetActiveMarketingMessages = function (_, _) {
+        (_.GetActiveMarketingMessages = function (_, _, _) {
           return _.SendMsg(
             "MarketingMessages.GetActiveMarketingMessages#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -3065,10 +3065,10 @@
             },
           );
         }),
-          (_.GetPastMarketingMessages = function (_, _) {
+          (_.GetPastMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPastMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3076,10 +3076,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForUser = function (_, _) {
+          (_.GetMarketingMessagesForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3087,10 +3087,10 @@
               },
             );
           }),
-          (_.DoesUserHavePendingMarketingMessages = function (_, _) {
+          (_.DoesUserHavePendingMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3098,10 +3098,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessage = function (_, _) {
+          (_.GetDisplayMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3110,10 +3110,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessageForUser = function (_, _) {
+          (_.GetDisplayMarketingMessageForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3121,10 +3121,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessageAdmin = function (_, _) {
+          (_.GetDisplayMarketingMessageAdmin = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3150,10 +3150,10 @@
               },
             );
           }),
-          (_.GetMarketingMessage = function (_, _) {
+          (_.GetMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -3161,80 +3161,80 @@
               },
             );
           }),
-          (_.CreateMarketingMessage = function (_, _) {
+          (_.CreateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.UpdateMarketingMessage = function (_, _) {
+          (_.UpdateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.DeleteMarketingMessage = function (_, _) {
+          (_.DeleteMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.FindMarketingMessages = function (_, _) {
+          (_.FindMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.FindMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetMarketingMessageViewerStats = function (_, _) {
+          (_.GetMarketingMessageViewerStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageViewerStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessagesViewerRangeStats = function (_, _) {
+          (_.GetMarketingMessagesViewerRangeStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessageClickedStats = function (_, _) {
+          (_.GetMarketingMessageClickedStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageClickedStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetPartnerReadyToPublishMessages = function (_, _) {
+          (_.GetPartnerReadyToPublishMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerReadyToPublishMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3243,10 +3243,10 @@
               },
             );
           }),
-          (_.PublishPartnerMessage = function (_, _) {
+          (_.PublishPartnerMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.PublishPartnerMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3255,10 +3255,10 @@
               },
             );
           }),
-          (_.GetPartnerMessagePreview = function (_, _) {
+          (_.GetPartnerMessagePreview = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerMessagePreview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3267,10 +3267,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForPartner = function (_, _) {
+          (_.GetMarketingMessagesForPartner = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3279,10 +3279,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForApps = function (_, _) {
+          (_.GetMarketingMessagesForApps = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,

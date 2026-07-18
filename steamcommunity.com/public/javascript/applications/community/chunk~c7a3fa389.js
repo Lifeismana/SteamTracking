@@ -11,19 +11,6 @@
         return e.toLocaleString((0, i.J)());
       }
     },
-    3049: (e, r, t) => {
-      t.d(r, { J: () => s });
-      var i = t(8527),
-        a = t(13843);
-      function s() {
-        return (0, a.A)().languages.map((e) => {
-          return 2 == (r = e.strISOCode).length && i.TS.COUNTRY
-            ? `${r}-${i.TS.COUNTRY}`
-            : r;
-          var r;
-        });
-      }
-    },
     66008: (e, r, t) => {
       t.d(r, {
         RY: () => v,
@@ -2036,7 +2023,7 @@
                     bw: o.gp.writeString,
                   },
                   animated: { n: 8, br: o.qM.readBool, bw: o.gp.writeBool },
-                  badge_data: { n: 9, c: Y, r: !0, q: !0 },
+                  badge_data: { n: 9, c: Z, r: !0, q: !0 },
                   profile_theme_id: {
                     n: 12,
                     br: o.qM.readString,
@@ -2083,56 +2070,56 @@
           return "LoyaltyRewardDefinition_CommunityItemData";
         }
       }
-      class Y extends s.Message {
+      class Z extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Y.prototype.level || o.Sg(Y.M()),
+            Z.prototype.level || o.Sg(Z.M()),
             s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Y.sm_m ||
-              (Y.sm_m = {
-                proto: Y,
+            Z.sm_m ||
+              (Z.sm_m = {
+                proto: Z,
                 fields: {
                   level: { n: 1, br: o.qM.readInt32, bw: o.gp.writeInt32 },
                   image: { n: 2, br: o.qM.readString, bw: o.gp.writeString },
                 },
               }),
-            Y.sm_m
+            Z.sm_m
           );
         }
         static MBF() {
-          return Y.sm_mbf || (Y.sm_mbf = o.w0(Y.M())), Y.sm_mbf;
+          return Z.sm_mbf || (Z.sm_mbf = o.w0(Z.M())), Z.sm_mbf;
         }
         toObject(e = !1) {
-          return Y.toObject(e, this);
+          return Z.toObject(e, this);
         }
         static toObject(e, r) {
-          return o.BT(Y.M(), e, r);
+          return o.BT(Z.M(), e, r);
         }
         static fromObject(e) {
-          return o.Uq(Y.M(), e);
+          return o.Uq(Z.M(), e);
         }
         static deserializeBinary(e) {
           let r = new (n().BinaryReader)(e),
-            t = new Y();
-          return Y.deserializeBinaryFromReader(t, r);
+            t = new Z();
+          return Z.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return o.zj(Y.MBF(), e, r);
+          return o.zj(Z.MBF(), e, r);
         }
         serializeBinary() {
           var e = new (n().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {
-          o.i0(Y.M(), e, r);
+          o.i0(Z.M(), e, r);
         }
         serializeBase64String() {
           var e = new (n().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "LoyaltyRewardDefinition_BadgeData";
@@ -2214,36 +2201,36 @@
           return "LoyaltyRewardPurchaseBonus";
         }
       }
-      class Z extends s.Message {
+      class Y extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Z.toObject(e, this);
+          return Y.toObject(e, this);
         }
         static toObject(e, r) {
           return e ? { $jspbMessageInstance: r } : {};
         }
         static fromObject(e) {
-          return new Z();
+          return new Y();
         }
         static deserializeBinary(e) {
           let r = new (n().BinaryReader)(e),
-            t = new Z();
-          return Z.deserializeBinaryFromReader(t, r);
+            t = new Y();
+          return Y.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
           return e;
         }
         serializeBinary() {
           var e = new (n().BinaryWriter)();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {}
         serializeBase64String() {
           var e = new (n().BinaryWriter)();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CLoyaltyRewards_GetActivePurchaseBonuses_Request";
@@ -2829,146 +2816,146 @@
       }
       var se;
       !(function (e) {
-        (e.GetPointsForSpend = function (e, r) {
+        (e.GetPointsForSpend = function (e, r, t) {
           return e.SendMsg(
             "LoyaltyRewards.GetPointsForSpend#1",
-            (0, l.I8)(p, r),
+            (0, l.I8)(p, r, t),
             _,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         }),
-          (e.GetSummary = function (e, r) {
+          (e.GetSummary = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetSummary#1",
-              (0, l.I8)(b, r),
+              (0, l.I8)(b, r, t),
               M,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.RedeemPoints = function (e, r) {
+          (e.RedeemPoints = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPoints#1",
-              (0, l.I8)(z, r),
+              (0, l.I8)(z, r, t),
               S,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsForBadgeLevel = function (e, r) {
+          (e.RedeemPointsForBadgeLevel = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
-              (0, l.I8)(f, r),
+              (0, l.I8)(f, r, t),
               S,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsToUpgradeItem = function (e, r) {
+          (e.RedeemPointsToUpgradeItem = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
-              (0, l.I8)(R, r),
+              (0, l.I8)(R, r, t),
               S,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsForProfileCustomization = function (e, r) {
+          (e.RedeemPointsForProfileCustomization = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
-              (0, l.I8)(q, r),
+              (0, l.I8)(q, r, t),
               W,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsForProfileCustomizationUpgrade = function (e, r) {
+          (e.RedeemPointsForProfileCustomizationUpgrade = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
-              (0, l.I8)(j, r),
+              (0, l.I8)(j, r, t),
               h,
               { ePrivilege: 1 },
             );
           }),
-          (e.RegisterForSteamDeckRewards = function (e, r) {
+          (e.RegisterForSteamDeckRewards = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.RegisterForSteamDeckRewards#1",
-              (0, l.I8)(F, r),
+              (0, l.I8)(F, r, t),
               I,
               { ePrivilege: 1 },
             );
           }),
-          (e.AddReaction = function (e, r) {
+          (e.AddReaction = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.AddReaction#1",
-              (0, l.I8)(v, r),
+              (0, l.I8)(v, r, t),
               O,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetReactions = function (e, r) {
+          (e.GetReactions = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetReactions#1",
-              (0, l.I8)(T, r),
+              (0, l.I8)(T, r, t),
               U,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetReactionsSummaryForUser = function (e, r) {
+          (e.GetReactionsSummaryForUser = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetReactionsSummaryForUser#1",
-              (0, l.I8)(C, r),
+              (0, l.I8)(C, r, t),
               P,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetReactionConfig = function (e, r) {
+          (e.GetReactionConfig = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetReactionConfig#1",
-              (0, l.I8)(x, r),
+              (0, l.I8)(x, r, t),
               N,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetProfileCustomizationsConfig = function (e, r) {
+          (e.GetProfileCustomizationsConfig = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetProfileCustomizationsConfig#1",
-              (0, l.I8)(G, r),
+              (0, l.I8)(G, r, t),
               k,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetEligibleApps = function (e, r) {
+          (e.GetEligibleApps = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetEligibleApps#1",
-              (0, l.I8)(A, r),
+              (0, l.I8)(A, r, t),
               D,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetActivePurchaseBonuses = function (e, r) {
+          (e.GetActivePurchaseBonuses = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetActivePurchaseBonuses#1",
-              (0, l.I8)(Z, r),
+              (0, l.I8)(Y, r, t),
               H,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.QueryRewardItems = function (e, r) {
+          (e.QueryRewardItems = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.QueryRewardItems#1",
-              (0, l.I8)(V, r),
+              (0, l.I8)(V, r, t),
               X,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.BatchedQueryRewardItems = function (e, r) {
+          (e.BatchedQueryRewardItems = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.BatchedQueryRewardItems#1",
-              (0, l.I8)(ee, r),
+              (0, l.I8)(ee, r, t),
               re,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetEquippedProfileItems = function (e, r) {
+          (e.GetEquippedProfileItems = function (e, r, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetEquippedProfileItems#1",
-              (0, l.I8)(ie, r),
+              (0, l.I8)(ie, r, t),
               ae,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );

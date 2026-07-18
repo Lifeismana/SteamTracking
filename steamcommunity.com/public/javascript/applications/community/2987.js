@@ -8,73 +8,87 @@
     },
     32987: (e, i, a) => {
       "use strict";
-      a.r(i), a.d(i, { default: () => v });
-      var o = a(7850),
-        s = a(8527),
-        l = a(65946),
-        t = a(67936),
-        n = a(53807),
-        c = a(48890),
-        r = a.n(c),
-        d = a(35380),
-        _ = a(39777);
-      function v(e) {
+      a.r(i), a.d(i, { default: () => _ });
+      var s = a(7850),
+        l = a(8527),
+        n = a(39777),
+        o = a(65946),
+        t = a(35380),
+        c = a(67936),
+        r = a(53807),
+        d = a(48890),
+        u = a.n(d),
+        v = a(79050);
+      function _(e) {
         const {
             rgPackageTuples: i,
             rgHardwareDetails: a,
-            selectedProduct: c,
+            selectedProduct: d,
           } = e,
-          [v, u, m, g] = (0, l.q3)(() => [
+          [_, g, m, f, k] = (0, o.q3)(() => [
             null == a ? void 0 : a.some((e) => e.collection_time_active),
             null == a
               ? void 0
               : a.some(
                   (e) =>
                     e.collection_time_active &&
-                    e.collection_time_active < s.TS.NOW,
+                    e.collection_time_active < l.TS.NOW,
                 ),
             i.length,
-            null == a ? void 0 : a.find((e) => (0, n.k)(e.reservation_state)),
+            null == a ? void 0 : a.find((e) => (0, r.k)(e.reservation_state)),
+            null == a
+              ? void 0
+              : a.find(
+                  (e) =>
+                    !!e.packageid &&
+                    e.packageid ===
+                      (null == d ? void 0 : d.reservation_package),
+                ),
           ]),
-          N = (0, d.oc)(null == g ? void 0 : g.packageid),
-          { data: h } = (0, _.J$)(N);
+          h = (0, t.oc)(null == f ? void 0 : f.packageid),
+          { data: N } = (0, n.J$)(h);
         if (!a) return null;
-        if (v)
-          return u
-            ? (0, o.jsx)("div", {
-                className: r().Message,
-                children: g
-                  ? t.F5.Localize("#Reservation_InPool_NoDate")
-                  : t.F5.Localize("#Reservation_Pool_Closed"),
-              })
-            : (0, o.jsx)("div", {
-                className: r().Message,
-                children: g
-                  ? t.F5.Localize("#Reservation_InPool_NoDate", m)
-                  : t.F5.Localize("#Reserationn_NoListJoined", m),
-              });
-        const k = g && (0, n.k)(g.reservation_state),
-          p =
-            (k && (null == g ? void 0 : g.position_is_waitlist)) ||
-            (!k && (null == g ? void 0 : g.position_is_waitlist)),
-          R = null == h ? void 0 : h.name;
-        return p && R && k
-          ? (0, o.jsx)("div", {
-              className: r().Message,
-              children: t.F5.Localize(
+        const p = f && (0, r.k)(f.reservation_state);
+        if (_) {
+          if (g && p)
+            return (0, s.jsx)("div", {
+              className: u().Message,
+              children: c.F5.Localize("#Reservation_InPool"),
+            });
+          if (!g)
+            return (0, s.jsx)("div", {
+              className: u().Message,
+              children: p
+                ? c.F5.Localize("#Reservation_InPool_NoDate", m)
+                : c.F5.Localize("#Reserationn_NoListJoined", m),
+            });
+        }
+        const R = (0, v.i)(f, k),
+          F = null == N ? void 0 : N.name;
+        if (R) {
+          if (F && p)
+            return (0, s.jsx)("div", {
+              className: u().Message,
+              children: c.F5.Localize(
                 "#Reservation_In_Waitlist_WithName_NoDate",
-                R,
+                F,
+              ),
+            });
+          if (!p)
+            return (0, s.jsx)("div", {
+              className: u().Message,
+              children: c.F5.Localize("#Reservation_Pool_Closed"),
+            });
+        }
+        return F && p
+          ? (0, s.jsx)("div", {
+              className: u().Message,
+              children: c.F5.Localize(
+                "#Reservation_OnRegularReserveForModel",
+                F,
               ),
             })
-          : R && k
-            ? (0, o.jsx)("div", {
-                className: r().Message,
-                children: t.F5.Localize(
-                  "#Reservation_OnRegularReserveForModel",
-                  R,
-                ),
-              })
-            : null;
+          : null;
       }
     },
   },

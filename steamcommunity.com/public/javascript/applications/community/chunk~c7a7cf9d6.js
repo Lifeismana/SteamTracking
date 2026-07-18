@@ -894,7 +894,7 @@
       class d extends r.ZQ {
         async DeleteOldAnnouncement(e, t) {
           let n = new URLSearchParams();
-          n.append("sessionid", a.TS.SESSIONID);
+          n.append("sessionid", (0, a.KC)());
           let i =
               a.TS.COMMUNITY_BASE_URL +
               "/gid/" +
@@ -984,7 +984,7 @@
           const i = c.TS.STORE_BASE_URL + "account/optoutappcommunication/",
             s = new FormData();
           if (
-            (s.append("sessionid", c.TS.SESSIONID),
+            (s.append("sessionid", (0, c.KC)()),
             s.append("allowCommunication", e ? "1" : "0"),
             t)
           ) {
@@ -1110,7 +1110,7 @@
       var i = n(7850),
         s = n(6144),
         a = n(82429),
-        r = n(34214),
+        r = n(43261),
         o = n(46067),
         l = n(81477),
         d = n(23338);

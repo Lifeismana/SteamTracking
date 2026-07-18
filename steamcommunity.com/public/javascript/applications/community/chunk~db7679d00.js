@@ -19,17 +19,17 @@
         g = r(78619),
         h = r(78327),
         p = r(45754),
-        S = r(81393),
-        f = r(80613),
-        _ = r.n(f),
+        f = r(81393),
+        S = r(80613),
+        _ = r.n(S),
         y = r(89068),
         b = r(21920);
-      class T extends f.Message {
+      class T extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.language || y.Sg(T.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -79,12 +79,12 @@
           return "CSteamEngine_UpdateTextFilterDictionary_Notification";
         }
       }
-      class M extends f.Message {
+      class M extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             M.prototype.language || y.Sg(M.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -134,12 +134,12 @@
           return "CSteamEngine_GetTextFilterDictionary_Request";
         }
       }
-      class B extends f.Message {
+      class B extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.dictionary || y.Sg(B.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -192,12 +192,12 @@
           return "CSteamEngine_GetTextFilterDictionary_Response";
         }
       }
-      class w extends f.Message {
+      class w extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             w.prototype.language || y.Sg(w.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -247,12 +247,12 @@
           return "CSteamEngine_TextFilterDictionaryChanged_Notification";
         }
       }
-      class C extends f.Message {
+      class C extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             C.prototype.pid || y.Sg(C.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -301,12 +301,12 @@
           return "CSteamEngine_GetGameIDForPID_Request";
         }
       }
-      class R extends f.Message {
+      class R extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             R.prototype.gameid || y.Sg(R.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -359,12 +359,12 @@
           return "CSteamEngine_GetGameIDForPID_Response";
         }
       }
-      class x extends f.Message {
+      class x extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             x.prototype.gameid || y.Sg(x.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -422,12 +422,12 @@
           return "CSteamEngine_SetOverlayEscapeKeyHandling_Notification";
         }
       }
-      class v extends f.Message {
+      class v extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             v.prototype.search_term || y.Sg(v.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -485,12 +485,12 @@
           return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
         }
       }
-      class F extends f.Message {
+      class F extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             F.prototype.appids || y.Sg(F.M()),
-            f.Message.initialize(this, e, 0, -1, [1], null);
+            S.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -770,7 +770,7 @@
         E = r(44654),
         O = r(34557),
         W = r(60778);
-      f.Message;
+      S.Message;
       class z {
         constructor() {
           (this.m_mapCallbacks = new Map()),
@@ -956,12 +956,12 @@
           "m_rgRegisteredServiceMethodHandlers",
           void 0,
         );
-      class H extends f.Message {
+      class H extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             H.prototype.auth_key || y.Sg(H.M()),
-            f.Message.initialize(this, e, 0, -1, void 0, null);
+            S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1010,10 +1010,10 @@
           return "CTransportAuth_Authenticate_Request";
         }
       }
-      class k extends f.Message {
+      class k extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), f.Message.initialize(this, e, 0, -1, void 0, null);
+          super(), S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return k.toObject(e, this);
@@ -1045,10 +1045,10 @@
           return "CTransportAuth_Authenticate_Response";
         }
       }
-      class P extends f.Message {
+      class P extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), f.Message.initialize(this, e, 0, -1, void 0, null);
+          super(), S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return P.toObject(e, this);
@@ -1607,11 +1607,11 @@
           const t = parseInt(e.Hdr().jobid_target()),
             r = this.m_mapPendingMethodRequests.get(t);
           if (null == r)
-            return void (0, S.wT)(
+            return void (0, f.wT)(
               !1,
               "Transport Error: no pending callback for request",
             );
-          (0, S.wT)(
+          (0, f.wT)(
             t == r.m_iSeq,
             "Transport Error: mistmatched request sequence",
           ),
@@ -1621,7 +1621,7 @@
         }
         DispatchNotification(e) {
           this.m_messageHandlers.DispatchMsgToHandlers(e, (e) => {
-            (0, S.wT)(
+            (0, f.wT)(
               !1,
               "Transport Error: A notification should not generate a response",
             );
@@ -1860,7 +1860,7 @@
                   .Body()
                   .preferences();
               } else {
-                let t = { sessionid: h.TS.SESSIONID, origin: $() };
+                let t = { sessionid: (0, h.KC)(), origin: $() };
                 const r = await a().get(
                   h.TS.COMMUNITY_BASE_URL +
                     "textfilter/ajaxgetcommunitypreferences",
@@ -1883,7 +1883,7 @@
                     .Body()
                     .words();
                 } else {
-                  let e = { sessionid: h.TS.SESSIONID, origin: $() };
+                  let e = { sessionid: (0, h.KC)(), origin: $() };
                   const r = await a().get(
                     h.TS.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgettextfiltercustomwords",
@@ -1928,7 +1928,7 @@
                 (await this.LoadLanguage("english"));
           } catch (t) {
             this.m_nLoadLanguagesRetryTimeout &&
-              ((0, S.wT)(
+              ((0, f.wT)(
                 !this.m_nLoadLanguagesRetryTimeout,
                 "Got two concurrent calls to TextFilteringStore.LoadLanguages",
               ),
@@ -2106,7 +2106,7 @@
       function Q() {
         if (!V) {
           const e = new Set();
-          let t = { sessionid: h.TS.SESSIONID, origin: $() };
+          let t = { sessionid: (0, h.KC)(), origin: $() };
           a()
             .get(h.TS.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,

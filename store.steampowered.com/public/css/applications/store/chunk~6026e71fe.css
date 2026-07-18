@@ -334,6 +334,7 @@ html.responsive.touch .O2jA-VCFl9bmblncfI4k2 {
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  will-change: transform;
   gap: 8px;
 }
 ._3G65z75zOTQeHrXxszHO4b {
@@ -5655,6 +5656,13 @@ html.responsive.touch
 ._182sEaT7DgwPKoXlxOZjc4 {
   background-color: rgba(0, 0, 0, 0.5);
 }
+._25TX3VPP7fvosVbV8Tk9BY {
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 @keyframes _3--8dqRLvQdQpxNt3iZ2Ci {
   from {
     background-position: 0 100%;
@@ -5790,6 +5798,11 @@ html.responsive.touch
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+._2XU65hvvZfdgNuY2C_wL5r {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 @keyframes _1PMJYtmG-0LXiCIzsf7hHH {
   from {
@@ -11018,7 +11031,7 @@ html.responsive.touch ._1rgWiRelyItuYoOZELdZSD {
     text-align: center;
   }
 }
-:where(._1fNVqPb5rhUOTSV5nEBHdl) {
+:where(.xqG5GdDEeYauX2ots2DLl) {
   --bg-color: var(--color-dull-8);
   --bg-color-hover: var(--color-dull-9);
   --bg-color-focus: var(--color-dull-9);
@@ -11030,14 +11043,14 @@ html.responsive.touch ._1rgWiRelyItuYoOZELdZSD {
   transition: box-shadow 0.2s ease-in-out;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
 }
-:where(._1fNVqPb5rhUOTSV5nEBHdl)._1K_Ve980-qBq8l1-cZJdw1 {
+:where(.xqG5GdDEeYauX2ots2DLl)._1K_Ve980-qBq8l1-cZJdw1 {
   --padding: 0 var(--spacing-3);
 }
-:where(._1fNVqPb5rhUOTSV5nEBHdl):focus-visible:not(textarea) {
+:where(.xqG5GdDEeYauX2ots2DLl):focus-visible:not(textarea) {
   outline: 2px solid #fff;
   outline-offset: -2px;
 }
-:where(._1fNVqPb5rhUOTSV5nEBHdl):hover {
+:where(.xqG5GdDEeYauX2ots2DLl):hover {
   box-shadow: var(--box-shadow-elevation-1);
 }
 :where(._2Z-Zr4UW8-jHrU5olM_rpn) {
@@ -11324,8 +11337,7 @@ html.responsive.touch ._1rgWiRelyItuYoOZELdZSD {
   background: var(--background);
 }
 :where(
-    ._3hD10Qy5141ZEY503SxZkd
-      ._2aNlsjcdOdHOtP8uACA3bM[data-selected="false"]:hover
+    .d2NNa31iY_ztalFCMja9O ._2aNlsjcdOdHOtP8uACA3bM[data-selected="false"]:hover
   ) {
   background-color: var(--color-dull-9);
 }

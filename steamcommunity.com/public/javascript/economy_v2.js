@@ -340,22 +340,21 @@ var kStandardTag_Unmarketable =
 	localized_category_name: 'Misc'
 };
 
-	var kStandardTag_Sealed =
-		{
-			localized_tag_name: 'Trade Protected',
-			internal_name: "sealed",
-			category: "misc",
-			localized_category_name: 'Misc'
-		};
-	
-	var kStandardTag_OnMarket =
-		{
-			localized_tag_name: 'Listed on Community Market',
-			internal_name: "onmarket",
-			category: "misc",
-			localized_category_name: 'Misc'
-		};
-	
+var kStandardTag_Sealed =
+{
+	localized_tag_name: 'Trade Protected',
+	internal_name: "sealed",
+	category: "misc",
+	localized_category_name: 'Misc'
+};
+
+var kStandardTag_OnMarket =
+{
+	localized_tag_name: 'Listed on Community Market',
+	internal_name: "onmarket",
+	category: "misc",
+	localized_category_name: 'Misc'
+};
 
 function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
 {
@@ -748,34 +747,32 @@ CInventory.prototype.AddInventoryData = function( data )
 				if ( !description.tags )
 					description.tags = [];
 
-									if ( description.sealed && description.sealed_type == 1 )
+				if ( description.sealed && description.sealed_type == 1 )
+				{
+					description.tags.push( kStandardTag_OnMarket );
+				}
+				else
+				{
+					if ( description.sealed )
+						description.tags.push( kStandardTag_Sealed );
+
+					if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
 					{
-						description.tags.push( kStandardTag_OnMarket );
+						if ( description.tradable )
+							description.tags.push( kStandardTag_Tradable );
+						else
+							description.tags.push( kStandardTag_Untradable );
 					}
-					else
+
+					if ( g_bUseMarketLinks )
 					{
-					
-				if ( description.sealed )
-					description.tags.push( kStandardTag_Sealed );
+						if ( description.marketable )
+							description.tags.push( kStandardTag_Marketable );
+						else
+							description.tags.push( kStandardTag_Unmarketable );
+					}
+			  }
 
-				if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
-				{
-					if ( description.tradable )
-						description.tags.push( kStandardTag_Tradable );
-					else
-						description.tags.push( kStandardTag_Untradable );
-				}
-
-				if ( g_bUseMarketLinks )
-				{
-					if ( description.marketable )
-						description.tags.push( kStandardTag_Marketable );
-					else
-						description.tags.push( kStandardTag_Unmarketable );
-				}
-
-				          }
-					
 				description.use_count = 0;
 
 				this.m_rgDescriptions[key] = description;
@@ -1248,18 +1245,17 @@ CInventory.prototype.BuildItemElement = function( asset, $Item )
 	$Item.append( $Link );
 	this.BindMouseEvents( $Link, $Item, asset );
 
-			if ( description.sealed && description.sealed_type == 1 )
-		{
-			$Item.addClass('listed_item');
-			var $ListedItemBadge = $J('<div />', {
-				'class': 'listed_item_badge',
-				'data-tooltip-text': 'Listed on Steam Community Market.'
-			});
-			$Item.append($ListedItemBadge);
-			BindTooltips($Item, {tooltipCSSClass: 'community_tooltip'});
-		}
-		else
-			if ( description.sealed )
+	if ( description.sealed && description.sealed_type == 1 )
+	{
+		$Item.addClass('listed_item');
+		var $ListedItemBadge = $J('<div />', {
+			'class': 'listed_item_badge',
+			'data-tooltip-text': 'Listed on Steam Community Market.'
+		});
+		$Item.append($ListedItemBadge);
+		BindTooltips($Item, {tooltipCSSClass: 'community_tooltip'});
+	}
+	else if ( description.sealed )
 	{
 		$Item.addClass('provisional_item');
 
@@ -2689,13 +2685,13 @@ var CUser = Class.create( {
 				rgContext.trade_permissions = appTradePermissions;
 				rgContext.inventory = null;
 				this.rgContexts[appid][contextid] = rgContext;
-								if ( rgContext.hide_context ?? false )
+				if ( rgContext.hide_context ?? false )
 				{
 					rgContextIds.splice( 0, 0, contextid );
 					this.m_bSingleContext = true;
 				}
 				else
-								{
+				{
 					rgContextIds.push(contextid);
 				}
 			}
@@ -3453,14 +3449,12 @@ function BuildHover( prefix, item, owner )
 		}
 	}
 
-	
 	var elTradeProtected = $( prefix + '_provisional_badge' );
 	if ( elTradeProtected )
 	{
 		PopulateTradeProtected( elTradeProtected, description );
 	}
 
-	
 	var elTags = $(prefix+'_item_tags');
 	var elTagsContent = $(prefix+'_item_tags_content');
 	if ( elTags && elTagsContent )
@@ -3565,7 +3559,6 @@ function PopulateTradeProtected( elTradeProtected, description )
 		$J( elTradeProtected ).hide();
 	}
 }
-
 
 function PopulateActions( prefix, elActions, rgActions, item, owner )
 {
@@ -4087,9 +4080,9 @@ SellItemDialog = {
 			$('market_sell_dialog_game_icon').alt = rgAppData.name;
 
 							$JFromIDOrElement('market_sell_dialog_game_name').text( rgAppData.name );
-										$J('#market_dialog_topwarning_inplace').toggle( rgAppData[ 'inplace_listing' ] ?? 0 );
-				$J('#market_dialog_topwarning').toggle( ! ( rgAppData[ 'inplace_listing' ] ?? 0 ) );
-			
+						$J('#market_dialog_topwarning_inplace').toggle( rgAppData[ 'inplace_listing' ] ?? 0 );
+			$J('#market_dialog_topwarning').toggle( ! ( rgAppData[ 'inplace_listing' ] ?? 0 ) );
+
 			$J('#market_sell_dialog_item_type').text( description.type );
 			$('market_sell_dialog_game_info').show();
 		}
@@ -4559,6 +4552,15 @@ SellItemDialog = {
 		}
 	},
 
+	GetPublisherFeeRate() {
+		var fee_pct = parseFloat( ( g_rgAppContextData [ g_ActiveInventory.m_appid ][ 'market_pubfee_rate' ] ) ?? ( g_rgWalletInfo[ 'wallet_publisher_fee_percent_default' ] ) ?? 0.10 );
+				return fee_pct;
+	},
+
+	GetSteamFeeRate() {
+				return parseFloat( g_rgWalletInfo[ 'wallet_fee_percent' ] ?? 0.05 );
+	},
+
 	OnInputKeyUp: function( event ) {
 		var inputValue = this.GetPriceAsInt();
 		var nAmount = inputValue;
@@ -4566,8 +4568,8 @@ SellItemDialog = {
 
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
-			var ppct = parseFloat( g_rgWalletInfo[ 'wallet_publisher_fee_percent_default' ] ?? 0.10 );
-			var spct = parseFloat( g_rgWalletInfo[ 'wallet_fee_percent' ] ?? 0.05 );
+			var ppct = this.GetPublisherFeeRate();
+			var spct = this.GetSteamFeeRate();
 			var nTotalUnitPrice = GetTotalWithFees( nAmount, ppct, spct, g_rgWalletInfo );
 
 			$('market_sell_buyercurrency_input').value = v_currencyformat( nTotalUnitPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );

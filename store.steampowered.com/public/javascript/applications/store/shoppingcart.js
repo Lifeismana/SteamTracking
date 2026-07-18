@@ -5,21 +5,21 @@
   [62965],
   {
     64908: (e, t, n) => {
-      n.r(t), n.d(t, { ShoppingCartErrorModal: () => B, default: () => b });
+      n.r(t), n.d(t, { ShoppingCartErrorModal: () => B, default: () => G });
       var i = n(7850),
         a = n(83392),
         r = n(20187),
         s = n(53965),
-        c = n(13904),
-        l = n(79443),
-        o = n(38858),
+        o = n(13904),
+        c = n(79443),
+        l = n(38858),
         d = n(76217),
         u = n(2551),
         m = n(8527),
         f = n(23809),
         h = n(80902),
-        C = n(75233),
-        _ = n(51614);
+        _ = n(75233),
+        C = n(51614);
       const g = "giftee-hint",
         p = 600;
       var j = n(60014),
@@ -35,24 +35,24 @@
         M = n(48980),
         S = n(11543),
         A = n.n(S),
-        G = n(53534);
-      function b(e) {
+        b = n(53534);
+      function G(e) {
         const { closeCart: t, lineItemIDs: n, replacedPackageIDs: a } = e,
           r = (0, w.UI)(),
           { data: s } = (0, w.g7)(),
-          c = (0, o.Yj)(n),
-          l = (0, j.aL)(k.TS.STORE_BASE_URL + "cart");
+          o = (0, l.Yj)(n),
+          c = (0, j.aL)(k.TS.STORE_BASE_URL + "cart");
         if (
           (x.useEffect(() => {
-            r.isSuccess && c && 0 === c.length && t();
-          }, [r, c, t]),
-          !c)
+            r.isSuccess && o && 0 === o.length && t();
+          }, [r, o, t]),
+          !o)
         )
           return null;
         const u = a?.length > 0;
-        return (0, i.jsx)(G.wW, {
+        return (0, i.jsx)(b.wW, {
           validateCart: s,
-          eDisplayType: G.WA.k_ECartDisplayType_Modal,
+          eDisplayType: b.WA.k_ECartDisplayType_Modal,
           children: (0, i.jsxs)(I.mt, {
             active: !0,
             className: A().ShoppingCartModal,
@@ -65,11 +65,11 @@
                 ),
               }),
               (0, i.jsx)(M.pf, {
-                lineItems: c,
+                lineItems: o,
                 cartValidation: s,
                 scrollable: !0,
               }),
-              (0, i.jsx)(P, { lineItems: c, cartValidation: s }),
+              (0, i.jsx)(P, { lineItems: o, cartValidation: s }),
               (0, i.jsxs)(d.Z, {
                 className: A().ShoppingCartModalBtns,
                 children: [
@@ -79,7 +79,7 @@
                   }),
                   (0, i.jsx)(y.jn, {
                     className: A().OpenCartBtn,
-                    onClick: () => (window.location.href = l),
+                    onClick: () => (window.location.href = c),
                     children: (0, N.we)(
                       "#Cart_ViewMyCart",
                       r.data?.line_items.length,
@@ -123,7 +123,7 @@
       }
       function P(e) {
         const { cartValidation: t, lineItems: n } = e,
-          o = x.useRef(!1),
+          l = x.useRef(!1),
           [d, j] = x.useState(!1),
           { data: w } = (function () {
             const e = (0, f.rX)();
@@ -140,11 +140,11 @@
             });
           })(),
           { data: y } = (0, D.js)(w),
-          I = (0, l.EJ)(),
+          I = (0, c.EJ)(),
           k = (function () {
-            const e = (0, C.jE)(),
+            const e = (0, _.jE)(),
               t = (0, f.rX)();
-            return (0, _.n)({
+            return (0, C.n)({
               mutationFn: async (e) => {
                 e
                   ? await t.StoreObject(g, {
@@ -155,13 +155,11 @@
               },
               onMutate: async (t) => {
                 await e.cancelQueries({ queryKey: [g] });
-                let n = null;
-                t && (n = { nGifteeAccountID: t, rtCreated: Date.now() / 1e3 }),
-                  e.setQueryData([g], n);
+                t && Date.now(), e.setQueryData([g], t);
               },
             });
           })(),
-          M = (0, c.C)();
+          M = (0, o.C)();
         let S = m.iA.logged_in && !d && !!w && !!y && !I && !!t?.cart_items;
         if (S) {
           const e = new Map(t.cart_items.map((e) => [e.line_item_id, e]));
@@ -174,13 +172,13 @@
         if (
           (x.useEffect(() => {
             S &&
-              !o.current &&
-              ((0, v.D)()?.AddEvent(u.Xm.K4), (o.current = !0));
+              !l.current &&
+              ((0, v.D)()?.AddEvent(u.Xm.K4), (l.current = !0));
           }, [S]),
           !S)
         )
           return null;
-        const G = (0, i.jsxs)("a", {
+        const b = (0, i.jsxs)("a", {
           href: y.GetCommunityProfileURL(),
           target: "_blank",
           children: [
@@ -205,7 +203,7 @@
               as: "div",
               align: "center",
               className: A().GifteeHint,
-              children: (0, N.PP)("#Cart_GifteeHint_Wishlist", G),
+              children: (0, N.PP)("#Cart_GifteeHint_Wishlist", b),
             }),
             (0, i.jsxs)(a.s, {
               gap: "2",

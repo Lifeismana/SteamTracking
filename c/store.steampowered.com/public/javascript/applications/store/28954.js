@@ -654,7 +654,7 @@
             _ = _.GetResizeDimension(),
             _ = new FormData();
           _.append("clanimage", _, _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
             _?.artworkType && _.append("arttype", _.artworkType),
             _ &&
@@ -733,7 +733,7 @@
           _.append("imagehash", _),
           _.append("extension", _),
           _.append("resize", _.map((_) => _.width + "x" + _.height).join(",")),
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
           (
             await _().post(_, _, {
               cancelToken: _,
@@ -1250,7 +1250,7 @@
         }
         async DeleteClanImageByID(_, _) {
           let _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               imageid: _,
             },
             _ = _.GetAccountID(),

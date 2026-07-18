@@ -2124,30 +2124,30 @@
         }
       }
       !(function (_) {
-        (_.CreateShareClip = function (_, _) {
+        (_.CreateShareClip = function (_, _, _) {
           return _.SendMsg(
             "GameRecordingClip.CreateShareClip#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.DeleteSharedClip = function (_, _) {
+          (_.DeleteSharedClip = function (_, _, _) {
             return _.SendMsg(
               "GameRecordingClip.DeleteSharedClip#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetSingleSharedClip = function (_, _) {
+          (_.GetSingleSharedClip = function (_, _, _) {
             return _.SendMsg(
               "GameRecordingClip.GetSingleSharedClip#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2158,40 +2158,40 @@
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.BeginGameRecordingSegmentsUpload = function (_, _) {
+          (_.BeginGameRecordingSegmentsUpload = function (_, _, _) {
             return _.SendMsg(
               "VideoClip.BeginGameRecordingSegmentsUpload#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-            (_.CommitGameRecordingSegmentsUpload = function (_, _) {
+            (_.CommitGameRecordingSegmentsUpload = function (_, _, _) {
               return _.SendMsg(
                 "VideoClip.CommitGameRecordingSegmentsUpload#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetNextBatchOfSegmentsToUpload = function (_, _) {
+            (_.GetNextBatchOfSegmentsToUpload = function (_, _, _) {
               return _.SendMsg(
                 "VideoClip.GetNextBatchOfSegmentsToUpload#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CommitSegmentUploads = function (_, _) {
+            (_.CommitSegmentUploads = function (_, _, _) {
               return _.SendMsg(
                 "VideoClip.CommitSegmentUploads#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,

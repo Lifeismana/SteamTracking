@@ -339,7 +339,6 @@
         CapsuleContainer: "_22AcxR1RBDH6i-gjKRHYk0",
         Linked: "_3b7bzOQeDc139QX27AIMtM",
         EventRow: "_1UMFnczt69Ka8nOWKMzKJR",
-        Muted: "_1HVwzvj5dyBMgn_KprOcNN",
         BottomCreatorRow: "_1JrUubE3c7FdJsMxYYxbt",
         CreatorLogo: "_3Krfug3wchu0qwGYQbbsHL",
         CreatorName: "Fmi-agZ0W7_4TkZ7CNquC",
@@ -1045,10 +1044,10 @@
       }
       var _;
       !(function (_) {
-        _.GetCookiePreferences = function (_, _) {
+        _.GetCookiePreferences = function (_, _, _) {
           return _.SendMsg(
             "AccountPrivacy.GetCookiePreferences#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -2102,17 +2101,17 @@
         }
       }
       !(function (_) {
-        (_.ValidateCart = function (_, _) {
-          return _.SendMsg("Checkout.ValidateCart#1", (0, _._)(_, _), _, {
+        (_.ValidateCart = function (_, _, _) {
+          return _.SendMsg("Checkout.ValidateCart#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetFriendOwnershipForGifting = function (_, _) {
+          (_.GetFriendOwnershipForGifting = function (_, _, _) {
             return _.SendMsg(
               "Checkout.GetFriendOwnershipForGifting#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2120,10 +2119,15 @@
               },
             );
           }),
-          (_.AddFreeLicense = function (_, _) {
-            return _.SendMsg("Checkout.AddFreeLicense#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.AddFreeLicense = function (_, _, _) {
+            return _.SendMsg(
+              "Checkout.AddFreeLicense#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {}));
     },
@@ -2165,6 +2169,11 @@
                     _: 3,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  email_giftee: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -4123,10 +4132,10 @@
         }
       }
       !(function (_) {
-        (_.CreateNewShoppingCart = function (_, _) {
+        (_.CreateNewShoppingCart = function (_, _, _) {
           return _.SendMsg(
             "ShoppingCart.CreateNewShoppingCart#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
@@ -4134,10 +4143,10 @@
             },
           );
         }),
-          (_.GetShoppingCartContents = function (_, _) {
+          (_.GetShoppingCartContents = function (_, _, _) {
             return _.SendMsg(
               "ShoppingCart.GetShoppingCartContents#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4146,16 +4155,10 @@
               },
             );
           }),
-          (_.AddPackages = function (_, _) {
-            return _.SendMsg("ShoppingCart.AddPackages#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
-          }),
-          (_.UpdatePackageQuantity = function (_, _) {
+          (_.AddPackages = function (_, _, _) {
             return _.SendMsg(
-              "ShoppingCart.UpdatePackageQuantity#1",
-              (0, _._)(_, _),
+              "ShoppingCart.AddPackages#1",
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -4163,16 +4166,27 @@
               },
             );
           }),
-          (_.AddBundle = function (_, _) {
-            return _.SendMsg("ShoppingCart.AddBundle#1", (0, _._)(_, _), _, {
+          (_.UpdatePackageQuantity = function (_, _, _) {
+            return _.SendMsg(
+              "ShoppingCart.UpdatePackageQuantity#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.AddBundle = function (_, _, _) {
+            return _.SendMsg("ShoppingCart.AddBundle#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.RemoveLineItems = function (_, _) {
+          (_.RemoveLineItems = function (_, _, _) {
             return _.SendMsg(
               "ShoppingCart.RemoveLineItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -4369,10 +4383,10 @@
       }
       var _;
       !(function (_) {
-        _.GetIgnoreList = function (_, _) {
+        _.GetIgnoreList = function (_, _, _) {
           return _.SendMsg(
             "StorePreferences.GetIgnoreList#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -4394,77 +4408,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 22940, 19))),
-        (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 59990, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38573, 19))),
-        (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 40975, 19))),
-        (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38721, 19))),
-        (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 354, 19))),
-        (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 49768, 19))),
-        (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 12931, 19))),
-        (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 6064, 19))),
-        (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62942, 19))),
-        (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 13924, 19))),
-        (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 99441, 19))),
-        (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 42584, 19))),
-        (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 97688, 19))),
-        (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 5407, 19))),
-        (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 65815, 19))),
-        (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 44287, 19))),
-        (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58160, 19))),
-        (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 33648, 19))),
-        (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 22649, 19))),
-        (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 23629, 19))),
-        (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 81555, 19))),
-        (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 11809, 19))),
-        (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 79004, 19))),
-        (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 97760, 19))),
-        (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 86881, 19))),
-        (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 28183, 19))),
-        (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 10950, 19))),
-        (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 22568, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 17038, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62327, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
       function _(_) {
         const { closeModal: _, strDescOverride: _ } = _;
         return (0, _.jsx)(_._, {
-          strTitle: _.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: _ || _.Localize("#LoginRedirect_Dialog_Description"),
+          strTitle: _._.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription:
+            _ || _._.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: _,
           strOKButtonText: _._.Localize("#Button_OK"),
           onOK: () => {
@@ -7360,10 +7309,10 @@
         }
       }
       !(function (_) {
-        (_.GetClientLogonInfo = function (_, _) {
+        (_.GetClientLogonInfo = function (_, _, _) {
           return _.SendMsg(
             "ClientComm.GetClientLogonInfo#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -7371,10 +7320,10 @@
             },
           );
         }),
-          (_.GetAllClientLogonInfo = function (_, _) {
+          (_.GetAllClientLogonInfo = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetAllClientLogonInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7382,16 +7331,21 @@
               },
             );
           }),
-          (_.GetClientInfo = function (_, _) {
-            return _.SendMsg("ClientComm.GetClientInfo#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetClientInfo = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.GetClientInfo#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetClientAppList = function (_, _) {
+          (_.GetClientAppList = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetClientAppList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7399,50 +7353,50 @@
               },
             );
           }),
-          (_.InstallClientApp = function (_, _) {
+          (_.InstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.InstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UninstallClientApp = function (_, _) {
+          (_.UninstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.UninstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.LaunchClientApp = function (_, _) {
+          (_.LaunchClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.LaunchClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetClientAppUpdateState = function (_, _) {
+          (_.SetClientAppUpdateState = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.SetClientAppUpdateState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.EnableOrDisableDownloads = function (_, _) {
+          (_.EnableOrDisableDownloads = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.EnableOrDisableDownloads#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -10481,7 +10435,7 @@
           const _ = _.GetAccountID(),
             _ = new FormData();
           _.append("clanid", "" + _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
           let _ = await _().post(_, _, {
             withCredentials: !0,
@@ -10498,7 +10452,7 @@
         async UpdateAppIgnore(_, _, _, _ = _._._) {
           let _ = _._.STORE_BASE_URL + "recommended/ignorerecommendation";
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("appid", "" + _),
             _.append("remove", _ ? "0" : "1"),
             _.append("snr", _),
@@ -10538,7 +10492,7 @@
             (_ ? "addtowishlist" : "removefromwishlist");
           const _ = new FormData();
           _.append("appid", "" + _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _ && _.append("snr", _);
           const _ = this.m_setWishList.has(_)
             ? this.m_wishlistInOrder.findIndex((_) => _ == _)
@@ -10590,7 +10544,7 @@
           _.append("action", "add_to_cart"),
             _ ? _.append("bundleid", _.toString()) : _.append("subid", "" + _),
             _ && _.append("snr", _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("quantity", "1");
           const _ = (0, _._)(_);
           _.preventDefault();
@@ -10610,7 +10564,7 @@
             const _ = _._.STORE_BASE_URL + "explore/followgame",
               _ = new FormData();
             _.append("appid", "" + _),
-              _.append("sessionid", _._.SESSIONID),
+              _.append("sessionid", (0, _._)()),
               _ || _.append("unfollow", "1");
             const _ = await _().post(_, _, {
               withCredentials: !0,
@@ -11028,7 +10982,7 @@
                   __webpack_require__.ConvertTo64BitString()) +
               (_ ? "/unfolloworunignoreevent" : "/followorignoreevent"),
             _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("ignore", "" + _),
             _.append("gid", _),
             _.append("notification_flag", "" + _),
@@ -11103,7 +11057,7 @@
                     "updated/ajaxrateupdate/" +
                     _.AnnouncementGID,
               _ = new URLSearchParams();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("voteup", _ ? "1" : "0"),
               _.append("clanid", "" + _.clanSteamID.GetAccountID()),
               _.append("ajax", "1");
@@ -12722,61 +12676,61 @@
       }
       var _;
       !(function (_) {
-        (_.GetCart = function (_, _) {
-          return _.SendMsg("AccountCart.GetCart#1", (0, _._)(_, _), _, {
+        (_.GetCart = function (_, _, _) {
+          return _.SendMsg("AccountCart.GetCart#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
         }),
-          (_.AddItemsToCart = function (_, _) {
+          (_.AddItemsToCart = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.AddItemsToCart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ModifyLineItem = function (_, _) {
+          (_.ModifyLineItem = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.ModifyLineItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RemoveItemFromCart = function (_, _) {
+          (_.RemoveItemFromCart = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.RemoveItemFromCart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.MergeShoppingCartContents = function (_, _) {
+          (_.MergeShoppingCartContents = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.MergeShoppingCartContents#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.DeleteCart = function (_, _) {
-            return _.SendMsg("AccountCart.DeleteCart#1", (0, _._)(_, _), _, {
+          (_.DeleteCart = function (_, _, _) {
+            return _.SendMsg("AccountCart.DeleteCart#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetRelevantCoupons = function (_, _) {
+          (_.GetRelevantCoupons = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.GetRelevantCoupons#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -13120,10 +13074,10 @@
         }
       }
       !(function (_) {
-        _.CheckInventoryAvailableByPackage = function (_, _) {
+        _.CheckInventoryAvailableByPackage = function (_, _, _) {
           return _.SendMsg(
             "PhysicalGoods.CheckInventoryAvailableByPackage#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -13251,7 +13205,7 @@
                   (0, _.jsx)("input", {
                     type: "hidden",
                     name: "sessionid",
-                    value: _._.SESSIONID,
+                    value: (0, _._)(),
                   }),
                   (0, _.jsx)("button", {
                     className: (0, _._)(_().Action, _),

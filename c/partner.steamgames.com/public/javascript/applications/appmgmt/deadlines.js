@@ -278,7 +278,7 @@
           try {
             const _ = _._.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 searchtext: _,
                 origin: self.origin,
               },
@@ -873,7 +873,7 @@
             if (_ && _ < 0) return;
             const _ = new FormData();
             __webpack_require__.append("type", _.toString()),
-              __webpack_require__.append("sessionid", _._.SESSIONID),
+              __webpack_require__.append("sessionid", (0, _._)()),
               _ && __webpack_require__.append("partnerid", _.toString());
             const _ = `${_._.PARTNER_BASE_URL}deadlines/ajaxgetdeadlines`,
               _ = await _().post(_, _, {
@@ -956,7 +956,7 @@
             const _ = _.onboarded ? "pub" : "newpartner",
               _ = `${_._.PARTNER_BASE_URL}${_}/ajaxstarttaxidentityworkflow/${_.deadline.data.partnerid}`,
               _ = new FormData();
-            _.append("sessionid", _._.SESSIONID), _(!0);
+            _.append("sessionid", (0, _._)()), _(!0);
             try {
               const _ = await _().post(_, _, {
                 withCredentials: !0,
@@ -2494,7 +2494,7 @@
             ? _
             : async () => {
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("publisherid", "" + _),
                   _.append("subject", _),
                   _.append("message", _);

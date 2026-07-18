@@ -165,6 +165,24 @@
     },
     chunkid: (module) => {
       module.exports = {
+        SupportedPlatforms: "_33rQKLUJRiKbr34oQgUJSd",
+        PlatformIndicator: "_1POD5IsW1vYfv9B_TuSiBd",
+        Windows: "_3xTrz2wDDtzNFR58CQfSNa",
+        SteamOS: "_1z6ASwnrVeCtYcPfPjiZZd",
+        Mac: "_1FiaJi5I3_8ky2ppYqGqfr",
+        DeckCompat: "GFz2Vhq20J9x6lqpaKy2G",
+        Fill: "_39zOL0i8BdQ_RV-xE0zXDz",
+        SteamDeckCompatLogo: "_2xju2qqP5744ItNt2uvbdT",
+        SteamDeckCompatIcon: "_28xj3TU4bHvjyeVhlzCmRV",
+        SteamDeckCompatVerified: "_3-OPVQMD-qkvAyt3Jntn9t",
+        SteamDeckCompatPlayable: "_1EMxxDePjZh_-E7AH0yDym",
+        SteamDeckCompatUnsupported: "_2qziiy9xhD4mLc1OgxQAAy",
+        SteamDeckCompatUnknown: "I6YFAbL_5IYOTtedVwwPV",
+        SteamOSCompatCompatible: "_2fVV0WviM21gsBt1Iz-Htx",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TrailerTitle: "_2jWguvQbMj3mHe0ytRpzNm",
         Category: "_3oxiEsdJdYRkKvYSWGAfih",
         Visible: "_3afqMxr7HnEfdxJwBg6GRd",
@@ -443,6 +461,9 @@
         CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
         CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
+        RatingIcon: "JpPKQ9u62K6FUa-N8VbN8",
+        SteamMachineDeviceIcon: "_1nTDsg_9olpJdf7qqVpGfL",
+        SteamDeckDeviceIcon: "_3IOFFIoATruXDCEVO_7Jqd",
         BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
         "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
         "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
@@ -1037,7 +1058,6 @@
         CapsuleContainer: "_22AcxR1RBDH6i-gjKRHYk0",
         Linked: "_3b7bzOQeDc139QX27AIMtM",
         EventRow: "_1UMFnczt69Ka8nOWKMzKJR",
-        Muted: "_1HVwzvj5dyBMgn_KprOcNN",
         BottomCreatorRow: "_1JrUubE3c7FdJsMxYYxbt",
         CreatorLogo: "_3Krfug3wchu0qwGYQbbsHL",
         CreatorName: "Fmi-agZ0W7_4TkZ7CNquC",
@@ -1686,10 +1706,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = 0,
         _ = 1,
-        _ = 2;
+        _ = 2,
+        _ = 3;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1715,15 +1737,23 @@
           bForceShowCompatInfo: !1,
           bSteamOS: !1,
           bSteamDeck: !1,
+          bSteamMachine: !1,
         }),
         _ = () => _.useContext(_);
       function _() {
-        const { bForceShowCompatInfo: _, bSteamDeck: _, bSteamOS: _ } = _();
-        return _
-          ? _ || _ || "steamdeck" == _._.FORCED_DISPLAY_MODE
+        const {
+          bForceShowCompatInfo: _,
+          bSteamDeck: _,
+          bSteamOS: _,
+          bSteamMachine: _,
+        } = _();
+        return (_ && _) || _ || "steamdeck" == _._.FORCED_DISPLAY_MODE
+          ? [!0, _._]
+          : (_ && _) || "steammachine" == _._.FORCED_DISPLAY_MODE
             ? [!0, _._]
-            : [!0, _._]
-          : [!1, _._];
+            : _
+              ? [!0, _._]
+              : [!1, _._];
       }
       function _(_) {
         const { _: _, className: _ } = _,
@@ -1763,7 +1793,7 @@
           });
         };
       function _(_) {
-        var _, _;
+        var _, _, _;
         const { eDisplay: _, storeItemPlatform: _, className: _ } = _;
         return _ == _._
           ? (0, _.jsx)(_, {
@@ -1779,13 +1809,24 @@
             ? (0, _.jsx)(_, {
                 category:
                   null !==
-                    (_ = null == _ ? void 0 : _.steam_os_compat_category) &&
+                    (_ =
+                      null == _ ? void 0 : _.steam_machine_compat_category) &&
                   void 0 !== _
                     ? _
                     : _._,
                 className: _,
               })
-            : null;
+            : _ == _._
+              ? (0, _.jsx)(_, {
+                  category:
+                    null !==
+                      (_ = null == _ ? void 0 : _.steam_os_compat_category) &&
+                    void 0 !== _
+                      ? _
+                      : _._,
+                  className: _,
+                })
+              : null;
       }
       const _ = {
           [_._]: _.jIP,
@@ -1809,6 +1850,7 @@
       _._, _._, _._, _._;
       _._, _._, _._, _._;
       _._, _._, _._;
+      _._, _._, _._, _._;
       _._, _._, _._;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -7642,30 +7684,30 @@
       }
       var _, _;
       !(function (_) {
-        (_.BeginBroadcastSession = function (_, _) {
+        (_.BeginBroadcastSession = function (_, _, _) {
           return _.SendMsg(
             "Broadcast.BeginBroadcastSession#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.EndBroadcastSession = function (_, _) {
+          (_.EndBroadcastSession = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.EndBroadcastSession#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.StartBroadcastUpload = function (_, _) {
+          (_.StartBroadcastUpload = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.StartBroadcastUpload#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -7681,10 +7723,15 @@
               },
             );
           }),
-          (_.WatchBroadcast = function (_, _) {
-            return _.SendMsg("Broadcast.WatchBroadcast#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-            });
+          (_.WatchBroadcast = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WatchBroadcast#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 2,
+              },
+            );
           }),
           (_.HeartbeatBroadcast = function (_, _) {
             return _.SendNotification(
@@ -7704,40 +7751,40 @@
               },
             );
           }),
-          (_.GetBroadcastStatus = function (_, _) {
+          (_.GetBroadcastStatus = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.GetBroadcastThumbnail = function (_, _) {
+          (_.GetBroadcastThumbnail = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastThumbnail#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.InviteToBroadcast = function (_, _) {
+          (_.InviteToBroadcast = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.InviteToBroadcast#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SendBroadcastStateToServer = function (_, _) {
+          (_.SendBroadcastStateToServer = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.SendBroadcastStateToServer#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -7753,71 +7800,81 @@
               },
             );
           }),
-          (_.GetBroadcastChatInfo = function (_, _) {
+          (_.GetBroadcastChatInfo = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastChatInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.PostChatMessage = function (_, _) {
-            return _.SendMsg("Broadcast.PostChatMessage#1", (0, _._)(_, _), _, {
-              ePrivilege: 3,
-            });
+          (_.PostChatMessage = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.PostChatMessage#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 3,
+              },
+            );
           }),
-          (_.UpdateChatMessageFlair = function (_, _) {
+          (_.UpdateChatMessageFlair = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.UpdateChatMessageFlair#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.MuteBroadcastChatUser = function (_, _) {
+          (_.MuteBroadcastChatUser = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.MuteBroadcastChatUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.RemoveUserChatText = function (_, _) {
+          (_.RemoveUserChatText = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.RemoveUserChatText#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetBroadcastChatUserNames = function (_, _) {
+          (_.GetBroadcastChatUserNames = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastChatUserNames#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.StartBuildClip = function (_, _) {
-            return _.SendMsg("Broadcast.StartBuildClip#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
+          (_.StartBuildClip = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.StartBuildClip#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
           }),
-          (_.GetBuildClipStatus = function (_, _) {
+          (_.GetBuildClipStatus = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBuildClipStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7826,26 +7883,36 @@
               },
             );
           }),
-          (_.SetClipDetails = function (_, _) {
-            return _.SendMsg("Broadcast.SetClipDetails#1", (0, _._)(_, _), _, {
+          (_.SetClipDetails = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.SetClipDetails#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.GetClipDetails = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.GetClipDetails#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.SetRTMPInfo = function (_, _, _) {
+            return _.SendMsg("Broadcast.SetRTMPInfo#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetClipDetails = function (_, _) {
-            return _.SendMsg("Broadcast.GetClipDetails#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (_.SetRTMPInfo = function (_, _) {
-            return _.SendMsg("Broadcast.SetRTMPInfo#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetRTMPInfo = function (_, _) {
-            return _.SendMsg("Broadcast.GetRTMPInfo#1", (0, _._)(_, _), _, {
+          (_.GetRTMPInfo = function (_, _, _) {
+            return _.SendMsg("Broadcast.GetRTMPInfo#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -7859,70 +7926,80 @@
               },
             );
           }),
-          (_.WebRTCStartResult = function (_, _) {
+          (_.WebRTCStartResult = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCStartResult#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCStopped = function (_, _) {
-            return _.SendMsg("Broadcast.WebRTCStopped#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.WebRTCStopped = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WebRTCStopped#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.WebRTCSetAnswer = function (_, _) {
-            return _.SendMsg("Broadcast.WebRTCSetAnswer#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.WebRTCSetAnswer = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WebRTCSetAnswer#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.WebRTCLookupTURNServer = function (_, _) {
+          (_.WebRTCLookupTURNServer = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCLookupTURNServer#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCAddHostCandidate = function (_, _) {
+          (_.WebRTCAddHostCandidate = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCAddHostCandidate#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCAddViewerCandidate = function (_, _) {
+          (_.WebRTCAddViewerCandidate = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCAddViewerCandidate#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCGetHostCandidates = function (_, _) {
+          (_.WebRTCGetHostCandidates = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCGetHostCandidates#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetBroadcastUploadStats = function (_, _) {
+          (_.GetBroadcastUploadStats = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastUploadStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7931,10 +8008,10 @@
               },
             );
           }),
-          (_.GetBroadcastViewerStats = function (_, _) {
+          (_.GetBroadcastViewerStats = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastViewerStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -9017,17 +9094,17 @@
         }
       }
       !(function (_) {
-        (_.ValidateCart = function (_, _) {
-          return _.SendMsg("Checkout.ValidateCart#1", (0, _._)(_, _), _, {
+        (_.ValidateCart = function (_, _, _) {
+          return _.SendMsg("Checkout.ValidateCart#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetFriendOwnershipForGifting = function (_, _) {
+          (_.GetFriendOwnershipForGifting = function (_, _, _) {
             return _.SendMsg(
               "Checkout.GetFriendOwnershipForGifting#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -9035,10 +9112,15 @@
               },
             );
           }),
-          (_.AddFreeLicense = function (_, _) {
-            return _.SendMsg("Checkout.AddFreeLicense#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.AddFreeLicense = function (_, _, _) {
+            return _.SendMsg(
+              "Checkout.AddFreeLicense#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {}));
     },
@@ -9078,6 +9160,11 @@
                     _: 3,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  email_giftee: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -10527,15 +10614,20 @@
       }
       var _;
       !(function (_) {
-        (_.ClaimItem = function (_, _) {
-          return _.SendMsg("SaleItemRewards.ClaimItem#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-          });
+        (_.ClaimItem = function (_, _, _) {
+          return _.SendMsg(
+            "SaleItemRewards.ClaimItem#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.CanClaimItem = function (_, _) {
+          (_.CanClaimItem = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.CanClaimItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -10543,10 +10635,10 @@
               },
             );
           }),
-          (_.GetRewardDefinitions = function (_, _) {
+          (_.GetRewardDefinitions = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.GetRewardDefinitions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -10554,20 +10646,20 @@
               },
             );
           }),
-          (_.SetRewardDefinitions = function (_, _) {
+          (_.SetRewardDefinitions = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.SetRewardDefinitions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetClaimedSaleRewards = function (_, _) {
+          (_.GetClaimedSaleRewards = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.GetClaimedSaleRewards#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -10575,10 +10667,10 @@
               },
             );
           }),
-          (_.GetCurrentDefinition = function (_, _) {
+          (_.GetCurrentDefinition = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.GetCurrentDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15772,15 +15864,15 @@
       }
       var _, _, _;
       !(function (_) {
-        (_.RegisterCDKey = function (_, _) {
-          return _.SendMsg("Store.RegisterCDKey#1", (0, _._)(_, _), _, {
+        (_.RegisterCDKey = function (_, _, _) {
+          return _.SendMsg("Store.RegisterCDKey#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.GetRecommendedTagsForUser = function (_, _) {
+          (_.GetRecommendedTagsForUser = function (_, _, _) {
             return _.SendMsg(
               "Store.GetRecommendedTagsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15788,17 +15880,10 @@
               },
             );
           }),
-          (_.GetMostPopularTags = function (_, _) {
-            return _.SendMsg("Store.GetMostPopularTags#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
-          }),
-          (_.GetLocalizedNameForTags = function (_, _) {
+          (_.GetMostPopularTags = function (_, _, _) {
             return _.SendMsg(
-              "Store.GetLocalizedNameForTags#1",
-              (0, _._)(_, _),
+              "Store.GetMostPopularTags#1",
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15807,23 +15892,29 @@
               },
             );
           }),
-          (_.GetTagList = function (_, _) {
-            return _.SendMsg("Store.GetTagList#1", (0, _._)(_, _), _, {
+          (_.GetLocalizedNameForTags = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetLocalizedNameForTags#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetTagList = function (_, _, _) {
+            return _.SendMsg("Store.GetTagList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetDiscoveryQueue = function (_, _) {
-            return _.SendMsg("Store.GetDiscoveryQueue#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetDiscoveryQueueSettings = function (_, _) {
+          (_.GetDiscoveryQueue = function (_, _, _) {
             return _.SendMsg(
-              "Store.GetDiscoveryQueueSettings#1",
-              (0, _._)(_, _),
+              "Store.GetDiscoveryQueue#1",
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15831,37 +15922,48 @@
               },
             );
           }),
-          (_.SkipDiscoveryQueueItem = function (_, _) {
+          (_.GetDiscoveryQueueSettings = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetDiscoveryQueueSettings#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.SkipDiscoveryQueueItem = function (_, _, _) {
             return _.SendMsg(
               "Store.SkipDiscoveryQueueItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserGameInterestState = function (_, _) {
+          (_.GetUserGameInterestState = function (_, _, _) {
             return _.SendMsg(
               "Store.GetUserGameInterestState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetGamesFollowed = function (_, _) {
-            return _.SendMsg("Store.GetGamesFollowed#1", (0, _._)(_, _), _, {
+          (_.GetGamesFollowed = function (_, _, _) {
+            return _.SendMsg("Store.GetGamesFollowed#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetGamesFollowedCount = function (_, _) {
+          (_.GetGamesFollowedCount = function (_, _, _) {
             return _.SendMsg(
               "Store.GetGamesFollowedCount#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15870,10 +15972,10 @@
               },
             );
           }),
-          (_.GetDiscoveryQueueSkippedApps = function (_, _) {
+          (_.GetDiscoveryQueueSkippedApps = function (_, _, _) {
             return _.SendMsg(
               "Store.GetDiscoveryQueueSkippedApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15881,21 +15983,26 @@
               },
             );
           }),
-          (_.ReportApp = function (_, _) {
-            return _.SendMsg("Store.ReportApp#1", (0, _._)(_, _), _, {
+          (_.ReportApp = function (_, _, _) {
+            return _.SendMsg("Store.ReportApp#1", (0, _._)(_, _, _), _, {
               ePrivilege: 3,
             });
           }),
-          (_.GetStorePreferences = function (_, _) {
-            return _.SendMsg("Store.GetStorePreferences#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetStorePreferences = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetStorePreferences#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetTrendingAppsAmongFriends = function (_, _) {
+          (_.GetTrendingAppsAmongFriends = function (_, _, _) {
             return _.SendMsg(
               "Store.GetTrendingAppsAmongFriends#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15912,60 +16019,60 @@
               },
             );
           }),
-          (_.UpdatePackageReservations = function (_, _) {
+          (_.UpdatePackageReservations = function (_, _, _) {
             return _.SendMsg(
               "Store.UpdatePackageReservations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetWishlistDemoEmailStatus = function (_, _) {
+          (_.GetWishlistDemoEmailStatus = function (_, _, _) {
             return _.SendMsg(
               "Store.GetWishlistDemoEmailStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.QueueWishlistDemoEmailToFire = function (_, _) {
+          (_.QueueWishlistDemoEmailToFire = function (_, _, _) {
             return _.SendMsg(
               "Store.QueueWishlistDemoEmailToFire#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetReservationPositionMessage = function (_, _) {
+          (_.SetReservationPositionMessage = function (_, _, _) {
             return _.SendMsg(
               "Store.SetReservationPositionMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.DeleteReservationPositionMessage = function (_, _) {
+          (_.DeleteReservationPositionMessage = function (_, _, _) {
             return _.SendMsg(
               "Store.DeleteReservationPositionMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetAllReservationPositionMessages = function (_, _) {
+          (_.GetAllReservationPositionMessages = function (_, _, _) {
             return _.SendMsg(
               "Store.GetAllReservationPositionMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -15982,20 +16089,20 @@
               },
             );
           }),
-          (_.SetCompatibilityFeedback = function (_, _) {
+          (_.SetCompatibilityFeedback = function (_, _, _) {
             return _.SendMsg(
               "Store.SetCompatibilityFeedback#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ShouldPromptForCompatibilityFeedback = function (_, _) {
+          (_.ShouldPromptForCompatibilityFeedback = function (_, _, _) {
             return _.SendMsg(
               "Store.ShouldPromptForCompatibilityFeedback#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -16010,40 +16117,50 @@
           };
         })(_ || (_ = {})),
         (function (_) {
-          (_.RequestInvite = function (_, _) {
-            return _.SendMsg("Playtest.RequestInvite#1", (0, _._)(_, _), _, {
+          (_.RequestInvite = function (_, _, _) {
+            return _.SendMsg("Playtest.RequestInvite#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-            (_.UpdateInvites = function (_, _) {
-              return _.SendMsg("Playtest.UpdateInvites#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetInvites = function (_, _) {
-              return _.SendMsg("Playtest.GetInvites#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetInviteHistory = function (_, _) {
+            (_.UpdateInvites = function (_, _, _) {
               return _.SendMsg(
-                "Playtest.GetInviteHistory#1",
-                (0, _._)(_, _),
+                "Playtest.UpdateInvites#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetUserStatus = function (_, _) {
-              return _.SendMsg("Playtest.GetUserStatus#1", (0, _._)(_, _), _, {
+            (_.GetInvites = function (_, _, _) {
+              return _.SendMsg("Playtest.GetInvites#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 1,
               });
             }),
-            (_.GetInviteOptions = function (_, _) {
+            (_.GetInviteHistory = function (_, _, _) {
+              return _.SendMsg(
+                "Playtest.GetInviteHistory#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetUserStatus = function (_, _, _) {
+              return _.SendMsg(
+                "Playtest.GetUserStatus#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetInviteOptions = function (_, _, _) {
               return _.SendMsg(
                 "Playtest.GetInviteOptions#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -16235,10 +16352,10 @@
       }
       var _;
       !(function (_) {
-        _.GetIgnoreList = function (_, _) {
+        _.GetIgnoreList = function (_, _, _) {
           return _.SendMsg(
             "StorePreferences.GetIgnoreList#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -19555,10 +19672,10 @@
         }
       }
       !(function (_) {
-        (_.GetClientLogonInfo = function (_, _) {
+        (_.GetClientLogonInfo = function (_, _, _) {
           return _.SendMsg(
             "ClientComm.GetClientLogonInfo#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -19566,10 +19683,10 @@
             },
           );
         }),
-          (_.GetAllClientLogonInfo = function (_, _) {
+          (_.GetAllClientLogonInfo = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetAllClientLogonInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -19577,16 +19694,21 @@
               },
             );
           }),
-          (_.GetClientInfo = function (_, _) {
-            return _.SendMsg("ClientComm.GetClientInfo#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetClientInfo = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.GetClientInfo#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetClientAppList = function (_, _) {
+          (_.GetClientAppList = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetClientAppList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -19594,50 +19716,50 @@
               },
             );
           }),
-          (_.InstallClientApp = function (_, _) {
+          (_.InstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.InstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UninstallClientApp = function (_, _) {
+          (_.UninstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.UninstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.LaunchClientApp = function (_, _) {
+          (_.LaunchClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.LaunchClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetClientAppUpdateState = function (_, _) {
+          (_.SetClientAppUpdateState = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.SetClientAppUpdateState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.EnableOrDisableDownloads = function (_, _) {
+          (_.EnableOrDisableDownloads = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.EnableOrDisableDownloads#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -25680,6 +25802,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _(_) {
         return (0, _.useMemo)(
           () =>
@@ -25730,26 +25853,23 @@
         );
       }
       function _(_, _) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_, _) {
-              switch (_) {
-                case "sub":
-                  return {
-                    packageid: _,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _,
-                  };
-                default:
-                  return {
-                    appid: _,
-                  };
-              }
-            })(_, _),
-          [_, _],
-        );
+        return (0, _.useMemo)(() => _(_, _), [_, _]);
+      }
+      function _(_, _) {
+        switch (_) {
+          case "sub":
+            return {
+              packageid: _,
+            };
+          case "bundle":
+            return {
+              bundleid: _,
+            };
+          default:
+            return {
+              appid: _,
+            };
+        }
       }
       function _(_) {
         return (0, _.useMemo)(() => {
@@ -26265,7 +26385,7 @@
           const _ = _.GetAccountID(),
             _ = new FormData();
           _.append("clanid", "" + _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append(_ ? "follow" : "ignore", _ ? "1" : "0");
           let _ = await _().post(_, _, {
             withCredentials: !0,
@@ -26282,7 +26402,7 @@
         async UpdateAppIgnore(_, _, _, _ = _._._) {
           let _ = _._.STORE_BASE_URL + "recommended/ignorerecommendation";
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("appid", "" + _),
             _.append("remove", _ ? "0" : "1"),
             _.append("snr", _),
@@ -26322,7 +26442,7 @@
             (_ ? "addtowishlist" : "removefromwishlist");
           const _ = new FormData();
           _.append("appid", "" + _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _ && _.append("snr", _);
           const _ = this.m_setWishList.has(_)
             ? this.m_wishlistInOrder.findIndex((_) => _ == _)
@@ -26374,7 +26494,7 @@
           _.append("action", "add_to_cart"),
             _ ? _.append("bundleid", _.toString()) : _.append("subid", "" + _),
             _ && _.append("snr", _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("quantity", "1");
           const _ = (0, _._)(_);
           _.preventDefault();
@@ -26396,7 +26516,7 @@
             const _ = _._.STORE_BASE_URL + "explore/followgame",
               _ = new FormData();
             _.append("appid", "" + _),
-              _.append("sessionid", _._.SESSIONID),
+              _.append("sessionid", (0, _._)()),
               _ || _.append("unfollow", "1");
             const _ = await _().post(_, _, {
               withCredentials: !0,
@@ -27319,16 +27439,21 @@
         }
       }
       !(function (_) {
-        (_.GetCategories = function (_, _) {
-          return _.SendMsg("FriendsList.GetCategories#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (_.GetCategories = function (_, _, _) {
+          return _.SendMsg(
+            "FriendsList.GetCategories#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.GetFriendsList = function (_, _) {
+          (_.GetFriendsList = function (_, _, _) {
             return _.SendMsg(
               "FriendsList.GetFriendsList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27336,16 +27461,26 @@
               },
             );
           }),
-          (_.GetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.GetFavorites#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.GetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.SetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.SetFavorites#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.SetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.SetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
@@ -27432,7 +27567,7 @@
                 "saleaction/ajaxgetusergiveawayregistration",
               _ = {
                 giveaway_name: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,
@@ -27499,7 +27634,7 @@
                 "saleaction/ajaxupdateusergiveawayregistration",
               _ = {
                 giveaway_name: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,
@@ -28125,7 +28260,7 @@
                 appid: _,
                 origin: self.origin,
                 _: _._.LANGUAGE,
-                sessionid: _ ? _._.SESSIONID : void 0,
+                sessionid: _ ? (0, _._)() : void 0,
               },
               _ = await _().get(_, {
                 params: _,
@@ -29011,8 +29146,8 @@
         }
       }
       !(function (_) {
-        (_.ClientGetVideoURL = function (_, _) {
-          return _.SendMsg("Video.ClientGetVideoURL#1", (0, _._)(_, _), _, {
+        (_.ClientGetVideoURL = function (_, _, _) {
+          return _.SendMsg("Video.ClientGetVideoURL#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
@@ -29025,10 +29160,15 @@
               },
             );
           }),
-          (_.GetVideoBookmarks = function (_, _) {
-            return _.SendMsg("Video.GetVideoBookmarks#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetVideoBookmarks = function (_, _, _) {
+            return _.SendMsg(
+              "Video.GetVideoBookmarks#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
@@ -29038,10 +29178,10 @@
           };
         })(_ || (_ = {})),
         (function (_) {
-          _.ClientGetOPFSettings = function (_, _) {
+          _.ClientGetOPFSettings = function (_, _, _) {
             return _.SendMsg(
               "FovasVideo.ClientGetOPFSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -29185,6 +29325,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -29258,7 +29399,7 @@
         constructor() {
           (this.m_boundActions = new Map()),
             (this.m_defaultActions = new Map()),
-            (this.m_actionSubscriptions = new Map()),
+            (this.m_globalActionsSubscriptions = []),
             (this.m_actionDescriptionChangedCallbackRegistrations = []);
         }
         InitContext(_) {
@@ -29312,38 +29453,50 @@
             _
           );
         }
-        NotifyUpdate(_) {
-          if (this.m_actionSubscriptions.has(_)) {
-            const _ = this.GetActionDescription(_);
-            this.m_actionSubscriptions.get(_).forEach((_) => _(_));
-          }
+        GetActionDescriptions() {
+          const _ = Object.values(_).filter((_) => "number" == typeof _),
+            _ = {};
+          for (const _ of _) _[_] = this.GetActionDescription(_);
+          return _;
         }
-        NotifyAll() {
-          Array.from(this.m_actionSubscriptions.keys()).forEach((_) => {
-            this.NotifyUpdate(_);
-          });
+        Notify() {
+          const _ = this.GetActionDescriptions();
+          this.m_globalActionsSubscriptions.forEach((_) => _(_));
         }
         IsDefaultAction(_) {
           return this.GetActionDescription(_) === this.m_defaultActions.get(_);
         }
         SetDefaultAction(_, _) {
-          void 0 === _
-            ? this.m_defaultActions.delete(_)
-            : this.m_defaultActions.set(_, _),
-            this.m_boundActions.has(_) || this.NotifyUpdate(_);
+          return (
+            void 0 === _
+              ? this.m_defaultActions.delete(_)
+              : this.m_defaultActions.set(_, _),
+            !this.m_boundActions.has(_)
+          );
+        }
+        SetDefaultActionsFromMap(_) {
+          let _ = !1;
+          for (const _ in _) {
+            const _ = parseInt(_);
+            this.SetDefaultAction(_, _[_]) && (_ = !0);
+          }
+          _ && this.Notify();
         }
         ClearActions() {
           _.Log("ClearActionDescriptions"),
             this.m_boundActions.clear(),
-            this.NotifyAll();
+            this.Notify();
         }
         SetActionsFromMap(_) {
+          let _ = !1;
           const _ = Array.from(this.m_boundActions.keys());
-          for (let _ of _) _[_] || this.SetAction(_, void 0);
+          for (let _ of _)
+            void 0 === _[_] && this.SetAction(_, void 0) && (_ = !0);
           for (let _ in _) {
             const _ = parseInt(_);
-            this.SetAction(_, _[_]);
+            this.SetAction(_, _[_]) && (_ = !0);
           }
+          _ && this.Notify();
         }
         SetActionDescriptionsFromMap(_) {
           const _ = {};
@@ -29355,28 +29508,27 @@
         }
         SetAction(_, _) {
           if ((_.Log("SetActionDescription", _, _), void 0 === _)) {
-            if (!this.m_boundActions.has(_)) return;
+            if (!this.m_boundActions.has(_)) return !1;
             this.m_boundActions.delete(_);
           } else {
-            if (this.m_boundActions.get(_) === _) return;
+            if ((0, _._)(this.m_boundActions.get(_), _)) return !1;
             this.m_boundActions.set(_, _);
           }
-          this.NotifyUpdate(_);
+          return !0;
         }
-        SubscribeToActionFunction(_, _) {
-          this.m_actionSubscriptions.has(_) ||
-            this.m_actionSubscriptions.set(_, []),
-            this.m_actionSubscriptions.get(_).push(_),
-            this.m_boundActions.has(_)
-              ? _(this.m_boundActions.get(_))
-              : this.m_defaultActions.has(_) && _(this.m_defaultActions.get(_));
+        SubscribeToActions(_) {
+          this.m_globalActionsSubscriptions.push(_),
+            _(this.GetActionDescriptions());
           return () => {
-            const _ = this.m_actionSubscriptions.get(_),
-              _ = null == _ ? void 0 : __webpack_require__.indexOf(_);
-            _ && null != _ && _ >= 0
-              ? __webpack_require__.splice(_, 1)
+            var _;
+            const _ =
+              null === (_ = this.m_globalActionsSubscriptions) || void 0 === _
+                ? void 0
+                : _.indexOf(_);
+            this.m_globalActionsSubscriptions && null != _ && _ >= 0
+              ? this.m_globalActionsSubscriptions.splice(_, 1)
               : console.error(
-                  "Unsubscribing an action that was already unsubscribed",
+                  "Unsubscribing an actions handler that was already unsubscribed",
                 );
           };
         }
@@ -29725,7 +29877,7 @@
         );
       }
       function _(_) {
-        _ && (window.clearTimeout(_.current), (_.current = null));
+        _.current && (window.clearTimeout(_.current), (_.current = null));
       }
       function _(_) {
         const {
@@ -29828,6 +29980,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -30174,10 +30327,10 @@
         }
       }
       !(function (_) {
-        _.GetGameFrameRateStats = function (_, _) {
+        _.GetGameFrameRateStats = function (_, _, _) {
           return _.SendMsg(
             "GamePerformanceStats.GetGameFrameRateStats#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -30189,7 +30342,7 @@
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        var _;
+        var _, _;
         const {
           results: _,
           titleId: _,
@@ -30198,8 +30351,7 @@
           buttonProps: _,
           autoFocus: _,
           onOpenBlogPost: _,
-          eStartingTab: _,
-          bIncludeSteamOS: _,
+          eStartingTab: _ = _._,
         } = _;
         if (!_) return null;
         const _ = () => {
@@ -30211,119 +30363,164 @@
         let _ = null != _ ? _ : {},
           _ = null,
           _ = null;
-        _.steam_deck_blog_url &&
-          ((_.onOptionsActionDescription = _._.Localize(
-            "#SteamDeckVerified_ViewDeveloperPost",
-          )),
-          (_.onOptionsButton = _),
-          (_ = (0, _.jsx)(_, {
-            blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: _._,
-          })),
-          (_ = (0, _.jsx)(_, {
-            blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: _._,
-          })));
-        const _ = _ == _._;
         if (
-          !(null === (_ = _.resolved_items) || void 0 === _ ? void 0 : _.length)
+          (_.steam_deck_blog_url &&
+            ((_.onOptionsActionDescription = _._.Localize(
+              "#SteamDeckVerified_ViewDeveloperPost",
+            )),
+            (_.onOptionsButton = _),
+            (_ = (0, _.jsx)(_, {
+              blogURL: _.steam_deck_blog_url,
+              eHWCompatibiltyDisplay: _._,
+            })),
+            (_ = (0, _.jsx)(_, {
+              blogURL: _.steam_deck_blog_url,
+              eHWCompatibiltyDisplay: _._,
+            }))),
+          !(null === (_ = _.resolved_items) || void 0 === _
+            ? void 0
+            : _.length) &&
+            !(null === (_ = _.frame_resolved_items) || void 0 === _
+              ? void 0
+              : _.length))
         ) {
-          const _ = _
-              ? _._.Localize(
-                  "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
-                )
-              : _._.Localize(
-                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                ),
-            _ = _
-              ? (0, _.jsx)(_, {
+          let _ = "",
+            _ = null,
+            _ = null;
+          return (
+            _ == _._
+              ? ((_ = _._.Localize(
+                  "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+                )),
+                (_ = (0, _.jsx)(_, {
                   _: _,
-                  category: _.steamos_resolved_category,
+                  category: _.machine_resolved_category,
                   appName: _,
-                })
-              : (0, _.jsx)(_, {
-                  category: _.resolved_category,
-                  appName: _,
-                }),
-            _ = _ ? _ : _;
-          return (0, _.jsxs)(_._, {
-            autoFocus: _,
-            focusableIfEmpty: _,
-            noFocusRing: !0,
-            className: _().CompatibilityDetailsContainer,
-            ..._,
-            children: [
-              (0, _.jsxs)("div", {
-                _: _,
-                className: _().DialogHeader,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().DialogTitle,
-                    children: _,
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().AppTitleCategory,
-                    children: (0, _.jsx)(_, {
-                      category: _.resolved_category,
+                })))
+              : _ == _._
+                ? ((_ = _._.Localize(
+                    "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (_ = (0, _.jsx)(_, {
+                    _: _,
+                    category: _.steamos_resolved_category,
+                    appName: _,
+                  })),
+                  (_ = _))
+                : ((_ = _._.Localize(
+                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (_ = (0, _.jsx)(_, {
+                    category: _.resolved_category,
+                    appName: _,
+                  })),
+                  (_ = _)),
+            (0, _.jsxs)(_._, {
+              autoFocus: _,
+              focusableIfEmpty: _,
+              noFocusRing: !0,
+              className: _().CompatibilityDetailsContainer,
+              ..._,
+              children: [
+                (0, _.jsxs)("div", {
+                  _: _,
+                  className: _().DialogHeader,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().DialogTitle,
+                      children: _,
                     }),
+                    (0, _.jsx)("div", {
+                      className: _().AppTitleCategory,
+                      children: (0, _.jsx)(_, {
+                        category: _.resolved_category,
+                      }),
+                    }),
+                  ],
+                }),
+                _,
+                _,
+                !1,
+              ],
+            })
+          );
+        }
+        const _ = (0, _._)(_.resolved_category),
+          _ = (0, _._)(_.steamos_resolved_category),
+          _ = (0, _._)(_.machine_resolved_category),
+          _ = (_) =>
+            window.sessionStorage.setItem(
+              "steamdeckcompatibility",
+              `?tab=${_.key}`,
+            ),
+          _ = [
+            {
+              name: (0, _.jsxs)("div", {
+                className: _().pillContent,
+                children: [
+                  (0, _.jsx)(_.xoK, {
+                    className: _().SteamDeckDeviceIcon,
+                  }),
+                  (0, _.jsx)(_, {
+                    className: _().RatingIcon,
                   }),
                 ],
               }),
-              _,
-              !1,
-              _,
-            ],
-          });
-        }
-        if (_ || _) {
-          const _ = (0, _._)(_.resolved_category),
-            _ = (0, _._)(_.steamos_resolved_category),
-            _ = (_) =>
-              window.sessionStorage.setItem(
-                "steamdeckcompatibility",
-                `?tab=${_.key}`,
-              ),
-            _ = [
-              {
-                name: (0, _.jsxs)("div", {
-                  className: _().pillContent,
-                  children: ["Steam Deck", (0, _.jsx)(_, {})],
+              key: _._.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  deckBlogContent: _,
                 }),
-                key: "steamdeck",
-                contents: (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                    deckBlogContent: _,
+              }),
+              onClick: _,
+            },
+            {
+              name: (0, _.jsxs)("div", {
+                className: _().pillContent,
+                children: [
+                  (0, _.jsx)(_.LO_, {
+                    className: _().SteamMachineDeviceIcon,
                   }),
-                }),
-                onClick: _,
-              },
-              {
-                name: (0, _.jsxs)("div", {
-                  className: _().pillContent,
-                  children: ["SteamOS", (0, _.jsx)(_, {})],
-                }),
-                key: "steamos",
-                contents: (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                    deckBlogContent: _,
+                  (0, _.jsx)(_, {
+                    className: _().RatingIcon,
                   }),
+                ],
+              }),
+              key: _._.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
                 }),
-                onClick: _,
-              },
-            ];
-          return (0, _.jsx)(_._, {
-            tabs: _,
-            classNameCtn: _().CompatibilityTabs,
-            classNameTabContent: _().CompatibilityTabContent,
-            startingTab: _ ? "steamos" : "steamdeck",
-            preferredFocus: !0,
-          });
-        }
-        return (0, _.jsx)(_, {
-          ..._,
-          deckBlogContent: _,
+              }),
+              onClick: _,
+            },
+            {
+              name: (0, _.jsxs)("div", {
+                className: _().pillContent,
+                children: [
+                  "steamos",
+                  (0, _.jsx)(_, {
+                    className: _().RatingIcon,
+                  }),
+                ],
+              }),
+              key: _._.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  deckBlogContent: _,
+                }),
+              }),
+              onClick: _,
+            },
+          ];
+        return (0, _.jsx)(_._, {
+          tabs: _,
+          classNameCtn: _().CompatibilityTabs,
+          classNameTabContent: _().CompatibilityTabContent,
+          startingTab: _.toString(),
+          preferredFocus: !0,
         });
       }
       function _(_) {
@@ -30572,6 +30769,84 @@
                     ),
                 }),
               !1,
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        var _, _;
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
+          _ =
+            -1 !==
+            (null === (_ = _.machine_resolved_items) || void 0 === _
+              ? void 0
+              : _.findIndex((_) => _.display_type == _)),
+          _ = (0, _.jsx)(_, {
+            _: _,
+            category: _.machine_resolved_category,
+            appName: _,
+          }),
+          _ = (0, _.jsx)(_, {
+            category: _.machine_resolved_category,
+          }),
+          _ =
+            _.machine_resolved_items &&
+            (null === (_ = _.machine_resolved_items) || void 0 === _
+              ? void 0
+              : _.length) > 0;
+        return (0, _.jsx)(_, {
+          titleId: _,
+          title: _._.Localize(
+            "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          ratingIcon: _,
+          ratingSummary: _,
+          ..._,
+          children: (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().CompatibilityDetailsSeparator,
+                }),
+              _.machine_resolved_items &&
+                _.machine_resolved_items
+                  .filter((_) => _.display_type !== _)
+                  .map((_) =>
+                    (0, _.jsxs)(
+                      "div",
+                      {
+                        className: _().CompatibilityDetailsRow,
+                        children: [
+                          (0, _.jsx)(_, {
+                            displaytype: _.display_type,
+                          }),
+                          (0, _.jsx)("span", {
+                            children: _._.Localize(_.loc_token),
+                          }),
+                        ],
+                      },
+                      _.loc_token + _.display_type,
+                    ),
+                  ),
+              _ &&
+                _.machine_resolved_items &&
+                (0, _.jsx)("div", {
+                  className: _().CompatibilityNotes,
+                  children: _.machine_resolved_items
+                    .filter((_) => _.display_type == _)
+                    .map((_) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _().CompatibilityDetailsNoteRow,
+                          children: (0, _.jsx)("span", {
+                            children: _._.Localize(_.loc_token),
+                          }),
+                        },
+                        _.loc_token + _.display_type,
+                      ),
+                    ),
+                }),
             ],
           }),
         });
@@ -30884,6 +31159,63 @@
               )
             : _._.LocalizeReact(
                 "#SteamOSCompatibility_DescriptionHeader",
+                _,
+                _,
+              );
+        return (0, _.jsx)("div", {
+          _: _,
+          className: _().CompatibilityDetailRatingSummary,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { _: _, category: _, appName: _, descriptionToken: _ } = _;
+        if (_ == _._)
+          return (0, _.jsx)("div", {
+            className: _().CompatibilityDetailRatingSummary,
+            children: _
+              ? _._.LocalizeReact(
+                  "#SteamMachineVerified_DescriptionHeader_Unknown_WithAppName",
+                  (0, _.jsx)("b", {
+                    children: (0, _._)(_),
+                  }),
+                )
+              : _._.Localize("#SteamMachineVerified_DescriptionHeader_Unknown"),
+          });
+        let _ = "",
+          _ = null;
+        switch (_) {
+          case _._:
+            (_ = "#SteamMachineVerified_DescriptionHeader_Verified"),
+              (_ = _().Verified);
+            break;
+          case _._:
+            (_ = "#SteamMachineVerified_DescriptionHeader_Playable"),
+              (_ = _().Playable);
+            break;
+          case _._:
+            (_ = "#SteamMachineVerified_DescriptionHeader_Unsupported"),
+              (_ = _().Unsupported);
+        }
+        const _ = (0, _.jsx)("span", {
+            className: _,
+            children: _._.Localize(_(_)),
+          }),
+          _ = (0, _.jsx)("span", {
+            className: _().CompatibilityDetailRatingSummary,
+            children: _._.Localize(_ || _),
+          }),
+          _ = _
+            ? _._.LocalizeReact(
+                "#SteamMachineVerified_DescriptionHeader_WithAppName",
+                (0, _.jsx)("b", {
+                  children: (0, _._)(_),
+                }),
+                _,
+                _,
+              )
+            : _._.LocalizeReact(
+                "#SteamMachineVerified_DescriptionHeader",
                 _,
                 _,
               );
@@ -32383,61 +32715,61 @@
       }
       var _;
       !(function (_) {
-        (_.GetCart = function (_, _) {
-          return _.SendMsg("AccountCart.GetCart#1", (0, _._)(_, _), _, {
+        (_.GetCart = function (_, _, _) {
+          return _.SendMsg("AccountCart.GetCart#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
         }),
-          (_.AddItemsToCart = function (_, _) {
+          (_.AddItemsToCart = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.AddItemsToCart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ModifyLineItem = function (_, _) {
+          (_.ModifyLineItem = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.ModifyLineItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RemoveItemFromCart = function (_, _) {
+          (_.RemoveItemFromCart = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.RemoveItemFromCart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.MergeShoppingCartContents = function (_, _) {
+          (_.MergeShoppingCartContents = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.MergeShoppingCartContents#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.DeleteCart = function (_, _) {
-            return _.SendMsg("AccountCart.DeleteCart#1", (0, _._)(_, _), _, {
+          (_.DeleteCart = function (_, _, _) {
+            return _.SendMsg("AccountCart.DeleteCart#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetRelevantCoupons = function (_, _) {
+          (_.GetRelevantCoupons = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.GetRelevantCoupons#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -32814,10 +33146,10 @@
         }
       }
       !(function (_) {
-        _.CheckInventoryAvailableByPackage = function (_, _) {
+        _.CheckInventoryAvailableByPackage = function (_, _, _) {
           return _.SendMsg(
             "PhysicalGoods.CheckInventoryAvailableByPackage#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -32948,7 +33280,7 @@
                   (0, _.jsx)("input", {
                     type: "hidden",
                     name: "sessionid",
-                    value: _._.SESSIONID,
+                    value: (0, _._)(),
                   }),
                   (0, _.jsx)("button", {
                     className: (0, _._)(_().Action, _),
@@ -35573,10 +35905,10 @@
         }
       }
       !(function (_) {
-        (_.UpdateRegistration = function (_, _) {
+        (_.UpdateRegistration = function (_, _, _) {
           return _.SendMsg(
             "PartnerMeetSteam.UpdateRegistration#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -35584,10 +35916,10 @@
             },
           );
         }),
-          (_.GetAvailability = function (_, _) {
+          (_.GetAvailability = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetAvailability#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -35596,10 +35928,10 @@
               },
             );
           }),
-          (_.GetRegistrations = function (_, _) {
+          (_.GetRegistrations = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetRegistrations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -35607,30 +35939,30 @@
               },
             );
           }),
-          (_.EmailInvitees = function (_, _) {
+          (_.EmailInvitees = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.EmailInvitees#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.TestFireEmails = function (_, _) {
+          (_.TestFireEmails = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.TestFireEmails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetSaleEventOrganizers = function (_, _) {
+          (_.GetSaleEventOrganizers = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetSaleEventOrganizers#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -35638,10 +35970,10 @@
               },
             );
           }),
-          (_.GetBatchPartnerEmailAndName = function (_, _) {
+          (_.GetBatchPartnerEmailAndName = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetBatchPartnerEmailAndName#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39453,10 +39785,10 @@
       }
       var _;
       !(function (_) {
-        (_.GetUserYearInReview = function (_, _) {
+        (_.GetUserYearInReview = function (_, _, _) {
           return _.SendMsg(
             "SaleFeature.GetUserYearInReview#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -39465,10 +39797,10 @@
             },
           );
         }),
-          (_.GetUserSharingPermissions = function (_, _) {
+          (_.GetUserSharingPermissions = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserSharingPermissions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -39476,10 +39808,10 @@
               },
             );
           }),
-          (_.SetUserSharingPermissions = function (_, _) {
+          (_.SetUserSharingPermissions = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.SetUserSharingPermissions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -39487,10 +39819,10 @@
               },
             );
           }),
-          (_.GetUserYearAchievements = function (_, _) {
+          (_.GetUserYearAchievements = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserYearAchievements#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39499,10 +39831,10 @@
               },
             );
           }),
-          (_.GetUserYearScreenshots = function (_, _) {
+          (_.GetUserYearScreenshots = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserYearScreenshots#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39511,10 +39843,10 @@
               },
             );
           }),
-          (_.GetUserActionData = function (_, _) {
+          (_.GetUserActionData = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserActionData#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39523,10 +39855,10 @@
               },
             );
           }),
-          (_.GetMultipleUserActionData = function (_, _) {
+          (_.GetMultipleUserActionData = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetMultipleUserActionData#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39535,10 +39867,10 @@
               },
             );
           }),
-          (_.GetAllUserActionDataForType = function (_, _) {
+          (_.GetAllUserActionDataForType = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetAllUserActionDataForType#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39546,10 +39878,10 @@
               },
             );
           }),
-          (_.GetFriendsSharedYearInReview = function (_, _) {
+          (_.GetFriendsSharedYearInReview = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetFriendsSharedYearInReview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39558,10 +39890,10 @@
               },
             );
           }),
-          (_.GetUserYearInReviewShareImage = function (_, _) {
+          (_.GetUserYearInReviewShareImage = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserYearInReviewShareImage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39570,10 +39902,10 @@
               },
             );
           }),
-          (_.GetYIRCurrentMonthlySummary = function (_, _) {
+          (_.GetYIRCurrentMonthlySummary = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetYIRCurrentMonthlySummary#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41960,7 +42292,7 @@
             return this.m_mapSourceEventGIDToPostedClans.get(_);
           const _ = _._.STORE_BASE_URL + "events/ajaxgetrepostedevent",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               source_clan_accountid: _.GetAccountID(),
               source_event_gid: _,
             };
@@ -42005,7 +42337,7 @@
           var _, _, _;
           const _ = _._.STORE_BASE_URL + "events/ajaxrepostevent",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("source_clan_accountid", "" + _.GetAccountID()),
             _.append("source_event_gid", "" + _),
             _.append(
@@ -42852,7 +43184,7 @@
           (this.m_fileUploadProps.eUploadState = 2),
             (this.m_fileUploadProps.uploadInfo = _);
           let _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("l", _._.LANGUAGE),
             __webpack_require__.append("file_size", _.size.toString()),
             __webpack_require__.append(
@@ -42971,7 +43303,7 @@
           let _ = this.m_fileUploadProps.file,
             _ = this.m_fileUploadProps.sha1,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("l", _._.LANGUAGE),
             _.append("file_name", this.m_fileUploadProps.uploadFileName),
             _.append("file_sha", _),
@@ -45872,7 +46204,7 @@
             return;
           const _ = _._.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
             _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("categoryid", _.toString()),
             _.append("appid", _.toString());
           try {
@@ -49864,7 +50196,367 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, ..._ } = _,
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsx)(_, {
+          ..._,
+          platforms: _,
+        });
+      }
+      _.memo(function (_) {
+        const { platforms: _ } = _;
+        if (!_) return null;
+        const { windows: _, mac: _, steamos_linux: _, vr_support: _ } = _;
+        return (0, _.jsxs)("span", {
+          className: _().SupportedPlatforms,
+          children: [
+            _ && (0, _.jsx)(_, {}),
+            _ && (0, _.jsx)(_, {}),
+            _ && (0, _.jsx)(_, {}),
+            (null == _ ? void 0 : _.vrhmd) && (0, _.jsx)(_, {}),
+          ],
+        });
+      });
+      const _ = _.memo(function (_) {
+        const { platforms: _, eHWCompat: _, size: _ = "small" } = _;
+        let _;
+        if (_ == _._)
+          return (
+            (0, _._)(
+              !1,
+              "SteamHWCompatIndicator called for k_ESteamHWCompatibility_None",
+            ),
+            null
+          );
+        if (_ == _._) {
+          const _ = null == _ ? void 0 : _.steam_os_compat_category;
+          if (void 0 === _) return null;
+          switch (_) {
+            case _._:
+              _ = _;
+              break;
+            case _._:
+              _ = _;
+              break;
+            case _._:
+              _ = _;
+              break;
+            default:
+              return (0, _._)(_, `Unhandled steam os category: ${_}`), null;
+          }
+        } else {
+          const _ =
+            _ == _._
+              ? null == _
+                ? void 0
+                : _.steam_machine_compat_category
+              : null == _
+                ? void 0
+                : _.steam_deck_compat_category;
+          if (void 0 === _) return null;
+          switch (_) {
+            case _._:
+              _ = _;
+              break;
+            case _._:
+              _ = _;
+              break;
+            case _._:
+              _ = _;
+              break;
+            case _._:
+              _ = _;
+              break;
+            default:
+              return (0, _._)(_, `Unhandled deck compat category: ${_}`), null;
+          }
+        }
+        return (0, _.jsxs)("span", {
+          className: _()(
+            _().DeckCompat,
+            "small" == _ && _().Small,
+            "fill" == _ && _().Fill,
+          ),
+          children: [
+            Boolean(_ == _._) && (0, _.jsx)(_, {}),
+            Boolean(_ == _._) && (0, _.jsx)(_, {}),
+            (0, _.jsx)(_, {}),
+          ],
+        });
+      });
+      function _() {
+        return (0, _.jsx)("span", {
+          className: _()(_().PlatformIndicator, _().Windows),
+          title: _._.Localize("#Platform_Windows"),
+          children: (0, _.jsx)(_, {}),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          className: _()(_().PlatformIndicator, _().Mac),
+          title: _._.Localize("#Platform_Mac"),
+          children: (0, _.jsx)(_, {}),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          className: _()(_().PlatformIndicator, _().SteamOS),
+          title: _._.Localize("#Platform_Linux"),
+          children: (0, _.jsx)(_, {}),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          className: _().PlatformIndicator,
+          title: _._.Localize("#Platform_VR"),
+          children: (0, _.jsx)(_, {}),
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          className: "SVGIcon_Button SVGIcon_WindowsLogo",
+          width: "100%",
+          height: "100%",
+          viewBox: "0 0 128 128",
+          enableBackground: "new 0 0 128 128",
+          children: [
+            (0, _.jsx)("rect", {
+              fill: "currentColor",
+              width: "60.834",
+              height: "60.835",
+            }),
+            (0, _.jsx)("rect", {
+              _: "67.165",
+              fill: "currentColor",
+              width: "60.835",
+              height: "60.835",
+            }),
+            (0, _.jsx)("rect", {
+              _: "67.164",
+              fill: "currentColor",
+              width: "60.834",
+              height: "60.836",
+            }),
+            (0, _.jsx)("rect", {
+              _: "67.165",
+              _: "67.164",
+              fill: "currentColor",
+              width: "60.835",
+              height: "60.836",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "base",
+          xmlns: "http://www.w3.org/2000/svg",
+          _: "0px",
+          _: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M138.365,26.557c16.139-21.272,38.578-21.376,38.578-21.376s3.336,19.999-12.696,39.266 c-17.12,20.572-36.58,17.206-36.58,17.206S124.012,45.473,138.365,26.557z",
+            }),
+            (0, _.jsx)("path", {
+              _: "M129.719,75.662c8.305,0,23.713-11.413,43.771-11.413c34.527,0,48.109,24.566,48.109,24.566s-26.565,13.583-26.565,46.54 c0,37.179,33.093,49.991,33.093,49.991s-23.134,65.112-54.38,65.112c-14.353,0-25.509-9.672-40.631-9.672 c-15.41,0-30.702,10.032-40.662,10.032c-28.533,0-64.581-61.765-64.581-111.414c0-48.849,30.512-74.474,59.13-74.474 C105.61,64.933,120.047,75.662,129.719,75.662z",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          version: "1.1",
+          _: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          fill: "#FFFFFF",
+          _: "0px",
+          _: "0px",
+          viewBox: "0 0 256 256",
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
+            }),
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              _: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsxs)("svg", {
+          width: "36",
+          height: "36",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              _: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              _: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
+              fill: "currentColor",
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize(
+            "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
+          ),
+          className: _()(_().SteamDeckCompatLogo),
+          children: (0, _.jsx)("svg", {
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, _.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
+              fill: "white",
+            }),
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize(
+            "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          className: _()(_().SteamDeckCompatLogo),
+          children: (0, _.jsxs)("svg", {
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, _.jsx)("path", {
+                _: "M18.6146 1C18.8276 1.00008 19 1.17285 19 1.3858V18.6146C18.9999 18.8275 18.8275 18.9999 18.6146 19H1.3858C1.17287 19 1.00012 18.8275 1 18.6146V1.3858C1 1.1728 1.1728 1 1.3858 1H18.6146ZM10.1133 4.65085C7.09611 4.65093 4.65004 7.09697 4.64996 10.1142C4.64996 13.1315 7.09606 15.5775 10.1133 15.5776C13.1307 15.5776 15.5767 13.1316 15.5767 10.1142C15.5767 7.09693 13.1307 4.65085 10.1133 4.65085Z",
+                fill: "white",
+              }),
+              (0, _.jsx)("path", {
+                _: "M14.125 10.1892C14.125 7.98021 12.3338 6.18945 10.1248 6.18945C7.9158 6.1895 6.12509 7.98025 6.125 10.1892C6.125 12.3292 7.80559 14.077 9.91901 14.1842L10.1248 14.1895C12.2649 14.1895 14.0127 12.5085 14.1197 10.395L14.125 10.1892Z",
+                fill: "white",
+              }),
+            ],
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize("#SteamDeckVerified_Category_Verified"),
+          className: _().SteamDeckCompatIcon,
+          children: (0, _.jsx)("svg", {
+            className: _()(_().SteamDeckCompatVerified),
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
+              fill: "currentColor",
+            }),
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize("#SteamDeckVerified_Category_Playable"),
+          className: _().SteamDeckCompatIcon,
+          children: (0, _.jsx)("svg", {
+            className: _()(_().SteamDeckCompatPlayable),
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.61079 9.44444V15H11.3886V9.44444H8.61079ZM9.07372 8.05245C9.34781 8.23558 9.67004 8.33333 9.99967 8.33333C10.4417 8.33333 10.8656 8.15774 11.1782 7.84518C11.4907 7.53262 11.6663 7.10869 11.6663 6.66667C11.6663 6.33703 11.5686 6.0148 11.3855 5.74072C11.2023 5.46663 10.942 5.25301 10.6375 5.12687C10.3329 5.00072 9.99783 4.96771 9.67452 5.03202C9.35122 5.09633 9.05425 5.25507 8.82116 5.48815C8.58808 5.72124 8.42934 6.01821 8.36503 6.34152C8.30072 6.66482 8.33373 6.99993 8.45988 7.30447C8.58602 7.60902 8.79964 7.86931 9.07372 8.05245Z",
+              fill: "currentColor",
+            }),
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize("#SteamDeckVerified_Category_Unsupported"),
+          className: _().SteamDeckCompatIcon,
+          children: (0, _.jsx)("svg", {
+            className: _()(_().SteamDeckCompatUnsupported),
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M14.1931 15.6064C13.0246 16.4816 11.5733 17 10.001 17C6.13498 17 3.00098 13.866 3.00098 10C3.00098 8.42766 3.51938 6.97641 4.39459 5.80783L14.1931 15.6064ZM15.6074 14.1922C16.4826 13.0236 17.001 11.5723 17.001 10C17.001 6.13401 13.867 3 10.001 3C8.42864 3 6.97739 3.5184 5.80881 4.39362L15.6074 14.1922ZM19.001 10C19.001 14.9706 14.9715 19 10.001 19C5.03041 19 1.00098 14.9706 1.00098 10C1.00098 5.02944 5.03041 1 10.001 1C14.9715 1 19.001 5.02944 19.001 10Z",
+              fill: "currentColor",
+            }),
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize("#SteamDeckVerified_Category_Unknown"),
+          className: _().SteamDeckCompatIcon,
+          children: (0, _.jsx)("svg", {
+            className: _()(_().SteamDeckCompatUnknown),
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M17.3972 11.2461L18.8767 11.4932C18.9578 11.0075 19 10.5087 19 10C19 9.49131 18.9578 8.99248 18.8767 8.50682L17.3972 8.75386C17.4647 9.15821 17.5 9.57442 17.5 10C17.5 10.4256 17.4647 10.8418 17.3972 11.2461ZM17.0295 7.3783L18.4348 6.8539C18.0814 5.90668 17.5729 5.03501 16.9403 4.26971L15.7842 5.22538C16.3119 5.86387 16.7354 6.59021 17.0295 7.3783ZM14.7746 4.21582L15.7303 3.05967C14.965 2.42708 14.0933 1.91864 13.1461 1.56519L12.6217 2.97054C13.4098 3.26461 14.1361 3.68805 14.7746 4.21582ZM11.2461 2.60281L11.4932 1.1233C11.0075 1.0422 10.5087 1 10 1C9.49131 1 8.99248 1.0422 8.50682 1.1233L8.75386 2.60281C9.15821 2.5353 9.57442 2.5 10 2.5C10.4256 2.5 10.8418 2.5353 11.2461 2.60281ZM7.3783 2.97054L6.8539 1.56519C5.90668 1.91864 5.03501 2.42708 4.26971 3.05967L5.22538 4.21582C5.86387 3.68805 6.59021 3.26461 7.3783 2.97054ZM4.21582 5.22538L3.05967 4.26971C2.42708 5.03501 1.91864 5.90668 1.56519 6.8539L2.97054 7.3783C3.26461 6.59022 3.68805 5.86387 4.21582 5.22538ZM1 10C1 9.49131 1.0422 8.99248 1.1233 8.50682L2.60281 8.75386C2.5353 9.15821 2.5 9.57442 2.5 10C2.5 10.4256 2.5353 10.8418 2.60281 11.2461L1.1233 11.4932C1.0422 11.0075 1 10.5087 1 10ZM2.97054 12.6217L1.56519 13.1461C1.91864 14.0933 2.42708 14.965 3.05967 15.7303L4.21582 14.7746C3.68805 14.1361 3.26461 13.4098 2.97054 12.6217ZM5.22538 15.7842L4.26971 16.9403C5.03501 17.5729 5.90668 18.0814 6.8539 18.4348L7.3783 17.0295C6.59022 16.7354 5.86387 16.3119 5.22538 15.7842ZM8.75386 17.3972L8.50682 18.8767C8.99248 18.9578 9.49131 19 10 19C10.5087 19 11.0075 18.9578 11.4932 18.8767L11.2461 17.3972C10.8418 17.4647 10.4256 17.5 10 17.5C9.57442 17.5 9.15821 17.4647 8.75386 17.3972ZM12.6217 17.0295L13.1461 18.4348C14.0933 18.0814 14.965 17.5729 15.7303 16.9403L14.7746 15.7842C14.1361 16.3119 13.4098 16.7354 12.6217 17.0295ZM15.7842 14.7746L16.9403 15.7303C17.5729 14.965 18.0814 14.0933 18.4348 13.1461L17.0295 12.6217C16.7354 13.4098 16.3119 14.1361 15.7842 14.7746ZM9.2425 14.7702C9.46679 14.92 9.73048 15 10.0002 15C10.362 15 10.7089 14.8563 10.9646 14.6006C11.2204 14.3448 11.3641 13.998 11.3641 13.6363C11.3641 13.3666 11.2841 13.1029 11.1343 12.8787C10.9844 12.6544 10.7714 12.4796 10.5222 12.3764C10.2729 12.2732 9.99872 12.2462 9.73415 12.2988C9.46958 12.3514 9.22656 12.4813 9.03582 12.672C8.84508 12.8628 8.71518 13.1057 8.66255 13.3703C8.60993 13.6348 8.63694 13.909 8.74016 14.1582C8.84339 14.4074 9.01821 14.6203 9.2425 14.7702ZM11.0981 10.3552C11.1722 10.2348 11.2765 10.1358 11.4005 10.068C11.8099 9.82315 12.1479 9.47526 12.3808 9.05903C12.6137 8.64279 12.7333 8.17276 12.7278 7.69584C12.7223 7.21892 12.5918 6.75179 12.3493 6.34105C12.1069 5.93031 11.7609 5.59033 11.346 5.35502C10.9311 5.11972 10.4617 4.99732 9.98466 5.00004C9.50764 5.00277 9.03969 5.13052 8.62748 5.37054C8.21527 5.61057 7.87321 5.95448 7.63545 6.36796C7.39769 6.78144 7.27253 7.25004 7.27246 7.72699H9.23191C9.23191 7.6261 9.25178 7.52621 9.29039 7.43301C9.32901 7.3398 9.3856 7.25511 9.45694 7.18378C9.52829 7.11244 9.61299 7.05586 9.70621 7.01725C9.79942 6.97865 9.89933 6.95878 10.0002 6.95878C10.1659 6.96387 10.3255 7.02207 10.4556 7.12479C10.5856 7.22751 10.6792 7.3693 10.7225 7.52925C10.7658 7.6892 10.7565 7.85883 10.6961 8.01311C10.6356 8.16739 10.5271 8.29816 10.3867 8.3861C9.97322 8.62846 9.63003 8.97429 9.39088 9.38955C9.15173 9.80482 9.02487 10.2752 9.02278 10.7544V11.3635H10.9777V10.7544C10.9825 10.6131 11.024 10.4755 11.0981 10.3552Z",
+              fill: "currentColor",
+            }),
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize("#SteamOSCompatibility_Category_Compatible"),
+          className: _().SteamDeckCompatIcon,
+          children: (0, _.jsx)("svg", {
+            className: _()(_().SteamOSCompatCompatible),
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
+              fill: "currentColor",
+            }),
+          }),
+        });
+      }
       function _(_) {
         const { bAllowOutsideOfDeck: _ } = _;
         return (0, _._)() || _
@@ -49874,44 +50566,21 @@
           : null;
       }
       function _(_) {
-        var _, _;
         const { className: _, _: _ } = _,
-          _ = (0, _._)(_),
           [_, _] = (0, _._)();
-        let _ = "unknown";
-        if (_ == _._)
-          switch (
-            null === (_ = _.data) || void 0 === _
-              ? void 0
-              : _.steam_os_compat_category
-          ) {
-            case _._:
-              _ = "steamoscompatible";
-              break;
-            case _._:
-              _ = "steamosunsupported";
-              break;
-            case _._:
-              _ = "steamosunknown";
-          }
-        else
-          switch (
-            null === (_ = _.data) || void 0 === _
-              ? void 0
-              : _.steam_deck_compat_category
-          ) {
-            case _._:
-              _ = "verified";
-              break;
-            case _._:
-              _ = "playable";
-              break;
-            case _._:
-              _ = "unsupported";
-          }
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_.CompatIcon, "ds_steam_deck_compat", _, _),
-        });
+        let _ = _;
+        return (
+          _ == _._ && (_ = _._),
+          _
+            ? (0, _.jsx)("div", {
+                className: (0, _._)(_.CompatIcon, _),
+                children: (0, _.jsx)(_, {
+                  _: _,
+                  eHWCompat: _,
+                }),
+              })
+            : null
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

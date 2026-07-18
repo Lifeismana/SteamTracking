@@ -127,8 +127,8 @@
         m = s(84518),
         d = s(60014),
         _ = s(90626),
-        u = s(24484);
-      var f = s(55263),
+        f = s(24484);
+      var u = s(55263),
         p = s(25706),
         h = s(52038),
         b = s(40594);
@@ -180,9 +180,9 @@
       };
       var x = s(61859),
         j = s(91675),
-        S = s(73745),
-        k = s(49395),
-        N = s.n(k),
+        k = s(73745),
+        N = s(49395),
+        S = s.n(N),
         T = s(85427),
         v = s.n(T),
         y = s(62490);
@@ -194,7 +194,7 @@
             rgCommunityItemDefs: m,
             bViewingOwnProfile: d,
           } = e,
-          u = (0, _.useMemo)(() => {
+          f = (0, _.useMemo)(() => {
             const e = new Set();
             null == a ||
               a.forEach((t) => {
@@ -263,14 +263,14 @@
                     }),
                   ],
                 }),
-                Array.from(u.keys()).map((e) =>
+                Array.from(f.keys()).map((e) =>
                   (0, r.jsx)(
                     C,
                     {
                       bViewingOwnProfile: d,
                       nAppID: t.appid,
                       itemClass: e,
-                      rgItems: u.get(e),
+                      rgItems: f.get(e),
                       bHideItemStore: !0,
                     },
                     "free_item_class_" + e,
@@ -372,7 +372,7 @@
       }
       function D(e) {
         const { item: t } = e,
-          [s, i] = (0, S.OP)(),
+          [s, i] = (0, k.OP)(),
           n = t.user_has_item || s,
           c = !n,
           l =
@@ -382,8 +382,8 @@
               : t.item_image_small;
         return (0, r.jsx)(o.Z, {
           ...i,
-          onFocus: i.onMouseEnter,
-          onBlur: i.onMouseLeave,
+          onFocus: () => i.onPointerEnter(),
+          onBlur: () => i.onPointerLeave(),
           focusable: !0,
           className: v().ItemBackground,
           children: (0, r.jsx)(p.Qc, {
@@ -401,7 +401,7 @@
       const E = { include_assets: !0 };
       function P(e) {
         const { nAppID: t } = e,
-          [s] = (0, f.t7)(t, E);
+          [s] = (0, u.t7)(t, E);
         return s
           ? (0, r.jsx)(o.Z, {
               className: v().AppHeaderCtn,
@@ -435,13 +435,13 @@
             bViewingOwnProfile: i,
             rgCommunityItemDefs: n,
             rgUserCommunityItems: c,
-            nAppID: f,
+            nAppID: u,
             rgRewardItems: p,
             rgUserItemRewarded: b,
             oRewardDefinition: I,
           } = (function () {
             const [e, t] = (0, _.useState)(() =>
-              (0, u.Tc)("profile-itemcollection", "itemcollection_config"),
+              (0, f.Tc)("profile-itemcollection", "itemcollection_config"),
             );
             return e;
           })(),
@@ -486,7 +486,7 @@
               s
             );
           }, [n, p, c]),
-          S = (0, _.useMemo)(() => {
+          k = (0, _.useMemo)(() => {
             if (j.has(a.sU)) {
               const e = j.get(a.sU).filter((e) => {
                 JSON.parse(e.item_key_values);
@@ -496,7 +496,7 @@
             }
             return null;
           }, [j]),
-          k = (0, _.useMemo)(() => {
+          N = (0, _.useMemo)(() => {
             let e = new Map();
             return (
               n.forEach((t) => {
@@ -514,7 +514,7 @@
                 null == c
                   ? void 0
                   : c.filter((e) => {
-                      const t = k.get(e.item_type);
+                      const t = N.get(e.item_type);
                       return (
                         !t || (t.item_class != a.Ve && t.item_class != a.u8)
                       );
@@ -523,15 +523,15 @@
               s = e.length || 0,
               r = t.length || 0;
             return [r ? Math.floor((100 * s) / r) : 0, r, s];
-          }, [k, n, c]);
+          }, [N, n, c]);
         return (0, r.jsx)(d.nn, {
           feature: "itemcollections",
           children: (0, r.jsx)(m.A, {
-            appID: f,
+            appID: u,
             children: (0, r.jsxs)(o.Z, {
-              className: N().ProfileSubPageContainer,
+              className: S().ProfileSubPageContainer,
               children: [
-                S &&
+                k &&
                   (0, r.jsx)("div", {
                     className: v().PageBackground,
                     children: (0, r.jsxs)("video", {
@@ -540,21 +540,21 @@
                       muted: !0,
                       autoPlay: !0,
                       loop: !0,
-                      poster: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_image_large}`,
+                      poster: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${u}/${k.item_image_large}`,
                       children: [
                         (0, r.jsx)("source", {
-                          src: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_movie_webm}`,
+                          src: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${u}/${k.item_movie_webm}`,
                           type: "video/webm",
                         }),
                         Boolean(!l.TS.IN_CLIENT) &&
                           (0, r.jsx)("source", {
-                            src: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_movie_mp4}`,
+                            src: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${u}/${k.item_movie_mp4}`,
                             type: "video/mp4",
                           }),
                       ],
                     }),
                   }),
-                (0, r.jsx)(P, { nAppID: f }),
+                (0, r.jsx)(P, { nAppID: u }),
                 (0, r.jsxs)("div", {
                   className: v().PageSection,
                   children: [
@@ -595,7 +595,7 @@
                       (0, r.jsx)(
                         C,
                         {
-                          nAppID: f,
+                          nAppID: u,
                           itemClass: e,
                           rgItems: j.get(e),
                           bViewingOwnProfile: i,
@@ -616,13 +616,13 @@
       "use strict";
       s.d(t, {
         EL: () => r,
-        Ed: () => f,
+        Ed: () => u,
         J4: () => c,
         Qw: () => m,
         ST: () => l,
         Ve: () => o,
         XY: () => _,
-        iV: () => u,
+        iV: () => f,
         jE: () => d,
         oW: () => a,
         sU: () => n,
@@ -643,8 +643,8 @@
         m = 7,
         d = 8,
         _ = 9,
-        u = 10,
-        f = 11,
+        f = 10,
+        u = 11,
         p = 12,
         h = 13,
         b = 14,
@@ -663,11 +663,11 @@
         const { appID: t, feature: s, depth: a, children: l } = e,
           m = (0, r.ru)(s, a),
           d = (0, o.b)(),
-          [_, u] = i.useState(void 0),
-          f = i.useCallback(
+          [_, f] = i.useState(void 0),
+          u = i.useCallback(
             (e) => {
               e.isIntersecting &&
-                u((e) =>
+                f((e) =>
                   (null == e ? void 0 : e.appID) == t &&
                   (null == e ? void 0 : e.snr) == m
                     ? e
@@ -679,7 +679,7 @@
         (0, i.useEffect)(() => {
           _ && null != _.appID && d.AddImpression(_.appID, _.snr);
         }, [d, _]);
-        const p = (0, n.BL)(f),
+        const p = (0, n.BL)(u),
           h = t && (!_ || (_.appID != t && _.snr != m)),
           b = (0, c.Ue)(l.props.ref, h ? p : void 0);
         return i.cloneElement(l, { ref: b });
@@ -762,7 +762,7 @@
                 appid: e,
                 origin: self.origin,
                 l: m.TS.LANGUAGE,
-                sessionid: t ? m.TS.SESSIONID : void 0,
+                sessionid: t ? (0, m.KC)() : void 0,
               },
               d = await i().get(a, { params: l, withCredentials: t });
             if (
@@ -844,7 +844,7 @@
     },
     25706: (e, t, s) => {
       "use strict";
-      s.d(t, { Qc: () => d, Zx: () => u, f8: () => _ });
+      s.d(t, { Qc: () => d, Zx: () => f, f8: () => _ });
       var r = s(7850),
         i = s(65946),
         o = s(37621),
@@ -907,7 +907,7 @@
           ? (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(d, { ...o }), l] })
           : (0, r.jsx)(c.t, { size: "small", string: (0, a.we)("#Loading") });
       }
-      function u(e) {
+      function f(e) {
         const { section: t, rewardDef: s, language: c } = e,
           a = (0, n.d2)(s.appid, s.community_item_type),
           [m] = (0, i.q3)(() => {
@@ -973,25 +973,25 @@
           size: s,
           string: n,
           position: d,
-          static: u,
-          msDelayAppear: f,
+          static: f,
+          msDelayAppear: u,
         } = e;
         let p = [c().LoadingWrapper, "SteamLogoThrobber", _(s)];
-        const [h, b] = i.useState(!f),
+        const [h, b] = i.useState(!u),
           g = !(0, l.q)();
         return (
           (0, i.useEffect)(() => {
             if (h) return;
-            const e = setTimeout(() => b(!0), f);
+            const e = setTimeout(() => b(!0), u);
             return () => clearTimeout(e);
-          }, [f, h]),
+          }, [u, h]),
           void 0 === n && p.push(c().noString),
           t && p.push(t),
-          u && p.push(c().Static),
+          f && p.push(c().Static),
           (0, r.jsxs)("div", {
             className: (0, o.A)(
               "center" == d && c().throbber_center_wrapper,
-              !!f && c().ThrobberDelayAppear,
+              !!u && c().ThrobberDelayAppear,
               h && c().Visible,
             ),
             children: [
@@ -1020,13 +1020,13 @@
           msDelayAppear: m,
         } = e;
         let d = [c().LoadingWrapper, "SteamLogoThrobber", _(s)];
-        const [f, p] = i.useState(!m);
+        const [u, p] = i.useState(!m);
         return (
           (0, i.useEffect)(() => {
-            if (f) return;
+            if (u) return;
             const e = setTimeout(() => p(!0), m);
             return () => clearTimeout(e);
-          }, [m, f]),
+          }, [m, u]),
           void 0 === n && d.push(c().noString),
           t && d.push(t),
           l && d.push(c().Static),
@@ -1034,17 +1034,17 @@
             className: (0, o.A)(
               "center" == a && c().throbber_center_wrapper,
               !!m && c().ThrobberDelayAppear,
-              f && c().Visible,
+              u && c().Visible,
             ),
             children: [
-              f &&
+              u &&
                 (0, r.jsx)("div", {
                   className: d.join(" "),
                   children: (0, r.jsxs)("div", {
                     className: c().Throbber,
                     children: [
-                      (0, r.jsx)(u, { className: c().base }),
-                      (0, r.jsx)(u, { className: c().blur }),
+                      (0, r.jsx)(f, { className: c().base }),
+                      (0, r.jsx)(f, { className: c().blur }),
                     ],
                   }),
                 }),
@@ -1068,7 +1068,7 @@
             return c().throbber_large;
         }
       }
-      function u(e) {
+      function f(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),

@@ -250,7 +250,7 @@
                     if (_(_, _)) return null;
                     const _ = Boolean(_(_, _.ZLm).trim()),
                       _ = new FormData();
-                    _.append("sessionid", _._.SESSIONID),
+                    _.append("sessionid", (0, _._)()),
                       _.append("appid", "" + _),
                       _.append("post_steam_china", "" + _),
                       _.append("titles", JSON.stringify(_)),

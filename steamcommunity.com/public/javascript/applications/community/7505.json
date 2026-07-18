@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Bu ilan artık mevcut değildir",
     "Listing_NotAvailable_Short": "Mevcut Değil",
     "Listing_NotAvailable_Long": "Bu ilandaki öğe artık satın alınamaz.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(İlanım)",
     "BuyOrderDialog_Header": "Satın al - %1$s",
     "BuyOrderDialog_Header_NoItem": "Satın Alma Talimatı Ver",
     "BuyOrderDialog_BucketPicker_Label": "Hangi öğe türünü satın almak istiyorsunuz?",

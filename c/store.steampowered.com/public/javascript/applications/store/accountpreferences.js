@@ -1122,7 +1122,7 @@
         async PostCookieSettings() {
           const _ = _._.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
             _ = new FormData();
-          _.set("sessionid", _._.SESSIONID),
+          _.set("sessionid", (0, _._)()),
             _.append("cookiepreferences", JSON.stringify(this.m_Preferences));
           try {
             let _ = await _().post(_, _, {
@@ -1191,7 +1191,7 @@
         async PostStorePreferences() {
           const _ = _._.STORE_BASE_URL + "account/savepreferences",
             _ = new FormData();
-          _.set("sessionid", _._.SESSIONID),
+          _.set("sessionid", (0, _._)()),
             _.set(
               "provide_deck_feedback",
               this.m_Preferences.provide_deck_feedback.toString(),
@@ -1271,7 +1271,7 @@
         async RenameHardware(_, _) {
           const _ = _._.STORE_BASE_URL + "account/ajaxhardwarerename",
             _ = new FormData();
-          _.set("sessionid", _._.SESSIONID),
+          _.set("sessionid", (0, _._)()),
             _.set("savedHardwareID", _),
             _.set("strFriendlyName", _);
           if (await this.PostRequest(_, _))
@@ -1282,7 +1282,7 @@
         async DeleteHardware(_) {
           const _ = _._.STORE_BASE_URL + "account/ajaxhardwaredelete",
             _ = new FormData();
-          __webpack_require__.set("sessionid", _._.SESSIONID),
+          __webpack_require__.set("sessionid", (0, _._)()),
             __webpack_require__.set("savedHardwareID", _);
           if (await this.PostRequest(_, _))
             for (let _ = 0; _ < this.m_rgSavedHardware.length; ++_)
@@ -2984,7 +2984,7 @@
                       onOK: async () => {
                         const _ = new FormData();
                         _.set("action", "deauthorize"),
-                          _.set("sessionid", _._.SESSIONID),
+                          _.set("sessionid", (0, _._)()),
                           await _().post(
                             _._.STORE_BASE_URL + "twofactor/manage_action",
                             _,
@@ -2995,7 +2995,7 @@
                         const _ = document.createElement("input");
                         (_.type = "hidden"),
                           (_.name = "sessionid"),
-                          (_.value = _._.SESSIONID),
+                          (_.value = (0, _._)()),
                           _.appendChild(_),
                           document.body.appendChild(_),
                           _.submit();

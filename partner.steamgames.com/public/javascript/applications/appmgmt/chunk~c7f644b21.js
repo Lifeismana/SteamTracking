@@ -1064,44 +1064,44 @@
       }
       var D, C;
       !(function (e) {
-        (e.GetDeadlinesForPartner = function (e, r) {
+        (e.GetDeadlinesForPartner = function (e, r, t) {
           return e.SendMsg(
             "PartnerDeadline.GetDeadlinesForPartner#1",
-            (0, c.I8)(z, r),
+            (0, c.I8)(z, r, t),
             f,
             { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
-          (e.GetDeadlineByTimeRange = function (e, r) {
+          (e.GetDeadlineByTimeRange = function (e, r, t) {
             return e.SendMsg(
               "PartnerDeadline.GetDeadlineByTimeRange#1",
-              (0, c.I8)(S, r),
+              (0, c.I8)(S, r, t),
               F,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           });
       })(D || (D = {})),
         (function (e) {
-          (e.CreateDismiss = function (e, r) {
+          (e.CreateDismiss = function (e, r, t) {
             return e.SendMsg(
               "PartnerDismiss.CreateDismiss#1",
-              (0, c.I8)(q, r),
+              (0, c.I8)(q, r, t),
               T,
               { ePrivilege: 1 },
             );
           }),
-            (e.GetDismissTimeRange = function (e, r) {
+            (e.GetDismissTimeRange = function (e, r, t) {
               return e.SendMsg(
                 "PartnerDismiss.GetDismissTimeRange#1",
-                (0, c.I8)(h, r),
+                (0, c.I8)(h, r, t),
                 U,
                 { bConstMethod: !0, ePrivilege: 1 },
               );
             }),
-            (e.DeleteDismiss = function (e, r) {
+            (e.DeleteDismiss = function (e, r, t) {
               return e.SendMsg(
                 "PartnerDismiss.DeleteDismiss#1",
-                (0, c.I8)(O, r),
+                (0, c.I8)(O, r, t),
                 v,
                 { ePrivilege: 1 },
               );

@@ -1175,23 +1175,17 @@
       }
       var _;
       !(function (_) {
-        (_.ConvertHTMLToBBCode = function (_, _) {
-          return _.SendMsg("News.ConvertHTMLToBBCode#1", (0, _._)(_, _), _, {
+        (_.ConvertHTMLToBBCode = function (_, _, _) {
+          return _.SendMsg("News.ConvertHTMLToBBCode#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.PreviewPartnerEvents = function (_, _) {
-            return _.SendMsg("News.PreviewPartnerEvents#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetNewsFeedByRepublishClan = function (_, _) {
+          (_.PreviewPartnerEvents = function (_, _, _) {
             return _.SendMsg(
-              "News.GetNewsFeedByRepublishClan#1",
-              (0, _._)(_, _),
+              "News.PreviewPartnerEvents#1",
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1199,15 +1193,31 @@
               },
             );
           }),
-          (_.PublishPartnerEvent = function (_, _) {
-            return _.SendMsg("News.PublishPartnerEvent#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetNewsFeedByRepublishClan = function (_, _, _) {
+            return _.SendMsg(
+              "News.GetNewsFeedByRepublishClan#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetBatchPublishedPartnerEvent = function (_, _) {
+          (_.PublishPartnerEvent = function (_, _, _) {
+            return _.SendMsg(
+              "News.PublishPartnerEvent#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetBatchPublishedPartnerEvent = function (_, _, _) {
             return _.SendMsg(
               "News.GetBatchPublishedPartnerEvent#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1378,7 +1388,7 @@
         }
         async CreateOrUpdateRSSNewFeed(_, _ = 0) {
           let _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("gid", this.m_strRSSGID),
             __webpack_require__.append("lang", "" + this.GetCuratorLanguage()),
             __webpack_require__.append("rss_url", _),
@@ -1410,7 +1420,7 @@
         async CheckForNewUpdate() {
           if (this.m_strRSSGID) {
             let _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("gid", this.m_strRSSGID);
             const _ =
               _._.STORE_BASE_URL +
@@ -2942,7 +2952,7 @@
         async ReindexClanEventsAndReloadAccount(_) {
           const _ = _._.STORE_BASE_URL + "events_admin/ajaxflushandreindexrss",
             _ = new FormData();
-          __webpack_require__.set("sessionid", _._.SESSIONID),
+          __webpack_require__.set("sessionid", (0, _._)()),
             __webpack_require__.append("clanids", "" + _);
           try {
             let _ = await _().post(_, _, {
@@ -4251,7 +4261,7 @@
           let _ = _.join(",");
           _ && (_.length > 0 && (_ += ","), (_ += _.ToModString()));
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clan_accountid", "" + _.GetAccountID()),
             _.append("gid_announcement", _),
             _.append("add_tags", _),
@@ -4266,7 +4276,7 @@
         async UpdatePartnerEventType(_, _, _, _) {
           const _ = _._.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clan_accountid", "" + _.GetAccountID()),
             _.append("gid_event", _),
             _.append("new_event_type", "" + _),

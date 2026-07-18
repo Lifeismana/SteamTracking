@@ -42,12 +42,12 @@
       i.d(e, {
         BG: () => I,
         E7: () => D,
-        cR: () => y,
-        p6: () => w,
+        cR: () => S,
+        p6: () => y,
         sU: () => B,
         tW: () => f,
         ur: () => M,
-        vV: () => S,
+        vV: () => w,
         wn: () => h,
         yB: () => b,
       });
@@ -148,11 +148,11 @@
               m.TS.PARTNER_BASE_URL +
               "promotion/discounts/ajaxupdatediscountevent",
             p = new FormData();
-          p.append("sessionid", m.TS.SESSIONID),
+          p.append("sessionid", (0, m.KC)()),
             p.append("name", i),
             p.append("start_time", t.toString()),
             p.append("end_time", e.toString()),
-            p.append("strJSONDiscountInfo", y(i, n, r, s, c));
+            p.append("strJSONDiscountInfo", S(i, n, r, s, c));
           let _ = null;
           try {
             const l = await a().post(d, p, {
@@ -211,7 +211,7 @@
               m.TS.PARTNER_BASE_URL +
               "promotion/discounts/ajaxupdatediscountevent",
             c = new FormData();
-          c.append("sessionid", m.TS.SESSIONID),
+          c.append("sessionid", (0, m.KC)()),
             c.append("start_time", r.start_date.toString()),
             c.append("end_time", r.end_date.toString()),
             c.append(
@@ -281,7 +281,7 @@
             const i =
                 m.TS.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetdiscounteventbyid",
-              n = { sessionid: m.TS.SESSIONID, discountid: t },
+              n = { sessionid: (0, m.KC)(), discountid: t },
               r = await a().get(i, { params: n, withCredentials: !0 });
             if (
               200 == r?.status &&
@@ -328,7 +328,7 @@
             const i =
                 m.TS.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetdiscounteventapplist",
-              n = { sessionid: m.TS.SESSIONID, discountid: t },
+              n = { sessionid: (0, m.KC)(), discountid: t },
               r = await a().get(i, { params: n, withCredentials: !0 });
             if (
               200 == r?.status &&
@@ -432,7 +432,7 @@
       function D(t) {
         return _.Get().GetDiscountEvent(t);
       }
-      function S(t) {
+      function w(t) {
         const { data: e } = (function (t) {
           const [e, i] = (0, s.useState)(_.Get().GetDiscountEvent(t)),
             [n, r] = s.useState(!!t);
@@ -455,7 +455,7 @@
         })(t);
         return e;
       }
-      function w(t) {
+      function y(t) {
         const [e, i] = (0, s.useState)(_.Get().GetDiscountEvent(t)),
           [n, r] = (0, s.useState)(_.Get().GetAppList(t));
         return (
@@ -472,7 +472,7 @@
           n ? { oDiscountEvent: e, rgAppList: n } : null
         );
       }
-      function y(t, e, i, n, r) {
+      function S(t, e, i, n, r) {
         return JSON.stringify({
           discount_event: {
             name: t,
@@ -511,17 +511,17 @@
       i.d(e, {
         D6: () => M,
         DC: () => R,
-        EF: () => S,
+        EF: () => w,
         G7: () => D,
-        Iy: () => w,
+        Iy: () => y,
         O4: () => E,
         _q: () => P,
         dN: () => v,
         es: () => k,
-        fw: () => G,
-        k: () => y,
+        fw: () => C,
+        k: () => S,
         kJ: () => I,
-        ms: () => C,
+        ms: () => G,
         uL: () => B,
       });
       var n = i(34629),
@@ -732,7 +732,7 @@
         async FetchOptInRegistrationForOptIn(t, e) {
           const i =
               b.TS.PARTNER_BASE_URL + "optin/ajaxgetalloptinregistrations",
-            n = { sessionid: b.TS.SESSIONID, opt_in_name: t, opt_in_only: e },
+            n = { sessionid: (0, b.KC)(), opt_in_name: t, opt_in_only: e },
             r = await a().get(i, { params: n, withCredentials: !0 });
           return r?.data?.data
             ? this.UpdateRegAndTrackInStore(t, r.data.data)
@@ -741,7 +741,7 @@
         async FetchPendingReviewOptInRegistrationn(t) {
           const e =
               b.TS.PARTNER_BASE_URL + "optin/ajaxgetpendingreviewregistrations",
-            i = { sessionid: b.TS.SESSIONID, opt_in_name: t },
+            i = { sessionid: (0, b.KC)(), opt_in_name: t },
             n = await a().get(e, { params: i, withCredentials: !0 });
           return n?.data?.data
             ? this.UpdateRegAndTrackInStore(t, n.data.data)
@@ -753,7 +753,7 @@
           if (n) return n;
           try {
             const n = b.TS.PARTNER_BASE_URL + "optin/ajaxgetoptinregistation",
-              r = { sessionid: b.TS.SESSIONID, appid: e, opt_in_name: t },
+              r = { sessionid: (0, b.KC)(), appid: e, opt_in_name: t },
               s = await a().get(n, {
                 params: r,
                 withCredentials: !0,
@@ -888,7 +888,7 @@
           let i = null;
           try {
             const n = new FormData();
-            n.append("sessionid", b.TS.SESSIONID),
+            n.append("sessionid", (0, b.KC)()),
               Object.keys(e).forEach((t) => n.append(t, e[t]));
             const r =
                 b.TS.PARTNER_BASE_URL +
@@ -913,7 +913,7 @@
           let n = null;
           try {
             const r = new FormData();
-            r.append("sessionid", b.TS.SESSIONID),
+            r.append("sessionid", (0, b.KC)()),
               r.append("appid", "" + t),
               r.append("opt_in_name", e.opt_in_name),
               r.append("jsondata", JSON.stringify(e)),
@@ -956,7 +956,7 @@
           try {
             const r = e.opt_in_name || e.jsondata.opt_in_name,
               s = new FormData();
-            s.append("sessionid", b.TS.SESSIONID),
+            s.append("sessionid", (0, b.KC)()),
               s.append("appid", "" + t),
               s.append("opt_in_name", r),
               s.append("approved", "" + i);
@@ -1062,7 +1062,7 @@
         }
         return [];
       }
-      function S() {
+      function w() {
         return o.useMemo(
           () => ({
             fnLoadMultiOptInRegistration: B.Get().LoadMultiOptInRegistration,
@@ -1070,7 +1070,7 @@
           [],
         );
       }
-      function w(t, e, i) {
+      function y(t, e, i) {
         const [n, r] = o.useState(null),
           a = (0, h.m)("useMultiLoadOptInAppReg");
         return (
@@ -1097,14 +1097,14 @@
           n
         );
       }
-      function y(t) {
+      function S(t) {
         const [e, i] = o.useState(B.Get().GetAllOptInRegistrations(t));
         return (
           (0, f.hL)(B.Get().GetOptInNameRegistrationsCallbackList(t), i), e
         );
       }
       function M(t) {
-        const e = y(t),
+        const e = S(t),
           [i, n] = o.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
@@ -1178,10 +1178,10 @@
           fnUpdateOptInRegistrationJson: B.Get().UpdateOptInRegistrationJson,
         };
       }
-      function G() {
+      function C() {
         return { fnUpdateAppealState: B.Get().UpdateAppealState };
       }
-      function C() {
+      function G() {
         const [t, e] = (0, o.useState)(B.Get().GetLoadCount());
         return (
           (0, f.hL)(B.Get().GetLoadCountChange(), e), B.Get().GetLoadCount()
@@ -1207,21 +1207,21 @@
     48996: (t, e, i) => {
       "use strict";
       i.d(e, {
-        $U: () => S,
+        $U: () => w,
         $p: () => A,
         CW: () => O,
-        Fk: () => G,
+        Fk: () => C,
         Ko: () => B,
         Lj: () => D,
         Mh: () => M,
-        XA: () => C,
+        XA: () => G,
         XL: () => L,
         a8: () => R,
         aU: () => k,
         gr: () => E,
         hC: () => P,
-        iI: () => y,
-        qN: () => w,
+        iI: () => S,
+        qN: () => y,
         qT: () => _,
         sZ: () => f,
         sk: () => z,
@@ -1471,7 +1471,7 @@
               "packages/createoreditdiscount/" +
               t.packageID,
             n = new FormData();
-          n.append("sessionid", p.TS.SESSIONID),
+          n.append("sessionid", (0, p.KC)()),
             t.nDiscountID && n.append("id", t.nDiscountID.toString()),
             n.append("name", t.strDiscountName),
             n.append("description", t.strDiscountDescription),
@@ -1516,7 +1516,7 @@
           const a =
               p.TS.PARTNER_BASE_URL + "packages/removepackagediscount/" + e,
             o = new FormData();
-          o.append("sessionid", p.TS.SESSIONID),
+          o.append("sessionid", (0, p.KC)()),
             o.append("discountid", t.toString());
           let l = null;
           try {
@@ -1600,13 +1600,13 @@
       function D(t) {
         return b.Get().GetDiscountByID(t);
       }
-      function S(t) {
+      function w(t) {
         return b.Get().GetAllDiscountsForDiscountEvent(t);
       }
-      function w(t) {
+      function y(t) {
         return b.Get().GetAllDiscountsForPackage(t);
       }
-      function y(t) {
+      function S(t) {
         return b.Get().GetCallbackListForPackage(t);
       }
       function M() {
@@ -1675,7 +1675,7 @@
           i
         );
       }
-      function G(t, e, i) {
+      function C(t, e, i) {
         const [n, r] = (0, a.useState)(),
           [s, o] = (0, a.useState)([]);
         return (
@@ -1705,7 +1705,7 @@
           { nDaysInDiscount: n, rgDiscountWithOverlap: s }
         );
       }
-      function C(t) {
+      function G(t) {
         const e = (0, o.f1)(),
           [i, n] = a.useState(b.Get().GetAllDiscountsForAllPackages());
         return (
@@ -1779,7 +1779,7 @@
         ew: () => H,
         gr: () => Z,
         h5: () => v,
-        hk: () => S,
+        hk: () => w,
         hu: () => E,
         i3: () => K,
         jM: () => M,
@@ -1789,11 +1789,11 @@
         s3: () => D,
         ve: () => $,
         wF: () => Y,
-        we: () => w,
+        we: () => y,
         wk: () => tt,
         wn: () => P,
         zP: () => J,
-        zU: () => y,
+        zU: () => S,
       });
       var n = i(30168),
         r = i(258),
@@ -1813,9 +1813,9 @@
         h = i(43552);
       const B = 0,
         D = 1,
-        S = 2,
-        w = 3,
-        y = 4,
+        w = 2,
+        y = 3,
+        S = 4,
         M = 5,
         I = 6,
         v = 7,
@@ -1823,7 +1823,7 @@
         R = 9,
         P = 10,
         k = 11;
-      function G(t, e) {
+      function C(t, e) {
         return (
           !!t == !!e &&
           t?.packageID == e?.packageID &&
@@ -1831,12 +1831,12 @@
           t?.eState == e?.eState &&
           t?.rgConflictDetails?.length == e?.rgConflictDetails?.length &&
           t?.optInReg == e?.optInReg &&
-          C(t?.discount, e?.discount) &&
+          G(t?.discount, e?.discount) &&
           t?.nBaseAppID == e?.nBaseAppID &&
           t?.bChangedLocally == e?.bChangedLocally
         );
       }
-      function C(t, e) {
+      function G(t, e) {
         return (
           (!e && 0 == (t?.nDiscountPct ?? 0)) ||
           (!!e && e.nDiscountPct == t?.nDiscountPct)
@@ -1900,7 +1900,7 @@
               discountEventID: a.id,
               bChangedLocally: !0,
             };
-          return C(s, r)
+          return G(s, r)
             ? null
             : (this.m_mapLocalPackageDiscountOverrides.has(t) ||
                 this.m_mapLocalPackageDiscountOverrides.set(t, new Map()),
@@ -1927,7 +1927,7 @@
           return (
             this.m_mapLocalPackageDiscountOverrides.forEach((e) =>
               e.forEach((e) => {
-                C(e, e.nDiscountID && (0, s.Lj)(e.nDiscountID)) || t.push(e);
+                G(e, e.nDiscountID && (0, s.Lj)(e.nDiscountID)) || t.push(e);
               }),
             ),
             t.sort(j),
@@ -1962,7 +1962,7 @@
           );
           return (
             this.m_mapLocalPackageDiscountOverrides.get(t)?.forEach((t, e) => {
-              C(t, n.get(e)) || n.set(e, t);
+              G(t, n.get(e)) || n.set(e, t);
             }),
             n
           );
@@ -2052,7 +2052,7 @@
                 );
                 (n.eState = t), (n.optInReg = e);
               }
-              if (n.eState != P && n.eState != y && n.eState != M) {
+              if (n.eState != P && n.eState != S && n.eState != M) {
                 const e = F(t, a, m);
                 e.ePackageDiscountState != D &&
                   ((n.eState = e.ePackageDiscountState),
@@ -2062,7 +2062,7 @@
                   )));
               }
             }
-            G(n, g.get(a.id)) ||
+            C(n, g.get(a.id)) ||
               (g.set(a.id, n),
               this.GetDiscountPackageCallbackList(t).Dispatch(),
               this.GetDiscountGridCellCallbackList(t, a.id).Dispatch(n),
@@ -2073,7 +2073,7 @@
         }
         GetAvailableDiscountEventsInRange(t, e, i) {
           const n = this.m_mapPackageStateForDiscountEvents.get(t),
-            r = new Set([D, k, S, w]);
+            r = new Set([D, k, w, y]);
           return (0, h.E1)()
             .filter(
               (t) =>
@@ -2173,14 +2173,14 @@
             };
             g.push(e), e.rgDiscountEventIDs.forEach((t) => _.add(t));
           }
-          const S = (0, h.E1)().filter(
+          const w = (0, h.E1)().filter(
             (e) =>
               e.collision_type == n.Lg &&
               !_.has(e.id) &&
               this.m_mapPackageStateForDiscountEvents.get(t).get(e.id).eState ==
                 D,
           );
-          for (const t of S)
+          for (const t of w)
             for (let e = 0; e < g.length; e++)
               if (
                 g[e].rtStartDate <= t.start_date &&
@@ -2245,8 +2245,8 @@
         if (e)
           (s = e.get(t)),
             !s || s.restricted || s.pruned
-              ? ((o = y), (s = { restricted: !0 }))
-              : (o = s.opt_in ? D : s.invited || !s.time_opted_in ? S : w);
+              ? ((o = S), (s = { restricted: !0 }))
+              : (o = s.opt_in ? D : s.invited || !s.time_opted_in ? w : y);
         else if (!n.nBaseAppID) {
           const t = i
             .GetIncludedAppIDs()
@@ -2404,11 +2404,11 @@
             case R:
               i.conflicts.add(t.packageID);
               break;
-            case S:
             case w:
+            case y:
               i.needRegistration.add(t.packageID);
               break;
-            case y:
+            case S:
             case M:
             case P:
               i.ineligibile.add(t.packageID);
@@ -2465,17 +2465,17 @@
     43552: (t, e, i) => {
       "use strict";
       i.d(e, {
-        Ad: () => w,
+        Ad: () => y,
         E1: () => b,
         Fs: () => M,
         Ix: () => D,
         Jn: () => I,
         Vk: () => m,
         Z6: () => h,
-        dp: () => S,
+        dp: () => w,
         ou: () => B,
         ry: () => p,
-        u7: () => y,
+        u7: () => S,
         v8: () => d,
         zL: () => f,
       });
@@ -2695,11 +2695,11 @@
         const [t, e] = n.useState(_.Get().m_rgDiscountEvents);
         return (0, s.hL)(_.Get().m_discountEventsCallbackList, e), t;
       }
-      function S() {
+      function w() {
         const [t, e] = n.useState(_.Get().m_setVisibleDiscountEventIDs);
         return (0, s.hL)(_.Get().m_visibleDiscountEventIDsCallbackList, e), t;
       }
-      function w(t) {
+      function y(t) {
         const [e, i] = n.useState(_.Get().m_mapDiscountEventsByID.get(t)),
           r = n.useCallback(
             () => i(_.Get().m_mapDiscountEventsByID.get(t)),
@@ -2711,7 +2711,7 @@
           e
         );
       }
-      function y(t = !0) {
+      function S(t = !0) {
         const [e, i] = n.useState(_.Get().GetEventSelectionParameters()),
           r = t ? _.Get().m_gridEventSelectionParametersCallbackList : null;
         return (0, s.hL)(r, i), e;
@@ -2741,9 +2741,9 @@
         IR: () => z,
         NP: () => k,
         Xr: () => O,
-        ZN: () => C,
+        ZN: () => G,
         mE: () => R,
-        rK: () => S,
+        rK: () => w,
         sF: () => P,
         uv: () => v,
       });
@@ -2769,7 +2769,7 @@
         if (!t) throw new Error("Missing GridRowContextProvider");
         return t;
       }
-      function S(t) {
+      function w(t) {
         const { children: e, fnBLocalChangesExist: i, fnWarnUser: a } = t,
           s = (0, u.jE)(),
           o = r.useMemo(
@@ -2778,7 +2778,7 @@
           );
         return (0, n.jsx)(B.Provider, { value: o, children: e });
       }
-      function w(t) {
+      function y(t) {
         const { row: e } = t,
           i = e.original.packageID || 0,
           r = (0, _.C5)(i);
@@ -2793,7 +2793,7 @@
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
         return (0, n.jsx)(I, { className: s, toolTip: c, ...t });
       }
-      function y(t) {
+      function S(t) {
         const { row: e } = t,
           i = e.original.packageID || 0,
           r = (0, d.nT)(i);
@@ -2914,7 +2914,7 @@
               cellClassname: l().PackageName,
             },
             filterFn: E,
-            cell: t ? w : y,
+            cell: t ? y : S,
             size: 300,
           }),
           [t],
@@ -2939,7 +2939,7 @@
           [],
         );
       }
-      function G(t) {
+      function C(t) {
         const { row: e } = t,
           { fnBLocalChangesExist: i, fnWarnUser: r } = D(),
           a = e.original.appids,
@@ -2953,12 +2953,12 @@
           children: 1 == c ? "1 appid" : c + " appids",
         });
       }
-      function C() {
+      function G() {
         return r.useMemo(
           () => ({
             accessorKey: "appName",
             header: (0, o.we)("#PackageGrid_Column_AppName"),
-            cell: G,
+            cell: C,
             size: 80,
             sortingFn: h.es,
             meta: {
@@ -3127,13 +3127,13 @@
       i.r(a),
         i.d(a, {
           ru: () => g,
-          mC: () => w,
+          mC: () => y,
           cJ: () => _,
           J5: () => f,
           tx: () => h,
           ao: () => B,
           _g: () => D,
-          y5: () => S,
+          y5: () => w,
           nH: () => b,
         });
       var s = {};
@@ -3143,15 +3143,15 @@
           dk: () => A,
           Ng: () => O,
           Mc: () => k,
-          pF: () => y,
+          pF: () => S,
           EE: () => E,
           nT: () => R,
           CI: () => I,
-          _j: () => G,
+          _j: () => C,
           UM: () => P,
           K2: () => v,
           E0: () => F,
-          iY: () => C,
+          iY: () => G,
           sR: () => L,
           rQ: () => z,
         });
@@ -3169,9 +3169,9 @@
         h = 32,
         B = 64,
         D = 128,
-        S = 256,
-        w = 512,
-        y = 0,
+        w = 256,
+        y = 512,
+        S = 0,
         M = 1,
         I = 2,
         v = 4,
@@ -3179,8 +3179,8 @@
         R = 16,
         P = 128,
         k = 256,
-        G = 512,
-        C = 1024,
+        C = 512,
+        G = 1024,
         z = 2048,
         O = 4096,
         A = 8192,
@@ -5663,123 +5663,123 @@
           return "CPartnerMembershipInvite_GetInvites_Response";
         }
       }
-      var Dt, St;
+      var Dt, wt;
       !(function (t) {
-        (t.GetSinglePartnerAppOptIn = function (t, e) {
+        (t.GetSinglePartnerAppOptIn = function (t, e, i) {
           return t.SendMsg(
             "Publishing.GetSinglePartnerAppOptIn#1",
-            (0, u.I8)(at, e),
+            (0, u.I8)(at, e, i),
             st,
             { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
-          (t.SetFeaturingOnPartnerAppOptIn = function (t, e) {
+          (t.SetFeaturingOnPartnerAppOptIn = function (t, e, i) {
             return t.SendMsg(
               "Publishing.SetFeaturingOnPartnerAppOptIn#1",
-              (0, u.I8)(ot, e),
+              (0, u.I8)(ot, e, i),
               ct,
               { ePrivilege: 1 },
             );
           }),
-          (t.GetOptInHistoryInternal = function (t, e) {
+          (t.GetOptInHistoryInternal = function (t, e, i) {
             return t.SendMsg(
               "Publishing.GetOptInHistoryInternal#1",
-              (0, u.I8)(ut, e),
+              (0, u.I8)(ut, e, i),
               dt,
               { ePrivilege: 4 },
             );
           }),
-          (t.GetPartnerAppOptInsIDs = function (t, e) {
+          (t.GetPartnerAppOptInsIDs = function (t, e, i) {
             return t.SendMsg(
               "Publishing.GetPartnerAppOptInsIDs#1",
-              (0, u.I8)(pt, e),
+              (0, u.I8)(pt, e, i),
               mt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (t.GetOptInAppealsSummaryStats = function (t, e) {
+          (t.GetOptInAppealsSummaryStats = function (t, e, i) {
             return t.SendMsg(
               "Publishing.GetOptInAppealsSummaryStats#1",
-              (0, u.I8)(gt, e),
+              (0, u.I8)(gt, e, i),
               _t,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (t.CreatePartnerAppOptInEmails = function (t, e) {
+          (t.CreatePartnerAppOptInEmails = function (t, e, i) {
             return t.SendMsg(
               "Publishing.CreatePartnerAppOptInEmails#1",
-              (0, u.I8)(W, e),
+              (0, u.I8)(W, e, i),
               q,
               { ePrivilege: 1 },
             );
           }),
-          (t.UpdatePartnerAppOptInEmails = function (t, e) {
+          (t.UpdatePartnerAppOptInEmails = function (t, e, i) {
             return t.SendMsg(
               "Publishing.UpdatePartnerAppOptInEmails#1",
-              (0, u.I8)(N, e),
+              (0, u.I8)(N, e, i),
               x,
               { ePrivilege: 1 },
             );
           }),
-          (t.SendPartnerOptInEmailAndWait = function (t, e) {
+          (t.SendPartnerOptInEmailAndWait = function (t, e, i) {
             return t.SendMsg(
               "Publishing.SendPartnerOptInEmailAndWait#1",
-              (0, u.I8)(H, e),
+              (0, u.I8)(H, e, i),
               K,
               { ePrivilege: 1 },
             );
           }),
-          (t.GetPartnerAppOptInEmailDefAndStats = function (t, e) {
+          (t.GetPartnerAppOptInEmailDefAndStats = function (t, e, i) {
             return t.SendMsg(
               "Publishing.GetPartnerAppOptInEmailDefAndStats#1",
-              (0, u.I8)($, e),
+              (0, u.I8)($, e, i),
               Z,
               { ePrivilege: 1 },
             );
           }),
-          (t.GetEstimatePartnerAppOptInEmail = function (t, e) {
+          (t.GetEstimatePartnerAppOptInEmail = function (t, e, i) {
             return t.SendMsg(
               "Publishing.GetEstimatePartnerAppOptInEmail#1",
-              (0, u.I8)(Y, e),
+              (0, u.I8)(Y, e, i),
               X,
               { ePrivilege: 1 },
             );
           }),
-          (t.TestFirePartnerAppOptInEmail = function (t, e) {
+          (t.TestFirePartnerAppOptInEmail = function (t, e, i) {
             return t.SendMsg(
               "Publishing.TestFirePartnerAppOptInEmail#1",
-              (0, u.I8)(Q, e),
+              (0, u.I8)(Q, e, i),
               tt,
               { ePrivilege: 1 },
             );
           }),
-          (t.GetOptInEmailTracking = function (t, e) {
+          (t.GetOptInEmailTracking = function (t, e, i) {
             return t.SendMsg(
               "Publishing.GetOptInEmailTracking#1",
-              (0, u.I8)(it, e),
+              (0, u.I8)(it, e, i),
               nt,
               { ePrivilege: 1 },
             );
           }),
-          (t.GetPartnerPaidGivenPackageList = function (t, e) {
+          (t.GetPartnerPaidGivenPackageList = function (t, e, i) {
             return t.SendMsg(
               "Publishing.GetPartnerPaidGivenPackageList#1",
-              (0, u.I8)(T, e),
+              (0, u.I8)(T, e, i),
               U,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           });
       })(Dt || (Dt = {})),
         (function (t) {
-          t.GetInvites = function (t, e) {
+          t.GetInvites = function (t, e, i) {
             return t.SendMsg(
               "PartnerMembershipInvite.GetInvites#1",
-              (0, u.I8)(ht, e),
+              (0, u.I8)(ht, e, i),
               Bt,
               { bConstMethod: !0, ePrivilege: 11 },
             );
           };
-        })(St || (St = {}));
+        })(wt || (wt = {}));
     },
     41103: (t, e, i) => {
       "use strict";

@@ -1262,16 +1262,21 @@
       }
       var _;
       !(function (_) {
-        (_.GetCommunityInventory = function (_, _) {
-          return _.SendMsg("Quest.GetCommunityInventory#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (_.GetCommunityInventory = function (_, _, _) {
+          return _.SendMsg(
+            "Quest.GetCommunityInventory#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.GetCommunityItemDefinitions = function (_, _) {
+          (_.GetCommunityItemDefinitions = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetCommunityItemDefinitions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1280,20 +1285,20 @@
               },
             );
           }),
-          (_.ActivateProfileModifierItem = function (_, _) {
+          (_.ActivateProfileModifierItem = function (_, _, _) {
             return _.SendMsg(
               "Quest.ActivateProfileModifierItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetNumTradingCardsEarned = function (_, _) {
+          (_.GetNumTradingCardsEarned = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetNumTradingCardsEarned#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1301,10 +1306,10 @@
               },
             );
           }),
-          (_.GetVirtualItemRewardDefinition = function (_, _) {
+          (_.GetVirtualItemRewardDefinition = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetVirtualItemRewardDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1312,10 +1317,10 @@
               },
             );
           }),
-          (_.SetVirtualItemRewardDefinition = function (_, _) {
+          (_.SetVirtualItemRewardDefinition = function (_, _, _) {
             return _.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,

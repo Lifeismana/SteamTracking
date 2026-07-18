@@ -1442,6 +1442,15 @@ function OnGetFinalPriceSuccess( result )
 			if ( result.formattedProviderRemaining )
 				g_strProviderRemaining = result.formattedProviderRemaining;
 
+			if ( result.requiressignature )
+			{
+				$J('#shipping_signature_required').show();
+			}
+			else
+			{
+				$J('#shipping_signature_required').hide();
+			}
+
 						if ( result.providerpaymentmethod != null && result.total && result.steamAccountBalance )
 			{
 				if ( result.providerpaymentmethod == 0 && result.total > result.steamAccountBalance )

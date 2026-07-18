@@ -803,30 +803,37 @@
         }
       }
       !(function (e) {
-        (e.GetCategories = function (e, t) {
-          return e.SendMsg("FriendsList.GetCategories#1", (0, o.I8)(d, t), g, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (e.GetCategories = function (e, t, r) {
+          return e.SendMsg(
+            "FriendsList.GetCategories#1",
+            (0, o.I8)(d, t, r),
+            g,
+            { bConstMethod: !0, ePrivilege: 1 },
+          );
         }),
-          (e.GetFriendsList = function (e, t) {
+          (e.GetFriendsList = function (e, t, r) {
             return e.SendMsg(
               "FriendsList.GetFriendsList#1",
-              (0, o.I8)(p, t),
+              (0, o.I8)(p, t, r),
               h,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.GetFavorites#1", (0, o.I8)(y, t), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (e.GetFavorites = function (e, t, r) {
+            return e.SendMsg(
+              "FriendsList.GetFavorites#1",
+              (0, o.I8)(y, t, r),
+              _,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
-          (e.SetFavorites = function (e, t) {
-            return e.SendMsg("FriendsList.SetFavorites#1", (0, o.I8)(M, t), f, {
-              ePrivilege: 1,
-            });
+          (e.SetFavorites = function (e, t, r) {
+            return e.SendMsg(
+              "FriendsList.SetFavorites#1",
+              (0, o.I8)(M, t, r),
+              f,
+              { ePrivilege: 1 },
+            );
           });
       })(i || (i = {})),
         (function (e) {

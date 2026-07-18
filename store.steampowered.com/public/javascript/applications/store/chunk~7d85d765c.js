@@ -1633,7 +1633,7 @@
               broadcastid: 0,
               viewertoken: this.m_broadcastSettings.ulViewerToken,
               watchlocation: e,
-              sessionid: u.TS.SESSIONID,
+              sessionid: (0, u.KC)(),
               is_webrtc: t.m_bWebRTC,
             },
             i = null;
@@ -1748,7 +1748,7 @@
           let a = {
               clipid: t.m_clipID,
               watchlocation: e,
-              sessionid: u.TS.SESSIONID,
+              sessionid: (0, u.KC)(),
             },
             s = null;
           try {

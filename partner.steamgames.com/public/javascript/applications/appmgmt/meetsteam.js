@@ -651,18 +651,18 @@ License: MIT
                 w = [],
                 E = [],
                 b = [],
-                I = (h = 0);
+                C = (h = 0);
               if (!o) return O();
               if (a || (!1 !== a && -1 === o.indexOf(d))) {
-                for (var D = o.split(n), C = 0; C < D.length; C++) {
-                  if (((b = D[C]), (h += b.length), C !== D.length - 1))
+                for (var I = o.split(n), D = 0; D < I.length; D++) {
+                  if (((b = I[D]), (h += b.length), D !== I.length - 1))
                     h += n.length;
                   else if (f) return O();
                   if (!s || b.substring(0, v) !== s) {
                     if (y) {
                       if (((w = []), N(b.split(t)), F(), g)) return O();
                     } else N(b.split(t));
-                    if (i && i <= C) return (w = w.slice(0, i)), O(!0);
+                    if (i && i <= D) return (w = w.slice(0, i)), O(!0);
                   }
                 }
                 return O();
@@ -670,13 +670,13 @@ License: MIT
               for (
                 var A = o.indexOf(t, h),
                   R = o.indexOf(n, h),
-                  T = new RegExp(m(u) + m(d), "g"),
-                  k = o.indexOf(d, h);
+                  k = new RegExp(m(u) + m(d), "g"),
+                  T = o.indexOf(d, h);
                 ;
               )
                 if (o[h] === d)
-                  for (k = h, h++; ; ) {
-                    if (-1 === (k = o.indexOf(d, k + 1)))
+                  for (T = h, h++; ; ) {
+                    if (-1 === (T = o.indexOf(d, T + 1)))
                       return (
                         f ||
                           E.push({
@@ -688,32 +688,32 @@ License: MIT
                           }),
                         L()
                       );
-                    if (k === _ - 1) return L(o.substring(h, k).replace(T, d));
-                    if (d === u && o[k + 1] === u) k++;
-                    else if (d === u || 0 === k || o[k - 1] !== u) {
-                      -1 !== A && A < k + 1 && (A = o.indexOf(t, k + 1));
+                    if (T === _ - 1) return L(o.substring(h, T).replace(k, d));
+                    if (d === u && o[T + 1] === u) T++;
+                    else if (d === u || 0 === T || o[T - 1] !== u) {
+                      -1 !== A && A < T + 1 && (A = o.indexOf(t, T + 1));
                       var M = B(
                         -1 ===
-                          (R = -1 !== R && R < k + 1 ? o.indexOf(n, k + 1) : R)
+                          (R = -1 !== R && R < T + 1 ? o.indexOf(n, T + 1) : R)
                           ? A
                           : Math.min(A, R),
                       );
-                      if (o.substr(k + 1 + M, x) === t) {
-                        b.push(o.substring(h, k).replace(T, d)),
-                          o[(h = k + 1 + M + x)] !== d && (k = o.indexOf(d, h)),
+                      if (o.substr(T + 1 + M, x) === t) {
+                        b.push(o.substring(h, T).replace(k, d)),
+                          o[(h = T + 1 + M + x)] !== d && (T = o.indexOf(d, h)),
                           (A = o.indexOf(t, h)),
                           (R = o.indexOf(n, h));
                         break;
                       }
                       if (
                         ((M = B(R)),
-                        o.substring(k + 1 + M, k + 1 + M + j) === n)
+                        o.substring(T + 1 + M, T + 1 + M + j) === n)
                       ) {
                         if (
-                          (b.push(o.substring(h, k).replace(T, d)),
-                          P(k + 1 + M + j),
+                          (b.push(o.substring(h, T).replace(k, d)),
+                          P(T + 1 + M + j),
                           (A = o.indexOf(t, h)),
-                          (k = o.indexOf(d, h)),
+                          (T = o.indexOf(d, h)),
                           y && (F(), g))
                         )
                           return O();
@@ -727,7 +727,7 @@ License: MIT
                         row: w.length,
                         index: h,
                       }),
-                        k++;
+                        T++;
                     }
                   }
                 else if (s && 0 === b.length && o.substring(h, h + v) === s) {
@@ -743,12 +743,12 @@ License: MIT
                 }
               return L();
               function N(e) {
-                w.push(e), (I = h);
+                w.push(e), (C = h);
               }
               function B(e) {
                 var t = 0;
                 return -1 !== e &&
-                  (e = o.substring(k + 1, e)) &&
+                  (e = o.substring(T + 1, e)) &&
                   "" === e.trim()
                   ? e.length
                   : t;
@@ -802,7 +802,7 @@ License: MIT
                     linebreak: n,
                     aborted: g,
                     truncated: !!s,
-                    cursor: I + (p || 0),
+                    cursor: C + (p || 0),
                     renamedHeaders: c,
                   },
                 };
@@ -1210,19 +1210,19 @@ License: MIT
         w = n(20194),
         E = n(75233),
         b = n(41735),
-        I = n.n(b),
-        D = n(17720),
-        C = n(78327),
+        C = n.n(b),
+        I = n(17720),
+        D = n(78327),
         A = n(32179),
         R = n(21711),
-        T = n(44165),
-        k = n(95034);
+        k = n(44165),
+        T = n(95034);
       function M() {
         const [e] = i.useState(() =>
-            (0, C.Tc)("events_list", "application_config"),
+            (0, D.Tc)("events_list", "application_config"),
           ),
-          [t] = (0, k.QD)("filter"),
-          n = (0, T.f1)(),
+          [t] = (0, T.QD)("filter"),
+          n = (0, k.f1)(),
           [s, r] = i.useMemo(() => {
             let t = new Array(),
               s = new Array();
@@ -1257,9 +1257,9 @@ License: MIT
         return ["usePartnerRevAndBestAppSlow", e];
       }
       async function B(e) {
-        const t = `${C.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
-          n = { sessionid: C.TS.SESSIONID, partnerid: e },
-          s = await I().get(t, { params: n });
+        const t = `${D.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
+          n = { sessionid: (0, D.KC)(), partnerid: e },
+          s = await C().get(t, { params: n });
         return s?.data?.data;
       }
       function L(e, t) {
@@ -1310,7 +1310,7 @@ License: MIT
                 "li",
                 {
                   children: (0, s.jsx)("a", {
-                    href: `${C.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
+                    href: `${D.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
                     target: "_blank",
                     children: t,
                   }),
@@ -1323,7 +1323,7 @@ License: MIT
       }
       function re() {
         const [e] = (0, i.useState)(() => {
-          const e = (0, C.Tc)("survey_list", "application_config") || {},
+          const e = (0, D.Tc)("survey_list", "application_config") || {},
             t = new Map();
           for (const n of Object.keys(e)) t.set(n, e[n]);
           return t;
@@ -1448,7 +1448,7 @@ License: MIT
             queryKey: ["MeetSteamInviteDirectDialog", n, l],
             queryFn: async () => {
               const e = {
-                  steamid: D.b.InitFromAccountID(l).ConvertTo64BitString(),
+                  steamid: I.b.InitFromAccountID(l).ConvertTo64BitString(),
                   gid: n,
                   type: ge.Dk.rV,
                 },
@@ -1722,7 +1722,7 @@ License: MIT
           i = t.map((e) => e.strEmailOverride).join(","),
           a = t.map((e) => (e.bAllowRegistrationIfFull ? "1" : "0")).join(",");
         let o = new FormData();
-        o.append("sessionid", ee.TS.SESSIONID),
+        o.append("sessionid", (0, D.KC)()),
           o.append("gid", e),
           o.append("accounts", s),
           o.append("partnerids", r),
@@ -1731,7 +1731,7 @@ License: MIT
           o.append("forceupdate", n ? "1" : "0");
         const c = `${ee.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
         try {
-          const e = await I().post(c, o, { withCredentials: !0 });
+          const e = await C().post(c, o, { withCredentials: !0 });
           if (e?.data?.success != j.R) {
             let t = (0, ue.H)(e);
             console.error("DisplayPartnerEventRow error: " + t.strErrorMsg, t);
@@ -1745,25 +1745,25 @@ License: MIT
       }
       var Ee = n(16666),
         be = n(66051),
-        Ie = n(54806),
-        De = n(58632),
-        Ce = n.n(De);
+        Ce = n(54806),
+        Ie = n(58632),
+        De = n.n(Ie);
       function Ae(e) {
         const t = _e(),
-          n = i.useContext(Te),
-          s = (0, w.I)(ke(n, t, e));
+          n = i.useContext(ke),
+          s = (0, w.I)(Te(n, t, e));
         return s.isLoading ? null : s.data;
       }
       function Re(e) {
         const t = _e(),
-          n = i.useContext(Te);
-        return (0, Ie.E)({ queries: e.map((e) => ke(n, t, e)) });
+          n = i.useContext(ke);
+        return (0, Ce.E)({ queries: e.map((e) => Te(n, t, e)) });
       }
-      const Te = i.createContext({
+      const ke = i.createContext({
         loadMeetSteamAllRegistration: async (e, t) =>
           await (function (e) {
             Me ||
-              (Me = new (Ce())(
+              (Me = new (De())(
                 async (t) => {
                   const n = v.w.Init(ge.j3);
                   n.Body().set_gids([...t]), n.Body().set_type(ge.Dk.rV);
@@ -1780,7 +1780,7 @@ License: MIT
                           const t = JSON.parse(e.jsondata());
                           if (!("steamid" in t) || !t.steamid) {
                             t.steamid = e.steamid();
-                            const n = new D.b(t.steamid);
+                            const n = new I.b(t.steamid);
                             t.accountid = n.GetAccountID();
                           }
                           const n = e.gid();
@@ -1799,7 +1799,7 @@ License: MIT
             return Me;
           })(e).load(t),
       });
-      function ke(e, t, n) {
+      function Te(e, t, n) {
         return {
           queryKey: ["MeetSteamAllRegistrationStatus", n],
           queryFn: () => e.loadMeetSteamAllRegistration(t, n),
@@ -1821,7 +1821,7 @@ License: MIT
         loadPartnerEmailAndName: async (e, t, n) =>
           await (function (e) {
             Fe ||
-              (Fe = new (Ce())(
+              (Fe = new (De())(
                 async (t) => {
                   const n = v.w.Init(S.g9);
                   n.Body().set_accountids(t.map((e) => e.accountID)),
@@ -1945,7 +1945,7 @@ License: MIT
           o = (function (e, t) {
             const n = (0, z.a)(),
               s = i.useContext(Pe);
-            return (0, Ie.E)({ queries: e.map((e, r) => Oe(s, n, e, t[r])) });
+            return (0, Ce.E)({ queries: e.map((e, r) => Oe(s, n, e, t[r])) });
           })(r, a);
         return o.filter((e) => !e.isLoading).length == o.length ? s : null;
       }
@@ -2153,11 +2153,11 @@ License: MIT
                       onClick: async () => {
                         await (async function (e, t) {
                           let n = new FormData();
-                          n.append("sessionid", ee.TS.SESSIONID),
+                          n.append("sessionid", (0, D.KC)()),
                             n.append("gid", t);
                           const s = `${ee.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
                           try {
-                            const r = await I().post(s, n, {
+                            const r = await C().post(s, n, {
                               withCredentials: !0,
                             });
                             if (r?.data?.success != j.R) {
@@ -2535,7 +2535,7 @@ License: MIT
                   }),
                   a.forEach((e) => {
                     e.rgRegistrations.forEach((t) => {
-                      const n = new D.b(t.steamid).GetAccountID(),
+                      const n = new I.b(t.steamid).GetAccountID(),
                         s =
                           o.get(`${e.gid}_${t.group_id}_${t.session_id}`) ||
                           `${t.group_id}:${t.session_id}`;
@@ -2584,7 +2584,7 @@ License: MIT
                       ? r
                           .filter((e) => e.is_business_contact)
                           .map((t) => {
-                            const n = new D.b(t.steamid),
+                            const n = new I.b(t.steamid),
                               s = e.get(n.GetAccountID());
                             return s?.displayName || t.steamid;
                           })
@@ -2670,7 +2670,7 @@ License: MIT
         });
       }
       function gt(e) {
-        const t = D.b.InitFromClanID((0, K.H)()),
+        const t = I.b.InitFromClanID((0, K.H)()),
           n = (function () {
             const [e] = (0, i.useState)(() =>
               (0, _.Tc)("event_gids", "application_config"),
@@ -2742,7 +2742,7 @@ License: MIT
       function pt(e) {
         const { oEvent: t } = e,
           n = t.GID,
-          r = D.b.InitFromClanID((0, K.H)()),
+          r = I.b.InitFromClanID((0, K.H)()),
           a = (0, z.a)(),
           o = (0, $.my)(a, (0, K.H)(), n),
           c = o.isSuccess ? o.data : null,
@@ -3008,7 +3008,7 @@ License: MIT
                 e.preventDefault(), e.stopPropagation(), a(!0);
                 const s = await (async function (e, t) {
                   const n = v.w.Init(S.VI),
-                    s = D.b.InitFromClanID((0, K.H)());
+                    s = I.b.InitFromClanID((0, K.H)());
                   n.Body().set_clan_event_gid(t),
                     n.Body().set_steamid(s.ConvertTo64BitString());
                   const r = await S.ZK.TestFireEmails(e, n);
@@ -3150,9 +3150,9 @@ License: MIT
       var wt = n(39777),
         Et = n(35380),
         bt = n(14336),
-        It = n(16021),
-        Dt = n(65522),
-        Ct = n(48479);
+        Ct = n(16021),
+        It = n(65522),
+        Dt = n(48479);
       function At(e) {
         const { rgEvents: t } = M(),
           n = (function () {
@@ -3165,7 +3165,7 @@ License: MIT
             );
           })(),
           [r, a] = (0, i.useState)(""),
-          o = C.TS.PARTNER_BASE_URL + "meetsteam",
+          o = D.TS.PARTNER_BASE_URL + "meetsteam",
           c = (0, i.useMemo)(() => {
             const e = new Map();
             return (
@@ -3216,13 +3216,13 @@ License: MIT
       }
       function Rt(e) {
         const { conf: t, nInterestCount: n, rgSurveyInterest: r } = e;
-        return (0, s.jsx)(Ct.qx, {
+        return (0, s.jsx)(Dt.qx, {
           title: `${t.name} in ${t.place} around ${t.time}: Interest: ${(0, xe.D)(n)}`,
           bStartMinimized: !0,
-          children: (0, s.jsx)(kt, { conf: t, rgSurveyInterest: r }),
+          children: (0, s.jsx)(Tt, { conf: t, rgSurveyInterest: r }),
         });
       }
-      function Tt(e) {
+      function kt(e) {
         if ("number" == typeof e) return e;
         const t = e.slice(-1).toUpperCase(),
           n = parseFloat(e.slice(0, -1));
@@ -3237,7 +3237,7 @@ License: MIT
             return parseFloat(e);
         }
       }
-      function kt(e) {
+      function Tt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           r = (0, i.useMemo)(
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
@@ -3254,7 +3254,7 @@ License: MIT
                   let t = 0;
                   for (const n of e) {
                     const e = n.results.partner_id;
-                    new D.b(n.steamid).GetAccountID(),
+                    new I.b(n.steamid).GetAccountID(),
                       await Promise.all([
                         (0, A.qG)(e),
                         a.prefetchQuery({
@@ -3350,9 +3350,9 @@ License: MIT
                     n.push(d ? d.name : "");
                     const u = L(r, a);
                     u
-                      ? (n.push("" + Tt(u.strGrossUSD)),
+                      ? (n.push("" + kt(u.strGrossUSD)),
                         n.push("" + u.nBestAppID),
-                        n.push(It.A.Get().GetApp(u.nBestAppID)?.GetName()),
+                        n.push(Ct.A.Get().GetApp(u.nBestAppID)?.GetName()),
                         n.push("" + u.nBestAppLongTermSalesRank))
                       : (n.push(""), n.push(""), n.push(""), n.push("")),
                       e.push(n);
@@ -3468,7 +3468,7 @@ License: MIT
         const { appid: t } = e,
           n = (0, Et.$5)(t),
           { data: r } = (0, wt.J$)(n);
-        return (0, s.jsx)(Dt.Q, {
+        return (0, s.jsx)(It.Q, {
           id: n,
           children: (0, s.jsx)("span", { children: r?.name || t }),
         });
@@ -3485,7 +3485,7 @@ License: MIT
                 ),
               [t],
             ));
-        return (0, s.jsxs)(Ct.qx, {
+        return (0, s.jsxs)(Dt.qx, {
           title: `Alternative Suggestions (${r.length})`,
           bStartMinimized: !0,
           children: [
@@ -3530,7 +3530,7 @@ License: MIT
                     s.push(l ? l.name : "");
                     const d = L(n, a);
                     d
-                      ? (s.push("" + Tt(d.strGrossUSD)),
+                      ? (s.push("" + kt(d.strGrossUSD)),
                         s.push("" + d.nBestAppID),
                         s.push("" + d.nBestAppLongTermSalesRank))
                       : (s.push(""), s.push(""), s.push("")),
@@ -3588,20 +3588,17 @@ License: MIT
         loadUserEmailAndLangs: async (e) =>
           await (function () {
             zt ||
-              (zt = new (Ce())(
+              (zt = new (De())(
                 async (e) => {
-                  const t = `${C.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
-                    n = {
-                      sessionid: C.TS.SESSIONID,
-                      strAccountIDs: e.join(","),
-                    },
-                    s = await I().get(t, { params: n, withCredentials: !0 });
+                  const t = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
+                    n = { sessionid: (0, D.KC)(), strAccountIDs: e.join(",") },
+                    s = await C().get(t, { params: n, withCredentials: !0 });
                   if (!s || 200 != s?.status || s?.data?.success != j.R)
                     throw `Failed to load app to user email and langs: ${((0, ue.H))(s).strErrorMsg}`;
                   const r = new Map();
                   return (
                     s.data.users.forEach((e) => {
-                      const t = new D.b(e.steamid);
+                      const t = new I.b(e.steamid);
                       r.set(t.GetAccountID(), e);
                     }),
                     e.map((e) => r.get(e) ?? null)
@@ -3708,7 +3705,7 @@ License: MIT
       function Wt(e) {
         const { organizer: t } = e,
           n = (0, i.useMemo)(
-            () => D.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
+            () => I.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
             [t],
           ),
           r = (0, bt.hW)(n),
@@ -3822,17 +3819,17 @@ License: MIT
       function nn(e) {
         const t = (function () {
             const [e] = (0, i.useState)(() =>
-              (0, C.Tc)("registration_open", "application_config"),
+              (0, D.Tc)("registration_open", "application_config"),
             );
             return e;
           })(),
           n = (function () {
             const [e] = (0, i.useState)(
-              () => (0, C.Tc)("user_reg", "application_config") || {},
+              () => (0, D.Tc)("user_reg", "application_config") || {},
             );
             return e;
           })(),
-          { data: r } = (0, bt.js)(C.iA.accountid),
+          { data: r } = (0, bt.js)(D.iA.accountid),
           [a, o] = (0, i.useState)(!1),
           [c, l] = (0, i.useState)(!1),
           [d, u] = (0, i.useState)(!1),
@@ -3896,15 +3893,15 @@ License: MIT
                             (0, s.jsx)(U.jn, {
                               onClick: async () => {
                                 l(!0), o(!1), u(!1);
-                                const e = `${C.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
+                                const e = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
                                   t = new FormData();
-                                t.append("sessionid", C.TS.SESSIONID),
+                                t.append("sessionid", (0, D.KC)()),
                                   t.append(
                                     "registrationJson",
                                     JSON.stringify(h),
                                   );
                                 try {
-                                  const n = await I().post(e, t, {
+                                  const n = await C().post(e, t, {
                                     withCredentials: !0,
                                   });
                                   n.data.success != j.R
@@ -3964,7 +3961,7 @@ License: MIT
             (0, s.jsx)("p", {
               children: (0, Z.PP)(
                 "#MeetSteam_Events_title",
-                (0, C.Tc)("meet_steam_year", "application_config") || "2025",
+                (0, D.Tc)("meet_steam_year", "application_config") || "2025",
               ),
             }),
             (0, s.jsxs)("p", {
@@ -4002,7 +3999,7 @@ License: MIT
               label: (0, Z.we)("#MeetSteam_others"),
             }),
             Boolean(i?.length > 0) &&
-              (0, s.jsx)(Ct.qx, {
+              (0, s.jsx)(Dt.qx, {
                 bStartMinimized: !0,
                 title: (0, Z.we)("#MeetSteam_PastEvents", i.length),
                 children: (0, s.jsx)(rn, { ...e, rgConference: i }),
@@ -4076,22 +4073,22 @@ License: MIT
       }
       function on(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          r = (0, bt.js)(C.iA.accountid),
+          r = (0, bt.js)(D.iA.accountid),
           a = (function (e) {
             const t = (function () {
                 const [e] = (0, i.useState)(
                   () =>
-                    (0, C.Tc)("partner_user_email", "application_config") || "",
+                    (0, D.Tc)("partner_user_email", "application_config") || "",
                 );
                 return e;
               })(),
               n = (function () {
                 const [e] = (0, i.useState)(() =>
-                  (0, C.Tc)("primary_partner_id", "application_config"),
+                  (0, D.Tc)("primary_partner_id", "application_config"),
                 );
                 return e;
               })(),
-              s = Be(C.iA.accountid, e != n ? e : null);
+              s = Be(D.iA.accountid, e != n ? e : null);
             return e == n ? t : s?.email;
           })(t?.partner_id),
           [o, c] = (0, i.useState)(() =>
@@ -4171,7 +4168,7 @@ License: MIT
                         n({
                           ...t,
                           english_not_good: !0,
-                          preferred_language: (0, x.sfN)(C.TS.LANGUAGE),
+                          preferred_language: (0, x.sfN)(D.TS.LANGUAGE),
                         }),
                       label: (0, Z.we)("#MeetSteam_CapabableEnglish_No"),
                     }),
@@ -4203,7 +4200,7 @@ License: MIT
       }
       function cn(e) {
         const { nPartnerID: t, setPartnerID: n, label: r } = e,
-          i = (0, Qt.c)(C.iA.accountid);
+          i = (0, Qt.c)(D.iA.accountid);
         if (!i)
           return (0, s.jsx)(Y.t, {
             size: "small",
@@ -4231,16 +4228,16 @@ License: MIT
         dn = n(13038),
         un = n.n(dn);
       function hn(e) {
-        const { data: t } = (0, bt.js)(C.iA.accountid),
+        const { data: t } = (0, bt.js)(D.iA.accountid),
           n = (function () {
             const [e] = (0, i.useState)(
-              () => (0, C.Tc)("survey_event_name", "application_config") || "",
+              () => (0, D.Tc)("survey_event_name", "application_config") || "",
             );
             return e;
           })(),
           r = (function () {
             const [e] = (0, i.useState)(
-              () => (0, C.Tc)("survey_data", "application_config") || "",
+              () => (0, D.Tc)("survey_data", "application_config") || "",
             );
             return e;
           })(),
@@ -4290,10 +4287,10 @@ License: MIT
                           (0, s.jsx)(U.jn, {
                             onClick: async () => {
                               g(!0), u(!1), p(!1);
-                              const e = `${C.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${l}`,
+                              const e = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${l}`,
                                 t = new FormData();
                               t.append("gid", l),
-                                t.append("sessionid", C.TS.SESSIONID);
+                                t.append("sessionid", (0, D.KC)());
                               let n = {
                                 gid: l,
                                 simple_response: a,
@@ -4303,7 +4300,7 @@ License: MIT
                               };
                               t.append("surveyjson", JSON.stringify(n));
                               try {
-                                const n = await I().post(e, t, {
+                                const n = await C().post(e, t, {
                                   withCredentials: !0,
                                 });
                                 n.data.success != j.R
@@ -4353,13 +4350,13 @@ License: MIT
       function pn(e) {
         const t = (function () {
             const [e] = (0, i.useState)(
-              () => (0, C.Tc)("event_gids", "application_config") || [],
+              () => (0, D.Tc)("event_gids", "application_config") || [],
             );
             return e;
           })(),
           n = (function () {
             const [e] = (0, i.useState)(
-              () => (0, C.Tc)("survey_results", "application_config") || [],
+              () => (0, D.Tc)("survey_results", "application_config") || [],
             );
             return e;
           })(),
@@ -4368,7 +4365,7 @@ License: MIT
               const [e] = (0, i.useState)(() => {
                 const e = new Map(),
                   t =
-                    (0, C.Tc)("registration_by_gid", "application_config") ||
+                    (0, D.Tc)("registration_by_gid", "application_config") ||
                     {};
                 for (const n in t) {
                   const s = t[n];
@@ -4383,7 +4380,7 @@ License: MIT
               return (
                 e.forEach((e, n) => {
                   e.forEach((e) => {
-                    const s = new D.b(e.steamid);
+                    const s = new I.b(e.steamid);
                     t.has(s.GetAccountID()) || t.set(s.GetAccountID(), []),
                       (e.gidEvent = n),
                       t.get(s.GetAccountID()).push(e);
@@ -4399,7 +4396,7 @@ License: MIT
             () => [
               n
                 .map((e) => {
-                  const t = new D.b(e.steamid);
+                  const t = new I.b(e.steamid);
                   if (r.has(t.GetAccountID())) {
                     const e = r.get(t.GetAccountID());
                     return JSON.parse(e[0].jsondata).partner_id;
@@ -4407,7 +4404,7 @@ License: MIT
                   return null;
                 })
                 .filter(Boolean),
-              n.map((e) => new D.b(e.steamid).GetAccountID()),
+              n.map((e) => new I.b(e.steamid).GetAccountID()),
             ],
             [r, n],
           ),
@@ -4436,7 +4433,7 @@ License: MIT
             return (
               t.forEach((t) => {
                 const r = JSON.parse(t.jsondata),
-                  i = new D.b(t.steamid);
+                  i = new I.b(t.steamid);
                 let a = {
                   feedback: r.simple_response,
                   accountid: i.GetAccountID(),

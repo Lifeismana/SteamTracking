@@ -358,6 +358,11 @@ function CalculateLocalTax( amtWithFee, quantity, flRate )
 	return local_tax_est;
 }
 
+function GetPublisherFee( dialogHandle )
+{
+	dialogHandle.m_fPubFee_Rate = parseFloat( g_fPubFee_Rate );
+	}
+
 CreateBuyOrderDialog = {
 	m_bInitialized: false,
 	m_divContents: null,
@@ -373,7 +378,8 @@ CreateBuyOrderDialog = {
 	m_confirmation: 0,
 	m_confirmationTries: 0,
 	m_nMinPrice: 3,
-
+	m_fPubFee_Rate: 0.10,
+	
 	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
 		this.m_divContents = divPopup;
@@ -402,6 +408,8 @@ CreateBuyOrderDialog = {
 			return;
 		}
 
+		GetPublisherFee( this );
+
 						if ( g_bRequiresBillingInfo && !this.m_bHasLocalRate )
 		{
 			GetLocalTaxRate( this );
@@ -428,8 +436,8 @@ CreateBuyOrderDialog = {
 		$J('#market_buy_commodity_input_quantity').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
 		$J('#market_buyorder_dialog_purchase').click( function() { CreateBuyOrderDialog.StartPurchase(); } );
 		$J('#market_buyorder_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
-				$J('#billing_state_select').change( function() { CreateBuyOrderDialog.UpdateLocalTaxRate();  } );
-				$J('#market_buy_commodity_input_price').blur( function() {
+		$J('#billing_state_select').change( function() { CreateBuyOrderDialog.UpdateLocalTaxRate();  } );
+		$J('#market_buy_commodity_input_price').blur( function() {
 			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 			var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 			$('market_buy_commodity_input_price').setValue( v_currencyformat( currency, sWalletCurrencyCode ) );
@@ -617,8 +625,8 @@ CreateBuyOrderDialog = {
 				appid: this.m_unAppId,
 				market_hash_name: this.m_strMarketHashName,
 				price_total: price_total,
-								tradefee_tax:  GetPriceValueAsInt( $J('#market_buy_commodity_input_localtax').val() ),
-								quantity: quantity,
+				tradefee_tax:  GetPriceValueAsInt( $J('#market_buy_commodity_input_localtax').val() ),
+				quantity: quantity,
 				first_name: first_name,
 				last_name: last_name,
 				billing_address: billing_address,

@@ -3,11 +3,11 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [9773],
   {
-    57361: (e) => {
+    27828: (e) => {
       e.exports = {
-        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
-        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
-        ColorPickerCtn: "_3qTvksxeNcdLlXlVi5T__3",
+        EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
+        EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
+        ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
       };
     },
     73309: (e) => {
@@ -1407,6 +1407,65 @@
         }
       }
     },
+    38165: (e, t, o) => {
+      "use strict";
+      o.d(t, { s: () => h });
+      var r = o(7850),
+        s = o(78686),
+        n = o(90626),
+        a = o(61257),
+        i = o(68255),
+        l = o(4869),
+        c = o(32754),
+        d = o(27828),
+        u = o.n(d);
+      function h(e) {
+        const { color: t, onChange: o, strTitle: d, disableAlpha: h } = e,
+          [m, p] = (0, n.useState)(() => t || "rgba(255, 255, 255, 1)"),
+          g = (0, n.useCallback)(async () => {
+            if ("EyeDropper" in window)
+              try {
+                const e = new window.EyeDropper(),
+                  t = await e.open(),
+                  r = (function (e) {
+                    const t = parseInt(e.slice(1), 16);
+                    return `rgba(${(t >> 16) & 255}, ${(t >> 8) & 255}, ${255 & t}, 1)`;
+                  })(t.sRGBHex);
+                p(r), o(r);
+              } catch (e) {
+                console.warn(s.Z.Localize("#Sale_EyeDropperFailed"), e);
+              }
+            else alert(s.Z.Localize("#Sale_EyeDropperError"));
+          }, [o]);
+        return (0, r.jsxs)("div", {
+          children: [
+            Boolean(d) && (0, r.jsx)(i.JU, { children: d }),
+            (0, r.jsx)(a.xk, {
+              onChange: (e) => {
+                const t = (function (e) {
+                  return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
+                })(e);
+                p(t), o(t);
+              },
+              color: m,
+              disableAlpha: h,
+              className: u().ColorPickerCtn,
+            }),
+            (0, r.jsx)("div", {
+              className: u().EyeDropperCtn,
+              children: (0, r.jsx)(c.Gq, {
+                toolTipContent: s.Z.Localize("#Sale_BackgroundColorPicker"),
+                children: (0, r.jsx)(i.$n, {
+                  className: u().EyeDropperBtn,
+                  onClick: g,
+                  children: (0, r.jsx)(l.O7b, {}),
+                }),
+              }),
+            }),
+          ],
+        });
+      }
+    },
     9024: (e, t, o) => {
       "use strict";
       o.d(t, { X: () => u, w: () => l });
@@ -1498,65 +1557,6 @@
           table_header: { ...c.table_header, bbCode: { ...d, tag: "th" } },
         };
     },
-    64046: (e, t, o) => {
-      "use strict";
-      o.d(t, { s: () => h });
-      var r = o(7850),
-        s = o(90626),
-        n = o(61257),
-        a = o(68255),
-        i = o(4869),
-        l = o(32754),
-        c = o(61859),
-        d = o(57361),
-        u = o.n(d);
-      function h(e) {
-        const { color: t, onChange: o, strTitle: d, disableAlpha: h } = e,
-          [m, p] = (0, s.useState)(() => t || "rgba(255, 255, 255, 1)"),
-          g = (0, s.useCallback)(async () => {
-            if ("EyeDropper" in window)
-              try {
-                const e = new window.EyeDropper(),
-                  t = await e.open(),
-                  r = (function (e) {
-                    const t = parseInt(e.slice(1), 16);
-                    return `rgba(${(t >> 16) & 255}, ${(t >> 8) & 255}, ${255 & t}, 1)`;
-                  })(t.sRGBHex);
-                p(r), o(r);
-              } catch (e) {
-                console.warn((0, c.we)("#Sale_EyeDropperFailed"), e);
-              }
-            else alert((0, c.we)("#Sale_EyeDropperError"));
-          }, [o]);
-        return (0, r.jsxs)("div", {
-          children: [
-            Boolean(d) && (0, r.jsx)(a.JU, { children: d }),
-            (0, r.jsx)(n.xk, {
-              onChange: (e) => {
-                const t = (function (e) {
-                  return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
-                })(e);
-                p(t), o(t);
-              },
-              color: m,
-              disableAlpha: h,
-              className: u().ColorPickerCtn,
-            }),
-            (0, r.jsx)("div", {
-              className: u().EyeDropperCtn,
-              children: (0, r.jsx)(l.Gq, {
-                toolTipContent: (0, c.we)("#Sale_BackgroundColorPicker"),
-                children: (0, r.jsx)(a.$n, {
-                  className: u().EyeDropperBtn,
-                  onClick: g,
-                  children: (0, r.jsx)(i.O7b, {}),
-                }),
-              }),
-            }),
-          ],
-        });
-      }
-    },
     72421: (e, t, o) => {
       "use strict";
       o.d(t, { _: () => i });
@@ -1610,7 +1610,7 @@
         s = o(37834),
         n = o(52893),
         a = o(90626),
-        i = o(64046),
+        i = o(38165),
         l = o(9154),
         c = o(72421),
         d = o(61859);

@@ -23,6 +23,15 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "object" == typeof _ && null !== _ && "value" in _;
+      }
+      function _(_, _) {
+        return _(_) && _(_)
+          ? _.value === _.value &&
+              Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft)
+          : _ === _;
+      }
       !(function (_) {
         (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
           (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
@@ -221,128 +230,7 @@
           }
         }
       }
-      function _(_, _) {
-        return (
-          (_ = Math.ceil(_)),
-          (_ = Math.floor(_)),
-          Math.floor(Math.random() * (_ - _ + 1)) + _
-        );
-      }
-      function _(_, _, _) {
-        return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
-      }
-      function _() {
-        return !!window.document;
-      }
-      let _;
-      function _() {
-        if (!_()) return _ || (_ = _()), _;
-        let _ = (function (_) {
-          if (!_() || !window.document.cookie) return null;
-          const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
-          return _ && _[2] ? decodeURIComponent(_[2]) : null;
-        })("sessionid");
-        return _ || (_ = _()), _;
-      }
-      function _() {
-        const _ = (function () {
-          let _ = "";
-          for (let _ = 0; _ < 24; _++) _ += _(0, 35).toString(36);
-          return _;
-        })();
-        return (
-          (function (_, _, _, _) {
-            if (!_()) return;
-            _ || (_ = "/");
-            let _ = "";
-            if (void 0 !== _ && _) {
-              const _ = new Date();
-              _.setTime(_.getTime() + 864e5 * _),
-                (_ = "; expires=" + _.toUTCString());
-            }
-            document.cookie =
-              encodeURIComponent(_) +
-              "=" +
-              encodeURIComponent(_) +
-              _ +
-              ";path=" +
-              _;
-          })("sessionid", _, 0),
-          _
-        );
-      }
-      new Set();
-      const _ = {
-        EUNIVERSE: 0,
-        WEB_UNIVERSE: "",
-        LANGUAGE: "english",
-        SUPPORTED_LANGUAGES: [],
-        COUNTRY: "",
-        AVATAR_BASE_URL: "",
-        MEDIA_CDN_COMMUNITY_URL: "",
-        MEDIA_CDN_URL: "",
-        CLAN_CDN_ASSET_URL: "",
-        COMMUNITY_ASSETS_BASE_URL: "",
-        VIDEO_CDN_URL: "",
-        COMMUNITY_CDN_URL: "",
-        COMMUNITY_CDN_ASSET_URL: "",
-        BASE_URL_SHARED_CDN: "",
-        STORE_CDN_URL: "",
-        PUBLIC_SHARED_URL: "",
-        COMMUNITY_BASE_URL: "",
-        CHAT_BASE_URL: "",
-        STORE_BASE_URL: "",
-        STORE_CHECKOUT_BASE_URL: "",
-        LOGIN_BASE_URL: "",
-        SUPPORT_BASE_URL: "",
-        STORE_ICON_BASE_URL: "",
-        STORE_ITEM_BASE_URL: "",
-        IMG_URL: "",
-        STEAMTV_BASE_URL: "",
-        HELP_BASE_URL: "",
-        PARTNER_BASE_URL: "",
-        STATS_BASE_URL: "",
-        INTERNAL_STATS_BASE_URL: "",
-        BASE_URL_STORE_CDN_ASSETS: "",
-        IN_CLIENT: !1,
-        USE_POPUPS: !1,
-        IN_MOBILE: !1,
-        IN_MOBILE_WEBVIEW: !1,
-        IN_TENFOOT: !1,
-        PLATFORM: "",
-        ARCH: "",
-        SNR: "",
-        LAUNCHER_TYPE: 0,
-        EREALM: 0,
-        IN_CHROMEOS: !1,
-        TESLA: !1,
-        LOCAL_HOSTNAME: "",
-        WEBAPI_BASE_URL: "",
-        TOKEN_URL: "",
-        BUILD_TIMESTAMP: 0,
-        PAGE_TIMESTAMP: 0,
-        FROM_WEB: !1,
-        WEBSITE_ID: "Unknown",
-        get SESSIONID() {
-          return _();
-        },
-        FRIENDSUI_BETA: !1,
-        STEAM_TV: !1,
-        DEV_MODE: !1,
-        IN_STEAMUI: !1,
-        IN_GAMEPADUI: !1,
-        FORCED_DISPLAY_MODE: void 0,
-        ON_FRAME: !1,
-        IS_STEAMOS: !1,
-        ON_STEAMOS_CLIENT_BRANCH: !1,
-        IN_GAMESCOPE: !1,
-        IN_LOGIN: !1,
-        IN_LOGIN_REFRESH: !1,
-        USE_LONGEST_LOC_STRING: !1,
-        SILENT_STARTUP: !1,
-        CLIENT_SESSION: 0,
-        NOW: 0,
-      };
+      const _ = "";
       class _ extends _._ {
         m_lastButtonDown = _._.INVALID;
         constructor(_) {
@@ -380,7 +268,7 @@
             (this.m_lastButtonDown = _._.INVALID));
         }
         GetKeycodeFromEvent(_) {
-          return "linux" === _.PLATFORM && _.key.length > 1
+          return "linux" === _ && _.key.length > 1
             ? _.key || _.code
             : _.code || _.key;
         }
@@ -1379,6 +1267,9 @@
           distance: _,
         };
       }
+      function _(_, _, _) {
+        return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
+      }
       class _ {
         m_options;
         m_msStart;
@@ -1494,6 +1385,128 @@
       const _ = new _("ScrollSnap").Debug;
       let _ = !1;
       let _;
+      function _(_, _, _, _, _) {
+        const _ = _.Element;
+        if (!_) return;
+        let _ = [
+          {
+            node: _,
+            eScrollType: _.m_Properties?.scrollIntoViewType,
+          },
+        ];
+        for (let _ = _.Parent; _; _ = _.Parent) {
+          const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+            _ = _.m_Properties?.scrollIntoViewType;
+          if (_) {
+            const _ = {
+              node: _,
+              eScrollType: _,
+            };
+            "force" === _ ? (_ = [_]) : _.push(_);
+          }
+          if (void 0 !== _)
+            for (
+              let _ = _.length - 1;
+              _ >= 0 && void 0 === _[_].eScrollType;
+              _--
+            )
+              _[_].eScrollType = _;
+        }
+        for (; _.length; ) {
+          let { node: _, eScrollType: _ } = _.pop(),
+            _ = 0 == _.length;
+          if (
+            (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+            _?.m_Properties?.fnScrollIntoViewHandler)
+          ) {
+            if (!1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
+              continue;
+          }
+          const _ = _.m_element,
+            _ = _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
+          if (_ || _ === _.GAMEPAD) {
+            const _ = _ ? _(_) : _.getBoundingClientRect(),
+              _ = _.ownerDocument.defaultView.innerHeight,
+              _ = 40,
+              _ = _ ? _ : Math.max(0.4 * _, _);
+            let _ = !1;
+            const _ = _ && performance.now() - _ < 500;
+            (_ || _.bottom < -_ || _.top > _ + _) &&
+              ((_ = !0),
+              _ ||
+                _(
+                  `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_} + ${_} `,
+                ));
+            let _ = _ ? "auto" : "smooth";
+            _ && (_ = performance.now()),
+              _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+              _
+                ? _(_, _, _)
+                : (_(
+                    `Scrolling Into View ('${_}' via browser scrollIntoView):`,
+                    _,
+                  ),
+                  _.scrollIntoView({
+                    behavior: _,
+                    block: "nearest",
+                  }));
+          } else
+            _("No previous element for scrolling, will jump"),
+              _
+                ? _(_, _, "auto")
+                : (_(
+                    "Scrolling Into View ('auto' via browser scrollIntoView):",
+                    _,
+                  ),
+                  _?.scrollIntoView({
+                    behavior: "auto",
+                    block: "nearest",
+                    inline: "nearest",
+                  }));
+        }
+        !(function (_, _) {
+          const _ = _(_);
+          if (!_) return;
+          let _ = null;
+          for (let _ = _; _; _ = _.GetNavParentCrossingTrees())
+            _.m_Properties?.scrollRegionToStartOrEnd && (_ = _);
+          if (!_) return;
+          for (
+            let _ = _;
+            _ &&
+            !_.BHasNavTargetInDirection(_, !0) &&
+            (_ != _ &&
+              _.Element &&
+              _.m_Properties?.scrollRegionToStartOrEnd &&
+              _(_.Element, _, _),
+            _ != _);
+            _ = _.GetNavParentCrossingTrees()
+          );
+        })(_, _);
+      }
+      function _(_, _, _) {
+        let _ = _,
+          _ = _.ownerDocument;
+        if (
+          (_ == _.body && _.defaultView && !_(_, _) && (_ = _.defaultView),
+          !_(_, _))
+        )
+          return;
+        const _ = _(_);
+        if ("y" == _) {
+          const _ = _ == _._.DIR_DOWN ? _.MaxScrollTop() : 0;
+          _.scrollTo({
+            top: _,
+            behavior: "smooth",
+          });
+        } else {
+          const _ = _ == _._.DIR_RIGHT ? _.MaxScrollLeft() : 0;
+          _.scrollTo({
+            left: _,
+            behavior: "smooth",
+          });
+        }
+      }
       function _(_) {
         if (!_)
           return {
@@ -1902,19 +1915,31 @@
         get Parent() {
           return this.m_Parent;
         }
+        GetNavParentCrossingTrees() {
+          return this.m_Parent
+            ? this.m_Parent
+            : this.m_Tree.GetParentEmbeddedNavTree() && this.Element
+              ? (this.Element.__nav_wrapper ?? null)
+              : null;
+        }
+        GetWrappedTree() {
+          return null;
+        }
         SetProperties(_) {
           const _ =
             ((_ = this.m_Properties?.actionDescriptionMap),
             (_ = _?.actionDescriptionMap),
+            (_ = _),
             !(null == _ || null == _
               ? _ === _
               : "object" == typeof _ &&
                 "object" == typeof _ &&
                 Object.keys(_).length === Object.keys(_).length &&
+                ((_ = _ ?? ((_, _) => _ === _)),
                 Object.keys(_).every(
-                  (_) => _.hasOwnProperty(_) && _[_] === _[_],
-                )));
-          var _, _;
+                  (_) => _.hasOwnProperty(_) && _(_[_], _[_]),
+                ))));
+          var _, _, _;
           const _ = this.m_Properties?.focusableIfEmpty,
             _ = this.m_Properties?.noFocusRing;
           (this.m_Properties = _ || {}),
@@ -2151,8 +2176,8 @@
             (this.m_rgChildren.sort((_, _) => {
               const _ = _.m_element,
                 _ = _.m_element;
-              if (!_) return _ ? 1 : 0;
-              if (!_) return -1;
+              if (!_ || !_.isConnected) return _ && _.isConnected ? 1 : 0;
+              if (!_ || !_.isConnected) return -1;
               const _ = __webpack_require__.compareDocumentPosition(_);
               return _ & Node.DOCUMENT_POSITION_PRECEDING
                 ? 1
@@ -2379,72 +2404,91 @@
           return _;
         }
         InternalFocusDescendant(_, _, _) {
-          return !!_ && (this.m_Tree.TransferFocus(_, _, _(_)), !0);
+          return !!_ && (this.m_Tree.TransferFocus(_, _, _, !1), !0);
         }
-        BTryInternalNavigation(_, _) {
-          const _ = this.GetLayout();
-          let _,
+        BHasNavTargetInDirection(_, _) {
+          if (this.HasMovementHandler(_)) return !0;
+          let _ = this.FindNextFocusableChild(_);
+          if (_ && _) {
+            let _ = __webpack_require__.GetWrappedTree();
+            if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+          }
+          return !!_;
+        }
+        HasMovementHandler(_) {
+          switch (_) {
+            case _._.DIR_UP:
+              return !!this.m_Properties?.onMoveUp;
+            case _._.DIR_DOWN:
+              return !!this.m_Properties?.onMoveDown;
+            case _._.DIR_LEFT:
+              return !!this.m_Properties?.onMoveLeft;
+            case _._.DIR_RIGHT:
+              return !!this.m_Properties?.onMoveRight;
+          }
+          return !1;
+        }
+        FindNextFocusableChild(_) {
+          const _ = this.GetLayout(),
             _ = this.ComputeRelativeDirection(_, _);
-          if (
-            (_(
-              `Handling navigation event ${_._[_]} - ${_[_]} - ${_[_]}`,
-              this.m_element,
-            ),
-            _ == _.INVALID)
-          )
-            return !1;
-          if (this.m_Properties?.focusable && this.BHasFocus())
-            return _("Skipping navigation within focused element"), !1;
+          if (_ == _.INVALID) return null;
+          if (this.m_Properties?.focusable && this.BHasFocus()) return null;
           if ((this.EnsureChildrenSorted(!0), _ == _.GRID))
-            _ = this.FindNextFocusableChildInGrid(
+            return this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               _,
               _,
             );
-          else if (_ == _.GEOMETRIC)
-            _ = this.FindNextFocusableChildGeometric(_, _);
-          else {
-            let _ = this.GetActiveChildIndex();
+          if (_ == _.GEOMETRIC)
+            return this.FindNextFocusableChildGeometric(_, _);
+          let _ = this.GetActiveChildIndex();
+          return (
             this.IsValidChildIndex(_) ||
               (_ = _ == _.FORWARD ? -1 : this.m_rgChildren.length),
-              (_ = this.FindNextFocusableChildInDirection(_, _, _));
-          }
-          if (_) {
-            const _ = _(_);
-            if (
-              this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
-              _.GetScrollIntoViewType() == _.NoTransformSparseContent
-            ) {
-              const _ = _.Element?.ownerDocument.defaultView;
-              if (_) {
-                const _ =
-                    ("y" == _ ? _.innerHeight : _.innerWidth) /
-                    (_ ? 4.5 : 3.33),
-                  _ = _(_.Element);
-                let _ = !1;
-                if (
-                  ("y" == _
-                    ? _ == _.FORWARD
+            this.FindNextFocusableChildInDirection(_, _, _)
+          );
+        }
+        BTryInternalNavigation(_, _) {
+          _(
+            `Handling navigation event ${_._[_]} - ${_[this.GetLayout()]}`,
+            this.m_element,
+          );
+          const _ = this.FindNextFocusableChild(_);
+          if (!_) return !1;
+          const _ = _(_),
+            _ = this.ComputeRelativeDirection(_, this.GetLayout());
+          if (
+            this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
+            __webpack_require__.GetScrollIntoViewType() ==
+              _.NoTransformSparseContent
+          ) {
+            const _ = _.Element?.ownerDocument.defaultView;
+            if (_) {
+              const _ =
+                  ("y" == _ ? _.innerHeight : _.innerWidth) / (_ ? 4.5 : 3.33),
+                _ = _(_.Element);
+              let _ = !1;
+              if (
+                ("y" == _
+                  ? _ == _.FORWARD
+                    ? (_ =
+                        _.top > _.innerHeight && _.bottom > _.innerHeight + _)
+                    : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
+                  : "x" == _ &&
+                    (_ == _.FORWARD
                       ? (_ =
-                          _.top > _.innerHeight && _.bottom > _.innerHeight + _)
-                      : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
-                    : "x" == _ &&
-                      (_ == _.FORWARD
-                        ? (_ =
-                            _.left > _.innerWidth && _.right > _.innerWidth + _)
-                        : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
-                  _)
-                )
-                  return (
-                    _(`Element too far away, scrolling ${_} on ${_} axis `),
-                    _(_.Element, _.Element, "smooth", _, _),
-                    !0
-                  );
-              }
+                          _.left > _.innerWidth && _.right > _.innerWidth + _)
+                      : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
+                _)
+              )
+                return (
+                  _(`Element too far away, scrolling ${_} on ${_} axis `),
+                  _(_.Element, _.Element, "smooth", _, _),
+                  !0
+                );
             }
-            return this.m_Tree.TransferFocus(_.GAMEPAD, _, _), !0;
           }
-          return !1;
+          return this.m_Tree.TransferFocus(_.GAMEPAD, _, _), !0;
         }
         GetScrollIntoViewType() {
           return void 0 !== this.m_Properties?.scrollIntoViewType &&
@@ -2740,7 +2784,7 @@
             bFocusDescendant: !0,
           });
         }
-        SetDOMFocusAndScroll(_, _) {
+        SetDOMFocusAndScroll(_, _, _, _) {
           this.UpdateParentActiveChild(),
             this.m_Tree.OnChildActivated(_),
             this.m_Tree.BIsActiveFocus()
@@ -2755,89 +2799,7 @@
                 _(
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
-            this.m_Tree.BIsActive() &&
-              (function (_, _, _) {
-                const _ = _.Element;
-                if (!_) return;
-                let _ = [
-                  {
-                    node: _,
-                    eScrollType: _.m_Properties?.scrollIntoViewType,
-                  },
-                ];
-                for (let _ = _.Parent; _; _ = _.Parent) {
-                  const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
-                    _ = _.m_Properties?.scrollIntoViewType;
-                  if (_) {
-                    const _ = {
-                      node: _,
-                      eScrollType: _,
-                    };
-                    "force" === _ ? (_ = [_]) : _.push(_);
-                  }
-                  if (void 0 !== _)
-                    for (
-                      let _ = _.length - 1;
-                      _ >= 0 && void 0 === _[_].eScrollType;
-                      _--
-                    )
-                      _[_].eScrollType = _;
-                }
-                for (; _.length; ) {
-                  let { node: _, eScrollType: _ } = _.pop(),
-                    _ = 0 == _.length;
-                  if (
-                    (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
-                    _?.m_Properties?.fnScrollIntoViewHandler &&
-                      !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
-                  )
-                    continue;
-                  const _ = _.m_element,
-                    _ =
-                      _ == _.NoTransform ||
-                      _ == _.NoTransformSparseContent ||
-                      !_;
-                  if (_ || _ === _.GAMEPAD) {
-                    const _ = _ ? _(_) : _.getBoundingClientRect();
-                    let _ = !1;
-                    const _ = Math.max(1.4 * (_.bottom - _.top), 40),
-                      _ = _ && performance.now() - _ < 500;
-                    (_ ||
-                      _.bottom < -_ ||
-                      _.top > _.ownerDocument.defaultView.innerHeight + _) &&
-                      ((_ = !0),
-                      _ ||
-                        _(
-                          `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
-                        ));
-                    let _ = _ ? "auto" : "smooth";
-                    _ && (_ = performance.now()),
-                      _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
-                      _
-                        ? _(0, _, _)
-                        : (_(
-                            "Scrolling Into View (via browser scrollIntoView):",
-                            _,
-                          ),
-                          _.scrollIntoView({
-                            behavior: _,
-                            block: "nearest",
-                          }));
-                  } else
-                    _("No previous element for scrolling, will jump"),
-                      _
-                        ? _(0, _, "auto")
-                        : (_(
-                            "Scrolling Into View (via browser scrollIntoView):",
-                            _,
-                          ),
-                          _?.scrollIntoView({
-                            behavior: "auto",
-                            block: "nearest",
-                            inline: "nearest",
-                          }));
-                }
-              })(this, _, _);
+            this.m_Tree.BIsActive() && _(this, _, _, _, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -2860,7 +2822,7 @@
           _ && this.BindTree(_);
         }
         OnUnmount() {
-          this.m_rgCallbackRegistrations.Unregister();
+          this.m_rgCallbackRegistrations.Unregister(), super.OnUnmount();
         }
         BindTree(_) {
           _.GetParentEmbeddedNavTree() &&
@@ -2895,22 +2857,30 @@
             !0
           );
         }
-        SetDOMFocusAndScroll(_, _) {
+        SetDOMFocusAndScroll(_, _, _, _) {
           this.UpdateParentActiveChild(),
             this.m_wrappedTree?.BIsActive() ||
               (this.m_wrappedTree?.Activate(),
               this.m_wrappedTree?.TakeFocus(_));
+        }
+        CanTakeFocus(_) {
+          return !!this.m_wrappedTree?.Root.FindFocusableDescendant();
         }
         SetProperties(_) {
           super.SetProperties({
             ..._,
             noFocusRing: !0,
             focusable: !0,
+            fnCanTakeFocus: this.CanTakeFocus,
           });
+        }
+        GetWrappedTree() {
+          return this.m_wrappedTree || null;
         }
       }
       (0, _._)([_._], _.prototype, "OnWrappedTreeActivated", null),
-        (0, _._)([_._], _.prototype, "OnWrappedTreeUnhandledButton", null);
+        (0, _._)([_._], _.prototype, "OnWrappedTreeUnhandledButton", null),
+        (0, _._)([_._], _.prototype, "CanTakeFocus", null);
       const _ = new _("FocusHistory").Debug;
       function _(_) {
         const _ = (_) => {
@@ -3045,6 +3015,7 @@
         m_onActiveFocusStateChangedCallbacks = new _._();
         m_onChildTreesChanged = new _._();
         m_Properties;
+        m_bExcludeFromScrollRegionSearch = !1;
         m_onGlobalButtonDown;
         m_rgOnUnhandledButton = [];
         m_rgGlobalButtonHandlers = [];
@@ -3225,6 +3196,12 @@
             ((this.m_bIsEnabled = _),
             this.m_bIsEnabled || (this.m_tsLastActivated = void 0));
         }
+        GetExcludeFromScrollRegionSearch() {
+          return this.m_bExcludeFromScrollRegionSearch;
+        }
+        SetExcludeFromScrollRegionSearch(_) {
+          this.m_bExcludeFromScrollRegionSearch = _;
+        }
         GetParentEmbeddedNavTree() {
           return this.m_Properties.bIsEmbeddedInLegacyTree
             ? this.m_ParentNavTree
@@ -3325,13 +3302,16 @@
             }
           );
         }
-        TransferFocus(_, _, _) {
-          this.m_Controller.BatchedUpdate(() =>
-            this.TransferFocusInternal(_, _, _),
-          );
+        TransferFocus(_, _, _, _) {
+          (_ = _ ?? _._.INVALID),
+            (_ = _ ?? !1),
+            this.m_Controller.BatchedUpdate(() =>
+              this.TransferFocusInternal(_, _, _, _),
+            );
         }
-        TransferFocusInternal(_, _, _) {
-          const _ = this.m_lastFocusNode;
+        TransferFocusInternal(_, _, _, _) {
+          const _ = _(_),
+            _ = this.m_lastFocusNode;
           if (
             _ == _ &&
             (this.m_bWasActiveForLastFocusChange || !this.BIsActive())
@@ -3373,7 +3353,7 @@
             for (let _ = _; _ && _ != _; _ = _.Parent) _.SetFocusWithin(!0);
           }
           let _ = this.m_context.OnFocusChangeStart(_, this, _, _);
-          _ && _.SetDOMFocusAndScroll(_, _),
+          _ && _.SetDOMFocusAndScroll(_, _, _, _),
             _ &&
               (_(_.Element, "vgp_onblur", _),
               !_.m_FocusRing ||
@@ -7910,8 +7890,14 @@
               : this.Body()[`set_${_}`] && this.Body()[`set_${_}`](_[_]);
         }
       }
-      function _(_, _) {
-        return _ instanceof _ ? _ : _.InitFromObject(_, _);
+      function _(_, _, _) {
+        let _;
+        return (
+          (_ = _ instanceof _ ? _ : _.InitFromObject(_, _)),
+          void 0 !== _?.strDebugSource &&
+            _.Hdr().set_debug_source(_.strDebugSource),
+          _
+        );
       }
       const _ = new (class {
         m_transport = null;
@@ -11118,6 +11104,11 @@
                     _: _.readInt32,
                     _: _.writeInt32,
                   },
+                  use_gyro_sw_biases: {
+                    _: 49,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -13219,7 +13210,7 @@
         m_ActiveContext;
         m_LastActiveContext;
         m_ContextSetChangedCallbacks = new _._();
-        m_fnCatchAllGamepadInput = null;
+        m_rgCatchAllGamepadInput = [];
         m_UnhandledButtonEventsCallbacks = new _._();
         m_navigationSource = _(
           {
@@ -13334,6 +13325,7 @@
             _.SetRepeatAllowed(() => this.m_ActiveContext?.BIsActive() ?? !1),
             _.Push(() => _.SetRepeatAllowed()),
             _.GetSourceType() == _._.GAMEPAD && this.UpdateSourceToGamepad(),
+            _.Push(_.Init(this).Unregister),
             _.GetUnregisterFunc()
           );
         }
@@ -13448,13 +13440,14 @@
           );
         }
         OnButtonActionInternal(_, _, _, _, _, _, _, _, _, _) {
-          if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(_))
-            return void (
-              _ &&
-              _(
-                "Ignoring button press - gamepad input is suppressed by parent window",
-              )
-            );
+          for (let _ = this.m_rgCatchAllGamepadInput.length - 1; _ >= 0; _--)
+            if (this.m_rgCatchAllGamepadInput[_](_, _, _ ?? !1))
+              return void (
+                _ &&
+                _(
+                  "Ignoring button press - gamepad input is suppressed by parent window",
+                )
+              );
           _(
             !!_ == !!_,
             "Must set both overrideContext and overrideElement or neither",
@@ -13613,11 +13606,16 @@
             (this.m_UnhandledButtonEventsCallbacks.Dispatch(_), !1)
           );
         }
-        SetSuppressGamepadInput(_) {
-          this.m_fnCatchAllGamepadInput = _ ? () => !0 : null;
-        }
         SetCatchAllGamepadInput(_) {
-          this.m_fnCatchAllGamepadInput = _;
+          return (
+            this.m_rgCatchAllGamepadInput.push(_),
+            {
+              Unregister: () => {
+                const _ = this.m_rgCatchAllGamepadInput.indexOf(_);
+                _ >= 0 && this.m_rgCatchAllGamepadInput.splice(_, 1);
+              },
+            }
+          );
         }
         TakeFocusChangingIFrame() {
           window.focus();
@@ -13997,10 +13995,12 @@
               _()(window)._("blur", () =>
                 __webpack_require__.OnDeactivate(window),
               );
-            const _ = _(_);
+            const _ = _(_),
+              _ = 0 != _.data("react-nav-scrollregiontostartorend");
             (_.Root.m_FocusRing = _),
               _.Root.SetProperties({
                 scrollIntoViewType: _.NoTransformSparseContent,
+                scrollRegionToStartOrEnd: _,
               }),
               _.SetIsEnabled(!0),
               _.OnActiveStateChangedCallbacks.Register((_) => {

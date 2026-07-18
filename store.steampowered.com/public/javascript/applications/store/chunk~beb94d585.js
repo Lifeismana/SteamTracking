@@ -863,7 +863,7 @@
           this.m_mapExistingEvents.has(t) &&
             (this.m_mapExistingEvents.get(t).deleteInProgress = !0);
           let n = new URLSearchParams();
-          n.append("sessionid", g.TS.SESSIONID),
+          n.append("sessionid", (0, g.KC)()),
             n.append("bDelete", "1"),
             n.append("gid", t);
           const a = await i().post(
@@ -1182,7 +1182,7 @@
           try {
             const o = `${g.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
               r = new FormData();
-            r.append("sessionid", g.TS.SESSIONID),
+            r.append("sessionid", (0, g.KC)()),
               r.append("gidclanevent", t),
               r.append("json", JSON.stringify(n)),
               r.append("pageStyles", JSON.stringify(a));

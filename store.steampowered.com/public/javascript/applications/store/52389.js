@@ -3287,50 +3287,50 @@
       }
       var Se, Re, he;
       !(function (e) {
-        (e.GetPasswordRSAPublicKey = function (e, t) {
+        (e.GetPasswordRSAPublicKey = function (e, t, r) {
           return e.SendMsg(
             "Authentication.GetPasswordRSAPublicKey#1",
-            (0, l.I8)(W, t),
+            (0, l.I8)(W, t, r),
             F,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         }),
-          (e.BeginAuthSessionViaQR = function (e, t) {
+          (e.BeginAuthSessionViaQR = function (e, t, r) {
             return e.SendMsg(
               "Authentication.BeginAuthSessionViaQR#1",
-              (0, l.I8)(v, t),
+              (0, l.I8)(v, t, r),
               O,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.BeginAuthSessionViaCredentials = function (e, t) {
+          (e.BeginAuthSessionViaCredentials = function (e, t, r) {
             return e.SendMsg(
               "Authentication.BeginAuthSessionViaCredentials#1",
-              (0, l.I8)(I, t),
+              (0, l.I8)(I, t, r),
               U,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.PollAuthSessionStatus = function (e, t) {
+          (e.PollAuthSessionStatus = function (e, t, r) {
             return e.SendMsg(
               "Authentication.PollAuthSessionStatus#1",
-              (0, l.I8)(C, t),
+              (0, l.I8)(C, t, r),
               A,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetAuthSessionInfo = function (e, t) {
+          (e.GetAuthSessionInfo = function (e, t, r) {
             return e.SendMsg(
               "Authentication.GetAuthSessionInfo#1",
-              (0, l.I8)(k, t),
+              (0, l.I8)(k, t, r),
               x,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetAuthSessionRiskInfo = function (e, t) {
+          (e.GetAuthSessionRiskInfo = function (e, t, r) {
             return e.SendMsg(
               "Authentication.GetAuthSessionRiskInfo#1",
-              (0, l.I8)(N, t),
+              (0, l.I8)(N, t, r),
               E,
               { ePrivilege: 1 },
             );
@@ -3342,118 +3342,118 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.UpdateAuthSessionWithMobileConfirmation = function (e, t) {
+          (e.UpdateAuthSessionWithMobileConfirmation = function (e, t, r) {
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
-              (0, l.I8)(K, t),
+              (0, l.I8)(K, t, r),
               $,
               { ePrivilege: 1 },
             );
           }),
-          (e.UpdateAuthSessionWithSteamGuardCode = function (e, t) {
+          (e.UpdateAuthSessionWithSteamGuardCode = function (e, t, r) {
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
-              (0, l.I8)(D, t),
+              (0, l.I8)(D, t, r),
               H,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GenerateAccessTokenForApp = function (e, t) {
+          (e.GenerateAccessTokenForApp = function (e, t, r) {
             return e.SendMsg(
               "Authentication.GenerateAccessTokenForApp#1",
-              (0, l.I8)(X, t),
+              (0, l.I8)(X, t, r),
               Y,
               { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.EnumerateTokens = function (e, t) {
+          (e.EnumerateTokens = function (e, t, r) {
             return e.SendMsg(
               "Authentication.EnumerateTokens#1",
-              (0, l.I8)(J, t),
+              (0, l.I8)(J, t, r),
               L,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetAuthSessionsForAccount = function (e, t) {
+          (e.GetAuthSessionsForAccount = function (e, t, r) {
             return e.SendMsg(
               "Authentication.GetAuthSessionsForAccount#1",
-              (0, l.I8)(Q, t),
+              (0, l.I8)(Q, t, r),
               V,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.RevokeToken = function (e, t) {
+          (e.RevokeToken = function (e, t, r) {
             return e.SendMsg(
               "Authentication.RevokeToken#1",
-              (0, l.I8)(te, t),
+              (0, l.I8)(te, t, r),
               re,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.RevokeRefreshToken = function (e, t) {
+          (e.RevokeRefreshToken = function (e, t, r) {
             return e.SendMsg(
               "Authentication.RevokeRefreshToken#1",
-              (0, l.I8)(ie, t),
+              (0, l.I8)(ie, t, r),
               ne,
               { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           });
       })(Se || (Se = {})),
         (function (e) {
-          (e.QueryRefreshTokensByAccount = function (e, t) {
+          (e.QueryRefreshTokensByAccount = function (e, t, r) {
             return e.SendMsg(
               "AuthenticationSupport.QueryRefreshTokensByAccount#1",
-              (0, l.I8)(ce, t),
+              (0, l.I8)(ce, t, r),
               me,
               { bConstMethod: !0, ePrivilege: 5 },
             );
           }),
-            (e.QueryRefreshTokenByID = function (e, t) {
+            (e.QueryRefreshTokenByID = function (e, t, r) {
               return e.SendMsg(
                 "AuthenticationSupport.QueryRefreshTokenByID#1",
-                (0, l.I8)(le, t),
+                (0, l.I8)(le, t, r),
                 ue,
                 { bConstMethod: !0, ePrivilege: 5 },
               );
             }),
-            (e.RevokeToken = function (e, t) {
+            (e.RevokeToken = function (e, t, r) {
               return e.SendMsg(
                 "AuthenticationSupport.RevokeToken#1",
-                (0, l.I8)(de, t),
+                (0, l.I8)(de, t, r),
                 ge,
                 { ePrivilege: 5 },
               );
             }),
-            (e.GetTokenHistory = function (e, t) {
+            (e.GetTokenHistory = function (e, t, r) {
               return e.SendMsg(
                 "AuthenticationSupport.GetTokenHistory#1",
-                (0, l.I8)(Be, t),
+                (0, l.I8)(Be, t, r),
                 be,
                 { bConstMethod: !0, ePrivilege: 5 },
               );
             }),
-            (e.MarkTokenCompromised = function (e, t) {
+            (e.MarkTokenCompromised = function (e, t, r) {
               return e.SendMsg(
                 "AuthenticationSupport.MarkTokenCompromised#1",
-                (0, l.I8)(Me, t),
+                (0, l.I8)(Me, t, r),
                 _e,
                 { ePrivilege: 5 },
               );
             });
         })(Re || (Re = {})),
         (function (e) {
-          (e.CreateNonce = function (e, t) {
+          (e.CreateNonce = function (e, t, r) {
             return e.SendMsg(
               "CloudGaming.CreateNonce#1",
-              (0, l.I8)(we, t),
+              (0, l.I8)(we, t, r),
               ye,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-            (e.GetTimeRemaining = function (e, t) {
+            (e.GetTimeRemaining = function (e, t, r) {
               return e.SendMsg(
                 "CloudGaming.GetTimeRemaining#1",
-                (0, l.I8)(fe, t),
+                (0, l.I8)(fe, t, r),
                 ze,
                 { bConstMethod: !0, ePrivilege: 1 },
               );
@@ -4784,61 +4784,61 @@
       }
       var F;
       !(function (e) {
-        (e.QueryTime = function (e, t) {
-          return e.SendMsg("TwoFactor.QueryTime#1", (0, o.I8)(u, t), d, {
+        (e.QueryTime = function (e, t, r) {
+          return e.SendMsg("TwoFactor.QueryTime#1", (0, o.I8)(u, t, r), d, {
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (e.QueryStatus = function (e, t) {
-            return e.SendMsg("TwoFactor.QueryStatus#1", (0, o.I8)(g, t), B, {
+          (e.QueryStatus = function (e, t, r) {
+            return e.SendMsg("TwoFactor.QueryStatus#1", (0, o.I8)(g, t, r), B, {
               ePrivilege: 1,
             });
           }),
-          (e.AddAuthenticator = function (e, t) {
+          (e.AddAuthenticator = function (e, t, r) {
             return e.SendMsg(
               "TwoFactor.AddAuthenticator#1",
-              (0, o.I8)(b, t),
+              (0, o.I8)(b, t, r),
               M,
               { ePrivilege: 1 },
             );
           }),
-          (e.FinalizeAddAuthenticator = function (e, t) {
+          (e.FinalizeAddAuthenticator = function (e, t, r) {
             return e.SendMsg(
               "TwoFactor.FinalizeAddAuthenticator#1",
-              (0, o.I8)(_, t),
+              (0, o.I8)(_, t, r),
               w,
               { ePrivilege: 1 },
             );
           }),
-          (e.UpdateTokenVersion = function (e, t) {
+          (e.UpdateTokenVersion = function (e, t, r) {
             return e.SendMsg(
               "TwoFactor.UpdateTokenVersion#1",
-              (0, o.I8)(q, t),
+              (0, o.I8)(q, t, r),
               W,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.RemoveAuthenticator = function (e, t) {
+          (e.RemoveAuthenticator = function (e, t, r) {
             return e.SendMsg(
               "TwoFactor.RemoveAuthenticator#1",
-              (0, o.I8)(y, t),
+              (0, o.I8)(y, t, r),
               p,
               { ePrivilege: 9 },
             );
           }),
-          (e.RemoveAuthenticatorViaChallengeStart = function (e, t) {
+          (e.RemoveAuthenticatorViaChallengeStart = function (e, t, r) {
             return e.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
-              (0, o.I8)(f, t),
+              (0, o.I8)(f, t, r),
               z,
               { ePrivilege: 9 },
             );
           }),
-          (e.RemoveAuthenticatorViaChallengeContinue = function (e, t) {
+          (e.RemoveAuthenticatorViaChallengeContinue = function (e, t, r) {
             return e.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
-              (0, o.I8)(S, t),
+              (0, o.I8)(S, t, r),
               h,
               { ePrivilege: 9 },
             );

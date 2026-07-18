@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Тази обява вече не е достъпна",
     "Listing_NotAvailable_Short": "Недостъпен",
     "Listing_NotAvailable_Long": "Тази обява вече не е достъпна за закупуване.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Моята обява)",
     "BuyOrderDialog_Header": "Купуване — %1$s",
     "BuyOrderDialog_Header_NoItem": "Поставяне на заявка за покупка",
     "BuyOrderDialog_BucketPicker_Label": "Кой тип артикул бихте искали да купите?",

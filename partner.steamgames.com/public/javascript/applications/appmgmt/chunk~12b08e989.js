@@ -9779,411 +9779,421 @@
       }
       var at, nt;
       !(function (e) {
-        (e.GetRecentPlaytimeSessionsForChild = function (e, r) {
+        (e.GetRecentPlaytimeSessionsForChild = function (e, r, t) {
           return e.SendMsg(
             "Player.GetRecentPlaytimeSessionsForChild#1",
-            (0, l.I8)(B, r),
+            (0, l.I8)(B, r, t),
             d,
             { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
-          (e.GetPlayerLinkDetails = function (e, r) {
+          (e.GetPlayerLinkDetails = function (e, r, t) {
             return e.SendMsg(
               "Player.GetPlayerLinkDetails#1",
-              (0, l.I8)(_, r),
+              (0, l.I8)(_, r, t),
               f,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetMutualFriendsForIncomingInvites = function (e, r) {
+          (e.GetMutualFriendsForIncomingInvites = function (e, r, t) {
             return e.SendMsg(
               "Player.GetMutualFriendsForIncomingInvites#1",
-              (0, l.I8)(S, r),
+              (0, l.I8)(S, r, t),
               j,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetOwnedGames = function (e, r) {
-            return e.SendMsg("Player.GetOwnedGames#1", (0, l.I8)(h, r), W, {
+          (e.GetOwnedGames = function (e, r, t) {
+            return e.SendMsg("Player.GetOwnedGames#1", (0, l.I8)(h, r, t), W, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.GetPlayNext = function (e, r) {
-            return e.SendMsg("Player.GetPlayNext#1", (0, l.I8)(v, r), q, {
+          (e.GetPlayNext = function (e, r, t) {
+            return e.SendMsg("Player.GetPlayNext#1", (0, l.I8)(v, r, t), q, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (e.GetFriendsGameplayInfo = function (e, r) {
+          (e.GetFriendsGameplayInfo = function (e, r, t) {
             return e.SendMsg(
               "Player.GetFriendsGameplayInfo#1",
-              (0, l.I8)(Br, r),
+              (0, l.I8)(Br, r, t),
               dr,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetGameBadgeLevels = function (e, r) {
+          (e.GetGameBadgeLevels = function (e, r, t) {
             return e.SendMsg(
               "Player.GetGameBadgeLevels#1",
-              (0, l.I8)(P, r),
+              (0, l.I8)(P, r, t),
               U,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetProfileBackground = function (e, r) {
+          (e.GetProfileBackground = function (e, r, t) {
             return e.SendMsg(
               "Player.GetProfileBackground#1",
-              (0, l.I8)(G, r),
+              (0, l.I8)(G, r, t),
               k,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.SetProfileBackground = function (e, r) {
+          (e.SetProfileBackground = function (e, r, t) {
             return e.SendMsg(
               "Player.SetProfileBackground#1",
-              (0, l.I8)(A, r),
+              (0, l.I8)(A, r, t),
               E,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetMiniProfileBackground = function (e, r) {
+          (e.GetMiniProfileBackground = function (e, r, t) {
             return e.SendMsg(
               "Player.GetMiniProfileBackground#1",
-              (0, l.I8)(D, r),
+              (0, l.I8)(D, r, t),
               L,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.SetMiniProfileBackground = function (e, r) {
+          (e.SetMiniProfileBackground = function (e, r, t) {
             return e.SendMsg(
               "Player.SetMiniProfileBackground#1",
-              (0, l.I8)(K, r),
+              (0, l.I8)(K, r, t),
               $,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetAvatarFrame = function (e, r) {
-            return e.SendMsg("Player.GetAvatarFrame#1", (0, l.I8)(H, r), V, {
+          (e.GetAvatarFrame = function (e, r, t) {
+            return e.SendMsg("Player.GetAvatarFrame#1", (0, l.I8)(H, r, t), V, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (e.SetAvatarFrame = function (e, r) {
-            return e.SendMsg("Player.SetAvatarFrame#1", (0, l.I8)(Q, r), J, {
+          (e.SetAvatarFrame = function (e, r, t) {
+            return e.SendMsg("Player.SetAvatarFrame#1", (0, l.I8)(Q, r, t), J, {
               ePrivilege: 1,
             });
           }),
-          (e.GetAnimatedAvatar = function (e, r) {
-            return e.SendMsg("Player.GetAnimatedAvatar#1", (0, l.I8)(X, r), Y, {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
+          (e.GetAnimatedAvatar = function (e, r, t) {
+            return e.SendMsg(
+              "Player.GetAnimatedAvatar#1",
+              (0, l.I8)(X, r, t),
+              Y,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+            );
           }),
-          (e.SetAnimatedAvatar = function (e, r) {
+          (e.SetAnimatedAvatar = function (e, r, t) {
             return e.SendMsg(
               "Player.SetAnimatedAvatar#1",
-              (0, l.I8)(Z, r),
+              (0, l.I8)(Z, r, t),
               ee,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetSteamDeckKeyboardSkin = function (e, r) {
+          (e.GetSteamDeckKeyboardSkin = function (e, r, t) {
             return e.SendMsg(
               "Player.GetSteamDeckKeyboardSkin#1",
-              (0, l.I8)(re, r),
+              (0, l.I8)(re, r, t),
               te,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.SetSteamDeckKeyboardSkin = function (e, r) {
+          (e.SetSteamDeckKeyboardSkin = function (e, r, t) {
             return e.SendMsg(
               "Player.SetSteamDeckKeyboardSkin#1",
-              (0, l.I8)(ie, r),
+              (0, l.I8)(ie, r, t),
               se,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetProfileItemsOwned = function (e, r) {
+          (e.GetProfileItemsOwned = function (e, r, t) {
             return e.SendMsg(
               "Player.GetProfileItemsOwned#1",
-              (0, l.I8)(ae, r),
+              (0, l.I8)(ae, r, t),
               ne,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetProfileItemsEquipped = function (e, r) {
+          (e.GetProfileItemsEquipped = function (e, r, t) {
             return e.SendMsg(
               "Player.GetProfileItemsEquipped#1",
-              (0, l.I8)(le, r),
+              (0, l.I8)(le, r, t),
               me,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.SetEquippedProfileItemFlags = function (e, r) {
+          (e.SetEquippedProfileItemFlags = function (e, r, t) {
             return e.SendMsg(
               "Player.SetEquippedProfileItemFlags#1",
-              (0, l.I8)(ce, r),
+              (0, l.I8)(ce, r, t),
               oe,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetEmoticonList = function (e, r) {
-            return e.SendMsg("Player.GetEmoticonList#1", (0, l.I8)(ue, r), Be, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (e.GetEmoticonList = function (e, r, t) {
+            return e.SendMsg(
+              "Player.GetEmoticonList#1",
+              (0, l.I8)(ue, r, t),
+              Be,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
-          (e.GetCommunityBadgeProgress = function (e, r) {
+          (e.GetCommunityBadgeProgress = function (e, r, t) {
             return e.SendMsg(
               "Player.GetCommunityBadgeProgress#1",
-              (0, l.I8)(ge, r),
+              (0, l.I8)(ge, r, t),
               ye,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetTopAchievementsForGames = function (e, r) {
+          (e.GetTopAchievementsForGames = function (e, r, t) {
             return e.SendMsg(
               "Player.GetTopAchievementsForGames#1",
-              (0, l.I8)(Se, r),
+              (0, l.I8)(Se, r, t),
               Re,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetAchievementsProgress = function (e, r) {
+          (e.GetAchievementsProgress = function (e, r, t) {
             return e.SendMsg(
               "Player.GetAchievementsProgress#1",
-              (0, l.I8)(Oe, r),
+              (0, l.I8)(Oe, r, t),
               Te,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetGameAchievements = function (e, r) {
+          (e.GetGameAchievements = function (e, r, t) {
             return e.SendMsg(
               "Player.GetGameAchievements#1",
-              (0, l.I8)(Pe, r),
+              (0, l.I8)(Pe, r, t),
               Ue,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetUserAchievements = function (e, r) {
+          (e.GetUserAchievements = function (e, r, t) {
             return e.SendMsg(
               "Player.GetUserAchievements#1",
-              (0, l.I8)(Ne, r),
+              (0, l.I8)(Ne, r, t),
               Ge,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetUserStats = function (e, r) {
-            return e.SendMsg("Player.GetUserStats#1", (0, l.I8)(We, r), Fe, {
+          (e.GetUserStats = function (e, r, t) {
+            return e.SendMsg("Player.GetUserStats#1", (0, l.I8)(We, r, t), Fe, {
               bConstMethod: !0,
               ePrivilege: 2,
             });
           }),
-          (e.GetFavoriteBadge = function (e, r) {
+          (e.GetFavoriteBadge = function (e, r, t) {
             return e.SendMsg(
               "Player.GetFavoriteBadge#1",
-              (0, l.I8)(Ee, r),
+              (0, l.I8)(Ee, r, t),
               De,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.SetFavoriteBadge = function (e, r) {
+          (e.SetFavoriteBadge = function (e, r, t) {
             return e.SendMsg(
               "Player.SetFavoriteBadge#1",
-              (0, l.I8)(Le, r),
+              (0, l.I8)(Le, r, t),
               Ke,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetProfileCustomization = function (e, r) {
+          (e.GetProfileCustomization = function (e, r, t) {
             return e.SendMsg(
               "Player.GetProfileCustomization#1",
-              (0, l.I8)(Je, r),
+              (0, l.I8)(Je, r, t),
               Xe,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetPurchasedProfileCustomizations = function (e, r) {
+          (e.GetPurchasedProfileCustomizations = function (e, r, t) {
             return e.SendMsg(
               "Player.GetPurchasedProfileCustomizations#1",
-              (0, l.I8)(Ze, r),
+              (0, l.I8)(Ze, r, t),
               er,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetPurchasedAndUpgradedProfileCustomizations = function (e, r) {
+          (e.GetPurchasedAndUpgradedProfileCustomizations = function (e, r, t) {
             return e.SendMsg(
               "Player.GetPurchasedAndUpgradedProfileCustomizations#1",
-              (0, l.I8)(tr, r),
+              (0, l.I8)(tr, r, t),
               ir,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetProfileThemesAvailable = function (e, r) {
+          (e.GetProfileThemesAvailable = function (e, r, t) {
             return e.SendMsg(
               "Player.GetProfileThemesAvailable#1",
-              (0, l.I8)(nr, r),
+              (0, l.I8)(nr, r, t),
               lr,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.SetProfileTheme = function (e, r) {
-            return e.SendMsg("Player.SetProfileTheme#1", (0, l.I8)(mr, r), cr, {
-              ePrivilege: 1,
-            });
+          (e.SetProfileTheme = function (e, r, t) {
+            return e.SendMsg(
+              "Player.SetProfileTheme#1",
+              (0, l.I8)(mr, r, t),
+              cr,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.SetProfilePreferences = function (e, r) {
+          (e.SetProfilePreferences = function (e, r, t) {
             return e.SendMsg(
               "Player.SetProfilePreferences#1",
-              (0, l.I8)(or, r),
+              (0, l.I8)(or, r, t),
               ur,
               { ePrivilege: 1 },
             );
           }),
-          (e.PostStatusToFriends = function (e, r) {
+          (e.PostStatusToFriends = function (e, r, t) {
             return e.SendMsg(
               "Player.PostStatusToFriends#1",
-              (0, l.I8)(Me, r),
+              (0, l.I8)(Me, r, t),
               _e,
               { ePrivilege: 3 },
             );
           }),
-          (e.GetPostedStatus = function (e, r) {
-            return e.SendMsg("Player.GetPostedStatus#1", (0, l.I8)(fe, r), we, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (e.GetPostedStatus = function (e, r, t) {
+            return e.SendMsg(
+              "Player.GetPostedStatus#1",
+              (0, l.I8)(fe, r, t),
+              we,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
-          (e.DeletePostedStatus = function (e, r) {
+          (e.DeletePostedStatus = function (e, r, t) {
             return e.SendMsg(
               "Player.DeletePostedStatus#1",
-              (0, l.I8)(ze, r),
+              (0, l.I8)(ze, r, t),
               pe,
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientGetLastPlayedTimes = function (e, r) {
+          (e.ClientGetLastPlayedTimes = function (e, r, t) {
             return e.SendMsg(
               "Player.ClientGetLastPlayedTimes#1",
-              (0, l.I8)(y, r),
+              (0, l.I8)(y, r, t),
               b,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetTimeSSAAccepted = function (e, r) {
+          (e.GetTimeSSAAccepted = function (e, r, t) {
             return e.SendMsg(
               "Player.GetTimeSSAAccepted#1",
-              (0, l.I8)(br, r),
+              (0, l.I8)(br, r, t),
               Mr,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.AcceptSSA = function (e, r) {
-            return e.SendMsg("Player.AcceptSSA#1", (0, l.I8)(_r, r), fr, {
+          (e.AcceptSSA = function (e, r, t) {
+            return e.SendMsg("Player.AcceptSSA#1", (0, l.I8)(_r, r, t), fr, {
               ePrivilege: 1,
             });
           }),
-          (e.GetNicknameList = function (e, r) {
-            return e.SendMsg("Player.GetNicknameList#1", (0, l.I8)(wr, r), zr, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (e.GetNicknameList = function (e, r, t) {
+            return e.SendMsg(
+              "Player.GetNicknameList#1",
+              (0, l.I8)(wr, r, t),
+              zr,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
-          (e.GetPerFriendPreferences = function (e, r) {
+          (e.GetPerFriendPreferences = function (e, r, t) {
             return e.SendMsg(
               "Player.GetPerFriendPreferences#1",
-              (0, l.I8)(Rr, r),
+              (0, l.I8)(Rr, r, t),
               jr,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.SetPerFriendPreferences = function (e, r) {
+          (e.SetPerFriendPreferences = function (e, r, t) {
             return e.SendMsg(
               "Player.SetPerFriendPreferences#1",
-              (0, l.I8)(hr, r),
+              (0, l.I8)(hr, r, t),
               Wr,
               { ePrivilege: 1 },
             );
           }),
-          (e.AddFriend = function (e, r) {
-            return e.SendMsg("Player.AddFriend#1", (0, l.I8)(Fr, r), vr, {
+          (e.AddFriend = function (e, r, t) {
+            return e.SendMsg("Player.AddFriend#1", (0, l.I8)(Fr, r, t), vr, {
               ePrivilege: 1,
             });
           }),
-          (e.RemoveFriend = function (e, r) {
-            return e.SendMsg("Player.RemoveFriend#1", (0, l.I8)(qr, r), Or, {
+          (e.RemoveFriend = function (e, r, t) {
+            return e.SendMsg("Player.RemoveFriend#1", (0, l.I8)(qr, r, t), Or, {
               ePrivilege: 1,
             });
           }),
-          (e.IgnoreFriend = function (e, r) {
-            return e.SendMsg("Player.IgnoreFriend#1", (0, l.I8)(Tr, r), Ir, {
+          (e.IgnoreFriend = function (e, r, t) {
+            return e.SendMsg("Player.IgnoreFriend#1", (0, l.I8)(Tr, r, t), Ir, {
               ePrivilege: 1,
             });
           }),
-          (e.GetCommunityPreferences = function (e, r) {
+          (e.GetCommunityPreferences = function (e, r, t) {
             return e.SendMsg(
               "Player.GetCommunityPreferences#1",
-              (0, l.I8)(Ur, r),
+              (0, l.I8)(Ur, r, t),
               Cr,
               { ePrivilege: 1 },
             );
           }),
-          (e.SetCommunityPreferences = function (e, r) {
+          (e.SetCommunityPreferences = function (e, r, t) {
             return e.SendMsg(
               "Player.SetCommunityPreferences#1",
-              (0, l.I8)(xr, r),
+              (0, l.I8)(xr, r, t),
               Nr,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetTextFilterWords = function (e, r) {
+          (e.GetTextFilterWords = function (e, r, t) {
             return e.SendMsg(
               "Player.GetTextFilterWords#1",
-              (0, l.I8)(kr, r),
+              (0, l.I8)(kr, r, t),
               Ar,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetNewSteamAnnouncementState = function (e, r) {
+          (e.GetNewSteamAnnouncementState = function (e, r, t) {
             return e.SendMsg(
               "Player.GetNewSteamAnnouncementState#1",
-              (0, l.I8)(Er, r),
+              (0, l.I8)(Er, r, t),
               Dr,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.UpdateSteamAnnouncementLastRead = function (e, r) {
+          (e.UpdateSteamAnnouncementLastRead = function (e, r, t) {
             return e.SendMsg(
               "Player.UpdateSteamAnnouncementLastRead#1",
-              (0, l.I8)(Lr, r),
+              (0, l.I8)(Lr, r, t),
               Kr,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetPrivacySettings = function (e, r) {
+          (e.GetPrivacySettings = function (e, r, t) {
             return e.SendMsg(
               "Player.GetPrivacySettings#1",
-              (0, l.I8)(Hr, r),
+              (0, l.I8)(Hr, r, t),
               Vr,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetDurationControl = function (e, r) {
+          (e.GetDurationControl = function (e, r, t) {
             return e.SendMsg(
               "Player.GetDurationControl#1",
-              (0, l.I8)(Qr, r),
+              (0, l.I8)(Qr, r, t),
               Jr,
               { ePrivilege: 1 },
             );
           }),
-          (e.RecordDisconnectedPlaytime = function (e, r) {
+          (e.RecordDisconnectedPlaytime = function (e, r, t) {
             return e.SendMsg(
               "Player.RecordDisconnectedPlaytime#1",
-              (0, l.I8)(O, r),
+              (0, l.I8)(O, r, t),
               I,
               { ePrivilege: 1 },
             );

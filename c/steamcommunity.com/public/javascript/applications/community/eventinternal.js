@@ -490,7 +490,7 @@
             const _ =
               _._.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
             let _ = new URLSearchParams();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("salePageID", _),
               _.append("clanAccountID", "" + _),
               _ && _.append("gidClanEvent", _);
@@ -552,7 +552,7 @@
             const _ =
                 _._.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,

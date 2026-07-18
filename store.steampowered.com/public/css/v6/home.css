@@ -862,18 +862,28 @@ a.home_headercap:hover {
 .discovery_queue_overlay_bg {
 	width: 810px;
 	max-width: 100%;
-	background: url( '/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top right;
 	height: 92px;
+	position: relative;
+}
+.discovery_queue_overlay_bg::before {
+	content: '';
+	background: url( '/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top right;
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+}
+.discovery_queue_overlay_bg:dir(rtl)::before {
+	transform: scaleX(-1);
 }
 
-.discovery_queue_overlay:hover .discovery_queue_overlay_bg {
+.discovery_queue_overlay:hover .discovery_queue_overlay_bg::before {
 	background-position: bottom;
 }
 
 .discovery_queue_overlay_message {
 	padding: 30px 52px 0 32px;
 	line-height: 30px;
-	text-align: left;
+	text-align: start;
 	font-size: 18px;
 	color: #ffcc6a;
 			font-family: "Motiva Sans", Sans-serif;
@@ -910,7 +920,7 @@ a.home_headercap:hover {
 	}
 	.dq_static_pos_2 {
 		top: 0px;
-		left: 0px;
+		inset-inline-start: 0px;
 		z-index: 5;
 		opacity: 1;
 	}
@@ -923,7 +933,7 @@ a.home_headercap:hover {
 	}
 	.dq_static_pos_3 {
 		top: 11px;
-		left: 221px;
+		inset-inline-start: 221px;
 		z-index: 4;
 		opacity: 1;
 	}
@@ -936,7 +946,7 @@ a.home_headercap:hover {
 	}
 	.dq_static_pos_4 {
 		top: 20px;
-		left: 431px;
+		inset-inline-start: 431px;
 		z-index: 3;
 		opacity: 1;
 	}
@@ -949,7 +959,7 @@ a.home_headercap:hover {
 	}
 	.dq_static_pos_5 {
 		top: 28px;
-		left: 641px;
+		inset-inline-start: 641px;
 		z-index: 2;
 		opacity: 1;
 	}

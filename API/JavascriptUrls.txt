@@ -261,7 +261,6 @@ ${COMMUNITY_BASE_URL}groups
 ${COMMUNITY_BASE_URL}groups/${VANITY_ID}
 ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
-${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
 ${COMMUNITY_BASE_URL}groups/community_market/discussions/
 ${COMMUNITY_BASE_URL}groups/steamworks/discussions
@@ -519,6 +518,7 @@ ${IMG_URL}${}.png
 ${IMG_URL}${}/icons/scroll_arrow.png
 ${IMG_URL}${}/river_vials/river_vial_${}1.jpg
 ${IMG_URL}${}/river_vials/river_vial_icon_${}.png
+${IMG_URL}/${image_path}
 ${IMG_URL}/${}
 ${IMG_URL}/checkout/computer.png
 ${IMG_URL}/cs2/audio.png
@@ -872,6 +872,7 @@ ${IMG_URL}team_unknown.png
 ${IMG_URL}team_unkown.png
 ${IMG_URL}teams_fallback/${nTeamID}.png
 ${IMG_URL}teams_override/team_unknown_web.png
+${IMG_URL}v6/ico/${_ ? "ico_learning_about_game.png" : "ico_info.png"}
 ${IMG_URL}valve_logo.png
 ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
@@ -1254,10 +1255,10 @@ ${PARTNER_BASE_URL}steamdirect
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
 ${PARTNER_BASE_URL}steamml/edit_problem
-${PARTNER_BASE_URL}steamml/get_problem_details?problemid=${}&sessionid=${SESSIONID}
-${PARTNER_BASE_URL}steamml/get_problems?sessionid=${SESSIONID}
-${PARTNER_BASE_URL}steamml/get_schema_details?appid=${}&schemaid=${}&sessionid=${SESSIONID}
-${PARTNER_BASE_URL}steamml/get_schemas?appid=${}&includesteammlapp=${}&sessionid=${SESSIONID}
+${PARTNER_BASE_URL}steamml/get_problem_details?problemid=${}&sessionid=${}
+${PARTNER_BASE_URL}steamml/get_problems?sessionid=${}
+${PARTNER_BASE_URL}steamml/get_schema_details?appid=${}&schemaid=${}&sessionid=${}
+${PARTNER_BASE_URL}steamml/get_schemas?appid=${}&includesteammlapp=${}&sessionid=${}
 ${PARTNER_BASE_URL}store/ajaxpackagesave/${}
 ${PARTNER_BASE_URL}store/ajaxpublishpackages
 ${PARTNER_BASE_URL}store/ajaxupdatef2pstore
@@ -1951,6 +1952,8 @@ ${g_szBaseURL}/apps/revert/${appid}
 ${g_szBaseURL}/apps/saveachievement/${appid}
 ${g_szBaseURL}/apps/savelanguages/${appid}
 ${g_szBaseURL}/apps/savestat/${appid}
+${g_szBaseURL}/apps/setappallowdevretirement/${appid}
+${g_szBaseURL}/apps/setappallowdevretirementanydlc/${appid}
 ${g_szBaseURL}/apps/setcommunityfriendlyname/${appid}
 ${g_szBaseURL}/apps/setcommunitystatshidden/${appid}
 ${g_szBaseURL}/apps/setdedicatedgs/${appid}
@@ -2902,7 +2905,6 @@ https://store.steampowered.com//ajaxreportproductaction/${appId}/
 https://store.steampowered.com//app/${appid}
 https://store.steampowered.com//news/post/${gid}
 https://store.steampowered.com//userreviews/ajaxgetvotes/
-https://store.steampowered.com/about/
 https://store.steampowered.com/account/
 https://store.steampowered.com/account/ajaxcreatewalletandcheckfunds/
 https://store.steampowered.com/account/ajaxredeemwalletcode/
@@ -3352,7 +3354,6 @@ url( ${IMG_URL}close.png )
 url( ${IMG_URL}dota_icon_generic.png )
 url( ${IMG_URL}dpc/bottom_block.jpg )
 url( ${IMG_URL}dpc/dark_gray_bg.jpg )
-url( ${IMG_URL}dpc/dpc_about_footer.jpg )
 url( ${IMG_URL}dpc/dpc_about_seasons.jpg )
 url( ${IMG_URL}dpc/dpc_about_tournaments.jpg )
 url( ${IMG_URL}dpc/dpc_about_tours.jpg )

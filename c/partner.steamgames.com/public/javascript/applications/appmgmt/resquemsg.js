@@ -433,7 +433,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ =
@@ -457,6 +456,8 @@
             })
           : _;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
       }
@@ -466,16 +467,28 @@
           rtEstimatedNotifcationDate: _,
           strUrlLearnMoreLink: _,
           bInReservationQueue: _,
+          bWaitlistIsActive: _,
+          reservedHardwareDetail: _,
+          bHideLabel: _,
         } = _;
-        if (!_ || !_)
+        let _ = _._.Localize("#Sale_Reservation_Fallback_V2"),
+          _ = !1;
+        if (
+          (_
+            ? (_ = _._.Localize("#Sale_Reservation_Fallback_user_V2"))
+            : _ &&
+              _ &&
+              !_.position_is_waitlist &&
+              ((_ = _._.Localize(
+                "#Reservation_Join_Waitlist_Cancel_Reservation",
+              )),
+              (_ = !0)),
+          !_ || !_ || _)
+        )
           return (0, _.jsx)("div", {
             className: _().Ctn,
             children: (0, _.jsx)(_, {
-              elReservationMessage: _._.Localize(
-                _
-                  ? "#Sale_Reservation_Fallback_user_V2"
-                  : "#Sale_Reservation_Fallback_V2",
-              ),
+              elReservationMessage: _,
               strUrlLearnMoreLink: _,
             }),
           });
@@ -540,19 +553,29 @@
             }
             break;
           case "#Sale_Reservation_AvailabilityUnknown":
-            _ = _
-              ? "#Sale_Reservation_Fallback_user_V2"
-              : "#Sale_Reservation_Fallback_V2";
+            _ = void 0;
             break;
           default:
             _ = "#Sale_Reservation_Fallback";
         }
-        return (0, _.jsx)("div", {
+        return (0, _.jsxs)("div", {
           className: _().Ctn,
-          children: (0, _.jsx)(_, {
-            elReservationMessage: (0, _._)(_, _, _, _, ""),
-            strUrlLearnMoreLink: _,
-          }),
+          children: [
+            (0, _.jsx)("div", {
+              children:
+                !_ &&
+                !!_ &&
+                (0, _._)(
+                  _
+                    ? "#Sale_Reservation_YourExpectedDate"
+                    : "#Sale_Reservation_ExpectedDate",
+                ),
+            }),
+            (0, _.jsx)(_, {
+              elReservationMessage: _ ? (0, _._)(_, _, _, _, "") : _,
+              strUrlLearnMoreLink: _,
+            }),
+          ],
         });
       }
       var _ = __webpack_require__("chunkid");
@@ -712,6 +735,7 @@
                 rtEstimatedNotifcationDate: _.rtime_estimated_notification,
                 strToken: _.localization_token,
                 bInReservationQueue: !0,
+                bHideLabel: !0,
               }),
             }),
             (0, _.jsxs)("td", {
@@ -941,6 +965,7 @@
                       rtEstimatedNotifcationDate: _,
                       strToken: _,
                       bInReservationQueue: !0,
+                      bHideLabel: !0,
                     }),
                   ],
                 }),

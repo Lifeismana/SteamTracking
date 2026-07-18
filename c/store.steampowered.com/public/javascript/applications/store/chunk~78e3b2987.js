@@ -1128,25 +1128,25 @@
       }
       var _;
       !(function (_) {
-        (_.Update = function (_, _) {
-          return _.SendMsg("UserReviews.Update#1", (0, _._)(_, _), _, {
+        (_.Update = function (_, _, _) {
+          return _.SendMsg("UserReviews.Update#1", (0, _._)(_, _, _), _, {
             ePrivilege: 3,
           });
         }),
-          (_.BackfillSavedHardware = function (_, _) {
+          (_.BackfillSavedHardware = function (_, _, _) {
             return _.SendMsg(
               "UserReviews.BackfillSavedHardware#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetFriendsRecommendedApp = function (_, _) {
+          (_.GetFriendsRecommendedApp = function (_, _, _) {
             return _.SendMsg(
               "UserReviews.GetFriendsRecommendedApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1154,10 +1154,10 @@
               },
             );
           }),
-          (_.GetIndividualRecommendations = function (_, _) {
+          (_.GetIndividualRecommendations = function (_, _, _) {
             return _.SendMsg(
               "UserReviews.GetIndividualRecommendations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

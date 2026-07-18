@@ -4885,7 +4885,8 @@
           (0, _.jsx)("a", {
             href: `${_._.BASE_URL}personadetails/${_}?u=${_}&appid=${_._.DOTA_APP_ID}`,
             children: _,
-          });
+          }),
+        _ = [19785, 19894, 19890, 19891, 19892, 19893, 19101, 19696];
       var _;
       !(function (_) {
         (_[(_.kTRAA_RegisterTeam = 0)] = "kTRAA_RegisterTeam"),
@@ -5420,7 +5421,7 @@
             displayName: "Series ID",
           },
           {
-            key: "scheduled_time",
+            key: "actual_time",
             displayName: "Series Date & Time",
             formatFunction: (_) =>
               _
@@ -5543,7 +5544,7 @@
               return;
             const _ = {
                 appid: _._.DOTA_APP_ID,
-                _: "public" !== _._.WEB_UNIVERSE ? "beta" : _,
+                _: _,
                 team_id: _,
               },
               _ = await _().get(
@@ -5553,7 +5554,7 @@
                 },
               ),
               _ = _?.data,
-              _ = _.members || [];
+              _ = _?.members || [];
             try {
               const _ = await _().get(_._.BASE_URL + "teams/getugcfilelinks/", {
                 params: {
@@ -5700,11 +5701,12 @@
                   _._.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
               );
               let _ = [];
+              __webpack_require__.push(..._);
               for (let _ of _) {
                 const _ = _.leagues.map((_) => _.league_id);
                 __webpack_require__.push(..._);
               }
-              __webpack_require__.sort(),
+              __webpack_require__.sort().reverse(),
                 (_ = __webpack_require__.filter(
                   (_, _, _) => __webpack_require__.indexOf(_) == _,
                 )),
@@ -5750,15 +5752,15 @@
                                 (_.score = `${_.team_2_wins} - ${_.team_1_wins}`)),
                             0 === _.team_1_wins &&
                               0 === _.team_2_wins &&
-                              _.scheduled_time &&
-                              new Date().getTime() < 1e3 * _.scheduled_time &&
+                              _.actual_time &&
+                              new Date().getTime() < 1e3 * _.actual_time &&
                               (_.outcome = "Upcoming"),
                             _.push(_));
                   var _;
                   _.sort((_, _) =>
-                    _.scheduled_time > _.scheduled_time
+                    _.actual_time > _.actual_time
                       ? -1
-                      : _.scheduled_time < _.scheduled_time
+                      : _.actual_time < _.actual_time
                         ? 1
                         : 0,
                   ),
@@ -6448,6 +6450,7 @@
                                     ),
                                   ),
                                 );
+                              _.push((0, _.jsx)("br", {}));
                             }),
                             _
                           );

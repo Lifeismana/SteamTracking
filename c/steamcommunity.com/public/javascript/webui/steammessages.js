@@ -522,6 +522,10 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = 0,
         _ = 1,
@@ -586,7 +590,11 @@ var CLSTAMP = "steamdb";
         _ = 60,
         _ = 61,
         _ = 62,
-        _ = 63;
+        _ = 63,
+        _ = 65,
+        _ = 66,
+        _ = 67,
+        _ = 68;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -1153,7 +1161,7 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
       });
-      const _ = /^(3389|6814)$/.test(__webpack_require__._) ? -1 : null,
+      const _ = 7612 != __webpack_require__._ ? -1 : null,
         _ = 0,
         _ = 1,
         _ = 2,
@@ -1294,8 +1302,6 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       const _ = 1,
         _ = 2,
@@ -1322,8 +1328,6 @@ var CLSTAMP = "steamdb";
         _ = 23,
         _ = 24,
         _ = 25,
-        _ = 26,
-        _ = 27,
         _ = 28,
         _ = 29,
         _ = 30,
@@ -2724,61 +2728,61 @@ var CLSTAMP = "steamdb";
       }
       var _;
       !(function (_) {
-        (_.GetCart = function (_, _) {
-          return _.SendMsg("AccountCart.GetCart#1", (0, _._)(_, _), _, {
+        (_.GetCart = function (_, _, _) {
+          return _.SendMsg("AccountCart.GetCart#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
         }),
-          (_.AddItemsToCart = function (_, _) {
+          (_.AddItemsToCart = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.AddItemsToCart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ModifyLineItem = function (_, _) {
+          (_.ModifyLineItem = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.ModifyLineItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RemoveItemFromCart = function (_, _) {
+          (_.RemoveItemFromCart = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.RemoveItemFromCart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.MergeShoppingCartContents = function (_, _) {
+          (_.MergeShoppingCartContents = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.MergeShoppingCartContents#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.DeleteCart = function (_, _) {
-            return _.SendMsg("AccountCart.DeleteCart#1", (0, _._)(_, _), _, {
+          (_.DeleteCart = function (_, _, _) {
+            return _.SendMsg("AccountCart.DeleteCart#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetRelevantCoupons = function (_, _) {
+          (_.GetRelevantCoupons = function (_, _, _) {
             return _.SendMsg(
               "AccountCart.GetRelevantCoupons#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -2798,10 +2802,8 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -3243,10 +3245,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        _.GetCookiePreferences = function (_, _) {
+        _.GetCookiePreferences = function (_, _, _) {
           return _.SendMsg(
             "AccountPrivacy.GetCookiePreferences#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -3596,20 +3598,20 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.ToggleAppPrivacy = function (_, _) {
+        (_.ToggleAppPrivacy = function (_, _, _) {
           return _.SendMsg(
             "AccountPrivateApps.ToggleAppPrivacy#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.GetPrivateAppList = function (_, _) {
+          (_.GetPrivateAppList = function (_, _, _) {
             return _.SendMsg(
               "AccountPrivateApps.GetPrivateAppList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7158,10 +7160,10 @@ var CLSTAMP = "steamdb";
       }
       var _, _, _;
       !(function (_) {
-        (_.GetPasswordRSAPublicKey = function (_, _) {
+        (_.GetPasswordRSAPublicKey = function (_, _, _) {
           return _.SendMsg(
             "Authentication.GetPasswordRSAPublicKey#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -7170,10 +7172,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.BeginAuthSessionViaQR = function (_, _) {
+          (_.BeginAuthSessionViaQR = function (_, _, _) {
             return _.SendMsg(
               "Authentication.BeginAuthSessionViaQR#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -7181,10 +7183,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.BeginAuthSessionViaCredentials = function (_, _) {
+          (_.BeginAuthSessionViaCredentials = function (_, _, _) {
             return _.SendMsg(
               "Authentication.BeginAuthSessionViaCredentials#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -7192,10 +7194,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.PollAuthSessionStatus = function (_, _) {
+          (_.PollAuthSessionStatus = function (_, _, _) {
             return _.SendMsg(
               "Authentication.PollAuthSessionStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -7203,20 +7205,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetAuthSessionInfo = function (_, _) {
+          (_.GetAuthSessionInfo = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GetAuthSessionInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAuthSessionRiskInfo = function (_, _) {
+          (_.GetAuthSessionRiskInfo = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GetAuthSessionRiskInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -7232,20 +7234,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.UpdateAuthSessionWithMobileConfirmation = function (_, _) {
+          (_.UpdateAuthSessionWithMobileConfirmation = function (_, _, _) {
             return _.SendMsg(
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdateAuthSessionWithSteamGuardCode = function (_, _) {
+          (_.UpdateAuthSessionWithSteamGuardCode = function (_, _, _) {
             return _.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -7253,10 +7255,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GenerateAccessTokenForApp = function (_, _) {
+          (_.GenerateAccessTokenForApp = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GenerateAccessTokenForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -7264,20 +7266,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.EnumerateTokens = function (_, _) {
+          (_.EnumerateTokens = function (_, _, _) {
             return _.SendMsg(
               "Authentication.EnumerateTokens#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAuthSessionsForAccount = function (_, _) {
+          (_.GetAuthSessionsForAccount = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GetAuthSessionsForAccount#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7285,10 +7287,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.RevokeToken = function (_, _) {
+          (_.RevokeToken = function (_, _, _) {
             return _.SendMsg(
               "Authentication.RevokeToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -7296,10 +7298,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.RevokeRefreshToken = function (_, _) {
+          (_.RevokeRefreshToken = function (_, _, _) {
             return _.SendMsg(
               "Authentication.RevokeRefreshToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -7309,10 +7311,10 @@ var CLSTAMP = "steamdb";
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.QueryRefreshTokensByAccount = function (_, _) {
+          (_.QueryRefreshTokensByAccount = function (_, _, _) {
             return _.SendMsg(
               "AuthenticationSupport.QueryRefreshTokensByAccount#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7320,10 +7322,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-            (_.QueryRefreshTokenByID = function (_, _) {
+            (_.QueryRefreshTokenByID = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.QueryRefreshTokenByID#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -7331,20 +7333,20 @@ var CLSTAMP = "steamdb";
                 },
               );
             }),
-            (_.RevokeToken = function (_, _) {
+            (_.RevokeToken = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.RevokeToken#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 5,
                 },
               );
             }),
-            (_.GetTokenHistory = function (_, _) {
+            (_.GetTokenHistory = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.GetTokenHistory#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -7352,10 +7354,10 @@ var CLSTAMP = "steamdb";
                 },
               );
             }),
-            (_.MarkTokenCompromised = function (_, _) {
+            (_.MarkTokenCompromised = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.MarkTokenCompromised#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 5,
@@ -7364,16 +7366,21 @@ var CLSTAMP = "steamdb";
             });
         })(_ || (_ = {})),
         (function (_) {
-          (_.CreateNonce = function (_, _) {
-            return _.SendMsg("CloudGaming.CreateNonce#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.CreateNonce = function (_, _, _) {
+            return _.SendMsg(
+              "CloudGaming.CreateNonce#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-            (_.GetTimeRemaining = function (_, _) {
+            (_.GetTimeRemaining = function (_, _, _) {
               return _.SendMsg(
                 "CloudGaming.GetTimeRemaining#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -14482,30 +14489,30 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.BeginBroadcastSession = function (_, _) {
+        (_.BeginBroadcastSession = function (_, _, _) {
           return _.SendMsg(
             "Broadcast.BeginBroadcastSession#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.EndBroadcastSession = function (_, _) {
+          (_.EndBroadcastSession = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.EndBroadcastSession#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.StartBroadcastUpload = function (_, _) {
+          (_.StartBroadcastUpload = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.StartBroadcastUpload#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -14521,10 +14528,15 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.WatchBroadcast = function (_, _) {
-            return _.SendMsg("Broadcast.WatchBroadcast#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-            });
+          (_.WatchBroadcast = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WatchBroadcast#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 2,
+              },
+            );
           }),
           (_.HeartbeatBroadcast = function (_, _) {
             return _.SendNotification(
@@ -14544,40 +14556,40 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastStatus = function (_, _) {
+          (_.GetBroadcastStatus = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.GetBroadcastThumbnail = function (_, _) {
+          (_.GetBroadcastThumbnail = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastThumbnail#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.InviteToBroadcast = function (_, _) {
+          (_.InviteToBroadcast = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.InviteToBroadcast#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SendBroadcastStateToServer = function (_, _) {
+          (_.SendBroadcastStateToServer = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.SendBroadcastStateToServer#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -14593,71 +14605,81 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChatInfo = function (_, _) {
+          (_.GetBroadcastChatInfo = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastChatInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.PostChatMessage = function (_, _) {
-            return _.SendMsg("Broadcast.PostChatMessage#1", (0, _._)(_, _), _, {
-              ePrivilege: 3,
-            });
+          (_.PostChatMessage = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.PostChatMessage#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 3,
+              },
+            );
           }),
-          (_.UpdateChatMessageFlair = function (_, _) {
+          (_.UpdateChatMessageFlair = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.UpdateChatMessageFlair#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.MuteBroadcastChatUser = function (_, _) {
+          (_.MuteBroadcastChatUser = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.MuteBroadcastChatUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.RemoveUserChatText = function (_, _) {
+          (_.RemoveUserChatText = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.RemoveUserChatText#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetBroadcastChatUserNames = function (_, _) {
+          (_.GetBroadcastChatUserNames = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastChatUserNames#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.StartBuildClip = function (_, _) {
-            return _.SendMsg("Broadcast.StartBuildClip#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
+          (_.StartBuildClip = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.StartBuildClip#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
           }),
-          (_.GetBuildClipStatus = function (_, _) {
+          (_.GetBuildClipStatus = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBuildClipStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14666,26 +14688,36 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetClipDetails = function (_, _) {
-            return _.SendMsg("Broadcast.SetClipDetails#1", (0, _._)(_, _), _, {
+          (_.SetClipDetails = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.SetClipDetails#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.GetClipDetails = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.GetClipDetails#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.SetRTMPInfo = function (_, _, _) {
+            return _.SendMsg("Broadcast.SetRTMPInfo#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetClipDetails = function (_, _) {
-            return _.SendMsg("Broadcast.GetClipDetails#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (_.SetRTMPInfo = function (_, _) {
-            return _.SendMsg("Broadcast.SetRTMPInfo#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetRTMPInfo = function (_, _) {
-            return _.SendMsg("Broadcast.GetRTMPInfo#1", (0, _._)(_, _), _, {
+          (_.GetRTMPInfo = function (_, _, _) {
+            return _.SendMsg("Broadcast.GetRTMPInfo#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -14699,70 +14731,80 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.WebRTCStartResult = function (_, _) {
+          (_.WebRTCStartResult = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCStartResult#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCStopped = function (_, _) {
-            return _.SendMsg("Broadcast.WebRTCStopped#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.WebRTCStopped = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WebRTCStopped#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.WebRTCSetAnswer = function (_, _) {
-            return _.SendMsg("Broadcast.WebRTCSetAnswer#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.WebRTCSetAnswer = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WebRTCSetAnswer#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.WebRTCLookupTURNServer = function (_, _) {
+          (_.WebRTCLookupTURNServer = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCLookupTURNServer#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCAddHostCandidate = function (_, _) {
+          (_.WebRTCAddHostCandidate = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCAddHostCandidate#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCAddViewerCandidate = function (_, _) {
+          (_.WebRTCAddViewerCandidate = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCAddViewerCandidate#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCGetHostCandidates = function (_, _) {
+          (_.WebRTCGetHostCandidates = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCGetHostCandidates#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetBroadcastUploadStats = function (_, _) {
+          (_.GetBroadcastUploadStats = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastUploadStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14771,10 +14813,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastViewerStats = function (_, _) {
+          (_.GetBroadcastViewerStats = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastViewerStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -25402,10 +25444,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        _.RequestFriendPersonaStates = function (_, _) {
+        _.RequestFriendPersonaStates = function (_, _, _) {
           return _.SendMsg(
             "Chat.RequestFriendPersonaStates#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
@@ -25414,300 +25456,335 @@ var CLSTAMP = "steamdb";
         };
       })(_ || (_ = {})),
         (function (_) {
-          (_.CreateChatRoomGroup = function (_, _) {
+          (_.CreateChatRoomGroup = function (_, _, _) {
             return _.SendMsg(
               "ChatRoom.CreateChatRoomGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-            (_.SaveChatRoomGroup = function (_, _) {
+            (_.SaveChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SaveChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.RenameChatRoomGroup = function (_, _) {
+            (_.RenameChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.RenameChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetChatRoomGroupTagline = function (_, _) {
+            (_.SetChatRoomGroupTagline = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetChatRoomGroupTagline#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetChatRoomGroupAvatar = function (_, _) {
+            (_.SetChatRoomGroupAvatar = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetChatRoomGroupAvatar#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetChatRoomGroupWatchingBroadcast = function (_, _) {
+            (_.SetChatRoomGroupWatchingBroadcast = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetChatRoomGroupWatchingBroadcast#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.JoinMiniGameForChatRoomGroup = function (_, _) {
+            (_.JoinMiniGameForChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.JoinMiniGameForChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.EndMiniGameForChatRoomGroup = function (_, _) {
+            (_.EndMiniGameForChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.EndMiniGameForChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.MuteUserInGroup = function (_, _) {
+            (_.MuteUserInGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.MuteUserInGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.KickUserFromGroup = function (_, _) {
+            (_.KickUserFromGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.KickUserFromGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetUserBanState = function (_, _) {
+            (_.SetUserBanState = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetUserBanState#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.RevokeInviteToGroup = function (_, _) {
+            (_.RevokeInviteToGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.RevokeInviteToGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CreateRole = function (_, _) {
-              return _.SendMsg("ChatRoom.CreateRole#1", (0, _._)(_, _), _, {
+            (_.CreateRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.CreateRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.GetRoles = function (_, _) {
-              return _.SendMsg("ChatRoom.GetRoles#1", (0, _._)(_, _), _, {
+            (_.GetRoles = function (_, _, _) {
+              return _.SendMsg("ChatRoom.GetRoles#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 1,
               });
             }),
-            (_.RenameRole = function (_, _) {
-              return _.SendMsg("ChatRoom.RenameRole#1", (0, _._)(_, _), _, {
+            (_.RenameRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.RenameRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.ReorderRole = function (_, _) {
-              return _.SendMsg("ChatRoom.ReorderRole#1", (0, _._)(_, _), _, {
+            (_.ReorderRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.ReorderRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.DeleteRole = function (_, _) {
-              return _.SendMsg("ChatRoom.DeleteRole#1", (0, _._)(_, _), _, {
+            (_.DeleteRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.DeleteRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.GetRoleActions = function (_, _) {
-              return _.SendMsg("ChatRoom.GetRoleActions#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
+            (_.GetRoleActions = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetRoleActions#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
             }),
-            (_.ReplaceRoleActions = function (_, _) {
+            (_.ReplaceRoleActions = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.ReplaceRoleActions#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.AddRoleToUser = function (_, _) {
-              return _.SendMsg("ChatRoom.AddRoleToUser#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.AddRoleToUser = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.AddRoleToUser#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.GetRolesForUser = function (_, _) {
+            (_.GetRolesForUser = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetRolesForUser#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.DeleteRoleFromUser = function (_, _) {
+            (_.DeleteRoleFromUser = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.DeleteRoleFromUser#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.JoinChatRoomGroup = function (_, _) {
+            (_.JoinChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.JoinChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.InviteFriendToChatRoomGroup = function (_, _) {
+            (_.InviteFriendToChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.InviteFriendToChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.LeaveChatRoomGroup = function (_, _) {
+            (_.LeaveChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.LeaveChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CreateChatRoom = function (_, _) {
-              return _.SendMsg("ChatRoom.CreateChatRoom#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.CreateChatRoom = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.CreateChatRoom#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.DeleteChatRoom = function (_, _) {
-              return _.SendMsg("ChatRoom.DeleteChatRoom#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.DeleteChatRoom = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.DeleteChatRoom#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.RenameChatRoom = function (_, _) {
-              return _.SendMsg("ChatRoom.RenameChatRoom#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.RenameChatRoom = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.RenameChatRoom#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.ReorderChatRoom = function (_, _) {
+            (_.ReorderChatRoom = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.ReorderChatRoom#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SendChatMessage = function (_, _) {
+            (_.SendChatMessage = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SendChatMessage#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.JoinVoiceChat = function (_, _) {
-              return _.SendMsg("ChatRoom.JoinVoiceChat#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
-            }),
-            (_.LeaveVoiceChat = function (_, _) {
-              return _.SendMsg("ChatRoom.LeaveVoiceChat#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetMessageHistory = function (_, _) {
+            (_.JoinVoiceChat = function (_, _, _) {
               return _.SendMsg(
-                "ChatRoom.GetMessageHistory#1",
-                (0, _._)(_, _),
+                "ChatRoom.JoinVoiceChat#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.GetMyChatRoomGroups = function (_, _) {
+            (_.LeaveVoiceChat = function (_, _, _) {
               return _.SendMsg(
-                "ChatRoom.GetMyChatRoomGroups#1",
-                (0, _._)(_, _),
+                "ChatRoom.LeaveVoiceChat#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetChatRoomGroupState = function (_, _) {
+            (_.GetMessageHistory = function (_, _, _) {
               return _.SendMsg(
-                "ChatRoom.GetChatRoomGroupState#1",
-                (0, _._)(_, _),
+                "ChatRoom.GetMessageHistory#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetAppChatRoomGroupForceActive = function (_, _) {
+            (_.GetMyChatRoomGroups = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetMyChatRoomGroups#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetChatRoomGroupState = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetChatRoomGroupState#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
+            }),
+            (_.SetAppChatRoomGroupForceActive = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetAppChatRoomGroupForceActive#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -25732,85 +25809,95 @@ var CLSTAMP = "steamdb";
                 },
               );
             }),
-            (_.CreateInviteLink = function (_, _) {
+            (_.CreateInviteLink = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.CreateInviteLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.GetInviteLinkInfo = function (_, _) {
+            (_.GetInviteLinkInfo = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetInviteLinkInfo#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetInviteInfo = function (_, _) {
-              return _.SendMsg("ChatRoom.GetInviteInfo#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
+            (_.GetInviteInfo = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetInviteInfo#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
             }),
-            (_.GetInviteLinksForGroup = function (_, _) {
+            (_.GetInviteLinksForGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetInviteLinksForGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.GetBanList = function (_, _) {
-              return _.SendMsg("ChatRoom.GetBanList#1", (0, _._)(_, _), _, {
+            (_.GetBanList = function (_, _, _) {
+              return _.SendMsg("ChatRoom.GetBanList#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.GetInviteList = function (_, _) {
-              return _.SendMsg("ChatRoom.GetInviteList#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.GetInviteList = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetInviteList#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.DeleteInviteLink = function (_, _) {
+            (_.DeleteInviteLink = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.DeleteInviteLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetSessionActiveChatRoomGroups = function (_, _) {
+            (_.SetSessionActiveChatRoomGroups = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetSessionActiveChatRoomGroups#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.SetUserChatGroupPreferences = function (_, _) {
+            (_.SetUserChatGroupPreferences = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetUserChatGroupPreferences#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.DeleteChatMessages = function (_, _) {
+            (_.DeleteChatMessages = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.DeleteChatMessages#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -25826,58 +25913,73 @@ var CLSTAMP = "steamdb";
                 },
               );
             }),
-            (_.SearchMembers = function (_, _) {
-              return _.SendMsg("ChatRoom.SearchMembers#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
+            (_.SearchMembers = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.SearchMembers#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
             }),
-            (_.UpdateMessageReaction = function (_, _) {
+            (_.UpdateMessageReaction = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.UpdateMessageReaction#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetMessageReactionReactors = function (_, _) {
+            (_.GetMessageReactionReactors = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetMessageReactionReactors#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.ReportMessage = function (_, _) {
-              return _.SendMsg("ChatRoom.ReportMessage#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.ReportMessage = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.ReportMessage#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.ResolveReport = function (_, _) {
-              return _.SendMsg("ChatRoom.ResolveReport#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-              });
+            (_.ResolveReport = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.ResolveReport#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                  eWebAPIKeyRequirement: 2,
+                },
+              );
             });
         })(_ || (_ = {})),
         (function (_) {
-          (_.GetClanChatRoomInfo = function (_, _) {
+          (_.GetClanChatRoomInfo = function (_, _, _) {
             return _.SendMsg(
               "ClanChatRooms.GetClanChatRoomInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-            (_.SetClanChatRoomPrivate = function (_, _) {
+            (_.SetClanChatRoomPrivate = function (_, _, _) {
               return _.SendMsg(
                 "ClanChatRooms.SetClanChatRoomPrivate#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
@@ -26992,17 +27094,17 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.ValidateCart = function (_, _) {
-          return _.SendMsg("Checkout.ValidateCart#1", (0, _._)(_, _), _, {
+        (_.ValidateCart = function (_, _, _) {
+          return _.SendMsg("Checkout.ValidateCart#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetFriendOwnershipForGifting = function (_, _) {
+          (_.GetFriendOwnershipForGifting = function (_, _, _) {
             return _.SendMsg(
               "Checkout.GetFriendOwnershipForGifting#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27010,10 +27112,15 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.AddFreeLicense = function (_, _) {
-            return _.SendMsg("Checkout.AddFreeLicense#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.AddFreeLicense = function (_, _, _) {
+            return _.SendMsg(
+              "Checkout.AddFreeLicense#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {}));
     },
@@ -27054,6 +27161,11 @@ var CLSTAMP = "steamdb";
                     _: 3,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  email_giftee: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -27337,8 +27449,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -27958,15 +28069,15 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.RespondToClanInvite = function (_, _) {
-          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _), _, {
+        (_.RespondToClanInvite = function (_, _, _) {
+          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _) {
+          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _, _) {
             return _.SendMsg(
               "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27974,10 +28085,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetPartnerEventsByBuildIDRange = function (_, _) {
+          (_.GetPartnerEventsByBuildIDRange = function (_, _, _) {
             return _.SendMsg(
               "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -29589,10 +29700,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetClientLogonInfo = function (_, _) {
+        (_.GetClientLogonInfo = function (_, _, _) {
           return _.SendMsg(
             "ClientComm.GetClientLogonInfo#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -29600,10 +29711,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetAllClientLogonInfo = function (_, _) {
+          (_.GetAllClientLogonInfo = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetAllClientLogonInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -29611,16 +29722,21 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetClientInfo = function (_, _) {
-            return _.SendMsg("ClientComm.GetClientInfo#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetClientInfo = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.GetClientInfo#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetClientAppList = function (_, _) {
+          (_.GetClientAppList = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetClientAppList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -29628,50 +29744,50 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.InstallClientApp = function (_, _) {
+          (_.InstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.InstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UninstallClientApp = function (_, _) {
+          (_.UninstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.UninstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.LaunchClientApp = function (_, _) {
+          (_.LaunchClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.LaunchClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetClientAppUpdateState = function (_, _) {
+          (_.SetClientAppUpdateState = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.SetClientAppUpdateState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.EnableOrDisableDownloads = function (_, _) {
+          (_.EnableOrDisableDownloads = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.EnableOrDisableDownloads#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -36956,13 +37072,13 @@ var CLSTAMP = "steamdb";
         _: () => _,
       });
       var _,
+        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -37807,6 +37923,355 @@ var CLSTAMP = "steamdb";
         }
         getClassName() {
           return "CCommunity_GetCommentThread_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_type: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidfeature: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature2: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidcomment: {
+                    _: 5,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_id: {
+                    _: 6,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetComment_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.comment || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  comment: {
+                    _: 1,
+                    _: _,
+                  },
+                  comment_thread_type: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidfeature: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature2: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetComment_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_id: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidcomment: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  reason: {
+                    _: 4,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  note: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  sanctions: {
+                    _: 6,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sanction || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sanction: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  days: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Request_Sanction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Response";
         }
       }
       class _ extends _.Message {
@@ -41438,28 +41903,337 @@ var CLSTAMP = "steamdb";
           return "CCommunity_SetRecommendationBotReviewStatus_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.explicit || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  explicit: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  adult: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  toxic: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  spam: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  malicious: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  commercial: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CommentClassification";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.resolve || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [12], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  resolve: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  reportid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  report_action: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidcomment: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  commentthreadtype: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  steamid: {
+                    _: 6,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature: {
+                    _: 7,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  gidfeature2: {
+                    _: 8,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  classification: {
+                    _: 9,
+                    _: _,
+                  },
+                  reason: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  comment_thread_id: {
+                    _: 11,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  sanctions: {
+                    _: 12,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  note: {
+                    _: 13,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sanction || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sanction: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  days: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Request_Sanction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Response";
+        }
+      }
       !(function (_) {
-        (_.GetApps = function (_, _) {
-          return _.SendMsg("Community.GetApps#1", (0, _._)(_, _), _, {
+        (_.GetApps = function (_, _, _) {
+          return _.SendMsg("Community.GetApps#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetAppRichPresenceLocalization = function (_, _) {
+          (_.GetAppRichPresenceLocalization = function (_, _, _) {
             return _.SendMsg(
               "Community.GetAppRichPresenceLocalization#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetCommentThread = function (_, _) {
+          (_.GetCommentThread = function (_, _, _) {
             return _.SendMsg(
               "Community.GetCommentThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -41467,50 +42241,66 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.PostCommentToThread = function (_, _) {
+          (_.GetComment = function (_, _, _) {
+            return _.SendMsg("Community.GetComment#1", (0, _._)(_, _, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 5,
+            });
+          }),
+          (_.SanctionComment = function (_, _, _) {
+            return _.SendMsg(
+              "Community.SanctionComment#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.PostCommentToThread = function (_, _, _) {
             return _.SendMsg(
               "Community.PostCommentToThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.DeleteCommentFromThread = function (_, _) {
+          (_.DeleteCommentFromThread = function (_, _, _) {
             return _.SendMsg(
               "Community.DeleteCommentFromThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RateCommentThread = function (_, _) {
+          (_.RateCommentThread = function (_, _, _) {
             return _.SendMsg(
               "Community.RateCommentThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetCommentThreadRatings = function (_, _) {
+          (_.GetCommentThreadRatings = function (_, _, _) {
             return _.SendMsg(
               "Community.GetCommentThreadRatings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.VerifyClanMembership = function (_, _) {
+          (_.VerifyClanMembership = function (_, _, _) {
             return _.SendMsg(
               "Community.VerifyClanMembership#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41519,36 +42309,41 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.RateClanAnnouncement = function (_, _) {
+          (_.RateClanAnnouncement = function (_, _, _) {
             return _.SendMsg(
               "Community.RateClanAnnouncement#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetClanAnnouncementVoteForUser = function (_, _) {
+          (_.GetClanAnnouncementVoteForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanAnnouncementVoteForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetClanMetadata = function (_, _) {
-            return _.SendMsg("Community.GetClanMetadata#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetClanMetadata = function (_, _, _) {
+            return _.SendMsg(
+              "Community.GetClanMetadata#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetClanLocGroupImages = function (_, _) {
+          (_.GetClanLocGroupImages = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanLocGroupImages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41556,20 +42351,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetAvatarHistory = function (_, _) {
+          (_.GetAvatarHistory = function (_, _, _) {
             return _.SendMsg(
               "Community.GetAvatarHistory#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetClanEventCrowdInMetadata = function (_, _) {
+          (_.GetClanEventCrowdInMetadata = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanEventCrowdInMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41577,10 +42372,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetClanCrowdInMetadata = function (_, _) {
+          (_.GetClanCrowdInMetadata = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanCrowdInMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41588,30 +42383,30 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.FetchTranslationFromCrowdIn = function (_, _) {
+          (_.FetchTranslationFromCrowdIn = function (_, _, _) {
             return _.SendMsg(
               "Community.FetchTranslationFromCrowdIn#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.HideAndReportComment = function (_, _) {
+          (_.HideAndReportComment = function (_, _, _) {
             return _.SendMsg(
               "Community.HideAndReportComment#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetUserPartnerEventNews = function (_, _) {
+          (_.GetUserPartnerEventNews = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventNews#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41620,10 +42415,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBestEventsForUser = function (_, _) {
+          (_.GetBestEventsForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.GetBestEventsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41632,20 +42427,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.MarkPartnerEventsForUser = function (_, _) {
+          (_.MarkPartnerEventsForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.MarkPartnerEventsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserPartnerEventViewStatus = function (_, _) {
+          (_.GetUserPartnerEventViewStatus = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventViewStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -41653,67 +42448,79 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.PartnerEventsShowMoreForApp = function (_, _) {
+          (_.PartnerEventsShowMoreForApp = function (_, _, _) {
             return _.SendMsg(
               "Community.PartnerEventsShowMoreForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.PartnerEventsShowLessForApp = function (_, _) {
+          (_.PartnerEventsShowLessForApp = function (_, _, _) {
             return _.SendMsg(
               "Community.PartnerEventsShowLessForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClearUserPartnerEventsAppPriorities = function (_, _) {
+          (_.ClearUserPartnerEventsAppPriorities = function (_, _, _) {
             return _.SendMsg(
               "Community.ClearUserPartnerEventsAppPriorities#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserPartnerEventsAppPriorities = function (_, _) {
+          (_.GetUserPartnerEventsAppPriorities = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventsAppPriorities#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClearSinglePartnerEventsAppPriority = function (_, _) {
+          (_.ClearSinglePartnerEventsAppPriority = function (_, _, _) {
             return _.SendMsg(
               "Community.ClearSinglePartnerEventsAppPriority#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetRecommendationBotReviewStatus = function (_, _) {
+          (_.SetRecommendationBotReviewStatus = function (_, _, _) {
             return _.SendMsg(
               "Community.SetRecommendationBotReviewStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           });
-      })(_ || (_ = {}));
+      })(_ || (_ = {})),
+        (function (_) {
+          _.UpdateCommentReportState = function (_, _, _) {
+            return _.SendMsg(
+              "CommentModeration.UpdateCommentReportState#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          };
+        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = __webpack_require__("chunkid"),
@@ -47181,20 +47988,20 @@ var CLSTAMP = "steamdb";
       }
       var _;
       !(function (_) {
-        (_.ClaimBatch = function (_, _) {
+        (_.ClaimBatch = function (_, _, _) {
           return _.SendMsg(
             "ContentModeration.ClaimBatch#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 5,
             },
           );
         }),
-          (_.GetClaimedSubjects = function (_, _) {
+          (_.GetClaimedSubjects = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetClaimedSubjects#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47202,40 +48009,40 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.ReleaseSubjects = function (_, _) {
+          (_.ReleaseSubjects = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ReleaseSubjects#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.CreateContentReport = function (_, _) {
+          (_.CreateContentReport = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.CreateContentReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CancelContentReport = function (_, _) {
+          (_.CancelContentReport = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.CancelContentReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetReportsSubmittedByUser = function (_, _) {
+          (_.GetReportsSubmittedByUser = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReportsSubmittedByUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47243,10 +48050,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetOneReportSubmittedByUser = function (_, _) {
+          (_.GetOneReportSubmittedByUser = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetOneReportSubmittedByUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47254,10 +48061,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetReportedSubjectsByOwner = function (_, _) {
+          (_.GetReportedSubjectsByOwner = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReportedSubjectsByOwner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47265,30 +48072,30 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.ClaimBatchForModeration = function (_, _) {
+          (_.ClaimBatchForModeration = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ClaimBatchForModeration#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ReleaseClaimed = function (_, _) {
+          (_.ReleaseClaimed = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ReleaseClaimed#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetClaimed = function (_, _) {
+          (_.GetClaimed = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetClaimed#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47296,130 +48103,130 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.ResolveSubject = function (_, _) {
+          (_.ResolveSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ResolveSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ResolveSubjectGroup = function (_, _) {
+          (_.ResolveSubjectGroup = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ResolveSubjectGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetSubjectOverview = function (_, _) {
+          (_.GetSubjectOverview = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetSubjectOverview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.EscalateSubject = function (_, _) {
+          (_.EscalateSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.EscalateSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.UpdateSubject = function (_, _) {
+          (_.UpdateSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.UpdateSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.UpdateSubjectGroup = function (_, _) {
+          (_.UpdateSubjectGroup = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.UpdateSubjectGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.DisputeModerationForReport = function (_, _) {
+          (_.DisputeModerationForReport = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.DisputeModerationForReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.DisputeModerationForSubject = function (_, _) {
+          (_.DisputeModerationForSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.DisputeModerationForSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ResolveDisputedSubject = function (_, _) {
+          (_.ResolveDisputedSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ResolveDisputedSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetContentReportSubject = function (_, _) {
+          (_.GetContentReportSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetContentReportSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetContentReportSubjectGroup = function (_, _) {
+          (_.GetContentReportSubjectGroup = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetContentReportSubjectGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.UpdateReporterCooldown = function (_, _) {
+          (_.UpdateReporterCooldown = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.UpdateReporterCooldown#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetReporterCooldown = function (_, _) {
+          (_.GetReporterCooldown = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReporterCooldown#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47427,50 +48234,50 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.WriteToAuditLog = function (_, _) {
+          (_.WriteToAuditLog = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.WriteToAuditLog#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetAuditLog = function (_, _) {
+          (_.GetAuditLog = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetAuditLog#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ReleaseSubject = function (_, _) {
+          (_.ReleaseSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ReleaseSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ClaimSubject = function (_, _) {
+          (_.ClaimSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ClaimSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetModeratorPreferences = function (_, _) {
+          (_.GetModeratorPreferences = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetModeratorPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47478,30 +48285,30 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetModeratorPreferences = function (_, _) {
+          (_.SetModeratorPreferences = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.SetModeratorPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetModeratorActivity = function (_, _) {
+          (_.GetModeratorActivity = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetModeratorActivity#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetDailyModerationStatistics = function (_, _) {
+          (_.GetDailyModerationStatistics = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetDailyModerationStatistics#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47509,10 +48316,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetOldestUnresolvedSubjects = function (_, _) {
+          (_.GetOldestUnresolvedSubjects = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetOldestUnresolvedSubjects#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47520,10 +48327,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetReporterStats = function (_, _) {
+          (_.GetReporterStats = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReporterStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -47531,10 +48338,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SustainModeration = function (_, _) {
+          (_.SustainModeration = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.SustainModeration#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -49388,10 +50195,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetInventoryItemsWithDescriptions = function (_, _) {
+        (_.GetInventoryItemsWithDescriptions = function (_, _, _) {
           return _.SendMsg(
             "Econ.GetInventoryItemsWithDescriptions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -49400,37 +50207,37 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetTradeOfferAccessToken = function (_, _) {
+          (_.GetTradeOfferAccessToken = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClientGetItemShopOverlayAuthURL = function (_, _) {
+          (_.ClientGetItemShopOverlayAuthURL = function (_, _, _) {
             return _.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAssetClassInfo = function (_, _) {
-            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _), _, {
+          (_.GetAssetClassInfo = function (_, _, _) {
+            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetAssetPropertySchema = function (_, _) {
+          (_.GetAssetPropertySchema = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetAssetPropertySchema#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -49453,10 +50260,8 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -51783,23 +52588,23 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.ReportPost = function (_, _) {
-          return _.SendMsg("Forums.ReportPost#1", (0, _._)(_, _), _, {
+        (_.ReportPost = function (_, _, _) {
+          return _.SendMsg("Forums.ReportPost#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
             eWebAPIKeyRequirement: 2,
           });
         }),
-          (_.GetTopicDetails = function (_, _) {
-            return _.SendMsg("Forums.GetTopicDetails#1", (0, _._)(_, _), _, {
+          (_.GetTopicDetails = function (_, _, _) {
+            return _.SendMsg("Forums.GetTopicDetails#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.ResolveReportedPosts = function (_, _) {
+          (_.ResolveReportedPosts = function (_, _, _) {
             return _.SendMsg(
               "Forums.ResolveReportedPosts#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -51807,10 +52612,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.ResolveReportedPost = function (_, _) {
+          (_.ResolveReportedPost = function (_, _, _) {
             return _.SendMsg(
               "Forums.ResolveReportedPost#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -51818,10 +52623,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SanctionReportedPost = function (_, _) {
+          (_.SanctionReportedPost = function (_, _, _) {
             return _.SendMsg(
               "Forums.SanctionReportedPost#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -51829,48 +52634,48 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.DeleteModeratedComment = function (_, _) {
+          (_.DeleteModeratedComment = function (_, _, _) {
             return _.SendMsg(
               "Forums.DeleteModeratedComment#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.DeleteModeratedTopic = function (_, _) {
+          (_.DeleteModeratedTopic = function (_, _, _) {
             return _.SendMsg(
               "Forums.DeleteModeratedTopic#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UndeleteDisputedComment = function (_, _) {
+          (_.UndeleteDisputedComment = function (_, _, _) {
             return _.SendMsg(
               "Forums.UndeleteDisputedComment#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UndeleteDisputedTopic = function (_, _) {
+          (_.UndeleteDisputedTopic = function (_, _, _) {
             return _.SendMsg(
               "Forums.UndeleteDisputedTopic#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetTopicLocked = function (_, _) {
-            return _.SendMsg("Forums.SetTopicLocked#1", (0, _._)(_, _), _, {
+          (_.SetTopicLocked = function (_, _, _) {
+            return _.SendMsg("Forums.SetTopicLocked#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           });
@@ -51896,10 +52701,8 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -53521,10 +54324,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetRecentMessages = function (_, _) {
+        (_.GetRecentMessages = function (_, _, _) {
           return _.SendMsg(
             "FriendMessages.GetRecentMessages#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -53532,10 +54335,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetActiveMessageSessions = function (_, _) {
+          (_.GetActiveMessageSessions = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.GetActiveMessageSessions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -53543,10 +54346,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SendMessage = function (_, _) {
+          (_.SendMessage = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.SendMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -53562,40 +54365,40 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.IsInFriendsUIBeta = function (_, _) {
+          (_.IsInFriendsUIBeta = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.IsInFriendsUIBeta#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdateMessageReaction = function (_, _) {
+          (_.UpdateMessageReaction = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.UpdateMessageReaction#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ReportMessage = function (_, _) {
+          (_.ReportMessage = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.ReportMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ResolveReport = function (_, _) {
+          (_.ResolveReport = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.ResolveReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -54251,16 +55054,21 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetCategories = function (_, _) {
-          return _.SendMsg("FriendsList.GetCategories#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (_.GetCategories = function (_, _, _) {
+          return _.SendMsg(
+            "FriendsList.GetCategories#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.GetFriendsList = function (_, _) {
+          (_.GetFriendsList = function (_, _, _) {
             return _.SendMsg(
               "FriendsList.GetFriendsList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -54268,16 +55076,26 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.GetFavorites#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.GetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.SetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.SetFavorites#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.SetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.SetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
@@ -54495,10 +55313,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        _.GetGameFrameRateStats = function (_, _) {
+        _.GetGameFrameRateStats = function (_, _, _) {
           return _.SendMsg(
             "GamePerformanceStats.GetGameFrameRateStats#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -56044,30 +56862,30 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.CreateShareClip = function (_, _) {
+        (_.CreateShareClip = function (_, _, _) {
           return _.SendMsg(
             "GameRecordingClip.CreateShareClip#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.DeleteSharedClip = function (_, _) {
+          (_.DeleteSharedClip = function (_, _, _) {
             return _.SendMsg(
               "GameRecordingClip.DeleteSharedClip#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetSingleSharedClip = function (_, _) {
+          (_.GetSingleSharedClip = function (_, _, _) {
             return _.SendMsg(
               "GameRecordingClip.GetSingleSharedClip#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -56078,40 +56896,40 @@ var CLSTAMP = "steamdb";
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.BeginGameRecordingSegmentsUpload = function (_, _) {
+          (_.BeginGameRecordingSegmentsUpload = function (_, _, _) {
             return _.SendMsg(
               "VideoClip.BeginGameRecordingSegmentsUpload#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-            (_.CommitGameRecordingSegmentsUpload = function (_, _) {
+            (_.CommitGameRecordingSegmentsUpload = function (_, _, _) {
               return _.SendMsg(
                 "VideoClip.CommitGameRecordingSegmentsUpload#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetNextBatchOfSegmentsToUpload = function (_, _) {
+            (_.GetNextBatchOfSegmentsToUpload = function (_, _, _) {
               return _.SendMsg(
                 "VideoClip.GetNextBatchOfSegmentsToUpload#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CommitSegmentUploads = function (_, _) {
+            (_.CommitSegmentUploads = function (_, _, _) {
               return _.SendMsg(
                 "VideoClip.CommitSegmentUploads#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -59010,10 +59828,10 @@ var CLSTAMP = "steamdb";
       }
       var _;
       !(function (_) {
-        (_.GetActiveMarketingMessages = function (_, _) {
+        (_.GetActiveMarketingMessages = function (_, _, _) {
           return _.SendMsg(
             "MarketingMessages.GetActiveMarketingMessages#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -59022,10 +59840,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetPastMarketingMessages = function (_, _) {
+          (_.GetPastMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPastMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59033,10 +59851,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetMarketingMessagesForUser = function (_, _) {
+          (_.GetMarketingMessagesForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59044,10 +59862,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.DoesUserHavePendingMarketingMessages = function (_, _) {
+          (_.DoesUserHavePendingMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59055,10 +59873,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetDisplayMarketingMessage = function (_, _) {
+          (_.GetDisplayMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59067,10 +59885,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetDisplayMarketingMessageForUser = function (_, _) {
+          (_.GetDisplayMarketingMessageForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59078,10 +59896,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetDisplayMarketingMessageAdmin = function (_, _) {
+          (_.GetDisplayMarketingMessageAdmin = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59107,10 +59925,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetMarketingMessage = function (_, _) {
+          (_.GetMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -59118,80 +59936,80 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.CreateMarketingMessage = function (_, _) {
+          (_.CreateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.UpdateMarketingMessage = function (_, _) {
+          (_.UpdateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.DeleteMarketingMessage = function (_, _) {
+          (_.DeleteMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.FindMarketingMessages = function (_, _) {
+          (_.FindMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.FindMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetMarketingMessageViewerStats = function (_, _) {
+          (_.GetMarketingMessageViewerStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageViewerStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessagesViewerRangeStats = function (_, _) {
+          (_.GetMarketingMessagesViewerRangeStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessageClickedStats = function (_, _) {
+          (_.GetMarketingMessageClickedStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageClickedStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetPartnerReadyToPublishMessages = function (_, _) {
+          (_.GetPartnerReadyToPublishMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerReadyToPublishMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59200,10 +60018,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.PublishPartnerMessage = function (_, _) {
+          (_.PublishPartnerMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.PublishPartnerMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59212,10 +60030,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetPartnerMessagePreview = function (_, _) {
+          (_.GetPartnerMessagePreview = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerMessagePreview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59224,10 +60042,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetMarketingMessagesForPartner = function (_, _) {
+          (_.GetMarketingMessagesForPartner = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -59236,10 +60054,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetMarketingMessagesForApps = function (_, _) {
+          (_.GetMarketingMessagesForApps = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
@@ -61875,30 +62693,30 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.EnableParentalSettings = function (_, _) {
+        (_.EnableParentalSettings = function (_, _, _) {
           return _.SendMsg(
             "Parental.EnableParentalSettings#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.DisableParentalSettings = function (_, _) {
+          (_.DisableParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.DisableParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetParentalSettings = function (_, _) {
+          (_.GetParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.GetParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -61906,10 +62724,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetSignedParentalSettings = function (_, _) {
+          (_.GetSignedParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.GetSignedParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -61917,81 +62735,96 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetParentalSettings = function (_, _) {
+          (_.SetParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.SetParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ValidateToken = function (_, _) {
-            return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _), _, {
+          (_.ValidateToken = function (_, _, _) {
+            return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.ValidatePassword = function (_, _) {
-            return _.SendMsg("Parental.ValidatePassword#1", (0, _._)(_, _), _, {
+          (_.ValidatePassword = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.ValidatePassword#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.LockClient = function (_, _, _) {
+            return _.SendMsg("Parental.LockClient#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.LockClient = function (_, _) {
-            return _.SendMsg("Parental.LockClient#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.RequestRecoveryCode = function (_, _) {
+          (_.RequestRecoveryCode = function (_, _, _) {
             return _.SendMsg(
               "Parental.RequestRecoveryCode#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestFeatureAccess = function (_, _) {
+          (_.RequestFeatureAccess = function (_, _, _) {
             return _.SendMsg(
               "Parental.RequestFeatureAccess#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ApproveFeatureAccess = function (_, _) {
+          (_.ApproveFeatureAccess = function (_, _, _) {
             return _.SendMsg(
               "Parental.ApproveFeatureAccess#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestPlaytime = function (_, _) {
-            return _.SendMsg("Parental.RequestPlaytime#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.RequestPlaytime = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.RequestPlaytime#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.ApprovePlaytime = function (_, _) {
-            return _.SendMsg("Parental.ApprovePlaytime#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.ApprovePlaytime = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.ApprovePlaytime#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetRequests = function (_, _) {
-            return _.SendMsg("Parental.GetRequests#1", (0, _._)(_, _), _, {
+          (_.GetRequests = function (_, _, _) {
+            return _.SendMsg("Parental.GetRequests#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.ReportPlaytimeAndNotify = function (_, _) {
+          (_.ReportPlaytimeAndNotify = function (_, _, _) {
             return _.SendMsg(
               "Parental.ReportPlaytimeAndNotify#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -62300,10 +63133,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetItems = function (_, _) {
+        (_.GetItems = function (_, _, _) {
           return _.SendMsg(
             "PartnerStoreBrowse.GetItems#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _._,
             {
               bConstMethod: !0,
@@ -62311,10 +63144,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetCountryRestrictions = function (_, _) {
+          (_.GetCountryRestrictions = function (_, _, _) {
             return _.SendMsg(
               "PartnerStoreBrowse.GetCountryRestrictions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -62465,10 +63298,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        _.CheckInventoryAvailableByPackage = function (_, _) {
+        _.CheckInventoryAvailableByPackage = function (_, _, _) {
           return _.SendMsg(
             "PhysicalGoods.CheckInventoryAvailableByPackage#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -62506,10 +63339,8 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -72839,10 +73670,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetRecentPlaytimeSessionsForChild = function (_, _) {
+        (_.GetRecentPlaytimeSessionsForChild = function (_, _, _) {
           return _.SendMsg(
             "Player.GetRecentPlaytimeSessionsForChild#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -72850,10 +73681,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetPlayerLinkDetails = function (_, _) {
+          (_.GetPlayerLinkDetails = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPlayerLinkDetails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -72862,10 +73693,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetMutualFriendsForIncomingInvites = function (_, _) {
+          (_.GetMutualFriendsForIncomingInvites = function (_, _, _) {
             return _.SendMsg(
               "Player.GetMutualFriendsForIncomingInvites#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -72873,23 +73704,23 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetOwnedGames = function (_, _) {
-            return _.SendMsg("Player.GetOwnedGames#1", (0, _._)(_, _), _, {
+          (_.GetOwnedGames = function (_, _, _) {
+            return _.SendMsg("Player.GetOwnedGames#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetPlayNext = function (_, _) {
-            return _.SendMsg("Player.GetPlayNext#1", (0, _._)(_, _), _, {
+          (_.GetPlayNext = function (_, _, _) {
+            return _.SendMsg("Player.GetPlayNext#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.GetFriendsGameplayInfo = function (_, _) {
+          (_.GetFriendsGameplayInfo = function (_, _, _) {
             return _.SendMsg(
               "Player.GetFriendsGameplayInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -72897,16 +73728,21 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetGameBadgeLevels = function (_, _) {
-            return _.SendMsg("Player.GetGameBadgeLevels#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetGameBadgeLevels = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetGameBadgeLevels#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetProfileBackground = function (_, _) {
+          (_.GetProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -72915,20 +73751,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetProfileBackground = function (_, _) {
+          (_.SetProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.SetProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetMiniProfileBackground = function (_, _) {
+          (_.GetMiniProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.GetMiniProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -72937,44 +73773,54 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetMiniProfileBackground = function (_, _) {
+          (_.SetMiniProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.SetMiniProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAvatarFrame = function (_, _) {
-            return _.SendMsg("Player.GetAvatarFrame#1", (0, _._)(_, _), _, {
+          (_.GetAvatarFrame = function (_, _, _) {
+            return _.SendMsg("Player.GetAvatarFrame#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.SetAvatarFrame = function (_, _) {
-            return _.SendMsg("Player.SetAvatarFrame#1", (0, _._)(_, _), _, {
+          (_.SetAvatarFrame = function (_, _, _) {
+            return _.SendMsg("Player.SetAvatarFrame#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetAnimatedAvatar = function (_, _) {
-            return _.SendMsg("Player.GetAnimatedAvatar#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.GetAnimatedAvatar = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetAnimatedAvatar#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.SetAnimatedAvatar = function (_, _) {
-            return _.SendMsg("Player.SetAnimatedAvatar#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.SetAnimatedAvatar = function (_, _, _) {
+            return _.SendMsg(
+              "Player.SetAnimatedAvatar#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetSteamDeckKeyboardSkin = function (_, _) {
+          (_.GetSteamDeckKeyboardSkin = function (_, _, _) {
             return _.SendMsg(
               "Player.GetSteamDeckKeyboardSkin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -72983,20 +73829,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetSteamDeckKeyboardSkin = function (_, _) {
+          (_.SetSteamDeckKeyboardSkin = function (_, _, _) {
             return _.SendMsg(
               "Player.SetSteamDeckKeyboardSkin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetProfileItemsOwned = function (_, _) {
+          (_.GetProfileItemsOwned = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileItemsOwned#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73004,10 +73850,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetProfileItemsEquipped = function (_, _) {
+          (_.GetProfileItemsEquipped = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileItemsEquipped#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73016,26 +73862,26 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetEquippedProfileItemFlags = function (_, _) {
+          (_.SetEquippedProfileItemFlags = function (_, _, _) {
             return _.SendMsg(
               "Player.SetEquippedProfileItemFlags#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetEmoticonList = function (_, _) {
-            return _.SendMsg("Player.GetEmoticonList#1", (0, _._)(_, _), _, {
+          (_.GetEmoticonList = function (_, _, _) {
+            return _.SendMsg("Player.GetEmoticonList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.GetCommunityBadgeProgress = function (_, _) {
+          (_.GetCommunityBadgeProgress = function (_, _, _) {
             return _.SendMsg(
               "Player.GetCommunityBadgeProgress#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73044,10 +73890,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetTopAchievementsForGames = function (_, _) {
+          (_.GetTopAchievementsForGames = function (_, _, _) {
             return _.SendMsg(
               "Player.GetTopAchievementsForGames#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73056,10 +73902,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetAchievementsProgress = function (_, _) {
+          (_.GetAchievementsProgress = function (_, _, _) {
             return _.SendMsg(
               "Player.GetAchievementsProgress#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -73067,10 +73913,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetGameAchievements = function (_, _) {
+          (_.GetGameAchievements = function (_, _, _) {
             return _.SendMsg(
               "Player.GetGameAchievements#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73079,10 +73925,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetUserAchievements = function (_, _) {
+          (_.GetUserAchievements = function (_, _, _) {
             return _.SendMsg(
               "Player.GetUserAchievements#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73091,28 +73937,38 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetUserStats = function (_, _) {
-            return _.SendMsg("Player.GetUserStats#1", (0, _._)(_, _), _, {
+          (_.GetUserStats = function (_, _, _) {
+            return _.SendMsg("Player.GetUserStats#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
             });
           }),
-          (_.GetFavoriteBadge = function (_, _) {
-            return _.SendMsg("Player.GetFavoriteBadge#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.GetFavoriteBadge = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetFavoriteBadge#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.SetFavoriteBadge = function (_, _) {
-            return _.SendMsg("Player.SetFavoriteBadge#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.SetFavoriteBadge = function (_, _, _) {
+            return _.SendMsg(
+              "Player.SetFavoriteBadge#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetProfileCustomization = function (_, _) {
+          (_.GetProfileCustomization = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileCustomization#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73121,10 +73977,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetPurchasedProfileCustomizations = function (_, _) {
+          (_.GetPurchasedProfileCustomizations = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPurchasedProfileCustomizations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73133,10 +73989,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetPurchasedAndUpgradedProfileCustomizations = function (_, _) {
+          (_.GetPurchasedAndUpgradedProfileCustomizations = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPurchasedAndUpgradedProfileCustomizations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73145,10 +74001,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetProfileThemesAvailable = function (_, _) {
+          (_.GetProfileThemesAvailable = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileThemesAvailable#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73156,46 +74012,51 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetProfileTheme = function (_, _) {
-            return _.SendMsg("Player.SetProfileTheme#1", (0, _._)(_, _), _, {
+          (_.SetProfileTheme = function (_, _, _) {
+            return _.SendMsg("Player.SetProfileTheme#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.SetProfilePreferences = function (_, _) {
+          (_.SetProfilePreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.SetProfilePreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.PostStatusToFriends = function (_, _) {
+          (_.PostStatusToFriends = function (_, _, _) {
             return _.SendMsg(
               "Player.PostStatusToFriends#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetPostedStatus = function (_, _) {
-            return _.SendMsg("Player.GetPostedStatus#1", (0, _._)(_, _), _, {
+          (_.GetPostedStatus = function (_, _, _) {
+            return _.SendMsg("Player.GetPostedStatus#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.DeletePostedStatus = function (_, _) {
-            return _.SendMsg("Player.DeletePostedStatus#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.DeletePostedStatus = function (_, _, _) {
+            return _.SendMsg(
+              "Player.DeletePostedStatus#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.ClientGetLastPlayedTimes = function (_, _) {
+          (_.ClientGetLastPlayedTimes = function (_, _, _) {
             return _.SendMsg(
               "Player.ClientGetLastPlayedTimes#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73204,27 +74065,32 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetTimeSSAAccepted = function (_, _) {
-            return _.SendMsg("Player.GetTimeSSAAccepted#1", (0, _._)(_, _), _, {
+          (_.GetTimeSSAAccepted = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetTimeSSAAccepted#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.AcceptSSA = function (_, _, _) {
+            return _.SendMsg("Player.AcceptSSA#1", (0, _._)(_, _, _), _, {
+              ePrivilege: 1,
+            });
+          }),
+          (_.GetNicknameList = function (_, _, _) {
+            return _.SendMsg("Player.GetNicknameList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.AcceptSSA = function (_, _) {
-            return _.SendMsg("Player.AcceptSSA#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetNicknameList = function (_, _) {
-            return _.SendMsg("Player.GetNicknameList#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetPerFriendPreferences = function (_, _) {
+          (_.GetPerFriendPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPerFriendPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73232,60 +74098,65 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetPerFriendPreferences = function (_, _) {
+          (_.SetPerFriendPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.SetPerFriendPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.AddFriend = function (_, _) {
-            return _.SendMsg("Player.AddFriend#1", (0, _._)(_, _), _, {
+          (_.AddFriend = function (_, _, _) {
+            return _.SendMsg("Player.AddFriend#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.RemoveFriend = function (_, _) {
-            return _.SendMsg("Player.RemoveFriend#1", (0, _._)(_, _), _, {
+          (_.RemoveFriend = function (_, _, _) {
+            return _.SendMsg("Player.RemoveFriend#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.IgnoreFriend = function (_, _) {
-            return _.SendMsg("Player.IgnoreFriend#1", (0, _._)(_, _), _, {
+          (_.IgnoreFriend = function (_, _, _) {
+            return _.SendMsg("Player.IgnoreFriend#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetCommunityPreferences = function (_, _) {
+          (_.GetCommunityPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.GetCommunityPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetCommunityPreferences = function (_, _) {
+          (_.SetCommunityPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.SetCommunityPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetTextFilterWords = function (_, _) {
-            return _.SendMsg("Player.GetTextFilterWords#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetTextFilterWords = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetTextFilterWords#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetNewSteamAnnouncementState = function (_, _) {
+          (_.GetNewSteamAnnouncementState = function (_, _, _) {
             return _.SendMsg(
               "Player.GetNewSteamAnnouncementState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73293,30 +74164,40 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.UpdateSteamAnnouncementLastRead = function (_, _) {
+          (_.UpdateSteamAnnouncementLastRead = function (_, _, _) {
             return _.SendMsg(
               "Player.UpdateSteamAnnouncementLastRead#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPrivacySettings = function (_, _) {
-            return _.SendMsg("Player.GetPrivacySettings#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetPrivacySettings = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetPrivacySettings#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetDurationControl = function (_, _) {
-            return _.SendMsg("Player.GetDurationControl#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetDurationControl = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetDurationControl#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.RecordDisconnectedPlaytime = function (_, _) {
+          (_.RecordDisconnectedPlaytime = function (_, _, _) {
             return _.SendMsg(
               "Player.RecordDisconnectedPlaytime#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -73377,6 +74258,7 @@ var CLSTAMP = "steamdb";
         _ = 1,
         _ = 2,
         _ = 3;
+      _.Message;
       _.Message;
       _.Message;
       _.Message;
@@ -75175,10 +76057,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.CreateNewShoppingCart = function (_, _) {
+        (_.CreateNewShoppingCart = function (_, _, _) {
           return _.SendMsg(
             "ShoppingCart.CreateNewShoppingCart#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
@@ -75186,10 +76068,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetShoppingCartContents = function (_, _) {
+          (_.GetShoppingCartContents = function (_, _, _) {
             return _.SendMsg(
               "ShoppingCart.GetShoppingCartContents#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -75198,16 +76080,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.AddPackages = function (_, _) {
-            return _.SendMsg("ShoppingCart.AddPackages#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
-          }),
-          (_.UpdatePackageQuantity = function (_, _) {
+          (_.AddPackages = function (_, _, _) {
             return _.SendMsg(
-              "ShoppingCart.UpdatePackageQuantity#1",
-              (0, _._)(_, _),
+              "ShoppingCart.AddPackages#1",
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -75215,16 +76091,27 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.AddBundle = function (_, _) {
-            return _.SendMsg("ShoppingCart.AddBundle#1", (0, _._)(_, _), _, {
+          (_.UpdatePackageQuantity = function (_, _, _) {
+            return _.SendMsg(
+              "ShoppingCart.UpdatePackageQuantity#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.AddBundle = function (_, _, _) {
+            return _.SendMsg("ShoppingCart.AddBundle#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.RemoveLineItems = function (_, _) {
+          (_.RemoveLineItems = function (_, _, _) {
             return _.SendMsg(
               "ShoppingCart.RemoveLineItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -80723,10 +81610,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.CreateBroadcastChannel = function (_, _) {
+        (_.CreateBroadcastChannel = function (_, _, _) {
           return _.SendMsg(
             "SteamTV.CreateBroadcastChannel#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
@@ -80734,10 +81621,10 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.GetBroadcastChannelID = function (_, _) {
+          (_.GetBroadcastChannelID = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelID#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80745,10 +81632,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetBroadcastChannelProfile = function (_, _) {
+          (_.SetBroadcastChannelProfile = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetBroadcastChannelProfile#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -80756,10 +81643,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChannelProfile = function (_, _) {
+          (_.GetBroadcastChannelProfile = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelProfile#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80767,10 +81654,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetBroadcastChannelImage = function (_, _) {
+          (_.SetBroadcastChannelImage = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetBroadcastChannelImage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -80778,10 +81665,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChannelImages = function (_, _) {
+          (_.GetBroadcastChannelImages = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelImages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80789,10 +81676,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetBroadcastChannelLinkRegions = function (_, _) {
+          (_.SetBroadcastChannelLinkRegions = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetBroadcastChannelLinkRegions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -80800,10 +81687,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChannelLinks = function (_, _) {
+          (_.GetBroadcastChannelLinks = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelLinks#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80811,10 +81698,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChannelBroadcasters = function (_, _) {
+          (_.GetBroadcastChannelBroadcasters = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelBroadcasters#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80823,10 +81710,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetFollowedChannels = function (_, _) {
+          (_.GetFollowedChannels = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetFollowedChannels#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80835,10 +81722,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetSubscribedChannels = function (_, _) {
+          (_.GetSubscribedChannels = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetSubscribedChannels#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80847,10 +81734,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChannelStatus = function (_, _) {
+          (_.GetBroadcastChannelStatus = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80858,10 +81745,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.FollowBroadcastChannel = function (_, _) {
+          (_.FollowBroadcastChannel = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.FollowBroadcastChannel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -80869,10 +81756,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SubscribeBroadcastChannel = function (_, _) {
+          (_.SubscribeBroadcastChannel = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SubscribeBroadcastChannel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -80880,10 +81767,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChannelClips = function (_, _) {
+          (_.GetBroadcastChannelClips = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelClips#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80891,10 +81778,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.ReportBroadcastChannel = function (_, _) {
+          (_.ReportBroadcastChannel = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.ReportBroadcastChannel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -80902,10 +81789,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetBroadcastChannelInteraction = function (_, _) {
+          (_.GetBroadcastChannelInteraction = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelInteraction#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80914,74 +81801,84 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetGames = function (_, _) {
-            return _.SendMsg("SteamTV.GetGames#1", (0, _._)(_, _), _, {
+          (_.GetGames = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetGames#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetChannels = function (_, _) {
-            return _.SendMsg("SteamTV.GetChannels#1", (0, _._)(_, _), _, {
+          (_.GetChannels = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetChannels#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.AddChatBan = function (_, _) {
-            return _.SendMsg("SteamTV.AddChatBan#1", (0, _._)(_, _), _, {
+          (_.AddChatBan = function (_, _, _) {
+            return _.SendMsg("SteamTV.AddChatBan#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetChatBans = function (_, _) {
-            return _.SendMsg("SteamTV.GetChatBans#1", (0, _._)(_, _), _, {
+          (_.GetChatBans = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetChatBans#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.AddChatModerator = function (_, _) {
-            return _.SendMsg("SteamTV.AddChatModerator#1", (0, _._)(_, _), _, {
+          (_.AddChatModerator = function (_, _, _) {
+            return _.SendMsg(
+              "SteamTV.AddChatModerator#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.GetChatModerators = function (_, _, _) {
+            return _.SendMsg(
+              "SteamTV.GetChatModerators#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+              },
+            );
+          }),
+          (_.AddWordBan = function (_, _, _) {
+            return _.SendMsg("SteamTV.AddWordBan#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetChatModerators = function (_, _) {
-            return _.SendMsg("SteamTV.GetChatModerators#1", (0, _._)(_, _), _, {
+          (_.GetWordBans = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetWordBans#1", (0, _._)(_, _, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            });
+          }),
+          (_.JoinChat = function (_, _, _) {
+            return _.SendMsg("SteamTV.JoinChat#1", (0, _._)(_, _, _), _, {
+              ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
+          (_.Search = function (_, _, _) {
+            return _.SendMsg("SteamTV.Search#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }),
-          (_.AddWordBan = function (_, _) {
-            return _.SendMsg("SteamTV.AddWordBan#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (_.GetWordBans = function (_, _) {
-            return _.SendMsg("SteamTV.GetWordBans#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (_.JoinChat = function (_, _) {
-            return _.SendMsg("SteamTV.JoinChat#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
-          }),
-          (_.Search = function (_, _) {
-            return _.SendMsg("SteamTV.Search#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-            });
-          }),
-          (_.GetSteamTVUserSettings = function (_, _) {
+          (_.GetSteamTVUserSettings = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetSteamTVUserSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -80990,10 +81887,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetSteamTVUserSettings = function (_, _) {
+          (_.SetSteamTVUserSettings = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetSteamTVUserSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -81001,10 +81898,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetMyBroadcastChannels = function (_, _) {
+          (_.GetMyBroadcastChannels = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetMyBroadcastChannels#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -81013,10 +81910,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetHomePageContents = function (_, _) {
+          (_.GetHomePageContents = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetHomePageContents#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -81025,8 +81922,8 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.AppCheer = function (_, _) {
-            return _.SendMsg("SteamTV.AppCheer#1", (0, _._)(_, _), _, {
+          (_.AppCheer = function (_, _, _) {
+            return _.SendMsg("SteamTV.AppCheer#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
@@ -86302,15 +87199,15 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.RegisterCDKey = function (_, _) {
-          return _.SendMsg("Store.RegisterCDKey#1", (0, _._)(_, _), _, {
+        (_.RegisterCDKey = function (_, _, _) {
+          return _.SendMsg("Store.RegisterCDKey#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.GetRecommendedTagsForUser = function (_, _) {
+          (_.GetRecommendedTagsForUser = function (_, _, _) {
             return _.SendMsg(
               "Store.GetRecommendedTagsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -86318,17 +87215,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetMostPopularTags = function (_, _) {
-            return _.SendMsg("Store.GetMostPopularTags#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
-          }),
-          (_.GetLocalizedNameForTags = function (_, _) {
+          (_.GetMostPopularTags = function (_, _, _) {
             return _.SendMsg(
-              "Store.GetLocalizedNameForTags#1",
-              (0, _._)(_, _),
+              "Store.GetMostPopularTags#1",
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -86337,23 +87227,29 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetTagList = function (_, _) {
-            return _.SendMsg("Store.GetTagList#1", (0, _._)(_, _), _, {
+          (_.GetLocalizedNameForTags = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetLocalizedNameForTags#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetTagList = function (_, _, _) {
+            return _.SendMsg("Store.GetTagList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetDiscoveryQueue = function (_, _) {
-            return _.SendMsg("Store.GetDiscoveryQueue#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetDiscoveryQueueSettings = function (_, _) {
+          (_.GetDiscoveryQueue = function (_, _, _) {
             return _.SendMsg(
-              "Store.GetDiscoveryQueueSettings#1",
-              (0, _._)(_, _),
+              "Store.GetDiscoveryQueue#1",
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -86361,37 +87257,48 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SkipDiscoveryQueueItem = function (_, _) {
+          (_.GetDiscoveryQueueSettings = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetDiscoveryQueueSettings#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.SkipDiscoveryQueueItem = function (_, _, _) {
             return _.SendMsg(
               "Store.SkipDiscoveryQueueItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserGameInterestState = function (_, _) {
+          (_.GetUserGameInterestState = function (_, _, _) {
             return _.SendMsg(
               "Store.GetUserGameInterestState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetGamesFollowed = function (_, _) {
-            return _.SendMsg("Store.GetGamesFollowed#1", (0, _._)(_, _), _, {
+          (_.GetGamesFollowed = function (_, _, _) {
+            return _.SendMsg("Store.GetGamesFollowed#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetGamesFollowedCount = function (_, _) {
+          (_.GetGamesFollowedCount = function (_, _, _) {
             return _.SendMsg(
               "Store.GetGamesFollowedCount#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -86400,10 +87307,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetDiscoveryQueueSkippedApps = function (_, _) {
+          (_.GetDiscoveryQueueSkippedApps = function (_, _, _) {
             return _.SendMsg(
               "Store.GetDiscoveryQueueSkippedApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -86411,21 +87318,26 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.ReportApp = function (_, _) {
-            return _.SendMsg("Store.ReportApp#1", (0, _._)(_, _), _, {
+          (_.ReportApp = function (_, _, _) {
+            return _.SendMsg("Store.ReportApp#1", (0, _._)(_, _, _), _, {
               ePrivilege: 3,
             });
           }),
-          (_.GetStorePreferences = function (_, _) {
-            return _.SendMsg("Store.GetStorePreferences#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetStorePreferences = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetStorePreferences#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetTrendingAppsAmongFriends = function (_, _) {
+          (_.GetTrendingAppsAmongFriends = function (_, _, _) {
             return _.SendMsg(
               "Store.GetTrendingAppsAmongFriends#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -86442,60 +87354,60 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.UpdatePackageReservations = function (_, _) {
+          (_.UpdatePackageReservations = function (_, _, _) {
             return _.SendMsg(
               "Store.UpdatePackageReservations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetWishlistDemoEmailStatus = function (_, _) {
+          (_.GetWishlistDemoEmailStatus = function (_, _, _) {
             return _.SendMsg(
               "Store.GetWishlistDemoEmailStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.QueueWishlistDemoEmailToFire = function (_, _) {
+          (_.QueueWishlistDemoEmailToFire = function (_, _, _) {
             return _.SendMsg(
               "Store.QueueWishlistDemoEmailToFire#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetReservationPositionMessage = function (_, _) {
+          (_.SetReservationPositionMessage = function (_, _, _) {
             return _.SendMsg(
               "Store.SetReservationPositionMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.DeleteReservationPositionMessage = function (_, _) {
+          (_.DeleteReservationPositionMessage = function (_, _, _) {
             return _.SendMsg(
               "Store.DeleteReservationPositionMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetAllReservationPositionMessages = function (_, _) {
+          (_.GetAllReservationPositionMessages = function (_, _, _) {
             return _.SendMsg(
               "Store.GetAllReservationPositionMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -86512,20 +87424,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.SetCompatibilityFeedback = function (_, _) {
+          (_.SetCompatibilityFeedback = function (_, _, _) {
             return _.SendMsg(
               "Store.SetCompatibilityFeedback#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ShouldPromptForCompatibilityFeedback = function (_, _) {
+          (_.ShouldPromptForCompatibilityFeedback = function (_, _, _) {
             return _.SendMsg(
               "Store.ShouldPromptForCompatibilityFeedback#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -86540,40 +87452,50 @@ var CLSTAMP = "steamdb";
           };
         })(_ || (_ = {})),
         (function (_) {
-          (_.RequestInvite = function (_, _) {
-            return _.SendMsg("Playtest.RequestInvite#1", (0, _._)(_, _), _, {
+          (_.RequestInvite = function (_, _, _) {
+            return _.SendMsg("Playtest.RequestInvite#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-            (_.UpdateInvites = function (_, _) {
-              return _.SendMsg("Playtest.UpdateInvites#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetInvites = function (_, _) {
-              return _.SendMsg("Playtest.GetInvites#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetInviteHistory = function (_, _) {
+            (_.UpdateInvites = function (_, _, _) {
               return _.SendMsg(
-                "Playtest.GetInviteHistory#1",
-                (0, _._)(_, _),
+                "Playtest.UpdateInvites#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetUserStatus = function (_, _) {
-              return _.SendMsg("Playtest.GetUserStatus#1", (0, _._)(_, _), _, {
+            (_.GetInvites = function (_, _, _) {
+              return _.SendMsg("Playtest.GetInvites#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 1,
               });
             }),
-            (_.GetInviteOptions = function (_, _) {
+            (_.GetInviteHistory = function (_, _, _) {
+              return _.SendMsg(
+                "Playtest.GetInviteHistory#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetUserStatus = function (_, _, _) {
+              return _.SendMsg(
+                "Playtest.GetUserStatus#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetInviteOptions = function (_, _, _) {
               return _.SendMsg(
                 "Playtest.GetInviteOptions#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -87199,7 +88121,7 @@ var CLSTAMP = "steamdb";
         constructor(_ = null) {
           super(),
             _.prototype.parent_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6], null);
+            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -87251,6 +88173,14 @@ var CLSTAMP = "steamdb";
                   related_f2p: {
                     _: 7,
                     _: _,
+                  },
+                  dlc_parent_appids: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -88130,6 +89060,11 @@ var CLSTAMP = "steamdb";
                   },
                   steam_frame_compat_category: {
                     _: 13,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  steam_machine_compat_category: {
+                    _: 14,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -91176,6 +92111,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  requires_signature: {
+                    _: 28,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -91411,17 +92351,17 @@ var CLSTAMP = "steamdb";
       }
       var _;
       !(function (_) {
-        (_.GetItems = function (_, _) {
-          return _.SendMsg("StoreBrowse.GetItems#1", (0, _._)(_, _), _, {
+        (_.GetItems = function (_, _, _) {
+          return _.SendMsg("StoreBrowse.GetItems#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetStoreCategories = function (_, _) {
+          (_.GetStoreCategories = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetStoreCategories#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -91430,10 +92370,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetContentHubConfig = function (_, _) {
+          (_.GetContentHubConfig = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetContentHubConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -91442,23 +92382,33 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetPriceStops = function (_, _) {
-            return _.SendMsg("StoreBrowse.GetPriceStops#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.GetPriceStops = function (_, _, _) {
+            return _.SendMsg(
+              "StoreBrowse.GetPriceStops#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.GetDLCForApps = function (_, _) {
-            return _.SendMsg("StoreBrowse.GetDLCForApps#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetDLCForApps = function (_, _, _) {
+            return _.SendMsg(
+              "StoreBrowse.GetDLCForApps#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetDLCForAppsSolr = function (_, _) {
+          (_.GetDLCForAppsSolr = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetDLCForAppsSolr#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -91467,10 +92417,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetHardwareItems = function (_, _) {
+          (_.GetHardwareItems = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetHardwareItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -92200,16 +93150,21 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.SetDevPageLink = function (_, _) {
-          return _.SendMsg("StoreCatalog.SetDevPageLink#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-            eWebAPIKeyRequirement: 2,
-          });
+        (_.SetDevPageLink = function (_, _, _) {
+          return _.SendMsg(
+            "StoreCatalog.SetDevPageLink#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            },
+          );
         }),
-          (_.GetDevPageLinks = function (_, _) {
+          (_.GetDevPageLinks = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPageLinks#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -92218,20 +93173,20 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetDevPageAllAppsLinked = function (_, _) {
+          (_.GetDevPageAllAppsLinked = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPageAllAppsLinked#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetDevPagesForPartner = function (_, _) {
+          (_.GetDevPagesForPartner = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPagesForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -92251,8 +93206,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -92872,17 +93826,17 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetLists = function (_, _) {
-          return _.SendMsg("StoreCuration.GetLists#1", (0, _._)(_, _), _, {
+        (_.GetLists = function (_, _, _) {
+          return _.SendMsg("StoreCuration.GetLists#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetListDetails = function (_, _) {
+          (_.GetListDetails = function (_, _, _) {
             return _.SendMsg(
               "StoreCuration.GetListDetails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -92902,8 +93856,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -93075,10 +94028,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        _.GetIgnoreList = function (_, _) {
+        _.GetIgnoreList = function (_, _, _) {
           return _.SendMsg(
             "StorePreferences.GetIgnoreList#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -94853,17 +95806,17 @@ var CLSTAMP = "steamdb";
       }
       var _;
       !(function (_) {
-        (_.Query = function (_, _) {
-          return _.SendMsg("StoreQuery.Query#1", (0, _._)(_, _), _, {
+        (_.Query = function (_, _, _) {
+          return _.SendMsg("StoreQuery.Query#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.SearchSuggestions = function (_, _) {
+          (_.SearchSuggestions = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.SearchSuggestions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -94872,17 +95825,22 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.MoreLikeThis = function (_, _) {
-            return _.SendMsg("StoreQuery.MoreLikeThis#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.MoreLikeThis = function (_, _, _) {
+            return _.SendMsg(
+              "StoreQuery.MoreLikeThis#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.GetItemsByUserRecommendedTags = function (_, _) {
+          (_.GetItemsByUserRecommendedTags = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.GetItemsByUserRecommendedTags#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -94890,10 +95848,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetItemByUserCombinedTagsPriority = function (_, _) {
+          (_.GetItemByUserCombinedTagsPriority = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.GetItemByUserCombinedTagsPriority#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -94913,8 +95871,7 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -96533,10 +97490,10 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.GetVoteDefinitions = function (_, _) {
+        (_.GetVoteDefinitions = function (_, _, _) {
           return _.SendMsg(
             "StoreSales.GetVoteDefinitions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -96545,23 +97502,28 @@ var CLSTAMP = "steamdb";
             },
           );
         }),
-          (_.SetVote = function (_, _) {
-            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _), _, {
+          (_.SetVote = function (_, _, _) {
+            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetUserVotes = function (_, _) {
-            return _.SendMsg("StoreSales.GetUserVotes#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetUserVotes = function (_, _, _) {
+            return _.SendMsg(
+              "StoreSales.GetUserVotes#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.GetUserNominations = function (_, _) {
+          (_.GetUserNominations = function (_, _, _) {
             return _.SendMsg(
               "SteamAwards.GetUserNominations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -96569,10 +97531,10 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-            (_.GetOtherUserNominations = function (_, _) {
+            (_.GetOtherUserNominations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetOtherUserNominations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -96580,16 +97542,16 @@ var CLSTAMP = "steamdb";
                 },
               );
             }),
-            (_.Nominate = function (_, _) {
-              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _), _, {
+            (_.Nominate = function (_, _, _) {
+              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _, _), _, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
             }),
-            (_.GetNominationRecommendations = function (_, _) {
+            (_.GetNominationRecommendations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationRecommendations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -96597,10 +97559,10 @@ var CLSTAMP = "steamdb";
                 },
               );
             }),
-            (_.GetNominationShareLink = function (_, _) {
+            (_.GetNominationShareLink = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationShareLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -98025,41 +98987,41 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.QueryTime = function (_, _) {
-          return _.SendMsg("TwoFactor.QueryTime#1", (0, _._)(_, _), _, {
+        (_.QueryTime = function (_, _, _) {
+          return _.SendMsg("TwoFactor.QueryTime#1", (0, _._)(_, _, _), _, {
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.QueryStatus = function (_, _) {
-            return _.SendMsg("TwoFactor.QueryStatus#1", (0, _._)(_, _), _, {
+          (_.QueryStatus = function (_, _, _) {
+            return _.SendMsg("TwoFactor.QueryStatus#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.AddAuthenticator = function (_, _) {
+          (_.AddAuthenticator = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.AddAuthenticator#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.FinalizeAddAuthenticator = function (_, _) {
+          (_.FinalizeAddAuthenticator = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.FinalizeAddAuthenticator#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdateTokenVersion = function (_, _) {
+          (_.UpdateTokenVersion = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.UpdateTokenVersion#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -98067,30 +99029,30 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.RemoveAuthenticator = function (_, _) {
+          (_.RemoveAuthenticator = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.RemoveAuthenticator#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 9,
               },
             );
           }),
-          (_.RemoveAuthenticatorViaChallengeStart = function (_, _) {
+          (_.RemoveAuthenticatorViaChallengeStart = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 9,
               },
             );
           }),
-          (_.RemoveAuthenticatorViaChallengeContinue = function (_, _) {
+          (_.RemoveAuthenticatorViaChallengeContinue = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 9,
@@ -98105,10 +99067,8 @@ var CLSTAMP = "steamdb";
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       _.Message;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -98732,8 +99692,8 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.ClientGetVideoURL = function (_, _) {
-          return _.SendMsg("Video.ClientGetVideoURL#1", (0, _._)(_, _), _, {
+        (_.ClientGetVideoURL = function (_, _, _) {
+          return _.SendMsg("Video.ClientGetVideoURL#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
@@ -98746,10 +99706,15 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.GetVideoBookmarks = function (_, _) {
-            return _.SendMsg("Video.GetVideoBookmarks#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetVideoBookmarks = function (_, _, _) {
+            return _.SendMsg(
+              "Video.GetVideoBookmarks#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
@@ -98759,10 +99724,10 @@ var CLSTAMP = "steamdb";
           };
         })(_ || (_ = {})),
         (function (_) {
-          _.ClientGetOPFSettings = function (_, _) {
+          _.ClientGetOPFSettings = function (_, _, _) {
             return _.SendMsg(
               "FovasVideo.ClientGetOPFSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -100256,20 +101221,20 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.UpdateVoiceChatWebRTCData = function (_, _) {
+        (_.UpdateVoiceChatWebRTCData = function (_, _, _) {
           return _.SendMsg(
             "VoiceChat.UpdateVoiceChatWebRTCData#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.UpdateUserVideoStatus = function (_, _) {
+          (_.UpdateUserVideoStatus = function (_, _, _) {
             return _.SendMsg(
               "VoiceChat.UpdateUserVideoStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -100285,50 +101250,60 @@ var CLSTAMP = "steamdb";
               },
             );
           }),
-          (_.UploadClientVoiceChatLogs = function (_, _) {
+          (_.UploadClientVoiceChatLogs = function (_, _, _) {
             return _.SendMsg(
               "VoiceChat.UploadClientVoiceChatLogs#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.LeaveVoiceChat = function (_, _) {
-            return _.SendMsg("VoiceChat.LeaveVoiceChat#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.LeaveVoiceChat = function (_, _, _) {
+            return _.SendMsg(
+              "VoiceChat.LeaveVoiceChat#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.RequestOneOnOneChat = function (_, _) {
+          (_.RequestOneOnOneChat = function (_, _, _) {
             return _.SendMsg(
               "VoiceChat.RequestOneOnOneChat#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.AnswerOneOnOneChat = function (_, _) {
+          (_.AnswerOneOnOneChat = function (_, _, _) {
             return _.SendMsg(
               "VoiceChat.AnswerOneOnOneChat#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.EndOneOnOneChat = function (_, _) {
-            return _.SendMsg("VoiceChat.EndOneOnOneChat#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.EndOneOnOneChat = function (_, _, _) {
+            return _.SendMsg(
+              "VoiceChat.EndOneOnOneChat#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.LeaveOneOnOneChat = function (_, _) {
+          (_.LeaveOneOnOneChat = function (_, _, _) {
             return _.SendMsg(
               "VoiceChat.LeaveOneOnOneChat#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -100987,30 +101962,30 @@ var CLSTAMP = "steamdb";
         }
       }
       !(function (_) {
-        (_.InitiateWebRTCConnection = function (_, _) {
+        (_.InitiateWebRTCConnection = function (_, _, _) {
           return _.SendMsg(
             "WebRTCClient.InitiateWebRTCConnection#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.UpdateWebRTCConnection = function (_, _) {
+          (_.UpdateWebRTCConnection = function (_, _, _) {
             return _.SendMsg(
               "WebRTCClient.UpdateWebRTCConnection#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.AcknowledgeUpdatedRemoteDescription = function (_, _) {
+          (_.AcknowledgeUpdatedRemoteDescription = function (_, _, _) {
             return _.SendMsg(
               "WebRTCClient.AcknowledgeUpdatedRemoteDescription#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -101054,14 +102029,11 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -101865,207 +102837,9 @@ var CLSTAMP = "steamdb";
           return "CSteamVR_VoiceChat_SetDefaultSession_Notification";
         }
       }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype._ || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  _: {
-                    _: 1,
-                    _: _._.readFloat,
-                    _: _._.writeFloat,
-                  },
-                  _: {
-                    _: 2,
-                    _: _._.readFloat,
-                    _: _._.writeFloat,
-                  },
-                  _: {
-                    _: 3,
-                    _: _._.readFloat,
-                    _: _._.writeFloat,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamVR_Vector3";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.position || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  position: {
-                    _: 1,
-                    _: _,
-                  },
-                  forward: {
-                    _: 2,
-                    _: _,
-                  },
-                  _: {
-                    _: 3,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamVR_VoiceChat_SetSpatialAudioListener_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  position: {
-                    _: 2,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamVR_VoiceChat_SetSpatialAudioSource_Notification";
-        }
-      }
+      _.Message;
+      _.Message;
+      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -102486,10 +103260,8 @@ var CLSTAMP = "steamdb";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -102874,10 +103646,10 @@ var CLSTAMP = "steamdb";
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  tmp_title: {
-                    _: 1e3,
-                    _: _._.readString,
-                    _: _._.writeString,
+                  dock_location: {
+                    _: 9,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -104831,6 +105603,16 @@ var CLSTAMP = "steamdb";
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  env_brightness_construct_theater: {
+                    _: 31,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                  env_brightness_construct_nominal: {
+                    _: 32,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
                 },
               }),
             _.sm_m
@@ -104908,6 +105690,84 @@ var CLSTAMP = "steamdb";
         }
         getClassName() {
           return "CVRGamepadUI_Message_SetHMDSettings_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_ResetHMDPerfSettings_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_ResetHMDPerfSettings_Response";
         }
       }
       class _ extends _.Message {
@@ -105189,6 +106049,193 @@ var CLSTAMP = "steamdb";
         }
         getClassName() {
           return "CVRGamepadUI_Message_ReportVRPanelErrorBoundaryError_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_FocusDashboardBar_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_FocusDashboardBar_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.button || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  button: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  button_down: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  repeat: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_GamepadButtonAction_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_GamepadButtonAction_Response";
         }
       }
       class _ extends _.Message {
@@ -105923,6 +106970,84 @@ var CLSTAMP = "steamdb";
           return "CVRGamepadUI_Message_NavigateInstance_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_ShowPowerMenu_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_ShowPowerMenu_Response";
+        }
+      }
       class _ {
         m_Client;
         constructor(_) {
@@ -105940,9 +107065,12 @@ var CLSTAMP = "steamdb";
             (this.SetDisplayBrightness = this.SetDisplayBrightness.bind(this)),
             (this.SetHMDSettings = this.SetHMDSettings.bind(this)),
             (this.ResetHMDSettings = this.ResetHMDSettings.bind(this)),
+            (this.ResetHMDPerfSettings = this.ResetHMDPerfSettings.bind(this)),
             (this.SetCurrentLanguage = this.SetCurrentLanguage.bind(this)),
             (this.ReportVRPanelErrorBoundaryError =
-              this.ReportVRPanelErrorBoundaryError.bind(this));
+              this.ReportVRPanelErrorBoundaryError.bind(this)),
+            (this.FocusDashboardBar = this.FocusDashboardBar.bind(this)),
+            (this.GamepadButtonAction = this.GamepadButtonAction.bind(this));
         }
         DashboardTabClicked(_, _) {
           return this.m_Client.SendVRGamepadUIRequest(
@@ -106032,6 +107160,14 @@ var CLSTAMP = "steamdb";
             _,
           );
         }
+        ResetHMDPerfSettings(_, _) {
+          return this.m_Client.SendVRGamepadUIRequest(
+            "ResetHMDPerfSettings#1",
+            _.fromObject(_ ?? {}),
+            _,
+            _,
+          );
+        }
         SetCurrentLanguage(_, _) {
           return this.m_Client.SendVRGamepadUIRequest(
             "SetCurrentLanguage#1",
@@ -106043,6 +107179,22 @@ var CLSTAMP = "steamdb";
         ReportVRPanelErrorBoundaryError(_, _) {
           return this.m_Client.SendVRGamepadUIRequest(
             "ReportVRPanelErrorBoundaryError#1",
+            _.fromObject(_ ?? {}),
+            _,
+            _,
+          );
+        }
+        FocusDashboardBar(_, _) {
+          return this.m_Client.SendVRGamepadUIRequest(
+            "FocusDashboardBar#1",
+            _.fromObject(_ ?? {}),
+            _,
+            _,
+          );
+        }
+        GamepadButtonAction(_, _) {
+          return this.m_Client.SendVRGamepadUIRequest(
+            "GamepadButtonAction#1",
             _.fromObject(_ ?? {}),
             _,
             _,
@@ -106080,6 +107232,11 @@ var CLSTAMP = "steamdb";
           msgClassResponse_t: _,
           strMethod: "NavigateInstance",
         },
+        "ShowPowerMenu#1": {
+          msgClassRequest_t: _,
+          msgClassResponse_t: _,
+          strMethod: "ShowPowerMenu",
+        },
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -106092,8 +107249,7 @@ var CLSTAMP = "steamdb";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       function _(_) {
         return "unknown EVRMsg ( " + _ + " )";
       }
@@ -106907,8 +108063,7 @@ var CLSTAMP = "steamdb";
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      if (/^(3389|6814)$/.test(__webpack_require__._))
-        var _ = __webpack_require__("chunkid");
+      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       _.Message;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -118904,6 +120059,11 @@ var CLSTAMP = "steamdb";
                     _: 48,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  use_gyro_sw_biases: {
+                    _: 49,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),

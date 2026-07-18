@@ -280,7 +280,7 @@
           try {
             const i = c.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
               n = {
-                sessionid: c.TS.SESSIONID,
+                sessionid: (0, c.KC)(),
                 searchtext: e,
                 origin: self.origin,
               },
@@ -792,7 +792,7 @@
             if (t && t < 0) return;
             const i = new FormData();
             i.append("type", e.toString()),
-              i.append("sessionid", m.TS.SESSIONID),
+              i.append("sessionid", (0, m.KC)()),
               t && i.append("partnerid", t.toString());
             const n = `${m.TS.PARTNER_BASE_URL}deadlines/ajaxgetdeadlines`,
               a = await h().post(n, i, { withCredentials: !0 });
@@ -866,7 +866,7 @@
             const e = t.onboarded ? "pub" : "newpartner",
               i = `${f.TS.PARTNER_BASE_URL}${e}/ajaxstarttaxidentityworkflow/${t.deadline.data.partnerid}`,
               n = new FormData();
-            n.append("sessionid", f.TS.SESSIONID), r(!0);
+            n.append("sessionid", (0, f.KC)()), r(!0);
             try {
               const e = await v().post(i, n, { withCredentials: !0 });
               200 == e?.status && e.data?.success == j.R && e.data.url
@@ -2328,7 +2328,7 @@
             ? t
             : async () => {
                 const e = new FormData();
-                e.append("sessionid", f.TS.SESSIONID),
+                e.append("sessionid", (0, f.KC)()),
                   e.append("publisherid", "" + s),
                   e.append("subject", i),
                   e.append("message", o);

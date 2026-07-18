@@ -112,7 +112,7 @@
         x: () => c,
         yu: () => m,
       });
-      var i = s(34214);
+      var i = s(43261);
       function n(e) {
         return Array.isArray(e) ? e[0] : e;
       }
@@ -427,7 +427,7 @@
       s.d(t, { o: () => o, q: () => l });
       var i = s(34629),
         n = s(14947),
-        a = s(34214),
+        a = s(43261),
         r = s(82705);
       function o(e) {
         return "waiting" == e || "uploading" == e || "processing" == e;
@@ -473,7 +473,7 @@
     },
     28954: (e, t, s) => {
       "use strict";
-      s.d(t, { M0: () => v, VE: () => w, vN: () => y, zO: () => A });
+      s.d(t, { M0: () => S, VE: () => w, vN: () => y, zO: () => A });
       var i = s(34629),
         n = s(22837),
         a = s(81393),
@@ -492,8 +492,8 @@
         _ = s(82817),
         x = s(40414),
         f = s(64953),
-        S = s(69343);
-      function b(e, t, s) {
+        b = s(69343);
+      function v(e, t, s) {
         const i = (0, c.Kf)(t.width, s),
           n = (0, c.Kf)(t.height, s);
         return {
@@ -511,7 +511,7 @@
           },
         };
       }
-      function v(e) {
+      function S(e) {
         return null == e
           ? void 0
           : e.flatMap((e) => {
@@ -520,17 +520,17 @@
                 ((0, a.wT)(Boolean(t), `Artwork Type not in Map ${e}`),
                 "number" == typeof t.width && "number" == typeof t.height)
               )
-                return [b(e, t)];
+                return [v(e, t)];
               {
                 let s = Math.max(
                   Array.isArray(t.width) ? t.width.length : 1,
                   Array.isArray(t.height) ? t.height.length : 1,
                 );
-                return Array.from({ length: s }, (s, i) => b(e, t, i));
+                return Array.from({ length: s }, (s, i) => v(e, t, i));
               }
             });
       }
-      class T extends S.Vr {
+      class T extends b.Vr {
         constructor(e, t, s, i) {
           super(),
             (this.m_filesToUpload = h.sH.array()),
@@ -538,7 +538,7 @@
             (this.m_lastError = void 0),
             (0, h.Gn)(this),
             (this.m_clanSteamID = e),
-            (this.m_rgImageOptions = v(t)),
+            (this.m_rgImageOptions = S(t)),
             (this.m_localizedImageGroupPrimaryImage = s),
             (this.m_clanImagesV2 = null != i && i);
         }
@@ -546,7 +546,7 @@
           return this.m_clanSteamID;
         }
         async AddImage(e, t = n.Bhc) {
-          const { language: s } = (0, S.jj)(e.name, t);
+          const { language: s } = (0, b.jj)(e.name, t);
           return this.AddImageForLanguage(e, s);
         }
         async AddImageForLanguage(e, t) {
@@ -636,7 +636,7 @@
             o = e.GetResizeDimension(),
             h = new FormData();
           h.append("clanimage", a, t),
-            h.append("sessionid", C.TS.SESSIONID),
+            h.append("sessionid", (0, C.KC)()),
             this.m_clanImagesV2 && h.append("clan_images_v2", "1"),
             (null == r ? void 0 : r.artworkType) &&
               h.append("arttype", r.artworkType),
@@ -1274,7 +1274,7 @@
           return i ? i.find((e) => e.image_hash == t) : void 0;
         }
         async DeleteClanImageByID(e, t) {
-          let s = { sessionid: u.TS.SESSIONID, imageid: t },
+          let s = { sessionid: (0, u.KC)(), imageid: t },
             i = e.GetAccountID(),
             a = await r().get(
               u.TS.COMMUNITY_BASE_URL +
@@ -1327,7 +1327,7 @@
       "use strict";
       s.d(t, { yh: () => n });
       s(90626);
-      var i = s(34214);
+      var i = s(43261);
       function n(e) {
         return (
           e.indexOf("?") > 0 && (e = e.split("?")[0]),
@@ -1439,9 +1439,9 @@
         _ = s(10820),
         x = s(14947),
         f = s(77700),
-        S = s.n(f),
-        b = s(52038);
-      class v extends l.Component {
+        b = s.n(f),
+        v = s(52038);
+      class S extends l.Component {
         constructor(e) {
           super(e),
             (this.m_rgCurrentMatches = []),
@@ -1619,10 +1619,10 @@
             e.push(t);
           }
           return (0, n.jsx)("div", {
-            className: S().mentionDialogPosition,
+            className: b().mentionDialogPosition,
             ref: this.containerRef,
             children: (0, n.jsxs)("div", {
-              className: S().mentionDialog,
+              className: b().mentionDialog,
               tabIndex: 0,
               onKeyDown: this.OnKeyDown,
               children: [this.renderHeader(), e],
@@ -1630,10 +1630,10 @@
           });
         }
       }
-      (0, i.Cg)([m.oI], v.prototype, "OnKeyDown", null),
-        (0, i.Cg)([m.oI], v.prototype, "OnClickSuggestion", null),
-        (0, i.Cg)([m.oI], v.prototype, "OnMouseOverSuggestion", null),
-        (0, i.Cg)([m.oI], v.prototype, "BindSelectedElement", null);
+      (0, i.Cg)([m.oI], S.prototype, "OnKeyDown", null),
+        (0, i.Cg)([m.oI], S.prototype, "OnClickSuggestion", null),
+        (0, i.Cg)([m.oI], S.prototype, "OnMouseOverSuggestion", null),
+        (0, i.Cg)([m.oI], S.prototype, "BindSelectedElement", null);
       class T extends l.PureComponent {
         constructor() {
           super(...arguments), (this.containerRef = l.createRef());
@@ -1646,10 +1646,10 @@
         }
         render() {
           return (0, n.jsx)("div", {
-            className: (0, b.A)(
-              S().suggestOption,
-              S().mentionSearchOption,
-              this.props.bIsSelected ? S().selected : "",
+            className: (0, v.A)(
+              b().suggestOption,
+              b().mentionSearchOption,
+              this.props.bIsSelected ? b().selected : "",
             ),
             onMouseEnter: this.OnMouseOver,
             onClick: this.OnClick,
@@ -1660,7 +1660,7 @@
       }
       (0, i.Cg)([m.oI], T.prototype, "OnMouseOver", null),
         (0, i.Cg)([m.oI], T.prototype, "OnClick", null);
-      const w = v;
+      const w = S;
       var y = s(79786),
         A = s.n(y);
       const D = class extends w {
@@ -1675,7 +1675,7 @@
         }
         renderMatch(e) {
           return (0, n.jsxs)("div", {
-            className: (0, b.A)(
+            className: (0, v.A)(
               A().EmoticonSuggestion,
               e.recent ? "Recent" : "",
             ),
@@ -1729,7 +1729,7 @@
           return (0, n.jsxs)(
             "div",
             {
-              className: (0, b.A)(E().BBCodeSuggestion),
+              className: (0, v.A)(E().BBCodeSuggestion),
               children: [
                 (0, n.jsx)("div", { className: E().BBCode, children: e.name }),
                 "[",
@@ -1746,7 +1746,7 @@
           return (0, n.jsx)(
             "div",
             {
-              className: (0, b.A)(S().mentionSearchOption, S().noMatches),
+              className: (0, v.A)(b().mentionSearchOption, b().noMatches),
               children: (0, j.we)("#Bbcode_No_Match"),
             },
             "nomatches",
@@ -1948,16 +1948,16 @@
         P = s(56011),
         z = s(78327),
         Y = s(44483),
-        V = s(38038),
-        W = s(41471),
-        K = s(60155),
+        K = s(38038),
+        V = s(41471),
+        W = s(60155),
         X = s(48079),
         Z = s(22797),
         J = s(32754),
         Q = s(99312),
         q = s.n(Q),
         $ = s(22837),
-        ee = s(34214),
+        ee = s(43261),
         te = s(81393),
         se = s(66331),
         ie = s(29347),
@@ -1998,11 +1998,11 @@
         }, [_, s]);
         let x,
           f = "",
-          S = !1;
+          b = !1;
         if (C && C.GetFilesToUpload().length > 0) {
           x = C.GetUploadImages()[0];
           const e = x.IsValidAssetType(o);
-          (f = e.error), (S = e.needsCrop);
+          (f = e.error), (b = e.needsCrop);
         }
         return (0, n.jsxs)(n.Fragment, {
           children: [
@@ -2021,7 +2021,7 @@
                   },
                 }),
             Boolean(f) && (0, n.jsx)("p", { children: f }),
-            S &&
+            b &&
               (0, n.jsx)(B.$n, {
                 onClick: (e) => {
                   const t = (0, P.uX)(e);
@@ -2152,7 +2152,7 @@
         async AjaxGetFormattingHelp() {
           if ("" == this.state.formattingHelp.__html) {
             let e,
-              t = { sessionid: z.TS.SESSIONID };
+              t = { sessionid: (0, z.KC)() };
             (e = await r().get(oe.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
@@ -2253,7 +2253,7 @@
                 clanSteamID: this.props.clanSteamID,
               }),
               (0, n.jsx)("div", {
-                className: (0, b.A)(
+                className: (0, v.A)(
                   q().DescriptionCtn,
                   q().BBCodeEditorInputStyles,
                   this.state.bShowDragTarget ? q().DragTarget : "",
@@ -2263,7 +2263,7 @@
                   cols: 90,
                   rows: this.props.nOverridesRows || 22,
                   maxLength: 64e3,
-                  className: (0, b.A)(
+                  className: (0, v.A)(
                     q().DefaultEditor,
                     this.props.classNameForTextArea
                       ? this.props.classNameForTextArea
@@ -2452,7 +2452,7 @@
         }
         OnOpenSpeakerDialog(e) {
           (0, G.pg)(
-            (0, n.jsx)(Se, {
+            (0, n.jsx)(be, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -2479,7 +2479,7 @@
             e &&
               (a = t
                 ? (0, n.jsx)("span", {
-                    className: (0, b.A)("ttip", q().ActionGetHelp),
+                    className: (0, v.A)("ttip", q().ActionGetHelp),
                     children: (0, n.jsx)(J.he, {
                       toolTipContent: (0, j.we)(
                         "#EventEditor_FormattingHelp_GetHelpLink",
@@ -2497,7 +2497,7 @@
                   })
                 : (0, n.jsx)("span", {
                     onClick: this.ShowHelpDialog,
-                    className: (0, b.A)("ttip", q().ActionGetHelp),
+                    className: (0, v.A)("ttip", q().ActionGetHelp),
                     children: (0, n.jsxs)(J.he, {
                       toolTipContent: (0, j.we)(
                         "#EventEditor_FormattingHelp_GetHelpLink",
@@ -2586,7 +2586,7 @@
                       toolTipContent: (0, j.we)("#Editor_Emoticon"),
                       children: (0, n.jsx)(k.A, {
                         title: " ",
-                        className: (0, b.A)(q().EmoteOuter),
+                        className: (0, v.A)(q().EmoteOuter),
                         disabled: !1,
                         OnEmoticonSelected: this.OnEmoticonSelected,
                         rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -3041,24 +3041,24 @@
         (0, i.Cg)([m.oI], fe.prototype, "OnImageURLChange", null),
         (0, i.Cg)([m.oI], fe.prototype, "OnAnchorURLChange", null),
         (fe = (0, i.Cg)([o.PA], fe));
-      const Se = (e) => {
+      const be = (e) => {
         const [t, s] = l.useState(""),
           [i, a] = l.useState(""),
           [r, o] = l.useState(""),
           [h, c] = l.useState(""),
           [u, m] = l.useState(void 0),
           [I, C] = l.useState(void 0),
-          { data: _ } = (0, V.Dv)(),
-          { isLoading: x, data: f } = (0, W.js)(
+          { data: _ } = (0, K.Dv)(),
+          { isLoading: x, data: f } = (0, V.js)(
             null == I ? void 0 : I.GetAccountID(),
           ),
-          S = 0 != t.trim().length && 0 != h.trim().length;
+          b = 0 != t.trim().length && 0 != h.trim().length;
         return (0, n.jsx)(H.o0, {
           strTitle: (0, j.we)("#EventEditor_AddSpeaker"),
           strDescription: (0, j.we)("#EventEditor_AddSpeaker_Desc"),
           closeModal: e.closeModal,
           onCancel: e.closeModal,
-          bOKDisabled: !S,
+          bOKDisabled: !b,
           onOK: () => {
             let s = `[speaker name="${t.trim()}"`;
             if (
@@ -3146,7 +3146,7 @@
                       (0, n.jsx)(B.$n, {
                         onClick: (e) =>
                           (0, p.lX)(
-                            (0, n.jsx)(be, { friends: _, setSteamID: C }),
+                            (0, n.jsx)(ve, { friends: _, setSteamID: C }),
                             e,
                           ),
                         children: (0, j.we)(
@@ -3216,19 +3216,19 @@
           }),
         });
       };
-      function be(e) {
+      function ve(e) {
         const { friends: t, setSteamID: s } = e;
         return (0, n.jsx)("div", {
           className: q().DropDownScroll,
           children: t.map((e) =>
-            (0, n.jsx)(ve, { steamid: e, setSteamID: s }, e),
+            (0, n.jsx)(Se, { steamid: e, setSteamID: s }, e),
           ),
         });
       }
-      function ve(e) {
+      function Se(e) {
         const { steamid: t, setSteamID: s } = e,
-          { data: i } = (0, W.js)(t);
-        return (0, n.jsx)(K.kt, {
+          { data: i } = (0, V.js)(t);
+        return (0, n.jsx)(W.kt, {
           onSelected: () => s(new d.b(t)),
           children: (0, n.jsxs)("div", {
             style: { display: "flex", alignItems: "center" },
@@ -3345,7 +3345,7 @@
                     children: [
                       (0, n.jsx)(B.a3, {
                         children: (0, n.jsxs)("div", {
-                          className: (0, b.A)(
+                          className: (0, v.A)(
                             R().FlexColumnContainer,
                             q().ImportHTMLCtn,
                           ),
@@ -3694,7 +3694,7 @@
         n = s(7850),
         a = s(90626),
         r = s(73744),
-        o = s(34214),
+        o = s(43261),
         l = s(68255),
         h = s(81416),
         p = s(9154),

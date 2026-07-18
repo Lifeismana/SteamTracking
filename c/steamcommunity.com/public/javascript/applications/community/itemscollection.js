@@ -412,8 +412,8 @@
               : _.item_image_small;
         return (0, _.jsx)(_._, {
           ..._,
-          onFocus: _.onMouseEnter,
-          onBlur: _.onMouseLeave,
+          onFocus: () => _.onPointerEnter(),
+          onBlur: () => _.onPointerLeave(),
           focusable: !0,
           className: _().ItemBackground,
           children: (0, _.jsx)(_._, {
@@ -808,7 +808,7 @@
                 appid: _,
                 origin: self.origin,
                 _: _._.LANGUAGE,
-                sessionid: _ ? _._.SESSIONID : void 0,
+                sessionid: _ ? (0, _._)() : void 0,
               },
               _ = await _().get(_, {
                 params: _,

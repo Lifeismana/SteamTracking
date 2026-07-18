@@ -342,6 +342,25 @@ function ShowGiftHistory()
 	}
 }
 
+function AddGiftSenderAsFriend( steamid, giftSenderPersonaName )
+{
+	$J.post(
+		'https://steamcommunity.com/actions/AddFriendAjax',
+		{sessionID: g_sessionID, steamid: steamid, accept_invite: 0 }
+	).done( function() {
+		// Hide the "send friend request" button once the invite was sent successfully
+		$( 'friend_request_btn' ).hide();
+
+		ShowAlertDialog(
+			'Add Friend' + ' - ' + giftSenderPersonaName,
+			'Friend invite sent. They will appear as a friend once they have accepted your invite.' );
+	} ).fail( function() {
+		ShowAlertDialog(
+			'Add Friend',
+			'Error adding friend. Please try again.' );
+	} );
+}
+
 
 function AcceptRejectGiftCard( gidGiftCardID, bAccept )
 {

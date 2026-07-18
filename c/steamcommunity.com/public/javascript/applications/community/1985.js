@@ -178,7 +178,7 @@
                 const _ = new FormData();
                 __webpack_require__.append("appid", "" + _),
                   __webpack_require__.append("status_text", _),
-                  __webpack_require__.append("sessionid", _._.SESSIONID);
+                  __webpack_require__.append("sessionid", (0, _._)());
                 const _ = await _().post(_, _, {
                   withCredentials: !0,
                 });

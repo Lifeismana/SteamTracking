@@ -56,7 +56,7 @@
     },
     27144: (e, t, s) => {
       "use strict";
-      s.d(t, { B3: () => y, KM: () => S, KT: () => v });
+      s.d(t, { B3: () => y, KM: () => j, KT: () => v });
       var n = s(41735),
         a = s.n(n),
         i = s(58632),
@@ -72,7 +72,7 @@
         h = s(42457),
         _ = s(23809);
       const x = "nicknames";
-      function S(e) {
+      function j(e) {
         const t = (0, _.KV)(),
           { data: s, isLoading: n } = (0, c.I)({
             queryKey: [x],
@@ -92,7 +92,7 @@
           });
         return s ? s.get(e) : null;
       }
-      const j = new (r())(
+      const S = new (r())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -141,7 +141,7 @@
       function v(e) {
         const { data: t, isLoading: s } = (0, c.I)({
           queryKey: [f, e],
-          queryFn: () => j.load(e),
+          queryFn: () => S.load(e),
         });
         return [t, s];
       }
@@ -150,7 +150,7 @@
           { data: s, isLoading: n } = (0, c.I)({
             queryKey: [f, e],
             queryFn: async () => {
-              const s = await j.loadMany(e);
+              const s = await S.loadMany(e);
               return (
                 s.forEach((e) => {
                   const s = [f, new u.b(e.steamid).GetAccountID()];
@@ -310,7 +310,7 @@
         h = s(61859),
         _ = s(43068),
         x = s(84811);
-      function S(e) {
+      function j(e) {
         const { gid: t } = (0, i.g)(),
           [s, a] = (0, d.useState)(!0);
         if (
@@ -324,36 +324,36 @@
             string: (0, h.we)("#Loading"),
             position: "center",
           });
-        const S = u.O3.GetClanEventModel(t);
-        return S
+        const j = u.O3.GetClanEventModel(t);
+        return j
           ? (0, n.jsxs)(x.tH, {
               children: [
-                !S.BIsUnlistedEvent() &&
+                !j.BIsUnlistedEvent() &&
                   (0, n.jsx)("div", {
                     children:
                       "NOTE: Event needs to be published in unlisted mode for Steam partners to see it. Admin account bypass this check",
                   }),
                 (0, n.jsx)(p.jA, {
                   lang: (0, r.sfN)(c.TS.LANGUAGE),
-                  event: S,
+                  event: j,
                   adminPanel:
                     c.TS.EREALM === o.TU.k_ESteamRealmChina
-                      ? (0, n.jsx)(_.P, { eventModel: S })
-                      : (0, n.jsx)(m.g, { eventModel: S, bSupportsSticky: !0 }),
+                      ? (0, n.jsx)(_.P, { eventModel: j })
+                      : (0, n.jsx)(m.g, { eventModel: j, bSupportsSticky: !0 }),
                 }),
               ],
             })
           : null;
       }
-      var j = s(37085),
+      var S = s(37085),
         f = s(51614),
         v = s(41735),
         y = s.n(v),
         M = s(62216),
         T = s(44165),
-        N = s(30470),
-        w = s(24484);
-      function C(e, t, s) {
+        C = s(30470),
+        N = s(24484);
+      function w(e, t, s) {
         for (const n of e)
           if (n.group_id === t) {
             const e = n.sessions.find((e) => e.id === s);
@@ -364,22 +364,22 @@
       function E(e, t) {
         const s = (0, T.f1)(),
           [n] = (0, d.useState)(() =>
-            (0, w.Tc)("registrations", "application_config")
+            (0, N.Tc)("registrations", "application_config")
               .map((e) => ((e.userReg = JSON.parse(e.jsondata)), e))
               .sort((t, s) => {
-                const n = C(
+                const n = w(
                     e.jsondata.meet_steam_groups,
                     t.group_id,
                     t.session_id,
                   ),
-                  a = C(e.jsondata.meet_steam_groups, s.group_id, s.session_id);
+                  a = w(e.jsondata.meet_steam_groups, s.group_id, s.session_id);
                 return (
                   (a?.session?.rtime_start || 0) -
                   (n?.session?.rtime_start || 0)
                 );
               })
               .map((t) => {
-                const n = C(
+                const n = w(
                   e.jsondata.meet_steam_groups,
                   t.group_id,
                   t.session_id,
@@ -450,22 +450,22 @@
         H = s(91675),
         $ = s(84933),
         z = s(15588),
-        O = s.n(z),
-        K = s(29233);
+        K = s.n(z),
+        O = s(29233);
       function q(e) {
         const [t] = (0, k.QD)("gid"),
           s = (0, A.RR)(t),
-          a = (0, r.sfN)(N.TS.LANGUAGE);
+          a = (0, r.sfN)(C.TS.LANGUAGE);
         return s
           ? (0, n.jsxs)("div", {
-              className: O().Ctn,
+              className: K().Ctn,
               children: [
                 (0, n.jsxs)("div", {
-                  className: O().EventName,
+                  className: K().EventName,
                   children: [
                     (0, n.jsx)("h2", { children: s.GetNameWithFallback(a) }),
                     (0, n.jsx)("a", {
-                      href: `${N.TS.STORE_BASE_URL}meetsteam/${t}`,
+                      href: `${C.TS.STORE_BASE_URL}meetsteam/${t}`,
                       target: "_blank",
                       children: "See Event Details",
                     }),
@@ -484,7 +484,7 @@
         return (0, n.jsxs)("div", {
           children: [
             (0, n.jsx)("div", {
-              className: O().User,
+              className: K().User,
               children: (0, n.jsx)(B.p, { accountID: a }),
             }),
             (0, n.jsx)(Q, {
@@ -540,8 +540,8 @@
           i = (0, d.useCallback)(() => a((e) => !e), []);
         return (0, n.jsx)("div", {
           className: (0, F.A)({
-            [O().DescriptionWrapper]: !0,
-            [O().Expanded]: s,
+            [K().DescriptionWrapper]: !0,
+            [K().Expanded]: s,
           }),
           onClick: i,
           onMouseEnter: () => a(!0),
@@ -551,50 +551,50 @@
       }
       function V(e) {
         const { reg: t, eventModel: s } = e,
-          a = new K.b2(t.steamid).GetAccountID(),
+          a = new O.b2(t.steamid).GetAccountID(),
           [i] = (0, R.KT)(t.userReg.accountid),
           [r, o] = (0, d.useState)(!0),
           [c, l] = (0, d.useState)([]),
           [u, m] = (0, d.useState)(!1),
           p = t.userReg,
-          { group: g, session: h } = C(
+          { group: g, session: h } = w(
             s.jsondata.meet_steam_groups,
             t.group_id,
             t.session_id,
           ),
-          [_, S, v] = (0, $.uD)(),
+          [_, j, v] = (0, $.uD)(),
           M =
             ((T = s.GID),
-            (w = a),
-            (E = t.group_id),
-            (D = t.session_id),
+            (E = a),
+            (D = t.group_id),
+            (A = t.session_id),
             (0, f.n)({
               mutationFn: async ({ bIncludeSelf: e, rgGuests: t }) => {
                 const s = new FormData();
-                s.append("sessionid", N.TS.SESSIONID),
+                s.append("sessionid", (0, N.KC)()),
                   s.append("gid", T),
-                  s.append("accountid", "" + w),
-                  s.append("meetsteam_group_id", "" + E),
-                  s.append("meetsteam_session_id", "" + D),
+                  s.append("accountid", "" + E),
+                  s.append("meetsteam_group_id", "" + D),
+                  s.append("meetsteam_session_id", "" + A),
                   s.append("include_self", "" + (e ? 1 : 0)),
                   t?.length && s.append("guests", t.join("|"));
-                const n = `${N.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
+                const n = `${C.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
                   a = await y().post(n, s, { withCredentials: !0 });
-                return a?.data?.success == j.R;
+                return a?.data?.success == S.R;
               },
             }));
-        var T, w, E, D;
-        const A = new Set(
+        var T, E, D, A;
+        const L = new Set(
             t.guests_attendance?.length > 0
               ? t.guests_attendance.split("|")
               : [],
           ),
-          L = t.attendance_count > A.size,
-          k = (e, t, s, a) =>
+          k = t.attendance_count > L.size,
+          B = (e, t, s, a) =>
             (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsxs)("span", {
-                  className: O().GuestTitle,
+                  className: K().GuestTitle,
                   children: [e, ":", " "],
                 }),
                 t,
@@ -603,7 +603,7 @@
                     children: [
                       " ",
                       (0, n.jsxs)("span", {
-                        className: O().GuestEmail,
+                        className: K().GuestEmail,
                         children: ["(", s, ")"],
                       }),
                     ],
@@ -624,19 +624,19 @@
             (0, n.jsx)(Y, { group: g, session: h }),
             Boolean(u)
               ? (0, n.jsx)("div", {
-                  className: O().CheckedIn,
+                  className: K().CheckedIn,
                   children: "Attendee has been checked in",
                 })
               : (0, n.jsxs)("div", {
-                  className: O().RegisteredUsers,
+                  className: K().RegisteredUsers,
                   children: [
                     (0, n.jsx)(b.Yh, {
                       label: (0, n.jsx)(n.Fragment, {
-                        children: k(
+                        children: B(
                           "Attendee",
                           p.name || i.persona_name,
                           p.email_override,
-                          L,
+                          k,
                         ),
                       }),
                       checked: r,
@@ -649,7 +649,7 @@
                             b.Yh,
                             {
                               label: (0, n.jsx)(n.Fragment, {
-                                children: k("Guest", e, void 0, A.has(e)),
+                                children: B("Guest", e, void 0, L.has(e)),
                               }),
                               checked: c.includes(e),
                               onChange: (t) => {
@@ -667,7 +667,7 @@
                         ),
                       }),
                     (0, n.jsx)(b.jn, {
-                      onClick: S,
+                      onClick: j,
                       children: "Check in selected people",
                     }),
                   ],
@@ -740,14 +740,14 @@
           d = (0, M.Mr)(i, o, a);
         return t && s
           ? (0, n.jsxs)("div", {
-              className: O().SessionInfo,
+              className: K().SessionInfo,
               children: [
                 (0, n.jsx)("div", {
-                  className: O().SessionName,
+                  className: K().SessionName,
                   children: s.localized_session_title[r.Bhc],
                 }),
                 (0, n.jsxs)("div", {
-                  className: O().SessionTime,
+                  className: K().SessionTime,
                   children: [c, " @ ", (0, n.jsx)("b", { children: d })],
                 }),
                 (0, n.jsx)("div", {
@@ -755,7 +755,7 @@
                     desc: `Description: ${s.localized_session_description[r.Bhc] || ""}`,
                   }),
                 }),
-                "dev" == N.TS.WEB_UNIVERSE &&
+                "dev" == C.TS.WEB_UNIVERSE &&
                   (0, n.jsxs)("div", {
                     children: ["Rtime Start (Dev only): ", t.rtime_start],
                   }),
@@ -776,7 +776,7 @@
       function ie(e) {
         const [t] = (0, k.QD)("gid"),
           s = (0, A.RR)(t),
-          a = (0, r.sfN)(N.TS.LANGUAGE),
+          a = (0, r.sfN)(C.TS.LANGUAGE),
           [i, o] = (0, d.useState)("");
         return s
           ? (0, n.jsxs)("div", {
@@ -787,7 +787,7 @@
                   children: [
                     (0, n.jsx)("h1", { children: s.GetNameWithFallback(a) }),
                     (0, n.jsx)("a", {
-                      href: `${N.TS.STORE_BASE_URL}meetsteam/${t}`,
+                      href: `${C.TS.STORE_BASE_URL}meetsteam/${t}`,
                       target: "_blank",
                       children: "See Event Details",
                     }),
@@ -1023,7 +1023,7 @@
             session: i,
             registrations: o,
           } = e,
-          c = (0, r.sfN)(N.TS.LANGUAGE),
+          c = (0, r.sfN)(C.TS.LANGUAGE),
           d = (0, T.s4)(),
           { sDisplayTimeZone: l, rtime_start: u } = (0, M._t)(i),
           m = (0, M.us)(u, l),
@@ -1036,25 +1036,25 @@
                 : 0),
             0,
           ),
-          [h, _, S] = (0, $.uD)(),
+          [h, _, j] = (0, $.uD)(),
           v =
             ((w = t.GID),
-            (C = a.group_id),
-            (E = i.id),
+            (E = a.group_id),
+            (D = i.id),
             (0, f.n)({
               mutationFn: async ({ nCapacity: e }) => {
                 const t = new FormData();
-                t.append("sessionid", N.TS.SESSIONID),
+                t.append("sessionid", (0, N.KC)()),
                   t.append("gid", w),
-                  t.append("meetsteam_group_id", "" + C),
-                  t.append("meetsteam_session_id", "" + E),
+                  t.append("meetsteam_group_id", "" + E),
+                  t.append("meetsteam_session_id", "" + D),
                   t.append("capacity", "" + e);
-                const s = `${N.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
+                const s = `${C.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
                   n = await y().post(s, t, { withCredentials: !0 });
-                return n?.data?.success == j.R;
+                return n?.data?.success == S.R;
               },
             }));
-        var w, C, E;
+        var w, E, D;
         return (0, n.jsxs)("div", {
           className: ee().DisplaySession,
           children: [
@@ -1092,7 +1092,7 @@
                     active: h,
                     children: (0, n.jsx)(x.tH, {
                       children: (0, n.jsx)(ue, {
-                        closeModal: S,
+                        closeModal: j,
                         nCapacity: i.max_capacity ?? 0,
                         fnUpdateCapacity: v,
                         fnOnSuccess: () => window.location.reload(),
@@ -1192,7 +1192,7 @@
             }),
             (0, n.jsx)(i.qh, {
               path: pe.MeetSteamEvent(),
-              render: (e) => (0, n.jsx)(S, { ...e }),
+              render: (e) => (0, n.jsx)(j, { ...e }),
             }),
             (0, n.jsx)(i.qh, { children: (0, n.jsx)(Z.a, {}) }),
           ],

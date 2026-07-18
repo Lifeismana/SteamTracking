@@ -117,7 +117,7 @@
               steamid: this.m_steamid.ConvertTo64BitString(),
               matchid: _,
               title: _,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           try {
             let _ = await _().get(_, {
@@ -154,7 +154,7 @@
             _ = {
               steamid: _,
               broadcastid: _ ? _.m_ulBroadcastID : null,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "StopBroadcast",
@@ -172,7 +172,7 @@
               broadcastid: _ ? _.m_ulBroadcastID : null,
               type: _,
               days: _,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetBroadcasterRestrictions",
@@ -188,7 +188,7 @@
             _ = {
               steamid: _,
               broadcastid: _ ? _.m_ulBroadcastID : null,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetUnBannable",
@@ -205,7 +205,7 @@
               steamid: _,
               broadcastid: _ ? _.m_ulBroadcastID : null,
               description: _,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SendUserReportOnBroadcast",

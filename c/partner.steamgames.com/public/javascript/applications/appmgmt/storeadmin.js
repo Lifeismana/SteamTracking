@@ -640,6 +640,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         ReleaseDateInfoCtn: "_3_BM0Yr1nZHLRCU-YScHph",
         GameEditCtn: "_2atDY79LoAg6W2I3f_ghoe",
         ReleaseDateContent: "_3EqL95FAclb4_KUCViyIy",
@@ -1920,7 +1921,7 @@
               }) => {
                 if (!_ || !_) return !1;
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("action", "alt_text"),
                   _.append("name", _),
                   _.append(
@@ -2275,7 +2276,7 @@
             return (0, _._)({
               mutationFn: async ({ extraAsset: _, eLang: _ }) => {
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("action", "delete"),
                   _.append("name", (0, _._)(_)),
                   (0, _._)(_) &&
@@ -2730,7 +2731,7 @@
           let _;
           if (_.file.size > 6291456) {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("name", _),
               _.append("file_size", "" + _.file.size);
             const _ = await this.MakePost(
@@ -2770,7 +2771,7 @@
           }
           {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("asset_type", "extra_asset_v2"),
               _.append("name", _),
               _
@@ -2798,7 +2799,7 @@
         }
         async CheckUploadStatus(_, _) {
           const _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("request_ids", _.join(","));
           const _ = await this.MakePost(
             this.m_urls.strCheckConvertStatus,
@@ -2816,7 +2817,7 @@
         }
         async CompleteUpload(_, _, _, _) {
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("request_id", _.toString()),
             _.append("name", _),
             _.append("asset_type", "extra_asset_v2"),
@@ -2840,7 +2841,7 @@
         }
         async GetExtraAssets(_) {
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID);
+          _.append("sessionid", (0, _._)());
           const _ = await this.MakePost(
             this.m_urls.strGetExtraAssets,
             _,
@@ -9512,7 +9513,7 @@
           let _ = null;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("packageid", "" + _),
               _.append("json", "1"),
               _.append("reason_code", _.join(",") || ""),
@@ -9545,7 +9546,7 @@
           let _ = null;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("packageid", "" + _),
               _.append("json", "1"),
               _.append("proposalkey", "" + _),
@@ -10465,28 +10466,33 @@
       }
       var _, _;
       !(function (_) {
-        _.GetQuickText = function (_, _) {
-          return _.SendMsg("SupportAgents.GetQuickText#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 5,
-          });
+        _.GetQuickText = function (_, _, _) {
+          return _.SendMsg(
+            "SupportAgents.GetQuickText#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 5,
+            },
+          );
         };
       })(_ || (_ = {})),
         (function (_) {
-          (_.UploadUserApplicationLog = function (_, _) {
+          (_.UploadUserApplicationLog = function (_, _, _) {
             return _.SendMsg(
               "HelpRequestLogs.UploadUserApplicationLog#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-            (_.GetApplicationLogDemand = function (_, _) {
+            (_.GetApplicationLogDemand = function (_, _, _) {
               return _.SendMsg(
                 "HelpRequestLogs.GetApplicationLogDemand#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -10678,7 +10684,7 @@
                   _.append("appid", "" + _.appid),
                   _.append("initial_text", _.strRequestTitle),
                   _.append("issue_text", _.strRequestBody),
-                  _.append("sessionid", _._.SESSIONID),
+                  _.append("sessionid", (0, _._)()),
                   _.append("steamid", _),
                   _.append("publisherid_selected", "" + _);
                 const _ = await _().post(
@@ -14789,7 +14795,7 @@
               mutationKey: ["save_nonapp_contents", _],
               mutationFn: async (_) => {
                 const _ = new FormData();
-                __webpack_require__.append("sessionid", _._.SESSIONID);
+                __webpack_require__.append("sessionid", (0, _._)());
                 const _ = "nonapp_contents";
                 for (let _ = 0; _ < _.length; _++) {
                   const _ = _[_];
@@ -14811,7 +14817,7 @@
                 if (200 !== _.status) return _.data;
                 if (1 != _.data.success) throw _.data;
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("changenotes", "Change non-app items in package");
                 const _ = `${_._.PARTNER_BASE_URL}admin/store/packagepublish/${_}`,
                   _ = await _().post(_, _);
@@ -15053,7 +15059,7 @@
               mutationKey: ["save_show_capsule_art_toggle", _],
               mutationFn: async (_) => {
                 const _ = new FormData();
-                __webpack_require__.append("sessionid", _._.SESSIONID),
+                __webpack_require__.append("sessionid", (0, _._)()),
                   __webpack_require__.append(
                     "show_capsule_art_in_purchase_option",
                     _.bShowCapsuleArt ? "1" : "0",
@@ -15067,7 +15073,7 @@
                 if (200 !== _.status) return _.data;
                 if (1 != _.data.success) throw _.data;
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append(
                     "changenotes",
                     "Configure package purchase display options.",
@@ -15727,7 +15733,7 @@
               queryFn: async () => {
                 const _ = `${_._.PARTNER_BASE_URL}creatorhome/ajaxgetgroupsforuser`,
                   _ = {
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                   },
                   _ = await _().get(_, {
                     params: _,
@@ -16036,7 +16042,7 @@
               mutationFn: async ({ nIndex: _, mapAltText: _ }) => {
                 if (null == _ || !_) return !1;
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID);
+                _.append("sessionid", (0, _._)());
                 for (const [_, _] of Object.entries(_))
                   _.append(`app[assets][screenshots][${_}][alt_text][${_}]`, _);
                 const _ = await fetch(_, {
@@ -16276,9 +16282,8 @@
           open: _,
           onToggle: (_) => __webpack_require__(_.currentTarget.open),
           children: [
-            (0, _.jsxs)("summary", {
+            (0, _.jsxs)(_._, {
               className: _().Summary,
-              "data-panel": '{"clickOnActivate": true}',
               children: [
                 (0, _.jsx)("div", {
                   className: _().ImageContainer,
@@ -16420,11 +16425,10 @@
         });
       }
       function _(_) {
-        return (0, _.jsx)("a", {
+        return (0, _.jsx)(_._, {
           href: `${_._.STORE_BASE_URL}category/${_[_.feature]}`,
           className: _().InfoRow,
-          "data-panel": '{"clickOnActivate": true}',
-          "data-gp-focus-disabled": _.open ? void 0 : "true",
+          focusable: _.open,
           children: (0, _.jsx)("span", {
             className: _().FeatureNameContainer,
             children: (0, _.jsx)("span", {
@@ -19037,7 +19041,6 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -19068,7 +19071,6 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -19129,7 +19131,7 @@
           : null;
       }
       function _(_) {
-        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
+        const { creatorAccountID: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -19178,7 +19180,7 @@
           })(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
+          className: (0, _._)(_().BottomCreatorRow, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -19457,19 +19459,16 @@
             strDoubleCapsuleMessage: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          _ = _ && !_;
+          { bIsOwned: _ } = (0, _._)(_);
         if (_ && _ && _.item_type == _._._ && _.appid)
           return (0, _.jsx)(_._, {
             appid: _.appid,
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && _),
-          _ = Boolean(_);
+        const _ = Boolean(_ && _);
         return (0, _.jsx)(_, {
           _: _,
-          bShowAsMuted: _,
           bHidePrice: _,
           bShowInLibraryInsteadOfPrice: _,
           bHidePlatforms: _,

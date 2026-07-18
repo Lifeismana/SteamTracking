@@ -635,8 +635,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -675,6 +677,33 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
+      function _(_) {
+        var _;
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.onClick,
+          _ = (0, _.jsx)("span", {
+            role: "button",
+            ...(0, _._)(
+              {
+                ..._,
+                underline: _,
+                className: _.TextLinkButton,
+              },
+              _,
+            ),
+          });
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

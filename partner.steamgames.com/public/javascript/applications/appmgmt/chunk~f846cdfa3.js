@@ -74,7 +74,7 @@
       n.d(t, { Y: () => l });
       var a = n(7850),
         i = n(90626),
-        s = n(64046),
+        s = n(38165),
         r = n(88997),
         o = n(40139),
         d = n.n(o);
@@ -216,7 +216,7 @@
                     mapAltText: r,
                   } = n,
                   o = new FormData();
-                o.append("sessionid", g.TS.SESSIONID);
+                o.append("sessionid", (0, g.KC)());
                 const d = Math.max(t.length, a.length);
                 for (let e = 0; e < d; e++)
                   e >= a.length
@@ -954,7 +954,7 @@
                     } = e,
                     i = `${b.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
                     s = new FormData();
-                  s.append("sessionid", b.TS.SESSIONID),
+                  s.append("sessionid", (0, b.KC)()),
                     n && s.append("release_date", n.toString());
                   s.append("coming_soon_display", a);
                   const o = await p().post(i, s);
@@ -995,7 +995,7 @@
                     label: (0, r.we)("#App_Landing_IntendedReleaseDateTitle"),
                     children: [
                       (0, a.jsx)(P, { rtSelectedDate: c, setSelectedDate: m }),
-                      (0, a.jsx)(I, {}),
+                      (0, a.jsx)(L, {}),
                     ],
                   }),
                   (0, a.jsxs)(T, {
@@ -1034,7 +1034,7 @@
                   }),
                 ),
               }),
-              (0, a.jsx)(B, {}),
+              (0, a.jsx)(I, {}),
             ],
           })
         );
@@ -1054,25 +1054,25 @@
         } = w();
         return e && t
           ? n
-            ? (0, a.jsx)(L, {
+            ? (0, a.jsx)(B, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_BuildReview",
                 ),
               })
-            : (0, a.jsx)(L, {
+            : (0, a.jsx)(B, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate",
                   (0, r.$z)(s),
                 ),
               })
           : i && o
-            ? (0, a.jsx)(L, {
+            ? (0, a.jsx)(B, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
                 ),
               })
             : o
-              ? (0, a.jsx)(L, {
+              ? (0, a.jsx)(B, {
                   children: (0, r.we)(
                     "#App_Landing_Release_EarliestDate_TwoWeeks",
                   ),
@@ -1140,7 +1140,7 @@
           }),
         });
       }
-      function I(e) {
+      function L(e) {
         const { bCanUpdateComingSoonDate: t, rtReleaseDate: n } = w();
         return t
           ? (0, a.jsxs)(a.Fragment, {
@@ -1172,13 +1172,13 @@
               ),
             });
       }
-      function L(e) {
+      function B(e) {
         return (0, a.jsx)("span", {
           className: A.BlueNote,
           children: e.children,
         });
       }
-      function B(e) {
+      function I(e) {
         const {
           rtEarliestDate: t,
           strReleaseState: n,

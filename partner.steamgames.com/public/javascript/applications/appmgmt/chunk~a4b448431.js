@@ -2841,58 +2841,58 @@
       }
       var st;
       !(function (e) {
-        (e.GetActiveMarketingMessages = function (e, t) {
+        (e.GetActiveMarketingMessages = function (e, t, r) {
           return e.SendMsg(
             "MarketingMessages.GetActiveMarketingMessages#1",
-            (0, g.I8)(he, t),
+            (0, g.I8)(he, t, r),
             Be,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         }),
-          (e.GetPastMarketingMessages = function (e, t) {
+          (e.GetPastMarketingMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetPastMarketingMessages#1",
-              (0, g.I8)(ye, t),
+              (0, g.I8)(ye, t, r),
               be,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-          (e.GetMarketingMessagesForUser = function (e, t) {
+          (e.GetMarketingMessagesForUser = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesForUser#1",
-              (0, g.I8)(fe, t),
+              (0, g.I8)(fe, t, r),
               Re,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.DoesUserHavePendingMarketingMessages = function (e, t) {
+          (e.DoesUserHavePendingMarketingMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
-              (0, g.I8)(Se, t),
+              (0, g.I8)(Se, t, r),
               ze,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetDisplayMarketingMessage = function (e, t) {
+          (e.GetDisplayMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessage#1",
-              (0, g.I8)(Ie, t),
+              (0, g.I8)(Ie, t, r),
               Te,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetDisplayMarketingMessageForUser = function (e, t) {
+          (e.GetDisplayMarketingMessageForUser = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageForUser#1",
-              (0, g.I8)(Ie, t),
+              (0, g.I8)(Ie, t, r),
               Te,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetDisplayMarketingMessageAdmin = function (e, t) {
+          (e.GetDisplayMarketingMessageAdmin = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
-              (0, g.I8)(Ie, t),
+              (0, g.I8)(Ie, t, r),
               Te,
               { bConstMethod: !0, ePrivilege: 4 },
             );
@@ -2911,106 +2911,106 @@
               { ePrivilege: 1 },
             );
           }),
-          (e.GetMarketingMessage = function (e, t) {
+          (e.GetMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessage#1",
-              (0, g.I8)(Oe, t),
+              (0, g.I8)(Oe, t, r),
               je,
               { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.CreateMarketingMessage = function (e, t) {
+          (e.CreateMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
-              (0, g.I8)(We, t),
+              (0, g.I8)(We, t, r),
               qe,
               { ePrivilege: 4 },
             );
           }),
-          (e.UpdateMarketingMessage = function (e, t) {
+          (e.UpdateMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
-              (0, g.I8)(Ue, t),
+              (0, g.I8)(Ue, t, r),
               De,
               { ePrivilege: 5 },
             );
           }),
-          (e.DeleteMarketingMessage = function (e, t) {
+          (e.DeleteMarketingMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
-              (0, g.I8)(Ge, t),
+              (0, g.I8)(Ge, t, r),
               Ae,
               { ePrivilege: 4 },
             );
           }),
-          (e.FindMarketingMessages = function (e, t) {
+          (e.FindMarketingMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.FindMarketingMessages#1",
-              (0, g.I8)(Fe, t),
+              (0, g.I8)(Fe, t, r),
               ve,
               { ePrivilege: 5 },
             );
           }),
-          (e.GetMarketingMessageViewerStats = function (e, t) {
+          (e.GetMarketingMessageViewerStats = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessageViewerStats#1",
-              (0, g.I8)(Pe, t),
+              (0, g.I8)(Pe, t, r),
               xe,
               { ePrivilege: 4 },
             );
           }),
-          (e.GetMarketingMessagesViewerRangeStats = function (e, t) {
+          (e.GetMarketingMessagesViewerRangeStats = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
-              (0, g.I8)(Ne, t),
+              (0, g.I8)(Ne, t, r),
               He,
               { ePrivilege: 4 },
             );
           }),
-          (e.GetMarketingMessageClickedStats = function (e, t) {
+          (e.GetMarketingMessageClickedStats = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessageClickedStats#1",
-              (0, g.I8)($e, t),
+              (0, g.I8)($e, t, r),
               Ve,
               { ePrivilege: 4 },
             );
           }),
-          (e.GetPartnerReadyToPublishMessages = function (e, t) {
+          (e.GetPartnerReadyToPublishMessages = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetPartnerReadyToPublishMessages#1",
-              (0, g.I8)(Ke, t),
+              (0, g.I8)(Ke, t, r),
               Ye,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.PublishPartnerMessage = function (e, t) {
+          (e.PublishPartnerMessage = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.PublishPartnerMessage#1",
-              (0, g.I8)(Qe, t),
+              (0, g.I8)(Qe, t, r),
               Je,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetPartnerMessagePreview = function (e, t) {
+          (e.GetPartnerMessagePreview = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetPartnerMessagePreview#1",
-              (0, g.I8)(Ze, t),
+              (0, g.I8)(Ze, t, r),
               Xe,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetMarketingMessagesForPartner = function (e, t) {
+          (e.GetMarketingMessagesForPartner = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesForPartner#1",
-              (0, g.I8)(rt, t),
+              (0, g.I8)(rt, t, r),
               it,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetMarketingMessagesForApps = function (e, t) {
+          (e.GetMarketingMessagesForApps = function (e, t, r) {
             return e.SendMsg(
               "MarketingMessages.GetMarketingMessagesForApps#1",
-              (0, g.I8)(et, t),
+              (0, g.I8)(et, t, r),
               tt,
               { ePrivilege: 4 },
             );

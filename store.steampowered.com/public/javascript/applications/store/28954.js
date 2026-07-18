@@ -421,7 +421,7 @@
     },
     28954: (t, e, i) => {
       "use strict";
-      i.d(e, { bT: () => T, zO: () => L });
+      i.d(e, { bT: () => L, zO: () => T });
       var s = i(34629),
         a = i(22837),
         n = i(81393),
@@ -585,7 +585,7 @@
             o = t.GetResizeDimension(),
             r = new FormData();
           r.append("clanimage", a, e),
-            r.append("sessionid", f.TS.SESSIONID),
+            r.append("sessionid", (0, f.KC)()),
             this.m_clanImagesV2 && r.append("clan_images_v2", "1"),
             n?.artworkType && r.append("arttype", n.artworkType),
             o &&
@@ -648,7 +648,7 @@
           super(t, e, i, !1);
         }
       }
-      async function T(t, e, i, s, a) {
+      async function L(t, e, i, s, a) {
         let n =
             f.TS.COMMUNITY_BASE_URL +
             "/gid/" +
@@ -659,11 +659,11 @@
           o.append("imagehash", i),
           o.append("extension", s),
           o.append("resize", a.map((t) => t.width + "x" + t.height).join(",")),
-          o.append("sessionid", f.TS.SESSIONID),
+          o.append("sessionid", (0, f.KC)()),
           (await l().post(n, o, { cancelToken: t })).data.count
         );
       }
-      function L(t, e, i) {
+      function T(t, e, i) {
         const s = (0, o.wm)(e instanceof Array ? e : [e]),
           a = t.ConvertTo64BitString();
         return g.useMemo(() => new k(t, s, i), [a, s]);
@@ -1139,7 +1139,7 @@
           return s ? s.find((t) => t.image_hash == e) : void 0;
         }
         async DeleteClanImageByID(t, e) {
-          let i = { sessionid: m.TS.SESSIONID, imageid: e },
+          let i = { sessionid: (0, m.KC)(), imageid: e },
             s = t.GetAccountID(),
             n = await o().get(
               m.TS.COMMUNITY_BASE_URL +

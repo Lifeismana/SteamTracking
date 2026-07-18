@@ -1960,6 +1960,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { app: _, initialValue: _, debugMode: _ } = _,
@@ -1976,21 +1977,28 @@
               style: {
                 zIndex: 402,
               },
-              children: (0, _.jsx)(_._, {
-                value: _,
-                onTextChange: _,
-                app: _ ? _ : void 0,
-                onClearApp: () => _(!1),
-                radius: "none",
-                variant: "default",
-                name: "q",
-                autoComplete: "off",
-                popoverWidth: (_) =>
-                  `clamp( ${_.unTargetWidth}px, 440px, 95vw )`,
+              children: (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_._, {
+                    value: _,
+                    onTextChange: _,
+                    app: _ ? _ : void 0,
+                    onClearApp: () => _(!1),
+                    radius: "none",
+                    name: "q",
+                    autoComplete: "off",
+                    popoverWidth: (_) =>
+                      `clamp( ${_.unTargetWidth}px, 440px, 95vw )`,
+                  }),
+                }),
               }),
             }),
           }),
         });
+      }
+      function _(_) {
+        return _.use(_._.Ready()), _.children;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2623,7 +2631,7 @@
           if (!_) return [];
           const _ = _[_];
           return _ ? _(_, _, _) : _(_, void 0, _, _);
-        }, [_, _, _]);
+        }, [_, _, _, _]);
       }
       const _ = 753,
         _ = {
@@ -2911,6 +2919,21 @@
           }),
         );
         var _;
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+        name: "bMarketOptOut",
+        preferenceControls: {
+          isTechnicallyNecessary: !0,
+        },
+        options: {
+          path: "/market",
+          maxAge: 2592e6,
+          httpOnly: !1,
+        },
+      };
+      function _() {
+        return "1" === (0, _._)(_);
       }
       const _ = "4",
         _ = (0, _.createContext)({});
@@ -3797,7 +3820,12 @@
           _ && _.set("q", _),
           _ && _ && _(_.app) && _.set("descriptions", "1");
         for (const _ of Object.keys(_))
-          if (_[_]) for (const _ of Object.keys(_[_])) 0;
+          if (_[_])
+            for (const _ of Object.keys(_[_]))
+              _[_][_] &&
+                (_()
+                  ? _.append(`category_${_.appid}_${_}[]`, `tag_${_}`)
+                  : _.append(`category_${_}[]`, _));
         for (const _ of Object.keys(_))
           if (_[_])
             for (const _ of Object.keys(_[_]))

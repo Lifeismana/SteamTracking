@@ -616,6 +616,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   border-radius: 20px;
   align-items: center;
 }
+.x5w70NwN-m7OmBy1DFogf,
 ._1dzQL1mVR8GTmmSi_kpDgr {
   width: 20px;
   height: 20px;
@@ -3250,6 +3251,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 ._2tALpM7z8naXJ35Pp5fNAG {
   align-self: center;
   flex-grow: 1;
+  min-width: 0;
 }
 .eKmEXJCm_lgme24Fp_HWt:not(._37xzVt6arvEzyNdW5GxK8f).Jgod1QRim6eNfvia2_3Ac
   ._2tALpM7z8naXJ35Pp5fNAG {
@@ -7628,7 +7630,7 @@ html.touch ._2RyPu-qJzs6novxZiGSDf- {
 }
 ._1YhdoyGYkUB4JuW0yFSbS7 {
   position: absolute;
-  right: 8px;
+  inset-inline-end: 8px;
   top: 8px;
   bottom: 8px;
   border: none;
@@ -7667,6 +7669,7 @@ html.touch ._2RyPu-qJzs6novxZiGSDf- {
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  overflow: visible;
 }
 ._2tlUAG6WNyYFlk9caIiLj5:focus-visible {
   border: 1px solid #1a9fff;
@@ -10545,7 +10548,7 @@ button.DialogButton:enabled:active.gpfocus {
   }
 }
 button.DialogButton.Primary:hover,
-button.DialogButton.Primary.gpfocus {
+button.DialogButton.Primary.gpfocus:not(.Disabled) {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 0%;
   background-size: 330% 100%;

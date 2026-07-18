@@ -1803,10 +1803,10 @@
         }
       }
       !(function (_) {
-        (_.GetInventoryItemsWithDescriptions = function (_, _) {
+        (_.GetInventoryItemsWithDescriptions = function (_, _, _) {
           return _.SendMsg(
             "Econ.GetInventoryItemsWithDescriptions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -1815,37 +1815,37 @@
             },
           );
         }),
-          (_.GetTradeOfferAccessToken = function (_, _) {
+          (_.GetTradeOfferAccessToken = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClientGetItemShopOverlayAuthURL = function (_, _) {
+          (_.ClientGetItemShopOverlayAuthURL = function (_, _, _) {
             return _.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAssetClassInfo = function (_, _) {
-            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _), _, {
+          (_.GetAssetClassInfo = function (_, _, _) {
+            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetAssetPropertySchema = function (_, _) {
+          (_.GetAssetPropertySchema = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetAssetPropertySchema#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

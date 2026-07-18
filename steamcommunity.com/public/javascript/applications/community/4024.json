@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Bài đăng bán này không tồn tại nữa",
     "Listing_NotAvailable_Short": "Không có",
     "Listing_NotAvailable_Long": "Bài đăng bán này không thể mua được nữa.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Mục mua bán của tôi)",
     "BuyOrderDialog_Header": "Mua - %1$s",
     "BuyOrderDialog_Header_NoItem": "Đặt lệnh mua",
     "BuyOrderDialog_BucketPicker_Label": "Bạn muốn mua loại sản phẩm nào?",

@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Esine ei ole enää saatavilla",
     "Listing_NotAvailable_Short": "Ei saatavilla",
     "Listing_NotAvailable_Long": "Esine ei ole enää ostettavissa.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Oma listaus)",
     "BuyOrderDialog_Header": "Osta – %1$s",
     "BuyOrderDialog_Header_NoItem": "Tee ostotilaus",
     "BuyOrderDialog_BucketPicker_Label": "Minkä tyyppisen esineen haluat ostaa?",

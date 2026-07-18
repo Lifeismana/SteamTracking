@@ -906,7 +906,7 @@
       class _ extends _._ {
         async DeleteOldAnnouncement(_, _) {
           let _ = new URLSearchParams();
-          __webpack_require__.append("sessionid", _._.SESSIONID);
+          __webpack_require__.append("sessionid", (0, _._)());
           let _ =
               _._.COMMUNITY_BASE_URL +
               "/gid/" +
@@ -998,7 +998,7 @@
           const _ = _._.STORE_BASE_URL + "account/optoutappcommunication/",
             _ = new FormData();
           if (
-            (_.append("sessionid", _._.SESSIONID),
+            (_.append("sessionid", (0, _._)()),
             _.append("allowCommunication", _ ? "1" : "0"),
             _)
           ) {

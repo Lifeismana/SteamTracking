@@ -34,8 +34,8 @@
         S = s(32754),
         d = s(51272),
         C = s(14256),
-        I = s.n(C),
-        x = s(1909),
+        x = s.n(C),
+        I = s(1909),
         g = s(41735),
         y = s.n(g),
         E = s(75844),
@@ -68,7 +68,7 @@
         );
         const d = a ? a.avatar_url : null,
           C = U.b.InitFromAccountID(A.iA.accountid),
-          I = async () => {
+          x = async () => {
             n.current &&
               n.current("ShareEventOnFriendsActivityFeed: cancel previous...");
             const e = y().CancelToken.source();
@@ -102,7 +102,7 @@
                 const s = new FormData();
                 s.append("appid", "" + t),
                   s.append("status_text", M),
-                  s.append("sessionid", A.TS.SESSIONID);
+                  s.append("sessionid", (0, A.KC)());
                 const n = await y().post(i, s, { withCredentials: !0 });
                 if (200 != n.status || n?.data?.success != h.R) {
                   const t =
@@ -165,7 +165,7 @@
               strDescription: "",
               strTitle: (0, L.we)("#Button_Share"),
               onCancel: e.closeModal,
-              onOK: I,
+              onOK: x,
               strOKButtonText: (0, L.we)("#Button_Post"),
               children: (0, M.jsxs)("div", {
                 className: r().FlexColumnContainer,
@@ -239,11 +239,11 @@
         return (0, M.jsxs)("div", {
           children: [
             (0, M.jsxs)("div", {
-              className: (0, l.A)(r().FlexRowContainer, I().linkField),
+              className: (0, l.A)(r().FlexRowContainer, x().linkField),
               onClick: o,
               children: [
                 (0, M.jsx)("span", {
-                  className: I().LinkInputLabel,
+                  className: x().LinkInputLabel,
                   children: (0, L.we)(
                     e.labelOverride
                       ? e.labelOverride
@@ -251,19 +251,19 @@
                   ),
                 }),
                 (0, M.jsx)("input", {
-                  className: I().LinkInput,
+                  className: x().LinkInput,
                   ref: t,
                   value: e.eventLink,
                   readOnly: !0,
                 }),
                 document.queryCommandSupported("copy") &&
                   (0, M.jsx)(N.Z, {
-                    className: (0, l.A)(r().Button, r().Icon, I().LinkButton),
+                    className: (0, l.A)(r().Button, r().Icon, x().LinkButton),
                     onActivate: o,
                     children: (0, M.jsx)(S.Gq, {
                       toolTipContent: (0, L.we)("#ToolTip_CopyLinkToClipboard"),
                       children: (0, M.jsx)("img", {
-                        className: I().ClipboardIcon,
+                        className: x().ClipboardIcon,
                         src: R.A,
                       }),
                     }),
@@ -272,7 +272,7 @@
             }),
             (0, M.jsx)("div", {
               ref: a,
-              className: I().ClipboardText,
+              className: x().ClipboardText,
               children: s,
             }),
           ],
@@ -345,22 +345,22 @@
             return e.searchParams.set("l", (0, a.LgB)(c)), e.href;
           }, [c, t]);
         return (0, M.jsxs)("div", {
-          className: (0, l.A)(r().FlexColumnContainer, I().share_controls_ctn),
+          className: (0, l.A)(r().FlexColumnContainer, x().share_controls_ctn),
           children: [
             !o &&
               (0, M.jsxs)(M.Fragment, {
                 children: [
                   (0, M.jsxs)("div", {
-                    className: I().ShareLanguagePicker,
+                    className: x().ShareLanguagePicker,
                     children: [
                       (0, M.jsx)(J.JU, {
-                        className: I().LanguageLabel,
+                        className: x().LanguageLabel,
                         children: (0, L.we)(
                           "#EventDisplay_Share_LanguageLabel",
                         ),
                       }),
                       (0, M.jsx)("div", {
-                        children: (0, M.jsx)(x.Ng, {
+                        children: (0, M.jsx)(I.Ng, {
                           selectedLang: c,
                           fnOnLanguageChanged: j,
                         }),
@@ -370,7 +370,7 @@
                   (0, M.jsxs)("div", {
                     className: (0, l.A)(
                       r().FlexRowContainer,
-                      I().ShareButtonContainer,
+                      x().ShareButtonContainer,
                     ),
                     style: { flexWrap: "wrap" },
                     children: [
@@ -382,12 +382,12 @@
                           onClick: n,
                           className: (0, l.A)(
                             r().Button,
-                            I().ShareBtn,
-                            I().ShareSteamBtn,
+                            x().ShareBtn,
+                            x().ShareSteamBtn,
                           ),
                           children: [
                             (0, M.jsx)("img", {
-                              className: I().SteamIcon,
+                              className: x().SteamIcon,
                               src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=",
                             }),
                             (0, M.jsx)("span", {
@@ -405,7 +405,7 @@
                         ),
                         children: (0, M.jsx)(d.uU, {
                           href: s.strFacebookUrl,
-                          className: I().ShareBtn,
+                          className: x().ShareBtn,
                           children: (0, M.jsx)("img", {
                             className: (0, l.A)(r().Button),
                             src: D.A,
@@ -418,7 +418,7 @@
                         ),
                         children: (0, M.jsx)(d.uU, {
                           href: s.strTwitterUrl,
-                          className: I().ShareBtn,
+                          className: x().ShareBtn,
                           children: (0, M.jsx)("img", {
                             className: (0, l.A)(r().Button),
                             src: u.A,
@@ -431,7 +431,7 @@
                         ),
                         children: (0, M.jsx)(d.uU, {
                           href: s.strRedditUrl,
-                          className: I().ShareBtn,
+                          className: x().ShareBtn,
                           children: (0, M.jsx)("img", {
                             className: (0, l.A)(r().Button),
                             src: T.A,

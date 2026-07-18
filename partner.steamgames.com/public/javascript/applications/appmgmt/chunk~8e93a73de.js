@@ -3430,7 +3430,7 @@
               ? new a.b(this.m_steamIDBroadcast).GetAccountID()
               : 0),
             (e.useragent = window.navigator.userAgent),
-            (e.sessionid = d.TS.SESSIONID),
+            (e.sessionid = (0, d.KC)()),
             (e.broadcast_origin = this.m_strBroadcastOrigin);
         }
       }

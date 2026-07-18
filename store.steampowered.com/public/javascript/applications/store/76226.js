@@ -1470,72 +1470,74 @@
         }
       }
       !(function (e) {
-        (e.GetClientLogonInfo = function (e, t) {
+        (e.GetClientLogonInfo = function (e, t, r) {
           return e.SendMsg(
             "ClientComm.GetClientLogonInfo#1",
-            (0, d.I8)(_, t),
+            (0, d.I8)(_, t, r),
             y,
             { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
-          (e.GetAllClientLogonInfo = function (e, t) {
+          (e.GetAllClientLogonInfo = function (e, t, r) {
             return e.SendMsg(
               "ClientComm.GetAllClientLogonInfo#1",
-              (0, d.I8)(w, t),
+              (0, d.I8)(w, t, r),
               f,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetClientInfo = function (e, t) {
-            return e.SendMsg("ClientComm.GetClientInfo#1", (0, d.I8)(z, t), C, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (e.GetClientInfo = function (e, t, r) {
+            return e.SendMsg(
+              "ClientComm.GetClientInfo#1",
+              (0, d.I8)(z, t, r),
+              C,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
-          (e.GetClientAppList = function (e, t) {
+          (e.GetClientAppList = function (e, t, r) {
             return e.SendMsg(
               "ClientComm.GetClientAppList#1",
-              (0, d.I8)(R, t),
+              (0, d.I8)(R, t, r),
               q,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.InstallClientApp = function (e, t) {
+          (e.InstallClientApp = function (e, t, r) {
             return e.SendMsg(
               "ClientComm.InstallClientApp#1",
-              (0, d.I8)(U, t),
+              (0, d.I8)(U, t, r),
               v,
               { ePrivilege: 1 },
             );
           }),
-          (e.UninstallClientApp = function (e, t) {
+          (e.UninstallClientApp = function (e, t, r) {
             return e.SendMsg(
               "ClientComm.UninstallClientApp#1",
-              (0, d.I8)(W, t),
+              (0, d.I8)(W, t, r),
               O,
               { ePrivilege: 1 },
             );
           }),
-          (e.LaunchClientApp = function (e, t) {
+          (e.LaunchClientApp = function (e, t, r) {
             return e.SendMsg(
               "ClientComm.LaunchClientApp#1",
-              (0, d.I8)(F, t),
+              (0, d.I8)(F, t, r),
               A,
               { ePrivilege: 1 },
             );
           }),
-          (e.SetClientAppUpdateState = function (e, t) {
+          (e.SetClientAppUpdateState = function (e, t, r) {
             return e.SendMsg(
               "ClientComm.SetClientAppUpdateState#1",
-              (0, d.I8)(T, t),
+              (0, d.I8)(T, t, r),
               G,
               { ePrivilege: 1 },
             );
           }),
-          (e.EnableOrDisableDownloads = function (e, t) {
+          (e.EnableOrDisableDownloads = function (e, t, r) {
             return e.SendMsg(
               "ClientComm.EnableOrDisableDownloads#1",
-              (0, d.I8)(L, t),
+              (0, d.I8)(L, t, r),
               E,
               { ePrivilege: 1 },
             );

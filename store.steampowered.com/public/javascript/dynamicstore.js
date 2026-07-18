@@ -630,8 +630,9 @@ GDynamicStore = {
 			var strAppIDs = $El.data('dsAppid');
 			var eSteamDeckCompatCategory = $El.data('dsSteamDeckCompatCategory');
 			var eSteamOSCompatCategory = $El.data('dsSteamOsCompatCategory');
+			var eSteamMachineCompatCategory = $El.data('dsSteamMachineCompatCategory');
 
-			if ( ( eSteamDeckCompatCategory !== undefined || eSteamOSCompatCategory !== undefined ) && !$El.data( 'dsSteamDeckCompatHandled' ) )
+			if ( ( eSteamDeckCompatCategory !== undefined || eSteamOSCompatCategory !== undefined || eSteamMachineCompatCategory !== undefined ) && !$El.data( 'dsSteamDeckCompatHandled' ) )
 			{
 				$El.data('dsSteamDeckCompatHandled', true);
 
@@ -649,6 +650,25 @@ GDynamicStore = {
 						case 0:
 						default:
 							strClasses += 'steamosunknown';
+							break;
+					}
+				}
+				else if ( eSteamMachineCompatCategory !== undefined )
+				{
+					switch( eSteamMachineCompatCategory )
+					{
+						case 3:
+							strClasses += 'machineverified';
+							break;
+						case 2:
+							strClasses += 'machineplayable';
+							break;
+						case 1:
+							strClasses += 'machineunsupported';
+							break;
+						case 0:
+						default:
+							strClasses += 'machineunknown';
 							break;
 					}
 				}
@@ -1353,6 +1373,11 @@ GDynamicStore = {
 		return ( appid in GDynamicStore.s_rgIgnoredApps );
 	},
 
+	BIsCreatorIgnored: function( creatorClanID )
+	{
+		return ( creatorClanID in GDynamicStore.s_rgCreatorsIgnored );
+	},
+
 	GetIgnoredAppCount: function( )
 	{
 		return Object.keys(GDynamicStore.s_rgIgnoredApps).length;
@@ -1827,6 +1852,11 @@ GStoreItemData = {
 			params['data-ds-steam-os-compat-category'] = rgItemData['steam_os_compat_category'];
 		}
 
+		if ( rgItemData['steam_machine_compat_category'] !== undefined )
+		{
+			params['data-ds-steam-machine-compat-category'] = rgItemData['steam_machine_compat_category'];
+		}
+		
 		if ( unAppID )
 		{
 			params['data-ds-appid'] = unAppID;
@@ -2014,6 +2044,15 @@ GStoreItemData = {
 
 		if ( rgItemData.coming_soon && ApplicableSettings.prepurchase && !Settings.prepurchase )
 			return false;
+
+		if ( rgItemData.creator_clan_ids && rgItemData.creator_clan_ids.length !== 0 )
+		{
+			for ( const creatorClanID of rgItemData.creator_clan_ids )
+			{
+				if ( GDynamicStore.BIsCreatorIgnored( creatorClanID ) )
+					return false;
+			}
+		}
 
 		return true;
 	},

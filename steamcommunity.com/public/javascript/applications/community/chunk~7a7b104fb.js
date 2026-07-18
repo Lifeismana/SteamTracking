@@ -1269,8 +1269,8 @@
         L = r(36064),
         E = r(15527),
         H = r.n(E),
-        X = r(22797);
-      function K() {
+        K = r(22797);
+      function X() {
         return (0, s.jsx)("div", {
           className: "STV_ReplayBanner",
           children: (0, P.we)("#DASHPlayerControls_IsReplay"),
@@ -1294,7 +1294,7 @@
           className: "BroadcastVideoWatchState",
           style: { filter: "hue-rotate(40deg)" },
           children: [
-            a && (0, s.jsx)(X.t, {}),
+            a && (0, s.jsx)(K.t, {}),
             !a &&
               (0, s.jsx)("div", {
                 className: "BroadcastVideoWatchState_Text",
@@ -2315,7 +2315,7 @@
                   className: H().BroadcastContext,
                   children: p,
                 }),
-              a && (0, s.jsx)(K, {}),
+              a && (0, s.jsx)(X, {}),
               this.props.showVideoBackgroundBlur &&
                 (0, s.jsx)(g, {
                   className: "videoBlur",
@@ -5059,69 +5059,11 @@
           return "CSteamTV_SubscribeBroadcastChannel_Request";
         }
       }
-      class X extends g.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            X.prototype.is_subscribed || B.Sg(X.M()),
-            g.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
-                fields: {
-                  is_subscribed: {
-                    n: 1,
-                    br: B.qM.readBool,
-                    bw: B.gp.writeBool,
-                  },
-                },
-              }),
-            X.sm_m
-          );
-        }
-        static MBF() {
-          return X.sm_mbf || (X.sm_mbf = B.w0(X.M())), X.sm_mbf;
-        }
-        toObject(e = !1) {
-          return X.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.BT(X.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.Uq(X.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            r = new X();
-          return X.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.zj(X.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.i0(X.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_SubscribeBroadcastChannel_Response";
-        }
-      }
       class K extends g.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            K.prototype.broadcast_channel_id || B.Sg(K.M()),
+            K.prototype.is_subscribed || B.Sg(K.M()),
             g.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -5130,12 +5072,11 @@
               (K.sm_m = {
                 proto: K,
                 fields: {
-                  broadcast_channel_id: {
+                  is_subscribed: {
                     n: 1,
-                    br: B.qM.readFixed64String,
-                    bw: B.gp.writeFixed64String,
+                    br: B.qM.readBool,
+                    bw: B.gp.writeBool,
                   },
-                  reason: { n: 2, br: B.qM.readString, bw: B.gp.writeString },
                 },
               }),
             K.sm_m
@@ -5171,6 +5112,65 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_SubscribeBroadcastChannel_Response";
+        }
+      }
+      class X extends g.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            X.prototype.broadcast_channel_id || B.Sg(X.M()),
+            g.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            X.sm_m ||
+              (X.sm_m = {
+                proto: X,
+                fields: {
+                  broadcast_channel_id: {
+                    n: 1,
+                    br: B.qM.readFixed64String,
+                    bw: B.gp.writeFixed64String,
+                  },
+                  reason: { n: 2, br: B.qM.readString, bw: B.gp.writeString },
+                },
+              }),
+            X.sm_m
+          );
+        }
+        static MBF() {
+          return X.sm_mbf || (X.sm_mbf = B.w0(X.M())), X.sm_mbf;
+        }
+        toObject(e = !1) {
+          return X.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.BT(X.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.Uq(X.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            r = new X();
+          return X.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.zj(X.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.i0(X.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_ReportBroadcastChannel_Request";
@@ -8064,18 +8064,18 @@
           return "CSteamTV_AppCheer_Request";
         }
       }
-      class Xe extends g.Message {
+      class Ke extends g.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Xe.prototype.aggregation_delay_ms || B.Sg(Xe.M()),
+            Ke.prototype.aggregation_delay_ms || B.Sg(Ke.M()),
             g.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Xe.sm_m ||
-              (Xe.sm_m = {
-                proto: Xe,
+            Ke.sm_m ||
+              (Ke.sm_m = {
+                proto: Ke,
                 fields: {
                   aggregation_delay_ms: {
                     n: 1,
@@ -8084,289 +8084,289 @@
                   },
                 },
               }),
-            Xe.sm_m
+            Ke.sm_m
           );
         }
         static MBF() {
-          return Xe.sm_mbf || (Xe.sm_mbf = B.w0(Xe.M())), Xe.sm_mbf;
+          return Ke.sm_mbf || (Ke.sm_mbf = B.w0(Ke.M())), Ke.sm_mbf;
         }
         toObject(e = !1) {
-          return Xe.toObject(e, this);
+          return Ke.toObject(e, this);
         }
         static toObject(e, t) {
-          return B.BT(Xe.M(), e, t);
+          return B.BT(Ke.M(), e, t);
         }
         static fromObject(e) {
-          return B.Uq(Xe.M(), e);
+          return B.Uq(Ke.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (_().BinaryReader)(e),
-            r = new Xe();
-          return Xe.deserializeBinaryFromReader(r, t);
+            r = new Ke();
+          return Ke.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return B.zj(Xe.MBF(), e, t);
+          return B.zj(Ke.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (_().BinaryWriter)();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          B.i0(Xe.M(), e, t);
+          B.i0(Ke.M(), e, t);
         }
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_AppCheer_Response";
         }
       }
       !(function (e) {
-        (e.CreateBroadcastChannel = function (e, t) {
+        (e.CreateBroadcastChannel = function (e, t, r) {
           return e.SendMsg(
             "SteamTV.CreateBroadcastChannel#1",
-            (0, d.I8)(b, t),
+            (0, d.I8)(b, t, r),
             S,
             { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
           );
         }),
-          (e.GetBroadcastChannelID = function (e, t) {
+          (e.GetBroadcastChannelID = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelID#1",
-              (0, d.I8)(y, t),
+              (0, d.I8)(y, t, r),
               M,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
-          (e.SetBroadcastChannelProfile = function (e, t) {
+          (e.SetBroadcastChannelProfile = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.SetBroadcastChannelProfile#1",
-              (0, d.I8)(w, t),
+              (0, d.I8)(w, t, r),
               f,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetBroadcastChannelProfile = function (e, t) {
+          (e.GetBroadcastChannelProfile = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelProfile#1",
-              (0, d.I8)(C, t),
+              (0, d.I8)(C, t, r),
               v,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
-          (e.SetBroadcastChannelImage = function (e, t) {
+          (e.SetBroadcastChannelImage = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.SetBroadcastChannelImage#1",
-              (0, d.I8)(z, t),
+              (0, d.I8)(z, t, r),
               R,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetBroadcastChannelImages = function (e, t) {
+          (e.GetBroadcastChannelImages = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelImages#1",
-              (0, d.I8)(T, t),
+              (0, d.I8)(T, t, r),
               I,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
-          (e.SetBroadcastChannelLinkRegions = function (e, t) {
+          (e.SetBroadcastChannelLinkRegions = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.SetBroadcastChannelLinkRegions#1",
-              (0, d.I8)(W, t),
+              (0, d.I8)(W, t, r),
               q,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetBroadcastChannelLinks = function (e, t) {
+          (e.GetBroadcastChannelLinks = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelLinks#1",
-              (0, d.I8)(x, t),
+              (0, d.I8)(x, t, r),
               F,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
-          (e.GetBroadcastChannelBroadcasters = function (e, t) {
+          (e.GetBroadcastChannelBroadcasters = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelBroadcasters#1",
-              (0, d.I8)(ie, t),
+              (0, d.I8)(ie, t, r),
               se,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetFollowedChannels = function (e, t) {
+          (e.GetFollowedChannels = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetFollowedChannels#1",
-              (0, d.I8)(V, t),
+              (0, d.I8)(V, t, r),
               A,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetSubscribedChannels = function (e, t) {
+          (e.GetSubscribedChannels = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetSubscribedChannels#1",
-              (0, d.I8)(G, t),
+              (0, d.I8)(G, t, r),
               k,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetBroadcastChannelStatus = function (e, t) {
+          (e.GetBroadcastChannelStatus = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelStatus#1",
-              (0, d.I8)(U, t),
+              (0, d.I8)(U, t, r),
               N,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
-          (e.FollowBroadcastChannel = function (e, t) {
+          (e.FollowBroadcastChannel = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.FollowBroadcastChannel#1",
-              (0, d.I8)(L, t),
+              (0, d.I8)(L, t, r),
               E,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.SubscribeBroadcastChannel = function (e, t) {
+          (e.SubscribeBroadcastChannel = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.SubscribeBroadcastChannel#1",
-              (0, d.I8)(H, t),
-              X,
+              (0, d.I8)(H, t, r),
+              K,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetBroadcastChannelClips = function (e, t) {
+          (e.GetBroadcastChannelClips = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelClips#1",
-              (0, d.I8)(Ge, t),
+              (0, d.I8)(Ge, t, r),
               Le,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
-          (e.ReportBroadcastChannel = function (e, t) {
+          (e.ReportBroadcastChannel = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.ReportBroadcastChannel#1",
-              (0, d.I8)(K, t),
+              (0, d.I8)(X, t, r),
               J,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetBroadcastChannelInteraction = function (e, t) {
+          (e.GetBroadcastChannelInteraction = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelInteraction#1",
-              (0, d.I8)($, t),
+              (0, d.I8)($, t, r),
               Y,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetGames = function (e, t) {
-            return e.SendMsg("SteamTV.GetGames#1", (0, d.I8)(Z, t), ee, {
+          (e.GetGames = function (e, t, r) {
+            return e.SendMsg("SteamTV.GetGames#1", (0, d.I8)(Z, t, r), ee, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (e.GetChannels = function (e, t) {
-            return e.SendMsg("SteamTV.GetChannels#1", (0, d.I8)(te, t), re, {
+          (e.GetChannels = function (e, t, r) {
+            return e.SendMsg("SteamTV.GetChannels#1", (0, d.I8)(te, t, r), re, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (e.AddChatBan = function (e, t) {
-            return e.SendMsg("SteamTV.AddChatBan#1", (0, d.I8)(oe, t), le, {
+          (e.AddChatBan = function (e, t, r) {
+            return e.SendMsg("SteamTV.AddChatBan#1", (0, d.I8)(oe, t, r), le, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.GetChatBans = function (e, t) {
-            return e.SendMsg("SteamTV.GetChatBans#1", (0, d.I8)(ce, t), de, {
+          (e.GetChatBans = function (e, t, r) {
+            return e.SendMsg("SteamTV.GetChatBans#1", (0, d.I8)(ce, t, r), de, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.AddChatModerator = function (e, t) {
+          (e.AddChatModerator = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.AddChatModerator#1",
-              (0, d.I8)(me, t),
+              (0, d.I8)(me, t, r),
               ue,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetChatModerators = function (e, t) {
+          (e.GetChatModerators = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetChatModerators#1",
-              (0, d.I8)(he, t),
+              (0, d.I8)(he, t, r),
               ge,
               { bConstMethod: !0, ePrivilege: 0 },
             );
           }),
-          (e.AddWordBan = function (e, t) {
-            return e.SendMsg("SteamTV.AddWordBan#1", (0, d.I8)(_e, t), Be, {
+          (e.AddWordBan = function (e, t, r) {
+            return e.SendMsg("SteamTV.AddWordBan#1", (0, d.I8)(_e, t, r), Be, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.GetWordBans = function (e, t) {
-            return e.SendMsg("SteamTV.GetWordBans#1", (0, d.I8)(be, t), Se, {
+          (e.GetWordBans = function (e, t, r) {
+            return e.SendMsg("SteamTV.GetWordBans#1", (0, d.I8)(be, t, r), Se, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.JoinChat = function (e, t) {
-            return e.SendMsg("SteamTV.JoinChat#1", (0, d.I8)(ye, t), Me, {
+          (e.JoinChat = function (e, t, r) {
+            return e.SendMsg("SteamTV.JoinChat#1", (0, d.I8)(ye, t, r), Me, {
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (e.Search = function (e, t) {
-            return e.SendMsg("SteamTV.Search#1", (0, d.I8)(we, t), fe, {
+          (e.Search = function (e, t, r) {
+            return e.SendMsg("SteamTV.Search#1", (0, d.I8)(we, t, r), fe, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }),
-          (e.GetSteamTVUserSettings = function (e, t) {
+          (e.GetSteamTVUserSettings = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetSteamTVUserSettings#1",
-              (0, d.I8)(Ce, t),
+              (0, d.I8)(Ce, t, r),
               ve,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.SetSteamTVUserSettings = function (e, t) {
+          (e.SetSteamTVUserSettings = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.SetSteamTVUserSettings#1",
-              (0, d.I8)(ze, t),
+              (0, d.I8)(ze, t, r),
               Re,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetMyBroadcastChannels = function (e, t) {
+          (e.GetMyBroadcastChannels = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetMyBroadcastChannels#1",
-              (0, d.I8)(Te, t),
+              (0, d.I8)(Te, t, r),
               Ie,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetHomePageContents = function (e, t) {
+          (e.GetHomePageContents = function (e, t, r) {
             return e.SendMsg(
               "SteamTV.GetHomePageContents#1",
-              (0, d.I8)(Ve, t),
+              (0, d.I8)(Ve, t, r),
               Ae,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.AppCheer = function (e, t) {
-            return e.SendMsg("SteamTV.AppCheer#1", (0, d.I8)(He, t), Xe, {
+          (e.AppCheer = function (e, t, r) {
+            return e.SendMsg("SteamTV.AppCheer#1", (0, d.I8)(He, t, r), Ke, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           });
       })(i || (i = {}));
-      var Ke = r(6419),
+      var Xe = r(6419),
         Je = r(6144),
         $e = r(61859),
         Ye = r(78327),
@@ -8551,7 +8551,7 @@
             const t = {
                 steamid: this.m_ulBroadcastSteamID,
                 broadcastid: this.m_ulBroadcastID,
-                sessionid: Ye.TS.SESSIONID,
+                sessionid: (0, Ye.KC)(),
               },
               r = await n().get(`${Ye.TS.CHAT_BASE_URL}broadcast/getchatinfo`, {
                 params: t,
@@ -8789,7 +8789,7 @@
             i.append("broadcaststeamid", this.m_ulBroadcastSteamID),
               i.append("moderatorsteamid", e),
               i.append("bAdd", t ? "1" : "0"),
-              i.append("sessionid", Ye.TS.SESSIONID);
+              i.append("sessionid", (0, Ye.KC)());
             try {
               await n().post(
                 `${Ye.TS.CHAT_BASE_URL}broadcast/ajaxupdatechannelmod`,
@@ -8838,7 +8838,7 @@
               i.append("bantype", t),
               i.append("duration", r.toString()),
               i.append("perm", s ? "1" : "0"),
-              i.append("sessionid", Ye.TS.SESSIONID);
+              i.append("sessionid", (0, Ye.KC)());
             try {
               await n().post(
                 `${Ye.TS.CHAT_BASE_URL}broadcast/ajaxupdateusermute`,
@@ -9043,9 +9043,9 @@
         (0, s.Cg)([o.sH], et.prototype, "m_bRateLimited", void 0),
         (0, s.Cg)([o.sH], et.prototype, "m_rgChatMessages", void 0),
         (0, s.Cg)([o.sH], et.prototype, "m_latestAnnouncement", void 0),
-        (0, s.Cg)([Ke.o], et.prototype, "FetchChatModerators", null),
-        (0, s.Cg)([Ke.o], et.prototype, "RequestLoop", null),
-        (0, s.Cg)([Ke.o], et.prototype, "MuteUserForSession", null);
+        (0, s.Cg)([Xe.o], et.prototype, "FetchChatModerators", null),
+        (0, s.Cg)([Xe.o], et.prototype, "RequestLoop", null),
+        (0, s.Cg)([Xe.o], et.prototype, "MuteUserForSession", null);
     },
     94057: (e, t, r) => {
       "use strict";

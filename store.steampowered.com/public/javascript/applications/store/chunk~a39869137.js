@@ -1474,7 +1474,7 @@
         m_schFirstFrameThrottler = new l.LU();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new l.LU();
-        m_watchedIntervals = new K();
+        m_watchedIntervals = new Y();
         constructor(e) {
           (0, o.Gn)(this),
             (this.m_elVideo = e),
@@ -1652,7 +1652,7 @@
           for (let i of e) {
             const e = document.createElement("track");
             (e.kind = "captions"),
-              (e.label = Y(i.m_strLanguageBCP47)),
+              (e.label = K(i.m_strLanguageBCP47)),
               (e.srclang = i.m_strLanguageBCP47),
               (e.src = i.m_strURL),
               (!this.m_bAlwaysStartWithSubtitles && t == m.Bhc) ||
@@ -2751,7 +2751,7 @@
       function J(e) {
         return !!e && e instanceof Error && "NotAllowedError" == e.name;
       }
-      function Y(e) {
+      function K(e) {
         return e in h.bi ? (0, h.we)("#Language_" + (0, m.LgB)(h.bi[e])) : "";
       }
       (0, s.Cg)([o.sH], X.prototype, "m_nTimedText", void 0),
@@ -2803,7 +2803,7 @@
         ),
         (0, s.Cg)([_.o], X.prototype, "ReportPlayerStats", null),
         (0, s.Cg)([o.XI.bound], X.prototype, "CaptureStatsForDisplay", null);
-      class K {
+      class Y {
         m_bEnabled = !1;
         m_rgIntervals = [];
         m_nWatchStart = void 0;
@@ -3418,7 +3418,7 @@
               ? new o.b(this.m_steamIDBroadcast).GetAccountID()
               : 0),
             (e.useragent = window.navigator.userAgent),
-            (e.sessionid = d.TS.SESSIONID),
+            (e.sessionid = (0, d.KC)()),
             (e.broadcast_origin = this.m_strBroadcastOrigin);
         }
       }

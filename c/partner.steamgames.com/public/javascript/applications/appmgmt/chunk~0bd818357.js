@@ -5429,15 +5429,15 @@
       }
       var _, _, _;
       !(function (_) {
-        (_.RegisterCDKey = function (_, _) {
-          return _.SendMsg("Store.RegisterCDKey#1", (0, _._)(_, _), _, {
+        (_.RegisterCDKey = function (_, _, _) {
+          return _.SendMsg("Store.RegisterCDKey#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.GetRecommendedTagsForUser = function (_, _) {
+          (_.GetRecommendedTagsForUser = function (_, _, _) {
             return _.SendMsg(
               "Store.GetRecommendedTagsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5445,17 +5445,10 @@
               },
             );
           }),
-          (_.GetMostPopularTags = function (_, _) {
-            return _.SendMsg("Store.GetMostPopularTags#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
-          }),
-          (_.GetLocalizedNameForTags = function (_, _) {
+          (_.GetMostPopularTags = function (_, _, _) {
             return _.SendMsg(
-              "Store.GetLocalizedNameForTags#1",
-              (0, _._)(_, _),
+              "Store.GetMostPopularTags#1",
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5464,23 +5457,29 @@
               },
             );
           }),
-          (_.GetTagList = function (_, _) {
-            return _.SendMsg("Store.GetTagList#1", (0, _._)(_, _), _, {
+          (_.GetLocalizedNameForTags = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetLocalizedNameForTags#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetTagList = function (_, _, _) {
+            return _.SendMsg("Store.GetTagList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetDiscoveryQueue = function (_, _) {
-            return _.SendMsg("Store.GetDiscoveryQueue#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetDiscoveryQueueSettings = function (_, _) {
+          (_.GetDiscoveryQueue = function (_, _, _) {
             return _.SendMsg(
-              "Store.GetDiscoveryQueueSettings#1",
-              (0, _._)(_, _),
+              "Store.GetDiscoveryQueue#1",
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5488,37 +5487,48 @@
               },
             );
           }),
-          (_.SkipDiscoveryQueueItem = function (_, _) {
+          (_.GetDiscoveryQueueSettings = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetDiscoveryQueueSettings#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.SkipDiscoveryQueueItem = function (_, _, _) {
             return _.SendMsg(
               "Store.SkipDiscoveryQueueItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserGameInterestState = function (_, _) {
+          (_.GetUserGameInterestState = function (_, _, _) {
             return _.SendMsg(
               "Store.GetUserGameInterestState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetGamesFollowed = function (_, _) {
-            return _.SendMsg("Store.GetGamesFollowed#1", (0, _._)(_, _), _, {
+          (_.GetGamesFollowed = function (_, _, _) {
+            return _.SendMsg("Store.GetGamesFollowed#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetGamesFollowedCount = function (_, _) {
+          (_.GetGamesFollowedCount = function (_, _, _) {
             return _.SendMsg(
               "Store.GetGamesFollowedCount#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5527,10 +5537,10 @@
               },
             );
           }),
-          (_.GetDiscoveryQueueSkippedApps = function (_, _) {
+          (_.GetDiscoveryQueueSkippedApps = function (_, _, _) {
             return _.SendMsg(
               "Store.GetDiscoveryQueueSkippedApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5538,21 +5548,26 @@
               },
             );
           }),
-          (_.ReportApp = function (_, _) {
-            return _.SendMsg("Store.ReportApp#1", (0, _._)(_, _), _, {
+          (_.ReportApp = function (_, _, _) {
+            return _.SendMsg("Store.ReportApp#1", (0, _._)(_, _, _), _, {
               ePrivilege: 3,
             });
           }),
-          (_.GetStorePreferences = function (_, _) {
-            return _.SendMsg("Store.GetStorePreferences#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetStorePreferences = function (_, _, _) {
+            return _.SendMsg(
+              "Store.GetStorePreferences#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetTrendingAppsAmongFriends = function (_, _) {
+          (_.GetTrendingAppsAmongFriends = function (_, _, _) {
             return _.SendMsg(
               "Store.GetTrendingAppsAmongFriends#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5569,60 +5584,60 @@
               },
             );
           }),
-          (_.UpdatePackageReservations = function (_, _) {
+          (_.UpdatePackageReservations = function (_, _, _) {
             return _.SendMsg(
               "Store.UpdatePackageReservations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetWishlistDemoEmailStatus = function (_, _) {
+          (_.GetWishlistDemoEmailStatus = function (_, _, _) {
             return _.SendMsg(
               "Store.GetWishlistDemoEmailStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.QueueWishlistDemoEmailToFire = function (_, _) {
+          (_.QueueWishlistDemoEmailToFire = function (_, _, _) {
             return _.SendMsg(
               "Store.QueueWishlistDemoEmailToFire#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetReservationPositionMessage = function (_, _) {
+          (_.SetReservationPositionMessage = function (_, _, _) {
             return _.SendMsg(
               "Store.SetReservationPositionMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.DeleteReservationPositionMessage = function (_, _) {
+          (_.DeleteReservationPositionMessage = function (_, _, _) {
             return _.SendMsg(
               "Store.DeleteReservationPositionMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetAllReservationPositionMessages = function (_, _) {
+          (_.GetAllReservationPositionMessages = function (_, _, _) {
             return _.SendMsg(
               "Store.GetAllReservationPositionMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5639,20 +5654,20 @@
               },
             );
           }),
-          (_.SetCompatibilityFeedback = function (_, _) {
+          (_.SetCompatibilityFeedback = function (_, _, _) {
             return _.SendMsg(
               "Store.SetCompatibilityFeedback#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ShouldPromptForCompatibilityFeedback = function (_, _) {
+          (_.ShouldPromptForCompatibilityFeedback = function (_, _, _) {
             return _.SendMsg(
               "Store.ShouldPromptForCompatibilityFeedback#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -5667,40 +5682,50 @@
           };
         })(_ || (_ = {})),
         (function (_) {
-          (_.RequestInvite = function (_, _) {
-            return _.SendMsg("Playtest.RequestInvite#1", (0, _._)(_, _), _, {
+          (_.RequestInvite = function (_, _, _) {
+            return _.SendMsg("Playtest.RequestInvite#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-            (_.UpdateInvites = function (_, _) {
-              return _.SendMsg("Playtest.UpdateInvites#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetInvites = function (_, _) {
-              return _.SendMsg("Playtest.GetInvites#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetInviteHistory = function (_, _) {
+            (_.UpdateInvites = function (_, _, _) {
               return _.SendMsg(
-                "Playtest.GetInviteHistory#1",
-                (0, _._)(_, _),
+                "Playtest.UpdateInvites#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetUserStatus = function (_, _) {
-              return _.SendMsg("Playtest.GetUserStatus#1", (0, _._)(_, _), _, {
+            (_.GetInvites = function (_, _, _) {
+              return _.SendMsg("Playtest.GetInvites#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 1,
               });
             }),
-            (_.GetInviteOptions = function (_, _) {
+            (_.GetInviteHistory = function (_, _, _) {
+              return _.SendMsg(
+                "Playtest.GetInviteHistory#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetUserStatus = function (_, _, _) {
+              return _.SendMsg(
+                "Playtest.GetUserStatus#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetInviteOptions = function (_, _, _) {
               return _.SendMsg(
                 "Playtest.GetInviteOptions#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,

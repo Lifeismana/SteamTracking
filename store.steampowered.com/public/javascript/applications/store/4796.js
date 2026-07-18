@@ -995,34 +995,34 @@
         }
       }
       !(function (e) {
-        (e.SetDevPageLink = function (e, t) {
+        (e.SetDevPageLink = function (e, t, r) {
           return e.SendMsg(
             "StoreCatalog.SetDevPageLink#1",
-            (0, s.I8)(p, t),
+            (0, s.I8)(p, t, r),
             d,
             { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
           );
         }),
-          (e.GetDevPageLinks = function (e, t) {
+          (e.GetDevPageLinks = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageLinks#1",
-              (0, s.I8)(_, t),
+              (0, s.I8)(_, t, r),
               g,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetDevPageAllAppsLinked = function (e, t) {
+          (e.GetDevPageAllAppsLinked = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageAllAppsLinked#1",
-              (0, s.I8)(I, t),
+              (0, s.I8)(I, t, r),
               f,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetDevPagesForPartner = function (e, t) {
+          (e.GetDevPagesForPartner = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPagesForPartner#1",
-              (0, s.I8)(h, t),
+              (0, s.I8)(h, t, r),
               y,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -1030,8 +1030,8 @@
       })(n || (n = {}));
       var v = r(64087),
         B = r(80902),
-        S = r(41735),
-        w = r.n(S),
+        w = r(41735),
+        S = r.n(w),
         T = r(14947),
         b = r(37085),
         A = r(29197),
@@ -1173,10 +1173,10 @@
             n & A.Wv.Jn && a.push(A.Wv.Jn),
             n & A.Wv.Mv && a.push(A.Wv.Mv);
           let i = new FormData();
-          i.append("sessionid", L.TS.SESSIONID),
+          i.append("sessionid", (0, L.KC)()),
             i.append("clan_account_id", this.GetClanAccountID().toString()),
             i.append("accountflags", JSON.stringify(a));
-          let s = await w().post(r, i);
+          let s = await S().post(r, i);
           s &&
             200 == s.status &&
             s.data.success == b.R &&
@@ -1290,14 +1290,14 @@
               "curator/" +
               e.GetClanAccountID() +
               "/ajaxgetcreatorhomeinfo",
-            a = await w().get(n, { params: r, cancelToken: t && t.token });
+            a = await S().get(n, { params: r, cancelToken: t && t.token });
           return e.Initialize(a.data), e;
         }
         async LoadCreatorHomeListForAppIncludeHiddden(e, t) {
           if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(e))) {
             let r = { appid: e },
               n = L.TS.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
-              a = await w().get(n, {
+              a = await S().get(n, {
                 params: r,
                 cancelToken: t && t.token,
                 withCredentials: !0,
@@ -1316,7 +1316,7 @@
               origin: self.origin,
             },
             i = new Array();
-          const s = await w().get(n, { params: a, cancelToken: r.token });
+          const s = await S().get(n, { params: a, cancelToken: r.token });
           return (
             s.data.curators &&
               (0, T.h5)(() => {
@@ -1762,7 +1762,7 @@
                   r.ConvertTo64BitString()) +
               (l ? "/unfolloworunignoreevent" : "/followorignoreevent"),
             p = new URLSearchParams();
-          p.append("sessionid", f.TS.SESSIONID),
+          p.append("sessionid", (0, f.KC)()),
             p.append("ignore", "" + t),
             p.append("gid", n),
             p.append("notification_flag", "" + a),
@@ -1831,7 +1831,7 @@
                     "updated/ajaxrateupdate/" +
                     e.AnnouncementGID,
               s = new URLSearchParams();
-            s.append("sessionid", f.TS.SESSIONID),
+            s.append("sessionid", (0, f.KC)()),
               s.append("voteup", t ? "1" : "0"),
               s.append("clanid", "" + e.clanSteamID.GetAccountID()),
               s.append("ajax", "1");

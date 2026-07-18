@@ -1611,10 +1611,10 @@
         }
       }
       !(function (_) {
-        (_.GetClientLogonInfo = function (_, _) {
+        (_.GetClientLogonInfo = function (_, _, _) {
           return _.SendMsg(
             "ClientComm.GetClientLogonInfo#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -1622,10 +1622,10 @@
             },
           );
         }),
-          (_.GetAllClientLogonInfo = function (_, _) {
+          (_.GetAllClientLogonInfo = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetAllClientLogonInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1633,16 +1633,21 @@
               },
             );
           }),
-          (_.GetClientInfo = function (_, _) {
-            return _.SendMsg("ClientComm.GetClientInfo#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetClientInfo = function (_, _, _) {
+            return _.SendMsg(
+              "ClientComm.GetClientInfo#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetClientAppList = function (_, _) {
+          (_.GetClientAppList = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.GetClientAppList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1650,50 +1655,50 @@
               },
             );
           }),
-          (_.InstallClientApp = function (_, _) {
+          (_.InstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.InstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UninstallClientApp = function (_, _) {
+          (_.UninstallClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.UninstallClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.LaunchClientApp = function (_, _) {
+          (_.LaunchClientApp = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.LaunchClientApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetClientAppUpdateState = function (_, _) {
+          (_.SetClientAppUpdateState = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.SetClientAppUpdateState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.EnableOrDisableDownloads = function (_, _) {
+          (_.EnableOrDisableDownloads = function (_, _, _) {
             return _.SendMsg(
               "ClientComm.EnableOrDisableDownloads#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,

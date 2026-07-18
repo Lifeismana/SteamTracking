@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Annonsen är inte längre tillgänglig",
     "Listing_NotAvailable_Short": "Inte tillgänglig",
     "Listing_NotAvailable_Long": "Den här annonsen är inte längre tillgänglig för köp.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Min annons)",
     "BuyOrderDialog_Header": "Köp – %1$s",
     "BuyOrderDialog_Header_NoItem": "Lägg köporder",
     "BuyOrderDialog_BucketPicker_Label": "Vilken typ av artikel vill du köpa?",

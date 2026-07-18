@@ -587,23 +587,26 @@
       }
       var S;
       !(function (e) {
-        (e.RespondToClanInvite = function (e, t) {
-          return e.SendMsg("Clan.RespondToClanInvite#1", (0, o.I8)(g, t), h, {
-            ePrivilege: 1,
-          });
+        (e.RespondToClanInvite = function (e, t, r) {
+          return e.SendMsg(
+            "Clan.RespondToClanInvite#1",
+            (0, o.I8)(g, t, r),
+            h,
+            { ePrivilege: 1 },
+          );
         }),
-          (e.GetDraftAndRecentPartnerEventSnippet = function (e, t) {
+          (e.GetDraftAndRecentPartnerEventSnippet = function (e, t, r) {
             return e.SendMsg(
               "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, o.I8)(y, t),
+              (0, o.I8)(y, t, r),
               B,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetPartnerEventsByBuildIDRange = function (e, t) {
+          (e.GetPartnerEventsByBuildIDRange = function (e, t, r) {
             return e.SendMsg(
               "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, o.I8)(b, t),
+              (0, o.I8)(b, t, r),
               v,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
@@ -1139,17 +1142,17 @@
       }
       var f;
       !(function (e) {
-        (e.GetLists = function (e, t) {
-          return e.SendMsg("StoreCuration.GetLists#1", (0, l.I8)(g, t), h, {
+        (e.GetLists = function (e, t, r) {
+          return e.SendMsg("StoreCuration.GetLists#1", (0, l.I8)(g, t, r), h, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (e.GetListDetails = function (e, t) {
+          (e.GetListDetails = function (e, t, r) {
             return e.SendMsg(
               "StoreCuration.GetListDetails#1",
-              (0, l.I8)(y, t),
+              (0, l.I8)(y, t, r),
               B,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -2513,34 +2516,34 @@
         }
       }
       !(function (e) {
-        (e.SetDevPageLink = function (e, t) {
+        (e.SetDevPageLink = function (e, t, r) {
           return e.SendMsg(
             "StoreCatalog.SetDevPageLink#1",
-            (0, s.I8)(d, t),
+            (0, s.I8)(d, t, r),
             _,
             { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
           );
         }),
-          (e.GetDevPageLinks = function (e, t) {
+          (e.GetDevPageLinks = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageLinks#1",
-              (0, s.I8)(p, t),
+              (0, s.I8)(p, t, r),
               g,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetDevPageAllAppsLinked = function (e, t) {
+          (e.GetDevPageAllAppsLinked = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageAllAppsLinked#1",
-              (0, s.I8)(h, t),
+              (0, s.I8)(h, t, r),
               y,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetDevPagesForPartner = function (e, t) {
+          (e.GetDevPagesForPartner = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPagesForPartner#1",
-              (0, s.I8)(B, t),
+              (0, s.I8)(B, t, r),
               f,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -2696,7 +2699,7 @@
             i & T.Wv.Jn && n.push(T.Wv.Jn),
             i & T.Wv.Mv && n.push(T.Wv.Mv);
           let a = new FormData();
-          a.append("sessionid", z.TS.SESSIONID),
+          a.append("sessionid", (0, z.KC)()),
             a.append("clan_account_id", this.GetClanAccountID().toString()),
             a.append("accountflags", JSON.stringify(n));
           let s = await S().post(r, a);
@@ -3004,7 +3007,7 @@
         a = r(37085),
         s = r(33688),
         o = r(56545),
-        l = r(34214),
+        l = r(43261),
         m = r(41735),
         c = r.n(m),
         u = r(14947),
@@ -3324,7 +3327,7 @@
                   r.ConvertTo64BitString()) +
               (l ? "/unfolloworunignoreevent" : "/followorignoreevent"),
             d = new URLSearchParams();
-          d.append("sessionid", y.TS.SESSIONID),
+          d.append("sessionid", (0, y.KC)()),
             d.append("ignore", "" + t),
             d.append("gid", i),
             d.append("notification_flag", "" + n),
@@ -3393,7 +3396,7 @@
                     "updated/ajaxrateupdate/" +
                     e.AnnouncementGID,
               s = new URLSearchParams();
-            s.append("sessionid", y.TS.SESSIONID),
+            s.append("sessionid", (0, y.KC)()),
               s.append("voteup", t ? "1" : "0"),
               s.append("clanid", "" + e.clanSteamID.GetAccountID()),
               s.append("ajax", "1");

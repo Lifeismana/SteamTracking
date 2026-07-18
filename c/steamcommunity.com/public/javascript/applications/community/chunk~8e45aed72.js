@@ -2416,109 +2416,114 @@
         }
       }
       !(function (_) {
-        (_.Create = function (_, _) {
-          return _.SendMsg("ClanFAQS.Create#1", (0, _._)(_, _), _, {
+        (_.Create = function (_, _, _) {
+          return _.SendMsg("ClanFAQS.Create#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.Delete = function (_, _) {
-            return _.SendMsg("ClanFAQS.Delete#1", (0, _._)(_, _), _, {
+          (_.Delete = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.Delete#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.UpdateInternalName = function (_, _) {
+          (_.UpdateInternalName = function (_, _, _) {
             return _.SendMsg(
               "ClanFAQS.UpdateInternalName#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdateJsonData = function (_, _) {
-            return _.SendMsg("ClanFAQS.UpdateJsonData#1", (0, _._)(_, _), _, {
+          (_.UpdateJsonData = function (_, _, _) {
+            return _.SendMsg(
+              "ClanFAQS.UpdateJsonData#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.SetVisibility = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.SetVisibility#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.SetVisibility = function (_, _) {
-            return _.SendMsg("ClanFAQS.SetVisibility#1", (0, _._)(_, _), _, {
+          (_.UpdateDraft = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.UpdateDraft#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.UpdateDraft = function (_, _) {
-            return _.SendMsg("ClanFAQS.UpdateDraft#1", (0, _._)(_, _), _, {
+          (_.PublishDraft = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.PublishDraft#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.PublishDraft = function (_, _) {
-            return _.SendMsg("ClanFAQS.PublishDraft#1", (0, _._)(_, _), _, {
+          (_.PreviewDraft = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.PreviewDraft#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.PreviewDraft = function (_, _) {
-            return _.SendMsg("ClanFAQS.PreviewDraft#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetFAQ = function (_, _) {
-            return _.SendMsg("ClanFAQS.GetFAQ#1", (0, _._)(_, _), _, {
+          (_.GetFAQ = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.GetFAQ#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetFAQVersion = function (_, _) {
-            return _.SendMsg("ClanFAQS.GetFAQVersion#1", (0, _._)(_, _), _, {
+          (_.GetFAQVersion = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.GetFAQVersion#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetAllDrafts = function (_, _) {
-            return _.SendMsg("ClanFAQS.GetAllDrafts#1", (0, _._)(_, _), _, {
+          (_.GetAllDrafts = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.GetAllDrafts#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetAllFAQsForClan = function (_, _) {
+          (_.GetAllFAQsForClan = function (_, _, _) {
             return _.SendMsg(
               "ClanFAQS.GetAllFAQsForClan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAllLatestVersionPublishedFAQS = function (_, _) {
+          (_.GetAllLatestVersionPublishedFAQS = function (_, _, _) {
             return _.SendMsg(
               "ClanFAQS.GetAllLatestVersionPublishedFAQS#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CheckFAQPermissions = function (_, _) {
+          (_.CheckFAQPermissions = function (_, _, _) {
             return _.SendMsg(
               "ClanFAQS.CheckFAQPermissions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SearchFAQs = function (_, _) {
-            return _.SendMsg("ClanFAQS.SearchFAQs#1", (0, _._)(_, _), _, {
+          (_.SearchFAQs = function (_, _, _) {
+            return _.SendMsg("ClanFAQS.SearchFAQs#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.FetchLocalizationFromCrowdIn = function (_, _) {
+          (_.FetchLocalizationFromCrowdIn = function (_, _, _) {
             return _.SendMsg(
               "ClanFAQS.FetchLocalizationFromCrowdIn#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2526,10 +2531,10 @@
               },
             );
           }),
-          (_.GetCrowdInMetadata = function (_, _) {
+          (_.GetCrowdInMetadata = function (_, _, _) {
             return _.SendMsg(
               "ClanFAQS.GetCrowdInMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
@@ -3392,8 +3397,7 @@
               "/ajaxpullfromcrowdin/" +
               _(_),
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
-            _.append("languages", _.join(","));
+          _.append("sessionid", (0, _._)()), _.append("languages", _.join(","));
           let _ = null;
           try {
             const _ = await _().post(_, _, {

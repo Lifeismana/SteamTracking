@@ -45,8 +45,8 @@
         g = a(17720),
         m = a(6626),
         p = a(68255),
-        S = a(9154),
-        _ = a(738),
+        _ = a(9154),
+        S = a(738),
         v = a(12155),
         f = a(22797),
         C = a(56011),
@@ -57,8 +57,8 @@
         E = a(88997),
         b = a(67165),
         M = a(60155),
-        T = a(84811),
-        w = a(64641),
+        w = a(84811),
+        T = a(64641),
         D = a(41338),
         L = a(82062);
       const y = (e) => {
@@ -118,7 +118,7 @@
             },
             [s, r],
           );
-          return (0, n.jsx)(T.tH, {
+          return (0, n.jsx)(w.tH, {
             children: (0, n.jsx)(p.pd, {
               type: "text",
               label: t,
@@ -143,10 +143,10 @@
                     style: { display: "flex", alignItems: "center" },
                     children: [
                       (0, n.jsx)("div", {
-                        className: w.GameImageContainer,
+                        className: T.GameImageContainer,
                         children: (0, n.jsx)("img", {
                           src: e.GetAvatarURLFullSize(),
-                          className: w.AvatarImage,
+                          className: T.AvatarImage,
                         }),
                       }),
                       (0, D.EK)(e.GetName()),
@@ -292,7 +292,7 @@
                   Boolean(!t.gid_clan_event || (t.hidden && !t.published)) &&
                     (0, n.jsx)(p.$n, {
                       onClick: (e) =>
-                        (0, _.pg)((0, n.jsx)(P, { record: t }), (0, C.uX)(e)),
+                        (0, S.pg)((0, n.jsx)(P, { record: t }), (0, C.uX)(e)),
                       children: "Migrate Sale Page",
                     }),
                 ],
@@ -308,8 +308,8 @@
             [l, c] = (0, u.useState)(void 0),
             [d, h] = (0, u.useState)(!1),
             [m, p] = (0, u.useState)(t.gid_clan_event),
-            [_, v] = (0, u.useState)(null);
-          return (0, n.jsxs)(S.o0, {
+            [S, v] = (0, u.useState)(null);
+          return (0, n.jsxs)(_.o0, {
             strTitle: "Migrate Sale page",
             strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
             bOKDisabled: !s || o,
@@ -351,7 +351,7 @@
                           r(e.GetClanAccountID()), v(e);
                         },
                       }),
-                      Boolean(_) && (0, n.jsx)(O, { creatorHome: _ }),
+                      Boolean(S) && (0, n.jsx)(O, { creatorHome: S }),
                     ],
                   }),
               Boolean(o && !l) &&
@@ -453,7 +453,7 @@
             const o =
               j.TS.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
             let i = new URLSearchParams();
-            i.append("sessionid", j.TS.SESSIONID),
+            i.append("sessionid", (0, j.KC)()),
               i.append("salePageID", e),
               i.append("clanAccountID", "" + t),
               a && i.append("gidClanEvent", a);
@@ -512,7 +512,7 @@
           try {
             const a =
                 j.TS.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
-              n = { sessionid: j.TS.SESSIONID },
+              n = { sessionid: (0, j.KC)() },
               s = await l().get(a, { params: n, withCredentials: !0 });
             if (
               ((this.m_bLoadComplete = !0),
@@ -704,7 +704,7 @@
         $ = a(80778),
         Q = a.n($),
         V = a(22837);
-      const W = (0, d.PA)((e) => {
+      const K = (0, d.PA)((e) => {
           const [t, a] = (0, u.useState)(!0);
           (0, u.useEffect)(() => {
             Promise.all([F.KN.InitGlobal(), r.mh.Init()]).then(() => a(!1));
@@ -714,14 +714,14 @@
             [c, d] = (0, z.QD)("count", 10),
             [h, g] = (0, z.QD)("autoload", !0),
             [m, p] = (0, z.QD)("batch_size", 1),
-            [S, _] = (0, z.QD)("automigrate", !1),
+            [_, S] = (0, z.QD)("automigrate", !1),
             [v, C] = (0, u.useState)(!1),
             [x, I] = (0, z.QD)("rolling", 0),
             [j, A] = (0, u.useState)(new Set()),
             E = (0, u.useRef)(0),
             b = q.Get().GetApps(s, c, i),
             M = 0 == x ? b : b.filter((e) => !j.has(Number(e.id))).slice(0, x),
-            T = (e, t) => {
+            w = (e, t) => {
               j.has(e) ||
                 (console.log("completed: ", e, t),
                 j.add(e),
@@ -737,13 +737,13 @@
               }),
               M.map((e) =>
                 (0, n.jsx)(
-                  K,
+                  W,
                   {
                     app: e,
                     bAutoLoad: h,
-                    bAutoMigrate: S || v,
+                    bAutoMigrate: _ || v,
                     nMigrateBatchSize: m,
-                    fnOnCompletion: T,
+                    fnOnCompletion: w,
                   },
                   e.id,
                 ),
@@ -767,7 +767,7 @@
                 },
                 children: "LOAD NEXT PAGE",
               }),
-              !S &&
+              !_ &&
                 (0, n.jsx)("div", {
                   className: Q().LoadEventsButton,
                   onClick: () => C(!0),
@@ -785,7 +785,7 @@
             ],
           });
         }),
-        K = (0, d.PA)((e) => {
+        W = (0, d.PA)((e) => {
           const t = Number(e.app.id),
             [a, s] = (0, u.useState)(0),
             [o, i] = (0, u.useState)([]),
@@ -809,8 +809,8 @@
           const g = U.ac.GetOGGClanInfo(t),
             m = g ? g.group_name : e.app.name,
             p = `${j.TS.COMMUNITY_BASE_URL}games/${g ? g.vanity_url : t}/partnerevents/`,
-            S = o.length,
-            _ = a == S,
+            _ = o.length,
+            S = a == _,
             v = o.filter((e) => e.BIsVisibleEvent()),
             C = v.length,
             x = v.filter(
@@ -827,7 +827,7 @@
                   g.clanAccountID == e.announcementClanSteamID.GetAccountID()),
             ),
             E = A.length,
-            b = !_ && E > 0 && (null == g ? void 0 : g.clanSteamID),
+            b = !S && E > 0 && (null == g ? void 0 : g.clanSteamID),
             M = async () => {
               const e = a;
               s(a + 50), c(!0);
@@ -835,12 +835,12 @@
               i(o.concat(n)), c(!1);
             };
           (0, u.useEffect)(() => {
-            e.bAutoLoad && _ && !l && M();
+            e.bAutoLoad && S && !l && M();
           });
-          const T = (e, t) => {
+          const w = (e, t) => {
               t ? (h.current += 1) : d.current.add(e);
             },
-            w = async () => {
+            T = async () => {
               c(!0),
                 await (async function (e, t, a, n, s) {
                   for (const o of e.slice(0, t)) {
@@ -873,15 +873,15 @@
                         s(o.AnnouncementGID, !1);
                     }
                   }
-                })(A, e.nMigrateBatchSize, t, g.clanSteamID, T),
+                })(A, e.nMigrateBatchSize, t, g.clanSteamID, w),
                 c(!1);
             };
           return (
             (0, u.useEffect)(() => {
-              e.bAutoMigrate && b && !l && w();
+              e.bAutoMigrate && b && !l && T();
             }),
             (0, u.useEffect)(() => {
-              _ || b || l || e.fnOnCompletion(t, h.current);
+              S || b || l || e.fnOnCompletion(t, h.current);
             }),
             (0, n.jsxs)("div", {
               className: Q().ClanRow,
@@ -895,7 +895,7 @@
                 (0, n.jsxs)("div", {
                   className: Q().Counts,
                   children: [
-                    `Loaded: ${S}\tVisible: ${C}\tOld: ${E}`,
+                    `Loaded: ${_}\tVisible: ${C}\tOld: ${E}`,
                     x > 0 &&
                       (0, n.jsx)("span", {
                         className: Q().LinkedAnnouncements,
@@ -903,7 +903,7 @@
                       }),
                   ],
                 }),
-                _
+                S
                   ? (0, n.jsx)("div", {
                       className: Q().LoadEventsButton,
                       onClick: M,
@@ -914,7 +914,7 @@
                     : b
                       ? (0, n.jsx)("div", {
                           className: Q().MigrateEventsButton,
-                          onClick: w,
+                          onClick: T,
                           children: "MIGRATE EVENTS",
                         })
                       : (0, n.jsx)("div", {
@@ -944,7 +944,7 @@
                   }),
                   (0, n.jsx)(X.qh, {
                     path: s.mQ.MigrateEvents(),
-                    component: W,
+                    component: K,
                   }),
                   (0, n.jsx)(X.qh, { component: J.a }),
                 ],

@@ -1916,40 +1916,40 @@
       }
       var _;
       !(function (_) {
-        (_.CreateAssetSet = function (_, _) {
+        (_.CreateAssetSet = function (_, _, _) {
           return _.SendMsg(
             "AssetSetPublishing.CreateAssetSet#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 7,
             },
           );
         }),
-          (_.DeleteAssetSet = function (_, _) {
+          (_.DeleteAssetSet = function (_, _, _) {
             return _.SendMsg(
               "AssetSetPublishing.DeleteAssetSet#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 7,
               },
             );
           }),
-          (_.UpdateAssetSet = function (_, _) {
+          (_.UpdateAssetSet = function (_, _, _) {
             return _.SendMsg(
               "AssetSetPublishing.UpdateAssetSet#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 7,
               },
             );
           }),
-          (_.GetAllAssetSets = function (_, _) {
+          (_.GetAllAssetSets = function (_, _, _) {
             return _.SendMsg(
               "AssetSetPublishing.GetAllAssetSets#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1957,40 +1957,40 @@
               },
             );
           }),
-          (_.AddBranchToAssetSet = function (_, _) {
+          (_.AddBranchToAssetSet = function (_, _, _) {
             return _.SendMsg(
               "AssetSetPublishing.AddBranchToAssetSet#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 7,
               },
             );
           }),
-          (_.RemoveBranchFromAssetSet = function (_, _) {
+          (_.RemoveBranchFromAssetSet = function (_, _, _) {
             return _.SendMsg(
               "AssetSetPublishing.RemoveBranchFromAssetSet#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 7,
               },
             );
           }),
-          (_.SwapAssetSetPriority = function (_, _) {
+          (_.SwapAssetSetPriority = function (_, _, _) {
             return _.SendMsg(
               "AssetSetPublishing.SwapAssetSetPriority#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 7,
               },
             );
           }),
-          (_.UpdatePublishTime = function (_, _) {
+          (_.UpdatePublishTime = function (_, _, _) {
             return _.SendMsg(
               "AssetSetPublishing.UpdatePublishTime#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 7,
@@ -2539,7 +2539,7 @@
           let _ = null;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appid", "" + _),
               _.append("asset_set_id", _),
               _.append("markerid", _),
@@ -2591,7 +2591,7 @@
             _ = _.asset_set_id;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appid", "" + _),
               _.append("asset_set_id", _),
               _.append("markerid", _),
@@ -2651,7 +2651,7 @@
           const _ = _.markerid;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appid", "" + _),
               _.append("asset_set_id", _),
               _.append("timeline_marker_id", _);
@@ -2709,7 +2709,7 @@
           }
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appid", "" + _),
               _.append("asset_set_id", _),
               _.append("timeline_marker_id", __webpack_require__.join(","));

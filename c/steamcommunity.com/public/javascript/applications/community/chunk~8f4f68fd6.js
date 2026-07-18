@@ -1176,10 +1176,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetSteamNotifications = function (_, _) {
+        (_.GetSteamNotifications = function (_, _, _) {
           return _.SendMsg(
             "SteamNotification.GetSteamNotifications#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -1214,20 +1214,20 @@
               },
             );
           }),
-          (_.SetPreferences = function (_, _) {
+          (_.SetPreferences = function (_, _, _) {
             return _.SendMsg(
               "SteamNotification.SetPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPreferences = function (_, _) {
+          (_.GetPreferences = function (_, _, _) {
             return _.SendMsg(
               "SteamNotification.GetPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

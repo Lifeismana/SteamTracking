@@ -650,7 +650,7 @@
           const _ =
               _._.PARTNER_BASE_URL + "actions/ajaxgetpartnervalvecontacts",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               strPartnerIDs: _.join(","),
             },
             _ = await _().get(_, {
@@ -7402,30 +7402,30 @@
       }
       var _, _;
       !(function (_) {
-        (_.BeginBroadcastSession = function (_, _) {
+        (_.BeginBroadcastSession = function (_, _, _) {
           return _.SendMsg(
             "Broadcast.BeginBroadcastSession#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.EndBroadcastSession = function (_, _) {
+          (_.EndBroadcastSession = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.EndBroadcastSession#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.StartBroadcastUpload = function (_, _) {
+          (_.StartBroadcastUpload = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.StartBroadcastUpload#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -7441,10 +7441,15 @@
               },
             );
           }),
-          (_.WatchBroadcast = function (_, _) {
-            return _.SendMsg("Broadcast.WatchBroadcast#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-            });
+          (_.WatchBroadcast = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WatchBroadcast#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 2,
+              },
+            );
           }),
           (_.HeartbeatBroadcast = function (_, _) {
             return _.SendNotification(
@@ -7464,40 +7469,40 @@
               },
             );
           }),
-          (_.GetBroadcastStatus = function (_, _) {
+          (_.GetBroadcastStatus = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.GetBroadcastThumbnail = function (_, _) {
+          (_.GetBroadcastThumbnail = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastThumbnail#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.InviteToBroadcast = function (_, _) {
+          (_.InviteToBroadcast = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.InviteToBroadcast#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SendBroadcastStateToServer = function (_, _) {
+          (_.SendBroadcastStateToServer = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.SendBroadcastStateToServer#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -7513,71 +7518,81 @@
               },
             );
           }),
-          (_.GetBroadcastChatInfo = function (_, _) {
+          (_.GetBroadcastChatInfo = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastChatInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.PostChatMessage = function (_, _) {
-            return _.SendMsg("Broadcast.PostChatMessage#1", (0, _._)(_, _), _, {
-              ePrivilege: 3,
-            });
+          (_.PostChatMessage = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.PostChatMessage#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 3,
+              },
+            );
           }),
-          (_.UpdateChatMessageFlair = function (_, _) {
+          (_.UpdateChatMessageFlair = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.UpdateChatMessageFlair#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.MuteBroadcastChatUser = function (_, _) {
+          (_.MuteBroadcastChatUser = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.MuteBroadcastChatUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.RemoveUserChatText = function (_, _) {
+          (_.RemoveUserChatText = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.RemoveUserChatText#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetBroadcastChatUserNames = function (_, _) {
+          (_.GetBroadcastChatUserNames = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastChatUserNames#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.StartBuildClip = function (_, _) {
-            return _.SendMsg("Broadcast.StartBuildClip#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
+          (_.StartBuildClip = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.StartBuildClip#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
           }),
-          (_.GetBuildClipStatus = function (_, _) {
+          (_.GetBuildClipStatus = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBuildClipStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7586,26 +7601,36 @@
               },
             );
           }),
-          (_.SetClipDetails = function (_, _) {
-            return _.SendMsg("Broadcast.SetClipDetails#1", (0, _._)(_, _), _, {
+          (_.SetClipDetails = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.SetClipDetails#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.GetClipDetails = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.GetClipDetails#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.SetRTMPInfo = function (_, _, _) {
+            return _.SendMsg("Broadcast.SetRTMPInfo#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetClipDetails = function (_, _) {
-            return _.SendMsg("Broadcast.GetClipDetails#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (_.SetRTMPInfo = function (_, _) {
-            return _.SendMsg("Broadcast.SetRTMPInfo#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetRTMPInfo = function (_, _) {
-            return _.SendMsg("Broadcast.GetRTMPInfo#1", (0, _._)(_, _), _, {
+          (_.GetRTMPInfo = function (_, _, _) {
+            return _.SendMsg("Broadcast.GetRTMPInfo#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -7619,70 +7644,80 @@
               },
             );
           }),
-          (_.WebRTCStartResult = function (_, _) {
+          (_.WebRTCStartResult = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCStartResult#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCStopped = function (_, _) {
-            return _.SendMsg("Broadcast.WebRTCStopped#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.WebRTCStopped = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WebRTCStopped#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.WebRTCSetAnswer = function (_, _) {
-            return _.SendMsg("Broadcast.WebRTCSetAnswer#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.WebRTCSetAnswer = function (_, _, _) {
+            return _.SendMsg(
+              "Broadcast.WebRTCSetAnswer#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.WebRTCLookupTURNServer = function (_, _) {
+          (_.WebRTCLookupTURNServer = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCLookupTURNServer#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCAddHostCandidate = function (_, _) {
+          (_.WebRTCAddHostCandidate = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCAddHostCandidate#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCAddViewerCandidate = function (_, _) {
+          (_.WebRTCAddViewerCandidate = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCAddViewerCandidate#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.WebRTCGetHostCandidates = function (_, _) {
+          (_.WebRTCGetHostCandidates = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.WebRTCGetHostCandidates#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetBroadcastUploadStats = function (_, _) {
+          (_.GetBroadcastUploadStats = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastUploadStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -7691,10 +7726,10 @@
               },
             );
           }),
-          (_.GetBroadcastViewerStats = function (_, _) {
+          (_.GetBroadcastViewerStats = function (_, _, _) {
             return _.SendMsg(
               "Broadcast.GetBroadcastViewerStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11054,10 +11089,10 @@
       }
       var _;
       !(function (_) {
-        (_.GetPointsForSpend = function (_, _) {
+        (_.GetPointsForSpend = function (_, _, _) {
           return _.SendMsg(
             "LoyaltyRewards.GetPointsForSpend#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -11066,86 +11101,91 @@
             },
           );
         }),
-          (_.GetSummary = function (_, _) {
-            return _.SendMsg("LoyaltyRewards.GetSummary#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetSummary = function (_, _, _) {
+            return _.SendMsg(
+              "LoyaltyRewards.GetSummary#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.RedeemPoints = function (_, _) {
+          (_.RedeemPoints = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPoints#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsForBadgeLevel = function (_, _) {
+          (_.RedeemPointsForBadgeLevel = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsToUpgradeItem = function (_, _) {
+          (_.RedeemPointsToUpgradeItem = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsForProfileCustomization = function (_, _) {
+          (_.RedeemPointsForProfileCustomization = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsForProfileCustomizationUpgrade = function (_, _) {
+          (_.RedeemPointsForProfileCustomizationUpgrade = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RegisterForSteamDeckRewards = function (_, _) {
+          (_.RegisterForSteamDeckRewards = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RegisterForSteamDeckRewards#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.AddReaction = function (_, _) {
+          (_.AddReaction = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.AddReaction#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetReactions = function (_, _) {
+          (_.GetReactions = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetReactions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11153,10 +11193,10 @@
               },
             );
           }),
-          (_.GetReactionsSummaryForUser = function (_, _) {
+          (_.GetReactionsSummaryForUser = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetReactionsSummaryForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11165,10 +11205,10 @@
               },
             );
           }),
-          (_.GetReactionConfig = function (_, _) {
+          (_.GetReactionConfig = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetReactionConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11177,10 +11217,10 @@
               },
             );
           }),
-          (_.GetProfileCustomizationsConfig = function (_, _) {
+          (_.GetProfileCustomizationsConfig = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetProfileCustomizationsConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11189,10 +11229,10 @@
               },
             );
           }),
-          (_.GetEligibleApps = function (_, _) {
+          (_.GetEligibleApps = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetEligibleApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11201,10 +11241,10 @@
               },
             );
           }),
-          (_.GetActivePurchaseBonuses = function (_, _) {
+          (_.GetActivePurchaseBonuses = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetActivePurchaseBonuses#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11213,10 +11253,10 @@
               },
             );
           }),
-          (_.QueryRewardItems = function (_, _) {
+          (_.QueryRewardItems = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.QueryRewardItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11225,10 +11265,10 @@
               },
             );
           }),
-          (_.BatchedQueryRewardItems = function (_, _) {
+          (_.BatchedQueryRewardItems = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.BatchedQueryRewardItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11237,10 +11277,10 @@
               },
             );
           }),
-          (_.GetEquippedProfileItems = function (_, _) {
+          (_.GetEquippedProfileItems = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetEquippedProfileItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12463,10 +12503,10 @@
         }
       }
       !(function (_) {
-        (_.UpdateRegistration = function (_, _) {
+        (_.UpdateRegistration = function (_, _, _) {
           return _.SendMsg(
             "PartnerMeetSteam.UpdateRegistration#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -12474,10 +12514,10 @@
             },
           );
         }),
-          (_.GetAvailability = function (_, _) {
+          (_.GetAvailability = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetAvailability#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12486,10 +12526,10 @@
               },
             );
           }),
-          (_.GetRegistrations = function (_, _) {
+          (_.GetRegistrations = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetRegistrations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12497,30 +12537,30 @@
               },
             );
           }),
-          (_.EmailInvitees = function (_, _) {
+          (_.EmailInvitees = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.EmailInvitees#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.TestFireEmails = function (_, _) {
+          (_.TestFireEmails = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.TestFireEmails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetSaleEventOrganizers = function (_, _) {
+          (_.GetSaleEventOrganizers = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetSaleEventOrganizers#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12528,10 +12568,10 @@
               },
             );
           }),
-          (_.GetBatchPartnerEmailAndName = function (_, _) {
+          (_.GetBatchPartnerEmailAndName = function (_, _, _) {
             return _.SendMsg(
               "PartnerMeetSteam.GetBatchPartnerEmailAndName#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13752,16 +13792,21 @@
         }
       }
       !(function (_) {
-        (_.GetCommunityInventory = function (_, _) {
-          return _.SendMsg("Quest.GetCommunityInventory#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (_.GetCommunityInventory = function (_, _, _) {
+          return _.SendMsg(
+            "Quest.GetCommunityInventory#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.GetCommunityItemDefinitions = function (_, _) {
+          (_.GetCommunityItemDefinitions = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetCommunityItemDefinitions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13770,20 +13815,20 @@
               },
             );
           }),
-          (_.ActivateProfileModifierItem = function (_, _) {
+          (_.ActivateProfileModifierItem = function (_, _, _) {
             return _.SendMsg(
               "Quest.ActivateProfileModifierItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetNumTradingCardsEarned = function (_, _) {
+          (_.GetNumTradingCardsEarned = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetNumTradingCardsEarned#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13791,10 +13836,10 @@
               },
             );
           }),
-          (_.GetVirtualItemRewardDefinition = function (_, _) {
+          (_.GetVirtualItemRewardDefinition = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetVirtualItemRewardDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13802,10 +13847,10 @@
               },
             );
           }),
-          (_.SetVirtualItemRewardDefinition = function (_, _) {
+          (_.SetVirtualItemRewardDefinition = function (_, _, _) {
             return _.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
@@ -17736,10 +17781,10 @@
       }
       var _;
       !(function (_) {
-        (_.GetUserYearInReview = function (_, _) {
+        (_.GetUserYearInReview = function (_, _, _) {
           return _.SendMsg(
             "SaleFeature.GetUserYearInReview#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -17748,10 +17793,10 @@
             },
           );
         }),
-          (_.GetUserSharingPermissions = function (_, _) {
+          (_.GetUserSharingPermissions = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserSharingPermissions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -17759,10 +17804,10 @@
               },
             );
           }),
-          (_.SetUserSharingPermissions = function (_, _) {
+          (_.SetUserSharingPermissions = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.SetUserSharingPermissions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -17770,10 +17815,10 @@
               },
             );
           }),
-          (_.GetUserYearAchievements = function (_, _) {
+          (_.GetUserYearAchievements = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserYearAchievements#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -17782,10 +17827,10 @@
               },
             );
           }),
-          (_.GetUserYearScreenshots = function (_, _) {
+          (_.GetUserYearScreenshots = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserYearScreenshots#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -17794,10 +17839,10 @@
               },
             );
           }),
-          (_.GetUserActionData = function (_, _) {
+          (_.GetUserActionData = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserActionData#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -17806,10 +17851,10 @@
               },
             );
           }),
-          (_.GetMultipleUserActionData = function (_, _) {
+          (_.GetMultipleUserActionData = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetMultipleUserActionData#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -17818,10 +17863,10 @@
               },
             );
           }),
-          (_.GetAllUserActionDataForType = function (_, _) {
+          (_.GetAllUserActionDataForType = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetAllUserActionDataForType#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -17829,10 +17874,10 @@
               },
             );
           }),
-          (_.GetFriendsSharedYearInReview = function (_, _) {
+          (_.GetFriendsSharedYearInReview = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetFriendsSharedYearInReview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -17841,10 +17886,10 @@
               },
             );
           }),
-          (_.GetUserYearInReviewShareImage = function (_, _) {
+          (_.GetUserYearInReviewShareImage = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetUserYearInReviewShareImage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -17853,10 +17898,10 @@
               },
             );
           }),
-          (_.GetYIRCurrentMonthlySummary = function (_, _) {
+          (_.GetYIRCurrentMonthlySummary = function (_, _, _) {
             return _.SendMsg(
               "SaleFeature.GetYIRCurrentMonthlySummary#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -19065,15 +19110,20 @@
         }
       }
       !(function (_) {
-        (_.ClaimItem = function (_, _) {
-          return _.SendMsg("SaleItemRewards.ClaimItem#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-          });
+        (_.ClaimItem = function (_, _, _) {
+          return _.SendMsg(
+            "SaleItemRewards.ClaimItem#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.CanClaimItem = function (_, _) {
+          (_.CanClaimItem = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.CanClaimItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -19081,10 +19131,10 @@
               },
             );
           }),
-          (_.GetRewardDefinitions = function (_, _) {
+          (_.GetRewardDefinitions = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.GetRewardDefinitions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -19092,20 +19142,20 @@
               },
             );
           }),
-          (_.SetRewardDefinitions = function (_, _) {
+          (_.SetRewardDefinitions = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.SetRewardDefinitions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetClaimedSaleRewards = function (_, _) {
+          (_.GetClaimedSaleRewards = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.GetClaimedSaleRewards#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -19113,10 +19163,10 @@
               },
             );
           }),
-          (_.GetCurrentDefinition = function (_, _) {
+          (_.GetCurrentDefinition = function (_, _, _) {
             return _.SendMsg(
               "SaleItemRewards.GetCurrentDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -20773,10 +20823,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetVoteDefinitions = function (_, _) {
+        (_.GetVoteDefinitions = function (_, _, _) {
           return _.SendMsg(
             "StoreSales.GetVoteDefinitions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -20785,23 +20835,28 @@
             },
           );
         }),
-          (_.SetVote = function (_, _) {
-            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _), _, {
+          (_.SetVote = function (_, _, _) {
+            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetUserVotes = function (_, _) {
-            return _.SendMsg("StoreSales.GetUserVotes#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetUserVotes = function (_, _, _) {
+            return _.SendMsg(
+              "StoreSales.GetUserVotes#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.GetUserNominations = function (_, _) {
+          (_.GetUserNominations = function (_, _, _) {
             return _.SendMsg(
               "SteamAwards.GetUserNominations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -20809,10 +20864,10 @@
               },
             );
           }),
-            (_.GetOtherUserNominations = function (_, _) {
+            (_.GetOtherUserNominations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetOtherUserNominations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20820,16 +20875,16 @@
                 },
               );
             }),
-            (_.Nominate = function (_, _) {
-              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _), _, {
+            (_.Nominate = function (_, _, _) {
+              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _, _), _, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
             }),
-            (_.GetNominationRecommendations = function (_, _) {
+            (_.GetNominationRecommendations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationRecommendations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20837,10 +20892,10 @@
                 },
               );
             }),
-            (_.GetNominationShareLink = function (_, _) {
+            (_.GetNominationShareLink = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationShareLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -29437,16 +29492,21 @@
         }
       }
       !(function (_) {
-        (_.GetCategories = function (_, _) {
-          return _.SendMsg("FriendsList.GetCategories#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (_.GetCategories = function (_, _, _) {
+          return _.SendMsg(
+            "FriendsList.GetCategories#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.GetFriendsList = function (_, _) {
+          (_.GetFriendsList = function (_, _, _) {
             return _.SendMsg(
               "FriendsList.GetFriendsList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -29454,16 +29514,26 @@
               },
             );
           }),
-          (_.GetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.GetFavorites#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.GetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.SetFavorites = function (_, _) {
-            return _.SendMsg("FriendsList.SetFavorites#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.SetFavorites = function (_, _, _) {
+            return _.SendMsg(
+              "FriendsList.SetFavorites#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
@@ -30100,7 +30170,7 @@
           this.m_mapExistingEvents.has(_) &&
             (this.m_mapExistingEvents.get(_).deleteInProgress = !0);
           let _ = new URLSearchParams();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("bDelete", "1"),
             __webpack_require__.append("gid", _);
           const _ = await _().post(
@@ -30435,7 +30505,7 @@
           try {
             const _ = `${_._.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${_}`,
               _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("gidclanevent", _),
               _.append("json", JSON.stringify(_)),
               _.append("pageStyles", JSON.stringify(_));
@@ -30558,7 +30628,7 @@
                 "saleaction/ajaxgetusergiveawayregistration",
               _ = {
                 giveaway_name: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,
@@ -30611,7 +30681,7 @@
                 "saleaction/ajaxupdateusergiveawayregistration",
               _ = {
                 giveaway_name: _,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(_, {
                 params: _,
@@ -31719,8 +31789,8 @@
         }
       }
       !(function (_) {
-        (_.ClientGetVideoURL = function (_, _) {
-          return _.SendMsg("Video.ClientGetVideoURL#1", (0, _._)(_, _), _, {
+        (_.ClientGetVideoURL = function (_, _, _) {
+          return _.SendMsg("Video.ClientGetVideoURL#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
@@ -31733,10 +31803,15 @@
               },
             );
           }),
-          (_.GetVideoBookmarks = function (_, _) {
-            return _.SendMsg("Video.GetVideoBookmarks#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetVideoBookmarks = function (_, _, _) {
+            return _.SendMsg(
+              "Video.GetVideoBookmarks#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
@@ -31746,10 +31821,10 @@
           };
         })(_ || (_ = {})),
         (function (_) {
-          _.ClientGetOPFSettings = function (_, _) {
+          _.ClientGetOPFSettings = function (_, _, _) {
             return _.SendMsg(
               "FovasVideo.ClientGetOPFSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -36836,20 +36911,20 @@
       }
       var _, _;
       !(function (_) {
-        (_.CreateFamilyGroup = function (_, _) {
+        (_.CreateFamilyGroup = function (_, _, _) {
           return _.SendMsg(
             "FamilyGroups.CreateFamilyGroup#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.GetFamilyGroup = function (_, _) {
+          (_.GetFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -36857,10 +36932,10 @@
               },
             );
           }),
-          (_.GetFamilyGroupForUser = function (_, _) {
+          (_.GetFamilyGroupForUser = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetFamilyGroupForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -36868,90 +36943,90 @@
               },
             );
           }),
-          (_.ModifyFamilyGroupDetails = function (_, _) {
+          (_.ModifyFamilyGroupDetails = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ModifyFamilyGroupDetails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.InviteToFamilyGroup = function (_, _) {
+          (_.InviteToFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.InviteToFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ConfirmInviteToFamilyGroup = function (_, _) {
+          (_.ConfirmInviteToFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ConfirmInviteToFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ResendInvitationToFamilyGroup = function (_, _) {
+          (_.ResendInvitationToFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ResendInvitationToFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.JoinFamilyGroup = function (_, _) {
+          (_.JoinFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.JoinFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ConfirmJoinFamilyGroup = function (_, _) {
+          (_.ConfirmJoinFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ConfirmJoinFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RemoveFromFamilyGroup = function (_, _) {
+          (_.RemoveFromFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RemoveFromFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CancelFamilyGroupInvite = function (_, _) {
+          (_.CancelFamilyGroupInvite = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.CancelFamilyGroupInvite#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUsersSharingDevice = function (_, _) {
+          (_.GetUsersSharingDevice = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetUsersSharingDevice#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -36959,50 +37034,50 @@
               },
             );
           }),
-          (_.DeleteFamilyGroup = function (_, _) {
+          (_.DeleteFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.DeleteFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UndeleteFamilyGroup = function (_, _) {
+          (_.UndeleteFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.UndeleteFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPlaytimeSummary = function (_, _) {
+          (_.GetPlaytimeSummary = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetPlaytimeSummary#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestPurchase = function (_, _) {
+          (_.RequestPurchase = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RequestPurchase#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPurchaseRequests = function (_, _) {
+          (_.GetPurchaseRequests = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetPurchaseRequests#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -37010,36 +37085,41 @@
               },
             );
           }),
-          (_.RespondToRequestedPurchase = function (_, _) {
+          (_.RespondToRequestedPurchase = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RespondToRequestedPurchase#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetChangeLog = function (_, _) {
-            return _.SendMsg("FamilyGroups.GetChangeLog#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetChangeLog = function (_, _, _) {
+            return _.SendMsg(
+              "FamilyGroups.GetChangeLog#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.SetFamilyCooldownOverrides = function (_, _) {
+          (_.SetFamilyCooldownOverrides = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.SetFamilyCooldownOverrides#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetSharedLibraryApps = function (_, _) {
+          (_.GetSharedLibraryApps = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetSharedLibraryApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -37047,20 +37127,20 @@
               },
             );
           }),
-          (_.SetPreferredLender = function (_, _) {
+          (_.SetPreferredLender = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.SetPreferredLender#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPreferredLenders = function (_, _) {
+          (_.GetPreferredLenders = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetPreferredLenders#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -37068,20 +37148,20 @@
               },
             );
           }),
-          (_.ForceAcceptInvite = function (_, _) {
+          (_.ForceAcceptInvite = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ForceAcceptInvite#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetInviteCheckResults = function (_, _) {
+          (_.GetInviteCheckResults = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetInviteCheckResults#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -37089,20 +37169,20 @@
               },
             );
           }),
-          (_.ClearCooldownSkip = function (_, _) {
+          (_.ClearCooldownSkip = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ClearCooldownSkip#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.RollbackFamilyGroup = function (_, _) {
+          (_.RollbackFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RollbackFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
@@ -39962,30 +40042,30 @@
         }
       }
       !(function (_) {
-        (_.EnableParentalSettings = function (_, _) {
+        (_.EnableParentalSettings = function (_, _, _) {
           return _.SendMsg(
             "Parental.EnableParentalSettings#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.DisableParentalSettings = function (_, _) {
+          (_.DisableParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.DisableParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetParentalSettings = function (_, _) {
+          (_.GetParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.GetParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -39993,10 +40073,10 @@
               },
             );
           }),
-          (_.GetSignedParentalSettings = function (_, _) {
+          (_.GetSignedParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.GetSignedParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -40004,81 +40084,96 @@
               },
             );
           }),
-          (_.SetParentalSettings = function (_, _) {
+          (_.SetParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.SetParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ValidateToken = function (_, _) {
-            return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _), _, {
+          (_.ValidateToken = function (_, _, _) {
+            return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.ValidatePassword = function (_, _) {
-            return _.SendMsg("Parental.ValidatePassword#1", (0, _._)(_, _), _, {
+          (_.ValidatePassword = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.ValidatePassword#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.LockClient = function (_, _, _) {
+            return _.SendMsg("Parental.LockClient#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.LockClient = function (_, _) {
-            return _.SendMsg("Parental.LockClient#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.RequestRecoveryCode = function (_, _) {
+          (_.RequestRecoveryCode = function (_, _, _) {
             return _.SendMsg(
               "Parental.RequestRecoveryCode#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestFeatureAccess = function (_, _) {
+          (_.RequestFeatureAccess = function (_, _, _) {
             return _.SendMsg(
               "Parental.RequestFeatureAccess#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ApproveFeatureAccess = function (_, _) {
+          (_.ApproveFeatureAccess = function (_, _, _) {
             return _.SendMsg(
               "Parental.ApproveFeatureAccess#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestPlaytime = function (_, _) {
-            return _.SendMsg("Parental.RequestPlaytime#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.RequestPlaytime = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.RequestPlaytime#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.ApprovePlaytime = function (_, _) {
-            return _.SendMsg("Parental.ApprovePlaytime#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.ApprovePlaytime = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.ApprovePlaytime#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetRequests = function (_, _) {
-            return _.SendMsg("Parental.GetRequests#1", (0, _._)(_, _), _, {
+          (_.GetRequests = function (_, _, _) {
+            return _.SendMsg("Parental.GetRequests#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.ReportPlaytimeAndNotify = function (_, _) {
+          (_.ReportPlaytimeAndNotify = function (_, _, _) {
             return _.SendMsg(
               "Parental.ReportPlaytimeAndNotify#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -42307,7 +42402,7 @@
           (this.m_fileUploadProps.eUploadState = 2),
             (this.m_fileUploadProps.uploadInfo = _);
           let _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("l", _._.LANGUAGE),
             __webpack_require__.append("file_size", _.size.toString()),
             __webpack_require__.append(
@@ -42424,7 +42519,7 @@
           let _ = this.m_fileUploadProps.file,
             _ = this.m_fileUploadProps.sha1,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("l", _._.LANGUAGE),
             _.append("file_name", this.m_fileUploadProps.uploadFileName),
             _.append("file_sha", _),
@@ -44441,7 +44536,7 @@
                 appid: _,
                 origin: self.origin,
                 _: _._.LANGUAGE,
-                sessionid: _ ? _._.SESSIONID : void 0,
+                sessionid: _ ? (0, _._)() : void 0,
               },
               _ = await _().get(_, {
                 params: _,

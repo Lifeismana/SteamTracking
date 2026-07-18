@@ -629,6 +629,7 @@
         _ = "sale_reservation_outofstock_",
         _ = "sale_reservation_delivery_",
         _ = "sale_reservation_product_",
+        _ = "sale_reservatin_callout_",
         _ = "sale_white_supplies_last_bbcode_",
         _ = "sale_section_desc_",
         _ = "sale_section_title_desc_",
@@ -976,6 +977,16 @@
                               _,
                               _.localized_reservation_desc[_],
                             ),
+                            _.callout &&
+                              _.callout.localized_callout &&
+                              Boolean(
+                                _._.Get(_.callout.localized_callout, _),
+                              ) &&
+                              _.SetLocalization(
+                                _ + _.unique_id + "_" + _.unique_id,
+                                _,
+                                _.callout.localized_callout[_],
+                              ),
                             _.localized_out_of_stock_override &&
                               Boolean(
                                 _._.Get(_.localized_out_of_stock_override, _),
@@ -1805,6 +1816,25 @@
                                     _ &&
                                     ((_.localized_reservation_desc = _._.Set(
                                       _.localized_reservation_desc || [],
+                                      _,
+                                      _,
+                                    )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ && !_.callout && (_.callout = {}),
+                                  _ ||
+                                    (_.callout.localized_callout &&
+                                      Boolean(
+                                        _._.Get(_.callout.localized_callout, _),
+                                      )))
+                                ) {
+                                  _._.Get(_.callout.localized_callout, _) !==
+                                    _ &&
+                                    ((_.callout.localized_callout = _._.Set(
+                                      _.callout.localized_callout || [],
                                       _,
                                       _,
                                     )),
@@ -6697,7 +6727,7 @@
                         _._.COMMUNITY_BASE_URL +
                         "partnereventdata/ajaxrequestsalepagereview",
                       _ = new URLSearchParams();
-                    _.append("sessionid", _._.SESSIONID),
+                    _.append("sessionid", (0, _._)()),
                       _.append("clanAccountID", "" + _.GetAccountID()),
                       _.append("gidClanEvent", _),
                       _.append("partnerID", "" + _),
@@ -7977,7 +8007,7 @@
                 let _ = Array.from(_);
                 _.sort();
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
+                _.append("sessionid", (0, _._)()),
                   _.append("name", "[AUTO] " + _.GetName()),
                   _.append("event", "1"),
                   _.append("type", "discount"),
@@ -16155,7 +16185,7 @@
             _ = {
               clanid: _.GetClanSteamID().GetAccountID(),
               gidevent: _.GetGID(),
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             };
           try {
             let _ = await _().get(_, {
@@ -16635,7 +16665,10 @@
           _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
         let _ = _.useRef(void 0);
         const _ = _.BHasSaleEnabled(),
-          _ = _.GetEventType();
+          _ = _.GetEventType(),
+          [_] = (0, _._)(() => [
+            _.GetEventModel().jsondata.country_restriction,
+          ]);
         if (!_.valve_admin) return null;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -16855,6 +16888,19 @@
                       }),
                     ],
                   }),
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  label: (0, _._)("#EventEditor_Options_RegionRestrictions"),
+                  placeholder: (0, _._)(
+                    "#EventEditor_Options_RegionRestrictions_placeholder",
+                  ),
+                  onChange: (_) => {
+                    (_.GetEventModel().jsondata.country_restriction =
+                      _.currentTarget.value),
+                      _.SetDirty(_._.description);
+                  },
+                  value: _,
+                }),
               ],
             }),
           ],
@@ -17751,7 +17797,7 @@
                         _._.COMMUNITY_BASE_URL +
                         "partnereventdata/ajaxrequestmarketingmessagemajorupdatereview",
                       _ = new URLSearchParams();
-                    _.append("sessionid", _._.SESSIONID),
+                    _.append("sessionid", (0, _._)()),
                       _.append("clanAccountID", "" + _.GetAccountID()),
                       _.append("appid", "" + _),
                       _.append("gidClanEvent", _),
@@ -19195,6 +19241,7 @@
                       section: _,
                       reservationDef: _[0],
                       hardwareDetail: _,
+                      reservedHardwareDetail: _,
                     }),
                   _ &&
                     (null == _ ? void 0 : _.allow_purchase_in_country) &&
@@ -20748,7 +20795,7 @@
             _._.COMMUNITY_BASE_URL + "invites/ajaxgetall",
             {
               params: {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
             },
           );
@@ -20763,7 +20810,7 @@
         }
         async OnCreateInviteLink() {
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("steamid_user", _._.steamid),
             _.append("duration", (2592e3).toString());
           const _ = await _().post(
@@ -20804,7 +20851,7 @@
         }
         async OnAddFriend(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0");
           try {
@@ -21018,7 +21065,7 @@
         }
         async OnActionClick(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0"),
             this.setState({

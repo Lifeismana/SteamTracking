@@ -96,24 +96,24 @@
     },
     86960: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => se });
+      i.r(t), i.d(t, { default: () => oe });
       var n = i(7850),
         s = i(90626),
         o = i(24484);
-      const r = (0, o.Tc)("physical_goods", "application_config");
-      var a = i(34629),
+      const a = (0, o.Tc)("physical_goods", "application_config");
+      var r = i(34629),
         l = i(37085),
         c = i(56545),
-        u = i(41071),
-        d = i(96059),
+        d = i(41071),
+        u = i(96059),
         h = i(81393),
-        m = i(68797),
-        _ = i(6144),
-        g = i(73745),
-        p = i(30470);
+        _ = i(68797),
+        m = i(6144),
+        p = i(73745),
+        g = i(30470);
       class f {
         m_mapProductPositionMsgList = new Map();
-        m_productListChangeCallback = new _.lu();
+        m_productListChangeCallback = new m.lu();
         m_messageListChangeCallback = new Map();
         m_steamInterface = null;
         GetKey(e) {
@@ -132,7 +132,7 @@
         GetPositionListViaKeyChangeCallback(e) {
           return (
             this.m_messageListChangeCallback.has(e) ||
-              this.m_messageListChangeCallback.set(e, new _.lu()),
+              this.m_messageListChangeCallback.set(e, new m.lu()),
             this.m_messageListChangeCallback.get(e)
           );
         }
@@ -160,7 +160,7 @@
             ));
         }
         async SetPositionMessages(e) {
-          const t = c.w.Init(u.ku);
+          const t = c.w.Init(d.ku);
           if (0 == e.length)
             return (
               console.log(
@@ -180,7 +180,7 @@
           });
           let i = null;
           try {
-            const n = await u.nd.SetReservationPositionMessage(
+            const n = await d.nd.SetReservationPositionMessage(
               this.m_steamInterface.GetServiceTransport(),
               t,
             );
@@ -189,15 +189,15 @@
                 i = Math.floor(Date.now() / 1e3);
               return (
                 e.forEach((e) => {
-                  (e.accountid = p.iA.accountid), (e.rtime_created = i);
+                  (e.accountid = g.iA.accountid), (e.rtime_created = i);
                   const n = this.GetKey(e);
                   let s = this.m_mapProductPositionMsgList.get(n);
                   const o = s.findIndex(
                     (t) => t.start_queue_position == e.start_queue_position,
                   );
-                  let r = [...s];
-                  o >= 0 ? (r[o] = e) : (r.push(e), this.SortList(r)),
-                    this.m_mapProductPositionMsgList.set(n, r),
+                  let a = [...s];
+                  o >= 0 ? (a[o] = e) : (a.push(e), this.SortList(a)),
+                    this.m_mapProductPositionMsgList.set(n, a),
                     t.add(this.GetKey(e));
                 }),
                 Array.from(t).forEach((e) => {
@@ -208,9 +208,9 @@
                 !0
               );
             }
-            i = (0, m.H)(n);
+            i = (0, _.H)(n);
           } catch (e) {
-            i = (0, m.H)(e);
+            i = (0, _.H)(e);
           }
           return (
             console.error(
@@ -222,13 +222,13 @@
           );
         }
         async DeletePositionMessage(e) {
-          const t = c.w.Init(u.$J);
+          const t = c.w.Init(d.$J);
           t.Body().set_edistributor(e.edistributor),
             t.Body().set_product_identifier(e.product_identifier),
             t.Body().set_start_queue_position(e.start_queue_position);
           let i = null;
           try {
-            const n = await u.nd.DeleteReservationPositionMessage(
+            const n = await d.nd.DeleteReservationPositionMessage(
               this.m_steamInterface.GetServiceTransport(),
               t,
             );
@@ -246,9 +246,9 @@
                 !0
               );
             }
-            i = (0, m.H)(n);
+            i = (0, _.H)(n);
           } catch (e) {
-            i = (0, m.H)(e);
+            i = (0, _.H)(e);
           }
           return (
             console.error(
@@ -260,8 +260,8 @@
           );
         }
         async ReloadReservationPositionMessages() {
-          const e = c.w.Init(u.jd);
-          return await u.nd.ReloadAllReservationPositionMessages(
+          const e = c.w.Init(d.jd);
+          return await d.nd.ReloadAllReservationPositionMessages(
             this.m_steamInterface.GetServiceTransport(),
             e,
           );
@@ -272,7 +272,7 @@
             f.s_Singleton ||
               ((f.s_Singleton = new f()),
               f.s_Singleton.Init(),
-              "dev" == p.TS.WEB_UNIVERSE &&
+              "dev" == g.TS.WEB_UNIVERSE &&
                 (window.g_ReservationMessagingStore = f.s_Singleton)),
             f.s_Singleton
           );
@@ -284,12 +284,12 @@
             "application_config",
           );
           (0, h.wT)(Boolean(e), "require promotion_operation_token"),
-            "dev" == p.TS.WEB_UNIVERSE &&
+            "dev" == g.TS.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CReservationMessagingStore with access token ",
                 e,
               ),
-            (this.m_steamInterface = new d.D(p.TS.WEBAPI_BASE_URL, e));
+            (this.m_steamInterface = new u.D(g.TS.WEBAPI_BASE_URL, e));
           const t = (0, o.Tc)(
             "reservation_queue_position_messages",
             "application_config",
@@ -319,7 +319,7 @@
       }
       function v() {
         const [e, t] = (0, s.useState)(() => f.Get().GetAllProducts());
-        return (0, g.hL)(f.Get().GetProductListChangeCallback(), t), e;
+        return (0, p.hL)(f.Get().GetProductListChangeCallback(), t), e;
       }
       function S() {
         const e = f.Get();
@@ -331,11 +331,11 @@
             e.ReloadReservationPositionMessages,
         };
       }
-      (0, a.Cg)([g.oI], f.prototype, "AddProductID", null),
-        (0, a.Cg)([g.oI], f.prototype, "SetPositionMessages", null),
-        (0, a.Cg)([g.oI], f.prototype, "DeletePositionMessage", null),
-        (0, a.Cg)(
-          [g.oI],
+      (0, r.Cg)([p.oI], f.prototype, "AddProductID", null),
+        (0, r.Cg)([p.oI], f.prototype, "SetPositionMessages", null),
+        (0, r.Cg)([p.oI], f.prototype, "DeletePositionMessage", null),
+        (0, r.Cg)(
+          [p.oI],
           f.prototype,
           "ReloadReservationPositionMessages",
           null,
@@ -355,7 +355,7 @@
                 children:
                   "Select an item for which we want to communicate a reservation status.",
               }),
-              (0, n.jsx)(T, { selected: t, setSelected: i }),
+              (0, n.jsx)(b, { selected: t, setSelected: i }),
               (0, n.jsxs)(j.$n, {
                 disabled: !t,
                 onClick: () => {
@@ -371,18 +371,18 @@
           })
         );
       }
-      function T(e) {
+      function b(e) {
         const { selected: t, setSelected: i } = e,
           o = (0, s.useRef)(void 0),
-          a = (function () {
-            const [e] = (0, s.useState)(() => r);
+          r = (function () {
+            const [e] = (0, s.useState)(() => a);
             return e;
           })(),
           l = v(),
           c = (0, s.useMemo)(
             () =>
-              a && l
-                ? a
+              r && l
+                ? r
                     .filter(
                       (e) =>
                         -1 ==
@@ -397,12 +397,12 @@
                       label: `${e.product_description} @ ${e.distributor} - product id: ${e.product_identifier}, part number ${e.part_number} `,
                     }))
                 : [],
-            [a, l],
+            [r, l],
           );
         (0, s.useEffect)(() => {
           o?.current && o.current.clearValue();
         }, [l]);
-        const u = c?.find(
+        const d = c?.find(
           (e) =>
             t &&
             t.edistributor == e.value.edistributor &&
@@ -415,13 +415,13 @@
           isClearable: !0,
           className: M.ItemSelect,
           options: c,
-          value: u,
+          value: d,
           onChange: (e) => {
             e && i(e.value);
           },
         });
       }
-      var b = i(71298),
+      var T = i(71298),
         R = i(99637),
         y = i(8905),
         A = i(9154),
@@ -430,97 +430,110 @@
         k = i(56011),
         I = i(61859),
         D = i(95695),
-        L = i(92825),
-        N = i.n(L),
+        L = i(67936),
+        N = i(78686),
         E = i(44165),
-        B = i(78686),
-        G = (i(78327), i(78603), i(6866)),
-        F = i(12842),
-        U = i.n(F);
-      function Y(e) {
+        B = (i(78327), i(78603), i(6866)),
+        G = i(12842),
+        F = i.n(G);
+      function U(e) {
         const { elReservationMessage: t, strUrlLearnMoreLink: i } = e;
         return i
           ? (0, n.jsxs)(n.Fragment, {
               children: [
                 t,
-                (0, n.jsx)(G.d$, {
+                (0, n.jsx)(B.d$, {
                   url: i,
-                  className: U().Link,
-                  children: B.Z.Localize("#Button_Learn"),
+                  className: F().Link,
+                  children: N.Z.Localize("#Button_Learn"),
                 }),
               ],
             })
           : t;
       }
-      function z(e, t) {
+      var Y = i(92825),
+        z = i.n(Y);
+      function O(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
-      function O(e) {
+      function W(e) {
         const {
           strToken: t,
           rtEstimatedNotifcationDate: i,
           strUrlLearnMoreLink: s,
           bInReservationQueue: o,
+          bWaitlistIsActive: a,
+          reservedHardwareDetail: r,
+          bHideLabel: l,
         } = e;
-        if (!t || !i)
+        let c = N.Z.Localize("#Sale_Reservation_Fallback_V2"),
+          d = !1;
+        if (
+          (o
+            ? (c = N.Z.Localize("#Sale_Reservation_Fallback_user_V2"))
+            : a &&
+              r &&
+              !r.position_is_waitlist &&
+              ((c = L.F5.Localize(
+                "#Reservation_Join_Waitlist_Cancel_Reservation",
+              )),
+              (d = !0)),
+          !t || !i || d)
+        )
           return (0, n.jsx)("div", {
-            className: N().Ctn,
-            children: (0, n.jsx)(Y, {
-              elReservationMessage: B.Z.Localize(
-                o
-                  ? "#Sale_Reservation_Fallback_user_V2"
-                  : "#Sale_Reservation_Fallback_V2",
-              ),
+            className: z().Ctn,
+            children: (0, n.jsx)(U, {
+              elReservationMessage: c,
               strUrlLearnMoreLink: s,
             }),
           });
-        const r = new Date(1e3 * i),
-          a = r.getMonth() + 1;
-        let l = "",
-          c = "",
-          u = "",
-          d = t;
+        const u = new Date(1e3 * i),
+          h = u.getMonth() + 1;
+        let _ = "",
+          m = "",
+          p = "",
+          g = t;
         switch (t) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
           case "#Sale_Reservation_ByYear":
-            l = "" + r.getFullYear();
+            _ = "" + u.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
           case "#Sale_Reservation_ByMonthYear":
-            (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (c = "" + r.getFullYear());
+            (_ = (0, I.we)("#Sale_Reservation_MonthNoun_" + h)),
+              (m = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + z(a, 1))),
-              (c = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (u = "" + r.getFullYear());
+            (_ = (0, I.we)("#Sale_Reservation_MonthNoun_" + O(h, 1))),
+              (m = (0, I.we)("#Sale_Reservation_MonthNoun_" + h)),
+              (p = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + z(a, 2))),
-              (c = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (u = "" + r.getFullYear());
+            (_ = (0, I.we)("#Sale_Reservation_MonthNoun_" + O(h, 2))),
+              (m = (0, I.we)("#Sale_Reservation_MonthNoun_" + h)),
+              (p = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + z(a, 3))),
-              (c = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (u = "" + r.getFullYear());
+            (_ = (0, I.we)("#Sale_Reservation_MonthNoun_" + O(h, 3))),
+              (m = (0, I.we)("#Sale_Reservation_MonthNoun_" + h)),
+              (p = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
-            (d = "#Sale_Reservation_Quarter" + (Math.floor((a - 1) / 3) + 1)),
-              (l = "" + r.getFullYear());
+            (g = "#Sale_Reservation_Quarter" + (Math.floor((h - 1) / 3) + 1)),
+              (_ = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
-            (d =
-              "#Sale_Reservation_AfterQuarter" + (Math.floor((a - 1) / 3) + 1)),
-              (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (c = "" + r.getFullYear());
+            (g =
+              "#Sale_Reservation_AfterQuarter" + (Math.floor((h - 1) / 3) + 1)),
+              (_ = (0, I.we)("#Sale_Reservation_MonthNoun_" + h)),
+              (m = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_BetweenNowAndLastDay":
-            (l = (0, I.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (c = "" + new Date(r.getFullYear(), r.getMonth(), 0).getDate()),
-              (u = "" + r.getFullYear());
+            (_ = (0, I.we)("#Sale_Reservation_MonthNoun_" + h)),
+              (m = "" + new Date(u.getFullYear(), u.getMonth(), 0).getDate()),
+              (p = "" + u.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
@@ -528,36 +541,46 @@
                 t = Math.floor((i - e) / 86400);
               t < 7 ||
                 (t < 28
-                  ? ((d = "#Sale_Reservation_RelativeWeekly_Plural"),
-                    (l = "" + Math.floor(t / 7 + 1)))
-                  : ((d = "#Sale_Reservation_RelativeMonthly"),
-                    (l = "" + Math.floor(t / 28 + 1))));
+                  ? ((g = "#Sale_Reservation_RelativeWeekly_Plural"),
+                    (_ = "" + Math.floor(t / 7 + 1)))
+                  : ((g = "#Sale_Reservation_RelativeMonthly"),
+                    (_ = "" + Math.floor(t / 28 + 1))));
             }
             break;
           case "#Sale_Reservation_AvailabilityUnknown":
-            d = o
-              ? "#Sale_Reservation_Fallback_user_V2"
-              : "#Sale_Reservation_Fallback_V2";
+            g = void 0;
             break;
           default:
-            d = "#Sale_Reservation_Fallback";
+            g = "#Sale_Reservation_Fallback";
         }
-        return (0, n.jsx)("div", {
-          className: N().Ctn,
-          children: (0, n.jsx)(Y, {
-            elReservationMessage: (0, I.we)(d, l, c, u, ""),
-            strUrlLearnMoreLink: s,
-          }),
+        return (0, n.jsxs)("div", {
+          className: z().Ctn,
+          children: [
+            (0, n.jsx)("div", {
+              children:
+                !l &&
+                !!g &&
+                (0, I.we)(
+                  o
+                    ? "#Sale_Reservation_YourExpectedDate"
+                    : "#Sale_Reservation_ExpectedDate",
+                ),
+            }),
+            (0, n.jsx)(U, {
+              elReservationMessage: g ? (0, I.we)(g, _, m, p, "") : c,
+              strUrlLearnMoreLink: s,
+            }),
+          ],
         });
       }
-      var W = i(6083);
-      function Q(e) {
+      var Q = i(6083);
+      function q(e) {
         const t = v();
         return t && 0 != t.length
           ? (0, n.jsx)("div", {
               children: t.map((e) =>
                 (0, n.jsx)(
-                  H,
+                  K,
                   { productID: e },
                   `${e.edistributor}_${e.product_identifier}`,
                 ),
@@ -568,7 +591,7 @@
                 "No products with reservation position messages exists.",
             });
       }
-      function q(e) {
+      function H(e) {
         return (0, n.jsxs)("div", {
           children: [
             (0, n.jsx)(j.JU, { children: "instructions:" }),
@@ -601,27 +624,27 @@
                 "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
             }),
             (0, n.jsx)(j.$n, {
-              onClick: (e) => (0, P.pg)((0, n.jsx)(X, {}), (0, k.uX)(e)),
+              onClick: (e) => (0, P.pg)((0, n.jsx)($, {}), (0, k.uX)(e)),
               children: "Force Reload Definitions on Steam Servers",
             }),
           ],
         });
       }
-      function H(e) {
+      function K(e) {
         const { productID: t } = e,
           i = (function (e) {
-            return r.find(
+            return a.find(
               (t) =>
                 t.edistributor == e.edistributor &&
                 t.product_identifier == e.product_identifier,
             );
           })(t),
           o = i?.product_description + " " + i?.distributor,
-          a = (function (e) {
+          r = (function (e) {
             const [t, i] = (0, s.useState)(() =>
               f.Get().GetPositionMessagingForProduct(e),
             );
-            return (0, g.hL)(f.Get().GetPositionListChangeCallback(e), i), t;
+            return (0, p.hL)(f.Get().GetPositionListChangeCallback(e), i), t;
           })(t);
         return i
           ? (0, n.jsxs)(C.qx, {
@@ -631,7 +654,7 @@
               children: [
                 (0, n.jsx)(j.$n, {
                   onClick: (e) =>
-                    (0, P.pg)((0, n.jsx)(J, { productID: t }), (0, k.uX)(e)),
+                    (0, P.pg)((0, n.jsx)(Z, { productID: t }), (0, k.uX)(e)),
                   children: "Add new start position",
                 }),
                 (0, n.jsxs)("table", {
@@ -653,9 +676,9 @@
                       }),
                     }),
                     (0, n.jsx)("tbody", {
-                      children: a.map((e) =>
+                      children: r.map((e) =>
                         (0, n.jsx)(
-                          K,
+                          J,
                           { positionMsg: e },
                           o + e.start_queue_position,
                         ),
@@ -674,20 +697,21 @@
               ],
             });
       }
-      function K(e) {
+      function J(e) {
         const { positionMsg: t } = e;
         return (0, n.jsxs)("tr", {
           children: [
-            (0, n.jsx)("td", { children: (0, W.D)(t.start_queue_position) }),
+            (0, n.jsx)("td", { children: (0, Q.D)(t.start_queue_position) }),
             (0, n.jsx)("td", {
               children: (0, I.TW)(t.rtime_estimated_notification),
             }),
             (0, n.jsx)("td", {
-              children: (0, n.jsx)(O, {
+              children: (0, n.jsx)(W, {
                 strUrlLearnMoreLink: void 0,
                 rtEstimatedNotifcationDate: t.rtime_estimated_notification,
                 strToken: t.localization_token,
                 bInReservationQueue: !0,
+                bHideLabel: !0,
               }),
             }),
             (0, n.jsxs)("td", {
@@ -705,14 +729,14 @@
                 (0, n.jsx)(j.$n, {
                   onClick: (e) =>
                     (0, P.pg)(
-                      (0, n.jsx)(J, { productID: t, existingPositionMsg: t }),
+                      (0, n.jsx)(Z, { productID: t, existingPositionMsg: t }),
                       (0, k.uX)(e),
                     ),
                   children: "Update",
                 }),
                 (0, n.jsx)(j.$n, {
                   onClick: (e) =>
-                    (0, P.pg)((0, n.jsx)(Z, { positionMsg: t }), (0, k.uX)(e)),
+                    (0, P.pg)((0, n.jsx)(X, { positionMsg: t }), (0, k.uX)(e)),
                   children: "Delete",
                 }),
               ],
@@ -720,39 +744,39 @@
           ],
         });
       }
-      function J(e) {
+      function Z(e) {
         const { productID: t, existingPositionMsg: i, closeModal: o } = e,
-          { fnSetPositionMessages: r } = S(),
-          a = Math.floor(Date.now() / 1e3),
+          { fnSetPositionMessages: a } = S(),
+          r = Math.floor(Date.now() / 1e3),
           [l, c] = (0, s.useState)(i?.start_queue_position || 0),
-          [u, d] = (0, s.useState)(
-            i?.rtime_estimated_notification || a + 86400,
+          [d, u] = (0, s.useState)(
+            i?.rtime_estimated_notification || r + 86400,
           ),
-          [h, m] = (0, s.useState)(
+          [h, _] = (0, s.useState)(
             i?.localization_token || "#Sale_Reservation_MonthYear",
           ),
-          _ = i ? "Update Queue Range" : "Create Queue Range",
-          g = (0, b.vs)();
-        return g.bLoading
-          ? (0, n.jsx)(b.Hh, { state: g, strDialogTitle: _, closeModal: o })
+          m = i ? "Update Queue Range" : "Create Queue Range",
+          p = (0, T.vs)();
+        return p.bLoading
+          ? (0, n.jsx)(T.Hh, { state: p, strDialogTitle: m, closeModal: o })
           : (0, n.jsx)(A.o0, {
               bDisableBackgroundDismiss: !0,
-              strTitle: _,
+              strTitle: m,
               onCancel: o,
               onOK: () => {
-                g.fnSetLoading(!0);
+                p.fnSetLoading(!0);
                 const e = {
                   ...t,
                   start_queue_position: l,
-                  rtime_estimated_notification: u,
+                  rtime_estimated_notification: d,
                   localization_token: h,
                 };
-                r([e]).then((e) => {
+                a([e]).then((e) => {
                   e
-                    ? (g.fnSetSuccess(!0),
-                      g.fnSetStrSuccess("Successfully created position"))
-                    : (g.fnSetSuccess(!1),
-                      g.fnSetStrError(
+                    ? (p.fnSetSuccess(!0),
+                      p.fnSetStrSuccess("Successfully created position"))
+                    : (p.fnSetSuccess(!1),
+                      p.fnSetStrError(
                         "Failed, please check console logs and/or try again",
                       ));
                 });
@@ -780,52 +804,52 @@
                     strDescription: "Estimated Time Users will receive invite",
                     strDescToolTip:
                       "Everyone above this queue position until the next entry, we expect to have been invited by or on this date",
-                    nEarliestTime: a,
-                    fnGetTimeToUpdate: () => u,
-                    fnSetTimeToUpdate: d,
+                    nEarliestTime: r,
+                    fnGetTimeToUpdate: () => d,
+                    fnSetTimeToUpdate: u,
                   }),
                   (0, n.jsx)("br", {}),
-                  (0, n.jsx)(ee, {
+                  (0, n.jsx)(te, {
                     strToken: h,
-                    fnSetToken: m,
-                    rtEstimateDate: u,
+                    fnSetToken: _,
+                    rtEstimateDate: d,
                   }),
                 ],
               }),
             });
       }
-      function Z(e) {
+      function X(e) {
         const { positionMsg: t, closeModal: i } = e,
           { fnDeletePositionMessage: s } = S(),
-          o = `Delete Queue Position ${(0, W.D)(t.start_queue_position)}`,
-          r = (0, b.vs)();
-        return r.bLoading
-          ? (0, n.jsx)(b.Hh, { state: r, strDialogTitle: o, closeModal: i })
+          o = `Delete Queue Position ${(0, Q.D)(t.start_queue_position)}`,
+          a = (0, T.vs)();
+        return a.bLoading
+          ? (0, n.jsx)(T.Hh, { state: a, strDialogTitle: o, closeModal: i })
           : (0, n.jsx)(A.o0, {
               strTitle: o,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: i,
               onOK: () => {
-                r.fnSetLoading(!0),
+                a.fnSetLoading(!0),
                   s(t).then((e) => {
                     e
-                      ? (r.fnSetSuccess(!0),
-                        r.fnSetStrSuccess("Successfully delete position"))
-                      : (r.fnSetSuccess(!1),
-                        r.fnSetStrError(
+                      ? (a.fnSetSuccess(!0),
+                        a.fnSetStrSuccess("Successfully delete position"))
+                      : (a.fnSetSuccess(!1),
+                        a.fnSetStrError(
                           "Failed, please check console logs and/or try again",
                         ));
                   });
               },
             });
       }
-      function X(e) {
+      function $(e) {
         const { closeModal: t } = e,
           { fnReloadReservationPositionMessages: i } = S(),
-          [o, r] = (0, s.useState)(!1);
+          [o, a] = (0, s.useState)(!1);
         return (
           (0, s.useEffect)(() => {
-            i().then(() => r(!0));
+            i().then(() => a(!0));
           }, [i]),
           (0, n.jsx)(A.o0, {
             bAlertDialog: !0,
@@ -837,7 +861,7 @@
           })
         );
       }
-      const $ = [
+      const ee = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -853,12 +877,12 @@
         "#Sale_Reservation_BetweenNowAndLastDay",
         "#Sale_Reservation_AvailabilityUnknown",
       ];
-      function ee(e) {
+      function te(e) {
         const { strToken: t, fnSetToken: i, rtEstimateDate: o } = e,
-          r = (0, s.useMemo)(
+          a = (0, s.useMemo)(
             () =>
-              $.map((e) => ({
-                label: (0, n.jsx)(O, {
+              ee.map((e) => ({
+                label: (0, n.jsx)(W, {
                   strToken: e,
                   rtEstimatedNotifcationDate: o,
                   strUrlLearnMoreLink: void 0,
@@ -873,7 +897,7 @@
             (0, n.jsx)(j.m, {
               strDropDownClassName: D.DropDownScroll,
               label: "Date Format",
-              rgOptions: r,
+              rgOptions: a,
               selectedOption: t,
               onChange: (e) => i(e.data),
               bDisableMouseOverlay: !0,
@@ -890,11 +914,12 @@
                     (0, n.jsx)("div", {
                       children: (0, I.we)("#Sale_Reservation_ExpectedDate"),
                     }),
-                    (0, n.jsx)(O, {
+                    (0, n.jsx)(W, {
                       strUrlLearnMoreLink: void 0,
                       rtEstimatedNotifcationDate: o,
                       strToken: t,
                       bInReservationQueue: !0,
+                      bHideLabel: !0,
                     }),
                   ],
                 }),
@@ -903,53 +928,53 @@
           ],
         });
       }
-      var te = i(52038),
-        ie = i(45737),
-        ne = i.n(ie);
-      function se(e) {
+      var ie = i(52038),
+        ne = i(45737),
+        se = i.n(ne);
+      function oe(e) {
         return (0, n.jsxs)("div", {
-          className: (0, te.A)(M.ctn, ne().AdminPageCtn),
+          className: (0, ie.A)(M.ctn, se().AdminPageCtn),
           children: [
             (0, n.jsx)("h1", {
-              className: ne().PageTitle,
+              className: se().PageTitle,
               children: "Lawrence's Reservation Queue Position Messaging Tools",
             }),
             (0, n.jsx)("hr", { className: "VO" }),
             (0, n.jsxs)("div", {
-              className: ne().ColumnCtn,
+              className: se().ColumnCtn,
               children: [
                 (0, n.jsxs)("div", {
-                  className: ne().LeftCol,
+                  className: se().LeftCol,
                   children: [
                     (0, n.jsx)("div", {
-                      className: ne().SectionCtn,
+                      className: se().SectionCtn,
                       children: (0, n.jsx)(w, {}),
                     }),
                     (0, n.jsx)("div", {
-                      className: ne().SectionCtn,
-                      children: (0, n.jsx)(Q, {}),
+                      className: se().SectionCtn,
+                      children: (0, n.jsx)(q, {}),
                     }),
                   ],
                 }),
                 (0, n.jsxs)("div", {
-                  className: ne().RightCol,
+                  className: se().RightCol,
                   children: [
                     (0, n.jsx)("div", {
-                      className: ne().SectionCtn,
-                      children: (0, n.jsx)(q, {}),
+                      className: se().SectionCtn,
+                      children: (0, n.jsx)(H, {}),
                     }),
                     (0, n.jsx)("div", {
-                      className: ne().SectionCtn,
+                      className: se().SectionCtn,
                       children: (0, n.jsx)(V, {}),
                     }),
                     (0, n.jsxs)("div", {
-                      className: ne().SectionCtn,
+                      className: se().SectionCtn,
                       children: [
                         (0, n.jsx)(j.JU, { children: "Useful Links:" }),
                         (0, n.jsx)("ul", {
                           children: (0, n.jsx)("li", {
                             children: (0, n.jsx)("a", {
-                              href: `${p.TS.STATS_BASE_URL}steamdeck/reservations/`,
+                              href: `${g.TS.STATS_BASE_URL}steamdeck/reservations/`,
                               target: "_blank",
                               children: "Steam Hardware reservation stats page",
                             }),
@@ -967,32 +992,32 @@
     },
     27144: (e, t, i) => {
       "use strict";
-      i.d(t, { B3: () => w, CF: () => T, KM: () => S, KT: () => j });
+      i.d(t, { B3: () => w, CF: () => b, KM: () => S, KT: () => j });
       var n = i(41735),
         s = i.n(n),
         o = i(58632),
-        r = i.n(o),
-        a = i(90626),
+        a = i.n(o),
+        r = i(90626),
         l = i(20194),
         c = i(75233),
-        u = i(37085),
-        d = i(17720),
+        d = i(37085),
+        u = i(17720),
         h = i(68797),
-        m = i(78327),
-        _ = i(56545),
-        g = i(76176),
-        p = i(23809),
+        _ = i(78327),
+        m = i(56545),
+        p = i(76176),
+        g = i(23809),
         f = i(7860);
       const v = "nicknames";
       function S(e) {
-        const t = (0, p.KV)(),
+        const t = (0, g.KV)(),
           { data: i, isLoading: n } = (0, l.I)({
             queryKey: [v],
             queryFn: async () => {
               const e = new Map();
-              if (m.iA.logged_in) {
-                const i = _.w.Init(g.w_T),
-                  n = (await g.xtC.GetNicknameList(t, i)).Body().toObject();
+              if (_.iA.logged_in) {
+                const i = m.w.Init(p.w_T),
+                  n = (await p.xtC.GetNicknameList(t, i)).Body().toObject();
                 n?.nicknames &&
                   n.nicknames.length > 0 &&
                   n.nicknames.forEach((t) => {
@@ -1004,14 +1029,14 @@
           });
         return i ? i.get(e) : null;
       }
-      const x = new (r())(
+      const x = new (a())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, m.yK)()
-                  ? m.TS.COMMUNITY_BASE_URL
-                  : m.TS.STORE_BASE_URL;
+                "community" == (0, _.yK)()
+                  ? _.TS.COMMUNITY_BASE_URL
+                  : _.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const i = { accountid: e[0], origin: self.origin },
                   n = await s().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -1020,7 +1045,7 @@
                 if (
                   !n ||
                   200 != n.status ||
-                  n.data?.success != u.R ||
+                  n.data?.success != d.R ||
                   !n.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, h.H))(n).strErrorMsg}`;
@@ -1034,14 +1059,14 @@
                 if (
                   !n ||
                   200 != n.status ||
-                  n.data?.success != u.R ||
+                  n.data?.success != d.R ||
                   !n.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, h.H))(n).strErrorMsg}`;
                 const o = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>
-                    o.set(new d.b(e.steamid).GetAccountID(), e),
+                    o.set(new u.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => o.get(e))
                 );
@@ -1065,7 +1090,7 @@
               const i = await x.loadMany(e);
               return (
                 i.forEach((e) => {
-                  const i = [M, new d.b(e.steamid).GetAccountID()];
+                  const i = [M, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(i, e);
                 }),
                 i
@@ -1073,7 +1098,7 @@
             },
             enabled: e?.length > 0,
           }),
-          s = (0, a.useMemo)(() => {
+          s = (0, r.useMemo)(() => {
             const e = new Array();
             return (
               i?.forEach((t) => {
@@ -1084,7 +1109,7 @@
           }, [i]);
         return n ? null : s;
       }
-      function T(e) {
+      function b(e) {
         return f.L.getQueryData([M, e]);
       }
     },
@@ -1094,18 +1119,18 @@
       var n = i(7850),
         s = i(90626),
         o = i(92298),
-        r = i.n(o),
-        a = i(44894),
+        a = i.n(o),
+        r = i(44894),
         l = i(44165),
         c = i(95695),
-        u = i.n(c),
-        d = i(52038),
+        d = i.n(c),
+        u = i(52038),
         h = i(61859),
-        m = i(32754),
-        _ = i(12916),
-        g = i.n(_),
-        p = i(87937),
-        f = i.n(p);
+        _ = i(32754),
+        m = i(12916),
+        p = i.n(m),
+        g = i(87937),
+        f = i.n(g);
       const v = "hh:mm a",
         S = "HH:mm";
       function x(e) {
@@ -1114,11 +1139,11 @@
           nEarliestTime: i,
           fnGetTimeToUpdate: o,
           onError: c,
-          strAlsoShowTimeZone: _,
-          disabled: p,
+          strAlsoShowTimeZone: m,
+          disabled: g,
           bNoDefaultDate: x,
-          className: T,
-          strDescToolTip: b,
+          className: b,
+          strDescToolTip: T,
           strDescription: R,
           bShowTimeZone: y,
           strInvalidDateTimeLocalizedMsg: A,
@@ -1139,19 +1164,19 @@
           [B, G] = s.useState(),
           [F, U] = s.useState(),
           Y = (function (e, t, i, n, o) {
-            const r = n && n(),
-              a = t && !j(t).isValid(),
+            const a = n && n(),
+              r = t && !j(t).isValid(),
               l = e && !w(e).isValid();
             let c = null;
-            (l || a || "string" == typeof r || !1 === r) &&
+            (l || r || "string" == typeof a || !1 === a) &&
               ((c = (0, h.we)(
                 i || "#DateTimePicker_Fallback_Invalid_DateTime",
               )),
               l
                 ? (c = (0, h.we)("#DateTimePicker_Time_CannotParse"))
-                : a
+                : r
                   ? (c = (0, h.we)("#DateTimePicker_Date_CannotParse"))
-                  : "string" == typeof r && (c = r));
+                  : "string" == typeof a && (c = a));
             return (
               s.useEffect(() => {
                 o && o(c);
@@ -1174,15 +1199,15 @@
         L || !i || x || (W = f().unix(i));
         const Q = f().tz.guess(),
           q = f().unix(L).tz(Q),
-          V = !!_ && Q != _ && f().unix(L).tz(_),
+          H = !!m && Q != m && f().unix(L).tz(m),
           {
-            fnOnInput: H,
+            fnOnInput: V,
             fnOnInputBlur: K,
             fnOnChange: J,
           } = M(
             j,
             (e) => {
-              if (p) return;
+              if (g) return;
               U(null);
               const t = o(),
                 i = f().unix(t || l.HD.GetTimeNowWithOverride());
@@ -1201,7 +1226,7 @@
           } = M(
             w,
             (e) => {
-              if (p) return;
+              if (g) return;
               G(null);
               let t = o(),
                 n = 0;
@@ -1222,35 +1247,35 @@
             G,
           );
         return (0, n.jsxs)("div", {
-          className: (0, d.A)(g().EventTimeSection, T),
+          className: (0, u.A)(p().EventTimeSection, b),
           children: [
             (0, n.jsxs)("div", {
-              className: (0, d.A)(g().EventTimeTitle, "DialogLabel"),
+              className: (0, u.A)(p().EventTimeTitle, "DialogLabel"),
               children: [
-                (0, n.jsx)(m.he, {
-                  toolTipContent: b,
+                (0, n.jsx)(_.he, {
+                  toolTipContent: T,
                   direction: "top",
                   children: Boolean(R) && (0, n.jsx)("span", { children: R }),
                 }),
                 z &&
                   (0, n.jsxs)("span", {
-                    className: g().DateErrorCtn,
-                    children: [(0, n.jsx)("img", { src: a.A }), z],
+                    className: p().DateErrorCtn,
+                    children: [(0, n.jsx)("img", { src: r.A }), z],
                   }),
               ],
             }),
             (0, n.jsxs)("div", {
-              className: u().FlexRowContainer,
+              className: d().FlexRowContainer,
               children: [
                 (0, n.jsxs)("div", {
-                  className: (0, d.A)(u().InputBorder, g().TimeBlock),
+                  className: (0, u.A)(d().InputBorder, p().TimeBlock),
                   children: [
-                    (0, n.jsx)(r(), {
+                    (0, n.jsx)(a(), {
                       onChange: J,
                       timeFormat: !1,
                       value: null != F ? F : N,
                       isValidDate: (e) =>
-                        !p &&
+                        !g &&
                         (function (e, t, i, n) {
                           const s = f().unix(e).hour(0).seconds(0).minute(0);
                           let o = n.unix() >= s.unix();
@@ -1271,27 +1296,27 @@
                       initialValue: W,
                       inputProps: {
                         placeholder: (0, h.we)("#DateTimePicker_Enter_Date"),
-                        className: (0, d.A)(
-                          g().DateWidth,
+                        className: (0, u.A)(
+                          p().DateWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
-                        disabled: p,
-                        onChange: (e) => H(e.currentTarget.value),
+                        disabled: g,
+                        onChange: (e) => V(e.currentTarget.value),
                         onBlur: (e) => K(e.currentTarget.value),
                       },
                     }),
-                    !!V &&
+                    !!H &&
                       (0, n.jsx)("div", {
-                        className: g().PacificTimeHint,
-                        children: V.format("L"),
+                        className: p().PacificTimeHint,
+                        children: H.format("L"),
                       }),
                   ],
                 }),
                 (0, n.jsxs)("div", {
-                  className: (0, d.A)(u().InputBorder, g().TimeBlock),
+                  className: (0, u.A)(d().InputBorder, p().TimeBlock),
                   children: [
-                    (0, n.jsx)(r(), {
+                    (0, n.jsx)(a(), {
                       onChange: $,
                       dateFormat: !1,
                       timeFormat: D,
@@ -1299,20 +1324,20 @@
                       value: null != B ? B : N,
                       inputProps: {
                         placeholder: (0, h.we)("#DateTimePicker_Enter_Time"),
-                        className: (0, d.A)(
-                          g().TimeWidth,
+                        className: (0, u.A)(
+                          p().TimeWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
-                        disabled: p,
+                        disabled: g,
                         onChange: (e) => Z(e.currentTarget.value),
                         onBlur: (e) => X(e.currentTarget.value),
                       },
                     }),
-                    !!V &&
+                    !!H &&
                       (0, n.jsx)("div", {
-                        className: g().PacificTimeHint,
-                        children: V.format("LT"),
+                        className: p().PacificTimeHint,
+                        children: H.format("LT"),
                       }),
                   ],
                 }),
@@ -1320,13 +1345,13 @@
                   (0, n.jsxs)("div", {
                     children: [
                       (0, n.jsx)("div", {
-                        className: g().TimeZone,
+                        className: p().TimeZone,
                         children: q.zoneAbbr(),
                       }),
-                      !!V &&
+                      !!H &&
                         (0, n.jsx)("div", {
-                          className: g().TimeZone,
-                          children: V.zoneAbbr(),
+                          className: p().TimeZone,
+                          children: H.zoneAbbr(),
                         }),
                     ],
                   }),
@@ -1384,37 +1409,37 @@
       var n = i(7850),
         s = i(90626),
         o = i(17720),
-        r = i(27144),
-        a = i(15736),
+        a = i(27144),
+        r = i(15736),
         l = i(78327);
       function c(e) {
         const {
             accountID: t,
             bHideWhenNotAvailable: i,
             bHideName: c,
-            bLink: u = !0,
+            bLink: d = !0,
           } = e,
-          [d] = (0, r.KT)(t),
-          h = (0, r.KM)(t),
-          m = s.useMemo(() => o.b.InitFromAccountID(t), [t]),
-          _ = `${l.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`,
-          g = u ? "a" : "span";
+          [u] = (0, a.KT)(t),
+          h = (0, a.KM)(t),
+          _ = s.useMemo(() => o.b.InitFromAccountID(t), [t]),
+          m = `${l.TS.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
+          p = d ? "a" : "span";
         return (0, n.jsx)(n.Fragment, {
-          children: Boolean(!d)
+          children: Boolean(!u)
             ? (0, n.jsx)(n.Fragment, {
                 children: Boolean(!i) && (0, n.jsx)("span", { children: t }),
               })
-            : (0, n.jsxs)(g, {
-                href: u ? _ : void 0,
+            : (0, n.jsxs)(p, {
+                href: d ? m : void 0,
                 children: [
                   (0, n.jsx)("img", {
-                    className: a.SmallAvatar,
-                    src: d.avatar_url,
-                    "data-miniprofile": "s" + m.ConvertTo64BitString(),
+                    className: r.SmallAvatar,
+                    src: u.avatar_url,
+                    "data-miniprofile": "s" + _.ConvertTo64BitString(),
                   }),
                   Boolean(!c) &&
                     (0, n.jsx)("span", {
-                      children: h ? `${h} (${d.persona_name})` : d.persona_name,
+                      children: h ? `${h} (${u.persona_name})` : u.persona_name,
                     }),
                 ],
               }),
@@ -1423,36 +1448,36 @@
     },
     48479: (e, t, i) => {
       "use strict";
-      i.d(t, { AQ: () => _, pn: () => p, qx: () => g });
+      i.d(t, { AQ: () => m, pn: () => g, qx: () => p });
       var n = i(7850),
         s = i(16676),
         o = i(61859),
-        r = i(12155),
-        a = i(90626),
+        a = i(12155),
+        r = i(90626),
         l = i(52038),
         c = i(95695),
-        u = i(84811),
-        d = i(64734),
+        d = i(84811),
+        u = i(64734),
         h = i(65946),
-        m = i(26408);
-      function _(e) {
+        _ = i(26408);
+      function m(e) {
         const {
             title: t,
             tooltip: i,
             getMinimized: s,
             toggleMinimized: o,
-            className: r,
-            children: a,
-            elAdditionalButtons: _,
+            className: a,
+            children: r,
+            elAdditionalButtons: m,
           } = e,
-          g = (0, h.q3)(() => s());
+          p = (0, h.q3)(() => s());
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
               className: (0, l.A)(
-                r,
-                d.SectionTitleHeader,
-                d.required_title,
+                a,
+                u.SectionTitleHeader,
+                u.required_title,
                 "SectionTitleHeader",
               ),
               children: [
@@ -1461,39 +1486,39 @@
                     c.CollapsableSectionTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: [t, Boolean(i) && (0, n.jsx)(m.o, { tooltip: i })],
+                  children: [t, Boolean(i) && (0, n.jsx)(_.o, { tooltip: i })],
                 }),
                 (0, n.jsxs)("div", {
-                  className: d.SectionTitleButtons,
+                  className: u.SectionTitleButtons,
                   children: [
-                    _,
-                    (0, n.jsx)(p, { bIsMinimized: g, fnToggleMinimize: o }),
+                    m,
+                    (0, n.jsx)(g, { bIsMinimized: p, fnToggleMinimize: o }),
                   ],
                 }),
               ],
             }),
-            !g && (0, n.jsx)(u.tH, { children: a }),
+            !p && (0, n.jsx)(d.tH, { children: r }),
           ],
         });
       }
-      function g(e) {
-        const [t, i] = a.useState(Boolean(e.bStartMinimized));
-        return (0, n.jsx)(_, {
+      function p(e) {
+        const [t, i] = r.useState(Boolean(e.bStartMinimized));
+        return (0, n.jsx)(m, {
           ...e,
           getMinimized: () => t,
           toggleMinimized: () => i(!t),
           children: e.children,
         });
       }
-      function p(e) {
+      function g(e) {
         const { bIsMinimized: t, fnToggleMinimize: i } = e,
-          a = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+          r = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, n.jsx)(s.$n, {
-          "data-tooltip-text": (0, o.we)(a),
+          "data-tooltip-text": (0, o.we)(r),
           onClick: i,
           children: e.bIsMinimized
-            ? (0, n.jsx)(r.hz4, {})
-            : (0, n.jsx)(r.Xjb, {}),
+            ? (0, n.jsx)(a.hz4, {})
+            : (0, n.jsx)(a.Xjb, {}),
         });
       }
     },

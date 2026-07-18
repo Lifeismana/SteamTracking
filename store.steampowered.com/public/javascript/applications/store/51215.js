@@ -1364,7 +1364,7 @@
       }
       function v(e) {
         const t = new FormData();
-        t.append("nonce", e), t.append("sessionid", f.TS.SESSIONID);
+        t.append("nonce", e), t.append("sessionid", (0, f.KC)());
         let n = new URL(document.location.href);
         const s = new URLSearchParams(n.search);
         s.has("need_password") &&
@@ -1742,8 +1742,8 @@
         W = 13,
         $ = 14,
         Y = 15,
-        X = 16;
-      class K extends k.gf {
+        K = 16;
+      class X extends k.gf {
         m_eStatus = U;
         m_steamid;
         m_strAccountName;
@@ -1998,7 +1998,7 @@
           }
         }
         Stop() {
-          this.StopPolling(), (this.m_eStatus = X);
+          this.StopPolling(), (this.m_eStatus = K);
         }
         GetStatus() {
           return this.m_eStatus;
@@ -2264,19 +2264,19 @@
           this.m_onLoginComplete = e;
         }
       }
-      (0, j.Cg)([I.sH], K.prototype, "m_eStatus", void 0),
-        (0, j.Cg)([I.sH], K.prototype, "m_strErrorReference", void 0),
-        (0, j.Cg)([L.oI], K.prototype, "Start", null),
-        (0, j.Cg)([L.oI], K.prototype, "SendSteamGuardCode", null),
-        (0, j.Cg)([L.oI], K.prototype, "UseCodeOverride", null),
-        (0, j.Cg)([L.oI], K.prototype, "CantAccessCode", null),
-        (0, j.Cg)([L.oI], K.prototype, "StartMoveAuthenticator", null),
-        (0, j.Cg)([L.oI], K.prototype, "ResendMoveCode", null),
-        (0, j.Cg)([L.oI], K.prototype, "FinishMoveAuthenticator", null),
-        (0, j.Cg)([L.oI], K.prototype, "FinishMoveRecovery", null),
-        (0, j.Cg)([L.oI], K.prototype, "GoBack", null),
-        (0, j.Cg)([I.XI], K.prototype, "SetFailureState", null),
-        (0, j.Cg)([L.oI], K.prototype, "SetOnLoginComplete", null);
+      (0, j.Cg)([I.sH], X.prototype, "m_eStatus", void 0),
+        (0, j.Cg)([I.sH], X.prototype, "m_strErrorReference", void 0),
+        (0, j.Cg)([L.oI], X.prototype, "Start", null),
+        (0, j.Cg)([L.oI], X.prototype, "SendSteamGuardCode", null),
+        (0, j.Cg)([L.oI], X.prototype, "UseCodeOverride", null),
+        (0, j.Cg)([L.oI], X.prototype, "CantAccessCode", null),
+        (0, j.Cg)([L.oI], X.prototype, "StartMoveAuthenticator", null),
+        (0, j.Cg)([L.oI], X.prototype, "ResendMoveCode", null),
+        (0, j.Cg)([L.oI], X.prototype, "FinishMoveAuthenticator", null),
+        (0, j.Cg)([L.oI], X.prototype, "FinishMoveRecovery", null),
+        (0, j.Cg)([L.oI], X.prototype, "GoBack", null),
+        (0, j.Cg)([I.XI], X.prototype, "SetFailureState", null),
+        (0, j.Cg)([L.oI], X.prototype, "SetOnLoginComplete", null);
       const J = [a.TY.x0, a.TY.bH, a.TY.Xs, a.TY.WM, a.TY.oP, a.TY.$Y].reduce(
         (e, t, n) => ((e[t] = n), e),
         {},
@@ -2857,7 +2857,7 @@
             [t],
           ),
           i = (function (e) {
-            const [t, n] = (0, u.useState)(new K(e));
+            const [t, n] = (0, u.useState)(new X(e));
             return (
               (0, u.useEffect)(() => {
                 t?.SetOnLoginComplete(e.onComplete);
@@ -2881,7 +2881,7 @@
                 finishMoveAuthenticator: t.FinishMoveAuthenticator,
                 finishMoveRecovery: t.FinishMoveRecovery,
                 replacementAuthenticator: t.GetReplacementAuthenticator(),
-                reset: () => n(new K(e)),
+                reset: () => n(new X(e)),
                 goBack: t.GoBack,
                 setTokenToRevoke: t.SetTokenToRevoke,
               }))
@@ -3092,7 +3092,7 @@
               onUseCodeOverride: w.password.useCodeOverride,
               onCodeHelp: e.onCodeHelp,
             });
-          case X:
+          case K:
             return (0, s.jsx)(mt, { reset: w.password.reset });
           case Y:
             return (0, s.jsx)(dt, {
@@ -3219,9 +3219,9 @@
           },
           className: de().LoginForm,
           children: [
-            (0, s.jsx)(Xe, {
+            (0, s.jsx)(Ke, {
               tone: S ? "danger" : void 0,
-              label: (0, s.jsx)(Ke, {
+              label: (0, s.jsx)(Xe, {
                 highlight: !0,
                 inputId: b,
                 children: (0, E.we)("#Login_SignIn_WithAccountName"),
@@ -3234,9 +3234,9 @@
               disabled: w,
               id: b,
             }),
-            (0, s.jsx)(Xe, {
+            (0, s.jsx)(Ke, {
               tone: S ? "danger" : void 0,
-              label: (0, s.jsx)(Ke, {
+              label: (0, s.jsx)(Xe, {
                 inputId: T,
                 children: (0, E.we)("#Login_Password"),
               }),
@@ -3373,7 +3373,7 @@
         return (0, s.jsxs)("div", {
           className: de().QRCodeContainer,
           children: [
-            (0, s.jsx)(Ke, {
+            (0, s.jsx)(Xe, {
               highlight: !0,
               children: (0, E.we)("#Login_SignIn_OrWithQRCode"),
             }),
@@ -3407,21 +3407,21 @@
           ],
         });
       }
-      function Xe(e) {
+      function Ke(e) {
         const { label: t, error: n, tone: r, autoFocus: i, id: o, ...a } = e,
           c = r ?? (n ? "danger" : void 0);
         return (0, s.jsxs)("div", {
           className: de().TextField,
           children: [
             "string" == typeof t
-              ? (0, s.jsx)(Ke, { inputId: o, children: t })
+              ? (0, s.jsx)(Xe, { inputId: o, children: t })
               : t,
             n && (0, s.jsx)(et, { type: "error", children: n }),
             (0, s.jsx)(Je, { autoFocus: i, tone: c, id: o, ...a }),
           ],
         });
       }
-      function Ke(e) {
+      function Xe(e) {
         const { children: t, inputId: n, highlight: r } = e;
         return (0, s.jsx)("label", {
           className: (0, v.A)(de().FieldLabel, r && de().Highlight),

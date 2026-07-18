@@ -924,7 +924,7 @@
         }
         async SelectAvatar(_, _) {
           let _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("json", "1"),
             __webpack_require__.append("sha", _);
           let _ =
@@ -992,7 +992,7 @@
         }
         async SelectGameAvatar(_, _, _) {
           let _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("json", "1"),
             _.append("selectedAvatar", "" + _);
           let _ =
@@ -1109,7 +1109,7 @@
         SavePrivacy() {
           let _ = new FormData();
           return (
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("Privacy", JSON.stringify(this.m_PrivacySettings)),
             _.append(
               "eCommentPermission",
@@ -2059,7 +2059,7 @@
           for (const _ in _) __webpack_require__.append(_, _[_]);
         }
         __webpack_require__.append("type", _),
-          __webpack_require__.append("sessionID", _._.SESSIONID),
+          __webpack_require__.append("sessionID", (0, _._)()),
           __webpack_require__.append("json", "1");
         const _ = `${_.ProfileURL}edit/`;
         try {
@@ -2392,7 +2392,7 @@
           _.append("avatar", _),
             _.append("type", "player_avatar_image"),
             _.append("sId", _._.steamid),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             _.append("doSub", "1"),
             _.append("json", "1");
           let _ = !1,
@@ -4245,7 +4245,7 @@
                 (0, _.jsx)("input", {
                   type: "hidden",
                   name: "sessionID",
-                  value: _._.SESSIONID,
+                  value: (0, _._)(),
                 }),
                 (0, _.jsx)("input", {
                   type: "hidden",
@@ -7045,10 +7045,6 @@
                       (0, _.jsx)(_._, {
                         ..._,
                       }),
-                    "comment-content-moderation-report-dialog": (_) =>
-                      (0, _.jsx)(_._, {
-                        ..._,
-                      }),
                     "reporter-cooldown-dialog": (_) =>
                       (0, _.jsx)(_, {
                         ..._,
@@ -7071,8 +7067,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7149,7 +7148,15 @@
               throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);
           },
           onSuccess: async (_, _) => {
-            await _(_, _, _, _);
+            await Promise.all([
+              _(_, _, _, _),
+              _.invalidateQueries({
+                queryKey: ["get_claimed"],
+              }),
+              _.invalidateQueries({
+                queryKey: ["get_subject_overview"],
+              }),
+            ]);
           },
         });
       }
@@ -7223,6 +7230,56 @@
             };
           })(_, _),
         );
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => {
+            const _ = _._.Init(_._);
+            _.Body().set_steamid(_),
+              _.Body().set_comment_thread_id(_),
+              _.Body().set_gidcomment(_),
+              _.Body().set_reason(_.reason),
+              _.Body().set_note(_.message);
+            for (const _ of _.sanctions) {
+              const _ = new _._();
+              _.set_sanction(_.sanction),
+                _.days && _.set_days(_.days),
+                _.Body().add_sanctions(_);
+            }
+            const _ = await _._.SanctionComment(_, _);
+            if (!_.BSuccess())
+              throw new Error(
+                `SanctionComment failed. EResult: ${_.GetEResult()} (${_.GetErrorMessage()})`,
+              );
+          },
+          onSuccess: async () => {
+            await _.invalidateQueries({
+              queryKey: ["get_claimed"],
+            });
+          },
+        });
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_steamid(_),
+              _.Body().set_comment_thread_id(_),
+              _.Body().set_gidcomment(_),
+              _.Body().set_report_action(_._._),
+              _.Body().set_resolve(!0),
+              await _._.UpdateCommentReportState(_, _);
+          },
+          onSuccess: async () => {
+            await _.invalidateQueries({
+              queryKey: ["get_claimed"],
+            });
+          },
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -58,6 +58,20 @@
         return (0, t.jsx)("div", { children: (0, t.jsx)(s.Ay, {}) });
       }
     },
+    3049: (e, r, c) => {
+      "use strict";
+      c.d(r, { J: () => o });
+      var t = c(8527),
+        s = c(13843);
+      function o() {
+        return (0, s.A)().languages.map((e) => {
+          return 2 == (r = e.strISOCode).length && t.TS.COUNTRY
+            ? `${r}-${t.TS.COUNTRY}`
+            : r;
+          var r;
+        });
+      }
+    },
     42248: (e, r, c) => {
       "use strict";
       c.d(r, { q: () => o });

@@ -2948,146 +2948,146 @@
       }
       var we;
       !(function (e) {
-        (e.GetPointsForSpend = function (e, t) {
+        (e.GetPointsForSpend = function (e, t, r) {
           return e.SendMsg(
             "LoyaltyRewards.GetPointsForSpend#1",
-            (0, u.I8)(T, t),
+            (0, u.I8)(T, t, r),
             U,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         }),
-          (e.GetSummary = function (e, t) {
+          (e.GetSummary = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetSummary#1",
-              (0, u.I8)(I, t),
+              (0, u.I8)(I, t, r),
               F,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.RedeemPoints = function (e, t) {
+          (e.RedeemPoints = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPoints#1",
-              (0, u.I8)(C, t),
+              (0, u.I8)(C, t, r),
               L,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsForBadgeLevel = function (e, t) {
+          (e.RedeemPointsForBadgeLevel = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
-              (0, u.I8)(P, t),
+              (0, u.I8)(P, t, r),
               L,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsToUpgradeItem = function (e, t) {
+          (e.RedeemPointsToUpgradeItem = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
-              (0, u.I8)(x, t),
+              (0, u.I8)(x, t, r),
               L,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsForProfileCustomization = function (e, t) {
+          (e.RedeemPointsForProfileCustomization = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
-              (0, u.I8)(N, t),
+              (0, u.I8)(N, t, r),
               E,
               { ePrivilege: 1 },
             );
           }),
-          (e.RedeemPointsForProfileCustomizationUpgrade = function (e, t) {
+          (e.RedeemPointsForProfileCustomizationUpgrade = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
-              (0, u.I8)(G, t),
+              (0, u.I8)(G, t, r),
               k,
               { ePrivilege: 1 },
             );
           }),
-          (e.RegisterForSteamDeckRewards = function (e, t) {
+          (e.RegisterForSteamDeckRewards = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.RegisterForSteamDeckRewards#1",
-              (0, u.I8)(D, t),
+              (0, u.I8)(D, t, r),
               A,
               { ePrivilege: 1 },
             );
           }),
-          (e.AddReaction = function (e, t) {
+          (e.AddReaction = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.AddReaction#1",
-              (0, u.I8)(K, t),
+              (0, u.I8)(K, t, r),
               Q,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetReactions = function (e, t) {
+          (e.GetReactions = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetReactions#1",
-              (0, u.I8)(Z, t),
+              (0, u.I8)(Z, t, r),
               $,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetReactionsSummaryForUser = function (e, t) {
+          (e.GetReactionsSummaryForUser = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetReactionsSummaryForUser#1",
-              (0, u.I8)(J, t),
+              (0, u.I8)(J, t, r),
               H,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetReactionConfig = function (e, t) {
+          (e.GetReactionConfig = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetReactionConfig#1",
-              (0, u.I8)(Y, t),
+              (0, u.I8)(Y, t, r),
               X,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetProfileCustomizationsConfig = function (e, t) {
+          (e.GetProfileCustomizationsConfig = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetProfileCustomizationsConfig#1",
-              (0, u.I8)(te, t),
+              (0, u.I8)(te, t, r),
               re,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetEligibleApps = function (e, t) {
+          (e.GetEligibleApps = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetEligibleApps#1",
-              (0, u.I8)(ie, t),
+              (0, u.I8)(ie, t, r),
               se,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetActivePurchaseBonuses = function (e, t) {
+          (e.GetActivePurchaseBonuses = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetActivePurchaseBonuses#1",
-              (0, u.I8)(ce, t),
+              (0, u.I8)(ce, t, r),
               ue,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.QueryRewardItems = function (e, t) {
+          (e.QueryRewardItems = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.QueryRewardItems#1",
-              (0, u.I8)(de, t),
+              (0, u.I8)(de, t, r),
               Be,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.BatchedQueryRewardItems = function (e, t) {
+          (e.BatchedQueryRewardItems = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.BatchedQueryRewardItems#1",
-              (0, u.I8)(ge, t),
+              (0, u.I8)(ge, t, r),
               be,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetEquippedProfileItems = function (e, t) {
+          (e.GetEquippedProfileItems = function (e, t, r) {
             return e.SendMsg(
               "LoyaltyRewards.GetEquippedProfileItems#1",
-              (0, u.I8)(_e, t),
+              (0, u.I8)(_e, t, r),
               Me,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -4206,47 +4206,50 @@
       }
       var q;
       !(function (e) {
-        (e.ClaimItem = function (e, t) {
-          return e.SendMsg("SaleItemRewards.ClaimItem#1", (0, m.I8)(B, t), g, {
-            ePrivilege: 1,
-          });
+        (e.ClaimItem = function (e, t, r) {
+          return e.SendMsg(
+            "SaleItemRewards.ClaimItem#1",
+            (0, m.I8)(B, t, r),
+            g,
+            { ePrivilege: 1 },
+          );
         }),
-          (e.CanClaimItem = function (e, t) {
+          (e.CanClaimItem = function (e, t, r) {
             return e.SendMsg(
               "SaleItemRewards.CanClaimItem#1",
-              (0, m.I8)(b, t),
+              (0, m.I8)(b, t, r),
               y,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetRewardDefinitions = function (e, t) {
+          (e.GetRewardDefinitions = function (e, t, r) {
             return e.SendMsg(
               "SaleItemRewards.GetRewardDefinitions#1",
-              (0, m.I8)(M, t),
+              (0, m.I8)(M, t, r),
               w,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-          (e.SetRewardDefinitions = function (e, t) {
+          (e.SetRewardDefinitions = function (e, t, r) {
             return e.SendMsg(
               "SaleItemRewards.SetRewardDefinitions#1",
-              (0, m.I8)(p, t),
+              (0, m.I8)(p, t, r),
               f,
               { ePrivilege: 4 },
             );
           }),
-          (e.GetClaimedSaleRewards = function (e, t) {
+          (e.GetClaimedSaleRewards = function (e, t, r) {
             return e.SendMsg(
               "SaleItemRewards.GetClaimedSaleRewards#1",
-              (0, m.I8)(z, t),
+              (0, m.I8)(z, t, r),
               R,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetCurrentDefinition = function (e, t) {
+          (e.GetCurrentDefinition = function (e, t, r) {
             return e.SendMsg(
               "SaleItemRewards.GetCurrentDefinition#1",
-              (0, m.I8)(S, t),
+              (0, m.I8)(S, t, r),
               h,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );

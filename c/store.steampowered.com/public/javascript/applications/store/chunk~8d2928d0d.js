@@ -5378,50 +5378,50 @@
         }
       }
       !(function (_) {
-        (_.CreatePlan = function (_, _) {
+        (_.CreatePlan = function (_, _, _) {
           return _.SendMsg(
             "PromotionPlanning.CreatePlan#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.CreateTentativePlan = function (_, _) {
+          (_.CreateTentativePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.CreateTentativePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlan = function (_, _) {
+          (_.UpdatePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlanPartnerInfo = function (_, _) {
+          (_.UpdatePlanPartnerInfo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlanPartnerInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePlanInputData = function (_, _) {
+          (_.UpdatePlanInputData = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.UpdatePlanInputData#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -5429,26 +5429,31 @@
               },
             );
           }),
-          (_.DeletePlan = function (_, _) {
+          (_.DeletePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.DeletePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPlan = function (_, _) {
-            return _.SendMsg("PromotionPlanning.GetPlan#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetPlan = function (_, _, _) {
+            return _.SendMsg(
+              "PromotionPlanning.GetPlan#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetAllActivePlan = function (_, _) {
+          (_.GetAllActivePlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllActivePlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5456,10 +5461,10 @@
               },
             );
           }),
-          (_.GetPlanCompletedInDateRange = function (_, _) {
+          (_.GetPlanCompletedInDateRange = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanCompletedInDateRange#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5467,10 +5472,10 @@
               },
             );
           }),
-          (_.GetPlanByAssociationID = function (_, _) {
+          (_.GetPlanByAssociationID = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByAssociationID#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5478,10 +5483,10 @@
               },
             );
           }),
-          (_.GetPlansUpdatedSince = function (_, _) {
+          (_.GetPlansUpdatedSince = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlansUpdatedSince#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5489,10 +5494,10 @@
               },
             );
           }),
-          (_.SearchPlan = function (_, _) {
+          (_.SearchPlan = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SearchPlan#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5500,10 +5505,10 @@
               },
             );
           }),
-          (_.GetAllPlansForApps = function (_, _) {
+          (_.GetAllPlansForApps = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllPlansForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5511,10 +5516,10 @@
               },
             );
           }),
-          (_.GetAllPlansForPartner = function (_, _) {
+          (_.GetAllPlansForPartner = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAllPlansForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5523,10 +5528,10 @@
               },
             );
           }),
-          (_.GetPlanByInputAccessKey = function (_, _) {
+          (_.GetPlanByInputAccessKey = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlanByInputAccessKey#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5535,20 +5540,20 @@
               },
             );
           }),
-          (_.MarkLocalizationAssetComplete = function (_, _) {
+          (_.MarkLocalizationAssetComplete = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.MarkLocalizationAssetComplete#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SendNotification = function (_, _) {
+          (_.SendNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SendNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -5556,10 +5561,10 @@
               },
             );
           }),
-          (_.GetSentNotification = function (_, _) {
+          (_.GetSentNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetSentNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5567,30 +5572,30 @@
               },
             );
           }),
-          (_.ResendNotification = function (_, _) {
+          (_.ResendNotification = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.ResendNotification#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetPromotionEmailTarget = function (_, _) {
+          (_.SetPromotionEmailTarget = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.SetPromotionEmailTarget#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPromotionPlanSalesDaily = function (_, _) {
+          (_.GetPromotionPlanSalesDaily = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPromotionPlanSalesDaily#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5598,10 +5603,10 @@
               },
             );
           }),
-          (_.GetPromotionPlanForSalePages = function (_, _) {
+          (_.GetPromotionPlanForSalePages = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPromotionPlanForSalePages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5609,20 +5614,20 @@
               },
             );
           }),
-          (_.CreateSalePageForPromo = function (_, _) {
+          (_.CreateSalePageForPromo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.CreateSalePageForPromo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUpcomingScheduledDiscounts = function (_, _) {
+          (_.GetUpcomingScheduledDiscounts = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetUpcomingScheduledDiscounts#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5630,10 +5635,10 @@
               },
             );
           }),
-          (_.GetSalePageCandidatesForPromo = function (_, _) {
+          (_.GetSalePageCandidatesForPromo = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetSalePageCandidatesForPromo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5641,10 +5646,10 @@
               },
             );
           }),
-          (_.GetAdvertisingAppsForPartner = function (_, _) {
+          (_.GetAdvertisingAppsForPartner = function (_, _, _) {
             return _.SendMsg(
               "PromotionPlanning.GetAdvertisingAppsForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5654,20 +5659,20 @@
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.SetInvite = function (_, _) {
+          (_.SetInvite = function (_, _, _) {
             return _.SendMsg(
               "PromotionEventInvites.SetInvite#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-            (_.GetInvite = function (_, _) {
+            (_.GetInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.GetInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -5675,40 +5680,40 @@
                 },
               );
             }),
-            (_.AcceptInvite = function (_, _) {
+            (_.AcceptInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.AcceptInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CancelInvite = function (_, _) {
+            (_.CancelInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.CancelInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.ResendEmailInvite = function (_, _) {
+            (_.ResendEmailInvite = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.ResendEmailInvite#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.GetEmailTargets = function (_, _) {
+            (_.GetEmailTargets = function (_, _, _) {
               return _.SendMsg(
                 "PromotionEventInvites.GetEmailTargets#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
@@ -5717,10 +5722,10 @@
             });
         })(_ || (_ = {})),
         (function (_) {
-          _.GetOptInDemoStats = function (_, _) {
+          _.GetOptInDemoStats = function (_, _, _) {
             return _.SendMsg(
               "PromotionStats.GetOptInDemoStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5795,7 +5800,7 @@
             "/deletetopic/";
           null != _ && "" != _ && (_ += _ + "/");
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID), _.append("gidforumtopic", _);
+          _.append("sessionid", (0, _._)()), _.append("gidforumtopic", _);
           let _ = await _().post(_, _, {
             withCredentials: !0,
             cancelToken: _.token,
@@ -6501,7 +6506,7 @@
                         strTitle: "Clear Rewards for Summer 2022",
                         onOK: async () => {
                           const _ = new FormData();
-                          _.append("sessionid", _._.SESSIONID),
+                          _.append("sessionid", (0, _._)()),
                             _.append("clan_accountid", "" + _._.CLANACCOUNTID),
                             _.append("event_id", "" + _._._);
                           const _ = await _().post(

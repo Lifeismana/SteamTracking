@@ -202,6 +202,7 @@ html.responsive.touch .O2jA-VCFl9bmblncfI4k2 {
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  will-change: transform;
   gap: 8px;
 }
 ._3G65z75zOTQeHrXxszHO4b {
@@ -2659,7 +2660,7 @@ html.responsive.touch .O2jA-VCFl9bmblncfI4k2 {
 ._2WV2bUC89j63V-9SIJ7nsO {
   position: absolute;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   max-width: 80%;
   padding: 4px 8px;
   background: linear-gradient(
@@ -2721,7 +2722,7 @@ html.responsive.touch .O2jA-VCFl9bmblncfI4k2 {
   min-width: 84px;
 }
 .HqVrl-7SIPNdZd1uHcMK1 {
-  padding: 0 0 0 8px;
+  padding-inline-start: 8px;
   transform: translateX(0px);
 }
 .HqVrl-7SIPNdZd1uHcMK1 .SliderTrack {

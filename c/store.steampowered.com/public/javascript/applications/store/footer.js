@@ -336,6 +336,136 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Grid, _.className),
+            },
+            _,
+          ),
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          });
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_._, {
+              "flow-children": "grid",
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "display",
+          responsive: !0,
+          className: _.Display,
+          cssProperty: "--grid-display",
+        },
+        {
+          prop: "columns",
+          responsive: !0,
+          className: _.Columns,
+          cssProperty: "--grid-columns",
+        },
+        {
+          prop: "rows",
+          responsive: !0,
+          className: _.Rows,
+          cssProperty: "--grid-rows",
+        },
+        {
+          prop: "autoColumns",
+          responsive: !0,
+          className: _.AutoColumns,
+          cssProperty: "--grid-auto-columns",
+        },
+        {
+          prop: "autoRows",
+          responsive: !0,
+          className: _.AutoRows,
+          cssProperty: "--grid-auto-rows",
+        },
+        {
+          prop: "autoFlow",
+          responsive: !0,
+          className: _.AutoFlow,
+          cssProperty: "--grid-auto-flow",
+        },
+        {
+          prop: "areas",
+          responsive: !0,
+          className: _.Areas,
+          cssProperty: "--grid-areas",
+        },
+        {
+          prop: "flow",
+          responsive: !0,
+          className: _.Flow,
+          cssProperty: "--grid-flow",
+        },
+        {
+          prop: "alignContent",
+          responsive: !0,
+          className: _.AlignContent,
+          cssProperty: "--grid-align-content",
+        },
+        {
+          prop: "justifyContent",
+          responsive: !0,
+          className: _.JustifyContent,
+          cssProperty: "--grid-justify-content",
+        },
+        {
+          prop: "alignItems",
+          responsive: !0,
+          className: _.AlignItems,
+          cssProperty: "--grid-align-items",
+        },
+        {
+          prop: "justifyItems",
+          responsive: !0,
+          className: _.JustifyItems,
+          cssProperty: "--grid-justify-items",
+        },
+        {
+          prop: "gap",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapX",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap-x", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapY",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap-y", `var(--spacing-${_})`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -469,8 +599,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -504,6 +636,28 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
+      function _(_) {
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)("span", {
+            role: "button",
+            ...(0, _._)(
+              {
+                ..._,
+                underline: _,
+                className: _.TextLinkButton,
+              },
+              _,
+            ),
+          });
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -521,128 +675,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Grid, _.className),
-            },
-            _,
-          ),
-          _ = _ ?? _?.focusable ?? !!_.onClick,
-          _ = (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          });
-        return _._.IN_GAMEPADUI
-          ? (0, _.jsx)(_._, {
-              "flow-children": "grid",
-              ...(_ || {}),
-              focusable: _,
-              children: _,
-            })
-          : _;
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "display",
-          responsive: !0,
-          className: _.Display,
-          cssProperty: "--grid-display",
-        },
-        {
-          prop: "columns",
-          responsive: !0,
-          className: _.Columns,
-          cssProperty: "--grid-columns",
-        },
-        {
-          prop: "rows",
-          responsive: !0,
-          className: _.Rows,
-          cssProperty: "--grid-rows",
-        },
-        {
-          prop: "autoColumns",
-          responsive: !0,
-          className: _.AutoColumns,
-          cssProperty: "--grid-auto-columns",
-        },
-        {
-          prop: "autoRows",
-          responsive: !0,
-          className: _.AutoRows,
-          cssProperty: "--grid-auto-rows",
-        },
-        {
-          prop: "autoFlow",
-          responsive: !0,
-          className: _.AutoFlow,
-          cssProperty: "--grid-auto-flow",
-        },
-        {
-          prop: "areas",
-          responsive: !0,
-          className: _.Areas,
-          cssProperty: "--grid-areas",
-        },
-        {
-          prop: "flow",
-          responsive: !0,
-          className: _.Flow,
-          cssProperty: "--grid-flow",
-        },
-        {
-          prop: "alignContent",
-          responsive: !0,
-          className: _.AlignContent,
-          cssProperty: "--grid-align-content",
-        },
-        {
-          prop: "justifyContent",
-          responsive: !0,
-          className: _.JustifyContent,
-          cssProperty: "--grid-justify-content",
-        },
-        {
-          prop: "alignItems",
-          responsive: !0,
-          className: _.AlignItems,
-          cssProperty: "--grid-align-items",
-        },
-        {
-          prop: "justifyItems",
-          responsive: !0,
-          className: _.JustifyItems,
-          cssProperty: "--grid-justify-items",
-        },
-        {
-          prop: "gap",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--grid-gap", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapX",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--grid-gap-x", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapY",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--grid-gap-y", `var(--spacing-${_})`],
-        },
-      ];
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -653,6 +685,9 @@
         _() && (0, _._)(_._), "location" in window && location.reload();
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1278,7 +1313,7 @@
             breakpoints: {
               _: 700,
             },
-            children: (0, _.jsxs)(_, {
+            children: (0, _.jsxs)(_._, {
               _: "footer",
               areas: {
                 initial: '"steam valve" "legal more" "main main"',

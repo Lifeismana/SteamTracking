@@ -87,17 +87,17 @@
         m = i(17720),
         p = i(56011),
         v = i(14947),
-        S = i(85044),
-        f = i(81393);
+        f = i(85044),
+        g = i(81393);
       i(68797);
-      class g {
+      class C {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map()),
             (0, v.Gn)(this);
         }
         async LoadProfiles(e, t) {
-          (0, f.wT)(
+          (0, g.wT)(
             e.length <= 500,
             "Check LoadProfiles, requesting too many steam IDs",
           );
@@ -118,9 +118,9 @@
             200 == a.status &&
             a.data.forEach((e) => {
               (e.avatar_hash = e.avatar_url),
-                (e.avatar_url_medium = (0, S.t)(e.avatar_url, "medium")),
-                (e.avatar_url_full = (0, S.t)(e.avatar_url, "full")),
-                (e.avatar_url = (0, S.t)(e.avatar_url)),
+                (e.avatar_url_medium = (0, f.t)(e.avatar_url, "medium")),
+                (e.avatar_url_full = (0, f.t)(e.avatar_url, "full")),
+                (e.avatar_url = (0, f.t)(e.avatar_url)),
                 this.m_mapProfiles.set(e.steamid, e),
                 this.m_mapProfilesLoading.delete(e.steamid);
             });
@@ -161,8 +161,8 @@
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      (0, s.Cg)([v.sH], g.prototype, "m_mapProfiles", void 0);
-      const C = new g();
+      (0, s.Cg)([v.sH], C.prototype, "m_mapProfiles", void 0);
+      const S = new C();
       var I = i(37085),
         x = i(12155),
         F = i(86328),
@@ -180,7 +180,7 @@
         async componentDidMount() {
           const e = await d().get(
             _.TS.COMMUNITY_BASE_URL + "invites/ajaxgetall",
-            { params: { sessionid: _.TS.SESSIONID } },
+            { params: { sessionid: (0, _.KC)() } },
           );
           if (e && e.data && e.data.tokens) {
             const t = e.data.tokens.filter((e) => e.valid);
@@ -191,7 +191,7 @@
         }
         async OnCreateInviteLink() {
           const e = new FormData();
-          e.append("sessionid", _.TS.SESSIONID),
+          e.append("sessionid", (0, _.KC)()),
             e.append("steamid_user", _.iA.steamid),
             e.append("duration", (2592e3).toString());
           const t = await d().post(
@@ -214,7 +214,7 @@
         }
         async OnAddFriend(e) {
           const t = new FormData();
-          t.append("sessionID", _.TS.SESSIONID),
+          t.append("sessionID", (0, _.KC)()),
             t.append("steamid", e),
             t.append("accept_invite", "0");
           try {
@@ -400,8 +400,8 @@
         async LoadProfile(e) {
           if (e) {
             const t = m.b.InitFromAccountID(Number(e));
-            await C.LoadProfiles([t.ConvertTo64BitString()]);
-            const i = C.GetProfile(t.ConvertTo64BitString());
+            await S.LoadProfiles([t.ConvertTo64BitString()]);
+            const i = S.GetProfile(t.ConvertTo64BitString());
             i
               ? this.setState({
                   searchResult: i,
@@ -415,7 +415,7 @@
         }
         async OnActionClick(e) {
           const t = new FormData();
-          t.append("sessionID", _.TS.SESSIONID),
+          t.append("sessionID", (0, _.KC)()),
             t.append("steamid", e),
             t.append("accept_invite", "0"),
             this.setState({ disable_send_invite: !0 });

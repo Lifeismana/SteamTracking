@@ -887,8 +887,8 @@
         k = r(20283),
         L = r(90150),
         H = r(84811),
-        $ = r(32754),
-        K = r(27429),
+        K = r(32754),
+        $ = r(27429),
         V = r(19976),
         X = r(6083);
       function J(e) {
@@ -1108,7 +1108,7 @@
               }),
               (0, i.jsx)(P.d, { vertical: !1, stroke: "#a0aab6" }),
               (0, i.jsx)(E.h, {
-                tickFormatter: K.Z2,
+                tickFormatter: $.Z2,
                 tick: { fill: "white" },
                 axisLine: !1,
                 orientation: "right",
@@ -1155,7 +1155,7 @@
                 Number.parseInt(e.app_summary_sales.total_gross_sales_usdx100) /
                 1e4;
             }),
-            (0, i.jsxs)($.t1, {
+            (0, i.jsxs)(K.t1, {
               className: V.TooltipPartnerSummary,
               children: [
                 (0, i.jsx)("div", {
@@ -1202,7 +1202,7 @@
                             }),
                             (0, i.jsx)("div", {
                               className: V.ToolTipTableCell,
-                              children: (0, K.Z2)(s),
+                              children: (0, $.Z2)(s),
                             }),
                             (0, i.jsxs)("div", {
                               className: V.ToolTipTableCell,
@@ -1219,7 +1219,7 @@
                           }),
                           (0, i.jsx)("div", {
                             className: V.ToolTipTableCell,
-                            children: (0, K.Z2)(r),
+                            children: (0, $.Z2)(r),
                           }),
                           (0, i.jsx)("div", { className: V.ToolTipTableCell }),
                         ],
@@ -1245,7 +1245,7 @@
             }),
             (0, i.jsx)("div", {
               className: V.ToolTipTableCell,
-              children: (0, K.Z2)(r),
+              children: (0, $.Z2)(r),
             }),
             (0, i.jsxs)("div", {
               className: V.ToolTipTableCell,
@@ -2881,41 +2881,42 @@
       }
       var Ge, ke;
       !(function (e) {
-        (e.GetInventoryItemsWithDescriptions = function (e, t) {
+        (e.GetInventoryItemsWithDescriptions = function (e, t, r) {
           return e.SendMsg(
             "Econ.GetInventoryItemsWithDescriptions#1",
-            (0, g.I8)(Fe, t),
+            (0, g.I8)(Fe, t, r),
             Ue,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
           );
         }),
-          (e.GetTradeOfferAccessToken = function (e, t) {
+          (e.GetTradeOfferAccessToken = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
-              (0, g.I8)(xe, t),
+              (0, g.I8)(xe, t, r),
               Ne,
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientGetItemShopOverlayAuthURL = function (e, t) {
+          (e.ClientGetItemShopOverlayAuthURL = function (e, t, r) {
             return e.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, g.I8)(De, t),
+              (0, g.I8)(De, t, r),
               Ae,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetAssetClassInfo = function (e, t) {
-            return e.SendMsg("Econ.GetAssetClassInfo#1", (0, g.I8)(Pe, t), Ee, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
+          (e.GetAssetClassInfo = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.GetAssetClassInfo#1",
+              (0, g.I8)(Pe, t, r),
+              Ee,
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
+            );
           }),
-          (e.GetAssetPropertySchema = function (e, t) {
+          (e.GetAssetPropertySchema = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetAssetPropertySchema#1",
-              (0, g.I8)(Ce, t),
+              (0, g.I8)(Ce, t, r),
               qe,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
@@ -3032,20 +3033,20 @@
           return "CEcon_GetTradePermissionsForApp_Request";
         }
       }
-      class $e extends ge.Message {
+      class Ke extends ge.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $e.prototype.can_receive || be.Sg($e.M()),
+            Ke.prototype.can_receive || be.Sg(Ke.M()),
             ge.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            $e.sm_m ||
-              ($e.sm_m = {
-                proto: $e,
+            Ke.sm_m ||
+              (Ke.sm_m = {
+                proto: Ke,
                 fields: {
                   can_receive: {
                     n: 1,
@@ -3065,76 +3066,6 @@
                   },
                   disabled_in_region: {
                     n: 5,
-                    br: be.qM.readBool,
-                    bw: be.gp.writeBool,
-                  },
-                },
-              }),
-            $e.sm_m
-          );
-        }
-        static MBF() {
-          return $e.sm_mbf || ($e.sm_mbf = be.w0($e.M())), $e.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $e.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return be.BT($e.M(), e, t);
-        }
-        static fromObject(e) {
-          return be.Uq($e.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (Be().BinaryReader)(e),
-            r = new $e();
-          return $e.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return be.zj($e.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (Be().BinaryWriter)();
-          return $e.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          be.i0($e.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (Be().BinaryWriter)();
-          return $e.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEcon_GetTradePermissionsForApp_Response";
-        }
-      }
-      class Ke extends ge.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ke.prototype.steamid || be.Sg(Ke.M()),
-            ge.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ke.sm_m ||
-              (Ke.sm_m = {
-                proto: Ke,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: be.qM.readFixed64String,
-                    bw: be.gp.writeFixed64String,
-                  },
-                  show_private: {
-                    n: 2,
-                    br: be.qM.readBool,
-                    bw: be.gp.writeBool,
-                  },
-                  cached_asset_count_only: {
-                    n: 3,
                     br: be.qM.readBool,
                     bw: be.gp.writeBool,
                   },
@@ -3173,6 +3104,76 @@
         serializeBase64String() {
           var e = new (Be().BinaryWriter)();
           return Ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEcon_GetTradePermissionsForApp_Response";
+        }
+      }
+      class $e extends ge.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            $e.prototype.steamid || be.Sg($e.M()),
+            ge.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            $e.sm_m ||
+              ($e.sm_m = {
+                proto: $e,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: be.qM.readFixed64String,
+                    bw: be.gp.writeFixed64String,
+                  },
+                  show_private: {
+                    n: 2,
+                    br: be.qM.readBool,
+                    bw: be.gp.writeBool,
+                  },
+                  cached_asset_count_only: {
+                    n: 3,
+                    br: be.qM.readBool,
+                    bw: be.gp.writeBool,
+                  },
+                },
+              }),
+            $e.sm_m
+          );
+        }
+        static MBF() {
+          return $e.sm_mbf || ($e.sm_mbf = be.w0($e.M())), $e.sm_mbf;
+        }
+        toObject(e = !1) {
+          return $e.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return be.BT($e.M(), e, t);
+        }
+        static fromObject(e) {
+          return be.Uq($e.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (Be().BinaryReader)(e),
+            r = new $e();
+          return $e.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return be.zj($e.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (Be().BinaryWriter)();
+          return $e.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          be.i0($e.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (Be().BinaryWriter)();
+          return $e.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEcon_GetEconSummary_Request";
@@ -6946,66 +6947,6 @@
           return "CEcon_CanUserTradeWithPartner_Response";
         }
       }
-      class $t extends ge.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            $t.prototype.steamid || be.Sg($t.M()),
-            ge.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            $t.sm_m ||
-              ($t.sm_m = {
-                proto: $t,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: be.qM.readFixed64String,
-                    bw: be.gp.writeFixed64String,
-                  },
-                },
-              }),
-            $t.sm_m
-          );
-        }
-        static MBF() {
-          return $t.sm_mbf || ($t.sm_mbf = be.w0($t.M())), $t.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $t.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return be.BT($t.M(), e, t);
-        }
-        static fromObject(e) {
-          return be.Uq($t.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (Be().BinaryReader)(e),
-            r = new $t();
-          return $t.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return be.zj($t.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (Be().BinaryWriter)();
-          return $t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          be.i0($t.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (Be().BinaryWriter)();
-          return $t.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEcon_GetUserTradeEligibility_Request";
-        }
-      }
       class Kt extends ge.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -7061,6 +7002,66 @@
         serializeBase64String() {
           var e = new (Be().BinaryWriter)();
           return Kt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEcon_GetUserTradeEligibility_Request";
+        }
+      }
+      class $t extends ge.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            $t.prototype.steamid || be.Sg($t.M()),
+            ge.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            $t.sm_m ||
+              ($t.sm_m = {
+                proto: $t,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: be.qM.readFixed64String,
+                    bw: be.gp.writeFixed64String,
+                  },
+                },
+              }),
+            $t.sm_m
+          );
+        }
+        static MBF() {
+          return $t.sm_mbf || ($t.sm_mbf = be.w0($t.M())), $t.sm_mbf;
+        }
+        toObject(e = !1) {
+          return $t.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return be.BT($t.M(), e, t);
+        }
+        static fromObject(e) {
+          return be.Uq($t.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (Be().BinaryReader)(e),
+            r = new $t();
+          return $t.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return be.zj($t.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (Be().BinaryWriter)();
+          return $t.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          be.i0($t.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (Be().BinaryWriter)();
+          return $t.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEcon_CheckTradePartnerTrustworthiness_Request";
@@ -10022,7 +10023,7 @@
       function Lr(e) {
         const { rgAssetProperties: t, appid: r } = e,
           [s, n] = (0, o.useState)(""),
-          [a, l] = (0, o.useState)(
+          [a, c] = (0, o.useState)(
             (function (e) {
               return e
                 ? e.map((e) => ({
@@ -10049,13 +10050,13 @@
                     onUpdate: (e) => {
                       ((e, t) => {
                         const r = a.map((r, i) => (i === e ? t : r));
-                        l(r);
+                        c(r);
                       })(t, e);
                     },
                     onRemove: (e) =>
                       ((e) => {
                         const t = a.slice();
-                        t.splice(e, 1), l(t);
+                        t.splice(e, 1), c(t);
                       })(e),
                   },
                   t,
@@ -10075,7 +10076,7 @@
                     max: null,
                     hide_from_description: !1,
                   }),
-                    l(e);
+                    c(e);
                 },
                 children: "Add Property",
               }),
@@ -10086,7 +10087,7 @@
                 onClick: async () => {
                   n("");
                   const e = new FormData();
-                  e.append("sessionid", N.TS.SESSIONID),
+                  e.append("sessionid", (0, l.KC)()),
                     e.append("asset_properties", JSON.stringify(a));
                   const t = await fetch(
                     `${N.TS.PARTNER_BASE_URL}apps/setassetpropertyschema/${r}`,
@@ -10130,7 +10131,7 @@
               },
             }),
             (0, i.jsx)("div", { children: "Type" }),
-            (0, i.jsx)($r, {
+            (0, i.jsx)(Kr, {
               propertyType: t.type,
               onUpdateType: (e) => {
                 s({ ...t, type: e });
@@ -10173,7 +10174,7 @@
           ],
         });
       }
-      function $r(e) {
+      function Kr(e) {
         const { propertyType: t, onUpdateType: r } = e,
           s = [
             { label: "Integer", data: ye },
@@ -10194,118 +10195,139 @@
         });
       }
       !(function (e) {
-        (e.GetTradePermissionsForApp = function (e, t) {
+        (e.GetTradePermissionsForApp = function (e, t, r) {
           return e.SendMsg(
             "Econ.GetTradePermissionsForApp#1",
-            (0, g.I8)(He, t),
-            $e,
+            (0, g.I8)(He, t, r),
+            Ke,
             { ePrivilege: 1 },
           );
         }),
-          (e.GetEconSummary = function (e, t) {
-            return e.SendMsg("Econ.GetEconSummary#1", (0, g.I8)(Ke, t), Xe, {
+          (e.GetEconSummary = function (e, t, r) {
+            return e.SendMsg("Econ.GetEconSummary#1", (0, g.I8)($e, t, r), Xe, {
               ePrivilege: 0,
             });
           }),
-          (e.GetTopTradePartners = function (e, t) {
+          (e.GetTopTradePartners = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetTopTradePartners#1",
-              (0, g.I8)(Je, t),
+              (0, g.I8)(Je, t, r),
               Qe,
               { ePrivilege: 0 },
             );
           }),
-          (e.SetTradeBanTime = function (e, t) {
-            return e.SendMsg("Econ.SetTradeBanTime#1", (0, g.I8)(Ze, t), Le, {
-              ePrivilege: 2,
-            });
+          (e.SetTradeBanTime = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.SetTradeBanTime#1",
+              (0, g.I8)(Ze, t, r),
+              Le,
+              { ePrivilege: 2 },
+            );
           }),
-          (e.SetForceTradeTrustedTime = function (e, t) {
+          (e.SetForceTradeTrustedTime = function (e, t, r) {
             return e.SendMsg(
               "Econ.SetForceTradeTrustedTime#1",
-              (0, g.I8)(et, t),
+              (0, g.I8)(et, t, r),
               Le,
               { ePrivilege: 0 },
             );
           }),
-          (e.CreateTradeOffer = function (e, t) {
-            return e.SendMsg("Econ.CreateTradeOffer#1", (0, g.I8)(tt, t), it, {
-              ePrivilege: 1,
-            });
+          (e.CreateTradeOffer = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.CreateTradeOffer#1",
+              (0, g.I8)(tt, t, r),
+              it,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.SendGift = function (e, t) {
-            return e.SendMsg("Econ.SendGift#1", (0, g.I8)(st, t), nt, {
+          (e.SendGift = function (e, t, r) {
+            return e.SendMsg("Econ.SendGift#1", (0, g.I8)(st, t, r), nt, {
               ePrivilege: 7,
               eWebAPIKeyRequirement: 5,
             });
           }),
-          (e.GetTradeOffers = function (e, t) {
-            return e.SendMsg("Econ.GetTradeOffers#1", (0, g.I8)(at, t), lt, {
+          (e.GetTradeOffers = function (e, t, r) {
+            return e.SendMsg("Econ.GetTradeOffers#1", (0, g.I8)(at, t, r), lt, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.GetTradeOffer = function (e, t) {
-            return e.SendMsg("Econ.GetTradeOffer#1", (0, g.I8)(Bt, t), _t, {
+          (e.GetTradeOffer = function (e, t, r) {
+            return e.SendMsg("Econ.GetTradeOffer#1", (0, g.I8)(Bt, t, r), _t, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.GetTradeOfferForAnyUser = function (e, t) {
+          (e.GetTradeOfferForAnyUser = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetTradeOfferForAnyUser#1",
-              (0, g.I8)(bt, t),
+              (0, g.I8)(bt, t, r),
               _t,
               { ePrivilege: 0 },
             );
           }),
-          (e.TradeLeftEscrow = function (e, t) {
-            return e.SendMsg("Econ.TradeLeftEscrow#1", (0, g.I8)(ct, t), mt, {
-              ePrivilege: 0,
-            });
+          (e.TradeLeftEscrow = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.TradeLeftEscrow#1",
+              (0, g.I8)(ct, t, r),
+              mt,
+              { ePrivilege: 0 },
+            );
           }),
-          (e.GetTradeHoldDurations = function (e, t) {
+          (e.GetTradeHoldDurations = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetTradeHoldDurations#1",
-              (0, g.I8)(ut, t),
+              (0, g.I8)(ut, t, r),
               dt,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetTradeOfferForConfirmation = function (e, t) {
+          (e.GetTradeOfferForConfirmation = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetTradeOfferForConfirmation#1",
-              (0, g.I8)(pt, t),
+              (0, g.I8)(pt, t, r),
               yt,
               { ePrivilege: 0 },
             );
           }),
-          (e.AcceptTradeOffer = function (e, t) {
-            return e.SendMsg("Econ.AcceptTradeOffer#1", (0, g.I8)(Mt, t), ft, {
-              ePrivilege: 1,
-            });
+          (e.AcceptTradeOffer = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.AcceptTradeOffer#1",
+              (0, g.I8)(Mt, t, r),
+              ft,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.ConfirmTradeOffer = function (e, t) {
-            return e.SendMsg("Econ.ConfirmTradeOffer#1", (0, g.I8)(wt, t), zt, {
-              ePrivilege: 0,
-            });
+          (e.ConfirmTradeOffer = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.ConfirmTradeOffer#1",
+              (0, g.I8)(wt, t, r),
+              zt,
+              { ePrivilege: 0 },
+            );
           }),
-          (e.DeclineTradeOffer = function (e, t) {
-            return e.SendMsg("Econ.DeclineTradeOffer#1", (0, g.I8)(St, t), ht, {
-              ePrivilege: 1,
-            });
+          (e.DeclineTradeOffer = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.DeclineTradeOffer#1",
+              (0, g.I8)(St, t, r),
+              ht,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.CancelTradeOffer = function (e, t) {
-            return e.SendMsg("Econ.CancelTradeOffer#1", (0, g.I8)(Rt, t), jt, {
-              ePrivilege: 1,
-            });
+          (e.CancelTradeOffer = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.CancelTradeOffer#1",
+              (0, g.I8)(Rt, t, r),
+              jt,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.CancelAllTradeOffers = function (e, t) {
+          (e.CancelAllTradeOffers = function (e, t, r) {
             return e.SendMsg(
               "Econ.CancelAllTradeOffers#1",
-              (0, g.I8)(vt, t),
+              (0, g.I8)(vt, t, r),
               Wt,
               { ePrivilege: 2 },
             );
@@ -10317,286 +10339,302 @@
               { ePrivilege: 2 },
             );
           }),
-          (e.IsSafeToCommitTrade = function (e, t) {
+          (e.IsSafeToCommitTrade = function (e, t, r) {
             return e.SendMsg(
               "Econ.IsSafeToCommitTrade#1",
-              (0, g.I8)(Ct, t),
+              (0, g.I8)(Ct, t, r),
               Le,
               { ePrivilege: 0 },
             );
           }),
-          (e.GetTradeOffersSummary = function (e, t) {
+          (e.GetTradeOffersSummary = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetTradeOffersSummary#1",
-              (0, g.I8)(qt, t),
+              (0, g.I8)(qt, t, r),
               Ot,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetTradeHistory = function (e, t) {
-            return e.SendMsg("Econ.GetTradeHistory#1", (0, g.I8)(Ft, t), It, {
+          (e.GetTradeHistory = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.GetTradeHistory#1",
+              (0, g.I8)(Ft, t, r),
+              It,
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
+            );
+          }),
+          (e.GetTradeStatus = function (e, t, r) {
+            return e.SendMsg("Econ.GetTradeStatus#1", (0, g.I8)(Et, t, r), It, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (e.GetTradeStatus = function (e, t) {
-            return e.SendMsg("Econ.GetTradeStatus#1", (0, g.I8)(Et, t), It, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (e.GetProvisionalTradeHistory = function (e, t) {
+          (e.GetProvisionalTradeHistory = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetProvisionalTradeHistory#1",
-              (0, g.I8)(Pt, t),
+              (0, g.I8)(Pt, t, r),
               It,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetInventoryItemsWithDescriptions = function (e, t) {
+          (e.GetInventoryItemsWithDescriptions = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetInventoryItemsWithDescriptions#1",
-              (0, g.I8)(Fe, t),
+              (0, g.I8)(Fe, t, r),
               Ue,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.CanUserTradeWithAnyone = function (e, t) {
+          (e.CanUserTradeWithAnyone = function (e, t, r) {
             return e.SendMsg(
               "Econ.CanUserTradeWithAnyone#1",
-              (0, g.I8)(Gt, t),
+              (0, g.I8)(Gt, t, r),
               kt,
               { ePrivilege: 1 },
             );
           }),
-          (e.CanUserTradeWithPartner = function (e, t) {
+          (e.CanUserTradeWithPartner = function (e, t, r) {
             return e.SendMsg(
               "Econ.CanUserTradeWithPartner#1",
-              (0, g.I8)(Lt, t),
+              (0, g.I8)(Lt, t, r),
               Ht,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetUserTradeEligibility = function (e, t) {
+          (e.GetUserTradeEligibility = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetUserTradeEligibility#1",
-              (0, g.I8)($t, t),
+              (0, g.I8)(Kt, t, r),
               kt,
               { ePrivilege: 0 },
             );
           }),
-          (e.CheckTradePartnerTrustworthiness = function (e, t) {
+          (e.CheckTradePartnerTrustworthiness = function (e, t, r) {
             return e.SendMsg(
               "Econ.CheckTradePartnerTrustworthiness#1",
-              (0, g.I8)(Kt, t),
+              (0, g.I8)($t, t, r),
               Vt,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetTradeOfferAccessToken = function (e, t) {
+          (e.GetTradeOfferAccessToken = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
-              (0, g.I8)(xe, t),
+              (0, g.I8)(xe, t, r),
               Ne,
               { ePrivilege: 1 },
             );
           }),
-          (e.CheckTradeOfferAccessToken = function (e, t) {
+          (e.CheckTradeOfferAccessToken = function (e, t, r) {
             return e.SendMsg(
               "Econ.CheckTradeOfferAccessToken#1",
-              (0, g.I8)(Xt, t),
+              (0, g.I8)(Xt, t, r),
               Jt,
               { ePrivilege: 0 },
             );
           }),
-          (e.FlushInventoryCache = function (e, t) {
+          (e.FlushInventoryCache = function (e, t, r) {
             return e.SendMsg(
               "Econ.FlushInventoryCache#1",
-              (0, g.I8)(Yt, t),
+              (0, g.I8)(Yt, t, r),
               Qt,
               { ePrivilege: 0, eWebAPIKeyRequirement: 5 },
             );
           }),
-          (e.FlushInventoryServiceDBOs = function (e, t) {
+          (e.FlushInventoryServiceDBOs = function (e, t, r) {
             return e.SendMsg(
               "Econ.FlushInventoryServiceDBOs#1",
-              (0, g.I8)(Zt, t),
+              (0, g.I8)(Zt, t, r),
               er,
               { ePrivilege: 0 },
             );
           }),
-          (e.FlushAssetAppearanceCache = function (e, t) {
+          (e.FlushAssetAppearanceCache = function (e, t, r) {
             return e.SendMsg(
               "Econ.FlushAssetAppearanceCache#1",
-              (0, g.I8)(tr, t),
+              (0, g.I8)(tr, t, r),
               rr,
               { ePrivilege: 7, eWebAPIKeyRequirement: 5 },
             );
           }),
-          (e.FlushContextCache = function (e, t) {
-            return e.SendMsg("Econ.FlushContextCache#1", (0, g.I8)(ir, t), sr, {
-              ePrivilege: 7,
-              eWebAPIKeyRequirement: 5,
-            });
+          (e.FlushContextCache = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.FlushContextCache#1",
+              (0, g.I8)(ir, t, r),
+              sr,
+              { ePrivilege: 7, eWebAPIKeyRequirement: 5 },
+            );
           }),
-          (e.GetEconAppSettings = function (e, t) {
+          (e.GetEconAppSettings = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetEconAppSettings#1",
-              (0, g.I8)(nr, t),
+              (0, g.I8)(nr, t, r),
               ar,
               { ePrivilege: 7 },
             );
           }),
-          (e.GetItemShopPartnerToken = function (e, t) {
+          (e.GetItemShopPartnerToken = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetItemShopPartnerToken#1",
-              (0, g.I8)(or, t),
+              (0, g.I8)(or, t, r),
               lr,
               { ePrivilege: 0 },
             );
           }),
-          (e.ClientGetItemShopOverlayAuthURL = function (e, t) {
+          (e.ClientGetItemShopOverlayAuthURL = function (e, t, r) {
             return e.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, g.I8)(De, t),
+              (0, g.I8)(De, t, r),
               Ae,
               { ePrivilege: 1 },
             );
           }),
-          (e.CheckItemShopPartnerHMAC = function (e, t) {
+          (e.CheckItemShopPartnerHMAC = function (e, t, r) {
             return e.SendMsg(
               "Econ.CheckItemShopPartnerHMAC#1",
-              (0, g.I8)(cr, t),
+              (0, g.I8)(cr, t, r),
               mr,
               { ePrivilege: 0 },
             );
           }),
-          (e.StartItemShopTxn = function (e, t) {
-            return e.SendMsg("Econ.StartItemShopTxn#1", (0, g.I8)(ur, t), dr, {
-              ePrivilege: 2,
-            });
+          (e.StartItemShopTxn = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.StartItemShopTxn#1",
+              (0, g.I8)(ur, t, r),
+              dr,
+              { ePrivilege: 2 },
+            );
           }),
-          (e.GetItemShopTxnState = function (e, t) {
+          (e.GetItemShopTxnState = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetItemShopTxnState#1",
-              (0, g.I8)(gr, t),
+              (0, g.I8)(gr, t, r),
               Br,
               { ePrivilege: 2 },
             );
           }),
-          (e.FinishItemShopTxn = function (e, t) {
-            return e.SendMsg("Econ.FinishItemShopTxn#1", (0, g.I8)(br, t), _r, {
-              ePrivilege: 2,
-            });
+          (e.FinishItemShopTxn = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.FinishItemShopTxn#1",
+              (0, g.I8)(br, t, r),
+              _r,
+              { ePrivilege: 2 },
+            );
           }),
-          (e.BuildItemShopReturnURL = function (e, t) {
+          (e.BuildItemShopReturnURL = function (e, t, r) {
             return e.SendMsg(
               "Econ.BuildItemShopReturnURL#1",
-              (0, g.I8)(pr, t),
+              (0, g.I8)(pr, t, r),
               yr,
               { ePrivilege: 2 },
             );
           }),
-          (e.AppSupportsRefund = function (e, t) {
-            return e.SendMsg("Econ.AppSupportsRefund#1", (0, g.I8)(Mr, t), fr, {
-              ePrivilege: 0,
-            });
+          (e.AppSupportsRefund = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.AppSupportsRefund#1",
+              (0, g.I8)(Mr, t, r),
+              fr,
+              { ePrivilege: 0 },
+            );
           }),
-          (e.QueryRefundAllowed = function (e, t) {
+          (e.QueryRefundAllowed = function (e, t, r) {
             return e.SendMsg(
               "Econ.QueryRefundAllowed#1",
-              (0, g.I8)(wr, t),
+              (0, g.I8)(wr, t, r),
               zr,
               { ePrivilege: 0 },
             );
           }),
-          (e.RefundPurchase = function (e, t) {
-            return e.SendMsg("Econ.RefundPurchase#1", (0, g.I8)(hr, t), Rr, {
+          (e.RefundPurchase = function (e, t, r) {
+            return e.SendMsg("Econ.RefundPurchase#1", (0, g.I8)(hr, t, r), Rr, {
               ePrivilege: 0,
             });
           }),
-          (e.GetEligibleOneOffRefunds = function (e, t) {
+          (e.GetEligibleOneOffRefunds = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetEligibleOneOffRefunds#1",
-              (0, g.I8)(jr, t),
+              (0, g.I8)(jr, t, r),
               vr,
               { ePrivilege: 0 },
             );
           }),
-          (e.ProcessOneOffRefund = function (e, t) {
+          (e.ProcessOneOffRefund = function (e, t, r) {
             return e.SendMsg(
               "Econ.ProcessOneOffRefund#1",
-              (0, g.I8)(Tr, t),
+              (0, g.I8)(Tr, t, r),
               Cr,
               { ePrivilege: 0 },
             );
           }),
-          (e.GetAssetClassInfo = function (e, t) {
-            return e.SendMsg("Econ.GetAssetClassInfo#1", (0, g.I8)(Pe, t), Ee, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
+          (e.GetAssetClassInfo = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.GetAssetClassInfo#1",
+              (0, g.I8)(Pe, t, r),
+              Ee,
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
+            );
           }),
-          (e.GetAssetClassInfoInternal = function (e, t) {
+          (e.GetAssetClassInfoInternal = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetAssetClassInfoInternal#1",
-              (0, g.I8)(Pe, t),
+              (0, g.I8)(Pe, t, r),
               Ee,
               { ePrivilege: 0 },
             );
           }),
-          (e.GetAssetClassProperties = function (e, t) {
+          (e.GetAssetClassProperties = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetAssetClassProperties#1",
-              (0, g.I8)(qr, t),
+              (0, g.I8)(qr, t, r),
               Or,
               { ePrivilege: 0 },
             );
           }),
-          (e.RevertTrade = function (e, t) {
-            return e.SendMsg("Econ.RevertTrade#1", (0, g.I8)(Ir, t), Ur, {
+          (e.RevertTrade = function (e, t, r) {
+            return e.SendMsg("Econ.RevertTrade#1", (0, g.I8)(Ir, t, r), Ur, {
               ePrivilege: 1,
             });
           }),
-          (e.RevertAllTrades = function (e, t) {
-            return e.SendMsg("Econ.RevertAllTrades#1", (0, g.I8)(xr, t), Nr, {
-              ePrivilege: 1,
-            });
+          (e.RevertAllTrades = function (e, t, r) {
+            return e.SendMsg(
+              "Econ.RevertAllTrades#1",
+              (0, g.I8)(xr, t, r),
+              Nr,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.ApplyTradeCooldown = function (e, t) {
+          (e.ApplyTradeCooldown = function (e, t, r) {
             return e.SendMsg(
               "Econ.ApplyTradeCooldown#1",
-              (0, g.I8)(Gr, t),
+              (0, g.I8)(Gr, t, r),
               kr,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetAssetPropertySchema = function (e, t) {
+          (e.GetAssetPropertySchema = function (e, t, r) {
             return e.SendMsg(
               "Econ.GetAssetPropertySchema#1",
-              (0, g.I8)(Ce, t),
+              (0, g.I8)(Ce, t, r),
               qe,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.AcknowledgeTradeUI = function (e, t) {
+          (e.AcknowledgeTradeUI = function (e, t, r) {
             return e.SendMsg(
               "Econ.AcknowledgeTradeUI#1",
-              (0, g.I8)(Dr, t),
+              (0, g.I8)(Dr, t, r),
               Ar,
               { ePrivilege: 1 },
             );
           }),
-          (e.NeedTradeUI = function (e, t) {
-            return e.SendMsg("Econ.NeedTradeUI#1", (0, g.I8)(Pr, t), Er, {
+          (e.NeedTradeUI = function (e, t, r) {
+            return e.SendMsg("Econ.NeedTradeUI#1", (0, g.I8)(Pr, t, r), Er, {
               ePrivilege: 1,
             });
           });
       })(ke || (ke = {}));
-      var Kr = r(65038),
+      var $r = r(65038),
         Vr = r(5323);
       const Xr = 1;
       class Jr extends ge.Message {
@@ -11926,68 +11964,68 @@
       }
       var bi, _i, pi, yi, Mi, fi, wi;
       !(function (e) {
-        (e.GetServersForSteamPipe = function (e, t) {
+        (e.GetServersForSteamPipe = function (e, t, r) {
           return e.SendMsg(
             "ContentServerDirectory.GetServersForSteamPipe#1",
-            (0, g.I8)(Qr, t),
+            (0, g.I8)(Qr, t, r),
             Zr,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
           );
         }),
-          (e.GetDepotPatchInfo = function (e, t) {
+          (e.GetDepotPatchInfo = function (e, t, r) {
             return e.SendMsg(
               "ContentServerDirectory.GetDepotPatchInfo#1",
-              (0, g.I8)(ei, t),
+              (0, g.I8)(ei, t, r),
               ti,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetClientUpdateHosts = function (e, t) {
+          (e.GetClientUpdateHosts = function (e, t, r) {
             return e.SendMsg(
               "ContentServerDirectory.GetClientUpdateHosts#1",
-              (0, g.I8)(ri, t),
+              (0, g.I8)(ri, t, r),
               ii,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetManifestRequestCode = function (e, t) {
+          (e.GetManifestRequestCode = function (e, t, r) {
             return e.SendMsg(
               "ContentServerDirectory.GetManifestRequestCode#1",
-              (0, g.I8)(si, t),
+              (0, g.I8)(si, t, r),
               ni,
               { bConstMethod: !0, ePrivilege: 2 },
             );
           }),
-          (e.GetCDNAuthToken = function (e, t) {
+          (e.GetCDNAuthToken = function (e, t, r) {
             return e.SendMsg(
               "ContentServerDirectory.GetCDNAuthToken#1",
-              (0, g.I8)(ai, t),
+              (0, g.I8)(ai, t, r),
               oi,
               { bConstMethod: !0, ePrivilege: 2 },
             );
           }),
-          (e.RequestPeerContentServer = function (e, t) {
+          (e.RequestPeerContentServer = function (e, t, r) {
             return e.SendMsg(
               "ContentServerDirectory.RequestPeerContentServer#1",
-              (0, g.I8)(li, t),
+              (0, g.I8)(li, t, r),
               ci,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetPeerContentInfo = function (e, t) {
+          (e.GetPeerContentInfo = function (e, t, r) {
             return e.SendMsg(
               "ContentServerDirectory.GetPeerContentInfo#1",
-              (0, g.I8)(mi, t),
+              (0, g.I8)(mi, t, r),
               ui,
               { ePrivilege: 1 },
             );
           });
       })(bi || (bi = {})),
         (function (e) {
-          e.GetAllDetectedAppContent = function (e, t) {
+          e.GetAllDetectedAppContent = function (e, t, r) {
             return e.SendMsg(
               "DepotContentDetection.GetAllDetectedAppContent#1",
-              (0, g.I8)(di, t),
+              (0, g.I8)(di, t, r),
               Bi,
               { bConstMethod: !0, ePrivilege: 4 },
             );
@@ -13455,70 +13493,12 @@
           return "CContentServerConfig_UpdateCDNPerformanceStats_Response";
         }
       }
-      class $i extends ge.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            $i.prototype.stats || be.Sg($i.M()),
-            ge.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            $i.sm_m ||
-              ($i.sm_m = {
-                proto: $i,
-                fields: {
-                  stats: { n: 1, c: Ki, r: !0, q: !0 },
-                  cdn_stats: { n: 2, c: Vi, r: !0, q: !0 },
-                  steamcache_stats: { n: 3, c: Xi, r: !0, q: !0 },
-                },
-              }),
-            $i.sm_m
-          );
-        }
-        static MBF() {
-          return $i.sm_mbf || ($i.sm_mbf = be.w0($i.M())), $i.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $i.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return be.BT($i.M(), e, t);
-        }
-        static fromObject(e) {
-          return be.Uq($i.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (Be().BinaryReader)(e),
-            r = new $i();
-          return $i.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return be.zj($i.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (Be().BinaryWriter)();
-          return $i.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          be.i0($i.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (Be().BinaryWriter)();
-          return $i.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CContentServerConfig_ContentServerStats_Notification";
-        }
-      }
       class Ki extends ge.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ki.prototype.cs_id || be.Sg(Ki.M()),
-            ge.Message.initialize(this, e, 0, -1, void 0, null);
+            Ki.prototype.stats || be.Sg(Ki.M()),
+            ge.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13528,17 +13508,9 @@
               (Ki.sm_m = {
                 proto: Ki,
                 fields: {
-                  cs_id: { n: 1, br: be.qM.readUint32, bw: be.gp.writeUint32 },
-                  current_load: {
-                    n: 2,
-                    br: be.qM.readUint32,
-                    bw: be.gp.writeUint32,
-                  },
-                  rtime_last_updated: {
-                    n: 3,
-                    br: be.qM.readUint32,
-                    bw: be.gp.writeUint32,
-                  },
+                  stats: { n: 1, c: $i, r: !0, q: !0 },
+                  cdn_stats: { n: 2, c: Vi, r: !0, q: !0 },
+                  steamcache_stats: { n: 3, c: Xi, r: !0, q: !0 },
                 },
               }),
             Ki.sm_m
@@ -13574,6 +13546,72 @@
         serializeBase64String() {
           var e = new (Be().BinaryWriter)();
           return Ki.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentServerConfig_ContentServerStats_Notification";
+        }
+      }
+      class $i extends ge.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            $i.prototype.cs_id || be.Sg($i.M()),
+            ge.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            $i.sm_m ||
+              ($i.sm_m = {
+                proto: $i,
+                fields: {
+                  cs_id: { n: 1, br: be.qM.readUint32, bw: be.gp.writeUint32 },
+                  current_load: {
+                    n: 2,
+                    br: be.qM.readUint32,
+                    bw: be.gp.writeUint32,
+                  },
+                  rtime_last_updated: {
+                    n: 3,
+                    br: be.qM.readUint32,
+                    bw: be.gp.writeUint32,
+                  },
+                },
+              }),
+            $i.sm_m
+          );
+        }
+        static MBF() {
+          return $i.sm_mbf || ($i.sm_mbf = be.w0($i.M())), $i.sm_mbf;
+        }
+        toObject(e = !1) {
+          return $i.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return be.BT($i.M(), e, t);
+        }
+        static fromObject(e) {
+          return be.Uq($i.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (Be().BinaryReader)(e),
+            r = new $i();
+          return $i.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return be.zj($i.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (Be().BinaryWriter)();
+          return $i.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          be.i0($i.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (Be().BinaryWriter)();
+          return $i.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CContentServerConfig_ContentServerStats_Notification_Stats";
@@ -16720,7 +16758,7 @@
             Hs.sm_m ||
               (Hs.sm_m = {
                 proto: Hs,
-                fields: { history: { n: 1, c: $s, r: !0, q: !0 } },
+                fields: { history: { n: 1, c: Ks, r: !0, q: !0 } },
               }),
             Hs.sm_m
           );
@@ -16760,20 +16798,20 @@
           return "CContentServerConfig_GetOpenCacheConfigHistory_Response";
         }
       }
-      class $s extends ge.Message {
+      class Ks extends ge.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $s.prototype.timestamp || be.Sg($s.M()),
+            Ks.prototype.timestamp || be.Sg(Ks.M()),
             ge.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            $s.sm_m ||
-              ($s.sm_m = {
-                proto: $s,
+            Ks.sm_m ||
+              (Ks.sm_m = {
+                proto: Ks,
                 fields: {
                   timestamp: {
                     n: 1,
@@ -16790,72 +16828,6 @@
                     br: be.qM.readString,
                     bw: be.gp.writeString,
                   },
-                },
-              }),
-            $s.sm_m
-          );
-        }
-        static MBF() {
-          return $s.sm_mbf || ($s.sm_mbf = be.w0($s.M())), $s.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $s.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return be.BT($s.M(), e, t);
-        }
-        static fromObject(e) {
-          return be.Uq($s.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (Be().BinaryReader)(e),
-            r = new $s();
-          return $s.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return be.zj($s.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (Be().BinaryWriter)();
-          return $s.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          be.i0($s.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (Be().BinaryWriter)();
-          return $s.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CContentServerConfig_GetOpenCacheConfigHistory_Response_HistoryEntry";
-        }
-      }
-      class Ks extends ge.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ks.prototype.cache_id || be.Sg(Ks.M()),
-            ge.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ks.sm_m ||
-              (Ks.sm_m = {
-                proto: Ks,
-                fields: {
-                  cache_id: {
-                    n: 1,
-                    br: be.qM.readUint32,
-                    bw: be.gp.writeUint32,
-                  },
-                  change_notes: {
-                    n: 2,
-                    br: be.qM.readString,
-                    bw: be.gp.writeString,
-                  },
-                  config: { n: 3, c: Ds },
                 },
               }),
             Ks.sm_m
@@ -16891,6 +16863,72 @@
         serializeBase64String() {
           var e = new (Be().BinaryWriter)();
           return Ks.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentServerConfig_GetOpenCacheConfigHistory_Response_HistoryEntry";
+        }
+      }
+      class $s extends ge.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            $s.prototype.cache_id || be.Sg($s.M()),
+            ge.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            $s.sm_m ||
+              ($s.sm_m = {
+                proto: $s,
+                fields: {
+                  cache_id: {
+                    n: 1,
+                    br: be.qM.readUint32,
+                    bw: be.gp.writeUint32,
+                  },
+                  change_notes: {
+                    n: 2,
+                    br: be.qM.readString,
+                    bw: be.gp.writeString,
+                  },
+                  config: { n: 3, c: Ds },
+                },
+              }),
+            $s.sm_m
+          );
+        }
+        static MBF() {
+          return $s.sm_mbf || ($s.sm_mbf = be.w0($s.M())), $s.sm_mbf;
+        }
+        toObject(e = !1) {
+          return $s.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return be.BT($s.M(), e, t);
+        }
+        static fromObject(e) {
+          return be.Uq($s.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (Be().BinaryReader)(e),
+            r = new $s();
+          return $s.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return be.zj($s.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (Be().BinaryWriter)();
+          return $s.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          be.i0($s.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (Be().BinaryWriter)();
+          return $s.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CContentServerConfig_UpdateOpenCacheConfig_Request";
@@ -18620,10 +18658,10 @@
         }
       }
       !(function (e) {
-        e.SetAppBuildLiveConfirmed = function (e, t) {
+        e.SetAppBuildLiveConfirmed = function (e, t, r) {
           return e.SendMsg(
             "BuildManagement.SetAppBuildLiveConfirmed#1",
-            (0, g.I8)(bn, t),
+            (0, g.I8)(bn, t, r),
             _n,
             { ePrivilege: 1 },
           );
@@ -18651,18 +18689,18 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.RequestAppContentPurge = function (e, t) {
+            (e.RequestAppContentPurge = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.RequestAppContentPurge#1",
-                (0, g.I8)(hi, t),
+                (0, g.I8)(hi, t, r),
                 Ri,
                 { ePrivilege: 5 },
               );
             }),
-            (e.GetAppContentPurgeStatus = function (e, t) {
+            (e.GetAppContentPurgeStatus = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.GetAppContentPurgeStatus#1",
-                (0, g.I8)(ji, t),
+                (0, g.I8)(ji, t, r),
                 vi,
                 { ePrivilege: 1 },
               );
@@ -18695,42 +18733,42 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetDepotDownloadBytes = function (e, t) {
+            (e.GetDepotDownloadBytes = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.GetDepotDownloadBytes#1",
-                (0, g.I8)(sn, t),
+                (0, g.I8)(sn, t, r),
                 nn,
                 { ePrivilege: 1 },
               );
             }),
-            (e.BeginOriginMigrationJob = function (e, t) {
+            (e.BeginOriginMigrationJob = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.BeginOriginMigrationJob#1",
-                (0, g.I8)(an, t),
+                (0, g.I8)(an, t, r),
                 on,
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetDepotChunkLocation = function (e, t) {
+            (e.GetDepotChunkLocation = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.GetDepotChunkLocation#1",
-                (0, g.I8)(ln, t),
+                (0, g.I8)(ln, t, r),
                 cn,
                 { ePrivilege: 1 },
               );
             }),
-            (e.SetAppBuildSortOrder = function (e, t) {
+            (e.SetAppBuildSortOrder = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.SetAppBuildSortOrder#1",
-                (0, g.I8)(mn, t),
+                (0, g.I8)(mn, t, r),
                 un,
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetManifestAppBranchInfo = function (e, t) {
+            (e.GetManifestAppBranchInfo = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.GetManifestAppBranchInfo#1",
-                (0, g.I8)(dn, t),
+                (0, g.I8)(dn, t, r),
                 gn,
                 { ePrivilege: 1 },
               );
@@ -18742,18 +18780,21 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.ChunkReceived = function (e, t) {
+            (e.ChunkReceived = function (e, t, r) {
               return e.SendMsg(
                 "MDSAdmin.ChunkReceived#1",
-                (0, g.I8)(Fi, t),
+                (0, g.I8)(Fi, t, r),
                 Ii,
                 { ePrivilege: 1 },
               );
             }),
-            (e.ChunkStored = function (e, t) {
-              return e.SendMsg("MDSAdmin.ChunkStored#1", (0, g.I8)(Ui, t), xi, {
-                ePrivilege: 1,
-              });
+            (e.ChunkStored = function (e, t, r) {
+              return e.SendMsg(
+                "MDSAdmin.ChunkStored#1",
+                (0, g.I8)(Ui, t, r),
+                xi,
+                { ePrivilege: 1 },
+              );
             }),
             (e.ChunkStorageFailure = function (e, t) {
               return e.SendNotification(
@@ -18764,26 +18805,26 @@
             });
         })(yi || (yi = {})),
         (function (e) {
-          (e.GetCDNConfigurations = function (e, t) {
+          (e.GetCDNConfigurations = function (e, t, r) {
             return e.SendMsg(
               "ContentServerConfig.GetCDNConfigurations#1",
-              (0, g.I8)(Di, t),
+              (0, g.I8)(Di, t, r),
               Ei,
               { ePrivilege: 1 },
             );
           }),
-            (e.UpdateCDNConfig = function (e, t) {
+            (e.UpdateCDNConfig = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.UpdateCDNConfig#1",
-                (0, g.I8)(Gi, t),
+                (0, g.I8)(Gi, t, r),
                 ki,
                 { ePrivilege: 1 },
               );
             }),
-            (e.UpdateCDNStats = function (e, t) {
+            (e.UpdateCDNStats = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.UpdateCDNStats#1",
-                (0, g.I8)(Li, t),
+                (0, g.I8)(Li, t, r),
                 Hi,
                 { ePrivilege: 1 },
               );
@@ -18791,7 +18832,7 @@
             (e.ContentServerStatsBroadcast = function (e, t) {
               return e.SendNotification(
                 "ContentServerConfig.ContentServerStatsBroadcast#1",
-                (0, g.I8)($i, t),
+                (0, g.I8)(Ki, t),
                 { ePrivilege: 1 },
               );
             }),
@@ -18802,18 +18843,18 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetSteamCSConfig = function (e, t) {
+            (e.GetSteamCSConfig = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetSteamCSConfig#1",
-                (0, g.I8)(os, t),
+                (0, g.I8)(os, t, r),
                 ls,
                 { ePrivilege: 1 },
               );
             }),
-            (e.UpdateSteamCSConfig = function (e, t) {
+            (e.UpdateSteamCSConfig = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.UpdateSteamCSConfig#1",
-                (0, g.I8)(gs, t),
+                (0, g.I8)(gs, t, r),
                 Bs,
                 { ePrivilege: 4 },
               );
@@ -18825,18 +18866,18 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetSteamCSConfigHistory = function (e, t) {
+            (e.GetSteamCSConfigHistory = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetSteamCSConfigHistory#1",
-                (0, g.I8)(ms, t),
+                (0, g.I8)(ms, t, r),
                 us,
                 { ePrivilege: 4 },
               );
             }),
-            (e.UpdateCSIPFilterRanges = function (e, t) {
+            (e.UpdateCSIPFilterRanges = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.UpdateCSIPFilterRanges#1",
-                (0, g.I8)(cs, t),
+                (0, g.I8)(cs, t, r),
                 _s,
                 { ePrivilege: 1 },
               );
@@ -18848,34 +18889,34 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetSteamCSNames = function (e, t) {
+            (e.GetSteamCSNames = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetSteamCSNames#1",
-                (0, g.I8)(ps, t),
+                (0, g.I8)(ps, t, r),
                 ys,
                 { ePrivilege: 1 },
               );
             }),
-            (e.AllocateSteamCacheNode = function (e, t) {
+            (e.AllocateSteamCacheNode = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.AllocateSteamCacheNode#1",
-                (0, g.I8)(fs, t),
+                (0, g.I8)(fs, t, r),
                 ws,
                 { ePrivilege: 2, eWebAPIKeyRequirement: 4 },
               );
             }),
-            (e.GetSteamCacheConfig = function (e, t) {
+            (e.GetSteamCacheConfig = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetSteamCacheConfig#1",
-                (0, g.I8)(js, t),
+                (0, g.I8)(js, t, r),
                 vs,
                 { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 4 },
               );
             }),
-            (e.UpdateSteamCacheConfig = function (e, t) {
+            (e.UpdateSteamCacheConfig = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.UpdateSteamCacheConfig#1",
-                (0, g.I8)(qs, t),
+                (0, g.I8)(qs, t, r),
                 Os,
                 { ePrivilege: 2, eWebAPIKeyRequirement: 4 },
               );
@@ -18887,50 +18928,50 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.RevSteamCacheAPIKey = function (e, t) {
+            (e.RevSteamCacheAPIKey = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.RevSteamCacheAPIKey#1",
-                (0, g.I8)(Is, t),
+                (0, g.I8)(Is, t, r),
                 Us,
                 { ePrivilege: 4 },
               );
             }),
-            (e.GetSteamCacheConfigHistory = function (e, t) {
+            (e.GetSteamCacheConfigHistory = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetSteamCacheConfigHistory#1",
-                (0, g.I8)(Ws, t),
+                (0, g.I8)(Ws, t, r),
                 Ts,
                 { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 4 },
               );
             }),
-            (e.GetSteamCacheNames = function (e, t) {
+            (e.GetSteamCacheNames = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetSteamCacheNames#1",
-                (0, g.I8)(Ss, t),
+                (0, g.I8)(Ss, t, r),
                 hs,
                 { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 4 },
               );
             }),
-            (e.AllocateOpenCacheNode = function (e, t) {
+            (e.AllocateOpenCacheNode = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.AllocateOpenCacheNode#1",
-                (0, g.I8)(xs, t),
+                (0, g.I8)(xs, t, r),
                 Ns,
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetOpenCacheConfig = function (e, t) {
+            (e.GetOpenCacheConfig = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetOpenCacheConfig#1",
-                (0, g.I8)(Gs, t),
+                (0, g.I8)(Gs, t, r),
                 ks,
                 { ePrivilege: 1 },
               );
             }),
-            (e.UpdateOpenCacheConfig = function (e, t) {
+            (e.UpdateOpenCacheConfig = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.UpdateOpenCacheConfig#1",
-                (0, g.I8)(Ks, t),
+                (0, g.I8)($s, t, r),
                 Vs,
                 { ePrivilege: 4 },
               );
@@ -18942,158 +18983,158 @@
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetOpenCacheConfigHistory = function (e, t) {
+            (e.GetOpenCacheConfigHistory = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetOpenCacheConfigHistory#1",
-                (0, g.I8)(Ls, t),
+                (0, g.I8)(Ls, t, r),
                 Hs,
                 { ePrivilege: 4 },
               );
             }),
-            (e.GetOpenCacheNames = function (e, t) {
+            (e.GetOpenCacheNames = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetOpenCacheNames#1",
-                (0, g.I8)(As, t),
+                (0, g.I8)(As, t, r),
                 Ps,
                 { ePrivilege: 1 },
               );
             }),
-            (e.SetSteamCacheClientFilters = function (e, t) {
+            (e.SetSteamCacheClientFilters = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.SetSteamCacheClientFilters#1",
-                (0, g.I8)(Js, t),
+                (0, g.I8)(Js, t, r),
                 Ys,
                 { ePrivilege: 0, eWebAPIKeyRequirement: 2 },
               );
             }),
-            (e.SetSteamCachePerformanceStats = function (e, t) {
+            (e.SetSteamCachePerformanceStats = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.SetSteamCachePerformanceStats#1",
-                (0, g.I8)(Qs, t),
+                (0, g.I8)(Qs, t, r),
                 Zs,
                 { ePrivilege: 0, eWebAPIKeyRequirement: 2 },
               );
             }),
-            (e.GetSteamCacheNodeParams = function (e, t) {
+            (e.GetSteamCacheNodeParams = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetSteamCacheNodeParams#1",
-                (0, g.I8)(en, t),
+                (0, g.I8)(en, t, r),
                 tn,
                 { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 2 },
               );
             }),
-            (e.CheckManifestRequestCode = function (e, t) {
+            (e.CheckManifestRequestCode = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.CheckManifestRequestCode#1",
-                (0, g.I8)(Zi, t),
+                (0, g.I8)(Zi, t, r),
                 es,
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetManifestRequestCode = function (e, t) {
+            (e.GetManifestRequestCode = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.GetManifestRequestCode#1",
-                (0, g.I8)(ts, t),
+                (0, g.I8)(ts, t, r),
                 rs,
                 { ePrivilege: 1 },
               );
             }),
-            (e.IsDepotAllowedSteamChina = function (e, t) {
+            (e.IsDepotAllowedSteamChina = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerConfig.IsDepotAllowedSteamChina#1",
-                (0, g.I8)(is, t),
+                (0, g.I8)(is, t, r),
                 ss,
                 { ePrivilege: 1 },
               );
             });
         })(Mi || (Mi = {})),
         (function (e) {
-          (e.GetCDNForVideo = function (e, t) {
+          (e.GetCDNForVideo = function (e, t, r) {
             return e.SendMsg(
               "ContentServerDirectory.GetCDNForVideo#1",
-              (0, g.I8)(pn, t),
+              (0, g.I8)(pn, t, r),
               yn,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-            (e.PickSingleContentServer = function (e, t) {
+            (e.PickSingleContentServer = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.PickSingleContentServer#1",
-                (0, g.I8)(Mn, t),
+                (0, g.I8)(Mn, t, r),
                 fn,
                 { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
               );
             }),
-            (e.GetServersForSteamPipe = function (e, t) {
+            (e.GetServersForSteamPipe = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.GetServersForSteamPipe#1",
-                (0, g.I8)(Qr, t),
+                (0, g.I8)(Qr, t, r),
                 Zr,
                 { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
               );
             }),
-            (e.GetDepotPatchInfo = function (e, t) {
+            (e.GetDepotPatchInfo = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.GetDepotPatchInfo#1",
-                (0, g.I8)(ei, t),
+                (0, g.I8)(ei, t, r),
                 ti,
                 { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
               );
             }),
-            (e.GetClientUpdateHosts = function (e, t) {
+            (e.GetClientUpdateHosts = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.GetClientUpdateHosts#1",
-                (0, g.I8)(ri, t),
+                (0, g.I8)(ri, t, r),
                 ii,
                 { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
               );
             }),
-            (e.GetManifestRequestCode = function (e, t) {
+            (e.GetManifestRequestCode = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.GetManifestRequestCode#1",
-                (0, g.I8)(si, t),
+                (0, g.I8)(si, t, r),
                 ni,
                 { bConstMethod: !0, ePrivilege: 2 },
               );
             }),
-            (e.GetCDNAuthToken = function (e, t) {
+            (e.GetCDNAuthToken = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.GetCDNAuthToken#1",
-                (0, g.I8)(ai, t),
+                (0, g.I8)(ai, t, r),
                 oi,
                 { bConstMethod: !0, ePrivilege: 2 },
               );
             }),
-            (e.RequestPeerContentServer = function (e, t) {
+            (e.RequestPeerContentServer = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.RequestPeerContentServer#1",
-                (0, g.I8)(li, t),
+                (0, g.I8)(li, t, r),
                 ci,
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetPeerContentInfo = function (e, t) {
+            (e.GetPeerContentInfo = function (e, t, r) {
               return e.SendMsg(
                 "ContentServerDirectory.GetPeerContentInfo#1",
-                (0, g.I8)(mi, t),
+                (0, g.I8)(mi, t, r),
                 ui,
                 { ePrivilege: 1 },
               );
             });
         })(fi || (fi = {})),
         (function (e) {
-          (e.GetAllDetectedAppContent = function (e, t) {
+          (e.GetAllDetectedAppContent = function (e, t, r) {
             return e.SendMsg(
               "DepotContentDetection.GetAllDetectedAppContent#1",
-              (0, g.I8)(di, t),
+              (0, g.I8)(di, t, r),
               Bi,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-            (e.GetDetectedContentSingleApp = function (e, t) {
+            (e.GetDetectedContentSingleApp = function (e, t, r) {
               return e.SendMsg(
                 "DepotContentDetection.GetDetectedContentSingleApp#1",
-                (0, g.I8)(wn, t),
+                (0, g.I8)(wn, t, r),
                 zn,
                 { bConstMethod: !0, ePrivilege: 7 },
               );
@@ -19195,14 +19236,14 @@
       function vn(e) {
         const { checked: t } = e;
         return (0, i.jsxs)("div", {
-          className: Kr.DXVCNotice,
+          className: $r.DXVCNotice,
           children: [
-            !t && (0, i.jsx)("div", { className: Kr.DXVCNoticeIconUnchecked }),
-            t && (0, i.jsx)("div", { className: Kr.DXVCNoticeIconChecked }),
+            !t && (0, i.jsx)("div", { className: $r.DXVCNoticeIconUnchecked }),
+            t && (0, i.jsx)("div", { className: $r.DXVCNoticeIconChecked }),
             (0, i.jsx)("div", {
               className: hn()(
-                Kr.DXVCNoticeText,
-                t ? Kr.DXVCNoticeTextChecked : Kr.DXVCNoticeTextUnchecked,
+                $r.DXVCNoticeText,
+                t ? $r.DXVCNoticeTextChecked : $r.DXVCNoticeTextUnchecked,
               ),
               children: (0, m.we)(
                 "#StoreAdmin_Game_Engine_Requires_DirectX_VC",
@@ -19389,7 +19430,7 @@
       (0, xn.Cg)([Nn.sH], Hn.prototype, "m_currentImageOptionKey", void 0),
         (0, xn.Cg)([Nn.EW], Hn.prototype, "ImageOptions", null),
         (0, xn.Cg)([Nn.XI], Hn.prototype, "SetCurrentImageOption", null);
-      class $n extends An.Vr {
+      class Kn extends An.Vr {
         m_filesToUpload = Nn.sH.array();
         m_strUploadPath = null;
         m_bSynchronousUpload = !1;
@@ -19466,8 +19507,7 @@
         async UploadSingleImage(e, t, r, i) {
           let s = null;
           const n = new FormData();
-          n.append("assetfile", e.file, t),
-            n.append("sessionid", N.TS.SESSIONID);
+          n.append("assetfile", e.file, t), n.append("sessionid", (0, l.KC)());
           const a = e.GetCurrentImageOption();
           n.append("strAssetType", a.asset_type);
           if (!(0, Gn.ab)(t))
@@ -19495,12 +19535,12 @@
             : { bSuccess: !0, result: s?.data };
         }
       }
-      (0, xn.Cg)([Nn.sH], $n.prototype, "m_filesToUpload", void 0),
-        (0, xn.Cg)([Dn.o], $n.prototype, "GetUploadImages", null),
-        (0, xn.Cg)([Dn.o], $n.prototype, "ClearImages", null),
-        (0, xn.Cg)([Dn.o], $n.prototype, "DeleteUploadImage", null),
-        (0, xn.Cg)([Dn.o], $n.prototype, "AddImageForLanguage", null);
-      var Kn = r(42027),
+      (0, xn.Cg)([Nn.sH], Kn.prototype, "m_filesToUpload", void 0),
+        (0, xn.Cg)([Dn.o], Kn.prototype, "GetUploadImages", null),
+        (0, xn.Cg)([Dn.o], Kn.prototype, "ClearImages", null),
+        (0, xn.Cg)([Dn.o], Kn.prototype, "DeleteUploadImage", null),
+        (0, xn.Cg)([Dn.o], Kn.prototype, "AddImageForLanguage", null);
+      var $n = r(42027),
         Vn = r(2160);
       function Xn(e) {
         const { appID: t, unItemType: r, rgAssetDefinitions: s } = e,
@@ -19508,10 +19548,10 @@
             const e =
               R.TS.PARTNER_BASE_URL +
               `communityitems/ajaxuploadasset/${t}/${r}`;
-            return new $n(e, !0, s);
+            return new Kn(e, !0, s);
           }, [t, r, s]);
         return (0, i.jsx)("div", {
-          children: (0, i.jsx)(Kn.O9, {
+          children: (0, i.jsx)($n.O9, {
             elOverrideDragAndDropText: (0, m.we)(
               "#CommunityItems_Upload_Instructions",
             ),
@@ -19681,7 +19721,7 @@
               queryFn: async () => {
                 const r = `${N.TS.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${e}/${t}`,
                   i = new FormData();
-                i.append("sessionid", N.TS.SESSIONID);
+                i.append("sessionid", (0, Fn.KC)());
                 const s = await U().post(r, i, { withCredentials: !0 });
                 return 200 == s?.status && s.data?.success == F.R
                   ? s.data.def

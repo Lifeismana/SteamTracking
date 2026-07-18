@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "ไม่มีรายการขายนี้อยู่อีกต่อไป",
     "Listing_NotAvailable_Short": "ไม่มี",
     "Listing_NotAvailable_Long": "ไม่สามารถสั่งซื้อรายการขายนี้ได้อีกต่อไป",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(รายการของฉัน)",
     "BuyOrderDialog_Header": "ซื้อ - %1$s",
     "BuyOrderDialog_Header_NoItem": "วางคำสั่งซื้อ",
     "BuyOrderDialog_BucketPicker_Label": "คุณต้องการซื้อผลิตภัณฑ์ประเภทใด?",

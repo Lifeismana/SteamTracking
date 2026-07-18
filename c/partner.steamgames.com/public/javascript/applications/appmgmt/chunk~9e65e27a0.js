@@ -58,6 +58,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_rtStartTime;
@@ -140,7 +141,7 @@
           let _;
           try {
             const _ = new FormData();
-            __webpack_require__.append("sessionid", _._.SESSIONID),
+            __webpack_require__.append("sessionid", (0, _._)()),
               __webpack_require__.append("rgAppIDs", _.join(",")),
               __webpack_require__.append("rtimeStart", "" + this.m_rtStartTime),
               __webpack_require__.append("rtimeEnd", "" + this.m_rtEndTime);
@@ -235,7 +236,7 @@
             "admin/store/contenthub/ajaxgetcontenthubcategorieskv",
           _ = {
             origin: self.origin,
-            sessionid: _._.SESSIONID,
+            sessionid: (0, _._)(),
           };
         let _ = null;
         try {
@@ -379,7 +380,7 @@
             _._.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
           _ = new FormData();
-        _.append("sessionid", _._.SESSIONID),
+        _.append("sessionid", (0, _._)()),
           _.append("origin", self.origin),
           _.append("json", JSON.stringify(_));
         let _ = null;
@@ -401,7 +402,7 @@
             "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
           _ = {
             origin: self.origin,
-            sessionid: _._.SESSIONID,
+            sessionid: (0, _._)(),
           };
         try {
           const _ = await _().get(_, {
@@ -461,7 +462,7 @@
               "admin/store/contenthub/ajaxgetstoretagsandcategories",
             _ = {
               origin: self.origin,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               _: _._.LANGUAGE,
             };
           let _ = null;
@@ -563,6 +564,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -690,7 +692,7 @@
           const _ = {
               rtStartTime: this.m_appAndPackagesSummuries.GetRTStartTime(),
               rtEndTime: this.m_appAndPackagesSummuries.GetRTEndTime(),
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             },
             _ = `${_._.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats`,
             _ = await _().get(_, {
@@ -755,7 +757,7 @@
               appCount: _,
             },
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append(
               "rtStartTime",
               "" + this.m_appAndPackagesSummuries.GetRTStartTime(),
@@ -796,7 +798,7 @@
             const _ = {
                 contenthubcategorytype: _.type,
                 handle: _.handle,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = `${_._.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary`,
               _ = await _().get(_, {
@@ -855,7 +857,7 @@
                   musthaveall: _,
                   musthaveany: _,
                   mustnothaveany: _,
-                  sessionid: _._.SESSIONID,
+                  sessionid: (0, _._)(),
                 },
                 _ = `${_._.PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist`,
                 _ = await _().get(_, {
@@ -923,7 +925,7 @@
                 const _ = {
                     contenthubcategorytype: _.type,
                     handle: _.handle,
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                   },
                   _ = `${_._.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist`,
                   _ = await _().get(_, {

@@ -6,7 +6,7 @@
   [7368],
   {
     29197: (e, t, r) => {
-      r.d(t, { FF: () => b, oH: () => h, Wv: () => i });
+      r.d(t, { FF: () => b, oH: () => S, Wv: () => i });
       var i = {};
       r.r(i),
         r.d(i, {
@@ -467,7 +467,7 @@
               (z.sm_m = {
                 proto: z,
                 fields: {
-                  matches: { n: 1, c: S, r: !0, q: !0 },
+                  matches: { n: 1, c: h, r: !0, q: !0 },
                   num_total_results: {
                     n: 2,
                     br: n.qM.readUint32,
@@ -518,20 +518,20 @@
           return "CClan_GetPartnerEventsByBuildIDRange_Response";
         }
       }
-      class S extends a.Message {
+      class h extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            S.prototype.appid || n.Sg(S.M()),
+            h.prototype.appid || n.Sg(h.M()),
             a.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
                 fields: {
                   appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
                   build_id: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
@@ -548,68 +548,71 @@
                   },
                 },
               }),
-            S.sm_m
+            h.sm_m
           );
         }
         static MBF() {
-          return S.sm_mbf || (S.sm_mbf = n.w0(S.M())), S.sm_mbf;
+          return h.sm_mbf || (h.sm_mbf = n.w0(h.M())), h.sm_mbf;
         }
         toObject(e = !1) {
-          return S.toObject(e, this);
+          return h.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(S.M(), e, t);
+          return n.BT(h.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(S.M(), e);
+          return n.Uq(h.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (s().BinaryReader)(e),
-            r = new S();
-          return S.deserializeBinaryFromReader(r, t);
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(S.MBF(), e, t);
+          return n.zj(h.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (s().BinaryWriter)();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(S.M(), e, t);
+          n.i0(h.M(), e, t);
         }
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClan_GetPartnerEventsByBuildIDRange_Response_PatchNotesDesc";
         }
       }
-      var h;
+      var S;
       !(function (e) {
-        (e.RespondToClanInvite = function (e, t) {
-          return e.SendMsg("Clan.RespondToClanInvite#1", (0, o.I8)(g, t), B, {
-            ePrivilege: 1,
-          });
+        (e.RespondToClanInvite = function (e, t, r) {
+          return e.SendMsg(
+            "Clan.RespondToClanInvite#1",
+            (0, o.I8)(g, t, r),
+            B,
+            { ePrivilege: 1 },
+          );
         }),
-          (e.GetDraftAndRecentPartnerEventSnippet = function (e, t) {
+          (e.GetDraftAndRecentPartnerEventSnippet = function (e, t, r) {
             return e.SendMsg(
               "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, o.I8)(b, t),
+              (0, o.I8)(b, t, r),
               y,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetPartnerEventsByBuildIDRange = function (e, t) {
+          (e.GetPartnerEventsByBuildIDRange = function (e, t, r) {
             return e.SendMsg(
               "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, o.I8)(w, t),
+              (0, o.I8)(w, t, r),
               z,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
             );
           });
-      })(h || (h = {}));
+      })(S || (S = {}));
     },
     29020: (e, t, r) => {
       r.d(t, {
@@ -1150,34 +1153,34 @@
         }
       }
       !(function (e) {
-        (e.SetDevPageLink = function (e, t) {
+        (e.SetDevPageLink = function (e, t, r) {
           return e.SendMsg(
             "StoreCatalog.SetDevPageLink#1",
-            (0, o.I8)(m, t),
+            (0, o.I8)(m, t, r),
             c,
             { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
           );
         }),
-          (e.GetDevPageLinks = function (e, t) {
+          (e.GetDevPageLinks = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageLinks#1",
-              (0, o.I8)(u, t),
+              (0, o.I8)(u, t, r),
               d,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
-          (e.GetDevPageAllAppsLinked = function (e, t) {
+          (e.GetDevPageAllAppsLinked = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageAllAppsLinked#1",
-              (0, o.I8)(_, t),
+              (0, o.I8)(_, t, r),
               p,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetDevPagesForPartner = function (e, t) {
+          (e.GetDevPagesForPartner = function (e, t, r) {
             return e.SendMsg(
               "StoreCatalog.GetDevPagesForPartner#1",
-              (0, o.I8)(g, t),
+              (0, o.I8)(g, t, r),
               B,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -1859,17 +1862,17 @@
       }
       var b;
       !(function (e) {
-        (e.GetLists = function (e, t) {
-          return e.SendMsg("StoreCuration.GetLists#1", (0, o.I8)(_, t), p, {
+        (e.GetLists = function (e, t, r) {
+          return e.SendMsg("StoreCuration.GetLists#1", (0, o.I8)(_, t, r), p, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (e.GetListDetails = function (e, t) {
+          (e.GetListDetails = function (e, t, r) {
             return e.SendMsg(
               "StoreCuration.GetListDetails#1",
-              (0, o.I8)(g, t),
+              (0, o.I8)(g, t, r),
               B,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -2031,7 +2034,7 @@
             i & u.Wv.Jn && s.push(u.Wv.Jn),
             i & u.Wv.Mv && s.push(u.Wv.Mv);
           let n = new FormData();
-          n.append("sessionid", d.TS.SESSIONID),
+          n.append("sessionid", (0, d.KC)()),
             n.append("clan_account_id", this.GetClanAccountID().toString()),
             n.append("accountflags", JSON.stringify(s));
           let o = await m().post(r, n);

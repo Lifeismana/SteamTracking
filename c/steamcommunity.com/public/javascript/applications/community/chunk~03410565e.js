@@ -194,7 +194,7 @@
         }
         async LoadAllSessions(_) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return _._;
+          if (!_._.logged_in || !(0, _._)()) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -250,14 +250,14 @@
         }
         async CreateNewSession(_, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return _._;
+          if (!_._.logged_in || !(0, _._)()) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
               _._.VANITY_ID +
               "/ajaxcreateqanda",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID), _.append("name", _);
+          _.append("sessionid", (0, _._)()), _.append("name", _);
           let _ = null;
           try {
             const _ = await _().post(_, _, {
@@ -303,7 +303,7 @@
         }
         async RenameSession(_, _, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return _._;
+          if (!_._.logged_in || !(0, _._)()) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -311,7 +311,7 @@
               "/ajaxrenameqanda/" +
               _,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID), _.append("name", _);
+          _.append("sessionid", (0, _._)()), _.append("name", _);
           let _ = null;
           try {
             const _ = await _().post(_, _, {
@@ -356,7 +356,7 @@
         }
         async DeleteSession(_, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return _._;
+          if (!_._.logged_in || !(0, _._)()) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -364,7 +364,7 @@
               "/ajaxdeleteqanda/" +
               _,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID);
+          _.append("sessionid", (0, _._)());
           let _ = null;
           try {
             const _ = await _().post(_, _, {
@@ -524,7 +524,7 @@
           var _, _, _, _, _;
           if (
             !_._.logged_in ||
-            !_._.SESSIONID ||
+            !(0, _._)() ||
             !(null === (_ = this.m_mapQAndASessions.get(_)) || void 0 === _
               ? void 0
               : _.bUserCanAskQuestions)
@@ -537,7 +537,7 @@
               "/ajaxaskquestion/" +
               _,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID), _.append("question", _);
+          _.append("sessionid", (0, _._)()), _.append("question", _);
           let _ = null;
           try {
             const _ = await _().post(_, _, {
@@ -580,7 +580,7 @@
           var _, _, _, _, _;
           if (
             !_._.logged_in ||
-            !_._.SESSIONID ||
+            !(0, _._)() ||
             !(null === (_ = this.m_mapQAndASessions.get(_)) || void 0 === _
               ? void 0
               : _.bUserCanModerate)
@@ -595,7 +595,7 @@
               "/ajaxmoderatequestion/" +
               _,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("gidquestion", _),
             _.append("action", _ == _ ? "show" : "hide");
           let _ = null;
@@ -646,7 +646,7 @@
           var _, _, _, _, _;
           if (
             !_._.logged_in ||
-            !_._.SESSIONID ||
+            !(0, _._)() ||
             !(null === (_ = this.m_mapQAndASessions.get(_)) || void 0 === _
               ? void 0
               : _.bUserCanAskQuestions)
@@ -659,7 +659,7 @@
               "/ajaxanswerquestion/" +
               _,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("gidquestion", _),
             _.append("answer", _);
           let _ = null;
@@ -703,7 +703,7 @@
           var _, _, _, _, _;
           if (
             !_._.logged_in ||
-            !_._.SESSIONID ||
+            !(0, _._)() ||
             !(null === (_ = this.m_mapQAndASessions.get(_)) || void 0 === _
               ? void 0
               : _.bUserCanAskQuestions)
@@ -727,7 +727,7 @@
               "/ajaxvoteforquestion/" +
               _,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("gidquestion", _),
             _.append("up", _ ? "1" : "0");
           let _ = null;

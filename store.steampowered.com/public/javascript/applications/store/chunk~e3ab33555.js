@@ -345,7 +345,7 @@
           if (!n || 0 == n.length) return !0;
           let i = (0, v.xv)() + "actions/ajaxgetpartnereventsreport",
             r = {
-              sessionid: v.TS.SESSIONID,
+              sessionid: (0, v.KC)(),
               clan_account_id: e.GetAccountID(),
               gidlist: n.join(","),
             };
@@ -389,12 +389,12 @@
       const D = new j();
       var E = a(55263),
         b = a(84811),
-        T = a(41550),
-        y = a(32541),
+        y = a(41550),
+        T = a(32541),
         A = a(42011),
         C = a(52885),
-        I = a(32803),
-        N = a(46107),
+        N = a(32803),
+        I = a(46107),
         B = a(43667),
         f = a(64940),
         P = a(90316),
@@ -409,8 +409,8 @@
         V = a(5065),
         U = a(82227),
         W = a(738),
-        z = a(56283),
-        K = a(51272),
+        K = a(56283),
+        z = a(51272),
         q = a(6379),
         Y = a(99637),
         Q = a(74568),
@@ -565,7 +565,7 @@
                   (0, n.jsxs)("div", {
                     className: "_DialogInputContainer _DialogLayout",
                     children: [
-                      (0, n.jsx)(z.Yh, {
+                      (0, n.jsx)(K.Yh, {
                         label: (0, M.we)("#EventDashboard_Stats_Oldest"),
                         onChange: o,
                         checked: r,
@@ -594,7 +594,7 @@
                   (0, n.jsxs)("div", {
                     className: "_DialogInputContainer _DialogLayout",
                     children: [
-                      (0, n.jsx)(z.Yh, {
+                      (0, n.jsx)(K.Yh, {
                         label: (0, M.we)("#EventDashboard_Stats_Newest"),
                         onChange: c,
                         checked: d,
@@ -665,9 +665,9 @@
                       (0, n.jsxs)("div", {
                         className: V.StatsActionRow,
                         children: [
-                          (0, n.jsx)(z.$n, {
+                          (0, n.jsx)(K.$n, {
                             onClick: (e) =>
-                              (0, K.EP)(
+                              (0, z.EP)(
                                 e,
                                 `${v.TS.PARTNER_BASE_URL}/doc/marketing/event_tools/stats`,
                               ),
@@ -675,7 +675,7 @@
                               "#EventDashBoard_SummaryStats_AboutStats",
                             ),
                           }),
-                          (0, n.jsx)(z.$n, {
+                          (0, n.jsx)(K.$n, {
                             onClick: (e) =>
                               (0, W.pg)(
                                 (0, n.jsx)(ie, { clanInfo: m }),
@@ -689,7 +689,7 @@
                       }),
                       (0, n.jsx)("div", {
                         className: V.StatsActionRow,
-                        children: (0, n.jsx)(z.$n, {
+                        children: (0, n.jsx)(K.$n, {
                           onClick: () => c(!d),
                           children: (0, M.we)(
                             "#EventDashBoard_SummaryStats_Details",
@@ -1022,7 +1022,7 @@
         De = a(30470),
         Ee = a(45737),
         be = a.n(Ee);
-      function Te(e) {
+      function ye(e) {
         const { event: t, lang: a } = e,
           s = (0, c.q3)(() => t.jsondata.meet_steam_groups),
           r = (0, u.Ec)(t.clanSteamID.GetAccountID()),
@@ -1053,7 +1053,7 @@
                   be().ValveOnlyBackground,
                 ),
                 children: [
-                  (0, n.jsx)(z.JU, { children: "(VO) Meet Steam URLs" }),
+                  (0, n.jsx)(K.JU, { children: "(VO) Meet Steam URLs" }),
                   Array.from(o.keys()).map((e) => {
                     const a = o.get(e);
                     return (0, n.jsx)(
@@ -1089,11 +1089,11 @@
               })
             : null;
       }
-      var ye = a(85693),
+      var Te = a(85693),
         Ae = a(76217),
         Ce = a(45699),
-        Ie = a(23310);
-      const Ne = _.lazy(() =>
+        Ne = a(23310);
+      const Ie = _.lazy(() =>
           Promise.all([
             a.e(36597),
             a.e(56589),
@@ -1107,7 +1107,7 @@
             a.e(57326),
             a.e(52389),
             a.e(51215),
-            a.e(17262),
+            a.e(1446),
             a.e(5289),
             a.e(63089),
             a.e(1703),
@@ -1141,16 +1141,18 @@
             }),
             [w, j] = (0, h.TB)(v);
           if (
-            (_.useEffect(() => window.scrollTo(0, 0), [u, v]),
+            (_.useEffect(() => {
+              window.scrollTo(0, 0);
+            }, [u, v]),
             !g && t.GetEventType() == i.ajI)
           )
-            return (0, n.jsx)(I.OG, {
+            return (0, n.jsx)(N.OG, {
               eventModel: t,
-              route: I.PH.k_eStoreSalePage,
+              route: N.PH.k_eStoreSalePage,
               bPopup: !1,
             });
-          const D = (0, I.Bw)(t, I.PH.k_eStoreNewsHub, "allowRelative"),
-            T = (0, I.Bw)(t, I.PH.k_eStoreUsersNewsHub, "allowRelative");
+          const D = (0, N.Bw)(t, N.PH.k_eStoreNewsHub, "allowRelative"),
+            y = (0, N.Bw)(t, N.PH.k_eStoreUsersNewsHub, "allowRelative");
           if (!t.bLoaded || !j || (u && !S && x !== E.eR))
             return (0, n.jsx)("div", {
               className: ue().FlexCenter,
@@ -1160,7 +1162,7 @@
                 string: (0, M.we)("#Loading"),
               }),
             });
-          let N = t.GetDescriptionWithFallback(a);
+          let I = t.GetDescriptionWithFallback(a);
           return (0, n.jsx)(fe, {
             event: t,
             lang: a,
@@ -1170,9 +1172,9 @@
                 (0, n.jsxs)("div", {
                   className: G().EventDetailTitleContainer,
                   children: [
-                    (0, n.jsx)(ye.r, {
+                    (0, n.jsx)(Te.r, {
                       crumbs: [
-                        { name: (0, M.we)("#BreadCrumbs_AllEvents"), url: T },
+                        { name: (0, M.we)("#BreadCrumbs_AllEvents"), url: y },
                         {
                           name: (0, M.we)(
                             "#BreadCrumbs_GameEvents",
@@ -1198,7 +1200,7 @@
                     className: G().EventBroadcastCtn,
                     children: (0, n.jsx)(_.Suspense, {
                       fallback: null,
-                      children: (0, n.jsx)(Ne, {
+                      children: (0, n.jsx)(Ie, {
                         event: t,
                         bIsPreview: g,
                         accountIDs: g ? t.jsondata.broadcast_whitelist : void 0,
@@ -1237,7 +1239,7 @@
                             ),
                             children: [
                               (0, n.jsx)(C.fh, {
-                                text: N || "",
+                                text: I || "",
                                 partnerEventStore: s,
                                 showErrorInfo: g,
                                 event: t,
@@ -1278,7 +1280,7 @@
                         Boolean(t.jsondata.read_more_link) &&
                           (0, n.jsx)("div", {
                             className: (0, O.A)(G().ReadMoreCnt),
-                            children: (0, n.jsx)(K.uU, {
+                            children: (0, n.jsx)(z.uU, {
                               className: (0, O.A)(F().Button),
                               href: t.jsondata.read_more_link,
                               children: (0, M.we)(
@@ -1345,7 +1347,7 @@
                           }),
                         ],
                       }),
-                    (0, n.jsx)(y.LG, { appid: t.appid, bSmallFormat: !0 }),
+                    (0, n.jsx)(T.LG, { appid: t.appid, bSmallFormat: !0 }),
                   ],
                 }),
               }),
@@ -1361,12 +1363,12 @@
               postbody: o,
               footer: l,
             } = e,
-            d = (0, N.m0)(t, "background", a),
+            d = (0, I.m0)(t, "background", a),
             c = t.BIsImageSafeForAllAges("background", a),
             _ = "lang_" + (0, i.wwZ)(a),
             m = !!d && t.BImageNeedScreenshotFallback("background", a);
           return (0, n.jsxs)(Ae.Z, {
-            scrollIntoViewType: Ie.Yo.NoTransformSparseContent,
+            scrollIntoViewType: Ne.Yo.NoTransformSparseContent,
             className: (0, O.A)(
               G().EventDetailsPageContainer,
               _,
@@ -1378,7 +1380,7 @@
               m && G().ScreenshotInsteadOfCover,
             ),
             children: [
-              (0, n.jsx)(T.vA, {
+              (0, n.jsx)(y.vA, {
                 appId: t.appid,
                 clanId: t.clanSteamID.GetAccountID(),
               }),
@@ -1507,7 +1509,7 @@
                     }),
                     (0, n.jsx)(Oe, { event: t, bIsOGG: S.is_ogg }),
                     Boolean(t.jsondata.meet_steam_groups) &&
-                      (0, n.jsx)(Te, { event: t, lang: a }),
+                      (0, n.jsx)(ye, { event: t, lang: a }),
                   ],
                 }),
               })
@@ -1752,12 +1754,12 @@
           disabled: v,
           bNoDefaultDate: w,
           className: b,
-          strDescToolTip: T,
-          strDescription: y,
+          strDescToolTip: y,
+          strDescription: T,
           bShowTimeZone: A,
           strInvalidDateTimeLocalizedMsg: C,
-          fnIsValidDateTime: I,
-          bWeekdaysOnly: N,
+          fnIsValidDateTime: N,
+          bWeekdaysOnly: I,
           fnSetTimeToUpdate: B,
           bForce24HourFormat: f,
         } = e;
@@ -1792,7 +1794,7 @@
               }, [d, i]),
               d
             );
-          })(H, F, C, I, d),
+          })(H, F, C, N, d),
           V = !d && M;
         let U, W;
         if (t && a && t == a && a > l.HD.GetTimeNowWithOverride()) {
@@ -1806,9 +1808,9 @@
             (P = x);
         }
         G || !a || w || (W = g().unix(a));
-        const z = g().tz.guess(),
-          K = g().unix(G).tz(z),
-          q = !!p && z != p && g().unix(G).tz(p),
+        const K = g().tz.guess(),
+          z = g().unix(G).tz(K),
+          q = !!p && K != p && g().unix(G).tz(p),
           {
             fnOnInput: Y,
             fnOnInputBlur: Q,
@@ -1862,9 +1864,9 @@
               className: (0, _.A)(u().EventTimeTitle, "DialogLabel"),
               children: [
                 (0, s.jsx)(h.he, {
-                  toolTipContent: T,
+                  toolTipContent: y,
                   direction: "top",
-                  children: Boolean(y) && (0, s.jsx)("span", { children: y }),
+                  children: Boolean(T) && (0, s.jsx)("span", { children: T }),
                 }),
                 V &&
                   (0, s.jsxs)("span", {
@@ -1901,7 +1903,7 @@
                             ((0 != s.weekday() && 6 != s.weekday()) ||
                               (i = !1));
                           return i;
-                        })(a, t, N, e),
+                        })(a, t, I, e),
                       initialValue: W,
                       inputProps: {
                         placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
@@ -1955,7 +1957,7 @@
                     children: [
                       (0, s.jsx)("div", {
                         className: u().TimeZone,
-                        children: K.zoneAbbr(),
+                        children: z.zoneAbbr(),
                       }),
                       !!q &&
                         (0, s.jsx)("div", {
@@ -2014,7 +2016,7 @@
     },
     43068: (e, t, a) => {
       "use strict";
-      a.d(t, { P: () => y });
+      a.d(t, { P: () => T });
       var s = a(7850),
         n = a(41735),
         i = a.n(n),
@@ -2095,8 +2097,8 @@
         D = a(22797),
         E = a(52038),
         b = a(56011),
-        T = a(61859);
-      const y = (0, h.PA)((e) => {
+        y = a(61859);
+      const T = (0, h.PA)((e) => {
           const [t, a] = p.useState(null),
             { eventModel: n } = e;
           let r = n.clanSteamID.GetAccountID();
@@ -2129,7 +2131,7 @@
                   children: [
                     (0, s.jsx)("span", {
                       className: S.DisplayAdminPanel_Title,
-                      children: (0, T.we)("#EventDisplay_Admin_Title"),
+                      children: (0, y.we)("#EventDisplay_Admin_Title"),
                     }),
                     (0, s.jsx)(A, { eventModel: n }, "removesteamchina"),
                   ],
@@ -2144,8 +2146,8 @@
               let n = !1;
               (0, j.pg)(
                 (0, s.jsx)(w.o0, {
-                  strTitle: (0, T.we)("#EventAdmin_Moderation_HideEventInSC"),
-                  strDescription: (0, T.we)(
+                  strTitle: (0, y.we)("#EventAdmin_Moderation_HideEventInSC"),
+                  strDescription: (0, y.we)(
                     "#EventAdmin_Moderation_HideEventInSC_Desc",
                   ),
                   bDestructiveWarning: !0,
@@ -2154,7 +2156,7 @@
                     (n = !0),
                       (async () => {
                         let a = new URLSearchParams();
-                        a.append("sessionid", l.TS.SESSIONID),
+                        a.append("sessionid", (0, l.KC)()),
                           a.append(
                             "clan_accountid",
                             "" + t.clanSteamID.GetAccountID(),
@@ -2187,13 +2189,13 @@
                             n
                               ? (0, s.jsx)(w.o0, {
                                   bAlertDialog: !0,
-                                  children: (0, T.we)(
+                                  children: (0, y.we)(
                                     "#EventDisplay_Share_Success",
                                   ),
                                 })
                               : (0, s.jsx)(w.KG, {
                                   children:
-                                    (0, T.we)("#EventDisplay_Share_Failure") +
+                                    (0, y.we)("#EventDisplay_Share_Failure") +
                                     " " +
                                     r,
                                 }),
@@ -2208,7 +2210,7 @@
                 (0, b.uX)(a),
               );
             },
-            children: (0, T.we)("#EventAdmin_Moderation_HideEventInSC"),
+            children: (0, y.we)("#EventAdmin_Moderation_HideEventInSC"),
           });
         };
     },

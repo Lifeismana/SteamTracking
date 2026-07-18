@@ -151,7 +151,7 @@
               _._.PARTNER_BASE_URL +
               "promotion/discounts/ajaxupdatediscountevent",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("name", _),
             _.append("start_time", _.toString()),
             _.append("end_time", _.toString()),
@@ -216,7 +216,7 @@
               _._.PARTNER_BASE_URL +
               "promotion/discounts/ajaxupdatediscountevent",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("start_time", _.start_date.toString()),
             _.append("end_time", _.end_date.toString()),
             _.append(
@@ -293,7 +293,7 @@
                 _._.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetdiscounteventbyid",
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 discountid: _,
               },
               _ = await _().get(_, {
@@ -346,7 +346,7 @@
                 _._.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetdiscounteventapplist",
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 discountid: _,
               },
               _ = await _().get(_, {
@@ -780,7 +780,7 @@
         async FetchOptInRegistrationForOptIn(_, _) {
           const _ = _._.PARTNER_BASE_URL + "optin/ajaxgetalloptinregistrations",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               opt_in_name: _,
               opt_in_only: _,
             },
@@ -796,7 +796,7 @@
           const _ =
               _._.PARTNER_BASE_URL + "optin/ajaxgetpendingreviewregistrations",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               opt_in_name: _,
             },
             _ = await _().get(_, {
@@ -814,7 +814,7 @@
           try {
             const _ = _._.PARTNER_BASE_URL + "optin/ajaxgetoptinregistation",
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
                 appid: _,
                 opt_in_name: _,
               },
@@ -953,7 +953,7 @@
           let _ = null;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               Object.keys(_).forEach((_) => _.append(_, _[_]));
             const _ =
                 _._.PARTNER_BASE_URL + "optin/ajaxupdateoptinregistration/" + _,
@@ -978,7 +978,7 @@
           let _ = null;
           try {
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appid", "" + _),
               _.append("opt_in_name", _.opt_in_name),
               _.append("jsondata", JSON.stringify(_)),
@@ -1025,7 +1025,7 @@
           try {
             const _ = _.opt_in_name || _.jsondata.opt_in_name,
               _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("appid", "" + _),
               _.append("opt_in_name", _),
               _.append("approved", "" + _);
@@ -1553,7 +1553,7 @@
               "packages/createoreditdiscount/" +
               _.packageID,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.nDiscountID && _.append("id", _.nDiscountID.toString()),
             _.append("name", _.strDiscountName),
             _.append("description", _.strDiscountDescription),
@@ -1602,7 +1602,7 @@
           const _ =
               _._.PARTNER_BASE_URL + "packages/removepackagediscount/" + _,
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("discountid", _.toString());
           let _ = null;
           try {
@@ -5988,10 +5988,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetSinglePartnerAppOptIn = function (_, _) {
+        (_.GetSinglePartnerAppOptIn = function (_, _, _) {
           return _.SendMsg(
             "Publishing.GetSinglePartnerAppOptIn#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -5999,30 +5999,30 @@
             },
           );
         }),
-          (_.SetFeaturingOnPartnerAppOptIn = function (_, _) {
+          (_.SetFeaturingOnPartnerAppOptIn = function (_, _, _) {
             return _.SendMsg(
               "Publishing.SetFeaturingOnPartnerAppOptIn#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetOptInHistoryInternal = function (_, _) {
+          (_.GetOptInHistoryInternal = function (_, _, _) {
             return _.SendMsg(
               "Publishing.GetOptInHistoryInternal#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetPartnerAppOptInsIDs = function (_, _) {
+          (_.GetPartnerAppOptInsIDs = function (_, _, _) {
             return _.SendMsg(
               "Publishing.GetPartnerAppOptInsIDs#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6030,10 +6030,10 @@
               },
             );
           }),
-          (_.GetOptInAppealsSummaryStats = function (_, _) {
+          (_.GetOptInAppealsSummaryStats = function (_, _, _) {
             return _.SendMsg(
               "Publishing.GetOptInAppealsSummaryStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6041,80 +6041,80 @@
               },
             );
           }),
-          (_.CreatePartnerAppOptInEmails = function (_, _) {
+          (_.CreatePartnerAppOptInEmails = function (_, _, _) {
             return _.SendMsg(
               "Publishing.CreatePartnerAppOptInEmails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdatePartnerAppOptInEmails = function (_, _) {
+          (_.UpdatePartnerAppOptInEmails = function (_, _, _) {
             return _.SendMsg(
               "Publishing.UpdatePartnerAppOptInEmails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SendPartnerOptInEmailAndWait = function (_, _) {
+          (_.SendPartnerOptInEmailAndWait = function (_, _, _) {
             return _.SendMsg(
               "Publishing.SendPartnerOptInEmailAndWait#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPartnerAppOptInEmailDefAndStats = function (_, _) {
+          (_.GetPartnerAppOptInEmailDefAndStats = function (_, _, _) {
             return _.SendMsg(
               "Publishing.GetPartnerAppOptInEmailDefAndStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetEstimatePartnerAppOptInEmail = function (_, _) {
+          (_.GetEstimatePartnerAppOptInEmail = function (_, _, _) {
             return _.SendMsg(
               "Publishing.GetEstimatePartnerAppOptInEmail#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.TestFirePartnerAppOptInEmail = function (_, _) {
+          (_.TestFirePartnerAppOptInEmail = function (_, _, _) {
             return _.SendMsg(
               "Publishing.TestFirePartnerAppOptInEmail#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetOptInEmailTracking = function (_, _) {
+          (_.GetOptInEmailTracking = function (_, _, _) {
             return _.SendMsg(
               "Publishing.GetOptInEmailTracking#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPartnerPaidGivenPackageList = function (_, _) {
+          (_.GetPartnerPaidGivenPackageList = function (_, _, _) {
             return _.SendMsg(
               "Publishing.GetPartnerPaidGivenPackageList#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6124,10 +6124,10 @@
           });
       })(_ || (_ = {})),
         (function (_) {
-          _.GetInvites = function (_, _) {
+          _.GetInvites = function (_, _, _) {
             return _.SendMsg(
               "PartnerMembershipInvite.GetInvites#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

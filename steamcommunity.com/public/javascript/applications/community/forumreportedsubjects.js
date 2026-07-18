@@ -65,48 +65,48 @@
       "use strict";
       r.r(t),
         r.d(t, {
+          ReadAdditionalDataFromForumPost: () => x,
           default: () => y,
-          readAdditionalDataFromForumPost: () => S,
-          useCommentThread: () => g,
+          useCommentThread: () => S,
         });
       var o = r(7850),
-        c = r(90182),
-        s = r(43224),
+        s = r(90182),
+        c = r(43224),
         n = r(56545),
         i = r(34410),
-        l = r(37226),
-        a = r(15993),
-        u = r(34214),
+        a = r(37226),
+        l = r(15993),
+        u = r(43261),
         d = r(88942),
         f = r(23809),
         b = r(22797),
         _ = r(78327),
-        h = r(30253),
-        m = r(90626),
+        m = r(30253),
+        h = r(90626),
         p = r(12155),
         j = r(52038);
       function y(e) {
         var t, r;
         const n = "floatingforumreportedsubjectslist",
-          l = (0, c.kZ)(i.lN, e.gidTopic),
-          [a, u] = (0, m.useState)(() => void 0 !== localStorage[n]);
+          a = (0, s.kZ)(i.lN, e.gidTopic),
+          [l, u] = (0, h.useState)(() => void 0 !== localStorage[n]);
         if (
-          ((0, m.useMemo)(() => {
+          ((0, h.useMemo)(() => {
             var e, t;
             null ===
               (t =
-                null === (e = l.data) || void 0 === e ? void 0 : e.subjects) ||
+                null === (e = a.data) || void 0 === e ? void 0 : e.subjects) ||
               void 0 === t ||
               t.sort(k);
-          }, [null === (t = l.data) || void 0 === t ? void 0 : t.subjects]),
-          !l.isSuccess ||
-            !(null === (r = l.data) || void 0 === r ? void 0 : r.subjects) ||
-            0 === l.data.subjects.length)
+          }, [null === (t = a.data) || void 0 === t ? void 0 : t.subjects]),
+          !a.isSuccess ||
+            !(null === (r = a.data) || void 0 === r ? void 0 : r.subjects) ||
+            0 === a.data.subjects.length)
         )
           return null;
         let d = 0;
         return (0, o.jsx)("div", {
-          className: a ? h.FloatingSubjectListCtn : "",
+          className: l ? m.FloatingSubjectListCtn : "",
           children: (0, o.jsx)("div", {
             className: "rightbox",
             children: (0, o.jsxs)("div", {
@@ -115,33 +115,33 @@
                 (0, o.jsx)("div", {
                   className: "rightbox_list_header",
                   children: (0, o.jsxs)("span", {
-                    className: h.SplitHeader,
+                    className: m.SplitHeader,
                     children: [
-                      s.T.Localize("#reportedsubjectlist_header"),
+                      c.T.Localize("#reportedsubjectlist_header"),
                       " ",
                       (0, o.jsx)("button", {
-                        className: h.PopoutButton,
+                        className: m.PopoutButton,
                         onClick: () => {
-                          a
+                          l
                             ? localStorage.removeItem(n)
                             : localStorage.setItem(n, "1"),
-                            u(!a);
+                            u(!l);
                         },
                         children: (0, o.jsx)(p.YNO, {}),
                       }),
                     ],
                   }),
                 }),
-                l.isError &&
+                a.isError &&
                   (0, o.jsx)("div", {
                     className: "moderatorToolLink",
                     children: "Error",
                   }),
-                l.isLoading && (0, o.jsx)(b.t, {}),
-                l.isSuccess &&
+                a.isLoading && (0, o.jsx)(b.t, {}),
+                a.isSuccess &&
                   (0, o.jsx)("div", {
                     style: { maxHeight: "20em", overflowY: "scroll" },
-                    children: l.data.subjects.map((e) => {
+                    children: a.data.subjects.map((e) => {
                       var t, r;
                       return (
                         null ===
@@ -153,13 +153,13 @@
                           ? void 0
                           : r.length
                       )
-                        ? (0, o.jsx)(x, { subject: e }, e.subject_id)
+                        ? (0, o.jsx)(g, { subject: e }, e.subject_id)
                         : (0, o.jsx)(
                             "div",
                             {
                               className: (0, j.A)(
                                 "moderatorToolLink",
-                                h.ReportedSubjectRow,
+                                m.ReportedSubjectRow,
                               ),
                               children: "Bug - inform Valve",
                             },
@@ -183,8 +183,8 @@
             if (e.length !== t.length) return e.length - t.length;
             for (let r = 0; r < e.length; r++) {
               const o = e.charCodeAt(r),
-                c = t.charCodeAt(r);
-              if (o !== c) return o - c;
+                s = t.charCodeAt(r);
+              if (o !== s) return o - s;
             }
             return 0;
           })(e.subject_id, t.subject_id)
@@ -198,20 +198,20 @@
         }
         return e.slice(0, 35);
       }
-      function x(e) {
+      function g(e) {
         var t, r;
-        const { subject: c } = e,
-          n = S(e.subject),
-          i = g(n.clanSteamId, l.Bv, n.forumId, c.subject_group_id);
+        const { subject: s } = e,
+          n = x(e.subject),
+          i = S(n.clanSteamId, a.Bv, n.forumId, s.subject_group_id);
         let u = null;
-        "0" === c.subject_id && (u = "Topic");
+        "0" === s.subject_id && (u = "Topic");
         let d = "#NA";
         if (null === u && i.isSuccess) {
           let e = 1;
           for (const r of null !== (t = i.data.comments) && void 0 !== t
             ? t
             : []) {
-            if (r.gidcomment === c.subject_id) {
+            if (r.gidcomment === s.subject_id) {
               (u = v(r.text)), (d = `#${e}`);
               break;
             }
@@ -222,43 +222,43 @@
           for (const e of null !== (r = i.data.deleted_comments) && void 0 !== r
             ? r
             : [])
-            if (e.gidcomment === c.subject_id) {
+            if (e.gidcomment === s.subject_id) {
               u = v(e.text);
               break;
             }
         null === u && (u = "[Comment]");
         const f =
-            "0" === c.subject_id
-              ? `#forum_op_${c.subject_group_id}`
-              : `#c${c.subject_id}`,
-          b = c.unresolved_dispute_count > 0 || c.unresolved_report_count > 0,
-          m = c.required_moderator_level === a.PV,
-          p = c.required_moderator_level === a.lp;
+            "0" === s.subject_id
+              ? `#forum_op_${s.subject_group_id}`
+              : `#c${s.subject_id}`,
+          b = s.unresolved_dispute_count > 0 || s.unresolved_report_count > 0,
+          h = s.required_moderator_level === l.PV,
+          p = s.required_moderator_level === l.lp;
         return (0, o.jsxs)("div", {
-          className: (0, j.A)("moderatorToolLink", h.ReportedSubjectRow),
+          className: (0, j.A)("moderatorToolLink", m.ReportedSubjectRow),
           children: [
             (0, o.jsxs)("a", {
               href: f,
               children: [
                 b &&
-                  !m &&
+                  !h &&
                   !p &&
                   (0, o.jsx)("img", {
-                    className: h.FlagIcon,
+                    className: m.FlagIcon,
                     src: `${_.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
                   }),
                 !b &&
-                  (0, o.jsx)("span", { className: h.FlagIcon, children: " " }),
+                  (0, o.jsx)("span", { className: m.FlagIcon, children: " " }),
                 b &&
-                  m &&
+                  h &&
                   (0, o.jsx)("span", {
-                    className: (0, j.A)(h.FlagIcon, h.ValveOnlyFlag),
+                    className: (0, j.A)(m.FlagIcon, m.ValveOnlyFlag),
                     children: "VO",
                   }),
                 b &&
                   p &&
                   (0, o.jsx)("span", {
-                    className: (0, j.A)(h.FlagIcon, h.SupervisorFlag),
+                    className: (0, j.A)(m.FlagIcon, m.SupervisorFlag),
                     children: "▲",
                   }),
                 " ",
@@ -268,98 +268,101 @@
               ],
             }),
             (0, o.jsxs)("div", {
-              className: h.SubjectReportSummary,
+              className: m.SubjectReportSummary,
               children: [
                 " ",
-                s.T.Localize(
+                c.T.Localize(
                   "#forumsubjectlist_subjectreportsummary",
-                  c.unresolved_report_count,
-                  c.unresolved_dispute_count,
+                  s.unresolved_report_count,
+                  s.unresolved_dispute_count,
                 ),
               ],
             }),
           ],
         });
       }
-      function g(e, t, r, o) {
-        const c = (0, f.KV)();
+      function S(e, t, r, o) {
+        const s = (0, f.KV)();
         return (0, d.I)({
           queryKey: ["comment_thread", e, t, r, o],
           queryFn: async () => {
-            const s = n.w.Init(u.ZP);
-            s.Body().set_steamid(e),
-              s.Body().set_comment_thread_type(t),
-              s.Body().set_gidfeature(r),
-              s.Body().set_gidfeature2(o),
-              s.Body().set_include_deleted(!0),
-              s.Body().set_oldest_first(!0);
-            return (await u.BE.GetCommentThread(c, s)).Body().toObject();
+            const c = n.w.Init(u.ZP);
+            c.Body().set_steamid(e),
+              c.Body().set_comment_thread_type(t),
+              c.Body().set_gidfeature(r),
+              c.Body().set_gidfeature2(o),
+              c.Body().set_include_deleted(!0),
+              c.Body().set_oldest_first(!0);
+            return (await u.BE.GetCommentThread(s, c)).Body().toObject();
           },
         });
       }
-      function S(e) {
+      function x(e) {
         var t, r;
         let o = "",
-          c = "";
+          s = "";
         if (!e.additional_subject_data) return null;
-        for (const s of null !==
+        for (const c of null !==
           (r =
             null === (t = e.additional_subject_data) || void 0 === t
               ? void 0
               : t.data) && void 0 !== r
           ? r
           : [])
-          "clanSteamId" === s.key
-            ? (o = s.value)
-            : "forumId" === s.key
-              ? (c = s.value)
+          "clanSteamId" === c.key
+            ? (o = c.value)
+            : "forumId" === c.key
+              ? (s = c.value)
               : console.error(
-                  `Unknown additional data key ${s.key} in forum post.`,
+                  `Unknown additional data key ${c.key} in forum post.`,
                 );
         if ("" == o)
           return console.error("Missing clanSteamId in additional data."), null;
-        if ("" == c)
+        if ("" == s)
           return console.error("Missing forumId in additional data."), null;
-        return { clanSteamId: o, forumId: c };
+        return { clanSteamId: o, forumId: s };
       }
     },
     90182: (e, t, r) => {
       "use strict";
       r.d(t, {
-        KQ: () => y,
-        Kt: () => _,
-        N8: () => m,
-        iW: () => f,
-        kZ: () => b,
+        EC: () => v,
+        KQ: () => k,
+        Kt: () => m,
+        N8: () => p,
+        c3: () => g,
+        iW: () => b,
+        kZ: () => _,
         lY: () => h,
-        wy: () => j,
-        y4: () => p,
+        wy: () => y,
+        y4: () => j,
       });
       var o = r(56545),
-        c = r(99164),
-        s = r(23809),
+        s = r(99164),
+        c = r(23809),
         n = r(88942),
         i = r(29385),
-        l = r(61739),
-        a = r(37085);
-      const u = "get_content_report_subject_group",
-        d = "get_content_report_subject_audit_log";
-      async function f(e, t, r, o) {
+        a = r(61739),
+        l = r(37085),
+        u = r(43261);
+      const d = "get_content_report_subject_group",
+        f = "get_content_report_subject_audit_log";
+      async function b(e, t, r, o) {
         return Promise.all([
-          e.invalidateQueries({ queryKey: [u, t, r] }),
-          e.invalidateQueries({ queryKey: [d, t, r, o] }),
+          e.invalidateQueries({ queryKey: [d, t, r] }),
+          e.invalidateQueries({ queryKey: [f, t, r, o] }),
         ]);
       }
-      function b(e, t) {
-        const r = (0, s.KV)();
+      function _(e, t) {
+        const r = (0, c.KV)();
         return (0, n.I)(
           (function (e, t, r) {
             return {
-              queryKey: [u, t, r],
+              queryKey: [d, t, r],
               queryFn: async () => {
-                const s = o.w.Init(c.ge);
-                s.Body().set_subject_type(t), s.Body().set_subject_group_id(r);
-                const n = await c.fL.GetContentReportSubjectGroup(e, s);
+                const c = o.w.Init(s.ge);
+                c.Body().set_subject_type(t), c.Body().set_subject_group_id(r);
+                const n = await s.fL.GetContentReportSubjectGroup(e, c);
                 if (!n.BSuccess())
                   throw new Error(
                     "Failed in GetContentReportSubjectGroup, EResult: " +
@@ -371,20 +374,20 @@
           })(r, e, t),
         );
       }
-      function _(e, t, r) {
-        const i = (0, s.KV)();
+      function m(e, t, r) {
+        const i = (0, c.KV)();
         return (0, n.I)(
-          (function (e, t, r, s) {
+          (function (e, t, r, c) {
             return {
-              queryKey: [d, t, r, s],
+              queryKey: [f, t, r, c],
               queryFn: async () => {
-                if (void 0 === t || void 0 === r || void 0 === s) return;
-                const n = o.w.Init(c.Ru);
+                if (void 0 === t || void 0 === r || void 0 === c) return;
+                const n = o.w.Init(s.Ru);
                 return (
                   n.Body().set_subject_type(t),
                   n.Body().set_subject_group_id(r),
-                  n.Body().set_subject_id(s),
-                  (await c.fL.GetAuditLog(e, n)).Body().toObject()
+                  n.Body().set_subject_id(c),
+                  (await s.fL.GetAuditLog(e, n)).Body().toObject()
                 );
               },
             };
@@ -392,126 +395,176 @@
         );
       }
       function h(e, t, r) {
-        const n = (0, s.KV)(),
+        const n = (0, c.KV)(),
           u = (0, i.jE)();
-        return (0, l.n)({
-          mutationFn: async (s) => {
-            const i = o.w.Init(c.u5);
+        return (0, a.n)({
+          mutationFn: async (c) => {
+            const i = o.w.Init(s.u5);
             i.Body().set_subject_type(e),
               i.Body().set_subject_group_id(t),
               i.Body().set_subject_id(r),
-              i.Body().set_required_level(s.eNewLevel),
-              s.eReason && i.Body().set_reason(s.eReason),
-              s.strNote && i.Body().set_note(s.strNote);
-            const l = await c.fL.EscalateSubject(n, i);
-            if (l.GetEResult() !== a.R)
-              throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);
+              i.Body().set_required_level(c.eNewLevel),
+              c.eReason && i.Body().set_reason(c.eReason),
+              c.strNote && i.Body().set_note(c.strNote);
+            const a = await s.fL.EscalateSubject(n, i);
+            if (a.GetEResult() !== l.R)
+              throw new Error(`Failed to escalate subject: ${a.GetEMsg()}`);
           },
-          onSuccess: async (o, c) => {
-            await f(u, e, t, r);
+          onSuccess: async (o, s) => {
+            await Promise.all([
+              b(u, e, t, r),
+              u.invalidateQueries({ queryKey: ["get_claimed"] }),
+              u.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+            ]);
           },
         });
       }
-      function m() {
-        const e = (0, s.KV)(),
+      function p() {
+        const e = (0, c.KV)(),
           t = (0, i.jE)();
-        return (0, l.n)({
+        return (0, a.n)({
           mutationFn: async (t) => {
-            const r = o.w.Init(c.j);
+            const r = o.w.Init(s.j);
             r.Body().set_subject_type(t.eSubjectType),
               r.Body().set_subject_group_id(t.ulSubjectGroupID),
               r.Body().set_subject_id(t.ulSubjectID);
-            await c.fL.SustainModeration(e, r);
+            await s.fL.SustainModeration(e, r);
           },
           onSuccess: async (e, r) => {
-            await f(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
+            await b(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
           },
         });
       }
-      function p(e, t, r, n, a) {
-        const u = (0, s.KV)(),
+      function j(e, t, r, n, l) {
+        const u = (0, c.KV)(),
           d = (0, i.jE)();
-        return (0, l.n)({
+        return (0, a.n)({
           mutationFn: async () => {
-            const s = o.w.Init(c.ZV);
-            s.Body().set_steamid(e),
-              s.Body().set_subject_type(t),
-              s.Body().set_subject_group_id(r),
-              s.Body().set_subject_id(n),
-              s.Body().set_details(a);
-            await c.fL.DisputeModerationForSubject(u, s);
+            const c = o.w.Init(s.ZV);
+            c.Body().set_steamid(e),
+              c.Body().set_subject_type(t),
+              c.Body().set_subject_group_id(r),
+              c.Body().set_subject_id(n),
+              c.Body().set_details(l);
+            await s.fL.DisputeModerationForSubject(u, c);
           },
           onSuccess: async () => {
-            await f(d, t, r, n);
+            await b(d, t, r, n);
           },
         });
       }
-      function j(e, t, r, n) {
-        const a = (0, i.jE)(),
-          u = (0, s.KV)();
-        return (0, l.n)({
+      function y(e, t, r, n) {
+        const l = (0, i.jE)(),
+          u = (0, c.KV)();
+        return (0, a.n)({
           mutationFn: async () => {
-            const s = o.w.Init(c.zF);
-            s.Body().set_subject_type(e),
-              s.Body().set_subject_group_id(t),
-              s.Body().set_subject_id(r),
-              s.Body().set_owner_dispute_details(n);
-            const i = await c.fL.UpdateSubject(u, s);
+            const c = o.w.Init(s.zF);
+            c.Body().set_subject_type(e),
+              c.Body().set_subject_group_id(t),
+              c.Body().set_subject_id(r),
+              c.Body().set_owner_dispute_details(n);
+            const i = await s.fL.UpdateSubject(u, c);
             if (!i.BSuccess()) throw new Error("EResult " + i.GetEResult());
           },
           onSuccess: async () => {
-            await f(a, e, t, r);
+            await b(l, e, t, r);
           },
         });
       }
-      function y(e) {
-        const t = (0, s.KV)();
+      function k(e) {
+        const t = (0, c.KV)();
         return (0, n.I)(
           (function (e, t) {
             return {
               queryKey: ["reporterstats", t],
               queryFn: async () => {
-                const r = o.w.Init(c.KD);
+                const r = o.w.Init(s.KD);
                 r.Body().set_steamid(t);
-                const s = await c.fL.GetReporterStats(e, r);
-                if (!s.BSuccess()) throw new Error("EResult " + s.GetEResult());
-                return s.Body().toObject();
+                const c = await s.fL.GetReporterStats(e, r);
+                if (!c.BSuccess()) throw new Error("EResult " + c.GetEResult());
+                return c.Body().toObject();
               },
             };
           })(t, e),
         );
       }
+      function v(e, t, r) {
+        const s = (0, c.KV)(),
+          n = (0, i.jE)();
+        return (0, a.n)({
+          mutationFn: async (c) => {
+            const n = o.w.Init(u.Er);
+            n.Body().set_steamid(e),
+              n.Body().set_comment_thread_id(t),
+              n.Body().set_gidcomment(r),
+              n.Body().set_reason(c.reason),
+              n.Body().set_note(c.message);
+            for (const e of c.sanctions) {
+              const t = new u.u6();
+              t.set_sanction(e.sanction),
+                e.days && t.set_days(e.days),
+                n.Body().add_sanctions(t);
+            }
+            const i = await u.BE.SanctionComment(s, n);
+            if (!i.BSuccess())
+              throw new Error(
+                `SanctionComment failed. EResult: ${i.GetEResult()} (${i.GetErrorMessage()})`,
+              );
+          },
+          onSuccess: async () => {
+            await n.invalidateQueries({ queryKey: ["get_claimed"] });
+          },
+        });
+      }
+      function g(e, t, r) {
+        const s = (0, c.KV)(),
+          n = (0, i.jE)();
+        return (0, a.n)({
+          mutationFn: async () => {
+            const c = o.w.Init(u.RX);
+            c.Body().set_steamid(e),
+              c.Body().set_comment_thread_id(t),
+              c.Body().set_gidcomment(r),
+              c.Body().set_report_action(u.du.Pn),
+              c.Body().set_resolve(!0),
+              await u.Vi.UpdateCommentReportState(s, c);
+          },
+          onSuccess: async () => {
+            await n.invalidateQueries({ queryKey: ["get_claimed"] });
+          },
+        });
+      }
     },
     37226: (e, t, r) => {
       "use strict";
-      r.d(t, { Bv: () => c, Dq: () => o, Yd: () => s });
+      r.d(t, { Bv: () => s, Dq: () => o, Yd: () => c });
       const o = 5,
-        c = 7,
-        s = 10;
+        s = 7,
+        c = 10;
     },
     42248: (e, t, r) => {
       "use strict";
-      r.d(t, { q: () => s });
+      r.d(t, { q: () => c });
       var o = r(78327),
-        c = r(22837);
-      function s() {
-        return o.TS.IN_CLIENT && (0, c.DOG)(o.TS.LAUNCHER_TYPE);
+        s = r(22837);
+      function c() {
+        return o.TS.IN_CLIENT && (0, s.DOG)(o.TS.LAUNCHER_TYPE);
       }
     },
     22797: (e, t, r) => {
       "use strict";
       r.d(t, { t: () => d });
       var o = r(7850),
-        c = r(90626),
-        s = r(52038),
+        s = r(90626),
+        c = r(52038),
         n = r(20978),
         i = r.n(n);
-      const l =
+      const a =
         r.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
-      var a = r(42248),
+      var l = r(42248),
         u = r(8527);
-      const d = c.memo(function (e) {
+      const d = s.memo(function (e) {
         const {
           className: t,
           size: r,
@@ -520,32 +573,32 @@
           static: b,
           msDelayAppear: _,
         } = e;
-        let h = [i().LoadingWrapper, "SteamLogoThrobber", f(r)];
-        const [m, p] = c.useState(!_),
-          j = !(0, a.q)();
+        let m = [i().LoadingWrapper, "SteamLogoThrobber", f(r)];
+        const [h, p] = s.useState(!_),
+          j = !(0, l.q)();
         return (
-          (0, c.useEffect)(() => {
-            if (m) return;
+          (0, s.useEffect)(() => {
+            if (h) return;
             const e = setTimeout(() => p(!0), _);
             return () => clearTimeout(e);
-          }, [_, m]),
-          void 0 === n && h.push(i().noString),
-          t && h.push(t),
-          b && h.push(i().Static),
+          }, [_, h]),
+          void 0 === n && m.push(i().noString),
+          t && m.push(t),
+          b && m.push(i().Static),
           (0, o.jsxs)("div", {
-            className: (0, s.A)(
+            className: (0, c.A)(
               "center" == d && i().throbber_center_wrapper,
               !!_ && i().ThrobberDelayAppear,
-              m && i().Visible,
+              h && i().Visible,
             ),
             children: [
-              m &&
+              h &&
                 j &&
                 (0, o.jsx)("div", {
-                  className: h.join(" "),
+                  className: m.join(" "),
                   children: (0, o.jsx)("div", {
                     className: i().NewThrobber,
-                    children: (0, o.jsx)("img", { src: (0, u.YJ)(l) }),
+                    children: (0, o.jsx)("img", { src: (0, u.YJ)(a) }),
                   }),
                 }),
               Boolean(n) &&
@@ -554,29 +607,29 @@
           })
         );
       });
-      c.memo(function (e) {
+      s.memo(function (e) {
         const {
           className: t,
           size: r,
           string: n,
-          position: l,
-          static: a,
+          position: a,
+          static: l,
           msDelayAppear: u,
         } = e;
         let d = [i().LoadingWrapper, "SteamLogoThrobber", f(r)];
-        const [_, h] = c.useState(!u);
+        const [_, m] = s.useState(!u);
         return (
-          (0, c.useEffect)(() => {
+          (0, s.useEffect)(() => {
             if (_) return;
-            const e = setTimeout(() => h(!0), u);
+            const e = setTimeout(() => m(!0), u);
             return () => clearTimeout(e);
           }, [u, _]),
           void 0 === n && d.push(i().noString),
           t && d.push(t),
-          a && d.push(i().Static),
+          l && d.push(i().Static),
           (0, o.jsxs)("div", {
-            className: (0, s.A)(
-              "center" == l && i().throbber_center_wrapper,
+            className: (0, c.A)(
+              "center" == a && i().throbber_center_wrapper,
               !!u && i().ThrobberDelayAppear,
               _ && i().Visible,
             ),

@@ -231,6 +231,7 @@ body.v6.explore .page_header_ctn {
 }
 .breadcrumbs a {
     color: #8f98a0;
+    unicode-bidi: isolate;
 }
 .breadcrumbs a:hover {
     color: #ffffff;
@@ -253,8 +254,8 @@ div.leftcol.small {
 
 div.rightcol {
 	width: 308px;
-	margin-left: 14px;
-	float: right;
+	margin-inline-start: 14px;
+	float: inline-end;
 }
 div.rightcol.small {
 	min-width: 220px;
@@ -3570,7 +3571,7 @@ body.v6 .discover_queue_empty>h3 {
 	background-color: rgba( 0, 0, 0, 0.4 );
 }
 .promo_rightcol {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 	padding: 1px 15px 10px 15px;
 	border-radius: 4px;
 	background: rgba( 0, 0, 0, 0.2 );
@@ -3650,7 +3651,7 @@ a.pulldown_mobile {
 	html.responsive .rightcol {
 		float: none;
 		width: auto;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	html.responsive .tab_item_cap_img {
@@ -3686,8 +3687,8 @@ a.pulldown_mobile {
 	}
 
 	html.responsive .carousel_container .arrow.right {
-		right: 0;
-		text-align: right;
+		inset-inline-end: 0;
+		text-align: inline-end;
 	}
 
 	html.responsive .carousel_container .carousel_items > * {
@@ -3731,7 +3732,7 @@ a.pulldown_mobile {
 	html.responsive.GamepadMode .rightcol {
 		float: none;
 		width: auto;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	html.responsive.GamepadMode .tab_item_cap_img {
@@ -3767,8 +3768,8 @@ a.pulldown_mobile {
 	}
 
 	html.responsive.GamepadMode .carousel_container .arrow.right {
-		right: 0;
-		text-align: right;
+		inset-inline-end: 0;
+		text-align: inline-end;
 	}
 
 	html.responsive.GamepadMode .carousel_container .carousel_items > * {
@@ -5771,7 +5772,7 @@ body.v6 .quadscreenshot_carousel h2 {
 }
 
 .carousel_container .arrow.left {
-	left: -46px;
+	inset-inline-start: -46px;
 background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
 	background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
 }
@@ -5781,7 +5782,7 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 17
 }
 
 .carousel_container .arrow.right {
-	right: -46px;
+	inset-inline-end: -46px;
 background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
 	background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
 }
@@ -6393,7 +6394,7 @@ body.v6.widestore #store_header {
 	body.v6.widestore .rightcol {
 		float: none;
 		width: auto;
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	body.v6.widestore .tab_item_cap_img {
@@ -6429,7 +6430,7 @@ body.v6.widestore #store_header {
 	}
 
 	body.v6.widestore .carousel_container .arrow.right {
-		right: 0;
+		inset-inline-end: 0;
 		text-align: right;
 	}
 

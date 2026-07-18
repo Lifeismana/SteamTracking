@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Ta oferta nie jest już dostępna",
     "Listing_NotAvailable_Short": "Niedostępna",
     "Listing_NotAvailable_Long": "Tego przedmiotu nie można już kupić.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "Moja oferta",
     "BuyOrderDialog_Header": "Kup – %1$s",
     "BuyOrderDialog_Header_NoItem": "Umieść zlecenie kupna",
     "BuyOrderDialog_BucketPicker_Label": "Jakiego typu produkt chciałbyś zakupić?",

@@ -164,13 +164,7 @@
                 await _.cancelQueries({
                   queryKey: [_],
                 });
-                let _ = null;
-                _ &&
-                  (_ = {
-                    nGifteeAccountID: _,
-                    rtCreated: Date.now() / 1e3,
-                  }),
-                  _.setQueryData([_], _);
+                _ && Date.now(), _.setQueryData([_], _);
               },
             });
           })(),

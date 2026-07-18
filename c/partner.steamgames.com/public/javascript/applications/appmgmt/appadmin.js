@@ -3205,10 +3205,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetInventoryItemsWithDescriptions = function (_, _) {
+        (_.GetInventoryItemsWithDescriptions = function (_, _, _) {
           return _.SendMsg(
             "Econ.GetInventoryItemsWithDescriptions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -3217,37 +3217,37 @@
             },
           );
         }),
-          (_.GetTradeOfferAccessToken = function (_, _) {
+          (_.GetTradeOfferAccessToken = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClientGetItemShopOverlayAuthURL = function (_, _) {
+          (_.ClientGetItemShopOverlayAuthURL = function (_, _, _) {
             return _.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAssetClassInfo = function (_, _) {
-            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _), _, {
+          (_.GetAssetClassInfo = function (_, _, _) {
+            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetAssetPropertySchema = function (_, _) {
+          (_.GetAssetPropertySchema = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetAssetPropertySchema#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -10880,7 +10880,7 @@
                 onClick: async () => {
                   _("");
                   const _ = new FormData();
-                  _.append("sessionid", _._.SESSIONID),
+                  _.append("sessionid", (0, _._)()),
                     _.append("asset_properties", JSON.stringify(_));
                   const _ = await fetch(
                     `${_._.PARTNER_BASE_URL}apps/setassetpropertyschema/${_}`,
@@ -11034,85 +11034,90 @@
         });
       }
       !(function (_) {
-        (_.GetTradePermissionsForApp = function (_, _) {
+        (_.GetTradePermissionsForApp = function (_, _, _) {
           return _.SendMsg(
             "Econ.GetTradePermissionsForApp#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.GetEconSummary = function (_, _) {
-            return _.SendMsg("Econ.GetEconSummary#1", (0, _._)(_, _), _, {
+          (_.GetEconSummary = function (_, _, _) {
+            return _.SendMsg("Econ.GetEconSummary#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
             });
           }),
-          (_.GetTopTradePartners = function (_, _) {
-            return _.SendMsg("Econ.GetTopTradePartners#1", (0, _._)(_, _), _, {
-              ePrivilege: 0,
-            });
-          }),
-          (_.SetTradeBanTime = function (_, _) {
-            return _.SendMsg("Econ.SetTradeBanTime#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-            });
-          }),
-          (_.SetForceTradeTrustedTime = function (_, _) {
+          (_.GetTopTradePartners = function (_, _, _) {
             return _.SendMsg(
-              "Econ.SetForceTradeTrustedTime#1",
-              (0, _._)(_, _),
+              "Econ.GetTopTradePartners#1",
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.CreateTradeOffer = function (_, _) {
-            return _.SendMsg("Econ.CreateTradeOffer#1", (0, _._)(_, _), _, {
+          (_.SetTradeBanTime = function (_, _, _) {
+            return _.SendMsg("Econ.SetTradeBanTime#1", (0, _._)(_, _, _), _, {
+              ePrivilege: 2,
+            });
+          }),
+          (_.SetForceTradeTrustedTime = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.SetForceTradeTrustedTime#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 0,
+              },
+            );
+          }),
+          (_.CreateTradeOffer = function (_, _, _) {
+            return _.SendMsg("Econ.CreateTradeOffer#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.SendGift = function (_, _) {
-            return _.SendMsg("Econ.SendGift#1", (0, _._)(_, _), _, {
+          (_.SendGift = function (_, _, _) {
+            return _.SendMsg("Econ.SendGift#1", (0, _._)(_, _, _), _, {
               ePrivilege: 7,
               eWebAPIKeyRequirement: 5,
             });
           }),
-          (_.GetTradeOffers = function (_, _) {
-            return _.SendMsg("Econ.GetTradeOffers#1", (0, _._)(_, _), _, {
+          (_.GetTradeOffers = function (_, _, _) {
+            return _.SendMsg("Econ.GetTradeOffers#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetTradeOffer = function (_, _) {
-            return _.SendMsg("Econ.GetTradeOffer#1", (0, _._)(_, _), _, {
+          (_.GetTradeOffer = function (_, _, _) {
+            return _.SendMsg("Econ.GetTradeOffer#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetTradeOfferForAnyUser = function (_, _) {
+          (_.GetTradeOfferForAnyUser = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeOfferForAnyUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.TradeLeftEscrow = function (_, _) {
-            return _.SendMsg("Econ.TradeLeftEscrow#1", (0, _._)(_, _), _, {
+          (_.TradeLeftEscrow = function (_, _, _) {
+            return _.SendMsg("Econ.TradeLeftEscrow#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
             });
           }),
-          (_.GetTradeHoldDurations = function (_, _) {
+          (_.GetTradeHoldDurations = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeHoldDurations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11121,40 +11126,45 @@
               },
             );
           }),
-          (_.GetTradeOfferForConfirmation = function (_, _) {
+          (_.GetTradeOfferForConfirmation = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeOfferForConfirmation#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.AcceptTradeOffer = function (_, _) {
-            return _.SendMsg("Econ.AcceptTradeOffer#1", (0, _._)(_, _), _, {
+          (_.AcceptTradeOffer = function (_, _, _) {
+            return _.SendMsg("Econ.AcceptTradeOffer#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.ConfirmTradeOffer = function (_, _) {
-            return _.SendMsg("Econ.ConfirmTradeOffer#1", (0, _._)(_, _), _, {
+          (_.ConfirmTradeOffer = function (_, _, _) {
+            return _.SendMsg("Econ.ConfirmTradeOffer#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
             });
           }),
-          (_.DeclineTradeOffer = function (_, _) {
-            return _.SendMsg("Econ.DeclineTradeOffer#1", (0, _._)(_, _), _, {
+          (_.DeclineTradeOffer = function (_, _, _) {
+            return _.SendMsg("Econ.DeclineTradeOffer#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.CancelTradeOffer = function (_, _) {
-            return _.SendMsg("Econ.CancelTradeOffer#1", (0, _._)(_, _), _, {
+          (_.CancelTradeOffer = function (_, _, _) {
+            return _.SendMsg("Econ.CancelTradeOffer#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.CancelAllTradeOffers = function (_, _) {
-            return _.SendMsg("Econ.CancelAllTradeOffers#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-            });
+          (_.CancelAllTradeOffers = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.CancelAllTradeOffers#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 2,
+              },
+            );
           }),
           (_.NotifyCancelAllTradeOffers = function (_, _) {
             return _.SendNotification(
@@ -11165,15 +11175,20 @@
               },
             );
           }),
-          (_.IsSafeToCommitTrade = function (_, _) {
-            return _.SendMsg("Econ.IsSafeToCommitTrade#1", (0, _._)(_, _), _, {
-              ePrivilege: 0,
-            });
+          (_.IsSafeToCommitTrade = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.IsSafeToCommitTrade#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 0,
+              },
+            );
           }),
-          (_.GetTradeOffersSummary = function (_, _) {
+          (_.GetTradeOffersSummary = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeOffersSummary#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11182,34 +11197,34 @@
               },
             );
           }),
-          (_.GetTradeHistory = function (_, _) {
-            return _.SendMsg("Econ.GetTradeHistory#1", (0, _._)(_, _), _, {
+          (_.GetTradeHistory = function (_, _, _) {
+            return _.SendMsg("Econ.GetTradeHistory#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetTradeStatus = function (_, _) {
-            return _.SendMsg("Econ.GetTradeStatus#1", (0, _._)(_, _), _, {
+          (_.GetTradeStatus = function (_, _, _) {
+            return _.SendMsg("Econ.GetTradeStatus#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetProvisionalTradeHistory = function (_, _) {
+          (_.GetProvisionalTradeHistory = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetProvisionalTradeHistory#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetInventoryItemsWithDescriptions = function (_, _) {
+          (_.GetInventoryItemsWithDescriptions = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetInventoryItemsWithDescriptions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11218,86 +11233,91 @@
               },
             );
           }),
-          (_.CanUserTradeWithAnyone = function (_, _) {
+          (_.CanUserTradeWithAnyone = function (_, _, _) {
             return _.SendMsg(
               "Econ.CanUserTradeWithAnyone#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CanUserTradeWithPartner = function (_, _) {
+          (_.CanUserTradeWithPartner = function (_, _, _) {
             return _.SendMsg(
               "Econ.CanUserTradeWithPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserTradeEligibility = function (_, _) {
+          (_.GetUserTradeEligibility = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetUserTradeEligibility#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.CheckTradePartnerTrustworthiness = function (_, _) {
+          (_.CheckTradePartnerTrustworthiness = function (_, _, _) {
             return _.SendMsg(
               "Econ.CheckTradePartnerTrustworthiness#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetTradeOfferAccessToken = function (_, _) {
+          (_.GetTradeOfferAccessToken = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CheckTradeOfferAccessToken = function (_, _) {
+          (_.CheckTradeOfferAccessToken = function (_, _, _) {
             return _.SendMsg(
               "Econ.CheckTradeOfferAccessToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.FlushInventoryCache = function (_, _) {
-            return _.SendMsg("Econ.FlushInventoryCache#1", (0, _._)(_, _), _, {
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 5,
-            });
+          (_.FlushInventoryCache = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.FlushInventoryCache#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 5,
+              },
+            );
           }),
-          (_.FlushInventoryServiceDBOs = function (_, _) {
+          (_.FlushInventoryServiceDBOs = function (_, _, _) {
             return _.SendMsg(
               "Econ.FlushInventoryServiceDBOs#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.FlushAssetAppearanceCache = function (_, _) {
+          (_.FlushAssetAppearanceCache = function (_, _, _) {
             return _.SendMsg(
               "Econ.FlushAssetAppearanceCache#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 7,
@@ -11305,148 +11325,173 @@
               },
             );
           }),
-          (_.FlushContextCache = function (_, _) {
-            return _.SendMsg("Econ.FlushContextCache#1", (0, _._)(_, _), _, {
+          (_.FlushContextCache = function (_, _, _) {
+            return _.SendMsg("Econ.FlushContextCache#1", (0, _._)(_, _, _), _, {
               ePrivilege: 7,
               eWebAPIKeyRequirement: 5,
             });
           }),
-          (_.GetEconAppSettings = function (_, _) {
-            return _.SendMsg("Econ.GetEconAppSettings#1", (0, _._)(_, _), _, {
-              ePrivilege: 7,
-            });
+          (_.GetEconAppSettings = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.GetEconAppSettings#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 7,
+              },
+            );
           }),
-          (_.GetItemShopPartnerToken = function (_, _) {
+          (_.GetItemShopPartnerToken = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetItemShopPartnerToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.ClientGetItemShopOverlayAuthURL = function (_, _) {
+          (_.ClientGetItemShopOverlayAuthURL = function (_, _, _) {
             return _.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CheckItemShopPartnerHMAC = function (_, _) {
+          (_.CheckItemShopPartnerHMAC = function (_, _, _) {
             return _.SendMsg(
               "Econ.CheckItemShopPartnerHMAC#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.StartItemShopTxn = function (_, _) {
-            return _.SendMsg("Econ.StartItemShopTxn#1", (0, _._)(_, _), _, {
+          (_.StartItemShopTxn = function (_, _, _) {
+            return _.SendMsg("Econ.StartItemShopTxn#1", (0, _._)(_, _, _), _, {
               ePrivilege: 2,
             });
           }),
-          (_.GetItemShopTxnState = function (_, _) {
-            return _.SendMsg("Econ.GetItemShopTxnState#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-            });
-          }),
-          (_.FinishItemShopTxn = function (_, _) {
-            return _.SendMsg("Econ.FinishItemShopTxn#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-            });
-          }),
-          (_.BuildItemShopReturnURL = function (_, _) {
+          (_.GetItemShopTxnState = function (_, _, _) {
             return _.SendMsg(
-              "Econ.BuildItemShopReturnURL#1",
-              (0, _._)(_, _),
+              "Econ.GetItemShopTxnState#1",
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.AppSupportsRefund = function (_, _) {
-            return _.SendMsg("Econ.AppSupportsRefund#1", (0, _._)(_, _), _, {
-              ePrivilege: 0,
+          (_.FinishItemShopTxn = function (_, _, _) {
+            return _.SendMsg("Econ.FinishItemShopTxn#1", (0, _._)(_, _, _), _, {
+              ePrivilege: 2,
             });
           }),
-          (_.QueryRefundAllowed = function (_, _) {
-            return _.SendMsg("Econ.QueryRefundAllowed#1", (0, _._)(_, _), _, {
-              ePrivilege: 0,
-            });
-          }),
-          (_.RefundPurchase = function (_, _) {
-            return _.SendMsg("Econ.RefundPurchase#1", (0, _._)(_, _), _, {
-              ePrivilege: 0,
-            });
-          }),
-          (_.GetEligibleOneOffRefunds = function (_, _) {
+          (_.BuildItemShopReturnURL = function (_, _, _) {
             return _.SendMsg(
-              "Econ.GetEligibleOneOffRefunds#1",
-              (0, _._)(_, _),
+              "Econ.BuildItemShopReturnURL#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 2,
+              },
+            );
+          }),
+          (_.AppSupportsRefund = function (_, _, _) {
+            return _.SendMsg("Econ.AppSupportsRefund#1", (0, _._)(_, _, _), _, {
+              ePrivilege: 0,
+            });
+          }),
+          (_.QueryRefundAllowed = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.QueryRefundAllowed#1",
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.ProcessOneOffRefund = function (_, _) {
-            return _.SendMsg("Econ.ProcessOneOffRefund#1", (0, _._)(_, _), _, {
+          (_.RefundPurchase = function (_, _, _) {
+            return _.SendMsg("Econ.RefundPurchase#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
             });
           }),
-          (_.GetAssetClassInfo = function (_, _) {
-            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _), _, {
+          (_.GetEligibleOneOffRefunds = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.GetEligibleOneOffRefunds#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 0,
+              },
+            );
+          }),
+          (_.ProcessOneOffRefund = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.ProcessOneOffRefund#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 0,
+              },
+            );
+          }),
+          (_.GetAssetClassInfo = function (_, _, _) {
+            return _.SendMsg("Econ.GetAssetClassInfo#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetAssetClassInfoInternal = function (_, _) {
+          (_.GetAssetClassInfoInternal = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetAssetClassInfoInternal#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.GetAssetClassProperties = function (_, _) {
+          (_.GetAssetClassProperties = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetAssetClassProperties#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
               },
             );
           }),
-          (_.RevertTrade = function (_, _) {
-            return _.SendMsg("Econ.RevertTrade#1", (0, _._)(_, _), _, {
+          (_.RevertTrade = function (_, _, _) {
+            return _.SendMsg("Econ.RevertTrade#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.RevertAllTrades = function (_, _) {
-            return _.SendMsg("Econ.RevertAllTrades#1", (0, _._)(_, _), _, {
+          (_.RevertAllTrades = function (_, _, _) {
+            return _.SendMsg("Econ.RevertAllTrades#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.ApplyTradeCooldown = function (_, _) {
-            return _.SendMsg("Econ.ApplyTradeCooldown#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.ApplyTradeCooldown = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.ApplyTradeCooldown#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetAssetPropertySchema = function (_, _) {
+          (_.GetAssetPropertySchema = function (_, _, _) {
             return _.SendMsg(
               "Econ.GetAssetPropertySchema#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -11455,13 +11500,18 @@
               },
             );
           }),
-          (_.AcknowledgeTradeUI = function (_, _) {
-            return _.SendMsg("Econ.AcknowledgeTradeUI#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.AcknowledgeTradeUI = function (_, _, _) {
+            return _.SendMsg(
+              "Econ.AcknowledgeTradeUI#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.NeedTradeUI = function (_, _) {
-            return _.SendMsg("Econ.NeedTradeUI#1", (0, _._)(_, _), _, {
+          (_.NeedTradeUI = function (_, _, _) {
+            return _.SendMsg("Econ.NeedTradeUI#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           });
@@ -12869,10 +12919,10 @@
       }
       var _, _, _, _, _, _, _;
       !(function (_) {
-        (_.GetServersForSteamPipe = function (_, _) {
+        (_.GetServersForSteamPipe = function (_, _, _) {
           return _.SendMsg(
             "ContentServerDirectory.GetServersForSteamPipe#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -12881,10 +12931,10 @@
             },
           );
         }),
-          (_.GetDepotPatchInfo = function (_, _) {
+          (_.GetDepotPatchInfo = function (_, _, _) {
             return _.SendMsg(
               "ContentServerDirectory.GetDepotPatchInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12893,10 +12943,10 @@
               },
             );
           }),
-          (_.GetClientUpdateHosts = function (_, _) {
+          (_.GetClientUpdateHosts = function (_, _, _) {
             return _.SendMsg(
               "ContentServerDirectory.GetClientUpdateHosts#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12905,10 +12955,10 @@
               },
             );
           }),
-          (_.GetManifestRequestCode = function (_, _) {
+          (_.GetManifestRequestCode = function (_, _, _) {
             return _.SendMsg(
               "ContentServerDirectory.GetManifestRequestCode#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12916,10 +12966,10 @@
               },
             );
           }),
-          (_.GetCDNAuthToken = function (_, _) {
+          (_.GetCDNAuthToken = function (_, _, _) {
             return _.SendMsg(
               "ContentServerDirectory.GetCDNAuthToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -12927,20 +12977,20 @@
               },
             );
           }),
-          (_.RequestPeerContentServer = function (_, _) {
+          (_.RequestPeerContentServer = function (_, _, _) {
             return _.SendMsg(
               "ContentServerDirectory.RequestPeerContentServer#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPeerContentInfo = function (_, _) {
+          (_.GetPeerContentInfo = function (_, _, _) {
             return _.SendMsg(
               "ContentServerDirectory.GetPeerContentInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -12949,10 +12999,10 @@
           });
       })(_ || (_ = {})),
         (function (_) {
-          _.GetAllDetectedAppContent = function (_, _) {
+          _.GetAllDetectedAppContent = function (_, _, _) {
             return _.SendMsg(
               "DepotContentDetection.GetAllDetectedAppContent#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -20010,10 +20060,10 @@
         }
       }
       !(function (_) {
-        _.SetAppBuildLiveConfirmed = function (_, _) {
+        _.SetAppBuildLiveConfirmed = function (_, _, _) {
           return _.SendMsg(
             "BuildManagement.SetAppBuildLiveConfirmed#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
@@ -20049,20 +20099,20 @@
                 },
               );
             }),
-            (_.RequestAppContentPurge = function (_, _) {
+            (_.RequestAppContentPurge = function (_, _, _) {
               return _.SendMsg(
                 "MDSAdmin.RequestAppContentPurge#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 5,
                 },
               );
             }),
-            (_.GetAppContentPurgeStatus = function (_, _) {
+            (_.GetAppContentPurgeStatus = function (_, _, _) {
               return _.SendMsg(
                 "MDSAdmin.GetAppContentPurgeStatus#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -20105,50 +20155,50 @@
                 },
               );
             }),
-            (_.GetDepotDownloadBytes = function (_, _) {
+            (_.GetDepotDownloadBytes = function (_, _, _) {
               return _.SendMsg(
                 "MDSAdmin.GetDepotDownloadBytes#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.BeginOriginMigrationJob = function (_, _) {
+            (_.BeginOriginMigrationJob = function (_, _, _) {
               return _.SendMsg(
                 "MDSAdmin.BeginOriginMigrationJob#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetDepotChunkLocation = function (_, _) {
+            (_.GetDepotChunkLocation = function (_, _, _) {
               return _.SendMsg(
                 "MDSAdmin.GetDepotChunkLocation#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.SetAppBuildSortOrder = function (_, _) {
+            (_.SetAppBuildSortOrder = function (_, _, _) {
               return _.SendMsg(
                 "MDSAdmin.SetAppBuildSortOrder#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetManifestAppBranchInfo = function (_, _) {
+            (_.GetManifestAppBranchInfo = function (_, _, _) {
               return _.SendMsg(
                 "MDSAdmin.GetManifestAppBranchInfo#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -20164,13 +20214,18 @@
                 },
               );
             }),
-            (_.ChunkReceived = function (_, _) {
-              return _.SendMsg("MDSAdmin.ChunkReceived#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
+            (_.ChunkReceived = function (_, _, _) {
+              return _.SendMsg(
+                "MDSAdmin.ChunkReceived#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
             }),
-            (_.ChunkStored = function (_, _) {
-              return _.SendMsg("MDSAdmin.ChunkStored#1", (0, _._)(_, _), _, {
+            (_.ChunkStored = function (_, _, _) {
+              return _.SendMsg("MDSAdmin.ChunkStored#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 1,
               });
             }),
@@ -20185,30 +20240,30 @@
             });
         })(_ || (_ = {})),
         (function (_) {
-          (_.GetCDNConfigurations = function (_, _) {
+          (_.GetCDNConfigurations = function (_, _, _) {
             return _.SendMsg(
               "ContentServerConfig.GetCDNConfigurations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-            (_.UpdateCDNConfig = function (_, _) {
+            (_.UpdateCDNConfig = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.UpdateCDNConfig#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.UpdateCDNStats = function (_, _) {
+            (_.UpdateCDNStats = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.UpdateCDNStats#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -20233,20 +20288,20 @@
                 },
               );
             }),
-            (_.GetSteamCSConfig = function (_, _) {
+            (_.GetSteamCSConfig = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetSteamCSConfig#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.UpdateSteamCSConfig = function (_, _) {
+            (_.UpdateSteamCSConfig = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.UpdateSteamCSConfig#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
@@ -20262,20 +20317,20 @@
                 },
               );
             }),
-            (_.GetSteamCSConfigHistory = function (_, _) {
+            (_.GetSteamCSConfigHistory = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetSteamCSConfigHistory#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.UpdateCSIPFilterRanges = function (_, _) {
+            (_.UpdateCSIPFilterRanges = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.UpdateCSIPFilterRanges#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -20291,20 +20346,20 @@
                 },
               );
             }),
-            (_.GetSteamCSNames = function (_, _) {
+            (_.GetSteamCSNames = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetSteamCSNames#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.AllocateSteamCacheNode = function (_, _) {
+            (_.AllocateSteamCacheNode = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.AllocateSteamCacheNode#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 2,
@@ -20312,10 +20367,10 @@
                 },
               );
             }),
-            (_.GetSteamCacheConfig = function (_, _) {
+            (_.GetSteamCacheConfig = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetSteamCacheConfig#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20324,10 +20379,10 @@
                 },
               );
             }),
-            (_.UpdateSteamCacheConfig = function (_, _) {
+            (_.UpdateSteamCacheConfig = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.UpdateSteamCacheConfig#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 2,
@@ -20344,20 +20399,20 @@
                 },
               );
             }),
-            (_.RevSteamCacheAPIKey = function (_, _) {
+            (_.RevSteamCacheAPIKey = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.RevSteamCacheAPIKey#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.GetSteamCacheConfigHistory = function (_, _) {
+            (_.GetSteamCacheConfigHistory = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetSteamCacheConfigHistory#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20366,10 +20421,10 @@
                 },
               );
             }),
-            (_.GetSteamCacheNames = function (_, _) {
+            (_.GetSteamCacheNames = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetSteamCacheNames#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20378,30 +20433,30 @@
                 },
               );
             }),
-            (_.AllocateOpenCacheNode = function (_, _) {
+            (_.AllocateOpenCacheNode = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.AllocateOpenCacheNode#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetOpenCacheConfig = function (_, _) {
+            (_.GetOpenCacheConfig = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetOpenCacheConfig#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.UpdateOpenCacheConfig = function (_, _) {
+            (_.UpdateOpenCacheConfig = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.UpdateOpenCacheConfig#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
@@ -20417,30 +20472,30 @@
                 },
               );
             }),
-            (_.GetOpenCacheConfigHistory = function (_, _) {
+            (_.GetOpenCacheConfigHistory = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetOpenCacheConfigHistory#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 4,
                 },
               );
             }),
-            (_.GetOpenCacheNames = function (_, _) {
+            (_.GetOpenCacheNames = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetOpenCacheNames#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.SetSteamCacheClientFilters = function (_, _) {
+            (_.SetSteamCacheClientFilters = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.SetSteamCacheClientFilters#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 0,
@@ -20448,10 +20503,10 @@
                 },
               );
             }),
-            (_.SetSteamCachePerformanceStats = function (_, _) {
+            (_.SetSteamCachePerformanceStats = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.SetSteamCachePerformanceStats#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 0,
@@ -20459,10 +20514,10 @@
                 },
               );
             }),
-            (_.GetSteamCacheNodeParams = function (_, _) {
+            (_.GetSteamCacheNodeParams = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetSteamCacheNodeParams#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20471,30 +20526,30 @@
                 },
               );
             }),
-            (_.CheckManifestRequestCode = function (_, _) {
+            (_.CheckManifestRequestCode = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.CheckManifestRequestCode#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetManifestRequestCode = function (_, _) {
+            (_.GetManifestRequestCode = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.GetManifestRequestCode#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.IsDepotAllowedSteamChina = function (_, _) {
+            (_.IsDepotAllowedSteamChina = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerConfig.IsDepotAllowedSteamChina#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -20503,10 +20558,10 @@
             });
         })(_ || (_ = {})),
         (function (_) {
-          (_.GetCDNForVideo = function (_, _) {
+          (_.GetCDNForVideo = function (_, _, _) {
             return _.SendMsg(
               "ContentServerDirectory.GetCDNForVideo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -20515,10 +20570,10 @@
               },
             );
           }),
-            (_.PickSingleContentServer = function (_, _) {
+            (_.PickSingleContentServer = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.PickSingleContentServer#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20527,10 +20582,10 @@
                 },
               );
             }),
-            (_.GetServersForSteamPipe = function (_, _) {
+            (_.GetServersForSteamPipe = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.GetServersForSteamPipe#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20539,10 +20594,10 @@
                 },
               );
             }),
-            (_.GetDepotPatchInfo = function (_, _) {
+            (_.GetDepotPatchInfo = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.GetDepotPatchInfo#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20551,10 +20606,10 @@
                 },
               );
             }),
-            (_.GetClientUpdateHosts = function (_, _) {
+            (_.GetClientUpdateHosts = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.GetClientUpdateHosts#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20563,10 +20618,10 @@
                 },
               );
             }),
-            (_.GetManifestRequestCode = function (_, _) {
+            (_.GetManifestRequestCode = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.GetManifestRequestCode#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20574,10 +20629,10 @@
                 },
               );
             }),
-            (_.GetCDNAuthToken = function (_, _) {
+            (_.GetCDNAuthToken = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.GetCDNAuthToken#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -20585,20 +20640,20 @@
                 },
               );
             }),
-            (_.RequestPeerContentServer = function (_, _) {
+            (_.RequestPeerContentServer = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.RequestPeerContentServer#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetPeerContentInfo = function (_, _) {
+            (_.GetPeerContentInfo = function (_, _, _) {
               return _.SendMsg(
                 "ContentServerDirectory.GetPeerContentInfo#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -20607,10 +20662,10 @@
             });
         })(_ || (_ = {})),
         (function (_) {
-          (_.GetAllDetectedAppContent = function (_, _) {
+          (_.GetAllDetectedAppContent = function (_, _, _) {
             return _.SendMsg(
               "DepotContentDetection.GetAllDetectedAppContent#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -20618,10 +20673,10 @@
               },
             );
           }),
-            (_.GetDetectedContentSingleApp = function (_, _) {
+            (_.GetDetectedContentSingleApp = function (_, _, _) {
               return _.SendMsg(
                 "DepotContentDetection.GetDetectedContentSingleApp#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -21024,8 +21079,7 @@
         async UploadSingleImage(_, _, _, _) {
           let _ = null;
           const _ = new FormData();
-          _.append("assetfile", _.file, _),
-            _.append("sessionid", _._.SESSIONID);
+          _.append("assetfile", _.file, _), _.append("sessionid", (0, _._)());
           const _ = _.GetCurrentImageOption();
           _.append("strAssetType", _.asset_type);
           if (!(0, _._)(_))
@@ -21248,7 +21302,7 @@
               queryFn: async () => {
                 const _ = `${_._.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${_}/${_}`,
                   _ = new FormData();
-                _.append("sessionid", _._.SESSIONID);
+                _.append("sessionid", (0, _._)());
                 const _ = await _().post(_, _, {
                   withCredentials: !0,
                 });

@@ -1387,7 +1387,7 @@
       }
       function _(_) {
         const _ = new FormData();
-        _.append("nonce", _), _.append("sessionid", _._.SESSIONID);
+        _.append("nonce", _), _.append("sessionid", (0, _._)());
         let _ = new URL(document.location.href);
         const _ = new URLSearchParams(_.search);
         _.has("need_password") &&

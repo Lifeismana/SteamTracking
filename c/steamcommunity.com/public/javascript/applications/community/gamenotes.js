@@ -272,6 +272,7 @@
       _.Message;
       _.Message;
       _.Message;
+      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -4366,59 +4367,69 @@
               },
             );
           }),
-          (_.BeginHTTPUpload = function (_, _) {
-            return _.SendMsg("Cloud.BeginHTTPUpload#1", (0, _._)(_, _), _, {
+          (_.BeginHTTPUpload = function (_, _, _) {
+            return _.SendMsg("Cloud.BeginHTTPUpload#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.CommitHTTPUpload = function (_, _) {
-            return _.SendMsg("Cloud.CommitHTTPUpload#1", (0, _._)(_, _), _, {
+          (_.CommitHTTPUpload = function (_, _, _) {
+            return _.SendMsg("Cloud.CommitHTTPUpload#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.BeginUGCUpload = function (_, _) {
-            return _.SendMsg("Cloud.BeginUGCUpload#1", (0, _._)(_, _), _, {
+          (_.BeginUGCUpload = function (_, _, _) {
+            return _.SendMsg("Cloud.BeginUGCUpload#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.CommitUGCUpload = function (_, _) {
-            return _.SendMsg("Cloud.CommitUGCUpload#1", (0, _._)(_, _), _, {
+          (_.CommitUGCUpload = function (_, _, _) {
+            return _.SendMsg("Cloud.CommitUGCUpload#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetFileDetails = function (_, _) {
-            return _.SendMsg("Cloud.GetFileDetails#1", (0, _._)(_, _), _, {
+          (_.GetFileDetails = function (_, _, _) {
+            return _.SendMsg("Cloud.GetFileDetails#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetSingleFileInfo = function (_, _) {
-            return _.SendMsg("Cloud.GetSingleFileInfo#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
+          (_.GetSingleFileInfo = function (_, _, _) {
+            return _.SendMsg(
+              "Cloud.GetSingleFileInfo#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.ShareFile = function (_, _, _) {
+            return _.SendMsg("Cloud.ShareFile#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.ShareFile = function (_, _) {
-            return _.SendMsg("Cloud.ShareFile#1", (0, _._)(_, _), _, {
+          (_.EnumerateUserFiles = function (_, _, _) {
+            return _.SendMsg(
+              "Cloud.EnumerateUserFiles#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.Delete = function (_, _, _) {
+            return _.SendMsg("Cloud.Delete#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.EnumerateUserFiles = function (_, _) {
-            return _.SendMsg("Cloud.EnumerateUserFiles#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.Delete = function (_, _) {
-            return _.SendMsg("Cloud.Delete#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetClientEncryptionKey = function (_, _) {
+          (_.GetClientEncryptionKey = function (_, _, _) {
             return _.SendMsg(
               "Cloud.GetClientEncryptionKey#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -4439,10 +4450,15 @@
               },
             );
           }),
-          (_.BeginAppUploadBatch = function (_, _) {
-            return _.SendMsg("Cloud.BeginAppUploadBatch#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.BeginAppUploadBatch = function (_, _, _) {
+            return _.SendMsg(
+              "Cloud.BeginAppUploadBatch#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
           (_.CompleteAppUploadBatch = function (_, _) {
             return _.SendNotification(
@@ -4453,43 +4469,48 @@
               },
             );
           }),
-          (_.CompleteAppUploadBatchBlocking = function (_, _) {
+          (_.CompleteAppUploadBatchBlocking = function (_, _, _) {
             return _.SendMsg(
               "Cloud.CompleteAppUploadBatchBlocking#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClientBeginFileUpload = function (_, _) {
+          (_.ClientBeginFileUpload = function (_, _, _) {
             return _.SendMsg(
               "Cloud.ClientBeginFileUpload#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClientCommitFileUpload = function (_, _) {
+          (_.ClientCommitFileUpload = function (_, _, _) {
             return _.SendMsg(
               "Cloud.ClientCommitFileUpload#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClientFileDownload = function (_, _) {
-            return _.SendMsg("Cloud.ClientFileDownload#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.ClientFileDownload = function (_, _, _) {
+            return _.SendMsg(
+              "Cloud.ClientFileDownload#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.ClientDeleteFile = function (_, _) {
-            return _.SendMsg("Cloud.ClientDeleteFile#1", (0, _._)(_, _), _, {
+          (_.ClientDeleteFile = function (_, _, _) {
+            return _.SendMsg("Cloud.ClientDeleteFile#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
@@ -4502,10 +4523,10 @@
               },
             );
           }),
-          (_.GetAppFileChangelist = function (_, _) {
+          (_.GetAppFileChangelist = function (_, _, _) {
             return _.SendMsg(
               "Cloud.GetAppFileChangelist#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4513,20 +4534,25 @@
               },
             );
           }),
-          (_.SuspendAppSession = function (_, _) {
-            return _.SendMsg("Cloud.SuspendAppSession#1", (0, _._)(_, _), _, {
+          (_.SuspendAppSession = function (_, _, _) {
+            return _.SendMsg(
+              "Cloud.SuspendAppSession#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.ResumeAppSession = function (_, _, _) {
+            return _.SendMsg("Cloud.ResumeAppSession#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.ResumeAppSession = function (_, _) {
-            return _.SendMsg("Cloud.ResumeAppSession#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.SignalAppLaunchIntent = function (_, _) {
+          (_.SignalAppLaunchIntent = function (_, _, _) {
             return _.SendMsg(
               "Cloud.SignalAppLaunchIntent#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -4542,10 +4568,10 @@
               },
             );
           }),
-          (_.ClientGetAppQuotaUsage = function (_, _) {
+          (_.ClientGetAppQuotaUsage = function (_, _, _) {
             return _.SendMsg(
               "Cloud.ClientGetAppQuotaUsage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

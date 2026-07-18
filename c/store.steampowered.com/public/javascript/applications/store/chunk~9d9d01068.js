@@ -2073,10 +2073,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetVoteDefinitions = function (_, _) {
+        (_.GetVoteDefinitions = function (_, _, _) {
           return _.SendMsg(
             "StoreSales.GetVoteDefinitions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -2085,23 +2085,28 @@
             },
           );
         }),
-          (_.SetVote = function (_, _) {
-            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _), _, {
+          (_.SetVote = function (_, _, _) {
+            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetUserVotes = function (_, _) {
-            return _.SendMsg("StoreSales.GetUserVotes#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetUserVotes = function (_, _, _) {
+            return _.SendMsg(
+              "StoreSales.GetUserVotes#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.GetUserNominations = function (_, _) {
+          (_.GetUserNominations = function (_, _, _) {
             return _.SendMsg(
               "SteamAwards.GetUserNominations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2109,10 +2114,10 @@
               },
             );
           }),
-            (_.GetOtherUserNominations = function (_, _) {
+            (_.GetOtherUserNominations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetOtherUserNominations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -2120,16 +2125,16 @@
                 },
               );
             }),
-            (_.Nominate = function (_, _) {
-              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _), _, {
+            (_.Nominate = function (_, _, _) {
+              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _, _), _, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
             }),
-            (_.GetNominationRecommendations = function (_, _) {
+            (_.GetNominationRecommendations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationRecommendations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -2137,10 +2142,10 @@
                 },
               );
             }),
-            (_.GetNominationShareLink = function (_, _) {
+            (_.GetNominationShareLink = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationShareLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,

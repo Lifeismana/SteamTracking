@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Ця пропозиція більше не доступна",
     "Listing_NotAvailable_Short": "Не доступна",
     "Listing_NotAvailable_Long": "Ця пропозиція більше не доступна для купівлі.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Моя пропозиція)",
     "BuyOrderDialog_Header": "Купівля — %1$s",
     "BuyOrderDialog_Header_NoItem": "Зробити запит на придбання",
     "BuyOrderDialog_BucketPicker_Label": "Предмет якого типу ви бажаєте придбати?",

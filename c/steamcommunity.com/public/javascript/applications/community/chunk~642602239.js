@@ -2364,16 +2364,21 @@
       }
       var _;
       !(function (_) {
-        (_.GetCommunityInventory = function (_, _) {
-          return _.SendMsg("Quest.GetCommunityInventory#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (_.GetCommunityInventory = function (_, _, _) {
+          return _.SendMsg(
+            "Quest.GetCommunityInventory#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.GetCommunityItemDefinitions = function (_, _) {
+          (_.GetCommunityItemDefinitions = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetCommunityItemDefinitions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2382,20 +2387,20 @@
               },
             );
           }),
-          (_.ActivateProfileModifierItem = function (_, _) {
+          (_.ActivateProfileModifierItem = function (_, _, _) {
             return _.SendMsg(
               "Quest.ActivateProfileModifierItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetNumTradingCardsEarned = function (_, _) {
+          (_.GetNumTradingCardsEarned = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetNumTradingCardsEarned#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2403,10 +2408,10 @@
               },
             );
           }),
-          (_.GetVirtualItemRewardDefinition = function (_, _) {
+          (_.GetVirtualItemRewardDefinition = function (_, _, _) {
             return _.SendMsg(
               "Quest.GetVirtualItemRewardDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2414,10 +2419,10 @@
               },
             );
           }),
-          (_.SetVirtualItemRewardDefinition = function (_, _) {
+          (_.SetVirtualItemRewardDefinition = function (_, _, _) {
             return _.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
@@ -4037,10 +4042,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetVoteDefinitions = function (_, _) {
+        (_.GetVoteDefinitions = function (_, _, _) {
           return _.SendMsg(
             "StoreSales.GetVoteDefinitions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -4049,23 +4054,28 @@
             },
           );
         }),
-          (_.SetVote = function (_, _) {
-            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _), _, {
+          (_.SetVote = function (_, _, _) {
+            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetUserVotes = function (_, _) {
-            return _.SendMsg("StoreSales.GetUserVotes#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetUserVotes = function (_, _, _) {
+            return _.SendMsg(
+              "StoreSales.GetUserVotes#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.GetUserNominations = function (_, _) {
+          (_.GetUserNominations = function (_, _, _) {
             return _.SendMsg(
               "SteamAwards.GetUserNominations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4073,10 +4083,10 @@
               },
             );
           }),
-            (_.GetOtherUserNominations = function (_, _) {
+            (_.GetOtherUserNominations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetOtherUserNominations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -4084,16 +4094,16 @@
                 },
               );
             }),
-            (_.Nominate = function (_, _) {
-              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _), _, {
+            (_.Nominate = function (_, _, _) {
+              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _, _), _, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
             }),
-            (_.GetNominationRecommendations = function (_, _) {
+            (_.GetNominationRecommendations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationRecommendations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -4101,10 +4111,10 @@
                 },
               );
             }),
-            (_.GetNominationShareLink = function (_, _) {
+            (_.GetNominationShareLink = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationShareLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -6304,7 +6314,8 @@
           (_.child_demo_appid_for_repost = void 0),
           (_.sale_vanity_id = void 0),
           (_.sale_update_landing_page_vanity_id = void 0),
-          (_.automatically_push_updated_source = void 0);
+          (_.automatically_push_updated_source = void 0),
+          (_.country_restriction = void 0);
       }
       !(function (_) {
         (_[(_.k_ETaggedItems = 0)] = "k_ETaggedItems"),
@@ -10336,7 +10347,7 @@
           this.m_mapExistingEvents.has(_) &&
             (this.m_mapExistingEvents.get(_).deleteInProgress = !0);
           let _ = new URLSearchParams();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("bDelete", "1"),
             __webpack_require__.append("gid", _);
           const _ = await _().post(
@@ -10714,7 +10725,7 @@
           try {
             const _ = `${_._.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${_}`,
               _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("gidclanevent", _),
               _.append("json", JSON.stringify(_)),
               _.append("pageStyles", JSON.stringify(_));

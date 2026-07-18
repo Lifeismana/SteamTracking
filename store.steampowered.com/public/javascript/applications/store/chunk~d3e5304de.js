@@ -1150,50 +1150,50 @@
       }
       var k;
       !(function (e) {
-        (e.GetCommunityInventory = function (e, t) {
+        (e.GetCommunityInventory = function (e, t, r) {
           return e.SendMsg(
             "Quest.GetCommunityInventory#1",
-            (0, u.I8)(v, t),
+            (0, u.I8)(v, t, r),
             h,
             { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
-          (e.GetCommunityItemDefinitions = function (e, t) {
+          (e.GetCommunityItemDefinitions = function (e, t, r) {
             return e.SendMsg(
               "Quest.GetCommunityItemDefinitions#1",
-              (0, u.I8)(I, t),
+              (0, u.I8)(I, t, r),
               T,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 4 },
             );
           }),
-          (e.ActivateProfileModifierItem = function (e, t) {
+          (e.ActivateProfileModifierItem = function (e, t, r) {
             return e.SendMsg(
               "Quest.ActivateProfileModifierItem#1",
-              (0, u.I8)(F, t),
+              (0, u.I8)(F, t, r),
               C,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetNumTradingCardsEarned = function (e, t) {
+          (e.GetNumTradingCardsEarned = function (e, t, r) {
             return e.SendMsg(
               "Quest.GetNumTradingCardsEarned#1",
-              (0, u.I8)(Q, t),
+              (0, u.I8)(Q, t, r),
               x,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetVirtualItemRewardDefinition = function (e, t) {
+          (e.GetVirtualItemRewardDefinition = function (e, t, r) {
             return e.SendMsg(
               "Quest.GetVirtualItemRewardDefinition#1",
-              (0, u.I8)(N, t),
+              (0, u.I8)(N, t, r),
               D,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-          (e.SetVirtualItemRewardDefinition = function (e, t) {
+          (e.SetVirtualItemRewardDefinition = function (e, t, r) {
             return e.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, u.I8)(E, t),
+              (0, u.I8)(E, t, r),
               P,
               { ePrivilege: 4 },
             );

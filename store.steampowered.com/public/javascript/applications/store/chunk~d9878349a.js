@@ -501,20 +501,20 @@
           return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
         }
       }
-      class I extends _.Message {
+      class F extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            I.prototype.appids || y.Sg(I.M()),
+            F.prototype.appids || y.Sg(F.M()),
             _.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: {
                   appids: {
                     n: 1,
@@ -526,39 +526,39 @@
                   },
                 },
               }),
-            I.sm_m
+            F.sm_m
           );
         }
         static MBF() {
-          return I.sm_mbf || (I.sm_mbf = y.w0(I.M())), I.sm_mbf;
+          return F.sm_mbf || (F.sm_mbf = y.w0(F.M())), F.sm_mbf;
         }
         toObject(e = !1) {
-          return I.toObject(e, this);
+          return F.toObject(e, this);
         }
         static toObject(e, t) {
-          return y.BT(I.M(), e, t);
+          return y.BT(F.M(), e, t);
         }
         static fromObject(e) {
-          return y.Uq(I.M(), e);
+          return y.Uq(F.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (S().BinaryReader)(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return y.zj(I.MBF(), e, t);
+          return y.zj(F.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (S().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          y.i0(I.M(), e, t);
+          y.i0(F.M(), e, t);
         }
         serializeBase64String() {
           var e = new (S().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Response";
@@ -751,7 +751,7 @@
           (e.SearchAppDataCacheByStoreKeywordsHandler = {
             name: "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
             request: x,
-            response: I,
+            response: F,
           }),
           (e.SearchAppDataCacheByStoreKeywords = function (e, t) {
             return null == (t = t || (0, b.OI)().GetDefaultTransport())
@@ -764,7 +764,7 @@
               : t.SendMsg(
                   "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
                   (0, m.I8)(x, e),
-                  I,
+                  F,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -779,12 +779,12 @@
               : t.SendMsg(
                   "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
                   (0, m.I8)(x, e),
-                  I,
+                  F,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           });
       })(n || (n = {}));
-      var F = r(84933),
+      var I = r(84933),
         O = r(44654),
         E = r(34557),
         W = r(60778);
@@ -1377,10 +1377,10 @@
           }
         }
       }
-      (0, i.Cg)([F.oI], A.prototype, "OnSocketError", null),
-        (0, i.Cg)([F.oI], A.prototype, "OnSocketOpen", null),
-        (0, i.Cg)([F.oI], A.prototype, "OnSocketClose", null),
-        (0, i.Cg)([F.oI], A.prototype, "OnSocketMessage", null);
+      (0, i.Cg)([I.oI], A.prototype, "OnSocketError", null),
+        (0, i.Cg)([I.oI], A.prototype, "OnSocketOpen", null),
+        (0, i.Cg)([I.oI], A.prototype, "OnSocketClose", null),
+        (0, i.Cg)([I.oI], A.prototype, "OnSocketMessage", null);
       const N = new W.wd("WebUITransport");
       class G {
         m_iMsgSeq = 1;
@@ -1654,11 +1654,11 @@
           return c.R;
         }
       }
-      (0, i.Cg)([F.oI], G.prototype, "OnWebsocketReconnectStart", null),
-        (0, i.Cg)([F.oI], G.prototype, "OnWebsocketReconnectFinish", null),
-        (0, i.Cg)([F.oI], G.prototype, "OnWebsocketClose", null),
-        (0, i.Cg)([F.oI], G.prototype, "OnWebsocketMessage", null),
-        (0, i.Cg)([F.oI], G.prototype, "OnStartShutdown", null);
+      (0, i.Cg)([I.oI], G.prototype, "OnWebsocketReconnectStart", null),
+        (0, i.Cg)([I.oI], G.prototype, "OnWebsocketReconnectFinish", null),
+        (0, i.Cg)([I.oI], G.prototype, "OnWebsocketClose", null),
+        (0, i.Cg)([I.oI], G.prototype, "OnWebsocketMessage", null),
+        (0, i.Cg)([I.oI], G.prototype, "OnStartShutdown", null);
       const U = new G();
       var j = r(6419);
       function $() {
@@ -1867,7 +1867,7 @@
                   .Body()
                   .preferences();
               } else {
-                let t = { sessionid: h.TS.SESSIONID, origin: $() };
+                let t = { sessionid: (0, h.KC)(), origin: $() };
                 const r = await a().get(
                   h.TS.COMMUNITY_BASE_URL +
                     "textfilter/ajaxgetcommunitypreferences",
@@ -1890,7 +1890,7 @@
                     .Body()
                     .words();
                 } else {
-                  let e = { sessionid: h.TS.SESSIONID, origin: $() };
+                  let e = { sessionid: (0, h.KC)(), origin: $() };
                   const r = await a().get(
                     h.TS.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgettextfiltercustomwords",
@@ -2111,7 +2111,7 @@
       function X() {
         if (!Y) {
           const e = new Set();
-          let t = { sessionid: h.TS.SESSIONID, origin: $() };
+          let t = { sessionid: (0, h.KC)(), origin: $() };
           a()
             .get(h.TS.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,

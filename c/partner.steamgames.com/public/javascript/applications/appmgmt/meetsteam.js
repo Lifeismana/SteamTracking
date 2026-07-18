@@ -1309,7 +1309,7 @@
       async function _(_) {
         const _ = `${_._.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
           _ = {
-            sessionid: _._.SESSIONID,
+            sessionid: (0, _._)(),
             partnerid: _,
           },
           _ = await _().get(_, {
@@ -1806,7 +1806,7 @@
           _ = _.map((_) => _.strEmailOverride).join(","),
           _ = _.map((_) => (_.bAllowRegistrationIfFull ? "1" : "0")).join(",");
         let _ = new FormData();
-        _.append("sessionid", _._.SESSIONID),
+        _.append("sessionid", (0, _._)()),
           _.append("gid", _),
           _.append("accounts", _),
           _.append("partnerids", _),
@@ -2280,10 +2280,7 @@
                       onClick: async () => {
                         await (async function (_, _) {
                           let _ = new FormData();
-                          __webpack_require__.append(
-                            "sessionid",
-                            _._.SESSIONID,
-                          ),
+                          __webpack_require__.append("sessionid", (0, _._)()),
                             __webpack_require__.append("gid", _);
                           const _ = `${_._.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
                           try {
@@ -4014,7 +4011,7 @@
                 async (_) => {
                   const _ = `${_._.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
                     _ = {
-                      sessionid: _._.SESSIONID,
+                      sessionid: (0, _._)(),
                       strAccountIDs: _.join(","),
                     },
                     _ = await _().get(_, {
@@ -4369,7 +4366,7 @@
                                 _(!0), _(!1), _(!1);
                                 const _ = `${_._.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
                                   _ = new FormData();
-                                _.append("sessionid", _._.SESSIONID),
+                                _.append("sessionid", (0, _._)()),
                                   _.append(
                                     "registrationJson",
                                     JSON.stringify(_),
@@ -4815,7 +4812,7 @@
                               const _ = `${_._.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${_}`,
                                 _ = new FormData();
                               _.append("gid", _),
-                                _.append("sessionid", _._.SESSIONID);
+                                _.append("sessionid", (0, _._)());
                               let _ = {
                                 gid: _,
                                 simple_response: _,

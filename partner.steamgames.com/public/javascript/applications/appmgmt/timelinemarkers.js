@@ -1796,66 +1796,66 @@
       }
       var E;
       !(function (e) {
-        (e.CreateAssetSet = function (e, t) {
+        (e.CreateAssetSet = function (e, t, r) {
           return e.SendMsg(
             "AssetSetPublishing.CreateAssetSet#1",
-            (0, f.I8)(y, t),
+            (0, f.I8)(y, t, r),
             T,
             { ePrivilege: 7 },
           );
         }),
-          (e.DeleteAssetSet = function (e, t) {
+          (e.DeleteAssetSet = function (e, t, r) {
             return e.SendMsg(
               "AssetSetPublishing.DeleteAssetSet#1",
-              (0, f.I8)(B, t),
+              (0, f.I8)(B, t, r),
               v,
               { ePrivilege: 7 },
             );
           }),
-          (e.UpdateAssetSet = function (e, t) {
+          (e.UpdateAssetSet = function (e, t, r) {
             return e.SendMsg(
               "AssetSetPublishing.UpdateAssetSet#1",
-              (0, f.I8)(R, t),
+              (0, f.I8)(R, t, r),
               w,
               { ePrivilege: 7 },
             );
           }),
-          (e.GetAllAssetSets = function (e, t) {
+          (e.GetAllAssetSets = function (e, t, r) {
             return e.SendMsg(
               "AssetSetPublishing.GetAllAssetSets#1",
-              (0, f.I8)(G, t),
+              (0, f.I8)(G, t, r),
               C,
               { bConstMethod: !0, ePrivilege: 7 },
             );
           }),
-          (e.AddBranchToAssetSet = function (e, t) {
+          (e.AddBranchToAssetSet = function (e, t, r) {
             return e.SendMsg(
               "AssetSetPublishing.AddBranchToAssetSet#1",
-              (0, f.I8)(I, t),
+              (0, f.I8)(I, t, r),
               P,
               { ePrivilege: 7 },
             );
           }),
-          (e.RemoveBranchFromAssetSet = function (e, t) {
+          (e.RemoveBranchFromAssetSet = function (e, t, r) {
             return e.SendMsg(
               "AssetSetPublishing.RemoveBranchFromAssetSet#1",
-              (0, f.I8)(z, t),
+              (0, f.I8)(z, t, r),
               O,
               { ePrivilege: 7 },
             );
           }),
-          (e.SwapAssetSetPriority = function (e, t) {
+          (e.SwapAssetSetPriority = function (e, t, r) {
             return e.SendMsg(
               "AssetSetPublishing.SwapAssetSetPriority#1",
-              (0, f.I8)(k, t),
+              (0, f.I8)(k, t, r),
               x,
               { ePrivilege: 7 },
             );
           }),
-          (e.UpdatePublishTime = function (e, t) {
+          (e.UpdatePublishTime = function (e, t, r) {
             return e.SendMsg(
               "AssetSetPublishing.UpdatePublishTime#1",
-              (0, f.I8)(D, t),
+              (0, f.I8)(D, t, r),
               j,
               { ePrivilege: 7 },
             );
@@ -2391,7 +2391,7 @@
           let a = null;
           try {
             const s = new FormData();
-            s.append("sessionid", X.TS.SESSIONID),
+            s.append("sessionid", (0, X.KC)()),
               s.append("appid", "" + e),
               s.append("asset_set_id", t),
               s.append("markerid", r),
@@ -2443,7 +2443,7 @@
             m = o.asset_set_id;
           try {
             const o = new FormData();
-            o.append("sessionid", X.TS.SESSIONID),
+            o.append("sessionid", (0, X.KC)()),
               o.append("appid", "" + e),
               o.append("asset_set_id", t),
               o.append("markerid", i),
@@ -2503,7 +2503,7 @@
           const a = n.markerid;
           try {
             const s = new FormData();
-            s.append("sessionid", X.TS.SESSIONID),
+            s.append("sessionid", (0, X.KC)()),
               s.append("appid", "" + e),
               s.append("asset_set_id", t),
               s.append("timeline_marker_id", r);
@@ -2561,7 +2561,7 @@
           }
           try {
             const n = new FormData();
-            n.append("sessionid", X.TS.SESSIONID),
+            n.append("sessionid", (0, X.KC)()),
               n.append("appid", "" + e),
               n.append("asset_set_id", t),
               n.append("timeline_marker_id", r.join(","));

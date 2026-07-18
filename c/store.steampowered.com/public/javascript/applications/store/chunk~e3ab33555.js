@@ -365,7 +365,7 @@
           if (!_ || 0 == _.length) return !0;
           let _ = (0, _._)() + "actions/ajaxgetpartnereventsreport",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               clan_account_id: _.GetAccountID(),
               gidlist: _.join(","),
             };
@@ -1191,7 +1191,9 @@
             }),
             [_, _] = (0, _._)(_);
           if (
-            (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
+            (_.useEffect(() => {
+              window.scrollTo(0, 0);
+            }, [_, _]),
             !_ && _.GetEventType() == _.ajI)
           )
             return (0, _.jsx)(_._, {
@@ -2326,7 +2328,7 @@
                     (_ = !0),
                       (async () => {
                         let _ = new URLSearchParams();
-                        __webpack_require__.append("sessionid", _._.SESSIONID),
+                        __webpack_require__.append("sessionid", (0, _._)()),
                           __webpack_require__.append(
                             "clan_accountid",
                             "" + _.clanSteamID.GetAccountID(),

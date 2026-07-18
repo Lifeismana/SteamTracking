@@ -398,7 +398,7 @@
         async InternalOpenDoor(e, t = !0, n, s = !1) {
           let o = m.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const r = new FormData();
-          r.append("sessionid", m.TS.SESSIONID),
+          r.append("sessionid", (0, m.KC)()),
             n && r.append("datarecord", n),
             s && r.append("fake_open", "" + s),
             r.append("door_index", "" + e),
@@ -468,7 +468,7 @@
         async CloseAllDoors(e) {
           let t = m.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
           const n = new FormData();
-          n.append("sessionid", m.TS.SESSIONID),
+          n.append("sessionid", (0, m.KC)()),
             n.append("clan_accountid", "" + e);
           let s = null;
           try {
@@ -897,7 +897,7 @@
                 ? (0, u.we)("#CreatorHome_PublishedBy")
                 : (0, u.we)("#CreatorHome_InFranchise"),
           E = w.GetCreatorHomeURL(G),
-          O = w.GetNumFollowers();
+          B = w.GetNumFollowers();
         return (0, s.jsx)(_.tH, {
           children: (0, s.jsx)(p.Ay, {
             feature: "salecreatorhome",
@@ -987,7 +987,7 @@
                                           }),
                                           (0, s.jsx)("span", {
                                             className: I.FollowerCount,
-                                            children: (0, d.Dq)(O),
+                                            children: (0, d.Dq)(B),
                                           }),
                                         ],
                                       }),

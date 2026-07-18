@@ -184,6 +184,9 @@
         CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
         CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
+        RatingIcon: "JpPKQ9u62K6FUa-N8VbN8",
+        SteamMachineDeviceIcon: "_1nTDsg_9olpJdf7qqVpGfL",
+        SteamDeckDeviceIcon: "_3IOFFIoATruXDCEVO_7Jqd",
         BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
         "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
         "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
@@ -4761,6 +4764,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _(_) {
         return (0, _.useMemo)(
           () =>
@@ -4811,26 +4815,23 @@
         );
       }
       function _(_, _) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_, _) {
-              switch (_) {
-                case "sub":
-                  return {
-                    packageid: _,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _,
-                  };
-                default:
-                  return {
-                    appid: _,
-                  };
-              }
-            })(_, _),
-          [_, _],
-        );
+        return (0, _.useMemo)(() => _(_, _), [_, _]);
+      }
+      function _(_, _) {
+        switch (_) {
+          case "sub":
+            return {
+              packageid: _,
+            };
+          case "bundle":
+            return {
+              bundleid: _,
+            };
+          default:
+            return {
+              appid: _,
+            };
+        }
       }
       function _(_) {
         return (0, _.useMemo)(() => {
@@ -4986,6 +4987,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -5058,7 +5060,7 @@
       class _ {
         m_boundActions = new Map();
         m_defaultActions = new Map();
-        m_actionSubscriptions = new Map();
+        m_globalActionsSubscriptions = [];
         m_actionDescriptionChangedCallbackRegistrations = [];
         static Log = new _._("ActionDescription").Debug;
         InitContext(_) {
@@ -5103,38 +5105,50 @@
             _
           );
         }
-        NotifyUpdate(_) {
-          if (this.m_actionSubscriptions.has(_)) {
-            const _ = this.GetActionDescription(_);
-            this.m_actionSubscriptions.get(_).forEach((_) => _(_));
-          }
+        GetActionDescriptions() {
+          const _ = Object.values(_).filter((_) => "number" == typeof _),
+            _ = {};
+          for (const _ of _) _[_] = this.GetActionDescription(_);
+          return _;
         }
-        NotifyAll() {
-          Array.from(this.m_actionSubscriptions.keys()).forEach((_) => {
-            this.NotifyUpdate(_);
-          });
+        Notify() {
+          const _ = this.GetActionDescriptions();
+          this.m_globalActionsSubscriptions.forEach((_) => _(_));
         }
         IsDefaultAction(_) {
           return this.GetActionDescription(_) === this.m_defaultActions.get(_);
         }
         SetDefaultAction(_, _) {
-          void 0 === _
-            ? this.m_defaultActions.delete(_)
-            : this.m_defaultActions.set(_, _),
-            this.m_boundActions.has(_) || this.NotifyUpdate(_);
+          return (
+            void 0 === _
+              ? this.m_defaultActions.delete(_)
+              : this.m_defaultActions.set(_, _),
+            !this.m_boundActions.has(_)
+          );
+        }
+        SetDefaultActionsFromMap(_) {
+          let _ = !1;
+          for (const _ in _) {
+            const _ = parseInt(_);
+            this.SetDefaultAction(_, _[_]) && (_ = !0);
+          }
+          _ && this.Notify();
         }
         ClearActions() {
           _.Log("ClearActionDescriptions"),
             this.m_boundActions.clear(),
-            this.NotifyAll();
+            this.Notify();
         }
         SetActionsFromMap(_) {
+          let _ = !1;
           const _ = Array.from(this.m_boundActions.keys());
-          for (let _ of _) _[_] || this.SetAction(_, void 0);
+          for (let _ of _)
+            void 0 === _[_] && this.SetAction(_, void 0) && (_ = !0);
           for (let _ in _) {
             const _ = parseInt(_);
-            this.SetAction(_, _[_]);
+            this.SetAction(_, _[_]) && (_ = !0);
           }
+          _ && this.Notify();
         }
         SetActionDescriptionsFromMap(_) {
           const _ = {};
@@ -5146,28 +5160,23 @@
         }
         SetAction(_, _) {
           if ((_.Log("SetActionDescription", _, _), void 0 === _)) {
-            if (!this.m_boundActions.has(_)) return;
+            if (!this.m_boundActions.has(_)) return !1;
             this.m_boundActions.delete(_);
           } else {
-            if (this.m_boundActions.get(_) === _) return;
+            if ((0, _._)(this.m_boundActions.get(_), _)) return !1;
             this.m_boundActions.set(_, _);
           }
-          this.NotifyUpdate(_);
+          return !0;
         }
-        SubscribeToActionFunction(_, _) {
-          this.m_actionSubscriptions.has(_) ||
-            this.m_actionSubscriptions.set(_, []),
-            this.m_actionSubscriptions.get(_).push(_),
-            this.m_boundActions.has(_)
-              ? _(this.m_boundActions.get(_))
-              : this.m_defaultActions.has(_) && _(this.m_defaultActions.get(_));
+        SubscribeToActions(_) {
+          this.m_globalActionsSubscriptions.push(_),
+            _(this.GetActionDescriptions());
           return () => {
-            const _ = this.m_actionSubscriptions.get(_),
-              _ = __webpack_require__?.indexOf(_);
-            _ && null != _ && _ >= 0
-              ? __webpack_require__.splice(_, 1)
+            const _ = this.m_globalActionsSubscriptions?.indexOf(_);
+            this.m_globalActionsSubscriptions && null != _ && _ >= 0
+              ? this.m_globalActionsSubscriptions.splice(_, 1)
               : console.error(
-                  "Unsubscribing an action that was already unsubscribed",
+                  "Unsubscribing an actions handler that was already unsubscribed",
                 );
           };
         }
@@ -5196,6 +5205,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -5585,6 +5595,63 @@
         });
       }
       function _(_) {
+        const { _: _, category: _, appName: _, descriptionToken: _ } = _;
+        if (_ == _._)
+          return (0, _.jsx)("div", {
+            className: _().CompatibilityDetailRatingSummary,
+            children: _
+              ? _._.LocalizeReact(
+                  "#SteamMachineVerified_DescriptionHeader_Unknown_WithAppName",
+                  (0, _.jsx)("b", {
+                    children: (0, _._)(_),
+                  }),
+                )
+              : _._.Localize("#SteamMachineVerified_DescriptionHeader_Unknown"),
+          });
+        let _ = "",
+          _ = null;
+        switch (_) {
+          case _._:
+            (_ = "#SteamMachineVerified_DescriptionHeader_Verified"),
+              (_ = _().Verified);
+            break;
+          case _._:
+            (_ = "#SteamMachineVerified_DescriptionHeader_Playable"),
+              (_ = _().Playable);
+            break;
+          case _._:
+            (_ = "#SteamMachineVerified_DescriptionHeader_Unsupported"),
+              (_ = _().Unsupported);
+        }
+        const _ = (0, _.jsx)("span", {
+            className: _,
+            children: _._.Localize(_(_)),
+          }),
+          _ = (0, _.jsx)("span", {
+            className: _().CompatibilityDetailRatingSummary,
+            children: _._.Localize(_ || _),
+          }),
+          _ = _
+            ? _._.LocalizeReact(
+                "#SteamMachineVerified_DescriptionHeader_WithAppName",
+                (0, _.jsx)("b", {
+                  children: (0, _._)(_),
+                }),
+                _,
+                _,
+              )
+            : _._.LocalizeReact(
+                "#SteamMachineVerified_DescriptionHeader",
+                _,
+                _,
+              );
+        return (0, _.jsx)("div", {
+          _: _,
+          className: _().CompatibilityDetailRatingSummary,
+          children: _,
+        });
+      }
+      function _(_) {
         switch (_) {
           case _._:
             return "#SteamDeckVerified_Category_Verified";
@@ -5758,10 +5825,10 @@
         }
       }
       !(function (_) {
-        _.CheckInventoryAvailableByPackage = function (_, _) {
+        _.CheckInventoryAvailableByPackage = function (_, _, _) {
           return _.SendMsg(
             "PhysicalGoods.CheckInventoryAvailableByPackage#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -5890,7 +5957,7 @@
                   (0, _.jsx)("input", {
                     type: "hidden",
                     name: "sessionid",
-                    value: _._.SESSIONID,
+                    value: (0, _._)(),
                   }),
                   (0, _.jsx)("button", {
                     className: (0, _._)(_().Action, _),
@@ -7993,10 +8060,10 @@
         }
       }
       !(function (_) {
-        _.GetGameFrameRateStats = function (_, _) {
+        _.GetGameFrameRateStats = function (_, _, _) {
           return _.SendMsg(
             "GamePerformanceStats.GetGameFrameRateStats#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -8016,8 +8083,7 @@
           buttonProps: _,
           autoFocus: _,
           onOpenBlogPost: _,
-          eStartingTab: _,
-          bIncludeSteamOS: _,
+          eStartingTab: _ = _._,
         } = _;
         if (!_) return null;
         const _ = () => {
@@ -8029,117 +8095,159 @@
         let _ = _ ?? {},
           _ = null,
           _ = null;
-        _.steam_deck_blog_url &&
-          ((_.onOptionsActionDescription = _._.Localize(
-            "#SteamDeckVerified_ViewDeveloperPost",
-          )),
-          (_.onOptionsButton = _),
-          (_ = (0, _.jsx)(_, {
-            blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: _._,
-          })),
-          (_ = (0, _.jsx)(_, {
-            blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: _._,
-          })));
-        const _ = _ == _._;
-        if (!_.resolved_items?.length) {
-          const _ = _
-              ? _._.Localize(
-                  "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
-                )
-              : _._.Localize(
-                  "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                ),
-            _ = _
-              ? (0, _.jsx)(_._, {
+        if (
+          (_.steam_deck_blog_url &&
+            ((_.onOptionsActionDescription = _._.Localize(
+              "#SteamDeckVerified_ViewDeveloperPost",
+            )),
+            (_.onOptionsButton = _),
+            (_ = (0, _.jsx)(_, {
+              blogURL: _.steam_deck_blog_url,
+              eHWCompatibiltyDisplay: _._,
+            })),
+            (_ = (0, _.jsx)(_, {
+              blogURL: _.steam_deck_blog_url,
+              eHWCompatibiltyDisplay: _._,
+            }))),
+          !_.resolved_items?.length && !_.frame_resolved_items?.length)
+        ) {
+          let _ = "",
+            _ = null,
+            _ = null;
+          return (
+            _ == _._
+              ? ((_ = _._.Localize(
+                  "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+                )),
+                (_ = (0, _.jsx)(_._, {
                   _: _,
-                  category: _.steamos_resolved_category,
+                  category: _.machine_resolved_category,
                   appName: _,
-                })
-              : (0, _.jsx)(_._, {
-                  category: _.resolved_category,
-                  appName: _,
-                }),
-            _ = _ ? _ : _;
-          return (0, _.jsxs)(_._, {
-            autoFocus: _,
-            focusableIfEmpty: _,
-            noFocusRing: !0,
-            className: _().CompatibilityDetailsContainer,
-            ..._,
-            children: [
-              (0, _.jsxs)("div", {
-                _: _,
-                className: _().DialogHeader,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().DialogTitle,
-                    children: _,
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().AppTitleCategory,
-                    children: (0, _.jsx)(_._, {
-                      category: _.resolved_category,
+                })))
+              : _ == _._
+                ? ((_ = _._.Localize(
+                    "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (_ = (0, _.jsx)(_._, {
+                    _: _,
+                    category: _.steamos_resolved_category,
+                    appName: _,
+                  })),
+                  (_ = _))
+                : ((_ = _._.Localize(
+                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                  )),
+                  (_ = (0, _.jsx)(_._, {
+                    category: _.resolved_category,
+                    appName: _,
+                  })),
+                  (_ = _)),
+            (0, _.jsxs)(_._, {
+              autoFocus: _,
+              focusableIfEmpty: _,
+              noFocusRing: !0,
+              className: _().CompatibilityDetailsContainer,
+              ..._,
+              children: [
+                (0, _.jsxs)("div", {
+                  _: _,
+                  className: _().DialogHeader,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().DialogTitle,
+                      children: _,
                     }),
+                    (0, _.jsx)("div", {
+                      className: _().AppTitleCategory,
+                      children: (0, _.jsx)(_._, {
+                        category: _.resolved_category,
+                      }),
+                    }),
+                  ],
+                }),
+                _,
+                _,
+                !1,
+              ],
+            })
+          );
+        }
+        const _ = (0, _._)(_.resolved_category),
+          _ = (0, _._)(_.steamos_resolved_category),
+          _ = (0, _._)(_.machine_resolved_category),
+          _ = (_) =>
+            window.sessionStorage.setItem(
+              "steamdeckcompatibility",
+              `?tab=${_.key}`,
+            ),
+          _ = [
+            {
+              name: (0, _.jsxs)("div", {
+                className: _().pillContent,
+                children: [
+                  (0, _.jsx)(_.xoK, {
+                    className: _().SteamDeckDeviceIcon,
+                  }),
+                  (0, _.jsx)(_, {
+                    className: _().RatingIcon,
                   }),
                 ],
               }),
-              _,
-              !1,
-              _,
-            ],
-          });
-        }
-        if (_ || _) {
-          const _ = (0, _._)(_.resolved_category),
-            _ = (0, _._)(_.steamos_resolved_category),
-            _ = (_) =>
-              window.sessionStorage.setItem(
-                "steamdeckcompatibility",
-                `?tab=${_.key}`,
-              ),
-            _ = [
-              {
-                name: (0, _.jsxs)("div", {
-                  className: _().pillContent,
-                  children: ["Steam Deck", (0, _.jsx)(_, {})],
+              key: _._.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  deckBlogContent: _,
                 }),
-                key: "steamdeck",
-                contents: (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                    deckBlogContent: _,
+              }),
+              onClick: _,
+            },
+            {
+              name: (0, _.jsxs)("div", {
+                className: _().pillContent,
+                children: [
+                  (0, _.jsx)(_.LO_, {
+                    className: _().SteamMachineDeviceIcon,
                   }),
-                }),
-                onClick: _,
-              },
-              {
-                name: (0, _.jsxs)("div", {
-                  className: _().pillContent,
-                  children: ["SteamOS", (0, _.jsx)(_, {})],
-                }),
-                key: "steamos",
-                contents: (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                    deckBlogContent: _,
+                  (0, _.jsx)(_, {
+                    className: _().RatingIcon,
                   }),
+                ],
+              }),
+              key: _._.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
                 }),
-                onClick: _,
-              },
-            ];
-          return (0, _.jsx)(_._, {
-            tabs: _,
-            classNameCtn: _().CompatibilityTabs,
-            classNameTabContent: _().CompatibilityTabContent,
-            startingTab: _ ? "steamos" : "steamdeck",
-            preferredFocus: !0,
-          });
-        }
-        return (0, _.jsx)(_, {
-          ..._,
-          deckBlogContent: _,
+              }),
+              onClick: _,
+            },
+            {
+              name: (0, _.jsxs)("div", {
+                className: _().pillContent,
+                children: [
+                  "steamos",
+                  (0, _.jsx)(_, {
+                    className: _().RatingIcon,
+                  }),
+                ],
+              }),
+              key: _._.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  deckBlogContent: _,
+                }),
+              }),
+              onClick: _,
+            },
+          ];
+        return (0, _.jsx)(_._, {
+          tabs: _,
+          classNameCtn: _().CompatibilityTabs,
+          classNameTabContent: _().CompatibilityTabContent,
+          startingTab: _.toString(),
+          preferredFocus: !0,
         });
       }
       function _(_) {
@@ -8351,6 +8459,77 @@
                     ),
                 }),
               !1,
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
+          _ =
+            -1 !==
+            _.machine_resolved_items?.findIndex((_) => _.display_type == _),
+          _ = (0, _.jsx)(_._, {
+            _: _,
+            category: _.machine_resolved_category,
+            appName: _,
+          }),
+          _ = (0, _.jsx)(_._, {
+            category: _.machine_resolved_category,
+          }),
+          _ = _.machine_resolved_items && _.machine_resolved_items?.length > 0;
+        return (0, _.jsx)(_, {
+          titleId: _,
+          title: _._.Localize(
+            "#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          ratingIcon: _,
+          ratingSummary: _,
+          ..._,
+          children: (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().CompatibilityDetailsSeparator,
+                }),
+              _.machine_resolved_items &&
+                _.machine_resolved_items
+                  .filter((_) => _.display_type !== _)
+                  .map((_) =>
+                    (0, _.jsxs)(
+                      "div",
+                      {
+                        className: _().CompatibilityDetailsRow,
+                        children: [
+                          (0, _.jsx)(_, {
+                            displaytype: _.display_type,
+                          }),
+                          (0, _.jsx)("span", {
+                            children: _._.Localize(_.loc_token),
+                          }),
+                        ],
+                      },
+                      _.loc_token + _.display_type,
+                    ),
+                  ),
+              _ &&
+                _.machine_resolved_items &&
+                (0, _.jsx)("div", {
+                  className: _().CompatibilityNotes,
+                  children: _.machine_resolved_items
+                    .filter((_) => _.display_type == _)
+                    .map((_) =>
+                      (0, _.jsx)(
+                        "div",
+                        {
+                          className: _().CompatibilityDetailsNoteRow,
+                          children: (0, _.jsx)("span", {
+                            children: _._.Localize(_.loc_token),
+                          }),
+                        },
+                        _.loc_token + _.display_type,
+                      ),
+                    ),
+                }),
             ],
           }),
         });

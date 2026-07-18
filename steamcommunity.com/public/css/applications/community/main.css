@@ -573,6 +573,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   border-radius: 20px;
   align-items: center;
 }
+.x5w70NwN-m7OmBy1DFogf,
 ._1dzQL1mVR8GTmmSi_kpDgr {
   width: 20px;
   height: 20px;
@@ -3207,6 +3208,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 ._2tALpM7z8naXJ35Pp5fNAG {
   align-self: center;
   flex-grow: 1;
+  min-width: 0;
 }
 .eKmEXJCm_lgme24Fp_HWt:not(._37xzVt6arvEzyNdW5GxK8f).Jgod1QRim6eNfvia2_3Ac
   ._2tALpM7z8naXJ35Pp5fNAG {
@@ -8757,7 +8759,7 @@ button.DialogButton:enabled:active.gpfocus {
   }
 }
 button.DialogButton.Primary:hover,
-button.DialogButton.Primary.gpfocus {
+button.DialogButton.Primary.gpfocus:not(.Disabled) {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 0%;
   background-size: 330% 100%;

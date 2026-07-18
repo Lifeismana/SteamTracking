@@ -404,7 +404,7 @@
         a = i(22837),
         s = i(37085),
         o = i(3577),
-        l = i(34214),
+        l = i(43261),
         c = i(17720),
         d = i(81393),
         u = i(68797),
@@ -2189,50 +2189,50 @@
       }
       var J;
       !(function (e) {
-        (e.GetCommunityInventory = function (e, t) {
+        (e.GetCommunityInventory = function (e, t, i) {
           return e.SendMsg(
             "Quest.GetCommunityInventory#1",
-            (0, u.I8)(F, t),
+            (0, u.I8)(F, t, i),
             L,
             { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
-          (e.GetCommunityItemDefinitions = function (e, t) {
+          (e.GetCommunityItemDefinitions = function (e, t, i) {
             return e.SendMsg(
               "Quest.GetCommunityItemDefinitions#1",
-              (0, u.I8)(U, t),
+              (0, u.I8)(U, t, i),
               N,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 4 },
             );
           }),
-          (e.ActivateProfileModifierItem = function (e, t) {
+          (e.ActivateProfileModifierItem = function (e, t, i) {
             return e.SendMsg(
               "Quest.ActivateProfileModifierItem#1",
-              (0, u.I8)(O, t),
+              (0, u.I8)(O, t, i),
               H,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetNumTradingCardsEarned = function (e, t) {
+          (e.GetNumTradingCardsEarned = function (e, t, i) {
             return e.SendMsg(
               "Quest.GetNumTradingCardsEarned#1",
-              (0, u.I8)(W, t),
+              (0, u.I8)(W, t, i),
               V,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetVirtualItemRewardDefinition = function (e, t) {
+          (e.GetVirtualItemRewardDefinition = function (e, t, i) {
             return e.SendMsg(
               "Quest.GetVirtualItemRewardDefinition#1",
-              (0, u.I8)(q, t),
+              (0, u.I8)(q, t, i),
               K,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-          (e.SetVirtualItemRewardDefinition = function (e, t) {
+          (e.SetVirtualItemRewardDefinition = function (e, t, i) {
             return e.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, u.I8)(Y, t),
+              (0, u.I8)(Y, t, i),
               Z,
               { ePrivilege: 4 },
             );
@@ -3685,61 +3685,65 @@
       }
       var U, N;
       !(function (e) {
-        (e.GetVoteDefinitions = function (e, t) {
+        (e.GetVoteDefinitions = function (e, t, i) {
           return e.SendMsg(
             "StoreSales.GetVoteDefinitions#1",
-            (0, c.I8)(y, t),
+            (0, c.I8)(y, t, i),
             b,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
           );
         }),
-          (e.SetVote = function (e, t) {
-            return e.SendMsg("StoreSales.SetVote#1", (0, c.I8)(E, t), I, {
+          (e.SetVote = function (e, t, i) {
+            return e.SendMsg("StoreSales.SetVote#1", (0, c.I8)(E, t, i), I, {
               ePrivilege: 1,
             });
           }),
-          (e.GetUserVotes = function (e, t) {
-            return e.SendMsg("StoreSales.GetUserVotes#1", (0, c.I8)(w, t), B, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (e.GetUserVotes = function (e, t, i) {
+            return e.SendMsg(
+              "StoreSales.GetUserVotes#1",
+              (0, c.I8)(w, t, i),
+              B,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           });
       })(U || (U = {})),
         (function (e) {
-          (e.GetUserNominations = function (e, t) {
+          (e.GetUserNominations = function (e, t, i) {
             return e.SendMsg(
               "SteamAwards.GetUserNominations#1",
-              (0, c.I8)(C, t),
+              (0, c.I8)(C, t, i),
               T,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-            (e.GetOtherUserNominations = function (e, t) {
+            (e.GetOtherUserNominations = function (e, t, i) {
               return e.SendMsg(
                 "SteamAwards.GetOtherUserNominations#1",
-                (0, c.I8)(M, t),
+                (0, c.I8)(M, t, i),
                 T,
                 { bConstMethod: !0, ePrivilege: 2 },
               );
             }),
-            (e.Nominate = function (e, t) {
-              return e.SendMsg("SteamAwards.Nominate#1", (0, c.I8)(R, t), j, {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              });
+            (e.Nominate = function (e, t, i) {
+              return e.SendMsg(
+                "SteamAwards.Nominate#1",
+                (0, c.I8)(R, t, i),
+                j,
+                { bConstMethod: !0, ePrivilege: 1 },
+              );
             }),
-            (e.GetNominationRecommendations = function (e, t) {
+            (e.GetNominationRecommendations = function (e, t, i) {
               return e.SendMsg(
                 "SteamAwards.GetNominationRecommendations#1",
-                (0, c.I8)(G, t),
+                (0, c.I8)(G, t, i),
                 k,
                 { bConstMethod: !0, ePrivilege: 1 },
               );
             }),
-            (e.GetNominationShareLink = function (e, t) {
+            (e.GetNominationShareLink = function (e, t, i) {
               return e.SendMsg(
                 "SteamAwards.GetNominationShareLink#1",
-                (0, c.I8)(F, t),
+                (0, c.I8)(F, t, i),
                 L,
                 { ePrivilege: 1 },
               );
@@ -5398,7 +5402,8 @@
           (t.child_demo_appid_for_repost = void 0),
           (t.sale_vanity_id = void 0),
           (t.sale_update_landing_page_vanity_id = void 0),
-          (t.automatically_push_updated_source = void 0);
+          (t.automatically_push_updated_source = void 0),
+          (t.country_restriction = void 0);
       }
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
@@ -9310,7 +9315,7 @@
           this.m_mapExistingEvents.has(t) &&
             (this.m_mapExistingEvents.get(t).deleteInProgress = !0);
           let i = new URLSearchParams();
-          i.append("sessionid", f.TS.SESSIONID),
+          i.append("sessionid", (0, f.KC)()),
             i.append("bDelete", "1"),
             i.append("gid", t);
           const n = await a().post(
@@ -9672,7 +9677,7 @@
           try {
             const o = `${f.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
               l = new FormData();
-            l.append("sessionid", f.TS.SESSIONID),
+            l.append("sessionid", (0, f.KC)()),
               l.append("gidclanevent", t),
               l.append("json", JSON.stringify(i)),
               l.append("pageStyles", JSON.stringify(n));
@@ -9797,7 +9802,7 @@
         zB: () => u,
       });
       var n = i(3577),
-        r = i(34214);
+        r = i(43261);
       function a(e) {
         const t = e.toLowerCase();
         return t.endsWith(".jpg") || t.endsWith(".jpeg")

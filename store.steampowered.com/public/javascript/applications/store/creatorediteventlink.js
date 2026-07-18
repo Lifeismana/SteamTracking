@@ -101,7 +101,7 @@
         PH: () => n,
         T7: () => I,
         tj: () => A,
-        yh: () => L,
+        yh: () => T,
       });
       var n,
         s = r(7850),
@@ -199,10 +199,10 @@
         };
       }
       function x(e) {
-        return T(e, n.k_eStoreSalePage, "absolute");
+        return L(e, n.k_eStoreSalePage, "absolute");
       }
       function I(e) {
-        return T(e, n.k_eStoreView, "absolute");
+        return L(e, n.k_eStoreView, "absolute");
       }
       function E(e, t, r) {
         if (r)
@@ -215,11 +215,11 @@
       function y() {
         return "news";
       }
-      function T(e, t, r) {
+      function L(e, t, r) {
         const { data: n } = (0, S.J$)(e?.appid ? { appid: e.appid } : void 0);
-        if (e) return L(e, n, t, r);
+        if (e) return T(e, n, t, r);
       }
-      function L(e, t, r, s) {
+      function T(e, t, r, s) {
         const a = "relative" === s,
           c = "community" === (0, f.yK)(),
           l = a ? "/" : v.TS.STORE_BASE_URL,
@@ -323,7 +323,7 @@
         }
       }
       function C(e, t, r) {
-        return T(
+        return L(
           e,
           t,
           "forceAbsolute" === r || !g(t, e) ? "absolute" : "relative",
@@ -332,7 +332,7 @@
       function D(e) {
         const { eventModel: t, route: r, bPopup: n = !0 } = e,
           i = g(r, t),
-          o = T(t, r, i ? "relative" : "absolute");
+          o = L(t, r, i ? "relative" : "absolute");
         return (
           l.useEffect(() => {
             o && (n ? window.open(o) : window.location.assign(o));
@@ -350,10 +350,10 @@
           o = (0, c.n9)(),
           m = (0, u.W6)(),
           _ = i && g(e.route, t),
-          f = T(t, e.route, _ ? "relative" : "absolute"),
+          f = L(t, e.route, _ ? "relative" : "absolute"),
           b = !_ && f ? (0, h.NT)(f) : f,
           S = _ || !b ? b : (0, d.wJ)(b, o),
-          v = T(t, n.k_eViewWebSiteHub, "absolute"),
+          v = L(t, n.k_eViewWebSiteHub, "absolute"),
           w = Boolean(e.route != n.k_eViewWebSiteHub)
             ? k.Z.Localize("#EventBrowse_MoreEventsBtn")
             : "",
@@ -808,7 +808,7 @@
             (E |= d.Wf.ApplyBrowserScaleToDimensions),
           e.fullscreen && (E |= d.Wf.FullScreen);
         const y = "PopupWindow_" + (t ? `${t}_` : "") + s.useId(),
-          { popup: T, element: L } = (0, o.OJ)(
+          { popup: L, element: T } = (0, o.OJ)(
             y,
             {
               title: r,
@@ -828,23 +828,23 @@
           );
         if (
           (s.useEffect(
-            () => ((0, l.cZ)(f, T), () => (0, l.cZ)(f, void 0)),
-            [f, T],
+            () => ((0, l.cZ)(f, L), () => (0, l.cZ)(f, void 0)),
+            [f, L],
           ),
           s.useEffect(() => {
-            T && (T.document.title = r ?? t);
-          }, [T, r, t]),
-          !L)
+            L && (L.document.title = r ?? t);
+          }, [L, r, t]),
+          !T)
         )
           return null;
         const C = e.modal ?? e.onlyPopoutIfNeeded,
           D = !e.resizable;
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            C && (0, n.jsx)(k, { popup: T }),
+            C && (0, n.jsx)(k, { popup: L }),
             i.createPortal(
               (0, n.jsxs)(d.kc, {
-                ownerWindow: T,
+                ownerWindow: L,
                 children: [
                   (0, n.jsxs)("div", {
                     className: "PopupFullWindow",
@@ -854,7 +854,7 @@
                         className: v,
                         hideMin: D,
                         hideMax: D,
-                        popup: T,
+                        popup: L,
                         hideActions: !h,
                       }),
                       (0, n.jsx)(u.EO, {
@@ -864,10 +864,10 @@
                       }),
                     ],
                   }),
-                  e.resizable && (0, n.jsx)(b, { popup: T }),
+                  e.resizable && (0, n.jsx)(b, { popup: L }),
                 ],
               }),
-              L,
+              T,
             ),
           ],
         });
@@ -1279,8 +1279,8 @@
         I = r(71298),
         E = r(21869),
         y = r(67165),
-        T = r(52038),
-        L = r(26408);
+        L = r(52038),
+        T = r(26408);
       function C(e) {
         const { clanAccountID: t } = e,
           r = (0, h.YR)(() => new d.b(t, i.TS.EUNIVERSE, l.P3F, 0)),
@@ -1324,15 +1324,15 @@
           x = v?.GetLinkedEventGID(),
           I = x && u?.some((e) => x == e.GID),
           E = o || k,
-          T = () => {
+          L = () => {
             p(), w();
           },
-          L = s.useMemo(
+          T = s.useMemo(
             () => [...(u ?? [])].sort((e, t) => t.startTime - e.startTime),
             [u],
           ),
-          C = L.filter((e) => x && x == e.GID),
-          N = L.filter((e) => !x || x != e.GID);
+          C = T.filter((e) => x && x == e.GID),
+          N = T.filter((e) => !x || x != e.GID);
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(g.he, {
@@ -1389,7 +1389,7 @@
                                     creatorHome: v,
                                     clanSteamID: r,
                                     eventModel: e,
-                                    refetch: T,
+                                    refetch: L,
                                   },
                                   e.GID,
                                 ),
@@ -1414,7 +1414,7 @@
                                     creatorHome: v,
                                     clanSteamID: r,
                                     eventModel: e,
-                                    refetch: T,
+                                    refetch: L,
                                   },
                                   e.GID,
                                 ),
@@ -1440,7 +1440,7 @@
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxdeletecreatorhomeevent",
                 r = new FormData();
-              r.append("sessionid", i.TS.SESSIONID), r.append("gid", e.gid);
+              r.append("sessionid", (0, i.KC)()), r.append("gid", e.gid);
               const n = await a().post(t, r, { withCredentials: !0 });
               return n?.data?.success == u.R;
             },
@@ -1455,7 +1455,7 @@
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxselectcreatorhome",
                 r = new FormData();
-              r.append("sessionid", i.TS.SESSIONID), r.append("gid", e.gid);
+              r.append("sessionid", (0, i.KC)()), r.append("gid", e.gid);
               const n = await a().post(t, r, { withCredentials: !0 });
               return n?.data?.success == u.R;
             },
@@ -1503,7 +1503,7 @@
               strError: (0, c.we)("#CreatorHome_EventLink_Clear_Dialog_Error"),
             }),
             (0, n.jsxs)("div", {
-              className: (0, T.A)(S().Entry, I && S().Active),
+              className: (0, L.A)(S().Entry, I && S().Active),
               children: [
                 (0, n.jsxs)("div", {
                   className: S().HeaderRow,
@@ -1523,7 +1523,7 @@
                               "#CreatorHome_EventLink_Unpublished",
                             ),
                           }),
-                          (0, n.jsx)(L.o, {
+                          (0, n.jsx)(T.o, {
                             tooltip: (0, c.we)(
                               "#CreatorHome_EventLink_Unpublished_ttip",
                             ),
@@ -1541,7 +1541,7 @@
                               "#CreatorHome_EventLink_PublishedAndNotSelected",
                             ),
                           }),
-                          (0, n.jsx)(L.o, {
+                          (0, n.jsx)(T.o, {
                             tooltip: (0, c.we)(
                               "#CreatorHome_EventLink_PublishedAndNotSelected_ttip",
                             ),
@@ -1564,7 +1564,7 @@
                           className: S().MustPublish,
                           children: [
                             (0, c.we)("#CreatorHome_EventLink_MustPublish"),
-                            (0, n.jsx)(L.o, {
+                            (0, n.jsx)(T.o, {
                               tooltip: (0, c.we)(
                                 "#CreatorHome_EventLink_MustPublish_ttip",
                               ),
@@ -1673,7 +1673,7 @@
           children: [
             (0, n.jsx)("div", { className: S().SVGIcon, children: i }),
             r,
-            s && (0, n.jsx)(L.o, { tooltip: s, small: !0 }),
+            s && (0, n.jsx)(T.o, { tooltip: s, small: !0 }),
           ],
         });
       }

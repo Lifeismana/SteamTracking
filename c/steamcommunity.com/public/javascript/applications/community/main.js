@@ -788,6 +788,7 @@
         EmoticonBow_st0: "Fw2WGmXjh2zUxYfuy3xDn",
         EmoticonBow_st1: "luj0tT8JHriKkK3r7pzqP",
         SteamDeckCompatInfo: "_3VPnvw_CDKU-PQKK1pSDlN",
+        SteamMachineCompatLogo: "x5w70NwN-m7OmBy1DFogf",
         SteamDeckCompatLogo: "_1dzQL1mVR8GTmmSi_kpDgr",
         SteamDeckCompatIcon: "_3hAj0iMJsfhKwnm2mfE098",
         SteamDeckCompatVerified: "kEODDe6M5cuHWuPlcQexX",
@@ -1314,7 +1315,7 @@
             async (_) => {
               const _ = new FormData();
               __webpack_require__.append("pin", _),
-                __webpack_require__.append("sessionid", _._.SESSIONID);
+                __webpack_require__.append("sessionid", (0, _._)());
               const _ = _().post(
                   _._.STORE_BASE_URL + "parental/ajaxunlock/",
                   _,
@@ -1693,6 +1694,7 @@
             (this.m_onDeactivateCallbacks = new _._()),
             (this.m_onActiveFocusStateChangedCallbacks = new _._()),
             (this.m_onChildTreesChanged = new _._()),
+            (this.m_bExcludeFromScrollRegionSearch = !1),
             (this.m_rgOnUnhandledButton = []),
             (this.m_rgGlobalButtonHandlers = []),
             (this.m_lastFocusNodeXMovement = new _()),
@@ -1877,6 +1879,12 @@
             ((this.m_bIsEnabled = _),
             this.m_bIsEnabled || (this.m_tsLastActivated = void 0));
         }
+        GetExcludeFromScrollRegionSearch() {
+          return this.m_bExcludeFromScrollRegionSearch;
+        }
+        SetExcludeFromScrollRegionSearch(_) {
+          this.m_bExcludeFromScrollRegionSearch = _;
+        }
         GetParentEmbeddedNavTree() {
           return this.m_Properties.bIsEmbeddedInLegacyTree
             ? this.m_ParentNavTree
@@ -1961,13 +1969,16 @@
             }
           );
         }
-        TransferFocus(_, _, _) {
-          this.m_Controller.BatchedUpdate(() =>
-            this.TransferFocusInternal(_, _, _),
-          );
+        TransferFocus(_, _, _, _) {
+          (_ = null != _ ? _ : _._.INVALID),
+            (_ = null != _ && _),
+            this.m_Controller.BatchedUpdate(() =>
+              this.TransferFocusInternal(_, _, _, _),
+            );
         }
-        TransferFocusInternal(_, _, _) {
-          const _ = this.m_lastFocusNode;
+        TransferFocusInternal(_, _, _, _) {
+          const _ = (0, _._)(_),
+            _ = this.m_lastFocusNode;
           if (
             _ == _ &&
             (this.m_bWasActiveForLastFocusChange || !this.BIsActive())
@@ -2009,7 +2020,7 @@
             for (let _ = _; _ && _ != _; _ = _.Parent) _.SetFocusWithin(!0);
           }
           let _ = this.m_context.OnFocusChangeStart(_, this, _, _);
-          _ && _.SetDOMFocusAndScroll(_, _),
+          _ && _.SetDOMFocusAndScroll(_, _, _, _),
             _ &&
               ((0, _._)(_.Element, "vgp_onblur", _),
               !_.m_FocusRing ||
@@ -2363,7 +2374,7 @@
           (this.m_rgGamepadInputSources = []),
             (this.m_rgAllContexts = []),
             (this.m_ContextSetChangedCallbacks = new _._()),
-            (this.m_fnCatchAllGamepadInput = null),
+            (this.m_rgCatchAllGamepadInput = []),
             (this.m_UnhandledButtonEventsCallbacks = new _._()),
             (this.m_navigationSource = (0, _._)(
               {
@@ -2498,6 +2509,7 @@
             }),
             _.Push(() => _.SetRepeatAllowed()),
             _.GetSourceType() == _._.GAMEPAD && this.UpdateSourceToGamepad(),
+            _.Push(_.Init(this).Unregister),
             _.GetUnregisterFunc()
           );
         }
@@ -2637,13 +2649,14 @@
         }
         OnButtonActionInternal(_, _, _, _, _, _, _, _, _, _) {
           var _, _;
-          if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(_))
-            return void (
-              _ &&
-              _(
-                "Ignoring button press - gamepad input is suppressed by parent window",
-              )
-            );
+          for (let _ = this.m_rgCatchAllGamepadInput.length - 1; _ >= 0; _--)
+            if (this.m_rgCatchAllGamepadInput[_](_, _, null != _ && _))
+              return void (
+                _ &&
+                _(
+                  "Ignoring button press - gamepad input is suppressed by parent window",
+                )
+              );
           _(
             !!_ == !!_,
             "Must set both overrideContext and overrideElement or neither",
@@ -2800,11 +2813,16 @@
             (this.m_UnhandledButtonEventsCallbacks.Dispatch(_), !1)
           );
         }
-        SetSuppressGamepadInput(_) {
-          this.m_fnCatchAllGamepadInput = _ ? () => !0 : null;
-        }
         SetCatchAllGamepadInput(_) {
-          this.m_fnCatchAllGamepadInput = _;
+          return (
+            this.m_rgCatchAllGamepadInput.push(_),
+            {
+              Unregister: () => {
+                const _ = this.m_rgCatchAllGamepadInput.indexOf(_);
+                _ >= 0 && this.m_rgCatchAllGamepadInput.splice(_, 1);
+              },
+            }
+          );
         }
         TakeFocusChangingIFrame() {
           var _, _;
@@ -3431,12 +3449,22 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = () => (_._.IS_OGG ? "games" : "groups"),
         _ = {
@@ -3566,12 +3594,6 @@
                                     ..._,
                                   }),
                                 "ugc-file-content-moderation-report-dialog": (
-                                  _,
-                                ) =>
-                                  (0, _.jsx)(_._, {
-                                    ..._,
-                                  }),
-                                "comment-content-moderation-report-dialog": (
                                   _,
                                 ) =>
                                   (0, _.jsx)(_._, {
@@ -3728,11 +3750,6 @@
                                         ..._,
                                       }),
                                     "ugc-file-content-moderation-report-dialog":
-                                      (_) =>
-                                        (0, _.jsx)(_._, {
-                                          ..._,
-                                        }),
-                                    "comment-content-moderation-report-dialog":
                                       (_) =>
                                         (0, _.jsx)(_._, {
                                           ..._,
@@ -3919,6 +3936,10 @@
                   (0, _.jsx)(_, {
                     ..._,
                   }),
+                "comment-moderation-tool": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
               },
             }),
           ],
@@ -4071,6 +4092,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -4079,6 +4101,7 @@
             bodyTextColor: _,
             children: _,
             breakpoints: _,
+            variants: _,
           } = _,
           _ = {
             display: "contents",
@@ -4093,17 +4116,20 @@
                 for (const [_, _] of Object.entries(_))
                   _[`--color-text-body-${_}`] = _;
               })(_, _);
-        const _ = (0, _.jsx)("div", {
-          "data-accent-color": _,
-          "data-dull-color": _,
-          "data-body-text-color": _,
-          style: _,
+        const _ = (0, _.jsx)(_._, {
+          variants: _,
           children: (0, _.jsx)("div", {
-            style: {
-              display: "contents",
-              color: "var(--color-text-body-body)",
-            },
-            children: _,
+            "data-accent-color": _,
+            "data-dull-color": _,
+            "data-body-text-color": _,
+            style: _,
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: _,
+            }),
           }),
         });
         return _
@@ -4115,6 +4141,42 @@
       }
       function _(_, _, _) {
         for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({
+        Button: "basic",
+        Checkbox: "basic",
+        Combobox: "basic",
+        LoadingSpinner: "basic",
+        SegmentedControl: "basic",
+        Select: "basic",
+        TextArea: "basic",
+        TextInput: "basic",
+      });
+      function _(_) {
+        const { variants: _ = {}, children: _ } = _,
+          _ = (0, _.use)(_);
+        return (0, _.jsx)(_, {
+          value: {
+            ..._,
+            ..._,
+          },
+          children: _,
+        });
+      }
+      function _(_, _) {
+        const _ = (function (_) {
+          return (0, _.use)(_)[_];
+        })(_);
+        return _ && "default" !== _ ? _ : _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4243,6 +4305,7 @@
           dullColor: _ = "greyneutral",
           bodyTextColor: _ = "text-light",
           breakpoints: _,
+          variants: _,
           children: _,
           zoo: _,
         } = _;
@@ -4265,6 +4328,7 @@
                     accentColor: _,
                     dullColor: _,
                     bodyTextColor: _,
+                    variants: _,
                     children: [_, !1],
                   }),
                 }),
@@ -4593,6 +4657,87 @@
         _ = 30,
         _ = 31,
         _ = 32;
+      [
+        ["None", "none", -1],
+        ["Afrikaans", "afrikaans", 0],
+        ["Albanian", "albanian", 1],
+        ["Amharic", "amharic", 2],
+        ["Armenian", "armenian", 3],
+        ["Assamese", "assamese", 4],
+        ["Azerbaijani", "azerbaijani", 5],
+        ["Bangla", "bangla", 6],
+        ["Basque", "basque", 7],
+        ["Belarusian", "belarusian", 8],
+        ["Bosnian", "bosnian", 9],
+        ["Catalan", "catalan", 10],
+        ["Cherokee", "cherokee", 11],
+        ["Croatian", "croatian", 12],
+        ["Dari", "dari", 13],
+        ["Estonian", "estonian", 14],
+        ["Filipino", "filipino", 15],
+        ["Galician", "galician", 16],
+        ["Georgian", "georgian", 17],
+        ["Gujarati", "gujarati", 18],
+        ["Punjabi (Gurmukhi)", "gurmukhi", 19],
+        ["Hausa", "hausa", 20],
+        ["Hebrew", "hebrew", 21],
+        ["Hindi", "hindi", 22],
+        ["Icelandic", "icelandic", 23],
+        ["Igbo", "igbo", 24],
+        ["Indonesian", "indonesian", 25],
+        ["Irish", "irish", 26],
+        ["Kannada", "kannada", 27],
+        ["Kazakh", "kazakh", 28],
+        ["Khmer", "khmer", 29],
+        ["K'iche'", "kiche", 30],
+        ["Kinyarwanda", "kinyarwanda", 31],
+        ["Konkani", "konkani", 32],
+        ["Kyrgyz", "kyrgyz", 33],
+        ["Latvian", "latvian", 34],
+        ["Lithuanian", "lithuanian", 35],
+        ["Luxembourgish", "luxembourgish", 36],
+        ["Macedonian", "macedonian", 37],
+        ["Malay", "malay", 38],
+        ["Malayalam", "malayalam", 39],
+        ["Maltese", "maltese", 40],
+        ["Maori", "maori", 41],
+        ["Marathi", "marathi", 42],
+        ["Mongolian", "mongolian", 43],
+        ["Nepali", "nepali", 44],
+        ["Odia", "odia", 45],
+        ["Persian", "persian", 46],
+        ["Quechua", "quechua", 47],
+        ["Scots", "scots", 48],
+        ["Serbian", "serbian", 49],
+        ["Punjabi (Shahmukhi)", "shahmukhi", 50],
+        ["Sindhi", "sindhi", 51],
+        ["Sinhala", "sinhala", 52],
+        ["Slovak", "slovak", 53],
+        ["Slovenian", "slovenian", 54],
+        ["Sorani", "sorani", 55],
+        ["Sotho", "sotho", 56],
+        ["Swahili", "swahili", 57],
+        ["Tajik", "tajik", 58],
+        ["Tamil", "tamil", 59],
+        ["Tatar", "tatar", 60],
+        ["Telugu", "telugu", 61],
+        ["Tigrinya", "tigrinya", 62],
+        ["Tswana", "tswana", 63],
+        ["Turkmen", "turkmen", 64],
+        ["Urdu", "urdu", 65],
+        ["Uyghur", "uyghur", 66],
+        ["Uzbek", "uzbek", 67],
+        ["Valencian", "valencian", 68],
+        ["Welsh", "welsh", 69],
+        ["Wolof", "wolof", 70],
+        ["Xhosa", "xhosa", 71],
+        ["Yoruba", "yoruba", 72],
+        ["Zulu", "zulu", 73],
+      ].map((_) => ({
+        name: _[0],
+        shortName: _[1],
+        eAdditionalLanguage: _[2],
+      }));
       function _(_, _ = "en") {
         switch (_) {
           case _:
@@ -5116,7 +5261,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -8251,6 +8395,11 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  use_gyro_sw_biases: {
+                    _: 49,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -10216,7 +10365,6 @@
         _ = 39,
         _ = 40,
         _ = 41,
-        _ = 42,
         _ = 43,
         _ = 44,
         _ = 45,
@@ -10587,6 +10735,12 @@
         }),
         (0, _._)("form", {
           bFocusableByDefault: !1,
+        }),
+        (0, _._)("summary", {
+          bActivateByDefault: !0,
+        }),
+        (0, _._)("details", {
+          bFocusableByDefault: !1,
         });
       function _(_, _, _ = !1) {
         _.useEffect(() => {
@@ -10698,6 +10852,7 @@
             onGlobalButtonDown: _,
             disableFocusClasses: _,
             disabledRoot: _,
+            excludeFromScrollRegionSearch: _,
             "flow-children": _,
             ..._
           } = _,
@@ -10716,6 +10871,7 @@
               onGlobalButtonDown: _,
               disableFocusClasses: _,
               disabledRoot: _,
+              excludeFromScrollRegionSearch: _,
               "flow-children": _,
               ..._,
               ..._,
@@ -10744,6 +10900,7 @@
             onGlobalButtonDown: _,
             disableFocusClasses: _ = !1,
             disabledRoot: _ = !1,
+            excludeFromScrollRegionSearch: _ = !1,
             "flow-children": _,
             ..._
           } = _,
@@ -10753,6 +10910,7 @@
                 navID: _,
                 parentEmbeddedNavTree: _,
                 disabledRoot: _,
+                excludeFromScrollRegionSearch: _,
                 enabled: _,
                 navTreeRef: _,
                 onGlobalButtonDown: _,
@@ -10783,6 +10941,9 @@
                 _.SetIsEnabled(_);
               }, [_, _]),
               _.useEffect(() => {
+                _.SetExcludeFromScrollRegionSearch(_);
+              }, [_, _]),
+              _.useEffect(() => {
                 if (!_)
                   return _.RegisterGamepadNavigationTree(
                     _,
@@ -10808,6 +10969,7 @@
             virtualFocus: _,
             modal: _,
             historyMode: _,
+            excludeFromScrollRegionSearch: _,
           });
         (0, _._)(_.OnActivateCallbacks, _),
           (0, _._)(_.OnDeactivateCallbacks, _),
@@ -10927,6 +11089,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10978,6 +11141,34 @@
             ref: _,
             node: _,
           }
+        );
+      }
+      function _(_) {
+        const _ = _.useRef(null),
+          _ = _.useRef(null);
+        _.useEffect(
+          () => () => {
+            var _;
+            null === (_ = _.current) || void 0 === _ || _.call(_);
+          },
+          [],
+        );
+        return _.useCallback(
+          (_) => {
+            var _;
+            _.current !== _ &&
+              ((_.current = _),
+              null === (_ = _.current) || void 0 === _ || _.call(_),
+              (_.current = null),
+              _ &&
+                (_.current = (0, _._)(
+                  _,
+                  (_) =>
+                    !(!_ || "none" == _.GetFocusable()) &&
+                    _.BTakeFocus(void 0, _.detail.button),
+                )));
+          },
+          [_],
         );
       }
       function _(_) {
@@ -11048,6 +11239,7 @@
             fnScrollIntoViewHandler: _,
             scrollIntoViewType: _,
             resetNavOnEntry: _,
+            scrollRegionToStartOrEnd: _,
             ..._
           } = _,
           { gamepadEvents: _, actionDescriptions: _, props: _ } = _(_);
@@ -11075,6 +11267,7 @@
             fnScrollIntoViewHandler: _,
             scrollIntoViewType: _,
             resetNavOnEntry: _,
+            scrollRegionToStartOrEnd: _,
             actionDescriptionMap: {
               ..._,
               ..._,
@@ -11161,7 +11354,8 @@
               _ &&
               (_.tabIndex = null !== (_ = _.tabIndex) && void 0 !== _ ? _ : -1),
           (0, _._)(_, _);
-        const _ = (0, _._)(_, _),
+        const _ = _(_),
+          _ = (0, _._)(_, _, _),
           _ =
             null === (_ = (0, _.useContext)(_)) || void 0 === _
               ? void 0
@@ -11606,7 +11800,8 @@
           _ = (0, _._)();
         (_.className = _()(_.className, "Panel", _ && "Focusable")),
           (0, _._)(_, _);
-        const _ = (0, _._)(_, _.ref);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _.ref, _);
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
@@ -11904,10 +12099,21 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
+      function _(_) {
+        return "object" == typeof _ && null !== _ && "value" in _;
+      }
+      function _(_, _) {
+        return _(_) && _(_)
+          ? _.value === _.value &&
+              Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft)
+          : _ === _;
+      }
       !(function (_) {
         (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
           (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
@@ -11960,6 +12166,9 @@
       }
       function _(_, _) {
         return _(_, "vgp_onblur", _);
+      }
+      function _(_, _) {
+        return _(_, "vgp_requestfocus", _(_));
       }
       function _(_, _, _) {
         let _ = _;
@@ -12704,6 +12913,146 @@
       const _ = new _._("ScrollSnap").Debug;
       let _ = !1;
       let _;
+      function _(_, _, _, _, _) {
+        var _, _, _, _;
+        const _ = _.Element;
+        if (!_) return;
+        let _ = [
+          {
+            node: _,
+            eScrollType:
+              null === (_ = _.m_Properties) || void 0 === _
+                ? void 0
+                : _.scrollIntoViewType,
+          },
+        ];
+        for (let _ = _.Parent; _; _ = _.Parent) {
+          const _ =
+              null === (_ = _.m_Properties) || void 0 === _
+                ? void 0
+                : _.scrollIntoViewWhenChildFocused,
+            _ =
+              null === (_ = _.m_Properties) || void 0 === _
+                ? void 0
+                : _.scrollIntoViewType;
+          if (_) {
+            const _ = {
+              node: _,
+              eScrollType: _,
+            };
+            "force" === _ ? (_ = [_]) : _.push(_);
+          }
+          if (void 0 !== _)
+            for (
+              let _ = _.length - 1;
+              _ >= 0 && void 0 === _[_].eScrollType;
+              _--
+            )
+              _[_].eScrollType = _;
+        }
+        for (; _.length; ) {
+          let { node: _, eScrollType: _ } = _.pop(),
+            _ = 0 == _.length;
+          if (
+            (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+            null === (_ = null == _ ? void 0 : _.m_Properties) || void 0 === _
+              ? void 0
+              : _.fnScrollIntoViewHandler)
+          ) {
+            if (!1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
+              continue;
+          }
+          const _ = _.m_element,
+            _ = _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
+          if (_ || _ === _._.GAMEPAD) {
+            const _ = _ ? _(_) : _.getBoundingClientRect(),
+              _ = _.ownerDocument.defaultView.innerHeight,
+              _ = 40,
+              _ = _ ? _ : Math.max(0.4 * _, _);
+            let _ = !1;
+            const _ = _ && performance.now() - _ < 500;
+            (_ || _.bottom < -_ || _.top > _ + _) &&
+              ((_ = !0),
+              _ ||
+                _(
+                  `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_} + ${_} `,
+                ));
+            let _ = _ ? "auto" : "smooth";
+            _ && (_ = performance.now()),
+              _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+              _
+                ? _(_, _, _)
+                : (_(
+                    `Scrolling Into View ('${_}' via browser scrollIntoView):`,
+                    _,
+                  ),
+                  _.scrollIntoView({
+                    behavior: _,
+                    block: "nearest",
+                  }));
+          } else
+            _("No previous element for scrolling, will jump"),
+              _
+                ? _(_, _, "auto")
+                : (_(
+                    "Scrolling Into View ('auto' via browser scrollIntoView):",
+                    _,
+                  ),
+                  null == _ ||
+                    _.scrollIntoView({
+                      behavior: "auto",
+                      block: "nearest",
+                      inline: "nearest",
+                    }));
+        }
+        !(function (_, _) {
+          var _, _;
+          const _ = (0, _._)(_);
+          if (!_) return;
+          let _ = null;
+          for (let _ = _; _; _ = _.GetNavParentCrossingTrees())
+            (null === (_ = _.m_Properties) || void 0 === _
+              ? void 0
+              : _.scrollRegionToStartOrEnd) && (_ = _);
+          if (!_) return;
+          for (
+            let _ = _;
+            _ &&
+            !__webpack_require__.BHasNavTargetInDirection(_, !0) &&
+            (_ != _ &&
+              _.Element &&
+              (null === (_ = _.m_Properties) || void 0 === _
+                ? void 0
+                : _.scrollRegionToStartOrEnd) &&
+              _(_.Element, _, _),
+            _ != _);
+            _ = __webpack_require__.GetNavParentCrossingTrees()
+          );
+        })(_, _);
+      }
+      function _(_, _, _) {
+        let _ = _,
+          _ = _.ownerDocument;
+        if (
+          (_ == _.body && _.defaultView && !_(_, _) && (_ = _.defaultView),
+          !_(_, _))
+        )
+          return;
+        const _ = _(_);
+        if ("y" == _) {
+          const _ = _ == _._.DIR_DOWN ? _.MaxScrollTop() : 0;
+          _.scrollTo({
+            top: _,
+            behavior: "smooth",
+          });
+        } else {
+          const _ = _ == _._.DIR_RIGHT ? _.MaxScrollLeft() : 0;
+          _.scrollTo({
+            left: _,
+            behavior: "smooth",
+          });
+        }
+      }
       function _(_) {
         if (!_)
           return {
@@ -13117,6 +13466,20 @@
         get Parent() {
           return this.m_Parent;
         }
+        GetNavParentCrossingTrees() {
+          var _;
+          return this.m_Parent
+            ? this.m_Parent
+            : this.m_Tree.GetParentEmbeddedNavTree() &&
+                this.Element &&
+                null !== (_ = this.Element.__nav_wrapper) &&
+                void 0 !== _
+              ? _
+              : null;
+        }
+        GetWrappedTree() {
+          return null;
+        }
         SetProperties(_) {
           var _, _, _, _, _;
           const _ =
@@ -13125,15 +13488,17 @@
                 ? void 0
                 : _.actionDescriptionMap),
             (_ = null == _ ? void 0 : _.actionDescriptionMap),
+            (_ = _._),
             !(null == _ || null == _
               ? _ === _
               : "object" == typeof _ &&
                 "object" == typeof _ &&
                 Object.keys(_).length === Object.keys(_).length &&
+                ((_ = null != _ ? _ : (_, _) => _ === _),
                 Object.keys(_).every(
-                  (_) => _.hasOwnProperty(_) && _[_] === _[_],
-                )));
-          var _, _;
+                  (_) => _.hasOwnProperty(_) && _(_[_], _[_]),
+                ))));
+          var _, _, _;
           const _ =
               null === (_ = this.m_Properties) || void 0 === _
                 ? void 0
@@ -13452,8 +13817,8 @@
             (this.m_rgChildren.sort((_, _) => {
               const _ = _.m_element,
                 _ = _.m_element;
-              if (!_) return _ ? 1 : 0;
-              if (!_) return -1;
+              if (!_ || !_.isConnected) return _ && _.isConnected ? 1 : 0;
+              if (!_ || !_.isConnected) return -1;
               const _ = __webpack_require__.compareDocumentPosition(_);
               return _ & Node.DOCUMENT_POSITION_PRECEDING
                 ? 1
@@ -13706,81 +14071,110 @@
           return _;
         }
         InternalFocusDescendant(_, _, _) {
-          return !!_ && (this.m_Tree.TransferFocus(_, _, (0, _._)(_)), !0);
+          return !!_ && (this.m_Tree.TransferFocus(_, _, _, !1), !0);
         }
-        BTryInternalNavigation(_, _) {
-          var _, _;
-          const _ = this.GetLayout();
-          let _,
+        BHasNavTargetInDirection(_, _) {
+          if (this.HasMovementHandler(_)) return !0;
+          let _ = this.FindNextFocusableChild(_);
+          if (_ && _) {
+            let _ = __webpack_require__.GetWrappedTree();
+            if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+          }
+          return !!_;
+        }
+        HasMovementHandler(_) {
+          var _, _, _, _;
+          switch (_) {
+            case _._.DIR_UP:
+              return !!(null === (_ = this.m_Properties) || void 0 === _
+                ? void 0
+                : _.onMoveUp);
+            case _._.DIR_DOWN:
+              return !!(null === (_ = this.m_Properties) || void 0 === _
+                ? void 0
+                : _.onMoveDown);
+            case _._.DIR_LEFT:
+              return !!(null === (_ = this.m_Properties) || void 0 === _
+                ? void 0
+                : _.onMoveLeft);
+            case _._.DIR_RIGHT:
+              return !!(null === (_ = this.m_Properties) || void 0 === _
+                ? void 0
+                : _.onMoveRight);
+          }
+          return !1;
+        }
+        FindNextFocusableChild(_) {
+          var _;
+          const _ = this.GetLayout(),
             _ = this.ComputeRelativeDirection(_, _);
-          if (
-            (_(
-              `Handling navigation event ${_._[_]} - ${_[_]} - ${_[_]}`,
-              this.m_element,
-            ),
-            _ == _.INVALID)
-          )
-            return !1;
+          if (_ == _.INVALID) return null;
           if (
             (null === (_ = this.m_Properties) || void 0 === _
               ? void 0
               : _.focusable) &&
             this.BHasFocus()
           )
-            return _("Skipping navigation within focused element"), !1;
+            return null;
           if ((this.EnsureChildrenSorted(!0), _ == _.GRID))
-            _ = this.FindNextFocusableChildInGrid(
+            return this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               _,
               _,
             );
-          else if (_ == _.GEOMETRIC)
-            _ = this.FindNextFocusableChildGeometric(_, _);
-          else {
-            let _ = this.GetActiveChildIndex();
+          if (_ == _.GEOMETRIC)
+            return this.FindNextFocusableChildGeometric(_, _);
+          let _ = this.GetActiveChildIndex();
+          return (
             this.IsValidChildIndex(_) ||
               (_ = _ == _.FORWARD ? -1 : this.m_rgChildren.length),
-              (_ = this.FindNextFocusableChildInDirection(_, _, _));
-          }
-          if (_) {
-            const _ = (0, _._)(_);
-            if (
-              this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
-              _.GetScrollIntoViewType() == _.NoTransformSparseContent
-            ) {
+            this.FindNextFocusableChildInDirection(_, _, _)
+          );
+        }
+        BTryInternalNavigation(_, _) {
+          var _;
+          _(
+            `Handling navigation event ${_._[_]} - ${_[this.GetLayout()]}`,
+            this.m_element,
+          );
+          const _ = this.FindNextFocusableChild(_);
+          if (!_) return !1;
+          const _ = (0, _._)(_),
+            _ = this.ComputeRelativeDirection(_, this.GetLayout());
+          if (
+            this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
+            _.GetScrollIntoViewType() == _.NoTransformSparseContent
+          ) {
+            const _ =
+              null === (_ = _.Element) || void 0 === _
+                ? void 0
+                : _.ownerDocument.defaultView;
+            if (_) {
               const _ =
-                null === (_ = _.Element) || void 0 === _
-                  ? void 0
-                  : _.ownerDocument.defaultView;
-              if (_) {
-                const _ =
-                    ("y" == _ ? _.innerHeight : _.innerWidth) /
-                    (_ ? 4.5 : 3.33),
-                  _ = _(_.Element);
-                let _ = !1;
-                if (
-                  ("y" == _
-                    ? _ == _.FORWARD
+                  ("y" == _ ? _.innerHeight : _.innerWidth) / (_ ? 4.5 : 3.33),
+                _ = _(_.Element);
+              let _ = !1;
+              if (
+                ("y" == _
+                  ? _ == _.FORWARD
+                    ? (_ =
+                        _.top > _.innerHeight && _.bottom > _.innerHeight + _)
+                    : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
+                  : "x" == _ &&
+                    (_ == _.FORWARD
                       ? (_ =
-                          _.top > _.innerHeight && _.bottom > _.innerHeight + _)
-                      : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
-                    : "x" == _ &&
-                      (_ == _.FORWARD
-                        ? (_ =
-                            _.left > _.innerWidth && _.right > _.innerWidth + _)
-                        : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
-                  _)
-                )
-                  return (
-                    _(`Element too far away, scrolling ${_} on ${_} axis `),
-                    _(_.Element, _.Element, "smooth", _, _),
-                    !0
-                  );
-              }
+                          _.left > _.innerWidth && _.right > _.innerWidth + _)
+                      : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
+                _)
+              )
+                return (
+                  _(`Element too far away, scrolling ${_} on ${_} axis `),
+                  _(_.Element, _.Element, "smooth", _, _),
+                  !0
+                );
             }
-            return this.m_Tree.TransferFocus(_._.GAMEPAD, _, _), !0;
           }
-          return !1;
+          return this.m_Tree.TransferFocus(_._.GAMEPAD, _, _), !0;
         }
         GetScrollIntoViewType() {
           var _, _;
@@ -14082,7 +14476,7 @@
             bFocusDescendant: !0,
           });
         }
-        SetDOMFocusAndScroll(_, _) {
+        SetDOMFocusAndScroll(_, _, _, _) {
           var _;
           this.UpdateParentActiveChild(),
             this.m_Tree.OnChildActivated(_),
@@ -14093,110 +14487,14 @@
                 ),
                 null === (_ = this.m_element) ||
                   void 0 === _ ||
-                  __webpack_require__.focus({
+                  _.focus({
                     preventScroll: !0,
                   }))
               : this.m_Tree.BUseVirtualFocus() ||
                 _(
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
-            this.m_Tree.BIsActive() &&
-              (function (_, _, _) {
-                var _, _, _, _;
-                const _ = _.Element;
-                if (!_) return;
-                let _ = [
-                  {
-                    node: _,
-                    eScrollType:
-                      null === (_ = _.m_Properties) || void 0 === _
-                        ? void 0
-                        : _.scrollIntoViewType,
-                  },
-                ];
-                for (let _ = _.Parent; _; _ = _.Parent) {
-                  const _ =
-                      null === (_ = _.m_Properties) || void 0 === _
-                        ? void 0
-                        : _.scrollIntoViewWhenChildFocused,
-                    _ =
-                      null === (_ = _.m_Properties) || void 0 === _
-                        ? void 0
-                        : _.scrollIntoViewType;
-                  if (_) {
-                    const _ = {
-                      node: _,
-                      eScrollType: _,
-                    };
-                    "force" === _ ? (_ = [_]) : _.push(_);
-                  }
-                  if (void 0 !== _)
-                    for (
-                      let _ = _.length - 1;
-                      _ >= 0 && void 0 === _[_].eScrollType;
-                      _--
-                    )
-                      _[_].eScrollType = _;
-                }
-                for (; _.length; ) {
-                  let { node: _, eScrollType: _ } = _.pop(),
-                    _ = 0 == _.length;
-                  if (
-                    (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
-                    (null === (_ = null == _ ? void 0 : _.m_Properties) ||
-                    void 0 === _
-                      ? void 0
-                      : _.fnScrollIntoViewHandler) &&
-                      !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
-                  )
-                    continue;
-                  const _ = _.m_element,
-                    _ =
-                      _ == _.NoTransform ||
-                      _ == _.NoTransformSparseContent ||
-                      !_;
-                  if (_ || _ === _._.GAMEPAD) {
-                    const _ = _ ? _(_) : _.getBoundingClientRect();
-                    let _ = !1;
-                    const _ = Math.max(1.4 * (_.bottom - _.top), 40),
-                      _ = _ && performance.now() - _ < 500;
-                    (_ ||
-                      _.bottom < -_ ||
-                      _.top > _.ownerDocument.defaultView.innerHeight + _) &&
-                      ((_ = !0),
-                      _ ||
-                        _(
-                          `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
-                        ));
-                    let _ = _ ? "auto" : "smooth";
-                    _ && (_ = performance.now()),
-                      _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
-                      _
-                        ? _(0, _, _)
-                        : (_(
-                            "Scrolling Into View (via browser scrollIntoView):",
-                            _,
-                          ),
-                          _.scrollIntoView({
-                            behavior: _,
-                            block: "nearest",
-                          }));
-                  } else
-                    _("No previous element for scrolling, will jump"),
-                      _
-                        ? _(0, _, "auto")
-                        : (_(
-                            "Scrolling Into View (via browser scrollIntoView):",
-                            _,
-                          ),
-                          null == _ ||
-                            _.scrollIntoView({
-                              behavior: "auto",
-                              block: "nearest",
-                              inline: "nearest",
-                            }));
-                }
-              })(this, _, _);
+            this.m_Tree.BIsActive() && _(this, _, _, _, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -14579,13 +14877,14 @@
         _.splice(_ + 1, 0, _);
       }
       function _(_, _, _) {
-        return (
-          _ ||
-            console.error(
+        return _
+          ? _.length < _
+            ? _.concat(Array(_ - _.length).fill(_))
+            : _
+          : (console.error(
               "array should be defined for us to fill in the missing indexes",
             ),
-          _.length < _ ? _.concat(Array(_ - _.length).fill(_)) : _
-        );
+            []);
       }
       function _(_) {
         return Array.from(new Set(_));
@@ -15277,7 +15576,7 @@
         );
       }
       function _(_) {
-        if (0 == _.length) return !1;
+        if (!_) return !1;
         for (let _ = 0; _ < _.length; _++) {
           const _ = _.charCodeAt(_);
           if (_ < 48 || _ > 57) return !1;
@@ -15910,11 +16209,20 @@
             {
               value: _._,
             },
+            {
+              value: _._,
+            },
           ],
         },
         {
           strLocToken: "#ContentReportReasonCategory_Disruptive",
           children: [
+            {
+              value: _._,
+            },
+            {
+              value: _._,
+            },
             {
               value: _._,
             },
@@ -15979,6 +16287,9 @@
         {
           strLocToken: "#ContentReportReasonCategory_Commercial",
           children: [
+            {
+              value: _._,
+            },
             {
               value: _._,
             },
@@ -16345,6 +16656,16 @@
             return _._.Localize(
               "#ContentReportReason_NegativeEffectonDiscourseOrElections",
             );
+          case _._:
+            return _._.Localize("#ContentReportReason_Piracy");
+          case _._:
+            return _._.Localize("#ContentReportReason_ToSViolation");
+          case _._:
+            return _._.Localize("#ContentReportReason_Miscategorized");
+          case _._:
+            return _._.Localize(
+              "#ContentReportReason_BypassingProfanityFilter",
+            );
           default:
             return "";
         }
@@ -16572,6 +16893,16 @@
             return 4696;
           case _._:
             return 4697;
+          case _._:
+            return 5467;
+          case _._:
+            return 5533;
+          case _._:
+            return 5534;
+          case _._:
+            return 5535;
+          case _._:
+            return 5536;
           default:
             return null;
         }
@@ -16709,7 +17040,7 @@
             let _ = _.map((_) => _.toObject()),
               _ = (0, _._)() + "actions/ajaxmarkpartnerevents";
             const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("request", JSON.stringify(_));
             try {
               _ =
@@ -16909,8 +17240,14 @@
               : this.Body()[`set_${_}`] && this.Body()[`set_${_}`](_[_]);
         }
       }
-      function _(_, _) {
-        return _ instanceof _ ? _ : _.InitFromObject(_, _);
+      function _(_, _, _) {
+        let _;
+        return (
+          (_ = _ instanceof _ ? _ : _.InitFromObject(_, _)),
+          void 0 !== (null == _ ? void 0 : _.strDebugSource) &&
+            _.Hdr().set_debug_source(_.strDebugSource),
+          _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -17573,6 +17910,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = 0,
         _ = 1,
@@ -17637,7 +17978,11 @@
         _ = 60,
         _ = 61,
         _ = 62,
-        _ = 63;
+        _ = 63,
+        _ = 65,
+        _ = 66,
+        _ = 67,
+        _ = 68;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -17724,8 +18069,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = 1,
+        _ = 2,
         _ = 3,
         _ = 4,
         _ = 5;
@@ -18223,10 +18570,10 @@
       }
       var _;
       !(function (_) {
-        _.GetCookiePreferences = function (_, _) {
+        _.GetCookiePreferences = function (_, _, _) {
           return _.SendMsg(
             "AccountPrivacy.GetCookiePreferences#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -22931,6 +23278,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = {};
       __webpack_require__._(_),
@@ -22952,6 +23303,11 @@
           _: () => _,
           _: () => _,
         });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -22968,7 +23324,8 @@
         _ = 10,
         _ = 4,
         _ = 6,
-        _ = 8;
+        _ = 8,
+        _ = 1;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -23793,6 +24150,347 @@
         }
         getClassName() {
           return "CCommunity_GetCommentThread_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_type: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidfeature: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature2: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidcomment: {
+                    _: 5,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_id: {
+                    _: 6,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetComment_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.comment || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  comment: {
+                    _: 1,
+                    _: _,
+                  },
+                  comment_thread_type: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidfeature: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature2: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetComment_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_id: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidcomment: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  reason: {
+                    _: 4,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  note: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  sanctions: {
+                    _: 6,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sanction || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sanction: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  days: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Request_Sanction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Response";
         }
       }
       class _ extends _.Message {
@@ -27336,29 +28034,332 @@
           return "CCommunity_SetRecommendationBotReviewStatus_Response";
         }
       }
-      var _;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.explicit || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  explicit: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  adult: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  toxic: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  spam: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  malicious: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  commercial: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CommentClassification";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.resolve || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [12], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  resolve: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  reportid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  report_action: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidcomment: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  commentthreadtype: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  steamid: {
+                    _: 6,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature: {
+                    _: 7,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  gidfeature2: {
+                    _: 8,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  classification: {
+                    _: 9,
+                    _: _,
+                  },
+                  reason: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  comment_thread_id: {
+                    _: 11,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  sanctions: {
+                    _: 12,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  note: {
+                    _: 13,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sanction || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sanction: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  days: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Request_Sanction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Response";
+        }
+      }
+      var _, _;
       !(function (_) {
-        (_.GetApps = function (_, _) {
-          return _.SendMsg("Community.GetApps#1", (0, _._)(_, _), _, {
+        (_.GetApps = function (_, _, _) {
+          return _.SendMsg("Community.GetApps#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetAppRichPresenceLocalization = function (_, _) {
+          (_.GetAppRichPresenceLocalization = function (_, _, _) {
             return _.SendMsg(
               "Community.GetAppRichPresenceLocalization#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetCommentThread = function (_, _) {
+          (_.GetCommentThread = function (_, _, _) {
             return _.SendMsg(
               "Community.GetCommentThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -27366,50 +28367,66 @@
               },
             );
           }),
-          (_.PostCommentToThread = function (_, _) {
+          (_.GetComment = function (_, _, _) {
+            return _.SendMsg("Community.GetComment#1", (0, _._)(_, _, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 5,
+            });
+          }),
+          (_.SanctionComment = function (_, _, _) {
+            return _.SendMsg(
+              "Community.SanctionComment#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.PostCommentToThread = function (_, _, _) {
             return _.SendMsg(
               "Community.PostCommentToThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.DeleteCommentFromThread = function (_, _) {
+          (_.DeleteCommentFromThread = function (_, _, _) {
             return _.SendMsg(
               "Community.DeleteCommentFromThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RateCommentThread = function (_, _) {
+          (_.RateCommentThread = function (_, _, _) {
             return _.SendMsg(
               "Community.RateCommentThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetCommentThreadRatings = function (_, _) {
+          (_.GetCommentThreadRatings = function (_, _, _) {
             return _.SendMsg(
               "Community.GetCommentThreadRatings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.VerifyClanMembership = function (_, _) {
+          (_.VerifyClanMembership = function (_, _, _) {
             return _.SendMsg(
               "Community.VerifyClanMembership#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27418,36 +28435,41 @@
               },
             );
           }),
-          (_.RateClanAnnouncement = function (_, _) {
+          (_.RateClanAnnouncement = function (_, _, _) {
             return _.SendMsg(
               "Community.RateClanAnnouncement#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetClanAnnouncementVoteForUser = function (_, _) {
+          (_.GetClanAnnouncementVoteForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanAnnouncementVoteForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetClanMetadata = function (_, _) {
-            return _.SendMsg("Community.GetClanMetadata#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetClanMetadata = function (_, _, _) {
+            return _.SendMsg(
+              "Community.GetClanMetadata#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetClanLocGroupImages = function (_, _) {
+          (_.GetClanLocGroupImages = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanLocGroupImages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27455,20 +28477,20 @@
               },
             );
           }),
-          (_.GetAvatarHistory = function (_, _) {
+          (_.GetAvatarHistory = function (_, _, _) {
             return _.SendMsg(
               "Community.GetAvatarHistory#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetClanEventCrowdInMetadata = function (_, _) {
+          (_.GetClanEventCrowdInMetadata = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanEventCrowdInMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27476,10 +28498,10 @@
               },
             );
           }),
-          (_.GetClanCrowdInMetadata = function (_, _) {
+          (_.GetClanCrowdInMetadata = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanCrowdInMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27487,30 +28509,30 @@
               },
             );
           }),
-          (_.FetchTranslationFromCrowdIn = function (_, _) {
+          (_.FetchTranslationFromCrowdIn = function (_, _, _) {
             return _.SendMsg(
               "Community.FetchTranslationFromCrowdIn#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.HideAndReportComment = function (_, _) {
+          (_.HideAndReportComment = function (_, _, _) {
             return _.SendMsg(
               "Community.HideAndReportComment#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetUserPartnerEventNews = function (_, _) {
+          (_.GetUserPartnerEventNews = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventNews#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27519,10 +28541,10 @@
               },
             );
           }),
-          (_.GetBestEventsForUser = function (_, _) {
+          (_.GetBestEventsForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.GetBestEventsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27531,20 +28553,20 @@
               },
             );
           }),
-          (_.MarkPartnerEventsForUser = function (_, _) {
+          (_.MarkPartnerEventsForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.MarkPartnerEventsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserPartnerEventViewStatus = function (_, _) {
+          (_.GetUserPartnerEventViewStatus = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventViewStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -27552,67 +28574,79 @@
               },
             );
           }),
-          (_.PartnerEventsShowMoreForApp = function (_, _) {
+          (_.PartnerEventsShowMoreForApp = function (_, _, _) {
             return _.SendMsg(
               "Community.PartnerEventsShowMoreForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.PartnerEventsShowLessForApp = function (_, _) {
+          (_.PartnerEventsShowLessForApp = function (_, _, _) {
             return _.SendMsg(
               "Community.PartnerEventsShowLessForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClearUserPartnerEventsAppPriorities = function (_, _) {
+          (_.ClearUserPartnerEventsAppPriorities = function (_, _, _) {
             return _.SendMsg(
               "Community.ClearUserPartnerEventsAppPriorities#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserPartnerEventsAppPriorities = function (_, _) {
+          (_.GetUserPartnerEventsAppPriorities = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventsAppPriorities#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClearSinglePartnerEventsAppPriority = function (_, _) {
+          (_.ClearSinglePartnerEventsAppPriority = function (_, _, _) {
             return _.SendMsg(
               "Community.ClearSinglePartnerEventsAppPriority#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetRecommendationBotReviewStatus = function (_, _) {
+          (_.SetRecommendationBotReviewStatus = function (_, _, _) {
             return _.SendMsg(
               "Community.SetRecommendationBotReviewStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           });
-      })(_ || (_ = {}));
+      })(_ || (_ = {})),
+        (function (_) {
+          _.UpdateCommentReportState = function (_, _, _) {
+            return _.SendMsg(
+              "CommentModeration.UpdateCommentReportState#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          };
+        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -32980,20 +34014,20 @@
       }
       var _;
       !(function (_) {
-        (_.ClaimBatch = function (_, _) {
+        (_.ClaimBatch = function (_, _, _) {
           return _.SendMsg(
             "ContentModeration.ClaimBatch#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 5,
             },
           );
         }),
-          (_.GetClaimedSubjects = function (_, _) {
+          (_.GetClaimedSubjects = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetClaimedSubjects#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33001,40 +34035,40 @@
               },
             );
           }),
-          (_.ReleaseSubjects = function (_, _) {
+          (_.ReleaseSubjects = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ReleaseSubjects#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.CreateContentReport = function (_, _) {
+          (_.CreateContentReport = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.CreateContentReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CancelContentReport = function (_, _) {
+          (_.CancelContentReport = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.CancelContentReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetReportsSubmittedByUser = function (_, _) {
+          (_.GetReportsSubmittedByUser = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReportsSubmittedByUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33042,10 +34076,10 @@
               },
             );
           }),
-          (_.GetOneReportSubmittedByUser = function (_, _) {
+          (_.GetOneReportSubmittedByUser = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetOneReportSubmittedByUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33053,10 +34087,10 @@
               },
             );
           }),
-          (_.GetReportedSubjectsByOwner = function (_, _) {
+          (_.GetReportedSubjectsByOwner = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReportedSubjectsByOwner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33064,30 +34098,30 @@
               },
             );
           }),
-          (_.ClaimBatchForModeration = function (_, _) {
+          (_.ClaimBatchForModeration = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ClaimBatchForModeration#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ReleaseClaimed = function (_, _) {
+          (_.ReleaseClaimed = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ReleaseClaimed#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetClaimed = function (_, _) {
+          (_.GetClaimed = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetClaimed#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33095,130 +34129,130 @@
               },
             );
           }),
-          (_.ResolveSubject = function (_, _) {
+          (_.ResolveSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ResolveSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ResolveSubjectGroup = function (_, _) {
+          (_.ResolveSubjectGroup = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ResolveSubjectGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetSubjectOverview = function (_, _) {
+          (_.GetSubjectOverview = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetSubjectOverview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.EscalateSubject = function (_, _) {
+          (_.EscalateSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.EscalateSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.UpdateSubject = function (_, _) {
+          (_.UpdateSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.UpdateSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.UpdateSubjectGroup = function (_, _) {
+          (_.UpdateSubjectGroup = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.UpdateSubjectGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.DisputeModerationForReport = function (_, _) {
+          (_.DisputeModerationForReport = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.DisputeModerationForReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.DisputeModerationForSubject = function (_, _) {
+          (_.DisputeModerationForSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.DisputeModerationForSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ResolveDisputedSubject = function (_, _) {
+          (_.ResolveDisputedSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ResolveDisputedSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetContentReportSubject = function (_, _) {
+          (_.GetContentReportSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetContentReportSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetContentReportSubjectGroup = function (_, _) {
+          (_.GetContentReportSubjectGroup = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetContentReportSubjectGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.UpdateReporterCooldown = function (_, _) {
+          (_.UpdateReporterCooldown = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.UpdateReporterCooldown#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetReporterCooldown = function (_, _) {
+          (_.GetReporterCooldown = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReporterCooldown#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33226,50 +34260,50 @@
               },
             );
           }),
-          (_.WriteToAuditLog = function (_, _) {
+          (_.WriteToAuditLog = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.WriteToAuditLog#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetAuditLog = function (_, _) {
+          (_.GetAuditLog = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetAuditLog#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ReleaseSubject = function (_, _) {
+          (_.ReleaseSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ReleaseSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.ClaimSubject = function (_, _) {
+          (_.ClaimSubject = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.ClaimSubject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetModeratorPreferences = function (_, _) {
+          (_.GetModeratorPreferences = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetModeratorPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33277,30 +34311,30 @@
               },
             );
           }),
-          (_.SetModeratorPreferences = function (_, _) {
+          (_.SetModeratorPreferences = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.SetModeratorPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetModeratorActivity = function (_, _) {
+          (_.GetModeratorActivity = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetModeratorActivity#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetDailyModerationStatistics = function (_, _) {
+          (_.GetDailyModerationStatistics = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetDailyModerationStatistics#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33308,10 +34342,10 @@
               },
             );
           }),
-          (_.GetOldestUnresolvedSubjects = function (_, _) {
+          (_.GetOldestUnresolvedSubjects = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetOldestUnresolvedSubjects#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33319,10 +34353,10 @@
               },
             );
           }),
-          (_.GetReporterStats = function (_, _) {
+          (_.GetReporterStats = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.GetReporterStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33330,10 +34364,10 @@
               },
             );
           }),
-          (_.SustainModeration = function (_, _) {
+          (_.SustainModeration = function (_, _, _) {
             return _.SendMsg(
               "ContentModeration.SustainModeration#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -35307,23 +36341,23 @@
         }
       }
       !(function (_) {
-        (_.ReportPost = function (_, _) {
-          return _.SendMsg("Forums.ReportPost#1", (0, _._)(_, _), _, {
+        (_.ReportPost = function (_, _, _) {
+          return _.SendMsg("Forums.ReportPost#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
             eWebAPIKeyRequirement: 2,
           });
         }),
-          (_.GetTopicDetails = function (_, _) {
-            return _.SendMsg("Forums.GetTopicDetails#1", (0, _._)(_, _), _, {
+          (_.GetTopicDetails = function (_, _, _) {
+            return _.SendMsg("Forums.GetTopicDetails#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.ResolveReportedPosts = function (_, _) {
+          (_.ResolveReportedPosts = function (_, _, _) {
             return _.SendMsg(
               "Forums.ResolveReportedPosts#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -35331,10 +36365,10 @@
               },
             );
           }),
-          (_.ResolveReportedPost = function (_, _) {
+          (_.ResolveReportedPost = function (_, _, _) {
             return _.SendMsg(
               "Forums.ResolveReportedPost#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -35342,10 +36376,10 @@
               },
             );
           }),
-          (_.SanctionReportedPost = function (_, _) {
+          (_.SanctionReportedPost = function (_, _, _) {
             return _.SendMsg(
               "Forums.SanctionReportedPost#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -35353,48 +36387,48 @@
               },
             );
           }),
-          (_.DeleteModeratedComment = function (_, _) {
+          (_.DeleteModeratedComment = function (_, _, _) {
             return _.SendMsg(
               "Forums.DeleteModeratedComment#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.DeleteModeratedTopic = function (_, _) {
+          (_.DeleteModeratedTopic = function (_, _, _) {
             return _.SendMsg(
               "Forums.DeleteModeratedTopic#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UndeleteDisputedComment = function (_, _) {
+          (_.UndeleteDisputedComment = function (_, _, _) {
             return _.SendMsg(
               "Forums.UndeleteDisputedComment#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UndeleteDisputedTopic = function (_, _) {
+          (_.UndeleteDisputedTopic = function (_, _, _) {
             return _.SendMsg(
               "Forums.UndeleteDisputedTopic#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetTopicLocked = function (_, _) {
-            return _.SendMsg("Forums.SetTopicLocked#1", (0, _._)(_, _), _, {
+          (_.SetTopicLocked = function (_, _, _) {
+            return _.SendMsg("Forums.SetTopicLocked#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           });
@@ -35675,10 +36709,10 @@
         }
       }
       !(function (_) {
-        (_.GetItems = function (_, _) {
+        (_.GetItems = function (_, _, _) {
           return _.SendMsg(
             "PartnerStoreBrowse.GetItems#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _._,
             {
               bConstMethod: !0,
@@ -35686,10 +36720,10 @@
             },
           );
         }),
-          (_.GetCountryRestrictions = function (_, _) {
+          (_.GetCountryRestrictions = function (_, _, _) {
             return _.SendMsg(
               "PartnerStoreBrowse.GetCountryRestrictions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45819,10 +46853,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetRecentPlaytimeSessionsForChild = function (_, _) {
+        (_.GetRecentPlaytimeSessionsForChild = function (_, _, _) {
           return _.SendMsg(
             "Player.GetRecentPlaytimeSessionsForChild#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -45830,10 +46864,10 @@
             },
           );
         }),
-          (_.GetPlayerLinkDetails = function (_, _) {
+          (_.GetPlayerLinkDetails = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPlayerLinkDetails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45842,10 +46876,10 @@
               },
             );
           }),
-          (_.GetMutualFriendsForIncomingInvites = function (_, _) {
+          (_.GetMutualFriendsForIncomingInvites = function (_, _, _) {
             return _.SendMsg(
               "Player.GetMutualFriendsForIncomingInvites#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45853,23 +46887,23 @@
               },
             );
           }),
-          (_.GetOwnedGames = function (_, _) {
-            return _.SendMsg("Player.GetOwnedGames#1", (0, _._)(_, _), _, {
+          (_.GetOwnedGames = function (_, _, _) {
+            return _.SendMsg("Player.GetOwnedGames#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetPlayNext = function (_, _) {
-            return _.SendMsg("Player.GetPlayNext#1", (0, _._)(_, _), _, {
+          (_.GetPlayNext = function (_, _, _) {
+            return _.SendMsg("Player.GetPlayNext#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.GetFriendsGameplayInfo = function (_, _) {
+          (_.GetFriendsGameplayInfo = function (_, _, _) {
             return _.SendMsg(
               "Player.GetFriendsGameplayInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45877,16 +46911,21 @@
               },
             );
           }),
-          (_.GetGameBadgeLevels = function (_, _) {
-            return _.SendMsg("Player.GetGameBadgeLevels#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetGameBadgeLevels = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetGameBadgeLevels#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetProfileBackground = function (_, _) {
+          (_.GetProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45895,20 +46934,20 @@
               },
             );
           }),
-          (_.SetProfileBackground = function (_, _) {
+          (_.SetProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.SetProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetMiniProfileBackground = function (_, _) {
+          (_.GetMiniProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.GetMiniProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45917,44 +46956,54 @@
               },
             );
           }),
-          (_.SetMiniProfileBackground = function (_, _) {
+          (_.SetMiniProfileBackground = function (_, _, _) {
             return _.SendMsg(
               "Player.SetMiniProfileBackground#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAvatarFrame = function (_, _) {
-            return _.SendMsg("Player.GetAvatarFrame#1", (0, _._)(_, _), _, {
+          (_.GetAvatarFrame = function (_, _, _) {
+            return _.SendMsg("Player.GetAvatarFrame#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.SetAvatarFrame = function (_, _) {
-            return _.SendMsg("Player.SetAvatarFrame#1", (0, _._)(_, _), _, {
+          (_.SetAvatarFrame = function (_, _, _) {
+            return _.SendMsg("Player.SetAvatarFrame#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetAnimatedAvatar = function (_, _) {
-            return _.SendMsg("Player.GetAnimatedAvatar#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.GetAnimatedAvatar = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetAnimatedAvatar#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.SetAnimatedAvatar = function (_, _) {
-            return _.SendMsg("Player.SetAnimatedAvatar#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.SetAnimatedAvatar = function (_, _, _) {
+            return _.SendMsg(
+              "Player.SetAnimatedAvatar#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetSteamDeckKeyboardSkin = function (_, _) {
+          (_.GetSteamDeckKeyboardSkin = function (_, _, _) {
             return _.SendMsg(
               "Player.GetSteamDeckKeyboardSkin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45963,20 +47012,20 @@
               },
             );
           }),
-          (_.SetSteamDeckKeyboardSkin = function (_, _) {
+          (_.SetSteamDeckKeyboardSkin = function (_, _, _) {
             return _.SendMsg(
               "Player.SetSteamDeckKeyboardSkin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetProfileItemsOwned = function (_, _) {
+          (_.GetProfileItemsOwned = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileItemsOwned#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45984,10 +47033,10 @@
               },
             );
           }),
-          (_.GetProfileItemsEquipped = function (_, _) {
+          (_.GetProfileItemsEquipped = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileItemsEquipped#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -45996,26 +47045,26 @@
               },
             );
           }),
-          (_.SetEquippedProfileItemFlags = function (_, _) {
+          (_.SetEquippedProfileItemFlags = function (_, _, _) {
             return _.SendMsg(
               "Player.SetEquippedProfileItemFlags#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetEmoticonList = function (_, _) {
-            return _.SendMsg("Player.GetEmoticonList#1", (0, _._)(_, _), _, {
+          (_.GetEmoticonList = function (_, _, _) {
+            return _.SendMsg("Player.GetEmoticonList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.GetCommunityBadgeProgress = function (_, _) {
+          (_.GetCommunityBadgeProgress = function (_, _, _) {
             return _.SendMsg(
               "Player.GetCommunityBadgeProgress#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46024,10 +47073,10 @@
               },
             );
           }),
-          (_.GetTopAchievementsForGames = function (_, _) {
+          (_.GetTopAchievementsForGames = function (_, _, _) {
             return _.SendMsg(
               "Player.GetTopAchievementsForGames#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46036,10 +47085,10 @@
               },
             );
           }),
-          (_.GetAchievementsProgress = function (_, _) {
+          (_.GetAchievementsProgress = function (_, _, _) {
             return _.SendMsg(
               "Player.GetAchievementsProgress#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -46047,10 +47096,10 @@
               },
             );
           }),
-          (_.GetGameAchievements = function (_, _) {
+          (_.GetGameAchievements = function (_, _, _) {
             return _.SendMsg(
               "Player.GetGameAchievements#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46059,10 +47108,10 @@
               },
             );
           }),
-          (_.GetUserAchievements = function (_, _) {
+          (_.GetUserAchievements = function (_, _, _) {
             return _.SendMsg(
               "Player.GetUserAchievements#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46071,28 +47120,38 @@
               },
             );
           }),
-          (_.GetUserStats = function (_, _) {
-            return _.SendMsg("Player.GetUserStats#1", (0, _._)(_, _), _, {
+          (_.GetUserStats = function (_, _, _) {
+            return _.SendMsg("Player.GetUserStats#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
             });
           }),
-          (_.GetFavoriteBadge = function (_, _) {
-            return _.SendMsg("Player.GetFavoriteBadge#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.GetFavoriteBadge = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetFavoriteBadge#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.SetFavoriteBadge = function (_, _) {
-            return _.SendMsg("Player.SetFavoriteBadge#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.SetFavoriteBadge = function (_, _, _) {
+            return _.SendMsg(
+              "Player.SetFavoriteBadge#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetProfileCustomization = function (_, _) {
+          (_.GetProfileCustomization = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileCustomization#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46101,10 +47160,10 @@
               },
             );
           }),
-          (_.GetPurchasedProfileCustomizations = function (_, _) {
+          (_.GetPurchasedProfileCustomizations = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPurchasedProfileCustomizations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46113,10 +47172,10 @@
               },
             );
           }),
-          (_.GetPurchasedAndUpgradedProfileCustomizations = function (_, _) {
+          (_.GetPurchasedAndUpgradedProfileCustomizations = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPurchasedAndUpgradedProfileCustomizations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46125,10 +47184,10 @@
               },
             );
           }),
-          (_.GetProfileThemesAvailable = function (_, _) {
+          (_.GetProfileThemesAvailable = function (_, _, _) {
             return _.SendMsg(
               "Player.GetProfileThemesAvailable#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46136,46 +47195,51 @@
               },
             );
           }),
-          (_.SetProfileTheme = function (_, _) {
-            return _.SendMsg("Player.SetProfileTheme#1", (0, _._)(_, _), _, {
+          (_.SetProfileTheme = function (_, _, _) {
+            return _.SendMsg("Player.SetProfileTheme#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.SetProfilePreferences = function (_, _) {
+          (_.SetProfilePreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.SetProfilePreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.PostStatusToFriends = function (_, _) {
+          (_.PostStatusToFriends = function (_, _, _) {
             return _.SendMsg(
               "Player.PostStatusToFriends#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetPostedStatus = function (_, _) {
-            return _.SendMsg("Player.GetPostedStatus#1", (0, _._)(_, _), _, {
+          (_.GetPostedStatus = function (_, _, _) {
+            return _.SendMsg("Player.GetPostedStatus#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.DeletePostedStatus = function (_, _) {
-            return _.SendMsg("Player.DeletePostedStatus#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.DeletePostedStatus = function (_, _, _) {
+            return _.SendMsg(
+              "Player.DeletePostedStatus#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.ClientGetLastPlayedTimes = function (_, _) {
+          (_.ClientGetLastPlayedTimes = function (_, _, _) {
             return _.SendMsg(
               "Player.ClientGetLastPlayedTimes#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46184,27 +47248,32 @@
               },
             );
           }),
-          (_.GetTimeSSAAccepted = function (_, _) {
-            return _.SendMsg("Player.GetTimeSSAAccepted#1", (0, _._)(_, _), _, {
+          (_.GetTimeSSAAccepted = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetTimeSSAAccepted#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.AcceptSSA = function (_, _, _) {
+            return _.SendMsg("Player.AcceptSSA#1", (0, _._)(_, _, _), _, {
+              ePrivilege: 1,
+            });
+          }),
+          (_.GetNicknameList = function (_, _, _) {
+            return _.SendMsg("Player.GetNicknameList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.AcceptSSA = function (_, _) {
-            return _.SendMsg("Player.AcceptSSA#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetNicknameList = function (_, _) {
-            return _.SendMsg("Player.GetNicknameList#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetPerFriendPreferences = function (_, _) {
+          (_.GetPerFriendPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.GetPerFriendPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46212,60 +47281,65 @@
               },
             );
           }),
-          (_.SetPerFriendPreferences = function (_, _) {
+          (_.SetPerFriendPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.SetPerFriendPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.AddFriend = function (_, _) {
-            return _.SendMsg("Player.AddFriend#1", (0, _._)(_, _), _, {
+          (_.AddFriend = function (_, _, _) {
+            return _.SendMsg("Player.AddFriend#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.RemoveFriend = function (_, _) {
-            return _.SendMsg("Player.RemoveFriend#1", (0, _._)(_, _), _, {
+          (_.RemoveFriend = function (_, _, _) {
+            return _.SendMsg("Player.RemoveFriend#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.IgnoreFriend = function (_, _) {
-            return _.SendMsg("Player.IgnoreFriend#1", (0, _._)(_, _), _, {
+          (_.IgnoreFriend = function (_, _, _) {
+            return _.SendMsg("Player.IgnoreFriend#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetCommunityPreferences = function (_, _) {
+          (_.GetCommunityPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.GetCommunityPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetCommunityPreferences = function (_, _) {
+          (_.SetCommunityPreferences = function (_, _, _) {
             return _.SendMsg(
               "Player.SetCommunityPreferences#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetTextFilterWords = function (_, _) {
-            return _.SendMsg("Player.GetTextFilterWords#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetTextFilterWords = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetTextFilterWords#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetNewSteamAnnouncementState = function (_, _) {
+          (_.GetNewSteamAnnouncementState = function (_, _, _) {
             return _.SendMsg(
               "Player.GetNewSteamAnnouncementState#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -46273,30 +47347,40 @@
               },
             );
           }),
-          (_.UpdateSteamAnnouncementLastRead = function (_, _) {
+          (_.UpdateSteamAnnouncementLastRead = function (_, _, _) {
             return _.SendMsg(
               "Player.UpdateSteamAnnouncementLastRead#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPrivacySettings = function (_, _) {
-            return _.SendMsg("Player.GetPrivacySettings#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetPrivacySettings = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetPrivacySettings#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetDurationControl = function (_, _) {
-            return _.SendMsg("Player.GetDurationControl#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.GetDurationControl = function (_, _, _) {
+            return _.SendMsg(
+              "Player.GetDurationControl#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.RecordDisconnectedPlaytime = function (_, _) {
+          (_.RecordDisconnectedPlaytime = function (_, _, _) {
             return _.SendMsg(
               "Player.RecordDisconnectedPlaytime#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -47090,7 +48174,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.parent_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6], null);
+            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6, 9], null);
         }
         static M() {
           return (
@@ -47140,6 +48224,14 @@
                   related_f2p: {
                     _: 7,
                     _: _,
+                  },
+                  dlc_parent_appids: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -47999,6 +49091,11 @@
                   },
                   steam_frame_compat_category: {
                     _: 13,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  steam_machine_compat_category: {
+                    _: 14,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -50971,6 +52068,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  requires_signature: {
+                    _: 28,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -51202,17 +52304,17 @@
       }
       var _;
       !(function (_) {
-        (_.GetItems = function (_, _) {
-          return _.SendMsg("StoreBrowse.GetItems#1", (0, _._)(_, _), _, {
+        (_.GetItems = function (_, _, _) {
+          return _.SendMsg("StoreBrowse.GetItems#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetStoreCategories = function (_, _) {
+          (_.GetStoreCategories = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetStoreCategories#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -51221,10 +52323,10 @@
               },
             );
           }),
-          (_.GetContentHubConfig = function (_, _) {
+          (_.GetContentHubConfig = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetContentHubConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -51233,23 +52335,33 @@
               },
             );
           }),
-          (_.GetPriceStops = function (_, _) {
-            return _.SendMsg("StoreBrowse.GetPriceStops#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.GetPriceStops = function (_, _, _) {
+            return _.SendMsg(
+              "StoreBrowse.GetPriceStops#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.GetDLCForApps = function (_, _) {
-            return _.SendMsg("StoreBrowse.GetDLCForApps#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetDLCForApps = function (_, _, _) {
+            return _.SendMsg(
+              "StoreBrowse.GetDLCForApps#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetDLCForAppsSolr = function (_, _) {
+          (_.GetDLCForAppsSolr = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetDLCForAppsSolr#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -51258,10 +52370,10 @@
               },
             );
           }),
-          (_.GetHardwareItems = function (_, _) {
+          (_.GetHardwareItems = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetHardwareItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -53023,17 +54135,17 @@
       }
       var _;
       !(function (_) {
-        (_.Query = function (_, _) {
-          return _.SendMsg("StoreQuery.Query#1", (0, _._)(_, _), _, {
+        (_.Query = function (_, _, _) {
+          return _.SendMsg("StoreQuery.Query#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.SearchSuggestions = function (_, _) {
+          (_.SearchSuggestions = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.SearchSuggestions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -53042,17 +54154,22 @@
               },
             );
           }),
-          (_.MoreLikeThis = function (_, _) {
-            return _.SendMsg("StoreQuery.MoreLikeThis#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.MoreLikeThis = function (_, _, _) {
+            return _.SendMsg(
+              "StoreQuery.MoreLikeThis#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.GetItemsByUserRecommendedTags = function (_, _) {
+          (_.GetItemsByUserRecommendedTags = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.GetItemsByUserRecommendedTags#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -53060,10 +54177,10 @@
               },
             );
           }),
-          (_.GetItemByUserCombinedTagsPriority = function (_, _) {
+          (_.GetItemByUserCombinedTagsPriority = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.GetItemByUserCombinedTagsPriority#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -53294,8 +54411,10 @@
         return [
           _,
           {
-            onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(
+            onPointerEnter: _.useCallback((_) => {
+              (_ && "pointerType" in _ && "mouse" !== _.pointerType) || _(!0);
+            }, []),
+            onPointerLeave: _.useCallback(
               () =>
                 window.sessionStorage &&
                 "true" != window.sessionStorage.getItem("DEBUG_StickyHovers") &&
@@ -53504,21 +54623,20 @@
         );
       }
       function _(_, _) {
+        const [_, _] = _.useState(_);
         return (
-          (function (_, _) {
-            const [_, _] = _.useState(_);
-            return (
-              _.useEffect(() => {
-                if (!_) {
-                  const _ = window.setTimeout(() => _(!1), _);
-                  return () => window.clearTimeout(_);
-                }
-                _(!0);
-              }, [_, _]),
-              _
-            );
-          })(_, _) || _
+          _.useEffect(() => {
+            if (!_) {
+              const _ = window.setTimeout(() => _(!1), _);
+              return () => window.clearTimeout(_);
+            }
+            _(!0);
+          }, [_, _]),
+          _
         );
+      }
+      function _(_, _) {
+        return _(_, _) || _;
       }
       function _(_ = !1) {
         const [_, _] = _.useState(_);
@@ -54843,6 +55961,10 @@
             (function (_, _, _) {
               _(_, _, _, "include_full_description", "full_description_bbcode");
             })(_, _, _),
+          _.include_supported_languages &&
+            (function (_, _, _) {
+              _(_, _, _, "include_supported_languages", "supported_languages");
+            })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (null ===
@@ -56001,7 +57123,8 @@
 	"personalcalendar-lastmonth": 100800,
 	"personalcalendar-lastweek": 100801,
 	"personalcalendar-calendar": 100802,
-	"personalcalendar-homepage": 100803
+	"personalcalendar-homepage": 100803,
+	"greatonframe": 100804
 }`);
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -58832,30 +59955,30 @@
         }
       }
       !(function (_) {
-        (_.EnableParentalSettings = function (_, _) {
+        (_.EnableParentalSettings = function (_, _, _) {
           return _.SendMsg(
             "Parental.EnableParentalSettings#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.DisableParentalSettings = function (_, _) {
+          (_.DisableParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.DisableParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetParentalSettings = function (_, _) {
+          (_.GetParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.GetParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -58863,10 +59986,10 @@
               },
             );
           }),
-          (_.GetSignedParentalSettings = function (_, _) {
+          (_.GetSignedParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.GetSignedParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -58874,81 +59997,96 @@
               },
             );
           }),
-          (_.SetParentalSettings = function (_, _) {
+          (_.SetParentalSettings = function (_, _, _) {
             return _.SendMsg(
               "Parental.SetParentalSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ValidateToken = function (_, _) {
-            return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _), _, {
+          (_.ValidateToken = function (_, _, _) {
+            return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.ValidatePassword = function (_, _) {
-            return _.SendMsg("Parental.ValidatePassword#1", (0, _._)(_, _), _, {
+          (_.ValidatePassword = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.ValidatePassword#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.LockClient = function (_, _, _) {
+            return _.SendMsg("Parental.LockClient#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.LockClient = function (_, _) {
-            return _.SendMsg("Parental.LockClient#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.RequestRecoveryCode = function (_, _) {
+          (_.RequestRecoveryCode = function (_, _, _) {
             return _.SendMsg(
               "Parental.RequestRecoveryCode#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestFeatureAccess = function (_, _) {
+          (_.RequestFeatureAccess = function (_, _, _) {
             return _.SendMsg(
               "Parental.RequestFeatureAccess#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ApproveFeatureAccess = function (_, _) {
+          (_.ApproveFeatureAccess = function (_, _, _) {
             return _.SendMsg(
               "Parental.ApproveFeatureAccess#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestPlaytime = function (_, _) {
-            return _.SendMsg("Parental.RequestPlaytime#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.RequestPlaytime = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.RequestPlaytime#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.ApprovePlaytime = function (_, _) {
-            return _.SendMsg("Parental.ApprovePlaytime#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.ApprovePlaytime = function (_, _, _) {
+            return _.SendMsg(
+              "Parental.ApprovePlaytime#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetRequests = function (_, _) {
-            return _.SendMsg("Parental.GetRequests#1", (0, _._)(_, _), _, {
+          (_.GetRequests = function (_, _, _) {
+            return _.SendMsg("Parental.GetRequests#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.ReportPlaytimeAndNotify = function (_, _) {
+          (_.ReportPlaytimeAndNotify = function (_, _, _) {
             return _.SendMsg(
               "Parental.ReportPlaytimeAndNotify#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -61116,7 +62254,7 @@
               requestAnimationFrame(() => {
                 _.style.display = "block";
               }),
-              _.showPopover();
+              _.showPopover && _.showPopover();
             const _ = _.querySelector(".hover_arrow.left"),
               _ = _.querySelector(".hover_arrow.right"),
               _ = _.querySelector(".hover_arrow.top"),
@@ -66723,10 +67861,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetActiveMarketingMessages = function (_, _) {
+        (_.GetActiveMarketingMessages = function (_, _, _) {
           return _.SendMsg(
             "MarketingMessages.GetActiveMarketingMessages#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -66735,10 +67873,10 @@
             },
           );
         }),
-          (_.GetPastMarketingMessages = function (_, _) {
+          (_.GetPastMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPastMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66746,10 +67884,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForUser = function (_, _) {
+          (_.GetMarketingMessagesForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66757,10 +67895,10 @@
               },
             );
           }),
-          (_.DoesUserHavePendingMarketingMessages = function (_, _) {
+          (_.DoesUserHavePendingMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66768,10 +67906,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessage = function (_, _) {
+          (_.GetDisplayMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66780,10 +67918,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessageForUser = function (_, _) {
+          (_.GetDisplayMarketingMessageForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66791,10 +67929,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessageAdmin = function (_, _) {
+          (_.GetDisplayMarketingMessageAdmin = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66820,10 +67958,10 @@
               },
             );
           }),
-          (_.GetMarketingMessage = function (_, _) {
+          (_.GetMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -66831,80 +67969,80 @@
               },
             );
           }),
-          (_.CreateMarketingMessage = function (_, _) {
+          (_.CreateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.UpdateMarketingMessage = function (_, _) {
+          (_.UpdateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.DeleteMarketingMessage = function (_, _) {
+          (_.DeleteMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.FindMarketingMessages = function (_, _) {
+          (_.FindMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.FindMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetMarketingMessageViewerStats = function (_, _) {
+          (_.GetMarketingMessageViewerStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageViewerStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessagesViewerRangeStats = function (_, _) {
+          (_.GetMarketingMessagesViewerRangeStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessageClickedStats = function (_, _) {
+          (_.GetMarketingMessageClickedStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageClickedStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetPartnerReadyToPublishMessages = function (_, _) {
+          (_.GetPartnerReadyToPublishMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerReadyToPublishMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66913,10 +68051,10 @@
               },
             );
           }),
-          (_.PublishPartnerMessage = function (_, _) {
+          (_.PublishPartnerMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.PublishPartnerMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66925,10 +68063,10 @@
               },
             );
           }),
-          (_.GetPartnerMessagePreview = function (_, _) {
+          (_.GetPartnerMessagePreview = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerMessagePreview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66937,10 +68075,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForPartner = function (_, _) {
+          (_.GetMarketingMessagesForPartner = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -66949,10 +68087,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForApps = function (_, _) {
+          (_.GetMarketingMessagesForApps = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
@@ -67352,7 +68490,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _,
         _,
@@ -67364,7 +68501,6 @@
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -68959,10 +70095,10 @@
         }
       }
       !(function (_) {
-        (_.GetRecentMessages = function (_, _) {
+        (_.GetRecentMessages = function (_, _, _) {
           return _.SendMsg(
             "FriendMessages.GetRecentMessages#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -68970,10 +70106,10 @@
             },
           );
         }),
-          (_.GetActiveMessageSessions = function (_, _) {
+          (_.GetActiveMessageSessions = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.GetActiveMessageSessions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -68981,10 +70117,10 @@
               },
             );
           }),
-          (_.SendMessage = function (_, _) {
+          (_.SendMessage = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.SendMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -69000,40 +70136,40 @@
               },
             );
           }),
-          (_.IsInFriendsUIBeta = function (_, _) {
+          (_.IsInFriendsUIBeta = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.IsInFriendsUIBeta#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdateMessageReaction = function (_, _) {
+          (_.UpdateMessageReaction = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.UpdateMessageReaction#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ReportMessage = function (_, _) {
+          (_.ReportMessage = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.ReportMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ResolveReport = function (_, _) {
+          (_.ResolveReport = function (_, _, _) {
             return _.SendMsg(
               "FriendMessages.ResolveReport#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -79285,10 +80421,10 @@
       }
       var _, _, _, _, _, _;
       !(function (_) {
-        _.RequestFriendPersonaStates = function (_, _) {
+        _.RequestFriendPersonaStates = function (_, _, _) {
           return _.SendMsg(
             "Chat.RequestFriendPersonaStates#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
@@ -79297,300 +80433,335 @@
         };
       })(_ || (_ = {})),
         (function (_) {
-          (_.CreateChatRoomGroup = function (_, _) {
+          (_.CreateChatRoomGroup = function (_, _, _) {
             return _.SendMsg(
               "ChatRoom.CreateChatRoomGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-            (_.SaveChatRoomGroup = function (_, _) {
+            (_.SaveChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SaveChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.RenameChatRoomGroup = function (_, _) {
+            (_.RenameChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.RenameChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetChatRoomGroupTagline = function (_, _) {
+            (_.SetChatRoomGroupTagline = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetChatRoomGroupTagline#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetChatRoomGroupAvatar = function (_, _) {
+            (_.SetChatRoomGroupAvatar = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetChatRoomGroupAvatar#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetChatRoomGroupWatchingBroadcast = function (_, _) {
+            (_.SetChatRoomGroupWatchingBroadcast = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetChatRoomGroupWatchingBroadcast#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.JoinMiniGameForChatRoomGroup = function (_, _) {
+            (_.JoinMiniGameForChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.JoinMiniGameForChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.EndMiniGameForChatRoomGroup = function (_, _) {
+            (_.EndMiniGameForChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.EndMiniGameForChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.MuteUserInGroup = function (_, _) {
+            (_.MuteUserInGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.MuteUserInGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.KickUserFromGroup = function (_, _) {
+            (_.KickUserFromGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.KickUserFromGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetUserBanState = function (_, _) {
+            (_.SetUserBanState = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetUserBanState#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.RevokeInviteToGroup = function (_, _) {
+            (_.RevokeInviteToGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.RevokeInviteToGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CreateRole = function (_, _) {
-              return _.SendMsg("ChatRoom.CreateRole#1", (0, _._)(_, _), _, {
+            (_.CreateRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.CreateRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.GetRoles = function (_, _) {
-              return _.SendMsg("ChatRoom.GetRoles#1", (0, _._)(_, _), _, {
+            (_.GetRoles = function (_, _, _) {
+              return _.SendMsg("ChatRoom.GetRoles#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 1,
               });
             }),
-            (_.RenameRole = function (_, _) {
-              return _.SendMsg("ChatRoom.RenameRole#1", (0, _._)(_, _), _, {
+            (_.RenameRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.RenameRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.ReorderRole = function (_, _) {
-              return _.SendMsg("ChatRoom.ReorderRole#1", (0, _._)(_, _), _, {
+            (_.ReorderRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.ReorderRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.DeleteRole = function (_, _) {
-              return _.SendMsg("ChatRoom.DeleteRole#1", (0, _._)(_, _), _, {
+            (_.DeleteRole = function (_, _, _) {
+              return _.SendMsg("ChatRoom.DeleteRole#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.GetRoleActions = function (_, _) {
-              return _.SendMsg("ChatRoom.GetRoleActions#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
+            (_.GetRoleActions = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetRoleActions#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
             }),
-            (_.ReplaceRoleActions = function (_, _) {
+            (_.ReplaceRoleActions = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.ReplaceRoleActions#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.AddRoleToUser = function (_, _) {
-              return _.SendMsg("ChatRoom.AddRoleToUser#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.AddRoleToUser = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.AddRoleToUser#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.GetRolesForUser = function (_, _) {
+            (_.GetRolesForUser = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetRolesForUser#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.DeleteRoleFromUser = function (_, _) {
+            (_.DeleteRoleFromUser = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.DeleteRoleFromUser#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.JoinChatRoomGroup = function (_, _) {
+            (_.JoinChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.JoinChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.InviteFriendToChatRoomGroup = function (_, _) {
+            (_.InviteFriendToChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.InviteFriendToChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.LeaveChatRoomGroup = function (_, _) {
+            (_.LeaveChatRoomGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.LeaveChatRoomGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.CreateChatRoom = function (_, _) {
-              return _.SendMsg("ChatRoom.CreateChatRoom#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.CreateChatRoom = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.CreateChatRoom#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.DeleteChatRoom = function (_, _) {
-              return _.SendMsg("ChatRoom.DeleteChatRoom#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.DeleteChatRoom = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.DeleteChatRoom#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.RenameChatRoom = function (_, _) {
-              return _.SendMsg("ChatRoom.RenameChatRoom#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.RenameChatRoom = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.RenameChatRoom#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.ReorderChatRoom = function (_, _) {
+            (_.ReorderChatRoom = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.ReorderChatRoom#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SendChatMessage = function (_, _) {
+            (_.SendChatMessage = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SendChatMessage#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.JoinVoiceChat = function (_, _) {
-              return _.SendMsg("ChatRoom.JoinVoiceChat#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
-            }),
-            (_.LeaveVoiceChat = function (_, _) {
-              return _.SendMsg("ChatRoom.LeaveVoiceChat#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetMessageHistory = function (_, _) {
+            (_.JoinVoiceChat = function (_, _, _) {
               return _.SendMsg(
-                "ChatRoom.GetMessageHistory#1",
-                (0, _._)(_, _),
+                "ChatRoom.JoinVoiceChat#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.GetMyChatRoomGroups = function (_, _) {
+            (_.LeaveVoiceChat = function (_, _, _) {
               return _.SendMsg(
-                "ChatRoom.GetMyChatRoomGroups#1",
-                (0, _._)(_, _),
+                "ChatRoom.LeaveVoiceChat#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetChatRoomGroupState = function (_, _) {
+            (_.GetMessageHistory = function (_, _, _) {
               return _.SendMsg(
-                "ChatRoom.GetChatRoomGroupState#1",
-                (0, _._)(_, _),
+                "ChatRoom.GetMessageHistory#1",
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetAppChatRoomGroupForceActive = function (_, _) {
+            (_.GetMyChatRoomGroups = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetMyChatRoomGroups#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            }),
+            (_.GetChatRoomGroupState = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetChatRoomGroupState#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
+            }),
+            (_.SetAppChatRoomGroupForceActive = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetAppChatRoomGroupForceActive#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -79615,85 +80786,95 @@
                 },
               );
             }),
-            (_.CreateInviteLink = function (_, _) {
+            (_.CreateInviteLink = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.CreateInviteLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.GetInviteLinkInfo = function (_, _) {
+            (_.GetInviteLinkInfo = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetInviteLinkInfo#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetInviteInfo = function (_, _) {
-              return _.SendMsg("ChatRoom.GetInviteInfo#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
+            (_.GetInviteInfo = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetInviteInfo#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
             }),
-            (_.GetInviteLinksForGroup = function (_, _) {
+            (_.GetInviteLinksForGroup = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetInviteLinksForGroup#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.GetBanList = function (_, _) {
-              return _.SendMsg("ChatRoom.GetBanList#1", (0, _._)(_, _), _, {
+            (_.GetBanList = function (_, _, _) {
+              return _.SendMsg("ChatRoom.GetBanList#1", (0, _._)(_, _, _), _, {
                 ePrivilege: 3,
               });
             }),
-            (_.GetInviteList = function (_, _) {
-              return _.SendMsg("ChatRoom.GetInviteList#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.GetInviteList = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.GetInviteList#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.DeleteInviteLink = function (_, _) {
+            (_.DeleteInviteLink = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.DeleteInviteLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
                 },
               );
             }),
-            (_.SetSessionActiveChatRoomGroups = function (_, _) {
+            (_.SetSessionActiveChatRoomGroups = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetSessionActiveChatRoomGroups#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.SetUserChatGroupPreferences = function (_, _) {
+            (_.SetUserChatGroupPreferences = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.SetUserChatGroupPreferences#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.DeleteChatMessages = function (_, _) {
+            (_.DeleteChatMessages = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.DeleteChatMessages#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -79709,58 +80890,73 @@
                 },
               );
             }),
-            (_.SearchMembers = function (_, _) {
-              return _.SendMsg("ChatRoom.SearchMembers#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-              });
+            (_.SearchMembers = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.SearchMembers#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
             }),
-            (_.UpdateMessageReaction = function (_, _) {
+            (_.UpdateMessageReaction = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.UpdateMessageReaction#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.GetMessageReactionReactors = function (_, _) {
+            (_.GetMessageReactionReactors = function (_, _, _) {
               return _.SendMsg(
                 "ChatRoom.GetMessageReactionReactors#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
                 },
               );
             }),
-            (_.ReportMessage = function (_, _) {
-              return _.SendMsg("ChatRoom.ReportMessage#1", (0, _._)(_, _), _, {
-                ePrivilege: 3,
-              });
+            (_.ReportMessage = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.ReportMessage#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 3,
+                },
+              );
             }),
-            (_.ResolveReport = function (_, _) {
-              return _.SendMsg("ChatRoom.ResolveReport#1", (0, _._)(_, _), _, {
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-              });
+            (_.ResolveReport = function (_, _, _) {
+              return _.SendMsg(
+                "ChatRoom.ResolveReport#1",
+                (0, _._)(_, _, _),
+                _,
+                {
+                  ePrivilege: 1,
+                  eWebAPIKeyRequirement: 2,
+                },
+              );
             });
         })(_ || (_ = {})),
         (function (_) {
-          (_.GetClanChatRoomInfo = function (_, _) {
+          (_.GetClanChatRoomInfo = function (_, _, _) {
             return _.SendMsg(
               "ClanChatRooms.GetClanChatRoomInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-            (_.SetClanChatRoomPrivate = function (_, _) {
+            (_.SetClanChatRoomPrivate = function (_, _, _) {
               return _.SendMsg(
                 "ClanChatRooms.SetClanChatRoomPrivate#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 3,
@@ -79835,7 +81031,6 @@
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { publishedFileId: _ } = _,
@@ -79845,7 +81040,7 @@
               mutationKey: ["report_ugc_file", _],
               mutationFn: async (_) => {
                 const _ = new FormData();
-                __webpack_require__.append("sessionid", _._.SESSIONID),
+                __webpack_require__.append("sessionid", (0, _._)()),
                   __webpack_require__.append("id", _),
                   __webpack_require__.append("description", _.text),
                   __webpack_require__.append("reason", _.reason.toString()),
@@ -79868,39 +81063,6 @@
           subjectType: _._,
           subjectGroupId: _,
           subjectId: "0",
-          showDialog: _,
-          setShowDialog: _,
-          excludedReasons: _,
-        });
-      }
-      function _(_) {
-        const { publishedFileId: _, commentId: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          _ = (function (_, _) {
-            const _ = (0, _._)();
-            return (0, _._)({
-              mutationKey: ["report_ugc_comment", _],
-              mutationFn: async (_) => {
-                const _ = _._.Init(_._);
-                _.Body().set_gidcomment(_),
-                  _.Body().set_gidfeature(_),
-                  _.Body().set_gidfeature2(_.kFb),
-                  _.Body().set_hide(!0),
-                  _.Body().set_report_reason(_.reason),
-                  _.Body().set_report_text(_.text);
-                await _._.HideAndReportComment(_, _);
-              },
-            });
-          })(_, _);
-        (0, _.useEffect)(() => {
-          window[`reportComment${_}`] = () => _(!0);
-        }, [_, _]);
-        const _ = new Set([_._]);
-        return (0, _.jsx)(_, {
-          reportSubjectMutation: _,
-          subjectType: _._,
-          subjectGroupId: _,
-          subjectId: _,
           showDialog: _,
           setShowDialog: _,
           excludedReasons: _,
@@ -80104,6 +81266,7 @@
                             placeholder: _._.Localize(
                               "#ReportContent_DetailsPlaceholder",
                             ),
+                            maxLength: 1024,
                           }),
                         }),
                         (0, _.jsxs)(_._, {
@@ -85204,6 +86367,8 @@
             "DriverProvidedIPDVisibility_Bool"),
           (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
             "Prop_SupportsVRGamepadMode_Bool"),
+          (_[(_.Prop_AllowHomeApp2Setting_Int32 = 2119)] =
+            "Prop_AllowHomeApp2Setting_Int32"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -85370,7 +86535,7 @@
             (_[(_.SmoothStep = 3)] = "SmoothStep"),
             (_[(_.SmootherStep = 4)] = "SmootherStep");
         })(_ || (_ = {}));
-      var _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -85408,17 +86573,23 @@
             (_[(_.Panel = 2)] = "Panel");
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.ControllerPairing = 0)] = "ControllerPairing"),
-            (_[(_.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
-            (_[(_.SystemButtonHideDashboard = 2)] =
+          (_[(_.Unknown = 0)] = "Unknown"),
+            (_[(_.LaserMouse = 1)] = "LaserMouse"),
+            (_[(_.Gamepad = 2)] = "Gamepad");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
+            (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
+            (_[(_.SystemButtonHideDashboard = 3)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 3)] =
+            (_[(_.SystemButtonDashboardHidden = 4)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 4)] =
+            (_[(_.SystemButtonShowDashboard = 5)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 5)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 6)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 6)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 7)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 8)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -87535,7 +88706,6 @@
               type: "xbox",
               ..._,
             });
-          case _._:
           case _._:
           case _._:
           case _._:
@@ -91933,6 +93103,7 @@
         KKS: () => _,
         L0X: () => _,
         LHj: () => _,
+        LO_: () => _,
         LPs: () => _,
         LsA: () => _,
         MUh: () => _,
@@ -92044,6 +93215,7 @@
         wB_: () => _,
         wC1: () => _,
         xHM: () => _,
+        xoK: () => _,
         xv8: () => _,
         yGy: () => _,
         y_e: () => _,
@@ -92508,6 +93680,7 @@
             (0, _.jsx)("g", {
               className: "Speaker",
               children: (0, _.jsx)("path", {
+                fill: "currentColor",
                 _: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
               }),
             }),
@@ -92517,18 +93690,22 @@
                 children: [
                   (0, _.jsx)("path", {
                     className: "SoundWavesHighest",
+                    fill: "currentColor",
                     _: "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
                   }),
                   (0, _.jsx)("path", {
                     className: "SoundWavesHigh",
+                    fill: "currentColor",
                     _: "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
                   }),
                   (0, _.jsx)("path", {
                     className: "SoundWavesMed",
+                    fill: "currentColor",
                     _: "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
                   }),
                   (0, _.jsx)("path", {
                     className: "SoundWavesLow",
+                    fill: "currentColor",
                     _: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
                   }),
                 ],
@@ -94825,23 +96002,6 @@
       function _(_) {
         const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
-          className: (0, _._)(_().SteamDeckCompatLogo, _),
-          ..._,
-          viewBox: "0 0 20 20",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: (0, _.jsx)("path", {
-            opacity: "0.84",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
-            fill: "white",
-          }),
-        });
-      }
-      function _(_) {
-        const { className: _, ..._ } = _;
-        return (0, _.jsx)("svg", {
           className: (0, _._)(
             _().SteamDeckCompatIcon,
             _().SteamOSCompatCompatible,
@@ -95039,21 +96199,6 @@
               }),
             });
         }
-      }
-      function _(_) {
-        const { className: _ } = _;
-        return (0, _.jsx)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          className: (0, _._)("SVGIcon_Button", "SVGIcon_SteamDeck", _),
-          viewBox: "0 0 36 36",
-          fill: "none",
-          children: (0, _.jsx)("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
-          }),
-        });
       }
       function _(_) {
         return (0, _.jsx)("svg", {
@@ -96453,6 +97598,95 @@
           ],
         });
       }
+      function _(_) {
+        const [_, _] = (0, _._)();
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsxs)("g", {
+              clipPath: _,
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "currentColor",
+                  _: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#199FFF",
+                  _: "M26.2788 18.2288C26.2787 13.7823 22.6734 10.1777 18.2268 10.1777C13.7804 10.1778 10.176 13.7824 10.1758 18.2288C10.1758 22.5363 13.5586 26.0544 17.8127 26.2701L18.2268 26.2807C22.5347 26.2807 26.0527 22.8973 26.2681 18.643L26.2788 18.2288Z",
+                }),
+              ],
+            }),
+            (0, _.jsx)("defs", {
+              children: (0, _.jsx)("clipPath", {
+                _: _,
+                children: (0, _.jsx)("rect", {
+                  fill: "currentColor",
+                  width: "36",
+                  height: "36",
+                }),
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        return (0, _.jsxs)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 36 36",
+          fill: "none",
+          ..._,
+          children: [
+            (0, _.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M24.5384 18C24.5384 11.6275 19.3725 6.46154 13 6.46154V0C22.9411 0 30.9999 8.05887 30.9999 18C30.9999 27.9411 22.9411 36 13 36V29.5385C19.3725 29.5385 24.5384 24.3725 24.5384 18Z",
+            }),
+            (0, _.jsx)("ellipse", {
+              fill: "#1A9FFF",
+              _: "13",
+              _: "18.0195",
+              _: "8.99996",
+              _: "9",
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { className: _, ..._ } = _;
+        return (0, _.jsx)("svg", {
+          className: (0, _._)(_().SteamDeckCompatLogo, _),
+          ..._,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
+            opacity: "0.84",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
+            fill: "white",
+          }),
+        });
+      }
+      function _(_) {
+        const { className: _ } = _;
+        return (0, _.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          className: (0, _._)("SVGIcon_Button", "SVGIcon_SteamDeck", _),
+          viewBox: "0 0 36 36",
+          fill: "none",
+          children: (0, _.jsx)("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
+          }),
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -96677,7 +97911,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
         const { divProps: _, tooltipProps: _ } = _({
@@ -96746,6 +97981,7 @@
             toolTipContent: _,
             nDelayShowMS: _ = 300,
             bDisabled: _,
+            bPortalToBody: _,
             direction: _,
             nBodyAlignment: _,
             nBodyDistance: _,
@@ -96786,6 +98022,7 @@
         const _ = {
           active: _ && !_,
           target: _,
+          bPortalToBody: _,
           nDelayShowMS: _,
           hoverPositionProps: _,
           children: _,
@@ -96830,13 +98067,14 @@
         const {
             active: _,
             target: _,
+            bPortalToBody: _,
             nDelayShowMS: _ = 300,
             hoverPositionProps: _,
             children: _,
           } = _,
           [_, _] = _.useState(_);
-        return (
-          _.useEffect(() => {
+        if (
+          (_.useEffect(() => {
             if (_) {
               if (_) {
                 const _ = window.setTimeout(() => _(!0), _);
@@ -96845,14 +98083,16 @@
               _(!0);
             } else (0, _._)() || _(!1);
           }, [_]),
-          _ && _ && _
-            ? (0, _.jsx)(_._, {
-                target: _,
-                ..._,
-                children: _,
-              })
-            : null
-        );
+          !_)
+        )
+          return null;
+        if (!_ || !_) return null;
+        const _ = (0, _.jsx)(_._, {
+          target: _,
+          ..._,
+          children: _,
+        });
+        return _ ? _.createPortal(_, _.ownerDocument.body) : _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -99603,6 +100843,7 @@
         _: () => _,
         _: () => _._,
         _: () => _,
+        _: () => _._,
         _: () => _,
         _: () => _._,
         _: () => _,
@@ -99741,8 +100982,7 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
@@ -99794,12 +101034,6 @@
           PAGE_TIMESTAMP: 0,
           FROM_WEB: !1,
           WEBSITE_ID: "Unknown",
-          get SESSIONID() {
-            return (0, _._)();
-          },
-          FRIENDSUI_BETA: !1,
-          STEAM_TV: !1,
-          DEV_MODE: !1,
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
@@ -99811,6 +101045,7 @@
           IN_LOGIN_REFRESH: !1,
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
+          DEV_MODE: !1,
           CLIENT_SESSION: 0,
           NOW: 0,
         },
@@ -99884,7 +101119,7 @@
       function _(_ = _) {
         const _ = {},
           _ = _("config", _);
-        _ && (delete _.SESSIONID, Object.assign(_._, _), (_.config = !0));
+        _ && (Object.assign(_._, _), (_.config = !0));
         const _ = _("userinfo", _);
         _ &&
           (Object.assign(_._, _),

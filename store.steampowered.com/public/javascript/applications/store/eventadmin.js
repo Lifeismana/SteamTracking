@@ -122,7 +122,7 @@
         Dw: () => p,
         vB: () => S,
         D$: () => s,
-        bH: () => E,
+        bH: () => M,
       });
       var s = {};
       n.r(s), n.d(s, { w4: () => l });
@@ -1072,45 +1072,49 @@
           return "CNews_GetBatchPublishedPartnerEvent_Response";
         }
       }
-      var E;
+      var M;
       !(function (e) {
-        (e.ConvertHTMLToBBCode = function (e, t) {
-          return e.SendMsg("News.ConvertHTMLToBBCode#1", (0, o.I8)(h, t), u, {
-            bConstMethod: !0,
-            ePrivilege: 0,
-            eWebAPIKeyRequirement: 1,
-          });
+        (e.ConvertHTMLToBBCode = function (e, t, n) {
+          return e.SendMsg(
+            "News.ConvertHTMLToBBCode#1",
+            (0, o.I8)(h, t, n),
+            u,
+            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+          );
         }),
-          (e.PreviewPartnerEvents = function (e, t) {
+          (e.PreviewPartnerEvents = function (e, t, n) {
             return e.SendMsg(
               "News.PreviewPartnerEvents#1",
-              (0, o.I8)(p, t),
+              (0, o.I8)(p, t, n),
               g,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetNewsFeedByRepublishClan = function (e, t) {
+          (e.GetNewsFeedByRepublishClan = function (e, t, n) {
             return e.SendMsg(
               "News.GetNewsFeedByRepublishClan#1",
-              (0, o.I8)(_, t),
+              (0, o.I8)(_, t, n),
               v,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.PublishPartnerEvent = function (e, t) {
-            return e.SendMsg("News.PublishPartnerEvent#1", (0, o.I8)(S, t), w, {
-              ePrivilege: 1,
-            });
+          (e.PublishPartnerEvent = function (e, t, n) {
+            return e.SendMsg(
+              "News.PublishPartnerEvent#1",
+              (0, o.I8)(S, t, n),
+              w,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.GetBatchPublishedPartnerEvent = function (e, t) {
+          (e.GetBatchPublishedPartnerEvent = function (e, t, n) {
             return e.SendMsg(
               "News.GetBatchPublishedPartnerEvent#1",
-              (0, o.I8)(C, t),
+              (0, o.I8)(C, t, n),
               b,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
-      })(E || (E = {}));
+      })(M || (M = {}));
     },
     75749: (e, t, n) => {
       "use strict";
@@ -1261,7 +1265,7 @@
         }
         async CreateOrUpdateRSSNewFeed(e, t = 0) {
           let n = new FormData();
-          n.append("sessionid", o.TS.SESSIONID),
+          n.append("sessionid", (0, o.KC)()),
             n.append("gid", this.m_strRSSGID),
             n.append("lang", "" + this.GetCuratorLanguage()),
             n.append("rss_url", e),
@@ -1291,7 +1295,7 @@
         async CheckForNewUpdate() {
           if (this.m_strRSSGID) {
             let e = new FormData();
-            e.append("sessionid", o.TS.SESSIONID),
+            e.append("sessionid", (0, o.KC)()),
               e.append("gid", this.m_strRSSGID);
             const t =
               o.TS.STORE_BASE_URL +
@@ -1605,8 +1609,8 @@
         w = n(81301),
         C = n(95695),
         b = n.n(C),
-        E = n(12037),
-        M = n(74568),
+        M = n(12037),
+        E = n(74568),
         A = n(738),
         R = n(22797),
         f = n(51272),
@@ -1993,7 +1997,7 @@
               .CheckForNewUpdate()
               .then(() =>
                 (0, A.pg)(
-                  (0, a.jsx)(M.o0, {
+                  (0, a.jsx)(E.o0, {
                     strTitle: (0, T.we)("#CuratorAdmin_RSSFeed_scannow"),
                     strDescription: (0, T.we)("#CuratorAdmin_RSSFeed_queued"),
                   }),
@@ -2002,7 +2006,7 @@
               )
               .catch((t) =>
                 (0, A.pg)(
-                  (0, a.jsx)(M.KG, {
+                  (0, a.jsx)(E.KG, {
                     strTitle: (0, T.we)("#CuratorAdmin_RSSFeed_scannow"),
                     strDescription: (0, x.H)(t).strErrorMsg,
                   }),
@@ -2191,7 +2195,7 @@
               return n ? (0, D.EK)(n[0]) : e[0];
             })();
           (0, A.pg)(
-            (0, a.jsx)(M.o0, {
+            (0, a.jsx)(E.o0, {
               bAlertDialog: !0,
               strTitle: (0, T.we)("#RSSManager_PostEvent_ViewRaw"),
               children: (0, a.jsx)("textarea", {
@@ -2343,8 +2347,8 @@
                       children: (0, T.we)("#RSSManager_PostEvent_ViewRaw"),
                     }),
                   Boolean(this.state.eventModelForPreviewNow) &&
-                    (0, a.jsx)(M.of, {
-                      className: E.StoreHeaderAdjust,
+                    (0, a.jsx)(E.of, {
+                      className: M.StoreHeaderAdjust,
                       children: (0, a.jsx)("div", {
                         children: (0, a.jsx)(w.H, {
                           event: this.state.eventModelForPreviewNow,
@@ -2457,7 +2461,7 @@
             case "activate_feed":
             case "update_feed":
             default:
-              return (0, a.jsx)(M.eV, {
+              return (0, a.jsx)(E.eV, {
                 title: this.GetStrTitle(),
                 children: (0, a.jsxs)(S.nB, {
                   children: [
@@ -2520,7 +2524,7 @@
                 }),
               });
             case "failure":
-              return (0, a.jsx)(M.KG, {
+              return (0, a.jsx)(E.KG, {
                 strDescription: (0, T.we)("#RSSManager_PostEvent_Failure"),
                 closeModal: this.props.closeModal,
                 children: (0, a.jsx)("div", {
@@ -2533,14 +2537,14 @@
               });
             case "creating_feed":
             case "waiting_post":
-              return (0, a.jsx)(M.o0, {
+              return (0, a.jsx)(E.o0, {
                 strTitle: this.GetStrTitle(),
                 strDescription: (0, T.we)("#RSSManager_PostEvent_InFlight"),
                 closeModal: this.props.closeModal,
                 children: (0, a.jsx)(R.t, { position: "center" }),
               });
             case "create_post":
-              return (0, a.jsx)(M.eV, {
+              return (0, a.jsx)(E.eV, {
                 title: this.GetStrTitle(),
                 children: (0, a.jsxs)(S.nB, {
                   children: [
@@ -2579,7 +2583,7 @@
                 }),
               });
             case "update_post":
-              return (0, a.jsx)(M.eV, {
+              return (0, a.jsx)(E.eV, {
                 title: this.GetStrTitle(),
                 children: (0, a.jsxs)(S.nB, {
                   children: [
@@ -2610,7 +2614,7 @@
                 }),
               });
             case "success":
-              return (0, a.jsx)(M.o0, {
+              return (0, a.jsx)(E.o0, {
                 strTitle: this.GetStrTitle(),
                 strDescription: (0, T.we)(
                   this.props.newsData
@@ -2742,7 +2746,7 @@
         async ReindexClanEventsAndReloadAccount(e) {
           const t = o.TS.STORE_BASE_URL + "events_admin/ajaxflushandreindexrss",
             n = new FormData();
-          n.set("sessionid", o.TS.SESSIONID), n.append("clanids", "" + e);
+          n.set("sessionid", (0, o.KC)()), n.append("clanids", "" + e);
           try {
             let e = await d().post(t, n, { withCredentials: !0 });
             if (e?.data?.success == i.R) return !0;
@@ -2766,8 +2770,8 @@
         w = n(84811),
         C = n(32541),
         b = n(738),
-        E = n(12155),
-        M = n(22797),
+        M = n(12155),
+        E = n(22797),
         A = n(32754),
         R = n(52038),
         f = n(56011),
@@ -2787,7 +2791,7 @@
             }, []),
             t)
           )
-            return (0, s.jsx)(M.t, {
+            return (0, s.jsx)(E.t, {
               string: (0, y.we)("#Loading"),
               size: "medium",
             });
@@ -2822,7 +2826,7 @@
           const [t, n] = (0, p.useState)(!1),
             [a, r] = (0, p.useState)(void 0);
           return t
-            ? (0, s.jsx)(M.t, { string: (0, y.we)("#Loading"), size: "medium" })
+            ? (0, s.jsx)(E.t, { string: (0, y.we)("#Loading"), size: "medium" })
             : void 0 !== a
               ? Boolean(a.length > 0)
                 ? (0, s.jsx)(F, {
@@ -2861,8 +2865,8 @@
                       className: T().ResizeButton,
                       onClick: () => r(!a),
                       children: a
-                        ? (0, s.jsx)(E.hz4, {})
-                        : (0, s.jsx)(E.Xjb, {}),
+                        ? (0, s.jsx)(M.hz4, {})
+                        : (0, s.jsx)(M.Xjb, {}),
                     }),
                   ],
                 }),
@@ -3114,7 +3118,7 @@
                                         "#EventEditor_ImportFromHTML_ConvertFinished",
                                       ),
                                     })
-                                  : (0, s.jsx)(M.t, {
+                                  : (0, s.jsx)(E.t, {
                                       size: "small",
                                       string: (0, y.we)("#Updating"),
                                     }),
@@ -3711,7 +3715,7 @@
                   ],
                 }),
               "started" == this.state.eBackfillState &&
-                (0, s.jsx)(M.t, {
+                (0, s.jsx)(E.t, {
                   size: "medium",
                   position: "center",
                   string: "Backfill In Progress",
@@ -3990,7 +3994,7 @@
           let l = s.join(",");
           r && (s.length > 0 && (l += ","), (l += r.ToModString()));
           const c = new FormData();
-          c.append("sessionid", o.TS.SESSIONID),
+          c.append("sessionid", (0, o.KC)()),
             c.append("clan_accountid", "" + t.GetAccountID()),
             c.append("gid_announcement", n),
             c.append("add_tags", l),
@@ -4002,7 +4006,7 @@
         async UpdatePartnerEventType(e, t, n, s) {
           const a = o.TS.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
             r = new FormData();
-          r.append("sessionid", o.TS.SESSIONID),
+          r.append("sessionid", (0, o.KC)()),
             r.append("clan_accountid", "" + t.GetAccountID()),
             r.append("gid_event", n),
             r.append("new_event_type", "" + s),
@@ -4017,7 +4021,7 @@
         we = n(91675),
         Ce = n(61311),
         be = n(14336);
-      function Ee(e) {
+      function Me(e) {
         const { accountID: t, locToken: n } = e,
           a = p.useMemo(() => _.b.InitFromAccountID(t), [t]),
           { data: r } = (0, be.js)(t);
@@ -4039,13 +4043,13 @@
           ),
         });
       }
-      function Me(e) {
+      function Ee(e) {
         const { modAction: t } = e,
           n =
             (0, y.TW)(t.m_rtWhen) +
             " @ " +
             (0, we.KC)(t.m_rtWhen, { bForce24HourClock: !1 }),
-          a = (0, s.jsx)(Ee, {
+          a = (0, s.jsx)(Me, {
             locToken: "#EventModTile_Moderator",
             accountID: t.m_moderator,
           });
@@ -4154,7 +4158,7 @@
                     const t = new ge();
                     return (
                       t.FromString(e),
-                      (0, s.jsx)(Me, { modAction: t }, n.GID + e)
+                      (0, s.jsx)(Ee, { modAction: t }, n.GID + e)
                     );
                   });
                 })(r),
@@ -4369,7 +4373,7 @@
               }),
               (0, s.jsx)(w.tH, { children: e }),
               this.state.bInfiniteScrollLoading &&
-                (0, s.jsx)(M.t, {
+                (0, s.jsx)(E.t, {
                   position: "center",
                   size: "medium",
                   string: (0, y.we)("#Loading"),
@@ -4582,7 +4586,7 @@
               className: (0, R.A)(ye().Button, Ie.Button, i),
               onClick: () => t(o),
               disabled: a,
-              children: [a && (0, s.jsx)(M.t, { size: "small" }), r],
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), r],
             })
           );
         }),
@@ -4600,7 +4604,7 @@
               className: (0, R.A)(ye().Button, Ie.Button),
               onClick: () => t(!r),
               disabled: a,
-              children: [a && (0, s.jsx)(M.t, { size: "small" }), i],
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), i],
             })
           );
         });
@@ -4619,7 +4623,7 @@
               className: (0, R.A)(ye().Button, Ie.Button),
               onClick: () => t(!r),
               disabled: a,
-              children: [a && (0, s.jsx)(M.t, { size: "small" }), i],
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), i],
             })
           : null;
       }
@@ -4809,7 +4813,7 @@
                               ),
                             }),
                           this.state.bLoadingEvent &&
-                            (0, s.jsx)(M.t, {
+                            (0, s.jsx)(E.t, {
                               size: "small",
                               string: (0, y.we)("#Loading"),
                             }),
@@ -5041,7 +5045,7 @@
                   ],
                 }),
               0 == this.state.nLocLanguages &&
-                (0, s.jsx)(M.t, {
+                (0, s.jsx)(E.t, {
                   size: "small",
                   string: (0, y.we)("#EventModTile_LoadingLocs"),
                 }),
@@ -5114,7 +5118,7 @@
           }, [e]),
           r)
         )
-          return (0, s.jsx)(M.t, {
+          return (0, s.jsx)(E.t, {
             size: "small",
             string: (0, y.we)("#EventModTile_AppInfoLoading"),
           });
@@ -5405,7 +5409,7 @@
                   className: Ie.CategoryChangeDialog,
                   children: [
                     (0, s.jsx)("br", {}),
-                    this.state.bUpdating && (0, s.jsx)(M.t, { size: "small" }),
+                    this.state.bUpdating && (0, s.jsx)(E.t, { size: "small" }),
                     this.state.strErrorMsg &&
                       (0, s.jsxs)("div", {
                         children: [
@@ -5528,7 +5532,7 @@
                     htmlFor: "Cute",
                     children: "Cute Tag",
                   }),
-                  this.state.bUpdating && (0, s.jsx)(M.t, { size: "small" }),
+                  this.state.bUpdating && (0, s.jsx)(E.t, { size: "small" }),
                   this.state.strErrorMsg &&
                     (0, s.jsxs)("div", {
                       children: [
@@ -5617,7 +5621,7 @@
             this.state.bLoadingApps ||
             this.state.bLoadingAssociatedDemoInfo
           )
-            return (0, s.jsx)(M.t, {
+            return (0, s.jsx)(E.t, {
               string:
                 (0, y.we)("#Loading") +
                 (this.state.bLoadingEvent

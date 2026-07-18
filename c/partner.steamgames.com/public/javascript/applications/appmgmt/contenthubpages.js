@@ -34,7 +34,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
+        "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
@@ -391,7 +391,7 @@
           } = _,
           _ = (function (_) {
             const {
-                variant: _ = "default",
+                variant: _ = "basic",
                 size: _ = "2",
                 radius: _,
                 focusable: _ = !0,
@@ -519,7 +519,8 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             checked: _,
@@ -527,7 +528,7 @@
             disabled: _,
             children: _,
             ref: _,
-            variant: _ = "default",
+            variant: _,
             color: _,
             align: _ = "center",
             ..._
@@ -536,7 +537,8 @@
           _ = _ ? _ : _,
           _ = () => {
             _ || (_ && __webpack_require__(!!_ || !_));
-          };
+          },
+          _ = (0, _._)("Checkbox", _);
         return (0, _.jsxs)(_._, {
           align: _,
           ref: _,
@@ -840,6 +842,7 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_, {}),
+            _ = (0, _._)("Select", _),
             _ = (0, _.jsx)(_, {
               afterContent: _,
               variant: _,

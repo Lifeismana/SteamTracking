@@ -125,17 +125,6 @@ function OpenFriendChat( steamid, accountid )
 	{
 				window.location = 'https://steamcommunity.com/chat/friend/' + steamid;
 	}
-	else if ( typeof ClientConnectionAPI !== 'undefined' )
-	{
-		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
-			if ( !result.success )
-			{
-				PromptContinueToWebChat( result, function() {
-					OpenFriendChatInWebChat( steamid, accountid );
-				}, 'steam://friends/message/' + steamid );
-			}
-		});
-	}
 	else
 	{
 		OpenFriendChatInWebChat( steamid, accountid );
@@ -157,32 +146,10 @@ function OpenGroupChat( steamid )
 	{
 				window.location = 'https://steamcommunity.com/chat/group/' + steamid;
 	}
-	else if ( !Steam.BIsUserInClientOrOverlay() && typeof ClientConnectionAPI !== 'undefined' )
-	{
-		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
-			if ( !result.success )
-			{
-				PromptContinueToWebChat( result, function() {
-					LaunchWebChat( null, {command: 'ShowFriendChatDialog', steamid: steamid} );
-				}, 'steam://friends/joinchat/' + steamid );
-			}
-		});
-	}
 	else
 	{
 		window.location = 'steam://friends/joinchat/' + steamid;
 	}
-}
-
-function PromptContinueToWebChat( result, fnLaunchWebchat, steamURL )
-{
-	ShowConfirmDialog( 'Got Steam?', 'We couldn\'t find Steam running on your machine.  Would you like to launch web chat?',
-		'Use web chat' , null, 'Get Steam' ).done( function( choice ) {
-			if ( choice == 'OK' )
-				fnLaunchWebchat();
-			else
-				window.location = 'https://store.steampowered.com/about/'
-	});
 }
 
 
@@ -1738,7 +1705,7 @@ function CScrollOffsetWatcher( el, fnCallback, nBufferHeight )
 	if ( !CScrollOffsetWatcher.sm_WatchersMap.has( this.m_$Element ) )
 	{
 		this.observer = new IntersectionObserver( this.fnCallback.bind( this ), {
-			rootMargin: '-' + this.nBufferHeight + 'px 0px 0px 0px',
+			rootMargin: this.nBufferHeight + 'px 0px ' + this.nBufferHeight + 'px 0px',
 			threshold: 0
 		});
 

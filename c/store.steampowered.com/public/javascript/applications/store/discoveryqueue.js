@@ -1872,6 +1872,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1884,38 +1886,50 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!_),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(Date.now()),
           _ = _.useCallback(
             (_) => {
-              _ || _(_);
+              _(_), _ || _(_);
             },
             [_],
-          );
-        return (0, _.jsx)(_._, {
-          trigger: "repeated",
-          onVisibilityChange: _,
-          children: (0, _.jsxs)(_._, {
-            focusable: !0,
-            onGamepadFocus: () => _(!0),
-            onMouseEnter: () => _ && _(!0),
-            onGamepadBlur: () => _(!1),
-            onMouseLeave: () => _ && _(!1),
-            onActivate: _,
-            onOKActionDescription: (0, _._)("#DiscoveryQueue_OpenWizard"),
-            className: (0, _._)(
-              _.DiscoveryQueueWidgetCtn,
-              _,
-              void 0 !== _ && _.Initialized,
-            ),
-            ..._,
-            children: [
-              (0, _.jsx)(_, {
-                rgAppIDs: _,
-                bAnimationEnabled: !_ && _,
-              }),
-              _,
-            ],
-          }),
-        });
+          ),
+          _ = _.useCallback(() => {
+            (_.current = Date.now()), !_ && _ && _(!0);
+          }, [_, _]);
+        return (
+          (0, _._)(() => {
+            Date.now() - _.current > 3e4 && !_ && _(!1);
+          }, 5e3),
+          (0, _._)(window, "scroll", _),
+          (0, _._)(window, "mousemove", _),
+          (0, _.jsx)(_._, {
+            trigger: "repeated",
+            onVisibilityChange: _,
+            children: (0, _.jsxs)(_._, {
+              focusable: !0,
+              onGamepadFocus: () => _(!0),
+              onMouseEnter: () => _ && _(!0),
+              onGamepadBlur: () => _(!1),
+              onMouseLeave: () => _ && _(!1),
+              onActivate: _,
+              onOKActionDescription: (0, _._)("#DiscoveryQueue_OpenWizard"),
+              className: (0, _._)(
+                _.DiscoveryQueueWidgetCtn,
+                _,
+                void 0 !== _ && _.Initialized,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)(_, {
+                  rgAppIDs: _,
+                  bAnimationEnabled: !_ && _,
+                }),
+                _,
+              ],
+            }),
+          })
+        );
       }
       let _;
       function _(_) {
@@ -1928,13 +1942,11 @@
         return (
           _.useEffect(() => {
             if (!_ || !_) return;
-            let _;
             _ || (_ = performance.now());
+            const _ = _.offsetWidth;
+            let _;
             const _ = () => {
-              const _ =
-                (((performance.now() - _) / 40) %
-                  (_.offsetWidth - 3 * _ - 16)) +
-                _;
+              const _ = (((performance.now() - _) / 40) % (_ - 3 * _ - 16)) + _;
               (_.style.transform = `translateX( -${_}px )`),
                 (_ = requestAnimationFrame(_));
             };

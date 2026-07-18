@@ -3015,7 +3015,9 @@
                   mutationKey: ["fetch_faq_translation", _],
                   mutationFn: async (_) => {
                     const _ = _._.Init(_._);
-                    _.Body().set_faq_id(_), _.Body().set_language(_);
+                    _.Body().set_faq_id(_),
+                      _.Body().set_language(_),
+                      _.Body().set_steamid(_._.CLANSTEAMID);
                     return (
                       await _._.FetchLocalizationFromCrowdIn(_, _)
                     ).GetEResult();
@@ -3035,7 +3037,8 @@
                   },
                 });
               })(_._.CLANSTEAMID, _.GetFAQID())),
-            [_, _] = (0, _.useState)(_.xPp);
+            [_, _] = (0, _.useState)(_.xPp),
+            [_, _] = (0, _.useState)(!1);
           let _ = "";
           return (
             _.isSuccess &&

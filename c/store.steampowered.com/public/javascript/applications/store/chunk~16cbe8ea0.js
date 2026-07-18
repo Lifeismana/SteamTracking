@@ -1794,7 +1794,7 @@
             return this.m_mapSourceEventGIDToPostedClans.get(_);
           const _ = _._.STORE_BASE_URL + "events/ajaxgetrepostedevent",
             _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               source_clan_accountid: _.GetAccountID(),
               source_event_gid: _,
             };
@@ -1830,7 +1830,7 @@
         async RepostEvent(_, _, _, _, _) {
           const _ = _._.STORE_BASE_URL + "events/ajaxrepostevent",
             _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("source_clan_accountid", "" + _.GetAccountID()),
             _.append("source_event_gid", "" + _),
             _.append(
@@ -2879,7 +2879,7 @@
             return;
           const _ = _._.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
             _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("categoryid", _.toString()),
             _.append("appid", _.toString());
           try {

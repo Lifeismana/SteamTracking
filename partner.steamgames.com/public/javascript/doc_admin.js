@@ -109,8 +109,10 @@ function updateArticleSummary( articleSummary ) {
 			$betaVersions.append( $row );
 			rgAllLanguages.push( version[ 'language' ] );
 		}
-		$J( '#articleSummaryPublishAll' ).click( function() {
+		$J( '#articleSummaryPublishAll' ).unbind( 'click' ).click( function() {
 			articleSummaryAjax( 'publish', { 'languages': rgAllLanguages.join( ',' ) } );
+			if ( rgAllLanguages.length > 1 )
+				$J( '#articleSummaryLocalizeDraft' ).prop( 'checked', false );
 			return false;
 		});
 	}

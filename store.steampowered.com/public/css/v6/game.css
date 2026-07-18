@@ -243,7 +243,7 @@ body.v6 .game_area_purchase h2.package_group {
 
 .highlight_overflow {
 	overflow: hidden;
-	margin-right: 16px;
+	margin-inline-end: 16px;
 	position: relative;
 }
 
@@ -749,8 +749,7 @@ img.game_header_image_full {
 .game_area_offsite_purchase {
 	position: relative;
 
-    background: -webkit-linear-gradient( 150deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
-	background: linear-gradient( -60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
+    background: linear-gradient( -60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
 
     border-radius: 4px;
 
@@ -766,10 +765,17 @@ img.game_header_image_full {
 	margin-bottom: 28px;
 }
 
+.game_area_purchase_game:dir(rtl),
+.game_area_offsite_purchase:dir(rtl) {
+    background: linear-gradient( 60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
+}
+
 .game_area_purchase_game.pt_active {
-    background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 138, 27, 0.6) 95%);
-	background: linear-gradient( 60deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 138, 27, 0.6) 95%);
+    background: linear-gradient( 60deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 138, 27, 0.6) 95%);
     color: #d0e3ba;
+}
+.game_area_purchase_game.pt_active:dir(rtl) {
+    background: linear-gradient( -60deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 138, 27, 0.6) 95%);
 }
 
 .game_area_purchase_game.game_area_purchase_game_dropdown_subscription {
@@ -783,17 +789,16 @@ img.game_header_image_full {
 }
 
 .game_area_purchase_game.free_weekend {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#acdbf5+0,ffffff+100&0.5+0,0.5+100 */
-	background: -moz-linear-gradient(-45deg,  rgba(172,219,245,0.5) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg,  rgba(172,219,245,0.5) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg,  rgba(172,219,245,0.5) 0%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80acdbf5', endColorstr='#80ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: linear-gradient(135deg,  rgba(172,219,245,0.5) 0%,rgba(255,255,255,0.5) 100%);
 
 	color: #eeeeee;
 
 	margin-bottom: 50px;
 
 	box-shadow: 0 0 8px 0 rgba( 0, 0, 0, 0.5 );
+}
+.game_area_purchase_game.free_weekend:dir(rtl) {
+	background: linear-gradient(-135deg,  rgba(172,219,245,0.5) 0%,rgba(255,255,255,0.5) 100%);
 }
 
 .game_area_purchase_game.demo_above_purchase {
@@ -830,21 +835,20 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	height: 40px;
 	position: absolute;
 	bottom: -17px;
-	left: 16px;
+	inset-inline-start: 16px;
 }
 
 .game_area_purchase_game_dropdown_left_panel div.discount_pct
 {
-	float: left;
+	float: inline-start;
 	position: relative;
 	height: 32px;
 	min-width: 69px;
 	text-align: center;
 	line-height: 34px;
 	font-size: 18px;
-	margin-left: 3px;
-	padding-left: 10px;
-	padding-right: 10px;
+	margin-inline-start: 3px;
+	padding-inline: 10px;
 }
 
 .game_area_purchase_game_dropdown_right_panel
@@ -852,13 +856,13 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	height: 40px;
 	position: absolute;
 	bottom: -17px;
-	right: 16px;
+	inset-inline-end: 16px;
 }
 
 .game_area_purchase_game_dropdown_panel
 {
-	float: left;
-	margin-left: 3px;
+	float: inline-start;
+	margin-inline-start: 3px;
 }
 
 .game_area_purchase_game_dropdown_selection
@@ -867,10 +871,10 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 		font-weight: normal; /* normal */
 
 			cursor: pointer;
-	float: left;
+	float: inline-start;
 	position: relative;
 	height: 34px;
-	text-align: left;
+	text-align: start;
 	line-height: 34px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -889,7 +893,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	background-color: #546270;
 	border-radius: 3px;
 	margin-top: 0px;
-	margin-left: 0px;
+	margin-inline-start: 0px;
 	padding: 3px;
 	box-shadow: 0 0 10px #000;
 	box-sizing: border-box;
@@ -932,7 +936,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 {
 	border-top: 1px solid rgb(38,38,38);
 	border-bottom: 1px solid rgb(38,38,38);
-	border-left: 2px solid rgb(38,38,38);
+	border-inline-start: 2px solid rgb(38,38,38);
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -952,17 +956,17 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 {
 	border-top: 1px solid rgb(38,38,38);
 	border-bottom: 1px solid rgb(38,38,38);
-	border-right: 2px solid rgb(38,38,38);
+	border-inline-end: 2px solid rgb(38,38,38);
 	min-width: 50px;
     color: #a3ce08;
     font-weight: 600;
     font-size: 14px;
-	padding-right: 8px;
+	padding-inline-end: 8px;
 }
 
 .game_area_purchase_game_dropdown_right_panel .btn_addtocart
 {
-	float: right;
+	float: inline-end;
 }
 
 /* if the wrapper is used instead, let the wrapper set margin-bottom instead of the game_area_purchase_game */
@@ -984,7 +988,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 		font-weight: 300; /* light */
 
 			font-size: 15px;
-	margin-left: 3px;
+	margin-inline-start: 3px;
 }
 .game_area_purchase_game_wrapper.bundle .bundleTag .bundleHelper,
 .game_area_purchase_game.bundle .bundleTag .bundleHelper{
@@ -996,7 +1000,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 .game_area_purchase_game_wrapper .purchase_type_header_wrapper {
 	display: flex;
 	position: relative;
-	margin-left: 16px;
+	margin-inline-start: 16px;
 	z-index: 2;
 	margin-bottom: -12px;
 }
@@ -1010,7 +1014,8 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	font-weight: 500;
 	line-height: normal;
 	letter-spacing: 0.6px;
-	padding: 1px 7px 1px 4px;
+	padding-block: 1px;
+	padding-inline: 4px 7px;
 	text-transform: uppercase;
 }
 
@@ -1023,7 +1028,8 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	font-weight: 500;
 	line-height: normal;
 	letter-spacing: 0.6px;
-	padding: 1px 7px 1px 6px;
+	padding-block: 1px;
+	padding-inline: 6px 7px;
 }
 
 .game_area_purchase_game_wrapper .advanced_access_start_desc {
@@ -1055,7 +1061,8 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	font-weight: 500;
 	line-height: normal;
 	letter-spacing: 0.6px;
-	padding: 1px 7px 1px 4px;
+	padding-block: 1px;
+	padding-inline: 4px 7px;
 	text-transform: uppercase;
 }
 
@@ -1069,7 +1076,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	font-weight: 500;
 	line-height: normal;
 	letter-spacing: 0.6px;
-	padding: 1px 7px 1px 6px;
+	padding-inline: 6px 7px;
 }
 
 .game_area_purchase_game_wrapper.bundle .game_area_purchase_game b {
@@ -1077,7 +1084,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 }
 
 .game_area_purchase_game .game_area_purchase_platform {
-	float: right;
+	float: inline-end;
 	display: flex;
 	flex-direction: row;
 	gap: 6px;
@@ -1115,7 +1122,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	background: rgba(0, 0, 0, 0.5);
 	padding: 6px;
 	display: block;
-	margin-left: -6px;
+	margin-inline-start: -6px;
 	line-height: 0;
 	position: relative;
 }
@@ -1157,7 +1164,7 @@ div.package_contents_capsule a {
 }
 
 .game_area_purchase_game div.package_contents_collapsed.package_contents_capsules div.package_contents_capsule:not(:first-child) {
-	margin-left: -34px;
+	margin-inline-start: -34px;
 }
 
 .game_area_purchase_game div.package_contents_collapsed.package_contents_capsules div.package_contents_capsule {
@@ -1187,7 +1194,7 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 
 .game_area_purchase_game p.package_contents a.package_contents_show_less {
 	color: #ffffff;
-	padding-left: 8px;
+	padding-inline-start: 8px;
 }
 
 .game_area_purchase_game p.package_contents .package_contents_show_more a {
@@ -1212,11 +1219,11 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 	left: 16px;
 /*	overflow-x: auto; */
 	white-space: nowrap;
-	text-align: right;
+	text-align: end;
 }
 
 .gameDlcBlocks #dlc_purchase_action {
-	float: right;
+	float: inline-end;
 }
 
 .game_purchase_action_bg {
@@ -1225,7 +1232,8 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 	display: inline-block;
 	/* background-color: rgba(0,0,0,0.5); */
 	background-color: #000000;
-	padding: 2px 2px 2px 0px;
+	padding-block: 2px;
+	padding-inline: 0px 2px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	white-space: nowrap;
@@ -1235,7 +1243,7 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 .game_purchase_action_bg > * {
 	font-size: 12px;
 	display: inline-block;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 	vertical-align: middle;
 }
 .game_purchase_action_bg > .discount_pct {
@@ -1255,7 +1263,8 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 	height: 32px;
 	display: inline-block;
 	background-color: #000000;
-	padding: 2px 2px 2px 0px;
+	padding-block: 2px;
+	padding-inline: 0px 2px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	white-space: nowrap;
@@ -1265,7 +1274,7 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 .game_purchase_action_qty > * {
 	font-size: 12px;
 	display: inline-block;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 	vertical-align: middle;
 }
 
@@ -1273,7 +1282,7 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 {
 	position: relative;
 	display: inline-block;
-	padding-right: 12px;
+	padding-inline-end: 12px;
 }
 
 .game_purchase_action_qty .quantity
@@ -1302,7 +1311,7 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 
 	position: absolute;
 	bottom: -22px;
-	left: 0px;
+	inset-inline-start: 0px;
 }
 
 .game_purchase_action .game_purchase_price {
@@ -1344,7 +1353,7 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 
 .game_purchase_price_history {
 	border-spacing: 1px 1px;
-    margin-right: 6px;
+    margin-inline-end: 6px;
     border-radius: 6px;
     overflow: hidden;
 }
@@ -1362,8 +1371,8 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 }
 
 .game_purchase_price_history td {
-    padding-left: 6px;
-    padding-right: 20px;
+    padding-inline-start: 6px;
+    padding-inline-end: 20px;
     background-color: #67788980;
 }
 
@@ -1410,9 +1419,12 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #acb5be;
-	text-align: right;
-	background: -webkit-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%);
+	text-align: end;
 	background: linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%);
+}
+.game_area_purchase_not_refundable:dir(rtl),
+.game_area_purchase_custom_cart_credit:dir(rtl)  {
+	background: linear-gradient( 60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%);
 }
 
 .game_area_purchase_custom_cart_credit {
@@ -1603,6 +1615,11 @@ a.package_contents_show_more_link, a.package_contents_show_less {
 
 	margin-bottom: 1px;
 }
+.game_description_column h2:dir(rtl), .recommendation_bodytext h2:dir(rtl) {
+	background-image: url( /public/images/v6/maincol_gradient_rule_rtl.png );
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
 
 body.v6 .game_description_column .game_page_autocollapse.sys_req h2 {
 	margin-bottom: 0px;
@@ -1639,6 +1656,11 @@ body.v6 .game_description_column h2.gradientbg {
     background-image: url('/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: bottom left;
+}
+.game_description_column .block .block_header h4:dir(rtl) {
+	background-image: url( /public/images/v6/maincol_gradient_rule_rtl.png );
+	background-repeat: no-repeat;
+	background-position: bottom right;
 }
 .game_description_column .block .block_header h4 .subh4 {
     color: #8f98a0;
@@ -2567,7 +2589,7 @@ a.friend_block_holder:hover {
 		padding: 12px;
 	}
 	html.responsive .rightcol.game_meta_data .block.recommendation_reasons {
-		padding-left: 30px;
+		padding-inline-start: 30px;
 	}
 	html.responsive .referring_curator {
 		flex-direction: column;
@@ -2772,15 +2794,15 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 
 .game_area_wishlist_btn img, .btnv6_blue_hoverfade.queue_btn_active img {
     vertical-align: middle;
-    margin-left: -6px;
+    margin-inline-start: -6px;
     margin-top: -2px;
-    margin-right: 3px;
+    margin-inline-end: 3px;
 }
 .game_area_wishlist_btn.right img {
     vertical-align: middle;
-    margin-left: 4px;
+    margin-inline-start: 4px;
     margin-top: -1px;
-    margin-right: -6px;
+    margin-inline-end: -6px;
 }
 
 .wishlist_area_success_text {
@@ -2847,15 +2869,16 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	color: #556772;
 	line-height: 18px;
 	z-index: 35;
-	left: 0px;
+	inset-inline-start: 0px;
 	margin-top: -4px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
 }
 .queue_btn_menu:hover .queue_menu_flyout,
 .queue_menu_flyout:hover,
+.queue_menu_flyout.force_expand,
 [aria-expanded=true] ~ .queue_menu_flyout {
 	display: block;
-    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
 .queue_menu_flyout_content {
 	position: relative;
@@ -2875,7 +2898,7 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 }
 
 .queue_menu_option_label {
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 .queue_menu_option_label > .option_title {
 	color: #fff;
@@ -3153,7 +3176,8 @@ img.package_header {
 	position: relative;
 	width: 157px;
 	height: 50px;
-	padding: 1px 0 1px 1px;
+	padding-block: 1px;
+	padding-inline: 1px 0;
 	box-sizing: border-box;
 	cursor: pointer;
 	display: flex;
@@ -3163,7 +3187,7 @@ img.package_header {
 }
 
 .btn_next_in_queue:after {
-	left: 100%;
+	inset-inline-start: 100%;
 	top: 0;
 	border: solid transparent;
 	content: "";
@@ -3175,6 +3199,9 @@ img.package_header {
 	border-left-color: #90763F;
 	border-width: 25px;
 	margin-top: 0;
+}
+.btn_next_in_queue:dir(rtl):after {
+	transform: scaleX(-1);
 }
 
 .btn_next_in_queue:hover:after {
@@ -3194,9 +3221,15 @@ img.package_header {
 	padding-left: 10px;
 	background: linear-gradient( to right, #746542, #90763F);
 }
+.next_in_queue_content:dir(rtl) {
+	background: linear-gradient( to left, #746542, #90763F);
+}
 
 .btn_next_in_queue:hover .next_in_queue_content {
 	background: linear-gradient( to right, #A38855, #EFC266);
+}
+.btn_next_in_queue:hover .next_in_queue_content:dir(rtl) {
+	background: linear-gradient( to left, #A38855, #EFC266);
 }
 
 
@@ -3380,9 +3413,12 @@ img.package_header {
 	justify-content: center;
 	color: #ffcc6a;
 	font-size: 12px;
-	padding: 6px 225px 6px 16px;
-	background: -webkit-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);
-	background: linear-gradient( to right, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);
+	padding-block: 6px;
+	padding-inline: 16px 225px;
+	background: linear-gradient(to right, rgba(196, 158, 82, 0.6) 0%, rgba(196, 158, 82, 0.0) 60%);
+}
+.queue_controls_description:dir(rtl) {
+	background: linear-gradient(to left, rgba(196, 158, 82, 0.6) 0%, rgba(196, 158, 82, 0.0) 60%);
 }
 
 .queue_ctn .queue_settings_link_ctn.queue_reason_description {
@@ -6179,7 +6215,7 @@ body.v6 .agegate_wizard .subtitle a {
 }
 
 .rightcol.game_meta_data .block.recommendation_reasons {
-	padding-left: 28px;
+	padding-inline-start: 28px;
 }
 
 .rightcol.game_meta_data .block.recommendation_noinfo {
@@ -6249,7 +6285,7 @@ p.reason {
 
 p.reason.for:before {
 	content: ' ';
-	margin-left: -20px;
+	margin-inline-start: -20px;
 	position: absolute;
 	display: inline-block;
 	vertical-align: top;
@@ -6261,7 +6297,7 @@ p.reason.for:before {
 
 p.reason.against:before {
 	content: ' ';
-	margin-left: -20px;
+	margin-inline-start: -20px;
 	position: absolute;
 	display: inline-block;
 	vertical-align: top;
@@ -6273,7 +6309,7 @@ p.reason.against:before {
 
 p.reason.info:before {
 	content: ' ';
-	margin-left: -20px;
+	margin-inline-start: -20px;
 	position: absolute;
 	display: inline-block;
 	vertical-align: top;
@@ -6792,6 +6828,11 @@ a.open_in_steam_body:hover {
     background-repeat: no-repeat;
     background-position: bottom left;
 	padding-bottom: 4px;
+}
+.game_purchase_options_editions_header:dir(rtl) {
+	background-image: url( /public/images/v6/maincol_gradient_rule_rtl.png );
+	background-repeat: no-repeat;
+	background-position: bottom right;
 }
 
 .game_purchase_options_editions_header_title {

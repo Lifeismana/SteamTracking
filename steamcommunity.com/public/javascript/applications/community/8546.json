@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Este anuncio ya no está disponible ",
     "Listing_NotAvailable_Short": "No disponible",
     "Listing_NotAvailable_Long": "Este anuncio ya no está disponible para su compra.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Mis anuncios)",
     "BuyOrderDialog_Header": "Comprar - %1$s",
     "BuyOrderDialog_Header_NoItem": "Realizar pedido de compra",
     "BuyOrderDialog_BucketPicker_Label": "¿Qué tipo de artículo te gustaría comprar?",

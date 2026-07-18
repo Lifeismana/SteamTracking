@@ -59,19 +59,19 @@
         v = n(68797),
         T = n(78327),
         L = n(58962);
-      function E(e, t, n) {
+      function C(e, t, n) {
         const i = e && e.length > n ? [...e] : (0, j.$Y)(e || [], n + 1, "");
         return (i[n] = t), i;
       }
-      function C(e, t) {
+      function E(e, t) {
         return (e && e.length > t && e[t]) || "";
       }
       function D(e, t) {
         let n = !1,
           i = !1;
         for (let a = l.Bhc; a < l.bP9; a++) {
-          const s = C(e, a).trim(),
-            r = C(t, a).trim();
+          const s = E(e, a).trim(),
+            r = E(t, a).trim();
           if (!s && !r) continue;
           const o = (0, N.we)("#Language_" + (0, l.LgB)(a));
           if (((n = !0), !s))
@@ -133,7 +133,7 @@
           [P, j] = r.useState(null);
         if (!G.Get().BShouldShowPatchNotesEditor()) return null;
         const w = (e) => n(e),
-          b = (e) => Boolean(C(a, e) || C(g, e)),
+          b = (e) => Boolean(E(a, e) || E(g, e)),
           I = G.Get().BCanSubmitSteamChinaPatchNotes()
             ? [d.TU.k_ESteamRealmChina, d.TU.k_ESteamRealmGlobal]
             : [d.TU.k_ESteamRealmGlobal],
@@ -189,10 +189,10 @@
                         realms: I,
                         fnHasLanguage: b,
                         fnSetLanguage: w,
-                        fnGetTitle: (e) => C(a, e),
-                        fnSetTitle: (e, t) => h(E(a, t, e)),
-                        fnGetDescription: (e) => C(g, e),
-                        fnSetDescription: (e, t) => _(E(g, t, e)),
+                        fnGetTitle: (e) => E(a, e),
+                        fnSetTitle: (e, t) => h(C(a, t, e)),
+                        fnGetDescription: (e) => E(g, e),
+                        fnSetDescription: (e, t) => _(C(g, t, e)),
                         fnOnPreviewEvent: () =>
                           B(
                             (function (e, t) {
@@ -204,8 +204,8 @@
                                 (n.createTime = Date.now() / 1e3),
                                 (n.type = l.Fwr);
                               for (let i = l.Bhc; i < l.bP9; i++)
-                                n.name.set(i, C(e, i)),
-                                  n.description.set(i, C(t, i));
+                                n.name.set(i, E(e, i)),
+                                  n.description.set(i, E(t, i));
                               return n;
                             })(a, g),
                           ),
@@ -217,8 +217,8 @@
                             const t = e.GetLocalization("Title", a) || "",
                               r = e.GetLocalization("Description", a) || "";
                             (t || r) && n.push(a),
-                              t && (i = E(i, t, a)),
-                              r && (s = E(s, r, a));
+                              t && (i = C(i, t, a)),
+                              r && (s = C(s, r, a));
                           }
                           return h(i), _(s), n;
                         },
@@ -242,9 +242,9 @@
                   B(null), f("submitting");
                   const t = await (async function (e, t, n) {
                     if (D(t, n)) return null;
-                    const i = Boolean(C(t, l.ZLm).trim()),
+                    const i = Boolean(E(t, l.ZLm).trim()),
                       a = new FormData();
-                    a.append("sessionid", T.TS.SESSIONID),
+                    a.append("sessionid", (0, T.KC)()),
                       a.append("appid", "" + e),
                       a.append("post_steam_china", "" + i),
                       a.append("titles", JSON.stringify(t)),

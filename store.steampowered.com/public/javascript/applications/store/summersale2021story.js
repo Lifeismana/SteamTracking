@@ -48,7 +48,7 @@
       "use strict";
       t.d(r, {
         E4: () => O,
-        PB: () => T,
+        PB: () => A,
         PU: () => B,
         VZ: () => N,
         _l: () => g,
@@ -135,7 +135,7 @@
           const m = new FormData();
           m.append("genre", e.toString()),
             m.append("choice", r.toString()),
-            m.append("sessionid", c.TS.SESSIONID);
+            m.append("sessionid", (0, c.KC)());
           let o = null;
           try {
             const s = await _().post(
@@ -418,7 +418,7 @@
           strGenreName: "#Summer21_Story_Anime_Genre",
         },
       ];
-      function T() {
+      function A() {
         a.useEffect(() => {
           const e = document.createElement("link");
           (e.rel = "stylesheet"),

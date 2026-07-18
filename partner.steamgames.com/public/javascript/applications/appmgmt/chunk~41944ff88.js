@@ -851,10 +851,11 @@
             ("onClick" in e.props && e.props.onClick && (m.onOKButton = a._K));
         const { ref: l, node: _ } = (0, a.qp)(c);
         (0, n.Ui)(m, l);
-        const d = (0, o.Ue)(l, e.props?.ref);
+        const d = (0, a.BT)(_),
+          u = (0, o.Ue)(l, e.props?.ref, d);
         return (0, p.jsx)(a.TJ.Provider, {
           value: _,
-          children: t.cloneElement(e, { ...e.props, ref: d }),
+          children: t.cloneElement(e, { ...e.props, ref: u }),
         });
       }
     },

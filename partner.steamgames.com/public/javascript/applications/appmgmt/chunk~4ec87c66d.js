@@ -5599,7 +5599,7 @@
     },
     5917: (e, t, n) => {
       "use strict";
-      n.d(t, { JK: () => u, wI: () => p });
+      n.d(t, { JK: () => m, wI: () => u });
       var s,
         a = n(22837),
         i = n(37085),
@@ -5607,7 +5607,8 @@
         o = n.n(r),
         l = n(51614),
         c = n(68797),
-        d = n(30470);
+        d = n(30470),
+        p = n(78327);
       !(function (e) {
         (e.k_AppTypeGame = "Game"),
           (e.k_AppTypeApplication = "Application"),
@@ -5625,13 +5626,13 @@
           (e.k_AppTypeMovie = "Movie"),
           (e.k_AppTypeAdvertising = "Advertising");
       })(s || (s = {}));
-      const p = d.TS.EUNIVERSE == a.Rv ? 12 : 504;
-      function u(e, t = p, n = !0) {
+      const u = d.TS.EUNIVERSE == a.Rv ? 12 : 504;
+      function m(e, t = u, n = !0) {
         const a = (0, l.n)({
           mutationFn: async (e) => {
             const t = `${d.TS.PARTNER_BASE_URL}apps/ajaxcreatenewapp/`,
               n = new FormData();
-            n.append("sessionid", d.TS.SESSIONID),
+            n.append("sessionid", (0, p.KC)()),
               n.append("name", e.name),
               n.append("type", e.type),
               n.append("range", "" + (e.range || 10)),
@@ -5723,7 +5724,7 @@
                             for (; r.length > 0; ) {
                               const t = new FormData(),
                                 s = r.splice(0, 250);
-                              t.append("sessionid", p.TS.SESSIONID),
+                              t.append("sessionid", (0, p.KC)()),
                                 t.append("rgAppIDs", s.join(",")),
                                 t.append(
                                   "bExcludeExpired",
@@ -5868,7 +5869,7 @@
                     for (; r.length > 0; ) {
                       const t = r.splice(0, 100),
                         s = new FormData();
-                      s.append("sessionid", p.TS.SESSIONID),
+                      s.append("sessionid", (0, p.KC)()),
                         s.append("rgBundleIDs", t.join(",")),
                         s.append(
                           "bExcludeExpired",
@@ -7159,7 +7160,7 @@
         async Save(e) {
           let t = S.TS.PARTNER_BASE_URL + "optin/ajaxadminupdate";
           const n = new FormData();
-          n.append("sessionid", S.TS.SESSIONID),
+          n.append("sessionid", (0, S.KC)()),
             n.append("pageid", this.m_model.pageid),
             n.append("jsondata", JSON.stringify(this.m_model));
           try {
@@ -7203,7 +7204,7 @@
         async Delete(e) {
           let t = S.TS.PARTNER_BASE_URL + "optin/ajaxadmindelete";
           const n = new FormData();
-          n.append("sessionid", S.TS.SESSIONID),
+          n.append("sessionid", (0, S.KC)()),
             n.append("pageid", this.m_model.pageid);
           try {
             let s = await i().post(t, n, {
@@ -7443,7 +7444,7 @@
           if (!this.m_model) return null;
           let t = S.TS.PARTNER_BASE_URL + "optin/ajaxrefreshoptinstats";
           const n = new FormData();
-          n.append("sessionid", S.TS.SESSIONID),
+          n.append("sessionid", (0, S.KC)()),
             n.append("pageids", this.m_model.pageid);
           try {
             let s = await i().post(t, n, {
@@ -8295,7 +8296,7 @@
           let t = null;
           try {
             const n = `${d.TS.PARTNER_BASE_URL}optin/ajaxadmingetdefandstats`,
-              s = { pageid: e, sessionid: d.TS.SESSIONID },
+              s = { pageid: e, sessionid: (0, d.KC)() },
               a = await i().get(n, { params: s });
             if (200 == a?.status && a.data?.def && a.data.stats)
               return (
@@ -8323,7 +8324,7 @@
               .toLowerCase()
               .replace(/^sale_/, ""),
             a = new FormData();
-          a.append("sessionid", d.TS.SESSIONID),
+          a.append("sessionid", (0, d.KC)()),
             a.append("action", "createsale"),
             a.append("id", s),
             a.append("is_optin", "true");
@@ -8758,7 +8759,7 @@
     },
     1305: (e, t, n) => {
       "use strict";
-      n.d(t, { Bx: () => v, S0: () => g, TR: () => S, f1: () => _ });
+      n.d(t, { Bx: () => x, S0: () => S, TR: () => v, f1: () => g });
       var s = n(34629),
         a = n(37085),
         i = n(41735),
@@ -8769,8 +8770,9 @@
         d = n(6419),
         p = n(6144),
         u = n(73745),
-        m = n(30470);
-      class h {
+        m = n(78327),
+        h = n(30470);
+      class _ {
         m_mapCluster = new Map();
         m_mapChangeCallbacks = new Map();
         m_mapClusterLoaders = new Map();
@@ -8800,11 +8802,11 @@
         async InternalLoadCluster(e, t) {
           let n = null;
           try {
-            const s = m.TS.PARTNER_BASE_URL + "cluster/ajaxloadcluster",
+            const s = h.TS.PARTNER_BASE_URL + "cluster/ajaxloadcluster",
               i = {
                 clustertype: (0, o.gw)(e),
                 clusterid: t,
-                sessionid: m.TS.SESSIONID,
+                sessionid: (0, m.KC)(),
               },
               l = await r().get(s, { params: i });
             if (200 == l?.status && l.data?.success == a.R && l.data.cluster)
@@ -8830,12 +8832,12 @@
           const s = t.id;
           let i = null;
           try {
-            const l = m.TS.PARTNER_BASE_URL + "cluster/ajaxsaveclusterassets",
+            const l = h.TS.PARTNER_BASE_URL + "cluster/ajaxsaveclusterassets",
               d = new FormData();
             d.append("clustertype", (0, o.gw)(e)),
               d.append("clusterid", s),
               d.append("clusterdata", JSON.stringify(t)),
-              d.append("sessionid", m.TS.SESSIONID),
+              d.append("sessionid", (0, m.KC)()),
               n && d.append("additional_params", JSON.stringify(n));
             const p = await r().post(l, d);
             if (200 == p?.status && p.data?.success == a.R && p.data.cluster)
@@ -8860,12 +8862,12 @@
         static s_Singleton;
         static Get() {
           return (
-            h.s_Singleton ||
-              ((h.s_Singleton = new h()),
-              h.s_Singleton.Init(),
-              "dev" == m.TS.WEB_UNIVERSE &&
-                (window.g_ClusterStore = h.s_Singleton)),
-            h.s_Singleton
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == h.TS.WEB_UNIVERSE &&
+                (window.g_ClusterStore = _.s_Singleton)),
+            _.s_Singleton
           );
         }
         constructor() {}
@@ -8875,27 +8877,27 @@
           this.m_mapCluster.set(s, n);
         }
       }
-      function _(e, t) {
-        return h.Get().GetKey(e, t);
-      }
       function g(e, t) {
-        return h.Get().GetClusterByID(e, t);
+        return _.Get().GetKey(e, t);
       }
       function S(e, t) {
-        const [n, s] = (0, l.useState)(() => h.Get().GetClusterByID(e, t));
+        return _.Get().GetClusterByID(e, t);
+      }
+      function v(e, t) {
+        const [n, s] = (0, l.useState)(() => _.Get().GetClusterByID(e, t));
         return (
           (0, l.useEffect)(() => {
-            e && t && n?.id != t && h.Get().LoadCluster(e, t).then(s);
+            e && t && n?.id != t && _.Get().LoadCluster(e, t).then(s);
           }, [n, e, t]),
-          (0, u.hL)(h.Get().GetCallbackForClusterByID(e, t), s),
+          (0, u.hL)(_.Get().GetCallbackForClusterByID(e, t), s),
           n
         );
       }
-      function v() {
-        return { fnSaveClusterAssets: h.Get().SaveClusterAssets };
+      function x() {
+        return { fnSaveClusterAssets: _.Get().SaveClusterAssets };
       }
-      (0, s.Cg)([d.o], h.prototype, "LoadCluster", null),
-        (0, s.Cg)([d.o], h.prototype, "SaveClusterAssets", null);
+      (0, s.Cg)([d.o], _.prototype, "LoadCluster", null),
+        (0, s.Cg)([d.o], _.prototype, "SaveClusterAssets", null);
     },
     11542: (e, t, n) => {
       "use strict";
@@ -10991,7 +10993,7 @@
           try {
             const n = {
                 partnerid: e,
-                sessionid: d.TS.SESSIONID,
+                sessionid: (0, d.KC)(),
                 bIncludeManagePricingRights: !0,
               },
               s =
@@ -11998,7 +12000,7 @@
           let h = null;
           try {
             const e = new FormData();
-            e.append("sessionid", v.TS.SESSIONID),
+            e.append("sessionid", (0, v.KC)()),
               s.appid && e.append("nAppID", "" + s.appid),
               s.packageid && e.append("nPackageID", "" + s.packageid),
               s.bundleid && e.append("nBundleID", "" + s.bundleid),
@@ -14366,7 +14368,7 @@
           try {
             const n = new FormData();
             n.append("rgAppIDs", e.join(",")),
-              n.append("sessionid", l.TS.SESSIONID);
+              n.append("sessionid", (0, l.KC)());
             const s = l.TS.PARTNER_BASE_URL + "sales/ajaxgetsalerank",
               a = await i().post(s, n, { withCredentials: !0 });
             if (200 == a?.status && a.data?.success == r.R && a.data.apps)
@@ -14431,15 +14433,16 @@
     },
     58097: (e, t, n) => {
       "use strict";
-      n.d(t, { JK: () => p, cw: () => d, qX: () => u });
+      n.d(t, { JK: () => u, cw: () => p, qX: () => m });
       var s = n(41735),
         a = n.n(s),
         i = n(1814),
         r = n(90626),
         o = n(20194),
         l = n(44165),
-        c = n(30470);
-      function d() {
+        c = n(30470),
+        d = n(78327);
+      function p() {
         const {
           data: e,
           isLoading: t,
@@ -14447,7 +14450,7 @@
         } = (0, o.I)({
           queryKey: ["useTopSalesRankGamesData"],
           queryFn: async () => {
-            const e = { sessionid: c.TS.SESSIONID },
+            const e = { sessionid: (0, d.KC)() },
               t = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetsalerankdashboard`,
               n = await a().get(t, { params: e });
             return 200 == n.status && n.data?.top_apps?.length > 0
@@ -14457,7 +14460,7 @@
         });
         return t || n ? null : e;
       }
-      function p(e, t) {
+      function u(e, t) {
         const [n, s] = (0, r.useState)(null);
         return (
           (0, r.useEffect)(() => {
@@ -14469,7 +14472,7 @@
           n
         );
       }
-      function u(e, t, n) {
+      function m(e, t, n) {
         const [s, a] = (0, r.useState)(null),
           o = (0, l.f1)();
         return (
@@ -14621,7 +14624,7 @@
             const n =
                 p.TS.PARTNER_BASE_URL +
                 "promotion/spotlights/ajaxloadspotlight",
-              s = { spotlightid: e, sessionid: p.TS.SESSIONID },
+              s = { spotlightid: e, sessionid: (0, p.KC)() },
               a = await i().get(n, { params: s });
             if (200 == a?.status && a.data?.success == o.R && a.data.spotlight)
               return (
@@ -14652,7 +14655,7 @@
                 p.TS.PARTNER_BASE_URL +
                 "promotion/spotlights/ajaxcreatenewspotlight",
               s = new FormData();
-            s.append("sessionid", p.TS.SESSIONID),
+            s.append("sessionid", (0, p.KC)()),
               s.append("spotlight", JSON.stringify(e));
             const a = e.association;
             a?.appid && "application" == e.association_type
@@ -14749,7 +14752,7 @@
     },
     35700: (e, t, n) => {
       "use strict";
-      n.d(t, { O: () => u });
+      n.d(t, { O: () => m });
       var s = n(34629),
         a = n(41735),
         i = n.n(a),
@@ -14757,49 +14760,50 @@
         o = n(37085),
         l = n(68797),
         c = n(6419),
-        d = n(30470);
-      class p {
-        async CreateCluster(e, t, n, s, a, c, p) {
-          const u = `${d.TS.PARTNER_BASE_URL}cluster/ajaxcreatecluster`,
-            m = new FormData();
-          m.append("sessionid", d.TS.SESSIONID),
-            m.append("pageid", (0, r.gw)(e)),
-            m.append("name", t),
-            m.append("layout", (0, r.J4)(e)),
-            n && m.append("rtStartTime", "" + n),
-            s && m.append("rtEndTime", "" + s),
-            a && m.append("targetURL", a),
+        d = n(30470),
+        p = n(78327);
+      class u {
+        async CreateCluster(e, t, n, s, a, c, u) {
+          const m = `${d.TS.PARTNER_BASE_URL}cluster/ajaxcreatecluster`,
+            h = new FormData();
+          h.append("sessionid", (0, p.KC)()),
+            h.append("pageid", (0, r.gw)(e)),
+            h.append("name", t),
+            h.append("layout", (0, r.J4)(e)),
+            n && h.append("rtStartTime", "" + n),
+            s && h.append("rtEndTime", "" + s),
+            a && h.append("targetURL", a),
             c &&
-              (m.append("storeItemID", "" + c),
-              m.append("storeItemType", "" + p));
-          let h = null;
+              (h.append("storeItemID", "" + c),
+              h.append("storeItemType", "" + u));
+          let _ = null;
           try {
-            const e = await i().post(u, m, { withCredentials: !0 });
+            const e = await i().post(m, h, { withCredentials: !0 });
             if (200 == e?.status && e.data?.success == o.R && e.data.clusterid)
               return e.data.clusterid;
-            h = { response: e };
+            _ = { response: e };
           } catch (e) {
-            h = e;
+            _ = e;
           }
-          const _ = (0, l.H)(h);
+          const g = (0, l.H)(_);
           return (
             console.error(
               "CTakeOverTakeUnderAdaptationStore.CreateCluster: failed",
-              _.strErrorMsg,
-              _,
+              g.strErrorMsg,
+              g,
             ),
             null
           );
         }
         static s_Singleton;
         static Get() {
-          return p.s_Singleton || (p.s_Singleton = new p()), p.s_Singleton;
+          return u.s_Singleton || (u.s_Singleton = new u()), u.s_Singleton;
         }
       }
-      function u() {
-        return { fnCreateCluster: p.Get().CreateCluster };
+      function m() {
+        return { fnCreateCluster: u.Get().CreateCluster };
       }
-      (0, s.Cg)([c.o], p.prototype, "CreateCluster", null);
+      (0, s.Cg)([c.o], u.prototype, "CreateCluster", null);
     },
     54965: (e, t, n) => {
       "use strict";
@@ -14832,7 +14836,7 @@
                         for (; r.length > 0; ) {
                           const t = new FormData(),
                             s = r.splice(0, 20);
-                          t.append("sessionid", l.TS.SESSIONID),
+                          t.append("sessionid", (0, l.KC)()),
                             t.append("strPromotionIDs", s.join(",")),
                             e.nPartnerID &&
                               t.append("publisherid", e.nPartnerID.toString()),
@@ -15062,7 +15066,7 @@
         async CreateSalePartnerEvent(e, t, n, s, a, o) {
           let u = i.TS.PARTNER_BASE_URL + "sales/ajaxcreatesalepartnerevent";
           const m = new FormData();
-          m.append("sessionid", i.TS.SESSIONID),
+          m.append("sessionid", (0, i.KC)()),
             m.append("clanAccountID", "" + e),
             m.append("eventName", t),
             m.append("vanity", n),
@@ -19715,6 +19719,13 @@
           }
           return t;
         }
+        if (e.row.original) {
+          let t = e.row.original;
+          if ("no_planned_discount" in t && !1 === t.no_planned_discount)
+            return (0, s.jsx)("span", {
+              children: "Possible Upcoming Discount",
+            });
+        }
         return null;
       }
     },
@@ -19899,7 +19910,7 @@
                 let a = null;
                 try {
                   const i = new FormData();
-                  i.append("sessionid", D.TS.SESSIONID),
+                  i.append("sessionid", (0, D.KC)()),
                     i.append(
                       n ? "strSourceOptInName" : "strOldOptInName",
                       e.pageid,
@@ -21680,7 +21691,7 @@
                 ),
                 C.nO
               );
-            o.append("sessionid", D.TS.SESSIONID),
+            o.append("sessionid", (0, D.KC)()),
               o.append("opt_in_name", e),
               t && o.append("appids", JSON.stringify(t)),
               o.append("add", n ? "1" : "0"),
@@ -21757,7 +21768,7 @@
         async componentDidMount() {
           const e = await I().get(
             D.TS.COMMUNITY_BASE_URL + "invites/ajaxgetall",
-            { params: { sessionid: D.TS.SESSIONID } },
+            { params: { sessionid: (0, D.KC)() } },
           );
           if (e && e.data && e.data.tokens) {
             const t = e.data.tokens.filter((e) => e.valid);
@@ -21768,7 +21779,7 @@
         }
         async OnCreateInviteLink() {
           const e = new FormData();
-          e.append("sessionid", D.TS.SESSIONID),
+          e.append("sessionid", (0, D.KC)()),
             e.append("steamid_user", D.iA.steamid),
             e.append("duration", (2592e3).toString());
           const t = await I().post(
@@ -21791,7 +21802,7 @@
         }
         async OnAddFriend(e) {
           const t = new FormData();
-          t.append("sessionID", D.TS.SESSIONID),
+          t.append("sessionID", (0, D.KC)()),
             t.append("steamid", e),
             t.append("accept_invite", "0");
           try {
@@ -21992,7 +22003,7 @@
         }
         async OnActionClick(e) {
           const t = new FormData();
-          t.append("sessionID", D.TS.SESSIONID),
+          t.append("sessionID", (0, D.KC)()),
             t.append("steamid", e),
             t.append("accept_invite", "0"),
             this.setState({ disable_send_invite: !0 });
@@ -24243,8 +24254,11 @@
           ],
         });
       }
-      var sn = n(6144);
-      class an {
+      var sn = n(66051),
+        an = n(32232),
+        rn = n.n(an),
+        on = n(6144);
+      class ln {
         m_mapAppToDemoAppID = new Map();
         m_mapPromises = new Map();
         m_mapLoadCallback = new Map();
@@ -24258,7 +24272,7 @@
           const n = this.ConvertToKey(e, t);
           return (
             this.m_mapLoadCallback.has(n) ||
-              this.m_mapLoadCallback.set(n, new sn.lu()),
+              this.m_mapLoadCallback.set(n, new on.lu()),
             this.m_mapLoadCallback.get(n)
           );
         }
@@ -24282,7 +24296,7 @@
           if (this.m_mapAppToDemoAppID.has(s))
             return this.m_mapAppToDemoAppID.get(s);
           try {
-            const a = { sessionid: D.TS.SESSIONID, optInName: e },
+            const a = { sessionid: (0, D.KC)(), optInName: e },
               i = D.TS.PARTNER_BASE_URL + "optin/ajaxgetoptinappwithdemoid",
               r = await I().get(i, { params: a, withCredentials: !0 });
             if (200 == r?.status && r?.data?.success == C.R)
@@ -24311,21 +24325,17 @@
         static s_Singleton;
         static Get() {
           return (
-            an.s_Singleton ||
-              ((an.s_Singleton = new an()),
+            ln.s_Singleton ||
+              ((ln.s_Singleton = new ln()),
               ("dev" != D.TS.WEB_UNIVERSE && "beta" != D.TS.WEB_UNIVERSE) ||
-                (window.g_OptInDemoAppStores = an.s_Singleton)),
-            an.s_Singleton
+                (window.g_OptInDemoAppStores = ln.s_Singleton)),
+            ln.s_Singleton
           );
         }
         constructor() {
           (0, U.Gn)(this);
         }
       }
-      (0, O.Cg)([U.sH], an.prototype, "m_mapAppToDemoAppID", void 0);
-      var rn = n(66051),
-        on = n(32232),
-        ln = n.n(on);
       function cn(e) {
         const { tableRef: t, mapAppToDiscountInfo: n, oAllStats: a } = e,
           i = r.Mt.Get(),
@@ -24341,38 +24351,41 @@
           [h, _] = (0, l.useState)(!1),
           [g, S] = (0, l.useState)(!1),
           [v, x] = (0, l.useState)(!1),
-          f = (function (e, t) {
-            const [n, s] = (0, l.useState)(an.Get().GetOptInDemoApps(e));
+          [f, y] = (0, l.useState)(!1),
+          b = (function (e, t) {
+            const [n, s] = (0, l.useState)(ln.Get().GetOptInDemoApps(e));
             return (
               (0, l.useEffect)(() => {
                 t &&
-                  !an.Get().BHasLoaded(e) &&
-                  an.Get().LoadAppWithDemoAppIDs(e);
+                  !ln.Get().BHasLoaded(e) &&
+                  ln.Get().LoadAppWithDemoAppIDs(e);
               }, [e, t]),
-              (0, at.hL)(an.Get().GetLoadCallback(e), s),
+              (0, at.hL)(ln.Get().GetLoadCallback(e), s),
               n
             );
           })(
             (0, ee.q3)(() => i.GetOptInPageID()),
             d,
           ),
-          y = (0, l.useMemo)(() => o.map((e) => e.appid), [o]),
-          b = (0, et.Iy)(i.GetOptInPageID(), y),
-          j = (0, l.useMemo)(
+          j = (0, l.useMemo)(() => o.map((e) => e.appid), [o]),
+          w = (0, et.Iy)(i.GetOptInPageID(), j),
+          I = (0, l.useMemo)(
             () =>
-              o && b
+              o && w
                 ? o
                     .filter((e) => {
-                      const t = b.get(e.appid);
+                      const t = w.get(e.appid);
                       return (
                         (!h || e.trailers_opt_in) &&
-                        (!v || e.opt_in) &&
-                        (!g || e.discount_info || (t && !t.no_planned_discount))
+                        (!f || e.opt_in) &&
+                        (!g ||
+                          e.discount_info ||
+                          (t && !t.no_planned_discount && !v))
                       );
                     })
                     .map((e) => {
-                      if (b) {
-                        const t = b.get(e.appid);
+                      if (w) {
+                        const t = w.get(e.appid);
                         t &&
                           ((e.opt_in = t.opt_in),
                           (e.trailers_opt_in = Boolean(
@@ -24392,8 +24405,8 @@
                           )),
                           (e.store_url = `${D.TS.STORE_BASE_URL}app/${e.appid}`));
                       }
-                      if (f) {
-                        const t = f.get(e.appid);
+                      if (b) {
+                        const t = b.get(e.appid);
                         t &&
                           (t.is_demo_released
                             ? (e.demo_state = "Released")
@@ -24404,33 +24417,33 @@
                       return e;
                     })
                 : null,
-            [o, b, h, g, f, v],
+            [o, w, h, g, b, v, f],
           );
-        if (!b || !j || (d && !f))
+        if (!w || !I || (d && !b))
           return (0, s.jsx)(E.t, {
             string: (0, N.we)("#Loading"),
             position: "center",
             size: "medium",
           });
-        const w =
+        const C =
             D.TS.PARTNER_BASE_URL + "optin/sale/" + i.GetOptInPageID() + "/",
-          I = {
+          A = {
             header: "Opted In",
             accessorKey: "opt_in",
-            cell: (e) => (0, s.jsx)(Kt.dA, { ...e, strURLToOptIn: w }),
+            cell: (e) => (0, s.jsx)(Kt.dA, { ...e, strURLToOptIn: C }),
             size: 50,
           },
-          C = [I, ...Jt()];
+          T = [A, ...Jt()];
         return (
           c &&
-            C.push({
+            T.push({
               header: "Trailer OptIn",
               accessorKey: "trailers_opt_in",
               cell: Kt.Xg,
               size: 50,
             }),
           d &&
-            C.push(
+            T.push(
               {
                 header: "Demo OptIn",
                 accessorKey: "demo_opt_in",
@@ -24445,13 +24458,13 @@
               },
             ),
           m &&
-            C.push({
+            T.push({
               header: "Game Profile OptIn",
               accessorKey: "game_profile_intent",
               cell: Kt.Xg,
               size: 50,
             }),
-          C.push({ header: "Store URL", accessorKey: "store_url", size: 350 }),
+          T.push({ header: "Store URL", accessorKey: "store_url", size: 350 }),
           (0, s.jsxs)(u.tH, {
             children: [
               (0, s.jsx)("div", {
@@ -24459,12 +24472,12 @@
                 children:
                   "To enable additional options unlocked during registration, switch over to the 'editor' tab and scroll to the very bottom. Games can be added to the featured list from the bottom of the 'editor' tab, or from the pruning process.",
               }),
-              (0, s.jsx)(rn.k, {
+              (0, s.jsx)(sn.k, {
                 ref: t,
-                className: ln().DefaultFancyTable,
+                className: rn().DefaultFancyTable,
                 stickyHeader: !0,
-                columns: C,
-                data: j,
+                columns: T,
+                data: I,
                 getRowKey: (e, t) => t.appid ?? `index-${e}`,
                 nItemHeight: 32,
                 height: 500,
@@ -24474,8 +24487,8 @@
               (0, s.jsxs)("div", {
                 children: [
                   (0, s.jsx)(p.Yh, {
-                    checked: v,
-                    onChange: x,
+                    checked: f,
+                    onChange: y,
                     label: "Filter To OptIn",
                   }),
                   (0, s.jsx)(p.Yh, {
@@ -24486,14 +24499,25 @@
                   (0, s.jsx)(p.Yh, {
                     checked: g,
                     onChange: S,
-                    label: "Filter To Discount Entered",
+                    label: "Filter To Discount Entered or Planned",
+                    tooltip:
+                      "Includes entered discounts, overlapping discounts with event, and also planned but not entered discounts",
                   }),
+                  g &&
+                    (0, s.jsx)(p.Yh, {
+                      checked: v,
+                      onChange: x,
+                      label: "Exclude Planned Discounts",
+                      tooltip:
+                        "Remove any without an explicit discount entered",
+                    }),
                 ],
               }),
             ],
           })
         );
       }
+      (0, O.Cg)([U.sH], ln.prototype, "m_mapAppToDemoAppID", void 0);
       var dn = n(39020);
       function pn(e) {
         const { tableRef: t, mapAppToDiscountInfo: n, oAllStats: a } = e,
@@ -24538,9 +24562,9 @@
             }),
           (0, s.jsxs)(u.tH, {
             children: [
-              (0, s.jsx)(rn.k, {
+              (0, s.jsx)(sn.k, {
                 ref: t,
-                className: ln().DefaultFancyTable,
+                className: rn().DefaultFancyTable,
                 stickyHeader: !0,
                 columns: h,
                 data: m,
@@ -24789,8 +24813,8 @@
       }
       const mn = l.forwardRef((e, t) =>
         (0, s.jsx)("div", {
-          className: ln().DefaultFancyTable,
-          children: (0, s.jsx)(rn.k, {
+          className: rn().DefaultFancyTable,
+          children: (0, s.jsx)(sn.k, {
             ref: t,
             initialSorting: [{ id: "sales", desc: !0 }],
             height: 500,
@@ -24803,7 +24827,7 @@
       class _n {
         async FetchAllEligibleOptInApps(e) {
           const t = D.TS.PARTNER_BASE_URL + "optin/ajaxgetalleligibleoptinapps",
-            n = { sessionid: D.TS.SESSIONID, opt_in_name: e },
+            n = { sessionid: (0, D.KC)(), opt_in_name: e },
             s = await I().get(t, { params: n, withCredentials: !0 });
           return s?.data?.data;
         }
@@ -24870,7 +24894,7 @@
                 n.current = e.cancel;
                 try {
                   const n = new FormData();
-                  n.append("sessionid", D.TS.SESSIONID),
+                  n.append("sessionid", (0, D.KC)()),
                     n.append("optInName", t.GetFullName()),
                     n.append("packageName", a);
                   const s =
@@ -25193,7 +25217,7 @@
                 const e = I().CancelToken.source();
                 y.current = e.cancel;
                 let s = null;
-                _ && (s = await an.Get().LoadAppWithDemoAppIDs(h, n));
+                _ && (s = await ln.Get().LoadAppWithDemoAppIDs(h, n));
                 const l = new Array();
                 m
                   .filter((e) =>
@@ -31432,7 +31456,7 @@
               await (async function (e) {
                 const t =
                     D.TS.PARTNER_BASE_URL + "optin/ajaxgetspecialeventinfo",
-                  n = { sessionid: D.TS.SESSIONID, opt_in_name: e },
+                  n = { sessionid: (0, D.KC)(), opt_in_name: e },
                   s = await I().get(t, { params: n, withCredentials: !0 });
                 if (
                   200 == s?.status &&
@@ -31633,7 +31657,7 @@
         GetDefChangeList(e) {
           return (
             this.m_mapPointShopDefsChange.has(e) ||
-              this.m_mapPointShopDefsChange.set(e, new sn.lu()),
+              this.m_mapPointShopDefsChange.set(e, new on.lu()),
             this.m_mapPointShopDefsChange.get(e)
           );
         }
@@ -31646,7 +31670,7 @@
         }
         async InternalLoadDefForOptIn(e) {
           const t = qe.TS.PARTNER_BASE_URL + "optin/ajaxgetpointshopiteminfo",
-            n = { sessionid: qe.TS.SESSIONID, opt_in_name: e };
+            n = { sessionid: (0, D.KC)(), opt_in_name: e };
           let s = null;
           try {
             const a = await I().get(t, { params: n, withCredentials: !0 });
@@ -31674,7 +31698,7 @@
         async FixPointShopItemForOptIn(e) {
           const t =
               qe.TS.PARTNER_BASE_URL + "optin/ajaxupdatepointshopiteminfo",
-            n = { sessionid: qe.TS.SESSIONID, opt_in_name: e };
+            n = { sessionid: (0, D.KC)(), opt_in_name: e };
           let s = null;
           try {
             const a = await I().get(t, { params: n, withCredentials: !0 });
@@ -31731,7 +31755,7 @@
         (0, O.Cg)([at.oI], Ga.prototype, "UpdateInternalModel", null);
       var Ma = n(23809),
         La = n(88997),
-        Oa = n(64046),
+        Oa = n(38165),
         Fa = n(58245),
         Ua = n(64035),
         qa = n.n(Ua);
@@ -32298,7 +32322,7 @@
               fnSaveSurveyResults: async (e) => {
                 const s = `${qe.TS.PARTNER_BASE_URL}optin/ajaxsubmitsurvey/${t}/${n.appid}`,
                   a = new FormData();
-                a.append("sessionid", qe.TS.SESSIONID),
+                a.append("sessionid", (0, ai.KC)()),
                   a.append("surveyjson", JSON.stringify(e));
                 const i = await I().post(s, a, { withCredentials: !0 });
                 o(!0), d(!(200 == i?.status));
@@ -33722,8 +33746,31 @@
           children: [
             (0, s.jsx)("div", {
               className: "sub_category",
-              children: (0, s.jsx)("h3", {
-                children: (0, N.we)("#OptIn_Collect_Trailer"),
+              children: (0, s.jsxs)("h3", {
+                children: [
+                  (0, N.we)("#OptIn_Collect_Trailer"),
+                  (0, s.jsx)("span", {
+                    className: "required_optional1",
+                    children: Boolean(t.collect_demo_deadline)
+                      ? (0, s.jsxs)(s.Fragment, {
+                          children: [
+                            "(",
+                            (0, N.we)(
+                              "#OptIn_Collect_SuggestedBy",
+                              (0, N.$z)(t.collect_demo_deadline),
+                            ),
+                            ")",
+                          ],
+                        })
+                      : (0, s.jsxs)(s.Fragment, {
+                          children: [
+                            "(",
+                            (0, N.we)("#OptIn_Collect_Optional"),
+                            ")",
+                          ],
+                        }),
+                  }),
+                ],
               }),
             }),
             (0, s.jsx)("p", {
@@ -33735,7 +33782,7 @@
             (0, s.jsx)("p", {
               children: (0, N.we)(
                 "#OptIn_Collect_Trailer_check_req_trailer",
-                (0, N.$z)(t.optin_deadline_date),
+                (0, N.$z)(t.collect_demo_deadline),
               ),
             }),
             a &&
@@ -34229,7 +34276,7 @@
             const t = (0, q.I)({
               queryKey: ["useFreeToKeepDLCInfoForApp", e],
               queryFn: async () => {
-                const t = { appid: e, sessionid: qe.TS.SESSIONID },
+                const t = { appid: e, sessionid: (0, D.KC)() },
                   n = `${qe.TS.PARTNER_BASE_URL}freetokeep/ajaxgetdlcforapp/`,
                   s = await I().get(n, { params: t, withCredentials: !0 });
                 return 200 == s?.status && s.data.success == C.R && s.data.data
@@ -34285,7 +34332,7 @@
             const t = (0, q.I)({
               queryKey: ["useFreeToKeepDLCReadiness", e],
               queryFn: async () => {
-                const t = { appid: e, sessionid: qe.TS.SESSIONID },
+                const t = { appid: e, sessionid: (0, D.KC)() },
                   n = `${qe.TS.PARTNER_BASE_URL}freetokeep/ajaxgetdlcfreetokeepreadiness/`,
                   s = await I().get(n, { params: t, withCredentials: !0 });
                 return 200 == s?.status && s.data.success == C.R && s.data
@@ -34331,7 +34378,7 @@
             const t = (0, q.I)({
               queryKey: ["useDLCRequireBaseGameOwnership", e],
               queryFn: async () => {
-                const t = { appid: e, sessionid: qe.TS.SESSIONID },
+                const t = { appid: e, sessionid: (0, D.KC)() },
                   n = `${qe.TS.PARTNER_BASE_URL}freetokeep/ajaxgetdlcrequirebaseapp/`,
                   s = await I().get(n, { params: t, withCredentials: !0 });
                 return 200 == s?.status &&
@@ -34354,7 +34401,7 @@
             return (0, Qi.n)({
               mutationFn: async (n) => {
                 const s = new FormData();
-                s.append("sessionid", qe.TS.SESSIONID),
+                s.append("sessionid", (0, D.KC)()),
                   s.append("appid", "" + e),
                   s.append("require", n ? "1" : "0");
                 const a = `${qe.TS.PARTNER_BASE_URL}freetokeep/ajaxupdatedlcrequirebaseapp`;
@@ -34522,7 +34569,7 @@
         m_nPrunedAppIDs = [];
         m_nAdditionalFeaturedppIDs = [];
         m_nPendingReviewAppIDs = [];
-        m_listCallback = new sn.lu();
+        m_listCallback = new on.lu();
         m_mapReviewCallback = new Map();
         GetAsConsolidatedList() {
           return {
@@ -34538,7 +34585,7 @@
         GetStateForAppCallback(e) {
           return (
             this.m_mapReviewCallback.has(e) ||
-              this.m_mapReviewCallback.set(e, new sn.lu()),
+              this.m_mapReviewCallback.set(e, new on.lu()),
             this.m_mapReviewCallback.get(e)
           );
         }
@@ -34554,7 +34601,7 @@
           let s = null;
           try {
             const a = new FormData();
-            a.append("sessionid", D.TS.SESSIONID),
+            a.append("sessionid", (0, D.KC)()),
               a.append("appids", JSON.stringify(t)),
               a.append("opt_in_name", e),
               a.append("prune", n ? "0" : "1");
@@ -34635,7 +34682,7 @@
           }
           try {
             const s = new FormData();
-            s.append("sessionid", D.TS.SESSIONID),
+            s.append("sessionid", (0, D.KC)()),
               s.append("appids", JSON.stringify(t)),
               s.append("opt_in_name", e),
               s.append("feature", n ? "1" : "0");
@@ -34945,7 +34992,7 @@
         GetLocalStoreChangeCallback(e) {
           return (
             this.m_mapChangeCallback.has(e) ||
-              this.m_mapChangeCallback.set(e, new sn.lu()),
+              this.m_mapChangeCallback.set(e, new on.lu()),
             this.m_mapChangeCallback.get(e)
           );
         }
@@ -35318,7 +35365,7 @@
               queryKey: ["usePartnerOptInEmailedApps", e],
               queryFn: () =>
                 (async function (e) {
-                  const t = { sessionid: D.TS.SESSIONID, opt_in_name: e },
+                  const t = { sessionid: (0, D.KC)(), opt_in_name: e },
                     n =
                       D.TS.PARTNER_BASE_URL + "optin/ajaxgetapplisttonotprune",
                     s = await I().get(n, { params: t, withCredentials: !0 });
@@ -37520,7 +37567,7 @@
                 onChange: r,
                 checked: i,
               }),
-              (0, s.jsx)(rn.k, {
+              (0, s.jsx)(sn.k, {
                 columns: h,
                 data: m,
                 getRowKey: (e, t) => t.appid ?? `index-${e}`,
@@ -37600,7 +37647,7 @@
               ],
               queryFn: async () => {
                 const t = {
-                    sessionid: D.TS.SESSIONID,
+                    sessionid: (0, D.KC)(),
                     strSearchName: e.strName,
                     strSearchDescription: e.strDescription,
                     nSearchTagId: e.nTag,
@@ -37901,7 +37948,7 @@
             ],
             [],
           );
-        return (0, s.jsx)(rn.k, {
+        return (0, s.jsx)(sn.k, {
           columns: n,
           data: t,
           getRowKey: (e, t) => t.nAppID,
@@ -40722,7 +40769,7 @@
                 else {
                   const e = await (async function (e, t) {
                     const n = new FormData();
-                    n.append("sessionid", J.TS.SESSIONID),
+                    n.append("sessionid", (0, J.KC)()),
                       n.append("gid_promotionplan", e);
                     const s =
                       J.TS.PARTNER_BASE_URL +
@@ -40839,7 +40886,7 @@
                 i.fnSetLoading(!0);
                 const e = await (async function (e, t) {
                   const n = new FormData();
-                  n.append("sessionid", J.TS.SESSIONID),
+                  n.append("sessionid", (0, J.KC)()),
                     n.append("gid_promotionplan", e);
                   const s =
                     J.TS.PARTNER_BASE_URL +
@@ -47151,7 +47198,7 @@
       }
       var ie = n(25359),
         re = n.n(ie),
-        oe = n(64046),
+        oe = n(38165),
         le = n(88997);
       function ce(e) {
         const { setting: t, fnUpdateSetting: n, label: a } = e,
@@ -49396,7 +49443,7 @@
           try {
             const n = w.TS.PARTNER_BASE_URL + "appsupport/ajaxgetassets/" + e,
               s = new FormData();
-            s.append("sessionid", w.TS.SESSIONID);
+            s.append("sessionid", (0, mt.KC)());
             const a = await yt().post(n, s, { withCredentials: !0 });
             if (200 == a?.status && a.data?.success == xt.R) {
               const t = {
@@ -49429,7 +49476,7 @@
             const n = w.TS.PARTNER_BASE_URL + "appsupport/ajaxpublishassets",
               s = new FormData();
             s.append("appid", JSON.stringify(e)),
-              s.append("sessionid", w.TS.SESSIONID);
+              s.append("sessionid", (0, mt.KC)());
             const a = await yt().post(n, s, { withCredentials: !0 });
             if (200 == a?.status && a.data?.success == xt.R) return !0;
             t = (0, Dt.H)(a?.data);
@@ -70837,7 +70884,7 @@
           if (!a || 0 == a.length) return !0;
           let i = (0, w.xv)() + "actions/ajaxgetpartnereventsreport",
             r = {
-              sessionid: w.TS.SESSIONID,
+              sessionid: (0, w.KC)(),
               clan_account_id: e.GetAccountID(),
               gidlist: a.join(","),
             };
@@ -73118,7 +73165,7 @@
         async InternalOpenDoor(e, t = !0, n, s = !1) {
           let a = w.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const i = new FormData();
-          i.append("sessionid", w.TS.SESSIONID),
+          i.append("sessionid", (0, w.KC)()),
             n && i.append("datarecord", n),
             s && i.append("fake_open", "" + s),
             i.append("door_index", "" + e),
@@ -73190,7 +73237,7 @@
         async CloseAllDoors(e) {
           let t = w.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
           const n = new FormData();
-          n.append("sessionid", w.TS.SESSIONID),
+          n.append("sessionid", (0, w.KC)()),
             n.append("clan_accountid", "" + e);
           let s = null;
           try {
@@ -73946,7 +73993,7 @@
           const s = w.TS.STORE_BASE_URL + "account/optoutappcommunication/",
             a = new FormData();
           if (
-            (a.append("sessionid", w.TS.SESSIONID),
+            (a.append("sessionid", (0, w.KC)()),
             a.append("allowCommunication", e ? "1" : "0"),
             t)
           ) {
@@ -74898,7 +74945,7 @@
         dn = n(92532),
         pn = n(73371),
         un = n.n(pn),
-        mn = n(54492);
+        mn = n(2240);
       const hn = (0, q.PA)((e) => {
         const { id: t, type: n } = e,
           a = (0, Ut.zl)(t, n),
@@ -76078,11 +76125,17 @@
                         "#Sale_BrowserSortOption_ContentHub_Popular_Controller"),
                       (n =
                         "#Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip"))
-                    : "greatondeck" === this.props.event?.GetContentHubType() &&
-                      ((t =
-                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
-                      (n =
-                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))),
+                    : "greatondeck" === this.props.event?.GetContentHubType()
+                      ? ((t =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
+                        (n =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))
+                      : "greatonframe" ===
+                          this.props.event?.GetContentHubType() &&
+                        ((t =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnFrame"),
+                        (n =
+                          "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnFrame_ttip"))),
                 (0, s.jsx)(
                   he.he,
                   {
@@ -79423,48 +79476,48 @@
       }
       var C;
       !(function (e) {
-        (e.GetDailyDeals = function (e, t) {
-          return e.SendMsg("DailyDeal.GetDailyDeals#1", (0, o.I8)(y, t), D, {
+        (e.GetDailyDeals = function (e, t, n) {
+          return e.SendMsg("DailyDeal.GetDailyDeals#1", (0, o.I8)(y, t, n), D, {
             bConstMethod: !0,
             ePrivilege: 1,
           });
         }),
-          (e.CreateDailyDeal = function (e, t) {
+          (e.CreateDailyDeal = function (e, t, n) {
             return e.SendMsg(
               "DailyDeal.CreateDailyDeal#1",
-              (0, o.I8)(m, t),
+              (0, o.I8)(m, t, n),
               h,
               { ePrivilege: 1 },
             );
           }),
-          (e.UpdateDailyDeal = function (e, t) {
+          (e.UpdateDailyDeal = function (e, t, n) {
             return e.SendMsg(
               "DailyDeal.UpdateDailyDeal#1",
-              (0, o.I8)(_, t),
+              (0, o.I8)(_, t, n),
               g,
               { ePrivilege: 1 },
             );
           }),
-          (e.DeleteDailyDeal = function (e, t) {
+          (e.DeleteDailyDeal = function (e, t, n) {
             return e.SendMsg(
               "DailyDeal.DeleteDailyDeal#1",
-              (0, o.I8)(S, t),
+              (0, o.I8)(S, t, n),
               v,
               { ePrivilege: 1 },
             );
           }),
-          (e.CancelDailyDeal = function (e, t) {
+          (e.CancelDailyDeal = function (e, t, n) {
             return e.SendMsg(
               "DailyDeal.CancelDailyDeal#1",
-              (0, o.I8)(x, t),
+              (0, o.I8)(x, t, n),
               f,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetDailyDealsForApps = function (e, t) {
+          (e.GetDailyDealsForApps = function (e, t, n) {
             return e.SendMsg(
               "DailyDeal.GetDailyDealsForApps#1",
-              (0, o.I8)(w, t),
+              (0, o.I8)(w, t, n),
               I,
               { bConstMethod: !0, ePrivilege: 4 },
             );
@@ -84535,270 +84588,270 @@
       }
       var Le, Oe, Fe;
       !(function (e) {
-        (e.CreatePlan = function (e, t) {
+        (e.CreatePlan = function (e, t, n) {
           return e.SendMsg(
             "PromotionPlanning.CreatePlan#1",
-            (0, l.I8)(_, t),
+            (0, l.I8)(_, t, n),
             g,
             { ePrivilege: 1 },
           );
         }),
-          (e.CreateTentativePlan = function (e, t) {
+          (e.CreateTentativePlan = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.CreateTentativePlan#1",
-              (0, l.I8)(_, t),
+              (0, l.I8)(_, t, n),
               g,
               { ePrivilege: 1 },
             );
           }),
-          (e.UpdatePlan = function (e, t) {
+          (e.UpdatePlan = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.UpdatePlan#1",
-              (0, l.I8)(S, t),
+              (0, l.I8)(S, t, n),
               v,
               { ePrivilege: 1 },
             );
           }),
-          (e.UpdatePlanPartnerInfo = function (e, t) {
+          (e.UpdatePlanPartnerInfo = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.UpdatePlanPartnerInfo#1",
-              (0, l.I8)(S, t),
+              (0, l.I8)(S, t, n),
               v,
               { ePrivilege: 1 },
             );
           }),
-          (e.UpdatePlanInputData = function (e, t) {
+          (e.UpdatePlanInputData = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.UpdatePlanInputData#1",
-              (0, l.I8)(S, t),
+              (0, l.I8)(S, t, n),
               v,
               { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.DeletePlan = function (e, t) {
+          (e.DeletePlan = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.DeletePlan#1",
-              (0, l.I8)(k, t),
+              (0, l.I8)(k, t, n),
               E,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetPlan = function (e, t) {
+          (e.GetPlan = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetPlan#1",
-              (0, l.I8)(x, t),
+              (0, l.I8)(x, t, n),
               f,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetAllActivePlan = function (e, t) {
+          (e.GetAllActivePlan = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetAllActivePlan#1",
-              (0, l.I8)(y, t),
+              (0, l.I8)(y, t, n),
               D,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetPlanCompletedInDateRange = function (e, t) {
+          (e.GetPlanCompletedInDateRange = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetPlanCompletedInDateRange#1",
-              (0, l.I8)(b, t),
+              (0, l.I8)(b, t, n),
               j,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetPlanByAssociationID = function (e, t) {
+          (e.GetPlanByAssociationID = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetPlanByAssociationID#1",
-              (0, l.I8)(I, t),
+              (0, l.I8)(I, t, n),
               C,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetPlansUpdatedSince = function (e, t) {
+          (e.GetPlansUpdatedSince = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetPlansUpdatedSince#1",
-              (0, l.I8)(A, t),
+              (0, l.I8)(A, t, n),
               T,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.SearchPlan = function (e, t) {
+          (e.SearchPlan = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.SearchPlan#1",
-              (0, l.I8)(P, t),
+              (0, l.I8)(P, t, n),
               B,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetAllPlansForApps = function (e, t) {
+          (e.GetAllPlansForApps = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetAllPlansForApps#1",
-              (0, l.I8)(R, t),
+              (0, l.I8)(R, t, n),
               N,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-          (e.GetAllPlansForPartner = function (e, t) {
+          (e.GetAllPlansForPartner = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetAllPlansForPartner#1",
-              (0, l.I8)(M, t),
+              (0, l.I8)(M, t, n),
               L,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetPlanByInputAccessKey = function (e, t) {
+          (e.GetPlanByInputAccessKey = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetPlanByInputAccessKey#1",
-              (0, l.I8)(O, t),
+              (0, l.I8)(O, t, n),
               F,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.MarkLocalizationAssetComplete = function (e, t) {
+          (e.MarkLocalizationAssetComplete = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.MarkLocalizationAssetComplete#1",
-              (0, l.I8)(U, t),
+              (0, l.I8)(U, t, n),
               q,
               { ePrivilege: 1 },
             );
           }),
-          (e.SendNotification = function (e, t) {
+          (e.SendNotification = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.SendNotification#1",
-              (0, l.I8)(z, t),
+              (0, l.I8)(z, t, n),
               H,
               { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetSentNotification = function (e, t) {
+          (e.GetSentNotification = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetSentNotification#1",
-              (0, l.I8)(W, t),
+              (0, l.I8)(W, t, n),
               V,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.ResendNotification = function (e, t) {
+          (e.ResendNotification = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.ResendNotification#1",
-              (0, l.I8)(Y, t),
+              (0, l.I8)(Y, t, n),
               $,
               { ePrivilege: 1 },
             );
           }),
-          (e.SetPromotionEmailTarget = function (e, t) {
+          (e.SetPromotionEmailTarget = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.SetPromotionEmailTarget#1",
-              (0, l.I8)(J, t),
+              (0, l.I8)(J, t, n),
               X,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetPromotionPlanSalesDaily = function (e, t) {
+          (e.GetPromotionPlanSalesDaily = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetPromotionPlanSalesDaily#1",
-              (0, l.I8)(te, t),
+              (0, l.I8)(te, t, n),
               ne,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetPromotionPlanForSalePages = function (e, t) {
+          (e.GetPromotionPlanForSalePages = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetPromotionPlanForSalePages#1",
-              (0, l.I8)(re, t),
+              (0, l.I8)(re, t, n),
               le,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-          (e.CreateSalePageForPromo = function (e, t) {
+          (e.CreateSalePageForPromo = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.CreateSalePageForPromo#1",
-              (0, l.I8)(Q, t),
+              (0, l.I8)(Q, t, n),
               Z,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetUpcomingScheduledDiscounts = function (e, t) {
+          (e.GetUpcomingScheduledDiscounts = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetUpcomingScheduledDiscounts#1",
-              (0, l.I8)(ce, t),
+              (0, l.I8)(ce, t, n),
               de,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
-          (e.GetSalePageCandidatesForPromo = function (e, t) {
+          (e.GetSalePageCandidatesForPromo = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetSalePageCandidatesForPromo#1",
-              (0, l.I8)(me, t),
+              (0, l.I8)(me, t, n),
               he,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetAdvertisingAppsForPartner = function (e, t) {
+          (e.GetAdvertisingAppsForPartner = function (e, t, n) {
             return e.SendMsg(
               "PromotionPlanning.GetAdvertisingAppsForPartner#1",
-              (0, l.I8)(Se, t),
+              (0, l.I8)(Se, t, n),
               ve,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
       })(Le || (Le = {})),
         (function (e) {
-          (e.SetInvite = function (e, t) {
+          (e.SetInvite = function (e, t, n) {
             return e.SendMsg(
               "PromotionEventInvites.SetInvite#1",
-              (0, l.I8)(De, t),
+              (0, l.I8)(De, t, n),
               be,
               { ePrivilege: 4 },
             );
           }),
-            (e.GetInvite = function (e, t) {
+            (e.GetInvite = function (e, t, n) {
               return e.SendMsg(
                 "PromotionEventInvites.GetInvite#1",
-                (0, l.I8)(je, t),
+                (0, l.I8)(je, t, n),
                 we,
                 { bConstMethod: !0, ePrivilege: 1 },
               );
             }),
-            (e.AcceptInvite = function (e, t) {
+            (e.AcceptInvite = function (e, t, n) {
               return e.SendMsg(
                 "PromotionEventInvites.AcceptInvite#1",
-                (0, l.I8)(Ee, t),
+                (0, l.I8)(Ee, t, n),
                 Pe,
                 { ePrivilege: 1 },
               );
             }),
-            (e.CancelInvite = function (e, t) {
+            (e.CancelInvite = function (e, t, n) {
               return e.SendMsg(
                 "PromotionEventInvites.CancelInvite#1",
-                (0, l.I8)(Be, t),
+                (0, l.I8)(Be, t, n),
                 Re,
                 { ePrivilege: 4 },
               );
             }),
-            (e.ResendEmailInvite = function (e, t) {
+            (e.ResendEmailInvite = function (e, t, n) {
               return e.SendMsg(
                 "PromotionEventInvites.ResendEmailInvite#1",
-                (0, l.I8)(Ie, t),
+                (0, l.I8)(Ie, t, n),
                 Ce,
                 { ePrivilege: 4 },
               );
             }),
-            (e.GetEmailTargets = function (e, t) {
+            (e.GetEmailTargets = function (e, t, n) {
               return e.SendMsg(
                 "PromotionEventInvites.GetEmailTargets#1",
-                (0, l.I8)(Ae, t),
+                (0, l.I8)(Ae, t, n),
                 ke,
                 { ePrivilege: 4 },
               );
             });
         })(Oe || (Oe = {})),
         (function (e) {
-          e.GetOptInDemoStats = function (e, t) {
+          e.GetOptInDemoStats = function (e, t, n) {
             return e.SendMsg(
               "PromotionStats.GetOptInDemoStats#1",
-              (0, l.I8)(Ne, t),
+              (0, l.I8)(Ne, t, n),
               Ge,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -85112,7 +85165,7 @@
             r = e.GetResizeDimension(),
             o = new FormData();
           o.append("clanimage", a, t),
-            o.append("sessionid", S.TS.SESSIONID),
+            o.append("sessionid", (0, S.KC)()),
             this.m_clanImagesV2 && o.append("clan_images_v2", "1"),
             i?.artworkType && o.append("arttype", i.artworkType),
             r &&
@@ -85327,7 +85380,7 @@
           return s ? s.find((e) => e.image_hash == t) : void 0;
         }
         async DeleteClanImageByID(e, t) {
-          let n = { sessionid: m.TS.SESSIONID, imageid: t },
+          let n = { sessionid: (0, m.KC)(), imageid: t },
             s = e.GetAccountID(),
             i = await r().get(
               m.TS.COMMUNITY_BASE_URL +
@@ -85578,7 +85631,7 @@
           if (this.BIsEqual(n, this.m_mapOriginalJSON.get(t))) return o.R;
           try {
             const s = new FormData();
-            s.append("sessionid", h.TS.SESSIONID),
+            s.append("sessionid", (0, h.KC)()),
               s.append("clanAccountID", "" + e.GetAccountID()),
               s.append("gidClanEvent", "" + t),
               s.append("jsonData", JSON.stringify(n));
@@ -87157,7 +87210,7 @@
         async AjaxGetFormattingHelp() {
           if ("" == this.state.formattingHelp.__html) {
             let e,
-              t = { sessionid: z.TS.SESSIONID };
+              t = { sessionid: (0, z.KC)() };
             (e = await r().get(ce.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
@@ -88421,7 +88474,7 @@
     },
     68212: (e, t, n) => {
       "use strict";
-      n.d(t, { a: () => I });
+      n.d(t, { a: () => C });
       var s = n(7850),
         a = n(90626),
         i = n(42027),
@@ -88433,16 +88486,17 @@
         p = n(68797),
         u = n(6419),
         m = n(30470),
-        h = n(28954),
-        _ = n(64953),
-        g = n(69343),
-        S = n(82817),
-        v = n(64753),
-        x = n(61336),
-        f = n(14771),
-        y = n(81393),
-        D = n(61859);
-      class b extends g.Vr {
+        h = n(78327),
+        _ = n(28954),
+        g = n(64953),
+        S = n(69343),
+        v = n(82817),
+        x = n(64753),
+        f = n(61336),
+        y = n(14771),
+        D = n(81393),
+        b = n(61859);
+      class j extends S.Vr {
         m_filesToUpload = d.sH.array();
         static k_nSingleMediaConvertThresholdBytes = 25e4;
         m_strUploadPath = null;
@@ -88454,7 +88508,7 @@
           super(),
             (0, d.Gn)(this),
             (this.m_strUploadPath = e),
-            (this.m_rgImageOptions = (0, h.M0)(t)),
+            (this.m_rgImageOptions = (0, _.M0)(t)),
             (this.m_bSynchronousUpload = n),
             (this.m_bTwoPhaseUpload = s),
             (this.m_bDirectTempStorageUpload = a);
@@ -88490,39 +88544,39 @@
           return this.m_bSynchronousUpload;
         }
         async AddImageForLanguage(e, t) {
-          if ((0, S.aL)(e.type) || (0, S.Uz)(e.type)) {
-            const n = await (0, S.zB)(e, (0, S.Uz)(e.type));
+          if ((0, v.aL)(e.type) || (0, v.Uz)(e.type)) {
+            const n = await (0, v.zB)(e, (0, v.Uz)(e.type));
             if (n instanceof HTMLImageElement) {
-              const s = new _.M7(
+              const s = new g.M7(
                 e,
                 e.name,
                 t,
                 this.m_rgImageOptions,
                 n.src,
-                (0, S.II)(n),
+                (0, v.II)(n),
                 n,
                 void 0,
               );
               return (this.m_filesToUpload = [...this.m_filesToUpload, s]), !0;
             }
             if (n instanceof HTMLVideoElement) {
-              const s = new _.IS(
+              const s = new g.IS(
                 e,
                 e.name,
                 t,
                 this.m_rgImageOptions,
                 n.src,
-                (0, S.II)(n),
+                (0, v.II)(n),
                 n,
               );
               return (this.m_filesToUpload = [...this.m_filesToUpload, s]), !0;
             }
           } else {
-            if (b.isSubtitleTextFile(e))
+            if (j.isSubtitleTextFile(e))
               return (
                 (this.m_filesToUpload = [
                   ...this.m_filesToUpload,
-                  new _.T2(e, e.name, t, this.m_rgImageOptions),
+                  new g.T2(e, e.name, t, this.m_rgImageOptions),
                 ]),
                 !0
               );
@@ -88537,16 +88591,16 @@
         }
         async UploadSingleImage(e, t, n, s) {
           const a = new FormData();
-          a.append("sessionid", m.TS.SESSIONID),
+          a.append("sessionid", (0, h.KC)()),
             a.append("elanguage", "" + n),
             a.append("originalname", t);
           const i = e.GetCurrentImageOption();
           i?.artworkType && a.append("arttype", i.artworkType);
-          const r = (0, S.ab)(t);
+          const r = (0, v.ab)(t);
           if (!r)
             return {
               bSuccess: !1,
-              elErrorMessage: (0, D.we)(
+              elErrorMessage: (0, b.we)(
                 "#MediaConvert_CloudUpload_ErrorFileType",
               ),
             };
@@ -88554,10 +88608,10 @@
           a.append("mimetype", r);
           const d =
               this.m_bDirectTempStorageUpload &&
-              e.file.size > b.k_nSingleMediaConvertThresholdBytes,
+              e.file.size > j.k_nSingleMediaConvertThresholdBytes,
             u =
               this.m_bTwoPhaseUpload &&
-              e.file.size > b.k_nSingleMediaConvertThresholdBytes;
+              e.file.size > j.k_nSingleMediaConvertThresholdBytes;
           try {
             if (d) {
               const t = await this.HandleDirectUploadToTempFromBrowser(e, s);
@@ -88599,8 +88653,8 @@
           return { bSuccess: !1, elErrorMessage: l, result: void 0 };
         }
         async HandleConvertAndPoll(e, t, n, s) {
-          const a = (0, x.yn)(this.m_strUploadPath, "ajax", "async");
-          (0, y.v8)(a, "upload path must contain ajax");
+          const a = (0, f.yn)(this.m_strUploadPath, "ajax", "async");
+          (0, D.v8)(a, "upload path must contain ajax");
           const i = await c().post(a, e, {
             withCredentials: !0,
             headers: { "Content-Type": "multipart/form-data" },
@@ -88610,12 +88664,12 @@
             return {
               strError:
                 i?.data?.msg ??
-                (0, D.we)("#MediaConvert_CloudUpload_UploadError"),
+                (0, b.we)("#MediaConvert_CloudUpload_UploadError"),
             };
           {
-            const e = (0, x.yn)(this.m_strUploadPath, "ajax", "status"),
+            const e = (0, f.yn)(this.m_strUploadPath, "ajax", "status"),
               t = {
-                sessionid: m.TS.SESSIONID,
+                sessionid: (0, h.KC)(),
                 requestid: i.data.requestID,
                 elanguage: n,
                 originalname: s,
@@ -88630,16 +88684,16 @@
                   strError: n?.data?.error ?? n?.data?.message ?? n?.data?.msg,
                 };
               if (n?.data?.success != o._9) return { uploadResults: n?.data };
-              await (0, f.IP)(2e3);
+              await (0, y.IP)(2e3);
             }
           }
         }
         async HandleDirectUploadToTempFromBrowser(e, t) {
           const n = new FormData();
           n.append("filesize", "" + e.file.size),
-            n.append("sessionid", m.TS.SESSIONID);
+            n.append("sessionid", (0, h.KC)());
           const s =
-              (0, x.yn)(this.m_strUploadPath, "ajax", "uploadurl") ||
+              (0, f.yn)(this.m_strUploadPath, "ajax", "uploadurl") ||
               this.m_strUploadPath,
             a = await c().post(s, n, { withCredentials: !0, cancelToken: t });
           if (
@@ -88648,7 +88702,7 @@
             a.data.file_id &&
             a.data.upload_url
           ) {
-            const t = (0, S.N1)(
+            const t = (0, v.N1)(
               { "Content-Type": "application/octet-stream" },
               a.data.headers_for_upload,
             );
@@ -88658,24 +88712,24 @@
               .catch(() => !1))
               ? { temp_file_id: a.data.file_id }
               : {
-                  strError: (0, D.we)("#MediaConvert_CloudUpload_UploadError"),
+                  strError: (0, b.we)("#MediaConvert_CloudUpload_UploadError"),
                 };
           }
           return {
             strError:
               a?.data?.msg ??
-              (0, D.we)("#MediaConvert_CloudUpload_UploadError"),
+              (0, b.we)("#MediaConvert_CloudUpload_UploadError"),
           };
         }
       }
-      (0, r.Cg)([d.sH], b.prototype, "m_filesToUpload", void 0),
-        (0, r.Cg)([u.o], b.prototype, "GetUploadImages", null),
-        (0, r.Cg)([u.o], b.prototype, "ClearImages", null),
-        (0, r.Cg)([u.o], b.prototype, "DeleteUploadImage", null),
-        (0, r.Cg)([u.o], b.prototype, "AddImageForLanguage", null);
-      var j = n(63556),
-        w = n(34214);
-      function I(e) {
+      (0, r.Cg)([d.sH], j.prototype, "m_filesToUpload", void 0),
+        (0, r.Cg)([u.o], j.prototype, "GetUploadImages", null),
+        (0, r.Cg)([u.o], j.prototype, "ClearImages", null),
+        (0, r.Cg)([u.o], j.prototype, "DeleteUploadImage", null),
+        (0, r.Cg)([u.o], j.prototype, "AddImageForLanguage", null);
+      var w = n(63556),
+        I = n(34214);
+      function C(e) {
         const {
             strUploadAjaxURL: t,
             fnOnUploadSuccess: n,
@@ -88685,10 +88739,10 @@
             bTwoPhaseUpload: c,
             bDirectTempStorageUpload: d,
           } = e,
-          p = j.O.Get().GetCurEditLanguage(),
+          p = w.O.Get().GetCurEditLanguage(),
           u = (function (e, t, n, s, i) {
-            const r = (0, v.wm)(t instanceof Array ? t : [t]);
-            return a.useMemo(() => new b(e, r, n, s, i), [e, r, n, s, i]);
+            const r = (0, x.wm)(t instanceof Array ? t : [t]);
+            return a.useMemo(() => new j(e, r, n, s, i), [e, r, n, s, i]);
           })(t, o, r ?? !1, c ?? !1, d ?? !1);
         return (
           a.useEffect(() => {
@@ -88701,12 +88755,12 @@
               for (const t of e) {
                 if (!t.bSuccess) continue;
                 const e = t.uploadResult,
-                  s = (0, g.PD)(e.language, p, l);
+                  s = (0, S.PD)(e.language, p, l);
                 n(
                   e.image_hash,
                   e.file_name,
                   s,
-                  C(e.file_type),
+                  A(e.file_type),
                   t.image.GetCurrentImageOption().artworkType,
                   t.image.width,
                   t.image.height,
@@ -88716,23 +88770,23 @@
           })
         );
       }
-      function C(e) {
+      function A(e) {
         switch (e) {
-          case w.bg.CK:
+          case I.bg.CK:
             return "image/gif";
-          case w.bg.iS:
+          case I.bg.iS:
             return "image/jpeg";
-          case w.bg.dU:
+          case I.bg.dU:
             return "image/png";
-          case w.bg.nn:
+          case I.bg.nn:
             return "video/mp4";
-          case w.bg.pJ:
+          case I.bg.pJ:
             return "video/webm";
-          case w.bg.k7:
+          case I.bg.k7:
             return "text/vtt";
-          case w.bg.pi:
+          case I.bg.pi:
             return "text/srt";
-          case w.bg.wD:
+          case I.bg.wD:
             return "image/webp";
         }
         return null;
@@ -90081,7 +90135,7 @@
       class m extends d.ZQ {
         async DeleteOldAnnouncement(e, t) {
           let n = new URLSearchParams();
-          n.append("sessionid", c.TS.SESSIONID);
+          n.append("sessionid", (0, c.KC)());
           let s =
               c.TS.COMMUNITY_BASE_URL +
               "/gid/" +
@@ -90407,7 +90461,7 @@
             return this.m_mapSourceEventGIDToPostedClans.get(t);
           const s = c.TS.STORE_BASE_URL + "events/ajaxgetrepostedevent",
             a = {
-              sessionid: c.TS.SESSIONID,
+              sessionid: (0, c.KC)(),
               source_clan_accountid: e.GetAccountID(),
               source_event_gid: t,
             };
@@ -90443,7 +90497,7 @@
         async RepostEvent(e, t, n, s, a) {
           const i = c.TS.STORE_BASE_URL + "events/ajaxrepostevent",
             r = new FormData();
-          r.append("sessionid", c.TS.SESSIONID),
+          r.append("sessionid", (0, c.KC)()),
             r.append("source_clan_accountid", "" + e.GetAccountID()),
             r.append("source_event_gid", "" + t),
             r.append("repost_clan_accountid", "" + n.GetAccountID()),
@@ -91397,7 +91451,7 @@
             return;
           const n = c.TS.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
             s = new URLSearchParams();
-          s.append("sessionid", c.TS.SESSIONID),
+          s.append("sessionid", (0, c.KC)()),
             s.append("categoryid", e.toString()),
             s.append("appid", t.toString());
           try {
@@ -94106,43 +94160,41 @@
       function b(e) {
         const {
             id: t,
-            bShowAsMuted: n,
-            bHidePrice: a,
-            bShowInLibraryInsteadOfPrice: i,
-            bHidePlatforms: r,
-            strClassName: l,
-            creatorAccountID: c,
-            bShowName: d,
-            onlyOneDiscountPct: p,
-            bShowAddToCart: u,
-            bShowWishlistButton: m,
+            bHidePrice: n,
+            bShowInLibraryInsteadOfPrice: a,
+            bHidePlatforms: i,
+            strClassName: r,
+            creatorAccountID: l,
+            bShowName: c,
+            onlyOneDiscountPct: d,
+            bShowAddToCart: p,
+            bShowWishlistButton: u,
           } = e,
-          S = (0, _.useRef)(null),
-          [b, I] = (0, _.useState)(!1),
-          { data: C } = (0, h.J$)(t);
+          m = (0, _.useRef)(null),
+          [S, b] = (0, _.useState)(!1),
+          { data: I } = (0, h.J$)(t);
         if (
           ((0, _.useEffect)(() => {
-            S.current && I(S.current.offsetWidth < 370);
-          }, [S]),
+            m.current && b(m.current.offsetWidth < 370);
+          }, [m]),
           !t || !("appid" in t || "bundleid" in t || "packageid" in t))
         )
           return null;
-        const A = Boolean(m && C?.item_type == o.c6.qI),
-          T = Boolean(!c && !u && !A && r && a);
+        const C = Boolean(u && I?.item_type == o.c6.qI),
+          A = Boolean(!l && !p && !C && i && n);
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            !T &&
+            !A &&
               (0, s.jsxs)("div", {
-                ref: S,
+                ref: m,
                 className: (0, D.A)(
                   v().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  n && v().Muted,
-                  l,
+                  r,
                 ),
                 children: [
-                  c && (0, s.jsx)(w, { creatorAccountID: c, ...e }),
-                  u &&
+                  l && (0, s.jsx)(w, { creatorAccountID: l, ...e }),
+                  p &&
                     (0, s.jsx)(g.h, {
                       id: t,
                       className: (0, D.A)(
@@ -94150,7 +94202,7 @@
                         v().AddToCartButton,
                       ),
                     }),
-                  A &&
+                  C &&
                     "appid" in t &&
                     (0, s.jsx)(y.r, {
                       appid: t.appid,
@@ -94159,24 +94211,24 @@
                         v().AddToWishlistButton,
                       ),
                     }),
-                  !r &&
+                  !i &&
                     (0, s.jsx)(x.Q, {
                       id: t,
-                      bMinimizePlatforms: b,
+                      bMinimizePlatforms: S,
                       bHideWindows: !0,
                     }),
-                  !a &&
+                  !n &&
                     (0, s.jsx)("span", {
                       className: v().BottomBarPriceInfo,
                       children: (0, s.jsx)(f.NF, {
                         id: t,
-                        bShowInLibrary: i,
-                        onlyOneDiscountPct: p,
+                        bShowInLibrary: a,
+                        onlyOneDiscountPct: d,
                       }),
                     }),
                 ],
               }),
-            d && (0, s.jsx)(j, { id: t }),
+            c && (0, s.jsx)(j, { id: t }),
           ],
         });
       }
@@ -94188,12 +94240,12 @@
           : null;
       }
       function w(e) {
-        const { creatorAccountID: t, bShowAsMuted: n, strClassName: a } = e,
-          i = (0, _.useMemo)(() => ({ creatorid: t }), [t]),
-          { data: r } = (0, h.J$)(i),
-          { data: o } = (0, h.lv)(i);
-        if (!r) return null;
-        const l = (function (e, t) {
+        const { creatorAccountID: t, strClassName: n } = e,
+          a = (0, _.useMemo)(() => ({ creatorid: t }), [t]),
+          { data: i } = (0, h.J$)(a),
+          { data: r } = (0, h.lv)(a);
+        if (!i) return null;
+        const o = (function (e, t) {
             let n = "0000000000000000000000000000000000000000";
             var s;
             "string" == typeof e
@@ -94227,17 +94279,17 @@
                 i += "_full";
             }
             return (i += a), i;
-          })(o?.clan_avatar, "Medium"),
-          c = r.name || "";
+          })(r?.clan_avatar, "Medium"),
+          l = i.name || "";
         return (0, s.jsxs)("div", {
-          className: (0, D.A)(v().BottomCreatorRow, n && v().Muted, a),
+          className: (0, D.A)(v().BottomCreatorRow, n),
           children: [
             (0, s.jsx)("img", {
               className: (0, D.A)(v().CreatorLogo),
-              src: l,
-              alt: c,
+              src: o,
+              alt: l,
             }),
-            (0, s.jsx)("span", { className: v().CreatorName, children: c }),
+            (0, s.jsx)("span", { className: v().CreatorName, children: l }),
           ],
         });
       }
@@ -94252,7 +94304,7 @@
         R = n(94191),
         N = n(72860),
         G = n(92532),
-        M = n(54492),
+        M = n(2240),
         L = n(49411),
         O = n(61859),
         F = n(61336),
@@ -94485,18 +94537,15 @@
             strDoubleCapsuleMessage: _,
           } = e,
           { data: g } = (0, h.J$)(t),
-          { bIsOwned: S } = (0, k.ZJ)(t),
-          v = S && !a;
+          { bIsOwned: S } = (0, k.ZJ)(t);
         if (i && g && g.item_type == o.c6.qI && g.appid)
           return (0, s.jsx)(p.E, { appid: g.appid, bIsMuted: u });
         if (r) return null;
-        const x = Boolean(S && n),
-          f = Boolean(v);
+        const v = Boolean(S && n);
         return (0, s.jsx)(b, {
           id: t,
-          bShowAsMuted: f,
           bHidePrice: l,
-          bShowInLibraryInsteadOfPrice: x,
+          bShowInLibraryInsteadOfPrice: v,
           bHidePlatforms: c,
           creatorAccountID: d,
           bShowName: e.bShowName,
@@ -94526,7 +94575,7 @@
         v = n(52038),
         x = n(61859),
         f = n(78327),
-        y = n(69620);
+        y = n(84547);
       function D(e) {
         const { appid: t, className: n, bTextMode: a } = e,
           r = (0, p.$5)(t),

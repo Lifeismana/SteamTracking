@@ -648,15 +648,15 @@
       }
       var _;
       !(function (_) {
-        (_.RespondToClanInvite = function (_, _) {
-          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _), _, {
+        (_.RespondToClanInvite = function (_, _, _) {
+          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _) {
+          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _, _) {
             return _.SendMsg(
               "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -664,10 +664,10 @@
               },
             );
           }),
-          (_.GetPartnerEventsByBuildIDRange = function (_, _) {
+          (_.GetPartnerEventsByBuildIDRange = function (_, _, _) {
             return _.SendMsg(
               "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -1309,17 +1309,17 @@
       }
       var _;
       !(function (_) {
-        (_.GetLists = function (_, _) {
-          return _.SendMsg("StoreCuration.GetLists#1", (0, _._)(_, _), _, {
+        (_.GetLists = function (_, _, _) {
+          return _.SendMsg("StoreCuration.GetLists#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetListDetails = function (_, _) {
+          (_.GetListDetails = function (_, _, _) {
             return _.SendMsg(
               "StoreCuration.GetListDetails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2797,16 +2797,21 @@
         }
       }
       !(function (_) {
-        (_.SetDevPageLink = function (_, _) {
-          return _.SendMsg("StoreCatalog.SetDevPageLink#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-            eWebAPIKeyRequirement: 2,
-          });
+        (_.SetDevPageLink = function (_, _, _) {
+          return _.SendMsg(
+            "StoreCatalog.SetDevPageLink#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            },
+          );
         }),
-          (_.GetDevPageLinks = function (_, _) {
+          (_.GetDevPageLinks = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPageLinks#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2815,20 +2820,20 @@
               },
             );
           }),
-          (_.GetDevPageAllAppsLinked = function (_, _) {
+          (_.GetDevPageAllAppsLinked = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPageAllAppsLinked#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetDevPagesForPartner = function (_, _) {
+          (_.GetDevPagesForPartner = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPagesForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -2987,7 +2992,7 @@
             _ & _._._ && _.push(_._._),
             _ & _._._ && _.push(_._._);
           let _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("clan_account_id", this.GetClanAccountID().toString()),
             _.append("accountflags", JSON.stringify(_));
           let _ = await _().post(_, _);
@@ -3644,7 +3649,7 @@
                   __webpack_require__.ConvertTo64BitString()) +
               (_ ? "/unfolloworunignoreevent" : "/followorignoreevent"),
             _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("ignore", "" + _),
             _.append("gid", _),
             _.append("notification_flag", "" + _),
@@ -3719,7 +3724,7 @@
                     "updated/ajaxrateupdate/" +
                     _.AnnouncementGID,
               _ = new URLSearchParams();
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
               _.append("voteup", _ ? "1" : "0"),
               _.append("clanid", "" + _.clanSteamID.GetAccountID()),
               _.append("ajax", "1");

@@ -175,7 +175,7 @@
                 const s = new FormData();
                 s.append("appid", "" + t),
                   s.append("status_text", a),
-                  s.append("sessionid", T.TS.SESSIONID);
+                  s.append("sessionid", (0, T.KC)());
                 const n = await E().post(N, s, { withCredentials: !0 });
                 if (
                   200 != n.status ||

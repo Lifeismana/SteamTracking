@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Αυτή η καταχώριση δεν είναι πλέον διαθέσιμη",
     "Listing_NotAvailable_Short": "Μη διαθέσιμη",
     "Listing_NotAvailable_Long": "Αυτή η καταχώριση δεν είναι πλέον διαθέσιμη για αγορά.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Η καταχώρισή μου)",
     "BuyOrderDialog_Header": "Αγορά – %1$s",
     "BuyOrderDialog_Header_NoItem": "Τοποθέτηση παραγγελίας αγοράς",
     "BuyOrderDialog_BucketPicker_Label": "Ποιον τύπο αντικειμένου θέλετε να αγοράσετε;",

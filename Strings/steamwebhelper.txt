@@ -1230,7 +1230,6 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:11:38
 08bX
 0A/8
 0F`8
@@ -1408,6 +1407,7 @@ $d`D-laM
 11CefResponse
 11M|
 123456789
+12:11:12
 12CAddressInfo
 12CAutoReleaseI15CJSCallbackFuncE
 12CDynamicFuncIPFP11SDL_SurfaceP12SDL_IOStreambEE
@@ -2263,11 +2263,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
-3333
-4096
-5000
 32767
 32CefDevToolsMessageObserverCppToC
+3333
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2303,6 +2301,7 @@ $d`D-laM
 3pay
 3psC'dcG,
 3|rN>
+4096
 40CMsgSwapModeInputBindings_CModeInputSwap
 40CefSelectClientCertificateCallbackCToCpp
 41CMsgBrowserViewPostMessageToParentRequest
@@ -2338,6 +2337,7 @@ $d`D-laM
 4i5U6B738%9
 4tpD
 5-535;5A5Q5e5o5q5w5{5}5
+5000
 50CMsgControllerInputControllerActionLEDColorBinding
 52F*
 53CMsgControllerInputControllerActionCameraHorizonReset
@@ -6387,6 +6387,7 @@ IVRSteamPrivate_025
 IVRSteamPrivate_026
 IVRSteamPrivate_027
 IVRSteamPrivate_028
+IVRSteamPrivate_029
 IVRSystem_022
 I\nlQ
 I\tHA\t981G'dc
@@ -6639,7 +6640,7 @@ January
 Japanese
 JoinedGroup
 Joystick
-Jul  7 2026
+Jul 12 2026
 July
 June
 K'iche'
@@ -7179,6 +7180,7 @@ N2vr19IVRSteamPrivate_025E
 N2vr19IVRSteamPrivate_026E
 N2vr19IVRSteamPrivate_027E
 N2vr19IVRSteamPrivate_028E
+N2vr19IVRSteamPrivate_029E
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -7205,7 +7207,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_028EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_029EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -7235,6 +7237,7 @@ N5vrapi33CVRSteamPrivateAdapter_024_as_025E
 N5vrapi33CVRSteamPrivateAdapter_025_as_026E
 N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N5vrapi33CVRSteamPrivateAdapter_027_as_028E
+N5vrapi33CVRSteamPrivateAdapter_028_as_029E
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE

@@ -8,7 +8,8 @@
         Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
         "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
         "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
-        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
+        "Variant-basic": "AjHMNGqS56A5oRpfyYhEz",
+        "Variant-dark": "_29OIX_G3reF-rRPFaaV2mW",
         "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
         "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
         "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
@@ -371,7 +372,8 @@
             ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
         const { ref: _, node: _ } = (0, _._)(_);
         (0, _._)(_, _);
-        const _ = (0, _._)(_, _.props?.ref);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _.props?.ref, _);
         return (0, _.jsx)(_._.Provider, {
           value: _,
           children: _.cloneElement(_, {
@@ -1027,15 +1029,17 @@
           : _;
       }
       const _ = _;
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
-          size: _ = "3",
-          loading: _ = !0,
-          children: _,
-          color: _,
-          variant: _,
-          ..._
-        } = _;
+            size: _ = "3",
+            loading: _ = !0,
+            children: _,
+            color: _,
+            variant: _,
+            ..._
+          } = _,
+          _ = (0, _._)("LoadingSpinner", _);
         return _ || !_
           ? (0, _.jsxs)(_, {
               position: "relative",
@@ -1121,7 +1125,7 @@
         ],
         _ = function (_) {
           const {
-              variant: _ = "default",
+              variant: _,
               size: _ = "2",
               minWidth: _ = "fit-content",
               color: _,
@@ -1148,7 +1152,7 @@
               ..._(
                 {
                   ..._,
-                  variant: _,
+                  variant: (0, _._)("Button", _),
                   size: _,
                   minWidth: _,
                   color: _,
@@ -1171,7 +1175,7 @@
         },
         _ = function (_) {
           const {
-              variant: _ = "default",
+              variant: _,
               size: _ = "2",
               minWidth: _ = "fit-content",
               disabled: _,
@@ -1184,7 +1188,7 @@
               {
                 onClick: _ ? _ : void 0,
                 ..._,
-                variant: _,
+                variant: (0, _._)("Button", _),
                 size: _,
                 minWidth: _,
                 className: _()(_.Button, _ && _.Icon, _()),

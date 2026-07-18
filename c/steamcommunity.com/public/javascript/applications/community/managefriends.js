@@ -193,7 +193,7 @@
             _._.COMMUNITY_BASE_URL + "invites/ajaxgetall",
             {
               params: {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
             },
           );
@@ -208,7 +208,7 @@
         }
         async OnCreateInviteLink() {
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _.append("steamid_user", _._.steamid),
             _.append("duration", (2592e3).toString());
           const _ = await _().post(
@@ -249,7 +249,7 @@
         }
         async OnAddFriend(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0");
           try {
@@ -463,7 +463,7 @@
         }
         async OnActionClick(_) {
           const _ = new FormData();
-          _.append("sessionID", _._.SESSIONID),
+          _.append("sessionID", (0, _._)()),
             _.append("steamid", _),
             _.append("accept_invite", "0"),
             this.setState({

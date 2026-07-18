@@ -18,8 +18,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -35,7 +36,9 @@
             ),
             _.length,
             __webpack_require__?.find((_) => (0, _._)(_.reservation_state)),
-            __webpack_require__?._("chunkid"),
+            __webpack_require__?.find(
+              (_) => !!_.packageid && _.packageid === _?.reservation_package,
+            ),
           ]),
           _ = (0, _._)(_?.packageid),
           { data: _ } = (0, _._)(_);
@@ -55,8 +58,7 @@
                 : _._.Localize("#Reserationn_NoListJoined", _),
             });
         }
-        const _ =
-            (_ && _?.position_is_waitlist) || (!_ && _?.queue_in_waitlist),
+        const _ = (0, _._)(_, _),
           _ = _?.name;
         if (_) {
           if (_ && _)

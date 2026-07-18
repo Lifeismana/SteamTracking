@@ -293,9 +293,9 @@
         S = t(62641),
         v = t(35380),
         x = t(33924),
-        N = t.n(x),
+        C = t.n(x),
         j = t(18654),
-        C = t.n(j),
+        N = t.n(j),
         f = t(72860),
         F = t(76684),
         y = t(3088),
@@ -314,7 +314,7 @@
             bHidePrices: x,
             nSummaryMaxLength: j,
           } = e,
-          C = (0, p.Zj)(a.appid),
+          N = (0, p.Zj)(a.appid),
           f = c || (0, i.sfN)(d.TS.LANGUAGE),
           I =
             (0, o.m0)(
@@ -340,20 +340,20 @@
         }
         const [V, H] = (0, A.useState)(I);
         if (!a)
-          return (0, n.jsx)("div", { className: N().OtherEvents_EventCtn });
+          return (0, n.jsx)("div", { className: C().OtherEvents_EventCtn });
         const M = d.TS.NOW,
           G = a ? a.GetStartTimeAndDateUnixSeconds() : 0;
         let W = R;
         return (
           R && (R.length > k || E.length > k) && (W = void 0),
           (0, n.jsxs)("div", {
-            className: N().EventSizer,
+            className: C().EventSizer,
             children: [
               (0, n.jsxs)(l.tj, {
                 className: (0, T.A)(
-                  N().OtherEvents_EventCtn,
+                  C().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
-                  N().HoversEnabled,
+                  C().HoversEnabled,
                 ),
                 eventModel: a,
                 route: h || l.PH.k_eView,
@@ -362,54 +362,54 @@
                 children: [
                   (0, n.jsxs)("div", {
                     className: (0, T.A)(
-                      N().EventSummaryContainer,
-                      N().HideInWideMode,
+                      C().EventSummaryContainer,
+                      C().HideInWideMode,
                     ),
                     children: [
                       (0, n.jsx)("div", {
-                        className: N().EventSummaryType,
+                        className: C().EventSummaryType,
                         children: B,
                       }),
                       (0, n.jsx)("div", {
-                        className: N().EventSummaryText,
+                        className: C().EventSummaryText,
                         children: D,
                       }),
                     ],
                   }),
                   (0, n.jsx)("div", {
-                    className: N().OtherEvents_BGImage,
+                    className: C().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
                       backgroundImage: V ? `url(${(0, S.j3)(V)})` : "none",
                     },
                   }),
                   (0, n.jsxs)("div", {
-                    className: N().OtherEvents_ContentCtn,
+                    className: C().OtherEvents_ContentCtn,
                     children: [
                       (0, n.jsx)("div", {
                         className: (0, T.A)(
-                          N().OtherEvents_MainImageCtn,
-                          C && N().MaskImages,
+                          C().OtherEvents_MainImageCtn,
+                          N && C().MaskImages,
                         ),
                         children: (0, n.jsx)(y.c, {
                           rgSources: O,
                           onIncrementalError: (e, a, t) => {
                             t >= O.length && H(void 0), H(O[t + 1]);
                           },
-                          className: N().OtherEvents_MainImage,
+                          className: C().OtherEvents_MainImage,
                           alt: "",
                         }),
                       }),
                       (0, n.jsxs)("div", {
-                        className: N().OtherEvents_TextCtn,
+                        className: C().OtherEvents_TextCtn,
                         children: [
                           (0, n.jsx)("div", {
-                            className: N().OtherEvents_TextTitle,
+                            className: C().OtherEvents_TextTitle,
                             children: E,
                           }),
                           Boolean(W) &&
                             (0, n.jsx)("div", {
-                              className: N().OtherEvents_SubTitle,
+                              className: C().OtherEvents_SubTitle,
                               children: W,
                             }),
                           (0, n.jsxs)(w.s, {
@@ -419,15 +419,15 @@
                             children: [
                               (0, n.jsx)("div", {
                                 className: (0, T.A)(
-                                  N().EventType,
-                                  N().ShowInWideMode,
+                                  C().EventType,
+                                  C().ShowInWideMode,
                                 ),
                                 children: B,
                               }),
                               Boolean(G > M)
                                 ? (0, n.jsx)("div", {
                                     className: (0, T.A)(
-                                      N().UpcomingCtn,
+                                      C().UpcomingCtn,
                                       "UpcomingCtn",
                                     ),
                                     children: (0, n.jsx)(F.K4, {
@@ -446,8 +446,8 @@
                           }),
                           (0, n.jsx)("div", {
                             className: (0, T.A)(
-                              N().EventSummaryText,
-                              N().ShowInWideMode,
+                              C().EventSummaryText,
+                              C().ShowInWideMode,
                             ),
                             children: D,
                           }),
@@ -476,7 +476,7 @@
         return (0, n.jsx)(_.A, {
           appID: a,
           children: (0, n.jsxs)(r.Z, {
-            className: (0, T.A)(N().AppCapsuleCtn, "AppCapsuleCtn"),
+            className: (0, T.A)(C().AppCapsuleCtn, "AppCapsuleCtn"),
             ...(0, f.S)(i, d, p, !1),
             children: [
               (0, n.jsx)(c.Q, {
@@ -486,7 +486,7 @@
                   style: { minWidth: "320px" },
                 },
                 children: (0, n.jsx)("img", {
-                  className: (0, T.A)(N().AppCapsuleImage, N().CapsuleShadow),
+                  className: (0, T.A)(C().AppCapsuleImage, C().CapsuleShadow),
                   src: (0, m.b0)(o, "small_capsule"),
                   alt: i.name,
                 }),
@@ -494,24 +494,24 @@
               Boolean(!t && !i.is_free) &&
                 (0, n.jsxs)("span", {
                   className: (0, T.A)(
-                    N().AppCapsulePrice,
-                    Boolean(l?.discount_pct) ? C().Discounted : "",
+                    C().AppCapsulePrice,
+                    Boolean(l?.discount_pct) ? N().Discounted : "",
                   ),
                   children: [
                     Boolean(l?.discount_pct && g) &&
                       (0, n.jsx)("div", {
-                        className: C().DiscountIconCtn,
+                        className: N().DiscountIconCtn,
                         children: (0, n.jsx)(I.XH_, {}),
                       }),
                     Boolean(l?.discount_pct && !g) &&
                       (0, n.jsx)("span", {
-                        className: C().StoreSaleDiscountBox,
+                        className: N().StoreSaleDiscountBox,
                         children: `-${l?.discount_pct}%`,
                       }),
                     l &&
                       l.final_price_in_cents &&
                       (0, n.jsx)("span", {
-                        className: C().StoreSalePriceBox,
+                        className: N().StoreSalePriceBox,
                         children: l.formatted_final_price,
                       }),
                   ],
@@ -635,7 +635,7 @@
       class d extends r.ZQ {
         async DeleteOldAnnouncement(e, a) {
           let t = new URLSearchParams();
-          t.append("sessionid", i.TS.SESSIONID);
+          t.append("sessionid", (0, i.KC)());
           let n =
               i.TS.COMMUNITY_BASE_URL +
               "/gid/" +
@@ -782,7 +782,7 @@
     },
     14326: (e, a, t) => {
       "use strict";
-      t.d(a, { _: () => j, r: () => N });
+      t.d(a, { _: () => j, r: () => C });
       var n = t(7850),
         s = t(48210),
         i = t(39777),
@@ -802,7 +802,7 @@
         S = t(61859),
         v = t(78327),
         x = t(84547);
-      function N(e) {
+      function C(e) {
         const { appid: a, className: t, bTextMode: s } = e,
           r = (0, m.$5)(a),
           { data: o } = (0, i.J$)(r),
@@ -821,7 +821,7 @@
           {
             appid: i,
             bIsFree: u,
-            bIsComingSoon: N,
+            bIsComingSoon: C,
             className: j,
             bTextMode: f,
           } = e,
@@ -830,8 +830,8 @@
           I = (0, l.bB)(i),
           { mutateAsync: T } = (0, d.s)(i, !I, (0, _.L3)(s)),
           { elDialogElement: b, fnShowLogonDialog: k } = (0, x.lS)();
-        if (y || (!N && u))
-          return u ? (0, n.jsx)(C, { possibleDemoAppID: i }) : null;
+        if (y || (!C && u))
+          return u ? (0, n.jsx)(N, { possibleDemoAppID: i }) : null;
         let E = null;
         return (
           a && !f
@@ -858,7 +858,7 @@
           })
         );
       }
-      function C(e) {
+      function N(e) {
         const { possibleDemoAppID: a, className: t } = e,
           r = (0, m.$5)(a),
           { data: o } = (0, i.J$)(r);
@@ -909,9 +909,9 @@
         S = t(52038),
         v = t(74568),
         x = t(738),
-        N = t(42457),
+        C = t(42457),
         j = t(82477),
-        C = t(75682),
+        N = t(75682),
         f = t(22797),
         F = t(55263),
         y = t(37085),
@@ -947,7 +947,7 @@
           });
         let c = (0, A.we)("#Steamawards_Nominate_ThisYear");
         return (
-          a.flag == C.Xs.bV &&
+          a.flag == N.Xs.bV &&
             (c = (0, A.we)("#Steamawards_Nominate_PastYear")),
           (0, n.jsxs)("div", {
             className: l().NominationPickerCtn,
@@ -987,7 +987,7 @@
                 children: (0, n.jsx)(ee, {
                   unAppID: _.Fq,
                   eSteamAwardCategoryID: a.voteid,
-                  eNominatonSource: C.Ji.HW,
+                  eNominatonSource: N.Ji.HW,
                   fnShowPicker: t,
                 }),
               }),
@@ -1027,7 +1027,7 @@
                     }),
                     (0, n.jsx)(J, {
                       eSteamAwardCategoryID: a.voteid,
-                      eNominatonSource: C.Ji.MU,
+                      eNominatonSource: N.Ji.MU,
                       rgGameCarouselItems: d,
                     }),
                   ],
@@ -1058,7 +1058,7 @@
                 s.data?.suggested_apps &&
                   (0, n.jsx)(J, {
                     eSteamAwardCategoryID: a.voteid,
-                    eNominatonSource: C.Ji.qP,
+                    eNominatonSource: N.Ji.qP,
                     rgGameCarouselItems: s.data.suggested_apps.map((e) => ({
                       appID: e.appid,
                     })),
@@ -1084,7 +1084,7 @@
             (0, n.jsx)(ee, {
               unAppID: _.Fq,
               eSteamAwardCategoryID: a,
-              eNominatonSource: C.Ji.HW,
+              eNominatonSource: N.Ji.HW,
               fnShowPicker: t,
             }),
           ],
@@ -1118,7 +1118,7 @@
                             K,
                             {
                               eSteamAwardCategoryID: t.voteid,
-                              eNominatonSource: C.Ji.RU,
+                              eNominatonSource: N.Ji.RU,
                               appSuggestion: e,
                             },
                             e.id,
@@ -1290,13 +1290,13 @@
             a === _.Fq && i && i(!1);
           }, [i, a]),
           x = (0, _.$d)(a, t, s, h, p);
-        let N = (0, A.we)("#Steamawards_Nominate"),
+        let C = (0, A.we)("#Steamawards_Nominate"),
           j = null;
         return (
           m
-            ? ((N = (0, A.we)("#Steamawards_Skip_Btn")),
+            ? ((C = (0, A.we)("#Steamawards_Skip_Btn")),
               (j = (0, n.jsx)(w.MOk, {})))
-            : u && (N = (0, A.we)("#Steamawards_Nominated")),
+            : u && (C = (0, A.we)("#Steamawards_Nominated")),
           (0, n.jsxs)(g.$n, {
             onClick: (e) => {
               u
@@ -1308,7 +1308,7 @@
                     );
             },
             className: (0, S.A)(l().NominateGameButton, u && l().Nominated),
-            children: [j, N],
+            children: [j, C],
           })
         );
       }
@@ -1700,7 +1700,7 @@
         );
       }
       function we() {
-        const e = (0, _.ed)(N.GPz.Mt);
+        const e = (0, _.ed)(C.GPz.Mt);
         let a = 0;
         const t = e.data?.quests?.map(
           (e) => (
@@ -2033,7 +2033,7 @@
           }),
         });
       }
-      function Ne(e) {
+      function Ce(e) {
         const { closeModal: a, nYear: t } = e,
           s = (0, _.np)(),
           i = (0, _._C)(),
@@ -2117,7 +2117,7 @@
                   e.preventDefault(),
                     e.stopPropagation(),
                     (function (e, a) {
-                      (0, x.pg)((0, n.jsx)(Ne, { nYear: e }), a);
+                      (0, x.pg)((0, n.jsx)(Ce, { nYear: e }), a);
                     })(a, (0, h.uX)(e));
                 },
                 children: [
@@ -2136,8 +2136,8 @@
               }),
             });
       }
-      var Ce = t(4775),
-        fe = t.n(Ce),
+      var Ne = t(4775),
+        fe = t.n(Ne),
         Fe = t(60383),
         ye = t(60014),
         Ie = t(84811),
@@ -2371,8 +2371,8 @@
           u = r.useContext(_.AD),
           [h, w] = r.useState([]),
           [v, x] = r.useState(0),
-          [N, j] = r.useState(!1),
-          [C, y] = r.useState(0),
+          [C, j] = r.useState(!1),
+          [N, y] = r.useState(0),
           [I, T] = r.useState(!l && !i),
           [b, k] = r.useState(),
           [E, Q] = r.useState(669),
@@ -2423,11 +2423,11 @@
               })();
           }, [a.app_discounts, H, h]);
         const M = r.useCallback(() => {
-            if (!C) {
+            if (!N) {
               let e = d.current + 1;
               e >= h.length && (e = 0), (d.current = e), x(h[d.current]);
             }
-          }, [h, C]),
+          }, [h, N]),
           G = r.useCallback((e) => {
             j(e);
           }, []),
@@ -2463,9 +2463,9 @@
             (0, n.jsx)(
               He,
               {
-                bHoveringApp: e == C,
+                bHoveringApp: e == N,
                 unAppID: e,
-                bPlayMicrotrailers: N,
+                bPlayMicrotrailers: C,
                 bCurrentlyActive: v === e,
                 fnOnVideoEnd: M,
               },
@@ -2488,7 +2488,7 @@
                 className: (0, S.A)(
                   fe().SteamAwardCategory,
                   l && fe().CategoryVoted,
-                  N && fe().Active,
+                  C && fe().Active,
                 ),
                 children: [
                   (0, n.jsx)("a", {
@@ -2694,7 +2694,7 @@
                 );
           }, [m, h]);
         if (!u) return null;
-        const N = m
+        const C = m
           ? (0, A.we)("#Steamawards_Voting_Action_Voted")
           : (0, A.we)("#Steamawards_Voting_Action_Vote");
         return (0, n.jsxs)(c.Z, {
@@ -2723,7 +2723,7 @@
               (0, n.jsx)(g.$n, {
                 onClick: x,
                 className: fe().ActionButton,
-                children: N,
+                children: C,
               }),
             v &&
               (0, n.jsx)("div", {

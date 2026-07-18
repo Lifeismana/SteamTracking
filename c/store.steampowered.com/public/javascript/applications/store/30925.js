@@ -4590,20 +4590,20 @@
       }
       var _, _;
       !(function (_) {
-        (_.CreateFamilyGroup = function (_, _) {
+        (_.CreateFamilyGroup = function (_, _, _) {
           return _.SendMsg(
             "FamilyGroups.CreateFamilyGroup#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
             },
           );
         }),
-          (_.GetFamilyGroup = function (_, _) {
+          (_.GetFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4611,10 +4611,10 @@
               },
             );
           }),
-          (_.GetFamilyGroupForUser = function (_, _) {
+          (_.GetFamilyGroupForUser = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetFamilyGroupForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4622,90 +4622,90 @@
               },
             );
           }),
-          (_.ModifyFamilyGroupDetails = function (_, _) {
+          (_.ModifyFamilyGroupDetails = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ModifyFamilyGroupDetails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.InviteToFamilyGroup = function (_, _) {
+          (_.InviteToFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.InviteToFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ConfirmInviteToFamilyGroup = function (_, _) {
+          (_.ConfirmInviteToFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ConfirmInviteToFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ResendInvitationToFamilyGroup = function (_, _) {
+          (_.ResendInvitationToFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ResendInvitationToFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.JoinFamilyGroup = function (_, _) {
+          (_.JoinFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.JoinFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ConfirmJoinFamilyGroup = function (_, _) {
+          (_.ConfirmJoinFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ConfirmJoinFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RemoveFromFamilyGroup = function (_, _) {
+          (_.RemoveFromFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RemoveFromFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.CancelFamilyGroupInvite = function (_, _) {
+          (_.CancelFamilyGroupInvite = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.CancelFamilyGroupInvite#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUsersSharingDevice = function (_, _) {
+          (_.GetUsersSharingDevice = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetUsersSharingDevice#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4713,50 +4713,50 @@
               },
             );
           }),
-          (_.DeleteFamilyGroup = function (_, _) {
+          (_.DeleteFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.DeleteFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UndeleteFamilyGroup = function (_, _) {
+          (_.UndeleteFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.UndeleteFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPlaytimeSummary = function (_, _) {
+          (_.GetPlaytimeSummary = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetPlaytimeSummary#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RequestPurchase = function (_, _) {
+          (_.RequestPurchase = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RequestPurchase#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPurchaseRequests = function (_, _) {
+          (_.GetPurchaseRequests = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetPurchaseRequests#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4764,36 +4764,41 @@
               },
             );
           }),
-          (_.RespondToRequestedPurchase = function (_, _) {
+          (_.RespondToRequestedPurchase = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RespondToRequestedPurchase#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetChangeLog = function (_, _) {
-            return _.SendMsg("FamilyGroups.GetChangeLog#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetChangeLog = function (_, _, _) {
+            return _.SendMsg(
+              "FamilyGroups.GetChangeLog#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.SetFamilyCooldownOverrides = function (_, _) {
+          (_.SetFamilyCooldownOverrides = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.SetFamilyCooldownOverrides#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetSharedLibraryApps = function (_, _) {
+          (_.GetSharedLibraryApps = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetSharedLibraryApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4801,20 +4806,20 @@
               },
             );
           }),
-          (_.SetPreferredLender = function (_, _) {
+          (_.SetPreferredLender = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.SetPreferredLender#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetPreferredLenders = function (_, _) {
+          (_.GetPreferredLenders = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetPreferredLenders#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4822,20 +4827,20 @@
               },
             );
           }),
-          (_.ForceAcceptInvite = function (_, _) {
+          (_.ForceAcceptInvite = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ForceAcceptInvite#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetInviteCheckResults = function (_, _) {
+          (_.GetInviteCheckResults = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.GetInviteCheckResults#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -4843,20 +4848,20 @@
               },
             );
           }),
-          (_.ClearCooldownSkip = function (_, _) {
+          (_.ClearCooldownSkip = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.ClearCooldownSkip#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.RollbackFamilyGroup = function (_, _) {
+          (_.RollbackFamilyGroup = function (_, _, _) {
             return _.SendMsg(
               "FamilyGroups.RollbackFamilyGroup#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,

@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "此上架物品已下架",
     "Listing_NotAvailable_Short": "不可购买",
     "Listing_NotAvailable_Long": "此上架物品已不可购买。",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "（我的上架物品）",
     "BuyOrderDialog_Header": "购买 - %1$s",
     "BuyOrderDialog_Header_NoItem": "提交订购单",
     "BuyOrderDialog_BucketPicker_Label": "您想要购买哪种类型的物品？",

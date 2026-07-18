@@ -1821,6 +1821,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -1872,6 +1873,32 @@ var CLSTAMP = "steamdb";
               ref: _,
               node: _,
             }
+          );
+        }
+        function _(_) {
+          const _ = _.useRef(null),
+            _ = _.useRef(null);
+          _.useEffect(
+            () => () => {
+              __webpack_require__.current?.();
+            },
+            [],
+          );
+          return _.useCallback(
+            (_) => {
+              _.current !== _ &&
+                ((_.current = _),
+                __webpack_require__.current?.(),
+                (_.current = null),
+                _ &&
+                  (_.current = (0, _._)(
+                    _,
+                    (_) =>
+                      !(!_ || "none" == _.GetFocusable()) &&
+                      _.BTakeFocus(void 0, _.detail.button),
+                  )));
+            },
+            [_],
           );
         }
         function _(_) {
@@ -2054,7 +2081,8 @@ var CLSTAMP = "steamdb";
               ? (_.tabIndex = _.tabIndex || 0)
               : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
             (0, _._)(_, _);
-          const _ = (0, _._)(_, _),
+          const _ = _(_),
+            _ = (0, _._)(_, _, _),
             _ = (0, _.useContext)(_)?.Component;
           let _ = {
             ..._,
@@ -2282,7 +2310,8 @@ var CLSTAMP = "steamdb";
             _ = (0, _._)();
           (_.className = _()(_.className, "Panel", _ && "Focusable")),
             (0, _._)(_, _);
-          const _ = (0, _._)(_, _.ref);
+          const _ = (0, _._)(_),
+            _ = (0, _._)(_, _.ref, _);
           (!_.focusable && !_.focusableIfEmpty) ||
             (_ && _.Tree.BUseVirtualFocus()) ||
             (_.tabIndex = _.tabIndex || 0),
@@ -2308,6 +2337,7 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -2400,6 +2430,9 @@ var CLSTAMP = "steamdb";
         }
         function _(_, _) {
           return _(_, "vgp_onblur", _);
+        }
+        function _(_, _) {
+          return _(_, "vgp_requestfocus", _(_));
         }
         function _(_, _, _) {
           let _ = _;
@@ -14829,6 +14862,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         function _(_, _) {
           let _ = _?.parentElement;
@@ -17808,9 +17842,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 7 2026 : 12:48:56",
-                BUILD_TIME_UTC: "Jul 7 2026 : 19:48:56",
-                BUILD_RTIME_UTC: 1783453736,
+                BUILD_TIME_LOCAL: "Jul 17 2026 : 14:04:44",
+                BUILD_TIME_UTC: "Jul 17 2026 : 21:04:44",
+                BUILD_RTIME_UTC: 1784322284,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -31221,9 +31255,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 7 2026 : 12:48:56",
-                    BUILD_TIME_UTC: "Jul 7 2026 : 19:48:56",
-                    BUILD_RTIME_UTC: 1783453736,
+                    BUILD_TIME_LOCAL: "Jul 17 2026 : 14:04:44",
+                    BUILD_TIME_UTC: "Jul 17 2026 : 21:04:44",
+                    BUILD_RTIME_UTC: 1784322284,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -31944,7 +31978,7 @@ var CLSTAMP = "steamdb";
         3356: "f1060d832dfd2513cd22",
         3366: "d7e43d3583690ec0e1f4",
         3473: "aa2e2c813e7588319881",
-        3569: "d093f262bbc0f95fd9e5",
+        3569: "ec0e08c3064ef9b83f47",
         3583: "22aaaa36100912e3ed08",
         3585: "7848ae778b003c5839b0",
         3589: "fd66d8f7b977b24bb0d2",
@@ -32145,7 +32179,7 @@ var CLSTAMP = "steamdb";
         9779: "59ef76674166d4b9e52e",
         9845: "13b5b6656f416f517b33",
         9853: "cb23ac97c5ef25298c13",
-        9858: "690ff802388bdaf52a0c",
+        9858: "0acb87de4b4dd6ca79b5",
         9861: "d075ad8e71f05bafe846",
         9862: "51ef07edcc880ce94847",
         9869: "87497576748f35eb5b06",

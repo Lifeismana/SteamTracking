@@ -28,7 +28,6 @@
         return _
           ? (0, _.jsx)(_.default, {
               results: _,
-              bIncludeSteamOS: !0,
             })
           : null;
       }

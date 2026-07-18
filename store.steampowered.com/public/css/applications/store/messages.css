@@ -1284,7 +1284,9 @@ A:active {
 ._3cEK5JKL6FSqY5FgD_4hFA {
   opacity: 1;
   transition: opacity 0.2s ease 0.1s;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 4px;
   right: 4px;
   width: 44px;
@@ -1293,6 +1295,85 @@ A:active {
   border-radius: 24px;
   background-color: var(--gpBackground-DarkMedium) !important;
   backdrop-filter: blur(24px);
+}
+._33rQKLUJRiKbr34oQgUJSd {
+  height: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+._33rQKLUJRiKbr34oQgUJSd ._1POD5IsW1vYfv9B_TuSiBd {
+  display: flex;
+}
+._33rQKLUJRiKbr34oQgUJSd ._1POD5IsW1vYfv9B_TuSiBd > svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  color: #fff;
+}
+._33rQKLUJRiKbr34oQgUJSd
+  ._1POD5IsW1vYfv9B_TuSiBd._3xTrz2wDDtzNFR58CQfSNa
+  > svg {
+  width: 15px;
+  height: 15px;
+}
+._33rQKLUJRiKbr34oQgUJSd
+  ._1POD5IsW1vYfv9B_TuSiBd._1z6ASwnrVeCtYcPfPjiZZd
+  > svg {
+  width: 16px;
+  height: 16px;
+}
+._33rQKLUJRiKbr34oQgUJSd
+  ._1POD5IsW1vYfv9B_TuSiBd._1FiaJi5I3_8ky2ppYqGqfr
+  > svg {
+  width: 16px;
+  height: 16px;
+  margin-top: -2px;
+}
+.GFz2Vhq20J9x6lqpaKy2G {
+  height: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.GFz2Vhq20J9x6lqpaKy2G._39zOL0i8BdQ_RV-xE0zXDz {
+  height: 100%;
+  overflow: hidden;
+}
+._2xju2qqP5744ItNt2uvbdT,
+._28xj3TU4bHvjyeVhlzCmRV {
+  display: flex;
+}
+._39zOL0i8BdQ_RV-xE0zXDz ._2xju2qqP5744ItNt2uvbdT,
+._39zOL0i8BdQ_RV-xE0zXDz ._28xj3TU4bHvjyeVhlzCmRV {
+  height: 100%;
+  width: unset;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+._2xju2qqP5744ItNt2uvbdT > svg,
+._28xj3TU4bHvjyeVhlzCmRV > svg {
+  width: 20px;
+  height: 20px;
+}
+._39zOL0i8BdQ_RV-xE0zXDz ._2xju2qqP5744ItNt2uvbdT > svg,
+._39zOL0i8BdQ_RV-xE0zXDz ._28xj3TU4bHvjyeVhlzCmRV > svg {
+  height: 100%;
+  width: 100%;
+}
+._3-OPVQMD-qkvAyt3Jntn9t {
+  color: #59bf40;
+}
+._1EMxxDePjZh_-E7AH0yDym {
+  color: #ffc82c;
+}
+._2qziiy9xhD4mLc1OgxQAAy,
+.I6YFAbL_5IYOTtedVwwPV {
+  color: #dcdedf;
+}
+._2fVV0WviM21gsBt1Iz-Htx {
+  color: #199fff;
 }
 ._1ubg0tXv_umwQZUB_0jDRE {
   width: 100%;
@@ -3257,7 +3338,7 @@ div.StoreSaleWidgetTitle {
 ._2WV2bUC89j63V-9SIJ7nsO {
   position: absolute;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   max-width: 80%;
   padding: 4px 8px;
   background: linear-gradient(
@@ -3319,7 +3400,7 @@ div.StoreSaleWidgetTitle {
   min-width: 84px;
 }
 .HqVrl-7SIPNdZd1uHcMK1 {
-  padding: 0 0 0 8px;
+  padding-inline-start: 8px;
   transform: translateX(0px);
 }
 .HqVrl-7SIPNdZd1uHcMK1 .SliderTrack {

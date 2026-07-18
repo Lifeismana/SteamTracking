@@ -517,9 +517,14 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   padding-right: var(--spacing-3);
   --font-size: var(--text-size-7);
 }
-._0BH1ydyFmSnUvoVK2hIc:where(.RttCMpsTJp47IkzXpZYvA) {
+._0BH1ydyFmSnUvoVK2hIc:where(.AjHMNGqS56A5oRpfyYhEz) {
   --background: var(--color-accent-8);
   --hover-background: var(--color-accent-10);
+  color: var(--color-accent-contrast);
+}
+._0BH1ydyFmSnUvoVK2hIc:where(._29OIX_G3reF-rRPFaaV2mW) {
+  --background: var(--color-accent-2);
+  --hover-background: var(--color-accent-6);
   color: var(--color-accent-contrast);
 }
 ._0BH1ydyFmSnUvoVK2hIc:where(.RmQIHBmo3QqjBtWih540t) {

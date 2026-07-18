@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "이 아이템은 더 이상 구매할 수 없습니다.",
     "Listing_NotAvailable_Short": "구매 불가",
     "Listing_NotAvailable_Long": "이 아이템은 더 이상 구매할 수 없습니다.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(내 목록)",
     "BuyOrderDialog_Header": "구매 주문 - %1$s",
     "BuyOrderDialog_Header_NoItem": "구매 주문",
     "BuyOrderDialog_BucketPicker_Label": "어떤 유형의 제품을 구매 주문할까요?",

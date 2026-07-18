@@ -54,28 +54,28 @@
         s = t(55348),
         o = t(11526),
         r = t(75659),
-        c = t(64238),
-        a = t.n(c),
-        l = t(65274);
+        a = t(64238),
+        l = t.n(a),
+        c = t(65274);
       function d(e) {
         const { as: n = "span", ref: t, className: s, ...r } = e,
-          c = n;
-        return (0, i.jsx)(c, {
+          a = n;
+        return (0, i.jsx)(a, {
           ref: t,
-          ...(0, o.mz)({ ...r, className: a()(l.Text, s) }, h),
+          ...(0, o.mz)({ ...r, className: l()(c.Text, s) }, h),
         });
       }
       const p = [
           {
             prop: "weight",
             responsive: !0,
-            className: l.TextWeight,
+            className: c.TextWeight,
             cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: l.TextAlign,
+            className: c.TextAlign,
             cssProperty: "--text-align",
           },
           {
@@ -94,16 +94,16 @@
               (0, o.To)((0, s.I)(n.color, t) ?? "text-body", e),
             ],
           },
-          { prop: "truncate", className: l.Truncate },
+          { prop: "truncate", className: c.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: l.LineClamp,
+            className: c.LineClamp,
             cssProperty: "--line-clamp",
           },
           {
             prop: "whiteSpace",
-            className: l.WhiteSpace,
+            className: c.WhiteSpace,
             cssProperty: "--white-space",
           },
         ],
@@ -113,31 +113,46 @@
           {
             prop: "size",
             responsive: !0,
-            className: (e) => l[`TextSize-${e}`],
+            className: (e) => c[`TextSize-${e}`],
           },
         ];
     },
     28491: (e, n, t) => {
       "use strict";
-      t.d(n, { Y: () => l });
+      t.d(n, { W: () => h, Y: () => d });
       var i = t(7850),
         s = t(50122),
         o = t(20187),
         r = t(11526),
-        c = t(8527),
-        a = t(45699);
-      function l(e) {
-        const { underline: n = "auto", focusable: t, navProps: o, ...l } = e,
-          p = t ?? o?.focusable ?? !!l.href,
-          h = (0, r.mz)({ ...l, underline: n, className: s.TextLink }, d);
-        return c.TS.IN_GAMEPADUI && (p || o)
-          ? (0, i.jsx)(a.Ii, { ...h, ...(o || {}), focusable: p })
+        a = t(8527),
+        l = t(45699),
+        c = t(39479);
+      function d(e) {
+        const { underline: n = "auto", focusable: t, navProps: o, ...c } = e,
+          d = t ?? o?.focusable ?? !!c.href,
+          h = (0, r.mz)({ ...c, underline: n, className: s.TextLink }, p);
+        return a.TS.IN_GAMEPADUI && (d || o)
+          ? (0, i.jsx)(l.Ii, { ...h, ...(o || {}), focusable: d })
           : (0, i.jsx)("a", { ...h });
       }
-      const d = [
+      const p = [
         ...o.Ae,
         { prop: "underline", className: (e) => s[`Underline-${e}`] },
       ];
+      function h(e) {
+        const { underline: n = "auto", focusable: t, navProps: o, ...l } = e,
+          d = t ?? o?.focusable ?? !!l.onClick,
+          h = (0, i.jsx)("span", {
+            role: "button",
+            ...(0, r.mz)(
+              { ...l, underline: n, className: s.TextLinkButton },
+              p,
+            ),
+          });
+        return a.TS.IN_GAMEPADUI && (d || o)
+          ? (0, i.jsx)(c.J, { ...(o || {}), focusable: d, children: h })
+          : h;
+      }
     },
     84547: (e, n, t) => {
       "use strict";
@@ -146,16 +161,16 @@
         s = t(64753),
         o = t(8527),
         r = t(78686),
-        c = t(78395),
-        a = t(21869),
-        l = t(67936),
+        a = t(78395),
+        l = t(21869),
+        c = t(67936),
         d = t(53965);
       function p(e) {
         const { closeModal: n, strDescOverride: t } = e;
-        return (0, i.jsx)(c.o0, {
-          strTitle: l.F5.Localize("#LoginRedirect_Dialog_Title"),
+        return (0, i.jsx)(a.o0, {
+          strTitle: c.F5.Localize("#LoginRedirect_Dialog_Title"),
           strDescription:
-            t || l.F5.Localize("#LoginRedirect_Dialog_Description"),
+            t || c.F5.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: n,
           strOKButtonText: r.Z.Localize("#Button_OK"),
           onOK: () => {
@@ -166,7 +181,7 @@
       function h(e) {
         const [n, t, o] = (0, s.uD)();
         return {
-          elDialogElement: (0, i.jsx)(a.E, {
+          elDialogElement: (0, i.jsx)(l.E, {
             active: n,
             children: (0, i.jsx)(p, { closeModal: o, strDescOverride: e }),
           }),
@@ -231,223 +246,15 @@
         if (s[e]) return s[e]();
       });
     },
-    62381: (e, n, t) => {
-      "use strict";
-      t.d(n, { W: () => c });
-      var i = t(37085),
-        s = t(30470);
-      let o = { success: !0, result: i.R };
-      class r {
-        m_mapWaitingCallbacks = new Map();
-        m_socket;
-        m_iCallSeq = 1;
-        m_bReady = !1;
-        m_bClientConnectionFailed = !1;
-        m_bSecurityException = !1;
-        m_promiseConnect;
-        m_ClientInfo = {
-          ulVersion: "",
-          bFriendsUIEnabled: !1,
-          unAccountID: 0,
-          rgSupportedMessages: [],
-        };
-        constructor() {}
-        get ClientInfo() {
-          return this.m_ClientInfo;
-        }
-        get ready() {
-          return this.m_bReady;
-        }
-        get browser_supported() {
-          return !this.m_bSecurityException;
-        }
-        get connected_to_client() {
-          return !!this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
-        }
-        SendMsgAndAwaitResponse(e) {
-          return new Promise((n, t) => {
-            let i = this.m_iCallSeq++;
-            this.BSendMsg(e, i)
-              ? this.m_mapWaitingCallbacks.set(i, {
-                  iSeq: i,
-                  fnCallback: n,
-                  fnError: t,
-                })
-              : t();
-          });
-        }
-        BSendMsg(e, n) {
-          if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
-            return !1;
-          let t = Object.assign({}, e, {
-            universe: s.TS.EUNIVERSE,
-            accountid: s.iA.accountid,
-          });
-          void 0 !== n && (t.sequenceid = n);
-          try {
-            return this.m_socket.send(JSON.stringify(t)), !0;
-          } catch (e) {
-            return !1;
-          }
-        }
-        OnSocketMessage(e) {
-          try {
-            let n = JSON.parse(e.data);
-            if (n.sequenceid) {
-              let e = this.m_mapWaitingCallbacks.get(n.sequenceid);
-              if (e)
-                return (
-                  this.m_mapWaitingCallbacks.delete(n.sequenceid),
-                  void e.fnCallback(n)
-                );
-            }
-          } catch (e) {
-            console.error("exception parsing response", e);
-          }
-        }
-        Connect() {
-          if (this.m_bReady && this.m_socket?.readyState === WebSocket.OPEN)
-            return Promise.resolve();
-          if (this.m_promiseConnect) return this.m_promiseConnect;
-          let e = new Promise((e, n) => {
-            try {
-              this.m_socket = new WebSocket(
-                "ws://127.0.0.1:27060/clientsocket/",
-              );
-            } catch (e) {
-              return (this.m_bSecurityException = !0), void n(e);
-            }
-            (this.m_socket.onerror = (e) => {
-              n();
-            }),
-              (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
-              (this.m_socket.onopen = () => {
-                this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-                  .then((t) => {
-                    t.success == i.R
-                      ? ((this.m_ClientInfo.ulVersion = t.clientversion),
-                        (this.m_ClientInfo.bFriendsUIEnabled = !!t.friendsui),
-                        (this.m_ClientInfo.unAccountID = t.accountid),
-                        t.supported_messages &&
-                          (this.m_ClientInfo.rgSupportedMessages =
-                            t.supported_messages),
-                        e())
-                      : n();
-                  })
-                  .catch(n);
-              });
-          });
-          return (
-            (this.m_promiseConnect = e),
-            this.m_promiseConnect
-              .then(() => {
-                (this.m_bReady = !0), (this.m_promiseConnect = void 0);
-              })
-              .catch(() => {
-                (this.m_bClientConnectionFailed = !0),
-                  (this.m_promiseConnect = void 0);
-              }),
-            this.m_promiseConnect
-          );
-        }
-      }
-      let c = new (class {
-        m_connection = new r();
-        FailureResult(e = i.zi) {
-          let n = { success: !1, result: e };
-          return (
-            this.m_connection &&
-              !this.m_connection.browser_supported &&
-              (n.browser_unsupported = !0),
-            this.m_connection &&
-              !this.m_connection.connected_to_client &&
-              (n.connect_failed = !0),
-            e == i.Vr && (n.call_unsupported = !0),
-            n
-          );
-        }
-        BClientConnected() {
-          return this.m_connection.Connect().then(
-            () => o,
-            () => this.FailureResult(),
-          );
-        }
-        BClientConnectedAndSupportsMessage(e) {
-          return this.m_connection
-            .Connect()
-            .then(() => this.BClientSupportsMessage(e))
-            .catch(() => !1);
-        }
-        BClientSupportsMessage(e) {
-          return (
-            !(
-              !this.m_connection.connected_to_client || !this.m_connection.ready
-            ) &&
-            -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
-          );
-        }
-        OpenFriendChatDialog(e) {
-          let n = { message: "ShowFriendChatDialog", steamid: e };
-          return this.GenericEResultCall(n);
-        }
-        OpenChatRoomGroupDialog(e, n) {
-          let t = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
-          return n && (t.chat_room_id = n), this.GenericEResultCall(t);
-        }
-        ShowChatRoomGroupInvite(e, n = !0) {
-          let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
-          return this.GenericEResultCall(t, n);
-        }
-        m_mapCacheSubscribedApp = new Map();
-        BIsSubscribedApp(e) {
-          if (this.m_mapCacheSubscribedApp.has(e))
-            return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
-          let n = { message: "IsSubscribedApp", appid: e };
-          return this.GenericEResultCall(n, !0).then((n) => {
-            if (n.connect_failed) return;
-            let t = n.result == i.R;
-            return this.m_mapCacheSubscribedApp.set(e, t), t;
-          });
-        }
-        OpenFriendsDialog() {
-          return this.GenericEResultCall({ message: "OpenFriendsDialog" });
-        }
-        OpenSteamURL(e, n = !1) {
-          let t = { message: "OpenSteamURL", url: e };
-          return this.GenericEResultCall(t, n);
-        }
-        BClientAccountMatches() {
-          return (
-            !s.iA.logged_in ||
-            s.iA.accountid == this.m_connection.ClientInfo.unAccountID
-          );
-        }
-        GenericEResultCall(e, n = !1) {
-          return this.m_connection
-            .Connect()
-            .then(() =>
-              n && !this.BClientAccountMatches()
-                ? { success: !1, result: i.$A, account_mismatch: !0 }
-                : this.m_connection
-                    .SendMsgAndAwaitResponse(e)
-                    .then((e) =>
-                      e.success === i.R ? o : this.FailureResult(e.success),
-                    ),
-            )
-            .catch(() => this.FailureResult());
-        }
-      })();
-      window.ClientConnectionAPI = c;
-    },
     74568: (e, n, t) => {
       "use strict";
       t.d(n, {
-        mt: () => l,
+        mt: () => c,
         o0: () => p.o0,
         eV: () => h.eV,
         KG: () => p.KG,
         Ee: () => p.Ee,
-        x_: () => c.x_,
+        x_: () => a.x_,
         of: () => d,
         pY: () => p.pY,
         EN: () => r.E,
@@ -456,9 +263,9 @@
         s = t(90626),
         o = t(56283),
         r = t(21869),
-        c = t(2654);
+        a = t(2654);
       t(37049);
-      function a(e) {
+      function l(e) {
         const { labelledBy: n } = e || {},
           [t, i] = s.useState(void 0);
         return {
@@ -466,23 +273,23 @@
           context: s.useMemo(() => ({ setHeaderId: i }), []),
         };
       }
-      function l(e) {
+      function c(e) {
         const {
             active: n,
             onDismiss: t,
             className: s,
-            modalClassName: l,
+            modalClassName: c,
             children: d,
             ...p
           } = e,
-          { headerId: h, context: u } = a({ labelledBy: e["aria-labelledby"] });
+          { headerId: h, context: u } = l({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(o.t6.Provider, {
           value: u,
           children: (0, i.jsx)(r.E, {
             active: n,
-            children: (0, i.jsx)(c.x_, {
+            children: (0, i.jsx)(a.x_, {
               onEscKeypress: t,
-              className: l,
+              className: c,
               children: (0, i.jsx)(o.UC, {
                 role: "dialog",
                 "aria-labelledby": h,
@@ -508,28 +315,28 @@
     },
     37049: (e, n, t) => {
       "use strict";
-      t.d(n, { w: () => C });
+      t.d(n, { w: () => _ });
       var i = t(7850),
         s = t(90626),
         o = t(72739),
         r = t(48902),
-        c = t(60155),
-        a = t(25118),
-        l = t(84933),
+        a = t(60155),
+        l = t(25118),
+        c = t(84933),
         d = t(52745),
         p = t(13871),
         h = t(21869),
         u = t(78327),
         m = t(66703),
-        _ = t(52038),
-        g = t(28460);
+        x = t(52038),
+        f = t(28460);
       function b(e) {
         const { popup: n, className: t, ...o } = e,
-          r = (0, g.GD)(n),
-          c = s.useRef(null);
+          r = (0, f.GD)(n),
+          a = s.useRef(null);
         return (
           s.useEffect(() => {
-            const e = c.current;
+            const e = a.current;
             if (e && (0, m.Fj)(n, "Window.SetResizeGrip")) {
               let t = 0,
                 i = 0;
@@ -550,13 +357,13 @@
           r
             ? null
             : (0, i.jsx)("div", {
-                className: (0, _.A)("window_resize_grip", t),
-                ref: c,
+                className: (0, x.A)("window_resize_grip", t),
+                ref: a,
                 ...o,
               })
         );
       }
-      const C = (e) =>
+      const _ = (e) =>
         (function (e) {
           const n = (0, p.R7)().ownerWindow,
             t = (0, u.Qn)(),
@@ -572,34 +379,34 @@
           return "inline" === o
             ? (0, i.jsx)(h.E, { active: !0, children: e.children })
             : "popout" === o
-              ? (0, i.jsx)(S, { ...e })
+              ? (0, i.jsx)(g, { ...e })
               : null;
         })({ modal: !0, ...e });
-      function S(e) {
+      function g(e) {
         const {
             strName: n,
             strTitle: t,
             popupWidth: h,
             popupHeight: u,
             browserType: m,
-            onDismiss: _,
-            refPopup: g,
-            children: C,
-            titleBarClassName: S,
-            saveDimensionsKey: x,
+            onDismiss: x,
+            refPopup: f,
+            children: _,
+            titleBarClassName: g,
+            saveDimensionsKey: S,
           } = e,
-          w = (0, p.R7)(),
-          I = w?.ownerWindow,
-          v = (0, d.yk)(),
-          O = { ...(0, r.h3)(x), onClose: _ };
-        let R = 0;
-        e.resizable && (R |= p.Wf.Resizable),
+          j = (0, p.R7)(),
+          v = j?.ownerWindow,
+          T = (0, d.yk)(),
+          B = { ...(0, r.h3)(S), onClose: x };
+        let C = 0;
+        e.resizable && (C |= p.Wf.Resizable),
           (e.minWidth || e.minHeight) &&
-            (R |= p.Wf.ApplyBrowserScaleToDimensions),
-          e.fullscreen && (R |= p.Wf.FullScreen);
-        const k = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
-          { popup: B, element: W } = (0, r.OJ)(
-            k,
+            (C |= p.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (C |= p.Wf.FullScreen);
+        const O = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
+          { popup: z, element: W } = (0, r.OJ)(
+            O,
             {
               title: t,
               dimensions: { width: h, height: u },
@@ -610,51 +417,51 @@
               minWidth: e.minWidth,
               minHeight: e.minHeight,
               replace_existing_popup: !0,
-              center_on_window: v?.BCenterPopupsOnWindow() ? I : void 0,
-              eCreationFlags: R,
-              target_browser: v?.GetBrowserInfo(),
+              center_on_window: T?.BCenterPopupsOnWindow() ? v : void 0,
+              eCreationFlags: C,
+              target_browser: T?.GetBrowserInfo(),
             },
-            O,
+            B,
           );
         if (
           (s.useEffect(
-            () => ((0, l.cZ)(g, B), () => (0, l.cZ)(g, void 0)),
-            [g, B],
+            () => ((0, c.cZ)(f, z), () => (0, c.cZ)(f, void 0)),
+            [f, z],
           ),
           s.useEffect(() => {
-            B && (B.document.title = t ?? n);
-          }, [B, t, n]),
+            z && (z.document.title = t ?? n);
+          }, [z, t, n]),
           !W)
         )
           return null;
-        const j = e.modal ?? e.onlyPopoutIfNeeded,
-          E = !e.resizable;
+        const I = e.modal ?? e.onlyPopoutIfNeeded,
+          N = !e.resizable;
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            j && (0, i.jsx)(f, { popup: B }),
+            I && (0, i.jsx)(w, { popup: z }),
             o.createPortal(
               (0, i.jsxs)(p.kc, {
-                ownerWindow: B,
+                ownerWindow: z,
                 children: [
                   (0, i.jsxs)("div", {
                     className: "PopupFullWindow",
-                    onContextMenu: c.aE,
+                    onContextMenu: a.aE,
                     children: [
-                      (0, i.jsx)(a.c, {
-                        className: S,
-                        hideMin: E,
-                        hideMax: E,
-                        popup: B,
-                        hideActions: !_,
+                      (0, i.jsx)(l.c, {
+                        className: g,
+                        hideMin: N,
+                        hideMax: N,
+                        popup: z,
+                        hideActions: !x,
                       }),
                       (0, i.jsx)(d.EO, {
-                        bCenterPopupsOnWindow: v?.BCenterPopupsOnWindow(),
-                        browserInfo: v?.GetBrowserInfo(),
-                        children: C,
+                        bCenterPopupsOnWindow: T?.BCenterPopupsOnWindow(),
+                        browserInfo: T?.GetBrowserInfo(),
+                        children: _,
                       }),
                     ],
                   }),
-                  e.resizable && (0, i.jsx)(b, { popup: B }),
+                  e.resizable && (0, i.jsx)(b, { popup: z }),
                 ],
               }),
               W,
@@ -662,7 +469,7 @@
           ],
         });
       }
-      function f(e) {
+      function w(e) {
         const { popup: n } = e,
           t = s.useCallback(() => {
             n?.SteamClient.Window.BringToFront();
@@ -689,47 +496,44 @@
       "use strict";
       t.r(n),
         t.d(n, {
-          OpenInDesktopClient: () => u,
-          default: () => _,
-          useOpenWebInSteamClient: () => m,
+          OpenInDesktopClient: () => d,
+          default: () => h,
+          useOpenWebInSteamClient: () => p,
         });
       var i = t(7850),
-        s = t(37085),
-        o = t(90626),
-        r = t(30470),
-        c = t(84811),
-        a = t(62381),
-        l = t(97824),
-        d = t(78327),
-        p = t(2627),
-        h = t(61859);
-      const u = (0, c.Nr)(function (e) {
-        const { fnOpenInSteamClient: n } = m();
+        s = t(90626),
+        o = t(84811),
+        r = t(97824),
+        a = t(78327),
+        l = t(2627),
+        c = t(61859);
+      const d = (0, o.Nr)(function (e) {
+        const { fnOpenInSteamClient: n } = p();
         return (0, i.jsx)("div", {
-          className: l.OpenInBannerContainer,
+          className: r.OpenInBannerContainer,
           children: (0, i.jsxs)("div", {
-            className: l.OpenInBannerContent,
+            className: r.OpenInBannerContent,
             children: [
               (0, i.jsx)("div", {
-                className: l.BannerButtonContainer,
+                className: r.BannerButtonContainer,
                 children: (0, i.jsx)("div", {
                   onClick: n,
-                  className: l.BannerButton,
-                  children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  className: r.BannerButton,
+                  children: (0, c.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
               }),
               (0, i.jsx)("div", {
-                className: l.BannerMessage,
+                className: r.BannerMessage,
                 children: (0, i.jsxs)("div", {
-                  className: l.BannerTitle,
+                  className: r.BannerTitle,
                   children: [
                     (0, i.jsx)("b", {
-                      children: (0, h.we)(
+                      children: (0, c.we)(
                         "#OpenInDesktopAppBanner_NotSignedIn",
                       ),
                     }),
                     (0, i.jsx)("br", {}),
-                    (0, h.we)("#OpenInDesktopAppBanner_Body"),
+                    (0, c.we)("#OpenInDesktopAppBanner_Body"),
                   ],
                 }),
               }),
@@ -737,77 +541,66 @@
           }),
         });
       });
-      function m() {
-        const [e, n] = o.useState(s._9);
-        o.useEffect(() => {
-          r.TS.IN_CLIENT ||
-            r.TS.IN_MOBILE ||
-            r.TS.IN_MOBILE_WEBVIEW ||
-            a.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
-              n(e ? s.R : s.zi);
-            });
-        }, []);
-        const t = o.useCallback(() => {
-          let n = `${(0, d.yl)()}//openurl/`;
-          const t = (0, p.VY)("browserid");
-          if (t) {
-            const e = new URL(window.location.href),
-              i = new URLSearchParams(e.search);
-            i.set("utm_bid", t),
-              (n += e.origin + e.pathname + "?" + i.toString() + e.hash);
-          } else n += window.location.href;
-          e == s.R ? a.W.OpenSteamURL(n) : (window.location.href = n);
-        }, [e]);
-        return { eClientConnectedState: e, fnOpenInSteamClient: t };
+      function p() {
+        return {
+          fnOpenInSteamClient: s.useCallback(() => {
+            let e = `${(0, a.yl)()}//openurl/`;
+            const n = (0, l.VY)("browserid");
+            if (n) {
+              const t = new URL(window.location.href),
+                i = new URLSearchParams(t.search);
+              i.set("utm_bid", n),
+                (e += t.origin + t.pathname + "?" + i.toString() + t.hash);
+            } else e += window.location.href;
+            window.location.href = e;
+          }, []),
+        };
       }
-      const _ = u;
+      const h = d;
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => I, default: () => v });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => j, default: () => v });
       var i = t(7850),
         s = t(53965),
         o = t(83392),
         r = t(20187),
-        c = t(28491),
-        a = t(37085),
+        a = t(28491),
         l = t(67936),
-        d = t(84547),
-        p = t(78686),
-        h = t(84811),
-        u = t(74568),
-        m = t(71009),
-        _ = t(32754),
-        g = t(61859),
-        b = t(84933),
-        C = t(30470),
-        S = t(11131),
-        f = t.n(S),
-        x = t(90626),
-        w = t(92724);
-      const I = (0, h.Nr)(function (e) {
-          const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
-            m.useOpenWebInSteamClient)(),
-            h = t == a.R,
-            [S, I, v] = (0, b.uD)();
+        c = t(84547),
+        d = t(78686),
+        p = t(84811),
+        h = t(74568),
+        u = t(71009),
+        m = t(32754),
+        x = t(61859),
+        f = t(84933),
+        b = t(30470),
+        _ = t(11131),
+        g = t.n(_),
+        w = t(90626),
+        S = t(92724);
+      const j = (0, p.Nr)(function (e) {
+          const { fnOpenInSteamClient: n } = (0, u.useOpenWebInSteamClient)(),
+            [t, p, _] = (0, f.uD)();
           return (
-            (0, x.use)((0, w.u)()),
+            (0, w.use)((0, S.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
-                (0, i.jsx)(_.Gq, {
-                  toolTipContent: p.Z.Localize("#AddToWishlist_ttip"),
+                (0, i.jsx)(m.Gq, {
+                  toolTipContent: d.Z.Localize("#AddToWishlist_ttip"),
                   children: (0, i.jsx)(s.$, {
-                    onClick: I,
-                    children: (0, g.we)("#AddToYourWishlist"),
+                    onClick: p,
+                    children: (0, x.we)("#AddToYourWishlist"),
                   }),
                 }),
-                (0, i.jsx)(u.EN, {
-                  active: S,
-                  children: (0, i.jsxs)(u.o0, {
-                    strTitle: (0, g.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                    className: f().WishlistModalOverride,
+                (0, i.jsx)(h.EN, {
+                  active: t,
+                  children: (0, i.jsxs)(h.o0, {
+                    strTitle: (0, x.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    className: g().WishlistModalOverride,
                     strDescription: l.F5.Localize("#Wishlist_NotSignedIn"),
-                    closeModal: v,
+                    closeModal: _,
                     bAlertDialog: !0,
                     children: [
                       (0, i.jsxs)(o.s, {
@@ -818,28 +611,25 @@
                         children: [
                           (0, i.jsx)(s.$, {
                             onClick: n,
-                            children: (0, g.we)(
+                            children: (0, x.we)(
                               "#OpenInDesktopAppBanner_OpenAppButton",
                             ),
                           }),
                           (0, i.jsx)(s.$, {
                             color: "dull",
-                            onClick: d.lh,
-                            children: p.Z.Localize("#Login_SignIn"),
+                            onClick: c.lh,
+                            children: d.Z.Localize("#Login_SignIn"),
                           }),
                         ],
                       }),
-                      !h &&
-                        (0, i.jsx)(i.Fragment, {
-                          children: (0, i.jsx)(r.EY, {
-                            children: (0, g.oW)(
-                              "#GotSteam_NeedSteam",
-                              (0, i.jsx)(c.Y, {
-                                href: `${C.TS.STORE_BASE_URL}about`,
-                              }),
-                            ),
+                      (0, i.jsx)(r.EY, {
+                        children: (0, x.oW)(
+                          "#GotSteam_NeedSteam",
+                          (0, i.jsx)(a.Y, {
+                            href: `${b.TS.STORE_BASE_URL}about`,
                           }),
-                        }),
+                        ),
+                      }),
                     ],
                   }),
                 }),
@@ -847,7 +637,7 @@
             })
           );
         }),
-        v = I;
+        v = j;
     },
   },
 ]);

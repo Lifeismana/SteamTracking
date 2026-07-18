@@ -140,7 +140,7 @@
           const _ = new FormData();
           _.append("genre", _.toString()),
             _.append("choice", _.toString()),
-            _.append("sessionid", _._.SESSIONID);
+            _.append("sessionid", (0, _._)());
           let _ = null;
           try {
             const _ = await _().post(

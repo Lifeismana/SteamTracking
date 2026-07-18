@@ -3456,7 +3456,7 @@
               ? new _._(this.m_steamIDBroadcast).GetAccountID()
               : 0),
             (_.useragent = window.navigator.userAgent),
-            (_.sessionid = _._.SESSIONID),
+            (_.sessionid = (0, _._)()),
             (_.broadcast_origin = this.m_strBroadcastOrigin);
         }
       }

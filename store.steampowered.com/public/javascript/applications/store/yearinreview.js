@@ -3311,7 +3311,7 @@
         async AjaxGetFormattingHelp() {
           if ("" == this.state.formattingHelp.__html) {
             let e,
-              t = { sessionid: Z.TS.SESSIONID };
+              t = { sessionid: (0, Z.KC)() };
             (e = await r().get(de.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
@@ -4626,7 +4626,7 @@
                 const a = new FormData();
                 a.append("appid", "" + t),
                   a.append("status_text", n),
-                  a.append("sessionid", Z.TS.SESSIONID);
+                  a.append("sessionid", (0, Z.KC)());
                 const s = await r().post(i, a, { withCredentials: !0 });
                 if (200 != s.status || s?.data?.success != c.R) {
                   const t =

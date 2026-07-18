@@ -12476,235 +12476,247 @@
       }
       var ka;
       !(function (e) {
-        (e.CreateProject = function (e, t) {
-          return e.SendMsg("SteamLearn.CreateProject#1", (0, m.I8)(st, t), nt, {
-            ePrivilege: 1,
-          });
+        (e.CreateProject = function (e, t, a) {
+          return e.SendMsg(
+            "SteamLearn.CreateProject#1",
+            (0, m.I8)(st, t, a),
+            nt,
+            { ePrivilege: 1 },
+          );
         }),
-          (e.EditProject = function (e, t) {
-            return e.SendMsg("SteamLearn.EditProject#1", (0, m.I8)(Nt, t), jt, {
-              ePrivilege: 1,
-            });
+          (e.EditProject = function (e, t, a) {
+            return e.SendMsg(
+              "SteamLearn.EditProject#1",
+              (0, m.I8)(Nt, t, a),
+              jt,
+              { ePrivilege: 1 },
+            );
           }),
-          (e.EditProjectConfig = function (e, t) {
+          (e.EditProjectConfig = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.EditProjectConfig#1",
-              (0, m.I8)(wt, t),
+              (0, m.I8)(wt, t, a),
               Bt,
               { ePrivilege: 1 },
             );
           }),
-          (e.ListProjects = function (e, t) {
+          (e.ListProjects = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.ListProjects#1",
-              (0, m.I8)(ot, t),
+              (0, m.I8)(ot, t, a),
               ct,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.ListProjectConfigs = function (e, t) {
+          (e.ListProjectConfigs = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.ListProjectConfigs#1",
-              (0, m.I8)(lt, t),
+              (0, m.I8)(lt, t, a),
               dt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetProject = function (e, t) {
-            return e.SendMsg("SteamLearn.GetProject#1", (0, m.I8)(_t, t), ut, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (e.GetProject = function (e, t, a) {
+            return e.SendMsg(
+              "SteamLearn.GetProject#1",
+              (0, m.I8)(_t, t, a),
+              ut,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
-          (e.GetProjectConfig = function (e, t) {
+          (e.GetProjectConfig = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetProjectConfig#1",
-              (0, m.I8)(pt, t),
+              (0, m.I8)(pt, t, a),
               gt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.PublishProject = function (e, t) {
+          (e.PublishProject = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.PublishProject#1",
-              (0, m.I8)(xt, t),
+              (0, m.I8)(xt, t, a),
               vt,
               { ePrivilege: 1 },
             );
           }),
-          (e.RegisterDataSource = function (e, t) {
+          (e.RegisterDataSource = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.RegisterDataSource#1",
-              (0, m.I8)(Ie, t),
+              (0, m.I8)(Ie, t, a),
               De,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.ListDataSources = function (e, t) {
+          (e.ListDataSources = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.ListDataSources#1",
-              (0, m.I8)(ht, t),
+              (0, m.I8)(ht, t, a),
               ft,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetDataSource = function (e, t) {
+          (e.GetDataSource = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetDataSource#1",
-              (0, m.I8)(St, t),
+              (0, m.I8)(St, t, a),
               bt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.CacheData = function (e, t) {
-            return e.SendMsg("SteamLearn.CacheData#1", (0, m.I8)(Oe, t), Fe, {
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            });
+          (e.CacheData = function (e, t, a) {
+            return e.SendMsg(
+              "SteamLearn.CacheData#1",
+              (0, m.I8)(Oe, t, a),
+              Fe,
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+            );
           }),
-          (e.SnapshotProject = function (e, t) {
+          (e.SnapshotProject = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.SnapshotProject#1",
-              (0, m.I8)(Re, t),
+              (0, m.I8)(Re, t, a),
               ke,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.Inference = function (e, t) {
-            return e.SendMsg("SteamLearn.Inference#1", (0, m.I8)(Ve, t), qe, {
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            });
+          (e.Inference = function (e, t, a) {
+            return e.SendMsg(
+              "SteamLearn.Inference#1",
+              (0, m.I8)(Ve, t, a),
+              qe,
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+            );
           }),
-          (e.InferenceMetadata = function (e, t) {
+          (e.InferenceMetadata = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.InferenceMetadata#1",
-              (0, m.I8)(Ue, t),
+              (0, m.I8)(Ue, t, a),
               Ee,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.InferenceBackend = function (e, t) {
+          (e.InferenceBackend = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.InferenceBackend#1",
-              (0, m.I8)(ra, t),
+              (0, m.I8)(ra, t, a),
               ia,
               { ePrivilege: 1 },
             );
           }),
-          (e.BatchOperation = function (e, t) {
+          (e.BatchOperation = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.BatchOperation#1",
-              (0, m.I8)(rt, t),
+              (0, m.I8)(rt, t, a),
               it,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
-          (e.GetAccessTokensWeb = function (e, t) {
+          (e.GetAccessTokensWeb = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetAccessTokensWeb#1",
-              (0, m.I8)(Lt, t),
+              (0, m.I8)(Lt, t, a),
               zt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.Train = function (e, t) {
-            return e.SendMsg("SteamLearn.Train#1", (0, m.I8)(It, t), Ft, {
+          (e.Train = function (e, t, a) {
+            return e.SendMsg("SteamLearn.Train#1", (0, m.I8)(It, t, a), Ft, {
               ePrivilege: 1,
             });
           }),
-          (e.GetFetchStatusVersions = function (e, t) {
+          (e.GetFetchStatusVersions = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetFetchStatusVersions#1",
-              (0, m.I8)(Rt, t),
+              (0, m.I8)(Rt, t, a),
               kt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetTrainStatusVersions = function (e, t) {
+          (e.GetTrainStatusVersions = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetTrainStatusVersions#1",
-              (0, m.I8)(Wt, t),
+              (0, m.I8)(Wt, t, a),
               Pt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetProjectStatus = function (e, t) {
+          (e.GetProjectStatus = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetProjectStatus#1",
-              (0, m.I8)(ba, t),
+              (0, m.I8)(ba, t, a),
               Ba,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetBatchedStatus = function (e, t) {
+          (e.GetBatchedStatus = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetBatchedStatus#1",
-              (0, m.I8)(Vt, t),
+              (0, m.I8)(Vt, t, a),
               qt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetFetchStatus = function (e, t) {
+          (e.GetFetchStatus = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetFetchStatus#1",
-              (0, m.I8)(Ut, t),
+              (0, m.I8)(Ut, t, a),
               Et,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetTrainStatus = function (e, t) {
+          (e.GetTrainStatus = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetTrainStatus#1",
-              (0, m.I8)(Ht, t),
+              (0, m.I8)(Ht, t, a),
               Kt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetTrainLogs = function (e, t) {
+          (e.GetTrainLogs = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetTrainLogs#1",
-              (0, m.I8)(Qt, t),
+              (0, m.I8)(Qt, t, a),
               Jt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetSnapshotStatus = function (e, t) {
+          (e.GetSnapshotStatus = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetSnapshotStatus#1",
-              (0, m.I8)(Zt, t),
+              (0, m.I8)(Zt, t, a),
               Yt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.SetTrainLive = function (e, t) {
+          (e.SetTrainLive = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.SetTrainLive#1",
-              (0, m.I8)(ea, t),
+              (0, m.I8)(ea, t, a),
               ta,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetLogEvents = function (e, t) {
+          (e.GetLogEvents = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetLogEvents#1",
-              (0, m.I8)(fa, t),
+              (0, m.I8)(fa, t, a),
               Sa,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetEmbeddingValues = function (e, t) {
+          (e.GetEmbeddingValues = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetEmbeddingValues#1",
-              (0, m.I8)(za, t),
+              (0, m.I8)(za, t, a),
               Ia,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetNearestEmbedding = function (e, t) {
+          (e.GetNearestEmbedding = function (e, t, a) {
             return e.SendMsg(
               "SteamLearn.GetNearestEmbedding#1",
-              (0, m.I8)(Oa, t),
+              (0, m.I8)(Oa, t, a),
               Fa,
               { bConstMethod: !0, ePrivilege: 1 },
             );

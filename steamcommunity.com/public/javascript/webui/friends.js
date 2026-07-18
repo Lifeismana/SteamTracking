@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10779229";
+var CLSTAMP = "10833564";
 (() => {
   var e,
     t,
@@ -2691,6 +2691,8 @@ var CLSTAMP = "10779229";
           EmoticonBow_st0: "shared_svg_library_EmoticonBow_st0_Fw2WG",
           EmoticonBow_st1: "shared_svg_library_EmoticonBow_st1_luj0t",
           SteamDeckCompatInfo: "shared_svg_library_SteamDeckCompatInfo_3VPnv",
+          SteamMachineCompatLogo:
+            "shared_svg_library_SteamMachineCompatLogo_x5w70",
           SteamDeckCompatLogo: "shared_svg_library_SteamDeckCompatLogo_1dzQL",
           SteamDeckCompatIcon: "shared_svg_library_SteamDeckCompatIcon_3hAj0",
           SteamDeckCompatVerified:
@@ -3528,7 +3530,7 @@ var CLSTAMP = "10779229";
         }
         (i.keys = () => Object.keys(s)), (i.id = 68042), (e.exports = i);
       },
-      80228: (e, t, n) => {
+      98825: (e, t, n) => {
         "use strict";
         n.d(t, {
           QO: () => s.QO,
@@ -3538,33 +3540,47 @@ var CLSTAMP = "10779229";
           iA: () => s.iA,
           xv: () => s.xv,
         });
-        var s = n(21582);
+        var s = n(96641);
       },
-      49649: (e, t, n) => {
+      29458: (e, t, n) => {
         "use strict";
-        var s = n(80228),
-          i = n(10774),
-          o = n(26054),
-          r = n(60907),
-          a = n(34264),
-          l = n(14986),
+        n.d(t, { K: () => s, S: () => i });
+        const s = { STEAM_TV: !1 };
+        function i() {
+          const e = document.getElementById("friendsui_config");
+          if (e && e.dataset.config)
+            try {
+              Object.assign(s, JSON.parse(e.dataset.config));
+            } catch (e) {
+              return;
+            }
+        }
+      },
+      24368: (e, t, n) => {
+        "use strict";
+        var s = n(98825),
+          i = n(37575),
+          o = n(80915),
+          r = n(41605),
+          a = n(47377),
+          l = n(40261),
           c = n(34629),
           d = n(37322),
-          h = n(21582),
-          u = n(87118),
-          m = n(9663),
-          p = n(94553),
-          _ = n(56738),
-          g = n(6985),
+          h = n(96641),
+          u = n(39831),
+          m = n(94058),
+          p = n(15704),
+          _ = n(73939),
+          g = n(16452),
           C = n(89193),
-          f = n(42308),
-          S = n(96108),
-          v = n(91209),
-          b = n(66405),
-          I = n(22613),
-          y = n(11662),
-          w = n(58752),
-          x = n(61407);
+          f = n(25699),
+          S = n(55747),
+          v = n(91680),
+          b = n(30220),
+          I = n(54632),
+          y = n(13791),
+          w = n(6242),
+          x = n(8194);
         class A {
           m_bRunOnce = !1;
           m_ClientConnectionCallbacks = new w.lu();
@@ -3900,8 +3916,8 @@ var CLSTAMP = "10779229";
           ),
           (0, c.Cg)([C.XI], R.prototype, "DispatchMessage", null),
           (0, c.Cg)([C.XI], R.prototype, "OnDisconnect", null);
-        var T = n(40114),
-          M = n(58686);
+        var T = n(66681),
+          M = n(28333);
         class D extends R {
           m_hSharedConnection;
           m_hEMsgRegistrationObserver;
@@ -4108,7 +4124,7 @@ var CLSTAMP = "10779229";
             null,
           );
         var k = n(53048),
-          P = n(84869),
+          P = n(80036),
           L = n(83957),
           G = n.n(L);
         const B = !1,
@@ -4620,12 +4636,13 @@ var CLSTAMP = "10779229";
         (0, c.Cg)([C.XI], j.prototype, "DecodeAndDispatchMultiMsg", null);
         n(70734), n(22386);
         new Map();
-        var V = n(8978);
-        n(56823), n(65070);
+        var V = n(62057),
+          U = (n(49926), n(65070), n(29458));
         (0, C.jK)({ enforceActions: "never" }),
           (window.AssertMsg = y.wT),
           document.addEventListener("DOMContentLoaded", async function () {
             (0, s.XJ)(),
+              (0, U.S)(),
               s.TS.IN_GAMEPADUI ||
                 (await n.e(3159).then(n.t.bind(n, 43159, 23))),
               await (async function (e) {
@@ -4642,7 +4659,7 @@ var CLSTAMP = "10779229";
             let e = !0;
             h.GP.steamid && (0, a.dP)(h.GP.steamid),
               !s.TS.IN_CLIENT &&
-                s.TS.STEAM_TV &&
+                U.K.STEAM_TV &&
                 (s.iA.logged_in
                   ? (0, o.xT)(h.GP.steamid)
                   : ((e = !1),
@@ -4652,14 +4669,14 @@ var CLSTAMP = "10779229";
                         n.e(9489),
                         n.e(1068),
                         n.e(7653),
-                      ]).then(n.bind(n, 54666));
+                      ]).then(n.bind(n, 55147));
                       new e().Init(() => {
                         window.location.href = window.location.href;
                       });
                     })())),
               l.Ay.SetNavEventParams(
                 "steamclient",
-                s.TS.STEAM_TV ? "steamtv" : "friendsui",
+                U.K.STEAM_TV ? "steamtv" : "friendsui",
               ),
               e &&
                 (function () {
@@ -4679,7 +4696,7 @@ var CLSTAMP = "10779229";
                 })();
           });
       },
-      10774: (e, t, n) => {
+      37575: (e, t, n) => {
         "use strict";
         n.d(t, {
           YO: () => P,
@@ -4700,19 +4717,19 @@ var CLSTAMP = "10779229";
           AM: () => D,
         });
         var s = n(34629),
-          i = n(66405),
+          i = n(30220),
           o = n(83957),
           r = n.n(o),
-          a = n(87118),
-          l = n(56738),
-          c = n(42308),
-          d = n(51756),
-          h = n(80228),
+          a = n(39831),
+          l = n(73939),
+          c = n(25699),
+          d = n(88071),
+          h = n(98825),
           u = n(89193),
-          m = n(33453),
-          p = n(96108),
-          _ = n(9663),
-          g = n(11662);
+          m = n(83402),
+          p = n(55747),
+          _ = n(94058),
+          g = n(13791);
         const C = 1,
           f = 2,
           S = 3,
@@ -4937,22 +4954,22 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([d.oI], P.prototype, "OnCMDisconnected", null),
           (0, s.Cg)([d.oI], P.prototype, "OnCMLoggedOn", null);
       },
-      69e3: (e, t, n) => {
+      32537: (e, t, n) => {
         "use strict";
         n.d(t, { o: () => b });
         var s = n(34629),
-          i = n(80228),
-          o = n(98985),
-          r = n(48757),
-          a = n(27737),
+          i = n(98825),
+          o = n(38204),
+          r = n(3884),
+          a = n(94522),
           l = n(89193),
-          c = n(96108),
-          d = n(42308),
-          h = n(44452),
-          u = n(44907),
-          m = n(11662),
-          p = n(86373),
-          _ = n(58686);
+          c = n(55747),
+          d = n(25699),
+          h = n(54888),
+          u = n(90294),
+          m = n(13791),
+          p = n(65264),
+          _ = n(28333);
         class g {
           static k_QueueForEffect = {
             snowball: "snowball",
@@ -5054,7 +5071,7 @@ var CLSTAMP = "10779229";
           }
         }
         (0, s.Cg)([l.sH], C.prototype, "m_rgRunningEffects", void 0);
-        var f = n(31038);
+        var f = n(71884);
         const S = _.Kp.PerMinute,
           v = 6 * _.Kp.PerHour;
         class b {
@@ -5678,14 +5695,14 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([l.XI], b.prototype, "AddLocalMsg", null),
           (0, s.Cg)([l.XI], b.prototype, "AddNewServerMsg", null);
       },
-      14769: (e, t, n) => {
+      74714: (e, t, n) => {
         "use strict";
         n.d(t, { w: () => l });
         var s = n(34629),
-          i = n(31002),
+          i = n(48813),
           o = n(89193),
-          r = n(34264),
-          a = n(9663);
+          r = n(47377),
+          a = n(94058);
         class l extends i.Q {
           m_steamID;
           m_tabset;
@@ -5709,7 +5726,7 @@ var CLSTAMP = "10779229";
               n.e(9489),
               n.e(1068),
               n.e(7653),
-            ]).then(n.bind(n, 28946));
+            ]).then(n.bind(n, 23536));
             return e;
           }
           GetSteamID() {
@@ -5761,7 +5778,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([o.XI], l.prototype, "ShowWatchPromptDialog", null),
           (0, s.Cg)([o.XI], l.prototype, "HideWatchPromptDialog", null);
       },
-      27972: (e, t, n) => {
+      68113: (e, t, n) => {
         "use strict";
         n.d(t, {
           CF: () => E.CF,
@@ -5771,9 +5788,9 @@ var CLSTAMP = "10779229";
           eW: () => B.eW,
         });
         var s = n(34629),
-          i = n(80228),
-          o = n(48757),
-          r = n(31038),
+          i = n(98825),
+          o = n(3884),
+          r = n(71884),
           a = n(89193);
         class l {
           bCollapsed = !1;
@@ -5849,21 +5866,21 @@ var CLSTAMP = "10779229";
               this.SaveEmbedData(e, t, i);
           }
         }
-        var h = n(36371),
-          u = n(67833),
-          m = n(10903),
-          p = n(59623),
-          _ = n(54757),
-          g = n(42308),
-          C = n(96108),
-          f = n(87118),
-          S = n(9663),
-          v = n(40114),
-          b = n(44452),
-          I = n(30952),
-          y = n(71802),
-          w = n(56738),
-          x = n(6985);
+        var h = n(28976),
+          u = n(54042),
+          m = n(81190),
+          p = n(9382),
+          _ = n(7628),
+          g = n(25699),
+          C = n(55747),
+          f = n(39831),
+          S = n(94058),
+          v = n(66681),
+          b = n(54888),
+          I = n(5109),
+          y = n(97307),
+          w = n(73939),
+          x = n(16452);
         class A extends y.pN {
           m_CMInterface;
           Init(e) {
@@ -5925,7 +5942,7 @@ var CLSTAMP = "10779229";
             });
           }
         }
-        var R = n(37737);
+        var R = n(65368);
         class T extends R.s {
           m_CMInterface;
           async InitCM(e, t) {
@@ -5956,9 +5973,9 @@ var CLSTAMP = "10779229";
                 ));
           }
         }
-        var M = n(18483),
-          D = n(11662),
-          k = n(8978);
+        var M = n(69164),
+          D = n(13791),
+          k = n(62057);
         function P(e, t) {
           if (!e || !t) return [];
           let n = [],
@@ -5971,8 +5988,8 @@ var CLSTAMP = "10779229";
           const n = Math.floor(Math.random() * t * 1e3);
           return await new Promise((e) => setTimeout(e, n)), e();
         }
-        var G = n(58686),
-          B = n(98985);
+        var G = n(28333),
+          B = n(38204);
         class F {
           static strSettingsStorageKey = "RecentChats.HiddenItems";
           m_storage;
@@ -6065,9 +6082,9 @@ var CLSTAMP = "10779229";
           }
         }
         (0, s.Cg)([a.sH], F.prototype, "m_bReady", void 0);
-        var E = n(39455),
-          O = n(58752);
-        n(69e3);
+        var E = n(53724),
+          O = n(6242);
+        n(32537);
         class N {
           m_FriendStore;
           m_CMInterface;
@@ -6955,7 +6972,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([a.EW], N.prototype, "currentChatRoomGroups", null),
           (0, s.Cg)([a.EW], N.prototype, "ClanChatRooms", null);
       },
-      48757: (e, t, n) => {
+      3884: (e, t, n) => {
         "use strict";
         n.d(t, {
           $F: () => _,
@@ -6974,12 +6991,12 @@ var CLSTAMP = "10779229";
           xN: () => S,
         });
         var s = n(34629),
-          i = n(44452),
+          i = n(54888),
           o = n(89193),
-          r = n(42308),
-          a = n(31038),
-          l = n(21582),
-          c = n(33453);
+          r = n(25699),
+          a = n(71884),
+          l = n(96641),
+          c = n(83402);
         const d = {
           "/me": {
             strDescriptionToken: "#SlashCommandDescription_Me",
@@ -7452,7 +7469,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([o.sH.shallow], R.prototype, "m_nextBlock", void 0),
           (0, s.Cg)([o.XI], R.prototype, "CreateVirtualSplitOnTimestamp", null);
       },
-      31002: (e, t, n) => {
+      48813: (e, t, n) => {
         "use strict";
         n.d(t, { Q: () => s });
         class s {
@@ -7475,7 +7492,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      98985: (e, t, n) => {
+      38204: (e, t, n) => {
         "use strict";
         n.d(t, {
           Lv: () => a,
@@ -7490,21 +7507,21 @@ var CLSTAMP = "10779229";
           r = 3,
           a = 4;
       },
-      39455: (e, t, n) => {
+      53724: (e, t, n) => {
         "use strict";
         n.d(t, { CF: () => g, JB: () => _ });
         var s = n(34629),
-          i = n(27737),
+          i = n(94522),
           o = n(89193),
-          r = n(18483),
-          a = n(58752),
-          l = n(21582),
-          c = n(55450),
-          d = n(86447),
-          h = n(54757),
-          u = n(31038),
-          m = n(31002),
-          p = n(98985);
+          r = n(69164),
+          a = n(6242),
+          l = n(96641),
+          c = n(83103),
+          d = n(3962),
+          h = n(7628),
+          u = n(71884),
+          m = n(48813),
+          p = n(38204);
         class _ extends m.Q {
           m_tabset;
           m_chat;
@@ -7747,14 +7764,14 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      36371: (e, t, n) => {
+      28976: (e, t, n) => {
         "use strict";
         n.d(t, { e7: () => m, xE: () => c });
         var s = n(34629),
-          i = n(9663),
-          o = n(31038),
-          r = n(60735),
-          a = n(80228),
+          i = n(94058),
+          o = n(71884),
+          r = n(72576),
+          a = n(98825),
           l = n(89193);
         function c(e, t, n, s, o) {
           let r,
@@ -7896,19 +7913,19 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      67833: (e, t, n) => {
+      54042: (e, t, n) => {
         "use strict";
         n.d(t, { F2: () => _, oX: () => p });
         var s = n(34629),
           i = n(89193),
-          o = n(44452),
-          r = n(87118),
-          a = n(9663),
-          l = n(42308),
-          c = n(96108),
-          d = n(31038),
-          h = n(50039),
-          u = n(8978);
+          o = n(54888),
+          r = n(39831),
+          a = n(94058),
+          l = n(25699),
+          c = n(55747),
+          d = n(71884),
+          h = n(18554),
+          u = n(62057);
         class m extends h.w {
           constructor(e) {
             super(e), (0, i.Gn)(this);
@@ -8074,7 +8091,7 @@ var CLSTAMP = "10779229";
               : null;
         }
       },
-      10903: (e, t, n) => {
+      81190: (e, t, n) => {
         "use strict";
         function s(e) {
           return (
@@ -8184,13 +8201,13 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      50039: (e, t, n) => {
+      18554: (e, t, n) => {
         "use strict";
         n.d(t, { u: () => l, w: () => a });
         var s = n(34629),
           i = n(89193),
-          o = n(42308),
-          r = n(80228);
+          o = n(25699),
+          r = n(98825);
         class a {
           m_strInviteCode;
           m_bReady = !1;
@@ -8262,33 +8279,33 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([i.XI], a.prototype, "InitInvalid", null),
           (0, s.Cg)([i.XI], a.prototype, "InitDirectInvite", null);
       },
-      55450: (e, t, n) => {
+      83103: (e, t, n) => {
         "use strict";
         n.d(t, { d: () => R });
         var s = n(34629),
-          i = n(14661),
-          o = n(80228),
-          r = n(87118),
-          a = n(44452),
-          l = n(27737),
+          i = n(474),
+          o = n(98825),
+          r = n(39831),
+          a = n(54888),
+          l = n(94522),
           c = n(89193),
-          d = n(96108),
-          h = n(8978),
-          u = n(86373),
-          m = n(69e3),
-          p = n(27972),
-          _ = n(51476),
-          g = n(31038),
-          C = n(51756),
-          f = n(48757),
-          S = n(50039),
-          v = n(49569),
-          b = n(11662),
-          I = n(10903),
-          y = n(40114),
-          w = n(44907),
-          x = n(58752),
-          A = n(18384);
+          d = n(55747),
+          h = n(62057),
+          u = n(65264),
+          m = n(32537),
+          p = n(68113),
+          _ = n(60651),
+          g = n(71884),
+          C = n(88071),
+          f = n(3884),
+          S = n(18554),
+          v = n(3190),
+          b = n(13791),
+          I = n(81190),
+          y = n(66681),
+          w = n(90294),
+          x = n(6242),
+          A = n(76065);
         class R extends m.o {
           LOG = new u.wd("ChatRoom", () => this.unique_id).Debug;
           m_group;
@@ -9089,27 +9106,27 @@ var CLSTAMP = "10779229";
             null,
           );
       },
-      59623: (e, t, n) => {
+      9382: (e, t, n) => {
         "use strict";
         n.d(t, { L2: () => T, a$: () => A, A: () => k, $C: () => R });
         var s = n(34629),
-          i = n(18483),
+          i = n(69164),
           o = n(37976),
-          r = n(86373),
-          a = n(27972),
-          l = n(55450),
-          c = n(9663),
+          r = n(65264),
+          a = n(68113),
+          l = n(83103),
+          c = n(94058),
           d = n(89193),
-          h = n(8978),
-          u = n(87118),
-          m = n(44452),
-          p = n(96108),
-          _ = n(18367),
-          g = n(31038),
-          C = n(94553),
-          f = n(80228),
-          S = n(11662),
-          v = n(51756);
+          h = n(62057),
+          u = n(39831),
+          m = n(54888),
+          p = n(55747),
+          _ = n(91918),
+          g = n(71884),
+          C = n(15704),
+          f = n(98825),
+          S = n(13791),
+          v = n(88071);
         class b {
           static sm_ulNextViewID = 1;
           m_ulChatRoomGroupID;
@@ -9420,8 +9437,8 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([d.sH], b.prototype, "m_cMemberSummaryInGame", void 0),
           (0, s.Cg)([d.XI], b.prototype, "ApplyUpdates", null),
           (0, s.Cg)([d.XI], b.prototype, "OnServerUpdate", null);
-        var I = n(27737),
-          y = n(31002);
+        var I = n(94522),
+          y = n(48813);
         class w {
           m_rank = void 0;
           m_role_ids = void 0;
@@ -11701,7 +11718,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([d.EW], P.prototype, "member_list", null),
           (0, s.Cg)([d.EW], P.prototype, "member_list_unsorted", null);
       },
-      18367: (e, t, n) => {
+      91918: (e, t, n) => {
         "use strict";
         n.d(t, {
           VT: () => Q,
@@ -11712,15 +11729,15 @@ var CLSTAMP = "10779229";
           uR: () => q,
         });
         var s = n(34629),
-          i = n(80228),
-          o = n(87118),
-          r = n(11282),
-          a = n(94553),
-          l = n(34264),
-          c = n(43871),
-          d = n(42308),
-          h = n(9663),
-          u = n(4709);
+          i = n(98825),
+          o = n(39831),
+          r = n(31543),
+          a = n(15704),
+          l = n(47377),
+          c = n(79828),
+          d = n(25699),
+          h = n(94058),
+          u = n(11074);
         class m extends r.Z {
           UpdateFromMessage(e, t) {
             if (
@@ -11794,21 +11811,21 @@ var CLSTAMP = "10779229";
                 (this.m_bAvatarPending = t.avatar_pending_review());
           }
         }
-        var p = n(56738),
-          _ = n(44452),
-          g = n(6985),
-          C = n(22613),
-          f = n(37435),
-          S = n(94929),
-          v = n(88302),
-          b = n(30952),
-          I = n(46192),
-          y = n(37076),
-          w = n(89711),
-          x = n(31038),
+        var p = n(73939),
+          _ = n(54888),
+          g = n(16452),
+          C = n(54632),
+          f = n(61018),
+          S = n(18402),
+          v = n(60709),
+          b = n(5109),
+          I = n(32705),
+          y = n(9369),
+          w = n(65230),
+          x = n(71884),
           A = n(89193),
-          R = n(96108),
-          T = n(11662);
+          R = n(55747),
+          T = n(13791);
         class M {
           m_bInitialized = !1;
           m_bGotInitialState = !1;
@@ -12120,15 +12137,15 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([A.EW], D.prototype, "clan_invite_count", null),
           (0, s.Cg)([A.EW], D.prototype, "clan_invites", null);
-        var k = n(51476),
-          P = n(29384),
-          L = n(58752),
-          G = n(49569),
-          B = n(8978),
-          F = n(51756),
+        var k = n(60651),
+          P = n(9851),
+          L = n(6242),
+          G = n(3190),
+          B = n(62057),
+          F = n(88071),
           E = n(83957),
           O = n.n(E),
-          N = n(57136);
+          N = n(33411);
         class j {
           m_numStartingTokens = 0;
           m_numTokensPerMillisecond = 0;
@@ -12162,9 +12179,9 @@ var CLSTAMP = "10779229";
             );
           }
         }
-        var V = n(40114),
-          U = n(89925);
-        const H = new (n(86373).wd)("FriendsUI").Debug;
+        var V = n(66681),
+          U = n(45604);
+        const H = new (n(65264).wd)("FriendsUI").Debug;
         class W {
           Notifications_ShowInGame = b.Bwb.OD;
           Notifications_ShowOnline = b.Bwb.OD;
@@ -13876,30 +13893,30 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([A.XI], Q.prototype, "InviteToLobby", null),
           (0, s.Cg)([A.XI], Q.prototype, "InviteToWatch", null);
       },
-      54757: (e, t, n) => {
+      7628: (e, t, n) => {
         "use strict";
         n.d(t, { b: () => A, s: () => R });
         var s = n(34629),
-          i = n(28142),
-          o = n(80228),
-          r = n(87118),
-          a = n(9663),
-          l = n(44907),
-          c = n(18367),
-          d = n(31038),
+          i = n(70027),
+          o = n(98825),
+          r = n(39831),
+          a = n(94058),
+          l = n(90294),
+          c = n(91918),
+          d = n(71884),
           h = n(89193),
-          u = n(42308),
-          m = n(14661),
-          p = n(96108),
-          _ = n(8978),
-          g = n(69e3),
-          C = n(27972),
-          f = n(48757),
-          S = n(51756),
-          v = n(49569),
-          b = n(58686),
-          I = n(86373),
-          y = n(10903);
+          u = n(25699),
+          m = n(474),
+          p = n(55747),
+          _ = n(62057),
+          g = n(32537),
+          C = n(68113),
+          f = n(3884),
+          S = n(88071),
+          v = n(3190),
+          b = n(28333),
+          I = n(65264),
+          y = n(81190);
         const w = new I.wd("Chat");
         const x = "FriendRecentChats";
         class A {
@@ -14784,24 +14801,24 @@ var CLSTAMP = "10779229";
           async UpdateLastMessage() {}
         }
       },
-      51476: (e, t, n) => {
+      60651: (e, t, n) => {
         "use strict";
         n.d(t, { Oz: () => P, o_: () => f, oy: () => S, uZ: () => v });
         var s = n(34629),
-          i = n(18483),
-          o = n(87118),
-          r = n(9663),
-          a = n(56738),
-          l = n(6985),
-          c = n(30952),
-          d = n(31038),
+          i = n(69164),
+          o = n(39831),
+          r = n(94058),
+          a = n(73939),
+          l = n(16452),
+          c = n(5109),
+          d = n(71884),
           h = n(89193),
-          u = n(96108),
-          m = n(42308),
-          p = n(8978),
-          _ = n(18367),
-          g = n(88302),
-          C = n(34264);
+          u = n(55747),
+          m = n(25699),
+          p = n(62057),
+          _ = n(91918),
+          g = n(60709),
+          C = n(47377);
         const f = -6;
         var S;
         !(function (e) {
@@ -15531,19 +15548,19 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([h.XI], P.prototype, "RecvCategoriesList", null),
           (0, s.Cg)([h.XI], P.prototype, "TransferFriendFromToGroup", null);
       },
-      29384: (e, t, n) => {
+      9851: (e, t, n) => {
         "use strict";
         n.d(t, { f: () => m, x: () => p });
         var s = n(34629),
-          i = n(87118),
-          o = n(88302),
-          r = n(31038),
+          i = n(39831),
+          o = n(60709),
+          r = n(71884),
           a = n(89193),
-          l = n(96108),
-          c = n(42308),
-          d = n(18483),
-          h = n(11662),
-          u = n(29439);
+          l = n(55747),
+          c = n(25699),
+          d = n(69164),
+          h = n(13791),
+          u = n(96996);
         function m(e, t) {
           return (
             e == t ||
@@ -15670,7 +15687,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([a.XI], p.prototype, "OnFriendRemoved", null),
           (0, s.Cg)([a.XI], p.prototype, "ReadFavorites", null);
       },
-      26054: (e, t, n) => {
+      80915: (e, t, n) => {
         "use strict";
         n.d(t, {
           kP: () => Ni,
@@ -15685,10 +15702,10 @@ var CLSTAMP = "10779229";
           PJ: () => Ki,
         });
         var s = n(34629),
-          i = n(42308),
-          o = n(52370),
-          r = n(80228),
-          a = n(63233);
+          i = n(25699),
+          o = n(621),
+          r = n(98825),
+          a = n(15518);
         class l {
           AddTrackedWindow(e) {}
           BIsUserIdle(e) {
@@ -15717,8 +15734,8 @@ var CLSTAMP = "10779229";
                 );
           }
         }
-        var c = n(51756),
-          d = n(18483);
+        var c = n(88071),
+          d = n(69164);
         class h extends l {
           m_msUserLastAction;
           m_rgWindows = [];
@@ -15819,7 +15836,7 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([c.oI], u.prototype, "OnComputerActiveStateChange", null),
           (0, s.Cg)([c.oI], u.prototype, "UpdateStillActive", null);
         var m,
-          p = n(31038);
+          p = n(71884);
         class _ {
           m_FriendStore;
           constructor(e) {
@@ -15879,7 +15896,7 @@ var CLSTAMP = "10779229";
             return Promise.resolve();
           }
         }
-        var C = n(60735);
+        var C = n(72576);
         class f extends _ {
           GetNotificationPermissionLevel() {
             if ("undefined" == typeof Notification) return "unsupported";
@@ -15928,10 +15945,10 @@ var CLSTAMP = "10779229";
                   });
           }
         }
-        var S = n(14769),
-          v = n(72270),
-          b = n(58752),
-          I = n(11662);
+        var S = n(74714),
+          v = n(57274),
+          b = n(6242),
+          I = n(13791);
         class y {
           m_data;
           m_bDropConsumed = !1;
@@ -15987,9 +16004,9 @@ var CLSTAMP = "10779229";
             return this.m_onDropCompleteCallbacks.Register(e);
           }
         }
-        var w = n(44452),
-          x = n(96108),
-          A = n(87118),
+        var w = n(54888),
+          x = n(55747),
+          A = n(39831),
           R = n(89193);
         class T {
           m_fnFillAppUsabilityMetrics;
@@ -16025,7 +16042,7 @@ var CLSTAMP = "10779229";
               );
           }
         }
-        var M = n(97873);
+        var M = n(40080);
         class D {
           m_mapBrowserInfo = new Map();
           m_hOverlayChatBrowserInfoChanged = null;
@@ -16114,18 +16131,18 @@ var CLSTAMP = "10779229";
           }
         }
         (0, s.Cg)([c.oI], D.prototype, "OnOverlayChatBrowserInfoChanged", null);
-        var k = n(29439),
+        var k = n(96996),
           P = n(62540),
           L = n(83957),
           G = n.n(L),
           B = n(41230),
           F = n(63696),
-          E = n(8978),
-          O = n(53354),
-          N = n(91042),
-          j = n(26194),
-          V = n(45510),
-          U = n(40114);
+          E = n(62057),
+          O = n(73823),
+          N = n(85307),
+          j = n(70407),
+          V = n(61473),
+          U = n(66681);
         let H = class extends F.Component {
           constructor(e) {
             super(e),
@@ -16295,7 +16312,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([c.oI], H.prototype, "OnOpen", null),
           (0, s.Cg)([c.oI], H.prototype, "ShowThumbnail", null),
           (H = (0, s.Cg)([B.PA], H));
-        var W = n(63461);
+        var W = n(74192);
         let z = class extends F.Component {
           m_pollTimeout = void 0;
           m_broadcastid = void 0;
@@ -16528,10 +16545,10 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([c.oI], q.prototype, "OnWatch", null),
           (0, s.Cg)([c.oI], q.prototype, "ShowThumbnail", null);
-        var K = n(74547),
-          Z = n(26105),
-          X = n(69533),
-          $ = n(48180);
+        var K = n(94490),
+          Z = n(74708),
+          X = n(70580),
+          $ = n(77081);
         function Q(e) {
           const { appID: t } = e,
             [n] = (0, $.t7)(t, { include_assets_without_overrides: !0 }),
@@ -16854,10 +16871,10 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([c.oI], Y.prototype, "DismissInvite", null),
           (0, s.Cg)([c.oI], Y.prototype, "OnShowGameContextMenu", null),
           (Y = (0, s.Cg)([B.PA], Y));
-        var J = n(50691),
-          ee = n(85427),
-          te = n(64382),
-          ne = n(21582),
+        var J = n(91844),
+          ee = n(31932),
+          te = n(10093),
+          ne = n(96641),
           se = n(93039);
         function ie(e) {
           const { inviter: t, inviteTarget: n, appID: s } = e,
@@ -16958,11 +16975,11 @@ var CLSTAMP = "10779229";
             s = t?.GetAssetsWithoutOverrides()?.GetHeaderURL();
           return s ? (0, P.jsx)("img", { src: s, className: n }) : null;
         }
-        var re = n(67833),
-          ae = n(97324),
-          le = n(47778),
-          ce = n(90131),
-          de = n(58322);
+        var re = n(54042),
+          ae = n(20155),
+          le = n(78275),
+          ce = n(14792),
+          de = n(64314);
         const he = (0, p.zy)(function (e, t, n) {
           (0, ce.HT)(
             (0, P.jsx)(pe, { ...e, bIsInviteDialog: !0 }),
@@ -17390,7 +17407,7 @@ var CLSTAMP = "10779229";
                 }),
               }),
             });
-        var Ie = n(27737),
+        var Ie = n(94522),
           ye = n(90095);
         const we = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
         function xe(e) {
@@ -17405,24 +17422,24 @@ var CLSTAMP = "10779229";
             n
           );
         }
-        var Ae = n(9663),
-          Re = (n(14986), n(56738)),
-          Te = n(37076),
-          Me = n(35676),
-          De = n(73511),
-          ke = n(16192),
-          Pe = n(98171),
-          Le = n(53808),
-          Ge = n(91639),
-          Be = n(49569),
-          Fe = n(28142),
-          Ee = n(6697),
-          Oe = n(34451),
-          Ne = n(98124),
+        var Ae = n(94058),
+          Re = (n(40261), n(73939)),
+          Te = n(9369),
+          Me = n(25493),
+          De = n(70425),
+          ke = n(15891),
+          Pe = n(37266),
+          Le = n(29793),
+          Ge = n(72590),
+          Be = n(3190),
+          Fe = n(70027),
+          Ee = n(71594),
+          Oe = n(94270),
+          Ne = n(10007),
           je = n(70757),
           Ve = n.n(je),
-          Ue = n(54757),
-          He = n(36371);
+          Ue = n(7628),
+          He = n(28976);
         function We(e) {
           if (e.context.chat instanceof Ue.s) {
             let t = e.args.appid,
@@ -17564,7 +17581,7 @@ var CLSTAMP = "10779229";
             return { body: (0, E.we)(e, n.display_name) };
           };
         }
-        var et = n(58567);
+        var et = n(68942);
         function tt(e) {
           const {
             href: t,
@@ -17610,19 +17627,19 @@ var CLSTAMP = "10779229";
                 ? i()
                 : (0, P.jsx)(tt, { href: s, children: s });
         }
-        var st = n(20314),
-          it = n(49890),
-          ot = n(97709),
-          rt = n(21937),
-          at = n(83254),
-          lt = n(19433),
-          ct = n(50736),
-          dt = n(64678),
+        var st = n(93593),
+          it = n(11931),
+          ot = n(94500),
+          rt = n(50286),
+          at = n(48603),
+          lt = n(33692),
+          ct = n(68773),
+          dt = n(50577),
           ht = n(67056),
-          ut = n(20285),
+          ut = n(37820),
           mt = n(65627),
           pt = n.n(mt),
-          _t = n(57242);
+          _t = n(30580);
         const gt = (0, F.createContext)({});
         function Ct() {
           return (0, F.useContext)(gt);
@@ -18006,8 +18023,8 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([c.oI], St.prototype, "UserInputReceived", null),
           (0, s.Cg)([R.XI.bound], St.prototype, "SetMuteInternal", null),
           (0, s.Cg)([c.oI], St.prototype, "SendStats", null);
-        var vt = n(14090),
-          bt = n(4695);
+        var vt = n(38969),
+          bt = n(9510);
         function It(e, t) {
           if (!e) return;
           if ((0, te.ww)(e)) return;
@@ -18125,8 +18142,8 @@ var CLSTAMP = "10779229";
             e && (e.strMode != t ? e.fnSetMode(t) : e.fnSetMode("none"));
           }, [e, t]);
         }
-        var Mt = n(46434),
-          Dt = n(63518),
+        var Mt = n(97087),
+          Dt = n(15283),
           kt = n(2965),
           Pt = n.n(kt);
         const Lt = (0, F.forwardRef)(function (e, t) {
@@ -18369,14 +18386,14 @@ var CLSTAMP = "10779229";
         }
         var Kt = n(16026),
           Zt = n.n(Kt),
-          Xt = n(99497),
-          $t = n(29656),
-          Qt = n(43698);
+          Xt = n(97684),
+          $t = n(8705),
+          Qt = n(55983);
         const Yt = {};
         (Yt.arabic = () => n.e(7247).then(n.t.bind(n, 67247, 19))),
           (Yt.brazilian = () => n.e(947).then(n.t.bind(n, 60947, 19))),
           (Yt.bulgarian = () => n.e(7468).then(n.t.bind(n, 47468, 19))),
-          (Yt.czech = () => n.e(474).then(n.t.bind(n, 474, 19))),
+          (Yt.czech = () => n.e(474).then(n.t.bind(n, 78093, 19))),
           (Yt.danish = () => n.e(8366).then(n.t.bind(n, 88366, 19))),
           (Yt.dutch = () => n.e(1571).then(n.t.bind(n, 51571, 19))),
           (Yt.english = () => n.e(5617).then(n.t.bind(n, 35617, 19))),
@@ -18411,7 +18428,7 @@ var CLSTAMP = "10779229";
         var en = n(78325),
           tn = n(41981),
           nn = n.n(tn),
-          sn = n(52203);
+          sn = n(78920);
         const on = parseInt(nn().nContextMenuEdgePadding),
           rn = parseInt(nn().nContextMenuVerticalGap);
         function an(e) {
@@ -19027,7 +19044,7 @@ var CLSTAMP = "10779229";
             ("once" != e || !a.current) && ("active" == i || n)
           );
         }
-        var Mn = n(89008);
+        var Mn = n(30513);
         function Dn(e) {
           let { player: t, category: n, title: s, focus: i } = e,
             o = (0, F.useRef)(null),
@@ -19446,7 +19463,7 @@ var CLSTAMP = "10779229";
         }
         var Hn = n(80478),
           Wn = n.n(Hn),
-          zn = n(32271);
+          zn = n(8512);
         function qn(e) {
           let { player: t, category: n, title: s } = e,
             [i, o] = (function (e) {
@@ -19843,12 +19860,12 @@ var CLSTAMP = "10779229";
           );
         }
         var es,
-          ts = n(6474),
-          ns = n(13177),
-          ss = n(99436),
-          is = n(44907);
+          ts = n(35123),
+          ns = n(97640),
+          ss = n(1444),
+          is = n(90294);
         const os = F.lazy(() =>
-          Promise.all([n.e(9489), n.e(6950), n.e(7462)]).then(n.bind(n, 4877)),
+          Promise.all([n.e(9489), n.e(4571), n.e(7462)]).then(n.bind(n, 87876)),
         );
         function rs(e) {
           return (0, P.jsx)(F.Suspense, {
@@ -23170,10 +23187,10 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([c.oI], di.prototype, "OnMouseOver", null),
           (0, s.Cg)([c.oI], di.prototype, "OnMouseOut", null);
-        var ui = n(83647),
-          mi = n(60907),
-          pi = n(27953),
-          _i = n(86373);
+        var ui = n(9387),
+          mi = n(41605),
+          pi = n(75486),
+          _i = n(65264);
         const gi =
             n.p +
             "javascript/webui/noisegate-audio-worklet.js?contenthash=ef007c9e0249549f997c",
@@ -23521,7 +23538,7 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([R.XI.bound], vi.prototype, "OnFailure", null),
           (0, s.Cg)([R.XI.bound], vi.prototype, "OnPlaybackEnded", null);
-        var bi = n(50886);
+        var bi = n(62049);
         class Ii extends bi.P {
           async GetString(e) {
             try {
@@ -23541,13 +23558,13 @@ var CLSTAMP = "10779229";
             return SteamClient.Storage.DeleteKey(e), Promise.resolve();
           }
         }
-        var yi = n(61452),
+        var yi = n(88829),
           wi = n(7470),
-          xi = n(38701),
-          Ai = n(64745),
+          xi = n(28554),
+          Ai = n(17469),
           Ri = n(32621),
           Ti = n.n(Ri),
-          Mi = n(65729);
+          Mi = n(63440);
         class Di {
           m_VoiceChatStore;
           m_CMInterface;
@@ -24757,27 +24774,27 @@ var CLSTAMP = "10779229";
           Zi(e.window, e.browser_info ?? C.m);
         });
       },
-      31038: (e, t, n) => {
+      71884: (e, t, n) => {
         "use strict";
         n.d(t, {
-          iw: () => K,
-          m: () => X,
-          RV: () => Z,
-          xm: () => $,
-          Nw: () => z,
-          zy: () => q,
-          LC: () => Q,
-          TN: () => Y,
+          iw: () => Z,
+          m: () => $,
+          RV: () => X,
+          xm: () => Q,
+          Nw: () => q,
+          zy: () => K,
+          LC: () => Y,
+          TN: () => J,
         });
         var s = n(34629),
-          i = n(80228),
+          i = n(98825),
           o = n(89193),
-          r = n(63461),
-          a = n(96108),
-          l = n(87118),
-          c = n(9663),
-          d = n(24163),
-          h = n(40114);
+          r = n(74192),
+          a = n(55747),
+          l = n(39831),
+          c = n(94058),
+          d = n(74874),
+          h = n(66681);
         class u {
           constructor() {
             (0, o.Gn)(this);
@@ -24828,8 +24845,8 @@ var CLSTAMP = "10779229";
             if (n == r.i_.k_EPending) {
               let t = this.m_nRequestID++;
               this.m_mapPendingRequests.set(this.MakeKey(e, t), n);
-              let s = $.GetDefaultBrowserContext(),
-                i = $.ShowFriendChatDialog(s, e);
+              let s = Q.GetDefaultBrowserContext(),
+                i = Q.ShowFriendChatDialog(s, e);
               i && i.ViewerNeedsApproval(t);
             } else this.m_mapPendingRequests.set(this.MakeKey(e, t), n);
           }
@@ -24978,9 +24995,9 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([o.sH], m.prototype, "m_bExpired", void 0),
           (0, s.Cg)([o.sH], m.prototype, "m_strThumbnail", void 0),
           (0, s.Cg)([o.sH], m.prototype, "m_nThumbnailCount", void 0);
-        var p = n(27972),
-          _ = n(39455),
-          g = n(35676);
+        var p = n(68113),
+          _ = n(53724),
+          g = n(25493);
         class C {
           m_CMInterface;
           m_strTradeOfferToken;
@@ -25017,13 +25034,14 @@ var CLSTAMP = "10779229";
             return `${i.TS.COMMUNITY_BASE_URL}tradeoffer/new/?partner=${e}&token=${encodeURIComponent(this.m_strTradeOfferToken)}`;
           }
         }
-        var f = n(18367),
-          S = n(24073),
-          v = n(8092),
-          b = n(42308);
+        var f = n(91918),
+          S = n(98064),
+          v = n(16045),
+          b = n(25699);
         const I = { locked: !1 };
-        var y = n(4345);
-        class w {
+        var y = n(47816),
+          w = n(96641);
+        class x {
           m_ParentalSettings = { is_enabled: !1 };
           m_ParentalState = I;
           m_CMInterface;
@@ -25064,16 +25082,14 @@ var CLSTAMP = "10779229";
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandlerAction(
                 v.w0.NotifyLockHandler,
                 (e) => (
-                  i.TS.SESSIONID == e.Body().sessionid() &&
-                    this.SetLockState(!0),
+                  (0, w.KC)() == e.Body().sessionid() && this.SetLockState(!0),
                   a.R
                 ),
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandlerAction(
                 v.w0.NotifyUnlockHandler,
                 (e) => (
-                  i.TS.SESSIONID == e.Body().sessionid() &&
-                    this.SetLockState(!1),
+                  (0, w.KC)() == e.Body().sessionid() && this.SetLockState(!1),
                   a.R
                 ),
               ),
@@ -25120,19 +25136,19 @@ var CLSTAMP = "10779229";
             return this.m_ParentalState.locked;
           }
           ValidateWebToken() {
-            let e = i.TS.SESSIONID,
+            let e = (0, w.KC)(),
               t = document.cookie.match("(^|; )steamparental=([^;]*)");
             if (!t || !t[2]) return Promise.resolve(!1);
             let n = t[2],
               s = n.split("||");
             n = 2 == s.length ? s[1] : s[0];
-            let o = l.w.Init(v.R2);
+            let i = l.w.Init(v.R2);
             return (
-              o.Body().set_unlock_token(e + "||" + n),
+              i.Body().set_unlock_token(e + "||" + n),
               new Promise((e, t) => {
                 v.JL.ValidateToken(
                   this.m_CMInterface.GetServiceTransport(),
-                  o,
+                  i,
                 ).then((t) => {
                   t.GetEResult() == a.R ? e(!0) : e(!1);
                 });
@@ -25159,7 +25175,7 @@ var CLSTAMP = "10779229";
               let t = l.w.Init(v.Rk);
               return (
                 t.Body().set_password(e),
-                t.Body().set_session(i.TS.SESSIONID),
+                t.Body().set_session((0, w.KC)()),
                 t.Body().set_send_unlock_on_success(!0),
                 new Promise((e, n) => {
                   v.JL.ValidatePassword(
@@ -25178,18 +25194,18 @@ var CLSTAMP = "10779229";
             }
           }
         }
-        (0, s.Cg)([o.sH], w.prototype, "m_ParentalSettings", void 0),
-          (0, s.Cg)([o.sH], w.prototype, "m_ParentalState", void 0),
-          (0, s.Cg)([o.XI], w.prototype, "UpdateParentalState", null),
-          (0, s.Cg)([o.EW], w.prototype, "isEnabled", null),
-          (0, s.Cg)([o.EW], w.prototype, "isLocked", null),
-          (0, s.Cg)([o.EW], w.prototype, "locked", null);
-        var x = n(96959),
-          A = n(14661),
-          R = n(30952),
-          T = n(35822),
-          M = n(11662);
-        class D {
+        (0, s.Cg)([o.sH], x.prototype, "m_ParentalSettings", void 0),
+          (0, s.Cg)([o.sH], x.prototype, "m_ParentalState", void 0),
+          (0, s.Cg)([o.XI], x.prototype, "UpdateParentalState", null),
+          (0, s.Cg)([o.EW], x.prototype, "isEnabled", null),
+          (0, s.Cg)([o.EW], x.prototype, "isLocked", null),
+          (0, s.Cg)([o.EW], x.prototype, "locked", null);
+        var A = n(19258),
+          R = n(474),
+          T = n(5109),
+          M = n(33121),
+          D = n(13791);
+        class k {
           m_bReady = !1;
           m_FriendsSettings = void 0;
           m_CommunityPreferences = void 0;
@@ -25208,11 +25224,11 @@ var CLSTAMP = "10779229";
             (0, o.Gn)(this),
               (this.m_Storage = e),
               i.TS.IN_CLIENT
-                ? (this.m_iFriendSettingsStore = new P(
+                ? (this.m_iFriendSettingsStore = new L(
                     this,
                     this.OnFriendSettingsChanged.bind(this),
                   ))
-                : (this.m_iFriendSettingsStore = new L(
+                : (this.m_iFriendSettingsStore = new G(
                     this,
                     this.OnFriendSettingsChanged.bind(this),
                   )),
@@ -25222,7 +25238,7 @@ var CLSTAMP = "10779229";
                   (e) => (this.m_bSteamIsInTournamentMode = e),
                 );
             {
-              let e = new R.B4H();
+              let e = new T.B4H();
               this.m_CommunityPreferences = {
                 bParenthesizeNicknames: e.parenthesize_nicknames(),
                 eTextFilterSetting: e.text_filter_setting(),
@@ -25239,9 +25255,9 @@ var CLSTAMP = "10779229";
               this.m_CM.AddOnLogonCallback(() => {
                 this.m_bReady ||
                   (this.m_iFriendSettingsStore.InternalInit(), this.SetReady());
-                let e = l.w.Init(T.xf);
+                let e = l.w.Init(M.xf);
                 e.Body().set_country_code(i.TS.COUNTRY),
-                  T.nd
+                  M.nd
                     .GetStorePreferences(this.m_CM.GetServiceTransport(), e)
                     .then((e) => {
                       this.m_StorePreferences = e.Body();
@@ -25250,7 +25266,7 @@ var CLSTAMP = "10779229";
                   this.LoadCommunityPreferences();
               }),
               this.m_CM.messageHandlers.RegisterServiceNotificationHandlerAction(
-                R.QAJ.NotifyCommunityPreferencesChangedHandler,
+                T.QAJ.NotifyCommunityPreferencesChangedHandler,
                 (e) => (
                   this.UpdateCommunityPreferences(e.Body().preferences()), a.R
                 ),
@@ -25386,7 +25402,7 @@ var CLSTAMP = "10779229";
               (this.m_CommunityPreferences = t);
           }
           CommunityPreferencesToMessage(e) {
-            let t = new R.B4H();
+            let t = new T.B4H();
             return t.set_parenthesize_nicknames(e.bParenthesizeNicknames), t;
           }
           SetCommunityPreferences(e) {
@@ -25416,8 +25432,8 @@ var CLSTAMP = "10779229";
             this.m_unTimerLoadCommunityPrefs &&
               (ClearBackgroundTimeout(this.m_unTimerLoadCommunityPrefs),
               (this.m_unTimerLoadCommunityPrefs = void 0));
-            let e = l.w.Init(R.tzK);
-            R.xtC
+            let e = l.w.Init(T.tzK);
+            T.xtC
               .GetCommunityPreferences(this.m_CM.GetServiceTransport(), e)
               .then((e) => {
                 if (e.GetEResult() != a.R) throw new Error(e.GetErrorMessage());
@@ -25449,13 +25465,13 @@ var CLSTAMP = "10779229";
                   break;
                 }
             if (!e) return;
-            let t = l.w.Init(R.pr_);
+            let t = l.w.Init(T.pr_);
             t
               .Body()
               .set_preferences(
                 this.CommunityPreferencesToMessage(this.CommunityPreferences),
               ),
-              R.xtC
+              T.xtC
                 .SetCommunityPreferences(this.m_CM.GetServiceTransport(), t)
                 .then((e) => {});
           }
@@ -25506,22 +25522,22 @@ var CLSTAMP = "10779229";
               t.set_animated_avatars(n.bAnimatedAvatars);
           }
         }
-        (0, s.Cg)([o.sH], D.prototype, "m_bReady", void 0),
-          (0, s.Cg)([o.sH], D.prototype, "m_FriendsSettings", void 0),
-          (0, s.Cg)([o.sH], D.prototype, "m_CommunityPreferences", void 0),
-          (0, s.Cg)([o.sH], D.prototype, "m_StorePreferences", void 0),
-          (0, s.Cg)([o.sH], D.prototype, "m_bSteamIsInTournamentMode", void 0),
-          (0, s.Cg)([o.XI], D.prototype, "BUpdateFriendsSettings", null),
-          (0, s.Cg)([o.XI], D.prototype, "UpdateCommunityPreferences", null),
-          (0, s.Cg)([o.XI], D.prototype, "SetCommunityPreferences", null);
-        class k {
+        (0, s.Cg)([o.sH], k.prototype, "m_bReady", void 0),
+          (0, s.Cg)([o.sH], k.prototype, "m_FriendsSettings", void 0),
+          (0, s.Cg)([o.sH], k.prototype, "m_CommunityPreferences", void 0),
+          (0, s.Cg)([o.sH], k.prototype, "m_StorePreferences", void 0),
+          (0, s.Cg)([o.sH], k.prototype, "m_bSteamIsInTournamentMode", void 0),
+          (0, s.Cg)([o.XI], k.prototype, "BUpdateFriendsSettings", null),
+          (0, s.Cg)([o.XI], k.prototype, "UpdateCommunityPreferences", null),
+          (0, s.Cg)([o.XI], k.prototype, "SetCommunityPreferences", null);
+        class P {
           m_SettingsStore;
           m_fnFriendSettingsChanged;
           constructor(e, t) {
             (this.m_SettingsStore = e), (this.m_fnFriendSettingsChanged = t);
           }
         }
-        class P extends k {
+        class L extends P {
           m_bClientInitComplete = !1;
           constructor(e, t) {
             super(e, t), this.InternalInit();
@@ -25533,11 +25549,11 @@ var CLSTAMP = "10779229";
                     this.OnClientSettingsChange.bind(this),
                   ),
                   (this.m_bClientInitComplete = !0))
-                : (0, M.wT)(!1, "Can't initialize settings from client"));
+                : (0, D.wT)(!1, "Can't initialize settings from client"));
           }
           OnClientSettingsChange(e) {
             let t,
-              n = A.uL();
+              n = R.uL();
             if ("string" != typeof e) {
               if (((t = e.FriendsSettings), this.BUpdateSettings(t))) return;
             } else
@@ -25552,12 +25568,12 @@ var CLSTAMP = "10779229";
             return SteamClient.FriendSettings.SetFriendSettings(t), !0;
           }
         }
-        class L extends k {
+        class G extends P {
           static k_strLocalStorageKeyPrefix = "LocalStorageFriendsSettings";
           InternalInit() {
             this.m_SettingsStore
               .GetObjectFromLocalStorage(
-                L.k_strLocalStorageKeyPrefix,
+                G.k_strLocalStorageKeyPrefix,
                 this.GetDefaultSettings(),
               )
               .then((e) => {
@@ -25565,18 +25581,18 @@ var CLSTAMP = "10779229";
               });
           }
           GetDefaultSettings() {
-            return { friendsSettings: A.uL() };
+            return { friendsSettings: R.uL() };
           }
           BUpdateSettings(e) {
             let t = { friendsSettings: e };
             return this.m_SettingsStore.StoreObjectInLocalStorage(
-              L.k_strLocalStorageKeyPrefix,
+              G.k_strLocalStorageKeyPrefix,
               t,
             );
           }
         }
-        var G = n(29439);
-        class B {
+        var B = n(96996);
+        class F {
           constructor() {
             (0, o.Gn)(this);
           }
@@ -25592,8 +25608,8 @@ var CLSTAMP = "10779229";
           Init(e) {
             (this.m_CMInterface = e),
               this.m_CMInterface.RunWhenLoggedOn(async () => {
-                let e = l.w.Init(R.bem),
-                  t = await R.xtC.GetPrivacySettings(
+                let e = l.w.Init(T.bem),
+                  t = await T.xtC.GetPrivacySettings(
                     this.m_CMInterface.GetServiceTransport(),
                     e,
                   );
@@ -25601,7 +25617,7 @@ var CLSTAMP = "10779229";
                   this.ReadPrivacySettings(t.Body().privacy_settings());
               }),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandlerAction(
-                R.QAJ.NotifyPrivacyPrivacySettingsChangedHandler,
+                T.QAJ.NotifyPrivacyPrivacySettingsChangedHandler,
                 (e) => (
                   this.ReadPrivacySettings(e.Body().privacy_settings()), a.R
                 ),
@@ -25614,41 +25630,41 @@ var CLSTAMP = "10779229";
             Object.assign(this.m_PrivacySettings, e.toObject());
           }
         }
-        (0, s.Cg)([o.sH], B.prototype, "m_PrivacySettings", void 0);
-        var F = n(55888),
-          E = n(70970),
-          O = n(59623),
-          N = n(60735),
-          j = n(23402);
-        function V(e, t) {
-          return `${e} - ${((n = performance.now() - t), n.toLocaleString((0, j.J)()))}ms`;
+        (0, s.Cg)([o.sH], F.prototype, "m_PrivacySettings", void 0);
+        var E = n(54938),
+          O = n(30599),
+          N = n(9382),
+          j = n(72576),
+          V = n(10779);
+        function U(e, t) {
+          return `${e} - ${((n = performance.now() - t), n.toLocaleString((0, V.J)()))}ms`;
           var n;
         }
-        var U = n(90095);
-        const H = new (n(86373).wd)("FriendsUI").Debug;
-        function W(e, t) {
+        var H = n(90095);
+        const W = new (n(65264).wd)("FriendsUI").Debug;
+        function z(e, t) {
           return function (...t) {
-            $.ready_to_render
+            Q.ready_to_render
               ? e.apply(this, t)
               : (0, o.z7)(
-                  () => $.ready_to_render,
+                  () => Q.ready_to_render,
                   () => {
                     e.apply(this, t);
                   },
                 );
           };
         }
-        function z(e, t, n) {
-          return { value: W(n.value) };
+        function q(e, t, n) {
+          return { value: z(n.value) };
         }
-        function q(e) {
-          return W(e, e.name);
+        function K(e) {
+          return z(e, e.name);
         }
-        class K {}
         class Z {}
-        class X {
+        class X {}
+        class $ {
           m_CMInterface;
-          m_BrowserContextDefaultTarget = N.m;
+          m_BrowserContextDefaultTarget = j.m;
           m_ChatRoomBBCodeParser;
           m_FriendChatBBCodeParser;
           m_NotificationBBCodeParser;
@@ -25658,15 +25674,15 @@ var CLSTAMP = "10779229";
           m_UIStore;
           m_Storage;
           m_SettingsStore;
-          m_AppInfoStore = E.Vw;
+          m_AppInfoStore = O.Vw;
           m_NotificationManager;
           m_EconomyStore = new C();
-          m_UserStore = new B();
+          m_UserStore = new F();
           m_VoiceChatStore;
-          m_ParentalStore = new w();
+          m_ParentalStore = new x();
           m_BroadcastStore = new u();
           m_GroupMemberStore = new S.me();
-          m_RemotePlayStore = new x.D2();
+          m_RemotePlayStore = new A.D2();
           m_bReadyToRender = !1;
           static sm_msStartup = performance.now();
           m_bShuttingDown = !1;
@@ -25674,15 +25690,15 @@ var CLSTAMP = "10779229";
           m_exportsVoiceInterface = null;
           constructor(e, t = {}) {
             (0, o.Gn)(this),
-              (0, M.wT)(!$, "FriendsUIApp already initialized"),
-              ($ = this),
+              (0, D.wT)(!Q, "FriendsUIApp already initialized"),
+              (Q = this),
               (window.g_FriendsUIApp = this),
               (this.m_Storage = e),
-              (this.m_SettingsStore = t.SettingsStore || new D(e)),
+              (this.m_SettingsStore = t.SettingsStore || new k(e)),
               (this.m_FriendStore = t.FriendStore || new f.VT()),
               (this.m_ChatStore = t.ChatStore || new p.fl(this.m_FriendStore)),
-              (this.m_UIStore = t.UIStore || new G.Vi(this.m_ChatStore)),
-              (this.m_VoiceChatStore = new F.F$(this.m_SettingsStore)),
+              (this.m_UIStore = t.UIStore || new B.Vi(this.m_ChatStore)),
+              (this.m_VoiceChatStore = new E.F$(this.m_SettingsStore)),
               (this.m_exportsCurrentUserStatus = {
                 GetPersonaState: () =>
                   this.FriendStore.self
@@ -25694,7 +25710,7 @@ var CLSTAMP = "10779229";
                   this.FriendStore.SetUserPersonaState(b._3b),
                 SetUserAway: () => this.FriendStore.SetUserPersonaState(b.PrD),
                 SetUserOffline: () => {
-                  this.SignOutOfFriends(N.m),
+                  this.SignOutOfFriends(j.m),
                     this.FriendStore.SetUserPersonaState(b.cU3);
                 },
                 GetUserDoNotDisturb: () =>
@@ -25731,7 +25747,7 @@ var CLSTAMP = "10779229";
                   this.VoiceStore.ConvertSliderToGainValue(e, t),
                 GetVoiceInputGain: () => this.VoiceStore.GetVoiceInputGain(),
                 GetVoiceOutputGain: () => this.VoiceStore.GetVoiceOutputGain(),
-                GetMaxInputOutputGain: () => F.F$.k_MaxInputOutputGainValue,
+                GetMaxInputOutputGain: () => E.F$.k_MaxInputOutputGainValue,
                 SetVoiceInputGain: (e) => this.VoiceStore.SetVoiceInputGain(e),
                 SetVoiceOutputGain: (e) =>
                   this.VoiceStore.SetVoiceOutputGain(e),
@@ -25794,10 +25810,10 @@ var CLSTAMP = "10779229";
                       "function" == typeof a.then
                     )
                       return l.then(
-                        () => n && o.push(V(`async ${e}`, i)),
+                        () => n && o.push(U(`async ${e}`, i)),
                         (t) => r(t, e),
                       );
-                    n && o.push(V(e, s));
+                    n && o.push(U(e, s));
                   } catch (t) {
                     r(t, e);
                   }
@@ -25806,7 +25822,7 @@ var CLSTAMP = "10779229";
                 }),
               ),
                 n &&
-                  (console.groupCollapsed(V(e, i)),
+                  (console.groupCollapsed(U(e, i)),
                   o.forEach((e) => console.log(e)),
                   console.groupEnd());
             })("FriendsUI ReadyToRender", [
@@ -25829,7 +25845,7 @@ var CLSTAMP = "10779229";
               ...n,
             ]).then(
               () => {
-                H("Ready To Render promises succeeded"),
+                W("Ready To Render promises succeeded"),
                   this.SetReadyToRender();
               },
               (e) => {
@@ -25898,8 +25914,8 @@ var CLSTAMP = "10779229";
           async SetReadyToRender() {
             if (
               !this.m_bReadyToRender &&
-              (H(
-                `FriendsUI ready to render after ${performance.now() - X.sm_msStartup}ms`,
+              (W(
+                `FriendsUI ready to render after ${performance.now() - $.sm_msStartup}ms`,
               ),
               (this.m_bReadyToRender = !0),
               await this.OnReadyToRender(),
@@ -25913,7 +25929,7 @@ var CLSTAMP = "10779229";
             return this.m_bReadyToRender;
           }
           GetStartupTime() {
-            return X.sm_msStartup;
+            return $.sm_msStartup;
           }
           ShowFriendChatDialog(e, t, n = !0) {
             return this.UIStore.ShowFriendChatDialog(e, t, n, n);
@@ -25922,14 +25938,14 @@ var CLSTAMP = "10779229";
             return this.m_BrowserContextDefaultTarget;
           }
           SetDefaultPopupContext(e) {
-            H("Set default popup context: " + e.m_unPID),
+            W("Set default popup context: " + e.m_unPID),
               (this.m_BrowserContextDefaultTarget = e);
           }
           CreateNewTabFromUniqueID(e, t, n, s) {
             let i = t.match(/^f(\d+)$/);
             if (i && i[1]) {
               let t = parseInt(i[1]),
-                n = $.FriendStore.GetPlayer(t);
+                n = Q.FriendStore.GetPlayer(t);
               if (n && !n.is_blocked) {
                 let i = this.m_ChatStore.GetFriendChat(t);
                 if (i) {
@@ -25937,7 +25953,7 @@ var CLSTAMP = "10779229";
                   return (
                     !s ||
                       n.is_friend ||
-                      $.FriendStore.BApprovedNonFriendMessages(t) ||
+                      Q.FriendStore.BApprovedNonFriendMessages(t) ||
                       i.SetShowNonFriendWarning(!0),
                     o
                   );
@@ -25953,7 +25969,7 @@ var CLSTAMP = "10779229";
                     t.GetGroupID(),
                     !n,
                   ),
-                  new O.$C(e, t)
+                  new N.$C(e, t)
                 );
             }
             return null;
@@ -25987,24 +26003,21 @@ var CLSTAMP = "10779229";
           }
           static sm_tzOffset;
           GetLocalMidnightInRTime32(e) {
-            void 0 === X.sm_tzOffset &&
-              ((X.sm_tzOffset = 60 * new Date().getTimezoneOffset()),
-              (0, M.wT)(
-                X.sm_tzOffset || 0 === X.sm_tzOffset,
-                `Computed invalid timezone offset ${X.sm_tzOffset}`,
+            void 0 === $.sm_tzOffset &&
+              (($.sm_tzOffset = 60 * new Date().getTimezoneOffset()),
+              (0, D.wT)(
+                $.sm_tzOffset || 0 === $.sm_tzOffset,
+                `Computed invalid timezone offset ${$.sm_tzOffset}`,
               ));
-            let t = X.sm_tzOffset || 0,
+            let t = $.sm_tzOffset || 0,
               n = (e || this.m_CMInterface.GetServerRTime32()) - t;
             return 86400 * Math.floor(n / 86400) + t;
-          }
-          IsInBeta() {
-            return i.TS.FRIENDSUI_BETA;
           }
           OnWindowBecameVisible() {
             this.m_FriendStore.EnsureFriendsListLoaded();
           }
           BIsValidBrowserContext(e) {
-            return (0, N.u)(e, N.m);
+            return (0, j.u)(e, j.m);
           }
           ShowCloseActiveVoiceConfirmation(e, t) {}
           UpdatePersonaState(e) {}
@@ -26045,30 +26058,30 @@ var CLSTAMP = "10779229";
             ]);
           }
         }
-        let $;
-        function Q() {
-          return (0, U.q3)(() => $.FriendStore.self?.persona?.m_gameid ?? "0");
-        }
+        let Q;
         function Y() {
-          return "0" != Q();
+          return (0, H.q3)(() => Q.FriendStore.self?.persona?.m_gameid ?? "0");
         }
-        (0, s.Cg)([o.sH], X.prototype, "m_bReadyToRender", void 0),
-          (0, s.Cg)([o.EW], X.prototype, "ready_to_render", null);
+        function J() {
+          return "0" != Y();
+        }
+        (0, s.Cg)([o.sH], $.prototype, "m_bReadyToRender", void 0),
+          (0, s.Cg)([o.EW], $.prototype, "ready_to_render", null);
       },
-      24073: (e, t, n) => {
+      98064: (e, t, n) => {
         "use strict";
         n.d(t, { fW: () => p, me: () => f, rV: () => g });
         var s = n(34629),
-          i = n(18483),
-          o = n(51756),
-          r = n(18367),
-          a = n(31038),
-          l = n(8978),
-          c = n(86373),
-          d = n(51476),
+          i = n(69164),
+          o = n(88071),
+          r = n(91918),
+          a = n(71884),
+          l = n(62057),
+          c = n(65264),
+          d = n(60651),
           h = n(89193),
-          u = n(11662),
-          m = n(42308);
+          u = n(13791),
+          m = n(25699);
         const p = -1,
           _ = -2;
         class g {
@@ -26606,20 +26619,20 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([o.oI], f.prototype, "OnPersonaStateChanged", null),
           (0, s.Cg)([o.oI], f.prototype, "OnPartyBeaconsUpdated", null);
       },
-      97873: (e, t, n) => {
+      40080: (e, t, n) => {
         "use strict";
         n.d(t, { DH: () => p, JD: () => _, ol: () => g });
         var s = n(34629),
-          i = n(1247),
+          i = n(28191),
           o = n(63696),
           r = n(89193),
-          a = n(80228),
-          l = n(89144),
-          c = n(51756),
-          d = n(91644),
-          h = n(18483),
-          u = n(26054),
-          m = n(31038);
+          a = n(98825),
+          l = n(30697),
+          c = n(88071),
+          d = n(67299),
+          h = n(69164),
+          u = n(80915),
+          m = n(71884);
         class p {
           m_mapHovers = new WeakMap();
           GetHover(e) {
@@ -26785,23 +26798,23 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([c.oI], g.prototype, "Hide", null),
           (0, s.Cg)([c.oI], g.prototype, "OnContextMenu", null);
       },
-      96959: (e, t, n) => {
+      19258: (e, t, n) => {
         "use strict";
         n.d(t, { D2: () => v, Fp: () => f });
         var s = n(34629),
-          i = n(31038),
-          o = n(14824),
+          i = n(71884),
+          o = n(27243),
           r = n(89193),
-          a = n(63233),
-          l = n(52370),
-          c = n(96108),
-          d = n(9663),
-          h = n(80228),
-          u = n(40114),
-          m = n(51756),
-          p = n(64382),
-          _ = n(86373),
-          g = n(60735);
+          a = n(15518),
+          l = n(621),
+          c = n(55747),
+          d = n(94058),
+          h = n(98825),
+          u = n(66681),
+          m = n(88071),
+          p = n(10093),
+          _ = n(65264),
+          g = n(72576);
         const C = new _.wd("FriendsUI/RemotePlay"),
           f = 4;
         class S {
@@ -27596,16 +27609,16 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([m.oI], v.prototype, "HandleGroupDisbanded", null),
           (0, s.Cg)([m.oI], v.prototype, "HandleRemoteClientStopped", null);
       },
-      29439: (e, t, n) => {
+      96996: (e, t, n) => {
         "use strict";
-        n.d(t, { TP: () => w, Vi: () => y, Jw: () => b, OC: () => I });
+        n.d(t, { TP: () => x, Vi: () => w, Jw: () => I, OC: () => y });
         var s = n(34629),
-          i = n(80228),
-          o = n(31038),
+          i = n(98825),
+          o = n(71884),
           r = n(89193),
-          a = n(40114),
-          l = n(18483),
-          c = n(8978);
+          a = n(66681),
+          l = n(69164),
+          c = n(62057);
         let d = 0;
         class h {
           m_id = void 0;
@@ -27779,16 +27792,17 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([r.XI], h.prototype, "RemoveTab", null),
           (0, s.Cg)([r.XI], h.prototype, "OnPopupClosed", null),
           (0, s.Cg)([r.XI], h.prototype, "CloseAllTabs", null);
-        var u = n(55450),
-          m = n(60735),
-          p = n(42308),
-          _ = n(38701),
-          g = n(11662),
-          C = n(58752),
-          f = n(51756),
-          S = n(21582);
-        const v = "ChatStorePopupState";
-        var b, I;
+        var u = n(83103),
+          m = n(72576),
+          p = n(25699),
+          _ = n(28554),
+          g = n(13791),
+          C = n(6242),
+          f = n(88071),
+          S = n(96641),
+          v = n(29458);
+        const b = "ChatStorePopupState";
+        var I, y;
         !(function (e) {
           (e[(e.Favorites = 0)] = "Favorites"),
             (e[(e.FriendsList = 1)] = "FriendsList"),
@@ -27796,8 +27810,8 @@ var CLSTAMP = "10779229";
             (e[(e.RecentMessages = 3)] = "RecentMessages"),
             (e[(e.FirstTab = 0)] = "FirstTab"),
             (e[(e.MaxTab = 3)] = "MaxTab");
-        })(b || (b = {}));
-        class y {
+        })(I || (I = {}));
+        class w {
           m_chatStore;
           m_bRestoredPopupState = !1;
           m_vecShowGroupsAfterRestorePopup = [];
@@ -27813,7 +27827,7 @@ var CLSTAMP = "10779229";
           m_bTheaterMode = !1;
           m_mapFriendChatBroadcastVisible = new Map();
           m_nTabActivationCount = 0;
-          m_eFriendsListSteamDeckActiveTab = b.FriendsList;
+          m_eFriendsListSteamDeckActiveTab = I.FriendsList;
           m_FriendsListSteamDeckActiveTabCallbackList = new C.lu();
           m_overlayCreatedCallbackList = new C.lu();
           m_bQamFriendsChatExpanded = !1;
@@ -27972,7 +27986,7 @@ var CLSTAMP = "10779229";
               t.OnTabClosed(),
               s.IsFriendsListSingleWindow() &&
                 0 == s.default_tabset.tabCount &&
-                (s.responsive_window_state.SetActiveView(I.FriendsList),
+                (s.responsive_window_state.SetActiveView(y.FriendsList),
                 this.SetTheaterMode(!1),
                 s.SetFriendsListCollapsed(!1)),
               o.xm.UIStore.SerializePopupState();
@@ -28029,7 +28043,7 @@ var CLSTAMP = "10779229";
               }
             }
             return (
-              s && n && i.responsive_window_state.SetActiveView(I.Chat),
+              s && n && i.responsive_window_state.SetActiveView(y.Chat),
               o.xm.UIStore.SerializePopupState(),
               n && this.m_nTabActivationCount++,
               s
@@ -28092,7 +28106,7 @@ var CLSTAMP = "10779229";
             let n = this.m_mapChatBrowserContexts.get(t);
             if (!n) {
               let s = o.xm.BIsValidBrowserContext(e);
-              (n = new A(e)),
+              (n = new R(e)),
                 s &&
                   ((0, g.wT)(
                     0 == e.m_unPID || void 0 !== e.m_eUIMode,
@@ -28176,7 +28190,7 @@ var CLSTAMP = "10779229";
           BShouldSuppressBrowserContextBroadcasting(e) {
             return (
               !!i.TS.IN_CHROMEOS ||
-              !!this.m_bSuppressBrowserContextBroadcasting ||
+              !!(0, S.Pr)() || !!this.m_bSuppressBrowserContextBroadcasting ||
               !this.BHasPerContextChatData(e)
             );
           }
@@ -28371,7 +28385,7 @@ var CLSTAMP = "10779229";
               return;
             if (this.m_bShuttingDown) return;
             let t = this.SerializePopupStateToObject(e);
-            o.xm.SettingsStore.StoreObjectInLocalStorage(v, t);
+            o.xm.SettingsStore.StoreObjectInLocalStorage(b, t);
           }
           SerializePopupStateToObject(e) {
             let t = this.GetPerContextChatData(m.m),
@@ -28432,7 +28446,7 @@ var CLSTAMP = "10779229";
                 void (this.m_bRestoringPopups = !1)
               );
             let e =
-                await o.xm.SettingsStore.GetObjectFromLocalStorageWhenReady(v),
+                await o.xm.SettingsStore.GetObjectFromLocalStorageWhenReady(b),
               t = !1;
             (0, a.Dp)("WebChat.BSuppressPopupsInRestore") &&
               (t = await SteamClient.WebChat.BSuppressPopupsInRestore()),
@@ -28561,7 +28575,7 @@ var CLSTAMP = "10779229";
           }
           SelectFriendsListSteamDeckSiblingTab(e) {
             let t = this.m_eFriendsListSteamDeckActiveTab + e;
-            t >= 0 && t <= b.MaxTab && (this.FriendsListSteamDeckActiveTab = t);
+            t >= 0 && t <= I.MaxTab && (this.FriendsListSteamDeckActiveTab = t);
           }
           FriendsListSteamDeckActiveTabCallbackList() {
             return this.m_FriendsListSteamDeckActiveTabCallbackList;
@@ -28589,25 +28603,25 @@ var CLSTAMP = "10779229";
                 );
           }
         }
-        (0, s.Cg)([r.sH], y.prototype, "m_bTheaterMode", void 0),
+        (0, s.Cg)([r.sH], w.prototype, "m_bTheaterMode", void 0),
           (0, s.Cg)(
             [r.sH],
-            y.prototype,
+            w.prototype,
             "m_mapFriendChatBroadcastVisible",
             void 0,
           ),
-          (0, s.Cg)([r.sH], y.prototype, "m_nTabActivationCount", void 0),
-          (0, s.Cg)([r.sH], y.prototype, "m_bQamFriendsChatExpanded", void 0),
-          (0, s.Cg)([r.XI], y.prototype, "OnFriendsParentalLockChanged", null),
-          (0, s.Cg)([o.Nw], y.prototype, "ShowFriendChatDialogWhenReady", null),
+          (0, s.Cg)([r.sH], w.prototype, "m_nTabActivationCount", void 0),
+          (0, s.Cg)([r.sH], w.prototype, "m_bQamFriendsChatExpanded", void 0),
+          (0, s.Cg)([r.XI], w.prototype, "OnFriendsParentalLockChanged", null),
+          (0, s.Cg)([o.Nw], w.prototype, "ShowFriendChatDialogWhenReady", null),
           (0, s.Cg)(
             [o.Nw],
-            y.prototype,
+            w.prototype,
             "ShowAndOrActivateChatRoomGroupWhenReady",
             null,
           ),
-          (0, s.Cg)([f.oI], y.prototype, "SerializePopupState", null);
-        class w {
+          (0, s.Cg)([f.oI], w.prototype, "SerializePopupState", null);
+        class x {
           m_popup;
           m_chatPopup;
           m_bShown = !1;
@@ -28633,12 +28647,12 @@ var CLSTAMP = "10779229";
         }
         !(function (e) {
           (e[(e.FriendsList = 0)] = "FriendsList"), (e[(e.Chat = 1)] = "Chat");
-        })(I || (I = {}));
-        class x {
+        })(y || (y = {}));
+        class A {
           constructor() {
             (0, r.Gn)(this);
           }
-          m_eActiveView = I.FriendsList;
+          m_eActiveView = y.FriendsList;
           GetActiveView() {
             return this.m_eActiveView;
           }
@@ -28646,8 +28660,8 @@ var CLSTAMP = "10779229";
             this.m_eActiveView = e;
           }
         }
-        (0, s.Cg)([r.sH], x.prototype, "m_eActiveView", void 0);
-        class A {
+        (0, s.Cg)([r.sH], A.prototype, "m_eActiveView", void 0);
+        class R {
           m_browserContext;
           m_DefaultTabSet = void 0;
           m_ResponsiveWindowState;
@@ -28664,9 +28678,9 @@ var CLSTAMP = "10779229";
               (this.m_FriendsListWindow = void 0),
               (this.m_PopupWindowRestoreDetails = void 0),
               (this.m_mapTabSetToPopup = new Map()),
-              (this.m_ResponsiveWindowState = new x()),
+              (this.m_ResponsiveWindowState = new A()),
               this.SetFriendsListSingleWindowMode(!1),
-              (this.m_bFriendsListCollapsed = i.TS.STEAM_TV);
+              (this.m_bFriendsListCollapsed = v.K.STEAM_TV);
           }
           BIsEmpty() {
             return (
@@ -28804,24 +28818,23 @@ var CLSTAMP = "10779229";
             );
           }
         }
-        (0, s.Cg)([r.sH], A.prototype, "m_DefaultTabSet", void 0),
-          (0, s.Cg)([r.sH], A.prototype, "m_bFriendsListSingleWindow", void 0),
-          (0, s.Cg)([r.sH], A.prototype, "m_bFriendsListCollapsed", void 0);
+        (0, s.Cg)([r.sH], R.prototype, "m_DefaultTabSet", void 0),
+          (0, s.Cg)([r.sH], R.prototype, "m_bFriendsListSingleWindow", void 0),
+          (0, s.Cg)([r.sH], R.prototype, "m_bFriendsListCollapsed", void 0);
       },
-      55888: (e, t, n) => {
+      54938: (e, t, n) => {
         "use strict";
-        n.d(t, { F$: () => ce, HT: () => U });
+        n.d(t, { F$: () => ae, HT: () => j });
         var s = n(34629),
-          i = n(80228),
-          o = n(87118),
-          r = n(30078),
-          a = n(58663),
-          l = n(17782),
-          c = n(94553),
-          d = n(58752),
-          h = n(86373);
-        const u = new h.wd("VRMessages");
-        let m = new (class {
+          i = n(98825),
+          o = n(39831),
+          r = n(58663),
+          a = n(4989),
+          l = n(15704),
+          c = n(6242),
+          d = n(65264);
+        const h = new d.wd("VRMessages");
+        let u = new (class {
           m_socket;
           m_promiseConnect;
           m_bClientConnectionFailed = !1;
@@ -28829,14 +28842,14 @@ var CLSTAMP = "10779229";
           m_bReady = !1;
           m_mapCallbacks = new Map();
           m_RegisterForVRModeChangeHandle;
-          m_ConnectCallbacks = new d.lu();
-          m_DisconnectCallbacks = new d.lu();
+          m_ConnectCallbacks = new c.lu();
+          m_DisconnectCallbacks = new c.lu();
           constructor() {
             this.m_ConnectCallbacks.Register(() =>
-              u.Info("Connected to vrserver."),
+              h.Info("Connected to vrserver."),
             ),
               this.m_DisconnectCallbacks.Register(() =>
-                u.Info("Disconnected from vrserver."),
+                h.Info("Disconnected from vrserver."),
               );
           }
           IsConnected() {
@@ -28860,29 +28873,30 @@ var CLSTAMP = "10779229";
           BSendMsg(e, t, n) {
             if (!this.IsConnected())
               return (
-                u.Warning(
-                  "Attempted to send message before we're connected:",
-                  (0, l.x2)(e),
-                  n,
-                  t.toObject(),
-                ),
+                h.IsDebugEnabled() &&
+                  h.Warning(
+                    "Attempted to send message before we're connected:",
+                    (0, a.x2)(e),
+                    n,
+                    t.toObject(),
+                  ),
                 !1
               );
             try {
-              let s = new l.S1();
+              let s = new a.S1();
               s.set_type(e), null != n && s.set_id(n);
               let i = s.serializeBinary();
               if (i.length > 255) return !1;
               let o = t.serializeBinary(),
                 r = new Uint8Array(1 + i.length + o.length),
-                a = new c.pV(r);
+                c = new l.pV(r);
               return (
-                a.PutUint8(i.length),
-                a.PutBytes(i),
-                a.PutBytes(o),
+                c.PutUint8(i.length),
+                c.PutBytes(i),
+                c.PutBytes(o),
                 this.m_socket.send(r),
-                u.IsDebugEnabled() &&
-                  u.Debug("Sent:", (0, l.x2)(e), t.toObject()),
+                h.IsDebugEnabled() &&
+                  h.Debug("Sent:", (0, a.x2)(e), t.toObject()),
                 !0
               );
             } catch (e) {
@@ -28893,7 +28907,7 @@ var CLSTAMP = "10779229";
             if (!("SteamClient" in window) || null == SteamClient) return;
             let s = this.m_mapCallbacks.get(e);
             s ||
-              ((s = { msgClass: t, list: new d.lu() }),
+              ((s = { msgClass: t, list: new c.lu() }),
               this.m_mapCallbacks.set(e, s));
             let i = s.list.Register(n);
             return (
@@ -28922,12 +28936,12 @@ var CLSTAMP = "10779229";
           }
           OnSocketMessage(e) {
             try {
-              let t = new c.pV(e.data),
+              let t = new l.pV(e.data),
                 n = t.GetUint8(),
-                s = new l.S1();
-              l.S1.deserializeBinaryFromReader(
+                s = new a.S1();
+              a.S1.deserializeBinaryFromReader(
                 s,
-                new a.BinaryReader(t.GetPacket(), t.TellGet(), n),
+                new r.BinaryReader(t.GetPacket(), t.TellGet(), n),
               ),
                 t.SeekGetCurrent(n);
               let i = this.m_mapCallbacks.get(s.type());
@@ -28935,7 +28949,7 @@ var CLSTAMP = "10779229";
                 let e = new i.msgClass();
                 i.msgClass.deserializeBinaryFromReader(
                   e,
-                  new a.BinaryReader(
+                  new r.BinaryReader(
                     t.GetPacket(),
                     t.TellGet(),
                     t.GetCountBytesRemaining(),
@@ -28952,7 +28966,7 @@ var CLSTAMP = "10779229";
               ? this.IsConnected()
                 ? Promise.resolve()
                 : (this.m_promiseConnect ||
-                    (u.Debug("Creating websocket connection with vrserver..."),
+                    (h.Debug("Creating websocket connection with vrserver..."),
                     (this.m_promiseConnect = new Promise(async (e, t) => {
                       try {
                         this.m_socket = new WebSocket(
@@ -28995,24 +29009,24 @@ var CLSTAMP = "10779229";
                         this.m_promiseConnect = void 0;
                       })),
                   this.m_promiseConnect)
-              : (u.Error("Can't connect; no SteamClient interface found."),
+              : (h.Error("Can't connect; no SteamClient interface found."),
                 Promise.reject());
           }
           Disconnect() {
             this.m_socket && this.m_socket.close();
           }
         })();
-        var p = n(42205),
-          _ = n(67076);
-        const g = 2 ** 32 - 1;
-        function C(e) {
+        var m = n(68424),
+          p = n(81424);
+        const _ = 2 ** 32 - 1;
+        function g(e) {
           try {
             return { result: e() };
           } catch (e) {
             return { error: e };
           }
         }
-        var f;
+        var C;
         !(function (e) {
           (e[(e.Success = 0)] = "Success"),
             (e[(e.HeaderSerializationFailure = 1)] =
@@ -29020,34 +29034,34 @@ var CLSTAMP = "10779229";
             (e[(e.PayloadSerializationFailure = 2)] =
               "PayloadSerializationFailure"),
             (e[(e.SendFailure = 3)] = "SendFailure");
-        })(f || (f = {}));
-        class S extends Error {
+        })(C || (C = {}));
+        class f extends Error {
           info;
           messageID;
           constructor(e, t) {
             const n = ["msgid:" + (e ?? "none")];
             switch (t?.origin) {
-              case p.Lu.C9:
+              case m.Lu.C9:
                 n.push("local");
                 break;
-              case p.Lu.zT:
+              case m.Lu.zT:
                 n.push("remote");
             }
             t.was_transmitted || n.push("not sent");
             let s = "(" + n.join(", ") + ") ";
-            (s += (0, p.Ut)(t?.error_code ?? p.Mb.U1)),
+            (s += (0, m.Ut)(t?.error_code ?? m.Mb.U1)),
               t?.error_description && (s += ": " + t.error_description),
               super(s),
               (this.info = t),
               (this.messageID = e);
           }
         }
-        const v = {
+        const S = {
           nMaxTimeoutRetries: 0,
           nTimeoutMS: 2e3,
           nRetryDelayMS: 1e3,
         };
-        class b {
+        class v {
           m_mapRequestHandlers;
           m_Endpoint;
           m_mapMethods = new Map();
@@ -29085,15 +29099,15 @@ var CLSTAMP = "10779229";
           }
           SendErrorResponse(e, t, n) {
             if (null == e?.message_id) return;
-            const s = new p.iM();
+            const s = new m.iM();
             s.set_error_code(t),
-              s.set_origin(p.Lu.zT),
+              s.set_origin(m.Lu.zT),
               n instanceof Error
                 ? s.set_error_description(n.message)
                 : n && "string" == typeof n && s.set_error_description(n),
               this.Log.Error(
                 "Sending VRGamepadUI Message Error Response",
-                (0, p.Ut)(t),
+                (0, m.Ut)(t),
                 ":",
                 s.error_description(),
               );
@@ -29103,10 +29117,10 @@ var CLSTAMP = "10779229";
                 is_error_response: !0,
               },
               o = this.m_Endpoint.SendVRGamepadUIMessage(i, s);
-            o == f.Success ||
+            o == C.Success ||
               this.Log.Error(
                 "Failed to send VRGamepadUI Message Error Response:",
-                f[o],
+                C[o],
                 { requestHeader: e, responseHeader: i },
               );
           }
@@ -29116,7 +29130,7 @@ var CLSTAMP = "10779229";
             if (!n)
               return void this.SendErrorResponse(
                 e,
-                p.Mb.zj,
+                m.Mb.zj,
                 `Unknown VRGamepadUI request name: ${e.name}`,
               );
             const s = this.m_mapMethods.get(n.strMethod);
@@ -29128,16 +29142,16 @@ var CLSTAMP = "10779229";
               } else
                 this.SendErrorResponse(
                   e,
-                  p.Mb.zj,
+                  m.Mb.zj,
                   `Unimplemented VRGamepadUI method: ${n.strMethod}`,
                 );
               return;
             }
-            const i = C(() =>
+            const i = g(() =>
               n.msgClassRequest_t.deserializeBinary(t).toObject(),
             );
             if ("error" in i)
-              return void this.SendErrorResponse(e, p.Mb.iZ, i.error);
+              return void this.SendErrorResponse(e, m.Mb.iZ, i.error);
             const o = i.result;
             if (this.m_setRecentlyExecutedRequestMessageIDs.has(e.message_id))
               return void this.Log.Debug(
@@ -29158,24 +29172,24 @@ var CLSTAMP = "10779229";
                   header: e,
                   payload: JSON.parse(JSON.stringify(o)),
                 });
-            const r = C(() => s(o));
+            const r = g(() => s(o));
             if ("error" in r)
-              return void this.SendErrorResponse(e, p.Mb.Bd, r.error);
+              return void this.SendErrorResponse(e, m.Mb.Bd, r.error);
             (r.result instanceof Promise
               ? r.result
               : Promise.resolve(r.result)
             ).then(
               (t) => {
                 const s = t ?? {},
-                  i = C(() => n.msgClassResponse_t.fromObject(s));
+                  i = g(() => n.msgClassResponse_t.fromObject(s));
                 if ("error" in i)
-                  return void this.SendErrorResponse(e, p.Mb.DI, i.error);
+                  return void this.SendErrorResponse(e, m.Mb.DI, i.error);
                 const o = {
                     message_id: this.m_Endpoint.CreateVRGamepadUIMessageId(),
                     response_to_message_id: e.message_id,
                   },
                   r = this.m_Endpoint.SendVRGamepadUIMessage(o, i.result);
-                if (r == f.Success)
+                if (r == C.Success)
                   this.Log.IsDebugEnabled() &&
                     this.Log.Debug("Sent response:", e.name, {
                       header: o,
@@ -29183,25 +29197,25 @@ var CLSTAMP = "10779229";
                     });
                 else
                   switch (r) {
-                    case f.HeaderSerializationFailure:
-                    case f.PayloadSerializationFailure:
-                      this.SendErrorResponse(e, p.Mb.DI, "Response " + f[r]);
+                    case C.HeaderSerializationFailure:
+                    case C.PayloadSerializationFailure:
+                      this.SendErrorResponse(e, m.Mb.DI, "Response " + C[r]);
                       break;
                     default:
                       this.Log.Error(
                         "Failed to send VRGamepadUI Message Response:",
-                        f[r],
+                        C[r],
                         { requestHeader: e, responseHeader: o },
                       );
                   }
               },
               (t) => {
-                this.SendErrorResponse(e, p.Mb.pK, t);
+                this.SendErrorResponse(e, m.Mb.pK, t);
               },
             );
           }
         }
-        class I {
+        class b {
           m_Endpoint;
           m_mapPendingRequests = new Map();
           m_mapMessageIDsCancelledAfterSend = new Map();
@@ -29235,20 +29249,20 @@ var CLSTAMP = "10779229";
               e.is_error_response)
             ) {
               let s;
-              const i = C(() => p.iM.deserializeBinary(t).toObject());
+              const i = g(() => m.iM.deserializeBinary(t).toObject());
               return (
-                (s = new S(
+                (s = new f(
                   n.header.message_id,
                   "error" in i
                     ? {
                         was_transmitted: n.bTransmitted,
-                        error_code: p.Mb.iZ,
-                        origin: p.Lu.C9,
+                        error_code: m.Mb.iZ,
+                        origin: m.Lu.C9,
                         error_description:
                           "Received a VRGamepadUI Message error response, but couldn't deserialize it. Response header: " +
                           JSON.stringify(e),
                       }
-                    : { ...i.result, was_transmitted: !0, origin: p.Lu.zT },
+                    : { ...i.result, was_transmitted: !0, origin: m.Lu.zT },
                 )),
                 this.Log.Warning(
                   "Received a VRGamepadUI Message error response:",
@@ -29257,7 +29271,7 @@ var CLSTAMP = "10779229";
                 void n.fnReject(s)
               );
             }
-            const s = C(() =>
+            const s = g(() =>
               n.msgExpectedResponseClass_t.deserializeBinary(t).toObject(),
             );
             "error" in s
@@ -29283,7 +29297,7 @@ var CLSTAMP = "10779229";
                   message_id: this.m_Endpoint.CreateVRGamepadUIMessageId(),
                 },
                 payload: t,
-                opts: { ...v, ...s },
+                opts: { ...S, ...s },
                 msgExpectedResponseClass_t: n,
                 fnResolve: (e) => {
                   (i.eState = 3),
@@ -29299,13 +29313,13 @@ var CLSTAMP = "10779229";
                   }
                 },
                 fnReject: (e) => {
-                  e instanceof S ||
-                    (e = new S(i.header.message_id, {
+                  e instanceof f ||
+                    (e = new f(i.header.message_id, {
                       was_transmitted: i.bTransmitted,
                       error_description:
                         "VRGamepadUIMessage PendingRequest object resolved with an error type other than VRGamepadUI_Message_Error",
-                      error_code: p.Mb.Bd,
-                      origin: p.Lu.C9,
+                      error_code: m.Mb.Bd,
+                      origin: m.Lu.C9,
                     })),
                     (i.eState = 3),
                     (i.bReceivedResponse = !0),
@@ -29364,23 +29378,23 @@ var CLSTAMP = "10779229";
               })(e.opts))
             )
               return void e.fnReject(
-                new S(e.header.message_id, {
+                new f(e.header.message_id, {
                   was_transmitted: e.bTransmitted,
-                  error_code: p.Mb.U1,
+                  error_code: m.Mb.U1,
                   error_description: "Invalid request options.",
-                  origin: p.Lu.C9,
+                  origin: m.Lu.C9,
                 }),
               );
             if (!this.m_Endpoint.IsConnected())
               return void this.ScheduleRequestMessageRetryOrFail(e, {
-                error_code: p.Mb._n,
-                origin: p.Lu.C9,
+                error_code: m.Mb._n,
+                origin: m.Lu.C9,
               });
             const t = this.m_Endpoint.SendVRGamepadUIMessage(
               e.header,
               e.payload,
             );
-            t == f.Success
+            t == C.Success
               ? (this.Log.IsDebugEnabled() &&
                   this.Log.Debug("Sent request:", e.header.name, {
                     header: e.header,
@@ -29395,9 +29409,9 @@ var CLSTAMP = "10779229";
                     e.opts.nTimeoutMS,
                   )))
               : this.ScheduleRequestMessageRetryOrFail(e, {
-                  error_code: p.Mb.U1,
-                  origin: p.Lu.C9,
-                  error_description: "Request " + f[t],
+                  error_code: m.Mb.U1,
+                  origin: m.Lu.C9,
+                  error_description: "Request " + C[t],
                 });
           }
           ScheduleRequestMessageRetryOrFail(e, t) {
@@ -29421,14 +29435,14 @@ var CLSTAMP = "10779229";
             }
             n
               ? ((e.eState = 2),
-                (e.eErrorOnLastAttempt = t.error_code ?? p.Mb.U1),
+                (e.eErrorOnLastAttempt = t.error_code ?? m.Mb.U1),
                 window.clearTimeout(e.nTimeoutHandle),
                 (e.nTimeoutHandle = window.setTimeout(
                   () => this.AttemptToSendRequestMessage(e),
                   e.opts.nRetryDelayMS,
                 )))
               : e.fnReject(
-                  new S(e.header.message_id, {
+                  new f(e.header.message_id, {
                     ...t,
                     was_transmitted: e.bTransmitted,
                   }),
@@ -29439,7 +29453,7 @@ var CLSTAMP = "10779229";
               let e = !1;
               for (const t of this.m_mapPendingRequests.values())
                 2 == t.eState &&
-                  t.eErrorOnLastAttempt == p.Mb._n &&
+                  t.eErrorOnLastAttempt == m.Mb._n &&
                   (!e &&
                     this.Log.IsDebugEnabled() &&
                     (this.Log.Debug(
@@ -29450,7 +29464,7 @@ var CLSTAMP = "10779229";
                   this.AttemptToSendRequestMessage(t));
             }
           }
-          CancelRequest(e, t = p.Mb.Ru) {
+          CancelRequest(e, t = m.Mb.Ru) {
             return (
               this.Log.IsDebugEnabled() &&
                 this.Log.Debug("Cancelling request:", e.header.name, {
@@ -29471,18 +29485,18 @@ var CLSTAMP = "10779229";
                 ? 1
                 : e.bTransmitted
                   ? (e?.fnReject(
-                      new S(e.header.message_id, {
+                      new f(e.header.message_id, {
                         was_transmitted: !0,
                         error_code: t,
-                        origin: p.Lu.dZ,
+                        origin: m.Lu.dZ,
                       }),
                     ),
                     0)
                   : (e?.fnReject(
-                      new S(e.header.message_id, {
+                      new f(e.header.message_id, {
                         was_transmitted: !1,
                         error_code: t,
-                        origin: p.Lu.C9,
+                        origin: m.Lu.C9,
                       }),
                     ),
                     2)
@@ -29495,8 +29509,8 @@ var CLSTAMP = "10779229";
           HandleSendTimeout(e) {
             this.ScheduleRequestMessageRetryOrFail(e, {
               was_transmitted: e.bTransmitted,
-              error_code: p.Mb.FZ,
-              origin: p.Lu.dZ,
+              error_code: m.Mb.FZ,
+              origin: m.Lu.dZ,
             });
           }
           DeletePendingRequest(e) {
@@ -29506,13 +29520,13 @@ var CLSTAMP = "10779229";
           }
         }
         Symbol.toStringTag;
-        const y = new h.wd("VRGamepadUIMessages");
-        const w = new (class {
-          m_Steam_Provider = new b(this, _.nV);
-          m_SteamVR_Client = new I(this);
-          m_SteamVR_ClientMethods = new _._i(this.m_SteamVR_Client);
+        const I = new d.wd("VRGamepadUIMessages");
+        const y = new (class {
+          m_Steam_Provider = new v(this, p.nV);
+          m_SteamVR_Client = new b(this);
+          m_SteamVR_ClientMethods = new p._i(this.m_SteamVR_Client);
           m_unNextVRGamepadUIMessageId =
-            1e6 * Math.floor((Math.random() * g) / 1e6);
+            1e6 * Math.floor((Math.random() * _) / 1e6);
           get Steam() {
             return this.m_Steam_Provider;
           }
@@ -29520,13 +29534,13 @@ var CLSTAMP = "10779229";
             return this.m_SteamVR_ClientMethods;
           }
           get Log() {
-            return y;
+            return I;
           }
           async Init() {
-            m.RegisterOnMsg(l.lK.N3, l.sR, (e) => {
+            u.RegisterOnMsg(a.lK.N3, a.sR, (e) => {
               const t = (function (e) {
                 try {
-                  return p.DX.deserializeBinary(e).toObject();
+                  return m.DX.deserializeBinary(e).toObject();
                 } catch (e) {
                   return void console.error(
                     "Received a VRGamepadUI Message but couldn't deserialize the header!",
@@ -29547,7 +29561,7 @@ var CLSTAMP = "10779229";
                         null != e.message_id && null != e.response_to_message_id
                       );
                     })(t)
-                    ? y.Error(
+                    ? I.Error(
                         "Received message from SteamVR that's neither a request nor response. Header:",
                         JSON.stringify(t),
                       )
@@ -29560,10 +29574,10 @@ var CLSTAMP = "10779229";
                       e.payload(),
                     ));
             }),
-              m.RegisterOnConnect(() =>
+              u.RegisterOnConnect(() =>
                 this.m_SteamVR_Client.NotifyConnectionStateChanged(!0),
               ),
-              m.RegisterOnDisconnect(() =>
+              u.RegisterOnDisconnect(() =>
                 this.m_SteamVR_Client.NotifyConnectionStateChanged(!1),
               ),
               SteamClient?.OpenVR?.RegisterForVRModeChange((e) => {
@@ -29580,34 +29594,33 @@ var CLSTAMP = "10779229";
           SendVRGamepadUIMessage(e, t) {
             let n, s;
             try {
-              n = p.DX.fromObject(e).serializeBinary();
+              n = m.DX.fromObject(e).serializeBinary();
             } catch (e) {
-              return f.HeaderSerializationFailure;
+              return C.HeaderSerializationFailure;
             }
             try {
               s = t.serializeBinary();
             } catch (e) {
-              return f.PayloadSerializationFailure;
+              return C.PayloadSerializationFailure;
             }
-            const i = new l.sR();
+            const i = new a.sR();
             return (
               i.set_header(n),
               i.set_payload(s),
-              m.BSendMsg(l.lK.N3, i) ? f.Success : f.SendFailure
+              u.BSendMsg(a.lK.N3, i) ? C.Success : C.SendFailure
             );
           }
           IsConnected() {
-            return m.IsConnected();
+            return u.IsConnected();
           }
         })();
-        const x = w;
-        var A = n(31038),
-          R = n(9663),
-          T = n(44174),
-          M = n(51756),
-          D = n(89193),
-          k = n(21582);
-        class P {
+        const w = y;
+        var x = n(71884),
+          A = n(94058),
+          R = n(96527),
+          T = n(88071),
+          M = n(89193);
+        class D {
           m_Supplier;
           m_Disposers = [];
           m_Session;
@@ -29616,16 +29629,16 @@ var CLSTAMP = "10779229";
           m_VoiceChatActiveStateChangedHandle;
           m_ChatGroupAddedHandle;
           m_NewChatMsgAddedHandles;
-          Log = new h.wd("VR");
+          Log = new d.wd("VR");
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
           SetSession(e) {
             this.m_Session &&
-              A.xm.ChatStore.DecRefActiveChatRoomGroup(this.m_Session.groupID),
+              x.xm.ChatStore.DecRefActiveChatRoomGroup(this.m_Session.groupID),
               (this.m_Session = e),
               this.m_Session &&
-                (A.xm.ChatStore.IncRefActiveChatRoomGroup(
+                (x.xm.ChatStore.IncRefActiveChatRoomGroup(
                   this.m_Session.groupID,
                   !0,
                 ),
@@ -29637,22 +29650,22 @@ var CLSTAMP = "10779229";
           }
           SendGroupName(e) {
             this.Log.Debug("Group: ", e);
-            let t = new T.sT();
-            t.set_name(e), m.BSendMsg(l.lK.r, t);
+            let t = new R.sT();
+            t.set_name(e), u.BSendMsg(a.lK.r, t);
           }
           RegisterForNewChatMessages() {
             if (!this.m_Session)
               return void this.Log.Debug(
                 "RegisterForNewChatMessages: session not set",
               );
-            let e = A.xm.ChatStore.GetChatRoomGroup(this.m_Session.groupID);
+            let e = x.xm.ChatStore.GetChatRoomGroup(this.m_Session.groupID);
             this.Log.Debug("RegisterForNewChatMessages: ", e),
               (this.m_NewChatMsgAddedHandles = e?.textRoomList.map((e) =>
                 e.RegisterOnNewChatMsgAdded(this.OnNewChatMsgAdded),
               )),
               e &&
                 (this.SendGroupName(e.name),
-                (this.m_GroupNameDisposer = (0, D.lB)(e, "name", (e) =>
+                (this.m_GroupNameDisposer = (0, M.lB)(e, "name", (e) =>
                   this.SendGroupName(e.newValue),
                 )));
           }
@@ -29686,16 +29699,16 @@ var CLSTAMP = "10779229";
             this.SetSession({ groupID: n, roomID: s }),
               this.Log.Debug("OnInitiateRoomChat: ", this.m_Session),
               this.m_Supplier?.InitiateRoomChat(n, s);
-            let i = new T.IQ();
-            m.BSendMsg(l.lK.qW, i, t);
+            let i = new R.IQ();
+            u.BSendMsg(a.lK.qW, i, t);
           }
           OnExitRoomChat(e, t) {
             this.Log.Debug("OnExitRoomChat: ", this),
               this.m_Session &&
                 (this.SetSession(void 0),
                 this.m_Supplier?.OnUserEndVoiceChat());
-            let n = new T.X0();
-            m.BSendMsg(l.lK.pf, n, t);
+            let n = new R.X0();
+            u.BSendMsg(a.lK.pf, n, t);
           }
           OnChatGroupAdded(e) {
             this.Log.Debug("OnChatGroupAdded: ", e),
@@ -29713,45 +29726,45 @@ var CLSTAMP = "10779229";
             ) {
               this.RegisterForNewChatMessages(),
                 (this.m_ChatGroupAddedHandle =
-                  A.xm.ChatStore.RegisterForGroupAdded(this.OnChatGroupAdded));
-              let e = new T.CX();
-              m.BSendMsg(l.lK.rC, e);
+                  x.xm.ChatStore.RegisterForGroupAdded(this.OnChatGroupAdded));
+              let e = new R.CX();
+              u.BSendMsg(a.lK.rC, e);
             } else {
-              let e = new T.xF();
-              m.BSendMsg(l.lK.Uf, e);
+              let e = new R.xF();
+              u.BSendMsg(a.lK.Uf, e);
             }
           }
           OnNewChatMsgAdded(e, t, n, s, i, o) {
             this.Log.Debug("OnNewChatMsgAdded: ", e, t, n, s, i, o);
-            let r = new T.ax();
+            let r = new R.ax();
             r.set_chat_group_id(e),
               r.set_chat_room_id(t),
               r.set_sender_accountid(n),
               r.set_timestamp(s),
               r.set_ordinal(i),
               r.set_message(o),
-              m.BSendMsg(l.lK.DY, r);
+              u.BSendMsg(a.lK.DY, r);
           }
           async OnGetAvatarUrl(e, t) {
             let n = e.profile_steamid(),
               s = await this.m_Supplier.GetPersonaState(n),
               i = "";
             switch (e.avatar_type()) {
-              case T.A_.xj:
+              case R.A_.xj:
                 i = s?.avatar_url;
                 break;
-              case T.A_.dt:
+              case R.A_.dt:
                 i = s?.avatar_url_medium;
                 break;
-              case T.A_.Fm:
+              case R.A_.Fm:
                 i = s?.avatar_url_full;
             }
-            let o = new T.Gr();
-            o.set_profile_avatar_url(i), m.BSendMsg(l.lK.UR, o, t);
+            let o = new R.Gr();
+            o.set_profile_avatar_url(i), u.BSendMsg(a.lK.UR, o, t);
           }
           async OnSendGroupChatMessage(e, t) {
             if (this.m_Session) {
-              const t = A.xm.ChatStore.GetChatRoomGroup(this.m_Session.groupID);
+              const t = x.xm.ChatStore.GetChatRoomGroup(this.m_Session.groupID);
               if (t) {
                 const n = t.textRoomList;
                 if (n.length > 0) {
@@ -29761,102 +29774,79 @@ var CLSTAMP = "10779229";
                 }
               }
             }
-            let n = new T.km();
-            m.BSendMsg(l.lK.oJ, n, t);
+            let n = new R.km();
+            u.BSendMsg(a.lK.oJ, n, t);
           }
           async OnConfigureVideo(e, t) {
             this.m_Supplier?.ConfigureVideo(e.send(), e.receive());
-            let n = new T.zl();
-            m.BSendMsg(l.lK.ZQ, n, t);
+            let n = new R.zl();
+            u.BSendMsg(a.lK.ZQ, n, t);
           }
           OnSetPerUserMuting(e, t) {
             this.m_Supplier?.SetPerUserMuting(e.accountid(), e.muted());
-            let n = new T.Wn();
-            m.BSendMsg(l.lK.AX, n, t);
+            let n = new R.Wn();
+            u.BSendMsg(a.lK.AX, n, t);
           }
           OnSetPerUserVideo(e, t) {
             this.m_Supplier?.SetReceivingVideo(e.accountid(), e.receive());
-            let n = new T.DB();
-            m.BSendMsg(l.lK.Jl, n, t);
+            let n = new R.DB();
+            u.BSendMsg(a.lK.Jl, n, t);
           }
           OnSetSpatialAudioListener(e) {
-            k.TS.ON_FRAME &&
-              this.m_Supplier &&
-              m.IsConnected() &&
-              this.m_Supplier.SetLocalHMDPose({
-                position: [
-                  e.position().x(),
-                  e.position().y(),
-                  e.position().z(),
-                ],
-                ahead: [e.forward().x(), e.forward().y(), e.forward().z()],
-                up: [e.up().x(), e.up().y(), e.up().z()],
-              });
+            0;
           }
           OnSetSpatialAudioSource(e) {
-            k.TS.ON_FRAME &&
-              this.m_Supplier &&
-              m.IsConnected() &&
-              this.m_Supplier.SetRemoteHMDPose(
-                new R.b(e.steamid()).GetAccountID(),
-                {
-                  position: [
-                    e.position().x(),
-                    e.position().y(),
-                    e.position().z(),
-                  ],
-                },
-              );
+            0;
           }
           OnAddPerUserGainLevel(e, t) {
-            let n = new T.wJ();
+            let n = new R.wJ();
             n.set_accountid(e),
               n.set_muted(t.muted),
               n.set_gain(t.gain),
-              m.BSendMsg(l.lK.py, n),
+              u.BSendMsg(a.lK.py, n),
               this.m_Disposers.push(
-                (0, D.mJ)(
+                (0, M.mJ)(
                   () => t.muted,
                   (e) => {
-                    n.set_muted(e), m.BSendMsg(l.lK.py, n);
+                    n.set_muted(e), u.BSendMsg(a.lK.py, n);
                   },
                 ),
               ),
               this.m_Disposers.push(
-                (0, D.mJ)(
+                (0, M.mJ)(
                   () => t.gain,
                   (e) => {
-                    n.set_gain(e), m.BSendMsg(l.lK.py, n);
+                    n.set_gain(e), u.BSendMsg(a.lK.py, n);
                   },
                 ),
               );
           }
           OnAddPerUserVoiceStatus(e, t) {
-            let n = new T.Wc();
+            let n = new R.Wc();
             n.set_accountid(e),
               n.set_mic_muted_locally(t.mic_muted_locally),
               n.set_output_muted_locally(t.output_muted_locally),
-              m.BSendMsg(l.lK.NY, n),
+              u.BSendMsg(a.lK.NY, n),
               this.m_Disposers.push(
-                (0, D.mJ)(
+                (0, M.mJ)(
                   () => t.mic_muted_locally,
                   (e) => {
-                    n.set_mic_muted_locally(e), m.BSendMsg(l.lK.NY, n);
+                    n.set_mic_muted_locally(e), u.BSendMsg(a.lK.NY, n);
                   },
                 ),
               ),
               this.m_Disposers.push(
-                (0, D.mJ)(
+                (0, M.mJ)(
                   () => t.output_muted_locally,
                   (e) => {
-                    n.set_output_muted_locally(e), m.BSendMsg(l.lK.NY, n);
+                    n.set_output_muted_locally(e), u.BSendMsg(a.lK.NY, n);
                   },
                 ),
               );
           }
           OnAddRemoteVideoStream(e, t) {
-            m.IsConnected() &&
-              x.SteamVR.RemoteVideoStream({
+            u.IsConnected() &&
+              w.SteamVR.RemoteVideoStream({
                 source_accountid: e,
                 video_uniqueid: t,
               });
@@ -29871,13 +29861,13 @@ var CLSTAMP = "10779229";
                 (this.m_SteamVRMsgHandlers.length = 0),
                 e &&
                   (this.m_Disposers.push(
-                    (0, D.lB)(e.GetPerUserGainLevels(), (e) => {
+                    (0, M.lB)(e.GetPerUserGainLevels(), (e) => {
                       "add" === e.type &&
                         this.OnAddPerUserGainLevel(e.name, e.newValue);
                     }),
                   ),
                   this.m_Disposers.push(
-                    (0, D.lB)(e.GetPerUserVoiceStatus(), (e) => {
+                    (0, M.lB)(e.GetPerUserVoiceStatus(), (e) => {
                       "add" === e.type &&
                         this.OnAddPerUserVoiceStatus(e.name, e.newValue);
                     }),
@@ -29889,53 +29879,39 @@ var CLSTAMP = "10779229";
                     .GetPerUserVoiceStatus()
                     .forEach((e, t) => this.OnAddPerUserVoiceStatus(t, e)),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnDisconnect(this.OnDisconnect),
+                    u.RegisterOnDisconnect(this.OnDisconnect),
                   ),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnMsg(l.lK.xd, T.wY, this.OnInitiateRoomChat),
+                    u.RegisterOnMsg(a.lK.xd, R.wY, this.OnInitiateRoomChat),
                   ),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnMsg(l.lK.UZ, T.xq, this.OnExitRoomChat),
+                    u.RegisterOnMsg(a.lK.UZ, R.xq, this.OnExitRoomChat),
                   ),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnMsg(l.lK.$E, T.Cv, this.OnGetAvatarUrl),
+                    u.RegisterOnMsg(a.lK.$E, R.Cv, this.OnGetAvatarUrl),
                   ),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnMsg(l.lK.dH, T.Uy, this.OnSendGroupChatMessage),
+                    u.RegisterOnMsg(a.lK.dH, R.Uy, this.OnSendGroupChatMessage),
                   ),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnMsg(l.lK.CV, T.vA, this.OnConfigureVideo),
+                    u.RegisterOnMsg(a.lK.CV, R.vA, this.OnConfigureVideo),
                   ),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnMsg(l.lK.JX, T.iF, this.OnSetPerUserMuting),
+                    u.RegisterOnMsg(a.lK.JX, R.iF, this.OnSetPerUserMuting),
                   ),
                   this.m_SteamVRMsgHandlers.push(
-                    m.RegisterOnMsg(l.lK.kT, T.v8, this.OnSetPerUserVideo),
+                    u.RegisterOnMsg(a.lK.kT, R.v8, this.OnSetPerUserVideo),
                   ),
-                  k.TS.ON_FRAME &&
-                    (this.m_SteamVRMsgHandlers.push(
-                      m.RegisterOnMsg(
-                        l.lK.n$,
-                        T.EE,
-                        this.OnSetSpatialAudioListener,
-                      ),
-                    ),
-                    this.m_SteamVRMsgHandlers.push(
-                      m.RegisterOnMsg(
-                        l.lK.ET,
-                        T.zz,
-                        this.OnSetSpatialAudioSource,
-                      ),
-                    )),
-                  m.WaitUntilConnected().then(this.SendReadyNotification)));
+                  u.WaitUntilConnected().then(this.SendReadyNotification)));
           }
           SendReadyNotification() {
-            this.m_Supplier && m.BSendMsg(l.lK.yy, new T.RI());
+            this.m_Supplier && u.BSendMsg(a.lK.yy, new R.RI());
           }
           get session() {
             return this.m_Session;
           }
           set session(e) {
+            if (!u.IsConnected()) return;
             if (
               (this.Log.Debug("session: ", e, this),
               e || (e = { groupID: "0", roomID: "0" }),
@@ -29945,34 +29921,34 @@ var CLSTAMP = "10779229";
             )
               return;
             this.SetSession(e);
-            let t = new T.Rg();
+            let t = new R.Rg();
             t.set_chat_group_id(e.groupID),
               t.set_chat_room_id(e.roomID),
-              m.BSendMsg(l.lK.aM, t);
+              u.BSendMsg(a.lK.aM, t);
           }
         }
-        (0, s.Cg)([M.oI], P.prototype, "OnDisconnect", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnInitiateRoomChat", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnExitRoomChat", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnChatGroupAdded", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnVoiceChatActiveStateChanged", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnNewChatMsgAdded", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnGetAvatarUrl", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnSendGroupChatMessage", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnConfigureVideo", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnSetPerUserMuting", null),
-          (0, s.Cg)([M.oI], P.prototype, "OnSetPerUserVideo", null),
+        (0, s.Cg)([T.oI], D.prototype, "OnDisconnect", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnInitiateRoomChat", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnExitRoomChat", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnChatGroupAdded", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnVoiceChatActiveStateChanged", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnNewChatMsgAdded", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnGetAvatarUrl", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnSendGroupChatMessage", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnConfigureVideo", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnSetPerUserMuting", null),
+          (0, s.Cg)([T.oI], D.prototype, "OnSetPerUserVideo", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            P.prototype,
+            [M.XI.bound],
+            D.prototype,
             "OnSetSpatialAudioListener",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], P.prototype, "OnSetSpatialAudioSource", null),
-          (0, s.Cg)([M.oI], P.prototype, "SendReadyNotification", null);
-        let L = new P();
-        var G = n(99929);
-        class B {
+          (0, s.Cg)([M.XI.bound], D.prototype, "OnSetSpatialAudioSource", null),
+          (0, s.Cg)([T.oI], D.prototype, "SendReadyNotification", null);
+        let k = new D();
+        var P = n(69226);
+        class L {
           m_Supplier;
           m_Disposer;
           m_PeerConnection;
@@ -29986,9 +29962,9 @@ var CLSTAMP = "10779229";
           m_DataChannelCloseHandle;
           m_StatsTimeout = 0;
           m_mapChannelStats = new Map();
-          Log = new h.wd("VRWebRTC");
+          Log = new d.wd("VRWebRTC");
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
           PadOutput(e, t, n = void 0) {
             if (Math.abs(t) <= e.length) return e;
@@ -30015,8 +29991,8 @@ var CLSTAMP = "10779229";
                 this.m_mapChannelStats.clear());
           }
           BSendData(e, t) {
-            let n = new G.EX();
-            return n.set_channel_id(e), n.set_data(t), m.BSendMsg(l.lK.Ws, n);
+            let n = new P.EX();
+            return n.set_channel_id(e), n.set_data(t), u.BSendMsg(a.lK.Ws, n);
           }
           SetupChannel(e, t, n) {
             this.Log.Debug(`OnDataChannel[${t}]:${e?.label}: ${n}`),
@@ -30026,11 +30002,11 @@ var CLSTAMP = "10779229";
               (e.binaryType = "arraybuffer"),
               (e.onmessage = (e) => {
                 if ("string" == typeof e.data) {
-                  let n = new G.Bl();
+                  let n = new P.Bl();
                   return (
                     n.set_channel_id(t),
                     n.set_reason(e.data),
-                    void m.BSendMsg(l.lK.fv, n)
+                    void u.BSendMsg(a.lK.fv, n)
                   );
                 }
                 this.BSendData(t, e.data);
@@ -30052,13 +30028,13 @@ var CLSTAMP = "10779229";
             -1 != o
               ? ((i = n.label.slice(0, o)), (s = n.label.slice(o)))
               : (i = n.label);
-            let r = new G.de();
+            let r = new P.de();
             r.set_channel_id(t),
               r.set_label(i),
               r.set_source_steamid(
-                R.b.InitFromString(s).ConvertTo64BitString(),
+                A.b.InitFromString(s).ConvertTo64BitString(),
               ),
-              m.BSendMsg(l.lK.Eq, r);
+              u.BSendMsg(a.lK.Eq, r);
           }
           OnDataChannelMessage(e) {
             let t = e.channel_id(),
@@ -30086,8 +30062,8 @@ var CLSTAMP = "10779229";
             this.m_DataChannels = this.m_DataChannels.filter(
               (e) => e.id !== n || (e.channel?.close(), !1),
             );
-            let s = new G.E6();
-            m.BSendMsg(l.lK.w, s, t);
+            let s = new P.E6();
+            u.BSendMsg(a.lK.w, s, t);
           }
           OnCreateDataChannel(e, t) {
             let n = {
@@ -30104,27 +30080,27 @@ var CLSTAMP = "10779229";
                 (this.m_Supplier.BSupportsDataChannels()
                   ? this.CreateDataChannel(n)
                   : this.m_Supplier.RenegotiateSDP());
-            let s = new G.aM();
-            s.set_channel_id(n.id), m.BSendMsg(l.lK.U, s, t);
+            let s = new P.aM();
+            s.set_channel_id(n.id), u.BSendMsg(a.lK.U, s, t);
           }
           OnDataChannelOpen(e, t) {
             this.Log.Debug(`OnDataChannelOpen[${t}]${e?.label}`),
               this.m_OpenChannels.set(t, e),
               this.m_DataChannelCloseHandle ||
-                (this.m_DataChannelCloseHandle = m.RegisterOnMsg(
-                  l.lK.fw,
-                  G.X9,
+                (this.m_DataChannelCloseHandle = u.RegisterOnMsg(
+                  a.lK.fw,
+                  P.X9,
                   () => {},
                 ));
-            let n = new G.bG();
-            n.set_channel_id(t), m.BSendMsg(l.lK.hU, n);
+            let n = new P.bG();
+            n.set_channel_id(t), u.BSendMsg(a.lK.hU, n);
           }
           OnDataChannelClose(e, t) {
             this.Log.Debug(`OnDataChannelClose[${t}]${e?.label}`),
               this.m_OpenChannels.delete(t);
-            let n = new G.X9();
+            let n = new P.X9();
             n.set_channel_id(t),
-              m.BSendMsg(l.lK.fw, n),
+              u.BSendMsg(a.lK.fw, n),
               0 == this.m_OpenChannels.size &&
                 this.m_DataChannelCloseHandle &&
                 (this.m_DataChannelCloseHandle.Unregister(),
@@ -30140,8 +30116,8 @@ var CLSTAMP = "10779229";
               (e.receivedAlert ? `, receivedAlert: ${e.receivedAlert}` : "") +
               (e.sentAlert ? `, sentAlert: ${e.sentAlert}` : "") +
               " }";
-            let i = new G.Bl();
-            i.set_channel_id(n), i.set_reason(s), m.BSendMsg(l.lK.fv, i);
+            let i = new P.Bl();
+            i.set_channel_id(n), i.set_reason(s), u.BSendMsg(a.lK.fv, i);
           }
           OnDisconnect() {
             this.m_DataChannels.forEach((e) => e.channel?.close()),
@@ -30178,7 +30154,7 @@ var CLSTAMP = "10779229";
                 ))));
           }
           set ActiveDataChannelSupplier(e) {
-            if (this.m_Supplier != e && (!e || m.IsConnected()))
+            if (this.m_Supplier != e && (!e || u.IsConnected()))
               if (
                 ((this.m_Supplier = e),
                 this.m_Disposer &&
@@ -30189,32 +30165,32 @@ var CLSTAMP = "10779229";
                 this.m_DataChannelMessageHandle?.Unregister(),
                 e)
               ) {
-                (this.m_Disposer = (0, D.lB)(e, "m_PeerConnection", (e) =>
+                (this.m_Disposer = (0, M.lB)(e, "m_PeerConnection", (e) =>
                   this.SetPeerConnection(e.newValue),
                 )),
-                  (this.m_DisconnectHandle = m.RegisterOnDisconnect(
+                  (this.m_DisconnectHandle = u.RegisterOnDisconnect(
                     this.OnDisconnect,
                   )),
-                  (this.m_CloseDataChannelHandle = m.RegisterOnMsg(
-                    l.lK.bF,
-                    G.GH,
+                  (this.m_CloseDataChannelHandle = u.RegisterOnMsg(
+                    a.lK.bF,
+                    P.GH,
                     this.OnCloseDataChannel,
                   )),
-                  (this.m_CreateDataChannelHandle = m.RegisterOnMsg(
-                    l.lK.jx,
-                    G.EZ,
+                  (this.m_CreateDataChannelHandle = u.RegisterOnMsg(
+                    a.lK.jx,
+                    P.EZ,
                     this.OnCreateDataChannel,
                   )),
-                  (this.m_DataChannelMessageHandle = m.RegisterOnMsg(
-                    l.lK.Ws,
-                    G.EX,
+                  (this.m_DataChannelMessageHandle = u.RegisterOnMsg(
+                    a.lK.Ws,
+                    P.EX,
                     this.OnDataChannelMessage,
                   ));
-                let t = new G.DR();
-                m.BSendMsg(l.lK.K8, t);
+                let t = new P.DR();
+                u.BSendMsg(a.lK.K8, t);
               } else {
-                let e = new G.am();
-                m.BSendMsg(l.lK.bM, e),
+                let e = new P.am();
+                u.BSendMsg(a.lK.bM, e),
                   this.SetPeerConnection(void 0),
                   (this.m_DataChannels.length = 0),
                   (this.m_CloseDataChannelHandle = void 0),
@@ -30226,20 +30202,20 @@ var CLSTAMP = "10779229";
             return this.m_DataChannels.length > 0;
           }
         }
-        (0, s.Cg)([D.XI.bound], B.prototype, "ProcessStatsReport", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnDataChannel", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnDataChannelMessage", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnCloseDataChannel", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnCreateDataChannel", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnDataChannelOpen", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnDataChannelClose", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnDataChannelError", null),
-          (0, s.Cg)([D.XI.bound], B.prototype, "OnDisconnect", null);
-        let F = new B();
-        var E = n(44452),
-          O = n(80513),
-          N = n(2424);
-        class j {
+        (0, s.Cg)([M.XI.bound], L.prototype, "ProcessStatsReport", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnDataChannel", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnDataChannelMessage", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnCloseDataChannel", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnCreateDataChannel", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnDataChannelOpen", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnDataChannelClose", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnDataChannelError", null),
+          (0, s.Cg)([M.XI.bound], L.prototype, "OnDisconnect", null);
+        let G = new L();
+        var B = n(54888),
+          F = n(190),
+          E = n(45545);
+        class O {
           constructor(e, t) {
             if (!(e instanceof BaseAudioContext))
               throw "Not a valid audio context.";
@@ -30318,7 +30294,7 @@ var CLSTAMP = "10779229";
                 ((n = Math.ceil(this.context_.sampleRate * this.release)),
                 (i = 1 / n));
             for (let t = 0; t < e.length; t++) {
-              if (j.toDecibel(2 * e[t]) < this.threshold) {
+              if (O.toDecibel(2 * e[t]) < this.threshold) {
                 const e = this.previousWeight_ - s;
                 this.weights_[t] = Math.max(e, 0);
               } else {
@@ -30336,7 +30312,7 @@ var CLSTAMP = "10779229";
             return 10 * Math.log10(e);
           }
         }
-        class V {
+        class N {
           m_Analyser = void 0;
           m_rgInputNode = [];
           m_hUpdateInterval = 0;
@@ -30346,7 +30322,7 @@ var CLSTAMP = "10779229";
           m_flRoundedVolume = 0;
           m_flAveraging = 0.6;
           constructor(e, t) {
-            (0, D.Gn)(this),
+            (0, M.Gn)(this),
               (this.m_Analyser = t.createAnalyser()),
               (this.m_Analyser.fftSize = 128),
               (this.m_buffer = new Float32Array(this.m_Analyser.fftSize)),
@@ -30405,35 +30381,35 @@ var CLSTAMP = "10779229";
             return this.m_flRoundedVolume;
           }
         }
-        (0, s.Cg)([D.sH], V.prototype, "m_lastTimeNonZero", void 0),
-          (0, s.Cg)([D.sH], V.prototype, "m_flVolume", void 0),
-          (0, s.Cg)([D.sH], V.prototype, "m_flRoundedVolume", void 0),
-          (0, s.Cg)([D.XI.bound], V.prototype, "UpdateVolume", null),
-          (0, s.Cg)([D.XI.bound], V.prototype, "stop", null);
-        var U,
-          H = n(96108),
-          W = n(49569),
-          z = n(8978),
-          q = n(6660),
-          K = n(11662);
+        (0, s.Cg)([M.sH], N.prototype, "m_lastTimeNonZero", void 0),
+          (0, s.Cg)([M.sH], N.prototype, "m_flVolume", void 0),
+          (0, s.Cg)([M.sH], N.prototype, "m_flRoundedVolume", void 0),
+          (0, s.Cg)([M.XI.bound], N.prototype, "UpdateVolume", null),
+          (0, s.Cg)([M.XI.bound], N.prototype, "stop", null);
+        var j,
+          V = n(55747),
+          U = n(3190),
+          H = n(62057),
+          W = n(6660),
+          z = n(13791);
         !(function (e) {
           (e[(e.k_ENoiseGateLevel_Off = 0)] = "k_ENoiseGateLevel_Off"),
             (e[(e.k_ENoiseGateLevel_Low = 1)] = "k_ENoiseGateLevel_Low"),
             (e[(e.k_ENoiseGateLevel_Medium = 2)] = "k_ENoiseGateLevel_Medium"),
             (e[(e.k_ENoiseGateLevel_High = 3)] = "k_ENoiseGateLevel_High");
-        })(U || (U = {}));
-        var Z,
-          X,
-          $ = n(40114);
+        })(j || (j = {}));
+        var q,
+          K,
+          Z = n(66681);
         !(function (e) {
           (e[(e.k_EAudioStreamType_Microphone = 1)] =
             "k_EAudioStreamType_Microphone"),
             (e[(e.k_EAudioStreamType_IncomingStream = 2)] =
               "k_EAudioStreamType_IncomingStream");
-        })(Z || (Z = {}));
-        class Q {
+        })(q || (q = {}));
+        class X {
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
           unique_id;
           stream;
@@ -30449,12 +30425,12 @@ var CLSTAMP = "10779229";
           muted = !1;
           volume_meter = void 0;
         }
-        (0, s.Cg)([D.sH], Q.prototype, "accountid", void 0),
-          (0, s.Cg)([D.sH], Q.prototype, "muted", void 0),
-          (0, s.Cg)([D.sH], Q.prototype, "volume_meter", void 0);
-        class Y {
+        (0, s.Cg)([M.sH], X.prototype, "accountid", void 0),
+          (0, s.Cg)([M.sH], X.prototype, "muted", void 0),
+          (0, s.Cg)([M.sH], X.prototype, "volume_meter", void 0);
+        class $ {
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
           unique_id;
           receive = !1;
@@ -30462,35 +30438,35 @@ var CLSTAMP = "10779229";
           accountid = void 0;
           showOnDesktop = !1;
         }
-        function J(e) {
+        function Q(e) {
           switch (e) {
-            case X.k_EVoiceCallState_None:
+            case K.k_EVoiceCallState_None:
               return "None";
-            case X.k_EVoiceCallState_ScheduledInitiate:
+            case K.k_EVoiceCallState_ScheduledInitiate:
               return "ScheduledInitiate";
-            case X.k_EVoiceCallState_RequestedMicAccess:
+            case K.k_EVoiceCallState_RequestedMicAccess:
               return "RequestedMicAccess";
-            case X.k_EVoiceCallState_LocalMicOnly:
+            case K.k_EVoiceCallState_LocalMicOnly:
               return "LocalMicOnly";
-            case X.k_EVoiceCallState_CreatePeerConnection:
+            case K.k_EVoiceCallState_CreatePeerConnection:
               return "CreatePeerConnection";
-            case X.k_EVoiceCallState_InitatedWebRTCSession:
+            case K.k_EVoiceCallState_InitatedWebRTCSession:
               return "InitiatedWebRTCSession";
-            case X.k_EVoiceCallState_UpdatingWebRTCSession:
+            case K.k_EVoiceCallState_UpdatingWebRTCSession:
               return "UpdatingWebRTCSession";
-            case X.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected:
+            case K.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected:
               return "WaitingOnICEConnected";
-            case X.k_EVoiceCallState_RequestedPermission:
+            case K.k_EVoiceCallState_RequestedPermission:
               return "RequestedPermission";
-            case X.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession:
+            case K.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession:
               return "NotifyingVoiceChatOfWebRTCSession";
-            case X.k_EVoiceCallState_Connected:
+            case K.k_EVoiceCallState_Connected:
               return "Connected";
           }
         }
-        (0, s.Cg)([D.sH], Y.prototype, "stream", void 0),
-          (0, s.Cg)([D.sH], Y.prototype, "accountid", void 0),
-          (0, s.Cg)([D.sH], Y.prototype, "showOnDesktop", void 0),
+        (0, s.Cg)([M.sH], $.prototype, "stream", void 0),
+          (0, s.Cg)([M.sH], $.prototype, "accountid", void 0),
+          (0, s.Cg)([M.sH], $.prototype, "showOnDesktop", void 0),
           (function (e) {
             (e[(e.k_EVoiceCallState_None = 0)] = "k_EVoiceCallState_None"),
               (e[(e.k_EVoiceCallState_ScheduledInitiate = 1)] =
@@ -30514,12 +30490,12 @@ var CLSTAMP = "10779229";
                 "k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession"),
               (e[(e.k_EVoiceCallState_Connected = 10)] =
                 "k_EVoiceCallState_Connected");
-          })(X || (X = {}));
-        class ee {
+          })(K || (K = {}));
+        class Y {
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
-          m_eState = X.k_EVoiceCallState_None;
+          m_eState = K.k_EVoiceCallState_None;
           m_targetAccountID = 0;
           m_bInitiatedOneOnOneCall = !1;
           m_bWaitingOnOneOnOneRejoin = !1;
@@ -30554,21 +30530,21 @@ var CLSTAMP = "10779229";
             return this.m_chatRoom && this.m_chatRoom.groupID == e;
           }
         }
-        (0, s.Cg)([D.sH], ee.prototype, "m_eState", void 0),
-          (0, s.Cg)([D.sH], ee.prototype, "m_targetAccountID", void 0),
-          (0, s.Cg)([D.sH], ee.prototype, "m_bInitiatedOneOnOneCall", void 0),
-          (0, s.Cg)([D.sH], ee.prototype, "m_bWaitingOnOneOnOneRejoin", void 0),
-          (0, s.Cg)([D.sH], ee.prototype, "m_bPostedOneOnOneEndedMsg", void 0),
-          (0, s.Cg)([D.sH], ee.prototype, "m_chatRoom", void 0),
-          (0, s.Cg)([D.sH], ee.prototype, "m_voiceChatID", void 0),
-          (0, s.Cg)([D.sH], ee.prototype, "m_nFailuresThisInitiate", void 0),
+        (0, s.Cg)([M.sH], Y.prototype, "m_eState", void 0),
+          (0, s.Cg)([M.sH], Y.prototype, "m_targetAccountID", void 0),
+          (0, s.Cg)([M.sH], Y.prototype, "m_bInitiatedOneOnOneCall", void 0),
+          (0, s.Cg)([M.sH], Y.prototype, "m_bWaitingOnOneOnOneRejoin", void 0),
+          (0, s.Cg)([M.sH], Y.prototype, "m_bPostedOneOnOneEndedMsg", void 0),
+          (0, s.Cg)([M.sH], Y.prototype, "m_chatRoom", void 0),
+          (0, s.Cg)([M.sH], Y.prototype, "m_voiceChatID", void 0),
+          (0, s.Cg)([M.sH], Y.prototype, "m_nFailuresThisInitiate", void 0),
           (0, s.Cg)(
-            [D.sH],
-            ee.prototype,
+            [M.sH],
+            Y.prototype,
             "m_bIsConnectionAttemptOverTwoSeconds",
             void 0,
           );
-        class te {
+        class J {
           m_SSRC = 0;
           m_BytesReceived = 0;
           m_HeaderBytesReceived = 0;
@@ -30582,7 +30558,7 @@ var CLSTAMP = "10779229";
           m_JitterBufferMinimumDelay = 0;
           m_JitterBufferTargetDelay = 0;
         }
-        class ne extends te {
+        class ee extends J {
           m_PacketsDiscarded = 0;
           m_ConcealmentEvents = 0;
           m_ConcealedSamples = 0;
@@ -30592,7 +30568,7 @@ var CLSTAMP = "10779229";
           m_TotalSamplesDuration = 0;
           m_TotalSamplesReceived = 0;
         }
-        class se extends te {
+        class te extends J {
           m_FirCount = 0;
           m_PliCount = 0;
           m_NackCount = 0;
@@ -30604,11 +30580,11 @@ var CLSTAMP = "10779229";
           m_FramesReceived = 0;
           m_FramesAssembledFromMultiplePackets = 0;
         }
-        const ie = "SteamVoiceSettings";
-        class oe {
+        const ne = "SteamVoiceSettings";
+        class se {
           m_VoiceInputGain = 1;
           m_VoiceOutputGain = 1;
-          m_NoiseGateLevel = U.k_ENoiseGateLevel_Medium;
+          m_NoiseGateLevel = j.k_ENoiseGateLevel_Medium;
           m_VoiceUseEchoCancellation = !0;
           m_VoiceUseNoiseCancellation = !0;
           m_VoiceUseAutoGainControl = !0;
@@ -30620,10 +30596,10 @@ var CLSTAMP = "10779229";
           m_bUseSteamAudioSpatialization = !1;
           m_SettingsStore;
           constructor(e) {
-            (0, D.Gn)(this), (this.m_SettingsStore = e);
+            (0, M.Gn)(this), (this.m_SettingsStore = e);
           }
           SaveToLocalStorage() {
-            this.m_SettingsStore.StoreObjectInLocalStorage(ie, {
+            this.m_SettingsStore.StoreObjectInLocalStorage(ne, {
               inputGain: this.m_VoiceInputGain,
               outputGain: this.m_VoiceOutputGain,
               noiseGateLevel: this.m_NoiseGateLevel,
@@ -30639,7 +30615,7 @@ var CLSTAMP = "10779229";
           }
           LoadFromLocalStorage(e) {
             this.m_SettingsStore
-              .GetObjectFromLocalStorageWhenReady(ie, void 0)
+              .GetObjectFromLocalStorageWhenReady(ne, void 0)
               .then((t) => {
                 null != t &&
                   (null != t.inputGain && (this.m_VoiceInputGain = t.inputGain),
@@ -30670,53 +30646,53 @@ var CLSTAMP = "10779229";
               });
           }
         }
-        (0, s.Cg)([D.sH], oe.prototype, "m_VoiceInputGain", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_VoiceOutputGain", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_NoiseGateLevel", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_VoiceUseEchoCancellation", void 0),
+        (0, s.Cg)([M.sH], se.prototype, "m_VoiceInputGain", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_VoiceOutputGain", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_NoiseGateLevel", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_VoiceUseEchoCancellation", void 0),
           (0, s.Cg)(
-            [D.sH],
-            oe.prototype,
+            [M.sH],
+            se.prototype,
             "m_VoiceUseNoiseCancellation",
             void 0,
           ),
-          (0, s.Cg)([D.sH], oe.prototype, "m_VoiceUseAutoGainControl", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_SelectedMicID", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_SelectedOutputID", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_bPlayPTTSounds", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_bSettingsLoaded", void 0),
-          (0, s.Cg)([D.sH], oe.prototype, "m_bHasResetOpenMicHotkey", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_VoiceUseAutoGainControl", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_SelectedMicID", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_SelectedOutputID", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_bPlayPTTSounds", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_bSettingsLoaded", void 0),
+          (0, s.Cg)([M.sH], se.prototype, "m_bHasResetOpenMicHotkey", void 0),
           (0, s.Cg)(
-            [D.sH],
-            oe.prototype,
+            [M.sH],
+            se.prototype,
             "m_bUseSteamAudioSpatialization",
             void 0,
           );
-        class re {
+        class ie {
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
           muted = !1;
           gain = 1;
         }
-        (0, s.Cg)([D.sH], re.prototype, "muted", void 0),
-          (0, s.Cg)([D.sH], re.prototype, "gain", void 0);
-        class ae {
+        (0, s.Cg)([M.sH], ie.prototype, "muted", void 0),
+          (0, s.Cg)([M.sH], ie.prototype, "gain", void 0);
+        class oe {
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
           mic_muted_locally = !1;
           output_muted_locally = !1;
           has_no_mic_for_session = !1;
           sends_video = !1;
         }
-        (0, s.Cg)([D.sH], ae.prototype, "mic_muted_locally", void 0),
-          (0, s.Cg)([D.sH], ae.prototype, "output_muted_locally", void 0),
-          (0, s.Cg)([D.sH], ae.prototype, "has_no_mic_for_session", void 0),
-          (0, s.Cg)([D.sH], ae.prototype, "sends_video", void 0);
-        class le {
+        (0, s.Cg)([M.sH], oe.prototype, "mic_muted_locally", void 0),
+          (0, s.Cg)([M.sH], oe.prototype, "output_muted_locally", void 0),
+          (0, s.Cg)([M.sH], oe.prototype, "has_no_mic_for_session", void 0),
+          (0, s.Cg)([M.sH], oe.prototype, "sends_video", void 0);
+        class re {
           constructor() {
-            (0, D.Gn)(this);
+            (0, M.Gn)(this);
           }
           partner_accountid = 0;
           voice_chatid = "";
@@ -30732,15 +30708,15 @@ var CLSTAMP = "10779229";
                 (this.audio_buffer = void 0));
           }
         }
-        (0, s.Cg)([D.sH], le.prototype, "partner_accountid", void 0),
-          (0, s.Cg)([D.sH], le.prototype, "voice_chatid", void 0),
-          (0, s.Cg)([D.sH], le.prototype, "previously_joined", void 0);
-        class ce {
+        (0, s.Cg)([M.sH], re.prototype, "partner_accountid", void 0),
+          (0, s.Cg)([M.sH], re.prototype, "voice_chatid", void 0),
+          (0, s.Cg)([M.sH], re.prototype, "previously_joined", void 0);
+        class ae {
           m_CMInterface;
-          m_VoiceCallState = new ee();
-          m_mapOneOnOneCallsWaitingJoinOrAccept = D.sH.map();
+          m_VoiceCallState = new Y();
+          m_mapOneOnOneCallsWaitingJoinOrAccept = M.sH.map();
           m_hRegisterForPushToTalkStateChange = null;
-          m_VoiceChatActiveStateChangeCallbacks = new d.lu();
+          m_VoiceChatActiveStateChangeCallbacks = new c.lu();
           m_bPushToTalkEnabled = !1;
           m_bPushToMuteEnabled = !1;
           m_bVoicePTTStateEnabled = !1;
@@ -30758,11 +30734,11 @@ var CLSTAMP = "10779229";
           static k_MaxPerUserGainMultiplier = 2;
           static k_MaxInputOutputGainValue = 4;
           m_AudioContext = void 0;
-          m_rgAudioStreams = (0, D.sH)([]);
+          m_rgAudioStreams = (0, M.sH)([]);
           m_MicVolumeMeter = void 0;
           m_MicNoiseGate = void 0;
           m_MicInputGainNode = void 0;
-          m_rgVideoStreams = (0, D.sH)([]);
+          m_rgVideoStreams = (0, M.sH)([]);
           m_bSendVideo = !1;
           m_bReceiveVideo = !1;
           m_bAutoShowVideoStream = !1;
@@ -30770,8 +30746,8 @@ var CLSTAMP = "10779229";
           m_mapSSRCToAccountID = new Map();
           m_mapAccountIDToAudioStats = new Map();
           m_mapAccountIDToVideoStats = new Map();
-          m_mapPerUserOutputGain = D.sH.map();
-          m_mapUserVoiceStatus = D.sH.map();
+          m_mapPerUserOutputGain = M.sH.map();
+          m_mapUserVoiceStatus = M.sH.map();
           m_PeerConnection = void 0;
           m_Settings = void 0;
           m_LogVoiceChatDetails = !1;
@@ -30786,16 +30762,16 @@ var CLSTAMP = "10779229";
           m_localPose = void 0;
           m_mapRemotePoseForAccountID = new Map();
           constructor(e) {
-            (0, D.Gn)(this),
-              (this.m_Settings = new oe(e)),
+            (0, M.Gn)(this),
+              (this.m_Settings = new se(e)),
               this.m_Settings.LoadFromLocalStorage(this),
               this.DispatchSetVoiceChatActive(!1),
-              (L.Supplier = this),
+              (k.Supplier = this),
               this.GenerateVoicePositions();
           }
           DispatchSetVoiceChatActive(e) {
             this.m_VoiceChatActiveStateChangeCallbacks.Dispatch(e),
-              (0, $.Dp)("WebChat.SetVoiceChatActive") &&
+              (0, Z.Dp)("WebChat.SetVoiceChatActive") &&
                 SteamClient.WebChat.SetVoiceChatActive(e);
           }
           Init(e) {
@@ -30809,24 +30785,24 @@ var CLSTAMP = "10779229";
               (window.SetVoiceAutoShowVideoStream =
                 this.SetAutoShowVideoStream),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                O.pt.NotifyOneOnOneChatRequestedHandler,
+                F.pt.NotifyOneOnOneChatRequestedHandler,
                 (e) => {
-                  let t = new R.b(e.Body().steamid_partner()),
+                  let t = new A.b(e.Body().steamid_partner()),
                     n = e.Body().voice_chatid(),
-                    s = A.xm.FriendStore.GetFriend(t.GetAccountID());
+                    s = x.xm.FriendStore.GetFriend(t.GetAccountID());
                   if (
                     null == s ||
                     s.is_blocked ||
-                    A.xm.FriendStore.BIsInvisibleMode() ||
-                    A.xm.FriendStore.GetUserDoNotDisturb()
+                    x.xm.FriendStore.BIsInvisibleMode() ||
+                    x.xm.FriendStore.GetUserDoNotDisturb()
                   )
                     return (
                       this.LogMsg(
                         "(VoiceChat) Ignoring one-on-one voice chat request because partner is not a friend, is blocked, we are invisible, or we are DND",
                       ),
-                      H.R
+                      V.R
                     );
-                  let i = new le();
+                  let i = new re();
                   (i.partner_accountid =
                     this.m_CMInterface.steamid.GetAccountID()),
                     (i.voice_chatid = n),
@@ -30854,41 +30830,41 @@ var CLSTAMP = "10779229";
                         "(VoiceChat) We are already trying to one on one chat this user, just auto-acceptting to re-sync.",
                       ),
                       this.OnAcceptOneOnOneVoiceChat(t, n),
-                      H.R
+                      V.R
                     );
-                  A.xm.NotificationManager.DisplayNotificationFromFriend(s, {
+                  x.xm.NotificationManager.DisplayNotificationFromFriend(s, {
                     title: s.display_name,
-                    body: (0, z.we)(
+                    body: (0, H.we)(
                       "#Friend_RequestingOneOnOneChat",
                       s.display_name,
                     ),
                     tag: "state_" + s.accountid,
                     steamid: s.persona.m_steamid.ConvertTo64BitString(),
                   });
-                  let r = A.xm.ChatStore.GetFriendChat(t.GetAccountID(), !0);
+                  let r = x.xm.ChatStore.GetFriendChat(t.GetAccountID(), !0);
                   return (
                     null != r &&
                       (r.AddVoiceChannelInviteMsg(
                         t.GetAccountID(),
-                        A.xm.GetServerRTime32(),
-                        (0, z.we)(
+                        x.xm.GetServerRTime32(),
+                        (0, H.we)(
                           "#FriendMsg_VoiceChannelInvite",
                           s.display_name,
                           r.self.display_name,
                         ),
                       ),
-                      A.xm.UIStore.ShowAndOrActivateChat(
-                        A.xm.GetDefaultBrowserContext(),
+                      x.xm.UIStore.ShowAndOrActivateChat(
+                        x.xm.GetDefaultBrowserContext(),
                         r,
                         !1,
                       )),
                     this.PlayRingSound(s.accountid),
-                    H.R
+                    V.R
                   );
                 },
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                O.pt.NotifyVoiceChatEndedHandler,
+                F.pt.NotifyVoiceChatEndedHandler,
                 (e) => {
                   let t = e.Body().voice_chatid();
                   for (let e of Array.from(
@@ -30901,28 +30877,28 @@ var CLSTAMP = "10779229";
                           e +
                           " has ended and is no longer joinable.",
                       ),
-                        A.xm.AudioPlaybackManager.PlayAudioURL(
+                        x.xm.AudioPlaybackManager.PlayAudioURL(
                           i.TS.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1",
                         );
                       let t = Number(e);
                       this.DeleteOneOnOneCallWaitingJoinOrAccept(t);
-                      let n = A.xm.ChatStore.GetFriendChat(t, !1),
-                        s = A.xm.FriendStore.GetFriend(t);
+                      let n = x.xm.ChatStore.GetFriendChat(t, !1),
+                        s = x.xm.FriendStore.GetFriend(t);
                       null != n &&
                         (s
                           ? n.AddVoiceChannelInviteMsg(
                               s.accountid,
-                              A.xm.GetServerRTime32(),
-                              (0, z.we)(
+                              x.xm.GetServerRTime32(),
+                              (0, H.we)(
                                 "#FriendMsg_VoiceChannelEndedExplicit",
                                 s.display_name,
                               ),
                             )
                           : n.AddVoiceChannelInviteMsg(
                               this.m_CMInterface.steamid.GetAccountID(),
-                              A.xm.GetServerRTime32(),
-                              (0, z.we)("#FriendMsg_VoiceChannelEnded"),
+                              x.xm.GetServerRTime32(),
+                              (0, H.we)("#FriendMsg_VoiceChannelEnded"),
                             ),
                         this.m_VoiceCallState.m_targetAccountID == Number(e) &&
                           (this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg =
@@ -30931,7 +30907,7 @@ var CLSTAMP = "10779229";
                   }
                   if (t == this.m_VoiceCallState.m_voiceChatID) {
                     if (0 != this.m_VoiceCallState.m_targetAccountID) {
-                      let e = A.xm.ChatStore.GetFriendChat(
+                      let e = x.xm.ChatStore.GetFriendChat(
                         this.m_VoiceCallState.m_targetAccountID,
                         !1,
                       );
@@ -30940,14 +30916,14 @@ var CLSTAMP = "10779229";
                         ((this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         e.AddVoiceChannelInviteMsg(
                           this.m_CMInterface.steamid.GetAccountID(),
-                          A.xm.GetServerRTime32(),
-                          (0, z.we)("#FriendMsg_VoiceChannelEnded"),
+                          x.xm.GetServerRTime32(),
+                          (0, H.we)("#FriendMsg_VoiceChannelEnded"),
                         ));
                     }
                     0 != this.m_VoiceCallState.m_targetAccountID &&
                       this.m_VoiceCallState.m_eState >
-                        X.k_EVoiceCallState_RequestedPermission &&
-                      A.xm.AudioPlaybackManager.PlayAudioURL(
+                        K.k_EVoiceCallState_RequestedPermission &&
+                      x.xm.AudioPlaybackManager.PlayAudioURL(
                         i.TS.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1",
                       ),
@@ -30956,17 +30932,17 @@ var CLSTAMP = "10779229";
                       ),
                       this.EndVoiceChatInternal(!1);
                   }
-                  return H.R;
+                  return V.R;
                 },
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                O.pt.NotifyUserJoinedVoiceChatHandler,
+                F.pt.NotifyUserJoinedVoiceChatHandler,
                 (e) => {
                   if (
                     e.Body().voice_chatid() ==
                     this.m_VoiceCallState.m_voiceChatID
                   ) {
-                    let t = new R.b(e.Body().user_steamid());
+                    let t = new A.b(e.Body().user_steamid());
                     this.LogMsg(
                       "(VoiceChat) User " +
                         t.Render() +
@@ -30977,17 +30953,17 @@ var CLSTAMP = "10779229";
                           t.GetAccountID() &&
                         (this.m_VoiceCallState.m_bWaitingOnOneOnOneRejoin = !1);
                   }
-                  return H.R;
+                  return V.R;
                 },
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                O.pt.NotifyUserLeftVoiceChatHandler,
+                F.pt.NotifyUserLeftVoiceChatHandler,
                 (e) => {
                   if (
                     e.Body().voice_chatid() ==
                     this.m_VoiceCallState.m_voiceChatID
                   ) {
-                    let t = new R.b(e.Body().user_steamid());
+                    let t = new A.b(e.Body().user_steamid());
                     this.LogMsg(
                       "(VoiceChat) User " +
                         t.Render() +
@@ -30998,11 +30974,11 @@ var CLSTAMP = "10779229";
                           t.GetAccountID() &&
                         (this.m_VoiceCallState.m_bWaitingOnOneOnOneRejoin = !0);
                   }
-                  return H.R;
+                  return V.R;
                 },
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                E.I0H.NotifyShouldRejoinChatRoomVoiceChatHandler,
+                B.I0H.NotifyShouldRejoinChatRoomVoiceChatHandler,
                 (e) => {
                   let t = {
                     groupID: e.Body().chat_group_id(),
@@ -31010,27 +30986,27 @@ var CLSTAMP = "10779229";
                   };
                   return (
                     this.m_VoiceCallState.m_eState >
-                      X.k_EVoiceCallState_ScheduledInitiate &&
+                      K.k_EVoiceCallState_ScheduledInitiate &&
                       this.m_VoiceCallState.BMatchingCall(0, t) &&
                       (this.LogMsg(
                         "(ChatRoom) Notified that we need to rejoin new voicechat session for chat room... doing so now...",
                       ),
                       this.EndVoiceChatInternal(!0),
                       this.InitiateVoiceChat(0, t)),
-                    H.R
+                    V.R
                   );
                 },
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                N.aI.NotifyWebRTCUpdateRemoteDescriptionHandler,
+                E.aI.NotifyWebRTCUpdateRemoteDescriptionHandler,
                 (e) =>
                   this.m_VoiceCallState.m_eState <
-                  X.k_EVoiceCallState_InitatedWebRTCSession
+                  K.k_EVoiceCallState_InitatedWebRTCSession
                     ? (this.LogMsg(
                         "(WebRTC) Hit NotifyWebRTCUpdateRemoteDescriptionHandler in wrong state " +
                           this.m_VoiceCallState.m_eState,
                       ),
-                      H.zi)
+                      V.zi)
                     : (this.m_VoiceCallState.m_bOfferUpdateInProgress
                         ? (this.LogMsg(
                             "(WebRTC) Hit NotifyWebRTCUpdateRemoteDescriptionHandler while already updating, queing work",
@@ -31038,18 +31014,18 @@ var CLSTAMP = "10779229";
                           (this.m_VoiceCallState.m_msgPendingRemoteDescriptionUpdate =
                             e.Body()))
                         : this.ProcessUpdatedRemoteDescription(e.Body()),
-                      H.R),
+                      V.R),
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                N.aI.NotifyWebRTCSessionConnectedHandler,
+                E.aI.NotifyWebRTCSessionConnectedHandler,
                 (e) =>
                   this.m_VoiceCallState.m_eState <
-                  X.k_EVoiceCallState_InitatedWebRTCSession
+                  K.k_EVoiceCallState_InitatedWebRTCSession
                     ? (this.LogMsg(
                         "(WebRTC) Hit NotifyWebRTCSessionConnectedHandler in wrong state " +
                           this.m_VoiceCallState.m_eState,
                       ),
-                      H.zi)
+                      V.zi)
                     : ((this.m_VoiceCallState.m_webRTCConnectedNotification =
                         e.Body()),
                       (this.m_VoiceCallState.m_webRTCServerIP =
@@ -31070,36 +31046,36 @@ var CLSTAMP = "10779229";
                             "(VoiceChat) ICE state is not connected after successful SetRemoteDescription, waiting for UDP connetivity",
                           ),
                           (this.m_VoiceCallState.m_eState =
-                            X.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected)),
-                      H.R),
+                            K.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected)),
+                      V.R),
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                O.pt.NotifyAllUsersVoiceStatusHandler,
+                F.pt.NotifyAllUsersVoiceStatusHandler,
                 (e) => {
                   if (
                     this.m_VoiceCallState.m_voiceChatID !=
                     e.Body().voice_chatid()
                   )
-                    return H.R;
+                    return V.R;
                   for (let t = 0; t < e.Body().users().length; ++t) {
                     let n = e.Body().users()[t];
                     this.UpdateUserVoiceStatus(n);
                   }
-                  return H.R;
+                  return V.R;
                 },
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                O.pt.NotifyUserVoiceStatusHandler,
-                (e) => (this.UpdateUserVoiceStatus(e.Body()), H.R),
+                F.pt.NotifyUserVoiceStatusHandler,
+                (e) => (this.UpdateUserVoiceStatus(e.Body()), V.R),
               ),
               this.m_CMInterface.messageHandlers.RegisterServiceNotificationHandler(
-                O.pt.NotifyOneOnOneChatResponseHandler,
+                F.pt.NotifyOneOnOneChatResponseHandler,
                 (e) => {
                   if (
                     this.m_VoiceCallState.m_eState >=
-                    X.k_EVoiceCallState_RequestedPermission
+                    K.k_EVoiceCallState_RequestedPermission
                   ) {
-                    let t = new R.b(e.Body().steamid_partner());
+                    let t = new A.b(e.Body().steamid_partner());
                     if (
                       e.Body().voicechat_id() !=
                       this.m_VoiceCallState.m_voiceChatID
@@ -31120,7 +31096,7 @@ var CLSTAMP = "10779229";
                           " " +
                           e.Hdr().steamid(),
                       ),
-                        A.xm.AudioPlaybackManager.PlayAudioURL(
+                        x.xm.AudioPlaybackManager.PlayAudioURL(
                           i.TS.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_enter.m4a?v=1",
                         ),
@@ -31129,18 +31105,18 @@ var CLSTAMP = "10779229";
                       this.LogMsg(
                         "(VoiceChat) Rejected by " + t.GetAccountID(),
                       );
-                      let e = A.xm.ChatStore.GetFriendChat(
+                      let e = x.xm.ChatStore.GetFriendChat(
                           t.GetAccountID(),
                           !1,
                         ),
-                        n = A.xm.FriendStore.GetFriend(t.GetAccountID());
+                        n = x.xm.FriendStore.GetFriend(t.GetAccountID());
                       null != e &&
                         null != n &&
                         ((this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         e.AddVoiceChannelInviteMsg(
                           t.GetAccountID(),
-                          A.xm.GetServerRTime32(),
-                          (0, z.we)(
+                          x.xm.GetServerRTime32(),
+                          (0, H.we)(
                             "#FriendMsg_VoiceChannelEndedExplicit",
                             n.display_name,
                           ),
@@ -31148,14 +31124,14 @@ var CLSTAMP = "10779229";
                         this.DeleteOneOnOneCallWaitingJoinOrAccept(
                           t.GetAccountID(),
                         ),
-                        A.xm.AudioPlaybackManager.PlayAudioURL(
+                        x.xm.AudioPlaybackManager.PlayAudioURL(
                           i.TS.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1",
                         ),
                         this.OnVoiceChatAccepted(!1);
                     }
                   }
-                  return H.R;
+                  return V.R;
                 },
               );
           }
@@ -31163,7 +31139,7 @@ var CLSTAMP = "10779229";
             return this.m_CMInterface.steamid.GetAccountID();
           }
           RefreshPushToTalkKeySettings() {
-            (0, $.Dp)("WebChat.GetPushToTalkEnabled") &&
+            (0, Z.Dp)("WebChat.GetPushToTalkEnabled") &&
               SteamClient.WebChat.GetPushToTalkEnabled().then((e) => {
                 (this.m_bPushToTalkEnabled = e.bEnabled),
                   (this.m_VKPushToTalkHotKey = e.vkHotKey),
@@ -31173,8 +31149,8 @@ var CLSTAMP = "10779229";
                   (this.m_strPushToTalkDisplayString = e.strKeyName || "None"),
                   this.m_bPushToTalkEnabled ||
                     this.m_bPushToMuteEnabled ||
-                    ((0, $.Dp)("WebChat.SetPushToTalkHotKey") &&
-                      ((0, K.wT)(
+                    ((0, Z.Dp)("WebChat.SetPushToTalkHotKey") &&
+                      ((0, z.wT)(
                         this.m_Settings.m_bSettingsLoaded,
                         "Settings not loaded but RefreshPushToTalkKeySettings hit",
                       ),
@@ -31187,7 +31163,7 @@ var CLSTAMP = "10779229";
                         SteamClient.WebChat.SetPushToTalkHotKey(0),
                         this.RefreshPushToTalkKeySettings())));
               }),
-              (0, $.Dp)("WebChat.RegisterForPushToTalkStateChange") &&
+              (0, Z.Dp)("WebChat.RegisterForPushToTalkStateChange") &&
                 (this.m_hRegisterForPushToTalkStateChange =
                   SteamClient.WebChat.RegisterForPushToTalkStateChange(
                     this.OnPushToTalkStateChange,
@@ -31197,7 +31173,7 @@ var CLSTAMP = "10779229";
             this.BPartnerHasRequestedAndIsInOneOnOneChat(e)
               ? this.AcceptPartnersOneOnOneChatRequest(e)
               : (this.InitiateVoiceChat(e, null),
-                A.xm.AudioPlaybackManager.PlayAudioURL(
+                x.xm.AudioPlaybackManager.PlayAudioURL(
                   i.TS.COMMUNITY_CDN_URL +
                     "public/sounds/webui/steam_phonecall.m4a?v=1",
                 ));
@@ -31211,7 +31187,7 @@ var CLSTAMP = "10779229";
           EndLocalMicTest() {
             (this.m_bLocalMicTestActive = !1),
               this.m_VoiceCallState.m_eState ==
-                X.k_EVoiceCallState_LocalMicOnly &&
+                K.k_EVoiceCallState_LocalMicOnly &&
                 this.EndVoiceChatInternal(!1),
               this.SetVoiceEchoLocalMic(this.m_bLocalMicEchoStateBeforeMicTest);
           }
@@ -31223,7 +31199,7 @@ var CLSTAMP = "10779229";
               (this.m_bLocalMicEchoStateBeforeMicTest =
                 this.m_VoiceEchoLocalMic),
               this.SetVoiceEchoLocalMic(!0),
-              this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_None &&
+              this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_None &&
                 this.InitiateVoiceChat(0, null);
           }
           GetOneOnOneCallsWaitingForJoinOrAccept() {
@@ -31234,18 +31210,18 @@ var CLSTAMP = "10779229";
             if (null == t) return !1;
             (this.m_VoiceCallState.m_timeStartedConnecting = void 0),
               t.ClearAudioRepeats();
-            let n = R.b.InitFromAccountID(e);
+            let n = A.b.InitFromAccountID(e);
             return this.OnAcceptOneOnOneVoiceChat(n, t.voice_chatid), !0;
           }
           OnRejectOneOnOneVoiceChatForPartner(e) {
             let t = this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(e);
             if (null == t) return !1;
             t.ClearAudioRepeats();
-            let n = R.b.InitFromAccountID(e);
+            let n = A.b.InitFromAccountID(e);
             this.OnRejectOneOnOneVoiceChat(n, t.voice_chatid),
               this.m_mapOneOnOneCallsWaitingJoinOrAccept.delete(e);
-            let s = A.xm.ChatStore.GetFriendChat(e, !1),
-              i = A.xm.FriendStore.self;
+            let s = x.xm.ChatStore.GetFriendChat(e, !1),
+              i = x.xm.FriendStore.self;
             return (
               null != s &&
                 null != i &&
@@ -31253,8 +31229,8 @@ var CLSTAMP = "10779229";
                   this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) ||
                   s.AddVoiceChannelInviteMsg(
                     i.accountid,
-                    A.xm.GetServerRTime32(),
-                    (0, z.we)(
+                    x.xm.GetServerRTime32(),
+                    (0, H.we)(
                       "#FriendMsg_VoiceChannelEndedExplicit",
                       i.display_name,
                     ),
@@ -31266,7 +31242,7 @@ var CLSTAMP = "10779229";
           }
           OnUserLeaveOneOnOneVoiceChat() {
             0 != this.m_VoiceCallState.m_targetAccountID ||
-            this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_None
+            this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_None
               ? (this.LogMsg(
                   "(VoiceChat) User asking to leave but not end one-on-one chat with: " +
                     this.m_VoiceCallState.m_targetAccountID,
@@ -31278,22 +31254,22 @@ var CLSTAMP = "10779229";
           }
           OnUserEndVoiceChat() {
             if (
-              this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None &&
+              this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None &&
               0 != this.m_VoiceCallState.m_targetAccountID
             ) {
               if (!this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) {
-                let e = A.xm.ChatStore.GetFriendChat(
+                let e = x.xm.ChatStore.GetFriendChat(
                     this.m_VoiceCallState.m_targetAccountID,
                     !1,
                   ),
-                  t = A.xm.FriendStore.self;
+                  t = x.xm.FriendStore.self;
                 null != e &&
                   null != t &&
                   ((this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                   e.AddVoiceChannelInviteMsg(
-                    A.xm.CMInterface.steamid.GetAccountID(),
-                    A.xm.GetServerRTime32(),
-                    (0, z.we)(
+                    x.xm.CMInterface.steamid.GetAccountID(),
+                    x.xm.GetServerRTime32(),
+                    (0, H.we)(
                       "#FriendMsg_VoiceChannelEndedExplicit",
                       t.display_name,
                     ),
@@ -31301,17 +31277,17 @@ var CLSTAMP = "10779229";
               }
               let e = this.m_VoiceCallState.m_targetAccountID;
               this.m_VoiceCallState.m_targetAccountID = 0;
-              let t = o.w.Init(O.BL);
+              let t = o.w.Init(F.BL);
               t
                 .Body()
                 .set_steamid_partner(
-                  R.b.InitFromAccountID(e).ConvertTo64BitString(),
+                  A.b.InitFromAccountID(e).ConvertTo64BitString(),
                 ),
                 this.DeleteOneOnOneCallWaitingJoinOrAccept(e),
-                O.cc
+                F.cc
                   .EndOneOnOneChat(this.m_CMInterface.GetServiceTransport(), t)
                   .then((t) => {
-                    t.GetEResult() == H.R
+                    t.GetEResult() == V.R
                       ? this.LogMsg("(VoiceChat) Ended voice chat with " + e)
                       : this.LogMsg(
                           "(VoiceChat) Failed ending voice chat with " + e,
@@ -31334,7 +31310,7 @@ var CLSTAMP = "10779229";
               (this.m_pendingOneOnOneVoiceChatRequestsAutorunDisposer = null),
               this.m_fnPendingOneOnOneVoiceChatRequestsCallback &&
                 (this.m_pendingOneOnOneVoiceChatRequestsAutorunDisposer = (0,
-                D.fm)(() => {
+                M.fm)(() => {
                   if (!this.m_fnPendingOneOnOneVoiceChatRequestsCallback)
                     return;
                   let e = Array.from(
@@ -31358,7 +31334,7 @@ var CLSTAMP = "10779229";
                 this.m_currentUserVoiceLevelAutorunDisposer(),
               (this.m_currentUserVoiceLevelAutorunDisposer = null),
               this.m_fnCurrentUserVoiceLevelCallback &&
-                (this.m_currentUserVoiceLevelAutorunDisposer = (0, D.fm)(() => {
+                (this.m_currentUserVoiceLevelAutorunDisposer = (0, M.fm)(() => {
                   if (!this.m_fnCurrentUserVoiceLevelCallback) return;
                   let e = this.get_volume(this.GetLocalAccountID());
                   this.m_fnCurrentUserVoiceLevelCallback(e);
@@ -31379,7 +31355,7 @@ var CLSTAMP = "10779229";
               this.RestartVoiceChatIfConnected());
           }
           GetAudioWorkletSupport() {
-            return A.xm.AudioPlaybackManager.supports_audio_worklets;
+            return x.xm.AudioPlaybackManager.supports_audio_worklets;
           }
           GetUserDeniedMicAccess() {
             return this.m_bUserHasDeniedMicPermissions;
@@ -31466,7 +31442,7 @@ var CLSTAMP = "10779229";
               (this.m_bReceiveVideo = t),
               n &&
                 (this.m_rgAudioStreams.forEach((t) => {
-                  t.type == Z.k_EAudioStreamType_Microphone &&
+                  t.type == q.k_EAudioStreamType_Microphone &&
                     t.stream?.getVideoTracks().forEach((t) => (t.enabled = e));
                 }),
                 this.SendVoiceStatusUpdate());
@@ -31482,28 +31458,28 @@ var CLSTAMP = "10779229";
             let n = this.m_rgVideoStreams.find((t) => t.accountid == e);
             if (
               (n && (n.receive = t),
-              this.m_VoiceCallState.m_eState < X.k_EVoiceCallState_Connected)
+              this.m_VoiceCallState.m_eState < K.k_EVoiceCallState_Connected)
             )
               return void (
                 t &&
                 !n &&
                 (this.AddPlaceholderVideoStream(e).receive = !0)
               );
-            let s = o.w.Init(O.OS);
+            let s = o.w.Init(F.OS);
             s.Body().set_voice_chatid(this.m_VoiceCallState.m_voiceChatID),
               s
                 .Body()
                 .set_user_steamid(
-                  R.b.InitFromAccountID(e).ConvertTo64BitString(),
+                  A.b.InitFromAccountID(e).ConvertTo64BitString(),
                 ),
               s.Body().set_accept_webrtc_video(t),
-              O.cc
+              F.cc
                 .UpdateUserVideoStatus(
                   this.m_CMInterface.GetServiceTransport(),
                   s,
                 )
                 .then((n) => {
-                  n.GetEResult() != H.R &&
+                  n.GetEResult() != V.R &&
                     (this.LogMsg(
                       "(WebRTC) Error updating video status for " + e,
                     ),
@@ -31540,7 +31516,7 @@ var CLSTAMP = "10779229";
             if (this.m_Settings.m_VoiceInputGain != e) {
               (this.m_Settings.m_VoiceInputGain = Math.max(
                 0,
-                Math.min(e, ce.k_MaxInputOutputGainValue),
+                Math.min(e, ae.k_MaxInputOutputGainValue),
               )),
                 this.LogMsg(
                   "(VoiceChat) New mic Input Gain value is " +
@@ -31565,7 +31541,7 @@ var CLSTAMP = "10779229";
             if (this.m_Settings.m_VoiceOutputGain != e) {
               (this.m_Settings.m_VoiceOutputGain = Math.max(
                 0,
-                Math.min(e, ce.k_MaxInputOutputGainValue),
+                Math.min(e, ae.k_MaxInputOutputGainValue),
               )),
                 this.LogMsg(
                   "(VoiceChat) New global OutputGain value is " +
@@ -31582,7 +31558,7 @@ var CLSTAMP = "10779229";
               for (let e = 0; e < this.m_rgAudioStreams.length; ++e) {
                 let t = this.m_rgAudioStreams[e];
                 t.output_gain_node &&
-                  (t.type == Z.k_EAudioStreamType_Microphone
+                  (t.type == q.k_EAudioStreamType_Microphone
                     ? t.output_gain_node.gain.setValueAtTime(
                         this.m_Settings.m_VoiceOutputGain,
                         this.m_AudioContext.currentTime,
@@ -31598,15 +31574,15 @@ var CLSTAMP = "10779229";
           BIsAccountFullyConnectedToActiveVoiceChat(e) {
             if (e == this.m_CMInterface.steamid.GetAccountID())
               return (
-                this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_Connected
+                this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_Connected
               );
-            if (this.m_VoiceCallState.m_eState < X.k_EVoiceCallState_Connected)
+            if (this.m_VoiceCallState.m_eState < K.k_EVoiceCallState_Connected)
               return !1;
             for (let t = 0; t < this.m_rgAudioStreams.length; ++t) {
               let n = this.m_rgAudioStreams[t];
               if (
                 n.output_gain_node &&
-                n.type == Z.k_EAudioStreamType_IncomingStream &&
+                n.type == q.k_EAudioStreamType_IncomingStream &&
                 n.accountid == e
               )
                 return !0;
@@ -31620,7 +31596,7 @@ var CLSTAMP = "10779229";
             let t = this.m_mapUserVoiceStatus.get(e);
             return (
               null == t &&
-                ((t = new ae()), this.m_mapUserVoiceStatus.set(e, t)),
+                ((t = new oe()), this.m_mapUserVoiceStatus.set(e, t)),
               t.mic_muted_locally
             );
           }
@@ -31628,7 +31604,7 @@ var CLSTAMP = "10779229";
             let t = this.m_mapUserVoiceStatus.get(e);
             return (
               null == t &&
-                ((t = new ae()), this.m_mapUserVoiceStatus.set(e, t)),
+                ((t = new oe()), this.m_mapUserVoiceStatus.set(e, t)),
               t.output_muted_locally
             );
           }
@@ -31636,7 +31612,7 @@ var CLSTAMP = "10779229";
             let t = this.m_mapUserVoiceStatus.get(e);
             return (
               null == t &&
-                ((t = new ae()), this.m_mapUserVoiceStatus.set(e, t)),
+                ((t = new oe()), this.m_mapUserVoiceStatus.set(e, t)),
               t.has_no_mic_for_session
             );
           }
@@ -31644,7 +31620,7 @@ var CLSTAMP = "10779229";
             let t = this.m_mapUserVoiceStatus.get(e);
             return (
               null == t &&
-                ((t = new ae()), this.m_mapUserVoiceStatus.set(e, t)),
+                ((t = new oe()), this.m_mapUserVoiceStatus.set(e, t)),
               t.sends_video
             );
           }
@@ -31665,14 +31641,14 @@ var CLSTAMP = "10779229";
             (this.m_bAutoShowVideoStream = e), e && (this.m_bReceiveVideo = !0);
           }
           GetActiveChatRoomGroupID() {
-            return this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_None
+            return this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_None
               ? ""
               : this.m_VoiceCallState.m_chatRoom
                 ? this.m_VoiceCallState.m_chatRoom.groupID
                 : "";
           }
           GetActiveVoiceChatID() {
-            return this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_None
+            return this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_None
               ? ""
               : this.m_VoiceCallState.m_chatRoom
                 ? this.m_VoiceCallState.m_chatRoom.chatID
@@ -31680,7 +31656,7 @@ var CLSTAMP = "10779229";
           }
           BInitiatedOneOnOneChat(e) {
             return (
-              this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None &&
+              this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None &&
               this.m_VoiceCallState.m_targetAccountID == e &&
               this.m_VoiceCallState.m_bInitiatedOneOnOneCall
             );
@@ -31688,7 +31664,7 @@ var CLSTAMP = "10779229";
           ToggleMicMuting() {
             for (let e = 0; e < this.m_rgAudioStreams.length; ++e) {
               let t = this.m_rgAudioStreams[e];
-              if (t.type == Z.k_EAudioStreamType_Microphone) {
+              if (t.type == q.k_EAudioStreamType_Microphone) {
                 t.muted = !t.muted;
                 let e = t.stream.getTracks();
                 for (let n = 0; n < e.length; n++) e[n].enabled = !t.muted;
@@ -31708,19 +31684,19 @@ var CLSTAMP = "10779229";
           BHasSampleRateTooHighInBrowser() {
             return (
               !i.TS.IN_CLIENT &&
-              A.xm.AudioPlaybackManager.GetLastObservedSampleRate() > 48e3
+              x.xm.AudioPlaybackManager.GetLastObservedSampleRate() > 48e3
             );
           }
           BNoMicAvailableForSession() {
             if (
               this.m_VoiceCallState.m_eState <=
-              X.k_EVoiceCallState_RequestedMicAccess
+              K.k_EVoiceCallState_RequestedMicAccess
             )
               return !1;
             if (this.BHasSampleRateTooHighInBrowser()) return !0;
             for (let e = 0; e < this.m_rgAudioStreams.length; ++e)
               if (
-                this.m_rgAudioStreams[e].type == Z.k_EAudioStreamType_Microphone
+                this.m_rgAudioStreams[e].type == q.k_EAudioStreamType_Microphone
               )
                 return !1;
             return !0;
@@ -31728,7 +31704,7 @@ var CLSTAMP = "10779229";
           IsMicMuted() {
             for (let e = 0; e < this.m_rgAudioStreams.length; ++e)
               if (
-                this.m_rgAudioStreams[e].type == Z.k_EAudioStreamType_Microphone
+                this.m_rgAudioStreams[e].type == q.k_EAudioStreamType_Microphone
               )
                 return this.m_rgAudioStreams[e].muted;
             return !1;
@@ -31737,7 +31713,7 @@ var CLSTAMP = "10779229";
             this.m_bOutputMuted = !this.m_bOutputMuted;
             for (let e = 0; e < this.m_rgAudioStreams.length; ++e) {
               let t = this.m_rgAudioStreams[e];
-              if (t.type == Z.k_EAudioStreamType_IncomingStream) {
+              if (t.type == q.k_EAudioStreamType_IncomingStream) {
                 t.muted =
                   this.m_bOutputMuted || this.GetPerUserMuting(t.accountid);
                 let e = t.stream.getTracks();
@@ -31751,7 +31727,7 @@ var CLSTAMP = "10779229";
             return this.m_bOutputMuted;
           }
           GetActiveOneOnOneVoiceChatAccountID() {
-            return this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_None
+            return this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_None
               ? 0
               : this.m_VoiceCallState.m_targetAccountID;
           }
@@ -31762,7 +31738,7 @@ var CLSTAMP = "10779229";
             return this.m_rgVideoStreams;
           }
           AddPlaceholderVideoStream(e) {
-            let t = new Y();
+            let t = new $();
             return (
               (t.accountid = e),
               this.m_rgVideoStreams.push(t),
@@ -31779,13 +31755,13 @@ var CLSTAMP = "10779229";
               if (
                 this.IsMicMuted() ||
                 (this.m_VoiceCallState.m_eState !=
-                  X.k_EVoiceCallState_Connected &&
+                  K.k_EVoiceCallState_Connected &&
                   this.m_VoiceCallState.m_eState !=
-                    X.k_EVoiceCallState_LocalMicOnly)
+                    K.k_EVoiceCallState_LocalMicOnly)
               )
                 return 0;
             } else if (
-              this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_Connected
+              this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_Connected
             )
               return 0;
             let t = 0;
@@ -31807,7 +31783,7 @@ var CLSTAMP = "10779229";
           }
           SetPerUserMuting(e, t) {
             let n = this.m_mapPerUserOutputGain.get(e);
-            null == n && (n = new re()),
+            null == n && (n = new ie()),
               (n.muted = t || this.m_bOutputMuted),
               this.m_mapPerUserOutputGain.set(e, n),
               this.UpdateStreamsForPerUseGainChange(e);
@@ -31815,7 +31791,7 @@ var CLSTAMP = "10779229";
           SetPerUserGainLevel(e, t) {
             let n = Math.max(0, Math.min(4, t)),
               s = this.m_mapPerUserOutputGain.get(e);
-            null == s && (s = new re()),
+            null == s && (s = new ie()),
               (s.gain = n),
               s.gain < 0.001 ? (s.muted = !0) : (s.muted = !1),
               this.m_mapPerUserOutputGain.set(e, s),
@@ -31823,7 +31799,7 @@ var CLSTAMP = "10779229";
           }
           UpdateStreamsForPerUseGainChange(e) {
             let t = this.m_mapPerUserOutputGain.get(e);
-            null == t && (t = new re());
+            null == t && (t = new ie());
             for (let n = 0; n < this.m_rgAudioStreams.length; ++n) {
               let s = this.m_rgAudioStreams[n];
               if (s.accountid == e && null != s.output_gain_node) {
@@ -31843,7 +31819,7 @@ var CLSTAMP = "10779229";
               .map((e) => (e.stream = null));
             let i = { groupID: e, chatID: t };
             this.m_VoiceCallState.m_eState >
-              X.k_EVoiceCallState_RequestedPermission &&
+              K.k_EVoiceCallState_RequestedPermission &&
               this.m_VoiceCallState.BMatchingCall(0, i) &&
               (n != this.m_CMInterface.steamid.GetAccountID() ||
                 s ||
@@ -31856,28 +31832,28 @@ var CLSTAMP = "10779229";
           }
           IsMicTestActive() {
             return (
-              this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_LocalMicOnly
+              this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_LocalMicOnly
             );
           }
           IsAnyVoiceActive() {
             return (
               !(
                 this.m_VoiceCallState.m_eState <=
-                  X.k_EVoiceCallState_LocalMicOnly &&
+                  K.k_EVoiceCallState_LocalMicOnly &&
                 0 == this.m_VoiceCallState.m_targetAccountID &&
                 null == this.m_VoiceCallState.m_chatRoom
               ) &&
-              (this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None ||
+              (this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None ||
                 0 != this.m_ScheduledInitiate)
             );
           }
           BSelfHasAcceptedOrInitiatedOneOnOneChat(e) {
             return (
-              this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None &&
+              this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None &&
               this.m_VoiceCallState.m_targetAccountID == e &&
               (!!this.m_VoiceCallState.m_bInitiatedOneOnOneCall ||
                 this.m_VoiceCallState.m_eState >=
-                  X.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession)
+                  K.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession)
             );
           }
           BSelfHadPreviouslyJoinedOneOnOneChat(e) {
@@ -31893,12 +31869,12 @@ var CLSTAMP = "10779229";
           BPartnerHasAcceptedOrInitiatedOneOnOneChat(e) {
             return (
               !(
-                this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None ||
+                this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None ||
                 this.m_VoiceCallState.m_bInitiatedOneOnOneCall ||
                 !this.BPartnerHasRequestedAndIsInOneOnOneChat(e)
               ) ||
               (this.m_VoiceCallState.m_eState >
-                X.k_EVoiceCallState_RequestedPermission &&
+                K.k_EVoiceCallState_RequestedPermission &&
                 !this.m_VoiceCallState.m_bWaitingOnOneOnOneRejoin)
             );
           }
@@ -31915,12 +31891,12 @@ var CLSTAMP = "10779229";
             return (
               (0 == this.m_VoiceCallState.m_targetAccountID ||
                 this.m_VoiceCallState.m_eState !=
-                  X.k_EVoiceCallState_RequestedPermission) &&
+                  K.k_EVoiceCallState_RequestedPermission) &&
               this.m_VoiceCallState.m_eState !=
-                X.k_EVoiceCallState_LocalMicOnly &&
+                K.k_EVoiceCallState_LocalMicOnly &&
                 this.IsAnyVoiceActive() &&
                   0 == this.m_VoiceCallState.m_nFailuresThisInitiate &&
-              this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_Connected
+              this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_Connected
             );
           }
           HasBeenAttemptingOverTwoSeconds() {
@@ -31934,7 +31910,7 @@ var CLSTAMP = "10779229";
               n = this.m_VoiceCallState.m_eState;
             return (
               !!this.m_bForceReconnectingStatus ||
-              (e && t > 0 && n != X.k_EVoiceCallState_Connected)
+              (e && t > 0 && n != K.k_EVoiceCallState_Connected)
             );
           }
           IsVoiceActiveForFriend(e) {
@@ -31946,11 +31922,11 @@ var CLSTAMP = "10779229";
           IsVoiceActiveForGroup(e) {
             return (
               !!this.m_VoiceCallState.BCallActiveForGroup(e) &&
-              this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None
+              this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None
             );
           }
           IsVoiceChatActive() {
-            return this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None;
+            return this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None;
           }
           LogMsg(e) {
             this.m_rgLogLines.push(e),
@@ -31975,11 +31951,11 @@ var CLSTAMP = "10779229";
             this.ToggleMicMuting(),
               this.GetPushToTalkOrMuteSoundsEnabled() &&
                 (this.IsMicMuted()
-                  ? A.xm.AudioPlaybackManager.PlayAudioURL(
+                  ? x.xm.AudioPlaybackManager.PlayAudioURL(
                       i.TS.COMMUNITY_CDN_URL +
                         "public/sounds/webui/steam_ui_ptt_short_02_quiet.m4a",
                     )
-                  : A.xm.AudioPlaybackManager.PlayAudioURL(
+                  : x.xm.AudioPlaybackManager.PlayAudioURL(
                       i.TS.COMMUNITY_CDN_URL +
                         "public/sounds/webui/steam_ui_ptt_short_01_quiet.m4a",
                     ));
@@ -31987,7 +31963,7 @@ var CLSTAMP = "10779229";
           OnPushToTalkStateChange(e) {
             let t = e,
               n = !1;
-            A.xm.SettingsStore.BClientHasFeatureOrOnWeb(
+            x.xm.SettingsStore.BClientHasFeatureOrOnWeb(
               "NewVoiceHotKeyState",
             ) && ((n = !0), this.m_bPushToMuteEnabled && (t = !e)),
               !n || this.m_bPushToTalkEnabled || this.m_bPushToMuteEnabled
@@ -31997,7 +31973,7 @@ var CLSTAMP = "10779229";
                     null != this.m_MicInputGainNode &&
                     (this.m_bVoicePTTStateEnabled
                       ? (this.GetPushToTalkOrMuteSoundsEnabled() &&
-                          A.xm.AudioPlaybackManager.PlayAudioURL(
+                          x.xm.AudioPlaybackManager.PlayAudioURL(
                             i.TS.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_ui_ptt_short_01_quiet.m4a",
                           ),
@@ -32016,7 +31992,7 @@ var CLSTAMP = "10779229";
                                 this.m_hPushToTalkReleaseTimeout,
                               )))
                       : (this.GetPushToTalkOrMuteSoundsEnabled() &&
-                          A.xm.AudioPlaybackManager.PlayAudioURL(
+                          x.xm.AudioPlaybackManager.PlayAudioURL(
                             i.TS.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_ui_ptt_short_02_quiet.m4a",
                           ),
@@ -32048,7 +32024,7 @@ var CLSTAMP = "10779229";
           RestartVoiceChatIfConnected() {
             if (
               this.m_VoiceCallState.m_eState >
-              X.k_EVoiceCallState_ScheduledInitiate
+              K.k_EVoiceCallState_ScheduledInitiate
             ) {
               let e = this.m_VoiceCallState.m_targetAccountID,
                 t = this.m_VoiceCallState.m_chatRoom;
@@ -32067,9 +32043,9 @@ var CLSTAMP = "10779229";
               bufferSize: 1024,
             };
             switch (this.m_Settings.m_NoiseGateLevel) {
-              case U.k_ENoiseGateLevel_Off:
+              case j.k_ENoiseGateLevel_Off:
                 break;
-              case U.k_ENoiseGateLevel_Low:
+              case j.k_ENoiseGateLevel_Low:
                 e = {
                   attack: 0.8,
                   release: 0.06,
@@ -32077,7 +32053,7 @@ var CLSTAMP = "10779229";
                   bufferSize: 1024,
                 };
                 break;
-              case U.k_ENoiseGateLevel_Medium:
+              case j.k_ENoiseGateLevel_Medium:
                 e = {
                   attack: 0.8,
                   release: 0.06,
@@ -32085,7 +32061,7 @@ var CLSTAMP = "10779229";
                   bufferSize: 1024,
                 };
                 break;
-              case U.k_ENoiseGateLevel_High:
+              case j.k_ENoiseGateLevel_High:
                 e = {
                   attack: 0.8,
                   release: 0.09,
@@ -32106,7 +32082,7 @@ var CLSTAMP = "10779229";
               let e;
               for (let t = 0; t < this.m_rgAudioStreams.length; ++t) {
                 let n = this.m_rgAudioStreams[t];
-                if (n.type == Z.k_EAudioStreamType_Microphone) {
+                if (n.type == q.k_EAudioStreamType_Microphone) {
                   e = n;
                   break;
                 }
@@ -32130,7 +32106,7 @@ var CLSTAMP = "10779229";
                   (this.m_MicVolumeMeter = void 0),
                   null != e.volume_meter &&
                     (e.volume_meter.stop(), (e.volume_meter = void 0)),
-                  this.m_Settings.m_NoiseGateLevel != U.k_ENoiseGateLevel_Off
+                  this.m_Settings.m_NoiseGateLevel != j.k_ENoiseGateLevel_Off
                     ? this.SetupNoiseGateOnMic(e.destination_node)
                     : this.m_MicInputGainNode.connect(e.destination_node);
                 let t = e.source_node;
@@ -32138,7 +32114,7 @@ var CLSTAMP = "10779229";
                   (t = this.m_MicNoiseGate.output
                     ? this.m_MicNoiseGate.output
                     : this.m_MicNoiseGate),
-                  (this.m_MicVolumeMeter = new V(t, this.m_AudioContext)),
+                  (this.m_MicVolumeMeter = new N(t, this.m_AudioContext)),
                   (e.volume_meter = this.m_MicVolumeMeter),
                   this.m_VoiceEchoLocalMic && null == this.m_MicNoiseGate
                     ? this.m_MicInputGainNode.connect(e.output_gain_node)
@@ -32180,12 +32156,12 @@ var CLSTAMP = "10779229";
             ),
               "failed" == e.iceConnectionState &&
               this.m_VoiceCallState.m_eState >
-                X.k_EVoiceCallState_CreatePeerConnection
+                K.k_EVoiceCallState_CreatePeerConnection
                 ? this.BackOffAndRetryInitiateVoiceChat()
                 : ("completed" != e.iceConnectionState &&
                     "connected" != e.iceConnectionState) ||
                   this.m_VoiceCallState.m_eState !=
-                    X.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected ||
+                    K.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected ||
                   (this.LogMsg(
                     "(VoiceChat) ICE connection state now 'completed' or 'connected', proceeding to join voice chat",
                   ),
@@ -32211,16 +32187,6 @@ var CLSTAMP = "10779229";
                   (n.elem.srcObject = void 0),
                   (n.elem.src = void 0),
                   (n.elem = void 0),
-                  i.TS.ON_FRAME &&
-                    (null != n.position_index &&
-                      (this.m_rgFreePositionIndices.push(n.position_index),
-                      (n.position_index = void 0)),
-                    null != n.spatializer_node &&
-                      (n.spatializer_node.disconnect(),
-                      (n.spatializer_node = void 0)),
-                    null != n.steamaudio_node &&
-                      (n.steamaudio_node.disconnect(),
-                      (n.steamaudio_node = void 0))),
                   null != n.volume_meter &&
                     (n.volume_meter.stop(), (n.volume_meter = void 0)),
                   null != n.output_gain_node &&
@@ -32270,8 +32236,8 @@ var CLSTAMP = "10779229";
           }
           GenerateVoicePositions() {
             const e = [];
-            for (let t = 0; t < ce.k_nMaxPositions; ++t) {
-              const n = (2 * Math.PI * t) / ce.k_nMaxPositions;
+            for (let t = 0; t < ae.k_nMaxPositions; ++t) {
+              const n = (2 * Math.PI * t) / ae.k_nMaxPositions;
               e.push({ x: Math.cos(n), y: 0, z: Math.sin(n) });
             }
             const t = [],
@@ -32283,7 +32249,7 @@ var CLSTAMP = "10779229";
                 if (n.has(o)) continue;
                 let r = 1e4;
                 for (let n = 0; n < t.length; ++n)
-                  r = Math.min(r, ce.DistanceBetween(e[t[n]], e[o]));
+                  r = Math.min(r, ae.DistanceBetween(e[t[n]], e[o]));
                 r > i && ((i = r), (s = o));
               }
               t.push(s), n.add(s);
@@ -32446,12 +32412,12 @@ var CLSTAMP = "10779229";
             let t = e.id.match(/Peer-(\d+)-(\d+)-/),
               n = t && 3 == t.length ? Number(t[2]) : 0;
             if (e.getAudioTracks().length > 0) {
-              let t = new Q();
+              let t = new X();
               if (
                 (this.SetupAudioStreamElementAndCreateSourceNode(t, e),
                 (t.unique_id = e.id),
                 (t.stream = e),
-                (t.type = Z.k_EAudioStreamType_IncomingStream),
+                (t.type = q.k_EAudioStreamType_IncomingStream),
                 (t.accountid = n),
                 this.LogMsg(
                   "(VoiceChat) AddStreamToOutput (audio) " +
@@ -32466,8 +32432,7 @@ var CLSTAMP = "10779229";
                 let e = t.stream.getTracks();
                 for (let n = 0; n < e.length; n++) e[n].enabled = !t.muted;
               }
-              if (
-                (this.m_rgAudioStreams.push(t),
+              this.m_rgAudioStreams.push(t),
                 (t.output_gain_node = this.m_AudioContext.createGain()),
                 t.output_gain_node.gain.setValueAtTime(
                   this.m_Settings.m_VoiceOutputGain *
@@ -32475,101 +32440,10 @@ var CLSTAMP = "10779229";
                   this.m_AudioContext.currentTime,
                 ),
                 t.source_node.connect(t.output_gain_node),
-                i.TS.ON_FRAME)
-              ) {
-                (t.spatializer_node = this.m_AudioContext.createPanner()),
-                  (t.spatializer_node.panningModel = "HRTF"),
-                  (t.position_index = this.GetNextVoiceChatPositionIndex());
-                const e = this.GetVoiceChatPosition(t.position_index);
-                this.m_Settings.m_bUseSteamAudioSpatialization
-                  ? ((t.steamaudio_node = new AudioWorkletNode(
-                      this.m_AudioContext,
-                      "steamaudio-binaural",
-                      { outputChannelCount: [2] },
-                    )),
-                    t.steamaudio_node.parameters
-                      .get("posX")
-                      .setValueAtTime(e.x, this.m_AudioContext.currentTime),
-                    t.steamaudio_node.parameters
-                      .get("posY")
-                      .setValueAtTime(e.y, this.m_AudioContext.currentTime),
-                    t.steamaudio_node.parameters
-                      .get("posZ")
-                      .setValueAtTime(e.z, this.m_AudioContext.currentTime),
-                    t.steamaudio_node.parameters
-                      .get("originX")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.positionX.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("originY")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.positionY.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("originZ")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.positionZ.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("aheadX")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.forwardX.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("aheadY")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.forwardY.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("aheadZ")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.forwardZ.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("upX")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.upX.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("upY")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.upY.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.steamaudio_node.parameters
-                      .get("upZ")
-                      .setValueAtTime(
-                        this.m_AudioContext.listener.upZ.value,
-                        this.m_AudioContext.currentTime,
-                      ),
-                    t.output_gain_node.connect(t.steamaudio_node),
-                    A.xm.AudioPlaybackManager.GetActiveDestination().then(
-                      (e) => {
-                        t.steamaudio_node.connect(e);
-                      },
-                    ))
-                  : ((t.spatializer_node.positionX.value = e.x),
-                    (t.spatializer_node.positionY.value = e.y),
-                    (t.spatializer_node.positionZ.value = e.z),
-                    t.output_gain_node.connect(t.spatializer_node),
-                    A.xm.AudioPlaybackManager.GetActiveDestination().then(
-                      (e) => {
-                        t.spatializer_node.connect(e);
-                      },
-                    ));
-              } else
-                A.xm.AudioPlaybackManager.GetActiveDestination().then((e) => {
+                x.xm.AudioPlaybackManager.GetActiveDestination().then((e) => {
                   t.output_gain_node.connect(e);
-                });
-              (t.volume_meter = new V(t.source_node, this.m_AudioContext)),
+                }),
+                (t.volume_meter = new N(t.source_node, this.m_AudioContext)),
                 t.volume_meter.Connect(t.source_node);
             }
             if (0 != n && e.getVideoTracks().length > 0) {
@@ -32584,7 +32458,7 @@ var CLSTAMP = "10779229";
                     " " +
                     t.unique_id,
                 ),
-                L.OnAddRemoteVideoStream(t.accountid, t.unique_id);
+                k.OnAddRemoteVideoStream(t.accountid, t.unique_id);
             }
           }
           OnAddTrack(e, t) {
@@ -32676,7 +32550,7 @@ var CLSTAMP = "10779229";
           OnCreateOfferSuccess(e, t) {
             if (
               this.m_VoiceCallState.m_eState !=
-              X.k_EVoiceCallState_CreatePeerConnection
+              K.k_EVoiceCallState_CreatePeerConnection
             )
               return void this.LogMsg(
                 "(WebRTC) Hit OnCreateOfferSuccess in wrong state " +
@@ -32688,17 +32562,17 @@ var CLSTAMP = "10779229";
               e
                 .setLocalDescription(t)
                 .then(function () {
-                  let e = o.w.Init(N.LH);
+                  let e = o.w.Init(E.LH);
                   e.Body().set_sdp(JSON.stringify(t));
-                  let s = new q.UAParser(navigator.userAgent).getResult();
+                  let s = new W.UAParser(navigator.userAgent).getResult();
                   e.Body().set_browser_name(s.browser.name),
                     e.Body().set_browser_version(s.browser.version),
                     n.LogMsg(
                       "(WebRTC) Offer (Local Description): " + e.Body().sdp(),
                     ),
                     (n.m_VoiceCallState.m_eState =
-                      X.k_EVoiceCallState_InitatedWebRTCSession),
-                    N.q3
+                      K.k_EVoiceCallState_InitatedWebRTCSession),
+                    E.q3
                       .InitiateWebRTCConnection(
                         n.m_CMInterface.GetServiceTransport(),
                         e,
@@ -32709,7 +32583,7 @@ var CLSTAMP = "10779229";
                             "(WebRTC) Got response to InitiateWebRTCConnection with no local peer connection",
                           ),
                             n.EndVoiceChatInternal(!1);
-                        else if (e.GetEResult() == H.R) {
+                        else if (e.GetEResult() == V.R) {
                           let t = JSON.parse(e.Body().remote_description());
                           n.m_PeerConnection
                             .setRemoteDescription(new RTCSessionDescription(t))
@@ -32762,7 +32636,7 @@ var CLSTAMP = "10779229";
               this.EndVoiceChatInternal(!1);
           }
           OnUpdatedCreateOfferSuccess(e, t) {
-            if (this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_Connected)
+            if (this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_Connected)
               return void this.LogMsg(
                 "(WebRTC) Hit OnUpdatedCreateOfferSuccess in wrong state " +
                   this.m_VoiceCallState.m_eState,
@@ -32773,7 +32647,7 @@ var CLSTAMP = "10779229";
               e
                 .setLocalDescription(t)
                 .then(function () {
-                  let e = o.w.Init(N.NF);
+                  let e = o.w.Init(E.NF);
                   e
                     .Body()
                     .set_ip_webrtc_server(n.m_VoiceCallState.m_webRTCServerIP),
@@ -32798,8 +32672,8 @@ var CLSTAMP = "10779229";
                         e.Body().sdp(),
                     ),
                     (n.m_VoiceCallState.m_eState =
-                      X.k_EVoiceCallState_UpdatingWebRTCSession),
-                    N.q3
+                      K.k_EVoiceCallState_UpdatingWebRTCSession),
+                    E.q3
                       .UpdateWebRTCConnection(
                         n.m_CMInterface.GetServiceTransport(),
                         e,
@@ -32810,7 +32684,7 @@ var CLSTAMP = "10779229";
                             "(WebRTC) Got response to UpdateWebRTCConnection with no local peer connection",
                           ),
                             n.EndVoiceChatInternal(!1);
-                        else if (e.GetEResult() == H.R) {
+                        else if (e.GetEResult() == V.R) {
                           let t = JSON.parse(e.Body().remote_description());
                           n.m_PeerConnection
                             .setRemoteDescription(new RTCSessionDescription(t))
@@ -32887,7 +32761,7 @@ var CLSTAMP = "10779229";
           OnMicStreamInactive(e, t) {
             this.LogMsg("(WebRTC) Mic Stream went inactive: " + t.type),
               this.m_VoiceCallState.m_eState >
-                X.k_EVoiceCallState_RequestedMicAccess &&
+                K.k_EVoiceCallState_RequestedMicAccess &&
                 (this.LogMsg(
                   "(WebRTC) Ending then auto-re-initiating voice chat without mic",
                 ),
@@ -32898,7 +32772,7 @@ var CLSTAMP = "10779229";
           }
           SetupNoiseGateOnMic(e) {
             let t = this.GetNoiseGateOptions(),
-              n = A.xm.AudioPlaybackManager.supports_audio_worklets;
+              n = x.xm.AudioPlaybackManager.supports_audio_worklets;
             if (n) {
               this.LogMsg(
                 "(VoiceChat) Audio Worklets supported - high performance mic noisegate in use!",
@@ -32943,18 +32817,18 @@ var CLSTAMP = "10779229";
               (this.LogMsg(
                 "(VoiceChat) Browser doesn't support audio worklets, mic perf will suffer and may stutter/echo during repaint/high CPU usage",
               ),
-              (this.m_MicNoiseGate = new j(this.m_AudioContext, t)),
+              (this.m_MicNoiseGate = new O(this.m_AudioContext, t)),
               this.m_MicInputGainNode.connect(this.m_MicNoiseGate.input),
               this.m_MicNoiseGate.output.connect(e));
           }
           OnGetUserMediaSuccess(e) {
             if (
               this.m_VoiceCallState.m_eState ==
-              X.k_EVoiceCallState_RequestedMicAccess
+              K.k_EVoiceCallState_RequestedMicAccess
             ) {
               if (
                 ((this.m_VoiceCallState.m_eState =
-                  X.k_EVoiceCallState_CreatePeerConnection),
+                  K.k_EVoiceCallState_CreatePeerConnection),
                 e?.getAudioTracks().length > 0)
               ) {
                 e.id;
@@ -32970,7 +32844,7 @@ var CLSTAMP = "10779229";
                   ),
                   t.connect(this.m_MicInputGainNode);
                 let s = this.m_AudioContext.createMediaStreamDestination();
-                this.m_Settings.m_NoiseGateLevel != U.k_ENoiseGateLevel_Off
+                this.m_Settings.m_NoiseGateLevel != j.k_ENoiseGateLevel_Off
                   ? this.SetupNoiseGateOnMic(s)
                   : this.m_MicInputGainNode.connect(s),
                   e.getVideoTracks().forEach((e) => {
@@ -32981,12 +32855,12 @@ var CLSTAMP = "10779229";
                       (e.enabled = this.m_bSendVideo);
                   }),
                   (e = s.stream);
-                let i = new Q();
+                let i = new X();
                 (i.unique_id = e.id),
                   (i.destination_node = s),
                   (i.stream = e),
                   (i.source_node = t),
-                  (i.type = Z.k_EAudioStreamType_Microphone),
+                  (i.type = q.k_EAudioStreamType_Microphone),
                   (i.accountid = this.m_CMInterface.steamid.GetAccountID()),
                   (i.muted = !1),
                   (i.elem = void 0),
@@ -32995,7 +32869,7 @@ var CLSTAMP = "10779229";
                     this.m_Settings.m_VoiceOutputGain,
                     this.m_AudioContext.currentTime,
                   ),
-                  A.xm.AudioPlaybackManager.GetActiveDestination().then((e) => {
+                  x.xm.AudioPlaybackManager.GetActiveDestination().then((e) => {
                     i.output_gain_node.connect(e);
                   }),
                   this.m_rgAudioStreams.push(i);
@@ -33006,7 +32880,7 @@ var CLSTAMP = "10779229";
                       ? this.m_MicNoiseGate.output
                       : this.m_MicNoiseGate),
                   (this.m_MicVolumeMeter = void 0),
-                  (this.m_MicVolumeMeter = new V(o, this.m_AudioContext)),
+                  (this.m_MicVolumeMeter = new N(o, this.m_AudioContext)),
                   (i.volume_meter = this.m_MicVolumeMeter),
                   this.m_VoiceEchoLocalMic && null == this.m_MicNoiseGate
                     ? this.m_MicInputGainNode.connect(i.output_gain_node)
@@ -33035,7 +32909,7 @@ var CLSTAMP = "10779229";
                   });
               } else
                 (this.m_VoiceCallState.m_eState =
-                  X.k_EVoiceCallState_LocalMicOnly),
+                  K.k_EVoiceCallState_LocalMicOnly),
                   (this.m_VoiceCallState.m_timeFinishedConnecting =
                     performance.now());
             } else {
@@ -33049,7 +32923,7 @@ var CLSTAMP = "10779229";
           OnGetUserMediaFailure(e) {
             if (
               this.m_VoiceCallState.m_eState <=
-              X.k_EVoiceCallState_ScheduledInitiate
+              K.k_EVoiceCallState_ScheduledInitiate
             )
               return;
             if (this.m_bSendVideo)
@@ -33061,7 +32935,7 @@ var CLSTAMP = "10779229";
                 this.LogMsg("(VoiceChat) Retrying without video"),
                 (this.m_bSendVideo = !1),
                 (this.m_VoiceCallState.m_eState =
-                  X.k_EVoiceCallState_ScheduledInitiate),
+                  K.k_EVoiceCallState_ScheduledInitiate),
                 void this.OnRequestMicrophoneAccess()
               );
             let t = this,
@@ -33081,20 +32955,20 @@ var CLSTAMP = "10779229";
           }
           InitiateChatRoomVoice() {
             this.m_VoiceCallState.m_eState >
-            X.k_EVoiceCallState_ScheduledInitiate
+            K.k_EVoiceCallState_ScheduledInitiate
               ? this.LogMsg(
                   "(VoiceChat) Hit InitiateChatRoomVoice in wrong state " +
                     this.m_VoiceCallState.m_eState,
                 )
-              : A.xm.AudioPlaybackManager.SetVoiceActive(
+              : x.xm.AudioPlaybackManager.SetVoiceActive(
                   this.OnRequestMicrophoneAccess,
                 );
           }
           JoinVoiceChatOrAskForOneOnOneChatNow() {
             if (0 == this.m_VoiceCallState.m_targetAccountID) {
               this.m_VoiceCallState.m_eState =
-                X.k_EVoiceCallState_RequestedPermission;
-              let e = o.w.Init(E.s8f);
+                K.k_EVoiceCallState_RequestedPermission;
+              let e = o.w.Init(B.s8f);
               e
                 .Body()
                 .set_chat_group_id(this.m_VoiceCallState.m_chatRoom.groupID),
@@ -33105,15 +32979,15 @@ var CLSTAMP = "10779229";
                     ", room: " +
                     this.m_VoiceCallState.m_chatRoom.chatID,
                 ),
-                E.xPp
+                B.xPp
                   .JoinVoiceChat(this.m_CMInterface.GetServiceTransport(), e)
                   .then((e) => {
-                    e.GetEResult() == H.R
+                    e.GetEResult() == V.R
                       ? ((this.m_VoiceCallState.m_voiceChatID = e
                           .Body()
                           .voice_chatid()),
                         this.OnVoiceChatAccepted(!0))
-                      : e.GetEResult() == H.zi
+                      : e.GetEResult() == V.zi
                         ? this.BackOffAndRetryInitiateVoiceChat()
                         : this.OnVoiceChatAccepted(!1);
                   })
@@ -33122,14 +32996,14 @@ var CLSTAMP = "10779229";
                   });
             } else if (
               ((this.m_VoiceCallState.m_eState =
-                X.k_EVoiceCallState_RequestedPermission),
+                K.k_EVoiceCallState_RequestedPermission),
               "" == this.m_VoiceCallState.m_voiceChatID)
             ) {
-              let e = o.w.Init(O.NT);
+              let e = o.w.Init(F.NT);
               e
                 .Body()
                 .set_steamid_partner(
-                  R.b
+                  A.b
                     .InitFromAccountID(this.m_VoiceCallState.m_targetAccountID)
                     .ConvertTo64BitString(),
                 ),
@@ -33137,13 +33011,13 @@ var CLSTAMP = "10779229";
                   "(VoiceChat) InitiateOneOnOneVoiceChat request to " +
                     this.m_VoiceCallState.m_targetAccountID,
                 ),
-                O.cc
+                F.cc
                   .RequestOneOnOneChat(
                     this.m_CMInterface.GetServiceTransport(),
                     e,
                   )
                   .then((e) => {
-                    if (e.GetEResult() == H.R) {
+                    if (e.GetEResult() == V.R) {
                       this.LogMsg(
                         "(VoiceChat) Waiting on acceptance from " +
                           this.m_VoiceCallState.m_targetAccountID,
@@ -33151,8 +33025,8 @@ var CLSTAMP = "10779229";
                         (this.m_VoiceCallState.m_voiceChatID = e
                           .Body()
                           .voice_chatid());
-                      let t = A.xm.FriendStore.self,
-                        n = A.xm.ChatStore.GetFriendChat(
+                      let t = x.xm.FriendStore.self,
+                        n = x.xm.ChatStore.GetFriendChat(
                           this.m_VoiceCallState.m_targetAccountID,
                           !1,
                         );
@@ -33160,8 +33034,8 @@ var CLSTAMP = "10779229";
                         null != n &&
                         n.AddVoiceChannelInviteMsg(
                           this.m_CMInterface.steamid.GetAccountID(),
-                          A.xm.GetServerRTime32(),
-                          (0, z.we)(
+                          x.xm.GetServerRTime32(),
+                          (0, H.we)(
                             "#FriendMsg_VoiceChannelInvite",
                             t.display_name,
                             n.chat_partner.display_name,
@@ -33179,7 +33053,7 @@ var CLSTAMP = "10779229";
           }
           OnVoiceChatAccepted(e) {
             this.m_VoiceCallState.m_eState <
-            X.k_EVoiceCallState_RequestedPermission
+            K.k_EVoiceCallState_RequestedPermission
               ? this.LogMsg(
                   "(VoiceChat) Hit OnVoiceChatAccepted in wrong state " +
                     this.m_VoiceCallState.m_eState,
@@ -33219,7 +33093,7 @@ var CLSTAMP = "10779229";
           }
           InitiateOneOnOneVoiceChat(e) {
             this.m_VoiceCallState.m_eState >
-            X.k_EVoiceCallState_ScheduledInitiate
+            K.k_EVoiceCallState_ScheduledInitiate
               ? this.LogMsg(
                   "(VoiceChat) Hit InitiateOneOnOneVoiceChat in wrong state " +
                     this.m_VoiceCallState.m_eState,
@@ -33232,7 +33106,7 @@ var CLSTAMP = "10779229";
                     this.CheckConnection,
                     2e3,
                   )),
-                A.xm.AudioPlaybackManager.SetVoiceActive(
+                x.xm.AudioPlaybackManager.SetVoiceActive(
                   this.OnRequestMicrophoneAccess,
                 ));
           }
@@ -33249,7 +33123,7 @@ var CLSTAMP = "10779229";
           }
           OnSetUpdatedLocalDescriptionSuccess() {
             this.LogMsg("(WebRTC) OnSetUpdatedLocalDescriptionSuccess");
-            let e = o.w.Init(N.W_);
+            let e = o.w.Init(E.W_);
             e
               .Body()
               .set_ip_webrtc_server(this.m_VoiceCallState.m_webRTCServerIP),
@@ -33273,7 +33147,7 @@ var CLSTAMP = "10779229";
                 .set_remote_description_version(
                   this.m_VoiceCallState.m_nMostRecentRemoteDescriptionVersion,
                 ),
-              N.q3
+              E.q3
                 .AcknowledgeUpdatedRemoteDescription(
                   this.m_CMInterface.GetServiceTransport(),
                   e,
@@ -33348,13 +33222,13 @@ var CLSTAMP = "10779229";
                     n.LogMsg("(VoiceChat) Fatal error, ending chat"),
                     n.EndVoiceChatInternal(!1);
                 }),
-              H.R
+              V.R
             );
           }
           SendVoiceStatusUpdate() {
             let e = this.IsMicMuted(),
               t = this.IsOutputMuted(),
-              n = o.w.Init(O.i7);
+              n = o.w.Init(F.i7);
             n
               .Body()
               .set_user_steamid(
@@ -33371,21 +33245,21 @@ var CLSTAMP = "10779229";
               n
                 .Body()
                 .set_user_webaudio_sample_rate(
-                  A.xm.AudioPlaybackManager.GetLastObservedSampleRate(),
+                  x.xm.AudioPlaybackManager.GetLastObservedSampleRate(),
                 ),
               n.Body().set_user_sends_video(this.m_bSendVideo),
-              O.cc.NotifyUserVoiceStatus(
+              F.cc.NotifyUserVoiceStatus(
                 this.m_CMInterface.GetServiceTransport(),
                 n,
               ),
-              (0, $.Dp)("WebChat.SetVoiceChatStatus") &&
+              (0, Z.Dp)("WebChat.SetVoiceChatStatus") &&
                 SteamClient.WebChat.SetVoiceChatStatus(e, t);
           }
           UpdateUserVoiceStatus(e) {
             if (this.m_VoiceCallState.m_voiceChatID != e.voice_chatid()) return;
-            let t = new R.b(e.user_steamid()).GetAccountID(),
+            let t = new A.b(e.user_steamid()).GetAccountID(),
               n = this.m_mapUserVoiceStatus.get(t);
-            null == n && (n = new ae()),
+            null == n && (n = new oe()),
               (n.mic_muted_locally = e.user_muted_mic_locally()),
               (n.output_muted_locally = e.user_muted_output_locally()),
               (n.has_no_mic_for_session = e.user_has_no_mic_for_session()),
@@ -33393,7 +33267,7 @@ var CLSTAMP = "10779229";
               n.sends_video &&
                 (this.m_rgVideoStreams.some((e) => e.accountid == t) ||
                   this.AddPlaceholderVideoStream(t));
-            let s = A.xm.FriendStore.GetPlayerIfCached(t),
+            let s = x.xm.FriendStore.GetPlayerIfCached(t),
               i = "[U:1:" + t + "]",
               o = "";
             null != s && (o = s.display_name + " ");
@@ -33418,7 +33292,7 @@ var CLSTAMP = "10779229";
           OnWebRTCConnectedAndVoiceChatConnected() {
             let e = this.m_VoiceCallState.m_webRTCConnectedNotification;
             (this.m_VoiceCallState.m_eState =
-              X.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession),
+              K.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession),
               this.LogMsg(
                 "(WebRTC) WebRTC session connected " +
                   this.IPIntToString(e.client_ip()) +
@@ -33434,7 +33308,7 @@ var CLSTAMP = "10779229";
                   "(VoiceChat) Reached OnWebRTCConnectedAndVoiceChatConnected without voice chat id? Failing.",
                 ),
                 this.EndVoiceChatInternal(!1));
-            let t = o.w.Init(O.v9);
+            let t = o.w.Init(F.v9);
             t.Body().set_voice_chatid(this.m_VoiceCallState.m_voiceChatID),
               t.Body().set_ssrc_my_sending_stream(e.ssrc()),
               t.Body().set_ip_webrtc_client(e.client_ip()),
@@ -33449,18 +33323,18 @@ var CLSTAMP = "10779229";
               t
                 .Body()
                 .set_has_audio_worklets_support(
-                  A.xm.AudioPlaybackManager.supports_audio_worklets,
+                  x.xm.AudioPlaybackManager.supports_audio_worklets,
                 ),
               t.Body().set_user_agent(navigator.userAgent),
-              O.cc
+              F.cc
                 .UpdateVoiceChatWebRTCData(
                   this.m_CMInterface.GetServiceTransport(),
                   t,
                 )
                 .then((e) => {
-                  e.GetEResult() == H.R
+                  e.GetEResult() == V.R
                     ? ((this.m_VoiceCallState.m_eState =
-                        X.k_EVoiceCallState_Connected),
+                        K.k_EVoiceCallState_Connected),
                       (this.m_VoiceCallState.m_timeFinishedConnecting =
                         performance.now()),
                       this.SendVoiceStatusUpdate(),
@@ -33476,7 +33350,7 @@ var CLSTAMP = "10779229";
                       e.Body().send_client_voice_logs() &&
                         this.ScheduleClientVoiceLogsUpload(2),
                       this.CheckConnection(),
-                      this.BSupportsDataChannels() != F.BHasDataChannels() &&
+                      this.BSupportsDataChannels() != G.BHasDataChannels() &&
                         this.RenegotiateSDP())
                     : (this.LogMsg(
                         "(WebRTC) Error updating voice session with WebRTC session data " +
@@ -33495,21 +33369,21 @@ var CLSTAMP = "10779229";
           OnAcceptOneOnOneVoiceChat(e, t) {
             this.m_VoiceCallState.m_targetAccountID != e.GetAccountID() &&
               this.EndVoiceChatInternal(!1),
-              (this.m_VoiceCallState.m_eState = X.k_EVoiceCallState_None),
+              (this.m_VoiceCallState.m_eState = K.k_EVoiceCallState_None),
               (this.m_VoiceCallState.m_targetAccountID = e.GetAccountID()),
               (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !1),
               (this.m_VoiceCallState.m_bWaitingOnOneOnOneRejoin = !1),
               (this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !1),
               (this.m_VoiceCallState.m_chatRoom = null),
               (this.m_VoiceCallState.m_voiceChatID = t);
-            let n = o.w.Init(O._$);
+            let n = o.w.Init(F._$);
             n.Body().set_steamid_partner(e.ConvertTo64BitString()),
               n.Body().set_accepted_request(!0),
               n.Body().set_voice_chatid(t),
-              O.cc
+              F.cc
                 .AnswerOneOnOneChat(this.m_CMInterface.GetServiceTransport(), n)
                 .then((t) => {
-                  t.GetEResult() == H.R
+                  t.GetEResult() == V.R
                     ? (e.GetAccountID() && this.DispatchSetVoiceChatActive(!0),
                       this.InitiateOneOnOneVoiceChat(e.GetAccountID()))
                     : (this.LogMsg(
@@ -33520,14 +33394,14 @@ var CLSTAMP = "10779229";
                 });
           }
           OnRejectOneOnOneVoiceChat(e, t) {
-            let n = o.w.Init(O._$);
+            let n = o.w.Init(F._$);
             n.Body().set_steamid_partner(e.ConvertTo64BitString()),
               n.Body().set_accepted_request(!1),
               n.Body().set_voice_chatid(t),
-              O.cc
+              F.cc
                 .AnswerOneOnOneChat(this.m_CMInterface.GetServiceTransport(), n)
                 .then((t) => {
-                  t.GetEResult() == H.R ||
+                  t.GetEResult() == V.R ||
                     this.LogMsg(
                       "(VoiceChat) Failed responding to voice chat from " +
                         e.GetAccountID(),
@@ -33536,7 +33410,7 @@ var CLSTAMP = "10779229";
           }
           PlayRingSound(e) {
             this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(e).audio_buffer =
-              A.xm.AudioPlaybackManager.PlayAudioURLWithRepeats(
+              x.xm.AudioPlaybackManager.PlayAudioURLWithRepeats(
                 i.TS.COMMUNITY_CDN_URL +
                   "public/sounds/webui/steam_phonecall.m4a?v=1",
                 1,
@@ -33545,20 +33419,20 @@ var CLSTAMP = "10779229";
           IsVoiceActive(e, t) {
             return (
               !!this.m_VoiceCallState.BMatchingCall(e, t) &&
-              this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None
+              this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None
             );
           }
           CheckVoiceSnoozeTimeout() {
             if (this.m_bAutoShowVideoStream) return;
-            if (A.xm.IdleTracker.GetUserIdleTime() > 3600) {
+            if (x.xm.IdleTracker.GetUserIdleTime() > 3600) {
               let e = this.m_MicVolumeMeter.GetLastTimeNonZero();
               performance.now() - e > 36e5 &&
                 (this.OnUserEndVoiceChat(),
-                A.xm
+                x.xm
                   .ShowAlert(
-                    (0, z.we)("#Voice_LeftIdleVoiceChat_Title"),
-                    (0, z.we)("#Voice_LeftIdleVoiceChat_Body"),
-                    (0, z.we)("#Voice_LeftIdleVoiceChat_OK"),
+                    (0, H.we)("#Voice_LeftIdleVoiceChat_Title"),
+                    (0, H.we)("#Voice_LeftIdleVoiceChat_Body"),
+                    (0, H.we)("#Voice_LeftIdleVoiceChat_OK"),
                   )
                   .then(() => {})
                   .catch(() => !0));
@@ -33572,7 +33446,6 @@ var CLSTAMP = "10779229";
                 this.ProcessStatsReport,
                 1e4,
               )),
-              i.TS.IN_CLIENT && r.W.BClientConnected().then(() => {}),
               -1 !=
                 this.m_PeerConnection.localDescription.sdp.indexOf(
                   "mozilla...",
@@ -33685,7 +33558,7 @@ var CLSTAMP = "10779229";
                 t.forEach(function (t) {
                   if ("inbound-rtp" == t.type)
                     if ("audio" == t.mediaType) {
-                      let n = new ne();
+                      let n = new ee();
                       (n.m_SSRC = t.ssrc),
                         (n.m_BytesReceived = t.bytesReceived),
                         (n.m_HeaderBytesReceived = t.headerBytesReceived),
@@ -33713,7 +33586,7 @@ var CLSTAMP = "10779229";
                       let s = e.m_mapSSRCToAccountID.get(n.m_SSRC);
                       null != s && e.m_mapAccountIDToAudioStats.set(s, n);
                     } else if ("video" == t.mediaType) {
-                      let n = new se();
+                      let n = new te();
                       (n.m_SSRC = t.ssrc),
                         (n.m_BytesReceived = t.bytesReceived),
                         (n.m_HeaderBytesReceived = t.headerBytesReceived),
@@ -33751,7 +33624,7 @@ var CLSTAMP = "10779229";
                     e.PadOutput("Samples Received", 20),
                 ),
                 e.m_mapAccountIDToAudioStats.forEach((t, n) => {
-                  let s = A.xm.FriendStore.GetPlayerIfCached(n),
+                  let s = x.xm.FriendStore.GetPlayerIfCached(n),
                     i = "[unknown]";
                   null != s && (i = s.display_name);
                   let o = String(t.m_SSRC);
@@ -33800,7 +33673,7 @@ var CLSTAMP = "10779229";
                       e.PadOutput("FIR/PLI/NACK Sent", 20),
                   ),
                   e.m_mapAccountIDToVideoStats.forEach((t, n) => {
-                    let s = A.xm.FriendStore.GetPlayerIfCached(n),
+                    let s = x.xm.FriendStore.GetPlayerIfCached(n),
                       i = "[unknown]";
                     null != s && (i = s.display_name);
                     let o = String(t.m_SSRC);
@@ -33848,8 +33721,8 @@ var CLSTAMP = "10779229";
           }
           CheckConnection() {
             if (
-              this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_Connected ||
-              this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_LocalMicOnly
+              this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_Connected ||
+              this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_LocalMicOnly
             )
               this.LogMsg(
                 "(VoiceChat) Succcess! Voice is fully connected took " +
@@ -33880,12 +33753,12 @@ var CLSTAMP = "10779229";
               let t = 6e4;
               0 != this.m_VoiceCallState.m_targetAccountID &&
                 this.m_VoiceCallState.m_eState ==
-                  X.k_EVoiceCallState_RequestedPermission &&
+                  K.k_EVoiceCallState_RequestedPermission &&
                 (t = 3e5),
                 e > t &&
                   (this.LogMsg(
                     "(VoiceChat) Failure! Gave up after more than one minute trying to connect, last state was " +
-                      J(this.m_VoiceCallState.m_eState) +
+                      Q(this.m_VoiceCallState.m_eState) +
                       "(" +
                       this.m_VoiceCallState.m_eState +
                       ")",
@@ -33893,7 +33766,7 @@ var CLSTAMP = "10779229";
                   this.EndVoiceChatInternal(!1)),
                 this.LogMsg(
                   "(VoiceChat) Still trying to connect to voice chat/webrtc " +
-                    J(this.m_VoiceCallState.m_eState) +
+                    Q(this.m_VoiceCallState.m_eState) +
                     "(" +
                     this.m_VoiceCallState.m_eState +
                     ") " +
@@ -33914,17 +33787,17 @@ var CLSTAMP = "10779229";
             );
           }
           RenegotiateSDP() {
-            this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_Connected &&
+            this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_Connected &&
               this.BackOffAndRetryInitiateVoiceChat();
           }
           BackOffAndRetryInitiateVoiceChat() {
-            if (this.m_VoiceCallState.m_eState != X.k_EVoiceCallState_None) {
+            if (this.m_VoiceCallState.m_eState != K.k_EVoiceCallState_None) {
               let e = this.m_VoiceCallState.m_nFailuresThisInitiate,
                 t = this.m_VoiceCallState.m_targetAccountID,
                 n = this.m_VoiceCallState.m_chatRoom;
               this.EndVoiceChatInternal(!0),
                 (this.m_VoiceCallState.m_eState =
-                  X.k_EVoiceCallState_ScheduledInitiate),
+                  K.k_EVoiceCallState_ScheduledInitiate),
                 (this.m_VoiceCallState.m_targetAccountID = t),
                 (this.m_VoiceCallState.m_chatRoom = n),
                 (this.m_VoiceCallState.m_nFailuresThisInitiate = e + 1);
@@ -33964,11 +33837,10 @@ var CLSTAMP = "10779229";
             (this.m_ScheduledInitiate = 0), this.InitiateVoiceChat(e, t);
           }
           InitiateVoiceChat(e, t) {
-            r.W.BClientConnected().then(() => {}),
-              t &&
-                ((F.ActiveDataChannelSupplier = this),
-                (L.session = { groupID: t.groupID, roomID: t.chatID }));
-            let n = new q.UAParser(navigator.userAgent).getResult(),
+            t &&
+              ((G.ActiveDataChannelSupplier = this),
+              (k.session = { groupID: t.groupID, roomID: t.chatID }));
+            let n = new W.UAParser(navigator.userAgent).getResult(),
               s = "Chrome" == n.browser.name,
               o = "Edge" == n.browser.name && "Blink" == n.engine.name;
             if (!s && !o) {
@@ -33976,22 +33848,22 @@ var CLSTAMP = "10779229";
                 "(VoiceChat) Voice chat not supported in browser: " +
                   n.browser.name,
               );
-              const e = (0, z.we)(
+              const e = (0, H.we)(
                   i.TS.IN_MOBILE
                     ? "#VoiceChat_Unavailable_NotSupported"
                     : "#Voice_VoiceUnavailableInBrowser_Title",
                 ),
                 t = i.TS.IN_MOBILE
-                  ? (0, z.we)("#VoiceChat_Unavailable_MobileChat")
-                  : (0, z.we)(
+                  ? (0, H.we)("#VoiceChat_Unavailable_MobileChat")
+                  : (0, H.we)(
                       "#Voice_VoiceUnavailableInBrowser_Body",
                       n.browser.name,
                     );
-              return void A.xm
+              return void x.xm
                 .ShowAlert(
                   e,
                   t,
-                  (0, z.we)("#Voice_VoiceUnavailableInBrowser_OK"),
+                  (0, H.we)("#Voice_VoiceUnavailableInBrowser_OK"),
                 )
                 .then(() => {})
                 .catch(() => !0);
@@ -34000,10 +33872,10 @@ var CLSTAMP = "10779229";
               return void this.LogMsg(
                 "Cant initiate voice chat for both friend & group",
               );
-            let a = this.m_VoiceCallState.BMatchingCall(e, t);
+            let r = this.m_VoiceCallState.BMatchingCall(e, t);
             !this.m_VoiceCallState.BMatchingCall(e, t) &&
               this.m_VoiceCallState.m_eState >
-                X.k_EVoiceCallState_ScheduledInitiate &&
+                K.k_EVoiceCallState_ScheduledInitiate &&
               (this.LogMsg(
                 "(VoiceChat) InitiateVoiceChat called for new target account/room while already connected, ending prior session first",
               ),
@@ -34011,19 +33883,19 @@ var CLSTAMP = "10779229";
               this.m_ScheduledInitiate &&
                 (ClearBackgroundTimeout(this.m_ScheduledInitiate),
                 (this.m_ScheduledInitiate = 0));
-            let l = performance.now();
+            let a = performance.now();
             if (
               this.m_VoiceCallState.m_eState <=
-                X.k_EVoiceCallState_ScheduledInitiate &&
+                K.k_EVoiceCallState_ScheduledInitiate &&
               0 != this.m_VoiceCallState.m_timeEndedVoiceChat &&
-              l - this.m_VoiceCallState.m_timeEndedVoiceChat < 100
+              a - this.m_VoiceCallState.m_timeEndedVoiceChat < 100
             ) {
               (this.m_VoiceCallState.m_eState =
-                X.k_EVoiceCallState_ScheduledInitiate),
+                K.k_EVoiceCallState_ScheduledInitiate),
                 (this.m_VoiceCallState.m_targetAccountID = e),
                 (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !0),
                 (this.m_VoiceCallState.m_chatRoom = t);
-              let n = 100 - (l - this.m_VoiceCallState.m_timeEndedVoiceChat);
+              let n = 100 - (a - this.m_VoiceCallState.m_timeEndedVoiceChat);
               return (
                 this.LogMsg(
                   "(VoiceChat) Delaying requested InitiateChat for " +
@@ -34035,9 +33907,9 @@ var CLSTAMP = "10779229";
                 }, n))
               );
             }
-            (!a ||
+            (!r ||
               this.m_VoiceCallState.m_eState <=
-                X.k_EVoiceCallState_ScheduledInitiate) &&
+                K.k_EVoiceCallState_ScheduledInitiate) &&
               (e
                 ? this.LogMsg(
                     "Resetting voice chat state and initiating to individual " +
@@ -34048,7 +33920,7 @@ var CLSTAMP = "10779229";
                       "Resetting voice chat state and initiating to room " +
                         t.chatID,
                     )
-                  : ((0, K.wT)(
+                  : ((0, z.wT)(
                       this.m_VoiceEchoLocalMic,
                       "Shouldn't hit local mic access only without echo local mic on",
                     ),
@@ -34056,7 +33928,7 @@ var CLSTAMP = "10779229";
                       "Resetting voice chat state and initiating local mic access only",
                     )),
               this.m_VoiceCallState.m_eState <=
-                X.k_EVoiceCallState_ScheduledInitiate &&
+                K.k_EVoiceCallState_ScheduledInitiate &&
                 ((0 == e && null == t) || this.DispatchSetVoiceChatActive(!0),
                 (this.m_VoiceCallState.m_targetAccountID = e),
                 (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !0),
@@ -34078,7 +33950,7 @@ var CLSTAMP = "10779229";
           OnRequestMicrophoneAccess() {
             if (
               this.m_VoiceCallState.m_eState >
-              X.k_EVoiceCallState_ScheduledInitiate
+              K.k_EVoiceCallState_ScheduledInitiate
             )
               return (
                 this.LogMsg(
@@ -34088,7 +33960,7 @@ var CLSTAMP = "10779229";
                 void this.EndVoiceChatInternal(!1)
               );
             null == this.m_AudioContext &&
-              (this.m_AudioContext = A.xm.AudioPlaybackManager.context);
+              (this.m_AudioContext = x.xm.AudioPlaybackManager.context);
             let e = {
               optional: [
                 {
@@ -34144,7 +34016,7 @@ var CLSTAMP = "10779229";
                       " now initating getUserMedia/WebRTC",
                   ),
               (this.m_VoiceCallState.m_eState =
-                X.k_EVoiceCallState_RequestedMicAccess);
+                K.k_EVoiceCallState_RequestedMicAccess);
             let t = navigator;
             (this.m_bUserHasDeniedMicPermissions = !1),
               (t.getUserMedia =
@@ -34175,18 +34047,18 @@ var CLSTAMP = "10779229";
             if (this.m_bClientSideLogsUploadInProgress)
               return void this.ScheduleClientVoiceLogsUpload(2);
             this.m_bClientSideLogsUploadInProgress = !0;
-            let e = o.w.Init(O.c6);
+            let e = o.w.Init(F.c6);
             e.Body().set_voice_chatid(this.m_VoiceCallState.m_voiceChatID);
             let t = this.m_rgLogLines.slice(this.m_nLastLogLineUploaded);
             e.Body().set_client_voice_logs_new_lines(t.join("\r\n"));
             let n = t.length;
-            O.cc
+            F.cc
               .UploadClientVoiceChatLogs(
                 this.m_CMInterface.GetServiceTransport(),
                 e,
               )
               .then((e) => {
-                e.GetEResult() == H.R
+                e.GetEResult() == V.R
                   ? ((this.m_nLastLogLineUploaded += n),
                     this.LogMsg(
                       "(VoiceChat) Uploaded " +
@@ -34221,7 +34093,7 @@ var CLSTAMP = "10779229";
                 (ClearBackgroundTimeout(this.m_StatsTimeout),
                 (this.m_StatsTimeout = 0)),
               this.DispatchSetVoiceChatActive(!1),
-              this.m_VoiceCallState.m_eState == X.k_EVoiceCallState_None)
+              this.m_VoiceCallState.m_eState == K.k_EVoiceCallState_None)
             )
               return;
             if (!e) {
@@ -34229,42 +34101,42 @@ var CLSTAMP = "10779229";
                 let e = this.m_VoiceCallState.m_targetAccountID;
                 this.m_VoiceCallState.m_targetAccountID = 0;
                 let t = this.m_VoiceCallState.m_voiceChatID,
-                  n = o.w.Init(O.lu);
+                  n = o.w.Init(F.lu);
                 n
                   .Body()
                   .set_steamid_partner(
-                    R.b.InitFromAccountID(e).ConvertTo64BitString(),
+                    A.b.InitFromAccountID(e).ConvertTo64BitString(),
                   ),
                   n
                     .Body()
                     .set_voice_chatid(this.m_VoiceCallState.m_voiceChatID);
                 let s = this.m_VoiceCallState.m_eState;
-                O.cc
+                F.cc
                   .LeaveOneOnOneChat(
                     this.m_CMInterface.GetServiceTransport(),
                     n,
                   )
                   .then((n) => {
-                    if (n.GetEResult() == H.R)
+                    if (n.GetEResult() == V.R)
                       if (
                         (this.LogMsg("(VoiceChat) Left voice chat with " + e),
-                        s == X.k_EVoiceCallState_Connected)
+                        s == K.k_EVoiceCallState_Connected)
                       ) {
-                        let n = new le();
+                        let n = new re();
                         (n.partner_accountid =
                           this.m_CMInterface.steamid.GetAccountID()),
                           (n.voice_chatid = t),
                           (n.previously_joined = !0),
                           this.m_mapOneOnOneCallsWaitingJoinOrAccept.set(e, n);
                       } else {
-                        let t = A.xm.FriendStore.self,
-                          n = A.xm.ChatStore.GetFriendChat(e, !1);
+                        let t = x.xm.FriendStore.self,
+                          n = x.xm.ChatStore.GetFriendChat(e, !1);
                         n &&
                           t &&
                           n.AddVoiceChannelInviteMsg(
-                            A.xm.CMInterface.steamid.GetAccountID(),
-                            A.xm.GetServerRTime32(),
-                            (0, z.we)(
+                            x.xm.CMInterface.steamid.GetAccountID(),
+                            x.xm.GetServerRTime32(),
+                            (0, H.we)(
                               "#FriendMsg_VoiceChannelEndedExplicit",
                               t.display_name,
                             ),
@@ -34276,16 +34148,16 @@ var CLSTAMP = "10779229";
                       );
                   });
               } else if (this.m_VoiceCallState.m_chatRoom) {
-                let e = o.w.Init(E.zaK);
+                let e = o.w.Init(B.zaK);
                 e
                   .Body()
                   .set_chat_group_id(this.m_VoiceCallState.m_chatRoom.groupID),
                   e.Body().set_chat_id(this.m_VoiceCallState.m_chatRoom.chatID);
                 let t = this.m_VoiceCallState.m_chatRoom.chatID;
-                E.xPp
+                B.xPp
                   .LeaveVoiceChat(this.m_CMInterface.GetServiceTransport(), e)
                   .then((e) => {
-                    e.GetEResult() == H.R
+                    e.GetEResult() == V.R
                       ? this.LogMsg(
                           "(VoiceChat) Left chat room (" + t + ") voice chat",
                         )
@@ -34296,7 +34168,7 @@ var CLSTAMP = "10779229";
                         );
                   });
               }
-              (F.ActiveDataChannelSupplier = void 0),
+              (G.ActiveDataChannelSupplier = void 0),
                 this.m_mapUserVoiceStatus.clear();
             }
             this.m_mapSSRCToAccountID.clear(),
@@ -34304,9 +34176,9 @@ var CLSTAMP = "10779229";
               this.m_mapAccountIDToVideoStats.clear();
             let t =
               this.m_VoiceCallState.m_eState >
-              X.k_EVoiceCallState_RequestedPermission;
+              K.k_EVoiceCallState_RequestedPermission;
             if (
-              ((this.m_VoiceCallState.m_eState = X.k_EVoiceCallState_None),
+              ((this.m_VoiceCallState.m_eState = K.k_EVoiceCallState_None),
               (this.m_VoiceCallState.m_targetAccountID = 0),
               (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !1),
               (this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !1),
@@ -34346,7 +34218,7 @@ var CLSTAMP = "10779229";
                 try {
                   if (
                     (n.source_node.disconnect(),
-                    n.type == Z.k_EAudioStreamType_Microphone &&
+                    n.type == q.k_EAudioStreamType_Microphone &&
                       n.source_node instanceof MediaStreamAudioSourceNode)
                   )
                     for (let e of n.source_node.mediaStream.getTracks())
@@ -34370,7 +34242,7 @@ var CLSTAMP = "10779229";
                 (this.m_MicInputGainNode.disconnect(),
                 (this.m_MicInputGainNode = void 0)),
               null != this.m_AudioContext &&
-                (A.xm.AudioPlaybackManager.SetVoiceNotActive(),
+                (x.xm.AudioPlaybackManager.SetVoiceNotActive(),
                 (this.m_AudioContext = void 0)),
               this.m_PeerConnection &&
                 ((this.m_PeerConnection.oniceconnectionstatechange = void 0),
@@ -34380,11 +34252,11 @@ var CLSTAMP = "10779229";
                 (this.m_PeerConnection = void 0));
           }
           GetPersonaState(e) {
-            const t = new R.b(e),
-              n = A.xm.FriendStore.GetPlayer(t.GetAccountID());
+            const t = new A.b(e),
+              n = x.xm.FriendStore.GetPlayer(t.GetAccountID());
             return (
               n.LoadIfNecessary(),
-              (0, D.z7)(() => n.is_ready, { timeout: 5e3 }).then(
+              (0, M.z7)(() => n.is_ready, { timeout: 5e3 }).then(
                 () => n.persona,
               )
             );
@@ -34421,201 +34293,201 @@ var CLSTAMP = "10779229";
                     e.ui_state().set_in_group_voice_chat(!0));
           }
         }
-        (0, s.Cg)([D.sH], ce.prototype, "m_VoiceCallState", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bPushToTalkEnabled", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bPushToMuteEnabled", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bVoicePTTStateEnabled", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_VKPushToTalkHotKey", void 0),
+        (0, s.Cg)([M.sH], ae.prototype, "m_VoiceCallState", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bPushToTalkEnabled", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bPushToMuteEnabled", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bVoicePTTStateEnabled", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_VKPushToTalkHotKey", void 0),
           (0, s.Cg)(
-            [D.sH],
-            ce.prototype,
+            [M.sH],
+            ae.prototype,
             "m_strPushToTalkDisplayString",
             void 0,
           ),
           (0, s.Cg)(
-            [D.sH],
-            ce.prototype,
+            [M.sH],
+            ae.prototype,
             "m_bUserHasDeniedMicPermissions",
             void 0,
           ),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bOutputMuted", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_AudioContext", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_rgAudioStreams", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_MicVolumeMeter", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_MicNoiseGate", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_MicInputGainNode", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_rgVideoStreams", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bSendVideo", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bReceiveVideo", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_PeerConnection", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_Settings", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bLocalMicTestActive", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bForceConnectingStatus", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_bForceReconnectingStatus", void 0),
-          (0, s.Cg)([D.sH], ce.prototype, "m_localPose", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bOutputMuted", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_AudioContext", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_rgAudioStreams", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_MicVolumeMeter", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_MicNoiseGate", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_MicInputGainNode", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_rgVideoStreams", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bSendVideo", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bReceiveVideo", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_PeerConnection", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_Settings", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bLocalMicTestActive", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bForceConnectingStatus", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_bForceReconnectingStatus", void 0),
+          (0, s.Cg)([M.sH], ae.prototype, "m_localPose", void 0),
           (0, s.Cg)(
-            [D.sH],
-            ce.prototype,
+            [M.sH],
+            ae.prototype,
             "m_mapRemotePoseForAccountID",
             void 0,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetSelectedMic", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetSelectedOutput", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetUseEchoCancellation", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetSelectedMic", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetSelectedOutput", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetUseEchoCancellation", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "SetUseNoiseCancellation",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetUseAutoGainControl", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetVoiceEchoLocalMic", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetUseAutoGainControl", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetVoiceEchoLocalMic", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "SetUseSteamAudioSpatialization",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetVoiceLogDetails", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "GetVoiceLogDetails", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetUseNoiseGateLevel", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetVoiceInputGain", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetVoiceOutputGain", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetVoiceLogDetails", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "GetVoiceLogDetails", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetUseNoiseGateLevel", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetVoiceInputGain", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetVoiceOutputGain", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "ForceReconnectingStatus",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "ForceConnectingStatus", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetAutoShowVideoStream", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "LogMsg", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "GetVoiceLogs", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnPushToTalkReleased", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "ForceConnectingStatus", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetAutoShowVideoStream", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "LogMsg", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "GetVoiceLogs", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnPushToTalkReleased", null),
           (0, s.Cg)(
-            [D.XI.bound, (0, W.s)(150)],
-            ce.prototype,
+            [M.XI.bound, (0, U.s)(150)],
+            ae.prototype,
             "DebouncedToggleMicMuting",
             null,
           ),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnPushToTalkStateChange",
             null,
           ),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "UpdateNoiseGateOnActiveMic",
             null,
           ),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnAudioContextStateChange",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnIceCandidate", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "AddRemoteIceCandidate", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnSignalingStateChange", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnIceCandidate", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "AddRemoteIceCandidate", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnSignalingStateChange", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnIceConnectionStateChange",
             null,
           ),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnIceGatheringStateChange",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnRemoveRemoteStream", null),
-          (0, s.Cg)([D.XI], ce.prototype, "SetLocalHMDPose", null),
-          (0, s.Cg)([D.XI], ce.prototype, "SetRemoteHMDPose", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnAddRemoteStream", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnRemoveRemoteStream", null),
+          (0, s.Cg)([M.XI], ae.prototype, "SetLocalHMDPose", null),
+          (0, s.Cg)([M.XI], ae.prototype, "SetRemoteHMDPose", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnAddRemoteStream", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "ModifyLocalSDPBeforeSetting",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnCreateOfferSuccess", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnCreateOfferError", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnCreateOfferSuccess", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnCreateOfferError", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnUpdatedCreateOfferSuccess",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnNoiseGateMessage", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "SetupNoiseGateOnMic", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnGetUserMediaSuccess", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnGetUserMediaFailure", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnNoiseGateMessage", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "SetupNoiseGateOnMic", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnGetUserMediaSuccess", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnGetUserMediaFailure", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnSetUpdatedLocalDescriptionSuccess",
             null,
           ),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnSetUpdatedLocalDescriptionFailure",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnCreateAnswerSuccess", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "OnCreateAnswerError", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnCreateAnswerSuccess", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "OnCreateAnswerError", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnAcceptOneOnOneVoiceChat",
             null,
           ),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnRejectOneOnOneVoiceChat",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "PlayRingSound", null),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "ProcessStatsReport", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "PlayRingSound", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "ProcessStatsReport", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "ProcessReceiverStatsReport",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "CheckConnection", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "CheckConnection", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "ScheduledAcceptOneOnOne",
             null,
           ),
-          (0, s.Cg)([D.XI.bound], ce.prototype, "ScheduledInitiate", null),
+          (0, s.Cg)([M.XI.bound], ae.prototype, "ScheduledInitiate", null),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "OnRequestMicrophoneAccess",
             null,
           ),
           (0, s.Cg)(
-            [D.XI.bound],
-            ce.prototype,
+            [M.XI.bound],
+            ae.prototype,
             "UploadClientSideVoiceLogs",
             null,
           );
       },
-      17969: (e, t, n) => {
+      31054: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => c, T: () => l });
         var s = n(62540),
-          i = n(26054),
+          i = n(80915),
           o = n(63696),
-          r = n(26194),
-          a = n(64382);
+          r = n(70407),
+          a = n(10093);
         const l = o.forwardRef(function (e, t) {
             const {
                 rgAcceptedTypes: n,
@@ -34754,7 +34626,7 @@ var CLSTAMP = "10779229";
           };
         }
       },
-      84162: (e, t, n) => {
+      60436: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ko: () => Re,
@@ -34770,15 +34642,15 @@ var CLSTAMP = "10779229";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(80228),
-          r = n(55450),
-          a = n(59623),
-          l = n(18367),
-          c = n(54757),
-          d = n(31038),
-          h = n(26054),
-          u = n(17969),
-          m = n(92179),
+          o = n(98825),
+          r = n(83103),
+          a = n(9382),
+          l = n(91918),
+          c = n(7628),
+          d = n(71884),
+          h = n(80915),
+          u = n(31054),
+          m = n(5436),
           p = n(30543),
           _ = n.n(p);
         const g = ({ message: e, name: t, renderImage: n, ...s }) =>
@@ -34816,41 +34688,41 @@ var CLSTAMP = "10779229";
             },
             "inviteDrop",
           );
-        var C = n(97324),
-          f = n(32962),
-          S = n(27515),
-          v = n(47778),
+        var C = n(20155),
+          f = n(92927),
+          S = n(81960),
+          v = n(78275),
           b = n(41230),
           I = n(90095),
           y = n(63696),
-          w = n(34469),
-          x = n(83300),
-          A = n(97418),
-          R = n(91042),
-          T = n(73511),
-          M = n(16208),
-          D = n(90131),
-          k = n(45510),
-          P = n(11662),
-          L = n(85427),
-          G = n(64382),
-          B = n(8978),
-          F = n(51756),
-          E = n(26194),
-          O = n(36198),
-          N = n(83647),
-          j = n(24058),
-          V = n(91644),
-          U = n(34835),
+          w = n(5966),
+          x = n(79229),
+          A = n(48102),
+          R = n(85307),
+          T = n(70425),
+          M = n(42501),
+          D = n(14792),
+          k = n(61473),
+          P = n(13791),
+          L = n(31932),
+          G = n(10093),
+          B = n(62057),
+          F = n(88071),
+          E = n(70407),
+          O = n(76578),
+          N = n(9387),
+          j = n(82966),
+          V = n(67299),
+          U = n(18834),
           H = n(23038),
-          W = n(9663),
-          z = n(24163),
-          q = n(28142),
-          K = n(41783),
-          Z = n(99436),
-          X = n(53354),
-          $ = n(87118),
-          Q = n(44907),
+          W = n(94058),
+          z = n(74874),
+          q = n(70027),
+          K = n(15834),
+          Z = n(1444),
+          X = n(73823),
+          $ = n(39831),
+          Q = n(90294),
           Y = n(4452),
           J = n.n(Y),
           ee = n(47062);
@@ -35007,15 +34879,15 @@ var CLSTAMP = "10779229";
             ],
           });
         }
-        var ie = n(77545),
-          oe = n(98124),
-          re = n(14986),
-          ae = n(42308),
-          le = n(35539),
-          ce = n(72270),
-          de = n(74547);
+        var ie = n(97492),
+          oe = n(10007),
+          re = n(40261),
+          ae = n(25699),
+          le = n(75393),
+          ce = n(57274),
+          de = n(94490);
         const he = y.lazy(() =>
-          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 43463)),
+          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 79312)),
         );
         let ue = class extends y.Component {
           static contextType = o.QO;
@@ -35757,11 +35629,11 @@ var CLSTAMP = "10779229";
         };
         (0, s.Cg)([F.oI], ge.prototype, "OnClick", null),
           (ge = (0, s.Cg)([b.PA], ge));
-        var Ce = n(75292),
-          fe = n(2108),
-          Se = n(26249);
+        var Ce = n(43668),
+          fe = n(71191),
+          Se = n(85606);
         const ve = y.lazy(() =>
-          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 90041)),
+          Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(n.bind(n, 81354)),
         );
         let be = class extends y.Component {
           m_refChatTabs;
@@ -36848,42 +36720,42 @@ var CLSTAMP = "10779229";
         }
         ke = (0, s.Cg)([b.PA], ke);
       },
-      99436: (e, t, n) => {
+      1444: (e, t, n) => {
         "use strict";
         n.d(t, { bX: () => $, kQ: () => Y, J0: () => Q });
         var s = n(62540),
-          i = n(42308),
-          o = n(55450),
-          r = n(31038),
-          a = n(9663),
+          i = n(25699),
+          o = n(83103),
+          r = n(71884),
+          a = n(94058),
           l = n(63696),
-          c = n(8978),
+          c = n(62057),
           d = n(53612),
           h = n.n(d),
-          u = n(83300),
-          m = n(73511),
-          p = n(45510),
+          u = n(79229),
+          m = n(70425),
+          p = n(61473),
           _ = n(12008),
           g = n.n(_),
-          C = n(85427),
-          f = n(73925),
-          S = n(6313),
-          v = n(87118),
-          b = (n(76589), n(22184)),
+          C = n(31932),
+          f = n(80080),
+          S = n(42190),
+          v = n(39831),
+          b = (n(61444), n(83763)),
           I = n(18397),
-          y = n(96108),
-          w = (n(17110), n(26194)),
-          x = n(21697),
-          A = n(44907),
-          R = n(44452),
-          T = n(21582),
-          M = n(11662),
-          D = n(91811),
-          k = n(43698);
+          y = n(55747),
+          w = (n(77470), n(70407)),
+          x = n(42724),
+          A = n(90294),
+          R = n(54888),
+          T = n(96641),
+          M = n(13791),
+          D = n(97734),
+          k = n(55983);
         const P = {};
         (P.arabic = () => n.e(9457).then(n.t.bind(n, 59457, 19))),
           (P.brazilian = () => n.e(8106).then(n.t.bind(n, 95725, 19))),
-          (P.bulgarian = () => n.e(4569).then(n.t.bind(n, 96950, 19))),
+          (P.bulgarian = () => n.e(6950).then(n.t.bind(n, 96950, 19))),
           (P.czech = () => n.e(7464).then(n.t.bind(n, 7464, 19))),
           (P.danish = () => n.e(7788).then(n.t.bind(n, 77788, 19))),
           (P.dutch = () => n.e(4473).then(n.t.bind(n, 4473, 19))),
@@ -36975,6 +36847,7 @@ var CLSTAMP = "10779229";
                 { value: S.WA },
                 { value: S.o8 },
                 { value: S.Nd },
+                { value: S.FJ },
                 { value: S.eH },
               ],
             },
@@ -36984,6 +36857,8 @@ var CLSTAMP = "10779229";
                 { value: S.Zl },
                 { value: S.u1 },
                 { value: S.VJ },
+                { value: S.qo },
+                { value: S.oj },
                 { value: S.Z0 },
               ],
             },
@@ -37015,6 +36890,7 @@ var CLSTAMP = "10779229";
                 { value: S.x2 },
                 { value: S.hw },
                 { value: S.FG },
+                { value: S.EF },
                 { value: S.N7 },
               ],
             },
@@ -37285,13 +37161,22 @@ var CLSTAMP = "10779229";
               return L.Localize(
                 "#ContentReportReason_NegativeEffectonDiscourseOrElections",
               );
+            case S.EF:
+              return L.Localize("#ContentReportReason_Piracy");
+            case S.FJ:
+              return L.Localize("#ContentReportReason_ToSViolation");
+            case S.oj:
+              return L.Localize("#ContentReportReason_Miscategorized");
+            case S.qo:
+              return L.Localize(
+                "#ContentReportReason_BypassingProfanityFilter",
+              );
             default:
               return "";
           }
         }
         f.lN, f.Uw, f.hP, f.z8;
-        n(8574);
-        var H = n(63518);
+        var H = n(15283);
         function W(e) {
           const {
               unAccountIDSender: t,
@@ -37704,6 +37589,7 @@ var CLSTAMP = "10779229";
                               placeholder: L.Localize(
                                 "#ReportContent_DetailsPlaceholder",
                               ),
+                              maxLength: 1024,
                             }),
                           }),
                           (0, s.jsxs)(w.Z, {
@@ -37890,28 +37776,28 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      24058: (e, t, n) => {
+      82966: (e, t, n) => {
         "use strict";
         n.d(t, { oi: () => le, xH: () => _e, w4: () => ge });
         var s = n(34629),
           i = n(62540),
           o = n(83957),
           r = n.n(o),
-          a = n(80228),
-          l = n(48757),
-          c = n(55450),
-          d = n(18367),
-          h = n(54757),
-          u = n(31038),
-          m = n(26054),
+          a = n(98825),
+          l = n(3884),
+          c = n(83103),
+          d = n(91918),
+          h = n(7628),
+          u = n(71884),
+          m = n(80915),
           p = n(63696),
-          _ = n(86447),
+          _ = n(3962),
           g = n(41230),
-          C = n(51756),
-          f = n(45510),
-          S = n(73511),
-          v = n(8978),
-          b = n(26194);
+          C = n(88071),
+          f = n(61473),
+          S = n(70425),
+          v = n(62057),
+          b = n(70407);
         let I = class extends p.Component {
           render() {
             const { fileUploadManager: e } = this.props;
@@ -38079,21 +37965,21 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([C.oI], x.prototype, "ClearErrorState", null),
           (0, s.Cg)([C.oI], x.prototype, "OnRetryClick", null),
           (x = (0, s.Cg)([g.PA], x));
-        var A = n(77545),
-          R = n(33453),
-          T = n(6474),
-          M = n(34469),
-          D = n(83300),
+        var A = n(97492),
+          R = n(83402),
+          T = n(35123),
+          M = n(5966),
+          D = n(79229),
           k = n(80611),
           P = n.n(k),
-          L = n(13177),
-          G = n(54378),
-          B = n(16192),
-          F = n(98171),
+          L = n(97640),
+          G = n(21973),
+          B = n(15891),
+          F = n(37266),
           E = n(89193),
           O = n(13991),
           N = n.n(O),
-          j = n(85427);
+          j = n(31932);
         class V extends p.Component {
           m_strLastSearch;
           m_rgCurrentMatches = [];
@@ -38360,21 +38246,21 @@ var CLSTAMP = "10779229";
             return Number.MAX_VALUE;
           }
         };
-        var K = n(64382),
-          Z = n(99497),
-          X = n(75292),
-          $ = n(74547),
-          Q = n(90131),
-          Y = n(36198),
-          J = n(21582),
-          ee = n(27953),
-          te = n(35539),
-          ne = n(32271),
-          se = n(42308),
-          ie = n(96108),
-          oe = n(40114);
+        var K = n(10093),
+          Z = n(97684),
+          X = n(43668),
+          $ = n(94490),
+          Q = n(14792),
+          Y = n(76578),
+          J = n(96641),
+          ee = n(75486),
+          te = n(75393),
+          ne = n(8512),
+          se = n(25699),
+          ie = n(55747),
+          oe = n(66681);
         const re = p.lazy(() =>
-          Promise.all([n.e(9489), n.e(6950), n.e(7462)]).then(n.bind(n, 2556)),
+          Promise.all([n.e(9489), n.e(4571), n.e(7462)]).then(n.bind(n, 79091)),
         );
         function ae(e) {
           return (0, i.jsx)(p.Suspense, {
@@ -39488,11 +39374,12 @@ var CLSTAMP = "10779229";
               },
               "https://steamloopback.host",
             ),
+            e.stopPropagation(),
             !0)
           );
         }
       },
-      97324: (e, t, n) => {
+      20155: (e, t, n) => {
         "use strict";
         n.d(t, {
           I: () => z,
@@ -39505,32 +39392,32 @@ var CLSTAMP = "10779229";
           i = n(62540),
           o = n(11057),
           r = n.n(o),
-          a = n(26054),
-          l = n(64382),
-          c = n(31038),
-          d = n(39585),
-          h = n(31722),
-          u = n(25172),
-          m = n(47778),
+          a = n(80915),
+          l = n(10093),
+          c = n(71884),
+          d = n(91490),
+          h = n(43493),
+          u = n(99107),
+          m = n(78275),
           p = n(41230),
           _ = n(63696),
-          g = n(45510),
-          C = n(8978),
-          f = n(51756),
-          S = n(99497),
-          v = n(32962),
-          b = n(28946),
-          I = n(48363),
-          y = n(85427),
-          w = n(9663),
-          x = n(13177),
-          A = n(6474),
-          R = n(26194),
-          T = n(90131),
-          M = n(36198),
-          D = n(53354),
-          k = n(48180),
-          P = n(6697);
+          g = n(61473),
+          C = n(62057),
+          f = n(88071),
+          S = n(97684),
+          v = n(92927),
+          b = n(23536),
+          I = n(49028),
+          y = n(31932),
+          w = n(94058),
+          x = n(97640),
+          A = n(35123),
+          R = n(70407),
+          T = n(14792),
+          M = n(76578),
+          D = n(73823),
+          k = n(77081),
+          P = n(71594);
         const L = ["148618792083695825", "76561197960266962"];
         let G = class extends _.Component {
           InviteFriend(e) {
@@ -40051,31 +39938,31 @@ var CLSTAMP = "10779229";
         }
         z = (0, s.Cg)([p.PA], z);
       },
-      36198: (e, t, n) => {
+      76578: (e, t, n) => {
         "use strict";
-        n.d(t, { vY: () => Ie, LC: () => we, _1: () => xe });
+        n.d(t, { vY: () => ye, LC: () => xe, _1: () => Ae });
         var s = n(34629),
           i = n(62540),
-          o = n(73511),
-          r = n(90131),
-          a = n(21697),
-          l = n(58322),
-          c = n(80228),
-          d = n(55450),
-          h = n(31038),
-          u = n(26054),
-          m = n(17969),
+          o = n(70425),
+          r = n(14792),
+          a = n(42724),
+          l = n(64314),
+          c = n(98825),
+          d = n(83103),
+          h = n(71884),
+          u = n(80915),
+          m = n(31054),
           p = n(63696),
-          _ = n(45510),
+          _ = n(61473),
           g = n(41230),
-          C = n(18367),
-          f = n(51756),
-          S = n(44452),
-          v = n(42308),
-          b = n(74547),
+          C = n(91918),
+          f = n(88071),
+          S = n(54888),
+          v = n(25699),
+          b = n(94490),
           I = n(52445),
           y = n(55700),
-          w = n(24073);
+          w = n(98064);
         class x extends p.Component {
           m_elContainer = null;
           m_resizeObserver = null;
@@ -40143,13 +40030,13 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([f.oI], x.prototype, "BindContainerRef", null),
           (0, s.Cg)([f.oI], x.prototype, "OnResize", null);
-        var A = n(8978),
-          R = n(34469),
-          T = n(85427),
-          M = n(26194),
-          D = n(83300),
-          k = n(49890),
-          P = n(33101);
+        var A = n(62057),
+          R = n(5966),
+          T = n(31932),
+          M = n(70407),
+          D = n(79229),
+          k = n(11931),
+          P = n(55492);
         const L = (e) =>
           c.TS.IN_CLIENT ? (0, i.jsx)(x, { ...e }) : (0, i.jsx)(I.Ay, { ...e });
         let G = class extends p.Component {
@@ -41010,39 +40897,40 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([f.oI], K.prototype, "ItemKey", null),
           (0, s.Cg)([f.oI], K.prototype, "CalculateItemHeight", null);
-        var Z = n(24058),
-          X = n(34835),
-          $ = n(97324),
-          Q = n(99936),
+        var Z = n(82966),
+          X = n(18834),
+          $ = n(20155),
+          Q = n(54803),
           Y = n(90095),
           J = n(23038),
-          ee = n(70971),
-          te = n(64382),
-          ne = n(24163),
-          se = n(11662),
-          ie = n(28142),
-          oe = n(98124),
-          re = n(84162),
-          ae = n(41432),
-          le = n(41783),
-          ce = n(32962),
-          de = n(31722),
-          he = n(25172),
-          ue = n(60735),
+          ee = n(7375),
+          te = n(10093),
+          ne = n(74874),
+          se = n(13791),
+          ie = n(70027),
+          oe = n(10007),
+          re = n(60436),
+          ae = n(54303),
+          le = n(15834),
+          ce = n(92927),
+          de = n(43493),
+          he = n(99107),
+          ue = n(72576),
           me = n(11057),
           pe = n.n(me),
-          _e = n(38565),
-          ge = n(35539),
-          Ce = n(21582),
-          fe = n(72270);
-        const Se = p.lazy(() =>
+          _e = n(7512),
+          ge = n(75393),
+          Ce = n(96641),
+          fe = n(57274),
+          Se = n(29458);
+        const ve = p.lazy(() =>
             Promise.all([n.e(9489), n.e(1068), n.e(7653)]).then(
-              n.bind(n, 91988),
+              n.bind(n, 89445),
             ),
           ),
-          ve = 1e4,
-          be = 6e4;
-        let Ie = class extends p.Component {
+          be = 1e4,
+          Ie = 6e4;
+        let ye = class extends p.Component {
           static contextType = Ce.QO;
           m_msWentInactive = 0;
           m_bShownTabIsGroupChat = !0;
@@ -41277,7 +41165,7 @@ var CLSTAMP = "10779229";
             h.xm.VoiceStore.IsVoiceActiveForGroup(t.GetGroupID())
               ? h.xm.VoiceStore.OnUserEndVoiceChat()
               : n.BIsVoiceAllowed() &&
-                (0, r.pg)((0, i.jsx)(xe, { groupView: e }), this.props.popup);
+                (0, r.pg)((0, i.jsx)(Ae, { groupView: e }), this.props.popup);
           }
           RenderInnerChatTabs() {
             const e = this.props.groupView,
@@ -41358,28 +41246,28 @@ var CLSTAMP = "10779229";
               r = this.state.bShowBothChats && t.isBroadcastShown,
               a = t.m_bShowGlobalChat,
               l = (a && r) || (!a && !r),
-              d = (r && t.isBroadcastShown) || (!r && a),
-              u = this.state.dropToInviteFriend
+              c = (r && t.isBroadcastShown) || (!r && a),
+              d = this.state.dropToInviteFriend
                 ? (0, i.jsx)(re.J3, {
                     chatView: n,
                     friend: this.state.dropToInviteFriend,
                   })
                 : null,
-              g = !1,
-              C = null,
-              f = this.ShouldShowVerticalBroadcastChat(),
-              S = t.m_bChatHidden,
-              v = ne.nn.AI;
+              u = !1,
+              g = null,
+              C = this.ShouldShowVerticalBroadcastChat(),
+              f = t.m_bChatHidden,
+              S = ne.nn.AI;
             if (
-              (c.TS.STEAM_TV && (v = ne.nn._3),
+              (Se.K.STEAM_TV && (S = ne.nn._3),
               e.watching_broadcast_steamid && t.isBroadcastShown)
             ) {
-              const n = this.CalculateBroadcastSectionStyles(f),
-                s = (0, i.jsx)(Se, {
+              const n = this.CalculateBroadcastSectionStyles(C),
+                s = (0, i.jsx)(ve, {
                   ref: this.m_refBroadcastContainer,
                   steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                   localSteamID: t.m_strLocalBroadcastId,
-                  watchLocation: v,
+                  watchLocation: S,
                   bWebRTC: !1,
                   onRequestClose: t.HideBroadcast,
                   onLocalStreamChange: this.OnLocalStreamChange,
@@ -41388,67 +41276,67 @@ var CLSTAMP = "10779229";
                       "div",
                       {
                         onClick: this.ToggleVerticalBroadcastChat,
-                        title: `${f ? ((0, A.we))("#Broadcast_View_Stack_H") : ((0, A.we))("#Broadcast_View_Stack_V")}`,
+                        title: `${C ? ((0, A.we))("#Broadcast_View_Stack_H") : ((0, A.we))("#Broadcast_View_Stack_V")}`,
                         className:
                           "BroadcastChatPositionToggle " +
-                          (f ? "right" : "bottom"),
+                          (C ? "right" : "bottom"),
                       },
                       "ChatPosToggle",
                     ),
                   ],
                   style: n,
                   onTheaterMode: t.ToggleTheaterModeBroadcastChat,
-                  bVerticalBroadcastChat: !f,
+                  bVerticalBroadcastChat: !C,
                 });
-              (C = (0, i.jsxs)(p.Fragment, {
+              (g = (0, i.jsxs)(p.Fragment, {
                 children: [
                   s,
-                  !S &&
+                  !f &&
                     (0, i.jsx)("div", {
                       className:
                         "BroadcastChatDivider " +
-                        (f ? "vertical" : "horizontal"),
+                        (C ? "vertical" : "horizontal"),
                       onMouseDown: this.OnGrabberMouseDown,
                     }),
-                  S &&
+                  f &&
                     (0, i.jsx)(re.Ko, {
                       onClick: this.ShowChat,
-                      edge: f ? "bottom" : "right",
+                      edge: C ? "bottom" : "right",
                     }),
                 ],
               })),
-                (g = !0);
-            } else g = !1;
-            let I = !1,
-              y = !1,
-              w = {};
+                (u = !0);
+            } else u = !1;
+            let v = !1,
+              I = !1,
+              y = {};
             if (!this.props.isActive) {
-              w.display = "none";
+              y.display = "none";
               let e = this.m_msWentInactive
                 ? performance.now() - this.m_msWentInactive
-                : be;
-              e >= ve && (I = !0), e >= be && !C && (y = !0);
+                : Ie;
+              e >= be && (v = !0), e >= Ie && !g && (I = !0);
             }
-            let x = "chatWindow MultiUserChat",
-              R = "ChatRoomGroupDialog_contents";
-            s && (R += " InsetWindowOpen"),
-              r && (R += " BothChatsDisplayed"),
-              e.IsNamedGroupChat() && (x += " namedGroup");
-            let T = "chatBody";
+            let w = "chatWindow MultiUserChat",
+              x = "ChatRoomGroupDialog_contents";
+            s && (x += " InsetWindowOpen"),
+              r && (x += " BothChatsDisplayed"),
+              e.IsNamedGroupChat() && (w += " namedGroup");
+            let R = "chatBody";
             this.state.dropToInviteFriend &&
-              (T = "chatBody chatRoomActiveDrop"),
+              (R = "chatBody chatRoomActiveDrop"),
               h.xm.SettingsStore.FriendsSettings.bCompactFriendsList &&
-                (x += " compactView"),
-              g && (x += " broadcastVisible");
-            let D = null;
+                (w += " compactView"),
+              u && (w += " broadcastVisible");
+            let T = null;
             this.props.bHideMemberList ||
-              (D = (0, i.jsx)(G, {
+              (T = (0, i.jsx)(G, {
                 groupView: this.props.groupView,
-                inactive: I,
+                inactive: v,
               }));
-            const k =
+            const D =
               this.props.bHideMessageInput ||
-              (t.isBroadcastShown && ((!r && t.m_bShowGlobalChat) || S))
+              (t.isBroadcastShown && ((!r && t.m_bShowGlobalChat) || f))
                 ? null
                 : (0, i.jsx)(fe.gs.Consumer, {
                     children: (e) =>
@@ -41469,15 +41357,15 @@ var CLSTAMP = "10779229";
                         }),
                       }),
                   });
-            let P,
-              L = (0, i.jsxs)(m.D, {
+            let k,
+              P = (0, i.jsxs)(m.D, {
                 "flow-children": "column",
-                style: w,
+                style: y,
                 className: "chatHistoryAndMembers",
                 ...this.GetChatBodyDragDropProps(),
                 navEntryPreferPosition: ge.iU.PREFERRED_CHILD,
                 children: [
-                  (0, i.jsx)(J.A, { children: u }),
+                  (0, i.jsx)(J.A, { children: d }),
                   (0, i.jsxs)(Z.xH, {
                     className: "displayColumn fullWidth",
                     children: [
@@ -41504,10 +41392,10 @@ var CLSTAMP = "10779229";
                             ],
                           }),
                           (0, i.jsx)("div", { className: "dropTargetBox" }),
-                          D,
+                          T,
                         ],
                       }),
-                      k,
+                      D,
                     ],
                   }),
                 ],
@@ -41517,27 +41405,27 @@ var CLSTAMP = "10779229";
                 emoticonStore: h.xm.ChatStore.EmoticonStore,
                 steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                 broadcastID: "0",
-                watchLocation: v,
+                watchLocation: S,
                 hidden: !t.m_bShowGlobalChat,
                 className: this.state.bDraggingChatGrabber
                   ? "avoidEvents"
                   : void 0,
               });
-              P = (0, i.jsx)(p.Fragment, { children: n });
+              k = (0, i.jsx)(p.Fragment, { children: n });
             }
-            let B = "chatStack " + (f ? "displayRow" : "displayColumn");
+            let L = "chatStack " + (C ? "displayRow" : "displayColumn");
             return (
-              d && (B += " GlobalChatVisible"),
-              l && (B += " GroupChatVisible"),
+              c && (L += " GlobalChatVisible"),
+              l && (L += " GroupChatVisible"),
               (0, i.jsxs)(m.D, {
                 fnCanTakeFocus: () => this.props.isActive,
                 "flow-children": "column",
                 "data-activechat": this.props.isActive,
-                style: w,
-                className: x,
+                style: y,
+                className: w,
                 ...this.GetTitleBarDragDropProps(),
                 children: [
-                  !y &&
+                  !I &&
                     !this.props.bHideHeader &&
                     !this.context?.IN_GAMEPADUI &&
                     (0, i.jsxs)("div", {
@@ -41548,12 +41436,12 @@ var CLSTAMP = "10779229";
                         (0, i.jsx)("div", { className: "disconnectBlocker" }),
                       ],
                     }),
-                  !y &&
-                    (0, i.jsxs)(Re, {
-                      className: R,
+                  !I &&
+                    (0, i.jsxs)(Te, {
+                      className: x,
                       readyToRender: e.readyToRender,
                       children: [
-                        (0, i.jsx)(ae.aq, { groupView: t, inactive: I }),
+                        (0, i.jsx)(ae.aq, { groupView: t, inactive: v }),
                         (0, i.jsx)("div", {
                           className:
                             "ChatRoomGroup_MainAndChatEntry displayColumn",
@@ -41562,285 +41450,13 @@ var CLSTAMP = "10779229";
                             className:
                               "ChatRoomGroup_Main_ContentAndMembers displayRow",
                             children: (0, i.jsxs)("div", {
-                              className: `ChatRoomGroup_Main_Content ${f ? "Vertical" : "Horizontal"} ${S ? "chatHidden" : ""}`,
+                              className: `ChatRoomGroup_Main_Content ${C ? "Vertical" : "Horizontal"} ${f ? "chatHidden" : ""}`,
                               children: [
-                                C,
+                                g,
                                 (!t.m_bChatHidden || !t.isBroadcastShown) &&
                                   (0, i.jsxs)("div", {
-                                    className: T,
+                                    className: R,
                                     children: [
-                                      t.isBroadcastShown &&
-                                        this.RenderInnerChatTabs(),
-                                      (0, i.jsxs)("div", {
-                                        className: B,
-                                        children: [
-                                          L,
-                                          r &&
-                                            (0, i.jsx)("div", {
-                                              className: "BothChatsSeperator",
-                                            }),
-                                          r &&
-                                            !this.ShouldShowVerticalBroadcastChat() &&
-                                            (0, i.jsxs)("div", {
-                                              className: "InnerChatTab",
-                                              onClick: () =>
-                                                t.SetGlobalBroadcastChatShown(
-                                                  !0,
-                                                ),
-                                              children: [
-                                                (0, i.jsx)(_.qzq, {}),
-                                                (0, i.jsx)("span", {
-                                                  className:
-                                                    "InnerChatTabLabel",
-                                                  children: (0, A.we)(
-                                                    "#Broadcast_Chat_PublicChatTab",
-                                                  ),
-                                                }),
-                                              ],
-                                            }),
-                                          P,
-                                        ],
-                                      }),
-                                      !l && t.isBroadcastShown && k,
-                                    ],
-                                  }),
-                              ],
-                            }),
-                          }),
-                        }),
-                      ],
-                    }),
-                ],
-              })
-            );
-          }
-          renderSteamDeck() {
-            if (!this.props.groupView || !this.props.groupView.GetChatView())
-              return null;
-            let e = this.props.groupView.GetGroup(),
-              t = this.props.groupView,
-              n = t.GetSelectedChatView(),
-              s = t.GetPopoverChatView(),
-              o = n.chat,
-              r = this.state.bShowBothChats && t.isBroadcastShown,
-              a = t.m_bShowGlobalChat,
-              l = (a && r) || (!a && !r),
-              d = (r && t.isBroadcastShown) || (!r && a),
-              u = this.state.dropToInviteFriend
-                ? (0, i.jsx)(re.J3, {
-                    chatView: n,
-                    friend: this.state.dropToInviteFriend,
-                  })
-                : null,
-              g = !1,
-              C = null,
-              f = this.ShouldShowVerticalBroadcastChat(),
-              S = t.m_bChatHidden,
-              v = ne.nn.AI;
-            if (
-              (c.TS.STEAM_TV && (v = ne.nn._3),
-              e.watching_broadcast_steamid && t.isBroadcastShown)
-            ) {
-              const n = this.CalculateBroadcastSectionStyles(f),
-                s = (0, i.jsx)(Se, {
-                  ref: this.m_refBroadcastContainer,
-                  steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
-                  localSteamID: t.m_strLocalBroadcastId,
-                  watchLocation: v,
-                  bWebRTC: !1,
-                  onRequestClose: t.HideBroadcast,
-                  onLocalStreamChange: this.OnLocalStreamChange,
-                  actions: [
-                    (0, i.jsx)(
-                      "div",
-                      {
-                        onClick: this.ToggleVerticalBroadcastChat,
-                        title: `${f ? ((0, A.we))("#Broadcast_View_Stack_H") : ((0, A.we))("#Broadcast_View_Stack_V")}`,
-                        className:
-                          "BroadcastChatPositionToggle " +
-                          (f ? "right" : "bottom"),
-                      },
-                      "ChatPosToggle",
-                    ),
-                  ],
-                  style: n,
-                  onTheaterMode: t.ToggleTheaterModeBroadcastChat,
-                  bVerticalBroadcastChat: !f,
-                });
-              (C = (0, i.jsxs)(p.Fragment, {
-                children: [
-                  s,
-                  !S &&
-                    (0, i.jsx)("div", {
-                      className:
-                        "BroadcastChatDivider " +
-                        (f ? "vertical" : "horizontal"),
-                      onMouseDown: this.OnGrabberMouseDown,
-                    }),
-                  S &&
-                    (0, i.jsx)(re.Ko, {
-                      onClick: this.ShowChat,
-                      edge: f ? "bottom" : "right",
-                    }),
-                ],
-              })),
-                (g = !0);
-            } else g = !1;
-            let I = !1,
-              y = !1,
-              w = {};
-            if (!this.props.isActive) {
-              w.display = "none";
-              let e = this.m_msWentInactive
-                ? performance.now() - this.m_msWentInactive
-                : be;
-              e >= ve && (I = !0), e >= be && !C && (y = !0);
-            }
-            let x = "chatWindow MultiUserChat";
-            n.IsFriendChat() || (x += " GroupChat");
-            let R = "ChatRoomGroupDialog_contents";
-            s && (R += " InsetWindowOpen"),
-              r && (R += " BothChatsDisplayed"),
-              e.IsNamedGroupChat() && (x += " namedGroup");
-            let T = "chatBody";
-            this.state.dropToInviteFriend &&
-              (T = "chatBody chatRoomActiveDrop"),
-              h.xm.SettingsStore.FriendsSettings.bCompactFriendsList &&
-                (x += " compactView"),
-              g && (x += " broadcastVisible");
-            const D =
-              this.props.bHideMessageInput ||
-              (t.isBroadcastShown && ((!r && t.m_bShowGlobalChat) || S))
-                ? null
-                : (0, i.jsx)(fe.gs.Consumer, {
-                    children: (e) =>
-                      (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(b.t8.Consumer, {
-                          children: (n) =>
-                            (0, i.jsx)(
-                              Z.oi,
-                              {
-                                chatView: t.GetActiveChatView(),
-                                isActive: this.props.isActive,
-                                disabled: !1,
-                                ownerWindow: e.ownerWindow,
-                                qam: n.bInQam,
-                              },
-                              o.unique_id,
-                            ),
-                        }),
-                      }),
-                  });
-            let k,
-              P = (0, i.jsxs)(M.Z, {
-                "flow-children": "column",
-                style: w,
-                className: "chatHistoryAndMembers",
-                navEntryPreferPosition: ge.iU.PREFERRED_CHILD,
-                children: [
-                  (0, i.jsx)(J.A, { children: u }),
-                  (0, i.jsxs)(Z.xH, {
-                    className: "displayColumn fullWidth",
-                    children: [
-                      (0, i.jsxs)(M.Z, {
-                        "flow-children": "row",
-                        className: "displayRow minHeightZero",
-                        navEntryPreferPosition: ge.iU.PREFERRED_CHILD,
-                        children: [
-                          (0, i.jsxs)("div", {
-                            className:
-                              "ChatRoomGroupDialog_history " +
-                              (o.GetVoiceAllowed() ? "voiceRoom" : ""),
-                            children: [
-                              !h.xm.SettingsStore.FriendsSettings
-                                .bDisableRoomEffects &&
-                                (0, i.jsx)(oe.Y, {
-                                  effectManager: o.RoomEffectManager(),
-                                }),
-                              (0, i.jsx)(le.D, {
-                                chatView: n,
-                                isActive: this.props.isActive,
-                              }),
-                              (0, i.jsx)(J.A, {
-                                children: (0, i.jsx)(re.n$, { groupView: t }),
-                              }),
-                            ],
-                          }),
-                          (0, i.jsx)(Ae, { groupView: t }),
-                        ],
-                      }),
-                      (0, i.jsx)(M.Z, { preferredFocus: !0, children: D }),
-                    ],
-                  }),
-                ],
-              });
-            if (e.watching_broadcast_steamid && t.isBroadcastShown) {
-              const n = (0, i.jsx)(ee.I, {
-                emoticonStore: h.xm.ChatStore.EmoticonStore,
-                steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
-                broadcastID: "0",
-                watchLocation: v,
-                hidden: !t.m_bShowGlobalChat,
-                className: this.state.bDraggingChatGrabber
-                  ? "avoidEvents"
-                  : void 0,
-              });
-              k = (0, i.jsx)(p.Fragment, { children: n });
-            }
-            let L = "chatStack " + (f ? "displayRow" : "displayColumn");
-            d && (L += " GlobalChatVisible"), l && (L += " GroupChatVisible");
-            let G = {};
-            h.xm.VoiceStore.IsVoiceActiveForGroup(e.GetGroupID()) &&
-              ((G.onSecondaryButton = () => this.ToggleVoiceChat()),
-              (G.onSecondaryActionDescription = (0, A.we)(
-                "#Chat_ChatRoomGroup_EndVoiceChat",
-              )));
-            return (0, i.jsx)(m.D, {
-              fnCanTakeFocus: () => this.props.isActive,
-              "flow-children": "row",
-              "data-activechat": this.props.isActive,
-              style: w,
-              className: x,
-              ...this.GetTitleBarDragDropProps(),
-              ...G,
-              children: (0, i.jsxs)(M.Z, {
-                "flow-children": "column",
-                className: "ChatRoomGroup_WindowContent",
-                navEntryPreferPosition: ge.iU.PREFERRED_CHILD,
-                children: [
-                  !y &&
-                    (0, i.jsxs)("div", {
-                      className: "chatHeader titleBarContainer",
-                      children: [
-                        (0, i.jsx)("div", { className: "chatHeaderGradient" }),
-                        (0, i.jsx)($.wu, { groupView: t }),
-                        (0, i.jsx)("div", { className: "disconnectBlocker" }),
-                      ],
-                    }),
-                  !y &&
-                    (0, i.jsxs)(Re, {
-                      className: R,
-                      readyToRender: e.readyToRender,
-                      children: [
-                        !1,
-                        (0, i.jsx)("div", {
-                          className:
-                            "ChatRoomGroup_MainAndChatEntry displayColumn",
-                          ref: this.SetMainContentRef,
-                          children: (0, i.jsx)("div", {
-                            className:
-                              "ChatRoomGroup_Main_ContentAndMembers displayRow",
-                            children: (0, i.jsxs)(M.Z, {
-                              className: `ChatRoomGroup_Main_Content ${f ? "Vertical" : "Horizontal"} ${S ? "chatHidden" : ""}`,
-                              "flow-children": "row",
-                              children: [
-                                C,
-                                (!t.m_bChatHidden || !t.isBroadcastShown) &&
-                                  (0, i.jsxs)("div", {
-                                    className: T,
-                                    children: [
-                                      this.context?.IN_GAMEPADUI &&
-                                        (0, i.jsx)(X.H, {}),
                                       t.isBroadcastShown &&
                                         this.RenderInnerChatTabs(),
                                       (0, i.jsxs)("div", {
@@ -41883,34 +41499,306 @@ var CLSTAMP = "10779229";
                       ],
                     }),
                 ],
+              })
+            );
+          }
+          renderSteamDeck() {
+            if (!this.props.groupView || !this.props.groupView.GetChatView())
+              return null;
+            let e = this.props.groupView.GetGroup(),
+              t = this.props.groupView,
+              n = t.GetSelectedChatView(),
+              s = t.GetPopoverChatView(),
+              o = n.chat,
+              r = this.state.bShowBothChats && t.isBroadcastShown,
+              a = t.m_bShowGlobalChat,
+              l = (a && r) || (!a && !r),
+              c = (r && t.isBroadcastShown) || (!r && a),
+              d = this.state.dropToInviteFriend
+                ? (0, i.jsx)(re.J3, {
+                    chatView: n,
+                    friend: this.state.dropToInviteFriend,
+                  })
+                : null,
+              u = !1,
+              g = null,
+              C = this.ShouldShowVerticalBroadcastChat(),
+              f = t.m_bChatHidden,
+              S = ne.nn.AI;
+            if (
+              (Se.K.STEAM_TV && (S = ne.nn._3),
+              e.watching_broadcast_steamid && t.isBroadcastShown)
+            ) {
+              const n = this.CalculateBroadcastSectionStyles(C),
+                s = (0, i.jsx)(ve, {
+                  ref: this.m_refBroadcastContainer,
+                  steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
+                  localSteamID: t.m_strLocalBroadcastId,
+                  watchLocation: S,
+                  bWebRTC: !1,
+                  onRequestClose: t.HideBroadcast,
+                  onLocalStreamChange: this.OnLocalStreamChange,
+                  actions: [
+                    (0, i.jsx)(
+                      "div",
+                      {
+                        onClick: this.ToggleVerticalBroadcastChat,
+                        title: `${C ? ((0, A.we))("#Broadcast_View_Stack_H") : ((0, A.we))("#Broadcast_View_Stack_V")}`,
+                        className:
+                          "BroadcastChatPositionToggle " +
+                          (C ? "right" : "bottom"),
+                      },
+                      "ChatPosToggle",
+                    ),
+                  ],
+                  style: n,
+                  onTheaterMode: t.ToggleTheaterModeBroadcastChat,
+                  bVerticalBroadcastChat: !C,
+                });
+              (g = (0, i.jsxs)(p.Fragment, {
+                children: [
+                  s,
+                  !f &&
+                    (0, i.jsx)("div", {
+                      className:
+                        "BroadcastChatDivider " +
+                        (C ? "vertical" : "horizontal"),
+                      onMouseDown: this.OnGrabberMouseDown,
+                    }),
+                  f &&
+                    (0, i.jsx)(re.Ko, {
+                      onClick: this.ShowChat,
+                      edge: C ? "bottom" : "right",
+                    }),
+                ],
+              })),
+                (u = !0);
+            } else u = !1;
+            let v = !1,
+              I = !1,
+              y = {};
+            if (!this.props.isActive) {
+              y.display = "none";
+              let e = this.m_msWentInactive
+                ? performance.now() - this.m_msWentInactive
+                : Ie;
+              e >= be && (v = !0), e >= Ie && !g && (I = !0);
+            }
+            let w = "chatWindow MultiUserChat";
+            n.IsFriendChat() || (w += " GroupChat");
+            let x = "ChatRoomGroupDialog_contents";
+            s && (x += " InsetWindowOpen"),
+              r && (x += " BothChatsDisplayed"),
+              e.IsNamedGroupChat() && (w += " namedGroup");
+            let R = "chatBody";
+            this.state.dropToInviteFriend &&
+              (R = "chatBody chatRoomActiveDrop"),
+              h.xm.SettingsStore.FriendsSettings.bCompactFriendsList &&
+                (w += " compactView"),
+              u && (w += " broadcastVisible");
+            const T =
+              this.props.bHideMessageInput ||
+              (t.isBroadcastShown && ((!r && t.m_bShowGlobalChat) || f))
+                ? null
+                : (0, i.jsx)(fe.gs.Consumer, {
+                    children: (e) =>
+                      (0, i.jsx)(i.Fragment, {
+                        children: (0, i.jsx)(b.t8.Consumer, {
+                          children: (n) =>
+                            (0, i.jsx)(
+                              Z.oi,
+                              {
+                                chatView: t.GetActiveChatView(),
+                                isActive: this.props.isActive,
+                                disabled: !1,
+                                ownerWindow: e.ownerWindow,
+                                qam: n.bInQam,
+                              },
+                              o.unique_id,
+                            ),
+                        }),
+                      }),
+                  });
+            let D,
+              k = (0, i.jsxs)(M.Z, {
+                "flow-children": "column",
+                style: y,
+                className: "chatHistoryAndMembers",
+                navEntryPreferPosition: ge.iU.PREFERRED_CHILD,
+                children: [
+                  (0, i.jsx)(J.A, { children: d }),
+                  (0, i.jsxs)(Z.xH, {
+                    className: "displayColumn fullWidth",
+                    children: [
+                      (0, i.jsxs)(M.Z, {
+                        "flow-children": "row",
+                        className: "displayRow minHeightZero",
+                        navEntryPreferPosition: ge.iU.PREFERRED_CHILD,
+                        children: [
+                          (0, i.jsxs)("div", {
+                            className:
+                              "ChatRoomGroupDialog_history " +
+                              (o.GetVoiceAllowed() ? "voiceRoom" : ""),
+                            children: [
+                              !h.xm.SettingsStore.FriendsSettings
+                                .bDisableRoomEffects &&
+                                (0, i.jsx)(oe.Y, {
+                                  effectManager: o.RoomEffectManager(),
+                                }),
+                              (0, i.jsx)(le.D, {
+                                chatView: n,
+                                isActive: this.props.isActive,
+                              }),
+                              (0, i.jsx)(J.A, {
+                                children: (0, i.jsx)(re.n$, { groupView: t }),
+                              }),
+                            ],
+                          }),
+                          (0, i.jsx)(Re, { groupView: t }),
+                        ],
+                      }),
+                      (0, i.jsx)(M.Z, { preferredFocus: !0, children: T }),
+                    ],
+                  }),
+                ],
+              });
+            if (e.watching_broadcast_steamid && t.isBroadcastShown) {
+              const n = (0, i.jsx)(ee.I, {
+                emoticonStore: h.xm.ChatStore.EmoticonStore,
+                steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
+                broadcastID: "0",
+                watchLocation: S,
+                hidden: !t.m_bShowGlobalChat,
+                className: this.state.bDraggingChatGrabber
+                  ? "avoidEvents"
+                  : void 0,
+              });
+              D = (0, i.jsx)(p.Fragment, { children: n });
+            }
+            let P = "chatStack " + (C ? "displayRow" : "displayColumn");
+            c && (P += " GlobalChatVisible"), l && (P += " GroupChatVisible");
+            let L = {};
+            h.xm.VoiceStore.IsVoiceActiveForGroup(e.GetGroupID()) &&
+              ((L.onSecondaryButton = () => this.ToggleVoiceChat()),
+              (L.onSecondaryActionDescription = (0, A.we)(
+                "#Chat_ChatRoomGroup_EndVoiceChat",
+              )));
+            return (0, i.jsx)(m.D, {
+              fnCanTakeFocus: () => this.props.isActive,
+              "flow-children": "row",
+              "data-activechat": this.props.isActive,
+              style: y,
+              className: w,
+              ...this.GetTitleBarDragDropProps(),
+              ...L,
+              children: (0, i.jsxs)(M.Z, {
+                "flow-children": "column",
+                className: "ChatRoomGroup_WindowContent",
+                navEntryPreferPosition: ge.iU.PREFERRED_CHILD,
+                children: [
+                  !I &&
+                    (0, i.jsxs)("div", {
+                      className: "chatHeader titleBarContainer",
+                      children: [
+                        (0, i.jsx)("div", { className: "chatHeaderGradient" }),
+                        (0, i.jsx)($.wu, { groupView: t }),
+                        (0, i.jsx)("div", { className: "disconnectBlocker" }),
+                      ],
+                    }),
+                  !I &&
+                    (0, i.jsxs)(Te, {
+                      className: x,
+                      readyToRender: e.readyToRender,
+                      children: [
+                        !1,
+                        (0, i.jsx)("div", {
+                          className:
+                            "ChatRoomGroup_MainAndChatEntry displayColumn",
+                          ref: this.SetMainContentRef,
+                          children: (0, i.jsx)("div", {
+                            className:
+                              "ChatRoomGroup_Main_ContentAndMembers displayRow",
+                            children: (0, i.jsxs)(M.Z, {
+                              className: `ChatRoomGroup_Main_Content ${C ? "Vertical" : "Horizontal"} ${f ? "chatHidden" : ""}`,
+                              "flow-children": "row",
+                              children: [
+                                g,
+                                (!t.m_bChatHidden || !t.isBroadcastShown) &&
+                                  (0, i.jsxs)("div", {
+                                    className: R,
+                                    children: [
+                                      this.context?.IN_GAMEPADUI &&
+                                        (0, i.jsx)(X.H, {}),
+                                      t.isBroadcastShown &&
+                                        this.RenderInnerChatTabs(),
+                                      (0, i.jsxs)("div", {
+                                        className: P,
+                                        children: [
+                                          k,
+                                          r &&
+                                            (0, i.jsx)("div", {
+                                              className: "BothChatsSeperator",
+                                            }),
+                                          r &&
+                                            !this.ShouldShowVerticalBroadcastChat() &&
+                                            (0, i.jsxs)("div", {
+                                              className: "InnerChatTab",
+                                              onClick: () =>
+                                                t.SetGlobalBroadcastChatShown(
+                                                  !0,
+                                                ),
+                                              children: [
+                                                (0, i.jsx)(_.qzq, {}),
+                                                (0, i.jsx)("span", {
+                                                  className:
+                                                    "InnerChatTabLabel",
+                                                  children: (0, A.we)(
+                                                    "#Broadcast_Chat_PublicChatTab",
+                                                  ),
+                                                }),
+                                              ],
+                                            }),
+                                          D,
+                                        ],
+                                      }),
+                                      !l && t.isBroadcastShown && T,
+                                    ],
+                                  }),
+                              ],
+                            }),
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
               }),
             });
           }
         };
-        (0, s.Cg)([f.oI], Ie.prototype, "OnDragEnter", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "OnDragLeave", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "OnDragOver", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "OnDrop", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "OnHTMLKeyEvent", null),
+        (0, s.Cg)([f.oI], ye.prototype, "OnDragEnter", null),
+          (0, s.Cg)([f.oI], ye.prototype, "OnDragLeave", null),
+          (0, s.Cg)([f.oI], ye.prototype, "OnDragOver", null),
+          (0, s.Cg)([f.oI], ye.prototype, "OnDrop", null),
+          (0, s.Cg)([f.oI], ye.prototype, "OnHTMLKeyEvent", null),
           (0, s.Cg)(
             [f.oI],
-            Ie.prototype,
+            ye.prototype,
             "ShouldShowVerticalBroadcastChat",
             null,
           ),
-          (0, s.Cg)([f.oI], Ie.prototype, "OnLayoutChange", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "OnGrabberMouseDown", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "HandleMouseMove", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "UnregisterDragEvents", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "OnLocalStreamChange", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "HideChat", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "ShowChat", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "ToggleVerticalBroadcastChat", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "SetMainContentRef", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "ToggleShowBothChats", null),
-          (0, s.Cg)([f.oI], Ie.prototype, "ToggleVoiceChat", null),
-          (Ie = (0, s.Cg)([g.PA], Ie));
-        const ye = (e) => {
+          (0, s.Cg)([f.oI], ye.prototype, "OnLayoutChange", null),
+          (0, s.Cg)([f.oI], ye.prototype, "OnGrabberMouseDown", null),
+          (0, s.Cg)([f.oI], ye.prototype, "HandleMouseMove", null),
+          (0, s.Cg)([f.oI], ye.prototype, "UnregisterDragEvents", null),
+          (0, s.Cg)([f.oI], ye.prototype, "OnLocalStreamChange", null),
+          (0, s.Cg)([f.oI], ye.prototype, "HideChat", null),
+          (0, s.Cg)([f.oI], ye.prototype, "ShowChat", null),
+          (0, s.Cg)([f.oI], ye.prototype, "ToggleVerticalBroadcastChat", null),
+          (0, s.Cg)([f.oI], ye.prototype, "SetMainContentRef", null),
+          (0, s.Cg)([f.oI], ye.prototype, "ToggleShowBothChats", null),
+          (0, s.Cg)([f.oI], ye.prototype, "ToggleVoiceChat", null),
+          (ye = (0, s.Cg)([g.PA], ye));
+        const we = (e) => {
             let { groupView: t, className: n, ...s } = e;
             p.useEffect(() => {
               t.SetMemberListCollapsed(!1, !1);
@@ -41924,10 +41812,10 @@ var CLSTAMP = "10779229";
               title: (0, A.we)("#Chat_MemberGroup_Online"),
               className: pe().GroupMemberListDialog,
               ...s,
-              children: [o, (0, i.jsx)(Te, { closeModal: e.closeModal })],
+              children: [o, (0, i.jsx)(Me, { closeModal: e.closeModal })],
             });
           },
-          we = (e) => {
+          xe = (e) => {
             let t,
               { groupView: n, ...s } = e,
               o = n.GetGroup(),
@@ -41993,13 +41881,13 @@ var CLSTAMP = "10779229";
                 children: (0, i.jsxs)(k.g, {
                   children: [
                     (0, i.jsxs)(M.Z, { focusable: !1, ...C, children: [t, _] }),
-                    (0, i.jsx)(Te, { closeModal: e.closeModal }),
+                    (0, i.jsx)(Me, { closeModal: e.closeModal }),
                   ],
                 }),
               })
             );
           },
-          xe = (e) => {
+          Ae = (e) => {
             let { groupView: t, ...n } = e,
               s = t.GetGroup(),
               o = t.GetGroup().voiceRoomList,
@@ -42159,12 +42047,12 @@ var CLSTAMP = "10779229";
                         }),
                     ],
                   }),
-                  (0, i.jsx)(Te, { closeModal: e.closeModal }),
+                  (0, i.jsx)(Me, { closeModal: e.closeModal }),
                 ],
               }),
             });
           },
-          Ae = (0, g.PA)((e) => {
+          Re = (0, g.PA)((e) => {
             let { groupView: t } = e;
             const n = (0, fe.R7)();
             let s = 0,
@@ -42185,7 +42073,7 @@ var CLSTAMP = "10779229";
                 (0, i.jsx)(M.Z, {
                   focusable: !0,
                   onActivate: (e) => {
-                    (0, r.pg)((0, i.jsx)(ye, { groupView: t }), (0, te.uX)(e));
+                    (0, r.pg)((0, i.jsx)(we, { groupView: t }), (0, te.uX)(e));
                   },
                   onOKActionDescription: (0, A.we)("#Chat_MemberGroup_Online"),
                   children: (0, i.jsx)(_.YJl, {}),
@@ -42193,7 +42081,7 @@ var CLSTAMP = "10779229";
                 (0, i.jsxs)(M.Z, {
                   focusable: !0,
                   onActivate: (e) => {
-                    (0, r.pg)((0, i.jsx)(we, { groupView: t }), (0, te.uX)(e));
+                    (0, r.pg)((0, i.jsx)(xe, { groupView: t }), (0, te.uX)(e));
                   },
                   onOKActionDescription: (0, A.we)(
                     "#GroupSettings_Channels_TextChannels",
@@ -42215,7 +42103,7 @@ var CLSTAMP = "10779229";
                   focusable: !0,
                   className: o && pe().currentUserInVoiceChannel,
                   onActivate: () => {
-                    (0, r.pg)((0, i.jsx)(xe, { groupView: t }), n.ownerWindow);
+                    (0, r.pg)((0, i.jsx)(Ae, { groupView: t }), n.ownerWindow);
                   },
                   onOKActionDescription: (0, A.we)(
                     "#GroupSettings_Channels_VoiceChannels",
@@ -42271,7 +42159,7 @@ var CLSTAMP = "10779229";
               ],
             });
           }),
-          Re = ({ className: e, readyToRender: t, children: n }) => {
+          Te = ({ className: e, readyToRender: t, children: n }) => {
             const s = (0, i.jsx)(l.t, {
               position: "center",
               string: (0, A.we)("#Chat_ChatRoomGroup_Requesting"),
@@ -42285,7 +42173,7 @@ var CLSTAMP = "10779229";
               }),
             });
           },
-          Te = (e) =>
+          Me = (e) =>
             (0, i.jsx)(o.wi, {
               children: (0, i.jsx)(M.Z, {
                 className: "_DialogColLayout",
@@ -42297,7 +42185,7 @@ var CLSTAMP = "10779229";
               }),
             });
       },
-      41432: (e, t, n) => {
+      54303: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ey: () => L,
@@ -42310,31 +42198,31 @@ var CLSTAMP = "10779229";
           i = n(62540),
           o = n(63696),
           r = n(23038),
-          a = n(73511),
-          l = n(45510),
-          c = n(26054),
-          d = n(31038),
-          h = n(17969),
-          u = n(39585),
-          m = n(47778),
-          p = n(90131),
-          _ = n(26194),
+          a = n(70425),
+          l = n(61473),
+          c = n(80915),
+          d = n(71884),
+          h = n(31054),
+          u = n(91490),
+          m = n(78275),
+          p = n(14792),
+          _ = n(70407),
           g = n(89193),
           C = n(41230),
-          f = n(6474),
-          S = n(34469),
-          v = n(13177),
-          b = n(8978),
-          I = n(51756),
-          y = n(74547),
-          w = n(99936),
-          x = n(84162),
-          A = n(64382),
-          R = n(32962),
-          T = n(11662),
-          M = n(58752),
-          D = n(21582),
-          k = n(92179);
+          f = n(35123),
+          S = n(5966),
+          v = n(97640),
+          b = n(62057),
+          I = n(88071),
+          y = n(94490),
+          w = n(54803),
+          x = n(60436),
+          A = n(10093),
+          R = n(92927),
+          T = n(13791),
+          M = n(6242),
+          D = n(96641),
+          k = n(5436);
         let P = class extends o.Component {
           m_schHoverDelay = new M.LU();
           constructor(e) {
@@ -43087,40 +42975,40 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([I.oI], N.prototype, "OnBlur", null),
           (N = (0, s.Cg)([C.PA], N));
       },
-      99936: (e, t, n) => {
+      54803: (e, t, n) => {
         "use strict";
         n.d(t, { AX: () => B, IV: () => G, RB: () => O });
         var s = n(34629),
           i = n(62540),
-          o = n(33453),
-          r = n(80228),
-          a = n(18367),
-          l = n(26054),
-          c = n(31038),
-          d = n(97324),
-          h = n(41432),
-          u = n(39585),
-          m = n(53354),
-          p = n(27737),
+          o = n(83402),
+          r = n(98825),
+          a = n(91918),
+          l = n(80915),
+          c = n(71884),
+          d = n(20155),
+          h = n(54303),
+          u = n(91490),
+          m = n(73823),
+          p = n(94522),
           _ = n(41230),
           g = n(63696),
           C = n(23038),
-          f = n(26194),
-          S = n(51171),
-          v = n(9663),
-          b = n(28946),
-          I = n(73511),
-          y = n(45510),
-          w = n(85427),
-          x = n(64382),
-          A = n(8978),
-          R = n(51756),
-          T = n(21582),
-          M = n(27515),
-          D = n(74547),
-          k = n(92179),
-          P = n(20547),
-          L = n(72270);
+          f = n(70407),
+          S = n(20448),
+          v = n(94058),
+          b = n(23536),
+          I = n(70425),
+          y = n(61473),
+          w = n(31932),
+          x = n(10093),
+          A = n(62057),
+          R = n(88071),
+          T = n(96641),
+          M = n(81960),
+          D = n(94490),
+          k = n(5436),
+          P = n(93246),
+          L = n(57274);
         let G = class extends g.Component {
           static contextType = T.QO;
           m_elDiv;
@@ -43566,33 +43454,33 @@ var CLSTAMP = "10779229";
           };
         U = (0, s.Cg)([_.PA], U);
       },
-      39585: (e, t, n) => {
+      91490: (e, t, n) => {
         "use strict";
         n.d(t, { Tz: () => R, ae: () => P, fM: () => T });
         var s = n(34629),
           i = n(62540),
-          o = n(80228),
-          r = (n(99436), n(26054)),
-          a = n(64382),
-          l = n(31038),
-          c = n(97324),
-          d = n(47778),
-          h = n(91644),
-          u = n(90131),
-          m = n(53354),
+          o = n(98825),
+          r = (n(1444), n(80915)),
+          a = n(10093),
+          l = n(71884),
+          c = n(20155),
+          d = n(78275),
+          h = n(67299),
+          u = n(14792),
+          m = n(73823),
           p = n(41230),
           _ = n(63696),
-          g = n(6474),
-          C = n(13177),
-          f = n(73511),
-          S = n(8978),
-          v = n(51756),
-          b = n(45510),
-          I = n(32962),
+          g = n(35123),
+          C = n(97640),
+          f = n(70425),
+          S = n(62057),
+          v = n(88071),
+          b = n(61473),
+          I = n(92927),
           y = n(33310),
           w = n.n(y),
-          x = n(21937),
-          A = n(21582);
+          x = n(50286),
+          A = n(96641);
         function R(e, t, n) {
           let s,
             o = (0, r.CO)(e);
@@ -44046,33 +43934,33 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([v.oI], G.prototype, "HandleSubmit", null),
           (G = (0, s.Cg)([p.PA], G));
       },
-      83647: (e, t, n) => {
+      9387: (e, t, n) => {
         "use strict";
         n.d(t, { sU: () => H, dH: () => V, XX: () => X });
         var s = n(34629),
           i = n(62540),
-          o = n(80228),
-          r = n(55450),
-          a = n(59623),
-          l = n(54757),
-          c = n(31038),
-          d = n(26054),
-          h = n(29439),
-          u = n(97324),
-          m = n(39585),
-          p = n(91644),
+          o = n(98825),
+          r = n(83103),
+          a = n(9382),
+          l = n(7628),
+          c = n(71884),
+          d = n(80915),
+          h = n(96996),
+          u = n(20155),
+          m = n(91490),
+          p = n(67299),
           _ = n(89193),
           g = n(41230),
           C = n(63696),
           f = n(23038),
-          S = n(34264),
-          v = n(6474),
-          b = n(26194),
-          I = n(13177),
-          y = n(73511),
-          w = n(16208),
-          x = n(51756),
-          A = n(35296);
+          S = n(47377),
+          v = n(35123),
+          b = n(70407),
+          I = n(97640),
+          y = n(70425),
+          w = n(42501),
+          x = n(88071),
+          A = n(17559);
         class R extends C.Component {
           m_elScroll;
           m_animation;
@@ -44212,19 +44100,19 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([x.oI], R.prototype, "OnSlideLeftClick", null),
           (0, s.Cg)([x.oI], R.prototype, "OnSlideRightClick", null),
           (0, s.Cg)([x.oI], R.prototype, "OnWheel", null);
-        var T = n(90131),
-          M = n(45510),
-          D = n(58931),
-          k = n(18483),
-          P = n(85427),
-          L = n(8978),
+        var T = n(14792),
+          M = n(61473),
+          D = n(19772),
+          k = n(69164),
+          P = n(31932),
+          L = n(62057),
           G = n(58574),
           B = n.n(G),
-          F = n(74547),
-          E = n(21582),
-          O = n(60735),
-          N = n(92179),
-          j = n(35539);
+          F = n(94490),
+          E = n(96641),
+          O = n(72576),
+          N = n(5436),
+          j = n(75393);
         let V = class extends C.Component {
           static contextType = E.QO;
           m_mapTabs = new Map();
@@ -45135,28 +45023,28 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([x.oI], $.prototype, "OnManualVoiceChatExit", null),
           ($ = (0, s.Cg)([g.PA], $));
       },
-      32962: (e, t, n) => {
+      92927: (e, t, n) => {
         "use strict";
         n.d(t, { E5: () => I, Rf: () => w, jv: () => y });
         var s = n(34629),
           i = n(62540),
-          o = n(21582),
-          r = n(26054),
-          a = n(31038),
-          l = n(17969),
-          c = n(97324),
-          d = n(76446),
-          h = n(74547),
-          u = n(90131),
+          o = n(96641),
+          r = n(80915),
+          a = n(71884),
+          l = n(31054),
+          c = n(20155),
+          d = n(92228),
+          h = n(94490),
+          u = n(14792),
           m = n(41230),
           p = n(63696),
-          _ = n(73511),
-          g = n(45510),
-          C = n(8978),
-          f = n(51756),
-          S = n(11662),
-          v = n(26194),
-          b = n(49890);
+          _ = n(70425),
+          g = n(61473),
+          C = n(62057),
+          f = n(88071),
+          S = n(13791),
+          v = n(70407),
+          b = n(11931);
         function I(e, t, n, s, i) {
           y(e, t, n, s, !1, i);
         }
@@ -45517,42 +45405,42 @@ var CLSTAMP = "10779229";
           }),
         );
       },
-      31722: (e, t, n) => {
+      43493: (e, t, n) => {
         "use strict";
         n.d(t, { hI: () => z });
         var s = n(34629),
           i = n(62540),
           o = n(83957),
           r = n.n(o),
-          a = n(80228),
-          l = n(44452),
-          c = n(59623),
-          d = n(26054),
-          h = n(31038),
-          u = n(41432),
-          m = n(32962),
-          p = n(47778),
-          _ = n(74547),
-          g = n(90131),
-          C = n(26194),
+          a = n(98825),
+          l = n(54888),
+          c = n(9382),
+          d = n(80915),
+          h = n(71884),
+          u = n(54303),
+          m = n(92927),
+          p = n(78275),
+          _ = n(94490),
+          g = n(14792),
+          C = n(70407),
           f = n(89193),
           S = n(41230),
           v = n(63696),
-          b = n(96108),
-          I = n(73511),
-          y = n(45510),
-          w = n(58322),
-          x = n(64382),
-          A = n(18483),
-          R = n(8978),
-          T = n(51756),
-          M = n(50039),
-          D = n(53354),
-          k = n(9663),
-          P = n(11662),
+          b = n(55747),
+          I = n(70425),
+          y = n(61473),
+          w = n(64314),
+          x = n(10093),
+          A = n(69164),
+          R = n(62057),
+          T = n(88071),
+          M = n(18554),
+          D = n(73823),
+          k = n(94058),
+          P = n(13791),
           L = n(84512),
           G = n.n(L),
-          B = n(85427);
+          B = n(31932);
         function F(e) {
           const {
               title: t,
@@ -45616,7 +45504,7 @@ var CLSTAMP = "10779229";
           };
         var U = n(86275),
           H = n.n(U),
-          W = n(21582);
+          W = n(96641);
         function z(e, t) {
           (0, g.HT)(
             (0, i.jsx)(q, { groupView: t }),
@@ -45977,7 +45865,7 @@ var CLSTAMP = "10779229";
               n = this.props.group;
             e.preventDefault();
             let s = new FormData();
-            s.set("sessionid", a.TS.SESSIONID), s.set("avatar", t);
+            s.set("sessionid", (0, W.KC)()), s.set("avatar", t);
             r()
               .post(a.TS.CHAT_BASE_URL + "chat/avatarfileupload/", s, {
                 headers: { "content-type": "multipart/form-data" },
@@ -47582,24 +47470,24 @@ var CLSTAMP = "10779229";
             ],
           });
       },
-      25172: (e, t, n) => {
+      99107: (e, t, n) => {
         "use strict";
         n.d(t, { lV: () => v, yi: () => b });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(80228),
-          a = n(73511),
-          l = n(26054),
-          c = n(90131),
-          d = n(26194),
-          h = n(8978),
-          u = n(51756),
-          m = n(44452),
-          p = n(31038),
+          r = n(98825),
+          a = n(70425),
+          l = n(80915),
+          c = n(14792),
+          d = n(70407),
+          h = n(62057),
+          u = n(88071),
+          m = n(54888),
+          p = n(71884),
           _ = n(41230),
-          g = n(75292),
-          C = n(11662),
+          g = n(43668),
+          C = n(13791),
           f = n(78161),
           S = n.n(f);
         function v(e, t) {
@@ -47938,26 +47826,26 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([u.oI], w.prototype, "OnShowUnreadIndicatorChanged", null),
           (w = (0, s.Cg)([_.PA], w));
       },
-      27515: (e, t, n) => {
+      81960: (e, t, n) => {
         "use strict";
         n.d(t, { UA: () => v, eJ: () => b, zw: () => I });
         var s = n(34629),
           i = n(62540),
-          o = n(31038),
+          o = n(71884),
           r = n(41230),
-          a = n(90131),
+          a = n(14792),
           l = n(63696),
-          c = n(18367),
-          d = n(51756),
-          h = n(8978),
-          u = n(73511),
-          m = n(26194),
-          p = n(76446),
-          _ = n(26054),
-          g = n(64382),
-          C = n(74547),
-          f = n(45510),
-          S = n(47778);
+          c = n(91918),
+          d = n(88071),
+          h = n(62057),
+          u = n(70425),
+          m = n(70407),
+          p = n(92228),
+          _ = n(80915),
+          g = n(10093),
+          C = n(94490),
+          f = n(61473),
+          S = n(78275);
         function v(e, t, n, s = !1, o) {
           (0, a.HT)(
             (0, i.jsx)(I, {
@@ -48173,26 +48061,26 @@ var CLSTAMP = "10779229";
           }),
         );
       },
-      76446: (e, t, n) => {
+      92228: (e, t, n) => {
         "use strict";
         n.d(t, { ro: () => x, dG: () => y, c3: () => I, mo: () => w });
         var s = n(62540),
           i = n(63696),
-          o = n(26194),
-          r = n(45581),
-          a = n(18367),
-          l = n(31038),
-          c = n(74547),
-          d = n(34469),
-          h = n(73511),
-          u = n(8978),
-          m = n(45510),
-          p = n(85427),
-          _ = n(23528),
-          g = n(49890),
-          C = n(21582),
-          f = n(51756),
-          S = n(35539),
+          o = n(70407),
+          r = n(77154),
+          a = n(91918),
+          l = n(71884),
+          c = n(94490),
+          d = n(5966),
+          h = n(70425),
+          u = n(62057),
+          m = n(61473),
+          p = n(31932),
+          _ = n(38915),
+          g = n(11931),
+          C = n(96641),
+          f = n(88071),
+          S = n(75393),
           v = n(28790),
           b = n.n(v);
         const I = 0,
@@ -48430,7 +48318,7 @@ var CLSTAMP = "10779229";
               }),
             });
       },
-      77545: (e, t, n) => {
+      97492: (e, t, n) => {
         "use strict";
         n.d(t, {
           IW: () => y,
@@ -48443,19 +48331,19 @@ var CLSTAMP = "10779229";
           i = n(34629),
           o = n(62540),
           r = n(63696),
-          a = n(42308),
-          l = n(73511),
-          c = n(80228),
+          a = n(25699),
+          l = n(70425),
+          c = n(98825),
           d = n(41230),
-          h = n(51756),
-          u = n(8978),
-          m = n(11282),
-          p = n(97418),
-          _ = n(45966),
-          g = n(9663),
-          C = n(26054),
-          f = n(31038),
-          S = n(53354);
+          h = n(88071),
+          u = n(62057),
+          m = n(31543),
+          p = n(48102),
+          _ = n(82443),
+          g = n(94058),
+          C = n(80915),
+          f = n(71884),
+          S = n(73823);
         class v extends r.Component {
           m_bSettingsChanged = !1;
           m_bCommunityPreferencesChanged = !1;
@@ -48844,23 +48732,23 @@ var CLSTAMP = "10779229";
         };
         w = (0, i.Cg)([d.PA], w);
       },
-      74570: (e, t, n) => {
+      50018: (e, t, n) => {
         "use strict";
         n.d(t, { Ov: () => Je });
         var s = n(62540),
           i = n(63696),
-          o = n(14824),
+          o = n(27243),
           r = n(41230),
           a = n(90095),
-          l = n(31038),
-          c = n(96959),
-          d = n(73511),
-          h = n(63518),
-          u = n(37506),
-          m = n(96108),
-          p = n(90131),
-          _ = n(85427),
-          g = n(8978),
+          l = n(71884),
+          c = n(19258),
+          d = n(70425),
+          h = n(15283),
+          u = n(54073),
+          m = n(55747),
+          p = n(14792),
+          _ = n(31932),
+          g = n(62057),
           C = n(91744),
           f = n.n(C);
         function S(e) {
@@ -48880,26 +48768,26 @@ var CLSTAMP = "10779229";
             ],
           });
         }
-        const v = (0, n(91811).Ri)(f().PanelSectionRow);
+        const v = (0, n(97734).Ri)(f().PanelSectionRow);
         var b = n(72754),
-          I = n(55888),
-          y = n(45510),
-          w = n(26054),
-          x = n(11282),
-          A = n(17969),
-          R = n(21582),
-          T = n(53354),
-          M = n(6474),
-          D = n(13177),
-          k = n(51756),
-          P = n(21697),
-          L = n(26194),
-          G = n(32271),
+          I = n(54938),
+          y = n(61473),
+          w = n(80915),
+          x = n(31543),
+          A = n(31054),
+          R = n(96641),
+          T = n(73823),
+          M = n(35123),
+          D = n(97640),
+          k = n(88071),
+          P = n(42724),
+          L = n(70407),
+          G = n(8512),
           B = n(20788),
           F = n.n(B),
-          E = n(35539),
-          O = n(54953),
-          N = n(25069);
+          E = n(75393),
+          O = n(43076),
+          N = n(79672);
         function j(...e) {
           return e.join(" ");
         }
@@ -49142,12 +49030,12 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        var W = n(76446),
-          z = n(64382),
-          q = n(88075),
-          K = n(26105),
-          Z = n(97709),
-          X = n(85215);
+        var W = n(92228),
+          z = n(10093),
+          q = n(79128),
+          K = n(74708),
+          Z = n(94500),
+          X = n(83642);
         (0, r.PA)(function (e) {
           const t = Array.from(l.xm.RemotePlayStore.groups),
             n = (0, l.LC)(),
@@ -51135,29 +51023,29 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      75292: (e, t, n) => {
+      43668: (e, t, n) => {
         "use strict";
         n.d(t, { T: () => M });
         var s = n(34629),
           i = n(62540),
-          o = n(31038),
-          r = n(26054),
-          a = n(80228),
-          l = n(90131),
+          o = n(71884),
+          r = n(80915),
+          a = n(98825),
+          l = n(14792),
           c = n(63696),
           d = n(41230),
-          h = n(77545),
-          u = n(51756),
-          m = n(8978),
-          p = n(73511),
-          _ = n(55888),
-          g = n(74547),
-          C = n(45510),
+          h = n(97492),
+          u = n(88071),
+          m = n(62057),
+          p = n(70425),
+          _ = n(54938),
+          g = n(94490),
+          C = n(61473),
           f = n(10893),
           S = n.n(f),
-          v = n(85427),
-          b = n(64382),
-          I = n(40114);
+          v = n(31932),
+          b = n(10093),
+          I = n(66681);
         function y(e) {
           const {
               bPushToTalkAvailable: t,
@@ -51766,8 +51654,8 @@ var CLSTAMP = "10779229";
             ],
           });
         });
-        var R = n(14661),
-          T = n(25172);
+        var R = n(474),
+          T = n(99107);
         function M(e, t, n) {
           (0, l.HT)(
             (0, i.jsx)(D, { browserContext: e, startingPage: n }),
@@ -52003,7 +51891,7 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([u.oI], k.prototype, "FriendsSettingsNotificationRow", null),
           (k = (0, s.Cg)([d.PA], k));
       },
-      47778: (e, t, n) => {
+      78275: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ci: () => l,
@@ -52013,11 +51901,11 @@ var CLSTAMP = "10779229";
           dt: () => m,
           hr: () => c,
         });
-        var s = n(90131),
-          i = n(26054),
-          o = n(31038),
-          r = n(8978),
-          a = n(21697);
+        var s = n(14792),
+          i = n(80915),
+          o = n(71884),
+          r = n(62057),
+          a = n(42724);
         function l(e, t, n, o, l = (0, r.we)("#Button_Cancel"), c, d, h) {
           return (0, a.ZH)(
             (n) => {
@@ -52072,33 +51960,33 @@ var CLSTAMP = "10779229";
             : null;
         }
       },
-      1247: (e, t, n) => {
+      28191: (e, t, n) => {
         "use strict";
         n.d(t, { Io: () => j, Rg: () => B, A6: () => O });
         var s = n(34629),
           i = n(62540),
-          o = n(51476),
+          o = n(60651),
           r = n(41230),
           a = n(63696),
           l = n(7470),
-          c = n(72270),
-          d = n(64382),
-          h = n(8978),
-          u = n(51756),
-          m = n(31038),
-          p = n(28946),
-          _ = n(9663),
-          g = n(48363),
-          C = n(35968),
-          f = n(85427),
-          S = n(34634),
+          c = n(57274),
+          d = n(10093),
+          h = n(62057),
+          u = n(88071),
+          m = n(71884),
+          p = n(23536),
+          _ = n(94058),
+          g = n(49028),
+          C = n(14277),
+          f = n(31932),
+          S = n(52099),
           v = n(94599),
           b = n.n(v),
-          I = n(11282),
-          y = n(97418),
-          w = n(48180),
-          x = n(42308);
-        n(89925);
+          I = n(31543),
+          y = n(48102),
+          w = n(77081),
+          x = n(25699);
+        n(45604);
         let A = class extends a.Component {
           render() {
             const { community_data: e } = this.props;
@@ -52529,7 +52417,7 @@ var CLSTAMP = "10779229";
               ? (0, i.jsx)(y.Ul, { ...o, strAvatarURL: a, ...l, children: r })
               : (0, i.jsx)(y.i8, { persona: t, ...o, ...l, children: r });
           };
-        var G = n(5761);
+        var G = n(60510);
         function B(e) {
           return (0, i.jsx)(G.g, {
             target: e.target,
@@ -52845,7 +52733,7 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([u.oI], V.prototype, "bindHover", null),
           (V = (0, s.Cg)([r.PA], V));
       },
-      91644: (e, t, n) => {
+      67299: (e, t, n) => {
         "use strict";
         n.d(t, {
           HS: () => be,
@@ -52857,15 +52745,15 @@ var CLSTAMP = "10779229";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(31038),
-          r = n(26054),
+          o = n(71884),
+          r = n(80915),
           a = n(41230),
-          l = n(90131),
+          l = n(14792),
           c = n(63696),
-          d = n(51756),
-          h = n(96108),
-          u = n(8978),
-          m = n(73511);
+          d = n(88071),
+          h = n(55747),
+          u = n(62057),
+          m = n(70425);
         function p(e, t, n) {
           (0, l.HT)(
             (0, i.jsx)(_, { player: t }),
@@ -52990,10 +52878,10 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([d.oI], _.prototype, "HandleTextEntry", null),
           (0, s.Cg)([d.oI], _.prototype, "HandleSubmit", null),
           (_ = (0, s.Cg)([a.PA], _));
-        var g = n(76446),
-          C = n(9663),
-          f = n(64382),
-          S = n(74547),
+        var g = n(92228),
+          C = n(94058),
+          f = n(10093),
+          S = n(94490),
           v = n(89193);
         function b(e, t, n) {
           let s = n ? [n.accountid] : [];
@@ -53262,21 +53150,21 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([d.oI], x.prototype, "OnToggle", null),
           (0, s.Cg)([d.oI], x.prototype, "OnContextMenu", null),
           (x = (0, s.Cg)([a.PA], x));
-        var A = n(6474),
-          R = n(13177),
-          T = n(18367),
-          M = n(54757),
-          D = n(55450),
-          k = n(80228),
-          P = n(53354),
-          L = n(42308),
-          G = n(33453),
-          B = n(47778),
-          F = n(45510),
-          E = n(55888),
-          O = n(30078),
-          N = n(83957),
-          j = n.n(N);
+        var A = n(35123),
+          R = n(97640),
+          T = n(91918),
+          M = n(7628),
+          D = n(83103),
+          k = n(98825),
+          P = n(73823),
+          L = n(25699),
+          G = n(83402),
+          B = n(78275),
+          F = n(61473),
+          E = n(54938),
+          O = n(83957),
+          N = n.n(O),
+          j = n(96641);
         let V = class extends c.Component {
           constructor(e) {
             super(e);
@@ -53316,14 +53204,14 @@ var CLSTAMP = "10779229";
               });
             else {
               let t = new FormData();
-              t.append("sessionid", k.TS.SESSIONID), t.append("persona", e);
+              t.append("sessionid", (0, j.KC)()), t.append("persona", e);
               let n = o.xm.FriendStore.self,
                 s =
                   k.TS.CHAT_BASE_URL +
                   "profiles/" +
                   n.steamid64 +
                   "/ajaxsetpersonaname/";
-              j()
+              N()
                 .post(s, t)
                 .then((e) => {
                   let t = e.data;
@@ -53423,11 +53311,11 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([d.oI], V.prototype, "HandleTextEntry", null),
           (0, s.Cg)([d.oI], V.prototype, "HandleSubmit", null),
           (V = (0, s.Cg)([a.PA], V));
-        var U = n(84162),
-          H = n(14661),
-          W = n(30952),
-          z = n(11282),
-          q = n(97418);
+        var U = n(60436),
+          H = n(474),
+          W = n(5109),
+          z = n(31543),
+          q = n(48102);
         let K = class extends c.Component {
           constructor(e) {
             super(e),
@@ -53717,15 +53605,15 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([d.oI], K.prototype, "NotificationRow", null),
           (0, s.Cg)([d.oI], K.prototype, "OnDefaultToggled", null),
           (K = (0, s.Cg)([a.PA], K));
-        var Z = n(91811),
-          X = n(14986),
-          $ = n(21937),
-          Q = n(36371),
-          Y = n(21697),
-          J = n(58322),
-          ee = n(40114),
-          te = n(48180),
-          ne = n(99436);
+        var Z = n(97734),
+          X = n(40261),
+          $ = n(50286),
+          Q = n(28976),
+          Y = n(42724),
+          J = n(64314),
+          ee = n(66681),
+          te = n(77081),
+          ne = n(1444);
         function se(e, t, n, s) {
           return (0, A.lX)(
             (0, i.jsx)(le, {
@@ -54971,9 +54859,12 @@ var CLSTAMP = "10779229";
           constructor(e) {
             super(e),
               (this.state = { bIsSubscribedToApp: void 0 }),
-              O.W.BIsSubscribedApp(this.props.unAppID).then((e) => {
-                this.setState({ bIsSubscribedToApp: e });
-              });
+              "SteamClient" in globalThis &&
+                SteamClient.Apps?.GetIsSubscribedApp?.(this.props.unAppID).then(
+                  (e) => {
+                    this.setState({ bIsSubscribedToApp: e });
+                  },
+                );
           }
           ShowStorePage(e) {
             let t = (0, X.Dn)(this.props.unAppID, "friendcontextmenu");
@@ -55632,49 +55523,49 @@ var CLSTAMP = "10779229";
           );
         });
       },
-      74547: (e, t, n) => {
+      94490: (e, t, n) => {
         "use strict";
         n.d(t, {
-          lg: () => Ne,
-          JG: () => ht,
-          bP: () => Ct,
-          gv: () => It,
-          Rg: () => gt,
-          i$: () => Ye,
-          t8: () => Qe,
-          f7: () => je,
-          Ql: () => Ve,
+          lg: () => Oe,
+          JG: () => ct,
+          bP: () => _t,
+          gv: () => vt,
+          Rg: () => pt,
+          i$: () => Qe,
+          t8: () => $e,
+          f7: () => Ne,
+          Ql: () => je,
         });
         var s = n(34629),
           i = n(62540),
-          o = n(80228),
-          r = n(59623),
-          a = n(55450),
-          l = n(18367),
-          c = n(54757),
-          d = n(51476),
-          h = n(26054),
-          u = n(31038),
-          m = n(17969),
-          p = n(47778),
-          _ = n(91644),
-          g = n(29384),
-          C = n(97324),
-          f = n(99936),
-          S = n(39585),
+          o = n(98825),
+          r = n(9382),
+          a = n(83103),
+          l = n(91918),
+          c = n(7628),
+          d = n(60651),
+          h = n(80915),
+          u = n(71884),
+          m = n(31054),
+          p = n(78275),
+          _ = n(67299),
+          g = n(9851),
+          C = n(20155),
+          f = n(54803),
+          S = n(91490),
           v = n(89193),
           b = n(41230),
           I = n(90095),
           y = n(63696),
-          w = n(26194),
-          x = n(51171),
-          A = n(34634),
-          R = n(97418),
-          T = n(64382),
-          M = n(8978),
-          D = n(51756),
-          k = n(72270),
-          P = n(60735);
+          w = n(70407),
+          x = n(20448),
+          A = n(52099),
+          R = n(48102),
+          T = n(10093),
+          M = n(62057),
+          D = n(88071),
+          k = n(57274),
+          P = n(72576);
         let L = class extends y.Component {
           m_rgFavoriteElementRefs = [];
           constructor(e) {
@@ -56040,7 +55931,7 @@ var CLSTAMP = "10779229";
             children: C,
           });
           return t.friend
-            ? (0, i.jsx)(gt, { friend: t.friend, context: a, children: v })
+            ? (0, i.jsx)(pt, { friend: t.friend, context: a, children: v })
             : v;
         }
         (0, s.Cg)([v.sH], G.prototype, "m_iActiveDragIndex", void 0),
@@ -56114,7 +56005,7 @@ var CLSTAMP = "10779229";
               e && ((C = e.animated_avatar), (f = e.avatar_frame));
             }
             return (0, i.jsx)(
-              Ct,
+              _t,
               {
                 friend: n,
                 className: e.className,
@@ -56246,25 +56137,25 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([D.oI], O.prototype, "OnDragStart", null),
           (0, s.Cg)([D.oI], O.prototype, "OnDragEnd", null),
           (O = (0, s.Cg)([b.PA], O));
-        n(84162);
-        var N = n(53354),
+        n(60436);
+        var N = n(73823),
           j = n(23038),
-          V = n(42308),
-          U = n(6474),
-          H = n(34469),
-          W = n(13177),
-          z = n(45510),
-          q = (n(63518), n(91639)),
-          K = n(28142),
-          Z = n(27515),
-          X = n(75292),
-          $ = (n(90131), n(73511)),
-          Q = n(18483);
+          V = n(25699),
+          U = n(35123),
+          H = n(5966),
+          W = n(97640),
+          z = n(61473),
+          q = (n(15283), n(72590)),
+          K = n(70027),
+          Z = n(81960),
+          X = n(43668),
+          $ = (n(14792), n(70425)),
+          Q = n(69164);
         const Y = "DEBUG_LogCMTraffic";
-        var J = n(58322),
-          ee = n(1247),
-          te = n(97873),
-          ne = (n(86373), n(21697), n(36642), n(72948));
+        var J = n(64314),
+          ee = n(28191),
+          te = n(40080),
+          ne = (n(65264), n(42724), n(36642), n(56995));
         y.Component;
         class se extends y.Component {
           m_rgSelectOptions = [
@@ -56619,7 +56510,7 @@ var CLSTAMP = "10779229";
                         style: { zIndex: 5 },
                         children: (0, i.jsx)(ee.A6, { hoverInstance: t }),
                       }),
-                      (0, i.jsx)(Ct, {
+                      (0, i.jsx)(_t, {
                         friend: u.xm.FriendStore.GetPlayer(+e),
                         context: null,
                       }),
@@ -56631,26 +56522,25 @@ var CLSTAMP = "10779229";
           }
         }
         (0, s.Cg)([D.oI], ae.prototype, "OnSearchInput", null);
-        var le = n(11282),
-          ce = n(58931),
-          de = n(9663),
-          he = n(14986),
-          ue = n(11662),
-          me = n(45966),
-          pe = n(85427),
-          _e = n(34835),
+        var le = n(31543),
+          ce = n(19772),
+          de = n(94058),
+          he = n(40261),
+          ue = n(13791),
+          me = n(82443),
+          pe = n(31932),
+          _e = n(18834),
           ge = n(31857),
-          Ce = n(74570),
-          fe = n(30078),
-          Se = n(83300),
-          ve = n(35539),
-          be = n(32271),
-          Ie = n(84357),
-          ye = n(2108),
-          we = n(29439),
-          xe = n(68189),
-          Ae = n(29656);
-        const Re = (0, b.PA)(function (e) {
+          Ce = n(50018),
+          fe = n(79229),
+          Se = n(75393),
+          ve = n(8512),
+          be = n(9808),
+          Ie = n(71191),
+          ye = n(96996),
+          we = n(68189),
+          xe = n(8705);
+        const Ae = (0, b.PA)(function (e) {
           const t = u.xm.ChatStore.GetRecentChats(),
             n = (0, k.R7)(),
             s = (0, h._k)(n.ownerWindow),
@@ -56664,7 +56554,7 @@ var CLSTAMP = "10779229";
                 u.xm.SettingsStore.FriendsSettings.b24HourClock,
             };
           return (0, i.jsx)("div", {
-            className: xe.RecentChatsList,
+            className: we.RecentChatsList,
             children: t.map((e, t) => {
               if (e instanceof c.s) {
                 const n = e,
@@ -56682,8 +56572,8 @@ var CLSTAMP = "10779229";
                 let l = (0, i.jsx)(
                     "div",
                     {
-                      className: xe.Time,
-                      children: (0, Ae.lQ)(n.time_last_message, o),
+                      className: we.Time,
+                      children: (0, xe.lQ)(n.time_last_message, o),
                     },
                     "RecentTime",
                   ),
@@ -56699,11 +56589,11 @@ var CLSTAMP = "10779229";
                       );
                   };
                 return (0, i.jsx)(
-                  Ct,
+                  _t,
                   {
                     friend: r,
                     className: (0, pe.A)(
-                      xe.RecentChatElement,
+                      we.RecentChatElement,
                       n.unread_message_count > 0 && "unreadFriend",
                     ),
                     context: { chat: n, chatContext: "recentchats" },
@@ -56740,8 +56630,8 @@ var CLSTAMP = "10779229";
                   ? (0, i.jsx)(
                       "div",
                       {
-                        className: xe.Time,
-                        children: (0, Ae.lQ)(s.time_last_message, o),
+                        className: we.Time,
+                        children: (0, xe.lQ)(s.time_last_message, o),
                       },
                       "RecentTime",
                     )
@@ -56749,7 +56639,7 @@ var CLSTAMP = "10779229";
                 return (0, i.jsx)(
                   f.AX,
                   {
-                    className: xe.RecentChatElement,
+                    className: we.RecentChatElement,
                     group: n,
                     bShowLastChat: !0,
                     bHideUnreadMention: !0,
@@ -56761,16 +56651,16 @@ var CLSTAMP = "10779229";
             }),
           });
         });
-        var Te = n(27737),
-          Me = n(25384);
-        var De,
-          ke = n(21582),
-          Pe = n(29876),
-          Le = n(23081),
-          Ge = n(92179),
-          Be = n(26249),
-          Fe = n(24058);
-        let Ee = class extends y.Component {
+        var Re = n(94522),
+          Te = n(48865);
+        var Me,
+          De = n(96641),
+          ke = n(81745),
+          Pe = n(12486),
+          Le = n(5436),
+          Ge = n(85606),
+          Be = n(82966);
+        let Fe = class extends y.Component {
           constructor(e) {
             super(e);
           }
@@ -56806,12 +56696,12 @@ var CLSTAMP = "10779229";
             });
           }
         };
-        Ee = (0, s.Cg)([b.PA], Ee);
-        let Oe = class extends y.Component {
+        Fe = (0, s.Cg)([b.PA], Fe);
+        let Ee = class extends y.Component {
           render() {
             let e = this.props.chats.GetActiveVoiceChat();
             return this.props.chats.VoiceChat.IsAnyVoiceActive() && e
-              ? (0, i.jsx)(Ne, {
+              ? (0, i.jsx)(Oe, {
                   chat: e,
                   name: this.props.chats.GetActiveVoiceChannelName(),
                   nostatus: !1,
@@ -56839,12 +56729,12 @@ var CLSTAMP = "10779229";
                           className: "activeVoiceButtons",
                           "flow-children": "row",
                           children: [
+                            (0, i.jsx)(Ne, {}),
                             (0, i.jsx)(je, {}),
-                            (0, i.jsx)(Ve, {}),
                             (0, i.jsx)("div", {
                               className: "activeVoiceButtonsSpacer",
                             }),
-                            (0, i.jsx)(Ue, {}),
+                            (0, i.jsx)(Ve, {}),
                             (0, i.jsx)("div", {
                               className: "activeVoiceButtonsSpacerAfter",
                             }),
@@ -56856,8 +56746,8 @@ var CLSTAMP = "10779229";
                 });
           }
         };
-        Oe = (0, s.Cg)([b.PA], Oe);
-        let Ne = class extends y.Component {
+        Ee = (0, s.Cg)([b.PA], Ee);
+        let Oe = class extends y.Component {
           constructor(e) {
             super(e);
           }
@@ -56916,12 +56806,12 @@ var CLSTAMP = "10779229";
                             className: "activeVoiceButtons",
                             "flow-children": "row",
                             children: [
+                              (0, i.jsx)(Ne, {}),
                               (0, i.jsx)(je, {}),
-                              (0, i.jsx)(Ve, {}),
                               (0, i.jsx)("div", {
                                 className: "activeVoiceButtonsSpacer",
                               }),
-                              (0, i.jsx)(Ue, {}),
+                              (0, i.jsx)(Ve, {}),
                               (0, i.jsx)("div", {
                                 className: "activeVoiceButtonsSpacerAfter",
                               }),
@@ -56930,7 +56820,7 @@ var CLSTAMP = "10779229";
                         ],
                       }),
                       !this.props.nostatus &&
-                        (0, i.jsx)(Ee, { chat: this.props.chat }),
+                        (0, i.jsx)(Fe, { chat: this.props.chat }),
                     ],
                   }),
                   (e || t) &&
@@ -56946,9 +56836,9 @@ var CLSTAMP = "10779229";
             );
           }
         };
-        (0, s.Cg)([D.oI], Ne.prototype, "ActivateActiveVoiceChat", null),
-          (Ne = (0, s.Cg)([b.PA], Ne));
-        let je = class extends y.Component {
+        (0, s.Cg)([D.oI], Oe.prototype, "ActivateActiveVoiceChat", null),
+          (Oe = (0, s.Cg)([b.PA], Oe));
+        let Ne = class extends y.Component {
           ToggleMicrophone(e) {
             u.xm.VoiceStore.IsMicMuted() &&
               u.xm.VoiceStore.IsOutputMuted() &&
@@ -56972,7 +56862,7 @@ var CLSTAMP = "10779229";
                   ? (0, M.we)("#VoiceChat_ChromeSampleRateTooHighMicExplainer")
                   : (0, M.we)("#VoiceChat_DeniedMicrophoneAccess"))),
               n && (s += " disabled"),
-              (0, i.jsx)(Se.fu, {
+              (0, i.jsx)(fe.fu, {
                 className: s,
                 onClick: this.ToggleMicrophone,
                 onOKActionDescription: o,
@@ -56988,9 +56878,9 @@ var CLSTAMP = "10779229";
             );
           }
         };
-        (0, s.Cg)([D.oI], je.prototype, "ToggleMicrophone", null),
-          (je = (0, s.Cg)([b.PA], je));
-        let Ve = class extends y.Component {
+        (0, s.Cg)([D.oI], Ne.prototype, "ToggleMicrophone", null),
+          (Ne = (0, s.Cg)([b.PA], Ne));
+        let je = class extends y.Component {
           ToggleVoiceOutput(e) {
             u.xm.VoiceStore.IsOutputMuted() == u.xm.VoiceStore.IsMicMuted() &&
               u.xm.VoiceStore.ToggleMicMuting(),
@@ -57006,7 +56896,7 @@ var CLSTAMP = "10779229";
               (n = e
                 ? (0, M.we)("#VoiceChat_UnmuteSpeaker")
                 : (0, M.we)("#VoiceChat_MuteSpeaker")),
-              (0, i.jsx)(Se.fu, {
+              (0, i.jsx)(fe.fu, {
                 className: t,
                 onClick: this.ToggleVoiceOutput,
                 onOKActionDescription: n,
@@ -57022,15 +56912,15 @@ var CLSTAMP = "10779229";
             );
           }
         };
-        (0, s.Cg)([D.oI], Ve.prototype, "ToggleVoiceOutput", null),
-          (Ve = (0, s.Cg)([b.PA], Ve));
-        let Ue = class extends y.Component {
+        (0, s.Cg)([D.oI], je.prototype, "ToggleVoiceOutput", null),
+          (je = (0, s.Cg)([b.PA], je));
+        let Ve = class extends y.Component {
           static contextType = o.QO;
           EndVoiceChat(e) {
             u.xm.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
           }
           render() {
-            return (0, i.jsx)(Se.fu, {
+            return (0, i.jsx)(fe.fu, {
               className: "VoiceControlPanelButton chatEndVoiceChat",
               onClick: this.EndVoiceChat,
               title: (0, M.we)("#VoiceChat_Leave"),
@@ -57042,9 +56932,9 @@ var CLSTAMP = "10779229";
             });
           }
         };
-        (0, s.Cg)([D.oI], Ue.prototype, "EndVoiceChat", null),
-          (Ue = (0, s.Cg)([b.PA], Ue));
-        class He extends y.Component {
+        (0, s.Cg)([D.oI], Ve.prototype, "EndVoiceChat", null),
+          (Ve = (0, s.Cg)([b.PA], Ve));
+        class Ue extends y.Component {
           constructor(e) {
             super(e);
           }
@@ -57055,7 +56945,7 @@ var CLSTAMP = "10779229";
             );
           }
         }
-        const We = (e) => {
+        const He = (e) => {
             e.fnOnToggleViewingIncomingInvites;
             let [t, n] = y.useState(u.xm.UIStore.FriendsListSteamDeckActiveTab),
               s = y.useRef(u.xm.UIStore.FriendsListSteamDeckActiveTab),
@@ -57100,7 +56990,7 @@ var CLSTAMP = "10779229";
               );
             };
             return (0, i.jsxs)(w.Z, {
-              navEntryPreferPosition: ve.iU.PREFERRED_CHILD,
+              navEntryPreferPosition: Se.iU.PREFERRED_CHILD,
               style: { width: "100%", height: "100%" },
               children: [
                 (0, i.jsxs)("div", {
@@ -57110,7 +57000,7 @@ var CLSTAMP = "10779229";
                       className: "TabPanelHeader",
                       children: [
                         e.rgTabs[t].strTabContentTitle,
-                        t == we.Jw.FriendsList &&
+                        t == ye.Jw.FriendsList &&
                           (0, i.jsxs)(w.Z, {
                             className: "FriendActionsContainer",
                             children: [
@@ -57141,7 +57031,7 @@ var CLSTAMP = "10779229";
                               }),
                             ],
                           }),
-                        t == we.Jw.GroupChats &&
+                        t == ye.Jw.GroupChats &&
                           (0, i.jsx)(w.Z, {
                             className: "FriendActionsContainer",
                             children: (0, i.jsx)(w.Z, {
@@ -57162,20 +57052,20 @@ var CLSTAMP = "10779229";
                     (0, i.jsxs)(w.Z, {
                       className: "FriendsListSteamDeckTabs",
                       "flow-children": "row",
-                      navEntryPreferPosition: ve.iU.PREFERRED_CHILD,
+                      navEntryPreferPosition: Se.iU.PREFERRED_CHILD,
                       children: [
                         (0, i.jsx)(w.Z, {
                           className: (0, pe.A)(ge.TabBumper, ge.Previous),
                           onActivate: () => l(-1),
                           focusable: !1,
-                          children: (0, i.jsx)(Be.Bh, {
-                            actionButton: ye.g4.LeftBumper,
+                          children: (0, i.jsx)(Ge.Bh, {
+                            actionButton: Ie.g4.LeftBumper,
                             className: ge.BumperIcon,
                           }),
                         }),
                         e.rgTabs.map((e, n) =>
                           (0, i.jsx)(
-                            Ke,
+                            qe,
                             {
                               navRef: o.get(e.eTab),
                               tab: e.eTab,
@@ -57192,8 +57082,8 @@ var CLSTAMP = "10779229";
                           className: (0, pe.A)(ge.TabBumper, ge.Next),
                           onActivate: () => l(1),
                           focusable: !1,
-                          children: (0, i.jsx)(Be.Bh, {
-                            actionButton: ye.g4.RightBumper,
+                          children: (0, i.jsx)(Ge.Bh, {
+                            actionButton: Ie.g4.RightBumper,
                             className: ge.BumperIcon,
                           }),
                         }),
@@ -57201,23 +57091,23 @@ var CLSTAMP = "10779229";
                     }),
                   ],
                 }),
-                (0, i.jsx)(qe, { rgTabs: e.rgTabs, activeTab: t }),
+                (0, i.jsx)(ze, { rgTabs: e.rgTabs, activeTab: t }),
               ],
             });
           },
-          ze = (e, t) => {
+          We = (e, t) => {
             let n;
             switch (e) {
-              case we.Jw.Favorites:
+              case ye.Jw.Favorites:
                 n = "FavoritesTabList";
                 break;
-              case we.Jw.FriendsList:
+              case ye.Jw.FriendsList:
                 n = "FriendsTabList";
                 break;
-              case we.Jw.GroupChats:
+              case ye.Jw.GroupChats:
                 n = "GroupsTabList";
                 break;
-              case we.Jw.RecentMessages:
+              case ye.Jw.RecentMessages:
                 n = "RecentMessagesTabList";
                 break;
               default:
@@ -57228,7 +57118,7 @@ var CLSTAMP = "10779229";
               e < t ? "beforeActiveTab" : e == t ? "" : "afterActiveTab",
             );
           };
-        function qe(e) {
+        function ze(e) {
           const { rgTabs: t, activeTab: n } = e,
             s = y.useRef(n),
             o = y.useRef(void 0),
@@ -57250,9 +57140,9 @@ var CLSTAMP = "10779229";
                   a = e.eTab === s.current,
                   l = t ? r : a ? o : null;
                 return (0, i.jsx)(
-                  Ze,
+                  Ke,
                   {
-                    className: ze(e.eTab, n),
+                    className: We(e.eTab, n),
                     navRef: l,
                     bActiveTab: t,
                     children: e.tabContentElement,
@@ -57263,7 +57153,7 @@ var CLSTAMP = "10779229";
             })
           );
         }
-        const Ke = y.forwardRef(function (e, t) {
+        const qe = y.forwardRef(function (e, t) {
             let { tab: n, activeTab: s, fnSetActiveTab: o, ...r } = e;
             const a = n == s;
             return (0, i.jsx)(w.Z, {
@@ -57276,7 +57166,7 @@ var CLSTAMP = "10779229";
               ref: t,
             });
           }),
-          Ze = y.forwardRef(function (e, t) {
+          Ke = y.forwardRef(function (e, t) {
             let {
               bActiveTab: n,
               className: s,
@@ -57310,7 +57200,7 @@ var CLSTAMP = "10779229";
                       }
                       s.current &&
                         o.current &&
-                        (s.current.RestoreFocusSnapshot(o.current, Me.GV),
+                        (s.current.RestoreFocusSnapshot(o.current, Te.GV),
                         (o.current = void 0));
                     }
                   }, [e, r]),
@@ -57327,7 +57217,7 @@ var CLSTAMP = "10779229";
               children: c && r,
             });
           });
-        function Xe() {
+        function Ze() {
           let e = !1,
             t = (0, I.q3)(() => {
               let t = 0;
@@ -57360,7 +57250,7 @@ var CLSTAMP = "10779229";
             ],
           });
         }
-        let $e = class extends He {
+        let Xe = class extends Ue {
           m_navRef = null;
           m_fnUnregisterMessages;
           constructor(e) {
@@ -57387,7 +57277,7 @@ var CLSTAMP = "10779229";
           OnMessage(e, t, n) {
             "FriendsList" == e &&
               "ShowInvitesList" == t &&
-              ((u.xm.UIStore.FriendsListSteamDeckActiveTab = we.Jw.FriendsList),
+              ((u.xm.UIStore.FriendsListSteamDeckActiveTab = ye.Jw.FriendsList),
               this.SetInviteListVisibility(!0));
           }
           OnSearchSelection() {
@@ -57436,7 +57326,7 @@ var CLSTAMP = "10779229";
                 (c += " FriendRequestViewActive");
             const d = [
               {
-                eTab: we.Jw.Favorites,
+                eTab: ye.Jw.Favorites,
                 strTabContentTitle: (0, M.we)("#FriendGroup_Favorites"),
                 tabElement: (0, i.jsx)(z.Em3, {}),
                 tabContentElement: (0, i.jsx)(L, {
@@ -57444,12 +57334,12 @@ var CLSTAMP = "10779229";
                 }),
               },
               {
-                eTab: we.Jw.FriendsList,
+                eTab: ye.Jw.FriendsList,
                 strTabContentTitle: (0, M.we)("#Label_Friends"),
                 tabElement: (0, i.jsx)(z.GSe, {
                   bShowArm: this.state.bViewingIncomingInvites,
                 }),
-                tabContentElement: (0, i.jsx)(it, {
+                tabContentElement: (0, i.jsx)(nt, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                   searchString: e,
@@ -57462,19 +57352,19 @@ var CLSTAMP = "10779229";
                 }),
               },
               {
-                eTab: we.Jw.GroupChats,
+                eTab: ye.Jw.GroupChats,
                 strTabContentTitle: (0, M.we)("#Label_Groups"),
                 tabElement: (0, i.jsx)(z.YJl, {}),
-                tabContentElement: (0, i.jsx)(ot, {
+                tabContentElement: (0, i.jsx)(st, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                 }),
               },
               {
-                eTab: we.Jw.RecentMessages,
+                eTab: ye.Jw.RecentMessages,
                 strTabContentTitle: (0, M.we)("#FriendGroup_Recent"),
-                tabElement: (0, i.jsx)(Xe, {}),
-                tabContentElement: (0, i.jsx)(Re, {}),
+                tabElement: (0, i.jsx)(Ze, {}),
+                tabContentElement: (0, i.jsx)(Ae, {}),
               },
             ];
             return (0, i.jsxs)(w.Z, {
@@ -57482,14 +57372,15 @@ var CLSTAMP = "10779229";
               "flow-children": "column",
               onButtonDown: (e) => {
                 const t = e.detail.button;
-                t == be.pR.BUMPER_LEFT
+                t == ve.pR.BUMPER_LEFT
                   ? (u.xm.UIStore.SelectFriendsListSteamDeckSiblingTab(-1),
                     e.stopPropagation())
-                  : t == be.pR.BUMPER_RIGHT
+                  : t == ve.pR.BUMPER_RIGHT
                     ? (u.xm.UIStore.SelectFriendsListSteamDeckSiblingTab(1),
                       e.stopPropagation())
-                    : t == be.pR.SELECT &&
-                      (0, Fe.w4)(e, this.props.bQuickAccess, this.props.appID);
+                    : t == ve.pR.SELECT &&
+                      ((0, Be.w4)(e, this.props.bQuickAccess, this.props.appID),
+                      e.stopPropagation());
               },
               navRef: this.m_navRef,
               children: [
@@ -57497,13 +57388,13 @@ var CLSTAMP = "10779229";
                   className: (0, pe.A)(
                     "friendListHeaderContainer",
                     "titleBarContainer",
-                    (0, ke.Pr)() && "OSX",
+                    (0, De.Pr)() && "OSX",
                   ),
                   children: (0, i.jsx)("div", {
                     className: "disconnectBlocker",
                   }),
                 }),
-                (0, i.jsx)(We, {
+                (0, i.jsx)(He, {
                   friends: this.props.friends,
                   rgTabs: d,
                   fnOnToggleViewingIncomingInvites:
@@ -57513,14 +57404,14 @@ var CLSTAMP = "10779229";
             });
           }
         };
-        (0, s.Cg)([D.oI], $e.prototype, "OnMessage", null),
-          (0, s.Cg)([D.oI], $e.prototype, "OnSearchSelection", null),
-          (0, s.Cg)([D.oI], $e.prototype, "StartSearchOnKeyPress", null),
-          (0, s.Cg)([D.oI], $e.prototype, "SetInviteListVisibility", null),
-          (0, s.Cg)([D.oI], $e.prototype, "ToggleViewingIncomingInvites", null),
-          ($e = (0, s.Cg)([b.PA], $e));
-        const Qe = y.createContext({ bInQam: !1, appID: void 0 });
-        let Ye = class extends He {
+        (0, s.Cg)([D.oI], Xe.prototype, "OnMessage", null),
+          (0, s.Cg)([D.oI], Xe.prototype, "OnSearchSelection", null),
+          (0, s.Cg)([D.oI], Xe.prototype, "StartSearchOnKeyPress", null),
+          (0, s.Cg)([D.oI], Xe.prototype, "SetInviteListVisibility", null),
+          (0, s.Cg)([D.oI], Xe.prototype, "ToggleViewingIncomingInvites", null),
+          (Xe = (0, s.Cg)([b.PA], Xe));
+        const $e = y.createContext({ bInQam: !1, appID: void 0 });
+        let Qe = class extends Ue {
           m_animationTabLabelCollapse;
           m_elTabLabel;
           m_tabLabelWidth;
@@ -57733,7 +57624,7 @@ var CLSTAMP = "10779229";
                   className: (0, pe.A)(
                     "friendListHeaderContainer",
                     "titleBarContainer",
-                    (0, ke.Pr)() && "OSX",
+                    (0, De.Pr)() && "OSX",
                   ),
                   children: [
                     this.props.popup &&
@@ -57755,7 +57646,7 @@ var CLSTAMP = "10779229";
                           children: (0, i.jsx)(z.F2T, {}),
                         }),
                       }),
-                    (0, i.jsx)(st, {
+                    (0, i.jsx)(tt, {
                       popup: this.props.popup && this.props.popup,
                       currentUser: e,
                     }),
@@ -57788,12 +57679,12 @@ var CLSTAMP = "10779229";
                             children:
                               _ &&
                               (0, i.jsx)(
-                                Ge.M,
+                                Le.M,
                                 {
                                   classNames: "activevoice-anim",
                                   timeout: 500,
                                   children: (e) =>
-                                    (0, i.jsx)(Oe, {
+                                    (0, i.jsx)(Ee, {
                                       chats: this.props.chats,
                                       containerRef: e,
                                     }),
@@ -57801,7 +57692,7 @@ var CLSTAMP = "10779229";
                                 "activeVoiceControls1",
                               ),
                           }),
-                          (0, i.jsx)(nt, {
+                          (0, i.jsx)(et, {
                             browserContext: this.props.browserContext,
                           }),
                           (0, i.jsx)(G, {
@@ -57837,7 +57728,7 @@ var CLSTAMP = "10779229";
                                             children:
                                               n &&
                                               (0, i.jsx)(
-                                                Ge.M,
+                                                Le.M,
                                                 {
                                                   classNames: "tab-search-anim",
                                                   timeout: 500,
@@ -57928,7 +57819,7 @@ var CLSTAMP = "10779229";
                                           }),
                                         ],
                                       }),
-                                      (0, i.jsx)(Je, {
+                                      (0, i.jsx)(Ye, {
                                         fnToggleViewingIncomingInvites:
                                           this.ToggleViewingIncomingInvites,
                                         bViewingIncomingInvites:
@@ -57984,7 +57875,7 @@ var CLSTAMP = "10779229";
                         ],
                       }),
                     })
-                  : (0, i.jsx)(it, {
+                  : (0, i.jsx)(nt, {
                       friends: this.props.friends,
                       chats: this.props.chats,
                       searchString: t,
@@ -57997,29 +57888,29 @@ var CLSTAMP = "10779229";
                     }),
                 (0, i.jsx)("div", {
                   className: "friendListFooter",
-                  children: (0, i.jsx)(tt, {}),
+                  children: (0, i.jsx)(Je, {}),
                 }),
               ],
             });
           }
         };
-        (0, s.Cg)([D.oI], Ye.prototype, "OnSearchInputRef", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "StartSearchOnKeyPress", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnSearchInput", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnSearchSubmit", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnSearchSelection", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnSearchKeyDown", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnClearSearch", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnSettingsClick", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "ToggleCollapseExpand", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnDoFriendsListUpdate", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "BindTabLabel", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "CollapseTabLabel", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "OnTabSearchClick", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "ToggleViewingIncomingInvites", null),
-          (0, s.Cg)([D.oI], Ye.prototype, "SignIn", null),
-          (Ye = (0, s.Cg)([b.PA], Ye));
-        const Je = (0, b.PA)(function (e) {
+        (0, s.Cg)([D.oI], Qe.prototype, "OnSearchInputRef", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "StartSearchOnKeyPress", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnSearchInput", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnSearchSubmit", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnSearchSelection", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnSearchKeyDown", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnClearSearch", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnSettingsClick", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "ToggleCollapseExpand", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnDoFriendsListUpdate", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "BindTabLabel", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "CollapseTabLabel", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "OnTabSearchClick", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "ToggleViewingIncomingInvites", null),
+          (0, s.Cg)([D.oI], Qe.prototype, "SignIn", null),
+          (Qe = (0, s.Cg)([b.PA], Qe));
+        const Ye = (0, b.PA)(function (e) {
           const {
               fnToggleViewingIncomingInvites: t,
               bViewingIncomingInvites: n,
@@ -58060,30 +57951,7 @@ var CLSTAMP = "10779229";
               : null
           );
         });
-        class et extends y.Component {
-          render() {
-            let e =
-              o.TS.COMMUNITY_BASE_URL + "groups/SteamClientBeta/discussions/3/";
-            return u.xm.IsInBeta()
-              ? (0, i.jsx)("div", {
-                  className: "betaFeedbackLabel",
-                  children: (0, M.PP)(
-                    "#GiveFeedbackToSteam_Desc",
-                    (0, i.jsxs)(N.uU, {
-                      href: e,
-                      className: "betaFeedbackAnchor",
-                      children: [
-                        " ",
-                        (0, M.we)("#GiveFeedbackToSteam_URL"),
-                        " ",
-                      ],
-                    }),
-                  ),
-                })
-              : null;
-          }
-        }
-        let tt = class extends y.Component {
+        let Je = class extends y.Component {
           constructor(e) {
             super(e);
           }
@@ -58092,16 +57960,16 @@ var CLSTAMP = "10779229";
           }
           render() {
             return (0, i.jsx)(y.Fragment, {
-              children: (0, i.jsxs)("div", {
+              children: (0, i.jsx)("div", {
                 className: "flexRowCentered",
-                children: [!1, (0, i.jsx)(et, {})],
+                children: !1,
               }),
             });
           }
         };
-        (0, s.Cg)([D.oI], tt.prototype, "OnSettingsZooClick", null),
-          (tt = (0, s.Cg)([b.PA], tt));
-        const nt = (0, b.PA)((e) => {
+        (0, s.Cg)([D.oI], Je.prototype, "OnSettingsZooClick", null),
+          (Je = (0, s.Cg)([b.PA], Je));
+        const et = (0, b.PA)((e) => {
             const { browserContext: t } = e,
               n = (0, I.q3)(() => u.xm.FriendStore.self.persona.m_gameid),
               s = (function () {
@@ -58125,7 +57993,7 @@ var CLSTAMP = "10779229";
                 );
               })(),
               [o, r] = (0, h.PJ)("bRemotePlayLinkHintDismissed"),
-              [a, l] = (0, Pe.l)();
+              [a, l] = (0, ke.l)();
             if (!s) return null;
             const c = (0, M.we)("#RemotePlay_LinkCopyTitle");
             return (0, i.jsxs)("div", {
@@ -58215,10 +58083,10 @@ var CLSTAMP = "10779229";
               ],
             });
           }),
-          st = (0, b.PA)(function (e) {
+          tt = (0, b.PA)(function (e) {
             const { currentUser: t, popup: n } = e,
-              s = (0, ke.Qn)(),
-              o = (0, Le.Uy)(t.persona.m_unGamePlayedAppID);
+              s = (0, De.Qn)(),
+              o = (0, Pe.Uy)(t.persona.m_unGamePlayedAppID);
             (0, y.useEffect)(() => {
               t.LoadEquippedProfileItems();
             });
@@ -58312,7 +58180,7 @@ var CLSTAMP = "10779229";
                   className: "AvatarAndUser",
                   onContextMenu: r,
                   children: [
-                    (0, i.jsx)(gt, {
+                    (0, i.jsx)(pt, {
                       friend: t,
                       context: { chatContext: "friendslist" },
                       onContextMenu: r,
@@ -58341,7 +58209,7 @@ var CLSTAMP = "10779229";
               ],
             });
           });
-        let it = class extends y.Component {
+        let nt = class extends y.Component {
           static contextType = o.QO;
           m_elFriendsListContent;
           m_elFriendsListScroll;
@@ -58547,7 +58415,7 @@ var CLSTAMP = "10779229";
                           ],
                         }),
                       }),
-                    (0, i.jsx)(ct, {
+                    (0, i.jsx)(at, {
                       group:
                         this.props.friends.FriendGroupStore
                           .incoming_invites_group,
@@ -58556,7 +58424,7 @@ var CLSTAMP = "10779229";
                       onClose: this.props.onClose,
                       bInOverlay: r,
                     }),
-                    (0, i.jsx)(ct, {
+                    (0, i.jsx)(at, {
                       group:
                         this.props.friends.FriendGroupStore
                           .outgoing_invites_group,
@@ -58568,7 +58436,7 @@ var CLSTAMP = "10779229";
                   ],
                 });
               } else if (t)
-                e = (0, i.jsx)(ct, {
+                e = (0, i.jsx)(at, {
                   group: this.props.friends.FriendGroupStore.all_friends,
                   collapsed: !1,
                   bInOverlay: r,
@@ -58578,7 +58446,7 @@ var CLSTAMP = "10779229";
                 let t = this.props.friends.FriendGroupStore.user_groups.map(
                     (e) =>
                       (0, i.jsx)(
-                        ct,
+                        at,
                         {
                           group: e,
                           groupDisplayPrefs:
@@ -58593,7 +58461,7 @@ var CLSTAMP = "10779229";
                   n = this.props.friends.FriendGroupStore.default_groups.map(
                     (e) =>
                       (0, i.jsx)(
-                        ct,
+                        at,
                         {
                           group: e,
                           groupDisplayPrefs:
@@ -58615,12 +58483,12 @@ var CLSTAMP = "10779229";
                         !this.context?.IN_GAMEPADUI &&
                         (0, i.jsx)("div", {
                           className: "recentChatsGroup unreadChatsGroup",
-                          children: (0, i.jsx)(wt, {
+                          children: (0, i.jsx)(It, {
                             friendChatStore: this.props.chats.FriendChatStore,
                             browserContext: this.props.browserContext,
                           }),
                         }),
-                      (0, i.jsx)(lt, { bInOverlay: r }),
+                      (0, i.jsx)(rt, { bInOverlay: r }),
                       t,
                       n,
                     ],
@@ -58637,7 +58505,7 @@ var CLSTAMP = "10779229";
               children: [
                 (0, i.jsx)(_e.H, {}),
                 !this.context?.IN_GAMEPADUI &&
-                  (0, i.jsx)(yt, {
+                  (0, i.jsx)(bt, {
                     browserContext: this.props.browserContext,
                     bScrolledFromTop: this.state.bScrolledFromTop && !t,
                     onClick: this.ScrollToTop,
@@ -58667,7 +58535,7 @@ var CLSTAMP = "10779229";
                 }),
                 (0, i.jsx)(_e.P, {}),
                 !s &&
-                  (0, i.jsx)(rt, {
+                  (0, i.jsx)(it, {
                     friends: this.props.friends,
                     chats: this.props.chats,
                     parent: this,
@@ -58676,14 +58544,14 @@ var CLSTAMP = "10779229";
             });
           }
         };
-        (0, s.Cg)([D.oI], it.prototype, "OnContextMenu", null),
-          (0, s.Cg)([D.oI], it.prototype, "BindFriendsListContent", null),
-          (0, s.Cg)([D.oI], it.prototype, "OnFriendsListKeyDown", null),
-          (0, s.Cg)([D.oI], it.prototype, "OnFriendsListScrollRef", null),
-          (0, s.Cg)([D.oI], it.prototype, "ScrollToTop", null),
-          (0, s.Cg)([D.oI], it.prototype, "OnScrollFriendsList", null),
-          (it = (0, s.Cg)([b.PA], it));
-        class ot extends y.Component {
+        (0, s.Cg)([D.oI], nt.prototype, "OnContextMenu", null),
+          (0, s.Cg)([D.oI], nt.prototype, "BindFriendsListContent", null),
+          (0, s.Cg)([D.oI], nt.prototype, "OnFriendsListKeyDown", null),
+          (0, s.Cg)([D.oI], nt.prototype, "OnFriendsListScrollRef", null),
+          (0, s.Cg)([D.oI], nt.prototype, "ScrollToTop", null),
+          (0, s.Cg)([D.oI], nt.prototype, "OnScrollFriendsList", null),
+          (nt = (0, s.Cg)([b.PA], nt));
+        class st extends y.Component {
           constructor(e) {
             super(e);
           }
@@ -58697,9 +58565,9 @@ var CLSTAMP = "10779229";
             });
           }
         }
-        let rt = class extends y.Component {
+        let it = class extends y.Component {
           static {
-            De = this;
+            Me = this;
           }
           static s_pxGroupChatsAutoCollapseThreshold = 45;
           m_elChatRoomTitleContainer;
@@ -58904,7 +58772,7 @@ var CLSTAMP = "10779229";
                 this.UnregisterChatRoomListDragEvents,
               ),
               this.state.nChatRoomListContainerHeight <
-              De.s_pxGroupChatsAutoCollapseThreshold
+              Me.s_pxGroupChatsAutoCollapseThreshold
                 ? (h.ZM.SetUIDisplayPref(
                     "nChatRoomListHeightPx",
                     this.state.nChatRoomListPreCollapseHeight,
@@ -58998,27 +58866,27 @@ var CLSTAMP = "10779229";
             );
           }
         };
-        (0, s.Cg)([D.oI], rt.prototype, "UpdateChatSectionSize", null),
-          (0, s.Cg)([D.oI], rt.prototype, "OnChatSectionMutation", null),
-          (0, s.Cg)([D.oI], rt.prototype, "BindChatRoomTitleContainer", null),
-          (0, s.Cg)([D.oI], rt.prototype, "BindChatRoomListContainer", null),
-          (0, s.Cg)([D.oI], rt.prototype, "BindChatSection", null),
-          (0, s.Cg)([D.oI], rt.prototype, "OnGrabberMouseDown", null),
-          (0, s.Cg)([D.oI], rt.prototype, "OnGrabberTouchStart", null),
-          (0, s.Cg)([D.oI], rt.prototype, "HandleTouchMove", null),
-          (0, s.Cg)([D.oI], rt.prototype, "HandleMouseMove", null),
-          (0, s.Cg)([D.oI], rt.prototype, "OnMouseEnter", null),
-          (0, s.Cg)([D.oI], rt.prototype, "OnMouseLeave", null),
-          (0, s.Cg)([D.oI], rt.prototype, "ToggleChatsList", null),
+        (0, s.Cg)([D.oI], it.prototype, "UpdateChatSectionSize", null),
+          (0, s.Cg)([D.oI], it.prototype, "OnChatSectionMutation", null),
+          (0, s.Cg)([D.oI], it.prototype, "BindChatRoomTitleContainer", null),
+          (0, s.Cg)([D.oI], it.prototype, "BindChatRoomListContainer", null),
+          (0, s.Cg)([D.oI], it.prototype, "BindChatSection", null),
+          (0, s.Cg)([D.oI], it.prototype, "OnGrabberMouseDown", null),
+          (0, s.Cg)([D.oI], it.prototype, "OnGrabberTouchStart", null),
+          (0, s.Cg)([D.oI], it.prototype, "HandleTouchMove", null),
+          (0, s.Cg)([D.oI], it.prototype, "HandleMouseMove", null),
+          (0, s.Cg)([D.oI], it.prototype, "OnMouseEnter", null),
+          (0, s.Cg)([D.oI], it.prototype, "OnMouseLeave", null),
+          (0, s.Cg)([D.oI], it.prototype, "ToggleChatsList", null),
           (0, s.Cg)(
             [D.oI],
-            rt.prototype,
+            it.prototype,
             "UnregisterChatRoomListDragEvents",
             null,
           ),
-          (0, s.Cg)([D.oI], rt.prototype, "OnCreateChatRoom", null),
-          (rt = De = (0, s.Cg)([b.PA], rt));
-        class at extends y.Component {
+          (0, s.Cg)([D.oI], it.prototype, "OnCreateChatRoom", null),
+          (it = Me = (0, s.Cg)([b.PA], it));
+        class ot extends y.Component {
           GetDragDropProps(e = !0) {
             let t = { rgAcceptedTypes: [] };
             return (
@@ -59090,12 +58958,12 @@ var CLSTAMP = "10779229";
             }
           }
         }
-        (0, s.Cg)([D.oI], at.prototype, "OnDragStart", null),
-          (0, s.Cg)([D.oI], at.prototype, "OnDragEnd", null),
-          (0, s.Cg)([D.oI], at.prototype, "OnDragEnter", null),
-          (0, s.Cg)([D.oI], at.prototype, "OnDragLeave", null),
-          (0, s.Cg)([D.oI], at.prototype, "OnDrop", null);
-        const lt = (0, b.PA)((e) => {
+        (0, s.Cg)([D.oI], ot.prototype, "OnDragStart", null),
+          (0, s.Cg)([D.oI], ot.prototype, "OnDragEnd", null),
+          (0, s.Cg)([D.oI], ot.prototype, "OnDragEnter", null),
+          (0, s.Cg)([D.oI], ot.prototype, "OnDragLeave", null),
+          (0, s.Cg)([D.oI], ot.prototype, "OnDrop", null);
+        const rt = (0, b.PA)((e) => {
           if (
             !u.xm.SettingsStore.FriendsSettings.bCategorizeInGameFriendsByGame
           )
@@ -59103,7 +58971,7 @@ var CLSTAMP = "10779229";
           let t = u.xm.FriendStore.FriendGroupStore.game_groups,
             n = t.map((t) =>
               (0, i.jsx)(
-                mt,
+                ht,
                 {
                   group: t,
                   bSingletonGroup: !1,
@@ -59120,7 +58988,7 @@ var CLSTAMP = "10779229";
             s &&
               n.push(
                 (0, i.jsx)(
-                  mt,
+                  ht,
                   {
                     group: s,
                     bSingletonGroup: !0,
@@ -59135,12 +59003,12 @@ var CLSTAMP = "10779229";
             (0, i.jsx)(y.Fragment, { children: n })
           );
         });
-        function ct(e) {
+        function at(e) {
           const t = (0, k.R7)(),
             n = (0, h._k)(t.ownerWindow);
-          return (0, i.jsx)(dt, { browserContext: n, ...e });
+          return (0, i.jsx)(lt, { browserContext: n, ...e });
         }
-        let dt = class extends at {
+        let lt = class extends ot {
           static contextType = o.QO;
           m_actions = v.sH.map();
           containerRef = y.createRef();
@@ -59448,7 +59316,7 @@ var CLSTAMP = "10779229";
                     });
                 s.push(
                   (0, i.jsx)(
-                    Ge.M,
+                    Le.M,
                     {
                       className: r
                         ? "friendInviteContainer" + l
@@ -59460,7 +59328,7 @@ var CLSTAMP = "10779229";
                           ref: n,
                           children: [
                             (0, i.jsx)(
-                              Ct,
+                              _t,
                               {
                                 friend: e,
                                 className: d,
@@ -59660,7 +59528,7 @@ var CLSTAMP = "10779229";
                     r &&
                       !this.context?.IN_GAMEPADUI &&
                       (0, i.jsx)(
-                        Ge.M,
+                        Le.M,
                         {
                           classNames: "opacityfade-anim",
                           timeout: 320,
@@ -59719,9 +59587,9 @@ var CLSTAMP = "10779229";
             });
           }
         };
-        function ht(e, t, n) {
+        function ct(e, t, n) {
           return (0, U.lX)(
-            (0, i.jsx)(ut, {
+            (0, i.jsx)(dt, {
               browserContext: e,
               appid: t,
               ownerWindow: n.currentTarget.ownerDocument.defaultView,
@@ -59729,18 +59597,18 @@ var CLSTAMP = "10779229";
             n,
           );
         }
-        (0, s.Cg)([D.oI], dt.prototype, "ToggleCollapsed", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnContextMenu", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnFriendSelected", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnAcceptInvite", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnDeclineInvite", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnBlockInvite", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnConfirmChanges", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnIgnoreAllInvites", null),
-          (0, s.Cg)([D.oI], dt.prototype, "OnCloseInvites", null),
-          (0, s.Cg)([D.oI], dt.prototype, "ToggleOfflineSortMethod", null),
-          (dt = (0, s.Cg)([b.PA], dt));
-        class ut extends y.PureComponent {
+        (0, s.Cg)([D.oI], lt.prototype, "ToggleCollapsed", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnContextMenu", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnFriendSelected", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnAcceptInvite", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnDeclineInvite", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnBlockInvite", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnConfirmChanges", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnIgnoreAllInvites", null),
+          (0, s.Cg)([D.oI], lt.prototype, "OnCloseInvites", null),
+          (0, s.Cg)([D.oI], lt.prototype, "ToggleOfflineSortMethod", null),
+          (lt = (0, s.Cg)([b.PA], lt));
+        class dt extends y.PureComponent {
           render() {
             return (0, i.jsx)(W.tz, {
               children: (0, i.jsx)(_.Rm, {
@@ -59750,21 +59618,24 @@ var CLSTAMP = "10779229";
             });
           }
         }
-        function mt(e) {
+        function ht(e) {
           const t = (0, k.R7)(),
             n = (0, h._k)(t.ownerWindow);
-          return (0, i.jsx)(pt, { browserContext: n, ...e });
+          return (0, i.jsx)(ut, { browserContext: n, ...e });
         }
-        let pt = class extends at {
+        let ut = class extends ot {
           constructor(e) {
             super(e),
               (this.state = {
                 bLocalCollapsed: this.props.collapsed,
                 bIsSubscribedToApp: !1,
               }),
-              fe.W.BIsSubscribedApp(this.props.group.id).then((e) => {
-                this.setState({ bIsSubscribedToApp: e });
-              });
+              "SteamClient" in globalThis &&
+                SteamClient.Apps?.GetIsSubscribedApp?.(
+                  this.props.group.id,
+                ).then((e) => {
+                  this.setState({ bIsSubscribedToApp: e });
+                });
           }
           GetGroup() {
             return this.props.group;
@@ -59802,7 +59673,7 @@ var CLSTAMP = "10779229";
             let t = this.props.group.id;
             if (t) {
               u.xm.AppInfoStore.GetAppInfo(t).is_valid &&
-                ht((0, h.CO)(e), t, e);
+                ct((0, h.CO)(e), t, e);
             }
           }
           render() {
@@ -59883,7 +59754,7 @@ var CLSTAMP = "10779229";
                               : "#FriendGroup_PlayerGroupFooter_Label_PlusYou"),
                         (t = 1 == e ? "firstInGroup" : "inGroup"),
                         (a = (0, i.jsx)(
-                          Ge.M,
+                          Le.M,
                           {
                             classNames: "friend-anim",
                             timeout: 320,
@@ -59918,7 +59789,7 @@ var CLSTAMP = "10779229";
                   e += " " + t;
                 }
                 this.props.bSingletonGroup &&
-                  (c = (0, i.jsx)(_t, {
+                  (c = (0, i.jsx)(mt, {
                     appid: l.persona.m_unGamePlayedAppID,
                   })),
                   (e += " " + A.p.hoverClass);
@@ -59931,13 +59802,13 @@ var CLSTAMP = "10779229";
                   );
                 t.push(
                   (0, i.jsx)(
-                    Ge.M,
+                    Le.M,
                     {
                       classNames: "friend-anim",
                       timeout: 320,
                       children: (t) =>
                         (0, i.jsx)(
-                          Ct,
+                          _t,
                           {
                             divRef: t,
                             friend: l,
@@ -60045,12 +59916,12 @@ var CLSTAMP = "10779229";
             );
           }
         };
-        (0, s.Cg)([D.oI], pt.prototype, "ToggleCollapsed", null),
-          (0, s.Cg)([D.oI], pt.prototype, "OnShowHeaderContextMenu", null),
-          (pt = (0, s.Cg)([b.PA], pt));
-        let _t = class extends y.Component {
+        (0, s.Cg)([D.oI], ut.prototype, "ToggleCollapsed", null),
+          (0, s.Cg)([D.oI], ut.prototype, "OnShowHeaderContextMenu", null),
+          (ut = (0, s.Cg)([b.PA], ut));
+        let mt = class extends y.Component {
           OnShowGameIconContextMenu(e) {
-            ht((0, h.CO)(e), this.props.appid, e);
+            ct((0, h.CO)(e), this.props.appid, e);
           }
           render() {
             let e =
@@ -60076,7 +59947,7 @@ var CLSTAMP = "10779229";
                 });
           }
         };
-        function gt(e) {
+        function pt(e) {
           const {
               friend: t,
               children: n,
@@ -60121,15 +59992,15 @@ var CLSTAMP = "10779229";
               })
             : n;
         }
-        (0, s.Cg)([D.oI], _t.prototype, "OnShowGameIconContextMenu", null),
-          (_t = (0, s.Cg)([b.PA], _t));
-        const Ct = (0, b.PA)((e) => {
+        (0, s.Cg)([D.oI], mt.prototype, "OnShowGameIconContextMenu", null),
+          (mt = (0, s.Cg)([b.PA], mt));
+        const _t = (0, b.PA)((e) => {
           const t = (0, k.R7)(),
             n = (0, h._k)(t.ownerWindow),
             s = !(0, P.u)(n, P.m);
-          return (0, i.jsx)(ft, { bInOverlay: s, browserContext: n, ...e });
+          return (0, i.jsx)(gt, { bInOverlay: s, browserContext: n, ...e });
         });
-        let ft = class extends y.Component {
+        let gt = class extends y.Component {
           static contextType = o.QO;
           constructor(e) {
             super(e),
@@ -60372,7 +60243,7 @@ var CLSTAMP = "10779229";
                 `${e.persona.GetAccountID()}_${e.persona.is_online}`,
               );
               a ||
-                (k = (0, i.jsx)(gt, {
+                (k = (0, i.jsx)(pt, {
                   friend: e,
                   context: o,
                   disableContextMenu: c,
@@ -60387,7 +60258,7 @@ var CLSTAMP = "10779229";
                   u.xm.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
                     e.steamid64,
                   ) && (F = "noMutualFriends"),
-                (O = () => (0, i.jsx)(St, { friend: e })));
+                (O = () => (0, i.jsx)(Ct, { friend: e })));
               let E = null;
               if (T && T.GetLastMessage()) {
                 const e = u.xm.ChatStore.NotificationBBCodeParser.ParseBBCode(
@@ -60403,7 +60274,7 @@ var CLSTAMP = "10779229";
                 E = () =>
                   (0, i.jsx)("div", {
                     className: ge.LastMessage,
-                    children: `${(e && e.body) || ((0, Te.Yj))(T.GetLastMessage())}`,
+                    children: `${(e && e.body) || ((0, Re.Yj))(T.GetLastMessage())}`,
                   });
               } else
                 e.persona.HasCurrentGameRichPresence()
@@ -60423,14 +60294,14 @@ var CLSTAMP = "10779229";
                 ...U,
                 ref: G,
                 children: [
-                  (0, i.jsx)(Ie.Y, {
+                  (0, i.jsx)(be.Y, {
                     onEnter: this.OnWaypointEnter,
                     onLeave: this.OnWaypointLeave,
                   }),
-                  (0, i.jsx)(vt, { friend: e }),
+                  (0, i.jsx)(ft, { friend: e }),
                   _ &&
                     (0, i.jsx)("div", { className: "SteamPlayerGroupLines" }),
-                  h && (0, i.jsx)(bt, { friend: e }),
+                  h && (0, i.jsx)(St, { friend: e }),
                   p,
                   k,
                   !y &&
@@ -60471,19 +60342,19 @@ var CLSTAMP = "10779229";
             return j;
           }
         };
-        (0, s.Cg)([D.oI], ft.prototype, "OnWaypointEnter", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnWaypointLeave", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnMouseEnter", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnMouseLeave", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnDoubleClick", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnClick", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnOKButton", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnDragStart", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnDragEnd", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnShowContextMenu", null),
-          (0, s.Cg)([D.oI], ft.prototype, "OnContextMenuShown", null),
-          (ft = (0, s.Cg)([b.PA], ft));
-        const St = (0, b.PA)(function (e) {
+        (0, s.Cg)([D.oI], gt.prototype, "OnWaypointEnter", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnWaypointLeave", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnMouseEnter", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnMouseLeave", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnDoubleClick", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnClick", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnOKButton", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnDragStart", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnDragEnd", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnShowContextMenu", null),
+          (0, s.Cg)([D.oI], gt.prototype, "OnContextMenuShown", null),
+          (gt = (0, s.Cg)([b.PA], gt));
+        const Ct = (0, b.PA)(function (e) {
             const { friend: t } = e;
             let n,
               s,
@@ -60512,19 +60383,19 @@ var CLSTAMP = "10779229";
               })
             );
           }),
-          vt = (0, b.PA)((e) => {
+          ft = (0, b.PA)((e) => {
             const { friend: t } = e,
               n = y.useCallback(() => t.LoadEquippedProfileItems(), [t]);
             return !t.BLoadedEquippedItems() &&
               t.persona.is_online &&
               u.xm.SettingsStore.FriendsSettings.bAnimatedAvatars
-              ? (0, i.jsx)(Ie.Y, {
+              ? (0, i.jsx)(be.Y, {
                   onEnter: n,
                   options: { rootMargin: "500px 0px 0px 0px" },
                 })
               : null;
           });
-        let bt = class extends y.Component {
+        let St = class extends y.Component {
           render() {
             let e = this.props.friend,
               t = u.xm.CMInterface.steamid.GetAccountID() == e.accountid,
@@ -60575,8 +60446,8 @@ var CLSTAMP = "10779229";
             );
           }
         };
-        bt = (0, s.Cg)([b.PA], bt);
-        let It = class extends y.Component {
+        St = (0, s.Cg)([b.PA], St);
+        let vt = class extends y.Component {
           render() {
             const {
               friend: e,
@@ -60585,7 +60456,7 @@ var CLSTAMP = "10779229";
               context: s,
               children: o,
             } = this.props;
-            return (0, i.jsx)(gt, {
+            return (0, i.jsx)(pt, {
               friend: e,
               context: s,
               children: (0, i.jsx)("div", {
@@ -60605,8 +60476,8 @@ var CLSTAMP = "10779229";
             });
           }
         };
-        It = (0, s.Cg)([b.PA], It);
-        let yt = class extends y.Component {
+        vt = (0, s.Cg)([b.PA], vt);
+        let bt = class extends y.Component {
           render() {
             let e,
               t = u.xm.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
@@ -60615,7 +60486,7 @@ var CLSTAMP = "10779229";
             return (
               this.props.bScrolledFromTop &&
                 t > 0 &&
-                (e = (0, i.jsx)(Ge.M, {
+                (e = (0, i.jsx)(Le.M, {
                   classNames: "unread-messages-anim",
                   timeout: 320,
                   children: (e) =>
@@ -60638,8 +60509,8 @@ var CLSTAMP = "10779229";
             );
           }
         };
-        yt = (0, s.Cg)([b.PA], yt);
-        let wt = class extends y.Component {
+        bt = (0, s.Cg)([b.PA], bt);
+        let It = class extends y.Component {
           constructor(e) {
             super(e), (this.state = { collapsed: !1 });
           }
@@ -60662,7 +60533,7 @@ var CLSTAMP = "10779229";
                         children: t,
                       });
                     return (0, i.jsx)(
-                      Ge.M,
+                      Le.M,
                       {
                         classNames: "friend-anim",
                         timeout: 320,
@@ -60671,7 +60542,7 @@ var CLSTAMP = "10779229";
                             ref: t,
                             className: "unreadFriend",
                             children: (0, i.jsx)(
-                              Ct,
+                              _t,
                               {
                                 friend: n,
                                 context: { chat: e },
@@ -60714,30 +60585,30 @@ var CLSTAMP = "10779229";
             });
           }
         };
-        (0, s.Cg)([D.oI], wt.prototype, "OnHeaderClick", null),
-          (wt = (0, s.Cg)([b.PA], wt));
+        (0, s.Cg)([D.oI], It.prototype, "OnHeaderClick", null),
+          (It = (0, s.Cg)([b.PA], It));
       },
-      38565: (e, t, n) => {
+      7512: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => b });
         var s = n(62540),
-          i = (n(55450), n(54757), n(41230)),
+          i = (n(83103), n(7628), n(41230)),
           o = n(63696),
-          r = n(26194),
-          a = n(85427),
-          l = n(8978),
-          c = n(74547),
+          r = n(70407),
+          a = n(31932),
+          l = n(62057),
+          c = n(94490),
           d = n(51234),
           h = n.n(d),
-          u = n(45510),
-          m = (n(97324), n(31038)),
-          p = n(45581),
-          _ = n(73511),
-          g = (n(55888), n(47778)),
-          C = n(64382),
-          f = n(90131),
-          S = n(21582);
-        n(72270);
+          u = n(61473),
+          m = (n(20155), n(71884)),
+          p = n(77154),
+          _ = n(70425),
+          g = (n(54938), n(78275)),
+          C = n(10093),
+          f = n(14792),
+          S = n(96641);
+        n(57274);
         const v = (e) => {
             const t = o.useRef(void 0);
             return (0, s.jsx)(f.x_, {
@@ -60931,7 +60802,7 @@ var CLSTAMP = "10779229";
             });
           });
       },
-      41783: (e, t, n) => {
+      15834: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => qe });
         var s = n(34629),
@@ -60939,48 +60810,48 @@ var CLSTAMP = "10779229";
           o = n(89193),
           r = n(41230),
           a = n(63696),
-          l = n(51756),
-          c = n(35296),
-          d = n(86373),
-          h = n(21582),
-          u = n(31038),
-          m = n(77545),
-          p = n(45581),
-          _ = n(35539),
-          g = n(34835),
-          C = n(11662),
-          f = n(8978),
-          S = n(84162),
-          v = n(45510),
-          b = n(42308),
-          I = n(44452),
-          y = n(99436),
-          w = n(27972),
-          x = n(55450),
-          A = n(48757),
-          R = n(64382),
-          T = n(99497),
-          M = n(26194),
-          D = n(53354),
-          k = n(80228),
-          P = n(27737),
-          L = n(18367),
-          G = n(74547),
-          B = n(91042),
-          F = n(92614);
-        var E = n(85427),
+          l = n(88071),
+          c = n(17559),
+          d = n(65264),
+          h = n(96641),
+          u = n(71884),
+          m = n(97492),
+          p = n(77154),
+          _ = n(75393),
+          g = n(18834),
+          C = n(13791),
+          f = n(62057),
+          S = n(60436),
+          v = n(61473),
+          b = n(25699),
+          I = n(54888),
+          y = n(1444),
+          w = n(68113),
+          x = n(83103),
+          A = n(3884),
+          R = n(10093),
+          T = n(97684),
+          M = n(70407),
+          D = n(73823),
+          k = n(98825),
+          P = n(94522),
+          L = n(91918),
+          G = n(94490),
+          B = n(85307),
+          F = n(74059);
+        var E = n(31932),
           O = n(94712),
           N = n.n(O),
-          j = n(97418),
+          j = n(48102),
           V = n(78325),
           U = n(90095),
-          H = n(5761),
-          W = n(71802),
-          z = n(6474),
-          q = n(98171),
+          H = n(60510),
+          W = n(97307),
+          z = n(35123),
+          q = n(37266),
           K = n(68628),
-          Z = n(44907),
-          X = n(34451);
+          Z = n(90294),
+          X = n(94270);
         const $ = (0, r.PA)((e) => {
           const { msg: t, chat: n } = e,
             { showPicker: s } = ne(n, t);
@@ -61223,14 +61094,14 @@ var CLSTAMP = "10779229";
           );
           return (0, i.jsx)("span", { className: K.ReactorName, children: t });
         }
-        var re = n(47778),
-          ae = n(96108),
-          le = n(13177),
-          ce = n(60735),
-          de = n(26054),
-          he = n(72270),
-          ue = n(63265),
-          me = n(90131);
+        var re = n(78275),
+          ae = n(55747),
+          le = n(97640),
+          ce = n(72576),
+          de = n(80915),
+          he = n(57274),
+          ue = n(7086),
+          me = n(14792);
         function pe(e) {
           const { reason: t } = e;
           let n;
@@ -63247,7 +63118,7 @@ var CLSTAMP = "10779229";
         };
         Ze = (0, s.Cg)([r.PA], Ze);
       },
-      60907: (e, t, n) => {
+      41605: (e, t, n) => {
         "use strict";
         n.d(t, {
           IO: () => Xe,
@@ -63259,24 +63130,24 @@ var CLSTAMP = "10779229";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(80228),
-          r = n(10774),
-          a = n(31038),
-          l = n(26054),
-          c = n(29439),
-          d = n(17969),
-          h = n(84162),
-          u = (n(74570), n(63696)),
+          o = n(98825),
+          r = n(37575),
+          a = n(71884),
+          l = n(80915),
+          c = n(96996),
+          d = n(31054),
+          h = n(60436),
+          u = (n(50018), n(63696)),
           m = n(41230),
-          p = n(64382),
+          p = n(10093),
           _ = n(83957),
           g = n.n(_),
           C = n(89193),
-          f = n(4709),
-          S = n(9663),
-          v = n(11662),
-          b = n(57136),
-          I = n(21582);
+          f = n(11074),
+          S = n(94058),
+          v = n(13791),
+          b = n(33411),
+          I = n(96641);
         class y {
           constructor() {
             (0, C.Gn)(this);
@@ -63387,15 +63258,15 @@ var CLSTAMP = "10779229";
             );
           })(u.useMemo(() => (e ? S.b.InitFromAccountID(e) : null), [e]));
         }
-        var A = n(51756),
-          R = n(73511),
-          T = n(8978),
+        var A = n(88071),
+          R = n(70425),
+          T = n(62057),
           M = n(96655),
           D = n.n(M),
-          k = n(96108),
-          P = n(45510),
-          L = n(34469),
-          G = n(83300);
+          k = n(55747),
+          P = n(61473),
+          L = n(5966),
+          G = n(79229);
         class B extends u.Component {
           state = {
             invite_token: "",
@@ -63406,7 +63277,7 @@ var CLSTAMP = "10779229";
           async componentDidMount() {
             const e = await g().get(
               I.TS.COMMUNITY_BASE_URL + "invites/ajaxgetall",
-              { params: { sessionid: I.TS.SESSIONID } },
+              { params: { sessionid: (0, I.KC)() } },
             );
             if (e && e.data && e.data.tokens) {
               const t = e.data.tokens.filter((e) => e.valid);
@@ -63417,7 +63288,7 @@ var CLSTAMP = "10779229";
           }
           async OnCreateInviteLink() {
             const e = new FormData();
-            e.append("sessionid", I.TS.SESSIONID),
+            e.append("sessionid", (0, I.KC)()),
               e.append("steamid_user", I.iA.steamid),
               e.append("duration", (2592e3).toString());
             const t = await g().post(
@@ -63440,7 +63311,7 @@ var CLSTAMP = "10779229";
           }
           async OnAddFriend(e) {
             const t = new FormData();
-            t.append("sessionID", I.TS.SESSIONID),
+            t.append("sessionID", (0, I.KC)()),
               t.append("steamid", e),
               t.append("accept_invite", "0");
             try {
@@ -63642,7 +63513,7 @@ var CLSTAMP = "10779229";
           }
           async OnActionClick(e) {
             const t = new FormData();
-            t.append("sessionID", I.TS.SESSIONID),
+            t.append("sessionID", (0, I.KC)()),
               t.append("steamid", e),
               t.append("accept_invite", "0"),
               this.setState({ disable_send_invite: !0 });
@@ -63795,16 +63666,16 @@ var CLSTAMP = "10779229";
               })
             : null;
         };
-        var O = n(47778),
-          N = n(91644),
-          j = n(42308),
-          V = n(21697),
-          U = n(58322),
-          H = n(26194),
-          W = n(74547),
-          z = n(99497),
-          q = n(90131),
-          K = n(53354),
+        var O = n(78275),
+          N = n(67299),
+          j = n(25699),
+          V = n(42724),
+          U = n(64314),
+          H = n(70407),
+          W = n(94490),
+          z = n(97684),
+          q = n(14792),
+          K = n(73823),
           Z = n(65226);
         function X(e, t, n, s) {
           (0, N.tj)(e, { friendGroup: t }, n, s);
@@ -64262,8 +64133,8 @@ var CLSTAMP = "10779229";
             })
           );
         });
-        n(38565), n(58686), n(59623), n(54757), n(96009);
-        n(55450), n(97324), n(89106);
+        n(7512), n(28333), n(9382), n(7628), n(96009);
+        n(83103), n(20155), n(89106);
         class re extends u.Component {
           m_refTextInput = null;
           constructor(e) {
@@ -64336,23 +64207,23 @@ var CLSTAMP = "10779229";
         var ae = n(7470),
           le = n(78325),
           ce = n(23038),
-          de = n(38701),
-          he = n(33453),
-          ue = n(22184),
-          me = n(61452),
-          pe = n(72270),
-          _e = (n(72854), n(13177)),
-          ge = n(16208),
-          Ce = n(91314),
-          fe = n(58931),
-          Se = n(79282),
-          ve = n(85427),
-          be = n(28142),
-          Ie = n(61217),
+          de = n(28554),
+          he = n(83402),
+          ue = n(83763),
+          me = n(88829),
+          pe = n(57274),
+          _e = (n(5183), n(97640)),
+          ge = n(42501),
+          Ce = n(30153),
+          fe = n(19772),
+          Se = n(45001),
+          ve = n(31932),
+          be = n(70027),
+          Ie = n(78178),
           ye = n(98077),
           we = n.n(ye),
-          xe = n(78149),
-          Ae = n(23081);
+          xe = n(57196),
+          Ae = n(12486);
         const Re = u.memo(function () {
           const e = (0, Ae.UL)();
           return (
@@ -64375,10 +64246,10 @@ var CLSTAMP = "10779229";
             null
           );
         });
-        var Te = n(92179),
-          Me = n(30869),
-          De = n(1653),
-          ke = n(57345);
+        var Te = n(5436),
+          Me = n(37108),
+          De = n(45850),
+          ke = n(17692);
         function Pe(e) {
           const { msDelayBatch: t, children: n } = e,
             s = (0, ue.KV)(),
@@ -64396,7 +64267,7 @@ var CLSTAMP = "10779229";
             })
           );
         }
-        var Le = n(40114);
+        var Le = n(66681);
         function Ge(e, t, n) {
           const s = window,
             o = (0, l._k)(s);
@@ -65423,7 +65294,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([A.oI], Ye.prototype, "OnLoginClick", null),
           (Ye = (0, s.Cg)([m.PA], Ye));
       },
-      53354: (e, t, n) => {
+      73823: (e, t, n) => {
         "use strict";
         n.d(t, {
           DH: () => d.W4,
@@ -65435,12 +65306,12 @@ var CLSTAMP = "10779229";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(26054),
-          r = n(92614),
+          o = n(80915),
+          r = n(74059),
           a = n(41230),
           l = n(63696),
-          c = n(40114),
-          d = n(91811);
+          c = n(66681),
+          d = n(97734);
         function h(e) {
           return "currentTarget" in e
             ? e.currentTarget.ownerDocument.defaultView
@@ -65490,7 +65361,7 @@ var CLSTAMP = "10779229";
         };
         g = (0, s.Cg)([a.PA], g);
       },
-      27737: (e, t, n) => {
+      94522: (e, t, n) => {
         "use strict";
         n.d(t, {
           Hd: () => c,
@@ -65503,8 +65374,8 @@ var CLSTAMP = "10779229";
           wr: () => a,
         });
         var s = n(63696),
-          i = n(11662),
-          o = n(18384);
+          i = n(13791),
+          o = n(76065);
         class r extends s.Component {
           GetArgument(e, t = !1) {
             return !e || (t && void 0 === this.props.args[e])
@@ -65818,11 +65689,11 @@ var CLSTAMP = "10779229";
           return t;
         }
       },
-      92614: (e, t, n) => {
+      74059: (e, t, n) => {
         "use strict";
         n.d(t, { j: () => a });
-        var s = n(31038),
-          i = n(8978);
+        var s = n(71884),
+          i = n(62057);
         let o = {
             TimeOfDay: new Intl.DateTimeFormat(i.pf.GetPreferredLocales(), {
               hour: "numeric",
@@ -65933,7 +65804,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      18384: (e, t, n) => {
+      76065: (e, t, n) => {
         "use strict";
         n.d(t, { gb: () => r, iT: () => s, j_: () => i, oZ: () => o });
         const s = 0,
@@ -65941,19 +65812,19 @@ var CLSTAMP = "10779229";
           o = 2,
           r = 3;
       },
-      44534: (e, t, n) => {
+      75608: (e, t, n) => {
         "use strict";
         n.d(t, { zU: () => _, z5: () => m });
         const s = "{STEAM_CLAN_IMAGE}",
           i = "{STEAM_CLAN_LOC_IMAGE}";
-        var o = n(86950),
-          r = n(42308),
-          a = n(96108);
-        var l = n(8574),
-          c = n(9663),
-          d = n(11662),
-          h = n(57136);
-        var u = n(40077);
+        var o = n(1783),
+          r = n(25699),
+          a = n(55747);
+        var l = n(91213),
+          c = n(94058),
+          d = n(13791),
+          h = n(33411);
+        var u = n(19022);
         function m(e, t, n = 0) {
           return p(e, t, n);
         }
@@ -66150,7 +66021,7 @@ var CLSTAMP = "10779229";
             e.file_type == l.bg.nn || e.file_type == l.bg.pJ,
         };
       },
-      86950: (e, t, n) => {
+      1783: (e, t, n) => {
         "use strict";
         n.d(t, { pb: () => i, wI: () => s });
         var s;
@@ -66171,7 +66042,7 @@ var CLSTAMP = "10779229";
           "localized_background_art",
         ];
       },
-      83950: (e, t, n) => {
+      65673: (e, t, n) => {
         "use strict";
         n.d(t, { GU: () => s, WN: () => r, wv: () => i, yT: () => o });
         const s = 39049601,
@@ -66179,7 +66050,7 @@ var CLSTAMP = "10779229";
           o = 45902273,
           r = [4145017, 35143931, s, 4, 41316928];
       },
-      33453: (e, t, n) => {
+      83402: (e, t, n) => {
         "use strict";
         var s;
         function i(e) {
@@ -66192,7 +66063,7 @@ var CLSTAMP = "10779229";
               (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
           })(s || (s = {}));
       },
-      42308: (e, t, n) => {
+      25699: (e, t, n) => {
         "use strict";
         n.d(t, {
           $l2: () => kt,
@@ -66485,6 +66356,87 @@ var CLSTAMP = "10779229";
           Ne = 30,
           je = 31,
           Ve = 32;
+        [
+          ["None", "none", -1],
+          ["Afrikaans", "afrikaans", 0],
+          ["Albanian", "albanian", 1],
+          ["Amharic", "amharic", 2],
+          ["Armenian", "armenian", 3],
+          ["Assamese", "assamese", 4],
+          ["Azerbaijani", "azerbaijani", 5],
+          ["Bangla", "bangla", 6],
+          ["Basque", "basque", 7],
+          ["Belarusian", "belarusian", 8],
+          ["Bosnian", "bosnian", 9],
+          ["Catalan", "catalan", 10],
+          ["Cherokee", "cherokee", 11],
+          ["Croatian", "croatian", 12],
+          ["Dari", "dari", 13],
+          ["Estonian", "estonian", 14],
+          ["Filipino", "filipino", 15],
+          ["Galician", "galician", 16],
+          ["Georgian", "georgian", 17],
+          ["Gujarati", "gujarati", 18],
+          ["Punjabi (Gurmukhi)", "gurmukhi", 19],
+          ["Hausa", "hausa", 20],
+          ["Hebrew", "hebrew", 21],
+          ["Hindi", "hindi", 22],
+          ["Icelandic", "icelandic", 23],
+          ["Igbo", "igbo", 24],
+          ["Indonesian", "indonesian", 25],
+          ["Irish", "irish", 26],
+          ["Kannada", "kannada", 27],
+          ["Kazakh", "kazakh", 28],
+          ["Khmer", "khmer", 29],
+          ["K'iche'", "kiche", 30],
+          ["Kinyarwanda", "kinyarwanda", 31],
+          ["Konkani", "konkani", 32],
+          ["Kyrgyz", "kyrgyz", 33],
+          ["Latvian", "latvian", 34],
+          ["Lithuanian", "lithuanian", 35],
+          ["Luxembourgish", "luxembourgish", 36],
+          ["Macedonian", "macedonian", 37],
+          ["Malay", "malay", 38],
+          ["Malayalam", "malayalam", 39],
+          ["Maltese", "maltese", 40],
+          ["Maori", "maori", 41],
+          ["Marathi", "marathi", 42],
+          ["Mongolian", "mongolian", 43],
+          ["Nepali", "nepali", 44],
+          ["Odia", "odia", 45],
+          ["Persian", "persian", 46],
+          ["Quechua", "quechua", 47],
+          ["Scots", "scots", 48],
+          ["Serbian", "serbian", 49],
+          ["Punjabi (Shahmukhi)", "shahmukhi", 50],
+          ["Sindhi", "sindhi", 51],
+          ["Sinhala", "sinhala", 52],
+          ["Slovak", "slovak", 53],
+          ["Slovenian", "slovenian", 54],
+          ["Sorani", "sorani", 55],
+          ["Sotho", "sotho", 56],
+          ["Swahili", "swahili", 57],
+          ["Tajik", "tajik", 58],
+          ["Tamil", "tamil", 59],
+          ["Tatar", "tatar", 60],
+          ["Telugu", "telugu", 61],
+          ["Tigrinya", "tigrinya", 62],
+          ["Tswana", "tswana", 63],
+          ["Turkmen", "turkmen", 64],
+          ["Urdu", "urdu", 65],
+          ["Uyghur", "uyghur", 66],
+          ["Uzbek", "uzbek", 67],
+          ["Valencian", "valencian", 68],
+          ["Welsh", "welsh", 69],
+          ["Wolof", "wolof", 70],
+          ["Xhosa", "xhosa", 71],
+          ["Yoruba", "yoruba", 72],
+          ["Zulu", "zulu", 73],
+        ].map((e) => ({
+          name: e[0],
+          shortName: e[1],
+          eAdditionalLanguage: e[2],
+        }));
         function Ue(e, t = "en") {
           switch (e) {
             case ce:
@@ -66940,7 +66892,7 @@ var CLSTAMP = "10779229";
                 "k_EWindowBringToFrontWithoutForcingOS");
           })(Yt || (Yt = {}));
       },
-      38701: (e, t, n) => {
+      28554: (e, t, n) => {
         "use strict";
         n.d(t, { BK: () => r, W: () => s });
         var s, i, o;
@@ -66992,7 +66944,7 @@ var CLSTAMP = "10779229";
             (e[(e.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
         })(a || (a = {}));
       },
-      63461: (e, t, n) => {
+      74192: (e, t, n) => {
         "use strict";
         n.d(t, { i_: () => i, vV: () => s });
         const s = {
@@ -67010,43 +66962,42 @@ var CLSTAMP = "10779229";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(i || (i = {}));
       },
-      37506: (e, t, n) => {
+      54073: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $9: () => E,
+          $9: () => F,
           AE: () => l,
           D$: () => u,
-          HD: () => y,
+          HD: () => I,
           HH: () => f,
-          Hg: () => v,
-          Hi: () => I,
-          JW: () => D,
-          K0: () => k,
+          Hi: () => b,
+          JW: () => M,
+          K0: () => D,
           Lr: () => S,
-          MW: () => M,
+          MW: () => T,
           My: () => d,
           OG: () => C,
           Oh: () => m,
           R4: () => a,
-          Ri: () => w,
-          TB: () => P,
+          Ri: () => y,
+          TB: () => k,
           TE: () => p,
           UK: () => h,
           VD: () => c,
           _X: () => _,
-          ah: () => G,
-          fD: () => T,
+          ah: () => L,
+          fD: () => R,
           gW: () => g,
-          i8: () => A,
-          kL: () => b,
+          i8: () => x,
+          kL: () => v,
           rb: () => r,
           rm: () => o,
-          tE: () => R,
-          uh: () => x,
-          vy: () => L,
+          tE: () => A,
+          uh: () => w,
+          vy: () => P,
         });
-        var s = n(74677);
-        n(85215);
+        var s = n(42386);
+        n(83642);
         const i = -1,
           o = 0,
           r = 2,
@@ -67063,23 +67014,22 @@ var CLSTAMP = "10779229";
           C = 39,
           f = 40,
           S = 41,
-          v = 42,
-          b = 43,
-          I = 44,
-          y = 45,
-          w = 46,
-          x = 47,
-          A = 48,
-          R = 49,
-          T = 50,
-          M = 51,
-          D = 100,
-          k = 101,
-          P = 102,
-          L = 120,
-          G = 130,
-          B = 0;
-        var F;
+          v = 43,
+          b = 44,
+          I = 45,
+          y = 46,
+          w = 47,
+          x = 48,
+          A = 49,
+          R = 50,
+          T = 51,
+          M = 100,
+          D = 101,
+          k = 102,
+          P = 120,
+          L = 130,
+          G = 0;
+        var B;
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -67097,7 +67047,7 @@ var CLSTAMP = "10779229";
               "k_EControllerBindingType_GameAction"),
             (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
               "k_EControllerBindingType_ControllerAction");
-        })(F || (F = {}));
+        })(B || (B = {}));
         BigInt(1),
           BigInt(0),
           BigInt(1),
@@ -67178,14 +67128,14 @@ var CLSTAMP = "10779229";
           BigInt(38),
           BigInt(1),
           BigInt(39);
-        function E(e) {
+        function F(e) {
           return {
             strName: e.name ?? "",
             eControllerType: e.controller_type ?? i,
             eControllerStyle: e.controller_style ?? s.eT,
             nXInputIndex: e.xinput_index ?? 0,
             nControllerIndex: e.controller_index ?? 16,
-            eRumblePreference: e.rumble_setting ?? B,
+            eRumblePreference: e.rumble_setting ?? G,
             bWireless: e.is_wireless_steam_dongle ?? !1,
             unVendorID: e.vendor_id ?? 0,
             unProductID: e.product_id ?? 0,
@@ -67206,6 +67156,7 @@ var CLSTAMP = "10779229";
             bSWAntiDrift: e.gyro_sw_antidrift_enabled ?? !1,
             bIMUOneEuroFilter: e.gyro_one_euro_filter_enabled ?? !1,
             nTritonGyroHWCalValue: e.triton_gyro_hw_cal ?? 100,
+            bUseSWBiases: e.use_gyro_sw_biases ?? !0,
             nLHapticStrength: e.haptic_strength_left ?? 0,
             nRHapticStrength: e.haptic_strength_right ?? 0,
             flLPadPressureCurve: e.pad_pressure_curve_left ?? 0,
@@ -67232,7 +67183,7 @@ var CLSTAMP = "10779229";
             bHasTouchscreen: e.has_touchscreen ?? !1,
           };
         }
-        var O;
+        var E;
         !(function (e) {
           (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
             (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -67294,9 +67245,9 @@ var CLSTAMP = "10779229";
             (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
               "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
             (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
-        })(O || (O = {}));
+        })(E || (E = {}));
       },
-      52370: (e, t, n) => {
+      621: (e, t, n) => {
         "use strict";
         var s;
         n.d(t, { l: () => s }),
@@ -67357,10 +67308,12 @@ var CLSTAMP = "10779229";
               (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
                 "k_ERemoteClientLaunchRestrictedCountry"),
               (e[(e.k_ERemoteClientLaunchUnauthorized = 29)] =
-                "k_ERemoteClientLaunchUnauthorized");
+                "k_ERemoteClientLaunchUnauthorized"),
+              (e[(e.k_ERemoteClientLaunchCaptureBusy = 30)] =
+                "k_ERemoteClientLaunchCaptureBusy");
           })(s || (s = {}));
       },
-      14661: (e, t, n) => {
+      474: (e, t, n) => {
         "use strict";
         n.d(t, { gy: () => o, qY: () => i, uL: () => r, zX: () => s });
         const s = 0,
@@ -67399,7 +67352,7 @@ var CLSTAMP = "10779229";
           };
         }
       },
-      63233: (e, t, n) => {
+      15518: (e, t, n) => {
         "use strict";
         var s;
         n.d(t, { GQ: () => i, YI: () => o }),
@@ -67460,10 +67413,10 @@ var CLSTAMP = "10779229";
                 "k_EClientUsedInputTypeMax");
           })(o || (o = {}));
       },
-      82948: (e, t, n) => {
+      34775: (e, t, n) => {
         "use strict";
         n.d(t, { J_: () => s, TP: () => i });
-        n(92892);
+        n(50209);
         const s = {
             name: "cookieSettings",
             options: {
@@ -67481,7 +67434,7 @@ var CLSTAMP = "10779229";
             preferenceControls: { isTechnicallyNecessary: !0 },
           };
       },
-      39878: (e, t, n) => {
+      97119: (e, t, n) => {
         "use strict";
         function s(e) {
           if (!document.cookie) return;
@@ -67490,7 +67443,7 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { j_: () => s });
       },
-      57242: (e, t, n) => {
+      30580: (e, t, n) => {
         "use strict";
         n.d(t, { Zn: () => Z, N_: () => W, lU: () => z, Br: () => U });
         var s,
@@ -67498,17 +67451,17 @@ var CLSTAMP = "10779229";
           o = n(83957),
           r = n.n(o),
           a = n(89193),
-          l = n(42308),
-          c = n(11662),
-          d = n(58752),
-          h = n(8978),
-          u = n(28142),
-          m = n(54250),
-          p = n(58686),
-          _ = n(21582),
-          g = n(36185),
-          C = n(7169),
-          f = n(6697);
+          l = n(25699),
+          c = n(13791),
+          d = n(6242),
+          h = n(62057),
+          u = n(70027),
+          m = n(67725),
+          p = n(28333),
+          _ = n(96641),
+          g = n(78414),
+          C = n(90698),
+          f = n(71594);
         function S(e, t) {
           let n = e.getElementsByTagName("MPD");
           return n && 1 == n.length ? n[0] : null;
@@ -68921,8 +68874,8 @@ var CLSTAMP = "10779229";
           (0, i.Cg)([m.o], N.prototype, "DownloadFailed", null),
           (0, i.Cg)([m.o], N.prototype, "DownloadGone", null),
           (0, i.Cg)([m.o], N.prototype, "CurrentTimeChanged", null);
-        var j = n(52203),
-          V = n(51756);
+        var j = n(78920),
+          V = n(88071);
         const U = 5;
         var H, W, z, q;
         function K(e) {
@@ -70414,19 +70367,19 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      7169: (e, t, n) => {
+      90698: (e, t, n) => {
         "use strict";
         n.d(t, { _L: () => C });
         var s = n(34629),
           i = n(89193),
           o = n(83957),
           r = n.n(o),
-          a = n(9663),
-          l = n(36185),
-          c = n(21582),
-          d = n(58752),
-          h = n(8978),
-          u = n(61122);
+          a = n(94058),
+          l = n(78414),
+          c = n(96641),
+          d = n(6242),
+          h = n(62057),
+          u = n(56577);
         const m = 1e6;
         class p {
           steamid = "";
@@ -70977,7 +70930,7 @@ var CLSTAMP = "10779229";
                 ? new a.b(this.m_steamIDBroadcast).GetAccountID()
                 : 0),
               (e.useragent = window.navigator.userAgent),
-              (e.sessionid = c.TS.SESSIONID),
+              (e.sessionid = (0, c.KC)()),
               (e.broadcast_origin = this.m_strBroadcastOrigin);
           }
         }
@@ -71189,7 +71142,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([i.sH], v.prototype, "m_nCurrentFPS", void 0),
           (0, s.Cg)([i.XI.bound], v.prototype, "TakeReading", null);
       },
-      52203: (e, t, n) => {
+      78920: (e, t, n) => {
         "use strict";
         n.d(t, { Y: () => s, n: () => i });
         const s = "auto";
@@ -71197,7 +71150,7 @@ var CLSTAMP = "10779229";
           return e.id == s;
         }
       },
-      83300: (e, t, n) => {
+      79229: (e, t, n) => {
         "use strict";
         n.d(t, {
           BA: () => h,
@@ -71209,7 +71162,7 @@ var CLSTAMP = "10779229";
         });
         var s = n(62540),
           i = n(63696),
-          o = n(40920);
+          o = n(48195);
         function r() {
           return i.createRef();
         }
@@ -71233,14 +71186,16 @@ var CLSTAMP = "10779229";
             bDOMElementFocusByDefault: !1,
           }),
           (0, o.HR)("section", { bFocusableByDefault: !1 }),
-          (0, o.HR)("form", { bFocusableByDefault: !1 });
+          (0, o.HR)("form", { bFocusableByDefault: !1 }),
+          (0, o.HR)("summary", { bActivateByDefault: !0 }),
+          (0, o.HR)("details", { bFocusableByDefault: !1 });
       },
-      19322: (e, t, n) => {
+      71195: (e, t, n) => {
         "use strict";
         n.d(t, { QI: () => a, Vu: () => r });
         n(62540);
         var s = n(63696),
-          i = n(72948);
+          i = n(56995);
         const o = s.createContext(void 0);
         function r() {
           return s.useContext(o);
@@ -71249,18 +71204,18 @@ var CLSTAMP = "10779229";
           return (0, i.gc)(r()?.GetShowDebugFocusRing()) ?? !1;
         }
       },
-      58678: (e, t, n) => {
+      92835: (e, t, n) => {
         "use strict";
         n.d(t, { qR: () => _ });
         var s = n(62540),
-          i = n(72948),
-          o = n(14090),
+          i = n(56995),
+          o = n(38969),
           r = n(63696),
-          a = n(40920),
-          l = n(37652),
-          c = n(19322),
-          d = n(89622),
-          h = n(24247);
+          a = n(48195),
+          l = n(48623),
+          c = n(71195),
+          d = n(36943),
+          h = n(52432);
         r.forwardRef(function (e, t) {
           const {
               navID: n,
@@ -71275,10 +71230,11 @@ var CLSTAMP = "10779229";
               onGlobalButtonDown: _,
               disableFocusClasses: g,
               disabledRoot: C,
-              "flow-children": f,
-              ...S
+              excludeFromScrollRegionSearch: f,
+              "flow-children": S,
+              ...v
             } = e,
-            { elemProps: v, navOptions: b, gamepadEvents: I } = (0, a.sl)(S);
+            { elemProps: b, navOptions: I, gamepadEvents: y } = (0, a.sl)(v);
           return (0, c.Vu)()
             ? (0, s.jsx)(u, {
                 navID: n,
@@ -71293,12 +71249,13 @@ var CLSTAMP = "10779229";
                 onGlobalButtonDown: _,
                 disableFocusClasses: g,
                 disabledRoot: C,
-                "flow-children": f,
-                ...b,
+                excludeFromScrollRegionSearch: f,
+                "flow-children": S,
                 ...I,
-                children: (0, s.jsx)("div", { ...v, ref: t }),
+                ...y,
+                children: (0, s.jsx)("div", { ...b, ref: t }),
               })
-            : (0, s.jsx)("div", { ...v, ref: t });
+            : (0, s.jsx)("div", { ...b, ref: t });
         });
         function u(e) {
           const {
@@ -71315,51 +71272,56 @@ var CLSTAMP = "10779229";
               onGlobalButtonDown: b,
               disableFocusClasses: I = !1,
               disabledRoot: y = !1,
-              "flow-children": w,
-              ...x
+              excludeFromScrollRegionSearch: w = !1,
+              "flow-children": x,
+              ...A
             } = e,
-            { elemProps: A, navOptions: R, gamepadEvents: T } = (0, a.sl)(x),
-            { refDiv: M, tree: D } = (function (e) {
+            { elemProps: R, navOptions: T, gamepadEvents: M } = (0, a.sl)(A),
+            { refDiv: D, tree: k } = (function (e) {
               const {
                   navID: t,
                   parentEmbeddedNavTree: n,
                   disabledRoot: s,
-                  enabled: i,
-                  navTreeRef: l,
-                  onGlobalButtonDown: h,
-                  ...u
+                  excludeFromScrollRegionSearch: i,
+                  enabled: l,
+                  navTreeRef: h,
+                  onGlobalButtonDown: u,
+                  ...m
                 } = e,
-                m = (0, c.Vu)(),
-                p = (0, d.nN)() || m.GetDefaultContext(),
-                _ = r.useContext(a.TJ),
-                [g] = r.useState(() =>
-                  m.NewGamepadNavigationTree(p, t, n ?? _?.Tree, {
-                    ...u,
+                p = (0, c.Vu)(),
+                _ = (0, d.nN)() || p.GetDefaultContext(),
+                g = r.useContext(a.TJ),
+                [C] = r.useState(() =>
+                  p.NewGamepadNavigationTree(_, t, n ?? g?.Tree, {
+                    ...m,
                     bIsEmbeddedInLegacyTree: !!n,
                   }),
                 );
-              let C = r.useRef(null);
+              let f = r.useRef(null);
               return (
-                g.SetOnGlobalButtonDown(h),
+                C.SetOnGlobalButtonDown(u),
                 r.useEffect(
-                  () => g.RegisterNavigationItem(g.Root, C.current),
-                  [g, C],
+                  () => C.RegisterNavigationItem(C.Root, f.current),
+                  [C, f],
                 ),
                 r.useEffect(() => {
-                  g.SetIsEnabled(i);
-                }, [g, i]),
+                  C.SetIsEnabled(l);
+                }, [C, l]),
+                r.useEffect(() => {
+                  C.SetExcludeFromScrollRegionSearch(i);
+                }, [C, i]),
                 r.useEffect(() => {
                   if (!s)
-                    return m.RegisterGamepadNavigationTree(
-                      g,
-                      C.current.ownerDocument.defaultView,
+                    return p.RegisterGamepadNavigationTree(
+                      C,
+                      f.current.ownerDocument.defaultView,
                     );
-                }, [m, g, s]),
+                }, [p, C, s]),
                 r.useEffect(
-                  () => ((0, o.cZ)(l, g), () => (0, o.cZ)(l, null)),
-                  [l, g],
+                  () => ((0, o.cZ)(h, C), () => (0, o.cZ)(h, null)),
+                  [h, C],
                 ),
-                { refDiv: C, tree: g }
+                { refDiv: f, tree: C }
               );
             })({
               navID: t,
@@ -71371,24 +71333,25 @@ var CLSTAMP = "10779229";
               virtualFocus: C,
               modal: g,
               historyMode: f,
+              excludeFromScrollRegionSearch: w,
             });
-          (0, i.hL)(D.OnActivateCallbacks, n),
-            (0, i.hL)(D.OnDeactivateCallbacks, u),
-            (0, h.KF)(T, M, D),
+          (0, i.hL)(k.OnActivateCallbacks, n),
+            (0, i.hL)(k.OnDeactivateCallbacks, u),
+            (0, h.KF)(M, D, k),
             r.useLayoutEffect(() => {
-              const e = (0, l.O)(w);
-              D.Root.SetProperties({ ...R, layout: e });
+              const e = (0, l.O)(x);
+              k.Root.SetProperties({ ...T, layout: e });
             });
-          const k = (0, o.Ue)(M, S.props.ref);
+          const P = (0, o.Ue)(D, S.props.ref);
           return (0, s.jsx)(p, {
-            tree: y ? null : D,
+            tree: y ? null : k,
             disableFocusClasses: I || y,
             children: (0, s.jsx)(a.TJ.Provider, {
-              value: y ? null : D.Root,
+              value: y ? null : k.Root,
               children: r.cloneElement(S, {
                 id: t,
                 "data-react-nav-root": t,
-                ref: k,
+                ref: P,
               }),
             }),
           });
@@ -71430,12 +71393,12 @@ var CLSTAMP = "10779229";
           return r.useContext(m);
         }
       },
-      89622: (e, t, n) => {
+      36943: (e, t, n) => {
         "use strict";
         n.d(t, { bJ: () => r, nN: () => o });
         n(62540);
         var s = n(63696);
-        n(21582);
+        n(96641);
         const i = s.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
         function o() {
           return s.useContext(i)?.focusNavWindow;
@@ -71444,31 +71407,32 @@ var CLSTAMP = "10779229";
           return s.useContext(i)?.bSupportsFocus ?? e;
         }
       },
-      40920: (e, t, n) => {
+      48195: (e, t, n) => {
         "use strict";
         n.d(t, {
-          C7: () => I,
-          sl: () => y,
-          D0: () => x,
+          C7: () => y,
+          sl: () => w,
+          D0: () => A,
           sQ: () => v,
-          HR: () => M,
-          v0: () => D,
+          HR: () => D,
+          v0: () => k,
           TJ: () => S,
           qp: () => b,
+          BT: () => I,
         });
         var s = n(62540),
-          i = n(72948),
-          o = n(14090),
+          i = n(56995),
+          o = n(38969),
           r = n(4452),
           a = n.n(r),
           l = n(63696),
-          c = n(54953),
-          d = n(64382),
-          h = n(89622),
-          u = n(24247),
-          m = n(51171),
-          p = n(31720),
-          _ = n(37652);
+          c = n(43076),
+          d = n(10093),
+          h = n(36943),
+          u = n(52432),
+          m = n(20448),
+          p = n(89891),
+          _ = n(48623);
         const g = l.createContext(function (e) {
           return {
             ShowVirtualKeyboard: () => {},
@@ -71554,7 +71518,7 @@ var CLSTAMP = "10779229";
             d
           );
         }
-        var f = n(58678);
+        var f = n(92835);
         const S = l.createContext(null),
           v = l.createContext(p.CZ);
         function b(e) {
@@ -71590,6 +71554,32 @@ var CLSTAMP = "10779229";
           );
         }
         function I(e) {
+          const t = l.useRef(null),
+            n = l.useRef(null);
+          l.useEffect(
+            () => () => {
+              n.current?.();
+            },
+            [],
+          );
+          return l.useCallback(
+            (s) => {
+              t.current !== s &&
+                ((t.current = s),
+                n.current?.(),
+                (n.current = null),
+                s &&
+                  (n.current = (0, m.aM)(
+                    s,
+                    (t) =>
+                      !(!e || "none" == e.GetFocusable()) &&
+                      e.BTakeFocus(void 0, t.detail.button),
+                  )));
+            },
+            [e],
+          );
+        }
+        function y(e) {
           const {
               onButtonDown: t,
               onButtonUp: n,
@@ -71633,7 +71623,7 @@ var CLSTAMP = "10779229";
             props: f,
           };
         }
-        function y(e) {
+        function w(e) {
           const {
               autoFocus: t,
               preferredFocus: n,
@@ -71656,12 +71646,13 @@ var CLSTAMP = "10779229";
               scrollIntoViewWhenChildFocused: S,
               fnScrollIntoViewHandler: v,
               scrollIntoViewType: b,
-              resetNavOnEntry: y,
-              ...w
+              resetNavOnEntry: I,
+              scrollRegionToStartOrEnd: w,
+              ...x
             } = e,
-            { gamepadEvents: x, actionDescriptions: A, props: R } = I(w);
+            { gamepadEvents: A, actionDescriptions: R, props: T } = y(x);
           return {
-            elemProps: R,
+            elemProps: T,
             navOptions: {
               autoFocus: t,
               preferredFocus: n,
@@ -71683,13 +71674,14 @@ var CLSTAMP = "10779229";
               scrollIntoViewWhenChildFocused: S,
               fnScrollIntoViewHandler: v,
               scrollIntoViewType: b,
-              resetNavOnEntry: y,
-              actionDescriptionMap: { ...m, ...A },
+              resetNavOnEntry: I,
+              scrollRegionToStartOrEnd: w,
+              actionDescriptionMap: { ...m, ...R },
             },
-            gamepadEvents: x,
+            gamepadEvents: A,
           };
         }
-        function w(e) {
+        function x(e) {
           return function (t) {
             const {
                 focusClassName: n,
@@ -71725,17 +71717,17 @@ var CLSTAMP = "10779229";
             );
           };
         }
-        const x = w("div");
-        function A(e) {
+        const A = x("div");
+        function R(e) {
           return (
             c.eZ.PlayNavSound(c.PN.DefaultOk),
             (0, d.kD)(e.currentTarget) && e.currentTarget.click(),
             !0
           );
         }
-        const R = l.createContext(void 0);
-        R.Provider;
-        function T(e, t, n, i, r) {
+        const T = l.createContext(void 0);
+        T.Provider;
+        function M(e, t, n, i, r) {
           const {
               elemProps: {
                 focusClassName: c,
@@ -71745,58 +71737,59 @@ var CLSTAMP = "10779229";
               },
               navOptions: p,
               gamepadEvents: g,
-            } = y(n),
+            } = w(n),
             {
               bFocusableByDefault: C = !0,
               bActivateByDefault: f = !1,
               bDOMElementFocusByDefault: v = C,
             } = r || {};
           void 0 === p.focusable && !m.disabled && C && (p.focusable = !0);
-          const I = (0, _.O)(h),
-            { ref: w, node: x } = b({ layout: I, ...p });
+          const y = (0, _.O)(h),
+            { ref: x, node: A } = b({ layout: y, ...p });
           g.onOKButton ||
             ((("onClick" in m && m.onClick) || (f && (!0 === f || f(m)))) &&
-              (g.onOKButton = A)),
+              (g.onOKButton = R)),
             p.focusable && !v
               ? (m.tabIndex = m.tabIndex || 0)
               : !p.focusable && v && (m.tabIndex = m.tabIndex ?? -1),
-            (0, u.Ui)(g, w);
-          const T = (0, o.Ue)(i, w),
-            M = (0, l.useContext)(R)?.Component;
-          let D = { ...m };
+            (0, u.Ui)(g, x);
+          const M = I(A),
+            D = (0, o.Ue)(i, x, M),
+            k = (0, l.useContext)(T)?.Component;
+          let P = { ...m };
           return (
-            "onClick" in m && (D.role ??= "button"),
-            x
-              ? ((D = {
-                  ...D,
-                  divRef: T,
-                  node: x,
+            "onClick" in m && (P.role ??= "button"),
+            A
+              ? ((P = {
+                  ...P,
+                  divRef: D,
+                  node: A,
                   focusClassName: a()(c, "gpfocus"),
                   focusWithinClassName: "gpfocuswithin",
                   bFocusableByDefault: v,
                   className: a()(m.className, "Focusable"),
                 }),
                 (0, s.jsx)(S.Provider, {
-                  value: x,
-                  children: M
-                    ? l.createElement(M, { ...D, Component: t }, d)
-                    : l.createElement(t, D, d),
+                  value: A,
+                  children: k
+                    ? l.createElement(k, { ...P, Component: t }, d)
+                    : l.createElement(t, P, d),
                 }))
               : l.createElement(
                   e,
-                  { ...D, ref: i, className: a()(m.className, "Focusable") },
+                  { ...P, ref: i, className: a()(m.className, "Focusable") },
                   d,
                 )
           );
         }
-        function M(e, t) {
-          const n = w(e);
+        function D(e, t) {
+          const n = x(e);
           return l.forwardRef(function (s, i) {
-            return T(e, n, s, i, t);
+            return M(e, n, s, i, t);
           });
         }
-        function D(e) {
-          const t = w(e);
+        function k(e) {
+          const t = x(e);
           return l.forwardRef(function (n, s) {
             const {
                 virtualKeyboardProps: i,
@@ -71827,27 +71820,27 @@ var CLSTAMP = "10779229";
               })(n),
               l = C(i, r),
               c = (0, o.Ue)(s, l);
-            return T(e, t, a, c);
+            return M(e, t, a, c);
           });
         }
       },
-      49890: (e, t, n) => {
+      11931: (e, t, n) => {
         "use strict";
         n.d(t, { g: () => b, q: () => f });
         var s = n(63696),
           i = n(62540),
           o = n(4452),
           r = n.n(o),
-          a = n(86373),
-          l = n(21582),
-          c = n(31720),
-          d = n(89622),
-          h = n(19322),
-          u = n(40920),
+          a = n(65264),
+          l = n(96641),
+          c = n(89891),
+          d = n(36943),
+          h = n(71195),
+          u = n(48195),
           m = n(13987),
           p = n.n(m),
-          _ = n(14090),
-          g = n(58678);
+          _ = n(38969),
+          g = n(92835);
         const C = new a.wd("FocusNavigation").Debug;
         function f(e) {
           const { children: t, disableFocusRing: n, ...o } = e,
@@ -72036,13 +72029,13 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      24247: (e, t, n) => {
+      52432: (e, t, n) => {
         "use strict";
         n.d(t, { KF: () => c, Ui: () => a });
         n(62540);
         var s = n(63696),
-          i = n(86373),
-          o = n(51171);
+          i = n(65264),
+          o = n(20448);
         const r = new i.wd("GamepadEvents").Debug;
         function a(e, t, n) {
           void 0 === n &&
@@ -72118,19 +72111,19 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      26194: (e, t, n) => {
+      70407: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => p });
         var s = n(62540),
-          i = n(14090),
+          i = n(38969),
           o = n(4452),
           r = n.n(o),
           a = n(63696),
-          l = n(40920),
-          c = n(35539),
-          d = n(37652),
-          h = n(89622),
-          u = n(24247);
+          l = n(48195),
+          c = n(75393),
+          d = n(48623),
+          h = n(36943),
+          u = n(52432);
         const m = a.createContext({ Component: l.D0 });
         function p(e) {
           const {
@@ -72157,34 +72150,35 @@ var CLSTAMP = "10779229";
             w = (0, h.bJ)();
           (C.className = r()(C.className, "Panel", w && "Focusable")),
             (0, u.Ui)(S, I);
-          const x = (0, i.Ue)(I, e.ref);
+          const x = (0, l.BT)(y),
+            A = (0, i.Ue)(I, e.ref, x);
           (!f.focusable && !f.focusableIfEmpty) ||
             (y && y.Tree.BUseVirtualFocus()) ||
             (C.tabIndex = C.tabIndex || 0),
             f.focusable && (n || S.onOKButton) && (C.role ??= "button");
-          const A = (0, a.useContext)(m).Component;
+          const R = (0, a.useContext)(m).Component;
           return (0, s.jsx)(l.TJ.Provider, {
             value: y,
             children: y
-              ? (0, s.jsx)(A, {
+              ? (0, s.jsx)(R, {
                   ...C,
-                  divRef: x,
+                  divRef: A,
                   node: y,
                   focusClassName: r()(p, "gpfocus"),
                   focusWithinClassName: r()(_, "gpfocuswithin"),
                 })
-              : (0, s.jsx)("div", { ...C, ref: x }),
+              : (0, s.jsx)("div", { ...C, ref: A }),
           });
         }
       },
-      45581: (e, t, n) => {
+      77154: (e, t, n) => {
         "use strict";
         n.d(t, { YZ: () => l });
         var s = n(62540),
-          i = n(14090),
+          i = n(38969),
           o = n(63696),
-          r = n(26194),
-          a = n(23528);
+          r = n(70407),
+          a = n(38915);
         const l = o.forwardRef(function (e, t) {
           const {
               onExplicitFocusLevelChanged: n,
@@ -72280,12 +72274,12 @@ var CLSTAMP = "10779229";
           return e.ChildTakeFocus(t);
         }
       },
-      23528: (e, t, n) => {
+      38915: (e, t, n) => {
         "use strict";
         n.d(t, { MS: () => I, Qg: () => y });
         var s = n(62540),
-          i = n(11662),
-          o = n(14090),
+          i = n(13791),
+          o = n(38969),
           r = n(4452),
           a = n.n(r),
           l = n(63696),
@@ -72322,11 +72316,11 @@ var CLSTAMP = "10779229";
             [r, u]
           );
         }
-        var h = n(35539),
-          u = n(35296),
-          m = n(86373),
-          p = n(3325),
-          _ = n(32271);
+        var h = n(75393),
+          u = n(17559),
+          m = n(65264),
+          p = n(22034),
+          _ = n(8512);
         const g = new m.wd("ScrollSnap").Debug;
         function C(e, t = "smooth", n, s) {
           const i = (n ?? 30) / 100,
@@ -72418,8 +72412,8 @@ var CLSTAMP = "10779229";
             [s, e, t, i, c, a],
           );
         }
-        var f = n(49890),
-          S = n(26194),
+        var f = n(11931),
+          S = n(70407),
           v = n(8804),
           b = n.n(v);
         const I = l.forwardRef(function (e, t) {
@@ -72566,25 +72560,36 @@ var CLSTAMP = "10779229";
           return l.useMemo(() => a(C, f), [C, f, a]);
         }
       },
-      51171: (e, t, n) => {
+      20448: (e, t, n) => {
         "use strict";
         n.d(t, {
           D$: () => s,
-          Ro: () => h,
-          SZ: () => a,
-          VX: () => l,
-          W1: () => _,
-          Y3: () => C,
-          cR: () => u,
-          f: () => d,
-          hr: () => c,
-          nt: () => r,
-          tV: () => p,
-          u8: () => m,
+          Ro: () => m,
+          SI: () => r,
+          SZ: () => c,
+          VX: () => d,
+          W1: () => C,
+          Y3: () => v,
+          aM: () => f,
+          cR: () => p,
+          f: () => u,
+          hr: () => h,
+          nt: () => l,
+          tV: () => g,
+          u8: () => _,
         });
         var s,
-          i = n(32271);
+          i = n(8512);
         n(63696);
+        function o(e) {
+          return "object" == typeof e && null !== e && "value" in e;
+        }
+        function r(e, t) {
+          return o(e) && o(t)
+            ? e.value === t.value &&
+                Boolean(e.bShowOnLeft) == Boolean(t.bShowOnLeft)
+            : e === t;
+        }
         !(function (e) {
           (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
             (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -72593,7 +72598,7 @@ var CLSTAMP = "10779229";
             (e[(e.AUTOFOCUS = 4)] = "AUTOFOCUS");
         })(s || (s = {}));
         i.pR.OK, i.pR.CANCEL, i.pR.SECONDARY, i.pR.OPTIONS, i.pR.START;
-        function o(e, t, n) {
+        function a(e, t, n) {
           return (
             e.addEventListener(t, n),
             () =>
@@ -72602,42 +72607,45 @@ var CLSTAMP = "10779229";
               })(e, t, n)
           );
         }
-        function r(e, t) {
-          return o(e, "vgp_onbuttondown", t);
-        }
-        function a(e, t) {
-          return o(e, "vgp_onbuttonup", t);
-        }
         function l(e, t) {
-          return o(e, "vgp_onok", g(t));
+          return a(e, "vgp_onbuttondown", t);
         }
         function c(e, t) {
-          return o(e, "vgp_oncancel", g(t));
+          return a(e, "vgp_onbuttonup", t);
         }
         function d(e, t) {
-          return o(e, "vgp_onsecondaryaction", g(t));
+          return a(e, "vgp_onok", S(t));
         }
         function h(e, t) {
-          return o(e, "vgp_onoptions", g(t));
+          return a(e, "vgp_oncancel", S(t));
         }
         function u(e, t) {
-          return o(e, "vgp_onmenu", g(t));
+          return a(e, "vgp_onsecondaryaction", S(t));
         }
         function m(e, t) {
-          return o(e, "vgp_ondirection", g(t));
+          return a(e, "vgp_onoptions", S(t));
         }
         function p(e, t) {
-          return o(e, "vgp_onfocus", t);
+          return a(e, "vgp_onmenu", S(t));
         }
         function _(e, t) {
-          return o(e, "vgp_onblur", t);
+          return a(e, "vgp_ondirection", S(t));
         }
-        function g(e) {
+        function g(e, t) {
+          return a(e, "vgp_onfocus", t);
+        }
+        function C(e, t) {
+          return a(e, "vgp_onblur", t);
+        }
+        function f(e, t) {
+          return a(e, "vgp_requestfocus", S(t));
+        }
+        function S(e) {
           return (t) => {
             !1 !== e(t) && (t.stopPropagation(), t.preventDefault());
           };
         }
-        function C(e) {
+        function v(e) {
           const {
               onOKActionDescription: t,
               onCancelActionDescription: n,
@@ -72657,7 +72665,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      32271: (e, t, n) => {
+      8512: (e, t, n) => {
         "use strict";
         var s, i;
         n.d(t, { pR: () => s }),
@@ -72703,7 +72711,7 @@ var CLSTAMP = "10779229";
               (e[(e.RPAD = 6)] = "RPAD");
           })(i || (i = {}));
       },
-      25384: (e, t, n) => {
+      48865: (e, t, n) => {
         "use strict";
         n.d(t, {
           Er: () => a,
@@ -72713,9 +72721,9 @@ var CLSTAMP = "10779229";
           Ze: () => d,
           nv: () => u,
         });
-        var s = n(11662),
-          i = n(51171);
-        const o = new (n(86373).wd)("FocusHistory"),
+        var s = n(13791),
+          i = n(20448);
+        const o = new (n(65264).wd)("FocusHistory"),
           r = o.Debug,
           a = 0,
           l = 2;
@@ -72834,7 +72842,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      31720: (e, t, n) => {
+      89891: (e, t, n) => {
         "use strict";
         n.d(t, {
           CZ: () => p,
@@ -72847,11 +72855,11 @@ var CLSTAMP = "10779229";
           lr: () => h,
           xb: () => m,
         });
-        var s = n(32271),
-          i = n(11662),
-          o = n(51171),
-          r = n(25384),
-          a = n(35539);
+        var s = n(8512),
+          i = n(13791),
+          o = n(20448),
+          r = n(48865),
+          a = n(75393);
         class l {
           m_node;
           m_History;
@@ -72999,21 +73007,21 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      35539: (e, t, n) => {
+      75393: (e, t, n) => {
         "use strict";
-        n.d(t, { $C: () => H, xj: () => j, iU: () => V, Yo: () => U });
+        n.d(t, { $C: () => z, xj: () => U, iU: () => H, Yo: () => W });
         var s = n(34629),
-          i = n(26889),
-          o = n(11662),
-          r = n(54250),
-          a = n(63265),
-          l = n(16148),
-          c = n(58752),
-          d = n(86373);
-        var h = n(51171),
-          u = n(32271),
-          m = n(31720),
-          p = n(64382);
+          i = n(37420),
+          o = n(13791),
+          r = n(67725),
+          a = n(7086),
+          l = n(70431),
+          c = n(6242),
+          d = n(65264);
+        var h = n(20448),
+          u = n(8512),
+          m = n(89891),
+          p = n(10093);
         function _(e, t, n) {
           const s = [],
             [i, o] = e.GetChildren(),
@@ -73121,7 +73129,7 @@ var CLSTAMP = "10779229";
             distance: o,
           };
         }
-        var S = n(28142);
+        var S = n(70027);
         class v {
           m_options;
           m_msStart;
@@ -73229,7 +73237,117 @@ var CLSTAMP = "10779229";
         const y = new d.wd("ScrollSnap").Debug;
         let w = !1;
         let x;
-        function A(e) {
+        function A(e, t, n, s, i) {
+          const o = e.Element;
+          if (!o) return;
+          let r = [
+            { node: e, eScrollType: e.m_Properties?.scrollIntoViewType },
+          ];
+          for (let t = e.Parent; t; t = t.Parent) {
+            const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
+              n = t.m_Properties?.scrollIntoViewType;
+            if (e) {
+              const s = { node: t, eScrollType: n };
+              "force" === e ? (r = [s]) : r.push(s);
+            }
+            if (void 0 !== n)
+              for (
+                let e = r.length - 1;
+                e >= 0 && void 0 === r[e].eScrollType;
+                e--
+              )
+                r[e].eScrollType = n;
+          }
+          for (; r.length; ) {
+            let { node: s, eScrollType: a } = r.pop(),
+              l = 0 == r.length;
+            if (
+              (void 0 === a && (a = w ? W.NoTransform : W.Standard),
+              s?.m_Properties?.fnScrollIntoViewHandler)
+            ) {
+              if (!1 !== s.m_Properties.fnScrollIntoViewHandler(e, t, s))
+                continue;
+            }
+            const c = s.m_element,
+              d = a == W.NoTransform || a == W.NoTransformSparseContent || !l;
+            if (t || n === h.D$.GAMEPAD) {
+              const t = d ? T(c) : c.getBoundingClientRect(),
+                n = c.ownerDocument.defaultView.innerHeight,
+                s = 40,
+                r = i ? s : Math.max(0.4 * n, s);
+              let a = !1;
+              const l = x && performance.now() - x < 500;
+              (l || t.bottom < -r || t.top > n + r) &&
+                ((a = !0),
+                l ||
+                  y(
+                    `Disabling smooth scrolling, ${t.bottom} < ${-r}, ${t.top} > ${n} + ${r} `,
+                  ));
+              let h = a ? "auto" : "smooth";
+              a && (x = performance.now()),
+                e.Tree.Controller.BIsRestoringHistory() && (h = "auto"),
+                d
+                  ? B(o, c, h)
+                  : (y(
+                      `Scrolling Into View ('${h}' via browser scrollIntoView):`,
+                      c,
+                    ),
+                    c.scrollIntoView({ behavior: h, block: "nearest" }));
+            } else
+              y("No previous element for scrolling, will jump"),
+                d
+                  ? B(o, c, "auto")
+                  : (y(
+                      "Scrolling Into View ('auto' via browser scrollIntoView):",
+                      c,
+                    ),
+                    c?.scrollIntoView({
+                      behavior: "auto",
+                      block: "nearest",
+                      inline: "nearest",
+                    }));
+          }
+          !(function (e, t) {
+            const n = (0, m.G4)(t);
+            if (!n) return;
+            let s = null;
+            for (let t = e; t; t = t.GetNavParentCrossingTrees())
+              t.m_Properties?.scrollRegionToStartOrEnd && (s = t);
+            if (!s) return;
+            for (
+              let i = e;
+              i &&
+              !i.BHasNavTargetInDirection(t, !0) &&
+              (i != e &&
+                i.Element &&
+                i.m_Properties?.scrollRegionToStartOrEnd &&
+                R(i.Element, t, n),
+              i != s);
+              i = i.GetNavParentCrossingTrees()
+            );
+          })(e, s);
+        }
+        function R(e, t, n) {
+          let s = e,
+            i = s.ownerDocument;
+          if (
+            (s == i.body &&
+              i.defaultView &&
+              !(0, a.aF)(s, n) &&
+              (s = i.defaultView),
+            !(0, a.aF)(s, n))
+          )
+            return;
+          const o = O(s);
+          if ("y" == n) {
+            const e = t == u.pR.DIR_DOWN ? o.MaxScrollTop() : 0;
+            o.scrollTo({ top: e, behavior: "smooth" });
+          } else {
+            const e = t == u.pR.DIR_RIGHT ? o.MaxScrollLeft() : 0;
+            o.scrollTo({ left: e, behavior: "smooth" });
+          }
+        }
+        function T(e) {
           if (!e) return { left: 0, top: 0, right: 0, bottom: 0 };
           if (!("ownerDocument" in e))
             return {
@@ -73249,7 +73367,7 @@ var CLSTAMP = "10779229";
             (t += s.offsetTop), (n += s.offsetLeft), (s = s.offsetParent);
           }
           for (s = e?.parentElement; s; ) {
-            const { scrollTop: e, scrollLeft: i } = E(s);
+            const { scrollTop: e, scrollLeft: i } = N(s);
             if (((t -= e), (n -= i), "ownerDocument" in s)) {
               const e = window.getComputedStyle(s);
               if ("fixed" === e.position || "sticky" === e.position) break;
@@ -73263,15 +73381,15 @@ var CLSTAMP = "10779229";
             bottom: t + e.offsetHeight,
           };
         }
-        function R(e, t) {
+        function M(e, t) {
           return "x" == t
             ? [e.left, e.right, e.right - e.left]
             : [e.top, e.bottom, e.bottom - e.top];
         }
-        function T(e, t, n, s) {
-          let [i, o, r] = R(e, s),
-            [a, l, c] = R(t, s),
-            [d, h] = R(n, s);
+        function D(e, t, n, s) {
+          let [i, o, r] = M(e, s),
+            [a, l, c] = M(t, s),
+            [d, h] = M(n, s);
           if (i < a && o > l) return 0;
           const u = i - d,
             m = o + h,
@@ -73282,25 +73400,25 @@ var CLSTAMP = "10779229";
               ? m - l
               : 0;
         }
-        function M(e) {
+        function k(e) {
           return "auto" == e
             ? 0
             : e.endsWith("px")
               ? parseInt(e)
               : (console.log("Unsupported length", e), 0);
         }
-        function D(e) {
+        function P(e) {
           if (!("ownerDocument" in e))
             return { left: 0, right: 0, top: 0, bottom: 0 };
           const t = e.ownerDocument.defaultView.getComputedStyle(e);
           return {
-            left: M(t.scrollMarginLeft),
-            right: M(t.scrollMarginRight),
-            top: M(t.scrollMarginTop),
-            bottom: M(t.scrollMarginBottom),
+            left: k(t.scrollMarginLeft),
+            right: k(t.scrollMarginRight),
+            top: k(t.scrollMarginTop),
+            bottom: k(t.scrollMarginBottom),
           };
         }
-        function k(e, t) {
+        function L(e, t) {
           let n = (function (e) {
             let t;
             return (
@@ -73311,10 +73429,10 @@ var CLSTAMP = "10779229";
                       window.document.documentElement,
                     )),
               {
-                left: M(t.scrollPaddingLeft),
-                right: M(t.scrollPaddingRight),
-                top: M(t.scrollPaddingTop),
-                bottom: M(t.scrollPaddingBottom),
+                left: k(t.scrollPaddingLeft),
+                right: k(t.scrollPaddingRight),
+                top: k(t.scrollPaddingTop),
+                bottom: k(t.scrollPaddingBottom),
               }
             );
           })(e);
@@ -73325,24 +73443,24 @@ var CLSTAMP = "10779229";
             bottom: Math.max(0, t.bottom - n.bottom),
           };
         }
-        function P(e) {
+        function G(e) {
           return e > -1 && e < 1;
         }
-        function L(e, t, n, s, i) {
+        function B(e, t, n, s, i) {
           y(
             "----------------------------------------------------------------------------------",
           ),
             y("Scrolling Into View (NoTransform):", t);
           let o = [],
             r = t,
-            l = A(t),
+            l = T(t),
             c = i ?? Number.MAX_VALUE;
           for (; r; ) {
             let e = (0, a._f)(r);
             e || (e = (0, a.qf)(r));
-            let t = D(r),
-              n = k(e, A(e)),
-              d = F(e),
+            let t = P(r),
+              n = L(e, T(e)),
+              d = O(e),
               h = { element: e, left: 0, top: 0 };
             if (
               (y(
@@ -73355,7 +73473,7 @@ var CLSTAMP = "10779229";
               ),
               (s && "y" != s) ||
                 !(0, a.aF)(e, "y") ||
-                ((h.top = T(l, n, t, "y")),
+                ((h.top = D(l, n, t, "y")),
                 (h.top = S.OQ(
                   h.top,
                   -d.scrollTop,
@@ -73368,7 +73486,7 @@ var CLSTAMP = "10779229";
                 y(`- checked y: ${h.top}`)),
               (s && "x" != s) ||
                 !(0, a.aF)(e, "x") ||
-                ((h.left = T(l, n, t, "x")),
+                ((h.left = D(l, n, t, "x")),
                 (h.left = S.OQ(
                   h.left,
                   -d.scrollLeft,
@@ -73396,13 +73514,13 @@ var CLSTAMP = "10779229";
           }
           let d = !1;
           for (let e of o) {
-            if (P(e.left) && P(e.top)) continue;
-            let t = F(e.element),
+            if (G(e.left) && G(e.top)) continue;
+            let t = O(e.element),
               s = t.scrollTop + e.top,
               i = t.scrollLeft + e.left;
             (i = S.OQ(i, 0, t.MaxScrollLeft())),
               (s = S.OQ(s, 0, t.MaxScrollTop())),
-              (P(t.scrollLeft - i) && P(t.scrollTop - s)) ||
+              (G(t.scrollLeft - i) && G(t.scrollTop - s)) ||
                 (t.scrollTo({ left: i, top: s, behavior: n }),
                 d || (y("Scrolling:"), (d = !0)),
                 y(
@@ -73411,7 +73529,7 @@ var CLSTAMP = "10779229";
                 ));
           }
         }
-        class G {
+        class F {
           m_element;
           m_fnOriginalScrollTo;
           m_window;
@@ -73521,21 +73639,21 @@ var CLSTAMP = "10779229";
             return this.scrollWidth - this.clientWidth;
           }
         }
-        (0, s.Cg)([r.o], G.prototype, "ResetScrollState", null);
-        const B = new WeakMap();
-        function F(e) {
-          let t = B.get(e);
-          return t || ((t = new G(e)), B.set(e, t)), t;
+        (0, s.Cg)([r.o], F.prototype, "ResetScrollState", null);
+        const E = new WeakMap();
+        function O(e) {
+          let t = E.get(e);
+          return t || ((t = new F(e)), E.set(e, t)), t;
         }
-        function E(e) {
-          const t = B.get(e);
+        function N(e) {
+          const t = E.get(e);
           return t
             ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
             : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
         }
-        const O = new d.wd("FocusNavigationMovement"),
-          N = O.Debug;
-        var j, V, U, H;
+        const j = new d.wd("FocusNavigationMovement"),
+          V = j.Debug;
+        var U, H, W, z;
         !(function (e) {
           (e[(e.NONE = 0)] = "NONE"),
             (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -73544,26 +73662,26 @@ var CLSTAMP = "10779229";
             (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
             (e[(e.GRID = 5)] = "GRID"),
             (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-        })(j || (j = {})),
+        })(U || (U = {})),
           (function (e) {
             (e[(e.FIRST = 0)] = "FIRST"),
               (e[(e.LAST = 1)] = "LAST"),
               (e[(e.MAINTAIN_X = 2)] = "MAINTAIN_X"),
               (e[(e.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
               (e[(e.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
-          })(V || (V = {})),
+          })(H || (H = {})),
           (function (e) {
             (e[(e.Standard = 0)] = "Standard"),
               (e[(e.NoTransform = 1)] = "NoTransform"),
               (e[(e.NoTransformSparseContent = 2)] =
                 "NoTransformSparseContent");
-          })(U || (U = {})),
+          })(W || (W = {})),
           (function (e) {
             (e[(e.INVALID = 0)] = "INVALID"),
               (e[(e.FORWARD = 1)] = "FORWARD"),
               (e[(e.BACKWARD = 2)] = "BACKWARD");
-          })(H || (H = {}));
-        class W {
+          })(z || (z = {}));
+        class q {
           m_Tree;
           m_Parent;
           m_rgChildren = [];
@@ -73605,34 +73723,46 @@ var CLSTAMP = "10779229";
           get Parent() {
             return this.m_Parent;
           }
+          GetNavParentCrossingTrees() {
+            return this.m_Parent
+              ? this.m_Parent
+              : this.m_Tree.GetParentEmbeddedNavTree() && this.Element
+                ? (this.Element.__nav_wrapper ?? null)
+                : null;
+          }
+          GetWrappedTree() {
+            return null;
+          }
           SetProperties(e) {
             const t =
               ((n = this.m_Properties?.actionDescriptionMap),
               (s = e?.actionDescriptionMap),
+              (i = h.SI),
               !(null == n || null == s
                 ? n === s
                 : "object" == typeof n &&
                   "object" == typeof s &&
                   Object.keys(n).length === Object.keys(s).length &&
+                  ((i = i ?? ((e, t) => e === t)),
                   Object.keys(n).every(
-                    (e) => s.hasOwnProperty(e) && n[e] === s[e],
-                  )));
-            var n, s;
-            const i = this.m_Properties?.focusableIfEmpty,
-              o = this.m_Properties?.noFocusRing;
+                    (e) => s.hasOwnProperty(e) && i(n[e], s[e]),
+                  ))));
+            var n, s, i;
+            const o = this.m_Properties?.focusableIfEmpty,
+              r = this.m_Properties?.noFocusRing;
             (this.m_Properties = e || {}),
               t && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
-              this.m_Properties.focusableIfEmpty && !i
+              this.m_Properties.focusableIfEmpty && !o
                 ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
                 : !this.m_Properties.focusableIfEmpty &&
-                  i &&
+                  o &&
                   this.PropagateFocusableIfEmptyAncestorToDescendants(
                     this.m_FocusableIfEmptyAncestor,
                   ),
-              this.m_Properties.noFocusRing && !o && this.BHasFocus()
+              this.m_Properties.noFocusRing && !r && this.BHasFocus()
                 ? this.m_FocusRing?.OnBlur(h.D$.APPLICATION, this, this)
                 : !this.m_Properties.noFocusRing &&
-                  o &&
+                  r &&
                   this.BHasFocus() &&
                   this.m_FocusRing?.OnFocus(h.D$.APPLICATION, this, this),
               this.m_element && this.RegisterDOMEvents();
@@ -73774,7 +73904,7 @@ var CLSTAMP = "10779229";
               (this.m_bMounted = !1);
             const e = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
             (this.BHasFocus() || e) &&
-              (N(
+              (V(
                 `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? "will transfer to retain focus ancestor" : "will blur"}.`,
               ),
               e && this.Tree.DeferredFocus.RequestFocus(null),
@@ -73796,7 +73926,7 @@ var CLSTAMP = "10779229";
             !this.m_rgNavigationHandlers.length &&
               this.m_element &&
               (this.m_rgChildren.length >= 2 ||
-                this.m_Properties?.layout != j.NONE ||
+                this.m_Properties?.layout != U.NONE ||
                 this.m_Properties.onMoveUp ||
                 this.m_Properties.onMoveRight ||
                 this.m_Properties.onMoveDown ||
@@ -73868,8 +73998,8 @@ var CLSTAMP = "10779229";
               (this.m_rgChildren.sort((e, t) => {
                 const n = e.m_element,
                   s = t.m_element;
-                if (!n) return s ? 1 : 0;
-                if (!s) return -1;
+                if (!n || !n.isConnected) return s && s.isConnected ? 1 : 0;
+                if (!s || !s.isConnected) return -1;
                 const i = n.compareDocumentPosition(s);
                 return i & Node.DOCUMENT_POSITION_PRECEDING
                   ? 1
@@ -73893,7 +74023,7 @@ var CLSTAMP = "10779229";
                 const e = this.FindFocusableDescendant();
                 if (e && e !== this)
                   return (
-                    N(
+                    V(
                       "Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.",
                       this.m_element,
                       e.m_element,
@@ -73952,7 +74082,7 @@ var CLSTAMP = "10779229";
           BFocusFirstChild(e) {
             const t = this.FindNextFocusableChildInDirection(
               -1,
-              H.FORWARD,
+              z.FORWARD,
               u.pR.INVALID,
             );
             return this.InternalFocusDescendant(t, e);
@@ -73960,7 +74090,7 @@ var CLSTAMP = "10779229";
           BFocusLastChild(e) {
             const t = this.FindNextFocusableChildInDirection(
               this.m_rgChildren.length,
-              H.BACKWARD,
+              z.BACKWARD,
               u.pR.INVALID,
             );
             return this.InternalFocusDescendant(t, e);
@@ -73982,16 +74112,16 @@ var CLSTAMP = "10779229";
                 (this.IsValidChildIndex(r) ||
                   (r =
                     r >= this.m_rgChildren.length ||
-                    a == j.ROW_REVERSE ||
-                    a == j.COLUMN_REVERSE ||
-                    i == V.LAST
+                    a == U.ROW_REVERSE ||
+                    a == U.COLUMN_REVERSE ||
+                    i == H.LAST
                       ? this.m_rgChildren.length - 1
                       : 0),
-                i == V.MAINTAIN_X
+                i == H.MAINTAIN_X
                   ? (d = "x")
-                  : i == V.MAINTAIN_Y
+                  : i == H.MAINTAIN_Y
                     ? (d = "y")
-                    : a == j.GEOMETRIC && n && (d = l.xr[n]),
+                    : a == U.GEOMETRIC && n && (d = l.xr[n]),
                 (d || t) && n)
               ) {
                 const s = this.m_Tree.GetLastFocusedNode();
@@ -74002,17 +74132,17 @@ var CLSTAMP = "10779229";
                       s.GetBoundingRect(),
                       n,
                     );
-                  N(
-                    `Taking focus while preserving ${i && V[i]} preserved: ${d} movement: ${n}, node:`,
+                  V(
+                    `Taking focus while preserving ${i && H[i]} preserved: ${d} movement: ${n}, node:`,
                     o,
                   ),
                     (c = this.FindClosestFocusableNodeToRect(e, o));
                 } else if (d != l.xr[n]) {
-                  const t = this.ComputeRelativeDirection(e, j.GRID),
-                    n = t == H.BACKWARD ? this.m_rgChildren.length : -1;
+                  const t = this.ComputeRelativeDirection(e, U.GRID),
+                    n = t == z.BACKWARD ? this.m_rgChildren.length : -1;
                   c = this.FindNextFocusableChildInDirection(n, t, e);
                 }
-              } else if (i == V.PREFERRED_CHILD) {
+              } else if (i == H.PREFERRED_CHILD) {
                 let t = this.m_rgChildren;
                 for (; t.length; ) {
                   let n = [];
@@ -74029,23 +74159,23 @@ var CLSTAMP = "10779229";
                   t = n;
                 }
               } else
-                i == V.LAST &&
+                i == H.LAST &&
                   (c = this.FindNextFocusableChildInDirection(
                     r + 1,
-                    H.BACKWARD,
+                    z.BACKWARD,
                     e,
                   ));
               return (
                 c ||
                   (c = this.FindNextFocusableChildInDirection(
                     r - 1,
-                    H.FORWARD,
+                    z.FORWARD,
                     e,
                   )),
                 c ||
                   (c = this.FindNextFocusableChildInDirection(
                     r,
-                    H.BACKWARD,
+                    z.BACKWARD,
                     e,
                   )),
                 c || (s ? this : null)
@@ -74062,7 +74192,7 @@ var CLSTAMP = "10779229";
                 bottom: t.innerHeight,
               });
             return (
-              N(
+              V(
                 `Focusing visible child, best child match is ${n?.child?.Element?.className} - ${JSON.stringify(n?.visibility)}`,
               ),
               !!n && n.child.BTakeFocus(e)
@@ -74070,7 +74200,7 @@ var CLSTAMP = "10779229";
           }
           GetLayout() {
             if (this.m_Properties?.layout) return this.m_Properties.layout;
-            if (this.m_rgChildren.length < 2) return j.NONE;
+            if (this.m_rgChildren.length < 2) return U.NONE;
             return (0, m.ko)(this.m_element);
           }
           OnNavigationEvent(e) {
@@ -74100,75 +74230,91 @@ var CLSTAMP = "10779229";
             return r;
           }
           InternalFocusDescendant(e, t, n) {
-            return !!e && (this.m_Tree.TransferFocus(t, e, (0, m.G4)(n)), !0);
+            return !!e && (this.m_Tree.TransferFocus(t, e, n, !1), !0);
           }
-          BTryInternalNavigation(e, t) {
-            const n = this.GetLayout();
-            let s,
-              i = this.ComputeRelativeDirection(e, n);
-            if (
-              (N(
-                `Handling navigation event ${u.pR[e]} - ${j[n]} - ${H[i]}`,
-                this.m_element,
-              ),
-              i == H.INVALID)
-            )
-              return !1;
-            if (this.m_Properties?.focusable && this.BHasFocus())
-              return N("Skipping navigation within focused element"), !1;
-            if ((this.EnsureChildrenSorted(!0), n == j.GRID))
-              s = this.FindNextFocusableChildInGrid(
-                this.GetActiveChildIndex(),
-                i,
-                e,
-              );
-            else if (n == j.GEOMETRIC)
-              s = this.FindNextFocusableChildGeometric(i, e);
-            else {
-              let t = this.GetActiveChildIndex();
-              this.IsValidChildIndex(t) ||
-                (t = i == H.FORWARD ? -1 : this.m_rgChildren.length),
-                (s = this.FindNextFocusableChildInDirection(t, i, e));
+          BHasNavTargetInDirection(e, t) {
+            if (this.HasMovementHandler(e)) return !0;
+            let n = this.FindNextFocusableChild(e);
+            if (t && n) {
+              let e = n.GetWrappedTree();
+              if (e && e.GetExcludeFromScrollRegionSearch()) return !1;
             }
-            if (s) {
-              const n = (0, m.G4)(e);
-              if (
-                this.GetScrollIntoViewType() == U.NoTransformSparseContent ||
-                s.GetScrollIntoViewType() == U.NoTransformSparseContent
-              ) {
-                const e = s.Element?.ownerDocument.defaultView;
-                if (e) {
-                  const o =
-                      ("y" == n ? e.innerHeight : e.innerWidth) /
-                      (t ? 4.5 : 3.33),
-                    r = A(s.Element);
-                  let a = !1;
-                  if (
-                    ("y" == n
-                      ? i == H.FORWARD
-                        ? (a =
-                            r.top > e.innerHeight &&
-                            r.bottom > e.innerHeight + o)
-                        : i == H.BACKWARD && (a = r.bottom < 0 && r.top < -o)
-                      : "x" == n &&
-                        (i == H.FORWARD
-                          ? (a =
-                              r.left > e.innerWidth &&
-                              r.right > e.innerWidth + o)
-                          : i == H.BACKWARD &&
-                            (a = r.right < 0 && r.left < -o)),
-                    a)
-                  )
-                    return (
-                      N(`Element too far away, scrolling ${o} on ${n} axis `),
-                      L(s.Element, s.Element, "smooth", n, o),
-                      !0
-                    );
-                }
-              }
-              return this.m_Tree.TransferFocus(h.D$.GAMEPAD, s, n), !0;
+            return !!n;
+          }
+          HasMovementHandler(e) {
+            switch (e) {
+              case u.pR.DIR_UP:
+                return !!this.m_Properties?.onMoveUp;
+              case u.pR.DIR_DOWN:
+                return !!this.m_Properties?.onMoveDown;
+              case u.pR.DIR_LEFT:
+                return !!this.m_Properties?.onMoveLeft;
+              case u.pR.DIR_RIGHT:
+                return !!this.m_Properties?.onMoveRight;
             }
             return !1;
+          }
+          FindNextFocusableChild(e) {
+            const t = this.GetLayout(),
+              n = this.ComputeRelativeDirection(e, t);
+            if (n == z.INVALID) return null;
+            if (this.m_Properties?.focusable && this.BHasFocus()) return null;
+            if ((this.EnsureChildrenSorted(!0), t == U.GRID))
+              return this.FindNextFocusableChildInGrid(
+                this.GetActiveChildIndex(),
+                n,
+                e,
+              );
+            if (t == U.GEOMETRIC)
+              return this.FindNextFocusableChildGeometric(n, e);
+            let s = this.GetActiveChildIndex();
+            return (
+              this.IsValidChildIndex(s) ||
+                (s = n == z.FORWARD ? -1 : this.m_rgChildren.length),
+              this.FindNextFocusableChildInDirection(s, n, e)
+            );
+          }
+          BTryInternalNavigation(e, t) {
+            V(
+              `Handling navigation event ${u.pR[e]} - ${U[this.GetLayout()]}`,
+              this.m_element,
+            );
+            const n = this.FindNextFocusableChild(e);
+            if (!n) return !1;
+            const s = (0, m.G4)(e),
+              i = this.ComputeRelativeDirection(e, this.GetLayout());
+            if (
+              this.GetScrollIntoViewType() == W.NoTransformSparseContent ||
+              n.GetScrollIntoViewType() == W.NoTransformSparseContent
+            ) {
+              const e = n.Element?.ownerDocument.defaultView;
+              if (e) {
+                const o =
+                    ("y" == s ? e.innerHeight : e.innerWidth) /
+                    (t ? 4.5 : 3.33),
+                  r = T(n.Element);
+                let a = !1;
+                if (
+                  ("y" == s
+                    ? i == z.FORWARD
+                      ? (a =
+                          r.top > e.innerHeight && r.bottom > e.innerHeight + o)
+                      : i == z.BACKWARD && (a = r.bottom < 0 && r.top < -o)
+                    : "x" == s &&
+                      (i == z.FORWARD
+                        ? (a =
+                            r.left > e.innerWidth && r.right > e.innerWidth + o)
+                        : i == z.BACKWARD && (a = r.right < 0 && r.left < -o)),
+                  a)
+                )
+                  return (
+                    V(`Element too far away, scrolling ${o} on ${s} axis `),
+                    B(n.Element, n.Element, "smooth", s, o),
+                    !0
+                  );
+              }
+            }
+            return this.m_Tree.TransferFocus(h.D$.GAMEPAD, n, e), !0;
           }
           GetScrollIntoViewType() {
             return void 0 !== this.m_Properties?.scrollIntoViewType &&
@@ -74176,55 +74322,55 @@ var CLSTAMP = "10779229";
               ? this.m_Properties.scrollIntoViewType
               : this.m_Parent
                 ? this.m_Parent.GetScrollIntoViewType()
-                : U.Standard;
+                : W.Standard;
           }
           GetRelativeDirection(e) {
             return this.ComputeRelativeDirection(e, this.GetLayout());
           }
           ComputeRelativeDirection(e, t) {
-            let n = t == j.ROW_REVERSE || t == j.COLUMN_REVERSE;
+            let n = t == U.ROW_REVERSE || t == U.COLUMN_REVERSE;
             switch (t) {
-              case j.ROW:
-              case j.ROW_REVERSE:
+              case U.ROW:
+              case U.ROW_REVERSE:
                 switch (e) {
                   case u.pR.DIR_LEFT:
-                    return n ? H.FORWARD : H.BACKWARD;
+                    return n ? z.FORWARD : z.BACKWARD;
                   case u.pR.DIR_RIGHT:
-                    return n ? H.BACKWARD : H.FORWARD;
+                    return n ? z.BACKWARD : z.FORWARD;
                   default:
-                    return H.INVALID;
+                    return z.INVALID;
                 }
-              case j.COLUMN:
-              case j.COLUMN_REVERSE:
+              case U.COLUMN:
+              case U.COLUMN_REVERSE:
                 switch (e) {
                   case u.pR.DIR_UP:
-                    return n ? H.FORWARD : H.BACKWARD;
+                    return n ? z.FORWARD : z.BACKWARD;
                   case u.pR.DIR_DOWN:
-                    return n ? H.BACKWARD : H.FORWARD;
+                    return n ? z.BACKWARD : z.FORWARD;
                   default:
-                    return H.INVALID;
+                    return z.INVALID;
                 }
-              case j.GRID:
-              case j.GEOMETRIC:
+              case U.GRID:
+              case U.GEOMETRIC:
                 switch (e) {
                   case u.pR.DIR_LEFT:
                   case u.pR.DIR_UP:
-                    return n ? H.FORWARD : H.BACKWARD;
+                    return n ? z.FORWARD : z.BACKWARD;
                   case u.pR.DIR_RIGHT:
                   case u.pR.DIR_DOWN:
-                    return n ? H.BACKWARD : H.FORWARD;
+                    return n ? z.BACKWARD : z.FORWARD;
                   default:
-                    return H.INVALID;
+                    return z.INVALID;
                 }
               default:
-                return H.INVALID;
+                return z.INVALID;
             }
           }
           AdvanceIndex(e, t) {
-            return e + (t == H.FORWARD ? 1 : -1);
+            return e + (t == z.FORWARD ? 1 : -1);
           }
           FindNextFocusableChildInDirection(e, t, n) {
-            let s = t == H.FORWARD ? 1 : -1;
+            let s = t == z.FORWARD ? 1 : -1;
             for (
               let t = e + s;
               t >= 0 && t < this.m_rgChildren.length;
@@ -74236,7 +74382,7 @@ var CLSTAMP = "10779229";
             return null;
           }
           ScanChildren(e, t, n) {
-            let s = t == H.FORWARD ? 1 : -1;
+            let s = t == z.FORWARD ? 1 : -1;
             for (let t = e; t >= 0 && t < this.m_rgChildren.length; t += s)
               if (n(this.m_rgChildren[t], t)) return t;
             return -1;
@@ -74283,7 +74429,7 @@ var CLSTAMP = "10779229";
                 s = e;
               }
             } else {
-              let s = t == H.FORWARD ? 1 : -1;
+              let s = t == z.FORWARD ? 1 : -1;
               for (
                 let i = this.AdvanceIndex(e, t);
                 i >= 0 && i < this.m_rgChildren.length;
@@ -74348,7 +74494,7 @@ var CLSTAMP = "10779229";
             return null;
           }
           FindClosetChildInDirection(e, t, n, s) {
-            N(
+            V(
               `Find child closest to rect, rect is at left ${t.left} top ${t.top} right ${t.right} bottom ${t.bottom}`,
             );
             const i = (0, m.lr)(e, t),
@@ -74358,7 +74504,7 @@ var CLSTAMP = "10779229";
               if (r) {
                 const a = (0, m.lr)(e, r);
                 let c;
-                (c = n == H.FORWARD ? a.min - i.max : i.min - a.max),
+                (c = n == z.FORWARD ? a.min - i.max : i.min - a.max),
                   c >= 0 &&
                     o.push({
                       child: s,
@@ -74375,7 +74521,7 @@ var CLSTAMP = "10779229";
                 const n = e.dist - t.dist;
                 return n || t.overlap - e.overlap;
               }),
-              O.IsDebugEnabled())
+              j.IsDebugEnabled())
             ) {
               const e = o
                 .slice(0, 3)
@@ -74383,7 +74529,7 @@ var CLSTAMP = "10779229";
                   ({ dist: e, overlap: t, child: n }) =>
                     `[ node: ${n.m_element?.className} dist: ${e} overlap: ${t} ]`,
                 );
-              N(`Found nodes on axis, top 3 (of ${o.length}: ${e.join(", ")}`);
+              V(`Found nodes on axis, top 3 (of ${o.length}: ${e.join(", ")}`);
             }
             for (const { child: e } of o) {
               const n = e.FindFocusableNode(s, t);
@@ -74409,7 +74555,7 @@ var CLSTAMP = "10779229";
                   !1))
               );
             }),
-              t == H.BACKWARD && r.reverse(),
+              t == z.BACKWARD && r.reverse(),
               r.sort((e, t) => {
                 const n = t.overlap - e.overlap;
                 return 0 != n ? n : e.dist - t.dist;
@@ -74427,7 +74573,7 @@ var CLSTAMP = "10779229";
             );
           }
           SetActiveChild(e) {
-            e instanceof W
+            e instanceof q
               ? (this.EnsureChildrenSorted(),
                 (this.m_ActiveChild = e),
                 (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
@@ -74452,7 +74598,7 @@ var CLSTAMP = "10779229";
               bFocusDescendant: !0,
             });
           }
-          SetDOMFocusAndScroll(e, t) {
+          SetDOMFocusAndScroll(e, t, n, s) {
             this.UpdateParentActiveChild(),
               this.m_Tree.OnChildActivated(e),
               this.m_Tree.BIsActiveFocus()
@@ -74462,100 +74608,21 @@ var CLSTAMP = "10779229";
                   ),
                   this.m_element?.focus({ preventScroll: !0 }))
                 : this.m_Tree.BUseVirtualFocus() ||
-                  N(
+                  V(
                     `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                   ),
-              this.m_Tree.BIsActive() &&
-                (function (e, t, n) {
-                  const s = e.Element;
-                  if (!s) return;
-                  let i = [
-                    {
-                      node: e,
-                      eScrollType: e.m_Properties?.scrollIntoViewType,
-                    },
-                  ];
-                  for (let t = e.Parent; t; t = t.Parent) {
-                    const e = t.m_Properties?.scrollIntoViewWhenChildFocused,
-                      n = t.m_Properties?.scrollIntoViewType;
-                    if (e) {
-                      const s = { node: t, eScrollType: n };
-                      "force" === e ? (i = [s]) : i.push(s);
-                    }
-                    if (void 0 !== n)
-                      for (
-                        let e = i.length - 1;
-                        e >= 0 && void 0 === i[e].eScrollType;
-                        e--
-                      )
-                        i[e].eScrollType = n;
-                  }
-                  for (; i.length; ) {
-                    let { node: s, eScrollType: o } = i.pop(),
-                      r = 0 == i.length;
-                    if (
-                      (void 0 === o && (o = w ? U.NoTransform : U.Standard),
-                      s?.m_Properties?.fnScrollIntoViewHandler &&
-                        !1 !== s.m_Properties.fnScrollIntoViewHandler(e, t, s))
-                    )
-                      continue;
-                    const a = s.m_element,
-                      l =
-                        o == U.NoTransform ||
-                        o == U.NoTransformSparseContent ||
-                        !r;
-                    if (t || n === h.D$.GAMEPAD) {
-                      const t = l ? A(a) : a.getBoundingClientRect();
-                      let n = !1;
-                      const s = Math.max(1.4 * (t.bottom - t.top), 40),
-                        i = x && performance.now() - x < 500;
-                      (i ||
-                        t.bottom < -s ||
-                        t.top > a.ownerDocument.defaultView.innerHeight + s) &&
-                        ((n = !0),
-                        i ||
-                          y(
-                            `Disabling smooth scrolling, ${t.bottom} < ${-s}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${s} `,
-                          ));
-                      let o = n ? "auto" : "smooth";
-                      n && (x = performance.now()),
-                        e.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
-                        l
-                          ? L(0, a, o)
-                          : (y(
-                              "Scrolling Into View (via browser scrollIntoView):",
-                              a,
-                            ),
-                            a.scrollIntoView({
-                              behavior: o,
-                              block: "nearest",
-                            }));
-                    } else
-                      y("No previous element for scrolling, will jump"),
-                        l
-                          ? L(0, a, "auto")
-                          : (y(
-                              "Scrolling Into View (via browser scrollIntoView):",
-                              a,
-                            ),
-                            a?.scrollIntoView({
-                              behavior: "auto",
-                              block: "nearest",
-                              inline: "nearest",
-                            }));
-                  }
-                })(this, t, e);
+              this.m_Tree.BIsActive() && A(this, t, e, n, s);
           }
         }
-        (0, s.Cg)([r.o], W.prototype, "OnDOMFocus", null),
-          (0, s.Cg)([r.o], W.prototype, "OnDOMBlur", null),
-          (0, s.Cg)([r.o], W.prototype, "OnNavigationEvent", null);
+        (0, s.Cg)([r.o], q.prototype, "OnDOMFocus", null),
+          (0, s.Cg)([r.o], q.prototype, "OnDOMBlur", null),
+          (0, s.Cg)([r.o], q.prototype, "OnNavigationEvent", null);
       },
-      37652: (e, t, n) => {
+      48623: (e, t, n) => {
         "use strict";
         n.d(t, { O: () => o });
-        var s = n(35539),
-          i = n(11662);
+        var s = n(75393),
+          i = n(13791);
         function o(e) {
           if (!e) return s.xj.NONE;
           switch (e) {
@@ -74576,7 +74643,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      27953: (e, t, n) => {
+      75486: (e, t, n) => {
         "use strict";
         n.d(t, {
           Fc: () => S,
@@ -74598,15 +74665,15 @@ var CLSTAMP = "10779229";
         var s = n(63696),
           i = n(90095),
           o = n(89193),
-          r = n(73640);
+          r = n(58033);
         function a() {
           return window.g_GRS;
         }
         async function l(e, t, s) {
           if (!a()) {
             const [{ CGameRecordingStore: i }] = await Promise.all([
-              Promise.all([n.e(9489), n.e(6950), n.e(9040)]).then(
-                n.bind(n, 39040),
+              Promise.all([n.e(9489), n.e(4571), n.e(531)]).then(
+                n.bind(n, 531),
               ),
             ]);
             s && (0, r.V)(s);
@@ -74688,7 +74755,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      18483: (e, t, n) => {
+      69164: (e, t, n) => {
         "use strict";
         function s(e, t = 0, n = Math.random) {
           if (e?.length > 1) {
@@ -74743,13 +74810,14 @@ var CLSTAMP = "10779229";
           e.splice(s + 1, 0, t);
         }
         function h(e, t, n) {
-          return (
-            e ||
-              console.error(
+          return e
+            ? e.length < t
+              ? e.concat(Array(t - e.length).fill(n))
+              : e
+            : (console.error(
                 "array should be defined for us to fill in the missing indexes",
               ),
-            e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
-          );
+              []);
         }
         n.d(t, {
           $D: () => a,
@@ -74763,7 +74831,7 @@ var CLSTAMP = "10779229";
           yY: () => i,
         });
       },
-      11662: (e, t, n) => {
+      13791: (e, t, n) => {
         "use strict";
         function s(e, t, ...n) {
           console.assert
@@ -74777,7 +74845,7 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { wT: () => s, z_: () => i });
       },
-      54250: (e, t, n) => {
+      67725: (e, t, n) => {
         "use strict";
         function s(e, t, n) {
           return {
@@ -74793,51 +74861,50 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { o: () => s });
       },
-      96108: (e, t, n) => {
+      55747: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $A: () => C,
           $U: () => u,
-          CF: () => R,
-          Dy: () => S,
+          CF: () => A,
+          Dy: () => f,
           FK: () => m,
-          FL: () => G,
+          FL: () => L,
           KH: () => a,
-          Lk: () => k,
-          Nb: () => H,
-          QR: () => E,
+          Lk: () => D,
+          Nb: () => U,
+          QR: () => F,
           Qo: () => d,
           R: () => s,
           S7: () => h,
-          Sq: () => f,
-          TE: () => I,
-          Te: () => M,
+          Sq: () => C,
+          TE: () => b,
+          Te: () => T,
           Um: () => r,
           Vr: () => l,
-          Ze: () => x,
+          Ze: () => w,
           _3: () => _,
-          _9: () => v,
+          _9: () => S,
           a_: () => o,
-          b7: () => V,
-          c3: () => U,
-          cr: () => B,
-          e9: () => F,
-          eH: () => N,
+          b7: () => j,
+          c3: () => V,
+          cr: () => G,
+          e9: () => B,
+          eH: () => O,
           f4: () => g,
-          fY: () => y,
-          fb: () => D,
-          hX: () => b,
-          h_: () => j,
-          iV: () => T,
-          nH: () => W,
+          fY: () => I,
+          fb: () => M,
+          hX: () => v,
+          h_: () => N,
+          iV: () => R,
+          nH: () => H,
           nO: () => c,
-          oH: () => z,
-          ob: () => w,
-          p: () => P,
-          sG: () => O,
+          oH: () => W,
+          ob: () => y,
+          p: () => k,
+          sG: () => E,
           sW: () => p,
-          uN: () => L,
-          yw: () => A,
+          uN: () => P,
+          yw: () => x,
           zi: () => i,
         });
         const s = 1,
@@ -74854,37 +74921,36 @@ var CLSTAMP = "10779229";
           p = 15,
           _ = 16,
           g = 17,
-          C = 19,
-          f = 20,
-          S = 21,
-          v = 22,
-          b = 24,
-          I = 25,
-          y = 26,
-          w = 27,
-          x = 29,
-          A = 32,
-          R = 34,
-          T = 35,
-          M = 37,
-          D = 40,
-          k = 41,
-          P = 42,
-          L = 43,
-          G = 48,
-          B = 49,
-          F = 52,
-          E = 65,
-          O = 69,
-          N = 79,
-          j = 84,
-          V = 88,
-          U = 94,
-          H = 112,
-          W = 116,
-          z = 118;
+          C = 20,
+          f = 21,
+          S = 22,
+          v = 24,
+          b = 25,
+          I = 26,
+          y = 27,
+          w = 29,
+          x = 32,
+          A = 34,
+          R = 35,
+          T = 37,
+          M = 40,
+          D = 41,
+          k = 42,
+          P = 43,
+          L = 48,
+          G = 49,
+          B = 52,
+          F = 65,
+          E = 69,
+          O = 79,
+          N = 84,
+          j = 88,
+          V = 94,
+          U = 112,
+          H = 116,
+          W = 118;
       },
-      51600: (e, t, n) => {
+      52308: (e, t, n) => {
         "use strict";
         async function s(e, t = "SHA-256") {
           let n;
@@ -74901,8 +74967,8 @@ var CLSTAMP = "10779229";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => w });
-        var i = n(87118),
-          o = n(31822),
+        var i = n(39831),
+          o = n(82377),
           r = n(63696);
         const a =
           window.addEventListener ||
@@ -75295,10 +75361,10 @@ var CLSTAMP = "10779229";
           return 1e4;
         }
       },
-      26889: (e, t, n) => {
+      37420: (e, t, n) => {
         "use strict";
         n.d(t, { l: () => i });
-        var s = n(18483);
+        var s = n(69164);
         class i {
           m_vecCallbacks = [];
           Register(e) {
@@ -75329,7 +75395,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      28142: (e, t, n) => {
+      70027: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return (
@@ -75352,7 +75418,7 @@ var CLSTAMP = "10779229";
           );
         }
         function a(e) {
-          if (0 == e.length) return !1;
+          if (!e) return !1;
           for (let t = 0; t < e.length; t++) {
             const n = e.charCodeAt(t);
             if (n < 48 || n > 57) return !1;
@@ -75374,14 +75440,14 @@ var CLSTAMP = "10779229";
           kf: () => l,
         });
       },
-      35360: (e, t, n) => {
+      75037: (e, t, n) => {
         "use strict";
         n.d(t, { p: () => s });
         function s() {
           return !1;
         }
       },
-      58566: (e, t, n) => {
+      3647: (e, t, n) => {
         "use strict";
         n.d(t, { S: () => i });
         const s = /^(steam|ftp|https?):\/\//;
@@ -75389,11 +75455,11 @@ var CLSTAMP = "10779229";
           return s.test(e) ? e : "https://" + e;
         }
       },
-      23402: (e, t, n) => {
+      10779: (e, t, n) => {
         "use strict";
         n.d(t, { J: () => o });
-        var s = n(40077),
-          i = n(43698);
+        var s = n(19022),
+          i = n(55983);
         function o() {
           return (0, i.A)().languages.map((e) => {
             return 2 == (t = e.strISOCode).length && s.TS.COUNTRY
@@ -75403,7 +75469,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      33101: (e, t, n) => {
+      55492: (e, t, n) => {
         "use strict";
         n.d(t, { Lg: () => l, VD: () => i, mR: () => a, yc: () => r });
         const s = new Set([
@@ -75491,12 +75557,12 @@ var CLSTAMP = "10779229";
         r.set("sc_schinese", r.get("schinese")),
           r.set("korean", r.get("koreana"));
       },
-      43698: (e, t, n) => {
+      55983: (e, t, n) => {
         "use strict";
         n.d(t, { l: () => d, A: () => h });
-        var s = n(40077),
+        var s = n(19022),
           i = n(63696),
-          o = n(33101);
+          o = n(55492);
         const r = 5;
         function a(e, ...t) {
           return 0 == t.length
@@ -75598,15 +75664,15 @@ var CLSTAMP = "10779229";
           };
         }
       },
-      87118: (e, t, n) => {
+      39831: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => h, lI: () => c, w: () => d });
-        var s = n(51600),
-          i = n(96108),
+        var s = n(52308),
+          i = n(55747),
           o = n(58663),
-          r = n(56738),
-          a = n(84869),
-          l = n(94553);
+          r = n(73939),
+          a = n(80036),
+          l = n(15704);
         class c {
           static InitHeaderFromPacket(e) {
             return new c(void 0, e);
@@ -75772,11 +75838,17 @@ var CLSTAMP = "10779229";
                 : this.Body()[`set_${t}`] && this.Body()[`set_${t}`](e[t]);
           }
         }
-        function h(e, t) {
-          return t instanceof d ? t : d.InitFromObject(e, t);
+        function h(e, t, n) {
+          let s;
+          return (
+            (s = t instanceof d ? t : d.InitFromObject(e, t)),
+            void 0 !== n?.strDebugSource &&
+              s.Hdr().set_debug_source(n.strDebugSource),
+            s
+          );
         }
       },
-      51037: (e, t, n) => {
+      21118: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => l,
@@ -75944,7 +76016,7 @@ var CLSTAMP = "10779229";
               };
         }
       },
-      94553: (e, t, n) => {
+      15704: (e, t, n) => {
         "use strict";
         n.d(t, { Kx: () => o, pV: () => s, w: () => r });
         class s {
@@ -76052,7 +76124,7 @@ var CLSTAMP = "10779229";
           return t;
         }
       },
-      62458: (e, t, n) => {
+      36970: (e, t, n) => {
         "use strict";
         n.d(t, { OI: () => i });
         const s = new (class {
@@ -76083,7 +76155,7 @@ var CLSTAMP = "10779229";
           return s;
         }
       },
-      63265: (e, t, n) => {
+      7086: (e, t, n) => {
         "use strict";
         function s(e) {
           return null != e && void 0 !== e.focus;
@@ -76138,7 +76210,7 @@ var CLSTAMP = "10779229";
           return "auto" === s || "scroll" === s;
         }
       },
-      89008: (e, t, n) => {
+      30513: (e, t, n) => {
         "use strict";
         n.d(t, {
           ML: () => o,
@@ -76150,7 +76222,7 @@ var CLSTAMP = "10779229";
           xA: () => r,
         });
         var s = n(63696),
-          i = n(14090);
+          i = n(38969);
         function o(e, t, n, i) {
           s.useEffect(() => {
             const s = e && "current" in e ? e.current : e;
@@ -76205,8 +76277,10 @@ var CLSTAMP = "10779229";
           return [
             e,
             {
-              onMouseEnter: s.useCallback(() => t(!0), []),
-              onMouseLeave: s.useCallback(
+              onPointerEnter: s.useCallback((e) => {
+                (e && "pointerType" in e && "mouse" !== e.pointerType) || t(!0);
+              }, []),
+              onPointerLeave: s.useCallback(
                 () =>
                   window.sessionStorage &&
                   "true" !=
@@ -76227,7 +76301,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      72948: (e, t, n) => {
+      56995: (e, t, n) => {
         "use strict";
         n.d(t, {
           CH: () => a,
@@ -76249,7 +76323,7 @@ var CLSTAMP = "10779229";
           xA: () => i.xA,
         });
         var s = n(63696),
-          i = n(89008);
+          i = n(30513);
         function o(e, t, n = !0, i = !1) {
           const o = s.useRef(t);
           o.current = t;
@@ -76405,7 +76479,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      14090: (e, t, n) => {
+      38969: (e, t, n) => {
         "use strict";
         n.d(t, {
           D5: () => c,
@@ -76457,11 +76531,11 @@ var CLSTAMP = "10779229";
             }, [e, t]);
         }
       },
-      20547: (e, t, n) => {
+      93246: (e, t, n) => {
         "use strict";
         n.d(t, { OO: () => r });
         var s = n(63696),
-          i = n(14090);
+          i = n(38969);
         function o(e, t) {
           return (0, i.QS)(
             (n) => {
@@ -76489,13 +76563,13 @@ var CLSTAMP = "10779229";
           }, t);
         }
       },
-      84357: (e, t, n) => {
+      9808: (e, t, n) => {
         "use strict";
         n.d(t, { Y: () => a, j: () => l });
         var s = n(62540),
           i = n(63696),
-          o = n(20547),
-          r = n(14090);
+          o = n(93246),
+          r = n(38969);
         function a(e) {
           const t = (0, o.OO)(e, e.options);
           return (0, s.jsx)("span", { ref: t, style: { fontSize: 0 } });
@@ -76507,11 +76581,11 @@ var CLSTAMP = "10779229";
           return (0, s.jsx)("div", { ref: d, ...l });
         });
       },
-      40077: (e, t, n) => {
+      19022: (e, t, n) => {
         "use strict";
         n.d(t, { YJ: () => o, TS: () => r, iA: () => a, Ki: () => l });
-        var s = n(57345),
-          i = n(94121);
+        var s = n(17692),
+          i = n(27650);
         function o(e) {
           return e;
         }
@@ -76521,7 +76595,7 @@ var CLSTAMP = "10779229";
         window.Config && Object.assign(s.TS, window.Config),
           window.UserConfig && Object.assign(s.iA, window.UserConfig);
       },
-      61217: (e, t, n) => {
+      78178: (e, t, n) => {
         "use strict";
         n.d(t, { s: () => a });
         var s = n(63696),
@@ -76557,7 +76631,7 @@ var CLSTAMP = "10779229";
         const l = { queries: { staleTime: 1 / 0 } },
           c = new o.E({ defaultOptions: l });
       },
-      65729: (e, t, n) => {
+      63440: (e, t, n) => {
         "use strict";
         n.d(t, { LH: () => r, Rh: () => o });
         var s = n(63696);
@@ -76572,7 +76646,7 @@ var CLSTAMP = "10779229";
           return e.useActiveAccount();
         }
       },
-      22184: (e, t, n) => {
+      83763: (e, t, n) => {
         "use strict";
         n.d(t, {
           KV: () => c,
@@ -76583,7 +76657,7 @@ var CLSTAMP = "10779229";
           zv: () => m,
         });
         var s = n(63696),
-          i = n(11662);
+          i = n(13791);
         const o = s.createContext(void 0),
           r = o.Provider,
           a = () => {
@@ -76633,10 +76707,10 @@ var CLSTAMP = "10779229";
             return e();
           };
       },
-      9939: (e, t, n) => {
+      11098: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => o });
-        var s = n(43698);
+        var s = n(55983);
         const i = {};
         (i.arabic = () => n.e(3710).then(n.t.bind(n, 8476, 19))),
           (i.brazilian = () => n.e(6562).then(n.t.bind(n, 99574, 19))),
@@ -76674,13 +76748,13 @@ var CLSTAMP = "10779229";
           if (i[e]) return i[e]();
         });
       },
-      19433: (e, t, n) => {
+      33692: (e, t, n) => {
         "use strict";
         n.d(t, { DT: () => c, b0: () => a, bu: () => l });
-        var s = n(40077),
-          i = n(83254),
-          o = n(11662),
-          r = n(91320);
+        var s = n(19022),
+          i = n(48603),
+          o = n(13791),
+          r = n(79701);
         function a(e, t) {
           if (e[t]) {
             if ("community_icon" == t) {
@@ -76731,7 +76805,7 @@ var CLSTAMP = "10779229";
             ].sort((e, t) => e.ordinal - t.ordinal);
         }
       },
-      64678: (e, t, n) => {
+      50577: (e, t, n) => {
         "use strict";
         n.d(t, {
           M4: () => h,
@@ -76743,9 +76817,9 @@ var CLSTAMP = "10779229";
           kB: () => a,
         });
         var s = n(62540),
-          i = n(40077),
-          o = n(83254),
-          r = n(91320);
+          i = n(19022),
+          o = n(48603),
+          r = n(79701);
         function a(e, t) {
           const { data: n } = (0, o.Yo)(e),
             s = (0, r.dy)();
@@ -76807,7 +76881,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      43224: (e, t, n) => {
+      52815: (e, t, n) => {
         "use strict";
         function s(e) {
           return (
@@ -76827,11 +76901,11 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { J: () => s, S: () => i });
       },
-      50736: (e, t, n) => {
+      68773: (e, t, n) => {
         "use strict";
         n.d(t, { CC: () => u, Wn: () => c });
         var s,
-          i = n(23402);
+          i = n(10779);
         function o(e, t) {
           const n = { year: "numeric", month: "short", day: "numeric", ...t };
           return new Date(1e3 * e).toLocaleDateString((0, i.J)(), n);
@@ -76841,8 +76915,8 @@ var CLSTAMP = "10779229";
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
         })(s || (s = {}));
-        var r = n(9939),
-          a = n(50696);
+        var r = n(11098),
+          a = n(63767);
         function l(e) {
           return e?.is_coming_soon
             ? (function (e, t, n) {
@@ -76931,11 +77005,11 @@ var CLSTAMP = "10779229";
           return t || (t = e.original_release_date), t ? o(t) : "";
         }
       },
-      46675: (e, t, n) => {
+      75478: (e, t, n) => {
         "use strict";
         n.d(t, { _: () => o });
-        var s = n(40077),
-          i = n(43224);
+        var s = n(19022),
+          i = n(52815);
         function o(e, t = !1) {
           if (e)
             return t && (0, i.J)(e)
@@ -76943,7 +77017,7 @@ var CLSTAMP = "10779229";
               : `${s.TS.STORE_BASE_URL}${e.store_url_path}`;
         }
       },
-      83254: (e, t, n) => {
+      48603: (e, t, n) => {
         "use strict";
         n.d(t, {
           AQ: () => w,
@@ -76966,11 +77040,11 @@ var CLSTAMP = "10779229";
           wl: () => m,
           xz: () => b,
         });
-        var s = n(11662),
+        var s = n(13791),
           i = n(61416),
           o = n(3715),
-          r = n(19406),
-          a = n(30869);
+          r = n(51907),
+          a = n(37108);
         function l(e) {
           const t = (0, a.eG)();
           return (0, i.I)(k(t, e));
@@ -77232,6 +77306,16 @@ var CLSTAMP = "10779229";
                   "full_description_bbcode",
                 );
               })(e, s, t),
+            n.include_supported_languages &&
+              (function (e, t, n) {
+                D(
+                  e,
+                  t,
+                  n,
+                  "include_supported_languages",
+                  "supported_languages",
+                );
+              })(e, s, t),
             n.include_included_items &&
               n.included_item_data_request &&
               (t.included_items?.included_apps?.forEach((t) =>
@@ -77272,15 +77356,15 @@ var CLSTAMP = "10779229";
           return await e.load(`${(0, r.ER)(t)}|${n}`);
         }
       },
-      30869: (e, t, n) => {
+      37108: (e, t, n) => {
         "use strict";
         n.d(t, { V3: () => u, eG: () => d, yn: () => h });
         var s = n(62540),
-          i = n(22184),
+          i = n(83763),
           o = n(3715),
           r = n(63696),
-          a = n(58671),
-          l = n(83254);
+          a = n(8159),
+          l = n(48603);
         const c = r.createContext({});
         function d() {
           return r.useContext(c).dataLoader;
@@ -77337,7 +77421,7 @@ var CLSTAMP = "10779229";
           return (0, s.jsx)(c.Provider, { value: I, children: u });
         }
       },
-      19406: (e, t, n) => {
+      51907: (e, t, n) => {
         "use strict";
         n.d(t, {
           ER: () => o,
@@ -77346,8 +77430,8 @@ var CLSTAMP = "10779229";
           RH: () => c,
           zj: () => l,
         });
-        var s = n(50691),
-          i = n(11662);
+        var s = n(91844),
+          i = n(13791);
         function o(e) {
           return "appid" in e
             ? `app_${e.appid}`
@@ -77452,21 +77536,21 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      58671: (e, t, n) => {
+      8159: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return e.split(t);
         }
         n.d(t, { n: () => m });
-        var i = n(96108),
-          o = n(11662),
-          r = n(87118),
-          a = n(17224),
-          l = n(50691),
+        var i = n(55747),
+          o = n(13791),
+          r = n(39831),
+          a = n(82577),
+          l = n(91844),
           c = n(11682),
           d = n.n(c),
-          h = n(19406);
-        n(41113);
+          h = n(51907);
+        n(1071);
         function u(e, t) {
           t.Body().set_context(
             (function (e) {
@@ -77554,14 +77638,14 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      12965: (e, t, n) => {
+      29321: (e, t, n) => {
         "use strict";
         n.d(t, { R: () => a, A: () => r });
-        var s = n(58566);
+        var s = n(3647);
         const i = JSON.parse(
-          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756,"trailercarousel":100757,"personalcalendar-lastmonth":100800,"personalcalendar-lastweek":100801,"personalcalendar-calendar":100802,"personalcalendar-homepage":100803}',
+          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756,"trailercarousel":100757,"personalcalendar-lastmonth":100800,"personalcalendar-lastweek":100801,"personalcalendar-calendar":100802,"personalcalendar-homepage":100803,"greatonframe":100804}',
         );
-        var o = n(83950);
+        var o = n(65673);
         class r {
           static InstrumentLink(e, t, n = null) {
             const s = r.GetSNRLinkParam(t, n),
@@ -77651,7 +77735,7 @@ var CLSTAMP = "10779229";
           };
         }
       },
-      5137: (e, t, n) => {
+      82220: (e, t, n) => {
         "use strict";
         n.d(t, {
           Gd: () => l,
@@ -77662,8 +77746,8 @@ var CLSTAMP = "10779229";
         });
         n(62540);
         var s = n(63696),
-          i = n(12965),
-          o = n(40077);
+          i = n(29321),
+          o = n(19022);
         const r = s.createContext({});
         s.createContext(void 0);
         function a() {
@@ -77697,7 +77781,7 @@ var CLSTAMP = "10779229";
           return i.A.AddNavParamToURL(t, o, r);
         }
       },
-      93008: (e, t, n) => {
+      37412: (e, t, n) => {
         "use strict";
         n.d(t, {
           Us: () => m,
@@ -77706,12 +77790,12 @@ var CLSTAMP = "10779229";
           mQ: () => h,
           BU: () => p,
         });
-        var s = n(33453),
+        var s = n(83402),
           i = n(61416),
           o = n(3715),
-          r = n(22184),
-          a = n(57345),
-          l = n(87533);
+          r = n(83763),
+          a = n(17692),
+          l = n(89808);
         function c() {
           (0, r.KV)();
           const e = a.iA.accountid;
@@ -77827,17 +77911,17 @@ var CLSTAMP = "10779229";
           return ["CuratorAffinityQueryKey", e ?? 0];
         }
       },
-      58567: (e, t, n) => {
+      68942: (e, t, n) => {
         "use strict";
         n.d(t, { Rp: () => m });
-        var s = n(92892),
-          i = n(33453),
-          o = n(40077),
-          r = n(82948);
+        var s = n(50209),
+          i = n(83402),
+          o = n(19022),
+          r = n(34775);
         const a = JSON.parse(
           '{"h":{"countries":{"AF":"Afghanistan","AX":"Aland Islands","AL":"Albania","DZ":"Algeria","AS":"American Samoa","AD":"Andorra","AO":"Angola","AI":"Anguilla","AQ":"Antarctica","AG":"Antigua and Barbuda","AR":"Argentina","AM":"Armenia","AW":"Aruba","AU":"Australia","AT":"Austria","AZ":"Azerbaijan","BS":"Bahamas","BH":"Bahrain","BD":"Bangladesh","BB":"Barbados","BY":"Belarus","BE":"Belgium","BZ":"Belize","BJ":"Benin","BM":"Bermuda","BT":"Bhutan","BO":"Bolivia","BA":"Bosnia and Herzegovina","BW":"Botswana","BV":"Bouvet Island","BR":"Brazil","IO":"British Indian Ocean Territory","BN":"Brunei Darussalam","BG":"Bulgaria","BF":"Burkina Faso","BI":"Burundi","KH":"Cambodia","CM":"Cameroon","CA":"Canada","CV":"Cabo Verde","KY":"Cayman Islands","CF":"Central African Republic","TD":"Chad","CL":"Chile","CN":"China","XC":"China","CX":"Christmas Island","CC":"Cocos (Keeling) Islands","CO":"Colombia","KM":"Comoros","CG":"Congo","CD":"Congo, the Democratic Republic of the","CK":"Cook Islands","CR":"Costa Rica","CI":"Cote d\'Ivoire","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","DJ":"Djibouti","DM":"Dominica","DO":"Dominican Republic","EC":"Ecuador","EG":"Egypt","SV":"El Salvador","GQ":"Equatorial Guinea","ER":"Eritrea","EE":"Estonia","ET":"Ethiopia","FK":"Falkland Islands (Malvinas)","FO":"Faroe Islands","FJ":"Fiji","FI":"Finland","FR":"France","GF":"French Guiana","PF":"French Polynesia","TF":"French Southern Territories","GA":"Gabon","GM":"Gambia","GE":"Georgia","DE":"Germany","GH":"Ghana","GI":"Gibraltar","GR":"Greece","GL":"Greenland","GD":"Grenada","GP":"Guadeloupe","GU":"Guam","GT":"Guatemala","GN":"Guinea","GW":"Guinea-Bissau","GG":"Guernsey","GY":"Guyana","HT":"Haiti","HM":"Heard and Mc Donald Islands","VA":"Holy See(Vatican City State)","HN":"Honduras","HK":"Hong Kong","HU":"Hungary","IS":"Iceland","IN":"India","ID":"Indonesia","IQ":"Iraq","IE":"Ireland","IM":"Isle of Man","IL":"Israel","IT":"Italy","JM":"Jamaica","JP":"Japan","JE":"Jersey","JO":"Jordan","KZ":"Kazakhstan","KE":"Kenya","KI":"Kiribati","KR":"Korea, Republic of","KW":"Kuwait","KG":"Kyrgyzstan","LA":"Lao People\'s Democratic Republic","LV":"Latvia","LB":"Lebanon","LS":"Lesotho","LR":"Liberia","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","LY":"Libya","MO":"Macau","MK":"North Macedonia, Republic of","MG":"Madagascar","MW":"Malawi","MY":"Malaysia","MV":"Maldives","ML":"Mali","MT":"Malta","MH":"Marshall Islands","MQ":"Martinique","MR":"Mauritania","MU":"Mauritius","YT":"Mayotte","MX":"Mexico","FM":"Micronesia, Federated States of","MD":"Moldova, Republic of","MC":"Monaco","MN":"Mongolia","ME":"Montenegro","MS":"Montserrat","MA":"Morocco","MZ":"Mozambique","MM":"Myanmar","NA":"Namibia","NR":"Nauru","NP":"Nepal","NL":"Netherlands","AN":"Netherlands Antilles","NC":"New Caledonia","NZ":"New Zealand","NI":"Nicaragua","NE":"Niger","NG":"Nigeria","NU":"Niue","NF":"Norfolk Island","MP":"Northern Mariana Islands","NO":"Norway","OM":"Oman","PK":"Pakistan","PW":"Palau","PS":"Palestinian Territory, Occupied","PA":"Panama","PG":"Papua New Guinea","PY":"Paraguay","PE":"Peru","PH":"Philippines","PN":"Pitcairn","PL":"Poland","PT":"Portugal","PR":"Puerto Rico","QA":"Qatar","RE":"Reunion","RO":"Romania","RU":"Russian Federation","RW":"Rwanda","SH":"Saint Helena","KN":"Saint Kitts and Nevis","LC":"Saint Lucia","PM":"Saint Pierre and Miquelon","VC":"Saint Vincent and the Grenadines","WS":"Samoa","SM":"San Marino","ST":"Sao Tome and Principe","SA":"Saudi Arabia","SN":"Senegal","RS":"Serbia","SC":"Seychelles","SL":"Sierra Leone","SG":"Singapore","SK":"Slovakia","SI":"Slovenia","SB":"Solomon Islands","SO":"Somalia","ZA":"South Africa","GS":"South Georgia and the South Sandwich Islands","ES":"Spain","LK":"Sri Lanka","SD":"Sudan","SR":"Suriname","SJ":"Svalbard and Jan Mayen","SY":"Syria","SZ":"Eswatini","SE":"Sweden","CH":"Switzerland","TW":"Taiwan","TJ":"Tajikistan","TZ":"Tanzania, United Republic of","TH":"Thailand","TL":"Timor-Leste","TG":"Togo","TK":"Tokelau","TO":"Tonga","TT":"Trinidad and Tobago","TN":"Tunisia","TR":"Turkey","TM":"Turkmenistan","TC":"Turks and Caicos Islands","TV":"Tuvalu","UG":"Uganda","UA":"Ukraine","AE":"United Arab Emirates","GB":"United Kingdom","US":"United States","UM":"United States Minor Outlying Islands","UY":"Uruguay","UZ":"Uzbekistan","VU":"Vanuatu","VE":"Venezuela","VN":"Viet Nam","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","WF":"Wallis and Futuna","EH":"Western Sahara","YE":"Yemen","ZM":"Zambia","ZW":"Zimbabwe"},"eucountries":{"AT":"Austria","BE":"Belgium","BG":"Bulgaria","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","EE":"Estonia","FI":"Finland","FR":"France","DE":"Germany","GR":"Greece","HU":"Hungary","IE":"Ireland","IT":"Italy","LV":"Latvia","LT":"Lithuania","LU":"Luxembourg","MT":"Malta","NL":"Netherlands","PL":"Poland","PT":"Portugal","RO":"Romania","SK":"Slovakia","SI":"Slovenia","ES":"Spain","SE":"Sweden","GB":"United Kingdom"},"eeacountries":{"NO":"Norway","IS":"Iceland","LI":"Liechtenstein"},"usstates":{"AL":"Alabama","AK":"Alaska","AS":"American Samoa","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District of Columbia","FM":"Federated States of Micronesia","FL":"Florida","GA":"Georgia","GU":"Guam","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MH":"Marshall Islands","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","MP":"Northern Mariana Islands","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PW":"Palau","PA":"Pennsylvania","PR":"Puerto Rico","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VI":"U.S. Virgin Islands","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","AA":"Armed Forces Americas","AE":"Armed Forces","AP":"Armed Forces Pacific"}}}',
         ).h;
-        var l = n(39878);
+        var l = n(97119);
         async function c(e) {
           if ((0, i.nA)(o.TS.EREALM))
             return { version: s.ie.mO, preference_state: s.CY.__ };
@@ -77860,7 +77944,7 @@ var CLSTAMP = "10779229";
             : { version: s.ie.mO, preference_state: s.CY.__ };
         }
         var d = n(61416),
-          h = n(22184);
+          h = n(83763);
         function u() {
           const e = (0, h.KV)();
           return (0, d.I)(
@@ -77896,14 +77980,14 @@ var CLSTAMP = "10779229";
             : void 0;
         }
       },
-      23081: (e, t, n) => {
+      12486: (e, t, n) => {
         "use strict";
         n.d(t, { UL: () => f, Uy: () => C });
-        var s = n(51600),
-          i = n(87118),
-          o = n(78149),
-          r = n(40077),
-          a = n(22184),
+        var s = n(52308),
+          i = n(39831),
+          o = n(57196),
+          r = n(19022),
+          a = n(83763),
           l = n(61416),
           c = n(3715),
           d = n(18397);
@@ -77984,7 +78068,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      87533: (e, t, n) => {
+      89808: (e, t, n) => {
         "use strict";
         n.d(t, { Am: () => i, WZ: () => o });
         const s = "unUserdataVersion";
@@ -78002,14 +78086,14 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      91320: (e, t, n) => {
+      79701: (e, t, n) => {
         "use strict";
         n.d(t, { dy: () => h });
         var s = n(63696),
-          i = n(57345),
-          o = n(36959),
-          r = n(58686),
-          a = n(48380),
+          i = n(17692),
+          o = n(13268),
+          r = n(28333),
+          a = n(58333),
           l = n(61416);
         const c = s.createContext({ eAdultOnlyMediaBehavior: "masked" });
         function d() {
@@ -78051,7 +78135,7 @@ var CLSTAMP = "10779229";
           return 0 != t ? t : null;
         }
       },
-      70971: (e, t, n) => {
+      7375: (e, t, n) => {
         "use strict";
         n.d(t, { I: () => mi });
         var s = n(34629),
@@ -78060,22 +78144,22 @@ var CLSTAMP = "10779229";
           r = n(41230),
           a = n(90095),
           l = n(63696),
-          c = n(6474),
-          d = n(24163),
+          c = n(35123),
+          d = n(74874),
           h = n(83957),
           u = n.n(h),
-          m = n(77500),
-          p = n(96108),
-          _ = n(87118),
-          g = n(61452),
-          C = n(47386),
-          f = n(9663),
-          S = n(31807),
-          v = n(54250),
-          b = n(58752),
-          I = n(8978),
-          y = n(21582),
-          w = n(37737);
+          m = n(689),
+          p = n(55747),
+          _ = n(39831),
+          g = n(88829),
+          C = n(32031),
+          f = n(94058),
+          S = n(64028),
+          v = n(67725),
+          b = n(6242),
+          I = n(62057),
+          y = n(96641),
+          w = n(65368);
         class x {
           m_mapChats = new Map();
           GetChat(e, t) {
@@ -78260,7 +78344,7 @@ var CLSTAMP = "10779229";
               const t = {
                   steamid: this.m_ulBroadcastSteamID,
                   broadcastid: this.m_ulBroadcastID,
-                  sessionid: y.TS.SESSIONID,
+                  sessionid: (0, y.KC)(),
                 },
                 n = await u().get(
                   `${y.TS.CHAT_BASE_URL}broadcast/getchatinfo`,
@@ -78498,7 +78582,7 @@ var CLSTAMP = "10779229";
               s.append("broadcaststeamid", this.m_ulBroadcastSteamID),
                 s.append("moderatorsteamid", e),
                 s.append("bAdd", t ? "1" : "0"),
-                s.append("sessionid", y.TS.SESSIONID);
+                s.append("sessionid", (0, y.KC)());
               try {
                 await u().post(
                   `${y.TS.CHAT_BASE_URL}broadcast/ajaxupdatechannelmod`,
@@ -78547,7 +78631,7 @@ var CLSTAMP = "10779229";
                 o.append("bantype", t),
                 o.append("duration", n.toString()),
                 o.append("perm", s ? "1" : "0"),
-                o.append("sessionid", y.TS.SESSIONID);
+                o.append("sessionid", (0, y.KC)());
               try {
                 await u().post(
                   `${y.TS.CHAT_BASE_URL}broadcast/ajaxupdateusermute`,
@@ -78763,8 +78847,8 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([v.o], A.prototype, "FetchChatModerators", null),
           (0, s.Cg)([v.o], A.prototype, "RequestLoop", null),
           (0, s.Cg)([v.o], A.prototype, "MuteUserForSession", null);
-        var R = n(33998),
-          T = n(84309);
+        var R = n(56063),
+          T = n(61651);
         class M {
           constructor() {
             (0, o.Gn)(this);
@@ -78906,17 +78990,17 @@ var CLSTAMP = "10779229";
         const D = new M();
         var k = n(80611),
           P = n.n(k),
-          L = n(13177),
-          G = n(73511),
-          B = n(16192),
-          F = n(54378),
-          E = n(90131),
-          O = n(33453),
-          N = n(42308),
-          j = n(22754),
+          L = n(97640),
+          G = n(70425),
+          B = n(15891),
+          F = n(21973),
+          E = n(14792),
+          O = n(83402),
+          N = n(25699),
+          j = n(74893),
           V = n(41659);
-        var U = n(72270),
-          H = n(86373);
+        var U = n(57274),
+          H = n(65264);
         const W = n(36500).A,
           z = new H.wd("Login"),
           q = z.Info,
@@ -78927,12 +79011,12 @@ var CLSTAMP = "10779229";
             s = W.encrypt(e, n);
           return !1 === s ? null : s;
         }
-        var $ = n(82075),
-          Q = n(16208),
-          Y = n(3267),
-          J = n(83300),
-          ee = n(26194),
-          te = n(85427),
+        var $ = n(14446),
+          Q = n(42501),
+          Y = n(168),
+          J = n(79229),
+          ee = n(70407),
+          te = n(31932),
           ne = n(43132),
           se = n.n(ne);
         function ie(e) {
@@ -79048,11 +79132,11 @@ var CLSTAMP = "10779229";
         }
         var oe,
           re,
-          ae = n(45510),
-          le = (n(29876), n(58322)),
-          ce = n(97709),
-          de = n(51756),
-          he = n(56738),
+          ae = n(61473),
+          le = (n(81745), n(64314)),
+          ce = n(94500),
+          de = n(88071),
+          he = n(73939),
           ue = n(37322);
         !(function (e) {
           (e[(e.None = 0)] = "None"),
@@ -79197,7 +79281,7 @@ var CLSTAMP = "10779229";
         }
         function pe(e) {
           const t = new FormData();
-          t.append("nonce", e), t.append("sessionid", y.TS.SESSIONID);
+          t.append("nonce", e), t.append("sessionid", (0, y.KC)());
           let n = new URL(document.location.href);
           const s = new URLSearchParams(n.search);
           s.has("need_password") &&
@@ -79281,8 +79365,8 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([o.sH], me.prototype, "m_strExtendedErrorMessage", void 0),
           (0, s.Cg)([v.o], me.prototype, "PollForUpdate", null),
           (0, s.Cg)([v.o], me.prototype, "SetTokenToRevoke", null);
-        var _e = n(62799),
-          ge = n(60670);
+        var _e = n(42906),
+          ge = n(86853);
         const Ce = 10,
           fe = 11;
         class Se extends me {
@@ -79939,7 +80023,7 @@ var CLSTAMP = "10779229";
           Te = n.n(Re),
           Me = n(48755),
           De = n.n(Me),
-          ke = n(11662),
+          ke = n(13791),
           Pe = n(40657),
           Le = n.n(Pe);
         function Ge(e) {
@@ -80211,7 +80295,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        var He = n(40077);
+        var He = n(19022);
         const We = (0, l.createContext)(!1),
           ze = () => (0, l.useContext)(We);
         function qe() {
@@ -81835,7 +81919,7 @@ var CLSTAMP = "10779229";
             children: (0, i.jsx)(le.t, {}),
           });
         }
-        var Qt = n(21697);
+        var Qt = n(42724);
         function Yt(e) {
           return (0, i.jsx)(E.x_, {
             onEscKeypress: e.closeModal,
@@ -81880,10 +81964,10 @@ var CLSTAMP = "10779229";
                 }),
           });
         }
-        var tn = n(44534),
-          nn = n(89144),
-          sn = n(5761),
-          on = n(35360);
+        var tn = n(75608),
+          nn = n(30697),
+          sn = n(60510),
+          on = n(75037);
         class rn {
           reactNodes = [];
           AppendText(e, t = !1) {
@@ -81947,7 +82031,7 @@ var CLSTAMP = "10779229";
               });
           }
         }
-        var cn = n(18384);
+        var cn = n(76065);
         class dn {
           m_fnAccumulatorFactory;
           m_dictComponents;
@@ -82202,9 +82286,9 @@ var CLSTAMP = "10779229";
         }
         var pn = n(95606),
           _n = n.n(pn),
-          gn = n(20314),
-          Cn = n(14986),
-          fn = n(6697);
+          gn = n(93593),
+          Cn = n(40261),
+          fn = n(71594);
         class Sn {
           m_bUserHasVolumePreference = !1;
           m_flVolumePreference = 0;
@@ -82358,7 +82442,7 @@ var CLSTAMP = "10779229";
             label: (0, I.uD)(s),
           });
         }
-        var xn = n(57345);
+        var xn = n(17692);
         function An(e) {
           let t = Os(e, "poster");
           t && (t = (0, fn.L$)(t));
@@ -82485,10 +82569,10 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([o.sH], Tn.prototype, "m_mapSharedFile", void 0);
         const Mn = new Tn();
         var Dn,
-          kn = n(96985),
-          Pn = n(57136),
-          Ln = n(61122),
-          Gn = n(53808),
+          kn = n(64908),
+          Pn = n(33411),
+          Ln = n(56577),
+          Gn = n(29793),
           Bn = n(64409),
           Fn = n.n(Bn);
         function En(e) {
@@ -82609,8 +82693,8 @@ var CLSTAMP = "10779229";
         })(Dn || (Dn = {}));
         var jn,
           Vn = n(42689),
-          Un = n(1653),
-          Hn = n(99869);
+          Un = n(45850),
+          Hn = n(86614);
         !(function (e) {
           (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
             (e[(e.k_eWishlist = 2)] = "k_eWishlist"),
@@ -82676,9 +82760,9 @@ var CLSTAMP = "10779229";
           }
         }
         var zn,
-          qn = n(18901),
-          Kn = n(94929),
-          Zn = n(93008);
+          qn = n(52312),
+          Kn = n(18402),
+          Zn = n(37412);
         !(function (e) {
           (e.k_ERecent = "recent"),
             (e.k_ELibrary = "library"),
@@ -83084,7 +83168,7 @@ var CLSTAMP = "10779229";
           }
         })();
         window.g_EventCalendarTrackingStore = is;
-        var os = n(87234);
+        var os = n(85498);
         class rs {
           constructor() {
             (0, o.Gn)(this);
@@ -83151,7 +83235,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([o.sH], rs.prototype, "m_nMobileDeviceCount", void 0);
         let as = new rs();
         var ls = n(26765),
-          cs = n(58686),
+          cs = n(28333),
           ds = n(90170),
           hs = n.n(ds);
         const us = n(18339);
@@ -83469,12 +83553,12 @@ var CLSTAMP = "10779229";
         Cs = (0, s.Cg)([r.PA], Cs);
         var fs = n(82211),
           Ss = n.n(fs),
-          vs = n(83950),
-          bs = n(41580);
+          vs = n(65673),
+          bs = n(29607);
         l.createContext({ bCanUseLink: !1 });
         var Is,
-          ys = n(46675),
-          ws = n(83254);
+          ys = n(75478),
+          ws = n(48603);
         !(function (e) {
           (e.k_eView = "view"),
             (e.k_eViewWebSiteHub = "websitehub"),
@@ -85030,10 +85114,10 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([de.oI], Zs.prototype, "OnScroll", null),
           (0, s.Cg)([de.oI], Zs.prototype, "OnHover", null),
           (0, s.Cg)([de.oI], Zs.prototype, "OnLeave", null);
-        var Xs = n(34835),
+        var Xs = n(18834),
           $s = n(63437),
           Qs = n.n($s);
-        n(28946);
+        n(23536);
         class Ys {
           constructor() {
             (0, o.Gn)(this);
@@ -85288,7 +85372,7 @@ var CLSTAMP = "10779229";
               const n =
                   y.TS.STORE_BASE_URL +
                   "saleaction/ajaxgetusergiveawayregistration",
-                s = { giveaway_name: e, sessionid: y.TS.SESSIONID },
+                s = { giveaway_name: e, sessionid: (0, y.KC)() },
                 i = await u().get(n, { params: s, withCredentials: !0 });
               if (
                 200 == i?.status &&
@@ -85333,7 +85417,7 @@ var CLSTAMP = "10779229";
               const n =
                   y.TS.STORE_BASE_URL +
                   "saleaction/ajaxupdateusergiveawayregistration",
-                s = { giveaway_name: e, sessionid: y.TS.SESSIONID },
+                s = { giveaway_name: e, sessionid: (0, y.KC)() },
                 i = await u().get(n, { params: s, withCredentials: !0 });
               if (
                 200 == i?.status &&
@@ -85377,7 +85461,7 @@ var CLSTAMP = "10779229";
           Init() {}
         }
         (0, s.Cg)([de.oI], si.prototype, "CreateRegistration", null);
-        var ii = n(91811),
+        var ii = n(97734),
           oi = n(16910),
           ri = n.n(oi);
         function ai(e) {
@@ -86081,12 +86165,12 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      34264: (e, t, n) => {
+      47377: (e, t, n) => {
         "use strict";
         n.d(t, { dP: () => c, td: () => l });
         var s = n(34629),
           i = n(89193),
-          o = n(21582);
+          o = n(96641);
         o.TS.CHAT_BASE_URL;
         const r = o.TS.CHAT_BASE_URL + "public/images/broadcast/yule_30x30.png";
         class a {
@@ -86168,7 +86252,7 @@ var CLSTAMP = "10779229";
               });
         }
       },
-      77500: (e, t, n) => {
+      689: (e, t, n) => {
         "use strict";
         var s, i;
         n.d(t, { J8: () => o, X8: () => i }),
@@ -86184,7 +86268,7 @@ var CLSTAMP = "10779229";
           })(i || (i = {}));
         class o {}
       },
-      36185: (e, t, n) => {
+      78414: (e, t, n) => {
         "use strict";
         n.d(t, {
           Mc: () => a,
@@ -86193,7 +86277,7 @@ var CLSTAMP = "10779229";
           ap: () => r,
           q_: () => i,
         });
-        const s = new (n(86373).wd)("video"),
+        const s = new (n(65264).wd)("video"),
           i = (s.Info, s.Debug),
           o = s.Error;
         s.Warning;
@@ -86227,7 +86311,7 @@ var CLSTAMP = "10779229";
           return "probably" === e || "maybe" === e;
         }
       },
-      50886: (e, t, n) => {
+      62049: (e, t, n) => {
         "use strict";
         n.d(t, { P: () => s });
         class s {
@@ -86244,10 +86328,10 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      61452: (e, t, n) => {
+      88829: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => i });
-        var s = n(50886);
+        var s = n(62049);
         class i extends s.P {
           GetString(e) {
             return Promise.resolve(localStorage.getItem(e));
@@ -86260,7 +86344,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      60735: (e, t, n) => {
+      72576: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return e.m_unPID == t.m_unPID && e.m_nBrowserID == t.m_nBrowserID;
@@ -86268,12 +86352,12 @@ var CLSTAMP = "10779229";
         n.d(t, { m: () => i, u: () => s });
         const i = { m_unPID: 0, m_nBrowserID: -1 };
       },
-      6474: (e, t, n) => {
+      35123: (e, t, n) => {
         "use strict";
         n.d(t, { Bk: () => s.Bk, XX: () => r, jb: () => s.jb, lX: () => a });
-        var s = n(91265),
-          i = n(11699),
-          o = n(11662);
+        var s = n(68828),
+          i = n(2758),
+          o = n(13791);
         const r = new (class {
           m_mapManagers = new WeakMap();
           GetContextMenuManagerFromWindow(e) {
@@ -86322,13 +86406,13 @@ var CLSTAMP = "10779229";
           return l.Show(), n?.bCreateHidden && l.Hide(), l;
         }
       },
-      91265: (e, t, n) => {
+      68828: (e, t, n) => {
         "use strict";
         n.d(t, { Bk: () => l, HP: () => d, jb: () => a });
         var s = n(34629),
           i = n(89193),
-          o = n(64382),
-          r = (n(13177), n(42308));
+          o = n(10093),
+          r = (n(97640), n(25699));
         const a = 0,
           l = 1;
         class c {
@@ -86598,13 +86682,13 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      11699: (e, t, n) => {
+      2758: (e, t, n) => {
         "use strict";
         n.d(t, { z: () => a });
-        var s = n(91265),
-          i = n(11662),
-          o = n(58752),
-          r = n(18483);
+        var s = n(68828),
+          i = n(13791),
+          o = n(6242),
+          r = n(69164);
         class a {
           m_callbacksMenusChanged = new o.lu();
           m_ActiveMenu;
@@ -86693,7 +86777,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      34469: (e, t, n) => {
+      5966: (e, t, n) => {
         "use strict";
         n.d(t, {
           $R: () => i,
@@ -86726,11 +86810,11 @@ var CLSTAMP = "10779229";
           _ = 40,
           g = 46;
       },
-      89144: (e, t, n) => {
+      30697: (e, t, n) => {
         "use strict";
         n.d(t, { MX: () => a });
         var s = n(7470),
-          i = n(64382);
+          i = n(10093);
         class o {
           activeObject;
           instance;
@@ -86826,7 +86910,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      72270: (e, t, n) => {
+      57274: (e, t, n) => {
         "use strict";
         n.d(t, {
           gs: () => x,
@@ -86841,19 +86925,19 @@ var CLSTAMP = "10779229";
           k5: () => w,
         });
         var s = n(34629),
-          i = n(42308),
-          o = n(38701),
+          i = n(25699),
+          o = n(28554),
           r = n(89193),
           a = n(63696),
-          l = n(60735),
-          c = n(40114),
-          d = n(11662),
-          h = n(49569),
-          u = n(64382),
-          m = n(8978),
-          p = (n(51756), n(21582)),
-          _ = n(54250),
-          g = n(18483);
+          l = n(72576),
+          c = n(66681),
+          d = n(13791),
+          h = n(3190),
+          u = n(10093),
+          m = n(62057),
+          p = (n(88071), n(96641)),
+          _ = n(67725),
+          g = n(69164);
         class C {
           m_fnRender;
           m_rgLoadingLinks = [];
@@ -86897,8 +86981,8 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([_.o], C.prototype, "OnLinkLoad", null);
         var f,
           S,
-          v = n(26889),
-          b = n(33101);
+          v = n(37420),
+          b = n(55492);
         function I() {
           return (0, p.td)() ? f.Composited : f.None;
         }
@@ -87641,7 +87725,7 @@ var CLSTAMP = "10779229";
         const k = new D();
         window.g_PopupManager = k;
       },
-      72854: (e, t, n) => {
+      5183: (e, t, n) => {
         "use strict";
         n.d(t, { W: () => o });
         n(62540);
@@ -87651,16 +87735,16 @@ var CLSTAMP = "10779229";
           return s.useContext(i);
         }
       },
-      64745: (e, t, n) => {
+      17469: (e, t, n) => {
         "use strict";
         n.d(t, { OJ: () => u, h3: () => p });
         var s,
           i = n(63696),
-          o = n(72270),
-          r = n(72854),
-          a = n(42308),
-          l = n(85427),
-          c = n(65729);
+          o = n(57274),
+          r = n(5183),
+          a = n(25699),
+          l = n(31932),
+          c = n(63440);
         !(function (e) {
           (e[(e.k_EAccountFlagNormalUser = 0)] = "k_EAccountFlagNormalUser"),
             (e[(e.k_EAccountFlagPersonaNameSet = 1)] =
@@ -88015,14 +88099,14 @@ var CLSTAMP = "10779229";
             : null;
         }
       },
-      18901: (e, t, n) => {
+      52312: (e, t, n) => {
         "use strict";
         n.d(t, { RR: () => a, hE: () => l });
         var s = n(63696),
-          i = n(84309),
-          o = n(96985),
-          r = (n(9663), n(21582), n(26105), n(8978));
-        n(83957), n(57136);
+          i = n(61651),
+          o = n(64908),
+          r = (n(94058), n(96641), n(74708), n(62057));
+        n(83957), n(33411);
         function a(e) {
           const [t, n] = (0, s.useState)(() => i.O3.GetClanEventModel(e)),
             r = (0, o.m)("usePartnerEventByEventGID");
@@ -88048,23 +88132,23 @@ var CLSTAMP = "10779229";
           return e != n && (t += "_" + n), t;
         }
       },
-      47386: (e, t, n) => {
+      32031: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => v });
         var s = n(34629),
           i = n(37322),
           o = n(58663),
-          r = n(87118),
-          a = n(54250),
+          r = n(39831),
+          a = n(67725),
           l = n(83957),
           c = n.n(l),
-          d = n(96108),
-          h = n(42308),
-          u = n(94553),
-          m = n(56738),
-          p = n(9663),
-          _ = n(67165),
-          g = n(99497);
+          d = n(55747),
+          h = n(25699),
+          u = n(15704),
+          m = n(73939),
+          p = n(94058),
+          _ = n(57816),
+          g = n(97684);
         function C(e) {
           try {
             if (!e || "string" != typeof e) return null;
@@ -88088,7 +88172,7 @@ var CLSTAMP = "10779229";
         function f(e) {
           return e ? e.body.exp : 0;
         }
-        var S = n(48380);
+        var S = n(58333);
         class v {
           m_ServiceTransport;
           m_AnonymousServiceTransport;
@@ -88293,13 +88377,13 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([a.o], v.prototype, "SendNotification", null),
           (0, s.Cg)([a.o], v.prototype, "Send", null);
       },
-      26105: (e, t, n) => {
+      74708: (e, t, n) => {
         "use strict";
         n.d(t, { IU: () => c, by: () => d, sc: () => a });
-        var s = n(21582),
-          i = n(4709),
-          o = n(11662),
-          r = n(69533);
+        var s = n(96641),
+          i = n(11074),
+          o = n(13791),
+          r = n(70580);
         const a = 0,
           l = "061818254b2c99ac49e6626adb128ed1282a392f",
           c = 120;
@@ -88393,16 +88477,16 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      70970: (e, t, n) => {
+      30599: (e, t, n) => {
         "use strict";
         n.d(t, { Vw: () => f });
         var s = n(34629),
           i = n(89193),
-          o = n(42308),
-          r = n(96108),
-          a = n(87118),
-          l = n(26105),
-          c = n(21582);
+          o = n(25699),
+          r = n(55747),
+          a = n(39831),
+          l = n(74708),
+          c = n(96641);
         class d {
           m_nLastUpdated = 0;
           m_mapLanguages = i.sH.map();
@@ -88500,9 +88584,9 @@ var CLSTAMP = "10779229";
             }
           return e;
         }
-        var p = n(8574),
-          _ = n(11662),
-          g = n(58752);
+        var p = n(91213),
+          _ = n(13791),
+          g = n(6242);
         class C {
           m_CMInterface;
           m_mapAppInfo = i.sH.map();
@@ -88783,14 +88867,14 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([i.XI], C.prototype, "OnRichPresenceLocUpdate", null);
         const f = new C();
       },
-      34634: (e, t, n) => {
+      52099: (e, t, n) => {
         "use strict";
         n.d(t, { p: () => d });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(85427),
+          a = n(31932),
           l = n(97931),
           c = n.n(l);
         let d = class extends o.Component {
@@ -88844,13 +88928,13 @@ var CLSTAMP = "10779229";
         };
         d = (0, s.Cg)([r.PA], d);
       },
-      88075: (e, t, n) => {
+      79128: (e, t, n) => {
         "use strict";
         n.d(t, { VS: () => a });
         var s = n(37976),
-          i = n(42308),
-          o = n(26105),
-          r = n(11662);
+          i = n(25699),
+          o = n(74708),
+          r = n(13791);
         class a {
           m_ulGameID;
           constructor(e, t, n) {
@@ -88909,12 +88993,12 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      5761: (e, t, n) => {
+      60510: (e, t, n) => {
         "use strict";
         n.d(t, { g: () => l });
         var s = n(62540),
           i = n(63696),
-          o = n(85427),
+          o = n(31932),
           r = n(85326),
           a = n.n(r);
         function l(e) {
@@ -88950,7 +89034,7 @@ var CLSTAMP = "10779229";
                 requestAnimationFrame(() => {
                   D.style.display = "block";
                 }),
-                D.showPopover();
+                D.showPopover && D.showPopover();
               const i = T.querySelector(".hover_arrow.left"),
                 o = T.querySelector(".hover_arrow.right"),
                 r = T.querySelector(".hover_arrow.top"),
@@ -89107,20 +89191,20 @@ var CLSTAMP = "10779229";
           return Math.max(0, Math.min(1, s)) * (t - n) + e;
         }
       },
-      82075: (e, t, n) => {
+      14446: (e, t, n) => {
         "use strict";
         n.d(t, { q: () => o });
-        var s = n(21582),
-          i = n(42308);
+        var s = n(96641),
+          i = n(25699);
         function o() {
           return s.TS.IN_CLIENT && (0, i.DOG)(s.TS.LAUNCHER_TYPE);
         }
       },
-      20314: (e, t, n) => {
+      93593: (e, t, n) => {
         "use strict";
         n.d(t, { E: () => o, p: () => r });
-        var s = n(40077),
-          i = n(6697);
+        var s = n(19022),
+          i = n(71594);
         function o(e) {
           return (
             s.TS.COMMUNITY_BASE_URL + "linkfilter/?u=" + encodeURIComponent(e)
@@ -89145,15 +89229,15 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      89925: (e, t, n) => {
+      45604: (e, t, n) => {
         "use strict";
         n.d(t, { n: () => d });
         var s = n(34629),
           i = n(83957),
           o = n.n(i),
           r = n(89193),
-          a = n(58686),
-          l = n(21582);
+          a = n(28333),
+          l = n(96641);
         const c = a.Kp.PerMinute;
         class d {
           m_accountid;
@@ -89214,18 +89298,18 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([r.sH], d.prototype, "m_communityData", void 0);
       },
-      11282: (e, t, n) => {
+      31543: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => m, dV: () => h.d, rO: () => u, tp: () => h.t });
         var s = n(34629),
           i = n(89193),
           o = n(59351),
-          r = n(70970),
-          a = n(8978),
-          l = n(42308),
-          c = n(31707),
-          d = n(21582),
-          h = n(4709);
+          r = n(30599),
+          a = n(62057),
+          l = n(25699),
+          c = n(20538),
+          d = n(96641),
+          h = n(11074);
         function u(e) {
           let t = "offline";
           return (
@@ -89518,23 +89602,23 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([i.sH], m.prototype, "m_eGamingDeviceType", void 0),
           (0, s.Cg)([i.sH], m.prototype, "m_bNameInitialized", void 0);
       },
-      45966: (e, t, n) => {
+      82443: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => f });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(8978),
-          l = n(42308),
-          c = n(11282),
-          d = n(34634),
-          h = n(35968),
-          u = n(45510),
-          m = n(85427),
+          a = n(62057),
+          l = n(25699),
+          c = n(31543),
+          d = n(52099),
+          h = n(14277),
+          u = n(61473),
+          m = n(31932),
           p = n(88903),
           _ = n.n(p),
-          g = n(21582);
+          g = n(96641);
         function C(e) {
           return (0, i.jsxs)(o.Fragment, {
             children: [
@@ -89738,21 +89822,21 @@ var CLSTAMP = "10779229";
           });
         });
       },
-      35968: (e, t, n) => {
+      14277: (e, t, n) => {
         "use strict";
         n.d(t, { X: () => _ });
         var s = n(62540),
           i = n(63696),
           o = n(41230),
-          r = n(8978),
-          a = n(31707),
-          l = n(11282),
-          c = n(85427),
-          d = n(45510),
+          r = n(62057),
+          a = n(20538),
+          l = n(31543),
+          c = n(31932),
+          d = n(61473),
           h = n(17089),
           u = n.n(h),
-          m = n(82039),
-          p = n(42308);
+          m = n(73886),
+          p = n(25699);
         const _ = (0, o.PA)((e) => {
           const { persona: t, className: n, ...o } = e;
           if (!t) return null;
@@ -89828,10 +89912,10 @@ var CLSTAMP = "10779229";
           });
         });
       },
-      4709: (e, t, n) => {
+      11074: (e, t, n) => {
         "use strict";
         n.d(t, { d: () => i, t: () => o });
-        var s = n(21582);
+        var s = n(96641);
         const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
         function o(e, t) {
           let n = ".jpg";
@@ -89849,16 +89933,16 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      97418: (e, t, n) => {
+      48102: (e, t, n) => {
         "use strict";
         n.d(t, { Ul: () => _, xz: () => f, i8: () => g });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(11282),
-          l = n(85427),
-          c = n(21582);
+          a = n(31543),
+          l = n(31932),
+          c = n(96641);
         function d(e) {
           const {
               rgSources: t,
@@ -89913,7 +89997,7 @@ var CLSTAMP = "10779229";
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
         var u = n(47814),
           m = n.n(u),
-          p = n(11662);
+          p = n(13791);
         const _ = o.memo(function (e) {
           const {
               strAvatarURL: t,
@@ -90113,12 +90197,12 @@ var CLSTAMP = "10779229";
         };
         f = (0, s.Cg)([r.PA], f);
       },
-      9663: (e, t, n) => {
+      94058: (e, t, n) => {
         "use strict";
         n.d(t, { b: () => r });
         var s = n(37976),
-          i = n(42308),
-          o = n(21582);
+          i = n(25699),
+          o = n(96641);
         class r {
           m_ulSteamID;
           constructor(e = 0, t, n, i) {
@@ -90286,7 +90370,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      14986: (e, t, n) => {
+      40261: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ay: () => g,
@@ -90297,13 +90381,13 @@ var CLSTAMP = "10779229";
           k2: () => d,
           wJ: () => u,
         });
-        var s = n(5137),
-          i = n(12965),
-          o = n(11662),
-          r = n(6697),
-          a = n(57345),
+        var s = n(82220),
+          i = n(29321),
+          o = n(13791),
+          r = n(71594),
+          a = n(17692),
           l = n(63696),
-          c = n(58566);
+          c = n(3647);
         function d(e, t = "", n = null) {
           return g.InstrumentLink(e, t, n);
         }
@@ -90400,7 +90484,7 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      40114: (e, t, n) => {
+      66681: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
@@ -90418,226 +90502,15 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { Dp: () => r, Fj: () => o, L: () => i });
       },
-      30078: (e, t, n) => {
-        "use strict";
-        n.d(t, { W: () => a });
-        var s = n(96108),
-          i = n(57345);
-        let o = { success: !0, result: s.R };
-        class r {
-          m_mapWaitingCallbacks = new Map();
-          m_socket;
-          m_iCallSeq = 1;
-          m_bReady = !1;
-          m_bClientConnectionFailed = !1;
-          m_bSecurityException = !1;
-          m_promiseConnect;
-          m_ClientInfo = {
-            ulVersion: "",
-            bFriendsUIEnabled: !1,
-            unAccountID: 0,
-            rgSupportedMessages: [],
-          };
-          constructor() {}
-          get ClientInfo() {
-            return this.m_ClientInfo;
-          }
-          get ready() {
-            return this.m_bReady;
-          }
-          get browser_supported() {
-            return !this.m_bSecurityException;
-          }
-          get connected_to_client() {
-            return (
-              !!this.m_socket && this.m_socket.readyState == WebSocket.OPEN
-            );
-          }
-          SendMsgAndAwaitResponse(e) {
-            return new Promise((t, n) => {
-              let s = this.m_iCallSeq++;
-              this.BSendMsg(e, s)
-                ? this.m_mapWaitingCallbacks.set(s, {
-                    iSeq: s,
-                    fnCallback: t,
-                    fnError: n,
-                  })
-                : n();
-            });
-          }
-          BSendMsg(e, t) {
-            if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
-              return !1;
-            let n = Object.assign({}, e, {
-              universe: i.TS.EUNIVERSE,
-              accountid: i.iA.accountid,
-            });
-            void 0 !== t && (n.sequenceid = t);
-            try {
-              return this.m_socket.send(JSON.stringify(n)), !0;
-            } catch (e) {
-              return !1;
-            }
-          }
-          OnSocketMessage(e) {
-            try {
-              let t = JSON.parse(e.data);
-              if (t.sequenceid) {
-                let e = this.m_mapWaitingCallbacks.get(t.sequenceid);
-                if (e)
-                  return (
-                    this.m_mapWaitingCallbacks.delete(t.sequenceid),
-                    void e.fnCallback(t)
-                  );
-              }
-            } catch (e) {
-              console.error("exception parsing response", e);
-            }
-          }
-          Connect() {
-            if (this.m_bReady && this.m_socket?.readyState === WebSocket.OPEN)
-              return Promise.resolve();
-            if (this.m_promiseConnect) return this.m_promiseConnect;
-            let e = new Promise((e, t) => {
-              try {
-                this.m_socket = new WebSocket(
-                  "ws://127.0.0.1:27060/clientsocket/",
-                );
-              } catch (e) {
-                return (this.m_bSecurityException = !0), void t(e);
-              }
-              (this.m_socket.onerror = (e) => {
-                t();
-              }),
-                (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
-                (this.m_socket.onopen = () => {
-                  this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-                    .then((n) => {
-                      n.success == s.R
-                        ? ((this.m_ClientInfo.ulVersion = n.clientversion),
-                          (this.m_ClientInfo.bFriendsUIEnabled = !!n.friendsui),
-                          (this.m_ClientInfo.unAccountID = n.accountid),
-                          n.supported_messages &&
-                            (this.m_ClientInfo.rgSupportedMessages =
-                              n.supported_messages),
-                          e())
-                        : t();
-                    })
-                    .catch(t);
-                });
-            });
-            return (
-              (this.m_promiseConnect = e),
-              this.m_promiseConnect
-                .then(() => {
-                  (this.m_bReady = !0), (this.m_promiseConnect = void 0);
-                })
-                .catch(() => {
-                  (this.m_bClientConnectionFailed = !0),
-                    (this.m_promiseConnect = void 0);
-                }),
-              this.m_promiseConnect
-            );
-          }
-        }
-        let a = new (class {
-          m_connection = new r();
-          FailureResult(e = s.zi) {
-            let t = { success: !1, result: e };
-            return (
-              this.m_connection &&
-                !this.m_connection.browser_supported &&
-                (t.browser_unsupported = !0),
-              this.m_connection &&
-                !this.m_connection.connected_to_client &&
-                (t.connect_failed = !0),
-              e == s.Vr && (t.call_unsupported = !0),
-              t
-            );
-          }
-          BClientConnected() {
-            return this.m_connection.Connect().then(
-              () => o,
-              () => this.FailureResult(),
-            );
-          }
-          BClientConnectedAndSupportsMessage(e) {
-            return this.m_connection
-              .Connect()
-              .then(() => this.BClientSupportsMessage(e))
-              .catch(() => !1);
-          }
-          BClientSupportsMessage(e) {
-            return (
-              !(
-                !this.m_connection.connected_to_client ||
-                !this.m_connection.ready
-              ) &&
-              -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
-            );
-          }
-          OpenFriendChatDialog(e) {
-            let t = { message: "ShowFriendChatDialog", steamid: e };
-            return this.GenericEResultCall(t);
-          }
-          OpenChatRoomGroupDialog(e, t) {
-            let n = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
-            return t && (n.chat_room_id = t), this.GenericEResultCall(n);
-          }
-          ShowChatRoomGroupInvite(e, t = !0) {
-            let n = { message: "ShowChatRoomGroupInvite", invite_code: e };
-            return this.GenericEResultCall(n, t);
-          }
-          m_mapCacheSubscribedApp = new Map();
-          BIsSubscribedApp(e) {
-            if (this.m_mapCacheSubscribedApp.has(e))
-              return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
-            let t = { message: "IsSubscribedApp", appid: e };
-            return this.GenericEResultCall(t, !0).then((t) => {
-              if (t.connect_failed) return;
-              let n = t.result == s.R;
-              return this.m_mapCacheSubscribedApp.set(e, n), n;
-            });
-          }
-          OpenFriendsDialog() {
-            return this.GenericEResultCall({ message: "OpenFriendsDialog" });
-          }
-          OpenSteamURL(e, t = !1) {
-            let n = { message: "OpenSteamURL", url: e };
-            return this.GenericEResultCall(n, t);
-          }
-          BClientAccountMatches() {
-            return (
-              !i.iA.logged_in ||
-              i.iA.accountid == this.m_connection.ClientInfo.unAccountID
-            );
-          }
-          GenericEResultCall(e, t = !1) {
-            return this.m_connection
-              .Connect()
-              .then(() =>
-                t && !this.BClientAccountMatches()
-                  ? { success: !1, result: s.$A, account_mismatch: !0 }
-                  : this.m_connection
-                      .SendMsgAndAwaitResponse(e)
-                      .then((e) =>
-                        e.success === s.R ? o : this.FailureResult(e.success),
-                      ),
-              )
-              .catch(() => this.FailureResult());
-          }
-        })();
-        window.ClientConnectionAPI = a;
-      },
-      61407: (e, t, n) => {
+      8194: (e, t, n) => {
         "use strict";
         n.d(t, { $: () => c });
         var s = n(34629),
-          i = n(87118),
-          o = n(56738),
+          i = n(39831),
+          o = n(73939),
           r = n(89193),
-          a = n(96108),
-          l = n(51600);
+          a = n(55747),
+          l = n(52308);
         class c {
           constructor() {
             (0, r.Gn)(this);
@@ -90823,11 +90696,11 @@ var CLSTAMP = "10779229";
             void 0,
           );
       },
-      54953: (e, t, n) => {
+      43076: (e, t, n) => {
         "use strict";
         n.d(t, { PN: () => s, eZ: () => o });
         var s,
-          i = n(58752);
+          i = n(6242);
         !(function (e) {
           (e[(e.LaunchGame = 0)] = "LaunchGame"),
             (e[(e.FriendMessage = 1)] = "FriendMessage"),
@@ -90876,7 +90749,7 @@ var CLSTAMP = "10779229";
           }
         })();
       },
-      28946: (e, t, n) => {
+      23536: (e, t, n) => {
         "use strict";
         n.d(t, {
           BroadcastWatchStore: () => q,
@@ -90888,8 +90761,8 @@ var CLSTAMP = "10779229";
           i = n(83957),
           o = n.n(i),
           r = n(89193),
-          a = n(34264),
-          l = n(77500);
+          a = n(47377),
+          l = n(689);
         function c(e, t, n) {
           return [e, t, n];
         }
@@ -91053,15 +90926,15 @@ var CLSTAMP = "10779229";
           }
           UpdateSoundtrack(e, t) {}
         }
-        var u = n(36185),
-          m = n(57242),
-          p = n(28142),
-          _ = n(21582),
-          g = n(54250),
-          C = n(7169),
-          f = n(52203),
-          S = n(58752),
-          v = n(96108);
+        var u = n(78414),
+          m = n(30580),
+          p = n(70027),
+          _ = n(96641),
+          g = n(67725),
+          C = n(90698),
+          f = n(78920),
+          S = n(6242),
+          v = n(55747);
         class b {
           m_elVideo = null;
           m_peerConnection = null;
@@ -91374,15 +91247,15 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([r.XI.bound], b.prototype, "CaptureStatsForDisplay", null),
           (0, s.Cg)([g.o], b.prototype, "OnVideoPause", null),
           (0, s.Cg)([g.o], b.prototype, "OnVideoResize", null);
-        var I = n(42308),
-          y = n(24163),
-          w = n(18483),
-          x = n(11662),
-          A = n(8978),
-          R = n(57136),
-          T = n(87118),
-          M = n(47386),
-          D = n(60812);
+        var I = n(25699),
+          y = n(74874),
+          w = n(69164),
+          x = n(13791),
+          A = n(62057),
+          R = n(33411),
+          T = n(39831),
+          M = n(32031),
+          D = n(2807);
         class k {
           static s_VODStore;
           m_transport = null;
@@ -91560,7 +91433,7 @@ var CLSTAMP = "10779229";
           }
           Init() {}
         }
-        var G = n(40114);
+        var G = n(66681);
         const B = 7;
         var F, E;
         !(function (e) {
@@ -91977,7 +91850,7 @@ var CLSTAMP = "10779229";
                 broadcastid: 0,
                 viewertoken: this.m_broadcastSettings.ulViewerToken,
                 watchlocation: t,
-                sessionid: _.TS.SESSIONID,
+                sessionid: (0, _.KC)(),
                 is_webrtc: e.m_bWebRTC,
               },
               i = null;
@@ -92092,7 +91965,7 @@ var CLSTAMP = "10779229";
             let n = {
                 clipid: e.m_clipID,
                 watchlocation: t,
-                sessionid: _.TS.SESSIONID,
+                sessionid: (0, _.KC)(),
               },
               s = null;
             try {
@@ -92712,7 +92585,7 @@ var CLSTAMP = "10779229";
         const q = new W();
         window.uiBroadcastWatchStore = q;
       },
-      99869: (e, t, n) => {
+      86614: (e, t, n) => {
         "use strict";
         n.d(t, { TB: () => _, ac: () => p });
         var s = n(34629),
@@ -92720,12 +92593,12 @@ var CLSTAMP = "10779229";
           o = n.n(i),
           r = n(89193),
           a = n(63696),
-          l = n(42308),
-          c = n(9663),
-          d = n(11662),
-          h = n(21582),
-          u = n(22344);
-        n(41580), n(89711), n(87234);
+          l = n(25699),
+          c = n(94058),
+          d = n(13791),
+          h = n(96641),
+          u = n(30847);
+        n(29607), n(65230), n(85498);
         class m {
           constructor() {
             (0, r.Gn)(this);
@@ -93044,7 +92917,7 @@ var CLSTAMP = "10779229";
         }
         window.g_ClanStore = p;
       },
-      86447: (e, t, n) => {
+      3962: (e, t, n) => {
         "use strict";
         n.d(t, {
           $D: () => h,
@@ -93059,10 +92932,10 @@ var CLSTAMP = "10779229";
           i = n(83957),
           o = n.n(i),
           r = n(89193),
-          a = n(96108),
-          l = n(11662),
-          c = n(8978),
-          d = n(21582);
+          a = n(55747),
+          l = n(13791),
+          c = n(62057),
+          d = n(96641);
         const h = 0,
           u = 1,
           m = 3,
@@ -93277,7 +93150,7 @@ var CLSTAMP = "10779229";
             (this.m_fileUploadProps.eUploadState = 2),
               (this.m_fileUploadProps.uploadInfo = e);
             let n = new FormData();
-            n.append("sessionid", d.TS.SESSIONID),
+            n.append("sessionid", (0, d.KC)()),
               n.append("l", d.TS.LANGUAGE),
               n.append("file_size", t.size.toString()),
               n.append("file_name", this.m_fileUploadProps.uploadFileName),
@@ -93388,7 +93261,7 @@ var CLSTAMP = "10779229";
             let n = this.m_fileUploadProps.file,
               s = this.m_fileUploadProps.sha1,
               i = new FormData();
-            i.append("sessionid", d.TS.SESSIONID),
+            i.append("sessionid", (0, d.KC)()),
               i.append("l", d.TS.LANGUAGE),
               i.append("file_name", this.m_fileUploadProps.uploadFileName),
               i.append("file_sha", s),
@@ -93536,16 +93409,16 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([r.XI], f.prototype, "ClearFileUploadError", null),
           (0, s.Cg)([r.XI], f.prototype, "Reset", null);
       },
-      22344: (e, t, n) => {
+      30847: (e, t, n) => {
         "use strict";
         n.d(t, { pF: () => p });
         var s = n(34629),
-          i = (n(87118), n(34720), n(70859), n(83957)),
+          i = (n(39831), n(65128), n(28640), n(83957)),
           o = n.n(i),
           r = n(89193),
-          a = n(96108),
-          l = n(89711),
-          c = n(21582);
+          a = n(55747),
+          l = n(65230),
+          c = n(96641);
         class d {
           m_clanSteamID;
           m_appidList = new Array();
@@ -93685,7 +93558,7 @@ var CLSTAMP = "10779229";
               s & l.Wv.Jn && i.push(l.Wv.Jn),
               s & l.Wv.Mv && i.push(l.Wv.Mv);
             let r = new FormData();
-            r.append("sessionid", c.TS.SESSIONID),
+            r.append("sessionid", (0, c.KC)()),
               r.append("clan_account_id", this.GetClanAccountID().toString()),
               r.append("accountflags", JSON.stringify(i));
             let d = await o().post(n, r);
@@ -93698,8 +93571,8 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([r.sH], d.prototype, "m_appidList", void 0),
           (0, s.Cg)([r.sH], d.prototype, "m_nFollowers", void 0),
           (0, s.Cg)([r.sH], d.prototype, "m_clanAccountFlags", void 0);
-        var h = n(47386),
-          u = n(9663);
+        var h = n(32031),
+          u = n(94058);
         class m {
           constructor() {
             (0, r.Gn)(this);
@@ -93907,11 +93780,11 @@ var CLSTAMP = "10779229";
         const g = new _();
         window.g_CreatorHomeListInfoStore = g;
       },
-      71802: (e, t, n) => {
+      97307: (e, t, n) => {
         "use strict";
         n.d(t, { pN: () => l });
         var s = n(34629),
-          i = n(21582),
+          i = n(96641),
           o = n(89193);
         n(63696);
         const r = "ː",
@@ -94167,14 +94040,14 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([o.sH], l.prototype, "m_rtLastStickerOrEffect", void 0),
           (0, s.Cg)([o.XI], l.prototype, "TrackEmoticonUsage", null);
       },
-      33998: (e, t, n) => {
+      56063: (e, t, n) => {
         "use strict";
         n.d(t, { HD: () => c, sB: () => u });
         var s = n(34629),
           i = n(89193),
           o = n(42689),
           r = n.n(o),
-          a = (n(63696), n(96985), n(21582));
+          a = (n(63696), n(64908), n(96641));
         class l {
           constructor() {
             (0, i.Gn)(this);
@@ -94230,19 +94103,19 @@ var CLSTAMP = "10779229";
           return c.nOverrideDateNow ?? h;
         }
       },
-      87234: (e, t, n) => {
+      85498: (e, t, n) => {
         "use strict";
         n.d(t, { KN: () => S, Nh: () => p });
         var s = n(34629),
-          i = n(96108),
-          o = n(8574),
-          r = n(87118),
-          a = n(58752),
-          l = n(54250),
-          c = n(21582),
+          i = n(55747),
+          o = n(91213),
+          r = n(39831),
+          a = n(6242),
+          l = n(67725),
+          c = n(96641),
           d = n(83957),
           h = n.n(d),
-          u = n(57136);
+          u = n(33411);
         class m {
           m_CMInterface;
           m_setShownEvents = new Set();
@@ -94329,7 +94202,7 @@ var CLSTAMP = "10779229";
               let n = e.map((e) => e.toObject()),
                 s = (0, c.xv)() + "actions/ajaxmarkpartnerevents";
               const o = new FormData();
-              o.append("sessionid", c.TS.SESSIONID),
+              o.append("sessionid", (0, c.KC)()),
                 o.append("request", JSON.stringify(n));
               try {
                 t =
@@ -94356,8 +94229,8 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([l.o], m.prototype, "UploadPendingData", null);
         var p,
           _ = n(89193),
-          g = (n(63696), n(9663), n(41580)),
-          C = n(11662);
+          g = (n(63696), n(94058), n(29607)),
+          C = n(13791);
         class f {
           clanid = void 0;
           appid = 0;
@@ -94666,7 +94539,7 @@ var CLSTAMP = "10779229";
                     n.ConvertTo64BitString()) +
                 (l ? "/unfolloworunignoreevent" : "/followorignoreevent"),
               u = new URLSearchParams();
-            u.append("sessionid", c.TS.SESSIONID),
+            u.append("sessionid", (0, c.KC)()),
               u.append("ignore", "" + t),
               u.append("gid", s),
               u.append("notification_flag", "" + i),
@@ -94735,7 +94608,7 @@ var CLSTAMP = "10779229";
                       "updated/ajaxrateupdate/" +
                       e.AnnouncementGID,
                 r = new URLSearchParams();
-              r.append("sessionid", c.TS.SESSIONID),
+              r.append("sessionid", (0, c.KC)()),
                 r.append("voteup", t ? "1" : "0"),
                 r.append("clanid", "" + e.clanSteamID.GetAccountID()),
                 r.append("ajax", "1");
@@ -94805,7 +94678,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([_.sH], S.prototype, "m_setReadEventGIDs", void 0),
           (0, s.Cg)([_.XI], S.prototype, "CopyFromResponseToTrack", null);
       },
-      73640: (e, t, n) => {
+      58033: (e, t, n) => {
         "use strict";
         n.d(t, { T: () => o, V: () => i });
         let s = null;
@@ -94823,7 +94696,7 @@ var CLSTAMP = "10779229";
               null);
         }
       },
-      84309: (e, t, n) => {
+      61651: (e, t, n) => {
         "use strict";
         n.d(t, { O3: () => he });
         var s = n(34629),
@@ -94831,8 +94704,8 @@ var CLSTAMP = "10779229";
           o = n.n(i),
           r = n(89193),
           a = n(59351),
-          l = n(42308),
-          c = n(96108);
+          l = n(25699),
+          c = n(55747);
         const d = [
             "p",
             "h1",
@@ -94915,8 +94788,8 @@ var CLSTAMP = "10779229";
           const s = "\\[\\/?(?:" + m(t) + "){1,}.*?]";
           return e.replace(new RegExp(s, "gi"), n);
         }
-        var _ = n(33453),
-          g = n(18710);
+        var _ = n(83402),
+          g = n(44607);
         const C = {
           bBroadcastEnabled: !1,
           broadcastChatSetting: "hide",
@@ -94926,12 +94799,12 @@ var CLSTAMP = "10779229";
           localized_broadcast_right_image: new Array(l.bP9),
           broadcast_whitelist: [],
         };
-        var f = n(9663),
-          S = n(44534),
-          v = n(86950),
-          b = n(83950),
-          I = n(18483),
-          y = n(21582);
+        var f = n(94058),
+          S = n(75608),
+          v = n(1783),
+          b = n(65673),
+          I = n(69164),
+          y = n(96641);
         class w {
           m_curLocImageGroup = null;
           m_curLocImageGroupType = null;
@@ -95054,17 +94927,17 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([r.sH], w.prototype, "m_curLocImageGroup", void 0);
         const x = new w();
-        var A = n(99869),
-          R = n(22344),
-          T = n(33998),
-          M = n(1653),
-          D = n(11662),
-          k = n(8978),
-          P = n(28142),
-          L = n(9939);
-        var G = n(99497),
-          B = n(58686),
-          F = n(54250);
+        var A = n(86614),
+          R = n(30847),
+          T = n(56063),
+          M = n(45850),
+          D = n(13791),
+          k = n(62057),
+          P = n(70027),
+          L = n(11098);
+        var G = n(97684),
+          B = n(28333),
+          F = n(67725);
         (0, s.Cg)(
           [F.o],
           class {
@@ -95089,7 +94962,7 @@ var CLSTAMP = "10779229";
         !(function (e) {
           (e.Random = "r"), (e.Personalized = "p");
         })(O || (O = {}));
-        var N = n(40077);
+        var N = n(19022);
         l.u0,
           l.zeJ,
           l.Fa4,
@@ -96453,10 +96326,10 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([r.sH], ne.prototype, "video_preview_type", void 0),
           (0, s.Cg)([r.sH], ne.prototype, "video_preview_id", void 0),
           (0, s.Cg)([r.sH], ne.prototype, "m_overrideCurrentDay", void 0);
-        var se = n(57136),
-          ie = n(58752),
-          oe = n(51756),
-          re = n(18901);
+        var se = n(33411),
+          ie = n(6242),
+          oe = n(88071),
+          re = n(52312);
         function ae(e) {
           return (
             (null == e.gid || null == e.gid || "0" == e.gid) &&
@@ -97230,7 +97103,7 @@ var CLSTAMP = "10779229";
             this.m_mapExistingEvents.has(t) &&
               (this.m_mapExistingEvents.get(t).deleteInProgress = !0);
             let n = new URLSearchParams();
-            n.append("sessionid", y.TS.SESSIONID),
+            n.append("sessionid", (0, y.KC)()),
               n.append("bDelete", "1"),
               n.append("gid", t);
             const s = await o().post(
@@ -97551,7 +97424,7 @@ var CLSTAMP = "10779229";
             try {
               const r = `${y.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
                 a = new FormData();
-              a.append("sessionid", y.TS.SESSIONID),
+              a.append("sessionid", (0, y.KC)()),
                 a.append("gidclanevent", t),
                 a.append("json", JSON.stringify(n)),
                 a.append("pageStyles", JSON.stringify(s));
@@ -97617,15 +97490,15 @@ var CLSTAMP = "10779229";
         const ue = new de(!0);
         window.g_PartnerEventSummaryStore = ue;
       },
-      98723: (e, t, n) => {
+      72942: (e, t, n) => {
         "use strict";
         n.d(t, { y: () => u });
         var s = n(34629),
-          i = n(87118),
-          o = n(31822),
-          r = n(86373),
-          a = n(58686),
-          l = n(54250);
+          i = n(39831),
+          o = n(82377),
+          r = n(65264),
+          a = n(28333),
+          l = n(67725);
         const c = new r.wd("ReactUsageReporting").Debug,
           d = 1e3 * a.Kp.PerMinute;
         class h {
@@ -97702,12 +97575,12 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([l.o], h.prototype, "CheckSend", null);
         const u = new h();
       },
-      60862: (e, t, n) => {
+      5011: (e, t, n) => {
         "use strict";
         n.d(t, { Ay: () => u, QO: () => f });
         var s,
-          i = n(50691);
-        n(68722);
+          i = n(91844);
+        n(33426);
         !(function (e) {
           (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
             (e[(e.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
@@ -97733,13 +97606,13 @@ var CLSTAMP = "10779229";
             (e[(e.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
             (e[(e.k_RejectAO = 19)] = "k_RejectAO");
         })(s || (s = {}));
-        var o = n(11662),
-          r = n(8978),
-          a = n(29656),
-          l = n(21582),
-          c = n(50696),
-          d = n(18483),
-          h = n(64678);
+        var o = n(13791),
+          r = n(62057),
+          a = n(8705),
+          l = n(96641),
+          c = n(63767),
+          d = n(69164),
+          h = n(50577);
         class u {
           m_eItemType;
           m_unID;
@@ -98728,21 +98601,21 @@ var CLSTAMP = "10779229";
             }
         }
       },
-      1653: (e, t, n) => {
+      45850: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => b });
         var s = n(34629),
           i = n(89193),
-          o = n(96108),
-          r = n(42308),
-          a = n(87118),
-          l = n(47386),
-          c = n(17224),
-          d = n(50691),
-          h = n(11662),
-          u = n(57136),
-          m = n(21582);
-        n(41113);
+          o = n(55747),
+          r = n(25699),
+          a = n(39831),
+          l = n(32031),
+          c = n(82577),
+          d = n(91844),
+          h = n(13791),
+          u = n(33411),
+          m = n(96641);
+        n(1071);
         function p(e, t) {
           e.Body().set_context(_(t));
         }
@@ -98757,8 +98630,8 @@ var CLSTAMP = "10779229";
         function g(e, t) {
           e.Body().set_data_request(d.gn.fromObject(t));
         }
-        var C = n(60862),
-          f = n(54250);
+        var C = n(5011),
+          f = n(67725);
         function S(e, t) {
           if (!e) return t;
           if (!t) return e;
@@ -99676,16 +99549,16 @@ var CLSTAMP = "10779229";
         }
         (0, s.Cg)([f.o], b.prototype, "ReadItem", null);
       },
-      48180: (e, t, n) => {
+      77081: (e, t, n) => {
         "use strict";
         n.d(t, { t7: () => p });
         var s = n(83957),
           i = n.n(s),
           o = n(63696),
-          r = n(96108),
-          a = n(50691),
-          l = n(51756),
-          c = n(1653);
+          r = n(55747),
+          a = n(91844),
+          l = n(88071),
+          c = n(45850);
         const d = 1,
           h = 2,
           u = 3;
@@ -99762,11 +99635,11 @@ var CLSTAMP = "10779229";
           return m(e, a.c6.qI, t, n);
         }
       },
-      50696: (e, t, n) => {
+      63767: (e, t, n) => {
         "use strict";
         n.d(t, { d: () => o });
-        var s = n(8978),
-          i = n(29656);
+        var s = n(62057),
+          i = n(8705);
         function o(e) {
           return (function (e, t, n, o) {
             switch (e) {
@@ -99792,7 +99665,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      37737: (e, t, n) => {
+      65368: (e, t, n) => {
         "use strict";
         n.d(t, { s: () => G, Q: () => F });
         var s = n(34629),
@@ -99800,25 +99673,25 @@ var CLSTAMP = "10779229";
           o = n.n(i),
           r = n(37322),
           a = n(89193),
-          l = n(96108),
-          c = n(42308),
-          d = n(87118),
-          h = n(9663),
-          u = n(30952),
-          m = n(21582),
-          p = n(51600),
-          _ = n(11662),
-          g = n(91831),
-          C = n(51756),
-          f = n(94553),
-          S = n(62458),
-          v = n(56738),
-          b = n(86373),
-          I = n(65496),
-          y = n(61407),
-          w = n(34350),
-          x = n(57345),
-          A = n(28142);
+          l = n(55747),
+          c = n(25699),
+          d = n(39831),
+          h = n(94058),
+          u = n(5109),
+          m = n(96641),
+          p = n(52308),
+          _ = n(13791),
+          g = n(68764),
+          C = n(88071),
+          f = n(15704),
+          S = n(36970),
+          v = n(73939),
+          b = n(65264),
+          I = n(37777),
+          y = n(8194),
+          w = n(73041),
+          x = n(17692),
+          A = n(70027);
         class R {
           m_socket = null;
           m_sName;
@@ -100319,7 +100192,7 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([C.oI], M.prototype, "OnWebsocketMessage", null),
           (0, s.Cg)([C.oI], M.prototype, "OnStartShutdown", null);
         const D = new M();
-        var k = n(54250);
+        var k = n(67725);
         function P() {
           return m.TS.IN_MOBILE ? m.NQ : (0, m.xv)();
         }
@@ -100530,7 +100403,7 @@ var CLSTAMP = "10779229";
                     .Body()
                     .preferences();
                 } else {
-                  let t = { sessionid: m.TS.SESSIONID, origin: P() };
+                  let t = { sessionid: (0, m.KC)(), origin: P() };
                   const n = await o().get(
                     m.TS.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgetcommunitypreferences",
@@ -100553,7 +100426,7 @@ var CLSTAMP = "10779229";
                       .Body()
                       .words();
                   } else {
-                    let e = { sessionid: m.TS.SESSIONID, origin: P() };
+                    let e = { sessionid: (0, m.KC)(), origin: P() };
                     const n = await o().get(
                       m.TS.COMMUNITY_BASE_URL +
                         "textfilter/ajaxgettextfiltercustomwords",
@@ -100784,7 +100657,7 @@ var CLSTAMP = "10779229";
         function F() {
           if (!B) {
             const e = new Set();
-            let t = { sessionid: m.TS.SESSIONID, origin: P() };
+            let t = { sessionid: (0, m.KC)(), origin: P() };
             o()
               .get(m.TS.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
                 params: t,
@@ -100816,47 +100689,48 @@ var CLSTAMP = "10779229";
           (0, s.Cg)([a.XI], G.prototype, "UpdateCommunityPreferences", null),
           (0, s.Cg)([a.XI], G.prototype, "BRebuildFilter", null);
       },
-      2108: (e, t, n) => {
+      71191: (e, t, n) => {
         "use strict";
         n.d(t, { g4: () => s });
         var s,
           i = n(34629),
-          o = n(32271),
-          r = n(86373),
-          a = n(51756);
-        function l(e) {
+          o = n(20448),
+          r = n(8512),
+          a = n(65264),
+          l = n(88071);
+        function c(e) {
           switch (e) {
-            case o.pR.OK:
+            case r.pR.OK:
               return s.A;
-            case o.pR.CANCEL:
+            case r.pR.CANCEL:
               return s.B;
-            case o.pR.SECONDARY:
+            case r.pR.SECONDARY:
               return s.X;
-            case o.pR.OPTIONS:
+            case r.pR.OPTIONS:
               return s.Y;
-            case o.pR.DIR_LEFT:
+            case r.pR.DIR_LEFT:
               return s.Left;
-            case o.pR.DIR_RIGHT:
+            case r.pR.DIR_RIGHT:
               return s.Right;
-            case o.pR.DIR_UP:
+            case r.pR.DIR_UP:
               return s.Up;
-            case o.pR.DIR_DOWN:
+            case r.pR.DIR_DOWN:
               return s.Down;
-            case o.pR.STEAM_GUIDE:
+            case r.pR.STEAM_GUIDE:
               return s.HomeMenu;
-            case o.pR.STEAM_QUICK_MENU:
+            case r.pR.STEAM_QUICK_MENU:
               return s.QuickMenu;
-            case o.pR.SELECT:
+            case r.pR.SELECT:
               return s.Select;
-            case o.pR.START:
+            case r.pR.START:
               return s.Start;
-            case o.pR.BUMPER_LEFT:
+            case r.pR.BUMPER_LEFT:
               return s.LeftBumper;
-            case o.pR.BUMPER_RIGHT:
+            case r.pR.BUMPER_RIGHT:
               return s.RightBumper;
-            case o.pR.TRIGGER_LEFT:
+            case r.pR.TRIGGER_LEFT:
               return s.LeftTrigger;
-            case o.pR.TRIGGER_RIGHT:
+            case r.pR.TRIGGER_RIGHT:
               return s.RightTrigger;
             default:
               return s.A;
@@ -100892,12 +100766,12 @@ var CLSTAMP = "10779229";
             (e[(e.RearRightUpper = 26)] = "RearRightUpper"),
             (e[(e.RearRightLower = 27)] = "RearRightLower");
         })(s || (s = {}));
-        class c {
+        class d {
           m_boundActions = new Map();
           m_defaultActions = new Map();
-          m_actionSubscriptions = new Map();
+          m_globalActionsSubscriptions = [];
           m_actionDescriptionChangedCallbackRegistrations = [];
-          static Log = new r.wd("ActionDescription").Debug;
+          static Log = new a.wd("ActionDescription").Debug;
           InitContext(e) {
             return e.FocusChangedCallbacks.Register(
               this.OnFocusNavigationChanged,
@@ -100927,7 +100801,7 @@ var CLSTAMP = "10779229";
                   this.m_actionDescriptionChangedCallbackRegistrations.push(
                     t.ActionDescriptionChangedCallbackList.Register(() => e()),
                   );
-              } else this.SetActionDescriptionsFromMap({ [o.pR.OK]: null });
+              } else this.SetActionDescriptionsFromMap({ [r.pR.OK]: null });
           }
           GetActionDescription(e) {
             let t;
@@ -100936,20 +100810,19 @@ var CLSTAMP = "10779229";
                 ? (t = this.m_boundActions.get(e))
                 : this.m_defaultActions.has(e) &&
                   (t = this.m_defaultActions.get(e)),
-              c.Log("GetActionDescription", t),
+              d.Log("GetActionDescription", t),
               t
             );
           }
-          NotifyUpdate(e) {
-            if (this.m_actionSubscriptions.has(e)) {
-              const t = this.GetActionDescription(e);
-              this.m_actionSubscriptions.get(e).forEach((e) => e(t));
-            }
+          GetActionDescriptions() {
+            const e = Object.values(s).filter((e) => "number" == typeof e),
+              t = {};
+            for (const n of e) t[n] = this.GetActionDescription(n);
+            return t;
           }
-          NotifyAll() {
-            Array.from(this.m_actionSubscriptions.keys()).forEach((e) => {
-              this.NotifyUpdate(e);
-            });
+          Notify() {
+            const e = this.GetActionDescriptions();
+            this.m_globalActionsSubscriptions.forEach((t) => t(e));
           }
           IsDefaultAction(e) {
             return (
@@ -100957,70 +100830,77 @@ var CLSTAMP = "10779229";
             );
           }
           SetDefaultAction(e, t) {
-            void 0 === t
-              ? this.m_defaultActions.delete(e)
-              : this.m_defaultActions.set(e, t),
-              this.m_boundActions.has(e) || this.NotifyUpdate(e);
+            return (
+              void 0 === t
+                ? this.m_defaultActions.delete(e)
+                : this.m_defaultActions.set(e, t),
+              !this.m_boundActions.has(e)
+            );
+          }
+          SetDefaultActionsFromMap(e) {
+            let t = !1;
+            for (const n in e) {
+              const s = parseInt(n);
+              this.SetDefaultAction(s, e[s]) && (t = !0);
+            }
+            t && this.Notify();
           }
           ClearActions() {
-            c.Log("ClearActionDescriptions"),
+            d.Log("ClearActionDescriptions"),
               this.m_boundActions.clear(),
-              this.NotifyAll();
+              this.Notify();
           }
           SetActionsFromMap(e) {
-            const t = Array.from(this.m_boundActions.keys());
-            for (let n of t) e[n] || this.SetAction(n, void 0);
-            for (let t in e) {
-              const n = parseInt(t);
-              this.SetAction(n, e[n]);
+            let t = !1;
+            const n = Array.from(this.m_boundActions.keys());
+            for (let s of n)
+              void 0 === e[s] && this.SetAction(s, void 0) && (t = !0);
+            for (let n in e) {
+              const s = parseInt(n);
+              this.SetAction(s, e[s]) && (t = !0);
             }
+            t && this.Notify();
           }
           SetActionDescriptionsFromMap(e) {
             const t = {};
             for (const n in e) {
               const s = parseInt(n);
-              t[l(s)] = e[s];
+              t[c(s)] = e[s];
             }
             this.SetActionsFromMap(t);
           }
           SetAction(e, t) {
-            if ((c.Log("SetActionDescription", e, t), void 0 === t)) {
-              if (!this.m_boundActions.has(e)) return;
+            if ((d.Log("SetActionDescription", e, t), void 0 === t)) {
+              if (!this.m_boundActions.has(e)) return !1;
               this.m_boundActions.delete(e);
             } else {
-              if (this.m_boundActions.get(e) === t) return;
+              if ((0, o.SI)(this.m_boundActions.get(e), t)) return !1;
               this.m_boundActions.set(e, t);
             }
-            this.NotifyUpdate(e);
+            return !0;
           }
-          SubscribeToActionFunction(e, t) {
-            this.m_actionSubscriptions.has(e) ||
-              this.m_actionSubscriptions.set(e, []),
-              this.m_actionSubscriptions.get(e).push(t),
-              this.m_boundActions.has(e)
-                ? t(this.m_boundActions.get(e))
-                : this.m_defaultActions.has(e) &&
-                  t(this.m_defaultActions.get(e));
+          SubscribeToActions(e) {
+            this.m_globalActionsSubscriptions.push(e),
+              e(this.GetActionDescriptions());
             return () => {
-              const n = this.m_actionSubscriptions.get(e),
-                s = n?.indexOf(t);
-              n && null != s && s >= 0
-                ? n.splice(s, 1)
+              const t = this.m_globalActionsSubscriptions?.indexOf(e);
+              this.m_globalActionsSubscriptions && null != t && t >= 0
+                ? this.m_globalActionsSubscriptions.splice(t, 1)
                 : console.error(
-                    "Unsubscribing an action that was already unsubscribed",
+                    "Unsubscribing an actions handler that was already unsubscribed",
                   );
             };
           }
         }
-        (0, i.Cg)([a.oI], c.prototype, "OnFocusNavigationChanged", null),
-          (0, i.Cg)([a.oI], c.prototype, "SetActionDescriptionsFromMap", null);
+        (0, i.Cg)([l.oI], d.prototype, "OnFocusNavigationChanged", null),
+          (0, i.Cg)([l.oI], d.prototype, "SetActionDescriptionsFromMap", null);
       },
-      91042: (e, t, n) => {
+      85307: (e, t, n) => {
         "use strict";
         n.d(t, { JO: () => a, pM: () => l, xh: () => r });
         var s = n(62540),
           i = n(63696),
-          o = n(64382);
+          o = n(10093);
         function r(e) {
           const { text: t = "", style: n, children: o } = e;
           if (null == t) return (0, s.jsx)(i.Fragment, { children: o });
@@ -101125,7 +101005,7 @@ var CLSTAMP = "10779229";
             })(t);
         }
       },
-      13177: (e, t, n) => {
+      97640: (e, t, n) => {
         "use strict";
         n.d(t, {
           IK: () => D,
@@ -101142,10 +101022,10 @@ var CLSTAMP = "10779229";
         });
         var s = n(34629),
           i = n(62540),
-          o = n(83300),
-          r = n(26194),
-          a = n(35539),
-          l = n(51171);
+          o = n(79229),
+          r = n(70407),
+          a = n(75393),
+          l = n(20448);
         const c = Object.seal({ onMoveUp: d, onMoveDown: d });
         Object.seal({ onMoveRight: d, onMoveLeft: d });
         function d(e, t) {
@@ -101157,17 +101037,17 @@ var CLSTAMP = "10779229";
         }
         var h = n(41230),
           u = n(63696),
-          m = n(6474),
-          p = n(34469),
-          _ = n(40114),
-          g = n(94117),
-          C = n(45510),
-          f = n(85427),
-          S = n(49569),
-          v = n(64382),
-          b = n(8978),
-          I = n(51756),
-          y = n(21582),
+          m = n(35123),
+          p = n(5966),
+          _ = n(66681),
+          g = n(41894),
+          C = n(61473),
+          f = n(31932),
+          S = n(3190),
+          v = n(10093),
+          b = n(62057),
+          I = n(88071),
+          y = n(96641),
           w = n(26765),
           x = n.n(w);
         const A = u.createContext(null);
@@ -101978,12 +101858,12 @@ var CLSTAMP = "10779229";
             : window.sessionStorage.removeItem(N);
         }
       },
-      94117: (e, t, n) => {
+      41894: (e, t, n) => {
         "use strict";
         n.d(t, { D: () => l, n: () => c });
         var s = n(62540),
           i = n(63696),
-          o = n(85427),
+          o = n(31932),
           r = n(26765),
           a = n.n(r);
         const l = i.forwardRef((e, t) => {
@@ -102012,14 +101892,14 @@ var CLSTAMP = "10779229";
         }
         l.displayName = "MenuItem";
       },
-      48363: (e, t, n) => {
+      49028: (e, t, n) => {
         "use strict";
         n.d(t, { y: () => d });
         var s = n(62540),
           i = n(63696),
           o = n(23038),
           r = n(61726),
-          a = n(85427);
+          a = n(31932);
         const l = 500;
         class c extends i.Component {
           render() {
@@ -102063,7 +101943,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      92179: (e, t, n) => {
+      5436: (e, t, n) => {
         "use strict";
         n.d(t, { M: () => r });
         var s = n(62540),
@@ -102075,7 +101955,7 @@ var CLSTAMP = "10779229";
           return (0, s.jsx)(o.A, { nodeRef: r, ...n, children: e.children(r) });
         }
       },
-      56092: (e, t, n) => {
+      99067: (e, t, n) => {
         "use strict";
         n.d(t, { Ce: () => i, Zt: () => r, a_: () => o, xv: () => a });
         var s = n(63696);
@@ -102089,7 +101969,7 @@ var CLSTAMP = "10779229";
           return !!e && e.bClassicMode;
         }
       },
-      25069: (e, t, n) => {
+      79672: (e, t, n) => {
         "use strict";
         n.d(t, {
           $n: () => E,
@@ -102122,17 +102002,17 @@ var CLSTAMP = "10779229";
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(34469),
-          a = n(83300),
-          l = n(26194),
-          c = n(45510),
-          d = n(91811),
-          h = n(54250),
-          u = n(85427),
-          m = n(8978),
-          p = n(50203),
-          _ = n(56092),
-          g = n(86732);
+          r = n(5966),
+          a = n(79229),
+          l = n(70407),
+          c = n(61473),
+          d = n(97734),
+          h = n(67725),
+          u = n(31932),
+          m = n(62057),
+          p = n(62794),
+          _ = n(99067),
+          g = n(66623);
         function C(e) {
           return o.forwardRef(function (t, n) {
             return (0, i.jsx)(l.Z, {
@@ -102625,7 +102505,7 @@ var CLSTAMP = "10779229";
         (0, s.Cg)([h.o], q.prototype, "OnOffKeyDown", null),
           (0, s.Cg)([h.o], q.prototype, "OnNewUIToggle", null);
       },
-      73511: (e, t, n) => {
+      70425: (e, t, n) => {
         "use strict";
         n.d(t, {
           Xg: () => Ke,
@@ -102646,9 +102526,9 @@ var CLSTAMP = "10779229";
           wi: () => s.wi,
           lV: () => s.lV,
           Vb: () => nt,
-          A0: () => Ft,
-          d3: () => jt,
-          y4: () => Wt,
+          A0: () => Et,
+          d3: () => Vt,
+          y4: () => zt,
           Dm: () => We,
           _E: () => s._E,
           Y9: () => s.Y9,
@@ -102681,20 +102561,20 @@ var CLSTAMP = "10779229";
           Zy: () => b,
           QS: () => g.xv,
         });
-        var s = n(25069),
+        var s = n(79672),
           i = n(34629),
           o = n(62540),
           r = n(63696),
-          a = n(83300),
-          l = n(26194),
-          c = n(45510),
-          d = n(11662),
-          h = n(85427),
-          u = n(8978),
-          m = n(51756),
-          p = n(91639),
-          _ = n(50203),
-          g = n(56092);
+          a = n(79229),
+          l = n(70407),
+          c = n(61473),
+          d = n(13791),
+          h = n(31932),
+          u = n(62057),
+          m = n(88071),
+          p = n(72590),
+          _ = n(62794),
+          g = n(99067);
         const C = r.forwardRef(function (e, t) {
           const n = (0, g.Zt)("InputElement", a.BA);
           return (0, o.jsx)(n, { ...e, ref: t });
@@ -103089,7 +102969,7 @@ var CLSTAMP = "10779229";
         (0, i.Cg)([m.oI], S.prototype, "OnBackgroundClick", null),
           (0, i.Cg)([m.oI], S.prototype, "OnInputFocus", null),
           (0, i.Cg)([m.oI], S.prototype, "OnInputBlur", null);
-        var v = n(34469);
+        var v = n(5966);
         const b = (e, t) =>
             "" +
             (null != e ? Number.parseFloat(e.toFixed(3)) : null) +
@@ -103276,7 +103156,7 @@ var CLSTAMP = "10779229";
           (0, i.Cg)([m.oI], T.prototype, "OnTouchMove", null),
           (0, i.Cg)([m.oI], T.prototype, "OnTouchEnd", null),
           (0, i.Cg)([m.oI], T.prototype, "OnKeyDown", null);
-        var M = n(86732),
+        var M = n(66623),
           D = n(82472),
           k = n.n(D);
         const P = r.createContext({ setValue: () => {} });
@@ -103333,8 +103213,8 @@ var CLSTAMP = "10779229";
             children: n,
           });
         }
-        var B = n(6474),
-          F = n(97709),
+        var B = n(35123),
+          F = n(94500),
           E = n(65092),
           O = n.n(E);
         function N(e) {
@@ -103735,10 +103615,10 @@ var CLSTAMP = "10779229";
         (0, i.Cg)([m.oI], te.prototype, "OnMenuOpened", null);
         n(27998);
         var ne = n(89193),
-          se = n(89144),
-          ie = n(18483),
-          oe = n(28142);
-        const re = new (n(86373).wd)("DragDrop").Debug;
+          se = n(30697),
+          ie = n(69164),
+          oe = n(70027);
+        const re = new (n(65264).wd)("DragDrop").Debug;
         function ae(e) {
           return e.children;
         }
@@ -104366,11 +104246,11 @@ var CLSTAMP = "10779229";
             );
           }
         }
-        var ge = n(32271),
-          Ce = n(35539),
-          fe = n(54953),
-          Se = n(63518),
-          ve = n(16208),
+        var ge = n(8512),
+          Ce = n(75393),
+          fe = n(43076),
+          Se = n(15283),
+          ve = n(42501),
           be = n(80583),
           Ie = n.n(be);
         const ye = "separator",
@@ -104822,8 +104702,8 @@ var CLSTAMP = "10779229";
           (0, i.Cg)([m.oI], Ee.prototype, "OnCut", null);
         var Oe = n(12008),
           Ne = n.n(Oe),
-          je = n(72270),
-          Ve = n(93320);
+          je = n(57274),
+          Ve = n(4789);
         function Ue(e) {
           return e ? e + "_Label" : void 0;
         }
@@ -105103,13 +104983,13 @@ var CLSTAMP = "10779229";
             (e[(e.Up = 3)] = "Up"),
             (e[(e.Down = 4)] = "Down");
         })($e || ($e = {}));
-        var Qe = n(21582);
+        var Qe = n(96641);
         n(94464);
         r.createContext(null);
         var Ye = n(28825),
           Je = n.n(Ye),
-          et = n(13177),
-          tt = n(40920);
+          et = n(97640),
+          tt = n(48195);
         function nt(e) {
           const {
               label: t,
@@ -105304,9 +105184,9 @@ var CLSTAMP = "10779229";
         var ot,
           rt = n(6541),
           at = n.n(rt),
-          lt = n(16148),
-          ct = n(45581),
-          dt = n(91811);
+          lt = n(70431),
+          ct = n(77154),
+          dt = n(97734);
         !(function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.TrackingSystemName_String = 1e3)] =
@@ -105549,6 +105429,8 @@ var CLSTAMP = "10779229";
               "DriverProvidedIPDVisibility_Bool"),
             (e[(e.Prop_SupportsVRGamepadMode_Bool = 2117)] =
               "Prop_SupportsVRGamepadMode_Bool"),
+            (e[(e.Prop_AllowHomeApp2Setting_Int32 = 2119)] =
+              "Prop_AllowHomeApp2Setting_Int32"),
             (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
               "DriverRequestedMuraCorrectionMode_Int32"),
             (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -105720,7 +105602,7 @@ var CLSTAMP = "10779229";
               (e[(e.SmoothStep = 3)] = "SmoothStep"),
               (e[(e.SmootherStep = 4)] = "SmootherStep");
           })(ft || (ft = {}));
-        var St, vt, bt, It, yt, wt, xt, At;
+        var St, vt, bt, It, yt, wt, xt, At, Rt;
         !(function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -105758,64 +105640,70 @@ var CLSTAMP = "10779229";
               (e[(e.Panel = 2)] = "Panel");
           })(yt || (yt = {})),
           (function (e) {
-            (e[(e.ControllerPairing = 0)] = "ControllerPairing"),
-              (e[(e.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
-              (e[(e.SystemButtonHideDashboard = 2)] =
-                "SystemButtonHideDashboard"),
-              (e[(e.SystemButtonDashboardHidden = 3)] =
-                "SystemButtonDashboardHidden"),
-              (e[(e.SystemButtonShowDashboard = 4)] =
-                "SystemButtonShowDashboard"),
-              (e[(e.PairWifiDongle = 5)] = "PairWifiDongle"),
-              (e[(e.TourSendOff = 6)] = "TourSendOff"),
-              (e[(e.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
+            (e[(e.Unknown = 0)] = "Unknown"),
+              (e[(e.LaserMouse = 1)] = "LaserMouse"),
+              (e[(e.Gamepad = 2)] = "Gamepad");
           })(wt || (wt = {})),
+          (function (e) {
+            (e[(e.Invalid = 0)] = "Invalid"),
+              (e[(e.ControllerPairing = 1)] = "ControllerPairing"),
+              (e[(e.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
+              (e[(e.SystemButtonHideDashboard = 3)] =
+                "SystemButtonHideDashboard"),
+              (e[(e.SystemButtonDashboardHidden = 4)] =
+                "SystemButtonDashboardHidden"),
+              (e[(e.SystemButtonShowDashboard = 5)] =
+                "SystemButtonShowDashboard"),
+              (e[(e.PairWifiDongle = 6)] = "PairWifiDongle"),
+              (e[(e.TourSendOff = 7)] = "TourSendOff"),
+              (e[(e.SteamGuidedTourFinished = 8)] = "SteamGuidedTourFinished");
+          })(xt || (xt = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.ThirdPartyClient = 1)] = "ThirdPartyClient"),
               (e[(e.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
               (e[(e.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
-          })(xt || (xt = {})),
+          })(At || (At = {})),
           (function (e) {
             (e[(e.Default = 0)] = "Default"),
               (e[(e.AuroraFloor = 1)] = "AuroraFloor");
-          })(At || (At = {}));
-        var Rt, Tt;
+          })(Rt || (Rt = {}));
+        var Tt, Mt;
         !(function (e) {
           (e[(e.Curved = 0)] = "Curved"), (e[(e.Flat = 1)] = "Flat");
-        })(Rt || (Rt = {})),
+        })(Tt || (Tt = {})),
           (function (e) {
             (e[(e.Default = 0)] = "Default"), (e[(e.Aurora = 1)] = "Aurora");
-          })(Tt || (Tt = {}));
-        var Mt = n(64382);
-        const Dt = 1,
-          kt = (0, dt.i_)(at()["error-shake-duration"]);
-        function Pt(e, t) {
+          })(Mt || (Mt = {}));
+        var Dt = n(10093);
+        const kt = 1,
+          Pt = (0, dt.i_)(at()["error-shake-duration"]);
+        function Lt(e, t) {
           return t < 0 ? 0 : t > 1 ? 1 : 0 == e ? t : Math.round(t / e) * e;
         }
-        function Lt(e, t, n) {
+        function Gt(e, t, n) {
           const s = e + n * (t - e);
           return Number.parseFloat(s.toFixed(10));
         }
-        function Gt(e, t, n) {
+        function Bt(e, t, n) {
           return (n - e) / (t - e);
         }
-        var Bt;
+        var Ft;
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.MouseDragging = 1)] = "MouseDragging"),
             (e[(e.TouchStart = 2)] = "TouchStart"),
             (e[(e.TouchDragging = 3)] = "TouchDragging"),
             (e[(e.DPad = 4)] = "DPad");
-        })(Bt || (Bt = {}));
-        class Ft extends r.Component {
+        })(Ft || (Ft = {}));
+        class Et extends r.Component {
           m_refSlider = r.createRef();
           m_refHandle = r.createRef();
           m_navRefSlider = r.createRef();
           m_sliderBounds = void 0;
           m_handleBounds = void 0;
           m_fZoom = 1;
-          m_eDragMode = Bt.None;
+          m_eDragMode = Ft.None;
           m_vTouchStartPosition = (0, lt.D0)();
           m_fStartValue;
           m_fLatestUserValue;
@@ -105836,7 +105724,7 @@ var CLSTAMP = "10779229";
             return this.validRange ? this.props.max - this.props.min : 0;
           }
           get step() {
-            return Math.abs(this.props.step ?? Dt);
+            return Math.abs(this.props.step ?? kt);
           }
           get stepSound() {
             return this.props.stepSound ?? true;
@@ -105854,7 +105742,7 @@ var CLSTAMP = "10779229";
               null == this.props.value || isNaN(this.props.value)
                 ? this.props.min
                 : (0, oe.OQ)(this.props.value, this.props.min, this.props.max);
-            return Gt(this.props.min, this.props.max, e);
+            return Bt(this.props.min, this.props.max, e);
           }
           get normalizedDefaultValue() {
             const e = this.props.resetValue;
@@ -105866,11 +105754,11 @@ var CLSTAMP = "10779229";
                 e > this.props.max
               )
             )
-              return Gt(this.props.min, this.props.max, e);
+              return Bt(this.props.min, this.props.max, e);
           }
           get normalizedSliderOrigin() {
             const e = (0, oe.OQ)(0, this.props.min, this.props.max);
-            return Gt(this.props.min, this.props.max, e);
+            return Bt(this.props.min, this.props.max, e);
           }
           get CanResetToDefault() {
             return (
@@ -105880,14 +105768,14 @@ var CLSTAMP = "10779229";
           }
           get SliderChangeSource() {
             switch (this.m_eDragMode) {
-              case Bt.MouseDragging:
+              case Ft.MouseDragging:
                 return y;
-              case Bt.TouchDragging:
-              case Bt.TouchStart:
+              case Ft.TouchDragging:
+              case Ft.TouchStart:
                 return I;
-              case Bt.DPad:
+              case Ft.DPad:
                 return w;
-              case Bt.None:
+              case Ft.None:
                 return;
             }
           }
@@ -105907,22 +105795,22 @@ var CLSTAMP = "10779229";
             if (e != this.m_eDragMode) {
               switch (
                 ((this.m_eDragMode = e),
-                e != Bt.None &&
+                e != Ft.None &&
                   this.props.onChangeStart &&
                   this.props.onChangeStart(this.SliderChangeSource),
                 e)
               ) {
-                case Bt.MouseDragging:
-                case Bt.TouchDragging:
-                case Bt.TouchStart:
-                case Bt.DPad:
+                case Ft.MouseDragging:
+                case Ft.TouchDragging:
+                case Ft.TouchStart:
+                case Ft.DPad:
                   this.RecomputeSliderBounds(),
                     (this.m_fStartValue = this.props.value),
                     (this.m_fLatestUserValue = this.props.value);
-                case Bt.None:
+                case Ft.None:
               }
               switch (e) {
-                case Bt.MouseDragging:
+                case Ft.MouseDragging:
                   this.m_refSlider.current?.ownerDocument?.addEventListener(
                     "mousemove",
                     this.OnWindowMouseMove,
@@ -105934,8 +105822,8 @@ var CLSTAMP = "10779229";
                       { passive: !1 },
                     );
                   break;
-                case Bt.TouchStart:
-                case Bt.TouchDragging:
+                case Ft.TouchStart:
+                case Ft.TouchDragging:
                   this.m_refSlider.current?.ownerDocument?.addEventListener(
                     "touchmove",
                     this.OnWindowTouchMove,
@@ -105947,7 +105835,7 @@ var CLSTAMP = "10779229";
                       { passive: !1 },
                     );
                   break;
-                case Bt.None:
+                case Ft.None:
                   this.RemoveDocumentEventListeners();
               }
             }
@@ -105971,8 +105859,8 @@ var CLSTAMP = "10779229";
               i = Math.pow(2, Math.floor(n / s)),
               o = this.normalizedDpadStep * i,
               r = (0, oe.OQ)(o, this.normalizedDpadStep, 0.05) * t,
-              a = Pt(this.normalizedStep, this.normalizedClampedValue + r);
-            let l = Lt(this.props.min, this.props.max, a);
+              a = Lt(this.normalizedStep, this.normalizedClampedValue + r);
+            let l = Gt(this.props.min, this.props.max, a);
             if (
               ((l = (0, oe.OQ)(
                 l,
@@ -105981,7 +105869,7 @@ var CLSTAMP = "10779229";
               )),
               l != this.props.value)
             ) {
-              this.m_eDragMode == Bt.None && this.SetDragMode(Bt.DPad);
+              this.m_eDragMode == Ft.None && this.SetDragMode(Ft.DPad);
               const e = l > this.m_fLatestUserValue;
               fe.eZ.PlayNavSound(e ? fe.PN.SliderUp : fe.PN.SliderDown),
                 (this.m_fLatestUserValue = l),
@@ -106019,19 +105907,19 @@ var CLSTAMP = "10779229";
           UpdateSliderValueForPosition(e) {
             if (this.props.disabled || !this.m_refSlider.current) return;
             const t = this.ComputeNormalizedValueForMousePosition(e),
-              n = Pt(this.normalizedStep, t);
-            let s = Lt(this.props.min, this.props.max, n);
+              n = Lt(this.normalizedStep, t);
+            let s = Gt(this.props.min, this.props.max, n);
             const i = this.props.clampMin ?? this.props.min,
               o = this.props.clampMax ?? this.props.max;
             if (((s = (0, oe.OQ)(s, i, o)), s != this.props.value)) {
               const e = s > this.props.value,
                 t = 0 == this.step;
               if (
-                ((this.m_eDragMode == Bt.None || !t) &&
+                ((this.m_eDragMode == Ft.None || !t) &&
                   this.props.stepSound &&
                   fe.eZ.PlayNavSound(e ? fe.PN.SliderUp : fe.PN.SliderDown),
-                this.m_eDragMode == Bt.MouseDragging ||
-                  this.m_eDragMode == Bt.TouchDragging)
+                this.m_eDragMode == Ft.MouseDragging ||
+                  this.m_eDragMode == Ft.TouchDragging)
               ) {
                 let e = !1;
                 if (
@@ -106062,13 +105950,13 @@ var CLSTAMP = "10779229";
             this.UpdateSliderValueForPosition(e.clientX);
           }
           OnWindowMouseUp(e) {
-            this.m_eDragMode != Bt.None && this.Complete();
+            this.m_eDragMode != Ft.None && this.Complete();
           }
           OnMouseDown(e) {
             0 == e.button &&
               (this.props.disabled ||
                 (e.preventDefault(),
-                this.SetDragMode(Bt.MouseDragging),
+                this.SetDragMode(Ft.MouseDragging),
                 this.UpdateSliderValueForPosition(e.clientX)));
           }
           OnTouchStart(e) {
@@ -106079,7 +105967,7 @@ var CLSTAMP = "10779229";
             );
             t < 0 ||
               t > 1 ||
-              (this.SetDragMode(Bt.TouchStart),
+              (this.SetDragMode(Ft.TouchStart),
               (this.m_vTouchStartPosition = {
                 x: e.touches[0].clientX,
                 y: e.touches[0].clientY,
@@ -106088,7 +105976,7 @@ var CLSTAMP = "10779229";
           OnWindowTouchMove(e) {
             if (1 == e.touches.length) {
               switch (this.m_eDragMode) {
-                case Bt.TouchStart:
+                case Ft.TouchStart:
                   const t = {
                     x: e.touches[0].clientX,
                     y: e.touches[0].clientY,
@@ -106096,29 +105984,29 @@ var CLSTAMP = "10779229";
                   if ((0, lt.LD)(this.m_vTouchStartPosition, t) >= 10) {
                     const e = (0, lt.Fg)(this.m_vTouchStartPosition, t);
                     Math.abs(e.x) > Math.abs(e.y)
-                      ? (this.SetDragMode(Bt.TouchDragging),
+                      ? (this.SetDragMode(Ft.TouchDragging),
                         this.m_refSlider.current?.focus())
-                      : this.SetDragMode(Bt.None);
+                      : this.SetDragMode(Ft.None);
                   }
                   break;
-                case Bt.TouchDragging:
+                case Ft.TouchDragging:
                   this.UpdateSliderValueForPosition(e.touches[0].clientX);
               }
               e.preventDefault();
             }
           }
           OnWindowTouchEnd(e) {
-            this.m_eDragMode != Bt.None && this.Complete();
+            this.m_eDragMode != Ft.None && this.Complete();
           }
           Complete() {
-            const e = this.m_eDragMode != Bt.None;
+            const e = this.m_eDragMode != Ft.None;
             this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
               this.props.onChangeComplete &&
                 this.props.onChangeComplete(
                   this.m_fLatestUserValue,
                   this.SliderChangeSource,
                 ),
-              this.SetDragMode(Bt.None);
+              this.SetDragMode(Ft.None);
             const t = 0 == this.step;
             if (
               this.m_fLatestUserValue != this.m_fStartValue &&
@@ -106148,7 +106036,7 @@ var CLSTAMP = "10779229";
               );
           }
           componentDidMount() {
-            this.m_fZoom = (0, Mt.a_)(this.m_refSlider.current);
+            this.m_fZoom = (0, Dt.a_)(this.m_refSlider.current);
           }
           componentWillUnmount() {
             this.RemoveDocumentEventListeners();
@@ -106163,11 +106051,11 @@ var CLSTAMP = "10779229";
           OnInnerSliderBlur() {
             (this.m_bInnerSliderHasFocus = !1),
               (this.m_fStartValue == this.m_fLatestUserValue &&
-                this.m_eDragMode == Bt.None) ||
+                this.m_eDragMode == Ft.None) ||
                 this.Complete();
           }
           ResetToDefault() {
-            if (!this.CanResetToDefault || this.m_eDragMode != Bt.None) return;
+            if (!this.CanResetToDefault || this.m_eDragMode != Ft.None) return;
             let e;
             (this.m_fLatestUserValue = this.props.resetValue),
               this.FireOnChange(this.props.resetValue, A),
@@ -106366,7 +106254,7 @@ var CLSTAMP = "10779229";
                         }),
                     ],
                   }),
-                  (0, o.jsx)(Et, {
+                  (0, o.jsx)(Ot, {
                     notchCount: U,
                     notchLabels: H,
                     sliderValue: this.normalizedClampedValue,
@@ -106378,7 +106266,7 @@ var CLSTAMP = "10779229";
             });
           }
         }
-        function Et(e) {
+        function Ot(e) {
           let {
               sliderValue: t,
               notchCount: n,
@@ -106395,7 +106283,7 @@ var CLSTAMP = "10779229";
             s && (c = !0),
               d.push(
                 (0, o.jsx)(
-                  Ot,
+                  Nt,
                   {
                     notchIndex: e,
                     sliderValue: t,
@@ -106413,7 +106301,7 @@ var CLSTAMP = "10779229";
             children: d,
           });
         }
-        function Ot(e) {
+        function Nt(e) {
           const t = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
             n = e.notchCount <= 3 && !e.notchTicksVisible,
             s = n && 0 == e.notchIndex,
@@ -106423,10 +106311,10 @@ var CLSTAMP = "10779229";
             className: (0, h.A)(at().SliderNotch, n && at().AlignToEnds),
             children: e.renderNotch
               ? e.renderNotch(r)
-              : (0, o.jsx)(Nt, { ...r }),
+              : (0, o.jsx)(jt, { ...r }),
           });
         }
-        function Nt(e) {
+        function jt(e) {
           const { alignLeftEnd: t, alignRightEnd: n, active: s } = e;
           return (0, o.jsxs)(o.Fragment, {
             children: [
@@ -106449,7 +106337,7 @@ var CLSTAMP = "10779229";
             ],
           });
         }
-        function jt(e) {
+        function Vt(e) {
           const {
               label: t,
               description: n,
@@ -106487,7 +106375,7 @@ var CLSTAMP = "10779229";
             j = (function (e) {
               const { min: t, max: n } = e,
                 s = e.validValues ?? "steps",
-                i = e.step ?? Dt,
+                i = e.step ?? kt,
                 o = r.useCallback(
                   (e) => "number" == typeof e && !Number.isNaN(e),
                   [],
@@ -106533,7 +106421,7 @@ var CLSTAMP = "10779229";
                     className: at().LabelText,
                     children: e.label,
                   }),
-                  (0, o.jsx)(Vt, {
+                  (0, o.jsx)(Ut, {
                     navRef: O,
                     editing: V,
                     renderedValue: N,
@@ -106604,7 +106492,7 @@ var CLSTAMP = "10779229";
             explainer: T,
             explainerTitle: M,
             transparentBackground: P,
-            children: (0, o.jsx)(Ft, {
+            children: (0, o.jsx)(Et, {
               ref: X,
               ...We(ne, se),
               disabled: k,
@@ -106617,7 +106505,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function Vt(e) {
+        function Ut(e) {
           const {
               editing: t,
               renderedValue: n,
@@ -106644,7 +106532,7 @@ var CLSTAMP = "10779229";
                     }, 0)),
                     n(!0),
                     window.clearTimeout(i.current),
-                    (i.current = window.setTimeout(() => n(!1), kt));
+                    (i.current = window.setTimeout(() => n(!1), Pt));
                 }, [e]);
               return (
                 r.useEffect(
@@ -106745,22 +106633,22 @@ var CLSTAMP = "10779229";
             ],
           });
         }
-        (0, i.Cg)([m.oI], Ft.prototype, "RecomputeSliderBounds", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "SetDragMode", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnGamepadDirection", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "UpdateSliderValueForPosition", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnWindowMouseMove", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnWindowMouseUp", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnMouseDown", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnTouchStart", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnWindowTouchMove", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnWindowTouchEnd", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "Complete", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "BlurInnerSlider", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnInnerSliderFocus", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnInnerSliderBlur", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "ResetToDefault", null),
-          (0, i.Cg)([m.oI], Ft.prototype, "OnContextMenu", null);
+        (0, i.Cg)([m.oI], Et.prototype, "RecomputeSliderBounds", null),
+          (0, i.Cg)([m.oI], Et.prototype, "SetDragMode", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnGamepadDirection", null),
+          (0, i.Cg)([m.oI], Et.prototype, "UpdateSliderValueForPosition", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnWindowMouseMove", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnWindowMouseUp", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnMouseDown", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnTouchStart", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnWindowTouchMove", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnWindowTouchEnd", null),
+          (0, i.Cg)([m.oI], Et.prototype, "Complete", null),
+          (0, i.Cg)([m.oI], Et.prototype, "BlurInnerSlider", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnInnerSliderFocus", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnInnerSliderBlur", null),
+          (0, i.Cg)([m.oI], Et.prototype, "ResetToDefault", null),
+          (0, i.Cg)([m.oI], Et.prototype, "OnContextMenu", null);
         r.forwardRef(function (e, t) {
           const {
             label: n,
@@ -106793,7 +106681,7 @@ var CLSTAMP = "10779229";
             }),
           });
         });
-        const Ut = r.forwardRef(function (e, t) {
+        const Ht = r.forwardRef(function (e, t) {
           const {
             value: n,
             onChange: s,
@@ -106831,7 +106719,7 @@ var CLSTAMP = "10779229";
             ],
           });
         });
-        function Ht(e) {
+        function Wt(e) {
           const t = !!e.disabled,
             { actionDescriptions: n, gamepadEvents: s } = (0, tt.C7)(e),
             i = r.useId(),
@@ -106855,7 +106743,7 @@ var CLSTAMP = "10779229";
             indentLevel: e.indentLevel,
             transparentBackground: e.transparentBackground,
             ...s,
-            children: (0, o.jsx)(Ut, {
+            children: (0, o.jsx)(Ht, {
               autoFocus: a,
               "aria-expanded": l,
               "aria-controls": c,
@@ -106867,26 +106755,26 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        class Wt extends s.pF {
+        class zt extends s.pF {
           OnToggleChange(e) {
             this.props.disabled || e === this.checked || this.Toggle();
           }
           render() {
-            return (0, o.jsx)(Ht, {
+            return (0, o.jsx)(Wt, {
               ...this.props,
               OnToggleChange: this.OnToggleChange,
               checked: this.checked,
             });
           }
         }
-        (0, i.Cg)([m.oI], Wt.prototype, "OnToggleChange", null);
+        (0, i.Cg)([m.oI], zt.prototype, "OnToggleChange", null);
       },
-      86732: (e, t, n) => {
+      66623: (e, t, n) => {
         "use strict";
         n.d(t, { P8: () => d, _H: () => l });
         var s = n(62540),
-          i = n(85427),
-          o = n(56092),
+          i = n(31932),
+          o = n(99067),
           r = n(24977),
           a = n.n(r);
         function l(e) {
@@ -106933,24 +106821,24 @@ var CLSTAMP = "10779229";
           });
         };
       },
-      54378: (e, t, n) => {
+      21973: (e, t, n) => {
         "use strict";
         n.d(t, { A: () => v });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
           r = n(41230),
-          a = n(51756),
-          l = n(83300),
-          c = n(26194),
-          d = n(6474),
-          h = n(98171),
-          u = n(8978),
-          m = n(85427),
+          a = n(88071),
+          l = n(79229),
+          c = n(70407),
+          d = n(35123),
+          h = n(37266),
+          u = n(62057),
+          m = n(31932),
           p = n(80611),
           _ = n.n(p),
-          g = n(82039),
-          C = n(97709);
+          g = n(73886),
+          C = n(94500);
         const f = 1576780700;
         let S = class extends o.Component {
           OnEmoticonClick(e) {
@@ -107071,7 +106959,7 @@ var CLSTAMP = "10779229";
           (S = (0, s.Cg)([r.PA], S));
         const v = S;
       },
-      98171: (e, t, n) => {
+      37266: (e, t, n) => {
         "use strict";
         n.d(t, {
           Q4: () => F,
@@ -107086,16 +106974,16 @@ var CLSTAMP = "10779229";
           o = n(89193),
           r = n(41230),
           a = n(63696),
-          l = n(71802),
-          c = n(48180),
-          d = n(13177),
-          h = n(85427),
-          u = n(8978),
-          m = n(34451),
-          p = n(21582),
-          _ = n(73511),
-          g = n(26194),
-          C = n(32271),
+          l = n(97307),
+          c = n(77081),
+          d = n(97640),
+          h = n(31932),
+          u = n(62057),
+          m = n(94270),
+          p = n(96641),
+          _ = n(70425),
+          g = n(70407),
+          C = n(8512),
           f = n(80825);
         class S extends a.Component {
           constructor(e) {
@@ -107282,8 +107170,8 @@ var CLSTAMP = "10779229";
         }
         var M = n(23489),
           D = n.n(M),
-          k = n(91811),
-          P = n(16192);
+          k = n(97734),
+          P = n(15891);
         function L(e) {
           return e.recent_emoticons;
         }
@@ -108028,20 +107916,20 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      16192: (e, t, n) => {
+      15891: (e, t, n) => {
         "use strict";
         n.d(t, { c: () => g, n: () => p });
         var s = n(62540),
           i = n(63696),
-          o = n(5761),
-          r = n(71802),
-          a = n(91042),
-          l = n(85427),
+          o = n(60510),
+          r = n(97307),
+          a = n(85307),
+          l = n(31932),
           c = n(23489),
           d = n.n(c),
-          h = n(89008),
+          h = n(30513),
           u = n(61416),
-          m = n(57345);
+          m = n(17692);
         function p(e) {
           const { emoticon: t, large: n } = e,
             [o, c] = (0, h.OP)(),
@@ -108110,14 +107998,14 @@ var CLSTAMP = "10779229";
             ],
           });
       },
-      16208: (e, t, n) => {
+      42501: (e, t, n) => {
         "use strict";
         n.d(t, { tH: () => c, wC: () => l });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(51600),
-          a = n(51756);
+          r = n(52308),
+          a = n(88071);
         function l(e) {
           return (0, i.jsx)(i.Fragment, {
             children: o.Children.map(e.children, (e) =>
@@ -108235,14 +108123,14 @@ var CLSTAMP = "10779229";
               children: e,
             });
       },
-      41580: (e, t, n) => {
+      29607: (e, t, n) => {
         "use strict";
         n.d(t, { H: () => o });
-        var s = n(42308),
-          i = n(57345);
+        var s = n(25699),
+          i = n(17692);
         const o = () => (i.TS.EUNIVERSE === s.Rv ? 2581 : 45267781);
       },
-      3267: (e, t, n) => {
+      168: (e, t, n) => {
         "use strict";
         n.d(t, { Bm: () => i, f3: () => s });
         n(63696);
@@ -108274,13 +108162,13 @@ var CLSTAMP = "10779229";
             : e.push(`?${i.toString()}`);
         }
       },
-      82039: (e, t, n) => {
+      73886: (e, t, n) => {
         "use strict";
         n.d(t, { nl: () => l, rf: () => a });
         var s = n(62540),
-          i = n(45510),
-          o = n(63518),
-          r = n(21582);
+          i = n(61473),
+          o = n(15283),
+          r = n(96641);
         function a() {
           return (0, s.jsx)(i.rfv, {});
         }
@@ -108288,20 +108176,20 @@ var CLSTAMP = "10779229";
           return (0, r.Qn)() ? (0, s.jsx)(o.nl, {}) : (0, s.jsx)(i.jZW, {});
         }
       },
-      26249: (e, t, n) => {
+      85606: (e, t, n) => {
         "use strict";
         n.d(t, { Bh: () => g });
         var s = n(62540),
-          i = n(85427),
+          i = n(31932),
           o = n(8770),
           r = n.n(o),
-          a = n(37506),
-          l = n(27759),
-          c = n(94977),
-          d = n(74677),
-          h = n(2108),
-          u = n(89622),
-          m = n(40077);
+          a = n(54073),
+          l = n(60274),
+          c = n(57898),
+          d = n(42386),
+          h = n(71191),
+          u = n(36943),
+          m = n(19022);
         const p = {
           [a.rb]: [
             {
@@ -114006,12 +113894,12 @@ var CLSTAMP = "10779229";
             },
             {
               eSource: l.u4,
-              eInput: c.sp,
+              eInput: c.lN,
               strPath: "/steaminputglyphs/shared_button_x.svg",
             },
             {
               eSource: l.u4,
-              eInput: c.lN,
+              eInput: c.sp,
               strPath: "/steaminputglyphs/shared_button_y.svg",
             },
             {
@@ -114398,7 +114286,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      63518: (e, t, n) => {
+      15283: (e, t, n) => {
         "use strict";
         n.d(t, {
           CeX: () => G,
@@ -114431,12 +114319,12 @@ var CLSTAMP = "10779229";
           y$y: () => D,
         });
         var s = n(62540),
-          i = (n(63696), n(37506)),
+          i = (n(63696), n(54073)),
           o = n(73151),
           r = n.n(o),
-          a = n(29876),
-          l = n(85427),
-          c = n(74677);
+          a = n(81745),
+          l = n(31932),
+          c = n(42386);
         function d(e) {
           const { direction: t } = e;
           let n;
@@ -114963,7 +114851,6 @@ var CLSTAMP = "10779229";
             case i.Oh:
             case i.Ri:
               return (0, s.jsx)(m, { type: "xbox", ...o });
-            case i.Hg:
             case i.OG:
             case i.HH:
             case i.Lr:
@@ -115537,7 +115424,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      34835: (e, t, n) => {
+      18834: (e, t, n) => {
         "use strict";
         n.d(t, { H: () => r, P: () => a });
         var s = n(62540),
@@ -115558,7 +115445,7 @@ var CLSTAMP = "10779229";
               }),
             });
       },
-      4695: (e, t, n) => {
+      9510: (e, t, n) => {
         "use strict";
         n.d(t, { L: () => x, Y: () => w });
         var s = n(62540),
@@ -115574,15 +115461,15 @@ var CLSTAMP = "10779229";
             t ? e.children : (e.fallback ?? null)
           );
         }
-        var r = n(72270),
-          a = n(16208),
+        var r = n(57274),
+          a = n(42501),
           l = n(78325),
-          c = n(89008),
-          d = n(64745),
-          h = n(13177),
-          u = n(91314),
-          m = n(58931),
-          p = n(21582);
+          c = n(30513),
+          d = n(17469),
+          h = n(97640),
+          u = n(30153),
+          m = n(19772),
+          p = n(96641);
         function _(e) {
           const { Modal: t } = e,
             { name: n, modalProps: o, options: a } = t,
@@ -115743,10 +115630,10 @@ var CLSTAMP = "10779229";
             (0, s.jsx)(a.tH, { children: o.rctToMeasure })
           );
         }
-        var S = n(85427),
-          v = n(51756),
-          b = n(89722),
-          I = n(24363),
+        var S = n(31932),
+          v = n(88071),
+          b = n(27635),
+          I = n(68328),
           y = n(79880);
         function w(e) {
           i.useEffect(() => {
@@ -115944,7 +115831,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      93320: (e, t, n) => {
+      4789: (e, t, n) => {
         "use strict";
         n.d(t, {
           KG: () => u,
@@ -115955,10 +115842,10 @@ var CLSTAMP = "10779229";
         });
         var s = n(62540),
           i = n(63696),
-          o = (n(13177), n(73511)),
-          r = n(90131),
-          a = n(8978),
-          l = n(36378);
+          o = (n(97640), n(70425)),
+          r = n(14792),
+          a = n(62057),
+          l = n(93237);
         function c(e, t, n, i, o, r, a) {
           return new Promise((l, c) => {
             e(
@@ -116088,16 +115975,16 @@ var CLSTAMP = "10779229";
           (0, r.pg)((0, s.jsx)(m, { strTitle: e, strDescription: t }), n);
         }
       },
-      36378: (e, t, n) => {
+      93237: (e, t, n) => {
         "use strict";
         n.d(t, { eV: () => h });
         var s = n(62540),
           i = n(63696),
-          o = n(73511),
-          r = n(11662),
-          a = n(85427),
-          l = n(21582),
-          c = n(30395);
+          o = n(70425),
+          r = n(13791),
+          a = n(31932),
+          l = n(96641),
+          c = n(55372);
         function d(e) {
           const {
               className: t,
@@ -116161,7 +116048,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      21697: (e, t, n) => {
+      42724: (e, t, n) => {
         "use strict";
         n.d(t, {
           mt: () => c,
@@ -116175,18 +116062,18 @@ var CLSTAMP = "10779229";
         });
         var s = n(62540),
           i = n(63696),
-          o = n(73511),
-          r = n(69152),
-          a = n(30395);
+          o = n(70425),
+          r = n(1055),
+          a = n(55372);
         n(78325),
-          n(64745),
-          n(13177),
-          n(58931),
-          n(51756),
-          n(91314),
-          n(72270),
-          n(21582),
-          n(79282);
+          n(17469),
+          n(97640),
+          n(19772),
+          n(88071),
+          n(30153),
+          n(57274),
+          n(96641),
+          n(45001);
         function l(e) {
           const { labelledBy: t } = e || {},
             [n, s] = i.useState(void 0);
@@ -116225,17 +116112,17 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        n(4695);
-        var d = n(93320),
-          h = n(36378);
-        n(24363);
+        n(9510);
+        var d = n(4789),
+          h = n(93237);
+        n(68328);
       },
-      89722: (e, t, n) => {
+      27635: (e, t, n) => {
         "use strict";
         n.d(t, { $9: () => l, IA: () => c, _F: () => a });
         var s = n(34629),
-          i = n(54250),
-          o = n(58752);
+          i = n(67725),
+          o = n(6242);
         class r {
           key;
           static sm_lastKey = 0;
@@ -116295,17 +116182,17 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      91314: (e, t, n) => {
+      30153: (e, t, n) => {
         "use strict";
         n.d(t, { EO: () => M, uH: () => P, oJ: () => k, yk: () => D });
         var s = n(62540),
-          i = n(14090),
+          i = n(38969),
           o = n(63696),
           r = n(78325),
-          a = n(6474),
-          l = n(11699),
-          c = n(72270),
-          d = n(51756);
+          a = n(35123),
+          l = n(2758),
+          c = n(57274),
+          d = n(88071);
         const h = o.createContext(null);
         function u(e) {
           const {
@@ -116332,15 +116219,15 @@ var CLSTAMP = "10779229";
             (0, s.jsx)(h.Provider, { value: m.current, children: i })
           );
         }
-        var m = n(42308),
-          p = n(91265),
-          _ = n(64745),
-          g = n(13177),
+        var m = n(25699),
+          p = n(68828),
+          _ = n(17469),
+          g = n(97640),
           C = n(26765),
           f = n.n(C),
-          S = n(16208),
-          v = n(85427),
-          b = n(64382);
+          S = n(42501),
+          v = n(31932),
+          b = n(10093);
         function I(e) {
           const { managerOverride: t, bSuppressMouseOverlay: n } = e,
             i = (0, d.CH)(),
@@ -116483,8 +116370,8 @@ var CLSTAMP = "10779229";
               : null
           );
         }
-        var A = n(4695),
-          R = n(24363);
+        var A = n(9510),
+          R = n(68328);
         const T = o.createContext({}),
           M = o.memo(function (e) {
             const {
@@ -116547,14 +116434,14 @@ var CLSTAMP = "10779229";
           }, [e, t]);
         }
       },
-      24363: (e, t, n) => {
+      68328: (e, t, n) => {
         "use strict";
         n.d(t, { BR: () => a, SZ: () => r, tx: () => l });
         n(63696);
-        var s = n(11662),
-          i = n(58752),
-          o = (n(51756), n(89722));
-        n(91314);
+        var s = n(13791),
+          i = n(6242),
+          o = (n(88071), n(27635));
+        n(30153);
         class r {
           m_bUsePopups = !0;
           m_bOnlyPopups = !1;
@@ -116783,15 +116670,15 @@ var CLSTAMP = "10779229";
           return a.GetModalManager(e);
         }
       },
-      30395: (e, t, n) => {
+      55372: (e, t, n) => {
         "use strict";
         n.d(t, { x_: () => h });
         var s = n(62540),
           i = n(63696),
-          o = n(34469),
-          r = n(16208),
-          a = n(45510),
-          l = n(64382);
+          o = n(5966),
+          r = n(42501),
+          a = n(61473),
+          l = n(10093);
         const c = i.createContext({}),
           d = () => i.useContext(c);
         function h(e) {
@@ -116845,14 +116732,14 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      69152: (e, t, n) => {
+      1055: (e, t, n) => {
         "use strict";
         n.d(t, { E: () => l });
         var s = n(62540),
           i = n(63696),
           o = n(78325),
-          r = n(91314),
-          a = n(24363);
+          r = n(30153),
+          a = n(68328);
         function l(e) {
           const { active: t, children: n } = e,
             l = (0, r.yk)() || (0, a.tx)(window),
@@ -116889,16 +116776,16 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      90131: (e, t, n) => {
+      14792: (e, t, n) => {
         "use strict";
         n.d(t, { HT: () => u, mK: () => d, pg: () => h, x_: () => r.x_ });
         var s = n(62540),
           i = n(63696),
-          o = n(24363),
-          r = n(30395),
-          a = n(11662),
-          l = n(8978),
-          c = n(21582);
+          o = n(68328),
+          r = n(55372),
+          a = n(13791),
+          l = n(62057),
+          c = n(96641);
         async function d(e, t, n) {
           const s = (0, o.tx)(t),
             r = n?.bForcePopOut || p(s);
@@ -116974,7 +116861,7 @@ var CLSTAMP = "10779229";
           return e.BOnlyPopups && e.BOnlyPopups();
         }
       },
-      20285: (e, t, n) => {
+      37820: (e, t, n) => {
         "use strict";
         n.d(t, {
           AY: () => u,
@@ -117999,7 +117886,7 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      45510: (e, t, n) => {
+      61473: (e, t, n) => {
         "use strict";
         n.d(t, {
           $$j: () => Fe,
@@ -118009,10 +117896,10 @@ var CLSTAMP = "10779229";
           BeN: () => k,
           CeX: () => te,
           DK4: () => g,
-          DQe: () => it,
+          DQe: () => at,
           Dp6: () => we,
           EQ9: () => v,
-          ETd: () => nt,
+          ETd: () => tt,
           Em3: () => ge,
           F2T: () => oe,
           GB9: () => _,
@@ -118022,9 +117909,10 @@ var CLSTAMP = "10779229";
           Gv$: () => j,
           IrQ: () => se,
           Jlk: () => Q,
-          Jru: () => ot,
+          Jru: () => st,
           K7s: () => xe,
           KOs: () => I,
+          LO_: () => it,
           LeN: () => D,
           MUh: () => De,
           MvQ: () => de,
@@ -118045,10 +117933,10 @@ var CLSTAMP = "10779229";
           T4m: () => We,
           V5W: () => pe,
           VR: () => Me,
-          WX$: () => tt,
+          WX$: () => et,
           X: () => w,
           X4B: () => Y,
-          XH_: () => st,
+          XH_: () => nt,
           XTb: () => b,
           Xjb: () => le,
           Xz0: () => Oe,
@@ -118056,15 +117944,15 @@ var CLSTAMP = "10779229";
           YNO: () => y,
           YuU: () => ke,
           ZWw: () => ce,
-          ZjT: () => $e,
+          ZjT: () => Xe,
           _V3: () => ne,
           _VW: () => je,
           _h6: () => Ve,
-          aVR: () => Je,
+          aVR: () => Ye,
           aeP: () => re,
           apU: () => ye,
           bPr: () => Re,
-          bcZ: () => Qe,
+          bcZ: () => $e,
           c_I: () => ee,
           eSy: () => C,
           eTF: () => J,
@@ -118078,16 +117966,16 @@ var CLSTAMP = "10779229";
           hz4: () => ae,
           i3G: () => ie,
           jGG: () => Z,
-          jIP: () => et,
+          jIP: () => Je,
           jZW: () => Ue,
           jZl: () => Ge,
           kPc: () => Ee,
           lMJ: () => me,
-          lRD: () => Xe,
+          lRD: () => rt,
           m59: () => m,
           mrd: () => A,
           nGC: () => q,
-          o5Q: () => Ye,
+          o5Q: () => Qe,
           pDR: () => H,
           qnF: () => He,
           qzq: () => Ie,
@@ -118101,6 +117989,7 @@ var CLSTAMP = "10779229";
           u9R: () => z,
           vRz: () => X,
           wB_: () => u,
+          xoK: () => ot,
           xv8: () => U,
           yFA: () => F,
           yUp: () => E,
@@ -118109,11 +117998,11 @@ var CLSTAMP = "10779229";
         });
         var s = n(62540),
           i = n(63696),
-          o = n(85427),
+          o = n(31932),
           r = n(75223),
           a = n.n(r),
-          l = n(21582),
-          c = n(29876);
+          l = n(96641),
+          c = n(81745);
         function d(e) {
           const [t, n] = (0, c.l)();
           return (0, s.jsxs)("svg", {
@@ -119245,6 +119134,7 @@ var CLSTAMP = "10779229";
               (0, s.jsx)("g", {
                 className: "Speaker",
                 children: (0, s.jsx)("path", {
+                  fill: "currentColor",
                   d: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
                 }),
               }),
@@ -119254,18 +119144,22 @@ var CLSTAMP = "10779229";
                   children: [
                     (0, s.jsx)("path", {
                       className: "SoundWavesHighest",
+                      fill: "currentColor",
                       d: "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
                     }),
                     (0, s.jsx)("path", {
                       className: "SoundWavesHigh",
+                      fill: "currentColor",
                       d: "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
                     }),
                     (0, s.jsx)("path", {
                       className: "SoundWavesMed",
+                      fill: "currentColor",
                       d: "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
                     }),
                     (0, s.jsx)("path", {
                       className: "SoundWavesLow",
+                      fill: "currentColor",
                       d: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
                     }),
                   ],
@@ -121290,23 +121184,6 @@ var CLSTAMP = "10779229";
         function Xe(e) {
           const { className: t, ...n } = e;
           return (0, s.jsx)("svg", {
-            className: (0, o.A)(a().SteamDeckCompatLogo, t),
-            ...n,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            children: (0, s.jsx)("path", {
-              opacity: "0.84",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
-              fill: "white",
-            }),
-          });
-        }
-        function $e(e) {
-          const { className: t, ...n } = e;
-          return (0, s.jsx)("svg", {
             className: (0, o.A)(
               a().SteamDeckCompatIcon,
               a().SteamOSCompatCompatible,
@@ -121324,7 +121201,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function Qe(e) {
+        function $e(e) {
           const { className: t, ...n } = e;
           return (0, s.jsx)("svg", {
             className: (0, o.A)(
@@ -121344,7 +121221,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function Ye(e) {
+        function Qe(e) {
           const { className: t, ...n } = e;
           return (0, s.jsx)("svg", {
             className: (0, o.A)(
@@ -121364,7 +121241,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function Je(e) {
+        function Ye(e) {
           const { className: t, ...n } = e;
           return (0, s.jsx)("svg", {
             className: (0, o.A)(
@@ -121384,7 +121261,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function et(e) {
+        function Je(e) {
           const { className: t, ...n } = e;
           return (0, s.jsx)("svg", {
             className: (0, o.A)(
@@ -121404,7 +121281,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function tt(e) {
+        function et(e) {
           const { className: t, ...n } = e;
           return (0, s.jsx)("svg", {
             className: (0, o.A)(
@@ -121424,7 +121301,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function nt(e) {
+        function tt(e) {
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 22 20",
@@ -121436,7 +121313,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function st(e) {
+        function nt(e) {
           return (0, s.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 26 26",
@@ -121450,22 +121327,7 @@ var CLSTAMP = "10779229";
             }),
           });
         }
-        function it(e) {
-          const { className: t } = e;
-          return (0, s.jsx)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, o.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
-            viewBox: "0 0 36 36",
-            fill: "none",
-            children: (0, s.jsx)("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
-            }),
-          });
-        }
-        function ot(e) {
+        function st(e) {
           return (0, s.jsxs)("svg", {
             viewBox: "4 1 24 30",
             fill: "none",
@@ -121487,8 +121349,97 @@ var CLSTAMP = "10779229";
             ],
           });
         }
+        function it(e) {
+          const [t, n] = (0, c.l)();
+          return (0, s.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: [
+              (0, s.jsxs)("g", {
+                clipPath: n,
+                children: [
+                  (0, s.jsx)("path", {
+                    fill: "currentColor",
+                    d: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
+                  }),
+                  (0, s.jsx)("path", {
+                    fill: "#199FFF",
+                    d: "M26.2788 18.2288C26.2787 13.7823 22.6734 10.1777 18.2268 10.1777C13.7804 10.1778 10.176 13.7824 10.1758 18.2288C10.1758 22.5363 13.5586 26.0544 17.8127 26.2701L18.2268 26.2807C22.5347 26.2807 26.0527 22.8973 26.2681 18.643L26.2788 18.2288Z",
+                  }),
+                ],
+              }),
+              (0, s.jsx)("defs", {
+                children: (0, s.jsx)("clipPath", {
+                  id: t,
+                  children: (0, s.jsx)("rect", {
+                    fill: "currentColor",
+                    width: "36",
+                    height: "36",
+                  }),
+                }),
+              }),
+            ],
+          });
+        }
+        function ot(e) {
+          return (0, s.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: [
+              (0, s.jsx)("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M24.5384 18C24.5384 11.6275 19.3725 6.46154 13 6.46154V0C22.9411 0 30.9999 8.05887 30.9999 18C30.9999 27.9411 22.9411 36 13 36V29.5385C19.3725 29.5385 24.5384 24.3725 24.5384 18Z",
+              }),
+              (0, s.jsx)("ellipse", {
+                fill: "#1A9FFF",
+                cx: "13",
+                cy: "18.0195",
+                rx: "8.99996",
+                ry: "9",
+              }),
+            ],
+          });
+        }
+        function rt(e) {
+          const { className: t, ...n } = e;
+          return (0, s.jsx)("svg", {
+            className: (0, o.A)(a().SteamDeckCompatLogo, t),
+            ...n,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, s.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
+              fill: "white",
+            }),
+          });
+        }
+        function at(e) {
+          const { className: t } = e;
+          return (0, s.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, o.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
+            viewBox: "0 0 36 36",
+            fill: "none",
+            children: (0, s.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
+            }),
+          });
+        }
       },
-      29876: (e, t, n) => {
+      81745: (e, t, n) => {
         "use strict";
         n.d(t, { l: () => o });
         var s = n(63696);
@@ -121501,17 +121452,17 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      58322: (e, t, n) => {
+      64314: (e, t, n) => {
         "use strict";
         n.d(t, { t: () => h });
         var s = n(62540),
           i = n(63696),
-          o = n(85427),
+          o = n(31932),
           r = n(97671),
           a = n.n(r);
         const l = n.p + "images/webui/8669e97b288da32670e77181618c3dfb.png";
-        var c = n(82075),
-          d = n(40077);
+        var c = n(14446),
+          d = n(19022);
         const h = i.memo(function (e) {
           const {
             className: t,
@@ -121844,16 +121795,16 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      58931: (e, t, n) => {
+      19772: (e, t, n) => {
         "use strict";
         n.d(t, { c: () => p });
         var s = n(62540),
           i = n(63696),
-          o = n(40114),
-          r = n(45510),
-          a = n(85427),
-          l = n(56147),
-          c = n(21582);
+          o = n(66681),
+          r = n(61473),
+          a = n(31932),
+          l = n(96754),
+          c = n(96641);
         function d(e) {
           const { popup: t, onMaximize: n, bOSX: c } = e,
             d = (0, l.GD)(t),
@@ -121971,23 +121922,24 @@ var CLSTAMP = "10779229";
           });
         }
       },
-      97709: (e, t, n) => {
+      94500: (e, t, n) => {
         "use strict";
-        n.d(t, { Gq: () => p, fS: () => C, he: () => u, m9: () => m });
+        n.d(t, { Gq: () => _, fS: () => f, he: () => m, m9: () => p });
         var s = n(62540),
-          i = n(83300),
-          o = n(35360),
+          i = n(79229),
+          o = n(75037),
           r = n(63696),
-          a = n(5761),
-          l = n(85427),
-          c = n(8978),
+          a = n(60510),
+          l = n(31932),
+          c = n(62057),
           d = n(1150),
-          h = n.n(d);
-        function u(e) {
-          const { divProps: t, tooltipProps: n } = _({
+          h = n.n(d),
+          u = n(78325);
+        function m(e) {
+          const { divProps: t, tooltipProps: n } = g({
             ...e,
             toolTipContent: e.toolTipContent
-              ? (0, s.jsx)(f, { children: g(e.toolTipContent) })
+              ? (0, s.jsx)(S, { children: C(e.toolTipContent) })
               : null,
           });
           return (0, s.jsxs)(i.ml, {
@@ -121995,138 +121947,143 @@ var CLSTAMP = "10779229";
             noFocusRing: !0,
             focusable: e.bNavStop ?? !!t.onClick,
             ...t,
-            children: [(0, s.jsx)(S, { ...n }), e.children],
+            children: [(0, s.jsx)(v, { ...n }), e.children],
           });
         }
-        function m(e) {
-          const { divProps: t, tooltipProps: n } = _(e);
+        function p(e) {
+          const { divProps: t, tooltipProps: n } = g(e);
           return (0, s.jsxs)(i.ml, {
             className: "tool-tip-source",
             noFocusRing: !0,
             focusable: e.bNavStop ?? !!t.onClick,
             ...t,
-            children: [(0, s.jsx)(S, { ...n }), e.children],
+            children: [(0, s.jsx)(v, { ...n }), e.children],
           });
         }
-        function p(e) {
+        function _(e) {
           const { children: t } = e,
-            { divProps: n, tooltipProps: i } = _({
+            { divProps: n, tooltipProps: i } = g({
               ...e,
               toolTipContent: e.toolTipContent
-                ? (0, s.jsx)(f, { children: g(e.toolTipContent) })
+                ? (0, s.jsx)(S, { children: C(e.toolTipContent) })
                 : null,
             });
           return (0, s.jsxs)(s.Fragment, {
             children: [
               r.cloneElement(t, { ...n, ...t.props }),
-              (0, s.jsx)(S, { ...i }),
+              (0, s.jsx)(v, { ...i }),
             ],
           });
         }
-        function _(e) {
+        function g(e) {
           const {
               toolTipContent: t,
               nDelayShowMS: n = 300,
               bDisabled: s,
-              direction: i,
-              nBodyAlignment: o,
-              nBodyDistance: a,
-              nAllowOffscreenPx: l,
-              nMaxLateralMoveOnScreen: c,
-              strTooltipClassname: d,
-              bNavStop: h,
-              bTopmost: u,
-              usePointerEvents: m,
-              children: p,
-              onMouseLeave: _,
-              ...g
+              bPortalToBody: i,
+              direction: o,
+              nBodyAlignment: a,
+              nBodyDistance: l,
+              nAllowOffscreenPx: c,
+              nMaxLateralMoveOnScreen: d,
+              strTooltipClassname: h,
+              bNavStop: u,
+              bTopmost: m,
+              usePointerEvents: p,
+              children: _,
+              onMouseLeave: g,
+              ...C
             } = e,
-            C = {
-              direction: i,
-              nBodyAlignment: o,
-              nBodyDistance: a,
-              nAllowOffscreenPx: l,
-              nMaxLateralMoveOnScreen: c,
-              className: d,
-              bTopmost: u,
+            f = {
+              direction: o,
+              nBodyAlignment: a,
+              nBodyDistance: l,
+              nAllowOffscreenPx: c,
+              nMaxLateralMoveOnScreen: d,
+              className: h,
+              bTopmost: m,
             },
-            [f, S] = r.useState(!1),
-            [v, b] = r.useState(),
-            I = r.useCallback(
+            [S, v] = r.useState(!1),
+            [b, I] = r.useState(),
+            y = r.useCallback(
               (e) => {
-                (m && "pointerType" in e && "mouse" != e.pointerType) ||
-                  (S(!0), b(e.currentTarget));
+                (p && "pointerType" in e && "mouse" != e.pointerType) ||
+                  (v(!0), I(e.currentTarget));
               },
-              [m],
+              [p],
             ),
-            y = r.useCallback(() => {
-              S(!1);
+            w = r.useCallback(() => {
+              v(!1);
             }, []);
           r.useEffect(() => {
-            s && f && S(!1);
-          }, [s, f]);
-          const w = {
-            active: f && !s,
-            target: v,
+            s && S && v(!1);
+          }, [s, S]);
+          const x = {
+            active: S && !s,
+            target: b,
+            bPortalToBody: i,
             nDelayShowMS: n,
-            hoverPositionProps: C,
+            hoverPositionProps: f,
             children: t,
           };
-          let x = { ...g };
+          let A = { ...C };
           return (
-            m
-              ? ((x.onPointerEnter = I), (x.onPointerLeave = y))
-              : ((x.onMouseEnter = I), (x.onMouseLeave = y)),
+            p
+              ? ((A.onPointerEnter = y), (A.onPointerLeave = w))
+              : ((A.onMouseEnter = y), (A.onMouseLeave = w)),
             {
-              divProps: x,
-              stateHandlers: { setTarget: b, setHovered: S },
-              tooltipProps: w,
+              divProps: A,
+              stateHandlers: { setTarget: I, setHovered: v },
+              tooltipProps: x,
             }
           );
         }
-        function g(e) {
+        function C(e) {
           return "string" == typeof e ? c.pf.LocalizeIfToken(e, !0) : e;
         }
-        function C(e) {
-          const { divProps: t, tooltipProps: n, stateHandlers: i } = _(e);
+        function f(e) {
+          const { divProps: t, tooltipProps: n, stateHandlers: i } = g(e);
           return {
             divProps: t,
             stateHandlers: i,
-            tooltip: (0, s.jsx)(S, { ...n }),
+            tooltip: (0, s.jsx)(v, { ...n }),
           };
         }
-        function f(e) {
+        function S(e) {
           return (0, s.jsx)("div", {
             ...e,
             className: (0, l.A)(h().TextToolTip, e.className),
           });
         }
-        function S(e) {
+        function v(e) {
           const {
               active: t,
               target: n,
-              nDelayShowMS: i = 300,
-              hoverPositionProps: l,
-              children: c,
+              bPortalToBody: i,
+              nDelayShowMS: l = 300,
+              hoverPositionProps: c,
+              children: d,
             } = e,
-            [d, h] = r.useState(t);
-          return (
-            r.useEffect(() => {
+            [h, m] = r.useState(t);
+          if (
+            (r.useEffect(() => {
               if (t) {
-                if (i) {
-                  const e = window.setTimeout(() => h(!0), i);
+                if (l) {
+                  const e = window.setTimeout(() => m(!0), l);
                   return () => window.clearTimeout(e);
                 }
-                h(!0);
-              } else (0, o.p)() || h(!1);
+                m(!0);
+              } else (0, o.p)() || m(!1);
             }, [t]),
-            d && c && n
-              ? (0, s.jsx)(a.g, { target: n, ...l, children: c })
-              : null
-          );
+            !h)
+          )
+            return null;
+          if (!d || !n) return null;
+          const p = (0, s.jsx)(a.g, { target: n, ...c, children: d });
+          return i ? u.createPortal(p, n.ownerDocument.body) : p;
         }
       },
-      91811: (e, t, n) => {
+      97734: (e, t, n) => {
         "use strict";
         n.d(t, {
           AJ: () => C,
@@ -122144,13 +122101,13 @@ var CLSTAMP = "10779229";
           i = n(62540),
           o = n(89193),
           r = n(63696),
-          a = n(6474),
-          l = n(20314),
-          c = n(40114),
-          d = n(85427),
-          h = n(64382),
-          u = n(8978),
-          m = n(13177);
+          a = n(35123),
+          l = n(93593),
+          c = n(66681),
+          d = n(31932),
+          h = n(10093),
+          u = n(62057),
+          m = n(97640);
         function p(e, t) {
           let n;
           (n =
@@ -122322,12 +122279,12 @@ var CLSTAMP = "10779229";
           void 0,
         );
       },
-      21937: (e, t, n) => {
+      50286: (e, t, n) => {
         "use strict";
         n.d(t, { L: () => a, p: () => r });
         var s = n(62540),
           i = n(63696),
-          o = n(98723);
+          o = n(72942);
         function r(e) {
           const { children: t, name: n } = e;
           var r;
@@ -122343,14 +122300,14 @@ var CLSTAMP = "10779229";
           o.y.ReportTrackedAction(e);
         }
       },
-      50203: (e, t, n) => {
+      62794: (e, t, n) => {
         "use strict";
         n.d(t, { o: () => l });
         var s = n(62540),
-          i = n(97709),
+          i = n(94500),
           o = n(32172),
-          r = n(45510),
-          a = n(85427);
+          r = n(61473),
+          a = n(31932);
         function l(e) {
           const {
               customTooltip: t,
@@ -122379,14 +122336,14 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      79282: (e, t, n) => {
+      45001: (e, t, n) => {
         "use strict";
         n.d(t, { Z: () => l });
         var s = n(62540),
           i = n(63696),
-          o = n(40114),
-          r = n(85427),
-          a = n(56147);
+          o = n(66681),
+          r = n(31932),
+          a = n(96754);
         function l(e) {
           const { popup: t, className: n, ...l } = e,
             c = (0, a.GD)(t),
@@ -122421,20 +122378,20 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      53808: (e, t, n) => {
+      29793: (e, t, n) => {
         "use strict";
         n.d(t, { N1: () => S, VC: () => C, gZ: () => v });
         var s,
           i = n(34629),
           o = n(62540),
           r = n(63696),
-          a = n(18483),
-          l = n(51756),
-          c = n(85427),
-          d = n(58322),
-          h = n(58567),
-          u = n(8978),
-          m = n(84357);
+          a = n(69164),
+          l = n(88071),
+          c = n(31932),
+          d = n(64314),
+          h = n(68942),
+          u = n(62057),
+          m = n(9808);
         !(function (e) {
           (e[(e.NotLoaded = 0)] = "NotLoaded"),
             (e[(e.Loading = 1)] = "Loading"),
@@ -122638,7 +122595,7 @@ var CLSTAMP = "10779229";
           (0, i.Cg)([l.oI], S.prototype, "OnPlayerLeftView", null),
           (0, i.Cg)([l.oI], S.prototype, "PlayVideo", null);
       },
-      96985: (e, t, n) => {
+      64908: (e, t, n) => {
         "use strict";
         n.d(t, { m: () => r });
         var s = n(83957),
@@ -122655,7 +122612,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      16148: (e, t, n) => {
+      70431: (e, t, n) => {
         "use strict";
         n.d(t, { D0: () => i, Fg: () => r, LD: () => a, xr: () => s });
         const s = { x: "y", y: "x" };
@@ -122673,10 +122630,10 @@ var CLSTAMP = "10779229";
           return Math.sqrt(o(n, n));
         }
       },
-      35296: (e, t, n) => {
+      17559: (e, t, n) => {
         "use strict";
         n.d(t, { JV: () => o, S2: () => i });
-        var s = n(64382);
+        var s = n(10093);
         class i {
           m_options;
           m_msStart;
@@ -122773,13 +122730,13 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      57136: (e, t, n) => {
+      33411: (e, t, n) => {
         "use strict";
         n.d(t, { H: () => a });
-        var s = n(96108),
+        var s = n(55747),
           i = n(83957),
           o = n.n(i),
-          r = n(87118);
+          r = n(39831);
         function a(e) {
           if (o().isCancel(e))
             return { strErrorMsg: "Action Cancelled:" + e, errorCode: s.e9 };
@@ -122851,13 +122808,13 @@ var CLSTAMP = "10779229";
             : { strErrorMsg: "Unknown Error: " + e, errorCode: s.zi };
         }
       },
-      58752: (e, t, n) => {
+      6242: (e, t, n) => {
         "use strict";
         n.d(t, { Jc: () => d, Ji: () => u, LU: () => h, lu: () => r.l });
         var s = n(34629),
-          i = n(18483),
-          o = n(54250),
-          r = n(26889);
+          i = n(69164),
+          o = n(67725),
+          r = n(37420);
         class a {
           SyncStore(e) {
             return this.Subscribe(e).Unsubscribe;
@@ -122969,7 +122926,7 @@ var CLSTAMP = "10779229";
           null,
         );
       },
-      85427: (e, t, n) => {
+      31932: (e, t, n) => {
         "use strict";
         function s(...e) {
           return e.reduce(
@@ -122996,7 +122953,7 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { A: () => s });
       },
-      48380: (e, t, n) => {
+      58333: (e, t, n) => {
         "use strict";
         function s(e) {
           if (!o() || !window.document.cookie) return null;
@@ -123025,7 +122982,7 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { VY: () => s, kI: () => o, lc: () => i });
       },
-      49569: (e, t, n) => {
+      3190: (e, t, n) => {
         "use strict";
         function s(e, t = !0) {
           return function (n, s, i) {
@@ -123048,7 +123005,7 @@ var CLSTAMP = "10779229";
         }
         n.d(t, { s: () => s });
       },
-      64382: (e, t, n) => {
+      10093: (e, t, n) => {
         "use strict";
         n.d(t, {
           MS: () => I,
@@ -123077,7 +123034,7 @@ var CLSTAMP = "10779229";
           ww: () => v,
           yU: () => A,
         });
-        var s = n(40114);
+        var s = n(66681);
         function i(e) {
           return null != e && void 0 !== e.focus;
         }
@@ -123332,7 +123289,7 @@ var CLSTAMP = "10779229";
           return i.prepend(...a), a;
         }
       },
-      8978: (e, t, n) => {
+      62057: (e, t, n) => {
         "use strict";
         n.d(t, {
           $z: () => h.$z,
@@ -123351,14 +123308,14 @@ var CLSTAMP = "10779229";
           we: () => m,
         });
         var s = n(63696),
-          i = n(42308),
-          o = n(33453),
-          r = n(21582),
-          a = n(18483),
-          l = n(11662),
-          c = n(51600),
-          d = n(58752),
-          h = n(29656);
+          i = n(25699),
+          o = n(83402),
+          r = n(96641),
+          a = n(69164),
+          l = n(13791),
+          c = n(52308),
+          d = n(6242),
+          h = n(8705);
         class u {
           m_mapTokens = new Map();
           m_mapFallbackTokens = new Map();
@@ -123669,7 +123626,7 @@ var CLSTAMP = "10779229";
         const w = new u();
         window.LocalizationManager = w;
       },
-      29656: (e, t, n) => {
+      8705: (e, t, n) => {
         "use strict";
         n.d(t, {
           $z: () => d,
@@ -123686,9 +123643,9 @@ var CLSTAMP = "10779229";
         });
         var s,
           i = n(59351),
-          o = n(8978),
-          r = n(58686),
-          a = n(9939);
+          o = n(62057),
+          r = n(28333),
+          a = n(11098);
         function l(e, t, n) {
           let i;
           if ("boolean" == typeof t) {
@@ -124113,11 +124070,11 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      61122: (e, t, n) => {
+      56577: (e, t, n) => {
         "use strict";
         n.d(t, { Dq: () => r, dm: () => o });
-        var s = n(23402),
-          i = n(9939);
+        var s = n(10779),
+          i = n(11098);
         function o(e, t, n, o) {
           let r = t;
           r =
@@ -124169,13 +124126,13 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      86373: (e, t, n) => {
+      65264: (e, t, n) => {
         "use strict";
         n.d(t, { fi: () => l, wd: () => a });
         var s,
           i = n(34629),
-          o = n(54250),
-          r = n(26889);
+          o = n(67725),
+          r = n(37420);
         !(function (e) {
           (e[(e.Debug = 0)] = "Debug"),
             (e[(e.Info = 1)] = "Info"),
@@ -124463,7 +124420,7 @@ var CLSTAMP = "10779229";
           (window.EnableSteamConsole = (e = !0) =>
             l.Get().SetDebugLogEnabled("SteamClient", e));
       },
-      51756: (e, t, n) => {
+      88071: (e, t, n) => {
         "use strict";
         n.d(t, {
           CH: () => s.CH,
@@ -124491,21 +124448,21 @@ var CLSTAMP = "10779229";
           wY: () => o.wY,
           xA: () => s.xA,
         });
-        var s = n(72948),
-          i = n(14090),
-          o = n(3325),
-          r = (n(34604), n(52972)),
-          a = (n(50562), n(54250));
+        var s = n(56995),
+          i = n(38969),
+          o = n(22034),
+          r = (n(89569), n(87627)),
+          a = (n(46789), n(67725));
       },
-      50562: (e, t, n) => {
+      46789: (e, t, n) => {
         "use strict";
-        n(63696), n(3325);
+        n(63696), n(22034);
       },
-      91639: (e, t, n) => {
+      72590: (e, t, n) => {
         "use strict";
         n.d(t, { w: () => o });
-        var s = n(64382),
-          i = n(35296);
+        var s = n(10093),
+          i = n(17559);
         class o extends i.S2 {
           m_component;
           m_propTargets;
@@ -124542,11 +124499,11 @@ var CLSTAMP = "10779229";
           }
         }
       },
-      52972: (e, t, n) => {
+      87627: (e, t, n) => {
         "use strict";
         n.d(t, { X: () => o });
         var s = n(63696),
-          i = n(3325);
+          i = n(22034);
         function o() {
           const [e, t] = s.useState(0),
             n = s.useCallback(
@@ -124562,12 +124519,12 @@ var CLSTAMP = "10779229";
           };
         }
       },
-      3325: (e, t, n) => {
+      22034: (e, t, n) => {
         "use strict";
         n.d(t, { BL: () => l, Fd: () => c, wY: () => a });
         var s = n(63696),
-          i = n(11662),
-          o = n(14090);
+          i = n(13791),
+          o = n(38969);
         function r(e, t) {
           return (0, o.QS)(
             (n) => {
@@ -124608,11 +124565,11 @@ var CLSTAMP = "10779229";
           return n.observe(e), n;
         }
       },
-      34604: (e, t, n) => {
+      89569: (e, t, n) => {
         "use strict";
-        n(63696), n(3325);
+        n(63696), n(22034);
       },
-      99497: (e, t, n) => {
+      97684: (e, t, n) => {
         "use strict";
         function s(e, t) {
           return e < t ? -1 : e > t ? 1 : 0;
@@ -124752,7 +124709,7 @@ var CLSTAMP = "10779229";
           tV: () => a,
         });
       },
-      58686: (e, t, n) => {
+      28333: (e, t, n) => {
         "use strict";
         n.d(t, {
           Ct: () => o,
@@ -124786,7 +124743,7 @@ var CLSTAMP = "10779229";
           return Math.floor(Date.now() / 1e3);
         }
       },
-      6697: (e, t, n) => {
+      71594: (e, t, n) => {
         "use strict";
         n.d(t, {
           DZ: () => p,
@@ -124799,9 +124756,9 @@ var CLSTAMP = "10779229";
           k2: () => h,
           wm: () => r,
         });
-        var s = n(21582),
-          i = n(42308),
-          o = (n(8978), n(11662));
+        var s = n(96641),
+          i = n(25699),
+          o = (n(62057), n(13791));
         function r(e) {
           if (void 0 === e)
             return console.error("Cannot GetHostname on empty URL"), "";
@@ -124942,19 +124899,19 @@ var CLSTAMP = "10779229";
           return e.startsWith("http://") || e.startsWith("https://");
         }
       },
-      34451: (e, t, n) => {
+      94270: (e, t, n) => {
         "use strict";
         function s(e, t, n = !1) {
           return `${e}economy/sticker${n ? "static" : ""}/${encodeURIComponent(t)}`;
         }
         n.d(t, { G: () => s });
       },
-      56147: (e, t, n) => {
+      96754: (e, t, n) => {
         "use strict";
         n.d(t, { GD: () => r, jt: () => a });
         var s = n(63696),
-          i = n(40114),
-          o = n(51756);
+          i = n(66681),
+          o = n(88071);
         function r(e) {
           const [t, n] = s.useState(!1),
             r = s.useCallback(() => {
@@ -124996,18 +124953,18 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      98124: (e, t, n) => {
+      10007: (e, t, n) => {
         "use strict";
         n.d(t, { B: () => Z, Y: () => X });
         var s = n(34629),
           i = n(62540),
           o = n(63696),
-          r = n(99497),
+          r = n(97684),
           a = n(41230),
           l = n(52124),
           c = n.n(l),
-          d = n(21582),
-          h = n(28142);
+          d = n(96641),
+          h = n(70027);
         function u(e, t, n) {
           return (
             d.TS.COMMUNITY_CDN_ASSET_URL + e + "/roomeffects/" + t + "/" + n
@@ -125755,7 +125712,7 @@ var CLSTAMP = "10779229";
             );
           }
         }
-        var E = n(18483);
+        var E = n(69164);
         function O(e) {
           const t = e.data,
             n = u(e.sale, e.effect.name, `${t.strImage}.png`);
@@ -125870,7 +125827,7 @@ var CLSTAMP = "10779229";
             });
           }
         }
-        var j = n(85427);
+        var j = n(31932);
         class V {
           m_seed;
           constructor(e) {
@@ -125985,7 +125942,7 @@ var CLSTAMP = "10779229";
         };
         X = (0, s.Cg)([a.PA], X);
       },
-      21582: (e, t, n) => {
+      96641: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bu: () => l.Bu,
@@ -125993,6 +125950,7 @@ var CLSTAMP = "10779229";
           Fd: () => l.Fd,
           GP: () => r.GP,
           Hn: () => f,
+          KC: () => l.KC,
           NQ: () => b,
           Pr: () => g,
           QO: () => c,
@@ -126011,11 +125969,11 @@ var CLSTAMP = "10779229";
           yK: () => y,
         });
         var s = n(63696),
-          i = n(33453),
-          o = n(11662),
-          r = n(57345),
-          a = n(46434),
-          l = n(94121);
+          i = n(83402),
+          o = n(13791),
+          r = n(17692),
+          a = n(97087),
+          l = n(27650);
         const c = s.createContext({}),
           d = (e) => {
             const t = s.useContext(c);
@@ -126101,18 +126059,17 @@ var CLSTAMP = "10779229";
           return "friendsui";
         }
       },
-      57345: (e, t, n) => {
+      17692: (e, t, n) => {
         "use strict";
         n.d(t, {
-          GP: () => a,
-          P9: () => c,
-          TS: () => o,
-          UF: () => l,
-          iA: () => r,
+          GP: () => r,
+          P9: () => l,
+          TS: () => i,
+          UF: () => a,
+          iA: () => o,
         });
-        var s = n(94121),
-          i = n(36959);
-        const o = {
+        var s = n(13268);
+        const i = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
             LANGUAGE: "english",
@@ -126163,12 +126120,6 @@ var CLSTAMP = "10779229";
             PAGE_TIMESTAMP: 0,
             FROM_WEB: !1,
             WEBSITE_ID: "Unknown",
-            get SESSIONID() {
-              return (0, s.KC)();
-            },
-            FRIENDSUI_BETA: !1,
-            STEAM_TV: !1,
-            DEV_MODE: !1,
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
@@ -126180,10 +126131,11 @@ var CLSTAMP = "10779229";
             IN_LOGIN_REFRESH: !1,
             USE_LONGEST_LOC_STRING: !1,
             SILENT_STARTUP: !1,
+            DEV_MODE: !1,
             CLIENT_SESSION: 0,
             NOW: 0,
           },
-          r = {
+          o = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -126198,10 +126150,10 @@ var CLSTAMP = "10779229";
             is_valve_email: !1,
             short_url: "",
             country_code: "",
-            excluded_content_descriptors: [i.u7, i.T4, i.mx],
+            excluded_content_descriptors: [s.u7, s.T4, s.mx],
           },
-          a = { steamid: "", clanid: 0, listid: 0 },
-          l = {
+          r = { steamid: "", clanid: 0, listid: 0 },
+          a = {
             CLANSTEAMID: "",
             CLANACCOUNTID: 0,
             APPID: 0,
@@ -126213,9 +126165,9 @@ var CLSTAMP = "10779229";
             IS_VALVE_GROUP: !1,
             IS_ALLOWED_SC: !1,
           },
-          c = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+          l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
       },
-      94121: (e, t, n) => {
+      27650: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bu: () => f,
@@ -126225,9 +126177,9 @@ var CLSTAMP = "10779229";
           XJ: () => d,
           bd: () => m,
         });
-        var s = n(28142),
-          i = n(48380),
-          o = n(57345);
+        var s = n(70027),
+          i = n(58333),
+          o = n(17692);
         const r = "webui_config";
         let a;
         function l() {
@@ -126246,7 +126198,7 @@ var CLSTAMP = "10779229";
         function d(e = r) {
           const t = {},
             n = p("config", e);
-          n && (delete n.SESSIONID, Object.assign(o.TS, n), (t.config = !0));
+          n && (Object.assign(o.TS, n), (t.config = !0));
           const s = p("userinfo", e);
           s &&
             (Object.assign(o.iA, s),
@@ -126320,7 +126272,7 @@ var CLSTAMP = "10779229";
           );
         }
       },
-      56823: (e, t, n) => {
+      49926: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -126330,7 +126282,7 @@ var CLSTAMP = "10779229";
           123 !== Array.from(new Set([123]))[0] &&
             console.error("Should not include prototypejs.");
       },
-      46434: (e, t, n) => {
+      97087: (e, t, n) => {
         "use strict";
         n.d(t, { $W: () => d, OO: () => h });
         let s = !1,
@@ -127604,168 +127556,168 @@ var CLSTAMP = "10779229";
       {
         43: "8170f2c895e19202cd65",
         133: "82545716ea1a8b82e4d9",
-        191: "e6f67d1fb2c1a709f290",
-        277: "c41977447be06a7f35ad",
+        191: "2f44a701276dca278b19",
+        277: "a5843aa6d5b4f2aac940",
         316: "b4a4125ab8550ef83a0b",
-        382: "edee64095010d9d809e6",
-        474: "6a9d0b4e2892dded462e",
-        496: "00d447361703a163d0e0",
+        382: "416dc2c22c72ab0b0084",
+        474: "6cf38875ad9313c7514b",
+        496: "630e52f5f2e69750f51c",
+        531: "f5286027b8851ccf27b4",
         684: "305a3dbe70504b78d062",
         762: "da846d9434cb0fa053d0",
-        898: "67195dccea0671f039cd",
-        902: "c56d4da3069bb284544a",
+        898: "bf0e29dd83ab70387fef",
+        902: "ee6a39e80b2d839c92b3",
         947: "77123a0d43c051462d19",
-        975: "dc9d5217418cde64914a",
-        976: "62af8b1f5e36c846de35",
-        1087: "72d2b3df2a9e3ac0d7f2",
-        1144: "d5491f042dda834f5074",
-        1158: "c49ed9a36111f3215f95",
+        975: "76153d133ec6fb7d2cc1",
+        976: "c361f800d6ef307ae120",
+        1087: "1b1e874fa0b17e33bd93",
+        1144: "a4c7352e8aac311aeb84",
+        1158: "1d8235c3eaa8411becd9",
         1224: "8cf7b28930c7b7c56321",
-        1225: "08fe5b6de8f6251654b8",
-        1316: "fa6b577fe95b73f13f43",
+        1225: "312ed1e4c5db2f4c081a",
+        1316: "36be20268a253397b95d",
         1330: "d8ab1ac01d7f47e93aca",
-        1449: "1367fe0bdc0f43c0f31b",
+        1449: "0ce4d085e4b397389652",
         1499: "fac3c5fdc04308b95497",
         1571: "301c37a370bcf304422d",
-        1639: "e49c6f71e615521bf76f",
-        1849: "e6f2ff342883c816882f",
-        1954: "0a7e5825c7a9f9f75ef0",
-        1973: "e1659222853901eb62f8",
-        1990: "7ad1115e21e059382469",
-        2116: "2089d06decc59bf16eed",
-        2177: "39a9472bf7922acdc24c",
-        2256: "52a13ef309e7739d3ec7",
-        2281: "03ce397cb6409816c7b8",
+        1639: "c94e1345f62cc02b0f42",
+        1849: "fd12fc9a1bcbaee17bb5",
+        1954: "0e55356fd7b14be54c0b",
+        1973: "6889f64ffb6b351881c1",
+        1990: "19ae39609ce8b3cc5be9",
+        2116: "dadd7a4b77ae550330e2",
+        2177: "e8733a65326e17ec064e",
+        2256: "d006f3fad816bc725d94",
+        2281: "86c1eb82513dd6d119a3",
         2292: "2648171bbf7a4e541935",
-        2320: "510bbdfeced4a455435d",
-        2435: "75b6398a7ac76b13a10f",
-        2506: "b22c3dae62dbf1b548fe",
-        2520: "ca3161f6f5ce03ee931b",
-        2532: "740ae502ef03c9aca44b",
-        2632: "ec150b3236df2e690317",
-        2687: "9b78fca378571aecda97",
-        2749: "69404acc6fa1b45b9861",
+        2320: "ca231c4d9fa7a6246d26",
+        2435: "ce0be30e4fbaa0add7d5",
+        2506: "48922957a9fcf4ad5283",
+        2520: "1f392503c94a20f48720",
+        2532: "726fc960ed3131ab0865",
+        2632: "5e1065ce31d6605a9004",
+        2687: "fe042a69cfd5cbb58cc1",
+        2749: "d10b086380b59ed531e1",
         2945: "e07e4818e2a0d4fcc6a4",
-        2954: "8efe7719788f5f88ef9b",
+        2954: "e7c6fe7f258a3a270829",
         2993: "e6827764a5e82e106259",
         3e3: "9d84323971dec0188c80",
-        3016: "aa776518a1c8d05e2346",
+        3016: "f6185aecd134f08375bc",
         3159: "200991dd6114e56702ed",
-        3199: "16f08efb41f95b3e6798",
-        3202: "411bdeb14ade5dd10dc7",
+        3199: "80a78b943688c4e0d141",
+        3202: "1b7f4f91c139fbacae69",
         3232: "7e18a3c2d3045e97050e",
-        3307: "9ba56adf5cbd8164bff6",
-        3382: "a288ae776dd10b3297e6",
+        3307: "be956d2e3454ca5126e3",
+        3382: "a6355aad8e70e332a6ac",
         3415: "f91b674a80d33488244d",
-        3485: "c54eec1e659f8c59da85",
-        3577: "da8542a37c82f77275c9",
-        3710: "bbea31831ed9beb2fe01",
-        3778: "8798316aa57df3f0dac8",
-        3789: "43b07ba659d8cbaa69f3",
+        3485: "203f1d427376e06cd2e9",
+        3577: "47d6f33f4c7aab2eea05",
+        3710: "74ae1c3c4d8f5265c05a",
+        3778: "b84bd8a8ffcba8d6fdcb",
+        3789: "68550c6cfd59330c3e48",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
-        3898: "2633c9c700cdfdffd414",
-        3912: "8ade0dffeccb2125472a",
-        4006: "79b02c0dcdeaa18c3799",
+        3898: "db69d531db6265ec839d",
+        3912: "c611b051820508717c70",
+        4006: "6603ebe760f65431a358",
         4154: "94ca8cb2d2aa1f47d22a",
-        4227: "362b601541431bbb4853",
+        4227: "9ee92894dd6a1890fbc5",
         4295: "e2c54df00cd7fc6e55c9",
-        4302: "26c6c68d68ef95ef5f8d",
+        4302: "435019249c6f51b79b4f",
         4352: "de92a58e851fd1f40a2a",
-        4421: "94bc4ea676750516f3fe",
+        4421: "58fab8f46777762af7e8",
         4434: "b76bcd1bc89404745cc8",
-        4473: "42f945245403202c5a27",
+        4473: "4f453826b91d887757e2",
         4488: "9b7902a9dcd57e5a8ac3",
-        4569: "b0001c2e875cf7e86920",
-        4776: "ef1dcbea9d59f8743bf8",
-        4777: "dcac9008121c1935e27a",
+        4571: "5e4085d8a145d3b81e3a",
+        4776: "6133207eac020e1ab36e",
+        4777: "3ccf3b0c2a8447e58f50",
         4779: "909f21776039059914ce",
-        4787: "07b24eb37c9e0b433d0c",
+        4787: "63f48bbabd6e52adb440",
         4844: "9b0a060abc338b33c9ea",
-        4976: "145feca95b31ba1d7542",
-        5018: "deaf385b0027de4bc7e8",
-        5094: "fb91a1669490a93c142a",
-        5110: "b6d91308dbed138a2376",
-        5136: "78b5bdf55f283ab3a605",
-        5241: "85abe55d560ef90d1dd8",
-        5341: "671fa39c7d33a83df311",
-        5358: "b0f55330c8199ef5ad72",
+        4976: "11dc50e1825c3ea78b66",
+        5018: "48bb2536dff04aca92d5",
+        5094: "5f0e0ec0448d09dc2693",
+        5110: "347aed336e9356d05ed8",
+        5136: "440cd9ccf22ad8afb2b7",
+        5241: "413f559a5b369ce41441",
+        5341: "ce5400f709b5d26948e2",
+        5358: "46677bfee5caf20bc8de",
         5480: "fe1e2469122f1c0d37d0",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
-        5725: "ea899ff033ecd4299e53",
-        5893: "c6d7ad8ab6221edf0bac",
-        6031: "020e61748b9171357081",
-        6059: "4807131c435c8ae36fc9",
-        6127: "165f942ae61f710d7fe3",
-        6149: "2b0342ce11a26116fbba",
-        6165: "e893d5dc017d8b2d5c0d",
-        6196: "8ed4ff5f310077be1c28",
-        6208: "9a22ef60d3b43fccfbe6",
-        6239: "f227e1d9fb6339d487c8",
-        6305: "6e1950fb55e24f03b440",
-        6332: "0dddb01f6059ba3b7d6f",
-        6385: "7f9b40cc12e05621335e",
-        6447: "1e264b02cf4212e65e2a",
-        6518: "dc5f6ae58364d09cceda",
-        6523: "8edfd42eb445c6e26656",
-        6562: "3874fca0b34b7db1a93e",
-        6609: "29f4e0907b3805eda2f2",
+        5725: "188fd09b6944f1d69b65",
+        5893: "91f5b813d41dc544101d",
+        6031: "95003c486e82a525a69e",
+        6059: "05073e711d6e45418a0b",
+        6127: "bcb2b356d29892b7ef52",
+        6149: "9f23e15638c56392642e",
+        6165: "ff95319000d3ed4331d6",
+        6196: "c488fbbb48f3d39973b9",
+        6208: "e89ab0751a896dda721d",
+        6239: "8c6148f2489f37fa3734",
+        6305: "9bcffc41a7b5eac1f15d",
+        6332: "7e9696572dca73107873",
+        6385: "633241ebfdb81845e960",
+        6447: "6571327308708b9cb4a5",
+        6518: "857261cae6462f001643",
+        6523: "ede2e78d4176328496b9",
+        6562: "b67278e9418d3bb684b3",
+        6609: "06b39a5f1c8a9fa61b56",
         6637: "bee05b6c76a9dd2fe06d",
-        6888: "f5ebd78ad10b3118603c",
+        6888: "5e713d851c095e455c3b",
         6905: "d9316fc5a220e6b4c416",
-        6920: "4e3ea3c468488d526f5d",
-        6950: "231c7cc0efedba924194",
+        6920: "57613c784cb3df432902",
+        6950: "ec0c8b0d665699ce915b",
         6971: "39f358e2496a3d2a55c3",
         7247: "7021b7a5aaf6d7ee9806",
-        7279: "679dc7a3cb571358118e",
-        7365: "c0fa6ed66ef022026c7b",
+        7279: "4fa8dad9d6bcde1d380b",
+        7365: "bb74e03060db6e6f780a",
         7418: "7680875bb68efceaf698",
-        7462: "b23b85df1b08aaeb2795",
-        7464: "bb095035baf998a9816c",
+        7462: "fa943229c824f20b3f7d",
+        7464: "d527671518fba684fd01",
         7468: "53e0875c52dff3de164a",
         7487: "c0d8195dd6dab3975615",
-        7539: "5e9acb4829c49e8f98d7",
-        7591: "8ce0cf3a5e90fb4ba20e",
-        7637: "3f8b1f9d6c22440ac29a",
-        7653: "640fd269657bee408f9a",
+        7539: "30f7291f91666a777754",
+        7591: "c20057d7e0fa41ff0297",
+        7637: "ca3d5ad06f37005fc037",
+        7653: "41d40e721cddc1fd5591",
         7673: "065a311d75b3213d4f15",
-        7786: "e023852d3ba679e8036e",
-        7788: "897ff1f6c2fa9239f98d",
-        7861: "46f4c386b3edcfa9f92b",
+        7786: "bd20decd1d48f51599f8",
+        7788: "d010383f4ccc1c1b6efb",
+        7861: "63671b2acc79688f22e9",
         7904: "116aefb93e005baea38e",
-        8016: "16682aff4da638be8856",
-        8025: "2352457a9b2341cbb996",
-        8106: "3d4d16c096180fc08c8b",
+        8016: "cdf2dc498440c2566fdc",
+        8025: "fb1e6b2c14acf134b544",
+        8106: "9e5de4171728b3824d1d",
         8191: "7c71b0175a3b35434ec8",
-        8194: "36f74d61aa3af730900f",
+        8194: "a3c2c82981967a0bb30a",
         8246: "d8dd4a47668b5bf225ab",
-        8306: "4e40ce76dfe927e742b7",
-        8311: "89e988fbff65473e7854",
+        8306: "56cc160b3b7995db89fd",
+        8311: "fca88b92e12a29883b5d",
         8366: "fbd35ad496eb7892a424",
         8566: "cd93e0bf03daf5972185",
-        8703: "5278dd0a8667b78b8195",
-        8759: "959f10c584a5ca3aac3b",
-        8766: "33682347c9abfde5c73d",
-        8822: "8cbf20e3b2d43052809d",
+        8703: "644cfd9a31d1c4890881",
+        8759: "64839c1cf1d65d068251",
+        8766: "568c79e84ce11aed47a9",
+        8822: "9f23fe630e1bc445a756",
         8833: "0db29dc3b45b31acb4a4",
-        8855: "6ef9fd3b494b835bd36f",
-        8871: "6cd2823c6d4e392c8e69",
-        8930: "3011ae7d97c0e9fde9c7",
-        8967: "4d2e78cb419d797d8268",
+        8855: "f6463721cab65712879d",
+        8871: "db91511bbe45c67ef042",
+        8930: "25153545da6040645366",
+        8967: "1f378ed5d477a32d6a96",
         9027: "99a11776d1c5b10911cd",
-        9040: "3ae0ca866fc5dd3d0453",
-        9152: "0cb7e3db4aa96b1db03a",
+        9152: "2cfbb8ff39b8268aaf58",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
         9457: "03ff4c6f7ee37e164af2",
-        9712: "5724bd2367a3c48e196d",
-        9746: "793a8abfe2e6fc8551cb",
+        9712: "ef39b8e43fc4e19b2138",
+        9746: "53570359ca81bb16a3cc",
         9808: "942f6e1ad27af2af89a2",
-        9925: "12bce090bd4d22262f64",
-        9930: "99f32fcf561b911c9c6d",
-        9947: "01e067290895d7530632",
+        9925: "aad6a733b314cfab6313",
+        9930: "f772d64e8b1b8a6b10c0",
+        9947: "eceb2e5cbfafd46602ed",
       }[e]),
     (a.miniCssF = (e) =>
       "css/webui/" +
@@ -127774,7 +127726,7 @@ var CLSTAMP = "10779229";
       {
         3159: "75a6e9ff11215c0f2a0b",
         7462: "523990cc8b40094c4a05",
-        7653: "bb556f4e47cfbb781332",
+        7653: "bfe5bb9ebb1faa40af83",
       }[e]),
     (a.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -127994,6 +127946,6 @@ var CLSTAMP = "10779229";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var l = a.O(void 0, [3987, 9489, 1068], () => a(49649));
+  var l = a.O(void 0, [3987, 9489, 1068], () => a(24368));
   l = a.O(l);
 })();

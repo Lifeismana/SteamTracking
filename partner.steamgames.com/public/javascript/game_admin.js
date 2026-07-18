@@ -1690,6 +1690,9 @@ function CopyRatingsFromParent( itemid )
 			case 1:
 				top.location.reload();
 				break;
+			case 42:
+				ShowAlertDialog( 'Error', 'There are no official ratings to copy from the parent app.' );
+				break;
 			default:
 				ShowAlertDialog( 'Error', 'There was a problem copying over the parent item\'s ratings: ' + data.success );
 				break;

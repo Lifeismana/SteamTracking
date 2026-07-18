@@ -79,7 +79,7 @@
     },
     28579: (e, s, t) => {
       "use strict";
-      t.d(s, { xh: () => z, AC: () => ne, u6: () => ie });
+      t.d(s, { xh: () => K, AC: () => ne, u6: () => ie });
       var n = t(7850),
         o = t(90626),
         i = t(37085),
@@ -146,14 +146,14 @@
       var Q = t(41735),
         _ = t.n(Q),
         p = t(4434),
-        S = t(68797);
-      const C = 0,
-        g = 1,
-        w = 2,
-        N = 3;
-      class x {
+        C = t(68797);
+      const g = 0,
+        w = 1,
+        S = 2,
+        x = 3;
+      class N {
         static Get() {
-          return x.s_Singleton || (x.s_Singleton = new x()), x.s_Singleton;
+          return N.s_Singleton || (N.s_Singleton = new N()), N.s_Singleton;
         }
         constructor() {
           (this.m_mapQAndASessions = new Map()),
@@ -192,7 +192,7 @@
         }
         async LoadAllSessions(e) {
           var s, t, n, o;
-          if (!m.iA.logged_in || !m.TS.SESSIONID) return i.sW;
+          if (!m.iA.logged_in || !(0, m.KC)()) return i.sW;
           const a =
               m.TS.COMMUNITY_BASE_URL +
               "questions/" +
@@ -223,7 +223,7 @@
           } catch (e) {
             l = e;
           }
-          const d = (0, S.H)(l);
+          const d = (0, C.H)(l);
           return (
             console.error(
               "Could not load question and answer sessions for group",
@@ -246,14 +246,14 @@
         }
         async CreateNewSession(e, s) {
           var t, n, o, a;
-          if (!m.iA.logged_in || !m.TS.SESSIONID) return i.sW;
+          if (!m.iA.logged_in || !(0, m.KC)()) return i.sW;
           const r =
               m.TS.COMMUNITY_BASE_URL +
               "questions/" +
               m.UF.VANITY_ID +
               "/ajaxcreateqanda",
             l = new FormData();
-          l.append("sessionid", m.TS.SESSIONID), l.append("name", e);
+          l.append("sessionid", (0, m.KC)()), l.append("name", e);
           let d = null;
           try {
             const e = await _().post(r, l, {
@@ -278,7 +278,7 @@
           } catch (e) {
             d = e;
           }
-          const u = (0, S.H)(d);
+          const u = (0, C.H)(d);
           return (
             console.error("Could not create Q&A", e, u.strErrorMsg, u),
             null !==
@@ -297,7 +297,7 @@
         }
         async RenameSession(e, s, t) {
           var n, o, a, r;
-          if (!m.iA.logged_in || !m.TS.SESSIONID) return i.sW;
+          if (!m.iA.logged_in || !(0, m.KC)()) return i.sW;
           const l =
               m.TS.COMMUNITY_BASE_URL +
               "questions/" +
@@ -305,7 +305,7 @@
               "/ajaxrenameqanda/" +
               e,
             d = new FormData();
-          d.append("sessionid", m.TS.SESSIONID), d.append("name", s);
+          d.append("sessionid", (0, m.KC)()), d.append("name", s);
           let u = null;
           try {
             const o = await _().post(l, d, {
@@ -329,7 +329,7 @@
           } catch (e) {
             u = e;
           }
-          const c = (0, S.H)(u);
+          const c = (0, C.H)(u);
           return (
             console.error("Could not rename Q&A", e, s, c.strErrorMsg, c),
             null !==
@@ -348,7 +348,7 @@
         }
         async DeleteSession(e, s) {
           var t, n, o, a;
-          if (!m.iA.logged_in || !m.TS.SESSIONID) return i.sW;
+          if (!m.iA.logged_in || !(0, m.KC)()) return i.sW;
           const r =
               m.TS.COMMUNITY_BASE_URL +
               "questions/" +
@@ -356,7 +356,7 @@
               "/ajaxdeleteqanda/" +
               e,
             l = new FormData();
-          l.append("sessionid", m.TS.SESSIONID);
+          l.append("sessionid", (0, m.KC)());
           let d = null;
           try {
             const n = await _().post(r, l, {
@@ -377,7 +377,7 @@
           } catch (e) {
             d = e;
           }
-          const u = (0, S.H)(d);
+          const u = (0, C.H)(d);
           return (
             console.error("Could not delete Q&A", e, u.strErrorMsg, u),
             null !==
@@ -406,7 +406,7 @@
                 : "/ajaxgetqandasession/",
             Q = m.TS.COMMUNITY_BASE_URL + "questions/" + m.UF.VANITY_ID + v + e,
             p = {};
-          let C = null;
+          let g = null;
           try {
             const s = await _().get(Q, {
               params: p,
@@ -464,18 +464,18 @@
                 i.R
               );
             }
-            C = { response: s };
+            g = { response: s };
           } catch (e) {
-            C = e;
+            g = e;
           }
-          const g = (0, S.H)(C);
+          const w = (0, C.H)(g);
           return (
-            console.error("Could not load Q&A", e, g.strErrorMsg, g),
+            console.error("Could not load Q&A", e, w.strErrorMsg, w),
             null !==
               (h =
                 null ===
                   (A =
-                    null === (c = null == C ? void 0 : C.response) ||
+                    null === (c = null == g ? void 0 : g.response) ||
                     void 0 === c
                       ? void 0
                       : c.data) || void 0 === A
@@ -491,7 +491,7 @@
           for (const s of e) {
             const e = this.m_mapQuestions.get(s);
             e.posterAccountID == m.iA.accountid &&
-              e.eState == g &&
+              e.eState == w &&
               t.add(e.gidQuestion);
           }
           if (this.m_rgPendingQuestionGIDs.length > 0) {
@@ -500,7 +500,7 @@
               n.has(e) &&
                 (null === (s = this.m_mapQuestions.get(e)) || void 0 === s
                   ? void 0
-                  : s.eState) == g &&
+                  : s.eState) == w &&
                 t.add(e);
           }
           this.m_rgPendingQuestionGIDs = Array.from(t);
@@ -509,7 +509,7 @@
           var n, o, a, r, l;
           if (
             !m.iA.logged_in ||
-            !m.TS.SESSIONID ||
+            !(0, m.KC)() ||
             !(null === (n = this.m_mapQAndASessions.get(e)) || void 0 === n
               ? void 0
               : n.bUserCanAskQuestions)
@@ -522,7 +522,7 @@
               "/ajaxaskquestion/" +
               e,
             u = new FormData();
-          u.append("sessionid", m.TS.SESSIONID), u.append("question", s);
+          u.append("sessionid", (0, m.KC)()), u.append("question", s);
           let c = null;
           try {
             const s = await _().post(d, u, {
@@ -542,7 +542,7 @@
           } catch (e) {
             c = e;
           }
-          const A = (0, S.H)(c);
+          const A = (0, C.H)(c);
           return (
             console.error("Could not upload question", e, s, A.strErrorMsg, A),
             null !==
@@ -563,13 +563,13 @@
           var o, a, r, l, d;
           if (
             !m.iA.logged_in ||
-            !m.TS.SESSIONID ||
+            !(0, m.KC)() ||
             !(null === (o = this.m_mapQAndASessions.get(e)) || void 0 === o
               ? void 0
               : o.bUserCanModerate)
           )
             return i.sW;
-          if (t != g && t != N) return i.nO;
+          if (t != w && t != x) return i.nO;
           if (this.m_mapQuestions.get(s).eState == t) return i.R;
           const u =
               m.TS.COMMUNITY_BASE_URL +
@@ -578,9 +578,9 @@
               "/ajaxmoderatequestion/" +
               e,
             c = new FormData();
-          c.append("sessionid", m.TS.SESSIONID),
+          c.append("sessionid", (0, m.KC)()),
             c.append("gidquestion", s),
-            c.append("action", t == g ? "show" : "hide");
+            c.append("action", t == w ? "show" : "hide");
           let A = null;
           try {
             const s = await _().post(u, c, {
@@ -599,7 +599,7 @@
           } catch (e) {
             A = e;
           }
-          const h = (0, S.H)(A);
+          const h = (0, C.H)(A);
           return (
             console.error(
               "Could not moderate question",
@@ -627,7 +627,7 @@
           var o, a, r, l, d;
           if (
             !m.iA.logged_in ||
-            !m.TS.SESSIONID ||
+            !(0, m.KC)() ||
             !(null === (o = this.m_mapQAndASessions.get(e)) || void 0 === o
               ? void 0
               : o.bUserCanAskQuestions)
@@ -640,7 +640,7 @@
               "/ajaxanswerquestion/" +
               e,
             c = new FormData();
-          c.append("sessionid", m.TS.SESSIONID),
+          c.append("sessionid", (0, m.KC)()),
             c.append("gidquestion", s),
             c.append("answer", t);
           let A = null;
@@ -661,7 +661,7 @@
           } catch (e) {
             A = e;
           }
-          const h = (0, S.H)(A);
+          const h = (0, C.H)(A);
           return (
             console.error("Could not upload answer", e, s, t, h.strErrorMsg, h),
             null !==
@@ -682,7 +682,7 @@
           var o, a, r, l, d;
           if (
             !m.iA.logged_in ||
-            !m.TS.SESSIONID ||
+            !(0, m.KC)() ||
             !(null === (o = this.m_mapQAndASessions.get(e)) || void 0 === o
               ? void 0
               : o.bUserCanAskQuestions)
@@ -702,7 +702,7 @@
               "/ajaxvoteforquestion/" +
               e,
             v = new FormData();
-          v.append("sessionid", m.TS.SESSIONID),
+          v.append("sessionid", (0, m.KC)()),
             v.append("gidquestion", s),
             v.append("up", t ? "1" : "0");
           let Q = null;
@@ -724,7 +724,7 @@
           (u = { ...u, nVoteCount: c, bUserUpVoted: !t }),
             this.m_mapQuestions.set(s, u),
             this.GetQuestionCallbackList(s).Dispatch(u);
-          const p = (0, S.H)(Q);
+          const p = (0, C.H)(Q);
           return (
             console.error("Could not upload vote", e, s, t, p.strErrorMsg, p),
             null !==
@@ -748,10 +748,10 @@
             async (t) => {
               var n;
               return (
-                (null === (n = x.Get().GetSession(e)) || void 0 === n
+                (null === (n = N.Get().GetSession(e)) || void 0 === n
                   ? void 0
                   : n.bUserCanAskQuestions) &&
-                (await x.Get().AskNewQuestion(e, t, s))
+                (await N.Get().AskNewQuestion(e, t, s))
               );
             },
             [e, s],
@@ -760,10 +760,10 @@
             (t, n) => {
               var o;
               return (
-                (null === (o = x.Get().GetSession(e)) || void 0 === o
+                (null === (o = N.Get().GetSession(e)) || void 0 === o
                   ? void 0
                   : o.bUserCanAskQuestions) &&
-                x.Get().VoteOnQuestion(e, t, n, s)
+                N.Get().VoteOnQuestion(e, t, n, s)
               );
             },
             [e, s],
@@ -783,41 +783,41 @@
                 (s = null == e ? void 0 : e.rgQuestionGIDs) && void 0 !== s
                 ? s
                 : []) {
-                const e = x.Get().GetQuestion(t);
+                const e = N.Get().GetQuestion(t);
                 switch (null == e ? void 0 : e.eState) {
-                  case g:
+                  case w:
                     l.push(t);
                     break;
-                  case w:
+                  case S:
                     d.push(t);
                     break;
-                  case C:
+                  case g:
                     u.push(t);
                     break;
-                  case N:
+                  case x:
                     c.push(t);
                 }
               }
               return (
                 l.sort(
                   (e, s) =>
-                    x.Get().GetQuestion(s).nVoteCount -
-                    x.Get().GetQuestion(e).nVoteCount,
+                    N.Get().GetQuestion(s).nVoteCount -
+                    N.Get().GetQuestion(e).nVoteCount,
                 ),
                 d.sort(
                   (e, s) =>
-                    x.Get().GetQuestion(s).rtAnswerTime -
-                    x.Get().GetQuestion(e).rtAnswerTime,
+                    N.Get().GetQuestion(s).rtAnswerTime -
+                    N.Get().GetQuestion(e).rtAnswerTime,
                 ),
                 u.sort(
                   (e, s) =>
-                    x.Get().GetQuestion(s).rtPostTime -
-                    x.Get().GetQuestion(e).rtPostTime,
+                    N.Get().GetQuestion(s).rtPostTime -
+                    N.Get().GetQuestion(e).rtPostTime,
                 ),
                 c.sort(
                   (e, s) =>
-                    x.Get().GetQuestion(s).rtPostTime -
-                    x.Get().GetQuestion(e).rtPostTime,
+                    N.Get().GetQuestion(s).rtPostTime -
+                    N.Get().GetQuestion(e).rtPostTime,
                 ),
                 {
                   bIsLoaded: o,
@@ -835,23 +835,23 @@
             },
             [t, n],
           ),
-          [a, r] = o.useState(() => i(x.Get().GetSession(e))),
+          [a, r] = o.useState(() => i(N.Get().GetSession(e))),
           l = o.useCallback((e) => r(i(e)), [i]);
         return (
-          (0, c.hL)(x.Get().GetQAndACallbackList(e), l),
+          (0, c.hL)(N.Get().GetQAndACallbackList(e), l),
           o.useEffect(() => {
-            a.bIsLoaded || x.Get().LoadSession(e);
+            a.bIsLoaded || N.Get().LoadSession(e);
           }, [a.bIsLoaded, e]),
           a
         );
       }
-      let I = null;
-      function f(e) {
+      let f = null;
+      function j(e) {
         const s = (0, p.m)("useReloadFunction"),
           [t, n] = o.useState(!1),
           i = o.useCallback(() => {
             n(!0);
-            const t = x.Get().LoadSession(e, !1, s);
+            const t = N.Get().LoadSession(e, !1, s);
             return t.then(() => n(!1)), t;
           }, [e, s]),
           a = (function (e) {
@@ -876,23 +876,23 @@
           })(i);
         return (
           o.useEffect(() => {
-            if (I) return () => {};
+            if (f) return () => {};
             return (
-              (I = window.setInterval(a, 1e4)), () => window.clearInterval(I)
+              (f = window.setInterval(a, 1e4)), () => window.clearInterval(f)
             );
           }, [a]),
           o.useMemo(() => ({ fnReload: i, bIsReloading: t }), [i, t])
         );
       }
-      function D(e) {
+      function k(e) {
         const s = (0, p.m)("useQuestionModeratorActions"),
           t = o.useCallback(
             (t, n) => {
               var o;
               return (
-                (null === (o = x.Get().GetSession(e)) || void 0 === o
+                (null === (o = N.Get().GetSession(e)) || void 0 === o
                   ? void 0
-                  : o.bUserCanModerate) && x.Get().AnswerQuestion(e, t, n, s)
+                  : o.bUserCanModerate) && N.Get().AnswerQuestion(e, t, n, s)
               );
             },
             [e, s],
@@ -901,9 +901,9 @@
             (t, n) => {
               var o;
               return (
-                (null === (o = x.Get().GetSession(e)) || void 0 === o
+                (null === (o = N.Get().GetSession(e)) || void 0 === o
                   ? void 0
-                  : o.bUserCanModerate) && x.Get().ModerateQuestion(e, t, n, s)
+                  : o.bUserCanModerate) && N.Get().ModerateQuestion(e, t, n, s)
               );
             },
             [e, s],
@@ -913,56 +913,56 @@
           [t, n],
         );
       }
-      var T = t(68255),
-        j = t(82477),
-        k = t(76684),
-        G = t(9154),
+      var D = t(68255),
+        T = t(82477),
+        G = t(76684),
+        I = t(9154),
         U = t(738),
         M = t(12155),
         L = t(22797),
         R = t(32754),
         B = t(48479),
         q = t(52038),
-        E = t(61859),
-        V = t(41338),
-        P = t(14771),
-        H = t(76048),
-        y = t.n(H),
+        V = t(61859),
+        P = t(41338),
+        H = t(14771),
+        y = t(76048),
+        E = t.n(y),
         F = t(41471),
         O = t(6083);
-      function z(e) {
+      function K(e) {
         const s = (function () {
-          const [e, s] = o.useState(x.Get().GetAllSessions());
+          const [e, s] = o.useState(N.Get().GetAllSessions());
           return (
-            (0, c.hL)(x.Get().GetDashboardCallbackList(), s),
+            (0, c.hL)(N.Get().GetDashboardCallbackList(), s),
             o.useEffect(() => {
-              0 == e.length && x.Get().LoadAllSessions();
+              0 == e.length && N.Get().LoadAllSessions();
             }, [e.length]),
             e
           );
         })();
         return (0, n.jsxs)("div", {
-          className: y().QADashboardCtn,
+          className: E().QADashboardCtn,
           children: [
-            (0, n.jsx)(Y, {}),
+            (0, n.jsx)(z, {}),
             (0, n.jsxs)("div", {
-              className: (0, q.A)(y().DashboardRow, y().DashboardColumnHeaders),
+              className: (0, q.A)(E().DashboardRow, E().DashboardColumnHeaders),
               children: [
                 (0, n.jsx)("div", {
-                  className: y().QAndAName,
-                  children: (0, E.we)("#QAndA_Column_Name"),
+                  className: E().QAndAName,
+                  children: (0, V.we)("#QAndA_Column_Name"),
                 }),
                 (0, n.jsx)("div", {
-                  className: y().GIDSession,
-                  children: (0, E.we)("#QAndA_Column_GID"),
+                  className: E().GIDSession,
+                  children: (0, V.we)("#QAndA_Column_GID"),
                 }),
                 (0, n.jsx)("div", {
-                  className: y().QuestionCount,
-                  children: (0, E.we)("#QAndA_Column_QuestionCount"),
+                  className: E().QuestionCount,
+                  children: (0, V.we)("#QAndA_Column_QuestionCount"),
                 }),
                 (0, n.jsx)("div", {
-                  className: y().QAndADeleteColumn,
-                  children: (0, E.we)("#QAndA_Column_DeleteButtons"),
+                  className: E().QAndADeleteColumn,
+                  children: (0, V.we)("#QAndA_Column_DeleteButtons"),
                 }),
               ],
             }),
@@ -970,54 +970,54 @@
           ],
         });
       }
-      function Y(e) {
+      function z(e) {
         const s = o.useCallback(
           () =>
-            (0, U.mK)((0, n.jsx)(K, {}), window, {
-              strTitle: (0, E.we)("#QAndA_CreateQAndA_Title"),
+            (0, U.mK)((0, n.jsx)(W, {}), window, {
+              strTitle: (0, V.we)("#QAndA_CreateQAndA_Title"),
             }),
           [],
         );
         return (0, n.jsxs)("div", {
-          className: y().DashboardHeader,
+          className: E().DashboardHeader,
           children: [
             (0, n.jsx)("div", {
-              className: y().DashboardHeaderTitle,
-              children: (0, E.we)("#QAndA_Dashboard"),
+              className: E().DashboardHeaderTitle,
+              children: (0, V.we)("#QAndA_Dashboard"),
             }),
             (0, n.jsx)("div", {
-              className: y().DashboardHeaderButtonCtn,
-              children: (0, n.jsx)(T.$n, {
+              className: E().DashboardHeaderButtonCtn,
+              children: (0, n.jsx)(D.$n, {
                 onClick: s,
-                children: (0, E.we)("#QAndA_CreateQAndA_Button"),
+                children: (0, V.we)("#QAndA_CreateQAndA_Button"),
               }),
             }),
           ],
         });
       }
-      const W = 120;
-      function K(e) {
+      const Y = 120;
+      function W(e) {
         const s = (function () {
             const e = (0, p.m)("useCreateQAndAFn");
-            return o.useCallback((s) => x.Get().CreateNewSession(s, e), [e]);
+            return o.useCallback((s) => N.Get().CreateNewSession(s, e), [e]);
           })(),
           [t, i] = o.useState("");
-        return (0, n.jsx)(G.o0, {
-          strTitle: (0, E.we)("#QAndA_CreateQAndA_Title"),
-          strDescription: (0, E.we)("#QAndA_CreateQAndA_Instructions"),
-          strOKButtonText: (0, E.we)("#Button_Create"),
+        return (0, n.jsx)(I.o0, {
+          strTitle: (0, V.we)("#QAndA_CreateQAndA_Title"),
+          strDescription: (0, V.we)("#QAndA_CreateQAndA_Instructions"),
+          strOKButtonText: (0, V.we)("#Button_Create"),
           onOK: () => s(t),
           bOKDisabled: 0 == t.length,
           closeModal: e.closeModal,
-          className: y().CreateQAndADialog,
-          children: (0, n.jsx)(T.pd, {
+          className: E().CreateQAndADialog,
+          children: (0, n.jsx)(D.pd, {
             type: "text",
-            className: y().NameInput,
+            className: E().NameInput,
             value: t,
-            placeholder: (0, E.we)("#QAndA_EnterNamePrompt"),
+            placeholder: (0, V.we)("#QAndA_EnterNamePrompt"),
             onFocus: (e) => e.target.select(),
             onChange: (e) => i(e.currentTarget.value),
-            maxLength: W,
+            maxLength: Y,
           }),
         });
       }
@@ -1034,28 +1034,28 @@
               e.stopPropagation(),
                 e.preventDefault(),
                 (0, U.mK)((0, n.jsx)(Z, { qanda: s }), window, {
-                  strTitle: (0, E.we)("#QAndA_CreateQAndA_Title"),
+                  strTitle: (0, V.we)("#QAndA_CreateQAndA_Title"),
                 });
             },
             [s],
           );
         return (0, n.jsxs)("a", {
-          className: y().DashboardRow,
+          className: E().DashboardRow,
           href: t,
           children: [
             (0, n.jsx)(J, { qanda: s }),
             (0, n.jsx)("div", {
-              className: y().GIDSession,
+              className: E().GIDSession,
               children: s.gidSession,
             }),
             (0, n.jsx)("div", {
-              className: y().QuestionCount,
+              className: E().QuestionCount,
               children: s.rgQuestionGIDs.length,
             }),
             (0, n.jsx)("div", {
-              className: y().QAndADeleteColumn,
+              className: E().QAndADeleteColumn,
               children: (0, n.jsx)("div", {
-                className: y().DeleteButton,
+                className: E().DeleteButton,
                 onClick: i,
                 children: (0, n.jsx)(M.lMJ, {}),
               }),
@@ -1069,42 +1069,42 @@
           [a, r] = o.useState(s.strName),
           l = (function () {
             const e = (0, p.m)("useRenameQAndAFn");
-            return o.useCallback((s, t) => x.Get().RenameSession(s, t, e), [e]);
+            return o.useCallback((s, t) => N.Get().RenameSession(s, t, e), [e]);
           })(),
           d =
             s.strName.length > 0
               ? s.strName
               : (0, n.jsx)("span", {
-                  className: y().Prompt,
-                  children: (0, E.we)("#QAndA_EnterNamePrompt"),
+                  className: E().Prompt,
+                  children: (0, V.we)("#QAndA_EnterNamePrompt"),
                 }),
           u = (0, n.jsxs)("div", {
-            className: y().NameInput,
+            className: E().NameInput,
             children: [
-              (0, n.jsx)(T.pd, {
+              (0, n.jsx)(D.pd, {
                 type: "text",
-                className: y().NameInput,
+                className: E().NameInput,
                 value: a,
-                placeholder: (0, E.we)("#QAndA_EnterNamePrompt"),
+                placeholder: (0, V.we)("#QAndA_EnterNamePrompt"),
                 onFocus: (e) => e.target.select(),
                 onChange: (e) => r(e.currentTarget.value),
-                maxLength: W,
+                maxLength: Y,
               }),
-              (0, n.jsx)(T.jn, {
+              (0, n.jsx)(D.jn, {
                 onClick: (e) => {
                   e.stopPropagation(),
                     e.preventDefault(),
-                    0 != (0, V.kd)(a, s.strName)
+                    0 != (0, P.kd)(a, s.strName)
                       ? l(s.gidSession, a).then(() => i(!1))
                       : i(!1);
                 },
-                className: y().InputButton,
-                children: (0, E.we)("#Button_Save"),
+                className: E().InputButton,
+                children: (0, V.we)("#Button_Save"),
               }),
             ],
           });
         return (0, n.jsx)("div", {
-          className: (0, q.A)(y().QAndAName, t && y().Editing),
+          className: (0, q.A)(E().QAndAName, t && E().Editing),
           onClick: (e) => {
             e.stopPropagation(), e.preventDefault(), t || i(!0);
           },
@@ -1115,23 +1115,23 @@
         const { qanda: s } = e,
           t = (function () {
             const e = (0, p.m)("useDeleteQAndAFn");
-            return o.useCallback((s) => x.Get().DeleteSession(s, e), [e]);
+            return o.useCallback((s) => N.Get().DeleteSession(s, e), [e]);
           })();
-        return (0, n.jsxs)(G.o0, {
-          strTitle: (0, E.we)("#QAndA_Column_DeleteButtons"),
-          strDescription: (0, E.we)("#QAndA_DeleteQAndA_Instructions"),
+        return (0, n.jsxs)(I.o0, {
+          strTitle: (0, V.we)("#QAndA_Column_DeleteButtons"),
+          strDescription: (0, V.we)("#QAndA_DeleteQAndA_Instructions"),
           onOK: () => t(s.gidSession),
           closeModal: e.closeModal,
-          className: y().DeleteQAndADialog,
+          className: E().DeleteQAndADialog,
           children: [
             (0, n.jsx)("div", {
-              className: y().DeleteInfo,
-              children: (0, E.we)("#QAndA_Column_Name") + ": " + s.strName,
+              className: E().DeleteInfo,
+              children: (0, V.we)("#QAndA_Column_Name") + ": " + s.strName,
             }),
             (0, n.jsx)("div", {
-              className: y().DeleteInfo,
+              className: E().DeleteInfo,
               children:
-                (0, E.we)("#QAndA_Column_QuestionCount") +
+                (0, V.we)("#QAndA_Column_QuestionCount") +
                 ": " +
                 s.rgQuestionGIDs.length,
             }),
@@ -1148,57 +1148,57 @@
             rtNow: l,
           } = e,
           [d, u] = (function (e) {
-            const [s, t] = o.useState(x.Get().GetQuestion(e));
-            (0, c.hL)(x.Get().GetQuestionCallbackList(e), t);
+            const [s, t] = o.useState(N.Get().GetQuestion(e));
+            (0, c.hL)(N.Get().GetQuestionCallbackList(e), t);
             const [n, i] = o.useState(!!s);
             return [s, !!s || n];
           })(t);
         if (!d) return null;
         const m = l - d.rtPostTime,
-          A = m < P.Kp.PerDay ? (0, E.Hq)(m) : (0, E._l)(d.rtPostTime),
+          A = m < H.Kp.PerDay ? (0, V.Hq)(m) : (0, V._l)(d.rtPostTime),
           h = a ? () => r(t, !d.bUserUpVoted) : null,
           v = a
             ? d.bUserUpVoted
-              ? y().Vote_Positive
-              : y().Vote_Ready
-            : y().Vote_CannotVote,
+              ? E().Vote_Positive
+              : E().Vote_Ready
+            : E().Vote_CannotVote,
           Q = (0, q.A)(
-            y().Question,
-            d.eState == N && y().Hidden,
-            d.eState == g && y().Moderated,
-            d.eState == C && y().Unmoderated,
-            d.eState == w && y().Answered,
+            E().Question,
+            d.eState == x && E().Hidden,
+            d.eState == w && E().Moderated,
+            d.eState == g && E().Unmoderated,
+            d.eState == S && E().Answered,
           );
         return (0, n.jsxs)("div", {
           className: Q,
           children: [
             (0, n.jsxs)("div", {
-              className: (0, q.A)(y().QuestionCtn, "questionCtn"),
+              className: (0, q.A)(E().QuestionCtn, "questionCtn"),
               children: [
                 (0, n.jsx)(se, { accountID: d.posterAccountID }),
                 (0, n.jsxs)("div", {
-                  className: y().QuestionText,
+                  className: E().QuestionText,
                   children: [
                     (0, n.jsxs)("div", {
-                      className: y().QuestionAndVotes,
+                      className: E().QuestionAndVotes,
                       children: [
                         (0, n.jsx)("div", {
-                          className: y().QuestionTitle,
+                          className: E().QuestionTitle,
                           children: d.strQuestionText,
                         }),
                         (0, n.jsx)(R.he, {
                           toolTipContent:
                             a &&
                             (d.bUserUpVoted
-                              ? (0, E.we)("#QAndA_VoteRemoveTooltip")
-                              : (0, E.we)("#QAndA_VoteTooltip")),
+                              ? (0, V.we)("#QAndA_VoteRemoveTooltip")
+                              : (0, V.we)("#QAndA_VoteTooltip")),
                           children: (0, n.jsxs)("div", {
-                            className: (0, q.A)(v, y().Votes),
+                            className: (0, q.A)(v, E().Votes),
                             onClick: h,
                             children: [
-                              (0, n.jsx)(M.bfp, { className: y().RateIcon }),
+                              (0, n.jsx)(M.bfp, { className: E().RateIcon }),
                               (0, n.jsx)("div", {
-                                className: y().VoteCount,
+                                className: E().VoteCount,
                                 children: (0, O.D)(Number(d.nVoteCount)),
                               }),
                             ],
@@ -1207,13 +1207,13 @@
                       ],
                     }),
                     (0, n.jsx)("div", {
-                      className: y().QuestionStats,
+                      className: E().QuestionStats,
                       children: (0, n.jsx)("div", {
-                        className: y().PostTime,
-                        children: (0, n.jsx)(k.gS, {
+                        className: E().PostTime,
+                        children: (0, n.jsx)(G.gS, {
                           rtFullDate: d.rtPostTime,
-                          className: y().PostTime,
-                          stylesmodule: y(),
+                          className: E().PostTime,
+                          stylesmodule: E(),
                           children: A,
                         }),
                       }),
@@ -1237,44 +1237,44 @@
           o = s.rtAnswerTime && t - s.rtAnswerTime,
           i =
             s.rtAnswerTime &&
-            (o < P.Kp.PerDay ? (0, E.Hq)(o) : (0, E._l)(s.rtAnswerTime));
+            (o < H.Kp.PerDay ? (0, V.Hq)(o) : (0, V._l)(s.rtAnswerTime));
         return s.strAnswerText
           ? (0, n.jsxs)("div", {
-              className: y().Answer,
+              className: E().Answer,
               children: [
                 (0, n.jsxs)("div", {
-                  className: y().AnswerTitle,
+                  className: E().AnswerTitle,
                   children: [
                     (0, n.jsx)("div", {
-                      className: y().AnswerCheck,
+                      className: E().AnswerCheck,
                       children: (0, n.jsx)(M.X4B, { color: "#67c1f5" }),
                     }),
-                    (0, E.we)("#QAndA_ModeratorAnswerTitle"),
+                    (0, V.we)("#QAndA_ModeratorAnswerTitle"),
                   ],
                 }),
                 (0, n.jsxs)("div", {
-                  className: y().AnswerText,
+                  className: E().AnswerText,
                   children: [" ", s.strAnswerText, " "],
                 }),
                 (0, n.jsx)("div", {
-                  className: y().QuestionStats,
-                  children: (0, n.jsx)(k.gS, {
+                  className: E().QuestionStats,
+                  children: (0, n.jsx)(G.gS, {
                     rtFullDate: s.rtAnswerTime,
-                    className: y().PostTime,
-                    stylesmodule: y(),
+                    className: E().PostTime,
+                    stylesmodule: E(),
                     children: i,
                   }),
                 }),
               ],
             })
           : (0, n.jsxs)("div", {
-              className: y().AnswerTitle,
+              className: E().AnswerTitle,
               children: [
                 (0, n.jsx)("div", {
-                  className: y().AnswerCheck,
+                  className: E().AnswerCheck,
                   children: (0, n.jsx)(M.X4B, { color: "#67c1f5" }),
                 }),
-                (0, E.we)("#QAndA_AlreadyAnsweredTitle"),
+                (0, V.we)("#QAndA_AlreadyAnsweredTitle"),
               ],
             });
       }
@@ -1286,7 +1286,7 @@
           ? null
           : (0, n.jsx)("a", {
               href: i.GetCommunityProfileURL(),
-              className: y().PersonaName,
+              className: E().PersonaName,
               "data-miniprofile": "s" + t,
               children:
                 null !== (s = null == i ? void 0 : i.m_strPlayerName) &&
@@ -1297,52 +1297,52 @@
       }
       function te(e) {
         const { gidSession: s, gidQuestion: t, eState: o } = e,
-          { fnAnswerQuestion: i, fnModerateQuestion: a } = D(s),
-          r = o == C || o == N,
-          l = o != N,
-          d = o == g;
+          { fnAnswerQuestion: i, fnModerateQuestion: a } = k(s),
+          r = o == g || o == x,
+          l = o != x,
+          d = o == w;
         return (0, n.jsxs)("div", {
-          className: y().ModeratorSection,
+          className: E().ModeratorSection,
           children: [
-            (0, E.we)("#QAndA_ModeratorLabel"),
+            (0, V.we)("#QAndA_ModeratorLabel"),
             (0, n.jsx)("div", {
-              className: y().ToolRow,
+              className: E().ToolRow,
               children: (0, n.jsx)(re, {
-                strPrompt: (0, E.we)("#QAndA_AnswerPrompt"),
+                strPrompt: (0, V.we)("#QAndA_AnswerPrompt"),
                 fnSubmit: (e) => i(t, e),
               }),
             }),
             (0, n.jsxs)("div", {
-              className: y().ToolRow,
+              className: E().ToolRow,
               children: [
-                (0, E.we)("#QAndA_ModeratorOtherOptionsLabel"),
+                (0, V.we)("#QAndA_ModeratorOtherOptionsLabel"),
                 (0, n.jsx)(R.he, {
-                  toolTipContent: (0, E.we)(
+                  toolTipContent: (0, V.we)(
                     "#QAndA_ModerateApproveButton_ttip",
                   ),
-                  children: (0, n.jsx)(T.$n, {
-                    onClick: () => a(t, g),
-                    className: y().InputButton,
+                  children: (0, n.jsx)(D.$n, {
+                    onClick: () => a(t, w),
+                    className: E().InputButton,
                     disabled: !r,
-                    children: (0, E.we)("#QAndA_ModerateApproveButton"),
+                    children: (0, V.we)("#QAndA_ModerateApproveButton"),
                   }),
                 }),
                 (0, n.jsx)(R.he, {
-                  toolTipContent: (0, E.we)("#QAndA_ModerateHideButton_ttip"),
-                  children: (0, n.jsx)(T.$n, {
-                    onClick: () => a(t, N),
-                    className: y().InputButton,
+                  toolTipContent: (0, V.we)("#QAndA_ModerateHideButton_ttip"),
+                  children: (0, n.jsx)(D.$n, {
+                    onClick: () => a(t, x),
+                    className: E().InputButton,
                     disabled: !l,
-                    children: (0, E.we)("#QAndA_ModerateHideButton"),
+                    children: (0, V.we)("#QAndA_ModerateHideButton"),
                   }),
                 }),
                 (0, n.jsx)(R.he, {
-                  toolTipContent: (0, E.we)("#QAndA_QuickAnswerButton_ttip"),
-                  children: (0, n.jsx)(T.$n, {
+                  toolTipContent: (0, V.we)("#QAndA_QuickAnswerButton_ttip"),
+                  children: (0, n.jsx)(D.$n, {
                     onClick: () => i(t, ""),
-                    className: y().InputButton,
+                    className: E().InputButton,
                     disabled: !d,
-                    children: (0, E.we)("#QAndA_QuickAnswerButton"),
+                    children: (0, V.we)("#QAndA_QuickAnswerButton"),
                   }),
                 }),
               ],
@@ -1355,16 +1355,16 @@
         v();
         const { strName: t, bUserCanModerate: o } = b(s);
         return (0, n.jsxs)("div", {
-          className: y().QAFullPageView,
+          className: E().QAFullPageView,
           children: [
             (0, n.jsx)("div", {
-              className: y().QAName,
+              className: E().QAName,
               children:
-                (0, E.we)("#QAndA_Header") +
+                (0, V.we)("#QAndA_Header") +
                 ((null == t ? void 0 : t.length) > 0 ? ": " + t : ""),
             }),
             (0, n.jsxs)("div", {
-              className: y().QAColumns,
+              className: E().QAColumns,
               children: [
                 (0, n.jsx)(ie, { gidSession: s, bHalfOfFullPage: o }),
                 o && (0, n.jsx)(oe, { gidSession: s }),
@@ -1383,13 +1383,13 @@
           a = (0, r.P_)(10);
         return t
           ? (0, n.jsxs)("div", {
-              className: (0, q.A)(y().QAModeratorColumn, y().QASplitColumns),
+              className: (0, q.A)(E().QAModeratorColumn, E().QASplitColumns),
               children: [
                 (0, n.jsx)(B.qx, {
-                  title: (0, E.we)("#QAndA_ModeratorViewHeader"),
-                  className: y().ModeratorInstructions,
+                  title: (0, V.we)("#QAndA_ModeratorViewHeader"),
+                  className: E().ModeratorInstructions,
                   children: (0, n.jsx)("div", {
-                    className: y().QuestionList,
+                    className: E().QuestionList,
                     children: o.map((e) =>
                       (0, n.jsx)(
                         $,
@@ -1406,11 +1406,11 @@
                   }),
                 }),
                 (0, n.jsx)(B.qx, {
-                  title: (0, E.we)("#QAndA_HiddenQuestionsHeader"),
-                  className: y().AnsweredSectionHeader,
+                  title: (0, V.we)("#QAndA_HiddenQuestionsHeader"),
+                  className: E().AnsweredSectionHeader,
                   bStartMinimized: !0,
                   children: (0, n.jsx)("div", {
-                    className: y().QuestionList,
+                    className: E().QuestionList,
                     children: i.map((e) =>
                       (0, n.jsx)(
                         $,
@@ -1443,44 +1443,44 @@
             rgAnsweredQuestionGIDs: c,
             rgNewQuestionGIDs: m,
           } = b(s),
-          { fnReload: A, bIsReloading: h } = f(s),
+          { fnReload: A, bIsReloading: h } = j(s),
           Q = (0, r.P_)(10),
           _ = a && t,
-          { fnModerateQuestion: p } = D(s);
+          { fnModerateQuestion: p } = k(s);
         return (0, n.jsxs)("div", {
-          className: (0, q.A)(y().QAMainCtn, t && y().QASplitColumns),
+          className: (0, q.A)(E().QAMainCtn, t && E().QASplitColumns),
           children: [
             (0, n.jsxs)("div", {
-              className: (0, q.A)(y().QAHeader, _ && y().ModerationHeader),
+              className: (0, q.A)(E().QAHeader, _ && E().ModerationHeader),
               children: [
-                (0, n.jsx)(T.$n, {
+                (0, n.jsx)(D.$n, {
                   onClick: A,
                   disabled: !o,
                   className: (0, q.A)(
-                    y().InputButton,
-                    y().Reload,
-                    h && y().Reloading,
+                    E().InputButton,
+                    E().Reload,
+                    h && E().Reloading,
                   ),
                   children: (0, n.jsx)("div", {
-                    className: y().ReloadIcon,
+                    className: E().ReloadIcon,
                     children: (0, n.jsx)(M.MvQ, {}),
                   }),
                 }),
                 _
                   ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                        (0, E.we)("#QAndA_ModeratorLabelHeader"),
+                        (0, V.we)("#QAndA_ModeratorLabelHeader"),
                         (0, n.jsx)(R.he, {
-                          toolTipContent: (0, E.we)(
+                          toolTipContent: (0, V.we)(
                             "#QAndA_ModerateHideAllButton_ttip",
                           ),
-                          children: (0, n.jsx)(T.$n, {
+                          children: (0, n.jsx)(D.$n, {
                             onClick: async () => {
                               for (const e of [m, u, c])
-                                for (const s of e) await p(s, N);
+                                for (const s of e) await p(s, x);
                             },
-                            className: y().InputButton,
-                            children: (0, E.we)("#QAndA_ModerateHideAllButton"),
+                            className: E().InputButton,
+                            children: (0, V.we)("#QAndA_ModerateHideAllButton"),
                           }),
                         }),
                       ],
@@ -1492,20 +1492,20 @@
             }),
             u.length + c.length == 0
               ? (0, n.jsx)("div", {
-                  className: y().NoQuestions,
-                  children: (0, E.we)("#QAndA_NoQuestionsYet"),
+                  className: E().NoQuestions,
+                  children: (0, V.we)("#QAndA_NoQuestionsYet"),
                 })
               : (0, n.jsxs)("div", {
-                  className: y().QuestionsCtn,
+                  className: E().QuestionsCtn,
                   children: [
                     (0, n.jsx)("div", {
-                      className: y().InsetShadowTopCtn,
+                      className: E().InsetShadowTopCtn,
                       children: (0, n.jsx)("div", {
-                        className: y().InsetShadowTop,
+                        className: E().InsetShadowTop,
                       }),
                     }),
                     (0, n.jsx)("div", {
-                      className: y().QuestionList,
+                      className: E().QuestionList,
                       children: o
                         ? u.map((e) =>
                             (0, n.jsx)(
@@ -1527,13 +1527,13 @@
                       (0, n.jsxs)(n.Fragment, {
                         children: [
                           (0, n.jsx)("div", {
-                            className: y().AnsweredSectionHeader,
-                            children: (0, E.we)(
+                            className: E().AnsweredSectionHeader,
+                            children: (0, V.we)(
                               "#QAndA_AnsweredQuestionsHeader",
                             ),
                           }),
                           (0, n.jsx)("div", {
-                            className: y().QuestionList,
+                            className: E().QuestionList,
                             children: c.map((e) =>
                               (0, n.jsx)(
                                 $,
@@ -1562,11 +1562,11 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)("div", {
-              className: y().Description,
-              children: (0, E.we)("#QAndA_HeaderDescription"),
+              className: E().Description,
+              children: (0, V.we)("#QAndA_HeaderDescription"),
             }),
             (0, n.jsx)(re, {
-              strPrompt: (0, E.we)("#QAndA_QuestionPrompt"),
+              strPrompt: (0, V.we)("#QAndA_QuestionPrompt"),
               fnSubmit: async (s) => {
                 const n = await e.fnAskQuestion(s);
                 return (
@@ -1581,8 +1581,8 @@
               },
             }),
             (0, n.jsx)("div", {
-              className: (0, q.A)(y().QuestionACK, s && y().Visible),
-              children: (0, E.we)("#QAndA_QuestionWasPosted"),
+              className: (0, q.A)(E().QuestionACK, s && E().Visible),
+              children: (0, V.we)("#QAndA_QuestionWasPosted"),
             }),
           ],
         });
@@ -1593,9 +1593,9 @@
           [l, d] = o.useState(!1);
         return (0, n.jsx)(n.Fragment, {
           children: (0, n.jsxs)("div", {
-            className: y().InputCtn,
+            className: E().InputCtn,
             children: [
-              (0, n.jsx)(T.pd, {
+              (0, n.jsx)(D.pd, {
                 type: "text",
                 placeholder: s,
                 maxLength: 512,
@@ -1603,24 +1603,24 @@
                 onChange: (e) => r(e.target.value),
               }),
               (0, n.jsxs)("div", {
-                className: y().ButtonCtn,
+                className: E().ButtonCtn,
                 children: [
                   l &&
                     (0, n.jsx)("div", {
-                      className: y().SaveSpinner,
+                      className: E().SaveSpinner,
                       children: (0, n.jsx)(L.t, {
                         size: "small",
                         position: "center",
                       }),
                     }),
-                  (0, n.jsx)(T.$n, {
+                  (0, n.jsx)(D.$n, {
                     onClick: async () => {
                       d(!0);
                       (await t(a)) == i.R && r(""), d(!1);
                     },
                     disabled: l || !a,
-                    className: y().InputButton,
-                    children: (0, E.we)("#QAndA_SubmitCommentButton"),
+                    className: E().InputButton,
+                    children: (0, V.we)("#QAndA_SubmitCommentButton"),
                   }),
                 ],
               }),
@@ -1630,17 +1630,17 @@
       }
       function le(e) {
         return (0, n.jsxs)("div", {
-          className: y().Description,
+          className: E().Description,
           children: [
             (0, n.jsx)("div", {
-              className: y().LogInPrompt,
-              children: (0, E.we)("#QAndA_LogInPrompt"),
+              className: E().LogInPrompt,
+              children: (0, V.we)("#QAndA_LogInPrompt"),
             }),
             !m.iA.logged_in &&
-              (0, n.jsx)(T.$n, {
-                onClick: j.vg,
-                className: (0, q.A)(y().SignInButton, y().InputButton),
-                children: (0, E.we)("#Login_SignIn"),
+              (0, n.jsx)(D.$n, {
+                onClick: T.vg,
+                className: (0, q.A)(E().SignInButton, E().InputButton),
+                children: (0, V.we)("#Login_SignIn"),
               }),
           ],
         });

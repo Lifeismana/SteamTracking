@@ -5872,10 +5872,10 @@
         }
       }
       !(function (_) {
-        (_.CreateBroadcastChannel = function (_, _) {
+        (_.CreateBroadcastChannel = function (_, _, _) {
           return _.SendMsg(
             "SteamTV.CreateBroadcastChannel#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               ePrivilege: 1,
@@ -5883,10 +5883,10 @@
             },
           );
         }),
-          (_.GetBroadcastChannelID = function (_, _) {
+          (_.GetBroadcastChannelID = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelID#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5894,10 +5894,10 @@
               },
             );
           }),
-          (_.SetBroadcastChannelProfile = function (_, _) {
+          (_.SetBroadcastChannelProfile = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetBroadcastChannelProfile#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -5905,10 +5905,10 @@
               },
             );
           }),
-          (_.GetBroadcastChannelProfile = function (_, _) {
+          (_.GetBroadcastChannelProfile = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelProfile#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5916,10 +5916,10 @@
               },
             );
           }),
-          (_.SetBroadcastChannelImage = function (_, _) {
+          (_.SetBroadcastChannelImage = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetBroadcastChannelImage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -5927,10 +5927,10 @@
               },
             );
           }),
-          (_.GetBroadcastChannelImages = function (_, _) {
+          (_.GetBroadcastChannelImages = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelImages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5938,10 +5938,10 @@
               },
             );
           }),
-          (_.SetBroadcastChannelLinkRegions = function (_, _) {
+          (_.SetBroadcastChannelLinkRegions = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetBroadcastChannelLinkRegions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -5949,10 +5949,10 @@
               },
             );
           }),
-          (_.GetBroadcastChannelLinks = function (_, _) {
+          (_.GetBroadcastChannelLinks = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelLinks#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5960,10 +5960,10 @@
               },
             );
           }),
-          (_.GetBroadcastChannelBroadcasters = function (_, _) {
+          (_.GetBroadcastChannelBroadcasters = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelBroadcasters#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5972,10 +5972,10 @@
               },
             );
           }),
-          (_.GetFollowedChannels = function (_, _) {
+          (_.GetFollowedChannels = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetFollowedChannels#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5984,10 +5984,10 @@
               },
             );
           }),
-          (_.GetSubscribedChannels = function (_, _) {
+          (_.GetSubscribedChannels = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetSubscribedChannels#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -5996,10 +5996,10 @@
               },
             );
           }),
-          (_.GetBroadcastChannelStatus = function (_, _) {
+          (_.GetBroadcastChannelStatus = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6007,10 +6007,10 @@
               },
             );
           }),
-          (_.FollowBroadcastChannel = function (_, _) {
+          (_.FollowBroadcastChannel = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.FollowBroadcastChannel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -6018,10 +6018,10 @@
               },
             );
           }),
-          (_.SubscribeBroadcastChannel = function (_, _) {
+          (_.SubscribeBroadcastChannel = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SubscribeBroadcastChannel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -6029,10 +6029,10 @@
               },
             );
           }),
-          (_.GetBroadcastChannelClips = function (_, _) {
+          (_.GetBroadcastChannelClips = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelClips#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6040,10 +6040,10 @@
               },
             );
           }),
-          (_.ReportBroadcastChannel = function (_, _) {
+          (_.ReportBroadcastChannel = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.ReportBroadcastChannel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -6051,10 +6051,10 @@
               },
             );
           }),
-          (_.GetBroadcastChannelInteraction = function (_, _) {
+          (_.GetBroadcastChannelInteraction = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetBroadcastChannelInteraction#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6063,74 +6063,84 @@
               },
             );
           }),
-          (_.GetGames = function (_, _) {
-            return _.SendMsg("SteamTV.GetGames#1", (0, _._)(_, _), _, {
+          (_.GetGames = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetGames#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.GetChannels = function (_, _) {
-            return _.SendMsg("SteamTV.GetChannels#1", (0, _._)(_, _), _, {
+          (_.GetChannels = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetChannels#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.AddChatBan = function (_, _) {
-            return _.SendMsg("SteamTV.AddChatBan#1", (0, _._)(_, _), _, {
+          (_.AddChatBan = function (_, _, _) {
+            return _.SendMsg("SteamTV.AddChatBan#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetChatBans = function (_, _) {
-            return _.SendMsg("SteamTV.GetChatBans#1", (0, _._)(_, _), _, {
+          (_.GetChatBans = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetChatBans#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.AddChatModerator = function (_, _) {
-            return _.SendMsg("SteamTV.AddChatModerator#1", (0, _._)(_, _), _, {
+          (_.AddChatModerator = function (_, _, _) {
+            return _.SendMsg(
+              "SteamTV.AddChatModerator#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.GetChatModerators = function (_, _, _) {
+            return _.SendMsg(
+              "SteamTV.GetChatModerators#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+              },
+            );
+          }),
+          (_.AddWordBan = function (_, _, _) {
+            return _.SendMsg("SteamTV.AddWordBan#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
-          (_.GetChatModerators = function (_, _) {
-            return _.SendMsg("SteamTV.GetChatModerators#1", (0, _._)(_, _), _, {
+          (_.GetWordBans = function (_, _, _) {
+            return _.SendMsg("SteamTV.GetWordBans#1", (0, _._)(_, _, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            });
+          }),
+          (_.JoinChat = function (_, _, _) {
+            return _.SendMsg("SteamTV.JoinChat#1", (0, _._)(_, _, _), _, {
+              ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
+          (_.Search = function (_, _, _) {
+            return _.SendMsg("SteamTV.Search#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           }),
-          (_.AddWordBan = function (_, _) {
-            return _.SendMsg("SteamTV.AddWordBan#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (_.GetWordBans = function (_, _) {
-            return _.SendMsg("SteamTV.GetWordBans#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            });
-          }),
-          (_.JoinChat = function (_, _) {
-            return _.SendMsg("SteamTV.JoinChat#1", (0, _._)(_, _), _, {
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
-          }),
-          (_.Search = function (_, _) {
-            return _.SendMsg("SteamTV.Search#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-            });
-          }),
-          (_.GetSteamTVUserSettings = function (_, _) {
+          (_.GetSteamTVUserSettings = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetSteamTVUserSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6139,10 +6149,10 @@
               },
             );
           }),
-          (_.SetSteamTVUserSettings = function (_, _) {
+          (_.SetSteamTVUserSettings = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.SetSteamTVUserSettings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -6150,10 +6160,10 @@
               },
             );
           }),
-          (_.GetMyBroadcastChannels = function (_, _) {
+          (_.GetMyBroadcastChannels = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetMyBroadcastChannels#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6162,10 +6172,10 @@
               },
             );
           }),
-          (_.GetHomePageContents = function (_, _) {
+          (_.GetHomePageContents = function (_, _, _) {
             return _.SendMsg(
               "SteamTV.GetHomePageContents#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -6174,8 +6184,8 @@
               },
             );
           }),
-          (_.AppCheer = function (_, _) {
-            return _.SendMsg("SteamTV.AppCheer#1", (0, _._)(_, _), _, {
+          (_.AppCheer = function (_, _, _) {
+            return _.SendMsg("SteamTV.AppCheer#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
@@ -8151,7 +8161,7 @@
                   .preferences();
               } else {
                 let _ = {
-                  sessionid: _._.SESSIONID,
+                  sessionid: (0, _._)(),
                   origin: _(),
                 };
                 const _ = await _().get(
@@ -8180,7 +8190,7 @@
                     .words();
                 } else {
                   let _ = {
-                    sessionid: _._.SESSIONID,
+                    sessionid: (0, _._)(),
                     origin: _(),
                   };
                   const _ = await _().get(
@@ -8407,7 +8417,7 @@
         if (!_) {
           const _ = new Set();
           let _ = {
-            sessionid: _._.SESSIONID,
+            sessionid: (0, _._)(),
             origin: _(),
           };
           _()
@@ -8621,7 +8631,7 @@
             const _ = {
                 steamid: this.m_ulBroadcastSteamID,
                 broadcastid: this.m_ulBroadcastID,
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               },
               _ = await _().get(`${_._.CHAT_BASE_URL}broadcast/getchatinfo`, {
                 params: _,
@@ -8861,7 +8871,7 @@
             _.append("broadcaststeamid", this.m_ulBroadcastSteamID),
               _.append("moderatorsteamid", _),
               _.append("bAdd", _ ? "1" : "0"),
-              _.append("sessionid", _._.SESSIONID);
+              _.append("sessionid", (0, _._)());
             try {
               await _().post(
                 `${_._.CHAT_BASE_URL}broadcast/ajaxupdatechannelmod`,
@@ -8916,7 +8926,7 @@
               _.append("bantype", _),
               _.append("duration", __webpack_require__.toString()),
               _.append("perm", _ ? "1" : "0"),
-              _.append("sessionid", _._.SESSIONID);
+              _.append("sessionid", (0, _._)());
             try {
               await _().post(
                 `${_._.CHAT_BASE_URL}broadcast/ajaxupdateusermute`,
@@ -15396,7 +15406,7 @@
               broadcastid: 0,
               viewertoken: this.m_broadcastSettings.ulViewerToken,
               watchlocation: _,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               is_webrtc: _.m_bWebRTC,
             },
             _ = null;
@@ -15514,7 +15524,7 @@
           let _ = {
               clipid: _.m_clipID,
               watchlocation: _,
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
             },
             _ = null;
           try {

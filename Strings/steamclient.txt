@@ -284,6 +284,7 @@
  Tried to set runtime antidrift value, but we are using hardware calibration, so we're not analysing the raw gyro drift. Skip. ( %f,  %f,  %f ).\n
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
+ Valid parameters\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
  [clone
@@ -11683,11 +11684,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -21274,6 +21275,7 @@ CRemoteClientJobRemotePlayInvite timed out k_ERemoteClientWaitUIProcessStreamSta
 CRemoteClientJobRequestControllerConfig
 CRemoteClientJobStartRemoteApp
 CRemoteClientJobStartRemoteApp couldn't get nonce for NVIDIA launch
+CRemoteClientJobStartRemoteApp launch_only success
 CRemoteClientJobStartRemoteApp received e_launch_result %d
 CRemoteClientJobStartRemoteApp starting authorization flow with %llu (%s)
 CRemoteClientJobStartRemoteApp timed out waiting for k_ERemoteClientWaitUIClientAuthorizationResponse
@@ -27798,6 +27800,7 @@ ISteamHTTPDestroyed while request in flight
 ISteamMatchmakingServers rate limited a server list refresh for appid: %u, you are refreshing too often
 ISteamNetworkingSocketsSerialized::GetCertAsync failed
 ISteamScreenshots::AddScreenshotToLibrary - screenshot does not exist at location %s\n
+ISteamScreenshots::AddScreenshotToLibrary - unable to determine valid gameID\n
 ISteamScreenshots::AddScreenshotToLibrary - vr screenshot does not exist at location %s\n
 ISteamScreenshots::SetLocation - empty location is not valid
 ISteamScreenshots::SetLocation - location '%s' longer than allowed and will be truncated, max length is %d\n
@@ -27873,6 +27876,7 @@ IVRSteamPrivate_025
 IVRSteamPrivate_026
 IVRSteamPrivate_027
 IVRSteamPrivate_028
+IVRSteamPrivate_029
 IVRSystem_022
 I\n\finvite_links
 I\n\nSendShader
@@ -30827,6 +30831,7 @@ N2vr19IVRSteamPrivate_025E
 N2vr19IVRSteamPrivate_026E
 N2vr19IVRSteamPrivate_027E
 N2vr19IVRSteamPrivate_028E
+N2vr19IVRSteamPrivate_029E
 N32SteamDatagramCachedCredentials_t11RelayTicketE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
@@ -30863,7 +30868,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_028EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_029EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -30893,6 +30898,7 @@ N5vrapi33CVRSteamPrivateAdapter_024_as_025E
 N5vrapi33CVRSteamPrivateAdapter_025_as_026E
 N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N5vrapi33CVRSteamPrivateAdapter_027_as_028E
+N5vrapi33CVRSteamPrivateAdapter_028_as_029E
 N6TagLib10ByteVector17ByteVectorPrivateE
 N6TagLib10ByteVectorE
 N6TagLib10FileStreamE
@@ -39258,7 +39264,6 @@ Valencian
 Valid
 Valid palette required for paletted images
 Valid parameters:\n
-Valid parameters\n
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -42939,6 +42944,7 @@ Zulu
 \n\vk_EMsgStats
 \n\vlast_logoff
 \n\vlast_played
+\n\vlaunch_only
 \n\vlaunch_task
 \n\vleft_bumper
 \n\vlive_branch
@@ -53483,8 +53489,8 @@ low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3066
 low-pri yield - /data/src/clientdll/peercontentserver.cpp:712
 low-pri yield - /data/src/clientdll/subscribedfilelistcache.cpp:368
 low-pri yield - /data/src/clientdll/subscribedfilelistcache.cpp:385
-low-pri yield - /data/src/clientdll/userscreenshots.cpp:2668
-low-pri yield - /data/src/clientdll/userscreenshots.cpp:2687
+low-pri yield - /data/src/clientdll/userscreenshots.cpp:2681
+low-pri yield - /data/src/clientdll/userscreenshots.cpp:2700
 lower
 lowest_recent_price_in_cents
 lowviolence
@@ -61375,7 +61381,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul  7 2026 02:11:41
+steam Jul 12 2026 12:15:14
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -13822,36 +13822,41 @@
       }
       var _;
       !(function (_) {
-        (_.CreateProject = function (_, _) {
-          return _.SendMsg("SteamLearn.CreateProject#1", (0, _._)(_, _), _, {
+        (_.CreateProject = function (_, _, _) {
+          return _.SendMsg("SteamLearn.CreateProject#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.EditProject = function (_, _) {
-            return _.SendMsg("SteamLearn.EditProject#1", (0, _._)(_, _), _, {
+          (_.EditProject = function (_, _, _) {
+            return _.SendMsg("SteamLearn.EditProject#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.EditProjectConfig = function (_, _) {
+          (_.EditProjectConfig = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.EditProjectConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ListProjects = function (_, _) {
-            return _.SendMsg("SteamLearn.ListProjects#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.ListProjects = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.ListProjects#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.ListProjectConfigs = function (_, _) {
+          (_.ListProjectConfigs = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.ListProjectConfigs#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13859,16 +13864,16 @@
               },
             );
           }),
-          (_.GetProject = function (_, _) {
-            return _.SendMsg("SteamLearn.GetProject#1", (0, _._)(_, _), _, {
+          (_.GetProject = function (_, _, _) {
+            return _.SendMsg("SteamLearn.GetProject#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
-          (_.GetProjectConfig = function (_, _) {
+          (_.GetProjectConfig = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetProjectConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13876,15 +13881,20 @@
               },
             );
           }),
-          (_.PublishProject = function (_, _) {
-            return _.SendMsg("SteamLearn.PublishProject#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
+          (_.PublishProject = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.PublishProject#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.RegisterDataSource = function (_, _) {
+          (_.RegisterDataSource = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.RegisterDataSource#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -13892,10 +13902,10 @@
               },
             );
           }),
-          (_.ListDataSources = function (_, _) {
+          (_.ListDataSources = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.ListDataSources#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13903,22 +13913,27 @@
               },
             );
           }),
-          (_.GetDataSource = function (_, _) {
-            return _.SendMsg("SteamLearn.GetDataSource#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetDataSource = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.GetDataSource#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.CacheData = function (_, _) {
-            return _.SendMsg("SteamLearn.CacheData#1", (0, _._)(_, _), _, {
+          (_.CacheData = function (_, _, _) {
+            return _.SendMsg("SteamLearn.CacheData#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.SnapshotProject = function (_, _) {
+          (_.SnapshotProject = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.SnapshotProject#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -13926,16 +13941,16 @@
               },
             );
           }),
-          (_.Inference = function (_, _) {
-            return _.SendMsg("SteamLearn.Inference#1", (0, _._)(_, _), _, {
+          (_.Inference = function (_, _, _) {
+            return _.SendMsg("SteamLearn.Inference#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
-          (_.InferenceMetadata = function (_, _) {
+          (_.InferenceMetadata = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.InferenceMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -13943,26 +13958,31 @@
               },
             );
           }),
-          (_.InferenceBackend = function (_, _) {
+          (_.InferenceBackend = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.InferenceBackend#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.BatchOperation = function (_, _) {
-            return _.SendMsg("SteamLearn.BatchOperation#1", (0, _._)(_, _), _, {
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.BatchOperation = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.BatchOperation#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.GetAccessTokensWeb = function (_, _) {
+          (_.GetAccessTokensWeb = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetAccessTokensWeb#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13970,15 +13990,15 @@
               },
             );
           }),
-          (_.Train = function (_, _) {
-            return _.SendMsg("SteamLearn.Train#1", (0, _._)(_, _), _, {
+          (_.Train = function (_, _, _) {
+            return _.SendMsg("SteamLearn.Train#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetFetchStatusVersions = function (_, _) {
+          (_.GetFetchStatusVersions = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetFetchStatusVersions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13986,10 +14006,10 @@
               },
             );
           }),
-          (_.GetTrainStatusVersions = function (_, _) {
+          (_.GetTrainStatusVersions = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetTrainStatusVersions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -13997,10 +14017,10 @@
               },
             );
           }),
-          (_.GetProjectStatus = function (_, _) {
+          (_.GetProjectStatus = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetProjectStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14008,10 +14028,10 @@
               },
             );
           }),
-          (_.GetBatchedStatus = function (_, _) {
+          (_.GetBatchedStatus = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetBatchedStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14019,28 +14039,43 @@
               },
             );
           }),
-          (_.GetFetchStatus = function (_, _) {
-            return _.SendMsg("SteamLearn.GetFetchStatus#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetFetchStatus = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.GetFetchStatus#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetTrainStatus = function (_, _) {
-            return _.SendMsg("SteamLearn.GetTrainStatus#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetTrainStatus = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.GetTrainStatus#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetTrainLogs = function (_, _) {
-            return _.SendMsg("SteamLearn.GetTrainLogs#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetTrainLogs = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.GetTrainLogs#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetSnapshotStatus = function (_, _) {
+          (_.GetSnapshotStatus = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetSnapshotStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14048,22 +14083,32 @@
               },
             );
           }),
-          (_.SetTrainLive = function (_, _) {
-            return _.SendMsg("SteamLearn.SetTrainLive#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.SetTrainLive = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.SetTrainLive#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetLogEvents = function (_, _) {
-            return _.SendMsg("SteamLearn.GetLogEvents#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetLogEvents = function (_, _, _) {
+            return _.SendMsg(
+              "SteamLearn.GetLogEvents#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetEmbeddingValues = function (_, _) {
+          (_.GetEmbeddingValues = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetEmbeddingValues#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -14071,10 +14116,10 @@
               },
             );
           }),
-          (_.GetNearestEmbedding = function (_, _) {
+          (_.GetNearestEmbedding = function (_, _, _) {
             return _.SendMsg(
               "SteamLearn.GetNearestEmbedding#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

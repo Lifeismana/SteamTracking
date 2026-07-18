@@ -1072,7 +1072,7 @@
         async PostCookieSettings() {
           const e = l.TS.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
             t = new FormData();
-          t.set("sessionid", l.TS.SESSIONID),
+          t.set("sessionid", (0, l.KC)()),
             t.append("cookiepreferences", JSON.stringify(this.m_Preferences));
           try {
             let s = await u().post(e, t, { withCredentials: !0 });
@@ -1107,7 +1107,7 @@
         g = s(52038),
         j = s(76217),
         w = s(45699);
-      class S {
+      class x {
         m_Preferences = void 0;
         constructor(e) {
           (0, c.Gn)(this), (this.m_Preferences = e);
@@ -1139,7 +1139,7 @@
         async PostStorePreferences() {
           const e = l.TS.STORE_BASE_URL + "account/savepreferences",
             t = new FormData();
-          t.set("sessionid", l.TS.SESSIONID),
+          t.set("sessionid", (0, l.KC)()),
             t.set(
               "provide_deck_feedback",
               this.m_Preferences.provide_deck_feedback.toString(),
@@ -1165,8 +1165,8 @@
           }
         }
       }
-      (0, n.Cg)([c.sH], S.prototype, "m_Preferences", void 0);
-      var x = s(68950),
+      (0, n.Cg)([c.sH], x.prototype, "m_Preferences", void 0);
+      var S = s(68950),
         y = s(22837);
       class k {
         m_rgSavedHardware = [];
@@ -1215,7 +1215,7 @@
         async RenameHardware(e, t) {
           const s = l.TS.STORE_BASE_URL + "account/ajaxhardwarerename",
             r = new FormData();
-          r.set("sessionid", l.TS.SESSIONID),
+          r.set("sessionid", (0, l.KC)()),
             r.set("savedHardwareID", e),
             r.set("strFriendlyName", t);
           if (await this.PostRequest(s, r))
@@ -1226,7 +1226,7 @@
         async DeleteHardware(e) {
           const t = l.TS.STORE_BASE_URL + "account/ajaxhardwaredelete",
             s = new FormData();
-          s.set("sessionid", l.TS.SESSIONID), s.set("savedHardwareID", e);
+          s.set("sessionid", (0, l.KC)()), s.set("savedHardwareID", e);
           if (await this.PostRequest(t, s))
             for (let t = 0; t < this.m_rgSavedHardware.length; ++t)
               if (this.m_rgSavedHardware[t].hardware_id == e)
@@ -1236,8 +1236,8 @@
       (0, n.Cg)([c.sH], k.prototype, "m_rgSavedHardware", void 0);
       var N = s(82227),
         P = s(65946),
-        T = s(738),
-        b = s(56011),
+        b = s(738),
+        T = s(56011),
         D = s(78395);
       function C(e) {
         const { hw: t, closeModal: s } = e,
@@ -1340,13 +1340,13 @@
                   (0, r.jsx)(p.$n, {
                     className: f.RenameButton,
                     onClick: (e) =>
-                      (0, T.pg)((0, r.jsx)(A, { hw: t }), (0, b.uX)(e)),
+                      (0, b.pg)((0, r.jsx)(A, { hw: t }), (0, T.uX)(e)),
                     children: (0, m.we)("#SavedHardware_Rename"),
                   }),
                   (0, r.jsx)(p.$n, {
                     className: f.DeleteButton,
                     onClick: (e) =>
-                      (0, T.pg)((0, r.jsx)(C, { hw: t }), (0, b.uX)(e)),
+                      (0, b.pg)((0, r.jsx)(C, { hw: t }), (0, T.uX)(e)),
                     children: (0, m.we)("#SavedHardware_Delete"),
                   }),
                 ],
@@ -1354,7 +1354,7 @@
             ],
           });
         }),
-        I = (0, P.PA)(() => {
+        G = (0, P.PA)(() => {
           const e = k.Get().GetSavedHardware(),
             t = "undefined" != typeof SteamClient,
             s = a.useCallback(() => {
@@ -1399,19 +1399,19 @@
             ],
           });
         });
-      let G = null,
-        R = null;
+      let R = null,
+        I = null;
       const F = (0, v.PA)(() => {
           const [e, t] = (function () {
-              if (!G) {
-                let e = (0, l.Tc)("cookiepreferences", "application_config");
-                G = new h(e);
-              }
               if (!R) {
-                let e = (0, l.Tc)("storedatapreferences", "application_config");
-                R = new S(e);
+                let e = (0, l.Tc)("cookiepreferences", "application_config");
+                R = new h(e);
               }
-              return [G, R];
+              if (!I) {
+                let e = (0, l.Tc)("storedatapreferences", "application_config");
+                I = new x(e);
+              }
+              return [R, I];
             })(),
             s = (0, a.useCallback)(() => {
               e.SetPreferenceState(d.CY.PK);
@@ -1419,7 +1419,7 @@
             i = (0, a.useCallback)(() => {
               e.SetPreferenceState(d.CY.rE);
             }, [e]),
-            n = (0, x.LH)();
+            n = (0, S.LH)();
           return (0, r.jsxs)("div", {
             children: [
               (0, r.jsx)("div", {
@@ -1852,7 +1852,7 @@
                   ],
                 }),
               }),
-              (0, r.jsx)(I, {}),
+              (0, r.jsx)(G, {}),
             ],
           });
         });
@@ -1932,7 +1932,7 @@
         let n = i?.GetName() ?? t.app_name;
         const c = a.useCallback(
           (e) => {
-            (0, J.EP)((0, b.uX)(e), `steam://open/games/details/${s}`);
+            (0, J.EP)((0, T.uX)(e), `steam://open/games/details/${s}`);
           },
           [s],
         );
@@ -2217,14 +2217,14 @@
           s.p +
           "images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching";
       var we,
-        Se = s(2160),
-        xe = s(51883),
+        xe = s(2160),
+        Se = s(51883),
         ye = s(23443),
         ke = s(31258),
         Ne = s(12155),
         Pe = s(32754),
-        Te = s(91675),
-        be = s(14771),
+        be = s(91675),
+        Te = s(14771),
         De = s(11838),
         Ce = s(61359);
       !(function (e) {
@@ -2237,9 +2237,9 @@
       })(we || (we = {}));
       const Ae = (0, v.PA)(() => {
         let e = he.Get();
-        const t = Ge(),
+        const t = Re(),
           s = Date.now() / 1e3,
-          a = Ie(e),
+          a = Ge(e),
           i = e.GetTwoFactorStatus();
         let n = null;
         switch (i.steamguard_scheme) {
@@ -2258,9 +2258,9 @@
         for (const n of e.GetActiveDevices()) {
           const e = n.logged_in && n.last_seen?.time > s - 900,
             l =
-              n.effective_token_state == xe.wv.BH ? Ce.RememberedDevice : null,
+              n.effective_token_state == Se.wv.BH ? Ce.RememberedDevice : null,
             d = (0, r.jsx)(
-              Re,
+              Ie,
               {
                 className: l,
                 device: n,
@@ -2277,7 +2277,7 @@
           .GetRevokedDevices()
           .map((e) =>
             (0, r.jsx)(
-              Re,
+              Ie,
               {
                 className: Ce.RevokedDevice,
                 device: e,
@@ -2338,7 +2338,7 @@
                         children: (0, r.jsx)(p.wl, {
                           className: Ce.RemoveDevicesButton,
                           onClick: (e) => {
-                            (0, T.pg)((0, r.jsx)(Ve, {}), (0, b.uX)(e));
+                            (0, b.pg)((0, r.jsx)(Ve, {}), (0, T.uX)(e));
                           },
                           children: (0, m.we)(
                             "#accountpreferences_authorized_devices_remove_button",
@@ -2391,7 +2391,7 @@
               children: [s && s, t],
             });
       }
-      function Ie(e) {
+      function Ge(e) {
         const t = Date.now() / 1e3;
         return Oe(
           e
@@ -2400,13 +2400,13 @@
             e.GetActiveDevices()[0],
         ).country;
       }
-      function Ge() {
+      function Re() {
         const [e] = a.useState(() =>
           (0, l.Tc)("requesting_token_id", "application_config"),
         );
         return e;
       }
-      function Re(e) {
+      function Ie(e) {
         const {
             device: t,
             bActiveNow: s,
@@ -2422,7 +2422,7 @@
           u.current?.BHasFocus() && u.current?.Node().ForceMeasureFocusRing();
         }, [d]);
         let h = (function (e) {
-          if (e.platform_type == xe.SS.tS) {
+          if (e.platform_type == Se.SS.tS) {
             let t = new De.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
               ? "WebKit" == t.browser.name
@@ -2542,7 +2542,7 @@
       function He(e) {
         const { msgTwoFactorUsage: t } = e;
         if (!t || !t.time) return null;
-        const s = (0, Te.Nm)(t.time);
+        const s = (0, be.Nm)(t.time);
         let a = null;
         if (t.usage_type == ye.oN.U3)
           a = (0, m.we)("#authorized_devices_lasttwofactor_login", s);
@@ -2633,17 +2633,17 @@
         const { device: t } = e,
           s =
             t.first_seen?.time &&
-            t.first_seen.time + 2 * be.Kp.PerWeek > Date.now() / 1e3,
-          a = t.effective_token_state == xe.wv.BH;
+            t.first_seen.time + 2 * Te.Kp.PerWeek > Date.now() / 1e3,
+          a = t.effective_token_state == Se.wv.BH;
         let i = (0, m.we)(
           "#accountpreferences_authorized_devices_last_seen_max",
         );
         return (
           t.last_seen?.time
-            ? (i = (0, Te.Nm)(t.last_seen.time))
+            ? (i = (0, be.Nm)(t.last_seen.time))
             : t.time_updated &&
               t.time_updated > Math.floor(Date.now() / 1e3 - 7776e3) &&
-              (i = (0, Te.Nm)(t.time_updated)),
+              (i = (0, be.Nm)(t.time_updated)),
           (0, r.jsxs)("div", {
             className: Ce.LastSeenRow,
             children: [
@@ -2693,45 +2693,45 @@
             Be(t),
             (0, m.TW)(t.first_seen.time) +
               " @ " +
-              (0, Te.KC)(t.first_seen.time),
+              (0, be.KC)(t.first_seen.time),
           ),
         });
       }
       function Be(e) {
         const t = e.authentication_type,
           s = e.auth_type;
-        if (t == xe.O6.w$) return "#authorized_devices_default_qr";
-        if (e.effective_token_state == xe.wv.BH)
+        if (t == Se.O6.w$) return "#authorized_devices_default_qr";
+        if (e.effective_token_state == Se.wv.BH)
           return "#authorized_devices_remembered_machine";
         switch (s) {
-          case xe.TY.Xs:
+          case Se.TY.Xs:
             return "#authorized_devices_emailcode_password";
-          case xe.TY.bH:
+          case Se.TY.bH:
             return "#authorized_devices_devicecode_password";
-          case xe.TY.x0:
-          case xe.TY.$Y:
+          case Se.TY.x0:
+          case Se.TY.$Y:
             return "#authorized_devices_mobileconf_password";
-          case xe.TY.ig:
+          case Se.TY.ig:
             return "#authorized_devices_machinetoken_password";
-          case xe.TY.sF:
-          case xe.TY.oP:
-          case xe.TY.WM:
+          case Se.TY.sF:
+          case Se.TY.oP:
+          case Se.TY.WM:
           default:
             return "#authorized_devices_default_password";
         }
       }
       function Me(e) {
         const { device: t, bHasAuthenticator: s } = e,
-          a = t.effective_token_state == xe.wv.BH;
+          a = t.effective_token_state == Se.wv.BH;
         let i = null;
-        if (t.platform_type == xe.SS.tS)
+        if (t.platform_type == Se.SS.tS)
           i = a
             ? (0, r.jsx)(ve.SQF, {
                 className: (0, g.A)(Ce.DeviceLogo, Ce.RememberedDevice),
               })
             : (0, r.jsx)(ve.FH7, { className: Ce.DeviceLogo });
         else if (
-          t.platform_type != xe.SS.w0 ||
+          t.platform_type != Se.SS.w0 ||
           (t.gaming_device_type !== y.LS$ &&
             t.gaming_device_type != y.ppM &&
             t.gaming_device_type != y.Ner)
@@ -2776,7 +2776,7 @@
       function Oe(e) {
         const t = e.last_seen ?? e.first_seen;
         if (t) {
-          if (!(0, Se.nA)(l.TS.EREALM))
+          if (!(0, xe.nA)(l.TS.EREALM))
             return {
               location: `${t.city ? t.city + ", " : ""}${t.country}`,
               country: t.country,
@@ -2793,11 +2793,11 @@
       function Ue(e) {
         const { device: t } = e;
         switch (t.platform_type) {
-          case xe.SS.Ql:
+          case Se.SS.Ql:
             return (0, m.we)(
               "#accountpreferences_authorized_devices_type_mobile",
             );
-          case xe.SS.w0:
+          case Se.SS.w0:
             return t.gaming_device_type === y.LS$
               ? (0, m.we)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
@@ -2813,11 +2813,11 @@
                   : (0, m.we)(
                       "#accountpreferences_authorized_devices_type_desktop",
                     );
-          case xe.SS.tS:
+          case Se.SS.tS:
             return (0, m.we)(
               "#accountpreferences_authorized_devices_type_browser",
             );
-          case xe.SS.FB:
+          case Se.SS.FB:
           default:
             return (0, m.we)(
               "#accountpreferences_authorized_devices_type_unknown",
@@ -2826,7 +2826,7 @@
       }
       function Ve(e) {
         const { closeModal: t } = e;
-        return (0, r.jsx)(T.x_, {
+        return (0, r.jsx)(b.x_, {
           onEscKeypress: t,
           children: (0, r.jsxs)(p.UC, {
             children: [
@@ -2846,7 +2846,7 @@
                       onOK: async () => {
                         const e = new FormData();
                         e.set("action", "deauthorize"),
-                          e.set("sessionid", l.TS.SESSIONID),
+                          e.set("sessionid", (0, l.KC)()),
                           await u().post(
                             l.TS.STORE_BASE_URL + "twofactor/manage_action",
                             e,
@@ -2857,7 +2857,7 @@
                         const s = document.createElement("input");
                         (s.type = "hidden"),
                           (s.name = "sessionid"),
-                          (s.value = l.TS.SESSIONID),
+                          (s.value = (0, l.KC)()),
                           t.appendChild(s),
                           document.body.appendChild(t),
                           t.submit();
@@ -2933,8 +2933,8 @@
       function $e(e) {
         const { msgTwoFactorStatus: t, strFaqUrl: s } = e,
           a = he.Get(),
-          i = Ie(a),
-          n = Ge(),
+          i = Ge(a),
+          n = Re(),
           c = [
             ...(a.GetActiveDevices() ?? []),
             ...(a.GetActiveDevices() ?? []),
@@ -2976,7 +2976,7 @@
                   !!o &&
                     (0, r.jsxs)(r.Fragment, {
                       children: [
-                        (0, r.jsx)(Re, {
+                        (0, r.jsx)(Ie, {
                           className: Ke.AuthorizedDevice,
                           device: o,
                           strActiveCountry: i,

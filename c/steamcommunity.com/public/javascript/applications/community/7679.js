@@ -712,7 +712,7 @@
             _ = _.GetResizeDimension(),
             _ = new FormData();
           _.append("clanimage", _, _),
-            _.append("sessionid", _._.SESSIONID),
+            _.append("sessionid", (0, _._)()),
             this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
             (null == _ ? void 0 : _.artworkType) &&
               _.append("arttype", _.artworkType),
@@ -1387,7 +1387,7 @@
         }
         async DeleteClanImageByID(_, _) {
           let _ = {
-              sessionid: _._.SESSIONID,
+              sessionid: (0, _._)(),
               imageid: _,
             },
             _ = _.GetAccountID(),
@@ -2310,7 +2310,7 @@
           if ("" == this.state.formattingHelp.__html) {
             let _,
               _ = {
-                sessionid: _._.SESSIONID,
+                sessionid: (0, _._)(),
               };
             (_ = await _().get(_.GetHelpURL(this.props.formatType, !0), {
               params: _,

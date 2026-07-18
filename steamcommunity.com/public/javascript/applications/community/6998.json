@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Dette opslag er ikke længere tilgængeligt",
     "Listing_NotAvailable_Short": "Ikke tilgængeligt",
     "Listing_NotAvailable_Long": "Genstanden i dette opslag kan ikke længere købes.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Mit opslag)",
     "BuyOrderDialog_Header": "Køb – %1$s",
     "BuyOrderDialog_Header_NoItem": "Læg købsordre ind",
     "BuyOrderDialog_BucketPicker_Label": "Hvilken slags emne vil du købe?",

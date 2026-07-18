@@ -705,27 +705,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Tooltip: "_2tRvFPkBhxR7vDxTqo4P0a",
-        CarouselFade: "_7iR6VaebVOGr3yes_KoOA",
-        StandardButton: "_24Nmu8CZlagdPfZba8crr",
-        ButtonText: "_21JTKSyd-kDDL5FzbaIBus",
-        Icon: "_2uGFhUvjk6rgXucxjGPe_c",
-        Play: "_1KMMLZ8hi2Fg3HUGnshmXu",
-        SteamLogo: "_23beEy2fvm-W7rMsj7kRjB",
-        ToolTip: "_2wzzKspsyxpbDNoj0nvOuN",
-        PlayerReportTooltip: "swiSQcWgrAUZPT0C7agj8",
-        DPCAboutBanner: "_2QgBEtpkbwciYHD7xv8Eyc",
-        Background: "_3O-JkwzNIjSlc9msxayRHG",
-        Content: "_25lN3Pbxw9yIP_lLhohbIe",
-        Title: "_2Ed2TE3cCjYxCNcKPdyZjI",
-        Body: "_11EGACADbXWL33cGBtGn4I",
-        BodyCentered: "_2LO-sZsRare-hfe6iAU5nX",
-        Button: "_3WY5VotWTWbsq3CuuUMrvd",
-        ContentCentered: "vJSYBazzUIOFNwqQli1jg",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         BracketNode: "nYREaMitgAmSh1wv6KyVY",
         Expanded: "_11Z54cgz__dkKhT8cDAXps",
         NodeHeader: "_1QtwcBysjOVfQgvLNn8Il3",
@@ -5349,8 +5328,8 @@
         "./my.js": 19628,
         "./nb": 84214,
         "./nb.js": 84214,
-        "./ne": 81476,
-        "./ne.js": 81476,
+        "./ne": 59095,
+        "./ne.js": 59095,
         "./nl": 33224,
         "./nl-be": 28476,
         "./nl-be.js": 28476,
@@ -48894,45 +48873,8 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = (0, _._)(({ bCenterElements: _ = !1 }) => {
-          const _ = _();
-          return (0, _.jsx)("div", {
-            className: _().DPCAboutBanner,
-            children: (0, _.jsx)("div", {
-              className: (0, _._)(_().Background, _().International),
-              style: {
-                backgroundImage: `url( ${_._.IMG_URL}dpc/dpc_about_footer.jpg )`,
-              },
-              children: (0, _.jsxs)("div", {
-                className: (0, _._)(_().Content, _ ? _().ContentCentered : ""),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().Title,
-                    children: (0, _._)("#dpc_about_banner_title"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().Body, _ ? _().BodyCentered : ""),
-                    children: (0, _._)("#dpc_about_banner_body"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    _: {
-                      state: {
-                        bAutoScroll: !0,
-                      },
-                      pathname: `${_._.dpc_about((0, _._)(_))}`,
-                    },
-                    className: _().Button,
-                    children: (0, _._)("#dpc_about_button"),
-                  }),
-                ],
-              }),
-            }),
-          });
-        }),
-        _ = (0, _._)((_) => {
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
           const _ = _(),
             _ = _._.Get().GetEventInfo(_),
             _ = _._.Get().GetEventDates(_).sort();
@@ -49915,7 +49857,6 @@
                     }),
                   children: (0, _._)("#dpc_scroll_to_top"),
                 }),
-                (0, _.jsx)(_, {}),
               ],
             })
           );
@@ -52345,7 +52286,6 @@
               backgroundImage: `url( ${_._.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
             },
             children: [
-              (0, _.jsx)(_, {}),
               (0, _.jsx)(_, {}),
               (0, _.jsx)(_, {}),
               (0, _.jsx)(_, {}),
@@ -63430,15 +63370,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = [
-          9467224, 8255888, 7732977, 8599101, 9303484, 36, 7554697, 9572001,
-          9247354, 2163, 9691969, 7119388, 9640842, 8291895, 9651185, 8261500,
-        ],
-        _ = [
           134513080, 1479611086, 102822329, 70473277, 70210046, 111750003,
           113439358, 870350113, 238146811, 82262664, 92647162, 172234089,
           341358028, 40547474, 92253768, 39128794, 60943014, 182672432,
           89269794, 113863940, 250056809, 191966736, 192154945, 94439767,
-          1202001315, 186301610, 98887913, 121265419,
+          1202001315, 186301610, 98887913, 121265419, 106285240, 27050645,
+          163227125, 173243564, 367267973, 113711310, 107579895, 104694710,
+          111034589, 1065535948, 98172857, 87278757, 350729580,
         ],
         _ = () => {
           const [_, _] = (0, _.useState)([]),
@@ -63740,21 +63678,15 @@
                 ],
               });
             },
-            _ = (_, _) => {
-              if (12 == _._.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) {
-                if (_.includes(_?.team_id) && !_.includes(_?.team_id))
-                  return -1;
-                if (!_.includes(_?.team_id) && _.includes(_?.team_id)) return 1;
-              }
-              return _.hasUploadedAutograph && !_.hasUploadedAutograph
+            _ = (_, _) =>
+              _.hasUploadedAutograph && !_.hasUploadedAutograph
                 ? -1
                 : (!_.hasUploadedAutograph && _.hasUploadedAutograph) ||
                     _?.name.toLowerCase() > _?.name.toLowerCase()
                   ? 1
                   : _?.name.toLowerCase() < _?.name.toLowerCase()
                     ? -1
-                    : 0;
-            },
+                    : 0,
             _ = 0 == _._.ACCOUNT_ID && !_._.VALVE_INTERNAL;
           return (0, _.jsxs)("div", {
             className: _().MajorsRegistrationAutographsPage,
@@ -63983,72 +63915,78 @@
                           (0, _.jsx)("div", {
                             children: (() => {
                               let _;
-                              return _ && _.team_autographs
-                                ? ((_ = _.team_autographs),
-                                  _.forEach((_, _) => {
-                                    const _ = _.autographs;
-                                    let _ = !1;
-                                    for (let _ = 0; _ < _.length; _++)
-                                      _[_].file && (_ = !0);
-                                    _[_].hasUploadedAutograph = _;
-                                  }),
-                                  (_ = _.filter(
-                                    (_) => _?.autographs?.length >= 4,
-                                  )),
-                                  _.sort(_),
-                                  _.map((_, _) =>
-                                    (0, _.jsxs)(
-                                      "div",
-                                      {
+                              if (!_ || !_.team_autographs)
+                                return (0, _.jsx)("div", {
+                                  children: "Could not load autographs",
+                                });
+                              (_ = _.team_autographs),
+                                _.forEach((_, _) => {
+                                  const _ = _.autographs;
+                                  let _ = !1;
+                                  for (let _ = 0; _ < _.length; _++)
+                                    _[_].file && (_ = !0);
+                                  _[_].hasUploadedAutograph = _;
+                                }),
+                                (_ = _.filter(
+                                  (_) => _?.autographs?.length >= 4,
+                                )),
+                                _.sort(_);
+                              return _.map((_, _) => {
+                                return (0, _.jsxs)(
+                                  "div",
+                                  {
+                                    children: [
+                                      (0, _.jsxs)("div", {
+                                        className: _().TeamName,
                                         children: [
-                                          (0, _.jsxs)("div", {
-                                            className: _().TeamName,
-                                            children: [
-                                              _.name || "(Team name)",
-                                              _.team_id
-                                                ? ` (${_.team_id})`
-                                                : "",
-                                            ],
-                                          }),
-                                          (0, _.jsx)(
-                                            "div",
-                                            {
-                                              className: _().TeamAutographRow,
-                                              children: _.autographs.map(
-                                                (_, _) => {
-                                                  const {
-                                                    name: _,
-                                                    pro_name: _,
-                                                    account_id: _,
-                                                    file: _,
-                                                    timestamp: _,
-                                                  } = _;
-                                                  return _.includes(_)
-                                                    ? null
-                                                    : (0, _.jsx)(
-                                                        _,
-                                                        {
-                                                          proName: _,
-                                                          accountId: _,
-                                                          pos: null,
-                                                          fileName: _,
-                                                          timestamp: _,
-                                                        },
-                                                        _,
-                                                      );
-                                                },
-                                              ),
-                                            },
-                                            `${_.team_id}Row`,
-                                          ),
+                                          `${_.name} (`,
+                                          _.team_id
+                                            ? ((_ = _.team_id),
+                                              (0, _.jsx)("a", {
+                                                href: `${_._.BASE_URL}${_._.teamdetails(_).substr(1)}`,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                                children: _,
+                                              }))
+                                            : "",
+                                          ")",
                                         ],
-                                      },
-                                      `${_.team_id}Container`,
-                                    ),
-                                  ))
-                                : (0, _.jsx)("div", {
-                                    children: "Could not load autographs",
-                                  });
+                                      }),
+                                      (0, _.jsx)(
+                                        "div",
+                                        {
+                                          className: _().TeamAutographRow,
+                                          children: _.autographs.map((_, _) => {
+                                            const {
+                                              name: _,
+                                              pro_name: _,
+                                              account_id: _,
+                                              file: _,
+                                              timestamp: _,
+                                            } = _;
+                                            return _.includes(_)
+                                              ? null
+                                              : (0, _.jsx)(
+                                                  _,
+                                                  {
+                                                    proName: _,
+                                                    accountId: _,
+                                                    pos: null,
+                                                    fileName: _,
+                                                    timestamp: _,
+                                                  },
+                                                  _,
+                                                );
+                                          }),
+                                        },
+                                        `${_.team_id}Row`,
+                                      ),
+                                    ],
+                                  },
+                                  `${_.team_id}Container`,
+                                );
+                                var _;
+                              });
                             })(),
                           }),
                         ],
@@ -64194,10 +64132,6 @@
                   children: (0, _.jsxs)("div", {
                     className: _().Page,
                     children: [
-                      (0, _.jsx)("img", {
-                        src: `${_._.IMG_URL}dpc/dpc_logo.png`,
-                        className: _().DPCLogo,
-                      }),
                       (0, _.jsx)("div", {
                         className: _().Header,
                         children: (0, _._)("#autograph_guidelines_top_header"),
@@ -108307,7 +108241,7 @@
   },
   (_) => {
     _._(0, [78997], () => {
-      return (_ = 59095), _((_._ = _));
+      return (_ = 92693), _((_._ = _));
       var _;
     });
     _._();

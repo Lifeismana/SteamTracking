@@ -1536,7 +1536,7 @@
                   _.clanSteamID.GetAccountID() +
                   "/admin/ajaxdeletecreatorhomeevent",
                 _ = new FormData();
-              __webpack_require__.append("sessionid", _._.SESSIONID),
+              __webpack_require__.append("sessionid", (0, _._)()),
                 __webpack_require__.append("gid", _.gid);
               const _ = await _().post(_, _, {
                 withCredentials: !0,
@@ -1554,7 +1554,7 @@
                   _.clanSteamID.GetAccountID() +
                   "/admin/ajaxselectcreatorhome",
                 _ = new FormData();
-              __webpack_require__.append("sessionid", _._.SESSIONID),
+              __webpack_require__.append("sessionid", (0, _._)()),
                 __webpack_require__.append("gid", _.gid);
               const _ = await _().post(_, _, {
                 withCredentials: !0,

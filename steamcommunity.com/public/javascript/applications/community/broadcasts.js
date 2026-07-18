@@ -51,7 +51,7 @@
     },
     35261: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => Be });
+      s.r(t), s.d(t, { default: () => Ce });
       var a = s(7850),
         n = (s(64641), s(90626)),
         r = s(92757),
@@ -65,7 +65,7 @@
         h = s(54728),
         _ = s(68797),
         p = s(78327);
-      class S {
+      class v {
         constructor() {
           (this.m_bShowOnlyVideo = !1),
             (this.m_bShowOnlyChat = !1),
@@ -114,7 +114,7 @@
               steamid: this.m_steamid.ConvertTo64BitString(),
               matchid: e,
               title: t,
-              sessionid: p.TS.SESSIONID,
+              sessionid: (0, p.KC)(),
             };
           try {
             let e = await d().get(a, {
@@ -151,7 +151,7 @@
             n = {
               steamid: t,
               broadcastid: s ? s.m_ulBroadcastID : null,
-              sessionid: p.TS.SESSIONID,
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "StopBroadcast",
@@ -169,7 +169,7 @@
               broadcastid: n ? n.m_ulBroadcastID : null,
               type: e,
               days: t,
-              sessionid: p.TS.SESSIONID,
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetBroadcasterRestrictions",
@@ -185,7 +185,7 @@
             n = {
               steamid: t,
               broadcastid: s ? s.m_ulBroadcastID : null,
-              sessionid: p.TS.SESSIONID,
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SetUnBannable",
@@ -202,7 +202,7 @@
               steamid: t,
               broadcastid: s ? s.m_ulBroadcastID : null,
               description: e,
-              sessionid: p.TS.SESSIONID,
+              sessionid: (0, p.KC)(),
             };
           return await this.InternalSendSimpleGetRequest(
             "SendUserReportOnBroadcast",
@@ -232,8 +232,8 @@
         }
         static Get() {
           return (
-            S.s_Singleton || ((S.s_Singleton = new S()), S.s_Singleton.Init()),
-            S.s_Singleton
+            v.s_Singleton || ((v.s_Singleton = new v()), v.s_Singleton.Init()),
+            v.s_Singleton
           );
         }
         Init() {
@@ -247,28 +247,28 @@
           return !(!e || "object" != typeof e) && "string" == typeof e.steamid;
         }
       }
-      (0, c.Cg)([l.sH], S.prototype, "m_curDebugInfo", void 0);
-      var v = s(75844),
-        x = s(39606),
+      (0, c.Cg)([l.sH], v.prototype, "m_curDebugInfo", void 0);
+      var x = s(75844),
+        S = s(39606),
         j = s(67397),
         g = s(53120),
-        B = s.n(g),
-        C = s(55815),
-        b = s(34214),
+        C = s.n(g),
+        B = s(55815),
+        b = s(43261),
         f = s(34010),
         w = s(4796),
         I = s(68255),
         y = s(84811),
         D = s(35685),
         T = s(95034),
-        N = s(95695),
-        A = s.n(N),
-        O = s(41399),
-        k = s(9154),
-        G = s(738),
+        A = s(95695),
+        N = s.n(A),
+        k = s(41399),
+        G = s(9154),
+        O = s(738),
         R = s(52038),
-        E = s(56011),
-        U = s(61859),
+        U = s(56011),
+        E = s(61859),
         M = s(14932),
         H = s(76684),
         P = s(82227),
@@ -294,7 +294,7 @@
                         t.current && t.current();
                         const e = d().CancelToken.source();
                         (t.current = e.cancel),
-                          r(await S.Get().LoadBroadcastDebugInfo(e));
+                          r(await v.Get().LoadBroadcastDebugInfo(e));
                       },
                       children: "(VO) Load Debug Info",
                     }),
@@ -310,7 +310,7 @@
           const { info: s } = e,
             [r, i] = (0, n.useState)(!1);
           if (!s) return null;
-          const o = S.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
+          const o = v.Get().GetBroadcasterSteamID().ConvertTo64BitString(),
             d = h.es.GetBroadcast(o);
           return (0, a.jsxs)("div", {
             className: V.DisplaySection,
@@ -649,7 +649,7 @@
                   Boolean(s.app_id && s.app_id > 0) &&
                     (0, a.jsx)("div", {
                       className: V.AppSummaryWidgetCtn,
-                      children: (0, a.jsx)(O.p, {
+                      children: (0, a.jsx)(k.p, {
                         id: s.app_id,
                         type: "game",
                         bPreferAssetWithoutOverride: !1,
@@ -702,13 +702,13 @@
         };
       var F = s(98371),
         Y = s(1035),
-        X = s(41471),
-        W = s(16971);
-      const $ = (e) => {
+        K = s(41471),
+        X = s(16971);
+      const W = (e) => {
         const t = e.steamid.GetAccountID(),
-          { data: s } = (0, X.hW)(t);
+          { data: s } = (0, K.hW)(t);
         return (0, a.jsxs)("div", {
-          className: W.AvatarCtn,
+          className: X.AvatarCtn,
           children: [
             (0, a.jsx)("a", {
               href: s.GetCommunityProfileURL(),
@@ -720,7 +720,7 @@
               }),
             }),
             (0, a.jsxs)("div", {
-              className: W.NameAndProps,
+              className: X.NameAndProps,
               children: [
                 Boolean(e.bShowName) &&
                   (0, a.jsx)("a", {
@@ -734,8 +734,8 @@
           ],
         });
       };
-      var z = s(65946),
-        K = s(55263),
+      var $ = s(65946),
+        z = s(55263),
         J = s(82477),
         Q = s(12155),
         Z = s(51272),
@@ -746,12 +746,12 @@
       function ne(e) {
         const { broadcasterSteamID: t } = e,
           s = t.ConvertTo64BitString(),
-          [n, r] = (0, z.q3)(() => {
+          [n, r] = (0, $.q3)(() => {
             const e = h.es.GetOrCreateBroadcastInfo(s);
             let t = e.m_nAppID != h.fO ? e.m_nAppID : 0;
             return [e.m_nViewerCount, t];
           }),
-          [i] = (0, K.t7)(r, { include_assets: !0 });
+          [i] = (0, z.t7)(r, { include_assets: !0 });
         let o = null == i ? void 0 : i.GetAssets().GetMainCapsuleURL(),
           d = o && o.length > 0;
         return (0, a.jsx)(y.tH, {
@@ -779,7 +779,7 @@
                           (0, a.jsx)(re, { broadcasterSteamID: t }),
                           (0, a.jsx)("div", {
                             className: te.ViewerCount,
-                            children: (0, U.Yp)(
+                            children: (0, E.Yp)(
                               "#Broadcast_ViewerCount",
                               (0, ae.D)(n),
                             ),
@@ -789,26 +789,26 @@
                       (0, a.jsx)(ie, { broadcasterSteamID: t }),
                     ],
                   }),
-                  (0, a.jsx)($, { steamid: t, size: "Medium", bShowName: !0 }),
+                  (0, a.jsx)(W, { steamid: t, size: "Medium", bShowName: !0 }),
                 ],
               }),
             ],
           }),
         });
       }
-      const re = (0, v.PA)((e) => {
+      const re = (0, x.PA)((e) => {
           const { broadcasterSteamID: t } = e,
             s = t.ConvertTo64BitString(),
-            [n, r] = (0, z.q3)(() => {
+            [n, r] = (0, $.q3)(() => {
               const e = h.es.GetOrCreateBroadcastInfo(s);
               let t = e.m_nAppID != h.fO ? e.m_nAppID : 0;
               return [e.m_strAppTitle, t];
             }),
-            [i] = (0, K.t7)(r, { include_assets: !0 });
+            [i] = (0, z.t7)(r, { include_assets: !0 });
           return (0, a.jsxs)("div", {
             className: te.BroadcastTitleCtn,
             children: [
-              (0, U.we)("#Broadcast_Playing"),
+              (0, E.we)("#Broadcast_Playing"),
               (0, a.jsx)("a", {
                 href: (0, ee.k2)(
                   (null == i ? void 0 : i.GetStorePageURL()) ||
@@ -821,7 +821,7 @@
             ],
           });
         }),
-        ie = (0, v.PA)((e) => {
+        ie = (0, x.PA)((e) => {
           const { broadcasterSteamID: t } = e;
           t.ConvertTo64BitString();
           return (0, a.jsxs)("div", {
@@ -833,26 +833,26 @@
                 (0, a.jsx)(I.$n, {
                   onClick: (e) => {
                     p.iA.logged_in
-                      ? (0, G.pg)(
+                      ? (0, O.pg)(
                           (0, a.jsx)(oe, { broadcasterSteamID: t }),
-                          (0, E.uX)(e),
+                          (0, U.uX)(e),
                         )
-                      : (0, G.pg)(
-                          (0, a.jsx)(k.o0, {
-                            strTitle: (0, U.we)(
+                      : (0, O.pg)(
+                          (0, a.jsx)(G.o0, {
+                            strTitle: (0, E.we)(
                               "#EventDisplay_Share_NotLoggedIn",
                             ),
-                            strDescription: (0, U.we)(
+                            strDescription: (0, E.we)(
                               "#EventDisplay_Share_NotLoggedIn_Description",
                             ),
-                            strOKButtonText: (0, U.we)("#MobileLogin_SignIn"),
+                            strOKButtonText: (0, E.we)("#MobileLogin_SignIn"),
                             onOK: () => (0, J.vg)(),
                           }),
-                          (0, E.uX)(e),
+                          (0, U.uX)(e),
                         );
                   },
                   children: (0, a.jsx)(se.he, {
-                    toolTipContent: (0, U.we)("#Broadcast_User_Report_ttip"),
+                    toolTipContent: (0, E.we)("#Broadcast_User_Report_ttip"),
                     children: (0, a.jsx)(Q.lNU, {}),
                   }),
                 }),
@@ -863,7 +863,7 @@
                     "https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8",
                   ),
                 children: (0, a.jsx)(se.he, {
-                  toolTipContent: (0, U.we)("#Broadcast_User_FAQ_ttip"),
+                  toolTipContent: (0, E.we)("#Broadcast_User_FAQ_ttip"),
                   children: (0, a.jsx)(Q.$$j, {}),
                 }),
               }),
@@ -872,13 +872,13 @@
         }),
         oe = (e) => {
           const [t, s] = (0, n.useState)("");
-          return (0, a.jsx)(k.o0, {
-            strTitle: (0, U.we)("#Broadcast_ReportItem_Title"),
-            strDescription: (0, U.we)("#Broadcast_ReportItem_Description"),
+          return (0, a.jsx)(G.o0, {
+            strTitle: (0, E.we)("#Broadcast_ReportItem_Title"),
+            strDescription: (0, E.we)("#Broadcast_ReportItem_Description"),
             onCancel: e.closeModal,
             bOKDisabled: 0 == t.trim().length,
             onOK: async () => {
-              await S.Get().SendUserReportOnBroadcast(t),
+              await v.Get().SendUserReportOnBroadcast(t),
                 e.closeModal && e.closeModal();
             },
             children: (0, a.jsx)("textarea", {
@@ -894,19 +894,19 @@
       const le = (e) => {
           if (!p.iA.is_support) return null;
           const t = (t, s) => {
-              (0, G.pg)(
+              (0, O.pg)(
                 (0, a.jsx)(ue, {
                   broadcastSteamID: e.broadcastSteamID,
                   strAction: s,
                 }),
-                (0, E.uX)(t),
+                (0, U.uX)(t),
               );
             },
             s =
               "https://steamsupport.valvesoftware.com/account/overview/" +
               e.broadcastSteamID.ConvertTo64BitString();
           return (0, a.jsxs)("div", {
-            className: (0, R.A)(de.AdminControls, A().ValveOnlyBackground),
+            className: (0, R.A)(de.AdminControls, N().ValveOnlyBackground),
             children: [
               (0, a.jsx)("div", { children: "(VO) Support Tools" }),
               (0, a.jsx)(I.$n, {
@@ -919,9 +919,9 @@
               }),
               (0, a.jsx)(I.$n, {
                 onClick: (t) => {
-                  (0, G.pg)(
+                  (0, O.pg)(
                     (0, a.jsx)(me, { steamid: e.broadcastSteamID }),
-                    (0, E.uX)(t),
+                    (0, U.uX)(t),
                   );
                 },
                 children: "Make Unbannable",
@@ -933,7 +933,7 @@
             ],
           });
         },
-        ue = (0, v.PA)((e) => {
+        ue = (0, x.PA)((e) => {
           const { broadcastSteamID: t, strAction: s } = e,
             [r, i] = (0, n.useState)(1),
             [o, c] = (0, n.useState)(!1),
@@ -948,7 +948,7 @@
           );
           const p = () => e.closeModal && e.closeModal();
           return (0, a.jsx)(y.tH, {
-            children: (0, a.jsx)(k.x_, {
+            children: (0, a.jsx)(G.x_, {
               onEscKeypress: p,
               children: (0, a.jsxs)(I.UC, {
                 children: [
@@ -996,13 +996,13 @@
                     children: l
                       ? (0, a.jsx)(I.jn, {
                           onClick: p,
-                          children: (0, U.we)("#Button_Dismiss"),
+                          children: (0, E.we)("#Button_Dismiss"),
                         })
                       : (0, a.jsxs)(I.dR, {
                           children: [
                             (0, a.jsx)(I.$n, {
                               onClick: p,
-                              children: (0, U.we)("#Button_Cancel"),
+                              children: (0, E.we)("#Button_Cancel"),
                             }),
                             (0, a.jsx)(I.jn, {
                               onClick: async () => {
@@ -1011,18 +1011,15 @@
                                   _.current && _.current();
                                   const e = d().CancelToken.source();
                                   _.current = e.cancel;
-                                  let t =
-                                    await S.Get().SetBroadcasterRestrictions(
-                                      s,
-                                      r,
-                                      e,
-                                    );
+                                  let t = await v
+                                    .Get()
+                                    .SetBroadcasterRestrictions(s, r, e);
                                   e.token.reason || (t = !0);
                                 } finally {
                                   c(!1), u(!0), h(false);
                                 }
                               },
-                              children: (0, U.we)("#Button_Confirm"),
+                              children: (0, E.we)("#Button_Confirm"),
                             }),
                           ],
                         }),
@@ -1045,7 +1042,7 @@
           );
           const u = () => e.closeModal && e.closeModal();
           return (0, a.jsx)(y.tH, {
-            children: (0, a.jsx)(k.x_, {
+            children: (0, a.jsx)(G.x_, {
               onEscKeypress: u,
               children: (0, a.jsxs)(I.UC, {
                 children: [
@@ -1075,13 +1072,13 @@
                     children: r
                       ? (0, a.jsx)(I.jn, {
                           onClick: u,
-                          children: (0, U.we)("#Button_Dismiss"),
+                          children: (0, E.we)("#Button_Dismiss"),
                         })
                       : (0, a.jsxs)(I.dR, {
                           children: [
                             (0, a.jsx)(I.$n, {
                               onClick: u,
-                              children: (0, U.we)("#Button_Cancel"),
+                              children: (0, E.we)("#Button_Cancel"),
                             }),
                             (0, a.jsx)(I.jn, {
                               onClick: async () => {
@@ -1091,12 +1088,12 @@
                                   l.current && l.current();
                                   const t = d().CancelToken.source();
                                   (l.current = t.cancel),
-                                    (e = await S.Get().SetUnBannable(t));
+                                    (e = await v.Get().SetUnBannable(t));
                                 } finally {
                                   s(!1), i(!0), c(e);
                                 }
                               },
-                              children: (0, U.we)("#Button_Confirm"),
+                              children: (0, E.we)("#Button_Confirm"),
                             }),
                           ],
                         }),
@@ -1108,13 +1105,13 @@
         };
       var he = s(26408),
         _e = s(25888);
-      const pe = (0, v.PA)((e) => {
-        const t = S.Get().GetBroadcasterSteamID(),
+      const pe = (0, x.PA)((e) => {
+        const t = v.Get().GetBroadcasterSteamID(),
           s = null == t ? void 0 : t.ConvertTo64BitString(),
           r = (function () {
             const [e] = (0, n.useState)(
               () =>
-                (0, p.Tc)("ewatchlocation", "application_config") || C.nn.CJ,
+                (0, p.Tc)("ewatchlocation", "application_config") || B.nn.CJ,
             );
             return e;
           })(),
@@ -1127,20 +1124,20 @@
                 className: (0, R.A)(F.BroadcastPage),
                 children: [
                   (0, a.jsxs)("div", {
-                    className: (0, R.A)(B().BroadcastAndChat),
+                    className: (0, R.A)(C().BroadcastAndChat),
                     children: [
-                      Boolean(!S.Get().BShowOnlyChat()) &&
+                      Boolean(!v.Get().BShowOnlyChat()) &&
                         (0, a.jsx)(y.tH, {
                           children: (0, a.jsx)("div", {
-                            className: (0, R.A)(B().wrapper),
+                            className: (0, R.A)(C().wrapper),
                             children: (0, a.jsx)("div", {
                               className: (0, R.A)({
-                                [B().video_placeholder]: !0,
+                                [C().video_placeholder]: !0,
                                 video_placeholder_trgt: !0,
-                                [B().NoChat]: S.Get().BShowOnlyVideo(),
+                                [C().NoChat]: v.Get().BShowOnlyVideo(),
                               }),
                               children: (0, a.jsx)("div", {
-                                className: B().BroadcastPlayerContainer,
+                                className: C().BroadcastPlayerContainer,
                                 children: (0, a.jsx)(y.tH, {
                                   children: (0, a.jsx)(j.default, {
                                     steamIDBroadcast: s,
@@ -1152,15 +1149,15 @@
                             }),
                           }),
                         }),
-                      Boolean(!S.Get().BShowOnlyVideo()) &&
+                      Boolean(!v.Get().BShowOnlyVideo()) &&
                         (0, a.jsx)("div", {
-                          className: B().detail_chat_ctn,
+                          className: C().detail_chat_ctn,
                           children: (0, a.jsx)("div", {
-                            className: B().ChatContainer,
+                            className: C().ChatContainer,
                             children: (0, a.jsx)(y.tH, {
-                              children: (0, a.jsx)(x.I, {
+                              children: (0, a.jsx)(S.I, {
                                 emoticonStore: f.MX,
-                                watchLocation: C.nn.fe,
+                                watchLocation: B.nn.fe,
                                 steamID: s,
                                 broadcastID: d ? d.m_ulBroadcastID : void 0,
                               }),
@@ -1169,23 +1166,23 @@
                         }),
                     ],
                   }),
-                  Boolean(!S.Get().BShowInIframe()) &&
-                    (0, a.jsx)(ve, { broadcasterSteamID: t, broadcastInfo: c }),
+                  Boolean(!v.Get().BShowInIframe()) &&
+                    (0, a.jsx)(xe, { broadcasterSteamID: t, broadcastInfo: c }),
                 ],
               }),
             })
           : null;
       });
-      function Se(e) {
+      function ve(e) {
         return 0 != e && e != h.fO;
       }
-      const ve = (0, v.PA)((e) => {
+      const xe = (0, x.PA)((e) => {
           const { broadcasterSteamID: t, broadcastInfo: s } = e,
             [r, i] = (0, n.useState)(null);
           let o = s.m_nAppID;
           return (
             (0, n.useEffect)(() => {
-              Se(o) &&
+              ve(o) &&
                 (async () => {
                   let e = await w.ac.LoadOGGClanInfoForAppID(o);
                   i(e);
@@ -1194,21 +1191,21 @@
             (0, a.jsxs)(a.Fragment, {
               children: [
                 (0, a.jsx)(ne, { broadcasterSteamID: t }),
-                (0, a.jsx)(xe, { steamid: t }),
+                (0, a.jsx)(Se, { steamid: t }),
                 Boolean(p.iA.is_support) &&
                   (0, a.jsxs)("div", {
                     children: [
                       (0, a.jsx)(le, { broadcastSteamID: t }),
                       (0, a.jsx)("div", {
                         className: (0, R.A)(
-                          A().ValveOnlyBackground,
+                          N().ValveOnlyBackground,
                           F.DebugCtn,
                         ),
                         children: (0, a.jsx)(L, {}),
                       }),
                     ],
                   }),
-                Se(o) &&
+                ve(o) &&
                   (0, a.jsxs)("div", {
                     className: F.GameInfoCtn,
                     children: [
@@ -1219,19 +1216,19 @@
                             className: F.GameAboutTitle,
                             children: [
                               " ",
-                              (0, U.we)("#Broadcast_About_Game"),
+                              (0, E.we)("#Broadcast_About_Game"),
                               " ",
                             ],
                           }),
                           (0, a.jsx)("div", {
-                            className: A().EventSectionSpacer,
+                            className: N().EventSectionSpacer,
                             children: " ",
                           }),
                         ],
                       }),
                       (0, a.jsx)("div", {
                         className: F.GameInfo,
-                        children: (0, a.jsx)(O.p, {
+                        children: (0, a.jsx)(k.p, {
                           id: Number.parseInt(s.m_strAppId),
                           type: "game",
                           bPreferAssetWithoutOverride: !1,
@@ -1253,7 +1250,7 @@
             })
           );
         }),
-        xe = (0, v.PA)((e) => {
+        Se = (0, x.PA)((e) => {
           const t = (0, n.useRef)(null);
           let s = h.es.GetOrCreateBroadcastInfo(
             e.steamid.ConvertTo64BitString(),
@@ -1279,7 +1276,7 @@
             children: [
               (0, a.jsx)("div", {
                 className: F.ControlsTitle,
-                children: (0, U.we)("#Broadcaster_Control_title"),
+                children: (0, E.we)("#Broadcaster_Control_title"),
               }),
               (0, a.jsxs)("div", {
                 className: F.TitleInput,
@@ -1289,14 +1286,14 @@
                     children: [
                       (0, a.jsx)(I.pd, {
                         type: "text",
-                        label: (0, U.we)("#Broadcast_title_title"),
+                        label: (0, E.we)("#Broadcast_title_title"),
                         onChange: (e) => i(e.currentTarget.value || ""),
-                        placeholder: (0, U.we)("#Broadcast_title_placeholder"),
+                        placeholder: (0, E.we)("#Broadcast_title_placeholder"),
                         value: r,
                       }),
                       (0, a.jsx)(I.pd, {
                         type: "text",
-                        label: (0, U.we)("#Broadcast_Control_matchid"),
+                        label: (0, E.we)("#Broadcast_Control_matchid"),
                         onChange: (e) => c(e.currentTarget.value || ""),
                         value: o,
                       }),
@@ -1305,14 +1302,12 @@
                           t.current && t.current();
                           const e = d().CancelToken.source();
                           t.current = e.cancel;
-                          let s = await S.Get().UpdateBroadcastSettings(
-                            o,
-                            r,
-                            e,
-                          );
+                          let s = await v
+                            .Get()
+                            .UpdateBroadcastSettings(o, r, e);
                           e.token.reason ||
                             u(
-                              (0, U.we)(
+                              (0, E.we)(
                                 s
                                   ? "#Broadcast_Control_Success"
                                   : "#Broadcast_Control_Failure",
@@ -1320,9 +1315,9 @@
                             );
                         },
                         children: [
-                          (0, U.we)("#Broadcast_save_changes"),
+                          (0, E.we)("#Broadcast_save_changes"),
                           (0, a.jsx)(he.o, {
-                            tooltip: (0, U.we)("#Broadcast_save_title_ttip"),
+                            tooltip: (0, E.we)("#Broadcast_save_title_ttip"),
                           }),
                         ],
                       }),
@@ -1333,22 +1328,22 @@
                     children: [
                       (0, a.jsx)(I.$n, {
                         onClick: (e) => {
-                          (0, G.pg)(
-                            (0, a.jsx)(k.o0, {
-                              strTitle: (0, U.we)(
+                          (0, O.pg)(
+                            (0, a.jsx)(G.o0, {
+                              strTitle: (0, E.we)(
                                 "#Broadcast_Control_StopBroadcast",
                               ),
-                              strDescription: (0, U.we)(
+                              strDescription: (0, E.we)(
                                 "#EventEditor_GenericAreYouSure",
                               ),
                               onOK: async () => {
                                 t.current && t.current();
                                 const e = d().CancelToken.source();
                                 t.current = e.cancel;
-                                let s = await S.Get().StopBroadcast(e);
+                                let s = await v.Get().StopBroadcast(e);
                                 e.token.reason ||
                                   u(
-                                    (0, U.we)(
+                                    (0, E.we)(
                                       s
                                         ? "#Broadcast_Control_StopSuccess"
                                         : "#Broadcast_Control_StopFailure",
@@ -1356,10 +1351,10 @@
                                   );
                               },
                             }),
-                            (0, E.uX)(e),
+                            (0, U.uX)(e),
                           );
                         },
-                        children: (0, U.we)("#Broadcast_Control_StopBroadcast"),
+                        children: (0, E.we)("#Broadcast_Control_StopBroadcast"),
                       }),
                       Boolean(l) && (0, a.jsx)("div", { children: l }),
                     ],
@@ -1371,7 +1366,7 @@
         });
       var je = s(82429);
       let ge = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
-      function Be(e) {
+      function Ce(e) {
         const [t, s] = n.useState(!0);
         return (
           (0, n.useEffect)(() => {
@@ -1379,7 +1374,7 @@
           }, [t]),
           t
             ? (0, a.jsx)(ce.t, {
-                string: (0, U.we)("#Loading"),
+                string: (0, E.we)("#Loading"),
                 position: "center",
                 size: "medium",
               })

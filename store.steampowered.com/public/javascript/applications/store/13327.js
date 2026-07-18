@@ -313,18 +313,18 @@
         }
       }
       !(function (e) {
-        (e.ToggleAppPrivacy = function (e, t) {
+        (e.ToggleAppPrivacy = function (e, t, r) {
           return e.SendMsg(
             "AccountPrivateApps.ToggleAppPrivacy#1",
-            (0, n.I8)(p, t),
+            (0, n.I8)(p, t, r),
             m,
             { ePrivilege: 1 },
           );
         }),
-          (e.GetPrivateAppList = function (e, t) {
+          (e.GetPrivateAppList = function (e, t, r) {
             return e.SendMsg(
               "AccountPrivateApps.GetPrivateAppList#1",
-              (0, n.I8)(B, t),
+              (0, n.I8)(B, t, r),
               d,
               { bConstMethod: !0, ePrivilege: 1 },
             );

@@ -115,7 +115,7 @@ GHomepage = {
 			InitTabSectionMicrotrailer();
 
 		if ( $J( '#load_addtl_scroll_target' ).length )
-			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
+			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this), 1000 );
 
 		if ( window.Responsive_ReparentItemsInResponsiveMode )
 		{
@@ -1866,14 +1866,14 @@ GHomepage = {
 							}
 
 							var friend = GStoreItemData.GetAccountData( null, oItem.friends[i] );
-							var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, friend.url).replace(/\%2\$s/g, GetAvatarURL( friend.avatar ) ).replace(/\%3\$s/g, friend.accountid) );
+							var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, friend.url).replace(/\%2\$s/g, GetAvatarURL( friend.avatar, "_medium" ) ).replace(/\%3\$s/g, friend.accountid) );
 							$AvatarsCtn.append( $AvatarCap );
 						}
 
 						return $FriendsCtn;
 					}
 
-					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true, 'html_before_price': $elFriendsRow } );
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true, 'lazy': true, 'html_before_price': $elFriendsRow } );
 				}
 
 
@@ -1916,8 +1916,8 @@ GHomepage = {
 
 		const k_nMinCapsules = 5;
 
-        let rgCapsules = GHomepage.FilterItemsForDisplay(
-			rgRecommendedAppsByCreators, 'home', k_nMinCapsules, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+		let rgCapsules = GHomepage.FilterItemsForDisplay(
+			rgRecommendedAppsByCreators, 'home', k_nMinCapsules, 25, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 
 		let rgFirstRow = [];
@@ -1943,12 +1943,60 @@ GHomepage = {
 		else
 			return;
 
+		const fnBuildCreatorArea = function( oItem, nDepth )
+		{
+			let elCuratorDetails = $J('<div/>', { 'class': 'creator_capsule_ctn' } );
+
+			const strLink = GStoreItemData.AddNavEventParamsToURL( oItem.link, 'creator_recommendations', nDepth );
+			let elCreatorLink = $J('<a/>', { 'class': 'curator_capsule_link', 'href': strLink } );
+			elCreatorLink.append( $J('<img/>', { 'class': 'curator_capsule_avatar', 'src': GetAvatarURL( oItem.avatar_sha, '_full' ), 'alt': V_EscapeHTML( oItem.name ) } ) );
+			elCreatorLink.append( $J('<span/>', {'class': 'curator_capsule_name'} ).text( oItem.name ) );
+			elCuratorDetails.append( elCreatorLink );
+
+			let $Actions = $J('<div class="creator_actions" />');
+			let $FollowLink = $J('<button/>', { 'class': 'creator_follow_btn btnv6_white_transparent btn_small_thin' } );
+			$FollowLink.attr( 'data-creatorid-btn', oItem.creatorid );
+
+			const fnUpdateFollowStatus = function( $elFollowButton, bFollowing )
+			{
+				if ( bFollowing )
+				{
+					$elFollowButton.html( '<span><img src="https://store.fastly.steamstatic.com/public/images/v6/ico/ico_selected.png">Following</span>' );
+					$elFollowButton.addClass( "following" );
+				}
+				else
+				{
+					$elFollowButton.html( '<span>Follow</span>' );
+					$elFollowButton.removeClass( "following" );
+				}
+			}
+
+			fnUpdateFollowStatus( $FollowLink, oItem.following );
+
+			$FollowLink.on( 'click', function( e ) {
+				const bFollow = !$J( this ).hasClass( "following" );
+				FollowCuratorWithCallback(
+					oItem.creatorid,
+					bFollow,
+					() => $RecommendedCreators.find('.creator_follow_btn[data-creatorid-btn="' + oItem.creatorid + '"]').each( ( idx, el ) => fnUpdateFollowStatus( $J( el ), bFollow ) )
+				);
+
+				e.preventDefault();
+				e.stopPropagation();
+			} );
+
+			$Actions.append( $FollowLink );
+
+			elCuratorDetails.append( $Actions );
+
+			return elCuratorDetails;
+		}
+
 		GHomepage.FillPagedCapsuleCarousel( rgCarouselCapsules, $RecommendedCreators,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
-				let $CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', { 'disable_autosizer': true });
-				GHomepage.AddCuratorToCapsule( $CapCtn, oItem.avatar_sha, oItem.name );
-				return $CapCtn;
+				const $CreatorArea = fnBuildCreatorArea( oItem, nDepth );
+				return GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', { 'disable_autosizer': true, 'lazy': true, 'html_before_price': $CreatorArea });
 			},	'creator_recommendations', k_nMinCapsules
 		);
 
@@ -2182,7 +2230,7 @@ GHomepage = {
 			{
 				if ( $TopVRTitles.hasClass( 'v2' ) )
 				{
-					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true, 'lazy': true } );
 				}
 				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 			},	'best_selling_vr', k_nMinCapsules
@@ -2530,7 +2578,7 @@ GHomepage = {
 				if ( $RecentlyUpdated.hasClass( 'v2' ) )
 				{
 					let $elAnnouncements = $J('<div/>', {'class': 'recently_updated_desc'} ).text( oItem.description );
-					let rgOptions = { 'disable_autosizer': true, 'html_before_price': $elAnnouncements };
+					let rgOptions = { 'disable_autosizer': true, 'lazy': true, 'html_before_price': $elAnnouncements };
 					if ( oItem.announcementid )
 					{
 						rgOptions.href = 'https://store.steampowered.com/' + 'app/' + oItem.appid + '?announce_gid=' + oItem.announcementid;
@@ -2853,7 +2901,7 @@ GHomepage = {
 		if ( rgUnder10Filtered.length >= k_nMinCapsules )
 		{
 			GHomepage.FillPagedCapsuleCarousel( rgUnder10Filtered, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions, nDepth ) {
-				return GHomepage.BuildHomePageCapsule( oItem, 'under10', { 'disable_autosizer': true } );
+				return GHomepage.BuildHomePageCapsule( oItem, 'under10', { 'disable_autosizer': true, 'lazy': true } );
 			} , 'under10', k_nMinCapsules );
 
 			GDynamicStore.MarkAppDisplayed ( rgUnder10Filtered, k_nMinCapsules );
@@ -3039,6 +3087,8 @@ GHomepage = {
 			'disable_autosizer': false,
 			'lazy': false,
 			'no_hover': false,
+			'microtrailerOnImageHover': false,
+			'curator_clanid': null,
 		}, rgCapsuleOptions ? rgCapsuleOptions : {} );
 
 		var params = { 'class': rgOptions.class };
@@ -3048,6 +3098,9 @@ GHomepage = {
 			strFeatureContext = item.feature;
 		}
 
+		if ( rgOptions.curator_clanid )
+			params['curator_clanid'] = rgOptions.curator_clanid;
+
 		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, item, params, nDepth );
 		if ( !rgItemData )
 			return;
@@ -3055,6 +3108,9 @@ GHomepage = {
 		var $CapCtn = $J('<a/>', params );
 		if ( rgOptions.href )
 			$CapCtn.attr( 'href', GStoreItemData.AddNavEventParamsToURL( rgOptions.href, strFeatureContext, nDepth, null ) );
+
+		if ( rgOptions.microtrailerOnImageHover )
+			$CapCtn.data( 'microtrailerOnImageHover', true );
 
 		if ( !rgOptions.no_hover )
 			GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
@@ -3064,7 +3120,15 @@ GHomepage = {
 		if ( rgOptions.disable_autosizer )
 		{
 			if ( rgOptions.lazy )
-				rgImageProperties['data-image-url'] = rgItemData[rgOptions.capsule_size];
+			{
+				rgImageProperties[ 'data-image-url' ] = rgItemData[ rgOptions.capsule_size ];
+
+				let src = 'https://store.fastly.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif';
+				if ( rgOptions.capsule_size === 'header' )
+					src = 'https://store.fastly.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif';
+
+				rgImageProperties['src'] = src;
+			}
 			else
 				rgImageProperties['src'] = rgItemData[rgOptions.capsule_size];
 		}
@@ -3117,16 +3181,6 @@ GHomepage = {
 		}
 
 		return $CapCtn;
-	},
-
-	AddCuratorToCapsule: function( $CapCtn, strAvatar, strCuratorName )
-	{
-		if ( !strAvatar || !strCuratorName )
-			return;
-
-		let $Curator = $J( '<img/>', { 'class': 'sale_capsule_curator', 'src': GetAvatarURL( strAvatar, '_full' ), 'alt': V_EscapeHTML( strCuratorName ) } );
-
-		$CapCtn.append( $Curator );
 	},
 
 	AddMicrotrailersToStaticCaps: function( $Parent )
@@ -4301,134 +4355,45 @@ GSteamCurators = {
 		if ( !$Parent.length )
 			return;
 
-		$Parent.hide();
-		$J('.apps_recommended_by_curators_ctn').hide();
-
-		const bVersion2 = $Parent.hasClass( 'v2' );
-
-		if( $J('#apps_recommended_by_curators').children().length > 0 )
-			return;
-
-		$J('#apps_recommended_by_curators').empty();
-		$J('#steam_curators').children('.steam_curator' ).remove();
-
 		// if there are apps, then show them
-		var bShowApps = 1;
-		if ( bShowApps && GSteamCurators.rgAppsRecommendedByCurators && GSteamCurators.rgAppsRecommendedByCurators.length != 0 &&
-			 GSteamCurators.rgAppsRecommendedByCurators.apps.length != 0 )
+		if ( GSteamCurators.rgAppsRecommendedByCurators && GSteamCurators.rgAppsRecommendedByCurators.length != 0 && GSteamCurators.rgAppsRecommendedByCurators.apps.length != 0 )
 		{
 			var apps = GSteamCurators.rgAppsRecommendedByCurators.apps;
 
 			var rgRecommendedApps = GHomepage.FilterItemsForDisplay(
-				apps, 'home', 6, 11, { games_already_in_library: false, displayed_elsewhere: false, only_current_platform: true }
+				apps, 'home', 4, 20, { games_already_in_library: false, displayed_elsewhere: false, only_current_platform: true }
 			);
 
-			GDynamicStore.MarkAppDisplayed( rgRecommendedApps, 5 ); 
-			if ( rgRecommendedApps.length >= 5 )
+			const $CuratorCarousel = $J('.more_apps_by_curators_capsule');
+			GHomepage.FillPagedCapsuleCarousel( rgRecommendedApps, $CuratorCarousel,
+				function( oItem, strFeature, rgOptions, nDepth )
 			{
-				GSteamCurators.bNeedRecommendedCurators = false;	// we don't need to ajax in curator recommendations
+				const curatorsCache = GSteamCurators.rgAppsRecommendedByCurators.curators;
+				const clanID = oItem.rgCurators[0];
 
-				// v2
-				$J('.apps_recommended_by_curators_ctn').show();
-				var $RecommendedApps = $J('#apps_recommended_by_curators_v2');
-
-				if( $RecommendedApps.children().length > 0 )
-					return;
-
-				// First show the giant cap
-				for( var j=0; j<rgRecommendedApps.length; j++ in rgRecommendedApps )
+				let params = { 'disable_autosizer': true, 'lazy': true, 'curator_clanid': clanID };
+				if ( curatorsCache.hasOwnProperty( clanID ) )
 				{
-					var appid = rgRecommendedApps[j].appid;
+					const curator = curatorsCache[clanID];
+					const rgRecommendation = oItem.rgRecommendationByCurator[ clanID ] || '';
 
-					// Find the item info in the unfiltered apps list
-					var oItem = false;
-					for( var i=0; i < apps.length; i++ )
-					{
-						if( apps[i].appid == appid )
-						{
-							oItem = apps[i];
-							break;
-						}
-					}
+					let elCuratorDetails = $J('<div/>', { 'class': 'curator_capsule_ctn' } );
 
-					var $Item = GSteamCurators.BuildHomePageGiantCap( 'curated_main_app', oItem );
-					if( !$Item )
-						continue;
+					const strLink = GStoreItemData.AddNavEventParamsToURL( curator.link, 'curator_recommended', nDepth );
+					let elCuratorLink = $J('<a/>', { 'class': 'curator_capsule_link', 'href': strLink } );
+					elCuratorLink.append( $J('<img/>', { 'class': 'curator_capsule_avatar', 'src': GetAvatarURL( curator.strAvatarHash, '_full' ), 'alt': V_EscapeHTML( curator.name ) } ) );
+					elCuratorLink.append($J('<span/>', {'class': 'curator_capsule_name'}).text( curator.name ));
+					elCuratorDetails.append( elCuratorLink );
+					elCuratorDetails.append( $J('<div/>', { 'class': 'curator_capsule_blurb' } ).text( rgRecommendation.blurb ) );
 
-					rgRecommendedApps.splice(j,1);
-
-					if ( bVersion2 )
-					{
-						const rgAppInfo = GStoreItemData.rgAppData[ appid ];
-						if ( rgAppInfo )
-						{
-							$J('#apps_recommended_by_curator_bg' ).css( {'background-image': 'url(' + rgAppInfo.main_capsule + ')' } );
-						}
-					}
-
-					$J('.giant_curator_capsule').empty().append($Item);
-					$J('.giant_curator_capsule').show();
-					$J('.giant_curator_controls').show();
-					$J('.giant_curator_title').show();
-
-                    var $ResponsiveItem = GSteamCurators.BuildResponsiveHomePageGiantCap( 'curated_main_app', oItem );
-
-                    if ( $ResponsiveItem )
-					{
-                        $J('.responsive_giant_curator_capsule').empty().append($ResponsiveItem);
-                        $J('.responsive_giant_curator_capsule').show();
-                    }
-
-					var $elButtonWishlist = $J('<span />').text("Add to Wishlist");
-
-					$elButtonWishlist.click(function(){
-						GDynamicStore.ModifyWishlist( $Item, appid, false, function(){ $elButtonWishlist.hide(); return false; } );
-					});
-
-					var $elButtonNotInterested = $J('<span />').text("Ignore");
-
-					$elButtonNotInterested.click(function(){
-						$J('.giant_curator_capsule').css({'opacity': 0.3});
-						GDynamicStore.ModifyIgnoredApp( $Item, appid, false, function(){ $elButtonNotInterested.hide();  return false; } );
-					});
-
-					if( !GDynamicStore.BIsAppOnWishlist(appid) )
-						$J('.giant_curator_controls').append( $elButtonWishlist );
-
-					if( !GDynamicStore.BIsAppIgnored(appid ) ) // Shouldn't ever need to check this here, but sure why not?
-						$J('.giant_curator_controls').append( $elButtonNotInterested );
-
-					break;
+					params['html_before_price'] = elCuratorDetails;
 				}
 
-				const $CuratorCarousel = $J('.more_apps_by_curators_capsule');
-				GHomepage.FillPagedCapsuleCarousel( rgRecommendedApps, $CuratorCarousel,
-					function( oItem, strFeature, rgOptions, nDepth )
-					{
-						let $CapCtn = null;
-						if ( bVersion2 )
-						{
-							$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', { 'disable_autosizer' : true } );
+				return GHomepage.BuildHomePageCapsule( oItem, 'curator_recommended', params );
+			},	'curated_app', 4 );
 
-							const curatorsCache = GSteamCurators.rgAppsRecommendedByCurators.curators;
-							const clanID = oItem.rgCurators[0];
-							if ( curatorsCache.hasOwnProperty( clanID ) )
-							{
-								const curator = curatorsCache[clanID];
-								GHomepage.AddCuratorToCapsule( $CapCtn, curator.strAvatarHash, curator.name );
-							}
-						}
-						else
-						{
-							$CapCtn  = GSteamCurators.BuildHomePageGenericCap( oItem, strFeature );
-						}
-
-						return $CapCtn;
-					},	'curated_app', bVersion2 ? 5 : 4
-				);
-
-				return;
-			}
+			GDynamicStore.MarkAppDisplayed( rgRecommendedApps, 4 );
+			$Parent.show();
 		}
 	},
 

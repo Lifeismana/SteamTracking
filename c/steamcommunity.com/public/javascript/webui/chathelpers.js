@@ -206,55 +206,120 @@ var CLSTAMP = "steamdb";
         "use strict";
         __webpack_require__("chunkid");
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_, _) {
-          return (
-            (_ = Math.ceil(_)),
-            (_ = Math.floor(_)),
-            Math.floor(Math.random() * (_ - _ + 1)) + _
-          );
-        }
-        function _(_) {
-          if (!_() || !window.document.cookie) return null;
-          const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
-          return _ && _[2] ? decodeURIComponent(_[2]) : null;
-        }
+        const _ = {
+            EUNIVERSE: 0,
+            WEB_UNIVERSE: "",
+            LANGUAGE: "english",
+            SUPPORTED_LANGUAGES: [],
+            COUNTRY: "",
+            AVATAR_BASE_URL: "",
+            MEDIA_CDN_COMMUNITY_URL: "",
+            MEDIA_CDN_URL: "",
+            CLAN_CDN_ASSET_URL: "",
+            COMMUNITY_ASSETS_BASE_URL: "",
+            VIDEO_CDN_URL: "",
+            COMMUNITY_CDN_URL: "",
+            COMMUNITY_CDN_ASSET_URL: "",
+            BASE_URL_SHARED_CDN: "",
+            STORE_CDN_URL: "",
+            PUBLIC_SHARED_URL: "",
+            COMMUNITY_BASE_URL: "",
+            CHAT_BASE_URL: "",
+            STORE_BASE_URL: "",
+            STORE_CHECKOUT_BASE_URL: "",
+            LOGIN_BASE_URL: "",
+            SUPPORT_BASE_URL: "",
+            STORE_ICON_BASE_URL: "",
+            STORE_ITEM_BASE_URL: "",
+            IMG_URL: "",
+            STEAMTV_BASE_URL: "",
+            HELP_BASE_URL: "",
+            PARTNER_BASE_URL: "",
+            STATS_BASE_URL: "",
+            INTERNAL_STATS_BASE_URL: "",
+            BASE_URL_STORE_CDN_ASSETS: "",
+            IN_CLIENT: !1,
+            USE_POPUPS: !1,
+            IN_MOBILE: !1,
+            IN_MOBILE_WEBVIEW: !1,
+            IN_TENFOOT: !1,
+            PLATFORM: "",
+            ARCH: "",
+            SNR: "",
+            LAUNCHER_TYPE: 0,
+            EREALM: 0,
+            IN_CHROMEOS: !1,
+            TESLA: !1,
+            LOCAL_HOSTNAME: "",
+            WEBAPI_BASE_URL: "",
+            TOKEN_URL: "",
+            BUILD_TIMESTAMP: 0,
+            PAGE_TIMESTAMP: 0,
+            FROM_WEB: !1,
+            WEBSITE_ID: "Unknown",
+            IN_STEAMUI: !1,
+            IN_GAMEPADUI: !1,
+            FORCED_DISPLAY_MODE: void 0,
+            ON_FRAME: !1,
+            IS_STEAMOS: !1,
+            ON_STEAMOS_CLIENT_BRANCH: !1,
+            IN_GAMESCOPE: !1,
+            IN_LOGIN: !1,
+            IN_LOGIN_REFRESH: !1,
+            USE_LONGEST_LOC_STRING: !1,
+            SILENT_STARTUP: !1,
+            DEV_MODE: !1,
+            CLIENT_SESSION: 0,
+            NOW: 0,
+          },
+          _ = {
+            logged_in: !1,
+            steamid: "",
+            accountid: 0,
+            account_name: "",
+            token: void 0,
+            token_use_id: void 0,
+            webapi_token: "",
+            authwgtoken: "",
+            is_support: !1,
+            is_limited: !1,
+            is_partner_member: !1,
+            is_valve_email: !1,
+            short_url: "",
+            country_code: "",
+            excluded_content_descriptors: [_._, _._, _._],
+          },
+          _ = {
+            steamid: "",
+            clanid: 0,
+            listid: 0,
+          },
+          _ = {
+            CLANSTEAMID: "",
+            CLANACCOUNTID: 0,
+            APPID: 0,
+            VANITY_ID: "",
+            IS_CREATOR_HOME: !1,
+            IS_CURATOR: !1,
+            IS_OGG: !1,
+            CAN_UPLOAD_IMAGES: !1,
+            IS_VALVE_GROUP: !1,
+            IS_ALLOWED_SC: !1,
+          },
+          _ = {
+            ANNOUNCEMENT_GID: "",
+            TAKEOVER_ANNOUNCEMENT_GID: "",
+          };
         function _() {
           return !!window.document;
         }
         const _ = "webui_config";
-        let _;
-        function _() {
-          const _ = (function () {
-            let _ = "";
-            for (let _ = 0; _ < 24; _++) _ += _(0, 35).toString(36);
-            return _;
-          })();
-          return (
-            (function (_, _, _, _) {
-              if (!_()) return;
-              _ || (_ = "/");
-              let _ = "";
-              if (void 0 !== _ && _) {
-                const _ = new Date();
-                _.setTime(_.getTime() + 864e5 * _),
-                  (_ = "; expires=" + _.toUTCString());
-              }
-              document.cookie =
-                encodeURIComponent(_) +
-                "=" +
-                encodeURIComponent(_) +
-                _ +
-                ";path=" +
-                _;
-            })("sessionid", _, 0),
-            _
-          );
-        }
         function _(_ = _) {
           const _ = {},
             _ = _("config", _);
-          _ && (delete _.SESSIONID, Object.assign(_, _), (_.config = !0));
+          _ && (Object.assign(_, _), (_.config = !0));
           const _ = _("userinfo", _);
           _ &&
             (Object.assign(_, _),
@@ -262,7 +327,12 @@ var CLSTAMP = "steamdb";
             _.is_support &&
               (function () {
                 let _ = null;
-                _() && (_ = _(_));
+                _() &&
+                  (_ = (function (_) {
+                    if (!_() || !window.document.cookie) return null;
+                    const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
+                    return _ && _[2] ? decodeURIComponent(_[2]) : null;
+                  })(_));
                 return Boolean(_ && 1 === Number.parseInt(_));
               })() &&
               (_.is_support = !1));
@@ -316,357 +386,7 @@ var CLSTAMP = "steamdb";
           else _ && console.error("Missing config element #", _);
         }
         const _ = "presentation_mode";
-        var _ = __webpack_require__("chunkid");
-        const _ = {
-            EUNIVERSE: 0,
-            WEB_UNIVERSE: "",
-            LANGUAGE: "english",
-            SUPPORTED_LANGUAGES: [],
-            COUNTRY: "",
-            AVATAR_BASE_URL: "",
-            MEDIA_CDN_COMMUNITY_URL: "",
-            MEDIA_CDN_URL: "",
-            CLAN_CDN_ASSET_URL: "",
-            COMMUNITY_ASSETS_BASE_URL: "",
-            VIDEO_CDN_URL: "",
-            COMMUNITY_CDN_URL: "",
-            COMMUNITY_CDN_ASSET_URL: "",
-            BASE_URL_SHARED_CDN: "",
-            STORE_CDN_URL: "",
-            PUBLIC_SHARED_URL: "",
-            COMMUNITY_BASE_URL: "",
-            CHAT_BASE_URL: "",
-            STORE_BASE_URL: "",
-            STORE_CHECKOUT_BASE_URL: "",
-            LOGIN_BASE_URL: "",
-            SUPPORT_BASE_URL: "",
-            STORE_ICON_BASE_URL: "",
-            STORE_ITEM_BASE_URL: "",
-            IMG_URL: "",
-            STEAMTV_BASE_URL: "",
-            HELP_BASE_URL: "",
-            PARTNER_BASE_URL: "",
-            STATS_BASE_URL: "",
-            INTERNAL_STATS_BASE_URL: "",
-            BASE_URL_STORE_CDN_ASSETS: "",
-            IN_CLIENT: !1,
-            USE_POPUPS: !1,
-            IN_MOBILE: !1,
-            IN_MOBILE_WEBVIEW: !1,
-            IN_TENFOOT: !1,
-            PLATFORM: "",
-            ARCH: "",
-            SNR: "",
-            LAUNCHER_TYPE: 0,
-            EREALM: 0,
-            IN_CHROMEOS: !1,
-            TESLA: !1,
-            LOCAL_HOSTNAME: "",
-            WEBAPI_BASE_URL: "",
-            TOKEN_URL: "",
-            BUILD_TIMESTAMP: 0,
-            PAGE_TIMESTAMP: 0,
-            FROM_WEB: !1,
-            WEBSITE_ID: "Unknown",
-            get SESSIONID() {
-              return (function () {
-                if (!_()) return _ || (_ = _()), _;
-                let _ = _("sessionid");
-                return _ || (_ = _()), _;
-              })();
-            },
-            FRIENDSUI_BETA: !1,
-            STEAM_TV: !1,
-            DEV_MODE: !1,
-            IN_STEAMUI: !1,
-            IN_GAMEPADUI: !1,
-            FORCED_DISPLAY_MODE: void 0,
-            ON_FRAME: !1,
-            IS_STEAMOS: !1,
-            ON_STEAMOS_CLIENT_BRANCH: !1,
-            IN_GAMESCOPE: !1,
-            IN_LOGIN: !1,
-            IN_LOGIN_REFRESH: !1,
-            USE_LONGEST_LOC_STRING: !1,
-            SILENT_STARTUP: !1,
-            CLIENT_SESSION: 0,
-            NOW: 0,
-          },
-          _ = {
-            logged_in: !1,
-            steamid: "",
-            accountid: 0,
-            account_name: "",
-            token: void 0,
-            token_use_id: void 0,
-            webapi_token: "",
-            authwgtoken: "",
-            is_support: !1,
-            is_limited: !1,
-            is_partner_member: !1,
-            is_valve_email: !1,
-            short_url: "",
-            country_code: "",
-            excluded_content_descriptors: [_._, _._, _._],
-          },
-          _ = {
-            steamid: "",
-            clanid: 0,
-            listid: 0,
-          },
-          _ = {
-            CLANSTEAMID: "",
-            CLANACCOUNTID: 0,
-            APPID: 0,
-            VANITY_ID: "",
-            IS_CREATOR_HOME: !1,
-            IS_CURATOR: !1,
-            IS_OGG: !1,
-            CAN_UPLOAD_IMAGES: !1,
-            IS_VALVE_GROUP: !1,
-            IS_ALLOWED_SC: !1,
-          },
-          _ = {
-            ANNOUNCEMENT_GID: "",
-            TAKEOVER_ANNOUNCEMENT_GID: "",
-          };
         _.createContext({});
-        var _ = __webpack_require__("chunkid");
-        let _ = {
-          success: !0,
-          result: _._,
-        };
-        class _ {
-          m_connection = new _();
-          FailureResult(_ = _._) {
-            let _ = {
-              success: !1,
-              result: _,
-            };
-            return (
-              this.m_connection &&
-                !this.m_connection.browser_supported &&
-                (_.browser_unsupported = !0),
-              this.m_connection &&
-                !this.m_connection.connected_to_client &&
-                (_.connect_failed = !0),
-              _ == _._ && (_.call_unsupported = !0),
-              _
-            );
-          }
-          BClientConnected() {
-            return this.m_connection.Connect().then(
-              () => _,
-              () => this.FailureResult(),
-            );
-          }
-          BClientConnectedAndSupportsMessage(_) {
-            return this.m_connection
-              .Connect()
-              .then(() => this.BClientSupportsMessage(_))
-              .catch(() => !1);
-          }
-          BClientSupportsMessage(_) {
-            return (
-              !(
-                !this.m_connection.connected_to_client ||
-                !this.m_connection.ready
-              ) &&
-              -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(_)
-            );
-          }
-          OpenFriendChatDialog(_) {
-            let _ = {
-              message: "ShowFriendChatDialog",
-              steamid: _,
-            };
-            return this.GenericEResultCall(_);
-          }
-          OpenChatRoomGroupDialog(_, _) {
-            let _ = {
-              message: "ShowChatRoomGroupDialog",
-              chat_group_id: _,
-            };
-            return _ && (_.chat_room_id = _), this.GenericEResultCall(_);
-          }
-          ShowChatRoomGroupInvite(_, _ = !0) {
-            let _ = {
-              message: "ShowChatRoomGroupInvite",
-              invite_code: _,
-            };
-            return this.GenericEResultCall(_, _);
-          }
-          m_mapCacheSubscribedApp = new Map();
-          BIsSubscribedApp(_) {
-            if (this.m_mapCacheSubscribedApp.has(_))
-              return Promise.resolve(this.m_mapCacheSubscribedApp.get(_));
-            let _ = {
-              message: "IsSubscribedApp",
-              appid: _,
-            };
-            return this.GenericEResultCall(_, !0).then((_) => {
-              if (_.connect_failed) return;
-              let _ = _.result == _._;
-              return this.m_mapCacheSubscribedApp.set(_, _), _;
-            });
-          }
-          OpenFriendsDialog() {
-            return this.GenericEResultCall({
-              message: "OpenFriendsDialog",
-            });
-          }
-          OpenSteamURL(_, _ = !1) {
-            let _ = {
-              message: "OpenSteamURL",
-              url: _,
-            };
-            return this.GenericEResultCall(_, _);
-          }
-          BClientAccountMatches() {
-            return (
-              !_.logged_in ||
-              _.accountid == this.m_connection.ClientInfo.unAccountID
-            );
-          }
-          GenericEResultCall(_, _ = !1) {
-            return this.m_connection
-              .Connect()
-              .then(() =>
-                _ && !this.BClientAccountMatches()
-                  ? {
-                      success: !1,
-                      result: _._,
-                      account_mismatch: !0,
-                    }
-                  : this.m_connection
-                      .SendMsgAndAwaitResponse(_)
-                      .then((_) =>
-                        _.success === _._ ? _ : this.FailureResult(_.success),
-                      ),
-              )
-              .catch(() => this.FailureResult());
-          }
-        }
-        class _ {
-          m_mapWaitingCallbacks = new Map();
-          m_socket;
-          m_iCallSeq = 1;
-          m_bReady = !1;
-          m_bClientConnectionFailed = !1;
-          m_bSecurityException = !1;
-          m_promiseConnect;
-          m_ClientInfo = {
-            ulVersion: "",
-            bFriendsUIEnabled: !1,
-            unAccountID: 0,
-            rgSupportedMessages: [],
-          };
-          constructor() {}
-          get ClientInfo() {
-            return this.m_ClientInfo;
-          }
-          get ready() {
-            return this.m_bReady;
-          }
-          get browser_supported() {
-            return !this.m_bSecurityException;
-          }
-          get connected_to_client() {
-            return (
-              !!this.m_socket && this.m_socket.readyState == WebSocket.OPEN
-            );
-          }
-          SendMsgAndAwaitResponse(_) {
-            return new Promise((_, _) => {
-              let _ = this.m_iCallSeq++;
-              this.BSendMsg(_, _)
-                ? this.m_mapWaitingCallbacks.set(_, {
-                    iSeq: _,
-                    fnCallback: _,
-                    fnError: _,
-                  })
-                : __webpack_require__();
-            });
-          }
-          BSendMsg(_, _) {
-            if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
-              return !1;
-            let _ = Object.assign({}, _, {
-              universe: _.EUNIVERSE,
-              accountid: _.accountid,
-            });
-            void 0 !== _ && (_.sequenceid = _);
-            try {
-              return this.m_socket.send(JSON.stringify(_)), !0;
-            } catch (_) {
-              return !1;
-            }
-          }
-          OnSocketMessage(_) {
-            try {
-              let _ = JSON.parse(_.data);
-              if (_.sequenceid) {
-                let _ = this.m_mapWaitingCallbacks.get(_.sequenceid);
-                if (_)
-                  return (
-                    this.m_mapWaitingCallbacks.delete(_.sequenceid),
-                    void _.fnCallback(_)
-                  );
-              }
-            } catch (_) {
-              console.error("exception parsing response", _);
-            }
-          }
-          Connect() {
-            if (this.m_bReady && this.m_socket?.readyState === WebSocket.OPEN)
-              return Promise.resolve();
-            if (this.m_promiseConnect) return this.m_promiseConnect;
-            let _ = new Promise((_, _) => {
-              try {
-                this.m_socket = new WebSocket(
-                  "ws://127.0.0.1:27060/clientsocket/",
-                );
-              } catch (_) {
-                return (this.m_bSecurityException = !0), void _(_);
-              }
-              (this.m_socket.onerror = (_) => {
-                _();
-              }),
-                (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
-                (this.m_socket.onopen = () => {
-                  this.SendMsgAndAwaitResponse({
-                    message: "GetClientInfo",
-                  })
-                    .then((_) => {
-                      _.success == _._
-                        ? ((this.m_ClientInfo.ulVersion = _.clientversion),
-                          (this.m_ClientInfo.bFriendsUIEnabled = !!_.friendsui),
-                          (this.m_ClientInfo.unAccountID = _.accountid),
-                          _.supported_messages &&
-                            (this.m_ClientInfo.rgSupportedMessages =
-                              _.supported_messages),
-                          _())
-                        : _();
-                    })
-                    .catch(_);
-                });
-            });
-            return (
-              (this.m_promiseConnect = _),
-              this.m_promiseConnect
-                .then(() => {
-                  (this.m_bReady = !0), (this.m_promiseConnect = void 0);
-                })
-                .catch(() => {
-                  (this.m_bClientConnectionFailed = !0),
-                    (this.m_promiseConnect = void 0);
-                }),
-              this.m_promiseConnect
-            );
-          }
-        }
-        let _ = new _();
-        window.ClientConnectionAPI = _;
         __webpack_require__("chunkid"), __webpack_require__("chunkid");
         new Map();
         var _;
@@ -722,6 +442,87 @@ var CLSTAMP = "steamdb";
         })(_ || (_ = {}));
         const _ = 2147483647,
           _ = 30;
+        [
+          ["None", "none", -1],
+          ["Afrikaans", "afrikaans", 0],
+          ["Albanian", "albanian", 1],
+          ["Amharic", "amharic", 2],
+          ["Armenian", "armenian", 3],
+          ["Assamese", "assamese", 4],
+          ["Azerbaijani", "azerbaijani", 5],
+          ["Bangla", "bangla", 6],
+          ["Basque", "basque", 7],
+          ["Belarusian", "belarusian", 8],
+          ["Bosnian", "bosnian", 9],
+          ["Catalan", "catalan", 10],
+          ["Cherokee", "cherokee", 11],
+          ["Croatian", "croatian", 12],
+          ["Dari", "dari", 13],
+          ["Estonian", "estonian", 14],
+          ["Filipino", "filipino", 15],
+          ["Galician", "galician", 16],
+          ["Georgian", "georgian", 17],
+          ["Gujarati", "gujarati", 18],
+          ["Punjabi (Gurmukhi)", "gurmukhi", 19],
+          ["Hausa", "hausa", 20],
+          ["Hebrew", "hebrew", 21],
+          ["Hindi", "hindi", 22],
+          ["Icelandic", "icelandic", 23],
+          ["Igbo", "igbo", 24],
+          ["Indonesian", "indonesian", 25],
+          ["Irish", "irish", 26],
+          ["Kannada", "kannada", 27],
+          ["Kazakh", "kazakh", 28],
+          ["Khmer", "khmer", 29],
+          ["K'iche'", "kiche", 30],
+          ["Kinyarwanda", "kinyarwanda", 31],
+          ["Konkani", "konkani", 32],
+          ["Kyrgyz", "kyrgyz", 33],
+          ["Latvian", "latvian", 34],
+          ["Lithuanian", "lithuanian", 35],
+          ["Luxembourgish", "luxembourgish", 36],
+          ["Macedonian", "macedonian", 37],
+          ["Malay", "malay", 38],
+          ["Malayalam", "malayalam", 39],
+          ["Maltese", "maltese", 40],
+          ["Maori", "maori", 41],
+          ["Marathi", "marathi", 42],
+          ["Mongolian", "mongolian", 43],
+          ["Nepali", "nepali", 44],
+          ["Odia", "odia", 45],
+          ["Persian", "persian", 46],
+          ["Quechua", "quechua", 47],
+          ["Scots", "scots", 48],
+          ["Serbian", "serbian", 49],
+          ["Punjabi (Shahmukhi)", "shahmukhi", 50],
+          ["Sindhi", "sindhi", 51],
+          ["Sinhala", "sinhala", 52],
+          ["Slovak", "slovak", 53],
+          ["Slovenian", "slovenian", 54],
+          ["Sorani", "sorani", 55],
+          ["Sotho", "sotho", 56],
+          ["Swahili", "swahili", 57],
+          ["Tajik", "tajik", 58],
+          ["Tamil", "tamil", 59],
+          ["Tatar", "tatar", 60],
+          ["Telugu", "telugu", 61],
+          ["Tigrinya", "tigrinya", 62],
+          ["Tswana", "tswana", 63],
+          ["Turkmen", "turkmen", 64],
+          ["Urdu", "urdu", 65],
+          ["Uyghur", "uyghur", 66],
+          ["Uzbek", "uzbek", 67],
+          ["Valencian", "valencian", 68],
+          ["Welsh", "welsh", 69],
+          ["Wolof", "wolof", 70],
+          ["Xhosa", "xhosa", 71],
+          ["Yoruba", "yoruba", 72],
+          ["Zulu", "zulu", 73],
+        ].map((_) => ({
+          name: _[0],
+          shortName: _[1],
+          eAdditionalLanguage: _[2],
+        }));
         function _(_, _ = 0) {
           switch (_) {
             case "english":
@@ -1568,7 +1369,6 @@ var CLSTAMP = "steamdb";
         _([_._], _.prototype, "InitFromPHPInviteLinkInfo", null);
         class _ {
           m_bConnectingToClient = !1;
-          m_connectResult = void 0;
           m_invite;
           m_htmlPreRendered;
           static sm_rtTimeCur;
@@ -1578,8 +1378,7 @@ var CLSTAMP = "steamdb";
               _.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(_.Invite)
                 : this.m_invite.InitInvalid(),
-              (this.m_htmlPreRendered = _.render),
-              this.SendInviteToClient();
+              (this.m_htmlPreRendered = _.render);
           }
           BIsInviteValid() {
             return this.m_invite.BIsValid() && !this.m_invite.BIsExpired();
@@ -1589,9 +1388,6 @@ var CLSTAMP = "steamdb";
           }
           BIsConnectingToClient() {
             return this.m_bConnectingToClient;
-          }
-          GetConnectResults() {
-            return this.m_connectResult;
           }
           GetPreRenderedHTML() {
             return this.m_htmlPreRendered;
@@ -1630,28 +1426,11 @@ var CLSTAMP = "steamdb";
               invite_code: this.m_invite.GetInviteCode(),
             });
           }
-          LaunchSteamIgnoreAccount() {
-            this.SendInviteToClient(!1);
-          }
           ForceLaunchSteamClient() {
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
           }
-          SendInviteToClient(_ = !0) {
-            this.m_invite.BIsValid() &&
-              !this.m_invite.BIsExpired() &&
-              ((this.m_bConnectingToClient = !0),
-              _.ShowChatRoomGroupInvite(this.m_invite.GetInviteCode(), _).then(
-                (_) => {
-                  (0, _._)(() => {
-                    (this.m_bConnectingToClient = !1),
-                      (this.m_connectResult = _);
-                  });
-                },
-              ));
-          }
         }
-        _([_._], _.prototype, "m_bConnectingToClient", void 0),
-          _([_._], _.prototype, "m_connectResult", void 0);
+        _([_._], _.prototype, "m_bConnectingToClient", void 0);
         let _ = class extends _.Component {
           render() {
             return (0, _.jsx)("div", {
@@ -1675,9 +1454,6 @@ var CLSTAMP = "steamdb";
           LaunchWebChat() {
             this.props.controller.LaunchWebChat();
           }
-          OpenInSteamIgnoreAccount() {
-            this.props.controller.LaunchSteamIgnoreAccount();
-          }
           LaunchSteamClient() {
             this.props.controller.ForceLaunchSteamClient(),
               window.setTimeout(() => {
@@ -1694,127 +1470,44 @@ var CLSTAMP = "steamdb";
             return !1;
           }
           render() {
-            if (this.props.controller.BIsConnectingToClient())
-              return (0, _.jsx)("div", {
-                className: "ChatMessageInvite RequestingInfo NoColumns",
-                children: (0, _.jsx)("div", {
-                  className: "postedExpiredInvite",
-                  children: _("#bbcode_invite_requesting_info"),
-                }),
-              });
-            let _ = this.props.controller.GetConnectResults(),
-              _ = this.props.controller.GetInvite(),
-              _ = (_.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+            let _ = this.props.controller.GetInvite(),
+              _ = this.IsMobileDevice(),
               _ = "inviteButton inviteButtonJoinChat";
             return (
               _.BIsVoiceChatInvite() && (_ += " inviteButtonJoinVoice"),
-              _.success
-                ? (0, _.jsxs)("div", {
-                    className: "ChatMessageInvite NoColumns",
+              (0, _.jsxs)(_, {
+                render: this.props.controller.GetPreRenderedHTML(),
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: "inviteLabel inviteLabelButtons",
                     children: [
-                      (0, _.jsx)("div", {
-                        className: "groupName",
-                        children: _("#InviteLanding_SentToSteam"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: "inviteLabel",
-                        children: _(
-                          "#InviteLanding_SentToSteam_Desc",
-                          (0, _.jsx)("a", {
-                            href: "#",
-                            onClick: this.LaunchWebChat,
-                            children: _(
-                              "#InviteLanding_SentToSteam_Desc_LaunchWebChat",
-                            ),
-                          }),
-                        ),
+                      !_ &&
+                        (0, _.jsx)("button", {
+                          className: _,
+                          type: "button",
+                          onClick: this.LaunchSteamClient,
+                          children: _("#InviteLanding_OpenInSteam"),
+                        }),
+                      (0, _.jsx)("button", {
+                        className: _,
+                        type: "button",
+                        onClick: this.LaunchWebChat,
+                        children: _("#InviteLanding_OpenInWebChat"),
                       }),
                     ],
-                  })
-                : _.account_mismatch
-                  ? (0, _.jsxs)(_, {
-                      render: this.props.controller.GetPreRenderedHTML(),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: "inviteLabel",
-                          children: _("#InviteLanding_AccountMismatch"),
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: "inviteLabel",
-                          children: [
-                            (0, _.jsx)("button", {
-                              className: _,
-                              type: "button",
-                              onClick: this.OpenInSteamIgnoreAccount,
-                              children: _("#InviteLanding_OpenInSteam"),
-                            }),
-                            (0, _.jsx)("button", {
-                              className: _,
-                              type: "button",
-                              onClick: this.LaunchWebChat,
-                              children: _("#InviteLanding_OpenInWebChat"),
-                            }),
-                          ],
-                        }),
-                      ],
-                    })
-                  : _.call_unsupported
-                    ? (0, _.jsxs)("div", {
-                        className: "ChatMessageInvite",
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: "groupName",
-                            children: _("#InviteLanding_SentToSteam"),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: "inviteLabel",
-                            children: _(
-                              "#InviteLanding_SentToSteam_Desc",
-                              (0, _.jsx)("a", {
-                                href: "#",
-                                onClick: this.LaunchWebChat,
-                                children: _(
-                                  "#InviteLanding_SentToSteam_Desc_LaunchWebChat",
-                                ),
-                              }),
-                            ),
-                          }),
-                        ],
-                      })
-                    : (0, _.jsxs)(_, {
-                        render: this.props.controller.GetPreRenderedHTML(),
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: "inviteLabel inviteLabelButtons",
-                            children: [
-                              !_ &&
-                                (0, _.jsx)("button", {
-                                  className: _,
-                                  type: "button",
-                                  onClick: this.LaunchSteamClient,
-                                  children: _("#InviteLanding_OpenInSteam"),
-                                }),
-                              (0, _.jsx)("button", {
-                                className: _,
-                                type: "button",
-                                onClick: this.LaunchWebChat,
-                                children: _("#InviteLanding_OpenInWebChat"),
-                              }),
-                            ],
-                          }),
-                          this.m_bTriedToLaunchSteam &&
-                            (0, _.jsx)("div", {
-                              className: "inviteLabel inviteLabelLaunchPrompt",
-                              children: _("#InviteLanding_OpenInSteam_Help"),
-                            }),
-                        ],
-                      })
+                  }),
+                  this.m_bTriedToLaunchSteam &&
+                    (0, _.jsx)("div", {
+                      className: "inviteLabel inviteLabelLaunchPrompt",
+                      children: _("#InviteLanding_OpenInSteam_Help"),
+                    }),
+                ],
+              })
             );
           }
         };
         _([_._], _.prototype, "m_bTriedToLaunchSteam", void 0),
           _([_], _.prototype, "LaunchWebChat", null),
-          _([_], _.prototype, "OpenInSteamIgnoreAccount", null),
           _([_], _.prototype, "LaunchSteamClient", null),
           (_ = _([_._], _));
         class _ extends _.Component {
@@ -1862,8 +1555,6 @@ var CLSTAMP = "steamdb";
             ],
           });
         }
-        window.AssertMsg = _;
-        let _ = new _();
         function _(_) {
           let _;
           try {
@@ -1877,7 +1568,7 @@ var CLSTAMP = "steamdb";
             }),
           );
         }
-        (window.ClientConnectionAPI = _),
+        (window.AssertMsg = _),
           document.addEventListener("DOMContentLoaded", async function () {
             _(),
               await (async function (_) {
@@ -1920,14 +1611,8 @@ var CLSTAMP = "steamdb";
         "use strict";
         __webpack_require__._(_, {
           _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
         });
-        const _ = 1,
-          _ = 2,
-          _ = 7,
-          _ = 19;
+        const _ = 1;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -2525,8 +2210,14 @@ var CLSTAMP = "steamdb";
                 : this.Body()[`set_${_}`] && this.Body()[`set_${_}`](_[_]);
           }
         }
-        function _(_, _) {
-          return _ instanceof _ ? _ : _.InitFromObject(_, _);
+        function _(_, _, _) {
+          let _;
+          return (
+            (_ = _ instanceof _ ? _ : _.InitFromObject(_, _)),
+            void 0 !== _?.strDebugSource &&
+              _.Hdr().set_debug_source(_.strDebugSource),
+            _
+          );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -2955,67 +2646,67 @@ var CLSTAMP = "steamdb";
       {
         43: "8170f2c895e19202cd65",
         762: "da846d9434cb0fa053d0",
-        976: "62af8b1f5e36c846de35",
-        1225: "08fe5b6de8f6251654b8",
-        1449: "1367fe0bdc0f43c0f31b",
+        976: "c361f800d6ef307ae120",
+        1225: "312ed1e4c5db2f4c081a",
+        1449: "0ce4d085e4b397389652",
         1499: "fac3c5fdc04308b95497",
-        1973: "e1659222853901eb62f8",
-        2256: "52a13ef309e7739d3ec7",
-        2320: "510bbdfeced4a455435d",
-        2435: "75b6398a7ac76b13a10f",
-        2532: "740ae502ef03c9aca44b",
-        2632: "ec150b3236df2e690317",
-        2749: "69404acc6fa1b45b9861",
+        1973: "6889f64ffb6b351881c1",
+        2256: "d006f3fad816bc725d94",
+        2320: "ca231c4d9fa7a6246d26",
+        2435: "ce0be30e4fbaa0add7d5",
+        2532: "726fc960ed3131ab0865",
+        2632: "5e1065ce31d6605a9004",
+        2749: "d10b086380b59ed531e1",
         2945: "e07e4818e2a0d4fcc6a4",
-        2954: "8efe7719788f5f88ef9b",
+        2954: "e7c6fe7f258a3a270829",
         3e3: "9d84323971dec0188c80",
-        3016: "aa776518a1c8d05e2346",
+        3016: "f6185aecd134f08375bc",
         3232: "7e18a3c2d3045e97050e",
         3415: "f91b674a80d33488244d",
-        3485: "c54eec1e659f8c59da85",
-        3710: "bbea31831ed9beb2fe01",
-        3789: "43b07ba659d8cbaa69f3",
-        3912: "8ade0dffeccb2125472a",
+        3485: "203f1d427376e06cd2e9",
+        3710: "74ae1c3c4d8f5265c05a",
+        3789: "68550c6cfd59330c3e48",
+        3912: "c611b051820508717c70",
         4154: "94ca8cb2d2aa1f47d22a",
-        4302: "26c6c68d68ef95ef5f8d",
+        4302: "435019249c6f51b79b4f",
         4434: "b76bcd1bc89404745cc8",
         4488: "9b7902a9dcd57e5a8ac3",
-        4776: "ef1dcbea9d59f8743bf8",
-        4787: "07b24eb37c9e0b433d0c",
-        5018: "deaf385b0027de4bc7e8",
-        5110: "b6d91308dbed138a2376",
-        5241: "85abe55d560ef90d1dd8",
-        5341: "671fa39c7d33a83df311",
+        4776: "6133207eac020e1ab36e",
+        4787: "63f48bbabd6e52adb440",
+        5018: "48bb2536dff04aca92d5",
+        5110: "347aed336e9356d05ed8",
+        5241: "413f559a5b369ce41441",
+        5341: "ce5400f709b5d26948e2",
         5480: "fe1e2469122f1c0d37d0",
-        6031: "020e61748b9171357081",
-        6127: "165f942ae61f710d7fe3",
-        6149: "2b0342ce11a26116fbba",
-        6165: "e893d5dc017d8b2d5c0d",
-        6208: "9a22ef60d3b43fccfbe6",
-        6239: "f227e1d9fb6339d487c8",
-        6332: "0dddb01f6059ba3b7d6f",
-        6385: "7f9b40cc12e05621335e",
-        6518: "dc5f6ae58364d09cceda",
-        6523: "8edfd42eb445c6e26656",
-        6562: "3874fca0b34b7db1a93e",
-        6609: "29f4e0907b3805eda2f2",
-        6888: "f5ebd78ad10b3118603c",
+        6031: "95003c486e82a525a69e",
+        6127: "bcb2b356d29892b7ef52",
+        6149: "9f23e15638c56392642e",
+        6165: "ff95319000d3ed4331d6",
+        6208: "e89ab0751a896dda721d",
+        6239: "8c6148f2489f37fa3734",
+        6332: "7e9696572dca73107873",
+        6385: "633241ebfdb81845e960",
+        6518: "857261cae6462f001643",
+        6523: "ede2e78d4176328496b9",
+        6562: "b67278e9418d3bb684b3",
+        6609: "06b39a5f1c8a9fa61b56",
+        6888: "5e713d851c095e455c3b",
         6971: "39f358e2496a3d2a55c3",
         7487: "c0d8195dd6dab3975615",
-        7539: "5e9acb4829c49e8f98d7",
-        7591: "8ce0cf3a5e90fb4ba20e",
-        7786: "e023852d3ba679e8036e",
-        7861: "46f4c386b3edcfa9f92b",
-        8025: "2352457a9b2341cbb996",
-        8194: "36f74d61aa3af730900f",
-        8306: "4e40ce76dfe927e742b7",
-        8759: "959f10c584a5ca3aac3b",
-        8766: "33682347c9abfde5c73d",
-        8967: "4d2e78cb419d797d8268",
+        7539: "30f7291f91666a777754",
+        7591: "c20057d7e0fa41ff0297",
+        7786: "bd20decd1d48f51599f8",
+        7861: "63671b2acc79688f22e9",
+        8025: "fb1e6b2c14acf134b544",
+        8194: "a3c2c82981967a0bb30a",
+        8306: "56cc160b3b7995db89fd",
+        8759: "64839c1cf1d65d068251",
+        8766: "568c79e84ce11aed47a9",
+        8967: "1f378ed5d477a32d6a96",
         9027: "99a11776d1c5b10911cd",
-        9152: "0cb7e3db4aa96b1db03a",
-        9712: "5724bd2367a3c48e196d",
-        9746: "793a8abfe2e6fc8551cb",
+        9152: "2cfbb8ff39b8268aaf58",
+        9712: "ef39b8e43fc4e19b2138",
+        9746: "53570359ca81bb16a3cc",
         9808: "942f6e1ad27af2af89a2",
       }[_]),
     (_.miniCssF = (_) => {}),
@@ -3162,6 +2853,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(86698));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(6263));
   _ = _._(_);
 })();

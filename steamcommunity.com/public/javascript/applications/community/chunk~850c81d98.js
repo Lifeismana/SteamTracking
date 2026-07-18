@@ -1539,41 +1539,42 @@
         }
       }
       !(function (e) {
-        (e.GetInventoryItemsWithDescriptions = function (e, r) {
+        (e.GetInventoryItemsWithDescriptions = function (e, r, t) {
           return e.SendMsg(
             "Econ.GetInventoryItemsWithDescriptions#1",
-            (0, o.I8)(z, r),
+            (0, o.I8)(z, r, t),
             f,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
           );
         }),
-          (e.GetTradeOfferAccessToken = function (e, r) {
+          (e.GetTradeOfferAccessToken = function (e, r, t) {
             return e.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
-              (0, o.I8)(q, r),
+              (0, o.I8)(q, r, t),
               R,
               { ePrivilege: 1 },
             );
           }),
-          (e.ClientGetItemShopOverlayAuthURL = function (e, r) {
+          (e.ClientGetItemShopOverlayAuthURL = function (e, r, t) {
             return e.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, o.I8)(h, r),
+              (0, o.I8)(h, r, t),
               W,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetAssetClassInfo = function (e, r) {
-            return e.SendMsg("Econ.GetAssetClassInfo#1", (0, o.I8)(j, r), I, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
+          (e.GetAssetClassInfo = function (e, r, t) {
+            return e.SendMsg(
+              "Econ.GetAssetClassInfo#1",
+              (0, o.I8)(j, r, t),
+              I,
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 1 },
+            );
           }),
-          (e.GetAssetPropertySchema = function (e, r) {
+          (e.GetAssetPropertySchema = function (e, r, t) {
             return e.SendMsg(
               "Econ.GetAssetPropertySchema#1",
-              (0, o.I8)(p, r),
+              (0, o.I8)(p, r, t),
               y,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );

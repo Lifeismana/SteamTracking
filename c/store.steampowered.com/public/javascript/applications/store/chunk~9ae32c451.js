@@ -416,7 +416,7 @@
         async InternalOpenDoor(_, _ = !0, _, _ = !1) {
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", (0, _._)()),
             _ && _.append("datarecord", _),
             _ && _.append("fake_open", "" + _),
             _.append("door_index", "" + _),
@@ -490,7 +490,7 @@
         async CloseAllDoors(_) {
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
           const _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
+          __webpack_require__.append("sessionid", (0, _._)()),
             __webpack_require__.append("clan_accountid", "" + _);
           let _ = null;
           try {

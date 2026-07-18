@@ -1,4 +1,4 @@
-var CLSTAMP = "10804487";
+var CLSTAMP = "10833093";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1739,15 +1739,16 @@ var CLSTAMP = "10804487";
       28869: (e, t, r) => {
         "use strict";
         r.d(t, {
-          C7: () => C,
-          sl: () => v,
-          D0: () => y,
-          Mg: () => R,
+          C7: () => v,
+          sl: () => S,
+          D0: () => x,
+          Mg: () => I,
           sQ: () => w,
-          HR: () => k,
-          v0: () => L,
+          HR: () => L,
+          v0: () => T,
           TJ: () => b,
           qp: () => M,
+          BT: () => C,
         });
         var n = r(62540),
           i = r(42898),
@@ -1799,6 +1800,32 @@ var CLSTAMP = "10804487";
           );
         }
         function C(e) {
+          const t = c.useRef(null),
+            r = c.useRef(null);
+          c.useEffect(
+            () => () => {
+              r.current?.();
+            },
+            [],
+          );
+          return c.useCallback(
+            (n) => {
+              t.current !== n &&
+                ((t.current = n),
+                r.current?.(),
+                (r.current = null),
+                n &&
+                  (r.current = (0, h.aM)(
+                    n,
+                    (t) =>
+                      !(!e || "none" == e.GetFocusable()) &&
+                      e.BTakeFocus(void 0, t.detail.button),
+                  )));
+            },
+            [e],
+          );
+        }
+        function v(e) {
           const {
               onButtonDown: t,
               onButtonUp: r,
@@ -1842,7 +1869,7 @@ var CLSTAMP = "10804487";
             props: b,
           };
         }
-        function v(e) {
+        function S(e) {
           const {
               autoFocus: t,
               preferredFocus: r,
@@ -1864,12 +1891,12 @@ var CLSTAMP = "10804487";
               navEntryPreferPosition: b,
               scrollIntoViewWhenChildFocused: w,
               fnScrollIntoViewHandler: M,
-              scrollIntoViewType: v,
+              scrollIntoViewType: C,
               resetNavOnEntry: S,
               scrollRegionToStartOrEnd: y,
               ...x
             } = e,
-            { gamepadEvents: B, actionDescriptions: R, props: I } = C(x);
+            { gamepadEvents: B, actionDescriptions: R, props: I } = v(x);
           return {
             elemProps: I,
             navOptions: {
@@ -1892,7 +1919,7 @@ var CLSTAMP = "10804487";
               navEntryPreferPosition: b,
               scrollIntoViewWhenChildFocused: w,
               fnScrollIntoViewHandler: M,
-              scrollIntoViewType: v,
+              scrollIntoViewType: C,
               resetNavOnEntry: S,
               scrollRegionToStartOrEnd: y,
               actionDescriptionMap: { ...h, ...R },
@@ -1900,7 +1927,7 @@ var CLSTAMP = "10804487";
             gamepadEvents: B,
           };
         }
-        function S(e) {
+        function y(e) {
           return function (t) {
             const {
                 focusClassName: r,
@@ -1936,17 +1963,17 @@ var CLSTAMP = "10804487";
             );
           };
         }
-        const y = S("div");
-        function x(e) {
+        const x = y("div");
+        function B(e) {
           return (
             l.eZ.PlayNavSound(l.PN.DefaultOk),
             (0, u.kD)(e.currentTarget) && e.currentTarget.click(),
             !0
           );
         }
-        const B = c.createContext(void 0),
-          R = B.Provider;
-        function I(e, t, r, i, o) {
+        const R = c.createContext(void 0),
+          I = R.Provider;
+        function k(e, t, r, i, o) {
           const {
               elemProps: {
                 focusClassName: l,
@@ -1956,58 +1983,59 @@ var CLSTAMP = "10804487";
               },
               navOptions: p,
               gamepadEvents: f,
-            } = v(r),
+            } = S(r),
             {
               bFocusableByDefault: _ = !0,
               bActivateByDefault: w = !1,
-              bDOMElementFocusByDefault: C = _,
+              bDOMElementFocusByDefault: v = _,
             } = o || {};
           void 0 === p.focusable && !h.disabled && _ && (p.focusable = !0);
-          const S = (0, g.O)(d),
-            { ref: y, node: R } = M({ layout: S, ...p });
+          const y = (0, g.O)(d),
+            { ref: x, node: I } = M({ layout: y, ...p });
           f.onOKButton ||
             ((("onClick" in h && h.onClick) || (w && (!0 === w || w(h)))) &&
-              (f.onOKButton = x)),
-            p.focusable && !C
+              (f.onOKButton = B)),
+            p.focusable && !v
               ? (h.tabIndex = h.tabIndex || 0)
-              : !p.focusable && C && (h.tabIndex = h.tabIndex ?? -1),
-            (0, m.Ui)(f, y);
-          const I = (0, s.Ue)(i, y),
-            k = (0, c.useContext)(B)?.Component;
-          let L = { ...h };
+              : !p.focusable && v && (h.tabIndex = h.tabIndex ?? -1),
+            (0, m.Ui)(f, x);
+          const k = C(I),
+            L = (0, s.Ue)(i, x, k),
+            T = (0, c.useContext)(R)?.Component;
+          let j = { ...h };
           return (
-            "onClick" in h && (L.role ??= "button"),
-            R
-              ? ((L = {
-                  ...L,
-                  divRef: I,
-                  node: R,
+            "onClick" in h && (j.role ??= "button"),
+            I
+              ? ((j = {
+                  ...j,
+                  divRef: L,
+                  node: I,
                   focusClassName: a()(l, "gpfocus"),
                   focusWithinClassName: "gpfocuswithin",
-                  bFocusableByDefault: C,
+                  bFocusableByDefault: v,
                   className: a()(h.className, "Focusable"),
                 }),
                 (0, n.jsx)(b.Provider, {
-                  value: R,
-                  children: k
-                    ? c.createElement(k, { ...L, Component: t }, u)
-                    : c.createElement(t, L, u),
+                  value: I,
+                  children: T
+                    ? c.createElement(T, { ...j, Component: t }, u)
+                    : c.createElement(t, j, u),
                 }))
               : c.createElement(
                   e,
-                  { ...L, ref: i, className: a()(h.className, "Focusable") },
+                  { ...j, ref: i, className: a()(h.className, "Focusable") },
                   u,
                 )
           );
         }
-        function k(e, t) {
-          const r = S(e);
+        function L(e, t) {
+          const r = y(e);
           return c.forwardRef(function (n, i) {
-            return I(e, r, n, i, t);
+            return k(e, r, n, i, t);
           });
         }
-        function L(e) {
-          const t = S(e);
+        function T(e) {
+          const t = y(e);
           return c.forwardRef(function (r, n) {
             const {
                 virtualKeyboardProps: i,
@@ -2038,7 +2066,7 @@ var CLSTAMP = "10804487";
               })(r),
               c = (0, f.Cz)(i, o),
               l = (0, s.Ue)(n, c);
-            return I(e, t, a, l);
+            return k(e, t, a, l);
           });
         }
       },
@@ -2168,40 +2196,42 @@ var CLSTAMP = "10804487";
             y = (0, d.bJ)();
           (_.className = o()(_.className, "Panel", y && "Focusable")),
             (0, m.Ui)(w, v);
-          const x = (0, i.Ue)(v, e.ref);
+          const x = (0, c.BT)(S),
+            B = (0, i.Ue)(v, e.ref, x);
           (!b.focusable && !b.focusableIfEmpty) ||
             (S && S.Tree.BUseVirtualFocus()) ||
             (_.tabIndex = _.tabIndex || 0),
             b.focusable && (r || w.onOKButton) && (_.role ??= "button");
-          const B = (0, a.useContext)(h).Component;
+          const R = (0, a.useContext)(h).Component;
           return (0, n.jsx)(c.TJ.Provider, {
             value: S,
             children: S
-              ? (0, n.jsx)(B, {
+              ? (0, n.jsx)(R, {
                   ..._,
-                  divRef: x,
+                  divRef: B,
                   node: S,
                   focusClassName: o()(p, "gpfocus"),
                   focusWithinClassName: o()(g, "gpfocuswithin"),
                 })
-              : (0, n.jsx)("div", { ..._, ref: x }),
+              : (0, n.jsx)("div", { ..._, ref: B }),
           });
         }
       },
       20893: (e, t, r) => {
         "use strict";
         r.d(t, {
-          AE: () => v,
+          AE: () => S,
           D$: () => n,
-          G7: () => S,
-          IA: () => y,
+          G7: () => y,
+          IA: () => x,
           Ro: () => _,
           SI: () => a,
           SZ: () => h,
           VX: () => p,
           W1: () => C,
-          Y3: () => B,
-          cC: () => R,
+          Y3: () => R,
+          aM: () => v,
+          cC: () => I,
           cR: () => b,
           f: () => f,
           gh: () => c,
@@ -2261,22 +2291,22 @@ var CLSTAMP = "10804487";
           return d(e, "vgp_onbuttonup", t);
         }
         function p(e, t) {
-          return d(e, "vgp_onok", x(t));
+          return d(e, "vgp_onok", B(t));
         }
         function g(e, t) {
-          return d(e, "vgp_oncancel", x(t));
+          return d(e, "vgp_oncancel", B(t));
         }
         function f(e, t) {
-          return d(e, "vgp_onsecondaryaction", x(t));
+          return d(e, "vgp_onsecondaryaction", B(t));
         }
         function _(e, t) {
-          return d(e, "vgp_onoptions", x(t));
+          return d(e, "vgp_onoptions", B(t));
         }
         function b(e, t) {
-          return d(e, "vgp_onmenu", x(t));
+          return d(e, "vgp_onmenu", B(t));
         }
         function w(e, t) {
-          return d(e, "vgp_ondirection", x(t));
+          return d(e, "vgp_ondirection", B(t));
         }
         function M(e, t) {
           return d(e, "vgp_onfocus", t);
@@ -2284,7 +2314,10 @@ var CLSTAMP = "10804487";
         function C(e, t) {
           return d(e, "vgp_onblur", t);
         }
-        function v(e, t, r) {
+        function v(e, t) {
+          return d(e, "vgp_requestfocus", B(t));
+        }
+        function S(e, t, r) {
           let n = e;
           if (!n || !n.ownerDocument || !n.ownerDocument.defaultView) return !0;
           let i = new n.ownerDocument.defaultView.CustomEvent(t, {
@@ -2294,29 +2327,29 @@ var CLSTAMP = "10804487";
           });
           return n.dispatchEvent(i);
         }
-        function S(e, t) {
+        function y(e, t) {
           const r = { button: t, source: s.Vz.GAMEPAD, is_repeat: !1 };
-          v(e, "vgp_onbuttondown", r), v(e, "vgp_onbuttonup", r);
+          S(e, "vgp_onbuttondown", r), S(e, "vgp_onbuttonup", r);
         }
-        function y(e) {
+        function x(e) {
           const t = [s.pR.DIR_UP, s.pR.DIR_DOWN, s.pR.DIR_LEFT, s.pR.DIR_RIGHT];
           let r = !0,
             n = !1,
             i = u[e.detail.button];
           return (
             i
-              ? ((n = !0), (r = v(e.target, i, e.detail)))
+              ? ((n = !0), (r = S(e.target, i, e.detail)))
               : -1 !== t.indexOf(e.detail.button) &&
-                ((n = !0), (r = v(e.target, "vgp_ondirection", e.detail))),
+                ((n = !0), (r = S(e.target, "vgp_ondirection", e.detail))),
             { bUnhandled: r, bHadLogicalEventMapping: n }
           );
         }
-        function x(e) {
+        function B(e) {
           return (t) => {
             !1 !== e(t) && (t.stopPropagation(), t.preventDefault());
           };
         }
-        function B(e) {
+        function R(e) {
           const {
               onOKActionDescription: t,
               onCancelActionDescription: r,
@@ -2335,7 +2368,7 @@ var CLSTAMP = "10804487";
             c
           );
         }
-        function R(e, t, r) {
+        function I(e, t, r) {
           return (0, i.QS)(
             (r) => {
               if (r && t) return d(r, e, t);
@@ -13981,7 +14014,13 @@ var CLSTAMP = "10804487";
           let t;
           return e && (t = e.ownerDocument.defaultView), t;
         }
-        r.d(t, { _f: () => o, aF: () => a, bZ: () => i, qf: () => s });
+        r.d(t, {
+          _f: () => o,
+          aF: () => a,
+          bZ: () => i,
+          kD: () => n,
+          qf: () => s,
+        });
         function o(e, t) {
           let r = e?.parentElement;
           for (; r; ) {
@@ -16084,9 +16123,9 @@ var CLSTAMP = "10804487";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 7 2026 : 12:48:56",
-                BUILD_TIME_UTC: "Jul 7 2026 : 19:48:56",
-                BUILD_RTIME_UTC: 1783453736,
+                BUILD_TIME_LOCAL: "Jul 17 2026 : 14:04:44",
+                BUILD_TIME_UTC: "Jul 17 2026 : 21:04:44",
+                BUILD_RTIME_UTC: 1784322284,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -28980,9 +29019,9 @@ var CLSTAMP = "10804487";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 7 2026 : 12:48:56",
-                    BUILD_TIME_UTC: "Jul 7 2026 : 19:48:56",
-                    BUILD_RTIME_UTC: 1783453736,
+                    BUILD_TIME_LOCAL: "Jul 17 2026 : 14:04:44",
+                    BUILD_TIME_UTC: "Jul 17 2026 : 21:04:44",
+                    BUILD_RTIME_UTC: 1784322284,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -29635,7 +29674,7 @@ var CLSTAMP = "10804487";
         3356: "f1060d832dfd2513cd22",
         3366: "d7e43d3583690ec0e1f4",
         3473: "aa2e2c813e7588319881",
-        3569: "d093f262bbc0f95fd9e5",
+        3569: "ec0e08c3064ef9b83f47",
         3583: "22aaaa36100912e3ed08",
         3585: "7848ae778b003c5839b0",
         3589: "fd66d8f7b977b24bb0d2",
@@ -29836,7 +29875,7 @@ var CLSTAMP = "10804487";
         9779: "59ef76674166d4b9e52e",
         9845: "13b5b6656f416f517b33",
         9853: "cb23ac97c5ef25298c13",
-        9858: "690ff802388bdaf52a0c",
+        9858: "0acb87de4b4dd6ca79b5",
         9861: "d075ad8e71f05bafe846",
         9862: "51ef07edcc880ce94847",
         9869: "87497576748f35eb5b06",

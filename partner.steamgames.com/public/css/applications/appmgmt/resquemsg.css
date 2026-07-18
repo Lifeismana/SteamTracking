@@ -143,10 +143,6 @@
 ._2g5oNomwd2lv8wL2qlsLVA .EventEditorTextTitle {
   padding-top: 6px;
 }
-._3gnQfZ3NUW9NFF3WllsQ6b {
-  position: relative;
-  max-width: 450px;
-}
 @keyframes _1xm0qUdmOPB5fFuOJowf-6 {
   from {
     background-position: 0 100%;
@@ -462,6 +458,10 @@
 ._20i0fZO4jaOWCaVeAoB6KJ ._1K4QC6vZ61M5lcIvcCWMEP:hover,
 .g1ayBmJ07JAYzenoRRpu5 ._1K4QC6vZ61M5lcIvcCWMEP:hover {
   color: #fff;
+}
+._3gnQfZ3NUW9NFF3WllsQ6b {
+  position: relative;
+  max-width: 450px;
 }
 .wC3_c2yhq3ppKA9AKQoTy {
   width: 100%;

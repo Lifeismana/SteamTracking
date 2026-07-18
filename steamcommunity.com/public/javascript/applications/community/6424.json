@@ -134,7 +134,7 @@
     "Listing_NotAvailable": "Ez az ajánlat már nem érhető el",
     "Listing_NotAvailable_Short": "Nem érhető el",
     "Listing_NotAvailable_Long": "Ez az ajánlat már nem vásárolható meg.",
-    "Listing_MyListing": "(My Listing)",
+    "Listing_MyListing": "(Saját ajánlatom)",
     "BuyOrderDialog_Header": "Vétel – %1$s",
     "BuyOrderDialog_Header_NoItem": "Vételi ajánlat létrehozása",
     "BuyOrderDialog_BucketPicker_Label": "Milyen típusú tételt szeretnél megvásárolni?",

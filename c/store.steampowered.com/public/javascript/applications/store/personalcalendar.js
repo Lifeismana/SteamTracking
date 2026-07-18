@@ -70,6 +70,7 @@
         Date: "_2ZLaa9X1KqHlMCSw96mYaW",
         Today: "_3mRf-suj1kS8DGKgfnHAql",
         DayAppContainer: "_3LhmtdtkRlqwQbEcHrCJGs",
+        EmptyDay: "_3UXGJAjhm6tgbPHq1f_UlN",
         MoreGames: "_2T5aAmTJF2RJhrBpoIOfqW",
         StoreAppHover: "_2Tqn7YAJcleffVrwKeeky6",
         StoreAppCapsule: "_1V0RCs8QeHLs8oLOr0MdyK",
@@ -80,6 +81,63 @@
         Screenshot: "_3aD2ult5gmmxWA_7oCdUPO",
         Active: "kPZWPvJo2jw2t3b47viEo",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, ..._) {
+        const _ = [],
+          _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+        let _,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          (_ += _[0].length), __webpack_require__.push(_[1]);
+          const _ = parseInt(_[2]),
+            _ = _[3] || "",
+            _ = _(_, ..._),
+            _ = (_ >= 1 && _ <= _.length ? _[_ - 1] : null)
+              ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
+              : _;
+          __webpack_require__.push(_);
+        }
+        return (
+          __webpack_require__.push(_.substr(_)),
+          _.createElement(_.Fragment, null, ..._)
+        );
+      }
+      function _(_, _ = ["b", "i", "br"]) {
+        const _ = _.join("|"),
+          _ = [],
+          _ = new RegExp(
+            `(?<before>.*?)<(?<tagname>${_})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
+            "gs",
+          );
+        let _,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          if (!_.groups) continue;
+          if (!_.groups?.endtag) {
+            const _ = _.groups.before.length + _.groups.tagname.length + 2;
+            (_ += _), (_.lastIndex = _.index + _), _.push(_.groups.before);
+            const _ = _[2],
+              _ = _.createElement(_);
+            _.push(_);
+            continue;
+          }
+          (_ += _[0].length), _.push(_.groups.before);
+          const _ = _.groups.tagname,
+            _ = _.groups.contents || "";
+          let _ = null;
+          _ && (_ = _(_, _));
+          const _ = _.createElement(_, {}, _);
+          _.push(_);
+        }
+        return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -842,7 +900,7 @@
         );
       }
       function _(_) {
-        _ && (window.clearTimeout(_.current), (_.current = null));
+        _.current && (window.clearTimeout(_.current), (_.current = null));
       }
       function _(_) {
         const {
@@ -1215,6 +1273,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         name: "personalcalendarPrefs",
@@ -1362,9 +1422,17 @@
             day: "numeric",
             month: "numeric",
           }),
-          _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _),
+          _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _).sort(
+            (_, _) =>
+              _.bIsWishlisted && !_.bIsWishlisted
+                ? -1
+                : _.bIsWishlisted && !_.bIsWishlisted
+                  ? 1
+                  : _.nRank - _.nRank,
+          ),
           _ = _ ?? 100,
           _ = _.filter((_) => _.nRank <= _).length - 2,
+          _ = 0 == _.length,
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
           _ = _.useRef(null);
@@ -1381,6 +1449,7 @@
               _.PersonalCalendarWidgetDay,
               _ && _.TodayCtn,
               _ && _.FutureCtn,
+              _ && _.EmptyDayCtn,
             ),
             "flow-children": "column",
             children: [
@@ -1411,15 +1480,29 @@
                 preferredFocus: _ && !_,
                 ref: _,
                 onFocusWithin: () => _(!0),
-                children: _.slice(0, 2).map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      nAppID: _.nAppID,
-                    },
-                    _.nAppID,
-                  ),
-                ),
+                children: (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    _.slice(0, 2).map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          nAppID: _.nAppID,
+                        },
+                        _.nAppID,
+                      ),
+                    ),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _.EmptyDay,
+                        children: (0, _._)(
+                          (0, _._)("#PersonalCalendar_EmptyDay"),
+                          (0, _.jsx)("a", {
+                            href: _,
+                          }),
+                        ),
+                      }),
+                  ],
+                }),
               }),
               !_ &&
                 _ > 0 &&
@@ -1463,33 +1546,36 @@
               },
               hoverClassName: _.StoreAppHover,
               disableScreenshots: !0,
-              children: (0, _.jsxs)(_._, {
-                ref: _,
-                className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
-                onMouseOver: () => _(!0),
-                onMouseOut: () => _(!1),
-                children: [
-                  (0, _.jsx)("img", {
-                    className: _.Image,
-                    src: _,
-                  }),
-                  _ &&
+              children: (0, _.jsx)(_._, {
+                appID: _.nAppID,
+                children: (0, _.jsxs)(_._, {
+                  ref: _,
+                  className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
+                  onMouseOver: () => _(!0),
+                  onMouseOut: () => _(!1),
+                  children: [
+                    (0, _.jsx)("img", {
+                      className: _.Image,
+                      src: _,
+                    }),
                     _ &&
-                    (0, _.jsx)(_, {
-                      _: {
-                        appid: _.nAppID,
-                      },
-                      nIntervalMS: 1e3,
-                    }),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      _: {
-                        appid: _.nAppID,
-                      },
-                      active: _,
-                      bIsHoverMode: !0,
-                    }),
-                ],
+                      _ &&
+                      (0, _.jsx)(_, {
+                        _: {
+                          appid: _.nAppID,
+                        },
+                        nIntervalMS: 1e3,
+                      }),
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        _: {
+                          appid: _.nAppID,
+                        },
+                        active: _,
+                        bIsHoverMode: !0,
+                      }),
+                  ],
+                }),
               }),
             }),
           })

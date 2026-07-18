@@ -778,13 +778,13 @@ a.commentthread_allcommentslink:hover {
 	font-size: 14px;
 }
 
-.commentthread_comment_author a.actionlink {
+.commentthread_comment_author .actionlink {
 	color: #B0AEAC;
 	font-size: 11px;
 	visibility: hidden;
 }
 
-.commentthread_comment_author a.actionlink:hover {
+.commentthread_comment_author .actionlink:hover {
 	text-decoration: underline;
 }
 .commentthread_comment_actions {
@@ -795,15 +795,15 @@ a.commentthread_allcommentslink:hover {
 	align-items: flex-start;
 }
 
-.commentthread_comment_actions a.actionlink {
+.commentthread_comment_actions .actionlink {
 	margin-left: 10px;
 }
 
-.commentthread_comment:hover .commentthread_comment_author a.actionlink {
+.commentthread_comment:hover .commentthread_comment_author .actionlink {
 	visibility: visible;
 }
 
-.commentthread_comment:hover .commentthread_comment_author a.actionlink img {
+.commentthread_comment:hover .commentthread_comment_author .actionlink img {
 	height: 16px;
 }
 

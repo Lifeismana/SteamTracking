@@ -1026,31 +1026,31 @@
       }
       var z;
       !(function (e) {
-        (e.Update = function (e, r) {
-          return e.SendMsg("UserReviews.Update#1", (0, o.I8)(l, r), c, {
+        (e.Update = function (e, r, t) {
+          return e.SendMsg("UserReviews.Update#1", (0, o.I8)(l, r, t), c, {
             ePrivilege: 3,
           });
         }),
-          (e.BackfillSavedHardware = function (e, r) {
+          (e.BackfillSavedHardware = function (e, r, t) {
             return e.SendMsg(
               "UserReviews.BackfillSavedHardware#1",
-              (0, o.I8)(d, r),
+              (0, o.I8)(d, r, t),
               u,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetFriendsRecommendedApp = function (e, r) {
+          (e.GetFriendsRecommendedApp = function (e, r, t) {
             return e.SendMsg(
               "UserReviews.GetFriendsRecommendedApp#1",
-              (0, o.I8)(_, r),
+              (0, o.I8)(_, r, t),
               p,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
-          (e.GetIndividualRecommendations = function (e, r) {
+          (e.GetIndividualRecommendations = function (e, r, t) {
             return e.SendMsg(
               "UserReviews.GetIndividualRecommendations#1",
-              (0, o.I8)(M, r),
+              (0, o.I8)(M, r, t),
               f,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );

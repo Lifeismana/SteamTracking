@@ -14,21 +14,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        return (0, _._)().languages.map((_) => {
-          return 2 == (_ = _.strISOCode).length && _._.COUNTRY
-            ? `${_}-${_._.COUNTRY}`
-            : _;
-          var _;
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -3086,10 +3071,10 @@
       }
       var _;
       !(function (_) {
-        (_.GetPointsForSpend = function (_, _) {
+        (_.GetPointsForSpend = function (_, _, _) {
           return _.SendMsg(
             "LoyaltyRewards.GetPointsForSpend#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -3098,86 +3083,91 @@
             },
           );
         }),
-          (_.GetSummary = function (_, _) {
-            return _.SendMsg("LoyaltyRewards.GetSummary#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetSummary = function (_, _, _) {
+            return _.SendMsg(
+              "LoyaltyRewards.GetSummary#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.RedeemPoints = function (_, _) {
+          (_.RedeemPoints = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPoints#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsForBadgeLevel = function (_, _) {
+          (_.RedeemPointsForBadgeLevel = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsToUpgradeItem = function (_, _) {
+          (_.RedeemPointsToUpgradeItem = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsForProfileCustomization = function (_, _) {
+          (_.RedeemPointsForProfileCustomization = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RedeemPointsForProfileCustomizationUpgrade = function (_, _) {
+          (_.RedeemPointsForProfileCustomizationUpgrade = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RegisterForSteamDeckRewards = function (_, _) {
+          (_.RegisterForSteamDeckRewards = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.RegisterForSteamDeckRewards#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.AddReaction = function (_, _) {
+          (_.AddReaction = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.AddReaction#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetReactions = function (_, _) {
+          (_.GetReactions = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetReactions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3185,10 +3175,10 @@
               },
             );
           }),
-          (_.GetReactionsSummaryForUser = function (_, _) {
+          (_.GetReactionsSummaryForUser = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetReactionsSummaryForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3197,10 +3187,10 @@
               },
             );
           }),
-          (_.GetReactionConfig = function (_, _) {
+          (_.GetReactionConfig = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetReactionConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3209,10 +3199,10 @@
               },
             );
           }),
-          (_.GetProfileCustomizationsConfig = function (_, _) {
+          (_.GetProfileCustomizationsConfig = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetProfileCustomizationsConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3221,10 +3211,10 @@
               },
             );
           }),
-          (_.GetEligibleApps = function (_, _) {
+          (_.GetEligibleApps = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetEligibleApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3233,10 +3223,10 @@
               },
             );
           }),
-          (_.GetActivePurchaseBonuses = function (_, _) {
+          (_.GetActivePurchaseBonuses = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetActivePurchaseBonuses#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3245,10 +3235,10 @@
               },
             );
           }),
-          (_.QueryRewardItems = function (_, _) {
+          (_.QueryRewardItems = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.QueryRewardItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3257,10 +3247,10 @@
               },
             );
           }),
-          (_.BatchedQueryRewardItems = function (_, _) {
+          (_.BatchedQueryRewardItems = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.BatchedQueryRewardItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -3269,10 +3259,10 @@
               },
             );
           }),
-          (_.GetEquippedProfileItems = function (_, _) {
+          (_.GetEquippedProfileItems = function (_, _, _) {
             return _.SendMsg(
               "LoyaltyRewards.GetEquippedProfileItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,

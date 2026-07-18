@@ -949,7 +949,8 @@
             ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
         const { ref: _, node: _ } = (0, _._)(_);
         (0, _._)(_, _);
-        const _ = (0, _._)(_, _.props?.ref);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _.props?.ref, _);
         return (0, _.jsx)(_._.Provider, {
           value: _,
           children: _.cloneElement(_, {
