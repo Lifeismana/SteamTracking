@@ -97,6 +97,7 @@
     "Cart_Error_TooManyInCart": "You have exceeded the maximum quantity of this item allowed in your cart.",
     "Cart_Error_CommercialLicenseRestricted_FootNote": "Your cart contains an item that is unavailable for purchase.",
     "Cart_Error_CommercialLicenseRestricted_LineItem": "Unavailable for purchase",
+    "Cart_Error_GiftRecipientInvalid": "The selected reipcient cannot receive this gift purchased from your region.",
     "Cart_Error_MissingMustOwnApps_LineItem": "Purchasing this item requires you own the following items:",
     "Cart_Error_MissingMustOwnApps_GiftLineItem": "This item requires the gift recipient own the following items:",
     "Cart_Error_MissingMustOwnApps_FootNote": "Your account doesn't own some items that are required for purchasing the items in your cart.  You can add the missing items or adjust the contents of your cart to continue.",
@@ -108,9 +109,11 @@
     "Cart_Warning_PriceChange_FootNote": "One or more of the items below have changed in price since you added it to your cart.",
     "Cart_Warning_PriceChange_LineItem": "The price of this item has changed",
     "Cart_Warning_NoRefund_LineItem": "This product contains consumable content that makes it not eligible for a refund.",
+    "Cart_Warning_RecipientHigherPrice": "The gift recipient you have selected is in a higher price region.  The cost of this item has been updated to match their region to allow it to be gifted to them.",
     "Cart_Warning_AvailableAtALowerPrice": "This item is available at a lower price as part of %1$s.",
     "Cart_Warning_GiftToNonFriend": "The gift recipient is NOT on your Steam friends list.",
     "Cart_Warning_GiftToNonFriend_Named": "NOTE: %1$s is NOT on your Steam friends list.",
+    "Cart_Warning_GiftToAccount_LoggedOut_Actionable": "If you are sending a gift to a Steam friend please <1>sign in</1> to verify that the recipient is on your friends list.",
     "Cart_GifteeHint_Wishlist": "You recently viewed %1$s's wishlist. Gift these items to them?",
     "PackageIncludesSubscriptionBySecond": "Subscription to be billed %1$s every %2$s second(s).",
     "PackageIncludesSubscriptionByMinute": "Subscription to be billed %1$s every %2$s minute(s).",
@@ -207,5 +210,6 @@
     "Cart_UserCountrySelector": "Country",
     "Cart_Replay_SavedCart": "Saved Cart",
     "Cart_Replay_Instructions": "This is a saved shopping cart.  Last time you attempted to purchase this cart there was an error, so we saved your cart (including discounts) for %1$s hours so you can attempt your purchase again.",
-    "Cart_Gifting_CopyGiftOptionsFrom": "Copy gift options from"
+    "Cart_Gifting_CopyGiftOptionsFrom": "Copy gift options from",
+    "Cart_Gifting_SignInToSelectFriends": "<1>Sign in</1> to select Steam friends"
 }

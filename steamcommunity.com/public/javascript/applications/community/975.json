@@ -1,5 +1,8 @@
 {
     "language": "czech",
+    "EventEditor_Loc_Title": "Správa lokalizace",
+    "EventEditor_Loc_Overview": "Exportujte a importujte lokalizační soubory a spravujte lokalizaci všech řetězců události.",
+    "EventEditor_Loc_Overview_Page": "Exportujte a importujte lokalizační soubory a spravujte lokalizaci všech řetězců stránky.",
     "LoginRedirect_Dialog_Title": "Přihlaste se",
     "LoginRedirect_Dialog_Description": "Abyste si mohli tento produkt přidat do seznamu přání, začít ho sledovat nebo ho zařadit mezi ignorované, musíte se nejprve přihlásit. Kliknutím na OK budete přesměrováni na stránku s přihlášením.",
     "Wishlist_NotSignedIn": "Přihlaste se, nebo tuto stránku otevřete v klientu služby Steam, kde si produkt můžete přidat do seznamu přání, začít ho sledovat nebo si ho zakoupit.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL adresa je správná",
     "SteamURLInvalid": "Chyba: URL adresa nevede do služby Steam (obchod/komunita)",
     "AnchorHashInputInvalid": "Neplatný vstup",
+    "Sale_Section_Label_Color": "Barva nadpisu",
+    "Sale_Section_Background_Top": "Pozadí s přechodem (nahoře)",
+    "Sale_Section_Background_Bottom": "Pozadí s přechodem (dole)",
     "Reservation_JoinPool": "Zapsat se na seznam",
     "Reserationn_NoListJoined": "Níže vyberte modely/balíčky, na jejichž seznamy se chcete zapsat – zákazníci splňující podmínky se mohou zapsat na seznamy až %1$s modelů/balíčků.",
     "Reservation_InPool": "Jste zapsáni na seznamech pro modely/balíčky vybrané níže",

@@ -156,13 +156,13 @@
         hoverAnimation: "VH09gZfzWmSxuuocDY_-n",
       };
     },
-    58813: (t, e, n) => {
+    81194: (t, e, n) => {
       "use strict";
       n.r(e), n.d(e, { default: () => m });
       var o = n(7850),
         i = n(90626),
         r = n(7929),
-        s = n(8527),
+        s = n(66418),
         a = n(16676),
         l = n(62113),
         c = n(38917),

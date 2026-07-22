@@ -707,7 +707,7 @@
             } else {
               if (!(0, _._)(_)) throw "Invalid cart type";
               {
-                const [_, _] = await (0, _._)(_, _ ? [_] : void 0, _, _);
+                const [_, _] = await (0, _._)(_, _ ? [_] : void 0, _, _, _);
                 if (_ != _._ || !_)
                   throw `AddItemsToAnonymousCart failed with ${_}`;
                 {
@@ -3847,6 +3847,74 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            className: _,
+            url: _,
+            style: _,
+            children: _,
+            bSkipForcingStoreLink: _,
+            bOpenInline: _,
+            bFocusable: _ = !0,
+          } = _,
+          _ = _
+            ? _
+            : _
+              ? (function (_, _) {
+                  try {
+                    const _ = new URL(_),
+                      _ = new URL(_);
+                    return (
+                      _.href.replace(/\/$/, "") + _.pathname + _.search + _.hash
+                    );
+                  } catch (_) {
+                    return "";
+                  }
+                })(_, _._.STORE_BASE_URL)
+              : void 0,
+          _ = (0, _._)(_);
+        return _
+          ? (0, _.jsx)(_._, {
+              href: _,
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+              className: _,
+              style: _,
+              rel: "noopener noreferrer",
+              focusable: _,
+              children: _,
+            })
+          : (0, _.jsx)("span", {
+              style: _,
+              className: _,
+              children: _,
+            });
+      }
+      function _(_) {
+        const { section: _ } = _;
+        return _.label_link && !_.label_link_style
+          ? (0, _.jsx)("div", {
+              className: _().SaleViewAll,
+              children: (0, _.jsx)(_, {
+                url: _.label_link,
+                children: _._.Localize("#btn_live_streams_all"),
+              }),
+            })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -6317,61 +6385,6 @@
           }),
         });
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            className: _,
-            url: _,
-            style: _,
-            children: _,
-            bSkipForcingStoreLink: _,
-            bOpenInline: _,
-            bFocusable: _ = !0,
-          } = _,
-          _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
-          _ = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_._, {
-              href: _,
-              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-              className: _,
-              style: _,
-              rel: "noopener noreferrer",
-              focusable: _,
-              children: _,
-            })
-          : (0, _.jsx)("span", {
-              style: _,
-              className: _,
-              children: _,
-            });
-      }
-      function _(_) {
-        const { section: _ } = _;
-        return _.label_link && !_.label_link_style
-          ? (0, _.jsx)("div", {
-              className: _().SaleViewAll,
-              children: (0, _.jsx)(_, {
-                url: _.label_link,
-                children: (0, _._)("#btn_live_streams_all"),
-              }),
-            })
-          : null;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

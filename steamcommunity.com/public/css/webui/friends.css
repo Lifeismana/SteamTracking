@@ -10941,6 +10941,11 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .newlogindialog_Login_lat0M .newlogindialog_GuestLayout_1r_sY {
   margin-top: 5px;
 }
+.newlogindialog_Login_lat0M
+  .newlogindialog_GuestLayout_1r_sY
+  .newlogindialog_StandardLayout_2EuR6.newlogindialog_Embedded_2R_n2 {
+  padding: 15px 40px 15px 40px;
+}
 .newlogindialog_Login_lat0M .newlogindialog_GuestText_2gE59 {
   flex: 2;
 }
@@ -12064,9 +12069,6 @@ p.bbcodes_Paragraph_3lnqG {
 th > p.bbcodes_Paragraph_3lnqG:first-child,
 td > p.bbcodes_Paragraph_3lnqG:first-child {
   margin-top: 0;
-}
-th > p.bbcodes_Paragraph_3lnqG:first-child,
-td > p.bbcodes_Paragraph_3lnqG:first-child {
   margin-bottom: 0;
 }
 .bbcodes_Header1_2LYsF,

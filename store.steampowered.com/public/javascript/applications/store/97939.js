@@ -221,27 +221,25 @@
       var o = n(7850),
         r = n(90626),
         i = n(73788),
-        s = n(28505),
+        s = n(8083),
         l = n(94621),
         c = n(8871),
         a = n(45699),
         d = n(85585),
         u = n(7445),
-        p = n(8527),
-        f = n(81393),
-        h = n(64238),
-        x = n.n(h),
-        g = n(11820);
+        p = n(81393),
+        f = n(64238),
+        h = n.n(f),
+        x = n(11820),
+        g = n(78327);
       const m = (0, r.createContext)(null);
       function v(e) {
-        return p.TS.IN_GAMEPADUI
-          ? (0, o.jsx)(b, { ...e })
-          : (0, o.jsx)(S, { ...e });
+        return (0, g.Qn)() ? (0, o.jsx)(b, { ...e }) : (0, o.jsx)(S, { ...e });
       }
       function b(e) {
         const { children: t } = e,
           n = (0, r.useContext)(m);
-        (0, f.wT)(
+        (0, p.wT)(
           !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
@@ -264,7 +262,7 @@
         const { children: t } = e,
           n = (0, r.useContext)(m);
         return (
-          (0, f.wT)(
+          (0, p.wT)(
             !!n,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
@@ -426,7 +424,7 @@
           const u = (0, r.cloneElement)(a, {
             ref: c,
             style: { ...l.floating.floatingStyles },
-            className: x()((0, g.T)(), n),
+            className: h()((0, x.T)(), n),
             popover: "manual",
             ...l.getFloatingProps(),
           });
@@ -437,11 +435,11 @@
     },
     71232: (e, t, n) => {
       "use strict";
-      n.d(t, { l6: () => D, WM: () => V });
+      n.d(t, { l6: () => A, WM: () => V });
       var o = n(7850),
         r = n(90626),
         i = n(73788),
-        s = n(28505),
+        s = n(8083),
         l = n(90534),
         c = n(80797),
         a = n(48093);
@@ -490,12 +488,10 @@
       var u = n(49560),
         p = n(45699),
         f = n(85585),
-        h = n(8527);
+        h = n(78327);
       const x = (0, r.createContext)(null);
       function g(e) {
-        return h.TS.IN_GAMEPADUI
-          ? (0, o.jsx)(m, { ...e })
-          : (0, o.jsx)(v, { ...e });
+        return (0, h.Qn)() ? (0, o.jsx)(m, { ...e }) : (0, o.jsx)(v, { ...e });
       }
       function m(e) {
         const { state: t, children: n } = e,
@@ -634,7 +630,7 @@
         });
       }
       var L = n(20187);
-      function _(e) {
+      function R(e) {
         return (0, o.jsx)(j.I, {
           ...e,
           viewBoxSize: 12,
@@ -644,7 +640,7 @@
           }),
         });
       }
-      var R = n(13843);
+      var _ = n(13843);
       var O = n(57757),
         k = n(83392),
         z = n(66922);
@@ -807,7 +803,7 @@
               role: "select",
               scroll: !0,
             });
-          return (0, o.jsx)(U.Provider, {
+          return (0, o.jsx)(B.Provider, {
             value: v,
             children: (0, o.jsx)(b, { state: S, children: t }),
           });
@@ -819,7 +815,7 @@
               multiselect: l,
               selectedValue: c,
               maxSelected: a,
-            } = E("<SelectTrigger>"),
+            } = U("<SelectTrigger>"),
             d = "string" == typeof t ? t : void 0;
           let u = !1,
             p = !1;
@@ -849,7 +845,7 @@
           });
         },
         Options: function (e) {
-          const { refPopover: t } = E("<Select.Options>");
+          const { refPopover: t } = U("<Select.Options>");
           return (0, o.jsx)(I, { ref: t, children: e.children });
         },
         Trigger: function (e) {
@@ -875,8 +871,8 @@
               placeholder: j,
               maxSelected: y,
               ...L
-            } = E("<SelectTrigger>"),
-            R = {
+            } = U("<SelectTrigger>"),
+            _ = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => i(!r),
@@ -885,7 +881,7 @@
             O = p ? Array.isArray(s) && s.length > 0 : !!s,
             k =
               O && m
-                ? (0, o.jsx)(_, { onClick: f, cursor: "pointer", hitSlop: !0 })
+                ? (0, o.jsx)(R, { onClick: f, cursor: "pointer", hitSlop: !0 })
                 : (0, o.jsx)(P, {}),
             V = (0, z.f)("Select", l),
             F = (0, o.jsx)(C.j, {
@@ -898,7 +894,7 @@
               cursor: "pointer",
               ...L,
             }),
-            T = (0, c.Q)(n, F, R, void 0);
+            T = (0, c.Q)(n, F, _, void 0);
           return (0, o.jsx)(S, { children: T });
         },
         Value: function (e) {
@@ -917,7 +913,7 @@
           });
         },
       };
-      function A(e) {
+      function H(e) {
         return "string" == typeof e
           ? e
           : "number" == typeof e
@@ -928,13 +924,13 @@
               ),
               "");
       }
-      const D = Object.assign(function (e) {
+      const A = Object.assign(function (e) {
         const {
             selectedValue: t,
             onSelectionChange: n,
             options: r,
             placeholder: i,
-            getOptionLabel: s = A,
+            getOptionLabel: s = H,
             ...l
           } = e,
           c = V({
@@ -945,32 +941,32 @@
           }),
           a = null != t,
           d = a ? s(t) : "";
-        return (0, o.jsxs)(D.Root, {
+        return (0, o.jsxs)(A.Root, {
           state: c,
           ...l,
           children: [
-            (0, o.jsxs)(D.Trigger, {
+            (0, o.jsxs)(A.Trigger, {
               children: [
-                a && (0, o.jsx)(D.Value, { children: d }),
-                !a && (0, o.jsx)(D.Placeholder, { children: i }),
+                a && (0, o.jsx)(A.Value, { children: d }),
+                !a && (0, o.jsx)(A.Placeholder, { children: i }),
               ],
             }),
-            (0, o.jsx)(D.Options, {
+            (0, o.jsx)(A.Options, {
               children: c.rgOptions.map((e, t) =>
-                (0, o.jsx)(D.Option, { value: e, children: s(e) }, t),
+                (0, o.jsx)(A.Option, { value: e, children: s(e) }, t),
               ),
             }),
           ],
         });
       }, T);
-      const N = T;
-      const H = Object.assign(function (e) {
+      const D = T;
+      const N = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
               options: r,
               placeholder: i,
-              getOptionLabel: s = A,
+              getOptionLabel: s = H,
               maxSelected: l,
               ...c
             } = e,
@@ -990,31 +986,31 @@
             u =
               "ListFormat" in Intl
                 ? new Intl.ListFormat(
-                    (0, R.A)().languages[0].strISOCode,
+                    (0, _.A)().languages[0].strISOCode,
                   ).format(e)
                 : e.join(", ");
           }
-          return (0, o.jsxs)(H.Root, {
+          return (0, o.jsxs)(N.Root, {
             state: a,
             ...c,
             children: [
-              (0, o.jsxs)(H.Trigger, {
+              (0, o.jsxs)(N.Trigger, {
                 children: [
-                  d && (0, o.jsx)(H.Value, { children: u }),
-                  !d && (0, o.jsx)(H.Placeholder, { children: i }),
+                  d && (0, o.jsx)(N.Value, { children: u }),
+                  !d && (0, o.jsx)(N.Placeholder, { children: i }),
                 ],
               }),
-              (0, o.jsx)(H.Options, {
+              (0, o.jsx)(N.Options, {
                 children: a.rgOptions.map((e, t) =>
-                  (0, o.jsx)(H.Option, { value: e, children: s(e) }, t),
+                  (0, o.jsx)(N.Option, { value: e, children: s(e) }, t),
                 ),
               }),
             ],
           });
-        }, N),
-        U = (0, r.createContext)(null);
-      function E(e) {
-        const t = (0, r.useContext)(U);
+        }, D),
+        B = (0, r.createContext)(null);
+      function U(e) {
+        const t = (0, r.useContext)(B);
         return t || console.error(`${e} must be used within a <Select>!`), t;
       }
     },

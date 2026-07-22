@@ -1,5 +1,8 @@
 {
     "language": "german",
+    "EventEditor_Loc_Title": "Lokalisierung verwalten",
+    "EventEditor_Loc_Overview": "Exportieren und importieren Sie Lokalisierungsdateien, um die Übersetzung von Strings für Ihr gesamtes Event zu verwalten.",
+    "EventEditor_Loc_Overview_Page": "Exportieren und importieren Sie Lokalisierungsdateien, um die Übersetzung von Strings für Ihre gesamte Seite zu verwalten.",
     "LoginRedirect_Dialog_Title": "Anmelden",
     "LoginRedirect_Dialog_Description": "Melden Sie sich an, um dieses Produkt Ihrer Wunschliste hinzuzufügen, ihm zu folgen oder es als ignoriert zu markieren. Mit einem Klick auf „OK“ werden Sie zur Anmeldeseite weitergeleitet.",
     "Wishlist_NotSignedIn": "Melden Sie sich an oder öffnen Sie diese Seite in der Steam-Desktopanwendung, um Ihre Wunschliste zu ergänzen, ein Follower zu werden und Käufe zu tätigen.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL wurde akzeptiert",
     "SteamURLInvalid": "Fehler: URL verweist nicht auf eine Steam-Seite (Shop/Community).",
     "AnchorHashInputInvalid": "Ungültige Eingabe",
+    "Sale_Section_Label_Color": "Kennzeichnungsfarbe",
+    "Sale_Section_Background_Top": "Hintergrundfarbverlauf (oben)",
+    "Sale_Section_Background_Bottom": "Hintergrundfarbverlauf (unten)",
     "Reservation_JoinPool": "Platz auf der Liste sichern",
     "Reserationn_NoListJoined": "Wählen Sie unten ein Modell aus, um sich zu registrieren. Berechtigte Kunden können sich für bis zu %1$s Modelle registrieren.",
     "Reservation_InPool": "Sie haben sich für die unten ausgewählten Modelle in die Liste eingetragen.",

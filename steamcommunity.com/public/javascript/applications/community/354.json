@@ -1,5 +1,8 @@
 {
     "language": "dutch",
+    "EventEditor_Loc_Title": "Vertalingen beheren",
+    "EventEditor_Loc_Overview": "Exporteer en importeer vertalingsbestanden om de vertalingen van tekst voor je hele evenement te beheren.",
+    "EventEditor_Loc_Overview_Page": "Exporteer en importeer vertalingsbestanden om de vertalingen van tekst voor je hele pagina te beheren.",
     "LoginRedirect_Dialog_Title": "Aanmelden",
     "LoginRedirect_Dialog_Description": "Meld je aan om dit artikel aan je verlanglijst toe te voegen, het te volgen of te negeren. Klik op OK om terug te gaan naar de inlogpagina.",
     "Wishlist_NotSignedIn": "Meld je aan of open deze pagina in de Steam-app om dit artikel te volgen, te kopen of op je verlanglijst te zetten.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL is geaccepteerd",
     "SteamURLInvalid": "Foutmelding: URL verwijst niet naar eigendom van Steam (winkel/community)",
     "AnchorHashInputInvalid": "Ongeldige invoer",
+    "Sale_Section_Label_Color": "Labelkleur",
+    "Sale_Section_Background_Top": "Achtergrondverloop (boven)",
+    "Sale_Section_Background_Bottom": "Achtergrondverloop (onder)",
     "Reservation_JoinPool": "Je aanmelden voor de lijst",
     "Reserationn_NoListJoined": "Selecteer hieronder een model om je aan te melden voor de lijst. Klanten die in aanmerking komen, kunnen zich aanmelden voor maximaal %1$s modellen.",
     "Reservation_InPool": "Je staat op de lijst voor de onderstaande geselecteerde modellen",

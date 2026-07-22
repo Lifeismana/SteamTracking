@@ -1,5 +1,8 @@
 {
     "language": "الإنجليزية",
+    "EventEditor_Loc_Title": "إدارة التوطين",
+    "EventEditor_Loc_Overview": "صدّر واستورد ملفات التوطين للتحكم بترجمة فعاليتك بأكملها.",
+    "EventEditor_Loc_Overview_Page": "صدّر واستورد ملفات التوطين للتحكم بترجمة صفحتك بأكملها.",
     "LoginRedirect_Dialog_Title": "تسجيل الدخول",
     "LoginRedirect_Dialog_Description": "سجّل الدخول لإضافة هذا العنصر إلى قائمة أمنياتك، أو لمتابعته، أو لتجاهله. سيؤدي النقر على \"موافق\" إلى إعادة توجيهك إلى صفحة تسجيل الدخول.",
     "Wishlist_NotSignedIn": "سجل الدخول أو افتح هذه الصفحة في Steam لإضافة العنصر إلى قائمة الأمنيات أو متابعته أو شرائه.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "تم قبول رابط %1$s",
     "SteamURLInvalid": "ثمة خطأ، فالرابط لا يشير إلى أحد مواقع Steam (المتجر أو المجتمع)",
     "AnchorHashInputInvalid": "المدخلات غير صحيحة",
+    "Sale_Section_Label_Color": "لون التسمية",
+    "Sale_Section_Background_Top": "تدرج الخلفية (أعلى)",
+    "Sale_Section_Background_Bottom": "تدرج الخلفية (أسفل)",
     "Reservation_JoinPool": "الانضمام إلى القائمة",
     "Reserationn_NoListJoined": "اختر أحد النماذج أدناه للتسجيل، يمكن للعملاء المؤهلين التسجيل في ما يصل إلى %1$s من النماذج.",
     "Reservation_InPool": "أنت مدرج في القائمة الخاصة بالنماذج المحددة أدناه",

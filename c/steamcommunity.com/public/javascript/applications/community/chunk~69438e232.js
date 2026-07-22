@@ -8440,6 +8440,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  gift_not_valid_for_recipient_region: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -8522,6 +8527,11 @@
                   },
                   non_refundable: {
                     _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  gift_recipient_higher_price: {
+                    _: 6,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -9123,313 +9133,6 @@
             );
           });
       })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.accountid_giftee || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  accountid_giftee: {
-                    _: 1,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  gift_message: {
-                    _: 2,
-                    _: _,
-                  },
-                  time_scheduled_send: {
-                    _: 3,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  email_giftee: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CartGiftInfo";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gifteename || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gifteename: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  message: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  sentiment: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  signature: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CartGiftMessage";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.amount_in_cents || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  amount_in_cents: {
-                    _: 1,
-                    _: _._.readInt64String,
-                    _: _._.writeInt64String,
-                  },
-                  currency_code: {
-                    _: 2,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  formatted_amount: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CartAmount";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.couponid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  couponid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  gidcoupon: {
-                    _: 2,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  title: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  coupon_description: {
-                    _: 6,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  large_icon_url: {
-                    _: 7,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  discount_pct: {
-                    _: 8,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CartCoupon";
-        }
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -21889,6 +21592,74 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            className: _,
+            url: _,
+            style: _,
+            children: _,
+            bSkipForcingStoreLink: _,
+            bOpenInline: _,
+            bFocusable: _ = !0,
+          } = _,
+          _ = _
+            ? _
+            : _
+              ? (function (_, _) {
+                  try {
+                    const _ = new URL(_),
+                      _ = new URL(_);
+                    return (
+                      _.href.replace(/\/$/, "") + _.pathname + _.search + _.hash
+                    );
+                  } catch (_) {
+                    return "";
+                  }
+                })(_, _._.STORE_BASE_URL)
+              : void 0,
+          _ = (0, _._)(_);
+        return _
+          ? (0, _.jsx)(_._, {
+              href: _,
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+              className: _,
+              style: _,
+              rel: "noopener noreferrer",
+              focusable: _,
+              children: _,
+            })
+          : (0, _.jsx)("span", {
+              style: _,
+              className: _,
+              children: _,
+            });
+      }
+      function _(_) {
+        const { section: _ } = _;
+        return _.label_link && !_.label_link_style
+          ? (0, _.jsx)("div", {
+              className: _().SaleViewAll,
+              children: (0, _.jsx)(_, {
+                url: _.label_link,
+                children: _._.Localize("#btn_live_streams_all"),
+              }),
+            })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -31264,6 +31035,9 @@
       function _(_) {
         return "account" === _.type;
       }
+      function _(_) {
+        return !!_;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -32778,18 +32552,17 @@
           });
       })(_ || (_ = {}));
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      function _(_) {
-        return !!_;
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_, _, _, _) {
+      async function _(_, _, _, _, _) {
         const _ = new FormData();
         _ &&
           (1 === _.length
             ? _.set("subid", _[0].toString())
             : _.forEach((_) => _.set("subid[]", _.toString()))),
           _ && _.set("bundleid", __webpack_require__.toString()),
+          (_ || _) &&
+            (_.set("isgift", "1"), _ && _.set("gifteeaccountid", _.toString())),
           _.set("action", "add_to_cart");
         const _ = await fetch(`${_._.STORE_BASE_URL}cart/addtocart`, {
           method: "post",
@@ -32865,7 +32638,10 @@
                             : _.bundleid
                         )
                           ? ((_.bundleid = _.bundle_item.bundleid),
-                            (_.type = _))
+                            (_.type = _),
+                            _.bundle_item.is_gift &&
+                              ((_.flags.is_gift = _.bundle_item.is_gift),
+                              (_.gift_info = _.bundle_item.gift_info)))
                           : _.package_item &&
                             ((_.packageid = _.package_item.packageid),
                             (_.price_when_added.amount_in_cents =
@@ -32886,7 +32662,10 @@
                                     : _.currencycode) && void 0 !== _
                                 ? _
                                 : 0),
-                            (_.type = _));
+                            (_.type = _),
+                            _.package_item.is_gift &&
+                              ((_.flags.is_gift = _.package_item.is_gift),
+                              (_.gift_info = _.package_item.gift_info)));
                       return _;
                     })(_);
               })
@@ -32960,7 +32739,7 @@
               )
                 throw "Invalid cart type";
               {
-                const [_, _] = await _(0, _ ? [_] : void 0, _);
+                const [_, _] = await _(0, _ ? [_] : void 0, _, _, _);
                 if (_ != _._ || !_)
                   throw `AddItemsToAnonymousCart failed with ${_}`;
                 {
@@ -48555,61 +48334,6 @@
               bIsComingSoon: Boolean(_.is_coming_soon),
               bIsFree: Boolean(_.is_free),
               className: _,
-            })
-          : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            className: _,
-            url: _,
-            style: _,
-            children: _,
-            bSkipForcingStoreLink: _,
-            bOpenInline: _,
-            bFocusable: _ = !0,
-          } = _,
-          _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
-          _ = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_._, {
-              href: _,
-              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-              className: _,
-              style: _,
-              rel: "noopener noreferrer",
-              focusable: _,
-              children: _,
-            })
-          : (0, _.jsx)("span", {
-              style: _,
-              className: _,
-              children: _,
-            });
-      }
-      function _(_) {
-        const { section: _ } = _;
-        return _.label_link && !_.label_link_style
-          ? (0, _.jsx)("div", {
-              className: _().SaleViewAll,
-              children: (0, _.jsx)(_, {
-                url: _.label_link,
-                children: (0, _._)("#btn_live_streams_all"),
-              }),
             })
           : null;
       }

@@ -14,7 +14,7 @@ function ConvertToTheirCurrency( amount )
 
 function ConvertToOurCurrency( amount )
 {
-		var flAmount = g_rgWalletInfo['wallet_inverse_conversion_rate'] * ( amount  );
+		var flAmount = g_rgWalletInfo['wallet_inverse_conversion_rate'] * ( amount );
 
 	var nAmount = Math.ceil( isNaN(flAmount) ? 0 : flAmount );
 	nAmount = Math.max( nAmount, 0 );
@@ -126,6 +126,7 @@ function ToValidMarketPrice( nPrice, rgWallet )
 	}
 	return nPrice;
 }
+
 
 function CalculateFee( base_amt, pct, rgWallet )
 {

@@ -646,7 +646,7 @@
         Te = t(48211),
         ye = t(70758),
         De = t.n(ye),
-        Ae = t(52505);
+        Ae = t(98735);
       const ke = (e) => {
           const n = ["maxresdefault", "mqdefault", "default"],
             [t, o] = f.useState(0);
@@ -1641,7 +1641,7 @@
                       ),
                     }),
                     (0, a.jsx)("a", {
-                      href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
+                      href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=933",
                       children: (0, x.we)("#Conference_NeedHelp_CreateTicket"),
                     }),
                   ],

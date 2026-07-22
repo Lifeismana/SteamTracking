@@ -428,6 +428,86 @@
         (e.exports = a),
         (a.id = 61738);
     },
+    11333: (e, t, s) => {
+      "use strict";
+      s.d(t, { L: () => o, c: () => c });
+      var r = s(42457),
+        a = s(49845),
+        i = s(58632),
+        n = s.n(i);
+      function c(e, t) {
+        return new (n())(
+          async (t) => {
+            const s = [...t],
+              a = await r.xtC.GetPlayerLinkDetails(e, { steamids: s }),
+              i = new Map();
+            return (
+              a
+                .Body()
+                .accounts()
+                .forEach((e) => {
+                  const t = e.toObject();
+                  i.set(t.public_data.steamid, t);
+                }),
+              s.map((e) => i.get(e) ?? null)
+            );
+          },
+          { maxBatchSize: 100, cache: !1, ...t },
+        );
+      }
+      function o(e) {
+        return (0, a.V)("PlayerLinkDetails", () => c(e));
+      }
+    },
+    49845: (e, t, s) => {
+      "use strict";
+      function r(e) {
+        return "[object Object]" === Object.prototype.toString.call(e);
+      }
+      function a(...e) {
+        return JSON.stringify(e, (e, t) => {
+          if (
+            (function (e) {
+              if (!r(e)) return !1;
+              const t = e.constructor;
+              if (void 0 === t) return !0;
+              const s = t.prototype;
+              return (
+                !!r(s) &&
+                !!Object.prototype.hasOwnProperty.call(s, "isPrototypeOf")
+              );
+            })(t)
+          ) {
+            const e = {};
+            return (
+              Object.keys(t)
+                .sort()
+                .forEach((s) => {
+                  e[s] = t[s];
+                }),
+              e
+            );
+          }
+          return t;
+        });
+      }
+      s.d(t, { V: () => c });
+      var i = s(90626);
+      s(7850);
+      const n = (0, i.createContext)({ instances: {}, factories: {} });
+      function c(e, t) {
+        const s = (0, i.useContext)(n),
+          r = "string" == typeof e ? e : a(...e);
+        let c = s;
+        for (; c; ) {
+          if (r in c.instances) return c.instances[r];
+          if (r in c.factories) break;
+          c = c.parent;
+        }
+        const o = (c?.factories[r] ?? t)();
+        return ((c ?? s).instances[r] = o), o;
+      }
+    },
     44165: (e, t, s) => {
       "use strict";
       s.d(t, { HD: () => d, f1: () => h, s4: () => v, sB: () => m });
@@ -498,9 +578,9 @@
         return c.useMemo(() => d.GetTimeNowWithOverrideAsDate(), []);
       }
     },
-    14336: (e, t, s) => {
+    41471: (e, t, s) => {
       "use strict";
-      s.d(t, { mK: () => j, DW: () => p, js: () => v, tb: () => g });
+      s.d(t, { DW: () => m, js: () => u, mK: () => p, tb: () => v });
       var r = s(90626),
         a = s(80902),
         i = s(54806),
@@ -509,44 +589,22 @@
         o = s(44654),
         l = s(10622),
         d = s(17720),
-        _ = s(42457),
-        u = s(58632),
-        m = s.n(u);
-      function h(e, t) {
-        return new (m())(
-          async (t) => {
-            const s = [...t],
-              r = await _.xtC.GetPlayerLinkDetails(e, { steamids: s }),
-              a = new Map();
-            return (
-              r
-                .Body()
-                .accounts()
-                .forEach((e) => {
-                  const t = e.toObject();
-                  a.set(t.public_data.steamid, t);
-                }),
-              s.map((e) => a.get(e) ?? null)
-            );
-          },
-          { maxBatchSize: 100, cache: !1, ...t },
-        );
-      }
-      function v(e) {
+        _ = s(11333);
+      function u(e) {
         const t = (0, c.KV)(),
-          s = r.useContext(f);
-        return (0, a.I)(j(s, t, e));
+          s = r.useContext(h);
+        return (0, a.I)(p(s, t, e));
       }
-      function p(e) {
+      function m(e) {
         const t = (0, c.KV)(),
-          s = r.useContext(f);
-        return (0, i.E)({ queries: e.map((e) => j(s, t, e)) });
+          s = r.useContext(h);
+        return (0, i.E)({ queries: e.map((e) => p(s, t, e)) });
       }
-      const f = r.createContext({
+      const h = r.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const s = await (function (e) {
-            return (w ??= h(e));
+            return (f ??= (0, _.c)(e));
           })(t).load(d.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
             let s = new l.Z(e);
@@ -571,10 +629,10 @@
           })(d.b.InitFromAccountID(e), s);
         },
       });
-      function g() {
-        return r.useContext(f);
+      function v() {
+        return r.useContext(h);
       }
-      function j(e, t, s) {
+      function p(e, t, s) {
         const r = "string" == typeof s ? new d.b(s).GetAccountID() : s;
         return {
           queryKey: ["PlayerSummary", r],
@@ -582,7 +640,7 @@
           enabled: !!r,
         };
       }
-      let w;
+      let f;
     },
     54969: (e, t, s) => {
       "use strict";
@@ -590,7 +648,7 @@
       var r = s(37085),
         a = s(56545),
         i = s(2551),
-        n = s(8527),
+        n = s(66418),
         c = s(80902),
         o = s(75233),
         l = s(51614),
@@ -1628,7 +1686,7 @@
                     }),
                     (0, r.jsx)("div", {
                       className: "account_settings_container",
-                      children: (0, r.jsx)(M, { settings: t }),
+                      children: (0, r.jsx)(O, { settings: t }),
                     }),
                   ],
                 }),
@@ -1789,7 +1847,7 @@
             }),
           });
         }),
-        M = (0, v.PA)((e) => {
+        O = (0, v.PA)((e) => {
           const { settings: t } = e,
             s = (0, a.useCallback)(() => {
               t.ToggleProvideDeckFeeback();
@@ -1856,12 +1914,12 @@
             ],
           });
         });
-      var O = s(6813),
+      var M = s(6813),
         U = s(86227),
         V = s.n(U),
         W = s(54969),
         K = s(1035),
-        q = s(14336),
+        q = s(41471),
         Y = s(17720),
         $ = s(55263),
         X = s(2551),
@@ -2393,7 +2451,7 @@
       }
       function Ge(e) {
         const t = Date.now() / 1e3;
-        return Oe(
+        return Me(
           e
             .GetActiveDevices()
             .find((e) => e.logged_in && e.last_seen?.time > t - 900) ??
@@ -2440,7 +2498,7 @@
         })(t);
         h.length &&
           (h = ` ${(0, m.we)("#accountpreferences_authorized_devices_name_separator")} "${h}"`);
-        const v = Oe(t);
+        const v = Me(t);
         let f = null;
         f =
           v.country && n && n != v.country
@@ -2473,7 +2531,7 @@
             navRef: u,
             onActivate: () => _(!d),
             children: [
-              (0, r.jsx)(Me, { device: t, bHasAuthenticator: w }),
+              (0, r.jsx)(Oe, { device: t, bHasAuthenticator: w }),
               (0, r.jsxs)("div", {
                 className: Ce.DeviceContent,
                 children: [
@@ -2720,7 +2778,7 @@
             return "#authorized_devices_default_password";
         }
       }
-      function Me(e) {
+      function Oe(e) {
         const { device: t, bHasAuthenticator: s } = e,
           a = t.effective_token_state == Se.wv.BH;
         let i = null;
@@ -2773,7 +2831,7 @@
             })
           : i;
       }
-      function Oe(e) {
+      function Me(e) {
         const t = e.last_seen ?? e.first_seen;
         if (t) {
           if (!(0, xe.nA)(l.TS.EREALM))
@@ -3324,28 +3382,28 @@
               (0, r.jsx)(i.qh, {
                 path: `${t}${s.CookieSettings()}`,
                 render: () =>
-                  (0, r.jsx)(O.X, {
+                  (0, r.jsx)(M.X, {
                     config: { "cookie-preferences": () => (0, r.jsx)(F, {}) },
                   }),
               }),
               (0, r.jsx)(i.qh, {
                 path: `${t}${s.FamilyManagement()}`,
                 render: () =>
-                  (0, r.jsx)(O.X, {
+                  (0, r.jsx)(M.X, {
                     config: { "family-management": () => (0, r.jsx)(at, {}) },
                   }),
               }),
               (0, r.jsx)(i.qh, {
                 path: `${t}${s.SecurityDevices()}`,
                 render: () =>
-                  (0, r.jsx)(O.X, {
+                  (0, r.jsx)(M.X, {
                     config: { "security-devices": () => (0, r.jsx)(qe, {}) },
                   }),
               }),
               (0, r.jsx)(i.qh, {
                 path: `${t}${s.PlaytestInvites()}`,
                 render: () =>
-                  (0, r.jsx)(O.X, {
+                  (0, r.jsx)(M.X, {
                     config: {
                       "playtest-invites": () =>
                         (0, r.jsx)(re, { bShowPlaytestOverview: !0 }),
@@ -3355,7 +3413,7 @@
               (0, r.jsx)(i.qh, {
                 path: `${t}${s.Playtests()}`,
                 render: () =>
-                  (0, r.jsx)(O.X, {
+                  (0, r.jsx)(M.X, {
                     config: { playtests: (e) => (0, r.jsx)(me, { ...e }) },
                   }),
               }),

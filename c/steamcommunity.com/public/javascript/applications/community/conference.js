@@ -1724,7 +1724,7 @@
                       ),
                     }),
                     (0, _.jsx)("a", {
-                      href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
+                      href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=933",
                       children: (0, _._)("#Conference_NeedHelp_CreateTicket"),
                     }),
                   ],

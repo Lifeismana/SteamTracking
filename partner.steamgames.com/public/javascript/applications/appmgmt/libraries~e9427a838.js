@@ -21581,6 +21581,9 @@
         }
       }
       (r = Symbol.for("react.module.reference")),
+        (e.isContextConsumer = function (t) {
+          return m(t) === l;
+        }),
         (e.isFragment = function (t) {
           return m(t) === i;
         });

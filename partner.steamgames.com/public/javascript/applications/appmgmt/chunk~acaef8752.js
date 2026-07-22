@@ -9,6 +9,7 @@
         EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
         EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
         ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
+        ColorPickerDialog: "_32PwNSgquR6tGAPIBcWgVq",
       };
     },
     71647: (e) => {
@@ -145,6 +146,7 @@
             else alert(n.Z.Localize("#Sale_EyeDropperError"));
           }, [i]);
         return (0, s.jsxs)("div", {
+          className: g().ColorPickerDialog,
           children: [
             Boolean(h) && (0, s.jsx)(r.JU, { children: h }),
             (0, s.jsx)(a.xk, {
@@ -1459,10 +1461,10 @@
             );
           })(B, G, C, A, c),
           W = !c && N;
-        let H, V;
+        let V, H;
         if (t && i && t == i && i > l.HD.GetTimeNowWithOverride()) {
           const e = w().unix(i);
-          (H = {
+          (V = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
@@ -1470,10 +1472,10 @@
           }),
             (E = f);
         }
-        U || !i || P || (V = w().unix(i));
+        U || !i || P || (H = w().unix(i));
         const z = w().tz.guess(),
-          Z = w().unix(U).tz(z),
-          q = !!u && z != u && w().unix(U).tz(u),
+          q = w().unix(U).tz(z),
+          Z = !!u && z != u && w().unix(U).tz(u),
           {
             fnOnInput: Y,
             fnOnInputBlur: K,
@@ -1567,7 +1569,7 @@
                               (o = !1));
                           return o;
                         })(i, t, L, e),
-                      initialValue: V,
+                      initialValue: H,
                       inputProps: {
                         placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
                         className: (0, g.A)(
@@ -1580,10 +1582,10 @@
                         onBlur: (e) => K(e.currentTarget.value),
                       },
                     }),
-                    !!q &&
+                    !!Z &&
                       (0, s.jsx)("div", {
                         className: m().PacificTimeHint,
-                        children: q.format("L"),
+                        children: Z.format("L"),
                       }),
                   ],
                 }),
@@ -1594,7 +1596,7 @@
                       onChange: Q,
                       dateFormat: !1,
                       timeFormat: E,
-                      timeConstraints: H,
+                      timeConstraints: V,
                       value: null != B ? B : O,
                       inputProps: {
                         placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
@@ -1608,10 +1610,10 @@
                         onBlur: (e) => $(e.currentTarget.value),
                       },
                     }),
-                    !!q &&
+                    !!Z &&
                       (0, s.jsx)("div", {
                         className: m().PacificTimeHint,
-                        children: q.format("LT"),
+                        children: Z.format("LT"),
                       }),
                   ],
                 }),
@@ -1620,18 +1622,18 @@
                     children: [
                       (0, s.jsx)("div", {
                         className: m().TimeZone,
-                        children: Z.zoneAbbr(),
+                        children: q.zoneAbbr(),
                       }),
-                      !!q &&
+                      !!Z &&
                         (0, s.jsx)("div", {
                           className: m().TimeZone,
-                          children: q.zoneAbbr(),
+                          children: Z.zoneAbbr(),
                         }),
                     ],
                   }),
               ],
             }),
-            Boolean(H) &&
+            Boolean(V) &&
               (0, s.jsx)("div", {
                 children: (0, d.we)("#DateTimePicker_DateTime_Fixed"),
               }),

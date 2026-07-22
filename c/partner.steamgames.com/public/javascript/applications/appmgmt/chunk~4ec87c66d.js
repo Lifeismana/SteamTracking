@@ -266,6 +266,7 @@
         NoEligibleCtn: "_3LgwOe6mZR78-w_PoXGKmt",
         EligibleGamesTable: "_3sBXwILYFyzoFqxMG_Q5yE",
         DialogErrorText: "_3u50nUTSryVrDLFl57rnyA",
+        OptInEditorTOCPlacement: "_1YPyflvb4EvPJV9IKbG3CI",
       };
     },
     chunkid: (module) => {
@@ -1237,6 +1238,22 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Waypoint: "_2pZVu5uwOWvVnfNisJPOB9",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TableOfContentsContainer: "_3N5be2rmYYNMGufXaKpBSb",
+        TableOfContents: "_3tLgun3y-qOlJAVcfwxowt",
+        TOCEntry: "_1fzqunMp3Jq_h9SsiGwRGu",
+        TOCEntryText: "_2GtCXeIDXaH3zjSXPON8Mc",
+        SectionOnScreen: "_3xZOOBpCfl1mS9OS-_DVq4",
+        TOCIndent: "_1fP_E_5IswSiXZj42jqqWq",
+        Header: "_1GAZYe3epNmQSdQq0rhZBQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
         Focused: "_3NISN-t8MP65UYQ4p5bNgh",
       };
@@ -1339,6 +1356,13 @@
         StatusIcon: "_1DFlt9vB8DfZc84ZeQcrgT",
         StatusIconDone: "K_JWTc7pXC9lechbL_JMT",
         StatusNotDone: "zl6s26pUkMfMXmoMlJstY",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        CalendarBtn: "_6LCq5awwJWbT0WLusE-as",
+        PickerContainer: "_3YV5gmu_9QoN0IYGWX7N0E",
       };
     },
     chunkid: (module) => {
@@ -1506,43 +1530,47 @@
         strWidescreenWidth: "1700px",
         strMidscreenWidth: "940px",
         strPhoneWidth: "768px",
-        FacetedBrowseInnerCtn: "_3vjDu6zylspBzUE7FmM6Yl",
-        FacetedBrowseControls: "_1JM3A81UO1KoAFlVTA3a8O",
-        FacetList: "_3XVd2muqXLYd2dNJEe3Xyj",
-        FacetMenuTitle: "_2HmeH7CKXh-UZS3UgKQ9DL",
-        FacetedBrowseMatchCount: "_3_OwRHMdhLqzhaZ9Y0aSlK",
-        FacetedBrowseReset: "_3jRGARq9XRw0uVd6lwd8E8",
-        Facet: "Qa8BXBnhFcu7QgSy5RqD",
-        FacetTitleCtn: "lDWZOvvYt_I38AKpMGNoE",
-        FacetTitle: "_3Jg7mwjxVKjnATI6MUQiGK",
-        FacetValue: "_12piyDV8d50GcK-wlEd3fy",
-        FacetValueEnabled: "TZdshfRox53mYuERxC510",
-        FacetValueDeactivated: "_2OE4sA183JjLeguru8dVfj",
-        FacetValueName: "_2uSEnLjFPyX4-yugJ6ZaEt",
-        FacetValueDescription: "_1inQ19muJm6rBJWJNHyPSx",
-        FacetValueShowMore: "_2b0ptP1NNBI0nXI0jsLlSO",
-        FacetedBrowseItems: "_3EdZTDIisUpowxwm6uJ7Iq",
-        FacetedBrowsePopupCtn: "_24dqXeaCgVvEZiayDaTquu",
-        FacetedBrowsePopupLabel: "zux_uSpUKU26Qnmh3MlFz",
-        FacetedBrowsePopup: "_2FEDs7kEuJtGGf36_PiaGZ",
-        FacetedBrowseFeedbackLink: "rpvzDfG6xbJVPUwzI49cl",
-        FacetValuePriceSlider: "FdYHbkrRE4XLP9tzEWPzZ",
-        SelectedFacetValuesTitle: "_2zYJo5ygwHplvJw4wZI5ly",
-        SelectedFacetValuesList: "T2laXwxJLS6qZ1Ko0q0Db",
-        SelectedFacetValueCtn: "_2XgkK2m_01lZYUuqv34NBt",
-        FacetValueSearch: "_3-lHtLWJ9p9OkKHzA4E5J",
-        BackgroundAnimation: "Uwgkqeb94UMwmyJ_dUvKp",
-        "ItemFocusAnim-darkerGrey-nocolor": "_2fOUgihscvE65oigXmaKB1",
-        "ItemFocusAnim-darkerGrey": "_2Zz5YKG-AtieYorMauAzsN",
-        "ItemFocusAnim-darkGreySettings": "_3LGTy6zChHph675eNQUXkq",
-        "ItemFocusAnim-darkGrey": "_3Clab3jPQdWdPjgkUVd_xv",
-        "ItemFocusAnim-grey": "_3nkj24RHleWUwg-w5PZLID",
-        "ItemFocusAnim-translucent-white-10": "_2hSev8SqoBLyqKXG9DVTKf",
-        "ItemFocusAnim-translucent-white-20": "_30yD4uxlh91iHAdEGY74J",
-        "ItemFocusAnimBorder-darkGrey": "_3IDOCzgA5UCrpPZXIcD8hI",
-        "ItemFocusAnim-green": "_5LpNLX8FjM9wN-9PEP5V6",
-        focusAnimation: "_11xvupbR5KirKWCbdSFawu",
-        hoverAnimation: "_1RFNh7VpFmEfjWpyEErvJO",
+        FacetedBrowseInnerCtn: "_21kblrCh3VR0BAgfqxyMRA",
+        FacetedBrowseItems: "_1ujNYGRQ8beCcurOxXJxGS",
+        FacetedBrowsePopupCtn: "BRn4HsM4kGOB90hVu5AYy",
+        FacetedBrowsePopupLabel: "_3zC_HWOm6j9mLBNRt5mgQV",
+        FacetedBrowsePopup: "_30JaOm6jg8GiGqvzxxPykR",
+        FacetedBrowseFeedbackLink: "_2o62_OefNFPgo3Q6j3DLY0",
+        BackgroundAnimation: "_2ibc2D6E-PTCyswsdZO1oD",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3zxUYOidW6ZwHxMz92nptx",
+        "ItemFocusAnim-darkerGrey": "_1fp149aJEmPBKq_0uDzx53",
+        "ItemFocusAnim-darkGreySettings": "_13BkAFhdVdQABPN-HRZmso",
+        "ItemFocusAnim-darkGrey": "sMLzD1wPYFYHHlliOFN7c",
+        "ItemFocusAnim-grey": "_3PK0fEpRcWxQzmMG_O2Ges",
+        "ItemFocusAnim-translucent-white-10": "_1HyH1MqO1T-UG80aLCUCMm",
+        "ItemFocusAnim-translucent-white-20": "_1DKBVwUUPQ5uFFAZFwt83j",
+        "ItemFocusAnimBorder-darkGrey": "_1WxgrqU_-fuKzF793_ISzD",
+        "ItemFocusAnim-green": "_3QmNSO0bi4cTWQqy8JrBso",
+        focusAnimation: "_2aZZL_SL1jj1B3poHtbAAZ",
+        hoverAnimation: "_3wfeuthDhOTnW4FhNzpsB2",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        FacetedBrowseControls: "_1RvYuzgLwCzzw8Pzy8eNiV",
+        FacetList: "_2ERaJ8wn7H5pJ5jahiWPPG",
+        FacetMenuTitle: "YOcgAqE4A7zGGirQVte00",
+        FacetedBrowseMatchCount: "_3iembTiag9T-QUR2yDg-mr",
+        FacetedBrowseReset: "_3uoutr_Is-pIYgTOcicO7V",
+        Facet: "_2iO0kA8HAETrOU7L6acOQd",
+        FacetTitleCtn: "_38pwyhBByF16mpyYBTBCQ3",
+        FacetTitle: "_20Wv2eNVnJ3m01hzk8ZnLL",
+        FacetValue: "_1_EtMgZQF4RHB8tOPvAEte",
+        FacetValueEnabled: "UYa5xyjEvTaVxbH9dxmj2",
+        FacetValueDeactivated: "_1CCOcR6x5Sf3rKz6XCbFjq",
+        FacetValueName: "_3jKfcG2j3Z1ZOPloJQ4a9M",
+        FacetValueDescription: "-xonoZd4I8ScB_xVi-xpV",
+        FacetValueShowMore: "TWoZMIJ151sicYqKm0-IT",
+        FacetValuePriceSlider: "_2GZduGHJ22_CeGmyfwmIj6",
+        SelectedFacetValuesTitle: "xf4U93BbkVBWuW_Ieay1O",
+        SelectedFacetValuesList: "_2Dqs-GHSCajtPu35S5buNl",
+        SelectedFacetValueCtn: "_2upU6ldC4f0edJZYF3aCnz",
+        FacetValueSearch: "_1zcMdNHKDFbHHgEeY52mJc",
       };
     },
     chunkid: (module) => {
@@ -6368,6 +6396,60 @@
             ((this.m_model.nextfest_question_and_answer_url2 = _),
             this.SetDirty(!0));
         }
+        GetNextFestRegistrationDeadline() {
+          return this.m_model.rtime_nextfest_registration_deadline || 0;
+        }
+        SetNextFestRegistrationDeadline(_) {
+          _ != this.m_model.rtime_nextfest_registration_deadline &&
+            ((this.m_model.rtime_nextfest_registration_deadline = _),
+            this.SetDirty(!0));
+        }
+        GetNextFestTrailerPull() {
+          return this.m_model.rtime_nextfest_trailer_pull || 0;
+        }
+        SetNextFestTrailerPull(_) {
+          _ != this.m_model.rtime_nextfest_trailer_pull &&
+            ((this.m_model.rtime_nextfest_trailer_pull = _), this.SetDirty(!0));
+        }
+        GetNextFestPressPreviewSubmit() {
+          return this.m_model.rtime_nextfest_press_preview_submit || 0;
+        }
+        SetNextFestPressPreviewSubmit(_) {
+          _ != this.m_model.rtime_nextfest_press_preview_submit &&
+            ((this.m_model.rtime_nextfest_press_preview_submit = _),
+            this.SetDirty(!0));
+        }
+        GetNextFestAllItemsSubmit() {
+          return this.m_model.rtime_nextfest_all_items_submit || 0;
+        }
+        SetNextFestAllItemsSubmit(_) {
+          _ != this.m_model.rtime_nextfest_all_items_submit &&
+            ((this.m_model.rtime_nextfest_all_items_submit = _),
+            this.SetDirty(!0));
+        }
+        GetNextFestTrailerOptOut() {
+          return this.m_model.rtime_nextfest_trailer_optout || 0;
+        }
+        SetNextFestTrailerOptOut(_) {
+          _ != this.m_model.rtime_nextfest_trailer_optout &&
+            ((this.m_model.rtime_nextfest_trailer_optout = _),
+            this.SetDirty(!0));
+        }
+        GetNextFestPressPreviewStart() {
+          return this.m_model.rtime_nextfest_press_preview_start || 0;
+        }
+        SetNextFestPressPreviewStart(_) {
+          _ != this.m_model.rtime_nextfest_press_preview_start &&
+            ((this.m_model.rtime_nextfest_press_preview_start = _),
+            this.SetDirty(!0));
+        }
+        GetNextFestNextEdition() {
+          return this.m_model.rtime_nextfest_next_edition || 0;
+        }
+        SetNextFestNextEdition(_) {
+          _ != this.m_model.rtime_nextfest_next_edition &&
+            ((this.m_model.rtime_nextfest_next_edition = _), this.SetDirty(!0));
+        }
         GetSpecialEventDocLink() {
           return this.m_model.special_event_doc_link;
         }
@@ -7686,6 +7768,35 @@
         (0, _._)([_._.bound], _.prototype, "SetQandA2EventStartTime", null),
         (0, _._)([_._], _.prototype, "GetQandA2URL", null),
         (0, _._)([_._.bound], _.prototype, "SetQandA2URL", null),
+        (0, _._)([_._], _.prototype, "GetNextFestRegistrationDeadline", null),
+        (0, _._)(
+          [_._.bound],
+          _.prototype,
+          "SetNextFestRegistrationDeadline",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "GetNextFestTrailerPull", null),
+        (0, _._)([_._.bound], _.prototype, "SetNextFestTrailerPull", null),
+        (0, _._)([_._], _.prototype, "GetNextFestPressPreviewSubmit", null),
+        (0, _._)(
+          [_._.bound],
+          _.prototype,
+          "SetNextFestPressPreviewSubmit",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "GetNextFestAllItemsSubmit", null),
+        (0, _._)([_._.bound], _.prototype, "SetNextFestAllItemsSubmit", null),
+        (0, _._)([_._], _.prototype, "GetNextFestTrailerOptOut", null),
+        (0, _._)([_._.bound], _.prototype, "SetNextFestTrailerOptOut", null),
+        (0, _._)([_._], _.prototype, "GetNextFestPressPreviewStart", null),
+        (0, _._)(
+          [_._.bound],
+          _.prototype,
+          "SetNextFestPressPreviewStart",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "GetNextFestNextEdition", null),
+        (0, _._)([_._.bound], _.prototype, "SetNextFestNextEdition", null),
         (0, _._)([_._], _.prototype, "GetSpecialEventDocLink", null),
         (0, _._)([_._.bound], _.prototype, "SetSpecialEventDocLink", null),
         (0, _._)([_._], _.prototype, "GetSpecialEventTypeMax", null),
@@ -20206,6 +20317,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20333,7 +20445,8 @@
         }
         return null;
       }
-      const _ = new RegExp("\\(package id:(\\d+)\\)");
+      const _ = new RegExp("\\(package id:(\\d+)\\)"),
+        _ = "Possible Upcoming Discount";
       function _(_) {
         const _ = _.getValue();
         if (_) {
@@ -20371,7 +20484,7 @@
           let _ = _.row.original;
           if ("no_planned_discount" in _ && !1 === _.no_planned_discount)
             return (0, _.jsx)("span", {
-              children: "Possible Upcoming Discount",
+              children: _,
             });
         }
         return null;
@@ -24057,7 +24170,225 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { toolTipContent: _ } = _,
+          _ =
+            ((_ = {
+              ..._,
+            }),
+            (0, _.useCallback)(
+              (_, _) => {
+                const _ = (0, _.jsx)(_, {
+                  ..._,
+                });
+                (0, _._)(_, _, _);
+              },
+              [_],
+            ));
+        var _;
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          children: (0, _.jsx)("div", {
+            className: (0, _._)(_().CalendarBtn),
+            onClick: (_) =>
+              __webpack_require__(_, {
+                bDisableMouseOverlay: !0,
+                bAlwaysOnTop: !0,
+              }),
+            children: (0, _.jsx)(_.VvS, {
+              color: "#c6d4df",
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const { value: _, fnOnUpdate: _, minDate: _, maxDate: _ } = _,
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ = _().unix(_),
+                _ = _().unix(_);
+              return (
+                _.isSameOrAfter(_, "month") && _.isSameOrBefore(_, "month")
+              );
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              __webpack_require__(_.unix()), _.current.Hide();
+            },
+            [_],
+          ),
+          _ = (0, _.useMemo)(() => {
+            if (!_().locales().includes("YearMonthPickerContextMenu")) {
+              const _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                ),
+                _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                );
+              _().defineLocale("YearMonthPickerContextMenu", {
+                months: _,
+                monthsShort: _,
+              });
+            }
+            return _()().clone().locale("YearMonthPickerContextMenu");
+          }, []);
+        return (0, _.jsx)(_._, {
+          refInstance: _,
+          children: (0, _.jsx)(_._, {
+            onSelected: () => {},
+            className: _().PickerContainer,
+            children: (0, _.jsx)("div", {
+              onClick: (_) => {
+                _.preventDefault(), _.stopPropagation();
+              },
+              children: (0, _.jsx)(_(), {
+                ref: _,
+                value: _,
+                onChange: _,
+                dateFormat: "YYYY-MM",
+                timeFormat: !1,
+                closeOnSelect: !0,
+                isValidDate: _,
+                input: !1,
+                locale: "YearMonthPickerContextMenu",
+              }),
+            }),
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapVisibleSections = new Map();
+        constructor() {
+          (0, _._)(this, {
+            m_mapVisibleSections: _._,
+          });
+        }
+      }
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const [_] = (0, _.useState)(() => new _());
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _.children,
+        });
+      }
+      function _() {
+        const _ = (0, _.useContext)(_);
+        if (!_)
+          throw new Error(
+            "useVisibleSectionStore must be used within a VisibleSectionStoreProvider",
+          );
+        return _;
+      }
+      function _(_) {
+        const { strSectionId: _, children: _ } = _,
+          _ = _(),
+          _ = (0, _._)(
+            {
+              onEnter: () => _.m_mapVisibleSections.set(_, _),
+              onLeave: () => _.m_mapVisibleSections.delete(_),
+            },
+            {
+              rootMargin: "-100px 0px -100px 0px",
+            },
+          );
+        return (0, _.jsx)(
+          _._,
+          {
+            children: (0, _.jsx)(
+              "div",
+              {
+                className: _.Waypoint,
+                ref: _,
+                children: _,
+              },
+              "waypoint_sale_sect_" + _,
+            ),
+          },
+          "eb_sale_sect_" + _,
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        const _ = new Array();
+        return (
+          _.rows.forEach((_) => {
+            const _ = () => {
+              _.onSelected && _.onSelected(_);
+              let _ = document.getElementById(_.strSectionId);
+              _ && (_.scrollIntoView(!0), window.scrollBy(0, -75));
+            };
+            _.push(
+              (0, _.jsx)(
+                "div",
+                {
+                  _: "tc_" + _.strSectionId,
+                  role: "button",
+                  tabIndex: 0,
+                  className: (0, _._)(
+                    {
+                      [_.TOCEntry]: !0,
+                      [_.SectionOnScreen]: _.bSectionIsVisible,
+                      [_.TOCIndent]: _.bIndent,
+                    },
+                    _.strClassName,
+                  ),
+                  onClick: _,
+                  onKeyDown: (_) => {
+                    ("Enter" !== _.key && " " !== _.key) ||
+                      (_.preventDefault(), _());
+                  },
+                  children: (0, _.jsx)("div", {
+                    style: _.style,
+                    className: _.TOCEntryText,
+                    children: _.strLabel,
+                  }),
+                },
+                "tc_" + _.strSectionId,
+              ),
+            );
+          }),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.TableOfContentsContainer, _.className),
+            children: [
+              _.elHeader,
+              (0, _.jsxs)("div", {
+                className: _.TableOfContents,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: _.strHeader,
+                  }),
+                  _,
+                  _.elBottomContent,
+                ],
+              }),
+            ],
+          })
+        );
+      };
       function _(_) {
         const _ = _._.Get(),
           [_, _, _, _] = (0, _._)(() => [
@@ -24066,7 +24397,79 @@
             _.BIsOptInEnabled(),
             _.EVisibility(),
           ]),
-          [_, _, _] = (0, _._)(!1);
+          [_, _, _] = (0, _._)(!1),
+          _ = [
+            {
+              _: "OptInEdit_BasicInfo",
+              label: "Basic Event Info",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_NextFest",
+              label: "Next Fest Options",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_Requirements",
+              label: "Registration Requirements",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_Appeals",
+              label: "Appeals Process",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_RegOptions",
+              label: "Registration Options",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_Reminders",
+              label: "Event Deadlines and Reminders",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_UncommonOptions",
+              label: "Uncommon Registration Options",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_DynamicSections",
+              label: "Optional Dynamic Sections",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_BeforeOptIn",
+              label: "Tasks Required Prior To Registration",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_WhenReady",
+              label: "Tasks Required To Start",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_DoAnytime",
+              label: "Tasks That Can Be Done Any Time",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_MediaPermissions",
+              label: "Additional Featuring Section",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_TextOverride",
+              label: "Override Final Participation Text",
+              _: (0, _.jsx)(_, {}),
+            },
+            {
+              _: "OptInEdit_Delete",
+              label: "Delete Opt-In",
+              _: (0, _.jsx)(_, {}),
+            },
+          ];
         return (0, _.jsxs)("div", {
           className: _().AdminPageCtn,
           children: [
@@ -24075,88 +24478,119 @@
               children: ["OptIn Admin Editing: ", _],
             }),
             (0, _.jsx)("hr", {}),
-            (0, _.jsxs)("div", {
-              className: _().ColumnCtn,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().LeftCol,
-                  children: [
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                  ],
-                }),
-                (0, _.jsx)("div", {
-                  className: _().RightCol,
-                  children: (0, _.jsxs)("div", {
-                    className: _().SectionCtn,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().SectionDesc,
-                        children:
-                          "When you are ready to start accepting opt-ins from eligible games that meet the criteria you've defined, check the box below and save the OptIn.",
-                      }),
-                      (0, _.jsx)("br", {}),
-                      (0, _.jsx)(_._, {
-                        label: "Enable Partners to opt-in",
-                        checked: _,
-                        onChange: (_) => {
-                          _ ? _.SetOptInEnabled(_) : _();
+            (0, _.jsx)(_, {
+              children: (0, _.jsxs)("div", {
+                className: _().ColumnCtn,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().LeftCol,
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          _: _._,
+                          children: _._,
                         },
-                      }),
-                      _ &&
-                        (0, _.jsxs)("div", {
-                          children: [
-                            (0, _.jsx)("h3", {
-                              children: "Opt-In Visibility:",
+                        _._,
+                      ),
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().RightCol,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _().SectionCtn,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().SectionDesc,
+                            children:
+                              "When you are ready to start accepting opt-ins from eligible games that meet the criteria you've defined, check the box below and save the OptIn.",
+                          }),
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsx)(_._, {
+                            label: "Enable Partners to opt-in",
+                            checked: _,
+                            onChange: (_) => {
+                              _ ? _.SetOptInEnabled(_) : _();
+                            },
+                          }),
+                          _ &&
+                            (0, _.jsxs)("div", {
+                              children: [
+                                (0, _.jsx)("h3", {
+                                  children: "Opt-In Visibility:",
+                                }),
+                                (0, _.jsx)("b", {
+                                  children:
+                                    void 0 === _ ||
+                                    _ === _._.k_EOptInVisibility_Public
+                                      ? "Public"
+                                      : "Invite Only",
+                                }),
+                                (0, _.jsx)("br", {}),
+                                (0, _.jsx)("br", {}),
+                              ],
                             }),
-                            (0, _.jsx)("b", {
-                              children:
-                                void 0 === _ ||
-                                _ === _._.k_EOptInVisibility_Public
-                                  ? "Public"
-                                  : "Invite Only",
+                          (0, _.jsx)("a", {
+                            href: `${_._.PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales`,
+                            target: "_blank",
+                            children: "Steam Works Doc Page",
+                          }),
+                          (0, _.jsx)(_._, {
+                            active: _,
+                            children: (0, _.jsx)(_._, {
+                              strTitle: (0, _._)("#Dialog_AreYouSure"),
+                              strDescription:
+                                "This opt-in was previously enabled and could be visible to partners. This will turn it off for all partners after you save. Are you sure you want to do this?",
+                              onOK: () => {
+                                _.SetOptInEnabled(!1);
+                              },
+                              closeModal: _,
                             }),
-                            (0, _.jsx)("br", {}),
-                            (0, _.jsx)("br", {}),
-                          ],
-                        }),
-                      (0, _.jsx)("a", {
-                        href: `${_._.PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales`,
-                        target: "_blank",
-                        children: "Steam Works Doc Page",
+                          }),
+                        ],
                       }),
-                      (0, _.jsx)(_._, {
-                        active: _,
-                        children: (0, _.jsx)(_._, {
-                          strTitle: (0, _._)("#Dialog_AreYouSure"),
-                          strDescription:
-                            "This opt-in was previously enabled and could be visible to partners. This will turn it off for all partners after you save. Are you sure you want to do this?",
-                          onOK: () => {
-                            _.SetOptInEnabled(!1);
-                          },
-                          closeModal: _,
-                        }),
+                      (0, _.jsx)(_, {
+                        sections: _.map(({ _: _, label: _ }) => ({
+                          _: _,
+                          label: _,
+                        })),
                       }),
                     ],
                   }),
-                }),
-              ],
+                ],
+              }),
             }),
           ],
         });
       }
+      function _(_) {
+        return (0, _.jsx)(_, {
+          strSectionId: _._,
+          children: (0, _.jsx)("div", {
+            _: _._,
+            style: {
+              flexGrow: 1,
+              minWidth: 0,
+            },
+            children: _.children,
+          }),
+        });
+      }
       const _ = (0, _._)((_) => {
+          const _ = _(),
+            _ = _.sections.map((_) => ({
+              strLabel: _.label,
+              strSectionId: _._,
+              bSectionIsVisible: _.m_mapVisibleSections.has(_._),
+            }));
+          return (0, _.jsx)(_, {
+            strHeader: "Sections",
+            rows: _,
+            className: _().OptInEditorTOCPlacement,
+          });
+        }),
+        _ = (0, _._)((_) => {
           const _ = _._.Get(),
             _ = [
               {
@@ -24381,6 +24815,268 @@
                 children: (0, _.jsx)(_, {}),
               }),
             ],
+          });
+        });
+      const _ = (0, _._)((_) => {
+          const _ = _._.Get(),
+            _ = {
+              display: "flex",
+              alignItems: "flex-start",
+              gap: "6px",
+            };
+          return (0, _.jsx)(_._, {
+            title: "Next Fest Options",
+            bStartMinimized: !0,
+            children: (0, _.jsxs)("div", {
+              className: _().Section,
+              children: [
+                (0, _.jsxs)("p", {
+                  children: [
+                    "These fields power the auto-generated Next Fest documentation page ( the ",
+                    (0, _.jsx)("code", {
+                      children: "[optin_nextfest]",
+                    }),
+                    " BBCode ). Any date left blank shows as ",
+                    (0, _.jsx)("b", {
+                      children: "TBD",
+                    }),
+                    " on that page. Event Start/End and the Trailer Live Date come from the ",
+                    (0, _.jsx)("b", {
+                      children: "Basic Event Info",
+                    }),
+                    " section above. Hover the ",
+                    (0, _.jsx)("b", {
+                      children: "(?)",
+                    }),
+                    " beside each date for the documentation context it drives.",
+                  ],
+                }),
+                (0, _.jsx)("h3", {
+                  children: "Live Q&A Sessions:",
+                }),
+                (0, _.jsx)("p", {
+                  children:
+                    "Virtual Zoom Q&A sessions. Sessions are always one hour long. The first session is the one shown in the documentation's Important Dates.",
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription: "Q&A Session 1 - Start",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _.GetQandA1EventStartTime(),
+                      fnSetTimeToUpdate: _.SetQandA1EventStartTime,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Live virtual Q&A session on Zoom ( sessions are always one hour ). This first session is the one surfaced in the documentation's Important Dates. Enter the announcement / reminder link in the URL field below.",
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  onChange: (_) => _.SetQandA1URL(_.target.value),
+                  value: _.GetQandA1URL(),
+                  mustBeURL: !0,
+                  placeholder:
+                    "Link to the Q&A announcement / reminder, e.g. https://store.steampowered.com/news/group/.../view/...",
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription: "Q&A Session 2 - Start",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _.GetQandA2EventStartTime(),
+                      fnSetTimeToUpdate: _.SetQandA2EventStartTime,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Optional second live Zoom Q&A session ( always one hour ). This one is not surfaced in the auto-generated Important Dates list.",
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  onChange: (_) => _.SetQandA2URL(_.target.value),
+                  value: _.GetQandA2URL(),
+                  mustBeURL: !0,
+                  placeholder:
+                    "Link to the Q&A announcement / reminder, e.g. https://store.steampowered.com/news/group/.../view/...",
+                }),
+                (0, _.jsx)("h3", {
+                  children: "Important Dates:",
+                }),
+                (0, _.jsxs)("p", {
+                  children: [
+                    "Deadlines and milestones shown in the Important Dates section of the documentation page. Leave any blank to show ",
+                    (0, _.jsx)("b", {
+                      children: "TBD",
+                    }),
+                    ".",
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription: "Registration Deadline",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () =>
+                        _.GetNextFestRegistrationDeadline(),
+                      fnSetTimeToUpdate: _.SetNextFestRegistrationDeadline,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Registration deadline for the festival. We also recommend having marketing materials up to date by this date to be considered for potential inclusion in official Next Fest marketing ( in particular the official event trailer ). Steam notifies partners shortly after if their demo is in consideration.",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription:
+                        "Steam Pulls Trailers For The Official Trailer",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _.GetNextFestTrailerPull(),
+                      fnSetTimeToUpdate: _.SetNextFestTrailerPull,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Date Steam pulls trailers to assemble the official Next Fest trailer. Partners notified of trailer inclusion consideration should ensure their most up-to-date trailer is live on the base game store page by this date.",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription:
+                        "Press Preview - Demo & Store Page Submission Deadline",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () =>
+                        _.GetNextFestPressPreviewSubmit(),
+                      fnSetTimeToUpdate: _.SetNextFestPressPreviewSubmit,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "To be live at the start of the Press Preview, the demo build and store page must be submitted for review by this date. The store page review is required even if the demo does not have a separate store page.",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription: "All Required Items Submission Deadline",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _.GetNextFestAllItemsSubmit(),
+                      fnSetTimeToUpdate: _.SetNextFestAllItemsSubmit,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Deadline for all required items to be submitted for review so the game is prepared for Steam Next Fest ( if not already completed for the Press Preview ).",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription: "Trailer Permissions Opt-Out Deadline",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _.GetNextFestTrailerOptOut(),
+                      fnSetTimeToUpdate: _.SetNextFestTrailerOptOut,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "Deadline to opt OUT of trailer permissions ( for partners who previously opted in ) to ensure their trailer is NOT included in official marketing materials.",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      strDescription: "Press Preview Start",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _.GetNextFestPressPreviewStart(),
+                      fnSetTimeToUpdate: _.SetNextFestPressPreviewStart,
+                      fnIsValidDateTime: () => !0,
+                      bShowTimeZone: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        "When the Press Preview begins. All demos that have opted in to be available for press preview are included at this time.",
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("h3", {
+                  children: [
+                    "Next Planned Next Fest: ",
+                    (0, _.jsx)(_._, {
+                      tooltip:
+                        'The next planned Next Fest, shown in the eligibility note so partners can plan their release timeline ( e.g. "The next edition planned is in June 2027" ).',
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("p", {
+                  children:
+                    'Pick the month and year of the next planned Next Fest. It is shown in the eligibility note as month + year only ( e.g. "The next edition planned is in June 2027" ) - the preview beside the picker shows exactly what will render.',
+                }),
+                (0, _.jsxs)("div", {
+                  style: _,
+                  children: [
+                    (0, _.jsx)(_, {
+                      value:
+                        _.GetNextFestNextEdition() ||
+                        Math.floor(Date.now() / 1e3),
+                      fnOnUpdate: (_) =>
+                        _.SetNextFestNextEdition(
+                          (function (_) {
+                            const _ = new Date(1e3 * _);
+                            return Math.floor(
+                              Date.UTC(
+                                _.getFullYear(),
+                                _.getMonth(),
+                                15,
+                                12,
+                                0,
+                                0,
+                              ) / 1e3,
+                            );
+                          })(_),
+                        ),
+                      minDate:
+                        _.GetEventStartTime() || Math.floor(Date.now() / 1e3),
+                      maxDate: Math.floor(Date.now() / 1e3) + 31536e4,
+                      toolTipContent: "Choose the month and year",
+                    }),
+                    (0, _.jsx)("b", {
+                      children:
+                        _.GetNextFestNextEdition() > 0
+                          ? (0, _._)(_.GetNextFestNextEdition())
+                          : "Not set (renders as TBD)",
+                    }),
+                  ],
+                }),
+              ],
+            }),
           });
         }),
         _ = (0, _._)((_) => {
@@ -25957,7 +26653,6 @@
           );
         return _.isLoading || !_ ? null : _;
       }
-      var _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const _ = _._.Get(),
           _ = (0, _.useRef)(null),
@@ -26744,7 +27439,7 @@
                       _ = _._.Get().GetApp(_);
                     let _, _;
                     if (_ == _.k_EDownloadTrailer)
-                      console.assert("trailer downloads not implemented");
+                      console.assert(!1, "trailer downloads not implemented");
                     else if (
                       _ == _.k_EDownloadAllAgeSafeScreenshots ||
                       _ == _.k_EDownloadScreenshots
@@ -26996,7 +27691,11 @@
                   __webpack_require__.forEach((_, _) => {
                     let _;
                     if ("accessorKey" in _)
-                      _ = (_[_.accessorKey] ?? "").toString();
+                      (_ = (_[_.accessorKey] ?? "").toString()),
+                        "discount_info" === _.accessorKey &&
+                          "" === _ &&
+                          !1 === _.no_planned_discount &&
+                          (_ = _._);
                     else {
                       if (!("accessorFn" in _)) return;
                       _ = (
@@ -28475,7 +29174,7 @@
                     (0, _.jsx)("a", {
                       href:
                         _._.HELP_BASE_URL +
-                        "en/wizard/HelpWithPublishing?issueid=933",
+                        "wizard/HelpWithPublishing?issueid=933",
                       children: "Steam Support",
                     }),
                     ".",
@@ -28751,7 +29450,7 @@
                       children: [
                         "If your plans have changed and you no longer intend to participate in this edition, or you would like to opt out of trailer inclusion, please ",
                         (0, _.jsx)("a", {
-                          href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932",
+                          href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=932",
                           target: "_blank",
                           children: "contact us",
                         }),
@@ -28841,7 +29540,7 @@
                       children: [
                         "If your plans have changed and you no longer intend to participate in this edition, or you would like to opt out of trailer inclusion, please ",
                         (0, _.jsx)("a", {
-                          href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932",
+                          href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=932",
                           target: "_blank",
                           children: "contact us",
                         }),
@@ -28926,7 +29625,7 @@
                       children: [
                         "If your plans have changed and you no longer intend to participate in this edition, or you would like to opt out of trailer inclusion, please ",
                         (0, _.jsx)("a", {
-                          href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932",
+                          href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=932",
                           target: "_blank",
                           children: "contact us",
                         }),
@@ -29005,7 +29704,7 @@
                       children: [
                         "If your plans have changed and you no longer intend to participate in this edition, or you would like to opt out of trailer and/or livestream inclusion, please ",
                         (0, _.jsx)("a", {
-                          href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932",
+                          href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=932",
                           target: "_blank",
                           children: "contact us",
                         }),
@@ -29166,7 +29865,7 @@
                       children: (0, _._)(
                         "#OptIn_EmailSection_SeasonalDiscounting_Body_2",
                         (0, _.jsx)("a", {
-                          href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=927",
+                          href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=927",
                           children: (0, _._)(
                             "#OptIn_EmailSection_SeasonalDiscounting_Body_2_Link",
                           ),
@@ -33345,7 +34044,6 @@
         (0, _._)([_._], _.prototype, "FixPointShopItemForOptIn", null),
         (0, _._)([_._], _.prototype, "UpdateInternalModel", null);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38505,8 +39203,7 @@
               children: (0, _._)("#OptIn_Appeals_HelpDoc_NeedHelp"),
             }),
             (0, _.jsx)("a", {
-              href:
-                _._.HELP_BASE_URL + "en/wizard/HelpWithPublishing?issueid=933",
+              href: _._.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=933",
               children: (0, _._)("#PricingDashboard_ContactUsButton"),
             }),
           ],
@@ -46910,7 +47607,7 @@
                     (0, _.jsx)("a", {
                       href:
                         _._.HELP_BASE_URL +
-                        "en/wizard/HelpWithPublishing?issueid=919",
+                        "wizard/HelpWithPublishing?issueid=919",
                       children: (0, _._)("#DailyDeals_Info_Contact"),
                     }),
                   ),
@@ -67278,7 +67975,7 @@
                     (0, _.jsx)("a", {
                       href:
                         _._.HELP_BASE_URL +
-                        "en/wizard/HelpWithPublishing?issueid=919",
+                        "wizard/HelpWithPublishing?issueid=919",
                       children: (0, _._)("#DailyDeals_Info_Contact"),
                     }),
                   ),
@@ -74213,9 +74910,9 @@
                         "Send the partner this url where they can create a ticket with necessary information to create the sale page. Keywords will help them with creating sale page and their sale related questions.",
                         (0, _.jsx)("br", {}),
                         (0, _.jsx)("a", {
-                          href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938",
+                          href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=938",
                           children:
-                            "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938",
+                            "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=938",
                         }),
                       ],
                     }),
@@ -75734,7 +76431,7 @@
                 }),
                 (0, _.jsx)("p", {
                   children: (0, _.jsx)("a", {
-                    href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938",
+                    href: "https://help.steampowered.com/wizard/HelpWithPublishing?issueid=938",
                     children:
                       "The best way is for the Partner to create a ticket. Keywords will help them with creating sale page and their sale related questions.",
                   }),
@@ -76815,8 +77512,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = {
@@ -76846,72 +77541,37 @@
         return _;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_priceStopInfo = [];
-        m_asyncLoader = null;
-        GetPriceStops() {
-          return this.m_priceStopInfo;
-        }
-        async LoadPriceStops() {
-          return (
-            this.m_asyncLoader ||
-              (this.m_asyncLoader = this.InternalLoadPriceStops()),
-            this.m_asyncLoader
+      const _ = ["sale", "pricestops"];
+      function _() {
+        const _ = (0, _._)("pricestops", "application_config");
+        if (_ && _.length > 0) return (_[0].price = 0), _;
+      }
+      async function _() {
+        const _ = _._.STORE_BASE_URL + "saleaction/ajaxgetpricestops",
+          _ = await _().get(_);
+        if (_?.data?.success !== _._)
+          throw new Error(
+            "Unable to load price stop data: " + _?.data?.success,
           );
-        }
-        async InternalLoadPriceStops() {
-          if (this.m_priceStopInfo?.length > 0) return;
-          const _ = _._.STORE_BASE_URL + "saleaction/ajaxgetpricestops";
-          let _;
-          try {
-            if (((_ = await _().get(_)), _?.data?.success !== _._))
-              return (
-                console.error(
-                  "CPriceStopStore: Unable to load price stop data: ",
-                  _?.data?.success,
-                ),
-                null
-              );
-          } catch (_) {
-            return (
-              console.error(
-                "CPriceStopStore: Unable to load price stop data: ",
-                _?.data?.success,
-              ),
-              null
-            );
-          }
-          (this.m_priceStopInfo = _.data.rgPriceStops),
-            (this.m_priceStopInfo[0].price = 0);
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleInteractionStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-        Init() {
-          const _ = (0, _._)("pricestops", "application_config");
-          _ &&
-            ((this.m_priceStopInfo = _), (this.m_priceStopInfo[0].price = 0));
-        }
+        const _ = _.data.rgPriceStops;
+        return _.length > 0 && (_[0].price = 0), _;
       }
       function _() {
-        return _.Get().GetPriceStops();
+        const { data: _ } = (0, _._)({
+          queryKey: _,
+          queryFn: _,
+          initialData: _,
+          staleTime: 36e5,
+        });
+        return _ ?? [];
       }
-      (0, _._)([_._], _.prototype, "m_priceStopInfo", void 0),
-        (0, _._)([_._], _.prototype, "LoadPriceStops", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      function _(_ = _._) {
+        return _.getQueryData(_) ?? _() ?? [];
+      }
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_HomeView = void 0;
         BHasHomeView() {
@@ -77092,554 +77752,566 @@
           _
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = _.name;
+        if (_?.length > 0 && _[0]?.startsWith("#tagid_")) {
+          const _ = parseInt(_[0].substring(7));
+          if (_ > 0) return _ && _[_];
+        }
+        return (0, _._)((_._.GetWithFallback(_, _) || "").trim());
+      }
+      function _(_) {
+        return String(_.type) + _._;
+      }
+      function _(_, _) {
+        return (
+          null != _.jsondata.item_source_type &&
+          _.jsondata.item_source_type !== _._.k_ETaggedItems
+        );
+      }
+      function _(_) {
+        for (const _ of _.facetValues)
+          if (null != _.filter)
+            for (const _ of _.filter.clauses)
+              for (const _ of _.or_tags) if (_.startsWith("[Opt]")) return !0;
+        return !1;
+      }
+      function _(_, _, _, _) {
+        const _ = {
+          m_facets: [],
+          m_nFilteredCapsuleCount: void 0,
+          m_facetCounts: void 0,
+          m_mapMultiFacetCounts: void 0,
+          m_bUnboundedScope: _,
+          m_facetSortKey: _,
+          m_language: _,
+          m_bHasHideIgnoredItemsFacetValue: !1,
+          m_strQuery: "",
+          m_strURLParam: void 0,
+          m_strFacetDefinitionHash: "",
+          m_nSelectedOptions: 0,
+          m_userPreferences: new Set(),
+          m_prunedFacets: [],
+          m_sortedFacets: [],
+          m_setCapsulesRemovedByUserPreferenceFilters: void 0,
+          m_nSolrMatchCount: 0,
+          BHasHideIgnoredItemsFacetValue() {
+            return this.m_bHasHideIgnoredItemsFacetValue;
+          },
+          GetFacets() {
+            return this.m_facets;
+          },
+          GetQuery() {
+            return this.m_strQuery;
+          },
+          GetURLParam() {
+            return this.m_strURLParam;
+          },
+          GetFacetDefinitionHash() {
+            return this.m_strFacetDefinitionHash;
+          },
+          GetSelectedOptionsCount() {
+            return this.m_nSelectedOptions;
+          },
+          BIsUserPreferenceEnabled(_) {
+            return this.m_userPreferences.has(_);
+          },
+          BIsAnyUserPreferenceEnabled() {
+            return this.m_userPreferences.size > 0;
+          },
+          GetSortedFacets() {
+            return this.m_sortedFacets;
+          },
+          GetMatchCount() {
+            return this.m_nFilteredCapsuleCount;
+          },
+          Reset() {
+            this.m_facets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
+              });
+            }),
+              this.UpdateFilter();
+          },
+          SetFromURLParam(_) {
+            if (_ === this.m_strURLParam) return;
+            this.m_facets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
+              });
+            });
+            (_?.split(",") || []).forEach((_) => {
+              const _ = _.split(":"),
+                _ = Number(_[0]);
+              _[1].split("|").forEach((_) => {
+                if (_.includes("_")) {
+                  const _ = _.split("_");
+                  (this.m_facets[_].facetValues[Number(_[0])].bEnabled = !0),
+                    (this.m_facets[_].facetValues[
+                      Number(_[0])
+                    ].nPriceStopIndex = Number(_[1]));
+                } else
+                  this.m_facets[_].facetValues[Number(_)].bEnabled =
+                    !this.m_facets[_].facetValues[Number(_)].facetValue
+                      .bEnabledByDefault;
+              });
+            }),
+              this.UpdateFilter();
+          },
+          SetFacetCounts(_) {
+            const _ = new Map();
+            if (_)
+              for (const _ of Object.keys(_)) _.set(Number(_), Number(_[_]));
+            this.m_facetCounts = _;
+          },
+          SetMultiFacetCounts(_) {
+            const _ = new Map();
+            if (_)
+              for (const _ of Object.keys(_)) {
+                const _ = _[_],
+                  _ = new Map();
+                if ("discounted" === _) {
+                  let _ = 0;
+                  for (const _ of Object.keys(_)) _ += Number(_[_]);
+                  _.set("true", _);
+                } else for (const _ of Object.keys(_)) _.set(_, Number(_[_]));
+                _.set(_, _);
+              }
+            this.m_mapMultiFacetCounts = _;
+          },
+          SetSolrMatchCount(_) {
+            this.m_nSolrMatchCount = _;
+          },
+          SetFacetValueSearchString(_, _, _) {
+            for (const _ of this.m_facets)
+              for (const _ of _.facetValues) _.bHiddenBySearch = !1;
+            if (!_) return;
+            const _ = _.toLocaleLowerCase().trim();
+            if (0 !== _.length)
+              for (const _ of this.m_facets)
+                for (const _ of _.facetValues) {
+                  (
+                    _(_.facetValue, _, _)?.toLocaleLowerCase().trim() || ""
+                  ).includes(_) || (_.bHiddenBySearch = !0);
+                }
+          },
+          UpdateFilter() {
+            this.UpdateQuery(),
+              this.UpdateURLParam(),
+              this.UpdateSelectedOptionsCount(),
+              this.UpdateUserPreferenceFilters();
+          },
+          UpdateFacetDefinitionHash(_) {
+            this.m_strFacetDefinitionHash = String((0, _._)((0, _._)(_)));
+          },
+          UpdateQuery() {
+            let _ = {
+              type: _._.k_EStoreFilterClauseTypeAnd,
+              rgSubexpressions: new Array(),
+            };
+            this.m_facets.forEach((_) => {
+              if (
+                (function (_) {
+                  for (const _ of _.facetValues)
+                    if (_.bEnabled && null != _.facetValue.filter)
+                      for (const _ of _.facetValue.filter.clauses)
+                        for (const _ of _.or_tags)
+                          if (_.startsWith("[Opt]")) return !0;
+                  return !1;
+                })(_)
+              )
+                return;
+              const _ = {
+                type: _.facet.logical_and
+                  ? _._.k_EStoreFilterClauseTypeAnd
+                  : _._.k_EStoreFilterClauseTypeOr,
+                rgSubexpressions: new Array(),
+              };
+              _.facetValues.forEach((_) => {
+                if (_.bEnabled && Boolean(_.facetValue.rgStoreTagFilter)) {
+                  if (_.facetValue.type === _._.k_EUserPreference) return;
+                  const _ = {
+                    ..._.facetValue.rgStoreTagFilter,
+                  };
+                  if (_.facetValue.type === _._.k_EPrice) {
+                    const _ = _(),
+                      _ = _.nPriceStopIndex;
+                    _.value =
+                      _.length > 0 && null != _ && -1 != _
+                        ? _[_].price
+                        : void 0;
+                  }
+                  (_.facetValue.type !== _._.k_EPrice ||
+                    Boolean(_().length > 0)) &&
+                    _.rgSubexpressions.push(_);
+                }
+              }),
+                0 !== _.rgSubexpressions.length && _.rgSubexpressions.push(_);
+            });
+            const _ = _(_);
+            this.m_strQuery = _ ? JSON.stringify(_) : "";
+          },
+          UpdateURLParam() {
+            const _ = [];
+            this.m_facets.forEach((_, _) => {
+              const _ = [];
+              if (
+                (_.facetValues.forEach((_, _) => {
+                  _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
+                    (_.facetValue.type === _._.k_EPrice
+                      ? _.push(_ + "_" + _.nPriceStopIndex)
+                      : _.push(_.toString()));
+                }),
+                0 === _.length)
+              )
+                return;
+              const _ = _.join("|");
+              _.push(_ + ":" + _);
+            }),
+              (this.m_strURLParam = _.length > 0 ? _.join(",") : void 0);
+          },
+          UpdateSelectedOptionsCount() {
+            (this.m_nSelectedOptions = 0),
+              this.m_facets.forEach((_) => {
+                _.facetValues.forEach((_) => {
+                  _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
+                    ++this.m_nSelectedOptions;
+                });
+              });
+          },
+          UpdateUserPreferenceFilters() {
+            (this.m_userPreferences = new Set()),
+              this.m_facets.forEach((_) => {
+                _.facetValues.forEach((_) => {
+                  _.facetValue.type === _._.k_EUserPreference &&
+                    _.bEnabled &&
+                    this.m_userPreferences.add(_.facetValue.userPreference);
+                });
+              });
+          },
+          PruneFacets() {
+            (this.m_prunedFacets = []),
+              this.m_facets.forEach((_) => {
+                _.facetValues.forEach((_) => {
+                  (_.bDeactivated = !1), (_.nMatchingFilteredCapsules = void 0);
+                }),
+                  this.m_prunedFacets.push({
+                    facet: _,
+                    facetValues: _.facetValues,
+                  });
+              }),
+              this.PruneFacetsForCurrentUser();
+          },
+          PruneFacetsForCurrentUser() {
+            this.m_prunedFacets.forEach((_) => {
+              _.facetValues = _.facetValues.filter((_) =>
+                _.facetValue.type === _._.k_EContentDescriptor
+                  ? !_._.Get().BIsLoaded() ||
+                    _._.Get().BIncludesContentDescriptor(
+                      _.facetValue.contentDescriptor,
+                    )
+                  : _.facetValue.type === _._.k_ELanguage
+                    ? !_._.Get().BIsLoaded() ||
+                      _.facetValue.language === _.Bhc ||
+                      ((0 !== _._.Get().GetSecondaryLanguages().size ||
+                        _._.Get().GetPrimaryLanguage() !== _.Bhc) &&
+                        (_._.Get().GetPrimaryLanguage() ===
+                          _.facetValue.language ||
+                          (null != _.facetValue.language &&
+                            _._.Get()
+                              .GetSecondaryLanguages()
+                              .has(_.facetValue.language))))
+                    : _.facetValue.type !== _._.k_EUserPreference ||
+                      (_._.logged_in && _._.Get().BIsLoaded()),
+              );
+            }),
+              (this.m_prunedFacets = this.m_prunedFacets.filter(
+                (_) => _.facetValues.length > 0,
+              ));
+          },
+          UpdateMatchingFilteredCapsuleCounts() {
+            this.m_prunedFacets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.nMatchingFilteredCapsules =
+                  this.GetMatchCountForFacetValue(_);
+              });
+            });
+          },
+          GetMatchCountForFacetValue(_) {
+            const _ = this.m_mapMultiFacetCounts,
+              _ = this.m_facetCounts;
+            if (_) {
+              const _ = "402",
+                _ = "401",
+                _ = "9",
+                _ = "28",
+                _ = "18",
+                _ = "41",
+                _ = "42",
+                _ = "43",
+                _ = "44",
+                _ = "61",
+                _ = "37",
+                _ = this.CollapseFilter(_.facetValue.rgStoreTagFilter);
+              switch (_.facetValue.type) {
+                case _._.k_ESaleTagFilter:
+                case void 0:
+                  if (
+                    _?.type === _._.k_EStoreFilterClauseTypeStoreTag &&
+                    _.facetValue.nAtomicStoreTagID
+                  )
+                    return _.get("tagidset")?.get(
+                      _.facetValue.nAtomicStoreTagID.toString(),
+                    );
+                  if (_?.type === _._.k_EStoreFilterClauseTypeFeatureTag)
+                    switch (_.value) {
+                      case "windows":
+                        return _.get("platform_win")?.get("true");
+                      case "linux":
+                        return _.get("platform_linux")?.get("true");
+                      case "mac":
+                        return _.get("platform_mac")?.get("true");
+                      case "vr":
+                        return _.get("vrsupport")?.get(_);
+                      case "vr only":
+                        return _.get("vrsupport")?.get(_);
+                      case "full controller":
+                        return _.get("category")?.get(_);
+                      case "any controller":
+                        return (
+                          _.get("category")?.get(_) || _.get("category")?.get(_)
+                        );
+                      case "remote play":
+                        return Math.max(
+                          _.get("category")?.get(_) ?? 0,
+                          _.get("category")?.get(_) ?? 0,
+                          _.get("category")?.get(_) ?? 0,
+                          _.get("category")?.get(_) ?? 0,
+                        );
+                      case "remote play together":
+                        return _.get("category")?.get(_);
+                      case "free":
+                        return _.get("genre")?.get(_);
+                      case "discounted":
+                        return _.get("discounted")?.get("true");
+                      case "coop":
+                        return _.get("category")?.get(_);
+                      case "hdr":
+                        return _.get("category")?.get(_);
+                    }
+                  break;
+                case _._.k_EAppType:
+                  let _ = _.facetValue.appType;
+                  return (
+                    !_ &&
+                      _?.type == _._.k_EStoreFilterClauseTypeAppType &&
+                      "string" == typeof _.value &&
+                      _.value.length &&
+                      (_ = _.value),
+                    null != _ ? _.get("type")?.get(_) : void 0
+                  );
+                case _._.k_ELanguage:
+                  const _ = (0, _.LgB)(_.facetValue.language);
+                  return _.get("supportedlang_" + _)?.get("true");
+                case _._.k_EContentDescriptor:
+                  return _.get("descids")?.get(
+                    _.facetValue.contentDescriptor.toString(),
+                  );
+              }
+            } else if (_)
+              return __webpack_require__.get(_.facetValue.nAtomicStoreTagID);
+          },
+          CollapseFilter(_) {
+            if (!_) return _;
+            let _ = _;
+            for (
+              ;
+              (_.type == _._.k_EStoreFilterClauseTypeOr ||
+                _.type == _._.k_EStoreFilterClauseTypeAnd) &&
+              1 == _.rgSubexpressions?.length;
+            )
+              _ = _.rgSubexpressions[0];
+            return _;
+          },
+          DeactivateFacetValues() {
+            this.m_prunedFacets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.bDeactivated = !1;
+              });
+            }),
+              this.m_prunedFacets.forEach((_) => {
+                const _ = _(_.facet.facet);
+                _.facetValues.forEach((_) => {
+                  let _ = _.nMatchingFilteredCapsules;
+                  _.bDeactivated = !(
+                    _.bEnabled ||
+                    _ ||
+                    0 !== _ ||
+                    _.facetValue.type === _._.k_EUserPreference
+                  );
+                });
+              });
+          },
+          SortFacets() {
+            this.UpdateMatchingFilteredCapsuleCounts(),
+              this.DeactivateFacetValues(),
+              (this.m_sortedFacets = []),
+              this.m_prunedFacets.forEach((_) => {
+                const _ = _.facetValues.slice();
+                _.sort((_, _) => {
+                  if (
+                    _.facetValue.type === _._.k_EPrice &&
+                    _.facetValue.type !== _._.k_EPrice
+                  )
+                    return 1;
+                  if (
+                    _.facetValue.type !== _._.k_EPrice &&
+                    _.facetValue.type == _._.k_EPrice
+                  )
+                    return -1;
+                  if (_.bEnabled !== _.bEnabled) return _.bEnabled ? 1 : -1;
+                  if (_.bDeactivated !== _.bDeactivated)
+                    return _.bDeactivated ? 1 : -1;
+                  if (!_.bEnabled && !_.bDeactivated) {
+                    if (
+                      _.facetValue.type === _._.k_ELanguage &&
+                      _.facetValue.type === _._.k_ELanguage
+                    )
+                      return _.facetValue.language ===
+                        _._.Get().GetPrimaryLanguage()
+                        ? 1
+                        : -1;
+                    const _ = _.nMatchingFilteredCapsules || 0,
+                      _ = _.nMatchingFilteredCapsules || 0;
+                    if (
+                      this.m_facetSortKey === _._.k_ESortFacetsByMatchCount &&
+                      _ !== _
+                    )
+                      return _ - _;
+                  }
+                  if (this.m_facetSortKey === _._.k_ESortFacetsByName) {
+                    const _ =
+                        _._.GetWithFallback(
+                          _.facetValue.name,
+                          this.m_language,
+                        ) || "",
+                      _ =
+                        _._.GetWithFallback(
+                          _.facetValue.name,
+                          this.m_language,
+                        ) || "";
+                    return __webpack_require__.localeCompare(_);
+                  }
+                  return 0;
+                }),
+                  this.m_sortedFacets.push({
+                    ..._,
+                    facetValues: _,
+                  });
+              });
+          },
+          async ApplyUserPreferenceFilters(_, _, _) {
+            const _ = this.BHasHideIgnoredItemsFacetValue(),
+              _ = this.BIsUserPreferenceEnabled(_._.k_EHideOwnedItems),
+              _ = this.BIsUserPreferenceEnabled(_._.k_EHideWishlistedItems),
+              _ = this.BIsUserPreferenceEnabled(_._.k_EHideIgnoredItems);
+            let _ = [];
+            const _ = await (async function (_, _, _, _, _, _, _) {
+              let _ = await _(
+                _,
+                _,
+                _,
+                _
+                  ? (_) =>
+                      !_ ||
+                      _._.Get().BExcludesContentDescriptor(
+                        _.GetContentDescriptorIDs(),
+                      ) ||
+                      _._.Get().BExcludeTagIDs(_.GetTagIDs())
+                  : _,
+              );
+              const _ = [];
+              for (const _ of _) {
+                const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
+                if (!_) continue;
+                const _ = _?.GetIncludedAppIDsOrSelf();
+                let _ = !1;
+                _ && (_ = _ || _.every((_) => _._.Get().BIsGameOwned(_))),
+                  _ &&
+                    (_ = _ || _.every((_) => _._.Get().BIsGameWishlisted(_))),
+                  _ && (_ = _ || _.every((_) => _._.Get().BIsGameIgnored(_))),
+                  _ ? _ && _.push(_) : _.push(_);
+              }
+              return _;
+            })(_, _, _, _, _, _, _);
+            if (
+              ((0, _._)(() => {
+                this.m_setCapsulesRemovedByUserPreferenceFilters = new Set(
+                  _.map(_),
+                );
+              }),
+              _)
+            )
+              for (const _ of _) __webpack_require__.push(_);
+            return _;
+          },
+          UpdateMatchCount(_, _) {
+            _
+              ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
+                (this.m_nFilteredCapsuleCount -=
+                  this.m_setCapsulesRemovedByUserPreferenceFilters?.size || 0))
+              : (this.m_nFilteredCapsuleCount = _),
+              this.SortFacets();
+          },
+        };
+        return (
+          (0, _._)(_),
+          _.forEach((_) => {
+            const _ = [];
+            _.facetValues.forEach((_) => {
+              _.push({
+                facetValue: _,
+                bEnabled: Boolean(_.bEnabledByDefault),
+                nPriceStopIndex: Boolean(_().length > 0)
+                  ? _().length - 1
+                  : void 0,
+                bDeactivated: !1,
+                nMatchingFilteredCapsules: void 0,
+                bHiddenBySearch: !1,
+              });
+            }),
+              _.m_facets.push({
+                facet: _,
+                facetValues: _,
+                matchingCapsules: null,
+                matchingCapsulesInOtherFacets: null,
+              });
+          }),
+          _.PruneFacets(),
+          _.UpdateFacetDefinitionHash(_),
+          _.UpdateFilter(),
+          (_.m_bHasHideIgnoredItemsFacetValue = _.some((_) =>
+            _.facetValues.some(
+              (_) =>
+                _.type === _._.k_EUserPreference &&
+                _.userPreference === _._.k_EHideIgnoredItems,
+            ),
+          )),
+          _.SortFacets(),
+          _
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_facets = [];
-        m_nFilteredCapsuleCount;
-        m_facetCounts;
-        m_mapMultiFacetCounts;
-        m_bUnboundedScope = !1;
-        m_facetSortKey = _._.k_ESortFacetsByMatchCount;
-        m_language = _.xPp;
-        m_bHasHideIgnoredItemsFacetValue;
-        m_matchingReferencedCapsules;
-        m_strQuery;
-        m_strURLParam;
-        m_strFacetDefinitionHash;
-        m_nSelectedOptions;
-        m_userPreferences;
-        m_prunedFacets;
-        m_sortedFacets = [];
-        m_setCapsulesRemovedByUserPreferenceFilters;
-        m_nSolrMatchCount;
-        constructor(_, _, _, _) {
-          (0, _._)(this),
-            (this.m_facetSortKey = _),
-            (this.m_language = _),
-            (this.m_bUnboundedScope = _),
-            (async function () {
-              _.Get().LoadPriceStops();
-            })(),
-            (this.m_facets = []),
-            _.forEach((_) => {
-              const _ = [];
-              _.facetValues.forEach((_) => {
-                _.push({
-                  facetValue: _,
-                  bEnabled: Boolean(_.bEnabledByDefault),
-                  nPriceStopIndex: Boolean(_().length > 0)
-                    ? _().length - 1
-                    : void 0,
-                  bDeactivated: !1,
-                  nMatchingFilteredCapsules: null,
-                  bHiddenBySearch: !1,
-                });
-              }),
-                this.m_facets.push({
-                  facet: _,
-                  facetValues: _,
-                  matchingCapsules: null,
-                  matchingCapsulesInOtherFacets: null,
-                });
-            }),
-            this.PruneFacets(),
-            this.UpdateFacetDefinitionHash(_),
-            this.UpdateFilter(),
-            (this.m_bHasHideIgnoredItemsFacetValue = _.some((_) =>
-              _.facetValues.some(
-                (_) =>
-                  _.type === _._.k_EUserPreference &&
-                  _.userPreference === _._.k_EHideIgnoredItems,
-              ),
-            )),
-            this.SortFacets();
-        }
-        BHasHideIgnoredItemsFacetValue() {
-          return this.m_bHasHideIgnoredItemsFacetValue;
-        }
-        GetFacets() {
-          return this.m_facets;
-        }
-        GetQuery() {
-          return this.m_strQuery;
-        }
-        GetURLParam() {
-          return this.m_strURLParam;
-        }
-        GetFacetDefinitionHash() {
-          return this.m_strFacetDefinitionHash;
-        }
-        GetSelectedOptionsCount() {
-          return this.m_nSelectedOptions;
-        }
-        BIsUserPreferenceEnabled(_) {
-          return this.m_userPreferences.has(_);
-        }
-        BIsAnyUserPreferenceEnabled() {
-          return this.m_userPreferences.size > 0;
-        }
-        GetSortedFacets() {
-          return this.m_sortedFacets;
-        }
-        GetMatchCount() {
-          return this.m_nFilteredCapsuleCount;
-        }
-        Reset() {
-          this.m_facets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
-            });
-          }),
-            this.UpdateFilter();
-        }
-        SetFromURLParam(_) {
-          if (_ === this.m_strURLParam) return;
-          this.m_facets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
-            });
-          });
-          (_?.split(",") || []).forEach((_) => {
-            const _ = _.split(":"),
-              _ = Number(_[0]);
-            _[1].split("|").forEach((_) => {
-              if (_.includes("_")) {
-                const _ = _.split("_");
-                (this.m_facets[_].facetValues[Number(_[0])].bEnabled = !0),
-                  (this.m_facets[_].facetValues[Number(_[0])].nPriceStopIndex =
-                    Number(_[1]));
-              } else
-                this.m_facets[_].facetValues[Number(_)].bEnabled =
-                  !this.m_facets[_].facetValues[Number(_)].facetValue
-                    .bEnabledByDefault;
-            });
-          }),
-            this.UpdateFilter();
-        }
-        SetFacetCounts(_) {
-          if (((this.m_facetCounts = new Map()), _))
-            for (const _ of Object.keys(_))
-              this.m_facetCounts.set(Number(_), Number(_[_]));
-        }
-        SetMultiFacetCounts(_) {
-          if (((this.m_mapMultiFacetCounts = new Map()), _))
-            for (const _ of Object.keys(_)) {
-              const _ = _[_],
-                _ = new Map();
-              if ("discounted" === _) {
-                let _ = 0;
-                for (const _ of Object.keys(_)) _ += Number(_[_]);
-                _.set("true", _);
-              } else for (const _ of Object.keys(_)) _.set(_, Number(_[_]));
-              this.m_mapMultiFacetCounts.set(_, _);
-            }
-        }
-        FilterCapsules(_) {
-          return null == this.m_matchingReferencedCapsules
-            ? _
-            : _.filter((_) => this.m_matchingReferencedCapsules.has(_(_)));
-        }
-        SetSolrMatchCount(_) {
-          this.m_nSolrMatchCount = _;
-        }
-        SetFacetValueSearchString(_, _, _) {
-          for (const _ of this.m_facets)
-            for (const _ of _.facetValues) _.bHiddenBySearch = !1;
-          if (!_) return;
-          const _ = _.toLocaleLowerCase().trim();
-          if (0 !== _.length)
-            for (const _ of this.m_facets)
-              for (const _ of _.facetValues) {
-                (
-                  _(_.facetValue, _, _)?.toLocaleLowerCase().trim() || ""
-                ).includes(_) || (_.bHiddenBySearch = !0);
-              }
-        }
-        UpdateFilter() {
-          this.UpdateQuery(),
-            this.UpdateURLParam(),
-            this.UpdateSelectedOptionsCount(),
-            this.UpdateUserPreferenceFilters();
-        }
-        UpdateFacetDefinitionHash(_) {
-          this.m_strFacetDefinitionHash = String((0, _._)((0, _._)(_)));
-        }
-        static BFacetHasEnabledOptTags(_) {
-          for (const _ of _.facetValues)
-            if (_.bEnabled && null != _.facetValue.filter)
-              for (const _ of _.facetValue.filter.clauses)
-                for (const _ of _.or_tags) if (_.startsWith("[Opt]")) return !0;
-          return !1;
-        }
-        UpdateQuery() {
-          let _ = {
-            type: _._.k_EStoreFilterClauseTypeAnd,
-            rgSubexpressions: new Array(),
-          };
-          this.m_facets.forEach((_) => {
-            if (_.BFacetHasEnabledOptTags(_)) return;
-            const _ = {
-              type: _.facet.logical_and
-                ? _._.k_EStoreFilterClauseTypeAnd
-                : _._.k_EStoreFilterClauseTypeOr,
-              rgSubexpressions: new Array(),
-            };
-            _.facetValues.forEach((_) => {
-              if (_.bEnabled && Boolean(_.facetValue.rgStoreTagFilter)) {
-                if (_.facetValue.type === _._.k_EUserPreference) return;
-                const _ = {
-                  ..._.facetValue.rgStoreTagFilter,
-                };
-                _.facetValue.type === _._.k_EPrice &&
-                  (_.value = Boolean(
-                    _().length > 0 &&
-                      null != _.nPriceStopIndex &&
-                      -1 != _.nPriceStopIndex,
-                  )
-                    ? _()[_.nPriceStopIndex].price
-                    : void 0),
-                  (_.facetValue.type !== _._.k_EPrice ||
-                    Boolean(_().length > 0)) &&
-                    _.rgSubexpressions.push(_);
-              }
-            }),
-              0 !== _.rgSubexpressions.length && _.rgSubexpressions.push(_);
-          }),
-            (_ = _(_)),
-            (this.m_strQuery = Boolean(_) ? JSON.stringify(_) : "");
-        }
-        UpdateURLParam() {
-          const _ = [];
-          this.m_facets.forEach((_, _) => {
-            const _ = [];
-            if (
-              (_.facetValues.forEach((_, _) => {
-                _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
-                  (_.facetValue.type === _._.k_EPrice
-                    ? _.push(_ + "_" + _.nPriceStopIndex)
-                    : _.push(_.toString()));
-              }),
-              0 === _.length)
-            )
-              return;
-            const _ = _.join("|");
-            _.push(_ + ":" + _);
-          }),
-            (this.m_strURLParam = _.length > 0 ? _.join(",") : void 0);
-        }
-        UpdateSelectedOptionsCount() {
-          (this.m_nSelectedOptions = 0),
-            this.m_facets.forEach((_) => {
-              _.facetValues.forEach((_) => {
-                _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
-                  ++this.m_nSelectedOptions;
-              });
-            });
-        }
-        UpdateUserPreferenceFilters() {
-          (this.m_userPreferences = new Set()),
-            this.m_facets.forEach((_) => {
-              _.facetValues.forEach((_) => {
-                _.facetValue.type === _._.k_EUserPreference &&
-                  _.bEnabled &&
-                  this.m_userPreferences.add(_.facetValue.userPreference);
-              });
-            });
-        }
-        PruneFacets() {
-          (this.m_prunedFacets = []),
-            this.m_facets.forEach((_) => {
-              _.facetValues.forEach((_) => {
-                (_.bDeactivated = !1), (_.nMatchingFilteredCapsules = null);
-              }),
-                this.m_prunedFacets.push({
-                  facet: _,
-                  facetValues: _.facetValues,
-                });
-            }),
-            this.PruneFacetsForCurrentUser();
-        }
-        PruneFacetsForCurrentUser() {
-          this.m_prunedFacets.forEach((_) => {
-            _.facetValues = _.facetValues.filter((_) =>
-              _.facetValue.type === _._.k_EContentDescriptor
-                ? !_._.Get().BIsLoaded() ||
-                  _._.Get().BIncludesContentDescriptor(
-                    _.facetValue.contentDescriptor,
-                  )
-                : _.facetValue.type === _._.k_ELanguage
-                  ? !_._.Get().BIsLoaded() ||
-                    _.facetValue.language === _.Bhc ||
-                    ((0 !== _._.Get().GetSecondaryLanguages().size ||
-                      _._.Get().GetPrimaryLanguage() !== _.Bhc) &&
-                      (_._.Get().GetPrimaryLanguage() ===
-                        _.facetValue.language ||
-                        _._.Get()
-                          .GetSecondaryLanguages()
-                          .has(_.facetValue.language)))
-                  : _.facetValue.type !== _._.k_EUserPreference ||
-                    (_._.logged_in && _._.Get().BIsLoaded()),
-            );
-          }),
-            (this.m_prunedFacets = this.m_prunedFacets.filter(
-              (_) => _.facetValues.length > 0,
-            ));
-        }
-        UpdateMatchingFilteredCapsuleCounts() {
-          this.m_prunedFacets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.nMatchingFilteredCapsules = this.GetMatchCountForFacetValue(_);
-            });
-          });
-        }
-        GetMatchCountForFacetValue(_) {
-          if (this.m_mapMultiFacetCounts) {
-            const _ = "402",
-              _ = "401",
-              _ = "9",
-              _ = "28",
-              _ = "18",
-              _ = "41",
-              _ = "42",
-              _ = "43",
-              _ = "44",
-              _ = "61",
-              _ = "37",
-              _ = this.CollapseFilter(_.facetValue.rgStoreTagFilter);
-            switch (_.facetValue.type) {
-              case _._.k_ESaleTagFilter:
-              case void 0:
-                if (
-                  _?.type === _._.k_EStoreFilterClauseTypeStoreTag &&
-                  _.facetValue.nAtomicStoreTagID
-                )
-                  return this.m_mapMultiFacetCounts
-                    .get("tagidset")
-                    ?.get(_.facetValue.nAtomicStoreTagID.toString());
-                if (_?.type === _._.k_EStoreFilterClauseTypeFeatureTag)
-                  switch (_.value) {
-                    case "windows":
-                      return this.m_mapMultiFacetCounts
-                        .get("platform_win")
-                        ?.get("true");
-                    case "linux":
-                      return this.m_mapMultiFacetCounts
-                        .get("platform_linux")
-                        ?.get("true");
-                    case "mac":
-                      return this.m_mapMultiFacetCounts
-                        .get("platform_mac")
-                        ?.get("true");
-                    case "vr":
-                      return this.m_mapMultiFacetCounts
-                        .get("vrsupport")
-                        ?.get(_);
-                    case "vr only":
-                      return this.m_mapMultiFacetCounts
-                        .get("vrsupport")
-                        ?.get(_);
-                    case "full controller":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                    case "any controller":
-                      return (
-                        this.m_mapMultiFacetCounts.get("category")?.get(_) ||
-                        this.m_mapMultiFacetCounts.get("category")?.get(_)
-                      );
-                    case "remote play":
-                      return Math.max(
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                      );
-                    case "remote play together":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                    case "free":
-                      return this.m_mapMultiFacetCounts.get("genre")?.get(_);
-                    case "discounted":
-                      return this.m_mapMultiFacetCounts
-                        .get("discounted")
-                        ?.get("true");
-                    case "coop":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                    case "hdr":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                  }
-                break;
-              case _._.k_EAppType:
-                let _ = _.facetValue.appType;
-                return (
-                  !_ &&
-                    _.type == _._.k_EStoreFilterClauseTypeAppType &&
-                    "string" == typeof _.value &&
-                    _.value.length &&
-                    (_ = _.value),
-                  this.m_mapMultiFacetCounts.get("type")?.get(_)
-                );
-              case _._.k_ELanguage:
-                const _ = (0, _.LgB)(_.facetValue.language);
-                return this.m_mapMultiFacetCounts
-                  .get("supportedlang_" + _)
-                  ?.get("true");
-              case _._.k_EContentDescriptor:
-                return this.m_mapMultiFacetCounts
-                  .get("descids")
-                  ?.get(_.facetValue.contentDescriptor.toString());
-            }
-          } else if (this.m_facetCounts)
-            return this.m_facetCounts?.get(_.facetValue.nAtomicStoreTagID);
-          return null;
-        }
-        CollapseFilter(_) {
-          if (!_) return _;
-          let _ = _;
-          for (
-            ;
-            (_.type == _._.k_EStoreFilterClauseTypeOr ||
-              _.type == _._.k_EStoreFilterClauseTypeAnd) &&
-            1 == _.rgSubexpressions?.length;
-          )
-            _ = _.rgSubexpressions[0];
-          return _;
-        }
-        DeactivateFacetValues() {
-          this.m_prunedFacets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.bDeactivated = !1;
-            });
-          }),
-            this.m_prunedFacets.forEach((_) => {
-              const _ = _(_.facet.facet);
-              _.facetValues.forEach((_) => {
-                let _ = _.nMatchingFilteredCapsules;
-                _.bDeactivated = !(
-                  _.bEnabled ||
-                  _ ||
-                  0 !== _ ||
-                  _.facetValue.type === _._.k_EUserPreference
-                );
-              });
-            });
-        }
-        SortFacets() {
-          this.UpdateMatchingFilteredCapsuleCounts(),
-            this.DeactivateFacetValues(),
-            (this.m_sortedFacets = []),
-            this.m_prunedFacets.forEach((_) => {
-              const _ = _.facetValues.slice();
-              _.sort((_, _) => {
-                if (
-                  _.facetValue.type === _._.k_EPrice &&
-                  _.facetValue.type !== _._.k_EPrice
-                )
-                  return 1;
-                if (
-                  _.facetValue.type !== _._.k_EPrice &&
-                  _.facetValue.type == _._.k_EPrice
-                )
-                  return -1;
-                if (_.bEnabled !== _.bEnabled) return _.bEnabled ? 1 : -1;
-                if (_.bDeactivated !== _.bDeactivated)
-                  return _.bDeactivated ? 1 : -1;
-                if (!_.bEnabled && !_.bDeactivated) {
-                  if (
-                    _.facetValue.type === _._.k_ELanguage &&
-                    _.facetValue.type === _._.k_ELanguage
-                  )
-                    return _.facetValue.language ===
-                      _._.Get().GetPrimaryLanguage()
-                      ? 1
-                      : -1;
-                  const _ = _.nMatchingFilteredCapsules || 0,
-                    _ = _.nMatchingFilteredCapsules || 0;
-                  if (
-                    this.m_facetSortKey === _._.k_ESortFacetsByMatchCount &&
-                    _ !== _
-                  )
-                    return _ - _;
-                }
-                if (this.m_facetSortKey === _._.k_ESortFacetsByName) {
-                  const _ = _._.GetWithFallback(
-                      _.facetValue.name,
-                      this.m_language,
-                    ),
-                    _ = _._.GetWithFallback(_.facetValue.name, this.m_language);
-                  return __webpack_require__.localeCompare(_);
-                }
-                return 0;
-              }),
-                this.m_sortedFacets.push({
-                  ..._,
-                  facetValues: _,
-                });
-            });
-        }
-        async ApplyUserPreferenceFilters(_, _, _) {
-          const _ = this.BHasHideIgnoredItemsFacetValue(),
-            _ = this.BIsUserPreferenceEnabled(_._.k_EHideOwnedItems),
-            _ = this.BIsUserPreferenceEnabled(_._.k_EHideWishlistedItems),
-            _ = this.BIsUserPreferenceEnabled(_._.k_EHideIgnoredItems);
-          let _ = [];
-          const _ = await (async function (_, _, _, _, _, _, _) {
-            let _ = await _(
-              _,
-              _,
-              _,
-              _
-                ? (_) =>
-                    !_ ||
-                    _._.Get().BExcludesContentDescriptor(
-                      _.GetContentDescriptorIDs(),
-                    ) ||
-                    _._.Get().BExcludeTagIDs(_.GetTagIDs())
-                : _,
-            );
-            const _ = [];
-            for (const _ of _) {
-              const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
-              if (!_) continue;
-              const _ = _?.GetIncludedAppIDsOrSelf();
-              let _ = !1;
-              _ && (_ = _ || _.every((_) => _._.Get().BIsGameOwned(_))),
-                _ && (_ = _ || _.every((_) => _._.Get().BIsGameWishlisted(_))),
-                _ && (_ = _ || _.every((_) => _._.Get().BIsGameIgnored(_))),
-                _ ? _ && _.push(_) : _.push(_);
-            }
-            return _;
-          })(_, _, _, _, _, _, _);
-          if (
-            ((this.m_setCapsulesRemovedByUserPreferenceFilters = new Set(
-              _.map(_),
-            )),
-            _)
-          )
-            for (const _ of _) __webpack_require__.push(_);
-          return _;
-        }
-        UpdateMatchCount(_, _) {
-          _
-            ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
-              (this.m_nFilteredCapsuleCount -=
-                this.m_setCapsulesRemovedByUserPreferenceFilters?.size || 0))
-            : (this.m_nFilteredCapsuleCount = _),
-            this.SortFacets();
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_facets", void 0),
-        (0, _._)([_._], _.prototype, "m_sortedFacets", void 0),
-        (0, _._)([_._], _.prototype, "Reset", null),
-        (0, _._)([_._], _.prototype, "SetFromURLParam", null),
-        (0, _._)([_._], _.prototype, "SetFacetCounts", null),
-        (0, _._)([_._], _.prototype, "SetMultiFacetCounts", null),
-        (0, _._)([_._], _.prototype, "SetSolrMatchCount", null),
-        (0, _._)([_._], _.prototype, "SetFacetValueSearchString", null),
-        (0, _._)([_._], _.prototype, "UpdateMatchCount", null);
       const _ = (0, _._)(function (_) {
           const {
               language: _,
@@ -77666,7 +78338,7 @@
               });
           const _ = (0, _.useRef)(null),
             _ = () => {
-              _.UpdateFilter(), _();
+              _.UpdateFilter(), _?.();
             };
           return (
             _.useEffect(() => {
@@ -77677,8 +78349,11 @@
                 _.rgItems &&
                 (_.SetFacetCounts(_.faceting),
                 _.SetMultiFacetCounts(_.multifaceting),
-                _.SetSolrMatchCount(_.nMatchCount),
-                _.UpdateMatchCount(_.bMoreAvailable, _.rgItems?.length));
+                _.SetSolrMatchCount(_.nMatchCount ?? 0),
+                _.UpdateMatchCount(
+                  Boolean(_.bMoreAvailable),
+                  _.rgItems?.length ?? 0,
+                ));
             }, [
               _,
               _.bMoreAvailable,
@@ -77746,9 +78421,12 @@
                             fnOnUpdateFilter: _,
                             styleOverrides: _,
                             bSearching: _?.length > 0,
-                            bInitiallyExpanded:
+                            bInitiallyExpanded: Boolean(
                               _.facet.facet.bInitiallyExpanded,
-                            bSingleSelection: _.facet.facet.single_selection,
+                            ),
+                            bSingleSelection: Boolean(
+                              _.facet.facet.single_selection,
+                            ),
                           },
                           "facet_" +
                             _._.GetWithFallback(_.facet.facet.name, _) +
@@ -77762,9 +78440,10 @@
                       children: (0, _.jsx)("a", {
                         onClick: (_) => {
                           _.preventDefault();
+                          const _ = _.current;
+                          if (!_) return;
                           const _ =
-                            _.current.getBoundingClientRect().top +
-                            window.scrollY;
+                            _.getBoundingClientRect().top + window.scrollY;
                           window.scrollTo(0, _);
                         },
                         children: (0, _._)("#FacetedBrowse_ReturnToTop"),
@@ -77846,7 +78525,9 @@
               borderBottom: "0px solid " + (_ || "white"),
               color: _ || "white",
             });
-          const _ = (0, _._)(_._.GetWithFallback(_.facet.facet.name, _).trim());
+          const _ = (0, _._)(
+            (_._.GetWithFallback(_.facet.facet.name, _) || "").trim(),
+          );
           let _ = _.nMaxFacetValues;
           const _ = _.facetValues.reduce(
             (_, _) => _ + (_.bDeactivated ? 1 : 0),
@@ -77866,7 +78547,7 @@
           const _ = _.every(
             (_) =>
               !Boolean(_.facetValue.subtitle) ||
-              _._.GetWithFallback(_.facetValue.subtitle, _)?.length <= 0,
+              (_._.GetWithFallback(_.facetValue.subtitle, _)?.length ?? 0) <= 0,
           );
           return (0, _.jsxs)("div", {
             className: _.Facet,
@@ -77897,7 +78578,7 @@
                       ((_) => {
                         if (_ && _.bEnabled)
                           for (const _ of _) _ != _ && (_.bEnabled = !1);
-                        _?.fnOnUpdateFilter();
+                        _?.fnOnUpdateFilter?.();
                       })(_),
                   },
                   "facet_" + _ + "_value_" + _,
@@ -77916,22 +78597,14 @@
             ],
           });
         });
-      function _(_, _, _) {
-        const _ = _.name;
-        if (_?.length > 0 && _[0]?.startsWith("#tagid_")) {
-          const _ = parseInt(_[0].substring(7));
-          if (_ > 0) return _ && _[_];
-        }
-        return (0, _._)(_._.GetWithFallback(_, _).trim());
-      }
       function _(_, _) {
         const _ = _.name;
         let _;
         _?.length > 0 &&
           _[0]?.startsWith("#tagid_") &&
           (_ = parseInt(_[0].substring(7)));
-        const _ = (0, _._)(_, (0, _.LgB)(_));
-        return _ ? _ : (0, _._)(_._.GetWithFallback(_, _).trim());
+        const _ = (0, _._)(_ ?? 0, (0, _.LgB)(_));
+        return _ ? _ : (0, _._)((_._.GetWithFallback(_, _) || "").trim());
       }
       const _ = (0, _._)(function (_) {
           const {
@@ -77943,9 +78616,9 @@
               fnOnUpdateFilter: _,
               showMatchCounts: _,
             } = _,
-            _ = _(_.facetValue, _);
-          if (_.facetValue.type === _._.k_EPrice && 0 == _().length)
-            return null;
+            _ = _(_.facetValue, _),
+            _ = _();
+          if (_.facetValue.type === _._.k_EPrice && 0 == _.length) return null;
           if (_.bHiddenBySearch) return null;
           const _ = _.bEnabled,
             _ = _.bDeactivated,
@@ -77962,7 +78635,7 @@
           const _ = (_) => {
               _.preventDefault(),
                 (0, _._)(() => {
-                  _ || ((_.bEnabled = !_.bEnabled), _());
+                  _ || ((_.bEnabled = !_.bEnabled), _?.());
                 });
             },
             _ = (_) => {
@@ -77972,8 +78645,8 @@
             },
             _ = () => {
               (0, _._)(() => {
-                (_.bEnabled = Boolean(_.nPriceStopIndex !== _().length - 1)),
-                  _();
+                (_.bEnabled = Boolean(_.nPriceStopIndex !== _.length - 1)),
+                  _?.();
               });
             },
             _ = _,
@@ -77984,13 +78657,13 @@
             const _ =
               null != _.nPriceStopIndex && -1 != _.nPriceStopIndex
                 ? _.nPriceStopIndex
-                : _().length - 1;
+                : _.length - 1;
             return (0, _.jsx)(_._, {
               className: _.FacetValuePriceSlider,
               min: 0,
-              max: _().length - 1,
+              max: _.length - 1,
               value: _,
-              label: _()[_].label,
+              label: _[_].label,
               onChange: _,
               onChangeComplete: _,
             });
@@ -78157,22 +78830,6 @@
           background: _,
           ..._,
         });
-      }
-      function _(_) {
-        return _.type + _._;
-      }
-      function _(_, _) {
-        return (
-          null != _.jsondata.item_source_type &&
-          _.jsondata.item_source_type !== _._.k_ETaggedItems
-        );
-      }
-      function _(_) {
-        for (const _ of _.facetValues)
-          if (null != _.filter)
-            for (const _ of _.filter.clauses)
-              for (const _ of _.or_tags) if (_.startsWith("[Opt]")) return !0;
-        return !1;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -79167,7 +79824,6 @@
           (_.k_eOriginal = "original"),
           (_.k_eReservation = "reservation");
       })(_ || (_ = {}));
-      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
@@ -80505,7 +81161,6 @@
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       const _ = new (class {
         m_rgCategoriesForTagID = null;
         m_rgTagNameForTagID = null;
@@ -81676,7 +82331,7 @@
                       "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
                     )),
                   this.setState({
-                    facetFilterState: new _(
+                    facetFilterState: _(
                       _ ?? [],
                       this.props.section.facet_sort_order ||
                         _._.k_ESortFacetsByMatchCount,

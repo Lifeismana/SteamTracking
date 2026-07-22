@@ -11684,11 +11684,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+2000000
 200M
 2019
 2048
 20000
-2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -53475,14 +53475,14 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:471
 low-pri yield - /data/src/clientdll/clientjob.cpp:780
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6938
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2054
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2310
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2577
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3248
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3305
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3318
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3370
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3971
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2051
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2307
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2574
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3245
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3302
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3315
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3367
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3968
 low-pri yield - /data/src/clientdll/csinterface.cpp:223
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3066
@@ -61381,7 +61381,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 12 2026 12:15:14
+steam Jul 21 2026 23:37:02
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -61439,6 +61439,7 @@ steam_deck_startup_movies
 steam_dev.cfg
 steam_display
 steam_frame_compat_category
+steam_frame_compatibility
 steam_id
 steam_id_added
 steam_id_candidate

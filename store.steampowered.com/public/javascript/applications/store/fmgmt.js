@@ -102,6 +102,7 @@
         AdditionalHoverCtn: "_3-q8xJGfslyHFJUlzGes_H",
         Loading: "_15y-D2NYrFwOAZ-AfJKy6Q",
         Error: "_3fKMV_g7GIfskW_oGQqbaD",
+        ExcludedCode: "_3vYQgrrL-TpIRWQXAb6Ip3",
       };
     },
     70322: (e) => {
@@ -411,7 +412,7 @@
         d = a(1035),
         u = a(17720),
         p = a(30925),
-        _ = a(14336),
+        _ = a(41471),
         h = a(68950),
         g = a(49451),
         y = a(34181),
@@ -735,7 +736,7 @@
         h = a(30925),
         g = a(75048),
         y = a(1035),
-        x = a(14336),
+        x = a(41471),
         f = a(92757),
         j = a(74568),
         w = a(78327),
@@ -1162,87 +1163,110 @@
         L = a(94104),
         q = a(9646);
       const H = i.memo(function (e) {
-          const {
-              virtualizer: t,
-              bDynamic: a,
-              idx: s,
-              rowGap: r,
-              renderItem: l,
-            } = e,
-            o = i.useCallback(
-              (e, a, n) => (t.scrollToIndex(s, { align: "center" }), !0),
-              [t, s],
-            );
-          return (0, n.jsx)(F.Z, {
-            ref: a ? t.measureElement : void 0,
-            navKey: `VirtualizedListIndex-${s}`,
-            "data-index": s,
-            fnScrollIntoViewHandler: o,
-            scrollIntoViewWhenChildFocused: "force",
-            style: { width: "100%", paddingBottom: r },
-            children: l(s),
-          });
-        }),
-        O = i.forwardRef(function (e, t) {
-          const {
-              nRows: a,
-              nItemHeight: s,
-              nRowGap: r,
-              overscan: l,
-              renderItem: o,
-              bDynamic: c,
-              measureElement: m,
-              className: d,
-              forceVirtualizeType: u,
-              initialOffset: p,
-              onOffsetChange: _,
-              ...h
-            } = e,
-            [g, y] = (0, i.useState)(u),
-            [x, f] = i.useState(),
-            [j, w] = i.useState(),
-            C = i.useCallback(
-              (e) => {
-                if (!e || "window" == u) return;
-                const t = (0, L._f)(e, "y");
-                (0, i.startTransition)(() => {
-                  f(t || void 0),
-                    w(e.offsetTop),
-                    u || y(t ? "element" : "window");
-                });
-              },
-              [u],
-            ),
-            v = (0, B.Ue)(C, t),
-            S = {
-              nRows: a,
-              nItemHeight: s,
-              nRowGap: r,
-              overscan: l,
-              renderItem: o,
-              bDynamic: c,
-              measureElement: m,
-              forceVirtualizeType: u,
-              initialOffset: p,
-              onOffsetChange: _,
-            };
-          return (0, n.jsx)(F.Z, {
-            className: d,
-            ref: v,
-            ...h,
-            children: (0, n.jsxs)(i.Suspense, {
-              children: [
-                "element" === g &&
-                  (0, n.jsx)(U, {
-                    ...S,
-                    nScrollMargin: j || 0,
-                    elScrollable: x,
-                  }),
-                "window" === g && (0, n.jsx)(W, { ...S, nScrollMargin: j }),
-              ],
-            }),
-          });
+        const {
+            virtualizer: t,
+            bDynamic: a,
+            idx: s,
+            rowGap: r,
+            renderItem: l,
+          } = e,
+          o = i.useCallback(
+            (e, a, n) => (t.scrollToIndex(s, { align: "center" }), !0),
+            [t, s],
+          );
+        return (0, n.jsx)(F.Z, {
+          ref: a ? t.measureElement : void 0,
+          navKey: `VirtualizedListIndex-${s}`,
+          "data-index": s,
+          fnScrollIntoViewHandler: o,
+          scrollIntoViewWhenChildFocused: "force",
+          style: { width: "100%", paddingBottom: r },
+          children: l(s),
         });
+      });
+      const O = i.forwardRef(function (e, t) {
+        const {
+            nRows: a,
+            nItemHeight: s,
+            nRowGap: r,
+            overscan: l,
+            renderItem: o,
+            bDynamic: c,
+            measureElement: m,
+            className: d,
+            forceVirtualizeType: u,
+            initialOffset: p,
+            onOffsetChange: _,
+            ...h
+          } = e,
+          [g, y] = (0, i.useState)(u),
+          [x, f] = i.useState(),
+          [j, w] = i.useState(),
+          C = i.useRef(null),
+          v = i.useCallback(
+            (e) => {
+              if (!e) return;
+              const t = (0, L._f)(e, "y");
+              (0, i.startTransition)(() => {
+                "window" != u && f(t || void 0),
+                  w(e.offsetTop),
+                  u || y(t ? "element" : "window");
+              });
+            },
+            [u],
+          ),
+          S =
+            ((b = (e) => {
+              C.current &&
+                (0, i.startTransition)(() => {
+                  C.current && w(C.current?.offsetTop);
+                });
+            }),
+            (0, B.QS)(
+              (e) => {
+                if (!e) return;
+                const t = new e.ownerDocument.defaultView.ResizeObserver(
+                  (e) => {
+                    b(e[0]);
+                  },
+                );
+                let a = [],
+                  n = e;
+                for (; n && null != n; )
+                  t.observe(n), a.push(n), (n = n.parentElement);
+                return () => {
+                  a.forEach((e) => t.unobserve(e));
+                };
+              },
+              [b],
+            ));
+        var b;
+        const N = (0, B.Ue)(v, C, S, t),
+          I = {
+            nRows: a,
+            nItemHeight: s,
+            nRowGap: r,
+            overscan: l,
+            renderItem: o,
+            bDynamic: c,
+            measureElement: m,
+            forceVirtualizeType: u,
+            initialOffset: p,
+            onOffsetChange: _,
+          };
+        return (0, n.jsx)(F.Z, {
+          className: d,
+          ref: N,
+          ...h,
+          children: (0, n.jsxs)(i.Suspense, {
+            children: [
+              "element" === g &&
+                (0, n.jsx)(U, { ...I, nScrollMargin: j || 0, elScrollable: x }),
+              "window" === g && (0, n.jsx)(W, { ...I, nScrollMargin: j }),
+            ],
+          }),
+        });
+      });
       function W(e) {
         const {
             nScrollMargin: t,
@@ -2817,9 +2841,20 @@
         let y, f;
         if (
           (h &&
-            (y = (0, n.jsx)("div", {
-              className: lt.Excluded,
-              children: (0, p.we)(h) + " (" + String(t.exclude_reason) + ")",
+            (y = (0, n.jsxs)(n.Fragment, {
+              children: [
+                (0, n.jsx)("div", {
+                  className: lt.Excluded,
+                  children: (0, p.we)(h),
+                }),
+                (0, n.jsx)("div", {
+                  className: lt.ExcludedCode,
+                  children: (0, p.we)(
+                    "#FamilyGame_ExcludedCode",
+                    t.exclude_reason,
+                  ),
+                }),
+              ],
             })),
           t.exclude_reason != s.fO.zC)
         )
@@ -3381,7 +3416,7 @@
       var Ht = a(71150),
         Ot = a(41735),
         Wt = a.n(Ot);
-      a(8527);
+      a(66418);
       const Ut = [Ht.ED, Ht.M, Ht.mx, Ht.T4, Ht.u7];
       function Zt(e) {
         let t = [];

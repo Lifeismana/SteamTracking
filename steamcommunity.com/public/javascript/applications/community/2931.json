@@ -1,5 +1,8 @@
 {
     "language": "finnish",
+    "EventEditor_Loc_Title": "Hallinnoi lokalisointia",
+    "EventEditor_Loc_Overview": "Vie ja tuo lokalisointitiedostoja hallinnoidaksesi koko tapahtuman tekstien käännöksiä.",
+    "EventEditor_Loc_Overview_Page": "Vie ja tuo lokalisointitiedostoja hallinnoidaksesi koko sivun tekstien käännöksiä.",
     "LoginRedirect_Dialog_Title": "Kirjaudu",
     "LoginRedirect_Dialog_Description": "Kirjaudu sisään lisätäksesi tämän tuotteen toivelistalle, seurataksesi sitä tai merkitäksesi sen ohitettavaksi. OK-painikkeen klikkaaminen siirtää sinut kirjautumissivulle.",
     "Wishlist_NotSignedIn": "Kirjaudu sisään tai avaa tämä sivu Steam-sovelluksessa, jotta voi lisätä pelin toivelistalle, seurata sitä tai ostaa sen.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s – URL-osoite hyväksytään",
     "SteamURLInvalid": "Virhe! URL ei osoita Steam-kohteeseen (kauppaan tai yhteisöön)",
     "AnchorHashInputInvalid": "Virheellinen syöte",
+    "Sale_Section_Label_Color": "Otsikon väri",
+    "Sale_Section_Background_Top": "Taustan liukuväri (yläosa)",
+    "Sale_Section_Background_Bottom": "Taustan liukuväri (alaosa)",
     "Reservation_JoinPool": "Liity listalle",
     "Reserationn_NoListJoined": "Liity listalle valitsemalla malli tai paketti. Vaatimukset täyttävät asiakkaat voivat ilmoittautua %1$s eri listalle.",
     "Reservation_InPool": "Nimesi on lisätty seuraavien valitsemiesi mallien ja pakettien listalle",

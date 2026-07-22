@@ -229,52 +229,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef((_, _) => {
-        const {
-          title: _,
-          count: _,
-          description: _,
-          children: _,
-          beta: _,
-          headerElement: _,
-        } = _;
-        return (0, _.jsxs)("div", {
-          className: _.Section,
-          ref: _,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _.Header,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _.Title,
-                  children: [
-                    _,
-                    null != _ &&
-                      (0, _.jsx)("span", {
-                        className: _.Count,
-                        children: _,
-                      }),
-                    _ &&
-                      (0, _.jsx)("span", {
-                        className: _.BetaCallout,
-                        children: (0, _._)("#NewToolTitleSuffix_Beta"),
-                      }),
-                  ],
-                }),
-                _,
-              ],
-            }),
-            _ &&
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: _,
-              }),
-            _,
-          ],
-        });
-      });
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4389,7 +4345,7 @@
         return (0, _.jsx)(_.Fragment, {
           children:
             _ &&
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
               title: (0, _._)("#Dashboard_UpcomingEvents_Title"),
               ref: _,
               beta: !0,
@@ -5222,171 +5178,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.useMemo(
-          () =>
-            (function () {
-              const _ = (0, _._)("rgRecentApps", "application_config"),
-                _ = _ ? Object.keys(_).map((_) => _[_]) : [],
-                _ = (0, _._)("rgRecentUnreleasedApps", "application_config"),
-                _ = _ ? Object.keys(_).map((_) => _[_]) : [],
-                _ = (0, _._)(_, _);
-              return _.sort((_, _) => _.nOrder - _.nOrder), _;
-            })(),
-          [],
-        );
-        return (0, _.jsx)(_, {
-          title: (0, _._)("#Dashboard_RecentApps_Title"),
-          headerElement: (0, _.jsx)(_, {}),
-          children: (0, _.jsxs)("div", {
-            className: _.AppTileContainer,
-            children: [
-              !_.length && (0, _.jsx)(_, {}),
-              _.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    app: _,
-                  },
-                  _.appid,
-                ),
-              ),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const _ = _._.PARTNER_BASE_URL + "apps/";
-        return (0, _.jsxs)("div", {
-          className: _.NoRecentApps,
-          children: [
-            (0, _._)("#Dashboard_RecentApps_NoRecent"),
-            " ",
-            (0, _.jsxs)("a", {
-              href: _,
-              target: "_blank",
-              children: [" ", (0, _._)("#Dashboard_RecentApps_ViewAll")],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const _ = _._.PARTNER_BASE_URL + "apps/";
-        return (0, _.jsx)("div", {
-          className: _.ViewAppsContainer,
-          children: (0, _.jsx)("div", {
-            className: _.ViewAppsLink,
-            children: (0, _.jsx)("a", {
-              href: _,
-              children: (0, _._)("#Dashboard_RecentApps_ViewAllShort"),
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        const { app: _ } = _,
-          _ = _.appid,
-          { data: _ } = (0, _._)({
-            appid: _,
-          }),
-          _ = _._.PARTNER_BASE_URL + "apps/landing/" + _,
-          _ = (function (_, _) {
-            if (_?.asset_url_format && _[_])
-              return (
-                _._.BASE_URL_SHARED_CDN +
-                "/store_item_assets/" +
-                _.asset_url_format.replace("${FILENAME}", _[_])
-              );
-          })(_, "header");
-        return (0, _.jsxs)("div", {
-          className: _.AppTile,
-          children: [
-            _ &&
-              (0, _.jsx)(_._, {
-                toolTipContent: _.name,
-                children: (0, _.jsx)("div", {
-                  className: _.AppTileImage,
-                  children: (0, _.jsx)("a", {
-                    href: _,
-                    target: "_blank",
-                    children: (0, _.jsx)("img", {
-                      src: _,
-                    }),
-                  }),
-                }),
-              }),
-            !_ &&
-              (0, _.jsx)("div", {
-                className: _.AppTileImagePlaceholder,
-                children: (0, _.jsx)("a", {
-                  href: _,
-                  target: "_blank",
-                  children: _.name,
-                }),
-              }),
-            (0, _.jsx)(_, {
-              app: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { app: _ } = _,
-          _ = _.appid,
-          { data: _ } = (0, _._)({
-            appid: _,
-          });
-        return (0, _.jsxs)("div", {
-          className: _.AppLabels,
-          children: [
-            (0, _.jsx)(_, {
-              appType: _.type,
-            }),
-            (0, _.jsx)(_, {
-              releaseState: _.releasestate,
-              hasStoreItem: _?.visible,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { appType: _ } = _;
-        let _ = null,
-          _ = null;
-        return (
-          "Game" == _
-            ? (_ = (0, _._)("#Dashboard_RecentApps_Game"))
-            : "DLC" == _
-              ? ((_ = (0, _._)("#Dashboard_RecentApps_DLC")), (_ = _.DLC))
-              : "Beta" == _
-                ? ((_ = (0, _._)("#Dashboard_RecentApps_Playtest")),
-                  (_ = _.Playtest))
-                : "Demo" == _
-                  ? ((_ = (0, _._)("#Dashboard_RecentApps_Demo")), (_ = _.Demo))
-                  : "Music" == _ &&
-                    ((_ = (0, _._)("#Dashboard_RecentApps_Music")),
-                    (_ = _.Music)),
-          !!_ &&
-            (0, _.jsx)("div", {
-              className: (0, _._)(_.AppType, _),
-              children: _,
-            })
-        );
-      }
-      function _(_) {
-        const { releaseState: _, hasStoreItem: _ } = _,
-          _ = (0, _._)(_, _);
-        return (
-          "released" != _ &&
-          (0, _.jsx)("div", {
-            className: (0, _._)(_.AppRelease),
-            children: _.sText,
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -5592,7 +5384,7 @@
           _ = _(_);
         return 0 == _.length
           ? null
-          : (0, _.jsx)(_, {
+          : (0, _.jsx)(_._, {
               title: (0, _._)("#Dashboard_ImportantActions_Title"),
               count: _.length,
               children: (0, _.jsx)("div", {
@@ -5695,7 +5487,7 @@
             : (0, _.jsxs)(_._, {
                 children: [
                   (0, _.jsx)(_, {}),
-                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_._, {}),
                   (0, _.jsx)(_, {
                     partnerId: _,
                     showWarnings: _,
@@ -5704,6 +5496,240 @@
                 ],
               });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useMemo(
+          () =>
+            (function () {
+              const _ = (0, _._)("rgRecentApps", "application_config"),
+                _ = _ ? Object.keys(_).map((_) => _[_]) : [],
+                _ = (0, _._)("rgRecentUnreleasedApps", "application_config"),
+                _ = _ ? Object.keys(_).map((_) => _[_]) : [],
+                _ = (0, _._)(_, _);
+              return _.sort((_, _) => _.nOrder - _.nOrder), _;
+            })(),
+          [],
+        );
+        return (0, _.jsx)(_._, {
+          title: (0, _._)("#Dashboard_RecentApps_Title"),
+          headerElement: (0, _.jsx)(_, {}),
+          children: (0, _.jsxs)("div", {
+            className: _.AppTileContainer,
+            children: [
+              !_.length && (0, _.jsx)(_, {}),
+              _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    app: _,
+                  },
+                  _.appid,
+                ),
+              ),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const _ = _._.PARTNER_BASE_URL + "apps/";
+        return (0, _.jsxs)("div", {
+          className: _.NoRecentApps,
+          children: [
+            (0, _._)("#Dashboard_RecentApps_NoRecent"),
+            " ",
+            (0, _.jsxs)("a", {
+              href: _,
+              target: "_blank",
+              children: [" ", (0, _._)("#Dashboard_RecentApps_ViewAll")],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const _ = _._.PARTNER_BASE_URL + "apps/";
+        return (0, _.jsx)("div", {
+          className: _.ViewAppsContainer,
+          children: (0, _.jsx)("div", {
+            className: _.ViewAppsLink,
+            children: (0, _.jsx)("a", {
+              href: _,
+              children: (0, _._)("#Dashboard_RecentApps_ViewAllShort"),
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const { app: _ } = _,
+          _ = _.appid,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = _._.PARTNER_BASE_URL + "apps/landing/" + _,
+          _ = (function (_, _) {
+            if (_?.asset_url_format && _[_])
+              return (
+                _._.BASE_URL_SHARED_CDN +
+                "/store_item_assets/" +
+                _.asset_url_format.replace("${FILENAME}", _[_])
+              );
+          })(_, "header");
+        return (0, _.jsxs)("div", {
+          className: _.AppTile,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                toolTipContent: _.name,
+                children: (0, _.jsx)("div", {
+                  className: _.AppTileImage,
+                  children: (0, _.jsx)("a", {
+                    href: _,
+                    target: "_blank",
+                    children: (0, _.jsx)("img", {
+                      src: _,
+                    }),
+                  }),
+                }),
+              }),
+            !_ &&
+              (0, _.jsx)("div", {
+                className: _.AppTileImagePlaceholder,
+                children: (0, _.jsx)("a", {
+                  href: _,
+                  target: "_blank",
+                  children: _.name,
+                }),
+              }),
+            (0, _.jsx)(_, {
+              app: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { app: _ } = _,
+          _ = _.appid,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        return (0, _.jsxs)("div", {
+          className: _.AppLabels,
+          children: [
+            (0, _.jsx)(_, {
+              appType: _.type,
+            }),
+            (0, _.jsx)(_, {
+              releaseState: _.releasestate,
+              hasStoreItem: _?.visible,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { appType: _ } = _;
+        let _ = null,
+          _ = null;
+        return (
+          "Game" == _
+            ? (_ = (0, _._)("#Dashboard_RecentApps_Game"))
+            : "DLC" == _
+              ? ((_ = (0, _._)("#Dashboard_RecentApps_DLC")), (_ = _.DLC))
+              : "Beta" == _
+                ? ((_ = (0, _._)("#Dashboard_RecentApps_Playtest")),
+                  (_ = _.Playtest))
+                : "Demo" == _
+                  ? ((_ = (0, _._)("#Dashboard_RecentApps_Demo")), (_ = _.Demo))
+                  : "Music" == _ &&
+                    ((_ = (0, _._)("#Dashboard_RecentApps_Music")),
+                    (_ = _.Music)),
+          !!_ &&
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.AppType, _),
+              children: _,
+            })
+        );
+      }
+      function _(_) {
+        const { releaseState: _, hasStoreItem: _ } = _,
+          _ = (0, _._)(_, _);
+        return (
+          "released" != _ &&
+          (0, _.jsx)("div", {
+            className: (0, _._)(_.AppRelease),
+            children: _.sText,
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.forwardRef((_, _) => {
+        const {
+          title: _,
+          count: _,
+          description: _,
+          children: _,
+          beta: _,
+          headerElement: _,
+        } = _;
+        return (0, _.jsxs)("div", {
+          className: _.Section,
+          ref: _,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.Header,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.Title,
+                  children: [
+                    _,
+                    null != _ &&
+                      (0, _.jsx)("span", {
+                        className: _.Count,
+                        children: _,
+                      }),
+                    _ &&
+                      (0, _.jsx)("span", {
+                        className: _.BetaCallout,
+                        children: (0, _._)("#NewToolTitleSuffix_Beta"),
+                      }),
+                  ],
+                }),
+                _,
+              ],
+            }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: _.Body,
+                children: _,
+              }),
+            _,
+          ],
+        });
+      });
     },
   },
 ]);

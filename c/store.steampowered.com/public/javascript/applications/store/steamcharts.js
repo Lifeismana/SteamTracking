@@ -64,6 +64,7 @@
         EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
         EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
         ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
+        ColorPickerDialog: "_32PwNSgquR6tGAPIBcWgVq",
       };
     },
     chunkid: (module) => {
@@ -2066,6 +2067,7 @@
             else alert(_._.Localize("#Sale_EyeDropperError"));
           }, [_]);
         return (0, _.jsxs)("div", {
+          className: _().ColorPickerDialog,
           children: [
             Boolean(_) &&
               (0, _.jsx)(_._, {

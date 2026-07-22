@@ -123,7 +123,7 @@
         n = s(37788),
         c = s(84143),
         a = s(37621),
-        l = s(8527),
+        l = s(66418),
         m = s(84518),
         d = s(60014),
         _ = s(90626),
@@ -966,7 +966,7 @@
         s.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var l = s(42248),
-        m = s(8527);
+        m = s(66418);
       const d = i.memo(function (e) {
         const {
           className: t,

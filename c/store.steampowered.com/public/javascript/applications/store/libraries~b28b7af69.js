@@ -15746,6 +15746,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       function _(_) {
         for (
@@ -18031,6 +18032,23 @@
           }),
           _
         );
+      }
+      var _ = Symbol("mobx-keys");
+      function _(_, _, _) {
+        return _(_)
+          ? _(_, _, _, _)
+          : (_(function () {
+              var _ = _(_, _)[_];
+              if (!_[_]) {
+                var _ = Object.getPrototypeOf(_),
+                  _ = new Set([].concat(_(_), _(_)));
+                _.delete("constructor"), _.delete(_), _(_, _, _);
+              }
+              _[_].forEach(function (_) {
+                return _.make_(_, !_ || !(_ in _) || _[_]);
+              });
+            }),
+            _);
       }
       var _ = "splice",
         _ = "update",

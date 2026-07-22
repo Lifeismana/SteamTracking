@@ -603,7 +603,7 @@
           children: (0, s.jsx)("div", { className: r, children: t }),
         });
       }
-      t(81194);
+      t(6230);
       var d = t(78395),
         p = t(10411);
       t(76222);
@@ -799,7 +799,7 @@
         t.p +
         "images/applications/store/steam_spinner.png?v=valveisgoodatcaching";
       var l = t(42248),
-        u = t(8527);
+        u = t(66418);
       const d = n.memo(function (e) {
         const {
           className: r,

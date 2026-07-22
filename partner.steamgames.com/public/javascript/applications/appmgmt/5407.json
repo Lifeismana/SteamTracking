@@ -1,5 +1,8 @@
 {
     "language": "japanese",
+    "EventEditor_Loc_Title": "ローカリゼーションを管理",
+    "EventEditor_Loc_Overview": "イベント全体の文字列の翻訳の管理用にローカリゼーションファイルをエクスポートおよびインポート",
+    "EventEditor_Loc_Overview_Page": "ページ全体の文字列の翻訳管理用にローカリゼーションファイルをエクスポートおよびインポートします。",
     "LoginRedirect_Dialog_Title": "サインイン",
     "LoginRedirect_Dialog_Description": "このアイテムをウィッシュリストに追加したり、フォローしたり、スルーしたりするには、サインインしてください。「OK」をクリックすると、サインインページにリダイレクトされます。",
     "Wishlist_NotSignedIn": "サインインするか、Steamアプリでこのページを開くと、ウィッシュリストへの追加、フォロー、購入ができます。",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URLが承認されました",
     "SteamURLInvalid": "エラー：Steamプロパティ（ストア／コミュニティ）へのURLではありません",
     "AnchorHashInputInvalid": "無効な入力",
+    "Sale_Section_Label_Color": "ラベルの色",
+    "Sale_Section_Background_Top": "背景グラデーション（上）",
+    "Sale_Section_Background_Bottom": "背景グラデーション（下）",
     "Reservation_JoinPool": "リストに参加",
     "Reserationn_NoListJoined": "以下でサインアップするモデルを選択してください。対象のユーザーは最大%1$s種類のモデルにサインアップできます。",
     "Reservation_InPool": "あなたは以下の選択されたモデルのリストに含まれています",

@@ -100,6 +100,7 @@
         AdditionalHoverCtn: "_3-q8xJGfslyHFJUlzGes_H",
         Loading: "_15y-D2NYrFwOAZ-AfJKy6Q",
         Error: "_3fKMV_g7GIfskW_oGQqbaD",
+        ExcludedCode: "_3vYQgrrL-TpIRWQXAb6Ip3",
       };
     },
     chunkid: (module) => {
@@ -1192,99 +1193,128 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
-          const {
-              virtualizer: _,
-              bDynamic: _,
-              idx: _,
-              rowGap: _,
-              renderItem: _,
-            } = _,
-            _ = _.useCallback(
-              (_, _, _) => (
-                _.scrollToIndex(_, {
-                  align: "center",
-                }),
-                !0
-              ),
-              [_, _],
-            );
-          return (0, _.jsx)(_._, {
-            ref: _ ? _.measureElement : void 0,
-            navKey: `VirtualizedListIndex-${_}`,
-            "data-index": _,
-            fnScrollIntoViewHandler: _,
-            scrollIntoViewWhenChildFocused: "force",
-            style: {
-              width: "100%",
-              paddingBottom: _,
+        const {
+            virtualizer: _,
+            bDynamic: _,
+            idx: _,
+            rowGap: _,
+            renderItem: _,
+          } = _,
+          _ = _.useCallback(
+            (_, _, _) => (
+              _.scrollToIndex(_, {
+                align: "center",
+              }),
+              !0
+            ),
+            [_, _],
+          );
+        return (0, _.jsx)(_._, {
+          ref: _ ? _.measureElement : void 0,
+          navKey: `VirtualizedListIndex-${_}`,
+          "data-index": _,
+          fnScrollIntoViewHandler: _,
+          scrollIntoViewWhenChildFocused: "force",
+          style: {
+            width: "100%",
+            paddingBottom: _,
+          },
+          children: _(_),
+        });
+      });
+      const _ = _.forwardRef(function (_, _) {
+        const {
+            nRows: _,
+            nItemHeight: _,
+            nRowGap: _,
+            overscan: _,
+            renderItem: _,
+            bDynamic: _,
+            measureElement: _,
+            className: _,
+            forceVirtualizeType: _,
+            initialOffset: _,
+            onOffsetChange: _,
+            ..._
+          } = _,
+          [_, _] = (0, _.useState)(_),
+          [_, _] = _.useState(),
+          [_, _] = _.useState(),
+          _ = _.useRef(null),
+          _ = _.useCallback(
+            (_) => {
+              if (!_) return;
+              const _ = (0, _._)(_, "y");
+              (0, _.startTransition)(() => {
+                "window" != _ && _(_ || void 0),
+                  _(_.offsetTop),
+                  _ || _(_ ? "element" : "window");
+              });
             },
-            children: _(_),
-          });
-        }),
-        _ = _.forwardRef(function (_, _) {
-          const {
-              nRows: _,
-              nItemHeight: _,
-              nRowGap: _,
-              overscan: _,
-              renderItem: _,
-              bDynamic: _,
-              measureElement: _,
-              className: _,
-              forceVirtualizeType: _,
-              initialOffset: _,
-              onOffsetChange: _,
-              ..._
-            } = _,
-            [_, _] = (0, _.useState)(_),
-            [_, _] = _.useState(),
-            [_, _] = _.useState(),
-            _ = _.useCallback(
-              (_) => {
-                if (!_ || "window" == _) return;
-                const _ = (0, _._)(_, "y");
+            [_],
+          ),
+          _ =
+            ((_ = (_) => {
+              _.current &&
                 (0, _.startTransition)(() => {
-                  _(_ || void 0),
-                    _(_.offsetTop),
-                    _ || _(_ ? "element" : "window");
+                  _.current && _(_.current?.offsetTop);
                 });
+            }),
+            (0, _._)(
+              (_) => {
+                if (!_) return;
+                const _ = new _.ownerDocument.defaultView.ResizeObserver(
+                  (_) => {
+                    _(_[0]);
+                  },
+                );
+                let _ = [],
+                  _ = _;
+                for (; _ && null != _; )
+                  _.observe(_),
+                    __webpack_require__.push(_),
+                    (_ = _.parentElement);
+                return () => {
+                  __webpack_require__.forEach((_) => _.unobserve(_));
+                };
               },
               [_],
-            ),
-            _ = (0, _._)(_, _),
-            _ = {
-              nRows: _,
-              nItemHeight: _,
-              nRowGap: _,
-              overscan: _,
-              renderItem: _,
-              bDynamic: _,
-              measureElement: _,
-              forceVirtualizeType: _,
-              initialOffset: _,
-              onOffsetChange: _,
-            };
-          return (0, _.jsx)(_._, {
-            className: _,
-            ref: _,
-            ..._,
-            children: (0, _.jsxs)(_.Suspense, {
-              children: [
-                "element" === _ &&
-                  (0, _.jsx)(_, {
-                    ..._,
-                    nScrollMargin: _ || 0,
-                    elScrollable: _,
-                  }),
-                "window" === _ &&
-                  (0, _.jsx)(_, {
-                    ..._,
-                    nScrollMargin: _,
-                  }),
-              ],
-            }),
-          });
+            ));
+        var _;
+        const _ = (0, _._)(_, _, _, _),
+          _ = {
+            nRows: _,
+            nItemHeight: _,
+            nRowGap: _,
+            overscan: _,
+            renderItem: _,
+            bDynamic: _,
+            measureElement: _,
+            forceVirtualizeType: _,
+            initialOffset: _,
+            onOffsetChange: _,
+          };
+        return (0, _.jsx)(_._, {
+          className: _,
+          ref: _,
+          ..._,
+          children: (0, _.jsxs)(_.Suspense, {
+            children: [
+              "element" === _ &&
+                (0, _.jsx)(_, {
+                  ..._,
+                  nScrollMargin: _ || 0,
+                  elScrollable: _,
+                }),
+              "window" === _ &&
+                (0, _.jsx)(_, {
+                  ..._,
+                  nScrollMargin: _,
+                }),
+            ],
+          }),
         });
+      });
       function _(_) {
         const {
             nScrollMargin: _,
@@ -2951,9 +2981,20 @@
         let _, _;
         if (
           (_ &&
-            (_ = (0, _.jsx)("div", {
-              className: _.Excluded,
-              children: (0, _._)(_) + " (" + String(_.exclude_reason) + ")",
+            (_ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Excluded,
+                  children: (0, _._)(_),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.ExcludedCode,
+                  children: (0, _._)(
+                    "#FamilyGame_ExcludedCode",
+                    _.exclude_reason,
+                  ),
+                }),
+              ],
             })),
           _.exclude_reason != _._._)
         )

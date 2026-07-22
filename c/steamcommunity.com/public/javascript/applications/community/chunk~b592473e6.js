@@ -6,6 +6,7 @@
         EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
         EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
         ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
+        ColorPickerDialog: "_32PwNSgquR6tGAPIBcWgVq",
       };
     },
     chunkid: (module) => {
@@ -1266,7 +1267,7 @@
                 ? ((_ = !0), _.push(_))
                 : (_ || (_ = !0), __webpack_require__.push(_));
             }
-            if ((console.assert(!_ || _), _ && _)) {
+            if ((console.assert(!_ || !!_), _ && _)) {
               _.isBlock &&
                 _.length > 1 &&
                 _[_.length - 1].type == this.schema.nodes.hard_break &&
@@ -1741,6 +1742,7 @@
             else alert(_._.Localize("#Sale_EyeDropperError"));
           }, [_]);
         return (0, _.jsxs)("div", {
+          className: _().ColorPickerDialog,
           children: [
             Boolean(_) &&
               (0, _.jsx)(_._, {

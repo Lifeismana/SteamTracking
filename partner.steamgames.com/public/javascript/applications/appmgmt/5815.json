@@ -1,5 +1,8 @@
 {
     "language": "koreana",
+    "EventEditor_Loc_Title": "현지화 관리",
+    "EventEditor_Loc_Overview": "전체 이벤트에 대한 문자열 번역을 관리하기 위해 현지화 파일을 내보내고 가져옵니다.",
+    "EventEditor_Loc_Overview_Page": "전체 페이지에 대한 문자열 번역을 관리하기 위해 현지화 파일을 내보내고 가져옵니다.",
     "LoginRedirect_Dialog_Title": "로그인",
     "LoginRedirect_Dialog_Description": "로그인하여 이 게임을 찜 목록에 추가하거나, 팔로우하거나, 제외로 지정하세요. '확인'을 클릭하면 로그인 페이지로 이동합니다.",
     "Wishlist_NotSignedIn": "게임을 찜 목록에 추가, 팔로우, 구매하려면 Steam에 로그인하거나 Steam 앱에서 이 페이지를 여세요.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s 허용되는 URL입니다.",
     "SteamURLInvalid": "오류: Steam 상점 또는 커뮤니티와 연결되지 않은 URL입니다.",
     "AnchorHashInputInvalid": "유효하지 않은 입력",
+    "Sale_Section_Label_Color": "레이블 색상",
+    "Sale_Section_Background_Top": "배경 그라데이션(상단)",
+    "Sale_Section_Background_Bottom": "배경 그라데이션(하단)",
     "Reservation_JoinPool": "예약 구매",
     "Reserationn_NoListJoined": "아래에서 예약 구매할 모델을 선택하세요. 자격 요건을 충족하는 경우 최대 %1$s개 모델까지 예약 구매할 수 있습니다.",
     "Reservation_InPool": "아래 선택한 모델에 대한 예약 구매 대기자 명단에 등록했습니다.",

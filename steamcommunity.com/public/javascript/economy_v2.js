@@ -3980,7 +3980,7 @@ SellItemDialog = {
 	m_plotPriceHistory: null,
 	m_timePriceHistoryEarliest: new Date(),
 	m_timePriceHistoryLatest: new Date(),
-
+	
 	m_modal: null,
 	m_elDialogContent: null,
 
@@ -4044,6 +4044,7 @@ SellItemDialog = {
 		$('market_sell_dialog_back').style.opacity = 1;
 		$('market_sell_dialog_throbber').hide();
 
+		
 		this.m_item = item;
 		var description = item.description;
 
@@ -4161,7 +4162,8 @@ SellItemDialog = {
 		$J('#pricehistory').hide();
 		$J('#pricehistory_throbber').show();
 		$J('#pricehistory_notavailable').hide();
-		new Ajax.Request( 'https://steamcommunity.com/market/pricehistory/', {
+
+				new Ajax.Request( 'https://steamcommunity.com/market/pricehistory/', {
 			method: 'get',
 			parameters: {
 				appid: this.m_item.appid,
@@ -4172,6 +4174,7 @@ SellItemDialog = {
 		} );
 	},
 
+	
 	OnPriceHistorySuccess: function( transport ) {
 		$J('#pricehistory_throbber').hide();
 		if ( transport.responseJSON && transport.responseJSON.success && transport.responseJSON.prices.length > 0 )
@@ -4558,7 +4561,7 @@ SellItemDialog = {
 	},
 
 	GetSteamFeeRate() {
-				return parseFloat( g_rgWalletInfo[ 'wallet_fee_percent' ] ?? 0.05 );
+		return parseFloat( g_rgWalletInfo[ 'wallet_fee_percent' ] ?? 0.05 );
 	},
 
 	OnInputKeyUp: function( event ) {
@@ -4566,7 +4569,7 @@ SellItemDialog = {
 		var nAmount = inputValue;
 		var quantity = this.GetQuantityAsInt();
 
-		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
+				if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
 			var ppct = this.GetPublisherFeeRate();
 			var spct = this.GetSteamFeeRate();
@@ -4576,21 +4579,21 @@ SellItemDialog = {
 
 			this.RecalculateTotal( nAmount, quantity );
 		}
-	},
+			},
 
 	OnBuyerPriceInputKeyUp: function( event ) {
 		var inputValue = this.GetBuyerPriceAsInt();
 		var nAmount = inputValue;
 		var quantity = this.GetQuantityAsInt();
 
-		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
+				if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
 			var nItemPrice = GetItemPriceFromTotal( nAmount, g_rgWalletInfo );
 			$('market_sell_currency_input').value = v_currencyformat( nItemPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 
 			this.RecalculateTotal( nAmount, quantity );
 		}
-	},
+			},
 
 	RecalculateTotal: function( nAmount, quantity ) {
 		if ( quantity > 0 )

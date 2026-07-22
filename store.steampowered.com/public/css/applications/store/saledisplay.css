@@ -1959,6 +1959,18 @@ p a:hover {
 .Nn2-w0eqLuugAR-Udm--3 input {
   background-color: #fff;
 }
+._32PwNSgquR6tGAPIBcWgVq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+._32PwNSgquR6tGAPIBcWgVq .DialogLabel {
+  font-size: 18px;
+  text-transform: none;
+  color: #fff;
+  font-weight: 500;
+}
 .d43sj0ExWatSivXsOo2Qx {
   z-index: 1000;
 }

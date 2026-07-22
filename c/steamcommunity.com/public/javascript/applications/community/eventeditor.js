@@ -65,6 +65,7 @@
       module.exports = {
         Ctn: "BTMmbSI5WdBvCQVAgf3-i",
         ButtonIcon: "_21IZDNymOVDf4u4Ont7WVA",
+        SalePageTOCPlacement: "_3swQ-bhpt-4JFhKZu9FvNW",
       };
     },
     chunkid: (module) => {
@@ -281,23 +282,33 @@
     },
     chunkid: (module) => {
       module.exports = {
-        TableOfContentsContainer: "_2VyHwZNHF7G8GTghQBppJM",
-        TableOfContents: "_3-gNExt8uVVXneiHJ_HBfO",
-        TOCEntry: "_2fkedbcvZ-Ypkg7IAM6g8y",
-        TOCEntryText: "_2E83D-k5Smoc5GOnIAYxX_",
-        SectionOnScreen: "_1ZlX0kgk4yXPDr43GYpCQE",
-        TOCIndent: "mtCjwe7hxKpsydYBLiVwo",
-        Header: "_1JRRCTaFT_9gTWN0PgcEE7",
-        ManageLocCtn: "_1PmKQt4vLN4zvIXblWoav2",
-        LocButtonsCtn: "_19-WGMy4r1bc3-bhcr0ghi",
-        ManageLocContents: "N1BFbJNE18yJ8DDMBdVUZ",
+        ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
+        ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
+        SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
-        ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
-        SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
+        ManageLocCtn: "_1f5Ik3OrM66FNXPSlNh_zR",
+        LocButtonsCtn: "bAoVO_tlg_jpl-uvQ9JFF",
+        ManageLocContents: "_2k4C7NwMxpGzAuHjmqEURq",
+        Header: "_1_uWHf6GPtvPfqvUQr-Alu",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Waypoint: "_2pZVu5uwOWvVnfNisJPOB9",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TableOfContentsContainer: "_3N5be2rmYYNMGufXaKpBSb",
+        TableOfContents: "_3tLgun3y-qOlJAVcfwxowt",
+        TOCEntry: "_1fzqunMp3Jq_h9SsiGwRGu",
+        TOCEntryText: "_2GtCXeIDXaH3zjSXPON8Mc",
+        SectionOnScreen: "_3xZOOBpCfl1mS9OS-_DVq4",
+        TOCIndent: "_1fP_E_5IswSiXZj42jqqWq",
+        Header: "_1GAZYe3epNmQSdQq0rhZBQ",
       };
     },
     chunkid: (module) => {
@@ -2907,6 +2918,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3108,305 +3120,296 @@
         );
       };
       var _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.bRedirectUsed = !1),
-            (this.state = {
-              redirectTarget: null,
-              bDeleting: !1,
-            });
-        }
-        OnFallbackClick(_) {
-          _.target instanceof HTMLButtonElement ||
-            _.target instanceof HTMLAnchorElement ||
-            (this.OnGotoPage("edit"), _.stopPropagation());
-        }
-        OnGotoPage(_) {
-          (this.bRedirectUsed = !1),
-            this.setState({
-              redirectTarget: _,
-            });
-        }
-        OnIgnoreFallbackClick(_) {
-          _.stopPropagation();
-        }
-        render() {
-          var _;
-          const {
+      const _ = (0, _._)(function (_) {
+        var _;
+        const {
             eventModel: _,
             appid_or_vanity_str: _,
             bShowGameName: _,
             bShowEventMetaDataSizes: _,
-          } = this.props;
-          let _ = _.GID,
-            _ = _.bOldAnnouncement;
-          if (this.state.redirectTarget && !this.bRedirectUsed)
-            switch (((this.bRedirectUsed = !0), this.state.redirectTarget)) {
-              case "clone":
-                return (0, _.jsx)(_._, {
-                  push: !0,
-                  _: _._.Edit(_, ""),
-                });
-              case "edit":
-                return (0, _.jsx)(_._, {
-                  eventModel: this.props.eventModel,
-                  route: _._.k_eCommunityEdit,
-                });
-              case "view":
-                return _.BIsVisibleEvent()
-                  ? (0, _.jsx)(_._, {
-                      eventModel: this.props.eventModel,
-                      route: _._.k_eView,
-                    })
-                  : (0, _.jsx)(_._, {
-                      eventModel: this.props.eventModel,
-                      route: _._.k_eCommunityPreview,
-                    });
-              default:
-                console.log(
-                  "EventDisplayTile - Unexpected Case - " +
-                    this.state.redirectTarget,
-                );
-            }
-          let _ = (0, _.sfN)(_._.LANGUAGE);
-          _.BIsLanguageValidForRealms(_) ||
-            (_ = _.BInRealmGlobal() ? _.Bhc : _.ZLm);
-          let _ = _.GetNameWithFallback(_);
-          const _ = _.BHasSubTitle(_),
-            _ = !0,
-            _ = _.BHasSaleEnabled(),
-            _ = _.visibility_state != _._.k_EEventStateUnpublished,
-            _ = _.visibility_state != _._.k_EEventStateVisible,
-            _ = _.visibility_state == _._.k_EEventStateUnlisted;
-          let _;
-          const _ = _.BShowLibrarySpotlight(!0);
-          let _;
-          if (
-            (_ &&
-              _ &&
-              !_ &&
-              (_ =
-                _.visibilityStartTime == _.startTime
-                  ? (0, _.jsx)("div", {
-                      className: _.TileTextStartsIn,
-                      children: (0, _._)(
-                        "#EventEditor_Status_WillBeVisible_EventStart",
-                      ),
-                    })
-                  : (0, _.jsx)("div", {
-                      className: _.TileTextStartsIn,
-                      children: (0, _._)(
-                        "#EventEditor_Status_WillBeVisible_At",
-                        (0, _.jsx)(_._, {
-                          dateAndTime:
-                            _.GetVisibilityStartTimeAndDateUnixSeconds(),
-                          bSingleLine: !0,
-                        }),
-                      ),
-                    })),
-            !_ && _)
-          ) {
-            let _ = _._.GetTimeNowWithOverride();
-            _.GetStartTimeAndDateUnixSeconds() > _
-              ? (_ = (0, _.jsx)("span", {
-                  className: _.EventStateUpcoming,
-                  children: (0, _._)("#EventDisplay_Upcoming"),
-                }))
-              : (0, _._)(_.type) && _.GetEndTimeAndDateUnixSeconds() > _
-                ? (_ = (0, _.jsx)("span", {
-                    className: _.EventStateActive,
-                    children: (0, _._)("#EventDisplay_Active"),
-                  }))
-                : _.GetStartTimeAndDateUnixSeconds() > _ + 3600 &&
-                  (_ = (0, _.jsx)("span", {
-                    className: _.EventStateRecent,
-                    children: (0, _._)("#EventDisplay_RecentlyActive"),
-                  }));
+          } = _,
+          [_, _] = _.useState(null),
+          _ = _.useRef(!1),
+          _ = _.useCallback((_) => {
+            (_.current = !1), _(_);
+          }, []),
+          _ = _.useCallback(
+            (_) => {
+              _.target instanceof HTMLButtonElement ||
+                _.target instanceof HTMLAnchorElement ||
+                (_("edit"), _.stopPropagation());
+            },
+            [_],
+          ),
+          _ = _.useCallback((_) => {
+            _.stopPropagation();
+          }, []),
+          _ = _.GID,
+          _ = _.bOldAnnouncement;
+        if (_ && !_.current)
+          switch (((_.current = !0), _)) {
+            case "clone":
+              return (0, _.jsx)(_._, {
+                push: !0,
+                _: _._.Edit(_, ""),
+              });
+            case "edit":
+              return (0, _.jsx)(_._, {
+                eventModel: _,
+                route: _._.k_eCommunityEdit,
+              });
+            case "view":
+              return __webpack_require__.BIsVisibleEvent()
+                ? (0, _.jsx)(_._, {
+                    eventModel: _,
+                    route: _._.k_eView,
+                  })
+                : (0, _.jsx)(_._, {
+                    eventModel: _,
+                    route: _._.k_eCommunityPreview,
+                  });
+            default:
+              console.log("EventDisplayTile - Unexpected Case - " + _);
           }
-          _ &&
-            (_ =
-              ((null === (_ = _._.Get().GetApp(_.appid)) || void 0 === _
-                ? void 0
-                : _.GetName()) || "") +
-              ": " +
-              _);
-          let _ =
-              _.BIsPartnerEvent() &&
-              _.BIsVisibleEvent() &&
-              _._.GetStatsFor(_.clanSteamID, _),
-            _ = _._.GetOGGClanInfo(_.appid),
-            _ = Boolean(
+        let _ = (0, _.sfN)(_._.LANGUAGE);
+        __webpack_require__.BIsLanguageValidForRealms(_) ||
+          (_ = __webpack_require__.BInRealmGlobal() ? _.Bhc : _.ZLm);
+        let _ = __webpack_require__.GetNameWithFallback(_);
+        const _ = __webpack_require__.BHasSubTitle(_),
+          _ = !0,
+          _ = __webpack_require__.BHasSaleEnabled(),
+          _ = _.visibility_state != _._.k_EEventStateUnpublished,
+          _ = _.visibility_state != _._.k_EEventStateVisible,
+          _ = _.visibility_state == _._.k_EEventStateUnlisted,
+          _ = __webpack_require__.BShowLibrarySpotlight(!0),
+          _ = _ && _ && !_;
+        _ &&
+          (_ =
+            ((null === (_ = _._.Get().GetApp(_.appid)) || void 0 === _
+              ? void 0
+              : _.GetName()) || "") +
+            ": " +
+            _);
+        const _ =
+            __webpack_require__.BIsPartnerEvent() &&
+            __webpack_require__.BIsVisibleEvent() &&
+            _._.GetStatsFor(_.clanSteamID, _),
+          _ = _._.GetOGGClanInfo(_.appid),
+          _ = Boolean(
+            _ &&
               _ &&
-                _ &&
-                _.is_ogg &&
-                _.clanAccountID != _.announcementClanSteamID.GetAccountID(),
-            );
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_.TileContainer]: !0,
-                [_.TileAgeAppropriate]: _,
-                [_.TileAgeNotAppropriate]: !1,
-                [_.ShowEventMetaDataSizes]: _,
-                [_.ShowLibrarySpotlight]: _,
-              }),
-              children: [
-                _ &&
-                  (0, _.jsxs)("div", {
-                    className: _.PartnerEventFeaturedHeader,
-                    children: [
-                      (0, _._)("#EventDisplay_Visible_Featured"),
-                      (0, _.jsx)(_._, {
-                        toolTipContent: (0, _._)(
-                          "#EventDisplay_Visible_Featured_Tooltip",
-                        ),
-                        children: " (?)",
-                      }),
-                    ],
+              _.is_ogg &&
+              _.clanAccountID != _.announcementClanSteamID.GetAccountID(),
+          );
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)({
+              [_.TileContainer]: !0,
+              [_.TileAgeAppropriate]: _,
+              [_.TileAgeNotAppropriate]: !1,
+              [_.ShowEventMetaDataSizes]: _,
+              [_.ShowLibrarySpotlight]: _,
+            }),
+            children: [
+              _ && (0, _.jsx)(_, {}),
+              (0, _.jsxs)("div", {
+                className: _.TileEventRow,
+                children: [
+                  (0, _.jsx)(_, {
+                    fnOnFallbackClick: _,
+                    lang: _,
+                    eventModel: _,
                   }),
-                (0, _.jsxs)("div", {
-                  className: _.TileEventRow,
-                  children: [
-                    (0, _.jsx)(_, {
-                      fnOnFallbackClick: this.OnFallbackClick,
-                      lang: _,
-                      eventModel: _,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.TileTextContainer,
-                      onClick: (_) => this.OnFallbackClick(_),
-                      children: (0, _.jsxs)("div", {
-                        className: _.TileDescriptionContainer,
-                        children: [
-                          (0, _.jsxs)("div", {
-                            style: {
-                              display: "flex",
-                            },
-                            children: [
-                              (0, _.jsx)("div", {
-                                className: _.TileTextAppName,
-                                children: _,
-                              }),
-                              (0, _.jsxs)("div", {
-                                className: _.TileTextEventType,
-                                children: [
-                                  _.GetCategoryAsString(!0),
-                                  _ &&
-                                    (0, _.jsxs)("span", {
-                                      className: _.TileHasSale,
-                                      children: [
-                                        " | ",
-                                        (0, _._)("#EventEditor_Status_HasSale"),
-                                      ],
-                                    }),
-                                ],
-                              }),
-                            ],
-                          }),
-                          _ && !1,
-                          (0, _.jsxs)("div", {
-                            className: _.ContainerSpaceBetween,
-                            children: [
-                              (0, _.jsxs)("div", {
-                                className: _.TileTextStartsIn,
-                                children: [
-                                  (0, _.jsx)(_._, {
-                                    dateAndTime:
-                                      _.GetStartTimeAndDateUnixSeconds(),
-                                    bSingleLine: !0,
+                  (0, _.jsx)("div", {
+                    className: _.TileTextContainer,
+                    onClick: _,
+                    children: (0, _.jsxs)("div", {
+                      className: _.TileDescriptionContainer,
+                      children: [
+                        (0, _.jsxs)("div", {
+                          style: {
+                            display: "flex",
+                          },
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: _.TileTextAppName,
+                              children: _,
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.TileTextEventType,
+                              children: [
+                                __webpack_require__.GetCategoryAsString(!0),
+                                _ &&
+                                  (0, _.jsxs)("span", {
+                                    className: _.TileHasSale,
+                                    children: [
+                                      " | ",
+                                      (0, _._)("#EventEditor_Status_HasSale"),
+                                    ],
                                   }),
-                                  _,
-                                  _.BHasTag("auto_rssfeed") &&
-                                    (0, _.jsxs)(_.Fragment, {
-                                      children: [
-                                        (0, _.jsx)("br", {}),
-                                        (0, _.jsx)("a", {
-                                          href:
-                                            _._.STORE_BASE_URL +
-                                            "curator/" +
-                                            _.clanSteamID.GetAccountID() +
-                                            "/admin/manage_rss/",
-                                          children:
-                                            " " +
-                                            (0, _._)(
-                                              "#EventEditor_Status_FromRSSFeed",
-                                            ),
-                                        }),
-                                      ],
-                                    }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        _ && !1,
+                        (0, _.jsxs)("div", {
+                          className: _.ContainerSpaceBetween,
+                          children: [
+                            (0, _.jsxs)("div", {
+                              className: _.TileTextStartsIn,
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  dateAndTime:
+                                    __webpack_require__.GetStartTimeAndDateUnixSeconds(),
+                                  bSingleLine: !0,
+                                }),
+                                !_ &&
+                                  _ &&
                                   (0, _.jsx)(_, {
                                     eventModel: _,
-                                    bAllowUpdate: !1,
                                   }),
-                                ],
-                              }),
-                              Boolean(_) &&
-                                (0, _.jsxs)("div", {
-                                  className: _.TileStats,
-                                  children: [
-                                    (0, _._)(
-                                      "#EventDashBoard_Summary_Tile_Impressions",
-                                      (0, _.jsx)("span", {
-                                        children: (0, _._)(
-                                          _.m_stats.total_showm,
-                                        ),
+                                __webpack_require__.BHasTag("auto_rssfeed") &&
+                                  (0, _.jsxs)(_.Fragment, {
+                                    children: [
+                                      (0, _.jsx)("br", {}),
+                                      (0, _.jsx)("a", {
+                                        href:
+                                          _._.STORE_BASE_URL +
+                                          "curator/" +
+                                          _.clanSteamID.GetAccountID() +
+                                          "/admin/manage_rss/",
+                                        children:
+                                          " " +
+                                          (0, _._)(
+                                            "#EventEditor_Status_FromRSSFeed",
+                                          ),
                                       }),
-                                    ),
-                                    (0, _.jsx)("br", {}),
-                                    (0, _._)(
-                                      "#EventDashBoard_Summary_Tile_Read",
-                                      (0, _.jsx)("span", {
-                                        children: (0, _._)(
-                                          _.m_stats.total_read,
-                                        ),
-                                      }),
-                                    ),
-                                  ],
+                                    ],
+                                  }),
+                                (0, _.jsx)(_, {
+                                  eventModel: _,
+                                  bAllowUpdate: !1,
                                 }),
-                            ],
-                          }),
-                          _,
-                          _
-                            ? (0, _.jsxs)("div", {
-                                className: _.TileButtonContainer,
-                                onClick: (_) => this.OnIgnoreFallbackClick(_),
-                                children: [
-                                  (0, _.jsx)("div", {
-                                    children: (0, _._)(
-                                      "#EventEditor_DataFromConnectAnnouncement",
-                                    ),
-                                  }),
-                                  (0, _.jsx)(_._, {
-                                    className: (0, _._)(_.ManageButton, _.Edit),
-                                    eventModel: _,
-                                    route: _._.k_eView,
-                                    children: (0, _._)("#Button_ViewPage"),
-                                  }),
-                                ],
-                              })
-                            : (0, _.jsx)(_, {
-                                fnOnGotoPage: this.OnGotoPage,
-                                ...this.props,
-                              }),
-                          _ &&
-                            (0, _.jsx)(_._, {
-                              requireAdmin: !0,
-                              clanSteamID: _.clanSteamID,
-                              children: (0, _.jsx)(_, {
-                                eventModel: _,
-                              }),
+                              ],
                             }),
-                        ],
-                      }),
+                            Boolean(_) &&
+                              (0, _.jsxs)("div", {
+                                className: _.TileStats,
+                                children: [
+                                  (0, _._)(
+                                    "#EventDashBoard_Summary_Tile_Impressions",
+                                    (0, _.jsx)("span", {
+                                      children: (0, _._)(_.m_stats.total_showm),
+                                    }),
+                                  ),
+                                  (0, _.jsx)("br", {}),
+                                  (0, _._)(
+                                    "#EventDashBoard_Summary_Tile_Read",
+                                    (0, _.jsx)("span", {
+                                      children: (0, _._)(_.m_stats.total_read),
+                                    }),
+                                  ),
+                                ],
+                              }),
+                          ],
+                        }),
+                        _ &&
+                          (0, _.jsx)(_, {
+                            eventModel: _,
+                          }),
+                        _
+                          ? (0, _.jsxs)("div", {
+                              className: _.TileButtonContainer,
+                              onClick: _,
+                              children: [
+                                (0, _.jsx)("div", {
+                                  children: (0, _._)(
+                                    "#EventEditor_DataFromConnectAnnouncement",
+                                  ),
+                                }),
+                                (0, _.jsx)(_._, {
+                                  className: (0, _._)(_.ManageButton, _.Edit),
+                                  eventModel: _,
+                                  route: _._.k_eView,
+                                  children: (0, _._)("#Button_ViewPage"),
+                                }),
+                              ],
+                            })
+                          : (0, _.jsx)(_, {
+                              fnOnGotoPage: _,
+                              ..._,
+                            }),
+                        _ &&
+                          (0, _.jsx)(_._, {
+                            requireAdmin: !0,
+                            clanSteamID: _.clanSteamID,
+                            children: (0, _.jsx)(_, {
+                              eventModel: _,
+                            }),
+                          }),
+                      ],
                     }),
-                  ],
-                }),
-              ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      });
+      function _() {
+        return (0, _.jsxs)("div", {
+          className: _.PartnerEventFeaturedHeader,
+          children: [
+            (0, _._)("#EventDisplay_Visible_Featured"),
+            (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)(
+                "#EventDisplay_Visible_Featured_Tooltip",
+              ),
+              children: " (?)",
             }),
-          });
-        }
-      };
+          ],
+        });
+      }
+      const _ = (0, _._)(function (_) {
+          const { eventModel: _ } = _,
+            _ = _._.GetTimeNowWithOverride();
+          return _.GetStartTimeAndDateUnixSeconds() > _
+            ? (0, _.jsx)("span", {
+                className: _.EventStateUpcoming,
+                children: (0, _._)("#EventDisplay_Upcoming"),
+              })
+            : (0, _._)(_.type) && _.GetEndTimeAndDateUnixSeconds() > _
+              ? (0, _.jsx)("span", {
+                  className: _.EventStateActive,
+                  children: (0, _._)("#EventDisplay_Active"),
+                })
+              : _.GetStartTimeAndDateUnixSeconds() > _ + 3600
+                ? (0, _.jsx)("span", {
+                    className: _.EventStateRecent,
+                    children: (0, _._)("#EventDisplay_RecentlyActive"),
+                  })
+                : null;
+        }),
+        _ = (0, _._)(function (_) {
+          const { eventModel: _ } = _;
+          return _.visibilityStartTime == _.startTime
+            ? (0, _.jsx)("div", {
+                className: _.TileTextStartsIn,
+                children: (0, _._)(
+                  "#EventEditor_Status_WillBeVisible_EventStart",
+                ),
+              })
+            : (0, _.jsx)("div", {
+                className: _.TileTextStartsIn,
+                children: (0, _._)(
+                  "#EventEditor_Status_WillBeVisible_At",
+                  (0, _.jsx)(_._, {
+                    dateAndTime: _.GetVisibilityStartTimeAndDateUnixSeconds(),
+                    bSingleLine: !0,
+                  }),
+                ),
+              });
+        });
       function _(_) {
         const { fnOnFallbackClick: _, eventModel: _, lang: _ } = _;
         let _ = [(0, _._)(_, "capsule", _)];
@@ -3419,148 +3422,184 @@
           }),
         });
       }
-      (0, _._)([_._], _.prototype, "OnFallbackClick", null),
-        (0, _._)([_._], _.prototype, "OnGotoPage", null),
-        (0, _._)([_._], _.prototype, "OnIgnoreFallbackClick", null),
-        (_ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        OnIgnoreFallbackClick(_) {
-          _.stopPropagation();
-        }
-        OnPublishEvent(_) {
-          _.stopPropagation();
-          const { eventModel: _ } = this.props;
-          _._.LoadEditorModel(_.clanSteamID, _.GID)
-            .then(() => {
-              (0, _._)(
+      const _ = (0, _._)(function (_) {
+        const { eventModel: _, fnOnGotoPage: _, refresh: _ } = _,
+          _ = _.useCallback((_) => {
+            _.stopPropagation();
+          }, []),
+          _ = _.useCallback(() => {
+            __webpack_require__("view");
+          }, [_]),
+          _ = _.bOldAnnouncement,
+          _ = _.visibility_state != _._.k_EEventStateVisible,
+          _ = _.visibility_state == _._.k_EEventStateUnlisted,
+          _ = _.visibility_state != _._.k_EEventStateUnpublished;
+        return (0, _.jsxs)("div", {
+          className: _.TileButtonContainer,
+          onClick: _,
+          children: [
+            !_ &&
+              (0, _.jsx)(_._, {
+                className: (0, _._)(_.ManageButton, _.Edit),
+                eventModel: _,
+                route: _._.k_eCommunityEdit,
+                onClick: _,
+                children: (0, _._)("#Button_Edit"),
+              }),
+            _ &&
+              (0, _.jsx)(_._, {
+                className: (0, _._)(_.ManageButton, _.Edit),
+                eventModel: _,
+                route: _._.k_eCommunityMigrate,
+                onClick: _,
+                children: (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)(
+                    "#EventEditor_Button_MigrateAndEdit_Announcement_ttip",
+                  ),
+                  children: (0, _._)("#EventEditor_Button_MigrateAndEdit"),
+                }),
+              }),
+            _ &&
+              !_ &&
+              (0, _.jsx)(_._, {
+                className: (0, _._)(_.ManageButton, _.View),
+                eventModel: _,
+                route: _._.k_eCommunityPreview,
+                onClick: _,
+                children: (0, _.jsx)(_._, {
+                  toolTipContent: (0, _._)(
+                    "#EventEditor_Button_PreviewButton_ttip",
+                  ),
+                  children: (0, _._)("#EventDisplay_Preview"),
+                }),
+              }),
+            (!_ || _) &&
+              (0, _.jsx)(_._, {
+                className: (0, _._)(_.ManageButton, _.View),
+                eventModel: _,
+                route: _._.k_eView,
+                onClick: _,
+                children: (0, _._)("#EventDisplay_View"),
+              }),
+            !_ &&
+              !_ &&
+              (0, _.jsx)(_, {
+                eventModel: _,
+                OnPublishSuccess: _,
+              }),
+            (0, _.jsx)("div", {
+              className: _.Spacer,
+              children: " ",
+            }),
+            (0, _.jsx)(_, {
+              eventModel: _,
+              fnOnGotoPage: _,
+            }),
+            (0, _.jsx)(_, {
+              eventModel: _,
+              refresh: _,
+            }),
+          ],
+        });
+      });
+      function _(_) {
+        const { eventModel: _, OnPublishSuccess: _ } = _,
+          [_, _] = _.useState({
+            kind: "none",
+          }),
+          _ = _.useCallback(
+            () =>
+              _({
+                kind: "none",
+              }),
+            [],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _.stopPropagation(),
+                _._.LoadEditorModel(_.clanSteamID, _.GID)
+                  .then(() => {
+                    _({
+                      kind: "publish",
+                    });
+                  })
+                  .catch((_) => {
+                    const _ = (0, _._)(_);
+                    _({
+                      kind: "error",
+                      strMessage: _.strErrorMsg,
+                    });
+                  });
+            },
+            [_],
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.ManageButton, _.Publish),
+              onClick: _,
+              children: (0, _._)("#EventDisplay_Publish"),
+            }),
+            (0, _.jsx)(_._, {
+              active: "publish" == _.kind,
+              children:
+                "publish" == _.kind &&
                 (0, _.jsx)(_._, {
                   editModel: _._.GetEditModel(),
                   partnerEventEditorStore: _._,
-                  OnPublishSuccess: this.OnPublishSuccess,
+                  closeModal: _,
+                  OnPublishSuccess: _,
                 }),
-                window,
-              );
-            })
-            .catch((_) => {
-              let _ = (0, _._)(_);
-              (0, _._)(
+            }),
+            (0, _.jsx)(_._, {
+              active: "error" == _.kind,
+              children:
+                "error" == _.kind &&
                 (0, _.jsx)(_._, {
                   strTitle: (0, _._)("#EventEditor_PublishingError"),
                   bAlertDialog: !0,
                   bDestructiveWarning: !0,
                   strDescription: (0, _._)(
                     "#EventEditor_PublishingError_Desc",
-                    _.strErrorMsg,
+                    _.strMessage,
                   ),
+                  closeModal: _,
                 }),
-                window,
-                {
-                  strTitle: (0, _._)("#EventEditor_PublishingError"),
-                },
-              );
-            });
-        }
-        OnPublishSuccess() {
-          this.setState({
-            redirectTarget: "view",
-          });
-        }
-        StopPropagation(_) {
-          _.stopPropagation();
-        }
-        OnDeleteClickAndVerify(_) {
-          _.stopPropagation(),
-            (0, _._)(
-              (0, _.jsx)(_._, {
-                eventModel: this.props.eventModel,
-                partnerEventStore: _._,
-                onDeleteSuccessAndCloseDialog: () => this.props.refresh(),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { eventModel: _, refresh: _ } = _,
+          [_, _, _] = (0, _._)(),
+          _ = _.useCallback(
+            (_) => {
+              _.stopPropagation(), _();
+            },
+            [_],
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)("#EventEditor_Button_DeleteButton_ttip"),
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(_.ManageButton, _.Delete),
+                onClick: _,
+                children: (0, _._)("#Button_Delete"),
               }),
-              (0, _._)(_),
-            );
-        }
-        render() {
-          const { eventModel: _, fnOnGotoPage: _ } = this.props,
-            _ = _.bOldAnnouncement,
-            _ = _.visibility_state != _._.k_EEventStateVisible,
-            _ = _.visibility_state == _._.k_EEventStateUnlisted,
-            _ = _.visibility_state != _._.k_EEventStateUnpublished;
-          return (0, _.jsxs)("div", {
-            className: _.TileButtonContainer,
-            onClick: (_) => this.OnIgnoreFallbackClick(_),
-            children: [
-              !_ &&
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(_.ManageButton, _.Edit),
-                  eventModel: _,
-                  route: _._.k_eCommunityEdit,
-                  onClick: this.StopPropagation,
-                  children: (0, _._)("#Button_Edit"),
-                }),
-              _ &&
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(_.ManageButton, _.Edit),
-                  eventModel: _,
-                  route: _._.k_eCommunityMigrate,
-                  onClick: this.StopPropagation,
-                  children: (0, _.jsx)(_._, {
-                    toolTipContent: (0, _._)(
-                      "#EventEditor_Button_MigrateAndEdit_Announcement_ttip",
-                    ),
-                    children: (0, _._)("#EventEditor_Button_MigrateAndEdit"),
-                  }),
-                }),
-              _ &&
-                !_ &&
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(_.ManageButton, _.View),
-                  eventModel: _,
-                  route: _._.k_eCommunityPreview,
-                  onClick: this.StopPropagation,
-                  children: (0, _.jsx)(_._, {
-                    toolTipContent: (0, _._)(
-                      "#EventEditor_Button_PreviewButton_ttip",
-                    ),
-                    children: (0, _._)("#EventDisplay_Preview"),
-                  }),
-                }),
-              (!_ || _) &&
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(_.ManageButton, _.View),
-                  eventModel: _,
-                  route: _._.k_eView,
-                  onClick: this.StopPropagation,
-                  children: (0, _._)("#EventDisplay_View"),
-                }),
-              !_ &&
-                !_ &&
-                (0, _.jsx)("div", {
-                  className: (0, _._)(_.ManageButton, _.Publish),
-                  onClick: this.OnPublishEvent,
-                  children: (0, _._)("#EventDisplay_Publish"),
-                }),
-              (0, _.jsx)("div", {
-                className: _.Spacer,
-                children: " ",
-              }),
-              (0, _.jsx)(_, {
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
                 eventModel: _,
-                fnOnGotoPage: _,
+                partnerEventStore: _._,
+                closeModal: _,
+                onDeleteSuccessAndCloseDialog: _,
               }),
-              (0, _.jsx)(_._, {
-                toolTipContent: (0, _._)(
-                  "#EventEditor_Button_DeleteButton_ttip",
-                ),
-                children: (0, _.jsx)("div", {
-                  className: (0, _._)(_.ManageButton, _.Delete),
-                  onClick: this.OnDeleteClickAndVerify,
-                  children: (0, _._)("#Button_Delete"),
-                }),
-              }),
-            ],
-          });
-        }
-      };
+            }),
+          ],
+        });
+      }
       function _(_, _) {
         if (!_ || _ <= 0) return [];
         const _ = new Array();
@@ -3589,12 +3628,6 @@
           _
         );
       }
-      (0, _._)([_._], _.prototype, "OnIgnoreFallbackClick", null),
-        (0, _._)([_._], _.prototype, "OnPublishEvent", null),
-        (0, _._)([_._], _.prototype, "OnPublishSuccess", null),
-        (0, _._)([_._], _.prototype, "StopPropagation", null),
-        (0, _._)([_._], _.prototype, "OnDeleteClickAndVerify", null),
-        (_ = (0, _._)([_._], _));
       const _ = (_) => {
         var _, _;
         const { eventModel: _ } = _;
@@ -5740,70 +5773,34 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      class _ {
+        constructor() {
+          (this.m_mapVisibleSections = new Map()),
+            (0, _._)(this, {
+              m_mapVisibleSections: _._,
+            });
+        }
+      }
+      const _ = (0, _.createContext)(null);
       function _(_) {
-        const {
-            strSectionId: _,
-            hasMinimize: _,
-            strTitle: _,
-            children: _,
-            strToolTip: _,
-            valveOnly: _,
-            valveOnlyClanSteamID: _,
-            requireAdmin: _,
-            dataToCopy: _,
-          } = _,
-          _ = (0, _._)(() => _ && (0, _._)(_));
-        if (_ && !(0, _._)(_, _)) return null;
-        const _ = _
-          ? (_) => {
-              (0, _._)(_), _.preventDefault(), _.stopPropagation();
-            }
-          : void 0;
-        return (0, _.jsx)(_, {
-          strSectionId: _,
-          children: (0, _.jsxs)("div", {
-            _: _,
-            className: (0, _._)({
-              [_.SettingCtn]: !0,
-              [_.ValveOnly]: _ || !!_,
-            }),
-            children: [
-              (0, _.jsxs)("div", {
-                className: (0, _._)(_.Title, _ && _.HasHover),
-                onClick: _,
-                children: [
-                  _,
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      tooltip: _,
-                    }),
-                  Boolean(_) &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)(_._, {
-                          dataToCopy: _._.k_EventData_SubMenu,
-                        }),
-                        (0, _.jsx)(_._, {
-                          dataToPaste: _._.k_EventData_SubMenu,
-                        }),
-                      ],
-                    }),
-                  _ &&
-                    (0, _.jsx)(_._, {
-                      bIsMinimized: _,
-                      fnToggleMinimize: () => (0, _._)(_),
-                    }),
-                ],
-              }),
-              !_ && _,
-            ],
-          }),
+        const [_] = (0, _.useState)(() => new _());
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _.children,
         });
+      }
+      function _() {
+        const _ = (0, _.useContext)(_);
+        if (!_)
+          throw new Error(
+            "useVisibleSectionStore must be used within a VisibleSectionStoreProvider",
+          );
+        return _;
       }
       function _(_) {
         const { strSectionId: _, children: _ } = _,
+          _ = _(),
           _ = (0, _._)(
             {
               onEnter: () => _.m_mapVisibleSections.set(_, _),
@@ -5829,260 +5826,249 @@
           "eb_sale_sect_" + _,
         );
       }
-      class _ {
-        constructor() {
-          (this.m_mapVisibleSections = new Map()), (0, _._)(this);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapVisibleSections", void 0);
-      const _ = new _(),
-        _ = (0, _._)((_) => {
-          var _, _, _, _;
-          const { editModel: _ } = _,
-            [_, _] = (0, _._)(() => [_.GetAppID(), _.GetEventType()]),
-            _ = Boolean(
-              _.BHasSomeImage("product_banner") &&
-                _.GetEventModel().BHasTag("hide_store"),
-            ),
-            _ = Boolean(
-              _.BHasSomeImage("product_mobile_banner") &&
-                _.GetEventModel().BHasTag("hide_store"),
-            ),
-            _ = _ == _.ajI,
-            _ = (_, _ = !1) => (0, _._)(_, _),
-            _ = (_, _ = !1) => (0, _._)(_, _),
-            _ =
-              (null ===
-                (_ =
-                  _.GetEventModel().jsondata.localized_sale_product_banner) ||
-              void 0 === _
-                ? void 0
-                : _.length) || 0,
-            _ =
-              (null ===
-                (_ =
-                  _.GetEventModel().jsondata
-                    .localized_sale_product_mobile_banner) || void 0 === _
-                ? void 0
-                : _.length) || 0,
-            _ =
-              (null === (_ = _.GetEventModel().jsondata.localized_sale_logo) ||
-              void 0 === _
-                ? void 0
-                : _.length) || 0,
-            _ =
-              (null ===
-                (_ = _.GetEventModel().jsondata.localized_sale_overlay) ||
-              void 0 === _
-                ? void 0
-                : _.length) || 0,
-            _ = [];
-          return (
-            _
-              ? _.push("sale_header")
-              : (_.push(
-                  "sale_header",
-                  "product_banner",
-                  "product_mobile_banner",
-                  "sale_logo",
-                ),
-                (0, _._)(_.GetClanSteamID(), !0) && _.push("sale_overlay")),
-            (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
+      const _ = (0, _._)((_) => {
+        var _, _, _, _;
+        const { editModel: _ } = _,
+          [_, _] = (0, _._)(() => [_.GetAppID(), _.GetEventType()]),
+          _ = Boolean(
+            _.BHasSomeImage("product_banner") &&
+              _.GetEventModel().BHasTag("hide_store"),
+          ),
+          _ = Boolean(
+            _.BHasSomeImage("product_mobile_banner") &&
+              _.GetEventModel().BHasTag("hide_store"),
+          ),
+          _ = _ == _.ajI,
+          _ = (_, _ = !1) => (0, _._)(_, _),
+          _ = (_, _ = !1) => (0, _._)(_, _),
+          _ =
+            (null ===
+              (_ = _.GetEventModel().jsondata.localized_sale_product_banner) ||
+            void 0 === _
+              ? void 0
+              : _.length) || 0,
+          _ =
+            (null ===
+              (_ =
+                _.GetEventModel().jsondata
+                  .localized_sale_product_mobile_banner) || void 0 === _
+              ? void 0
+              : _.length) || 0,
+          _ =
+            (null === (_ = _.GetEventModel().jsondata.localized_sale_logo) ||
+            void 0 === _
+              ? void 0
+              : _.length) || 0,
+          _ =
+            (null === (_ = _.GetEventModel().jsondata.localized_sale_overlay) ||
+            void 0 === _
+              ? void 0
+              : _.length) || 0,
+          _ = [];
+        return (
+          _
+            ? _.push("sale_header")
+            : (_.push(
+                "sale_header",
+                "product_banner",
+                "product_mobile_banner",
+                "sale_logo",
+              ),
+              (0, _._)(_.GetClanSteamID(), !0) && _.push("sale_overlay")),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                clanSteamID: _.GetClanSteamID(),
+                rgSupportArtwork: _,
+                fnSetImageURL: _.SetImageURL,
+                bAllowPreviousClanImageSelection: !0,
+                rgRealmList: _.GetIncludedRealmList(),
+              }),
+              (0, _.jsx)(_, {
+                strSectionId: "SalePageEdit_SaleBgImg",
+                children: (0, _.jsx)(_._, {
+                  _: "SalePageEdit_SaleBgImg",
+                  appid: _,
+                  eventModel: _.GetEventModel(),
                   clanSteamID: _.GetClanSteamID(),
-                  rgSupportArtwork: _,
-                  fnSetImageURL: _.SetImageURL,
-                  bAllowPreviousClanImageSelection: !0,
-                  rgRealmList: _.GetIncludedRealmList(),
-                }),
-                (0, _.jsx)(_, {
-                  strSectionId: "SalePageEdit_SaleBgImg",
-                  children: (0, _.jsx)(_._, {
-                    _: "SalePageEdit_SaleBgImg",
-                    appid: _,
-                    eventModel: _.GetEventModel(),
-                    clanSteamID: _.GetClanSteamID(),
-                    title: (0, _._)("#EventEditor_ArtworkType_sale_header"),
+                  title: (0, _._)("#EventEditor_ArtworkType_sale_header"),
+                  artworkType: "sale_header",
+                  elEventArtworkExample: (0, _.jsx)(_, {
                     artworkType: "sale_header",
-                    elEventArtworkExample: (0, _.jsx)(_, {
-                      artworkType: "sale_header",
-                    }),
-                    bIsMinimized: _("sale_header"),
-                    fnLangHasData: (_) => _.BHasImage("sale_header", _),
-                    fnSetImageURL: _.SetImageURL,
-                    fnGetImageHashAndExt: _.GetImageHashAndExt,
-                    fnToggleMinimize: () => _("sale_header"),
-                    partnerEventStore: _._,
-                    elAdditionalControls: (0, _.jsx)(_, {
-                      editModel: _,
-                    }),
+                  }),
+                  bIsMinimized: _("sale_header"),
+                  fnLangHasData: (_) => _.BHasImage("sale_header", _),
+                  fnSetImageURL: _.SetImageURL,
+                  fnGetImageHashAndExt: _.GetImageHashAndExt,
+                  fnToggleMinimize: () => _("sale_header"),
+                  partnerEventStore: _._,
+                  elAdditionalControls: (0, _.jsx)(_, {
+                    editModel: _,
                   }),
                 }),
-                !_ &&
-                  (0, _.jsx)(_, {
-                    strSectionId: "SalePageEdit_SaleLogo",
-                    children: (0, _.jsxs)("div", {
-                      className: _.SalePageLogoCtn,
-                      children: [
-                        (0, _.jsx)(_._, {
-                          _: "SalePageEdit_SaleLogo",
-                          clanSteamID: _.GetClanSteamID(),
-                          eventModel: _.GetEventModel(),
-                          appid: _,
-                          title: (0, _._)("#EventEditor_ArtworkType_sale_logo"),
-                          artworkType: "sale_logo",
-                          elEventArtworkExample: (0, _.jsx)(_, {
-                            artworkType: "sale_logo",
-                          }),
-                          bIsMinimized: _("sale_logo"),
-                          fnLangHasData: (_) => _.BHasImage("sale_logo", _),
-                          fnSetImageURL: _.SetImageURL,
-                          fnGetImageHashAndExt: _.GetImageHashAndExt,
-                          fnToggleMinimize: () => _("sale_logo"),
-                          partnerEventStore: _._,
-                          fnRemoveAllArtwork:
-                            0 == _
-                              ? void 0
-                              : () => {
-                                  (0, _._)(() => {
-                                    (_.GetEventModel().jsondata.localized_sale_logo =
-                                      []),
-                                      _.SetDirty(_._.jsondata_sales);
-                                  });
-                                },
-                        }),
-                        (0, _.jsx)(_._, {
-                          label: (0, _._)(
-                            "#EventEditor_ArtworkType_sale_logo_url",
-                          ),
-                          value: _.GetEventModel().jsondata.sale_logo_url,
-                          tooltip: (0, _._)(
-                            "#EventEditor_ArtworkType_sale_logo_url_tooltip",
-                          ),
-                          onChange: (_) => {
-                            (0, _._)(() => {
-                              (_.GetEventModel().jsondata.sale_logo_url =
-                                _.target.value),
-                                _.SetDirty(_._.jsondata_sales);
-                            });
-                          },
-                        }),
-                      ],
-                    }),
-                  }),
-                !_ &&
-                  (0, _.jsx)(_, {
-                    strSectionId: "SalePageEdit_SaleBanner",
-                    children: (0, _.jsx)(_._, {
-                      _: "SalePageEdit_SaleBanner",
-                      clanSteamID: _.GetClanSteamID(),
-                      eventModel: _.GetEventModel(),
-                      appid: _,
-                      fnLangHasData: (_) => _.BHasImage("product_banner", _),
-                      fnSetImageURL: _.SetImageURL,
-                      fnGetImageHashAndExt: _.GetImageHashAndExt,
-                      title: (0, _._)(
-                        "#EventEditor_ArtworkType_sale_product_banner",
-                      ),
-                      artworkType: "product_banner",
-                      bIsMinimized: _("product_banner"),
-                      fnToggleMinimize: () => _("product_banner"),
-                      strWarning: _
-                        ? (0, _._)("#Sale_BannerVisibility_Warning")
-                        : void 0,
-                      elEventArtworkExample: (0, _.jsx)(_, {
-                        artworkType: "product_banner",
-                      }),
-                      partnerEventStore: _._,
-                      fnRemoveAllArtwork:
-                        0 == _
-                          ? void 0
-                          : () => {
-                              (0, _._)(() => {
-                                (_.GetEventModel().jsondata.localized_sale_product_banner =
-                                  []),
-                                  _.SetDirty(_._.jsondata_sales);
-                              });
-                            },
-                    }),
-                  }),
-                !_ &&
-                  (0, _.jsx)(_, {
-                    strSectionId: "SalePageEdit_SaleMobileBanner",
-                    children: (0, _.jsx)(_._, {
-                      _: "SalePageEdit_SaleMobileBanner",
-                      clanSteamID: _.GetClanSteamID(),
-                      eventModel: _.GetEventModel(),
-                      appid: _,
-                      title: (0, _._)(
-                        "#EventEditor_ArtworkType_sale_product_mobile_banner",
-                      ),
-                      artworkType: "product_mobile_banner",
-                      bIsMinimized: _("product_mobile_banner"),
-                      fnToggleMinimize: () => _("product_mobile_banner"),
-                      fnLangHasData: (_) =>
-                        _.BHasImage("product_mobile_banner", _),
-                      fnSetImageURL: _.SetImageURL,
-                      fnGetImageHashAndExt: _.GetImageHashAndExt,
-                      partnerEventStore: _._,
-                      strWarning: _
-                        ? (0, _._)("#Sale_BannerVisibility_Warning")
-                        : void 0,
-                      fnRemoveAllArtwork:
-                        0 == _
-                          ? void 0
-                          : () => {
-                              (0, _._)(() => {
-                                (_.GetEventModel().jsondata.localized_sale_product_mobile_banner =
-                                  []),
-                                  _.SetDirty(_._.jsondata_sales);
-                              });
-                            },
-                    }),
-                  }),
-                !_ &&
-                  (0, _.jsx)(_, {
-                    strSectionId: "SalePageEdit_SaleOverlay",
-                    children: (0, _.jsx)(_._, {
-                      clanSteamID: _.GetClanSteamID(),
-                      requireAdmin: !0,
-                      className: _.SalePageLogoCtn,
-                      children: (0, _.jsx)(_._, {
-                        _: "SalePageEdit_SaleOverlay",
+              }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  strSectionId: "SalePageEdit_SaleLogo",
+                  children: (0, _.jsxs)("div", {
+                    className: _.SalePageLogoCtn,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        _: "SalePageEdit_SaleLogo",
                         clanSteamID: _.GetClanSteamID(),
                         eventModel: _.GetEventModel(),
                         appid: _,
-                        title: (0, _._)(
-                          "#EventEditor_ArtworkType_sale_overlay",
-                        ),
-                        artworkType: "sale_overlay",
+                        title: (0, _._)("#EventEditor_ArtworkType_sale_logo"),
+                        artworkType: "sale_logo",
                         elEventArtworkExample: (0, _.jsx)(_, {
-                          artworkType: "sale_overlay",
+                          artworkType: "sale_logo",
                         }),
-                        bIsMinimized: _("sale_overlay"),
-                        fnToggleMinimize: () => _("sale_overlay"),
-                        fnLangHasData: (_) => _.BHasImage("sale_overlay", _),
+                        bIsMinimized: _("sale_logo"),
+                        fnLangHasData: (_) => _.BHasImage("sale_logo", _),
                         fnSetImageURL: _.SetImageURL,
                         fnGetImageHashAndExt: _.GetImageHashAndExt,
+                        fnToggleMinimize: () => _("sale_logo"),
                         partnerEventStore: _._,
                         fnRemoveAllArtwork:
                           0 == _
                             ? void 0
                             : () => {
                                 (0, _._)(() => {
-                                  (_.GetEventModel().jsondata.localized_sale_overlay =
+                                  (_.GetEventModel().jsondata.localized_sale_logo =
                                     []),
                                     _.SetDirty(_._.jsondata_sales);
                                 });
                               },
                       }),
+                      (0, _.jsx)(_._, {
+                        label: (0, _._)(
+                          "#EventEditor_ArtworkType_sale_logo_url",
+                        ),
+                        value: _.GetEventModel().jsondata.sale_logo_url,
+                        tooltip: (0, _._)(
+                          "#EventEditor_ArtworkType_sale_logo_url_tooltip",
+                        ),
+                        onChange: (_) => {
+                          (0, _._)(() => {
+                            (_.GetEventModel().jsondata.sale_logo_url =
+                              _.target.value),
+                              _.SetDirty(_._.jsondata_sales);
+                          });
+                        },
+                      }),
+                    ],
+                  }),
+                }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  strSectionId: "SalePageEdit_SaleBanner",
+                  children: (0, _.jsx)(_._, {
+                    _: "SalePageEdit_SaleBanner",
+                    clanSteamID: _.GetClanSteamID(),
+                    eventModel: _.GetEventModel(),
+                    appid: _,
+                    fnLangHasData: (_) => _.BHasImage("product_banner", _),
+                    fnSetImageURL: _.SetImageURL,
+                    fnGetImageHashAndExt: _.GetImageHashAndExt,
+                    title: (0, _._)(
+                      "#EventEditor_ArtworkType_sale_product_banner",
+                    ),
+                    artworkType: "product_banner",
+                    bIsMinimized: _("product_banner"),
+                    fnToggleMinimize: () => _("product_banner"),
+                    strWarning: _
+                      ? (0, _._)("#Sale_BannerVisibility_Warning")
+                      : void 0,
+                    elEventArtworkExample: (0, _.jsx)(_, {
+                      artworkType: "product_banner",
+                    }),
+                    partnerEventStore: _._,
+                    fnRemoveAllArtwork:
+                      0 == _
+                        ? void 0
+                        : () => {
+                            (0, _._)(() => {
+                              (_.GetEventModel().jsondata.localized_sale_product_banner =
+                                []),
+                                _.SetDirty(_._.jsondata_sales);
+                            });
+                          },
+                  }),
+                }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  strSectionId: "SalePageEdit_SaleMobileBanner",
+                  children: (0, _.jsx)(_._, {
+                    _: "SalePageEdit_SaleMobileBanner",
+                    clanSteamID: _.GetClanSteamID(),
+                    eventModel: _.GetEventModel(),
+                    appid: _,
+                    title: (0, _._)(
+                      "#EventEditor_ArtworkType_sale_product_mobile_banner",
+                    ),
+                    artworkType: "product_mobile_banner",
+                    bIsMinimized: _("product_mobile_banner"),
+                    fnToggleMinimize: () => _("product_mobile_banner"),
+                    fnLangHasData: (_) =>
+                      _.BHasImage("product_mobile_banner", _),
+                    fnSetImageURL: _.SetImageURL,
+                    fnGetImageHashAndExt: _.GetImageHashAndExt,
+                    partnerEventStore: _._,
+                    strWarning: _
+                      ? (0, _._)("#Sale_BannerVisibility_Warning")
+                      : void 0,
+                    fnRemoveAllArtwork:
+                      0 == _
+                        ? void 0
+                        : () => {
+                            (0, _._)(() => {
+                              (_.GetEventModel().jsondata.localized_sale_product_mobile_banner =
+                                []),
+                                _.SetDirty(_._.jsondata_sales);
+                            });
+                          },
+                  }),
+                }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  strSectionId: "SalePageEdit_SaleOverlay",
+                  children: (0, _.jsx)(_._, {
+                    clanSteamID: _.GetClanSteamID(),
+                    requireAdmin: !0,
+                    className: _.SalePageLogoCtn,
+                    children: (0, _.jsx)(_._, {
+                      _: "SalePageEdit_SaleOverlay",
+                      clanSteamID: _.GetClanSteamID(),
+                      eventModel: _.GetEventModel(),
+                      appid: _,
+                      title: (0, _._)("#EventEditor_ArtworkType_sale_overlay"),
+                      artworkType: "sale_overlay",
+                      elEventArtworkExample: (0, _.jsx)(_, {
+                        artworkType: "sale_overlay",
+                      }),
+                      bIsMinimized: _("sale_overlay"),
+                      fnToggleMinimize: () => _("sale_overlay"),
+                      fnLangHasData: (_) => _.BHasImage("sale_overlay", _),
+                      fnSetImageURL: _.SetImageURL,
+                      fnGetImageHashAndExt: _.GetImageHashAndExt,
+                      partnerEventStore: _._,
+                      fnRemoveAllArtwork:
+                        0 == _
+                          ? void 0
+                          : () => {
+                              (0, _._)(() => {
+                                (_.GetEventModel().jsondata.localized_sale_overlay =
+                                  []),
+                                  _.SetDirty(_._.jsondata_sales);
+                              });
+                            },
                     }),
                   }),
-              ],
-            })
-          );
-        });
+                }),
+            ],
+          })
+        );
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8303,6 +8289,68 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            strSectionId: _,
+            hasMinimize: _,
+            strTitle: _,
+            children: _,
+            strToolTip: _,
+            valveOnly: _,
+            valveOnlyClanSteamID: _,
+            requireAdmin: _,
+            dataToCopy: _,
+          } = _,
+          _ = (0, _._)(() => _ && (0, _._)(_));
+        if (_ && !(0, _._)(_, _)) return null;
+        const _ = _
+          ? (_) => {
+              (0, _._)(_), _.preventDefault(), _.stopPropagation();
+            }
+          : void 0;
+        return (0, _.jsx)(_, {
+          strSectionId: _,
+          children: (0, _.jsxs)("div", {
+            _: _,
+            className: (0, _._)({
+              [_.SettingCtn]: !0,
+              [_.ValveOnly]: _ || !!_,
+            }),
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_.Title, _ && _.HasHover),
+                onClick: _,
+                children: [
+                  _,
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      tooltip: _,
+                    }),
+                  Boolean(_) &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          dataToCopy: _._.k_EventData_SubMenu,
+                        }),
+                        (0, _.jsx)(_._, {
+                          dataToPaste: _._.k_EventData_SubMenu,
+                        }),
+                      ],
+                    }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      bIsMinimized: _,
+                      fnToggleMinimize: () => (0, _._)(_),
+                    }),
+                ],
+              }),
+              !_ && _,
+            ],
+          }),
+        });
+      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
@@ -9318,77 +9366,93 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const _ = new Array();
-        _.rows.forEach((_) => {
-          _.push(
-            (0, _.jsx)(
-              "div",
-              {
-                _: "tc_" + _.strSectionId,
-                className: (0, _._)({
-                  [_.TOCEntry]: !0,
-                  [_.SectionOnScreen]: _.bSectionIsVisible,
-                  [_.strClassName]: !0,
-                  [_.TOCIndent]: _.bIndent,
-                }),
-                onClick: () => {
-                  _.onSelected && _.onSelected(_);
-                  let _ = document.getElementById(_.strSectionId);
-                  _ && (_.scrollIntoView(!0), window.scrollBy(0, -75));
+        return (
+          _.rows.forEach((_) => {
+            const _ = () => {
+              _.onSelected && _.onSelected(_);
+              let _ = document.getElementById(_.strSectionId);
+              _ && (_.scrollIntoView(!0), window.scrollBy(0, -75));
+            };
+            _.push(
+              (0, _.jsx)(
+                "div",
+                {
+                  _: "tc_" + _.strSectionId,
+                  role: "button",
+                  tabIndex: 0,
+                  className: (0, _._)(
+                    {
+                      [_.TOCEntry]: !0,
+                      [_.SectionOnScreen]: _.bSectionIsVisible,
+                      [_.TOCIndent]: _.bIndent,
+                    },
+                    _.strClassName,
+                  ),
+                  onClick: _,
+                  onKeyDown: (_) => {
+                    ("Enter" !== _.key && " " !== _.key) ||
+                      (_.preventDefault(), _());
+                  },
+                  children: (0, _.jsx)("div", {
+                    style: _.style,
+                    className: _.TOCEntryText,
+                    children: _.strLabel,
+                  }),
                 },
-                children: (0, _.jsx)("div", {
-                  style: _.style || null,
-                  className: _.TOCEntryText,
-                  children: _.strLabel,
-                }),
-              },
-              "tc_" + _.strSectionId,
-            ),
-          );
-        });
+                "tc_" + _.strSectionId,
+              ),
+            );
+          }),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(_.TableOfContentsContainer, _.className),
+            children: [
+              _.elHeader,
+              (0, _.jsxs)("div", {
+                className: _.TableOfContents,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Header,
+                    children: _.strHeader,
+                  }),
+                  _,
+                  _.elBottomContent,
+                ],
+              }),
+            ],
+          })
+        );
+      };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
         const _ = _.eventType == _.ajI;
         return (0, _.jsxs)("div", {
-          className: _.TableOfContentsContainer,
+          className: _.ManageLocCtn,
           children: [
-            (0, _.jsxs)("div", {
-              className: _.ManageLocCtn,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.Header,
-                  children: (0, _._)("#EventEditor_Loc_Title"),
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.ManageLocContents,
-                  children: [
-                    _
-                      ? (0, _._)("#EventEditor_Loc_Overview_Page")
-                      : (0, _._)("#EventEditor_Loc_Overview"),
-                    (0, _.jsx)("div", {
-                      className: _.LocButtonsCtn,
-                      children: _.elTopContent,
-                    }),
-                  ],
-                }),
-              ],
+            (0, _.jsx)("div", {
+              className: _.Header,
+              children: _._.Localize("#EventEditor_Loc_Title"),
             }),
             (0, _.jsxs)("div", {
-              className: _.TableOfContents,
+              className: _.ManageLocContents,
               children: [
+                _
+                  ? _._.Localize("#EventEditor_Loc_Overview_Page")
+                  : _._.Localize("#EventEditor_Loc_Overview"),
                 (0, _.jsx)("div", {
-                  className: _.Header,
-                  children: _.strHeader,
+                  className: _.LocButtonsCtn,
+                  children: _.children,
                 }),
-                _,
-                _.elBottomContent,
               ],
             }),
           ],
         });
-      };
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -9495,6 +9559,7 @@
       const _ = (0, _._)((_) => {
           const { editModel: _ } = _,
             _ = (0, _._)(),
+            _ = _(),
             [_, _, _, _] = (0, _._)(() => [
               (0, _._)(),
               (0, _._)(),
@@ -9576,9 +9641,12 @@
               _(_, "(VO) Custom CSS Editor", "SalePageEdit_CustomCSSCode")),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_, {
-                eventType: _.editModel.GetEventType(),
-                elTopContent: (0, _.jsx)(_, {
-                  editModel: _.editModel,
+                className: _().SalePageTOCPlacement,
+                elHeader: (0, _.jsx)(_, {
+                  eventType: _.editModel.GetEventType(),
+                  children: (0, _.jsx)(_, {
+                    editModel: _.editModel,
+                  }),
                 }),
                 strHeader: (0, _._)("#Sale_TOC"),
                 rows: _,
@@ -11690,8 +11758,10 @@
         return _
           ? (0, _.jsx)(_._, {
               children: (0, _.jsx)(_, {
-                editModel: _,
-                mode: _,
+                children: (0, _.jsx)(_, {
+                  editModel: _,
+                  mode: _,
+                }),
               }),
             })
           : _ == _.ajI

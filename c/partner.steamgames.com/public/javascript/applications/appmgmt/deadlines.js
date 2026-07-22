@@ -2098,7 +2098,7 @@
                             onClick: () =>
                               window.open(
                                 _._.HELP_BASE_URL +
-                                  "en/wizard/HelpWithPublishing?issueid=904",
+                                  "wizard/HelpWithPublishing?issueid=904",
                                 "_blank",
                               ),
                             className: _().NotificationButton,

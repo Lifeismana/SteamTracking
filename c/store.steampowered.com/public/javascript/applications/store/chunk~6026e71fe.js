@@ -391,43 +391,47 @@
         strWidescreenWidth: "1700px",
         strMidscreenWidth: "940px",
         strPhoneWidth: "768px",
-        FacetedBrowseInnerCtn: "_3vjDu6zylspBzUE7FmM6Yl",
-        FacetedBrowseControls: "_1JM3A81UO1KoAFlVTA3a8O",
-        FacetList: "_3XVd2muqXLYd2dNJEe3Xyj",
-        FacetMenuTitle: "_2HmeH7CKXh-UZS3UgKQ9DL",
-        FacetedBrowseMatchCount: "_3_OwRHMdhLqzhaZ9Y0aSlK",
-        FacetedBrowseReset: "_3jRGARq9XRw0uVd6lwd8E8",
-        Facet: "Qa8BXBnhFcu7QgSy5RqD",
-        FacetTitleCtn: "lDWZOvvYt_I38AKpMGNoE",
-        FacetTitle: "_3Jg7mwjxVKjnATI6MUQiGK",
-        FacetValue: "_12piyDV8d50GcK-wlEd3fy",
-        FacetValueEnabled: "TZdshfRox53mYuERxC510",
-        FacetValueDeactivated: "_2OE4sA183JjLeguru8dVfj",
-        FacetValueName: "_2uSEnLjFPyX4-yugJ6ZaEt",
-        FacetValueDescription: "_1inQ19muJm6rBJWJNHyPSx",
-        FacetValueShowMore: "_2b0ptP1NNBI0nXI0jsLlSO",
-        FacetedBrowseItems: "_3EdZTDIisUpowxwm6uJ7Iq",
-        FacetedBrowsePopupCtn: "_24dqXeaCgVvEZiayDaTquu",
-        FacetedBrowsePopupLabel: "zux_uSpUKU26Qnmh3MlFz",
-        FacetedBrowsePopup: "_2FEDs7kEuJtGGf36_PiaGZ",
-        FacetedBrowseFeedbackLink: "rpvzDfG6xbJVPUwzI49cl",
-        FacetValuePriceSlider: "FdYHbkrRE4XLP9tzEWPzZ",
-        SelectedFacetValuesTitle: "_2zYJo5ygwHplvJw4wZI5ly",
-        SelectedFacetValuesList: "T2laXwxJLS6qZ1Ko0q0Db",
-        SelectedFacetValueCtn: "_2XgkK2m_01lZYUuqv34NBt",
-        FacetValueSearch: "_3-lHtLWJ9p9OkKHzA4E5J",
-        BackgroundAnimation: "Uwgkqeb94UMwmyJ_dUvKp",
-        "ItemFocusAnim-darkerGrey-nocolor": "_2fOUgihscvE65oigXmaKB1",
-        "ItemFocusAnim-darkerGrey": "_2Zz5YKG-AtieYorMauAzsN",
-        "ItemFocusAnim-darkGreySettings": "_3LGTy6zChHph675eNQUXkq",
-        "ItemFocusAnim-darkGrey": "_3Clab3jPQdWdPjgkUVd_xv",
-        "ItemFocusAnim-grey": "_3nkj24RHleWUwg-w5PZLID",
-        "ItemFocusAnim-translucent-white-10": "_2hSev8SqoBLyqKXG9DVTKf",
-        "ItemFocusAnim-translucent-white-20": "_30yD4uxlh91iHAdEGY74J",
-        "ItemFocusAnimBorder-darkGrey": "_3IDOCzgA5UCrpPZXIcD8hI",
-        "ItemFocusAnim-green": "_5LpNLX8FjM9wN-9PEP5V6",
-        focusAnimation: "_11xvupbR5KirKWCbdSFawu",
-        hoverAnimation: "_1RFNh7VpFmEfjWpyEErvJO",
+        FacetedBrowseInnerCtn: "_21kblrCh3VR0BAgfqxyMRA",
+        FacetedBrowseItems: "_1ujNYGRQ8beCcurOxXJxGS",
+        FacetedBrowsePopupCtn: "BRn4HsM4kGOB90hVu5AYy",
+        FacetedBrowsePopupLabel: "_3zC_HWOm6j9mLBNRt5mgQV",
+        FacetedBrowsePopup: "_30JaOm6jg8GiGqvzxxPykR",
+        FacetedBrowseFeedbackLink: "_2o62_OefNFPgo3Q6j3DLY0",
+        BackgroundAnimation: "_2ibc2D6E-PTCyswsdZO1oD",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3zxUYOidW6ZwHxMz92nptx",
+        "ItemFocusAnim-darkerGrey": "_1fp149aJEmPBKq_0uDzx53",
+        "ItemFocusAnim-darkGreySettings": "_13BkAFhdVdQABPN-HRZmso",
+        "ItemFocusAnim-darkGrey": "sMLzD1wPYFYHHlliOFN7c",
+        "ItemFocusAnim-grey": "_3PK0fEpRcWxQzmMG_O2Ges",
+        "ItemFocusAnim-translucent-white-10": "_1HyH1MqO1T-UG80aLCUCMm",
+        "ItemFocusAnim-translucent-white-20": "_1DKBVwUUPQ5uFFAZFwt83j",
+        "ItemFocusAnimBorder-darkGrey": "_1WxgrqU_-fuKzF793_ISzD",
+        "ItemFocusAnim-green": "_3QmNSO0bi4cTWQqy8JrBso",
+        focusAnimation: "_2aZZL_SL1jj1B3poHtbAAZ",
+        hoverAnimation: "_3wfeuthDhOTnW4FhNzpsB2",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        FacetedBrowseControls: "_1RvYuzgLwCzzw8Pzy8eNiV",
+        FacetList: "_2ERaJ8wn7H5pJ5jahiWPPG",
+        FacetMenuTitle: "YOcgAqE4A7zGGirQVte00",
+        FacetedBrowseMatchCount: "_3iembTiag9T-QUR2yDg-mr",
+        FacetedBrowseReset: "_3uoutr_Is-pIYgTOcicO7V",
+        Facet: "_2iO0kA8HAETrOU7L6acOQd",
+        FacetTitleCtn: "_38pwyhBByF16mpyYBTBCQ3",
+        FacetTitle: "_20Wv2eNVnJ3m01hzk8ZnLL",
+        FacetValue: "_1_EtMgZQF4RHB8tOPvAEte",
+        FacetValueEnabled: "UYa5xyjEvTaVxbH9dxmj2",
+        FacetValueDeactivated: "_1CCOcR6x5Sf3rKz6XCbFjq",
+        FacetValueName: "_3jKfcG2j3Z1ZOPloJQ4a9M",
+        FacetValueDescription: "-xonoZd4I8ScB_xVi-xpV",
+        FacetValueShowMore: "TWoZMIJ151sicYqKm0-IT",
+        FacetValuePriceSlider: "_2GZduGHJ22_CeGmyfwmIj6",
+        SelectedFacetValuesTitle: "xf4U93BbkVBWuW_Ieay1O",
+        SelectedFacetValuesList: "_2Dqs-GHSCajtPu35S5buNl",
+        SelectedFacetValueCtn: "_2upU6ldC4f0edJZYF3aCnz",
+        FacetValueSearch: "_1zcMdNHKDFbHHgEeY52mJc",
       };
     },
     chunkid: (module) => {
@@ -1716,6 +1720,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = _ ?? _?.focusable ?? !!_.href,
           _ = (0, _._)(
             {
@@ -1725,7 +1730,7 @@
             },
             _,
           );
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ..._,
               ...(_ || {}),
@@ -1744,6 +1749,7 @@
       ];
       function _(_) {
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = _ ?? _?.focusable ?? !!_.onClick,
           _ = (0, _.jsx)("span", {
             role: "button",
@@ -1756,7 +1762,7 @@
               _,
             ),
           });
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ...(_ || {}),
               focusable: _,
@@ -4000,44 +4006,9 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "[object Object]" === Object.prototype.toString.call(_);
-      }
-      function _(..._) {
-        return JSON.stringify(_, (_, _) => {
-          if (
-            (function (_) {
-              if (!_(_)) return !1;
-              const _ = _.constructor;
-              if (void 0 === _) return !0;
-              const _ = _.prototype;
-              return (
-                !!_(_) &&
-                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
-              );
-            })(_)
-          ) {
-            const _ = {};
-            return (
-              Object.keys(_)
-                .sort()
-                .forEach((_) => {
-                  _[_] = _[_];
-                }),
-              _
-            );
-          }
-          return _;
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      const _ = (0, _.createContext)({
-        instances: {},
-        factories: {},
-      });
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4085,18 +4056,7 @@
         return ["hardwaredetail", _];
       }
       function _(_) {
-        return (function (_, _) {
-          const _ = (0, _.useContext)(_),
-            _ = "string" == typeof _ ? _ : _(..._);
-          let _ = _;
-          for (; _; ) {
-            if (_ in _.instances) return _.instances[_];
-            if (_ in _.factories) break;
-            _ = _.parent;
-          }
-          const _ = (_?.factories[_] ?? _)();
-          return ((_ ?? _).instances[_] = _), _;
-        })("HardwareDetailLoader", () =>
+        return (0, _._)("HardwareDetailLoader", () =>
           (function (_) {
             return new (_())(async (_) => {
               const _ = await (async function (_, _) {
@@ -15673,1079 +15633,46 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_priceStopInfo = [];
-        m_asyncLoader = null;
-        GetPriceStops() {
-          return this.m_priceStopInfo;
-        }
-        async LoadPriceStops() {
-          return (
-            this.m_asyncLoader ||
-              (this.m_asyncLoader = this.InternalLoadPriceStops()),
-            this.m_asyncLoader
+      const _ = ["sale", "pricestops"];
+      function _() {
+        const _ = (0, _._)("pricestops", "application_config");
+        if (_ && _.length > 0) return (_[0].price = 0), _;
+      }
+      async function _() {
+        const _ = _._.STORE_BASE_URL + "saleaction/ajaxgetpricestops",
+          _ = await _().get(_);
+        if (_?.data?.success !== _._)
+          throw new Error(
+            "Unable to load price stop data: " + _?.data?.success,
           );
-        }
-        async InternalLoadPriceStops() {
-          if (this.m_priceStopInfo?.length > 0) return;
-          const _ = _._.STORE_BASE_URL + "saleaction/ajaxgetpricestops";
-          let _;
-          try {
-            if (((_ = await _().get(_)), _?.data?.success !== _._))
-              return (
-                console.error(
-                  "CPriceStopStore: Unable to load price stop data: ",
-                  _?.data?.success,
-                ),
-                null
-              );
-          } catch (_) {
-            return (
-              console.error(
-                "CPriceStopStore: Unable to load price stop data: ",
-                _?.data?.success,
-              ),
-              null
-            );
-          }
-          (this.m_priceStopInfo = _.data.rgPriceStops),
-            (this.m_priceStopInfo[0].price = 0);
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleInteractionStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-        Init() {
-          const _ = (0, _._)("pricestops", "application_config");
-          _ &&
-            ((this.m_priceStopInfo = _), (this.m_priceStopInfo[0].price = 0));
-        }
+        const _ = _.data.rgPriceStops;
+        return _.length > 0 && (_[0].price = 0), _;
       }
       function _() {
-        return _.Get().GetPriceStops();
-      }
-      (0, _._)([_._], _.prototype, "m_priceStopInfo", void 0),
-        (0, _._)([_._], _.prototype, "LoadPriceStops", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_facets = [];
-        m_nFilteredCapsuleCount;
-        m_facetCounts;
-        m_mapMultiFacetCounts;
-        m_bUnboundedScope = !1;
-        m_facetSortKey = _._.k_ESortFacetsByMatchCount;
-        m_language = _.xPp;
-        m_bHasHideIgnoredItemsFacetValue;
-        m_matchingReferencedCapsules;
-        m_strQuery;
-        m_strURLParam;
-        m_strFacetDefinitionHash;
-        m_nSelectedOptions;
-        m_userPreferences;
-        m_prunedFacets;
-        m_sortedFacets = [];
-        m_setCapsulesRemovedByUserPreferenceFilters;
-        m_nSolrMatchCount;
-        constructor(_, _, _, _) {
-          (0, _._)(this),
-            (this.m_facetSortKey = _),
-            (this.m_language = _),
-            (this.m_bUnboundedScope = _),
-            (async function () {
-              _.Get().LoadPriceStops();
-            })(),
-            (this.m_facets = []),
-            _.forEach((_) => {
-              const _ = [];
-              _.facetValues.forEach((_) => {
-                _.push({
-                  facetValue: _,
-                  bEnabled: Boolean(_.bEnabledByDefault),
-                  nPriceStopIndex: Boolean(_().length > 0)
-                    ? _().length - 1
-                    : void 0,
-                  bDeactivated: !1,
-                  nMatchingFilteredCapsules: null,
-                  bHiddenBySearch: !1,
-                });
-              }),
-                this.m_facets.push({
-                  facet: _,
-                  facetValues: _,
-                  matchingCapsules: null,
-                  matchingCapsulesInOtherFacets: null,
-                });
-            }),
-            this.PruneFacets(),
-            this.UpdateFacetDefinitionHash(_),
-            this.UpdateFilter(),
-            (this.m_bHasHideIgnoredItemsFacetValue = _.some((_) =>
-              _.facetValues.some(
-                (_) =>
-                  _.type === _._.k_EUserPreference &&
-                  _.userPreference === _._.k_EHideIgnoredItems,
-              ),
-            )),
-            this.SortFacets();
-        }
-        BHasHideIgnoredItemsFacetValue() {
-          return this.m_bHasHideIgnoredItemsFacetValue;
-        }
-        GetFacets() {
-          return this.m_facets;
-        }
-        GetQuery() {
-          return this.m_strQuery;
-        }
-        GetURLParam() {
-          return this.m_strURLParam;
-        }
-        GetFacetDefinitionHash() {
-          return this.m_strFacetDefinitionHash;
-        }
-        GetSelectedOptionsCount() {
-          return this.m_nSelectedOptions;
-        }
-        BIsUserPreferenceEnabled(_) {
-          return this.m_userPreferences.has(_);
-        }
-        BIsAnyUserPreferenceEnabled() {
-          return this.m_userPreferences.size > 0;
-        }
-        GetSortedFacets() {
-          return this.m_sortedFacets;
-        }
-        GetMatchCount() {
-          return this.m_nFilteredCapsuleCount;
-        }
-        Reset() {
-          this.m_facets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
-            });
-          }),
-            this.UpdateFilter();
-        }
-        SetFromURLParam(_) {
-          if (_ === this.m_strURLParam) return;
-          this.m_facets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
-            });
-          });
-          (_?.split(",") || []).forEach((_) => {
-            const _ = _.split(":"),
-              _ = Number(_[0]);
-            _[1].split("|").forEach((_) => {
-              if (_.includes("_")) {
-                const _ = _.split("_");
-                (this.m_facets[_].facetValues[Number(_[0])].bEnabled = !0),
-                  (this.m_facets[_].facetValues[Number(_[0])].nPriceStopIndex =
-                    Number(_[1]));
-              } else
-                this.m_facets[_].facetValues[Number(_)].bEnabled =
-                  !this.m_facets[_].facetValues[Number(_)].facetValue
-                    .bEnabledByDefault;
-            });
-          }),
-            this.UpdateFilter();
-        }
-        SetFacetCounts(_) {
-          if (((this.m_facetCounts = new Map()), _))
-            for (const _ of Object.keys(_))
-              this.m_facetCounts.set(Number(_), Number(_[_]));
-        }
-        SetMultiFacetCounts(_) {
-          if (((this.m_mapMultiFacetCounts = new Map()), _))
-            for (const _ of Object.keys(_)) {
-              const _ = _[_],
-                _ = new Map();
-              if ("discounted" === _) {
-                let _ = 0;
-                for (const _ of Object.keys(_)) _ += Number(_[_]);
-                _.set("true", _);
-              } else for (const _ of Object.keys(_)) _.set(_, Number(_[_]));
-              this.m_mapMultiFacetCounts.set(_, _);
-            }
-        }
-        FilterCapsules(_) {
-          return null == this.m_matchingReferencedCapsules
-            ? _
-            : _.filter((_) => this.m_matchingReferencedCapsules.has(_(_)));
-        }
-        SetSolrMatchCount(_) {
-          this.m_nSolrMatchCount = _;
-        }
-        SetFacetValueSearchString(_, _, _) {
-          for (const _ of this.m_facets)
-            for (const _ of _.facetValues) _.bHiddenBySearch = !1;
-          if (!_) return;
-          const _ = _.toLocaleLowerCase().trim();
-          if (0 !== _.length)
-            for (const _ of this.m_facets)
-              for (const _ of _.facetValues) {
-                (
-                  _(_.facetValue, _, _)?.toLocaleLowerCase().trim() || ""
-                ).includes(_) || (_.bHiddenBySearch = !0);
-              }
-        }
-        UpdateFilter() {
-          this.UpdateQuery(),
-            this.UpdateURLParam(),
-            this.UpdateSelectedOptionsCount(),
-            this.UpdateUserPreferenceFilters();
-        }
-        UpdateFacetDefinitionHash(_) {
-          this.m_strFacetDefinitionHash = String((0, _._)((0, _._)(_)));
-        }
-        static BFacetHasEnabledOptTags(_) {
-          for (const _ of _.facetValues)
-            if (_.bEnabled && null != _.facetValue.filter)
-              for (const _ of _.facetValue.filter.clauses)
-                for (const _ of _.or_tags) if (_.startsWith("[Opt]")) return !0;
-          return !1;
-        }
-        UpdateQuery() {
-          let _ = {
-            type: _._.k_EStoreFilterClauseTypeAnd,
-            rgSubexpressions: new Array(),
-          };
-          this.m_facets.forEach((_) => {
-            if (_.BFacetHasEnabledOptTags(_)) return;
-            const _ = {
-              type: _.facet.logical_and
-                ? _._.k_EStoreFilterClauseTypeAnd
-                : _._.k_EStoreFilterClauseTypeOr,
-              rgSubexpressions: new Array(),
-            };
-            _.facetValues.forEach((_) => {
-              if (_.bEnabled && Boolean(_.facetValue.rgStoreTagFilter)) {
-                if (_.facetValue.type === _._.k_EUserPreference) return;
-                const _ = {
-                  ..._.facetValue.rgStoreTagFilter,
-                };
-                _.facetValue.type === _._.k_EPrice &&
-                  (_.value = Boolean(
-                    _().length > 0 &&
-                      null != _.nPriceStopIndex &&
-                      -1 != _.nPriceStopIndex,
-                  )
-                    ? _()[_.nPriceStopIndex].price
-                    : void 0),
-                  (_.facetValue.type !== _._.k_EPrice ||
-                    Boolean(_().length > 0)) &&
-                    _.rgSubexpressions.push(_);
-              }
-            }),
-              0 !== _.rgSubexpressions.length && _.rgSubexpressions.push(_);
-          }),
-            (_ = (0, _._)(_)),
-            (this.m_strQuery = Boolean(_) ? JSON.stringify(_) : "");
-        }
-        UpdateURLParam() {
-          const _ = [];
-          this.m_facets.forEach((_, _) => {
-            const _ = [];
-            if (
-              (_.facetValues.forEach((_, _) => {
-                _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
-                  (_.facetValue.type === _._.k_EPrice
-                    ? _.push(_ + "_" + _.nPriceStopIndex)
-                    : _.push(_.toString()));
-              }),
-              0 === _.length)
-            )
-              return;
-            const _ = _.join("|");
-            _.push(_ + ":" + _);
-          }),
-            (this.m_strURLParam = _.length > 0 ? _.join(",") : void 0);
-        }
-        UpdateSelectedOptionsCount() {
-          (this.m_nSelectedOptions = 0),
-            this.m_facets.forEach((_) => {
-              _.facetValues.forEach((_) => {
-                _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
-                  ++this.m_nSelectedOptions;
-              });
-            });
-        }
-        UpdateUserPreferenceFilters() {
-          (this.m_userPreferences = new Set()),
-            this.m_facets.forEach((_) => {
-              _.facetValues.forEach((_) => {
-                _.facetValue.type === _._.k_EUserPreference &&
-                  _.bEnabled &&
-                  this.m_userPreferences.add(_.facetValue.userPreference);
-              });
-            });
-        }
-        PruneFacets() {
-          (this.m_prunedFacets = []),
-            this.m_facets.forEach((_) => {
-              _.facetValues.forEach((_) => {
-                (_.bDeactivated = !1), (_.nMatchingFilteredCapsules = null);
-              }),
-                this.m_prunedFacets.push({
-                  facet: _,
-                  facetValues: _.facetValues,
-                });
-            }),
-            this.PruneFacetsForCurrentUser();
-        }
-        PruneFacetsForCurrentUser() {
-          this.m_prunedFacets.forEach((_) => {
-            _.facetValues = _.facetValues.filter((_) =>
-              _.facetValue.type === _._.k_EContentDescriptor
-                ? !_._.Get().BIsLoaded() ||
-                  _._.Get().BIncludesContentDescriptor(
-                    _.facetValue.contentDescriptor,
-                  )
-                : _.facetValue.type === _._.k_ELanguage
-                  ? !_._.Get().BIsLoaded() ||
-                    _.facetValue.language === _.Bhc ||
-                    ((0 !== _._.Get().GetSecondaryLanguages().size ||
-                      _._.Get().GetPrimaryLanguage() !== _.Bhc) &&
-                      (_._.Get().GetPrimaryLanguage() ===
-                        _.facetValue.language ||
-                        _._.Get()
-                          .GetSecondaryLanguages()
-                          .has(_.facetValue.language)))
-                  : _.facetValue.type !== _._.k_EUserPreference ||
-                    (_._.logged_in && _._.Get().BIsLoaded()),
-            );
-          }),
-            (this.m_prunedFacets = this.m_prunedFacets.filter(
-              (_) => _.facetValues.length > 0,
-            ));
-        }
-        UpdateMatchingFilteredCapsuleCounts() {
-          this.m_prunedFacets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.nMatchingFilteredCapsules = this.GetMatchCountForFacetValue(_);
-            });
-          });
-        }
-        GetMatchCountForFacetValue(_) {
-          if (this.m_mapMultiFacetCounts) {
-            const _ = "402",
-              _ = "401",
-              _ = "9",
-              _ = "28",
-              _ = "18",
-              _ = "41",
-              _ = "42",
-              _ = "43",
-              _ = "44",
-              _ = "61",
-              _ = "37",
-              _ = this.CollapseFilter(_.facetValue.rgStoreTagFilter);
-            switch (_.facetValue.type) {
-              case _._.k_ESaleTagFilter:
-              case void 0:
-                if (
-                  _?.type === _._.k_EStoreFilterClauseTypeStoreTag &&
-                  _.facetValue.nAtomicStoreTagID
-                )
-                  return this.m_mapMultiFacetCounts
-                    .get("tagidset")
-                    ?.get(_.facetValue.nAtomicStoreTagID.toString());
-                if (_?.type === _._.k_EStoreFilterClauseTypeFeatureTag)
-                  switch (_.value) {
-                    case "windows":
-                      return this.m_mapMultiFacetCounts
-                        .get("platform_win")
-                        ?.get("true");
-                    case "linux":
-                      return this.m_mapMultiFacetCounts
-                        .get("platform_linux")
-                        ?.get("true");
-                    case "mac":
-                      return this.m_mapMultiFacetCounts
-                        .get("platform_mac")
-                        ?.get("true");
-                    case "vr":
-                      return this.m_mapMultiFacetCounts
-                        .get("vrsupport")
-                        ?.get(_);
-                    case "vr only":
-                      return this.m_mapMultiFacetCounts
-                        .get("vrsupport")
-                        ?.get(_);
-                    case "full controller":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                    case "any controller":
-                      return (
-                        this.m_mapMultiFacetCounts.get("category")?.get(_) ||
-                        this.m_mapMultiFacetCounts.get("category")?.get(_)
-                      );
-                    case "remote play":
-                      return Math.max(
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                        this.m_mapMultiFacetCounts.get("category")?.get(_),
-                      );
-                    case "remote play together":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                    case "free":
-                      return this.m_mapMultiFacetCounts.get("genre")?.get(_);
-                    case "discounted":
-                      return this.m_mapMultiFacetCounts
-                        .get("discounted")
-                        ?.get("true");
-                    case "coop":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                    case "hdr":
-                      return this.m_mapMultiFacetCounts.get("category")?.get(_);
-                  }
-                break;
-              case _._.k_EAppType:
-                let _ = _.facetValue.appType;
-                return (
-                  !_ &&
-                    _.type == _._.k_EStoreFilterClauseTypeAppType &&
-                    "string" == typeof _.value &&
-                    _.value.length &&
-                    (_ = _.value),
-                  this.m_mapMultiFacetCounts.get("type")?.get(_)
-                );
-              case _._.k_ELanguage:
-                const _ = (0, _.LgB)(_.facetValue.language);
-                return this.m_mapMultiFacetCounts
-                  .get("supportedlang_" + _)
-                  ?.get("true");
-              case _._.k_EContentDescriptor:
-                return this.m_mapMultiFacetCounts
-                  .get("descids")
-                  ?.get(_.facetValue.contentDescriptor.toString());
-            }
-          } else if (this.m_facetCounts)
-            return this.m_facetCounts?.get(_.facetValue.nAtomicStoreTagID);
-          return null;
-        }
-        CollapseFilter(_) {
-          if (!_) return _;
-          let _ = _;
-          for (
-            ;
-            (_.type == _._.k_EStoreFilterClauseTypeOr ||
-              _.type == _._.k_EStoreFilterClauseTypeAnd) &&
-            1 == _.rgSubexpressions?.length;
-          )
-            _ = _.rgSubexpressions[0];
-          return _;
-        }
-        DeactivateFacetValues() {
-          this.m_prunedFacets.forEach((_) => {
-            _.facetValues.forEach((_) => {
-              _.bDeactivated = !1;
-            });
-          }),
-            this.m_prunedFacets.forEach((_) => {
-              const _ = _(_.facet.facet);
-              _.facetValues.forEach((_) => {
-                let _ = _.nMatchingFilteredCapsules;
-                _.bDeactivated = !(
-                  _.bEnabled ||
-                  _ ||
-                  0 !== _ ||
-                  _.facetValue.type === _._.k_EUserPreference
-                );
-              });
-            });
-        }
-        SortFacets() {
-          this.UpdateMatchingFilteredCapsuleCounts(),
-            this.DeactivateFacetValues(),
-            (this.m_sortedFacets = []),
-            this.m_prunedFacets.forEach((_) => {
-              const _ = _.facetValues.slice();
-              _.sort((_, _) => {
-                if (
-                  _.facetValue.type === _._.k_EPrice &&
-                  _.facetValue.type !== _._.k_EPrice
-                )
-                  return 1;
-                if (
-                  _.facetValue.type !== _._.k_EPrice &&
-                  _.facetValue.type == _._.k_EPrice
-                )
-                  return -1;
-                if (_.bEnabled !== _.bEnabled) return _.bEnabled ? 1 : -1;
-                if (_.bDeactivated !== _.bDeactivated)
-                  return _.bDeactivated ? 1 : -1;
-                if (!_.bEnabled && !_.bDeactivated) {
-                  if (
-                    _.facetValue.type === _._.k_ELanguage &&
-                    _.facetValue.type === _._.k_ELanguage
-                  )
-                    return _.facetValue.language ===
-                      _._.Get().GetPrimaryLanguage()
-                      ? 1
-                      : -1;
-                  const _ = _.nMatchingFilteredCapsules || 0,
-                    _ = _.nMatchingFilteredCapsules || 0;
-                  if (
-                    this.m_facetSortKey === _._.k_ESortFacetsByMatchCount &&
-                    _ !== _
-                  )
-                    return _ - _;
-                }
-                if (this.m_facetSortKey === _._.k_ESortFacetsByName) {
-                  const _ = _._.GetWithFallback(
-                      _.facetValue.name,
-                      this.m_language,
-                    ),
-                    _ = _._.GetWithFallback(_.facetValue.name, this.m_language);
-                  return __webpack_require__.localeCompare(_);
-                }
-                return 0;
-              }),
-                this.m_sortedFacets.push({
-                  ..._,
-                  facetValues: _,
-                });
-            });
-        }
-        async ApplyUserPreferenceFilters(_, _, _) {
-          const _ = this.BHasHideIgnoredItemsFacetValue(),
-            _ = this.BIsUserPreferenceEnabled(_._.k_EHideOwnedItems),
-            _ = this.BIsUserPreferenceEnabled(_._.k_EHideWishlistedItems),
-            _ = this.BIsUserPreferenceEnabled(_._.k_EHideIgnoredItems);
-          let _ = [];
-          const _ = await (0, _._)(_, _, _, _, _, _, _);
-          if (
-            ((this.m_setCapsulesRemovedByUserPreferenceFilters = new Set(
-              _.map(_),
-            )),
-            _)
-          )
-            for (const _ of _) __webpack_require__.push(_);
-          return _;
-        }
-        UpdateMatchCount(_, _) {
-          _
-            ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
-              (this.m_nFilteredCapsuleCount -=
-                this.m_setCapsulesRemovedByUserPreferenceFilters?.size || 0))
-            : (this.m_nFilteredCapsuleCount = _),
-            this.SortFacets();
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_facets", void 0),
-        (0, _._)([_._], _.prototype, "m_sortedFacets", void 0),
-        (0, _._)([_._], _.prototype, "Reset", null),
-        (0, _._)([_._], _.prototype, "SetFromURLParam", null),
-        (0, _._)([_._], _.prototype, "SetFacetCounts", null),
-        (0, _._)([_._], _.prototype, "SetMultiFacetCounts", null),
-        (0, _._)([_._], _.prototype, "SetSolrMatchCount", null),
-        (0, _._)([_._], _.prototype, "SetFacetValueSearchString", null),
-        (0, _._)([_._], _.prototype, "UpdateMatchCount", null);
-      const _ = (0, _._)(function (_) {
-          const {
-              language: _,
-              linkColor: _,
-              headingColor: _,
-              background: _,
-              styleOverrides: _,
-              facetFilterState: _,
-              fnOnUpdateFilter: _,
-              onInitFilter: _,
-            } = _,
-            [_, _] = (0, _.useState)(""),
-            { data: _ } = (0, _._)((0, _.LgB)(_));
-          let _, _;
-          _?.menu ||
-            (_ = {
-              ..._,
-              color: _ || "white",
-            }),
-            _?.menuTitle ||
-              (_ = {
-                borderBottom: "0px solid " + (_ || "white"),
-                color: _ || "white",
-              });
-          const _ = (0, _.useRef)(null),
-            _ = () => {
-              _.UpdateFilter(), _();
-            };
-          return (
-            _.useEffect(() => {
-              !_ && _ && _();
-            }, [_, _]),
-            _.useEffect(() => {
-              _ &&
-                _.rgItems &&
-                (_.SetFacetCounts(_.faceting),
-                _.SetMultiFacetCounts(_.multifaceting),
-                _.SetSolrMatchCount(_.nMatchCount),
-                _.UpdateMatchCount(_.bMoreAvailable, _.rgItems?.length));
-            }, [
-              _,
-              _.bMoreAvailable,
-              _.faceting,
-              _.multifaceting,
-              _.nMatchCount,
-              _.rgItems,
-              _.rgItems?.length,
-            ]),
-            _
-              ? (0, _.jsxs)("div", {
-                  ref: _,
-                  className: _?.menu || _.FacetedBrowseControls,
-                  style: _,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _?.menuTitle || _.FacetMenuTitle,
-                      style: _,
-                      children: (0, _._)("#FacetedBrowse_Heading"),
-                    }),
-                    (0, _.jsx)(_, {
-                      facets: _?.GetSortedFacets(),
-                      onUpdateFilter: _,
-                      ..._,
-                    }),
-                    Boolean(_) &&
-                      (0, _.jsx)("div", {
-                        className: _?.matchCount || _.FacetedBrowseMatchCount,
-                        children:
-                          null != _.GetMatchCount() &&
-                          (0, _._)(
-                            "#FacetedBrowse_MatchCount",
-                            _.GetMatchCount(),
-                          ),
-                      }),
-                    (0, _.jsx)("div", {
-                      className: _.FacetValueSearch,
-                      children: (0, _.jsx)(_._, {
-                        type: "text",
-                        value: _,
-                        placeholder: (0, _._)(
-                          "#FacetedBrowse_SearchFacetValues",
-                        ),
-                        onChange: (_) => {
-                          _(_.target.value),
-                            _.SetFacetValueSearchString(_.target.value, _, _);
-                        },
-                        bShowClearAction: !0,
-                      }),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.FacetList,
-                      children: _?.GetSortedFacets()?.map((_, _) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            facet: _,
-                            facetFilterState: _,
-                            nFacetIndex: _,
-                            language: _,
-                            nMaxFacetValues: _.nMaxFacetValues,
-                            highlightedFacetColor: _.highlightedFacetColor,
-                            linkColor: _.linkColor,
-                            headingColor: _.headingColor,
-                            fnOnUpdateFilter: _,
-                            styleOverrides: _,
-                            bSearching: _?.length > 0,
-                            bInitiallyExpanded:
-                              _.facet.facet.bInitiallyExpanded,
-                            bSingleSelection: _.facet.facet.single_selection,
-                          },
-                          "facet_" +
-                            _._.GetWithFallback(_.facet.facet.name, _) +
-                            "_" +
-                            _,
-                        ),
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _?.reset || _.FacetedBrowseReset,
-                      children: (0, _.jsx)("a", {
-                        onClick: (_) => {
-                          _.preventDefault();
-                          const _ =
-                            _.current.getBoundingClientRect().top +
-                            window.scrollY;
-                          window.scrollTo(0, _);
-                        },
-                        children: (0, _._)("#FacetedBrowse_ReturnToTop"),
-                      }),
-                    }),
-                  ],
-                })
-              : null
-          );
-        }),
-        _ = (0, _._)(function (_) {
-          const { facets: _ } = _,
-            [_, _] = (0, _.useState)([]);
-          return (
-            (0, _.useEffect)(() => {
-              const _ = [];
-              if (_)
-                for (const _ of _)
-                  for (const _ of _.facetValues)
-                    _.bEnabled &&
-                      _.facetValue.type !== _._.k_EPrice &&
-                      _.push(_);
-              _(_);
-            }, [_]),
-            _
-              ? (0, _.jsx)(_.Fragment, {
-                  children: (0, _.jsx)("div", {
-                    className: _.SelectedFacetValuesList,
-                    children: __webpack_require__.map((_, _) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          facetValue: _,
-                          ..._,
-                        },
-                        _.facetValue.unique_id + "_" + _,
-                      ),
-                    ),
-                  }),
-                })
-              : null
-          );
-        }),
-        _ = (0, _._)(function (_) {
-          const { facetValue: _, language: _, onUpdateFilter: _ } = _,
-            _ = _(_.facetValue, _);
-          return (0, _.jsxs)("a", {
-            className: _.SelectedFacetValueCtn,
-            onClick: (_) => {
-              _.preventDefault(), (_.bEnabled = !1), _ && _();
-            },
-            children: [
-              (0, _.jsx)(_.i6V, {}),
-              (0, _.jsx)("span", {
-                className: _.SelectedFacetValue,
-                children: _,
-              }),
-            ],
-          });
-        }),
-        _ = (0, _._)(function (_) {
-          const {
-              language: _,
-              linkColor: _,
-              headingColor: _,
-              facet: _,
-              nFacetIndex: _,
-              styleOverrides: _,
-              bSearching: _,
-              bInitiallyExpanded: _,
-              bSingleSelection: _,
-            } = _,
-            [_, _] = (0, _.useState)(Boolean(0 === _ || _)),
-            [_, _] = (0, _.useState)(!1);
-          if (_.facetValues.every((_) => _.bHiddenBySearch)) return null;
-          let _;
-          _?.facetName ||
-            (_ = {
-              borderBottom: "0px solid " + (_ || "white"),
-              color: _ || "white",
-            });
-          const _ = (0, _._)(_._.GetWithFallback(_.facet.facet.name, _).trim());
-          let _ = _.nMaxFacetValues;
-          const _ = _.facetValues.reduce(
-            (_, _) => _ + (_.bDeactivated ? 1 : 0),
-            0,
-          );
-          _ = Math.min(_, _.facetValues.length - _);
-          const _ = _.facetValues.reduce(
-              (_, _) =>
-                _ + (_.bEnabled || _.facetValue.type === _._.k_EPrice ? 1 : 0),
-              0,
-            ),
-            _ = _.facetValues.some((_) => !_.bEnabled && !_.bDeactivated);
-          _ = Math.max(_, _ + (_ ? 1 : 0));
-          const _ = _.facetValues.length > _;
-          let _ = !_ || _ || _ ? _.facetValues : _.facetValues.slice(0, _);
-          _ || _ || (_ = _.filter((_) => _.bEnabled));
-          const _ = _.every(
-            (_) =>
-              !Boolean(_.facetValue.subtitle) ||
-              _._.GetWithFallback(_.facetValue.subtitle, _)?.length <= 0,
-          );
-          return (0, _.jsxs)("div", {
-            className: _.Facet,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.FacetTitleCtn,
-                onClick: () => _(!_),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _?.facetName || _.FacetTitle,
-                    style: _,
-                    children: _,
-                  }),
-                  (0, _.jsx)(_.DK4, {
-                    angle: _ ? 0 : 270,
-                  }),
-                ],
-              }),
-              _.map((_, _) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    facetValue: _,
-                    styleOverrides: _,
-                    showMatchCounts: _ && !_(_.facet.facet),
-                    ..._,
-                    fnOnUpdateFilter: () =>
-                      ((_) => {
-                        if (_ && _.bEnabled)
-                          for (const _ of _) _ != _ && (_.bEnabled = !1);
-                        _?.fnOnUpdateFilter();
-                      })(_),
-                  },
-                  "facet_" + _ + "_value_" + _,
-                ),
-              ),
-              _ &&
-                _ &&
-                !_ &&
-                (0, _.jsx)("div", {
-                  className: _?.showMore || _.FacetValueShowMore,
-                  onClick: () => _(!_),
-                  children: _
-                    ? (0, _._)("#Bbcode_Expand_ShowMore_Expanded")
-                    : (0, _._)("#Bbcode_Expand_ShowMore_Collapsed"),
-                }),
-            ],
-          });
+        const { data: _ } = (0, _._)({
+          queryKey: _,
+          queryFn: _,
+          initialData: _,
+          staleTime: 36e5,
         });
+        return _ ?? [];
+      }
+      function _(_ = _._) {
+        return _.getQueryData(_) ?? _() ?? [];
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _.name;
         if (_?.length > 0 && _[0]?.startsWith("#tagid_")) {
           const _ = parseInt(_[0].substring(7));
           if (_ > 0) return _ && _[_];
         }
-        return (0, _._)(_._.GetWithFallback(_, _).trim());
-      }
-      function _(_, _) {
-        const _ = _.name;
-        let _;
-        _?.length > 0 &&
-          _[0]?.startsWith("#tagid_") &&
-          (_ = parseInt(_[0].substring(7)));
-        const _ = (0, _._)(_, (0, _.LgB)(_));
-        return _ ? _ : (0, _._)(_._.GetWithFallback(_, _).trim());
-      }
-      const _ = (0, _._)(function (_) {
-          const {
-              language: _,
-              highlightedFacetColor: _,
-              linkColor: _,
-              facetValue: _,
-              styleOverrides: _,
-              fnOnUpdateFilter: _,
-              showMatchCounts: _,
-            } = _,
-            _ = _(_.facetValue, _);
-          if (_.facetValue.type === _._.k_EPrice && 0 == _().length)
-            return null;
-          if (_.bHiddenBySearch) return null;
-          const _ = _.bEnabled,
-            _ = _.bDeactivated,
-            _ = {
-              color: _ || "darkorange",
-              borderLeft: "4px solid " + (_ || "darkorange"),
-            };
-          let _, _;
-          _?.facetValue || (_ = _ ? _ : {}),
-            _?.facetValueName ||
-              (_ = {
-                color: _ || "white",
-              });
-          const _ = (_) => {
-              _.preventDefault(),
-                (0, _._)(() => {
-                  _ || ((_.bEnabled = !_.bEnabled), _());
-                });
-            },
-            _ = (_) => {
-              (0, _._)(() => {
-                _.nPriceStopIndex = Math.floor(_);
-              });
-            },
-            _ = () => {
-              (0, _._)(() => {
-                (_.bEnabled = Boolean(_.nPriceStopIndex !== _().length - 1)),
-                  _();
-              });
-            },
-            _ = _,
-            _ = Boolean(_.facetValue.subtitle)
-              ? _._.GetWithFallback(_.facetValue.subtitle, _)
-              : null;
-          if (_.facetValue.type === _._.k_EPrice) {
-            const _ =
-              null != _.nPriceStopIndex && -1 != _.nPriceStopIndex
-                ? _.nPriceStopIndex
-                : _().length - 1;
-            return (0, _.jsx)(_._, {
-              className: _.FacetValuePriceSlider,
-              min: 0,
-              max: _().length - 1,
-              value: _,
-              label: _()[_].label,
-              onChange: _,
-              onChangeComplete: _,
-            });
-          }
-          {
-            const _ = _?.facetValue || _.FacetValue,
-              _ = _?.facetValueEnabled || _.FacetValueEnabled,
-              _ = _?.facetValueDeactivated || _.FacetValueDeactivated,
-              _ = _?.facetValueName || _.FacetValueName;
-            return (0, _.jsxs)("div", {
-              className: _ ? _ : _ ? _ : _,
-              style: _,
-              children: [
-                (0, _.jsx)("a", {
-                  className: _,
-                  style: _,
-                  onClick: _,
-                  href: "",
-                  children: _,
-                }),
-                _ &&
-                  !_.bDeactivated &&
-                  Boolean(_.nMatchingFilteredCapsules) &&
-                  (0, _.jsx)("div", {
-                    className: _?.facetValueDesc || _.FacetValueDescription,
-                    children: _.nMatchingFilteredCapsules,
-                  }),
-                Boolean(_) &&
-                  (0, _.jsx)("div", {
-                    className: _?.facetValueDesc || _.FacetValueDescription,
-                    children: _,
-                  }),
-              ],
-            });
-          }
-        }),
-        _ = (0, _._)(function (_) {
-          const {
-              background: _,
-              labelColor: _,
-              headingColor: _,
-              buttonColor: _,
-              highlightedFacetColor: _,
-            } = _,
-            [_, _] = (0, _.useState)(!1),
-            _ = (0, _._)(`(max-width: ${_.strMidscreenWidth})`),
-            _ = !(0, _._)() && (_ || !_);
-          return (0, _.jsxs)("div", {
-            className: _.FacetedBrowseCtn,
-            children: [
-              _ &&
-                (0, _.jsx)(_, {
-                  buttonColor: _,
-                  bShowControls: _,
-                  fnOnToggleControls: () => {
-                    _(!_);
-                  },
-                }),
-              (0, _.jsxs)("div", {
-                className: _.FacetedBrowseInnerCtn,
-                children: [
-                  _
-                    ? (0, _.jsx)(_, {
-                        highlightedFacetColor: _,
-                        linkColor: _,
-                        headingColor: _,
-                        background: _,
-                        ..._,
-                      })
-                    : null,
-                  (0, _.jsx)("div", {
-                    className: _.FacetedBrowseItems,
-                    children: _.children,
-                  }),
-                ],
-              }),
-            ],
-          });
-        }),
-        _ = (0, _._)(function (_) {
-          const { buttonColor: _, bShowControls: _, fnOnToggleControls: _ } = _,
-            _ = {
-              color: _ || "white",
-            };
-          return (0, _.jsx)("div", {
-            className: _.FacetedBrowsePopupCtn,
-            onClick: () => _(),
-            children: _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.FacetedBrowsePopup,
-                      style: _,
-                      children: (0, _.jsx)(_.i6V, {}),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.FacetedBrowsePopupLabel,
-                      children: (0, _._)("#Button_Close"),
-                    }),
-                  ],
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.FacetedBrowsePopup,
-                      style: _,
-                      children: (0, _.jsx)(_.dJT, {}),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.FacetedBrowsePopupLabel,
-                      children: (0, _._)("#FacetedBrowse_Heading"),
-                    }),
-                  ],
-                }),
-          });
-        });
-      function _(_) {
-        const { section: _, event: _ } = _,
-          [_, _, _] = (0, _._)(() => [
-            _.label_color,
-            _.heading_color,
-            _.highlighted_facet_color,
-          ]),
-          _ = (0, _._)(),
-          _ = (0, _._)(_, _, _);
-        return (0, _.jsx)(_, {
-          labelColor: _,
-          headingColor: _,
-          buttonColor: _,
-          highlightedFacetColor: _,
-          background: _,
-          ..._,
-        });
+        return (0, _._)((_._.GetWithFallback(_, _) || "").trim());
       }
       function _(_) {
-        return _.type + _._;
+        return String(_.type) + _._;
       }
       function _(_, _) {
         return (
@@ -16759,6 +15686,504 @@
             for (const _ of _.filter.clauses)
               for (const _ of _.or_tags) if (_.startsWith("[Opt]")) return !0;
         return !1;
+      }
+      function _(_, _, _, _) {
+        const _ = {
+          m_facets: [],
+          m_nFilteredCapsuleCount: void 0,
+          m_facetCounts: void 0,
+          m_mapMultiFacetCounts: void 0,
+          m_bUnboundedScope: _,
+          m_facetSortKey: _,
+          m_language: _,
+          m_bHasHideIgnoredItemsFacetValue: !1,
+          m_strQuery: "",
+          m_strURLParam: void 0,
+          m_strFacetDefinitionHash: "",
+          m_nSelectedOptions: 0,
+          m_userPreferences: new Set(),
+          m_prunedFacets: [],
+          m_sortedFacets: [],
+          m_setCapsulesRemovedByUserPreferenceFilters: void 0,
+          m_nSolrMatchCount: 0,
+          BHasHideIgnoredItemsFacetValue() {
+            return this.m_bHasHideIgnoredItemsFacetValue;
+          },
+          GetFacets() {
+            return this.m_facets;
+          },
+          GetQuery() {
+            return this.m_strQuery;
+          },
+          GetURLParam() {
+            return this.m_strURLParam;
+          },
+          GetFacetDefinitionHash() {
+            return this.m_strFacetDefinitionHash;
+          },
+          GetSelectedOptionsCount() {
+            return this.m_nSelectedOptions;
+          },
+          BIsUserPreferenceEnabled(_) {
+            return this.m_userPreferences.has(_);
+          },
+          BIsAnyUserPreferenceEnabled() {
+            return this.m_userPreferences.size > 0;
+          },
+          GetSortedFacets() {
+            return this.m_sortedFacets;
+          },
+          GetMatchCount() {
+            return this.m_nFilteredCapsuleCount;
+          },
+          Reset() {
+            this.m_facets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
+              });
+            }),
+              this.UpdateFilter();
+          },
+          SetFromURLParam(_) {
+            if (_ === this.m_strURLParam) return;
+            this.m_facets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.bEnabled = Boolean(_.facetValue.bEnabledByDefault);
+              });
+            });
+            (_?.split(",") || []).forEach((_) => {
+              const _ = _.split(":"),
+                _ = Number(_[0]);
+              _[1].split("|").forEach((_) => {
+                if (_.includes("_")) {
+                  const _ = _.split("_");
+                  (this.m_facets[_].facetValues[Number(_[0])].bEnabled = !0),
+                    (this.m_facets[_].facetValues[
+                      Number(_[0])
+                    ].nPriceStopIndex = Number(_[1]));
+                } else
+                  this.m_facets[_].facetValues[Number(_)].bEnabled =
+                    !this.m_facets[_].facetValues[Number(_)].facetValue
+                      .bEnabledByDefault;
+              });
+            }),
+              this.UpdateFilter();
+          },
+          SetFacetCounts(_) {
+            const _ = new Map();
+            if (_)
+              for (const _ of Object.keys(_)) _.set(Number(_), Number(_[_]));
+            this.m_facetCounts = _;
+          },
+          SetMultiFacetCounts(_) {
+            const _ = new Map();
+            if (_)
+              for (const _ of Object.keys(_)) {
+                const _ = _[_],
+                  _ = new Map();
+                if ("discounted" === _) {
+                  let _ = 0;
+                  for (const _ of Object.keys(_)) _ += Number(_[_]);
+                  _.set("true", _);
+                } else for (const _ of Object.keys(_)) _.set(_, Number(_[_]));
+                _.set(_, _);
+              }
+            this.m_mapMultiFacetCounts = _;
+          },
+          SetSolrMatchCount(_) {
+            this.m_nSolrMatchCount = _;
+          },
+          SetFacetValueSearchString(_, _, _) {
+            for (const _ of this.m_facets)
+              for (const _ of _.facetValues) _.bHiddenBySearch = !1;
+            if (!_) return;
+            const _ = _.toLocaleLowerCase().trim();
+            if (0 !== _.length)
+              for (const _ of this.m_facets)
+                for (const _ of _.facetValues) {
+                  (
+                    _(_.facetValue, _, _)?.toLocaleLowerCase().trim() || ""
+                  ).includes(_) || (_.bHiddenBySearch = !0);
+                }
+          },
+          UpdateFilter() {
+            this.UpdateQuery(),
+              this.UpdateURLParam(),
+              this.UpdateSelectedOptionsCount(),
+              this.UpdateUserPreferenceFilters();
+          },
+          UpdateFacetDefinitionHash(_) {
+            this.m_strFacetDefinitionHash = String((0, _._)((0, _._)(_)));
+          },
+          UpdateQuery() {
+            let _ = {
+              type: _._.k_EStoreFilterClauseTypeAnd,
+              rgSubexpressions: new Array(),
+            };
+            this.m_facets.forEach((_) => {
+              if (
+                (function (_) {
+                  for (const _ of _.facetValues)
+                    if (_.bEnabled && null != _.facetValue.filter)
+                      for (const _ of _.facetValue.filter.clauses)
+                        for (const _ of _.or_tags)
+                          if (_.startsWith("[Opt]")) return !0;
+                  return !1;
+                })(_)
+              )
+                return;
+              const _ = {
+                type: _.facet.logical_and
+                  ? _._.k_EStoreFilterClauseTypeAnd
+                  : _._.k_EStoreFilterClauseTypeOr,
+                rgSubexpressions: new Array(),
+              };
+              _.facetValues.forEach((_) => {
+                if (_.bEnabled && Boolean(_.facetValue.rgStoreTagFilter)) {
+                  if (_.facetValue.type === _._.k_EUserPreference) return;
+                  const _ = {
+                    ..._.facetValue.rgStoreTagFilter,
+                  };
+                  if (_.facetValue.type === _._.k_EPrice) {
+                    const _ = _(),
+                      _ = _.nPriceStopIndex;
+                    _.value =
+                      _.length > 0 && null != _ && -1 != _
+                        ? _[_].price
+                        : void 0;
+                  }
+                  (_.facetValue.type !== _._.k_EPrice ||
+                    Boolean(_().length > 0)) &&
+                    _.rgSubexpressions.push(_);
+                }
+              }),
+                0 !== _.rgSubexpressions.length && _.rgSubexpressions.push(_);
+            });
+            const _ = (0, _._)(_);
+            this.m_strQuery = _ ? JSON.stringify(_) : "";
+          },
+          UpdateURLParam() {
+            const _ = [];
+            this.m_facets.forEach((_, _) => {
+              const _ = [];
+              if (
+                (_.facetValues.forEach((_, _) => {
+                  _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
+                    (_.facetValue.type === _._.k_EPrice
+                      ? _.push(_ + "_" + _.nPriceStopIndex)
+                      : _.push(_.toString()));
+                }),
+                0 === _.length)
+              )
+                return;
+              const _ = _.join("|");
+              _.push(_ + ":" + _);
+            }),
+              (this.m_strURLParam = _.length > 0 ? _.join(",") : void 0);
+          },
+          UpdateSelectedOptionsCount() {
+            (this.m_nSelectedOptions = 0),
+              this.m_facets.forEach((_) => {
+                _.facetValues.forEach((_) => {
+                  _.bEnabled !== Boolean(_.facetValue.bEnabledByDefault) &&
+                    ++this.m_nSelectedOptions;
+                });
+              });
+          },
+          UpdateUserPreferenceFilters() {
+            (this.m_userPreferences = new Set()),
+              this.m_facets.forEach((_) => {
+                _.facetValues.forEach((_) => {
+                  _.facetValue.type === _._.k_EUserPreference &&
+                    _.bEnabled &&
+                    this.m_userPreferences.add(_.facetValue.userPreference);
+                });
+              });
+          },
+          PruneFacets() {
+            (this.m_prunedFacets = []),
+              this.m_facets.forEach((_) => {
+                _.facetValues.forEach((_) => {
+                  (_.bDeactivated = !1), (_.nMatchingFilteredCapsules = void 0);
+                }),
+                  this.m_prunedFacets.push({
+                    facet: _,
+                    facetValues: _.facetValues,
+                  });
+              }),
+              this.PruneFacetsForCurrentUser();
+          },
+          PruneFacetsForCurrentUser() {
+            this.m_prunedFacets.forEach((_) => {
+              _.facetValues = _.facetValues.filter((_) =>
+                _.facetValue.type === _._.k_EContentDescriptor
+                  ? !_._.Get().BIsLoaded() ||
+                    _._.Get().BIncludesContentDescriptor(
+                      _.facetValue.contentDescriptor,
+                    )
+                  : _.facetValue.type === _._.k_ELanguage
+                    ? !_._.Get().BIsLoaded() ||
+                      _.facetValue.language === _.Bhc ||
+                      ((0 !== _._.Get().GetSecondaryLanguages().size ||
+                        _._.Get().GetPrimaryLanguage() !== _.Bhc) &&
+                        (_._.Get().GetPrimaryLanguage() ===
+                          _.facetValue.language ||
+                          (null != _.facetValue.language &&
+                            _._.Get()
+                              .GetSecondaryLanguages()
+                              .has(_.facetValue.language))))
+                    : _.facetValue.type !== _._.k_EUserPreference ||
+                      (_._.logged_in && _._.Get().BIsLoaded()),
+              );
+            }),
+              (this.m_prunedFacets = this.m_prunedFacets.filter(
+                (_) => _.facetValues.length > 0,
+              ));
+          },
+          UpdateMatchingFilteredCapsuleCounts() {
+            this.m_prunedFacets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.nMatchingFilteredCapsules =
+                  this.GetMatchCountForFacetValue(_);
+              });
+            });
+          },
+          GetMatchCountForFacetValue(_) {
+            const _ = this.m_mapMultiFacetCounts,
+              _ = this.m_facetCounts;
+            if (_) {
+              const _ = "402",
+                _ = "401",
+                _ = "9",
+                _ = "28",
+                _ = "18",
+                _ = "41",
+                _ = "42",
+                _ = "43",
+                _ = "44",
+                _ = "61",
+                _ = "37",
+                _ = this.CollapseFilter(_.facetValue.rgStoreTagFilter);
+              switch (_.facetValue.type) {
+                case _._.k_ESaleTagFilter:
+                case void 0:
+                  if (
+                    _?.type === _._.k_EStoreFilterClauseTypeStoreTag &&
+                    _.facetValue.nAtomicStoreTagID
+                  )
+                    return _.get("tagidset")?.get(
+                      _.facetValue.nAtomicStoreTagID.toString(),
+                    );
+                  if (_?.type === _._.k_EStoreFilterClauseTypeFeatureTag)
+                    switch (_.value) {
+                      case "windows":
+                        return _.get("platform_win")?.get("true");
+                      case "linux":
+                        return _.get("platform_linux")?.get("true");
+                      case "mac":
+                        return _.get("platform_mac")?.get("true");
+                      case "vr":
+                        return _.get("vrsupport")?.get(_);
+                      case "vr only":
+                        return _.get("vrsupport")?.get(_);
+                      case "full controller":
+                        return _.get("category")?.get(_);
+                      case "any controller":
+                        return (
+                          _.get("category")?.get(_) || _.get("category")?.get(_)
+                        );
+                      case "remote play":
+                        return Math.max(
+                          _.get("category")?.get(_) ?? 0,
+                          _.get("category")?.get(_) ?? 0,
+                          _.get("category")?.get(_) ?? 0,
+                          _.get("category")?.get(_) ?? 0,
+                        );
+                      case "remote play together":
+                        return _.get("category")?.get(_);
+                      case "free":
+                        return _.get("genre")?.get(_);
+                      case "discounted":
+                        return _.get("discounted")?.get("true");
+                      case "coop":
+                        return _.get("category")?.get(_);
+                      case "hdr":
+                        return _.get("category")?.get(_);
+                    }
+                  break;
+                case _._.k_EAppType:
+                  let _ = _.facetValue.appType;
+                  return (
+                    !_ &&
+                      _?.type == _._.k_EStoreFilterClauseTypeAppType &&
+                      "string" == typeof _.value &&
+                      _.value.length &&
+                      (_ = _.value),
+                    null != _ ? _.get("type")?.get(_) : void 0
+                  );
+                case _._.k_ELanguage:
+                  const _ = (0, _.LgB)(_.facetValue.language);
+                  return _.get("supportedlang_" + _)?.get("true");
+                case _._.k_EContentDescriptor:
+                  return _.get("descids")?.get(
+                    _.facetValue.contentDescriptor.toString(),
+                  );
+              }
+            } else if (_)
+              return __webpack_require__.get(_.facetValue.nAtomicStoreTagID);
+          },
+          CollapseFilter(_) {
+            if (!_) return _;
+            let _ = _;
+            for (
+              ;
+              (_.type == _._.k_EStoreFilterClauseTypeOr ||
+                _.type == _._.k_EStoreFilterClauseTypeAnd) &&
+              1 == _.rgSubexpressions?.length;
+            )
+              _ = _.rgSubexpressions[0];
+            return _;
+          },
+          DeactivateFacetValues() {
+            this.m_prunedFacets.forEach((_) => {
+              _.facetValues.forEach((_) => {
+                _.bDeactivated = !1;
+              });
+            }),
+              this.m_prunedFacets.forEach((_) => {
+                const _ = _(_.facet.facet);
+                _.facetValues.forEach((_) => {
+                  let _ = _.nMatchingFilteredCapsules;
+                  _.bDeactivated = !(
+                    _.bEnabled ||
+                    _ ||
+                    0 !== _ ||
+                    _.facetValue.type === _._.k_EUserPreference
+                  );
+                });
+              });
+          },
+          SortFacets() {
+            this.UpdateMatchingFilteredCapsuleCounts(),
+              this.DeactivateFacetValues(),
+              (this.m_sortedFacets = []),
+              this.m_prunedFacets.forEach((_) => {
+                const _ = _.facetValues.slice();
+                _.sort((_, _) => {
+                  if (
+                    _.facetValue.type === _._.k_EPrice &&
+                    _.facetValue.type !== _._.k_EPrice
+                  )
+                    return 1;
+                  if (
+                    _.facetValue.type !== _._.k_EPrice &&
+                    _.facetValue.type == _._.k_EPrice
+                  )
+                    return -1;
+                  if (_.bEnabled !== _.bEnabled) return _.bEnabled ? 1 : -1;
+                  if (_.bDeactivated !== _.bDeactivated)
+                    return _.bDeactivated ? 1 : -1;
+                  if (!_.bEnabled && !_.bDeactivated) {
+                    if (
+                      _.facetValue.type === _._.k_ELanguage &&
+                      _.facetValue.type === _._.k_ELanguage
+                    )
+                      return _.facetValue.language ===
+                        _._.Get().GetPrimaryLanguage()
+                        ? 1
+                        : -1;
+                    const _ = _.nMatchingFilteredCapsules || 0,
+                      _ = _.nMatchingFilteredCapsules || 0;
+                    if (
+                      this.m_facetSortKey === _._.k_ESortFacetsByMatchCount &&
+                      _ !== _
+                    )
+                      return _ - _;
+                  }
+                  if (this.m_facetSortKey === _._.k_ESortFacetsByName) {
+                    const _ =
+                        _._.GetWithFallback(
+                          _.facetValue.name,
+                          this.m_language,
+                        ) || "",
+                      _ =
+                        _._.GetWithFallback(
+                          _.facetValue.name,
+                          this.m_language,
+                        ) || "";
+                    return __webpack_require__.localeCompare(_);
+                  }
+                  return 0;
+                }),
+                  this.m_sortedFacets.push({
+                    ..._,
+                    facetValues: _,
+                  });
+              });
+          },
+          async ApplyUserPreferenceFilters(_, _, _) {
+            const _ = this.BHasHideIgnoredItemsFacetValue(),
+              _ = this.BIsUserPreferenceEnabled(_._.k_EHideOwnedItems),
+              _ = this.BIsUserPreferenceEnabled(_._.k_EHideWishlistedItems),
+              _ = this.BIsUserPreferenceEnabled(_._.k_EHideIgnoredItems);
+            let _ = [];
+            const _ = await (0, _._)(_, _, _, _, _, _, _);
+            if (
+              ((0, _._)(() => {
+                this.m_setCapsulesRemovedByUserPreferenceFilters = new Set(
+                  _.map(_),
+                );
+              }),
+              _)
+            )
+              for (const _ of _) __webpack_require__.push(_);
+            return _;
+          },
+          UpdateMatchCount(_, _) {
+            _
+              ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
+                (this.m_nFilteredCapsuleCount -=
+                  this.m_setCapsulesRemovedByUserPreferenceFilters?.size || 0))
+              : (this.m_nFilteredCapsuleCount = _),
+              this.SortFacets();
+          },
+        };
+        return (
+          (0, _._)(_),
+          _.forEach((_) => {
+            const _ = [];
+            _.facetValues.forEach((_) => {
+              _.push({
+                facetValue: _,
+                bEnabled: Boolean(_.bEnabledByDefault),
+                nPriceStopIndex: Boolean(_().length > 0)
+                  ? _().length - 1
+                  : void 0,
+                bDeactivated: !1,
+                nMatchingFilteredCapsules: void 0,
+                bHiddenBySearch: !1,
+              });
+            }),
+              _.m_facets.push({
+                facet: _,
+                facetValues: _,
+                matchingCapsules: null,
+                matchingCapsulesInOtherFacets: null,
+              });
+          }),
+          _.PruneFacets(),
+          _.UpdateFacetDefinitionHash(_),
+          _.UpdateFilter(),
+          (_.m_bHasHideIgnoredItemsFacetValue = _.some((_) =>
+            _.facetValues.some(
+              (_) =>
+                _.type === _._.k_EUserPreference &&
+                _.userPreference === _._.k_EHideIgnoredItems,
+            ),
+          )),
+          _.SortFacets(),
+          _
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16777,12 +16202,7 @@
                     contentHub: {
                       type: "greatondeck",
                     },
-                    facetFilter: new _(
-                      [],
-                      _._.k_ESortFacetsByMatchCount,
-                      _,
-                      !0,
-                    ),
+                    facetFilter: _([], _._.k_ESortFacetsByMatchCount, _, !0),
                   };
                 _.Get()
                   .GetSaleGamesByFlavor(!1, null, _, _, _, _, _)
@@ -16947,8 +16367,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "bTrailerCarouselAutoAdvance",
@@ -17046,6 +16466,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17905,7 +17326,6 @@
       }
       (0, _._)([_._], _.prototype, "m_mapMasterAppToBenefitApps", void 0);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -19800,6 +19220,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20987,6 +20408,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -22457,6 +21879,496 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)(function (_) {
+          const {
+              language: _,
+              linkColor: _,
+              headingColor: _,
+              background: _,
+              styleOverrides: _,
+              facetFilterState: _,
+              fnOnUpdateFilter: _,
+              onInitFilter: _,
+            } = _,
+            [_, _] = (0, _.useState)(""),
+            { data: _ } = (0, _._)((0, _.LgB)(_));
+          let _, _;
+          _?.menu ||
+            (_ = {
+              ..._,
+              color: _ || "white",
+            }),
+            _?.menuTitle ||
+              (_ = {
+                borderBottom: "0px solid " + (_ || "white"),
+                color: _ || "white",
+              });
+          const _ = (0, _.useRef)(null),
+            _ = () => {
+              _.UpdateFilter(), _?.();
+            };
+          return (
+            _.useEffect(() => {
+              !_ && _ && _();
+            }, [_, _]),
+            _.useEffect(() => {
+              _ &&
+                _.rgItems &&
+                (_.SetFacetCounts(_.faceting),
+                _.SetMultiFacetCounts(_.multifaceting),
+                _.SetSolrMatchCount(_.nMatchCount ?? 0),
+                _.UpdateMatchCount(
+                  Boolean(_.bMoreAvailable),
+                  _.rgItems?.length ?? 0,
+                ));
+            }, [
+              _,
+              _.bMoreAvailable,
+              _.faceting,
+              _.multifaceting,
+              _.nMatchCount,
+              _.rgItems,
+              _.rgItems?.length,
+            ]),
+            _
+              ? (0, _.jsxs)("div", {
+                  ref: _,
+                  className: _?.menu || _.FacetedBrowseControls,
+                  style: _,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _?.menuTitle || _.FacetMenuTitle,
+                      style: _,
+                      children: (0, _._)("#FacetedBrowse_Heading"),
+                    }),
+                    (0, _.jsx)(_, {
+                      facets: _?.GetSortedFacets(),
+                      onUpdateFilter: _,
+                      ..._,
+                    }),
+                    Boolean(_) &&
+                      (0, _.jsx)("div", {
+                        className: _?.matchCount || _.FacetedBrowseMatchCount,
+                        children:
+                          null != _.GetMatchCount() &&
+                          (0, _._)(
+                            "#FacetedBrowse_MatchCount",
+                            _.GetMatchCount(),
+                          ),
+                      }),
+                    (0, _.jsx)("div", {
+                      className: _.FacetValueSearch,
+                      children: (0, _.jsx)(_._, {
+                        type: "text",
+                        value: _,
+                        placeholder: (0, _._)(
+                          "#FacetedBrowse_SearchFacetValues",
+                        ),
+                        onChange: (_) => {
+                          _(_.target.value),
+                            _.SetFacetValueSearchString(_.target.value, _, _);
+                        },
+                        bShowClearAction: !0,
+                      }),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.FacetList,
+                      children: _?.GetSortedFacets()?.map((_, _) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            facet: _,
+                            facetFilterState: _,
+                            nFacetIndex: _,
+                            language: _,
+                            nMaxFacetValues: _.nMaxFacetValues,
+                            highlightedFacetColor: _.highlightedFacetColor,
+                            linkColor: _.linkColor,
+                            headingColor: _.headingColor,
+                            fnOnUpdateFilter: _,
+                            styleOverrides: _,
+                            bSearching: _?.length > 0,
+                            bInitiallyExpanded: Boolean(
+                              _.facet.facet.bInitiallyExpanded,
+                            ),
+                            bSingleSelection: Boolean(
+                              _.facet.facet.single_selection,
+                            ),
+                          },
+                          "facet_" +
+                            _._.GetWithFallback(_.facet.facet.name, _) +
+                            "_" +
+                            _,
+                        ),
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _?.reset || _.FacetedBrowseReset,
+                      children: (0, _.jsx)("a", {
+                        onClick: (_) => {
+                          _.preventDefault();
+                          const _ = _.current;
+                          if (!_) return;
+                          const _ =
+                            _.getBoundingClientRect().top + window.scrollY;
+                          window.scrollTo(0, _);
+                        },
+                        children: (0, _._)("#FacetedBrowse_ReturnToTop"),
+                      }),
+                    }),
+                  ],
+                })
+              : null
+          );
+        }),
+        _ = (0, _._)(function (_) {
+          const { facets: _ } = _,
+            [_, _] = (0, _.useState)([]);
+          return (
+            (0, _.useEffect)(() => {
+              const _ = [];
+              if (_)
+                for (const _ of _)
+                  for (const _ of _.facetValues)
+                    _.bEnabled &&
+                      _.facetValue.type !== _._.k_EPrice &&
+                      _.push(_);
+              _(_);
+            }, [_]),
+            _
+              ? (0, _.jsx)(_.Fragment, {
+                  children: (0, _.jsx)("div", {
+                    className: _.SelectedFacetValuesList,
+                    children: __webpack_require__.map((_, _) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          facetValue: _,
+                          ..._,
+                        },
+                        _.facetValue.unique_id + "_" + _,
+                      ),
+                    ),
+                  }),
+                })
+              : null
+          );
+        }),
+        _ = (0, _._)(function (_) {
+          const { facetValue: _, language: _, onUpdateFilter: _ } = _,
+            _ = _(_.facetValue, _);
+          return (0, _.jsxs)("a", {
+            className: _.SelectedFacetValueCtn,
+            onClick: (_) => {
+              _.preventDefault(), (_.bEnabled = !1), _ && _();
+            },
+            children: [
+              (0, _.jsx)(_.i6V, {}),
+              (0, _.jsx)("span", {
+                className: _.SelectedFacetValue,
+                children: _,
+              }),
+            ],
+          });
+        }),
+        _ = (0, _._)(function (_) {
+          const {
+              language: _,
+              linkColor: _,
+              headingColor: _,
+              facet: _,
+              nFacetIndex: _,
+              styleOverrides: _,
+              bSearching: _,
+              bInitiallyExpanded: _,
+              bSingleSelection: _,
+            } = _,
+            [_, _] = (0, _.useState)(Boolean(0 === _ || _)),
+            [_, _] = (0, _.useState)(!1);
+          if (_.facetValues.every((_) => _.bHiddenBySearch)) return null;
+          let _;
+          _?.facetName ||
+            (_ = {
+              borderBottom: "0px solid " + (_ || "white"),
+              color: _ || "white",
+            });
+          const _ = (0, _._)(
+            (_._.GetWithFallback(_.facet.facet.name, _) || "").trim(),
+          );
+          let _ = _.nMaxFacetValues;
+          const _ = _.facetValues.reduce(
+            (_, _) => _ + (_.bDeactivated ? 1 : 0),
+            0,
+          );
+          _ = Math.min(_, _.facetValues.length - _);
+          const _ = _.facetValues.reduce(
+              (_, _) =>
+                _ + (_.bEnabled || _.facetValue.type === _._.k_EPrice ? 1 : 0),
+              0,
+            ),
+            _ = _.facetValues.some((_) => !_.bEnabled && !_.bDeactivated);
+          _ = Math.max(_, _ + (_ ? 1 : 0));
+          const _ = _.facetValues.length > _;
+          let _ = !_ || _ || _ ? _.facetValues : _.facetValues.slice(0, _);
+          _ || _ || (_ = _.filter((_) => _.bEnabled));
+          const _ = _.every(
+            (_) =>
+              !Boolean(_.facetValue.subtitle) ||
+              (_._.GetWithFallback(_.facetValue.subtitle, _)?.length ?? 0) <= 0,
+          );
+          return (0, _.jsxs)("div", {
+            className: _.Facet,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _.FacetTitleCtn,
+                onClick: () => _(!_),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _?.facetName || _.FacetTitle,
+                    style: _,
+                    children: _,
+                  }),
+                  (0, _.jsx)(_.DK4, {
+                    angle: _ ? 0 : 270,
+                  }),
+                ],
+              }),
+              _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    facetValue: _,
+                    styleOverrides: _,
+                    showMatchCounts: _ && !_(_.facet.facet),
+                    ..._,
+                    fnOnUpdateFilter: () =>
+                      ((_) => {
+                        if (_ && _.bEnabled)
+                          for (const _ of _) _ != _ && (_.bEnabled = !1);
+                        _?.fnOnUpdateFilter?.();
+                      })(_),
+                  },
+                  "facet_" + _ + "_value_" + _,
+                ),
+              ),
+              _ &&
+                _ &&
+                !_ &&
+                (0, _.jsx)("div", {
+                  className: _?.showMore || _.FacetValueShowMore,
+                  onClick: () => _(!_),
+                  children: _
+                    ? (0, _._)("#Bbcode_Expand_ShowMore_Expanded")
+                    : (0, _._)("#Bbcode_Expand_ShowMore_Collapsed"),
+                }),
+            ],
+          });
+        });
+      function _(_, _) {
+        const _ = _.name;
+        let _;
+        _?.length > 0 &&
+          _[0]?.startsWith("#tagid_") &&
+          (_ = parseInt(_[0].substring(7)));
+        const _ = (0, _._)(_ ?? 0, (0, _.LgB)(_));
+        return _ ? _ : (0, _._)((_._.GetWithFallback(_, _) || "").trim());
+      }
+      const _ = (0, _._)(function (_) {
+          const {
+              language: _,
+              highlightedFacetColor: _,
+              linkColor: _,
+              facetValue: _,
+              styleOverrides: _,
+              fnOnUpdateFilter: _,
+              showMatchCounts: _,
+            } = _,
+            _ = _(_.facetValue, _),
+            _ = _();
+          if (_.facetValue.type === _._.k_EPrice && 0 == _.length) return null;
+          if (_.bHiddenBySearch) return null;
+          const _ = _.bEnabled,
+            _ = _.bDeactivated,
+            _ = {
+              color: _ || "darkorange",
+              borderLeft: "4px solid " + (_ || "darkorange"),
+            };
+          let _, _;
+          _?.facetValue || (_ = _ ? _ : {}),
+            _?.facetValueName ||
+              (_ = {
+                color: _ || "white",
+              });
+          const _ = (_) => {
+              _.preventDefault(),
+                (0, _._)(() => {
+                  _ || ((_.bEnabled = !_.bEnabled), _?.());
+                });
+            },
+            _ = (_) => {
+              (0, _._)(() => {
+                _.nPriceStopIndex = Math.floor(_);
+              });
+            },
+            _ = () => {
+              (0, _._)(() => {
+                (_.bEnabled = Boolean(_.nPriceStopIndex !== _.length - 1)),
+                  _?.();
+              });
+            },
+            _ = _,
+            _ = Boolean(_.facetValue.subtitle)
+              ? _._.GetWithFallback(_.facetValue.subtitle, _)
+              : null;
+          if (_.facetValue.type === _._.k_EPrice) {
+            const _ =
+              null != _.nPriceStopIndex && -1 != _.nPriceStopIndex
+                ? _.nPriceStopIndex
+                : _.length - 1;
+            return (0, _.jsx)(_._, {
+              className: _.FacetValuePriceSlider,
+              min: 0,
+              max: _.length - 1,
+              value: _,
+              label: _[_].label,
+              onChange: _,
+              onChangeComplete: _,
+            });
+          }
+          {
+            const _ = _?.facetValue || _.FacetValue,
+              _ = _?.facetValueEnabled || _.FacetValueEnabled,
+              _ = _?.facetValueDeactivated || _.FacetValueDeactivated,
+              _ = _?.facetValueName || _.FacetValueName;
+            return (0, _.jsxs)("div", {
+              className: _ ? _ : _ ? _ : _,
+              style: _,
+              children: [
+                (0, _.jsx)("a", {
+                  className: _,
+                  style: _,
+                  onClick: _,
+                  href: "",
+                  children: _,
+                }),
+                _ &&
+                  !_.bDeactivated &&
+                  Boolean(_.nMatchingFilteredCapsules) &&
+                  (0, _.jsx)("div", {
+                    className: _?.facetValueDesc || _.FacetValueDescription,
+                    children: _.nMatchingFilteredCapsules,
+                  }),
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _?.facetValueDesc || _.FacetValueDescription,
+                    children: _,
+                  }),
+              ],
+            });
+          }
+        }),
+        _ = (0, _._)(function (_) {
+          const {
+              background: _,
+              labelColor: _,
+              headingColor: _,
+              buttonColor: _,
+              highlightedFacetColor: _,
+            } = _,
+            [_, _] = (0, _.useState)(!1),
+            _ = (0, _._)(`(max-width: ${_.strMidscreenWidth})`),
+            _ = !(0, _._)() && (_ || !_);
+          return (0, _.jsxs)("div", {
+            className: _.FacetedBrowseCtn,
+            children: [
+              _ &&
+                (0, _.jsx)(_, {
+                  buttonColor: _,
+                  bShowControls: _,
+                  fnOnToggleControls: () => {
+                    _(!_);
+                  },
+                }),
+              (0, _.jsxs)("div", {
+                className: _.FacetedBrowseInnerCtn,
+                children: [
+                  _
+                    ? (0, _.jsx)(_, {
+                        highlightedFacetColor: _,
+                        linkColor: _,
+                        headingColor: _,
+                        background: _,
+                        ..._,
+                      })
+                    : null,
+                  (0, _.jsx)("div", {
+                    className: _.FacetedBrowseItems,
+                    children: _.children,
+                  }),
+                ],
+              }),
+            ],
+          });
+        }),
+        _ = (0, _._)(function (_) {
+          const { buttonColor: _, bShowControls: _, fnOnToggleControls: _ } = _,
+            _ = {
+              color: _ || "white",
+            };
+          return (0, _.jsx)("div", {
+            className: _.FacetedBrowsePopupCtn,
+            onClick: () => _(),
+            children: _
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.FacetedBrowsePopup,
+                      style: _,
+                      children: (0, _.jsx)(_.i6V, {}),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.FacetedBrowsePopupLabel,
+                      children: (0, _._)("#Button_Close"),
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.FacetedBrowsePopup,
+                      style: _,
+                      children: (0, _.jsx)(_.dJT, {}),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.FacetedBrowsePopupLabel,
+                      children: (0, _._)("#FacetedBrowse_Heading"),
+                    }),
+                  ],
+                }),
+          });
+        });
+      function _(_) {
+        const { section: _, event: _ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.label_color,
+            _.heading_color,
+            _.highlighted_facet_color,
+          ]),
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _, _);
+        return (0, _.jsx)(_, {
+          labelColor: _,
+          headingColor: _,
+          buttonColor: _,
+          highlightedFacetColor: _,
+          background: _,
+          ..._,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
         const {
@@ -22524,7 +22436,7 @@
               if (_.enable_faceted_browsing) {
                 const _ = _.facet_sort_order || _._.k_ESortFacetsByMatchCount,
                   _ = _(_);
-                return new _(_.facets, _, _, _);
+                return _(_.facets, _, _, _);
               }
               return null;
             })(_, _, _),
@@ -24134,7 +24046,7 @@
                       "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
                     )),
                   this.setState({
-                    facetFilterState: new _(
+                    facetFilterState: _(
                       _ ?? [],
                       this.props.section.facet_sort_order ||
                         _._.k_ESortFacetsByMatchCount,
@@ -29149,11 +29061,23 @@
             marginTop: "14px",
           },
           children: (0, _.jsx)(_, {
-            text: (0, _._)("#Sale_SeeAllSpecials"),
+            text: _._.Localize("#Sale_SeeAllSpecials"),
             url: _,
             color: _,
             bgcolor: _,
           }),
+        });
+      }
+      function _(_) {
+        const { text: _, url: _, color: _, bgcolor: _ } = _;
+        return (0, _.jsx)(_._, {
+          url: _,
+          className: _().BrowseMoreButton,
+          style: {
+            backgroundColor: _,
+            color: _,
+          },
+          children: _ || _._.Localize("#Sale_BrowseMore_Text_Default"),
         });
       }
       !(function (_) {
@@ -29206,16 +29130,6 @@
             (_.MediaLeft = "MediaLeft"),
             (_.MediaRight = "MediaLeft");
         })(_ || (_ = {}));
-      const _ = ({ text: _, url: _, color: _, bgcolor: _ }) =>
-        (0, _.jsx)(_._, {
-          url: _,
-          className: _().BrowseMoreButton,
-          style: {
-            backgroundColor: _,
-            color: _,
-          },
-          children: _ || (0, _._)("#Sale_BrowseMore_Text_Default"),
-        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

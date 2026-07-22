@@ -287,7 +287,6 @@
         DeleteMarker: "_1HITbDUgqbAsnVISlw-IU4",
         ViewScreenshot: "_2HfiRMT1mpZZy-Op04_Vp5",
         ViewClip: "_20E0pQUHwdjs6eM1Ow2GiS",
-        active: "NjA0Fz51GxvZgm847KioJ",
       };
     },
     23533: (e) => {
@@ -2066,7 +2065,7 @@
       async function q(e, t, i) {
         if (!W()) {
           const [{ CGameRecordingStore: a }] = await Promise.all([
-            r.e(6209).then(r.bind(r, 76209)),
+            r.e(8806).then(r.bind(r, 18806)),
           ]);
           i &&
             ((n = i),
@@ -10686,7 +10685,7 @@
     3049: (e, t, r) => {
       "use strict";
       r.d(t, { J: () => a });
-      var i = r(8527),
+      var i = r(66418),
         n = r(13843);
       function a() {
         return (0, n.A)().languages.map((e) => {
@@ -13518,16 +13517,33 @@
       class ve extends l.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.Message.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            ve.prototype.result || c.Sg(ve.M()),
+            l.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            ve.sm_m ||
+              (ve.sm_m = {
+                proto: ve,
+                fields: {
+                  result: { n: 1, br: c.qM.readInt32, bw: c.gp.writeInt32 },
+                },
+              }),
+            ve.sm_m
+          );
+        }
+        static MBF() {
+          return ve.sm_mbf || (ve.sm_mbf = c.w0(ve.M())), ve.sm_mbf;
         }
         toObject(e = !1) {
           return ve.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return c.BT(ve.M(), e, t);
         }
         static fromObject(e) {
-          return new ve();
+          return c.Uq(ve.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (m().BinaryReader)(e),
@@ -13535,13 +13551,15 @@
           return ve.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return c.zj(ve.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (m().BinaryWriter)();
           return ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          c.i0(ve.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
@@ -13629,6 +13647,7 @@
                     bw: c.gp.writeUint64String,
                   },
                   settings: { n: 2, c: Te },
+                  result: { n: 3, br: c.qM.readInt32, bw: c.gp.writeInt32 },
                 },
               }),
             Ge.sm_m
@@ -15574,7 +15593,6 @@
                 fields: {
                   progress: { n: 1, br: c.qM.readFloat, bw: c.gp.writeFloat },
                   clip_id: { n: 2, br: c.qM.readString, bw: c.gp.writeString },
-                  eresult: { n: 3, br: c.qM.readInt32, bw: c.gp.writeInt32 },
                 },
               }),
             lt.sm_m

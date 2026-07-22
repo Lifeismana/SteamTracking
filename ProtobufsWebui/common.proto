@@ -96,7 +96,7 @@ message CartCoupon {
 	optional int32 discount_pct = 8;
 }
 
-// Used by: AccountCart, Checkout
+// Used by: AccountCart, Checkout, ShoppingCart
 message CartGiftInfo {
 	optional int32 accountid_giftee = 1;
 	optional .CartGiftMessage gift_message = 2;
@@ -104,7 +104,7 @@ message CartGiftInfo {
 	optional string email_giftee = 4;
 }
 
-// Used by: AccountCart, Checkout
+// Used by: AccountCart, Checkout, ShoppingCart
 message CartGiftMessage {
 	optional string gifteename = 1;
 	optional string message = 2;

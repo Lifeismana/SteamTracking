@@ -6,18 +6,17 @@
   {
     94621: (e, t, n) => {
       n.d(t, {
-        BN: () => m,
-        Ej: () => g,
-        UU: () => p,
-        cY: () => v,
-        we: () => d,
+        BN: () => v,
+        Ej: () => p,
+        UU: () => m,
+        cY: () => d,
+        we: () => f,
       });
-      var r = n(28505),
-        o = n(33559),
-        u = n(90626),
-        i = n(72739),
-        c = "undefined" != typeof document ? u.useLayoutEffect : u.useEffect;
-      function l(e, t) {
+      var r = n(8083),
+        o = n(90626),
+        u = n(72739),
+        i = "undefined" != typeof document ? o.useLayoutEffect : o.useEffect;
+      function c(e, t) {
         if (e === t) return !0;
         if (typeof e != typeof t) return !1;
         if ("function" == typeof e && e.toString() === t.toString()) return !0;
@@ -25,7 +24,7 @@
         if (e && t && "object" == typeof e) {
           if (Array.isArray(e)) {
             if (((n = e.length), n !== t.length)) return !1;
-            for (r = n; 0 !== r--; ) if (!l(e[r], t[r])) return !1;
+            for (r = n; 0 !== r--; ) if (!c(e[r], t[r])) return !1;
             return !0;
           }
           if (
@@ -36,42 +35,42 @@
             if (!{}.hasOwnProperty.call(t, o[r])) return !1;
           for (r = n; 0 !== r--; ) {
             const n = o[r];
-            if (("_owner" !== n || !e.$$typeof) && !l(e[n], t[n])) return !1;
+            if (("_owner" !== n || !e.$$typeof) && !c(e[n], t[n])) return !1;
           }
           return !0;
         }
         return e != e && t != t;
       }
-      function s(e) {
+      function l(e) {
         if ("undefined" == typeof window) return 1;
         return (e.ownerDocument.defaultView || window).devicePixelRatio || 1;
       }
-      function a(e, t) {
-        const n = s(e);
+      function s(e, t) {
+        const n = l(e);
         return Math.round(t * n) / n;
       }
-      function f(e) {
-        const t = u.useRef(e);
+      function a(e) {
+        const t = o.useRef(e);
         return (
-          c(() => {
+          i(() => {
             t.current = e;
           }),
           t
         );
       }
-      function d(e) {
+      function f(e) {
         void 0 === e && (e = {});
         const {
             placement: t = "bottom",
             strategy: n = "absolute",
-            middleware: o = [],
+            middleware: f = [],
             platform: d,
             elements: { reference: v, floating: m } = {},
             transform: p = !0,
             whileElementsMounted: g,
             open: h,
           } = e,
-          [b, y] = u.useState({
+          [b, y] = o.useState({
             x: 0,
             y: 0,
             strategy: n,
@@ -79,47 +78,47 @@
             middlewareData: {},
             isPositioned: !1,
           }),
-          [E, w] = u.useState(o);
-        l(E, o) || w(o);
-        const [R, x] = u.useState(null),
-          [k, I] = u.useState(null),
-          C = u.useCallback((e) => {
+          [E, w] = o.useState(f);
+        c(E, f) || w(f);
+        const [R, x] = o.useState(null),
+          [k, I] = o.useState(null),
+          C = o.useCallback((e) => {
             e !== O.current && ((O.current = e), x(e));
           }, []),
-          M = u.useCallback((e) => {
+          M = o.useCallback((e) => {
             e !== T.current && ((T.current = e), I(e));
           }, []),
           S = v || R,
           L = m || k,
-          O = u.useRef(null),
-          T = u.useRef(null),
-          A = u.useRef(b),
+          O = o.useRef(null),
+          T = o.useRef(null),
+          A = o.useRef(b),
           P = null != g,
-          N = f(g),
-          D = f(d),
-          q = f(h),
-          F = u.useCallback(() => {
+          N = a(g),
+          D = a(d),
+          q = a(h),
+          F = o.useCallback(() => {
             if (!O.current || !T.current) return;
             const e = { placement: t, strategy: n, middleware: E };
             D.current && (e.platform = D.current),
               (0, r.rD)(O.current, T.current, e).then((e) => {
                 const t = { ...e, isPositioned: !1 !== q.current };
                 K.current &&
-                  !l(A.current, t) &&
+                  !c(A.current, t) &&
                   ((A.current = t),
-                  i.flushSync(() => {
+                  u.flushSync(() => {
                     y(t);
                   }));
               });
           }, [E, t, n, D, q]);
-        c(() => {
+        i(() => {
           !1 === h &&
             A.current.isPositioned &&
             ((A.current.isPositioned = !1),
             y((e) => ({ ...e, isPositioned: !1 })));
         }, [h]);
-        const K = u.useRef(!1);
-        c(
+        const K = o.useRef(!1);
+        i(
           () => (
             (K.current = !0),
             () => {
@@ -128,13 +127,13 @@
           ),
           [],
         ),
-          c(() => {
+          i(() => {
             if ((S && (O.current = S), L && (T.current = L), S && L)) {
               if (N.current) return N.current(S, L, F);
               F();
             }
           }, [S, L, F, N, P]);
-        const _ = u.useMemo(
+        const _ = o.useMemo(
             () => ({
               reference: O,
               floating: T,
@@ -143,29 +142,29 @@
             }),
             [C, M],
           ),
-          j = u.useMemo(() => ({ reference: S, floating: L }), [S, L]),
-          U = u.useMemo(() => {
+          j = o.useMemo(() => ({ reference: S, floating: L }), [S, L]),
+          U = o.useMemo(() => {
             const e = { position: n, left: 0, top: 0 };
             if (!j.floating) return e;
-            const t = a(j.floating, b.x),
-              r = a(j.floating, b.y);
+            const t = s(j.floating, b.x),
+              r = s(j.floating, b.y);
             return p
               ? {
                   ...e,
                   transform: "translate(" + t + "px, " + r + "px)",
-                  ...(s(j.floating) >= 1.5 && { willChange: "transform" }),
+                  ...(l(j.floating) >= 1.5 && { willChange: "transform" }),
                 }
               : { position: n, left: t, top: r };
           }, [n, p, j.floating, b.x, b.y]);
-        return u.useMemo(
+        return o.useMemo(
           () => ({ ...b, update: F, refs: _, elements: j, floatingStyles: U }),
           [b, F, _, j, U],
         );
       }
-      const v = (e, t) => ({ ...(0, o.cY)(e), options: [e, t] }),
-        m = (e, t) => ({ ...(0, r.BN)(e), options: [e, t] }),
-        p = (e, t) => ({ ...(0, r.UU)(e), options: [e, t] }),
-        g = (e, t) => ({ ...(0, r.Ej)(e), options: [e, t] });
+      const d = (e, t) => ({ ...(0, r.cY)(e), options: [e, t] }),
+        v = (e, t) => ({ ...(0, r.BN)(e), options: [e, t] }),
+        m = (e, t) => ({ ...(0, r.UU)(e), options: [e, t] }),
+        p = (e, t) => ({ ...(0, r.Ej)(e), options: [e, t] });
     },
     73788: (e, t, n) => {
       n.d(t, {

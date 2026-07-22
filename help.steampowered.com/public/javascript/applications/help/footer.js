@@ -352,7 +352,7 @@
     },
     83403: (e, s, r) => {
       "use strict";
-      r.r(s), r.d(s, { GlobalFooter: () => Ke });
+      r.r(s), r.d(s, { GlobalFooter: () => Ye });
       var t = r(7850),
         n = r(8871),
         o = r(90626),
@@ -730,21 +730,22 @@
           },
         ];
       var y = r(68875),
-        w = r(8527);
+        w = r(88272);
       function b(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
-          a = f({ ...i, className: h()(e.className, y.Flex) }, S),
-          c = r ?? n?.focusable ?? !!i.onClick,
-          p = (0, t.jsx)(s, { ref: o, ...a }),
-          C = m(i.direction ?? "row", (0, d.xC)());
-        return w.TS.IN_GAMEPADUI
+          a = (0, w.Qn)(),
+          c = f({ ...i, className: h()(e.className, y.Flex) }, S),
+          p = r ?? n?.focusable ?? !!i.onClick,
+          C = (0, t.jsx)(s, { ref: o, ...c }),
+          _ = m(i.direction ?? "row", (0, d.xC)());
+        return a
           ? (0, t.jsx)(l, {
               ...(n || {}),
-              focusable: c,
-              "flow-children": C,
-              children: p,
+              focusable: p,
+              "flow-children": _,
+              children: C,
             })
-          : p;
+          : C;
       }
       const S = [
         ...j,
@@ -797,7 +798,7 @@
       }
       var N = r(39049),
         V = r(65274);
-      function P(e) {
+      function z(e) {
         const { as: s = "span", ref: r, className: n, ...o } = e,
           i = s;
         return (0, t.jsx)(i, {
@@ -805,7 +806,7 @@
           ...f({ ...o, className: h()(V.Text, n) }, M),
         });
       }
-      const z = [
+      const P = [
           {
             prop: "weight",
             responsive: !0,
@@ -848,7 +849,7 @@
           },
         ],
         M = [
-          ...z,
+          ...P,
           ...H,
           {
             prop: "size",
@@ -858,10 +859,10 @@
         ];
       const R = o.createContext({ depth: 0 });
       var T = r(91239);
-      function A() {
+      function k() {
         return T.Reset;
       }
-      function k(e) {
+      function A(e) {
         const { level: s = "auto", className: r, color: n } = e,
           i = (function (e, s) {
             if ("auto" === e && 0 === s) return "h1";
@@ -879,11 +880,11 @@
             return "h" + r;
           })(s, (0, o.useContext)(R).depth);
         return (0, t.jsx)(i, {
-          ...f({ ...e, className: h()(A(), N.Heading, r) }, E),
+          ...f({ ...e, className: h()(k(), N.Heading, r) }, E),
         });
       }
       const E = [
-        ...z,
+        ...P,
         ...H,
         {
           prop: "size",
@@ -893,29 +894,31 @@
       ];
       var Z = r(50122),
         U = r(45699);
-      function I(e) {
+      function B(e) {
         const { underline: s = "auto", focusable: r, navProps: n, ...o } = e,
-          i = r ?? n?.focusable ?? !!o.href,
-          a = f({ ...o, underline: s, className: Z.TextLink }, B);
-        return w.TS.IN_GAMEPADUI && (i || n)
-          ? (0, t.jsx)(U.Ii, { ...a, ...(n || {}), focusable: i })
-          : (0, t.jsx)("a", { ...a });
+          i = (0, w.Qn)(),
+          a = r ?? n?.focusable ?? !!o.href,
+          c = f({ ...o, underline: s, className: Z.TextLink }, F);
+        return i && (a || n)
+          ? (0, t.jsx)(U.Ii, { ...c, ...(n || {}), focusable: a })
+          : (0, t.jsx)("a", { ...c });
       }
-      const B = [
+      const F = [
         ...M,
         { prop: "underline", className: (e) => Z[`Underline-${e}`] },
       ];
-      var G = r(69041),
-        F = r(73406),
-        W = r(44041);
-      function O(e) {
+      var W = r(69041),
+        O = r(73406),
+        I = r(44041);
+      function G(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
-          a = f({ ...i, className: h()(W.Box, A(), e.className) }, D),
-          c = r ?? n?.focusable ?? !!i.onClick,
-          p = (0, t.jsx)(s, { ref: o, ...a });
-        return w.TS.IN_GAMEPADUI && (c || n)
-          ? (0, t.jsx)(l, { ...(n || {}), focusable: c, children: p })
-          : p;
+          a = (0, w.Qn)(),
+          c = f({ ...i, className: h()(I.Box, k(), e.className) }, D),
+          p = r ?? n?.focusable ?? !!i.onClick,
+          d = (0, t.jsx)(s, { ref: o, ...c });
+        return a && (p || n)
+          ? (0, t.jsx)(l, { ...(n || {}), focusable: p, children: d })
+          : d;
       }
       const D = j;
       var K = r(66922);
@@ -930,14 +933,14 @@
           } = e,
           c = (0, K.f)("LoadingSpinner", i);
         return n || !r
-          ? (0, t.jsxs)(O, {
+          ? (0, t.jsxs)(G, {
               position: "relative",
               ...a,
               width: "fit-content",
               children: [
                 (0, t.jsx)("div", {
                   "data-visibility": !r,
-                  className: F.ChildContainer,
+                  className: O.ChildContainer,
                   children: n,
                 }),
                 r &&
@@ -956,32 +959,32 @@
         const { className: s, color: r, ...n } = f(e, q);
         return (0, t.jsx)("div", {
           "data-accent-color": r,
-          className: h()(s, F.Spinner),
+          className: h()(s, O.Spinner),
           ...n,
         });
       }
       const q = [
         ...H,
-        { prop: "size", responsive: !0, className: (e) => F[`Size-${e}`] },
-        { prop: "variant", className: (e) => F[`Variant-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => O[`Size-${e}`] },
+        { prop: "variant", className: (e) => O[`Variant-${e}`] },
       ];
       function J(e) {
         e.preventDefault();
       }
       const X = [
           ...H,
-          { prop: "size", responsive: !0, className: (e) => G[`Size-${e}`] },
-          { prop: "variant", className: (e) => G[`Variant-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => W[`Size-${e}`] },
+          { prop: "variant", className: (e) => W[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
           {
             prop: "width",
-            className: G.Width,
+            className: W.Width,
             cssProperty: "--width",
             responsive: !0,
           },
           {
             prop: "minWidth",
-            className: G.MinWidth,
+            className: W.MinWidth,
             cssProperty: "--min-width",
             responsive: !0,
           },
@@ -1000,7 +1003,8 @@
               navProps: d,
               ...C
             } = e,
-            m = i
+            m = (0, w.Qn)(),
+            _ = i
               ? (0, t.jsx)(Y, {
                   size: r,
                   color: o,
@@ -1008,9 +1012,9 @@
                   children: a,
                 })
               : a,
-            _ = i ? void 0 : c,
-            u = p ?? d?.focusable ?? !!_,
-            x = {
+            u = i ? void 0 : c,
+            x = p ?? d?.focusable ?? !!u,
+            g = {
               type: "button",
               ...f(
                 {
@@ -1019,16 +1023,16 @@
                   size: r,
                   minWidth: n,
                   color: o,
-                  className: h()(G.Button, l && G.Icon),
-                  onClick: _,
+                  className: h()(W.Button, l && W.Icon),
+                  onClick: u,
                 },
                 X,
               ),
-              children: m,
+              children: _,
             };
-          return w.TS.IN_GAMEPADUI && (u || d)
-            ? (0, t.jsx)(U.fu, { ...x, ...(d || {}), focusable: u })
-            : (0, t.jsx)("button", { ...x });
+          return m && (x || d)
+            ? (0, t.jsx)(U.fu, { ...g, ...(d || {}), focusable: x })
+            : (0, t.jsx)("button", { ...g });
         },
         ee = function (e) {
           const {
@@ -1041,36 +1045,38 @@
               navProps: c,
               ...l
             } = e,
-            p = f(
+            p = (0, w.Qn)(),
+            d = f(
               {
                 onClick: o ? J : void 0,
                 ...l,
                 variant: (0, K.f)("Button", s),
                 size: r,
                 minWidth: n,
-                className: h()(G.Button, i && G.Icon, A()),
+                className: h()(W.Button, i && W.Icon, k()),
               },
               X,
             );
-          return w.TS.IN_GAMEPADUI && (a || c)
-            ? (0, t.jsx)(U.Ii, { ...p, ...(c || {}), focusable: a })
-            : (0, t.jsx)("a", { ...p });
+          return p && (a || c)
+            ? (0, t.jsx)(U.Ii, { ...d, ...(c || {}), focusable: a })
+            : (0, t.jsx)("a", { ...d });
         };
       var se = r(37603),
         re = r(75180);
       function te(e) {
         const { as: s = "div", ref: r, focusable: n, navProps: o, ...i } = e,
-          a = f({ ...i, className: h()(re.Grid, e.className) }, ne),
-          c = n ?? o?.focusable ?? !!i.onClick,
-          p = (0, t.jsx)(s, { ref: r, ...a });
-        return w.TS.IN_GAMEPADUI
+          a = (0, w.Qn)(),
+          c = f({ ...i, className: h()(re.Grid, e.className) }, ne),
+          p = n ?? o?.focusable ?? !!i.onClick,
+          d = (0, t.jsx)(s, { ref: r, ...c });
+        return a
           ? (0, t.jsx)(l, {
               "flow-children": "grid",
               ...(o || {}),
-              focusable: c,
-              children: p,
+              focusable: p,
+              children: d,
             })
-          : p;
+          : d;
       }
       const ne = [
         ...j,
@@ -1203,51 +1209,52 @@
       function pe() {
         le() && (0, ae.Y1)(ce.k1), "location" in window && location.reload();
       }
-      var he = r(60014),
-        de = r(74840),
-        Ce = r(73788),
-        me = r(28505),
-        _e = r(94621),
-        fe = r(85585),
-        ue = r(7445),
-        xe = r(81393);
-      const ge = (0, o.createContext)(null);
-      function ve(e) {
-        return w.TS.IN_GAMEPADUI
-          ? (0, t.jsx)(He, { ...e })
-          : (0, t.jsx)(je, { ...e });
-      }
+      var he = r(66418),
+        de = r(60014),
+        Ce = r(74840),
+        me = r(73788),
+        _e = r(38889),
+        fe = r(94621),
+        ue = r(85585),
+        xe = r(7445),
+        ge = r(81393);
+      const ve = (0, o.createContext)(null);
       function He(e) {
+        return (0, w.Qn)()
+          ? (0, t.jsx)(je, { ...e })
+          : (0, t.jsx)(ye, { ...e });
+      }
+      function je(e) {
         const { children: s } = e,
-          r = (0, o.useContext)(ge);
-        (0, xe.wT)(
+          r = (0, o.useContext)(ve);
+        (0, ge.wT)(
           !!r,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
         const n = o.useRef(void 0);
         return (
           (0, U.O7)(n, !!n.current, !1),
-          (0, t.jsx)(fe.D6, {
+          (0, t.jsx)(ue.D6, {
             navID: "Popover",
             onCancelButton: () => r.floating.context.onOpenChange(!1),
             modal: !0,
             navTreeRef: n,
             children: (0, t.jsx)("div", {
               style: { display: "contents" },
-              children: (0, t.jsx)(ue.q, { children: s }),
+              children: (0, t.jsx)(xe.q, { children: s }),
             }),
           })
         );
       }
-      function je(e) {
+      function ye(e) {
         const { children: s } = e,
-          r = (0, o.useContext)(ge);
+          r = (0, o.useContext)(ve);
         return (
-          (0, xe.wT)(
+          (0, ge.wT)(
             !!r,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
-          (0, t.jsx)(Ce.s3, {
+          (0, t.jsx)(me.s3, {
             context: r.floating.context,
             initialFocus: -1,
             returnFocus: !1,
@@ -1255,22 +1262,22 @@
           })
         );
       }
-      function ye(e) {
+      function we(e) {
         const { gutter: s = 0, placement: r } = e,
           t = [],
           n = r && "object" == typeof r;
         return (
           n && r.offset
-            ? t.push((0, _e.cY)(r.offset))
-            : (n && void 0 !== r.offset) || t.push((0, _e.cY)(2)),
+            ? t.push((0, fe.cY)(r.offset))
+            : (n && void 0 !== r.offset) || t.push((0, fe.cY)(2)),
           n && r.flip
-            ? t.push((0, _e.UU)(r.flip))
-            : (n && void 0 !== r.flip) || t.push((0, _e.UU)()),
+            ? t.push((0, fe.UU)(r.flip))
+            : (n && void 0 !== r.flip) || t.push((0, fe.UU)()),
           n && r.shift
-            ? t.push((0, _e.BN)(r.shift))
-            : (n && void 0 !== r.shift) || t.push((0, _e.BN)()),
+            ? t.push((0, fe.BN)(r.shift))
+            : (n && void 0 !== r.shift) || t.push((0, fe.BN)()),
           t.push(
-            (0, _e.Ej)({
+            (0, fe.Ej)({
               apply: (r) => {
                 const { rects: t, elements: n, availableHeight: o } = r,
                   i = { boxSizing: "border-box", zIndex: "1" };
@@ -1316,7 +1323,7 @@
           t
         );
       }
-      const we = {
+      const be = {
         Root: function (e) {
           const { children: s, ...r } = e,
             n = (function (e) {
@@ -1328,30 +1335,30 @@
               } = e;
               let o = s;
               0;
-              const i = (0, Ce.we)({
+              const i = (0, me.we)({
                   open: o,
                   onOpenChange: r,
-                  middleware: ye(e),
-                  whileElementsMounted: me.ll,
+                  middleware: we(e),
+                  whileElementsMounted: _e.ll,
                   placement: t && "object" == typeof t ? t.initial : t,
                   strategy: "fixed",
                   platform: {
-                    ...me.iD,
+                    ..._e.iD,
                     getOffsetParent: (e) =>
                       e?.ownerDocument?.defaultView ?? window,
                   },
                 }),
                 a = { enabled: !!n.click },
                 c = "function" == typeof n.click ? n.click(a) : a,
-                l = (0, Ce.kp)(i.context, c),
+                l = (0, me.kp)(i.context, c),
                 p = { enabled: !!n.focus },
                 h = "function" == typeof n.focus ? n.focus(p) : p,
-                d = (0, Ce.iQ)(i.context, h),
-                C = { handleClose: (0, Ce.iB)() },
+                d = (0, me.iQ)(i.context, h),
+                C = { handleClose: (0, me.iB)() },
                 m = "function" == typeof n.hover ? n.hover(C) : C,
-                _ = (0, Ce.Mk)(i.context, { enabled: !!n.hover, ...m }),
-                f = (0, Ce.s9)(i.context),
-                { getFloatingProps: u, getReferenceProps: x } = (0, Ce.bv)([
+                _ = (0, me.Mk)(i.context, { enabled: !!n.hover, ...m }),
+                f = (0, me.s9)(i.context),
+                { getFloatingProps: u, getReferenceProps: x } = (0, me.bv)([
                   l,
                   d,
                   _,
@@ -1364,12 +1371,12 @@
                 open: o,
               };
             })(r);
-          return (0, t.jsx)(ge.Provider, { value: n, children: s });
+          return (0, t.jsx)(ve.Provider, { value: n, children: s });
         },
         Anchor: function (e) {
           const { children: s } = e,
             r = o.Children.only(s),
-            t = (0, o.useContext)(ge);
+            t = (0, o.useContext)(ve);
           return r
             ? t
               ? (0, o.cloneElement)(r, {
@@ -1384,8 +1391,8 @@
         },
         Positioner: function (e) {
           const { children: s, className: r, ref: n } = e,
-            i = (0, o.useContext)(ge),
-            a = (0, Ce.SV)([
+            i = (0, o.useContext)(ve),
+            a = (0, me.SV)([
               n,
               i?.floating.refs.setFloating,
               (e) => e?.showPopover?.(),
@@ -1400,21 +1407,21 @@
           if (!i.open) return null;
           let c = o.Children.only(s),
             l = o.Fragment;
-          c.type == we.FocusManager &&
-            ((c = o.Children.only(c.props.children)), (l = ve));
+          c.type == be.FocusManager &&
+            ((c = o.Children.only(c.props.children)), (l = He));
           const p = (0, o.cloneElement)(c, {
             ref: a,
             style: { ...i.floating.floatingStyles },
-            className: h()(A(), r),
+            className: h()(k(), r),
             popover: "manual",
             ...i.getFloatingProps(),
           });
           return (0, t.jsx)(l, { children: p });
         },
-        FocusManager: ve,
+        FocusManager: He,
       };
       r(42327);
-      function be(e) {
+      function Se(e) {
         const {
             children: s,
             hoverContent: r,
@@ -1423,7 +1430,7 @@
             popoverProps: a,
           } = e,
           [c, l] = (0, o.useState)(!1);
-        return (0, t.jsxs)(we.Root, {
+        return (0, t.jsxs)(be.Root, {
           open: c,
           onOpenChange: l,
           interactions: {
@@ -1434,16 +1441,16 @@
           },
           ...a,
           children: [
-            (0, t.jsx)(we.Anchor, { children: s }),
-            (0, t.jsx)(we.Positioner, {
-              children: (0, t.jsx)(O, { children: r }),
+            (0, t.jsx)(be.Anchor, { children: s }),
+            (0, t.jsx)(be.Positioner, {
+              children: (0, t.jsx)(G, { children: r }),
             }),
           ],
         });
       }
-      var Se = r(60859),
-        Le = r.n(Se);
-      function Ne() {
+      var Le = r(60859),
+        Ne = r.n(Le);
+      function Ve() {
         return (0, t.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -1481,7 +1488,7 @@
           ],
         });
       }
-      function Ve() {
+      function ze() {
         return (0, t.jsxs)("svg", {
           width: "98",
           height: "34",
@@ -1526,12 +1533,12 @@
           ],
         });
       }
-      function ze(e) {
+      function Me(e) {
         let { href: s, ...r } = e;
-        const n = (0, he.n9)();
+        const n = (0, de.n9)();
         return (
-          s?.startsWith(w.TS.STORE_BASE_URL) && (s = (0, he.bV)(n, s)),
-          (0, t.jsx)(I, {
+          s?.startsWith(he.TS.STORE_BASE_URL) && (s = (0, de.bV)(n, s)),
+          (0, t.jsx)(B, {
             href: s,
             color: "dull-11",
             target: "_blank",
@@ -1540,68 +1547,68 @@
           })
         );
       }
-      function Me(e) {
+      function Re(e) {
         const s = (0, d.xC)();
         return "initial" === s || "sm" === s
           ? null
           : (0, t.jsx)("footer", {
-              className: h()(Le().SteamChinaFooter, e.className),
-              children: (0, t.jsxs)(O, {
-                className: Le().FooterContent,
+              className: h()(Ne().SteamChinaFooter, e.className),
+              children: (0, t.jsxs)(G, {
+                className: Ne().FooterContent,
                 children: [
                   (0, t.jsxs)(b, {
                     align: "center",
                     justify: "between",
                     children: [
-                      (0, t.jsx)(ze, {
-                        href: w.TS.STORE_BASE_URL,
-                        children: (0, t.jsx)(Ne, {}),
+                      (0, t.jsx)(Me, {
+                        href: he.TS.STORE_BASE_URL,
+                        children: (0, t.jsx)(Ve, {}),
                       }),
-                      (0, t.jsxs)(O, {
-                        className: Le().NavLinks,
+                      (0, t.jsxs)(G, {
+                        className: Ne().NavLinks,
                         children: [
-                          (0, t.jsx)(ze, {
+                          (0, t.jsx)(Me, {
                             href: "https://about.steamchina.com/upgrade_announcement.html",
                             children: "公告",
                           }),
                           "  |  ",
-                          (0, t.jsx)(ze, {
-                            href: w.TS.STORE_BASE_URL + "about",
+                          (0, t.jsx)(Me, {
+                            href: he.TS.STORE_BASE_URL + "about",
                             children: "关于蒸汽平台",
                           }),
                           "  |  ",
-                          (0, t.jsx)(ze, {
-                            href: w.TS.STORE_BASE_URL + "steam_refunds",
+                          (0, t.jsx)(Me, {
+                            href: he.TS.STORE_BASE_URL + "steam_refunds",
                             children: "退款政策",
                           }),
                           "  |  ",
-                          (0, t.jsx)(ze, {
-                            href: w.TS.STORE_BASE_URL + "subscriber_agreement",
+                          (0, t.jsx)(Me, {
+                            href: he.TS.STORE_BASE_URL + "subscriber_agreement",
                             children: "软件许可服务协议",
                           }),
                           "  |  ",
-                          (0, t.jsx)(ze, {
-                            href: w.TS.STORE_BASE_URL + "privacy_agreement",
+                          (0, t.jsx)(Me, {
+                            href: he.TS.STORE_BASE_URL + "privacy_agreement",
                             children: "个人信息保护政策",
                           }),
                           "  |  ",
-                          (0, t.jsx)(ze, {
-                            href: w.TS.STORE_BASE_URL + "data_outbound",
+                          (0, t.jsx)(Me, {
+                            href: he.TS.STORE_BASE_URL + "data_outbound",
                             children: "个人信息出境告知书",
                           }),
                           "  |  ",
-                          (0, t.jsx)(ze, {
+                          (0, t.jsx)(Me, {
                             href: "https://about.steamchina.com/content_report.html",
                             children: "不良内容举报投诉",
                           }),
                           "  |  ",
                           (0, t.jsx)("br", {}),
-                          (0, t.jsx)(ze, {
+                          (0, t.jsx)(Me, {
                             href: "https://about.steamchina.com/infringement_report.html",
                             children: "侵权投诉",
                           }),
                           "  |  ",
-                          (0, t.jsx)(ze, {
+                          (0, t.jsx)(Me, {
                             href: "https://about.steamchina.com/parentguardianship_agreement.html",
                             children: "家长监护",
                           }),
@@ -1617,11 +1624,11 @@
                       (0, t.jsxs)(b, {
                         gap: "2",
                         children: [
-                          (0, t.jsx)(ze, {
+                          (0, t.jsx)(Me, {
                             href: "https://www.wanmei.com/",
-                            children: (0, t.jsx)(Ve, {}),
+                            children: (0, t.jsx)(ze, {}),
                           }),
-                          (0, t.jsx)(ze, {
+                          (0, t.jsx)(Me, {
                             href: "https://www.valvesoftware.com",
                             children: (0, t.jsx)(Pe, {}),
                           }),
@@ -1630,11 +1637,11 @@
                       (0, t.jsxs)(b, {
                         gap: "5",
                         children: [
-                          (0, t.jsx)(be, {
+                          (0, t.jsx)(Se, {
                             hoverContent: (0, t.jsx)("img", {
                               alt: "",
                               src:
-                                w.TS.STORE_CDN_URL +
+                                he.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/Weibo-QR.png?v=2",
                             }),
                             children: (0, t.jsxs)(b, {
@@ -1643,18 +1650,18 @@
                                 (0, t.jsx)("img", {
                                   alt: "微博",
                                   src:
-                                    w.TS.STORE_CDN_URL +
+                                    he.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
-                                (0, t.jsx)(P, { children: "微博" }),
+                                (0, t.jsx)(z, { children: "微博" }),
                               ],
                             }),
                           }),
-                          (0, t.jsx)(be, {
+                          (0, t.jsx)(Se, {
                             hoverContent: (0, t.jsx)("img", {
                               alt: "",
                               src:
-                                w.TS.STORE_CDN_URL +
+                                he.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/WeChat-QR.png?v=2",
                             }),
                             children: (0, t.jsxs)(b, {
@@ -1663,10 +1670,10 @@
                                 (0, t.jsx)("img", {
                                   alt: "微信",
                                   src:
-                                    w.TS.STORE_CDN_URL +
+                                    he.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
-                                (0, t.jsx)(P, { children: "微信" }),
+                                (0, t.jsx)(z, { children: "微信" }),
                               ],
                             }),
                           }),
@@ -1679,7 +1686,7 @@
                     justify: "between",
                     marginTop: "5",
                     children: [
-                      (0, t.jsxs)(O, {
+                      (0, t.jsxs)(G, {
                         children: [
                           "© ",
                           new Date().getFullYear(),
@@ -1688,11 +1695,11 @@
                           "所有商标均属于其在美国或其他国家的拥有者。",
                         ],
                       }),
-                      (0, t.jsxs)(O, {
+                      (0, t.jsxs)(G, {
                         children: [
                           "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
                           (0, t.jsx)("br", {}),
-                          (0, t.jsx)(ze, {
+                          (0, t.jsx)(Me, {
                             href: "https://beian.miit.gov.cn",
                             children: "沪ICP备 17051673号-4",
                           }),
@@ -1712,43 +1719,43 @@
               }),
             });
       }
-      var Re = r(4038);
-      const Te = {};
-      (Te.arabic = () => r.e(2560).then(r.t.bind(r, 42560, 19))),
-        (Te.brazilian = () => r.e(5061).then(r.t.bind(r, 37442, 19))),
-        (Te.bulgarian = () => r.e(9945).then(r.t.bind(r, 39945, 19))),
-        (Te.czech = () => r.e(5059).then(r.t.bind(r, 55059, 19))),
-        (Te.danish = () => r.e(9605).then(r.t.bind(r, 19605, 19))),
-        (Te.dutch = () => r.e(3366).then(r.t.bind(r, 13366, 19))),
-        (Te.english = () => r.e(4468).then(r.t.bind(r, 74468, 19))),
-        (Te.finnish = () => r.e(1655).then(r.t.bind(r, 31655, 19))),
-        (Te.french = () => r.e(1580).then(r.t.bind(r, 21580, 19))),
-        (Te.german = () => r.e(5666).then(r.t.bind(r, 5666, 19))),
-        (Te.greek = () => r.e(2936).then(r.t.bind(r, 22936, 19))),
-        (Te.hungarian = () => r.e(2173).then(r.t.bind(r, 52173, 19))),
-        (Te.indonesian = () => r.e(412).then(r.t.bind(r, 80412, 19))),
-        (Te.italian = () => r.e(9468).then(r.t.bind(r, 29468, 19))),
-        (Te.japanese = () => r.e(2811).then(r.t.bind(r, 52811, 19))),
-        (Te.koreana = () => r.e(6139).then(r.t.bind(r, 76139, 19))),
-        (Te.latam = () => r.e(7267).then(r.t.bind(r, 77267, 19))),
-        (Te.malay = () => r.e(8844).then(r.t.bind(r, 88844, 19))),
-        (Te.norwegian = () => r.e(5964).then(r.t.bind(r, 85964, 19))),
-        (Te.polish = () => r.e(6509).then(r.t.bind(r, 26509, 19))),
-        (Te.portuguese = () => r.e(8233).then(r.t.bind(r, 58233, 19))),
-        (Te.romanian = () => r.e(8727).then(r.t.bind(r, 48727, 19))),
-        (Te.russian = () => r.e(8973).then(r.t.bind(r, 98973, 19))),
-        (Te.schinese = () => r.e(9720).then(r.t.bind(r, 49720, 19))),
-        (Te.spanish = () => r.e(1924).then(r.t.bind(r, 31924, 19))),
-        (Te.swedish = () => r.e(7925).then(r.t.bind(r, 17925, 19))),
-        (Te.tchinese = () => r.e(9259).then(r.t.bind(r, 89259, 19))),
-        (Te.thai = () => r.e(5474).then(r.t.bind(r, 25474, 19))),
-        (Te.turkish = () => r.e(2164).then(r.t.bind(r, 12164, 19))),
-        (Te.ukrainian = () => r.e(2626).then(r.t.bind(r, 52626, 19))),
-        (Te.vietnamese = () => r.e(6515).then(r.t.bind(r, 66515, 19)));
-      const Ae = (0, Re.l)(async function (e) {
-        if (Te[e]) return Te[e]();
+      var Te = r(4038);
+      const ke = {};
+      (ke.arabic = () => r.e(2560).then(r.t.bind(r, 42560, 19))),
+        (ke.brazilian = () => r.e(5061).then(r.t.bind(r, 37442, 19))),
+        (ke.bulgarian = () => r.e(9945).then(r.t.bind(r, 39945, 19))),
+        (ke.czech = () => r.e(5059).then(r.t.bind(r, 55059, 19))),
+        (ke.danish = () => r.e(9605).then(r.t.bind(r, 19605, 19))),
+        (ke.dutch = () => r.e(3366).then(r.t.bind(r, 13366, 19))),
+        (ke.english = () => r.e(4468).then(r.t.bind(r, 74468, 19))),
+        (ke.finnish = () => r.e(1655).then(r.t.bind(r, 31655, 19))),
+        (ke.french = () => r.e(1580).then(r.t.bind(r, 21580, 19))),
+        (ke.german = () => r.e(5666).then(r.t.bind(r, 5666, 19))),
+        (ke.greek = () => r.e(2936).then(r.t.bind(r, 22936, 19))),
+        (ke.hungarian = () => r.e(2173).then(r.t.bind(r, 52173, 19))),
+        (ke.indonesian = () => r.e(412).then(r.t.bind(r, 80412, 19))),
+        (ke.italian = () => r.e(9468).then(r.t.bind(r, 29468, 19))),
+        (ke.japanese = () => r.e(2811).then(r.t.bind(r, 52811, 19))),
+        (ke.koreana = () => r.e(6139).then(r.t.bind(r, 76139, 19))),
+        (ke.latam = () => r.e(7267).then(r.t.bind(r, 77267, 19))),
+        (ke.malay = () => r.e(8844).then(r.t.bind(r, 88844, 19))),
+        (ke.norwegian = () => r.e(5964).then(r.t.bind(r, 85964, 19))),
+        (ke.polish = () => r.e(6509).then(r.t.bind(r, 26509, 19))),
+        (ke.portuguese = () => r.e(8233).then(r.t.bind(r, 58233, 19))),
+        (ke.romanian = () => r.e(8727).then(r.t.bind(r, 48727, 19))),
+        (ke.russian = () => r.e(8973).then(r.t.bind(r, 98973, 19))),
+        (ke.schinese = () => r.e(9720).then(r.t.bind(r, 49720, 19))),
+        (ke.spanish = () => r.e(1924).then(r.t.bind(r, 31924, 19))),
+        (ke.swedish = () => r.e(7925).then(r.t.bind(r, 17925, 19))),
+        (ke.tchinese = () => r.e(9259).then(r.t.bind(r, 89259, 19))),
+        (ke.thai = () => r.e(5474).then(r.t.bind(r, 25474, 19))),
+        (ke.turkish = () => r.e(2164).then(r.t.bind(r, 12164, 19))),
+        (ke.ukrainian = () => r.e(2626).then(r.t.bind(r, 52626, 19))),
+        (ke.vietnamese = () => r.e(6515).then(r.t.bind(r, 66515, 19)));
+      const Ae = (0, Te.l)(async function (e) {
+        if (ke[e]) return ke[e]();
       });
-      function ke() {
+      function Ee() {
         return (0, t.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -1786,7 +1793,7 @@
           ],
         });
       }
-      function Ee() {
+      function Ze() {
         const e = (0, o.useId)();
         return (0, t.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -1822,7 +1829,7 @@
           ],
         });
       }
-      function Ze() {
+      function Ue() {
         return (0, t.jsx)("svg", {
           width: "24",
           height: "22",
@@ -1834,7 +1841,7 @@
           }),
         });
       }
-      function Ue() {
+      function Be() {
         return (0, t.jsx)("svg", {
           width: "22",
           height: "22",
@@ -1846,7 +1853,7 @@
           }),
         });
       }
-      function Ie() {
+      function Fe() {
         return (0, t.jsx)("svg", {
           width: "30",
           height: "22",
@@ -1858,7 +1865,7 @@
           }),
         });
       }
-      function Be() {
+      function We() {
         return (0, t.jsx)("svg", {
           width: "20",
           height: "22",
@@ -1870,24 +1877,24 @@
           }),
         });
       }
-      function Ge(e) {
+      function Oe(e) {
         return (0, t.jsx)(b, { direction: "column", gap: "4", ...e });
       }
-      function Fe(e) {
-        return (0, t.jsx)(k, {
+      function Ie(e) {
+        return (0, t.jsx)(A, {
           level: "3",
           color: "dull-12",
           weight: "heavy",
-          className: de.LinkColumnHeading,
+          className: Ce.LinkColumnHeading,
           ...e,
         });
       }
-      function We(e) {
+      function Ge(e) {
         let { href: s, ...r } = e;
-        const n = (0, he.n9)();
+        const n = (0, de.n9)();
         return (
-          s?.startsWith(w.TS.STORE_BASE_URL) && (s = (0, he.bV)(n, s)),
-          (0, t.jsx)(I, {
+          s?.startsWith(he.TS.STORE_BASE_URL) && (s = (0, de.bV)(n, s)),
+          (0, t.jsx)(B, {
             href: s,
             color: "dull-11",
             target: "_blank",
@@ -1896,7 +1903,7 @@
           })
         );
       }
-      function Oe() {
+      function De() {
         const e = (0, d.xC)();
         return (0, t.jsxs)(b, {
           gridArea: "main",
@@ -1908,20 +1915,20 @@
               gap: "6",
               align: "center",
               children: [
-                (0, t.jsx)(We, {
-                  href: w.TS.STORE_BASE_URL,
-                  children: (0, t.jsx)(ke, {}),
-                }),
-                (0, t.jsx)(We, {
-                  href: "https://valvesoftware.com",
+                (0, t.jsx)(Ge, {
+                  href: he.TS.STORE_BASE_URL,
                   children: (0, t.jsx)(Ee, {}),
+                }),
+                (0, t.jsx)(Ge, {
+                  href: "https://valvesoftware.com",
+                  children: (0, t.jsx)(Ze, {}),
                 }),
               ],
             }),
-            (0, t.jsx)(P, {
+            (0, t.jsx)(z, {
               as: "p",
               size: "1",
-              className: de.LegalNotice,
+              className: Ce.LegalNotice,
               children: ie(
                 Ae.Localize("#footer_legal_notice", new Date().getFullYear()),
               ),
@@ -1929,23 +1936,23 @@
             (0, t.jsxs)(b, {
               gap: "6",
               align: "center",
-              className: de.LogoLinks,
+              className: Ce.LogoLinks,
               children: [
-                (0, t.jsx)(We, {
+                (0, t.jsx)(Ge, {
                   href: "https://www.youtube.com/@Steam",
-                  children: (0, t.jsx)(Ie, {}),
+                  children: (0, t.jsx)(Fe, {}),
                 }),
-                (0, t.jsx)(We, {
+                (0, t.jsx)(Ge, {
                   href: "https://bsky.app/profile/steampowered.com",
-                  children: (0, t.jsx)(Ze, {}),
-                }),
-                (0, t.jsx)(We, {
-                  href: "https://facebook.com/steam",
                   children: (0, t.jsx)(Ue, {}),
                 }),
-                (0, t.jsx)(We, {
-                  href: "https://twitter.com/steam",
+                (0, t.jsx)(Ge, {
+                  href: "https://facebook.com/steam",
                   children: (0, t.jsx)(Be, {}),
+                }),
+                (0, t.jsx)(Ge, {
+                  href: "https://twitter.com/steam",
+                  children: (0, t.jsx)(We, {}),
                 }),
               ],
             }),
@@ -1953,9 +1960,9 @@
               gap: "5",
               children: [
                 "initial" === e &&
-                  !w.TS.IN_MOBILE_WEBVIEW &&
+                  !he.TS.IN_MOBILE_WEBVIEW &&
                   (0, t.jsx)(ee, {
-                    href: w.TS.STORE_BASE_URL + "mobile/",
+                    href: he.TS.STORE_BASE_URL + "mobile/",
                     children: Ae.Localize("#footer_link_get_mobile_apps"),
                   }),
                 le() &&
@@ -1969,7 +1976,7 @@
           ],
         });
       }
-      function De(e) {
+      function Ke(e) {
         return (
           (0, o.use)(Ae.Ready()),
           (0, t.jsx)(se.N, {
@@ -1986,7 +1993,7 @@
                 sm: "min-content min-content max-content max-content",
                 md: "fit-content(400px) max-content max-content max-content max-content",
               },
-              className: h()(de.GlobalFooter, e.className),
+              className: h()(Ce.GlobalFooter, e.className),
               justifyContent: { initial: "start", sm: "start", md: "center" },
               gap: { initial: "6", sm: "9" },
               padding: "7",
@@ -1994,109 +2001,109 @@
               textAlign: "start",
               id: "footer",
               children: [
-                (0, t.jsx)(Oe, {}),
-                (0, t.jsxs)(Ge, {
+                (0, t.jsx)(De, {}),
+                (0, t.jsxs)(Oe, {
                   gridArea: "steam",
                   children: [
-                    (0, t.jsx)(Fe, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_steam"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "about/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_about_steam"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "subscriber_agreement/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: Ae.Localize("#footer_link_steam_ssa"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.PARTNER_BASE_URL,
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.PARTNER_BASE_URL,
                       children: Ae.Localize("#footer_link_steamworks"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.PARTNER_BASE_URL + "steamdirect",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.PARTNER_BASE_URL + "steamdirect",
                       children: Ae.Localize("#footer_link_steam_distribution"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "digitalgiftcards/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: Ae.Localize("#footer_link_gift_cards"),
                     }),
                   ],
                 }),
-                (0, t.jsxs)(Ge, {
+                (0, t.jsxs)(Oe, {
                   gridArea: "valve",
                   children: [
-                    (0, t.jsx)(Fe, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_valve"),
                     }),
-                    (0, t.jsx)(We, {
+                    (0, t.jsx)(Ge, {
                       href: "https://valvesoftware.com/about",
                       children: Ae.Localize("#footer_link_about_valve"),
                     }),
-                    (0, t.jsx)(We, {
+                    (0, t.jsx)(Ge, {
                       href: "https://valvesoftware.com/",
                       children: Ae.Localize("#footer_link_jobs"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "hardware/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "hardware/",
                       children: Ae.Localize("#footer_link_hardware"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "hardware_recycling/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: Ae.Localize("#footer_link_recycling"),
                     }),
                   ],
                 }),
-                (0, t.jsxs)(Ge, {
+                (0, t.jsxs)(Oe, {
                   gridArea: "legal",
                   children: [
-                    (0, t.jsx)(Fe, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_legal"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "privacy_agreement/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: Ae.Localize("#footer_link_privacy"),
                     }),
-                    (0, t.jsx)(We, {
+                    (0, t.jsx)(Ge, {
                       href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
                       children: Ae.Localize("#footer_link_accessibility"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "legal/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "legal/",
                       children: Ae.Localize(
                         "#footer_link_notices_and_policies",
                       ),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "account/cookiepreferences/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: Ae.Localize("#footer_link_cookies"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "steam_refunds/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "steam_refunds/",
                       children: Ae.Localize("#footer_link_refunds"),
                     }),
                   ],
                 }),
-                (0, t.jsxs)(Ge, {
+                (0, t.jsxs)(Oe, {
                   gridArea: "more",
                   children: [
-                    (0, t.jsx)(Fe, {
+                    (0, t.jsx)(Ie, {
                       children: Ae.Localize("#footer_link_header_more"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "about/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_get_steam"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "mobile/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "mobile/",
                       children: Ae.Localize("#footer_link_get_mobile_apps"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.HELP_BASE_URL,
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.HELP_BASE_URL,
                       children: Ae.Localize("#footer_link_get_support"),
                     }),
-                    (0, t.jsx)(We, {
-                      href: w.TS.STORE_BASE_URL + "account/",
+                    (0, t.jsx)(Ge, {
+                      href: he.TS.STORE_BASE_URL + "account/",
                       children: Ae.Localize("#footer_link_my_account"),
                     }),
                   ],
@@ -2106,12 +2113,12 @@
           })
         );
       }
-      function Ke(e) {
-        if (w.TS.IN_GAMEPADUI) return null;
-        const s = (0, oe.nA)(w.TS.EREALM)
-          ? (0, t.jsx)(Me, { ...e })
-          : (0, t.jsx)(De, { ...e });
-        return (0, t.jsx)(he.nn, {
+      function Ye(e) {
+        if (he.TS.IN_GAMEPADUI) return null;
+        const s = (0, oe.nA)(he.TS.EREALM)
+          ? (0, t.jsx)(Re, { ...e })
+          : (0, t.jsx)(Ke, { ...e });
+        return (0, t.jsx)(de.nn, {
           controller: "footer",
           method: "footer",
           children: s,

@@ -1429,6 +1429,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  gift_not_valid_for_recipient_region: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -1513,6 +1518,11 @@
                   },
                   non_refundable: {
                     _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  gift_recipient_higher_price: {
+                    _: 6,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -2452,6 +2462,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -2681,6 +2692,10 @@
                     _: 5,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  gift_info: {
+                    _: 6,
+                    _: _._,
                   },
                 },
               }),
@@ -2945,6 +2960,15 @@
                     _: 2,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  is_gift: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  gift_info: {
+                    _: 4,
+                    _: _._,
                   },
                 },
               }),
@@ -3884,6 +3908,10 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  gift_info: {
+                    _: 8,
+                    _: _._,
+                  },
                 },
               }),
             _.sm_m
@@ -3989,6 +4017,134 @@
         }
         getClassName() {
           return "CShoppingCart_AddBundle_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.gidshoppingcart || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  gidshoppingcart: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  gidlineitem: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  gift_info: {
+                    _: 3,
+                    _: _._,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CShoppingCart_ModifyLineItem_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.contents || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  contents: {
+                    _: 1,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CShoppingCart_ModifyLineItem_Response";
         }
       }
       class _ extends _.Message {
@@ -4182,6 +4338,17 @@
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
             });
+          }),
+          (_.ModifyLineItem = function (_, _, _) {
+            return _.SendMsg(
+              "ShoppingCart.ModifyLineItem#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
           (_.RemoveLineItems = function (_, _, _) {
             return _.SendMsg(
@@ -8767,6 +8934,58 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      function _(_) {
+        const {
+            className: _,
+            url: _,
+            style: _,
+            children: _,
+            bSkipForcingStoreLink: _,
+            bOpenInline: _,
+            bFocusable: _ = !0,
+          } = _,
+          _ = _
+            ? _
+            : _
+              ? (function (_, _) {
+                  try {
+                    const _ = new URL(_),
+                      _ = new URL(_);
+                    return (
+                      _.href.replace(/\/$/, "") + _.pathname + _.search + _.hash
+                    );
+                  } catch (_) {
+                    return "";
+                  }
+                })(_, _._.STORE_BASE_URL)
+              : void 0,
+          _ = (0, _._)(_);
+        return _
+          ? (0, _.jsx)(_._, {
+              href: _,
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+              className: _,
+              style: _,
+              rel: "noopener noreferrer",
+              focusable: _,
+              children: _,
+            })
+          : (0, _.jsx)("span", {
+              style: _,
+              className: _,
+              children: _,
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(void 0);
       _.Provider;
@@ -11185,6 +11404,9 @@
       function _(_) {
         return "account" === _.type;
       }
+      function _(_) {
+        return !!_;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -12739,18 +12961,17 @@
           });
       })(_ || (_ = {}));
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      function _(_) {
-        return !!_;
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_, _, _, _) {
+      async function _(_, _, _, _, _) {
         const _ = new FormData();
         _ &&
           (1 === _.length
             ? _.set("subid", _[0].toString())
             : _.forEach((_) => _.set("subid[]", _.toString()))),
           _ && _.set("bundleid", __webpack_require__.toString()),
+          (_ || _) &&
+            (_.set("isgift", "1"), _ && _.set("gifteeaccountid", _.toString())),
           _.set("action", "add_to_cart");
         const _ = await fetch(`${_._.STORE_BASE_URL}cart/addtocart`, {
           method: "post",
@@ -12810,14 +13031,20 @@
                       (_.line_item_id = _.gidlineitem),
                         _.bundle_item?.bundleid
                           ? ((_.bundleid = _.bundle_item.bundleid),
-                            (_.type = _))
+                            (_.type = _),
+                            _.bundle_item.is_gift &&
+                              ((_.flags.is_gift = _.bundle_item.is_gift),
+                              (_.gift_info = _.bundle_item.gift_info)))
                           : _.package_item &&
                             ((_.packageid = _.package_item.packageid),
                             (_.price_when_added.amount_in_cents =
                               _.package_item.costwhenadded?.amount ?? ""),
                             (_.price_when_added.currency_code =
                               _.package_item.costwhenadded?.currencycode ?? 0),
-                            (_.type = _));
+                            (_.type = _),
+                            _.package_item.is_gift &&
+                              ((_.flags.is_gift = _.package_item.is_gift),
+                              (_.gift_info = _.package_item.gift_info)));
                       return _;
                     })(_),
               )
@@ -12890,7 +13117,7 @@
               )
                 throw "Invalid cart type";
               {
-                const [_, _] = await _(0, _ ? [_] : void 0, _);
+                const [_, _] = await _(0, _ ? [_] : void 0, _, _, _);
                 if (_ != _._ || !_)
                   throw `AddItemsToAnonymousCart failed with ${_}`;
                 {
@@ -13642,48 +13869,6 @@
           }),
         });
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            className: _,
-            url: _,
-            style: _,
-            children: _,
-            bSkipForcingStoreLink: _,
-            bOpenInline: _,
-            bFocusable: _ = !0,
-          } = _,
-          _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
-          _ = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_._, {
-              href: _,
-              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-              className: _,
-              style: _,
-              rel: "noopener noreferrer",
-              focusable: _,
-              children: _,
-            })
-          : (0, _.jsx)("span", {
-              style: _,
-              className: _,
-              children: _,
-            });
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

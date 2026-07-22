@@ -338,6 +338,7 @@
               navProps: _,
               ..._
             } = _,
+            _ = (0, _._)(),
             _ = _
               ? (0, _.jsx)(_._, {
                   size: _,
@@ -369,7 +370,7 @@
               ),
               children: _,
             };
-          return _._.IN_GAMEPADUI && (_ || _)
+          return _ && (_ || _)
             ? (0, _.jsx)(_._, {
                 ..._,
                 ...(_ || {}),
@@ -390,6 +391,7 @@
               navProps: _,
               ..._
             } = _,
+            _ = (0, _._)(),
             _ = (0, _._)("Button", _),
             _ = _ ? _ : void 0,
             _ = (0, _._)(
@@ -403,7 +405,7 @@
               },
               _,
             );
-          return _._.IN_GAMEPADUI && (_ || _)
+          return _ && (_ || _)
             ? (0, _.jsx)(_._, {
                 ..._,
                 ...(_ || {}),
@@ -509,6 +511,7 @@
       function _(_) {
         var _;
         const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(
             {
               ..._,
@@ -525,7 +528,7 @@
             ref: _,
             ..._,
           });
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ...(_ || {}),
               focusable: _,
@@ -555,6 +558,7 @@
       function _(_) {
         var _, _;
         const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(
             {
               ..._,
@@ -572,7 +576,7 @@
             ..._,
           }),
           _ = (0, _._)(null !== (_ = _.direction) && void 0 !== _ ? _ : "row");
-        return _._.IN_GAMEPADUI
+        return _
           ? (0, _.jsx)(_._, {
               ...(_ || {}),
               focusable: _,

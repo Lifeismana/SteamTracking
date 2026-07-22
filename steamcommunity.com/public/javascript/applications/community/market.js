@@ -123,7 +123,7 @@
       }
       var h = n(37085),
         d = n(63215),
-        p = n(8527),
+        p = n(66418),
         u = n(23809),
         f = n(29385),
         g = n(88942);
@@ -1824,25 +1824,26 @@
         i = n(75659),
         v = n(11526),
         r = n(75180),
-        o = n(8527);
+        o = n(78327);
       function h(t) {
         var c;
         const { as: n = "div", ref: s, focusable: i, navProps: h, ...p } = t,
-          u = (0, v.mz)({ ...p, className: a()(r.Grid, t.className) }, d),
-          f =
+          u = (0, o.Qn)(),
+          f = (0, v.mz)({ ...p, className: a()(r.Grid, t.className) }, d),
+          g =
             null !== (c = null != i ? i : null == h ? void 0 : h.focusable) &&
             void 0 !== c
               ? c
               : !!p.onClick,
-          g = (0, e.jsx)(n, { ref: s, ...u });
-        return o.TS.IN_GAMEPADUI
+          m = (0, e.jsx)(n, { ref: s, ...f });
+        return u
           ? (0, e.jsx)(l.J, {
               "flow-children": "grid",
               ...(h || {}),
-              focusable: f,
-              children: g,
+              focusable: g,
+              children: m,
             })
-          : g;
+          : m;
       }
       const d = [
         ...i.h,
@@ -1976,7 +1977,7 @@
       "use strict";
       n.d(c, { jn: () => r });
       var e = n(29233),
-        l = n(8527),
+        l = n(66418),
         s = n(23809),
         a = n(88942),
         i = n(11333);
@@ -2041,7 +2042,7 @@
     3049: (t, c, n) => {
       "use strict";
       n.d(c, { J: () => s });
-      var e = n(8527),
+      var e = n(66418),
         l = n(13843);
       function s() {
         return (0, l.A)().languages.map((t) => {
@@ -2092,7 +2093,7 @@
       n.d(c, { nk: () => dt, Tx: () => Mt, D: () => zt, xs: () => gt });
       var e = n(7850),
         l = n(90626),
-        s = n(8527),
+        s = n(66418),
         a = n(88942),
         i = n(90534),
         v = n(59805),
@@ -3569,7 +3570,7 @@
         m = n(11967),
         x = n(46562),
         C = n(62548),
-        _ = n(8527);
+        _ = n(66418);
       const j =
           n.p +
           "images/applications/community/knife.png?v=valveisgoodatcaching",
@@ -6807,7 +6808,7 @@
     67603: (t, c, n) => {
       "use strict";
       n.d(c, { N: () => l });
-      var e = n(8527);
+      var e = n(66418);
       const l = {
         Home: (t) => s("", t),
         AppHome: (t, c) => l.Search({ ...c, search: `appid=${t}` }),
@@ -6892,7 +6893,7 @@
     42834: (t, c, n) => {
       "use strict";
       n.d(c, { DT: () => r, b0: () => i, bu: () => v, pd: () => o });
-      var e = n(8527),
+      var e = n(66418),
         l = n(39777),
         s = n(81393),
         a = n(38535);

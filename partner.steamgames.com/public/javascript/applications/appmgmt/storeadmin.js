@@ -3244,7 +3244,7 @@
                 ? ((i = !0), n.push(l))
                 : (u || (r = !0), s.push(l));
             }
-            if ((console.assert(!r || t), r && t)) {
+            if ((console.assert(!r || !!t), r && t)) {
               t.isBlock &&
                 s.length > 1 &&
                 s[s.length - 1].type == this.schema.nodes.hard_break &&
@@ -7385,7 +7385,7 @@
         ce = s(96409),
         de = s(92757),
         ue = s(32801),
-        pe = s(8527),
+        pe = s(66418),
         me = s(77411),
         he = s(17720),
         _e = s(4796),
@@ -16919,7 +16919,7 @@
         l = s(49411),
         c = s(61336),
         d = s(52541),
-        u = s(8527);
+        u = s(66418);
       s(78327);
       function p(e) {
         if (e) {
@@ -17540,7 +17540,7 @@
         c = s(20433);
       var d = s(78588),
         u = s(12424),
-        p = s(8527);
+        p = s(66418);
       const m = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       var h = s(39777),
         _ = s(90626),

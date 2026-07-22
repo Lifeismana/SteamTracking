@@ -302,7 +302,7 @@ function SubmitReplyForm_Internal( form, extraFormData )
 	var $Form = $J( form );
 	var strReply = ConvertEditableContentToBBCode( $Form.find( 'div[name=reply_body]' )[0] );
 
-	var regexReplacementText = /(?:^| )#[\w\-]+(?: |$)/i;
+	var regexReplacementText = /(?:^|\p{Po}| )#[\w\-]+(?: |\p{Po}|$)/iu;
 
 	if ( regexReplacementText.exec( strReply ) )
 	{
@@ -310,7 +310,7 @@ function SubmitReplyForm_Internal( form, extraFormData )
 		return;
 	}
 
-	var regexProcessReplacementText = /(?:^| )⭈[\w\-]+(?: |$)/i;
+	var regexProcessReplacementText = /(?:^|\p{Po}| )⭈[\w\-]+(?: |\p{Po}|$)/iu;
 
 	if ( regexProcessReplacementText.exec( strReply ) )
 	{

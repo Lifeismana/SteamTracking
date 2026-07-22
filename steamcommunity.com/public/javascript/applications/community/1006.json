@@ -157,7 +157,7 @@
     "ContentReportSubmitted_Chat_Description": "Gracias por enviar tu denuncia. Recopilamos una pequeña parte del registro del chat y la hemos enviado a moderación. No necesitas hacer nada más.",
     "ContentReportSubmissionError_Title": "Error al enviar la denuncia",
     "ContentReportSubmissionError_Description": "Se produjo un error al enviar la denuncia. Inténtalo de nuevo más tarde.",
-    "ContentReportSubmissionOnCooldown_Description": "Fuiste bloqueado temporalmente de hacer denuncias de contenido.",
+    "ContentReportSubmissionOnCooldown_Description": "Se bloqueó temporalmente tu capacidad para denunciar contenido.",
     "ContentReport_FriendOptions_CallToAction": "Puedes tomar medidas adicionales para evitar futuros mensajes:",
     "ContentReport_FriendOptions_BlockedDesc": "Este usuario se ha bloqueado automáticamente y ya no recibirás mensajes suyos.",
     "ContentReport_FriendOptions_Unblock": "Revertir el bloqueo",

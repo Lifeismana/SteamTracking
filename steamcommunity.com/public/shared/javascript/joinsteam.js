@@ -631,7 +631,7 @@ function TransferLogin( data )
 function ReallyCreateAccount()
 {
 	++iAjaxCalls;
-	let $waitDialog = ShowBlockingWaitDialog( 'Creating your Steam account...' );
+	let $waitDialog = ShowBlockingWaitDialog( !g_bGuest ? 'Proceeding to your purchase...' : 'Creating your Steam account...' );
 	new Ajax.Request( g_sBaseURL + 'join/createaccount/',
 	{
 		type: 'POST', 	    parameters: { accountname : $('accountname').value,

@@ -1,5 +1,8 @@
 {
     "language": "polish",
+    "EventEditor_Loc_Title": "Zarządzaj lokalizacją",
+    "EventEditor_Loc_Overview": "Eksportuj i importuj pliki lokalizacji, by zarządzać tłumaczeniem tekstu w całym twoim wydarzeniu.",
+    "EventEditor_Loc_Overview_Page": "Eksportuj i importuj pliki lokalizacji, by zarządzać tłumaczeniem tekstu na całej twojej stronie.",
     "LoginRedirect_Dialog_Title": "Zaloguj się",
     "LoginRedirect_Dialog_Description": "Zaloguj się, aby dodać tę pozycję do listy życzeń, zacząć ją obserwować lub oznaczyć jako ignorowaną. Kliknięcie „OK” przekieruje cię na stronę logowania.",
     "Wishlist_NotSignedIn": "Zaloguj się lub otwórz tę stronę w aplikacji Steam, by dodawać produkty do list życzeń, obserwować lub kupować.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s Adres URL został zaakceptowany",
     "SteamURLInvalid": "Błąd: adres URL nie prowadzi do zasobu Steam (w sklepie/społeczności)",
     "AnchorHashInputInvalid": "Nieprawidłowe dane wejściowe",
+    "Sale_Section_Label_Color": "Kolor etykiety",
+    "Sale_Section_Background_Top": "Gradient tła (góra)",
+    "Sale_Section_Background_Bottom": "Gradient tła (dół)",
     "Reservation_JoinPool": "Dołącz do listy",
     "Reserationn_NoListJoined": "Wybierz model poniżej, aby się zarejestrować – kwalifikujący się klienci mogą zarejestrować się maksymalnie na %1$s modele.",
     "Reservation_InPool": "Jesteś na liście dla wybranych modeli poniżej.",

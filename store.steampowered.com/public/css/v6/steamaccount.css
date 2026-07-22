@@ -518,6 +518,7 @@ body.v6 .account_settings_container .h3_content {
 	margin: 5px 0 5px 25px;
 }
 
+
 .account_settings_container label {
 	font-size: 13px;
 	color: #c5d1df;
@@ -550,6 +551,25 @@ body.v6 .account_settings_container .h3_content {
 	margin-right: 25px;
     min-width: 35%;
 }
+
+@media screen and (max-width: 910px)
+{
+	.account_settings_container blockquote {
+		margin: 5px 0 5px 5px;
+	}
+
+	.account_settings_container .half {
+		display: flex;
+		flex: 1;
+		margin-right: 10px;
+		min-width: 35%;
+	}
+
+	.account_settings_container label {
+		display: unset;
+	}
+}
+
 
 .account_settings_container .two_column_container {
 	display: flex;

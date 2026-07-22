@@ -9,6 +9,8 @@
         SideBySide: "ZHRZ8czyqs7NaNmv65ARI",
         GuestContainer: "_3Sfbz5IM9d2jNMdOV2aFal",
         GuestLayout: "_1r_sYgW1VktkbK33MvFdMx",
+        StandardLayout: "_2EuR68sQbA8eP01DlIfu6O",
+        Embedded: "_2R_n2M6thAvA4On2yeR_Jd",
         GuestText: "_2gE59p3vz8NzTRZIejilUN",
         GuestLink: "_3zcmXq9FSDuc9eFPT7yj1A",
         ConfirmCredntialsNag: "_2oMvaF46xYOE6Guy0xjCAl",
@@ -79,10 +81,8 @@
         RefreshTitle: "_3yMMwjOGjHdmMrJbYQyst3",
         RefreshReason: "_1b-mLIbA7lNlcrNICBrLu6",
         InsecureComputer: "_3onX-q5mCgAQyvYp-RXyQy",
-        StandardLayout: "_2EuR68sQbA8eP01DlIfu6O",
         PrimaryHeader: "g5L61o-ZrHHmwLEugLjLI",
         FormContainer: "_3XCnc4SuTz8V8-jXVwkt_s",
-        Embedded: "_2R_n2M6thAvA4On2yeR_Jd",
         Compact: "_3FB9Kwzf1SnNWl8p2Mypu7",
         HeaderLogo: "_3v6WnuVNx1rJx0x_1AAyPp",
         LogoContainer: "_14exBrSFDthVqeknXgFh4X",
@@ -7293,7 +7293,7 @@
           }),
         });
       }
-      var Ke = r(8527);
+      var Ke = r(66418);
       const Ye = (0, u.createContext)(!1),
         $e = () => (0, u.useContext)(Ye);
       function Xe() {
@@ -9067,7 +9067,7 @@
         r.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var l = r(42248),
-        u = r(8527);
+        u = r(66418);
       const m = n.memo(function (e) {
         const {
           className: t,

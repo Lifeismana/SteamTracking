@@ -1,5 +1,8 @@
 {
     "language": "turkish",
+    "EventEditor_Loc_Title": "Yerelleştirmeyi Yönet",
+    "EventEditor_Loc_Overview": "Etkinliğinize ait dizgelerin yerelleştirmesini yönetmek için yerelleştirme dosyalarını dışa ve içe aktarın.",
+    "EventEditor_Loc_Overview_Page": "Sayfanıza ait dizgelerin yerelleştirmesini yönetmek için yerelleştirme dosyalarını dışa ve içe aktarın.",
     "LoginRedirect_Dialog_Title": "Giriş Yap",
     "LoginRedirect_Dialog_Description": "Bu öğeyi istek listenize eklemek, takip etmek veya yok sayıldı olarak işaretlemek için giriş yapın. Tamam'a tıklamak sizi giriş yapma sayfasına yönlendirecektir.",
     "Wishlist_NotSignedIn": "Giriş yaparak veya bu sayfayı Steam uygulamasında açarak istek listenize ekleyin, takip edin veya satın alın.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL'i Kabul Edildi",
     "SteamURLInvalid": "Hata: URL bir Steam varlığı değil (mağaza/topluluk)",
     "AnchorHashInputInvalid": "Geçersiz Girdi",
+    "Sale_Section_Label_Color": "Etiket Rengi",
+    "Sale_Section_Background_Top": "Arka Plan Gradyanı (Üst)",
+    "Sale_Section_Background_Bottom": "Arka Plan Gradyanı (Alt)",
     "Reservation_JoinPool": "Listeye Katıl",
     "Reserationn_NoListJoined": "Kaydolmak için aşağıdaki modellerden birini seçin. Uygun müşteriler en fazla %1$s model için kaydolabilir.",
     "Reservation_InPool": "Aşağıdaki seçilen modeller için listeye girdiniz.",

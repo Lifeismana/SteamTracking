@@ -17,9 +17,6 @@ p._3lnqGBzYap-Z2T81XBiBUU {
 th > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
 td > p._3lnqGBzYap-Z2T81XBiBUU:first-child {
   margin-top: 0;
-}
-th > p._3lnqGBzYap-Z2T81XBiBUU:first-child,
-td > p._3lnqGBzYap-Z2T81XBiBUU:first-child {
   margin-bottom: 0;
 }
 ._2LYsFAwy8wdRJQTNJOUcsT,
@@ -1072,6 +1069,18 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 }
 .Nn2-w0eqLuugAR-Udm--3 input {
   background-color: #fff;
+}
+._32PwNSgquR6tGAPIBcWgVq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+._32PwNSgquR6tGAPIBcWgVq .DialogLabel {
+  font-size: 18px;
+  text-transform: none;
+  color: #fff;
+  font-weight: 500;
 }
 @keyframes K5kB32gMVsnDCBwxYDm4r {
   from {

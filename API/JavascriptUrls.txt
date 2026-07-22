@@ -4,6 +4,7 @@ ${BASE_URL_SHARED_CDN}/store_item_assets/${filename}
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
 ${BASE_URL_SHARED_CDN}community_assets/
+${BASE_URL_SHARED_CDN}community_assets/images/apps/${}/${}
 ${BASE_URL_SHARED_CDN}social_sharing/
 ${BASE_URL_SHARED_CDN}store_item_assets/
 ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
@@ -170,6 +171,7 @@ ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
 ${COMMUNITY_BASE_URL}actions/redirecttoforumtopic/?accountIDOwner=${}&gidForum=${forumId}&gidTopic=${group_id}
+${COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${}&gidForum=${gidForum}&gidTopic=${gidTopic}
 ${COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${}&gidForum=${}&gidTopic=${}
 ${COMMUNITY_BASE_URL}actions/selectPreviousAvatar
 ${COMMUNITY_BASE_URL}app/${appId}
@@ -306,7 +308,7 @@ ${COMMUNITY_BASE_URL}my/groups/
 ${COMMUNITY_BASE_URL}my/itemcollection
 ${COMMUNITY_BASE_URL}my/moderatormessages
 ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
-${COMMUNITY_BASE_URL}my/myworkshopfiles/?appid=${appid}${_ ? _ : ""}
+${COMMUNITY_BASE_URL}my/myworkshopfiles/?appid=${appid}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}my/reportedcontent/${subject_type}-${subject_group_id}-${subject_id}
 ${COMMUNITY_BASE_URL}my/reportedcontent/${}-${}-${}
 ${COMMUNITY_BASE_URL}my/revenueactivity
@@ -347,6 +349,7 @@ ${COMMUNITY_BASE_URL}profiles/${steamid}/posthistory
 ${COMMUNITY_BASE_URL}profiles/${steamid}/tradeoffers
 ${COMMUNITY_BASE_URL}profiles/${}
 ${COMMUNITY_BASE_URL}profiles/${}/
+${COMMUNITY_BASE_URL}profiles/${}/achievements/${}
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxlanguagepreferences
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
 ${COMMUNITY_BASE_URL}profiles/${}/friends/pending
@@ -396,7 +399,7 @@ ${COMMUNITY_BASE_URL}sharedfiles/markassuspicious
 ${COMMUNITY_BASE_URL}sharedfiles/moderationqueueview/?appid=${appid}
 ${COMMUNITY_BASE_URL}sharedfiles/reportitem
 ${COMMUNITY_BASE_URL}sharedfiles/updaterestrictedcountries
-${COMMUNITY_BASE_URL}sharedfiles/votingqueue/?appid=${appid}&matchingFileType=${}
+${COMMUNITY_BASE_URL}sharedfiles/votingqueue/?appid=${appid}&matchingFileType=17
 ${COMMUNITY_BASE_URL}tempcloud/beginfileupload/
 ${COMMUNITY_BASE_URL}tempcloud/commitfileupload/
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetcommunitypreferences
@@ -409,18 +412,19 @@ ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&for_items[]=${}_${}_${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&token=${}
 ${COMMUNITY_BASE_URL}tradingcards/boostercreator/
 ${COMMUNITY_BASE_URL}vtt/video/${}
-${COMMUNITY_BASE_URL}workshop/${}${_ ? _ : ""}
+${COMMUNITY_BASE_URL}workshop/${}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}workshop/about/?appid=${appid}
-${COMMUNITY_BASE_URL}workshop/browse/?appid=${appid}${_ ? _ : ""}
+${COMMUNITY_BASE_URL}workshop/browse/?appid=${appid}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}workshop/discussions/?appid=${appid}
 ${COMMUNITY_BASE_URL}workshop/editcollection/?appid=${appid}
-${COMMUNITY_BASE_URL}workshop/edititem/${appid}/${}/
+${COMMUNITY_BASE_URL}workshop/edititem/${appid}/11/
 ${COMMUNITY_CDN_ASSET_URL}${imgHeadshot}
 ${COMMUNITY_CDN_ASSET_URL}${screenshot}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/${}/${}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/96px/${}.png
 ${COMMUNITY_CDN_ASSET_URL}prettify/prettify.js
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/96px/flake_${}.png
+${COMMUNITY_CDN_URL}
 ${COMMUNITY_CDN_URL}economy/boosterpack/${}?l=${LANGUAGE}
 ${COMMUNITY_CDN_URL}economy/emoticon/${}
 ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
@@ -437,7 +441,6 @@ ${COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png
 ${COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png
 ${COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png
 ${COMMUNITY_CDN_URL}public/images/sharedfiles/guides/
-${COMMUNITY_CDN_URL}public/images/sharedfiles/workshop_background_grid.png
 ${COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_moderator.png
 ${COMMUNITY_CDN_URL}public/images/skin_1/comment_modindicator_officer.png
 ${COMMUNITY_CDN_URL}public/images/skin_1/valve_comment.png
@@ -457,11 +460,8 @@ ${COMMUNITY_CDN_URL}public/sounds/webui/steam_voice_channel_exit.m4a?v=1
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_message_old_smooth.m4a
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_smoother_friend_join.m4a
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_smoother_friend_online.m4a
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${}&v=1&origin=${}
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${}&v=1&origin=${}
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=1&origin=${}
 ${COMMUNITY_URL}app/${DOTA_APP_ID}/guides
 ${COMMUNITY_URL}app/570/guides
@@ -477,9 +477,6 @@ ${HELP_BASE_URL}/wizard/HelpChangePassword
 ${HELP_BASE_URL}en/ticketmaster/ticket/${}
 ${HELP_BASE_URL}en/wizard/HelpRequest/${_ ? _ : _}
 ${HELP_BASE_URL}en/wizard/HelpRequest/${}
-${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=904
-${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
-${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${k_strGRFAQ}
 ${HELP_BASE_URL}faqs/view/${url_code}
 ${HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36
@@ -502,9 +499,11 @@ ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
 ${HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402
+${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=904
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=920
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=927
+${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}wizard/HelpWithSteamGuardCode
 ${IMG_URL}${_ ? "favorite_star.png" : "favorite_star_empty.png"}
 ${IMG_URL}${image}
@@ -920,7 +919,6 @@ ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}store/
 ${MEDIA_CDN_URL}store/promo/steamawards2025/trophy_220.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
-${PARTNER_BASE_URL}
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
@@ -946,6 +944,18 @@ ${PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/pccafe
 ${PARTNER_BASE_URL}/vrlicensing
+${PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${}
+${PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${}
+${PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${}
+${PARTNER_BASE_URL}achievements/ajaxdeletegroup/${}
+${PARTNER_BASE_URL}achievements/ajaxgetappinfo/${}
+${PARTNER_BASE_URL}achievements/ajaxgetdlc/${}
+${PARTNER_BASE_URL}achievements/ajaxgetlanguagelist/${}
+${PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${}
+${PARTNER_BASE_URL}achievements/ajaxgetstatsschema/${}
+${PARTNER_BASE_URL}achievements/ajaxmoveachievements/${}
+${PARTNER_BASE_URL}achievements/ajaxreordergroups/${}
+${PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${}
 ${PARTNER_BASE_URL}actions/ajaxgetadminusers
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
@@ -959,6 +969,7 @@ ${PARTNER_BASE_URL}admin/editdiscountevent/${}
 ${PARTNER_BASE_URL}admin/game/edit/${nItemId}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}
 ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}?activetab=tab_specialsettings#seasonpass
+${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_basic#feature_section
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets&base_assets=1
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_specialsettings#associated_demos
@@ -988,7 +999,6 @@ ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
 ${PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${}
 ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
-${PARTNER_BASE_URL}apps
 ${PARTNER_BASE_URL}apps/
 ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
 ${PARTNER_BASE_URL}apps/ajaxgetdlc
@@ -1032,6 +1042,7 @@ ${PARTNER_BASE_URL}doc/accessibility_features#narrated_menus
 ${PARTNER_BASE_URL}doc/accessibility_features#tts
 ${PARTNER_BASE_URL}doc/accessibility_features#visual_recommendations
 ${PARTNER_BASE_URL}doc/accessibility_features#volume_controls
+${PARTNER_BASE_URL}doc/features/achievements
 ${PARTNER_BASE_URL}doc/features/playtest#4
 ${PARTNER_BASE_URL}doc/features/timeline
 ${PARTNER_BASE_URL}doc/finance/taxfaq
@@ -1076,6 +1087,7 @@ ${PARTNER_BASE_URL}freetokeep/ajaxupdatedlcrequirebaseapp
 ${PARTNER_BASE_URL}gfxproxy/externalgfx/
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
 ${PARTNER_BASE_URL}giveaways/control/${}
+${PARTNER_BASE_URL}images/uploadachievement
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
@@ -1358,6 +1370,8 @@ ${STORE_BASE_URL}actions/ajaxresolvepackages
 ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
+${STORE_BASE_URL}api/addtowishlist
+${STORE_BASE_URL}api/removefromwishlist
 ${STORE_BASE_URL}app${appid}/landing/${sale_update_landing_page_vanity_id}
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
@@ -1465,6 +1479,7 @@ ${STORE_BASE_URL}events_admin/ajaxupdatetags
 ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
+${STORE_BASE_URL}explore/followgame/
 ${STORE_BASE_URL}explore/new/
 ${STORE_BASE_URL}explore/next/${}
 ${STORE_BASE_URL}explore/next/0
@@ -1504,7 +1519,7 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/trendingreviews/
 ${STORE_BASE_URL}legal/
-${STORE_BASE_URL}login/${_ ? `?redir=${}` : ""}
+${STORE_BASE_URL}login/${_ ? `?redir=${}` : ``}
 ${STORE_BASE_URL}login/?redir=${}
 ${STORE_BASE_URL}login/?steamtv
 ${STORE_BASE_URL}login?redir=${}
@@ -1575,6 +1590,7 @@ ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}publisher/${vanity}/
 ${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
+${STORE_BASE_URL}recommended/ignorerecommendation/
 ${STORE_BASE_URL}recommender/
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
@@ -1683,6 +1699,7 @@ ${STORE_CDN_URL}images/storepagebackground/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
+${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? `animated` : `still`}/${}.png
 ${STORE_CDN_URL}public/images/mobile/localizedimages/appleappstore/apple_store_${LANGUAGE}.png
 ${STORE_CDN_URL}public/images/mobile/localizedimages/googleplaystore/google_play_store_${LANGUAGE}.png
 ${STORE_CDN_URL}public/shared/images/footer/WeChat-QR.png?v=2
@@ -2026,7 +2043,7 @@ ${m_strRSSFeedURL}${}
 ${m_strRedirectURL}
 ${m_strWebAPIBaseURL}I${}Service/${}/v${}
 ${mp4_url}${_ ? _ : _}
-${mustBeURL}${}
+${mustBeURL}1
 ${optional_url}${value}
 ${override_url}${}
 ${page_url}${m_sCurrentPage}
@@ -2089,20 +2106,18 @@ ${wizard_url}Home
 ${youtube_trailer_public_url}${}
 /wishlist/id/${profile_url}/
 /wishlistnew/id/${profile_url}/
-Navigation type ${navigationType} can intercept ${canIntercept} path ${url} info: ${}
 [url=${HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${}[/url]
 http://
 http://${}
 http://dashif.org/guidelines/thumbnail_tile${}
 http://help.steampowered.com/
+http://json-schema.org/draft-04/schema#
+http://json-schema.org/draft-07/schema#
 http://proxy
-http://qr.weibo.cn/g/7kla92
 http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
 http://steamconnecttest.com
 http://steamloopback.host
 http://store-tc.k.steam.net/graph
-http://twitter.com/steam
-http://weixin.qq.com/r/LC-K0i3EunDFrWmx93o_
 http://www.dota2.com
 http://www.dota2.com/700
 http://www.dota2.com/acolyteofthelostarts
@@ -2136,11 +2151,7 @@ http://www.dota2.com/thebetaisover/
 http://www.dota2.com/threespirits/
 http://www.dota2.com/winter2016
 http://www.dota2.com/wraithnight/
-http://www.facebook.com/Steam
 http://www.facebook.com/sharer.php?
-http://www.steampowered.com/steamworks/
-http://www.valvesoftware.com
-http://www.valvesoftware.com/legal.htm
 http://www.w3.org/1998/Math/MathML
 http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xlink
@@ -2149,8 +2160,6 @@ http://www.w3.org/2000/svg${namespaceURI}
 http://www.w3.org/2000/xmlns/
 http://www.w3.org/XML/1998/namespace
 https://
-https://${hostname}
-https://${hostname}${pathname}
 https://${}
 https://${}/
 https://${}/cmping/
@@ -2177,7 +2186,6 @@ https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jp
 https://beian.miit.gov.cn
 https://blog.counter-strike.net/
 https://bouncinglogo.steamscreensavers.host/index.html
-https://bsky.app/profile/partner.steamgames.com
 https://bsky.app/profile/steampowered.com
 https://calendar.google.com/calendar/render?action=TEMPLATE
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.mp4
@@ -2383,11 +2391,6 @@ https://help.steampowered.com/agents/ticketlisting/
 https://help.steampowered.com/en/faqs/view/6639-EB3C-EC79-FF60
 https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A
 https://help.steampowered.com/en/ticketmaster/ticket/
-https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=927
-https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932
-https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
-https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
-https://help.steampowered.com/en/wizard/HelpWithPublishingEvent
 https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
 https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436
 https://help.steampowered.com/faqs/view/17DA-EC4C-7D5B-8266
@@ -2471,6 +2474,11 @@ https://help.steampowered.com/wizard/AjaxVerifySerialNumber
 https://help.steampowered.com/wizard/AjaxVerifyShippingAddress
 https://help.steampowered.com/wizard/HelpWithLogin/
 https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=${strSessionID}&account=${accountid}&reset=${eReset}&lost=${nLost}
+https://help.steampowered.com/wizard/HelpWithPublishing?issueid=927
+https://help.steampowered.com/wizard/HelpWithPublishing?issueid=932
+https://help.steampowered.com/wizard/HelpWithPublishing?issueid=933
+https://help.steampowered.com/wizard/HelpWithPublishing?issueid=938
+https://help.steampowered.com/wizard/HelpWithPublishingEvent
 https://help.steampowered.com/wizard/HelpWithPurchase
 https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415
 https://help.steampowered.com/wizard/RefreshCaptcha
@@ -2481,6 +2489,7 @@ https://imgur.com
 https://instagram.com/dota2
 https://itunes.apple.com/app/steam-link/id1246969117
 https://itunes.apple.com/us/app/steam-mobile/id495369748
+https://json-schema.org/draft/2020-12/schema
 https://komodostation.com/
 https://learn.microsoft.com/windows/win32/winauto/entry-uiauto-win32
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
@@ -3035,12 +3044,10 @@ https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
 https://twitter.com/Steam
-https://twitter.com/Steamworks
 https://twitter.com/dota2ti
 https://twitter.com/intent/tweet/?
 https://twitter.com/steam
 https://twitter.com/steam_games
-https://valve.enterprise.slack.com/archives/C0B3BBQF0NA
 https://valvecorp.slack.com/app_redirect?channel=${}
 https://valvesoftware.com
 https://valvesoftware.com/
@@ -3105,12 +3112,10 @@ https://www.twitch.tv/directory/game/Dota%202
 https://www.twitch.tv/valve
 https://www.valvesoftware.com
 https://www.valvesoftware.com/
-https://www.valvesoftware.com/about
 https://www.valvesoftware.com/en/about
 https://www.valvesoftware.com/legal/statement-of-compliance
 https://www.wanmei.com/
 https://www.youtube-nocookie.com
-https://www.youtube-nocookie.com/embed/${youtubevideoid}?fs=1&modestbranding=1&rel=0&playsinline=1${_ ? "&autoplay=1" : ""}${_ ? _ : ""}
 https://www.youtube-nocookie.com/embed/LJ6CoMgr2U8
 https://www.youtube-nocookie.com/embed/d8N2A8KePP4
 https://www.youtube-nocookie.com/embed/p0qKpJXOJsY
@@ -3119,7 +3124,6 @@ https://www.youtube.com/@Steam
 https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
 https://www.youtube.com/iframe_api
-https://www.youtube.com/user/SteamworksDev
 https://www.youtube.com/user/dota2
 https://www.youtube.com/watch?v=
 https://www.youtube.com/watch?v=${strVideoID}

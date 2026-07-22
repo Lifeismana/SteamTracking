@@ -312,7 +312,6 @@
         DeleteMarker: "_1HITbDUgqbAsnVISlw-IU4",
         ViewScreenshot: "_2HfiRMT1mpZZy-Op04_Vp5",
         ViewClip: "_20E0pQUHwdjs6eM1Ow2GiS",
-        active: "NjA0Fz51GxvZgm847KioJ",
       };
     },
     23533: (e) => {
@@ -830,7 +829,7 @@
       "use strict";
       r.r(t), r.d(t, { default: () => Ca });
       var i = r(7850),
-        n = r(86679),
+        n = r(121),
         a = r(45737),
         s = r.n(a),
         o = r(16676),
@@ -15034,16 +15033,35 @@
       class Be extends l.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), l.Message.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Be.prototype.result || c.Sg(Be.M()),
+            l.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Be.sm_m ||
+              (Be.sm_m = {
+                proto: Be,
+                fields: {
+                  result: { n: 1, br: c.qM.readInt32, bw: c.gp.writeInt32 },
+                },
+              }),
+            Be.sm_m
+          );
+        }
+        static MBF() {
+          return Be.sm_mbf || (Be.sm_mbf = c.w0(Be.M())), Be.sm_mbf;
         }
         toObject(e = !1) {
           return Be.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return c.BT(Be.M(), e, t);
         }
         static fromObject(e) {
-          return new Be();
+          return c.Uq(Be.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (m().BinaryReader)(e),
@@ -15051,13 +15069,15 @@
           return Be.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return c.zj(Be.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (m().BinaryWriter)();
           return Be.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          c.i0(Be.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return Be.serializeBinaryToWriter(this, e), e.getResultBase64String();
@@ -15149,6 +15169,7 @@
                     bw: c.gp.writeUint64String,
                   },
                   settings: { n: 2, c: ye },
+                  result: { n: 3, br: c.qM.readInt32, bw: c.gp.writeInt32 },
                 },
               }),
             Re.sm_m
@@ -17152,7 +17173,6 @@
                 fields: {
                   progress: { n: 1, br: c.qM.readFloat, bw: c.gp.writeFloat },
                   clip_id: { n: 2, br: c.qM.readString, bw: c.gp.writeString },
-                  eresult: { n: 3, br: c.qM.readInt32, bw: c.gp.writeInt32 },
                 },
               }),
             ot.sm_m

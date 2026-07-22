@@ -33,6 +33,12 @@
 {
 }
 
+.dmca_takedownnotice_workshop_item
+{
+	border: 1px solid #529CDE;
+	padding: 10px;
+}
+
 .dmca_takedownnotice_view_content_desc
 {
 	padding-top: 10px;

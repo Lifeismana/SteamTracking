@@ -2534,15 +2534,6 @@ enum UnnamedEnum3dd1c4581017d7dd
 	PREFERRED_CHILD = 4;
 }
 
-enum UnnamedEnum3fcaac8de59d5e7c
-{
-	PRE_NAME = 0;
-	IN_NAME = 1;
-	POST_NAME = 2;
-	IN_VALUE = 3;
-	IN_QUOTED_VALUE = 4;
-}
-
 enum UnnamedEnum417b0cbbb904eb0c
 {
 	NONE = 0;
@@ -2621,6 +2612,20 @@ enum UnnamedEnum453fb51a20bad046
 	StreamGone = 1;
 	PlaybackError = 2;
 	UnsupportedMediaType = 3;
+}
+
+enum UnnamedEnum46bd72fc6163c6f8
+{
+	Invalid = 0;
+	ControllerPairing = 1;
+	WelcomeToSteamFrame = 2;
+	PlayspaceSetup = 3;
+	SystemButtonHideDashboard = 4;
+	SystemButtonDashboardHidden = 5;
+	SystemButtonShowDashboard = 6;
+	PairWifiDongle = 7;
+	TourSendOff = 8;
+	SteamGuidedTourFinished = 9;
 }
 
 enum UnnamedEnum47122ffa63e68b01
@@ -3854,24 +3859,18 @@ enum UnnamedEnum904a3ce99bfd1fb9
 	ForceBrowserVisible = 16777216;
 }
 
+enum UnnamedEnum91788a9e6e102512
+{
+	Client = 0;
+	GameServer = 1;
+	OfficialGameServer = 2;
+}
+
 enum UnnamedEnum940ff890eb1bf26e
 {
 	POPULAR = 1;
 	FAVORITE = 2;
 	ALL = 3;
-}
-
-enum UnnamedEnum9454c04074c16008
-{
-	Invalid = 0;
-	ControllerPairing = 1;
-	WelcomeToSteamFrame = 2;
-	SystemButtonHideDashboard = 3;
-	SystemButtonDashboardHidden = 4;
-	SystemButtonShowDashboard = 5;
-	PairWifiDongle = 6;
-	TourSendOff = 7;
-	SteamGuidedTourFinished = 8;
 }
 
 enum UnnamedEnum9524e4d523009738
@@ -4071,6 +4070,23 @@ enum UnnamedEnuma711eb0b24c3e113
 	None = 0;
 	Play = 1;
 	Pause = 2;
+}
+
+enum UnnamedEnuma72cbfa4f7ba7f76
+{
+	Invalid = 0;
+	Success = 1;
+	Failed = 2;
+	InvalidParam = 3;
+	InputNotFound = 4;
+	ErrorReadingInput = 5;
+	ErrorWritingOuput = 6;
+	NoHardwareEncoder = 7;
+	UnsupportedSourceCodec = 8;
+	UnsupportedTargetCodec = 9;
+	DiskFull = 10;
+	ResolutionTooLarge = 11;
+	ConverterBusy = 12;
 }
 
 enum UnnamedEnuma744c529bb8c8699

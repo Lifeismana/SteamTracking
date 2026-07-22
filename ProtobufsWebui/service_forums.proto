@@ -111,6 +111,7 @@ message CForums_SanctionReportedPost_Request {
 message CForums_SanctionReportedPost_Request_Sanction {
 	optional int32 sanction = 1 [(.description) = "enum"];
 	optional int32 days = 2;
+	optional int32 escalate_to = 3 [(.description) = "enum"];
 }
 
 message CForums_SanctionReportedPost_Response {

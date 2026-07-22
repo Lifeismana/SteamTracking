@@ -1,5 +1,8 @@
 {
     "language": "schinese",
+    "EventEditor_Loc_Title": "管理本地化",
+    "EventEditor_Loc_Overview": "导出并导入本地化文件，以管理您整个活动字符串的翻译。",
+    "EventEditor_Loc_Overview_Page": "导出和导入本地化文件，以管理您整个页面字符串的翻译。",
     "LoginRedirect_Dialog_Title": "登录",
     "LoginRedirect_Dialog_Description": "想要将此项目添加至您的愿望单、关注它或标记为已忽略，请先登录。点击“确定”将跳转至登录页面。",
     "Wishlist_NotSignedIn": "登录或在 Steam 应用中打开此页面即可关注、购买游戏，或是将其加入愿望单。",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL 已接受",
     "SteamURLInvalid": "错误：URL 未指向 Steam 页面（商店/社区）",
     "AnchorHashInputInvalid": "无效输入",
+    "Sale_Section_Label_Color": "标识词颜色",
+    "Sale_Section_Background_Top": "背景渐变（顶部）",
+    "Sale_Section_Background_Bottom": "背景渐变（底部）",
     "Reservation_JoinPool": "加入名单",
     "Reserationn_NoListJoined": "在下方选择型号报名 - 符合条件的顾客最多可以为 %1$s 个型号报名。",
     "Reservation_InPool": "您已在下列选定型号的名单中",

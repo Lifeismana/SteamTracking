@@ -61,7 +61,7 @@
     3049: (e, r, c) => {
       "use strict";
       c.d(r, { J: () => o });
-      var t = c(8527),
+      var t = c(66418),
         s = c(13843);
       function o() {
         return (0, s.A)().languages.map((e) => {
@@ -93,7 +93,7 @@
         c.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var a = c(42248),
-        f = c(8527);
+        f = c(66418);
       const b = s.memo(function (e) {
         const {
           className: r,

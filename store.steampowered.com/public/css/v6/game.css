@@ -2204,16 +2204,22 @@ body.v6 .game_area_description h2.bb_tag strong {
 }
 
 .communitylink_achievement_images {
+	max-width: 100%;
 	padding: 4px 0;
-	display: flex;
+	display: grid;
 	gap: 4px;
-	justify-content: space-between;
+	grid-template-columns: repeat(5, 1fr);
+	justify-content: start;
 	overflow: hidden;
 	margin-bottom: 5px;
 }
 
+.communitylink_achievement_images>* {
+	contain: strict
+}
+
 div.communitylink_achievement, a.communitylink_achievement {
-	width: calc( 20% - 4px );
+	width: 100%;
 	aspect-ratio: 1/1;
 }
 

@@ -1,5 +1,8 @@
 {
     "language": "english",
+    "EventEditor_Loc_Title": "Manage Localization",
+    "EventEditor_Loc_Overview": "Export and import localization files to manage translation of strings for your whole event.",
+    "EventEditor_Loc_Overview_Page": "Export and import localization files to manage translation of strings for your whole page.",
     "LoginRedirect_Dialog_Title": "Sign In",
     "LoginRedirect_Dialog_Description": "Sign in to add this item to your wishlist, follow it, or mark it as ignored. Clicking OK will redirect to the sign in page.",
     "Wishlist_NotSignedIn": "Sign in or open this page in the Steam App to wishlist, follow, or purchase.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL is Accepted",
     "SteamURLInvalid": "Error URL not to a Steam property (store/community)",
     "AnchorHashInputInvalid": "Invalid Input",
+    "Sale_Section_Label_Color": "Label Color",
+    "Sale_Section_Background_Top": "Background Gradient (Top)",
+    "Sale_Section_Background_Bottom": "Background Gradient (Bottom)",
     "Reservation_JoinPool": "Join the List",
     "Reserationn_NoListJoined": "Select a model below to sign up - eligible customers can sign up for up to %1$s models.",
     "Reservation_InPool": "You are on the list for the selected models below",

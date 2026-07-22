@@ -495,7 +495,8 @@
             } = _,
             [_, _] = (0, _.useState)(void 0);
           (0, _.useEffect)(() => _(void 0), [_.bOpen]);
-          const _ = (0, _.useRef)(null),
+          const _ = (0, _._)(),
+            _ = (0, _.useRef)(null),
             _ = (0, _.useRef)(null),
             _ = (0, _.useMemo)(
               () => _.rgFilteredOptions.findIndex((_) => _ === _.selectedValue),
@@ -517,7 +518,7 @@
                 ),
               interactions: {
                 click: !0,
-                virtualItemFocus: !_._.IN_GAMEPADUI,
+                virtualItemFocus: !_,
               },
               role: "combobox",
               scroll: !1,
@@ -924,12 +925,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        return _._.IN_GAMEPADUI
+        return (0, _._)()
           ? (0, _.jsx)(_, {
               ..._,
             })
@@ -1243,7 +1244,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        return _._.IN_GAMEPADUI
+        return (0, _._)()
           ? (0, _.jsx)(_, {
               ..._,
             })
@@ -2053,6 +2054,7 @@
             gamepadFocusable: _ = !0,
             ..._
           } = _,
+          _ = (0, _._)(),
           _ =
             _ && _
               ? (0, _.jsx)(_._, {
@@ -2074,7 +2076,7 @@
             disabled: _,
           },
           _ = (0, _.useRef)(null),
-          _ = _ && _._.IN_GAMEPADUI ? _._ : "input";
+          _ = _ && _ ? _._ : "input";
         return (0, _.jsx)(_._, {
           cursor: "text",
           ..._,
@@ -2385,6 +2387,7 @@
       function _(_) {
         var _;
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ =
             null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
             void 0 !== _
@@ -2398,7 +2401,7 @@
             },
             _,
           );
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ..._,
               ...(_ || {}),
@@ -2418,6 +2421,7 @@
       function _(_) {
         var _;
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ =
             null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
             void 0 !== _
@@ -2434,7 +2438,7 @@
               _,
             ),
           });
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ...(_ || {}),
               focusable: _,

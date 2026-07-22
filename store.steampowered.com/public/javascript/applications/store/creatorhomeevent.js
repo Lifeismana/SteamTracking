@@ -66,6 +66,7 @@
         EyeDropperCtn: "_5jKe2NV9CM3JA3hcMALLw",
         EyeDropperBtn: "_3afPQT_fEWmhHhFHS-WIk7",
         ColorPickerCtn: "Nn2-w0eqLuugAR-Udm--3",
+        ColorPickerDialog: "_32PwNSgquR6tGAPIBcWgVq",
       };
     },
     64387: (e) => {
@@ -939,7 +940,7 @@
           ],
         });
       }
-      var k = t(8527),
+      var k = t(66418),
         C = t(75233),
         E = t(80902),
         D = t(24484),
@@ -1510,6 +1511,7 @@
             else alert(B.Z.Localize("#Sale_EyeDropperError"));
           }, [t]);
         return (0, a.jsxs)("div", {
+          className: Pe().ColorPickerDialog,
           children: [
             Boolean(o) && (0, a.jsx)(Ge.JU, { children: o }),
             (0, a.jsx)(Me.xk, {
@@ -4662,7 +4664,7 @@
         });
       }
       var zt = t(77021),
-        Ht = t(43033);
+        Ht = t(32092);
       function Vt(e) {
         const {
             promotionName: n,

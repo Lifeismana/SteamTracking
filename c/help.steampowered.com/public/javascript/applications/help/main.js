@@ -208,6 +208,8 @@
         SideBySide: "ZHRZ8czyqs7NaNmv65ARI",
         GuestContainer: "_3Sfbz5IM9d2jNMdOV2aFal",
         GuestLayout: "_1r_sYgW1VktkbK33MvFdMx",
+        StandardLayout: "_2EuR68sQbA8eP01DlIfu6O",
+        Embedded: "_2R_n2M6thAvA4On2yeR_Jd",
         GuestText: "_2gE59p3vz8NzTRZIejilUN",
         GuestLink: "_3zcmXq9FSDuc9eFPT7yj1A",
         ConfirmCredntialsNag: "_2oMvaF46xYOE6Guy0xjCAl",
@@ -278,10 +280,8 @@
         RefreshTitle: "_3yMMwjOGjHdmMrJbYQyst3",
         RefreshReason: "_1b-mLIbA7lNlcrNICBrLu6",
         InsecureComputer: "_3onX-q5mCgAQyvYp-RXyQy",
-        StandardLayout: "_2EuR68sQbA8eP01DlIfu6O",
         PrimaryHeader: "g5L61o-ZrHHmwLEugLjLI",
         FormContainer: "_3XCnc4SuTz8V8-jXVwkt_s",
-        Embedded: "_2R_n2M6thAvA4On2yeR_Jd",
         Compact: "_3FB9Kwzf1SnNWl8p2Mypu7",
         HeaderLogo: "_3v6WnuVNx1rJx0x_1AAyPp",
         LogoContainer: "_14exBrSFDthVqeknXgFh4X",
@@ -7429,6 +7429,7 @@
             )
           : null;
       }
+      const _ = (0, _.createContext)(!1);
       function _(_) {
         const { ModalManager: _ } = _,
           [_, _] = _.useState(void 0),
@@ -7513,8 +7514,11 @@
               () => _(void 0)
             );
           }, [_, _, _]),
-          (0, _.jsx)(_._, {
-            children: _.rctToMeasure,
+          (0, _.jsx)(_.Provider, {
+            value: !0,
+            children: (0, _.jsx)(_._, {
+              children: _.rctToMeasure,
+            }),
           })
         );
       }
@@ -13360,15 +13364,16 @@
           (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
             (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
-            (_[(_.SystemButtonHideDashboard = 3)] =
+            (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
+            (_[(_.SystemButtonHideDashboard = 4)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 4)] =
+            (_[(_.SystemButtonDashboardHidden = 5)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 5)] =
+            (_[(_.SystemButtonShowDashboard = 6)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 6)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 7)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 8)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 7)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 8)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 9)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -14118,45 +14123,54 @@
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
-          value: _,
-          onChange: _,
-          disabled: _,
-          className: _,
-          focusable: _,
-          children: _,
-          navRef: _,
-          autoFocus: _,
-          ..._
-        } = _;
-        return (0, _.jsxs)(_._, {
-          ..._,
-          autoFocus: _,
-          noFocusRing: !0,
-          className: (0, _._)(_, _().Toggle, {
-            [_().Disabled]: !!_,
-            [_()._]: !!_,
-          }),
-          onClick: () => {
+            value: _,
+            onChange: _,
+            disabled: _,
+            className: _,
+            focusable: _,
+            children: _,
+            navRef: _,
+            autoFocus: _,
+            toggleRef: _,
+            ..._
+          } = _,
+          _ = _.useCallback(() => {
             if (!_ && _) {
               const _ = !_;
               _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
             }
-          },
-          ref: _,
-          navRef: _,
-          focusable: _,
-          role: "checkbox",
-          "aria-checked": !!_,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().ToggleRail,
+          }, [_, _, _]);
+        return (
+          _.useEffect(() => {
+            (0, _._)(_, {
+              toggle: _,
+            });
+          }, [_, _]),
+          (0, _.jsxs)(_._, {
+            ..._,
+            autoFocus: _,
+            noFocusRing: !0,
+            className: (0, _._)(_, _().Toggle, {
+              [_().Disabled]: !!_,
+              [_()._]: !!_,
             }),
-            (0, _.jsx)("div", {
-              className: _().ToggleSwitch,
-            }),
-            _,
-          ],
-        });
+            onClick: _,
+            ref: _,
+            navRef: _,
+            focusable: _,
+            role: "checkbox",
+            "aria-checked": !!_,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().ToggleRail,
+              }),
+              (0, _.jsx)("div", {
+                className: _().ToggleSwitch,
+              }),
+              _,
+            ],
+          })
+        );
       });
       function _(_) {
         const _ = !!_.disabled,
@@ -15569,8 +15583,6 @@
           _ ? _.toLocaleString(_(), _) : "" + _
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       const _ = JSON.parse(`{
 	"h": {
 		"countries": {
@@ -15918,14 +15930,16 @@
 		}
 	}
 }`)._;
-      var _ = __webpack_require__("chunkid");
-      async function _(_) {
-        if ((0, _._)(_._.EREALM))
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _, _, _) {
+        if (_)
           return {
             version: _._._,
             preference_state: _._._,
           };
-        if (_._.logged_in) {
+        if (_) {
           const _ = (await _._.GetCookiePreferences(_, {}))
             .Body()
             .toObject().preferences;
@@ -15938,7 +15952,6 @@
             if (_ && void 0 !== _.version && _.version != _._._) return _;
           }
         } catch (_) {}
-        const _ = _._.COUNTRY;
         return _ in _.eucountries || _ in _.eeacountries || "CH" === _
           ? {
               version: _._._,
@@ -15956,7 +15969,7 @@
           (function (_) {
             return {
               queryKey: ["CookiePreferences"],
-              queryFn: () => _(_),
+              queryFn: () => _(_, _._.logged_in, _._.COUNTRY, _._.EREALM),
             };
           })(_),
         );
@@ -21900,11 +21913,12 @@
         (0, _._)([_._], _.prototype, "m_nMobileDeviceCount", void 0);
       let _ = new _();
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const _ = _._.guess(),
-          _ = _.unix(_)._(_),
+        const _ = _()._.guess(),
+          _ = _().unix(_)._(_),
           _ = (0, _._)();
         return (
           _ && _.locale(_),
@@ -45766,6 +45780,11 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -49703,6 +49722,11 @@
                     _: 2,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -83185,7 +83209,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 8290), _((_._ = _));
+      return (_ = 14653), _((_._ = _));
       var _;
     });
     _._();

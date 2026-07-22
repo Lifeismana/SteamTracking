@@ -86,27 +86,25 @@
       var s = n(7850),
         r = n(90626),
         o = n(73788),
-        i = n(28505),
+        i = n(8083),
         l = n(94621),
         c = n(8871),
         a = n(45699),
         h = n(85585),
         C = n(7445),
-        d = n(8527),
-        p = n(81393),
-        u = n(64238),
-        x = n.n(u),
-        f = n(11820);
+        d = n(81393),
+        p = n(64238),
+        u = n.n(p),
+        x = n(11820),
+        f = n(78327);
       const g = (0, r.createContext)(null);
       function m(e) {
-        return d.TS.IN_GAMEPADUI
-          ? (0, s.jsx)(v, { ...e })
-          : (0, s.jsx)(H, { ...e });
+        return (0, f.Qn)() ? (0, s.jsx)(v, { ...e }) : (0, s.jsx)(H, { ...e });
       }
       function v(e) {
         const { children: t } = e,
           n = (0, r.useContext)(g);
-        (0, p.wT)(
+        (0, d.wT)(
           !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
@@ -129,7 +127,7 @@
         const { children: t } = e,
           n = (0, r.useContext)(g);
         return (
-          (0, p.wT)(
+          (0, d.wT)(
             !!n,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
@@ -306,7 +304,7 @@
           const C = (0, r.cloneElement)(a, {
             ref: c,
             style: { ...l.floating.floatingStyles },
-            className: x()((0, f.T)(), n),
+            className: u()((0, x.T)(), n),
             popover: "manual",
             ...l.getFloatingProps(),
           });
@@ -325,25 +323,26 @@
         l = n(75659),
         c = n(11526),
         a = n(75180),
-        h = n(8527);
+        h = n(78327);
       function C(e) {
         var t;
         const { as: n = "div", ref: o, focusable: l, navProps: C, ...p } = e,
-          u = (0, c.mz)({ ...p, className: i()(a.Grid, e.className) }, d),
-          x =
+          u = (0, h.Qn)(),
+          x = (0, c.mz)({ ...p, className: i()(a.Grid, e.className) }, d),
+          f =
             null !== (t = null != l ? l : null == C ? void 0 : C.focusable) &&
             void 0 !== t
               ? t
               : !!p.onClick,
-          f = (0, s.jsx)(n, { ref: o, ...u });
-        return h.TS.IN_GAMEPADUI
+          g = (0, s.jsx)(n, { ref: o, ...x });
+        return u
           ? (0, s.jsx)(r.J, {
               "flow-children": "grid",
               ...(C || {}),
-              focusable: x,
-              children: f,
+              focusable: f,
+              children: g,
             })
-          : f;
+          : g;
       }
       const d = [
         ...l.h,
@@ -576,21 +575,22 @@
         r = n(50122),
         o = n(20187),
         i = n(11526),
-        l = n(8527),
-        c = n(45699),
-        a = n(39479);
+        l = n(45699),
+        c = n(39479),
+        a = n(78327);
       function h(e) {
         var t;
-        const { underline: n = "auto", focusable: o, navProps: a, ...h } = e,
-          d =
-            null !== (t = null != o ? o : null == a ? void 0 : a.focusable) &&
+        const { underline: n = "auto", focusable: o, navProps: c, ...h } = e,
+          d = (0, a.Qn)(),
+          p =
+            null !== (t = null != o ? o : null == c ? void 0 : c.focusable) &&
             void 0 !== t
               ? t
               : !!h.href,
-          p = (0, i.mz)({ ...h, underline: n, className: r.TextLink }, C);
-        return l.TS.IN_GAMEPADUI && (d || a)
-          ? (0, s.jsx)(c.Ii, { ...p, ...(a || {}), focusable: d })
-          : (0, s.jsx)("a", { ...p });
+          u = (0, i.mz)({ ...h, underline: n, className: r.TextLink }, C);
+        return d && (p || c)
+          ? (0, s.jsx)(l.Ii, { ...u, ...(c || {}), focusable: p })
+          : (0, s.jsx)("a", { ...u });
       }
       const C = [
         ...o.Ae,
@@ -598,22 +598,23 @@
       ];
       function d(e) {
         var t;
-        const { underline: n = "auto", focusable: o, navProps: c, ...h } = e,
-          d =
-            null !== (t = null != o ? o : null == c ? void 0 : c.focusable) &&
+        const { underline: n = "auto", focusable: o, navProps: l, ...h } = e,
+          d = (0, a.Qn)(),
+          p =
+            null !== (t = null != o ? o : null == l ? void 0 : l.focusable) &&
             void 0 !== t
               ? t
               : !!h.onClick,
-          p = (0, s.jsx)("span", {
+          u = (0, s.jsx)("span", {
             role: "button",
             ...(0, i.mz)(
               { ...h, underline: n, className: r.TextLinkButton },
               C,
             ),
           });
-        return l.TS.IN_GAMEPADUI && (d || c)
-          ? (0, s.jsx)(a.J, { ...(c || {}), focusable: d, children: p })
-          : p;
+        return d && (p || l)
+          ? (0, s.jsx)(c.J, { ...(l || {}), focusable: p, children: u })
+          : u;
       }
     },
     21423: (e, t, n) => {
@@ -638,7 +639,7 @@
       function g() {
         f() && (0, u.Y1)(x.k1), "location" in window && location.reload();
       }
-      var m = n(8527),
+      var m = n(66418),
         v = n(60014),
         H = n(64238),
         _ = n.n(H),
@@ -647,7 +648,7 @@
         w = n(90534),
         V = n(49560);
       n(42327);
-      function S(e) {
+      function b(e) {
         const {
             children: t,
             hoverContent: n,
@@ -674,8 +675,8 @@
           ],
         });
       }
-      var b = n(60859),
-        M = n.n(b);
+      var S = n(60859),
+        M = n.n(S);
       function z() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -714,7 +715,7 @@
           ],
         });
       }
-      function T() {
+      function y() {
         return (0, s.jsxs)("svg", {
           width: "98",
           height: "34",
@@ -734,7 +735,7 @@
           ],
         });
       }
-      function y() {
+      function T() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "100",
@@ -853,18 +854,18 @@
                         children: [
                           (0, s.jsx)(R, {
                             href: "https://www.wanmei.com/",
-                            children: (0, s.jsx)(T, {}),
+                            children: (0, s.jsx)(y, {}),
                           }),
                           (0, s.jsx)(R, {
                             href: "https://www.valvesoftware.com",
-                            children: (0, s.jsx)(y, {}),
+                            children: (0, s.jsx)(T, {}),
                           }),
                         ],
                       }),
                       (0, s.jsxs)(r.s, {
                         gap: "5",
                         children: [
-                          (0, s.jsx)(S, {
+                          (0, s.jsx)(b, {
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:
@@ -884,7 +885,7 @@
                               ],
                             }),
                           }),
-                          (0, s.jsx)(S, {
+                          (0, s.jsx)(b, {
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:
@@ -946,41 +947,41 @@
               }),
             });
       }
-      var E = n(13843);
-      const k = {};
-      (k.arabic = () => n.e(2560).then(n.t.bind(n, 42560, 19))),
-        (k.brazilian = () => n.e(5061).then(n.t.bind(n, 37442, 19))),
-        (k.bulgarian = () => n.e(9945).then(n.t.bind(n, 39945, 19))),
-        (k.czech = () => n.e(5059).then(n.t.bind(n, 55059, 19))),
-        (k.danish = () => n.e(9605).then(n.t.bind(n, 19605, 19))),
-        (k.dutch = () => n.e(3366).then(n.t.bind(n, 13366, 19))),
-        (k.english = () => n.e(4468).then(n.t.bind(n, 74468, 19))),
-        (k.finnish = () => n.e(1655).then(n.t.bind(n, 31655, 19))),
-        (k.french = () => n.e(1580).then(n.t.bind(n, 21580, 19))),
-        (k.german = () => n.e(5666).then(n.t.bind(n, 5666, 19))),
-        (k.greek = () => n.e(2936).then(n.t.bind(n, 22936, 19))),
-        (k.hungarian = () => n.e(2173).then(n.t.bind(n, 52173, 19))),
-        (k.indonesian = () => n.e(412).then(n.t.bind(n, 80412, 19))),
-        (k.italian = () => n.e(9468).then(n.t.bind(n, 29468, 19))),
-        (k.japanese = () => n.e(2811).then(n.t.bind(n, 52811, 19))),
-        (k.koreana = () => n.e(6139).then(n.t.bind(n, 76139, 19))),
-        (k.latam = () => n.e(7267).then(n.t.bind(n, 77267, 19))),
-        (k.malay = () => n.e(8844).then(n.t.bind(n, 88844, 19))),
-        (k.norwegian = () => n.e(5964).then(n.t.bind(n, 85964, 19))),
-        (k.polish = () => n.e(6509).then(n.t.bind(n, 26509, 19))),
-        (k.portuguese = () => n.e(8233).then(n.t.bind(n, 58233, 19))),
-        (k.romanian = () => n.e(8727).then(n.t.bind(n, 48727, 19))),
-        (k.russian = () => n.e(8973).then(n.t.bind(n, 98973, 19))),
-        (k.schinese = () => n.e(9720).then(n.t.bind(n, 49720, 19))),
-        (k.spanish = () => n.e(1924).then(n.t.bind(n, 31924, 19))),
-        (k.swedish = () => n.e(7925).then(n.t.bind(n, 17925, 19))),
-        (k.tchinese = () => n.e(9259).then(n.t.bind(n, 89259, 19))),
-        (k.thai = () => n.e(5474).then(n.t.bind(n, 25474, 19))),
-        (k.turkish = () => n.e(2164).then(n.t.bind(n, 12164, 19))),
-        (k.ukrainian = () => n.e(2626).then(n.t.bind(n, 52626, 19))),
-        (k.vietnamese = () => n.e(6515).then(n.t.bind(n, 66515, 19)));
-      const P = (0, E.l)(async function (e) {
-        if (k[e]) return k[e]();
+      var k = n(13843);
+      const E = {};
+      (E.arabic = () => n.e(2560).then(n.t.bind(n, 42560, 19))),
+        (E.brazilian = () => n.e(5061).then(n.t.bind(n, 37442, 19))),
+        (E.bulgarian = () => n.e(9945).then(n.t.bind(n, 39945, 19))),
+        (E.czech = () => n.e(5059).then(n.t.bind(n, 55059, 19))),
+        (E.danish = () => n.e(9605).then(n.t.bind(n, 19605, 19))),
+        (E.dutch = () => n.e(3366).then(n.t.bind(n, 13366, 19))),
+        (E.english = () => n.e(4468).then(n.t.bind(n, 74468, 19))),
+        (E.finnish = () => n.e(1655).then(n.t.bind(n, 31655, 19))),
+        (E.french = () => n.e(1580).then(n.t.bind(n, 21580, 19))),
+        (E.german = () => n.e(5666).then(n.t.bind(n, 5666, 19))),
+        (E.greek = () => n.e(2936).then(n.t.bind(n, 22936, 19))),
+        (E.hungarian = () => n.e(2173).then(n.t.bind(n, 52173, 19))),
+        (E.indonesian = () => n.e(412).then(n.t.bind(n, 80412, 19))),
+        (E.italian = () => n.e(9468).then(n.t.bind(n, 29468, 19))),
+        (E.japanese = () => n.e(2811).then(n.t.bind(n, 52811, 19))),
+        (E.koreana = () => n.e(6139).then(n.t.bind(n, 76139, 19))),
+        (E.latam = () => n.e(7267).then(n.t.bind(n, 77267, 19))),
+        (E.malay = () => n.e(8844).then(n.t.bind(n, 88844, 19))),
+        (E.norwegian = () => n.e(5964).then(n.t.bind(n, 85964, 19))),
+        (E.polish = () => n.e(6509).then(n.t.bind(n, 26509, 19))),
+        (E.portuguese = () => n.e(8233).then(n.t.bind(n, 58233, 19))),
+        (E.romanian = () => n.e(8727).then(n.t.bind(n, 48727, 19))),
+        (E.russian = () => n.e(8973).then(n.t.bind(n, 98973, 19))),
+        (E.schinese = () => n.e(9720).then(n.t.bind(n, 49720, 19))),
+        (E.spanish = () => n.e(1924).then(n.t.bind(n, 31924, 19))),
+        (E.swedish = () => n.e(7925).then(n.t.bind(n, 17925, 19))),
+        (E.tchinese = () => n.e(9259).then(n.t.bind(n, 89259, 19))),
+        (E.thai = () => n.e(5474).then(n.t.bind(n, 25474, 19))),
+        (E.turkish = () => n.e(2164).then(n.t.bind(n, 12164, 19))),
+        (E.ukrainian = () => n.e(2626).then(n.t.bind(n, 52626, 19))),
+        (E.vietnamese = () => n.e(6515).then(n.t.bind(n, 66515, 19)));
+      const P = (0, k.l)(async function (e) {
+        if (E[e]) return E[e]();
       });
       function Z() {
         return (0, s.jsxs)("svg", {
@@ -1092,7 +1093,7 @@
           }),
         });
       }
-      function I() {
+      function F() {
         return (0, s.jsx)("svg", {
           width: "20",
           height: "22",
@@ -1104,10 +1105,10 @@
           }),
         });
       }
-      function F(e) {
+      function I(e) {
         return (0, s.jsx)(r.s, { direction: "column", gap: "4", ...e });
       }
-      function D(e) {
+      function W(e) {
         return (0, s.jsx)(o.D, {
           level: "3",
           color: "dull-12",
@@ -1116,7 +1117,7 @@
           ...e,
         });
       }
-      function W(e) {
+      function Y(e) {
         let { href: t, ...n } = e;
         const r = (0, v.n9)();
         return (
@@ -1131,7 +1132,7 @@
           })
         );
       }
-      function Y() {
+      function D() {
         const e = (0, l.xC)();
         return (0, s.jsxs)(r.s, {
           gridArea: "main",
@@ -1143,11 +1144,11 @@
               gap: "6",
               align: "center",
               children: [
-                (0, s.jsx)(W, {
+                (0, s.jsx)(Y, {
                   href: m.TS.STORE_BASE_URL,
                   children: (0, s.jsx)(Z, {}),
                 }),
-                (0, s.jsx)(W, {
+                (0, s.jsx)(Y, {
                   href: "https://valvesoftware.com",
                   children: (0, s.jsx)(N, {}),
                 }),
@@ -1166,21 +1167,21 @@
               align: "center",
               className: L.LogoLinks,
               children: [
-                (0, s.jsx)(W, {
+                (0, s.jsx)(Y, {
                   href: "https://www.youtube.com/@Steam",
                   children: (0, s.jsx)(O, {}),
                 }),
-                (0, s.jsx)(W, {
+                (0, s.jsx)(Y, {
                   href: "https://bsky.app/profile/steampowered.com",
                   children: (0, s.jsx)(U, {}),
                 }),
-                (0, s.jsx)(W, {
+                (0, s.jsx)(Y, {
                   href: "https://facebook.com/steam",
                   children: (0, s.jsx)(B, {}),
                 }),
-                (0, s.jsx)(W, {
+                (0, s.jsx)(Y, {
                   href: "https://twitter.com/steam",
-                  children: (0, s.jsx)(I, {}),
+                  children: (0, s.jsx)(F, {}),
                 }),
               ],
             }),
@@ -1229,106 +1230,106 @@
               textAlign: "start",
               id: "footer",
               children: [
-                (0, s.jsx)(Y, {}),
-                (0, s.jsxs)(F, {
+                (0, s.jsx)(D, {}),
+                (0, s.jsxs)(I, {
                   gridArea: "steam",
                   children: [
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(W, {
                       children: P.Localize("#footer_link_header_steam"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "about/",
                       children: P.Localize("#footer_link_about_steam"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: P.Localize("#footer_link_steam_ssa"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.PARTNER_BASE_URL,
                       children: P.Localize("#footer_link_steamworks"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.PARTNER_BASE_URL + "steamdirect",
                       children: P.Localize("#footer_link_steam_distribution"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: P.Localize("#footer_link_gift_cards"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(F, {
+                (0, s.jsxs)(I, {
                   gridArea: "valve",
                   children: [
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(W, {
                       children: P.Localize("#footer_link_header_valve"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: "https://valvesoftware.com/about",
                       children: P.Localize("#footer_link_about_valve"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: "https://valvesoftware.com/",
                       children: P.Localize("#footer_link_jobs"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "hardware/",
                       children: P.Localize("#footer_link_hardware"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: P.Localize("#footer_link_recycling"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(F, {
+                (0, s.jsxs)(I, {
                   gridArea: "legal",
                   children: [
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(W, {
                       children: P.Localize("#footer_link_header_legal"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: P.Localize("#footer_link_privacy"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
                       children: P.Localize("#footer_link_accessibility"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "legal/",
                       children: P.Localize("#footer_link_notices_and_policies"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: P.Localize("#footer_link_cookies"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "steam_refunds/",
                       children: P.Localize("#footer_link_refunds"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(F, {
+                (0, s.jsxs)(I, {
                   gridArea: "more",
                   children: [
-                    (0, s.jsx)(D, {
+                    (0, s.jsx)(W, {
                       children: P.Localize("#footer_link_header_more"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "about/",
                       children: P.Localize("#footer_link_get_steam"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "mobile/",
                       children: P.Localize("#footer_link_get_mobile_apps"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.HELP_BASE_URL,
                       children: P.Localize("#footer_link_get_support"),
                     }),
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       href: m.TS.STORE_BASE_URL + "account/",
                       children: P.Localize("#footer_link_my_account"),
                     }),

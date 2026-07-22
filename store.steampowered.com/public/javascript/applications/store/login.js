@@ -151,7 +151,7 @@
         t.p +
         "images/applications/store/steam_spinner.png?v=valveisgoodatcaching";
       var a = t(42248),
-        f = t(8527);
+        f = t(66418);
       const b = s.memo(function (e) {
         const {
           className: r,

@@ -1,5 +1,8 @@
 {
     "language": "portuguese",
+    "EventEditor_Loc_Title": "Gerir tradução",
+    "EventEditor_Loc_Overview": "Exporte e importe ficheiros de localização para gerir a tradução de textos de todo o seu evento.",
+    "EventEditor_Loc_Overview_Page": "Exporte e importe ficheiros de localização para gerir a tradução de textos de toda a sua página.",
     "LoginRedirect_Dialog_Title": "Iniciar sessão",
     "LoginRedirect_Dialog_Description": "Inicia sessão para adicionares este artigo à tua lista de desejos, segui-lo ou ignorá-lo. Clicar em OK irá reencaminhar-te para a página de início de sessão.",
     "Wishlist_NotSignedIn": "Inicia sessão ou abre esta página na aplicação Steam para adicionar à lista de desejos, seguir ou comprar.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL aceite",
     "SteamURLInvalid": "Erro: URL não encaminha para uma página do Steam (Loja/Comunidade)",
     "AnchorHashInputInvalid": "Entrada inválida",
+    "Sale_Section_Label_Color": "Cor da etiqueta",
+    "Sale_Section_Background_Top": "Gradação do fundo (superior)",
+    "Sale_Section_Background_Bottom": "Gradação do fundo (inferior)",
     "Reservation_JoinPool": "Entrar na lista",
     "Reserationn_NoListJoined": "Seleciona uma opção abaixo para te inscreveres (utilizadores elegíveis podem inscrever-se em até %1$s opções).",
     "Reservation_InPool": "Estás na lista das opções selecionadas abaixo",

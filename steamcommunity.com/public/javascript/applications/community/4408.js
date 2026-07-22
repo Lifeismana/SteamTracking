@@ -15,7 +15,7 @@
       n.r(a), n.d(a, { ShuffleActions: () => b, default: () => f });
       var t = n(7850),
         o = n(52908),
-        s = n(8527),
+        s = n(66418),
         r = n(78686),
         i = n(5309),
         l = n(65946),

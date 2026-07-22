@@ -1,0 +1,41 @@
+.UA90o-oI90s- {
+  flex-direction: column;
+  gap: 12px;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 18px;
+  display: flex;
+  overflow: clip;
+}
+.-NVQMIMjQO4- {
+  flex-direction: row;
+  justify-content: right;
+  align-items: flex-start;
+  gap: 18px;
+  display: flex;
+}
+.-NVQMIMjQO4- .sb69a-gt7Fs- {
+  color: #fff;
+  flex-grow: 1;
+  max-width: 800px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+.-NVQMIMjQO4- .RKZVX7rCtPY- {
+  color: #b7bfcb;
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  flex-grow: 0;
+  flex-basis: 26px;
+  width: 26px;
+  height: 26px;
+  padding: 4px;
+}
+.-NVQMIMjQO4- .RKZVX7rCtPY-:hover {
+  color: #fff;
+}
+.KesFka-Q7cY- {
+  overflow: auto;
+}

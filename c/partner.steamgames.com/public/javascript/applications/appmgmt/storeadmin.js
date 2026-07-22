@@ -3434,7 +3434,7 @@
                 ? ((_ = !0), _.push(_))
                 : (_ || (_ = !0), __webpack_require__.push(_));
             }
-            if ((console.assert(!_ || _), _ && _)) {
+            if ((console.assert(!_ || !!_), _ && _)) {
               _.isBlock &&
                 _.length > 1 &&
                 _[_.length - 1].type == this.schema.nodes.hard_break &&

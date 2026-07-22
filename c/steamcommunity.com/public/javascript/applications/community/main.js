@@ -3045,29 +3045,38 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(!1);
-        return (
-          (0, _.useEffect)(() => {
+        if (
+          ((0, _.useEffect)(() => {
             var _;
             null === (_ = document.getElementById(_.anchorId)) ||
               void 0 === _ ||
               _.addEventListener("click", () => __webpack_require__(!0));
           }, [_.anchorId]),
-          _
-            ? (0, _.jsx)(_, {
-                bShowDialog: _,
-                setShowDialog: _,
-              })
-            : null
+          !_)
+        )
+          return null;
+        const _ = new _._(_.clanSteamId).GetAccountID();
+        let _ = `${_._.COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${_}&gidForum=${_.gidForum}&gidTopic=${_.gidTopic}`;
+        return (
+          "0" !== _.gidComment && (_ += "#c" + _.gidComment),
+          (0, _.jsx)(_, {
+            bShowDialog: _,
+            setShowDialog: _,
+            contentURL: _,
+          })
         );
       }
       function _(_) {
-        const { bShowDialog: _, setShowDialog: _ } = _,
+        const { bShowDialog: _, setShowDialog: _, contentURL: _ } = _,
           _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`,
           _ = `${_._.STORE_BASE_URL}join/`,
-          _ = `${_._.HELP_BASE_URL}wizard/HelpWithAnonymousContentReport`;
+          _ =
+            `${_._.HELP_BASE_URL}wizard/HelpWithAnonymousContentReport` +
+            (_ ? `?contenturl=${encodeURIComponent(_)}` : "");
         return (0, _.jsx)(_._, {
           active: _,
           children: (0, _.jsxs)(_._, {
@@ -17820,6 +17829,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = 1,
         _ = 2,
@@ -17830,7 +17840,8 @@
         _ = 7,
         _ = 8,
         _ = 9,
-        _ = 10;
+        _ = 10,
+        _ = 12;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -24414,6 +24425,11 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -28258,6 +28274,11 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -29618,6 +29639,15 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  reported_content_id: {
+                    _: 34,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  coordinates: {
+                    _: 35,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -30096,6 +30126,11 @@
                     _: 2,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -34012,6 +34047,114 @@
           return "CContentModeration_SustainModeration_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subject_type: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  forum: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  topic: {
+                    _: 4,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  comment: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  comment_thread_id: {
+                    _: 6,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  sender_account_id: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  chat_message_rtime: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  chat_message_ordinal: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  chat_group_id: {
+                    _: 10,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  chat_room_id: {
+                    _: 11,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "ReportedContentCoordinates";
+        }
+      }
       var _;
       !(function (_) {
         (_.ClaimBatch = function (_, _, _) {
@@ -35665,6 +35808,11 @@
                     _: 2,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -54793,12 +54941,13 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _;
       }
-      var _, _;
       const _ = null !== (_ = window.Config) && void 0 !== _ ? _ : _._,
         _ = null !== (_ = window.UserConfig) && void 0 !== _ ? _ : _._,
         _ = window.Config ? () => Promise.resolve() : _._;
@@ -86581,15 +86730,16 @@
           (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
             (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
-            (_[(_.SystemButtonHideDashboard = 3)] =
+            (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
+            (_[(_.SystemButtonHideDashboard = 4)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 4)] =
+            (_[(_.SystemButtonDashboardHidden = 5)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 5)] =
+            (_[(_.SystemButtonShowDashboard = 6)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 6)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 7)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 8)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 7)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 8)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 9)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -87418,45 +87568,54 @@
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
-          value: _,
-          onChange: _,
-          disabled: _,
-          className: _,
-          focusable: _,
-          children: _,
-          navRef: _,
-          autoFocus: _,
-          ..._
-        } = _;
-        return (0, _.jsxs)(_._, {
-          ..._,
-          autoFocus: _,
-          noFocusRing: !0,
-          className: (0, _._)(_, _().Toggle, {
-            [_().Disabled]: !!_,
-            [_()._]: !!_,
-          }),
-          onClick: () => {
+            value: _,
+            onChange: _,
+            disabled: _,
+            className: _,
+            focusable: _,
+            children: _,
+            navRef: _,
+            autoFocus: _,
+            toggleRef: _,
+            ..._
+          } = _,
+          _ = _.useCallback(() => {
             if (!_ && _) {
               const _ = !_;
               _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
             }
-          },
-          ref: _,
-          navRef: _,
-          focusable: _,
-          role: "checkbox",
-          "aria-checked": !!_,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().ToggleRail,
+          }, [_, _, _]);
+        return (
+          _.useEffect(() => {
+            (0, _._)(_, {
+              toggle: _,
+            });
+          }, [_, _]),
+          (0, _.jsxs)(_._, {
+            ..._,
+            autoFocus: _,
+            noFocusRing: !0,
+            className: (0, _._)(_, _().Toggle, {
+              [_().Disabled]: !!_,
+              [_()._]: !!_,
             }),
-            (0, _.jsx)("div", {
-              className: _().ToggleSwitch,
-            }),
-            _,
-          ],
-        });
+            onClick: _,
+            ref: _,
+            navRef: _,
+            focusable: _,
+            role: "checkbox",
+            "aria-checked": !!_,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().ToggleRail,
+              }),
+              (0, _.jsx)("div", {
+                className: _().ToggleSwitch,
+              }),
+              _,
+            ],
+          })
+        );
       });
       function _(_) {
         const _ = !!_.disabled,
@@ -91312,6 +91471,7 @@
             )
           : null;
       }
+      const _ = (0, _.createContext)(!1);
       function _(_) {
         const { ModalManager: _ } = _,
           [_, _] = _.useState(void 0),
@@ -91396,8 +91556,11 @@
               () => _(void 0)
             );
           }, [_, _, _]),
-          (0, _.jsx)(_._, {
-            children: _.rctToMeasure,
+          (0, _.jsx)(_.Provider, {
+            value: !0,
+            children: (0, _.jsx)(_._, {
+              children: _.rctToMeasure,
+            }),
           })
         );
       }
@@ -100642,7 +100805,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -100756,15 +100918,6 @@
           -1 == _.toLocaleLowerCase().indexOf("snr=")
           ? _ + (_.indexOf("?") >= 0 ? "&" : "?") + "snr=" + _._.SNR
           : _;
-      }
-      function _(_, _) {
-        try {
-          const _ = new URL(_),
-            _ = new URL(_);
-          return _.href.replace(/\/$/, "") + _.pathname + _.search + _.hash;
-        } catch (_) {
-          return "";
-        }
       }
       function _(_, _) {
         return (

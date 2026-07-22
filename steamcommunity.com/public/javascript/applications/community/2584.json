@@ -1,5 +1,8 @@
 {
     "language": "indonesian",
+    "EventEditor_Loc_Title": "Kelola Pelokalan",
+    "EventEditor_Loc_Overview": "Ekspor dan impor file pelokalan untuk mengelola baris-baris terjemahan untuk event-mu.",
+    "EventEditor_Loc_Overview_Page": "Ekspor dan impor file pelokalan untuk mengelola baris-baris terjemahan untuk seluruh halamanmu.",
     "LoginRedirect_Dialog_Title": "Login",
     "LoginRedirect_Dialog_Description": "Login untuk menambahkan item ini ke wishlist, mengikutinya, atau mengabaikannya. Mengeklik OK akan mengarahkan ke halaman login.",
     "Wishlist_NotSignedIn": "Login atau buka halaman ini di Aplikasi Steam untuk menambahkan produk ke wishlist, mengikutinya, atau membelinya.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL Diterima",
     "SteamURLInvalid": "Eror: URL tidak mengarahkan ke halaman Steam (Toko/Komunitas)",
     "AnchorHashInputInvalid": "Input Tidak Valid",
+    "Sale_Section_Label_Color": "Warna Label",
+    "Sale_Section_Background_Top": "Gradien Latar (Atas)",
+    "Sale_Section_Background_Bottom": "Gradien Latar (Bawah)",
     "Reservation_JoinPool": "Masuk ke Daftar",
     "Reserationn_NoListJoined": "Pilih model di bawah ini untuk mendaftar. Pelanggan yang memenuhi syarat dapat mendaftar sampai %1$s model.",
     "Reservation_InPool": "Kamu terdaftar untuk model-model terpilih di bawah ini",

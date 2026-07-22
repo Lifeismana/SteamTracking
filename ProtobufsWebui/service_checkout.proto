@@ -77,6 +77,7 @@ message CCheckout_ValidateCart_Response_CartItem_Errors {
 	repeated int32 missing_must_own_appids = 11;
 	optional bool adult_content_restricted = 12;
 	optional bool commercial_license_restricted = 13;
+	optional bool gift_not_valid_for_recipient_region = 14;
 }
 
 message CCheckout_ValidateCart_Response_CartItem_Warnings {
@@ -85,6 +86,7 @@ message CCheckout_ValidateCart_Response_CartItem_Warnings {
 	repeated .CCheckout_ValidateCart_Response_CartItem_Warnings_AppInMasterSub appids_in_mastersub = 3;
 	optional bool price_has_changed = 4;
 	optional bool non_refundable = 5;
+	optional bool gift_recipient_higher_price = 6;
 }
 
 message CCheckout_ValidateCart_Response_CartItem_Warnings_AppInMasterSub {

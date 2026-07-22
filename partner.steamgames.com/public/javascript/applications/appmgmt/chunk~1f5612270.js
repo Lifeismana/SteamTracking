@@ -68,59 +68,59 @@
     },
     95582: (e, i, r) => {
       "use strict";
-      r.d(i, { i: () => u });
-      var a = r(7850),
-        n = r(83800),
+      r.d(i, { i: () => P });
+      var n = r(7850),
+        a = r(83800),
         s = r(69423),
         o = r(9154),
-        l = r(61859),
-        t = r(78327),
+        t = r(61859),
+        l = r(78327),
         c = r(14578),
         d = r.n(c),
-        P = r(7929);
-      function u(e) {
+        u = r(7929);
+      function P(e) {
         const { closeModal: i, fnOnApply: r, singlePackage: c } = e,
-          u = (0, s._A)();
-        return (0, a.jsxs)(o.o0, {
+          P = (0, s._A)();
+        return (0, n.jsxs)(o.o0, {
           closeModal: i,
           bAlertDialog: !0,
-          strTitle: P.g.Localize("#PricingDashboard_ApplyConversion_Method"),
+          strTitle: u.g.Localize("#PricingDashboard_ApplyConversion_Method"),
           onOK: () => {
-            u(), r && r();
+            P(), r && r();
           },
           strOKButtonText: c
-            ? (0, l.we)("#PricingDashboard_ApplyGuidelines_Button_Single")
-            : (0, l.we)("#PricingDashboard_ApplyGuidelines_Button"),
+            ? (0, t.we)("#PricingDashboard_ApplyGuidelines_Button_Single")
+            : (0, t.we)("#PricingDashboard_ApplyGuidelines_Button"),
           children: [
-            (0, a.jsx)("div", {
+            (0, n.jsx)("div", {
               className: d().Instructions,
-              children: P.g.Localize(
+              children: u.g.Localize(
                 "#PricingDashboard_ApplyGuidelines_Instructions_MultiOptions",
               ),
             }),
-            (0, a.jsx)("br", {}),
-            (0, a.jsx)("a", {
-              href: t.TS.PARTNER_BASE_URL + "doc/store/pricing#5",
+            (0, n.jsx)("br", {}),
+            (0, n.jsx)("a", {
+              href: l.TS.PARTNER_BASE_URL + "doc/store/pricing#5",
               target: "_blank",
-              children: (0, l.we)("#PricingDashboard_ApplyGuidelines_Link"),
+              children: (0, t.we)("#PricingDashboard_ApplyGuidelines_Link"),
             }),
-            (0, a.jsx)("br", {}),
-            (0, a.jsx)("br", {}),
+            (0, n.jsx)("br", {}),
+            (0, n.jsx)("br", {}),
             !c &&
-              (0, a.jsx)("div", {
+              (0, n.jsx)("div", {
                 className: d().Instructions,
-                children: (0, l.we)(
+                children: (0, t.we)(
                   "#PricingDashboard_ApplyGuidelines_Instructions2",
                 ),
               }),
-            (0, a.jsx)("div", {
+            (0, n.jsx)("div", {
               className: d().Instructions,
-              children: (0, l.we)(
+              children: (0, t.we)(
                 "#PricingDashboard_ApplyGuidelines_Assurance",
               ),
             }),
-            (0, a.jsx)("br", {}),
-            (0, a.jsx)(n.J, { bHideTour: !0 }),
+            (0, n.jsx)("br", {}),
+            (0, n.jsx)(a.J, { bHideTour: !0 }),
           ],
         });
       }
@@ -128,38 +128,38 @@
     61311: (e, i, r) => {
       "use strict";
       r.d(i, { t: () => _ });
-      var a = r(7850),
-        n = r(96745),
+      var n = r(7850),
+        a = r(96745),
         s = r(69423),
         o = r(90626),
-        l = r(16676),
-        t = r(12155),
+        t = r(16676),
+        l = r(12155),
         c = r(32754),
         d = r(52038),
-        P = r(61859),
-        u = r(10754),
+        u = r(61859),
+        P = r(10754),
         h = r(18715),
         g = r.n(h);
       function _(e) {
         const { rgLocalPriceOverrides: i } = e,
-          [r, n] = o.useState(i.length < 9);
-        return (0, a.jsx)("div", {
+          [r, a] = o.useState(i.length < 9);
+        return (0, n.jsx)("div", {
           className: g().SeeDetailsSection,
           children: r
-            ? (0, a.jsx)("div", {
+            ? (0, n.jsx)("div", {
                 className: g().PriceOverrideSummaryList,
                 children: i.map((e) =>
-                  (0, a.jsx)(
+                  (0, n.jsx)(
                     b,
                     { override: e },
                     `${e.packageID}_${e.strPriceKey}`,
                   ),
                 ),
               })
-            : (0, a.jsx)(l.$n, {
-                onClick: () => n(!0),
+            : (0, n.jsx)(t.$n, {
+                onClick: () => a(!0),
                 className: g().SeeDetailsButton,
-                children: (0, P.we)("#PackageGrid_SeePendingChanges"),
+                children: (0, u.we)("#PackageGrid_SeePendingChanges"),
               }),
         });
       }
@@ -168,26 +168,26 @@
           {
             packageID: r,
             strPriceKey: o,
-            nPriceInCents: l,
-            nOldPriceInCents: P,
+            nPriceInCents: t,
+            nOldPriceInCents: u,
           } = i,
-          h = (0, n.ww)(r),
-          [_, b, v] = (0, s.Wx)(P, o),
-          [x, p, D] = (0, s.Wx)(l, o),
+          h = (0, a.ww)(r),
+          [_, b, v] = (0, s.Wx)(u, o),
+          [x, p, D] = (0, s.Wx)(t, o),
           w = (0, s.XK)(o),
           { nMinPriceInCents: j, nMaxPriceInCents: m } = (0, s.tn)(r, o),
-          C = l < j || (!!m && l > m);
-        return (0, a.jsxs)("div", {
+          C = t < j || (!!m && t > m);
+        return (0, n.jsxs)("div", {
           className: (0, d.A)(g().PriceOverrideSummary),
           children: [
-            (0, a.jsx)(c.he, {
+            (0, n.jsx)(c.he, {
               toolTipContent: w,
               direction: "top",
               className: g().Currency,
               strTooltipClassname: g().HoverToolTip,
               children: o,
             }),
-            (0, a.jsx)(c.he, {
+            (0, n.jsx)(c.he, {
               toolTipContent: `${r}: ${h}`,
               direction: "overlay",
               className: g().PackageName,
@@ -195,26 +195,26 @@
               children: h,
             }),
             C
-              ? (0, a.jsx)(u.T6, { packageID: r, strPriceKey: o })
-              : (0, a.jsx)(u.Gy, { nPriceInCents: l, nSavedPriceInCents: P }),
-            (0, a.jsxs)("div", {
+              ? (0, n.jsx)(P.T6, { packageID: r, strPriceKey: o })
+              : (0, n.jsx)(P.Gy, { nPriceInCents: t, nSavedPriceInCents: u }),
+            (0, n.jsxs)("div", {
               className: g().OldPriceCtn,
               children: [
-                (0, a.jsx)("div", { className: g().PricePrefix, children: _ }),
-                (0, a.jsx)("span", { className: g().OldPrice, children: b }),
-                (0, a.jsx)("div", { className: g().PriceSuffix, children: v }),
+                (0, n.jsx)("div", { className: g().PricePrefix, children: _ }),
+                (0, n.jsx)("span", { className: g().OldPrice, children: b }),
+                (0, n.jsx)("div", { className: g().PriceSuffix, children: v }),
               ],
             }),
-            (0, a.jsx)("span", {
+            (0, n.jsx)("span", {
               className: g().ChangeArrow,
-              children: (0, a.jsx)(t.i3G, { angle: 90 }),
+              children: (0, n.jsx)(l.i3G, { angle: 90 }),
             }),
-            (0, a.jsxs)("div", {
+            (0, n.jsxs)("div", {
               className: g().NewPriceCtn,
               children: [
-                (0, a.jsx)("div", { className: g().PricePrefix, children: _ }),
-                (0, a.jsx)("span", { className: g().NewPrice, children: p }),
-                (0, a.jsx)("div", { className: g().PriceSuffix, children: v }),
+                (0, n.jsx)("div", { className: g().PricePrefix, children: _ }),
+                (0, n.jsx)("span", { className: g().NewPrice, children: p }),
+                (0, n.jsx)("div", { className: g().PriceSuffix, children: v }),
               ],
             }),
           ],
@@ -223,59 +223,59 @@
     },
     74267: (e, i, r) => {
       "use strict";
-      r.d(i, { O: () => u });
-      var a = r(7850),
-        n = r(90626),
+      r.d(i, { O: () => P });
+      var n = r(7850),
+        a = r(90626),
         s = r(85274),
         o = r.n(s),
-        l = r(12155),
-        t = r(52038),
+        t = r(12155),
+        l = r(52038),
         c = r(49771),
         d = r(6336);
-      const P = new c.MX("price-grid-cell-popout-elements");
-      function u(e) {
+      const u = new c.MX("price-grid-cell-popout-elements");
+      function P(e) {
         let { hoverKey: i, className: r, renderHover: s } = e,
-          c = (0, t.A)(o().MoreDots, r),
-          u = n.useRef(void 0),
-          h = n.useCallback(() => {
-            P.HideElement(u.current.ownerDocument, i);
+          c = (0, l.A)(o().MoreDots, r),
+          P = a.useRef(void 0),
+          h = a.useCallback(() => {
+            u.HideElement(P.current.ownerDocument, i);
           }, [i]);
-        return (0, a.jsx)("div", {
-          ref: u,
+        return (0, n.jsx)("div", {
+          ref: P,
           tabIndex: -1,
           className: c,
           onFocus: (e) => {
             e.target.focus();
-            let r = (0, a.jsx)(d.g, {
-              target: u.current,
+            let r = (0, n.jsx)(d.g, {
+              target: P.current,
               direction: "top",
               bEnablePointerEvents: !0,
               nBodyDistance: 0,
               onClick: h,
               children: s(),
             });
-            P.ShowElement(u.current.ownerDocument, r, i);
+            u.ShowElement(P.current.ownerDocument, r, i);
           },
           onBlur: () => {
-            P.HideElement(u.current.ownerDocument, i, 100);
+            u.HideElement(P.current.ownerDocument, i, 100);
           },
-          children: (0, a.jsx)(l.faJ, {}),
+          children: (0, n.jsx)(t.faJ, {}),
         });
       }
     },
     86762: (e, i, r) => {
       "use strict";
       r.d(i, { m: () => B });
-      var a,
-        n,
+      var n,
+        a,
         s = r(7850),
         o = r(69423),
-        l = r(10754),
-        t = r(41103),
+        t = r(10754),
+        l = r(41103),
         c = r(61859),
         d = r(4160),
-        P = r(52038),
-        u = r(32754),
+        u = r(52038),
+        P = r(32754),
         h = r(74267),
         g = r(12917),
         _ = r.n(g),
@@ -291,48 +291,48 @@
         f = r(87924),
         S = r(61311);
       function N(e) {
-        const { closeModal: i, packageID: r, bPackageVisible: l } = e,
-          t = (0, o.FX)(r),
-          d = t.some((e) => e.nPriceInCents > e.nOldPriceInCents),
-          P = (function (e, i) {
-            let [r, a] = v.useState(void 0);
+        const { closeModal: i, packageID: r, bPackageVisible: t } = e,
+          l = (0, o.FX)(r),
+          d = l.some((e) => e.nPriceInCents > e.nOldPriceInCents),
+          u = (function (e, i) {
+            let [r, n] = v.useState(void 0);
             const s = (0, m.zq)(),
               o = (0, C.P_)(60);
             if (
               (v.useEffect(() => {
                 i &&
-                  (a(void 0),
+                  (n(void 0),
                   s([e], void 0, 6e4).then(async (e) => {
-                    a(e);
+                    n(e);
                   }));
-              }, [i, e, a, s]),
+              }, [i, e, n, s]),
               !i)
             )
-              return n.OK;
-            if (null == r) return n.Loading;
-            if (r != b.R) return n.FailedToLoad;
-            const l = (0, m.qN)(e);
-            return l.every((e) => e.rtStartDate > o + f.nu || e.rtEndDate < o)
-              ? n.OK
-              : n.RequiresCooldown;
+              return a.OK;
+            if (null == r) return a.Loading;
+            if (r != b.R) return a.FailedToLoad;
+            const t = (0, m.qN)(e);
+            return t.every((e) => e.rtStartDate > o + f.nu || e.rtEndDate < o)
+              ? a.OK
+              : a.RequiresCooldown;
           })(r, d),
-          { fnPublish: u, ePublishState: h } = (function (e) {
+          { fnPublish: P, ePublishState: h } = (function (e) {
             const i = (0, o.h4)(),
-              [r, n] = v.useState(a.Idle);
+              [r, a] = v.useState(n.Idle);
             let s = v.useCallback(async () => {
-              n(a.Loading);
-              (await i(e)).success == b.R ? n(a.OK) : n(a.Failed);
-            }, [n, i, e]);
+              a(n.Loading);
+              (await i(e)).success == b.R ? a(n.OK) : a(n.Failed);
+            }, [a, i, e]);
             return { fnPublish: s, ePublishState: r };
           })(r);
         let g;
-        if (P == n.FailedToLoad)
+        if (u == a.FailedToLoad)
           g = (0, c.oW)(
             "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
             (0, s.jsx)("div", {}),
             (0, s.jsx)("div", {}),
           );
-        else if (P == n.RequiresCooldown) {
+        else if (u == a.RequiresCooldown) {
           let e = (0, s.jsx)(D.uU, {
             href: "https://partner.steamgames.com/doc/store/pricing",
           });
@@ -373,7 +373,7 @@
             ],
           });
         } else
-          h == a.Failed &&
+          h == n.Failed &&
             (g = (0, c.oW)(
               "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
               (0, s.jsx)("div", {}),
@@ -381,12 +381,12 @@
             ));
         if (g) {
           let e = (0, c.we)(
-            l
+            t
               ? "#PricingDashboard_PriceProposal_Publish_Title"
               : "#PricingDashboard_StageNewPrices_title",
           );
           return (
-            P == n.RequiresCooldown &&
+            u == a.RequiresCooldown &&
               (e = (0, c.we)(
                 "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
               )),
@@ -403,23 +403,23 @@
             })
           );
         }
-        let _ = P == n.Loading || h == a.Loading;
+        let _ = u == a.Loading || h == n.Loading;
         return (0, s.jsxs)(x.o0, {
           strTitle: (0, c.we)(
-            l
+            t
               ? "#PricingDashboard_PriceProposal_Publish_Title"
               : "#PricingDashboard_StageNewPrices_title",
           ),
           bAlertDialog: !1,
           strOKButtonText: (0, c.we)(
-            l
+            t
               ? "#PricingDashboard_PriceProposal_Publish_Button"
               : "#PricingDashboard_StageNewPrices_ok",
           ),
           bOKDisabled: _,
           bCancelDisabled: _,
           bDestructiveWarning: !0,
-          onOK: u,
+          onOK: P,
           onCancel: i,
           closeModal: i,
           children: [
@@ -428,12 +428,12 @@
               (0, s.jsxs)(s.Fragment, {
                 children: [
                   (0, c.Yp)(
-                    l
+                    t
                       ? "#PricingDashboard_PriceProposal_Publish_Explanation"
                       : "#PricingDashboard_StageNewPrices_desc",
-                    t.length,
+                    l.length,
                   ),
-                  l &&
+                  t &&
                     d &&
                     (0, s.jsx)("div", {
                       className: j().PublishWarning,
@@ -441,7 +441,7 @@
                         "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
                       ),
                     }),
-                  (0, s.jsx)(S.t, { rgLocalPriceOverrides: t }),
+                  (0, s.jsx)(S.t, { rgLocalPriceOverrides: l }),
                 ],
               }),
           ],
@@ -452,35 +452,35 @@
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.OK = 2)] = "OK"),
           (e[(e.Failed = 3)] = "Failed");
-      })(a || (a = {})),
+      })(n || (n = {})),
         (function (e) {
           (e[(e.Idle = 0)] = "Idle"),
             (e[(e.Loading = 1)] = "Loading"),
             (e[(e.OK = 2)] = "OK"),
             (e[(e.FailedToLoad = 3)] = "FailedToLoad"),
             (e[(e.RequiresCooldown = 4)] = "RequiresCooldown");
-        })(n || (n = {}));
+        })(a || (a = {}));
       var I = r(64753),
-        O = r(16676),
-        T = r(96434),
-        k = r.n(T),
+        T = r(16676),
+        O = r(96434),
+        k = r.n(O),
         y = r(39777);
       function B(e) {
         const { packageID: i, bShowCancel: r } = e,
-          a = (0, o.XB)(i),
-          n = (0, o.d$)(i),
-          g = n && (0, l.mK)(n.rtSubmitted),
-          [b, v] = (0, t.Hl)(n?.submitterID),
-          x = v ? v.persona_name : n?.submitterID;
+          n = (0, o.XB)(i),
+          a = (0, o.d$)(i),
+          g = a && (0, t.mK)(a.rtSubmitted),
+          [b, v] = (0, l.Hl)(a?.submitterID),
+          x = v ? v.persona_name : a?.submitterID;
         let p = "PackageMore_" + i,
           D = null,
           w = null,
           j = null;
-        a
+        n
           ? ((D = _().NeedsReview),
             (j = (0, c.we)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
             (w = (0, c.we)("#PricingDashboard_PriceProposal_NeedsReview")))
-          : n?.eState == d.Al && n.bPartnerWillPublish
+          : a?.eState == d.Al && a.bPartnerWillPublish
             ? ((D = _().PartnerWillPublish),
               (j = (0, c.we)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
@@ -490,8 +490,8 @@
               (w = (0, c.we)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
               )))
-            : n?.eState != d.Al || n.bPartnerWillPublish
-              ? n?.eState == d.Zo
+            : a?.eState != d.Al || a.bPartnerWillPublish
+              ? a?.eState == d.Zo
                 ? ((D = _().ApprovedCanPublish),
                   (j = (0, c.we)(
                     "#PricingDashboard_PriceProposal_Approved_ttip",
@@ -523,11 +523,11 @@
                     }),
                   ],
                 })));
-        let m = r && (a || !!n);
+        let m = r && (n || !!a);
         return (0, s.jsxs)("div", {
-          className: (0, P.A)(_().ProposalState, D),
+          className: (0, u.A)(_().ProposalState, D),
           children: [
-            (0, s.jsxs)(u.he, {
+            (0, s.jsxs)(P.he, {
               toolTipContent: j,
               className: _().StateText,
               children: [
@@ -546,15 +546,15 @@
       }
       function A(e) {
         const { packageID: i } = e,
-          [r, a, n] = (0, I.uD)(),
+          [r, n, a] = (0, I.uD)(),
           { data: o } = (0, y.by)({ packageid: i }),
-          l = Boolean(o);
+          t = Boolean(o);
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(O.jn, {
-              onClick: a,
+            (0, s.jsx)(T.jn, {
+              onClick: n,
               children: (0, c.we)(
-                l
+                t
                   ? "#PricingDashboard_PriceProposal_PublishDialog_Button"
                   : "#PricingDashboard_StageNewPrices",
               ),
@@ -563,8 +563,8 @@
               active: r,
               children: (0, s.jsx)(N, {
                 packageID: i,
-                bPackageVisible: l,
-                closeModal: n,
+                bPackageVisible: t,
+                closeModal: a,
               }),
             }),
           ],
@@ -573,9 +573,9 @@
       function W(e) {
         const { packageID: i } = e,
           r = (0, o.XB)(i);
-        let a = (0, o.T_)(i);
-        const n = (0, o.d$)(i);
-        let l = (0, o.fr)(i);
+        let n = (0, o.T_)(i);
+        const a = (0, o.d$)(i);
+        let t = (0, o.fr)(i);
         return (0, s.jsx)("div", {
           className: k().PricePopout,
           children: (0, s.jsxs)("div", {
@@ -584,13 +584,13 @@
               r &&
                 (0, s.jsx)("div", {
                   className: k().DetailLabel,
-                  onClick: a,
+                  onClick: n,
                   children: (0, c.we)("#PricingDashboard_RevertAllPackage"),
                 }),
-              !!n &&
+              !!a &&
                 (0, s.jsx)("div", {
                   className: k().DetailLabel,
-                  onClick: l,
+                  onClick: t,
                   children: (0, c.we)("#PricingDashboard_CancelPriceProposal"),
                 }),
             ],
@@ -600,17 +600,17 @@
     },
     40818: (e, i, r) => {
       "use strict";
-      r.d(i, { Zg: () => k, BL: () => I, cK: () => O });
-      var a = r(7850),
-        n = r(37085),
+      r.d(i, { Zg: () => k, BL: () => I, cK: () => T });
+      var n = r(7850),
+        a = r(37085),
         s = r(64753),
         o = r(48996),
-        l = r(96745),
-        t = r(69423),
+        t = r(96745),
+        l = r(69423),
         c = r(90626),
         d = r(44165),
-        P = r(16676),
-        u = r(9154),
+        u = r(16676),
+        P = r(9154),
         h = r(738),
         g = r(12155),
         _ = r(22797),
@@ -623,17 +623,17 @@
         j = r(61311);
       function m(e) {
         const { closeModal: i } = e,
-          r = (0, t.Ci)(),
-          n = (0, t.NC)();
-        return (0, a.jsxs)(u.o0, {
+          r = (0, l.Ci)(),
+          a = (0, l.NC)();
+        return (0, n.jsxs)(P.o0, {
           strTitle: (0, D.we)("#PackageGrid_DiscardChangesTitle"),
           strOKButtonText: (0, D.we)("#PackageGrid_DiscardChangesButton"),
-          onOK: n,
+          onOK: a,
           bDestructiveWarning: !0,
           closeModal: i,
           children: [
             (0, D.Yp)("#PricingDashboard_DiscardChangesExplanation", r.length),
-            (0, a.jsx)(j.t, { rgLocalPriceOverrides: r }),
+            (0, n.jsx)(j.t, { rgLocalPriceOverrides: r }),
           ],
         });
       }
@@ -643,87 +643,87 @@
         N = 40;
       function I(e) {
         const { bReloadPageOnSave: i } = e,
-          r = (0, t.Ci)();
-        let n = r?.length ?? 0,
-          o = n > 0;
-        const [l, c, d] = (0, s.uD)(),
+          r = (0, l.Ci)();
+        let a = r?.length ?? 0,
+          o = a > 0;
+        const [t, c, d] = (0, s.uD)(),
           [h, g, _] = (0, s.uD)();
-        return (0, a.jsxs)("div", {
+        return (0, n.jsxs)("div", {
           className: (0, x.A)(f().ToolbarInfo, o && f().Visible),
           children: [
-            (0, a.jsx)("div", {
+            (0, n.jsx)("div", {
               className: f().ChangeCount,
-              children: (0, D.Yp)("#PackageGrid_PendingChangeCount", n),
+              children: (0, D.Yp)("#PackageGrid_PendingChangeCount", a),
             }),
-            (0, a.jsxs)("div", {
+            (0, n.jsxs)("div", {
               className: f().Buttons,
               children: [
-                (0, a.jsx)(P.$n, {
+                (0, n.jsx)(u.$n, {
                   onClick: c,
-                  disabled: 0 == n,
+                  disabled: 0 == a,
                   className: (0, x.A)(f().Button, f().SaveButton),
                   children: (0, D.we)("#PackageGrid_SaveChangesDialogButton"),
                 }),
-                (0, a.jsx)(u.EN, {
-                  active: l,
-                  children: (0, a.jsx)(k, {
+                (0, n.jsx)(P.EN, {
+                  active: t,
+                  children: (0, n.jsx)(k, {
                     closeModal: d,
                     bReloadPageOnSave: i,
                   }),
                 }),
-                (0, a.jsx)(P.$n, {
+                (0, n.jsx)(u.$n, {
                   className: f().Button,
                   onClick: g,
                   children: (0, D.we)(
                     "#PackageGrid_DiscardChangesDialogButton",
                   ),
                 }),
-                (0, a.jsx)(u.EN, {
+                (0, n.jsx)(P.EN, {
                   active: h,
-                  children: (0, a.jsx)(m, { closeModal: _ }),
+                  children: (0, n.jsx)(m, { closeModal: _ }),
                 }),
               ],
             }),
           ],
         });
       }
-      function O() {
+      function T() {
         return c.useCallback(
           (e, i) =>
-            (0, h.pg)((0, a.jsx)(k, { strContinueUrl: i }), (0, p.uX)(e)),
+            (0, h.pg)((0, n.jsx)(k, { strContinueUrl: i }), (0, p.uX)(e)),
           [],
         );
       }
-      function T(e) {
+      function O(e) {
         return e
           .filter((e) => e.nPriceInCents > e.nOldPriceInCents)
           .map((e) => e.packageID);
       }
       function k(e) {
         const { closeModal: i, strContinueUrl: r, bReloadPageOnSave: s } = e,
-          g = (0, t.Ci)(),
-          _ = (0, t.NC)(),
+          g = (0, l.Ci)(),
+          _ = (0, l.NC)(),
           [v, x] = c.useState(void 0),
           p = (function (e) {
             let [i, r] = c.useState(void 0);
-            const a = (0, o.zq)(),
+            const n = (0, o.zq)(),
               s = (0, d.P_)(60);
             return (
               c.useEffect(() => {
                 r(void 0);
-                let i = T(e);
+                let i = O(e);
                 i.length > 0
-                  ? a(i, void 0, 6e4).then((e) => {
+                  ? n(i, void 0, 6e4).then((e) => {
                       r(e);
                     })
-                  : r(n.R);
-              }, [r, e, a]),
+                  : r(a.R);
+              }, [r, e, n]),
               c.useMemo(() => {
                 if (void 0 === i) return null;
-                if (i != n.R) return { days: 0, loadFailed: !0 };
+                if (i != a.R) return { days: 0, loadFailed: !0 };
                 let r = Number.MAX_SAFE_INTEGER,
-                  a = T(e);
-                for (let e of a) {
+                  n = O(e);
+                for (let e of n) {
                   const i = (0, o.qN)(e);
                   for (const e of i) {
                     if (e.rtStartDate < s) continue;
@@ -744,43 +744,43 @@
           ),
           S = (0, D.Yp)("#PricingDashboard_SavePricesExplanation", g.length);
         if (p.loadFailed)
-          return (0, a.jsx)(u.o0, {
+          return (0, n.jsx)(P.o0, {
             strTitle: C,
             bAlertDialog: !0,
             onOK: i,
             onCancel: i,
             closeModal: i,
-            children: (0, a.jsx)("div", {
+            children: (0, n.jsx)("div", {
               className: f().PublishErrorDialog,
               children: (0, D.oW)(
                 "#PricingDashboard_SavePrices_FailedToLoad",
-                (0, a.jsx)("div", {}),
-                (0, a.jsx)("div", {}),
+                (0, n.jsx)("div", {}),
+                (0, n.jsx)("div", {}),
               ),
             }),
           });
         let N = !1,
           I = !1,
-          O = !1,
+          T = !1,
           k = new Set();
         for (const e of g) {
-          const { nMinPriceInCents: i, nMaxPriceInCents: r } = (0, t.tn)(
+          const { nMinPriceInCents: i, nMaxPriceInCents: r } = (0, l.tn)(
             e.packageID,
             e.strPriceKey,
           );
           (N = N || e.nPriceInCents < i),
             (I = I || (!!r && e.nPriceInCents > r)),
-            (O = O || e.nPriceInCents > e.nOldPriceInCents),
+            (T = T || e.nPriceInCents > e.nOldPriceInCents),
             k.add(e.packageID);
         }
         let W,
-          M = (0, t.ww)(k);
-        if (M.length > 0) {
-          let e = M.map((e) => (0, l.ww)(e));
+          E = (0, l.ww)(k);
+        if (E.length > 0) {
+          let e = E.map((e) => (0, t.ww)(e));
           W = (0, D.we)("#PricingDashboad_RequiredPrices", e.join(", "));
         }
-        const E = N || I,
-          R = E || void 0 === v || 0 != M.length,
+        const M = N || I,
+          R = M || void 0 === v || 0 != E.length,
           F = (e) => {
             r
               ? (window.location.href = r)
@@ -790,36 +790,36 @@
             void 0 !== v
               ? (e.closeModal(),
                 (0, h.pg)(
-                  (0, a.jsx)(A, { bAutoPublish: v, fnOnSuccess: F }),
+                  (0, n.jsx)(A, { bAutoPublish: v, fnOnSuccess: F }),
                   window,
                 ))
               : console.error(
                   "Pricing:SaveChangesDialog auto publish undefined",
                 );
           };
-        let L = (0, a.jsx)(b.uU, {
+        let L = (0, n.jsx)(b.uU, {
           href: "https://partner.steamgames.com/doc/store/pricing",
         });
-        return (0, a.jsx)(u.eV, {
+        return (0, n.jsx)(P.eV, {
           title: C,
           onOK: K,
           onCancel: e.closeModal,
           bDestructiveWarning: m,
           closeModal: i,
-          children: (0, a.jsxs)(P.nB, {
+          children: (0, n.jsxs)(u.nB, {
             className: f().SaveDialogBody,
             children: [
-              (0, a.jsxs)(P.a3, {
+              (0, n.jsxs)(u.a3, {
                 className: f().SaveDialogBodyText,
                 children: [
                   m &&
-                    (0, a.jsx)("div", {
+                    (0, n.jsx)("div", {
                       className: f().NavigationWarning,
                       children: (0, D.we)("#PackageGrid_NavigationWarning"),
                     }),
                   S,
-                  E &&
-                    (0, a.jsxs)("div", {
+                  M &&
+                    (0, n.jsxs)("div", {
                       className: f().PricePreviewWarning,
                       children: [
                         " ",
@@ -828,22 +828,22 @@
                       ],
                     }),
                   W &&
-                    (0, a.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                       className: f().PricePreviewWarning,
                       children: [" ", W, " "],
                     }),
-                  (0, a.jsx)(j.t, { rgLocalPriceOverrides: g }),
-                  (0, a.jsx)(y, { priceIncrease: O, nextDiscount: p.days }),
-                  (0, a.jsx)(B, {
+                  (0, n.jsx)(j.t, { rgLocalPriceOverrides: g }),
+                  (0, n.jsx)(y, { priceIncrease: T, nextDiscount: p.days }),
+                  (0, n.jsx)(B, {
                     value: v,
                     onChange: x,
                     nextDiscount: p.days,
                   }),
                 ],
               }),
-              (0, a.jsx)(P.wi, {
+              (0, n.jsx)(u.wi, {
                 children: m
-                  ? (0, a.jsx)(P.VQ, {
+                  ? (0, n.jsx)(u.VQ, {
                       strOKText: (0, D.we)("#Button_Save"),
                       onOK: K,
                       bOKDisabled: R,
@@ -855,7 +855,7 @@
                       },
                       onCancel: e.closeModal,
                     })
-                  : (0, a.jsx)(P.CB, {
+                  : (0, n.jsx)(u.CB, {
                       strOKText: (0, D.we)("#Button_Save"),
                       onOK: K,
                       bOKDisabled: R,
@@ -868,32 +868,32 @@
       }
       function y(e) {
         let i,
-          { priceIncrease: r, nextDiscount: n } = e;
+          { priceIncrease: r, nextDiscount: a } = e;
         return r
           ? ((i =
-              n < S
+              a < S
                 ? (0, D.we)(
                     "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
                     S,
                   )
-                : n < N
+                : a < N
                   ? (0, D.we)(
                       "#PricingDashboard_SavePrice_FutureDiscountSoon",
-                      n,
+                      a,
                       S,
                     )
                   : (0, D.we)(
                       "#PricingDashboard_SavePrice_CooldownWarning",
                       S,
                     )),
-            (0, a.jsxs)("div", {
+            (0, n.jsxs)("div", {
               className: f().PriceChangeSaveWarning,
               children: [
-                (0, a.jsx)("div", {
+                (0, n.jsx)("div", {
                   className: f().PriceChangeSaveWarningArrow,
-                  children: (0, a.jsx)(g.i3G, { angle: 0 }),
+                  children: (0, n.jsx)(g.i3G, { angle: 0 }),
                 }),
-                (0, a.jsxs)("div", {
+                (0, n.jsxs)("div", {
                   className: f().HigherPriceWarning,
                   children: [" ", i, " "],
                 }),
@@ -903,20 +903,20 @@
       }
       function B(e) {
         let { value: i, onChange: r } = e,
-          n = e.nextDiscount <= S;
-        return (0, a.jsxs)("div", {
+          a = e.nextDiscount <= S;
+        return (0, n.jsxs)("div", {
           className: f().AutoPublishCheckBox,
           children: [
-            (0, a.jsx)(P.Od, {
+            (0, n.jsx)(u.Od, {
               className: f().RadioButtons,
               checked: !1 === i,
               onChange: () => r(!1),
               label: (0, D.we)("#PricingDashboard_AutoPublish_Disabled"),
             }),
-            (0, a.jsx)(P.Od, {
+            (0, n.jsx)(u.Od, {
               className: f().RadioButtons,
               checked: !0 === i,
-              disabled: n,
+              disabled: a,
               onChange: () => r(!0),
               label: (0, D.we)("#PricingDashboard_AutoPublish_Enabled"),
             }),
@@ -925,10 +925,10 @@
       }
       function A(e) {
         const { closeModal: i, bAutoPublish: r, fnOnSuccess: s } = e,
-          o = (0, t.Ci)(),
-          l = (0, t.Bt)(),
+          o = (0, l.Ci)(),
+          t = (0, l.Bt)(),
           d = (0, v.m)("SaveProgressDialog"),
-          [P, h] = c.useState(0),
+          [u, h] = c.useState(0),
           [g, b] = c.useState(null),
           x = !r;
         return (
@@ -938,17 +938,17 @@
               for (let i = 0; i < e.length; i++) {
                 h(i);
                 const r = e[i],
-                  a = await l(r, x, d);
+                  n = await t(r, x, d);
                 if (d.token.reason) return;
-                if (a.success != n.R)
+                if (n.success != a.R)
                   return void b(
-                    a.msg ?? (0, D.we)("#PricingDashboard_SavePricesError"),
+                    n.msg ?? (0, D.we)("#PricingDashboard_SavePricesError"),
                   );
               }
               h(e.length), s(), i();
             })();
           }, []),
-          (0, a.jsx)(u.o0, {
+          (0, n.jsx)(P.o0, {
             strTitle: (0, D.we)("#PackageGrid_SaveInProgress"),
             bAlertDialog: !!g,
             strOKButtonText: g
@@ -962,9 +962,9 @@
             bDestructiveWarning: !0,
             children:
               g ??
-              (0, a.jsx)(_.t, {
+              (0, n.jsx)(_.t, {
                 position: "center",
-                string: (0, D.we)("#PricingDashboard_Progress", P),
+                string: (0, D.we)("#PricingDashboard_Progress", u),
               }),
           })
         );
@@ -973,19 +973,36 @@
     83800: (e, i, r) => {
       "use strict";
       r.d(i, { J: () => o });
-      var a = r(7850),
-        n = r(90626);
-      const s = n.lazy(() =>
-          Promise.all([r.e(4781), r.e(1194)]).then(r.bind(r, 58813)),
+      var n = r(7850),
+        a = r(90626);
+      const s = a.lazy(() =>
+          Promise.all([r.e(4781), r.e(1194)]).then(r.bind(r, 81194)),
         ),
         o = s
           ? function (e) {
-              return (0, a.jsx)(n.Suspense, {
+              return (0, n.jsx)(a.Suspense, {
                 fallback: null,
-                children: (0, a.jsx)(s, { ...e }),
+                children: (0, n.jsx)(s, { ...e }),
               });
             }
           : (e) => null;
+    },
+    4434: (e, i, r) => {
+      "use strict";
+      r.d(i, { m: () => o });
+      var n = r(41735),
+        a = r.n(n),
+        s = r(90626);
+      function o(e) {
+        const i = s.useRef(a().CancelToken.source());
+        return (
+          s.useEffect(() => {
+            const r = i.current;
+            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          i.current
+        );
+      }
     },
   },
 ]);

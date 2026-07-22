@@ -183,37 +183,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
-          _ = _ ?? _?.focusable ?? !!_.href,
-          _ = (0, _._)(
-            {
-              ..._,
-              underline: _,
-              className: _.TextLink,
-            },
-            _,
-          );
-        return _._.IN_GAMEPADUI && (_ || _)
-          ? (0, _.jsx)(_._, {
-              ..._,
-              ...(_ || {}),
-              focusable: _,
-            })
-          : (0, _.jsx)("a", {
-              ..._,
-            });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "underline",
-          className: (_) => _[`Underline-${_}`],
-        },
-      ];
       function _(_) {
         const _ = `${_._.PARTNER_BASE_URL}doc/finance/taxfaq`;
         return (0, _.jsxs)(_.Fragment, {
@@ -261,7 +231,7 @@
               children: (0, _.jsx)(_._, {
                 children: _._.LocalizeReact(
                   "#SinglePricingPackage_Desc_2",
-                  (0, _.jsx)(_, {
+                  (0, _.jsx)(_._, {
                     href: _,
                     children: _._.LocalizeReact(
                       "#SinglePricingPackage_Desc_2_Link",
@@ -396,6 +366,7 @@
           : "--";
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         depth: 0,
@@ -472,7 +443,7 @@
                     "#SinglePackagePricing_Right_Help_Desc",
                   ),
                 }),
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   href: `${_._.PARTNER_BASE_URL}doc/store/pricing`,
                   children: _._.Localize("#SinglePackagePricing_Right_Link"),
                 }),
@@ -498,7 +469,7 @@
                     (0, _.jsx)(_._, {
                       children: _._.LocalizeReact(
                         "#SinglePackagePricing_Right_FAQ_switching_answer",
-                        (0, _.jsx)(_, {
+                        (0, _.jsx)(_._, {
                           href: `${_._.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
                           children: _._.Localize(
                             "#SinglePackagePricing_Right_FAQ_switching_answer_link",
@@ -951,6 +922,47 @@
           })
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
+          _ = _ ?? _?.focusable ?? !!_.href,
+          _ = (0, _._)(
+            {
+              ..._,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          );
+        return _ && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ..._,
+              ...(_ || {}),
+              focusable: _,
+            })
+          : (0, _.jsx)("a", {
+              ..._,
+            });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
     },
   },
 ]);

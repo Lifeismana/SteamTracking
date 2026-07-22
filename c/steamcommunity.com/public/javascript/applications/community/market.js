@@ -2126,6 +2126,7 @@
       function _(_) {
         var _;
         const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(
             {
               ..._,
@@ -2142,7 +2143,7 @@
             ref: _,
             ..._,
           });
-        return _._.IN_GAMEPADUI
+        return _
           ? (0, _.jsx)(_._, {
               "flow-children": "grid",
               ...(_ || {}),

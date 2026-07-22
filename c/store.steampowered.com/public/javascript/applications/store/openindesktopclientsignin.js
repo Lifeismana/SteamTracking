@@ -145,6 +145,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = _ ?? _?.focusable ?? !!_.href,
           _ = (0, _._)(
             {
@@ -154,7 +155,7 @@
             },
             _,
           );
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ..._,
               ...(_ || {}),
@@ -173,6 +174,7 @@
       ];
       function _(_) {
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = _ ?? _?.focusable ?? !!_.onClick,
           _ = (0, _.jsx)("span", {
             role: "button",
@@ -185,7 +187,7 @@
               _,
             ),
           });
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ...(_ || {}),
               focusable: _,

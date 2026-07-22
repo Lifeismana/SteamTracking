@@ -299,7 +299,7 @@
     "setcooldown_clearcooldown": "Remover suspensão",
     "setcooldown_cooldownsummary": "(%1$s dias)",
     "setcooldown_dialogtitle": "Definir suspensão da opção de denúncia",
-    "setcooldown_dialogdescription": "Esta opção bloqueia um utilizador de denunciar conteúdo ou contestar decisões de moderadores caso tenha abusado do sistema.",
+    "setcooldown_dialogdescription": "Esta opção impede um utilizador de denunciar conteúdo ou contestar decisões de moderadores caso tenha abusado do sistema.",
     "setcooldown_setbutton": "Definir suspensão",
     "setcooldown_clearopenreports": "Limpar denúncias não resolvidas deste utilizador",
     "setcooldown_statssummary": "%1$s/%2$s denúncias absolvidas, %3$s/%4$s na semana passada.",

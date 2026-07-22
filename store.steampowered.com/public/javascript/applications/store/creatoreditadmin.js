@@ -100,7 +100,7 @@
         r.p +
         "images/applications/store/steam_spinner.png?v=valveisgoodatcaching";
       var a = r(42248),
-        d = r(8527);
+        d = r(66418);
       const u = o.memo(function (e) {
         const {
           className: t,

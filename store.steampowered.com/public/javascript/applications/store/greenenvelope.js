@@ -231,6 +231,37 @@
     87910: (e) => {
       e.exports = { WebPinnedNotification: "_34nLZDNirxRHssbsjB_dJf" };
     },
+    11333: (e, t, i) => {
+      "use strict";
+      i.d(t, { L: () => c, c: () => r });
+      var n = i(42457),
+        o = i(49845),
+        a = i(58632),
+        s = i.n(a);
+      function r(e, t) {
+        return new (s())(
+          async (t) => {
+            const i = [...t],
+              o = await n.xtC.GetPlayerLinkDetails(e, { steamids: i }),
+              a = new Map();
+            return (
+              o
+                .Body()
+                .accounts()
+                .forEach((e) => {
+                  const t = e.toObject();
+                  a.set(t.public_data.steamid, t);
+                }),
+              i.map((e) => a.get(e) ?? null)
+            );
+          },
+          { maxBatchSize: 100, cache: !1, ...t },
+        );
+      }
+      function c(e) {
+        return (0, o.V)("PlayerLinkDetails", () => r(e));
+      }
+    },
     38924: (e, t, i) => {
       "use strict";
       i.d(t, {
@@ -255,6 +286,55 @@
         o = 2,
         a = 4,
         s = 1073741824;
+    },
+    49845: (e, t, i) => {
+      "use strict";
+      function n(e) {
+        return "[object Object]" === Object.prototype.toString.call(e);
+      }
+      function o(...e) {
+        return JSON.stringify(e, (e, t) => {
+          if (
+            (function (e) {
+              if (!n(e)) return !1;
+              const t = e.constructor;
+              if (void 0 === t) return !0;
+              const i = t.prototype;
+              return (
+                !!n(i) &&
+                !!Object.prototype.hasOwnProperty.call(i, "isPrototypeOf")
+              );
+            })(t)
+          ) {
+            const e = {};
+            return (
+              Object.keys(t)
+                .sort()
+                .forEach((i) => {
+                  e[i] = t[i];
+                }),
+              e
+            );
+          }
+          return t;
+        });
+      }
+      i.d(t, { V: () => r });
+      var a = i(90626);
+      i(7850);
+      const s = (0, a.createContext)({ instances: {}, factories: {} });
+      function r(e, t) {
+        const i = (0, a.useContext)(s),
+          n = "string" == typeof e ? e : o(...e);
+        let r = i;
+        for (; r; ) {
+          if (n in r.instances) return r.instances[n];
+          if (n in r.factories) break;
+          r = r.parent;
+        }
+        const c = (r?.factories[n] ?? t)();
+        return ((r ?? i).instances[n] = c), c;
+      }
     },
     17690: (e, t, i) => {
       "use strict";
@@ -676,9 +756,9 @@
         );
       }
     },
-    14336: (e, t, i) => {
+    41471: (e, t, i) => {
       "use strict";
-      i.d(t, { mK: () => N, DW: () => h, js: () => f, tb: () => y });
+      i.d(t, { DW: () => u, js: () => _, mK: () => h, tb: () => f });
       var n = i(90626),
         o = i(80902),
         a = i(54806),
@@ -687,44 +767,22 @@
         c = i(44654),
         l = i(10622),
         m = i(17720),
-        d = i(42457),
-        _ = i(58632),
-        u = i.n(_);
-      function p(e, t) {
-        return new (u())(
-          async (t) => {
-            const i = [...t],
-              n = await d.xtC.GetPlayerLinkDetails(e, { steamids: i }),
-              o = new Map();
-            return (
-              n
-                .Body()
-                .accounts()
-                .forEach((e) => {
-                  const t = e.toObject();
-                  o.set(t.public_data.steamid, t);
-                }),
-              i.map((e) => o.get(e) ?? null)
-            );
-          },
-          { maxBatchSize: 100, cache: !1, ...t },
-        );
-      }
-      function f(e) {
+        d = i(11333);
+      function _(e) {
         const t = (0, r.KV)(),
-          i = n.useContext(g);
-        return (0, o.I)(N(i, t, e));
+          i = n.useContext(p);
+        return (0, o.I)(h(i, t, e));
       }
-      function h(e) {
+      function u(e) {
         const t = (0, r.KV)(),
-          i = n.useContext(g);
-        return (0, a.E)({ queries: e.map((e) => N(i, t, e)) });
+          i = n.useContext(p);
+        return (0, a.E)({ queries: e.map((e) => h(i, t, e)) });
       }
-      const g = n.createContext({
+      const p = n.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const i = await (function (e) {
-            return (S ??= p(e));
+            return (g ??= (0, d.c)(e));
           })(t).load(m.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
             let i = new l.Z(e);
@@ -749,10 +807,10 @@
           })(m.b.InitFromAccountID(e), i);
         },
       });
-      function y() {
-        return n.useContext(g);
+      function f() {
+        return n.useContext(p);
       }
-      function N(e, t, i) {
+      function h(e, t, i) {
         const n = "string" == typeof i ? new m.b(i).GetAccountID() : i;
         return {
           queryKey: ["PlayerSummary", n],
@@ -760,7 +818,7 @@
           enabled: !!n,
         };
       }
-      let S;
+      let g;
     },
     98425: (e, t, i) => {
       "use strict";
@@ -799,12 +857,12 @@
       function A(e) {
         return r.useMemo(() => ((0, _.V4)(e.type) ? (0, _.bP)(e) : null), [e]);
       }
-      var T = i(87910),
-        j = i.n(T),
+      var j = i(87910),
+        T = i.n(j),
         w = i(32630),
         b = i(60014),
-        L = i(14336),
-        P = i(76217),
+        P = i(41471),
+        L = i(76217),
         U = i(91675),
         C = i(14771),
         R = i(93761),
@@ -818,7 +876,7 @@
             ? (l = H().PinnedTemplateDesktop)
             : s == o.yrU && (l = H().PinnedTemplateWeb),
           (l = (0, f.A)(l, r)),
-          (0, n.jsx)(P.Z, {
+          (0, n.jsx)(L.Z, {
             className: l,
             onActivate: c,
             children: (0, n.jsx)("div", {
@@ -921,7 +979,7 @@
             ],
           });
         }
-        return (0, n.jsxs)(P.Z, {
+        return (0, n.jsxs)(L.Z, {
           onActivate: p,
           className: H().StandardTemplateContainer,
           onOptionsButton: e.onOptionsButton,
@@ -1060,7 +1118,7 @@
               [e, t],
             );
           })(t, i);
-        return (0, n.jsxs)(P.Z, {
+        return (0, n.jsxs)(L.Z, {
           className: (0, f.A)(J().ShortTemplate, !d && J().TwoLine, m),
           onActivate: u,
           onMouseDown: (e) => {
@@ -1313,7 +1371,7 @@
         if (i && !g) {
           const e = s.state == o._UC && c != o.PN1,
             t = u ? te().ShortLogoDimensions : te().StandardLogoDimensions;
-          S = (0, n.jsxs)(P.Z, {
+          S = (0, n.jsxs)(L.Z, {
             style: { position: "relative" },
             children: [
               e && (0, n.jsx)(p.GSe, { className: te().FriendIndicator }),
@@ -1374,7 +1432,7 @@
               ? "#" + t.item_data.background_color
               : null;
           const o = f ? te().ShortLogoDimensions : te().StandardLogoDimensions;
-          g = (0, n.jsx)(P.Z, {
+          g = (0, n.jsx)(L.Z, {
             style: { position: "relative" },
             children: (0, n.jsx)("img", {
               className: o,
@@ -1519,7 +1577,7 @@
           } = e,
           u = X(c),
           p = u ? te().ShortLogoDimensions : te().StandardLogoDimensions,
-          f = (0, n.jsx)(P.Z, {
+          f = (0, n.jsx)(L.Z, {
             style: { position: "relative" },
             children: (0, n.jsx)("img", {
               className: p,
@@ -1577,27 +1635,27 @@
           } = e,
           x = S;
         const I = X(m),
-          [A, T] = r.useState(!1),
-          j = () => T(!0),
+          [A, j] = r.useState(!1),
+          T = () => j(!0),
           [w, b] = (0, ie.TB)(
             l.bclan_account ? l.owner_steam_id?.GetAccountID() : void 0,
           ),
-          L = (0, _.hr)(l) ? a : null,
-          P = (0, _.T4)(l) ? c : null;
+          P = (0, _.hr)(l) ? a : null,
+          L = (0, _.T4)(l) ? c : null;
         l.comment_type == K.Yd
           ? (x =
               l.owner_steam_id?.ConvertTo64BitString() == t
-                ? m == o.oYe && L
-                  ? (0, h.we)("#SteamNotifications_Comment_Your_Profile_By", L)
+                ? m == o.oYe && P
+                  ? (0, h.we)("#SteamNotifications_Comment_Your_Profile_By", P)
                   : (0, h.we)("#SteamNotifications_Comment_Your_Profile")
-                : P
-                  ? m == o.oYe && L
+                : L
+                  ? m == o.oYe && P
                     ? (0, h.we)(
                         "#SteamNotifications_Comment_Player_Profile_By",
-                        L,
                         P,
+                        L,
                       )
-                    : (0, h.we)("#SteamNotifications_Comment_Player_Profile", P)
+                    : (0, h.we)("#SteamNotifications_Comment_Player_Profile", L)
                   : (0, h.we)("#SteamNotifications_Comment_Profile"))
           : l.comment_type == K.Dq && l.json_data?.file_type == o.pmA
             ? (x =
@@ -1645,7 +1703,7 @@
               style: { position: "relative" },
               children: [
                 t && (0, n.jsx)(p.GSe, { className: te().FriendIndicator }),
-                (0, n.jsx)("img", { className: e, src: s, onError: j }),
+                (0, n.jsx)("img", { className: e, src: s, onError: T }),
               ],
             });
           } else
@@ -1653,7 +1711,7 @@
               (H = (0, n.jsx)("img", {
                 className: e,
                 src: b.avatar_medium_url,
-                onError: j,
+                onError: T,
               }));
         }
         return I
@@ -1769,13 +1827,13 @@
         const [o, a] = r.useState(!1),
           s = () => a(!0);
         if (!e || o)
-          return (0, n.jsx)(P.Z, {
+          return (0, n.jsx)(L.Z, {
             style: { position: "relative" },
             children: t,
           });
         const c = (0, oe.b0)(e, "community_icon");
         return i
-          ? (0, n.jsx)(P.Z, {
+          ? (0, n.jsx)(L.Z, {
               style: { position: "relative" },
               children: (0, n.jsx)("img", {
                 src: c,
@@ -1783,7 +1841,7 @@
                 onError: s,
               }),
             })
-          : (0, n.jsxs)(P.Z, {
+          : (0, n.jsxs)(L.Z, {
               style: { position: "relative" },
               children: [
                 (0, n.jsx)("img", {
@@ -1847,10 +1905,10 @@
             let t = null;
             return (
               (0, _.sR)(e)
-                ? (t = je)
+                ? (t = Te)
                 : (0, _.IC)(e)
                   ? (t = Ae)
-                  : Le[e] && (t = Le[e]),
+                  : Pe[e] && (t = Pe[e]),
               t
             );
           })(t.type);
@@ -1926,7 +1984,7 @@
           }),
         });
       }
-      function Te(e) {
+      function je(e) {
         const {
             steamid: t,
             url: i,
@@ -1938,7 +1996,7 @@
             uimode: l,
             onHide: m,
           } = e,
-          { data: d } = (0, L.js)(t);
+          { data: d } = (0, P.js)(t);
         if (!a) return null;
         const u = !d,
           f = (0, h.we)(o, d?.m_strPlayerName ?? ""),
@@ -1962,7 +2020,7 @@
           }),
         });
       }
-      function je(e) {
+      function Te(e) {
         const t =
           ((i = e.rollup.type),
           (o = e.rollup.item.body_data),
@@ -1990,7 +2048,7 @@
         if (!t) return null;
         const { strTitleLoc: a, strBodyLoc: s, strUrl: c, steamid: l } = t;
         return l && a && s
-          ? (0, n.jsx)(Te, {
+          ? (0, n.jsx)(je, {
               steamid: l,
               url: c,
               strTitleLoc: a,
@@ -2032,7 +2090,7 @@
             ? null
             : (0, n.jsx)("a", {
                 href: t,
-                className: j().WebPinnedNotification,
+                className: T().WebPinnedNotification,
                 children: (0, n.jsx)(D, {
                   icon: (0, n.jsx)(a, {}),
                   count: i,
@@ -2044,7 +2102,7 @@
               })
           : null;
       }
-      const Le = {
+      const Pe = {
         [v.Vv.v_]: function (e) {
           const {
               rollup: t,
@@ -2057,9 +2115,9 @@
             l = (0, c.LH)(),
             m = g.TS.COMMUNITY_BASE_URL + t.url,
             d = (0, _.iO)(r) ? r?.account_steam_id?.GetAccountID() : null,
-            { data: u } = (0, L.js)(d),
+            { data: u } = (0, P.js)(d),
             f = (0, _.OT)(r) ? r?.owner_steam_id?.GetAccountID() : null,
-            { data: h } = (0, L.js)(f),
+            { data: h } = (0, P.js)(f),
             y = r.json_data?.app_id ? { appid: r.json_data?.app_id } : void 0,
             { data: N } = (0, ne.J$)(y),
             [S, v] = xe(),
@@ -2151,7 +2209,7 @@
             r = (0, c.LH)(),
             l = `${g.TS.COMMUNITY_BASE_URL}profiles/${r}/friends/pending`,
             m = A(t),
-            { data: d } = (0, L.js)(m.requestorID);
+            { data: d } = (0, P.js)(m.requestorID);
           return (0, n.jsx)("a", {
             href: l,
             onMouseDown: (e) => i(() => {}, t.item, e),
@@ -2214,7 +2272,7 @@
             l = `${g.TS.COMMUNITY_BASE_URL}profiles/${r}/inventory/#pending_gifts`,
             m = A(t),
             d = x.b.InitFromAccountID(m),
-            { data: u } = (0, L.js)(d.GetAccountID());
+            { data: u } = (0, P.js)(d.GetAccountID());
           return (0, n.jsx)("a", {
             href: l,
             onMouseDown: (e) => i(() => {}, t.item, e),
@@ -2244,7 +2302,7 @@
             l = A(t),
             m = `${g.TS.COMMUNITY_BASE_URL}profiles/${r}/tradeoffers`,
             d = x.b.InitFromAccountID(l),
-            { data: u } = (0, L.js)(d.GetAccountID());
+            { data: u } = (0, P.js)(d.GetAccountID());
           return (0, n.jsx)("a", {
             href: m,
             onMouseDown: (e) => i(() => {}, t.item, e),
@@ -2298,7 +2356,7 @@
               onHide: s,
             } = e,
             r = A(t),
-            { data: c } = (0, L.js)(r.responder_steamid),
+            { data: c } = (0, P.js)(r.responder_steamid),
             l =
               r.package_id > 0
                 ? { packageid: r.package_id }
@@ -2335,7 +2393,7 @@
         },
         [v.Vv.mr]: we,
       };
-      var Pe = i(60383);
+      var Le = i(60383);
       const Ue = new _.cE(),
         Ce = (0, y.Nr)(function (e) {
           const { bResponsiveHeader: t, notifications: i } = e;
@@ -2413,7 +2471,7 @@
           },
           [i],
         );
-        return (0, n.jsx)(Pe.J, {
+        return (0, n.jsx)(Le.J, {
           trigger: "repeated",
           onVisibilityChange: c,
           children: (0, n.jsx)("button", {

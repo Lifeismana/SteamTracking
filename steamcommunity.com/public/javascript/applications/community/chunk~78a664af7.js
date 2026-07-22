@@ -190,7 +190,7 @@
           src: c,
         });
       }
-      var x = r(8527),
+      var x = r(66418),
         v = r(64238),
         y = r.n(v),
         B = r(16339),
@@ -723,8 +723,8 @@
         });
       }
       var V = r(64115),
-        G = r(98580),
-        K = r.n(G),
+        K = r(98580),
+        G = r.n(K),
         H = r(59884),
         J = r.n(H),
         Z = r(55388);
@@ -1446,16 +1446,17 @@
           [x, v] = (0, j.useState)(null),
           [y, B] = (0, j.useState)(!1),
           [A, S] = (0, j.useState)(!1),
-          [w, T] = (0, j.useState)(""),
-          M = c || d || h || b || x || y || A,
-          k =
-            ((C = e.authorSteamID),
+          [w, T] = (0, j.useState)(E.HH),
+          [M, k] = (0, j.useState)(""),
+          C = c || d || h || b || x || y || A,
+          z =
+            ((L = e.authorSteamID),
             (0, ne.I)({
-              queryKey: ["get_primary_language_for_user", C],
+              queryKey: ["get_primary_language_for_user", L],
               queryFn: async () => {
-                if ("0" === C || !C) throw new Error("Invalid steamid");
+                if ("0" === L || !L) throw new Error("Invalid steamid");
                 const e = await fetch(
-                    `${m.TS.COMMUNITY_BASE_URL}profiles/${C}/ajaxlanguagepreferences`,
+                    `${m.TS.COMMUNITY_BASE_URL}profiles/${L}/ajaxlanguagepreferences`,
                   ),
                   t = await e.json();
                 if (t.success === re.R) return t.preferences;
@@ -1464,17 +1465,17 @@
                 );
               },
             }));
-        var C;
-        let z = f.Bhc;
-        if (k.isSuccess) {
-          const e = k.data;
+        var L;
+        let R = f.Bhc;
+        if (z.isSuccess) {
+          const e = z.data;
           void 0 !== e.pref_primary_language && -1 !== e.pref_primary_language
-            ? (z = e.pref_primary_language)
+            ? (R = e.pref_primary_language)
             : void 0 !== e.last_logon_langauge &&
               -1 !== e.last_logon_langauge &&
-              (z = e.last_logon_langauge);
+              (R = e.last_logon_langauge);
         }
-        const L = (function (e, t) {
+        const N = (function (e, t) {
           const r = (0, be.KV)();
           return (0, ne.I)({
             queryKey: ["get_quick_text", e, t],
@@ -1492,10 +1493,10 @@
             },
             enabled: void 0 !== e,
           });
-        })((0, i.AH)(t), z);
+        })((0, i.AH)(t), R);
         (0, j.useEffect)(() => {
           var e, t, r, n, s, i, a;
-          T(
+          k(
             null !==
               (a =
                 null !==
@@ -1504,7 +1505,7 @@
                       (r =
                         null ===
                           (t =
-                            null === (e = L.data) || void 0 === e
+                            null === (e = N.data) || void 0 === e
                               ? void 0
                               : e.quicktext) || void 0 === t
                           ? void 0
@@ -1514,7 +1515,7 @@
                   ? n
                   : null ===
                         (i =
-                          null === (s = L.data) || void 0 === s
+                          null === (s = N.data) || void 0 === s
                             ? void 0
                             : s.english_reference) || void 0 === i
                     ? void 0
@@ -1522,10 +1523,10 @@
               ? a
               : "",
           );
-        }, [L.data, k.data]);
-        const R = !1,
-          N = !1,
-          I = !1;
+        }, [N.data, z.data]);
+        const I = !1,
+          U = !1,
+          F = !1;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             "reason" === a &&
@@ -1539,11 +1540,11 @@
               (0, n.jsxs)(D.Z, {
                 children: [
                   (0, n.jsxs)(D.Z, {
-                    className: K().SanctionForm,
+                    className: G().SanctionForm,
                     children: [
                       e.sanctionMutation.isError &&
                         (0, n.jsxs)("div", {
-                          className: (0, ee.A)(K().OneColumn, K().ErrorMessage),
+                          className: (0, ee.A)(G().OneColumn, G().ErrorMessage),
                           children: [
                             (0, n.jsx)(fe.Q9b, {}),
                             " Error: ",
@@ -1556,7 +1557,7 @@
                       }),
                       (0, n.jsx)("button", {
                         id: "reason",
-                        className: K().ClickableText,
+                        className: G().ClickableText,
                         onClick: () => o("reason"),
                         children:
                           null === t
@@ -1566,7 +1567,7 @@
                             : (0, i.Jt)(t),
                       }),
                       (0, n.jsxs)("label", {
-                        className: K().OneColumn,
+                        className: G().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
@@ -1577,14 +1578,14 @@
                         ],
                       }),
                       (0, n.jsxs)("label", {
-                        className: K().OneColumn,
+                        className: G().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
                             checked: d,
                             onChange: (e) => p(e.target.checked),
                           }),
-                          "Issue Warning",
+                          " Issue Warning",
                         ],
                       }),
                       e.clanSteamID &&
@@ -1642,7 +1643,7 @@
                                 }),
                               ],
                             }),
-                            R,
+                            I,
                           ],
                         }),
                       (0, n.jsx)("label", {
@@ -1697,7 +1698,7 @@
                           }),
                         ],
                       }),
-                      N,
+                      U,
                       (0, n.jsx)("label", {
                         htmlFor: "deletecomments",
                         children: "Delete comments since:",
@@ -1740,7 +1741,7 @@
                         ],
                       }),
                       (0, n.jsxs)("span", {
-                        className: K().OneColumn,
+                        className: G().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
@@ -1750,9 +1751,9 @@
                           " Permanent trade ban",
                         ],
                       }),
-                      I,
+                      F,
                       (0, n.jsxs)("span", {
-                        className: K().OneColumn,
+                        className: G().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
@@ -1762,19 +1763,42 @@
                           " Mark as suspicious",
                         ],
                       }),
+                      (0, n.jsx)("label", {
+                        htmlFor: "escalateto",
+                        children: "Escalate to",
+                      }),
+                      (0, n.jsxs)("select", {
+                        id: "escalateto",
+                        onChange: (e) => T(parseInt(e.target.value)),
+                        value: w,
+                        children: [
+                          (0, n.jsx)("option", {
+                            value: E.HH,
+                            children: "Do not escalate",
+                          }),
+                          (0, n.jsx)("option", {
+                            value: E.lp,
+                            children: "Supervisor",
+                          }),
+                          (0, n.jsx)("option", {
+                            value: E.PV,
+                            children: "Valve",
+                          }),
+                        ],
+                      }),
                       (0, n.jsx)("textarea", {
                         className: (0, ee.A)(
-                          K().OneColumn,
-                          K().MessageTextArea,
+                          G().OneColumn,
+                          G().MessageTextArea,
                         ),
                         placeholder: "Message to send",
-                        value: w,
-                        onChange: (e) => T(e.target.value),
+                        value: M,
+                        onChange: (e) => k(e.target.value),
                       }),
                     ],
                   }),
                   (0, n.jsxs)(D.Z, {
-                    className: K().BottomButtons,
+                    className: G().BottomButtons,
                     children: [
                       e.sanctionMutation.isPending &&
                         (0, n.jsx)(u.t, { size: "small" }),
@@ -1799,14 +1823,24 @@
                                   x && r.push({ sanction: V.bX, days: x }),
                                   y && r.push({ sanction: V.Fh, days: -1 }),
                                   A && r.push({ sanction: V.X5 }),
+                                  w === E.lp
+                                    ? r.push({
+                                        sanction: V.nw,
+                                        escalate_to: E.lp,
+                                      })
+                                    : w === E.PV &&
+                                      r.push({
+                                        sanction: V.nw,
+                                        escalate_to: E.PV,
+                                      }),
                                   await e.sanctionMutation.mutateAsync({
                                     sanctions: r,
-                                    message: w.trim(),
+                                    message: M.trim(),
                                     reason: t,
                                   }),
                                   e.onSanction();
                               },
-                              disabled: null === t || !M,
+                              disabled: null === t || !C,
                               children: "Sanction",
                             }),
                           ],
@@ -2229,7 +2263,7 @@
     99171: (e, t, r) => {
       "use strict";
       r.d(t, { t: () => i });
-      var n = r(8527);
+      var n = r(66418);
       const s = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function i(e, t) {
         let r = "0000000000000000000000000000000000000000";
@@ -2358,21 +2392,22 @@
         s = r(50122),
         i = r(20187),
         a = r(11526),
-        o = r(8527),
-        c = r(45699),
-        l = r(39479);
+        o = r(45699),
+        c = r(39479),
+        l = r(78327);
       function u(e) {
         var t;
-        const { underline: r = "auto", focusable: i, navProps: l, ...u } = e,
-          p =
-            null !== (t = null != i ? i : null == l ? void 0 : l.focusable) &&
+        const { underline: r = "auto", focusable: i, navProps: c, ...u } = e,
+          p = (0, l.Qn)(),
+          m =
+            null !== (t = null != i ? i : null == c ? void 0 : c.focusable) &&
             void 0 !== t
               ? t
               : !!u.href,
-          m = (0, a.mz)({ ...u, underline: r, className: s.TextLink }, d);
-        return o.TS.IN_GAMEPADUI && (p || l)
-          ? (0, n.jsx)(c.Ii, { ...m, ...(l || {}), focusable: p })
-          : (0, n.jsx)("a", { ...m });
+          h = (0, a.mz)({ ...u, underline: r, className: s.TextLink }, d);
+        return p && (m || c)
+          ? (0, n.jsx)(o.Ii, { ...h, ...(c || {}), focusable: m })
+          : (0, n.jsx)("a", { ...h });
       }
       const d = [
         ...i.Ae,
@@ -2380,22 +2415,23 @@
       ];
       function p(e) {
         var t;
-        const { underline: r = "auto", focusable: i, navProps: c, ...u } = e,
-          p =
-            null !== (t = null != i ? i : null == c ? void 0 : c.focusable) &&
+        const { underline: r = "auto", focusable: i, navProps: o, ...u } = e,
+          p = (0, l.Qn)(),
+          m =
+            null !== (t = null != i ? i : null == o ? void 0 : o.focusable) &&
             void 0 !== t
               ? t
               : !!u.onClick,
-          m = (0, n.jsx)("span", {
+          h = (0, n.jsx)("span", {
             role: "button",
             ...(0, a.mz)(
               { ...u, underline: r, className: s.TextLinkButton },
               d,
             ),
           });
-        return o.TS.IN_GAMEPADUI && (p || c)
-          ? (0, n.jsx)(l.J, { ...(c || {}), focusable: p, children: m })
-          : m;
+        return p && (m || o)
+          ? (0, n.jsx)(c.J, { ...(o || {}), focusable: m, children: h })
+          : h;
       }
     },
     11333: (e, t, r) => {
@@ -2436,7 +2472,7 @@
       "use strict";
       r.d(t, { jn: () => l });
       var n = r(29233),
-        s = r(8527),
+        s = r(66418),
         i = r(23809),
         a = r(88942),
         o = r(11333);
@@ -3013,7 +3049,7 @@
         r.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var l = r(42248),
-        u = r(8527);
+        u = r(66418);
       const d = s.memo(function (e) {
         const {
           className: t,

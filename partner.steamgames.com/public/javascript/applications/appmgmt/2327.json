@@ -1,5 +1,8 @@
 {
     "language": "vietnamese",
+    "EventEditor_Loc_Title": "Quản lý bản địa hóa",
+    "EventEditor_Loc_Overview": "Xuất và nhập các file bản địa hóa để quản lý nội dung cần dịch cho toàn bộ sự kiện của bạn.",
+    "EventEditor_Loc_Overview_Page": "Xuất và nhập các file bản địa hóa để quản lý nội dung cần dịch cho toàn bộ trang của bạn.",
     "LoginRedirect_Dialog_Title": "Đăng nhập",
     "LoginRedirect_Dialog_Description": "Đăng nhập để thêm sản phẩm này vào danh sách ước, theo dõi, hoặc đánh dấu phớt lờ. Nhấp OK sẽ chuyển về trang đăng nhập.",
     "Wishlist_NotSignedIn": "Đăng nhập và mở trang này trong phần mềm Steam để thêm vào danh sách ước, theo dõi, hoặc mua hàng.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL được chấp nhận",
     "SteamURLInvalid": "Lỗi: URL không thuộc hệ thống của Steam (cửa hàng/cộng đồng)",
     "AnchorHashInputInvalid": "Đầu vào không hợp lệ",
+    "Sale_Section_Label_Color": "Màu nhãn",
+    "Sale_Section_Background_Top": "Dải màu cho hình nền (trên)",
+    "Sale_Section_Background_Bottom": "Dải màu cho hình nền (dưới)",
     "Reservation_JoinPool": "Tham gia danh sách",
     "Reserationn_NoListJoined": "Chọn một phiên bản bên dưới để đăng ký - khách hàng đủ điều kiện có thể đăng ký tối đa %1$s phiên bản.",
     "Reservation_InPool": "Bạn có trong danh sách phiên bản thiết bị đã chọn bên dưới",

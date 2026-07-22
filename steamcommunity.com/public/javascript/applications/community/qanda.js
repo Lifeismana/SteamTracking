@@ -99,7 +99,7 @@
     3049: (e, t, i) => {
       "use strict";
       i.d(t, { J: () => a });
-      var n = i(8527),
+      var n = i(66418),
         r = i(13843);
       function a() {
         return (0, r.A)().languages.map((e) => {

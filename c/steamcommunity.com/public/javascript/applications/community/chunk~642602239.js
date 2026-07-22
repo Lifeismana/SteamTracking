@@ -4356,10 +4356,6 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       const _ = JSON.parse(`{
 	"h": {
 		"countries": {
@@ -4707,14 +4703,16 @@
 		}
 	}
 }`)._;
-      var _ = __webpack_require__("chunkid");
-      async function _(_) {
-        if ((0, _._)(_._.EREALM))
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _, _, _) {
+        if (_)
           return {
             version: _._._,
             preference_state: _._._,
           };
-        if (_._.logged_in) {
+        if (_) {
           const _ = (await _._.GetCookiePreferences(_, {}))
             .Body()
             .toObject().preferences;
@@ -4727,7 +4725,6 @@
             if (_ && void 0 !== _.version && _.version != _._._) return _;
           }
         } catch (_) {}
-        const _ = _._.COUNTRY;
         return _ in _.eucountries || _ in _.eeacountries || "CH" === _
           ? {
               version: _._._,
@@ -4739,6 +4736,7 @@
             };
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
@@ -4746,7 +4744,7 @@
           (function (_) {
             return {
               queryKey: ["CookiePreferences"],
-              queryFn: () => _(_),
+              queryFn: () => _(_, _._.logged_in, _._.COUNTRY, _._.EREALM),
             };
           })(_),
         );

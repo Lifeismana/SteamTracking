@@ -1,5 +1,8 @@
 {
     "language": "danish",
+    "EventEditor_Loc_Title": "Administrer oversættelse",
+    "EventEditor_Loc_Overview": "Eksporter og importer oversættelsesfiler for at administrere oversættelse af strenge til hele begivenheden.",
+    "EventEditor_Loc_Overview_Page": "Eksporter og importer oversættelsesfiler for at administrere oversættelse af strenge til hele siden.",
     "LoginRedirect_Dialog_Title": "Log på",
     "LoginRedirect_Dialog_Description": "Log på for at føje dette emne til din ønskeliste, følge det eller markere det som ignoreret. Hvis du klikker på OK, omdirigeres du til loginsiden.",
     "Wishlist_NotSignedIn": "Log på eller åbn denne side i Steam-appen for at tilføje til ønskelisten, følge eller købe.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL er accepteret",
     "SteamURLInvalid": "Fejl: URL er ikke til Steam (butik/fællesskab)",
     "AnchorHashInputInvalid": "Ugyldigt input",
+    "Sale_Section_Label_Color": "Etiketfarve",
+    "Sale_Section_Background_Top": "Baggrundsgraduering (top)",
+    "Sale_Section_Background_Bottom": "Baggrundsgraduering (bund)",
     "Reservation_JoinPool": "Kom på listen",
     "Reserationn_NoListJoined": "Vælg en model nedenfor for at tilmelde dig. Kvalificerede kunder kan tilmelde sig op til %1$s modeller.",
     "Reservation_InPool": "Du er på listen til de valgte modeller nedenfor",

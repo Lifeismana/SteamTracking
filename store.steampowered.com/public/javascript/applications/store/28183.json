@@ -1,5 +1,8 @@
 {
     "language": "tchinese",
+    "EventEditor_Loc_Title": "管理在地化",
+    "EventEditor_Loc_Overview": "匯出和匯入在地化檔案，以管理整項活動的字串翻譯。",
+    "EventEditor_Loc_Overview_Page": "匯出和匯入在地化檔案，以管理整個頁面的字串翻譯。",
     "LoginRedirect_Dialog_Title": "登入",
     "LoginRedirect_Dialog_Description": "登入以將此項目新增至您的願望清單、關注它，或標記為已忽略。點選「確定」將重新導向至登入頁面。",
     "Wishlist_NotSignedIn": "在 Steam 應用程式中登入或開啟此頁面以加入願望清單、關注或購買。",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "已接受 %1$s 網址",
     "SteamURLInvalid": "錯誤網址，未指向 Steam 產品（商店 / 社群）",
     "AnchorHashInputInvalid": "無效的輸入",
+    "Sale_Section_Label_Color": "識別條顏色",
+    "Sale_Section_Background_Top": "背景漸層（頂端）",
+    "Sale_Section_Background_Bottom": "背景漸層（底部）",
     "Reservation_JoinPool": "加入隨機名單",
     "Reserationn_NoListJoined": "選擇下列一款機型進行登記 - 符合條件的顧客最多可登記 %1$s 款機型。",
     "Reservation_InPool": "您已加入下列所選機型的隨機名單",

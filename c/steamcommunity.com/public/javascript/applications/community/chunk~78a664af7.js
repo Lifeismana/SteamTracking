@@ -1559,6 +1559,7 @@
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(_._),
           [_, _] = (0, _.useState)(""),
           _ = _ || _ || _ || _ || _ || _ || _,
           _ =
@@ -1697,7 +1698,7 @@
                             checked: _,
                             onChange: (_) => _(_.target.checked),
                           }),
-                          "Issue Warning",
+                          " Issue Warning",
                         ],
                       }),
                       _.clanSteamID &&
@@ -1875,6 +1876,29 @@
                           " Mark as suspicious",
                         ],
                       }),
+                      (0, _.jsx)("label", {
+                        htmlFor: "escalateto",
+                        children: "Escalate to",
+                      }),
+                      (0, _.jsxs)("select", {
+                        _: "escalateto",
+                        onChange: (_) => _(parseInt(_.target.value)),
+                        value: _,
+                        children: [
+                          (0, _.jsx)("option", {
+                            value: _._,
+                            children: "Do not escalate",
+                          }),
+                          (0, _.jsx)("option", {
+                            value: _._,
+                            children: "Supervisor",
+                          }),
+                          (0, _.jsx)("option", {
+                            value: _._,
+                            children: "Valve",
+                          }),
+                        ],
+                      }),
                       (0, _.jsx)("textarea", {
                         className: (0, _._)(_().OneColumn, _().MessageTextArea),
                         placeholder: "Message to send",
@@ -1936,6 +1960,16 @@
                                     __webpack_require__.push({
                                       sanction: _._,
                                     }),
+                                  _ === _._
+                                    ? __webpack_require__.push({
+                                        sanction: _._,
+                                        escalate_to: _._,
+                                      })
+                                    : _ === _._ &&
+                                      __webpack_require__.push({
+                                        sanction: _._,
+                                        escalate_to: _._,
+                                      }),
                                   await _.sanctionMutation.mutateAsync({
                                     sanctions: _,
                                     message: _.trim(),
@@ -2544,6 +2578,7 @@
       function _(_) {
         var _;
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ =
             null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
             void 0 !== _
@@ -2557,7 +2592,7 @@
             },
             _,
           );
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ..._,
               ...(_ || {}),
@@ -2577,6 +2612,7 @@
       function _(_) {
         var _;
         const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ =
             null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
             void 0 !== _
@@ -2593,7 +2629,7 @@
               _,
             ),
           });
-        return _._.IN_GAMEPADUI && (_ || _)
+        return _ && (_ || _)
           ? (0, _.jsx)(_._, {
               ...(_ || {}),
               focusable: _,

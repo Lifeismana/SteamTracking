@@ -4,6 +4,7 @@ var currently_selected_friend_name = '';
 var currently_selected_friend_id = 0;
 
 var g_nPaymentMethodStep = 1;			var g_nPurchaseTotal = 0;				var g_strProviderRemaining = '';		var g_strProviderMethod = '';			var g_bShowAddressForm = true;
+var g_bIsGift = false;
 
 var nGetFinalPriceCalls = 0;
 
@@ -633,7 +634,7 @@ function InitializeTransaction()
 	var gift_sentiment = g_sGift_sentiment;
 	var gift_signature = g_sGift_signature;
 	var gift_scheduled_send = g_sGift_scheduledSend;
-	var bIsGift = false;
+	g_bIsGift = false;
 	g_eLastAuthenticationStep = false;
 
 		$('is_external_finalize_transaction').value = 0;
@@ -687,7 +688,7 @@ function InitializeTransaction()
 	{
 				if ( $( 'send_via_email' ) || $('send_via_friends') || $( 'send_via_giftee_accountid' ) )
 		{
-			bIsGift = true;
+			g_bIsGift = true;
 			if ( $( 'send_via_email' ) && $( 'send_via_email' ).checked )
 			{
 				giftee_email = $( 'email_input' ).value;
@@ -705,7 +706,7 @@ function InitializeTransaction()
 
 				if ( g_bIsPurchaseRequest )
 		{
-			bIsGift = true;
+			g_bIsGift = true;
 			currently_selected_friend_name = g_sGiftee_name;
 		}
 
@@ -754,52 +755,6 @@ function InitializeTransaction()
 				bSaveBillingAddress = true;
 		}
 
-		$('gift_tracking_description').hide();
-		$('checkout_receipt_description').show();
-				if ( g_bHardwareOnly )
-		{
-						$('checkout_receipt_description').hide();
-		}
-		else if ( bIsGift )
-		{
-			if ( $('send_self') && $('send_self').checked )
-			{
-								$('checkout_receipt_description').innerHTML = 'The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
-			}
-			else
-			{
-								$('checkout_receipt_description').innerHTML = 'Your gift is on its way!';
-				$('gift_tracking_description').show();
-			}
-		}
-		else if ( g_bMicroTxn )
-		{
-						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately.';
-		}
-		else if ( g_bWalletCreditOnly )
-		{
-						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately.';
-		}
-		else if ( g_bIsInOverlay )
-		{
-						$('checkout_receipt_description').innerHTML = 'Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
-		}
-		else
-		{
-			if ( g_nItemsForSelf > 0 && g_nItemsForGifts > 0 )
-			{
-								$('checkout_receipt_description').innerHTML = 'Your digitally delivered items are now registered to your account on Steam. To access your items, simply visit your library in Steam whenever you\'re ready.<br/><br/>Extra copies of items from this purchase have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending your extra copies as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
-			}
-			else if ( g_nItemsForSelf == 0 && g_nItemsForGifts > 0 )
-			{
-								$('checkout_receipt_description').innerHTML = 'The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
-			}
-			else
-			{
-								$('checkout_receipt_description').innerHTML = 'Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
-			}
-		}
-
 		new Ajax.Request('https://checkout.steampowered.com/checkout/inittransaction/',
 		{
 		    method:'post',
@@ -839,7 +794,7 @@ function InitializeTransaction()
 
 
 				// gift info, which may or may not exist
-				'bIsGift' : ( bIsGift ? 1 : 0 ),
+				'bIsGift' : ( g_bIsGift ? 1 : 0 ),
 				'GifteeAccountID' : giftee_account_id,
 				'GifteeEmail' : giftee_email,
 				'GifteeName' : giftee_name,
@@ -5699,6 +5654,52 @@ function OnPurchaseSuccess( result )
 		$('receipt_track_img').innerHTML = result.strReceiptPageHTML;
 				$('reward_points_balance').innerHTML = result.purchasereceipt.rewardPointsBalance;
 		
+		$('gift_tracking_description').hide();
+		$('checkout_receipt_description').show();
+				if ( g_bHardwareOnly )
+		{
+						$('checkout_receipt_description').hide();
+		}
+		else if ( g_bIsGift )
+		{
+			if ( $('send_self') && $('send_self').checked )
+			{
+								$('checkout_receipt_description').innerHTML = 'The items you purchased have been added to your Steam Inventory. Click <%1$s>here<%2$s> to view your Steam Inventory and to see options for sending these items as gifts to your friends.'.replace( '<%1$s>', '<a href="' + g_sInventoryLink + '">').replace( '<%2$s>', '</a>');
+			}
+			else
+			{
+								$('checkout_receipt_description').innerHTML = 'Your gift is on its way!';
+				$('gift_tracking_description').show();
+			}
+		}
+		else if ( g_bMicroTxn )
+		{
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately.';
+		}
+		else if ( g_bWalletCreditOnly )
+		{
+						$('checkout_receipt_description').innerHTML = 'Your funds are available for use immediately.';
+		}
+		else if ( g_bIsInOverlay )
+		{
+						$('checkout_receipt_description').innerHTML = 'Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+		}
+		else
+		{
+			if ( g_nItemsForSelf > 0 && g_nItemsForGifts > 0 )
+			{
+								$('checkout_receipt_description').innerHTML = 'Your digitally delivered items are now registered to your account on Steam. To access your items, simply visit your library in Steam whenever you\'re ready.<br/><br/>You can track the status of gifts on the <%1$s>purchase details page</a>.'.replace( '<%1$s>', '<a href="https://help.steampowered.com/wizard/HelpWithTransaction?transid=' + result.purchasereceipt.transactionid + '">');
+			}
+			else if ( g_nItemsForSelf == 0 && g_nItemsForGifts > 0 )
+			{
+								$('checkout_receipt_description').innerHTML = 'You can track the status of your gifts on the <%1$s>purchase details page</a>.'.replace( '<%1$s>', '<a href="https://help.steampowered.com/wizard/HelpWithTransaction?transid=' + result.purchasereceipt.transactionid + '">');
+			}
+			else
+			{
+								$('checkout_receipt_description').innerHTML = 'Any digital items in this order are now registered to your account on Steam.  To access your items, simply visit your <a href="steam://open/games">library</a> in Steam whenever you\'re ready.';
+			}
+		}
+
 		DisplayReceiptPage();
 
 		if ( result.purchaseresultdetail == 29 )

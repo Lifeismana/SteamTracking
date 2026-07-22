@@ -416,7 +416,7 @@
         h = i.n(u),
         m = i(78327),
         p = i(22837),
-        x = i(8527),
+        x = i(66418),
         f = i(54330),
         y = i(32179),
         v = i(16021),
@@ -1946,7 +1946,7 @@
                             onClick: () =>
                               window.open(
                                 f.TS.HELP_BASE_URL +
-                                  "en/wizard/HelpWithPublishing?issueid=904",
+                                  "wizard/HelpWithPublishing?issueid=904",
                                 "_blank",
                               ),
                             className: l().NotificationButton,

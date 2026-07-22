@@ -6,7 +6,7 @@
   {
     3049: (e, n, t) => {
       t.d(n, { J: () => o });
-      var i = t(8527),
+      var i = t(66418),
         r = t(13843);
       function o() {
         return (0, r.A)().languages.map((e) => {

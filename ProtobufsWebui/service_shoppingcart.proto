@@ -1,3 +1,4 @@
+import "common.proto";
 
 message CShoppingCart_AddBundle_Request {
 	optional uint64 gidshoppingcart = 1;
@@ -6,6 +7,7 @@ message CShoppingCart_AddBundle_Request {
 	optional string store_country = 5;
 	optional uint32 quantity = 6;
 	optional bool beta_mode = 7 [default = false];
+	optional .CartGiftInfo gift_info = 8;
 }
 
 message CShoppingCart_AddBundle_Response {
@@ -41,6 +43,8 @@ message CShoppingCart_AvailableCoupon {
 message CShoppingCart_BundleItem {
 	optional uint32 bundleid = 1;
 	optional uint32 quantity = 2;
+	optional bool is_gift = 3;
+	optional .CartGiftInfo gift_info = 4;
 }
 
 message CShoppingCart_Contents {
@@ -97,12 +101,23 @@ message CShoppingCart_MicroTxnAsset {
 	optional uint64 microtxnassetclassid = 2;
 }
 
+message CShoppingCart_ModifyLineItem_Request {
+	optional uint64 gidshoppingcart = 1;
+	optional uint64 gidlineitem = 2;
+	optional .CartGiftInfo gift_info = 3;
+}
+
+message CShoppingCart_ModifyLineItem_Response {
+	optional .CShoppingCart_Contents contents = 1;
+}
+
 message CShoppingCart_PackageItem {
 	optional uint32 packageid = 1;
 	optional .CShoppingCart_Amount costwhenadded = 2;
 	optional bool is_gift = 3;
 	optional uint64 gidbundle = 4;
 	optional uint32 quantity = 5;
+	optional .CartGiftInfo gift_info = 6;
 }
 
 message CShoppingCart_Potentials {
@@ -150,6 +165,8 @@ service ShoppingCart {
 	rpc CreateNewShoppingCart (.CShoppingCart_CreateNew_Request) returns (.CShoppingCart_CreateNew_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc GetShoppingCartContents (.CShoppingCart_GetContents_Request) returns (.CShoppingCart_GetContents_Response);
+	// ePrivilege=1, eWebAPIKeyRequirement=1
+	rpc ModifyLineItem (.CShoppingCart_ModifyLineItem_Request) returns (.CShoppingCart_ModifyLineItem_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=1
 	rpc RemoveLineItems (.CShoppingCart_RemoveLineItems_Request) returns (.CShoppingCart_RemoveLineItems_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=1

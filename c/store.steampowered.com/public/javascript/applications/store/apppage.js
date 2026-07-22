@@ -219,6 +219,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        WidestChildContainer: "_3YUWXt-ylyufqMm-YAliva",
+        Hidden: "_29niryxpei49tSjYOBokyK",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         TrackListContainer: "_1B94J6blto63JooX8xE8x2",
         DiscTabs: "_1f6LeASDnCawGhXbVgpGbN",
@@ -286,7 +292,6 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
-        Details: "_3i5pyKjdWnRPqCqWMAmwAb",
         Summary: "_3Prm5m5vhL6ZyDzq9BAi-Q",
         FeatureList: "_3Vfkk-MdImFuKEOrcb0-iS",
         CategoryIcon: "_3q4P9LQHRxDb5N6xxg2cno",
@@ -295,6 +300,7 @@
         FeatureGroupItems: "_3pZio2UegeDHK5If5lsACR",
         InfoRow: "MebJlVvjledfLjBzNnZks",
         FeatureName: "_2XVo6DmEk_3H8El012J6n3",
+        Details: "_3i5pyKjdWnRPqCqWMAmwAb",
         ImageContainer: "_2hLfFwbFsdutlEoG1YjlJe",
         TextBox: "_2_4UfjDA56JkBQwKFByppO",
         Open: "_3qssZq9veZ21NuSSKhTJzE",
@@ -350,7 +356,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        wishlistCategoryMaxDisplayChars: "26",
+        wishlistCategoryMaxDisplayChars: "30",
         CategoriesCtn: "_1Ua4366mxFvXUSFTfIlJ-i",
         CategoryListHeader: "_3Ra2jK42XFbrJlIPtsmMfC",
         CategoryList: "_1FrjJkMKzXxdevx_oYK2Nx",
@@ -743,6 +749,380 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
+        _ =
+          __webpack_require__._ +
+          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching",
+        _ =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgSources: _, onIncrementalError: _, alt: _, ..._ } = _,
+          [_, _] = (0, _.useState)(0),
+          _ = _[_];
+        return (0, _.jsx)("img", {
+          onError: (_) => {
+            _((_) => _ + 1), __webpack_require__?.(_, _, _);
+          },
+          alt: _,
+          ..._,
+          src: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            avatarURL: _,
+            size: _,
+            statusStyle: _,
+            statusPosition: _,
+            className: _,
+            children: _,
+            isOnline: _,
+            isInGame: _,
+            isWatchingBroadcast: _,
+            isAwayOrSnooze: _,
+            alt: _,
+          } = _,
+          _ = [];
+        return (
+          _ && _.push(_),
+          _.push(
+            (function (_) {
+              switch (_) {
+                case "X-Small":
+                case "Small":
+                  return (0, _._)(_);
+                case "Medium":
+                case "MediumLarge":
+                  return (0, _._)(_);
+                case "Large":
+                case "X-Large":
+                case "FillArea":
+                  return (0, _._)(_);
+              }
+            })(_ ?? "Medium"),
+          ),
+          (0, _.jsxs)("div", {
+            className: _()(
+              _.AvatarHolder,
+              {
+                [_.Offline]: !_,
+                [_.Online]: _,
+                [_.InGame]: _,
+                [_.WatchingBroadcast]: _,
+                [_.AwayOrSnooze]: _,
+              },
+              _,
+            ),
+            "data-size": _,
+            "data-status-position": _,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.AvatarStatus,
+                style: _,
+              }),
+              (0, _.jsx)(_, {
+                className: _()(_.Avatar),
+                rgSources: _,
+                draggable: !1,
+                alt: _,
+              }),
+              _,
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const {
+          playerLinkDetails: _,
+          animatedAvatar: _,
+          avatarFrame: _,
+          size: _,
+          ..._
+        } = _;
+        let _ = (0, _._)(_.public_data?.sha_digest_avatar, _);
+        return (
+          _?.image_small?.length &&
+            (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _.image_small),
+          (0, _.jsx)(_, {
+            avatarURL: _,
+            size: _,
+            isOnline: _.private_data?.persona_state === _.UXk,
+            isInGame: void 0 !== _.private_data?.game_id,
+            isWatchingBroadcast:
+              void 0 !== _.private_data?.watching_broadcast_accountid,
+            isAwayOrSnooze:
+              _.private_data?.persona_state === _.PrD ||
+              _.private_data?.persona_state === _.vPz,
+            ..._,
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        return (0, _._)()
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+            });
+      }
+      function _(_) {
+        const { children: _ } = _,
+          _ = (0, _.useContext)(_);
+        (0, _._)(
+          !!_,
+          "<Popover.Positioner> must be a child of <Popover.Root>.",
+        );
+        const _ = _.useRef(void 0);
+        return (
+          (0, _._)(_, !!_.current, !1),
+          (0, _.jsx)(_._, {
+            navID: "Popover",
+            onCancelButton: () => _.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: _,
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+              },
+              children: (0, _.jsx)(_._, {
+                children: _,
+              }),
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { children: _ } = _,
+          _ = (0, _.useContext)(_);
+        return (
+          (0, _._)(
+            !!_,
+            "<Popover.Positioner> must be a child of <Popover.Root>.",
+          ),
+          (0, _.jsx)(_._, {
+            context: _.floating.context,
+            initialFocus: -1,
+            returnFocus: !1,
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const { gutter: _ = 0, placement: _ } = _,
+          _ = [],
+          _ = _ && "object" == typeof _;
+        return (
+          _ && _.offset
+            ? _.push((0, _._)(_.offset))
+            : (_ && void 0 !== _.offset) || _.push((0, _._)(2)),
+          _ && _.flip
+            ? _.push((0, _._)(_.flip))
+            : (_ && void 0 !== _.flip) || _.push((0, _._)()),
+          _ && _.shift
+            ? _.push((0, _._)(_.shift))
+            : (_ && void 0 !== _.shift) || _.push((0, _._)()),
+          _.push(
+            (0, _._)({
+              apply: (_) => {
+                const { rects: _, elements: _, availableHeight: _ } = _,
+                  _ = {
+                    boxSizing: "border-box",
+                    zIndex: "1",
+                  };
+                switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
+                  case "target":
+                    _.width = `${_.reference.width}px`;
+                    break;
+                  case "content":
+                    _.width = `${_.floating.width}px`;
+                    break;
+                  case "dropdown": {
+                    let _ = _.reference.width;
+                    _.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                      (_.width = `${_}px`);
+                  }
+                }
+                "function" == typeof _.width &&
+                  (_.width = _.width({
+                    unContentWidth: _.floating.width,
+                    unTargetWidth: _.reference.width,
+                  }));
+                const _ =
+                  "number" == typeof _ ? `${_}px` : `var(--spacing-${_})`;
+                "function" == typeof _.maxHeight
+                  ? (_.maxHeight = _.maxHeight({
+                      unAvailableHeight: _,
+                      gutter: _,
+                    }))
+                  : "number" == typeof _.maxHeight
+                    ? (_.maxHeight = `min( calc( ${_}px - ${_} ), ${_.maxHeight}px )`)
+                    : (_.maxHeight =
+                        "number" == typeof _
+                          ? _ - _ + "px"
+                          : `calc( ${_}px - var(--spacing-${_}) )`),
+                  Object.assign(_.floating.style, _),
+                  _.floating.style.setProperty(
+                    "--popover-max-height",
+                    _.maxHeight,
+                  );
+              },
+            }),
+          ),
+          _
+        );
+      }
+      const _ = {
+        Root: function (_) {
+          const { children: _, ..._ } = _,
+            _ = (function (_) {
+              const {
+                open: _,
+                onOpenChange: _,
+                placement: _,
+                interactions: _ = {},
+              } = _;
+              let _ = _;
+              0;
+              const _ = (0, _._)({
+                  open: _,
+                  onOpenChange: _,
+                  middleware: _(_),
+                  whileElementsMounted: _._,
+                  placement: _ && "object" == typeof _ ? _.initial : _,
+                  strategy: "fixed",
+                  platform: {
+                    ..._._,
+                    getOffsetParent: (_) =>
+                      _?.ownerDocument?.defaultView ?? window,
+                  },
+                }),
+                _ = {
+                  enabled: !!_.click,
+                },
+                _ = "function" == typeof _.click ? _.click(_) : _,
+                _ = (0, _._)(_.context, _),
+                _ = {
+                  enabled: !!_.focus,
+                },
+                _ = "function" == typeof _.focus ? _.focus(_) : _,
+                _ = (0, _._)(_.context, _),
+                _ = {
+                  handleClose: (0, _._)(),
+                },
+                _ = "function" == typeof _.hover ? _.hover(_) : _,
+                _ = (0, _._)(_.context, {
+                  enabled: !!_.hover,
+                  ..._,
+                }),
+                _ = (0, _._)(_.context),
+                { getFloatingProps: _, getReferenceProps: _ } = (0, _._)([
+                  _,
+                  _,
+                  _,
+                  _,
+                ]);
+              return {
+                floating: _,
+                getFloatingProps: _,
+                getReferenceProps: _,
+                open: _,
+              };
+            })(_);
+          return (0, _.jsx)(_.Provider, {
+            value: _,
+            children: _,
+          });
+        },
+        Anchor: function (_) {
+          const { children: _ } = _,
+            _ = _.Children.only(_),
+            _ = (0, _.useContext)(_);
+          return _
+            ? _
+              ? (0, _.cloneElement)(_, {
+                  ..._.getReferenceProps(_.props),
+                  ref: (0, _._)(_.props.ref, _.floating.refs.setReference),
+                })
+              : (console.error(
+                  "<PopoverAnchor> must be a child of <PopoverRoot>.",
+                ),
+                null)
+            : null;
+        },
+        Positioner: function (_) {
+          const { children: _, className: _, ref: _ } = _,
+            _ = (0, _.useContext)(_),
+            _ = (0, _._)([
+              _,
+              _?.floating.refs.setFloating,
+              (_) => _?.showPopover?.(),
+            ]);
+          if (!_)
+            return (
+              console.error(
+                "<Popover.Positioner> must be a child of <Popover.Root>.",
+              ),
+              null
+            );
+          if (!_.open) return null;
+          let _ = _.Children.only(_),
+            _ = _.Fragment;
+          _.type == _.FocusManager &&
+            ((_ = _.Children.only(_.props.children)), (_ = _));
+          const _ = (0, _.cloneElement)(_, {
+            ref: _,
+            style: {
+              ..._.floating.floatingStyles,
+            },
+            className: _()((0, _._)(), _),
+            popover: "manual",
+            ..._.getFloatingProps(),
+          });
+          return (0, _.jsx)(_, {
+            children: _,
+          });
+        },
+        FocusManager: _,
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -754,6 +1134,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(
             {
               ..._,
@@ -766,7 +1147,7 @@
             ref: _,
             ..._,
           });
-        return _._.IN_GAMEPADUI
+        return _
           ? (0, _.jsx)(_._, {
               "flow-children": "grid",
               ...(_ || {}),
@@ -6679,94 +7060,9 @@
               ),
             null);
       };
-      var _ = __webpack_require__("chunkid");
-      const _ =
-          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching",
-        _ =
-          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
-      function _(_) {
-        const { rgSources: _, onIncrementalError: _, alt: _, ..._ } = _,
-          [_, _] = (0, _.useState)(0),
-          _ = _[_];
-        return (0, _.jsx)("img", {
-          onError: (_) => {
-            _((_) => _ + 1), __webpack_require__?.(_, _, _);
-          },
-          alt: _,
-          ..._,
-          src: _,
-        });
-      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            avatarURL: _,
-            size: _,
-            statusStyle: _,
-            statusPosition: _,
-            className: _,
-            children: _,
-            isOnline: _,
-            isInGame: _,
-            isWatchingBroadcast: _,
-            isAwayOrSnooze: _,
-            alt: _,
-          } = _,
-          _ = [];
-        return (
-          _ && _.push(_),
-          _.push(
-            (function (_) {
-              switch (_) {
-                case "X-Small":
-                case "Small":
-                  return (0, _._)(_);
-                case "Medium":
-                case "MediumLarge":
-                  return (0, _._)(_);
-                case "Large":
-                case "X-Large":
-                case "FillArea":
-                  return (0, _._)(_);
-              }
-            })(_ ?? "Medium"),
-          ),
-          (0, _.jsxs)("div", {
-            className: _()(
-              _.AvatarHolder,
-              {
-                [_.Offline]: !_,
-                [_.Online]: _,
-                [_.InGame]: _,
-                [_.WatchingBroadcast]: _,
-                [_.AwayOrSnooze]: _,
-              },
-              _,
-            ),
-            "data-size": _,
-            "data-status-position": _,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.AvatarStatus,
-                style: _,
-              }),
-              (0, _.jsx)(_, {
-                className: _()(_.Avatar),
-                rgSources: _,
-                draggable: !1,
-                alt: _,
-              }),
-              _,
-            ],
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7068,7 +7364,7 @@
           className: _().AvatarContainer,
           "data-miniprofile": _.GetAccountID(),
           href: _.profile_url,
-          children: (0, _.jsx)(_, {
+          children: (0, _.jsx)(_._, {
             className: _().Avatar,
             size: _,
             statusPosition: "border",
@@ -8091,6 +8387,8 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -10194,9 +10492,10 @@
       function _(_, _) {
         if (!_.current) return;
         const _ = _.current.closest(".queue_menu_flyout");
-        _
-          ? _.classList.add("force_expand")
-          : _.classList.remove("force_expand");
+        _ &&
+          (_
+            ? _.classList.add("force_expand")
+            : _.classList.remove("force_expand"));
       }
       function _(_) {
         const { appid: _ } = _,
@@ -10222,12 +10521,12 @@
           _ = _(_),
           _ = _(),
           _ = async (_, _) => {
-            if (
-              _.find((_) => (_ && _ !== _ ? _._ === _ : _.name === _)).bSelected
-            )
+            if (!_) return;
+            const _ = _ ? _.find((_) => _._ === _) : void 0;
+            if (_?.bSelected)
               _.mutate({
                 appid: _,
-                categoryID: _,
+                categoryID: _._,
               }),
                 _(
                   _.map((_) =>
@@ -10246,21 +10545,21 @@
                 categoryName: _,
                 categoryID: _ ?? _,
               });
-              _.eresult === _._ &&
-                _.category?._ &&
-                (_((_) =>
-                  _.map((_) =>
-                    _.name === _
-                      ? {
-                          ..._.category,
-                          bSelected: !0,
-                        }
-                      : _,
-                  ),
+              if (_.eresult === _._ && _.category?._) {
+                const _ = {
+                  ..._.category,
+                  bSelected: !0,
+                };
+                _(
+                  (_) =>
+                    __webpack_require__?.map((_) => (_.name === _ ? _ : _)) ?? [
+                      _,
+                    ],
                 ),
-                _.mutate({
-                  rgCategoryIDs: [_.category._],
-                }));
+                  _.mutate({
+                    rgCategoryIDs: [_.category._],
+                  });
+              }
             }
           };
         if (
@@ -10288,7 +10587,7 @@
           className: _.CategoriesMenuOption,
           ref: _,
           children: [
-            (0, _.jsxs)("div", {
+            (0, _.jsxs)(_._, {
               className: _.HeaderCtn,
               ..._,
               onClick: (_) => {
@@ -13562,6 +13861,439 @@
             })
           : null;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = new _._("InterestButtons"),
+        _ = {
+          ignored: !1,
+          following: !1,
+          wishlist: !1,
+        };
+      function _(_) {
+        return ["GameInterest", _];
+      }
+      function _(_) {
+        return (0, _._)({
+          queryKey: _(_),
+          queryFn: async () => {
+            throw (
+              (_.Info("Fetching user game interest from the back end for ", _),
+              new Error("Fetching user game interest is not yet supported"))
+            );
+          },
+        });
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationKey: [_, ..._(_)],
+          mutationFn: async (_) => {
+            _.Info(`Mutating ${_} for ${_}`, _);
+            const _ = new FormData();
+            _.set("sessionid", (0, _._)()),
+              _.set("appid", _.toString()),
+              _.set("snr", _);
+            const { url: _, new_interest: _ } = __webpack_require__(_, _);
+            _.Info(" new interest before backend call", _),
+              _.setQueryData(_(_), _);
+            try {
+              const _ = await fetch(_, {
+                method: "POST",
+                body: _,
+              });
+              return (
+                !!_._ ||
+                (_.Info(`request to ${_} ${_} failed with ${_}`, _), !1)
+              );
+            } catch (_) {
+              return _.Info(`request to ${_} ${_} failed with ${_}`, _), !1;
+            }
+          },
+          onSuccess: (_, _) => {
+            _ || _.setQueryData(_(_), _.old_interest);
+          },
+          onError: (_, _, _) => {
+            _.setQueryData(_(_), _.old_interest);
+          },
+        });
+      }
+      function _(_) {
+        const { appid: _, userInterest: _ = {} } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = (function (_, _) {
+            const [_, _] = _.useState(!1),
+              _ = (0, _._)();
+            return (
+              _.useEffect(() => {
+                const _ = {
+                  ..._,
+                  ...(_ ?? {}),
+                };
+                _.setQueryData(_(_), _), _(!0);
+              }, [_, _, _]),
+              _
+            );
+          })(_, _);
+        return _ && null != _.type && _
+          ? (0, _.jsx)(_._, {
+              className: _().ButtonRow,
+              "flow-children": "column",
+              children: (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "1",
+                children: [
+                  (0, _.jsx)(_, {
+                    appid: _,
+                  }),
+                  (0, _.jsxs)(_._, {
+                    direction: "row",
+                    width: "100%",
+                    gap: "1",
+                    children: [
+                      (0, _.jsx)(_, {
+                        appid: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        appid: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const { options: _, children: _ } = _;
+        return (0, _.jsxs)("span", {
+          className: _().WidestChildContainer,
+          children: [
+            _.map((_, _) =>
+              (0, _.jsx)(
+                "span",
+                {
+                  className: _().Hidden,
+                  children: _,
+                },
+                _,
+              ),
+            ),
+            (0, _.jsx)("span", {
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _() {
+        return (0, _.jsx)(_._, {
+          width: "16px",
+          marginRight: "1",
+          marginTop: "1",
+          children: (0, _.jsx)(_.MGO, {}),
+        });
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = _(_),
+          _ = (function (_) {
+            return _(_, "follow", (_, _) => {
+              const { following: _, old_interest: _ } = _,
+                _ = {
+                  ..._,
+                  following: _,
+                };
+              return (
+                _ || _.set("unfollow", "1"),
+                {
+                  new_interest: _,
+                  url: `${_._.STORE_BASE_URL}explore/followgame/`,
+                }
+              );
+            });
+          })(_);
+        if (!_) return null;
+        const { following: _ = !1 } = _,
+          _ = _.Localize("#button_follow"),
+          _ = (0, _.jsxs)(_._, {
+            direction: "row",
+            align: "center",
+            gap: "1",
+            children: [(0, _.jsx)(_, {}), _.Localize("#button_follow_undo")],
+          });
+        return (0, _.jsx)(_._, {
+          flexGrow: "1",
+          children: (0, _.jsxs)(_._, {
+            color: "greyneutral",
+            onClick: () => {
+              return (
+                (_ = !_),
+                void _.mutateAsync({
+                  following: _,
+                  old_interest: _,
+                })
+              );
+              var _;
+            },
+            width: "100%",
+            children: [
+              (0, _.jsx)(_._, {
+                children: _ ? (0, _.jsx)(_.c9e, {}) : (0, _.jsx)(_.pPV, {}),
+              }),
+              (0, _.jsx)(_, {
+                options: [_, _],
+                children: _ ? _ : _,
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = _(_),
+          _ = (function (_) {
+            return _(_, "ignore", (_, _) => {
+              const { ignored: _, ignored_reason: _, old_interest: _ } = _,
+                _ = {
+                  ..._,
+                  ignored: _,
+                  ignored_reason: _,
+                };
+              return (
+                _ && void 0 !== _
+                  ? _.set("ignore_reason", _.toString())
+                  : _.set("remove", "1"),
+                {
+                  new_interest: _,
+                  url: `${_._.STORE_BASE_URL}recommended/ignorerecommendation/`,
+                }
+              );
+            });
+          })(_),
+          [_, _] = _.useState(!1);
+        if (!_) return null;
+        const { ignored: _ = !1, ignored_reason: _ } = _,
+          _ = !!_ && (_ ?? !1),
+          _ = (_) => {
+            var _, _;
+            (_ = !1 !== _),
+              (_ = !1 === _ ? void 0 : _),
+              _.Info("ignoring", _, _),
+              _.mutateAsync({
+                ignored: _,
+                ignored_reason: _,
+                old_interest: _,
+              }),
+              _(!1);
+          },
+          _ = _.Localize("#button_ignore"),
+          _ = (0, _.jsxs)(_._, {
+            direction: "row",
+            align: "center",
+            gap: "1",
+            children: [(0, _.jsx)(_, {}), _.Localize("#button_ignore_undo")],
+          });
+        return (0, _.jsx)(_._, {
+          flexGrow: "1",
+          children: (0, _.jsxs)(_._.Root, {
+            open: _,
+            onOpenChange: _,
+            children: [
+              (0, _.jsx)(_._.Anchor, {
+                children: (0, _.jsx)(_._, {
+                  color: "greyneutral",
+                  onClick: () => _(!_),
+                  width: "100%",
+                  children: (0, _.jsx)(_, {
+                    options: [_, _],
+                    children: _ ? _ : _,
+                  }),
+                }),
+              }),
+              (0, _.jsx)(_._.Positioner, {
+                children: (0, _.jsx)(_._.FocusManager, {
+                  children: (0, _.jsx)(_._, {
+                    border: "1",
+                    borderColor: "blue-7",
+                    background: "greyneutral-4",
+                    elevation: "1",
+                    padding: "1",
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsxs)(_._, {
+                        direction: "column",
+                        children: [
+                          (0, _.jsx)(_, {
+                            type: _._._,
+                            currentType: _,
+                            select: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            type: _._._,
+                            currentType: _,
+                            select: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            type: !1,
+                            currentType: _,
+                            select: _,
+                          }),
+                        ],
+                      }),
+                    }),
+                  }),
+                }),
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        switch (_) {
+          default:
+          case !1:
+            return "#ignore_reason_none_header";
+          case _._._:
+            return "#ignore_reason_generic_header";
+          case _._._:
+            return "#ignore_reason_otherstore_header";
+        }
+      }
+      function _(_) {
+        switch (_) {
+          default:
+          case !1:
+            return "#ignore_reason_none_desc";
+          case _._._:
+            return "#ignore_reason_generic_desc";
+          case _._._:
+            return "#ignore_reason_otherstore_desc";
+        }
+      }
+      function _(_) {
+        const { type: _, currentType: _, select: _ } = _;
+        return (0, _.jsx)(_._, {
+          focusable: !0,
+          onActivate: () => _(_),
+          autoFocus: _ == _._._,
+          children: (0, _.jsxs)(_._, {
+            direction: "row",
+            padding: "2",
+            maxWidth: "275px",
+            gap: "2",
+            children: [
+              (0, _.jsx)(_._, {
+                minWidth: "16px",
+                maxWidth: "16px",
+                children:
+                  _ === _ &&
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_.MGO, {}),
+                  }),
+              }),
+              (0, _.jsxs)(_._, {
+                direction: "column",
+                gap: "1",
+                children: [
+                  (0, _.jsx)(_._, {
+                    color: "greyneutral-12",
+                    weight: "heavy",
+                    children: _.Localize(_(_)),
+                  }),
+                  (0, _.jsx)(_._, {
+                    color: "greyneutral-11",
+                    children: _.Localize(_(_)),
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = _(_),
+          _ = (function (_) {
+            return _(_, "wishlist", (_, _) => {
+              const { wishlist: _, old_interest: _ } = _;
+              return {
+                new_interest: {
+                  ..._,
+                  wishlist: _,
+                },
+                url: _
+                  ? `${_._.STORE_BASE_URL}api/addtowishlist`
+                  : `${_._.STORE_BASE_URL}api/removefromwishlist`,
+              };
+            });
+          })(_),
+          [_, _] = _.useState(!1),
+          _ = (0, _._)();
+        if (!_) return null;
+        const { wishlist: _ = !1 } = _,
+          _ = (0, _.jsxs)(_._, {
+            direction: "row",
+            align: "center",
+            gap: "1",
+            children: [
+              (0, _.jsx)(_._, {
+                width: "20px",
+                marginRight: "1",
+                children: (0, _.jsx)(_.T4m, {}),
+              }),
+              _.Localize("#button_wishlist"),
+            ],
+          }),
+          _ = (0, _.jsxs)(_._, {
+            direction: "row",
+            align: "center",
+            gap: "1",
+            children: [
+              (0, _.jsx)(_._, {
+                width: "20px",
+                marginRight: "1",
+                children: (0, _.jsx)(_.qnF, {}),
+              }),
+              _.Localize("#button_wishlist_undo"),
+            ],
+          });
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)(_._, {
+            onSecondaryButton: () => _(!0),
+            onSecondaryActionDescription: _.Localize(
+              "#wishlist_manage_categories",
+            ),
+            children: [
+              (0, _.jsx)(_._, {
+                onClick: () => {
+                  return (
+                    (_ = !_),
+                    void _.mutateAsync({
+                      wishlist: _,
+                      old_interest: _,
+                    })
+                  );
+                  var _;
+                },
+                width: "100%",
+                children: (0, _.jsx)(_, {
+                  options: [_, _],
+                  children: _ ? _ : _,
+                }),
+              }),
+              _ &&
+                (0, _.jsx)(_, {
+                  appid: _,
+                  steamid: _,
+                  onClose: () => _(!1),
+                }),
+            ],
+          }),
+        });
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -13773,6 +14505,11 @@
                       appid: _,
                     }),
                   "music-album-details": (_) =>
+                    (0, _.jsx)(_, {
+                      ..._,
+                      appid: _,
+                    }),
+                  "interest-buttons": (_) =>
                     (0, _.jsx)(_, {
                       ..._,
                       appid: _,
