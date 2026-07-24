@@ -1,5 +1,12 @@
 import "common_base.proto";
 
+message CAudio_GetBluetoothAudioPreference_Request {
+}
+
+message CAudio_GetBluetoothAudioPreference_Response {
+	optional int32 preference = 1 [(.description) = "enum"];
+}
+
 message CAudio_GetHdmiCecActive_Request {
 	optional int32 sink_id = 1;
 }
@@ -30,6 +37,7 @@ message CAudio_GetSupportedFeatures_Response {
 	optional bool mono_downmix = 1;
 	optional bool use_bluetooth_for_mic = 2;
 	optional bool reset_config = 3;
+	optional bool bluetooth_audio_preference = 4;
 }
 
 message CAudio_GetUseBluetoothForMic_Request {
@@ -59,6 +67,13 @@ message CAudio_SendHdmiCecVolume_Request {
 }
 
 message CAudio_SendHdmiCecVolume_Response {
+}
+
+message CAudio_SetBluetoothAudioPreference_Request {
+	optional int32 preference = 1 [(.description) = "enum"];
+}
+
+message CAudio_SetBluetoothAudioPreference_Response {
 }
 
 message CAudio_SetHdmiCecEnabled_Request {
@@ -111,6 +126,8 @@ message CAudio_ToggleHdmiCecMute_Response {
 
 service Audio {
 	// ePrivilege=1, eClientExecutionSite=1
+	rpc GetBluetoothAudioPreference (.CAudio_GetBluetoothAudioPreference_Request) returns (.CAudio_GetBluetoothAudioPreference_Response);
+	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetHdmiCecActive (.CAudio_GetHdmiCecActive_Request) returns (.CAudio_GetHdmiCecActive_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetHdmiCecEnabled (.CAudio_GetHdmiCecEnabled_Request) returns (.CAudio_GetHdmiCecEnabled_Response);
@@ -126,6 +143,8 @@ service Audio {
 	rpc ResetConfig (.CAudio_ResetConfig_Request) returns (.CAudio_ResetConfig_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SendHdmiCecVolume (.CAudio_SendHdmiCecVolume_Request) returns (.CAudio_SendHdmiCecVolume_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetBluetoothAudioPreference (.CAudio_SetBluetoothAudioPreference_Request) returns (.CAudio_SetBluetoothAudioPreference_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetHdmiCecEnabled (.CAudio_SetHdmiCecEnabled_Request) returns (.CAudio_SetHdmiCecEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1

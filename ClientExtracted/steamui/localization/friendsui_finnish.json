@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Näytä kaveri luettelon kärjessä, josta hänet on helppo löytää",
     "FriendSettings_Mobile_BlockDesc": "Näyt uloskirjautuneena etkä saa häneltä viestejä",
     "FriendSettings_Mobile_Notifications": "Mobiili-ilmoitukset",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Upota kuvia ja muuta mediasisältöä vain WiFi-yhteydellä",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Upota kuvia ja muuta mediasisältöä vain wifi-yhteydellä",
     "FriendSettings_Mobile_UploadCurrentLogs": "Lataa nykyisen istunnon lokitiedot",
     "FriendSettings_Mobile_UploadPreviousLogs": "Lataa aiemman istunnon lokitiedot",
     "FriendSettings_Mobile_SaveImageCaptures": "Tallenna kuvakaappaukset",

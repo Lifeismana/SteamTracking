@@ -692,7 +692,7 @@
                 throw new Error(`failed to load dlc for app id ${e}`);
               },
             });
-            return t.isLoading ? null : t.data;
+            return t.isLoading ? [] : t.data;
           }
           const F = "AppInfo";
           function P(e) {
@@ -2550,13 +2550,14 @@
                   permission: o.yu[e.permission ?? o.yu.Client],
                 })),
               "achievements-definitions.csv",
+              !0,
             );
           }
           function b(e, t) {
             const n = e
               .map((e) => w(e, t))
               .reduce((e, t) => (e.push(...t), e), []);
-            c.g.WriteCSVToFile(n, "achievements-localization.csv");
+            c.g.WriteCSVToFile(n, "achievements-localization.csv", !0);
           }
           function C(e, t, n) {
             if (!t) return {};
@@ -3178,77 +3179,77 @@
                 onSave: t,
                 onCancel: n,
                 bNewAchievement: i,
-                achievement: _,
-                groupid: g,
+                achievement: c,
+                groupid: _,
               } = e,
-              { appID: j, cdnRoot: A } = (0, m.L3)(),
-              y = (0, m.J3)(j),
-              T = (0, m.Q4)(j),
-              D = (0, S.YZ)(_?.statID, _?.bitID),
-              k = (0, m.ts)(j),
+              { appID: g, cdnRoot: j } = (0, m.L3)(),
+              A = (0, m.J3)(g),
+              y = (0, m.Q4)(g),
+              T = (0, S.YZ)(c?.statID, c?.bitID),
+              D = (0, m.ts)(g),
               {
-                value: R,
-                setValue: B,
-                isValid: G,
-                issues: L,
-              } = (0, N.$q)(_?.name, (0, N.Cm)(h.YjP().nonempty()), !0),
-              [V, O] = v.useState(_?.permission ?? m.yu.Client),
-              [F, P] = v.useState("1" == _?.display?.hidden),
-              [z, U] = v.useState("1" == _?.archived),
-              [H, W] = v.useState(_?.groupid ?? g),
-              [Y, K] = v.useState(_?.display?.name ?? { token: `${R}_NAME` }),
-              [Q, q] = v.useState(_?.display?.desc ?? { token: `${R}_DESC` }),
-              Z = T?.[_?.groupid ?? g],
-              J = (0, S.fw)(H, Z),
-              $ = (0, S.fw)(H, T?.[H]),
-              [X, ee] = v.useState(_?.progress ?? void 0),
-              te = X ? y.find((e) => e.name == X.value.operand1) : void 0,
-              ne = (0, C.E)(te),
-              ie =
-                !X ||
-                ne.validator(
+                value: k,
+                setValue: R,
+                isValid: B,
+                issues: G,
+              } = (0, N.$q)(c?.name, (0, N.Cm)(h.YjP().nonempty()), !0),
+              [L, V] = v.useState(c?.permission ?? m.yu.Client),
+              [O, F] = v.useState("1" == c?.display?.hidden),
+              [P, z] = v.useState("1" == c?.archived),
+              [U, H] = v.useState(c?.groupid ?? _),
+              [W, Y] = v.useState(c?.display?.name ?? { token: `${k}_NAME` }),
+              [K, Q] = v.useState(c?.display?.desc ?? { token: `${k}_DESC` }),
+              q = y?.[c?.groupid ?? _],
+              Z = (0, S.fw)(U, q),
+              J = (0, S.fw)(U, y?.[U]),
+              [$, X] = v.useState(c?.progress ?? void 0),
+              ee = $ ? A.find((e) => e.name == $.value.operand1) : void 0,
+              te = (0, C.E)(ee),
+              ne =
+                !$ ||
+                te.validator(
                   h
                     .Ikc({ min_val: h.auy.number(), max_val: h.auy.number() })
-                    .safeParse(X).data,
+                    .safeParse($).data,
                 ).success,
-              se = G && ie,
-              [re, ae] = v.useState(
-                _?.display?.icon
+              ie = B && ne,
+              [se, re] = v.useState(
+                c?.display?.icon
                   ? {
-                      image: A + _?.display?.icon,
+                      image: j + c?.display?.icon,
                       imageType: I.bi,
-                      filenameWithoutExtension: _?.display?.icon,
+                      filenameWithoutExtension: c?.display?.icon,
                     }
                   : void 0,
               ),
-              [oe, ce] = v.useState(
-                _?.display?.icon_gray
+              [ae, oe] = v.useState(
+                c?.display?.icon_gray
                   ? {
-                      image: A + _?.display?.icon_gray,
+                      image: j + c?.display?.icon_gray,
                       imageType: I.bi,
-                      filenameWithoutExtension: _?.display?.icon_gray,
+                      filenameWithoutExtension: c?.display?.icon_gray,
                     }
                   : void 0,
               ),
-              le = (0, m.q4)(j, i ? null : _.statID, i ? null : _.bitID);
-            let de;
+              ce = (0, m.q4)(g, i ? null : c.statID, i ? null : c.bitID);
+            let le;
             return (
-              i && $.visible && $.hasprogress
-                ? (de = (0, s.jsx)(S.lh, {
+              i && J.visible && J.hasprogress
+                ? (le = (0, s.jsx)(S.lh, {
                     text: (0, w.we)(
                       "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
                     ),
                   }))
-                : J.visible && !$.visible && (D?.global_unlock_percent ?? 0) > 0
-                  ? (de = (0, s.jsx)(S.lh, {
+                : Z.visible && !J.visible && (T?.global_unlock_percent ?? 0) > 0
+                  ? (le = (0, s.jsx)(S.lh, {
                       text: (0, w.we)(
                         "#AchievementEditor_Achievement_Edit_Group_Warn_HidingAchievement",
                       ),
                     }))
-                  : _?.groupid != g &&
-                    $.visible &&
-                    $.hasprogress &&
-                    (de = (0, s.jsx)(S.lh, {
+                  : c?.groupid != _ &&
+                    J.visible &&
+                    J.hasprogress &&
+                    (le = (0, s.jsx)(S.lh, {
                       text: (0, w.we)(
                         "#AchievementEditor_Achievement_Edit_Group_Warn_BreakCompletion",
                       ),
@@ -3297,18 +3298,18 @@
                                       }),
                                     }),
                                     (0, s.jsx)(M, {
-                                      icon: re,
+                                      icon: se,
                                       setIcon: async (e) => {
-                                        if ((ae(e), !oe)) {
+                                        if ((re(e), !ae)) {
                                           const t = await (0, I.I7)(e.image);
-                                          ce({
+                                          oe({
                                             image: t,
                                             imageType: I.bi,
                                             filenameWithoutExtension: "",
                                           });
                                         }
                                       },
-                                      achievement: _,
+                                      achievement: c,
                                     }),
                                   ],
                                 }),
@@ -3327,16 +3328,16 @@
                                       }),
                                     }),
                                     (0, s.jsx)(M, {
-                                      icon: oe,
-                                      setIcon: ce,
-                                      achievement: _,
+                                      icon: ae,
+                                      setIcon: oe,
+                                      achievement: c,
                                     }),
-                                    !!re &&
+                                    !!se &&
                                       (0, s.jsx)(r.$, {
                                         color: "dull",
                                         onClick: async () => {
-                                          const e = await (0, I.I7)(re.image);
-                                          ce({
+                                          const e = await (0, I.I7)(se.image);
+                                          oe({
                                             image: e,
                                             imageType: I.bi,
                                             filenameWithoutExtension: "",
@@ -3361,11 +3362,11 @@
                               placeholder: (0, w.we)(
                                 "#AchievementEditor_Achievement_Edit_ApiName_Placeholder",
                               ),
-                              value: R,
-                              isValid: G,
-                              setValue: B,
-                              issues: L,
-                              autoFocus: void 0 === _?.name,
+                              value: k,
+                              isValid: B,
+                              setValue: R,
+                              issues: G,
+                              autoFocus: void 0 === c?.name,
                             }),
                             (0, s.jsxs)("div", {
                               children: [
@@ -3374,7 +3375,7 @@
                                     (0, w.we)(
                                       "#AchievementEditor_Achievement_Edit_SetBy",
                                     ),
-                                    !!X &&
+                                    !!$ &&
                                       (0, s.jsxs)(o.EY, {
                                         contrast: "description",
                                         children: [
@@ -3389,37 +3390,37 @@
                                       }),
                                   ],
                                 }),
-                                X
+                                $
                                   ? (0, s.jsx)(p.j, {
                                       disabled: !0,
-                                      children: m.yu[V ?? m.yu.Client],
+                                      children: m.yu[L ?? m.yu.Client],
                                     })
                                   : (0, s.jsx)(d.l6, {
                                       options: Object.values(m.yu).filter(
                                         (e) => "number" == typeof e,
                                       ),
                                       getOptionLabel: (e) => m.yu[e],
-                                      selectedValue: V,
+                                      selectedValue: L,
                                       onSelectionChange: (e) => {
-                                        O(e ?? m.yu.Client);
+                                        V(e ?? m.yu.Client);
                                       },
                                     }),
                               ],
                             }),
                             (0, s.jsx)(C.O, {
-                              appID: j,
-                              progress: X,
+                              appID: g,
+                              progress: $,
                               setProgress: (e) => {
                                 if (e && e.value.operand1) {
-                                  ee(e);
-                                  const t = y.find(
+                                  X(e);
+                                  const t = A.find(
                                     (t) => t.name == e.value.operand1,
                                   );
-                                  t && O(t.permission);
+                                  t && V(t.permission);
                                 } else
-                                  ee(void 0), O(_?.permission ?? m.yu.Client);
+                                  X(void 0), V(c?.permission ?? m.yu.Client);
                               },
-                              ...ne,
+                              ...te,
                             }),
                           ],
                         }),
@@ -3435,10 +3436,10 @@
                                         "#AchievementEditor_Achievement_Edit_DisplayName",
                                       ),
                                     }),
-                                    (0, s.jsx)(b.Mq, { locstring: Y }),
+                                    (0, s.jsx)(b.Mq, { locstring: W }),
                                   ],
                                 }),
-                                (0, s.jsx)(b.Pk, { value: Y, setValue: K }),
+                                (0, s.jsx)(b.Pk, { value: W, setValue: Y }),
                               ],
                             }),
                             (0, s.jsxs)("div", {
@@ -3451,13 +3452,13 @@
                                         "#AchievementEditor_Achievement_Edit_Description",
                                       ),
                                     }),
-                                    (0, s.jsx)(b.Mq, { locstring: Q }),
+                                    (0, s.jsx)(b.Mq, { locstring: K }),
                                   ],
                                 }),
                                 (0, s.jsx)(b.Pk, {
                                   multiline: !0,
-                                  value: Q,
-                                  setValue: q,
+                                  value: K,
+                                  setValue: Q,
                                 }),
                               ],
                             }),
@@ -3468,10 +3469,10 @@
                                     "#AchievementEditor_Achievement_Edit_Group",
                                   ),
                                 }),
-                                de,
+                                le,
                                 (0, s.jsx)(S.yo, {
-                                  selectedValue: H ?? S.z0,
-                                  onSelectionChange: W,
+                                  selectedValue: U ?? S.z0,
+                                  onSelectionChange: H,
                                 }),
                               ],
                             }),
@@ -3479,11 +3480,11 @@
                               children: [
                                 (0, s.jsx)("h2", {
                                   children: (0, w.we)(
-                                    "#AchievementEditor_Achievement_Edit_Visibility",
+                                    "#AchievementEditor_Achievement_Edit_Status",
                                   ),
                                 }),
                                 (0, s.jsxs)(a.s, {
-                                  direction: "row",
+                                  direction: "column",
                                   gap: "1",
                                   justify: "between",
                                   children: [
@@ -3496,18 +3497,31 @@
                                         maxWidth: "300px",
                                         whiteSpace: "normal",
                                       },
-                                      children: (0, s.jsx)(c.az, {
+                                      children: (0, s.jsx)(a.s, {
+                                        direction: "column",
                                         flexGrow: "1",
                                         padding: "1",
-                                        radius: "sm",
+                                        align: "start",
+                                        className: E.Cursor,
                                         children: (0, s.jsx)(u.S, {
-                                          checked: F,
-                                          onChange: P,
-                                          children: (0, s.jsx)("span", {
-                                            className: E.Cursor,
-                                            children: (0, w.we)(
-                                              "#AchievementEditor_Achievement_Edit_Spoiler",
-                                            ),
+                                          checked: O,
+                                          onChange: F,
+                                          align: "start",
+                                          children: (0, s.jsxs)(a.s, {
+                                            direction: "column",
+                                            children: [
+                                              (0, s.jsx)(o.EY, {
+                                                weight: "heavy",
+                                                children: (0, w.we)(
+                                                  "#AchievementEditor_Achievement_Edit_Spoiler",
+                                                ),
+                                              }),
+                                              (0, s.jsx)(o.EY, {
+                                                children: (0, w.we)(
+                                                  "#AchievementEditor_Achievement_Edit_SpoilerDesc",
+                                                ),
+                                              }),
+                                            ],
                                           }),
                                         }),
                                       }),
@@ -3521,18 +3535,31 @@
                                         maxWidth: "300px",
                                         whiteSpace: "normal",
                                       },
-                                      children: (0, s.jsx)(c.az, {
+                                      children: (0, s.jsx)(a.s, {
+                                        direction: "column",
                                         flexGrow: "1",
                                         padding: "1",
-                                        radius: "sm",
+                                        align: "start",
+                                        className: E.Cursor,
                                         children: (0, s.jsx)(u.S, {
-                                          checked: z,
-                                          onChange: U,
-                                          children: (0, s.jsx)("span", {
-                                            className: E.Cursor,
-                                            children: (0, w.we)(
-                                              "#AchievementEditor_Achievement_Edit_Archived",
-                                            ),
+                                          checked: P,
+                                          onChange: z,
+                                          align: "start",
+                                          children: (0, s.jsxs)(a.s, {
+                                            direction: "column",
+                                            children: [
+                                              (0, s.jsx)(o.EY, {
+                                                weight: "heavy",
+                                                children: (0, w.we)(
+                                                  "#AchievementEditor_Achievement_Edit_Archived",
+                                                ),
+                                              }),
+                                              (0, s.jsx)(o.EY, {
+                                                children: (0, w.we)(
+                                                  "#AchievementEditor_Achievement_Edit_ArchivedDesc",
+                                                ),
+                                              }),
+                                            ],
                                           }),
                                         }),
                                       }),
@@ -3546,43 +3573,43 @@
                       ],
                     }),
                     (0, s.jsx)(S.Aj, {
-                      saveDisabled: !se,
+                      saveDisabled: !ie,
                       onSave: async () => {
                         const e = (0, S.EV)(
-                            _?.display?.name?.token,
-                            _?.name,
+                            c?.display?.name?.token,
+                            c?.name,
                             "name",
-                            R,
+                            k,
                           ),
                           n = (0, S.EV)(
-                            _?.display?.desc?.token,
-                            _?.name,
+                            c?.display?.desc?.token,
+                            c?.name,
                             "desc",
-                            R,
+                            k,
                           ),
-                          i = (0, b.II)(_?.display?.name, k),
-                          s = (0, b.II)(_?.display?.desc, k),
-                          r = (0, b.II)(Y, k),
-                          a = (0, b.II)(Q, k);
+                          i = (0, b.II)(c?.display?.name, D),
+                          s = (0, b.II)(c?.display?.desc, D),
+                          r = (0, b.II)(W, D),
+                          a = (0, b.II)(K, D);
                         let o = {
-                          ..._,
-                          name: R,
-                          groupid: H,
-                          permission: V,
-                          archived: z ? "1" : "0",
+                          ...c,
+                          name: k,
+                          groupid: U,
+                          permission: L,
+                          archived: P ? "1" : "0",
                           display: {
-                            ..._?.display,
+                            ...c?.display,
                             name: { ...i, ...r, token: e },
                             desc: { ...s, ...a, token: n },
-                            hidden: F ? "1" : "0",
+                            hidden: O ? "1" : "0",
                           },
-                          progress: X,
+                          progress: $,
                         };
-                        await le
+                        await ce
                           .mutateAsync({
                             achievement: o,
-                            icon: re?.image,
-                            icon_gray: oe?.image,
+                            icon: se?.image,
+                            icon_gray: ae?.image,
                           })
                           .then(({ statid: e, bitid: n }) => {
                             t && t(o);
@@ -4063,7 +4090,7 @@
       "use strict";
       n.a(e, async (e, i) => {
         try {
-          n.d(t, { C6: () => M, _e: () => S, or: () => O });
+          n.d(t, { C6: () => O, _e: () => I, or: () => F });
           var s = n(7850),
             r = n(89558),
             a = n(53965),
@@ -4072,29 +4099,30 @@
             l = n(90534),
             d = n(57757),
             u = n(11967),
-            p = n(84896),
-            h = n(90626),
-            m = n(16676),
-            v = n(10435),
-            _ = n(9154),
-            g = n(12155),
-            x = n(52038),
-            j = n(61859),
-            f = n(874),
-            A = n(97377),
-            w = n(1103),
-            y = n(59330),
-            E = n(21261),
-            b = e([p, A, y, E]);
-          function C(e, t, n) {
+            p = n(46562),
+            h = n(84896),
+            m = n(90626),
+            v = n(16676),
+            _ = n(10435),
+            g = n(9154),
+            x = n(12155),
+            j = n(52038),
+            f = n(61859),
+            A = n(874),
+            w = n(97377),
+            y = n(1103),
+            E = n(59330),
+            b = n(21261),
+            C = e([h, w, E, b]);
+          function S(e, t, n) {
             if (!t) return { included: e, excluded: [] };
             const i = t.replace(/[#-.]|[[-^]|[?|{}]/g, "\\$&"),
               s = new RegExp(`.*${i ?? ""}.*`, "i");
             return (e ?? []).reduce(
               (e, t) => (
                 ((e) => {
-                  const t = (0, y.ZM)(e.display?.name, n ?? "english"),
-                    r = (0, y.ZM)(e.display?.desc, n ?? "english");
+                  const t = (0, E.ZM)(e.display?.name, n ?? "english"),
+                    r = (0, E.ZM)(e.display?.desc, n ?? "english");
                   return !(
                     i &&
                     "" !== i &&
@@ -4110,42 +4138,42 @@
               { included: [], excluded: [] },
             );
           }
-          function S(e) {
+          function I(e) {
             const {
                 reordering: t,
                 setReordering: n,
                 creatingNewGroup: i,
                 setCreatingNewGroup: r,
               } = e,
-              { appID: o } = (0, p.L3)(),
-              c = (0, p.kb)(o),
-              l = (0, p.FM)(o);
+              { appID: o } = (0, h.L3)(),
+              c = (0, h.kb)(o),
+              l = (0, h.FM)(o);
             return t
               ? (0, s.jsx)("div", {
                   children: (0, s.jsxs)("div", {
-                    className: w.GroupList,
+                    className: y.GroupList,
                     children: [
                       (0, s.jsx)("div", {
-                        className: w.GroupReorderDescription,
-                        children: (0, j.we)(
+                        className: y.GroupReorderDescription,
+                        children: (0, f.we)(
                           "#AchievementEditor_Reorder_Description",
                         ),
                       }),
                       (0, s.jsxs)("div", {
-                        className: w.SortDefaultGroup,
+                        className: y.SortDefaultGroup,
                         children: [
-                          (0, s.jsx)(T, { groupid: null, group: null }),
+                          (0, s.jsx)(D, { groupid: null, group: null }),
                           (0, s.jsx)("div", {
-                            className: w.OverlayContent,
+                            className: y.OverlayContent,
                             children: (0, s.jsx)("h2", {
-                              children: (0, j.we)(
+                              children: (0, f.we)(
                                 "#AchievementEditor_Reorder_NotDefault",
                               ),
                             }),
                           }),
                         ],
                       }),
-                      (0, s.jsx)(I, {
+                      (0, s.jsx)(N, {
                         groups: l,
                         onSave: () => n(!1),
                         onCancel: () => n(!1),
@@ -4156,13 +4184,13 @@
               : (0, s.jsxs)("div", {
                   children: [
                     (0, s.jsxs)("div", {
-                      className: w.GroupList,
+                      className: y.GroupList,
                       children: [
-                        !!c && (0, s.jsx)(N, { groupid: null, group: null }),
+                        !!c && (0, s.jsx)(T, { groupid: null, group: null }),
                         !!l &&
                           l.map((e) =>
                             (0, s.jsx)(
-                              N,
+                              T,
                               { groupid: e.groupid, group: e },
                               e.groupid,
                             ),
@@ -4172,7 +4200,7 @@
                     (0, s.jsx)("div", {
                       children: i
                         ? (0, s.jsx)(
-                            N,
+                            T,
                             {
                               groupid: "",
                               group: null,
@@ -4187,14 +4215,14 @@
                             variant: "vibrant",
                             onClick: () => r(!0),
                             children: [
-                              (0, s.jsx)(v.OMN, {
+                              (0, s.jsx)(_.OMN, {
                                 width: "14",
                                 height: "14",
                                 fill: "currentColor",
-                                className: w.Icon,
+                                className: y.Icon,
                               }),
                               " ",
-                              (0, j.we)(
+                              (0, f.we)(
                                 "#AchievementEditor_Button_CreateNewGroup",
                               ),
                             ],
@@ -4203,11 +4231,11 @@
                   ],
                 });
           }
-          function I(e) {
+          function N(e) {
             const { groups: t, onSave: n, onCancel: i } = e,
-              { appID: a } = (0, p.L3)(),
-              [o, c] = h.useState(t),
-              l = (0, p.iF)(a);
+              { appID: a } = (0, h.L3)(),
+              [o, c] = m.useState(t),
+              l = (0, h.iF)(a);
             return (0, s.jsxs)(s.Fragment, {
               children: [
                 (0, s.jsx)(r.JY, {
@@ -4225,7 +4253,7 @@
                     direction: "vertical",
                     children: (e) =>
                       (0, s.jsxs)("div", {
-                        className: w.GroupSorter,
+                        className: y.GroupSorter,
                         ...e.droppableProps,
                         ref: e.innerRef,
                         children: [
@@ -4236,7 +4264,7 @@
                                 draggableId: e.groupid,
                                 index: t,
                                 children: (t) =>
-                                  (0, s.jsx)(T, {
+                                  (0, s.jsx)(D, {
                                     groupid: e.groupid,
                                     group: e,
                                     ref: t?.innerRef,
@@ -4252,7 +4280,7 @@
                       }),
                   }),
                 }),
-                (0, s.jsx)(E.Aj, {
+                (0, s.jsx)(b.Aj, {
                   pending: l.isPending,
                   onSave: async () => {
                     await l.mutateAsync(o.map((e) => e.groupid)), n();
@@ -4262,7 +4290,7 @@
               ],
             });
           }
-          function N(e) {
+          function T(e) {
             const {
                 groupid: t,
                 group: n,
@@ -4270,40 +4298,40 @@
                 onSave: r,
                 onCancel: l,
               } = e,
-              { appID: d, filter: u, localization: m } = (0, p.L3)(),
-              { currentLanguage: _ } = m,
-              x = (0, p.FK)(d, t),
-              f = (0, E.fw)(t, n),
-              y = (0, E.$P)(),
-              b =
-                f.visible &&
-                Object.values(y).some(
+              { appID: d, filter: u, localization: p } = (0, h.L3)(),
+              { currentLanguage: v } = p,
+              g = (0, h.FK)(d, t),
+              j = (0, b.fw)(t, n),
+              A = (0, b.$P)(),
+              E =
+                j.visible &&
+                Object.values(A).some(
                   (e) => (e.global_unlock_percent ?? 0) > 0,
                 ),
-              [C, S] = h.useState(i),
-              [I, N] = h.useState(!1),
-              [T, D] = h.useState(!1),
-              [R, L] = h.useState(!1),
-              [V, M] = h.useState(!1),
+              [C, S] = m.useState(i),
+              [I, N] = m.useState(!1),
+              [T, D] = m.useState(!1),
+              [k, B] = m.useState(!1),
+              [V, M] = m.useState(!1),
               O = T
                 ? void 0
                 : [
                     {
                       key: "edit",
-                      label: (0, j.we)("#AchievementEditor_Group_Tools_Edit"),
-                      icon: () => (0, s.jsx)(g.ffu, {}),
+                      label: (0, f.we)("#AchievementEditor_Group_Tools_Edit"),
+                      icon: () => (0, s.jsx)(x.ffu, {}),
                       action: () => S(!0),
                     },
                     {
                       key: "delete",
-                      label: (0, j.we)("#AchievementEditor_Group_Tools_Delete"),
-                      icon: () => (0, s.jsx)(g.X, {}),
+                      label: (0, f.we)("#AchievementEditor_Group_Tools_Delete"),
+                      icon: () => (0, s.jsx)(x.X, {}),
                       action: () => N(!0),
                     },
                   ].filter((e) =>
                     "edit" == e.key ? !!t : "delete" != e.key || !!t,
                   ),
-              z = async () => {
+              F = async () => {
                 S(!1), r && r();
               },
               U = () => {
@@ -4311,20 +4339,20 @@
               };
             let H = (0, s.jsxs)(a.$, {
               variant: "vibrant",
-              onClick: () => L(!0),
+              onClick: () => B(!0),
               children: [
-                (0, s.jsx)(v.OMN, {
+                (0, s.jsx)(_.OMN, {
                   width: "14",
                   height: "14",
                   fill: "currentColor",
-                  className: w.Icon,
+                  className: y.Icon,
                 }),
                 " ",
-                (0, j.we)("#AchievementEditor_Group_CreateAchievement"),
+                (0, f.we)("#AchievementEditor_Group_CreateAchievement"),
               ],
             });
             return (
-              b &&
+              E &&
                 (H = (0, s.jsxs)(o.s, {
                   direction: "row",
                   gap: "1",
@@ -4334,9 +4362,9 @@
                     (0, s.jsxs)(c.EY, {
                       color: "amber-9",
                       children: [
-                        (0, s.jsx)(E.id, {}),
+                        (0, s.jsx)(b.id, {}),
                         " ",
-                        (0, j.we)(
+                        (0, f.we)(
                           "#AchievementEditor_Group_CreateAchievement_WarnLiveGroup",
                         ),
                       ],
@@ -4345,14 +4373,14 @@
                 })),
               C
                 ? i
-                  ? (0, s.jsx)(F, { onSave: z, onCancel: U })
-                  : (0, s.jsx)(P, {
+                  ? (0, s.jsx)(P, { onSave: F, onCancel: U })
+                  : (0, s.jsx)(z, {
                       groupid: t,
                       group: n,
-                      onSave: z,
+                      onSave: F,
                       onCancel: U,
                     })
-                : (0, s.jsxs)(k, {
+                : (0, s.jsxs)(R, {
                     groupid: t,
                     group: n,
                     actions: O,
@@ -4361,30 +4389,30 @@
                     children: [
                       !V &&
                         (0, s.jsx)("div", {
-                          className: w.AchievementsFullDisplay,
+                          className: y.AchievementsFullDisplay,
                           children: T
-                            ? (0, s.jsx)(G, {
+                            ? (0, s.jsx)(L, {
                                 groupid: t,
-                                achievements: x,
+                                achievements: g,
                                 filter: u,
-                                currentLanguage: _,
+                                currentLanguage: v,
                                 onClose: () => D(!1),
                               })
                             : (0, s.jsxs)(s.Fragment, {
                                 children: [
-                                  (0, s.jsx)(B, {
-                                    achievements: x,
+                                  (0, s.jsx)(G, {
+                                    achievements: g,
                                     filter: u,
-                                    currentLanguage: _,
+                                    currentLanguage: v,
                                     setBulkMove: () => D(!0),
                                   }),
                                   (0, s.jsx)("div", {
-                                    children: R
-                                      ? (0, s.jsx)(A.i, {
+                                    children: k
+                                      ? (0, s.jsx)(w.i, {
                                           achievement: null,
                                           groupid: t,
-                                          onSave: (e) => L(!1),
-                                          onCancel: () => L(!1),
+                                          onSave: (e) => B(!1),
+                                          onCancel: () => B(!1),
                                         })
                                       : H,
                                   }),
@@ -4392,7 +4420,7 @@
                               }),
                         }),
                       I &&
-                        (0, s.jsx)(W, {
+                        (0, s.jsx)(K, {
                           groupid: t,
                           group: n,
                           hideModal: () => {
@@ -4403,17 +4431,17 @@
                   })
             );
           }
-          function T(e) {
+          function D(e) {
             const { className: t, ...n } = e;
-            return (0, s.jsx)(k, {
-              className: (0, x.A)(w.CompactGroupContainer, t),
+            return (0, s.jsx)(R, {
+              className: (0, j.A)(y.CompactGroupContainer, t),
               ...n,
             });
           }
-          function D(e) {
+          function k(e) {
             return `group-${e}`;
           }
-          function k(e) {
+          function R(e) {
             const {
                 groupid: t,
                 group: n,
@@ -4424,15 +4452,15 @@
                 setCollapsed: c,
                 ...l
               } = e,
-              d = (0, E.fw)(t, n).visible ? w.Released : w.Unreleased;
+              d = (0, b.fw)(t, n).visible ? y.Released : y.Unreleased;
             return (0, s.jsx)("div", {
-              id: D(t),
-              className: (0, x.A)(w.Group, a, d),
+              id: k(t),
+              className: (0, j.A)(y.Group, a, d),
               ...l,
               children: (0, s.jsxs)("div", {
-                className: w.GroupDisplay,
+                className: y.GroupDisplay,
                 children: [
-                  (0, s.jsx)(R, {
+                  (0, s.jsx)(B, {
                     groupid: t,
                     group: n,
                     actions: i,
@@ -4444,7 +4472,7 @@
               }),
             });
           }
-          function R(e) {
+          function B(e) {
             const {
                 groupid: t,
                 group: n,
@@ -4452,48 +4480,48 @@
                 collapsed: r,
                 setCollapsed: a,
               } = e,
-              { appID: c } = (0, p.L3)(),
+              { appID: c } = (0, h.L3)(),
               d = n?.dlcappid,
-              u = (0, p.Xe)(c),
-              h = (0, p.sJ)(c),
-              m = h?.find((e) => d == e.appid);
+              u = (0, h.Xe)(c),
+              p = (0, h.sJ)(c),
+              m = p?.find((e) => d == e.appid);
             return (0, s.jsxs)("div", {
-              className: w.GroupHeader,
+              className: y.GroupHeader,
               children: [
-                (0, s.jsx)(V, { info: m ?? u }),
+                (0, s.jsx)(M, { info: m ?? u }),
                 (0, s.jsxs)("div", {
-                  className: w.GroupHeaderContent,
+                  className: y.GroupHeaderContent,
                   children: [
                     !t &&
                       (0, s.jsxs)("div", {
-                        className: w.CoreGroup,
+                        className: y.CoreGroup,
                         children: [
                           (0, s.jsx)("h1", {
-                            children: (0, j.we)(
+                            children: (0, f.we)(
                               "#AchievementEditor_Group_CoreGameAchievements_Heading",
                             ),
                           }),
                           (0, s.jsx)("p", {
-                            children: (0, j.we)(
+                            children: (0, f.we)(
                               "#AchievementEditor_Group_CoreGameAchievements_Description",
                             ),
                           }),
                         ],
                       }),
                     (0, s.jsxs)("div", {
-                      className: w.GroupData,
+                      className: y.GroupData,
                       children: [
                         !!t &&
                           (0, s.jsx)("div", {
                             children: (0, s.jsx)("h2", {
-                              children: (0, s.jsx)(y.VU, {
+                              children: (0, s.jsx)(E.VU, {
                                 text: n?.name,
                                 missingStringLocToken:
                                   "#AchievementEditor_Group_MissingName",
                               }),
                             }),
                           }),
-                        (0, s.jsx)(O, {
+                        (0, s.jsx)(F, {
                           archived: "1" == n?.archived,
                           developeronly: "1" == n?.developeronly,
                           app: m ?? u,
@@ -4503,19 +4531,19 @@
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: w.EditButtons,
+                  className: y.EditButtons,
                   children: [
                     (0, s.jsxs)(o.s, {
                       direction: "row",
                       gap: "3",
                       children: [
-                        !!i && i.length > 0 && (0, s.jsx)(L, { actions: i }),
+                        !!i && i.length > 0 && (0, s.jsx)(V, { actions: i }),
                         void 0 !== r &&
                           a &&
                           (0, s.jsx)(l.az, {
-                            className: w.CollapseButton,
+                            className: y.CollapseButton,
                             onClick: () => a(!r),
-                            children: (0, s.jsx)(g.F2T, {
+                            children: (0, s.jsx)(x.F2T, {
                               fill: "currentColor",
                               angle: r ? 0 : -90,
                             }),
@@ -4524,7 +4552,7 @@
                     }),
                     !!t &&
                       (0, s.jsxs)("div", {
-                        className: w.IDText,
+                        className: y.IDText,
                         children: ["ID: ", t],
                       }),
                   ],
@@ -4532,24 +4560,24 @@
               ],
             });
           }
-          function B(e) {
+          function G(e) {
             const {
                 achievements: t,
                 filter: n,
                 currentLanguage: i,
                 setBulkMove: r,
               } = e,
-              a = C(t, n, i);
+              a = S(t, n, i);
             return (0, s.jsxs)(s.Fragment, {
               children: [
                 a.included.length > 0 &&
-                  (0, s.jsx)(A.p, { achievements: a.included, setBulkMove: r }),
+                  (0, s.jsx)(w.p, { achievements: a.included, setBulkMove: r }),
                 a.excluded.length > 0 &&
                   (0, s.jsxs)("div", {
-                    className: w.FilterFooter,
+                    className: y.FilterFooter,
                     children: [
-                      (0, s.jsx)(g.dJT, {}),
-                      (0, j.Yp)(
+                      (0, s.jsx)(x.dJT, {}),
+                      (0, f.Yp)(
                         "#AchievementEditor_Group_Filtered_Achievements",
                         a.excluded.length,
                       ),
@@ -4557,15 +4585,15 @@
                   }),
                 (!t || 0 == t.length) &&
                   (0, s.jsx)("div", {
-                    className: w.Empty,
-                    children: (0, j.we)(
+                    className: y.Empty,
+                    children: (0, f.we)(
                       "#AchievementEditor_Group_EmptyGroup_Description",
                     ),
                   }),
               ],
             });
           }
-          function G(e) {
+          function L(e) {
             const {
                 groupid: t,
                 onClose: n,
@@ -4573,68 +4601,68 @@
                 filter: r,
                 currentLanguage: a,
               } = e,
-              { appID: c } = (0, p.L3)(),
-              l = C(i, r, a),
-              [u, m] = (0, h.useState)(void 0),
-              [v, _] = (0, h.useState)([]),
-              x = (0, p.Q4)(c) || {};
-            let f = new Set(v);
-            const y = u === E.Gl,
-              b = z(void 0, void 0, !0),
-              S = x[t],
-              I = x[u],
-              N = (0, E.fw)(t, S);
+              { appID: c } = (0, h.L3)(),
+              l = S(i, r, a),
+              [u, p] = (0, m.useState)(void 0),
+              [v, _] = (0, m.useState)([]),
+              g = (0, h.Q4)(c) || {};
+            let j = new Set(v);
+            const A = u === b.Gl,
+              E = U(void 0, void 0, !0),
+              C = g[t],
+              I = g[u],
+              N = (0, b.fw)(t, C);
             let T,
-              k = (0, E.fw)(u, I);
-            y && (k = b.visibility),
-              N.visible && !k.visible
-                ? (T = (0, s.jsx)(E.lh, {
-                    text: (0, j.we)(
+              D = (0, b.fw)(u, I);
+            A && (D = E.visibility),
+              N.visible && !D.visible
+                ? (T = (0, s.jsx)(b.lh, {
+                    text: (0, f.we)(
                       "#AchievementEditor_Group_MoveAchievements_Warn_HidingAchievements",
                     ),
                   }))
-                : S?.dlcappid != (y ? b.editAppID : I?.dlcappid) &&
-                  k.visible &&
-                  k.hasprogress &&
-                  (T = (0, s.jsx)(E.lh, {
-                    text: (0, j.we)(
+                : C?.dlcappid != (A ? E.editAppID : I?.dlcappid) &&
+                  D.visible &&
+                  D.hasprogress &&
+                  (T = (0, s.jsx)(b.lh, {
+                    text: (0, f.we)(
                       "#AchievementEditor_Group_MoveAchievements_Warn_BreakCompletion",
                     ),
                   }));
-            const [R, B] = h.useState(l.included.length == v.length),
-              G = (0, p.zG)(c),
+            const [R, B] = m.useState(l.included.length == v.length),
+              G = (0, h.zG)(c),
               L = (e) => {
                 for (const t of l.included) {
-                  const n = (0, p.nf)(t);
-                  e ? f.add(n) : f.delete(n);
+                  const n = (0, h.nf)(t);
+                  e ? j.add(n) : j.delete(n);
                 }
-                _([...f]), B(e);
+                _([...j]), B(e);
               };
             return (0, s.jsxs)(s.Fragment, {
               children: [
                 l.included.length > 0 &&
-                  (0, s.jsx)(A.p, {
+                  (0, s.jsx)(w.p, {
                     achievements: l.included,
                     compact: !0,
                     editable: !1,
                     headerContentBefore: () =>
                       (0, s.jsx)("div", {
-                        className: w.MoveAchievementCheckbox,
+                        className: y.MoveAchievementCheckbox,
                         children: (0, s.jsx)(d.S, { checked: R, onChange: L }),
                       }),
                     contentBefore: (e) => {
-                      const t = (0, p.nf)(e);
+                      const t = (0, h.nf)(e);
                       return (0, s.jsx)("div", {
-                        className: w.MoveAchievementCheckbox,
+                        className: y.MoveAchievementCheckbox,
                         children: (0, s.jsx)(d.S, {
-                          checked: f.has(t),
+                          checked: j.has(t),
                           onChange: (e) =>
                             ((e, t) => {
-                              t ? f.add(e) : f.delete(e),
-                                _([...f]),
-                                f.size,
+                              t ? j.add(e) : j.delete(e),
+                                _([...j]),
+                                j.size,
                                 l.included.length,
-                                (f.size == l.included.length) != R && B(!R);
+                                (j.size == l.included.length) != R && B(!R);
                             })(t, e),
                         }),
                       });
@@ -4642,10 +4670,10 @@
                   }),
                 l.excluded.length > 0 &&
                   (0, s.jsxs)("div", {
-                    className: w.FilterFooter,
+                    className: y.FilterFooter,
                     children: [
-                      (0, s.jsx)(g.dJT, {}),
-                      (0, j.Yp)(
+                      (0, s.jsx)(x.dJT, {}),
+                      (0, f.Yp)(
                         "#AchievementEditor_Group_Filtered_Achievements",
                         l.excluded.length,
                       ),
@@ -4653,45 +4681,45 @@
                   }),
                 (!i || 0 == i.length) &&
                   (0, s.jsx)("div", {
-                    className: w.Empty,
-                    children: (0, j.we)(
+                    className: y.Empty,
+                    children: (0, f.we)(
                       "#AchievementEditor_Group_EmptyGroup_Description",
                     ),
                   }),
                 (0, s.jsxs)(o.s, {
-                  direction: y ? "column" : "row",
-                  justify: y ? void 0 : "between",
-                  align: y ? void 0 : "end",
+                  direction: A ? "column" : "row",
+                  justify: A ? void 0 : "between",
+                  align: A ? void 0 : "end",
                   gap: "1",
-                  className: w.MoveFooter,
+                  className: y.MoveFooter,
                   children: [
                     (0, s.jsxs)(o.s, {
                       direction: "column",
                       gap: "1",
                       children: [
-                        (0, j.we)(
+                        (0, f.we)(
                           "#AchievementEditor_Group_MoveAchievements_GroupSelect_Label",
-                          f.size,
+                          j.size,
                         ),
                         ":",
                         (0, s.jsx)(o.s, {
                           direction: "column",
                           align: "baseline",
                           gap: "1",
-                          children: (0, s.jsx)(E.yo, {
+                          children: (0, s.jsx)(b.yo, {
                             variant: "inset",
                             selectedValue: u,
-                            filter: (0, E.zy)(t),
-                            onSelectionChange: m,
+                            filter: (0, b.zy)(t),
+                            onSelectionChange: p,
                             allowCreate: !0,
                           }),
                         }),
-                        y &&
-                          (0, s.jsx)(H, {
+                        A &&
+                          (0, s.jsx)(Y, {
                             bHideSaveCancelButtons: !0,
                             onCancel: () => {},
                             onSave: () => {},
-                            state: b,
+                            state: E,
                           }),
                       ],
                     }),
@@ -4701,24 +4729,24 @@
                       justify: "end",
                       children: [
                         T,
-                        (0, s.jsx)(E.VZ, {
+                        (0, s.jsx)(b.VZ, {
                           saveDisabled: 0 == v.length || null == u,
-                          saveText: (0, j.we)(
+                          saveText: (0, f.we)(
                             "#AchievementEditor_Group_MoveAchievements_MoveButton",
                           ),
                           onCancel: n,
                           onSave: async () => {
                             let e = u;
-                            y && (e = await b.save());
+                            A && (e = await E.save());
                             const t = {
                               groupid: e,
                               api_names: i
-                                .filter((e) => f.has((0, p.nf)(e)))
+                                .filter((e) => j.has((0, h.nf)(e)))
                                 .map((e) => e.name),
                             };
                             await G.mutateAsync(t),
                               setTimeout(() => {
-                                const t = document.getElementById(D(e));
+                                const t = document.getElementById(k(e));
                                 t?.scrollIntoView({
                                   behavior: "smooth",
                                   block: "nearest",
@@ -4735,7 +4763,7 @@
               ],
             });
           }
-          function L(e) {
+          function V(e) {
             const { actions: t } = e,
               n = (0, u.WM)({
                 rgOptions: t.map((e, t) => t),
@@ -4750,14 +4778,14 @@
                 (0, s.jsx)(u.l6.Trigger, {
                   render: (e) =>
                     (0, s.jsxs)("div", {
-                      className: (0, x.A)(w.EditButton),
+                      className: (0, j.A)(y.EditButton),
                       ...e,
                       children: [
-                        (0, j.we)("#AchievementEditor_Options"),
+                        (0, f.we)("#AchievementEditor_Options"),
                         " ",
                         (0, s.jsx)("div", {
-                          className: (0, x.A)(w.SmallIconButton, w.OptionsSVG),
-                          children: (0, s.jsx)(g.GB9, {}),
+                          className: (0, j.A)(y.SmallIconButton, y.OptionsSVG),
+                          children: (0, s.jsx)(x.GB9, {}),
                         }),
                       ],
                     }),
@@ -4769,7 +4797,7 @@
                       {
                         value: t,
                         children: (0, s.jsxs)("div", {
-                          className: w.SelectIconOption,
+                          className: y.SelectIconOption,
                           children: [e?.icon(), e.label],
                         }),
                       },
@@ -4780,7 +4808,7 @@
               ],
             });
           }
-          function V(e) {
+          function M(e) {
             const { info: t } = e,
               { image: n, type: i, releasestate: r, name: a } = t || {},
               o = {
@@ -4789,72 +4817,72 @@
                 releasestate: r,
               };
             return (0, s.jsxs)("div", {
-              className: w.AppTile,
+              className: y.AppTile,
               children: [
                 (0, s.jsx)("div", {
-                  className: w.AppTileImage,
+                  className: y.AppTileImage,
                   children: n
                     ? (0, s.jsx)("img", { src: n })
                     : (0, s.jsx)("div", { children: a }),
                 }),
-                i && r && (0, s.jsx)(f.b, { app: o }),
+                i && r && (0, s.jsx)(A.b, { app: o }),
               ],
             });
           }
-          function M(e) {
+          function O(e) {
             const { hidden: t, className: n, omitText: i = !1 } = e;
             return (0, s.jsx)("div", {
-              className: (0, x.A)(
-                w.GroupVisibilitySummary,
-                t ? w.UnreleasedText : w.ReleasedText,
+              className: (0, j.A)(
+                y.GroupVisibilitySummary,
+                t ? y.UnreleasedText : y.ReleasedText,
                 n,
               ),
               children: t
                 ? (0, s.jsxs)(s.Fragment, {
                     children: [
-                      (0, s.jsx)(v.ZyV, {}),
+                      (0, s.jsx)(_.ZyV, {}),
                       !i &&
-                        (0, j.we)(
+                        (0, f.we)(
                           "#AchievementEditor_Group_Field_Visibility_Value_Hidden",
                         ),
                     ],
                   })
                 : (0, s.jsxs)(s.Fragment, {
                     children: [
-                      (0, s.jsx)(v.rxV, {}),
+                      (0, s.jsx)(_.rxV, {}),
                       !i &&
-                        (0, j.we)(
+                        (0, f.we)(
                           "#AchievementEditor_Group_Field_Visibility_Value_Visible",
                         ),
                     ],
                   }),
             });
           }
-          function O(e) {
+          function F(e) {
             const { archived: t = !1, developeronly: n = !1, app: i } = e,
               r = t || n || !i?.is_released_somewhere,
-              a = (0, x.A)(w.Label, w.Unreleased);
+              a = (0, j.A)(y.Label, y.Unreleased);
             return (0, s.jsxs)("div", {
-              className: w.GroupVisibilityInfo,
+              className: y.GroupVisibilityInfo,
               children: [
                 (0, s.jsx)("div", {
-                  className: (0, x.A)(
-                    w.GroupVisibilitySummary,
-                    r ? w.UnreleasedText : w.ReleasedText,
+                  className: (0, j.A)(
+                    y.GroupVisibilitySummary,
+                    r ? y.UnreleasedText : y.ReleasedText,
                   ),
-                  children: (0, s.jsx)(M, { hidden: r }),
+                  children: (0, s.jsx)(O, { hidden: r }),
                 }),
                 r &&
                   (0, s.jsxs)("div", {
-                    className: w.GroupVisibilityLabels,
+                    className: y.GroupVisibilityLabels,
                     children: [
                       !i?.is_released_somewhere &&
                         (0, s.jsx)("div", {
                           className: a,
-                          children: (0, j.PP)(
+                          children: (0, f.PP)(
                             "#AchievementEditor_Group_Field_Restrictions_Value_OwnersReleaseStatus",
                             (0, s.jsx)("strong", { children: i?.name ?? "" }),
-                            (0, j.we)(
+                            (0, f.we)(
                               "#AchievementEditor_Group_Field_Restrictions_App_Unreleased",
                             ),
                           ),
@@ -4863,13 +4891,13 @@
                         (0, s.jsxs)("div", {
                           className: a,
                           children: [
-                            (0, s.jsx)(g.KVe, {}),
+                            (0, s.jsx)(x.KVe, {}),
                             " ",
-                            (0, j.we)(
+                            (0, f.we)(
                               "#AchievementEditor_Group_Field_IsArchived",
                             ),
                             " ",
-                            (0, s.jsx)(E.NT, {
+                            (0, s.jsx)(b.NT, {
                               helpText:
                                 "#AchievementEditor_Group_Tooltip_Archived",
                             }),
@@ -4879,13 +4907,13 @@
                         (0, s.jsxs)("div", {
                           className: a,
                           children: [
-                            (0, s.jsx)(v.bmT, {}),
+                            (0, s.jsx)(_.bmT, {}),
                             " ",
-                            (0, j.we)(
+                            (0, f.we)(
                               "#AchievementEditor_Group_Field_DeveloperOnly",
                             ),
                             " ",
-                            (0, s.jsx)(E.NT, {
+                            (0, s.jsx)(b.NT, {
                               helpText:
                                 "#AchievementEditor_Group_Tooltip_DeveloperOnly",
                             }),
@@ -4896,19 +4924,19 @@
               ],
             });
           }
-          function F(e) {
-            return (0, s.jsx)(U, { bNewGroup: !0, ...e });
-          }
           function P(e) {
-            return (0, s.jsx)(U, { bNewGroup: !1, ...e });
+            return (0, s.jsx)(H, { bNewGroup: !0, ...e });
           }
-          function z(e, t, n) {
-            const { appID: i } = (0, p.L3)(),
-              [s, r] = h.useState(t?.name ?? {}),
-              [a, o] = h.useState(t?.dlcappid),
-              [c, l] = h.useState("1" == t?.archived),
-              [d, u] = h.useState(n || "1" == t?.developeronly),
-              m = (0, h.useMemo)(
+          function z(e) {
+            return (0, s.jsx)(H, { bNewGroup: !1, ...e });
+          }
+          function U(e, t, n) {
+            const { appID: i } = (0, h.L3)(),
+              [s, r] = m.useState(t?.name ?? {}),
+              [a, o] = m.useState(t?.dlcappid),
+              [c, l] = m.useState("1" == t?.archived),
+              [d, u] = m.useState(n || "1" == t?.developeronly),
+              p = (0, m.useMemo)(
                 () => ({
                   ...t,
                   name: s,
@@ -4918,8 +4946,8 @@
                 }),
                 [s, a, c, d, t],
               ),
-              v = (0, p.mb)(i, n ? "0" : e),
-              _ = (0, E.fw)(e, m),
+              v = (0, h.mb)(i, n ? "0" : e),
+              _ = (0, b.fw)(e, p),
               g = v.isPending;
             return {
               editGroupName: s,
@@ -4942,7 +4970,7 @@
                 let e;
                 return (
                   await v
-                    .mutateAsync(m)
+                    .mutateAsync(p)
                     .then((t) => {
                       e = t;
                     })
@@ -4953,21 +4981,58 @@
               isPending: g,
             };
           }
-          function U(e) {
+          function H(e) {
             const { groupid: t, group: n, bNewGroup: i } = e,
-              r = z(t, n, i),
-              a = (0, h.useRef)(null);
+              r = U(t, n, i),
+              a = (0, m.useRef)(null);
             return (
-              (0, h.useEffect)(() => {
+              (0, m.useEffect)(() => {
                 a?.current?.scrollIntoView({
                   behavior: "smooth",
                   block: "nearest",
                 });
               }, []),
-              (0, s.jsx)(H, { ref: a, ...e, state: r })
+              (0, s.jsx)(Y, { ref: a, ...e, state: r })
             );
           }
-          function H(e) {
+          function W(e) {
+            const { value: t, setValue: n } = e,
+              { appID: i } = (0, h.L3)(),
+              r = (0, h.sJ)(i),
+              a = (0, m.useCallback)(
+                (e) =>
+                  "0" == (e ?? "0")
+                    ? (0, f.we)(
+                        "#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers",
+                      )
+                    : r.find((t) => t.appid == e)?.name,
+                [r],
+              ),
+              o = Array.from(
+                new Set(
+                  r
+                    .sort((e, t) => (e.name ?? "").localeCompare(t.name ?? ""))
+                    .map((e) => e.appid),
+                ),
+              ),
+              c = ["0"].concat(o);
+            return r.length < 20
+              ? (0, s.jsx)(u.l6, {
+                  options: c,
+                  getOptionLabel: a,
+                  selectedValue: t ?? "0",
+                  onSelectionChange: n,
+                })
+              : (0, s.jsx)(p.G3, {
+                  options: c,
+                  getOptionLabel: a,
+                  selectedValue: t ?? "0",
+                  onSelectionChange: n,
+                  placeholder: "",
+                  filterPlaceholder: "",
+                });
+          }
+          function Y(e) {
             const {
                 state: t,
                 groupid: n,
@@ -4976,85 +5041,84 @@
                 onCancel: a,
                 ref: c,
               } = e,
-              { appID: m } = (0, p.L3)(),
-              v = (0, p.sJ)(m),
-              _ = (0, h.useRef)(null);
-            (0, h.useEffect)(() => {
-              _?.current?.focus();
+              { appID: u } = (0, h.L3)(),
+              p = (0, m.useRef)(null);
+            (0, m.useEffect)(() => {
+              p?.current?.focus();
             }, []);
             const {
-                editGroupName: g,
-                setEditGroupName: f,
-                editAppID: A,
-                setEditAppID: b,
-                editIsArchived: C,
-                setEditIsArchived: S,
-                editDeveloperOnly: I,
-                setEditDeveloperOnly: N,
-                isNewGroup: T,
-                visibility: D,
-                isPending: k,
+                editGroupName: v,
+                setEditGroupName: _,
+                editAppID: g,
+                setEditAppID: x,
+                editIsArchived: A,
+                setEditIsArchived: w,
+                editDeveloperOnly: C,
+                setEditDeveloperOnly: S,
+                isNewGroup: I,
+                visibility: N,
+                isPending: T,
               } = t,
-              R = void 0 !== t.editAppID,
-              B = D.visible ? w.Released : w.Unreleased;
+              D = void 0 !== t.editAppID,
+              k = N.visible ? y.Released : y.Unreleased;
             return (0, s.jsxs)("div", {
               ref: c,
-              className: (0, x.A)(w.Group, w.Editing, B),
+              className: (0, j.A)(y.Group, y.Editing, k),
               children: [
                 (0, s.jsx)("div", {
-                  className: (0, x.A)(w.ReleaseStatusBar, B),
+                  className: (0, j.A)(y.ReleaseStatusBar, k),
                 }),
                 (0, s.jsx)("div", {
-                  className: w.GroupDisplay,
+                  className: y.GroupDisplay,
                   children: (0, s.jsx)("div", {
-                    className: w.GroupHeader,
+                    className: y.GroupHeader,
                     children: (0, s.jsxs)("div", {
-                      className: w.GroupHeaderContent,
+                      className: y.GroupHeaderContent,
                       children: [
                         !n &&
-                          !T &&
+                          !I &&
                           (0, s.jsxs)("div", {
-                            className: w.CoreGroup,
+                            className: y.CoreGroup,
                             children: [
                               (0, s.jsx)("h1", {
-                                children: (0, j.we)(
+                                children: (0, f.we)(
                                   "#AchievementEditor_Group_CoreGameAchievements_Heading",
                                 ),
                               }),
                               (0, s.jsx)("p", {
-                                children: (0, j.we)(
+                                children: (0, f.we)(
                                   "#AchievementEditor_Group_CoreGameAchievements_Description",
                                 ),
                               }),
                             ],
                           }),
                         (0, s.jsx)("div", {
-                          children: T
+                          children: I
                             ? (0, s.jsx)("div", {
-                                className: w.EditTitle,
+                                className: y.EditTitle,
                                 children: (0, s.jsx)("h1", {
-                                  children: (0, j.we)(
+                                  children: (0, f.we)(
                                     "#AchievementEditor_AchievementsTable_Header_CreateGroup",
                                   ),
                                 }),
                               })
                             : (0, s.jsx)("div", {
-                                className: w.EditTitle,
+                                className: y.EditTitle,
                                 children: (0, s.jsx)("h1", {
-                                  children: (0, j.we)(
+                                  children: (0, f.we)(
                                     "#AchievementEditor_Group_Tools_Edit",
                                   ),
                                 }),
                               }),
                         }),
                         (0, s.jsxs)("div", {
-                          className: w.GroupData,
+                          className: y.GroupData,
                           children: [
                             (0, s.jsxs)("div", {
                               children: [
                                 (0, s.jsxs)("div", {
                                   children: [
-                                    (0, j.we)(
+                                    (0, f.we)(
                                       "#AchievementEditor_Group_Field_Restrictions",
                                     ),
                                     ":",
@@ -5064,36 +5128,22 @@
                                   children: [
                                     (0, s.jsxs)("p", {
                                       children: [
-                                        (0, j.we)(
+                                        (0, f.we)(
                                           "#AchievementEditor_Group_Edit_Field_Restrictions_Description",
                                         ),
                                         ":",
                                       ],
                                     }),
-                                    (0, s.jsx)(u.l6, {
-                                      options: ["0"].concat(
-                                        v.map((e) => e.appid),
-                                      ),
-                                      getOptionLabel: (e) =>
-                                        "0" == (e ?? "0")
-                                          ? (0, j.we)(
-                                              "#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers",
-                                            )
-                                          : v.find((t) => t.appid == e)?.name,
-                                      selectedValue: A ?? "0",
-                                      onSelectionChange: (e) => {
-                                        b(e);
-                                      },
-                                    }),
-                                    (0, s.jsx)(V, { info: D.app }),
+                                    (0, s.jsx)(W, { value: g, setValue: x }),
+                                    (0, s.jsx)(M, { info: N.app }),
                                   ],
                                 }),
                               ],
                             }),
                             (0, s.jsxs)("div", {
-                              className: w.VisibilityColumn,
+                              className: y.VisibilityColumn,
                               children: [
-                                (!!n || T) &&
+                                (!!n || I) &&
                                   (0, s.jsxs)("div", {
                                     children: [
                                       (0, s.jsxs)(o.s, {
@@ -5101,13 +5151,13 @@
                                           (0, s.jsxs)(o.s, {
                                             flexGrow: "1",
                                             children: [
-                                              (0, j.we)(
+                                              (0, f.we)(
                                                 "#AchievementEditor_Group_Field_Name",
                                               ),
                                               ":",
                                             ],
                                           }),
-                                          R &&
+                                          D &&
                                             (0, s.jsx)(o.s, {
                                               children: (0, s.jsx)("p", {
                                                 children:
@@ -5120,19 +5170,19 @@
                                         children: [
                                           (0, s.jsxs)("div", {
                                             children: [
-                                              (0, j.we)(
+                                              (0, f.we)(
                                                 "#AchievementEditor_Group_Edit_Field_Name_Description",
                                               ),
                                               " ",
-                                              (0, s.jsx)(y.Mq, {
-                                                locstring: g,
+                                              (0, s.jsx)(E.Mq, {
+                                                locstring: v,
                                               }),
                                             ],
                                           }),
-                                          (0, s.jsx)(y.Pk, {
+                                          (0, s.jsx)(E.Pk, {
                                             autofocus: !0,
-                                            value: g,
-                                            setValue: f,
+                                            value: v,
+                                            setValue: _,
                                           }),
                                         ],
                                       }),
@@ -5141,7 +5191,7 @@
                                 (0, s.jsxs)("div", {
                                   children: [
                                     (0, s.jsx)("div", {
-                                      children: (0, j.we)(
+                                      children: (0, f.we)(
                                         "#AchievementEditor_Group_Field_DeveloperOnly",
                                       ),
                                     }),
@@ -5152,9 +5202,9 @@
                                         padding: "1",
                                         radius: "sm",
                                         children: (0, s.jsx)(d.S, {
-                                          checked: I,
-                                          onChange: N,
-                                          children: (0, j.we)(
+                                          checked: C,
+                                          onChange: S,
+                                          children: (0, f.we)(
                                             "#AchievementEditor_Group_Field_DeveloperOnly",
                                           ),
                                         }),
@@ -5162,12 +5212,12 @@
                                     }),
                                   ],
                                 }),
-                                !T &&
+                                !I &&
                                   (0, s.jsxs)("div", {
                                     children: [
                                       (0, s.jsxs)("div", {
                                         children: [
-                                          (0, j.we)(
+                                          (0, f.we)(
                                             "#AchievementEditor_Group_Field_Archive",
                                           ),
                                           ":",
@@ -5180,9 +5230,9 @@
                                           padding: "1",
                                           radius: "sm",
                                           children: (0, s.jsx)(d.S, {
-                                            checked: C,
-                                            onChange: S,
-                                            children: (0, j.we)(
+                                            checked: A,
+                                            onChange: w,
+                                            children: (0, f.we)(
                                               "#AchievementEditor_Group_Field_IsArchived",
                                             ),
                                           }),
@@ -5191,18 +5241,18 @@
                                     ],
                                   }),
                                 (0, s.jsxs)("div", {
-                                  className: w.VisibilitySection,
+                                  className: y.VisibilitySection,
                                   children: [
                                     (0, s.jsxs)("div", {
                                       children: [
-                                        (0, j.we)(
+                                        (0, f.we)(
                                           "#AchievementEditor_Group_Field_Visibility",
                                         ),
                                         ":",
                                       ],
                                     }),
                                     (0, s.jsx)("div", {
-                                      children: (0, s.jsx)(O, { ...D }),
+                                      children: (0, s.jsx)(F, { ...N }),
                                     }),
                                   ],
                                 }),
@@ -5211,14 +5261,14 @@
                           ],
                         }),
                         !i &&
-                          (0, s.jsx)(E.Aj, {
+                          (0, s.jsx)(b.Aj, {
                             onSave: async () => {
                               void 0 !== (await t.save()) && r && r();
                             },
                             onCancel: () => {
                               t.reset(), a && a();
                             },
-                            pending: k,
+                            pending: T,
                           }),
                       ],
                     }),
@@ -5227,26 +5277,26 @@
               ],
             });
           }
-          function W(e) {
+          function K(e) {
             const { groupid: t, group: n, hideModal: i } = e,
-              { appID: r } = (0, p.L3)(),
-              a = (0, p.F0)(r, t),
-              l = (0, p.FK)(r, t),
-              d = (0, E.fw)(t, n),
+              { appID: r } = (0, h.L3)(),
+              a = (0, h.F0)(r, t),
+              l = (0, h.FK)(r, t),
+              d = (0, b.fw)(t, n),
               u = !l || 0 === l.length;
-            return (0, s.jsx)(_.EN, {
+            return (0, s.jsx)(g.EN, {
               active: !0,
-              children: (0, s.jsx)(_.x_, {
+              children: (0, s.jsx)(g.x_, {
                 onEscKeypress: i,
-                children: (0, s.jsxs)(m.U9, {
-                  className: w.GroupDeleteDialog,
+                children: (0, s.jsxs)(v.U9, {
+                  className: y.GroupDeleteDialog,
                   children: [
-                    (0, s.jsx)(m.Y9, {
-                      children: (0, j.we)(
+                    (0, s.jsx)(v.Y9, {
+                      children: (0, f.we)(
                         "#AchievementEditor_Group_Delete_Dialog_Title",
                       ),
                     }),
-                    (0, s.jsxs)(m.nB, {
+                    (0, s.jsxs)(v.nB, {
                       children: [
                         !u &&
                           (0, s.jsxs)(o.s, {
@@ -5257,10 +5307,10 @@
                             background: "red-7",
                             style: { color: "var(--color-text-light-title)" },
                             children: [
-                              (0, s.jsx)(E.id, {}),
+                              (0, s.jsx)(b.id, {}),
                               (0, s.jsx)(c.EY, {
                                 contrast: "title",
-                                children: (0, j.we)(
+                                children: (0, f.we)(
                                   "#AchievementEditor_Group_Delete_Dialog_WarnNonEmptyGroup",
                                 ),
                               }),
@@ -5270,25 +5320,25 @@
                           direction: "column",
                           gap: "1",
                           padding: "2",
-                          className: w.GroupBox,
+                          className: y.GroupBox,
                           children: [
                             (0, s.jsxs)(c.EY, {
                               children: [
-                                (0, j.we)(
+                                (0, f.we)(
                                   "#AchievementEditor_Group_Field_Name",
                                 ),
                                 ": ",
-                                (0, y.ZM)(n?.name, "english") ?? n?.name.token,
+                                (0, E.ZM)(n?.name, "english") ?? n?.name.token,
                               ],
                             }),
-                            (0, s.jsx)(O, { ...d }),
+                            (0, s.jsx)(F, { ...d }),
                           ],
                         }),
                       ],
                     }),
-                    (0, s.jsx)(m.wi, {
-                      children: (0, s.jsx)(E.Aj, {
-                        saveText: (0, j.we)(
+                    (0, s.jsx)(v.wi, {
+                      children: (0, s.jsx)(b.Aj, {
+                        saveText: (0, f.we)(
                           "#AchievementEditor_Group_Delete_Dialog_Delete",
                         ),
                         saveColor: "red",
@@ -5304,9 +5354,9 @@
               }),
             });
           }
-          ([p, A, y, E] = b.then ? (await b)() : b), i();
-        } catch (Y) {
-          i(Y);
+          ([h, w, E, b] = C.then ? (await C)() : C), i();
+        } catch (Q) {
+          i(Q);
         }
       });
     },

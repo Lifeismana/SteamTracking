@@ -12719,6 +12719,20 @@
           });
         },
         _ = (_) => {
+          const { category: _, className: _ } = _;
+          if (!_) return null;
+          const _ = _(_);
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.SteamDeckCompatInfo, _),
+            children: [
+              (0, _.jsx)(_.fhy, {}),
+              (0, _.jsx)(_, {
+                className: _.SteamDeckCompatIcon,
+              }),
+            ],
+          });
+        },
+        _ = (_) => {
           const { category: _, elControllerSupport: _ } = _,
             _ = _(_);
           return (0, _.jsxs)("div", {
@@ -83234,6 +83248,7 @@
         fSs: () => _,
         faJ: () => _,
         ffu: () => _,
+        fhy: () => _,
         g$j: () => _,
         h20: () => _,
         hz4: () => _,
@@ -87497,6 +87512,32 @@
             fill: "currentColor",
             _: "M32.7687 5H3.2313C1.4504 5.01034 0.0102603 6.45488 0 8.24129V26.7587C0.0103061 28.5451 1.4504 29.9897 3.2313 30H32.7687C34.5496 29.9897 35.9897 28.5451 36 26.7587V8.24129C35.9897 6.45488 34.5496 5.01029 32.7687 5ZM6.92325 16.1113H10.6149C11.3799 16.1113 11.9996 16.7327 11.9996 17.5002C11.9996 18.2676 11.3801 18.8892 10.6149 18.8892H6.92325C6.1583 18.8892 5.53858 18.2678 5.53858 17.5002C5.53858 16.7329 6.15807 16.1113 6.92325 16.1113ZM19.8472 24.4449H6.92325C6.1583 24.4449 5.53858 23.8235 5.53858 23.0559C5.53858 22.2886 6.15807 21.667 6.92325 21.667H19.8472C20.6105 21.667 21.2318 22.2884 21.2318 23.0559C21.2318 23.8233 20.6105 24.4449 19.8472 24.4449ZM29.0773 24.4449H25.3857C24.6207 24.4449 24.001 23.8235 24.001 23.0559C24.001 22.2886 24.6205 21.667 25.3857 21.667H29.0773C29.8423 21.667 30.462 22.2884 30.462 23.0559C30.462 23.8233 29.8425 24.4449 29.0773 24.4449ZM29.0773 18.8892H16.1534C15.3901 18.8892 14.7688 18.2678 14.7688 17.5003C14.7688 16.733 15.3901 16.1113 16.1534 16.1113H29.0773C29.8423 16.1113 30.462 16.7327 30.462 17.5003C30.462 18.2676 29.8425 18.8892 29.0773 18.8892Z",
           }),
+        });
+      }
+      function _(_) {
+        const { className: _, ..._ } = _;
+        return (0, _.jsxs)("svg", {
+          className: (0, _._)(_().SteamMachineCompatLogo, _),
+          ..._,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
+              fill: "white",
+            }),
+            (0, _.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
+              fill: "white",
+            }),
+          ],
         });
       }
       function _(_) {
@@ -99669,23 +99710,29 @@
         return _() ? (0, _.jsx)(_, {}) : _.children;
       }
       function _() {
-        const [_, _] = _.useState(null);
-        return (
-          _(_?.parentElement?.parentElement, _.ResponsiveHeaderContent),
-          _(_?.parentElement?.parentElement, _.ElementTakeover),
-          (0, _.jsx)("div", {
-            className: _()(_.SearchContainer),
-            ref: _,
-            children: (0, _.jsx)(_, {
-              bBackdropActive: !1,
-            }),
-          })
-        );
-      }
-      function _(_, _) {
-        _.useLayoutEffect(() => {
-          if (_ && _) return _.classList.add(_), () => _.classList.remove(_);
-        }, [_, _]);
+        const _ = _.useCallback((_) => {
+          const _ = (function (_, _) {
+            let _ = _;
+            for (; (_ = _.parentElement); )
+              if (_.classList.contains(_)) return _;
+            return null;
+          })(_, "responsive_header_content");
+          return _
+            ? (_.classList.add(_.ResponsiveHeaderContent),
+              _.classList.add(_.ElementTakeover),
+              () => {
+                _.classList.remove(_.ResponsiveHeaderContent),
+                  _.classList.remove(_.ElementTakeover);
+              })
+            : void console.warn("Couldn't find responsive header menu");
+        }, []);
+        return (0, _.jsx)("div", {
+          className: _()(_.SearchContainer),
+          ref: _,
+          children: (0, _.jsx)(_, {
+            bBackdropActive: !1,
+          }),
+        });
       }
       const _ = _.lazy(() =>
         Promise.all([
@@ -101362,17 +101409,17 @@
                           fallback: null,
                           children: (0, _.jsx)(_, {}),
                         }),
-                      "store-menu-responsive-search": () =>
-                        (0, _.jsx)(_.Suspense, {
-                          fallback: null,
-                          children: (0, _.jsx)(_, {}),
-                        }),
                     },
                   }),
                   (0, _.jsx)(_._, {
                     omitFocusNavTreeBridge: !0,
                     config: {
                       "store-menu-v7": () =>
+                        (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                      "store-menu-responsive-search": () =>
                         (0, _.jsx)(_.Suspense, {
                           fallback: null,
                           children: (0, _.jsx)(_, {}),

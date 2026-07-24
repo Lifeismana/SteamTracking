@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Všechny hry",
     "SteamOS_FilterDescription_Compatible": "Budou zahrnuty hry, které byly zkontrolovány na kompatibilitu se systémem SteamOS.",
     "SteamOS_FilterDescription_Compatible_Unknown": "Budou zahrnuty hry, které byly zkontrolovány na kompatibilitu se systémem SteamOS, a také hry, které zkontrolovány nebyly.",
-    "SteamOS_FilterDescription_AllGames": "Zobrazí se všechny hry z Vaší knihovny, včetně těch, které na systému SteamOS nemusí fungovat."
+    "SteamOS_FilterDescription_AllGames": "Zobrazí se všechny hry z Vaší knihovny, včetně těch, které na systému SteamOS nemusí fungovat.",
+    "MachineVerified_FilterDescription_Verified": "Zobrazí se pouze hry, které bez problémů fungují se zařízením Steam Machine.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Zobrazí se všechny plně kompatibilní a také částečně kompatibilní hry, které fungují, ale interakce s nimi nebo jejich konfigurace může skrývat nějaké překážky.",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Zobrazí se všechny plně i částečně kompatibilní hry a také hry, jejichž kompatibilita se zařízením Steam Machine ještě nebyla zkontrolována.",
+    "MachineVerified_FilterDescription_AllGames": "Zobrazí se všechny hry z Vaší knihovny, včetně těch, které na zařízení Steam Machine nemusí fungovat.",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }

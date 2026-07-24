@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Vis denne personen øverst på vennelisten, slik at de er lett å finne",
     "FriendSettings_Mobile_BlockDesc": "Personen ser deg som frakoblet, og du vil ikke motta samtalemeldinger fra dem",
     "FriendSettings_Mobile_Notifications": "Mobilvarsler",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Kun bygg inn bilder og andre medier over Wi-Fi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Bygg kun inn bilder og andre medier når du er på Wi-Fi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Last opp gjeldende øktfiler",
     "FriendSettings_Mobile_UploadPreviousLogs": "Last opp tidligere øktfiler",
     "FriendSettings_Mobile_SaveImageCaptures": "Lagre skjermbilder",

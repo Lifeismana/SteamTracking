@@ -1,5 +1,8 @@
 {
     "language": "romanian",
+    "EventEditor_Loc_Title": "Gestionează localizarea",
+    "EventEditor_Loc_Overview": "Exportă și importă fișierele pentru localizare ca să gestionezi traducerea textelor pentru întregul eveniment.",
+    "EventEditor_Loc_Overview_Page": "Exportă și importă fișierele pentru localizare ca să gestionezi traducerea textelor pentru întreaga pagină.",
     "LoginRedirect_Dialog_Title": "Conectează-te",
     "LoginRedirect_Dialog_Description": "Conectează-te pentru a adăuga acest articol în lista ta de dorințe, a-l urmări sau a-l marca drept ignorat. Apasă OK pentru a fi redirecționat către pagina de conectare.",
     "Wishlist_NotSignedIn": "Conectează-te sau deschide pagina aceasta în aplicația Steam pentru a adăuga produsul în lista de dorințe, a-l urmări sau a-l achiziționa.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "URL-ul %1$s este acceptat",
     "SteamURLInvalid": "Eroare: URL-ul nu este o proprietate Steam (magazin/comunitate)",
     "AnchorHashInputInvalid": "Input nevalid",
+    "Sale_Section_Label_Color": "Culoarea marcajului",
+    "Sale_Section_Background_Top": "Degradeu de fundal (sus)",
+    "Sale_Section_Background_Bottom": "Degradeu de fundal (jos)",
     "Reservation_JoinPool": "Înscrie-te pe listă",
     "Reserationn_NoListJoined": "Selectează un model de mai jos pentru a te înscrie. Clienții eligibili se pot înscrie pentru până la %1$s modele.",
     "Reservation_InPool": "Ești înscris pentru modelele selectate de mai jos",

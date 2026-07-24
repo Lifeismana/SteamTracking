@@ -1155,5 +1155,6 @@
     "PersonalCalendar_More": "+%1$s More",
     "PersonalCalendar_EmptyDay": "We don't have any new releases to recommend to you on this day <1>Check out the rest of your calendar!</1>",
     "Wishlist_QuickAdd_Header": "Categorize",
+    "Wishlist_QuickAdd_RecentAndSuggested": "Recent & Suggested",
     "dummy_for_end_of_file_convenience": "dummy"
 }

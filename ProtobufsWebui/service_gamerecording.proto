@@ -83,7 +83,6 @@ message CGameRecording_ExportClipPreview_Response {
 message CGameRecording_ExportProgress_Notification {
 	optional float progress = 1;
 	optional string clip_id = 2;
-	optional int32 eresult = 3;
 }
 
 message CGameRecording_GetAndTrimPostGameHighlights_Request {

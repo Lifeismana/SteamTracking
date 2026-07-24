@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Hiển thị người này ở đầu danh sách bạn bè của tôi để dễ tìm",
     "FriendSettings_Mobile_BlockDesc": "Họ sẽ thấy bạn đang rời mạng và bạn sẽ không nhận được tin nhắn trò chuyện từ họ",
     "FriendSettings_Mobile_Notifications": "Thông báo trên di động",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Chỉ nhúng hình ảnh và các đa phương tiện khác khi bật wifi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Chỉ nhúng hình ảnh và các đa phương tiện khác khi bật Wi-Fi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Tải lên nhật ký phiên hiện tại",
     "FriendSettings_Mobile_UploadPreviousLogs": "Tải lên nhật ký phiên trước đó",
     "FriendSettings_Mobile_SaveImageCaptures": "Lưu ảnh chụp",

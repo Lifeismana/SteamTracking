@@ -5056,12 +5056,10 @@
           ? null
           : (0, _.jsx)("div", {
               className: _().SignInLink,
-              children: (0, _._)(
-                "#Cart_Gifting_SignInToSelectFriends",
-                (0, _.jsx)(_._, {
-                  onClick: () => (0, _._)(),
-                }),
-              ),
+              children: (0, _.jsx)(_._, {
+                onClick: () => (0, _._)(),
+                children: (0, _._)("#Cart_Gifting_SignInForFriends"),
+              }),
             });
       }
       function _(_) {
@@ -5093,6 +5091,26 @@
                 highlightedAccountIDs: _,
               }),
           ],
+        });
+      }
+      function _(_) {
+        const { lineItem: _, onClick: _ } = _,
+          { mutate: _ } = (0, _._)(),
+          _ = _.useCallback(() => {
+            _({
+              lineItemID: _.line_item_id,
+              lineItemFlags: _.flags,
+              giftInfo: {
+                ..._.gift_info,
+                email_giftee: "",
+              },
+            }),
+              __webpack_require__();
+          }, [_, _, _]);
+        return (0, _.jsx)(_._, {
+          color: "dull",
+          onClick: _,
+          children: (0, _._)("#Cart_EnterRecipientEmail"),
         });
       }
       function _(_) {
@@ -5271,7 +5289,10 @@
             (0, _.jsx)(_, {
               ..._,
             }),
-            !1,
+            (0, _.jsx)(_, {
+              onClick: _,
+              ..._,
+            }),
             (0, _.jsx)(_, {}),
           ],
         });

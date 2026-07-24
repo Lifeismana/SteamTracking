@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Afișează persoana aceasta în partea superioară a listei de prieteni, ca să poată fi găsită mai ușor",
     "FriendSettings_Mobile_BlockDesc": "Te vor vedea ca fiind offline și nu vei primi mesaje prin chat de la aceștia",
     "FriendSettings_Mobile_Notifications": "Notificări pe mobil",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Afișează imaginile încorporate și alte tipuri de conținut media doar atunci când sunt conectat la wifi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Afișează imaginile încorporate și alte tipuri de conținut media doar atunci când sunt conectat la o rețea Wi-Fi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Încarcă jurnalele sesiunii actuale",
     "FriendSettings_Mobile_UploadPreviousLogs": "Încarcă jurnalele sesiunii precedente",
     "FriendSettings_Mobile_SaveImageCaptures": "Salvează capturile de ecran",

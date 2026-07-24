@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "所有遊戲",
     "SteamOS_FilterDescription_Compatible": "包含經過測試且支援 SteamOS 的遊戲",
     "SteamOS_FilterDescription_Compatible_Unknown": "包含經測試支援 SteamOS 的遊戲，以及尚未測試 SteamOS 相容性的遊戲。",
-    "SteamOS_FilterDescription_AllGames": "顯示收藏庫中的所有遊戲，包括無法在 SteamOS 上順暢執行的遊戲。"
+    "SteamOS_FilterDescription_AllGames": "顯示收藏庫中的所有遊戲，包括無法在 SteamOS 上順暢執行的遊戲。",
+    "MachineVerified_FilterDescription_Verified": "僅顯示可在 Steam Machine 上順暢執行的遊戲。",
+    "MachineVerified_FilterDescription_Verified_Playable": "顯示所有已驗證遊戲，以及可能需要進行調整或設定才能遊玩的遊戲。",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "顯示所有已驗證和可遊玩遊戲，以及尚未測試 Steam Machine 相容性的遊戲。",
+    "MachineVerified_FilterDescription_AllGames": "顯示收藏庫中的所有遊戲，包括無法在 Steam Machine 上順暢執行的遊戲。",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }

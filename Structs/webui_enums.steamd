@@ -3303,6 +3303,16 @@ enum UnnamedEnum7c4ccc7e7f11da9c
 	TriggerForIncompleteCompletions = 2;
 }
 
+enum UnnamedEnum7cd98891c307c5cf
+{
+	Init = 0;
+	UserChooser = 1;
+	LoginWithBack = 2;
+	Login = 3;
+	WaitingForLibrary = 4;
+	EnterPin = 5;
+}
+
 enum UnnamedEnum7fc69a440e5248f6
 {
 	Invalid = 0;
@@ -4218,17 +4228,6 @@ enum UnnamedEnumad989ac806e57514
 	ClosedByPeer = 4;
 	ProblemDetectedLocally = 5;
 	Linger = -2;
-}
-
-enum UnnamedEnumb00802ca68381832
-{
-	Init = 0;
-	UserChooser = 1;
-	LoginWithBack = 2;
-	Login = 3;
-	RemoveConfirmation = 4;
-	WaitingForLibrary = 5;
-	EnterPin = 6;
 }
 
 enum UnnamedEnumb0a2812931bd301b

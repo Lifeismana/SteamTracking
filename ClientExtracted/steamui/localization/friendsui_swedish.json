@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Visa denna person överst på min vänlista så att de är lätta att hitta",
     "FriendSettings_Mobile_BlockDesc": "De kommer att se dig som offline och du kommer inte ta emot chattmeddelanden från dem",
     "FriendSettings_Mobile_Notifications": "Mobilaviseringar",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Bädda bara in bilder och andra medier med wifi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Bädda bara in bilder och andra medier vid anslutning med wifi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Ladda upp nuvarande sessionsloggar",
     "FriendSettings_Mobile_UploadPreviousLogs": "Ladda upp tidigare sessionsloggar",
     "FriendSettings_Mobile_SaveImageCaptures": "Spara tagna bilder",

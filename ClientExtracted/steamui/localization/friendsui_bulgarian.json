@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Изобразяване на това лице в най-горната част на списъка с приятели, така че да е лесно за намиране",
     "FriendSettings_Mobile_BlockDesc": "Те ще Ви виждат извън линия и няма да получавате чат съобщения от тях",
     "FriendSettings_Mobile_Notifications": "Мобилни известия",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Вграждане на изображения и друга медия само при ползване на Wi-Fi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Вграждане на изображения и други медии само при ползване на Wi-Fi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Качване на хронология от текуща сесия",
     "FriendSettings_Mobile_UploadPreviousLogs": "Качване на хронология от предходна сесия",
     "FriendSettings_Mobile_SaveImageCaptures": "Запазване на уловени изображения",

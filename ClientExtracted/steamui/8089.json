@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "すべてのゲーム",
     "SteamOS_FilterDescription_Compatible": "SteamOSのサポートのためにテストされたゲームを含む",
     "SteamOS_FilterDescription_Compatible_Unknown": "SteamOSのサポートのためにテストされたゲームと、SteamOS互換性テストがまだ行われていないゲームを含む。",
-    "SteamOS_FilterDescription_AllGames": "SteamOSで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示する。"
+    "SteamOS_FilterDescription_AllGames": "SteamOSで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示する。",
+    "MachineVerified_FilterDescription_Verified": "Steam Machineで快適に動作するゲームのみを表示します。",
+    "MachineVerified_FilterDescription_Verified_Playable": "「確認済み」のすべてのタイトルに加えて、プレイ可能であるものの操作や設定に追加の作業が必要な場合があるゲームを表示します。",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "「確認済み」および「プレイ可能」のすべてのタイトルに加えて、Steam Machineの互換性テストがまだ行われていないゲームを表示します。",
+    "MachineVerified_FilterDescription_AllGames": "Steam Machineで快適に動作しないゲームを含め、ライブラリ内のすべてのゲームを表示します。",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }

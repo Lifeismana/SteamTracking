@@ -453,14 +453,16 @@ $\nY8O
 '7GWgw
 '\n"k_EStreamControlSetBitrateOverride
 '\n"k_EStreamControlSetQualityOverride
+'\n#k_EBluetoothAudioPreference_Latency
+'\n#k_EBluetoothAudioPreference_Quality
 '\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
-'\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EClientNotificationType_AsyncGame
 '\n#k_EClientNotificationType_MajorSale
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
 '\n#k_EFrameStatClientBitrateKbitPerSec
@@ -626,7 +628,9 @@ $\nY8O
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentModerationSanction_Escalate
 )\n%k_EContentReportReason_Discrimination
+)\n%k_EContentReportReason_Miscategorized
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Sanctioned
@@ -743,7 +747,6 @@ $\nY8O
 +2D9
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
-+\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_EClientNotificationType_FriendMessage
 +\n'k_EClientNotificationType_TradeReversal
 +\n'k_ECommentThreadTypeUserReceivedNewGame
@@ -929,7 +932,7 @@ $\nY8O
 .EBrowserFeatureStatus
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
-.ECaptureFailedReason"%\n
+.ECaptureFailedReason"H\n
 .EFrameAccumulatedStat
 .EGameRecordingErrorType"8\n%CClientNotificationGameRecordingStart
 .EJSRegisterMethodType"
@@ -1130,6 +1133,7 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0)AA7A
 0000000000000000000000000000000000000000
+1000
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
@@ -1165,7 +1169,6 @@ $\nY8O
 0x%llx
 1.2.11
 1.6.37
-1000
 10BlankImage
 10CHintLabel
 10CMsgGoBack
@@ -1612,6 +1615,7 @@ $\nY8O
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentModerationSanction_HarassmentBanned
+1\n-k_EContentModerationSanction_HarassmentStrike
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -1743,6 +1747,7 @@ $\nY8O
 23CMsgSetWindowVisibility
 23CMsgSteamAuthCookiesSet
 23CNegotiationCompleteMsg
+23CStreamVideoOverflowMsg
 23CToggleMagnificationMsg
 23IClientParentalSettings
 23ParentalPlaytimeRequest
@@ -1880,6 +1885,7 @@ $\nY8O
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EClientNotificationType_ClaimSteamDeckRewards
 3\n/k_EClientNotificationType_FamilyPurchaseRequest
+3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EStreamControllerConfigMsg_ActiveConfigChange
@@ -2767,6 +2773,7 @@ CStopVideoDataMsg"
 CStreamDataLostMsg
 CStreamVideoLimit
 CStreamVideoMode
+CStreamVideoOverflowMsg
 CStreamingClientCaps
 CStreamingClientConfig
 CStreamingClientHandshakeInfo
@@ -3039,13 +3046,13 @@ EACState
 EAccessibilityContrastMode
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
+EBluetoothAudioPreference
 EBluetoothDeviceType
 EBroadcastEncoderSetting
 EBroadcastPermission
 EBrowserFeatureStatus
 EBrowserGPUStatus
 ECaptureFailedReason
-EChildProcessQueryCommand
 EChildProcessQueryExitCode
 EClientNotificationType
 ECloudGamingPlatform
@@ -4401,6 +4408,9 @@ PopulateFileList
 PopulateFileNameCompletion
 PopupHTML
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 Potential overflow in png_zalloc()
 PrepareBuffer( nNewLength ) == pstrNew
 PressButton
@@ -4926,6 +4936,7 @@ V_IsAbsolutePath
 V_IsSteamCloseProtocol
 V_IsValidURLCharacter
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
@@ -5222,6 +5233,7 @@ Zulu
 \n\rinitial_width
 \n\ris_system_key
 \n\rk_EAppTypeDLC
+\n\rlast_frame_id
 \n\rlong_frame_ms
 \n\rmouse_enabled
 \n\rnativeKeyCode
@@ -6058,6 +6070,7 @@ findactive
 findcount
 fingerid
 finnish
+first_frame_id
 fixed point overflow ignored
 fixed32
 fixed64
@@ -6640,7 +6653,6 @@ k_ECPUGovernor_Powersave
 k_ECaptureFailedReasonNone
 k_ECaptureFailedReasonUnknown
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
-k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
@@ -6677,6 +6689,7 @@ k_EContentReportReason_Gambling
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_None
+k_EContentReportReason_Piracy
 k_EContentReportReason_Raffles
 k_EContentReportReason_Spam
 k_EContentReportReason_Stalking
@@ -6874,6 +6887,7 @@ k_EStreamControlStopAudioData
 k_EStreamControlStopRequest
 k_EStreamControlStopVideoData
 k_EStreamControlSystemSuspend
+k_EStreamControlVideoOverflow
 k_EStreamDataLost
 k_EStreamDataPacket
 k_EStreamDiscoveryPingRequest

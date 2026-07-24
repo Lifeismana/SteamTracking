@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "将此用户显示在好友列表顶部以便查找",
     "FriendSettings_Mobile_BlockDesc": "对方将看到您处于离线状态，且您将不会收到对方发送的聊天消息",
     "FriendSettings_Mobile_Notifications": "移动通知",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "使用 wifi 时仅嵌入图片及其他媒体",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "使用 Wi-Fi 时仅嵌入图片及其他媒体",
     "FriendSettings_Mobile_UploadCurrentLogs": "上传当前会话日志",
     "FriendSettings_Mobile_UploadPreviousLogs": "上传之前会话日志",
     "FriendSettings_Mobile_SaveImageCaptures": "保存图像捕捉",

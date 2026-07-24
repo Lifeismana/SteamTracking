@@ -1067,12 +1067,58 @@ function ShowAvatarHandle()
 		elOptions.hide();
 	});
 
-	var elUploadFrame = $J( '<iframe src="https://steamcommunity.com/actions/FileUploader?type=group_avatar_image&gId=' + g_strCuratorSteamID+ '&bgColor=262627" width="400" height="30" border="0" frameborder="no"></iframe>' );
+	var elFileInput = $J( '<input type="file" name="avatar" accept="image/png,image/jpeg,image/webp" />' );
+	var elUploadButton = $J( '<a class="btnv6_blue_hoverfade btn_small btn_uppercase"><span>'+"Upload"+'</span></a>' );
 
+	elUploadButton.on( 'click', function()
+	{
+		var rgFiles = elFileInput[0] ? elFileInput[0].files : null;
+		if ( !rgFiles || rgFiles.length == 0 )
+		{
+			ShowAlertDialog( 'Error', 'Error attempting to update with following message:<br/>%1$s'.replace( /%1\$s/g, 'Please choose an image to upload.' ) );
+			return;
+		}
+
+		var oFormData = new FormData();
+		oFormData.append( 'avatar', rgFiles[0] );
+		oFormData.append( 'sessionid', g_sessionID );
+
+		function ShowUploadError( data )
+		{
+			var strMsg = ( data && data.message ) ? data.message : 'Something went wrong setting the avatar. Please try again.';
+			ShowAlertDialog( 'Error', 'Error attempting to update with following message:<br/>%1$s'.replace( /%1\$s/g, strMsg ) );
+		}
+
+		$J.ajax( {
+			url: g_strCuratorAdminURL + 'ajaxuploadavatar/',
+			data: oFormData,
+			type: 'POST',
+			processData: false,
+			contentType: false
+		} ).done( function ( data )
+		{
+			if ( data && data.success )
+			{
+				var strBustCache = ( data.avatar_full.indexOf( '?' ) >= 0 ? '&' : '?' ) + 't=' + Date.now();
+				$container.find( 'img.curator_avatar' ).attr( 'src', data.avatar_full + strBustCache );
+				$J( '#headerAvatarImg' ).attr( 'src', data.avatar_medium + strBustCache );
+				elOptions.hide();
+			}
+			else
+			{
+				ShowUploadError( data );
+			}
+		} ).fail( function ( xhr )
+		{
+			var data = null;
+			try { data = $J.parseJSON( xhr.responseText ); } catch ( e ) {}
+			ShowUploadError( data );
+		} );
+	} );
 
 	elOptions.hide();
 
-	elOptions.append( WrapFormFieldWithLabel( "Avatar",  elUploadFrame ) );
+	elOptions.append( WrapFormFieldWithLabel( "Avatar", $J('<div></div>').append( elFileInput ).append( elUploadButton ) ) );
 	elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append(elClose) ) );
 	$container.append(elOptions);
 

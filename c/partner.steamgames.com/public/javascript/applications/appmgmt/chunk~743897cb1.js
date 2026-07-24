@@ -57777,12 +57777,13 @@
             document.removeChild(_);
           } catch (_) {}
         }
-        static WriteCSVToFile(_, _) {
+        static WriteCSVToFile(_, _, _) {
           const _ = _().unparse(_, {
-            header: !0,
-          });
+              header: !0,
+            }),
+            _ = 1 == _ ? ["\ufeff" + _] : [_];
           _.WriteFile(
-            new Blob([_], {
+            new Blob(_, {
               type: "text/csv:charset=utf-8;",
             }),
             _,

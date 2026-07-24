@@ -410,7 +410,7 @@
 "Friends_PlayersDialog_Title"				"Jugadores"
 "Friends_CurrentPlayers_TabTitle"			"Partida actual"
 "Friends_RecentPlayers_TabTitle"			"Partidas recientes"
-"Friends_AddPlayerAsFriend"				"Agregar como amigo..."
+"Friends_AddPlayerAsFriend"				"Agregar amigo..."
 "Friends_NoRecentlyPlayedWithUsers"		"No has jugado recientemente a juegos de Steam con nadie."
 "Friends_NoCurrentlyPlayedWithUsers"		"El servidor de la partida no ha detectado usuarios de Steam."
 "Friends_PlayerName"						"Nombre del perfil"

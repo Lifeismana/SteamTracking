@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Alle spil",
     "SteamOS_FilterDescription_Compatible": "Inkluder spil, som er blevet testet og understøtter SteamOS.",
     "SteamOS_FilterDescription_Compatible_Unknown": "Inkluder spil, som er blevet testet og understøtter SteamOS, plus spil, som endnu ikke er blevet testet for SteamOS-kompatibilitet.",
-    "SteamOS_FilterDescription_AllGames": "Vis alle spil i dit bibliotek, inklusive spil, der ikke kører godt på SteamOS."
+    "SteamOS_FilterDescription_AllGames": "Vis alle spil i dit bibliotek, inklusive spil, der ikke kører godt på SteamOS.",
+    "MachineVerified_FilterDescription_Verified": "Vis kun spil, som fungerer uden videre med Steam Machine.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Vis alle bekræftede spil og spil, som er spilbare, men som kan kræve ekstra arbejde at interagere med eller konfigurere.",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Vis alle bekræftede og spilbare spil samt spil, som endnu ikke er blevet testet for kompatibilitet med Steam Machine.",
+    "MachineVerified_FilterDescription_AllGames": "Vis alle spil i dit bibliotek, inklusive spil, der ikke kører godt på Steam Machine.",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }

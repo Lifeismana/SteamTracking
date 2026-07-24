@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Todos os jogos",
     "SteamOS_FilterDescription_Compatible": "Incluir jogos que foram testados e são compatíveis com SteamOS.",
     "SteamOS_FilterDescription_Compatible_Unknown": "Incluir jogos que foram testados e são compatíveis com o SteamOS, para além de jogos cuja compatibilidade com o SteamOS ainda não foi testada.",
-    "SteamOS_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no SteamOS."
+    "SteamOS_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no SteamOS.",
+    "MachineVerified_FilterDescription_Verified": "Mostrar apenas jogos que funcionam naturalmente na Steam Machine.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis, mas que podem precisar de passos adicionais para a interação ou configuração.",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com a Steam Machine ainda não foi testada.",
+    "MachineVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem na Steam Machine.",
+    "FrameVerified_FilterDescription_Verified": "Mostrar apenas jogos que funcionam naturalmente no Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Mostrar todos os jogos Aprovados e jogos que são Jogáveis no Steam Frame, mas que podem precisar de passos adicionais para a interação ou configuração.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Mostrar todos os jogos Aprovados e Jogáveis, para além de jogos cuja compatibilidade com o Steam Frame ainda não foi testada.",
+    "FrameVerified_FilterDescription_AllGames": "Mostrar todos os jogos da tua biblioteca, incluindo aqueles que não funcionam bem no Steam Frame."
 }

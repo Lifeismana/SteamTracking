@@ -549,8 +549,8 @@
 "Steam_ChangePasswordFailedSmsFailed"			"Falha ao alterar a palavra-passe.\nVerifica se introduziste o código da SMS corretamente."
 "Steam_ChangePasswordSuccessful"		"A tua palavra-passe foi alterada com sucesso.\nUtiliza esta nova palavra-passe sempre que iniciares sessão no Steam."
 "Steam_ForceChangePassword"				"A tua conta requer uma palavra-passe nova, porque a tua palavra-passe atual já não cumpre os requisitos de complexidade do Steam, ou porque o Suporte Steam recuperou a tua conta perdida ou roubada e definiu uma palavra-passe-temporária.\n\nVamos ajudar-te a estabelecer uma nova palavra-passe agora."
-"Steam_ChangePasswordFailedIllegal"		"Falha ao mudar palavra-passe.\nA palavra-passe não satisfaz os requerimentos de complexidade adicionais. Por favor, escolhe de novo."
-"Steam_ChangePasswordFailedReuse"		"Falha ao alterar a palavra-passe.\nNão podes reutilizar uma palavra-passe antiga. Por favor, escolhe de novo."
+"Steam_ChangePasswordFailedIllegal"		"Falha ao mudar palavra-passe.\nA palavra-passe não satisfaz os requisitos de complexidade adicionais. Escolhe outra palavra-passe."
+"Steam_ChangePasswordFailedReuse"		"Falha ao alterar a palavra-passe.\nNão podes reutilizar uma palavra-passe antiga. Escolhe outra palavra-passe."
 "Steam_PasswordStrength"				"Eficácia da palavra-passe:"
 
 "Steam_MustRestart_Title"		"Steam - É necessário reiniciar"
@@ -1149,7 +1149,7 @@
 "SteamUI_AccountNameInUse" "Falha ao criar a conta.\nEste nome de conta já está a ser utilizado.\nPor favor, tenta novamente com um nome de conta diferente."
 "Steam_ErrorValidEmailRequired" "É necessário um endereço de e-mail válido."
 "Steam_ForgottenPassword_CouldNotFindEmail" "Essa conta não foi encontrada.\n\nIntroduz o nome de conta que utilizas para iniciar sessão no Steam."
-"SteamUI_CreateAccountFailedPasswordIllegal" "Falha ao criar conta.\nA palavra-passe não satisfaz os requisitos de complexidade adicionais. Por favor, escolhe de novo."
+"SteamUI_CreateAccountFailedPasswordIllegal" "Falha ao criar conta.\nA palavra-passe não satisfaz os requisitos de complexidade adicionais. Escolhe outra palavra-passe."
 
 "SteamUI_ChosenCreateNewAccountHeadline" "A tua Conta Steam é importante!"
 "SteamUI_ChosenCreateNewAccount" "Não te esqueças do nome de utilizador e da palavra-passe - precisas de iniciar sessão para aceder aos teus jogos. O Steam transferirá os teus jogos para qualquer computador que uses."
@@ -2422,7 +2422,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_Shutdown_Waiting_For_Download" "A parar download de %game% ..."
 "Steam_Shutdown_Waiting_For_Cloud" "A concluir sincronização com a Steam Cloud..."
 "Steam_Shutdown_Waiting_For_Logoff" "A terminar sessão ..."
-"Steam_Shutdown_ForceQuit" "Sair Agora"
+"Steam_Shutdown_ForceQuit" "Sair agora"
 
 
 "SteamUI_SecuROM_Revoke_Error_Title"	"Steam - Não foi possível concluir a desinstalação"

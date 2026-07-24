@@ -583,12 +583,14 @@ $d`D-laM
 '7GWgw
 'DAE
 'RL6
+'\n#k_EBluetoothAudioPreference_Latency
+'\n#k_EBluetoothAudioPreference_Quality
 '\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
-'\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
 '\n#k_EGraphicsPerfOverlayLevel_Minimal
@@ -720,7 +722,9 @@ $d`D-laM
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentModerationSanction_Escalate
 )\n%k_EContentReportReason_Discrimination
+)\n%k_EContentReportReason_Miscategorized
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Sanctioned
@@ -830,7 +834,6 @@ $d`D-laM
 +QQ 3K%
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
-+\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
@@ -1049,8 +1052,8 @@ $d`D-laM
 /+ep+eqU
 /.config/user-dirs.dirs
 /Desktop
-/Dtst
 /P8i
+/SteamFrame
 /ValveIPCSHM_%d
 /\n+k_EAppTestType_SteamDeckCompatibilityReview
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
@@ -1230,6 +1233,7 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+05:03:33
 08bX
 0A/8
 0F`8
@@ -1988,6 +1992,7 @@ $d`D-laM
 1H@H
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentModerationSanction_HarassmentBanned
+1\n-k_EContentModerationSanction_HarassmentStrike
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -2093,7 +2098,6 @@ $d`D-laM
 22CefRenderHandlerCppToC
 22CefStringVisitorCppToC
 22CefV8InterceptorCppToC
-23:34:09
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -2263,9 +2267,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
+32767
 32CefDevToolsMessageObserverCppToC
 3333
-32767
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2292,6 +2296,7 @@ $d`D-laM
 3DES(168)
 3Wk1^
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
@@ -2316,7 +2321,6 @@ $d`D-laM
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 474E4U4W4c4i4m4
-4766605f244a2d18d26d0cfe222d25d6698cd5a0
 47CMsgControllerInputControllerActionMouseBinding
 49fN
 4@AA
@@ -2357,6 +2361,7 @@ $d`D-laM
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
 5\tuy
+5bb14b1dcc8e1bbadae0c36535a69b1220034351
 5mF\tfE
 5mmQ
 5q\teH
@@ -3158,7 +3163,6 @@ Browser.NotifyUserActivation
 Browser.OpenDevTools
 Browser.Paste
 Browser.RemoveAllBackstackEntries
-Browser.RemoveAllBackstackEntries takes zero arguments
 Browser.ReplaceMisspelling
 Browser.RestartJSContext
 Browser.SetBackgroundThrottlingDisabled
@@ -4207,6 +4211,7 @@ CreateBrowser %u type:%u flags:%u  (%d, %d) %ux%u
 CreateBrowserWindow
 CreateInterface
 CreateOutputWindow
+CreateOutputWindow: Adding SDL_WINDOW_TRANSPARENT
 CreateOutputWindow: Failed to initialize SDL_INIT_VIDEO: %s
 CreateOutputWindow: SDL_INIT_VIDEO had to be manually initialized
 Created
@@ -4548,6 +4553,7 @@ EAppUpdateState
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
 EAuthTokenPermission
+EBluetoothAudioPreference
 EBluetoothDeviceType
 EBroadcastEncoderSetting
 EBroadcastPermission
@@ -4681,7 +4687,6 @@ EC_POINT_set_to_infinity
 EC_POINTs_make_affine
 EC_POINTs_mul
 EC_PRIVATEKEY
-EChildProcessQueryCommand
 EChildProcessQueryExitCode
 EClanAccountType
 EClanAction
@@ -4996,6 +5001,7 @@ Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error writing file
 Error: %s: GL error at %s:%d: %s
+Error: %s: GLX_EXT_texture_from_pixmap extension unavailable
 Error: %s: SetOverlayTexture failed
 Error: %s: XDamage is unavailable
 Error: %s: XInput extension not present\n
@@ -5288,7 +5294,7 @@ Flags
 FocusDbg [%s]
 FocusDbg [%s] (bFocus=%s) (prev m_bKeyFocus=%s) (source=%d) (vrkb=%s) (vrdictatesfocus=%s)
 FocusDbg [%s] (pWindow=%p)
-FocusDbg [%s] (source=%d) (vrdictatesfocus=%s)
+FocusDbg [%s] (source=%d) (vrdictatesfocus=%s) (m_bKeyFocus=%s)
 FocusDbg [%s] Calling CefBrowserHost::SetFocus(%s)
 FocusDbg [%s] Calling CefBrowserHost::SetFocus(true)
 Forbidden
@@ -5297,6 +5303,7 @@ Force Password Change
 Force Run Restriction
 Force canceled while pending
 Force enable browser view underlays
+Force enabling sandbox
 ForceUpdate
 Forced Off
 Forced create but already created for SharedObjectEvent\n
@@ -5312,7 +5319,6 @@ Free Weekend
 Free disk space for %s would overflow
 Freed EMS handle %u
 Freed XMS handle %u
-Fremont
 French
 FrenemyFilter
 Friday
@@ -6195,7 +6201,6 @@ Google Swiftshader
 Google.Protobuf.Reflection
 Got %s failure (%s)\n
 Got over 32MB message in CEFThread Command Stream!
-GpuTopology
 GrabPay
 Gray color space not permitted on RGB PNG
 Greek
@@ -6444,6 +6449,7 @@ Initializing graphics device
 Input file read error
 Input size too large:
 Input.EnableControllerAnalogInputMessages
+Input.EnableControllerAnalogInputMessages requires 1 argument: <enabled: boolean>
 Input.RegisterForControllerAnalogInputMessages
 Input.RegisterForControllerInputMessages
 Input.RegisterForKeyboardDeviceChanges
@@ -6640,7 +6646,7 @@ January
 Japanese
 JoinedGroup
 Joystick
-Jul 21 2026
+Jul 23 2026
 July
 June
 K'iche'
@@ -7045,6 +7051,7 @@ MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
 MaybeAllocateAligned cannot fail here.
+MbP?
 Meeting
 Member
 Members
@@ -8069,6 +8076,9 @@ Polynomial:
 PopulateFileDialogFilters
 Portuguese
 PositionWindowRelative requires 5 parameters: <restore details: string> <x: number> <y: number> <width: number> <height: number>
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostMessage
 PostTime
@@ -9067,6 +9077,7 @@ SteamCloudDocuments
 SteamDeck
 SteamGameId=
 SteamID
+SteamMachine
 SteamOSGeneric
 SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
@@ -9719,6 +9730,7 @@ V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
@@ -10658,6 +10670,7 @@ _g@Cg
 _input
 _internal.BInGpuFallbackMode
 _internal.ExecutePromise
+_internal.GetBrowserProcessDetails
 _internal.GetDisplayScaleFactors
 _internal.IsDebuggingEnabled
 _internal.RequestDisableGpu
@@ -11069,7 +11082,7 @@ bAllow
 bB"`3
 bBrowserViewDomainMapping
 bEnableCertWarningDisplay
-bGPUEnabled
+bGpuEnabled
 bHasCertError
 bHasMultipleInputs
 bInput
@@ -11083,6 +11096,7 @@ bNewNavigation
 bOnlyAllowTrustedPopups
 bPreventCloseFromJavascript
 bS11*?
+bUnderlayCapable
 bUnderlaySupported
 bV}TS
 b\fLM%
@@ -11969,6 +11983,7 @@ controller_steamcontroller_unknown
 controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
+controller_switch2_pro_generic
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -17236,6 +17251,7 @@ internal row width error
 internal sequential row size calculation error
 internal write transform logic error
 internal_disablegpu
+internal_getbrowserprocessdetails
 internal_getdisplayscalefactors
 internal_ingpufallbackmode
 internal_setdevmode
@@ -17556,7 +17572,6 @@ k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
 k_ECceResult_Failk_ECceResult_InvalidArgumentk_ECceResult_InvalidPathk_ECceResult_InvalidPathActionSetKeyk_ECceResult_InvalidPathActivatorIndexk_ECceResult_InvalidPathBaseActionSetKeyk_ECceResult_InvalidPathBindingIndexk_ECceResult_InvalidPathInputKeyk_ECceResult_InvalidPathLayerActionSetKeyk_ECceResult_InvalidPathSourceKeyk_ECceResult_InvalidPathSourceModeKeyk_ECceResult_InvalidValueActionSetNamek_ECceResult_InvalidValueActivatork_ECceResult_InvalidValueActivatorActivationk_ECceResult_InvalidValueActivatorSettingKeyk_ECceResult_InvalidValueActivatorSettingValuek_ECceResult_InvalidValueBindingk_ECceResult_InvalidValueBindingControllerActionk_ECceResult_InvalidValueBindingGameActionk_ECceResult_InvalidValueBindingGameActionKeyk_ECceResult_InvalidValueBindingGameActionSetKeyk_ECceResult_InvalidValueBindingGamepadButtonk_ECceResult_InvalidValueBindingKeyboardKeyk_ECceResult_InvalidValueBindingModeShiftk_ECceResult_InvalidValueBindingMouseButtonk_ECceResult_InvalidValueBindingMouseWheelk_ECceResult_InvalidValueSourceModek_ECceResult_InvalidValueSourceModeSettingKeyk_ECceResult_InvalidValueSourceModeSettingValuek_ECceResult_NoEditingConfigurationk_ECceResult_NotImplementedk_ECceResult_Ok
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
-k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
@@ -17593,6 +17608,7 @@ k_EContentReportReason_Gambling
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_None
+k_EContentReportReason_Piracy
 k_EContentReportReason_Raffles
 k_EContentReportReason_Spam
 k_EContentReportReason_Stalking
@@ -21676,6 +21692,7 @@ winME
 winNT
 winVista
 winXP
+window.postMessage( 'browser_process_details_changed', '*' );
 window.postMessage( 'display_changed', '*' );
 window.postMessage( 'go_back', '*' );
 window.postMessage( 'go_forward', '*' );

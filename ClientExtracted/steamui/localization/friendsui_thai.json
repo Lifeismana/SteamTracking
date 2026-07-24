@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "แสดงชื่อเพื่อนคนนี้บนรายการสูงสุดของรายชื่อเพื่อน เพื่อความหาง่าย",
     "FriendSettings_Mobile_BlockDesc": "เพื่อนจะเห็นคุณออฟไลน์และคุณจะไม่สามารถรับข้อความแช็ตจากพวกเขาได้",
     "FriendSettings_Mobile_Notifications": "การแจ้งเตือนบนมือถือ",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "ฝังรูปภาพและสื่ออื่น ๆ เมื่อใช้ wifi เท่านั้น",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "ฝังรูปภาพและสื่ออื่น ๆ เมื่อใช้ Wi-Fi เท่านั้น",
     "FriendSettings_Mobile_UploadCurrentLogs": "อัปโหลดล็อกเซสชันปัจจุบัน",
     "FriendSettings_Mobile_UploadPreviousLogs": "อัปโหลดล็อกเซสชันก่อนหน้า",
     "FriendSettings_Mobile_SaveImageCaptures": "บันทึกการจับภาพ",

@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Alle spellen",
     "SteamOS_FilterDescription_Compatible": "Spellen toevoegen waarvan uit tests is gebleken dat ze SteamOS ondersteunen",
     "SteamOS_FilterDescription_Compatible_Unknown": "Spellen toevoegen waarvan uit tests is gebleken dat ze SteamOS ondersteunen, plus spellen die nog niet op SteamOS-compatibiliteit zijn getest.",
-    "SteamOS_FilterDescription_AllGames": "Alle spellen in je bibliotheek weergeven, inclusief spellen die niet goed op SteamOS draaien."
+    "SteamOS_FilterDescription_AllGames": "Alle spellen in je bibliotheek weergeven, inclusief spellen die niet goed op SteamOS draaien.",
+    "MachineVerified_FilterDescription_Verified": "Alleen spellen weergeven die goed functioneren op Steam Machine.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Alle geverifieerde titels weergeven, plus spellen die speelbaar zijn maar mogelijk extra aanpassingen nodig hebben om te navigeren of in te stellen.",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Alle geverifieerde en speelbare titels weergeven, plus spellen die nog niet zijn getest op compatibiliteit met Steam Machine.",
+    "MachineVerified_FilterDescription_AllGames": "Alle spellen in je bibliotheek weergeven, inclusief spellen die niet goed op Steam Machine draaien.",
+    "FrameVerified_FilterDescription_Verified": "Alleen spellen weergeven die goed functioneren op Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Alle voor Frame geverifieerde titels weergeven, plus spellen die speelbaar zijn maar mogelijk extra aanpassingen nodig hebben om te navigeren of in te stellen.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Alle geverifieerde en speelbare titels weergeven, plus spellen die nog niet zijn getest op compatibiliteit met Steam Frame.",
+    "FrameVerified_FilterDescription_AllGames": "Alle spellen in je bibliotheek weergeven, inclusief spellen die niet goed op Steam Frame draaien."
 }

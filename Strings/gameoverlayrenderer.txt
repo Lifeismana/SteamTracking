@@ -562,6 +562,7 @@ eglGetPlatformDisplayEXT
 eglGetProcAddress
 en_US.UTF-8
 enable
+environ
 exec
 execv
 execvp

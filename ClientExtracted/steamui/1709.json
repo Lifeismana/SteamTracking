@@ -1,5 +1,8 @@
 {
     "language": "spanish",
+    "EventEditor_Loc_Title": "Gestionar la localización",
+    "EventEditor_Loc_Overview": "Exporta e importa archivos de localización para gestionar la traducción de cadenas de todo tu evento.",
+    "EventEditor_Loc_Overview_Page": "Exporta e importa archivos de localización para gestionar la traducción de cadenas de toda tu página.",
     "LoginRedirect_Dialog_Title": "Iniciar sesión",
     "LoginRedirect_Dialog_Description": "Inicia sesión para añadir este artículo a tu lista de deseados, seguirlo o marcarlo como ignorado. Al hacer clic en «Aceptar», se te redirigirá a la página de inicio de sesión.",
     "Wishlist_NotSignedIn": "Inicia sesión o abre esta página en la aplicación de Steam para seguir, comprar o añadir juegos a la lista de deseados.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "URL %1$s aceptado",
     "SteamURLInvalid": "Error: el URL no corresponde a una propiedad de Steam (la tienda o la comunidad).",
     "AnchorHashInputInvalid": "Entrada no válida",
+    "Sale_Section_Label_Color": "Color de la etiqueta",
+    "Sale_Section_Background_Top": "Gradiente de fondo (parte superior)",
+    "Sale_Section_Background_Bottom": "Gradiente de fondo (parte inferior)",
     "Reservation_JoinPool": "Unirse a la lista",
     "Reserationn_NoListJoined": "Selecciona un modelo abajo para inscribirte. Los clientes que cumplan los requisitos pueden inscribirse hasta en %1$s modelos.",
     "Reservation_InPool": "Estás en la lista para los modelos seleccionados de abajo",

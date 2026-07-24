@@ -1,5 +1,8 @@
 {
     "language": "swedish",
+    "EventEditor_Loc_Title": "Hantera lokalisering",
+    "EventEditor_Loc_Overview": "Exportera och importera lokaliseringsfiler för översättning av strängar i hela eventet.",
+    "EventEditor_Loc_Overview_Page": "Exportera och importera lokaliseringsfiler och hantera översättning av strängar på hela sidan.",
     "LoginRedirect_Dialog_Title": "Logga in",
     "LoginRedirect_Dialog_Description": "Logga in för att lägga till på önskelistan, följa eller ignorera produkten. Om du klickar på OK skickas du vidare till inloggningssidan.",
     "Wishlist_NotSignedIn": "Logga in eller öppna den här sidan i Steam-appen för att lägga till på önskelistan, följa eller köpa.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL godkänd",
     "SteamURLInvalid": "URL:en leder inte till Steam (butik/gemenskap)",
     "AnchorHashInputInvalid": "Ogiltig inmatning",
+    "Sale_Section_Label_Color": "Etikettsfärg",
+    "Sale_Section_Background_Top": "Bakgrundsgradient (övre)",
+    "Sale_Section_Background_Bottom": "Bakgrundsgradient (nedre)",
     "Reservation_JoinPool": "Skriv upp dig på listan",
     "Reserationn_NoListJoined": "Välj en modell nedan för att registrera dig – kunder som uppfyller kraven kan registrera sig för upp till %1$s modeller.",
     "Reservation_InPool": "Du finns med på listan för de valda modellerna nedan.",

@@ -899,6 +899,9 @@ Plat_OutputDebugStringRaw
 Plat_RelativeTicks
 Plat_VirtualAccessFlags
 Plat_localtime
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 QPON
 QUEBEC

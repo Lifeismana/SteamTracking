@@ -2077,9 +2077,10 @@ License: MIT
             document.removeChild(r);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t) {
-          const r = n().unparse(e, { header: !0 });
-          s.WriteFile(new Blob([r], { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, r) {
+          const i = n().unparse(e, { header: !0 }),
+            a = 1 == r ? ["\ufeff" + i] : [i];
+          s.WriteFile(new Blob(a, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {

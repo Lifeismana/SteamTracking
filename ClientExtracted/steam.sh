@@ -39,6 +39,10 @@ MAGIC_RESTART_EXITCODE=42
 
 function has_beta_optin()
 {
+	if [[ "$STEAMROOT" == "$HOME/devkit-game/steam" ]]; then
+		return 0
+	fi
+
 	local betafile="$STEAMROOT/package/beta"
 	if [ ! -r "$betafile" ]; then
 		# No beta file, not in beta

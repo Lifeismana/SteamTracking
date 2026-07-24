@@ -9463,7 +9463,11 @@
             j.length > 0 &&
               (0, r.jsxs)("div", {
                 children: [
-                  (0, r.jsx)("div", { children: "Recent & Suggested" }),
+                  (0, r.jsx)("div", {
+                    children: (0, v.we)(
+                      "#Wishlist_QuickAdd_RecentAndSuggested",
+                    ),
+                  }),
                   (0, r.jsx)(Us, {
                     rgCategories: j,
                     header: null,

@@ -1,5 +1,8 @@
 {
     "language": "hungarian",
+    "EventEditor_Loc_Title": "Lokalizáció kezelése",
+    "EventEditor_Loc_Overview": "Lokalizációs fájlok exportálása és importálása az egész eseményedhez tartozó szövegek fordításának kezeléséhez.",
+    "EventEditor_Loc_Overview_Page": "Lokalizációs fájlok exportálása és importálása az egész oldaladhoz tartozó szövegek fordításának kezeléséhez.",
     "LoginRedirect_Dialog_Title": "Bejelentkezés",
     "LoginRedirect_Dialog_Description": "Jelentkezz be, hogy ezt a tételt a kívánságlistádhoz add, kövesd vagy mellőzöttnek jelöld. Az OK gombra kattintás átirányít a bejelentkezési oldalra.",
     "Wishlist_NotSignedIn": "Jelentkezz be, vagy nyisd meg ezt az oldalt a Steam alkalmazásban a kívánságlistázáshoz, követéshez vagy vásárláshoz.",
@@ -16,6 +19,9 @@
     "SteamURLAccepted": "%1$s URL elfogadva",
     "SteamURLInvalid": "Hiba: az URL nem egy Steam oldalhoz (áruházi/közösségi) tartozik",
     "AnchorHashInputInvalid": "Érvénytelen bemenet",
+    "Sale_Section_Label_Color": "Címkeszín",
+    "Sale_Section_Background_Top": "Háttérátmenet (felül)",
+    "Sale_Section_Background_Bottom": "Háttérátmenet (alul)",
     "Reservation_JoinPool": "Csatlakozás a listához",
     "Reserationn_NoListJoined": "Válassz egy modellt alább a feliratkozáshoz – a jogosult vásárlók legfeljebb %1$s modellre iratkozhatnak fel.",
     "Reservation_InPool": "Az alább kiválasztott modellek listáján szerepelsz.",

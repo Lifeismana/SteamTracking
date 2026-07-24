@@ -117,7 +117,7 @@ $ORIGIN
 %s: insufficient permissions - delete and recreate\n
 %s: is not a directory - delete and recreate.\n
 %s: is not owned by us - delete and recreate.\n
-%s: no such process %d\n
+%s: no such process %d - %d\n
 %s_%d%.2d%.2d%.2d%.2d%.2d_%d
 &AElig;
 &Aacute;
@@ -357,6 +357,7 @@ $ORIGIN
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
 0123456789abcdef
+05:03:21
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -383,7 +384,6 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
-23:33:48
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -564,7 +564,7 @@ IsValidIndex(elem)
 JArray
 January
 Jobs/Coroutines
-Jul 21 2026
+Jul 23 2026
 July
 June
 LOCK_EX
@@ -632,6 +632,7 @@ NSt8ios_base7failureE
 NULL != m_pValObjectCur
 NULL buffer passed to V_atof()
 NULL buffer passed to V_atoi()
+N\3O
 No Error
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
@@ -656,6 +657,9 @@ PPid:\t
 PS3 Unattributed
 Peak %.2f ms frame\n
 Platform
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 Probably deadlock or failure waiting for thread to initialize.
 ProductName
@@ -1501,6 +1505,7 @@ short
 sigaction
 sigaddset
 sigemptyset
+siginfo.si_pid == dwProcessId
 signal
 signed char
 sigprocmask

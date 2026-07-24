@@ -63,9 +63,11 @@
 !is_large()
 !m_ChromeIPCClient.BInitialized()
 !m_data.HasError()
+!m_pInt
 !options.strHTMLCacheDir.IsEmpty()
 !options.strInstallDir.IsEmpty()
 !pszString || pszString[nChars] == '\0'
+!vecEntryFields.IsEmpty()
 " \n\rCMsgSetUIMode
 " because it is missing required fields:
 " conflicts with field "
@@ -139,6 +141,7 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
+"N9__gnu_cxx24__concurrence_lock_errorE
 "\n\farray_values
 "^\n\fOneofOptions
 "e" must be followed by exponent.
@@ -266,12 +269,15 @@ $\n k_SystemAudioPortDirection_Input
 &\n"k_EStorageDriveMediaType_Removable
 &\n"k_SystemAudioPortDirection_Invalid
 &\n\ngpu_status
+&bzi
+'\n#k_EBluetoothAudioPreference_Latency
+'\n#k_EBluetoothAudioPreference_Quality
 '\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
-'\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
 '\n#k_EGraphicsPerfOverlayLevel_Minimal
@@ -375,7 +381,9 @@ $\n k_SystemAudioPortDirection_Input
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentModerationSanction_Escalate
 )\n%k_EContentReportReason_Discrimination
+)\n%k_EContentReportReason_Miscategorized
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Sanctioned
@@ -423,6 +431,7 @@ $\n k_SystemAudioPortDirection_Input
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
+*ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *\\n\fEExportCodec
 *\n%k_EPersonaStateFlag_ClientTypeTenfoot
 *\n%k_EPersonaStateFlag_LaunchTypeGamepad
@@ -450,7 +459,6 @@ $\n k_SystemAudioPortDirection_Input
 +2D9
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
-+\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
@@ -732,6 +740,7 @@ $\n k_SystemAudioPortDirection_Input
 .google.protobuf.SourceCodeInfo
 .placeholder.proto
 .steam_exec_test.sh
+.y4w
 /\n+k_EAppTestType_SteamDeckCompatibilityReview
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_ECommentThreadTypePublishedFile_Developer
@@ -747,7 +756,7 @@ $\n k_SystemAudioPortDirection_Input
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
 /\n+k_PublishedFileQueryType_RankedByTextSearch
 /data/src/common/callbacklist.h
-/data/src/common/environmentmanager.cpp
+/data/src/common/environmenthelpers.cpp
 /data/src/common/html/chrome_ipc_client.cpp
 /data/src/common/html/chrome_ipc_shared.cpp
 /data/src/common/html/chromewrapper.cpp
@@ -756,12 +765,15 @@ $\n k_SystemAudioPortDirection_Input
 /data/src/overlay/common/shmemstream.cpp
 /data/src/public/html/htmlprotobuf.cpp
 /data/src/public/tier0/tslist.h
+/data/src/public/tier1/bitstring.h
 /data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utlhashmap.h
 /data/src/public/tier1/utllinkedlist.h
 /data/src/public/tier1/utlmemory.h
 /data/src/public/tier1/utlrbtree.h
 /data/src/public/tier1/utlstring.h
 /data/src/public/tier1/utlvector.h
+/data/src/tier1/bitstring.cpp
 /data/src/tier1/fileio.cpp
 /data/src/tier1/interface.cpp
 /data/src/tier1/utlbuffer.cpp
@@ -1000,6 +1012,7 @@ $\n k_SystemAudioPortDirection_Input
 19HTMLCommandBuffer_t
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentModerationSanction_HarassmentBanned
+1\n-k_EContentModerationSanction_HarassmentStrike
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -1110,6 +1123,7 @@ $\n k_SystemAudioPortDirection_Input
 35CMsgHorizontalScrollBarSizeResponse
 38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
@@ -1268,6 +1282,8 @@ CANCELLED
 CChromeIPCClient::PushCommand
 CChromeIPCClient::RunFrame
 CCookie
+CEF_CRASH_REPORTER_PRODUCT_VERSION
+CEF_CRASH_REPORTER_SERVER_URL
 CFileReader
 CFileReader::BOpenFile - %s
 CFileReader::Read
@@ -1656,17 +1672,6 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPathString
-CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
-CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
-CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
-CProcessEnvironmentManager ERROR: the buffer for env variable '%s' has moved!\n
-CProcessEnvironmentManager ERROR: value length of %zu for env variable '%s' exceeds max size of %d\n
-CProcessEnvironmentManager is disabled by external environment setting '%s'.\n
-CProcessEnvironmentManager is ready, %d preallocated environment variables.\n
-CProcessEnvironmentManager::InitFromDll trying to initialize twice
-CProcessEnvironmentManager::InitFromMain trying to initialize twice
-CProcessEnvironmentManager::setenv called with no value
-CProcessEnvironmentManager::setenv invalid index %d\n
 CSHA1::Update
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
 CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
@@ -1678,6 +1683,8 @@ CUIProtoBufMsg::BDeserialize
 CUIProtoBufMsg::SerializeCrossProc
 CUtlBuffer
 CUtlBuffer::GetStringFast: binary buffers only
+CUtlHashMap::RemoveAt - Invalid index
+CUtlHashMap::RemoveAt - couldn't find bucket for item
 CUtlString::ReplaceInternal
 CUtlString::SetValue
 CUtlString::VAppendFormat
@@ -1692,6 +1699,7 @@ CValidator::DumpDoubleClaim(char const*) const
 CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
+CVariableBitStringBase
 C\n#direct_rendering_display_compositor
 C\n?k_EContentReportReason_MisleadingInformationAboutConsumerRights
 Call set methods to initialize MapKey.
@@ -1764,12 +1772,12 @@ EACState
 EAccessibilityContrastMode
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
+EBluetoothAudioPreference
 EBluetoothDeviceType
 EBroadcastEncoderSetting
 EBroadcastPermission
 EBrowserFeatureStatus
 EBrowserGPUStatus
-EChildProcessQueryCommand
 EChildProcessQueryExitCode
 ECloudGamingPlatform
 ECloudStoragePersistState
@@ -1796,8 +1804,6 @@ EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
 EHDRVisualization
 EJSRegisterMethodType
-ELegacyEnvironmentVariable
-ENABLE_VK_LAYER_VALVE_steam_overlay_1
 ENewSteamAnnouncementState
 EPersonaStateFlag
 EPressOutletAction
@@ -1999,6 +2005,7 @@ GetFileSystemStableId requires a valid path: %s\n
 GetFloat
 GetInt32
 GetInt64
+GetInts()
 GetMessage
 GetMiniDumpBuildID
 GetMiniDumpDirectory
@@ -2153,6 +2160,7 @@ Kyrgyz
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
+LD_LIBRARY_PATH
 LEZShnat7{
 LOCK_EX
 LOCK_SH
@@ -2216,7 +2224,6 @@ Messages can't have default values!
 Messages can't have default values.
 MethodDescriptorProto
 MethodOptions
-Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 Missing field: FileDescriptorProto.name.
 Missing name.
 Monday
@@ -2342,7 +2349,6 @@ N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
-N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NOT_FOUND
 NO_SIDE_EFFECTS
@@ -2422,6 +2428,9 @@ PlatformHEVCDecoderSupport
 Polish
 PopupHTMLWindow: idx:%u handle:%u
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 Process %d failed to shm_open %s\n
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
@@ -2504,6 +2513,7 @@ Simplified_Chinese
 Sindhi
 Sinhala
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
+Size() == operand.Size()
 Slovak
 Slovenian
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
@@ -2590,7 +2600,6 @@ St9type_info
 Started webhelper process %u
 StaticFileWriterThread()
 Steam - DirWatcher
-Steam3Master
 SteamChina_SChinese
 SteamChrome_MasterStream
 SteamChrome_MasterStream_Event_uid%d_spid%u
@@ -2618,7 +2627,6 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-SteamUser
 SteamVProf::CVProfile::MarkFrame(char const*)
 String field
 String literals cannot cross line boundaries.
@@ -2708,7 +2716,6 @@ Unexpected failure while serializing option submessage
 Unimplemented type:
 Uninterpreted option is missing name or value.
 UninterpretedOption
-Unknown
 Unknown enumeration value of "
 Unknown error
 Unmatched %s\n
@@ -2735,8 +2742,10 @@ V_FormatAndAppend
 V_IsAbsolutePath
 V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
@@ -2797,12 +2806,12 @@ Wednesday
 Welsh
 WinRetrieveSuggestionsOnlyOnDemand
 Wolof
+WriteToEnvFD: write failed, aborted: %s
 XXXXXX
 Xhosa
 Yoruba
 Z-google.golang.org/protobuf/types/descriptorpb
 Zulu
-[Config]\n# Product information.\nProductName=cefwebhelper\nProductVersion=%u\n\n# Required to enable crash dump upload.\nServerURL=%s\n\n# Disable rate limiting so that all crashes are uploaded.\nRateLimitEnabled=true\nMaxUploadsPerDay=5\n\n[CrashKeys]\nVendor=small\nUserID=small\nBuildID=small\nPlatform=small\nSteamUniverse=small\n
 [abi:
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
@@ -3082,6 +3091,7 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
+a\rxg[
 abort
 access
 accessor_ == other.accessor_
@@ -3147,6 +3157,7 @@ bind
 bind_textdomain_codeset
 bindtextdomain
 binput
+bitNum >= 0 && bitNum < this->Size()
 blank
 bool
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
@@ -3209,7 +3220,6 @@ cookies
 coord_x
 coord_y
 covariant return thunk to
-crash_reporter.cfg
 creation_flags
 croatian
 cs_CZ
@@ -3284,6 +3294,7 @@ english
 entries
 enum
 enums.proto
+environ
 error
 error_description
 es-419
@@ -3351,6 +3362,7 @@ freopen
 fscanf disk-free output failed\n
 fseek
 fseeko64
+fsync
 fsync %s failed, errno = %d\n
 ftello64
 ftruncate
@@ -3525,6 +3537,7 @@ iconv_open
 id_ID
 idempotency_level
 identifier_value
+idx < m_map.m_nMaxElement
 igbo
 imaginary
 import "$0";\n
@@ -3616,7 +3629,6 @@ k_ECPUGovernor_Invalid
 k_ECPUGovernor_Manual
 k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
-k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
@@ -3653,6 +3665,7 @@ k_EContentReportReason_Gambling
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_None
+k_EContentReportReason_Piracy
 k_EContentReportReason_Raffles
 k_EContentReportReason_Spam
 k_EContentReportReason_Stalking
@@ -4020,6 +4033,8 @@ parse
 parsing
 path
 patterns
+pchVar
+pchVar && pchValue
 pclose
 persian
 php_class_prefix
@@ -4091,6 +4106,7 @@ requesting_url
 required
 res > 0
 reserved_range
+resizeNumBits >= 0
 result
 results
 reverse
@@ -4126,7 +4142,6 @@ serializing
 server_streaming
 service
 service $0 {\n
-setenv
 setlocale
 setmntent
 setvbuf

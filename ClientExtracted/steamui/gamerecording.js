@@ -1515,60 +1515,60 @@
         }
       }
       !(function (e) {
-        (e.CreateShareClip = function (e, r) {
+        (e.CreateShareClip = function (e, r, t) {
           return e.SendMsg(
             "GameRecordingClip.CreateShareClip#1",
-            (0, b.I8)(j, r),
+            (0, b.I8)(j, r, t),
             U,
             { ePrivilege: 1 },
           );
         }),
-          (e.DeleteSharedClip = function (e, r) {
+          (e.DeleteSharedClip = function (e, r, t) {
             return e.SendMsg(
               "GameRecordingClip.DeleteSharedClip#1",
-              (0, b.I8)(C, r),
+              (0, b.I8)(C, r, t),
               F,
               { ePrivilege: 1 },
             );
           }),
-          (e.GetSingleSharedClip = function (e, r) {
+          (e.GetSingleSharedClip = function (e, r, t) {
             return e.SendMsg(
               "GameRecordingClip.GetSingleSharedClip#1",
-              (0, b.I8)(W, r),
+              (0, b.I8)(W, r, t),
               v,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           });
       })(i || (i = {})),
         (function (e) {
-          (e.BeginGameRecordingSegmentsUpload = function (e, r) {
+          (e.BeginGameRecordingSegmentsUpload = function (e, r, t) {
             return e.SendMsg(
               "VideoClip.BeginGameRecordingSegmentsUpload#1",
-              (0, b.I8)(T, r),
+              (0, b.I8)(T, r, t),
               q,
               { ePrivilege: 1 },
             );
           }),
-            (e.CommitGameRecordingSegmentsUpload = function (e, r) {
+            (e.CommitGameRecordingSegmentsUpload = function (e, r, t) {
               return e.SendMsg(
                 "VideoClip.CommitGameRecordingSegmentsUpload#1",
-                (0, b.I8)(O, r),
+                (0, b.I8)(O, r, t),
                 x,
                 { ePrivilege: 1 },
               );
             }),
-            (e.GetNextBatchOfSegmentsToUpload = function (e, r) {
+            (e.GetNextBatchOfSegmentsToUpload = function (e, r, t) {
               return e.SendMsg(
                 "VideoClip.GetNextBatchOfSegmentsToUpload#1",
-                (0, b.I8)(I, r),
+                (0, b.I8)(I, r, t),
                 G,
                 { ePrivilege: 1 },
               );
             }),
-            (e.CommitSegmentUploads = function (e, r) {
+            (e.CommitSegmentUploads = function (e, r, t) {
               return e.SendMsg(
                 "VideoClip.CommitSegmentUploads#1",
-                (0, b.I8)(N, r),
+                (0, b.I8)(N, r, t),
                 P,
                 { ePrivilege: 1 },
               );

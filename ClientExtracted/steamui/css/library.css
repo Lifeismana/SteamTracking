@@ -756,7 +756,7 @@ button.DialogButton:enabled:active.gpfocus {
   }
 }
 button.DialogButton.Primary:hover,
-button.DialogButton.Primary.gpfocus {
+button.DialogButton.Primary.gpfocus:not(.Disabled) {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 0%;
   background-size: 330% 100%;
@@ -2887,7 +2887,9 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   border-radius: 20px;
   align-items: center;
 }
-._1dzQL1mVR8GTmmSi_kpDgr {
+.x5w70NwN-m7OmBy1DFogf,
+._1dzQL1mVR8GTmmSi_kpDgr,
+._33PLF0uIKrs-fwlQiOEf_ {
   width: 20px;
   height: 20px;
 }

@@ -716,7 +716,7 @@
                 throw new Error(`failed to load dlc for app id ${_}`);
               },
             });
-            return _.isLoading ? null : _.data;
+            return _.isLoading ? [] : _.data;
           }
           const _ = "AppInfo";
           function _(_) {
@@ -2711,6 +2711,7 @@
                 permission: _._[_.permission ?? _._.Client],
               })),
               "achievements-definitions.csv",
+              !0,
             );
           }
           function _(_, _) {
@@ -2718,7 +2719,7 @@
               (_, _) => (_.push(..._), _),
               [],
             );
-            _._.WriteCSVToFile(_, "achievements-localization.csv");
+            _._.WriteCSVToFile(_, "achievements-localization.csv", !0);
           }
           function _(_, _, _) {
             if (!_) return {};
@@ -3699,11 +3700,11 @@
                               children: [
                                 (0, _.jsx)("h2", {
                                   children: (0, _._)(
-                                    "#AchievementEditor_Achievement_Edit_Visibility",
+                                    "#AchievementEditor_Achievement_Edit_Status",
                                   ),
                                 }),
                                 (0, _.jsxs)(_._, {
-                                  direction: "row",
+                                  direction: "column",
                                   gap: "1",
                                   justify: "between",
                                   children: [
@@ -3717,17 +3718,30 @@
                                         whiteSpace: "normal",
                                       },
                                       children: (0, _.jsx)(_._, {
+                                        direction: "column",
                                         flexGrow: "1",
                                         padding: "1",
-                                        radius: "sm",
+                                        align: "start",
+                                        className: _.Cursor,
                                         children: (0, _.jsx)(_._, {
                                           checked: _,
                                           onChange: _,
-                                          children: (0, _.jsx)("span", {
-                                            className: _.Cursor,
-                                            children: (0, _._)(
-                                              "#AchievementEditor_Achievement_Edit_Spoiler",
-                                            ),
+                                          align: "start",
+                                          children: (0, _.jsxs)(_._, {
+                                            direction: "column",
+                                            children: [
+                                              (0, _.jsx)(_._, {
+                                                weight: "heavy",
+                                                children: (0, _._)(
+                                                  "#AchievementEditor_Achievement_Edit_Spoiler",
+                                                ),
+                                              }),
+                                              (0, _.jsx)(_._, {
+                                                children: (0, _._)(
+                                                  "#AchievementEditor_Achievement_Edit_SpoilerDesc",
+                                                ),
+                                              }),
+                                            ],
                                           }),
                                         }),
                                       }),
@@ -3742,17 +3756,30 @@
                                         whiteSpace: "normal",
                                       },
                                       children: (0, _.jsx)(_._, {
+                                        direction: "column",
                                         flexGrow: "1",
                                         padding: "1",
-                                        radius: "sm",
+                                        align: "start",
+                                        className: _.Cursor,
                                         children: (0, _.jsx)(_._, {
                                           checked: _,
                                           onChange: _,
-                                          children: (0, _.jsx)("span", {
-                                            className: _.Cursor,
-                                            children: (0, _._)(
-                                              "#AchievementEditor_Achievement_Edit_Archived",
-                                            ),
+                                          align: "start",
+                                          children: (0, _.jsxs)(_._, {
+                                            direction: "column",
+                                            children: [
+                                              (0, _.jsx)(_._, {
+                                                weight: "heavy",
+                                                children: (0, _._)(
+                                                  "#AchievementEditor_Achievement_Edit_Archived",
+                                                ),
+                                              }),
+                                              (0, _.jsx)(_._, {
+                                                children: (0, _._)(
+                                                  "#AchievementEditor_Achievement_Edit_ArchivedDesc",
+                                                ),
+                                              }),
+                                            ],
                                           }),
                                         }),
                                       }),
@@ -4322,6 +4349,7 @@
             _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
@@ -5279,6 +5307,43 @@
             );
           }
           function _(_) {
+            const { value: _, setValue: _ } = _,
+              { appID: _ } = (0, _._)(),
+              _ = (0, _._)(_),
+              _ = (0, _.useCallback)(
+                (_) =>
+                  "0" == (_ ?? "0")
+                    ? (0, _._)(
+                        "#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers",
+                      )
+                    : _.find((_) => _.appid == _)?.name,
+                [_],
+              ),
+              _ = Array.from(
+                new Set(
+                  _.sort((_, _) =>
+                    (_.name ?? "").localeCompare(_.name ?? ""),
+                  ).map((_) => _.appid),
+                ),
+              ),
+              _ = ["0"].concat(_);
+            return _.length < 20
+              ? (0, _.jsx)(_._, {
+                  options: _,
+                  getOptionLabel: _,
+                  selectedValue: _ ?? "0",
+                  onSelectionChange: _,
+                })
+              : (0, _.jsx)(_._, {
+                  options: _,
+                  getOptionLabel: _,
+                  selectedValue: _ ?? "0",
+                  onSelectionChange: _,
+                  placeholder: "",
+                  filterPlaceholder: "",
+                });
+          }
+          function _(_) {
             const {
                 state: _,
                 groupid: _,
@@ -5288,7 +5353,6 @@
                 ref: _,
               } = _,
               { appID: _ } = (0, _._)(),
-              _ = (0, _._)(_),
               _ = (0, _.useRef)(null);
             (0, _.useEffect)(() => {
               _?.current?.focus();
@@ -5381,20 +5445,9 @@
                                         ":",
                                       ],
                                     }),
-                                    (0, _.jsx)(_._, {
-                                      options: ["0"].concat(
-                                        _.map((_) => _.appid),
-                                      ),
-                                      getOptionLabel: (_) =>
-                                        "0" == (_ ?? "0")
-                                          ? (0, _._)(
-                                              "#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers",
-                                            )
-                                          : _.find((_) => _.appid == _)?.name,
-                                      selectedValue: _ ?? "0",
-                                      onSelectionChange: (_) => {
-                                        _(_);
-                                      },
+                                    (0, _.jsx)(_, {
+                                      value: _,
+                                      setValue: _,
                                     }),
                                     (0, _.jsx)(_, {
                                       info: _.app,

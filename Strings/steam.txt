@@ -726,7 +726,7 @@ $ffn
 %s: lseek %s: %s\n
 %s: lseek start failed: %s\n
 %s: mkstemp %s: errno %s\n
-%s: no such process %d\n
+%s: no such process %d - %d\n
 %s: pending command too large, truncating
 %s: re-launching steam in SteamRT runtime\n
 %s: read failed: %s\n
@@ -1018,9 +1018,8 @@ $ffn
 (%p) Disconnecting HTTP connection due to !BAsyncSendPartialBody\n
 (%p) Disconnecting HTTP connection due to SSL failure: %s(%d)\n
 (%p) Fatal HTTP2 error in nghttp2_session_mem_recv (%s)\n
+(%p) Fatal HTTP2 error in nghttp2_session_send (%s)\n
 (%p) Fatal HTTP2 error in nghttp2_session_send after init (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send after recv (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send during initial request submit (%s)\n
 (%p) HTTP request connecting to %s\n
 (%p) HTTP request resolved %s to %s. Now checking proxy.\n
 (%p) HTTP request resolving %s\n
@@ -1035,7 +1034,7 @@ $ffn
 (%p) Sending request for http%s://%s%s - Stale Timeout %u\n
 (%p) State to %s is now k_EHTTPClientConnectionState_WAITING_RESPONSELINE_VERSION\n
 (%p) TLS handshake was not valid for SNI hostname '%s', disconnecting\n
-(%p) no more requests allowed on HTTP session (%s)\n
+(%p) no more requests allowed on HTTP session\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 ()*+,-./*(((
@@ -1947,16 +1946,16 @@ $ffn
 0 Umv
 0)AA7A
 00000000
-00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
-0123456789
-0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+05:03:21
+05:03:35
+05:03:38
 08bX
 0?0L
 0A/8
@@ -2000,7 +1999,6 @@ $ffn
 100 127.0.0.1 stale
 1000
 1024
-10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2264,7 +2262,6 @@ $ffn
 11CWorkThread
 11IFileSystem
 11M|
-123456789
 127.0.0.1
 12CAddressInfo
 12CAutoReleaseI14CMetricsStringE
@@ -2337,8 +2334,8 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
+172.16
 1536
-15000
 155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
@@ -2366,7 +2363,6 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
-172.16
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2390,7 +2386,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18446744073709551615
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2498,9 +2493,6 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:33:48
-23:34:04
-23:34:09
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2563,7 +2555,14 @@ $ffn
 3-WH
 30!]^JV
 3072
+00003333
+10000
+15000
 30000
+0123456789
+123456789
+0123456789.
+18446744073709551615
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -2694,11 +2693,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -5427,7 +5426,6 @@ EC_POINT_set_to_infinity
 EC_POINTs_make_affine
 EC_POINTs_mul
 EC_PRIVATEKEY
-EChildProcessQueryCommand
 EClanAccountType
 EClanAction
 EClanEventType
@@ -6074,7 +6072,6 @@ Free disk space for %s would overflow
 FreeDeletedPackets
 Freed EMS handle %u
 Freed XMS handle %u
-Fremont
 French
 FrenemyFilter
 Friday
@@ -6247,6 +6244,8 @@ GetRepeatedStringReference
 GetRepeatedUInt32
 GetRepeatedUInt64
 GetSendToClientSessions
+GetStartupClientBeta
+GetStartupClientBeta: %p\n
 GetString
 GetStringReference
 GetUInt32
@@ -6268,7 +6267,6 @@ Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got completed conditional request dispatched to client cache, but no data for it in our map?
 Got frame type %d for stream %d\n
-GpuTopology
 GrabPay
 Gray color space not permitted on RGB PNG
 Greek
@@ -6876,7 +6874,7 @@ Jobs/Coroutines
 JoinedGroup
 Joystick
 JpL9=
-Jul 21 2026
+Jul 23 2026
 July
 June
 K'iche'
@@ -7620,7 +7618,7 @@ No space in chunk cache for sPLT
 No subscription
 No tracked allocs currently in use. Total %d\n
 No verified phone number
-No waiting requests for %s\n
+No waiting requests (or no free capacity) for %s\n
 NoInternet
 NoLAN
 NoRenegotiation
@@ -8227,6 +8225,9 @@ Polish
 Poly1305
 Polynomial:
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostRecv
 PostTime
@@ -9000,9 +9001,9 @@ Send Proxied Router
 Send Router
 SenderAddress
 SenderName
-Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
+Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
 Sentiment
 September
@@ -9215,7 +9216,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 21 2026 23:34:04
+Startup - updater built Jul 23 2026 05:03:31
 State
 StaticFileWriterThread()
 Steam
@@ -9256,6 +9257,7 @@ SteamCloudDocuments
 SteamDeck
 SteamDllMainEx
 SteamID
+SteamMachine
 SteamOSGeneric
 SteamPID
 SteamRealPath
@@ -12229,6 +12231,7 @@ controller_steamcontroller_unknown
 controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
+controller_switch2_pro_generic
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -16422,6 +16425,7 @@ m_mapStatsBucket[iBucket]
 m_memNodes
 m_memPSK
 m_nAllocationCount >= 0
+m_nHTTP2CallbackDepth > 0
 m_nPollFd >= 0
 m_nPostFd >= 0
 m_nRecursions > 0
@@ -19302,6 +19306,7 @@ sigalgs
 sigdelset
 sigemptyset
 sigfillset
+siginfo.si_pid == dwProcessId
 siglongjmp
 signal
 signature

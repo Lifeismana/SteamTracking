@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Усі ігри",
     "SteamOS_FilterDescription_Compatible": "Ігри, які перевірені й підтримують SteamOS",
     "SteamOS_FilterDescription_Compatible_Unknown": "Ігри, які перевірені й підтримують SteamOS, а також ті, що ще не перевірені",
-    "SteamOS_FilterDescription_AllGames": "Усі ігри в бібліотеці, включно з тими, які добре не працюють на SteamOS"
+    "SteamOS_FilterDescription_AllGames": "Усі ігри в бібліотеці, включно з тими, які добре не працюють на SteamOS",
+    "MachineVerified_FilterDescription_Verified": "Показувати лише ігри, які чудово працюють на Steam Machine.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Показувати всі сумісні ігри та ігри, у які можна грати, але з додатковими налаштуваннями.",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Показувати всі сумісні ігри й ті, у які можна грати, а також ігри, які ще не були перевірені на сумісність зі Steam Machine.",
+    "MachineVerified_FilterDescription_AllGames": "Показувати всі ігри в бібліотеці, включно з тими, які не повністю сумісні зі Steam Machine.",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }

@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "將這位好友置於好友名單頂端，以便尋找",
     "FriendSettings_Mobile_BlockDesc": "他們會看到您的狀態為離線，您也不會收到他們傳來的聊天訊息",
     "FriendSettings_Mobile_Notifications": "行動裝置通知",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "僅在使用 WIFI 時內嵌圖片和其他媒體",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "僅在使用 Wi-Fi 時內嵌圖片和其它媒體",
     "FriendSettings_Mobile_UploadCurrentLogs": "上傳目前的工作階段紀錄",
     "FriendSettings_Mobile_UploadPreviousLogs": "上傳先前的工作階段紀錄",
     "FriendSettings_Mobile_SaveImageCaptures": "儲存擷取的圖片",

@@ -2873,7 +2873,7 @@
 "Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"此玩家通行证已被撤销"
-"Steam_GuestPassAccept_TextRevoked$type=guestpass"	"给您发送此玩家通行证的好友已取消此通行证，并重新发送了一个赎回代码。 如果给您发送了新的版本，您将会收到另一封带有已更新代码的电子邮件。"
+"Steam_GuestPassAccept_TextRevoked$type=guestpass"	"给您发送此玩家通行证的好友已取消此通行证，并重新发送了一个兑换码。 如果给您发送的是更新版本的通行证，您将会收到另一封带有已更新代码的电子邮件。"
 
 "Steam_GuestPassAccept_HeadlineExpired"	"此玩家通行证已过期"
 "Steam_GuestPassAccept_TextExpired"	"您不能接受此玩家通行证，因为已超过有效期限。"
@@ -2903,7 +2903,7 @@
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"在激活 %package% 的通行证之前，您必须先拥有 %appname%。当您拥有它时，请尝试重新激活此玩家通行证。"
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=guestpass"	"此玩家通行证已被撤销"
-"Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"给您发送此玩家通行证的好友已取消此通行证，并重新发送了一个赎回代码。 如果给您发送了新的版本，您将会收到另一封带有已更新代码的电子邮件。"
+"Steam_GuestPassRedeemed_TextRevoked$type=guestpass"	"给您发送此玩家通行证的好友已取消此通行证，并重新发送了一个兑换码。 如果给您发送的是更新版本的通行证，您将会收到另一封带有已更新代码的电子邮件。"
 
 "Steam_GuestPassRedeemed_HeadlineExpired"	"此玩家通行证已过期"
 "Steam_GuestPassRedeemed_TextExpired"	"您不能接受此玩家通行证，因为已超过有效期限。"
@@ -3242,7 +3242,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_SendGuestPass_Title$type=gift"		"发送礼物"
 
 "Steam_SendGuestPass_InvitationSentHeadline$type=gift" "成功发送礼物！"
-"Steam_SendGuestPass_InvitationSent$type=gift"	"已经向 %search% 发出兑换 %package% 礼物的邀请邮件。\n\n请查看您的“好友”列表 -- 您将能看到正在进行线上游戏的好友。"
+"Steam_SendGuestPass_InvitationSent$type=gift"	"已经向 %search% 发出兑换 %package% 礼物的邀请电子邮件。\n\n请查看您的“好友”列表，您会看到正在线上玩游戏的好友。"
 
 "Steam_SendGuestPass_DefaultInviteErrorHeadline$type=gift"	"礼物发送不成功"
 "Steam_SendGuestPass_DefaultInviteError$type=gift"	"抱歉，在向 %search% 发送礼物时出现问题。"
@@ -3267,15 +3267,15 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=gift"	"礼物接受失败"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=gift"	"此礼物已被撤销"
-"Steam_GuestPassAccept_TextRevoked$type=gift"	"给您发送此礼物的好友已取消该礼物，并重新发送了一个赎回代码。 如果给您发送了新的版本，您将会收到另一封带有已更新代码的电子邮件。"
+"Steam_GuestPassAccept_TextRevoked$type=gift"	"给您发送此礼物的好友已取消该礼物，并重新发送了一个兑换码。如果给您发送的是更新的版本，您将会收到另一封带有已更新代码的电子邮件。"
 
 "Steam_GuestPassAccept_HeadlineSelfRedeem$type=gift"	"您不能给您自己发送礼物！"
-"Steam_GuestPassAccept_TextSelfRedeem$type=gift"	"您正在尝试接受您自己发送给自己的通行证。 礼物应用于与好友分享您的游戏。 请尝试邀请您的好友免费试玩新游戏！"
+"Steam_GuestPassAccept_TextSelfRedeem$type=gift"	"您似乎正在尝试接受您自己发送给自己的通行证。礼物是为了用来与好友分享游戏。请尝试邀请您的好友免费畅玩新游戏！"
 
 "Steam_GuestPassRedeemed_TitleFailed$type=gift"	"礼物激活失败"
 
 "Steam_GuestPassRedeemed_HeadlineFailed$type=gift"	"无效礼物"
-"Steam_GuestPassRedeemed_TextFailed$type=gift"	"您尝试使用的礼物已不再有效。 此礼物可能已被其他玩家使用，可能已经过期，或可能已被发送人撤销。"
+"Steam_GuestPassRedeemed_TextFailed$type=gift"	"您尝试兑换的礼物已不再有效。此礼物可能已被其他玩家使用，可能已经过期，或可能已被发送人撤销。"
 
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=gift"	"礼物激活失败"
 
@@ -3283,10 +3283,10 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"您不能接受 %package% 的礼物，因为您已拥有该游戏！要开始游戏，请进行安装并从游戏库中启动该游戏。"
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=gift"	"此礼物需要额外附加条件"
-"Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"在接收礼物 %package% 之前，您必须先拥有 %appname%。当您拥有它时，请尝试重新接收此礼物。"
+"Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"在接受 %package% 的礼物之前，您必须先拥有 %appname%。请在拥有后尝试重新接受此礼物。"
 
 "Steam_GuestPassRedeemed_HeadlineRevoked$type=gift"	"此礼物已被撤销"
-"Steam_GuestPassRedeemed_TextRevoked$type=gift"	"给您发送此礼物的好友已取消该礼物，并重新发送了一个赎回代码。 如果给您发送了新的版本，您将会收到另一封带有已更新代码的电子邮件。"
+"Steam_GuestPassRedeemed_TextRevoked$type=gift"	"给您发送此礼物的好友已取消该礼物，并重新发送了一个兑换码。如果给您发送的是更新的版本，您将会收到另一封带有已更新代码的电子邮件。"
 
 "Steam_SendGuestPass_RefreshingList"	"正在刷新列表..."
 "Steam_SendGuestPass_AllFriendsOwnProduct"	"您所有的 Steam 社区好友都已拥有此产品。

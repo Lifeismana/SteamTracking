@@ -52882,9 +52882,10 @@
             document.removeChild(r);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t) {
-          const r = a().unparse(e, { header: !0 });
-          s.WriteFile(new Blob([r], { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, r) {
+          const i = a().unparse(e, { header: !0 }),
+            n = 1 == r ? ["\ufeff" + i] : [i];
+          s.WriteFile(new Blob(n, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {

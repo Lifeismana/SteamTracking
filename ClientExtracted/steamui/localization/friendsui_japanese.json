@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "見つけやすいように、この人をフレンドリストの一番上に表示",
     "FriendSettings_Mobile_BlockDesc": "オフラインと表示されるため、チャットメッセージを受け取ることはありません",
     "FriendSettings_Mobile_Notifications": "モバイル通知",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "WiFi接続時にのみ画像やその他のメディアを埋め込む",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Wi-Fi接続時にのみ画像やその他のメディアを埋め込む",
     "FriendSettings_Mobile_UploadCurrentLogs": "現在のセッションログをアップロード",
     "FriendSettings_Mobile_UploadPreviousLogs": "前回のセッションログをアップロード",
     "FriendSettings_Mobile_SaveImageCaptures": "画像キャプチャーを保存",

@@ -10616,7 +10616,7 @@
               (0, _.jsxs)("div", {
                 children: [
                   (0, _.jsx)("div", {
-                    children: "Recent & Suggested",
+                    children: (0, _._)("#Wishlist_QuickAdd_RecentAndSuggested"),
                   }),
                   (0, _.jsx)(_, {
                     rgCategories: _,

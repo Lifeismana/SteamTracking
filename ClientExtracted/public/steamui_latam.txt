@@ -549,7 +549,7 @@
 "Steam_ChangePasswordFailedSmsFailed"			"No se pudo cambiar la contraseña.\nPor favor, comprueba que has introducido el código del SMS correctamente."
 "Steam_ChangePasswordSuccessful"		"La contraseña se ha cambiado con éxito.\nUsa esta nueva contraseña cada vez que inicies sesión en Steam."
 "Steam_ForceChangePassword"				"Tu cuenta requiere que se establezca una nueva contraseña. Esto puede deberse a que tu contraseña ya no cumple los requisitos de seguridad o porque el Soporte de Steam ha recuperado tu cuenta perdida o en peligro y ha establecido una contraseña temporal.\n\nAhora te ayudaremos a que puedas establecer una nueva contraseña."
-"Steam_ChangePasswordFailedIllegal"		"Error al cambiar la contraseña.\nLa contraseña no cumple los requisitos de seguridad adicionales. Por favor, inténtalo de nuevo."
+"Steam_ChangePasswordFailedIllegal"		"Error al cambiar la contraseña.\nLa contraseña no cumple los requisitos de seguridad adicionales. Inténtalo de nuevo."
 "Steam_ChangePasswordFailedReuse"		"Error al cambiar la contraseña.\nNo puedes volver a usar una contraseña antigua. Por favor, elige otra."
 "Steam_PasswordStrength"				"Seguridad:"
 

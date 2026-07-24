@@ -11584,11 +11584,11 @@
         $o: () => f,
         Ec: () => p,
         FD: () => h,
-        Ff: () => w,
-        _R: () => C,
+        Ff: () => y,
+        _R: () => v,
         kk: () => b,
         sG: () => _,
-        z5: () => S,
+        z5: () => C,
       });
       var i = r(7850),
         n = r(34104),
@@ -11648,7 +11648,7 @@
       const f = (e) => {
           const { category: t, className: r } = e;
           if (!t) return null;
-          const n = S(t);
+          const n = C(t);
           return (0, i.jsxs)("div", {
             className: (0, u.A)(c.SteamDeckCompatInfo, r),
             children: [
@@ -11658,14 +11658,26 @@
           });
         },
         B = (e) => {
+          const { category: t, className: r } = e;
+          if (!t) return null;
+          const n = C(t);
+          return (0, i.jsxs)("div", {
+            className: (0, u.A)(c.SteamDeckCompatInfo, r),
+            children: [
+              (0, i.jsx)(l.fhy, {}),
+              (0, i.jsx)(n, { className: c.SteamDeckCompatIcon }),
+            ],
+          });
+        },
+        w = (e) => {
           const { category: t, elControllerSupport: r } = e,
-            n = C(t);
+            n = v(t);
           return (0, i.jsxs)("div", {
             className: (0, u.A)(c.SteamDeckCompatInfo, e.className),
             children: [r, (0, i.jsx)(n, { className: c.SteamDeckCompatIcon })],
           });
         };
-      function w(e) {
+      function y(e) {
         const { eDisplay: t, storeItemPlatform: r, className: a } = e;
         return t == d.ZJ
           ? (0, i.jsx)(f, {
@@ -11673,24 +11685,24 @@
               className: a,
             })
           : t == d.JR
-            ? (0, i.jsx)(f, {
+            ? (0, i.jsx)(B, {
                 category: r?.steam_machine_compat_category ?? n.YX,
                 className: a,
               })
             : t == d.c9
-              ? (0, i.jsx)(B, {
+              ? (0, i.jsx)(w, {
                   category: r?.steam_os_compat_category ?? s.xs,
                   className: a,
                 })
               : null;
       }
-      const y = { [n.V8]: l.jIP, [n.sd]: l.aVR, [n.I2]: l.o5Q, [n.YX]: l.WX$ },
-        M = { [s.xs]: l.WX$, [s.u_]: l.jIP, [s.Hi]: l.ZjT };
-      function S(e) {
-        return y[e] || l.WX$;
-      }
+      const M = { [n.V8]: l.jIP, [n.sd]: l.aVR, [n.I2]: l.o5Q, [n.YX]: l.WX$ },
+        S = { [s.xs]: l.WX$, [s.u_]: l.jIP, [s.Hi]: l.ZjT };
       function C(e) {
         return M[e] || l.WX$;
+      }
+      function v(e) {
+        return S[e] || l.WX$;
       }
       n.I2, n.sd, n.V8, n.YX;
       s.Hi, s.u_, s.xs;
@@ -75059,7 +75071,7 @@
         CeX: () => E,
         Cv4: () => d,
         DK4: () => B,
-        DQe: () => mr,
+        DQe: () => dr,
         Dp6: () => pe,
         EEf: () => Ze,
         ENo: () => Je,
@@ -75085,7 +75097,7 @@
         KKS: () => ye,
         L0X: () => V,
         LDq: () => vt,
-        LO_: () => lr,
+        LO_: () => cr,
         Lh2: () => we,
         MOk: () => J,
         MQO: () => Ie,
@@ -75154,6 +75166,7 @@
         fSs: () => O,
         faJ: () => Ue,
         ffu: () => Oe,
+        fhy: () => lr,
         g$j: () => Lt,
         h20: () => te,
         hz4: () => Q,
@@ -75171,7 +75184,7 @@
         koA: () => sr,
         l8x: () => $,
         lMJ: () => re,
-        lRD: () => ur,
+        lRD: () => mr,
         mb7: () => Xt,
         mcU: () => Yt,
         nkJ: () => Ae,
@@ -75205,7 +75218,7 @@
         wB_: () => b,
         wC1: () => g,
         ww0: () => Fe,
-        xoK: () => cr,
+        xoK: () => ur,
         xv8: () => F,
         yHA: () => Ye,
         y_e: () => ue,
@@ -79342,6 +79355,32 @@
         });
       }
       function lr(e) {
+        const { className: t, ...r } = e;
+        return (0, i.jsxs)("svg", {
+          className: (0, s.A)(o().SteamMachineCompatLogo, t),
+          ...r,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
+              fill: "white",
+            }),
+            (0, i.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
+              fill: "white",
+            }),
+          ],
+        });
+      }
+      function cr(e) {
         const [t, r] = (0, c.l)();
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -79375,7 +79414,7 @@
           ],
         });
       }
-      function cr(e) {
+      function ur(e) {
         return (0, i.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
@@ -79398,7 +79437,7 @@
           ],
         });
       }
-      function ur(e) {
+      function mr(e) {
         const { className: t, ...r } = e;
         return (0, i.jsx)("svg", {
           className: (0, s.A)(o().SteamDeckCompatLogo, t),
@@ -79415,7 +79454,7 @@
           }),
         });
       }
-      function mr(e) {
+      function dr(e) {
         const { className: t } = e;
         return (0, i.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -90187,23 +90226,29 @@
         return zt() ? (0, o.jsx)(Ua, {}) : e.children;
       }
       function Ua() {
-        const [e, t] = n.useState(null);
-        return (
-          Pa(e?.parentElement?.parentElement, La.ResponsiveHeaderContent),
-          Pa(e?.parentElement?.parentElement, La.ElementTakeover),
-          (0, o.jsx)("div", {
-            className: kt()(La.SearchContainer),
-            ref: t,
-            children: (0, o.jsx)(fa, { bBackdropActive: !1 }),
-          })
-        );
+        const e = n.useCallback((e) => {
+          const t = (function (e, t) {
+            let r = e;
+            for (; (r = r.parentElement); )
+              if (r.classList.contains(t)) return r;
+            return null;
+          })(e, "responsive_header_content");
+          return t
+            ? (t.classList.add(La.ResponsiveHeaderContent),
+              t.classList.add(La.ElementTakeover),
+              () => {
+                t.classList.remove(La.ResponsiveHeaderContent),
+                  t.classList.remove(La.ElementTakeover);
+              })
+            : void console.warn("Couldn't find responsive header menu");
+        }, []);
+        return (0, o.jsx)("div", {
+          className: kt()(La.SearchContainer),
+          ref: e,
+          children: (0, o.jsx)(fa, { bBackdropActive: !1 }),
+        });
       }
-      function Pa(e, t) {
-        n.useLayoutEffect(() => {
-          if (e && t) return e.classList.add(t), () => e.classList.remove(t);
-        }, [e, t]);
-      }
-      const ka = n.lazy(() =>
+      const Pa = n.lazy(() =>
         Promise.all([
           r.e(29197),
           r.e(4796),
@@ -90223,7 +90268,7 @@
           r.e(89672),
         ]).then(r.bind(r, 30769)),
       );
-      function Da(e) {
+      function ka(e) {
         const { children: t } = e,
           [r, i] = n.useState(),
           s = n.useCallback(
@@ -90249,7 +90294,7 @@
                 children: (0, o.jsx)(F.tH, {
                   children: (0, o.jsx)(n.Suspense, {
                     fallback: null,
-                    children: (0, o.jsx)(ka, { ...r, fnCloseModal: a }),
+                    children: (0, o.jsx)(Pa, { ...r, fnCloseModal: a }),
                   }),
                 }),
               }),
@@ -90257,19 +90302,19 @@
           ],
         });
       }
-      var Na = r(31292),
-        Ea = r(55156),
-        Ga = r(87652);
-      let Ha = 0;
-      function Va(e) {
+      var Da = r(31292),
+        Na = r(55156),
+        Ea = r(87652);
+      let Ga = 0;
+      function Ha(e) {
         return n.lazy(async function () {
-          let t = Ha++,
+          let t = Ga++,
             r = performance.now();
           performance.mark(`reactLazyLoad${t}`);
           const i = await e();
           return (
-            (0, Na.D)() &&
-              ((0, Na.D)().m_stats.firstReactLazyLoad ??=
+            (0, Da.D)() &&
+              ((0, Da.D)().m_stats.firstReactLazyLoad ??=
                 performance.now() - r),
             performance.measure(`reactLazyLoad${t}`, {
               start: `reactLazyLoad${t}`,
@@ -90278,7 +90323,7 @@
           );
         });
       }
-      const Za = Va(() =>
+      const Va = Ha(() =>
           Promise.all([
             r.e(29197),
             r.e(4796),
@@ -90289,7 +90334,7 @@
             r.e(20976),
           ]).then(r.bind(r, 98425)),
         ),
-        Ka = Va(() =>
+        Za = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(5979),
@@ -90300,7 +90345,7 @@
             r.e(22634),
           ]).then(r.bind(r, 2489)),
         ),
-        $a = Va(() =>
+        Ka = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90344,7 +90389,7 @@
             r.e(57333),
           ]).then(r.bind(r, 71004)),
         ),
-        Qa = Va(() =>
+        $a = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90369,7 +90414,7 @@
             r.e(68396),
           ]).then(r.bind(r, 49850)),
         ),
-        Ya = Va(() =>
+        Qa = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90411,7 +90456,7 @@
             r.e(9236),
           ]).then(r.bind(r, 9678)),
         ),
-        Xa = Va(() =>
+        Ya = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90453,7 +90498,7 @@
             r.e(50970),
           ]).then(r.bind(r, 34568)),
         ),
-        Ja = Va(() =>
+        Xa = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90495,8 +90540,8 @@
             r.e(83276),
           ]).then(r.bind(r, 44231)),
         ),
-        eo = Va(() => r.e(30030).then(r.bind(r, 91648))),
-        to = Va(() =>
+        Ja = Ha(() => r.e(30030).then(r.bind(r, 91648))),
+        eo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(29197),
@@ -90507,10 +90552,10 @@
             r.e(73687),
           ]).then(r.bind(r, 87731)),
         ),
-        ro = Va(() =>
+        to = Ha(() =>
           Promise.all([r.e(94781), r.e(41402)]).then(r.bind(r, 44899)),
         ),
-        io = Va(() =>
+        ro = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(29197),
@@ -90529,7 +90574,7 @@
             r.e(20716),
           ]).then(r.bind(r, 49271)),
         ),
-        no = Va(() =>
+        io = Ha(() =>
           Promise.all([
             r.e(29197),
             r.e(4796),
@@ -90549,7 +90594,7 @@
             r.e(89672),
           ]).then(r.bind(r, 25054)),
         ),
-        so = Va(() =>
+        no = Ha(() =>
           Promise.all([
             r.e(29197),
             r.e(4796),
@@ -90569,7 +90614,7 @@
             r.e(89672),
           ]).then(r.bind(r, 6804)),
         ),
-        ao = Va(() =>
+        so = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(10400),
@@ -90580,7 +90625,7 @@
             r.e(27701),
           ]).then(r.bind(r, 88916)),
         ),
-        oo = Va(() =>
+        ao = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90622,7 +90667,7 @@
             r.e(50970),
           ]).then(r.bind(r, 58426)),
         ),
-        lo = Va(() =>
+        oo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90664,7 +90709,7 @@
             r.e(74268),
           ]).then(r.bind(r, 3111)),
         ),
-        co = Va(() =>
+        lo = Ha(() =>
           Promise.all([
             r.e(56589),
             r.e(29197),
@@ -90674,12 +90719,12 @@
             r.e(15068),
           ]).then(r.bind(r, 40917)),
         ),
-        uo = Va(() =>
+        co = Ha(() =>
           Promise.all([r.e(56589), r.e(52389), r.e(51215), r.e(96966)]).then(
             r.bind(r, 8685),
           ),
         ),
-        mo = Va(() =>
+        uo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90693,7 +90738,7 @@
             r.e(36814),
           ]).then(r.bind(r, 56125)),
         ),
-        go = Va(() =>
+        mo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(87937),
@@ -90714,7 +90759,7 @@
             r.e(35871),
           ]).then(r.bind(r, 11417)),
         ),
-        po = Va(() =>
+        go = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90753,11 +90798,11 @@
             r.e(98620),
           ]).then(r.bind(r, 57912)),
         ),
-        _o = Va(() => r.e(38843).then(r.bind(r, 71009))),
-        ho = Va(() =>
+        po = Ha(() => r.e(38843).then(r.bind(r, 71009))),
+        _o = Ha(() =>
           Promise.all([r.e(53965), r.e(21349)]).then(r.bind(r, 26240)),
         ),
-        bo = Va(() =>
+        ho = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90787,7 +90832,7 @@
             r.e(55894),
           ]).then(r.bind(r, 13164)),
         ),
-        fo = Va(() =>
+        bo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90817,7 +90862,7 @@
             r.e(58987),
           ]).then(r.bind(r, 35649)),
         ),
-        Bo = Va(() =>
+        fo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90846,7 +90891,7 @@
             r.e(62965),
           ]).then(r.bind(r, 75910)),
         ),
-        wo = Va(() =>
+        Bo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90879,7 +90924,7 @@
             r.e(23027),
           ]).then(r.bind(r, 5136)),
         ),
-        yo = Va(() =>
+        wo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90922,7 +90967,7 @@
             r.e(2414),
           ]).then(r.bind(r, 67309)),
         ),
-        Mo = Va(() =>
+        yo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -90966,7 +91011,7 @@
             r.e(57333),
           ]).then(r.bind(r, 87669)),
         ),
-        So = Va(() =>
+        Mo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -91008,10 +91053,10 @@
             r.e(9236),
           ]).then(r.bind(r, 84428)),
         ),
-        Co = Va(() =>
+        So = Ha(() =>
           Promise.all([r.e(59157), r.e(57819)]).then(r.bind(r, 90428)),
         ),
-        vo = Va(() =>
+        Co = Ha(() =>
           Promise.all([
             r.e(29197),
             r.e(4796),
@@ -91027,7 +91072,7 @@
             r.e(86991),
           ]).then(r.bind(r, 108)),
         ),
-        Ro = Va(() =>
+        vo = Ha(() =>
           Promise.all([
             r.e(36597),
             r.e(56589),
@@ -91063,7 +91108,7 @@
             r.e(39297),
           ]).then(r.bind(r, 13643)),
         ),
-        zo = Va(async () => ({
+        Ro = Ha(async () => ({
           default: (
             await Promise.all([
               r.e(8083),
@@ -91073,7 +91118,7 @@
             ]).then(r.bind(r, 21423))
           ).GlobalFooter,
         })),
-        Io = Va(() =>
+        zo = Ha(() =>
           Promise.all([
             r.e(56589),
             r.e(8083),
@@ -91094,7 +91139,7 @@
             r.e(29456),
           ]).then(r.bind(r, 7841)),
         ),
-        jo = Va(() =>
+        Io = Ha(() =>
           Promise.all([
             r.e(56589),
             r.e(8083),
@@ -91115,7 +91160,7 @@
             r.e(29456),
           ]).then(r.bind(r, 1593)),
         ),
-        To = Va(() =>
+        jo = Ha(() =>
           Promise.all([
             r.e(56589),
             r.e(8083),
@@ -91136,10 +91181,10 @@
             r.e(29456),
           ]).then(r.bind(r, 54796)),
         );
-      function xo(e) {
+      function To(e) {
         return (0, o.jsx)(F.tH, { children: (0, o.jsx)(M.qh, { ...e }) });
       }
-      function Fo() {
+      function xo() {
         return (
           (0, n.useEffect)(
             () => (
@@ -91151,7 +91196,7 @@
           null
         );
       }
-      function Oo(e) {
+      function Fo(e) {
         const [t, r] = n.useState(),
           [i, u] = n.useState(!1);
         return (
@@ -91191,15 +91236,15 @@
                 history: e.history,
                 children: (0, o.jsx)("div", {
                   className: y().App,
-                  children: (0, o.jsxs)(Ao, {
+                  children: (0, o.jsxs)(Lo, {
                     storeUserConfig: t,
                     children: [
-                      (0, o.jsx)(Uo, {}),
+                      (0, o.jsx)(Ao, {}),
                       (0, o.jsx)(n.Suspense, {
-                        fallback: (0, o.jsx)(Fo, {}),
+                        fallback: (0, o.jsx)(xo, {}),
                         children: (0, o.jsxs)(M.dO, {
                           children: [
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.DiagData(),
                               render: (e) =>
@@ -91209,33 +91254,33 @@
                                   strConfigID: "application_config",
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.Login(),
                               children: (0, o.jsx)(Be.X, {
                                 config: {
-                                  login: (e) => (0, o.jsx)(uo, { ...e }),
+                                  login: (e) => (0, o.jsx)(co, { ...e }),
                                 },
                               }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.OAuthLogin(),
                               children: (0, o.jsx)(Be.X, {
                                 config: {
-                                  login: (e) => (0, o.jsx)(uo, { ...e }),
+                                  login: (e) => (0, o.jsx)(co, { ...e }),
                                 },
                               }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.AppStorePage(),
                               render: (e) =>
-                                (0, o.jsx)($a, {
+                                (0, o.jsx)(Ka, {
                                   appid: parseInt(e.match.params.appid),
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.SaleLandingPage(),
                               render: (e) => {
@@ -91249,7 +91294,7 @@
                                   config: {
                                     "sale-display": () =>
                                       (0, o.jsx)(
-                                        So,
+                                        Mo,
                                         {
                                           promotionName: `sale_${t}`,
                                           language: (0, l.sfN)(s.TS.LANGUAGE),
@@ -91258,7 +91303,7 @@
                                       ),
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Qa,
+                                        $a,
                                         { ...e, promotionName: t },
                                         `broadcastsale_${t}`,
                                       ),
@@ -91266,37 +91311,37 @@
                                 });
                               },
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.CuratorAdminEditPage(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "creatorhome-social-media-edit": (e) =>
-                                      (0, o.jsx)(eo, { ...e }),
+                                      (0, o.jsx)(Ja, { ...e }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.CuratorAdminEventLinkEditPage(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "creatorhome-events-link-edit": (e) =>
-                                      (0, o.jsx)(to, { ...e }),
+                                      (0, o.jsx)(eo, { ...e }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.CuratorAdminPage(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "curator-admin-rss": () =>
-                                      (0, o.jsx)(Xa, {}),
+                                      (0, o.jsx)(Ya, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.CreatorSaleLandingPage(),
                               render: (e) =>
@@ -91305,7 +91350,7 @@
                                   config: {
                                     "sale-display": () =>
                                       (0, o.jsx)(
-                                        So,
+                                        Mo,
                                         {
                                           promotionName:
                                             "sale_" +
@@ -91320,7 +91365,7 @@
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: [
                                 p.B.RemotePlay(),
                                 p.B.RemotePlayTogether(),
@@ -91333,9 +91378,9 @@
                                 p.B.SteamHardware(),
                                 p.B.SteamAwardsArchive(),
                               ],
-                              render: (e) => (0, o.jsx)(Wo, {}),
+                              render: (e) => (0, o.jsx)(Oo, {}),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.CuratorHomePage(),
                               render: (e) =>
@@ -91343,7 +91388,7 @@
                                   config: {
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Qa,
+                                        $a,
                                         {
                                           ...e,
                                           clanid: s.GP.clanid,
@@ -91355,13 +91400,13 @@
                                           s.GP.listid,
                                       ),
                                     "creatorhome-social-media-display": (e) =>
-                                      (0, o.jsx)(ro, { ...e }),
+                                      (0, o.jsx)(to, { ...e }),
                                     "creator-home-event": (e) =>
-                                      (0, o.jsx)(Ja, { ...e }),
+                                      (0, o.jsx)(Xa, { ...e }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.CuratorListPage(),
                               render: (e) =>
@@ -91369,25 +91414,25 @@
                                   config: {
                                     "list-display": () =>
                                       (0, o.jsx)(
-                                        io,
+                                        ro,
                                         { listid: e.match.params.listid },
                                         "curator_list",
                                       ),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.CuratorAllOtherserPages(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "creatorhome-social-media-display": (e) =>
-                                      (0, o.jsx)(ro, { ...e }),
+                                      (0, o.jsx)(to, { ...e }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.PackageStorePage(),
                               render: (e) =>
@@ -91395,7 +91440,7 @@
                                   config: {
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Qa,
+                                        $a,
                                         {
                                           subid:
                                             Number.parseInt(
@@ -91408,12 +91453,12 @@
                                     "storeitems-carousel": (e) =>
                                       (0, o.jsx)(we.Ay, {
                                         feature: "recommended",
-                                        children: (0, o.jsx)(Mo, { ...e }),
+                                        children: (0, o.jsx)(yo, { ...e }),
                                       }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.BundleStorePage(),
                               render: (e) =>
@@ -91421,7 +91466,7 @@
                                   config: {
                                     "broadcast-embed": () =>
                                       (0, o.jsx)(
-                                        Qa,
+                                        $a,
                                         {
                                           bundleid:
                                             Number.parseInt(
@@ -91434,74 +91479,74 @@
                                     "storeitems-carousel": (e) =>
                                       (0, o.jsx)(we.Ay, {
                                         feature: "recommended",
-                                        children: (0, o.jsx)(Mo, { ...e }),
+                                        children: (0, o.jsx)(yo, { ...e }),
                                       }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.NewsHub(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   takeGamepadFocusOnMount: !0,
                                   config: {
-                                    "event-calendar": () => (0, o.jsx)(lo, {}),
-                                  },
-                                }),
-                            }),
-                            (0, o.jsx)(xo, {
-                              path: p.B.EventAdmin(),
-                              render: (e) =>
-                                (0, o.jsx)(Be.X, {
-                                  config: {
                                     "event-calendar": () => (0, o.jsx)(oo, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
+                              path: p.B.EventAdmin(),
+                              render: (e) =>
+                                (0, o.jsx)(Be.X, {
+                                  config: {
+                                    "event-calendar": () => (0, o.jsx)(ao, {}),
+                                  },
+                                }),
+                            }),
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.GameExplorer(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
-                                    gameexplorer: () => (0, o.jsx)(Io, {}),
+                                    gameexplorer: () => (0, o.jsx)(zo, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.RecommenderDemos(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
-                                    recommenderdemos: () => (0, o.jsx)(jo, {}),
+                                    recommenderdemos: () => (0, o.jsx)(Io, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.LabsSandbox(),
-                              render: (e) => (0, o.jsx)(To, {}),
+                              render: (e) => (0, o.jsx)(jo, {}),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.SteamCharts(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "react-root": () =>
-                                      (0, o.jsx)(yo, { ...e }),
+                                      (0, o.jsx)(wo, { ...e }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.Loyalty(),
                               render: () =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
-                                    "points-shop": () => (0, o.jsx)(mo, {}),
+                                    "points-shop": () => (0, o.jsx)(uo, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.ContentHubHome(),
                               render: (e) => {
                                 const {
@@ -91514,7 +91559,7 @@
                                   config: {
                                     "sale-display": () =>
                                       (0, o.jsx)(
-                                        So,
+                                        Mo,
                                         {
                                           promotionName: "contenthub_" + t,
                                           language: (0, l.sfN)(s.TS.LANGUAGE),
@@ -91525,77 +91570,64 @@
                                 });
                               },
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.Categories(),
                               render: () =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
-                                    categories: () => (0, o.jsx)(Ya, {}),
+                                    categories: () => (0, o.jsx)(Qa, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.AccountPreferences(),
-                              render: (e) => (0, o.jsx)(Ka, { ...e }),
+                              render: (e) => (0, o.jsx)(Za, { ...e }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.SummerSale2021Story(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
-                                    "forge-your-fate": () => (0, o.jsx)(Co, {}),
+                                    "forge-your-fate": () => (0, o.jsx)(So, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               exact: !0,
                               path: p.B.LabsHome(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "discovery-queue-button": () =>
-                                      (0, o.jsx)(no, {}),
+                                      (0, o.jsx)(io, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.MarketingMessages(),
+                              render: (e) => (0, o.jsx)(mo, { ...e }),
+                            }),
+                            (0, o.jsx)(To, {
+                              path: p.B.MeetSteamRoute(),
                               render: (e) => (0, o.jsx)(go, { ...e }),
                             }),
-                            (0, o.jsx)(xo, {
-                              path: p.B.MeetSteamRoute(),
-                              render: (e) => (0, o.jsx)(po, { ...e }),
-                            }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.VerifiedProgram(),
-                              render: (e) => (0, o.jsx)(vo, { ...e }),
+                              render: (e) => (0, o.jsx)(Co, { ...e }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.YearInReview(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "react-root": () =>
-                                      (0, o.jsx)(Ro, { ...e }),
+                                      (0, o.jsx)(vo, { ...e }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.ShoppingCartAccountCartPurchaseRequested(),
-                              render: (e) =>
-                                (0, o.jsx)(Be.X, {
-                                  config: {
-                                    "react-root": () =>
-                                      (0, o.jsx)(fo, {
-                                        familyGroupID:
-                                          e.match.params.familygroupid,
-                                      }),
-                                  },
-                                }),
-                            }),
-                            (0, o.jsx)(xo, {
-                              path: p.B.ShoppingCartPurchaseRequest(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
@@ -91603,23 +91635,45 @@
                                       (0, o.jsx)(bo, {
                                         familyGroupID:
                                           e.match.params.familygroupid,
+                                      }),
+                                  },
+                                }),
+                            }),
+                            (0, o.jsx)(To, {
+                              path: p.B.ShoppingCartPurchaseRequest(),
+                              render: (e) =>
+                                (0, o.jsx)(Be.X, {
+                                  config: {
+                                    "react-root": () =>
+                                      (0, o.jsx)(ho, {
+                                        familyGroupID:
+                                          e.match.params.familygroupid,
                                         requestID: e.match.params.requestid,
                                       }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.ShoppingCartGifts(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "react-root": () =>
-                                      (0, o.jsx)(Bo, { initialStep: "gifts" }),
+                                      (0, o.jsx)(fo, { initialStep: "gifts" }),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.ShoppingCart(),
+                              render: (e) =>
+                                (0, o.jsx)(Be.X, {
+                                  config: {
+                                    "react-root": () => (0, o.jsx)(fo, {}),
+                                  },
+                                }),
+                            }),
+                            (0, o.jsx)(To, {
+                              path: p.B.SteamAwards(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
@@ -91627,32 +91681,23 @@
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, {
-                              path: p.B.SteamAwards(),
-                              render: (e) =>
-                                (0, o.jsx)(Be.X, {
-                                  config: {
-                                    "react-root": () => (0, o.jsx)(wo, {}),
-                                  },
-                                }),
-                            }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.JoinMultiplayerSession(),
-                              render: (e) => (0, o.jsx)(co, {}),
+                              render: (e) => (0, o.jsx)(lo, {}),
                             }),
-                            (0, o.jsx)(xo, {
+                            (0, o.jsx)(To, {
                               path: p.B.Home(),
                               render: (e) =>
                                 (0, o.jsx)(Be.X, {
                                   config: {
                                     "discovery-queue-home": () =>
-                                      (0, o.jsx)(so, {}),
+                                      (0, o.jsx)(no, {}),
                                     "personal-calendar-home": () =>
-                                      (0, o.jsx)(ao, {}),
+                                      (0, o.jsx)(so, {}),
                                   },
                                 }),
                             }),
-                            (0, o.jsx)(xo, { children: (0, o.jsx)(ye.a, {}) }),
+                            (0, o.jsx)(To, { children: (0, o.jsx)(ye.a, {}) }),
                           ],
                         }),
                       }),
@@ -91663,7 +91708,7 @@
             : null
         );
       }
-      function Wo(e) {
+      function Oo(e) {
         const t = (0, M.zy)().pathname.split("/").filter(Boolean).pop(),
           r = "sale_" + (t?.split("?")[0] || "unknown");
         return (0, o.jsx)(Be.X, {
@@ -91671,14 +91716,14 @@
           config: {
             "sale-display": () =>
               (0, o.jsx)(
-                So,
+                Mo,
                 { promotionName: r, language: (0, l.sfN)(s.TS.LANGUAGE) },
                 r,
               ),
           },
         });
       }
-      function qo(e) {
+      function Wo(e) {
         const { children: t } = e,
           r = n.useCallback(() => (0, u.P)(), []),
           i = (0, E.bs)(r),
@@ -91696,7 +91741,7 @@
           }),
         });
       }
-      function Lo(e) {
+      function qo(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useRef(void 0);
         i.current || (i.current = new B());
@@ -91715,12 +91760,12 @@
           })
         );
       }
-      const Ao = n.memo(function (e) {
+      const Lo = n.memo(function (e) {
           const { storeUserConfig: t, children: r } = e,
             i = (0, s.Tc)("hwinfo", "application_config");
-          return (0, o.jsx)(Lo, {
+          return (0, o.jsx)(qo, {
             storeUserConfig: t,
-            children: (0, o.jsx)(Ga.Iz, {
+            children: (0, o.jsx)(Ea.Iz, {
               children: (0, o.jsx)(O.I.Provider, {
                 value: { bCanUseLink: !0 },
                 children: (0, o.jsx)(s.ss, {
@@ -91728,13 +91773,13 @@
                     bSteamOS: i?.bSteamOS ?? !1,
                     bSteamDeck: i?.bSteamDeck ?? !1,
                     bSteamMachine: i?.bSteamMachine ?? !1,
-                    children: (0, o.jsx)(qo, {
+                    children: (0, o.jsx)(Wo, {
                       children: (0, o.jsx)(c.s, {
                         children: (0, o.jsx)(j, {
                           children: (0, o.jsx)(it, {
                             children: (0, o.jsx)(ae, {
-                              children: (0, o.jsx)(Da, {
-                                children: (0, o.jsx)(Ea.Y, { children: r }),
+                              children: (0, o.jsx)(ka, {
+                                children: (0, o.jsx)(Na.Y, { children: r }),
                               }),
                             }),
                           }),
@@ -91747,7 +91792,7 @@
             }),
           });
         }),
-        Uo = n.memo(function (e) {
+        Ao = n.memo(function (e) {
           return (0, o.jsxs)(o.Fragment, {
             children: [
               (0, o.jsx)(Bt, {}),
@@ -91758,7 +91803,7 @@
                       "green-envelope": () =>
                         (0, o.jsx)(n.Suspense, {
                           fallback: null,
-                          children: (0, o.jsx)(Za, {
+                          children: (0, o.jsx)(Va, {
                             bResponsiveHeader: !1,
                             notifications: (0, s.Tc)(
                               "steam_notifications",
@@ -91769,7 +91814,7 @@
                       "green-envelope-responsive": () =>
                         (0, o.jsx)(n.Suspense, {
                           fallback: null,
-                          children: (0, o.jsx)(Za, {
+                          children: (0, o.jsx)(Va, {
                             bResponsiveHeader: !0,
                             notifications: (0, s.Tc)(
                               "steam_notifications",
@@ -91785,17 +91830,12 @@
                       "open-in-desktop-client": () =>
                         (0, o.jsx)(n.Suspense, {
                           fallback: null,
-                          children: (0, o.jsx)(_o, {}),
+                          children: (0, o.jsx)(po, {}),
                         }),
                       "open-in-desktop-client-or-login": () =>
                         (0, o.jsx)(n.Suspense, {
                           fallback: null,
-                          children: (0, o.jsx)(ho, {}),
-                        }),
-                      "store-menu-responsive-search": () =>
-                        (0, o.jsx)(n.Suspense, {
-                          fallback: null,
-                          children: (0, o.jsx)(Aa, {}),
+                          children: (0, o.jsx)(_o, {}),
                         }),
                     },
                   }),
@@ -91806,6 +91846,11 @@
                         (0, o.jsx)(n.Suspense, {
                           fallback: null,
                           children: (0, o.jsx)(qa, {}),
+                        }),
+                      "store-menu-responsive-search": () =>
+                        (0, o.jsx)(n.Suspense, {
+                          fallback: null,
+                          children: (0, o.jsx)(Aa, {}),
                         }),
                     },
                   }),
@@ -91826,20 +91871,20 @@
                   footer: () =>
                     (0, o.jsx)(n.Suspense, {
                       fallback: null,
-                      children: (0, o.jsx)(zo, {}),
+                      children: (0, o.jsx)(Ro, {}),
                     }),
                 },
               }),
             ],
           });
         });
-      var Po = r(72034),
-        ko = r(49419);
+      var Uo = r(72034),
+        Po = r(49419);
       r(52244);
       new Map();
-      var Do = r(14947),
-        No = r(29248);
-      function Eo() {
+      var ko = r(14947),
+        Do = r(29248);
+      function No() {
         const e = [];
         return (
           vt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
@@ -91847,10 +91892,10 @@
           e
         );
       }
-      var Go = r(92724),
-        Ho = (r(64641), r(37523)),
-        Vo = r(78686);
-      (0, Do.jK)({ enforceActions: "never" }),
+      var Eo = r(92724),
+        Go = (r(64641), r(37523)),
+        Ho = r(78686);
+      (0, ko.jK)({ enforceActions: "never" }),
         performance.mark("storeReactStartup");
       new PerformanceObserver((e) => {
         const t = e.getEntriesByType("navigation")[0];
@@ -91859,29 +91904,29 @@
           "responseEnd" in t &&
           "number" == typeof t.responseEnd &&
           t.responseEnd &&
-          (0, Na.D)()
+          (0, Da.D)()
         ) {
-          const e = Zo - t.responseEnd;
-          (0, Na.D)().IncrementStat("storeReactStartup", e),
+          const e = Vo - t.responseEnd;
+          (0, Da.D)().IncrementStat("storeReactStartup", e),
             performance.measure("storeReactStartup", {
               start: t.responseEnd,
               duration: e,
             });
         }
       }).observe({ type: "navigation", buffered: !0 });
-      let Zo = performance.now();
-      let Ko,
-        $o = !1;
-      function Qo() {
-        if (!$o) {
+      let Vo = performance.now();
+      let Zo,
+        Ko = !1;
+      function $o() {
+        if (!Ko) {
           (0, s.XJ)("application_config").config
-            ? (Yo(), ($o = !0))
+            ? (Qo(), (Ko = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function Yo() {
-        Ko ||
-          (Ko = (async function (e) {
+      async function Qo() {
+        Zo ||
+          (Zo = (async function (e) {
             0;
             const t = a.A0.GetLanguageFallback(e),
               i = e === t,
@@ -91894,38 +91939,38 @@
                 i ? {} : r(95386)(`./sales_${t}.json`),
                 i ? {} : r(68982)(`./main_${t}.json`),
                 i ? {} : r(13122)(`./marketing_${t}.json`),
-                Ho.n.Ready(),
+                Go.n.Ready(),
                 gi.Ready(),
-                Vo.Z.Ready(),
-                (0, Go.u)(),
+                Ho.Z.Ready(),
+                (0, Eo.u)(),
               ]);
             a.pf.AddTokens(
               { ...s, ...n, ...o, ...l },
               { ...u, ...c, ...m, ...d },
             );
           })(s.TS.LANGUAGE)),
-          await Ko;
+          await Zo;
       }
-      Qo(),
+      $o(),
         Te.oQ(async function () {
-          Qo();
-          const e = (0, No.zR)({ basename: (0, p.C)() });
-          (0, ko.aj)().Init(
+          $o();
+          const e = (0, Do.zR)({ basename: (0, p.C)() });
+          (0, Po.aj)().Init(
             "Store",
             CLSTAMP,
-            new Po.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-            { fnGetReportTags: Eo },
+            new Uo.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+            { fnGetReportTags: No },
           ),
-            await Yo(),
+            await Qo(),
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
-                  .render(n.createElement(Oo, { history: e }))
+                  .render(n.createElement(Fo, { history: e }))
               : console.error('No "application_root" was found to target'),
-            (0, Na.D)() &&
-              (0, Na.D)().IncrementStat(
+            (0, Da.D)() &&
+              (0, Da.D)().IncrementStat(
                 "storeReactLocalizationReady",
-                performance.now() - Zo,
+                performance.now() - Vo,
               ),
             performance.measure("storeReactLocalizationReady", {
               start: "storeReactStartup",

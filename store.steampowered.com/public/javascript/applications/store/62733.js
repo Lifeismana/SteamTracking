@@ -3608,9 +3608,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          BaseCartPage: () => $t,
-          default: () => qt,
-          useInitCartLocalization: () => tn,
+          BaseCartPage: () => en,
+          default: () => Qt,
+          useInitCartLocalization: () => nn,
         });
       var i = n(7850),
         s = n(90485),
@@ -3950,11 +3950,11 @@
           children: n,
         });
       }
-      var Q = n(28491),
-        J = n(53965),
-        X = n(83392),
-        $ = n(90534),
-        ee = n(20187),
+      var Q = n(53965),
+        J = n(83392),
+        X = n(90534),
+        $ = n(20187),
+        ee = n(28491),
         te = n(13904),
         ne = n(12229),
         ie = n(93332),
@@ -3972,10 +3972,10 @@
         const { scheduledTime: t, onScheduledTimeChange: n } = e,
           [s, r] = u.useState(null),
           a = t > 0;
-        return (0, i.jsxs)(at, {
+        return (0, i.jsxs)(ot, {
           children: [
-            (0, i.jsx)(lt, { children: (0, w.we)("#Cart_GiftDelivery_Label") }),
-            (0, i.jsx)(ct, {
+            (0, i.jsx)(dt, { children: (0, w.we)("#Cart_GiftDelivery_Label") }),
+            (0, i.jsx)(lt, {
               children: (0, i.jsx)(g.Od, {
                 controlled: !0,
                 checked: !a,
@@ -3983,7 +3983,7 @@
                 label: (0, w.we)("#Cart_GiftDelivery_Now"),
               }),
             }),
-            (0, i.jsxs)(ct, {
+            (0, i.jsxs)(lt, {
               children: [
                 (0, i.jsx)(g.Od, {
                   controlled: !0,
@@ -4233,13 +4233,13 @@
           });
         return s.length < 1
           ? null
-          : (0, i.jsx)($.az, {
+          : (0, i.jsx)(X.az, {
               flexGrow: "0",
               children: (0, i.jsxs)(ye.l6.Root, {
                 state: a,
                 children: [
                   (0, i.jsx)(ye.l6.Trigger, {
-                    children: (0, i.jsx)(ee.EY, {
+                    children: (0, i.jsx)($.EY, {
                       children: (0, w.we)("#Cart_Gifting_CopyGiftOptionsFrom"),
                     }),
                   }),
@@ -4272,7 +4272,7 @@
               persona: r,
             })
           : (0, i.jsx)(i.Fragment, {});
-        return (0, i.jsxs)(X.s, {
+        return (0, i.jsxs)(J.s, {
           minWidth: "0",
           align: "center",
           justify: "between",
@@ -4280,7 +4280,7 @@
           maxWidth: "600px",
           children: [
             (0, i.jsx)("div", { children: s.GetName() }),
-            (0, i.jsxs)(X.s, { gap: "1", align: "center", children: [c, o] }),
+            (0, i.jsxs)(J.s, { gap: "1", align: "center", children: [c, o] }),
           ],
         });
       }
@@ -4547,11 +4547,11 @@
         const { giftInfo: t, onChange: n } = e,
           s = (0, Se.js)(t.accountid_giftee);
         return s.data
-          ? (0, i.jsxs)(rt, {
+          ? (0, i.jsxs)(at, {
               children: [
-                (0, i.jsxs)(ot, {
+                (0, i.jsxs)(ct, {
                   children: [
-                    (0, i.jsx)(lt, {
+                    (0, i.jsx)(dt, {
                       children: (0, w.we)("#Cart_PurchaseFor_Label"),
                     }),
                     (0, i.jsx)("a", {
@@ -4566,18 +4566,18 @@
                     s.data.m_strPlayerName,
                   ],
                 }),
-                (0, i.jsx)(tt, { giftInfo: t, onChange: n }),
+                (0, i.jsx)(nt, { giftInfo: t, onChange: n }),
               ],
             })
           : null;
       }
       function Ve(e) {
         const { lineItem: t } = e;
-        return (0, i.jsxs)(rt, {
+        return (0, i.jsxs)(at, {
           children: [
-            (0, i.jsx)(Je, { ...e }),
-            (0, i.jsx)(et, { lineItem: t }),
-            (0, i.jsx)(ut, { gifteeAccountID: t.gift_info?.accountid_giftee }),
+            (0, i.jsx)(Xe, { ...e }),
+            (0, i.jsx)(tt, { lineItem: t }),
+            (0, i.jsx)(mt, { gifteeAccountID: t.gift_info?.accountid_giftee }),
           ],
         });
       }
@@ -4586,10 +4586,10 @@
           ? null
           : (0, i.jsx)("div", {
               className: _e().SignInLink,
-              children: (0, w.oW)(
-                "#Cart_Gifting_SignInToSelectFriends",
-                (0, i.jsx)(Q.W, { onClick: () => (0, j.vg)() }),
-              ),
+              children: (0, i.jsx)(Q.$, {
+                onClick: () => (0, j.vg)(),
+                children: (0, w.we)("#Cart_Gifting_SignInForFriends"),
+              }),
             });
       }
       function Ke(e) {
@@ -4608,7 +4608,7 @@
         return (0, i.jsxs)(i.Fragment, {
           children: [
             S.iA.logged_in &&
-              (0, i.jsx)(J.$, {
+              (0, i.jsx)(Q.$, {
                 onClick: () => r(!0),
                 children: (0, w.we)("#Cart_SelectRecipient"),
               }),
@@ -4624,10 +4624,27 @@
         });
       }
       function Ye(e) {
+        const { lineItem: t, onClick: n } = e,
+          { mutate: s } = (0, te.C)(),
+          r = u.useCallback(() => {
+            s({
+              lineItemID: t.line_item_id,
+              lineItemFlags: t.flags,
+              giftInfo: { ...t.gift_info, email_giftee: "" },
+            }),
+              n();
+          }, [s, t, n]);
+        return (0, i.jsx)(Q.$, {
+          color: "dull",
+          onClick: r,
+          children: (0, w.we)("#Cart_EnterRecipientEmail"),
+        });
+      }
+      function qe(e) {
         const { lineItem: t } = e,
           n = (0, ce.$)(t);
         return n
-          ? (0, i.jsxs)(X.s, {
+          ? (0, i.jsxs)(J.s, {
               align: "center",
               children: [
                 (0, i.jsx)("a", {
@@ -4644,7 +4661,7 @@
             })
           : null;
       }
-      function qe(e) {
+      function Qe(e) {
         const { lineItem: t } = e,
           n = t.gift_info?.email_giftee,
           { mutate: s } = (0, te.C)(),
@@ -4670,7 +4687,7 @@
                   mustBeEmail: !0,
                   value: r,
                   onChange: (e) => o(e.target.value),
-                  maxChars: it,
+                  maxChars: st,
                 }),
               }),
               (0, i.jsxs)("ul", {
@@ -4691,17 +4708,17 @@
           })
         );
       }
-      var Qe;
-      function Je(e) {
+      var Je;
+      function Xe(e) {
         const { lineItem: t } = e,
           [n, s] = u.useState(!1),
           r = u.useMemo(
             () =>
               t.gift_info?.accountid_giftee
-                ? Qe.AccountSelected
+                ? Je.AccountSelected
                 : n || t.gift_info?.email_giftee
-                  ? Qe.EmailSelected
-                  : Qe.NoRecipientSelected,
+                  ? Je.EmailSelected
+                  : Je.NoRecipientSelected,
             [t, n],
           ),
           { mutate: a } = (0, te.C)(),
@@ -4716,33 +4733,33 @@
                 giftInfo: e,
               });
           }, [a, t]);
-        return (0, i.jsxs)(at, {
+        return (0, i.jsxs)(ot, {
           children: [
             (0, i.jsx)("div", { className: _e().GiftFormDivider }),
-            (0, i.jsxs)(X.s, {
+            (0, i.jsxs)(J.s, {
               justify: "between",
               gap: "3",
               direction: { initial: "column-reverse", md: "row" },
               marginBottom: "2",
               children: [
-                (0, i.jsxs)(ot, {
+                (0, i.jsxs)(ct, {
                   children: [
-                    (0, i.jsx)(lt, {
-                      fullWidth: r === Qe.EmailSelected,
+                    (0, i.jsx)(dt, {
+                      fullWidth: r === Je.EmailSelected,
                       children:
-                        r == Qe.EmailSelected
+                        r == Je.EmailSelected
                           ? (0, w.we)("#Cart_GiftRecipientEmail_Label")
                           : (0, w.we)("#Cart_GiftRecipient_Label"),
                     }),
-                    r == Qe.AccountSelected && (0, i.jsx)(Ye, { lineItem: t }),
-                    r == Qe.NoRecipientSelected &&
-                      (0, i.jsx)(Xe, { onEmailRecipient: () => s(!0), ...e }),
-                    r != Qe.NoRecipientSelected &&
-                      (0, i.jsxs)(dt, {
+                    r == Je.AccountSelected && (0, i.jsx)(qe, { lineItem: t }),
+                    r == Je.NoRecipientSelected &&
+                      (0, i.jsx)($e, { onEmailRecipient: () => s(!0), ...e }),
+                    r != Je.NoRecipientSelected &&
+                      (0, i.jsxs)(ut, {
                         onClick: o,
                         children: [
                           "(",
-                          r == Qe.EmailSelected
+                          r == Je.EmailSelected
                             ? (0, w.we)("#Cart_EditGiftDelivery")
                             : (0, w.we)("#Cart_Edit"),
                           ")",
@@ -4754,23 +4771,27 @@
               ],
             }),
             (0, i.jsx)("div", {
-              children: r == Qe.EmailSelected && (0, i.jsx)(qe, { ...e }),
+              children: r == Je.EmailSelected && (0, i.jsx)(Qe, { ...e }),
             }),
-            r == Qe.AccountSelected && (0, i.jsx)($e, { lineItem: t }),
+            r == Je.AccountSelected && (0, i.jsx)(et, { lineItem: t }),
           ],
         });
       }
-      function Xe(e) {
+      function $e(e) {
         const { onEmailRecipient: t, ...n } = e;
-        return (0, i.jsxs)(X.s, {
+        return (0, i.jsxs)(J.s, {
           align: "center",
           gap: "2",
           marginStart: "2",
           wrap: "wrap",
-          children: [(0, i.jsx)(Ke, { ...n }), !1, (0, i.jsx)(Ze, {})],
+          children: [
+            (0, i.jsx)(Ke, { ...n }),
+            (0, i.jsx)(Ye, { onClick: t, ...n }),
+            (0, i.jsx)(Ze, {}),
+          ],
         });
       }
-      function $e(e) {
+      function et(e) {
         const { lineItem: t } = e,
           n = (0, ce.$)(t),
           { data: s } = (0, ie.Dv)(),
@@ -4781,17 +4802,17 @@
         return n
           ? r
             ? null
-            : (0, i.jsx)($.az, {
+            : (0, i.jsx)(X.az, {
                 marginTop: "3",
                 className: _e().GiftNonFriendWarning,
-                children: (0, i.jsxs)(ee.EY, {
+                children: (0, i.jsxs)($.EY, {
                   size: "3",
                   color: "amber-9",
                   children: [
                     S.iA.logged_in &&
                       (0, w.PP)(
                         "#Cart_Warning_GiftToNonFriend_Named",
-                        (0, i.jsx)(Q.Y, {
+                        (0, i.jsx)(ee.Y, {
                           target: "_blank",
                           href: n.GetCommunityProfileURL(),
                           children: n.m_strPlayerName,
@@ -4800,7 +4821,7 @@
                     !S.iA.logged_in &&
                       (0, w.oW)(
                         "#Cart_Warning_GiftToAccount_LoggedOut_Actionable",
-                        (0, i.jsx)(Q.W, {
+                        (0, i.jsx)(ee.W, {
                           color: "text-light",
                           contrast: "title",
                           onClick: () => (0, j.vg)(),
@@ -4811,7 +4832,7 @@
               })
           : null;
       }
-      function et(e) {
+      function tt(e) {
         const { lineItem: t } = e,
           [n, s] = u.useState(t.gift_info?.gift_message?.message || ""),
           r = u.useRef(n),
@@ -4861,7 +4882,7 @@
               (r.current = n),
               (c.current = a));
           }, [n, a, l, g, t.gift_info]),
-          (0, i.jsx)(st, {
+          (0, i.jsx)(rt, {
             id: t.line_item_id,
             message: n,
             onMessageChange: (e) => {
@@ -4878,9 +4899,9 @@
           })
         );
       }
-      function tt(e) {
+      function nt(e) {
         const { giftInfo: t, onChange: n } = e;
-        return (0, i.jsx)(st, {
+        return (0, i.jsx)(rt, {
           id: "cart",
           message: t.gift_message?.message || "",
           onMessageChange: (e) =>
@@ -4897,10 +4918,10 @@
         (e[(e.NoRecipientSelected = 0)] = "NoRecipientSelected"),
           (e[(e.AccountSelected = 1)] = "AccountSelected"),
           (e[(e.EmailSelected = 2)] = "EmailSelected");
-      })(Qe || (Qe = {}));
-      const nt = 160,
-        it = 330;
-      function st(e) {
+      })(Je || (Je = {}));
+      const it = 160,
+        st = 330;
+      function rt(e) {
         const {
             id: t,
             message: n,
@@ -4913,15 +4934,15 @@
             onBlur: d,
           } = e,
           m = (0, ae.LH)(),
-          _ = nt - n.length,
+          _ = it - n.length,
           [p, f] = u.useState(!1),
           h = p || r?.length > 0 || !m,
           { data: x } = (0, Se.js)(S.iA.accountid);
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsxs)(at, {
+            (0, i.jsxs)(ot, {
               children: [
-                (0, i.jsx)(lt, {
+                (0, i.jsx)(dt, {
                   fullWidth: !0,
                   children: (0, w.PP)(
                     "#Cart_GiftDelivery_Body",
@@ -4941,11 +4962,11 @@
               ],
             }),
             !!m &&
-              (0, i.jsx)(at, {
+              (0, i.jsx)(ot, {
                 children: (0, i.jsxs)("div", {
                   className: _e().GiftFormRecipient,
                   children: [
-                    (0, i.jsx)(lt, {
+                    (0, i.jsx)(dt, {
                       children: (0, w.we)("#Cart_GiftDelivery_From"),
                     }),
                     (0, i.jsx)(we.i8, {
@@ -4956,7 +4977,7 @@
                     " ",
                     x?.m_strPlayerName || "",
                     !h &&
-                      (0, i.jsxs)(dt, {
+                      (0, i.jsxs)(ut, {
                         onClick: () => f(!0),
                         children: [
                           "(",
@@ -4968,9 +4989,9 @@
                 }),
               }),
             h &&
-              (0, i.jsxs)(at, {
+              (0, i.jsxs)(ot, {
                 children: [
-                  (0, i.jsx)(lt, {
+                  (0, i.jsx)(dt, {
                     fullWidth: !0,
                     children: (0, w.we)("#Cart_GiftDelivery_Signature"),
                   }),
@@ -4979,7 +5000,7 @@
                     className: _e().GiftSignatureInput,
                     onChange: (e) => a(e.target.value),
                     onBlur: d,
-                    maxChars: nt,
+                    maxChars: it,
                   }),
                 ],
               }),
@@ -4987,45 +5008,45 @@
           ],
         });
       }
-      function rt(e) {
+      function at(e) {
         return (0, i.jsx)("div", {
           className: _e().GiftFormCtn,
           children: e.children,
         });
       }
-      function at(e) {
+      function ot(e) {
         return (0, i.jsx)("div", {
           className: _e().GiftFormSection,
           children: e.children,
         });
       }
-      function ot(e) {
+      function ct(e) {
         return (0, i.jsx)("div", {
           className: _e().GiftFormRecipient,
           children: e.children,
         });
       }
-      function ct(e) {
+      function lt(e) {
         return (0, i.jsx)("div", {
           className: _e().GiftRadioRow,
           children: e.children,
         });
       }
-      function lt(e) {
+      function dt(e) {
         const { fullWidth: t } = e;
         return (0, i.jsx)("div", {
           className: l()(_e().FormTextLabel, t && _e().FullWidth),
           children: e.children,
         });
       }
-      function dt(e) {
+      function ut(e) {
         return (0, i.jsx)(r.Z, {
           onActivate: e.onClick,
           children: e.children,
           className: _e().LinkButton,
         });
       }
-      function ut(e) {
+      function mt(e) {
         const { gifteeAccountID: t } = e,
           { isLoading: n, data: s } = (0, _.vo)(!0);
         if (n || s.is_not_member_of_any_group() || s.role() === se.PQ.sf)
@@ -5043,16 +5064,16 @@
             })
           : null;
       }
-      var mt = n(79443),
-        _t = n(30709),
-        pt = n(70343),
-        ft = n(22837),
-        ht = n(81393),
-        gt = n(43527),
-        xt = n(50829),
-        jt = n(97232),
-        Ct = n(8364);
-      function vt(e) {
+      var _t = n(79443),
+        pt = n(30709),
+        ft = n(70343),
+        ht = n(22837),
+        gt = n(81393),
+        xt = n(43527),
+        jt = n(50829),
+        Ct = n(97232),
+        vt = n(8364);
+      function It(e) {
         const {
             lineItem: t,
             storeItem: n,
@@ -5065,7 +5086,7 @@
           l = (0, te.C)();
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(It, {
+            (0, i.jsx)(wt, {
               couponApplied: s,
               numAvailable: r.length,
               onModifyClick: () =>
@@ -5076,7 +5097,7 @@
                   ),
                 }),
             }),
-            (0, i.jsx)(St, {
+            (0, i.jsx)(yt, {
               active: a,
               title: o || (0, w.we)("#Cart_CouponModify_Add"),
               packageName: n.GetName(),
@@ -5095,37 +5116,37 @@
           ],
         });
       }
-      function It(e) {
+      function wt(e) {
         const { couponApplied: t, numAvailable: n, onModifyClick: s } = e,
           r = (0, w.we)(
             t ? "#Cart_CouponModify_Change" : "#Cart_CouponModify_Add",
           );
         return (0, i.jsx)("div", {
-          className: xt.CouponPickerRowGlow,
+          className: jt.CouponPickerRowGlow,
           children: (0, i.jsxs)("div", {
-            className: xt.CouponPickerRow,
+            className: jt.CouponPickerRow,
             children: [
-              t ? (0, i.jsx)(wt, { ...t }) : null,
-              (0, i.jsx)(bt, {
+              t ? (0, i.jsx)(St, { ...t }) : null,
+              (0, i.jsx)(Dt, {
                 children: (0, w.Yp)("#Cart_CouponAvailability", n),
               }),
               (0, i.jsx)("div", {
-                className: xt.ModifyLink,
-                children: (0, i.jsx)(dt, { onClick: s, children: r }),
+                className: jt.ModifyLink,
+                children: (0, i.jsx)(ut, { onClick: s, children: r }),
               }),
             ],
           }),
         });
       }
-      function wt(e) {
+      function St(e) {
         const { large_icon_url: t, title: n } = e;
         return (0, i.jsx)("img", {
-          className: xt.CouponRepresentation,
+          className: jt.CouponRepresentation,
           src: t,
           title: n,
         });
       }
-      function St(e) {
+      function yt(e) {
         const {
             active: t,
             onRequestClose: n,
@@ -5144,10 +5165,10 @@
             (0, i.jsx)(g.a3, {
               children: (0, w.PP)(
                 "#Cart_SelectCouponToApply",
-                (0, i.jsx)("span", { className: xt.PackageName, children: s }),
+                (0, i.jsx)("span", { className: jt.PackageName, children: s }),
               ),
             }),
-            (0, i.jsx)(yt, {
+            (0, i.jsx)(Nt, {
               availableCoupons: o,
               couponApplied: a?.gidcoupon,
               couponSelected: l,
@@ -5156,27 +5177,27 @@
             (0, i.jsx)(g.CB, {
               onCancel: n,
               onOK: () => {
-                n(), c(l || ft.kFb);
+                n(), c(l || ht.kFb);
               },
               strOKText: (0, w.we)("#Button_Done"),
             }),
           ],
         });
       }
-      function yt(e) {
+      function Nt(e) {
         const {
             availableCoupons: t,
             couponApplied: n,
             couponSelected: s,
             onSelectedChange: r,
           } = e,
-          { data: a } = (0, Ct.g)(),
+          { data: a } = (0, vt.g)(),
           o = (a?.cart_items || []).map((e) => e.coupon_applied?.gidcoupon);
         return (0, i.jsx)("div", {
-          className: xt.CouponListContainer,
+          className: jt.CouponListContainer,
           children: t.map((e) =>
             (0, i.jsx)(
-              Nt,
+              bt,
               {
                 ...e,
                 applied: n === e.gidcoupon,
@@ -5189,7 +5210,7 @@
           ),
         });
       }
-      function Nt(e) {
+      function bt(e) {
         const {
             applied: t,
             inUse: n,
@@ -5202,50 +5223,50 @@
           l = !t && n,
           d = l ? void 0 : () => c(!s);
         return (0, i.jsxs)("div", {
-          className: (0, y.A)(xt.CouponListItem, l && xt.Disabled),
+          className: (0, y.A)(jt.CouponListItem, l && jt.Disabled),
           onClick: d,
           children: [
-            (0, i.jsx)(Dt, { checked: s, hidden: l }),
-            (0, i.jsx)("img", { src: r, title: a, className: xt.Image }),
+            (0, i.jsx)(At, { checked: s, hidden: l }),
+            (0, i.jsx)("img", { src: r, title: a, className: jt.Image }),
             (0, i.jsxs)("div", {
-              className: xt.Info,
+              className: jt.Info,
               children: [
                 t &&
-                  (0, i.jsx)(bt, {
+                  (0, i.jsx)(Dt, {
                     children: (0, w.we)("#Cart_Coupons_Applied"),
                   }),
                 l &&
-                  (0, i.jsx)(bt, {
+                  (0, i.jsx)(Dt, {
                     children: (0, w.we)("#Cart_Coupons_InUse"),
                   }),
               ],
             }),
             (0, i.jsxs)("div", {
-              className: xt.Discount,
+              className: jt.Discount,
               children: ["-", o, "%"],
             }),
           ],
         });
       }
-      function bt(e) {
+      function Dt(e) {
         return (0, i.jsx)("div", {
-          className: xt.CouponInfoText,
+          className: jt.CouponInfoText,
           children: e.children,
         });
       }
-      function Dt(e) {
+      function At(e) {
         const { checked: t, hidden: n } = e;
         return (0, i.jsx)("div", {
-          className: (0, y.A)(xt.Checkbox, n && xt.Hidden),
-          children: t && (0, i.jsx)(jt.Jl, {}),
+          className: (0, y.A)(jt.Checkbox, n && jt.Hidden),
+          children: t && (0, i.jsx)(Ct.Jl, {}),
         });
       }
-      var At = n(53534),
-        Tt = n(71460),
-        Gt = n.n(Tt),
-        Pt = n(11543),
-        kt = n.n(Pt);
-      function Lt() {
+      var Tt = n(53534),
+        Gt = n(71460),
+        Pt = n.n(Gt),
+        kt = n(11543),
+        Lt = n.n(kt);
+      function Et() {
         const [e, t] = u.useState(null);
         return (
           u.useEffect(() => {
@@ -5254,24 +5275,24 @@
           e
             ? (0, i.jsxs)("div", {
                 className: (0, y.A)(
-                  kt().EstimatedTotalFlex,
-                  Gt().UserCountrySelector,
+                  Lt().EstimatedTotalFlex,
+                  Pt().UserCountrySelector,
                 ),
                 children: [
                   (0, i.jsx)("div", {
-                    className: kt().CartLabelText,
+                    className: Lt().CartLabelText,
                     children: (0, w.we)("#Cart_UserCountrySelector"),
                   }),
                   (0, i.jsx)("div", {
-                    className: kt().CartValueText,
-                    children: (0, i.jsx)(Et, { rgCountryOptions: e }),
+                    className: Lt().CartValueText,
+                    children: (0, i.jsx)(Ft, { rgCountryOptions: e }),
                   }),
                 ],
               })
             : null
         );
       }
-      function Et(e) {
+      function Ft(e) {
         const { rgCountryOptions: t } = e,
           [n, s] = u.useState(S.TS.COUNTRY),
           r = u.useMemo(
@@ -5290,19 +5311,19 @@
           contextMenuPositionOptions: { bMatchWidth: !1 },
         });
       }
-      var Ft = n(48980),
-        Bt = n(10247);
-      function Rt(e) {
-        const { children: t } = e;
-        return (0, i.jsx)(Ot, { children: t });
-      }
+      var Bt = n(48980),
+        Rt = n(10247);
       function Ot(e) {
+        const { children: t } = e;
+        return (0, i.jsx)(Mt, { children: t });
+      }
+      function Mt(e) {
         const { children: t } = e,
           n = (0, d.UI)(),
           { data: s } = (0, d.Ck)(),
           a = n.isLoading || !n.data,
           o = (0, ue.Qn)(),
-          [c, l] = (0, Bt.fg)(),
+          [c, l] = (0, Rt.fg)(),
           { sortedLineItems: m, bCartIncludesGifts: _ } = u.useMemo(() => {
             const e = n?.data?.line_items || [],
               t = e.some((e) => e.flags?.is_gift);
@@ -5323,25 +5344,25 @@
           }, [n?.data?.line_items]),
           p = u.useCallback(
             (e) =>
-              (0, i.jsx)(Mt, {
+              (0, i.jsx)(Wt, {
                 ...e,
                 availableCoupons: (s && s[e.lineItem.line_item_id]) || [],
               }),
             [s],
           ),
           { data: f } = (0, d.g7)();
-        return (0, i.jsxs)(At.wW, {
+        return (0, i.jsxs)(Tt.wW, {
           validateCart: f,
-          eDisplayType: At.WA.k_ECartDisplayType_FullPage,
+          eDisplayType: Tt.WA.k_ECartDisplayType_FullPage,
           children: [
-            (0, i.jsx)(At.ZZ, {}),
+            (0, i.jsx)(Tt.ZZ, {}),
             (0, i.jsxs)(r.Z, {
-              className: kt().ShoppingCartCtn,
+              className: Lt().ShoppingCartCtn,
               children: [
                 (0, i.jsxs)(r.Z, {
-                  className: kt().ShoppingCartLeftCol,
+                  className: Lt().ShoppingCartLeftCol,
                   children: [
-                    a && (0, i.jsx)(pt.UD, {}),
+                    a && (0, i.jsx)(ft.UD, {}),
                     !!c &&
                       (0, i.jsx)(x.tH, {
                         children: (0, i.jsx)(b, {
@@ -5352,23 +5373,23 @@
                         }),
                       }),
                     (0, i.jsx)(x.tH, {
-                      children: (0, i.jsx)(Ft.pf, {
+                      children: (0, i.jsx)(Bt.pf, {
                         lineItems: m,
                         cartValidation: f,
                         LineItemContainer: p,
                       }),
                     }),
-                    (0, i.jsx)(At.LP, { validateCart: f }),
+                    (0, i.jsx)(Tt.LP, { validateCart: f }),
                     !o &&
                       (0, i.jsxs)("div", {
-                        className: kt().ResponsiveShoppingCartSummary,
+                        className: Lt().ResponsiveShoppingCartSummary,
                         children: [
-                          (0, i.jsx)(Wt, {
+                          (0, i.jsx)(zt, {
                             bCartIncludesGifts: _,
                             strEstimatedTotal:
                               f?.estimated_totals?.subtotal.formatted_amount,
                           }),
-                          (0, i.jsx)(Vt, {}),
+                          (0, i.jsx)(Zt, {}),
                         ],
                       }),
                     t &&
@@ -5381,18 +5402,18 @@
                 }),
                 (0, i.jsx)(r.Z, {
                   className: (0, y.A)(
-                    kt().ShoppingCartRightCol,
-                    m?.length <= 2 && kt().SmallCart,
+                    Lt().ShoppingCartRightCol,
+                    m?.length <= 2 && Lt().SmallCart,
                   ),
                   children: (0, i.jsxs)("div", {
-                    className: kt().CartRightColStickyCtn,
+                    className: Lt().CartRightColStickyCtn,
                     children: [
-                      (0, i.jsx)(Wt, {
+                      (0, i.jsx)(zt, {
                         bCartIncludesGifts: _,
                         strEstimatedTotal:
                           f?.estimated_totals?.subtotal.formatted_amount,
                       }),
-                      (0, i.jsx)(Vt, {}),
+                      (0, i.jsx)(Zt, {}),
                       (0, i.jsx)(U, { cart: n.data, bMinimalDisplay: !0 }),
                     ],
                   }),
@@ -5402,7 +5423,7 @@
           ],
         });
       }
-      function Mt(e) {
+      function Wt(e) {
         const {
             lineItem: t,
             storeItem: n,
@@ -5410,16 +5431,16 @@
             availableCoupons: a,
             children: o,
           } = e,
-          [c] = (0, Bt.Ez)(),
+          [c] = (0, Rt.Ez)(),
           l = "gifts" === c && !!t.flags.is_gift,
           d = !!a.length;
         return (0, i.jsxs)(r.Z, {
           children: [
-            (0, i.jsxs)(pt.Rz, {
+            (0, i.jsxs)(ft.Rz, {
               children: [o, l && (0, i.jsx)(Ve, { storeItem: n, lineItem: t })],
             }),
             d &&
-              (0, i.jsx)(vt, {
+              (0, i.jsx)(It, {
                 storeItem: n,
                 lineItem: t,
                 couponApplied: s?.coupon_applied,
@@ -5428,49 +5449,49 @@
           ],
         });
       }
-      const Wt = (0, x.Nr)(function (e) {
+      const zt = (0, x.Nr)(function (e) {
         const { strEstimatedTotal: t, bCartIncludesGifts: n } = e,
-          { bButtonDisabled: s, nextStep: r, bGuestAvailable: a } = zt(n);
+          { bButtonDisabled: s, nextStep: r, bGuestAvailable: a } = Ut(n);
         return (0, i.jsxs)("div", {
-          className: kt().CartSummaryCtn,
+          className: Lt().CartSummaryCtn,
           children: [
-            (0, i.jsx)(x.tH, { children: (0, i.jsx)(Lt, {}) }),
+            (0, i.jsx)(x.tH, { children: (0, i.jsx)(Et, {}) }),
             (0, i.jsxs)("div", {
               className: (0, y.A)(
-                kt().EstimatedTotalFlex,
-                kt().SummaryMarginBottom,
+                Lt().EstimatedTotalFlex,
+                Lt().SummaryMarginBottom,
               ),
               children: [
                 (0, i.jsx)("div", {
-                  className: kt().CartLabelText,
+                  className: Lt().CartLabelText,
                   children: (0, w.we)("#Cart_EstimatedTotal"),
                 }),
                 (0, i.jsx)("div", {
-                  className: kt().CartValueText,
+                  className: Lt().CartValueText,
                   children: t,
                 }),
               ],
             }),
             (0, i.jsx)("div", {
-              className: (0, y.A)(kt().CartNoteText, kt().SummaryMarginBottom),
+              className: (0, y.A)(Lt().CartNoteText, Lt().SummaryMarginBottom),
               children: (0, w.we)("#Cart_Note_SalesTax"),
             }),
             (0, i.jsxs)(x.wC, {
               children: [
-                (0, i.jsx)(Ht, { bDisabled: s, nextStep: r, bGuestOption: a }),
-                (0, i.jsx)(Kt, { disabled: s || n }),
-                (0, i.jsx)(Zt, { bDisabled: s }),
+                (0, i.jsx)(Vt, { bDisabled: s, nextStep: r, bGuestOption: a }),
+                (0, i.jsx)(Yt, { disabled: s || n }),
+                (0, i.jsx)(Kt, { bDisabled: s }),
               ],
             }),
           ],
         });
       });
-      function zt(e) {
+      function Ut(e) {
         const t = (0, d.UI)(),
           n = (0, d.g7)(),
           i = n.isSuccess && n.data.cart_items.every((e) => !e.errors),
-          [s, r] = (0, Bt.Ez)(),
-          a = (0, mt.EJ)(),
+          [s, r] = (0, Rt.Ez)(),
+          a = (0, _t.EJ)(),
           o = (0, d.uQ)(n.data),
           c = (0, d.n0)(n.data) || o,
           l =
@@ -5498,22 +5519,22 @@
           { bButtonDisabled: m, nextStep: u, bGuestAvailable: c }
         );
       }
-      function Ut(e) {
+      function Ht(e) {
         const {
           bButtonDisabled: t,
           nextStep: n,
           bGuestAvailable: s,
-        } = zt(e.bCartIncludesGifts);
-        return (0, i.jsx)(Ht, { bDisabled: t, nextStep: n, bGuestOption: s });
+        } = Ut(e.bCartIncludesGifts);
+        return (0, i.jsx)(Vt, { bDisabled: t, nextStep: n, bGuestOption: s });
       }
-      function Ht(e) {
+      function Vt(e) {
         const { bDisabled: t, nextStep: n, bGuestOption: s } = e,
           r = (0, d.jY)(),
           a = (0, m.W6)(),
-          [o, c] = (0, Bt.Ez)(),
-          l = (0, _t.j4)();
-        let u = ft.kFb;
-        (0, mt.kx)(l) && (u = l.gid);
+          [o, c] = (0, Rt.Ez)(),
+          l = (0, pt.j4)();
+        let u = ht.kFb;
+        (0, _t.kx)(l) && (u = l.gid);
         const _ = (function (e) {
             return "login" == e
               ? (0, w.we)("#Cart_ContinueButton_Payment")
@@ -5521,12 +5542,12 @@
                 ? (0, w.we)("#Cart_ContinueButton_Gifts")
                 : "checkout" == e
                   ? (0, w.we)("#Cart_ContinueButton_Payment")
-                  : ((0, ht.z_)(e, "unhandled step"), "");
+                  : ((0, gt.z_)(e, "unhandled step"), "");
           })(n),
           p = (0, y.A)(
-            kt().CartSummaryBtn,
-            kt().SummaryMarginBottom,
-            kt().Button,
+            Lt().CartSummaryBtn,
+            Lt().SummaryMarginBottom,
+            Lt().Button,
           );
         return (0, i.jsx)(g.jn, {
           disabled: t,
@@ -5534,7 +5555,7 @@
           onClick: () => {
             switch (n) {
               case "login":
-                if (u != ft.kFb && s) {
+                if (u != ht.kFb && s) {
                   const e =
                     S.TS.STORE_CHECKOUT_BASE_URL +
                     "checkout?purchasetype=self&cart=" +
@@ -5543,22 +5564,22 @@
                 } else (0, j.vg)();
                 break;
               case "gifts":
-                c("gifts"), a.push(gt.B.ShoppingCartGifts());
+                c("gifts"), a.push(xt.B.ShoppingCartGifts());
                 break;
               case "checkout":
                 location.href = r;
                 break;
               default:
-                (0, ht.z_)(n, "unhandled step");
+                (0, gt.z_)(n, "unhandled step");
             }
           },
           children: _,
         });
       }
-      function Vt() {
+      function Zt() {
         const e = `${S.TS.STORE_BASE_URL}subscriber_agreement/`;
         return (0, i.jsxs)(r.Z, {
-          className: kt().LicenseContextCtn,
+          className: Lt().LicenseContextCtn,
           children: [
             (0, i.jsx)("img", {
               src: `${S.TS.IMG_URL}/checkout/computer.png`,
@@ -5567,11 +5588,11 @@
             (0, i.jsxs)("div", {
               children: [
                 (0, i.jsx)("div", {
-                  className: kt().LicenseTitle,
+                  className: Lt().LicenseTitle,
                   children: (0, w.we)("#Cart_LicenseContextTitle"),
                 }),
                 (0, i.jsx)("div", {
-                  className: kt().LicenseLink,
+                  className: Lt().LicenseLink,
                   children: (0, w.PP)(
                     "#Cart_LicenseContextLink",
                     (0, i.jsx)("a", {
@@ -5585,7 +5606,7 @@
           ],
         });
       }
-      function Zt(e) {
+      function Kt(e) {
         const { bDisabled: t } = e,
           n = (0, _.vo)(),
           s = (0, d.sI)(),
@@ -5595,8 +5616,8 @@
           ? (0, i.jsx)(g.$n, {
               disabled: t,
               className: (0, y.A)(
-                kt().CartSummaryBtn,
-                kt().SummaryMarginBottom,
+                Lt().CartSummaryBtn,
+                Lt().SummaryMarginBottom,
               ),
               onClick: () => {
                 a.mutate(void 0, {
@@ -5609,7 +5630,7 @@
             })
           : null;
       }
-      function Kt(e) {
+      function Yt(e) {
         const { disabled: t } = e,
           n = (0, _.vo)(),
           s = n.data?.family_groupid(),
@@ -5619,13 +5640,13 @@
         return a || o == d.Mn.k_ENonGiftableItemPresent
           ? (0, i.jsxs)("div", {
               className: (0, y.A)(
-                kt().RequestPurchaseCtn,
-                kt().SummaryMarginBottom,
+                Lt().RequestPurchaseCtn,
+                Lt().SummaryMarginBottom,
               ),
               children: [
                 (0, i.jsx)(g.jn, {
                   disabled: t || c || !a,
-                  className: (0, y.A)(kt().CartSummaryBtn),
+                  className: (0, y.A)(Lt().CartSummaryBtn),
                   onClick: () => {
                     t ||
                       c ||
@@ -5652,9 +5673,9 @@
             })
           : null;
       }
-      var Yt = n(50438);
-      function qt(e) {
-        const t = tn(),
+      var qt = n(50438);
+      function Qt(e) {
+        const t = nn(),
           n = (function () {
             const e = (0, m.zy)();
             return (0, u.useMemo)(() => {
@@ -5671,22 +5692,22 @@
         return (
           (s = t
             ? "replay" == n.type
-              ? (0, i.jsx)(Xt, { cartID: n })
-              : (0, i.jsx)(Jt, { cartID: n, ...e })
+              ? (0, i.jsx)($t, { cartID: n })
+              : (0, i.jsx)(Xt, { cartID: n, ...e })
             : (0, i.jsx)("div", {
-                className: l()(kt().ShoppingCartPage, kt().CartPagePlaceholder),
+                className: l()(Lt().ShoppingCartPage, Lt().CartPagePlaceholder),
                 children: (0, i.jsx)(v.t, {
                   position: "center",
                   msDelayAppear: 250,
                 }),
               })),
-          (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(Qt, {}), s] })
+          (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(Jt, {}), s] })
         );
       }
-      function Qt() {
+      function Jt() {
         return (0, o.Pt)(), (0, _.vo)(), null;
       }
-      function Jt(e) {
+      function Xt(e) {
         const { cartID: t, initialStep: n = "initial" } = e,
           [s, r] = u.useState(n),
           a = (0, d.UI)(),
@@ -5696,7 +5717,7 @@
               ? (0, w.Yp)("#Cart_YourShoppingCartLineItems", t)
               : (0, w.we)("#Cart_YourShoppingCart");
           })(s, a?.data?.line_items.length || 0);
-        return (0, i.jsx)($t, {
+        return (0, i.jsx)(en, {
           cartID: t,
           title: o,
           step: s,
@@ -5705,7 +5726,7 @@
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(x.tH, {
-                  children: (0, i.jsx)(sn, {
+                  children: (0, i.jsx)(rn, {
                     isCartEmpty: !e || 0 === e.line_items.length,
                     cart: t,
                     bCartIncludesGifts: n,
@@ -5718,10 +5739,10 @@
             }),
         });
       }
-      function Xt(e) {
+      function $t(e) {
         const { cartID: t } = e;
         return S.iA.logged_in
-          ? (0, i.jsx)($t, {
+          ? (0, i.jsx)(en, {
               cartID: t,
               title: (0, w.we)("#Cart_Replay_SavedCart"),
               step: "initial",
@@ -5733,7 +5754,7 @@
             })
           : (0, i.jsx)(j.Cg, {});
       }
-      function $t(e) {
+      function en(e) {
         const {
             children: t,
             cartID: n,
@@ -5751,23 +5772,23 @@
             controller: "cart",
             method: "display",
             submethod: a,
-            children: (0, i.jsxs)(Bt.iZ, {
+            children: (0, i.jsxs)(Rt.iZ, {
               cartID: n,
               step: a,
               setStep: o,
               ...c,
               children: [
-                (0, i.jsx)(nn, {}),
+                (0, i.jsx)(sn, {}),
                 (0, i.jsxs)(r.Z, {
-                  className: kt().ShoppingCartPage,
+                  className: Lt().ShoppingCartPage,
                   navRef: l,
                   children: [
-                    (0, i.jsx)(en, { step: a, title: s }),
+                    (0, i.jsx)(tn, { step: a, title: s }),
                     (0, i.jsx)("div", {
-                      className: kt().ShoppingCartHeader,
+                      className: Lt().ShoppingCartHeader,
                       children: s,
                     }),
-                    (0, i.jsx)(Rt, { children: t }),
+                    (0, i.jsx)(Ot, { children: t }),
                   ],
                 }),
               ],
@@ -5775,7 +5796,7 @@
           })
         );
       }
-      function en(e) {
+      function tn(e) {
         const { step: t, title: n } = e,
           s = (function (e) {
             if ("gifts" === e)
@@ -5793,7 +5814,7 @@
         return (0, ue.Qn)()
           ? null
           : (0, i.jsxs)("div", {
-              className: kt().ShoppingCartBreadcrumbs,
+              className: Lt().ShoppingCartBreadcrumbs,
               children: [
                 (0, i.jsx)("a", {
                   href: S.TS.STORE_BASE_URL,
@@ -5803,22 +5824,22 @@
                 s,
                 " ",
                 (0, i.jsxs)("span", {
-                  className: kt().CurrentBreadcrumb,
+                  className: Lt().CurrentBreadcrumb,
                   children: ["> ", n],
                 }),
               ],
             });
       }
-      function tn() {
+      function nn() {
         const [e, t] = u.useState(!1);
         return (
           u.useEffect(() => {
-            e || (0, Yt.U)().then(() => t(!0));
+            e || (0, qt.U)().then(() => t(!0));
           }, [e]),
           e
         );
       }
-      function nn(e) {
+      function sn(e) {
         const t = (function () {
           const e = u.useRef(""),
             t = (0, d.UI)(),
@@ -5851,40 +5872,40 @@
           return e.current;
         })();
         return (0, i.jsx)("div", {
-          className: kt().BackgroundImage,
+          className: Lt().BackgroundImage,
           style: t ? { backgroundImage: `url("${t}")` } : null,
         });
       }
-      function sn(e) {
+      function rn(e) {
         const { isCartEmpty: t, cart: n, bCartIncludesGifts: s } = e;
         return (0, i.jsxs)(i.Fragment, {
           children: [
             !t && (0, i.jsx)(T, { cart: n }),
             (0, i.jsxs)(r.Z, {
               "flow-children": "row",
-              className: kt().CartFooter,
+              className: Lt().CartFooter,
               children: [
                 (0, i.jsxs)("div", {
-                  className: kt().NavButtons,
+                  className: Lt().NavButtons,
                   children: [
                     (0, i.jsx)(g.$n, {
                       onClick: () =>
                         (window.location.href = S.TS.STORE_BASE_URL),
-                      className: kt().Button,
+                      className: Lt().Button,
                       children: (0, w.we)("#Cart_ContinueShopping"),
                     }),
-                    (0, i.jsx)(Ut, { bCartIncludesGifts: s }),
+                    (0, i.jsx)(Ht, { bCartIncludesGifts: s }),
                   ],
                 }),
-                !t && (0, i.jsx)(rn, {}),
+                !t && (0, i.jsx)(an, {}),
               ],
             }),
           ],
         });
       }
-      function rn() {
+      function an() {
         const e = (0, s.Z)();
-        return (0, i.jsx)(dt, {
+        return (0, i.jsx)(ut, {
           onClick: () => e.mutate(),
           children: (0, w.we)("#Cart_RemoveAll"),
         });

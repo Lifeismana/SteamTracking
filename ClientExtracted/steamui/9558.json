@@ -26,5 +26,6 @@
     "SteamOS_FilterLabel_AllGames": "جميع الألعاب",
     "SteamOS_FilterDescription_Compatible": "تشمل الألعاب المختبرة لدعم نظام SteamOS",
     "SteamOS_FilterDescription_Compatible_Unknown": "تشمل الألعاب المختبرة لدعم نظام SteamOS، بالإضافة إلى الألعاب التي لم يُختبر توافقها نظام SteamOS بعد.",
-    "SteamOS_FilterDescription_AllGames": "عرض جميع الألعاب في مكتبتك، بما في ذلك الألعاب التي لا تدعم بشكل جيد SteamOS."
+    "SteamOS_FilterDescription_AllGames": "عرض جميع الألعاب في مكتبتك، بما في ذلك الألعاب التي لا تدعم بشكل جيد SteamOS.",
+    "MachineVerified_FilterDescription_Verified_Playable": "عرض جميع الألعاب الموثقة بالإضافة إلى الألعاب القابلة للعب ولكنها قد تتطلب مجهودًا إضافيًا للتفاعل أو التهيئة."
 }

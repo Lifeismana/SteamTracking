@@ -1,4 +1,4 @@
-var CLSTAMP = "10835308";
+var CLSTAMP = "10845460";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -58,7 +58,9 @@ var CLSTAMP = "10835308";
           EmoticonBow_st0: "Fw2WGmXjh2zUxYfuy3xDn",
           EmoticonBow_st1: "luj0tT8JHriKkK3r7pzqP",
           SteamDeckCompatInfo: "_3VPnvw_CDKU-PQKK1pSDlN",
+          SteamMachineCompatLogo: "x5w70NwN-m7OmBy1DFogf",
           SteamDeckCompatLogo: "_1dzQL1mVR8GTmmSi_kpDgr",
+          SteamFrameCompatLogo: "_33PLF0uIKrs-fwlQiOEf_",
           SteamDeckCompatIcon: "_3hAj0iMJsfhKwnm2mfE098",
           SteamDeckCompatVerified: "kEODDe6M5cuHWuPlcQexX",
           SteamDeckCompatPlayable: "mPD42Bwx3VAs0qw9wubf2",
@@ -192,312 +194,318 @@ var CLSTAMP = "10835308";
         "use strict";
         r.d(t, {
           $4F: () => ue,
-          $6p: () => zi,
-          $Ut: () => Li,
+          $6p: () => Ni,
+          $Ut: () => Ei,
           $b2: () => c,
-          $l2: () => Bn,
-          $ys: () => Rt,
-          A2g: () => on,
-          A4L: () => xt,
+          $l2: () => Ln,
+          $ys: () => Tt,
+          A2g: () => un,
+          A4L: () => kt,
+          ACF: () => be,
           ADn: () => V,
-          AZ7: () => Jn,
-          Aav: () => _r,
-          AcZ: () => dn,
-          Aqr: () => Ir,
-          Ass: () => Ke,
-          B3I: () => _n,
-          Bb7: () => ir,
+          AZ7: () => ni,
+          Aav: () => Cr,
+          AcZ: () => gn,
+          Aqr: () => jr,
+          Ass: () => Xe,
+          B3I: () => Cn,
+          Bb7: () => cr,
           Bh9: () => te,
-          Bhc: () => bt,
+          Bhc: () => vt,
           Byx: () => w,
-          C$4: () => Mr,
-          C0f: () => gi,
-          C6g: () => Ri,
-          CII: () => Ce,
-          C_P: () => qn,
-          Cnj: () => Cn,
-          Cpk: () => Zr,
-          Ctw: () => $n,
+          C$4: () => yr,
+          C0f: () => wi,
+          C6g: () => Ti,
+          CII: () => xe,
+          C_P: () => Yn,
+          Cnj: () => xn,
+          Cpk: () => Qr,
+          Ctw: () => Jn,
           CvG: () => G,
-          DEQ: () => gr,
+          DEQ: () => wr,
           DJE: () => F,
-          DOG: () => cn,
-          DRF: () => tr,
+          DOG: () => mn,
+          DRF: () => sr,
           DvW: () => se,
           Dyr: () => X,
-          E3D: () => or,
-          EPt: () => ar,
-          Ec7: () => De,
-          FH6: () => wt,
-          FHN: () => Vt,
-          Fa4: () => fr,
-          FpT: () => fi,
-          Fwr: () => dr,
-          GXE: () => Bt,
-          Gj7: () => He,
-          H24: () => Qi,
+          E3D: () => ur,
+          EPt: () => dr,
+          Ec7: () => Pe,
+          FH6: () => St,
+          FHN: () => $t,
+          Fa4: () => Mr,
+          FpT: () => Mi,
+          Fwr: () => gr,
+          G38: () => Yi,
+          GUI: () => _e,
+          GXE: () => Lt,
+          Gj7: () => Ze,
+          H24: () => ns,
           HAb: () => W,
-          HFK: () => Tr,
-          HRy: () => wr,
-          HUv: () => oi,
-          HkE: () => St,
+          HFK: () => zr,
+          HRy: () => Sr,
+          HUv: () => ui,
+          HkE: () => Rt,
           HkO: () => $,
           Hrn: () => U,
-          I$j: () => Qn,
-          I5b: () => Br,
-          IDH: () => an,
-          IVA: () => at,
-          IyP: () => et,
+          I$j: () => ti,
+          I5b: () => Lr,
+          IDH: () => dn,
+          IVA: () => dt,
+          IyP: () => it,
           J2R: () => b,
-          JBx: () => Et,
+          JBx: () => Dt,
           JKf: () => ce,
-          JOj: () => Gt,
-          JPR: () => st,
-          JV7: () => $e,
-          JoK: () => Xr,
-          K91: () => Ot,
-          K9x: () => zr,
-          KDJ: () => ur,
-          KH9: () => ei,
-          KoM: () => Yr,
-          L0X: () => cr,
-          L3y: () => jt,
-          LHp: () => ke,
-          LOv: () => kr,
-          LS$: () => Hi,
-          LgB: () => Jt,
+          JOj: () => Kt,
+          JPR: () => lt,
+          JV7: () => Je,
+          JoK: () => rn,
+          K91: () => Ut,
+          K9x: () => Nr,
+          KDJ: () => pr,
+          KH9: () => ii,
+          KoM: () => en,
+          L0X: () => mr,
+          L3y: () => Ot,
+          LHp: () => Fe,
+          LOv: () => Fr,
+          LS$: () => Zi,
+          LgB: () => nr,
           Llp: () => re,
-          Lzz: () => Ut,
+          Lzz: () => Gt,
           MAT: () => _,
-          MED: () => gt,
-          MGb: () => Fn,
+          MED: () => wt,
+          MGb: () => An,
           MhR: () => i,
-          NFp: () => yt,
-          NwL: () => Ar,
+          NFp: () => It,
+          NwL: () => Wr,
           OB6: () => y,
           OEI: () => I,
-          OFl: () => It,
-          OZx: () => zn,
-          Obu: () => pi,
-          P3F: () => Le,
-          PN1: () => gn,
-          PPm: () => ve,
+          OFl: () => jt,
+          OZx: () => Nn,
+          Obu: () => bi,
+          P3F: () => Ee,
+          PN1: () => wn,
+          PPm: () => Be,
           Pj2: () => u,
-          Pn1: () => vt,
+          Pn1: () => Bt,
           PrD: () => D,
-          Pw_: () => Ci,
-          Q2u: () => un,
-          Q7f: () => Er,
-          QO1: () => Ur,
+          Pw_: () => xi,
+          Q2u: () => pn,
+          Q7f: () => Dr,
+          QO1: () => Gr,
           QPp: () => K,
-          QT4: () => kt,
-          R1s: () => Sn,
-          R2g: () => ii,
+          QT4: () => Ft,
+          Qb4: () => we,
+          R1s: () => Rn,
+          R2g: () => ci,
           R71: () => v,
+          Rb6: () => Xi,
           Rer: () => R,
-          RhO: () => Nt,
-          Rhn: () => Yi,
-          Rnx: () => Si,
-          Rv: () => we,
-          S$u: () => Ne,
-          SRb: () => br,
-          SSr: () => Ai,
-          SWo: () => Gn,
-          Sxg: () => Di,
-          TQL: () => wi,
-          TQt: () => ft,
-          Tby: () => mi,
-          TeY: () => Gr,
-          TiP: () => sr,
-          U5N: () => rt,
-          UXi: () => Ee,
+          RhO: () => Ht,
+          Rhn: () => rs,
+          Rnx: () => Ri,
+          Rv: () => Se,
+          S$u: () => He,
+          SRb: () => vr,
+          SSr: () => Wi,
+          SWo: () => Kn,
+          Sxg: () => Pi,
+          TQL: () => Si,
+          TQt: () => Mt,
+          Tby: () => fi,
+          TeY: () => Kr,
+          TiP: () => lr,
+          U5N: () => ot,
+          UXi: () => De,
           UXk: () => O,
           UfC: () => l,
           UkI: () => T,
-          UtJ: () => Be,
-          Uu1: () => Wt,
-          Uuy: () => ln,
+          UtJ: () => Le,
+          Uu1: () => Vt,
+          Uuy: () => hn,
           VIA: () => a,
           VOs: () => pe,
           VS9: () => H,
-          VXt: () => Vr,
-          VYj: () => Jr,
-          Vb8: () => On,
+          VXt: () => $r,
+          VYj: () => nn,
+          Vb8: () => Un,
           Vpw: () => ee,
           VrD: () => s,
-          W19: () => ye,
+          W19: () => Ie,
           WE0: () => ne,
-          WNR: () => jr,
-          WU6: () => Ki,
-          Wpf: () => Pn,
-          Wvm: () => Vn,
-          X51: () => Ht,
+          WNR: () => Or,
+          WU6: () => es,
+          Wpf: () => qn,
+          Wvm: () => $n,
+          X51: () => Zt,
           Xte: () => B,
-          Y3j: () => nr,
-          Y5S: () => En,
-          YAh: () => di,
+          Y3j: () => ar,
+          Y5S: () => Dn,
+          YAh: () => gi,
           YI2: () => ie,
-          Yjh: () => Fe,
-          ZLm: () => Zt,
-          ZUW: () => Wi,
-          Ze9: () => Kt,
+          Yjh: () => Ae,
+          ZLm: () => Qt,
+          ZUW: () => Vi,
+          Ze9: () => Xt,
           ZjD: () => he,
-          Zw7: () => Nr,
+          Zw7: () => Hr,
           _3b: () => P,
-          _Q1: () => Lt,
-          _UC: () => ze,
+          _Q1: () => Et,
+          _UC: () => Ne,
           _Vf: () => g,
-          a2r: () => hi,
-          aPS: () => Ue,
-          ab9: () => Hn,
-          abL: () => je,
+          a2r: () => _i,
+          aPS: () => Ge,
+          ab9: () => Zn,
+          abL: () => Oe,
           aff: () => p,
-          ajI: () => Fr,
-          ak3: () => mt,
-          b$p: () => Tn,
+          ajI: () => Ar,
+          ak3: () => ft,
+          b$p: () => zn,
           bGq: () => k,
-          bOm: () => Vi,
-          bP9: () => Yt,
-          b_A: () => $r,
-          beA: () => Mi,
-          bmB: () => xe,
-          c3e: () => _e,
+          bOm: () => $i,
+          bP9: () => er,
+          b_A: () => Jr,
+          beA: () => yi,
+          bmB: () => ke,
+          c3e: () => Ce,
           cU3: () => z,
           cfC: () => h,
-          ciT: () => Dn,
-          ckP: () => Ti,
-          cwp: () => Xe,
-          dFE: () => Ct,
+          ciT: () => Pn,
+          ckP: () => zi,
+          cwp: () => rt,
+          dFE: () => xt,
           dMO: () => oe,
-          dZ5: () => Pt,
-          eAR: () => yi,
-          eEM: () => ui,
-          eIg: () => Ie,
+          dZ5: () => qt,
+          eAR: () => Ii,
+          eEM: () => pi,
+          eIg: () => je,
           eNs: () => de,
-          eSB: () => Ni,
-          eY9: () => bi,
-          egf: () => Ft,
-          etS: () => We,
-          ey3: () => Mn,
-          f4X: () => pr,
-          f7X: () => Te,
-          fLp: () => Ln,
-          foV: () => Kr,
-          fui: () => si,
-          fy4: () => Ze,
-          g0U: () => Ui,
-          g5s: () => nt,
-          hGl: () => Sr,
+          eSB: () => Hi,
+          eY9: () => vi,
+          egf: () => At,
+          etS: () => Ve,
+          ey3: () => yn,
+          f4X: () => br,
+          f7X: () => ze,
+          fLp: () => En,
+          foV: () => Xr,
+          fui: () => li,
+          fy4: () => Qe,
+          g0U: () => Gi,
+          g5s: () => at,
+          hGl: () => Rr,
           hGu: () => M,
           hL2: () => Y,
-          h_E: () => vn,
-          hmR: () => ri,
-          iEc: () => Xi,
-          iQT: () => Tt,
-          icp: () => me,
-          imt: () => Ve,
-          izQ: () => xr,
-          j2d: () => vi,
+          h_E: () => Bn,
+          hmR: () => oi,
+          iEc: () => is,
+          iQT: () => zt,
+          imt: () => $e,
+          izQ: () => kr,
+          j2d: () => Bi,
           j5C: () => S,
-          jHX: () => Fi,
-          jO6: () => rr,
-          jYC: () => qi,
-          jrQ: () => ji,
+          jHX: () => Ai,
+          jO6: () => or,
+          jYC: () => Qi,
+          jnU: () => Me,
+          jrQ: () => Oi,
           k1m: () => le,
-          kEl: () => Wr,
-          kFb: () => pt,
-          kG6: () => Dt,
-          kQI: () => Dr,
-          kSD: () => qt,
-          keb: () => Ge,
-          kvY: () => sn,
-          lDg: () => ni,
-          lcX: () => $i,
-          lmQ: () => it,
-          m2$: () => At,
-          mLF: () => Yn,
-          mWc: () => ci,
-          mZ: () => ut,
-          miK: () => fn,
-          mv5: () => Wn,
-          n4o: () => Qr,
-          nHq: () => mn,
-          oYe: () => bn,
+          kEl: () => Vr,
+          kFb: () => bt,
+          kG6: () => Pt,
+          kQI: () => Pr,
+          kSD: () => Yt,
+          keb: () => Ke,
+          kvY: () => ln,
+          lDg: () => ai,
+          lcX: () => ts,
+          lmQ: () => ct,
+          m2$: () => Wt,
+          mLF: () => ei,
+          mWc: () => mi,
+          mZ: () => pt,
+          miK: () => Mn,
+          mv5: () => Vn,
+          n4o: () => tn,
+          nHq: () => fn,
+          oYe: () => vn,
           ocM: () => j,
-          oez: () => dt,
-          ogI: () => kn,
-          pIh: () => yr,
+          oez: () => gt,
+          ogI: () => Fn,
+          pIh: () => Ir,
           piN: () => o,
           pmA: () => q,
-          ppM: () => Gi,
+          ppM: () => Ki,
           ppu: () => J,
-          qNf: () => Oe,
+          qNf: () => Ue,
           qhh: () => E,
-          qho: () => lt,
-          qqY: () => Un,
-          qxI: () => tn,
-          qxU: () => Je,
-          r5B: () => ai,
+          qho: () => ht,
+          qqY: () => Gn,
+          qxI: () => on,
+          qxU: () => nt,
+          r5B: () => di,
           rPb: () => fe,
           rYC: () => x,
-          r_E: () => _i,
-          rlK: () => Ii,
-          rmr: () => tt,
-          rzR: () => Hr,
-          s5U: () => ct,
-          s7X: () => Or,
+          r_E: () => Ci,
+          rlK: () => ji,
+          rmr: () => st,
+          rzR: () => Zr,
+          s5U: () => mt,
+          s7X: () => Ur,
           sC: () => n,
-          sCr: () => li,
+          sCr: () => hi,
           sGL: () => m,
           sX0: () => ae,
-          sfN: () => er,
-          sln: () => Se,
-          t5y: () => Kn,
-          tIg: () => xi,
-          tgE: () => Oi,
-          u0: () => mr,
-          uGW: () => en,
-          uYK: () => Rr,
-          urx: () => Re,
-          uvF: () => Pr,
-          uw: () => An,
-          vC_: () => qe,
-          vHO: () => ki,
-          vOk: () => Pe,
+          sfN: () => ir,
+          sln: () => Re,
+          t5y: () => Xn,
+          tIg: () => ki,
+          tgE: () => Ui,
+          u0: () => fr,
+          uGW: () => sn,
+          uYK: () => Tr,
+          urx: () => Te,
+          uvF: () => qr,
+          uw: () => Wn,
+          vC_: () => Ye,
+          vHO: () => Fi,
+          vOk: () => qe,
           vPz: () => N,
-          vVO: () => Bi,
+          vVO: () => Li,
           vu5: () => L,
           vyo: () => f,
-          w1d: () => Ye,
-          wEc: () => Pi,
-          wFw: () => ti,
-          wKv: () => ot,
-          wLO: () => be,
-          wOY: () => hn,
+          w1d: () => et,
+          wEc: () => qi,
+          wFw: () => si,
+          wKv: () => ut,
+          wLO: () => ve,
+          wOY: () => _n,
           wUl: () => C,
-          wWt: () => zt,
-          wY0: () => qr,
+          wWt: () => Nt,
+          wY0: () => Yr,
           wcG: () => A,
-          wim: () => Ae,
-          wjO: () => Me,
-          wrm: () => ht,
-          wwZ: () => Qt,
-          x6o: () => Xt,
-          xPp: () => _t,
-          xXg: () => Nn,
-          xcz: () => Mt,
-          xyI: () => Xn,
-          y44: () => Qe,
-          y6: () => vr,
-          yXf: () => jn,
-          yhO: () => lr,
-          yrU: () => xn,
+          wim: () => We,
+          wjO: () => ye,
+          wrm: () => _t,
+          wwZ: () => tr,
+          x6o: () => rr,
+          xOr: () => me,
+          xPp: () => Ct,
+          xXg: () => Hn,
+          xcz: () => yt,
+          xyI: () => ri,
+          y44: () => tt,
+          y6: () => Br,
+          yXf: () => On,
+          yhO: () => hr,
+          yrU: () => kn,
           z41: () => Z,
-          zA: () => Cr,
+          zA: () => xr,
           zIc: () => ge,
-          zRv: () => Zn,
-          zcX: () => Lr,
-          zeJ: () => hr,
+          zRv: () => Qn,
+          zcX: () => Er,
+          zeJ: () => _r,
           zlr: () => d,
         });
         const n = 1,
@@ -618,509 +626,594 @@ var CLSTAMP = "10835308";
           pe = 0,
           ge = 1,
           fe = 2,
-          _e = 0,
-          be = 1,
-          we = 2,
-          Me = 3,
-          Ce = 4,
-          ve = 5,
-          Se = 0,
-          ye = 1,
-          xe = 2,
-          Be = 3,
-          Re = 4,
-          Ie = 5,
-          ke = 6,
-          Le = 7,
-          Te = 11,
-          je = 0,
-          Fe = 1,
-          Ee = 2,
-          ze = 3,
-          Oe = 4,
-          Ae = 5,
-          De = 6;
-        function Ne(e) {
-          return e == ze || e == De;
+          _e = 3,
+          be = 4,
+          we = 5,
+          Me = 6,
+          Ce = 0,
+          ve = 1,
+          Se = 2,
+          ye = 3,
+          xe = 4,
+          Be = 5,
+          Re = 0,
+          Ie = 1,
+          ke = 2,
+          Le = 3,
+          Te = 4,
+          je = 5,
+          Fe = 6,
+          Ee = 7,
+          ze = 11,
+          Oe = 0,
+          Ae = 1,
+          De = 2,
+          Ne = 3,
+          Ue = 4,
+          We = 5,
+          Pe = 6;
+        function He(e) {
+          return e == Ne || e == Pe;
         }
-        function Ue(e) {
-          return e == Ae || e == De;
+        function Ge(e) {
+          return e == We || e == Pe;
         }
-        const We = 0,
-          Pe = 2,
-          He = 3,
-          Ge = 1,
-          Ve = 4,
-          qe = 1,
-          Ze = 2,
-          Ke = 47,
-          $e = 102,
-          Ye = 7,
-          Qe = 750,
-          Xe = 753,
-          Je = 769,
-          et = 799,
-          tt = 241100,
-          rt = 202355,
-          nt = 250820,
-          it = 330050,
-          st = 358510,
-          ot = 366490,
-          at = 413080,
-          ct = 413090,
-          lt = 443510,
-          ut = 1,
-          dt = 2371090;
-        function mt(e) {
-          return e == nt || e == it;
+        const Ve = 0,
+          qe = 2,
+          Ze = 3,
+          Ke = 1,
+          $e = 4,
+          Ye = 1,
+          Qe = 2,
+          Xe = 47,
+          Je = 102,
+          et = 7,
+          tt = 750,
+          rt = 753,
+          nt = 769,
+          it = 799,
+          st = 241100,
+          ot = 202355,
+          at = 250820,
+          ct = 330050,
+          lt = 358510,
+          ut = 366490,
+          dt = 413080,
+          mt = 413090,
+          ht = 443510,
+          pt = 1,
+          gt = 2371090;
+        function ft(e) {
+          return e == at || e == ct;
         }
-        function ht(e) {
-          return e == at || e == ct || e == lt || e == Je;
+        function _t(e) {
+          return e == dt || e == mt || e == ht || e == nt;
         }
-        const pt = "18446744073709551615",
-          gt = 0,
-          ft = 2147483647,
-          _t = -1,
-          bt = 0,
-          wt = 1,
-          Mt = 2,
-          Ct = 3,
-          vt = 4,
-          St = 5,
-          yt = 6,
-          xt = 7,
-          Bt = 8,
-          Rt = 9,
-          It = 10,
-          kt = 11,
-          Lt = 12,
-          Tt = 13,
-          jt = 14,
-          Ft = 15,
-          Et = 16,
-          zt = 17,
-          Ot = 18,
-          At = 19,
-          Dt = 20,
-          Nt = 21,
-          Ut = 22,
-          Wt = 23,
-          Pt = 24,
-          Ht = 25,
-          Gt = 26,
-          Vt = 27,
-          qt = 28,
-          Zt = 29,
-          Kt = 30,
-          $t = 31,
-          Yt = 32;
-        function Qt(e, t = "en") {
+        const bt = "18446744073709551615",
+          wt = 0,
+          Mt = 2147483647,
+          Ct = -1,
+          vt = 0,
+          St = 1,
+          yt = 2,
+          xt = 3,
+          Bt = 4,
+          Rt = 5,
+          It = 6,
+          kt = 7,
+          Lt = 8,
+          Tt = 9,
+          jt = 10,
+          Ft = 11,
+          Et = 12,
+          zt = 13,
+          Ot = 14,
+          At = 15,
+          Dt = 16,
+          Nt = 17,
+          Ut = 18,
+          Wt = 19,
+          Pt = 20,
+          Ht = 21,
+          Gt = 22,
+          Vt = 23,
+          qt = 24,
+          Zt = 25,
+          Kt = 26,
+          $t = 27,
+          Yt = 28,
+          Qt = 29,
+          Xt = 30,
+          Jt = 31,
+          er = 32;
+        [
+          ["None", "none", -1],
+          ["Afrikaans", "afrikaans", 0],
+          ["Albanian", "albanian", 1],
+          ["Amharic", "amharic", 2],
+          ["Armenian", "armenian", 3],
+          ["Assamese", "assamese", 4],
+          ["Azerbaijani", "azerbaijani", 5],
+          ["Bangla", "bangla", 6],
+          ["Basque", "basque", 7],
+          ["Belarusian", "belarusian", 8],
+          ["Bosnian", "bosnian", 9],
+          ["Catalan", "catalan", 10],
+          ["Cherokee", "cherokee", 11],
+          ["Croatian", "croatian", 12],
+          ["Dari", "dari", 13],
+          ["Estonian", "estonian", 14],
+          ["Filipino", "filipino", 15],
+          ["Galician", "galician", 16],
+          ["Georgian", "georgian", 17],
+          ["Gujarati", "gujarati", 18],
+          ["Punjabi (Gurmukhi)", "gurmukhi", 19],
+          ["Hausa", "hausa", 20],
+          ["Hebrew", "hebrew", 21],
+          ["Hindi", "hindi", 22],
+          ["Icelandic", "icelandic", 23],
+          ["Igbo", "igbo", 24],
+          ["Indonesian", "indonesian", 25],
+          ["Irish", "irish", 26],
+          ["Kannada", "kannada", 27],
+          ["Kazakh", "kazakh", 28],
+          ["Khmer", "khmer", 29],
+          ["K'iche'", "kiche", 30],
+          ["Kinyarwanda", "kinyarwanda", 31],
+          ["Konkani", "konkani", 32],
+          ["Kyrgyz", "kyrgyz", 33],
+          ["Latvian", "latvian", 34],
+          ["Lithuanian", "lithuanian", 35],
+          ["Luxembourgish", "luxembourgish", 36],
+          ["Macedonian", "macedonian", 37],
+          ["Malay", "malay", 38],
+          ["Malayalam", "malayalam", 39],
+          ["Maltese", "maltese", 40],
+          ["Maori", "maori", 41],
+          ["Marathi", "marathi", 42],
+          ["Mongolian", "mongolian", 43],
+          ["Nepali", "nepali", 44],
+          ["Odia", "odia", 45],
+          ["Persian", "persian", 46],
+          ["Quechua", "quechua", 47],
+          ["Scots", "scots", 48],
+          ["Serbian", "serbian", 49],
+          ["Punjabi (Shahmukhi)", "shahmukhi", 50],
+          ["Sindhi", "sindhi", 51],
+          ["Sinhala", "sinhala", 52],
+          ["Slovak", "slovak", 53],
+          ["Slovenian", "slovenian", 54],
+          ["Sorani", "sorani", 55],
+          ["Sotho", "sotho", 56],
+          ["Swahili", "swahili", 57],
+          ["Tajik", "tajik", 58],
+          ["Tamil", "tamil", 59],
+          ["Tatar", "tatar", 60],
+          ["Telugu", "telugu", 61],
+          ["Tigrinya", "tigrinya", 62],
+          ["Tswana", "tswana", 63],
+          ["Turkmen", "turkmen", 64],
+          ["Urdu", "urdu", 65],
+          ["Uyghur", "uyghur", 66],
+          ["Uzbek", "uzbek", 67],
+          ["Valencian", "valencian", 68],
+          ["Welsh", "welsh", 69],
+          ["Wolof", "wolof", 70],
+          ["Xhosa", "xhosa", 71],
+          ["Yoruba", "yoruba", 72],
+          ["Zulu", "zulu", 73],
+        ].map((e) => ({
+          name: e[0],
+          shortName: e[1],
+          eAdditionalLanguage: e[2],
+        }));
+        function tr(e, t = "en") {
           switch (e) {
-            case bt:
-              return "en";
-            case wt:
-              return "de";
-            case Mt:
-              return "fr";
-            case Ct:
-              return "it";
             case vt:
-              return "ko";
+              return "en";
             case St:
-              return "es";
+              return "de";
             case yt:
-              return "zh-cn";
+              return "fr";
             case xt:
-              return "zh-tw";
+              return "it";
             case Bt:
-              return "ru";
+              return "ko";
             case Rt:
-              return "th";
+              return "es";
             case It:
-              return "ja";
+              return "zh-cn";
             case kt:
-              return "pt";
+              return "zh-tw";
             case Lt:
-              return "pl";
+              return "ru";
             case Tt:
-              return "da";
+              return "th";
             case jt:
-              return "nl";
+              return "ja";
             case Ft:
-              return "fi";
+              return "pt";
             case Et:
-              return "no";
+              return "pl";
             case zt:
-              return "sv";
+              return "da";
             case Ot:
-              return "hu";
+              return "nl";
             case At:
-              return "cs";
+              return "fi";
             case Dt:
-              return "ro";
+              return "no";
             case Nt:
-              return "tr";
-            case Ht:
-              return "ar";
+              return "sv";
             case Ut:
-              return "pt-br";
+              return "hu";
             case Wt:
-              return "bg";
+              return "cs";
             case Pt:
-              return "el";
-            case Gt:
-              return "uk";
-            case Vt:
-              return "es-419";
-            case qt:
-              return "vi";
+              return "ro";
+            case Ht:
+              return "tr";
             case Zt:
-              return "sc-sc";
+              return "ar";
+            case Gt:
+              return "pt-br";
+            case Vt:
+              return "bg";
+            case qt:
+              return "el";
             case Kt:
-              return "id";
+              return "uk";
             case $t:
+              return "es-419";
+            case Yt:
+              return "vi";
+            case Qt:
+              return "sc-sc";
+            case Xt:
+              return "id";
+            case Jt:
               return "ms";
             default:
               return t;
           }
         }
-        const Xt = (e) => ("koreana" === e ? "korean" : e);
-        function Jt(e, t = "") {
+        const rr = (e) => ("koreana" === e ? "korean" : e);
+        function nr(e, t = "") {
           switch (e) {
-            case bt:
-              return "english";
-            case wt:
-              return "german";
-            case Mt:
-              return "french";
-            case Ct:
-              return "italian";
             case vt:
-              return "koreana";
+              return "english";
             case St:
-              return "spanish";
+              return "german";
             case yt:
-              return "schinese";
+              return "french";
             case xt:
-              return "tchinese";
+              return "italian";
             case Bt:
-              return "russian";
+              return "koreana";
             case Rt:
-              return "thai";
+              return "spanish";
             case It:
-              return "japanese";
+              return "schinese";
             case kt:
-              return "portuguese";
+              return "tchinese";
             case Lt:
-              return "polish";
+              return "russian";
             case Tt:
-              return "danish";
+              return "thai";
             case jt:
-              return "dutch";
+              return "japanese";
             case Ft:
-              return "finnish";
+              return "portuguese";
             case Et:
-              return "norwegian";
+              return "polish";
             case zt:
-              return "swedish";
+              return "danish";
             case Ot:
-              return "hungarian";
+              return "dutch";
             case At:
-              return "czech";
+              return "finnish";
             case Dt:
-              return "romanian";
+              return "norwegian";
             case Nt:
-              return "turkish";
-            case Ht:
-              return "arabic";
+              return "swedish";
             case Ut:
-              return "brazilian";
+              return "hungarian";
             case Wt:
-              return "bulgarian";
+              return "czech";
             case Pt:
-              return "greek";
-            case Gt:
-              return "ukrainian";
-            case Vt:
-              return "latam";
-            case qt:
-              return "vietnamese";
+              return "romanian";
+            case Ht:
+              return "turkish";
             case Zt:
-              return "sc_schinese";
+              return "arabic";
+            case Gt:
+              return "brazilian";
+            case Vt:
+              return "bulgarian";
+            case qt:
+              return "greek";
             case Kt:
-              return "indonesian";
+              return "ukrainian";
             case $t:
+              return "latam";
+            case Yt:
+              return "vietnamese";
+            case Qt:
+              return "sc_schinese";
+            case Xt:
+              return "indonesian";
+            case Jt:
               return "malay";
             default:
               return t;
           }
         }
-        function er(e, t = bt) {
+        function ir(e, t = vt) {
           switch (e) {
             case "english":
-              return bt;
+              return vt;
             case "german":
-              return wt;
+              return St;
             case "french":
-              return Mt;
+              return yt;
             case "italian":
-              return Ct;
+              return xt;
             case "korean":
             case "koreana":
-              return vt;
-            case "spanish":
-              return St;
-            case "schinese":
-              return yt;
-            case "tchinese":
-              return xt;
-            case "russian":
               return Bt;
-            case "thai":
+            case "spanish":
               return Rt;
-            case "japanese":
+            case "schinese":
               return It;
-            case "portuguese":
+            case "tchinese":
               return kt;
-            case "polish":
+            case "russian":
               return Lt;
-            case "danish":
+            case "thai":
               return Tt;
-            case "dutch":
+            case "japanese":
               return jt;
-            case "finnish":
+            case "portuguese":
               return Ft;
-            case "norwegian":
+            case "polish":
               return Et;
-            case "swedish":
+            case "danish":
               return zt;
-            case "hungarian":
+            case "dutch":
               return Ot;
-            case "czech":
+            case "finnish":
               return At;
-            case "romanian":
+            case "norwegian":
               return Dt;
-            case "turkish":
+            case "swedish":
               return Nt;
-            case "arabic":
-              return Ht;
-            case "brazilian":
+            case "hungarian":
               return Ut;
-            case "bulgarian":
+            case "czech":
               return Wt;
-            case "greek":
+            case "romanian":
               return Pt;
-            case "ukrainian":
-              return Gt;
-            case "latam":
-              return Vt;
-            case "vietnamese":
-              return qt;
-            case "sc_schinese":
+            case "turkish":
+              return Ht;
+            case "arabic":
               return Zt;
-            case "indonesian":
+            case "brazilian":
+              return Gt;
+            case "bulgarian":
+              return Vt;
+            case "greek":
+              return qt;
+            case "ukrainian":
               return Kt;
-            case "malay":
+            case "latam":
               return $t;
+            case "vietnamese":
+              return Yt;
+            case "sc_schinese":
+              return Qt;
+            case "indonesian":
+              return Xt;
+            case "malay":
+              return Jt;
             default:
               return t;
           }
         }
-        const tr = 1,
-          rr = 2,
-          nr = 4,
-          ir = 5,
-          sr = 6,
-          or = 7,
-          ar = 8,
-          cr = 9,
-          lr = 10,
-          ur = 11,
-          dr = 12,
-          mr = 13,
-          hr = 14,
-          pr = 15,
-          gr = 16,
-          fr = 17,
-          _r = 18,
-          br = 19,
-          wr = 20,
-          Mr = 21,
-          Cr = 22,
-          vr = 23,
-          Sr = 24,
-          yr = 25,
-          xr = 26,
-          Br = 27,
-          Rr = 28,
-          Ir = 29,
-          kr = 31,
-          Lr = 32,
-          Tr = 34,
-          jr = 35,
-          Fr = 36,
-          Er = 100,
-          zr = 103,
-          Or = 500,
-          Ar = 600,
-          Dr = 601,
-          Nr = 1e3,
-          Ur = 1001,
-          Wr = 0,
-          Pr = 1,
-          Hr = 0,
-          Gr = 1,
-          Vr = 2,
-          qr = 3,
-          Zr = 1,
-          Kr = 2,
-          $r = 0,
-          Yr = 1,
-          Qr = 2,
-          Xr = 3,
-          Jr = 4,
-          en = 6,
-          tn = 7,
-          rn = 1,
+        const sr = 1,
+          or = 2,
+          ar = 4,
+          cr = 5,
+          lr = 6,
+          ur = 7,
+          dr = 8,
+          mr = 9,
+          hr = 10,
+          pr = 11,
+          gr = 12,
+          fr = 13,
+          _r = 14,
+          br = 15,
+          wr = 16,
+          Mr = 17,
+          Cr = 18,
+          vr = 19,
+          Sr = 20,
+          yr = 21,
+          xr = 22,
+          Br = 23,
+          Rr = 24,
+          Ir = 25,
+          kr = 26,
+          Lr = 27,
+          Tr = 28,
+          jr = 29,
+          Fr = 31,
+          Er = 32,
+          zr = 34,
+          Or = 35,
+          Ar = 36,
+          Dr = 100,
+          Nr = 103,
+          Ur = 500,
+          Wr = 600,
+          Pr = 601,
+          Hr = 1e3,
+          Gr = 1001,
+          Vr = 0,
+          qr = 1,
+          Zr = 0,
+          Kr = 1,
+          $r = 2,
+          Yr = 3,
+          Qr = 1,
+          Xr = 2,
+          Jr = 0,
+          en = 1,
+          tn = 2,
+          rn = 3,
           nn = 4,
-          sn = 7,
-          on = 8;
-        function an(e) {
+          sn = 6,
+          on = 7,
+          an = 1,
+          cn = 4,
+          ln = 7,
+          un = 8;
+        function dn(e) {
           switch (e) {
             default:
               break;
-            case nn:
-            case rn:
-            case sn:
-            case on:
+            case cn:
+            case an:
+            case ln:
+            case un:
               return !0;
           }
           return !1;
         }
-        function cn(e) {
+        function mn(e) {
           switch (e) {
             default:
               break;
-            case nn:
-            case rn:
-            case on:
+            case cn:
+            case an:
+            case un:
               return !0;
           }
           return !1;
         }
-        const ln = 2,
-          un = 4,
-          dn = 8,
-          mn = 16,
-          hn = 30,
-          pn = 0,
-          gn = 1,
-          fn = 2,
-          _n = 3,
-          bn = 4,
-          wn = 5;
-        function Mn(e) {
+        const hn = 2,
+          pn = 4,
+          gn = 8,
+          fn = 16,
+          _n = 30,
+          bn = 0,
+          wn = 1,
+          Mn = 2,
+          Cn = 3,
+          vn = 4,
+          Sn = 5;
+        function yn(e) {
           switch (e) {
-            case pn:
-              return "invalid";
-            case gn:
-              return "gamepad";
-            case fn:
-              return "desktop";
-            case _n:
-              return "tray";
             case bn:
-              return "all";
+              return "invalid";
             case wn:
+              return "gamepad";
+            case Mn:
+              return "desktop";
+            case Cn:
+              return "tray";
+            case vn:
+              return "all";
+            case Sn:
               return "push";
           }
         }
-        const Cn = -1,
-          vn = 0,
-          Sn = 1,
-          yn = 2,
-          xn = 3,
-          Bn = 4,
-          Rn = 5,
-          In = 6,
-          kn = 7;
-        function Ln(e) {
+        const xn = -1,
+          Bn = 0,
+          Rn = 1,
+          In = 2,
+          kn = 3,
+          Ln = 4,
+          Tn = 5,
+          jn = 6,
+          Fn = 7;
+        function En(e) {
           switch (e) {
-            case vn:
-              return "vgui";
-            case Sn:
-              return "tenfoot";
-            case yn:
-              return "mobile";
-            case xn:
-              return "web";
             case Bn:
-              return "gamepad";
+              return "vgui";
             case Rn:
-              return "mobilechat";
+              return "tenfoot";
             case In:
-              return "embedded";
+              return "mobile";
             case kn:
+              return "web";
+            case Ln:
+              return "gamepad";
+            case Tn:
+              return "mobilechat";
+            case jn:
+              return "embedded";
+            case Fn:
               return "desktop";
             default:
               return "unknown";
           }
         }
-        const Tn = 1,
-          jn = 2,
-          Fn = 9,
-          En = 18,
-          zn = 20,
-          On = 22,
-          An = 23,
-          Dn = 24,
-          Nn = 25,
-          Un = 27,
-          Wn = 28,
-          Pn = 29,
-          Hn = 30,
-          Gn = 31,
-          Vn = 36,
-          qn = 37,
-          Zn = 38,
-          Kn = 39,
-          $n = 41,
-          Yn = 42,
-          Qn = 43,
-          Xn = 44,
-          Jn = 50,
-          ei = 55,
-          ti = 56,
-          ri = 57,
-          ni = 58,
-          ii = 59,
-          si = 60,
-          oi = 61,
-          ai = 62,
-          ci = 64,
-          li = 65,
-          ui = 66,
-          di = 67,
-          mi = 68,
-          hi = 69,
-          pi = 70,
-          gi = 71,
-          fi = 72,
-          _i = 73,
-          bi = 74,
-          wi = 75,
-          Mi = 76,
-          Ci = 77,
-          vi = 78,
-          Si = 79,
-          yi = 80,
-          xi = 81,
-          Bi = 82,
-          Ri = 0,
-          Ii = 1,
-          ki = 4,
-          Li = 11;
-        var Ti, ji, Fi, Ei, zi, Oi, Ai, Di;
+        const zn = 1,
+          On = 2,
+          An = 9,
+          Dn = 18,
+          Nn = 20,
+          Un = 22,
+          Wn = 23,
+          Pn = 24,
+          Hn = 25,
+          Gn = 27,
+          Vn = 28,
+          qn = 29,
+          Zn = 30,
+          Kn = 31,
+          $n = 36,
+          Yn = 37,
+          Qn = 38,
+          Xn = 39,
+          Jn = 41,
+          ei = 42,
+          ti = 43,
+          ri = 44,
+          ni = 50,
+          ii = 55,
+          si = 56,
+          oi = 57,
+          ai = 58,
+          ci = 59,
+          li = 60,
+          ui = 61,
+          di = 62,
+          mi = 64,
+          hi = 65,
+          pi = 66,
+          gi = 67,
+          fi = 68,
+          _i = 69,
+          bi = 70,
+          wi = 71,
+          Mi = 72,
+          Ci = 73,
+          vi = 74,
+          Si = 75,
+          yi = 76,
+          xi = 77,
+          Bi = 78,
+          Ri = 79,
+          Ii = 80,
+          ki = 81,
+          Li = 82,
+          Ti = 0,
+          ji = 1,
+          Fi = 4,
+          Ei = 11;
+        var zi, Oi, Ai, Di, Ni, Ui, Wi, Pi;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -1136,7 +1229,7 @@ var CLSTAMP = "10835308";
               "k_EConnectivityTestResult_WifiDisabled"),
             (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
               "k_EConnectivityTestResult_NoLAN");
-        })(Ti || (Ti = {})),
+        })(zi || (zi = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -1150,7 +1243,7 @@ var CLSTAMP = "10835308";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(ji || (ji = {})),
+          })(Oi || (Oi = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -1164,7 +1257,7 @@ var CLSTAMP = "10835308";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(Fi || (Fi = {})),
+          })(Ai || (Ai = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -1174,7 +1267,7 @@ var CLSTAMP = "10835308";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(Ei || (Ei = {})),
+          })(Di || (Di = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -1184,7 +1277,7 @@ var CLSTAMP = "10835308";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(zi || (zi = {})),
+          })(Ni || (Ni = {})),
           (function (e) {
             (e[(e.k_EAppUpdateProgress_VerifyingInstalledFiles = 0)] =
               "k_EAppUpdateProgress_VerifyingInstalledFiles"),
@@ -1202,7 +1295,7 @@ var CLSTAMP = "10835308";
                 "k_EAppUpdateProgress_Committing"),
               (e[(e.k_EAppUpdateProgress_Max = 7)] =
                 "k_EAppUpdateProgress_Max");
-          })(Oi || (Oi = {})),
+          })(Ui || (Ui = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -1210,22 +1303,24 @@ var CLSTAMP = "10835308";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(Ai || (Ai = {})),
+          })(Wi || (Wi = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(Di || (Di = {}));
-        const Ni = 0,
-          Ui = 1,
-          Wi = 320,
-          Pi = 528,
-          Hi = 544,
-          Gi = 545,
-          Vi = 546,
-          qi = 5001;
-        var Zi, Ki, $i, Yi, Qi, Xi;
+          })(Pi || (Pi = {}));
+        const Hi = 0,
+          Gi = 1,
+          Vi = 320,
+          qi = 528,
+          Zi = 544,
+          Ki = 545,
+          $i = 546,
+          Yi = 5e3,
+          Qi = 5001,
+          Xi = 5099;
+        var Ji, es, ts, rs, ns, is;
         !(function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -1233,14 +1328,14 @@ var CLSTAMP = "10835308";
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(Zi || (Zi = {})),
+        })(Ji || (Ji = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(Ki || (Ki = {})),
+          })(es || (es = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -1254,12 +1349,12 @@ var CLSTAMP = "10835308";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })($i || ($i = {})),
+          })(ts || (ts = {})),
           (function (e) {
             (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
               (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
               (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
-          })(Yi || (Yi = {})),
+          })(rs || (rs = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -1293,7 +1388,7 @@ var CLSTAMP = "10835308";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(Qi || (Qi = {})),
+          })(ns || (ns = {})),
           (function (e) {
             (e[(e.k_EWindowBringToFrontInvalid = 0)] =
               "k_EWindowBringToFrontInvalid"),
@@ -1301,7 +1396,7 @@ var CLSTAMP = "10835308";
                 "k_EWindowBringToFrontAndForceOS"),
               (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS");
-          })(Xi || (Xi = {}));
+          })(is || (is = {}));
       },
       85243: (e, t, r) => {
         "use strict";
@@ -1442,7 +1537,9 @@ var CLSTAMP = "10835308";
           bDOMElementFocusByDefault: !1,
         }),
           (0, s.HR)("section", { bFocusableByDefault: !1 }),
-          (0, s.HR)("form", { bFocusableByDefault: !1 });
+          (0, s.HR)("form", { bFocusableByDefault: !1 }),
+          (0, s.HR)("summary", { bActivateByDefault: !0 }),
+          (0, s.HR)("details", { bFocusableByDefault: !1 });
         function p(e) {
           const { Component: t, children: r } = e,
             o = i.useMemo(() => ({ Component: t }), [t]);
@@ -3375,8 +3472,8 @@ var CLSTAMP = "10835308";
               (this.m_rgChildren.sort((e, t) => {
                 const r = e.m_element,
                   n = t.m_element;
-                if (!r) return n ? 1 : 0;
-                if (!n) return -1;
+                if (!r || !r.isConnected) return n && n.isConnected ? 1 : 0;
+                if (!n || !n.isConnected) return -1;
                 const i = r.compareDocumentPosition(n);
                 return i & Node.DOCUMENT_POSITION_PRECEDING
                   ? 1
@@ -4768,13 +4865,14 @@ var CLSTAMP = "10835308";
           return (e.length = n), e;
         }
         function g(e, t, r) {
-          return (
-            e ||
-              console.error(
+          return e
+            ? e.length < t
+              ? e.concat(Array(t - e.length).fill(r))
+              : e
+            : (console.error(
                 "array should be defined for us to fill in the missing indexes",
               ),
-            e.length < t ? e.concat(Array(t - e.length).fill(r)) : e
-          );
+              []);
         }
         function f(e) {
           return Array.from(new Set(e));
@@ -5591,7 +5689,7 @@ var CLSTAMP = "10835308";
       12466: (e, t, r) => {
         "use strict";
         r.d(t, { l: () => l, A: () => u });
-        var n = r(14628),
+        var n = r(39607),
           i = r(63696),
           s = r(51579);
         const o = 5;
@@ -5874,8 +5972,14 @@ var CLSTAMP = "10835308";
                 : this.Body()[`set_${t}`] && this.Body()[`set_${t}`](e[t]);
           }
         }
-        function d(e, t) {
-          return t instanceof u ? t : u.InitFromObject(e, t);
+        function d(e, t, r) {
+          let n;
+          return (
+            (n = t instanceof u ? t : u.InitFromObject(e, t)),
+            void 0 !== r?.strDebugSource &&
+              n.Hdr().set_debug_source(r.strDebugSource),
+            n
+          );
         }
       },
       48307: (e, t, r) => {
@@ -14135,8 +14239,10 @@ var CLSTAMP = "10835308";
           return [
             e,
             {
-              onMouseEnter: n.useCallback(() => t(!0), []),
-              onMouseLeave: n.useCallback(
+              onPointerEnter: n.useCallback((e) => {
+                (e && "pointerType" in e && "mouse" !== e.pointerType) || t(!0);
+              }, []),
+              onPointerLeave: n.useCallback(
                 () =>
                   window.sessionStorage &&
                   "true" !=
@@ -14214,19 +14320,20 @@ var CLSTAMP = "10835308";
           _g: () => f,
           aA: () => s.aA,
           bB: () => u,
-          bs: () => I,
+          bs: () => k,
           dh: () => b,
           eV: () => c,
           gc: () => C,
           hL: () => _,
           l6: () => s.l6,
           o4: () => s.o4,
-          ob: () => k,
-          uD: () => R,
+          oT: () => R,
+          ob: () => L,
+          uD: () => I,
           uH: () => x,
           uN: () => S,
           vJ: () => h,
-          wm: () => L,
+          wm: () => T,
           x2: () => v,
           xA: () => s.xA,
           xM: () => g,
@@ -14438,7 +14545,18 @@ var CLSTAMP = "10835308";
         function B(e, t) {
           return x(e, t) || e;
         }
-        function R(e = !1) {
+        function R(e, t) {
+          const r = null != e,
+            i = x(r, t),
+            s = n.useRef(e);
+          return (
+            n.useEffect(() => {
+              null != e && e != s.current && (s.current = e);
+            }, [e]),
+            r ? e : i ? s.current : e
+          );
+        }
+        function I(e = !1) {
           const [t, r] = n.useState(e);
           return [
             t,
@@ -14446,7 +14564,7 @@ var CLSTAMP = "10835308";
             n.useCallback(() => r(!1), []),
           ];
         }
-        function I(e) {
+        function k(e) {
           const t = n.useRef(void 0);
           return n.useCallback(
             () => (
@@ -14457,7 +14575,7 @@ var CLSTAMP = "10835308";
             [e],
           );
         }
-        function k() {
+        function L() {
           const [e, t] = n.useState(() => (0, i.x0)());
           return {
             ...e,
@@ -14467,7 +14585,7 @@ var CLSTAMP = "10835308";
             }, []),
           };
         }
-        function L(e) {
+        function T(e) {
           const t = n.useRef(e);
           return (
             (t.current.length !== e.length ||
@@ -14529,11 +14647,11 @@ var CLSTAMP = "10835308";
             }, [e, t]);
         }
       },
-      14628: (e, t, r) => {
+      39607: (e, t, r) => {
         "use strict";
-        r.d(t, { YJ: () => s, TS: () => o, iA: () => a, Ki: () => c });
+        r.d(t, { Ki: () => c, TS: () => o, YJ: () => s, iA: () => a });
         var n = r(43691),
-          i = r(9731);
+          i = r(8275);
         function s(e) {
           return e;
         }
@@ -14938,7 +15056,7 @@ var CLSTAMP = "10835308";
         r.d(t, { R: () => a, A: () => o });
         var n = r(17372);
         const i = JSON.parse(
-          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756,"trailercarousel":100757,"personalcalendar-lastmonth":100800,"personalcalendar-lastweek":100801,"personalcalendar-calendar":100802,"personalcalendar-homepage":100803}',
+          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756,"trailercarousel":100757,"personalcalendar-lastmonth":100800,"personalcalendar-lastweek":100801,"personalcalendar-calendar":100802,"personalcalendar-homepage":100803,"greatonframe":100804}',
         );
         var s = r(89400);
         class o {
@@ -15044,7 +15162,7 @@ var CLSTAMP = "10835308";
         var n = r(62540),
           i = r(63696),
           s = r(49810),
-          o = r(14628);
+          o = r(39607);
         const a = i.createContext({});
         i.createContext(void 0);
         function c(e) {
@@ -15691,7 +15809,7 @@ var CLSTAMP = "10835308";
             [r, n] = l.useState(0),
             i = l.useCallback(() => n((e) => e + 1), [n]);
           (0, f.Qi)(e.ownerWindow, "window_details_changed", i);
-          const s = { bGPUEnabled: !0, bUnderlaySupported: !0 },
+          const s = { bUnderlaySupported: !0 },
             o = (0, f.vJ)(t, [t, r], s);
           return void 0 !== o ? o : s;
         }
@@ -16123,9 +16241,9 @@ var CLSTAMP = "10835308";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 20 2026 : 02:54:20",
-                BUILD_TIME_UTC: "Jul 20 2026 : 09:54:20",
-                BUILD_RTIME_UTC: 1784541260,
+                BUILD_TIME_LOCAL: "Jul 22 2026 : 19:04:25",
+                BUILD_TIME_UTC: "Jul 23 2026 : 02:04:25",
+                BUILD_RTIME_UTC: 1784772265,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -19564,7 +19682,7 @@ var CLSTAMP = "10835308";
       },
       36437: (e, t, r) => {
         "use strict";
-        r.d(t, { L: () => x, Y: () => y });
+        r.d(t, { L: () => B, Y: () => x });
         var n = r(62540),
           i = r(63696);
         function s(e) {
@@ -19673,7 +19791,8 @@ var CLSTAMP = "10835308";
               )
             : null;
         }
-        function f(e) {
+        var f = r(79435);
+        function _(e) {
           const { ModalManager: t } = e,
             [r, s] = i.useState(void 0),
             [o, a] = i.useState(!0),
@@ -19698,10 +19817,10 @@ var CLSTAMP = "10835308";
             });
           }, []);
           return r
-            ? (0, n.jsx)(_, { onMeasureComplete: l, request: r }, r.id)
+            ? (0, n.jsx)(b, { onMeasureComplete: l, request: r }, r.id)
             : null;
         }
-        function _(e) {
+        function b(e) {
           const [t, r] = i.useState(),
             s = (0, o.R7)().ownerWindow;
           return (
@@ -19719,11 +19838,11 @@ var CLSTAMP = "10835308";
               );
             }, [s]),
             t
-              ? c.createPortal((0, n.jsx)(b, { ...e, elContainer: t }), t)
+              ? c.createPortal((0, n.jsx)(w, { ...e, elContainer: t }), t)
               : null
           );
         }
-        function b(e) {
+        function w(e) {
           const { elContainer: t, onMeasureComplete: r, request: s } = e;
           return (
             i.useEffect(() => {
@@ -19744,24 +19863,27 @@ var CLSTAMP = "10835308";
                 () => n(void 0)
               );
             }, [t, r, s]),
-            (0, n.jsx)(a.tH, { children: s.rctToMeasure })
+            (0, n.jsx)(f.J.Provider, {
+              value: !0,
+              children: (0, n.jsx)(a.tH, { children: s.rctToMeasure }),
+            })
           );
         }
-        var w = r(90765),
-          M = r(51115),
-          C = r(21440),
-          v = r(3673),
-          S = r(55993);
-        function y(e) {
+        var M = r(90765),
+          C = r(51115),
+          v = r(21440),
+          S = r(3673),
+          y = r(55993);
+        function x(e) {
           i.useEffect(() => {
             if (e)
               return (
-                document.body.classList.add(S.BodyNoScrollDialog),
-                () => document.body.classList.remove(S.BodyNoScrollDialog)
+                document.body.classList.add(y.BodyNoScrollDialog),
+                () => document.body.classList.remove(y.BodyNoScrollDialog)
               );
           }, [e]);
         }
-        function x(e) {
+        function B(e) {
           let {
             ModalManager: t,
             bRegisterModalManager: r = !0,
@@ -19774,10 +19896,10 @@ var CLSTAMP = "10835308";
           const m = t.modals,
             h = m && !!m.length,
             p = t.active_modal;
-          y(h),
+          x(h),
             (function (e) {
               const t = (0, o.R7)().ownerWindow,
-                r = (0, M.CH)(),
+                r = (0, C.CH)(),
                 n = i.useCallback(() => {
                   t?.SteamClient?.Window && t.SteamClient.Window.BringToFront();
                 }, [t]);
@@ -19788,35 +19910,35 @@ var CLSTAMP = "10835308";
                 );
             })(t);
           const g = (function (e, t) {
-            return (0, M.QS)(
+            return (0, C.QS)(
               (r) => {
                 if (!r || !t) return;
                 const n = r.ownerDocument.defaultView;
-                return v.BR.RegisterModalManager(e, n);
+                return S.BR.RegisterModalManager(e, n);
               },
               [e],
             );
           })(t, r);
-          let _ = null,
+          let f = null,
             b = !l;
           return (
             m && m.length
-              ? (_ = m.map((e) => {
+              ? (f = m.map((e) => {
                   const t = e == p,
                     r = {
                       key: e.key,
                       active: t,
                       rctActiveContextMenus: t && l ? c : void 0,
                     };
-                  return e instanceof C._F
-                    ? (0, i.createElement)(R, {
+                  return e instanceof v._F
+                    ? (0, i.createElement)(I, {
                         ...r,
                         key: r.key,
                         modal: e,
-                        Component: a ?? I,
+                        Component: a ?? k,
                       })
-                    : e instanceof C.$9
-                      ? (0, i.createElement)(B, {
+                    : e instanceof v.$9
+                      ? (0, i.createElement)(R, {
                           ...r,
                           key: r.key,
                           modal: e,
@@ -19833,25 +19955,25 @@ var CLSTAMP = "10835308";
                       ...d,
                       style: u,
                       ref: g,
-                      className: (0, w.A)(d.className, "FullModalOverlay"),
+                      className: (0, M.A)(d.className, "FullModalOverlay"),
                       children: [
                         (0, n.jsx)("div", {
                           className:
                             "ModalOverlayContent ModalOverlayBackground",
                         }),
-                        _,
+                        f,
                       ],
                     }),
                     b && c,
                   ],
                 }),
-                (0, n.jsx)(f, { ModalManager: t }),
-                (0, n.jsx)(L, { ModalManager: t }),
+                (0, n.jsx)(_, { ModalManager: t }),
+                (0, n.jsx)(T, { ModalManager: t }),
               ],
             })
           );
         }
-        function B(e) {
+        function R(e) {
           const {
             modal: t,
             rctActiveContextMenus: r,
@@ -19870,7 +19992,7 @@ var CLSTAMP = "10835308";
           const c = (0, n.jsxs)(a.tH, {
             children: [
               (0, n.jsx)("div", {
-                className: (0, w.A)(
+                className: (0, M.A)(
                   "ModalOverlayContent",
                   s ? "active" : "inactive",
                 ),
@@ -19879,21 +20001,21 @@ var CLSTAMP = "10835308";
               r,
             ],
           });
-          return o ? (0, n.jsx)(k, { active: s, children: c }) : c;
+          return o ? (0, n.jsx)(L, { active: s, children: c }) : c;
         }
-        function R(e) {
+        function I(e) {
           const {
               modal: t,
               active: r,
               rctActiveContextMenus: i,
               Component: s,
             } = e,
-            o = (0, M.CH)();
+            o = (0, C.CH)();
           return (
-            (0, M.hL)(t.ModalUpdatedCallback, o),
+            (0, C.hL)(t.ModalUpdatedCallback, o),
             (0, n.jsx)(a.tH, {
               children: (0, n.jsxs)(s, {
-                className: (0, w.A)(
+                className: (0, M.A)(
                   "ModalOverlayContent",
                   r ? "active" : "inactive",
                 ),
@@ -19904,9 +20026,9 @@ var CLSTAMP = "10835308";
             })
           );
         }
-        function I(e) {
+        function k(e) {
           const { className: t, active: r, children: i } = e;
-          return (0, n.jsx)(k, {
+          return (0, n.jsx)(L, {
             active: r,
             children: (0, n.jsx)("div", {
               className: t,
@@ -19915,7 +20037,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function k(e) {
+        function L(e) {
           const { active: t, children: r } = e,
             s = i.useRef(null),
             [o, a] = i.useState(!1);
@@ -19928,18 +20050,18 @@ var CLSTAMP = "10835308";
             }, [o]),
             (0, n.jsx)("dialog", {
               ref: s,
-              className: S.ModalDialog,
+              className: y.ModalDialog,
               onClose: () => a(!1),
               onCancel: (e) => e.preventDefault(),
               children: r,
             })
           );
         }
-        function L(e) {
+        function T(e) {
           const { ModalManager: t } = e,
-            r = (0, M.CH)();
+            r = (0, C.CH)();
           return (
-            (0, M.hL)(t.LegacyPopupModalCountChangedCallbacks, r),
+            (0, C.hL)(t.LegacyPopupModalCountChangedCallbacks, r),
             (0, n.jsx)(n.Fragment, {
               children: t.legacy_popup_modals.map((e) =>
                 (0, n.jsx)(g, { Modal: e }, e.key),
@@ -20335,58 +20457,68 @@ var CLSTAMP = "10835308";
           return (0, o.hL)(t.ModalCountChangedCallbacks, s), r;
         }
       },
+      79435: (e, t, r) => {
+        "use strict";
+        r.d(t, { J: () => i, m: () => s });
+        var n = r(63696);
+        const i = (0, n.createContext)(!1);
+        function s() {
+          return (0, n.useContext)(i);
+        }
+      },
       50376: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $$j: () => ct,
-          $4X: () => Ut,
-          $Qn: () => ot,
+          $$j: () => at,
+          $4X: () => Nt,
+          $Qn: () => st,
           $rC: () => w,
-          $vK: () => _r,
+          $vK: () => pr,
           Aj0: () => je,
-          B1N: () => Dt,
-          BQz: () => fr,
+          B1N: () => At,
+          BQz: () => hr,
           BeN: () => U,
-          Bir: () => or,
-          Bki: () => hr,
-          CE1: () => kt,
+          Bir: () => ir,
+          Bki: () => ur,
+          CE1: () => It,
           CeX: () => me,
-          Cip: () => _t,
+          Cip: () => ft,
           Cv4: () => m,
           DK4: () => C,
-          DQe: () => dr,
+          DQe: () => Wr,
           Dp6: () => We,
           EQ9: () => x,
-          ETd: () => er,
+          ETd: () => Xt,
           Em3: () => Te,
           F2T: () => be,
           FWt: () => T,
           GB9: () => M,
           GSe: () => Le,
-          Gkr: () => Pt,
+          Gkr: () => Wt,
           Gq2: () => A,
-          GrD: () => Ct,
+          GrD: () => Mt,
           Gv$: () => $,
-          IFd: () => sr,
-          IGf: () => Or,
+          IFd: () => nr,
+          IGf: () => Fr,
           IOc: () => ne,
           IrQ: () => pe,
           Jlk: () => ce,
-          Jru: () => Er,
+          Jru: () => Tr,
           K7s: () => Pe,
           KKS: () => $e,
           KOs: () => R,
           L0X: () => fe,
+          LO_: () => Dr,
           LeN: () => N,
-          MFH: () => ut,
+          MFH: () => lt,
           MUh: () => Ze,
-          MbF: () => Tr,
+          MbF: () => Ir,
           MvQ: () => ye,
           MxO: () => Y,
           N8C: () => Je,
-          NCC: () => Wt,
-          NtH: () => Nt,
-          OSJ: () => xr,
+          NCC: () => Ut,
+          NtH: () => Dt,
+          OSJ: () => vr,
           OWN: () => O,
           OeC: () => re,
           OiG: () => rt,
@@ -20398,130 +20530,133 @@ var CLSTAMP = "10835308";
           Q38: () => p,
           QHH: () => ae,
           QQ4: () => He,
-          QcV: () => ht,
+          QcV: () => mt,
           Qte: () => ze,
           RO3: () => G,
           ROZ: () => Ae,
           Rkk: () => g,
-          SYj: () => qt,
-          T4m: () => At,
-          UTF: () => Lt,
-          U_V: () => lt,
+          SYj: () => Vt,
+          T4m: () => Ot,
+          UTF: () => kt,
+          U_V: () => ct,
           V5W: () => ke,
           VR: () => qe,
-          VSd: () => vr,
-          Vgk: () => gr,
-          Vt2: () => br,
-          WOg: () => Mt,
-          WX$: () => Jt,
-          Wy0: () => pt,
+          VSd: () => wr,
+          Ves: () => Or,
+          Vgk: () => mr,
+          Vt2: () => gr,
+          WOg: () => wt,
+          WX$: () => Qt,
+          Wy0: () => ht,
           X: () => k,
           X4B: () => le,
-          XH_: () => nr,
+          XH_: () => tr,
           XTb: () => B,
           Xjb: () => ve,
-          Xz0: () => gt,
+          Xz0: () => pt,
           YJl: () => H,
           YNO: () => I,
-          Yb3: () => ir,
-          Yoo: () => Fr,
+          Yb3: () => rr,
+          Yoo: () => Lr,
           YuU: () => Ye,
-          ZPc: () => zt,
+          ZPc: () => Et,
           ZWw: () => Se,
-          ZjT: () => Kt,
-          ZnA: () => pr,
+          ZjT: () => qt,
+          ZnA: () => dr,
           _2Q: () => Ke,
           _V3: () => he,
-          _VW: () => vt,
-          _h6: () => yt,
-          _r0: () => xt,
-          a3E: () => st,
+          _VW: () => Ct,
+          _h6: () => St,
+          _r0: () => yt,
+          a3E: () => it,
           aPd: () => E,
-          aVR: () => Qt,
+          aVR: () => $t,
           aeP: () => Me,
-          agV: () => Ir,
+          agV: () => xr,
           apU: () => Ue,
-          az8: () => zr,
-          b8_: () => cr,
-          bKN: () => kr,
+          az8: () => jr,
+          b8_: () => or,
+          bKN: () => Br,
           bPr: () => Ge,
-          bcZ: () => $t,
-          bfp: () => Bt,
+          bcZ: () => Zt,
+          bfp: () => xt,
+          bk: () => zr,
           c_I: () => de,
-          ccb: () => Mr,
-          d1w: () => ar,
-          dI9: () => lr,
-          dJT: () => it,
-          eJJ: () => ft,
+          ccb: () => _r,
+          d1w: () => sr,
+          dI9: () => ar,
+          eJJ: () => gt,
           eNX: () => nt,
           eSy: () => v,
           eTF: () => ue,
-          emH: () => jr,
-          f2R: () => Ft,
+          emH: () => kr,
+          f2R: () => jt,
           f5X: () => tt,
           f5w: () => Z,
           fSs: () => J,
-          faJ: () => bt,
-          ffu: () => at,
+          faJ: () => _t,
+          ffu: () => ot,
+          fhy: () => Ar,
           fpT: () => P,
-          g$j: () => wr,
+          g$j: () => fr,
           gxp: () => oe,
-          gzV: () => Ht,
+          gzV: () => Pt,
           h20: () => xe,
-          h28: () => wt,
+          h28: () => bt,
           hz4: () => Ce,
           i3G: () => ge,
           i6V: () => Ne,
           iSZ: () => h,
-          ilR: () => St,
+          ilR: () => vt,
           jGG: () => ie,
-          jIP: () => Xt,
-          jZW: () => jt,
+          jIP: () => Yt,
+          jZW: () => Tt,
           jZl: () => et,
-          jdP: () => Br,
-          jlt: () => rr,
-          kPc: () => mt,
-          koA: () => Ar,
+          jdP: () => Sr,
+          jlt: () => er,
+          kPc: () => dt,
+          koA: () => Er,
           l8x: () => we,
           lMJ: () => Re,
-          lRD: () => Zt,
+          lRD: () => Ur,
           m59: () => b,
           mrd: () => z,
           nGC: () => te,
-          nm_: () => mr,
-          o5Q: () => Yt,
-          ofN: () => Sr,
-          oy: () => yr,
+          nm_: () => lr,
+          o5Q: () => Kt,
+          ofN: () => Mr,
+          oy: () => Cr,
           pDR: () => X,
           qcc: () => Qe,
-          qnF: () => Ot,
+          qnF: () => zt,
           qzq: () => De,
-          rNt: () => Cr,
+          rNt: () => br,
           rfv: () => Ve,
-          sDU: () => Lr,
+          sDU: () => Rr,
           sED: () => L,
           sdo: () => K,
           t$Q: () => W,
           tID: () => Fe,
-          tIO: () => Rr,
+          tIO: () => yr,
           tcj: () => D,
           tmR: () => y,
-          twC: () => Rt,
+          twC: () => Bt,
           u9R: () => ee,
           uMb: () => _e,
           vRz: () => se,
-          vdG: () => ur,
-          vjL: () => dt,
-          vrn: () => Et,
+          vdG: () => cr,
+          vjL: () => ut,
+          vrn: () => Ft,
           wB_: () => f,
-          wVV: () => Tt,
+          wVV: () => Lt,
           wbc: () => _,
-          xTY: () => tr,
+          xTY: () => Jt,
+          xoK: () => Nr,
           xv8: () => Q,
           yFA: () => V,
           yUp: () => q,
           y_e: () => Oe,
-          ypD: () => It,
+          ypD: () => Rt,
           zD7: () => S,
           zHo: () => Ie,
         });
@@ -21816,6 +21951,7 @@ var CLSTAMP = "10835308";
               (0, n.jsx)("g", {
                 className: "Speaker",
                 children: (0, n.jsx)("path", {
+                  fill: "currentColor",
                   d: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
                 }),
               }),
@@ -21825,18 +21961,22 @@ var CLSTAMP = "10835308";
                   children: [
                     (0, n.jsx)("path", {
                       className: "SoundWavesHighest",
+                      fill: "currentColor",
                       d: "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
                     }),
                     (0, n.jsx)("path", {
                       className: "SoundWavesHigh",
+                      fill: "currentColor",
                       d: "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
                     }),
                     (0, n.jsx)("path", {
                       className: "SoundWavesMed",
+                      fill: "currentColor",
                       d: "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
                     }),
                     (0, n.jsx)("path", {
                       className: "SoundWavesLow",
+                      fill: "currentColor",
                       d: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
                     }),
                   ],
@@ -24009,23 +24149,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function it() {
-          return (0, n.jsx)("svg", {
-            version: "1.1",
-            id: "Layer_3",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Filter",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            children: (0, n.jsx)("path", {
-              d: "M236.445,23.522c-1.085-2.35-3.438-3.855-6.025-3.855H25.58c-2.586,0-4.936,1.501-6.024,3.855 c-1.08,2.349-0.698,5.112,0.983,7.083l80.328,94.039v104.181c0,2.74,1.682,5.194,4.237,6.188c0.778,0.3,1.588,0.445,2.392,0.445 c1.832,0,3.626-0.762,4.91-2.17l41.012-45.13c1.111-1.219,1.724-2.811,1.724-4.459v-59.054l80.325-94.04 C237.144,28.634,237.526,25.867,236.445,23.522z",
-            }),
-          });
-        }
-        function st(e) {
+        function it(e) {
           const { percentComplete: t, startOffset: r } = e;
           let i = o.Fu(t, 0, 100, 800, 0),
             a = r ? r + 270 : 270;
@@ -24055,7 +24179,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function ot() {
+        function st() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             xmlns: "http://www.w3.org/2000/svg",
@@ -24081,7 +24205,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function at() {
+        function ot() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24118,7 +24242,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function ct() {
+        function at() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24153,7 +24277,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function lt(e) {
+        function ct(e) {
           return (0, n.jsxs)("svg", {
             style: { height: e.height, width: e.height },
             version: "1.1",
@@ -24182,7 +24306,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function ut() {
+        function lt() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "base",
@@ -24219,7 +24343,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function dt() {
+        function ut() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24243,7 +24367,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function mt(e) {
+        function dt(e) {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "base",
@@ -24265,7 +24389,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function ht(e) {
+        function mt(e) {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "base",
@@ -24282,7 +24406,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function pt() {
+        function ht() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_3",
@@ -24303,7 +24427,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function gt(e) {
+        function pt(e) {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             xmlns: "http://www.w3.org/2000/svg",
@@ -24343,7 +24467,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function ft(e) {
+        function gt(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -24355,7 +24479,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function _t() {
+        function ft() {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -24370,7 +24494,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function bt() {
+        function _t() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -24385,7 +24509,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function wt() {
+        function bt() {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -24415,7 +24539,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function Mt() {
+        function wt() {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -24431,7 +24555,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Ct() {
+        function Mt() {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 18 18",
@@ -24447,7 +24571,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function vt(e) {
+        function Ct(e) {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 100 100",
@@ -24470,7 +24594,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function St(e) {
+        function vt(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -24484,7 +24608,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function yt(e) {
+        function St(e) {
           return (0, l.Qn)()
             ? (0, n.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -24513,7 +24637,7 @@ var CLSTAMP = "10835308";
                 }),
               });
         }
-        function xt(e) {
+        function yt(e) {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24529,7 +24653,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Bt(e) {
+        function xt(e) {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24545,7 +24669,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Rt(e) {
+        function Bt(e) {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24564,7 +24688,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function It(e) {
+        function Rt(e) {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24586,7 +24710,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function kt(e) {
+        function It(e) {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -24608,7 +24732,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function Lt(e) {
+        function kt(e) {
           return (0, n.jsxs)("svg", {
             height: "100px",
             width: "100px",
@@ -24643,7 +24767,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function Tt(e) {
+        function Lt(e) {
           return (0, n.jsxs)("svg", {
             width: "100%",
             height: "100%",
@@ -24673,7 +24797,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function jt(e) {
+        function Tt(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -24687,7 +24811,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Ft(e) {
+        function jt(e) {
           const { className: t, color: r } = e;
           return (0, n.jsxs)("svg", {
             className: (0, s.A)(t),
@@ -24712,7 +24836,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function Et(e) {
+        function Ft(e) {
           const { className: t, ...r } = e,
             [i, s] = (0, u.l)(),
             [o, a] = (0, u.l)(),
@@ -24883,7 +25007,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function zt() {
+        function Et() {
           return (0, n.jsx)("svg", {
             height: "100px",
             width: "100px",
@@ -24911,7 +25035,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Ot(e) {
+        function zt(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 100 100",
@@ -24926,7 +25050,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function At(e) {
+        function Ot(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 100 100",
@@ -24941,7 +25065,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Dt(e) {
+        function At(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 1200 1200",
@@ -24951,7 +25075,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Nt(e) {
+        function Dt(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 1200 1200",
@@ -24963,7 +25087,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Ut() {
+        function Nt() {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -24978,7 +25102,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Wt() {
+        function Ut() {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -24995,7 +25119,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Pt() {
+        function Wt() {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "Layer_1",
@@ -25030,7 +25154,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Ht() {
+        function Pt() {
           return (0, n.jsxs)("svg", {
             width: "36",
             height: "36",
@@ -25050,7 +25174,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function Gt(e) {
+        function Ht(e) {
           return (0, n.jsx)("svg", {
             ...e,
             height: "100px",
@@ -25066,7 +25190,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Vt(e) {
+        function Gt(e) {
           return (0, n.jsxs)("svg", {
             ...e,
             fill: "#000000",
@@ -25085,29 +25209,12 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function qt(e) {
+        function Vt(e) {
           return (0, d.Ae)()
-            ? (0, n.jsx)(Vt, { ...e })
-            : (0, n.jsx)(Gt, { ...e });
+            ? (0, n.jsx)(Gt, { ...e })
+            : (0, n.jsx)(Ht, { ...e });
         }
-        function Zt(e) {
-          const { className: t, ...r } = e;
-          return (0, n.jsx)("svg", {
-            className: (0, s.A)(c().SteamDeckCompatLogo, t),
-            ...r,
-            viewBox: "0 0 20 20",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            children: (0, n.jsx)("path", {
-              opacity: "0.84",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
-              fill: "white",
-            }),
-          });
-        }
-        function Kt(e) {
+        function qt(e) {
           const { className: t, ...r } = e;
           return (0, n.jsx)("svg", {
             className: (0, s.A)(
@@ -25127,7 +25234,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function $t(e) {
+        function Zt(e) {
           const { className: t, ...r } = e;
           return (0, n.jsx)("svg", {
             className: (0, s.A)(
@@ -25147,7 +25254,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Yt(e) {
+        function Kt(e) {
           const { className: t, ...r } = e;
           return (0, n.jsx)("svg", {
             className: (0, s.A)(
@@ -25167,7 +25274,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Qt(e) {
+        function $t(e) {
           const { className: t, ...r } = e;
           return (0, n.jsx)("svg", {
             className: (0, s.A)(
@@ -25187,7 +25294,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Xt(e) {
+        function Yt(e) {
           const { className: t, ...r } = e;
           return (0, n.jsx)("svg", {
             className: (0, s.A)(
@@ -25207,7 +25314,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Jt(e) {
+        function Qt(e) {
           const { className: t, ...r } = e;
           return (0, n.jsx)("svg", {
             className: (0, s.A)(
@@ -25227,7 +25334,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function er(e) {
+        function Xt(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 22 20",
@@ -25239,7 +25346,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function tr(e) {
+        function Jt(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -25252,7 +25359,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function rr(e) {
+        function er(e) {
           const { className: t, ...r } = e;
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -25270,7 +25377,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function nr(e) {
+        function tr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 26 26",
@@ -25284,7 +25391,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function ir(e) {
+        function rr(e) {
           return (0, n.jsxs)("svg", {
             width: "36",
             height: "36",
@@ -25305,7 +25412,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function sr(e) {
+        function nr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 74 74",
@@ -25317,7 +25424,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function or(e) {
+        function ir(e) {
           return (0, n.jsxs)("svg", {
             viewBox: "0 0 36 36",
             fill: "none",
@@ -25339,7 +25446,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function ar(e) {
+        function sr(e) {
           return (0, n.jsxs)("svg", {
             viewBox: "0 0 36 36",
             fill: "none",
@@ -25361,7 +25468,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function cr(e) {
+        function or(e) {
           const { direction: t, ...r } = e;
           switch (t) {
             case "up":
@@ -25410,7 +25517,7 @@ var CLSTAMP = "10835308";
               });
           }
         }
-        function lr(e) {
+        function ar(e) {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -25430,7 +25537,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function ur(e) {
+        function cr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -25444,22 +25551,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function dr(e) {
-          const { className: t } = e;
-          return (0, n.jsx)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            className: (0, s.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
-            viewBox: "0 0 36 36",
-            fill: "none",
-            children: (0, n.jsx)("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
-            }),
-          });
-        }
-        function mr(e) {
+        function lr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25470,7 +25562,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function hr(e) {
+        function ur(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25481,7 +25573,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function pr(e) {
+        function dr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25492,7 +25584,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function gr(e) {
+        function mr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25503,7 +25595,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function fr(e) {
+        function hr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25514,7 +25606,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function _r(e) {
+        function pr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25525,7 +25617,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function br(e) {
+        function gr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25536,7 +25628,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function wr(e) {
+        function fr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25547,7 +25639,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Mr(e) {
+        function _r(e) {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25566,7 +25658,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function Cr(e) {
+        function br(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25577,7 +25669,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function vr(e) {
+        function wr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25588,7 +25680,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Sr(e) {
+        function Mr(e) {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25613,7 +25705,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function yr(e) {
+        function Cr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25624,7 +25716,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function xr(e) {
+        function vr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25635,7 +25727,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Br(e) {
+        function Sr(e) {
           return (0, n.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25651,7 +25743,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function Rr(e) {
+        function yr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25662,7 +25754,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Ir(e) {
+        function xr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25673,7 +25765,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function kr(e) {
+        function Br(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25684,7 +25776,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Lr(e) {
+        function Rr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25695,7 +25787,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Tr(e) {
+        function Ir(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25706,7 +25798,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function jr(e) {
+        function kr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25717,7 +25809,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Fr(e) {
+        function Lr(e) {
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
@@ -25758,7 +25850,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Er(e) {
+        function Tr(e) {
           return (0, n.jsxs)("svg", {
             viewBox: "4 1 24 30",
             fill: "none",
@@ -25780,7 +25872,7 @@ var CLSTAMP = "10835308";
             ],
           });
         }
-        function zr(e) {
+        function jr(e) {
           const { fill: t, ...r } = e;
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -25797,7 +25889,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Or(e) {
+        function Fr(e) {
           const { fill: t, ...r } = e;
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -25816,7 +25908,7 @@ var CLSTAMP = "10835308";
             }),
           });
         }
-        function Ar(e) {
+        function Er(e) {
           const { fill: t, ...r } = e;
           return (0, n.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -25831,6 +25923,181 @@ var CLSTAMP = "10835308";
               width: "8",
               height: "8",
               fill: e.fill || "currentColor",
+            }),
+          });
+        }
+        function zr(e) {
+          const [t, r] = (0, u.l)();
+          return (0, n.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: [
+              (0, n.jsxs)("g", {
+                clipPath: r,
+                children: [
+                  (0, n.jsx)("path", {
+                    fill: "#199FFF",
+                    d: "M35.9982 12.4814C23.0097 12.4814 12.4805 23.0107 12.4805 35.9991H35.9982V12.4814Z",
+                  }),
+                  (0, n.jsx)("path", {
+                    fill: "currentColor",
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M0 0.776571C0 0.34768 0.347683 0 0.776571 0H35.9984V7.76572H7.76571V35.9984H0V0.776571Z",
+                  }),
+                ],
+              }),
+              (0, n.jsx)("defs", {
+                children: (0, n.jsx)("clipPath", {
+                  id: t,
+                  children: (0, n.jsx)("rect", {
+                    fill: "currentColor",
+                    width: "36",
+                    height: "36",
+                  }),
+                }),
+              }),
+            ],
+          });
+        }
+        function Or(e) {
+          const { className: t, ...r } = e;
+          return (0, n.jsxs)("svg", {
+            className: (0, s.A)(c().SteamFrameCompatLogo, t),
+            ...r,
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 20 20",
+            fill: "none",
+            children: [
+              (0, n.jsx)("path", {
+                opacity: "0.84",
+                fill: "white",
+                d: "M18.0001 7.54712C12.2272 7.54712 7.54736 12.227 7.54736 17.9998H18.0001V7.54712Z",
+              }),
+              (0, n.jsx)("path", {
+                opacity: "0.84",
+                fill: "white",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M2 2.34516C2 2.15453 2.15453 2 2.34516 2H17.9999V5.45157H5.45157V17.9999H2V2.34516Z",
+              }),
+            ],
+          });
+        }
+        function Ar(e) {
+          const { className: t, ...r } = e;
+          return (0, n.jsxs)("svg", {
+            className: (0, s.A)(c().SteamMachineCompatLogo, t),
+            ...r,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, n.jsx)("path", {
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M17.6574 2C17.8468 2.00007 18 2.15364 18 2.34293V17.6574C17.9999 17.8467 17.8467 17.9999 17.6574 18H2.34293C2.15366 18 2.00011 17.8467 2 17.6574V2.34293C2 2.1536 2.1536 2 2.34293 2H17.6574ZM10.1007 5.2452C7.41876 5.24527 5.24448 7.41953 5.24441 10.1015C5.24441 12.7836 7.41872 14.9578 10.1007 14.9579C12.7828 14.9579 14.9571 12.7836 14.9571 10.1015C14.9571 7.41949 12.7828 5.2452 10.1007 5.2452Z",
+                fill: "white",
+              }),
+              (0, n.jsx)("path", {
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M13.6445 10.1892C13.6445 8.24558 12.0685 6.66992 10.1248 6.66992C8.18116 6.66997 6.60555 8.24562 6.60547 10.1892C6.60547 12.0722 8.08419 13.61 9.94375 13.7044L10.1248 13.709C12.0079 13.709 13.5457 12.2299 13.6399 10.3703L13.6445 10.1892Z",
+                fill: "white",
+              }),
+            ],
+          });
+        }
+        function Dr(e) {
+          const [t, r] = (0, u.l)();
+          return (0, n.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: [
+              (0, n.jsxs)("g", {
+                clipPath: r,
+                children: [
+                  (0, n.jsx)("path", {
+                    fill: "currentColor",
+                    d: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
+                  }),
+                  (0, n.jsx)("path", {
+                    fill: "#199FFF",
+                    d: "M26.2788 18.2288C26.2787 13.7823 22.6734 10.1777 18.2268 10.1777C13.7804 10.1778 10.176 13.7824 10.1758 18.2288C10.1758 22.5363 13.5586 26.0544 17.8127 26.2701L18.2268 26.2807C22.5347 26.2807 26.0527 22.8973 26.2681 18.643L26.2788 18.2288Z",
+                  }),
+                ],
+              }),
+              (0, n.jsx)("defs", {
+                children: (0, n.jsx)("clipPath", {
+                  id: t,
+                  children: (0, n.jsx)("rect", {
+                    fill: "currentColor",
+                    width: "36",
+                    height: "36",
+                  }),
+                }),
+              }),
+            ],
+          });
+        }
+        function Nr(e) {
+          return (0, n.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: [
+              (0, n.jsx)("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M24.5384 18C24.5384 11.6275 19.3725 6.46154 13 6.46154V0C22.9411 0 30.9999 8.05887 30.9999 18C30.9999 27.9411 22.9411 36 13 36V29.5385C19.3725 29.5385 24.5384 24.3725 24.5384 18Z",
+              }),
+              (0, n.jsx)("ellipse", {
+                fill: "#1A9FFF",
+                cx: "13",
+                cy: "18.0195",
+                rx: "8.99996",
+                ry: "9",
+              }),
+            ],
+          });
+        }
+        function Ur(e) {
+          const { className: t, ...r } = e;
+          return (0, n.jsx)("svg", {
+            className: (0, s.A)(c().SteamDeckCompatLogo, t),
+            ...r,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, n.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
+              fill: "white",
+            }),
+          });
+        }
+        function Wr(e) {
+          const { className: t } = e;
+          return (0, n.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
+            viewBox: "0 0 36 36",
+            fill: "none",
+            children: (0, n.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
             }),
           });
         }
@@ -25893,7 +26160,7 @@ var CLSTAMP = "10835308";
           o = r(11804),
           a = r.n(o);
         var c = r(29285),
-          l = r(14628);
+          l = r(39607);
         const u = i.memo(function (e) {
           const {
             className: t,
@@ -28462,12 +28729,11 @@ var CLSTAMP = "10835308";
       53807: (e, t, r) => {
         "use strict";
         r.d(t, {
-          DZ: () => g,
+          DZ: () => p,
           IT: () => c,
           L$: () => l,
-          Ln: () => p,
-          NT: () => h,
-          Ps: () => m,
+          Ln: () => h,
+          NT: () => m,
           Qz: () => a,
           ZF: () => u,
           k2: () => d,
@@ -28594,15 +28860,6 @@ var CLSTAMP = "10835308";
             : e;
         }
         function m(e, t) {
-          try {
-            const r = new URL(t),
-              n = new URL(e);
-            return r.href.replace(/\/$/, "") + n.pathname + n.search + n.hash;
-          } catch (e) {
-            return "";
-          }
-        }
-        function h(e, t) {
           return (
             n.TS.IN_STEAMUI &&
               !e.startsWith("steam://") &&
@@ -28612,10 +28869,10 @@ var CLSTAMP = "10835308";
             e
           );
         }
-        function p(e) {
+        function h(e) {
           return "steam://close" == e || "steam://close/" == e;
         }
-        function g(e) {
+        function p(e) {
           return e.startsWith("http://") || e.startsWith("https://");
         }
       },
@@ -28722,9 +28979,10 @@ var CLSTAMP = "10835308";
           Fd: () => l.Fd,
           GP: () => a.GP,
           Hn: () => S,
-          IW: () => x,
+          IW: () => R,
           KC: () => l.KC,
-          NQ: () => I,
+          LJ: () => B,
+          NQ: () => L,
           Pr: () => M,
           QO: () => u,
           Qn: () => h,
@@ -28736,16 +28994,17 @@ var CLSTAMP = "10835308";
           Xk: () => g,
           Y2: () => _,
           bf: () => l.bf,
+          dm: () => x,
           hf: () => p,
           iA: () => a.iA,
           mP: () => v,
           oS: () => l.oS,
           rP: () => d,
-          rf: () => B,
+          rf: () => I,
           ss: () => m,
           td: () => w,
-          xv: () => k,
-          yK: () => L,
+          xv: () => T,
+          yK: () => j,
         });
         var n = r(63696),
           i = r(44846),
@@ -28753,7 +29012,7 @@ var CLSTAMP = "10835308";
           o = r(85688),
           a = r(43691),
           c = r(67784),
-          l = r(9731);
+          l = r(8275);
         const u = n.createContext({}),
           d = (e) => {
             const t = n.useContext(u);
@@ -28821,45 +29080,51 @@ var CLSTAMP = "10835308";
           return a.TS.IN_CHROMEOS;
         }
         function y() {
-          return a.TS.IN_GAMESCOPE && B();
+          return a.TS.IN_GAMESCOPE && I();
         }
-        function x(e) {
-          return e?.IN_GAMEPADUI;
+        function x() {
+          return "steamdeck" === a.TS.FORCED_DISPLAY_MODE;
         }
         function B() {
+          return "steammachine" === a.TS.FORCED_DISPLAY_MODE;
+        }
+        function R(e) {
+          return e?.IN_GAMEPADUI;
+        }
+        function I() {
           return a.TS.IS_STEAMOS;
         }
-        function R(e, t) {
+        function k(e, t) {
           return 0 != t.length && e.startsWith(t);
         }
-        const I = "unknown";
-        function k() {
+        const L = "unknown";
+        function T() {
           if (!window || !window.location || !window.location.href)
-            return console.warn("Unable to determine base url!"), I;
+            return console.warn("Unable to determine base url!"), L;
           const e = window.location.href;
-          return R(e, a.TS.STORE_BASE_URL)
+          return k(e, a.TS.STORE_BASE_URL)
             ? a.TS.STORE_BASE_URL
-            : R(e, a.TS.COMMUNITY_BASE_URL)
+            : k(e, a.TS.COMMUNITY_BASE_URL)
               ? a.TS.COMMUNITY_BASE_URL
-              : R(e, a.TS.CHAT_BASE_URL)
+              : k(e, a.TS.CHAT_BASE_URL)
                 ? a.TS.CHAT_BASE_URL
-                : R(e, a.TS.PARTNER_BASE_URL)
+                : k(e, a.TS.PARTNER_BASE_URL)
                   ? a.TS.PARTNER_BASE_URL
-                  : R(e, a.TS.HELP_BASE_URL)
+                  : k(e, a.TS.HELP_BASE_URL)
                     ? a.TS.HELP_BASE_URL
-                    : R(e, a.TS.STEAMTV_BASE_URL)
+                    : k(e, a.TS.STEAMTV_BASE_URL)
                       ? a.TS.STEAMTV_BASE_URL
-                      : R(e, a.TS.STATS_BASE_URL)
+                      : k(e, a.TS.STATS_BASE_URL)
                         ? a.TS.STATS_BASE_URL
-                        : R(e, a.TS.INTERNAL_STATS_BASE_URL)
+                        : k(e, a.TS.INTERNAL_STATS_BASE_URL)
                           ? a.TS.INTERNAL_STATS_BASE_URL
-                          : R(e, a.TS.STORE_CHECKOUT_BASE_URL)
+                          : k(e, a.TS.STORE_CHECKOUT_BASE_URL)
                             ? a.TS.STORE_CHECKOUT_BASE_URL
-                            : R(e, "https://steamloopback.host")
+                            : k(e, "https://steamloopback.host")
                               ? "https://steamloopback.host"
                               : "";
         }
-        function L() {
+        function j() {
           return "steamui";
         }
       },
@@ -28964,54 +29229,28 @@ var CLSTAMP = "10835308";
             IS_ALLOWED_SC: !1,
           };
       },
-      9731: (e, t, r) => {
+      8275: (e, t, r) => {
         "use strict";
         r.d(t, {
           Bu: () => b,
-          Fd: () => g,
-          KC: () => c,
-          Tc: () => p,
-          bd: () => m,
-          bf: () => l,
-          oS: () => h,
+          bf: () => m,
+          Tc: () => a,
+          Fd: () => c,
+          KC: () => d,
+          oS: () => f,
+          bd: () => g,
         });
         var n = r(49412),
           i = r(9626),
           s = r(43691);
         const o = "webui_config";
-        let a;
-        function c() {
-          if (!(0, i.kI)()) return a || (a = l()), a;
-          let e = (0, i.VY)("sessionid");
-          return e || (e = l()), e;
+        function a(e, t = o) {
+          return l(e, t, !0);
         }
-        function l() {
-          const e = (function () {
-            let e = "";
-            for (let t = 0; t < 24; t++) e += (0, n.Tg)(0, 35).toString(36);
-            return e;
-          })();
-          return (0, i.lc)("sessionid", e, 0), e;
+        function c(e, t = o) {
+          return l(e, t, !1);
         }
-        let u = new Set(),
-          d = !1;
-        function m() {
-          return d
-            ? Promise.resolve()
-            : new Promise((e) => {
-                u.add(e);
-              });
-        }
-        function h() {
-          d || ((d = !0), u.forEach((e) => e()));
-        }
-        function p(e, t = o) {
-          return f(e, t, !0);
-        }
-        function g(e, t = o) {
-          return f(e, t, !1);
-        }
-        function f(e, t = o, r) {
+        function l(e, t = o, r) {
           let n;
           if (
             ((n =
@@ -29019,9 +29258,9 @@ var CLSTAMP = "10835308";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 20 2026 : 02:54:20",
-                    BUILD_TIME_UTC: "Jul 20 2026 : 09:54:20",
-                    BUILD_RTIME_UTC: 1784541260,
+                    BUILD_TIME_LOCAL: "Jul 22 2026 : 19:04:25",
+                    BUILD_TIME_UTC: "Jul 23 2026 : 02:04:25",
+                    BUILD_RTIME_UTC: 1784772265,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -29044,6 +29283,32 @@ var CLSTAMP = "10835308";
               );
             }
           else r && console.error("Missing config element #", t);
+        }
+        let u;
+        function d() {
+          if (!(0, i.kI)()) return u || (u = m()), u;
+          let e = (0, i.VY)("sessionid");
+          return e || (e = m()), e;
+        }
+        function m() {
+          const e = (function () {
+            let e = "";
+            for (let t = 0; t < 24; t++) e += (0, n.Tg)(0, 35).toString(36);
+            return e;
+          })();
+          return (0, i.lc)("sessionid", e, 0), e;
+        }
+        let h = new Set(),
+          p = !1;
+        function g() {
+          return p
+            ? Promise.resolve()
+            : new Promise((e) => {
+                h.add(e);
+              });
+        }
+        function f() {
+          p || ((p = !0), h.forEach((e) => e()));
         }
         const _ = "presentation_mode";
         function b() {
@@ -29551,335 +29816,335 @@ var CLSTAMP = "10835308";
       ".js?contenthash=" +
       {
         48: "e47e4f540b067a8b55df",
-        63: "5bc0a8f5ea40640c244c",
-        89: "0679e3127b09597af700",
-        106: "3444a930cde738bd040b",
-        129: "3a00d71541d9b3d62298",
-        139: "43f4ea929f13e6d9aaf8",
-        195: "f803e034cadfb1d61b19",
+        63: "e75a1be37171e4ce12f5",
+        89: "0bc518b621be89b5baf4",
+        106: "0b395006fc827edf2802",
+        129: "828a2c5d5d00412e0a3c",
+        139: "8cc9a4d6ebb6b7b4fcf6",
+        195: "16042659755feeda198b",
         218: "3fd52d93e5d68ce14112",
-        256: "ce06549b3f0401cebbe5",
-        297: "e2e8b28a620be5fdf86a",
-        342: "a662e8cdfa65ed225132",
-        437: "d7e142ac3ecbcb6eb776",
-        499: "b84cdb8febc0beb6363c",
+        256: "b08a0f07a294e1a0371a",
+        297: "d7d6c143e0770331f228",
+        342: "ad3b04f69a867e2c2a16",
+        437: "351b6a9be82d1540859b",
+        499: "36dadca9e6b5f8a4db7d",
         548: "8b5ff9a20b9008edae42",
         580: "3e5a411a79374b95ccd3",
-        699: "8307e24cd59263045d53",
+        699: "55a10259572eac9b3055",
         716: "666de33917d80425274c",
-        728: "8faeeabcf9586a48b728",
-        740: "893ff03b673bf66b1146",
-        748: "938f0b50da070bae609c",
-        761: "cd266dcf9af8ce8be919",
-        766: "f23a32377bd3050c6400",
+        728: "b8b59aae60c03728b766",
+        740: "7fc8e9b8c39e9f79167c",
+        748: "721c90d9b034a6fe6b9f",
+        761: "135448ada4c700457967",
+        766: "4b7db3a0ccd02300c4c6",
         786: "4bb1cffcda61cc74a96b",
-        806: "fb3b7f7e9305749b125a",
-        823: "6467c77e79b9413f4949",
+        806: "264f26a0ecf179a055ea",
+        823: "61c8d873df1f3d36f0fc",
         876: "25eede417d42c0cd26d1",
         884: "1e9d2523f65497feb69b",
-        901: "7c61b7b7d2c7225395f6",
-        959: "36a2112db24626d40607",
-        1005: "3bd85d94354714e0e4f1",
+        901: "bdd9a995849de614191d",
+        959: "1ce45df1f104ada485da",
+        1005: "1a103d957baf167a5624",
         1012: "6449d3277e3245a235a7",
-        1093: "9038f657966d3f7e10f4",
-        1133: "d2f912d9c2ab1427e863",
+        1093: "f0e724c8f0fc10815bbb",
+        1133: "0245c9c48ffccbafbaa9",
         1139: "462f892bdd11621e1239",
-        1220: "49db0fc28c8ac9df9186",
-        1242: "d540c2e46c3b19118e64",
+        1220: "fe2ceb8833b60c6e4216",
+        1242: "669d2aa8b1cacbcdc4b7",
         1275: "ddb9f0aa00a9c9bbf441",
         1325: "c752e6ae17746436bff0",
-        1388: "315d0837be5086f0a826",
-        1389: "d4e85db473017e7ea6d0",
+        1388: "611d5811b136ba9ced47",
+        1389: "44398869799d90e820b0",
         1391: "0e40d57987ac9fbef65e",
-        1423: "0a80f5b8968559ace0b7",
-        1463: "57d2775f655e10309803",
-        1478: "a15e792d1d799fa4a485",
-        1502: "1935efb2461ad9bce662",
+        1423: "6432418aedc69a4ce7d5",
+        1463: "9a9ee8366ce64aea9ce3",
+        1478: "9d39831139e6855dd740",
+        1502: "52cc10393f67bf765b11",
         1511: "b63d4421e78664b1b165",
-        1545: "25215dde3dc3c457826b",
+        1545: "b21c5d5a4d1ab76eeb47",
         1547: "6814f74596b44c58bf4e",
         1548: "9d8472e8ca52930267c3",
-        1549: "f174d6a923e1b7a8a31c",
-        1573: "577bb15708bfc059dd57",
-        1629: "53d32d373f7c0277067c",
+        1549: "82beedaacdab62dc96c0",
+        1573: "464df1c0407267553881",
+        1629: "7e3ff8bf46c394c70bed",
         1648: "ae7888c22c818aa27a14",
-        1651: "b7ec4ee5142468faf100",
+        1651: "a6ea4ce047cf620cdfeb",
         1663: "69583c6318b737ea4d67",
-        1709: "cd3695ef1d660e962a3c",
+        1709: "b40cbb5ed68e1022c8ff",
         1791: "7a4d0025acd50b0c8785",
-        1792: "2741080f9fc7aecf93ec",
-        1800: "c2e8891a18999978e407",
-        1822: "5b0ebd20c79b5a4ce429",
+        1792: "9eba4fcf6f99adc295c3",
+        1800: "41b487132e92fa71bc85",
+        1822: "d617ef819a6552e8f19a",
         1879: "e5a0394ea4f2fd2da944",
-        1917: "32e7bc7d5cdaf7899bac",
-        1922: "1f258438fbda46bf7fcc",
-        2021: "11f776f77c42b40baf87",
+        1917: "c3cd8e90f3625e3edb50",
+        1922: "f68ea75e2b8883787187",
+        2021: "f3eaf63d7f31888523dc",
         2056: "b59b66100bf9f25fcdee",
         2101: "432742a8a4f0cce8eb12",
-        2140: "b4f70f82ab73244977b8",
-        2160: "3467baf861a5f7c39db4",
-        2171: "1a6c2680f9f50b6ee647",
-        2198: "71ffc190aa7b24262e88",
-        2199: "bb34733dd3cb6ea64e0d",
+        2140: "4b3f761488a918cf9bfb",
+        2160: "9bf7756b7ba4e515823a",
+        2171: "cbacc6e39da865fc58b6",
+        2198: "6108c6692ef6f7212f04",
+        2199: "839ef8386be74cac0f26",
         2225: "e9549de91e74e24a5557",
-        2263: "34d5b8e0a47e4324ef7b",
-        2266: "d4049da41b848707b218",
-        2294: "82b896449d9a586692a4",
-        2320: "76cef2b5dd91f317cb3f",
-        2348: "2ceb7e2ff86556fca18b",
-        2393: "7f676d56759c81a36d13",
-        2397: "12e8de49bab168797894",
-        2438: "24be384d2b304cdf50e4",
+        2263: "a0e2641035c8e7a65586",
+        2266: "381cf072c7f788e47dcb",
+        2294: "c317da8e2db4aface0ae",
+        2320: "d684eaf3b28169d80b4f",
+        2348: "7d69c9ae9579561f6bd6",
+        2393: "ba12eb3b6e5d28ce97ee",
+        2397: "7fd9fed08b7fb0319082",
+        2438: "ce8a6d4647fc27dd9bd4",
         2448: "5cd57d315e0130e0e873",
-        2481: "8c13aff7c832e786e605",
-        2493: "b2e6ee30f4d3af08ab6d",
+        2481: "25a60ae0dca7ec292ae5",
+        2493: "0c6881b0d99f17aa4803",
         2515: "39384fb79ef15b7f53b5",
         2539: "0f9b65120876cd1969bc",
         2561: "ab555204d6f9f5c725de",
-        2563: "517bc917cca527cc3f58",
+        2563: "6504a9fcf43f800b9aac",
         2576: "31176a0c9721961ab176",
-        2600: "3ba4ddf1d7e6ba146d2c",
+        2600: "c7a39fb829b3cc7865e0",
         2611: "f9524140f601be23197f",
         2640: "d9ded060cd6c4dc29609",
-        2646: "e29546467596233a3523",
-        2662: "bd3f70e8039adc99634a",
-        2664: "fba6402d566e6638f698",
-        2742: "60d33391566fbd216cd7",
+        2646: "95e5b46f3022ec314af9",
+        2662: "38c3ce9e6d9cce94a47a",
+        2664: "41bfe498688c60045004",
+        2742: "44063572ca3e8b97c824",
         2752: "ede88a82875229bb4a3a",
-        2761: "d10e19c276b0c2d8d401",
+        2761: "ce6e81a5c324ba65776f",
         2783: "f4c41c100afa2dbc4807",
-        2834: "4d454a9d89e5afa2e62a",
-        2855: "cf823e4958e12e5ef6c8",
+        2834: "337393b648afef06461d",
+        2855: "c7d3866c94eaa21d66ec",
         2862: "6a99372ffe2e960717da",
         2867: "3c6a175069489069b448",
-        2871: "fb5cf9ee194794b6c42b",
-        2880: "c86ee925129d6c94a44f",
-        2889: "1dfdc989ad95375759d5",
+        2871: "b116dc7a23dfa8d8f8f2",
+        2880: "882a351546be5fbd3c29",
+        2889: "e0eb273c23244ae43cbc",
         2916: "ac9f0e39080834163a5e",
         2952: "dfba8734112ac661278e",
-        2959: "842f3ee23092cf30ec6b",
+        2959: "516db6f94bdfb8770071",
         2982: "552bb7ba822785db03d2",
         2984: "d1fce728407839d54ab1",
-        3087: "80c091990d573e07ce38",
-        3124: "20bc5f2fa654d2d5f599",
-        3158: "eb811559de47f318e011",
-        3177: "6a12458c9b500cafae0f",
+        3087: "7bb29dd339bddf1ef341",
+        3124: "96c6379b0731b1e7f9e5",
+        3158: "f7cd8795c38aaa7f6019",
+        3177: "3715fea2d826e8c122c3",
         3180: "367ab241f4ef845293b6",
-        3222: "70a1b6ded76f91a2c853",
+        3222: "0c3d3ec332481a7970d2",
         3263: "1d89c594059719a35fc9",
-        3324: "a862a24aac95011ac5bd",
-        3334: "a4845ebf5538a8c9403b",
+        3324: "56651145efa16ad62592",
+        3334: "635715e3f45af376ebe8",
         3350: "f80a23c85667168bf911",
-        3352: "f2ede16e80949a4d17c1",
-        3356: "f1060d832dfd2513cd22",
-        3366: "d7e43d3583690ec0e1f4",
+        3352: "51c0e12fb4db91c01d95",
+        3356: "e0597efcc3652ad62dfc",
+        3366: "0cdf839969c2cabfbd09",
         3473: "aa2e2c813e7588319881",
-        3569: "ec0e08c3064ef9b83f47",
+        3569: "30be52268954b34643e2",
         3583: "22aaaa36100912e3ed08",
-        3585: "7848ae778b003c5839b0",
+        3585: "8f20f1330a4dc3dc7b4f",
         3589: "fd66d8f7b977b24bb0d2",
-        3594: "e0ed40c5de797633ca11",
+        3594: "5cee46915b45ec0face9",
         3645: "b21815a71721ebf30c86",
-        3675: "31811efc3e57c33e20fc",
+        3675: "f16b73b04a580b688c00",
         3695: "f286c82598902f2e3840",
         3706: "948e81a3ef05a567717f",
-        3714: "1992320fd3bb94fe7cd7",
+        3714: "c66dff5c114d4f06d038",
         3744: "775ac7cdb21bac1fe37c",
-        3834: "bf21f188fc4915ee14e0",
-        3869: "b75ea045d953b47b5817",
-        3876: "84fa0241ab1adeec788e",
+        3834: "c82fb008805f60479a87",
+        3869: "868889f4da45d735850c",
+        3876: "370603b91c5502f2b0dd",
         3899: "5ffcf512ba617d848f61",
         3947: "5f24a36110afc8e0968a",
-        3961: "67ed5e4556be6844e345",
-        3962: "51b9d32823275b203183",
+        3961: "41b8f92b7f392e3b79e0",
+        3962: "ac8b765b39bb17071d0b",
         4026: "0a24c2b15af8d2ea87bf",
-        4057: "76e5ea1b2eae1203041b",
-        4102: "71dcbcafea414d3603b0",
+        4057: "b2bf33a6f9a02621ce50",
+        4102: "f6300ff2f32483bd2fab",
         4139: "79d7700eb0ce61e945e2",
         4175: "2e35904177f5886d7bdd",
-        4224: "2cb30c4afad3f6ef16ad",
+        4224: "3cc1992c3bad927c18fe",
         4259: "aa37b751e98aeca3b305",
-        4291: "c7469793c19cc332e1f6",
-        4309: "f994f7388aac0d4fe05c",
-        4321: "86c52d8287cbbba94d36",
-        4402: "0af03ab8e2a6e086efba",
+        4291: "a9a88fae07d4d0ace97a",
+        4309: "36c9462c3535bc282dfd",
+        4321: "9dd66bd1d9921d9c1ab9",
+        4402: "f68eaf1e515dd19d3f52",
         4475: "125e6435ae309d0db57e",
-        4481: "6037845a06e43f4c1c36",
+        4481: "70547bf58fcb2afa2cdc",
         4500: "492f845c5dd9461a737d",
-        4513: "5fb87340eba735948c6b",
-        4515: "0a0061ec8188e9c86123",
-        4516: "9c4f2d339035db94afd6",
-        4572: "fdcefee7c5a076c1e2ab",
+        4513: "e65dad00b4173f5b8041",
+        4515: "acf9bb1199a283a861c0",
+        4516: "83adf676e9ef66236be1",
+        4572: "5a32608143f5dc7ca58a",
         4595: "a1cc551c2df7ac00aa37",
         4768: "17a7d7c4e34e0266ba4b",
-        4825: "564782ada94b966add1a",
+        4825: "06a56fe994f5f75dd7c8",
         4839: "6acda41d1762102d43b7",
-        4842: "b222206e7f49cb0d2b09",
-        4912: "ae71f824d5e53fe3750c",
-        4922: "85077b03323ead971850",
+        4842: "4dd852d8eace93c2ddfb",
+        4912: "c100c8c01cf40c906064",
+        4922: "cf70d9a88cc56da75e9e",
         4925: "ed69214de5d337886985",
         4933: "696e5de7324513db0a18",
-        4951: "503c3206f456c350dfd8",
-        4952: "c781e47ba87f1201ff83",
-        5019: "de1e64999df9585b947f",
-        5045: "1ce6c9e66fd00cf272b7",
-        5056: "8a07c0e63c0e839c947a",
+        4951: "e526761f39b5dc953e6d",
+        4952: "9fb7e661de8889423b7b",
+        5019: "024c097a857142fb6a0a",
+        5045: "5d0a4e674cc180c6e106",
+        5056: "5eadc3ef6a9462d8c572",
         5073: "ca9541ea0b126c362d75",
         5173: "e680f814a22f2521dcef",
         5181: "c49352f8e35656f9e939",
-        5256: "7985c5712ac64bead0da",
+        5256: "9ef050dc2a309adf1277",
         5269: "60207428bd2868248c3a",
-        5324: "567856d650d54988b214",
-        5355: "1384e750c24f11d2af09",
-        5473: "6665cc44dc9fac090d32",
-        5497: "14bf3b92aea756b4a3f2",
-        5501: "54702330033b5f61868a",
-        5536: "1c7c649745bbc6d3b5f4",
-        5553: "60e2779caa7b4516751a",
-        5569: "71b473e8c8592aa3d1dc",
+        5324: "43fe8afdcc29a54c2527",
+        5355: "4b2661d46ad84d410b26",
+        5473: "6d7d143b320ebcadc9c8",
+        5497: "e7871cba134f62fbe2e2",
+        5501: "2110bab85c923c918920",
+        5536: "1b9695e98982c59243dd",
+        5553: "dc298088f32a8b83ab13",
+        5569: "ae827c7f950fec5dba0e",
         5575: "a1d9f5e992078b45427c",
-        5592: "d86f02d1c78dffa0ea98",
-        5668: "fab72a3366cb3d606682",
+        5592: "5a32412051a174ccb66f",
+        5668: "24359025583af697ad4e",
         5704: "b9b1d9243a5999e04486",
-        5716: "d8ec9e353ff8a48e7f86",
-        5743: "0162c73a6eb4ab68b6fd",
+        5716: "3672ae7d11acfd1b371c",
+        5743: "1b2f48de14a884238105",
         5752: "65a652a4cf8cb3c37607",
-        5803: "70483c3c74100d66ecfe",
-        5864: "f2e5ec8effc5760c940c",
+        5803: "73b58f38d03e36c2b30f",
+        5864: "510511e021266bc1fcb6",
         5903: "270e7369ee63f73cf6f7",
-        5905: "4e37274fff725e948646",
-        6034: "8687a98c16ba56b1dc05",
-        6120: "e1935abe50b12097267e",
-        6197: "8af0717e4fcd0746d10b",
+        5905: "3e5fd1855c0a224967ee",
+        6034: "e2166db4919ae90b8ffe",
+        6120: "defdfddb2ed0a8fa5752",
+        6197: "8fd0ab952fe47acca306",
         6235: "ce98638999c6f5e08952",
-        6345: "d77e54ee3f3a40eb2ebe",
+        6345: "b30f2b248444c745e467",
         6350: "79c1e06f7c6253af3bcc",
         6381: "32a17fb20e9f52c3985a",
-        6391: "e91dfa796384dd5792a8",
-        6409: "519909cf0cfb8e6cec43",
-        6430: "4aca9e264221788118e6",
-        6472: "8d61ff049193cdfd31f0",
-        6513: "9807f1b64c40a02b3c8f",
-        6577: "78d4d3863631b0eb47c6",
-        6643: "6d901c48907c613ddcbc",
+        6391: "b02e4f7200cbdc1707ae",
+        6409: "43883b5b3f668f2327e8",
+        6430: "691305becc778dcb8c30",
+        6472: "4bb51d3ca65069abc61d",
+        6513: "d5370f4e67a0c5c644b7",
+        6577: "a6472c460655f98eec4f",
+        6643: "6fb23ae884e21a6a384b",
         6696: "bf0354bdfd3e79ba42f2",
-        6752: "8133e857d4c0ed0d00a9",
-        6783: "09ced4f08bbf2a1a9873",
+        6752: "560d9c3178fafb7f5078",
+        6783: "b41deb2b858786957589",
         6785: "b5feffbba32b8e3e4e54",
-        6787: "d848461b204dcf445b61",
+        6787: "463e1a594e5c4d0dce61",
         6810: "891c059117c6b984347f",
         6865: "b48073424ca49ee76f2a",
-        6879: "e0cfd74424a1d8c6165d",
+        6879: "a98be62bb965e0e60823",
         6884: "0f06d2665dc521b8f26a",
-        6888: "c4a54979d9cf8cf3ef75",
-        6890: "8fb40edb67cc114eb100",
-        6896: "8911b02c243ec4c6b01a",
-        6913: "c5986330980f0f66a5ef",
+        6888: "3e7e69d1181c66e80f6f",
+        6890: "d47cd87983b7bf00e3b2",
+        6896: "b9eb9771db3391ad4b50",
+        6913: "ba672f2f9ebe912125a5",
         6960: "fd233689ee3919f8a533",
         7151: "9399cb74b313637fa058",
         7155: "13c2e38c399236750f6a",
-        7191: "aee46d37d3923603d5dd",
+        7191: "e4edf13f4733736dae5a",
         7306: "94d65d257f8b7e645038",
         7314: "9212ce12ca386591d521",
         7316: "b433424133c7e0fe3ffa",
         7376: "5a64bf5d31340f560998",
-        7386: "78d691bc1f52758abf36",
-        7442: "c7115895985a4f87483e",
-        7462: "af240d82974ceed87c7c",
+        7386: "a359a7961d4b0be2ad75",
+        7442: "04826aadbceeddeb275d",
+        7462: "5fd1dcb0052acdff1319",
         7503: "658123cceab17e7f1fa9",
-        7533: "84f7b46aea07d92f8434",
-        7554: "f80856c048cd00abf719",
+        7533: "4c12ed9d91b80e014c90",
+        7554: "97f97bae7e512da05687",
         7569: "7075d5c4f1fc4a72f4a3",
-        7627: "3ba7d3f7f510449560a8",
+        7627: "41e646bd67ae3d4d5bd6",
         7653: "3aa892cfd7fe9c912557",
-        7656: "c502b14ba8980f17f4c9",
-        7696: "de7a052d677f898c0b57",
+        7656: "73923067f1d944bd5485",
+        7696: "75901c50064ed9bcb5bc",
         7770: "cada18dc5b7ebdaecb46",
         7824: "db32def3f61e834e4ddc",
-        7836: "6460c1f8c85ad1cfc76d",
-        7906: "e6d157e2bebe235d0fc3",
-        7930: "5caa86d9f8d78ad8b032",
+        7836: "2af230dfc877ccfcb1b0",
+        7906: "9351fdd4e3ff14b4c137",
+        7930: "4b811a3c184934c399fc",
         7946: "993cc29facf976e15c24",
         7993: "8abb76779fa037eebe08",
         7996: "4a4ce77e9c751bf1a989",
         8054: "66440e5efce14ce6dc87",
-        8089: "3fde6feb10dd20d2988e",
-        8098: "74a09d96a15a0ace9267",
-        8159: "811015cf4d25ecd59862",
-        8196: "ee017111e5c4141a225a",
-        8198: "5857f061f7d49b939f13",
-        8219: "df98d1552e304c311d9e",
-        8247: "ea40a2c1c95ebf6dc60e",
-        8263: "b3dd7a358e5d482491aa",
+        8089: "37372238eebdd88f3578",
+        8098: "92ca6f90b3cabf107c0e",
+        8159: "481e352f0cd805b7a885",
+        8196: "4e7760db52fd31799557",
+        8198: "8deceaa11aa26f8890de",
+        8219: "0b5228720be599f409d3",
+        8247: "aec64abea408f3e384a2",
+        8263: "8d9ace069191ceca12e4",
         8280: "93936d356d8860f50169",
         8286: "3e4d91e8f8c1af50112e",
-        8291: "f4fd59006b2f91befd5a",
-        8330: "ae4d5daab6a9107ae209",
-        8346: "3d8fccf6ac6adabd3012",
-        8391: "edd72c4c85056b0644d0",
+        8291: "c7d5336ef01721fba8e0",
+        8330: "90b0ffb369b41fb6d3f2",
+        8346: "b81c5170a015aa9effe5",
+        8391: "7f75cfb668ca666515db",
         8396: "d946d4a735fe6c31e57c",
-        8405: "177659c9fe8b2b7bf9a3",
+        8405: "cfdd5c39c0055abeb2a8",
         8443: "9a6a49c4fe8ee06033ba",
-        8445: "e06b22d6f4a143145f07",
-        8478: "33ddea5d4aa857c0a2bb",
+        8445: "350f55f29e2e6726bd17",
+        8478: "1b2a765d035a75bb86b6",
         8484: "90cf9e56abd4e4060277",
         8495: "2f2134218b04af3bda03",
         8497: "c5d5114bd970bc1129be",
-        8522: "00f0067f8dab0c251b1c",
-        8534: "068bd0e7dc785e2cf478",
-        8536: "ad657fa3ed5909ff619a",
+        8522: "4ab35c6f59f9bc36b738",
+        8534: "337520abeec676b80e3e",
+        8536: "b498c69d4a8cd9f49ef2",
         8545: "174287b968f93bbb1564",
-        8635: "50a0734be083bf704768",
-        8636: "220c11c1d11253ca5fae",
-        8646: "8adbef2817b2ecf6c439",
-        8674: "7284dabdd6361855cec8",
-        8699: "830f7e358e9dfc743b27",
+        8635: "5c6c36ce6b971f96b3da",
+        8636: "de9880c108a98ee6e16b",
+        8646: "4ff55c60bc7da647abde",
+        8674: "e1aee5cd86bcb2fdf0f3",
+        8699: "7d3e3c7eee95253d6500",
         8700: "caca82602cc709a500f5",
         8732: "56c11dd88a12d7cb90d5",
         8780: "4b5f78ecc5d269cf0954",
-        8830: "758b6b54327d5c62ee5e",
+        8830: "228c318595e4c07040bd",
         8839: "91b4a0584540a6cbe29c",
-        8854: "98dc7189ba9957c84336",
-        8872: "7e18fd5f23d34c23905b",
-        8882: "b2eb5aea31ad49acf6ae",
+        8854: "4c47c242e55af0f664f3",
+        8872: "4fcbb57503aeff1a2df2",
+        8882: "9973bf3b0140f3f65624",
         8906: "12513bcd136de3092c2a",
-        8935: "bbc1ebc120bef2c9799d",
+        8935: "74bf8bdc204c948061e3",
         8948: "79956ac4e87cfd5cf067",
         8970: "c432673605747d241ec4",
-        9053: "36e5131a2c31a525768f",
+        9053: "309e33dbb1040e013778",
         9063: "258ca2a504162c0dac77",
-        9108: "80ea95544df711f114ae",
-        9120: "794cf0040ac9b0c1d41f",
+        9108: "30b742e9ea0e0c52b179",
+        9120: "6aaf4f781d82c6461eaf",
         9129: "7fc272526ac7acd75e07",
         9134: "5a7e04bb3d2d818f9f9d",
-        9171: "78b6924d7eca53900c37",
-        9183: "f500299272a34d576269",
-        9266: "a54477228b6f87d7091d",
+        9171: "9d064e328ec3b743b394",
+        9183: "a2cdee5d0996151ee015",
+        9266: "fd6ac4faeb4992e84d56",
         9268: "71a8661ed31f294a4fd2",
-        9298: "caec3c66131c85d84fd0",
+        9298: "9249af24cffb6b924182",
         9365: "7efb27242c0037cefec5",
-        9368: "4f425b6ed40eeaf849cf",
+        9368: "c74efa9a263c29bb69c6",
         9418: "516fbdc3d5df1d0006fd",
         9441: "9992b2f4c3ff8537d6c3",
-        9458: "a45c27ba640b24015d65",
-        9462: "7b977c4108a105f53e81",
-        9465: "615728f503276e76658c",
-        9485: "b4d52519addecd908178",
+        9458: "e5934ff45ee3371946a3",
+        9462: "015add32a15f1ee244b0",
+        9465: "46574f102c56c44f2ec6",
+        9485: "173fda0a7b5874fe376d",
         9536: "4367f32b4c6562afa768",
-        9558: "836324fb8d170325fbef",
+        9558: "1a876ab77e9ebdb86a7f",
         9637: "706882d30a629adc3ca3",
         9672: "9fb3af38898c0d62d118",
         9711: "c299e2fab8790c7c37d0",
-        9737: "4f8b3e58776fd31e6afb",
-        9740: "b9f257ecbdd5ae10a47f",
+        9737: "9c09658e5d7c7eca2cee",
+        9740: "0ee8267c02b587cacc4f",
         9779: "59ef76674166d4b9e52e",
-        9845: "13b5b6656f416f517b33",
-        9853: "cb23ac97c5ef25298c13",
-        9858: "f2b2e7abd840053ce099",
-        9861: "d075ad8e71f05bafe846",
-        9862: "51ef07edcc880ce94847",
-        9869: "87497576748f35eb5b06",
-        9887: "94ebd191cf19efff19b2",
+        9845: "67d8ccf06f062089fbdd",
+        9853: "7be45ac954716a4a58c1",
+        9858: "ac29f8b4168c1c176f13",
+        9861: "28739986a6f0de57d87c",
+        9862: "f7642c72003ad4fab6eb",
+        9869: "d3b3dea779721d721088",
+        9887: "6f7715aa3c9192cf1519",
         9902: "687ccd0d6e13cf864303",
       }[e]),
     (a.miniCssF = (e) =>

@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "E személy a barátlistám tetején látszódjon, hogy könnyű legyen megtalálni.",
     "FriendSettings_Mobile_BlockDesc": "Offline-nak fognak látni, és nem fogsz tőlük csevegésüzeneteket kapni.",
     "FriendSettings_Mobile_Notifications": "Mobil értesítések",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Beágyazott képek és más elemek mutatása csak wifin",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Képek és más média beágyazása csak Wi-Fi-n",
     "FriendSettings_Mobile_UploadCurrentLogs": "Jelenlegi csevegésnaplók feltöltése",
     "FriendSettings_Mobile_UploadPreviousLogs": "Korábbi csevegésnaplók feltöltése",
     "FriendSettings_Mobile_SaveImageCaptures": "Képernyőkép mentése",

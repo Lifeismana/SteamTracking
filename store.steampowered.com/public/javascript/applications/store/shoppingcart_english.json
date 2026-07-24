@@ -211,5 +211,5 @@
     "Cart_Replay_SavedCart": "Saved Cart",
     "Cart_Replay_Instructions": "This is a saved shopping cart.  Last time you attempted to purchase this cart there was an error, so we saved your cart (including discounts) for %1$s hours so you can attempt your purchase again.",
     "Cart_Gifting_CopyGiftOptionsFrom": "Copy gift options from",
-    "Cart_Gifting_SignInToSelectFriends": "<1>Sign in</1> to select Steam friends"
+    "Cart_Gifting_SignInForFriends": "Sign in to select a friend"
 }

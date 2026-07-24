@@ -621,7 +621,7 @@ $ffn
 %s: '%s', '%s'
 %s: (%d bit)\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%s: no such process %d\n
+%s: no such process %d - %d\n
 %s:%d: OpenSSL internal error: %s\n
 %s://%s/%s%s
 %s:443
@@ -897,9 +897,8 @@ $ffn
 (%p) Disconnecting HTTP connection due to !BAsyncSendPartialBody\n
 (%p) Disconnecting HTTP connection due to SSL failure: %s(%d)\n
 (%p) Fatal HTTP2 error in nghttp2_session_mem_recv (%s)\n
+(%p) Fatal HTTP2 error in nghttp2_session_send (%s)\n
 (%p) Fatal HTTP2 error in nghttp2_session_send after init (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send after recv (%s)\n
-(%p) Fatal HTTP2 error in nghttp2_session_send during initial request submit (%s)\n
 (%p) HTTP request connecting to %s\n
 (%p) HTTP request resolved %s to %s. Now checking proxy.\n
 (%p) HTTP request resolving %s\n
@@ -914,7 +913,7 @@ $ffn
 (%p) Sending request for http%s://%s%s - Stale Timeout %u\n
 (%p) State to %s is now k_EHTTPClientConnectionState_WAITING_RESPONSELINE_VERSION\n
 (%p) TLS handshake was not valid for SNI hostname '%s', disconnecting\n
-(%p) no more requests allowed on HTTP session (%s)\n
+(%p) no more requests allowed on HTTP session\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 ()*+,-./*(((
@@ -1659,6 +1658,7 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+05:03:21
 08bX
 0?0L
 0A/8
@@ -2194,7 +2194,6 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:33:48
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23GamePerformanceSettings
@@ -2368,11 +2367,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -4892,7 +4891,6 @@ EC_POINT_set_to_infinity
 EC_POINTs_make_affine
 EC_POINTs_mul
 EC_PRIVATEKEY
-EChildProcessQueryCommand
 EClanAccountType
 EClanAction
 EClanEventType
@@ -5420,7 +5418,6 @@ Free
 Free Weekend
 Free disk space for %s would overflow
 FreeDeletedPackets
-Fremont
 French
 FrenemyFilter
 Friday
@@ -5582,7 +5579,6 @@ Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got completed conditional request dispatched to client cache, but no data for it in our map?
 Got frame type %d for stream %d\n
-GpuTopology
 GrabPay
 Greek
 Greenlight Items
@@ -6086,7 +6082,7 @@ Jobs/Coroutines
 JoinedGroup
 Joystick
 JpL9=
-Jul 21 2026
+Jul 23 2026
 July
 June
 K'iche'
@@ -6794,7 +6790,7 @@ No site licenses found
 No subscription
 No tracked allocs currently in use. Total %d\n
 No verified phone number
-No waiting requests for %s\n
+No waiting requests (or no free capacity) for %s\n
 NoInternet
 NoLAN
 NoRenegotiation
@@ -7364,6 +7360,9 @@ PollResponseAsync
 Poly1305
 Polynomial:
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostRecv
 PostedAnnouncement
 Pragma
@@ -8061,9 +8060,9 @@ Send Proxied Owner
 Send Proxied Router
 Send Router
 SendSAS
-Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
+Sending up to %u queued request(s) for %s\n
 Sent message: %s - %u bytes\n
 September
 Serbian
@@ -8275,6 +8274,7 @@ SteamChina_SChinese
 SteamClientService
 SteamCloudDocuments
 SteamDeck
+SteamMachine
 SteamOSGeneric
 SteamPID
 SteamRealPath
@@ -10909,6 +10909,7 @@ controller_steamcontroller_unknown
 controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
+controller_switch2_pro_generic
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -11891,6 +11892,7 @@ enum
 enums_clientserver.proto
 enums_clientserver.proto*
 enveloped-data
+environ
 epoch
 epoll_create
 epoll_ctl
@@ -14812,6 +14814,7 @@ m_memPSK
 m_nAllocationCount >= 0
 m_nEpollSet >= 0
 m_nEventCount == 0
+m_nHTTP2CallbackDepth > 0
 m_nPollFd >= 0
 m_nPostFd >= 0
 m_nRecursions > 0
@@ -17159,6 +17162,7 @@ sigalgs
 sigdelset
 sigemptyset
 sigfillset
+siginfo.si_pid == dwProcessId
 siglongjmp
 signal
 signature

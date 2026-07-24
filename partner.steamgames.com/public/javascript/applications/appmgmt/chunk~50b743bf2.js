@@ -943,9 +943,10 @@
             document.removeChild(n);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t) {
-          const n = r().unparse(e, { header: !0 });
-          i.WriteFile(new Blob([n], { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, n) {
+          const o = r().unparse(e, { header: !0 }),
+            s = 1 == n ? ["\ufeff" + o] : [o];
+          i.WriteFile(new Blob(s, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {

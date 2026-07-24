@@ -463,12 +463,14 @@ $\nY8O
 &\n\ngpu_status
 &bzi
 '7GWgw
+'\n#k_EBluetoothAudioPreference_Latency
+'\n#k_EBluetoothAudioPreference_Quality
 '\n#k_EBrowserContrastMode_NoPreference
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
-'\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
+'\n#k_EContentReportReason_ToSViolation
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
 '\n#k_EGraphicsPerfOverlayLevel_Minimal
@@ -588,7 +590,9 @@ $\nY8O
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentModerationSanction_Escalate
 )\n%k_EContentReportReason_Discrimination
+)\n%k_EContentReportReason_Miscategorized
 )\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Sanctioned
@@ -677,7 +681,6 @@ $\nY8O
 +2D9
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
-+\n'k_EChildProcessQueryCommand_GpuTopology
 +\n'k_ECommentThreadTypeUserReceivedNewGame
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
@@ -1052,6 +1055,7 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+05:03:40
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAppTestType_SteamFrameCompatibilityReview
@@ -1482,6 +1486,7 @@ $\nY8O
 1A26b
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentModerationSanction_HarassmentBanned
+1\n-k_EContentModerationSanction_HarassmentStrike
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -1545,7 +1550,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:34:16
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1625,6 +1629,7 @@ $\nY8O
 35CMsgHorizontalScrollBarSizeResponse
 38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_EContentReportReason_BypassingProfanityFilter
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
@@ -2995,6 +3000,7 @@ EAppUpdateState
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
 EAuthTokenPermission
+EBluetoothAudioPreference
 EBluetoothDeviceType
 EBroadcastEncoderSetting
 EBroadcastPermission
@@ -3003,7 +3009,6 @@ EBrowserFeatureStatus
 EBrowserGPUStatus
 ECDNPropertyType
 ECDNProviders
-EChildProcessQueryCommand
 EChildProcessQueryExitCode
 EClanAccountType
 EClanAction
@@ -3488,7 +3493,6 @@ Fraud Check Failed
 Free
 Free Weekend
 Free disk space for %s would overflow
-Fremont
 French
 FrenemyFilter
 Friday
@@ -3625,7 +3629,6 @@ Google Swiftshader
 Google.Protobuf.Reflection
 Got gameid on commandline: %llu\n
 Gothic
-GpuTopology
 GrabPay
 GraphLarge
 GraphPanel
@@ -3984,7 +3987,7 @@ Japanese
 Javanese
 JoinedGroup
 Joystick
-Jul 21 2026
+Jul 23 2026
 July
 June
 K'iche'
@@ -5165,6 +5168,9 @@ PopulateFileList
 PopulateFileNameCompletion
 PopupHTML
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostTime
 PostedAnnouncement
@@ -5682,6 +5688,7 @@ SteamChina_SChinese
 SteamCloudDocuments
 SteamDeck
 SteamID
+SteamMachine
 SteamOSGeneric
 SteamRealPath
 SteamRealm
@@ -6122,6 +6129,7 @@ V_IsAbsolutePath
 V_IsSteamCloseProtocol
 V_IsValidURLCharacter
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
@@ -6663,6 +6671,7 @@ _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
 _uid
+`rNf
 `tun%
 a numbered reference must not be zero
 a\rxg[
@@ -7113,6 +7122,7 @@ controller_steamcontroller_unknown
 controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
+controller_switch2_pro_generic
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -8045,7 +8055,6 @@ k_ECPUGovernor_Manual
 k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
-k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
@@ -8082,6 +8091,7 @@ k_EContentReportReason_Gambling
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
 k_EContentReportReason_None
+k_EContentReportReason_Piracy
 k_EContentReportReason_Raffles
 k_EContentReportReason_Spam
 k_EContentReportReason_Stalking

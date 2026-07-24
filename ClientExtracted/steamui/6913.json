@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Toate jocurile",
     "SteamOS_FilterDescription_Compatible": "Include jocurile care au fost testate și sunt compatibile cu SteamOS.",
     "SteamOS_FilterDescription_Compatible_Unknown": "Include jocurile care au fost testate și sunt compatibile cu SteamOS, dar și jocurile care nu au fost testate încă pentru compatibilitatea cu SteamOS.",
-    "SteamOS_FilterDescription_AllGames": "Afișează toate jocurile din biblioteca ta, inclusiv cele care nu rulează bine pe SteamOS."
+    "SteamOS_FilterDescription_AllGames": "Afișează toate jocurile din biblioteca ta, inclusiv cele care nu rulează bine pe SteamOS.",
+    "MachineVerified_FilterDescription_Verified": "Afișează numai jocurile care funcționează perfect cu Steam Machine.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Afișează toate jocurile etichetate cu „Verificat” și titlurile care sunt jucabile, dar pot necesita un efort suplimentar pentru interacțiune sau configurare.",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Afișează toate titlurile etichetate cu „Verificat” sau „Jucabil”, plus titlurile care nu au fost testate încă pentru compatibilitatea cu Steam Machine.",
+    "MachineVerified_FilterDescription_AllGames": "Afișează toate jocurile din biblioteca ta, inclusiv cele care nu rulează bine pe Steam Machine.",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }

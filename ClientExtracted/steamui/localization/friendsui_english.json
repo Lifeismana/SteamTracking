@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Display this person at the top of my friends list so they're easy to find",
     "FriendSettings_Mobile_BlockDesc": "They'll see you as offline and you won't receive chat messages from them",
     "FriendSettings_Mobile_Notifications": "Mobile Notifications",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Only embed images and other media when on wifi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Only embed images and other media when on Wi-Fi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Upload Current Session Logs",
     "FriendSettings_Mobile_UploadPreviousLogs": "Upload Previous Session Logs",
     "FriendSettings_Mobile_SaveImageCaptures": "Save image captures",

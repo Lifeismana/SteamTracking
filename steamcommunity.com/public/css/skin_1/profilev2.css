@@ -2463,6 +2463,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 		float: left;
 		margin-right: 1%;
 		max-width: 54%;
+		width: auto;
 		white-space: normal;
 	}
 	html.responsive .game_info_achievements_summary_area .game_info_achievement_summary {

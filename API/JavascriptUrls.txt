@@ -1895,6 +1895,7 @@ ${g_strCuratorAdminURL}ajaxupdatelistorder/
 ${g_strCuratorAdminURL}ajaxupdatemultiplecurations/
 ${g_strCuratorAdminURL}ajaxupdatepagesection/
 ${g_strCuratorAdminURL}ajaxupdatesortorder/
+${g_strCuratorAdminURL}ajaxuploadavatar/
 ${g_strCuratorBaseURL}ajaxappsearchsuggest/
 ${g_strCuratorBaseURL}ajaxgetfilteredrecommendations
 ${g_strCuratorBaseURL}ajaxgetfilteredrecommendations/
@@ -2105,7 +2106,6 @@ ${wizard_url}
 ${wizard_url}Home
 ${youtube_trailer_public_url}${}
 /wishlist/id/${profile_url}/
-/wishlistnew/id/${profile_url}/
 [url=${HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${}[/url]
 http://
 http://${}
@@ -3140,7 +3140,6 @@ steam://
 steam://${path}
 steam://broadcast/watch/${steamid64}
 steam://cdkeys/${appid}
-steam://changeuser
 steam://checkforupdates
 steam://checkout_return/paypal_cancel/
 steam://checkout_return/paypal_success/
@@ -3232,7 +3231,6 @@ steam://settings/account${}
 steam://settings/broadcast
 steam://settings/downloads
 steam://settings/ingame
-steam://signout
 steam://stopstreaming
 steam://store
 steam://store/${appid}

@@ -2120,6 +2120,7 @@ MasterPackageID
 Matched '%s' -> '%s'\n
 MaxUseCount
 MaybeAllocateAligned cannot fail here.
+MbP?
 Memory allocation failed while processing sCAL
 Menu
 MenuName
@@ -2445,6 +2446,9 @@ Platform Error: module '%s' failed to initialize\n
 Platform Error: module version ('%s, %s) invalid, not loading\n
 Polish
 Portuguese
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PostCode
 PostTime
 PosterID
@@ -2869,7 +2873,7 @@ UUUU
 Ukrainian
 Unable to find font named %s\n
 Unable to initalize freetype library, is it installed?
-Unable to open display
+Unable to open X11 display, exiting
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unexpected end of string.
@@ -2944,6 +2948,7 @@ V_FormatAndAppend
 V_GetFileExtension
 V_IsAbsolutePath
 V_MakeAbsolutePath
+V_MakeRelativePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_SplitNumbers

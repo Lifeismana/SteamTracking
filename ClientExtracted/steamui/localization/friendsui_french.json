@@ -1001,7 +1001,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Afficher cette personne en haut de ma liste de contacts pour la trouver facilement",
     "FriendSettings_Mobile_BlockDesc": "Les contacts bloqués vous verront hors ligne et vous ne recevrez pas de messages de chat de leur part",
     "FriendSettings_Mobile_Notifications": "Notifications sur mobile",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Inclure les images et autres médias seulement en mode wifi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Inclure les images et autres médias seulement en cas de connexion wifi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Charger les journaux de la session en cours",
     "FriendSettings_Mobile_UploadPreviousLogs": "Charger les journaux de la session précédente",
     "FriendSettings_Mobile_SaveImageCaptures": "Enregistrer les captures d'écran",

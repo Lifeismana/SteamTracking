@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Kaikki pelit",
     "SteamOS_FilterDescription_Compatible": "Sisällytä pelit, joiden SteamOS-yhteensopivuus on testattu.",
     "SteamOS_FilterDescription_Compatible_Unknown": "Sisällytä sekä pelit, joiden SteamOS-tukea on testattu että pelit, joiden yhteensopivuutta ei ole testattu.",
-    "SteamOS_FilterDescription_AllGames": "Näytä kaikki kirjaston pelit, myös sellaiset, jotka eivät toimi hyvin SteamOSissa."
+    "SteamOS_FilterDescription_AllGames": "Näytä kaikki kirjaston pelit, myös sellaiset, jotka eivät toimi hyvin SteamOSissa.",
+    "MachineVerified_FilterDescription_Verified": "Näytä vain pelit, jotka toimivat sujuvasti Steam Machinella.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Näytä kaikki vahvistetut pelit sekä mahdollisia lisätoimia ja lisämäärityksiä vaativat, pelattavissa olevat pelit.",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Näytä kaikki vahvistetut ja pelattavissa olevat pelit sekä pelit, joiden Steam Machine -yhteensopivuutta ei ole vielä testattu.",
+    "MachineVerified_FilterDescription_AllGames": "Näytä kaikki kirjaston pelit, myös ne, jotka eivät toimi hyvin Steam Machinella.",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }

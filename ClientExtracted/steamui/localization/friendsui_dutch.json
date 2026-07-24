@@ -713,7 +713,7 @@
     "Friend_Invites_FailedToDecline_Plural": "Negeren mislukt voor %1$s uitnodigingen.",
     "Friend_Invites_ViewMutual": "Gemeenschappelijke vrienden weergeven",
     "Friend_Invites_MutualFriends": "Gemeenschappelijke vrienden",
-    "Friend_InviteSent": "Vriendenuitnodiging verzonden. Zodra de uitnodiging is geaccepteerd zullen ze als vriend worden getoond.",
+    "Friend_InviteSent": "Vriendenuitnodiging verzonden. Zodra de uitnodiging is geaccepteerd, wordt deze persoon als vriend weergegeven.",
     "Friend_MutualInviteSent": "%1$s is aan je vriendenlijst toegevoegd.",
     "Friend_InviteError": "Er is een fout opgetreden bij het toevoegen van %1$s aan je vriendenlijst.",
     "Friend_Block_Confirm": "Weet je zeker dat je alle communicatie met %1$s wilt blokkeren? Je zult geen directe berichten kunnen versturen of ontvangen, geen meldingen over inkomende berichten of oproepen van hem/haar ontvangen en zijn/haar berichten in chatrooms niet kunnen zien.",

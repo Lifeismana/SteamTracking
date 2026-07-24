@@ -15142,7 +15142,7 @@
           const e = (0, i.Tc)("saleeventstore", "application_config");
           if (this.ValidateStoreDefault(e)) {
             const t = Math.floor(Date.now() / 1e3),
-              n = t - 2592e3;
+              n = t - 7776e3;
             e.forEach((e) => {
               e.bVisible && e.rtEndTime && e.rtEndTime < t
                 ? this.m_rgArchive.push(e)

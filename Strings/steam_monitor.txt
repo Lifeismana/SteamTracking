@@ -60,7 +60,7 @@ $ORIGIN
 %s double claimed!\n
 %s not implemented
 %s/.steam/steam
-%s: no such process %d\n
+%s: no such process %d - %d\n
 &AElig;
 &Aacute;
 &Acirc;
@@ -231,13 +231,13 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
+05:03:21
+05:03:23
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
-23:33:48
-23:33:51
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 </script>
@@ -317,7 +317,7 @@ Invalid thread id during thread Start()
 IsSpewActive
 JArray
 Jobs/Coroutines
-Jul 21 2026
+Jul 23 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -587,6 +587,7 @@ double
 dprintf
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
+environ
 exec
 execv
 execvp
@@ -833,6 +834,7 @@ short
 sigaction
 sigaddset
 sigemptyset
+siginfo.si_pid == dwProcessId
 signed char
 sigprocmask
 sizeof

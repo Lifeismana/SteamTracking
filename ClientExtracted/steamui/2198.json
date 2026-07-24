@@ -26,5 +26,13 @@
     "SteamOS_FilterLabel_AllGames": "Tous les jeux",
     "SteamOS_FilterDescription_Compatible": "Inclure les jeux dont la compatibilité avec SteamOS a été testée",
     "SteamOS_FilterDescription_Compatible_Unknown": "Inclure les jeux dont la compatibilité avec SteamOS a été testée, ainsi que ceux qui n'ont pas encore été testés.",
-    "SteamOS_FilterDescription_AllGames": "Afficher tous les jeux de votre bibliothèque, y compris ceux qui ne fonctionnent pas correctement sur SteamOS."
+    "SteamOS_FilterDescription_AllGames": "Afficher tous les jeux de votre bibliothèque, y compris ceux qui ne fonctionnent pas correctement sur SteamOS.",
+    "MachineVerified_FilterDescription_Verified": "Afficher uniquement les jeux ayant reçu l'étiquette « Compatible » avec la Steam Machine.",
+    "MachineVerified_FilterDescription_Verified_Playable": "Afficher tous les titres ayant reçu l'étiquette « Compatible » ou « Jouable » (jeux pouvant nécessiter des étapes supplémentaires dans leur configuration ou interaction).",
+    "MachineVerified_FilterDescription_Verified_Playable_Unknown": "Afficher tous les jeux ayant reçu l'étiquette « Compatible » ou « Jouable », ainsi que ceux dont la compatibilité avec la Steam Machine n'a pas encore été vérifiée.",
+    "MachineVerified_FilterDescription_AllGames": "Afficher tous les jeux de votre bibliothèque, y compris ceux qui ne fonctionnent pas correctement sur la Steam Machine.",
+    "FrameVerified_FilterDescription_Verified": "Show only games that work naturally with Steam Frame.",
+    "FrameVerified_FilterDescription_Verified_Playable": "Show all Frame Verified titles, plus games that are playable but might require extra effort to interact with or configure.",
+    "FrameVerified_FilterDescription_Verified_Playable_Unknown": "Show all Verified and Playable titles, plus games that haven't yet been tested for Steam Frame compatibility.",
+    "FrameVerified_FilterDescription_AllGames": "Show all games in your library, including those that Steam Frame doesn't run well."
 }
