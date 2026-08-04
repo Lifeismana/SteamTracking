@@ -589,7 +589,7 @@
             );
       }
       var nt = n(29233),
-        et = n(62220);
+        et = n(18519);
       function lt(t) {
         var c, n;
         const l = parseInt(
@@ -1973,62 +1973,60 @@
         return (0, l.V)("PlayerLinkDetails", () => i(t));
       }
     },
-    62220: (t, c, n) => {
+    18519: (t, c, n) => {
       "use strict";
-      n.d(c, { jn: () => r });
-      var e = n(29233),
-        l = n(66418),
-        s = n(23809),
+      n.d(c, { jn: () => h });
+      var e = n(66418),
+        l = n(23809),
+        s = n(29233),
         a = n(88942),
         i = n(11333);
-      function v(t) {
+      const v = 1;
+      function r(t) {
         return ["PlayerLinkDetails", t];
       }
-      function r(t) {
-        const c = (0, s.KV)(),
+      function o(t, c) {
+        const n =
+          "number" == typeof c
+            ? s.b2.InitFromAccountID(c, e.TS.EUNIVERSE).ConvertTo64BitString()
+            : c;
+        return {
+          queryKey: r(n),
+          queryFn: async () => {
+            if (n) {
+              return (function (t) {
+                var c, n, e, l, s;
+                return (
+                  null === (c = null == t ? void 0 : t.private_data) ||
+                    void 0 === c ||
+                    delete c.account_name,
+                  null === (n = null == t ? void 0 : t.public_data) ||
+                    void 0 === n ||
+                    delete n.account_flags,
+                  null === (e = null == t ? void 0 : t.public_data) ||
+                    void 0 === e ||
+                    delete e.ban_expires_time,
+                  null === (l = null == t ? void 0 : t.public_data) ||
+                    void 0 === l ||
+                    delete l.privacy_state,
+                  (null === (s = null == t ? void 0 : t.public_data) ||
+                  void 0 === s
+                    ? void 0
+                    : s.profile_state) !== v &&
+                    (null == t || delete t.private_data),
+                  t
+                );
+              })(await t.load(n));
+            }
+            return null;
+          },
+          enabled: !!n,
+        };
+      }
+      function h(t) {
+        const c = (0, l.KV)(),
           n = (0, i.L)(c);
-        return (0, a.I)(
-          (function (t, c) {
-            const n =
-              "number" == typeof c
-                ? e.b2
-                    .InitFromAccountID(c, l.TS.EUNIVERSE)
-                    .ConvertTo64BitString()
-                : c;
-            return {
-              queryKey: v(n),
-              queryFn: async () => {
-                var c, e, l, s, a;
-                if (n) {
-                  const i = await t.load(n);
-                  return (
-                    null === (c = null == i ? void 0 : i.private_data) ||
-                      void 0 === c ||
-                      delete c.account_name,
-                    null === (e = null == i ? void 0 : i.public_data) ||
-                      void 0 === e ||
-                      delete e.account_flags,
-                    null === (l = null == i ? void 0 : i.public_data) ||
-                      void 0 === l ||
-                      delete l.ban_expires_time,
-                    null === (s = null == i ? void 0 : i.public_data) ||
-                      void 0 === s ||
-                      delete s.privacy_state,
-                    1 !==
-                      (null === (a = null == i ? void 0 : i.public_data) ||
-                      void 0 === a
-                        ? void 0
-                        : a.profile_state) &&
-                      (null == i || delete i.private_data),
-                    i
-                  );
-                }
-                return null;
-              },
-              enabled: !!n,
-            };
-          })(n, t),
-        );
+        return (0, a.I)(o(n, t));
       }
     },
     6083: (t, c, n) => {
@@ -5845,7 +5843,7 @@
                 color: s,
                 ref: a,
               } = t;
-              return (0, e.jsx)("div", {
+              return (0, e.jsx)(r.az, {
                 ref: a,
                 role: "switch",
                 "aria-checked": !!c,

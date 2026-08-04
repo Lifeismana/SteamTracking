@@ -292,10 +292,19 @@
     "MyHistory_Title_ActedOnTime": "Tranzacționat pe",
     "MyHistory_Title_TransactedPrice": "Preț",
     "MyHistory_Title_Action": "Acțiune",
+    "MyListings_Title_ListedPrice": "Listat pentru",
+    "MyListings_Title_MedianPrice": "Prețul normal de vânzare",
+    "MyListings_ListingPrice": "%1$s <1>(%2$s)</1>",
+    "MyBuyOrders_Title_Quantity": "Cantitatea achiziționată",
+    "MyBuyOrders_Title_BidPrice": "Prețul dorit",
+    "MyBuyOrders_QuantityPurchased": "%1$s/%2$s",
     "MyHistory_NoResults": "Nu a fost găsit niciun rezultat",
     "MyHistory_Action_Sold": "Vândut",
     "MyHistory_Action_Purchased": "Achiziționat",
     "Breadcrumbs_Label_History": "Istoricul meu",
     "Breadcrumbs_Label_Listings": "Listările mele",
-    "Breadcrumbs_Label_BuyOrders": "Ordinele mele de cumpărare"
+    "Breadcrumbs_Label_BuyOrders": "Ordinele mele de cumpărare",
+    "MyListings_SectionHeader_Button_History": "My Market History",
+    "MyListings_SectionHeader_Button_Listings": "My Active Sell Listings (%1$s)",
+    "MyListings_SectionHeader_Button_BuyOrders": "My Active Buy Orders (%1$s)"
 }

@@ -292,10 +292,19 @@
     "MyHistory_Title_ActedOnTime": "Gekocht/verkocht op",
     "MyHistory_Title_TransactedPrice": "Prijs",
     "MyHistory_Title_Action": "Actie",
+    "MyListings_Title_ListedPrice": "Aangeboden voor",
+    "MyListings_Title_MedianPrice": "Wordt doorgaans verkocht voor",
+    "MyListings_ListingPrice": "%1$s <1>(%2$s)</1>",
+    "MyBuyOrders_Title_Quantity": "Aantal gekocht",
+    "MyBuyOrders_Title_BidPrice": "Gewenste prijs",
+    "MyBuyOrders_QuantityPurchased": "%1$s / %2$s",
     "MyHistory_NoResults": "Geen resultaten gevonden",
     "MyHistory_Action_Sold": "Verkocht",
     "MyHistory_Action_Purchased": "Gekocht",
     "Breadcrumbs_Label_History": "Mijn geschiedenis",
     "Breadcrumbs_Label_Listings": "Mijn vermeldingen",
-    "Breadcrumbs_Label_BuyOrders": "Mijn aankooporders"
+    "Breadcrumbs_Label_BuyOrders": "Mijn aankooporders",
+    "MyListings_SectionHeader_Button_History": "My Market History",
+    "MyListings_SectionHeader_Button_Listings": "My Active Sell Listings (%1$s)",
+    "MyListings_SectionHeader_Button_BuyOrders": "My Active Buy Orders (%1$s)"
 }

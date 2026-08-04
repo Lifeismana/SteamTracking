@@ -12167,14 +12167,15 @@
               _(_.data);
             },
             [_],
-          );
+          ),
+          _ = (0, _._)();
         return "dev" === _._.WEB_UNIVERSE ||
           "beta" === _._.WEB_UNIVERSE ||
           (_._.is_support &&
             Boolean(
               (0, _._)("localization_advanced_access", "application_config"),
             ))
-          ? _._.IN_GAMEPADUI
+          ? _
             ? null
             : (0, _.jsxs)("div", {
                 className: (0, _._)(_().DevToggle, _.ValveOnlyBackground),

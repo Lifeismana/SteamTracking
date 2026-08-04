@@ -253,6 +253,8 @@
         TabEditorButtons: "rJGYL9KtL2_oxMfjOUUuq",
         TabSummaryCtn: "_1EYXZbKBjqfFYXpQKyGS-A",
         Expanded: "_1nReDgRjI0XUSMzT635iGm",
+        TabSummaryScrollCtn: "_3xIIJpUNQtsQMPoZD-jibC",
+        TabSummaryCount: "_27V3HBBbQnbk0GU4YWMelc",
         TabSummaryItem: "_2wI0jrWTXmdWAEiz7y1yTH",
         Checked: "_17x-C-paezhBHOimg-XpU5",
         Hide: "_3CFHNxlYvvFQa74bL_-8xT",
@@ -11577,27 +11579,39 @@
           ? (0, i.jsxs)("div", {
               className: (0, I.A)(G.TabSummaryCtn, n && G.Expanded),
               children: [
-                l.map((e) =>
-                  (0, i.jsx)(
-                    "button",
-                    {
-                      "data-label": e.strLabel,
-                      className: (0, I.A)(
-                        G.TabSummaryItem,
-                        e.unique_id == s && G.Checked,
-                        e.bHide && G.Hide,
-                      ),
-                      onClick: () => {
-                        return (
-                          (t = e.unique_id), void (0, O.qT)(s == t ? void 0 : t)
-                        );
-                        var t;
+                (0, i.jsx)("div", {
+                  className: G.TabSummaryScrollCtn,
+                  children: l.map((e) =>
+                    (0, i.jsx)(
+                      "button",
+                      {
+                        "data-label": e.strLabel,
+                        className: (0, I.A)(
+                          G.TabSummaryItem,
+                          e.unique_id == s && G.Checked,
+                          e.bHide && G.Hide,
+                        ),
+                        onClick: () => {
+                          return (
+                            (t = e.unique_id),
+                            void (0, O.qT)(s == t ? void 0 : t)
+                          );
+                          var t;
+                        },
+                        children: e.strLabel,
                       },
-                      children: e.strLabel,
-                    },
-                    e.unique_id,
+                      e.unique_id,
+                    ),
                   ),
-                ),
+                }),
+                (0, i.jsx)("div", {
+                  className: G.TabSummaryCount,
+                  children: (0, E.Yp)(
+                    "#Sale_Tabs_TabCount",
+                    l.length,
+                    l.length,
+                  ),
+                }),
                 (0, i.jsx)(j.o, {
                   className: G.TabSummaryQuestionTooltip,
                   tooltip: (0, E.we)("#Sale_Tabs_QuickFilter"),
@@ -40668,7 +40682,7 @@
       });
       var H = a(76217),
         z = a(84143),
-        U = a(6256),
+        U = a(93341),
         q = a(62307);
       function V(e) {
         const {

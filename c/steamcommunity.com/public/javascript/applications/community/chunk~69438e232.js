@@ -335,6 +335,7 @@
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
         gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+        dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
         NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
         twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
         DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
@@ -1729,8 +1730,8 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1894,6 +1895,7 @@
       _._, _._, _._, _._;
       _._, _._, _._, _._;
       _._, _._, _._;
+      _._, _._, _._, _._;
       _._, _._, _._, _._;
       _._, _._, _._;
     },
@@ -17607,7 +17609,7 @@
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 44287, 19))),
         (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58160, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 35779, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 33648, 19))),
         (_.polish = () =>
@@ -34547,6 +34549,7 @@
             bHasGamePrivacy: _,
             bNoMask: _,
             bEllipsisName: _,
+            bDropPadding: _,
             ..._
           } = this.props;
           let _ = null,
@@ -34666,6 +34669,7 @@
                           _().gameName,
                           _ ? _().threeLines : void 0,
                           _().richPresenceLabel,
+                          _ && _().dropPadding,
                           "no-drag",
                         ),
                         children: [
@@ -34680,7 +34684,11 @@
                       }),
                     _ &&
                       (0, _.jsxs)("div", {
-                        className: (0, _._)(_().richPresenceLabel, "no-drag"),
+                        className: (0, _._)(
+                          _().richPresenceLabel,
+                          _ && _().dropPadding,
+                          "no-drag",
+                        ),
                         children: [_, " "],
                       }),
                   ],
@@ -51385,6 +51393,8 @@
             tabs: _,
             bDisableRouting: _,
             startingTab: _,
+            controlledTab: _,
+            OnTabChanged: _,
             classNameCtn: _,
             classNameTab: _,
             classNameTabContent: _,
@@ -51417,13 +51427,15 @@
             (_) => {
               _(_.key),
                 _ || (0, _._)(_, "tab", _.key),
+                null == _ || _(_.key),
                 _.onClick && _.onClick(_);
             },
-            [_, _],
+            [_, _, _],
           ),
           _ = _.filter((_) => !_.hidden);
         if (!_.length) return null;
-        const _ = _.find((_) => _.key === _) || _[0],
+        const _ = null != _ ? _ : _,
+          _ = _.find((_) => _.key === _) || _[0],
           _ = _ ? (null != _ ? _ : _[0].key) : void 0,
           _ = (0, _.jsxs)(_.Fragment, {
             children: [

@@ -292,10 +292,19 @@
     "MyHistory_Title_ActedOnTime": "Handlet",
     "MyHistory_Title_TransactedPrice": "Pris",
     "MyHistory_Title_Action": "Handling",
+    "MyListings_Title_ListedPrice": "Slået op til",
+    "MyListings_Title_MedianPrice": "Sælges typisk for",
+    "MyListings_ListingPrice": "%1$s <1>(%2$s)</1>",
+    "MyBuyOrders_Title_Quantity": "Antal købt",
+    "MyBuyOrders_Title_BidPrice": "Ønsket pris",
+    "MyBuyOrders_QuantityPurchased": "%1$s/%2$s",
     "MyHistory_NoResults": "Ingen resultater fundet",
     "MyHistory_Action_Sold": "Solgt",
     "MyHistory_Action_Purchased": "Købt",
     "Breadcrumbs_Label_History": "Min historik",
     "Breadcrumbs_Label_Listings": "Mine opslag",
-    "Breadcrumbs_Label_BuyOrders": "Mine købsordrer"
+    "Breadcrumbs_Label_BuyOrders": "Mine købsordrer",
+    "MyListings_SectionHeader_Button_History": "My Market History",
+    "MyListings_SectionHeader_Button_Listings": "My Active Sell Listings (%1$s)",
+    "MyListings_SectionHeader_Button_BuyOrders": "My Active Buy Orders (%1$s)"
 }

@@ -8231,7 +8231,7 @@
         p = i(13112),
         h = i(60383),
         _ = i(76217),
-        g = i(30470);
+        g = i(78327);
       const f = "none";
       function w(e, t, i = {}) {
         const {
@@ -8399,18 +8399,19 @@
         };
       function b(e) {
         const {
-          items: t,
-          renderItem: i,
-          loadMore: s,
-          bLoadingMore: n,
-          style: a,
-        } = e;
+            items: t,
+            renderItem: i,
+            loadMore: s,
+            bLoadingMore: n,
+            style: a,
+          } = e,
+          o = (0, g.Qn)();
         return (0, r.jsx)(_.Z, {
           className: d.MobileContainer,
           children: (0, r.jsxs)(_.Z, {
             "flow-children": "row",
             className: (0, m.A)(d.Container, d.Mobile),
-            style: g.TS.IN_GAMEPADUI ? null : a,
+            style: o ? null : a,
             children: [
               t.map(i),
               (0, r.jsx)(h.J, {
@@ -8907,8 +8908,8 @@
         n = i(4399),
         a = i(52038),
         o = i(76217),
-        l = i(30470),
-        c = i(39739);
+        l = i(39739),
+        c = i(78327);
       const d = (0, r.forwardRef)(function (e, t) {
           const {
               component: i,
@@ -9105,15 +9106,9 @@
         const {
             breakpoint: { tablet: e, desktop: t },
           } = g(),
-          i = (0, c.h)(`(min-width: ${e}px)`),
-          s = (0, c.h)(`(min-width: ${t}px)`);
-        return l.TS.IN_GAMEPADUI
-          ? "mobile"
-          : s
-            ? "desktop"
-            : i
-              ? "tablet"
-              : "mobile";
+          i = (0, l.h)(`(min-width: ${e}px)`),
+          s = (0, l.h)(`(min-width: ${t}px)`);
+        return (0, c.Qn)() ? "mobile" : s ? "desktop" : i ? "tablet" : "mobile";
       }
       function C(e) {
         return e.children(j());
@@ -9907,11 +9902,11 @@
     54279: (e, t, i) => {
       "use strict";
       i.d(t, {
-        dR: () => ue,
-        ZI: () => ce,
-        Qs: () => ie,
-        jy: () => oe,
-        Ch: () => _e,
+        dR: () => me,
+        ZI: () => le,
+        Qs: () => te,
+        jy: () => ae,
+        Ch: () => he,
       });
       var s = i(7850),
         r = i(90626),
@@ -10103,8 +10098,8 @@
           if (!t) return !1;
           return (i.hash === E) === e;
         },
-        O = () => {
-          const e = [
+        O = (e) => {
+          const t = [
               {
                 label: (0, S.we)("#FeaturedLabel"),
                 items: [
@@ -10217,11 +10212,11 @@
                 ],
               },
             ],
-            t = (0, A.nA)(B.TS.EREALM);
+            i = (0, A.nA)(B.TS.EREALM);
           return (
-            t ||
-              B.TS.IN_GAMEPADUI ||
-              e[2].items.push({
+            i ||
+              e ||
+              t[2].items.push({
                 props: {
                   iconComponent: v.Z1,
                   children: (0, S.we)("#ShopNav_AwardsLink"),
@@ -10229,8 +10224,8 @@
                   isActive: F(!0),
                 },
               }),
-            t ||
-              (e[2].items.push({
+            i ||
+              (t[2].items.push({
                 props: {
                   iconComponent: C.Exy,
                   children: (0, S.we)("#ShopNav_SeasonalBadgeLink"),
@@ -10238,15 +10233,15 @@
                   to: j.B.LoyaltySteamBadge(),
                 },
               }),
-              e[2].items.push({
+              t[2].items.push({
                 props: {
                   iconComponent: v.CF,
                   children: (0, S.we)("#ShopNav_ProfileBundlesLink"),
                   to: j.B.LoyaltyProfileBundles(),
                 },
               })),
-            t ||
-              e[2].items.push({
+            i ||
+              t[2].items.push({
                 props: {
                   iconComponent: v.Nu,
                   children: (0, S.we)("#ShopNav_ProfileShowcasesLink"),
@@ -10254,7 +10249,7 @@
                 },
               }),
             N.DZ.Get().BIsLoggedIn() &&
-              (e[4].items.push({
+              (t[4].items.push({
                 external: !0,
                 props: {
                   iconComponent: v.VO,
@@ -10262,7 +10257,7 @@
                   href: B.TS.COMMUNITY_BASE_URL + "my/awards",
                 },
               }),
-              e[4].items.push({
+              t[4].items.push({
                 external: !0,
                 props: {
                   iconComponent: v.Aq,
@@ -10270,14 +10265,14 @@
                   href: B.TS.STORE_BASE_URL + "pointssummary/",
                 },
               }),
-              e[4].items.push({
+              t[4].items.push({
                 props: {
                   iconComponent: v.VO,
                   children: (0, S.we)("#MyEquippedProfileItems"),
                   to: { pathname: j.B.LoyaltyEquippedProfile(B.iA.steamid) },
                 },
               })),
-            e
+            t
           );
         },
         U = (0, n.PA)(() => {
@@ -10359,8 +10354,9 @@
           : null;
       }
       const W = () => {
-          const e = O(),
-            t = N.DZ.Get().BIsLoggedIn() && N.DZ.Get().GetIsUsingAppIDFilters();
+          const e = (0, B.Qn)(),
+            t = O(e),
+            i = N.DZ.Get().BIsLoggedIn() && N.DZ.Get().GetIsUsingAppIDFilters();
           return (0, s.jsx)(l.az, {
             className: b.PrimaryNav,
             "flow-children": "column",
@@ -10368,8 +10364,8 @@
               spacing: "none",
               children: [
                 (0, s.jsx)(H, {}),
-                t && (0, s.jsx)(U, {}),
-                e.map((e, t) =>
+                i && (0, s.jsx)(U, {}),
+                t.map((e, t) =>
                   (0, s.jsxs)(
                     r.Fragment,
                     {
@@ -10450,14 +10446,15 @@
         });
       }
       const Q = () => {
-        const e = O(),
-          t = [];
+        const e = (0, B.Qn)(),
+          t = O(e),
+          i = [];
         return (
-          e.forEach((e) => {
+          t.forEach((e) => {
             e.items.forEach((e) => {
               if (e.external) {
-                const { iconComponent: i, iconCallout: n, ...a } = e.props;
-                t.push(
+                const { iconComponent: t, iconCallout: n, ...a } = e.props;
+                i.push(
                   (0, r.createElement)(
                     P.Ii,
                     {
@@ -10473,10 +10470,10 @@
                   ),
                 );
               } else {
-                const i = e.props,
-                  { iconComponent: n, iconCallout: a, ...o } = i,
-                  l = "string" == typeof i.to ? i.to : JSON.stringify(i.to);
-                t.push(
+                const t = e.props,
+                  { iconComponent: n, iconCallout: a, ...o } = t,
+                  l = "string" == typeof t.to ? t.to : JSON.stringify(t.to);
+                i.push(
                   (0, r.createElement)(
                     h.A,
                     {
@@ -10485,13 +10482,13 @@
                       focusClassName: b.Focused,
                       noFocusRing: !0,
                     },
-                    (0, s.jsx)(V, { ...i, children: i.children }),
+                    (0, s.jsx)(V, { ...t, children: t.children }),
                   ),
                 );
               }
             });
           }),
-          (0, s.jsx)(z, { className: b.ScrollableTabs, children: t })
+          (0, s.jsx)(z, { className: b.ScrollableTabs, children: i })
         );
       };
       var Y = i(39739);
@@ -10504,10 +10501,9 @@
         J =
           i.p +
           "images/applications/store/halloween_2020_pointspage_bg.png?v=valveisgoodatcaching";
-      var $ = i(30470),
-        ee = i(55263),
-        te = i(82734);
-      const ie = ({ className: e, ...t }) => {
+      var $ = i(55263),
+        ee = i(82734);
+      const te = ({ className: e, ...t }) => {
           const i = r.useRef(void 0);
           return (0, s.jsxs)(s.Fragment, {
             children: [
@@ -10520,12 +10516,12 @@
             ],
           });
         },
-        se = ({ children: e }) =>
-          (0, s.jsx)(ie, {
+        ie = ({ children: e }) =>
+          (0, s.jsx)(te, {
             className: (0, u.A)(a.ParallaxRoot, o.ParallaxRoot),
             children: e,
           }),
-        re = ({ children: e, src: t, className: i }) =>
+        se = ({ children: e, src: t, className: i }) =>
           (0, s.jsxs)(s.Fragment, {
             children: [
               e,
@@ -10539,12 +10535,13 @@
               }),
             ],
           });
-      function ne() {
-        return (0, Y.h)("(max-width: 965px)") || $.TS.IN_GAMEPADUI;
+      function re() {
+        const e = (0, B.Qn)();
+        return (0, Y.h)("(max-width: 965px)") || e;
       }
-      function ae(e) {
+      function ne(e) {
         const t = (0, l.tv)(["xxsmall", "small", "xxlarge"]),
-          i = ne(),
+          i = re(),
           r = (0, l.WH)(t);
         return (0, s.jsx)(p.hL, {
           spacing: { horizontal: r },
@@ -10564,28 +10561,28 @@
           }),
         });
       }
-      const oe = ({ background: e, children: t }) => {
+      const ae = ({ background: e, children: t }) => {
           let i = K;
           return (
             e && (i = e),
-            (0, s.jsx)(se, {
-              children: (0, s.jsx)(re, {
+            (0, s.jsx)(ie, {
+              children: (0, s.jsx)(se, {
                 src: i,
-                children: (0, s.jsx)(ae, { children: t }),
+                children: (0, s.jsx)(ne, { children: t }),
               }),
             })
           );
         },
+        oe = ({ children: e }) =>
+          (0, s.jsx)(se, { src: X, className: a.HomeBackground, children: e }),
         le = ({ children: e }) =>
-          (0, s.jsx)(re, { src: X, className: a.HomeBackground, children: e }),
-        ce = ({ children: e }) =>
-          (0, s.jsx)(se, {
-            children: (0, s.jsx)(le, {
-              children: (0, s.jsx)(ae, { children: e }),
+          (0, s.jsx)(ie, {
+            children: (0, s.jsx)(oe, {
+              children: (0, s.jsx)(ne, { children: e }),
             }),
           }),
-        de = (0, n.PA)(({ children: e, appid: t }) => {
-          const [i] = (0, ee.t7)(t, { include_assets: !0 });
+        ce = (0, n.PA)(({ children: e, appid: t }) => {
+          const [i] = (0, $.t7)(t, { include_assets: !0 });
           let r = K;
           const n = N.DZ.Get().GetAppHeroImage(t);
           return (
@@ -10595,49 +10592,49 @@
                 (r =
                   i.GetAssets().GetRawPageBackgroundURL() ??
                   i.GetAssets().GetPageBackgroundURL()),
-            (0, s.jsx)(re, {
+            (0, s.jsx)(se, {
               src: r,
               className: a.ParallaxAppBackground,
               children: e,
             })
           );
         }),
-        me = { 1461450: J };
-      function ue(e) {
-        return e.appid in me
-          ? (0, s.jsx)(pe, { ...e })
-          : (0, s.jsx)(he, { ...e });
+        de = { 1461450: J };
+      function me(e) {
+        return e.appid in de
+          ? (0, s.jsx)(ue, { ...e })
+          : (0, s.jsx)(pe, { ...e });
       }
-      function pe(e) {
+      function ue(e) {
         const { children: t, appid: i } = e,
           r = (function (e) {
-            return me[e];
+            return de[e];
           })(i);
-        return (0, s.jsx)(ie, {
+        return (0, s.jsx)(te, {
           children: (0, s.jsx)("div", {
             style: { backgroundImage: `url("${r}")` },
             className: a.CustomAppBackground,
-            children: (0, s.jsx)(ae, { children: t }),
+            children: (0, s.jsx)(ne, { children: t }),
+          }),
+        });
+      }
+      function pe(e) {
+        const { children: t, appid: i } = e;
+        return (0, s.jsx)(ie, {
+          children: (0, s.jsx)(ce, {
+            appid: i,
+            children: (0, s.jsx)(ne, { children: t }),
           }),
         });
       }
       function he(e) {
-        const { children: t, appid: i } = e;
-        return (0, s.jsx)(se, {
-          children: (0, s.jsx)(de, {
-            appid: i,
-            children: (0, s.jsx)(ae, { children: t }),
-          }),
-        });
-      }
-      function _e(e) {
         const { title: t, subtitle: i, headerImage: r } = e,
-          n = ne();
+          n = re();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)("div", {
               className: a.PagePointShopTitle,
-              children: (0, s.jsx)(te.F, {}),
+              children: (0, s.jsx)(ee.F, {}),
             }),
             n && (0, s.jsx)(H, {}),
             r && (0, s.jsx)("img", { className: a.PageHeaderImage, src: r }),
@@ -10866,7 +10863,7 @@
     59707: (e, t, i) => {
       "use strict";
       i.d(t, {
-        gs: () => gt,
+        gs: () => ft,
         iZ: () => Fe,
         rE: () => Ge,
         Xw: () => Ee,
@@ -12211,12 +12208,12 @@
           ) {
             r = `${document.location.href.split("/reward/")[0]}/reward/${this.props.definition.rewardDefinition.defid}`;
           }
-          return (0, a.jsx)(Bt, {
+          return (0, a.jsx)(At, {
             onEscKeypress: this.CloseModal,
             destructive: this.state.error,
             children: (0, a.jsx)(De.Qg, {
               className: h.RedeemModalMobileScroll,
-              children: (0, a.jsxs)(At, {
+              children: (0, a.jsxs)(Dt, {
                 children: [
                   (0, a.jsx)(Ze, {
                     itemName: t,
@@ -12240,7 +12237,7 @@
                         classNames: e,
                         timeout: 500,
                         children: (e) =>
-                          (0, a.jsx)(pt, {
+                          (0, a.jsx)(ht, {
                             definition: this.m_mutableObjDefinition,
                             closeModal: this.CloseModal,
                             redeemPoints: this.RedeemPoints,
@@ -12273,11 +12270,11 @@
             r = t.rewardDefinition
               ? we.Vw.GetAppInfo(t.rewardDefinition.appid)
               : null;
-          return (0, a.jsx)(Bt, {
+          return (0, a.jsx)(At, {
             onEscKeypress: i,
             children: (0, a.jsx)(De.Qg, {
               children: (0, a.jsx)("div", {
-                children: (0, a.jsxs)(At, {
+                children: (0, a.jsxs)(Dt, {
                   children: [
                     (0, a.jsx)(Ze, {
                       itemName: Ve(t),
@@ -12285,7 +12282,7 @@
                       appInfo: r,
                       onRequestClose: i,
                     }),
-                    (0, a.jsx)(pt, {
+                    (0, a.jsx)(ht, {
                       definition: t,
                       closeModal: i,
                       redeemPoints: s,
@@ -12307,8 +12304,9 @@
             itemLink: i,
             appInfo: s,
             onRequestClose: r,
-          }) =>
-            (0, a.jsxs)(l.Z, {
+          }) => {
+            const n = (0, x.Qn)();
+            return (0, a.jsxs)(l.Z, {
               className: h.HeaderContainer,
               children: [
                 (0, a.jsxs)("div", {
@@ -12319,7 +12317,7 @@
                       children: [
                         e,
                         i &&
-                          !x.TS.IN_GAMEPADUI &&
+                          !n &&
                           (0, a.jsx)(xe, {
                             link: i,
                             style: { marginLeft: "8px" },
@@ -12370,7 +12368,8 @@
                     ],
                   }),
               ],
-            }),
+            });
+          },
         ),
         Ve = (e) =>
           2 == e.type || 3 == e.type
@@ -12475,7 +12474,7 @@
         }
         GetModalPreview() {
           if ("saleitem" == this.props.step)
-            return (0, a.jsx)(Ct, {
+            return (0, a.jsx)(vt, {
               className: h.PreviewSummerSaleCtn,
               step: this.props.step,
               children: (0, a.jsx)("img", {
@@ -12493,18 +12492,18 @@
                   ")",
               },
               i = (0, ze.k)(e.appid, e.community_item_data.item_image_large);
-            return (0, a.jsxs)(Ct, {
+            return (0, a.jsxs)(vt, {
               className: h.PreviewChat,
               step: this.props.step,
               children: [
                 (0, a.jsx)("div", { className: h.LargePreview, style: t }),
-                (0, a.jsx)(vt, { icon: i }),
+                (0, a.jsx)(bt, { icon: i }),
               ],
             });
           }
         }
         render() {
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: (0, F.A)(
               h.StickerPreviewContainer,
@@ -12512,19 +12511,19 @@
             ),
             children: [
               this.GetModalPreview(),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-                children: (0, a.jsx)(ft, { closeModal: this.props.closeModal }),
+                children: (0, a.jsx)(wt, { closeModal: this.props.closeModal }),
               }),
             ],
           });
@@ -12589,20 +12588,20 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: h.BackgroundPreviewContainer,
             children: [
-              (0, a.jsxs)(Ct, {
+              (0, a.jsxs)(vt, {
                 className: h.PreviewBackgroundContainer,
                 step: this.props.step,
                 children: [
@@ -12610,12 +12609,12 @@
                   this.GetPreview(),
                 ],
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -12643,14 +12642,14 @@
                 (0, ze.k)(e.appid, e.community_item_data.item_image_large) +
                 ")",
             };
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: (0, F.A)(
               h.EmoticonPreviewContainer,
               h.ChatPreviewContainer,
             ),
             children: [
-              (0, a.jsxs)(Ct, {
+              (0, a.jsxs)(vt, {
                 className: h.PreviewChat,
                 step: this.props.step,
                 children: [
@@ -12671,22 +12670,22 @@
                       }),
                     ],
                   }),
-                  (0, a.jsx)(vt, { icon: t }),
+                  (0, a.jsx)(bt, { icon: t }),
                 ],
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-                children: (0, a.jsx)(ft, { closeModal: this.props.closeModal }),
+                children: (0, a.jsx)(wt, { closeModal: this.props.closeModal }),
               }),
             ],
           });
@@ -12718,14 +12717,14 @@
             : (0, g.we)("#Redeem_UsePoints_ChatEffect");
         }
         render() {
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: (0, F.A)(
               h.EmoticonPreviewContainer,
               h.ChatPreviewContainer,
             ),
             children: [
-              (0, a.jsxs)(Ct, {
+              (0, a.jsxs)(vt, {
                 className: h.PreviewChat,
                 step: this.props.step,
                 children: [
@@ -12733,24 +12732,24 @@
                     className: h.PreviewEffectContainer,
                     children: (0, a.jsx)(pe, { effectManager: this.m_manager }),
                   }),
-                  (0, a.jsx)(vt, {
+                  (0, a.jsx)(bt, {
                     children: this.GetEffectConfig().renderButton(),
                   }),
                 ],
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
                 step: this.props.step,
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
-                children: (0, a.jsx)(ft, { closeModal: this.props.closeModal }),
+                children: (0, a.jsx)(wt, { closeModal: this.props.closeModal }),
               }),
             ],
           });
@@ -12777,7 +12776,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
@@ -12798,11 +12797,11 @@
               avatarFrame: t.avatar_frame,
               className: h.CurrentAvatar,
             });
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: h.MiniProfilePreviewContainer,
             children: [
-              (0, a.jsx)(Ct, {
+              (0, a.jsx)(vt, {
                 className: h.PreviewBackgroundContainer,
                 step: this.props.step,
                 children: (0, a.jsxs)("div", {
@@ -12845,12 +12844,12 @@
                   ],
                 }),
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -12883,12 +12882,12 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -12929,11 +12928,11 @@
                   }),
                 ],
               })),
-            (0, a.jsxs)(Nt, {
+            (0, a.jsxs)(Bt, {
               ref: this.props.containerRef,
               className: h.AvatarPreviewContainer,
               children: [
-                (0, a.jsxs)(Ct, {
+                (0, a.jsxs)(vt, {
                   className: (0, F.A)(h.PreviewBackgroundContainer, h.Frame),
                   step: this.props.step,
                   children: [
@@ -12948,12 +12947,12 @@
                   ],
                 }),
                 n,
-                (0, a.jsx)(St, {
+                (0, a.jsx)(Nt, {
                   definition: this.props.definition,
                   step: this.props.step,
                   description: this.GetDescription(),
                 }),
-                (0, a.jsx)(jt, {
+                (0, a.jsx)(Ct, {
                   fnReloadItemDef: this.props.fnReloadItemDef,
                   bRequestInProgress: this.props.bRequestInProgress,
                   definition: this.props.definition,
@@ -12987,12 +12986,12 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -13033,11 +13032,11 @@
                   }),
                 ],
               })),
-            (0, a.jsxs)(Nt, {
+            (0, a.jsxs)(Bt, {
               ref: this.props.containerRef,
               className: h.AvatarPreviewContainer,
               children: [
-                (0, a.jsxs)(Ct, {
+                (0, a.jsxs)(vt, {
                   className: (0, F.A)(h.PreviewBackgroundContainer, h.Animated),
                   step: this.props.step,
                   children: [
@@ -13052,12 +13051,12 @@
                   ],
                 }),
                 n,
-                (0, a.jsx)(St, {
+                (0, a.jsx)(Nt, {
                   definition: this.props.definition,
                   step: this.props.step,
                   description: this.GetDescription(),
                 }),
-                (0, a.jsx)(jt, {
+                (0, a.jsx)(Ct, {
                   fnReloadItemDef: this.props.fnReloadItemDef,
                   bRequestInProgress: this.props.bRequestInProgress,
                   definition: this.props.definition,
@@ -13079,7 +13078,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
@@ -13088,11 +13087,11 @@
         render() {
           const e = this.props.definition.rewardDefinition;
           let t = (0, ze.k)(e.appid, e.community_item_data.item_image_large);
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: (0, F.A)(h.KeyboardSkinPreviewContainer),
             children: [
-              (0, a.jsx)(Ct, {
+              (0, a.jsx)(vt, {
                 className: h.LargePreview,
                 step: this.props.step,
                 children: (0, a.jsx)("img", {
@@ -13100,12 +13099,12 @@
                   src: t,
                 }),
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -13127,7 +13126,7 @@
         }
         GetButtons() {
           if ("equip" == this.props.step)
-            return (0, a.jsx)(wt, {
+            return (0, a.jsx)(yt, {
               closeModal: this.props.closeModal,
               equipItem: this.props.equipItem,
             });
@@ -13144,11 +13143,11 @@
         render() {
           const e = this.props.definition.rewardDefinition;
           let t = (0, ze.k)(e.appid, e.community_item_data.item_image_large);
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: (0, F.A)(h.StartupMoviePreviewContainer),
             children: [
-              (0, a.jsx)(Ct, {
+              (0, a.jsx)(vt, {
                 className: h.LargePreview,
                 step: this.props.step,
                 children: (0, a.jsxs)("video", {
@@ -13178,7 +13177,7 @@
                   ],
                 }),
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
@@ -13192,7 +13191,7 @@
                     ),
                   }),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -13211,26 +13210,26 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+            ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
             : null;
         }
         GetPreviewForLevel() {
           let e = f.DZ.Get().GetUserSeasonalBadgeLevel();
           return "equip" == this.props.step
-            ? (0, a.jsx)(bt, {
+            ? (0, a.jsx)(St, {
                 definition: this.props.definition.rewardDefinition,
                 badgeLevel: e,
                 title: (0, g.we)("#Redeem_Badge_CurrentLevel"),
               })
             : 0 == e
-              ? (0, a.jsx)(bt, {
+              ? (0, a.jsx)(St, {
                   definition: this.props.definition.rewardDefinition,
                   badgeLevel: this.props.definition.itemLevel,
                   title: (0, g.we)("#Redeem_Badge_AfterPoints"),
                 })
               : (0, a.jsxs)(a.Fragment, {
                   children: [
-                    (0, a.jsx)(bt, {
+                    (0, a.jsx)(St, {
                       definition: this.props.definition.rewardDefinition,
                       badgeLevel: e,
                       title: (0, g.we)("#Redeem_Badge_CurrentLevel"),
@@ -13239,7 +13238,7 @@
                       className: (0, F.A)(h.BadgeColumn, h.ArrowColumn),
                       children: (0, a.jsx)("div", { className: h.BlueArrow }),
                     }),
-                    (0, a.jsx)(bt, {
+                    (0, a.jsx)(St, {
                       definition: this.props.definition.rewardDefinition,
                       badgeLevel: this.props.definition.itemLevel,
                       title: (0, g.we)("#Redeem_Badge_AfterPoints"),
@@ -13250,20 +13249,20 @@
         render() {
           return this.props.definition.rewardDefinition.community_item_data
             .badge_data[this.props.definition.itemLevel - 1]
-            ? (0, a.jsxs)(Nt, {
+            ? (0, a.jsxs)(Bt, {
                 ref: this.props.containerRef,
                 className: h.BadgeItemContainer,
                 children: [
-                  (0, a.jsx)(Ct, {
+                  (0, a.jsx)(vt, {
                     className: h.BadgePreviewContainer,
                     children: this.GetPreviewForLevel(),
                   }),
-                  (0, a.jsx)(St, {
+                  (0, a.jsx)(Nt, {
                     definition: this.props.definition,
                     step: this.props.step,
                     description: this.GetDescription(),
                   }),
-                  (0, a.jsx)(jt, {
+                  (0, a.jsx)(Ct, {
                     fnReloadItemDef: this.props.fnReloadItemDef,
                     bRequestInProgress: this.props.bRequestInProgress,
                     definition: this.props.definition,
@@ -13289,29 +13288,29 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: h.CouponPreviewContainer,
             children: [
-              (0, a.jsx)(Ct, {
+              (0, a.jsx)(vt, {
                 className: h.PreviewBackgroundContainer,
                 step: this.props.step,
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -13334,12 +13333,12 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -13363,11 +13362,11 @@
                 t[0].community_item_data.item_image_small);
           }
           let r = { image_small: s.frame };
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: h.GoldenProfileContainer,
             children: [
-              (0, a.jsx)(Ct, {
+              (0, a.jsx)(vt, {
                 className: h.GoldenProfilePreviewContainer,
                 step: this.props.step,
                 children: (0, a.jsx)("div", {
@@ -13381,15 +13380,15 @@
                   }),
                 }),
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
-                children: (0, a.jsx)(ht, {
+                children: (0, a.jsx)(_t, {
                   children: (0, g.we)("#Redeem_GoldenProfile_Expiration"),
                 }),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -13443,12 +13442,12 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(wt, {
+            ? (0, a.jsx)(yt, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
               : null;
         }
         GetProfileSteamID() {
@@ -13469,11 +13468,11 @@
               f.DZ.Get().GetMaxProfileShowcaseUpgradeLevel(),
             ),
             r = 0.5 * this.state.iframeHeight;
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: h.ProfileShowcaseContainer,
             children: [
-              (0, a.jsxs)(Ct, {
+              (0, a.jsxs)(vt, {
                 className: (0, F.A)(
                   h.ProfileShowcasePreviewContainer,
                   e ? h.LoadedPreview : h.LoadingPreview,
@@ -13517,12 +13516,12 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -13546,7 +13545,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+            ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
@@ -13600,7 +13599,7 @@
                 e.defid,
               );
             });
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: h.BundleItemContainer,
             children: [
@@ -13608,12 +13607,12 @@
                 className: h.BundleItemPreviewContainer,
                 children: e,
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -13626,7 +13625,20 @@
           });
         }
       }
-      class mt extends o.Component {
+      function mt(e) {
+        return (0, x.Qn)()
+          ? null
+          : (0, a.jsx)("div", {
+              className: h.PreviewLinkContainer,
+              children: (0, a.jsx)("a", {
+                href: e.strPreviewURL,
+                target: "_blank",
+                className: h.PreviewLink,
+                children: (0, g.we)("#ProfileModifier_PreviewLinkText"),
+              }),
+            });
+      }
+      class ut extends o.Component {
         constructor(e) {
           super(e), (this.state = { bLoadedIFrame: !1 });
         }
@@ -13647,7 +13659,7 @@
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? (0, a.jsx)(yt, { closeModal: this.props.closeModal })
+            ? (0, a.jsx)(It, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
@@ -13708,7 +13720,7 @@
               i +
               "&itemtype=" +
               s;
-          return (0, a.jsxs)(Nt, {
+          return (0, a.jsxs)(Bt, {
             ref: this.props.containerRef,
             className: (0, F.A)(
               h.BundleItemContainer,
@@ -13741,26 +13753,17 @@
                   },
                 }),
               }),
-              !x.TS.IN_GAMEPADUI &&
-                (0, a.jsx)("div", {
-                  className: h.PreviewLinkContainer,
-                  children: (0, a.jsx)("a", {
-                    href: n,
-                    target: "_blank",
-                    className: h.PreviewLink,
-                    children: (0, g.we)("#ProfileModifier_PreviewLinkText"),
-                  }),
-                }),
+              (0, a.jsx)(mt, { strPreviewURL: n }),
               (0, a.jsx)("div", {
                 className: h.BundleItemPreviewContainer,
                 children: r,
               }),
-              (0, a.jsx)(St, {
+              (0, a.jsx)(Nt, {
                 definition: this.props.definition,
                 step: this.props.step,
                 description: this.GetDescription(),
               }),
-              (0, a.jsx)(jt, {
+              (0, a.jsx)(Ct, {
                 fnReloadItemDef: this.props.fnReloadItemDef,
                 bRequestInProgress: this.props.bRequestInProgress,
                 definition: this.props.definition,
@@ -13773,7 +13776,7 @@
           });
         }
       }
-      const ut = {
+      const pt = {
           [y.Ed]: Xe,
           [y.sU]: Je,
           [y.J4]: $e,
@@ -13786,7 +13789,7 @@
           [y.yZ]: rt,
           [y.Tl]: nt,
         },
-        pt = (0, m.PA)((e) => {
+        ht = (0, m.PA)((e) => {
           let t = null;
           switch (e.definition.type) {
             case 3:
@@ -13801,8 +13804,8 @@
                   : e.definition.rewardDefinition.community_item_class ==
                         y.jE &&
                       0 != e.definition.rewardDefinition.bundle_defids?.length
-                    ? mt
-                    : ut[e.definition.rewardDefinition.community_item_class];
+                    ? ut
+                    : pt[e.definition.rewardDefinition.community_item_class];
           }
           return t
             ? (0, a.jsx)(t, { ...e })
@@ -13810,7 +13813,7 @@
               ? (0, a.jsx)(ot, { ...e })
               : null;
         }),
-        ht = (e) => {
+        _t = (e) => {
           const { className: t, ...i } = e;
           return (0, a.jsxs)("div", {
             className: (0, F.A)(h.WarningTextContainer, e.className),
@@ -13821,7 +13824,7 @@
             ],
           });
         },
-        _t = (e) => {
+        gt = (e) => {
           const {
             cost: t,
             discount: i,
@@ -13831,7 +13834,7 @@
           } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(gt, {
+              (0, a.jsx)(ft, {
                 cost: t,
                 discount: i,
                 originalCost: s,
@@ -13844,7 +13847,7 @@
             ],
           });
         },
-        gt = (e) => {
+        ft = (e) => {
           const {
             cost: t,
             discount: i,
@@ -13904,7 +13907,7 @@
             }),
           });
         },
-        ft = (e) => {
+        wt = (e) => {
           const { closeModal: t } = e,
             i = () => {
               (window.location.href = "steam://open/friends"), t();
@@ -13949,7 +13952,7 @@
                 ],
               });
         },
-        wt = (e) => {
+        yt = (e) => {
           const { equipItem: t, closeModal: i } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -13964,7 +13967,7 @@
             ],
           });
         },
-        yt = (e) => {
+        It = (e) => {
           const { closeModal: t } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -13980,7 +13983,7 @@
             ],
           });
         },
-        It = (e) => {
+        Mt = (e) => {
           const { closeModal: t } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -13998,7 +14001,7 @@
             ],
           });
         },
-        Mt = (e) => {
+        xt = (e) => {
           const { closeModal: t } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -14016,7 +14019,7 @@
             ],
           });
         },
-        xt = (e) => {
+        jt = (e) => {
           const { closeModal: t, fnReloadItemDef: i } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -14031,7 +14034,7 @@
             ],
           });
         },
-        jt = (e) => {
+        Ct = (e) => {
           const {
             step: t,
             definition: i,
@@ -14087,7 +14090,7 @@
                   originalCost: parseInt(e.rewardDefinition.point_cost),
                 };
               })(i);
-            d = (0, a.jsx)(_t, {
+            d = (0, a.jsx)(gt, {
               cost: e,
               discount: t,
               originalCost: n,
@@ -14096,9 +14099,9 @@
             });
           } else
             "cantredeemforapp" == t
-              ? (d = (0, a.jsx)(It, { closeModal: s }))
+              ? (d = (0, a.jsx)(Mt, { closeModal: s }))
               : "cantafford" == t
-                ? (d = (0, a.jsx)(Mt, { closeModal: s }))
+                ? (d = (0, a.jsx)(xt, { closeModal: s }))
                 : "saleitem" == t
                   ? (d = (0, a.jsxs)(a.Fragment, {
                       children: [
@@ -14113,7 +14116,7 @@
                       ],
                     }))
                   : "pricechange" == t &&
-                    (d = (0, a.jsx)(xt, { fnReloadItemDef: o, closeModal: s }));
+                    (d = (0, a.jsx)(jt, { fnReloadItemDef: o, closeModal: s }));
           return (0, a.jsx)(l.Z, {
             "flow-children": "row",
             className: h.ItemButtonsContainer,
@@ -14121,7 +14124,7 @@
             children: d,
           });
         },
-        Ct = (e) => {
+        vt = (e) => {
           const { step: t, className: i, ...s } = e;
           let r = null;
           return (
@@ -14140,7 +14143,7 @@
             })
           );
         },
-        vt = (e) => {
+        bt = (e) => {
           const { icon: t, ...i } = e;
           return (0, a.jsx)("div", {
             className: h.ChatPickerContainer,
@@ -14152,7 +14155,7 @@
             }),
           });
         },
-        bt = (e) => {
+        St = (e) => {
           const { definition: t, badgeLevel: i, title: s } = e;
           if (!i) return null;
           let r = t.community_item_data.badge_data[i - 1]?.image,
@@ -14189,7 +14192,7 @@
             })
           );
         },
-        St = (e) => {
+        Nt = (e) => {
           const { definition: t, step: i, description: s, ...r } = e;
           let n,
             o = null;
@@ -14234,7 +14237,7 @@
             ],
           });
         },
-        Nt = o.forwardRef((e, t) => {
+        Bt = o.forwardRef((e, t) => {
           const { className: i, ...s } = e;
           return (0, a.jsx)(l.Z, {
             ref: t,
@@ -14243,7 +14246,7 @@
             children: e.children,
           });
         });
-      function Bt(e) {
+      function At(e) {
         const { children: t, destructive: i, onEscKeypress: s } = e;
         return (0, a.jsx)(_.x_, {
           onEscKeypress: s,
@@ -14254,7 +14257,7 @@
           children: t,
         });
       }
-      function At(e) {
+      function Dt(e) {
         const t = "desktop" !== (0, Ae.xC)();
         return (0, a.jsx)(l.Z, {
           className: (0, F.A)(h.ModalContainer, t && h.Responsive),

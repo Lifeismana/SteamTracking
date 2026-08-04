@@ -169,7 +169,7 @@
     },
     92557: (e, t, a) => {
       "use strict";
-      a.d(t, { K8: () => Pe, P2: () => Ge, jA: () => Be });
+      a.d(t, { K8: () => Pe, P2: () => Ge, jA: () => fe });
       var s = a(34629),
         n = a(7850),
         i = a(22837),
@@ -396,8 +396,8 @@
         C = a(52885),
         N = a(32803),
         I = a(46107),
-        B = a(43667),
-        f = a(64940),
+        f = a(43667),
+        B = a(64940),
         P = a(90316),
         G = a.n(P),
         L = a(67417),
@@ -448,10 +448,12 @@
             document.removeChild(a);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t, a) {
-          const s = Z().unparse(e, { header: !0 }),
-            n = 1 == a ? ["\ufeff" + s] : [s];
-          $.WriteFile(new Blob(n, { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, a, s) {
+          const n = s
+              ? Z().unparse({ fields: s, data: e }, { header: !0 })
+              : Z().unparse(e, { header: !0 }),
+            i = 1 == a ? ["\ufeff" + n] : [n];
+          $.WriteFile(new Blob(i, { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {
@@ -1120,7 +1122,7 @@
             a.e(68396),
           ]).then(a.bind(a, 49850)),
         ),
-        Be = (0, d.PA)((e) => {
+        fe = (0, d.PA)((e) => {
           const {
               event: t,
               lang: a,
@@ -1165,7 +1167,7 @@
               }),
             });
           let I = t.GetDescriptionWithFallback(a);
-          return (0, n.jsx)(fe, {
+          return (0, n.jsx)(Be, {
             event: t,
             lang: a,
             titleBar: p,
@@ -1218,13 +1220,13 @@
                         (0, n.jsxs)(b.tH, {
                           children: [
                             t.BHasTag("steam_award_nomination_request") &&
-                              (0, n.jsx)(f.EventDisplaySteamAwardNomination, {
+                              (0, n.jsx)(B.EventDisplaySteamAwardNomination, {
                                 event: t,
                                 lang: a,
                                 previewMode: g,
                               }),
                             t.BHasTag("steam_award_vote_request") &&
-                              (0, n.jsx)(f.WinterSaleSteamAwardVoteWrapper, {
+                              (0, n.jsx)(B.WinterSaleSteamAwardVoteWrapper, {
                                 appID: t.appid,
                                 bIsEventActionEnabled:
                                   t.BIsEventActionEnabled(),
@@ -1356,7 +1358,7 @@
             }),
           });
         }),
-        fe = (0, d.PA)((e) => {
+        Be = (0, d.PA)((e) => {
           const {
               event: t,
               lang: a,
@@ -1492,7 +1494,7 @@
                       d < _ &&
                       (0, n.jsx)("div", {
                         className: G().EventDetailTimeInfo,
-                        children: (0, n.jsx)(B.j, { eventModel: t, lang: a }),
+                        children: (0, n.jsx)(f.j, { eventModel: t, lang: a }),
                       }),
                     (0, n.jsxs)("div", {
                       className: G().EventDetailUserType,
@@ -1762,15 +1764,15 @@
           strInvalidDateTimeLocalizedMsg: C,
           fnIsValidDateTime: N,
           bWeekdaysOnly: I,
-          fnSetTimeToUpdate: B,
-          bForce24HourFormat: f,
+          fnSetTimeToUpdate: f,
+          bForce24HourFormat: B,
           bAllowClear: P,
         } = e;
         let G =
           (function () {
             const e = g()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
-          })() || f
+          })() || B
             ? x
             : S;
         const L = i(),
@@ -1829,7 +1831,7 @@
               (e = e.clone()).hour(a.hour()),
                 e.minute(a.minute()),
                 e.second(0),
-                B(e.unix()),
+                f(e.unix()),
                 H(e);
             },
             U,
@@ -1857,7 +1859,7 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              B(s), H(g().unix(s));
+              f(s), H(g().unix(s));
             },
             M,
           ),
@@ -1984,7 +1986,7 @@
                     type: "button",
                     className: u().ClearButton,
                     onClick: () => {
-                      v || (B(0), H(null), U(null), M(null), F((e) => e + 1));
+                      v || (f(0), H(null), U(null), M(null), F((e) => e + 1));
                     },
                     children: (0, m.we)("#Button_Clear"),
                   }),

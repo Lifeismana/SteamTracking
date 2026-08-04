@@ -1,0 +1,16 @@
+.RgOQ2zp5-Og- {
+  --bg-color: rgb(from var(--color-dull-10) r g b / 60%);
+  background-color: var(--bg-color);
+  animation: 2s ease-in-out infinite fzWQmEUyG7Y-;
+}
+@keyframes fzWQmEUyG7Y- {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}

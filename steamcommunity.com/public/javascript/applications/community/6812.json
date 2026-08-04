@@ -292,10 +292,19 @@
     "MyHistory_Title_ActedOnTime": "發生時間",
     "MyHistory_Title_TransactedPrice": "價格",
     "MyHistory_Title_Action": "動作",
+    "MyListings_Title_ListedPrice": "上架價格",
+    "MyListings_Title_MedianPrice": "通常售價為",
+    "MyListings_ListingPrice": "%1$s <1>（%2$s）</1>",
+    "MyBuyOrders_Title_Quantity": "已購買的數量",
+    "MyBuyOrders_Title_BidPrice": "想要的價格",
+    "MyBuyOrders_QuantityPurchased": "%1$s / %2$s",
     "MyHistory_NoResults": "找不到結果",
     "MyHistory_Action_Sold": "售出",
     "MyHistory_Action_Purchased": "購買",
     "Breadcrumbs_Label_History": "我的歷史記錄",
     "Breadcrumbs_Label_Listings": "我的上架物品",
-    "Breadcrumbs_Label_BuyOrders": "我的訂購單"
+    "Breadcrumbs_Label_BuyOrders": "我的訂購單",
+    "MyListings_SectionHeader_Button_History": "My Market History",
+    "MyListings_SectionHeader_Button_Listings": "My Active Sell Listings (%1$s)",
+    "MyListings_SectionHeader_Button_BuyOrders": "My Active Buy Orders (%1$s)"
 }

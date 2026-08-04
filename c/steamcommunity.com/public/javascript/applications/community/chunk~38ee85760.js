@@ -25,6 +25,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
@@ -124,6 +125,33 @@
           ..._,
         };
         return new Date(1e3 * _).toLocaleDateString((0, _._)(), _);
+      }
+      function _(_, _) {
+        const {
+            fullmonthname: _ = !1,
+            bUseRelativeNames: _ = !0,
+            bIncludeDayName: _ = !1,
+          } = null != _ ? _ : {},
+          _ = new Date(),
+          _ = new Date(1e3 * _);
+        if (_.getFullYear() != _.getFullYear())
+          return _(_, {
+            month: _ ? "long" : "short",
+          });
+        const _ = new Date();
+        if ((_.setHours(0, 0, 0, 0), _))
+          if (_ >= _) {
+            if ((_.setDate(_.getDate() + 1), _ < _))
+              return _.Localize("#Time_Today");
+            if ((_.setDate(_.getDate() + 1), _ < _))
+              return _.Localize("#Time_Tomorrow");
+          } else if ((_.setDate(_.getDate() - 1), _ >= _))
+            return _.Localize("#Time_Yesterday");
+        const _ = {
+          month: _ ? "long" : "short",
+          day: "numeric",
+        };
+        return _ && (_.weekday = "long"), _.toLocaleDateString((0, _._)(), _);
       }
       function _(_, _, _) {
         const _ = new Date(1e3 * _),

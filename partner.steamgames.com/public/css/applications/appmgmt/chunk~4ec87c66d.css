@@ -22,10 +22,12 @@
   outline: 2px solid #fff;
   outline-offset: -2px;
 }
-._0BH1ydyFmSnUvoVK2hIc:disabled {
+._0BH1ydyFmSnUvoVK2hIc:disabled,
+._0BH1ydyFmSnUvoVK2hIc[aria-disabled="true"] {
   opacity: 0.35;
 }
-._0BH1ydyFmSnUvoVK2hIc:disabled:hover {
+._0BH1ydyFmSnUvoVK2hIc:disabled:hover,
+._0BH1ydyFmSnUvoVK2hIc[aria-disabled="true"]:hover {
   background: var(--background);
   cursor: default;
 }
@@ -10656,6 +10658,7 @@ textarea._3793xvP87t1rZYbAQDC1pG {
 ._2pZVu5uwOWvVnfNisJPOB9 {
   display: flex;
   flex-grow: 1;
+  min-width: 0;
 }
 ._3N5be2rmYYNMGufXaKpBSb {
   box-sizing: border-box;

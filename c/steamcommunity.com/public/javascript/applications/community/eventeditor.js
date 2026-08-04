@@ -16343,7 +16343,14 @@
                         (0, _._)(_.rtime_stop_firing),
                       ),
                     }),
-                  "queued" != _.state &&
+                  "window_closed" == _.state &&
+                    (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#EventEmail_Stats_WindowClosed",
+                        (0, _._)(_.rtime_stop_firing),
+                      ),
+                    }),
+                  Boolean(_.rtime_last_update_time) &&
                     (0, _.jsxs)(_.Fragment, {
                       children: [
                         (0, _.jsx)("div", {

@@ -1,0 +1,35 @@
+._7-YnTYBrWGM- {
+  opacity: 0;
+  background: #070707;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+._7-YnTYBrWGM- .tK5agp5sRy8- {
+  scroll-margin-top: 150px;
+  scroll-margin-bottom: 100px;
+}
+._7-YnTYBrWGM- img {
+  width: 100%;
+  display: block;
+}
+._7-YnTYBrWGM-.CZIkT3axIG8- {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+._7-YnTYBrWGM-.QZ-BCWkxxn0- {
+  aspect-ratio: 1;
+}
+._7-YnTYBrWGM-.P-hrWw6KqUE- {
+  aspect-ratio: 16 / 9;
+}
+._7-YnTYBrWGM-.kUR8PF3keI4- {
+  aspect-ratio: 4 / 3;
+}
+._7-YnTYBrWGM-.sSHup54TcdY- {
+  aspect-ratio: 948 / 470;
+}

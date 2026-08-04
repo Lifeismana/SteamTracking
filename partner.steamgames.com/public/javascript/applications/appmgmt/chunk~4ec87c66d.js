@@ -3386,6 +3386,8 @@
                   (this.m_oMessage.associated_id = t),
                   (this.m_oMessage.associated_name = ""),
                   this.SetupStoreItemKey(),
+                  this.ClearSalePage(),
+                  (this.m_oAdditionalRestrictions.requires_sale_page = void 0),
                   this.Dispatch();
                 break;
               case o.OT.Zb:
@@ -3403,6 +3405,8 @@
             (this.m_oMessage.association_type = void 0),
             (this.m_oMessage.associated_id = void 0),
             (this.m_oMessage.associated_name = ""),
+            this.ClearSalePage(),
+            (this.m_oAdditionalRestrictions.requires_sale_page = void 0),
             this.Dispatch();
         }
         SetMessageTime(e, t) {
@@ -3754,7 +3758,8 @@
             this.Dispatch());
         }
         ClearSalePage() {
-          this.m_oAdditionalRestrictions.sale_clan_event_gid &&
+          (this.m_oAdditionalRestrictions.sale_clan_event_gid ||
+            this.m_oAdditionalRestrictions.sale_clan_account) &&
             ((this.m_oAdditionalRestrictions.sale_clan_account = void 0),
             (this.m_oAdditionalRestrictions.sale_clan_event_gid = void 0),
             this.Dispatch());
@@ -44901,7 +44906,8 @@
               }),
               (0, s.jsx)("img", {
                 className: r.DDVisibilityExample,
-                src: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg",
+                src:
+                  i.TS.COMMUNITY_CDN_ASSET_URL + "home/daily_deal_example.jpg",
                 alt: "Daily Deal Example",
               }),
             ],
@@ -59176,9 +59182,8 @@
             t.BAllowUnpublishedStorePreview(),
           ]),
           o = (0, me.O5)(i),
-          [l, c] = (0, d.useState)(t.BHasAssociatedSaleEvent()),
-          [p, u, m] = (0, ue.uD)(),
-          { data: h } = (0, pt.J$)(
+          [l, c, d] = (0, ue.uD)(),
+          { data: p } = (0, pt.J$)(
             n
               ? (0, ut.Jz)({ item_type: (0, j.JK)(n.item_type), id: n.id })
               : void 0,
@@ -59192,14 +59197,14 @@
                 className: wn.FeatureSelectBtn,
                 children: [
                   (0, s.jsx)(A.$n, {
-                    onClick: u,
+                    onClick: c,
                     children: "Change Selected Product",
                   }),
                   (0, s.jsx)(N.EN, {
-                    active: p,
+                    active: l,
                     children: (0, s.jsx)(Ht, {
                       oEditableMessage: t,
-                      closeModal: m,
+                      closeModal: d,
                     }),
                   }),
                   Boolean(n)
@@ -59234,15 +59239,15 @@
                 children:
                   "Actions click through to this store page and show prices from this:",
               }),
-              Boolean(!h)
+              Boolean(!p)
                 ? (0, s.jsx)("div", {
                     className: wn.TargetGamePlaceholder,
                     children: n
                       ? `${n.id}/${n.item_type}`
                       : "Nothing associated yet",
                   })
-                : (0, s.jsx)(V.cy, { id: n.id, itemType: h.item_type }),
-              Boolean(h && !h.visible) &&
+                : (0, s.jsx)(V.cy, { id: n.id, itemType: p.item_type }),
+              Boolean(p && !p.visible) &&
                 (0, s.jsx)("div", {
                   className: E.WarningStylesWithIcon,
                   children:
@@ -59251,17 +59256,8 @@
               Boolean(i == pe.D4.W8) &&
                 (0, s.jsx)(os.i, { oEditableMessage: t }),
               (0, s.jsx)(_s, { oEditableMessage: t }),
-              Boolean(h?.type == ee.uE.pl) &&
-                (0, s.jsx)(s.Fragment, {
-                  children: l
-                    ? (0, s.jsx)(Q.eq, { oEditablePlan: t })
-                    : (0, s.jsx)(A.Yh, {
-                        checked: !1,
-                        label:
-                          "Associated Store Item is an advertising app. Do we intend to point to a sales page?",
-                        onChange: c,
-                      }),
-                }),
+              Boolean(p?.type == ee.uE.pl) &&
+                (0, s.jsx)(Q.eq, { oEditablePlan: t }),
             ],
           }),
         });
@@ -70095,6 +70091,7 @@
           "#msg_publisher_sale",
           "#spotlight_franchise_sale",
           "#spotlight_thirdparty_event",
+          "#spotlight_major_update",
         ];
       var o = n(13810),
         l = n(97843),
@@ -75222,7 +75219,7 @@
         });
       });
       var on = n(23310),
-        ln = n(6256),
+        ln = n(93341),
         cn = n(62307);
       function dn(e) {
         const {

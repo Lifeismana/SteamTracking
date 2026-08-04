@@ -1,15 +1,15 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10862082";
+var CLSTAMP = "10882371";
 (() => {
   var e,
     t,
     n,
-    s,
+    i,
     r,
-    i = {
+    s = {
       9437: (e, t, n) => {
-        var s = {
+        var i = {
           "./friendsui_arabic.json": [64541, 6518],
           "./friendsui_brazilian.json": [34977, 4154],
           "./friendsui_bulgarian.json": [29322, 6385],
@@ -44,19 +44,19 @@ var CLSTAMP = "10862082";
           "./friendsui_vietnamese.json": [13414, 3789],
         };
         function r(e) {
-          if (!n.o(s, e))
+          if (!n.o(i, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = s[e],
+          var t = i[e],
             r = t[0];
           return n.e(t[1]).then(() => n.t(r, 19));
         }
-        (r.keys = () => Object.keys(s)), (r.id = 9437), (e.exports = r);
+        (r.keys = () => Object.keys(i)), (r.id = 9437), (e.exports = r);
       },
       48516: (e, t, n) => {
-        var s = {
+        var i = {
           "./friendsui_arabic.json": [64541, 6518],
           "./friendsui_brazilian.json": [34977, 4154],
           "./friendsui_bulgarian.json": [29322, 6385],
@@ -91,117 +91,23 @@ var CLSTAMP = "10862082";
           "./friendsui_vietnamese.json": [13414, 3789],
         };
         function r(e) {
-          if (!n.o(s, e))
+          if (!n.o(i, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = s[e],
+          var t = i[e],
             r = t[0];
           return n.e(t[1]).then(() => n.t(r, 19));
         }
-        (r.keys = () => Object.keys(s)), (r.id = 48516), (e.exports = r);
+        (r.keys = () => Object.keys(i)), (r.id = 48516), (e.exports = r);
       },
-      14919: (e, t, n) => {
-        var s = {
-          "./shared_arabic.json": [8476, 3710],
-          "./shared_brazilian.json": [99574, 6562],
-          "./shared_bulgarian.json": [43789, 1449],
-          "./shared_czech.json": [815, 7591],
-          "./shared_danish.json": [4289, 6523],
-          "./shared_dutch.json": [54978, 5110],
-          "./shared_english.json": [33800, 2256],
-          "./shared_finnish.json": [3907, 6031],
-          "./shared_french.json": [45040, 5018],
-          "./shared_german.json": [94750, 6208],
-          "./shared_greek.json": [69668, 9712],
-          "./shared_hungarian.json": [45233, 6165],
-          "./shared_indonesian.json": [90200, 8306],
-          "./shared_italian.json": [31864, 3912],
-          "./shared_japanese.json": [7263, 1973],
-          "./shared_koreana.json": [30295, 7539],
-          "./shared_latam.json": [50559, 2435],
-          "./shared_malay.json": [61136, 6332],
-          "./shared_norwegian.json": [86512, 2320],
-          "./shared_polish.json": [52889, 8967],
-          "./shared_portuguese.json": [72269, 6239],
-          "./shared_romanian.json": [34419, 2749],
-          "./shared_russian.json": [75777, 8025],
-          "./shared_sc_schinese.json": [23723, 9027],
-          "./shared_schinese.json": [85436, 7786],
-          "./shared_spanish.json": [76736, 2632],
-          "./shared_swedish.json": [94625, 1225],
-          "./shared_tchinese.json": [15191, 5241],
-          "./shared_thai.json": [4230, 976],
-          "./shared_turkish.json": [34792, 9152],
-          "./shared_ukrainian.json": [27246, 2954],
-          "./shared_vietnamese.json": [59863, 6149],
-        };
-        function r(e) {
-          if (!n.o(s, e))
-            return Promise.resolve().then(() => {
-              var t = new Error("Cannot find module '" + e + "'");
-              throw ((t.code = "MODULE_NOT_FOUND"), t);
-            });
-          var t = s[e],
-            r = t[0];
-          return n.e(t[1]).then(() => n.t(r, 19));
-        }
-        (r.keys = () => Object.keys(s)), (r.id = 14919), (e.exports = r);
-      },
-      68042: (e, t, n) => {
-        var s = {
-          "./shared_arabic.json": [8476, 3710],
-          "./shared_brazilian.json": [99574, 6562],
-          "./shared_bulgarian.json": [43789, 1449],
-          "./shared_czech.json": [815, 7591],
-          "./shared_danish.json": [4289, 6523],
-          "./shared_dutch.json": [54978, 5110],
-          "./shared_english.json": [33800, 2256],
-          "./shared_finnish.json": [3907, 6031],
-          "./shared_french.json": [45040, 5018],
-          "./shared_german.json": [94750, 6208],
-          "./shared_greek.json": [69668, 9712],
-          "./shared_hungarian.json": [45233, 6165],
-          "./shared_indonesian.json": [90200, 8306],
-          "./shared_italian.json": [31864, 3912],
-          "./shared_japanese.json": [7263, 1973],
-          "./shared_koreana.json": [30295, 7539],
-          "./shared_latam.json": [50559, 2435],
-          "./shared_malay.json": [61136, 6332],
-          "./shared_norwegian.json": [86512, 2320],
-          "./shared_polish.json": [52889, 8967],
-          "./shared_portuguese.json": [72269, 6239],
-          "./shared_romanian.json": [34419, 2749],
-          "./shared_russian.json": [75777, 8025],
-          "./shared_sc_schinese.json": [23723, 9027],
-          "./shared_schinese.json": [85436, 7786],
-          "./shared_spanish.json": [76736, 2632],
-          "./shared_swedish.json": [94625, 1225],
-          "./shared_tchinese.json": [15191, 5241],
-          "./shared_thai.json": [4230, 976],
-          "./shared_turkish.json": [34792, 9152],
-          "./shared_ukrainian.json": [27246, 2954],
-          "./shared_vietnamese.json": [59863, 6149],
-        };
-        function r(e) {
-          if (!n.o(s, e))
-            return Promise.resolve().then(() => {
-              var t = new Error("Cannot find module '" + e + "'");
-              throw ((t.code = "MODULE_NOT_FOUND"), t);
-            });
-          var t = s[e],
-            r = t[0];
-          return n.e(t[1]).then(() => n.t(r, 19));
-        }
-        (r.keys = () => Object.keys(s)), (r.id = 68042), (e.exports = r);
-      },
-      73059: (e, t, n) => {
+      16079: (e, t, n) => {
         "use strict";
-        n(9627);
-        var s = n(63696),
+        n(86775);
+        var i = n(63696),
           r = n(7470),
-          i = n(69227);
+          s = n(77855);
         const a = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -254,7 +160,6 @@ var CLSTAMP = "10862082";
             FROM_WEB: !1,
             WEBSITE_ID: "Unknown",
             IN_STEAMUI: !1,
-            IN_GAMEPADUI: !1,
             FORCED_DISPLAY_MODE: void 0,
             ON_FRAME: !1,
             IS_STEAMOS: !1,
@@ -283,7 +188,7 @@ var CLSTAMP = "10862082";
             is_valve_email: !1,
             short_url: "",
             country_code: "",
-            excluded_content_descriptors: [i.u7, i.T4, i.mx],
+            excluded_content_descriptors: [s.u7, s.T4, s.mx],
           },
           c = { steamid: "", clanid: 0, listid: 0 },
           l = {
@@ -307,9 +212,9 @@ var CLSTAMP = "10862082";
           return m(e, t, !0);
         }
         function m(e, t = _, n) {
-          let s;
+          let i;
           if (
-            ((s =
+            ((i =
               "string" == typeof t
                 ? {
                     NODE_ENV: "production",
@@ -319,11 +224,11 @@ var CLSTAMP = "10862082";
                   ? null
                   : document.getElementById(t)
                 : t),
-            s)
+            i)
           )
             try {
-              if (s.hasAttribute("data-" + e)) {
-                return JSON.parse(s.getAttribute("data-" + e));
+              if (i.hasAttribute("data-" + e)) {
+                return JSON.parse(i.getAttribute("data-" + e));
               }
               return null;
             } catch (e) {
@@ -342,9 +247,9 @@ var CLSTAMP = "10862082";
           const t = {},
             n = h("config", e);
           n && (Object.assign(a, n), (t.config = !0));
-          const s = h("userinfo", e);
-          s &&
-            (Object.assign(o, s),
+          const i = h("userinfo", e);
+          i &&
+            (Object.assign(o, i),
             (t.userConfig = !0),
             o.is_support &&
               (function () {
@@ -360,8 +265,8 @@ var CLSTAMP = "10862082";
               (o.is_support = !1));
           const r = h("broadcast", e);
           r && (Object.assign(c, r), (t.broadcastConfig = !0));
-          const i = h("community", e);
-          i && (Object.assign(l, i), (t.communityConfig = !0));
+          const s = h("community", e);
+          s && (Object.assign(l, s), (t.communityConfig = !0));
           const m = h("event", e);
           return (
             m && (Object.assign(d, m), (t.eventConfig = !0)),
@@ -373,10 +278,10 @@ var CLSTAMP = "10862082";
         let g = new Set(),
           f = !1;
         const k = "presentation_mode";
-        s.createContext({});
+        i.createContext({});
         n(83957), n(22386);
         new Map();
-        var I;
+        var E, b, I;
         !(function (e) {
           (e[(e.kPFIFlag_MicroTransactionFile = 1)] =
             "kPFIFlag_MicroTransactionFile"),
@@ -426,9 +331,78 @@ var CLSTAMP = "10862082";
               "kPFIFlag_ManagedContentDescriptors"),
             (e[(e.kPFIFlag_HasAuthorSnapshots = 268435456)] =
               "kPFIFlag_HasAuthorSnapshots");
-        })(I || (I = {}));
-        const b = 2147483647,
-          S = 30;
+        })(E || (E = {})),
+          (function (e) {
+            (e[(e.k_EPFSplitType_MicrotransactionItem = 0)] =
+              "k_EPFSplitType_MicrotransactionItem"),
+              (e[(e.k_EPFSplitType_WorkshopItem = 1)] =
+                "k_EPFSplitType_WorkshopItem"),
+              (e[(e.k_EPFSplitType_GreenlightItem = 2)] =
+                "k_EPFSplitType_GreenlightItem"),
+              (e[(e.k_EPFSplitType_SharedFile = 3)] =
+                "k_EPFSplitType_SharedFile");
+          })(b || (b = {})),
+          (function (e) {
+            (e[(e.k_EPFAuditAction_Banned = 1)] = "k_EPFAuditAction_Banned"),
+              (e[(e.k_EPFAuditAction_UnBanned = 2)] =
+                "k_EPFAuditAction_UnBanned"),
+              (e[(e.k_EPFAuditAction_AddedIncompatibleFlag = 3)] =
+                "k_EPFAuditAction_AddedIncompatibleFlag"),
+              (e[(e.k_EPFAuditAction_RemovedIncompatibleFlag = 4)] =
+                "k_EPFAuditAction_RemovedIncompatibleFlag"),
+              (e[(e.k_EPFAuditAction_AddedForceInappropriateFlag = 5)] =
+                "k_EPFAuditAction_AddedForceInappropriateFlag"),
+              (e[(e.k_EPFAuditAction_RemovedForceInappropriateFlag = 6)] =
+                "k_EPFAuditAction_RemovedForceInappropriateFlag"),
+              (e[(e.k_EPFAuditAction_AddedForceAppropriateFlag = 7)] =
+                "k_EPFAuditAction_AddedForceAppropriateFlag"),
+              (e[(e.k_EPFAuditAction_RemovedForceAppropriateFlag = 8)] =
+                "k_EPFAuditAction_RemovedForceAppropriateFlag"),
+              (e[(e.k_EPFAuditAction_AddedAcceptedForUseFlag = 9)] =
+                "k_EPFAuditAction_AddedAcceptedForUseFlag"),
+              (e[(e.k_EPFAuditAction_RemovedAcceptedForUseFlag = 10)] =
+                "k_EPFAuditAction_RemovedAcceptedForUseFlag"),
+              (e[(e.k_EPFAuditAction_ClearedReports = 11)] =
+                "k_EPFAuditAction_ClearedReports"),
+              (e[(e.k_EPFAuditAction_RequireVerification = 12)] =
+                "k_EPFAuditAction_RequireVerification"),
+              (e[(e.k_EPFAuditAction_ResendVerificationEmail = 13)] =
+                "k_EPFAuditAction_ResendVerificationEmail"),
+              (e[(e.k_EPFAuditAction_SubmissionVerified = 14)] =
+                "k_EPFAuditAction_SubmissionVerified"),
+              (e[(e.k_EPFAuditAction_ApprovedByModerator = 15)] =
+                "k_EPFAuditAction_ApprovedByModerator"),
+              (e[(e.k_EPFAuditAction_RejectedByModerator = 16)] =
+                "k_EPFAuditAction_RejectedByModerator"),
+              (e[(e.k_EPFAuditAction_ApprovedForSteamChina = 17)] =
+                "k_EPFAuditAction_ApprovedForSteamChina"),
+              (e[(e.k_EPFAuditAction_RejectedForSteamChina = 18)] =
+                "k_EPFAuditAction_RejectedForSteamChina"),
+              (e[(e.k_EPFAuditAction_AddedIgnoreTextContentCheckFlag = 19)] =
+                "k_EPFAuditAction_AddedIgnoreTextContentCheckFlag"),
+              (e[(e.k_EPFAuditAction_RemovedIgnoreTextContentCheckFlag = 20)] =
+                "k_EPFAuditAction_RemovedIgnoreTextContentCheckFlag"),
+              (e[(e.k_EPFAuditAction_VoteBannedUsers = 21)] =
+                "k_EPFAuditAction_VoteBannedUsers"),
+              (e[(e.k_EPFAuditAction_ClearedVoteBannedUsers = 22)] =
+                "k_EPFAuditAction_ClearedVoteBannedUsers"),
+              (e[(e.k_EPFAuditAction_Deleted = 23)] =
+                "k_EPFAuditAction_Deleted"),
+              (e[(e.k_EPFAuditAction_PermanentlyDeleted = 24)] =
+                "k_EPFAuditAction_PermanentlyDeleted"),
+              (e[(e.k_EPFAuditAction_AddedContentDescriptor = 25)] =
+                "k_EPFAuditAction_AddedContentDescriptor"),
+              (e[(e.k_EPFAuditAction_RemovedContentDescriptor = 26)] =
+                "k_EPFAuditAction_RemovedContentDescriptor"),
+              (e[(e.k_EPFAuditAction_AddedRestrictedCountry = 27)] =
+                "k_EPFAuditAction_AddedRestrictedCountry"),
+              (e[(e.k_EPFAuditAction_RemovedRestrictedCountry = 28)] =
+                "k_EPFAuditAction_RemovedRestrictedCountry"),
+              (e[(e.k_EPFAuditAction_TransferredOwnership = 29)] =
+                "k_EPFAuditAction_TransferredOwnership");
+          })(I || (I = {}));
+        const S = 2147483647,
+          A = 30;
         [
           ["None", "none", -1],
           ["Afrikaans", "afrikaans", 0],
@@ -510,7 +484,7 @@ var CLSTAMP = "10862082";
           shortName: e[1],
           eAdditionalLanguage: e[2],
         }));
-        function E(e, t = 0) {
+        function F(e, t = 0) {
           switch (e) {
             case "english":
               return 0;
@@ -574,14 +548,14 @@ var CLSTAMP = "10862082";
             case "sc_schinese":
               return 29;
             case "indonesian":
-              return S;
+              return A;
             case "malay":
               return 31;
             default:
               return t;
           }
         }
-        var v, C, y, T, j, A, F, R;
+        var v, P, C, y, T, R, w, L;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -611,7 +585,7 @@ var CLSTAMP = "10862082";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(C || (C = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -625,7 +599,7 @@ var CLSTAMP = "10862082";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(y || (y = {})),
+          })(C || (C = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -635,7 +609,7 @@ var CLSTAMP = "10862082";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(T || (T = {})),
+          })(y || (y = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -645,7 +619,7 @@ var CLSTAMP = "10862082";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(j || (j = {})),
+          })(T || (T = {})),
           (function (e) {
             (e[(e.k_EAppUpdateProgress_VerifyingInstalledFiles = 0)] =
               "k_EAppUpdateProgress_VerifyingInstalledFiles"),
@@ -663,7 +637,7 @@ var CLSTAMP = "10862082";
                 "k_EAppUpdateProgress_Committing"),
               (e[(e.k_EAppUpdateProgress_Max = 7)] =
                 "k_EAppUpdateProgress_Max");
-          })(A || (A = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -671,14 +645,14 @@ var CLSTAMP = "10862082";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(F || (F = {})),
+          })(w || (w = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(R || (R = {}));
-        var P, w, L, M, U, G;
+          })(L || (L = {}));
+        var M, U, G, j, O, N;
         !(function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -686,14 +660,14 @@ var CLSTAMP = "10862082";
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(P || (P = {})),
+        })(M || (M = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(w || (w = {})),
+          })(U || (U = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -707,12 +681,12 @@ var CLSTAMP = "10862082";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })(L || (L = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
               (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
               (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
-          })(M || (M = {})),
+          })(j || (j = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -746,7 +720,7 @@ var CLSTAMP = "10862082";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(U || (U = {})),
+          })(O || (O = {})),
           (function (e) {
             (e[(e.k_EWindowBringToFrontInvalid = 0)] =
               "k_EWindowBringToFrontInvalid"),
@@ -754,51 +728,59 @@ var CLSTAMP = "10862082";
                 "k_EWindowBringToFrontAndForceOS"),
               (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS");
-          })(G || (G = {}));
-        var O;
+          })(N || (N = {}));
+        var B, D;
         !(function (e) {
-          (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-            (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-            (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-        })(O || (O = {}));
-        function N(e, t, ...n) {
+          (e[(e.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
+            "k_ETwoFactorTokenSteamguardScheme_None"),
+            (e[(e.k_ETwoFactorTokenSteamguardScheme_Email = 1)] =
+              "k_ETwoFactorTokenSteamguardScheme_Email"),
+            (e[(e.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
+              "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
+        })(B || (B = {})),
+          (function (e) {
+            (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+              (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+              (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+          })(D || (D = {}));
+        function x(e, t, ...n) {
           console.assert
             ? 0 == n.length
               ? console.assert(!!e, t)
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        var B = n(42946);
-        function D(e, t, n, s) {
+        var V = n(63676);
+        function W(e, t, n, i) {
           var r,
-            i = arguments.length,
+            s = arguments.length,
             a =
-              i < 3
+              s < 3
                 ? t
-                : null === s
-                  ? (s = Object.getOwnPropertyDescriptor(t, n))
-                  : s;
+                : null === i
+                  ? (i = Object.getOwnPropertyDescriptor(t, n))
+                  : i;
           if (
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
           )
-            a = Reflect.decorate(e, t, n, s);
+            a = Reflect.decorate(e, t, n, i);
           else
             for (var o = e.length - 1; o >= 0; o--)
               (r = e[o]) &&
-                (a = (i < 3 ? r(a) : i > 3 ? r(t, n, a) : r(t, n)) || a);
-          return i > 3 && a && Object.defineProperty(t, n, a), a;
+                (a = (s < 3 ? r(a) : s > 3 ? r(t, n, a) : r(t, n)) || a);
+          return s > 3 && a && Object.defineProperty(t, n, a), a;
         }
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        function x(e, t) {
+        function H(e, t) {
           return (function (e, t) {
             const n = e.findIndex(t);
             return n >= 0 && (e.splice(n, 1), !0);
           })(e, (e) => t == e);
         }
-        function W(e, t, n) {
+        function z(e, t, n) {
           return {
             get() {
               let e = n.value.bind(this);
@@ -810,13 +792,13 @@ var CLSTAMP = "10862082";
             },
           };
         }
-        class H {
+        class $ {
           m_vecCallbacks = [];
           Register(e) {
             this.m_vecCallbacks.push(e);
             return {
               Unregister: () => {
-                x(this.m_vecCallbacks, e);
+                H(this.m_vecCallbacks, e);
               },
             };
           }
@@ -832,14 +814,14 @@ var CLSTAMP = "10862082";
           static PromiseFromAny(e) {
             return new Promise((t) => {
               let n = [];
-              const s = () => {
+              const i = () => {
                 n.forEach((e) => e.Unregister()), t();
               };
-              for (const t of e) n.push(t.Register(s));
+              for (const t of e) n.push(t.Register(i));
             });
           }
         }
-        class V {
+        class K {
           SyncStore(e) {
             return this.Subscribe(e).Unsubscribe;
           }
@@ -847,10 +829,10 @@ var CLSTAMP = "10862082";
             return this.Value;
           }
         }
-        D([W], V.prototype, "SyncStore", null),
-          D([W], V.prototype, "GetValue", null);
-        D(
-          [W],
+        W([z], K.prototype, "SyncStore", null),
+          W([z], K.prototype, "GetValue", null);
+        W(
+          [z],
           class {
             m_schTimer;
             m_fnCallback;
@@ -864,11 +846,11 @@ var CLSTAMP = "10862082";
                 ));
             }
             AsyncSchedule(e, t) {
-              return new Promise((n, s) => {
+              return new Promise((n, i) => {
                 this.Schedule(e, () => {
                   t(), n();
                 }),
-                  (this.m_fnOnCancel = s);
+                  (this.m_fnOnCancel = i);
               });
             }
             IsScheduled() {
@@ -893,15 +875,15 @@ var CLSTAMP = "10862082";
           "ScheduledInternal",
           null,
         );
-        D(
-          [W],
+        W(
+          [z],
           class {
             m_vecCallbacks = [];
             Push(e) {
               this.m_vecCallbacks.push(e);
             }
             PushArrayRemove(e, t) {
-              this.m_vecCallbacks.push(() => x(e, t));
+              this.m_vecCallbacks.push(() => H(e, t));
             }
             Unregister() {
               for (const e of this.m_vecCallbacks) e();
@@ -914,19 +896,272 @@ var CLSTAMP = "10862082";
           "Unregister",
           null,
         );
-        var z;
+        const q = window.Config ?? a,
+          Y =
+            (window.UserConfig,
+            window.Config
+              ? () => Promise.resolve()
+              : function () {
+                  return f
+                    ? Promise.resolve()
+                    : new Promise((e) => {
+                        g.add(e);
+                      });
+                });
+        window.Config && Object.assign(a, window.Config),
+          window.UserConfig && Object.assign(o, window.UserConfig);
+        const Q = new Set([
+          "sc_schinese",
+          "schinese",
+          "tchinese",
+          "japanese",
+          "koreana",
+          "thai",
+          "arabic",
+          "indonesian",
+          "malay",
+          "bulgarian",
+          "czech",
+          "danish",
+          "german",
+          "english",
+          "spanish",
+          "latam",
+          "greek",
+          "french",
+          "italian",
+          "hungarian",
+          "dutch",
+          "norwegian",
+          "polish",
+          "portuguese",
+          "brazilian",
+          "romanian",
+          "russian",
+          "finnish",
+          "swedish",
+          "turkish",
+          "vietnamese",
+          "ukrainian",
+        ]);
+        const J = new Map([
+          ["en", "english"],
+          ["de", "german"],
+          ["fr", "french"],
+          ["it", "italian"],
+          ["ko", "koreana"],
+          ["es-419", "latam"],
+          ["es", "spanish"],
+          ["zh", "schinese"],
+          ["zh-cn", "schinese"],
+          ["zh-tw", "tchinese"],
+          ["ru", "russian"],
+          ["ar", "arabic"],
+          ["th", "thai"],
+          ["ja", "japanese"],
+          ["pt-br", "brazilian"],
+          ["pt", "portuguese"],
+          ["pl", "polish"],
+          ["da", "danish"],
+          ["nl", "dutch"],
+          ["fi", "finnish"],
+          ["nb", "norwegian"],
+          ["no", "norwegian"],
+          ["sv", "swedish"],
+          ["hu", "hungarian"],
+          ["cs", "czech"],
+          ["ro", "romanian"],
+          ["tr", "turkish"],
+          ["bg", "bulgarian"],
+          ["el", "greek"],
+          ["uk", "ukrainian"],
+          ["vn", "vietnamese"],
+          ["vi", "vietnamese"],
+          ["id", "indonesian"],
+          ["ms", "malay"],
+        ]);
+        const X = new Map();
+        for (const [e, t] of J.entries()) X.set(t, e);
+        function Z(e) {
+          if ("english" !== e)
+            return "sc_schinese" === e ? "schinese" : "english";
+        }
+        X.set("sc_schinese", X.get("schinese")),
+          X.set("korean", X.get("koreana"));
+        function ee(e, ...t) {
+          return 0 == t.length
+            ? e
+            : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
+                if (n <= t.length && n >= 1) {
+                  const e = t[n - 1];
+                  return String(null == e ? "" : e);
+                }
+                return e;
+              }));
+        }
+        let te;
+        te ??= new Set();
+        let ne = null;
+        var ie = n(61034);
+        function re() {
+          if (((e = q.LANGUAGE), !Q.has(e)))
+            throw `unknown language ${q.LANGUAGE}`;
+          return {
+            languages: [
+              {
+                strLanguage: q.LANGUAGE,
+                strISOCode: X.get(q.LANGUAGE),
+                eSource: 5,
+              },
+            ],
+          };
+          var e;
+        }
+        const se = {};
+        (se.arabic = () => n.e(8476).then(n.t.bind(n, 8476, 19))),
+          (se.brazilian = () => n.e(9574).then(n.t.bind(n, 99574, 19))),
+          (se.bulgarian = () => n.e(6170).then(n.t.bind(n, 43789, 19))),
+          (se.czech = () => n.e(815).then(n.t.bind(n, 815, 19))),
+          (se.danish = () => n.e(4289).then(n.t.bind(n, 4289, 19))),
+          (se.dutch = () => n.e(4978).then(n.t.bind(n, 54978, 19))),
+          (se.english = () => n.e(3800).then(n.t.bind(n, 33800, 19))),
+          (se.finnish = () => n.e(3907).then(n.t.bind(n, 3907, 19))),
+          (se.french = () => n.e(5040).then(n.t.bind(n, 45040, 19))),
+          (se.german = () => n.e(4750).then(n.t.bind(n, 94750, 19))),
+          (se.greek = () => n.e(9668).then(n.t.bind(n, 69668, 19))),
+          (se.hungarian = () => n.e(5233).then(n.t.bind(n, 45233, 19))),
+          (se.indonesian = () => n.e(200).then(n.t.bind(n, 90200, 19))),
+          (se.italian = () => n.e(1864).then(n.t.bind(n, 31864, 19))),
+          (se.japanese = () => n.e(7263).then(n.t.bind(n, 7263, 19))),
+          (se.koreana = () => n.e(295).then(n.t.bind(n, 30295, 19))),
+          (se.latam = () => n.e(559).then(n.t.bind(n, 50559, 19))),
+          (se.malay = () => n.e(1136).then(n.t.bind(n, 61136, 19))),
+          (se.norwegian = () => n.e(6512).then(n.t.bind(n, 86512, 19))),
+          (se.polish = () => n.e(2889).then(n.t.bind(n, 52889, 19))),
+          (se.portuguese = () => n.e(2269).then(n.t.bind(n, 72269, 19))),
+          (se.romanian = () => n.e(4419).then(n.t.bind(n, 34419, 19))),
+          (se.russian = () => n.e(5777).then(n.t.bind(n, 75777, 19))),
+          (se.sc_schinese = () => n.e(3723).then(n.t.bind(n, 23723, 19))),
+          (se.schinese = () => n.e(5436).then(n.t.bind(n, 85436, 19))),
+          (se.spanish = () => n.e(6736).then(n.t.bind(n, 76736, 19))),
+          (se.swedish = () => n.e(4625).then(n.t.bind(n, 94625, 19))),
+          (se.tchinese = () => n.e(5191).then(n.t.bind(n, 15191, 19))),
+          (se.thai = () => n.e(4230).then(n.t.bind(n, 4230, 19))),
+          (se.turkish = () => n.e(4792).then(n.t.bind(n, 34792, 19))),
+          (se.ukrainian = () => n.e(7246).then(n.t.bind(n, 27246, 19))),
+          (se.vietnamese = () => n.e(9863).then(n.t.bind(n, 59863, 19)));
+        const ae = (function (e) {
+          const t = new Map(),
+            n = (async function () {
+              await Y();
+              const n = re(),
+                i = new Set([]);
+              for (const e of n.languages) {
+                i.add(e.strLanguage);
+                const t = Z(e.strLanguage);
+                t && i.add(t);
+              }
+              return Promise.all(
+                Array.from(i).map((n) =>
+                  e(n).then((e) => {
+                    if (!e) return;
+                    const i = new Map();
+                    for (const [t, n] of Object.entries(e)) i.set("#" + t, n);
+                    t.set(n, i);
+                  }),
+                ),
+              );
+            })();
+          let r = !1;
+          var s;
+          function a(e, n) {
+            const [i, ...r] = n,
+              s =
+                t.get(i.strLanguage)?.get(e) ??
+                t.get(Z(i.strLanguage) ?? "english")?.get(e);
+            return void 0 !== s
+              ? s
+              : 0 === r.length
+                ? (console.error("Couldn't find localization key", e), e)
+                : a(e, r);
+          }
+          function o(e, ...t) {
+            return ee(a(e, re().languages), ...t);
+          }
+          return (
+            n.then(() => (r = !0)),
+            (s = n),
+            (te ??= new Set()),
+            te.add(s),
+            (ne = Promise.all(te)),
+            {
+              Localize: (e, ...t) => o(e, ...t),
+              LocalizeReact(e, ...t) {
+                const n = this.Localize(e);
+                if (n === e) return n;
+                const r = [],
+                  s = /(.*?)%(\d+)\$s/g;
+                let a,
+                  o = 0;
+                for (; (a = s.exec(n)); ) {
+                  (o += a[0].length), r.push(a[1]);
+                  const e = parseInt(a[2]);
+                  e >= 1 && e <= t.length && r.push(t[e - 1]);
+                }
+                return (
+                  r.push(n.slice(o)), i.createElement(i.Fragment, null, ...r)
+                );
+              },
+              LocalizePlural: (e, t, ...n) =>
+                1 === t || "1" === t
+                  ? o(e, t, ...n)
+                  : o(e + "_Plural", t, ...n),
+              GetAppTypeLocKey(e, t) {
+                switch (t) {
+                  case ie.uE.Sv:
+                    return e + "_Software";
+                  case ie.uE.Wz:
+                    return e + "_Video";
+                  default:
+                    return e;
+                }
+              },
+              GetAppTypePluralLocKey(e, t) {
+                switch (t) {
+                  case ie.uE.Sv:
+                    return e + "_Software";
+                  case ie.uE.Wz:
+                    return e + "_Video";
+                  default:
+                    return e;
+                }
+              },
+              LocalizeInSpecificLang: (e, t, ...n) => ee(a(t, [e]), ...n),
+              Ready: () => n,
+              IsReady: () => r,
+              HasKey: (e) =>
+                re().languages.some((n) => {
+                  const i = t.get(n.strLanguage);
+                  return !!i && i.has(e);
+                }),
+            }
+          );
+        })(async function (e) {
+          if (se[e]) return se[e]();
+        });
+        var oe;
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
-        })(z || (z = {}));
+        })(oe || (oe = {}));
         new Map();
         new Map();
         new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-        class $ {
+        class ce {
           m_mapTokens = new Map();
           m_mapFallbackTokens = new Map();
-          m_cbkTokensChanged = new H();
+          m_cbkTokensChanged = new $();
           m_rgLocalesToUse;
           m_bReportIndividualMissingTokens = !0;
           static GetLanguageFallback(e) {
@@ -937,25 +1172,24 @@ var CLSTAMP = "10862082";
           }
           static IsELanguageValidInRealm(e, t) {
             return (
-              t === (29 === e ? O.k_ESteamRealmChina : O.k_ESteamRealmGlobal)
+              t === (29 === e ? D.k_ESteamRealmChina : D.k_ESteamRealmGlobal)
             );
           }
           static GetLanguageListForRealms(e) {
             const t = new Array();
             for (let n = 0; n < 32; n++)
-              for (const s of e)
-                if (this.IsELanguageValidInRealm(n, s)) {
+              for (const i of e)
+                if (this.IsELanguageValidInRealm(n, i)) {
                   t.push(n);
                   break;
                 }
             return t;
           }
-          InitFromObjects(e, t, n, s, r, i) {
+          InitFromObjects(e, t, n, i) {
             i && (this.m_bReportIndividualMissingTokens = !1),
-              r || this.m_mapTokens.clear();
-            const a = { ...(n || {}), ...e },
-              o = { ...(s || {}), ...(t || {}) };
-            this.AddTokens(a, o), this.m_cbkTokensChanged.Dispatch();
+              n || this.m_mapTokens.clear(),
+              this.AddTokens(e, t || {}),
+              this.m_cbkTokensChanged.Dispatch();
           }
           InitDirect(e, t) {
             this.m_mapTokens.clear(),
@@ -986,13 +1220,13 @@ var CLSTAMP = "10862082";
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
             if (
-              (t.push(E(a.LANGUAGE)),
+              (t.push(F(a.LANGUAGE)),
               (a.SUPPORTED_LANGUAGES || []).forEach((e) => {
-                e.value != a.LANGUAGE && t.push(E(e.value));
+                e.value != a.LANGUAGE && t.push(F(e.value));
               }),
               e)
             ) {
-              $.GetLanguageListForRealms(e).forEach((e) => {
+              ce.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -1008,26 +1242,25 @@ var CLSTAMP = "10862082";
             return this.BLooksLikeToken(e) ? this.LocalizeString(e, t) : e;
           }
           LocalizeString(e, t) {
-            const n = 0 == this.m_mapTokens.size;
-            if (
-              (N(
-                !n,
-                `Attempting to localize token '${e}' with no tokens in our map.`,
-              ),
-              !this.BLooksLikeToken(e))
-            )
-              return;
-            let s = this.m_mapTokens.get(e.substring(1));
-            if (void 0 !== s) return s;
-            t ||
-              n ||
-              !this.m_bReportIndividualMissingTokens ||
-              (0, B.aj)().ReportError(
-                new Error(
-                  `Unable to find localization token '${e}' for language '${a.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
-                ),
-                { bIncludeMessageInIdentifier: !0 },
-              );
+            if (!this.BLooksLikeToken(e)) return;
+            let n = this.m_mapTokens.get(e.substring(1));
+            return void 0 === n
+              ? ae.HasKey(e)
+                ? ae.Localize(e)
+                : void (0 === this.m_mapTokens.size
+                    ? x(
+                        !1,
+                        `Attempting to localize token '${e}' with no tokens in our map.`,
+                      )
+                    : !t &&
+                      this.m_bReportIndividualMissingTokens &&
+                      (0, V.aj)().ReportError(
+                        new Error(
+                          `Unable to find localization token '${e}' for language '${a.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                        ),
+                        { bIncludeMessageInIdentifier: !0 },
+                      ))
+              : n;
           }
           LocalizeStringFromFallback(e) {
             if (!e || 0 == e.length || "#" != e.charAt(0)) return;
@@ -1036,36 +1269,36 @@ var CLSTAMP = "10862082";
           }
           static GetTokenWithFallback(e) {
             if (!e) return "";
-            const t = E(a.LANGUAGE),
+            const t = F(a.LANGUAGE),
               n = e.find((e) => e.language == t);
             if (n) return n.localized_string;
-            const s = $.GetELanguageFallback(t),
-              r = e.find((e) => e.language == s);
+            const i = ce.GetELanguageFallback(t),
+              r = e.find((e) => e.language == i);
             return r?.localized_string ?? "";
           }
           static BHasTokenLanguage(e, t) {
             return Boolean(t.find((t) => t.language == e));
           }
         }
-        function K(e, ...t) {
-          let n = Q.LocalizeString(e);
-          return void 0 === n ? e : q(n, ...t);
+        function le(e, ...t) {
+          let n = _e.LocalizeString(e);
+          return void 0 === n ? e : ue(n, ...t);
         }
-        function Y(e, ...t) {
-          let n = Q.LocalizeString(e);
+        function de(e, ...t) {
+          let n = _e.LocalizeString(e);
           if (void 0 === n) return e;
           let r,
-            i = [],
+            s = [],
             a = /(.*?)%(\d+)\$s/g,
             o = 0;
           for (; (r = a.exec(n)); ) {
-            (o += r[0].length), i.push(r[1]);
+            (o += r[0].length), s.push(r[1]);
             let e = parseInt(r[2]);
-            e >= 1 && e <= t.length && i.push(t[e - 1]);
+            e >= 1 && e <= t.length && s.push(t[e - 1]);
           }
-          return i.push(n.substr(o)), s.createElement(s.Fragment, null, ...i);
+          return s.push(n.substr(o)), i.createElement(i.Fragment, null, ...s);
         }
-        function q(e, ...t) {
+        function ue(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -1076,12 +1309,12 @@ var CLSTAMP = "10862082";
                 return e;
               }));
         }
-        const Q = new $();
-        window.LocalizationManager = Q;
-        var J = n(62540),
-          X = n(89193),
-          Z = n(41230);
-        class ee {
+        const _e = new ce();
+        window.LocalizationManager = _e;
+        var he = n(62540),
+          me = n(89193),
+          pe = n(41230);
+        class ge {
           m_strInviteCode;
           m_bReady = !1;
           m_bValid = !1;
@@ -1092,7 +1325,7 @@ var CLSTAMP = "10862082";
           m_bIsBanned;
           m_rtKickExpires;
           constructor(e) {
-            (0, X.Gn)(this), (this.m_strInviteCode = e);
+            (0, me.Gn)(this), (this.m_strInviteCode = e);
           }
           BIsReady() {
             return this.m_bReady;
@@ -1107,7 +1340,7 @@ var CLSTAMP = "10862082";
             return this.m_strInviteCode;
           }
           BNeverExpires() {
-            return this.m_rtTimeExpires == b;
+            return this.m_rtTimeExpires == S;
           }
           GetChatRoomGroupID() {
             return this.m_ulChatRoomGroupID;
@@ -1139,38 +1372,38 @@ var CLSTAMP = "10862082";
           InitInvalid() {
             (this.m_bValid = !1), (this.m_bReady = !0);
           }
-          InitDirectInvite(e, t, n = !1, s = void 0) {
+          InitDirectInvite(e, t, n = !1, i = void 0) {
             (this.m_ulChatRoomGroupID = e),
               (this.m_ulChatID = t),
               (this.m_bIsBanned = n),
-              (this.m_rtKickExpires = s),
-              (this.m_rtTimeExpires = b),
+              (this.m_rtKickExpires = i),
+              (this.m_rtTimeExpires = S),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }
         }
-        D([X.sH], ee.prototype, "m_bReady", void 0),
-          D([X.XI], ee.prototype, "InitInvalid", null),
-          D([X.XI], ee.prototype, "InitDirectInvite", null);
-        var te = n(37976);
-        class ne {
+        W([me.sH], ge.prototype, "m_bReady", void 0),
+          W([me.XI], ge.prototype, "InitInvalid", null),
+          W([me.XI], ge.prototype, "InitDirectInvite", null);
+        var fe = n(37976);
+        class ke {
           m_ulSteamID;
-          constructor(e = 0, t, n, s) {
-            e instanceof ne
+          constructor(e = 0, t, n, i) {
+            e instanceof ke
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-                ? (this.m_ulSteamID = te.A.fromString(e, !0))
-                : t && n && void 0 !== s
-                  ? this.SetFromComponents(e ?? 0, s, n, t)
+                ? (this.m_ulSteamID = fe.A.fromString(e, !0))
+                : t && n && void 0 !== i
+                  ? this.SetFromComponents(e ?? 0, i, n, t)
                   : (this.m_ulSteamID = e
-                      ? te.A.fromNumber(e, !0)
-                      : te.A.UZERO);
+                      ? fe.A.fromNumber(e, !0)
+                      : fe.A.UZERO);
           }
           static InitFromAccountID(e) {
-            return new ne(Number(e), a.EUNIVERSE, 1, 1);
+            return new ke(Number(e), a.EUNIVERSE, 1, 1);
           }
           static InitFromClanID(e) {
-            return new ne(Number(e), a.EUNIVERSE, 7, 0);
+            return new ke(Number(e), a.EUNIVERSE, 7, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -1236,14 +1469,14 @@ var CLSTAMP = "10862082";
             }
           }
           static InitFromString(e) {
-            let t = new ne();
+            let t = new ke();
             try {
-              let [n, s, r, i, a] =
+              let [n, i, r, s, a] =
                   e.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
                 o = Number(r),
-                c = Number(i),
+                c = Number(s),
                 l = a ? Number(a) : 1;
-              switch (s) {
+              switch (i) {
                 case "I":
                   t.SetFromComponents(c, l, 0, o);
                 case "g":
@@ -1284,7 +1517,7 @@ var CLSTAMP = "10862082";
             return 7 == this.GetAccountType();
           }
           SetAccountID(e) {
-            this.m_ulSteamID = new te.A(
+            this.m_ulSteamID = new fe.A(
               e,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0,
@@ -1314,23 +1547,23 @@ var CLSTAMP = "10862082";
               e,
             );
           }
-          SetFromComponents(e, t, n, s) {
-            let r = ((255 & s) << 24) + ((15 & n) << 20) + (1048575 & t),
-              i = 4294967295 & e;
-            this.m_ulSteamID = new te.A(i, r, !0);
+          SetFromComponents(e, t, n, i) {
+            let r = ((255 & i) << 24) + ((15 & n) << 20) + (1048575 & t),
+              s = 4294967295 & e;
+            this.m_ulSteamID = new fe.A(s, r, !0);
           }
         }
-        var se = n(6660);
-        class re extends ee {
+        var Ee = n(6660);
+        class be extends ge {
           constructor(e) {
-            super(e), (0, X.Gn)(this);
+            super(e), (0, me.Gn)(this);
           }
           BIsExpired() {
-            return ie.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return Ie.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
-            let t = new ne(e.steamid_sender);
+            let t = new ke(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -1342,15 +1575,15 @@ var CLSTAMP = "10862082";
               (this.m_bReady = !0);
           }
         }
-        D([X.XI], re.prototype, "InitFromPHPInviteLinkInfo", null);
-        class ie {
+        W([me.XI], be.prototype, "InitFromPHPInviteLinkInfo", null);
+        class Ie {
           m_bConnectingToClient = !1;
           m_invite;
           m_htmlPreRendered;
           static sm_rtTimeCur;
           constructor(e) {
-            (0, X.Gn)(this),
-              (this.m_invite = new re(e.strInviteCode)),
+            (0, me.Gn)(this),
+              (this.m_invite = new be(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -1373,22 +1606,22 @@ var CLSTAMP = "10862082";
               let t = window.open("", "SteamWebChat", "");
               if (!t) return;
               let n = !1,
-                s = !1;
+                i = !1;
               try {
                 n = "about:blank" == t.location.href;
               } catch (e) {
-                s = !0;
+                i = !0;
               }
               if (n) {
                 if (e) {
-                  let n = function (s) {
+                  let n = function (i) {
                     let r = a.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1",
                     );
-                    s.source == t &&
-                      "FriendsUIReady" == s.data &&
-                      s.origin == r &&
+                    i.source == t &&
+                      "FriendsUIReady" == i.data &&
+                      i.origin == r &&
                       (t.postMessage(e, a.COMMUNITY_BASE_URL),
                       window.removeEventListener("message", n));
                   };
@@ -1406,21 +1639,21 @@ var CLSTAMP = "10862082";
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
           }
         }
-        D([X.sH], ie.prototype, "m_bConnectingToClient", void 0);
-        let ae = class extends s.Component {
+        W([me.sH], Ie.prototype, "m_bConnectingToClient", void 0);
+        let Se = class extends i.Component {
           render() {
-            return (0, J.jsx)("div", {
+            return (0, he.jsx)("div", {
               className: "InviteLandingRoot",
               children: this.props.controller.BIsInviteValid()
-                ? (0, J.jsx)(oe, { controller: this.props.controller })
-                : (0, J.jsx)(ce, { controller: this.props.controller }),
+                ? (0, he.jsx)(Ae, { controller: this.props.controller })
+                : (0, he.jsx)(Fe, { controller: this.props.controller }),
             });
           }
         };
-        ae = D([Z.PA], ae);
-        let oe = class extends s.Component {
+        Se = W([pe.PA], Se);
+        let Ae = class extends i.Component {
           constructor(e) {
-            super(e), (0, X.Gn)(this);
+            super(e), (0, me.Gn)(this);
           }
           m_bTriedToLaunchSteam = !1;
           LaunchWebChat() {
@@ -1433,7 +1666,7 @@ var CLSTAMP = "10862082";
               }, 1e3);
           }
           IsMobileDevice() {
-            switch (new se.UAParser(navigator.userAgent).getResult().os.name) {
+            switch (new Ee.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -1447,75 +1680,75 @@ var CLSTAMP = "10862082";
               n = "inviteButton inviteButtonJoinChat";
             return (
               e.BIsVoiceChatInvite() && (n += " inviteButtonJoinVoice"),
-              (0, J.jsxs)(le, {
+              (0, he.jsxs)(ve, {
                 render: this.props.controller.GetPreRenderedHTML(),
                 children: [
-                  (0, J.jsxs)("div", {
+                  (0, he.jsxs)("div", {
                     className: "inviteLabel inviteLabelButtons",
                     children: [
                       !t &&
-                        (0, J.jsx)("button", {
+                        (0, he.jsx)("button", {
                           className: n,
                           type: "button",
                           onClick: this.LaunchSteamClient,
-                          children: K("#InviteLanding_OpenInSteam"),
+                          children: le("#InviteLanding_OpenInSteam"),
                         }),
-                      (0, J.jsx)("button", {
+                      (0, he.jsx)("button", {
                         className: n,
                         type: "button",
                         onClick: this.LaunchWebChat,
-                        children: K("#InviteLanding_OpenInWebChat"),
+                        children: le("#InviteLanding_OpenInWebChat"),
                       }),
                     ],
                   }),
                   this.m_bTriedToLaunchSteam &&
-                    (0, J.jsx)("div", {
+                    (0, he.jsx)("div", {
                       className: "inviteLabel inviteLabelLaunchPrompt",
-                      children: K("#InviteLanding_OpenInSteam_Help"),
+                      children: le("#InviteLanding_OpenInSteam_Help"),
                     }),
                 ],
               })
             );
           }
         };
-        D([X.sH], oe.prototype, "m_bTriedToLaunchSteam", void 0),
-          D([W], oe.prototype, "LaunchWebChat", null),
-          D([W], oe.prototype, "LaunchSteamClient", null),
-          (oe = D([Z.PA], oe));
-        class ce extends s.Component {
+        W([me.sH], Ae.prototype, "m_bTriedToLaunchSteam", void 0),
+          W([z], Ae.prototype, "LaunchWebChat", null),
+          W([z], Ae.prototype, "LaunchSteamClient", null),
+          (Ae = W([pe.PA], Ae));
+        class Fe extends i.Component {
           render() {
-            return (0, J.jsx)("div", {
+            return (0, he.jsx)("div", {
               className: "ChatMessageInvite",
-              children: (0, J.jsx)("div", {
+              children: (0, he.jsx)("div", {
                 className: "postedExpiredInvite",
-                children: K("#InviteLanding_ExpiredOrInvalid"),
+                children: le("#InviteLanding_ExpiredOrInvalid"),
               }),
             });
           }
         }
-        function le(e) {
-          return (0, J.jsxs)("div", {
+        function ve(e) {
+          return (0, he.jsxs)("div", {
             className: "ChatMessageInvite",
             children: [
-              (0, J.jsx)("div", {
+              (0, he.jsx)("div", {
                 className: "leftInviteContainer",
                 dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML },
               }),
-              (0, J.jsxs)("div", {
+              (0, he.jsxs)("div", {
                 className: "rightInviteContainer",
                 children: [
-                  (0, J.jsx)("div", {
+                  (0, he.jsx)("div", {
                     className: "inviteLabel",
-                    children: Y(
+                    children: de(
                       "#bbcode_invite_description",
-                      (0, J.jsx)("span", {
+                      (0, he.jsx)("span", {
                         dangerouslySetInnerHTML: {
                           __html: e.render.strInviterNameLinkHTML,
                         },
                       }),
                     ),
                   }),
-                  (0, J.jsx)("div", {
+                  (0, he.jsx)("div", {
                     className: "groupName",
                     children: e.render.strChatRoomGroupName,
                   }),
@@ -1525,53 +1758,52 @@ var CLSTAMP = "10862082";
             ],
           });
         }
-        function de(e) {
+        function Pe(e) {
           let t;
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          ie.sm_rtTimeCur = t.rtTimeCur;
-          let n = new ie(t);
-          r.createRoot(e).render(s.createElement(ae, { controller: n }));
+          Ie.sm_rtTimeCur = t.rtTimeCur;
+          let n = new Ie(t);
+          r.createRoot(e).render(i.createElement(Se, { controller: n }));
         }
-        (window.AssertMsg = N),
+        (window.AssertMsg = x),
           document.addEventListener("DOMContentLoaded", async function () {
             p(),
               await (async function (e) {
-                const t = $.GetLanguageFallback(e),
-                  s = e === t,
-                  [r, i, a, o] = await Promise.all([
-                    n(14919)(`./shared_${e}.json`),
+                const t = ce.GetLanguageFallback(e),
+                  i = e === t,
+                  [r, s] = await Promise.all([
                     n(9437)(`./friendsui_${e}.json`),
-                    s ? {} : n(68042)(`./shared_${t}.json`),
-                    s ? {} : n(48516)(`./friendsui_${t}.json`),
+                    i ? {} : n(48516)(`./friendsui_${t}.json`),
+                    ae.Ready(),
                   ]);
-                Q.AddTokens({ ...r, ...i }, { ...a, ...o });
+                _e.AddTokens(r, s);
               })(a.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".ChatReactRoot");
                 for (let t = 0; t < e.length; t++) {
                   let n = e[t],
-                    s = n.getAttribute("data-component");
-                  "ChatInvite" === s
-                    ? de(n)
-                    : N(!1, `unknown component: "${s}"`);
+                    i = n.getAttribute("data-component");
+                  "ChatInvite" === i
+                    ? Pe(n)
+                    : x(!1, `unknown component: "${i}"`);
                 }
               })();
           });
       },
-      79552: (e, t, n) => {
+      22188: (e, t, n) => {
         "use strict";
-        n.d(t, { R: () => s });
-        const s = 1;
+        n.d(t, { R: () => i });
+        const i = 1;
       },
-      42946: (e, t, n) => {
+      63676: (e, t, n) => {
         "use strict";
-        async function s(e, t = "SHA-256") {
+        async function i(e, t = "SHA-256") {
           let n;
-          var s;
+          var i;
           "string" == typeof e
-            ? ((s = e), (n = new TextEncoder().encode(s).buffer))
+            ? ((i = e), (n = new TextEncoder().encode(i).buffer))
             : (n = e);
           return (function (e) {
             const t = new Uint8Array(e);
@@ -1581,9 +1813,9 @@ var CLSTAMP = "10862082";
             return n;
           })(await window.crypto.subtle.digest(t, n));
         }
-        n.d(t, { aj: () => C });
-        var r = n(62698),
-          i = n(27599),
+        n.d(t, { aj: () => F });
+        var r = n(62414),
+          s = n(61554),
           a = n(63696);
         const o =
           window.addEventListener ||
@@ -1601,21 +1833,21 @@ var CLSTAMP = "10862082";
         }
         {
           const e = console.assert;
-          console.assert = (t, n, ...s) => {
+          console.assert = (t, n, ...i) => {
             if (!t) {
               const e = p();
-              d(new _(f(n, ...s)), 2, e);
+              d(new _(f(n, ...i)), 2, e);
             }
-            e.apply(console, [t, n, ...s]);
+            e.apply(console, [t, n, ...i]);
           };
           const t = console.error;
           (console.error = (e, ...n) => {
-            const s = p();
-            d(new Error(f(e, ...n)), 1, s), t.apply(console, [e, ...n]);
+            const i = p();
+            d(new Error(f(e, ...n)), 1, i), t.apply(console, [e, ...n]);
           }),
-            (console.clogerror = (e, n, ...s) => {
+            (console.clogerror = (e, n, ...i) => {
               const r = p();
-              d(new Error(f(n, ...s)), e + 1, r), t.apply(console, [n, ...s]);
+              d(new Error(f(n, ...i)), e + 1, r), t.apply(console, [n, ...i]);
             }),
             o("error", (e) => {
               d(e.error, 0);
@@ -1659,7 +1891,7 @@ var CLSTAMP = "10862082";
           m_sendTimer = null;
           m_bReportingPaused = !1;
           m_pauseTimer = void 0;
-          m_fnGetReportingInterval = T;
+          m_fnGetReportingInterval = P;
           m_fnGetReportTags = () => [];
           m_fnGetURL = () => location.href;
           m_bEnabled = !0;
@@ -1686,15 +1918,15 @@ var CLSTAMP = "10862082";
                   ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
               }, 3e4);
           }
-          Init(e, t, n, s = {}) {
+          Init(e, t, n, i = {}) {
             (this.m_bInitialized = !0),
               (this.m_strProduct = e),
               (this.m_strVersion = t),
               (this.m_transport = n),
-              s.fnGetReportingInterval &&
-                (this.m_fnGetReportingInterval = s.fnGetReportingInterval),
-              s.fnGetReportTags && (this.m_fnGetReportTags = s.fnGetReportTags),
-              s.fnGetURL && (this.m_fnGetURL = s.fnGetURL),
+              i.fnGetReportingInterval &&
+                (this.m_fnGetReportingInterval = i.fnGetReportingInterval),
+              i.fnGetReportTags && (this.m_fnGetReportTags = i.fnGetReportTags),
+              i.fnGetURL && (this.m_fnGetURL = i.fnGetURL),
               this.m_bEnabled ||
                 (console.error(
                   "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -1719,18 +1951,18 @@ var CLSTAMP = "10862082";
               const n = { ...h, ...t };
               if (!this.m_bEnabled) return null;
               0;
-              const s = await (function (e, t) {
+              const i = await (function (e, t) {
                 try {
                   return e.stack && e.stack.match(k)
                     ? (async function (e, t) {
                         const {
                             cCallsitesToIgnore: n,
-                            bIncludeMessageInIdentifier: s,
+                            bIncludeMessageInIdentifier: i,
                           } = t,
-                          { message: r, stack: i } = e,
-                          a = i?.split("\n") ?? [];
-                        let o = v(a.filter((e) => !!e.match(k))[n]);
-                        s && (o = `${o} ${r}`);
+                          { message: r, stack: s } = e,
+                          a = s?.split("\n") ?? [];
+                        let o = A(a.filter((e) => !!e.match(k))[n]);
+                        i && (o = `${o} ${r}`);
                         const c = a
                           .map((e) => {
                             let t = e.match(/(.*)\((.*):(\d+):(\d+)\)/);
@@ -1741,45 +1973,45 @@ var CLSTAMP = "10862082";
                             )
                               return e;
                             if (5 === t.length) {
-                              const [e, n, s, r, i] = t,
+                              const [e, n, i, r, s] = t,
                                 a = parseInt(r),
-                                o = parseInt(i);
-                              if (!isNaN(a) && !isNaN(o)) return [n, s, a, o];
+                                o = parseInt(s);
+                              if (!isNaN(a) && !isNaN(o)) return [n, i, a, o];
                             }
                             return e;
                           })
                           .filter((e) => !!e);
                         return {
                           identifier: o,
-                          identifierHash: await y(o),
+                          identifierHash: await v(o),
                           message: c,
                         };
                       })(e, t)
-                    : e.stack && e.stack.match(I)
+                    : e.stack && e.stack.match(E)
                       ? (async function (e, t) {
                           const {
                               cCallsitesToIgnore: n,
-                              bIncludeMessageInIdentifier: s,
+                              bIncludeMessageInIdentifier: i,
                             } = t,
                             r = e.stack?.split("\n") ?? [];
-                          let i = v(r.filter((e) => !!e.match(I))[n]);
-                          s && (i = `${i} ${e.message}`);
+                          let s = A(r.filter((e) => !!e.match(E))[n]);
+                          i && (s = `${s} ${e.message}`);
                           const a = r
                             .map((e) => {
                               const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
                               if (!t) return e;
                               if (5 === t.length) {
-                                const [e, n, s, r, i] = t,
+                                const [e, n, i, r, s] = t,
                                   a = parseInt(r),
-                                  o = parseInt(i);
-                                if (!isNaN(a) && !isNaN(o)) return [n, s, a, o];
+                                  o = parseInt(s);
+                                if (!isNaN(a) && !isNaN(o)) return [n, i, a, o];
                               }
                               return e;
                             })
                             .filter((e) => !!e);
                           return {
-                            identifier: i,
-                            identifierHash: await y(i),
+                            identifier: s,
+                            identifierHash: await v(s),
                             message: [e.message, ...a],
                           };
                         })(e, t)
@@ -1787,41 +2019,41 @@ var CLSTAMP = "10862082";
                         ? (async function (e, t) {
                             const {
                                 bIncludeMessageInIdentifier: n,
-                                cCallsitesToIgnore: s,
+                                cCallsitesToIgnore: i,
                               } = t,
                               r = e.stack?.split("\n") ?? [],
-                              i = r[s],
-                              a = i.split("/");
+                              s = r[i],
+                              a = s.split("/");
                             let o = a[a.length - 1];
-                            i.indexOf("@") > -1 &&
-                              (o = i.split("@")[0] + "@" + o);
+                            s.indexOf("@") > -1 &&
+                              (o = s.split("@")[0] + "@" + o);
                             n && (o = `${o} ${e.message}`);
                             const c = r
                               .map((e) => {
                                 const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
                                 if (!t) return e;
                                 if (5 === t.length) {
-                                  const [e, n, s, r, i] = t,
+                                  const [e, n, i, r, s] = t,
                                     a = parseInt(r),
-                                    o = parseInt(i);
+                                    o = parseInt(s);
                                   if (!isNaN(a) && !isNaN(o))
-                                    return [n, s, a, o];
+                                    return [n, i, a, o];
                                 }
                                 return e;
                               })
                               .filter((e) => !!e);
                             return {
                               identifier: o,
-                              identifierHash: await y(o),
+                              identifierHash: await v(o),
                               message: [e.message, ...c],
                             };
                           })(e, t)
-                        : (E ||
+                        : (S ||
                             (console.warn(
                               "Error reporter does not know how to parse generated stack:",
                             ),
                             console.warn(e.stack),
-                            (E = !0)),
+                            (S = !0)),
                           null);
                 } catch (e) {
                   return (
@@ -1829,14 +2061,14 @@ var CLSTAMP = "10862082";
                   );
                 }
               })(e, n);
-              return s
+              return i
                 ? (n.cCallsitesToIgnore &&
-                    s.message.splice(1, n.cCallsitesToIgnore),
+                    i.message.splice(1, n.cCallsitesToIgnore),
                   n.strComponentStack &&
-                    (s.strComponentStack = n.strComponentStack),
-                  (s.strUrl = this.m_fnGetURL()),
-                  this.SendErrorReport(s),
-                  s)
+                    (i.strComponentStack = n.strComponentStack),
+                  (i.strUrl = this.m_fnGetURL()),
+                  this.SendErrorReport(i),
+                  i)
                 : null;
             } catch (e) {
               return console.log(`Failed to report error: ${e}`), null;
@@ -1862,8 +2094,8 @@ var CLSTAMP = "10862082";
             for (let t of e.message) {
               let n = JSON.stringify(t);
               for (let t of m) {
-                const s = new RegExp(t);
-                if (n.match(s))
+                const i = new RegExp(t);
+                if (n.match(i))
                   return console.warn("Report", e, "matched regex", t), !0;
               }
             }
@@ -1889,7 +2121,7 @@ var CLSTAMP = "10862082";
           }
           SendErrorReports(e) {
             if (!e || !e.length) return;
-            const t = r.w.Init(i.Gf),
+            const t = r.w.Init(s.Gf),
               n = e.reduce(
                 (e, t) => (
                   e[t.identifier]
@@ -1899,12 +2131,12 @@ var CLSTAMP = "10862082";
                 ),
                 {},
               ),
-              s = Object.keys(n).map((e) => {
-                const { report: t, count: s } = n[e],
-                  r = new i.tF();
+              i = Object.keys(n).map((e) => {
+                const { report: t, count: i } = n[e],
+                  r = new s.tF();
                 let a;
                 return (
-                  r.set_count(s),
+                  r.set_count(i),
                   r.set_identifier(t.identifier + " " + t.identifierHash),
                   r.set_message(JSON.stringify(t.message)),
                   t.strComponentStack &&
@@ -1916,9 +2148,9 @@ var CLSTAMP = "10862082";
               });
             t.Body().set_product(this.m_strProduct),
               t.Body().set_version(this.m_strVersion),
-              t.Body().set_errors(s);
+              t.Body().set_errors(i);
             for (const e of this.m_fnGetReportTags()) t.Body().add_tags(e);
-            i._5.ReportClientError(this.m_transport, t);
+            s._5.ReportClientError(this.m_transport, t);
           }
           get version() {
             return this.m_strVersion;
@@ -1944,17 +2176,17 @@ var CLSTAMP = "10862082";
             .join(", ");
         }
         const k = /^\s*at .*(\S+:\d+|\(native\))/m,
-          I = /(^|@)\S+:\d+/,
+          E = /(^|@)\S+:\d+/,
           b = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-        let S,
-          E = !1;
-        function v(e) {
+        let I,
+          S = !1;
+        function A(e) {
           return (function (e) {
             const t = "https://",
               n = e.indexOf(t);
             if (-1 === n) return e;
-            const s = e.indexOf("/", n + t.length);
-            return -1 === s ? e : e.slice(0, n) + e.slice(s);
+            const i = e.indexOf("/", n + t.length);
+            return -1 === i ? e : e.slice(0, n) + e.slice(i);
           })(
             (function (e) {
               const t = e.lastIndexOf("?");
@@ -1964,27 +2196,27 @@ var CLSTAMP = "10862082";
             })(e),
           );
         }
-        const C = () => (S || (S = new g()), S);
-        async function y(e) {
+        const F = () => (I || (I = new g()), I);
+        async function v(e) {
           try {
-            return (await s(e)).slice(0, 16);
+            return (await i(e)).slice(0, 16);
           } catch (e) {
             return "";
           }
         }
-        function T() {
+        function P() {
           return 1e4;
         }
       },
-      62698: (e, t, n) => {
+      62414: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => u, w: () => d });
-        var s = n(42946),
-          r = n(79552),
-          i = n(58663),
-          a = n(36302),
-          o = n(22089),
-          c = n(62773);
+        var i = n(63676),
+          r = n(22188),
+          s = n(58663),
+          a = n(9122),
+          o = n(24668),
+          c = n(97145);
         class l {
           static InitHeaderFromPacket(e) {
             return new l(void 0, e);
@@ -1995,14 +2227,14 @@ var CLSTAMP = "10862082";
           m_cubHeader;
           m_header;
           m_body;
-          constructor(e, t, n, s, r, a) {
-            if (s)
-              (this.m_eMsg = s.m_eMsg),
-                (this.m_bValid = s.m_bValid),
+          constructor(e, t, n, i, r, a) {
+            if (i)
+              (this.m_eMsg = i.m_eMsg),
+                (this.m_bValid = i.m_bValid),
                 this.m_bValid &&
-                  ((this.m_netPacket = s.m_netPacket),
-                  (this.m_cubHeader = s.m_cubHeader),
-                  (this.m_header = s.m_header),
+                  ((this.m_netPacket = i.m_netPacket),
+                  (this.m_cubHeader = i.m_cubHeader),
+                  (this.m_header = i.m_header),
                   this.InitForType(n));
             else {
               if (((this.m_header = new o.LH(null)), (this.m_bValid = !0), t))
@@ -2017,7 +2249,7 @@ var CLSTAMP = "10862082";
                   try {
                     o.LH.deserializeBinaryFromReader(
                       this.m_header,
-                      new i.BinaryReader(
+                      new s.BinaryReader(
                         this.m_netPacket.GetPacket(),
                         this.m_netPacket.TellGet(),
                         this.m_cubHeader,
@@ -2048,7 +2280,7 @@ var CLSTAMP = "10862082";
             try {
               e.deserializeBinaryFromReader(
                 this.m_body,
-                new i.BinaryReader(
+                new s.BinaryReader(
                   t.GetPacket(),
                   t.TellGet(),
                   t.GetCountBytesRemaining(),
@@ -2056,7 +2288,7 @@ var CLSTAMP = "10862082";
               );
             } catch (e) {
               this.m_bValid = !1;
-              const t = (0, s.aj)(),
+              const t = (0, i.aj)(),
                 n = `Exception parsing protobuf message body of type ${this.m_eMsg}.  Definitions may be out of sync with server version.`;
               t &&
                 t.ReportError(new Error(n), {
@@ -2099,14 +2331,14 @@ var CLSTAMP = "10862082";
             const e = this.m_header.serializeBinary(),
               t = this.m_body.serializeBinary(),
               n = 2147483648 | this.m_eMsg,
-              s = new Uint8Array(8 + e.length + t.length),
-              r = new c.pV(s);
+              i = new Uint8Array(8 + e.length + t.length),
+              r = new c.pV(i);
             return (
               r.PutUint32(n),
               r.PutUint32(e.length),
               r.PutBytes(e),
               r.PutBytes(t),
-              s
+              i
             );
           }
           SerializeBody() {
@@ -2122,8 +2354,8 @@ var CLSTAMP = "10862082";
           }
         }
         class d extends l {
-          constructor(e, t = a.MSr, n, s, r) {
-            super(t, n, e, s, void 0, r);
+          constructor(e, t = a.MSr, n, i, r) {
+            super(t, n, e, i, void 0, r);
           }
           static InitFromPacket(e, t) {
             return new d(e, 0, t);
@@ -2151,77 +2383,77 @@ var CLSTAMP = "10862082";
           }
         }
         function u(e, t, n) {
-          let s;
+          let i;
           return (
-            (s = t instanceof d ? t : d.InitFromObject(e, t)),
+            (i = t instanceof d ? t : d.InitFromObject(e, t)),
             void 0 !== n?.strDebugSource &&
-              s.Hdr().set_debug_source(n.strDebugSource),
-            s
+              i.Hdr().set_debug_source(n.strDebugSource),
+            i
           );
         }
       },
-      665: (e, t, n) => {
+      18237: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => c,
           Sg: () => u,
           Uq: () => o,
-          gp: () => i,
+          gp: () => s,
           i0: () => d,
           qM: () => r,
           w0: () => a,
           zj: () => l,
         });
-        var s = n(58663);
-        const r = s.BinaryReader.prototype,
-          i = s.BinaryWriter.prototype;
+        var i = n(58663);
+        const r = i.BinaryReader.prototype,
+          s = i.BinaryWriter.prototype;
         function a(e) {
           const t = {},
             { fields: n } = e;
           for (const e in n) {
-            const s = n[e];
-            t[s.n] = s;
+            const i = n[e];
+            t[i.n] = i;
           }
           return t;
         }
         function o(e, t) {
           const { proto: n, fields: r } = e,
-            i = new n();
-          if (null == t) return i;
+            s = new n();
+          if (null == t) return s;
           for (const e in r) {
             const { n, c: a, r: o, d: c, q: l } = r[e];
             if (!Object.prototype.hasOwnProperty.call(t, e)) continue;
             const d = t[e];
             a
               ? o
-                ? s.Message.setRepeatedWrapperField(
-                    i,
+                ? i.Message.setRepeatedWrapperField(
+                    s,
                     n,
                     Array.isArray(d) ? d.map((e) => a.fromObject(e)) : [],
                   )
-                : s.Message.setWrapperField(i, n, a.fromObject(d))
-              : s.Message.setField(i, n, d);
+                : i.Message.setWrapperField(s, n, a.fromObject(d))
+              : i.Message.setField(s, n, d);
           }
-          return i;
+          return s;
         }
         function c(e, t, n) {
-          const { proto: r, fields: i } = e,
+          const { proto: r, fields: s } = e,
             a = {};
-          for (const e in i) {
-            const { n: r, c: o, r: c, d: l, q: d } = i[e];
+          for (const e in s) {
+            const { n: r, c: o, r: c, d: l, q: d } = s[e];
             if (o)
               if (c)
-                a[e] = s.Message.toObjectList(
-                  s.Message.getRepeatedWrapperField(n, o, r),
+                a[e] = i.Message.toObjectList(
+                  i.Message.getRepeatedWrapperField(n, o, r),
                   o.toObject,
                   t,
                 );
               else {
-                const i = s.Message.getWrapperField(n, o, r, d ? 1 : 0);
-                i && (a[e] = o.toObject(t, i));
+                const s = i.Message.getWrapperField(n, o, r, d ? 1 : 0);
+                s && (a[e] = o.toObject(t, s));
               }
             else {
-              const t = s.Message.getFieldWithDefault(
+              const t = i.Message.getFieldWithDefault(
                 n,
                 r,
                 void 0 !== l ? l : null,
@@ -2235,22 +2467,22 @@ var CLSTAMP = "10862082";
           for (; n.nextField() && !n.isEndGroup(); ) {
             const r = e[n.getFieldNumber()];
             if (r) {
-              const { n: e, c: i, r: a, d: o, q: c, br: l } = r;
-              if (i) {
-                const r = new i();
-                n.readMessage(r, i.deserializeBinaryFromReader),
+              const { n: e, c: s, r: a, d: o, q: c, br: l } = r;
+              if (s) {
+                const r = new s();
+                n.readMessage(r, s.deserializeBinaryFromReader),
                   a
-                    ? s.Message.addToRepeatedWrapperField(t, e, r, i)
-                    : s.Message.setWrapperField(t, e, r);
+                    ? i.Message.addToRepeatedWrapperField(t, e, r, s)
+                    : i.Message.setWrapperField(t, e, r);
               } else if (l) {
                 const r = l.call(n);
                 a
-                  ? s.Message.addToRepeatedField(t, e, r)
-                  : s.Message.setField(t, e, r);
+                  ? i.Message.addToRepeatedField(t, e, r)
+                  : i.Message.setField(t, e, r);
               } else
                 console.assert(
                   !!l,
-                  `Reader func not set for field number ${e} in class ${i}`,
+                  `Reader func not set for field number ${e} in class ${s}`,
                 ),
                   n.skipField();
             } else n.skipField();
@@ -2260,23 +2492,23 @@ var CLSTAMP = "10862082";
         function d(e, t, n) {
           const { fields: r } = e;
           for (const e in r) {
-            const { n: i, c: a, r: o, d: c, q: l, bw: d } = r[e];
+            const { n: s, c: a, r: o, d: c, q: l, bw: d } = r[e];
             if (a)
               if (o) {
-                const e = s.Message.getRepeatedWrapperField(t, a, i);
+                const e = i.Message.getRepeatedWrapperField(t, a, s);
                 ((e && e.length) || l) &&
-                  n.writeRepeatedMessage(i, e, a.serializeBinaryToWriter);
+                  n.writeRepeatedMessage(s, e, a.serializeBinaryToWriter);
               } else {
-                const e = s.Message.getWrapperField(t, a, i, l ? 1 : 0);
-                e && n.writeMessage(i, e, a.serializeBinaryToWriter);
+                const e = i.Message.getWrapperField(t, a, s, l ? 1 : 0);
+                e && n.writeMessage(s, e, a.serializeBinaryToWriter);
               }
             else if (d) {
-              const e = s.Message.getField(t, i);
-              void 0 !== e && d.call(n, i, e);
+              const e = i.Message.getField(t, s);
+              void 0 !== e && d.call(n, s, e);
             } else
               console.assert(
                 !!d,
-                `Writer func not set for field number ${i} in class ${a}`,
+                `Writer func not set for field number ${s} in class ${a}`,
               );
           }
         }
@@ -2284,23 +2516,23 @@ var CLSTAMP = "10862082";
           const t = e.proto;
           for (const n in e.fields) {
             const r = e.fields[n],
-              { n: i, c: a, r: o, d: c, q: l } = r;
+              { n: s, c: a, r: o, d: c, q: l } = r;
             Object.prototype.hasOwnProperty.call(r, "d")
-              ? (t.prototype[n] = _(s.Message.getFieldWithDefault, i, c))
+              ? (t.prototype[n] = _(i.Message.getFieldWithDefault, s, c))
               : (t.prototype[n] = a
                   ? o
-                    ? _(s.Message.getRepeatedWrapperField, a, i)
-                    : h(a, i)
-                  : _(s.Message.getField, i)),
+                    ? _(i.Message.getRepeatedWrapperField, a, s)
+                    : h(a, s)
+                  : _(i.Message.getField, s)),
               (t.prototype[`set_${n}`] = m(
                 a
                   ? o
-                    ? s.Message.setRepeatedWrapperField
-                    : s.Message.setWrapperField
-                  : s.Message.setField,
-                i,
+                    ? i.Message.setRepeatedWrapperField
+                    : i.Message.setWrapperField
+                  : i.Message.setField,
+                s,
               )),
-              o && (t.prototype[`add_${n}`] = p(i, a));
+              o && (t.prototype[`add_${n}`] = p(s, a));
           }
         }
         function _(e, ...t) {
@@ -2310,7 +2542,7 @@ var CLSTAMP = "10862082";
         }
         function h(e, t) {
           return function (n = !0) {
-            return s.Message.getWrapperField(this, e, t, n ? 1 : 0);
+            return i.Message.getWrapperField(this, e, t, n ? 1 : 0);
           };
         }
         function m(e, t) {
@@ -2321,17 +2553,17 @@ var CLSTAMP = "10862082";
         function p(e, t) {
           return t
             ? function (n, r) {
-                return s.Message.addToRepeatedWrapperField(this, e, n, t, r);
+                return i.Message.addToRepeatedWrapperField(this, e, n, t, r);
               }
             : function (t, n) {
-                s.Message.addToRepeatedField(this, e, t, n);
+                i.Message.addToRepeatedField(this, e, t, n);
               };
         }
       },
-      62773: (e, t, n) => {
+      97145: (e, t, n) => {
         "use strict";
-        n.d(t, { pV: () => s });
-        class s {
+        n.d(t, { pV: () => i });
+        class i {
           m_nOffset;
           m_nLength;
           m_viewPacket;
@@ -2404,7 +2636,7 @@ var CLSTAMP = "10862082";
           }
         }
       },
-      9627: (e, t, n) => {
+      86775: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2420,22 +2652,22 @@ var CLSTAMP = "10862082";
     var t = a[e];
     if (void 0 !== t) return t.exports;
     var n = (a[e] = { id: e, loaded: !1, exports: {} });
-    return i[e].call(n.exports, n, n.exports, o), (n.loaded = !0), n.exports;
+    return s[e].call(n.exports, n, n.exports, o), (n.loaded = !0), n.exports;
   }
-  (o.m = i),
+  (o.m = s),
     (o.amdO = {}),
     (e = []),
-    (o.O = (t, n, s, r) => {
+    (o.O = (t, n, i, r) => {
       if (!n) {
-        var i = 1 / 0;
+        var s = 1 / 0;
         for (d = 0; d < e.length; d++) {
-          for (var [n, s, r] = e[d], a = !0, c = 0; c < n.length; c++)
-            (!1 & r || i >= r) && Object.keys(o.O).every((e) => o.O[e](n[c]))
+          for (var [n, i, r] = e[d], a = !0, c = 0; c < n.length; c++)
+            (!1 & r || s >= r) && Object.keys(o.O).every((e) => o.O[e](n[c]))
               ? n.splice(c--, 1)
-              : ((a = !1), r < i && (i = r));
+              : ((a = !1), r < s && (s = r));
           if (a) {
             e.splice(d--, 1);
-            var l = s();
+            var l = i();
             void 0 !== l && (t = l);
           }
         }
@@ -2443,7 +2675,7 @@ var CLSTAMP = "10862082";
       }
       r = r || 0;
       for (var d = e.length; d > 0 && e[d - 1][2] > r; d--) e[d] = e[d - 1];
-      e[d] = [n, s, r];
+      e[d] = [n, i, r];
     }),
     (o.n = (e) => {
       var t = e && e.__esModule ? () => e.default : () => e;
@@ -2452,19 +2684,19 @@ var CLSTAMP = "10862082";
     (n = Object.getPrototypeOf
       ? (e) => Object.getPrototypeOf(e)
       : (e) => e.__proto__),
-    (o.t = function (e, s) {
-      if ((1 & s && (e = this(e)), 8 & s)) return e;
+    (o.t = function (e, i) {
+      if ((1 & i && (e = this(e)), 8 & i)) return e;
       if ("object" == typeof e && e) {
-        if (4 & s && e.__esModule) return e;
-        if (16 & s && "function" == typeof e.then) return e;
+        if (4 & i && e.__esModule) return e;
+        if (16 & i && "function" == typeof e.then) return e;
       }
       var r = Object.create(null);
       o.r(r);
-      var i = {};
+      var s = {};
       t = t || [null, n({}), n([]), n(n)];
-      for (var a = 2 & s && e; "object" == typeof a && !~t.indexOf(a); a = n(a))
-        Object.getOwnPropertyNames(a).forEach((t) => (i[t] = () => e[t]));
-      return (i.default = () => e), o.d(r, i), r;
+      for (var a = 2 & i && e; "object" == typeof a && !~t.indexOf(a); a = n(a))
+        Object.getOwnPropertyNames(a).forEach((t) => (s[t] = () => e[t]));
+      return (s.default = () => e), o.d(r, s), r;
     }),
     (o.d = (e, t) => {
       for (var n in t)
@@ -2477,138 +2709,106 @@ var CLSTAMP = "10862082";
       Promise.all(Object.keys(o.f).reduce((t, n) => (o.f[n](e, t), t), []))),
     (o.u = (e) =>
       "javascript/webui/" +
-      {
+      ({
         43: "friendsui_sc_schinese-json",
         762: "friendsui_indonesian-json",
-        976: "shared_thai-json",
-        1225: "shared_swedish-json",
-        1449: "shared_bulgarian-json",
         1499: "friendsui_latam-json",
-        1973: "shared_japanese-json",
-        2256: "shared_english-json",
-        2320: "shared_norwegian-json",
-        2435: "shared_latam-json",
         2532: "friendsui_malay-json",
-        2632: "shared_spanish-json",
-        2749: "shared_romanian-json",
         2945: "friendsui_russian-json",
-        2954: "shared_ukrainian-json",
         3e3: "friendsui_turkish-json",
         3016: "friendsui_english-json",
         3232: "friendsui_italian-json",
         3415: "friendsui_portuguese-json",
         3485: "friendsui_japanese-json",
-        3710: "shared_arabic-json",
         3789: "friendsui_vietnamese-json",
-        3912: "shared_italian-json",
         4154: "friendsui_brazilian-json",
         4302: "friendsui_dutch-json",
         4434: "friendsui_ukrainian-json",
         4488: "friendsui_greek-json",
         4776: "friendsui_norwegian-json",
         4787: "friendsui_danish-json",
-        5018: "shared_french-json",
-        5110: "shared_dutch-json",
-        5241: "shared_tchinese-json",
         5341: "friendsui_hungarian-json",
         5480: "friendsui_german-json",
-        6031: "shared_finnish-json",
         6127: "friendsui_polish-json",
-        6149: "shared_vietnamese-json",
-        6165: "shared_hungarian-json",
-        6208: "shared_german-json",
-        6239: "shared_portuguese-json",
-        6332: "shared_malay-json",
         6385: "friendsui_bulgarian-json",
         6518: "friendsui_arabic-json",
-        6523: "shared_danish-json",
-        6562: "shared_brazilian-json",
         6609: "friendsui_swedish-json",
         6888: "friendsui_thai-json",
         6971: "friendsui_koreana-json",
         7487: "friendsui_czech-json",
-        7539: "shared_koreana-json",
-        7591: "shared_czech-json",
-        7786: "shared_schinese-json",
         7861: "friendsui_romanian-json",
-        8025: "shared_russian-json",
         8194: "friendsui_french-json",
-        8306: "shared_indonesian-json",
         8759: "friendsui_finnish-json",
         8766: "friendsui_tchinese-json",
-        8967: "shared_polish-json",
-        9027: "shared_sc_schinese-json",
-        9152: "shared_turkish-json",
-        9712: "shared_greek-json",
         9746: "friendsui_schinese-json",
         9808: "friendsui_spanish-json",
-      }[e] +
+      }[e] || e) +
       ".js?contenthash=" +
       {
         43: "8170f2c895e19202cd65",
-        762: "da846d9434cb0fa053d0",
-        976: "4a9239f69bb779f9fef3",
-        1225: "ec8afa83eabe9ae92d0a",
-        1449: "0db9a38bbe2536fe1f62",
-        1499: "fac3c5fdc04308b95497",
-        1973: "dc9c2e6f8745f4ed715e",
-        2256: "65356325fccb3ceeb2e5",
-        2320: "427d5328d49347270aad",
-        2435: "f6b7d137f86c8df45dc6",
-        2532: "726fc960ed3131ab0865",
-        2632: "8b71d2971e73b6a79dd7",
-        2749: "e894f632b642be8ef44f",
-        2945: "e07e4818e2a0d4fcc6a4",
-        2954: "dc0327a03c047b853556",
-        3e3: "9d84323971dec0188c80",
-        3016: "f6185aecd134f08375bc",
-        3232: "7e18a3c2d3045e97050e",
-        3415: "f91b674a80d33488244d",
-        3485: "203f1d427376e06cd2e9",
-        3710: "7c8bb8eefaf2ac5d7bdf",
-        3789: "68550c6cfd59330c3e48",
-        3912: "00e7e05afb74e3d70639",
-        4154: "94ca8cb2d2aa1f47d22a",
-        4302: "435019249c6f51b79b4f",
-        4434: "b76bcd1bc89404745cc8",
-        4488: "9b7902a9dcd57e5a8ac3",
-        4776: "6133207eac020e1ab36e",
-        4787: "63f48bbabd6e52adb440",
-        5018: "f59bb70dbbe1343d41fa",
-        5110: "24687cb3c9a8182c5135",
-        5241: "351135034277f9bcc265",
-        5341: "ce5400f709b5d26948e2",
-        5480: "fe1e2469122f1c0d37d0",
-        6031: "472a546a646d274e4c2e",
-        6127: "bcb2b356d29892b7ef52",
-        6149: "543b4aa9e9e3e12dfb72",
-        6165: "a3a2002003aab2c6918e",
-        6208: "0a4310d596b298b6e397",
-        6239: "d22a663e3c74cf090815",
-        6332: "5a8e17fda116a713235d",
-        6385: "633241ebfdb81845e960",
+        200: "d19c4846c06154d67855",
+        295: "336a9b135aa763f6c3c3",
+        559: "34c52b90fa8b26a1c635",
+        762: "989dc3b4eff679fe5ec9",
+        815: "6888140329d7bd556c13",
+        1136: "836cff48f9e730cd72bd",
+        1499: "63ac62860d966e5978a9",
+        1864: "e350ed7cbba674d7b6da",
+        2269: "d397976ea72a0d451d39",
+        2532: "81f6c1f1d6e42e913450",
+        2889: "bcecf4256e68449a01d0",
+        2945: "f36eb722d1197b9ccc69",
+        3e3: "a020a8a0239eaddd4347",
+        3016: "1e84930d3e0b90c7a6b5",
+        3232: "74edce7d52daf7c1e927",
+        3415: "bdd3dd7cc431e75b2dd9",
+        3485: "d45be7f2f2c9a5c0f02d",
+        3723: "325ca6fc0ceca5503b85",
+        3789: "8c81812abc11a5169e5b",
+        3800: "abf0e9792c15c6580951",
+        3907: "517c2dead846273d00e6",
+        4154: "da950d2a24eca80bf91a",
+        4230: "e1190919e0888bf21125",
+        4289: "68b7a9f0b64962e564ce",
+        4302: "6777319b6735c96a6a98",
+        4419: "d5832b2e23944965b86c",
+        4434: "06de5f0d3ba8406dd2d0",
+        4488: "8dd091f616bb836b799e",
+        4625: "12d71f03cdffd77e1cc7",
+        4750: "b3436560d9c0c0f0dc70",
+        4776: "0ff0003552979744c3ee",
+        4787: "ab118cafd413ef8db5d3",
+        4792: "7ea03c2167ad8c04a97e",
+        4978: "be080baf55ab1c8a8bf9",
+        5040: "28c2c65b91467c8d8051",
+        5191: "4752709558f32548377e",
+        5233: "fddfcb86ab26564014c4",
+        5341: "0050d1d3444cdf99610b",
+        5436: "275b440c57715c534d2b",
+        5480: "819bcdfa36698211a731",
+        5777: "8689d3419c07185245a4",
+        6127: "658afba6cdc2a25013d4",
+        6170: "2a530f2478d5a36a3276",
+        6385: "641291b44bff14d6f0d7",
+        6512: "7a7968b059aa2615c129",
         6518: "dc5f6ae58364d09cceda",
-        6523: "8fd05b6cdc60fcf89b56",
-        6562: "dafc1ec6ee6981904382",
-        6609: "06b39a5f1c8a9fa61b56",
-        6888: "5e713d851c095e455c3b",
-        6971: "39f358e2496a3d2a55c3",
-        7487: "c0d8195dd6dab3975615",
-        7539: "104191112b77b34b5111",
-        7591: "64c4a6924e87e3000209",
-        7786: "9bb5faf26b198c787094",
-        7861: "63671b2acc79688f22e9",
-        8025: "0f6d0bc178820df7087c",
-        8194: "a3c2c82981967a0bb30a",
-        8306: "4c09e8a1a38f03ae82bd",
-        8759: "64839c1cf1d65d068251",
-        8766: "568c79e84ce11aed47a9",
-        8967: "9c80671f181fafb22c63",
-        9027: "99a11776d1c5b10911cd",
-        9152: "50a4ea1fcbf9a17d5f47",
-        9712: "3eeeb5ae8447bed29535",
-        9746: "53570359ca81bb16a3cc",
-        9808: "942f6e1ad27af2af89a2",
+        6609: "58380bc6920b369df4a7",
+        6736: "f4347c70c77ccd97063f",
+        6888: "b1d82792ec48c0c9f838",
+        6971: "8bfca381100e06a3c16d",
+        7246: "a438c51a87936df01ffe",
+        7263: "27dd6217cfff48a12f94",
+        7487: "49d81d8d15ad6c6cb411",
+        7861: "7b73403c160be056831f",
+        8194: "cee76cc3439b0428bedd",
+        8476: "2a1a5a0621ee33cce652",
+        8759: "c5da3a31f5e1a781a6b1",
+        8766: "99861106e88eb68fe3ec",
+        9574: "ee1efd14ab96fa8cae92",
+        9668: "6dd0a225f937e6af2d71",
+        9746: "2cfaacb3359ab5b9bd3c",
+        9808: "21bf92301f1b8edb7b62",
+        9863: "9c5c03a5b7c37fd2753a",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2620,10 +2820,10 @@ var CLSTAMP = "10862082";
       }
     })()),
     (o.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
-    (s = {}),
+    (i = {}),
     (r = "@steam/friendsui:"),
-    (o.l = (e, t, n, i) => {
-      if (s[e]) s[e].push(t);
+    (o.l = (e, t, n, s) => {
+      if (i[e]) i[e].push(t);
       else {
         var a, c;
         if (void 0 !== n)
@@ -2648,12 +2848,12 @@ var CLSTAMP = "10862082";
           o.nc && a.setAttribute("nonce", o.nc),
           a.setAttribute("data-webpack", r + n),
           (a.src = e)),
-          (s[e] = [t]);
+          (i[e] = [t]);
         var _ = (t, n) => {
             (a.onerror = a.onload = null), clearTimeout(h);
-            var r = s[e];
+            var r = i[e];
             if (
-              (delete s[e],
+              (delete i[e],
               a.parentNode && a.parentNode.removeChild(a),
               r && r.forEach((e) => e(n)),
               t)
@@ -2684,8 +2884,8 @@ var CLSTAMP = "10862082";
       if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
         var n = t.getElementsByTagName("script");
         if (n.length)
-          for (var s = n.length - 1; s > -1 && (!e || !/^http(s?):/.test(e)); )
-            e = n[s--].src;
+          for (var i = n.length - 1; i > -1 && (!e || !/^http(s?):/.test(e)); )
+            e = n[i--].src;
       }
       if (!e)
         throw new Error(
@@ -2700,26 +2900,26 @@ var CLSTAMP = "10862082";
     (() => {
       var e = { 7612: 0 };
       (o.f.j = (t, n) => {
-        var s = o.o(e, t) ? e[t] : void 0;
-        if (0 !== s)
-          if (s) n.push(s[2]);
+        var i = o.o(e, t) ? e[t] : void 0;
+        if (0 !== i)
+          if (i) n.push(i[2]);
           else {
-            var r = new Promise((n, r) => (s = e[t] = [n, r]));
-            n.push((s[2] = r));
-            var i = o.p + o.u(t),
+            var r = new Promise((n, r) => (i = e[t] = [n, r]));
+            n.push((i[2] = r));
+            var s = o.p + o.u(t),
               a = new Error();
             o.l(
-              i,
+              s,
               (n) => {
-                if (o.o(e, t) && (0 !== (s = e[t]) && (e[t] = void 0), s)) {
+                if (o.o(e, t) && (0 !== (i = e[t]) && (e[t] = void 0), i)) {
                   var r = n && ("load" === n.type ? "missing" : n.type),
-                    i = n && n.target && n.target.src;
+                    s = n && n.target && n.target.src;
                   (a.message =
-                    "Loading chunk " + t + " failed.\n(" + r + ": " + i + ")"),
+                    "Loading chunk " + t + " failed.\n(" + r + ": " + s + ")"),
                     (a.name = "ChunkLoadError"),
                     (a.type = r),
-                    (a.request = i),
-                    s[1](a);
+                    (a.request = s),
+                    i[1](a);
                 }
               },
               "chunk-" + t,
@@ -2729,22 +2929,22 @@ var CLSTAMP = "10862082";
       }),
         (o.O.j = (t) => 0 === e[t]);
       var t = (t, n) => {
-          var s,
+          var i,
             r,
-            [i, a, c] = n,
+            [s, a, c] = n,
             l = 0;
-          if (i.some((t) => 0 !== e[t])) {
-            for (s in a) o.o(a, s) && (o.m[s] = a[s]);
+          if (s.some((t) => 0 !== e[t])) {
+            for (i in a) o.o(a, i) && (o.m[i] = a[i]);
             if (c) var d = c(o);
           }
-          for (t && t(n); l < i.length; l++)
-            (r = i[l]), o.o(e, r) && e[r] && e[r][0](), (e[r] = 0);
+          for (t && t(n); l < s.length; l++)
+            (r = s[l]), o.o(e, r) && e[r] && e[r][0](), (e[r] = 0);
           return o.O(d);
         },
         n = (self.webpackChunk_steam_friendsui =
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [3987, 9489, 1068], () => o(73059));
+  var c = o.O(void 0, [3987, 9489, 1068], () => o(16079));
   c = o.O(c);
 })();

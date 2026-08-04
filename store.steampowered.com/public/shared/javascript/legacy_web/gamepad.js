@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    615: (e, t, r) => {
+    696: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => sn });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(998),
-        o = r(696);
+        a = r(302),
+        o = r(315);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
       }
@@ -93,10 +93,10 @@
         );
       }
       var b = r(629),
-        f = r(159),
-        p = r(440),
-        B = r(43),
-        w = r(266);
+        f = r(996),
+        p = r(471),
+        B = r(908),
+        w = r(819);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -375,8 +375,8 @@
         (0, b.Cg)([f.o], C.prototype, "OnKeyUp", null),
         (0, b.Cg)([f.o], C.prototype, "Reset", null);
       var R,
-        T = r(606),
-        I = r(126);
+        T = r(10),
+        I = r(299);
       class F {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -9869,7 +9869,7 @@
                     br: nt.readUint32,
                     bw: st.writeUint32,
                   },
-                  xinput_index: { n: 5, br: nt.readUint32, bw: st.writeUint32 },
+                  xinput_index: { n: 5, br: nt.readInt32, bw: st.writeInt32 },
                   is_wireless_steam_dongle: {
                     n: 6,
                     br: nt.readBool,
@@ -12146,7 +12146,7 @@
           let n = this.m_navigationSource.Value,
             s = n.nLastActiveGamepadIndex;
           return (
-            n.nActiveGamepadIndex &&
+            null != n.nActiveGamepadIndex &&
               n.nActiveGamepadIndex >= 0 &&
               (s = n.nActiveGamepadIndex),
             this.m_navigationSource.Set({
@@ -13083,7 +13083,7 @@
         },
       };
     },
-    440: (e, t, r) => {
+    471: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13096,12 +13096,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    266: (e, t, r) => {
+    819: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(159),
-        s = r(440);
+        n = r(996),
+        s = r(471);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

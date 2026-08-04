@@ -808,6 +808,47 @@ enum EPagedSettingsInitialFocus
 	k_EPagedSettingsInitialFocus_PageContent = 2;
 }
 
+enum EPFAuditAction
+{
+	k_EPFAuditAction_Banned = 1;
+	k_EPFAuditAction_UnBanned = 2;
+	k_EPFAuditAction_AddedIncompatibleFlag = 3;
+	k_EPFAuditAction_RemovedIncompatibleFlag = 4;
+	k_EPFAuditAction_AddedForceInappropriateFlag = 5;
+	k_EPFAuditAction_RemovedForceInappropriateFlag = 6;
+	k_EPFAuditAction_AddedForceAppropriateFlag = 7;
+	k_EPFAuditAction_RemovedForceAppropriateFlag = 8;
+	k_EPFAuditAction_AddedAcceptedForUseFlag = 9;
+	k_EPFAuditAction_RemovedAcceptedForUseFlag = 10;
+	k_EPFAuditAction_ClearedReports = 11;
+	k_EPFAuditAction_RequireVerification = 12;
+	k_EPFAuditAction_ResendVerificationEmail = 13;
+	k_EPFAuditAction_SubmissionVerified = 14;
+	k_EPFAuditAction_ApprovedByModerator = 15;
+	k_EPFAuditAction_RejectedByModerator = 16;
+	k_EPFAuditAction_ApprovedForSteamChina = 17;
+	k_EPFAuditAction_RejectedForSteamChina = 18;
+	k_EPFAuditAction_AddedIgnoreTextContentCheckFlag = 19;
+	k_EPFAuditAction_RemovedIgnoreTextContentCheckFlag = 20;
+	k_EPFAuditAction_VoteBannedUsers = 21;
+	k_EPFAuditAction_ClearedVoteBannedUsers = 22;
+	k_EPFAuditAction_Deleted = 23;
+	k_EPFAuditAction_PermanentlyDeleted = 24;
+	k_EPFAuditAction_AddedContentDescriptor = 25;
+	k_EPFAuditAction_RemovedContentDescriptor = 26;
+	k_EPFAuditAction_AddedRestrictedCountry = 27;
+	k_EPFAuditAction_RemovedRestrictedCountry = 28;
+	k_EPFAuditAction_TransferredOwnership = 29;
+}
+
+enum EPFSplitType
+{
+	k_EPFSplitType_MicrotransactionItem = 0;
+	k_EPFSplitType_WorkshopItem = 1;
+	k_EPFSplitType_GreenlightItem = 2;
+	k_EPFSplitType_SharedFile = 3;
+}
+
 enum EPlatformType
 {
 	k_EPlatformTypeUnknown = 0;

@@ -3423,6 +3423,8 @@
                   (this.m_oMessage.associated_id = _),
                   (this.m_oMessage.associated_name = ""),
                   this.SetupStoreItemKey(),
+                  this.ClearSalePage(),
+                  (this.m_oAdditionalRestrictions.requires_sale_page = void 0),
                   this.Dispatch();
                 break;
               case _._._:
@@ -3440,6 +3442,8 @@
             (this.m_oMessage.association_type = void 0),
             (this.m_oMessage.associated_id = void 0),
             (this.m_oMessage.associated_name = ""),
+            this.ClearSalePage(),
+            (this.m_oAdditionalRestrictions.requires_sale_page = void 0),
             this.Dispatch();
         }
         SetMessageTime(_, _) {
@@ -3805,7 +3809,8 @@
             this.Dispatch());
         }
         ClearSalePage() {
-          this.m_oAdditionalRestrictions.sale_clan_event_gid &&
+          (this.m_oAdditionalRestrictions.sale_clan_event_gid ||
+            this.m_oAdditionalRestrictions.sale_clan_account) &&
             ((this.m_oAdditionalRestrictions.sale_clan_account = void 0),
             (this.m_oAdditionalRestrictions.sale_clan_event_gid = void 0),
             this.Dispatch());
@@ -47705,7 +47710,8 @@
               }),
               (0, _.jsx)("img", {
                 className: _.DDVisibilityExample,
-                src: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg",
+                src:
+                  _._.COMMUNITY_CDN_ASSET_URL + "home/daily_deal_example.jpg",
                 alt: "Daily Deal Example",
               }),
             ],
@@ -63227,7 +63233,6 @@
             _.BAllowUnpublishedStorePreview(),
           ]),
           _ = (0, _._)(_),
-          [_, _] = (0, _.useState)(_.BHasAssociatedSaleEvent()),
           [_, _, _] = (0, _._)(),
           { data: _ } = (0, _._)(
             _
@@ -63315,17 +63320,8 @@
                 oEditableMessage: _,
               }),
               Boolean(_?.type == _._._) &&
-                (0, _.jsx)(_.Fragment, {
-                  children: _
-                    ? (0, _.jsx)(_._, {
-                        oEditablePlan: _,
-                      })
-                    : (0, _.jsx)(_._, {
-                        checked: !1,
-                        label:
-                          "Associated Store Item is an advertising app. Do we intend to point to a sales page?",
-                        onChange: _,
-                      }),
+                (0, _.jsx)(_._, {
+                  oEditablePlan: _,
                 }),
             ],
           }),
@@ -75227,6 +75223,7 @@
           "#msg_publisher_sale",
           "#spotlight_franchise_sale",
           "#spotlight_thirdparty_event",
+          "#spotlight_major_update",
         ];
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

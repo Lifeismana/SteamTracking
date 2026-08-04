@@ -135,9 +135,9 @@
         );
       }
     },
-    92799: (e, a, t) => {
+    47352: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { ShoppingCartErrorModal: () => F, default: () => N });
+      t.r(a), t.d(a, { ShoppingCartErrorModal: () => J, default: () => F });
       var i = t(7850),
         n = t(98682),
         r = t(83392),
@@ -156,66 +156,63 @@
       }
       var B = t(76217),
         g = t(2551),
-        f = t(29233),
-        Q = t(23809),
+        f = t(23809),
+        Q = t(29233),
         C = t(80902),
         p = t(11333);
-      function m(e) {
+      const m = 1;
+      function E(e) {
         return ["PlayerLinkDetails", e];
       }
-      function E(e) {
-        const a = (0, Q.KV)(),
-          t = (0, p.L)(a);
-        return (0, C.I)(
-          (function (e, a) {
-            const t =
-              "number" == typeof a
-                ? f.b2
-                    .InitFromAccountID(a, d.TS.EUNIVERSE)
-                    .ConvertTo64BitString()
-                : a;
-            return {
-              queryKey: m(t),
-              queryFn: async () => {
-                if (t) {
-                  const a = await e.load(t);
-                  return (
-                    delete a?.private_data?.account_name,
-                    delete a?.public_data?.account_flags,
-                    delete a?.public_data?.ban_expires_time,
-                    delete a?.public_data?.privacy_state,
-                    1 !== a?.public_data?.profile_state &&
-                      delete a?.private_data,
-                    a
-                  );
-                }
-                return null;
-              },
-              enabled: !!t,
-            };
-          })(t, e),
-        );
+      function h(e, a) {
+        const t =
+          "number" == typeof a
+            ? Q.b2.InitFromAccountID(a, d.TS.EUNIVERSE).ConvertTo64BitString()
+            : a;
+        return {
+          queryKey: E(t),
+          queryFn: async () => {
+            if (t) {
+              return (function (e) {
+                return (
+                  delete e?.private_data?.account_name,
+                  delete e?.public_data?.account_flags,
+                  delete e?.public_data?.ban_expires_time,
+                  delete e?.public_data?.privacy_state,
+                  e?.public_data?.profile_state !== m && delete e?.private_data,
+                  e
+                );
+              })(await e.load(t));
+            }
+            return null;
+          },
+          enabled: !!t,
+        };
       }
-      var h = t(75233),
-        _ = t(51614);
-      const v = "giftee-hint-2",
-        D = 600;
-      function S() {
+      var _ = t(75233),
+        v = t(51614);
+      const D = "giftee-hint-2",
+        S = 600;
+      function U() {
         const { data: e } = (function () {
-            const e = (0, Q.rX)();
+            const e = (0, f.rX)();
             return (0, C.I)({
-              queryKey: [v],
+              queryKey: [D],
               queryFn: async () => {
-                const a = await e.GetObject(v);
+                const a = await e.GetObject(D);
                 return a
-                  ? !a.rtCreated || a.rtCreated < Date.now() / 1e3 - D
-                    ? (await e.RemoveObject(v), null)
+                  ? !a.rtCreated || a.rtCreated < Date.now() / 1e3 - S
+                    ? (await e.RemoveObject(D), null)
                     : a
                   : null;
               },
             });
           })(),
-          a = E(e?.nGifteeAccountID);
+          a = (function (e) {
+            const a = (0, f.KV)(),
+              t = (0, p.L)(a);
+            return (0, C.I)(h(t, e));
+          })(e?.nGifteeAccountID);
         if (a.isLoading || !e?.nGifteeAccountID)
           return { gifteeHint: e, gifteePlayerDetails: void 0 };
         if (a.data) return { gifteeHint: e, gifteePlayerDetails: a.data };
@@ -223,7 +220,7 @@
           gifteeHint: e,
           gifteePlayerDetails: {
             public_data: {
-              steamid: f.b2
+              steamid: Q.b2
                 .InitFromAccountID(e.nGifteeAccountID, d.TS.EUNIVERSE)
                 .ConvertTo64BitString(),
               persona_name: e.strPersonaName,
@@ -234,63 +231,63 @@
           },
         };
       }
-      var U = t(60014),
-        j = t(41515),
-        w = t(90626),
-        I = t(31292),
-        K = t(56283),
-        T = t(74568),
-        y = t(61859),
-        R = t(30470),
-        x = t(48980),
-        M = t(11543),
-        k = t.n(M),
-        H = t(53534);
-      function N(e) {
+      var j = t(60014),
+        w = t(41515),
+        I = t(90626),
+        K = t(31292),
+        T = t(56283),
+        y = t(74568),
+        R = t(61859),
+        x = t(30470),
+        M = t(48980),
+        k = t(11543),
+        H = t.n(k),
+        N = t(53534);
+      function F(e) {
         const { closeCart: a, lineItemIDs: t, replacedPackageIDs: n } = e,
-          r = (0, j.UI)(),
-          { data: A } = (0, j.g7)(),
+          r = (0, w.UI)(),
+          { data: A } = (0, w.g7)(),
           s = (0, c.Yj)(t),
-          o = (0, U.aL)(R.TS.STORE_BASE_URL + "cart");
+          o = (0, j.aL)(x.TS.STORE_BASE_URL + "cart");
         if (
-          (w.useEffect(() => {
+          (I.useEffect(() => {
             r.isSuccess && s && 0 === s.length && a();
           }, [r, s, a]),
           !s)
         )
           return null;
         const l = n?.length > 0;
-        return (0, i.jsx)(H.wW, {
+        return (0, i.jsx)(N.wW, {
           validateCart: A,
-          eDisplayType: H.WA.k_ECartDisplayType_Modal,
-          children: (0, i.jsxs)(T.mt, {
+          eDisplayType: N.WA.k_ECartDisplayType_Modal,
+          children: (0, i.jsxs)(y.mt, {
             active: !0,
-            className: k().ShoppingCartModal,
+            className: H().ShoppingCartModal,
             onDismiss: a,
             children: [
               (0, i.jsx)("div", {
-                className: k().ShoppingCartHeader,
-                children: (0, y.we)(
+                className: H().ShoppingCartHeader,
+                children: (0, R.we)(
                   l ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
                 ),
               }),
-              (0, i.jsx)(x.pf, {
+              (0, i.jsx)(M.pf, {
                 lineItems: s,
                 cartValidation: A,
                 scrollable: !0,
               }),
-              (0, i.jsx)(J, { lineItems: s, cartValidation: A }),
+              (0, i.jsx)(P, { lineItems: s, cartValidation: A }),
               (0, i.jsxs)(B.Z, {
-                className: k().ShoppingCartModalBtns,
+                className: H().ShoppingCartModalBtns,
                 children: [
-                  (0, i.jsx)(K.$n, {
+                  (0, i.jsx)(T.$n, {
                     onClick: a,
-                    children: (0, y.we)("#Cart_ContinueShopping"),
+                    children: (0, R.we)("#Cart_ContinueShopping"),
                   }),
-                  (0, i.jsx)(K.jn, {
-                    className: k().OpenCartBtn,
+                  (0, i.jsx)(T.jn, {
+                    className: H().OpenCartBtn,
                     onClick: () => (window.location.href = o),
-                    children: (0, y.we)(
+                    children: (0, R.we)(
                       "#Cart_ViewMyCart",
                       r.data?.line_items.length,
                     ),
@@ -301,29 +298,29 @@
           }),
         });
       }
-      function F(e) {
+      function J(e) {
         const { active: a, result: t, onDismiss: n } = e;
-        return (0, i.jsxs)(T.mt, {
+        return (0, i.jsxs)(y.mt, {
           active: a,
           onDismiss: n,
           children: [
-            (0, i.jsx)(K.Y9, { children: (0, y.we)("#Error_Generic") }),
+            (0, i.jsx)(T.Y9, { children: (0, R.we)("#Error_Generic") }),
             (0, i.jsxs)("div", {
-              className: k().ErrorModalContent,
+              className: H().ErrorModalContent,
               children: [
                 (0, i.jsx)("div", {
-                  className: k().ErrorModalMessage,
-                  children: (0, y.we)("#Cart_ErrorUpdating"),
+                  className: H().ErrorModalMessage,
+                  children: (0, R.we)("#Cart_ErrorUpdating"),
                 }),
                 (0, i.jsx)("div", {
-                  className: k().ErrorModalCode,
-                  children: t ? (0, y.we)("#Cart_ErrorCode", t) : "",
+                  className: H().ErrorModalCode,
+                  children: t ? (0, R.we)("#Cart_ErrorCode", t) : "",
                 }),
                 (0, i.jsx)("div", {
-                  className: k().ErrorModalBottom,
-                  children: (0, i.jsx)(K.$n, {
+                  className: H().ErrorModalBottom,
+                  children: (0, i.jsx)(T.$n, {
                     onClick: n,
-                    children: (0, y.we)("#Button_Close"),
+                    children: (0, R.we)("#Button_Close"),
                   }),
                 }),
               ],
@@ -331,57 +328,57 @@
           ],
         });
       }
-      function J(e) {
+      function P(e) {
         const { cartValidation: a, lineItems: t } = e,
-          c = w.useRef(!1),
-          [d, B] = w.useState(!1),
-          { gifteeHint: f, gifteePlayerDetails: C } = S(),
+          c = I.useRef(!1),
+          [d, B] = I.useState(!1),
+          { gifteeHint: Q, gifteePlayerDetails: C } = U(),
           p = (0, l.EJ)(),
           m = (function () {
-            const e = (0, h.jE)(),
-              a = (0, Q.rX)();
-            return (0, _.n)({
+            const e = (0, _.jE)(),
+              a = (0, f.rX)();
+            return (0, v.n)({
               mutationFn: async (e) => {
                 e
-                  ? await a.StoreObject(v, {
+                  ? await a.StoreObject(D, {
                       ...e,
                       rtCreated: Date.now() / 1e3,
                     })
-                  : await a.RemoveObject(v);
+                  : await a.RemoveObject(D);
               },
               onMutate: async (a) => {
-                await e.cancelQueries({ queryKey: [v] }),
+                await e.cancelQueries({ queryKey: [D] }),
                   a && (a = { ...a, rtCreated: Date.now() / 1e3 }),
-                  e.setQueryData([v], a);
+                  e.setQueryData([D], a);
               },
             });
           })(),
           E = (0, o.C)();
-        let D = !(
+        let h = !(
           d ||
-          !f?.nGifteeAccountID ||
+          !Q?.nGifteeAccountID ||
           !C?.public_data ||
           p ||
           !a?.cart_items
         );
-        if (D) {
+        if (h) {
           const e = new Map(a.cart_items.map((e) => [e.line_item_id, e]));
-          D = !!t.find(
+          h = !!t.find(
             (a) =>
               !a.gift_info?.accountid_giftee &&
               !!e.get(a.line_item_id)?.can_purchase_as_gift,
           );
         }
         if (
-          (w.useEffect(() => {
-            D &&
+          (I.useEffect(() => {
+            h &&
               !c.current &&
-              ((0, I.D)()?.AddEvent(g.Xm.K4), (c.current = !0));
-          }, [D]),
-          !D)
+              ((0, K.D)()?.AddEvent(g.Xm.K4), (c.current = !0));
+          }, [h]),
+          !h)
         )
           return null;
-        const U = (0, i.jsxs)("a", {
+        const S = (0, i.jsxs)("a", {
           href: u(C),
           target: "_blank",
           children: [
@@ -392,13 +389,13 @@
               alt: C.public_data.persona_name,
             }),
             (0, i.jsx)("div", {
-              className: k().PersonaName,
+              className: H().PersonaName,
               children: C.public_data.persona_name,
             }),
           ],
         });
         return (0, i.jsxs)(r.s, {
-          className: k().GifteeHintCtn,
+          className: H().GifteeHintCtn,
           align: "center",
           gap: "3",
           direction: "row",
@@ -406,8 +403,8 @@
             (0, i.jsx)(A.EY, {
               as: "div",
               align: "center",
-              className: k().GifteeHint,
-              children: (0, y.PP)("#Cart_GifteeHint_Wishlist", U),
+              className: H().GifteeHint,
+              children: (0, R.PP)("#Cart_GifteeHint_Wishlist", S),
             }),
             (0, i.jsxs)(r.s, {
               gap: "2",
@@ -418,9 +415,9 @@
                   size: "1",
                   color: "dull",
                   onClick: () => {
-                    (0, I.D)()?.AddEvent(g.Xm.En), m.mutate(null);
+                    (0, K.D)()?.AddEvent(g.Xm.En), m.mutate(null);
                   },
-                  children: (0, y.we)("#Button_No"),
+                  children: (0, R.we)("#Button_No"),
                 }),
                 (0, i.jsx)(s.$, {
                   size: "1",
@@ -431,13 +428,13 @@
                         lineItemFlags: { is_gift: !0 },
                         giftInfo: {
                           ...e.gift_info,
-                          accountid_giftee: f.nGifteeAccountID,
+                          accountid_giftee: Q.nGifteeAccountID,
                         },
                         gidCoupon: e.gidcoupon_applied,
                       });
-                    m.mutate(f), B(!0), (0, I.D)()?.AddEvent(g.Xm.xh);
+                    m.mutate(Q), B(!0), (0, K.D)()?.AddEvent(g.Xm.xh);
                   },
-                  children: (0, y.we)("#Button_Yes"),
+                  children: (0, R.we)("#Button_Yes"),
                 }),
               ],
             }),

@@ -456,6 +456,7 @@
             _ = (0, _._)(
               {
                 onClick: _,
+                "aria-disabled": _,
                 ..._,
                 variant: _,
                 size: _,

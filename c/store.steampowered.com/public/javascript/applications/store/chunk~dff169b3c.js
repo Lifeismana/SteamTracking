@@ -1660,6 +1660,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  market_bucket_id: {
+                    _: 39,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m

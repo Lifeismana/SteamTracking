@@ -5855,6 +5855,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  is_achievable: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                   completion_achievements: {
                     _: 3,
                     _: _._.readUint32,

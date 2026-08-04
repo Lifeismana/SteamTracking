@@ -325,6 +325,7 @@
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
         gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+        dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
         NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
         twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
         DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
@@ -45811,12 +45812,13 @@
             bHasGamePrivacy: w,
             bNoMask: M,
             bEllipsisName: S,
-            ...z
+            bDropPadding: z,
+            ...v
           } = this.props;
-          let v = null,
-            R = null,
+          let R = null,
             T = null,
-            j = [
+            j = null,
+            C = [
               e,
               tr().personaNameAndStatusLabel,
               (0, Ge.rO)(r),
@@ -45824,53 +45826,53 @@
               M ? tr().NoMask : void 0,
             ];
           f || r.has_public_party_beacon
-            ? (R = (0, i.jsx)(rr, { persona: r }))
+            ? (T = (0, i.jsx)(rr, { persona: r }))
             : (0, a.aPS)(s)
-              ? ((R = (0, B.we)("#PersonaStateBlocked")), j.push(tr().blocked))
+              ? ((T = (0, B.we)("#PersonaStateBlocked")), C.push(tr().blocked))
               : r.is_ingame
-                ? ((R =
+                ? ((T =
                     !r.is_in_nonsteam_game || n || (0, a.S$u)(s)
                       ? r.GetCurrentGameName()
                       : (0, B.we)("#PersonaStateInNonSteamGame")),
                   n || y
                     ? n &&
                       r.is_awayOrSnooze &&
-                      (T = (0, B.we)("#PersonaStateAway"))
-                    : (T = r.GetCurrentGameRichPresence()))
+                      (j = (0, B.we)("#PersonaStateAway"))
+                    : (j = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (R = (0, B.we)("#PersonaStateWatchingBroadcast")),
-            R || (R = r.GetLocalizedOnlineStatus()),
-            p && (R = p());
-          let C = !y && !d;
-          !1 === d && (C = !0),
-            r.is_awayOrSnooze && C && (v = (0, i.jsx)(Kt, { persona: r }));
-          let F = (0, i.jsx)(i.Fragment, {});
+                  (T = (0, B.we)("#PersonaStateWatchingBroadcast")),
+            T || (T = r.GetLocalizedOnlineStatus()),
+            p && (T = p());
+          let F = !y && !d;
+          !1 === d && (F = !0),
+            r.is_awayOrSnooze && F && (R = (0, i.jsx)(Kt, { persona: r }));
+          let I = (0, i.jsx)(i.Fragment, {});
           t
-            ? (F = (0, i.jsx)("div", {
+            ? (I = (0, i.jsx)("div", {
                 className: "ContextMenuButton",
                 onClick: t,
                 children: (0, i.jsx)(_.GB9, {}),
               }))
-            : j.push(tr().noContextMenu),
-            y && j.push(tr().hidePersona),
-            b && (T = b()),
-            (!m && T) || j.push(tr().twoLine);
-          const I = !r.is_ingame && !g,
-            x = !u && T,
-            W = R && (!m || !x),
-            U = (0, a.IDH)(De.TS.LAUNCHER_TYPE);
-          let O = l && !o,
-            q = O ? l : r.m_strPlayerName,
-            E = !y && (W || I) && x;
+            : C.push(tr().noContextMenu),
+            y && C.push(tr().hidePersona),
+            b && (j = b()),
+            (!m && j) || C.push(tr().twoLine);
+          const x = !r.is_ingame && !g,
+            W = !u && j,
+            U = T && (!m || !W),
+            O = (0, a.IDH)(De.TS.LAUNCHER_TYPE);
+          let q = l && !o,
+            E = q ? l : r.m_strPlayerName,
+            A = !y && (U || x) && W;
           return (0, i.jsxs)("div", {
-            ...z,
-            className: (0, ke.A)(...j),
+            ...v,
+            className: (0, ke.A)(...C),
             onContextMenu: t,
             children: [
               (0, i.jsxs)("div", {
                 className: (0, ke.A)(
                   tr().statusAndName,
-                  E ? tr().threeLines : void 0,
+                  A ? tr().threeLines : void 0,
                 ),
                 children: [
                   (0, i.jsxs)("div", {
@@ -45879,7 +45881,7 @@
                       S ? tr().EllipsisName : void 0,
                     ),
                     children: [
-                      q || " ",
+                      E || " ",
                       o &&
                         l &&
                         (0, i.jsxs)("span", {
@@ -45894,34 +45896,35 @@
                       title: (0, B.we)("#User_ToggleDoNotDisturb"),
                       children: (0, i.jsx)(_.Aj0, {}),
                     }),
-                  O &&
+                  q &&
                     (0, i.jsx)("span", {
                       className: tr().playerNicknameBracket,
                       title: (0, B.we)("#isNickname"),
                       children: " *",
                     }),
                   (0, i.jsx)(Xt, { persona: r }),
-                  v,
+                  R,
                   (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
-                    U &&
+                    O &&
                     (0, i.jsx)("div", {
                       className: tr().PendingPersona,
                       title: (0, B.we)("#SteamChina_PendingPersonaName"),
                       children: (0, i.jsx)(_.zD7, {}),
                     }),
-                  F,
+                  I,
                 ],
               }),
               !y &&
                 (0, i.jsxs)("div", {
                   className: tr().richPresenceContainer,
                   children: [
-                    (W || I) &&
+                    (U || x) &&
                       (0, i.jsxs)("div", {
                         className: (0, ke.A)(
                           tr().gameName,
-                          E ? tr().threeLines : void 0,
+                          A ? tr().threeLines : void 0,
                           tr().richPresenceLabel,
+                          z && tr().dropPadding,
                           "no-drag",
                         ),
                         children: [
@@ -45931,13 +45934,17 @@
                               title: (0, B.we)("#User_GameInfoHidden"),
                               children: (0, i.jsx)(_.jZl, {}),
                             }),
-                          R,
+                          T,
                         ],
                       }),
-                    x &&
+                    W &&
                       (0, i.jsxs)("div", {
-                        className: (0, ke.A)(tr().richPresenceLabel, "no-drag"),
-                        children: [T, " "],
+                        className: (0, ke.A)(
+                          tr().richPresenceLabel,
+                          z && tr().dropPadding,
+                          "no-drag",
+                        ),
+                        children: [j, " "],
                       }),
                   ],
                 }),
@@ -51727,7 +51734,7 @@
         q = r(14987),
         E = r(60014),
         A = r(35380),
-        k = r(6256),
+        k = r(93341),
         N = r(96006),
         P = r(94191),
         G = r(94095),

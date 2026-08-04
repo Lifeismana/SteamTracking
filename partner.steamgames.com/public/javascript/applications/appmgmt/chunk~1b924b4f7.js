@@ -51,11 +51,11 @@
       "use strict";
       t.d(n, {
         mK: () => L,
-        Gy: () => y,
+        Gy: () => T,
         sh: () => w,
         T6: () => S,
-        yk: () => k,
-        Ur: () => j,
+        yk: () => j,
+        Ur: () => y,
       });
       var r = t(7850),
         i = t(48724),
@@ -70,8 +70,8 @@
         g = t(12155),
         P = t(32754),
         p = t(52038),
-        m = t(61859),
-        b = t(7929),
+        b = t(61859),
+        m = t(7929),
         f = t(96434),
         _ = t.n(f),
         D = t(14336);
@@ -99,13 +99,13 @@
                   (0, r.jsxs)(P.he, {
                     className: _().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, m.we)(
+                    toolTipContent: (0, b.we)(
                       "#PricingDashboard_CurrentPriceOnStore_ttip",
                     ),
                     children: [
                       (0, r.jsx)("div", {
                         className: _().DetailLabel,
-                        children: (0, m.we)(
+                        children: (0, b.we)(
                           "#PricingDashboard_CurrentPriceOnStore",
                         ),
                       }),
@@ -120,10 +120,10 @@
                         ),
                         onClick: () => c(s),
                         bDisabled: s == i,
-                        toolTipContent: (0, m.we)(
+                        toolTipContent: (0, b.we)(
                           "#PricingDashboard_UseThisOldPrice_ttip",
                         ),
-                        children: (0, m.we)(
+                        children: (0, b.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
@@ -133,7 +133,7 @@
                   (0, r.jsxs)(P.he, {
                     className: _().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, m.we)(
+                    toolTipContent: (0, b.we)(
                       "#PricingDashboard_ProposedPrice_ttip",
                       C,
                       g,
@@ -141,7 +141,7 @@
                     children: [
                       (0, r.jsx)("div", {
                         className: _().DetailLabel,
-                        children: (0, m.we)("#PricingDashboard_ProposedPrice"),
+                        children: (0, b.we)("#PricingDashboard_ProposedPrice"),
                       }),
                       (0, r.jsx)("div", {
                         className: _().DetailPrice,
@@ -154,10 +154,10 @@
                         ),
                         onClick: () => c(o),
                         bDisabled: o == i,
-                        toolTipContent: (0, m.we)(
+                        toolTipContent: (0, b.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
                         ),
-                        children: (0, m.we)(
+                        children: (0, b.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
@@ -167,14 +167,14 @@
                   (0, r.jsxs)(P.he, {
                     className: _().DetailRow,
                     direction: "left",
-                    toolTipContent: b.g.Localize(
+                    toolTipContent: m.g.Localize(
                       "#PricingDashboard_Method_SuggestedPrice_ttip",
                       (0, l.Wx)(d, "USD").join(""),
                     ),
                     children: [
                       (0, r.jsx)("div", {
                         className: _().DetailLabel,
-                        children: b.g.Localize(
+                        children: m.g.Localize(
                           "#PricingDashboard_Method_SuggestedPrice",
                         ),
                       }),
@@ -189,10 +189,10 @@
                         ),
                         onClick: () => c(a),
                         bDisabled: a == i,
-                        toolTipContent: (0, m.we)(
+                        toolTipContent: (0, b.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
                         ),
-                        children: (0, m.we)(
+                        children: (0, b.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
@@ -212,25 +212,25 @@
             nProposedPriceInCents: P,
             fnSetPrice: p,
           } = (0, l.xQ)(s, o),
-          [m, b, f] = (0, l.Wx)(a, o),
+          [b, m, f] = (0, l.Wx)(a, o),
           D = (0, l.Gs)(o),
           w = u.useRef(void 0),
-          { strClassName: j } = T(s, o),
-          k = "USD" == o,
+          { strClassName: y } = k(s, o),
+          j = "USD" == o,
           L = P ?? g,
-          E = a != L;
+          F = a != L;
         return (0, r.jsxs)("div", {
           ref: w,
           onKeyDown: d.nm,
-          className: j,
+          className: y,
           children: [
-            E && (0, r.jsx)(y, { nPriceInCents: a, nSavedPriceInCents: L }),
-            (0, r.jsx)("div", { className: _().PricePrefix, children: m && m }),
+            F && (0, r.jsx)(T, { nPriceInCents: a, nSavedPriceInCents: L }),
+            (0, r.jsx)("div", { className: _().PricePrefix, children: b && b }),
             (0, r.jsx)(i.n, {
               menuTarget: (0, r.jsx)("div", {
                 className: _().EditablePrice,
                 children: (0, r.jsx)(h.pd, {
-                  value: b,
+                  value: m,
                   className: _().PriceInput,
                   onChange: (e) => {
                     const n = e.target.value.replace(/[^0-9]/g, "");
@@ -252,7 +252,7 @@
               children: (0, r.jsx)(C, { packageID: s, strPriceKey: o }),
             }),
             (0, r.jsx)("div", { className: _().PriceSuffix, children: f && f }),
-            k &&
+            j &&
               (0, r.jsx)(v, {
                 packageID: s,
                 appids: t.original.appids,
@@ -268,7 +268,7 @@
         return (0, r.jsx)(o.x, {
           fnGetUSDPriceInCents: () => (0, l.FR)(n, "USD"),
           fnOnUpdate: (e) => a(n, e),
-          strDescription: b.g.Localize(
+          strDescription: m.g.Localize(
             "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           nPackageID: n,
@@ -278,7 +278,7 @@
       }
       function S(e) {
         const { packageID: n, strPriceKey: t } = e,
-          { strPriceWarning: i, bBadPrice: s, bShowWarningIcon: o } = T(n, t);
+          { strPriceWarning: i, bBadPrice: s, bShowWarningIcon: o } = k(n, t);
         return o
           ? (0, r.jsx)(P.he, {
               className: _().PriceAlert,
@@ -291,9 +291,9 @@
             })
           : null;
       }
-      const j = 2.25,
-        k = 0.5;
-      function T(e, n) {
+      const y = 2.25,
+        j = 0.5;
+      function k(e, n) {
         const {
             nPriceInCents: t,
             nPublishedPriceInCents: r,
@@ -306,71 +306,71 @@
           h = (0, l.d$)(e),
           g = "USD" == n,
           P = t != (i ?? r),
-          b = t < s,
+          m = t < s,
           f = !!o && t > o,
-          D = !!d && t > d * j,
-          x = !!d && t < d * k,
+          D = !!d && t > d * y,
+          x = !!d && t < d * j,
           C = !!d && t < d && !!c,
           w = !!d && t == d && !!c;
         let v = !1;
         f
-          ? (v = (0, m.we)("#PricingDashboard_PriceIncreaseDisallowed"))
-          : b && !P
-            ? (v = (0, m.we)("#PricingDashboard_PriceTooLow_Grandfathered"))
-            : b
-              ? (v = (0, m.we)(
+          ? (v = (0, b.we)("#PricingDashboard_PriceIncreaseDisallowed"))
+          : m && !P
+            ? (v = (0, b.we)("#PricingDashboard_PriceTooLow_Grandfathered"))
+            : m
+              ? (v = (0, b.we)(
                   "#PricingDashboard_PriceTooLow",
                   (0, l.Wx)(s, n).join(""),
                 ))
               : D
-                ? (v = (0, m.we)(
+                ? (v = (0, b.we)(
                     "#PricingDashboard_PriceMuchHigherThanMethod",
                     (0, l.Wx)(d, n).join(""),
                   ))
                 : x && C
-                  ? (v = (0, m.we)(
+                  ? (v = (0, b.we)(
                       "#PricingDashboard_PriceMuchLowerThanMethod_AndLimitDiscount",
                       (0, l.Wx)(d, n).join(""),
                       c,
                     ))
                   : x
-                    ? (v = (0, m.we)(
+                    ? (v = (0, b.we)(
                         "#PricingDashboard_PriceMuchLowerThanMethod",
                         (0, l.Wx)(d, n).join(""),
                       ))
                     : C
-                      ? (v = (0, m.we)(
+                      ? (v = (0, b.we)(
                           "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
                           c,
                         ))
-                      : w && (v = (0, m.we)("#PricingDashboard_PriceCheap", c));
-        const S = f || b,
-          T = D || x,
-          y = S || T || C,
+                      : w && (v = (0, b.we)("#PricingDashboard_PriceCheap", c));
+        const S = f || m,
+          k = D || x,
+          T = S || k || C,
           L = !(P || !i || (r && i == r)),
-          E = h?.eState == a.Zo,
-          F = (0, p.A)(
+          F = h?.eState == a.Zo,
+          I = (0, p.A)(
             _().PriceCell,
             g && _().USD,
             P && _().ChangedLocally,
             L && _().ProposedPrice,
-            E && _().ApprovedCanPublish,
-            y && _().WarningPrice,
-            T && _().SevereWarningPrice,
+            F && _().ApprovedCanPublish,
+            T && _().WarningPrice,
+            k && _().SevereWarningPrice,
             S && _().BadPrice,
           );
         return u.useMemo(
           () => ({
             strPriceWarning: v,
-            strClassName: F,
+            strClassName: I,
             bBadPrice: S,
-            bShowSevereWarning: T,
-            bShowWarningIcon: y,
+            bShowSevereWarning: k,
+            bShowWarningIcon: T,
           }),
-          [v, F, S, T, y],
+          [v, I, S, k, T],
         );
       }
-      function y(e) {
+      function T(e) {
         const { nPriceInCents: n, nSavedPriceInCents: t } = e;
         let i = null,
           s = null,
@@ -380,8 +380,8 @@
           const e = Math.ceil((100 * (n - t)) / t),
             c = n > t;
           (o = c
-            ? (0, m.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
-            : (0, m.we)("#PricingDashboard_PriceLowerBy", e + "%")),
+            ? (0, b.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
+            : (0, b.we)("#PricingDashboard_PriceLowerBy", e + "%")),
             (a = (0, p.A)(_().PriceChange, c && _().PriceIncrease)),
             (s = (0, r.jsx)("div", {
               className: _().PriceChangeArrow,
@@ -389,7 +389,7 @@
             })),
             (i = e + "%");
         } else
-          (i = (0, m.we)("#PricingDashboard_PriceIsNew_Short")),
+          (i = (0, b.we)("#PricingDashboard_PriceIsNew_Short")),
             (a = (0, p.A)(_().NewPrice));
         return (0, r.jsxs)(P.he, {
           className: a,
@@ -400,7 +400,7 @@
         });
       }
       function L(e) {
-        return new Date(1e3 * e).toLocaleString(m.pf.GetPreferredLocales(), {
+        return new Date(1e3 * e).toLocaleString(b.pf.GetPreferredLocales(), {
           weekday: "long",
           month: "long",
           day: "numeric",
@@ -434,8 +434,8 @@
             dismissOnClick: g,
             menuTarget: P,
             className: p,
-            children: m,
-            renderWhenClosed: b = !0,
+            children: b,
+            renderWhenClosed: m = !0,
             ...f
           } = e,
           {
@@ -469,7 +469,7 @@
                 onCancel: C,
                 onFocusWithin: (e) => !e && C(),
                 childFocusDisabled: !_,
-                children: (0, r.jsx)(l.q, { children: (b || _) && m }),
+                children: (0, r.jsx)(l.q, { children: (m || _) && b }),
               }),
             ],
           })
@@ -495,8 +495,8 @@
       !(function (e) {
         (e.k_FreeToPlay = "freetoplay"), (e.k_Free = "free");
       })(r || (r = {}));
-      var m = t(66418),
-        b = t(51614);
+      var b = t(66418),
+        m = t(51614);
       var f = t(71298),
         _ = t(78686);
       function D(e) {
@@ -540,7 +540,7 @@
         const { closeModal: n, nAppID: t, nPackageID: s } = e,
           [l, h] = (0, d.useState)(r.k_FreeToPlay),
           D = (function (e, n) {
-            return (0, b.n)({
+            return (0, m.n)({
               mutationKey: ["settofree", n],
               mutationFn: async (t) => {
                 const { displayOption: i, fnOnStoreSaveSucceed: s } = t;
@@ -558,7 +558,7 @@
                     ),
                     !(
                       await fetch(
-                        `${m.TS.PARTNER_BASE_URL}store/ajaxupdatef2pstore`,
+                        `${b.TS.PARTNER_BASE_URL}store/ajaxupdatef2pstore`,
                         { method: "POST", credentials: "include", body: n },
                       )
                     ).ok)
@@ -576,7 +576,7 @@
                     e.set("billing_type", "12"),
                     !(
                       await fetch(
-                        `${m.TS.PARTNER_BASE_URL}store/ajaxpackagesave/${n}`,
+                        `${b.TS.PARTNER_BASE_URL}store/ajaxpackagesave/${n}`,
                         { method: "POST", credentials: "include", body: e },
                       )
                     ).ok)
@@ -702,8 +702,8 @@
         g = t.n(h),
         P = t(90626),
         p = t(7929),
-        m = t(53965),
-        b = t(32754);
+        b = t(53965),
+        m = t(32754);
       function f(e) {
         const n = (0, r.jsx)("button", {
           className: g().PriceGuidelinesPicker,
@@ -713,10 +713,10 @@
       }
       function _(e) {
         const { strButton: n, strTooltip: t } = e,
-          i = (0, r.jsxs)(m.$, {
+          i = (0, r.jsxs)(b.$, {
             onClick: () => {},
             children: [
-              (0, r.jsx)(b.Gq, {
+              (0, r.jsx)(m.Gq, {
                 toolTipContent: t,
                 children: (0, r.jsx)("span", { children: n }),
               }),
@@ -752,10 +752,10 @@
             onSelect: h,
             appids: P,
           } = e,
-          m = (0, a.cT)(),
-          b = n();
-        if (!m) return null;
-        const f = m.GetUSDPricePointsInCents();
+          b = (0, a.cT)(),
+          m = n();
+        if (!b) return null;
+        const f = b.GetUSDPricePointsInCents();
         return (0, r.jsxs)("div", {
           className: g().GuidelinesPanel,
           children: [
@@ -790,7 +790,7 @@
                       },
                       className: (0, u.A)({
                         [g().GridElement]: !0,
-                        [g().CurrentPrice]: b == e,
+                        [g().CurrentPrice]: m == e,
                       }),
                       children: (0, i.x)(e, s.CS),
                     },
@@ -874,8 +874,8 @@
           g = (0, i.useRef)(null),
           P = (0, i.useRef)(!1),
           p = (0, i.useRef)(!1),
-          m = (0, i.useRef)(null),
-          [b, f] = (0, i.useState)(!1),
+          b = (0, i.useRef)(null),
+          [m, f] = (0, i.useState)(!1),
           [_, D] = (0, i.useMemo)(
             () =>
               (function (e) {
@@ -885,11 +885,11 @@
             [n],
           ),
           x = (0, i.useCallback)(() => {
-            if (!m.current || !g.current) return;
-            const e = m.current.getBoundingClientRect(),
+            if (!b.current || !g.current) return;
+            const e = b.current.getBoundingClientRect(),
               n = g.current.getBoundingClientRect();
             let r = D;
-            const i = m.current.matches(":dir(rtl)");
+            const i = b.current.matches(":dir(rtl)");
             i && ("left" === D ? (r = "right") : "right" === D && (r = "left")),
               g.current.style.setProperty("--parentWidth", `${e.width}px`),
               g.current.style.setProperty("--parentHeight", `${e.height}px`);
@@ -901,21 +901,20 @@
                 }
                 if ("right" === r) {
                   const t = _ ? e.left : e.right;
-                  s = document.documentElement.clientWidth - (t + n.width);
+                  s = document.body.clientWidth - (t + n.width);
                 }
                 void 0 === r &&
                   (s = i
                     ? e.right - n.width
-                    : document.documentElement.clientWidth -
-                      (e.left + n.width)),
+                    : document.body.clientWidth - (e.left + n.width)),
                   (s = Math.min(s, 0));
               }
               "left" === r
                 ? _
                   ? ((g.current.style.left = "unset"),
-                    (g.current.style.right = `${document.documentElement.clientWidth - e.right + s}px`))
+                    (g.current.style.right = `${document.body.clientWidth - e.right + s}px`))
                   : ((g.current.style.left = "unset"),
-                    (g.current.style.right = `${document.documentElement.clientWidth - e.left + s}px`))
+                    (g.current.style.right = `${document.body.clientWidth - e.left + s}px`))
                 : "right" === r
                   ? _
                     ? ((g.current.style.left = `${e.left + s}px`),
@@ -925,7 +924,7 @@
                   : void 0 === r &&
                     (i
                       ? ((g.current.style.left = "unset"),
-                        (g.current.style.right = `${document.documentElement.clientWidth - e.right + s}px`))
+                        (g.current.style.right = `${document.body.clientWidth - e.right + s}px`))
                       : ((g.current.style.left = `${e.left + s}px`),
                         (g.current.style.right = "unset")));
             }
@@ -954,11 +953,11 @@
                     )));
           }, [D, t, d, _]),
           C = (0, i.useMemo)(() => {
-            if (m.current) return (0, s._f)(m.current);
-          }, [m.current]);
+            if (b.current) return (0, s._f)(b.current);
+          }, [b.current]);
         (0, i.useEffect)(
           () =>
-            b
+            m
               ? (g.current?.showPopover(),
                 x(),
                 C?.addEventListener("scroll", x),
@@ -971,7 +970,7 @@
                   window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
                   g.current?.hidePopover(),
                 () => {}),
-          [b, x, C],
+          [m, x, C],
         );
         const w = (0, i.useCallback)(() => {
             x(), f(!0), (p.current = !0);
@@ -982,37 +981,37 @@
           S = (0, i.useCallback)(() => {
             (P.current = !0), f(!0);
           }, []),
+          y = (0, i.useCallback)(
+            (e) => {
+              g.current?.contains(e.target) && S();
+            },
+            [S],
+          ),
           j = (0, i.useCallback)(
             (e) => {
               g.current?.contains(e.target) && S();
             },
             [S],
           ),
-          k = (0, i.useCallback)(
-            (e) => {
-              g.current?.contains(e.target) && S();
-            },
-            [S],
-          ),
-          T = (0, i.useCallback)(() => {
+          k = (0, i.useCallback)(() => {
             (P.current = !1), p.current || f(!1);
           }, []),
-          y = (0, i.useCallback)(
+          T = (0, i.useCallback)(
             (e) => {
-              g.current?.contains(e.target) && T();
+              g.current?.contains(e.target) && k();
             },
-            [T],
+            [k],
           ),
           L = (0, i.useCallback)(() => {
-            T(), v();
-          }, [T, v]),
-          E = (0, i.useCallback)(
-            (e) => {
-              "Enter" === e.key && (e.preventDefault(), b ? v() : w());
-            },
-            [v, w, b],
-          ),
+            k(), v();
+          }, [k, v]),
           F = (0, i.useCallback)(
+            (e) => {
+              "Enter" === e.key && (e.preventDefault(), m ? v() : w());
+            },
+            [v, w, m],
+          ),
+          I = (0, i.useCallback)(
             (e) => {
               e.currentTarget.contains(e.relatedTarget) ||
                 g.current?.contains(e.relatedTarget) ||
@@ -1020,7 +1019,7 @@
             },
             [v],
           ),
-          I = (0, i.useCallback)(
+          E = (0, i.useCallback)(
             (e) => {
               h === l && w();
             },
@@ -1031,48 +1030,48 @@
               const n =
                   e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
                 t = !e.relatedTarget && !P.current;
-              (n || t) && (T(), f(!1));
+              (n || t) && (k(), f(!1));
             },
-            [T],
+            [k],
           ),
           M = (0, i.useCallback)(
             (e) => {
               g.current?.contains(e.target) &&
-                (b && u ? L() : P.current && w());
+                (m && u ? L() : P.current && w());
             },
-            [L, u, b, w],
+            [L, u, m, w],
           ),
           O = (0, i.useCallback)(
             (e) => {
               g.current?.contains(e.target) &&
-                ("Enter" === e.key && b && u ? L() : w(),
-                "Escape" === e.key && b && (L(), e.stopPropagation()));
+                ("Enter" === e.key && m && u ? L() : w(),
+                "Escape" === e.key && m && (L(), e.stopPropagation()));
             },
-            [L, u, b, w],
+            [L, u, m, w],
           );
         let A;
-        h !== a || b
-          ? h === c && (A = b ? v : w)
+        h !== a || m
+          ? h === c && (A = m ? v : w)
           : (A = (e) => {
               e.preventDefault(), w();
             });
         const B = {
-            "aria-expanded": b,
+            "aria-expanded": m,
             role: "button",
             onMouseEnter: h === a ? w : void 0,
             onMouseLeave: h === a ? v : void 0,
             onClick: A,
-            ref: m,
-            onKeyDown: E,
-            onFocus: I,
-            onBlur: F,
+            ref: b,
+            onKeyDown: F,
+            onFocus: E,
+            onBlur: I,
           },
           R = {
             popover: "manual",
             ref: g,
-            onMouseEnter: k,
-            onMouseLeave: y,
-            onFocus: j,
+            onMouseEnter: j,
+            onMouseLeave: T,
+            onFocus: y,
             onBlur: N,
             onClick: M,
             onKeyDown: O,
@@ -1084,7 +1083,7 @@
             () => ({ show: w, hide: v, close: L }),
             [w, v, L],
           ),
-          { isShowingMenu: b, triggerProps: B, menuProps: R, closeMenu: L }
+          { isShowingMenu: m, triggerProps: B, menuProps: R, closeMenu: L }
         );
       }
     },

@@ -5878,13 +5878,13 @@
               { appID: _ } = (0, _._)(),
               _ = (0, _._)(_),
               _ = (0, _.useCallback)(
-                (_) =>
-                  "0" == (_ ?? "0")
-                    ? (0, _._)(
-                        "#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers",
-                      )
-                    : _.find((_) => _.appid == _)?.name,
-                [_],
+                (_) => {
+                  if ("0" == (_ ?? "0"))
+                    return `(${_}) ${(0, _._)("#AchievementEditor_Group_Field_Restrictions_Value_AllPlayers")}`;
+                  const _ = _.find((_) => _.appid == _)?.name;
+                  return `(${_}) ${_}`;
+                },
+                [_, _],
               ),
               _ = Array.from(
                 new Set(
@@ -8191,6 +8191,7 @@
             _ = (0, _._)(
               {
                 onClick: _,
+                "aria-disabled": _,
                 ..._,
                 variant: _,
                 size: _,

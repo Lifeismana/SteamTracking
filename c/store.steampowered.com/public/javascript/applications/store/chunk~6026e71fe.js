@@ -3,6 +3,20 @@
   {
     chunkid: (module) => {
       module.exports = {
+        AvatarHolder: "_1_sHcxv9rQdANehiviVZR4",
+        Avatar: "_3qaudpkfSKoxlwfA-deQLX",
+        Offline: "_2G4b7NcQECHtFR_D28hqQG",
+        Online: "_2-QtgoeBaZrzBPhoKaud5x",
+        AvatarStatus: "_3pbKzT087jaL2EeQO1qsaR",
+        InGame: "_2K3Q_r66P06VLgIPo-DYsv",
+        AwayOrSnooze: "_3VrE4NMh7NJt0aKikAbOA3",
+        WatchingBroadcast: "FhCJhs583_Ocqm0UT9y_d",
+        AvatarFrame: "_3ZPXpi9X8K-n17XiGgTMdU",
+        AvatarFrameImg: "Uk4DBWxeyo7Tn8SAl8afe",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "Variant-basic": "xqG5GdDEeYauX2ots2DLl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -77,6 +91,128 @@
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
         "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Spoiler: "_2HIF4E13yuhn3QbY2I5vlt",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        FullScreenCarousel: "GWpeP0OynUHnroAJBEqtW",
+        Carousel: "_3Ox4yOQ30uqXO-_SSU25-4",
+        InnerContainer: "OyPgwnvn3qD0HnYa4g5FY",
+        PageableContainer: "_3YkXocjmZ3Gzt3OHpou5A-",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        CarouselWrapper: "yZriF6RhqF6mZVbimfY5m",
+        Carousel: "_3RXtvFl56Rcjg9d3S8l0sg",
+        ReviewSectionTitle: "_1ed_Gl_BrsYGwgTnzD6Ks4",
+        LoadingThrobber: "_3Gx8g3deQNvG7maEho_KEm",
+        FullScreen: "_2-3tU3uMzoBujNDTj_j78I",
+        ModalPosition: "_1-PD5DTGhli1DHzHFM3S78",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        ReviewDetails: "amNoDX2pd1HfanrHX9QUo",
+        Top: "_2uvK1zucSC4I2mo3PDObGs",
+        Friend: "_1LI9d9a8_tfZJvBuuZz6Oh",
+        Short: "dh9oGaFfS7QEnReR1JGRQ",
+        AuthorInfo: "_3F7bFyuhd9Wd6ElK9gYO78",
+        ReviewInfo: "_3bOVkQDR-47l_JC2dHQts_",
+        Body: "_1ezRJ8ihekaFqbr-BLpl4p",
+        ReviewText: "_7-m3PA_FStk99zsZUPYX-",
+        Text: "_1zbKizfCRpoX2D_zOLQes0",
+        ReviewInfoHeader: "HGCiCZ2mhusHJku7z15Nw",
+        HeaderText: "_2zyEpK1LijR3BZCoCwm5V6",
+        Persona: "_2AL4QiqNSjqzhkK1W9m2E6",
+        Playtime: "_1N9XZTVu3iXgXmyuKwSF4E",
+        Headline: "_17lxcLR8FnXBii5ZgrKZCf",
+        FadeGradient: "_25ppgVnyq5WaMqUlTkqeug",
+        Gamepad: "_3xiX6A0plTO_i8P3Di75Oy",
+        ScrollPanel: "_3td8YZg3hAz_HxtJAPJXeJ",
+        ReviewHeaderLink: "pTfX5u-NsAgUX8Co1ntO8",
+        ReviewWrapper: "_3EzUr8FHQTy6eQl2ZpHLjq",
+        TextContainer: "uxZHwbCMxnLnMBo894hNi",
+        ReviewRatings: "hIgoBpQW6F1kNF7Bs7Gna",
+        ReviewReactions: "_3kYaVBYTs2J13FnFOmJqgK",
+        Fullscreen: "HdMtG8LBYDGx20EG8UEc1",
+        ReviewCategories: "_1ws-mV4Z-XpaO-YlEJfvlj",
+        ReadMoreButton: "Zq302wXf0fsRUcqWKFdy3",
+        VoteButtonsContainer: "_3yLQ-0lsgzRjHo5_mPaKBX",
+        MainDivider: "GjhFar4SYq03mCinc1Ck7",
+        CommentCount: "_1PW82leH_VoFuD5ITaDX0Q",
+        ReviewHardware: "KahBO3vHzFejyThpZEiB",
+        ReviewInfoHeaderLink: "_1g3QBaToAKTX9YqI9G-eg7",
+        VoteButton: "_131dBxXvyV0SDKXTx9Ad0n",
+        Name: "K01H9PwUQhHjebFXo5Jhy",
+        Count: "_24Z0sYrwo1ALn7WkF98RaU",
+        AvatarContainer: "gRtbvIsqKpCY8sM1wgCK4",
+        Avatar: "_1ECYubSfoiGJYOJLzlP2F5",
+        AuthorNameAndCounts: "_4pj7vPPl2cD7Orooy3rbL",
+        Counts: "_1FJB6124h53YHFICMSC1Nv",
+        PostedDate: "_36PINioDf9qx6L5QCpuW3l",
+        Location: "_2ifjfmA4V1OqEf39_KX1iV",
+        ReviewSource: "_1flaV2raNUjjfHa0TAffZY",
+        PostedDateAndSource: "T4IE5FC36srd-IePhWb1I",
+        Expanded: "_3NUI82h2e6Am3hmtU-1_Sq",
+        ThumbIcon: "_1pk8MT_nsrwd0kif6cppyD",
+        Down: "_1yQUzR4jghsMyIgpY_Ay7f",
+        CountedIcon: "_2s2CbdRTNIrjcu41r05ZO_",
+        SteamDeckIcon: "hiVsqfE7bsqlJBXW-5D1s",
+        Reaction: "gIkMYMHi6hVU9kquHJeBV",
+        Icon: "_3HF_6EnhyIHLJKH2hzBLWT",
+        ReviewCountedIcon: "_3Uzd_f-5YsYobTQa3Frb9b",
+        Left: "uKnloaPS_o0E0eTCMfMRJ",
+        Right: "cHVnP4M48QFbMLEqcdKbs",
+        ReviewRating: "_37ICOYBDy-RisYkzNGWFDX",
+        VoteButtons: "_22edD6e1Rd44stPirbVhB2",
+        Selected: "_20o0K-LdkmbQfesddfuo-X",
+        Award: "tZsBoG2WBEWtqx3xZ4MIB",
+        VoteButtonText: "Nu7NgfdJiM1QdEPGrlUcN",
+        Disclaimer: "_2OpCkQAxn48FmAJ4KO84_C",
+        LowerDisclaimer: "_2s6TIoq8OcJpmpUPEdWbfT",
+        Highlight: "_1Og1SDK0h6unb2aONe0eSC",
+        Active: "_3flg_k1JjeqMdaCq9qspZO",
+        ReviewTags: "_2Y6W9ubBDuKT7IqGkKnD4s",
+        ReviewTagButton: "_1AAd0FKqyFBa_l-XYm6Iyf",
+        ReviewTagsHeader: "WHTvQNtEUvKhuVvtsZDte",
+        ValveOnly: "_274t1rdPpbJvNT-UmQiwbi",
+        DeveloperResponse: "o1IEt4zkutNjpN0-UVQCO",
+        Title: "_3toTOSwDTTJaLLQjvKd99_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ReviewSectionTitle: "_2nAa7fM6w0mQzxPqb6sPYU",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        ReviewSummary: "VMKAxsAZetlGikVTgPEKw",
+        Left: "_2kYf3jTunOpi3mdvRApEMt",
+        Right: "_27C1i_J1FJeoqNW2LqLEkg",
+        BrowseAllLink: "_3RMhe-2D4zNZ4Wvhc9MIRc",
+        RightColumn: "op4IzSyLCutJs_417Lf8i",
+        LeftColumn: "_1Ovww-oSMFGzdKcmAmYwyG",
+        GamepadBrowseAll: "j7tvZAPMnU3kefwWxV1SX",
+        StatusLine: "_2-8QGxhaDbQ3lfs-nUqFJZ",
+        ScoreTooltip: "sWevUiCQ3-a8SjTc6eHOM",
+        ReviewCount: "_2-ZPGiWJ_o9kRtpQWJ0cur",
+        Score: "_3rzc5NT-Ku8422NtpWAaf4",
+        Positive: "X1xkib-fr1Aup48Z-HrmL",
+        Mixed: "J3mo8jDoasHzmaeemRXyV",
+        ReviewSection: "_1TDtXqBlTVLGgP7QifbduF",
+        Reviews: "_1nHzHf_bsJHT58gTBq7xfR",
+        LoadingError: "_3EoDtRwsYvl2qGBjV18mvk",
+        LoadMoreButton: "_2nAT1gpL4N6fargm37eReZ",
       };
     },
     chunkid: (module) => {
@@ -239,6 +375,11 @@
         "ItemFocusAnim-green": "_3CT6dHnuA3SYWZrgk1Sf1Y",
         focusAnimation: "_34YOI6hVEDmEAWHAHlUXon",
         hoverAnimation: "_1UXiQtSunyxlP1LxWHXACi",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Unbleed: "_2Iq2_PdBsiH7mwdEzB4Qon",
       };
     },
     chunkid: (module) => {
@@ -1214,6 +1355,96 @@
     chunkid: () => {},
     chunkid: (module) => {
       module.exports = {
+        PageableContainer: "SMWMsB-gz3WbYRK2HOm7i",
+        HeaderPageControls: "_2o5c89vAnrXN8C60QTSMqO",
+        Name: "_2hfibYuzyMOQ0sj2egsHh0",
+        Clickable: "S2uaatxG3tw8bGI9HaQio",
+        PageClickContainer: "bsNegRKT1Hbv4tqHrOk9-",
+        PageLeft: "_14b-hQsLwSwYcELtknxCUX",
+        PageRight: "_3IIEUTw03Vm3Mk54jlnUaT",
+        Disabled: "_16nHYucq6xgfe67DrVWLCI",
+        Small: "_3qlJ0L41KQFqUTzVQKFERC",
+        PageableCloseButton: "_2dB1oJFsqNThak1cFya2-q",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        GrantAwardModal: "_2ilpH-HpvuSm6s5MWX5bA-",
+        Header: "_2_vbZB-J_M1GH9js-PXnEj",
+        Title: "_2yJ4jvaS0kUJdPVIPR_gld",
+        Description: "_16dREqlIrGflPfbNtLGdJh",
+        ButtonContainer: "JYQgsMzgbFLgarphirEoQ",
+        Button: "_3M92hj6aELzceURcKR7WFu",
+        Selected: "Efo_8muMPNLjjSbObMuDq",
+        Disabled: "_3k_TnD8zygLxN0YOdqn9B1",
+        LabelCtn: "_3jka4zmfNL8_t69ZkB-JmU",
+        IconCtn: "_1fdGEFL1uEyxjfiarnOXI",
+        Label: "_2iEkqauHWZiCAOo0cWqnPP",
+        Points: "_3k_jxlKBddOAxgSknpHNTq",
+        IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
+        Footer: "_164mmLkSJ91cXzABhIrlZq",
+        PointsArea: "_3CsHeO3G5c1fQY9Xx4lgUI",
+        Column: "_2ihFd-KfZvzA81NOi3SEEJ",
+        Left: "_1v0jLHAK-8P4IONBwuF4kv",
+        BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
+        BalanceDetails: "_209Gyxysjz0vcGVVWuh_Xc",
+        BalanceLabel: "_2u9RZJXJSDg3e-J_EX1exE",
+        BalanceAmount: "_1O3FSoJxkQYLv1MB6H7QNy",
+        Right: "_1hgRCff96-fQY4zKEKUkac",
+        Actions: "_1-AT2x5dQpwoR2WGoLgbhi",
+        Action: "_1Beae_Paey3Y7zly_GQZpI",
+        FooterLink: "KId8dCUFbYh_bz-jozERD",
+        Divider: "_105pyOdHwQJP6rdcKymwUq",
+        ConfirmContainer: "_3rAoeyoUq23O8OYP09P1oz",
+        ConfirmTextCtn: "j0Jt4NEMft-y_QAF5NFFh",
+        ConfirmText: "_1uA9QkRBqGe3Xt5tlGGhlU",
+        AwardName: "_25N0xPcslHWWCQovL3Ycpk",
+        TimePeriod: "_6mEUOxWKweU9C1C2VmgsZ",
+        Visible: "_2QQTWF2AuPKh-8O0fgjl3b",
+        ConfirmAwardImage: "_1ARgx7wEEFOEolu5lBhrk-",
+        LoadingContainer: "_1hKG3O3_MI7rp8_HJ7_0fV",
+        SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
+        SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
+        InitialLoading: "_1ZKr7z5ZdQghkZZCnjx455",
+        Loading: "fGpQ7K-RTxeDJfNELWaCD",
+        ErrorContainer: "_1SebPOeiRaEqfXHg_dsaYQ",
+        ErrorText: "ok8moMj5E4XI25uTRhAHN",
+        PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
+        PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
+        NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
+        BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
+        "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
+        "ItemFocusAnim-darkGreySettings": "XvVy1qhFrJwjYK25wo2O6",
+        "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
+        "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
+        "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
+        "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
+        "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
+        "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
+        focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
+        hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        AwardToolTip: "_3JMj6IpnJvygxi7kP4IFhc",
+        Icon: "ooZbF4DEoLdU3xkXtVHrW",
+        Info: "_1N-vafkNzIrJiKAvn5Y-gJ",
+        Title: "l-zN0Z5luPILUbvMTqkoZ",
+        Desc: "XF8ZwqK03rP1vbTQUGWE-",
+        Points: "_1uWdjrM4XJS5fFLKIApfq",
+        Count: "_2Bt66Ga3LnIL-TiUOt-ARL",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        UnstyledButton: "_1hcJa9ylImmFKuHsfilos",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         WidgetHeaderCtn: "_2-tz2hqtOXPPtMnVPHNSdx",
         LaunchAction: "xD8XE561L4OLHkp9K3UIV",
         DiscoveryQueueWidget: "aKZCakHw7WVaUN3j36Nh",
@@ -1348,6 +1579,130 @@
         focusAnimation: "rpa_zF1YXxbH3-m1-AI6Q",
         hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
+        _ =
+          __webpack_require__._ +
+          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching",
+        _ =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgSources: _, onIncrementalError: _, alt: _, ..._ } = _,
+          [_, _] = (0, _.useState)(0),
+          _ = _[_];
+        return (0, _.jsx)("img", {
+          onError: (_) => {
+            _((_) => _ + 1), __webpack_require__?.(_, _, _);
+          },
+          alt: _,
+          ..._,
+          src: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            avatarURL: _,
+            size: _,
+            statusStyle: _,
+            statusPosition: _,
+            className: _,
+            children: _,
+            isOnline: _,
+            isInGame: _,
+            isWatchingBroadcast: _,
+            isAwayOrSnooze: _,
+            alt: _,
+          } = _,
+          _ = [];
+        return (
+          _ && _.push(_),
+          _.push(
+            (function (_) {
+              switch (_) {
+                case "X-Small":
+                case "Small":
+                  return (0, _._)(_);
+                case "Medium":
+                case "MediumLarge":
+                  return (0, _._)(_);
+                case "Large":
+                case "X-Large":
+                case "FillArea":
+                  return (0, _._)(_);
+              }
+            })(_ ?? "Medium"),
+          ),
+          (0, _.jsxs)("div", {
+            className: _()(
+              _.AvatarHolder,
+              {
+                [_.Offline]: !_,
+                [_.Online]: _,
+                [_.InGame]: _,
+                [_.WatchingBroadcast]: _,
+                [_.AwayOrSnooze]: _,
+              },
+              _,
+            ),
+            "data-size": _,
+            "data-status-position": _,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.AvatarStatus,
+                style: _,
+              }),
+              (0, _.jsx)(_, {
+                className: _()(_.Avatar),
+                rgSources: _,
+                draggable: !1,
+                alt: _,
+              }),
+              _,
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const {
+          playerLinkDetails: _,
+          animatedAvatar: _,
+          avatarFrame: _,
+          size: _,
+          ..._
+        } = _;
+        let _ = (0, _._)(_.public_data?.sha_digest_avatar, _);
+        return (
+          _?.image_small?.length &&
+            (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _.image_small),
+          (0, _.jsx)(_, {
+            avatarURL: _,
+            size: _,
+            isOnline: _.private_data?.persona_state === _.UXk,
+            isInGame: void 0 !== _.private_data?.game_id,
+            isWatchingBroadcast:
+              void 0 !== _.private_data?.watching_broadcast_accountid,
+            isAwayOrSnooze:
+              _.private_data?.persona_state === _.PrD ||
+              _.private_data?.persona_state === _.vPz,
+            ..._,
+          })
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1971,6 +2326,18 @@
                 strAltText: _,
               })
           : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      class _ extends Error {
+        eResult;
+        constructor(_, _) {
+          super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _);
+        }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3852,6 +4219,3324 @@
             );
           });
       })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.recommendationid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  recommendationid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  review_text: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  voted_up: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  is_public: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  language: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  is_in_early_access: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  received_compensation: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  comments_disabled: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  hide_in_steam_china: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  saved_hardware_id: {
+                    _: 10,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Update_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Update_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.saved_hardware_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  saved_hardware_id: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_BackfillSavedHardware_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.num_backfilled || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  num_backfilled: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_BackfillSavedHardware_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.reaction_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  reaction_type: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  count: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Recommendation_LoyaltyReaction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype._ || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  _: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  ranges: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Recommendation_Tag";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.start || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  start: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  end: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Recommendation_Tag_Range";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.recommendationid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [27, 40, 54], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  recommendationid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  appid: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  review: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  time_created: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  time_updated: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  votes_up: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  votes_down: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  vote_score: {
+                    _: 9,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                  language: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  comment_count: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  voted_up: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  is_public: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  moderator_hidden: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  flagged_by_developer: {
+                    _: 15,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  report_score: {
+                    _: 16,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  steamid_moderator: {
+                    _: 17,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  steamid_developer: {
+                    _: 18,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  steamid_dev_responder: {
+                    _: 19,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  developer_response: {
+                    _: 20,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  time_developer_responded: {
+                    _: 21,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  developer_flag_cleared: {
+                    _: 22,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  written_during_early_access: {
+                    _: 23,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  votes_funny: {
+                    _: 24,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  received_compensation: {
+                    _: 25,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  unverified_purchase: {
+                    _: 26,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  review_qualities: {
+                    _: 27,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                  weighted_vote_score: {
+                    _: 28,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                  moderation_note: {
+                    _: 29,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  payment_method: {
+                    _: 30,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  playtime_2weeks: {
+                    _: 31,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  playtime_forever: {
+                    _: 32,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  last_playtime: {
+                    _: 33,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  comments_disabled: {
+                    _: 34,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  playtime_at_review: {
+                    _: 35,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  approved_for_china: {
+                    _: 36,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  ban_check_result: {
+                    _: 37,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  refunded: {
+                    _: 38,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  account_score_spend: {
+                    _: 39,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  reactions: {
+                    _: 40,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  ipaddress: {
+                    _: 41,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  hidden_in_steam_china: {
+                    _: 42,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  steam_china_location: {
+                    _: 43,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  category_ascii_pct: {
+                    _: 44,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  category_meme_pct: {
+                    _: 45,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  category_offtopic_pct: {
+                    _: 46,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  category_uninformative_pct: {
+                    _: 47,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  category_votefarming_pct: {
+                    _: 48,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  deck_playtime_at_review: {
+                    _: 49,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  is_bot_review_pct: {
+                    _: 50,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  positivity_pct: {
+                    _: 51,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  tags_with_ranges: {
+                    _: 54,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  saved_hardware_id: {
+                    _: 56,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  hardware_cluster_id: {
+                    _: 57,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "RecommendationDetails";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_GetFriendsRecommendedApp_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.accountids_recommended || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  accountids_recommended: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  accountids_not_recommended: {
+                    _: 3,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_GetFriendsRecommendedApp_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.requests || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  requests: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_GetIndividualRecommendations_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  appid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_GetIndividualRecommendations_Request_RecommendationRequest";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.recommendations || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  recommendations: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_GetIndividualRecommendations_Response";
+        }
+      }
+      var _;
+      !(function (_) {
+        (_.Update = function (_, _, _) {
+          return _.SendMsg("UserReviews.Update#1", (0, _._)(_, _, _), _, {
+            ePrivilege: 3,
+          });
+        }),
+          (_.BackfillSavedHardware = function (_, _, _) {
+            return _.SendMsg(
+              "UserReviews.BackfillSavedHardware#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetFriendsRecommendedApp = function (_, _, _) {
+            return _.SendMsg(
+              "UserReviews.GetFriendsRecommendedApp#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetIndividualRecommendations = function (_, _, _) {
+            return _.SendMsg(
+              "UserReviews.GetIndividualRecommendations#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          });
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return {
+          filter: "summary",
+          date_range_type: "all",
+          day_range: 30,
+          start_date: -1,
+          end_date: -1,
+          cursor: "*",
+          filter_offtopic_activity: !0,
+          playtime_filter_max: 0,
+          playtime_filter_min: 0,
+          playtime_type: "all",
+          purchase_type: "all",
+          review_type: "all",
+          hardware_os: "all",
+          hardware_cpu: "all",
+          hardware_gpu: "all",
+          hardware_device_type: "all",
+          use_review_quality: !0,
+          language: _._.LANGUAGE,
+        };
+      }
+      function _(_) {
+        _.set("origin", window.location.origin);
+      }
+      async function _(_, _, _, _) {
+        if (!_) throw new _._(_._, "Bad appid");
+        const _ = Object.assign(_(), _);
+        _.cursor = _;
+        const _ = (function (_) {
+          const _ = Object.entries(_)
+              .filter((_) => "topics" != _[0])
+              .map((_) => [_[0], String(_[1])]),
+            _ = new URLSearchParams(_);
+          return (
+            _.topics &&
+              _.topics.forEach((_) =>
+                __webpack_require__.append("topics[]", _),
+              ),
+            _
+          );
+        })(_);
+        _(_);
+        const _ = await fetch(
+            `${_._.STORE_BASE_URL}ajaxappreviews/${_}?${_.toString()}`,
+            {
+              credentials: "include",
+            },
+          ),
+          _ = await _.json().catch((_) => "");
+        if (!_ || "object" != typeof _)
+          throw new _._(_._, "Malformed ajaxgetreviews response");
+        if (_.success != _._)
+          throw new _._(_.success, `Error ${_.success} from ajaxgetreviews`);
+        const _ = _;
+        _.reviewFilter = _.get("filter") || "all";
+        const _ = [
+          ...(_.reviews?.map((_) => _.recommendationid) || []),
+          ...(_.recentreviews?.map((_) => _.recommendationid) || []),
+          ...(_.friendreviews?.map((_) => _.recommendationid) || []),
+        ];
+        try {
+          const _ = await _(_);
+          for (const _ of _) _.setQueryData(_(_.recommendationid), _);
+        } catch (_) {
+          console.warn("Error from GetUserVotes", _);
+        }
+        return _;
+      }
+      async function _(_) {
+        if (!_._.logged_in) return [];
+        try {
+          return (
+            await _(
+              `${_._.STORE_BASE_URL}userreviews/ajaxgetvotes/`,
+              "ajaxgetvotes",
+              {
+                recommendationids: _,
+              },
+            )
+          ).votes;
+        } catch (_) {
+          if (_ instanceof _._ && _.eResult == _._) return [];
+          throw _;
+        }
+      }
+      function _(_) {
+        return ["reviewuservotes", _];
+      }
+      function _(_) {
+        return (0, _._)({
+          queryKey: _(_),
+          queryFn: async () => (await _([_]))[0] || null,
+        });
+      }
+      function _(_, _) {
+        const _ = ["reviews", _];
+        for (let [_, _] of Object.entries(_).sort((_, _) =>
+          (0, _._)(_[0], _[0]),
+        ))
+          __webpack_require__.push(_ + ":" + _);
+        return _;
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: _(_, _),
+          queryFn: async (_) => _(_, _, _, _.pageParam),
+          enabled: _,
+          initialPageParam: "*",
+          getNextPageParam: (_) => _.cursor,
+          placeholderData: (_) => _,
+          retry: (_, _) =>
+            _ instanceof _._ ? _.eResult != _._ && _ < 3 : _ < 3,
+        });
+      }
+      async function _(_, _, _) {
+        const _ = new FormData();
+        Object.entries(_).forEach((_) => {
+          if (Array.isArray(_[1]))
+            for (const _ of _[1]) _.append(_[0] + "[]", _);
+          else _.append(_[0], _[1]);
+        });
+        const _ = new URL(_);
+        _(_.searchParams);
+        const _ = await fetch(_, {
+            method: "POST",
+            body: _,
+            credentials: "include",
+          }),
+          _ = await _.json().catch((_) => "");
+        if (!_ || "object" != typeof _)
+          throw new _._(_._, `Malformed ${_} response`);
+        if (_.success != _._)
+          throw new _._(_.success, `Error ${_.success} from ${_}`);
+        return _;
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => (
+            await _(
+              `${_._.STORE_BASE_URL}userreviews/rate/${_}`,
+              "userreviews/rate",
+              {
+                rateup: _ ? 1 : 0,
+                sessionid: (0, _._)(),
+              },
+            ),
+            _
+          ),
+          onSuccess: (_) => {
+            const _ = {
+              recommendationid: _,
+              voted_up: _ ? 1 : 0,
+              voted_down: _ ? 0 : 1,
+              voted_funny: 0,
+              reported: 0,
+            };
+            _.setQueryData(_(_), _);
+          },
+        });
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => (
+            await _(
+              `${_._.STORE_BASE_URL}userreviews/votetag/${_}`,
+              "userreviews/votetag",
+              {
+                tagid: _.tagID,
+                rateup: _.bRateUp ? 1 : 0,
+                sessionid: (0, _._)(),
+              },
+            ),
+            _.bRateUp
+          ),
+          onSuccess: (_) => {
+            _.invalidateQueries({
+              queryKey: _(_),
+            });
+          },
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return (0, _.jsx)("span", {
+          className: _().Spoiler,
+          children: _.children,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { eReactionID: _, nCount: _ } = _,
+          _ = (0, _._)(_);
+        return _
+          ? (0, _.jsxs)("div", {
+              className: _.AwardToolTip,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _.Icon,
+                  children: (0, _.jsx)("img", {
+                    src: (0, _._)(_, !0),
+                    alt: _.localized_title,
+                  }),
+                }),
+                (0, _.jsxs)("div", {
+                  className: _.Info,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.Title,
+                      children: _.localized_title,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _.Desc,
+                      children: _.localized_desc,
+                    }),
+                    !!_.points_transferred &&
+                      (0, _.jsx)("div", {
+                        className: _.Points,
+                        children: (0, _._)(
+                          "#RewardsReaction_ToolTip_Points",
+                          (0, _._)(_.points_transferred),
+                        ),
+                      }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _.Count,
+                        children: (0, _._)(
+                          "#RewardsReaction_ToolTip_Granted",
+                          (0, _._)(_),
+                        ),
+                      }),
+                  ],
+                }),
+              ],
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 79349, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 65193, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 88466, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 49500, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 40912, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 21069, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 747, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 58916, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 95825, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 81899, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 48987, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 71886, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 4809, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 2035, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 56286, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 88568, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 54488, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 77767, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 76907, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 34236, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 82404, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94822, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 674, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 51073, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 39459, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 29826, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 96658, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 85787, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 33915, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 31201, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 86174, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { url: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          target: "_blank",
+          href: _.href,
+          underline: "auto",
+          contrast: "title",
+          children: _,
+        });
+      }
+      function _(_, _) {
+        switch (_) {
+          case _.k_EURLSite_Store:
+            return _ + "/" == _._.STORE_BASE_URL || !1;
+          case _.k_EURLSite_Community:
+            return _ + "/" == _._.COMMUNITY_BASE_URL || !1;
+        }
+        return !1;
+      }
+      !(function (_) {
+        (_[(_.k_EURLSite_None = 0)] = "k_EURLSite_None"),
+          (_[(_.k_EURLSite_Store = 1)] = "k_EURLSite_Store"),
+          (_[(_.k_EURLSite_Community = 2)] = "k_EURLSite_Community");
+      })(_ || (_ = {}));
+      const _ = _.createContext([]);
+      function _(_) {
+        const _ = _.useContext(_);
+        let _ = (0, _._)(_.args) ?? (0, _._)(_.args, "href");
+        if (!_ || !__webpack_require__.match(/^https?:\/\//)) return _.children;
+        (0, _._)(_) && (_ = (0, _._)(_));
+        const _ = URL.parse(_);
+        if (!_) return _.children;
+        const _ = (function (_, _) {
+          for (const _ of _)
+            if (_(_.origin, _.site) && _.regex.exec(_.pathname))
+              return _.component;
+          return _;
+        })(_ || [], _);
+        return (0, _.jsx)(_, {
+          url: _,
+          children: _.children,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return `${_.author.profile_url}recommended/${_}`;
+      }
+      function _(_) {
+        const { author: _ } = _;
+        if (!_.avatar) return null;
+        const _ = "FillArea",
+          _ = new _._(_.steamid),
+          _ = (0, _._)(_.avatar, _);
+        return (0, _.jsx)(_._, {
+          className: _().AvatarContainer,
+          "data-miniprofile": _.GetAccountID(),
+          href: _.profile_url,
+          children: (0, _.jsx)(_._, {
+            className: _().Avatar,
+            size: _,
+            statusPosition: "border",
+            isOnline: "online" == _.persona_status,
+            isInGame: "in-game" == _.persona_status,
+            avatarURL: _,
+            alt: _.personaname,
+          }),
+        });
+      }
+      function _(_) {
+        const { author: _ } = _,
+          _ = new _._(_.steamid);
+        return (0, _.jsxs)(_._, {
+          className: _().AuthorInfo,
+          children: [
+            (0, _.jsx)(_, {
+              author: _,
+            }),
+            (0, _.jsxs)(_._, {
+              className: _().AuthorNameAndCounts,
+              children: [
+                (0, _.jsx)(_._, {
+                  className: _().Name,
+                  "data-miniprofile": __webpack_require__.GetAccountID(),
+                  href: _.profile_url,
+                  children: _.personaname,
+                }),
+                (0, _.jsxs)(_._, {
+                  className: _().Counts,
+                  children: [
+                    _.num_games_owned > 0 &&
+                      (0, _.jsx)(_._, {
+                        className: _().Count,
+                        href: _.profile_url + "games/?tab=all",
+                        children: _.Localize(
+                          "#ReviewAuthor_GameCount",
+                          _.num_games_owned,
+                        ),
+                      }),
+                    _.num_reviews > 0 &&
+                      (0, _.jsx)(_._, {
+                        className: _().Count,
+                        href: _.profile_url + "recommended",
+                        children: _.Localize(
+                          "#ReviewAuthor_ReviewCount",
+                          _.num_reviews,
+                        ),
+                      }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _ } = _,
+          _ = _.steam_purchase;
+        return (0, _.jsx)(_._, {
+          toolTipContent: _.Localize(
+            _ ? "#Review_Source_Counted" : "#Review_Source_NotCounted",
+          ),
+          children: (0, _.jsx)(_.FEq, {
+            className: _().ReviewCountedIcon,
+            filled: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { bPositive: _ } = _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().ThumbIcon, _ ? _()._ : _().Down),
+          children: (0, _.jsx)(_.twC, {}),
+        });
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return _.primarily_steam_deck
+          ? (0, _.jsx)(_._, {
+              toolTipContent: _.Localize(
+                "#Review_Majority_Deck",
+                _(_.author.playtime_forever),
+              ),
+              className: _().SteamDeckIcon,
+              children: (0, _.jsx)(_.DQe, {}),
+            })
+          : null;
+      }
+      function _(_) {
+        return (0, _._)(_ / 60, 1);
+      }
+      function _(_) {
+        const { review: _, bIsFriend: _, bShortPresentation: _ } = _,
+          { appid: _ } = _.useContext(_),
+          _ = _.voted_up;
+        let _ = _ ? "#Review_Recommended" : "#Review_NotRecommended";
+        _ &&
+          (_ = _
+            ? "#Review_RecommendedByFriend"
+            : "#Review_NotRecommendedByFriend");
+        let _ =
+          _.author.playtime_at_review &&
+          _.author.playtime_at_review < _.author.playtime_forever
+            ? "#Review_HoursOnRecordWithRecentPlaytime"
+            : "#Review_HoursOnRecord";
+        _ && (_ = "#Review_HoursOnRecord_Short");
+        const _ = _.Localize(
+          _,
+          _(_.author.playtime_forever),
+          _(_.author.playtime_at_review),
+        );
+        return (0, _.jsx)(_._, {
+          className: _().ReviewInfoHeaderLink,
+          href: _(_, _),
+          children: (0, _.jsxs)(_._, {
+            className: _().ReviewInfoHeader,
+            toolTipContent: _.Localize("#Review_SeeFullReview"),
+            direction: "top",
+            children: [
+              (0, _.jsx)(_, {
+                bPositive: _,
+              }),
+              (0, _.jsxs)("div", {
+                className: _().HeaderText,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Headline,
+                    children: _.Localize(_),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Persona,
+                    children: _.author.personaname,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Playtime,
+                    children: _,
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                review: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _().CountedIcon,
+                children: (0, _.jsx)(_, {
+                  review: _,
+                }),
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { review: _ } = _,
+          { appid: _, app_release_date: _, appname: _ } = _.useContext(_);
+        if (_ == _.qaO || _ == _.DFD || _ == _.PBt) {
+          if ((_.timestamp_updated || _.timestamp_created) < 1695853800)
+            return (0, _.jsx)(_._, {
+              className: _().Disclaimer,
+              toolTipContent: _.Localize("#Review_CSGO_Disclaimer_Tooltip", _),
+              children: _.Localize("#Review_CSGO_Disclaimer"),
+            });
+        }
+        return null;
+      }
+      function _(_) {
+        const { review: _ } = _,
+          { app_release_date: _, appname: _ } = _.useContext(_);
+        return _.written_during_early_access
+          ? (0, _.jsx)(_._, {
+              className: _().Disclaimer,
+              toolTipContent: _.Localize(
+                "#Review_EarlyAccess_Disclaimer_Tooltip",
+                _,
+              ),
+              children: _.Localize("#Review_EarlyAccess_Disclaimer"),
+            })
+          : null;
+      }
+      function _(_) {
+        const { review: _ } = _,
+          { app_release_date: _, appname: _ } = _.useContext(_);
+        return _ && _.author.last_played && _.author.last_played < _
+          ? (0, _.jsx)(
+              _._,
+              {
+                className: _().Disclaimer,
+                toolTipContent: _.LocalizeReact(
+                  "#Review_PreRelease_Disclaimer_Tooltip",
+                  _,
+                  (0, _._)(_.author.last_played),
+                  (0, _.jsx)("br", {}),
+                ),
+                children: _.Localize("#Review_PreRelease_Disclaimer"),
+              },
+              "prerelease",
+            )
+          : null;
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              review: _,
+            }),
+            _.written_during_early_access
+              ? (0, _.jsx)(_, {
+                  review: _,
+                })
+              : (0, _.jsx)(_, {
+                  review: _,
+                }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return (0, _.jsx)("div", {
+          className: _().PostedDate,
+          children: _.Localize(
+            "#Review_PostedOn",
+            (0, _._)(_.timestamp_created, {
+              fullmonthname: !0,
+            }),
+          ),
+        });
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return (0, _.jsx)("div", {
+          className: _().ReviewSource,
+          children: _.Localize(
+            _.steam_purchase
+              ? "#Review_PurchaseSource_Steam"
+              : "#Review_PurchaseSource_Key",
+          ),
+        });
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: _().PostedDateAndSource,
+          children: [
+            (0, _.jsx)(_, {
+              review: _,
+            }),
+            (0, _.jsx)(_, {
+              review: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return _.location
+          ? (0, _.jsx)("div", {
+              className: _().Location,
+              children: _.Localize("#Review_Location", _.location),
+            })
+          : null;
+      }
+      function _(_) {
+        const { review: _ } = _,
+          _ = [],
+          { appname: _ } = _.useContext(_);
+        return (
+          _.received_for_free &&
+            __webpack_require__.push(
+              (0, _.jsx)(
+                _._,
+                {
+                  className: _().LowerDisclaimer,
+                  toolTipContent: _.Localize(
+                    "#Review_FreeCopy_Disclaimer_Tooltip",
+                    _,
+                  ),
+                  children: _.Localize("#Review_FreeCopy_Disclaimer"),
+                },
+                "free",
+              ),
+            ),
+          _.refunded &&
+            __webpack_require__.push(
+              (0, _.jsx)(
+                _._,
+                {
+                  className: _().LowerDisclaimer,
+                  toolTipContent: _.Localize(
+                    "#Review_Refunded_Disclaimer_Tooltip",
+                    _,
+                  ),
+                  children: _.Localize("#Review_Refunded_Disclaimer"),
+                },
+                "refunded",
+              ),
+            ),
+          _
+        );
+      }
+      function _(_) {
+        const {
+          strLabel: _,
+          bSelected: _,
+          bEnabled: _,
+          onActivate: _,
+          children: _,
+        } = _;
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().VoteButton, _ && _().Selected),
+          onClick: _,
+          disabled: !_,
+          children: [
+            _,
+            (0, _.jsx)("div", {
+              className: _().VoteButtonText,
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _ } = _,
+          [_, _, _] = (0, _._)(),
+          [_, _] = _.useState(),
+          _ = (0, _._)(_.recommendationid),
+          _ = (0, _._)(_.recommendationid),
+          _ = (0, _._)(_.recommendationid).data,
+          _ = _._.logged_in,
+          _ = _.useCallback((_) => {
+            let _ = "#Review_VoteError";
+            const _ = _ instanceof _._ ? _.eResult : _._;
+            switch (_) {
+              case _._:
+                _ = "#Review_VoteError_NotLoggedIn";
+                break;
+              case _._:
+                _ = "#Review_VoteError_AccessDenied";
+                break;
+              case _._:
+                _ = "#Review_VoteError_LimitedUser";
+            }
+            _(_.Localize(_, _));
+          }, []),
+          _ = _.useCallback(
+            async (_) => {
+              _.mutate(_, {
+                onError: _,
+              });
+            },
+            [_, _],
+          ),
+          _ = _.useCallback(
+            async (_, _) => {
+              _.mutate(
+                {
+                  tagID: _,
+                  bRateUp: _,
+                },
+                {
+                  onError: _,
+                },
+              );
+            },
+            [_, _],
+          );
+        return (0, _.jsxs)(_._, {
+          className: _().VoteButtonsContainer,
+          children: [
+            (0, _.jsx)(_._, {
+              active: !!_,
+              children: (0, _.jsx)(_._, {
+                closeModal: () => _(void 0),
+                strDescription: _,
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              targetType: _._._,
+              bShowModal: _,
+              targetid: _.recommendationid,
+              onDismiss: _,
+              onSuccess: () => {},
+            }),
+            (0, _.jsx)("div", {
+              className: _().Text,
+              children: _.Localize("#Review_WasHelpful"),
+            }),
+            (0, _.jsxs)(_._, {
+              className: _().VoteButtons,
+              children: [
+                (0, _.jsx)(_, {
+                  bEnabled: _,
+                  bSelected: !!_ && !!_.voted_up,
+                  strLabel: _._.Localize("#Button_Yes"),
+                  onActivate: () => _(!0),
+                  children: (0, _.jsx)(_, {
+                    bPositive: !0,
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  bEnabled: _,
+                  bSelected: !!_ && !!_.voted_down,
+                  strLabel: _._.Localize("#Button_No"),
+                  onActivate: () => _(!1),
+                  children: (0, _.jsx)(_, {
+                    bPositive: !1,
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  bEnabled: _,
+                  bSelected: !!_ && !!_.voted_funny,
+                  strLabel: _.Localize("#Review_RateFunny"),
+                  onActivate: () => _(_._._, !0),
+                  children: (0, _.jsx)(_.FwP, {}),
+                }),
+                (0, _.jsx)(_, {
+                  bEnabled: _,
+                  bSelected: !1,
+                  strLabel: _.Localize("#Review_GiveAward"),
+                  onActivate: _,
+                  children: (0, _.jsx)(_.OiG, {
+                    className: _().Award,
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _ } = _,
+          { appid: _ } = _.useContext(_);
+        return (0, _.jsxs)(_._, {
+          className: _().ReviewRatings,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().Left,
+              children: [
+                _.votes_up > 0 &&
+                  (0, _.jsx)("div", {
+                    className: _().ReviewRating,
+                    children: _.LocalizePlural(
+                      "#Review_RatingStats_Helpful",
+                      _.votes_up,
+                    ),
+                  }),
+                _.votes_funny > 0 &&
+                  (0, _.jsx)("div", {
+                    className: _().ReviewRating,
+                    children: _.LocalizePlural(
+                      "#Review_RatingStats_Funny",
+                      _.votes_funny,
+                    ),
+                  }),
+              ],
+            }),
+            Boolean(_.comment_count) &&
+              (0, _.jsx)("div", {
+                className: _().Right,
+                children: (0, _.jsx)(_._, {
+                  href: _(_, _),
+                  children: (0, _.jsxs)(_._, {
+                    className: _().CommentCount,
+                    toolTipContent: _.Localize("#Review_SeeFullReview"),
+                    direction: "top",
+                    children: [_.comment_count, " ", (0, _.jsx)(_._h6, {})],
+                  }),
+                }),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _ } = _;
+        return _.categories && _.categories.length > 0
+          ? (0, _.jsxs)("div", {
+              className: _().ReviewCategories,
+              children: [
+                (0, _.jsx)("div", {
+                  children: _.Localize(
+                    "#Review_RecommendationID",
+                    _.recommendationid,
+                  ),
+                }),
+                _.categories.map((_, _) =>
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      children: _,
+                    },
+                    _,
+                  ),
+                ),
+              ],
+            })
+          : null;
+      }
+      const _ = _.createContext(0);
+      function _(_) {
+        const _ = _.useContext(_),
+          _ = (0, _._)(_.args),
+          _ = JSON.parse(`[${_}]`).includes(_);
+        return (0, _.jsx)("span", {
+          className: (0, _._)(_().Highlight, _ && _().Active),
+          "data-type": _,
+          children: _.children,
+        });
+      }
+      function _(_) {
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)("br", {}),
+          ],
+        });
+      }
+      function _(_) {
+        const { text: _ = "" } = _,
+          _ = _.useMemo(() => {
+            const _ = {
+              ..._._,
+              ..._._,
+              ..._._,
+              spoiler: {
+                Constructor: _,
+              },
+              highlight: {
+                Constructor: _,
+              },
+              url: {
+                Constructor: _,
+              },
+            };
+            return new _._(_, (_) => new _._(new _._()), _._.LANGUAGE);
+          }, []),
+          _ = _.useMemo(() => [], []);
+        return _.useMemo(
+          () =>
+            (0, _.jsx)(_.Provider, {
+              value: _,
+              children: __webpack_require__.ParseBBCode(_, void 0),
+            }),
+          [_, _, _],
+        );
+      }
+      function _(_) {
+        const { review: _ } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1);
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(
+            _().ReviewText,
+            _ && _().Expanded,
+            _ && _().Collapsed,
+          ),
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().TextContainer,
+              ref: (_) => {
+                _ && _.scrollHeight > _.clientHeight && _(!0);
+              },
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().Text,
+                  children: (0, _.jsx)(_, {
+                    text: _.review,
+                  }),
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().FadeGradient,
+                  }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                className: _().ReadMoreButton,
+                tabIndex: 0,
+                onClick: () => _(!0),
+                children: _.Localize("#Review_ReadMore"),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _, reaction: _ } = _,
+          [_, _, _] = (0, _._)(),
+          _ = (0, _._)(_.reaction_type);
+        return (0, _.jsx)(_._, {
+          bDisabled: _,
+          toolTipContent: (0, _.jsx)(_, {
+            eReactionID: _.reaction_type,
+            nCount: _.count,
+          }),
+          direction: "top",
+          children: (0, _.jsxs)(_._, {
+            className: _().Reaction,
+            onActivate: _,
+            focusable: !0,
+            children: [
+              (0, _.jsx)(_._, {
+                targetType: _._._,
+                bShowModal: _,
+                targetid: _.recommendationid,
+                onDismiss: _,
+                initialSelectedReaction: _.reaction_type,
+                onSuccess: () => {},
+              }),
+              (0, _.jsx)("img", {
+                className: _().Icon,
+                src: (0, _._)(_.reaction_type, !1),
+                alt: _?.localized_title,
+              }),
+              _.count > 1 &&
+                (0, _.jsx)("div", {
+                  className: _().Count,
+                  children: _.count,
+                }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { nReactions: _, onActivate: _ } = _;
+        return (0, _.jsx)(_._, {
+          toolTipContent: _.Localize("#Review_ShowAllReactions"),
+          direction: "top",
+          children: (0, _.jsxs)(_._, {
+            className: _().Reaction,
+            onActivate: _,
+            children: [
+              (0, _.jsx)("img", {
+                className: _().Icon,
+                src:
+                  _._.STORE_BASE_URL +
+                  "public/shared/images/award_icon_blue.svg",
+                alt: _.LocalizePlural("#Review_ReactionCount", _),
+              }),
+              (0, _.jsx)("div", {
+                className: _().Count,
+                children: _,
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { review: _ } = _,
+          [_, _] = _.useState(!0),
+          _ = (0, _._)();
+        if (!_.isSuccess || !_.reactions || 0 == _.reactions?.length)
+          return null;
+        const _ = [];
+        let _ = 0;
+        for (let _ of _.reactions) {
+          const _ = _.data?.find((_) => _.reactionid == _.reaction_type);
+          _ &&
+            (!_ || (_.length < 3 && _.purchaseable)
+              ? _.push(_)
+              : (_ += _.count));
+        }
+        return (0, _.jsxs)(_._, {
+          className: _().ReviewReactions,
+          children: [
+            _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  review: _,
+                  reaction: _,
+                },
+                _.reaction_type,
+              ),
+            ),
+            _ &&
+              _ > 0 &&
+              (0, _.jsx)(_, {
+                nReactions: _,
+                onActivate: () => _(!1),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { _: _, name: _, onHighlight: _, onUnhighlight: _ } = _,
+          { fnSetTopicFilter: _ } = _.useContext(_),
+          _ = _.useCallback(() => {
+            _?.(_);
+          }, [_, _]);
+        return _
+          ? (0, _.jsx)(_._, {
+              className: _().ReviewTagButton,
+              onClick: _,
+              onMouseEnter: () => _(_),
+              onMouseLeave: () => _(_),
+              children: _,
+            })
+          : null;
+      }
+      function _(_) {
+        const { review: _, mapTags: _, setHighlight: _ } = _,
+          { fnSetTopicFilter: _ } = _.useContext(_),
+          _ = _.useCallback(
+            function (_) {
+              _(_);
+            },
+            [_],
+          ),
+          _ = _.useCallback(
+            function (_) {
+              _(0);
+            },
+            [_],
+          );
+        return _.rgTags && _
+          ? (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().ReviewTagsHeader,
+                  children: [
+                    _.Localize("#Review_TagHeader"),
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: _().ValveOnly,
+                      children: "(VO)",
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().ReviewTags,
+                  children: _.rgTags.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        _: _,
+                        name: __webpack_require__.get(_)?.name,
+                        onHighlight: _,
+                        onUnhighlight: _,
+                      },
+                      _,
+                    ),
+                  ),
+                }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { review: _ } = _;
+        if (!_.hardware) return null;
+        const _ = 1024 * parseInt(_.hardware.system_ram || "0") * 1024,
+          _ = 1024 * (_.hardware.vram_size || 0) * 1024;
+        return (0, _.jsxs)("div", {
+          className: _().ReviewHardware,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().Title,
+              children: _.Localize("#Review_Hardware_Title"),
+            }),
+            (0, _.jsx)("div", {
+              className: _()._,
+              children: _.hardware._,
+            }),
+            (0, _.jsxs)("div", {
+              className: _().CPUAndMemory,
+              children: [
+                _.hardware.cpu_name,
+                " ",
+                _ > 0 &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      "- ",
+                      _.Localize(
+                        "#Review_Hardware_RAM",
+                        (0, _._)(_, {
+                          nDigitsAfterDecimal: 0,
+                        }),
+                      ),
+                    ],
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _().GPU,
+              children: [
+                _.hardware.adapter_description,
+                " ",
+                _ > 0 &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      "- ",
+                      _.Localize(
+                        "#Review_Hardware_VRAM",
+                        (0, _._)(_, {
+                          nDigitsAfterDecimal: 0,
+                        }),
+                      ),
+                    ],
+                  }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { review: _ } = _,
+          { appid: _ } = _.useContext(_);
+        return _.developer_response && _.timestamp_dev_responded
+          ? (0, _.jsxs)("div", {
+              className: _().DeveloperResponse,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().Text,
+                  children: _.Localize(
+                    "#Review_OfficialDeveloperResponseExistsDate",
+                    (0, _._)(_.timestamp_dev_responded, {
+                      fullmonthname: !0,
+                      bUseRelativeNames: !1,
+                    }),
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _().Link,
+                  href: _(_, _),
+                  children: _.Localize(
+                    "#Review_OfficialDeveloperResponse_View",
+                  ),
+                }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            review: _,
+            bIsFriend: _,
+            bShortPresentation: _,
+            mapTags: _,
+          } = _,
+          [_, _] = _.useState(0);
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsxs)(_._, {
+            className: _().ReviewInfo,
+            children: [
+              (0, _.jsx)(_, {
+                review: _,
+                bIsFriend: _,
+                bShortPresentation: _,
+              }),
+              (0, _.jsxs)(_._, {
+                className: _().Body,
+                children: [
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                    mapTags: _,
+                    setHighlight: _,
+                  }),
+                  (0, _.jsx)("hr", {
+                    className: _().MainDivider,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                ],
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        switch (_.detail.button) {
+          case _._.DIR_UP:
+          case _._.DIR_DOWN:
+            return !0;
+        }
+        return !1;
+      }
+      function _(_) {
+        const {
+          review: _,
+          bIsFriend: _ = !1,
+          bShortPresentation: _ = !1,
+          gamepadPresentation: _,
+          mapTags: _,
+          className: _,
+          nItemWidth: _,
+          nItemHeight: _,
+          onActivate: _,
+          onCancel: _,
+          autoFocus: _,
+        } = _;
+        let _ = _ ? _._ : _._;
+        const _ = {
+          width: _ || void 0,
+          height: _ || void 0,
+        };
+        return (0, _.jsx)("div", {
+          style: _,
+          children: (0, _.jsx)(_, {
+            onGamepadDirection: "full" == _ ? _ : void 0,
+            className: (0, _._)(
+              _().ReviewDetails,
+              _ && _().Friend,
+              _ && _().Short,
+              !!_ && _().Gamepad,
+              "full" == _ && _().Fullscreen,
+              _,
+            ),
+            onActivate: _,
+            autoFocus: _,
+            children: (0, _.jsx)(_._, {
+              className: _().ScrollPanel,
+              style: {
+                maxHeight: _.height,
+              },
+              children: (0, _.jsxs)("div", {
+                className: _().ReviewWrapper,
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: _().Top,
+                    children: [
+                      (0, _.jsx)(_, {
+                        author: _.author,
+                      }),
+                      (0, _.jsx)(_, {
+                        review: _,
+                        bIsFriend: _,
+                        bShortPresentation: _,
+                        mapTags: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                ],
+              }),
+            }),
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { _: _, className: _, title: _ } = _;
+        return _
+          ? (0, _.jsx)("div", {
+              _: _,
+              className: (0, _._)(_().ReviewSectionTitle, _),
+              children: _.Localize(_),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        onCloseButtonClicked(_) {
+          this.props.bShowCloseButton &&
+            this.props.fnOnCloseButtonClicked &&
+            this.props.bShowCloseButton &&
+            this.props.fnOnCloseButtonClicked &&
+            this.props.fnOnCloseButtonClicked(_);
+        }
+        render() {
+          let _ = this.props.bLeftEnabled || this.props.bRightEnabled,
+            _ = _().Medium;
+          "small" == this.props.buttonSize && (_ = _().Small);
+          let _ = {};
+          return (
+            !this.props.bNoHeader &&
+              this.props.headerPadding &&
+              (_.padding = this.props.headerPadding),
+            (0, _.jsxs)(_._, {
+              "flow-children": "row",
+              navEntryPreferPosition: _._.MAINTAIN_X,
+              className: (0, _._)(_().PageableContainer, this.props.className),
+              children: [
+                !this.props.bNoHeader &&
+                  (0, _.jsxs)("div", {
+                    className: _().HeaderPageControls,
+                    style: _,
+                    children: [
+                      this.props.customheader
+                        ? this.props.customheader
+                        : (0, _.jsxs)(_.Fragment, {
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: (0, _._)(
+                                  _().Name,
+                                  this.props.bClickableHeader && _().Clickable,
+                                ),
+                                onClick: this.props.fnOnClickHeader,
+                                children: this.props.name,
+                              }),
+                              this.props.aftername,
+                              (0, _.jsx)("div", {
+                                className: _().Rule,
+                              }),
+                            ],
+                          }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().PageClickContainer,
+                          this.props.pageContainerStyles,
+                        ),
+                        children: [
+                          _ &&
+                            (0, _.jsxs)(_.Fragment, {
+                              children: [
+                                (0, _.jsx)("div", {
+                                  className: (0, _._)(
+                                    _().PageLeft,
+                                    !this.props.bLeftEnabled && _().Disabled,
+                                    _,
+                                  ),
+                                  onClick: this.props.fnLeftClicked,
+                                  children: (0, _.jsx)(_.F2T, {
+                                    singlearrow: !0,
+                                    angle: 0,
+                                  }),
+                                }),
+                                (0, _.jsx)("div", {
+                                  className: (0, _._)(
+                                    _().PageRight,
+                                    !this.props.bRightEnabled && _().Disabled,
+                                    _,
+                                  ),
+                                  onClick: this.props.fnRightClicked,
+                                  children: (0, _.jsx)(_.F2T, {
+                                    singlearrow: !0,
+                                    angle: 180,
+                                  }),
+                                }),
+                                " ",
+                              ],
+                            }),
+                          this.props.bShowCloseButton &&
+                            (0, _.jsx)("div", {
+                              className: (0, _._)(
+                                _().PageableCloseButton,
+                                _ && _().PageButtonsVisible,
+                                _,
+                              ),
+                              onClick: this.onCloseButtonClicked,
+                              children: (0, _.jsx)(_.sED, {}),
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                (0, _.jsx)("div", {
+                  className: _().PageableContent,
+                  children: this.props.children,
+                }),
+              ],
+            })
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "onCloseButtonClicked", null);
+      class _ extends _.Component {
+        state = {
+          bLeftArrowEnabled: !1,
+          bRightArrowEnabled: !1,
+        };
+        m_refCarousel = _.createRef();
+        OnLeftClicked(_) {
+          this.ScrollLeft(_);
+        }
+        OnRightClicked(_) {
+          this.ScrollRight(_);
+        }
+        ScrollLeft(_) {
+          let _ = this.m_refCarousel.current;
+          _ && _.ScrollLeft(_);
+        }
+        ScrollRight(_) {
+          let _ = this.m_refCarousel.current;
+          _ && _.ScrollRight(_);
+        }
+        ScrollToFirstChild() {
+          let _ = this.m_refCarousel.current;
+          _ && _.ScrollToFirstChild();
+        }
+        OnUpdateArrows(_, _) {
+          (this.state.bLeftArrowEnabled == _ &&
+            this.state.bRightArrowEnabled == _) ||
+            this.setState({
+              bLeftArrowEnabled: _,
+              bRightArrowEnabled: _,
+            }),
+            this.props.fnUpdateArrows && this.props.fnUpdateArrows(_, _);
+        }
+        OnHeaderClick(_) {
+          this.props.bHeaderClickScrollToFirst &&
+            (this.props.onClickHeader && this.props.onClickHeader(_),
+            this.m_refCarousel.current &&
+              this.m_refCarousel.current.ScrollToFirstChild());
+        }
+        onCloseButtonClicked(_) {
+          this.props.bShowCloseButton &&
+            this.props.onCloseButtonClicked &&
+            this.props.bShowCloseButton &&
+            this.props.onCloseButtonClicked &&
+            this.props.onCloseButtonClicked(_);
+        }
+        render() {
+          let _ = this.props.children(this.m_refCarousel, this.OnUpdateArrows),
+            _ =
+              this.props.bHeaderClickScrollToFirst &&
+              this.state.bLeftArrowEnabled;
+          return (0, _.jsx)(_, {
+            name: this.props.name,
+            aftername: this.props.aftername,
+            className: this.props.className,
+            customheader: this.props.customheader,
+            fnOnClickHeader: this.OnHeaderClick,
+            bClickableHeader: _,
+            fnLeftClicked: this.OnLeftClicked,
+            fnRightClicked: this.OnRightClicked,
+            bLeftEnabled: this.state.bLeftArrowEnabled,
+            bRightEnabled: this.state.bRightArrowEnabled,
+            bShowCloseButton: this.props.bShowCloseButton,
+            fnOnCloseButtonClicked: this.onCloseButtonClicked,
+            bNoHeader: this.props.bNoHeader,
+            pageContainerStyles: this.props.pageContainerStyles,
+            buttonSize: this.props.buttonSize,
+            headerPadding: this.props.headerPadding,
+            children: _,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnLeftClicked", null),
+        (0, _._)([_._], _.prototype, "OnRightClicked", null),
+        (0, _._)([_._], _.prototype, "ScrollLeft", null),
+        (0, _._)([_._], _.prototype, "ScrollRight", null),
+        (0, _._)([_._], _.prototype, "ScrollToFirstChild", null),
+        (0, _._)([_._], _.prototype, "OnUpdateArrows", null),
+        (0, _._)([_._], _.prototype, "OnHeaderClick", null),
+        (0, _._)([_._], _.prototype, "onCloseButtonClicked", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            itemWidthPercentage: _,
+            closeModal: _,
+            name: _,
+            nNumItems: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0),
+          _ = _.useCallback((_) => {
+            _ && (_(_.clientWidth), _(_.clientHeight));
+          }, []),
+          _ = _.useCallback((_) => (_ * _) / 100, [_, _]);
+        return (0, _.jsx)(_._, {
+          className: _().FullScreenCarousel,
+          onCancel: _,
+          children: (0, _.jsx)("div", {
+            className: _().InnerContainer,
+            ref: _,
+            children:
+              _ &&
+              (0, _.jsx)(_, {
+                className: _().PageableContainer,
+                name: _,
+                bNoHeader: !0,
+                fnUpdateArrows: void 0,
+                children: (_, _) =>
+                  (0, _.jsx)(_._, {
+                    name: _,
+                    nNumItems: _,
+                    ..._,
+                    className: _().Carousel,
+                    ref: _,
+                    fnGetColumnWidth: _,
+                    fnUpdateArrows: _,
+                    nHeight: _,
+                    nItemHeight: _,
+                  }),
+              }),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            name: _,
+            initialColumn: _,
+            modalClassName: _,
+            fnOnFocusedColumnChange: _,
+            bFullScreen: _,
+            setFullScreen: _,
+            nFullScreenItemWidthPercentage: _,
+            ..._
+          } = _,
+          [_, _] = (0, _._)(_, _, _);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                onEscKeypress: () => _(!1),
+                className: _,
+                padding: "none",
+                children: (0, _.jsx)(_, {
+                  name: _,
+                  fnOnFocusedColumnChange: _,
+                  focusedColumn: _,
+                  setFocusedColumn: _,
+                  itemWidthPercentage: _,
+                  closeModal: () => _(!1),
+                  navEntryPreferPosition: _._.PREFERRED_CHILD,
+                  ..._,
+                }),
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              name: _,
+              fnOnFocusedColumnChange: _,
+              focusedColumn: _,
+              setFocusedColumn: _,
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              ..._,
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            rgReviews: _,
+            nNumItems: _,
+            nFriendReviews: _,
+            getTitle: _,
+            mapTags: _,
+            onItemFocusChanged: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(void 0),
+          _ = 350,
+          _ = _.useId(),
+          _ = _.useCallback(
+            (_) => (_ < _.length ? _[_].recommendationid : "Throbber"),
+            [_],
+          ),
+          _ = _.useCallback((_) => _ < _.length, [_.length]),
+          _ = _.useCallback(
+            (_, _, _, _) => {
+              if (_ >= _.length)
+                return (0, _.jsx)(_._, {
+                  className: (0, _._)(_().LoadingThrobber, _().FullScreen),
+                  style: {
+                    width: _,
+                    height: _,
+                  },
+                  focusable: !1,
+                  children: (0, _.jsx)(_._, {
+                    size: "large",
+                    position: "center",
+                  }),
+                });
+              const _ = _[_],
+                _ = _ < _;
+              return (0, _.jsx)(_, {
+                gamepadPresentation: _ ? "full" : "capsule",
+                onActivate: _
+                  ? void 0
+                  : () => {
+                      _(!0);
+                    },
+                onCancel: () => {
+                  _(!1);
+                },
+                nItemWidth: _,
+                nItemHeight: _,
+                bIsFriend: _,
+                review: _,
+                mapTags: _,
+              });
+            },
+            [_, _, _, _],
+          ),
+          _ = _.useCallback((_) => _, [_]),
+          _ = _.useCallback(
+            (_, _) => {
+              _(_(_)), _ && _(_, _);
+            },
+            [_, _],
+          );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().CarouselWrapper),
+          children: [
+            (0, _.jsx)(_, {
+              className: _().ReviewSectionTitle,
+              _: _,
+              title: _,
+            }),
+            (0, _.jsx)(_, {
+              name: "AppReviews",
+              modalClassName: _().ModalPosition,
+              bFullScreen: _,
+              setFullScreen: _,
+              nFullScreenItemWidthPercentage: 80,
+              className: _().Carousel,
+              "aria-labelledby": _,
+              scrollToAlignment: "center",
+              nNumItems: _,
+              nHeight: _ / 0.92,
+              nItemHeight: _ / 0.92,
+              nItemMarginX: 20,
+              fnGetColumnWidth: _,
+              fnGetId: _,
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              fnDoesItemTakeFocus: _,
+              fnOnFocusedColumnChange: _,
+              fnItemRenderer: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { queryReviews: _, mapTags: _, loadMore: _ } = _,
+          _ = _.useMemo(
+            () => (_?.data?.pages || []).map((_) => _.reviews).flat(1),
+            [_?.data?.pages],
+          ),
+          _ = _.useCallback((_) => {}, []),
+          _ = _.useCallback(
+            (_, _) => {
+              _ && _ > _.length - 3 && !_.isFetching && _();
+            },
+            [_, _.length, _.isFetching],
+          );
+        return (0, _.jsx)(_, {
+          rgReviews: _,
+          nNumItems: _.length + (_ ? 1 : 0),
+          nFriendReviews: 0,
+          getTitle: _,
+          mapTags: _,
+          onItemFocusChanged: _,
+        });
+      }
+      function _(_) {
+        const { summary: _, mapTags: _ } = _,
+          _ = _?.friendreviews?.length || 0,
+          _ = _?.reviews?.length || 0,
+          _ = _.useCallback(
+            function (_) {
+              let _;
+              return (
+                (_ =
+                  _ < _
+                    ? "#Review_SectionTitle_Friends"
+                    : _ < _ + _
+                      ? "#Review_SectionTitle_Top"
+                      : "#Review_SectionTitle_Recent"),
+                _
+              );
+            },
+            [_, _],
+          ),
+          _ = _.useMemo(
+            () =>
+              (_?.friendreviews || [])
+                .concat(_?.reviews || [])
+                .concat(_?.recentreviews || []),
+            [_],
+          );
+        return (0, _.jsx)(_, {
+          rgReviews: _,
+          nNumItems: _.length,
+          nFriendReviews: _,
+          getTitle: _,
+          mapTags: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { data: _ } = _,
+          _ = _?.query_summary;
+        if (!_ || !_.total_reviews) return null;
+        let _ = _().Negative;
+        switch (_.review_score) {
+          case _._._:
+          case _._._:
+          case _._._:
+          case _._._:
+            _ = _().Positive;
+            break;
+          case _._._:
+            _ = _().Mixed;
+        }
+        let _ = "#Review_Count";
+        return (
+          (_ = _.review_score
+            ? 1 == _.total_reviews
+              ? "#Review_CountAndRating"
+              : "#Review_CountAndRating_Plural"
+            : 1 == _.total_reviews
+              ? "#Review_Count"
+              : "#Review_Count_Plural"),
+          (0, _.jsx)("div", {
+            className: _().ReviewCount,
+            children: _.LocalizeReact(
+              _,
+              (0, _.jsx)("b", {
+                children: (0, _._)(_.total_reviews),
+              }),
+              (0, _.jsx)(_._, {
+                toolTipContent: _.review_score_tooltip,
+                className: _().ScoreTooltip,
+                direction: "top",
+                children: (0, _.jsx)("span", {
+                  className: _()(_().Score, _),
+                  children: _.review_score_desc,
+                }),
+              }),
+            ),
+          })
+        );
+      }
+      function _(_) {
+        const {
+            title: _,
+            className: _,
+            bIsFriend: _,
+            bShortPresentation: _,
+            reviews: _,
+            mapTags: _,
+          } = _,
+          _ = _.useId();
+        return _?.length
+          ? (0, _.jsxs)("div", {
+              className: _()(_().ReviewSection, _),
+              children: [
+                (0, _.jsx)(_, {
+                  _: _,
+                  title: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Reviews,
+                  "aria-labelledby": _,
+                  role: "list",
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        bIsFriend: _,
+                        bShortPresentation: _,
+                        review: _,
+                        mapTags: _,
+                      },
+                      _.recommendationid,
+                    ),
+                  ),
+                }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { error: _ } = _,
+          _ = _ instanceof _._ ? _.eResult : void 0;
+        return (0, _.jsx)("div", {
+          className: _().LoadingError,
+          children:
+            void 0 !== _
+              ? _.Localize("#Review_LoadError", _)
+              : _.Localize("#Review_LoadErrorUnknown"),
+        });
+      }
+      function _(_) {
+        const { searchParams: _ } = _,
+          { appid: _ } = _.useContext(_),
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(
+            _.useCallback((_) => {
+              _.isIntersecting && _(!0);
+            }, []),
+            {
+              threshold: 1,
+              rootMargin: "0px 0px 1000px 0px",
+            },
+          ),
+          _ = (0, _._)(_, _, _),
+          _ = _?.data?.pages?.[0],
+          _ =
+            (_?.data?.pages?.[_.data.pages.length - 1],
+            new Map(_?.rgReviewTags.map((_) => [_._, _])));
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !1,
+            (0, _.jsxs)("div", {
+              ref: _,
+              className: _().StatusLine,
+              children: [
+                _.isFetching &&
+                  (0, _.jsx)(_._, {
+                    size: "small",
+                  }),
+                (0, _.jsx)(_, {
+                  data: _,
+                }),
+              ],
+            }),
+            "summary" == _?.reviewFilter &&
+              (0, _.jsx)(_, {
+                summary: _,
+                mapTags: _,
+              }),
+            "summary" != _?.reviewFilter &&
+              (0, _.jsx)(_, {
+                queryReviews: _,
+                mapTags: _,
+              }),
+            _.isError &&
+              (0, _.jsx)(_, {
+                error: _.error,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { queryReviews: _, mapTags: _ } = _,
+          _ = (_?.data?.pages || []).map((_) => _.reviews).flat(1),
+          _ =
+            (_?.data?.pages[0].cAppRecommendationCount || 0) > _.length &&
+            !_.isError,
+          _ = _ ? () => _.fetchNextPage() : void 0,
+          _ = (0, _._)();
+        return 0 == _.length
+          ? null
+          : _
+            ? (0, _.jsx)(_, {
+                ..._,
+                loadMore: _,
+              })
+            : (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    reviews: _,
+                    mapTags: _,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      disabled: _.isFetching,
+                      className: _().LoadMoreButton,
+                      onClick: _,
+                      children: _.Localize("#Review_LoadMore"),
+                    }),
+                ],
+              });
+      }
+      function _(_) {
+        const { summary: _, className: _ } = _,
+          { appid: _ } = _.useContext(_);
+        return _?.query_summary?.total_reviews_unfiltered
+          ? (0, _.jsx)(_._, {
+              className: _()(_().BrowseAllLink, _),
+              href:
+                _._.COMMUNITY_BASE_URL +
+                `app/${_}/reviews/?browsefilter=toprated`,
+              children: _.LocalizePlural(
+                "#Review_BrowseAll",
+                (0, _._)(_.query_summary.total_reviews_unfiltered),
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { summary: _, mapTags: _ } = _,
+          _ = (0, _._)();
+        return _
+          ? _
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                  (0, _.jsx)(_._, {
+                    children: (0, _.jsx)(_, {
+                      className: _().GamepadBrowseAll,
+                      summary: _,
+                    }),
+                  }),
+                ],
+              })
+            : (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)(_._, {
+                  className: _().ReviewSummary,
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      className: _().Left,
+                      children: [
+                        (0, _.jsx)(_, {
+                          title: "#Review_SectionTitle_Friends",
+                          className: _().Friends,
+                          bIsFriend: !0,
+                          reviews: _?.friendreviews,
+                          mapTags: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          title: "#Review_SectionTitle_Top",
+                          className: _().TopReviews,
+                          reviews: _?.reviews,
+                          mapTags: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          className: _().LeftColumn,
+                          summary: _,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
+                      className: _().Right,
+                      children: [
+                        (0, _.jsx)(_, {
+                          title: "#Review_SectionTitle_Recent",
+                          className: _().Recent,
+                          bShortPresentation: !0,
+                          reviews: _?.recentreviews,
+                          mapTags: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          className: _().RightColumn,
+                          summary: _,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              })
+          : null;
+      }
+      const _ = _.createContext({
+        appid: 0,
+        app_release_date: 0,
+        appname: "",
+      });
+      function _(_) {
+        window.SetReviewTopicFilter(_, !0);
+      }
+      function _(_) {
+        const { appid: _, app_release_date: _, appname: _ } = _,
+          _ = _.useMemo(
+            () => ({
+              appid: _,
+              app_release_date: _,
+              appname: _,
+              fnSetTopicFilter: _,
+            }),
+            [_, _, _],
+          ),
+          [_, _] = _.useState(_._);
+        return (
+          (0, _._)(
+            window,
+            "message",
+            _.useCallback((_) => {
+              try {
+                const _ = JSON.parse(_.data);
+                "ReviewFilterChange" == _?.message && _(_.args);
+              } catch {}
+            }, []),
+          ),
+          (0, _.jsx)(_.Provider, {
+            value: _,
+            children: (0, _.jsx)(_, {
+              searchParams: _,
+            }),
+          })
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5742,6 +9427,22 @@
           }),
         });
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { children: _ } = _;
+        return (0, _.jsx)("div", {
+          className: _().Unbleed,
+          children: _,
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -28850,14 +32551,6 @@
           children: _ || _._.Localize("#Sale_BrowseMore_Text_Default"),
         });
       }
-      function _(_) {
-        const _ = _.reviewSection?.review_appid;
-        return _
-          ? (0, _.jsx)("div", {
-              children: "SteamReviewSection appid: " + _,
-            })
-          : null;
-      }
       !(function (_) {
         (_.k_MediaImage = "image"),
           (_.k_MediaVideo = "video"),
@@ -28908,6 +32601,45 @@
             (_.MediaLeft = "MediaLeft"),
             (_.MediaRight = "MediaLeft");
         })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _ } = _,
+          _ = (0, _._)({
+            appid: _,
+          }),
+          _ = (0, _._)({
+            appid: _,
+          }),
+          _ = _.data?.name || "",
+          _ = _.data?.steam_release_date || 0,
+          _ = _.useMemo(
+            () => ({
+              appid: _,
+              appname: _,
+              app_release_date: _,
+            }),
+            [_, _, _],
+          ),
+          _ = _.useMemo(_._, []);
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: (0, _.jsx)(_._, {
+            searchParams: _,
+          }),
+        });
+      }
+      function _(_) {
+        const _ = _.reviewSection?.review_appid;
+        return _ && _._.is_valve_email
+          ? (0, _.jsx)("div", {
+              className: _().ValveOnlyBackground,
+              children: (0, _.jsx)(_, {
+                appid: _,
+              }),
+            })
+          : null;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31006,6 +34738,1497 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("VirtualizedBoxCarousel"),
+        _ = _.Debug,
+        _ = _.Warning;
+      function _(_, _, _) {
+        const _ = (0, _._)("VBC_" + _, _ || 0);
+        return (
+          _.useEffect(() => {
+            _ && __webpack_require__(void 0, _ || 0);
+          }, []),
+          _
+        );
+      }
+      _.forwardRef(function (_, _) {
+        const { name: _, initialColumn: _, fnOnFocusedColumnChange: _ } = _,
+          [_, _] = _(_, _, _);
+        return (0, _.jsx)(_, {
+          ..._,
+          ref: _,
+          focusedColumn: _,
+          setFocusedColumn: _,
+        });
+      });
+      const _ = _.forwardRef(function (_, _) {
+        const _ = (0, _._)();
+        return (0, _.jsx)(_, {
+          ref: _,
+          ..._,
+          autoHeight: !_,
+        });
+      });
+      class _ extends _.PureComponent {
+        static defaultProps = {
+          nIndexLeftmost: 0,
+          scrollDuration: 100,
+          scrollTiming: "sine",
+          enableBumperPaging: !1,
+          bPlaySoundOnFailedScroll: !0,
+        };
+        state = {
+          nContainerWidth: 0,
+          nRightPadding: 0,
+        };
+        m_refContainer = _.createRef();
+        m_refGrid = void 0;
+        m_refGridContainer = _.createRef();
+        m_refGridElement = void 0;
+        m_resizeObserver;
+        m_scrollAnimation = null;
+        m_mapRefs = new Map();
+        m_iStart = 0;
+        m_iEnd = 0;
+        m_activeScrollTo = null;
+        StartScrollAnimation(_, _, _, _, _) {
+          let _ = this.m_refGrid;
+          if (_) {
+            const _ = this.m_refGridElement;
+            if (_ && _) {
+              _("StartScrollAnimation", _, _, _);
+              let _ = {
+                msDuration: _,
+                timing: this.props.scrollTiming,
+                onComplete: () => this.OnAnimationScrollComplete(_, _, _, _),
+              };
+              this.m_scrollAnimation && this.m_scrollAnimation.End(),
+                (this.m_scrollAnimation = new _._(
+                  _,
+                  {
+                    scrollLeft: _,
+                  },
+                  _,
+                )),
+                this.m_scrollAnimation.Start();
+            } else
+              _.scrollToPosition({
+                scrollLeft: _,
+                scrollTop: 0,
+              }),
+                this.OnAnimationScrollComplete(_, _, _, _);
+          }
+        }
+        RestoreScrollPosition(_) {
+          this.StartScrollAnimation(
+            _._.INVALID,
+            0,
+            "RestoreScrollPosition",
+            _,
+            0,
+          );
+        }
+        m_timeout = void 0;
+        SendScrollNotification(_) {
+          this.m_timeout && window.clearTimeout(this.m_timeout);
+          const _ = this.props.fnOnScroll;
+          this.m_timeout = window.setTimeout(() => {
+            _ && _(_), (this.m_timeout = void 0);
+          }, 250);
+        }
+        OnAnimationScrollComplete(_, _, _, _) {
+          _.unstable_batchedUpdates(() => {
+            _("OnAnimationScrollComplete", _, _),
+              this.SendScrollNotification(_);
+            const _ = this.m_mapRefs.get(_);
+            _ &&
+              _.current &&
+              (_("Sending focus to", _), _.current.TakeFocus(_)),
+              this.props.setFocusedColumn(_),
+              (this.m_scrollAnimation = null),
+              (this.m_activeScrollTo = null);
+          });
+        }
+        m_nTouchStartClientX = void 0;
+        OnTouchStart(_) {
+          1 == _.touches.length &&
+            (this.m_nTouchStartClientX = _.touches[0].clientX);
+        }
+        OnTouchEnd(_) {
+          this.m_nTouchStartClientX = void 0;
+        }
+        OnTouchMove(_) {
+          if (
+            !this.m_refGrid ||
+            0 == _.touches.length ||
+            void 0 === this.m_nTouchStartClientX
+          )
+            return;
+          const _ = this.m_nTouchStartClientX - _.touches[0].clientX;
+          this.BlockMovementLeftPastFirstElement(_, _);
+        }
+        m_bMouseDown = !1;
+        OnMouseDown(_) {
+          this.m_bMouseDown = !0;
+        }
+        OnMouseUp(_) {
+          this.m_bMouseDown = !1;
+        }
+        BlockMovementLeftPastFirstElement(_, _) {
+          if (!this.m_refGrid || !this.m_refGridElement) return;
+          const _ = this.m_refGrid.getOffsetForCell({
+            alignment: this.props.scrollToAlignment,
+            columnIndex: this.nIndexLeftmost,
+          });
+          this.m_refGridElement.scrollLeft - _.scrollLeft + _ < 0 &&
+            _.cancelable &&
+            (console.warn("Blocking touch scroll out of bounds"),
+            _.cancelable && _.preventDefault());
+        }
+        SnapBackToFirstElement(_) {
+          console.warn("Carousel out of bounds, scrolling back to", _),
+            this.RestoreScrollPosition(_);
+        }
+        OnScroll(_) {
+          const _ = this.m_refGrid?.getOffsetForCell({
+            alignment: this.props.scrollToAlignment,
+            columnIndex: this.nIndexLeftmost,
+          });
+          this.SendScrollNotification(_.scrollLeft),
+            _ &&
+              _.scrollLeft < Math.floor(_.scrollLeft) &&
+              this.SnapBackToFirstElement(_.scrollLeft),
+            this.UpdateScrollArrows();
+        }
+        GetCellColumnWidth(_) {
+          let { fnGetColumnWidth: _ } = this.props,
+            _ = _(_.index) + this.props.nItemMarginX;
+          return (
+            _.index == this.props.nNumItems - 1 &&
+              (_ += this.state.nRightPadding),
+            _
+          );
+        }
+        OnItemFocused(_, _) {
+          this.m_bMouseDown ||
+            this.ScrollToItem(
+              _._.INVALID,
+              _,
+              this.props.scrollToAlignment || "auto",
+              void 0,
+              0,
+            );
+        }
+        CellRenderer(_) {
+          const {
+              fnGetColumnWidth: _,
+              fnGetId: _,
+              fnItemRenderer: _,
+              nItemHeight: _,
+              autoFocus: _,
+            } = this.props,
+            { key: _, columnIndex: _, style: _ } = _,
+            _ = _(_),
+            _ = parseInt(_.left?.toString() ?? "0"),
+            _ = __webpack_require__(_),
+            _ = !this.m_mapRefs.has(_),
+            _ = this.m_mapRefs.get(_) || (0, _._)();
+          return (
+            this.m_mapRefs.set(_, _),
+            (0, _.jsx)(
+              _._,
+              {
+                navKey: _,
+                navRef: _,
+                focusable: !1,
+                onGamepadDirection: this.OnGamepadDirection,
+                autoFocus: _ && _ == this.props.focusedColumn && _,
+                "data-id": _,
+                onFocus: (_) => this.OnItemFocused(_, _),
+                style: _,
+                preferredFocus: _ == this.props.focusedColumn,
+                role: "listitem",
+                "aria-setsize": this.props.nNumItems,
+                "aria-posinset": _ + 1,
+                children: _(_, _, _, _),
+              },
+              _,
+            )
+          );
+        }
+        OnSectionRendered(_) {
+          (this.m_iStart = _.columnStartIndex),
+            (this.m_iEnd = _.columnStopIndex),
+            _("Section rendered", this.m_iStart, this.m_iEnd),
+            this.UpdateScrollArrows();
+        }
+        get alignment() {
+          return this.props.scrollToAlignment || "start";
+        }
+        get nIndexLeftmost() {
+          return this.props.nIndexLeftmost ?? 0;
+        }
+        get scrollDuration() {
+          return this.props.scrollDuration ?? 100;
+        }
+        GetLastFocusableColumn() {
+          let _ = this.props.nNumItems - 1;
+          if (this.props.fnDoesItemTakeFocus)
+            for (
+              ;
+              !this.props.fnDoesItemTakeFocus(_) && _ > this.nIndexLeftmost;
+            )
+              _--;
+          return _("LastFocusableColumn: ", _), _;
+        }
+        UpdateScrollArrows() {
+          if (this.props.fnUpdateArrows) {
+            const _ =
+                this.m_refGrid?.getOffsetForCell({
+                  alignment: this.props.scrollToAlignment,
+                  columnIndex: this.nIndexLeftmost,
+                })?.scrollLeft ?? NaN,
+              _ =
+                this.m_refGrid?.getOffsetForCell({
+                  alignment: this.props.scrollToAlignment,
+                  columnIndex: this.GetLastFocusableColumn(),
+                })?.scrollLeft ?? NaN,
+              _ = Math.round(this.m_refGridElement?.scrollLeft ?? NaN),
+              _ = _ != Math.floor(_) && _ != Math.round(_),
+              _ = _ != Math.floor(_) && _ != Math.round(_);
+            _(
+              "ShowLeftArrow: ",
+              _,
+              _,
+              " ShowRightArrow: ",
+              _,
+              _,
+              " ScrollPos: ",
+              _,
+            ),
+              this.props.fnUpdateArrows(_, _);
+          }
+        }
+        BindGridObject(_) {
+          if (
+            (this.m_refGridElement &&
+              (this.m_refGridElement.removeEventListener(
+                "touchstart",
+                this.OnTouchStart,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "touchend",
+                this.OnTouchEnd,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "touchmove",
+                this.OnTouchMove,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "mousedown",
+                this.OnMouseDown,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              )),
+            (this.m_refGrid = _),
+            (this.m_refGridElement = void 0),
+            this.m_refGrid)
+          ) {
+            const _ = this.m_refGridContainer.current;
+            this.m_refGrid._setScrollingContainerRef(_),
+              (this.m_refGridElement = _),
+              _?.addEventListener("touchstart", this.OnTouchStart),
+              _?.addEventListener("touchend", this.OnTouchEnd),
+              _?.addEventListener("touchmove", this.OnTouchMove, {
+                passive: !1,
+              }),
+              _?.addEventListener("mousedown", this.OnMouseDown),
+              _?.addEventListener("mouseup", this.OnMouseUp),
+              this.props["aria-label"] &&
+                _.firstChild?.setAttribute(
+                  "aria-label",
+                  this.props["aria-label"],
+                ),
+              this.props["aria-labelledby"] &&
+                _.firstChild?.setAttribute(
+                  "aria-labelledby",
+                  this.props["aria-labelledby"],
+                );
+            const _ = window.getComputedStyle(_),
+              _ = parseInt(_.getPropertyValue("padding-right")) || 0,
+              _ = parseInt(_.getPropertyValue("scroll-padding-right")) || 0,
+              _ = Math.max(_, _);
+            _ != this.state.nRightPadding &&
+              (_("Computed", _, "additional right padding"),
+              this.setState(
+                {
+                  nRightPadding: _,
+                },
+                () => {
+                  this.m_refGrid?.recomputeGridSize({
+                    columnIndex: this.props.nNumItems - 1,
+                  });
+                },
+              ));
+          }
+        }
+        componentDidMount() {
+          this.m_refContainer.current &&
+            ((this.m_resizeObserver = (0, _._)(
+              this.m_refContainer.current,
+              this.OnResize,
+            )),
+            _(
+              "componentDidMount Setting width to",
+              this.m_refContainer.current.clientWidth,
+            ),
+            this.setState({
+              nContainerWidth: this.m_refContainer.current.clientWidth,
+            }));
+        }
+        componentDidUpdate(_) {
+          this.props.fnGetColumnWidth != _.fnGetColumnWidth &&
+            (_(
+              "Column width function changed, recalculating sizes. Are you missing a useCallback?",
+            ),
+            this.m_refGrid?.recomputeGridSize());
+        }
+        componentWillUnmount() {
+          this.m_resizeObserver?.disconnect();
+        }
+        OnResize() {
+          const _ = this.m_refContainer.current?.clientWidth ?? 0;
+          _ != this.state.nContainerWidth &&
+            (_("OnResize Setting width to", _),
+            this.setState({
+              nContainerWidth: _,
+            })),
+            this.UpdateScrollArrows();
+        }
+        ScrollLeft(_) {
+          const _ = this.m_iEnd - this.m_iStart,
+            _ = (0, _._)(
+              this.props.focusedColumn - _,
+              this.nIndexLeftmost,
+              this.props.nNumItems - 1,
+            ),
+            _ = this.alignment;
+          return this.ScrollToItem(_._.INVALID, _, _, _);
+        }
+        ScrollRight(_) {
+          const _ = this.m_iEnd - this.m_iStart,
+            _ = (0, _._)(
+              this.props.focusedColumn + _,
+              this.nIndexLeftmost,
+              this.props.nNumItems - 1,
+            ),
+            _ = this.alignment;
+          return this.ScrollToItem(_._.INVALID, _, _, _);
+        }
+        ScrollToFirstChild() {
+          return this.ScrollToItem(_._.INVALID, this.nIndexLeftmost, "auto");
+        }
+        MoveLeft(_) {
+          _("MoveLeft from", this.props.focusedColumn);
+          let _ = this.props.focusedColumn - 1;
+          for (
+            ;
+            _ != this.nIndexLeftmost - 1 &&
+            this.props.fnDoesItemTakeFocus &&
+            !this.props.fnDoesItemTakeFocus(_);
+          )
+            _--;
+          return _ == this.nIndexLeftmost - 1
+            ? (_("At left edge, not handling left gamepad"), !1)
+            : (_("MoveLeft to", _),
+              this.ScrollToItem(
+                _ ? _.detail.button : _._.INVALID,
+                _,
+                this.props.scrollToAlignment || "auto",
+                _,
+              ));
+        }
+        MoveRight(_) {
+          _("MoveRight from", this.props.focusedColumn);
+          let _ = this.props.focusedColumn + 1;
+          for (
+            ;
+            _ != this.props.nNumItems &&
+            this.props.fnDoesItemTakeFocus &&
+            !this.props.fnDoesItemTakeFocus(_);
+          )
+            _++;
+          return _ == this.props.nNumItems
+            ? (_("At right edge, not handling right gamepad"), !1)
+            : (_("MoveRight to", _),
+              this.ScrollToItem(
+                _ ? _.detail.button : _._.INVALID,
+                _,
+                this.props.scrollToAlignment || "auto",
+                _,
+              ));
+        }
+        ScrollToItem(_, _, _, _, _) {
+          if (
+            this.m_activeScrollTo &&
+            this.m_activeScrollTo.alignment === _ &&
+            this.m_activeScrollTo.iNewFocus === _
+          )
+            return !0;
+          if (
+            (_("ScrollToItem", _, _, _, _),
+            _ != this.props.focusedColumn &&
+              this.m_refGrid &&
+              (!this.props.fnDoesItemTakeFocus ||
+                this.props.fnDoesItemTakeFocus(_)))
+          ) {
+            const _ = this.m_refGrid.getOffsetForCell({
+                alignment: _,
+                columnIndex: _,
+                rowIndex: 0,
+              }),
+              _ = this.props.fnGetId(_);
+            return (
+              _("Scrolling to item", _, _, _, _.scrollLeft, _),
+              (this.m_activeScrollTo = {
+                iNewFocus: _,
+                alignment: _,
+              }),
+              this.props.fnOnFocusedColumnChange &&
+                this.props.fnOnFocusedColumnChange(this.props.focusedColumn, _),
+              this.StartScrollAnimation(
+                _,
+                _,
+                _,
+                _.scrollLeft,
+                _ ?? this.scrollDuration,
+              ),
+              _?.stopPropagation(),
+              _?.preventDefault(),
+              !0
+            );
+          }
+          return !1;
+        }
+        OnGamepadButtonDown(_) {
+          switch ((_("OnGamepadButtonDown", _.detail), _.detail.button)) {
+            case _._.BUMPER_LEFT:
+              return !!this.props.enableBumperPaging && this.ScrollLeft(_);
+            case _._.BUMPER_RIGHT:
+              return !!this.props.enableBumperPaging && this.ScrollRight(_);
+          }
+          return !1;
+        }
+        OnGamepadDirection(_) {
+          switch ((_("OnGamepadDirection", _.detail), _.detail.button)) {
+            case _._.DIR_LEFT:
+              return this.MoveLeft(_);
+            case _._.DIR_RIGHT:
+              return this.MoveRight(_);
+          }
+          return !1;
+        }
+        render() {
+          const {
+              className: _,
+              nNumItems: _,
+              nHeight: _,
+              nItemHeight: _,
+              overscan: _ = 3,
+              scrollToAlignment: _,
+              focusedColumn: _,
+              autoHeight: _,
+              "aria-label": _,
+              navEntryPreferPosition: _,
+            } = this.props,
+            _ = this.state.nContainerWidth;
+          return (
+            _(
+              "Inner render",
+              this.props.name,
+              this.props.nNumItems,
+              _,
+              this.nIndexLeftmost,
+              _,
+            ),
+            (0, _.jsx)(_._, {
+              ref: this.m_refContainer,
+              "flow-children": "row",
+              onButtonDown: this.OnGamepadButtonDown,
+              focusable: !1,
+              navEntryPreferPosition: _,
+              children:
+                _ &&
+                (0, _.jsx)(_._, {
+                  role: "generic",
+                  containerRole: "list",
+                  ref: this.BindGridObject,
+                  containerProps: {
+                    ref: this.m_refGridContainer,
+                  },
+                  className: _,
+                  cellRenderer: this.CellRenderer,
+                  onScroll: this.OnScroll,
+                  onSectionRendered: this.OnSectionRendered,
+                  columnCount: _,
+                  columnWidth: this.GetCellColumnWidth,
+                  overscanColumnCount: _,
+                  overscanIndicesGetter: ({
+                    cellCount: _,
+                    overscanCellsCount: _,
+                    startIndex: _,
+                    stopIndex: _,
+                  }) => ({
+                    overscanStartIndex: Math.max(0, _ - _),
+                    overscanStopIndex: Math.min(_ - 1, _ + _),
+                  }),
+                  rowCount: 1,
+                  rowHeight: _,
+                  height: _,
+                  width: _,
+                  containerStyle: {
+                    overflow: "visible",
+                  },
+                  scrollToAlignment: this.alignment,
+                  scrollToColumn: _,
+                  tabIndex: null,
+                  autoHeight: _,
+                }),
+            })
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "RestoreScrollPosition", null),
+        (0, _._)([_._], _.prototype, "OnAnimationScrollComplete", null),
+        (0, _._)([_._], _.prototype, "OnTouchStart", null),
+        (0, _._)([_._], _.prototype, "OnTouchEnd", null),
+        (0, _._)([_._], _.prototype, "OnTouchMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)(
+          [_._, (0, _._)(250)],
+          _.prototype,
+          "SnapBackToFirstElement",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "OnScroll", null),
+        (0, _._)([_._], _.prototype, "GetCellColumnWidth", null),
+        (0, _._)([_._], _.prototype, "OnItemFocused", null),
+        (0, _._)([_._], _.prototype, "CellRenderer", null),
+        (0, _._)([_._], _.prototype, "OnSectionRendered", null),
+        (0, _._)([_._, (0, _._)(250)], _.prototype, "UpdateScrollArrows", null),
+        (0, _._)([_._], _.prototype, "BindGridObject", null),
+        (0, _._)([_._], _.prototype, "OnResize", null),
+        (0, _._)([_._], _.prototype, "ScrollLeft", null),
+        (0, _._)([_._], _.prototype, "ScrollRight", null),
+        (0, _._)([_._], _.prototype, "ScrollToFirstChild", null),
+        (0, _._)([_._], _.prototype, "MoveLeft", null),
+        (0, _._)([_._], _.prototype, "MoveRight", null),
+        (0, _._)([_._], _.prototype, "OnGamepadButtonDown", null),
+        (0, _._)([_._], _.prototype, "OnGamepadDirection", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.SELECTING = 0)] = "SELECTING"),
+          (_[(_.CONFIRM = 1)] = "CONFIRM"),
+          (_[(_.SUBMITTING = 2)] = "SUBMITTING"),
+          (_[(_.DONE = 3)] = "DONE"),
+          (_[(_.ERROR = 4)] = "ERROR"),
+          (_[(_.LOADING_ERROR = 5)] = "LOADING_ERROR");
+      })(_ || (_ = {}));
+      const _ = (_) =>
+        (0, _.jsx)("svg", {
+          viewBox: "0 0 24 24",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          ..._,
+          children: (0, _.jsx)("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
+          }),
+        });
+      class _ extends _.PureComponent {
+        constructor(_) {
+          super(_),
+            (this.state = {
+              bHovered: !1,
+            });
+        }
+        handleMouseOver(_) {
+          this.setState({
+            bHovered: !0,
+          });
+        }
+        handleMouseOut() {
+          this.setState({
+            bHovered: !1,
+          });
+        }
+        render() {
+          const _ = (0, _._)(
+            this.props.reactionType,
+            !(
+              0 != this.props.bDisableAnimation ||
+              (!this.state.bHovered && !this.props.bForceAnimated)
+            ),
+          );
+          return (0, _.jsx)("img", {
+            className: this.props.className,
+            src: _,
+            onMouseEnter: this.handleMouseOver,
+            onMouseLeave: this.handleMouseOut,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "handleMouseOver", null),
+        (0, _._)([_._], _.prototype, "handleMouseOut", null);
+      class _ extends _.Component {
+        static defaultProps = {
+          targetType: _._._,
+        };
+        constructor(_) {
+          super(_),
+            (window.fnLoyalty_ShowAwardModal = (_, _, _, _, _) => {
+              _ || (_ = _._._),
+                this.setState({
+                  bShowModal: !0,
+                  fnSuccessFunc: _,
+                  targetid: _,
+                  ugcType: _,
+                  initialSelectedReaction: _,
+                  targetType: _,
+                });
+            }),
+            (this.state = {
+              bShowModal: !1,
+              targetid: "",
+              targetType: _._._,
+            });
+        }
+        render() {
+          const {
+            bShowModal: _,
+            targetType: _,
+            fnSuccessFunc: _,
+            targetid: _,
+            ugcType: _,
+            initialSelectedReaction: _,
+          } = this.state;
+          return _
+            ? (0, _.jsx)(
+                _,
+                {
+                  targetid: _,
+                  active: _,
+                  targetType: _ ?? _._._,
+                  ugcType: _,
+                  onDismiss: () =>
+                    this.setState({
+                      bShowModal: !1,
+                    }),
+                  onSuccess: _,
+                  initialSelectedReaction: _,
+                },
+                _,
+              )
+            : null;
+        }
+      }
+      function _(_) {
+        const {
+          targetType: _,
+          targetid: _,
+          bShowModal: _,
+          ugcType: _,
+          initialSelectedReaction: _,
+          onDismiss: _,
+          onSuccess: _,
+        } = _;
+        return (0, _.jsx)(
+          _,
+          {
+            targetid: _,
+            active: _,
+            targetType: _,
+            ugcType: _,
+            onDismiss: _,
+            onSuccess: _,
+            initialSelectedReaction: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const {
+            active: _,
+            targetid: _,
+            targetType: _,
+            ugcType: _,
+            initialSelectedReaction: _,
+            onSuccess: _,
+            onDismiss: _,
+          } = _,
+          [_, _] = _.useState(_ || _._._),
+          [_, _] = _.useState(_.SELECTING),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(_._),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (function (_, _, _, _) {
+            return (0, _._)({
+              queryKey: ["UserReactions", _, _],
+              queryFn: async () => {
+                if (!_._.logged_in) throw _._;
+                const _ = _._.Init(_._);
+                _.Body().set_target_type(_), _.Body().set_targetid(_);
+                let _ = await _._.GetReactions(_, _);
+                if (_.GetEResult() == _._)
+                  return new Set(_.Body().reactionids());
+                throw _.GetEResult();
+              },
+              enabled: _,
+            });
+          })(!!_, _, _, _),
+          _ = (function (_, _) {
+            return (0, _._)({
+              queryKey: ["AwardsConfiguration"],
+              queryFn: async () => {
+                const _ = _._.Init(_._);
+                _.Body().set_elanguage((0, _.sfN)(_._.LANGUAGE));
+                let _ = await _._.GetReactionConfig(_, _);
+                if (__webpack_require__.GetEResult() == _._) {
+                  const _ = new Map();
+                  let _ = __webpack_require__.Body().toObject().reactions ?? [];
+                  for (const _ of _) _.reactionid && _.set(_.reactionid, _);
+                  return _;
+                }
+                throw __webpack_require__.GetEResult();
+              },
+              enabled: _,
+            });
+          })(!!_, _),
+          _ = (function (_, _) {
+            return (0, _._)({
+              queryKey: ["UserPointBalance"],
+              queryFn: async () => {
+                if (!_._.logged_in) throw _._;
+                const _ = _._.steamid,
+                  _ = _._.Init(_._);
+                __webpack_require__.Body().set_steamid(_);
+                let _ = await _._.GetSummary(_, _);
+                if (_.GetEResult() == _._)
+                  return _._.fromString(
+                    _.Body().toObject().summary?.points ?? "0",
+                  );
+                throw _.GetEResult();
+              },
+              enabled: _,
+            });
+          })(!!_, _),
+          _ = (function (_) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                if (!_._.logged_in) throw _._;
+                const { targetid: _, targetType: _, nReactionId: _ } = _;
+                let _ = _._.Init(_._);
+                _.Body().set_target_type(_),
+                  _.Body().set_targetid(_),
+                  _.Body().set_reactionid(_);
+                const _ = await _._.AddReaction(_, _);
+                if (_.GetEResult() != _._) throw _.GetEResult();
+              },
+              onSuccess: () => {
+                _.invalidateQueries({
+                  queryKey: ["UserPointBalance"],
+                });
+              },
+            });
+          })(_),
+          _ = _.isPending || _.isPending;
+        if (
+          (_.useEffect(() => {
+            _.error && (_(_.error), _(_.LOADING_ERROR));
+          }, [_.error]),
+          !_)
+        )
+          return null;
+        const _ = _.data ?? new Map(),
+          _ = _.data ?? new _._(0),
+          _ = (function (_, _, _) {
+            let _ = [];
+            return (
+              _.forEach(function (_) {
+                if (
+                  _.valid_target_types?.includes(_) &&
+                  _.purchaseable &&
+                  _.reactionid
+                )
+                  switch (_) {
+                    case _._._:
+                      _.push(_.reactionid);
+                      break;
+                    case _._._:
+                      void 0 !== _ &&
+                        _.valid_ugc_types?.includes(_) &&
+                        _.push(_.reactionid);
+                      break;
+                    case _._._:
+                    case _._._:
+                    case _._._:
+                      _.push(_.reactionid);
+                  }
+              }),
+              _
+            );
+          })(_, _, _),
+          _ = _ === _._._ ? null : _.get(_),
+          _ = _ ? _.points_cost : 0,
+          _ = _ ? _.points_transferred : 0;
+        let _,
+          _ = "";
+        switch (_) {
+          case _._._:
+            _ = (0, _._)("#GrantAwardDescription_Review");
+            break;
+          case _._._:
+            _ = (0, _._)("#GrantAwardDescription_UGC");
+            break;
+          case _._._:
+            _ = (0, _._)("#GrantAwardDescription_Profile");
+            break;
+          case _._._:
+            _ = (0, _._)("#GrantAwardDescription_ForumTopic");
+            break;
+          case _._._:
+            _ = (0, _._)("#GrantAwardDescription_Comment");
+        }
+        switch (_) {
+          case _.SELECTING:
+            {
+              const _ = _ === _._._ || _.data?.has(_),
+                _ = !_ || _.greaterThanOrEqual(_),
+                _ = (0, _.jsx)(_._, {
+                  onClick: () => _(_.CONFIRM),
+                  disabled: _,
+                  focusable: !_,
+                  title: (0, _._)(
+                    _
+                      ? "#GrantAward_PromptTooltip"
+                      : "#GrantAward_SubmitTooltip",
+                  ),
+                  children: (0, _._)(
+                    _ ? "#GrantAward_SelectAward" : "#GrantAward_Next",
+                  ),
+                });
+              _ = (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    description: _,
+                  }),
+                  (0, _.jsx)(_, {}),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.InitialLoading,
+                      children: (0, _.jsx)("div", {
+                        className: (0, _._)(_.LoadingContainer, _.Visible),
+                        children: (0, _.jsx)(_, {}),
+                      }),
+                    }),
+                  (0, _.jsx)(_._, {
+                    className: _.ButtonContainer,
+                    scrollDirection: _ ? "x" : "y",
+                    "flow-children": "grid",
+                    children:
+                      !_ &&
+                      _.map((_, _) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            autoFocus:
+                              (void 0 === _ && 0 == _) ||
+                              (_ === _ && !_.data?.has(_)),
+                            reaction: _,
+                            selected: _ === _ && !_.data?.has(_),
+                            cost: _.get(_).points_cost,
+                            alreadyAwarded: _.data?.has(_),
+                            awardConfig: _.get(_),
+                            onClick: () => {
+                              _.data?.has(_) || _(_ === _ ? _._._ : _);
+                            },
+                          },
+                          _,
+                        ),
+                      ),
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {
+                    pointBalance: _,
+                    children:
+                      _ || _
+                        ? _
+                        : [
+                            (0, _.jsx)(
+                              "div",
+                              {
+                                className: _.NotEnoughPoints,
+                                children: (0, _._)(
+                                  "#GrantAward_CantAfford",
+                                  (0, _._)(_.negate().add(_).toNumber()),
+                                ),
+                              },
+                              "msg",
+                            ),
+                            (0, _.jsx)(
+                              _._,
+                              {
+                                href: `${_._.STORE_BASE_URL}points/howitworks`,
+                                children: (0, _.jsx)(
+                                  _._,
+                                  {
+                                    children: (0, _._)(
+                                      "#GrantAward_HowToGetPoints",
+                                    ),
+                                  },
+                                  "button",
+                                ),
+                              },
+                              "button",
+                            ),
+                          ],
+                  }),
+                ],
+              });
+            }
+            break;
+          case _.CONFIRM:
+          case _.SUBMITTING:
+          case _.DONE:
+            {
+              let _ = (0, _.jsxs)(_, {
+                pointBalance: _,
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: () => _(_.SELECTING),
+                    disabled: _ !== _.CONFIRM,
+                    children: (0, _._)("#GrantAward_Back"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: async function () {
+                      null !== _ &&
+                        _ != _._._ &&
+                        (_(_.SUBMITTING),
+                        await _.mutate(
+                          {
+                            targetid: _,
+                            targetType: _,
+                            nReactionId: _,
+                          },
+                          {
+                            onSuccess: () => {
+                              _(_.DONE),
+                                _(!0),
+                                setTimeout(() => {
+                                  _ && _(_, _);
+                                }, 2e3);
+                            },
+                            onError: (_) => {
+                              _(_.ERROR), _(_);
+                            },
+                          },
+                        ));
+                    },
+                    title: (0, _._)("#GrantAward_SubmitTooltip"),
+                    disabled: _ !== _.CONFIRM,
+                    children: (0, _._)("#GrantAwardNowButton"),
+                  }),
+                ],
+              });
+              _ === _.DONE &&
+                (_ = (0, _.jsx)(_, {
+                  pointBalance: _,
+                  children: (0, _.jsx)(_._, {
+                    onClick: _,
+                    children: (0, _._)("#Button_Close"),
+                  }),
+                })),
+                (_ = (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_, {
+                      description: _,
+                    }),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsxs)("div", {
+                      style: {
+                        position: "relative",
+                      },
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            _.ConfirmContainer,
+                            _ === _.CONFIRM && _.Visible,
+                          ),
+                          children: [
+                            (0, _.jsx)(_, {
+                              className: _.ConfirmAwardImage,
+                              reactionType: _,
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: _.ConfirmTextCtn,
+                              children: [
+                                (0, _.jsx)("div", {
+                                  className: _.ConfirmText,
+                                  children: (0, _._)(
+                                    "#GrantAward_Confirm",
+                                    (0, _.jsx)(_, {
+                                      children: (0, _._)(_),
+                                    }),
+                                    (0, _.jsx)("span", {
+                                      className: _.AwardName,
+                                      children: _.data?.get(_)?.localized_title,
+                                    }),
+                                  ),
+                                }),
+                                _ > 0 &&
+                                  (0, _.jsx)("div", {
+                                    className: _.ConfirmText,
+                                    children: (0, _._)(
+                                      "#GrantAward_Confirm_Details",
+                                      (0, _.jsx)(_, {
+                                        children: (0, _._)(_),
+                                      }),
+                                      (0, _.jsx)("span", {
+                                        className: _.TimePeriod,
+                                        children: (0, _._)(
+                                          "#GrantAward_Confirm_DetailsTimePeriod",
+                                        ),
+                                      }),
+                                    ),
+                                  }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)("div", {
+                          className: (0, _._)(
+                            _.LoadingContainer,
+                            _ === _.SUBMITTING && _.Visible,
+                          ),
+                          children: (0, _.jsx)(_, {}),
+                        }),
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            _.SuccessContainer,
+                            _ === _.DONE && _.Visible,
+                          ),
+                          children: [
+                            (0, _.jsx)(_, {
+                              className: _.ConfirmAwardImage,
+                              reactionType: _,
+                              bForceAnimated: !0,
+                            }),
+                            (0, _.jsx)("div", {
+                              className: _.SuccessText,
+                              children: (0, _._)("#GrantAward_Success"),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_, {}),
+                    _,
+                  ],
+                }));
+            }
+            break;
+          case _.ERROR:
+            {
+              let _ = "";
+              switch (_) {
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_Busy");
+                  break;
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_PersistFailed");
+                  break;
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_InvalidParam");
+                  break;
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_NoMatch");
+                  break;
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_InsufficientFunds");
+                  break;
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_AccessDenied");
+                  break;
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_NotLoggedOn");
+                  break;
+                case _._:
+                  _ = (0, _._)("#GrantAwardError_DuplicateRequest");
+                  break;
+                default:
+                  _ = (0, _._)("#GrantAwardError_Fail");
+              }
+              _ = (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    description: _,
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)("div", {
+                    style: {
+                      position: "relative",
+                    },
+                    children: (0, _.jsx)("div", {
+                      className: _.ErrorContainer,
+                      children: (0, _.jsx)("div", {
+                        className: _.ErrorText,
+                        children: _,
+                      }),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)(_, {
+                    pointBalance: _,
+                    children: (0, _.jsx)(_._, {
+                      onClick: () => _(_.SELECTING),
+                      children: (0, _._)("#GrantAward_Back"),
+                    }),
+                  }),
+                ],
+              });
+            }
+            break;
+          case _.LOADING_ERROR: {
+            let _ = "";
+            switch (_) {
+              case _._:
+                _ = (0, _._)("#GrantAwardError_Busy");
+                break;
+              case _._:
+                _ = (0, _._)("#GrantAwardError_NotLoggedOn");
+                break;
+              default:
+                _ = (0, _._)("#GrantAwardError_LoadExistingReactions");
+            }
+            _ = (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  description: _,
+                }),
+                (0, _.jsx)(_, {}),
+                (0, _.jsx)("div", {
+                  style: {
+                    position: "relative",
+                  },
+                  children: (0, _.jsx)("div", {
+                    className: _.ErrorContainer,
+                    children: (0, _.jsx)("div", {
+                      className: _.ErrorText,
+                      children: _,
+                    }),
+                  }),
+                }),
+                (0, _.jsx)(_, {}),
+              ],
+            });
+          }
+        }
+        return (0, _.jsxs)(_._, {
+          className: _.GrantAwardModal,
+          active: _,
+          onDismiss: _,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                eType: _._.Default,
+              }),
+            _,
+          ],
+        });
+      }
+      const _ = ({ description: _ }) =>
+        (0, _.jsxs)("div", {
+          className: _.Header,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.Title,
+              children: (0, _._)("#GrantAwardTitle"),
+            }),
+            (0, _.jsx)("div", {
+              className: _.Description,
+              children: _,
+            }),
+          ],
+        });
+      function _(_) {
+        const { pointBalance: _, children: _ } = _,
+          _ = _ && (0, _._)(_.toNumber());
+        return (0, _.jsxs)("div", {
+          className: _.Footer,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.PointsArea,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _.Left,
+                  children: [
+                    (0, _.jsx)(_.vrn, {
+                      className: _.BalanceIcon,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _.BalanceDetails,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _.BalanceLabel,
+                          children: (0, _._)("#YourBalance"),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _.BalanceAmount,
+                          children: _,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _.Column,
+                  children: (0, _.jsx)("a", {
+                    className: _.FooterLink,
+                    href: `${_._.STORE_BASE_URL}points/howitworks`,
+                    children: (0, _._)("#GrantAward_PointsLink"),
+                  }),
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _.Right,
+              children: (0, _.jsx)(_._, {
+                className: _.Actions,
+                "flow-children": "row",
+                children: _.Children.map(_, (_) =>
+                  (0, _.jsx)("div", {
+                    className: _.Action,
+                    children: _,
+                  }),
+                ),
+              }),
+            }),
+          ],
+        });
+      }
+      const _ = () =>
+        (0, _.jsx)("div", {
+          className: _.Divider,
+        });
+      class _ extends _.PureComponent {
+        constructor(_) {
+          super(_),
+            (this.state = {
+              bHovered: !1,
+            });
+        }
+        handleMouseOver(_) {
+          this.setState({
+            bHovered: !0,
+          });
+        }
+        handleMouseOut() {
+          this.setState({
+            bHovered: !1,
+          });
+        }
+        render() {
+          const {
+            reaction: _,
+            selected: _,
+            alreadyAwarded: _,
+            cost: _,
+            autoFocus: _,
+            awardConfig: _,
+            ..._
+          } = this.props;
+          return (0, _.jsxs)(_._, {
+            type: "button",
+            onMouseEnter: this.handleMouseOver,
+            onMouseLeave: this.handleMouseOut,
+            className: (0, _._)(_.Button, _ && _.Selected, _ && _.Disabled),
+            autoFocus: _,
+            ..._,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.IconCtn,
+                children: (0, _.jsx)(_, {
+                  reactionType: _,
+                  bForceAnimated: this.state.bHovered,
+                  bDisableAnimation: _,
+                }),
+              }),
+              (0, _.jsxs)("div", {
+                className: _.LabelCtn,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Label,
+                    children: _?.localized_title,
+                  }),
+                  (0, _.jsx)(_, {
+                    className: _.Points,
+                    children: (0, _._)(_ ?? 0),
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _.IconCheckMark,
+                }),
+            ],
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "handleMouseOver", null),
+        (0, _._)([_._], _.prototype, "handleMouseOut", null);
+      const _ = () =>
+          (0, _.jsx)(_._, {
+            size: "large",
+            className: _.Loading,
+          }),
+        _ = (_) => {
+          const { children: _, className: _, ..._ } = _;
+          return (0, _.jsxs)("span", {
+            ..._,
+            className: (0, _._)(_, _.PointsAmount),
+            children: [
+              (0, _.jsx)(_.vrn, {
+                className: _.PointsAmountIcon,
+              }),
+              _,
+            ],
+          });
+        };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `${_._.STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${_}.png`;
+      }
+      function _() {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: ["useGetReactionConfiguration"],
+          queryFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_elanguage((0, _.sfN)(_._.LANGUAGE));
+            let _ = await _._.GetReactionConfig(_, _);
+            return __webpack_require__.GetEResult() == _._
+              ? __webpack_require__.Body().toObject().reactions
+              : (console.error(
+                  `Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${__webpack_require__.GetEResult()}`,
+                ),
+                null);
+          },
+          staleTime: 1 / 0,
+        });
+      }
+      function _(_) {
+        const _ = _();
+        return (0, _.useMemo)(
+          () => _?.data?.find((_) => _.reactionid === _),
+          [_, _],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        const { className: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: (0, _._)(_, _.UnstyledButton),
+          ..._,
+        });
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31603,6 +36826,525 @@
           }, [_]);
         (0, _._)(window, "blur", _), (0, _._)(window, "focus", _);
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 8e3;
+      var _;
+      function _(_) {
+        switch (_) {
+          case _.Gold:
+          case _.LNY2020:
+            return `hsl(${51 + -16 * Math.random()}, 93%, 54%)`;
+          default:
+            return `hsl(${360 * Math.random()}, 100%, 40%)`;
+        }
+      }
+      function _(_) {
+        return _ == _.LNY2020
+          ? `hue-rotate(${360 + ((0, _._))(-30, 10)}deg)`
+          : "";
+      }
+      !(function (_) {
+        (_[(_.Default = 0)] = "Default"),
+          (_[(_.Gold = 1)] = "Gold"),
+          (_[(_.LNY2020 = 2)] = "LNY2020");
+      })(_ || (_ = {}));
+      const _ = (_, _) => {
+          const { anim: _ } = (0, _._)({
+              anim: 1,
+              from: {
+                anim: 0,
+              },
+              config: {
+                duration: _,
+              },
+            }),
+            _ = (0, _.useMemo)(() => {
+              let _ = (function (_, _) {
+                  const _ = [];
+                  if (!_) return _;
+                  const { width: _, height: _ } = _;
+                  for (let _ = 0; _ < 200; _++) {
+                    const _ = Math.random(),
+                      _ = Math.random() * _,
+                      _ = Math.random() * _,
+                      _ = 4 * (Math.random() - 0.5) * Math._ * 20,
+                      _ = Math.random() + 0.5,
+                      _ = [
+                        Math.random() * _ - _ - 20,
+                        _ + 20 + Math.random() * _ * _,
+                      ],
+                      _ = _ * (_ <= 1e3 ? 1 : _ / 1e3) * (_ == _.Gold ? 2 : 1),
+                      _ = (Math.random() - 0.5) * _,
+                      _ = (Math.random() - 0.5) * _,
+                      _ = [_, _ + _],
+                      _ = _(_),
+                      _ = _(_);
+                    __webpack_require__.push({
+                      rotationCoefficient: _,
+                      rotationRatioY: _,
+                      rotationRatioX: _,
+                      rotationRatioZ: _,
+                      yRange: _,
+                      xRange: _,
+                      scale: _,
+                      colorHue: _,
+                      filter: _,
+                    });
+                  }
+                  return _;
+                })(_, _),
+                _ = _.map((_) =>
+                  (function (_, _) {
+                    _.Default;
+                    const {
+                      rotationCoefficient: _,
+                      rotationRatioY: _,
+                      rotationRatioX: _,
+                      rotationRatioZ: _,
+                      yRange: _,
+                      xRange: _,
+                      scale: _,
+                      colorHue: _,
+                      filter: _,
+                    } = _;
+                    return {
+                      backgroundColor: _,
+                      fill: _,
+                      filter: _,
+                      flRandom: 0,
+                      transform: _.interpolate((_) => {
+                        const _ = _ * _ * _,
+                          _ = _ * _ * _,
+                          _ = _ * _ * _,
+                          _ = _ * (_[1] - _[0]) + _[0];
+                        return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateY(${_}rad) rotateX(${_}rad) rotateZ(${_}rad) scale(${_})`;
+                      }),
+                    };
+                  })(_, _),
+                ),
+                _ = _.map((_) =>
+                  (function (_, _) {
+                    if (Math.random() > 0.1) return null;
+                    const {
+                      rotationCoefficient: _,
+                      rotationRatioZ: _,
+                      yRange: _,
+                      xRange: _,
+                      scale: _,
+                      colorHue: _,
+                      filter: _,
+                    } = _;
+                    return {
+                      backgroundColor: void 0,
+                      fill: _,
+                      filter: _,
+                      flRandom: Math.random(),
+                      transform: _.interpolate((_) => {
+                        const _ = ((_ * _) / 4) * _,
+                          _ = _ * (_[1] - _[0]) + _[0];
+                        return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateZ(${_}rad) scale(${_})`;
+                      }),
+                    };
+                  })(_, _),
+                ).filter((_) => !!_);
+              return {
+                rgParticleStyles: _,
+                rgStreamerStyles: _,
+              };
+            }, [_, _, _]);
+          return _;
+        },
+        _ = {
+          position: "absolute",
+          left: "50%",
+          top: 0,
+        },
+        _ = {
+          ..._,
+          width: 10,
+          height: 5,
+          borderWidth: 1,
+          borderColor: "black",
+        },
+        _ = ({ eType: _ }) => {
+          _.Gold, _.LNY2020;
+          const [_, _] = (function () {
+            const [_, _] = (0, _.useState)(null),
+              _ = (0, _.useCallback)((_) => {
+                _ &&
+                  "function" == typeof _.getBoundingClientRect &&
+                  _(_.getBoundingClientRect());
+              }, []);
+            return [_, _];
+          })();
+          let _,
+            { rgParticleStyles: _, rgStreamerStyles: _ } = _(_, _);
+          switch (_) {
+            case _.Gold:
+              _ = _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    style: _,
+                  },
+                  _,
+                ),
+              );
+              break;
+            case _.LNY2020:
+              _ = _.map((_, _) =>
+                _ % 2
+                  ? (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    )
+                  : (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    ),
+              );
+              break;
+            case _.Default:
+              _ = _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    style: _,
+                  },
+                  _,
+                ),
+              );
+          }
+          return (0, _.jsxs)("div", {
+            style: {
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              overflow: "hidden",
+            },
+            ref: _,
+            children: [
+              _,
+              _.map((_, _) =>
+                _.flRandom > 0.5
+                  ? (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    )
+                  : (0, _.jsx)(
+                      _,
+                      {
+                        style: _,
+                      },
+                      _,
+                    ),
+              ),
+            ],
+          });
+        },
+        _ = ({ style: _ }) =>
+          (0, _.jsx)(_._.div, {
+            style: {
+              ..._,
+              ..._,
+            },
+          }),
+        _ = ({ style: _ }) => {
+          const [_] = (0, _.useState)(Math.floor(Math.random() * _.length)),
+            _ = _[_];
+          return (0, _.jsx)(_, {
+            style: {
+              ..._,
+              ..._,
+              backgroundColor: void 0,
+            },
+          });
+        },
+        _ = ({ style: _ }) => {
+          const [_] = (0, _.useState)(Math.floor(Math.random() * _.length)),
+            _ = _[_];
+          return (0, _.jsx)(_, {
+            style: {
+              ..._,
+              ..._,
+              backgroundColor: void 0,
+            },
+          });
+        },
+        _ = ({ style: _ }) =>
+          (0, _.jsx)(_._.svg, {
+            viewBox: "0 0 80 620",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: {
+              width: 10,
+              height: 70,
+              ..._,
+            },
+            children: (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M0.53418 0.446363C4.80788 7.96949 8.99436 15.2008 13.0073 22.1324C35.0383 60.1862 51.8397 89.2071 49.1318 107.895C48.8475 101.617 47.1164 95.1506 43.6182 89.4997C22.9652 56.1375 -2.34054 7.06674 0.53418 0.446363ZM56.8207 188.805C55.1885 180.279 48.7591 170.011 41.3806 161.521C37.204 156.715 9.25983 141.889 7.31883 141.711L7.31474 141.711L7.31468 141.71L7.31452 141.71L7.11268 139.174L6.5244 131.791L6.5251 131.791L6.52505 131.79L6.52672 131.791C34.8022 129.659 47.1567 121.526 49.1318 107.895C49.6795 119.989 44.859 131.385 36.9599 134.917C33.2606 136.571 29.1329 137.843 25.1609 138.813C32.3599 142.599 44.0294 149.927 51.5956 160.751C60.8324 173.966 58.2537 184.901 56.8207 188.805ZM14.1541 214.387C28.3318 211.43 49.5183 206.914 54.7559 200.428C57.1974 197.404 57.6912 193.352 56.8207 188.805C56.4544 189.804 56.163 190.342 56.163 190.342C50.7646 194.114 26.0806 200.624 11.3908 204.497L11.3906 204.497L11.3904 204.497C7.40758 205.548 4.15949 206.404 2.22967 206.96L2.67009 212.483L3.21786 219.36C12.4021 224.467 20.8538 228.732 28.2879 232.483C70.3706 253.717 79.8458 258.498 5.02032 306.544C5.02047 306.546 5.02063 306.548 5.02078 306.55C5.01989 306.548 5.019 306.547 5.01812 306.545C5.24371 309.369 5.53845 312.547 5.79092 315.269C5.89859 316.43 5.99858 317.508 6.08223 318.44C6.15188 319.464 6.19564 320.436 6.20554 321.424C6.20464 321.331 6.23688 321.223 6.30064 321.101C6.31949 321.398 6.32799 321.609 6.32408 321.719C6.27561 321.616 6.23528 321.518 6.20333 321.425C6.28038 321.817 6.31788 321.895 6.32408 321.719C7.33553 323.874 11.894 328.285 17.8731 334.069C41.6329 357.056 87.8264 401.748 23.0228 412.886C23.5764 419.833 23.1631 419.992 23.1631 419.992C23.1631 419.992 24.3205 419.752 26.2506 419.305C34.1052 423.989 55.3095 438.589 58.8169 442.625C66.1955 451.115 72.6248 461.382 74.2571 469.909C73.8908 470.907 73.5993 471.446 73.5993 471.446C68.4367 475.053 42.2327 481.635 25.7172 485.783L25.7152 485.783L25.7147 485.784L25.7135 485.784L25.7028 485.787C20.6602 487.053 16.5222 488.093 14.1645 488.751L13.6222 488.439L13.6585 488.894L13.653 488.896L13.6602 488.916L14.4124 498.36C47.1778 516.58 73.923 535.597 77.6114 557.121C77.1891 558.457 76.6366 559.776 75.9628 561.084C62.5946 587.039 41.1874 608.612 24.1016 619.88C66.6744 596.331 80.8095 575.784 77.6114 557.121C81.823 543.801 73.0945 528.757 42.6319 505.104L26.8056 496.013C27.3301 495.908 27.8664 495.802 28.4133 495.693L28.4153 495.693C43.5756 492.685 66.9267 488.052 72.1923 481.531C74.6338 478.508 75.1275 474.456 74.2571 469.909C75.69 466.004 78.2687 455.069 69.032 441.855C57.4339 425.262 36.1944 416.886 36.1944 416.886L35.6563 416.927C41.635 415.285 48.7178 413.074 54.4334 410.519C66.4332 405.154 68.2307 384.374 57.9941 367.838C51.515 357.372 43.7231 350.194 35.4751 342.596C27.6489 335.386 19.4122 327.798 11.4967 316.664C12.7089 315.779 14.0928 314.791 15.6091 313.709C40.2963 296.086 100.082 253.407 25.4758 221.439L14.1541 214.387Z",
+              fill: _.fill,
+            }),
+          }),
+        _ = ({ style: _ }) =>
+          (0, _.jsx)(_._.svg, {
+            viewBox: "0 0 203 295",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: {
+              width: 10,
+              height: 20,
+              ..._,
+            },
+            children: (0, _.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M104.427 22.6009L104.428 22.6013C125.146 59.4015 140.687 87.0059 133.282 102.839C134.662 95.3303 133.62 86.4659 129.246 79.1843C112.124 50.6796 91.1453 8.75528 93.5285 3.10091C97.2525 9.85693 100.914 16.3611 104.427 22.6009ZM142.726 166.38C141.373 159.096 136.043 150.323 129.926 143.069C127.078 139.691 110.154 127.651 103.342 123.396C101.494 123.638 100.371 123.725 100.371 123.725C100.371 123.725 100.713 123.589 100.254 117.655C119.247 116.187 129.407 111.125 133.282 102.839C131.985 109.898 128.547 115.759 123.726 117.978C120.124 119.637 116.182 120.838 112.579 121.699C116.941 123.721 130.418 130.653 138.395 142.414C146.052 153.705 143.914 163.045 142.726 166.38ZM103.389 188.664C103.824 188.575 104.268 188.484 104.721 188.392L104.722 188.392C117.291 185.827 136.649 181.876 141.015 176.307C143.039 173.725 143.448 170.264 142.726 166.38C142.423 167.232 142.181 167.693 142.181 167.693C137.901 170.772 116.177 176.387 102.486 179.926C98.3006 181.007 94.8659 181.895 92.9093 182.457L92.4596 182.191L92.4896 182.579C92.4878 182.58 92.486 182.58 92.4842 182.581L92.4914 182.602L93.1147 190.665C120.278 206.239 142.45 222.491 145.508 240.879C145.158 242.02 144.7 243.146 144.141 244.263C133.059 266.43 115.312 284.852 101.148 294.472C136.441 274.369 148.16 256.821 145.508 240.879C149 229.501 141.764 216.649 116.509 196.435L103.389 188.664Z",
+              fill: _.fill,
+            }),
+          }),
+        _ = [
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 102",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 5,
+                height: 10,
+                ..._,
+              },
+              children: (0, _.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M45.8382 77.0734L24 0L2.16179 77.0734C0.773631 79.3013 0 81.7786 0 84.3885C0 84.4894 0.00115761 84.5902 0.00346361 84.6908L0 84.703H0.00374963C0.23239 94.2845 10.8883 102 24 102C37.1117 102 47.7676 94.2845 47.9963 84.703H48L47.9965 84.6908C47.9988 84.5902 48 84.4894 48 84.3885C48 81.7786 47.2264 79.3013 45.8382 77.0734Z",
+                fill: "#F7D51E",
+              }),
+            }),
+          ({ style: _ }) =>
+            (0, _.jsxs)(_._.svg, {
+              viewBox: "0 0 50 39",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 7,
+                ..._,
+              },
+              children: [
+                (0, _.jsx)("path", {
+                  _: "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
+                  fill: "#C4C4C4",
+                }),
+                (0, _.jsx)("path", {
+                  _: "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
+                  fill: _.fill,
+                }),
+              ],
+            }),
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 68 69",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 10,
+                ..._,
+              },
+              children: (0, _.jsx)("rect", {
+                _: "34.6389",
+                width: "48",
+                height: "48",
+                transform: "rotate(-45 0 34.6389)",
+                fill: _.fill,
+              }),
+            }),
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 48",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 10,
+                ..._,
+              },
+              children: (0, _.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M24 0L0 24L24 47.9999L48 24L24 0ZM23.7089 8.48533L8.48527 23.7089L23.7089 38.9325L38.9324 23.7089L23.7089 8.48533Z",
+                fill: _.fill,
+              }),
+            }),
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 30",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
+              },
+              children: (0, _.jsx)("ellipse", {
+                _: "24",
+                _: "15",
+                _: "24",
+                _: "15",
+                fill: _.fill,
+              }),
+            }),
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 30",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
+              },
+              children: (0, _.jsx)("ellipse", {
+                _: "24",
+                _: "15",
+                _: "24",
+                _: "15",
+                fill: _.fill,
+              }),
+            }),
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 30",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
+              },
+              children: (0, _.jsx)("ellipse", {
+                _: "24",
+                _: "15",
+                _: "24",
+                _: "15",
+                fill: _.fill,
+              }),
+            }),
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              viewBox: "0 0 48 39",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 8,
+                ..._,
+              },
+              children: (0, _.jsx)("path", {
+                _: "M33.8287 29.6914L24.9705 21.1201C23.199 24.5487 23.4612 24.5487 21.4282 27.9773C19.3952 31.4058 13.4557 29.6914 12.57 27.9773C7.25553 22.8344 10.7985 17.6914 12.57 15.9773C19.656 5.69155 36.5247 4.54869 48 5.69155C47.4095 4.54865 45.5199 1.92 42.6855 0.548571C39.1425 -1.16571 1.94169 0.548571 0.170191 14.2629C-1.60131 27.9771 10.7992 38.2629 21.4282 38.2629C29.9314 38.2629 33.2382 32.5486 33.8287 29.6914Z",
+                fill: _.fill,
+              }),
+            }),
+          ({ style: _ }) =>
+            (0, _.jsx)(_._.svg, {
+              width: "48",
+              height: "35",
+              viewBox: "0 0 48 35",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              style: {
+                width: 10,
+                height: 7,
+                ..._,
+              },
+              children: (0, _.jsx)("path", {
+                _: "M48 0H0L24 35L48 0Z",
+                fill: _.fill,
+              }),
+            }),
+        ],
+        _ = [
+          ({ style: _ }) =>
+            (0, _.jsxs)(_._.svg, {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 54 47.18",
+              style: {
+                width: 28,
+                height: 28,
+                ..._,
+              },
+              children: [
+                (0, _.jsx)("polygon", {
+                  fill: "#60000e",
+                  points: "10.02 14.06 10.02 14.06 10.02 14.06 10.02 14.06",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#f93838",
+                  _: "M54,9.53A9.52,9.52,0,0,0,37.74,2.79a10.82,10.82,0,0,0-2.25,3.54,21.52,21.52,0,0,0-1.19,4.08A16.55,16.55,0,0,0,27,8.73h-.24a16.38,16.38,0,0,0-7,1.69,22.41,22.41,0,0,0-1.2-4.09,10.82,10.82,0,0,0-2.25-3.54A9.52,9.52,0,1,0,2.79,16.26h0a10.82,10.82,0,0,0,3.54,2.25,23.87,23.87,0,0,0,5,1.36,16.34,16.34,0,0,0-.94,5.48h0v0a16.57,16.57,0,0,0,4.92,11.81A7.36,7.36,0,0,1,17.05,40a10.5,10.5,0,0,0,10,7.15,10.38,10.38,0,0,0,6.17-2,10.57,10.57,0,0,0,3.77-5.11,7.48,7.48,0,0,1,1.79-2.89,16.66,16.66,0,0,0,4-17.3l.65-.12a22.44,22.44,0,0,0,4.31-1.24,10.82,10.82,0,0,0,3.54-2.25L50.9,16l.31.31A9.5,9.5,0,0,0,54,9.53ZM32.11,21.28a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.4,8.4,0,0,0-2.59-.39,8.59,8.59,0,0,0-2.43.34h0a.44.44,0,1,1-.26-.84Zm-7.88,8.64a9.27,9.27,0,0,1,2.68-.38,9.06,9.06,0,0,1,2.87.44.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27,8.35,8.35,0,0,0-2.59-.39,8.46,8.46,0,0,0-2.42.34h0a.44.44,0,1,1-.26-.84ZM24.31,33a.45.45,0,0,1,.54-.32l2.16.55,2.14-.55a.45.45,0,0,1,.54.32.44.44,0,0,1-.32.53l-2.25.58a.41.41,0,0,1-.22,0l-2.27-.58h0A.44.44,0,0,1,24.31,33ZM21.9,21.34a.44.44,0,0,1,.28.56.44.44,0,0,1-.56.27A8.35,8.35,0,0,0,19,21.78a8.46,8.46,0,0,0-2.42.34h0a.44.44,0,0,1-.26-.84A9.27,9.27,0,0,1,19,20.9,9.06,9.06,0,0,1,21.9,21.34Zm-1.6,8.08h0v0a.41.41,0,0,1,0-.1c0-.08-.06-.19-.12-.33a4.39,4.39,0,0,0-.47-.95,2.16,2.16,0,0,0-.43-.5,1.11,1.11,0,0,0-.24-.16.7.7,0,0,0-.25-.05.88.88,0,0,0-.29.05,1.82,1.82,0,0,0-.4.24,5,5,0,0,0-1.16,1.3.66.66,0,0,1-.92.17.65.65,0,0,1-.17-.91,7.44,7.44,0,0,1,1.1-1.32A3.45,3.45,0,0,1,18,26.13a2.21,2.21,0,0,1,.75-.14,2,2,0,0,1,.87.21,2.37,2.37,0,0,1,.66.49,4.41,4.41,0,0,1,.84,1.21,7.08,7.08,0,0,1,.3.72c.1.27.14.45.15.46h0a.67.67,0,0,1-.47.81A.66.66,0,0,1,20.3,29.42Zm12.19,8.86a4.18,4.18,0,0,1-.92.52,7.57,7.57,0,0,1-1.11,2.55A4.85,4.85,0,0,1,28.58,43a3.56,3.56,0,0,1-3.16,0,4.71,4.71,0,0,1-1.33-1,7.14,7.14,0,0,1-1.66-3.24,4.18,4.18,0,0,1-.92-.52.44.44,0,0,1-.1-.61.45.45,0,0,1,.62-.1,2.89,2.89,0,0,0,1.76.61,3,3,0,0,0,1.58-.47,4.28,4.28,0,0,0,1.26-1.31.43.43,0,0,1,.74,0,4.28,4.28,0,0,0,1.26,1.31,3,3,0,0,0,1.58.47A2.89,2.89,0,0,0,32,37.57h0a.45.45,0,0,1,.62.1A.44.44,0,0,1,32.49,38.28ZM38,29.07a.66.66,0,0,1-.92-.17,6.25,6.25,0,0,0-.9-1.09,2.25,2.25,0,0,0-.66-.45.88.88,0,0,0-.29-.05.58.58,0,0,0-.28.07,1,1,0,0,0-.31.23,3.29,3.29,0,0,0-.58.84c-.1.21-.19.42-.25.59s-.12.37-.13.38h0a.66.66,0,0,1-.8.47.67.67,0,0,1-.47-.81s.07-.25.2-.58a6.91,6.91,0,0,1,.59-1.2,3.66,3.66,0,0,1,.69-.79,2.3,2.3,0,0,1,.56-.35,1.82,1.82,0,0,1,.78-.17,2.21,2.21,0,0,1,.75.14,3,3,0,0,1,.73.41,6.6,6.6,0,0,1,1.46,1.62A.65.65,0,0,1,38,29.07Z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#f93838",
+                  _: "M27,40.35c1.12,0,1.55-.37,1.89-1.53a4.17,4.17,0,0,1-.73-.37A5,5,0,0,1,27,37.39a5,5,0,0,1-1.16,1.06,4.17,4.17,0,0,1-.73.37C25.45,40,25.88,40.35,27,40.35Z",
+                }),
+              ],
+            }),
+          ({ style: _ }) =>
+            (0, _.jsxs)(_._.svg, {
+              version: "1.1",
+              xmlns: "http://www.w3.org/2000/svg",
+              _: "0px",
+              _: "0px",
+              viewBox: "0 0 14.5 22",
+              style: {
+                width: 28,
+                height: 28,
+                ..._,
+              },
+              children: [
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M1.6,10.1c0,0-0.1,0-0.4-0.1C1,10,0.8,9.9,0.8,9.9c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,9c0.1-0.1,0.2-0.3,0.5-0.6C1.8,8.1,2,7.8,2.2,7.5c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2C2.6,7,2.7,6.8,2.8,6.5c0-0.1,0.1-0.2,0.1-0.3C3,6.1,3,6,3,5.9c0-0.2-0.1-0.4-0.2-0.5C2.6,5.3,2.4,5.3,2.1,5.3c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2V3.5l0.5-0.2C1.6,3.2,2,3.1,2.5,3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2C6.1,6.8,5.7,7.2,5.1,7.6h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8V9v0.3c0,0.2,0,0.4-0.1,0.5C6.6,10,6.5,10,6.2,10c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,10.1,1.6,10.1,1.6,10.1z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M9.8,10.3c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1C8.1,9.8,8,9.8,8,9.7L7.8,9.6c-0.1,0-0.1-0.1-0.2-0.1C7.4,9.3,7.2,9,7.1,8.6C7,8.3,6.9,8,6.9,7.6c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1C8.5,3.1,8.8,3,9.1,2.9c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4C14.2,8.6,14,9,13.7,9.3c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,10.3,9.9,10.3,9.8,10.3z M11.2,8.3c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3c-0.1-0.1-0.1-0.1-0.3-0.1c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,6.2C9.9,6.4,9.9,6.6,9.9,6.8c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,8.6,11.1,8.5,11.2,8.3z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M1.6,17.5c0,0-0.1,0-0.4-0.1c-0.2,0-0.4-0.1-0.4-0.1c-0.1,0-0.2-0.1-0.2-0.2c0-0.2,0.1-0.4,0.3-0.6v0L1,16.4c0.1-0.1,0.2-0.3,0.5-0.6c0.2-0.2,0.4-0.5,0.7-0.9c0-0.1,0.1-0.1,0.1-0.2s0.1-0.1,0.1-0.2c0.1-0.1,0.2-0.3,0.3-0.6c0-0.1,0.1-0.2,0.1-0.3C3,13.5,3,13.4,3,13.3c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.4-0.1-0.7-0.1c-0.2,0-0.4,0-0.6,0.1c-0.1,0-0.4,0.1-0.7,0.3c0,0,0,0,0,0c0,0,0-0.1,0-0.1c0-0.2,0-0.4-0.1-0.8l0-0.6l0-0.3l0-0.2v-0.1l0.5-0.2c0.4-0.1,0.9-0.2,1.3-0.3c0.5-0.1,0.9-0.1,1.4-0.1c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.7,0.2,0.9,0.4c0.6,0.4,0.9,1,0.9,1.8c0,0.4-0.1,0.8-0.4,1.2c-0.3,0.4-0.7,0.8-1.3,1.2h0.5h0.5c0.2,0,0.4,0,0.5,0c0.2,0.1,0.3,0.1,0.3,0.3c0,0.2,0,0.5,0,0.8v0.3v0.3c0,0.2,0,0.4-0.1,0.5c-0.1,0.1-0.3,0.2-0.5,0.2c0,0-0.1,0-0.2,0c-0.1,0-0.4,0-0.9,0H4H3.6H3.1H2.6C1.9,17.5,1.6,17.5,1.6,17.5z",
+                }),
+                (0, _.jsx)("path", {
+                  fill: "#fc1010",
+                  _: "M9.8,17.7c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1L7.8,17c-0.1,0-0.1-0.1-0.2-0.1c-0.2-0.2-0.4-0.5-0.5-0.9C7,15.7,6.9,15.4,6.9,15c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0.2-0.1,0.5-0.2,0.8-0.3c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4c-0.1,0.5-0.3,0.9-0.7,1.2c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,17.7,9.9,17.7,9.8,17.7z M11.2,15.7c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3C10.9,12,10.8,12,10.7,12c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,13.6c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,16,11.1,15.9,11.2,15.7z",
+                }),
+              ],
+            }),
+        ];
     },
   },
 ]);

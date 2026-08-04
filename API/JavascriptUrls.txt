@@ -401,9 +401,17 @@ ${COMMUNITY_BASE_URL}search/users/
 ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/ban
 ${COMMUNITY_BASE_URL}sharedfiles/banupvoters
+${COMMUNITY_BASE_URL}sharedfiles/edititem/${appid}/11/
+${COMMUNITY_BASE_URL}sharedfiles/edititem/?appid=${}&filetype=${}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${published_file_id}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/changelog/?id=${}${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/managechildren/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/managepreviews/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/merchartwork/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/stats/?id=${}
 ${COMMUNITY_BASE_URL}sharedfiles/itemsetvisibility
 ${COMMUNITY_BASE_URL}sharedfiles/markassuspicious
 ${COMMUNITY_BASE_URL}sharedfiles/moderationqueueview/?appid=${appid}
@@ -427,11 +435,11 @@ ${COMMUNITY_BASE_URL}workshop/about/?appid=${appid}
 ${COMMUNITY_BASE_URL}workshop/browse/?appid=${appid}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}workshop/discussions/?appid=${appid}
 ${COMMUNITY_BASE_URL}workshop/editcollection/?appid=${appid}
-${COMMUNITY_BASE_URL}workshop/edititem/${appid}/11/
 ${COMMUNITY_CDN_ASSET_URL}${imgHeadshot}
 ${COMMUNITY_CDN_ASSET_URL}${screenshot}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/${}/${}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/96px/${}.png
+${COMMUNITY_CDN_ASSET_URL}home/daily_deal_example.jpg
 ${COMMUNITY_CDN_ASSET_URL}prettify/prettify.js
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/96px/flake_${}.png
 ${COMMUNITY_CDN_URL}
@@ -1333,16 +1341,12 @@ ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
-${STORE_BASE_URL}/ajaxappreviews/${}?${}
 ${STORE_BASE_URL}/curator/${}/
 ${STORE_BASE_URL}/curator/${}/admin/ajaxdeletecreatorhomeevent
 ${STORE_BASE_URL}/curator/${}/admin/ajaxgetcreatorhomeevents
 ${STORE_BASE_URL}/curator/${}/admin/ajaxselectcreatorhome
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
-${STORE_BASE_URL}/userreviews/ajaxgetvotes/
-${STORE_BASE_URL}/userreviews/rate/${}
-${STORE_BASE_URL}/userreviews/votetag/${}
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
 ${STORE_BASE_URL}account
@@ -1381,6 +1385,7 @@ ${STORE_BASE_URL}actions/ajaxgetstoretags?origin=${origin}
 ${STORE_BASE_URL}actions/ajaxgetwatchvodtoken
 ${STORE_BASE_URL}actions/ajaxresolvepackages
 ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
+${STORE_BASE_URL}ajaxappreviews/${}?${}
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/addtowishlist
@@ -1690,6 +1695,9 @@ ${STORE_BASE_URL}twofactor/manage_action
 ${STORE_BASE_URL}twofactor/remove?step=promptdevice
 ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
+${STORE_BASE_URL}userreviews/ajaxgetvotes/
+${STORE_BASE_URL}userreviews/rate/${}
+${STORE_BASE_URL}userreviews/votetag/${}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist

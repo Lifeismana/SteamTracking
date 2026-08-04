@@ -8871,6 +8871,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   );
   padding-inline-end: 24px;
 }
+.personanameandstatus_richPresenceLabel_2Ri00.personanameandstatus_dropPadding_3tEPY {
+  padding-inline-end: 0px;
+}
 .BasicUI .personanameandstatus_richPresenceLabel_2Ri00 {
   display: block;
   text-overflow: ellipsis;
@@ -41936,6 +41939,12 @@ body.in_global_drag .title-area {
 }
 #dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb:hover {
   background-color: rgba(180, 192, 201, 0.8);
+}
+div:focus,
+a:focus,
+span:focus,
+button:focus {
+  outline: none;
 }
 @keyframes BackgroundAnimation {
   from {

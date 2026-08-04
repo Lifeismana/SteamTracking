@@ -992,21 +992,20 @@
                 }
                 if ("right" === _) {
                   const _ = _ ? _.left : _.right;
-                  _ = document.documentElement.clientWidth - (_ + _.width);
+                  _ = document.body.clientWidth - (_ + _.width);
                 }
                 void 0 === _ &&
                   (_ = _
                     ? _.right - _.width
-                    : document.documentElement.clientWidth -
-                      (_.left + _.width)),
+                    : document.body.clientWidth - (_.left + _.width)),
                   (_ = Math.min(_, 0));
               }
               "left" === _
                 ? _
                   ? ((_.current.style.left = "unset"),
-                    (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                    (_.current.style.right = `${document.body.clientWidth - _.right + _}px`))
                   : ((_.current.style.left = "unset"),
-                    (_.current.style.right = `${document.documentElement.clientWidth - _.left + _}px`))
+                    (_.current.style.right = `${document.body.clientWidth - _.left + _}px`))
                 : "right" === _
                   ? _
                     ? ((_.current.style.left = `${_.left + _}px`),
@@ -1016,7 +1015,7 @@
                   : void 0 === _ &&
                     (_
                       ? ((_.current.style.left = "unset"),
-                        (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                        (_.current.style.right = `${document.body.clientWidth - _.right + _}px`))
                       : ((_.current.style.left = `${_.left + _}px`),
                         (_.current.style.right = "unset")));
             }

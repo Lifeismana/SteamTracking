@@ -1000,104 +1000,6 @@
       (_.keys = () => Object.keys(_)), (_._ = 95386), (module.exports = _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      var _ = {
-        "./shared_arabic.json": [10361, 3710],
-        "./shared_brazilian.json": [16476, 6562],
-        "./shared_bulgarian.json": [9854, 1449],
-        "./shared_czech.json": [23296, 7591],
-        "./shared_danish.json": [38356, 6523],
-        "./shared_dutch.json": [54401, 5110],
-        "./shared_english.json": [11031, 9875],
-        "./shared_finnish.json": [27688, 6031],
-        "./shared_french.json": [42589, 5018],
-        "./shared_german.json": [41359, 6208],
-        "./shared_greek.json": [54175, 9712],
-        "./shared_hungarian.json": [42330, 6165],
-        "./shared_indonesian.json": [51229, 8306],
-        "./shared_italian.json": [12711, 1531],
-        "./shared_japanese.json": [68010, 1973],
-        "./shared_koreana.json": [40764, 7539],
-        "./shared_latam.json": [30684, 2435],
-        "./shared_malay.json": [8515, 6332],
-        "./shared_norwegian.json": [25319, 2320],
-        "./shared_polish.json": [92736, 8967],
-        "./shared_portuguese.json": [83248, 6239],
-        "./shared_romanian.json": [54122, 2749],
-        "./shared_russian.json": [69998, 8025],
-        "./shared_sc_schinese.json": [40020, 9027],
-        "./shared_schinese.json": [99965, 7786],
-        "./shared_spanish.json": [29431, 2632],
-        "./shared_swedish.json": [67046, 1225],
-        "./shared_tchinese.json": [40662, 5241],
-        "./shared_thai.json": [81047, 976],
-        "./shared_turkish.json": [75319, 9152],
-        "./shared_ukrainian.json": [93301, 2954],
-        "./shared_vietnamese.json": [92378, 6149],
-      };
-      function _(_) {
-        if (!__webpack_require__._(_, _))
-          return Promise.resolve().then(() => {
-            var _ = new Error("Cannot find module '" + _ + "'");
-            throw ((_.code = "MODULE_NOT_FOUND"), _);
-          });
-        var _ = _[_],
-          _ = _[0];
-        return __webpack_require__
-          ._(_[1])
-          .then(() => __webpack_require__._(_, 19));
-      }
-      (_.keys = () => Object.keys(_)), (_._ = 14919), (module.exports = _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      var _ = {
-        "./shared_arabic.json": [10361, 3710],
-        "./shared_brazilian.json": [16476, 6562],
-        "./shared_bulgarian.json": [9854, 1449],
-        "./shared_czech.json": [23296, 7591],
-        "./shared_danish.json": [38356, 6523],
-        "./shared_dutch.json": [54401, 5110],
-        "./shared_english.json": [11031, 9875],
-        "./shared_finnish.json": [27688, 6031],
-        "./shared_french.json": [42589, 5018],
-        "./shared_german.json": [41359, 6208],
-        "./shared_greek.json": [54175, 9712],
-        "./shared_hungarian.json": [42330, 6165],
-        "./shared_indonesian.json": [51229, 8306],
-        "./shared_italian.json": [12711, 1531],
-        "./shared_japanese.json": [68010, 1973],
-        "./shared_koreana.json": [40764, 7539],
-        "./shared_latam.json": [30684, 2435],
-        "./shared_malay.json": [8515, 6332],
-        "./shared_norwegian.json": [25319, 2320],
-        "./shared_polish.json": [92736, 8967],
-        "./shared_portuguese.json": [83248, 6239],
-        "./shared_romanian.json": [54122, 2749],
-        "./shared_russian.json": [69998, 8025],
-        "./shared_sc_schinese.json": [40020, 9027],
-        "./shared_schinese.json": [99965, 7786],
-        "./shared_spanish.json": [29431, 2632],
-        "./shared_swedish.json": [67046, 1225],
-        "./shared_tchinese.json": [40662, 5241],
-        "./shared_thai.json": [81047, 976],
-        "./shared_turkish.json": [75319, 9152],
-        "./shared_ukrainian.json": [93301, 2954],
-        "./shared_vietnamese.json": [92378, 6149],
-      };
-      function _(_) {
-        if (!__webpack_require__._(_, _))
-          return Promise.resolve().then(() => {
-            var _ = new Error("Cannot find module '" + _ + "'");
-            throw ((_.code = "MODULE_NOT_FOUND"), _);
-          });
-        var _ = _[_],
-          _ = _[0];
-        return __webpack_require__
-          ._(_[1])
-          .then(() => __webpack_require__._(_, 19));
-      }
-      (_.keys = () => Object.keys(_)), (_._ = 68042), (module.exports = _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -2988,7 +2890,8 @@
           _
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       (0, _._)({
         enforceActions: "never",
       }),
@@ -3001,8 +2904,7 @@
             fnGetReportTags: _,
           }),
             await (async function (_) {
-              const [_, _, _, _] = await Promise.all([
-                  __webpack_require__("chunkid")(`./shared_${_}.json`),
+              const [_, _, _] = await Promise.all([
                   __webpack_require__("chunkid")(`./marketing_${_}.json`),
                   __webpack_require__("chunkid")(`./sales_${_}.json`).then(
                     (_) => _.default,
@@ -3015,20 +2917,20 @@
                 },
                 _ = _._.GetLanguageFallback(_);
               if (_ !== _) {
-                const [_, _, _, _] = await Promise.all([
-                    __webpack_require__("chunkid")(`./shared_${_}.json`),
+                const [_, _, _] = await Promise.all([
                     __webpack_require__("chunkid")(`./marketing_${_}.json`),
                     __webpack_require__("chunkid")(`./sales_${_}.json`),
                     __webpack_require__("chunkid")(`./main_${_}.json`),
+                    _._.Ready(),
                   ]),
                   _ = {
                     ..._.default,
                   };
-                _._.InitFromObjects(_, _, _.default, _.default),
+                _._.InitFromObjects(_, _),
                   _._.AddTokens(_, _),
                   _._.AddTokens(_, _);
               } else
-                _._.InitFromObjects(_, null, _.default, null),
+                _._.InitFromObjects(_, null),
                   _._.AddTokens(_, null),
                   _._.AddTokens(_, null);
             })(_._.LANGUAGE),
@@ -3338,7 +3240,7 @@
         _ = 5,
         _ = 6,
         _ = 7;
-      var _;
+      var _, _, _;
       !(function (_) {
         (_[(_.kPFIFlag_MicroTransactionFile = 1)] =
           "kPFIFlag_MicroTransactionFile"),
@@ -3387,7 +3289,75 @@
             "kPFIFlag_ManagedContentDescriptors"),
           (_[(_.kPFIFlag_HasAuthorSnapshots = 268435456)] =
             "kPFIFlag_HasAuthorSnapshots");
-      })(_ || (_ = {}));
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EPFSplitType_MicrotransactionItem = 0)] =
+            "k_EPFSplitType_MicrotransactionItem"),
+            (_[(_.k_EPFSplitType_WorkshopItem = 1)] =
+              "k_EPFSplitType_WorkshopItem"),
+            (_[(_.k_EPFSplitType_GreenlightItem = 2)] =
+              "k_EPFSplitType_GreenlightItem"),
+            (_[(_.k_EPFSplitType_SharedFile = 3)] =
+              "k_EPFSplitType_SharedFile");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EPFAuditAction_Banned = 1)] = "k_EPFAuditAction_Banned"),
+            (_[(_.k_EPFAuditAction_UnBanned = 2)] =
+              "k_EPFAuditAction_UnBanned"),
+            (_[(_.k_EPFAuditAction_AddedIncompatibleFlag = 3)] =
+              "k_EPFAuditAction_AddedIncompatibleFlag"),
+            (_[(_.k_EPFAuditAction_RemovedIncompatibleFlag = 4)] =
+              "k_EPFAuditAction_RemovedIncompatibleFlag"),
+            (_[(_.k_EPFAuditAction_AddedForceInappropriateFlag = 5)] =
+              "k_EPFAuditAction_AddedForceInappropriateFlag"),
+            (_[(_.k_EPFAuditAction_RemovedForceInappropriateFlag = 6)] =
+              "k_EPFAuditAction_RemovedForceInappropriateFlag"),
+            (_[(_.k_EPFAuditAction_AddedForceAppropriateFlag = 7)] =
+              "k_EPFAuditAction_AddedForceAppropriateFlag"),
+            (_[(_.k_EPFAuditAction_RemovedForceAppropriateFlag = 8)] =
+              "k_EPFAuditAction_RemovedForceAppropriateFlag"),
+            (_[(_.k_EPFAuditAction_AddedAcceptedForUseFlag = 9)] =
+              "k_EPFAuditAction_AddedAcceptedForUseFlag"),
+            (_[(_.k_EPFAuditAction_RemovedAcceptedForUseFlag = 10)] =
+              "k_EPFAuditAction_RemovedAcceptedForUseFlag"),
+            (_[(_.k_EPFAuditAction_ClearedReports = 11)] =
+              "k_EPFAuditAction_ClearedReports"),
+            (_[(_.k_EPFAuditAction_RequireVerification = 12)] =
+              "k_EPFAuditAction_RequireVerification"),
+            (_[(_.k_EPFAuditAction_ResendVerificationEmail = 13)] =
+              "k_EPFAuditAction_ResendVerificationEmail"),
+            (_[(_.k_EPFAuditAction_SubmissionVerified = 14)] =
+              "k_EPFAuditAction_SubmissionVerified"),
+            (_[(_.k_EPFAuditAction_ApprovedByModerator = 15)] =
+              "k_EPFAuditAction_ApprovedByModerator"),
+            (_[(_.k_EPFAuditAction_RejectedByModerator = 16)] =
+              "k_EPFAuditAction_RejectedByModerator"),
+            (_[(_.k_EPFAuditAction_ApprovedForSteamChina = 17)] =
+              "k_EPFAuditAction_ApprovedForSteamChina"),
+            (_[(_.k_EPFAuditAction_RejectedForSteamChina = 18)] =
+              "k_EPFAuditAction_RejectedForSteamChina"),
+            (_[(_.k_EPFAuditAction_AddedIgnoreTextContentCheckFlag = 19)] =
+              "k_EPFAuditAction_AddedIgnoreTextContentCheckFlag"),
+            (_[(_.k_EPFAuditAction_RemovedIgnoreTextContentCheckFlag = 20)] =
+              "k_EPFAuditAction_RemovedIgnoreTextContentCheckFlag"),
+            (_[(_.k_EPFAuditAction_VoteBannedUsers = 21)] =
+              "k_EPFAuditAction_VoteBannedUsers"),
+            (_[(_.k_EPFAuditAction_ClearedVoteBannedUsers = 22)] =
+              "k_EPFAuditAction_ClearedVoteBannedUsers"),
+            (_[(_.k_EPFAuditAction_Deleted = 23)] = "k_EPFAuditAction_Deleted"),
+            (_[(_.k_EPFAuditAction_PermanentlyDeleted = 24)] =
+              "k_EPFAuditAction_PermanentlyDeleted"),
+            (_[(_.k_EPFAuditAction_AddedContentDescriptor = 25)] =
+              "k_EPFAuditAction_AddedContentDescriptor"),
+            (_[(_.k_EPFAuditAction_RemovedContentDescriptor = 26)] =
+              "k_EPFAuditAction_RemovedContentDescriptor"),
+            (_[(_.k_EPFAuditAction_AddedRestrictedCountry = 27)] =
+              "k_EPFAuditAction_AddedRestrictedCountry"),
+            (_[(_.k_EPFAuditAction_RemovedRestrictedCountry = 28)] =
+              "k_EPFAuditAction_RemovedRestrictedCountry"),
+            (_[(_.k_EPFAuditAction_TransferredOwnership = 29)] =
+              "k_EPFAuditAction_TransferredOwnership");
+        })(_ || (_ = {}));
       const _ = 0,
         _ = 1,
         _ = 2,
@@ -4014,6 +3984,15 @@
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
         })(_ || (_ = {}));
+      var _;
+      !(function (_) {
+        (_[(_.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
+          "k_ETwoFactorTokenSteamguardScheme_None"),
+          (_[(_.k_ETwoFactorTokenSteamguardScheme_Email = 1)] =
+            "k_ETwoFactorTokenSteamguardScheme_Email"),
+          (_[(_.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
+            "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -7001,8 +6980,8 @@
                   },
                   xinput_index: {
                     _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
                   },
                   is_wireless_steam_dongle: {
                     _: 6,
@@ -13879,7 +13858,8 @@
               return _;
             }));
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = new Map();
         const _ = (async function () {
@@ -13941,9 +13921,34 @@
             },
             LocalizePlural: (_, _, ..._) =>
               1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._),
+            GetAppTypeLocKey(_, _) {
+              switch (_) {
+                case _._._:
+                  return _ + "_Software";
+                case _._._:
+                  return _ + "_Video";
+                default:
+                  return _;
+              }
+            },
+            GetAppTypePluralLocKey(_, _) {
+              switch (_) {
+                case _._._:
+                  return _ + "_Software";
+                case _._._:
+                  return _ + "_Video";
+                default:
+                  return _;
+              }
+            },
             LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
             Ready: () => _,
             IsReady: () => _,
+            HasKey: (_) =>
+              _().languages.some((_) => {
+                const _ = _.get(_.strLanguage);
+                return !!_ && _.has(_);
+              }),
           }
         );
       }
@@ -28052,8 +28057,223 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.kernel_mode || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  kernel_mode: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  uninstall_completely: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  boot_protection: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  boot_protection_name: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  name: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  name_loc: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Anticheat";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Eula";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_AIGeneratedContentService";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.steam_award || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
+            _.Message.initialize(this, _, 0, -1, [1, 10], null);
         }
         static sm_m;
         static sm_mbf;
@@ -28068,6 +28288,60 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  vetted: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  no_mouse_keyboard_support: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  controller_wizard_complete: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  drm_third_party_type: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  drm_activation_limit: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  user_account_third_party: {
+                    _: 7,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  user_account_third_party_link_to_steam: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  anticheat: {
+                    _: 9,
+                    _: _,
+                  },
+                  eula: {
+                    _: 10,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  ai_generation_service: {
+                    _: 11,
+                    _: _,
+                  },
+                  refund_checks_ea_playtime: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -30328,6 +30602,10 @@
                     _: 13,
                     _: _,
                   },
+                  discounted_dates_filter: {
+                    _: 17,
+                    _: _,
+                  },
                   content_descriptors_must_match: {
                     _: 15,
                     _: !0,
@@ -30805,6 +31083,76 @@
         }
         getClassName() {
           return "CStoreQueryFilters_ReleaseDateFilter";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.start_date || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  start_date: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  end_date: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  allow_partial_overlap: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQueryFilters_DiscountedDatesFilter";
         }
       }
       class _ extends _.Message {
@@ -38413,6 +38761,7 @@
             (0, _.jsxs)(_, {
               onClick: _.onOK,
               disabled: _.bOKDisabled,
+              autoFocus: "primary" == _.focusButton,
               children: [_.strOKText || (0, _._)("#Button_Confirm"), " "],
             }),
             (0, _.jsxs)(_, {
@@ -38423,6 +38772,7 @@
             (0, _.jsx)(_, {
               onClick: _.onCancel,
               disabled: _.bCancelDisabled,
+              autoFocus: "secondary" == _.focusButton,
               children: _.strCancelText || (0, _._)("#Button_Cancel"),
             }),
           ],
@@ -45869,7 +46219,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -45885,6 +46235,7 @@
             strOKButtonText: _,
             strCancelButtonText: _,
             onGamepadCancel: _,
+            strGamepadCancelDescription: _,
             strMiddleButtonText: _,
             onMiddleButton: _,
             bAlertDialog: _,
@@ -45915,6 +46266,7 @@
                 strOKText: _,
                 onCancel: _(_.onCancel),
                 strCancelText: _,
+                focusButton: _,
                 onUpdate: () => {
                   _(), _.closeModal && _.closeModal();
                 },
@@ -45932,6 +46284,7 @@
           "aria-describedby": _,
           children: (0, _.jsxs)(_._, {
             onCancelButton: _(_ || _.onCancel),
+            onCancelActionDescription: _,
             children: [
               (0, _.jsxs)(_._, {
                 children: [
@@ -51992,6 +52345,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapTokens = new Map();
@@ -52021,18 +52375,11 @@
               }
           return _;
         }
-        InitFromObjects(_, _, _, _, _, _) {
+        InitFromObjects(_, _, _, _) {
           _ && (this.m_bReportIndividualMissingTokens = !1),
-            _ || this.m_mapTokens.clear();
-          const _ = {
-              ...(_ || {}),
-              ..._,
-            },
-            _ = {
-              ...(_ || {}),
-              ...(_ || {}),
-            };
-          this.AddTokens(_, _), this.m_cbkTokensChanged.Dispatch();
+            _ || this.m_mapTokens.clear(),
+            this.AddTokens(_, _ || {}),
+            this.m_cbkTokensChanged.Dispatch();
         }
         InitDirect(_, _) {
           this.m_mapTokens.clear(),
@@ -52085,28 +52432,27 @@
           return this.BLooksLikeToken(_) ? this.LocalizeString(_, _) : _;
         }
         LocalizeString(_, _) {
-          const _ = 0 == this.m_mapTokens.size;
-          if (
-            ((0, _._)(
-              !_,
-              `Attempting to localize token '${_}' with no tokens in our map.`,
-            ),
-            !this.BLooksLikeToken(_))
-          )
-            return;
+          if (!this.BLooksLikeToken(_)) return;
           let _ = this.m_mapTokens.get(_.substring(1));
-          if (void 0 !== _) return _;
-          _ ||
-            _ ||
-            !this.m_bReportIndividualMissingTokens ||
-            (0, _._)().ReportError(
-              new Error(
-                `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
-              ),
-              {
-                bIncludeMessageInIdentifier: !0,
-              },
-            );
+          return void 0 === _
+            ? _._.HasKey(_)
+              ? _._.Localize(_)
+              : void (0 === this.m_mapTokens.size
+                  ? (0, _._)(
+                      !1,
+                      `Attempting to localize token '${_}' with no tokens in our map.`,
+                    )
+                  : !_ &&
+                    this.m_bReportIndividualMissingTokens &&
+                    (0, _._)().ReportError(
+                      new Error(
+                        `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                      ),
+                      {
+                        bIncludeMessageInIdentifier: !0,
+                      },
+                    ))
+            : _;
         }
         LocalizeStringFromFallback(_) {
           if (!_ || 0 == _.length || "#" != _.charAt(0)) return;
@@ -53703,10 +54049,11 @@
           _ = _({
             bSuppressAssert: !0,
           }),
-          _ = (0, _._)()?.startsWith("Gamepad VR"),
+          _ = (0, _._)()?.startsWith("Gamepad VR") ?? !1,
           _ = _.useMemo(
             () => ({
-              IN_GAMEPADUI: _ ?? _?.IN_GAMEPADUI ?? _._.IN_GAMEPADUI,
+              IN_GAMEPADUI:
+                _ ?? _?.IN_GAMEPADUI ?? (0, _._)()?.startsWith("Gamepad") ?? !1,
               IN_DESKTOPUI: _ ?? _?.IN_DESKTOPUI ?? !1,
               IN_VR: _ ?? _?.IN_VR ?? _,
             }),
@@ -53838,7 +54185,6 @@
           FROM_WEB: !1,
           WEBSITE_ID: "Unknown",
           IN_STEAMUI: !1,
-          IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
           ON_FRAME: !1,
           IS_STEAMOS: !1,

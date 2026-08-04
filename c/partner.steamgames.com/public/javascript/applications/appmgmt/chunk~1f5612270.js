@@ -64,6 +64,8 @@
         HoverToolTip: "_1yXHpORUurTNRsHpzalvwp",
         PriceChangeSaveWarning: "_2lTJ7-iyFOMpIaZ-p6yDvd",
         PriceChangeSaveWarningArrow: "B3-IB6jhKQuhRCYOH9Zd5",
+        PriceChangeSaveWarningText: "_2LN01zxswJjZ2gBihNCUsI",
+        IncreasedCurrencies: "_13GstIJtNo2RVdUkwJtDSd",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -832,7 +834,7 @@
           });
         let _ = !1,
           _ = !1,
-          _ = !1,
+          _ = new Set(),
           _ = new Set();
         for (const _ of _) {
           const { nMinPriceInCents: _, nMaxPriceInCents: _ } = (0, _._)(
@@ -841,9 +843,10 @@
           );
           (_ = _ || _.nPriceInCents < _),
             (_ = _ || (!!_ && _.nPriceInCents > _)),
-            (_ = _ || _.nPriceInCents > _.nOldPriceInCents),
+            _.nPriceInCents > _.nOldPriceInCents && _.add(_.strPriceKey),
             _.add(_.packageID);
         }
+        const _ = Array.from(_);
         let _,
           _ = (0, _._)(_);
         if (_.length > 0) {
@@ -910,7 +913,7 @@
                     rgLocalPriceOverrides: _,
                   }),
                   (0, _.jsx)(_, {
-                    priceIncrease: _,
+                    rgIncreasedPriceKeys: _,
                     nextDiscount: _.days,
                   }),
                   (0, _.jsx)(_, {
@@ -947,9 +950,10 @@
       }
       function _(_) {
         let _,
-          { priceIncrease: _, nextDiscount: _ } = _;
-        return _
-          ? ((_ =
+          { rgIncreasedPriceKeys: _, nextDiscount: _ } = _;
+        return 0 == _.length
+          ? null
+          : ((_ =
               _ < _
                 ? (0, _._)(
                     "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
@@ -972,12 +976,24 @@
                   }),
                 }),
                 (0, _.jsxs)("div", {
-                  className: _().HigherPriceWarning,
-                  children: [" ", _, " "],
+                  className: _().PriceChangeSaveWarningText,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().HigherPriceWarning,
+                      children: [" ", _, " "],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().IncreasedCurrencies,
+                      children: (0, _._)(
+                        "#PricingDashboard_SavePrice_IncreasedCurrencies",
+                        _.length,
+                        __webpack_require__.join(", "),
+                      ),
+                    }),
+                  ],
                 }),
               ],
-            }))
-          : null;
+            }));
       }
       function _(_) {
         let { value: _, onChange: _ } = _,

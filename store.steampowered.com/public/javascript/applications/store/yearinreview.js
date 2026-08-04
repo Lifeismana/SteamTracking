@@ -1497,12 +1497,12 @@
           })
         );
       }
-      function A(e) {
+      function f(e) {
         const { title: t, onFilterChange: a, filter: n, onSubmit: r, ...i } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(I, {
-              children: (0, s.jsx)(w, {
+              children: (0, s.jsx)(A, {
                 title: t,
                 children: (0, s.jsx)(j, { ...i }),
               }),
@@ -1511,7 +1511,7 @@
           ],
         });
       }
-      function f(e) {
+      function w(e) {
         const { onFilterChange: t, filter: a, sections: n, title: r } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1524,7 +1524,7 @@
                   }),
                 n.map(({ title: e, ...t }) =>
                   (0, s.jsx)(
-                    w,
+                    A,
                     { title: e, children: (0, s.jsx)(j, { ...t }) },
                     e,
                   ),
@@ -1535,7 +1535,7 @@
           ],
         });
       }
-      function w(e) {
+      function A(e) {
         return (0, s.jsxs)("div", {
           className: v.Section,
           children: [
@@ -1876,7 +1876,7 @@
                         ),
                   }),
               }),
-            (0, s.jsx)(f, {
+            (0, s.jsx)(w, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: r,
@@ -1891,7 +1891,7 @@
             { filter: n } = this.state,
             r = !n && a ? e.GetFlairListByGroupID(a) : e.emoticon_list,
             i = l.pN.FilterEmoticons(r, n).slice(0, 1e3);
-          return (0, s.jsx)(A, {
+          return (0, s.jsx)(f, {
             title: (0, h.we)("#AddonPicker_Emoticons"),
             items: i,
             onItemSelect: t,
@@ -1942,7 +1942,7 @@
           const { store: e, onItemSelect: t } = this.props,
             { filter: a } = this.state,
             n = l.pN.FilterStickers(e.GetStickerList(), a);
-          return (0, s.jsx)(A, {
+          return (0, s.jsx)(f, {
             title: (0, h.we)("#EmoticonPicker_StickerHeading"),
             items: n,
             onItemSelect: t,
@@ -1986,7 +1986,7 @@
           const { store: e, effectSettings: t, onItemSelect: a } = this.props,
             { filter: n } = this.state,
             r = e.GetEffectList().filter(({ name: e }) => e.indexOf(n) > -1);
-          return (0, s.jsx)(A, {
+          return (0, s.jsx)(f, {
             title: (0, h.we)("#EmoticonPicker_EffectHeading"),
             items: r,
             onItemSelect: a,
@@ -2049,7 +2049,7 @@
                         ),
                   }),
               }),
-            (0, s.jsx)(f, {
+            (0, s.jsx)(w, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: [
@@ -2078,7 +2078,7 @@
         render() {
           const { store: e, onItemSelect: t, flairGroupID: a } = this.props,
             { filter: n } = this.state;
-          return (0, s.jsx)(f, {
+          return (0, s.jsx)(w, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
             sections: [
@@ -2591,9 +2591,9 @@
         I = a(81962),
         y = a(10820),
         j = a(14947),
-        A = a(77700),
-        f = a.n(A),
-        w = a(52038);
+        f = a(77700),
+        w = a.n(f),
+        A = a(52038);
       class N extends o.Component {
         m_strLastSearch;
         m_rgCurrentMatches = [];
@@ -2774,10 +2774,10 @@
             e.push(t);
           }
           return (0, n.jsx)("div", {
-            className: f().mentionDialogPosition,
+            className: w().mentionDialogPosition,
             ref: this.containerRef,
             children: (0, n.jsxs)("div", {
-              className: f().mentionDialog,
+              className: w().mentionDialog,
               tabIndex: 0,
               onKeyDown: this.OnKeyDown,
               children: [this.renderHeader(), e],
@@ -2799,10 +2799,10 @@
         }
         render() {
           return (0, n.jsx)("div", {
-            className: (0, w.A)(
-              f().suggestOption,
-              f().mentionSearchOption,
-              this.props.bIsSelected ? f().selected : "",
+            className: (0, A.A)(
+              w().suggestOption,
+              w().mentionSearchOption,
+              this.props.bIsSelected ? w().selected : "",
             ),
             onMouseEnter: this.OnMouseOver,
             onClick: this.OnClick,
@@ -2828,7 +2828,7 @@
         }
         renderMatch(e) {
           return (0, n.jsxs)("div", {
-            className: (0, w.A)(
+            className: (0, A.A)(
               k().EmoticonSuggestion,
               e.recent ? "Recent" : "",
             ),
@@ -2882,7 +2882,7 @@
           return (0, n.jsxs)(
             "div",
             {
-              className: (0, w.A)(L().BBCodeSuggestion),
+              className: (0, A.A)(L().BBCodeSuggestion),
               children: [
                 (0, n.jsx)("div", { className: L().BBCode, children: e.name }),
                 "[",
@@ -2899,7 +2899,7 @@
           return (0, n.jsx)(
             "div",
             {
-              className: (0, w.A)(f().mentionSearchOption, f().noMatches),
+              className: (0, A.A)(w().mentionSearchOption, w().noMatches),
               children: (0, P.we)("#Bbcode_No_Match"),
             },
             "nomatches",
@@ -3411,7 +3411,7 @@
                 clanSteamID: this.props.clanSteamID,
               }),
               (0, n.jsx)("div", {
-                className: (0, w.A)(
+                className: (0, A.A)(
                   te().DescriptionCtn,
                   te().BBCodeEditorInputStyles,
                   this.state.bShowDragTarget ? te().DragTarget : "",
@@ -3421,7 +3421,7 @@
                   cols: 90,
                   rows: this.props.nOverridesRows || 22,
                   maxLength: 64e3,
-                  className: (0, w.A)(
+                  className: (0, A.A)(
                     te().DefaultEditor,
                     this.props.classNameForTextArea
                       ? this.props.classNameForTextArea
@@ -3608,7 +3608,7 @@
         }
         OnOpenSpeakerDialog(e) {
           (0, H.pg)(
-            (0, n.jsx)(Ae, {
+            (0, n.jsx)(fe, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -3635,7 +3635,7 @@
             e &&
               (r = t
                 ? (0, n.jsx)("span", {
-                    className: (0, w.A)("ttip", te().ActionGetHelp),
+                    className: (0, A.A)("ttip", te().ActionGetHelp),
                     children: (0, n.jsx)($.he, {
                       toolTipContent: (0, P.we)(
                         "#EventEditor_FormattingHelp_GetHelpLink",
@@ -3653,7 +3653,7 @@
                   })
                 : (0, n.jsx)("span", {
                     onClick: this.ShowHelpDialog,
-                    className: (0, w.A)("ttip", te().ActionGetHelp),
+                    className: (0, A.A)("ttip", te().ActionGetHelp),
                     children: (0, n.jsxs)($.he, {
                       toolTipContent: (0, P.we)(
                         "#EventEditor_FormattingHelp_GetHelpLink",
@@ -3743,7 +3743,7 @@
                       toolTipContent: (0, P.we)("#Editor_Emoticon"),
                       children: (0, n.jsx)(Y.A, {
                         title: " ",
-                        className: (0, w.A)(te().EmoteOuter),
+                        className: (0, A.A)(te().EmoteOuter),
                         disabled: !1,
                         OnEmoticonSelected: this.OnEmoticonSelected,
                         rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -4195,7 +4195,7 @@
         (0, u.Cg)([S.oI], je.prototype, "OnImageURLChange", null),
         (0, u.Cg)([S.oI], je.prototype, "OnAnchorURLChange", null),
         (je = (0, u.Cg)([i.PA], je));
-      const Ae = (e) => {
+      const fe = (e) => {
         const [t, a] = o.useState(""),
           [s, r] = o.useState(""),
           [i, l] = o.useState(""),
@@ -4298,7 +4298,7 @@
                       (0, n.jsx)(M.$n, {
                         onClick: (e) =>
                           (0, _.lX)(
-                            (0, n.jsx)(fe, { friends: v, setSteamID: g }),
+                            (0, n.jsx)(we, { friends: v, setSteamID: g }),
                             e,
                           ),
                         children: (0, P.we)(
@@ -4368,16 +4368,16 @@
           }),
         });
       };
-      function fe(e) {
+      function we(e) {
         const { friends: t, setSteamID: a } = e;
         return (0, n.jsx)("div", {
           className: te().DropDownScroll,
           children: t.map((e) =>
-            (0, n.jsx)(we, { steamid: e, setSteamID: a }, e),
+            (0, n.jsx)(Ae, { steamid: e, setSteamID: a }, e),
           ),
         });
       }
-      function we(e) {
+      function Ae(e) {
         const { steamid: t, setSteamID: a } = e,
           { data: s } = (0, K.js)(t);
         return (0, n.jsx)(X.kt, {
@@ -4496,7 +4496,7 @@
                     children: [
                       (0, n.jsx)(M.a3, {
                         children: (0, n.jsxs)("div", {
-                          className: (0, w.A)(
+                          className: (0, A.A)(
                             O().FlexColumnContainer,
                             te().ImportHTMLCtn,
                           ),
@@ -4592,7 +4592,7 @@
         );
         const y = i ? i.avatar_url : null,
           j = h.b.InitFromAccountID(Z.iA.accountid),
-          A = async () => {
+          f = async () => {
             s.current &&
               s.current("ShareEventOnFriendsActivityFeed: cancel previous...");
             const e = r().CancelToken.source();
@@ -4689,7 +4689,7 @@
               strDescription: "",
               strTitle: (0, P.we)("#Button_Share"),
               onCancel: e.closeModal,
-              onOK: A,
+              onOK: f,
               strOKButtonText: (0, P.we)("#Button_Post"),
               children: (0, n.jsxs)("div", {
                 className: O().FlexColumnContainer,
@@ -4700,7 +4700,7 @@
                     ),
                   }),
                   (0, n.jsxs)("div", {
-                    className: (0, w.A)(
+                    className: (0, A.A)(
                       Ge().Container,
                       O().FlexColumnContainer,
                     ),
@@ -4713,7 +4713,7 @@
                             "data-miniprofile": "s" + Z.iA.steamid,
                           }),
                           (0, n.jsx)("div", {
-                            className: (0, w.A)(O().FlexColumnContainer),
+                            className: (0, A.A)(O().FlexColumnContainer),
                             children: (0, n.jsx)(xe, {
                               strPlaceholder: (0, P.we)(
                                 "#EventDisplay_Share_OnMyStatus_Placeholder",
@@ -5344,7 +5344,7 @@
           rgRankings: s?.slice(0, a) || [],
         };
       }
-      function A(e, t) {
+      function f(e, t) {
         switch (t) {
           case "overall":
             return e.playtime_stats.game_summary.filter(
@@ -5382,18 +5382,18 @@
             );
         }
       }
-      function f(e, t) {
+      function w(e, t) {
         if ("demo" != t && "playtest" != t) {
           const a = `${"overall" === t ? "total" : t}_sessions`,
             n = `${"overall" === t ? "total" : t}_playtime_percentagex100`;
           return {
-            nTotalGames: A(e, t).length || 0,
+            nTotalGames: f(e, t).length || 0,
             nTotalSessions: e.playtime_stats.total_stats[a] || 0,
             nTotalPercentage: e.playtime_stats.total_stats[n] || 0,
           };
         }
         {
-          const a = A(e, t);
+          const a = f(e, t);
           return {
             nTotalGames: a.length,
             nTotalSessions: a
@@ -5405,7 +5405,7 @@
           };
         }
       }
-      const w = "percentMonthOfOverall",
+      const A = "percentMonthOfOverall",
         N = "percentOtherGamesRelativeMonth";
       var T = a(14947),
         R = a(17720),
@@ -5583,7 +5583,7 @@
                           const p = n.get(a).total_playtime_percentagex100;
                           l[a] = (c / p) * 1e4;
                         }),
-                        (r[w] = c);
+                        (r[A] = c);
                       const p = c - d;
                       r[N] = p;
                       const u = 1e4 - m;
@@ -6113,9 +6113,9 @@
           children: a,
         });
       }
-      var Ae = a(38535),
-        fe = a(76217);
-      const we = { ...U, include_screenshots: !0 };
+      var fe = a(38535),
+        we = a(76217);
+      const Ae = { ...U, include_screenshots: !0 };
       function Ne(e) {
         const {
             category: t,
@@ -6132,7 +6132,7 @@
             nTotalGames: h,
             nTotalSessions: p,
             nTotalPercentage: u,
-          } = (0, o.useMemo)(() => f(m, t), [m, t]),
+          } = (0, o.useMemo)(() => w(m, t), [m, t]),
           { rgResults: g, nTotalResultCount: x } = (0, o.useMemo)(
             () => y(a, t, 5, u),
             [a, t, u, 5],
@@ -6144,7 +6144,7 @@
           [S, C] = (0, o.useState)(
             g.length > 0 ? g[0].parent_appid || g[0].appid : 0,
           ),
-          I = (0, ue.zX)(v, Boolean("vr" == t) ? we : U),
+          I = (0, ue.zX)(v, Boolean("vr" == t) ? Ae : U),
           j = (function (e, t, a) {
             const [n, s] = o.useState(0);
             return (
@@ -6161,7 +6161,7 @@
               n
             );
           })(g, t, I),
-          A =
+          f =
             "overall" === t ||
             "controller" === t ||
             "demo" == t ||
@@ -6204,7 +6204,7 @@
                     }),
                   ],
                 }),
-                Boolean(!A) &&
+                Boolean(!f) &&
                   (0, n.jsx)(Be, { percentVal: u, subToken: "#YIR_NewLine" }),
               ],
             }),
@@ -6236,8 +6236,8 @@
       }
       function Te(e) {
         const { appid: t } = e,
-          [a] = (0, ue.t7)(t, we),
-          s = (0, Ae.$9)();
+          [a] = (0, ue.t7)(t, Ae),
+          s = (0, fe.$9)();
         if (!a) return null;
         const r = a.GetScreenshots("blocked" == s);
         if (!r.length) return null;
@@ -6259,7 +6259,7 @@
           case "playtest":
             i = E.uE.Vi;
         }
-        return (0, n.jsx)(fe.Z, {
+        return (0, n.jsx)(we.Z, {
           "flow-children": "grid",
           className: (0, he.A)(
             Se().YearInReviewContent,
@@ -6607,7 +6607,7 @@
             e.appid,
           ),
         );
-        return (0, n.jsx)(fe.Z, {
+        return (0, n.jsx)(we.Z, {
           "flow-children": "grid",
           className: (0, he.A)(ge.FirstPlayCtn, Ee.FirstPlayCtn),
           children: o,
@@ -7053,8 +7053,8 @@
                 (0, n.jsxs)("div", {
                   className: at().SpiderAndNumbersCnt,
                   children: [
+                    (0, n.jsx)(ft, { userYearInReview: t }),
                     (0, n.jsx)(At, { userYearInReview: t }),
-                    (0, n.jsx)(wt, { userYearInReview: t }),
                   ],
                 }),
               ],
@@ -7104,7 +7104,7 @@
             startAnimation: _,
             delay: 700,
           }),
-          A = (0, n.jsx)(ht, {
+          f = (0, n.jsx)(ht, {
             endValue: l,
             maxValue: (100 * l) / m,
             duration: 2e3,
@@ -7161,7 +7161,7 @@
                       1 == l
                         ? "#YIR_Compare_PlayerProgress_LongestStreak_Single"
                         : "#YIR_Compare_PlayerProgress_LongestStreak_Label",
-                      A,
+                      f,
                     ),
                     userPercent: m,
                     steamAverage:
@@ -7292,12 +7292,12 @@
             UsedActive: m("#YIR_Compare_ComfortGames_Desc_User", u),
             OldActive: m("#YIR_Compare_OldGames_Desc_User", g),
           },
-          A = {
+          f = {
             NewActive: (0, _.we)("#YIR_Compare_NewGames_Desc_AvgSteam", a),
             UsedActive: (0, _.we)("#YIR_Compare_ComfortGames_Desc_AvgSteam", u),
             OldActive: (0, _.we)("#YIR_Compare_OldGames_Desc_AvgSteam", g),
           },
-          f = (0, o.useMemo)(() => {
+          w = (0, o.useMemo)(() => {
             const e = new Array();
             return (
               e.push({ name: "new", value: v > 0 ? v : 1 }),
@@ -7331,7 +7331,7 @@
                     aspect: 1,
                     children: (0, n.jsx)(rt.r, {
                       children: (0, n.jsxs)(it.F, {
-                        data: f,
+                        data: w,
                         dataKey: "value",
                         nameKey: "name",
                         cx: "50%",
@@ -7468,7 +7468,7 @@
                               s.PercentageDescriptionLabel,
                               s.Color,
                             ),
-                            children: A[c],
+                            children: f[c],
                           }),
                         ],
                       }),
@@ -7480,7 +7480,7 @@
           ],
         });
       }
-      function At(e) {
+      function ft(e) {
         const { userYearInReview: t } = e,
           a = t.GetUserAggregateTagData(),
           { data: s } = (0, ut.Fv)(nt.TS.LANGUAGE),
@@ -7518,7 +7518,7 @@
                   children: [
                     (0, n.jsx)(ct.z, {}),
                     (0, n.jsx)(dt.r, {
-                      tick: (0, n.jsx)(ft, {}),
+                      tick: (0, n.jsx)(wt, {}),
                       dataKey: "subject",
                     }),
                     (0, n.jsx)(mt.V, {
@@ -7542,7 +7542,7 @@
           ],
         });
       }
-      function ft(e) {
+      function wt(e) {
         const { payload: t, x: a, ...s } = e,
           r = (0, pt.Ae)(),
           i = window.innerWidth <= 300;
@@ -7573,7 +7573,7 @@
               }),
             });
       }
-      function wt(e) {
+      function At(e) {
         const { userYearInReview: t } = e;
         let a = (function (e) {
           let t = e.GetRawStats().playtime_stats?.by_numbers;
@@ -7760,7 +7760,7 @@
                 className: kt.FriendsSharedSectionTitle,
                 children: (0, _.we)("#YIR_FriendShared"),
               }),
-              (0, n.jsx)(fe.Z, {
+              (0, n.jsx)(we.Z, {
                 className: kt.FriendsGrid,
                 "flow-children": "grid",
                 children: i
@@ -8052,7 +8052,7 @@
             nTotalGames: d,
             nTotalSessions: m,
             nTotalPercentage: h,
-          } = (0, o.useMemo)(() => f(r, "deck"), [r]),
+          } = (0, o.useMemo)(() => w(r, "deck"), [r]),
           { rgResults: p } = (0, o.useMemo)(() => y(t, "deck", 5, h), [t, h]),
           u = Number(Math.round(h / 100).toFixed(0));
         let g = i("#YIR_TopGames_deck_new");
@@ -8069,8 +8069,8 @@
           j = o.useCallback((e) => {
             e && I(!0);
           }, []),
-          A = (0, n.jsx)(ht, { endValue: d, duration: 2e3, startAnimation: C }),
-          w = (0, n.jsx)(ht, { endValue: m, duration: 2e3, startAnimation: C }),
+          f = (0, n.jsx)(ht, { endValue: d, duration: 2e3, startAnimation: C }),
+          A = (0, n.jsx)(ht, { endValue: m, duration: 2e3, startAnimation: C }),
           N =
             ((0, n.jsx)(ht, { endValue: u, duration: 2e3, startAnimation: C }),
             (0, o.useRef)(null));
@@ -8108,7 +8108,7 @@
                             children: [
                               (0, n.jsx)("div", {
                                 className: Ie().BigNum,
-                                children: A,
+                                children: f,
                               }),
                               (0, n.jsx)("div", {
                                 className: Ie().StatDescription,
@@ -8121,7 +8121,7 @@
                             children: [
                               (0, n.jsx)("div", {
                                 className: Ie().BigNum,
-                                children: w,
+                                children: A,
                               }),
                               (0, n.jsx)("div", {
                                 className: Ie().StatDescription,
@@ -8437,7 +8437,7 @@
                     }),
                     (0, n.jsx)("div", {
                       className: (0, he.A)(aa().CapRowCtn),
-                      children: (0, n.jsx)(fe.Z, {
+                      children: (0, n.jsx)(we.Z, {
                         "flow-children": "grid",
                         className: (0, he.A)(
                           xe().CapRow,
@@ -8594,11 +8594,11 @@
             href: `${l.TS.STORE_BASE_URL}replay/${l.iA.steamid}/${s}?src=${d.Db.UO}`,
             children: (0, _.we)("#YIR_SeeYourRewind"),
           });
-        return (0, n.jsxs)(fe.Z, {
+        return (0, n.jsxs)(we.Z, {
           className: ca.YIRShareCtn,
           children: [
             (0, n.jsx)(Ca, { userYearInReview: t, steamId: a, nYear: s }),
-            (0, n.jsxs)(fe.Z, {
+            (0, n.jsxs)(we.Z, {
               className: ca.ShareButton,
               onActivate: (e) => {
                 (0, ma.pg)(
@@ -8632,7 +8632,7 @@
             },
             { data: d.hb.QB, label: (0, _.we)("#YIR_ShareVisbility_Public") },
           ];
-        return (0, n.jsxs)(fe.Z, {
+        return (0, n.jsxs)(we.Z, {
           "flow-children": "column",
           children: [
             (0, n.jsx)("div", {
@@ -8776,7 +8776,7 @@
                   className: ca.CarouselCtn,
                   children: [
                     d &&
-                      (0, n.jsx)(Aa, {
+                      (0, n.jsx)(fa, {
                         carouselIndex: i,
                         endPreviewImage: (e) => {
                           h(!1), e.stopPropagation();
@@ -8855,13 +8855,13 @@
                       ],
                     }),
                     l.TS.IN_MOBILE_WEBVIEW
-                      ? (0, n.jsx)(wa, {
+                      ? (0, n.jsx)(Aa, {
                           imageUrl: `${x}${u[i].url_path}`,
                           shareUrl: r,
                         })
                       : l.TS.IN_CLIENT
                         ? null
-                        : (0, n.jsx)(fa, { imageUrl: `${x}${u[i].url_path}` }),
+                        : (0, n.jsx)(wa, { imageUrl: `${x}${u[i].url_path}` }),
                     (0, n.jsx)("div", {
                       className: ca.CarouselHintCtn,
                       children: u.map((e, t) =>
@@ -8895,7 +8895,7 @@
                 })
         );
       }
-      function Aa(e) {
+      function fa(e) {
         const {
           carouselIndex: t,
           maxIndex: a,
@@ -8948,7 +8948,7 @@
           })
         );
       }
-      function fa(e) {
+      function wa(e) {
         return (0, n.jsxs)("div", {
           className: ca.InteractButton,
           onClick: () => {
@@ -8973,7 +8973,7 @@
           ],
         });
       }
-      function wa(e) {
+      function Aa(e) {
         const { imageUrl: t, shareUrl: a } = e;
         return (0, n.jsxs)("div", {
           className: ca.InteractButton,
@@ -9878,7 +9878,7 @@
         if (t && a && a.length) {
           const e = a[0].payload.date.getMonth(),
             t = (0, _.we)(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
-            l = a[0].payload.topPlayedPercentBreakdownPerMonth[w],
+            l = a[0].payload.topPlayedPercentBreakdownPerMonth[A],
             c = Object.keys(a[0].payload.otherPlayedPercentBreakdownForMonth),
             d = a[0].payload.topPlayedRelativePercentBreakdownForMonth,
             m = a.find((e) => e.name === s.current),
@@ -10353,9 +10353,9 @@
           ],
         });
       }
-      var An = a(7077),
-        fn = a.n(An),
-        wn = a(36626);
+      var fn = a(7077),
+        wn = a.n(fn),
+        An = a(36626);
       function Nn(e) {
         const { appid: t, userYearInReview: a } = e,
           s = ae(a.GetYear(), a.GetAccountID(), t);
@@ -10388,37 +10388,37 @@
           g = `${l.TS.COMMUNITY_BASE_URL}profiles/${a.GetSteamID().ConvertTo64BitString()}/stats/${t}`,
           x = (0, l.hf)();
         return (0, n.jsxs)("div", {
-          className: (0, he.A)(ve.YearInReviewContent, wn.AchievementsCtn),
+          className: (0, he.A)(ve.YearInReviewContent, An.AchievementsCtn),
           children: [
             i &&
               (0, n.jsx)("div", {
                 onClick: () => c(!1),
-                className: wn.ContentRestrictionText,
+                className: An.ContentRestrictionText,
                 children: (0, _.we)(
                   "#YIR_TopGames_ContentRestrictionAchievements",
                 ),
               }),
             (0, n.jsxs)("div", {
-              className: wn.AchievementSectionTitleCtn,
+              className: An.AchievementSectionTitleCtn,
               children: [
                 (0, n.jsx)("div", {
-                  className: wn.AchievementSectionTitle,
+                  className: An.AchievementSectionTitle,
                   children: d("#YIR_TopGames_Achievements"),
                 }),
                 (0, n.jsxs)("div", {
-                  className: wn.AchievementLinkCtn,
+                  className: An.AchievementLinkCtn,
                   children: [
                     x &&
                       (0, n.jsx)("a", {
                         href: g,
-                        className: wn.AchievementLink,
+                        className: An.AchievementLink,
                         children: (0, _.we)("#YIR_SeeAllAchievements"),
                       }),
                     !x &&
                       (0, n.jsx)(bt.Ii, {
                         href: g,
                         target: "_blank",
-                        className: wn.AchievementLink,
+                        className: An.AchievementLink,
                         children: (0, _.we)("#YIR_SeeAllAchievements"),
                       }),
                   ],
@@ -10427,21 +10427,21 @@
             }),
             (0, n.jsx)("div", {
               className: (0, he.A)({
-                [wn.AllUnlockedAchievements]: u,
-                [wn.AchievementsRowCtn]: !0,
+                [An.AllUnlockedAchievements]: u,
+                [An.AchievementsRowCtn]: !0,
               }),
               children: (0, n.jsxs)("div", {
-                className: wn.AchievementRow,
+                className: An.AchievementRow,
                 children: [
                   (0, n.jsxs)("div", {
-                    className: wn.AchievementsTitleCtn,
+                    className: An.AchievementsTitleCtn,
                     children: [
                       (0, n.jsx)("div", {
-                        className: wn.AchievementsBigNum,
+                        className: An.AchievementsBigNum,
                         children: (0, _e.Dq)(h),
                       }),
                       (0, n.jsx)("div", {
-                        className: wn.AchievementsSmallText,
+                        className: An.AchievementsSmallText,
                         children: (0, _.PP)(
                           "#YIR_UnlockedThisYear_Short",
                           (0, n.jsx)("br", {}),
@@ -10497,12 +10497,12 @@
         return (0, n.jsx)(Ye.m9, {
           toolTipContent: (0, n.jsx)(Bn, { display: t }),
           className: (0, he.A)({
-            [wn.RareAchievement]: r,
-            [wn.Achievement]: !0,
+            [An.RareAchievement]: r,
+            [An.Achievement]: !0,
           }),
           children: (0, n.jsx)(jn, {
             imgURL: s,
-            className: wn.AchievementIcon,
+            className: An.AchievementIcon,
             alt: t.localized_name ?? t.internal_name,
             glow: r,
           }),
@@ -10518,7 +10518,7 @@
               ? (a = t.localized_name)
               : t.internal_name && (a = t.internal_name),
           (0, n.jsxs)("div", {
-            className: fn().TextToolTip,
+            className: wn().TextToolTip,
             children: [
               (0, n.jsx)("div", { children: a }),
               (0, n.jsx)("br", {}),
@@ -10766,9 +10766,9 @@
           I = s % 2 ? "OddGradient" : "EvenGradient",
           y = (0, l.Qn)(),
           j = g(),
-          A = x(),
-          f = (0, l.hf)(),
-          { gameChartData: w, rank: N } = (0, o.useMemo)(
+          f = x(),
+          w = (0, l.hf)(),
+          { gameChartData: A, rank: N } = (0, o.useMemo)(
             () => a.GetChartMonthlyDataForApp(t),
             [t, a],
           );
@@ -10777,8 +10777,8 @@
             className: (0, he.A)(
               ge.TopGameBlockContainer,
               ge[I],
-              A.TopGameBlockContainer,
-              A[I],
+              f.TopGameBlockContainer,
+              f[I],
               ge.LoadingCtn,
             ),
             children: (0, n.jsx)(me.t, { position: "center" }),
@@ -10786,7 +10786,7 @@
         if (!m || !c) return null;
         let T = (0, be.wJ)(m.GetStorePageURL(), u);
         l.TS.IN_CLIENT && (T = "steam://openurl/" + T);
-        const R = w?.find((e) => e.percent > 0),
+        const R = A?.find((e) => e.percent > 0),
           G = R ? R.date.getMonth() : null,
           k = G ? (0, _.we)(`#YIR_MonthlyCharts_MonthNoun_${G + 1}`) : "",
           B = Math.trunc(c.total_sessions);
@@ -10805,8 +10805,8 @@
             className: (0, he.A)(
               ge.TopGameBlockContainer,
               ge[I],
-              A.TopGameBlockContainer,
-              A[I],
+              f.TopGameBlockContainer,
+              f[I],
             ),
             children: [
               (0, n.jsx)(Un, { oStoreItem: m }),
@@ -10823,11 +10823,11 @@
                       (0, n.jsxs)("div", {
                         className: ge.InfoContainer,
                         children: [
-                          (0, n.jsxs)(fe.Z, {
+                          (0, n.jsxs)(we.Z, {
                             className: ge.GameLinks,
                             "flow-children": "row",
                             children: [
-                              f &&
+                              w &&
                                 (0, n.jsx)("a", {
                                   href: T,
                                   className: ge.GameLink,
@@ -10835,7 +10835,7 @@
                                     "#YIR_TopGames_VisitInStore",
                                   ),
                                 }),
-                              !f &&
+                              !w &&
                                 (0, n.jsx)(bt.Ii, {
                                   href: T,
                                   target: "_blank",
@@ -10969,7 +10969,7 @@
                           }),
                         ],
                       }),
-                      w &&
+                      A &&
                         (0, n.jsxs)("div", {
                           className: (0, he.A)(
                             ge.GameChartCtn,
@@ -10990,9 +10990,9 @@
                             (0, n.jsx)("div", {
                               className: ge.GameChart,
                               children: (0, n.jsx)(sn, {
-                                data: w,
+                                data: A,
                                 name: m.GetName(),
-                                color: A[`topApp_${N}`],
+                                color: f[`topApp_${N}`],
                               }),
                             }),
                           ],
@@ -11047,7 +11047,7 @@
           { mutate: c } = (0, pn.s)(t, !s, o);
         return !l.iA.logged_in || r
           ? null
-          : (0, n.jsxs)(fe.Z, {
+          : (0, n.jsxs)(we.Z, {
               className: (0, he.A)(ge.AddToWishlist),
               onActivate: (e) => {
                 e.preventDefault(), e.stopPropagation(), c();
@@ -11086,7 +11086,7 @@
         if (!a || !t)
           return (0, n.jsx)(es, { message: (0, _.we)("#YIR_Error_NoData") });
         const c = new R.b(a);
-        return (0, n.jsx)(fe.Z, {
+        return (0, n.jsx)(we.Z, {
           navRef: i,
           children: (0, n.jsx)(Zn, { steamID: c, year: t }),
         });
@@ -11174,7 +11174,7 @@
           );
         return (0, n.jsx)(Qn.Provider, {
           value: p,
-          children: (0, n.jsx)(Ae.QA, {
+          children: (0, n.jsx)(fe.QA, {
             eAdultOnlyMediaBehavior: t ? "allowed" : "masked",
             children: i,
           }),
@@ -11270,7 +11270,7 @@
                           className: da().ShareTitle,
                           children: (0, _.we)("#YIR_ShareOptionsTitle"),
                         }),
-                        (0, n.jsxs)(fe.Z, {
+                        (0, n.jsxs)(we.Z, {
                           className: da().ShareColumns,
                           children: [
                             (0, n.jsxs)("div", {
@@ -11402,14 +11402,15 @@
               r(e.data);
             },
             [r],
-          );
+          ),
+          c = (0, l.Qn)();
         return "dev" === l.TS.WEB_UNIVERSE ||
           "beta" === l.TS.WEB_UNIVERSE ||
           (l.iA.is_support &&
             Boolean(
               (0, l.Fd)("localization_advanced_access", "application_config"),
             ))
-          ? l.TS.IN_GAMEPADUI
+          ? c
             ? null
             : (0, n.jsxs)("div", {
                 className: (0, he.A)(Se().DevToggle, ce.ValveOnlyBackground),

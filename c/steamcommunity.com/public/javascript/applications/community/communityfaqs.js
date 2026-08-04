@@ -4415,10 +4415,20 @@
             document.removeChild(_);
           } catch (_) {}
         }
-        static WriteCSVToFile(_, _, _) {
-          const _ = _().unparse(_, {
-              header: !0,
-            }),
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
             _ = 1 == _ ? ["\ufeff" + _] : [_];
           _.WriteFile(
             new Blob(_, {

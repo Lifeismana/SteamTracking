@@ -1449,6 +1449,8 @@
     "PricingDashboard_SavePricesError": "ERROR: server failure. Please try again shortly.",
     "PricingDashboard_SavePrices_FailedToLoad": "<1>An error occurred while preparing to load data for these price changes.</1><2>Please try again and contact Valve if you continue experiencing this issue.</2>",
     "PricingDashboard_SavePrice_CooldownWarning": "Note: Games with a price increase in any currency will be ineligible for discounting for %1$s days following the date of publishing.",
+    "PricingDashboard_SavePrice_IncreasedCurrencies": "This will increase the price in %1$s currency: %2$s",
+    "PricingDashboard_SavePrice_IncreasedCurrencies_Plural": "This will increase the price in %1$s currencies: %2$s",
     "PricingDashboard_SavePrice_FutureDiscountSoon": "Note: One of the modified packages has a discount in %1$s days. This price increase will need to be published %2$s days before that discount begins.",
     "PricingDashboard_SavePrice_FutureDiscountTooSoon": "Note: One of the modified packages has a discount starting in under %1$s days. You will need to manually publish this price increase after that discount has ended.",
     "PricingDashboard_Column_PriceProposalState": "Price status",

@@ -1131,6 +1131,7 @@
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
+      var _ = __webpack_require__("chunkid");
       function _() {
         return (0, _.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -1502,7 +1503,7 @@
         );
       }
       function _(_) {
-        if (_._.IN_GAMEPADUI) return null;
+        if ((0, _._)()) return null;
         const _ = (0, _._)(_._.EREALM)
           ? (0, _.jsx)(_, {
               ..._,

@@ -53,7 +53,7 @@
       "use strict";
       c.r(r), c.d(r, { default: () => o });
       var t = c(7850),
-        s = c(50050);
+        s = c(30760);
       function o(e) {
         return (0, t.jsx)("div", { children: (0, t.jsx)(s.Ay, {}) });
       }

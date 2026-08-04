@@ -4812,7 +4812,7 @@
         c = n(64753),
         u = n(39777),
         d = n(90626),
-        m = n(6256),
+        m = n(93341),
         p = n(34629),
         C = n(41735),
         _ = n.n(C),
@@ -7309,7 +7309,7 @@
         C = 4;
       var _,
         h = n(90626),
-        g = n(6256),
+        g = n(93341),
         f = n(20713),
         S = n(54906),
         b = n(35111),
@@ -8153,73 +8153,77 @@
             tabs: t,
             bDisableRouting: n,
             startingTab: i,
-            classNameCtn: l,
-            classNameTab: u,
-            classNameTabContent: d,
-            preferredFocus: _,
-            bVerticalTabs: g,
-            bSticky: f,
-            bChecklistMode: S,
+            controlledTab: l,
+            OnTabChanged: u,
+            classNameCtn: d,
+            classNameTab: _,
+            classNameTabContent: g,
+            preferredFocus: f,
+            bVerticalTabs: S,
+            bSticky: b,
+            bChecklistMode: w,
           } = e,
-          b = (0, C.zy)(),
-          w = (0, C.W6)(),
-          [y, x] = (0, a.useState)(
+          y = (0, C.zy)(),
+          x = (0, C.W6)(),
+          [v, L] = (0, a.useState)(
             () =>
               i ||
-              (!n && (0, s.f3)(b, "tab") ? ((0, s.f3)(b, "tab") ?? "") : ""),
+              (!n && (0, s.f3)(y, "tab") ? ((0, s.f3)(y, "tab") ?? "") : ""),
           );
         (0, a.useEffect)(() => {
-          if (!e.bDisableRouting && b) {
-            const e = (0, s.f3)(b, "tab");
-            e && x(e);
+          if (!e.bDisableRouting && y) {
+            const e = (0, s.f3)(y, "tab");
+            e && L(e);
           }
-        }, [b, b.key, e.bDisableRouting, x]);
-        const v = a.useCallback(
+        }, [y, y.key, e.bDisableRouting, L]);
+        const j = a.useCallback(
             (e) => {
-              x(e.key),
-                n || (0, s.Bm)(w, "tab", e.key),
+              L(e.key),
+                n || (0, s.Bm)(x, "tab", e.key),
+                u?.(e.key),
                 e.onClick && e.onClick(e);
             },
-            [n, w],
+            [n, x, u],
           ),
-          L = t.filter((e) => !e.hidden);
-        if (!L.length) return null;
-        const j = L.find((e) => e.key === y) || L[0],
-          B = _ ? (i ?? L[0].key) : void 0,
-          D = (0, r.jsxs)(r.Fragment, {
+          B = t.filter((e) => !e.hidden);
+        if (!B.length) return null;
+        const D = l ?? v,
+          A = B.find((e) => e.key === D) || B[0],
+          k = f ? (i ?? B[0].key) : void 0,
+          H = (0, r.jsxs)(r.Fragment, {
             children: [
               (0, r.jsx)(m.Z, {
                 className: (0, o.A)(
                   c().GraphicalAssetsTabs,
-                  g && c().GraphicalAssetsTabsVertical,
-                  S && c().ChecklistMode,
-                  f && c().Sticky,
-                  l,
+                  S && c().GraphicalAssetsTabsVertical,
+                  w && c().ChecklistMode,
+                  b && c().Sticky,
+                  d,
                 ),
-                navEntryPreferPosition: _ ? p.iU.PREFERRED_CHILD : p.iU.FIRST,
-                children: L.map((e, t) =>
+                navEntryPreferPosition: f ? p.iU.PREFERRED_CHILD : p.iU.FIRST,
+                children: B.map((e, t) =>
                   (0, r.jsx)(
                     h,
                     {
                       tab: e,
-                      OnTabClick: v,
-                      classNameTab: u,
-                      active: e.key === j.key,
-                      preferredFocus: B === e.key,
+                      OnTabClick: j,
+                      classNameTab: _,
+                      active: e.key === A.key,
+                      preferredFocus: k === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              j && (0, r.jsx)(m.Z, { className: d, children: j.contents }),
+              A && (0, r.jsx)(m.Z, { className: g, children: A.contents }),
             ],
           });
-        return g
+        return S
           ? (0, r.jsx)(m.Z, {
               className: (0, o.A)(c().GraphicalAssetsTabsLayoutVertical),
-              children: D,
+              children: H,
             })
-          : D;
+          : H;
       }
       function h(e) {
         const {

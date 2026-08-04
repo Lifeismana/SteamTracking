@@ -66,7 +66,10 @@
       };
     },
     22584: (e) => {
-      e.exports = { BreadContainer: "GkVFIKIAijTGzfSc4BEQl" };
+      e.exports = {
+        BreadContainer: "GkVFIKIAijTGzfSc4BEQl",
+        HeaderContent: "_2nPcyDvQVywsCXSLbgnUQp",
+      };
     },
     17083: (e, t, n) => {
       "use strict";
@@ -190,10 +193,10 @@
                 })
               : null,
             L = !!(I ? I(j, n) : j),
-            B = "function" == typeof p ? p(L) : p,
-            D = "function" == typeof y ? y(L) : y;
+            D = "function" == typeof p ? p(L) : p,
+            B = "function" == typeof y ? y(L) : y;
           L &&
-            ((B = (function () {
+            ((D = (function () {
               for (
                 var e = arguments.length, t = new Array(e), n = 0;
                 n < e;
@@ -205,10 +208,10 @@
                   return e;
                 })
                 .join(" ");
-            })(B, m)),
-            (D = (0, o.A)({}, D, _)));
+            })(D, m)),
+            (B = (0, o.A)({}, B, _)));
           var R = (0, o.A)(
-            { "aria-current": (L && i) || null, className: B, style: D, to: r },
+            { "aria-current": (L && i) || null, className: D, style: B, to: r },
             C,
           );
           return (
@@ -671,8 +674,8 @@
             include_supported_languages: x,
             include_full_description: j,
             include_included_items: L,
-            include_assets_without_overrides: B,
-            apply_user_filters: D,
+            include_assets_without_overrides: D,
+            apply_user_filters: B,
             include_links: R,
             include_extra_details: T,
           } = n;
@@ -692,8 +695,8 @@
               include_supported_languages: x,
               include_full_description: j,
               include_included_items: L,
-              include_assets_without_overrides: B,
-              apply_user_filters: D,
+              include_assets_without_overrides: D,
+              apply_user_filters: B,
               include_links: R,
               include_extra_details: T,
             };
@@ -730,8 +733,8 @@
             x,
             j,
             L,
-            B,
             D,
+            B,
             R,
             T,
             p,
@@ -1208,8 +1211,8 @@
         x = n(39777),
         j = n(33380),
         L = n.n(j),
-        B = n(12155),
-        D = n(52038),
+        D = n(12155),
+        B = n(52038),
         R = n(70758);
       const T = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
@@ -1233,7 +1236,7 @@
           _ = null != r && null != r && r;
         if (d)
           return (0, a.jsxs)("div", {
-            className: (0, D.A)(
+            className: (0, B.A)(
               "YoutubePreviewContainer",
               R.YoutubePreviewImage,
               e.imageClassnames,
@@ -1241,7 +1244,7 @@
             onClick: () => m(!1),
             children: [
               (0, a.jsx)("img", {
-                className: (0, D.A)(
+                className: (0, B.A)(
                   "YoutubePreviewImage",
                   R.YoutubePreviewImage,
                 ),
@@ -1252,7 +1255,7 @@
               }),
               (0, a.jsx)("div", {
                 className: "YoutubePreviewPlay",
-                children: (0, a.jsx)(B.IOc, {}),
+                children: (0, a.jsx)(D.IOc, {}),
               }),
             ],
           });
@@ -1272,10 +1275,10 @@
               return `${t}h${n}m${(e -= n * e)}s`;
             })(l)}`),
           (0, a.jsxs)("div", {
-            className: (0, D.A)("YoutubePlayer", L().TwitchPlayer),
+            className: (0, B.A)("YoutubePlayer", L().TwitchPlayer),
             children: [
               (0, a.jsx)("img", {
-                className: (0, D.A)(
+                className: (0, B.A)(
                   "YoutubePreviewContainer",
                   R.YoutubePreviewImage,
                   e.imageClassnames,
@@ -1318,30 +1321,30 @@
           className: "page_content_ctn",
           "flow-children": "column",
           autoFocus: !0,
-          children: (0, a.jsx)("div", {
-            className: "page_content",
-            children: (0, a.jsxs)(c.Z, {
-              className: "list_header_area",
-              "flow-children": "row",
-              children: [
-                (0, a.jsx)("div", {
-                  className: "curator_avatar_image",
-                  children: (0, a.jsx)(l.Ii, {
-                    href: n,
-                    children: (0, a.jsx)("img", {
-                      className: "curator_avatar",
-                      src: i,
+          children: (0, a.jsxs)("div", {
+            className: "page_content " + Z.HeaderContent,
+            children: [
+              (0, a.jsx)(q.r, {
+                className: Z.BreadContainer,
+                crumbs: (0, g.Tc)("breadcrumbs", "application_config"),
+              }),
+              (0, a.jsxs)(c.Z, {
+                className: "list_header_area",
+                "flow-children": "row",
+                children: [
+                  (0, a.jsx)("div", {
+                    className: "curator_avatar_image",
+                    children: (0, a.jsx)(l.Ii, {
+                      href: n,
+                      children: (0, a.jsx)("img", {
+                        className: "curator_avatar",
+                        src: i,
+                      }),
                     }),
                   }),
-                }),
-                (0, a.jsxs)("div", {
-                  className: "curator_details",
-                  children: [
-                    (0, a.jsx)(q.r, {
-                      className: Z.BreadContainer,
-                      crumbs: (0, g.Tc)("breadcrumbs", "application_config"),
-                    }),
-                    (0, a.jsx)(l.Ii, {
+                  (0, a.jsx)("div", {
+                    className: "curator_details",
+                    children: (0, a.jsx)(l.Ii, {
                       className: "pageheader curator_name",
                       href: n,
                       children: (0, W.we)(
@@ -1349,10 +1352,10 @@
                         t.group_name,
                       ),
                     }),
-                  ],
-                }),
-              ],
-            }),
+                  }),
+                ],
+              }),
+            ],
           }),
         });
       }
@@ -1369,52 +1372,47 @@
           ),
           n = (0, w.m1)(t),
           i = (0, w.ME)(n?.clanSteamID, e.listid);
-        return (
-          (0, C.vb)(g.TS.LANGUAGE),
-          i
-            ? (0, a.jsxs)(X.Ay, {
-                feature: "curatorlistcapsule",
-                children: [
-                  (0, a.jsx)(Q, { clanInfo: n }),
-                  (0, a.jsx)("div", {
-                    className: "page_content_ctn grayscale",
-                    children: (0, a.jsx)("div", {
-                      className: "page_content",
-                      children: (0, a.jsxs)("div", {
-                        className: z().CuratorListCtn,
-                        children: [
-                          (0, a.jsx)(ie, { listDetails: i }),
-                          (0, w.cc)(i)
-                            ? (0, a.jsx)(ne, { listDetails: i })
-                            : (0, a.jsx)(ae, {
-                                listDetails: i,
-                                rgListItems: i.apps,
-                              }),
-                          (0, a.jsxs)("div", {
-                            className: z().CuratorMoreCtn,
-                            children: [
-                              (0, a.jsx)("h2", {
-                                children: (0, W.we)(
-                                  "#SteamCurator_ExploreMoreTitle",
-                                ),
-                              }),
-                              (0, a.jsx)(l.Ii, {
-                                href: n.vanity_url,
-                                children: (0, W.PP)(
-                                  "#SteamCurator_MoreReviews",
-                                  n.group_name,
-                                ),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
+        if (((0, C.vb)(g.TS.LANGUAGE), !i)) return null;
+        const s = n.is_ogg,
+          r = n.is_creator_home && !n.is_ogg,
+          o = s
+            ? "#SteamCurator_MoreDLC"
+            : r
+              ? "#SteamCurator_MoreProducts"
+              : "#SteamCurator_MoreReviews";
+        return (0, a.jsxs)(X.Ay, {
+          feature: "curatorlistcapsule",
+          children: [
+            (0, a.jsx)(Q, { clanInfo: n }),
+            (0, a.jsx)("div", {
+              className: "page_content_ctn grayscale",
+              children: (0, a.jsx)("div", {
+                className: "page_content",
+                children: (0, a.jsxs)("div", {
+                  className: z().CuratorListCtn,
+                  children: [
+                    (0, a.jsx)(ie, { listDetails: i }),
+                    (0, w.cc)(i)
+                      ? (0, a.jsx)(ne, { listDetails: i })
+                      : (0, a.jsx)(ae, { listDetails: i, rgListItems: i.apps }),
+                    (0, a.jsxs)("div", {
+                      className: z().CuratorMoreCtn,
+                      children: [
+                        (0, a.jsx)("h2", {
+                          children: (0, W.we)("#SteamCurator_ExploreMoreTitle"),
+                        }),
+                        (0, a.jsx)(l.Ii, {
+                          href: n.vanity_url,
+                          children: (0, W.PP)(o, n.group_name),
+                        }),
+                      ],
                     }),
-                  }),
-                ],
-              })
-            : null
-        );
+                  ],
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function ne(e) {
         const { listDetails: t } = e,
@@ -1484,7 +1482,7 @@
         return (0, a.jsxs)(a.Fragment, {
           children: [
             (0, a.jsx)(c.Z, {
-              className: (0, D.A)(z().CuratorList, m && z().CuratorListGrid),
+              className: (0, B.A)(z().CuratorList, m && z().CuratorListGrid),
               "flow-children": "grid",
               children: o.map((e, n) =>
                 (0, a.jsx)(
@@ -1605,7 +1603,7 @@
           x = l.BHasDemo(),
           j = S?.img_url,
           L = `curator_clanid=${o.clanAccountID}&curator_listid=${n.listid}`,
-          B = l.GetStorePageURL() + "/?curator_clanid=" + o.clanAccountID;
+          D = l.GetStorePageURL() + "/?curator_clanid=" + o.clanAccountID;
         return (0, a.jsxs)(c.Z, {
           className: z().CuratorReview,
           autoFocus: i,
@@ -1635,7 +1633,7 @@
               children: [
                 (0, a.jsx)("a", {
                   className: z().GameTitle,
-                  href: B,
+                  href: D,
                   children: l.GetName(),
                 }),
                 (0, a.jsxs)("div", {

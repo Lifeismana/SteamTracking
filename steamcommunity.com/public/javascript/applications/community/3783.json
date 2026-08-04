@@ -292,10 +292,19 @@
     "MyHistory_Title_ActedOnTime": "操作采取时间",
     "MyHistory_Title_TransactedPrice": "价格",
     "MyHistory_Title_Action": "操作",
+    "MyListings_Title_ListedPrice": "上架价格",
+    "MyListings_Title_MedianPrice": "通常售价",
+    "MyListings_ListingPrice": "%1$s<1>（%2$s）</1>",
+    "MyBuyOrders_Title_Quantity": "已购买数量",
+    "MyBuyOrders_Title_BidPrice": "理想价格",
+    "MyBuyOrders_QuantityPurchased": "%1$s / %2$s",
     "MyHistory_NoResults": "未找到结果",
     "MyHistory_Action_Sold": "售出",
     "MyHistory_Action_Purchased": "购买",
     "Breadcrumbs_Label_History": "我的历史记录",
     "Breadcrumbs_Label_Listings": "我的上架物品",
-    "Breadcrumbs_Label_BuyOrders": "我的订购单"
+    "Breadcrumbs_Label_BuyOrders": "我的订购单",
+    "MyListings_SectionHeader_Button_History": "My Market History",
+    "MyListings_SectionHeader_Button_Listings": "My Active Sell Listings (%1$s)",
+    "MyListings_SectionHeader_Button_BuyOrders": "My Active Buy Orders (%1$s)"
 }

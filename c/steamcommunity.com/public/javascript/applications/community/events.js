@@ -237,6 +237,7 @@
             nSummaryMaxLength: _,
           } = _,
           _ = (0, _._)(),
+          _ = (0, _._)(),
           _ = (0, _._)();
         let _ = 2,
           _ = _ + 1;
@@ -260,7 +261,7 @@
                           (0, _.jsxs)("h2", {
                             children: [
                               _._.Localize("#EventBrowse_RecentEvents"),
-                              !_._.IN_GAMEPADUI &&
+                              !_ &&
                                 !!_ &&
                                 (0, _.jsx)(_.Fragment, {
                                   children:
@@ -445,7 +446,8 @@
           ),
           [_],
         );
-        const _ = !!_ && !!_.rtime,
+        const _ = (0, _._)(),
+          _ = !!_ && !!_.rtime,
           _ =
             _ && !!_.announcement_gid && (!_ || 0 == _.length)
               ? _.announcement_gid
@@ -460,7 +462,7 @@
               }))
             : !_ ||
               _ ||
-              _._.IN_GAMEPADUI ||
+              _ ||
               (_ = (0, _.jsx)(_, {
                 nUpdateTime: _.rtime,
                 onClick: _,

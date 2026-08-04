@@ -168,39 +168,34 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1;
       function _(_) {
         return ["PlayerLinkDetails", _];
       }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(_);
-        return (0, _._)(
-          (function (_, _) {
-            const _ =
-              "number" == typeof _
-                ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
-                : _;
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                if (_) {
-                  const _ = await _.load(_);
-                  return (
-                    delete _?.private_data?.account_name,
-                    delete _?.public_data?.account_flags,
-                    delete _?.public_data?.ban_expires_time,
-                    delete _?.public_data?.privacy_state,
-                    1 !== _?.public_data?.profile_state &&
-                      delete _?.private_data,
-                    _
-                  );
-                }
-                return null;
-              },
-              enabled: !!_,
-            };
-          })(_, _),
-        );
+      function _(_, _) {
+        const _ =
+          "number" == typeof _
+            ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
+            : _;
+        return {
+          queryKey: _(_),
+          queryFn: async () => {
+            if (_) {
+              return (function (_) {
+                return (
+                  delete _?.private_data?.account_name,
+                  delete _?.public_data?.account_flags,
+                  delete _?.public_data?.ban_expires_time,
+                  delete _?.public_data?.privacy_state,
+                  _?.public_data?.profile_state !== _ && delete _?.private_data,
+                  _
+                );
+              })(await _.load(_));
+            }
+            return null;
+          },
+          enabled: !!_,
+        };
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -221,7 +216,11 @@
               },
             });
           })(),
-          _ = _(_?.nGifteeAccountID);
+          _ = (function (_) {
+            const _ = (0, _._)(),
+              _ = (0, _._)(_);
+            return (0, _._)(_(_, _));
+          })(_?.nGifteeAccountID);
         if (_.isLoading || !_?.nGifteeAccountID)
           return {
             gifteeHint: _,

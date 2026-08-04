@@ -263,6 +263,8 @@
         TabEditorButtons: "rJGYL9KtL2_oxMfjOUUuq",
         TabSummaryCtn: "_1EYXZbKBjqfFYXpQKyGS-A",
         Expanded: "_1nReDgRjI0XUSMzT635iGm",
+        TabSummaryScrollCtn: "_3xIIJpUNQtsQMPoZD-jibC",
+        TabSummaryCount: "_27V3HBBbQnbk0GU4YWMelc",
         TabSummaryItem: "_2wI0jrWTXmdWAEiz7y1yTH",
         Checked: "_17x-C-paezhBHOimg-XpU5",
         Hide: "_3CFHNxlYvvFQa74bL_-8xT",
@@ -12391,27 +12393,35 @@
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_.TabSummaryCtn, _ && _.Expanded),
               children: [
-                _.map((_) =>
-                  (0, _.jsx)(
-                    "button",
-                    {
-                      "data-label": _.strLabel,
-                      className: (0, _._)(
-                        _.TabSummaryItem,
-                        _.unique_id == _ && _.Checked,
-                        _.bHide && _.Hide,
-                      ),
-                      onClick: () => {
-                        return (
-                          (_ = _.unique_id), void (0, _._)(_ == _ ? void 0 : _)
-                        );
-                        var _;
+                (0, _.jsx)("div", {
+                  className: _.TabSummaryScrollCtn,
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      "button",
+                      {
+                        "data-label": _.strLabel,
+                        className: (0, _._)(
+                          _.TabSummaryItem,
+                          _.unique_id == _ && _.Checked,
+                          _.bHide && _.Hide,
+                        ),
+                        onClick: () => {
+                          return (
+                            (_ = _.unique_id),
+                            void (0, _._)(_ == _ ? void 0 : _)
+                          );
+                          var _;
+                        },
+                        children: _.strLabel,
                       },
-                      children: _.strLabel,
-                    },
-                    _.unique_id,
+                      _.unique_id,
+                    ),
                   ),
-                ),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.TabSummaryCount,
+                  children: (0, _._)("#Sale_Tabs_TabCount", _.length, _.length),
+                }),
                 (0, _.jsx)(_._, {
                   className: _.TabSummaryQuestionTooltip,
                   tooltip: (0, _._)("#Sale_Tabs_QuickFilter"),

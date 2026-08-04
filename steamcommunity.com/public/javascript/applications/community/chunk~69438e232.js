@@ -335,6 +335,7 @@
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
         gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+        dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
         NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
         twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
         DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
@@ -1586,20 +1587,20 @@
         s = 3,
         o = 4;
     },
-    6256: (e, t, r) => {
+    93341: (e, t, r) => {
       "use strict";
       r.d(t, {
-        z5: () => v,
-        _R: () => C,
         $o: () => b,
-        kk: () => B,
-        Ff: () => w,
         FD: () => _,
+        Ff: () => w,
+        _R: () => C,
+        kk: () => B,
+        z5: () => v,
       });
       var i = r(7850),
         n = r(34104),
-        a = r(72737);
-      var s = r(39777),
+        a = r(72737),
+        s = r(39777),
         o = r(90626),
         l = r(12155),
         c = r(57866),
@@ -1743,6 +1744,7 @@
       n.I2, n.sd, n.YX, n.V8;
       n.I2, n.sd, n.YX, n.V8;
       a.Hi, a.xs, a.u_;
+      n.I2, n.sd, n.YX, n.V8;
       n.I2, n.sd, n.YX, n.V8;
       a.Hi, a.xs, a.u_;
     },
@@ -16164,11 +16166,11 @@
         (n.greek = () => r.e(3924).then(r.t.bind(r, 13924, 19))),
         (n.hungarian = () => r.e(9441).then(r.t.bind(r, 99441, 19))),
         (n.indonesian = () => r.e(2584).then(r.t.bind(r, 42584, 19))),
-        (n.italian = () => r.e(7688).then(r.t.bind(r, 97688, 19))),
+        (n.italian = () => r.e(5307).then(r.t.bind(r, 97688, 19))),
         (n.japanese = () => r.e(5407).then(r.t.bind(r, 5407, 19))),
         (n.koreana = () => r.e(5815).then(r.t.bind(r, 65815, 19))),
         (n.latam = () => r.e(4287).then(r.t.bind(r, 44287, 19))),
-        (n.malay = () => r.e(8160).then(r.t.bind(r, 58160, 19))),
+        (n.malay = () => r.e(8160).then(r.t.bind(r, 35779, 19))),
         (n.norwegian = () => r.e(3648).then(r.t.bind(r, 33648, 19))),
         (n.polish = () => r.e(2649).then(r.t.bind(r, 22649, 19))),
         (n.portuguese = () => r.e(3629).then(r.t.bind(r, 23629, 19))),
@@ -27390,7 +27392,7 @@
         c = r(64753),
         d = r(39777),
         u = r(90626),
-        m = r(6256),
+        m = r(93341),
         p = r(34629),
         g = r(41735),
         _ = r.n(g),
@@ -31755,12 +31757,13 @@
             bHasGamePrivacy: j,
             bNoMask: x,
             bEllipsisName: I,
-            ...T
+            bDropPadding: T,
+            ...F
           } = this.props;
-          let F = null,
-            W = null,
+          let W = null,
             O = null,
-            U = [
+            U = null,
+            A = [
               e,
               C().personaNameAndStatusLabel,
               (0, w.rO)(r),
@@ -31768,53 +31771,53 @@
               x ? C().NoMask : void 0,
             ];
           v || r.has_public_party_beacon
-            ? (W = (0, i.jsx)(z, { persona: r }))
+            ? (O = (0, i.jsx)(z, { persona: r }))
             : (0, n.aPS)(a)
-              ? ((W = (0, B.we)("#PersonaStateBlocked")), U.push(C().blocked))
+              ? ((O = (0, B.we)("#PersonaStateBlocked")), A.push(C().blocked))
               : r.is_ingame
-                ? ((W =
+                ? ((O =
                     !r.is_in_nonsteam_game || s || (0, n.S$u)(a)
                       ? r.GetCurrentGameName()
                       : (0, B.we)("#PersonaStateInNonSteamGame")),
                   s || y
                     ? s &&
                       r.is_awayOrSnooze &&
-                      (O = (0, B.we)("#PersonaStateAway"))
-                    : (O = r.GetCurrentGameRichPresence()))
+                      (U = (0, B.we)("#PersonaStateAway"))
+                    : (U = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (W = (0, B.we)("#PersonaStateWatchingBroadcast")),
-            W || (W = r.GetLocalizedOnlineStatus()),
-            _ && (W = _());
-          let A = !y && !m;
-          !1 === m && (A = !0),
-            r.is_awayOrSnooze && A && (F = (0, i.jsx)(S.p, { persona: r }));
-          let N = (0, i.jsx)(i.Fragment, {});
+                  (O = (0, B.we)("#PersonaStateWatchingBroadcast")),
+            O || (O = r.GetLocalizedOnlineStatus()),
+            _ && (O = _());
+          let N = !y && !m;
+          !1 === m && (N = !0),
+            r.is_awayOrSnooze && N && (W = (0, i.jsx)(S.p, { persona: r }));
+          let k = (0, i.jsx)(i.Fragment, {});
           t
-            ? (N = (0, i.jsx)("div", {
+            ? (k = (0, i.jsx)("div", {
                 className: "ContextMenuButton",
                 onClick: t,
                 children: (0, i.jsx)(g.GB9, {}),
               }))
-            : U.push(C().noContextMenu),
-            y && U.push(C().hidePersona),
-            h && (O = h()),
-            (!d && O) || U.push(C().twoLine);
-          const k = !r.is_ingame && !p,
-            D = !u && O,
-            P = W && (!d || !D),
-            L = (0, n.IDH)(R.TS.LAUNCHER_TYPE);
-          let q = l && !o,
-            E = q ? l : r.m_strPlayerName,
-            G = !y && (P || k) && D;
+            : A.push(C().noContextMenu),
+            y && A.push(C().hidePersona),
+            h && (U = h()),
+            (!d && U) || A.push(C().twoLine);
+          const D = !r.is_ingame && !p,
+            P = !u && U,
+            L = O && (!d || !P),
+            q = (0, n.IDH)(R.TS.LAUNCHER_TYPE);
+          let E = l && !o,
+            G = E ? l : r.m_strPlayerName,
+            H = !y && (L || D) && P;
           return (0, i.jsxs)("div", {
-            ...T,
-            className: (0, b.A)(...U),
+            ...F,
+            className: (0, b.A)(...A),
             onContextMenu: t,
             children: [
               (0, i.jsxs)("div", {
                 className: (0, b.A)(
                   C().statusAndName,
-                  G ? C().threeLines : void 0,
+                  H ? C().threeLines : void 0,
                 ),
                 children: [
                   (0, i.jsxs)("div", {
@@ -31823,7 +31826,7 @@
                       I ? C().EllipsisName : void 0,
                     ),
                     children: [
-                      E || " ",
+                      G || " ",
                       o &&
                         l &&
                         (0, i.jsxs)("span", {
@@ -31838,34 +31841,35 @@
                       title: (0, B.we)("#User_ToggleDoNotDisturb"),
                       children: (0, i.jsx)(g.Aj0, {}),
                     }),
-                  q &&
+                  E &&
                     (0, i.jsx)("span", {
                       className: C().playerNicknameBracket,
                       title: (0, B.we)("#isNickname"),
                       children: " *",
                     }),
                   (0, i.jsx)(M.X, { persona: r }),
-                  F,
+                  W,
                   (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
-                    L &&
+                    q &&
                     (0, i.jsx)("div", {
                       className: C().PendingPersona,
                       title: (0, B.we)("#SteamChina_PendingPersonaName"),
                       children: (0, i.jsx)(g.zD7, {}),
                     }),
-                  N,
+                  k,
                 ],
               }),
               !y &&
                 (0, i.jsxs)("div", {
                   className: C().richPresenceContainer,
                   children: [
-                    (P || k) &&
+                    (L || D) &&
                       (0, i.jsxs)("div", {
                         className: (0, b.A)(
                           C().gameName,
-                          G ? C().threeLines : void 0,
+                          H ? C().threeLines : void 0,
                           C().richPresenceLabel,
+                          T && C().dropPadding,
                           "no-drag",
                         ),
                         children: [
@@ -31875,13 +31879,17 @@
                               title: (0, B.we)("#User_GameInfoHidden"),
                               children: (0, i.jsx)(g.jZl, {}),
                             }),
-                          W,
+                          O,
                         ],
                       }),
-                    D &&
+                    P &&
                       (0, i.jsxs)("div", {
-                        className: (0, b.A)(C().richPresenceLabel, "no-drag"),
-                        children: [O, " "],
+                        className: (0, b.A)(
+                          C().richPresenceLabel,
+                          T && C().dropPadding,
+                          "no-drag",
+                        ),
+                        children: [U, " "],
                       }),
                   ],
                 }),
@@ -43504,7 +43512,7 @@
         A = r(14987),
         N = r(60014),
         k = r(35380),
-        D = r(6256),
+        D = r(93341),
         P = r(96006),
         L = r(94191),
         q = r(94095),
@@ -46045,7 +46053,7 @@
       "use strict";
       r.d(t, { J: () => N });
       var i = r(7850),
-        n = r(6256),
+        n = r(93341),
         a = r(52038),
         s = r(78327),
         o = r(58855),
@@ -47244,80 +47252,84 @@
             tabs: t,
             bDisableRouting: r,
             startingTab: s,
-            classNameCtn: l,
-            classNameTab: d,
-            classNameTabContent: u,
-            preferredFocus: _,
-            bVerticalTabs: B,
-            bSticky: h,
-            bChecklistMode: y,
+            controlledTab: l,
+            OnTabChanged: d,
+            classNameCtn: u,
+            classNameTab: _,
+            classNameTabContent: B,
+            preferredFocus: h,
+            bVerticalTabs: y,
+            bSticky: f,
+            bChecklistMode: w,
           } = e,
-          f = (0, g.zy)(),
-          w = (0, g.W6)(),
-          [S, M] = (0, n.useState)(() => {
+          S = (0, g.zy)(),
+          M = (0, g.W6)(),
+          [v, C] = (0, n.useState)(() => {
             var e;
             return (
               s ||
               (!r &&
-              (0, o.f3)(f, "tab") &&
-              null !== (e = (0, o.f3)(f, "tab")) &&
+              (0, o.f3)(S, "tab") &&
+              null !== (e = (0, o.f3)(S, "tab")) &&
               void 0 !== e
                 ? e
                 : "")
             );
           });
         (0, n.useEffect)(() => {
-          if (!e.bDisableRouting && f) {
-            const e = (0, o.f3)(f, "tab");
-            e && M(e);
+          if (!e.bDisableRouting && S) {
+            const e = (0, o.f3)(S, "tab");
+            e && C(e);
           }
-        }, [f, f.key, e.bDisableRouting, M]);
-        const v = n.useCallback(
+        }, [S, S.key, e.bDisableRouting, C]);
+        const R = n.useCallback(
             (e) => {
-              M(e.key),
-                r || (0, o.Bm)(w, "tab", e.key),
+              C(e.key),
+                r || (0, o.Bm)(M, "tab", e.key),
+                null == d || d(e.key),
                 e.onClick && e.onClick(e);
             },
-            [r, w],
+            [r, M, d],
           ),
-          C = t.filter((e) => !e.hidden);
-        if (!C.length) return null;
-        const R = C.find((e) => e.key === S) || C[0],
-          z = _ ? (null != s ? s : C[0].key) : void 0,
-          j = (0, i.jsxs)(i.Fragment, {
+          z = t.filter((e) => !e.hidden);
+        if (!z.length) return null;
+        const j = null != l ? l : v,
+          x = z.find((e) => e.key === j) || z[0],
+          I = h ? (null != s ? s : z[0].key) : void 0,
+          T = (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)(m.Z, {
                 className: (0, a.A)(
                   c().GraphicalAssetsTabs,
-                  B && c().GraphicalAssetsTabsVertical,
-                  y && c().ChecklistMode,
-                  h && c().Sticky,
-                  l,
+                  y && c().GraphicalAssetsTabsVertical,
+                  w && c().ChecklistMode,
+                  f && c().Sticky,
+                  u,
                 ),
-                navEntryPreferPosition: _ ? p.iU.PREFERRED_CHILD : p.iU.FIRST,
-                children: C.map((e, t) =>
+                navEntryPreferPosition: h ? p.iU.PREFERRED_CHILD : p.iU.FIRST,
+                children: z.map((e, t) =>
                   (0, i.jsx)(
                     b,
                     {
                       tab: e,
-                      OnTabClick: v,
-                      classNameTab: d,
-                      active: e.key === R.key,
-                      preferredFocus: z === e.key,
+                      OnTabClick: R,
+                      classNameTab: _,
+                      active: e.key === x.key,
+                      preferredFocus: I === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              R && (0, i.jsx)(m.Z, { className: u, children: R.contents }),
+              x && (0, i.jsx)(m.Z, { className: B, children: x.contents }),
             ],
           });
-        return B
+        return y
           ? (0, i.jsx)(m.Z, {
               className: (0, a.A)(c().GraphicalAssetsTabsLayoutVertical),
-              children: j,
+              children: T,
             })
-          : j;
+          : T;
       }
       function B(e) {
         const { statusType: t = "success", bShowStatusBox: r, children: n } = e;

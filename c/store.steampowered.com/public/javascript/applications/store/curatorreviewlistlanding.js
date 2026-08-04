@@ -68,6 +68,7 @@
     chunkid: (module) => {
       module.exports = {
         BreadContainer: "GkVFIKIAijTGzfSc4BEQl",
+        HeaderContent: "_2nPcyDvQVywsCXSLbgnUQp",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1387,30 +1388,30 @@
           className: "page_content_ctn",
           "flow-children": "column",
           autoFocus: !0,
-          children: (0, _.jsx)("div", {
-            className: "page_content",
-            children: (0, _.jsxs)(_._, {
-              className: "list_header_area",
-              "flow-children": "row",
-              children: [
-                (0, _.jsx)("div", {
-                  className: "curator_avatar_image",
-                  children: (0, _.jsx)(_._, {
-                    href: _,
-                    children: (0, _.jsx)("img", {
-                      className: "curator_avatar",
-                      src: _,
+          children: (0, _.jsxs)("div", {
+            className: "page_content " + _.HeaderContent,
+            children: [
+              (0, _.jsx)(_._, {
+                className: _.BreadContainer,
+                crumbs: (0, _._)("breadcrumbs", "application_config"),
+              }),
+              (0, _.jsxs)(_._, {
+                className: "list_header_area",
+                "flow-children": "row",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "curator_avatar_image",
+                    children: (0, _.jsx)(_._, {
+                      href: _,
+                      children: (0, _.jsx)("img", {
+                        className: "curator_avatar",
+                        src: _,
+                      }),
                     }),
                   }),
-                }),
-                (0, _.jsxs)("div", {
-                  className: "curator_details",
-                  children: [
-                    (0, _.jsx)(_._, {
-                      className: _.BreadContainer,
-                      crumbs: (0, _._)("breadcrumbs", "application_config"),
-                    }),
-                    (0, _.jsx)(_._, {
+                  (0, _.jsx)("div", {
+                    className: "curator_details",
+                    children: (0, _.jsx)(_._, {
                       className: "pageheader curator_name",
                       href: _,
                       children: (0, _._)(
@@ -1418,10 +1419,10 @@
                         _.group_name,
                       ),
                     }),
-                  ],
-                }),
-              ],
-            }),
+                  }),
+                ],
+              }),
+            ],
           }),
         });
       }
@@ -1440,58 +1441,56 @@
           ),
           _ = (0, _._)(_),
           _ = (0, _._)(_?.clanSteamID, _.listid);
-        return (
-          (0, _._)(_._.LANGUAGE),
-          _
-            ? (0, _.jsxs)(_._, {
-                feature: "curatorlistcapsule",
-                children: [
-                  (0, _.jsx)(_, {
-                    clanInfo: _,
-                  }),
-                  (0, _.jsx)("div", {
-                    className: "page_content_ctn grayscale",
-                    children: (0, _.jsx)("div", {
-                      className: "page_content",
-                      children: (0, _.jsxs)("div", {
-                        className: _().CuratorListCtn,
-                        children: [
-                          (0, _.jsx)(_, {
-                            listDetails: _,
-                          }),
-                          (0, _._)(_)
-                            ? (0, _.jsx)(_, {
-                                listDetails: _,
-                              })
-                            : (0, _.jsx)(_, {
-                                listDetails: _,
-                                rgListItems: _.apps,
-                              }),
-                          (0, _.jsxs)("div", {
-                            className: _().CuratorMoreCtn,
-                            children: [
-                              (0, _.jsx)("h2", {
-                                children: (0, _._)(
-                                  "#SteamCurator_ExploreMoreTitle",
-                                ),
-                              }),
-                              (0, _.jsx)(_._, {
-                                href: _.vanity_url,
-                                children: (0, _._)(
-                                  "#SteamCurator_MoreReviews",
-                                  _.group_name,
-                                ),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
+        if (((0, _._)(_._.LANGUAGE), !_)) return null;
+        const _ = _.is_ogg,
+          _ = _.is_creator_home && !_.is_ogg,
+          _ = _
+            ? "#SteamCurator_MoreDLC"
+            : _
+              ? "#SteamCurator_MoreProducts"
+              : "#SteamCurator_MoreReviews";
+        return (0, _.jsxs)(_._, {
+          feature: "curatorlistcapsule",
+          children: [
+            (0, _.jsx)(_, {
+              clanInfo: _,
+            }),
+            (0, _.jsx)("div", {
+              className: "page_content_ctn grayscale",
+              children: (0, _.jsx)("div", {
+                className: "page_content",
+                children: (0, _.jsxs)("div", {
+                  className: _().CuratorListCtn,
+                  children: [
+                    (0, _.jsx)(_, {
+                      listDetails: _,
                     }),
-                  }),
-                ],
-              })
-            : null
-        );
+                    (0, _._)(_)
+                      ? (0, _.jsx)(_, {
+                          listDetails: _,
+                        })
+                      : (0, _.jsx)(_, {
+                          listDetails: _,
+                          rgListItems: _.apps,
+                        }),
+                    (0, _.jsxs)("div", {
+                      className: _().CuratorMoreCtn,
+                      children: [
+                        (0, _.jsx)("h2", {
+                          children: (0, _._)("#SteamCurator_ExploreMoreTitle"),
+                        }),
+                        (0, _.jsx)(_._, {
+                          href: _.vanity_url,
+                          children: (0, _._)(_, _.group_name),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          ],
+        });
       }
       function _(_) {
         const { listDetails: _ } = _,

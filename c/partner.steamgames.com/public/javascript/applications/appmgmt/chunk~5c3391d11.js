@@ -123,8 +123,8 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -202,6 +202,7 @@
       _._, _._, _._, _._;
       _._, _._, _._, _._;
       _._, _._, _._;
+      _._, _._, _._, _._;
       _._, _._, _._, _._;
       _._, _._, _._;
     },
@@ -3261,6 +3262,8 @@
             tabs: _,
             bDisableRouting: _,
             startingTab: _,
+            controlledTab: _,
+            OnTabChanged: _,
             classNameCtn: _,
             classNameTab: _,
             classNameTabContent: _,
@@ -3285,13 +3288,15 @@
             (_) => {
               _(_.key),
                 _ || (0, _._)(_, "tab", _.key),
+                _?.(_.key),
                 _.onClick && _.onClick(_);
             },
-            [_, _],
+            [_, _, _],
           ),
           _ = _.filter((_) => !_.hidden);
         if (!_.length) return null;
-        const _ = _.find((_) => _.key === _) || _[0],
+        const _ = _ ?? _,
+          _ = _.find((_) => _.key === _) || _[0],
           _ = _ ? (_ ?? _[0].key) : void 0,
           _ = (0, _.jsxs)(_.Fragment, {
             children: [

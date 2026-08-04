@@ -325,6 +325,7 @@
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
         gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+        dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
         NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
         twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
         DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
@@ -50026,6 +50027,7 @@
             bHasGamePrivacy: _,
             bNoMask: _,
             bEllipsisName: _,
+            bDropPadding: _,
             ..._
           } = this.props;
           let _ = null,
@@ -50145,6 +50147,7 @@
                           _().gameName,
                           _ ? _().threeLines : void 0,
                           _().richPresenceLabel,
+                          _ && _().dropPadding,
                           "no-drag",
                         ),
                         children: [
@@ -50159,7 +50162,11 @@
                       }),
                     _ &&
                       (0, _.jsxs)("div", {
-                        className: (0, _._)(_().richPresenceLabel, "no-drag"),
+                        className: (0, _._)(
+                          _().richPresenceLabel,
+                          _ && _().dropPadding,
+                          "no-drag",
+                        ),
                         children: [_, " "],
                       }),
                   ],

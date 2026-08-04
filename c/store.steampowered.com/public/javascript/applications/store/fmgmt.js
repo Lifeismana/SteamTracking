@@ -7603,13 +7603,7 @@
           } = _(),
           _ = (0, _._)(`(min-width: ${_}px)`),
           _ = (0, _._)(`(min-width: ${_}px)`);
-        return _._.IN_GAMEPADUI
-          ? "mobile"
-          : _
-            ? "desktop"
-            : _
-              ? "tablet"
-              : "mobile";
+        return (0, _._)() ? "mobile" : _ ? "desktop" : _ ? "tablet" : "mobile";
       }
       function _(_) {
         return _.children(_());

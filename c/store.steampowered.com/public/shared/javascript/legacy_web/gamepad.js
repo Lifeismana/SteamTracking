@@ -10885,8 +10885,8 @@
                   },
                   xinput_index: {
                     _: 5,
-                    _: _.readUint32,
-                    _: _.writeUint32,
+                    _: _.readInt32,
+                    _: _.writeInt32,
                   },
                   is_wireless_steam_dongle: {
                     _: 6,
@@ -13420,7 +13420,7 @@
           let _ = this.m_navigationSource.Value,
             _ = _.nLastActiveGamepadIndex;
           return (
-            _.nActiveGamepadIndex &&
+            null != _.nActiveGamepadIndex &&
               _.nActiveGamepadIndex >= 0 &&
               (_ = _.nActiveGamepadIndex),
             this.m_navigationSource.Set({

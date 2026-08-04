@@ -2012,10 +2012,12 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   outline: 2px solid #fff;
   outline-offset: -2px;
 }
-._0BH1ydyFmSnUvoVK2hIc:disabled {
+._0BH1ydyFmSnUvoVK2hIc:disabled,
+._0BH1ydyFmSnUvoVK2hIc[aria-disabled="true"] {
   opacity: 0.35;
 }
-._0BH1ydyFmSnUvoVK2hIc:disabled:hover {
+._0BH1ydyFmSnUvoVK2hIc:disabled:hover,
+._0BH1ydyFmSnUvoVK2hIc[aria-disabled="true"]:hover {
   background: var(--background);
   cursor: default;
 }

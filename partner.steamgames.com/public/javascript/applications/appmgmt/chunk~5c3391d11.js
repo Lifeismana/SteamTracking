@@ -114,19 +114,19 @@
         l = 3,
         o = 4;
     },
-    6256: (e, t, r) => {
+    93341: (e, t, r) => {
       "use strict";
       r.d(t, {
-        z5: () => H,
-        _R: () => w,
         $o: () => x,
-        kk: () => h,
         FD: () => g,
+        _R: () => w,
+        kk: () => h,
+        z5: () => H,
       });
       var s = r(7850),
         i = r(34104),
-        a = r(72737);
-      var l = r(39777),
+        a = r(72737),
+        l = r(39777),
         o = r(90626),
         n = r(12155),
         c = r(57866),
@@ -194,6 +194,7 @@
       i.I2, i.sd, i.YX, i.V8;
       a.Hi, a.xs, a.u_;
       i.I2, i.sd, i.YX, i.V8;
+      i.I2, i.sd, i.YX, i.V8;
       a.Hi, a.xs, a.u_;
     },
     34104: (e, t, r) => {
@@ -231,7 +232,7 @@
         c = r(64753),
         C = r(39777),
         d = r(90626),
-        u = r(6256),
+        u = r(93341),
         m = r(34629),
         p = r(41735),
         g = r.n(p),
@@ -696,7 +697,7 @@
         p = 4;
       var g,
         h = r(90626),
-        x = r(6256),
+        x = r(93341),
         f = r(34629),
         _ = r(45730),
         H = r(88006),
@@ -3145,73 +3146,77 @@
             tabs: t,
             bDisableRouting: r,
             startingTab: l,
-            classNameCtn: n,
-            classNameTab: C,
-            classNameTabContent: d,
-            preferredFocus: g,
-            bVerticalTabs: h,
-            bSticky: f,
-            bChecklistMode: _,
+            controlledTab: n,
+            OnTabChanged: C,
+            classNameCtn: d,
+            classNameTab: g,
+            classNameTabContent: h,
+            preferredFocus: f,
+            bVerticalTabs: _,
+            bSticky: H,
+            bChecklistMode: w,
           } = e,
-          H = (0, p.zy)(),
-          w = (0, p.W6)(),
-          [v, b] = (0, i.useState)(
+          v = (0, p.zy)(),
+          b = (0, p.W6)(),
+          [L, j] = (0, i.useState)(
             () =>
               l ||
-              (!r && (0, o.f3)(H, "tab") ? ((0, o.f3)(H, "tab") ?? "") : ""),
+              (!r && (0, o.f3)(v, "tab") ? ((0, o.f3)(v, "tab") ?? "") : ""),
           );
         (0, i.useEffect)(() => {
-          if (!e.bDisableRouting && H) {
-            const e = (0, o.f3)(H, "tab");
-            e && b(e);
+          if (!e.bDisableRouting && v) {
+            const e = (0, o.f3)(v, "tab");
+            e && j(e);
           }
-        }, [H, H.key, e.bDisableRouting, b]);
-        const L = i.useCallback(
+        }, [v, v.key, e.bDisableRouting, j]);
+        const y = i.useCallback(
             (e) => {
-              b(e.key),
-                r || (0, o.Bm)(w, "tab", e.key),
+              j(e.key),
+                r || (0, o.Bm)(b, "tab", e.key),
+                C?.(e.key),
                 e.onClick && e.onClick(e);
             },
-            [r, w],
+            [r, b, C],
           ),
-          j = t.filter((e) => !e.hidden);
-        if (!j.length) return null;
-        const y = j.find((e) => e.key === v) || j[0],
-          V = g ? (l ?? j[0].key) : void 0,
-          k = (0, s.jsxs)(s.Fragment, {
+          V = t.filter((e) => !e.hidden);
+        if (!V.length) return null;
+        const k = n ?? L,
+          R = V.find((e) => e.key === k) || V[0],
+          S = f ? (l ?? V[0].key) : void 0,
+          M = (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsx)(u.Z, {
                 className: (0, a.A)(
                   c().GraphicalAssetsTabs,
-                  h && c().GraphicalAssetsTabsVertical,
-                  _ && c().ChecklistMode,
-                  f && c().Sticky,
-                  n,
+                  _ && c().GraphicalAssetsTabsVertical,
+                  w && c().ChecklistMode,
+                  H && c().Sticky,
+                  d,
                 ),
-                navEntryPreferPosition: g ? m.iU.PREFERRED_CHILD : m.iU.FIRST,
-                children: j.map((e, t) =>
+                navEntryPreferPosition: f ? m.iU.PREFERRED_CHILD : m.iU.FIRST,
+                children: V.map((e, t) =>
                   (0, s.jsx)(
                     x,
                     {
                       tab: e,
-                      OnTabClick: L,
-                      classNameTab: C,
-                      active: e.key === y.key,
-                      preferredFocus: V === e.key,
+                      OnTabClick: y,
+                      classNameTab: g,
+                      active: e.key === R.key,
+                      preferredFocus: S === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              y && (0, s.jsx)(u.Z, { className: d, children: y.contents }),
+              R && (0, s.jsx)(u.Z, { className: h, children: R.contents }),
             ],
           });
-        return h
+        return _
           ? (0, s.jsx)(u.Z, {
               className: (0, a.A)(c().GraphicalAssetsTabsLayoutVertical),
-              children: k,
+              children: M,
             })
-          : k;
+          : M;
       }
       function h(e) {
         const { statusType: t = "success", bShowStatusBox: r, children: i } = e;

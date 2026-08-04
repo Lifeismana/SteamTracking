@@ -33423,8 +33423,8 @@ Error generating stack: ` +
                   },
                   xinput_index: {
                     n: 5,
-                    br: ReaderProto.readUint32,
-                    bw: WriterProto.writeUint32,
+                    br: ReaderProto.readInt32,
+                    bw: WriterProto.writeInt32,
                   },
                   is_wireless_steam_dongle: {
                     n: 6,
@@ -36715,6 +36715,9 @@ Error generating stack: ` +
           }
         });
     }),
+    k_EStoreAppType_Software,
+    k_EStoreAppType_Video,
+    init_steammessages_storebrowse_estoreapptype = __esmMin(() => {}),
     k_EStoreBrowseFilterFailure_None,
     init_steammessages_storebrowse_estorebrowsefilterfailure = __esmMin(
       () => {},
@@ -36750,6 +36753,9 @@ Error generating stack: ` +
     StoreItem_FreeWeekend,
     StoreItem_Link,
     StoreItem_PackageGroup,
+    StoreItem_Anticheat,
+    StoreItem_Eula,
+    StoreItem_AIGeneratedContentService,
     StoreItem_ExtraDetails,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
@@ -36783,6 +36789,7 @@ Error generating stack: ` +
         init_msgprotobuf(),
         init_steammessages_steamawards_types_pb(),
         init_contenthubs_pb(),
+        init_steammessages_storebrowse_estoreapptype(),
         init_steammessages_storebrowse_estorebrowsefilterfailure(),
         (StoreGameRating = class t extends import_google_protobuf$1.Message {
           static ImplementsStaticInterface() {}
@@ -39736,6 +39743,249 @@ Error generating stack: ` +
             return `StoreItem_PackageGroup`;
           }
         }),
+        (StoreItem_Anticheat = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.kernel_mode || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  kernel_mode: {
+                    n: 1,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  uninstall_completely: {
+                    n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  boot_protection: {
+                    n: 3,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  boot_protection_name: {
+                    n: 4,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  name: {
+                    n: 5,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  name_loc: {
+                    n: 6,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_Anticheat`;
+          }
+        }),
+        (StoreItem_Eula = class t extends import_google_protobuf$1.Message {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.name || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  name: {
+                    n: 1,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  url: {
+                    n: 2,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_Eula`;
+          }
+        }),
+        (StoreItem_AIGeneratedContentService = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.name || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  name: {
+                    n: 1,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  url: {
+                    n: 2,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_AIGeneratedContentService`;
+          }
+        }),
         (StoreItem_ExtraDetails = class t extends (
           import_google_protobuf$1.Message
         ) {
@@ -39748,7 +39998,7 @@ Error generating stack: ` +
                 n,
                 0,
                 -1,
-                [1],
+                [1, 10],
                 null,
               );
           }
@@ -39758,7 +40008,55 @@ Error generating stack: ` +
             return (
               (t.sm_m ||= {
                 proto: t,
-                fields: { steam_award: { n: 1, c: SteamAward, r: !0, q: !0 } },
+                fields: {
+                  steam_award: { n: 1, c: SteamAward, r: !0, q: !0 },
+                  vetted: {
+                    n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  no_mouse_keyboard_support: {
+                    n: 3,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  controller_wizard_complete: {
+                    n: 4,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  drm_third_party_type: {
+                    n: 5,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  drm_activation_limit: {
+                    n: 6,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  user_account_third_party: {
+                    n: 7,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  user_account_third_party_link_to_steam: {
+                    n: 8,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  anticheat: { n: 9, c: StoreItem_Anticheat },
+                  eula: { n: 10, c: StoreItem_Eula, r: !0, q: !0 },
+                  ai_generation_service: {
+                    n: 11,
+                    c: StoreItem_AIGeneratedContentService,
+                  },
+                  refund_checks_ea_playtime: {
+                    n: 12,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                },
               }),
               t.sm_m
             );
@@ -42246,7 +42544,6 @@ Error generating stack: ` +
           FROM_WEB: !1,
           WEBSITE_ID: `Unknown`,
           IN_STEAMUI: !1,
-          IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
           ON_FRAME: !1,
           IS_STEAMOS: !1,
@@ -42382,7 +42679,20 @@ Error generating stack: ` +
     import_client = require_client();
   init_configconstants(), init_configconstants(), init_coreconfig();
   var ConfigContext = import_react$3.createContext({}),
-    import_google_protobuf = __toESM(require_google_protobuf(), 1);
+    useConfigContext = (t) => {
+      let n = import_react$3.useContext(ConfigContext);
+      return (
+        AssertMsg(
+          t?.bSuppressAssert || n.IN_GAMEPADUI !== void 0,
+          `Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application.`,
+        ),
+        n
+      );
+    };
+  function useInGamepadUI(t) {
+    return useConfigContext(t)?.IN_GAMEPADUI;
+  }
+  var import_google_protobuf = __toESM(require_google_protobuf(), 1);
   init_protohelpers(), init_msgprotobuf();
   var CAccountPrivacyCookiePreferences = class t extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
@@ -43092,6 +43402,26 @@ Error generating stack: ` +
       LocalizePlural(t, n, ...r) {
         return l(n === 1 || n === `1` ? t : t + `_Plural`, n, ...r);
       },
+      GetAppTypeLocKey(t, n) {
+        switch (n) {
+          case 6:
+            return t + `_Software`;
+          case 7:
+            return t + `_Video`;
+          default:
+            return t;
+        }
+      },
+      GetAppTypePluralLocKey(t, n) {
+        switch (n) {
+          case 6:
+            return t + `_Software`;
+          case 7:
+            return t + `_Video`;
+          default:
+            return t;
+        }
+      },
       LocalizeInSpecificLang(t, n, ...r) {
         return ReplaceArgumentsInString(s(n, [t]), ...r);
       },
@@ -43100,6 +43430,12 @@ Error generating stack: ` +
       },
       IsReady() {
         return o;
+      },
+      HasKey(t) {
+        return CurrentLocalizationSettings().languages.some((r) => {
+          let i = n.get(r.strLanguage);
+          return i ? i.has(t) : !1;
+        });
       },
     };
   }
@@ -43123,7 +43459,8 @@ Error generating stack: ` +
         init_languages(),
         init_languagesource(),
         init_replacelocarguments(),
-        init_locready();
+        init_locready(),
+        init_steammessages_storebrowse_pb();
     }),
     require_classnames = __commonJSMin((t, n) => {
       (function () {
@@ -43825,20 +44162,20 @@ Error generating stack: ` +
               o === `right`)
             ) {
               let r = _ ? t.left : t.right;
-              u = document.documentElement.clientWidth - (r + n.width);
+              u = document.body.clientWidth - (r + n.width);
             }
             o === void 0 &&
               (u = s
                 ? t.right - n.width
-                : document.documentElement.clientWidth - (t.left + n.width)),
+                : document.body.clientWidth - (t.left + n.width)),
               (u = Math.min(u, 0));
           }
           o === `left`
             ? _
               ? ((l.current.style.left = `unset`),
-                (l.current.style.right = `${document.documentElement.clientWidth - t.right + u}px`))
+                (l.current.style.right = `${document.body.clientWidth - t.right + u}px`))
               : ((l.current.style.left = `unset`),
-                (l.current.style.right = `${document.documentElement.clientWidth - t.left + u}px`))
+                (l.current.style.right = `${document.body.clientWidth - t.left + u}px`))
             : o === `right`
               ? _
                 ? ((l.current.style.left = `${t.left + u}px`),
@@ -43848,7 +44185,7 @@ Error generating stack: ` +
               : o === void 0 &&
                 (s
                   ? ((l.current.style.left = `unset`),
-                    (l.current.style.right = `${document.documentElement.clientWidth - t.right + u}px`))
+                    (l.current.style.right = `${document.body.clientWidth - t.right + u}px`))
                   : ((l.current.style.left = `${t.left + u}px`),
                     (l.current.style.right = `unset`)));
         }
@@ -48520,9 +48857,10 @@ Error generating stack: ` +
         } = t,
         m = n,
         h = useStoreNavEventContext(),
-        g = useRenderContext().manifest;
+        g = useRenderContext().manifest,
+        _ = useInGamepadUI();
       s && (m = GetStoreNavLink(typeof s == `boolean` ? h : { ...h, ...s }, m));
-      let { bIsExternal: _, targetRoute: v } = import_react$3.useMemo(() => {
+      let { bIsExternal: v, targetRoute: y } = import_react$3.useMemo(() => {
         let t = m;
         if (i || r) return { bIsExternal: !0, targetRoute: t };
         if (absoluteUrlRegex.test(t)) {
@@ -48538,13 +48876,15 @@ Error generating stack: ` +
       }, [r, i, m, g?.routes]);
       i &&
         (Config.IN_CLIENT
-          ? (v = CreateSteamClientURL(`openurl/${m}`))
+          ? (y = CreateSteamClientURL(`openurl/${m}`))
           : ((p.target ??= `_blank`), (p.rel ??= `noreferrer noopener`)));
-      let y = useOnClick(v, _, o);
-      return (0, import_jsx_runtime$1.jsx)(
-        l && Config.IN_GAMEPADUI ? FocusableAnchor : `a`,
-        { ref: u, href: m, onClick: y, ...p },
-      );
+      let x = useOnClick(y, v, o);
+      return (0, import_jsx_runtime$1.jsx)(l && _ ? FocusableAnchor : `a`, {
+        ref: u,
+        href: m,
+        onClick: x,
+        ...p,
+      });
     }),
     k_EAppTypeGame = 1,
     k_EAppTypeApplication = 2,
@@ -48552,6 +48892,7 @@ Error generating stack: ` +
     k_EAppTypeDemo = 8,
     k_EAppTypeDLC = 32,
     k_EAppTypeConfig = 256,
+    k_EAppTypeHardware = 512,
     k_EAppTypeVideo = 2048,
     k_EAppTypeMusicAlbum = 8192,
     k_EAppTypeBeta = 65536;
@@ -48616,6 +48957,7 @@ Error generating stack: ` +
     app_DLC = `-WCgItbQf-E-`,
     app_Music = `TUG1nFX-yq8-`,
     app_Beta = `gJJkOluz-M4-`,
+    app_Hardware = `veiwkWgxD2g-`,
     partner_menu_arabic_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$30,
       AppType_TitleCase_Application: () => AppType_TitleCase_Application$30,
@@ -66395,6 +66737,8 @@ Error generating stack: ` +
         return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Music`);
       case k_EAppTypeBeta:
         return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Beta`);
+      case 512:
+        return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Hardware`);
     }
   }
   function AppSearchSuggestion(t) {
@@ -66410,6 +66754,7 @@ Error generating stack: ` +
         [app_Movie]: n.app_type === k_EAppTypeVideo,
         [app_Music]: n.app_type === k_EAppTypeMusicAlbum,
         [app_Beta]: n.app_type === k_EAppTypeBeta,
+        [app_Hardware]: n.app_type === 512,
       }),
       ref: i,
       children: [o ? `[${o}] ` : ``, ` `, n.match],

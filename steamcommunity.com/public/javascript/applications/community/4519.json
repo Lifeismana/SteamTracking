@@ -287,6 +287,7 @@
     "MyHistory_Title_ItemNameBlock": "الاسم",
     "MyHistory_Title_TransactedPrice": "السعر",
     "MyHistory_Title_Action": "الإجراء",
+    "MyBuyOrders_QuantityPurchased": "%1$s / %2$s",
     "MyHistory_NoResults": "لم يتم العثور على نتائج",
     "MyHistory_Action_Sold": "تم بيعه",
     "MyHistory_Action_Purchased": "تم شراؤه",

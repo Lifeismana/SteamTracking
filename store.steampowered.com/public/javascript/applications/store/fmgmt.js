@@ -798,7 +798,7 @@
           });
         const O = D.data,
           W = () => k(!1),
-          U = () => L.push("/account/familymanagement");
+          Z = () => L.push("/account/familymanagement");
         return (0, n.jsxs)("div", {
           className: _.IncomingInviteRow,
           children: [
@@ -850,13 +850,13 @@
                     title: (0, p.we)(
                       "#FamilyManagement_Await2FAForJoin_Header",
                     ),
-                    closeModal: U,
+                    closeModal: Z,
                     children: [
                       (0, n.jsx)("div", {
                         className: _.DialogText,
                         children: (0, p.we)(
-                          ((Z = "awaitmobile2fa" === A),
-                          Z
+                          ((U = "awaitmobile2fa" === A),
+                          U
                             ? w.TS.IN_MOBILE_WEBVIEW
                               ? "#FamilyManagement_Await2FAForJoin_Description_Mobile_MobileApp"
                               : "#FamilyManagement_Await2FAForJoin_Description_Mobile"
@@ -876,7 +876,7 @@
                           ),
                         }),
                       (0, n.jsx)(o.$n, {
-                        onClick: U,
+                        onClick: Z,
                         children: (0, p.we)("#FamilyManagement_Close"),
                       }),
                     ],
@@ -886,7 +886,7 @@
                     title: (0, p.we)(
                       "#FamilyManagement_Await2FAForJoin_Header",
                     ),
-                    closeModal: U,
+                    closeModal: Z,
                     children: [
                       c === s.PQ.sf &&
                         (0, n.jsxs)(F.Z, {
@@ -935,7 +935,7 @@
                         children: [
                           (0, n.jsx)(o.jn, {
                             onClick: async () => {
-                              M.mutateAsync(G).then(U);
+                              M.mutateAsync(G).then(Z);
                             },
                             children: (0, p.we)(
                               "#FamilyManagement_AwaitCodeFromEmail_Confirm",
@@ -956,7 +956,7 @@
                     title: (0, p.we)(
                       "#FamilyManagement_AlreadyAccepted_Header",
                     ),
-                    closeModal: U,
+                    closeModal: Z,
                     children: [
                       (0, n.jsx)("div", {
                         className: _.DialogText,
@@ -965,7 +965,7 @@
                         ),
                       }),
                       (0, n.jsx)(o.$n, {
-                        onClick: U,
+                        onClick: Z,
                         children: (0, p.we)("#FamilyManagement_Close"),
                       }),
                     ],
@@ -1084,7 +1084,7 @@
             }),
           ],
         });
-        var Z;
+        var U;
       }
       function N() {
         return (0, n.jsxs)("div", {
@@ -1263,7 +1263,7 @@
           children: (0, n.jsxs)(i.Suspense, {
             children: [
               "element" === y &&
-                (0, n.jsx)(U, { ...P, nScrollMargin: w || 0, elScrollable: f }),
+                (0, n.jsx)(Z, { ...P, nScrollMargin: w || 0, elScrollable: f }),
               "window" === y && (0, n.jsx)(W, { ...P, nScrollMargin: w }),
             ],
           }),
@@ -1301,10 +1301,10 @@
               u.measure();
             });
           }, [u, d]),
-          (0, n.jsx)(Z, { ...e, virtualizer: u })
+          (0, n.jsx)(U, { ...e, virtualizer: u })
         );
       }
-      function U(e) {
+      function Z(e) {
         const {
             nRows: t,
             nScrollMargin: a,
@@ -1344,10 +1344,10 @@
               _.measure();
             });
           }, [_, u]),
-          (0, n.jsx)(Z, { ...e, virtualizer: _ })
+          (0, n.jsx)(U, { ...e, virtualizer: _ })
         );
       }
-      function Z(e) {
+      function U(e) {
         const { virtualizer: t, nRowGap: a, renderItem: s, bDynamic: i } = e,
           r = t.getVirtualItems(),
           l = r.length ? r[0].start - t.options.scrollMargin : 0,
@@ -2598,10 +2598,10 @@
         He = a(64238),
         Oe = a.n(He),
         We = a(29528);
-      const Ue =
+      const Ze =
         a.p +
         "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
-      var Ze = a(40236),
+      var Ue = a(40236),
         ze = a(1242);
       function Qe(e) {
         const {
@@ -2645,7 +2645,7 @@
             },
             [c],
           ),
-          g = (0, Ze.wY)(h);
+          g = (0, Ue.wY)(h);
         return (0, n.jsx)(O, {
           ref: g,
           nRows: u,
@@ -2678,7 +2678,7 @@
               children: [
                 (0, n.jsx)("img", {
                   className: We.Capsule,
-                  src: Ue,
+                  src: Ze,
                   alt: t.name,
                   loading: "lazy",
                 }),
@@ -3419,8 +3419,8 @@
         Ot = a(41735),
         Wt = a.n(Ot);
       a(66418);
-      const Ut = [Ht.ED, Ht.M, Ht.mx, Ht.T4, Ht.u7];
-      function Zt(e) {
+      const Zt = [Ht.ED, Ht.M, Ht.mx, Ht.T4, Ht.u7];
+      function Ut(e) {
         let t = [];
         switch (e) {
           case Ht.ED:
@@ -3687,17 +3687,17 @@
             }),
             (0, n.jsx)(F.Z, {
               className: Be.FilterSection,
-              children: Ut.map((e) => {
+              children: Zt.map((e) => {
                 const t = c.includes(e),
                   a = ((e) => (t) => {
                     let a = [];
                     if (t) {
                       const t = [e].concat(Qt(e));
-                      for (const e of Ut)
+                      for (const e of Zt)
                         (c.includes(e) || t.includes(e)) && a.push(e);
                     } else {
-                      const t = [e].concat(Zt(e));
-                      for (const e of Ut)
+                      const t = [e].concat(Ut(e));
+                      for (const e of Zt)
                         c.includes(e) && !t.includes(e) && a.push(e);
                     }
                     m(a);
@@ -4801,7 +4801,7 @@
             const i = !n;
             let l = e(s);
             if (i) {
-              const e = [a].concat(Zt(a));
+              const e = [a].concat(Ut(a));
               for (const t of e) {
                 -1 !== l.findIndex((e) => e === t.valueOf()) ||
                   l.push(t.valueOf());
@@ -4968,7 +4968,7 @@
                         }),
                       ],
                     }),
-                    Ut.map((e) =>
+                    Zt.map((e) =>
                       (0, n.jsx)(
                         ba,
                         {
@@ -5439,7 +5439,7 @@
             })
           : null;
       }
-      function Ua(e) {
+      function Za(e) {
         const { item: t } = e,
           a = (0, be.EB)(t),
           s = i.useCallback(() => {
@@ -5457,7 +5457,7 @@
           renderApproveDialog: r,
         });
       }
-      function Za(e) {
+      function Ua(e) {
         const { item: t } = e,
           a = (0, be.To)(t),
           s = i.useCallback(() => {
@@ -5721,10 +5721,10 @@
         let s;
         switch (t.type) {
           case Ta.k_ParentalFeature:
-            s = (0, n.jsx)(Ua, { item: t.data });
+            s = (0, n.jsx)(Za, { item: t.data });
             break;
           case Ta.k_ParentalPlaytime:
-            s = (0, n.jsx)(Za, { item: t.data });
+            s = (0, n.jsx)(Ua, { item: t.data });
             break;
           case Ta.k_PurchaseRequest:
             s = (0, n.jsx)(Xa, { item: t.data, familyGroupID: a });
@@ -6888,8 +6888,8 @@
         i = a(4399),
         r = a(52038),
         l = a(76217),
-        o = a(30470),
-        c = a(39739);
+        o = a(39739),
+        c = a(78327);
       const m = (0, s.forwardRef)(function (e, t) {
           const {
               component: a,
@@ -7086,15 +7086,9 @@
         const {
             breakpoint: { tablet: e, desktop: t },
           } = g(),
-          a = (0, c.h)(`(min-width: ${e}px)`),
-          n = (0, c.h)(`(min-width: ${t}px)`);
-        return o.TS.IN_GAMEPADUI
-          ? "mobile"
-          : n
-            ? "desktop"
-            : a
-              ? "tablet"
-              : "mobile";
+          a = (0, o.h)(`(min-width: ${e}px)`),
+          n = (0, o.h)(`(min-width: ${t}px)`);
+        return (0, c.Qn)() ? "mobile" : n ? "desktop" : a ? "tablet" : "mobile";
       }
       function v(e) {
         return e.children(C());

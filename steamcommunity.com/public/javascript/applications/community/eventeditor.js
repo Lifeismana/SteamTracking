@@ -15386,7 +15386,14 @@
                         (0, k.TW)(p.rtime_stop_firing),
                       ),
                     }),
-                  "queued" != p.state &&
+                  "window_closed" == p.state &&
+                    (0, i.jsx)("div", {
+                      children: (0, k.we)(
+                        "#EventEmail_Stats_WindowClosed",
+                        (0, k.TW)(p.rtime_stop_firing),
+                      ),
+                    }),
+                  Boolean(p.rtime_last_update_time) &&
                     (0, i.jsxs)(n.Fragment, {
                       children: [
                         (0, i.jsx)("div", {
@@ -18377,7 +18384,7 @@
         Td = a(99487),
         Id = a(38677),
         Gd = a(39199),
-        Ad = a(52288),
+        Ad = a(30211),
         Nd = a(40353);
       function Md(e) {
         const { eventModel: t, nEventBadgeID: a } = e,

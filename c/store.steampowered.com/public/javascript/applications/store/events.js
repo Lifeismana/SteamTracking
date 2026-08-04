@@ -310,37 +310,6 @@
         ErrorMsg: "_1ZEL9R8kTy3jJqcuU_IguM",
       };
     },
-    chunkid: (module) => {
-      "use strict";
-      module.exports = function _(_, _) {
-        if (_ === _) return !0;
-        if (_ && _ && "object" == typeof _ && "object" == typeof _) {
-          if (_.constructor !== _.constructor) return !1;
-          var _, _, _;
-          if (Array.isArray(_)) {
-            if ((_ = _.length) != _.length) return !1;
-            for (_ = _; 0 !== _--; ) if (!_(_[_], _[_])) return !1;
-            return !0;
-          }
-          if (_.constructor === RegExp)
-            return _.source === _.source && _.flags === _.flags;
-          if (_.valueOf !== Object.prototype.valueOf)
-            return _.valueOf() === __webpack_require__.valueOf();
-          if (_.toString !== Object.prototype.toString)
-            return _.toString() === __webpack_require__.toString();
-          if ((_ = (_ = Object.keys(_)).length) !== Object.keys(_).length)
-            return !1;
-          for (_ = _; 0 !== _--; )
-            if (!Object.prototype.hasOwnProperty.call(_, _[_])) return !1;
-          for (_ = _; 0 !== _--; ) {
-            var _ = _[_];
-            if (!_(_[_], _[_])) return !1;
-          }
-          return !0;
-        }
-        return _ != _ && _ != _;
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -2197,29 +2166,29 @@
             _.children,
           ],
         });
-      let _ = class extends _.Component {
-        OpenFilterSettings(_) {
-          _.Get().SetDisplay(_ ? "event_filter" : "desktop_navigation");
-        }
-        render() {
+      function _(_) {
+        _.Get().SetDisplay(_ ? "event_filter" : "desktop_navigation");
+      }
+      const _ = (0, _._)(function (_) {
           const {
               bUserIsLoggedIn: _,
               nDisappearingHeaderVisibleHeight: _,
               bIsCollapsed: _,
               fnToggleCollapsed: _,
               fnOnFilterChange: _,
-            } = this.props,
+            } = _,
             _ = _(),
             _ = (0, _.jsx)("div", {
               className: _().MobileCloseButton,
               onClick: () => {
-                this.OpenFilterSettings(!1), _();
+                _(!1), _();
               },
               children: (0, _.jsx)(_.i6V, {}),
             }),
+            _ = (0, _._)(),
             _ = _ ? Math.max(0, _) : 0,
             _ =
-              _ || _._.IN_GAMEPADUI
+              _ || _
                 ? null
                 : (0, _.jsx)("div", {
                     onClick: _,
@@ -2237,7 +2206,7 @@
             _ = _
               ? null
               : (0, _.jsx)("div", {
-                  onClick: () => this.OpenFilterSettings(!1),
+                  onClick: () => _(!1),
                   className: _().CollapseButton,
                   children: (0, _.jsx)("div", {
                     style: {
@@ -2249,7 +2218,7 @@
                 }),
             _ = "desktop_navigation" != _.Get().GetDisplay() ? _ : _,
             _ = _
-              ? null
+              ? void 0
               : {
                   top: `${_}px`,
                 };
@@ -2267,8 +2236,8 @@
               break;
             case "desktop_navigation":
               _ = (0, _.jsx)(_, {
-                ...this.props,
-                fnOpenFilterSettings: this.OpenFilterSettings,
+                ..._,
+                fnOpenFilterSettings: _,
               });
           }
           return (0, _.jsx)(_.Fragment, {
@@ -2294,61 +2263,61 @@
                   }),
             }),
           });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OpenFilterSettings", null),
-        (_ = (0, _._)([_._], _));
-      const _ = (0, _._)((_) => {
-        const { bShouldIncludeLegalFooter: _, bShowUpcoming: _ } = _,
-          _ =
-            "Responsive_RequestMobileView" in window &&
-            window.Responsive_RequestMobileView,
-          _ = (0, _._)();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("div", {
-              className: _().SidebarBackground,
-              children: (0, _.jsx)(_.Qte, {}),
-            }),
-            (0, _.jsx)("div", {
-              className: _().SidebarTitle,
-              children: (0, _._)("#EventCalendar_Title", (0, _.jsx)("br", {})),
-            }),
-            (0, _.jsx)(_, {
-              bIsUpcoming: _,
-            }),
-            (0, _.jsx)(_, {}),
-            (0, _.jsx)("div", {
-              className: _().SidePanelGameSearch,
-              children: (0, _.jsx)(_, {
-                label: (0, _._)("#EventCalendar_UniversalSearch"),
-              }),
-            }),
-            (0, _.jsx)(_, {
-              bIsUpcoming: _,
-            }),
-            !_ &&
+        }),
+        _ = (0, _._)((_) => {
+          const { bShouldIncludeLegalFooter: _, bShowUpcoming: _ } = _,
+            _ =
+              "Responsive_RequestMobileView" in window &&
+              window.Responsive_RequestMobileView,
+            _ = (0, _._)();
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
               (0, _.jsx)("div", {
-                className: _().FilterSettingsCtn,
-                children: (0, _.jsxs)("div", {
-                  className: (0, _._)(_().FilterLink, _().OpenFilterSettings),
-                  onClick: () => _.fnOpenFilterSettings(!0),
-                  children: [
-                    (0, _.jsx)(_.wB_, {}),
-                    (0, _._)("#EventCalendar_EditFilters"),
-                  ],
+                className: _().SidebarBackground,
+                children: (0, _.jsx)(_.Qte, {}),
+              }),
+              (0, _.jsx)("div", {
+                className: _().SidebarTitle,
+                children: (0, _._)(
+                  "#EventCalendar_Title",
+                  (0, _.jsx)("br", {}),
+                ),
+              }),
+              (0, _.jsx)(_, {
+                bIsUpcoming: _,
+              }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)("div", {
+                className: _().SidePanelGameSearch,
+                children: (0, _.jsx)(_, {
+                  label: (0, _._)("#EventCalendar_UniversalSearch"),
                 }),
               }),
-            _ &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().SidebarLink, _().ForceResponsiveLink),
-                onClick: _,
-                children: (0, _._)("#EventCalendar_ShowResponsiveView"),
+              (0, _.jsx)(_, {
+                bIsUpcoming: _,
               }),
-            _ && (0, _.jsx)(_, {}),
-          ],
+              !_ &&
+                (0, _.jsx)("div", {
+                  className: _().FilterSettingsCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: (0, _._)(_().FilterLink, _().OpenFilterSettings),
+                    onClick: () => _.fnOpenFilterSettings(!0),
+                    children: [
+                      (0, _.jsx)(_.wB_, {}),
+                      (0, _._)("#EventCalendar_EditFilters"),
+                    ],
+                  }),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().SidebarLink, _().ForceResponsiveLink),
+                  onClick: _,
+                  children: (0, _._)("#EventCalendar_ShowResponsiveView"),
+                }),
+              _ && (0, _.jsx)(_, {}),
+            ],
+          });
         });
-      });
       let _ = class extends _.Component {
         DecorateSearchSuggestion(_, _) {
           if (_ && _._) {
@@ -4106,7 +4075,6 @@
           nAccumScrollUp: 0,
           nAccumScrollDown: 0,
         };
-        m_refControlBar = _.createRef();
         m_cancelSignal = _().CancelToken.source();
         componentDidMount() {
           this.InitEventCalendarStore(),
@@ -4481,9 +4449,7 @@
               : _.classList.remove(_().BodyNoScroll));
         }
         MobileNavOpenSettings() {
-          this.ToggleControlBarCollapsed(),
-            this.m_refControlBar.current &&
-              this.m_refControlBar.current.OpenFilterSettings(!0);
+          this.ToggleControlBarCollapsed(), _(!0);
         }
         ToggleControlBarCollapsed() {
           this.setState((_) => {
@@ -4589,7 +4555,6 @@
                 }),
                 (0, _.jsx)(_._, {
                   children: (0, _.jsx)(_, {
-                    ref: this.m_refControlBar,
                     bUserIsLoggedIn: this.state.bUserIsLoggedIn,
                     nDisappearingHeaderVisibleHeight: _,
                     bIsCollapsed: this.state.bControlBarIsCollapsed,

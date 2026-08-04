@@ -34180,8 +34180,8 @@ Error generating stack: ` +
                   },
                   xinput_index: {
                     _: 5,
-                    _: ReaderProto.readUint32,
-                    _: WriterProto.writeUint32,
+                    _: ReaderProto.readInt32,
+                    _: WriterProto.writeInt32,
                   },
                   is_wireless_steam_dongle: {
                     _: 6,
@@ -37695,6 +37695,9 @@ Error generating stack: ` +
           }
         });
     }),
+    k_EStoreAppType_Software,
+    k_EStoreAppType_Video,
+    init_steammessages_storebrowse_estoreapptype = __esmMin(() => {}),
     k_EStoreBrowseFilterFailure_None,
     init_steammessages_storebrowse_estorebrowsefilterfailure = __esmMin(
       () => {},
@@ -37730,6 +37733,9 @@ Error generating stack: ` +
     StoreItem_FreeWeekend,
     StoreItem_Link,
     StoreItem_PackageGroup,
+    StoreItem_Anticheat,
+    StoreItem_Eula,
+    StoreItem_AIGeneratedContentService,
     StoreItem_ExtraDetails,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
@@ -37763,6 +37769,7 @@ Error generating stack: ` +
         init_msgprotobuf(),
         init_steammessages_steamawards_types_pb(),
         init_contenthubs_pb(),
+        init_steammessages_storebrowse_estoreapptype(),
         init_steammessages_storebrowse_estorebrowsefilterfailure(),
         (StoreGameRating = class _ extends import_google_protobuf$1.Message {
           static ImplementsStaticInterface() {}
@@ -40813,6 +40820,249 @@ Error generating stack: ` +
             return `StoreItem_PackageGroup`;
           }
         }),
+        (StoreItem_Anticheat = class _ extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.kernel_mode || AddAccessors(_._()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (_.sm_m ||= {
+                proto: _,
+                fields: {
+                  kernel_mode: {
+                    _: 1,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  uninstall_completely: {
+                    _: 2,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  boot_protection: {
+                    _: 3,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  boot_protection_name: {
+                    _: 4,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  name: {
+                    _: 5,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  name_loc: {
+                    _: 6,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                },
+              }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return ToObject(_._(), _, _);
+          }
+          static fromObject(_) {
+            return FromObject(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new import_google_protobuf$1.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return DeserializeBinary(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            SerializeBinary(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_Anticheat`;
+          }
+        }),
+        (StoreItem_Eula = class _ extends import_google_protobuf$1.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.name || AddAccessors(_._()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (_.sm_m ||= {
+                proto: _,
+                fields: {
+                  name: {
+                    _: 1,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  url: {
+                    _: 2,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                },
+              }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return ToObject(_._(), _, _);
+          }
+          static fromObject(_) {
+            return FromObject(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new import_google_protobuf$1.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return DeserializeBinary(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            SerializeBinary(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_Eula`;
+          }
+        }),
+        (StoreItem_AIGeneratedContentService = class _ extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.name || AddAccessors(_._()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                _,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (_.sm_m ||= {
+                proto: _,
+                fields: {
+                  name: {
+                    _: 1,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  url: {
+                    _: 2,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                },
+              }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return (_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return ToObject(_._(), _, _);
+          }
+          static fromObject(_) {
+            return FromObject(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new import_google_protobuf$1.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return DeserializeBinary(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            SerializeBinary(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new import_google_protobuf$1.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_AIGeneratedContentService`;
+          }
+        }),
         (StoreItem_ExtraDetails = class _ extends (
           import_google_protobuf$1.Message
         ) {
@@ -40825,7 +41075,7 @@ Error generating stack: ` +
                 _,
                 0,
                 -1,
-                [1],
+                [1, 10],
                 null,
               );
           }
@@ -40841,6 +41091,60 @@ Error generating stack: ` +
                     _: SteamAward,
                     _: !0,
                     _: !0,
+                  },
+                  vetted: {
+                    _: 2,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  no_mouse_keyboard_support: {
+                    _: 3,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  controller_wizard_complete: {
+                    _: 4,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  drm_third_party_type: {
+                    _: 5,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  drm_activation_limit: {
+                    _: 6,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  user_account_third_party: {
+                    _: 7,
+                    _: ReaderProto.readString,
+                    _: WriterProto.writeString,
+                  },
+                  user_account_third_party_link_to_steam: {
+                    _: 8,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
+                  anticheat: {
+                    _: 9,
+                    _: StoreItem_Anticheat,
+                  },
+                  eula: {
+                    _: 10,
+                    _: StoreItem_Eula,
+                    _: !0,
+                    _: !0,
+                  },
+                  ai_generation_service: {
+                    _: 11,
+                    _: StoreItem_AIGeneratedContentService,
+                  },
+                  refund_checks_ea_playtime: {
+                    _: 12,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
                   },
                 },
               }),
@@ -43406,7 +43710,6 @@ Error generating stack: ` +
           FROM_WEB: !1,
           WEBSITE_ID: `Unknown`,
           IN_STEAMUI: !1,
-          IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
           ON_FRAME: !1,
           IS_STEAMOS: !1,
@@ -43549,7 +43852,20 @@ Error generating stack: ` +
     import_client = require_client();
   init_configconstants(), init_configconstants(), init_coreconfig();
   var ConfigContext = import_react$3.createContext({}),
-    import_google_protobuf = __toESM(require_google_protobuf(), 1);
+    useConfigContext = (_) => {
+      let _ = import_react$3.useContext(ConfigContext);
+      return (
+        AssertMsg(
+          _?.bSuppressAssert || _.IN_GAMEPADUI !== void 0,
+          `Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application.`,
+        ),
+        _
+      );
+    };
+  function useInGamepadUI(_) {
+    return useConfigContext(_)?.IN_GAMEPADUI;
+  }
+  var import_google_protobuf = __toESM(require_google_protobuf(), 1);
   init_protohelpers(), init_msgprotobuf();
   var CAccountPrivacyCookiePreferences = class _ extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
@@ -44280,6 +44596,26 @@ Error generating stack: ` +
       LocalizePlural(_, _, ..._) {
         return _(_ === 1 || _ === `1` ? _ : _ + `_Plural`, _, ..._);
       },
+      GetAppTypeLocKey(_, _) {
+        switch (_) {
+          case 6:
+            return _ + `_Software`;
+          case 7:
+            return _ + `_Video`;
+          default:
+            return _;
+        }
+      },
+      GetAppTypePluralLocKey(_, _) {
+        switch (_) {
+          case 6:
+            return _ + `_Software`;
+          case 7:
+            return _ + `_Video`;
+          default:
+            return _;
+        }
+      },
       LocalizeInSpecificLang(_, _, ..._) {
         return ReplaceArgumentsInString(_(_, [_]), ..._);
       },
@@ -44288,6 +44624,12 @@ Error generating stack: ` +
       },
       IsReady() {
         return _;
+      },
+      HasKey(_) {
+        return CurrentLocalizationSettings().languages.some((_) => {
+          let _ = _.get(_.strLanguage);
+          return _ ? _.has(_) : !1;
+        });
       },
     };
   }
@@ -44311,7 +44653,8 @@ Error generating stack: ` +
         init_languages(),
         init_languagesource(),
         init_replacelocarguments(),
-        init_locready();
+        init_locready(),
+        init_steammessages_storebrowse_pb();
     }),
     require_classnames = __commonJSMin((_, _) => {
       (function () {
@@ -45015,20 +45358,20 @@ Error generating stack: ` +
               _ === `right`)
             ) {
               let _ = _ ? _.left : _.right;
-              _ = document.documentElement.clientWidth - (_ + _.width);
+              _ = document.body.clientWidth - (_ + _.width);
             }
             _ === void 0 &&
               (_ = _
                 ? _.right - _.width
-                : document.documentElement.clientWidth - (_.left + _.width)),
+                : document.body.clientWidth - (_.left + _.width)),
               (_ = Math.min(_, 0));
           }
           _ === `left`
             ? _
               ? ((_.current.style.left = `unset`),
-                (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                (_.current.style.right = `${document.body.clientWidth - _.right + _}px`))
               : ((_.current.style.left = `unset`),
-                (_.current.style.right = `${document.documentElement.clientWidth - _.left + _}px`))
+                (_.current.style.right = `${document.body.clientWidth - _.left + _}px`))
             : _ === `right`
               ? _
                 ? ((_.current.style.left = `${_.left + _}px`),
@@ -45038,7 +45381,7 @@ Error generating stack: ` +
               : _ === void 0 &&
                 (_
                   ? ((_.current.style.left = `unset`),
-                    (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                    (_.current.style.right = `${document.body.clientWidth - _.right + _}px`))
                   : ((_.current.style.left = `${_.left + _}px`),
                     (_.current.style.right = `unset`)));
         }
@@ -49905,7 +50248,8 @@ Error generating stack: ` +
         } = _,
         _ = _,
         _ = useStoreNavEventContext(),
-        _ = useRenderContext().manifest;
+        _ = useRenderContext().manifest,
+        _ = useInGamepadUI();
       _ &&
         (_ = GetStoreNavLink(
           typeof _ == `boolean`
@@ -49949,15 +50293,12 @@ Error generating stack: ` +
           ? (_ = CreateSteamClientURL(`openurl/${_}`))
           : ((_.target ??= `_blank`), (_.rel ??= `noreferrer noopener`)));
       let _ = useOnClick(_, _, _);
-      return (0, import_jsx_runtime$1.jsx)(
-        _ && Config.IN_GAMEPADUI ? FocusableAnchor : `a`,
-        {
-          ref: _,
-          href: _,
-          onClick: _,
-          ..._,
-        },
-      );
+      return (0, import_jsx_runtime$1.jsx)(_ && _ ? FocusableAnchor : `a`, {
+        ref: _,
+        href: _,
+        onClick: _,
+        ..._,
+      });
     }),
     k_EAppTypeGame = 1,
     k_EAppTypeApplication = 2,
@@ -49965,6 +50306,7 @@ Error generating stack: ` +
     k_EAppTypeDemo = 8,
     k_EAppTypeDLC = 32,
     k_EAppTypeConfig = 256,
+    k_EAppTypeHardware = 512,
     k_EAppTypeVideo = 2048,
     k_EAppTypeMusicAlbum = 8192,
     k_EAppTypeBeta = 65536;
@@ -50029,6 +50371,7 @@ Error generating stack: ` +
     app_DLC = `-WCgItbQf-E-`,
     app_Music = `TUG1nFX-yq8-`,
     app_Beta = `gJJkOluz-M4-`,
+    app_Hardware = `veiwkWgxD2g-`,
     partner_menu_arabic_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$30,
       AppType_TitleCase_Application: () => AppType_TitleCase_Application$30,
@@ -67808,6 +68151,8 @@ Error generating stack: ` +
         return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Music`);
       case k_EAppTypeBeta:
         return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Beta`);
+      case 512:
+        return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Hardware`);
     }
   }
   function AppSearchSuggestion(_) {
@@ -67823,6 +68168,7 @@ Error generating stack: ` +
         [app_Movie]: _.app_type === k_EAppTypeVideo,
         [app_Music]: _.app_type === k_EAppTypeMusicAlbum,
         [app_Beta]: _.app_type === k_EAppTypeBeta,
+        [app_Hardware]: _.app_type === 512,
       }),
       ref: _,
       children: [_ ? `[${_}] ` : ``, ` `, _.match],
