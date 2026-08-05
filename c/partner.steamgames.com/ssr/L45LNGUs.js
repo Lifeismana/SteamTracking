@@ -203,7 +203,7 @@ function _({ queries: _, ..._ }, _) {
 }
 var _ = _(),
   _ = _.lazy(() =>
-    _(() => import(`./P1w71_yq.js`), __vite__mapDeps([0]), import.meta.url),
+    _(() => import(`./cFo40m-u.js`), __vite__mapDeps([0]), import.meta.url),
   );
 function _(_) {
   return _().metrics

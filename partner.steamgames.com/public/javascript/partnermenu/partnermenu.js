@@ -42589,9 +42589,16 @@ Error generating stack: ` +
         }),
         (EventConfig = { ANNOUNCEMENT_GID: ``, TAKEOVER_ANNOUNCEMENT_GID: `` });
     }),
-    init_mathutils = __esmMin(() => {
-      init_mathutils$1();
-    });
+    import_client = require_client();
+  init_configconstants();
+  function GetClientSteamType() {
+    if (!navigator?.userAgent) return;
+    let t = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
+    if (t && t.length == 2) return t[1];
+  }
+  var init_mathutils = __esmMin(() => {
+    init_mathutils$1();
+  });
   function GetCookie(t) {
     if (!BCanAccessCookies() || !window.document.cookie) return null;
     let n = document.cookie.match(`(^|; )` + t + `=([^;]*)`);
@@ -42625,7 +42632,7 @@ Error generating stack: ` +
   }
   var CONFIG_ELEMENT_ID,
     init_configjson = __esmMin(() => {
-      init_configconstants(), (CONFIG_ELEMENT_ID = `webui_config`);
+      CONFIG_ELEMENT_ID = `webui_config`;
     });
   function InitConfig(t = CONFIG_ELEMENT_ID) {
     let n = {},
@@ -42675,8 +42682,7 @@ Error generating stack: ` +
         (configLoadWaiters = new Set()),
         (bAnyConfigLoaded = !1),
         (k_PresentationModeCookie = `presentation_mode`);
-    }),
-    import_client = require_client();
+    });
   init_configconstants(), init_configconstants(), init_coreconfig();
   var ConfigContext = import_react$3.createContext({}),
     useConfigContext = (t) => {
@@ -42689,6 +42695,28 @@ Error generating stack: ` +
         n
       );
     };
+  function ConfigContextRoot(t) {
+    let { IN_GAMEPADUI: n, IN_DESKTOPUI: r, IN_VR: i, children: o } = t,
+      s = useConfigContext({ bSuppressAssert: !0 }),
+      l = GetClientSteamType()?.startsWith(`Gamepad VR`) ?? !1,
+      u = import_react$3.useMemo(
+        () => ({
+          IN_GAMEPADUI:
+            n ??
+            s?.IN_GAMEPADUI ??
+            GetClientSteamType()?.startsWith(`Gamepad`) ??
+            !1,
+          IN_DESKTOPUI: r ?? s?.IN_DESKTOPUI ?? !1,
+          IN_VR: i ?? s?.IN_VR ?? l,
+        }),
+        [s, n, r, i, l],
+      );
+    return import_react$3.createElement(
+      ConfigContext.Provider,
+      { value: u },
+      o,
+    );
+  }
   function useInGamepadUI(t) {
     return useConfigContext(t)?.IN_GAMEPADUI;
   }
@@ -72128,15 +72156,17 @@ Error generating stack: ` +
     InitConfig(`headerContainer`),
       (0, import_client.createRoot)(container).render(
         (0, import_jsx_runtime$1.jsx)(ReactQueryRoot, {
-          children: (0, import_jsx_runtime$1.jsx)(PartnerMenu, {
-            menuItems: t.menu.mainNav,
-            partnerMenuItems: t.menu.partnerNav,
-            globalActions: t.menu.globalActions,
-            userDetails: t.userDetails,
-            isAdmin: t.menu.bIsAdmin,
-            primaryPublisherName: t.menu.primaryPublisherName,
-            spoof: t.menu.spoof,
-            disableLogin: t.menu.disableLoginButton,
+          children: (0, import_jsx_runtime$1.jsx)(ConfigContextRoot, {
+            children: (0, import_jsx_runtime$1.jsx)(PartnerMenu, {
+              menuItems: t.menu.mainNav,
+              partnerMenuItems: t.menu.partnerNav,
+              globalActions: t.menu.globalActions,
+              userDetails: t.userDetails,
+              isAdmin: t.menu.bIsAdmin,
+              primaryPublisherName: t.menu.primaryPublisherName,
+              spoof: t.menu.spoof,
+              disableLogin: t.menu.disableLoginButton,
+            }),
           }),
         }),
       );

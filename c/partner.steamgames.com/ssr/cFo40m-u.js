@@ -799,7 +799,7 @@ function _(_) {
         _ = _[1];
       if (_ && !_.startsWith(`node_modules`)) {
         let _ = _.match(/(.*?):(\d+:(\d+)?)/);
-        return _ ? `${_}${_[1]}?v=@10882403#L${_[2]}` : `${_}${_}?v=@10882403`;
+        return _ ? `${_}${_[1]}?v=@10882548#L${_[2]}` : `${_}${_}?v=@10882548`;
       }
     }
   }
@@ -1154,8 +1154,8 @@ function _(_) {
                         children: (0, _.jsx)(`a`, {
                           target: `_blank`,
                           rel: `noreferrer`,
-                          href: `https://swarm.valve.org/changes/10882403`,
-                          children: `10882403`,
+                          href: `https://swarm.valve.org/changes/10882548`,
+                          children: `10882548`,
                         }),
                       }),
                     ],
