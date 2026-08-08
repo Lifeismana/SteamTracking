@@ -619,7 +619,7 @@
     },
     21423: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { GlobalFooter: () => X });
+      n.r(t), n.d(t, { GlobalFooter: () => J });
       var s = n(7850),
         r = n(83392),
         o = n(59805),
@@ -676,8 +676,8 @@
         });
       }
       var S = n(60859),
-        M = n.n(S);
-      function z() {
+        z = n.n(S);
+      function M() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -780,9 +780,9 @@
         return "initial" === t || "sm" === t
           ? null
           : (0, s.jsx)("footer", {
-              className: _()(M().SteamChinaFooter, e.className),
+              className: _()(z().SteamChinaFooter, e.className),
               children: (0, s.jsxs)(w.az, {
-                className: M().FooterContent,
+                className: z().FooterContent,
                 children: [
                   (0, s.jsxs)(r.s, {
                     align: "center",
@@ -790,10 +790,10 @@
                     children: [
                       (0, s.jsx)(R, {
                         href: m.TS.STORE_BASE_URL,
-                        children: (0, s.jsx)(z, {}),
+                        children: (0, s.jsx)(M, {}),
                       }),
                       (0, s.jsxs)(w.az, {
-                        className: M().NavLinks,
+                        className: z().NavLinks,
                         children: [
                           (0, s.jsx)(R, {
                             href: "https://about.steamchina.com/upgrade_announcement.html",
@@ -950,7 +950,7 @@
       var k = n(13843);
       const E = {};
       (E.arabic = () => n.e(2560).then(n.t.bind(n, 42560, 19))),
-        (E.brazilian = () => n.e(5061).then(n.t.bind(n, 37442, 19))),
+        (E.brazilian = () => n.e(7442).then(n.t.bind(n, 37442, 19))),
         (E.bulgarian = () => n.e(9945).then(n.t.bind(n, 39945, 19))),
         (E.czech = () => n.e(5059).then(n.t.bind(n, 55059, 19))),
         (E.danish = () => n.e(9605).then(n.t.bind(n, 19605, 19))),
@@ -983,7 +983,8 @@
       const P = (0, k.l)(async function (e) {
         if (E[e]) return E[e]();
       });
-      function Z() {
+      var Z = n(78327);
+      function N() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -1021,7 +1022,7 @@
           ],
         });
       }
-      function N() {
+      function U() {
         const e = (0, j.useId)();
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -1057,7 +1058,7 @@
           ],
         });
       }
-      function U() {
+      function B() {
         return (0, s.jsx)("svg", {
           width: "24",
           height: "22",
@@ -1069,7 +1070,7 @@
           }),
         });
       }
-      function B() {
+      function O() {
         return (0, s.jsx)("svg", {
           width: "22",
           height: "22",
@@ -1081,7 +1082,7 @@
           }),
         });
       }
-      function O() {
+      function F() {
         return (0, s.jsx)("svg", {
           width: "30",
           height: "22",
@@ -1093,7 +1094,7 @@
           }),
         });
       }
-      function F() {
+      function I() {
         return (0, s.jsx)("svg", {
           width: "20",
           height: "22",
@@ -1105,10 +1106,10 @@
           }),
         });
       }
-      function I(e) {
+      function W(e) {
         return (0, s.jsx)(r.s, { direction: "column", gap: "4", ...e });
       }
-      function W(e) {
+      function Y(e) {
         return (0, s.jsx)(o.D, {
           level: "3",
           color: "dull-12",
@@ -1117,7 +1118,7 @@
           ...e,
         });
       }
-      function Y(e) {
+      function D(e) {
         let { href: t, ...n } = e;
         const r = (0, v.n9)();
         return (
@@ -1132,7 +1133,7 @@
           })
         );
       }
-      function D() {
+      function G() {
         const e = (0, l.xC)();
         return (0, s.jsxs)(r.s, {
           gridArea: "main",
@@ -1144,13 +1145,13 @@
               gap: "6",
               align: "center",
               children: [
-                (0, s.jsx)(Y, {
+                (0, s.jsx)(D, {
                   href: m.TS.STORE_BASE_URL,
-                  children: (0, s.jsx)(Z, {}),
-                }),
-                (0, s.jsx)(Y, {
-                  href: "https://valvesoftware.com",
                   children: (0, s.jsx)(N, {}),
+                }),
+                (0, s.jsx)(D, {
+                  href: "https://valvesoftware.com",
+                  children: (0, s.jsx)(U, {}),
                 }),
               ],
             }),
@@ -1167,21 +1168,21 @@
               align: "center",
               className: L.LogoLinks,
               children: [
-                (0, s.jsx)(Y, {
+                (0, s.jsx)(D, {
                   href: "https://www.youtube.com/@Steam",
-                  children: (0, s.jsx)(O, {}),
+                  children: (0, s.jsx)(F, {}),
                 }),
-                (0, s.jsx)(Y, {
+                (0, s.jsx)(D, {
                   href: "https://bsky.app/profile/steampowered.com",
-                  children: (0, s.jsx)(U, {}),
-                }),
-                (0, s.jsx)(Y, {
-                  href: "https://facebook.com/steam",
                   children: (0, s.jsx)(B, {}),
                 }),
-                (0, s.jsx)(Y, {
+                (0, s.jsx)(D, {
+                  href: "https://facebook.com/steam",
+                  children: (0, s.jsx)(O, {}),
+                }),
+                (0, s.jsx)(D, {
                   href: "https://twitter.com/steam",
-                  children: (0, s.jsx)(F, {}),
+                  children: (0, s.jsx)(I, {}),
                 }),
               ],
             }),
@@ -1205,7 +1206,7 @@
           ],
         });
       }
-      function G(e) {
+      function X(e) {
         return (
           (0, j.use)(P.Ready()),
           (0, s.jsx)(h.N, {
@@ -1230,106 +1231,106 @@
               textAlign: "start",
               id: "footer",
               children: [
-                (0, s.jsx)(D, {}),
-                (0, s.jsxs)(I, {
+                (0, s.jsx)(G, {}),
+                (0, s.jsxs)(W, {
                   gridArea: "steam",
                   children: [
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_steam"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "about/",
                       children: P.Localize("#footer_link_about_steam"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: P.Localize("#footer_link_steam_ssa"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.PARTNER_BASE_URL,
                       children: P.Localize("#footer_link_steamworks"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.PARTNER_BASE_URL + "steamdirect",
                       children: P.Localize("#footer_link_steam_distribution"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: P.Localize("#footer_link_gift_cards"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(I, {
+                (0, s.jsxs)(W, {
                   gridArea: "valve",
                   children: [
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_valve"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: "https://valvesoftware.com/about",
                       children: P.Localize("#footer_link_about_valve"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: "https://valvesoftware.com/",
                       children: P.Localize("#footer_link_jobs"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "hardware/",
                       children: P.Localize("#footer_link_hardware"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: P.Localize("#footer_link_recycling"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(I, {
+                (0, s.jsxs)(W, {
                   gridArea: "legal",
                   children: [
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_legal"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: P.Localize("#footer_link_privacy"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
                       children: P.Localize("#footer_link_accessibility"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "legal/",
                       children: P.Localize("#footer_link_notices_and_policies"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: P.Localize("#footer_link_cookies"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "steam_refunds/",
                       children: P.Localize("#footer_link_refunds"),
                     }),
                   ],
                 }),
-                (0, s.jsxs)(I, {
+                (0, s.jsxs)(W, {
                   gridArea: "more",
                   children: [
-                    (0, s.jsx)(W, {
+                    (0, s.jsx)(Y, {
                       children: P.Localize("#footer_link_header_more"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "about/",
                       children: P.Localize("#footer_link_get_steam"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "mobile/",
                       children: P.Localize("#footer_link_get_mobile_apps"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.HELP_BASE_URL,
                       children: P.Localize("#footer_link_get_support"),
                     }),
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(D, {
                       href: m.TS.STORE_BASE_URL + "account/",
                       children: P.Localize("#footer_link_my_account"),
                     }),
@@ -1340,11 +1341,11 @@
           })
         );
       }
-      function X(e) {
-        if (m.TS.IN_GAMEPADUI) return null;
+      function J(e) {
+        if ((0, Z.Qn)()) return null;
         const t = (0, d.nA)(m.TS.EREALM)
           ? (0, s.jsx)(A, { ...e })
-          : (0, s.jsx)(G, { ...e });
+          : (0, s.jsx)(X, { ...e });
         return (0, s.jsx)(v.nn, {
           controller: "footer",
           method: "footer",

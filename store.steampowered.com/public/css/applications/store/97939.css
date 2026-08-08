@@ -386,6 +386,9 @@
 .gpfocus ._3cEK5JKL6FSqY5FgD_4hFA {
   opacity: 1;
 }
+._3E70dZ6hSfFCmskaIzbgJp {
+  opacity: 1;
+}
 ._33rQKLUJRiKbr34oQgUJSd {
   height: 20px;
   align-items: center;
@@ -871,6 +874,15 @@
 }
 :where(.EFvA4gLIikUE06LDGCqg5):hover {
   box-shadow: var(--box-shadow-elevation-1);
+}
+:where(._3vxqpebgJYIYNTcigTXx21) {
+  --bg-color: transparent;
+  --bg-color-hover: rgb(from var(--color-dull-6) r g b / 50%);
+  --bg-color-focus: var(--bg-color-hover);
+  --bg-color-active: transparent;
+  --padding: 0 var(--spacing-2);
+  --text-color: var(--color-text-body-body);
+  --text-muted-color: var(--color-text-body-description);
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH) {
   background-color: var(--bg-color, var(--color-debug));

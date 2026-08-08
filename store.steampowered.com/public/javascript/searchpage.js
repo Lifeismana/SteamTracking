@@ -52,7 +52,7 @@ function PopulateHWCompatFacetData( rgCompatFacetData, rgSteamOSFacetData, bIncl
 		else
 			$Compatible.find('.tab_filter_control_count').text( bIncludeParens ? "(" + v_numberformat( nCompatible ) + ")" : v_numberformat( nCompatible ) ).css( {display: '' } );
 	}
-	else // Show Machine or Deck Verified
+	else // Show Machine, Frame, or Deck Verified
 	{
 		let $Verified = $Container.find( '.tab_filter_control_row[data-value=' + 3 + ']');
 		let $Playable = $Container.find( '.tab_filter_control_row[data-value=' + 2 + ']');

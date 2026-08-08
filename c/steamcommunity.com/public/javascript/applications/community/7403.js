@@ -1514,10 +1514,11 @@
         });
       }
       function _(_) {
+        const _ = (0, _._)();
         return (
-          (0, _._)(_._),
+          (0, _._)(_),
           (0, _.jsx)(_._, {
-            emoticonStore: _._,
+            emoticonStore: _,
             OnSelected: _.OnSelected,
           })
         );
@@ -2853,6 +2854,7 @@
       });
       const _ = _.memo(function (_) {
         const { eventSchemaConfig: _, editModel: _, onURLPasted: _ } = _,
+          _ = (0, _._)(),
           { marks: _, nodes: _ } = _.pm_schema;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -2871,7 +2873,7 @@
               clanSteamID: __webpack_require__.GetClanSteamID(),
             }),
             (0, _.jsx)(_, {
-              emoticonStore: _._,
+              emoticonStore: _,
               schema: _.pm_schema,
             }),
           ],

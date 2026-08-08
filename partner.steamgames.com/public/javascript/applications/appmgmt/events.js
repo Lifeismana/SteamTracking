@@ -42,7 +42,7 @@
         d = n(2160),
         c = n(18318),
         u = n(17720),
-        h = n(68033),
+        h = n(65606),
         g = n(6205),
         m = n(16676),
         p = n(84811),
@@ -225,9 +225,9 @@
                       }),
                     "submitting" === x && (0, i.jsx)(O, {}),
                     "failed" === x &&
-                      (0, i.jsx)(A, { fnOnReturnToEditor: () => f("editing") }),
+                      (0, i.jsx)(U, { fnOnReturnToEditor: () => f("editing") }),
                     "submitted" === x &&
-                      (0, i.jsx)(U, { appId: e.appId, eventGid: P }),
+                      (0, i.jsx)(A, { appId: e.appId, eventGid: P }),
                   ],
                 }),
               ],
@@ -299,22 +299,23 @@
       }
       const R = (e) => {
           const {
-            sError: t,
-            eLanguage: n,
-            realms: a,
-            fnHasLanguage: s,
-            fnSetLanguage: r,
-            fnGetTitle: o,
-            fnSetTitle: u,
-            fnGetDescription: p,
-            fnSetDescription: _,
-            fnOnPreviewEvent: x,
-            fnApplyLoc: P,
-          } = e;
-          let j = "";
+              sError: t,
+              eLanguage: n,
+              realms: a,
+              fnHasLanguage: s,
+              fnSetLanguage: r,
+              fnGetTitle: o,
+              fnSetTitle: u,
+              fnGetDescription: p,
+              fnSetDescription: _,
+              fnOnPreviewEvent: x,
+              fnApplyLoc: P,
+            } = e,
+            j = (0, h.LJ)();
+          let w = "";
           if (a.includes(d.TU.k_ESteamRealmChina)) {
             const e = "" !== o(l.ZLm).trim();
-            j = (0, N.we)(
+            w = (0, N.we)(
               e
                 ? "#BuildNotes_SteamChina_Provided"
                 : "#BuildNotes_SteamChina_NotProvided",
@@ -377,7 +378,7 @@
                 fnOnTextChange: (e) => _(n, e.currentTarget.value),
                 fnSetText: (e) => _(n, e),
                 strPlaceholder: (0, N.we)("#BuildNotes_DescPlaceholder"),
-                emoticonStore: h.A,
+                emoticonStore: j,
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
                 classNameForTextArea: L.BBCodeEditor,
@@ -392,10 +393,10 @@
                     }),
                   Boolean(t) &&
                     (0, i.jsx)("div", { className: L.ErrorMsg, children: t }),
-                  Boolean(!t && j) &&
+                  Boolean(!t && w) &&
                     (0, i.jsx)("div", {
                       className: L.SteamChinaMsg,
-                      children: j,
+                      children: w,
                     }),
                 ],
               }),
@@ -460,7 +461,7 @@
               }),
             ],
           }),
-        A = (e) =>
+        U = (e) =>
           (0, i.jsxs)("div", {
             className: (0, w.A)(L.RightPanel, L.FailedPanel),
             children: [
@@ -477,7 +478,7 @@
               }),
             ],
           }),
-        U = (e) => {
+        A = (e) => {
           const { appId: t, eventGid: n } = e,
             a = `${T.TS.STORE_BASE_URL}news/app/${t}/view/${n}`;
           return (0, i.jsxs)("div", {

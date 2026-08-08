@@ -118,37 +118,6 @@
       };
     },
     chunkid: (module) => {
-      "use strict";
-      module.exports = function _(_, _) {
-        if (_ === _) return !0;
-        if (_ && _ && "object" == typeof _ && "object" == typeof _) {
-          if (_.constructor !== _.constructor) return !1;
-          var _, _, _;
-          if (Array.isArray(_)) {
-            if ((_ = _.length) != _.length) return !1;
-            for (_ = _; 0 !== _--; ) if (!_(_[_], _[_])) return !1;
-            return !0;
-          }
-          if (_.constructor === RegExp)
-            return _.source === _.source && _.flags === _.flags;
-          if (_.valueOf !== Object.prototype.valueOf)
-            return _.valueOf() === __webpack_require__.valueOf();
-          if (_.toString !== Object.prototype.toString)
-            return _.toString() === __webpack_require__.toString();
-          if ((_ = (_ = Object.keys(_)).length) !== Object.keys(_).length)
-            return !1;
-          for (_ = _; 0 !== _--; )
-            if (!Object.prototype.hasOwnProperty.call(_, _[_])) return !1;
-          for (_ = _; 0 !== _--; ) {
-            var _ = _[_];
-            if (!_(_[_], _[_])) return !1;
-          }
-          return !0;
-        }
-        return _ != _ && _ != _;
-      };
-    },
-    chunkid: (module) => {
       module.exports = function (_, _) {
         for (
           var _ = -1, _ = null == _ ? 0 : _.length;

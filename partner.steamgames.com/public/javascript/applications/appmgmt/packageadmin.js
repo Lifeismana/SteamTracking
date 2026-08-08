@@ -92,7 +92,7 @@
         (C.romanian = () => i.e(2224).then(i.t.bind(i, 22224, 19))),
         (C.russian = () => i.e(5544).then(i.t.bind(i, 35544, 19))),
         (C.schinese = () => i.e(8875).then(i.t.bind(i, 58875, 19))),
-        (C.spanish = () => i.e(1661).then(i.t.bind(i, 91661, 19))),
+        (C.spanish = () => i.e(1661).then(i.t.bind(i, 36423, 19))),
         (C.swedish = () => i.e(4140).then(i.t.bind(i, 4140, 19))),
         (C.tchinese = () => i.e(7208).then(i.t.bind(i, 87208, 19))),
         (C.thai = () => i.e(4925).then(i.t.bind(i, 54925, 19))),

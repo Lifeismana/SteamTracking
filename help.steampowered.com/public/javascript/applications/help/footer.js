@@ -796,27 +796,27 @@
       function L(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
-      var N = r(39049),
-        V = r(65274);
+      var V = r(39049),
+        N = r(65274);
       function z(e) {
         const { as: s = "span", ref: r, className: n, ...o } = e,
           i = s;
         return (0, t.jsx)(i, {
           ref: r,
-          ...f({ ...o, className: h()(V.Text, n) }, M),
+          ...f({ ...o, className: h()(N.Text, n) }, M),
         });
       }
       const P = [
           {
             prop: "weight",
             responsive: !0,
-            className: V.TextWeight,
+            className: N.TextWeight,
             cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: V.TextAlign,
+            className: N.TextAlign,
             cssProperty: "--text-align",
           },
           {
@@ -835,16 +835,16 @@
               g(m(s.color, r) ?? "text-body", e),
             ],
           },
-          { prop: "truncate", className: V.Truncate },
+          { prop: "truncate", className: N.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: V.LineClamp,
+            className: N.LineClamp,
             cssProperty: "--line-clamp",
           },
           {
             prop: "whiteSpace",
-            className: V.WhiteSpace,
+            className: N.WhiteSpace,
             cssProperty: "--white-space",
           },
         ],
@@ -854,7 +854,7 @@
           {
             prop: "size",
             responsive: !0,
-            className: (e) => V[`TextSize-${e}`],
+            className: (e) => N[`TextSize-${e}`],
           },
         ];
       const R = o.createContext({ depth: 0 });
@@ -880,7 +880,7 @@
             return "h" + r;
           })(s, (0, o.useContext)(R).depth);
         return (0, t.jsx)(i, {
-          ...f({ ...e, className: h()(k(), N.Heading, r) }, E),
+          ...f({ ...e, className: h()(k(), V.Heading, r) }, E),
         });
       }
       const E = [
@@ -889,7 +889,7 @@
         {
           prop: "size",
           responsive: !0,
-          className: (e) => N[`HeadingSize-${e}`],
+          className: (e) => V[`HeadingSize-${e}`],
         },
       ];
       var Z = r(50122),
@@ -909,11 +909,11 @@
       ];
       var W = r(69041),
         O = r(73406),
-        I = r(44041);
-      function G(e) {
+        G = r(44041);
+      function I(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
           a = (0, w.Qn)(),
-          c = f({ ...i, className: h()(I.Box, k(), e.className) }, D),
+          c = f({ ...i, className: h()(G.Box, k(), e.className) }, D),
           p = r ?? n?.focusable ?? !!i.onClick,
           d = (0, t.jsx)(s, { ref: o, ...c });
         return a && (p || n)
@@ -933,7 +933,7 @@
           } = e,
           c = (0, K.f)("LoadingSpinner", i);
         return n || !r
-          ? (0, t.jsxs)(G, {
+          ? (0, t.jsxs)(I, {
               position: "relative",
               ...a,
               width: "fit-content",
@@ -1049,6 +1049,7 @@
             d = f(
               {
                 onClick: o ? J : void 0,
+                "aria-disabled": o,
                 ...l,
                 variant: (0, K.f)("Button", s),
                 size: r,
@@ -1443,14 +1444,14 @@
           children: [
             (0, t.jsx)(be.Anchor, { children: s }),
             (0, t.jsx)(be.Positioner, {
-              children: (0, t.jsx)(G, { children: r }),
+              children: (0, t.jsx)(I, { children: r }),
             }),
           ],
         });
       }
       var Le = r(60859),
-        Ne = r.n(Le);
-      function Ve() {
+        Ve = r.n(Le);
+      function Ne() {
         return (0, t.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -1552,9 +1553,9 @@
         return "initial" === s || "sm" === s
           ? null
           : (0, t.jsx)("footer", {
-              className: h()(Ne().SteamChinaFooter, e.className),
-              children: (0, t.jsxs)(G, {
-                className: Ne().FooterContent,
+              className: h()(Ve().SteamChinaFooter, e.className),
+              children: (0, t.jsxs)(I, {
+                className: Ve().FooterContent,
                 children: [
                   (0, t.jsxs)(b, {
                     align: "center",
@@ -1562,10 +1563,10 @@
                     children: [
                       (0, t.jsx)(Me, {
                         href: he.TS.STORE_BASE_URL,
-                        children: (0, t.jsx)(Ve, {}),
+                        children: (0, t.jsx)(Ne, {}),
                       }),
-                      (0, t.jsxs)(G, {
-                        className: Ne().NavLinks,
+                      (0, t.jsxs)(I, {
+                        className: Ve().NavLinks,
                         children: [
                           (0, t.jsx)(Me, {
                             href: "https://about.steamchina.com/upgrade_announcement.html",
@@ -1686,7 +1687,7 @@
                     justify: "between",
                     marginTop: "5",
                     children: [
-                      (0, t.jsxs)(G, {
+                      (0, t.jsxs)(I, {
                         children: [
                           "© ",
                           new Date().getFullYear(),
@@ -1695,7 +1696,7 @@
                           "所有商标均属于其在美国或其他国家的拥有者。",
                         ],
                       }),
-                      (0, t.jsxs)(G, {
+                      (0, t.jsxs)(I, {
                         children: [
                           "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
                           (0, t.jsx)("br", {}),
@@ -1722,7 +1723,7 @@
       var Te = r(4038);
       const ke = {};
       (ke.arabic = () => r.e(2560).then(r.t.bind(r, 42560, 19))),
-        (ke.brazilian = () => r.e(5061).then(r.t.bind(r, 37442, 19))),
+        (ke.brazilian = () => r.e(7442).then(r.t.bind(r, 37442, 19))),
         (ke.bulgarian = () => r.e(9945).then(r.t.bind(r, 39945, 19))),
         (ke.czech = () => r.e(5059).then(r.t.bind(r, 55059, 19))),
         (ke.danish = () => r.e(9605).then(r.t.bind(r, 19605, 19))),
@@ -1880,7 +1881,7 @@
       function Oe(e) {
         return (0, t.jsx)(b, { direction: "column", gap: "4", ...e });
       }
-      function Ie(e) {
+      function Ge(e) {
         return (0, t.jsx)(A, {
           level: "3",
           color: "dull-12",
@@ -1889,7 +1890,7 @@
           ...e,
         });
       }
-      function Ge(e) {
+      function Ie(e) {
         let { href: s, ...r } = e;
         const n = (0, de.n9)();
         return (
@@ -1915,11 +1916,11 @@
               gap: "6",
               align: "center",
               children: [
-                (0, t.jsx)(Ge, {
+                (0, t.jsx)(Ie, {
                   href: he.TS.STORE_BASE_URL,
                   children: (0, t.jsx)(Ee, {}),
                 }),
-                (0, t.jsx)(Ge, {
+                (0, t.jsx)(Ie, {
                   href: "https://valvesoftware.com",
                   children: (0, t.jsx)(Ze, {}),
                 }),
@@ -1938,19 +1939,19 @@
               align: "center",
               className: Ce.LogoLinks,
               children: [
-                (0, t.jsx)(Ge, {
+                (0, t.jsx)(Ie, {
                   href: "https://www.youtube.com/@Steam",
                   children: (0, t.jsx)(Fe, {}),
                 }),
-                (0, t.jsx)(Ge, {
+                (0, t.jsx)(Ie, {
                   href: "https://bsky.app/profile/steampowered.com",
                   children: (0, t.jsx)(Ue, {}),
                 }),
-                (0, t.jsx)(Ge, {
+                (0, t.jsx)(Ie, {
                   href: "https://facebook.com/steam",
                   children: (0, t.jsx)(Be, {}),
                 }),
-                (0, t.jsx)(Ge, {
+                (0, t.jsx)(Ie, {
                   href: "https://twitter.com/steam",
                   children: (0, t.jsx)(We, {}),
                 }),
@@ -2005,26 +2006,26 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "steam",
                   children: [
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       children: Ae.Localize("#footer_link_header_steam"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_about_steam"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: Ae.Localize("#footer_link_steam_ssa"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.PARTNER_BASE_URL,
                       children: Ae.Localize("#footer_link_steamworks"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.PARTNER_BASE_URL + "steamdirect",
                       children: Ae.Localize("#footer_link_steam_distribution"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: Ae.Localize("#footer_link_gift_cards"),
                     }),
@@ -2033,22 +2034,22 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "valve",
                   children: [
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       children: Ae.Localize("#footer_link_header_valve"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: "https://valvesoftware.com/about",
                       children: Ae.Localize("#footer_link_about_valve"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: "https://valvesoftware.com/",
                       children: Ae.Localize("#footer_link_jobs"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "hardware/",
                       children: Ae.Localize("#footer_link_hardware"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: Ae.Localize("#footer_link_recycling"),
                     }),
@@ -2057,28 +2058,28 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "legal",
                   children: [
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       children: Ae.Localize("#footer_link_header_legal"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: Ae.Localize("#footer_link_privacy"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
                       children: Ae.Localize("#footer_link_accessibility"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "legal/",
                       children: Ae.Localize(
                         "#footer_link_notices_and_policies",
                       ),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: Ae.Localize("#footer_link_cookies"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "steam_refunds/",
                       children: Ae.Localize("#footer_link_refunds"),
                     }),
@@ -2087,22 +2088,22 @@
                 (0, t.jsxs)(Oe, {
                   gridArea: "more",
                   children: [
-                    (0, t.jsx)(Ie, {
+                    (0, t.jsx)(Ge, {
                       children: Ae.Localize("#footer_link_header_more"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "about/",
                       children: Ae.Localize("#footer_link_get_steam"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "mobile/",
                       children: Ae.Localize("#footer_link_get_mobile_apps"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.HELP_BASE_URL,
                       children: Ae.Localize("#footer_link_get_support"),
                     }),
-                    (0, t.jsx)(Ge, {
+                    (0, t.jsx)(Ie, {
                       href: he.TS.STORE_BASE_URL + "account/",
                       children: Ae.Localize("#footer_link_my_account"),
                     }),
@@ -2114,7 +2115,7 @@
         );
       }
       function Ye(e) {
-        if (he.TS.IN_GAMEPADUI) return null;
+        if ((0, w.Qn)()) return null;
         const s = (0, oe.nA)(he.TS.EREALM)
           ? (0, t.jsx)(Re, { ...e })
           : (0, t.jsx)(Ke, { ...e });

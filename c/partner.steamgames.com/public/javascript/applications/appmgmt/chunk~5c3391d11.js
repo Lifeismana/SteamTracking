@@ -48,6 +48,7 @@
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
         RatingIcon: "JpPKQ9u62K6FUa-N8VbN8",
         SteamMachineDeviceIcon: "_1nTDsg_9olpJdf7qqVpGfL",
+        SteamFrameDeviceIcon: "_34S3mEk7xRyS1Lnlnkd0hu",
         SteamDeckDeviceIcon: "_3IOFFIoATruXDCEVO_7Jqd",
         BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
         "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
@@ -103,11 +104,13 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = 0,
         _ = 1,
         _ = 2,
-        _ = 3;
+        _ = 3,
+        _ = 4;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -133,6 +136,7 @@
           bSteamOS: !1,
           bSteamDeck: !1,
           bSteamMachine: !1,
+          bSteamFrame: !1,
         }),
         _ = () => _.useContext(_);
       function _() {
@@ -141,14 +145,17 @@
           bSteamDeck: _,
           bSteamOS: _,
           bSteamMachine: _,
+          bSteamFrame: _,
         } = _();
         return (_ && _) || _ || "steamdeck" == _._.FORCED_DISPLAY_MODE
           ? [!0, _._]
           : (_ && _) || "steammachine" == _._.FORCED_DISPLAY_MODE
             ? [!0, _._]
-            : _
+            : (_ && _) || "steamframe" == _._.FORCED_DISPLAY_MODE
               ? [!0, _._]
-              : [!1, _._];
+              : _
+                ? [!0, _._]
+                : [!1, _._];
       }
       function _(_) {
         const { _: _, className: _ } = _,
@@ -161,9 +168,8 @@
           : null;
       }
       const _ = (_) => {
-        const { category: _, className: _ } = _;
-        if (!_) return null;
-        const _ = _(_);
+        const { category: _ = _._, className: _ } = _,
+          _ = _(_);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.SteamDeckCompatInfo, _),
           children: [
@@ -196,6 +202,7 @@
       _._, _._, _._, _._;
       _._, _._, _._, _._;
       _._, _._, _._;
+      _._, _._, _._, _._;
       _._, _._, _._, _._;
       _._, _._, _._;
     },
@@ -327,7 +334,7 @@
         }
         constructor() {
           if (document.getElementById("application_config")) {
-            let _ = (0, _._)("deckcompatibility", "application_config");
+            let _ = (0, _._)("hardwarecompatibility", "application_config");
             _.ValidateCompatabilityResult(_) &&
               (this.AddCompatabilityResult(_),
               "dev" == _._.WEB_UNIVERSE &&
@@ -729,6 +736,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 1,
@@ -2639,14 +2647,23 @@
                     appName: _,
                   })),
                   (_ = _))
-                : ((_ = _._.Localize(
-                    "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
-                  )),
-                  (_ = (0, _.jsx)(_._, {
-                    category: _.resolved_category,
-                    appName: _,
-                  })),
-                  (_ = _)),
+                : _ == _._
+                  ? ((_ = _._.Localize(
+                      "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+                    )),
+                    (_ = (0, _.jsx)(_._, {
+                      _: _,
+                      category: _.frame_resolved_category,
+                      appName: _,
+                    })))
+                  : ((_ = _._.Localize(
+                      "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
+                    )),
+                    (_ = (0, _.jsx)(_._, {
+                      category: _.resolved_category,
+                      appName: _,
+                    })),
+                    (_ = _)),
             (0, _.jsxs)(_._, {
               autoFocus: _,
               focusableIfEmpty: _,
@@ -2680,6 +2697,7 @@
         const _ = (0, _._)(_.resolved_category),
           _ = (0, _._)(_.steamos_resolved_category),
           _ = (0, _._)(_.machine_resolved_category),
+          _ = (0, _._)(_.frame_resolved_category || _._),
           _ = (_) =>
             window.sessionStorage.setItem(
               "steamdeckcompatibility",
@@ -2747,13 +2765,36 @@
               onClick: _,
             },
           ];
-        return (0, _.jsx)(_._, {
-          tabs: _,
-          classNameCtn: _().CompatibilityTabs,
-          classNameTabContent: _().CompatibilityTabContent,
-          startingTab: _.toString(),
-          preferredFocus: !0,
-        });
+        return (
+          _ == _._ &&
+            _.push({
+              name: (0, _.jsxs)("div", {
+                className: _().pillContent,
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _().SteamFrameDeviceIcon,
+                  }),
+                  (0, _.jsx)(_, {
+                    className: _().RatingIcon,
+                  }),
+                ],
+              }),
+              key: _._.toString(),
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              }),
+              onClick: _,
+            }),
+          (0, _.jsx)(_._, {
+            tabs: _,
+            classNameCtn: _().CompatibilityTabs,
+            classNameTabContent: _().CompatibilityTabContent,
+            startingTab: _.toString(),
+            preferredFocus: !0,
+          })
+        );
       }
       function _(_) {
         const {
@@ -3046,11 +3087,11 @@
             _.frame_resolved_items?.findIndex((_) => _.display_type == _),
           _ = (0, _.jsx)(_._, {
             _: _,
-            category: _.frame_resolved_category,
+            category: _.frame_resolved_category ?? _._,
             appName: _,
           }),
           _ = (0, _.jsx)(_._, {
-            category: _.frame_resolved_category,
+            category: _.frame_resolved_category ?? _._,
           }),
           _ = _.frame_resolved_items && _.frame_resolved_items?.length > 0;
         return (0, _.jsx)(_, {
@@ -3221,6 +3262,8 @@
             tabs: _,
             bDisableRouting: _,
             startingTab: _,
+            controlledTab: _,
+            OnTabChanged: _,
             classNameCtn: _,
             classNameTab: _,
             classNameTabContent: _,
@@ -3245,13 +3288,15 @@
             (_) => {
               _(_.key),
                 _ || (0, _._)(_, "tab", _.key),
+                _?.(_.key),
                 _.onClick && _.onClick(_);
             },
-            [_, _],
+            [_, _, _],
           ),
           _ = _.filter((_) => !_.hidden);
         if (!_.length) return null;
-        const _ = _.find((_) => _.key === _) || _[0],
+        const _ = _ ?? _,
+          _ = _.find((_) => _.key === _) || _[0],
           _ = _ ? (_ ?? _[0].key) : void 0,
           _ = (0, _.jsxs)(_.Fragment, {
             children: [

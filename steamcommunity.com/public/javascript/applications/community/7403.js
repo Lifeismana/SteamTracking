@@ -197,8 +197,8 @@
         H = s(88942),
         W = s(78327),
         X = s(41735),
-        Z = s.n(X),
-        J = s(26408);
+        J = s.n(X),
+        Z = s(26408);
       function ee(e) {
         const { hideModal: t, fnUpdateSession: s } = e,
           [n, l] = (0, _.useState)(() => re(!0, null)),
@@ -330,7 +330,7 @@
             (0, o.jsxs)(h.JU, {
               children: [
                 "FAQ ",
-                (0, o.jsx)(J.o, {
+                (0, o.jsx)(Z.o, {
                   tooltip:
                     "Optional FAQ section which appears in the pop-up display and hidden by default",
                 }),
@@ -551,7 +551,7 @@
               queryFn: async () => {
                 const t = `${W.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
                   s = { reference_time: e },
-                  o = await Z().get(t, { params: s });
+                  o = await J().get(t, { params: s });
                 return null == o ? void 0 : o.data.timezones;
               },
             });
@@ -1342,7 +1342,7 @@
       }
       var Ge = s(88997),
         Ne = s(10820),
-        Oe = s(68033),
+        Oe = s(65606),
         Be = s(30193),
         Ae = s(14947);
       function ze(e) {
@@ -1382,9 +1382,10 @@
         });
       }
       function Ve(e) {
+        const t = (0, Oe.LJ)();
         return (
-          (0, Be.k3)(Oe.A),
-          (0, o.jsx)(Ne.iY, { emoticonStore: Oe.A, OnSelected: e.OnSelected })
+          (0, Be.k3)(t),
+          (0, o.jsx)(Ne.iY, { emoticonStore: t, OnSelected: e.OnSelected })
         );
       }
       var Re = s(14703),
@@ -1408,7 +1409,7 @@
             },
             children: (0, o.jsx)("div", {
               className: Ke().DialogCtn,
-              children: (0, o.jsx)(Ze, {
+              children: (0, o.jsx)(Je, {
                 clanAccountID: n,
                 userPollDef: l,
                 fnSetDef: i,
@@ -1438,7 +1439,7 @@
             closeModal: t,
             children: (0, o.jsx)("div", {
               className: Ke().DialogCtn,
-              children: (0, o.jsx)(Ze, {
+              children: (0, o.jsx)(Je, {
                 userPollDef: i,
                 clanAccountID: n,
                 fnSetDef: a,
@@ -1462,7 +1463,7 @@
             return (0, j.we)("#UserPolls_Visibility_OnDemand");
         }
       }
-      function Ze(e) {
+      function Je(e) {
         const { userPollDef: t, fnSetDef: s } = e,
           n = (0, V.E)(),
           [l] = (0, y.q3)(() => [t.results_visibility_settings]),
@@ -1500,11 +1501,11 @@
                 contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
               }),
             }),
-            (0, o.jsx)(Je, { ...e }),
+            (0, o.jsx)(Ze, { ...e }),
           ],
         });
       }
-      function Je(e) {
+      function Ze(e) {
         const { clanAccountID: t, userPollDef: s, fnSetDef: n } = e,
           l = (0, he.LU)(),
           i = (0, Re.rR)(l.GetClanSteamID()),
@@ -2572,21 +2573,22 @@
       });
       const Rt = _.memo(function (e) {
         const { eventSchemaConfig: t, editModel: s, onURLPasted: n } = e,
-          { marks: l, nodes: i } = t.pm_schema;
+          l = (0, Oe.LJ)(),
+          { marks: i, nodes: a } = t.pm_schema;
         return (0, o.jsxs)(o.Fragment, {
           children: [
             (0, o.jsx)(r.W, {
-              linkMarkType: l.link,
+              linkMarkType: i.link,
               onURLPasted: n,
               schema: t.pm_schema,
             }),
-            i.image && (0, o.jsx)(yt.pw, { nodeType: i.image }),
+            a.image && (0, o.jsx)(yt.pw, { nodeType: a.image }),
             (0, o.jsx)(Ft, {
               schemaConfig: t,
               editModel: s,
               clanSteamID: s.GetClanSteamID(),
             }),
-            (0, o.jsx)(Pt, { emoticonStore: Oe.A, schema: t.pm_schema }),
+            (0, o.jsx)(Pt, { emoticonStore: l, schema: t.pm_schema }),
           ],
         });
       });

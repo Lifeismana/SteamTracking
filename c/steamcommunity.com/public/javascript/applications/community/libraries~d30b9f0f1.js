@@ -15589,28 +15589,11 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        for (var _ = 0; _ < _.length; _++) {
-          var _ = _[_];
-          (_.enumerable = _.enumerable || !1),
-            (_.configurable = !0),
-            "value" in _ && (_.writable = !0),
-            Object.defineProperty(_, (0, _._)(_.key), _);
-        }
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (
-          (_ = Object.setPrototypeOf
-            ? Object.getPrototypeOf.bind()
-            : function (_) {
-                return _.__proto__ || Object.getPrototypeOf(_);
-              }),
-          _(_)
-        );
-      }
       function _() {
         try {
           var _ = !Boolean.prototype.valueOf.call(
@@ -15621,28 +15604,7 @@
           return !!_;
         })();
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        var _ = _();
-        return function () {
-          var _,
-            _ = _(_);
-          if (_) {
-            var _ = _(this).constructor;
-            _ = Reflect.construct(_, arguments, _);
-          } else _ = _.apply(this, arguments);
-          return (function (_, _) {
-            if (_ && ("object" == (0, _._)(_) || "function" == typeof _))
-              return _;
-            if (void 0 !== _)
-              throw new TypeError(
-                "Derived constructors may only return object or undefined",
-              );
-            return (0, _._)(_);
-          })(this, _);
-        };
-      }
+      var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16925,34 +16887,25 @@
         },
         _ = 1,
         _ = (function (_) {
-          !(function (_, _) {
-            if ("function" != typeof _ && null !== _)
-              throw new TypeError(
-                "Super expression must either be null or a function",
-              );
-            (_.prototype = Object.create(_ && _.prototype, {
-              constructor: {
-                value: _,
-                writable: !0,
-                configurable: !0,
-              },
-            })),
-              Object.defineProperty(_, "prototype", {
-                writable: !1,
-              }),
-              _ && (0, _._)(_, _);
-          })(_, _);
+          (0, _._)(_, _);
           var _,
             _,
-            _,
-            _ = _(_);
+            _ =
+              ((_ = _),
+              (_ = _()),
+              function () {
+                var _,
+                  _ = (0, _._)(_);
+                if (_) {
+                  var _ = (0, _._)(this).constructor;
+                  _ = Reflect.construct(_, arguments, _);
+                } else _ = _.apply(this, arguments);
+                return (0, _._)(this, _);
+              });
           function _(_) {
             var _;
             if (
-              ((function (_, _) {
-                if (!(_ instanceof _))
-                  throw new TypeError("Cannot call a class as a function");
-              })(this, _),
+              ((0, _._)(this, _),
               ((_ = _.call(this, _)).state = {
                 ariaSelection: null,
                 focusedOption: null,
@@ -17439,1049 +17392,1065 @@
             return _;
           }
           return (
-            (_ = _),
-            (_ = [
-              {
-                key: "componentDidMount",
-                value: function () {
-                  this.startListeningComposition(),
-                    this.startListeningToTouch(),
-                    this.props.closeMenuOnScroll &&
-                      document &&
-                      document.addEventListener &&
-                      document.addEventListener("scroll", this.onScroll, !0),
-                    this.props.autoFocus && this.focusInput(),
-                    this.props.menuIsOpen &&
-                      this.state.focusedOption &&
+            (0, _._)(
+              _,
+              [
+                {
+                  key: "componentDidMount",
+                  value: function () {
+                    this.startListeningComposition(),
+                      this.startListeningToTouch(),
+                      this.props.closeMenuOnScroll &&
+                        document &&
+                        document.addEventListener &&
+                        document.addEventListener("scroll", this.onScroll, !0),
+                      this.props.autoFocus && this.focusInput(),
+                      this.props.menuIsOpen &&
+                        this.state.focusedOption &&
+                        this.menuListRef &&
+                        this.focusedOptionRef &&
+                        (0, _._)(this.menuListRef, this.focusedOptionRef);
+                  },
+                },
+                {
+                  key: "componentDidUpdate",
+                  value: function (_) {
+                    var _ = this.props,
+                      _ = _.isDisabled,
+                      _ = _.menuIsOpen,
+                      _ = this.state.isFocused;
+                    ((_ && !_ && _.isDisabled) || (_ && _ && !_.menuIsOpen)) &&
+                      this.focusInput(),
+                      _ && _ && !_.isDisabled
+                        ? this.setState(
+                            {
+                              isFocused: !1,
+                            },
+                            this.onMenuClose,
+                          )
+                        : _ ||
+                          _ ||
+                          !_.isDisabled ||
+                          this.inputRef !== document.activeElement ||
+                          this.setState({
+                            isFocused: !0,
+                          }),
                       this.menuListRef &&
-                      this.focusedOptionRef &&
-                      (0, _._)(this.menuListRef, this.focusedOptionRef);
+                        this.focusedOptionRef &&
+                        this.scrollToFocusedOptionOnUpdate &&
+                        ((0, _._)(this.menuListRef, this.focusedOptionRef),
+                        (this.scrollToFocusedOptionOnUpdate = !1));
+                  },
                 },
-              },
-              {
-                key: "componentDidUpdate",
-                value: function (_) {
-                  var _ = this.props,
-                    _ = _.isDisabled,
-                    _ = _.menuIsOpen,
-                    _ = this.state.isFocused;
-                  ((_ && !_ && _.isDisabled) || (_ && _ && !_.menuIsOpen)) &&
-                    this.focusInput(),
-                    _ && _ && !_.isDisabled
-                      ? this.setState(
-                          {
-                            isFocused: !1,
-                          },
-                          this.onMenuClose,
-                        )
-                      : _ ||
-                        _ ||
-                        !_.isDisabled ||
-                        this.inputRef !== document.activeElement ||
-                        this.setState({
-                          isFocused: !0,
-                        }),
-                    this.menuListRef &&
-                      this.focusedOptionRef &&
-                      this.scrollToFocusedOptionOnUpdate &&
-                      ((0, _._)(this.menuListRef, this.focusedOptionRef),
-                      (this.scrollToFocusedOptionOnUpdate = !1));
+                {
+                  key: "componentWillUnmount",
+                  value: function () {
+                    this.stopListeningComposition(),
+                      this.stopListeningToTouch(),
+                      document.removeEventListener("scroll", this.onScroll, !0);
+                  },
                 },
-              },
-              {
-                key: "componentWillUnmount",
-                value: function () {
-                  this.stopListeningComposition(),
-                    this.stopListeningToTouch(),
-                    document.removeEventListener("scroll", this.onScroll, !0);
+                {
+                  key: "onMenuOpen",
+                  value: function () {
+                    this.props.onMenuOpen();
+                  },
                 },
-              },
-              {
-                key: "onMenuOpen",
-                value: function () {
-                  this.props.onMenuOpen();
+                {
+                  key: "onMenuClose",
+                  value: function () {
+                    this.onInputChange("", {
+                      action: "menu-close",
+                      prevInputValue: this.props.inputValue,
+                    }),
+                      this.props.onMenuClose();
+                  },
                 },
-              },
-              {
-                key: "onMenuClose",
-                value: function () {
-                  this.onInputChange("", {
-                    action: "menu-close",
-                    prevInputValue: this.props.inputValue,
-                  }),
-                    this.props.onMenuClose();
+                {
+                  key: "onInputChange",
+                  value: function (_, _) {
+                    this.props.onInputChange(_, _);
+                  },
                 },
-              },
-              {
-                key: "onInputChange",
-                value: function (_, _) {
-                  this.props.onInputChange(_, _);
+                {
+                  key: "focusInput",
+                  value: function () {
+                    this.inputRef && this.inputRef.focus();
+                  },
                 },
-              },
-              {
-                key: "focusInput",
-                value: function () {
-                  this.inputRef && this.inputRef.focus();
+                {
+                  key: "blurInput",
+                  value: function () {
+                    this.inputRef && this.inputRef.blur();
+                  },
                 },
-              },
-              {
-                key: "blurInput",
-                value: function () {
-                  this.inputRef && this.inputRef.blur();
+                {
+                  key: "openMenu",
+                  value: function (_) {
+                    var _ = this,
+                      _ = this.state,
+                      _ = _.selectValue,
+                      _ = _.isFocused,
+                      _ = this.buildFocusableOptions(),
+                      _ = "first" === _ ? 0 : _.length - 1;
+                    if (!this.props.isMulti) {
+                      var _ = _.indexOf(_[0]);
+                      _ > -1 && (_ = _);
+                    }
+                    (this.scrollToFocusedOptionOnUpdate = !(
+                      _ && this.menuListRef
+                    )),
+                      this.setState(
+                        {
+                          inputIsHiddenAfterUpdate: !1,
+                          focusedValue: null,
+                          focusedOption: _[_],
+                          focusedOptionId: this.getFocusedOptionId(_[_]),
+                        },
+                        function () {
+                          return _.onMenuOpen();
+                        },
+                      );
+                  },
                 },
-              },
-              {
-                key: "openMenu",
-                value: function (_) {
-                  var _ = this,
-                    _ = this.state,
-                    _ = _.selectValue,
-                    _ = _.isFocused,
-                    _ = this.buildFocusableOptions(),
-                    _ = "first" === _ ? 0 : _.length - 1;
-                  if (!this.props.isMulti) {
-                    var _ = _.indexOf(_[0]);
-                    _ > -1 && (_ = _);
-                  }
-                  (this.scrollToFocusedOptionOnUpdate = !(
-                    _ && this.menuListRef
-                  )),
-                    this.setState(
-                      {
-                        inputIsHiddenAfterUpdate: !1,
-                        focusedValue: null,
-                        focusedOption: _[_],
-                        focusedOptionId: this.getFocusedOptionId(_[_]),
-                      },
-                      function () {
-                        return _.onMenuOpen();
-                      },
-                    );
-                },
-              },
-              {
-                key: "focusValue",
-                value: function (_) {
-                  var _ = this.state,
-                    _ = _.selectValue,
-                    _ = _.focusedValue;
-                  if (this.props.isMulti) {
-                    this.setState({
-                      focusedOption: null,
-                    });
-                    var _ = __webpack_require__.indexOf(_);
-                    _ || (_ = -1);
-                    var _ = _.length - 1,
-                      _ = -1;
-                    if (_.length) {
-                      switch (_) {
-                        case "previous":
-                          _ = 0 === _ ? 0 : -1 === _ ? _ : _ - 1;
-                          break;
-                        case "next":
-                          _ > -1 && _ < _ && (_ = _ + 1);
-                      }
+                {
+                  key: "focusValue",
+                  value: function (_) {
+                    var _ = this.state,
+                      _ = _.selectValue,
+                      _ = _.focusedValue;
+                    if (this.props.isMulti) {
                       this.setState({
-                        inputIsHidden: -1 !== _,
-                        focusedValue: _[_],
+                        focusedOption: null,
+                      });
+                      var _ = __webpack_require__.indexOf(_);
+                      _ || (_ = -1);
+                      var _ = _.length - 1,
+                        _ = -1;
+                      if (_.length) {
+                        switch (_) {
+                          case "previous":
+                            _ = 0 === _ ? 0 : -1 === _ ? _ : _ - 1;
+                            break;
+                          case "next":
+                            _ > -1 && _ < _ && (_ = _ + 1);
+                        }
+                        this.setState({
+                          inputIsHidden: -1 !== _,
+                          focusedValue: _[_],
+                        });
+                      }
+                    }
+                  },
+                },
+                {
+                  key: "focusOption",
+                  value: function () {
+                    var _ =
+                        arguments.length > 0 && void 0 !== arguments[0]
+                          ? arguments[0]
+                          : "first",
+                      _ = this.props.pageSize,
+                      _ = this.state.focusedOption,
+                      _ = this.getFocusableOptions();
+                    if (_.length) {
+                      var _ = 0,
+                        _ = _.indexOf(_);
+                      _ || (_ = -1),
+                        "up" === _
+                          ? (_ = _ > 0 ? _ - 1 : _.length - 1)
+                          : "down" === _
+                            ? (_ = (_ + 1) % _.length)
+                            : "pageup" === _
+                              ? (_ = _ - _) < 0 && (_ = 0)
+                              : "pagedown" === _
+                                ? (_ = _ + _) > _.length - 1 &&
+                                  (_ = _.length - 1)
+                                : "last" === _ && (_ = _.length - 1),
+                        (this.scrollToFocusedOptionOnUpdate = !0),
+                        this.setState({
+                          focusedOption: _[_],
+                          focusedValue: null,
+                          focusedOptionId: this.getFocusedOptionId(_[_]),
+                        });
+                    }
+                  },
+                },
+                {
+                  key: "getTheme",
+                  value: function () {
+                    return this.props.theme
+                      ? "function" == typeof this.props.theme
+                        ? this.props.theme(_)
+                        : (0, _._)((0, _._)({}, _), this.props.theme)
+                      : _;
+                  },
+                },
+                {
+                  key: "getCommonProps",
+                  value: function () {
+                    var _ = this.clearValue,
+                      _ = this._,
+                      _ = this.getStyles,
+                      _ = this.getClassNames,
+                      _ = this.getValue,
+                      _ = this.selectOption,
+                      _ = this.setValue,
+                      _ = this.props,
+                      _ = _.isMulti,
+                      _ = _.isRtl,
+                      _ = _.options;
+                    return {
+                      clearValue: _,
+                      _: _,
+                      getStyles: _,
+                      getClassNames: _,
+                      getValue: _,
+                      hasValue: this.hasValue(),
+                      isMulti: _,
+                      isRtl: _,
+                      options: _,
+                      selectOption: _,
+                      selectProps: _,
+                      setValue: _,
+                      theme: this.getTheme(),
+                    };
+                  },
+                },
+                {
+                  key: "hasValue",
+                  value: function () {
+                    return this.state.selectValue.length > 0;
+                  },
+                },
+                {
+                  key: "hasOptions",
+                  value: function () {
+                    return !!this.getFocusableOptions().length;
+                  },
+                },
+                {
+                  key: "isClearable",
+                  value: function () {
+                    var _ = this.props,
+                      _ = _.isClearable,
+                      _ = _.isMulti;
+                    return void 0 === _ ? _ : _;
+                  },
+                },
+                {
+                  key: "isOptionDisabled",
+                  value: function (_, _) {
+                    return _(this.props, _, _);
+                  },
+                },
+                {
+                  key: "isOptionSelected",
+                  value: function (_, _) {
+                    return _(this.props, _, _);
+                  },
+                },
+                {
+                  key: "filterOption",
+                  value: function (_, _) {
+                    return _(this.props, _, _);
+                  },
+                },
+                {
+                  key: "formatOptionLabel",
+                  value: function (_, _) {
+                    if ("function" == typeof this.props.formatOptionLabel) {
+                      var _ = this.props.inputValue,
+                        _ = this.state.selectValue;
+                      return this.props.formatOptionLabel(_, {
+                        context: _,
+                        inputValue: _,
+                        selectValue: _,
                       });
                     }
-                  }
+                    return this.getOptionLabel(_);
+                  },
                 },
-              },
-              {
-                key: "focusOption",
-                value: function () {
-                  var _ =
-                      arguments.length > 0 && void 0 !== arguments[0]
-                        ? arguments[0]
-                        : "first",
-                    _ = this.props.pageSize,
-                    _ = this.state.focusedOption,
-                    _ = this.getFocusableOptions();
-                  if (_.length) {
-                    var _ = 0,
-                      _ = _.indexOf(_);
-                    _ || (_ = -1),
-                      "up" === _
-                        ? (_ = _ > 0 ? _ - 1 : _.length - 1)
-                        : "down" === _
-                          ? (_ = (_ + 1) % _.length)
-                          : "pageup" === _
-                            ? (_ = _ - _) < 0 && (_ = 0)
-                            : "pagedown" === _
-                              ? (_ = _ + _) > _.length - 1 && (_ = _.length - 1)
-                              : "last" === _ && (_ = _.length - 1),
-                      (this.scrollToFocusedOptionOnUpdate = !0),
-                      this.setState({
-                        focusedOption: _[_],
-                        focusedValue: null,
-                        focusedOptionId: this.getFocusedOptionId(_[_]),
-                      });
-                  }
+                {
+                  key: "formatGroupLabel",
+                  value: function (_) {
+                    return this.props.formatGroupLabel(_);
+                  },
                 },
-              },
-              {
-                key: "getTheme",
-                value: function () {
-                  return this.props.theme
-                    ? "function" == typeof this.props.theme
-                      ? this.props.theme(_)
-                      : (0, _._)((0, _._)({}, _), this.props.theme)
-                    : _;
-                },
-              },
-              {
-                key: "getCommonProps",
-                value: function () {
-                  var _ = this.clearValue,
-                    _ = this._,
-                    _ = this.getStyles,
-                    _ = this.getClassNames,
-                    _ = this.getValue,
-                    _ = this.selectOption,
-                    _ = this.setValue,
-                    _ = this.props,
-                    _ = _.isMulti,
-                    _ = _.isRtl,
-                    _ = _.options;
-                  return {
-                    clearValue: _,
-                    _: _,
-                    getStyles: _,
-                    getClassNames: _,
-                    getValue: _,
-                    hasValue: this.hasValue(),
-                    isMulti: _,
-                    isRtl: _,
-                    options: _,
-                    selectOption: _,
-                    selectProps: _,
-                    setValue: _,
-                    theme: this.getTheme(),
-                  };
-                },
-              },
-              {
-                key: "hasValue",
-                value: function () {
-                  return this.state.selectValue.length > 0;
-                },
-              },
-              {
-                key: "hasOptions",
-                value: function () {
-                  return !!this.getFocusableOptions().length;
-                },
-              },
-              {
-                key: "isClearable",
-                value: function () {
-                  var _ = this.props,
-                    _ = _.isClearable,
-                    _ = _.isMulti;
-                  return void 0 === _ ? _ : _;
-                },
-              },
-              {
-                key: "isOptionDisabled",
-                value: function (_, _) {
-                  return _(this.props, _, _);
-                },
-              },
-              {
-                key: "isOptionSelected",
-                value: function (_, _) {
-                  return _(this.props, _, _);
-                },
-              },
-              {
-                key: "filterOption",
-                value: function (_, _) {
-                  return _(this.props, _, _);
-                },
-              },
-              {
-                key: "formatOptionLabel",
-                value: function (_, _) {
-                  if ("function" == typeof this.props.formatOptionLabel) {
-                    var _ = this.props.inputValue,
-                      _ = this.state.selectValue;
-                    return this.props.formatOptionLabel(_, {
-                      context: _,
-                      inputValue: _,
-                      selectValue: _,
-                    });
-                  }
-                  return this.getOptionLabel(_);
-                },
-              },
-              {
-                key: "formatGroupLabel",
-                value: function (_) {
-                  return this.props.formatGroupLabel(_);
-                },
-              },
-              {
-                key: "startListeningComposition",
-                value: function () {
-                  document &&
-                    document.addEventListener &&
-                    (document.addEventListener(
-                      "compositionstart",
-                      this.onCompositionStart,
-                      !1,
-                    ),
-                    document.addEventListener(
-                      "compositionend",
-                      this.onCompositionEnd,
-                      !1,
-                    ));
-                },
-              },
-              {
-                key: "stopListeningComposition",
-                value: function () {
-                  document &&
-                    document.removeEventListener &&
-                    (document.removeEventListener(
-                      "compositionstart",
-                      this.onCompositionStart,
-                    ),
-                    document.removeEventListener(
-                      "compositionend",
-                      this.onCompositionEnd,
-                    ));
-                },
-              },
-              {
-                key: "startListeningToTouch",
-                value: function () {
-                  document &&
-                    document.addEventListener &&
-                    (document.addEventListener(
-                      "touchstart",
-                      this.onTouchStart,
-                      !1,
-                    ),
-                    document.addEventListener(
-                      "touchmove",
-                      this.onTouchMove,
-                      !1,
-                    ),
-                    document.addEventListener("touchend", this.onTouchEnd, !1));
-                },
-              },
-              {
-                key: "stopListeningToTouch",
-                value: function () {
-                  document &&
-                    document.removeEventListener &&
-                    (document.removeEventListener(
-                      "touchstart",
-                      this.onTouchStart,
-                    ),
-                    document.removeEventListener("touchmove", this.onTouchMove),
-                    document.removeEventListener("touchend", this.onTouchEnd));
-                },
-              },
-              {
-                key: "renderInput",
-                value: function () {
-                  var _ = this.props,
-                    _ = _.isDisabled,
-                    _ = _.isSearchable,
-                    _ = _.inputId,
-                    _ = _.inputValue,
-                    _ = _.tabIndex,
-                    _ = _.form,
-                    _ = _.menuIsOpen,
-                    _ = _.required,
-                    _ = this.getComponents().Input,
-                    _ = this.state,
-                    _ = _.inputIsHidden,
-                    _ = _.ariaSelection,
-                    _ = this.commonProps,
-                    _ = _ || this.getElementId("input"),
-                    _ = (0, _._)(
-                      (0, _._)(
-                        (0, _._)(
-                          {
-                            "aria-autocomplete": "list",
-                            "aria-expanded": _,
-                            "aria-haspopup": !0,
-                            "aria-errormessage":
-                              this.props["aria-errormessage"],
-                            "aria-invalid": this.props["aria-invalid"],
-                            "aria-label": this.props["aria-label"],
-                            "aria-labelledby": this.props["aria-labelledby"],
-                            "aria-required": _,
-                            role: "combobox",
-                            "aria-activedescendant": this.isAppleDevice
-                              ? void 0
-                              : this.state.focusedOptionId || "",
-                          },
-                          _ && {
-                            "aria-controls": this.getElementId("listbox"),
-                          },
-                        ),
-                        !_ && {
-                          "aria-readonly": !0,
-                        },
+                {
+                  key: "startListeningComposition",
+                  value: function () {
+                    document &&
+                      document.addEventListener &&
+                      (document.addEventListener(
+                        "compositionstart",
+                        this.onCompositionStart,
+                        !1,
                       ),
-                      this.hasValue()
-                        ? "initial-input-focus" ===
-                            (null == _ ? void 0 : _.action) && {
-                            "aria-describedby":
-                              this.getElementId("live-region"),
-                          }
-                        : {
-                            "aria-describedby":
-                              this.getElementId("placeholder"),
-                          },
-                    );
-                  return _
-                    ? _.createElement(
-                        _,
-                        (0, _._)(
-                          {},
-                          _,
-                          {
-                            autoCapitalize: "none",
-                            autoComplete: "off",
-                            autoCorrect: "off",
-                            _: _,
-                            innerRef: this.getInputRef,
-                            isDisabled: _,
-                            isHidden: _,
-                            onBlur: this.onInputBlur,
-                            onChange: this.handleInputChange,
-                            onFocus: this.onInputFocus,
-                            spellCheck: "false",
-                            tabIndex: _,
-                            form: _,
-                            type: "text",
-                            value: _,
-                          },
-                          _,
-                        ),
-                      )
-                    : _.createElement(
-                        _,
-                        (0, _._)(
-                          {
-                            _: _,
-                            innerRef: this.getInputRef,
-                            onBlur: this.onInputBlur,
-                            onChange: _._,
-                            onFocus: this.onInputFocus,
-                            disabled: _,
-                            tabIndex: _,
-                            inputMode: "none",
-                            form: _,
-                            value: "",
-                          },
-                          _,
-                        ),
-                      );
+                      document.addEventListener(
+                        "compositionend",
+                        this.onCompositionEnd,
+                        !1,
+                      ));
+                  },
                 },
-              },
-              {
-                key: "renderPlaceholderOrValue",
-                value: function () {
-                  var _ = this,
-                    _ = this.getComponents(),
-                    _ = _.MultiValue,
-                    _ = _.MultiValueContainer,
-                    _ = _.MultiValueLabel,
-                    _ = _.MultiValueRemove,
-                    _ = _.SingleValue,
-                    _ = _.Placeholder,
-                    _ = this.commonProps,
-                    _ = this.props,
-                    _ = _.controlShouldRenderValue,
-                    _ = _.isDisabled,
-                    _ = _.isMulti,
-                    _ = _.inputValue,
-                    _ = _.placeholder,
-                    _ = this.state,
-                    _ = _.selectValue,
-                    _ = _.focusedValue,
-                    _ = _.isFocused;
-                  if (!this.hasValue() || !_)
+                {
+                  key: "stopListeningComposition",
+                  value: function () {
+                    document &&
+                      document.removeEventListener &&
+                      (document.removeEventListener(
+                        "compositionstart",
+                        this.onCompositionStart,
+                      ),
+                      document.removeEventListener(
+                        "compositionend",
+                        this.onCompositionEnd,
+                      ));
+                  },
+                },
+                {
+                  key: "startListeningToTouch",
+                  value: function () {
+                    document &&
+                      document.addEventListener &&
+                      (document.addEventListener(
+                        "touchstart",
+                        this.onTouchStart,
+                        !1,
+                      ),
+                      document.addEventListener(
+                        "touchmove",
+                        this.onTouchMove,
+                        !1,
+                      ),
+                      document.addEventListener(
+                        "touchend",
+                        this.onTouchEnd,
+                        !1,
+                      ));
+                  },
+                },
+                {
+                  key: "stopListeningToTouch",
+                  value: function () {
+                    document &&
+                      document.removeEventListener &&
+                      (document.removeEventListener(
+                        "touchstart",
+                        this.onTouchStart,
+                      ),
+                      document.removeEventListener(
+                        "touchmove",
+                        this.onTouchMove,
+                      ),
+                      document.removeEventListener(
+                        "touchend",
+                        this.onTouchEnd,
+                      ));
+                  },
+                },
+                {
+                  key: "renderInput",
+                  value: function () {
+                    var _ = this.props,
+                      _ = _.isDisabled,
+                      _ = _.isSearchable,
+                      _ = _.inputId,
+                      _ = _.inputValue,
+                      _ = _.tabIndex,
+                      _ = _.form,
+                      _ = _.menuIsOpen,
+                      _ = _.required,
+                      _ = this.getComponents().Input,
+                      _ = this.state,
+                      _ = _.inputIsHidden,
+                      _ = _.ariaSelection,
+                      _ = this.commonProps,
+                      _ = _ || this.getElementId("input"),
+                      _ = (0, _._)(
+                        (0, _._)(
+                          (0, _._)(
+                            {
+                              "aria-autocomplete": "list",
+                              "aria-expanded": _,
+                              "aria-haspopup": !0,
+                              "aria-errormessage":
+                                this.props["aria-errormessage"],
+                              "aria-invalid": this.props["aria-invalid"],
+                              "aria-label": this.props["aria-label"],
+                              "aria-labelledby": this.props["aria-labelledby"],
+                              "aria-required": _,
+                              role: "combobox",
+                              "aria-activedescendant": this.isAppleDevice
+                                ? void 0
+                                : this.state.focusedOptionId || "",
+                            },
+                            _ && {
+                              "aria-controls": this.getElementId("listbox"),
+                            },
+                          ),
+                          !_ && {
+                            "aria-readonly": !0,
+                          },
+                        ),
+                        this.hasValue()
+                          ? "initial-input-focus" ===
+                              (null == _ ? void 0 : _.action) && {
+                              "aria-describedby":
+                                this.getElementId("live-region"),
+                            }
+                          : {
+                              "aria-describedby":
+                                this.getElementId("placeholder"),
+                            },
+                      );
                     return _
-                      ? null
+                      ? _.createElement(
+                          _,
+                          (0, _._)(
+                            {},
+                            _,
+                            {
+                              autoCapitalize: "none",
+                              autoComplete: "off",
+                              autoCorrect: "off",
+                              _: _,
+                              innerRef: this.getInputRef,
+                              isDisabled: _,
+                              isHidden: _,
+                              onBlur: this.onInputBlur,
+                              onChange: this.handleInputChange,
+                              onFocus: this.onInputFocus,
+                              spellCheck: "false",
+                              tabIndex: _,
+                              form: _,
+                              type: "text",
+                              value: _,
+                            },
+                            _,
+                          ),
+                        )
                       : _.createElement(
                           _,
-                          (0, _._)({}, _, {
-                            key: "placeholder",
-                            isDisabled: _,
-                            isFocused: _,
-                            innerProps: {
-                              _: this.getElementId("placeholder"),
+                          (0, _._)(
+                            {
+                              _: _,
+                              innerRef: this.getInputRef,
+                              onBlur: this.onInputBlur,
+                              onChange: _._,
+                              onFocus: this.onInputFocus,
+                              disabled: _,
+                              tabIndex: _,
+                              inputMode: "none",
+                              form: _,
+                              value: "",
                             },
-                          }),
-                          _,
+                            _,
+                          ),
                         );
-                  if (_)
-                    return _.map(function (_, _) {
-                      var _ = _ === _,
-                        _ = ""
-                          .concat(_.getOptionLabel(_), "-")
-                          .concat(_.getOptionValue(_));
-                      return _.createElement(
-                        _,
-                        (0, _._)({}, _, {
-                          components: {
-                            Container: _,
-                            Label: _,
-                            Remove: _,
-                          },
-                          isFocused: _,
-                          isDisabled: _,
-                          key: _,
-                          index: _,
-                          removeProps: {
-                            onClick: function () {
-                              return _.removeValue(_);
-                            },
-                            onTouchEnd: function () {
-                              return _.removeValue(_);
-                            },
-                            onMouseDown: function (_) {
-                              _.preventDefault();
-                            },
-                          },
-                          data: _,
-                        }),
-                        _.formatOptionLabel(_, "value"),
-                      );
-                    });
-                  if (_) return null;
-                  var _ = _[0];
-                  return _.createElement(
-                    _,
-                    (0, _._)({}, _, {
-                      data: _,
-                      isDisabled: _,
-                    }),
-                    this.formatOptionLabel(_, "value"),
-                  );
+                  },
                 },
-              },
-              {
-                key: "renderClearIndicator",
-                value: function () {
-                  var _ = this.getComponents().ClearIndicator,
-                    _ = this.commonProps,
-                    _ = this.props,
-                    _ = _.isDisabled,
-                    _ = _.isLoading,
-                    _ = this.state.isFocused;
-                  if (!this.isClearable() || !_ || _ || !this.hasValue() || _)
-                    return null;
-                  var _ = {
-                    onMouseDown: this.onClearIndicatorMouseDown,
-                    onTouchEnd: this.onClearIndicatorTouchEnd,
-                    "aria-hidden": "true",
-                  };
-                  return _.createElement(
-                    _,
-                    (0, _._)({}, _, {
-                      innerProps: _,
-                      isFocused: _,
-                    }),
-                  );
-                },
-              },
-              {
-                key: "renderLoadingIndicator",
-                value: function () {
-                  var _ = this.getComponents().LoadingIndicator,
-                    _ = this.commonProps,
-                    _ = this.props,
-                    _ = _.isDisabled,
-                    _ = _.isLoading,
-                    _ = this.state.isFocused;
-                  return _ && _
-                    ? _.createElement(
-                        _,
-                        (0, _._)({}, _, {
-                          innerProps: {
-                            "aria-hidden": "true",
-                          },
-                          isDisabled: _,
-                          isFocused: _,
-                        }),
-                      )
-                    : null;
-                },
-              },
-              {
-                key: "renderIndicatorSeparator",
-                value: function () {
-                  var _ = this.getComponents(),
-                    _ = _.DropdownIndicator,
-                    _ = _.IndicatorSeparator;
-                  if (!_ || !_) return null;
-                  var _ = this.commonProps,
-                    _ = this.props.isDisabled,
-                    _ = this.state.isFocused;
-                  return _.createElement(
-                    _,
-                    (0, _._)({}, _, {
-                      isDisabled: _,
-                      isFocused: _,
-                    }),
-                  );
-                },
-              },
-              {
-                key: "renderDropdownIndicator",
-                value: function () {
-                  var _ = this.getComponents().DropdownIndicator;
-                  if (!_) return null;
-                  var _ = this.commonProps,
-                    _ = this.props.isDisabled,
-                    _ = this.state.isFocused,
-                    _ = {
-                      onMouseDown: this.onDropdownIndicatorMouseDown,
-                      onTouchEnd: this.onDropdownIndicatorTouchEnd,
-                      "aria-hidden": "true",
-                    };
-                  return _.createElement(
-                    _,
-                    (0, _._)({}, _, {
-                      innerProps: _,
-                      isDisabled: _,
-                      isFocused: _,
-                    }),
-                  );
-                },
-              },
-              {
-                key: "renderMenu",
-                value: function () {
-                  var _ = this,
-                    _ = this.getComponents(),
-                    _ = _.Group,
-                    _ = _.GroupHeading,
-                    _ = _.Menu,
-                    _ = _.MenuList,
-                    _ = _.MenuPortal,
-                    _ = _.LoadingMessage,
-                    _ = _.NoOptionsMessage,
-                    _ = _.Option,
-                    _ = this.commonProps,
-                    _ = this.state.focusedOption,
-                    _ = this.props,
-                    _ = _.captureMenuScroll,
-                    _ = _.inputValue,
-                    _ = _.isLoading,
-                    _ = _.loadingMessage,
-                    _ = _.minMenuHeight,
-                    _ = _.maxMenuHeight,
-                    _ = _.menuIsOpen,
-                    _ = _.menuPlacement,
-                    _ = _.menuPosition,
-                    _ = _.menuPortalTarget,
-                    _ = _.menuShouldBlockScroll,
-                    _ = _.menuShouldScrollIntoView,
-                    _ = _.noOptionsMessage,
-                    _ = _.onMenuScrollToTop,
-                    _ = _.onMenuScrollToBottom;
-                  if (!_) return null;
-                  var _,
-                    _ = function (_, _) {
-                      var _ = _.type,
-                        _ = _.data,
-                        _ = _.isDisabled,
-                        _ = _.isSelected,
-                        _ = _.label,
-                        _ = _.value,
-                        _ = _ === _,
-                        _ = _
-                          ? void 0
-                          : function () {
-                              return _.onOptionHover(_);
-                            },
-                        _ = _
-                          ? void 0
-                          : function () {
-                              return _.selectOption(_);
-                            },
-                        _ = "".concat(_.getElementId("option"), "-").concat(_),
-                        _ = {
-                          _: _,
-                          onClick: _,
-                          onMouseMove: _,
-                          onMouseOver: _,
-                          tabIndex: -1,
-                          role: "option",
-                          "aria-selected": _.isAppleDevice ? void 0 : _,
-                        };
-                      return _.createElement(
-                        _,
-                        (0, _._)({}, _, {
-                          innerProps: _,
-                          data: _,
-                          isDisabled: _,
-                          isSelected: _,
-                          key: _,
-                          label: _,
-                          type: _,
-                          value: _,
-                          isFocused: _,
-                          innerRef: _ ? _.getFocusedOptionRef : void 0,
-                        }),
-                        _.formatOptionLabel(_.data, "menu"),
-                      );
-                    };
-                  if (this.hasOptions())
-                    _ = this.getCategorizedOptions().map(function (_) {
-                      if ("group" === _.type) {
-                        var _ = _.data,
-                          _ = _.options,
-                          _ = _.index,
-                          _ = "".concat(_.getElementId("group"), "-").concat(_),
-                          _ = "".concat(_, "-heading");
+                {
+                  key: "renderPlaceholderOrValue",
+                  value: function () {
+                    var _ = this,
+                      _ = this.getComponents(),
+                      _ = _.MultiValue,
+                      _ = _.MultiValueContainer,
+                      _ = _.MultiValueLabel,
+                      _ = _.MultiValueRemove,
+                      _ = _.SingleValue,
+                      _ = _.Placeholder,
+                      _ = this.commonProps,
+                      _ = this.props,
+                      _ = _.controlShouldRenderValue,
+                      _ = _.isDisabled,
+                      _ = _.isMulti,
+                      _ = _.inputValue,
+                      _ = _.placeholder,
+                      _ = this.state,
+                      _ = _.selectValue,
+                      _ = _.focusedValue,
+                      _ = _.isFocused;
+                    if (!this.hasValue() || !_)
+                      return _
+                        ? null
+                        : _.createElement(
+                            _,
+                            (0, _._)({}, _, {
+                              key: "placeholder",
+                              isDisabled: _,
+                              isFocused: _,
+                              innerProps: {
+                                _: this.getElementId("placeholder"),
+                              },
+                            }),
+                            _,
+                          );
+                    if (_)
+                      return _.map(function (_, _) {
+                        var _ = _ === _,
+                          _ = ""
+                            .concat(_.getOptionLabel(_), "-")
+                            .concat(_.getOptionValue(_));
                         return _.createElement(
                           _,
                           (0, _._)({}, _, {
-                            key: _,
-                            data: _,
-                            options: _,
-                            Heading: _,
-                            headingProps: {
-                              _: _,
-                              data: _.data,
+                            components: {
+                              Container: _,
+                              Label: _,
+                              Remove: _,
                             },
-                            label: _.formatGroupLabel(_.data),
+                            isFocused: _,
+                            isDisabled: _,
+                            key: _,
+                            index: _,
+                            removeProps: {
+                              onClick: function () {
+                                return _.removeValue(_);
+                              },
+                              onTouchEnd: function () {
+                                return _.removeValue(_);
+                              },
+                              onMouseDown: function (_) {
+                                _.preventDefault();
+                              },
+                            },
+                            data: _,
                           }),
-                          _.options.map(function (_) {
-                            return _(_, "".concat(_, "-").concat(_.index));
-                          }),
+                          _.formatOptionLabel(_, "value"),
                         );
-                      }
-                      if ("option" === _.type) return _(_, "".concat(_.index));
-                    });
-                  else if (_) {
-                    var _ = _({
-                      inputValue: _,
-                    });
-                    if (null === _) return null;
-                    _ = _.createElement(_, _, _);
-                  } else {
-                    var _ = _({
-                      inputValue: _,
-                    });
-                    if (null === _) return null;
-                    _ = _.createElement(_, _, _);
-                  }
-                  var _ = {
-                      minMenuHeight: _,
-                      maxMenuHeight: _,
-                      menuPlacement: _,
-                      menuPosition: _,
-                      menuShouldScrollIntoView: _,
-                    },
-                    _ = _.createElement(_._, (0, _._)({}, _, _), function (_) {
-                      var _ = _.ref,
-                        _ = _.placerProps,
-                        _ = _.placement,
-                        _ = _.maxHeight;
-                      return _.createElement(
-                        _,
-                        (0, _._)({}, _, _, {
-                          innerRef: _,
-                          innerProps: {
-                            onMouseDown: _.onMenuMouseDown,
-                            onMouseMove: _.onMenuMouseMove,
-                          },
-                          isLoading: _,
-                          placement: _,
-                        }),
-                        _.createElement(
-                          _,
-                          {
-                            captureEnabled: _,
-                            onTopArrive: _,
-                            onBottomArrive: _,
-                            lockEnabled: _,
-                          },
-                          function (_) {
-                            return _.createElement(
-                              _,
-                              (0, _._)({}, _, {
-                                innerRef: function (_) {
-                                  _.getMenuListRef(_), _(_);
-                                },
-                                innerProps: {
-                                  role: "listbox",
-                                  "aria-multiselectable": _.isMulti,
-                                  _: _.getElementId("listbox"),
-                                },
-                                isLoading: _,
-                                maxHeight: _,
-                                focusedOption: _,
-                              }),
-                              _,
-                            );
-                          },
-                        ),
-                      );
-                    });
-                  return _ || "fixed" === _
-                    ? _.createElement(
-                        _,
-                        (0, _._)({}, _, {
-                          appendTo: _,
-                          controlElement: this.controlRef,
-                          menuPlacement: _,
-                          menuPosition: _,
-                        }),
-                        _,
-                      )
-                    : _;
-                },
-              },
-              {
-                key: "renderFormField",
-                value: function () {
-                  var _ = this,
-                    _ = this.props,
-                    _ = _.delimiter,
-                    _ = _.isDisabled,
-                    _ = _.isMulti,
-                    _ = _.name,
-                    _ = _.required,
-                    _ = this.state.selectValue;
-                  if (_ && !this.hasValue() && !_)
-                    return _.createElement(_, {
-                      name: _,
-                      onFocus: this.onValueInputFocus,
-                    });
-                  if (_ && !_) {
-                    if (_) {
-                      if (_) {
-                        var _ = _.map(function (_) {
-                          return _.getOptionValue(_);
-                        }).join(_);
-                        return _.createElement("input", {
-                          name: _,
-                          type: "hidden",
-                          value: _,
-                        });
-                      }
-                      var _ =
-                        _.length > 0
-                          ? _.map(function (_, _) {
-                              return _.createElement("input", {
-                                key: "i-".concat(_),
-                                name: _,
-                                type: "hidden",
-                                value: _.getOptionValue(_),
-                              });
-                            })
-                          : _.createElement("input", {
-                              name: _,
-                              type: "hidden",
-                              value: "",
-                            });
-                      return _.createElement("div", null, _);
-                    }
-                    var _ = _[0] ? this.getOptionValue(_[0]) : "";
-                    return _.createElement("input", {
-                      name: _,
-                      type: "hidden",
-                      value: _,
-                    });
-                  }
-                },
-              },
-              {
-                key: "renderLiveRegion",
-                value: function () {
-                  var _ = this.commonProps,
-                    _ = this.state,
-                    _ = _.ariaSelection,
-                    _ = _.focusedOption,
-                    _ = _.focusedValue,
-                    _ = _.isFocused,
-                    _ = _.selectValue,
-                    _ = this.getFocusableOptions();
-                  return _.createElement(
-                    _,
-                    (0, _._)({}, _, {
-                      _: this.getElementId("live-region"),
-                      ariaSelection: _,
-                      focusedOption: _,
-                      focusedValue: _,
-                      isFocused: _,
-                      selectValue: _,
-                      focusableOptions: _,
-                      isAppleDevice: this.isAppleDevice,
-                    }),
-                  );
-                },
-              },
-              {
-                key: "render",
-                value: function () {
-                  var _ = this.getComponents(),
-                    _ = _.Control,
-                    _ = _.IndicatorsContainer,
-                    _ = _.SelectContainer,
-                    _ = _.ValueContainer,
-                    _ = this.props,
-                    _ = _.className,
-                    _ = _._,
-                    _ = _.isDisabled,
-                    _ = _.menuIsOpen,
-                    _ = this.state.isFocused,
-                    _ = (this.commonProps = this.getCommonProps());
-                  return _.createElement(
-                    _,
-                    (0, _._)({}, _, {
-                      className: _,
-                      innerProps: {
-                        _: _,
-                        onKeyDown: this.onKeyDown,
-                      },
-                      isDisabled: _,
-                      isFocused: _,
-                    }),
-                    this.renderLiveRegion(),
-                    _.createElement(
+                      });
+                    if (_) return null;
+                    var _ = _[0];
+                    return _.createElement(
                       _,
                       (0, _._)({}, _, {
-                        innerRef: this.getControlRef,
+                        data: _,
+                        isDisabled: _,
+                      }),
+                      this.formatOptionLabel(_, "value"),
+                    );
+                  },
+                },
+                {
+                  key: "renderClearIndicator",
+                  value: function () {
+                    var _ = this.getComponents().ClearIndicator,
+                      _ = this.commonProps,
+                      _ = this.props,
+                      _ = _.isDisabled,
+                      _ = _.isLoading,
+                      _ = this.state.isFocused;
+                    if (!this.isClearable() || !_ || _ || !this.hasValue() || _)
+                      return null;
+                    var _ = {
+                      onMouseDown: this.onClearIndicatorMouseDown,
+                      onTouchEnd: this.onClearIndicatorTouchEnd,
+                      "aria-hidden": "true",
+                    };
+                    return _.createElement(
+                      _,
+                      (0, _._)({}, _, {
+                        innerProps: _,
+                        isFocused: _,
+                      }),
+                    );
+                  },
+                },
+                {
+                  key: "renderLoadingIndicator",
+                  value: function () {
+                    var _ = this.getComponents().LoadingIndicator,
+                      _ = this.commonProps,
+                      _ = this.props,
+                      _ = _.isDisabled,
+                      _ = _.isLoading,
+                      _ = this.state.isFocused;
+                    if (!_ || !_) return null;
+                    return _.createElement(
+                      _,
+                      (0, _._)({}, _, {
                         innerProps: {
-                          onMouseDown: this.onControlMouseDown,
-                          onTouchEnd: this.onControlTouchEnd,
+                          "aria-hidden": "true",
                         },
                         isDisabled: _,
                         isFocused: _,
-                        menuIsOpen: _,
                       }),
-                      _.createElement(
-                        _,
-                        (0, _._)({}, _, {
-                          isDisabled: _,
-                        }),
-                        this.renderPlaceholderOrValue(),
-                        this.renderInput(),
-                      ),
-                      _.createElement(
-                        _,
-                        (0, _._)({}, _, {
-                          isDisabled: _,
-                        }),
-                        this.renderClearIndicator(),
-                        this.renderLoadingIndicator(),
-                        this.renderIndicatorSeparator(),
-                        this.renderDropdownIndicator(),
-                      ),
-                    ),
-                    this.renderMenu(),
-                    this.renderFormField(),
-                  );
+                    );
+                  },
                 },
-              },
-            ]),
-            (_ = [
-              {
-                key: "getDerivedStateFromProps",
-                value: function (_, _) {
-                  var _ = _.prevProps,
-                    _ = _.clearFocusValueOnUpdate,
-                    _ = _.inputIsHiddenAfterUpdate,
-                    _ = _.ariaSelection,
-                    _ = _.isFocused,
-                    _ = _.prevWasFocused,
-                    _ = _.instancePrefix,
-                    _ = _.options,
-                    _ = _.value,
-                    _ = _.menuIsOpen,
-                    _ = _.inputValue,
-                    _ = _.isMulti,
-                    _ = (0, _._)(_),
-                    _ = {};
-                  if (
-                    _ &&
-                    (_ !== _.value ||
-                      _ !== _.options ||
-                      _ !== _.menuIsOpen ||
-                      _ !== _.inputValue)
-                  ) {
-                    var _ = _
-                        ? (function (_, _) {
-                            return _(_(_, _));
-                          })(_, _)
-                        : [],
-                      _ = _ ? _(_(_, _), "".concat(_, "-option")) : [],
-                      _ = _
-                        ? (function (_, _) {
-                            var _ = _.focusedValue,
-                              _ = _.selectValue.indexOf(_);
-                            if (_ > -1) {
-                              if (_.indexOf(_) > -1) return _;
-                              if (_ < _.length) return _[_];
-                            }
-                            return null;
-                          })(_, _)
-                        : null,
-                      _ = (function (_, _) {
-                        var _ = _.focusedOption;
-                        return _ && _.indexOf(_) > -1 ? _ : _[0];
-                      })(_, _);
-                    _ = {
-                      selectValue: _,
-                      focusedOption: _,
-                      focusedOptionId: _(_, _),
-                      focusableOptionsWithIds: _,
-                      focusedValue: _,
-                      clearFocusValueOnUpdate: !1,
-                    };
-                  }
-                  var _ =
-                      null != _ && _ !== _
-                        ? {
-                            inputIsHidden: _,
-                            inputIsHiddenAfterUpdate: void 0,
-                          }
-                        : {},
-                    _ = _,
-                    _ = _ && _;
-                  return (
-                    _ &&
-                      !_ &&
-                      ((_ = {
-                        value: (0, _._)(_, _, _[0] || null),
-                        options: _,
-                        action: "initial-input-focus",
+                {
+                  key: "renderIndicatorSeparator",
+                  value: function () {
+                    var _ = this.getComponents(),
+                      _ = _.DropdownIndicator,
+                      _ = _.IndicatorSeparator;
+                    if (!_ || !_) return null;
+                    var _ = this.commonProps,
+                      _ = this.props.isDisabled,
+                      _ = this.state.isFocused;
+                    return _.createElement(
+                      _,
+                      (0, _._)({}, _, {
+                        isDisabled: _,
+                        isFocused: _,
                       }),
-                      (_ = !_)),
-                    "initial-input-focus" === (null == _ ? void 0 : _.action) &&
-                      (_ = null),
-                    (0, _._)(
-                      (0, _._)((0, _._)({}, _), _),
-                      {},
-                      {
-                        prevProps: _,
-                        ariaSelection: _,
-                        prevWasFocused: _,
+                    );
+                  },
+                },
+                {
+                  key: "renderDropdownIndicator",
+                  value: function () {
+                    var _ = this.getComponents().DropdownIndicator;
+                    if (!_) return null;
+                    var _ = this.commonProps,
+                      _ = this.props.isDisabled,
+                      _ = this.state.isFocused,
+                      _ = {
+                        onMouseDown: this.onDropdownIndicatorMouseDown,
+                        onTouchEnd: this.onDropdownIndicatorTouchEnd,
+                        "aria-hidden": "true",
+                      };
+                    return _.createElement(
+                      _,
+                      (0, _._)({}, _, {
+                        innerProps: _,
+                        isDisabled: _,
+                        isFocused: _,
+                      }),
+                    );
+                  },
+                },
+                {
+                  key: "renderMenu",
+                  value: function () {
+                    var _ = this,
+                      _ = this.getComponents(),
+                      _ = _.Group,
+                      _ = _.GroupHeading,
+                      _ = _.Menu,
+                      _ = _.MenuList,
+                      _ = _.MenuPortal,
+                      _ = _.LoadingMessage,
+                      _ = _.NoOptionsMessage,
+                      _ = _.Option,
+                      _ = this.commonProps,
+                      _ = this.state.focusedOption,
+                      _ = this.props,
+                      _ = _.captureMenuScroll,
+                      _ = _.inputValue,
+                      _ = _.isLoading,
+                      _ = _.loadingMessage,
+                      _ = _.minMenuHeight,
+                      _ = _.maxMenuHeight,
+                      _ = _.menuIsOpen,
+                      _ = _.menuPlacement,
+                      _ = _.menuPosition,
+                      _ = _.menuPortalTarget,
+                      _ = _.menuShouldBlockScroll,
+                      _ = _.menuShouldScrollIntoView,
+                      _ = _.noOptionsMessage,
+                      _ = _.onMenuScrollToTop,
+                      _ = _.onMenuScrollToBottom;
+                    if (!_) return null;
+                    var _,
+                      _ = function (_, _) {
+                        var _ = _.type,
+                          _ = _.data,
+                          _ = _.isDisabled,
+                          _ = _.isSelected,
+                          _ = _.label,
+                          _ = _.value,
+                          _ = _ === _,
+                          _ = _
+                            ? void 0
+                            : function () {
+                                return _.onOptionHover(_);
+                              },
+                          _ = _
+                            ? void 0
+                            : function () {
+                                return _.selectOption(_);
+                              },
+                          _ = ""
+                            .concat(_.getElementId("option"), "-")
+                            .concat(_),
+                          _ = {
+                            _: _,
+                            onClick: _,
+                            onMouseMove: _,
+                            onMouseOver: _,
+                            tabIndex: -1,
+                            role: "option",
+                            "aria-selected": _.isAppleDevice ? void 0 : _,
+                          };
+                        return _.createElement(
+                          _,
+                          (0, _._)({}, _, {
+                            innerProps: _,
+                            data: _,
+                            isDisabled: _,
+                            isSelected: _,
+                            key: _,
+                            label: _,
+                            type: _,
+                            value: _,
+                            isFocused: _,
+                            innerRef: _ ? _.getFocusedOptionRef : void 0,
+                          }),
+                          _.formatOptionLabel(_.data, "menu"),
+                        );
+                      };
+                    if (this.hasOptions())
+                      _ = this.getCategorizedOptions().map(function (_) {
+                        if ("group" === _.type) {
+                          var _ = _.data,
+                            _ = _.options,
+                            _ = _.index,
+                            _ = ""
+                              .concat(_.getElementId("group"), "-")
+                              .concat(_),
+                            _ = "".concat(_, "-heading");
+                          return _.createElement(
+                            _,
+                            (0, _._)({}, _, {
+                              key: _,
+                              data: _,
+                              options: _,
+                              Heading: _,
+                              headingProps: {
+                                _: _,
+                                data: _.data,
+                              },
+                              label: _.formatGroupLabel(_.data),
+                            }),
+                            _.options.map(function (_) {
+                              return _(_, "".concat(_, "-").concat(_.index));
+                            }),
+                          );
+                        }
+                        if ("option" === _.type)
+                          return _(_, "".concat(_.index));
+                      });
+                    else if (_) {
+                      var _ = _({
+                        inputValue: _,
+                      });
+                      if (null === _) return null;
+                      _ = _.createElement(_, _, _);
+                    } else {
+                      var _ = _({
+                        inputValue: _,
+                      });
+                      if (null === _) return null;
+                      _ = _.createElement(_, _, _);
+                    }
+                    var _ = {
+                        minMenuHeight: _,
+                        maxMenuHeight: _,
+                        menuPlacement: _,
+                        menuPosition: _,
+                        menuShouldScrollIntoView: _,
                       },
-                    )
-                  );
+                      _ = _.createElement(
+                        _._,
+                        (0, _._)({}, _, _),
+                        function (_) {
+                          var _ = _.ref,
+                            _ = _.placerProps,
+                            _ = _.placement,
+                            _ = _.maxHeight;
+                          return _.createElement(
+                            _,
+                            (0, _._)({}, _, _, {
+                              innerRef: _,
+                              innerProps: {
+                                onMouseDown: _.onMenuMouseDown,
+                                onMouseMove: _.onMenuMouseMove,
+                              },
+                              isLoading: _,
+                              placement: _,
+                            }),
+                            _.createElement(
+                              _,
+                              {
+                                captureEnabled: _,
+                                onTopArrive: _,
+                                onBottomArrive: _,
+                                lockEnabled: _,
+                              },
+                              function (_) {
+                                return _.createElement(
+                                  _,
+                                  (0, _._)({}, _, {
+                                    innerRef: function (_) {
+                                      _.getMenuListRef(_), _(_);
+                                    },
+                                    innerProps: {
+                                      role: "listbox",
+                                      "aria-multiselectable": _.isMulti,
+                                      _: _.getElementId("listbox"),
+                                    },
+                                    isLoading: _,
+                                    maxHeight: _,
+                                    focusedOption: _,
+                                  }),
+                                  _,
+                                );
+                              },
+                            ),
+                          );
+                        },
+                      );
+                    return _ || "fixed" === _
+                      ? _.createElement(
+                          _,
+                          (0, _._)({}, _, {
+                            appendTo: _,
+                            controlElement: this.controlRef,
+                            menuPlacement: _,
+                            menuPosition: _,
+                          }),
+                          _,
+                        )
+                      : _;
+                  },
                 },
-              },
-            ]),
-            _ && _(_.prototype, _),
-            _ && _(_, _),
-            Object.defineProperty(_, "prototype", {
-              writable: !1,
-            }),
+                {
+                  key: "renderFormField",
+                  value: function () {
+                    var _ = this,
+                      _ = this.props,
+                      _ = _.delimiter,
+                      _ = _.isDisabled,
+                      _ = _.isMulti,
+                      _ = _.name,
+                      _ = _.required,
+                      _ = this.state.selectValue;
+                    if (_ && !this.hasValue() && !_)
+                      return _.createElement(_, {
+                        name: _,
+                        onFocus: this.onValueInputFocus,
+                      });
+                    if (_ && !_) {
+                      if (_) {
+                        if (_) {
+                          var _ = _.map(function (_) {
+                            return _.getOptionValue(_);
+                          }).join(_);
+                          return _.createElement("input", {
+                            name: _,
+                            type: "hidden",
+                            value: _,
+                          });
+                        }
+                        var _ =
+                          _.length > 0
+                            ? _.map(function (_, _) {
+                                return _.createElement("input", {
+                                  key: "i-".concat(_),
+                                  name: _,
+                                  type: "hidden",
+                                  value: _.getOptionValue(_),
+                                });
+                              })
+                            : _.createElement("input", {
+                                name: _,
+                                type: "hidden",
+                                value: "",
+                              });
+                        return _.createElement("div", null, _);
+                      }
+                      var _ = _[0] ? this.getOptionValue(_[0]) : "";
+                      return _.createElement("input", {
+                        name: _,
+                        type: "hidden",
+                        value: _,
+                      });
+                    }
+                  },
+                },
+                {
+                  key: "renderLiveRegion",
+                  value: function () {
+                    var _ = this.commonProps,
+                      _ = this.state,
+                      _ = _.ariaSelection,
+                      _ = _.focusedOption,
+                      _ = _.focusedValue,
+                      _ = _.isFocused,
+                      _ = _.selectValue,
+                      _ = this.getFocusableOptions();
+                    return _.createElement(
+                      _,
+                      (0, _._)({}, _, {
+                        _: this.getElementId("live-region"),
+                        ariaSelection: _,
+                        focusedOption: _,
+                        focusedValue: _,
+                        isFocused: _,
+                        selectValue: _,
+                        focusableOptions: _,
+                        isAppleDevice: this.isAppleDevice,
+                      }),
+                    );
+                  },
+                },
+                {
+                  key: "render",
+                  value: function () {
+                    var _ = this.getComponents(),
+                      _ = _.Control,
+                      _ = _.IndicatorsContainer,
+                      _ = _.SelectContainer,
+                      _ = _.ValueContainer,
+                      _ = this.props,
+                      _ = _.className,
+                      _ = _._,
+                      _ = _.isDisabled,
+                      _ = _.menuIsOpen,
+                      _ = this.state.isFocused,
+                      _ = (this.commonProps = this.getCommonProps());
+                    return _.createElement(
+                      _,
+                      (0, _._)({}, _, {
+                        className: _,
+                        innerProps: {
+                          _: _,
+                          onKeyDown: this.onKeyDown,
+                        },
+                        isDisabled: _,
+                        isFocused: _,
+                      }),
+                      this.renderLiveRegion(),
+                      _.createElement(
+                        _,
+                        (0, _._)({}, _, {
+                          innerRef: this.getControlRef,
+                          innerProps: {
+                            onMouseDown: this.onControlMouseDown,
+                            onTouchEnd: this.onControlTouchEnd,
+                          },
+                          isDisabled: _,
+                          isFocused: _,
+                          menuIsOpen: _,
+                        }),
+                        _.createElement(
+                          _,
+                          (0, _._)({}, _, {
+                            isDisabled: _,
+                          }),
+                          this.renderPlaceholderOrValue(),
+                          this.renderInput(),
+                        ),
+                        _.createElement(
+                          _,
+                          (0, _._)({}, _, {
+                            isDisabled: _,
+                          }),
+                          this.renderClearIndicator(),
+                          this.renderLoadingIndicator(),
+                          this.renderIndicatorSeparator(),
+                          this.renderDropdownIndicator(),
+                        ),
+                      ),
+                      this.renderMenu(),
+                      this.renderFormField(),
+                    );
+                  },
+                },
+              ],
+              [
+                {
+                  key: "getDerivedStateFromProps",
+                  value: function (_, _) {
+                    var _ = _.prevProps,
+                      _ = _.clearFocusValueOnUpdate,
+                      _ = _.inputIsHiddenAfterUpdate,
+                      _ = _.ariaSelection,
+                      _ = _.isFocused,
+                      _ = _.prevWasFocused,
+                      _ = _.instancePrefix,
+                      _ = _.options,
+                      _ = _.value,
+                      _ = _.menuIsOpen,
+                      _ = _.inputValue,
+                      _ = _.isMulti,
+                      _ = (0, _._)(_),
+                      _ = {};
+                    if (
+                      _ &&
+                      (_ !== _.value ||
+                        _ !== _.options ||
+                        _ !== _.menuIsOpen ||
+                        _ !== _.inputValue)
+                    ) {
+                      var _ = _
+                          ? (function (_, _) {
+                              return _(_(_, _));
+                            })(_, _)
+                          : [],
+                        _ = _ ? _(_(_, _), "".concat(_, "-option")) : [],
+                        _ = _
+                          ? (function (_, _) {
+                              var _ = _.focusedValue,
+                                _ = _.selectValue.indexOf(_);
+                              if (_ > -1) {
+                                if (_.indexOf(_) > -1) return _;
+                                if (_ < _.length) return _[_];
+                              }
+                              return null;
+                            })(_, _)
+                          : null,
+                        _ = (function (_, _) {
+                          var _ = _.focusedOption;
+                          return _ && _.indexOf(_) > -1 ? _ : _[0];
+                        })(_, _);
+                      _ = {
+                        selectValue: _,
+                        focusedOption: _,
+                        focusedOptionId: _(_, _),
+                        focusableOptionsWithIds: _,
+                        focusedValue: _,
+                        clearFocusValueOnUpdate: !1,
+                      };
+                    }
+                    var _ =
+                        null != _ && _ !== _
+                          ? {
+                              inputIsHidden: _,
+                              inputIsHiddenAfterUpdate: void 0,
+                            }
+                          : {},
+                      _ = _,
+                      _ = _ && _;
+                    return (
+                      _ &&
+                        !_ &&
+                        ((_ = {
+                          value: (0, _._)(_, _, _[0] || null),
+                          options: _,
+                          action: "initial-input-focus",
+                        }),
+                        (_ = !_)),
+                      "initial-input-focus" ===
+                        (null == _ ? void 0 : _.action) && (_ = null),
+                      (0, _._)(
+                        (0, _._)((0, _._)({}, _), _),
+                        {},
+                        {
+                          prevProps: _,
+                          ariaSelection: _,
+                          prevWasFocused: _,
+                        },
+                      )
+                    );
+                  },
+                },
+              ],
+            ),
             _
           );
         })(_.Component);
@@ -20259,6 +20228,42 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_, _) {
+        if (!(_ instanceof _))
+          throw new TypeError("Cannot call a class as a function");
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        for (var _ = 0; _ < _.length; _++) {
+          var _ = _[_];
+          (_.enumerable = _.enumerable || !1),
+            (_.configurable = !0),
+            "value" in _ && (_.writable = !0),
+            Object.defineProperty(_, (0, _._)(_.key), _);
+        }
+      }
+      function _(_, _, _) {
+        return (
+          _ && _(_.prototype, _),
+          _ && _(_, _),
+          Object.defineProperty(_, "prototype", {
+            writable: !1,
+          }),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -20275,6 +20280,46 @@
             : (_[_] = _),
           _
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return (
+          (_ = Object.setPrototypeOf
+            ? Object.getPrototypeOf.bind()
+            : function (_) {
+                return _.__proto__ || Object.getPrototypeOf(_);
+              }),
+          _(_)
+        );
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if ("function" != typeof _ && null !== _)
+          throw new TypeError(
+            "Super expression must either be null or a function",
+          );
+        (_.prototype = Object.create(_ && _.prototype, {
+          constructor: {
+            value: _,
+            writable: !0,
+            configurable: !0,
+          },
+        })),
+          Object.defineProperty(_, "prototype", {
+            writable: !1,
+          }),
+          _ && (0, _._)(_, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -20335,6 +20380,22 @@
                 (_[_] = _[_]);
         }
         return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_ && ("object" == (0, _._)(_) || "function" == typeof _)) return _;
+        if (void 0 !== _)
+          throw new TypeError(
+            "Derived constructors may only return object or undefined",
+          );
+        return (0, _._)(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

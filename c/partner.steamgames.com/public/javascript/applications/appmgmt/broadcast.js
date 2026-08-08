@@ -16140,60 +16140,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ extends _._ {
-        constructor() {
-          super();
-        }
-        BTransportReady() {
-          return !0;
-        }
-        GetServerTime() {
-          return _._.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
-        }
-        async RequestEmoticonListInternal() {
-          let _ = [];
-          try {
-            let _ = await _().get(_._.CHAT_BASE_URL + "actions/EmoticonData", {
-              withCredentials: !0,
-            });
-            if (_.data.emoticons)
-              for (let _ of _.data.emoticons) {
-                let _ = _.name;
-                if (_.startsWith("^"))
-                  _.push({
-                    name: _,
-                  });
-                else {
-                  let _ = {
-                      name: _.substr(1, _.length - 2),
-                    },
-                    _ = _.name.toLowerCase();
-                  _ != _.name && (_.name_normalized = _),
-                    _.time_last_used && (_.last_used = _.time_last_used),
-                    _.use_count && (_.use_count = _.use_count),
-                    _.time_received && (_.time_received = _.time_received),
-                    _.appid && (_.appid = _.appid),
-                    _.push(_);
-                }
-              }
-          } catch (_) {
-            console.error("error loading emoticon list", _);
-          }
-          this.OnEmoticonListReceived(_);
-        }
-      }
-      const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

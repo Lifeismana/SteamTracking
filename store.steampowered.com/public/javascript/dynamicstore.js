@@ -695,6 +695,33 @@ GDynamicStore = {
 				$El.append( elSteamDeckCompatCategory );
 			}
 
+			var eSteamFrameCompatCategory = $El.data('dsSteamFrameCompatCategory');
+			if ( eSteamFrameCompatCategory !== undefined && !$El.data( 'dsSteamFrameCompatHandled' ) )
+			{
+				$El.data('dsSteamFrameCompatHandled', true);
+
+				var strClasses = 'ds_steam_frame_compat ';
+				if ( eSteamFrameCompatCategory !== undefined )
+				{
+					switch( eSteamFrameCompatCategory )
+					{
+						case 3:
+							strClasses += 'verified';
+							break;
+						case 2:
+							strClasses += 'playable';
+							break;
+						case 1:
+							strClasses += 'unsupported';
+							break;
+						case 0:
+						default:
+							strClasses += 'unknown';
+							break;
+					}
+				}
+			}
+
 			if ( unBundleID )
 			{
 				var Bundle = GDynamicStore.GetPersonalizedBundleData( unBundleID, $El.data('dsBundleData') );
@@ -1856,7 +1883,12 @@ GStoreItemData = {
 		{
 			params['data-ds-steam-machine-compat-category'] = rgItemData['steam_machine_compat_category'];
 		}
-		
+
+		if ( rgItemData['steam_frame_compat_category'] !== undefined )
+		{
+			params['data-ds-steam-frame-compat-category'] = rgItemData['steam_frame_compat_category'];
+		}
+
 		if ( unAppID )
 		{
 			params['data-ds-appid'] = unAppID;

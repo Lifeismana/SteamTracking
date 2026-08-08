@@ -168,9 +168,21 @@ function SaveTakeDownNotice( frm )
 		return false;
 	}
 
+	if ( !IsValidURL( $J( "#content_url" ).val() ) )
+	{
+		ShowAlertDialog( 'Error', 'Please provide a valid URL for the content on Steam' );
+		return false;
+	}
+
+	var original_content_url = $J( "#original_content_url" ).val();
+	if ( original_content_url.length != 0 && !IsValidURL( original_content_url ) )
+	{
+		ShowAlertDialog( 'Error', 'Please provide a valid URL for your original content' );
+		return false;
+	}
+
 	var email = $J('#email').val();
-	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
-	if ( email == '' || !email_regex.test(email) )
+	if ( !IsValidEmailAddress( email ) )
 	{
 		ShowAlertDialog( 'Error', 'The email address you entered is invalid.' )
 			.done( function() {

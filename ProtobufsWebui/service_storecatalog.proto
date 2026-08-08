@@ -30,6 +30,21 @@ message CStoreCatalog_GetDevPageLinks_Response {
 	repeated .CDeveloperPageLink links = 1;
 }
 
+message CStoreCatalog_GetDevPageListApps_Request {
+	optional uint32 clan_account_id = 1;
+	optional uint64 listid = 2;
+	optional bool ignore_dlc = 3;
+}
+
+message CStoreCatalog_GetDevPageListApps_Response {
+	repeated .CStoreCatalog_GetDevPageListApps_Response_ListApp apps = 1;
+}
+
+message CStoreCatalog_GetDevPageListApps_Response_ListApp {
+	optional uint32 appid = 1;
+	optional uint32 sort_order = 2;
+}
+
 message CStoreCatalog_GetDevPagesForPartner_Request {
 	optional uint32 partnerid = 1;
 }
@@ -60,6 +75,8 @@ service StoreCatalog {
 	rpc GetDevPageAllAppsLinked (.CStoreCatalog_GetDevPageAllAppsLinked_Request) returns (.CStoreCatalog_GetDevPageAllAppsLinked_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetDevPageLinks (.CStoreCatalog_GetDevPageLinks_Request) returns (.CStoreCatalog_GetDevPageLinks_Response);
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	rpc GetDevPageListApps (.CStoreCatalog_GetDevPageListApps_Request) returns (.CStoreCatalog_GetDevPageListApps_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetDevPagesForPartner (.CStoreCatalog_GetDevPagesForPartner_Request) returns (.CStoreCatalog_GetDevPagesForPartner_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2

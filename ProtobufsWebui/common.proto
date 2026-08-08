@@ -1,5 +1,23 @@
 import "common_base.proto";
 
+message CAppContentDescriptors_GetActiveSurvey_Request {
+	optional uint32 appid = 1;
+	optional bool include_descriptors = 2;
+	optional bool include_keyvalues = 3;
+	optional bool include_categories = 4;
+	optional bool include_ai_survey = 5;
+	optional bool include_all_ratings = 6;
+}
+
+message CAppContentDescriptors_GetWorkingSurvey_Request {
+	optional uint32 appid = 1;
+	optional bool include_descriptors = 2;
+	optional bool include_keyvalues = 3;
+	optional bool include_categories = 4;
+	optional bool include_ai_survey = 5;
+	optional bool include_all_ratings = 6;
+}
+
 // Used by: common.proto
 message CAppOverview {
 	optional uint32 appid = 1;
@@ -3403,10 +3421,30 @@ message CVRGamepadUIShared_Icon {
 	optional uint32 hwnd = 4;
 }
 
+message CVRGamepadUIShared_PathProperty_ClientSettings {
+	optional bool enable_ui_sounds = 1;
+}
+
 message CVRGamepadUIShared_PathProperty_ClientUserInfo {
 	optional bool logged_in = 1;
 	optional bool valve_email = 2;
 	optional bool developer_mode_enabled = 3;
+}
+
+message CVRGamepadUIShared_PathProperty_Controllers {
+	repeated .CVRGamepadUIShared_PathProperty_Controllers_Controller controllers = 1;
+	optional uint32 current_controller_index = 2;
+}
+
+// Used by: common.proto
+message CVRGamepadUIShared_PathProperty_Controllers_Controller {
+	optional uint32 controller_index = 1;
+	optional string name = 2;
+	optional int32 controller_type = 3;
+	optional int32 xinput_index = 4;
+	optional string serial_number = 5;
+	optional uint32 vendor_id = 6;
+	optional uint32 product_id = 7;
 }
 
 message CVRGamepadUIShared_PathProperty_DashboardBarActions {
@@ -3482,6 +3520,7 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	repeated uint32 supersample_effective_resolution = 15;
 	optional uint32 frames_to_throttle_value = 20;
 	optional bool motion_smoothing_value = 21;
+	optional uint32 gamescope_framerate_limit = 22;
 	optional bool env_theater_active = 30;
 	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_theater = 31;
 	optional .CVRGamepadUIShared_RichFloat env_brightness_construct_nominal = 32;
@@ -3489,6 +3528,8 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	optional bool perf_graph_in_hmd_value = 51;
 	optional bool record_vr_stats_value = 52;
 	optional bool record_tracking_value = 53;
+	optional string performance_profile_name = 54;
+	optional string playtime_profile_name = 55;
 }
 
 message CVRGamepadUIShared_PathProperty_PowerOptions {
@@ -3578,6 +3619,17 @@ message LoyaltyRewardDefinition_CommunityItemData {
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message SteamAward {
+	optional int32 voteid = 1;
+	optional .SteamAward_Localization localization = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message SteamAward_Localization {
+	optional string title = 1;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
 message StoreBrowseContext {
 	optional string language = 1;
 	optional int32 elanguage = 2;
@@ -3623,6 +3675,7 @@ message StoreBrowseItemDataRequest {
 	optional bool include_assets_without_overrides = 15;
 	optional bool apply_user_filters = 16;
 	optional bool include_links = 17;
+	optional bool include_extra_details = 18;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3685,6 +3738,23 @@ message StoreItem {
 	repeated .StoreItem_Link links = 71;
 	optional string purchase_description_bbcode = 72;
 	repeated .StoreItem_PackageGroup package_groups = 74;
+	optional .StoreItem_ExtraDetails extra_details = 75;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_AIGeneratedContentService {
+	optional string name = 1;
+	optional string url = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_Anticheat {
+	optional bool kernel_mode = 1;
+	optional bool uninstall_completely = 2;
+	optional bool boot_protection = 3;
+	optional string boot_protection_name = 4;
+	optional string name = 5;
+	optional string name_loc = 6;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3738,6 +3808,28 @@ message StoreItem_Demo {
 	optional uint32 appid = 1;
 	optional string label = 2;
 	optional bool show_above_purchase = 3;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_Eula {
+	optional string name = 1;
+	optional string url = 2;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_ExtraDetails {
+	repeated .SteamAward steam_award = 1;
+	optional bool vetted = 2;
+	optional bool no_mouse_keyboard_support = 3;
+	optional bool controller_wizard_complete = 4;
+	optional string drm_third_party_type = 5;
+	optional string drm_activation_limit = 6;
+	optional string user_account_third_party = 7;
+	optional bool user_account_third_party_link_to_steam = 8;
+	optional .StoreItem_Anticheat anticheat = 9;
+	repeated .StoreItem_Eula eula = 10;
+	optional .StoreItem_AIGeneratedContentService ai_generation_service = 11;
+	optional bool refund_checks_ea_playtime = 12;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

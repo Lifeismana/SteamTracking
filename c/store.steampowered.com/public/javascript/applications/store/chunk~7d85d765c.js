@@ -2429,59 +2429,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ extends _._ {
-        constructor() {
-          super();
-        }
-        BTransportReady() {
-          return !0;
-        }
-        GetServerTime() {
-          return _._.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
-        }
-        async RequestEmoticonListInternal() {
-          let _ = [];
-          try {
-            let _ = await _().get(_._.CHAT_BASE_URL + "actions/EmoticonData", {
-              withCredentials: !0,
-            });
-            if (_.data.emoticons)
-              for (let _ of _.data.emoticons) {
-                let _ = _.name;
-                if (_.startsWith("^"))
-                  _.push({
-                    name: _,
-                  });
-                else {
-                  let _ = {
-                      name: _.substr(1, _.length - 2),
-                    },
-                    _ = _.name.toLowerCase();
-                  _ != _.name && (_.name_normalized = _),
-                    _.time_last_used && (_.last_used = _.time_last_used),
-                    _.use_count && (_.use_count = _.use_count),
-                    _.time_received && (_.time_received = _.time_received),
-                    _.appid && (_.appid = _.appid),
-                    _.push(_);
-                }
-              }
-          } catch (_) {
-            console.error("error loading emoticon list", _);
-          }
-          this.OnEmoticonListReceived(_);
-        }
-      }
-      const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";

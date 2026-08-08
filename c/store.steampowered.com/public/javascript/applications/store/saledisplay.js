@@ -1547,6 +1547,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { color: _, onChange: _, strTitle: _, disableAlpha: _ } = _,
@@ -1598,11 +1599,49 @@
           ],
         });
       }
+      function _(_) {
+        const {
+            color: _,
+            onChange: _,
+            onRequestClose: _,
+            disableAlpha: _,
+            strTitle: _,
+          } = _,
+          _ = (0, _.useRef)(null);
+        return (
+          (0, _.useEffect)(() => {
+            const _ = _.current?.ownerDocument ?? document,
+              _ = (_) => {
+                _.current && !_.current.contains(_.target) && _();
+              },
+              _ = (_) => {
+                "Escape" === _.key && _();
+              };
+            return (
+              _.addEventListener("pointerdown", _, !0),
+              _.addEventListener("keydown", _, !0),
+              () => {
+                _.removeEventListener("pointerdown", _, !0),
+                  _.removeEventListener("keydown", _, !0);
+              }
+            );
+          }, [_]),
+          (0, _.jsx)("div", {
+            ref: _,
+            children: (0, _.jsx)(_, {
+              color: _,
+              disableAlpha: _,
+              strTitle: _ ?? _._.Localize("#Button_Color"),
+              onChange: _,
+            }),
+          })
+        );
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3139,6 +3178,7 @@
       }
       function _(_) {
         const { lang: _, eventModel: _, partnerEventStore: _ } = _,
+          _ = (0, _._)(),
           [_, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetNameWithFallback(_),
             __webpack_require__.GetDescriptionWithFallback(_),
@@ -3220,7 +3260,7 @@
                         _._,
                         {
                           event: _,
-                          emoticonStore: _._,
+                          emoticonStore: _,
                           partnerEventStore: _,
                           headerClassnames: "editor",
                           langOverride: _,
@@ -4139,6 +4179,24 @@
             fnUpdateImageGroup: _,
             eventModel: _,
           } = _,
+          { openColorPicker: _ } = {
+            openColorPicker: (0, _.useCallback)((_, _) => {
+              let _ = null;
+              _ = (0, _._)(
+                (0, _.jsx)(_, {
+                  color: _.color,
+                  disableAlpha: _.disableAlpha,
+                  strTitle: _.strTitle,
+                  onChange: _.onChange,
+                  onRequestClose: () => __webpack_require__?.Hide(),
+                }),
+                _,
+                {
+                  bDisablePopTop: !0,
+                },
+              );
+            }, []),
+          },
           [_, _] = (0, _.useState)(() => _),
           [_, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.repeat_setting,
@@ -4257,19 +4315,15 @@
                           style: {
                             backgroundColor: _,
                           },
-                          onClick: (_) => {
-                            (0, _._)(
-                              (0, _.jsx)(_, {
-                                color: _ ?? "",
-                                setColor: (_) =>
-                                  _({
-                                    ..._,
-                                    background_color1: _,
-                                  }),
-                              }),
-                              (0, _._)(_) ?? window,
-                            );
-                          },
+                          onClick: (_) =>
+                            _(_, {
+                              color: _ ?? "",
+                              onChange: (_) =>
+                                _({
+                                  ..._,
+                                  background_color1: _,
+                                }),
+                            }),
                           children: (0, _._)(
                             void 0 === _
                               ? "#BackgroundGroups_ColorNum_unset"
@@ -4308,19 +4362,15 @@
                             style: {
                               backgroundColor: _,
                             },
-                            onClick: (_) => {
-                              (0, _._)(
-                                (0, _.jsx)(_, {
-                                  color: _ ?? "",
-                                  setColor: (_) =>
-                                    _({
-                                      ..._,
-                                      background_color2: _,
-                                    }),
-                                }),
-                                (0, _._)(_) ?? window,
-                              );
-                            },
+                            onClick: (_) =>
+                              _(_, {
+                                color: _ ?? "",
+                                onChange: (_) =>
+                                  _({
+                                    ..._,
+                                    background_color2: _,
+                                  }),
+                              }),
                             children: (0, _._)(
                               void 0 === _
                                 ? "#BackgroundGroups_ColorNum_unset"
@@ -4362,19 +4412,6 @@
               }),
             }),
           ],
-        });
-      }
-      function _(_) {
-        const { closeModal: _, color: _, setColor: _ } = _,
-          [_, _] = (0, _.useState)(_);
-        return (0, _.jsx)(_._, {
-          strTitle: (0, _._)("#Button_Color"),
-          closeModal: _,
-          onOK: () => _(_),
-          children: (0, _.jsx)(_, {
-            onChange: (_) => _(_),
-            color: _,
-          }),
         });
       }
       function _(_) {

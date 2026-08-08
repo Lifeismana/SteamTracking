@@ -19,11 +19,12 @@
     },
     39832: (e, n, t) => {
       t.d(n, {
-        cc: () => l,
-        TW: () => u,
-        P0: () => s,
+        cc: () => m,
+        TW: () => h,
+        P0: () => l,
         KC: () => d,
         $z: () => c,
+        _l: () => s,
         R2: () => g,
       });
       var i = t(3049);
@@ -64,8 +65,8 @@
         if (r[e]) return r[e]();
       });
       var a,
-        h = t(83710);
-      function u(e, n, t) {
+        u = t(83710);
+      function h(e, n, t) {
         let r;
         r =
           void 0 === n || !0 === n || !1 === n
@@ -84,6 +85,28 @@
       function c(e, n) {
         const t = { year: "numeric", month: "short", day: "numeric", ...n };
         return new Date(1e3 * e).toLocaleDateString((0, i.J)(), t);
+      }
+      function s(e, n) {
+        const {
+            fullmonthname: t = !1,
+            bUseRelativeNames: r = !0,
+            bIncludeDayName: a = !1,
+          } = null != n ? n : {},
+          u = new Date(),
+          h = new Date(1e3 * e);
+        if (h.getFullYear() != u.getFullYear())
+          return c(e, { month: t ? "long" : "short" });
+        const s = new Date();
+        if ((s.setHours(0, 0, 0, 0), r))
+          if (h >= s) {
+            if ((s.setDate(s.getDate() + 1), h < s))
+              return o.Localize("#Time_Today");
+            if ((s.setDate(s.getDate() + 1), h < s))
+              return o.Localize("#Time_Tomorrow");
+          } else if ((s.setDate(s.getDate() - 1), h >= s))
+            return o.Localize("#Time_Yesterday");
+        const d = { month: t ? "long" : "short", day: "numeric" };
+        return a && (d.weekday = "long"), h.toLocaleDateString((0, i.J)(), d);
       }
       function d(e, n, t) {
         const r = new Date(1e3 * e),
@@ -104,7 +127,7 @@
           };
         return r.toLocaleTimeString(o, a);
       }
-      function s(e, n, t) {
+      function l(e, n, t) {
         return (
           (function (e, n = !1, t = !0) {
             const r = {
@@ -120,17 +143,17 @@
           t
         );
       }
-      function l(e) {
+      function m(e) {
         return e.toLocaleDateString((0, i.J)(), { weekday: "long" });
       }
       function g(e) {
-        const n = Math.floor(e / h.Kp.PerYear),
-          t = Math.floor(e / h.Kp.PerMonth),
-          i = Math.floor((e % h.Kp.PerMonth) / h.Kp.PerDay),
-          r = Math.floor((e % h.Kp.PerDay) / h.Kp.PerHour),
-          a = Math.floor((e % h.Kp.PerHour) / h.Kp.PerMinute);
+        const n = Math.floor(e / u.Kp.PerYear),
+          t = Math.floor(e / u.Kp.PerMonth),
+          i = Math.floor((e % u.Kp.PerMonth) / u.Kp.PerDay),
+          r = Math.floor((e % u.Kp.PerDay) / u.Kp.PerHour),
+          a = Math.floor((e % u.Kp.PerHour) / u.Kp.PerMinute);
         return (
-          (e %= h.Kp.PerMinute),
+          (e %= u.Kp.PerMinute),
           n > 0
             ? o.Localize("#TimeRemaining_MoreThanOneYear")
             : t > 0

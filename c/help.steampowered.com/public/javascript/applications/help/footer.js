@@ -1192,6 +1192,7 @@
             _ = _(
               {
                 onClick: _ ? _ : void 0,
+                "aria-disabled": _,
                 ..._,
                 variant: (0, _._)("Button", _),
                 size: _,
@@ -2364,7 +2365,7 @@
         );
       }
       function _(_) {
-        if (_._.IN_GAMEPADUI) return null;
+        if ((0, _._)()) return null;
         const _ = (0, _._)(_._.EREALM)
           ? (0, _.jsx)(_, {
               ..._,

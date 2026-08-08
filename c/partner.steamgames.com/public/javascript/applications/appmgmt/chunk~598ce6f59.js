@@ -688,6 +688,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -1075,6 +1076,202 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.clan_account_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_account_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  listid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  ignore_dlc: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.apps || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  apps: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  sort_order: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Response_ListApp";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.partnerid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -1290,6 +1487,18 @@
               _,
               {
                 ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetDevPageListApps = function (_, _, _) {
+            return _.SendMsg(
+              "StoreCatalog.GetDevPageListApps#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
               },
             );
           }),
@@ -1766,7 +1975,7 @@
                 fields: {
                   recommended_app: {
                     _: 1,
-                    _,
+                    _: _,
                   },
                   blurb: {
                     _: 2,
@@ -2133,6 +2342,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2462,50 +2673,25 @@
         (0, _._)([_._], _.prototype, "m_mapAppToCreatorIDList", void 0),
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
-      window.g_CreatorHomeStore = _;
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapListInfo = new Map();
-        m_bLoadedFromConfig = !1;
-        LazyInit() {
-          if (!this.m_bLoadedFromConfig) {
-            const _ = (0, _._)("creator_home_list_info", "application_config");
-            if (this.ValidateCreatorHomeTitles(_))
-              for (const [
-                _,
-                { title: _, description: _, listtileimage: _ },
-              ] of Object.entries(_ ?? {}))
-                _ &&
-                  this.m_mapListInfo.set(_, {
-                    title: _ ?? "",
-                    description: _?.length ? _ : void 0,
-                    imageUrl: _?.length ? _ : void 0,
-                  });
-            this.m_bLoadedFromConfig = !0;
-          }
-        }
-        ValidateCreatorHomeTitles(_) {
-          return null != _ && "object" == typeof _ && !Array.isArray(_);
-        }
-        GetListTitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.title : void 0;
-        }
-        GetListSubtitle(_) {
-          return (
-            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.description : void 0
-          );
-        }
-        GetListtileImage(_) {
-          return (
-            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.imageUrl : void 0
-          );
-        }
+      function _(_) {
+        if (!_) return;
+        const _ = (0, _._)("creator_home_list_info", "application_config");
+        if (null == _ || "object" != typeof _ || Array.isArray(_)) return;
+        const _ = _[_];
+        return _ && _.title
+          ? {
+              title: _.title,
+              description: _.description?.length ? _.description : void 0,
+              imageUrl: _.listtileimage?.length ? _.listtileimage : void 0,
+            }
+          : void 0;
       }
-      (0, _._)([_._], _.prototype, "m_mapListInfo", void 0),
-        (0, _._)([_._], _.prototype, "LazyInit", null);
-      const _ = new _();
+      function _(_) {
+        return _(_)?.title;
+      }
+      function _(_) {
+        return _(_)?.description;
+      }
       function _(_) {
         const _ = _._.InitFromClanID(_);
         return {
@@ -2544,7 +2730,31 @@
         });
         return _?.isLoading ? null : _.data;
       }
-      window.g_CreatorHomeListInfoStore = _;
+      function _(_, _, _) {
+        return {
+          queryKey: ["GetCreatorHomeListAppsQuery", _, _, _],
+          queryFn: async () => {
+            const _ = _.GetServiceTransport(),
+              _ = _._.Init(_._);
+            _.Body().set_clan_account_id(_),
+              _.Body().set_listid(_),
+              _ && _.Body().set_ignore_dlc(!0);
+            const _ = await _._.GetDevPageListApps(_, _);
+            if (_.GetEResult() != _._)
+              throw new Error(
+                `Error from GetCreatorHomeListAppsQuery: ${_.GetEResult()}`,
+              );
+            return _.Body()
+              .apps()
+              .slice()
+              .sort((_, _) => (_.sort_order() ?? 0) - (_.sort_order() ?? 0))
+              .map((_) => _.appid() ?? 0)
+              .filter((_) => _ > 0);
+          },
+          enabled: Boolean(_ > 0 && _),
+        };
+      }
+      window.g_CreatorHomeStore = _;
     },
   },
 ]);

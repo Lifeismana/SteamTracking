@@ -1188,6 +1188,7 @@
     "OpenSourceLicenses_Title": "Open Source Licenses",
     "OpenSourceLicenses_Label": "Licenses",
     "OpenSourceLicense_FieldLabel": "License:",
+    "OpenSourceLicense_NoText": "Failed to load license text",
     "MessageReaction_Description1": "%1$s reacted with %2$s",
     "MessageReaction_Description1You": "You reacted with %1$s",
     "MessageReaction_Description2": "%1$s and %2$s reacted with %3$s",

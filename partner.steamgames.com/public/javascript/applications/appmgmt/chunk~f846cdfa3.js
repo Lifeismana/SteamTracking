@@ -71,78 +71,68 @@
     },
     92528: (e, t, n) => {
       "use strict";
-      n.d(t, { Y: () => l });
-      var a = n(7850),
-        i = n(90626),
-        s = n(38165),
-        r = n(88997),
-        o = n(40139),
-        d = n.n(o);
-      function l(e) {
+      n.d(t, { Y: () => d });
+      var i = n(7850),
+        a = n(90626),
+        s = n(95893),
+        r = n(40139),
+        o = n.n(r);
+      function d(e) {
         const { rgGameProfileColorDefs: t } = e,
           n = t.map((e) =>
-            (0, a.jsxs)(
+            (0, i.jsxs)(
               "div",
               {
                 className: "form_row_flex",
                 children: [
-                  (0, a.jsxs)("div", {
+                  (0, i.jsxs)("div", {
                     className: "form_label_flex",
                     children: ["*", e.strProfileColorLabel],
                   }),
-                  (0, a.jsx)("div", {
+                  (0, i.jsx)("div", {
                     className: "form_data_flex",
-                    children: p(e),
+                    children: c(e),
                   }),
                 ],
               },
               e.strProfileColorKey,
             ),
           );
-        return (0, a.jsx)("div", {
-          className: d().profile_colors_ctn,
+        return (0, i.jsx)("div", {
+          className: o().profile_colors_ctn,
           children: n,
         });
       }
-      function c(e) {
+      function l(e) {
         const t = e.match(/rgba?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
         if (!t) return null;
-        const [, n, a, i] = t;
-        return `${n},${a},${i}`;
+        const [, n, i, a] = t;
+        return `${n},${i},${a}`;
       }
-      function p(e) {
+      function c(e) {
         const { strKVPrepend: t, bWriteAsRGBOnly: n } = e;
-        let [o, l] = i.useState(e.strCurrentColor);
-        const p = i.useRef(void 0);
-        return (0, a.jsxs)(a.Fragment, {
+        let [r, d] = a.useState(e.strCurrentColor);
+        const c = a.useRef(void 0),
+          { openColorPicker: p } = (0, s.p)();
+        return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, a.jsx)("input", {
-              ref: p,
+            (0, i.jsx)("input", {
+              ref: c,
               type: "text",
               name: `${t || "item[profile_colors]"}[${e.strProfileColorKey}]`,
               onChange: () => {
-                l(p.current.value);
+                d(c.current.value);
               },
               placeholder: n ? "255,255,255" : "rgba(255, 255, 255, .5)",
               size: 20,
-              value: n ? c(o) : o,
+              value: n ? l(r) : r,
               readOnly: !0,
             }),
-            (0, a.jsx)("div", {
-              className: d().profile_color_preview,
-              style: { backgroundColor: `${o}` },
+            (0, i.jsx)("div", {
+              className: o().profile_color_preview,
+              style: { backgroundColor: `${r}` },
               onClick: (e) => {
-                (0, r.lX)(
-                  (0, a.jsx)(s.s, {
-                    onChange: (e) => {
-                      l(e);
-                    },
-                    color: o,
-                    disableAlpha: n,
-                  }),
-                  e,
-                  { bDisablePopTop: !0 },
-                );
+                p(e, { color: r, onChange: d, disableAlpha: n });
               },
             }),
           ],
@@ -152,8 +142,8 @@
     35863: (e, t, n) => {
       "use strict";
       n.d(t, { H: () => j });
-      var a = n(7850),
-        i = n(90626),
+      var i = n(7850),
+        a = n(90626),
         s = n(93542),
         r = n(61859),
         o = n(21869),
@@ -192,34 +182,34 @@
         }
       }
       function j(e) {
-        const [t, n] = (0, i.useState)("closed"),
+        const [t, n] = (0, a.useState)("closed"),
           p = e.rgEditions,
-          [u, x] = (0, i.useState)(new E(p)),
+          [u, x] = (0, a.useState)(new E(p)),
           j = new Map();
         for (const t of Object.keys(e.rgEditionsComparisonGraphics))
           j.set(t, e.rgEditionsComparisonGraphics[t]);
-        const [S, A] = (0, i.useState)(() => {
+        const [S, C] = (0, a.useState)(() => {
             const t = new Map();
             for (const n of Object.keys(e.rgEditionsAltText))
               t.set(n, e.rgEditionsAltText[n]);
             return t;
           }),
-          [C, D] = (0, i.useState)(j),
+          [A, D] = (0, a.useState)(j),
           w = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
           R = (function (e, t) {
             return (0, c.n)({
               mutationFn: async (n) => {
                 const {
-                    rgEditionsToSave: a,
-                    rgGraphicsToDelete: i,
+                    rgEditionsToSave: i,
+                    rgGraphicsToDelete: a,
                     mapGraphicsToUpload: s,
                     mapAltText: r,
                   } = n,
                   o = new FormData();
                 o.append("sessionid", (0, g.KC)());
-                const d = Math.max(t.length, a.length);
+                const d = Math.max(t.length, i.length);
                 for (let e = 0; e < d; e++)
-                  e >= a.length
+                  e >= i.length
                     ? (o.append(
                         `app[related_items][editions][${e}][packageid]`,
                         "",
@@ -228,23 +218,23 @@
                         `app[related_items][editions][${e}][bundleid]`,
                         "",
                       ))
-                    : a[e].packageid
+                    : i[e].packageid
                       ? (o.append(
                           `app[related_items][editions][${e}][packageid]`,
-                          "" + a[e].packageid,
+                          "" + i[e].packageid,
                         ),
                         o.append(
                           `app[related_items][editions][${e}][bundleid]`,
                           "",
                         ))
-                      : a[e].bundleid
+                      : i[e].bundleid
                         ? (o.append(
                             `app[related_items][editions][${e}][packageid]`,
                             "",
                           ),
                           o.append(
                             `app[related_items][editions][${e}][bundleid]`,
-                            "" + a[e].bundleid,
+                            "" + i[e].bundleid,
                           ))
                         : console.log(
                             "Tried to save an edition with neither packageid or bundleid.",
@@ -255,7 +245,7 @@
                     e,
                   );
                 });
-                for (const e of i)
+                for (const e of a)
                   o.append(`app[assets][edition_comparison][image][${e}]`, "");
                 r.forEach((e, t) => {
                   o.append(
@@ -283,53 +273,53 @@
             e.nBasePackageId,
           );
         }
-        const k = i.useId();
-        return (0, a.jsxs)(a.Fragment, {
+        const k = a.useId();
+        return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, a.jsx)(o.E, {
+            (0, i.jsx)(o.E, {
               active: "editor" === t || "alert" === t,
-              children: (0, a.jsxs)(d.eV, {
+              children: (0, i.jsxs)(d.eV, {
                 "aria-labelledby": k,
                 closeModal: () => n("closed"),
                 children: [
                   "editor" === t &&
-                    (0, a.jsxs)(a.Fragment, {
+                    (0, i.jsxs)(i.Fragment, {
                       children: [
-                        (0, a.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                           className: s.EditionsEditorContents,
                           children: [
-                            (0, a.jsx)("h2", {
+                            (0, i.jsx)("h2", {
                               id: k,
                               children: (0, r.we)(
                                 "#StoreAdmin_EditEditions_DialogTitle",
                               ),
                             }),
-                            R.isPending && (0, a.jsx)(_.t, {}),
+                            R.isPending && (0, i.jsx)(_.t, {}),
                             !R.isPending &&
-                              (0, a.jsxs)(a.Fragment, {
+                              (0, i.jsxs)(i.Fragment, {
                                 children: [
                                   null !== N &&
-                                    (0, a.jsxs)("div", {
+                                    (0, i.jsxs)("div", {
                                       className: s.ErrorBox,
                                       children: [
-                                        (0, a.jsx)(h.X, {}),
-                                        (0, a.jsx)("div", { children: N }),
+                                        (0, i.jsx)(h.X, {}),
+                                        (0, i.jsx)("div", { children: N }),
                                       ],
                                     }),
-                                  (0, a.jsx)(b, {
+                                  (0, i.jsx)(b, {
                                     rgEditions: u,
                                     rgCandidates: e.rgCandidates,
                                     setEditions: x,
                                   }),
-                                  (0, a.jsx)("div", {
+                                  (0, i.jsx)("div", {
                                     className: s.EditionPickerHr,
                                   }),
-                                  (0, a.jsx)(f, {
+                                  (0, i.jsx)(f, {
                                     mapOriginalImages: j,
-                                    mapImages: C,
+                                    mapImages: A,
                                     setImages: D,
                                     mapAltText: S,
-                                    setAltText: A,
+                                    setAltText: C,
                                     bAppHasSteamChinaToolsEnabled:
                                       e.bAppHasSteamChinaToolsEnabled,
                                   }),
@@ -337,20 +327,20 @@
                               }),
                           ],
                         }),
-                        (0, a.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                           className: s.EditionsEditorDialogButtons,
                           children: [
-                            (0, a.jsx)("button", {
+                            (0, i.jsx)("button", {
                               className: "btn_green_white_innerfade",
                               disabled: null !== N,
                               onClick: async () => {
                                 const e = new Map();
-                                C.forEach((t, n) => {
+                                A.forEach((t, n) => {
                                   t instanceof File && e.set(n, t);
                                 });
                                 const t = [];
                                 j.forEach((e, n) => {
-                                  C.has(n) || t.push(n);
+                                  A.has(n) || t.push(n);
                                 }),
                                   R.mutate({
                                     rgEditionsToSave: Array.from(u),
@@ -364,7 +354,7 @@
                                 "#StoreAdmin_EditEditions_SaveButton",
                               ),
                             }),
-                            (0, a.jsx)("button", {
+                            (0, i.jsx)("button", {
                               onClick: () => {
                                 x(new E(p)), n("closed");
                               },
@@ -374,11 +364,11 @@
                             }),
                           ],
                         }),
-                        (0, a.jsx)("p", {
+                        (0, i.jsx)("p", {
                           className: s.NeedToPublishNotification,
                           children: (0, r.oW)(
                             "#StoreAdmin_EditEditions_NeedToPublishNotice",
-                            (0, a.jsx)("a", {
+                            (0, i.jsx)("a", {
                               target: "_blank",
                               href: `${g.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
                             }),
@@ -387,22 +377,22 @@
                       ],
                     }),
                   "alert" === t &&
-                    (0, a.jsx)(a.Fragment, {
-                      children: (0, a.jsxs)("div", {
+                    (0, i.jsx)(i.Fragment, {
+                      children: (0, i.jsxs)("div", {
                         className: s.EditionEditorContents,
                         children: [
-                          (0, a.jsx)("h2", {
+                          (0, i.jsx)("h2", {
                             children: (0, r.we)(
                               "#StoreAdmin_EditEditions_SavingTitle",
                             ),
                           }),
-                          (0, a.jsxs)("div", {
+                          (0, i.jsxs)("div", {
                             className: s.EditionsEditorSaveStatus,
                             children: [
                               R.isPending &&
-                                (0, a.jsxs)(a.Fragment, {
+                                (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                    (0, a.jsx)(_.t, {}),
+                                    (0, i.jsx)(_.t, {}),
                                     " ",
                                     (0, r.we)(
                                       "#StoreAdmin_EditEditions_Saving",
@@ -410,26 +400,26 @@
                                   ],
                                 }),
                               !R.isPending &&
-                                (0, a.jsx)("span", {
+                                (0, i.jsx)("span", {
                                   children: (0, r.we)(
                                     "#StoreAdmin_EditEditions_Saved",
                                   ),
                                 }),
                             ],
                           }),
-                          (0, a.jsx)("span", {
+                          (0, i.jsx)("span", {
                             className: s.PublishReminder,
                             children: (0, r.oW)(
                               "#StoreAdmin_EditEditions_NeedToPublishAlert",
-                              (0, a.jsx)("a", {
+                              (0, i.jsx)("a", {
                                 target: "_blank",
                                 href: `${g.TS.PARTNER_BASE_URL}admin/game/edit/${e.nItemId}?activetab=tab_publish`,
                               }),
                             ),
                           }),
-                          (0, a.jsx)("div", {
+                          (0, i.jsx)("div", {
                             className: s.EditionsEditorDialogButtons,
-                            children: (0, a.jsx)("button", {
+                            children: (0, i.jsx)("button", {
                               onClick: () => {
                                 n("refreshing"), window.location.reload();
                               },
@@ -445,17 +435,17 @@
               }),
             }),
             (e.rgCandidates.length > 1 || e.rgEditions.length > 0) &&
-              (0, a.jsx)(a.Fragment, {
-                children: (0, a.jsxs)("div", {
+              (0, i.jsx)(i.Fragment, {
+                children: (0, i.jsxs)("div", {
                   className: (0, l.A)(
                     s.EditionsEditorRow,
                     w && s.ImageProvided,
                   ),
                   children: [
                     "closed" === t &&
-                      (0, a.jsxs)(a.Fragment, {
+                      (0, i.jsxs)(i.Fragment, {
                         children: [
-                          (0, a.jsx)("button", {
+                          (0, i.jsx)("button", {
                             className: s.OpenEditorButton,
                             onClick: () => n("editor"),
                             children: (0, r.we)(
@@ -463,20 +453,20 @@
                             ),
                           }),
                           u?.size > 0
-                            ? (0, a.jsx)("span", {
+                            ? (0, i.jsx)("span", {
                                 children: (0, r.we)(
                                   "#StoreAdmin_EditEditions_ManageEditionsDescription",
                                   u.size,
                                 ),
                               })
-                            : (0, a.jsx)("span", {
+                            : (0, i.jsx)("span", {
                                 children: (0, r.we)(
                                   "#StoreAdmin_EditEditions_GroupEditionsDescription",
                                 ),
                               }),
-                          (0, a.jsx)("span", {
+                          (0, i.jsx)("span", {
                             children: w
-                              ? (0, a.jsx)("span", {
+                              ? (0, i.jsx)("span", {
                                   className: (0, l.A)(
                                     s.TaskDone,
                                     "icon_check_green",
@@ -492,8 +482,8 @@
                         ],
                       }),
                     "refreshing" === t &&
-                      (0, a.jsx)(a.Fragment, {
-                        children: (0, a.jsx)(_.t, { size: "small" }),
+                      (0, i.jsx)(i.Fragment, {
+                        children: (0, i.jsx)(_.t, { size: "small" }),
                       }),
                   ],
                 }),
@@ -507,34 +497,34 @@
         const { rgEditions: t, rgCandidates: n, setEditions: o } = e,
           d = new Map();
         for (const t of e.rgCandidates) d.set(t.nId, t);
-        const [c, p] = (0, i.useState)(""),
+        const [c, p] = (0, a.useState)(""),
           m = n.filter(
             (e) => -1 !== e.strName.toLowerCase().indexOf(c.toLowerCase()),
           );
-        return (0, a.jsxs)("div", {
+        return (0, i.jsxs)("div", {
           className: s.EditionPicker,
           children: [
-            (0, a.jsx)("p", {
+            (0, i.jsx)("p", {
               children: (0, r.oW)(
                 "#StoreAdmin_EditEditions_GroupEditionsIntro",
-                (0, a.jsx)("a", {
+                (0, i.jsx)("a", {
                   target: "_blank",
                   href: `${g.TS.PARTNER_BASE_URL}doc/store/manageeditions`,
                 }),
               ),
             }),
-            (0, a.jsx)("br", {}),
-            (0, a.jsx)("h3", {
+            (0, i.jsx)("br", {}),
+            (0, i.jsx)("h3", {
               children: (0, r.we)("#StoreAdmin_EditEditions_StepNumber1"),
             }),
-            (0, a.jsx)("p", {
+            (0, i.jsx)("p", {
               children: (0, r.we)(
                 "#StoreAdmin_EditEditions_SelectEditionsDescription",
               ),
             }),
-            (0, a.jsx)("div", {
+            (0, i.jsx)("div", {
               className: s.EditionPickerFilterBox,
-              children: (0, a.jsx)("input", {
+              children: (0, i.jsx)("input", {
                 type: "text",
                 placeholder: (0, r.we)(
                   "#StoreAdmin_EditEditions_FilterDescription",
@@ -546,27 +536,27 @@
                 },
               }),
             }),
-            (0, a.jsxs)("table", {
+            (0, i.jsxs)("table", {
               children: [
-                (0, a.jsx)("thead", {
-                  children: (0, a.jsxs)("tr", {
+                (0, i.jsx)("thead", {
+                  children: (0, i.jsxs)("tr", {
                     children: [
-                      (0, a.jsx)("td", {
+                      (0, i.jsx)("td", {
                         children: (0, r.we)(
                           "#StoreAdmin_EditEditions_ColumnEdition",
                         ),
                       }),
-                      (0, a.jsx)("td", {
+                      (0, i.jsx)("td", {
                         children: (0, r.we)(
                           "#StoreAdmin_EditEditions_ColumnPackageTitle",
                         ),
                       }),
-                      (0, a.jsx)("td", {
+                      (0, i.jsx)("td", {
                         children: (0, r.we)(
                           "#StoreAdmin_EditEditions_ColumnState",
                         ),
                       }),
-                      (0, a.jsx)("td", {
+                      (0, i.jsx)("td", {
                         children: (0, r.we)(
                           "#StoreAdmin_EditEditions_ColumnPrice",
                         ),
@@ -574,23 +564,23 @@
                     ],
                   }),
                 }),
-                (0, a.jsx)("tbody", {
+                (0, i.jsx)("tbody", {
                   children: m.map((e) => {
                     const n = t.has(S(e));
-                    let i = s.HiddenColor;
+                    let a = s.HiddenColor;
                     return (
                       "Released" === e.strReleaseState
-                        ? (i = s.ReleasedColor)
+                        ? (a = s.ReleasedColor)
                         : "Prepurchase" === e.strReleaseState
-                          ? (i = s.PrepurchaseColor)
-                          : "Beta" === e.strReleaseState && (i = s.BetaColor),
-                      (0, a.jsxs)(
+                          ? (a = s.PrepurchaseColor)
+                          : "Beta" === e.strReleaseState && (a = s.BetaColor),
+                      (0, i.jsxs)(
                         "tr",
                         {
-                          className: (0, l.A)(i, s.EditionPickerRow),
+                          className: (0, l.A)(a, s.EditionPickerRow),
                           children: [
-                            (0, a.jsx)("td", {
-                              children: (0, a.jsx)("input", {
+                            (0, i.jsx)("td", {
+                              children: (0, i.jsx)("input", {
                                 type: "checkbox",
                                 onChange:
                                   ((r = e.eType),
@@ -613,11 +603,11 @@
                                 checked: n,
                               }),
                             }),
-                            (0, a.jsx)("td", { children: e.strName }),
-                            (0, a.jsx)("td", {
+                            (0, i.jsx)("td", { children: e.strName }),
+                            (0, i.jsx)("td", {
                               children: e.strLocalizedReleaseState,
                             }),
-                            (0, a.jsx)("td", {
+                            (0, i.jsx)("td", {
                               dangerouslySetInnerHTML: { __html: e.strPricing },
                             }),
                           ],
@@ -642,10 +632,10 @@
             setAltText: l,
             bAppHasSteamChinaToolsEnabled: c,
           } = e,
-          [p, m] = (0, i.useState)(null),
+          [p, m] = (0, a.useState)(null),
           _ = (0, r.O9)(e.bAppHasSteamChinaToolsEnabled),
-          [g, E] = (0, i.useState)("english"),
-          j = (0, i.useRef)(null);
+          [g, E] = (0, a.useState)("english"),
+          j = (0, a.useRef)(null);
         let S = null,
           b = "missing";
         if (n.has(g)) {
@@ -660,52 +650,52 @@
             : n.has(e)
               ? s.ExistsImageOption
               : s.MissingImageOption;
-        return (0, a.jsxs)("div", {
+        return (0, i.jsxs)("div", {
           className: s.LocalizedImageSelector,
           children: [
-            (0, a.jsx)("h3", {
+            (0, i.jsx)("h3", {
               children: (0, r.we)("#StoreAdmin_EditEditions_StepNumber2"),
             }),
-            (0, a.jsx)("p", {
+            (0, i.jsx)("p", {
               children: (0, r.we)(
                 "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
                 u,
                 x,
               ),
             }),
-            (0, a.jsxs)("div", {
+            (0, i.jsxs)("div", {
               className: s.Header,
               children: [
-                (0, a.jsx)("input", {
+                (0, i.jsx)("input", {
                   type: "file",
                   ref: j,
                   onChange: async (e) => {
                     if (e.target.files && e.target.files[0]) {
                       const t = e.target.files[0],
-                        a = await createImageBitmap(t);
-                      if (a.width !== u || a.height !== x)
+                        i = await createImageBitmap(t);
+                      if (i.width !== u || i.height !== x)
                         return void m(
                           (0, r.we)(
                             "#StoreAdmin_EditEditions_ImageSizeError",
                             u,
                             x,
-                            a.width,
-                            a.height,
+                            i.width,
+                            i.height,
                           ),
                         );
-                      const i = new Map(n);
-                      i.set(g, t), o(i), m(null);
+                      const a = new Map(n);
+                      a.set(g, t), o(a), m(null);
                     }
                   },
                   style: { display: "none" },
                 }),
-                (0, a.jsx)("select", {
+                (0, i.jsx)("select", {
                   onChange: (e) => {
                     E(e.target.value), m(null);
                   },
                   className: f(g),
                   children: (0, r.vR)(_, (e, t) =>
-                    (0, a.jsx)(
+                    (0, i.jsx)(
                       "option",
                       { value: t, className: f(t), children: e },
                       t,
@@ -714,13 +704,13 @@
                 }),
               ],
             }),
-            (0, a.jsx)("p", {
+            (0, i.jsx)("p", {
               className: s.ErrorBox,
               children:
                 null !== p &&
-                (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(h.X, {}), p] }),
+                (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(h.X, {}), p] }),
             }),
-            (0, a.jsx)("div", {
+            (0, i.jsx)("div", {
               className: s.ImageDropPane,
               onClick: () => j.current?.click(),
               onDragOver: (e) => e.preventDefault(),
@@ -730,34 +720,34 @@
                   e.dataTransfer.files && e.dataTransfer.files[0])
                 ) {
                   const t = e.dataTransfer.files[0],
-                    a = await createImageBitmap(t);
-                  if (a.width !== u || a.height !== x)
+                    i = await createImageBitmap(t);
+                  if (i.width !== u || i.height !== x)
                     return void m(
                       (0, r.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
                         u,
                         x,
-                        a.width,
-                        a.height,
+                        i.width,
+                        i.height,
                       ),
                     );
-                  const i = new Map(n);
-                  i.set(g, t), o(i), m(null);
+                  const a = new Map(n);
+                  a.set(g, t), o(a), m(null);
                 }
               },
               children: S
-                ? (0, a.jsxs)(a.Fragment, {
+                ? (0, i.jsxs)(i.Fragment, {
                     children: [
-                      (0, a.jsx)("div", {
+                      (0, i.jsx)("div", {
                         className: s.DragAndDropDescriptionWithImage,
                         children: (0, r.we)(
                           "#StoreAdmin_EditEditions_DragAndDropToReplace",
                         ),
                       }),
-                      (0, a.jsx)("img", { src: S }),
-                      (0, a.jsx)("div", {
+                      (0, i.jsx)("img", { src: S }),
+                      (0, i.jsx)("div", {
                         className: s.DeleteLink,
-                        children: (0, a.jsx)("a", {
+                        children: (0, i.jsx)("a", {
                           onClick: () => {
                             if (n.has(g)) {
                               const e = new Map(n);
@@ -771,25 +761,25 @@
                       }),
                     ],
                   })
-                : (0, a.jsx)("div", {
+                : (0, i.jsx)("div", {
                     className: s.DragAndDropDescriptionWithoutImage,
                     children: (0, r.we)(
                       "#StoreAdmin_EditEditions_DragAndDropHere",
                     ),
                   }),
             }),
-            (0, a.jsx)("h3", {
+            (0, i.jsx)("h3", {
               children: (0, r.we)("#StoreAdmin_EditEditions_StepNumber3"),
             }),
-            (0, a.jsx)("label", {
+            (0, i.jsx)("label", {
               htmlFor: "altTextArea",
-              children: (0, a.jsx)("p", {
+              children: (0, i.jsx)("p", {
                 children: (0, r.we)(
                   "#StoreAdmin_EditEditions_AltTextDescription",
                 ),
               }),
             }),
-            (0, a.jsx)("textarea", {
+            (0, i.jsx)("textarea", {
               id: "altTextArea",
               className: s.AltTextArea,
               onChange: (e) => {
@@ -805,8 +795,8 @@
     39679: (e, t, n) => {
       "use strict";
       n.d(t, { Ll: () => c, ut: () => l });
-      var a = n(7850),
-        i = n(90626),
+      var i = n(7850),
+        a = n(90626),
         s = n(63369),
         r = n(16676),
         o = n(61859);
@@ -828,7 +818,7 @@
             bExpandedDisplay: p,
           } = e,
           m = !!t,
-          _ = i.useMemo(
+          _ = a.useMemo(
             () =>
               (c || d).map((e) => ({
                 label: (0, s.M)(e, t, null, p),
@@ -836,7 +826,7 @@
               })),
             [t, c, p],
           ),
-          g = i.useCallback(
+          g = a.useCallback(
             (e) => {
               l(e.data);
             },
@@ -845,7 +835,7 @@
           h = t
             ? (0, o.we)("#GameEdit_ComingSoon_SelectAnOption")
             : (0, o.we)("#App_Landing_NoDateSelected");
-        return (0, a.jsx)(r.ZU, {
+        return (0, i.jsx)(r.ZU, {
           disabled: !m,
           strDefaultLabel: h,
           rgOptions: _,
@@ -857,8 +847,8 @@
     67045: (e, t, n) => {
       "use strict";
       n.d(t, { M: () => F });
-      var a = n(7850),
-        i = n(90626),
+      var i = n(7850),
+        a = n(90626),
         s = n(63369),
         r = n(61859),
         o = n(91675),
@@ -877,10 +867,10 @@
         S = n(61336),
         b = n(78327),
         f = n(39679),
-        A = n(51780);
-      function C(e) {
+        C = n(51780);
+      function A(e) {
         const { appid: t, onClose: n, onCommit: s } = e,
-          [o, d] = i.useState(null),
+          [o, d] = a.useState(null),
           {
             data: l,
             isLoading: c,
@@ -899,23 +889,23 @@
             });
           })(t),
           g = "prerelease" == l?.strReleaseState,
-          h = i.useCallback(
+          h = a.useCallback(
             (e, n) => {
               j.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
                 s(e, n, g);
             },
             [t, s, g],
           );
-        let u = (0, a.jsx)(R, { setOnOKButton: d, onCommit: h });
+        let u = (0, i.jsx)(R, { setOnOKButton: d, onCommit: h });
         return (
           m
-            ? (u = (0, a.jsx)(v, {
+            ? (u = (0, i.jsx)(v, {
                 strError: (0, r.we)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!c && l) || (u = (0, a.jsx)(E.t, {})),
-          (0, a.jsx)(D.Provider, {
+            : (!c && l) || (u = (0, i.jsx)(E.t, {})),
+          (0, i.jsx)(D.Provider, {
             value: l,
-            children: (0, a.jsx)(k, {
+            children: (0, i.jsx)(k, {
               fnSubmit: o,
               fnCloseModal: n,
               children: u,
@@ -923,11 +913,11 @@
           })
         );
       }
-      const D = i.createContext(null);
+      const D = a.createContext(null);
       function w() {
-        return i.useContext(D);
+        return a.useContext(D);
       }
-      const R = i.memo(function (e) {
+      const R = a.memo(function (e) {
         const {
             appid: t,
             bCanUpdateComingSoonDate: n,
@@ -935,29 +925,29 @@
             strComingSoonDisplay: o,
           } = w(),
           { setOnOKButton: d, onCommit: l } = e,
-          [c, m] = i.useState(s),
-          [_, u] = i.useState(o || void 0),
-          [x, E] = i.useState("none"),
-          [j, C] = i.useState(),
-          D = i.useCallback((e) => {
-            C(e), E("none");
+          [c, m] = a.useState(s),
+          [_, u] = a.useState(o || void 0),
+          [x, E] = a.useState("none"),
+          [j, A] = a.useState(),
+          D = a.useCallback((e) => {
+            A(e), E("none");
           }, []),
-          R = i.useCallback(() => {
+          R = a.useCallback(() => {
             if (c)
               if (_) {
-                E("submitting"), C(null);
+                E("submitting"), A(null);
                 (async function (e) {
                   const {
                       unAppID: t,
                       rtReleaseDate: n,
-                      strComingSoonDisplay: a,
+                      strComingSoonDisplay: i,
                     } = e,
-                    i = `${b.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
+                    a = `${b.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
                     s = new FormData();
                   s.append("sessionid", (0, b.KC)()),
                     n && s.append("release_date", n.toString());
-                  s.append("coming_soon_display", a);
-                  const o = await p().post(i, s);
+                  s.append("coming_soon_display", i);
+                  const o = await p().post(a, s);
                   if (!o.data || o.data.success != g.R)
                     throw (0, r.we)(
                       "#Error_Description",
@@ -982,36 +972,36 @@
             else D((0, r.we)("#App_Landing_ReleaseDate_Error_NoDate"));
           }, [t, c, _, n, l, D]);
         return (
-          i.useEffect(() => {
+          a.useEffect(() => {
             d("none" == x ? () => R : null);
           }, [R, n, x, d]),
-          (0, a.jsxs)(a.Fragment, {
+          (0, i.jsxs)(i.Fragment, {
             children: [
-              j && (0, a.jsx)(v, { strError: j }),
-              (0, a.jsx)(N, {}),
-              (0, a.jsxs)(h.dR, {
+              j && (0, i.jsx)(v, { strError: j }),
+              (0, i.jsx)(N, {}),
+              (0, i.jsxs)(h.dR, {
                 children: [
-                  (0, a.jsxs)(T, {
+                  (0, i.jsxs)(T, {
                     label: (0, r.we)("#App_Landing_IntendedReleaseDateTitle"),
                     children: [
-                      (0, a.jsx)(P, { rtSelectedDate: c, setSelectedDate: m }),
-                      (0, a.jsx)(L, {}),
+                      (0, i.jsx)(P, { rtSelectedDate: c, setSelectedDate: m }),
+                      (0, i.jsx)(L, {}),
                     ],
                   }),
-                  (0, a.jsxs)(T, {
+                  (0, i.jsxs)(T, {
                     label: (0, r.we)("#App_Landing_PublicDateDisplayTitle"),
                     children: [
-                      (0, a.jsx)(f.Ll, {
+                      (0, i.jsx)(f.Ll, {
                         rtSteamReleaseDate: c,
                         value: _,
                         onChange: u,
                       }),
-                      (0, a.jsx)("p", {
+                      (0, i.jsx)("p", {
                         children: (0, r.we)(
                           "#App_Landing_ReleaseDateStorePage",
                         ),
                       }),
-                      (0, a.jsx)("p", {
+                      (0, i.jsx)("p", {
                         children: (0, r.we)(
                           "#App_Landing_ReleaseDateStoreListing",
                         ),
@@ -1020,59 +1010,59 @@
                   }),
                 ],
               }),
-              (0, a.jsx)("div", {
-                className: A.ReleaseColumnFooter,
+              (0, i.jsx)("div", {
+                className: C.ReleaseColumnFooter,
                 children: (0, r.oW)(
                   "#App_Landing_NeedHelpWithReleaseDates",
-                  (0, a.jsx)("a", {
+                  (0, i.jsx)("a", {
                     target: "_blank",
                     href: `${b.TS.PARTNER_BASE_URL}doc/store/coming_soon`,
                   }),
-                  (0, a.jsx)("a", {
+                  (0, i.jsx)("a", {
                     target: "_blank",
                     href: `${(0, S.GX)()}wizard/HelpWithPublishing`,
                   }),
                 ),
               }),
-              (0, a.jsx)(I, {}),
+              (0, i.jsx)(I, {}),
             ],
           })
         );
       });
       function v(e) {
         const { strError: t } = e;
-        return (0, a.jsx)("div", { className: A.ErrorBox, children: t });
+        return (0, i.jsx)("div", { className: C.ErrorBox, children: t });
       }
       function N() {
         const {
           bIsComingSoon: e,
           bIsStorePageReviewed: t,
           bIsWaitingForBuildReview: n,
-          bIsFirstSelfPublishingApp: i,
+          bIsFirstSelfPublishingApp: a,
           rtEarliestDate: s,
           bRequiresReleaseWaitingPeriod: o,
         } = w();
         return e && t
           ? n
-            ? (0, a.jsx)(B, {
+            ? (0, i.jsx)(B, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_BuildReview",
                 ),
               })
-            : (0, a.jsx)(B, {
+            : (0, i.jsx)(B, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate",
                   (0, r.$z)(s),
                 ),
               })
-          : i && o
-            ? (0, a.jsx)(B, {
+          : a && o
+            ? (0, i.jsx)(B, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
                 ),
               })
             : o
-              ? (0, a.jsx)(B, {
+              ? (0, i.jsx)(B, {
                   children: (0, r.we)(
                     "#App_Landing_Release_EarliestDate_TwoWeeks",
                   ),
@@ -1080,27 +1070,27 @@
               : null;
       }
       function k(e) {
-        const { fnCloseModal: t, fnSubmit: n, children: i } = e,
+        const { fnCloseModal: t, fnSubmit: n, children: a } = e,
           { bCanUpdateComingSoonDate: s } = w() || {
             bCanUpdateComingSoonDate: !0,
           };
-        return (0, a.jsxs)(x.mt, {
+        return (0, i.jsxs)(x.mt, {
           active: !0,
-          className: A.ReleaseDateModal,
+          className: C.ReleaseDateModal,
           onDismiss: t,
           children: [
-            (0, a.jsx)(h.Y9, {
+            (0, i.jsx)(h.Y9, {
               children: (0, r.we)(
                 s
                   ? "#App_Landing_Set_Release_Date"
                   : "#App_Landing_Change_Release_Date",
               ),
             }),
-            (0, a.jsx)(h.nB, {
-              className: A.ReleaseDateRequestBody,
-              children: i,
+            (0, i.jsx)(h.nB, {
+              className: C.ReleaseDateRequestBody,
+              children: a,
             }),
-            (0, a.jsx)(h.CB, {
+            (0, i.jsx)(h.CB, {
               bOKDisabled: !n,
               onCancel: t,
               strCancelText: (0, r.we)("#App_Landing_Requested_Date_Cancel"),
@@ -1112,29 +1102,29 @@
       }
       function T(e) {
         const { label: t, children: n } = e;
-        return (0, a.jsxs)(h.VP, {
-          className: A.Column,
+        return (0, i.jsxs)(h.VP, {
+          className: C.Column,
           children: [
-            (0, a.jsxs)("div", {
-              className: A.ColumnLabel,
+            (0, i.jsxs)("div", {
+              className: C.ColumnLabel,
               children: [t, ":"],
             }),
-            (0, a.jsx)("div", { className: A.ColumnContent, children: n }),
+            (0, i.jsx)("div", { className: C.ColumnContent, children: n }),
           ],
         });
       }
       function P(e) {
         const { rtSelectedDate: t, setSelectedDate: n } = e,
-          { bCanUpdateComingSoonDate: i, rtEarliestDate: s } = w();
-        return (0, a.jsx)(a.Fragment, {
-          children: (0, a.jsx)(u.K, {
+          { bCanUpdateComingSoonDate: a, rtEarliestDate: s } = w();
+        return (0, i.jsx)(i.Fragment, {
+          children: (0, i.jsx)(u.K, {
             bWeekdaysOnly: !0,
             bNoDefaultDate: !0,
-            disabled: !i,
+            disabled: !a,
             nEarliestTime: s,
             fnGetTimeToUpdate: () => t,
             fnSetTimeToUpdate: n,
-            className: A.DatePicker,
+            className: C.DatePicker,
             bShowTimeZone: !0,
             strAlsoShowTimeZone: m.o,
           }),
@@ -1143,38 +1133,38 @@
       function L(e) {
         const { bCanUpdateComingSoonDate: t, rtReleaseDate: n } = w();
         return t
-          ? (0, a.jsxs)(a.Fragment, {
+          ? (0, i.jsxs)(i.Fragment, {
               children: [
-                (0, a.jsx)("p", {
+                (0, i.jsx)("p", {
                   children: (0, r.we)(
                     "#App_Landing_Set_Release_Date_SetIntended",
                   ),
                 }),
-                (0, a.jsx)("p", {
+                (0, i.jsx)("p", {
                   children: (0, r.we)("#App_Landing_Set_Release_Date_Weekends"),
                 }),
-                (0, a.jsx)("p", {
+                (0, i.jsx)("p", {
                   children: (0, r.we)(
                     "#App_Landing_Set_Release_Date_PacificTime",
                   ),
                 }),
               ],
             })
-          : (0, a.jsx)("p", {
+          : (0, i.jsx)("p", {
               children: (0, r.oW)(
                 (0, r.we)(
                   "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
                   (0, r.$z)(n),
                 ),
-                (0, a.jsx)("a", {
+                (0, i.jsx)("a", {
                   href: `${(0, S.GX)()}wizard/HelpWithPublishing?issueid=905`,
                 }),
               ),
             });
       }
       function B(e) {
-        return (0, a.jsx)("span", {
-          className: A.BlueNote,
+        return (0, i.jsx)("span", {
+          className: C.BlueNote,
           children: e.children,
         });
       }
@@ -1182,12 +1172,12 @@
         const {
           rtEarliestDate: t,
           strReleaseState: n,
-          bCanUpdateComingSoonDate: i,
+          bCanUpdateComingSoonDate: a,
         } = w();
-        return "prerelease" != n || i
+        return "prerelease" != n || a
           ? null
-          : (0, a.jsx)("div", {
-              className: A.PublishNowWarning,
+          : (0, i.jsx)("div", {
+              className: C.PublishNowWarning,
               children: (0, r.we)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
                 (0, r.$z)(t),
@@ -1202,37 +1192,37 @@
             unAppID: n,
             rgEarliestAdvancedAccessDate: o,
           } = e,
-          [c, p] = i.useState(e.rtReleaseDate),
-          [m, _] = i.useState(e.strComingSoonDisplay),
-          [g, h] = i.useState(!1),
-          [u, x] = i.useState(!1),
-          E = i.useCallback(() => h(!0), []),
-          j = i.useCallback(() => h(!1), []),
-          S = i.useCallback((e, t, n) => {
+          [c, p] = a.useState(e.rtReleaseDate),
+          [m, _] = a.useState(e.strComingSoonDisplay),
+          [g, h] = a.useState(!1),
+          [u, x] = a.useState(!1),
+          E = a.useCallback(() => h(!0), []),
+          j = a.useCallback(() => h(!1), []),
+          S = a.useCallback((e, t, n) => {
             p(e), _(t), h(!1), n && x(!0);
           }, []);
-        return (0, a.jsxs)(a.Fragment, {
+        return (0, i.jsxs)(i.Fragment, {
           children: [
-            g && (0, a.jsx)(C, { appid: n, onClose: j, onCommit: S }),
+            g && (0, i.jsx)(A, { appid: n, onClose: j, onCommit: S }),
             u &&
-              (0, a.jsx)(U, {
+              (0, i.jsx)(U, {
                 appid: n,
                 bIsGameEdit: t,
                 closeModal: () => x(!1),
               }),
-            (0, a.jsxs)("div", {
+            (0, i.jsxs)("div", {
               className: (0, y.A)(d.ReleaseDateInfoCtn, t && d.GameEditCtn),
               children: [
-                (0, a.jsxs)("div", {
+                (0, i.jsxs)("div", {
                   className: d.ReleaseDateContent,
                   children: [
-                    (0, a.jsx)($, {
+                    (0, i.jsx)($, {
                       label: (0, r.we)("#App_Landing_SpecifiedReleaseDate"),
-                      children: (0, a.jsx)(M, { rtReleaseDate: c }),
+                      children: (0, i.jsx)(M, { rtReleaseDate: c }),
                     }),
-                    (0, a.jsx)($, {
+                    (0, i.jsx)($, {
                       label: (0, r.we)("#App_Landing_CustomersSeeReleaseDate"),
-                      children: (0, a.jsx)("div", {
+                      children: (0, i.jsx)("div", {
                         className: (0, y.A)(d.BigField, m ? d.Set : d.Unset),
                         children: m
                           ? (0, s.M)(m, c)
@@ -1241,16 +1231,16 @@
                     }),
                   ],
                 }),
-                (0, a.jsxs)("div", {
+                (0, i.jsxs)("div", {
                   className: d.EditButton,
                   onClick: E,
                   children: [
-                    (0, a.jsx)("div", { className: (0, y.A)(d.Spacer, d.Top) }),
-                    (0, a.jsx)("div", {
+                    (0, i.jsx)("div", { className: (0, y.A)(d.Spacer, d.Top) }),
+                    (0, i.jsx)("div", {
                       className: d.EditButtonIcon,
-                      children: (0, a.jsx)(l.ffu, {}),
+                      children: (0, i.jsx)(l.ffu, {}),
                     }),
-                    (0, a.jsx)("div", {
+                    (0, i.jsx)("div", {
                       className: (0, y.A)(d.Spacer, d.Bottom),
                     }),
                   ],
@@ -1258,9 +1248,9 @@
               ],
             }),
             1e3 * o > new Date().getTime() &&
-              (0, a.jsx)($, {
+              (0, i.jsx)($, {
                 label: (0, r.we)("#App_Landing_EarliestAdvancedAccessDate"),
-                children: (0, a.jsx)(M, { rtReleaseDate: o }),
+                children: (0, i.jsx)(M, { rtReleaseDate: o }),
               }),
           ],
         });
@@ -1268,35 +1258,35 @@
       function M(e) {
         const { rtReleaseDate: t } = e;
         return t
-          ? (0, a.jsxs)(a.Fragment, {
+          ? (0, i.jsxs)(i.Fragment, {
               children: [
-                (0, a.jsx)("div", {
+                (0, i.jsx)("div", {
                   className: (0, y.A)(d.BigField, d.Set),
                   children: (0, r.$z)(t),
                 }),
-                (0, a.jsx)("div", {
+                (0, i.jsx)("div", {
                   className: (0, y.A)(d.SubField, d.Set),
                   children: (0, o.KC)(t, {}, { timeZoneName: "short" }),
                 }),
               ],
             })
-          : (0, a.jsx)("div", {
+          : (0, i.jsx)("div", {
               className: (0, y.A)(d.BigField, d.Unset),
               children: (0, r.we)("#App_Landing_UnsetReleaseDate"),
             });
       }
       function $(e) {
-        return (0, a.jsxs)("div", {
+        return (0, i.jsxs)("div", {
           className: d.LabelField,
           children: [
-            (0, a.jsx)("div", { className: d.Label, children: e.label }),
+            (0, i.jsx)("div", { className: d.Label, children: e.label }),
             e.children,
           ],
         });
       }
       function U(e) {
         const { appid: t, bIsGameEdit: n, closeModal: s } = e,
-          o = i.useCallback(() => {
+          o = a.useCallback(() => {
             n
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
@@ -1304,9 +1294,9 @@
                   "?activetab=tab_publish"),
               s();
           }, [t, n, s]);
-        return (0, a.jsx)(x.EN, {
+        return (0, i.jsx)(x.EN, {
           active: !0,
-          children: (0, a.jsx)(x.o0, {
+          children: (0, i.jsx)(x.o0, {
             strTitle: (0, r.we)("#App_Landing_ReleaseDate_ChangesSaved"),
             strDescription: (0, r.we)(
               "#App_Landing_Release_PublishStorePrompt",
@@ -1321,8 +1311,8 @@
     },
     96409: (e, t, n) => {
       "use strict";
-      n.d(t, { Cg: () => r, _h: () => s, a3: () => i, bI: () => a });
-      let a = {
+      n.d(t, { Cg: () => r, _h: () => s, a3: () => a, bI: () => i });
+      let i = {
         GameEdit: (e, t) => `/admin/game/${e}/${t}`,
         PackageEdit: (e, t) => `/admin/store/${e}/${t}`,
         BundleEdit: (e, t) => `/bundles/${e}/${t}`,
@@ -1336,7 +1326,7 @@
           `/admin/store/pageclusteredit/content_hub_${t}/${e}`,
         StoreAdminCreatorHome: () => "/admin/creatorhome",
       };
-      const i = ["edit", "diff", "revert", "prepare", "publish"],
+      const a = ["edit", "diff", "revert", "prepare", "publish"],
         s = [
           "package",
           "packagesave",

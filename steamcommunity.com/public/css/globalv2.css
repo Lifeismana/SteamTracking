@@ -740,6 +740,14 @@ a.commentthread_allcommentslink:hover {
 	width: 100%;
 }
 
+.commentthread_comment_content .forum_comment_moderate, .forum_op .forum_comment_moderate {
+	visibility: hidden;
+}
+
+.commentthread_comment_content:hover .forum_comment_moderate, .forum_op:hover .forum_comment_moderate {
+	visibility: visible;
+}
+
 .commentthread_comment_author {
 	line-height: 16px;
 	display: flex;
@@ -1186,7 +1194,7 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 .gray_bevel.for_text_input {
 	display: inline-block;
 	padding-bottom: 1px;
-	height: 25px;
+	min-height: 25px;
 }
 
 .gray_bevel input {
@@ -1220,6 +1228,7 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 
 .gray_bevel.fullwidth.for_text_input input, .gray_bevel.fullwidth textarea {
 	width: 100%;
+	box-sizing: border-box;
 }
 
 input.gray_bevel {

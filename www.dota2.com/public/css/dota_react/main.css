@@ -573,7 +573,9 @@ html._152-vV5p8EnQc-Xz_koEgo body {
   border-radius: 20px;
   align-items: center;
 }
-._1Ly8YGAprqIELn7EazNiny {
+._3BgSmU0vMcMLerdcBeGtlz,
+._1Ly8YGAprqIELn7EazNiny,
+._1feBVMhNUpP5hQ4wLAhvcP {
   width: 20px;
   height: 20px;
 }
@@ -1169,54 +1171,6 @@ a {
 }
 ._19PKMUtuszaQNJ1_zPh6MP {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3DLe6k1hMhQ6joi9xvTVPD {
   font-size: 96px;
@@ -6426,54 +6380,6 @@ a {
 ._2RSwMorL-UaW2Eh7I5CUqX {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._3bvNs3feC322joubiM-hHk {
   width: 100%;
   height: 64px;
@@ -7292,54 +7198,6 @@ a {
 ._3UfnjMUJkjNkVxMBkpaxP3 {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 .H4GkwYa62LAvIf_pwCcKc {
   text-align: center;
   width: 100%;
@@ -8123,54 +7981,6 @@ a {
 }
 ._2xDgTqsHZXtlOsPEx-XE4I {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3GZ8iNGEAkqEru6fLzdp1a {
   font-size: 70px;
@@ -9206,54 +9016,6 @@ a {
 ._3ENoXyVWy36hYRw7SHHkfe {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1m4FsPBcjK8cowqTTtDIFo {
   font-size: 70px;
   font-weight: 800;
@@ -10196,54 +9958,6 @@ a {
 ._1NspeadzJiTVg5ZEw0uNYc {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._2DQg-Bbun-nrWAOzAm_W3g {
   font-size: 70px;
   font-weight: 800;
@@ -11042,54 +10756,6 @@ a {
 }
 ._3xxyief9k7f5hiuS3cPVaM {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 .U7wdCoQycRPyErCfTw2sv {
   width: 100%;
@@ -12204,54 +11870,6 @@ a {
 ._1LkNRUr9gglPqfnFetm6PX {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1C-JMvX01uM-zhoJiLU72W {
   cursor: pointer;
 }
@@ -12884,54 +12502,6 @@ a {
 }
 ._2euXyrZeY8-gynJvA1Ig_p {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._1UrDLeVgHFXDQsJeIN3TA4 {
   font-size: 70px;
@@ -19613,54 +19183,6 @@ a {
 ._3s54cb8f-kz--v8FANQ2pv {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._3OBoG7TZb8gxM8NbILzAan {
   width: 400px;
   height: 245px;
@@ -20319,54 +19841,6 @@ a {
 }
 ._3g4FrteUm0ImZ4Zp9vXz-H {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3PVZqELwggVvMhoK3lRGwk {
   width: 100%;
@@ -21148,54 +20622,6 @@ a {
 ._3v0pvTpBfU7e_dgHAHg4Nx {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 .-EouvmnKRMabN5fJonx-O {
   width: 100%;
   justify-items: left;
@@ -21813,54 +21239,6 @@ a {
 }
 ._1nhVgrSOlzwvwqKo4w0gBy {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._1mf6e1ORV5-E_4LPuFaknV {
   width: 100%;
@@ -22823,54 +22201,6 @@ a {
 }
 ._3u6owVq3uXlzK_K_78-JYd {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._1SBIP4kGSQyJK1V8BHFo68 {
   position: sticky;
@@ -27686,54 +27016,6 @@ a {
 ._2kaD7vHsecNTU0LnOy4CT5 {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._14-kxCB2ZU7KE9BlwHLmaT {
   height: 140px;
   width: 100%;
@@ -29204,54 +28486,6 @@ a {
 .XbFkKGwakEMnzgpJIvZwE {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1i7q1grvIPZIoGbEwyWRLq {
   z-index: 99999;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
@@ -29965,54 +29199,6 @@ a {
 }
 .y3WJsKt0oH-EGd83VzJmS {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3mKWeUE8SHl16RHL2BYk_F {
   width: 100%;
@@ -31163,54 +30349,6 @@ a {
 }
 ._2muPdHChfAflAVfDa2s8AI {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._2bfYTYBubNBlR5pzFE5ncp {
   width: 100%;
@@ -36705,54 +35843,6 @@ a {
 .NzHZ4Arkv6yN0rzB752EQ {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 .J-DTLlGLtAgAKuMzq4cxr {
   color: #fff;
   width: 100%;
@@ -37975,54 +37065,6 @@ a {
 }
 ._3baYgGoj-k7YK0W8kCSOOv {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3-HyZjCghYUe813h-UcfyQ {
   width: 100%;
@@ -39421,54 +38463,6 @@ a {
 .GNkeQRN-9rcCWItA89u0h {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 .oJp3o8OOTSsT_uiD0V5GG {
   width: 100%;
   color: #fff;
@@ -40544,54 +39538,6 @@ a {
 }
 .bZEOH8qxRUAqcaAwUab7B {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._1-3WkuMpRwoc9iOS_-9yKw {
   width: 100%;
@@ -41741,54 +40687,6 @@ a {
 }
 ._3BZm3gusUxSrmH-KKBqkKy {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 .ku5wl1500_tIszEDzK_vq {
   font-size: 70px;
@@ -43310,54 +42208,6 @@ a {
 }
 ._1rY_6ZJD6c26Ref4ihBX5E {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 .MHdLxB3oMVmmEMtawoJdu {
   font-size: 70px;
@@ -44889,54 +43739,6 @@ a {
 .rnZ4axTANBfJm9qBPYNSZ {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1DpubqH96i7Qk1KudhXTzs {
   font-size: 70px;
   font-weight: 800;
@@ -46379,54 +45181,6 @@ a {
 }
 ._3xKh8FXlezKA0T9eC1dr6m {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._9iyAUgVKeN3VKB8Tb7L-w {
   font-size: 70px;
@@ -48024,54 +46778,6 @@ a {
 }
 ._2t6XnPsTOEYWTyQBJCQ2lu {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3c93ZGmZU2kCDanym6JlG1 {
   font-size: 70px;
@@ -50190,54 +48896,6 @@ a {
 ._30EsjbkL3Xv8vxOEkarPI6 {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._8HNS72mBl5NnYUZ_wzrgc {
   width: 100%;
   min-height: 900px;
@@ -52289,54 +50947,6 @@ a {
 ._1IRmGo1O9x7sUmY-tQA_4C {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._2FXfn7luOlwhfhFwWNh9TR {
   width: 100%;
   display: flex;
@@ -53431,54 +52041,6 @@ a {
 .Cww0u_yM-obDgTlKAJoi {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1dCoZjAQEZVfaMZXaikpJO {
   width: 100%;
   position: relative;
@@ -54046,54 +52608,6 @@ a {
 }
 .dP_ekfyI6xplmUL-kqB7- {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3WHGFlFknZyr_TIyep3_HG {
   width: 100%;
@@ -54768,54 +53282,6 @@ a {
 }
 .YF454N2qCdTHVVOg1r7wV {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._2-YrFwdpVzSxtLS8IqBmoU {
   color: #fff;
@@ -55771,65 +54237,17 @@ a {
 ._1bbBhJsdEHwz97d081fLd {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 .swTQdhtrGo5VPAWX79ypS._1CfNN9ThEKrSsenxeEus1k ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(22%) sepia(93%) saturate(100%) hue-rotate(314deg)
-    brightness(99%) contrast(100%);
+  filter: invert(25%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(96%)
+    contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS.xtvx4cJJ28WfokLl3e1rw ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(23%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(95%)
-    contrast(99%);
+  filter: invert(22%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(99%)
+    contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._3Z29Y_FOqzXOpfMlcd_5fy ._2fhX1TTRFtYguzNm8eFp1t {
   filter: invert(39%) sepia(100%) saturate(100%) hue-rotate(333deg)
-    brightness(100%) contrast(100%);
+    brightness(99%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._1CfNN9ThEKrSsenxeEus1k ._3res7MhQAQYvetFp26zMBj {
   background: linear-gradient(to right, #9f3c3c, #4a2040);
@@ -55842,19 +54260,19 @@ a {
 }
 .swTQdhtrGo5VPAWX79ypS._27A6RL0t9TnKDMRC55-Lbv ._2fhX1TTRFtYguzNm8eFp1t {
   filter: invert(53%) sepia(100%) saturate(100%) hue-rotate(0deg)
-    brightness(100%) contrast(100%);
+    brightness(99%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._3spLK6wDHrX91TbT5lkZQK ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(53%) sepia(100%) saturate(100%) hue-rotate(346deg)
-    brightness(100%) contrast(100%);
+  filter: invert(52%) sepia(100%) saturate(100%) hue-rotate(0deg)
+    brightness(99%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._1Du0NDp85VpOjFcJPWVwva ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(68%) sepia(89%) saturate(100%) hue-rotate(12deg)
-    brightness(93%) contrast(96%);
+  filter: invert(63%) sepia(88%) saturate(100%) hue-rotate(12deg)
+    brightness(98%) contrast(99%);
 }
 .swTQdhtrGo5VPAWX79ypS._31mGQJ6AsVZbRtFSPZwQY0 ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(64%) sepia(65%) saturate(100%) hue-rotate(0deg) brightness(97%)
-    contrast(94%);
+  filter: invert(68%) sepia(67%) saturate(97%) hue-rotate(0deg) brightness(92%)
+    contrast(91%);
 }
 .swTQdhtrGo5VPAWX79ypS._27A6RL0t9TnKDMRC55-Lbv ._3res7MhQAQYvetFp26zMBj {
   background: linear-gradient(to right, #c8a45c, #6f3d21);
@@ -55869,24 +54287,24 @@ a {
   background: linear-gradient(to right, #c3a99a, #4d352b);
 }
 .swTQdhtrGo5VPAWX79ypS._24g1DnRUkX1Uj7gYslMp4n ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(32deg)
+  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(34deg)
     brightness(93%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._3fakjxSYvJtj6nYLCQSv8h ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(61%) sepia(100%) saturate(100%) hue-rotate(114deg)
-    brightness(94%) contrast(98%);
+  filter: invert(62%) sepia(100%) saturate(100%) hue-rotate(114deg)
+    brightness(92%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._2CWDM7JkbuMwlJfigBZTxy ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(37%) sepia(100%) saturate(100%) hue-rotate(89deg)
-    brightness(97%) contrast(100%);
+  filter: invert(39%) sepia(100%) saturate(99%) hue-rotate(88deg)
+    brightness(93%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._2MPSVz0DHeZXUitqKU4WHl ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(53%) sepia(100%) saturate(100%) hue-rotate(26deg)
+  filter: invert(53%) sepia(99%) saturate(100%) hue-rotate(26deg)
     brightness(92%) contrast(99%);
 }
 .swTQdhtrGo5VPAWX79ypS.YOX8iaxQLPHg6YfhGtdFu ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(60%) sepia(48%) saturate(100%) hue-rotate(44deg)
-    brightness(98%) contrast(94%);
+  filter: invert(64%) sepia(60%) saturate(100%) hue-rotate(44deg)
+    brightness(91%) contrast(92%);
 }
 .swTQdhtrGo5VPAWX79ypS._24g1DnRUkX1Uj7gYslMp4n ._3res7MhQAQYvetFp26zMBj {
   background: linear-gradient(to right, #a2b23e, #2d5a18);
@@ -55904,20 +54322,20 @@ a {
   background: linear-gradient(to right, #9fad8e, #3f4129);
 }
 .swTQdhtrGo5VPAWX79ypS.e41t1IblOLG9BnSIBzVxZ ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(45%) sepia(100%) saturate(100%) hue-rotate(191deg)
-    brightness(93%) contrast(100%);
+  filter: invert(44%) sepia(100%) saturate(100%) hue-rotate(190deg)
+    brightness(95%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._3TYlAam9BhOx6ssVMiZsh4 ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(39%) sepia(100%) saturate(100%) hue-rotate(167deg)
-    brightness(100%) contrast(100%);
+  filter: invert(39%) sepia(99%) saturate(99%) hue-rotate(167deg)
+    brightness(99%) contrast(99%);
 }
 .swTQdhtrGo5VPAWX79ypS._1PR3DcB_yG3PFcpS60NX8k ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(58%) sepia(100%) saturate(100%) hue-rotate(145deg)
-    brightness(91%) contrast(100%);
+  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(145deg)
+    brightness(92%) contrast(99%);
 }
 .swTQdhtrGo5VPAWX79ypS._1xUQ7SuMeslEmQ454ne03F ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(64%) sepia(61%) saturate(99%) hue-rotate(139deg)
-    brightness(94%) contrast(97%);
+  filter: invert(62%) sepia(93%) saturate(72%) hue-rotate(139deg)
+    brightness(92%) contrast(92%);
 }
 .swTQdhtrGo5VPAWX79ypS.e41t1IblOLG9BnSIBzVxZ ._3res7MhQAQYvetFp26zMBj {
   background: linear-gradient(to right, #727cb2, #342d5b);
@@ -55932,16 +54350,16 @@ a {
   background: linear-gradient(to right, #94b5ba, #385b59);
 }
 .swTQdhtrGo5VPAWX79ypS._2XFDLoLDlYK2f2sJhq7Awl ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(51%) sepia(88%) saturate(100%) hue-rotate(243deg)
-    brightness(86%) contrast(100%);
+  filter: invert(50%) sepia(87%) saturate(100%) hue-rotate(243deg)
+    brightness(88%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._2Nq0d7R5eVd3Q9QleN1pzJ ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(47%) sepia(100%) saturate(100%) hue-rotate(296deg)
-    brightness(94%) contrast(99%);
+  filter: invert(44%) sepia(100%) saturate(100%) hue-rotate(294deg)
+    brightness(98%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._3Uj2UAa5-ALYwbxuI4N7hb ._2fhX1TTRFtYguzNm8eFp1t {
   filter: invert(33%) sepia(100%) saturate(100%) hue-rotate(207deg)
-    brightness(99%) contrast(100%);
+    brightness(98%) contrast(100%);
 }
 .swTQdhtrGo5VPAWX79ypS._2XFDLoLDlYK2f2sJhq7Awl ._3res7MhQAQYvetFp26zMBj {
   background: linear-gradient(to right, #b57789, #412755);
@@ -55953,20 +54371,20 @@ a {
   background: linear-gradient(to right, #675cae, #261c44);
 }
 .swTQdhtrGo5VPAWX79ypS.zYS3DT9BDqO4ynB-9VQ3K ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(34%) sepia(36%) saturate(95%) hue-rotate(165deg)
-    brightness(91%) contrast(90%);
+  filter: invert(34%) sepia(33%) saturate(99%) hue-rotate(165deg)
+    brightness(93%) contrast(92%);
 }
 .swTQdhtrGo5VPAWX79ypS._2bzpptN4PABZ8f357H1Bdd ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(43%) sepia(22%) saturate(100%) hue-rotate(181deg)
-    brightness(92%) contrast(89%);
+  filter: invert(42%) sepia(23%) saturate(99%) hue-rotate(181deg)
+    brightness(95%) contrast(94%);
 }
 .swTQdhtrGo5VPAWX79ypS._34FW7PsOS8m3jl-qZ6e5YO ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(63%) sepia(46%) saturate(98%) hue-rotate(151deg)
-    brightness(95%) contrast(91%);
+  filter: invert(66%) sepia(46%) saturate(99%) hue-rotate(151deg)
+    brightness(90%) contrast(90%);
 }
 .swTQdhtrGo5VPAWX79ypS._4mA0faDYQOnCcCnVpWk-X ._2fhX1TTRFtYguzNm8eFp1t {
-  filter: invert(72%) sepia(32%) saturate(73%) hue-rotate(166deg)
-    brightness(93%) contrast(92%);
+  filter: invert(73%) sepia(29%) saturate(81%) hue-rotate(166deg)
+    brightness(92%) contrast(93%);
 }
 .swTQdhtrGo5VPAWX79ypS.zYS3DT9BDqO4ynB-9VQ3K ._3res7MhQAQYvetFp26zMBj {
   background: linear-gradient(to right, #565c61, #1b1b21);
@@ -56924,6 +55342,7 @@ a {
   font-size: 14px;
   text-shadow: 0px 1px 2px #000;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  color: #f5f5f5;
 }
 @media (max-width: 600px) {
   ._3ty-o0Vg7AspURxYD_vDO0 ._1XQ_H9kVf_C7J3v_uDnCAx {
@@ -58831,54 +57250,6 @@ a {
 ._1gG8F-DbuKvw_cyRclQyO9 {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._2RJH7WFXCOyouXM3YjsHOV {
   width: 80px;
   height: 3px;
@@ -60311,54 +58682,6 @@ a {
 ._1Via0-bnw8eYgQbeRG5NRm {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1SOz9pNb_ZBn73r0s61AA7 {
   width: 100%;
   color: #fff;
@@ -61045,54 +59368,6 @@ a {
 ._2xDdECV_wA2A4mx1YqdveI {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._3PkqiMD4LiADveQl9EQU0K {
   width: 100%;
   min-width: 320px;
@@ -61757,54 +60032,6 @@ a {
 }
 ._3BTr6NuZsjdRUGZdXgwtCE {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3p-trN6Fd1hKkRhqKk8Y1S {
   width: 100%;
@@ -62834,54 +61061,6 @@ a {
 ._3N2lhWZuZpXiA2eqFNIg58 {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 .fe1EMNOsJ2hr9ZrAQa_Bk {
   width: 100%;
   min-width: 1200px;
@@ -63705,54 +61884,6 @@ a {
 ._3oK9d9bDX6Ntvuqq_InpUg {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1U0jNLd6-Mk4LoOOPvzu2 {
   width: 100%;
   min-width: 320px;
@@ -64560,54 +62691,6 @@ a {
 }
 ._3k7DxRAs3fo6Ew_rKhsjCo {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._9Q-Qwknepefiuo2rjgCrD {
   width: 100%;
@@ -65417,54 +63500,6 @@ a {
 ._1S0ehyW27Pvf8-gaJ-_6HA {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._3MdQUFwsMebwrb1dP-7yxY {
   width: 100%;
   background-size: 100% auto;
@@ -66140,54 +64175,6 @@ a {
 ._2uJFlDth7qlqC-H1qU7JsS {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1errB2xcxmIZevcDxJaeYi {
   width: 100%;
   background-color: #151618;
@@ -66830,54 +64817,6 @@ a {
 }
 ._28yGLfmTwzUytqVEFSMyzS {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 ._3UwtqFnNwCOW--Z8hkz8-1 {
   width: 80px;
@@ -67587,65 +65526,17 @@ a {
 ._2MWXoo6fE0cjxZuUN3GV4S {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._2hi-RjW8OhfVOOptfDGOrN._1kYH3bWqXt8VeDdpDhiFIs ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(22%) sepia(93%) saturate(100%) hue-rotate(314deg)
-    brightness(99%) contrast(100%);
+  filter: invert(25%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(96%)
+    contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._7zm5THO3AOG4rp8WVNRMz ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(23%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(95%)
-    contrast(99%);
+  filter: invert(22%) sepia(99%) saturate(100%) hue-rotate(0deg) brightness(99%)
+    contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1jAdTG_-y-NwaQ57MlAmHz ._3qKyNCw36_w-EuY8l2k8Zn {
   filter: invert(39%) sepia(100%) saturate(100%) hue-rotate(333deg)
-    brightness(100%) contrast(100%);
+    brightness(99%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1kYH3bWqXt8VeDdpDhiFIs ._24HHVQlQW3_3TYfptPOa7R {
   background: linear-gradient(to right, #9f3c3c, #4a2040);
@@ -67658,19 +65549,19 @@ a {
 }
 ._2hi-RjW8OhfVOOptfDGOrN._369JMrSSBx7TFoxVwS-Hzl ._3qKyNCw36_w-EuY8l2k8Zn {
   filter: invert(53%) sepia(100%) saturate(100%) hue-rotate(0deg)
-    brightness(100%) contrast(100%);
+    brightness(99%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._3TO-dRYwfiL3V9p7dksZco ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(53%) sepia(100%) saturate(100%) hue-rotate(346deg)
-    brightness(100%) contrast(100%);
+  filter: invert(52%) sepia(100%) saturate(100%) hue-rotate(0deg)
+    brightness(99%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._3RihxHSaQ007Kc_9xMt4Zi ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(68%) sepia(89%) saturate(100%) hue-rotate(12deg)
-    brightness(93%) contrast(96%);
+  filter: invert(63%) sepia(88%) saturate(100%) hue-rotate(12deg)
+    brightness(98%) contrast(99%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN.ey3qOZFxkX0kZdpYBYL0t ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(64%) sepia(65%) saturate(100%) hue-rotate(0deg) brightness(97%)
-    contrast(94%);
+  filter: invert(68%) sepia(67%) saturate(97%) hue-rotate(0deg) brightness(92%)
+    contrast(91%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._369JMrSSBx7TFoxVwS-Hzl ._24HHVQlQW3_3TYfptPOa7R {
   background: linear-gradient(to right, #c8a45c, #6f3d21);
@@ -67685,24 +65576,24 @@ a {
   background: linear-gradient(to right, #c3a99a, #4d352b);
 }
 ._2hi-RjW8OhfVOOptfDGOrN.r2MyVtWFLLgQjHGMeydn_ ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(32deg)
+  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(34deg)
     brightness(93%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._3extiNNBuAx4BBhCv0keza ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(61%) sepia(100%) saturate(100%) hue-rotate(114deg)
-    brightness(94%) contrast(98%);
+  filter: invert(62%) sepia(100%) saturate(100%) hue-rotate(114deg)
+    brightness(92%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._16iSk2Jr3cHFUHBS0Szd4y ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(37%) sepia(100%) saturate(100%) hue-rotate(89deg)
-    brightness(97%) contrast(100%);
+  filter: invert(39%) sepia(100%) saturate(99%) hue-rotate(88deg)
+    brightness(93%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._2tkNYq00KjoYhtxtpavtkR ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(53%) sepia(100%) saturate(100%) hue-rotate(26deg)
+  filter: invert(53%) sepia(99%) saturate(100%) hue-rotate(26deg)
     brightness(92%) contrast(99%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN.hfxpJjJUCh_7ubDOPpL0n ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(60%) sepia(48%) saturate(100%) hue-rotate(44deg)
-    brightness(98%) contrast(94%);
+  filter: invert(64%) sepia(60%) saturate(100%) hue-rotate(44deg)
+    brightness(91%) contrast(92%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN.r2MyVtWFLLgQjHGMeydn_ ._24HHVQlQW3_3TYfptPOa7R {
   background: linear-gradient(to right, #a2b23e, #2d5a18);
@@ -67720,20 +65611,20 @@ a {
   background: linear-gradient(to right, #9fad8e, #3f4129);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1Ghro7tjYuy7FOiIJw7ckm ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(45%) sepia(100%) saturate(100%) hue-rotate(191deg)
-    brightness(93%) contrast(100%);
+  filter: invert(44%) sepia(100%) saturate(100%) hue-rotate(190deg)
+    brightness(95%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1jxmxC9T2oBnsTr9TXfZV4 ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(39%) sepia(100%) saturate(100%) hue-rotate(167deg)
-    brightness(100%) contrast(100%);
+  filter: invert(39%) sepia(99%) saturate(99%) hue-rotate(167deg)
+    brightness(99%) contrast(99%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1xpJNuLxCxUPsk1_waPWfX ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(58%) sepia(100%) saturate(100%) hue-rotate(145deg)
-    brightness(91%) contrast(100%);
+  filter: invert(57%) sepia(100%) saturate(100%) hue-rotate(145deg)
+    brightness(92%) contrast(99%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN.S_BvdIcpEJDSSVqfe8m6x ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(64%) sepia(61%) saturate(99%) hue-rotate(139deg)
-    brightness(94%) contrast(97%);
+  filter: invert(62%) sepia(93%) saturate(72%) hue-rotate(139deg)
+    brightness(92%) contrast(92%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1Ghro7tjYuy7FOiIJw7ckm ._24HHVQlQW3_3TYfptPOa7R {
   background: linear-gradient(to right, #727cb2, #342d5b);
@@ -67748,16 +65639,16 @@ a {
   background: linear-gradient(to right, #94b5ba, #385b59);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._2BQuztehHzlkI1CvI-QoJc ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(51%) sepia(88%) saturate(100%) hue-rotate(243deg)
-    brightness(86%) contrast(100%);
+  filter: invert(50%) sepia(87%) saturate(100%) hue-rotate(243deg)
+    brightness(88%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._4PzWKJpUYw_CDQwTW-IuT ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(47%) sepia(100%) saturate(100%) hue-rotate(296deg)
-    brightness(94%) contrast(99%);
+  filter: invert(44%) sepia(100%) saturate(100%) hue-rotate(294deg)
+    brightness(98%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._3FKrGjwT2TbDGbYJMgL9nl ._3qKyNCw36_w-EuY8l2k8Zn {
   filter: invert(33%) sepia(100%) saturate(100%) hue-rotate(207deg)
-    brightness(99%) contrast(100%);
+    brightness(98%) contrast(100%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._2BQuztehHzlkI1CvI-QoJc ._24HHVQlQW3_3TYfptPOa7R {
   background: linear-gradient(to right, #b57789, #412755);
@@ -67769,20 +65660,20 @@ a {
   background: linear-gradient(to right, #675cae, #261c44);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1SdKpEnThPUty-jYwHCHp8 ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(34%) sepia(36%) saturate(95%) hue-rotate(165deg)
-    brightness(91%) contrast(90%);
+  filter: invert(34%) sepia(33%) saturate(99%) hue-rotate(165deg)
+    brightness(93%) contrast(92%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._2fF7AFcW1G4p408mGFP_Br ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(43%) sepia(22%) saturate(100%) hue-rotate(181deg)
-    brightness(92%) contrast(89%);
+  filter: invert(42%) sepia(23%) saturate(99%) hue-rotate(181deg)
+    brightness(95%) contrast(94%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._34NSG3-4-5HqwjXfAEjmOH ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(63%) sepia(46%) saturate(98%) hue-rotate(151deg)
-    brightness(95%) contrast(91%);
+  filter: invert(66%) sepia(46%) saturate(99%) hue-rotate(151deg)
+    brightness(90%) contrast(90%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._3RRjpvEMMCmUzNELhnRRkw ._3qKyNCw36_w-EuY8l2k8Zn {
-  filter: invert(72%) sepia(32%) saturate(73%) hue-rotate(166deg)
-    brightness(93%) contrast(92%);
+  filter: invert(73%) sepia(29%) saturate(81%) hue-rotate(166deg)
+    brightness(92%) contrast(93%);
 }
 ._2hi-RjW8OhfVOOptfDGOrN._1SdKpEnThPUty-jYwHCHp8 ._24HHVQlQW3_3TYfptPOa7R {
   background: linear-gradient(to right, #565c61, #1b1b21);
@@ -68078,6 +65969,19 @@ a {
     rgba(6, 37, 65, 0.3) 88.06%
   );
   box-shadow: 0px 0px 50px #000;
+}
+._99z4VmVloubOYkwGT2JMB span.New {
+  color: #36a15e;
+}
+._99z4VmVloubOYkwGT2JMB span.Reworked {
+  color: #d05307;
+}
+._99z4VmVloubOYkwGT2JMB .PatchnotesTooltip {
+  max-width: 360px;
+  padding: 12px;
+}
+._99z4VmVloubOYkwGT2JMB .PatchnotesTooltip div {
+  font-size: 16px;
 }
 ._99z4VmVloubOYkwGT2JMB .EYgE09jEZdFCZhy4TH8ww {
   width: 100%;
@@ -69155,12 +67059,6 @@ a {
   border-radius: 50%;
   box-shadow: 0px 6px 16px -2px rgba(0, 0, 0, 0.3);
 }
-span.New {
-  color: #36a15e;
-}
-span.Reworked {
-  color: #d05307;
-}
 ._2jgesjf6ByT5s0kMJkQc0x {
   display: inline-block;
 }
@@ -69174,13 +67072,6 @@ span.Reworked {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
-.PatchnotesTooltip {
-  max-width: 360px;
-  padding: 12px;
-}
-.PatchnotesTooltip div {
-  font-size: 16px;
 }
 * {
   box-sizing: border-box;
@@ -69742,54 +67633,6 @@ a {
 }
 ._22FO6DiWnAucM-_OGhybi3 {
   max-width: none;
-}
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
 }
 .VM6IJ31lauzQdaq82rfPP {
   width: 100%;
@@ -71211,54 +69054,6 @@ a {
 ._1fApfiYoCASp9eSBWB3Y9H {
   max-width: none;
 }
-.ReactVirtualized__Table__headerRow {
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.ReactVirtualized__Table__headerTruncatedText {
-  display: inline-block;
-  max-width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.ReactVirtualized__Table__headerColumn {
-  margin-right: 5px;
-  min-width: 0px;
-}
-.ReactVirtualized__Table__rowColumn {
-  margin-right: 5px;
-  min-width: 0px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ReactVirtualized__Table__headerColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__rowColumn:first-of-type {
-  margin-left: 5px;
-}
-.ReactVirtualized__Table__sortableHeaderColumn {
-  cursor: pointer;
-}
-.ReactVirtualized__Table__sortableHeaderIconContainer {
-  display: flex;
-  align-items: center;
-}
-.ReactVirtualized__Table__sortableHeaderIcon {
-  flex: 0 0 24px;
-  height: 1em;
-  width: 1em;
-  fill: currentColor;
-}
 ._1VZQUSd7zu-6zVsfVG56Tu {
   width: 80px;
   height: 3px;
@@ -71849,9 +69644,6 @@ p._23SXWVQfREeO5DYXHTgcWK {
 th > p._23SXWVQfREeO5DYXHTgcWK:first-child,
 td > p._23SXWVQfREeO5DYXHTgcWK:first-child {
   margin-top: 0;
-}
-th > p._23SXWVQfREeO5DYXHTgcWK:first-child,
-td > p._23SXWVQfREeO5DYXHTgcWK:first-child {
   margin-bottom: 0;
 }
 ._1XYQUaQdH9ez4zWmzyHFti,
@@ -73911,6 +71703,11 @@ button.Primary._24jC1U19Lm-G-eDvgSQ07D {
 ._1sORIiwhn_8CJx_XcxkMfb .v2fIszS0AXVt9wq1x1VN_ {
   margin-top: 5px;
 }
+._1sORIiwhn_8CJx_XcxkMfb
+  .v2fIszS0AXVt9wq1x1VN_
+  ._23HHn9m5G9tvQUQfp0sOQq.uif43-40CZBGcmqvcmjyG {
+  padding: 15px 40px 15px 40px;
+}
 ._1sORIiwhn_8CJx_XcxkMfb ._1AQsyQX3sv0iyHpoisWTKg {
   flex: 2;
 }
@@ -75673,7 +73470,7 @@ button.DialogButton:enabled:active.gpfocus {
   }
 }
 button.DialogButton.Primary:hover,
-button.DialogButton.Primary.gpfocus {
+button.DialogButton.Primary.gpfocus:not(.Disabled) {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 0%;
   background-size: 330% 100%;

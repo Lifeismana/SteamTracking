@@ -423,8 +423,8 @@
         j = i(55263),
         g = i(95034),
         S = i(95695),
-        b = i.n(S),
-        _ = i(51272),
+        _ = i.n(S),
+        b = i(51272),
         N = i(26408),
         w = i(52038),
         T = i(61859),
@@ -476,10 +476,10 @@
                   children: [
                     "Season Passes ",
                     (0, n.jsx)("button", {
-                      className: (0, w.A)(b().Button),
+                      className: (0, w.A)(_().Button),
                       style: { float: "right", marginRight: "16px" },
                       onClick: (e) =>
-                        (0, _.EP)(
+                        (0, b.EP)(
                           e,
                           "https://confluence.valve.org/display/~adils/Steam+Season+Passes",
                         ),
@@ -841,7 +841,7 @@
           ],
         });
       }
-      function b() {
+      function _() {
         return (0, n.jsxs)("div", {
           className: l().MessageHeader,
           children: [
@@ -854,7 +854,7 @@
           ],
         });
       }
-      let _ = -1,
+      let b = -1,
         N = -1;
       function w(e) {
         const { requirement: t } = e,
@@ -877,8 +877,8 @@
             }
             r(!1);
           }, [t]);
-        if (-1 == _) _ = t.index;
-        else if (_ != t.index) return null;
+        if (-1 == b) b = t.index;
+        else if (b != t.index) return null;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             !!i &&
@@ -1054,7 +1054,7 @@
               return (0, n.jsxs)("div", {
                 className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
                 children: [
-                  (0, n.jsx)(b, {}),
+                  (0, n.jsx)(_, {}),
                   (0, n.jsxs)("div", {
                     className: l().SectionBody,
                     children: [
@@ -1073,7 +1073,7 @@
               return (0, n.jsxs)("div", {
                 className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
                 children: [
-                  (0, n.jsx)(b, {}),
+                  (0, n.jsx)(_, {}),
                   (0, n.jsx)("div", {
                     className: l().SectionTitle,
                     children: "Why is this important?",
@@ -1145,7 +1145,7 @@
               return (0, n.jsxs)("div", {
                 className: (0, m.A)(l().NotificationContainer, u().SectionCtn),
                 children: [
-                  (0, n.jsx)(b, {}),
+                  (0, n.jsx)(_, {}),
                   (0, n.jsx)("div", {
                     className: l().SectionTitle,
                     children: "Why is this important?",
@@ -1195,7 +1195,7 @@
                       u().SectionCtn,
                     ),
                     children: [
-                      (0, n.jsx)(b, {}),
+                      (0, n.jsx)(_, {}),
                       (0, n.jsx)("div", {
                         className: l().SectionTitle,
                         children: "Why is this important?",
@@ -2614,7 +2614,7 @@
         a = i.n(n),
         s = i(90626),
         o = i(37085),
-        r = i(96171),
+        r = i(6824),
         d = i(73745),
         l = i(16021);
       const c = 1,
@@ -2632,8 +2632,8 @@
             include_platforms: j,
             include_all_purchase_options: g,
             include_screenshots: S,
-            include_trailers: b,
-            include_ratings: _,
+            include_trailers: _,
+            include_ratings: b,
             include_tag_count: N,
             include_reviews: w,
             include_basic_info: T,
@@ -2643,6 +2643,7 @@
             include_assets_without_overrides: R,
             apply_user_filters: A,
             include_links: k,
+            include_extra_details: P,
           } = i;
         if (
           ((0, s.useEffect)(() => {
@@ -2652,8 +2653,8 @@
               include_platforms: j,
               include_all_purchase_options: g,
               include_screenshots: S,
-              include_trailers: b,
-              include_ratings: _,
+              include_trailers: _,
+              include_ratings: b,
               include_tag_count: N,
               include_reviews: w,
               include_basic_info: T,
@@ -2663,6 +2664,7 @@
               include_assets_without_overrides: R,
               apply_user_filters: A,
               include_links: k,
+              include_extra_details: P,
             };
             let s = null;
             return (
@@ -2679,15 +2681,38 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, x, y, v, j, g, S, b, _, N, w, T, C, I, B, R, A, k, p]),
+          }, [
+            e,
+            t,
+            n,
+            x,
+            y,
+            v,
+            j,
+            g,
+            S,
+            _,
+            b,
+            N,
+            w,
+            T,
+            C,
+            I,
+            B,
+            R,
+            A,
+            k,
+            P,
+            p,
+          ]),
           !e)
         )
           return [null, u];
         if (!1 === x) return [void 0, u];
         if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, u];
         if (!l.A.Get().BHasStoreItem(e, t, i)) return [void 0, c];
-        const P = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return P ? [P, h] : [null, u];
+        const D = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return D ? [D, h] : [null, u];
       }
       function p(e, t, i) {
         return m(e, r.c6.qI, t, i);
@@ -2711,12 +2736,13 @@
             include_tag_count: j,
             include_reviews: g,
             include_basic_info: S,
-            include_supported_languages: b,
-            include_full_description: _,
+            include_supported_languages: _,
+            include_full_description: b,
             include_included_items: N,
             include_assets_without_overrides: w,
             apply_user_filters: T,
             include_links: C,
+            include_extra_details: I,
           } = i;
         if (
           ((0, s.useEffect)(() => {
@@ -2732,12 +2758,13 @@
                 include_tag_count: j,
                 include_reviews: g,
                 include_basic_info: S,
-                include_supported_languages: b,
-                include_full_description: _,
+                include_supported_languages: _,
+                include_full_description: b,
                 include_included_items: N,
                 include_assets_without_overrides: w,
                 apply_user_filters: T,
                 include_links: C,
+                include_extra_details: I,
               },
               n = e.filter(
                 (e) =>
@@ -2755,7 +2782,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, o, r, m, p, x, f, y, v, j, g, S, b, _, N, w, T, C]),
+          }, [e, t, n, o, r, m, p, x, f, y, v, j, g, S, _, b, N, w, T, C, I]),
           !e)
         )
           return u;

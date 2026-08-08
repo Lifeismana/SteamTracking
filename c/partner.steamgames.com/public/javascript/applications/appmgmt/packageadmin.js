@@ -120,7 +120,7 @@
         (_.schinese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 58875, 19))),
         (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 91661, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 36423, 19))),
         (_.swedish = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 4140, 19))),
         (_.tchinese = () =>

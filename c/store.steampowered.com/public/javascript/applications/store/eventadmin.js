@@ -6344,22 +6344,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(!1),
-          [_] = (0, _.useState)(() =>
-            (function () {
-              const _ = (0, _._)(
-                "partnerbrowse_webapi_token",
-                "application_config",
-              );
-              (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
-              const _ = new _._(_._.WEBAPI_BASE_URL, _);
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                  _,
-                );
-              return _;
-            })(),
-          ),
+          [_] = (0, _.useState)(() => _()),
           _ = (0, _.useMemo)(
             () => ({
               country: _._.COUNTRY,
@@ -6388,6 +6373,19 @@
                 children: _.children,
               })
             : null
+        );
+      }
+      function _() {
+        const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
+        (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+        const _ = new _._(_._.WEBAPI_BASE_URL, _);
+        return (
+          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
+              _,
+            ),
+          _
         );
       }
       var _ = __webpack_require__("chunkid");

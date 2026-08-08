@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    894: (e, t, r) => {
+    884: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => sn });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(850),
+        a = r(773),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -93,10 +93,10 @@
         );
       }
       var b = r(629),
-        f = r(697),
-        p = r(458),
-        B = r(285),
-        w = r(628);
+        f = r(364),
+        p = r(207),
+        B = r(988),
+        w = r(603);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -375,8 +375,8 @@
         (0, b.Cg)([f.o], C.prototype, "OnKeyUp", null),
         (0, b.Cg)([f.o], C.prototype, "Reset", null);
       var R,
-        T = r(336),
-        I = r(88);
+        T = r(210),
+        I = r(667);
       class F {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -584,6 +584,7 @@
         async LoadSettings() {
           const e = (e, t) => {
             try {
+              0;
               const r = localStorage.getItem(e);
               return r ? JSON.parse(r) : t;
             } catch {
@@ -9868,7 +9869,7 @@
                     br: nt.readUint32,
                     bw: st.writeUint32,
                   },
-                  xinput_index: { n: 5, br: nt.readUint32, bw: st.writeUint32 },
+                  xinput_index: { n: 5, br: nt.readInt32, bw: st.writeInt32 },
                   is_wireless_steam_dongle: {
                     n: 6,
                     br: nt.readBool,
@@ -12145,7 +12146,7 @@
           let n = this.m_navigationSource.Value,
             s = n.nLastActiveGamepadIndex;
           return (
-            n.nActiveGamepadIndex &&
+            null != n.nActiveGamepadIndex &&
               n.nActiveGamepadIndex >= 0 &&
               (s = n.nActiveGamepadIndex),
             this.m_navigationSource.Set({
@@ -13082,7 +13083,7 @@
         },
       };
     },
-    458: (e, t, r) => {
+    207: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13095,12 +13096,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    628: (e, t, r) => {
+    603: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(697),
-        s = r(458);
+        n = r(364),
+        s = r(207);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

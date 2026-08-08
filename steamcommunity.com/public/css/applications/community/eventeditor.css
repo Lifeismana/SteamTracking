@@ -388,6 +388,7 @@
 ._2pZVu5uwOWvVnfNisJPOB9 {
   display: flex;
   flex-grow: 1;
+  min-width: 0;
 }
 ._2pKjCSfT0Aa7Wx8_VoNJzc {
   background-color: #abb2bd;

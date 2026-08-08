@@ -2298,52 +2298,52 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1;
       function _(_) {
         return ["PlayerLinkDetails", _];
+      }
+      function _(_, _) {
+        const _ =
+          "number" == typeof _
+            ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
+            : _;
+        return {
+          queryKey: _(_),
+          queryFn: async () => {
+            if (_) {
+              return (function (_) {
+                var _, _, _, _, _;
+                return (
+                  null === (_ = null == _ ? void 0 : _.private_data) ||
+                    void 0 === _ ||
+                    delete _.account_name,
+                  null === (_ = null == _ ? void 0 : _.public_data) ||
+                    void 0 === _ ||
+                    delete _.account_flags,
+                  null === (_ = null == _ ? void 0 : _.public_data) ||
+                    void 0 === _ ||
+                    delete _.ban_expires_time,
+                  null === (_ = null == _ ? void 0 : _.public_data) ||
+                    void 0 === _ ||
+                    delete _.privacy_state,
+                  (null === (_ = null == _ ? void 0 : _.public_data) ||
+                  void 0 === _
+                    ? void 0
+                    : _.profile_state) !== _ &&
+                    (null == _ || delete _.private_data),
+                  _
+                );
+              })(await _.load(_));
+            }
+            return null;
+          },
+          enabled: !!_,
+        };
       }
       function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)(_);
-        return (0, _._)(
-          (function (_, _) {
-            const _ =
-              "number" == typeof _
-                ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
-                : _;
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                var _, _, _, _, _;
-                if (_) {
-                  const _ = await _.load(_);
-                  return (
-                    null === (_ = null == _ ? void 0 : _.private_data) ||
-                      void 0 === _ ||
-                      delete _.account_name,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.account_flags,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.ban_expires_time,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.privacy_state,
-                    1 !==
-                      (null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _
-                        ? void 0
-                        : _.profile_state) &&
-                      (null == _ || delete _.private_data),
-                    _
-                  );
-                }
-                return null;
-              },
-              enabled: !!_,
-            };
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -6777,7 +6777,7 @@
                 color: _,
                 ref: _,
               } = _;
-              return (0, _.jsx)("div", {
+              return (0, _.jsx)(_._, {
                 ref: _,
                 role: "switch",
                 "aria-checked": !!_,

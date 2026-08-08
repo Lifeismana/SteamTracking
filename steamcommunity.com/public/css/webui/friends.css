@@ -164,7 +164,8 @@
   align-items: center;
 }
 .shared_svg_library_SteamMachineCompatLogo_x5w70,
-.shared_svg_library_SteamDeckCompatLogo_1dzQL {
+.shared_svg_library_SteamDeckCompatLogo_1dzQL,
+.shared_svg_library_SteamFrameCompatLogo_33PLF {
   width: 20px;
   height: 20px;
 }
@@ -8869,6 +8870,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
     rgba(0, 0, 0, 0.15) 100%
   );
   padding-inline-end: 24px;
+}
+.personanameandstatus_richPresenceLabel_2Ri00.personanameandstatus_dropPadding_3tEPY {
+  padding-inline-end: 0px;
 }
 .BasicUI .personanameandstatus_richPresenceLabel_2Ri00 {
   display: block;
@@ -41935,6 +41939,12 @@ body.in_global_drag .title-area {
 }
 #dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb:hover {
   background-color: rgba(180, 192, 201, 0.8);
+}
+div:focus,
+a:focus,
+span:focus,
+button:focus {
+  outline: none;
 }
 @keyframes BackgroundAnimation {
   from {

@@ -71,6 +71,8 @@
             _.include_assets_without_overrides,
           apply_user_filters: _.apply_user_filters || _.apply_user_filters,
           include_links: _.include_links || _.include_links,
+          include_extra_details:
+            _.include_extra_details || _.include_extra_details,
         };
       }
       async function _(_, _) {

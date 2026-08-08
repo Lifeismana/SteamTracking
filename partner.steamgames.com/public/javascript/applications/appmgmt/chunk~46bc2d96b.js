@@ -3063,7 +3063,7 @@
       "use strict";
       i.d(e, { Hf: () => d, i$: () => l, qP: () => o });
       var n = i(37085),
-        r = i(96171),
+        r = i(6824),
         a = i(16021),
         s = i(61859);
       const o = new Set([r.uE.HT, r.uE.RA, r.uE.Sv, r.uE.Lj]),
@@ -3169,31 +3169,32 @@
             measureElement: u,
             className: m,
             forceVirtualizeType: p,
-            initialOffset: _,
-            onOffsetChange: h,
-            ...b
+            hintVirtualizeType: _,
+            initialOffset: h,
+            onOffsetChange: b,
+            ...D
           } = t,
-          [D, S] = (0, d.useState)(p),
-          [y, v] = d.useState(),
-          [M, I] = d.useState(),
-          E = d.useRef(null),
-          R = d.useCallback(
+          [S, y] = (0, d.useState)(p ?? _),
+          [v, M] = d.useState(),
+          [I, E] = d.useState(),
+          R = d.useRef(null),
+          P = d.useCallback(
             (t) => {
               if (!t) return;
               const e = (0, f._f)(t, "y");
               (0, d.startTransition)(() => {
-                "window" != p && v(e || void 0),
-                  I(t.offsetTop),
-                  p || S(e ? "element" : "window");
+                "window" != p && M(e || void 0),
+                  E(t.offsetTop),
+                  p || y(e ? "element" : "window");
               });
             },
             [p],
           ),
-          P =
-            ((C = (t) => {
-              E.current &&
+          C =
+            ((k = (t) => {
+              R.current &&
                 (0, d.startTransition)(() => {
-                  E.current && I(E.current?.offsetTop);
+                  R.current && E(R.current?.offsetTop);
                 });
             }),
             (0, r.QS)(
@@ -3201,7 +3202,7 @@
                 if (!t) return;
                 const e = new t.ownerDocument.defaultView.ResizeObserver(
                   (t) => {
-                    C(t[0]);
+                    k(t[0]);
                   },
                 );
                 let i = [],
@@ -3212,11 +3213,11 @@
                   i.forEach((t) => e.unobserve(t));
                 };
               },
-              [C],
+              [k],
             ));
-        var C;
-        const k = (0, r.Ue)(R, E, P, e),
-          z = {
+        var k;
+        const z = (0, r.Ue)(P, R, C, e),
+          G = {
             nRows: i,
             nItemHeight: a,
             nRowGap: s,
@@ -3225,18 +3226,19 @@
             bDynamic: l,
             measureElement: u,
             forceVirtualizeType: p,
-            initialOffset: _,
-            onOffsetChange: h,
+            hintVirtualizeType: _,
+            initialOffset: h,
+            onOffsetChange: b,
           };
         return (0, n.jsx)(g.Z, {
           className: m,
-          ref: k,
-          ...b,
+          ref: z,
+          ...D,
           children: (0, n.jsxs)(d.Suspense, {
             children: [
-              "element" === D &&
-                (0, n.jsx)(B, { ...z, nScrollMargin: M || 0, elScrollable: y }),
-              "window" === D && (0, n.jsx)(w, { ...z, nScrollMargin: M }),
+              "element" === S &&
+                (0, n.jsx)(B, { ...G, nScrollMargin: I || 0, elScrollable: v }),
+              "window" === S && (0, n.jsx)(w, { ...G, nScrollMargin: I }),
             ],
           }),
         });

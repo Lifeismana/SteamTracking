@@ -1215,8 +1215,8 @@
         A = a(81393),
         v = a(61859),
         w = a(68797),
-        T = a(6469),
-        V = a(43882),
+        V = a(6469),
+        T = a(43882),
         k = a(66703);
       const E = 7;
       var G, P;
@@ -1352,11 +1352,11 @@
       (0, s.Cg)([o.sH], O.prototype, "m_eWatchState", void 0),
         (0, s.Cg)([o.sH], O.prototype, "m_strStateDescription", void 0),
         (0, s.Cg)([o.XI], O.prototype, "SetState", null);
-      class L extends O {
+      class M extends O {
         m_clipID;
         m_data;
       }
-      class M extends O {
+      class L extends O {
         m_nAppIDVOD;
         m_manifestURL;
       }
@@ -1558,7 +1558,7 @@
           let e = this.m_mapClips.get(t);
           return (
             e ||
-            ((e = new L()),
+            ((e = new M()),
             (e.m_clipID = t),
             (e.m_eWatchState = G.None),
             this.m_mapClips.set(t, e),
@@ -1569,7 +1569,7 @@
           let e = this.m_mapVODs.get(t);
           return (
             e ||
-            ((e = new M()),
+            ((e = new L()),
             (e.m_nAppIDVOD = t),
             (e.m_eWatchState = G.None),
             this.m_mapVODs.set(t, e),
@@ -1771,7 +1771,7 @@
         }
         async GetVODManifest(t, e) {
           t.SetState(G.Loading, "");
-          let a = await T.K.Get().LoadVODForAppID(t.m_nAppIDVOD);
+          let a = await V.K.Get().LoadVODForAppID(t.m_nAppIDVOD);
           a
             ? (t.SetState(G.Ready),
               (t.m_manifestURL = a.video_url),
@@ -2127,7 +2127,7 @@
             (this.m_player = e),
             u.iA.logged_in &&
               t.m_nAppIDVOD &&
-              e.SetBookmarkAdapter(new V.M(t.m_nAppIDVOD)),
+              e.SetBookmarkAdapter(new T.M(t.m_nAppIDVOD)),
             e.PlayMPD(t.m_manifestURL),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
@@ -2359,51 +2359,6 @@
         (0, s.Cg)([S.o], W.prototype, "OnUserInputNeeded", null);
       const N = new F();
       window.uiBroadcastWatchStore = N;
-    },
-    68033: (t, e, a) => {
-      a.d(e, { A: () => d, T: () => n });
-      var s = a(30193),
-        i = a(78327),
-        r = a(41735),
-        o = a.n(r);
-      class n extends s.pN {
-        constructor() {
-          super();
-        }
-        BTransportReady() {
-          return !0;
-        }
-        GetServerTime() {
-          return i.TS.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
-        }
-        async RequestEmoticonListInternal() {
-          let t = [];
-          try {
-            let e = await o().get(i.TS.CHAT_BASE_URL + "actions/EmoticonData", {
-              withCredentials: !0,
-            });
-            if (e.data.emoticons)
-              for (let a of e.data.emoticons) {
-                let e = a.name;
-                if (e.startsWith("^")) t.push({ name: e });
-                else {
-                  let s = { name: e.substr(1, e.length - 2) },
-                    i = s.name.toLowerCase();
-                  i != s.name && (s.name_normalized = i),
-                    a.time_last_used && (s.last_used = a.time_last_used),
-                    a.use_count && (s.use_count = a.use_count),
-                    a.time_received && (s.time_received = a.time_received),
-                    a.appid && (s.appid = a.appid),
-                    t.push(s);
-                }
-              }
-          } catch (t) {
-            console.error("error loading emoticon list", t);
-          }
-          this.OnEmoticonListReceived(t);
-        }
-      }
-      const d = new n();
     },
     10886: (t, e, a) => {
       a.d(e, { A: () => s });

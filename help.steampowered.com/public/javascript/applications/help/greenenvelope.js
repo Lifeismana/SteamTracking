@@ -4235,6 +4235,11 @@
                     br: B.qM.readString,
                     bw: B.gp.writeString,
                   },
+                  market_bucket_id: {
+                    n: 39,
+                    br: B.qM.readString,
+                    bw: B.gp.writeString,
+                  },
                 },
               }),
             ut.sm_m

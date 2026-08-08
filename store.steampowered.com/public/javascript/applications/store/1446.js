@@ -38,7 +38,10 @@
       };
     },
     58855: (e) => {
-      e.exports = { CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA" };
+      e.exports = {
+        CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA",
+        CompatIconFrame: "_3E70dZ6hSfFCmskaIzbgJp",
+      };
     },
     67523: (e) => {
       e.exports = { ErrorDiv: "_2FXMECiK-1oag3HieTiKJW" };
@@ -119,7 +122,7 @@
       "use strict";
       a.d(t, { G: () => h });
       var s = a(7850),
-        r = a(48210),
+        r = a(76119),
         n = a(74812),
         i = a(90626),
         l = a(18654),
@@ -186,10 +189,10 @@
             ],
           });
         const v = (0, m.N)(h, !0),
-          j = v.length - 1,
-          w = (e) => {
+          w = v.length - 1,
+          j = (e) => {
             const t = v.indexOf(e);
-            t >= j && t < v.length - 1 && g(t + 1);
+            t >= w && t < v.length - 1 && g(t + 1);
           };
         if (f < v.length) {
           const e = v[f];
@@ -205,7 +208,7 @@
                 srcs: v,
                 className: c().CapsuleImage,
                 alt: p.name,
-                onImageError: w,
+                onImageError: j,
               }),
             ],
           });
@@ -215,7 +218,7 @@
     },
     94191: (e, t, a) => {
       "use strict";
-      a.d(t, { V: () => w });
+      a.d(t, { V: () => j });
       var s = a(7850),
         r = a(66418),
         n = a(78686),
@@ -258,14 +261,14 @@
         x = a.n(g),
         _ = a(12155),
         v = a(52038),
-        j = a(94011);
-      function w(e) {
+        w = a(94011);
+      function j(e) {
         const { appids: t, hide_status_banners: a, show_early_access: i } = e,
           { data: c } = (0, C.$Y)(),
           { data: o } = (0, h.F0)(),
           g = t.length > 0 && t.every((e) => c && c.has(e)),
-          w = t.length > 0 && t.every((e) => o && o.has(e)),
-          L = (function (e) {
+          j = t.length > 0 && t.every((e) => o && o.has(e)),
+          S = (function (e) {
             const { data: t } = p(),
               [a, s] = (0, m.useState)(!1),
               r = (0, l.jE)(),
@@ -292,13 +295,13 @@
               a
             );
           })(t),
-          S = g && !a,
-          b = w && !a,
+          b = g && !a,
+          L = j && !a,
           I = !a && i;
         return (0, s.jsxs)("div", {
           className: (0, v.A)(x().CapsuleDecorators, "CapsuleDecorators"),
           children: [
-            S &&
+            b &&
               (0, s.jsxs)("span", {
                 className: (0, v.A)(x().Banner, x().Blue),
                 children: [
@@ -310,7 +313,7 @@
                   n.Z.Localize("#Sale_InLibrary"),
                 ],
               }),
-            b &&
+            L &&
               (0, s.jsxs)("span", {
                 className: x().Banner,
                 children: [
@@ -318,8 +321,8 @@
                   n.Z.Localize("#Sale_OnWishlist"),
                 ],
               }),
-            I && !S && !b && (0, s.jsx)(y, { appids: t }),
-            L && (0, s.jsx)(j.K, {}),
+            I && !b && !L && (0, s.jsx)(y, { appids: t }),
+            S && (0, s.jsx)(w.K, {}),
           ],
         });
       }
@@ -354,7 +357,7 @@
       "use strict";
       a.d(t, { q: () => i });
       var s = a(81393),
-        r = a(48210),
+        r = a(76119),
         n = a(39777);
       function i(e, t, a = !1) {
         const { data: i } = (0, n.J$)(e),
@@ -501,7 +504,7 @@
       "use strict";
       a.d(t, { nz: () => i, oj: () => l });
       var s = a(7850),
-        r = a(48210),
+        r = a(76119),
         n = a(84518);
       function i(e) {
         return e == r.c6.xO
@@ -627,7 +630,7 @@
     },
     2240: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => E });
+      a.d(t, { J: () => H });
       var s = a(7850),
         r = a(93341),
         n = a(52038),
@@ -656,10 +659,10 @@
         return (0, s.jsxs)("span", {
           className: C().SupportedPlatforms,
           children: [
-            a && (0, s.jsx)(j, {}),
-            r && (0, s.jsx)(w, {}),
+            a && (0, s.jsx)(w, {}),
+            r && (0, s.jsx)(j, {}),
             n && (0, s.jsx)(y, {}),
-            i?.vrhmd && (0, s.jsx)(L, {}),
+            i?.vrhmd && (0, s.jsx)(S, {}),
           ],
         });
       });
@@ -679,10 +682,10 @@
           if (void 0 === e) return null;
           switch (e) {
             case h.Hi:
-              n = V;
+              n = E;
               break;
             case h.u_:
-              n = Z;
+              n = V;
               break;
             case h.xs:
               n = R;
@@ -691,20 +694,26 @@
               return (0, g.z_)(e, `Unhandled steam os category: ${e}`), null;
           }
         } else {
-          const e =
-            a == x.JR
-              ? t?.steam_machine_compat_category
-              : t?.steam_deck_compat_category;
-          if (void 0 === e) return null;
+          let e;
+          if (
+            ((e =
+              a == x.JR
+                ? t?.steam_machine_compat_category
+                : a == x.bY
+                  ? t?.steam_frame_compat_category
+                  : t?.steam_deck_compat_category),
+            void 0 === e)
+          )
+            return null;
           switch (e) {
             case f.I2:
-              n = M;
+              n = Z;
               break;
             case f.sd:
               n = D;
               break;
             case f.V8:
-              n = Z;
+              n = V;
               break;
             case f.YX:
               n = R;
@@ -722,22 +731,23 @@
           children: [
             Boolean(a == x.ZJ) && (0, s.jsx)(N, {}),
             Boolean(a == x.JR) && (0, s.jsx)(k, {}),
+            Boolean(a == x.bY) && (0, s.jsx)(M, {}),
             (0, s.jsx)(n, {}),
           ],
         });
       });
-      function j() {
+      function w() {
         return (0, s.jsx)("span", {
           className: u()(C().PlatformIndicator, C().Windows),
           title: c.Z.Localize("#Platform_Windows"),
-          children: (0, s.jsx)(S, {}),
+          children: (0, s.jsx)(b, {}),
         });
       }
-      function w() {
+      function j() {
         return (0, s.jsx)("span", {
           className: u()(C().PlatformIndicator, C().Mac),
           title: c.Z.Localize("#Platform_Mac"),
-          children: (0, s.jsx)(b, {}),
+          children: (0, s.jsx)(L, {}),
         });
       }
       function y() {
@@ -747,14 +757,14 @@
           children: (0, s.jsx)(I, {}),
         });
       }
-      function L() {
+      function S() {
         return (0, s.jsx)("span", {
           className: C().PlatformIndicator,
           title: c.Z.Localize("#Platform_VR"),
           children: (0, s.jsx)(A, {}),
         });
       }
-      function S() {
+      function b() {
         return (0, s.jsxs)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -793,7 +803,7 @@
           ],
         });
       }
-      function b() {
+      function L() {
         return (0, s.jsxs)("svg", {
           version: "1.1",
           id: "base",
@@ -908,6 +918,33 @@
       }
       function M() {
         return (0, s.jsx)("span", {
+          title: c.Z.Localize(
+            "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          className: u()(C().SteamDeckCompatLogo),
+          children: (0, s.jsxs)("svg", {
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, s.jsx)("path", {
+                opacity: "0.84",
+                d: "M16.9997 7.85352C11.9484 7.85352 7.85352 11.9484 7.85352 16.9997H16.9997V7.85352Z",
+                fill: "white",
+              }),
+              (0, s.jsx)("path", {
+                opacity: "0.84",
+                "fill-rule": "evenodd",
+                "clip-rule": "evenodd",
+                d: "M3 3.30201C3 3.13522 3.13522 3 3.30201 3H17V6.02012H6.02012V17H3V3.30201Z",
+                fill: "white",
+              }),
+            ],
+          }),
+        });
+      }
+      function Z() {
+        return (0, s.jsx)("span", {
           title: c.Z.Localize("#SteamDeckVerified_Category_Verified"),
           className: C().SteamDeckCompatIcon,
           children: (0, s.jsx)("svg", {
@@ -942,7 +979,7 @@
           }),
         });
       }
-      function Z() {
+      function V() {
         return (0, s.jsx)("span", {
           title: c.Z.Localize("#SteamDeckVerified_Category_Unsupported"),
           className: C().SteamDeckCompatIcon,
@@ -978,7 +1015,7 @@
           }),
         });
       }
-      function V() {
+      function E() {
         return (0, s.jsx)("span", {
           title: c.Z.Localize("#SteamOSCompatibility_Category_Compatible"),
           className: C().SteamDeckCompatIcon,
@@ -996,21 +1033,23 @@
           }),
         });
       }
-      function E(e) {
+      function H(e) {
         const { bAllowOutsideOfDeck: t } = e;
         return (0, i.Qn)() || t ? (0, s.jsx)(z, { ...e }) : null;
       }
       function z(e) {
         const { className: t, id: a } = e,
           [i, c] = (0, r.FD)();
-        let o = c;
+        let o,
+          d = c;
         return (
-          c == x.iA && (o = x.ZJ),
+          c == x.iA && (d = x.ZJ),
           a
-            ? (0, s.jsx)("div", {
-                className: (0, n.A)(l.CompatIcon, t),
-                children: (0, s.jsx)(_, { id: a, eHWCompat: o }),
-              })
+            ? (c == x.bY && (o = l.CompatIconFrame),
+              (0, s.jsx)("div", {
+                className: (0, n.A)(l.CompatIcon, o, t),
+                children: (0, s.jsx)(_, { id: a, eHWCompat: d }),
+              }))
             : null
         );
       }

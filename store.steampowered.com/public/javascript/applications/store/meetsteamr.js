@@ -402,7 +402,7 @@
                         ? "past"
                         : "future";
                   })(n?.session, s)),
-                  (t.rtSesssionTime = n.session.rtime_start),
+                  (t.rtSesssionTime = n?.session?.rtime_start ?? 0),
                   t
                 );
               }),

@@ -2668,6 +2668,7 @@
       }
       function _(_) {
         const { lang: _, eventModel: _, partnerEventStore: _ } = _,
+          _ = (0, _._)(),
           [_, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetNameWithFallback(_),
             __webpack_require__.GetDescriptionWithFallback(_),
@@ -2749,7 +2750,7 @@
                         _._,
                         {
                           event: _,
-                          emoticonStore: _._,
+                          emoticonStore: _,
                           partnerEventStore: _,
                           headerClassnames: "editor",
                           langOverride: _,

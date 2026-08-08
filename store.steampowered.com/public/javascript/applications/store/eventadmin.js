@@ -2682,7 +2682,7 @@
     },
     58426: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => rt });
+      n.r(t), n.d(t, { default: () => it });
       var s = n(7850),
         a = n(43527),
         r = n(75749),
@@ -5551,7 +5551,7 @@
         (0, H.Cg)([z.oI], Je.prototype, "ChangeHorror", null),
         (0, H.Cg)([z.oI], Je.prototype, "ChangeCute", null),
         (0, H.Cg)([z.oI], Je.prototype, "ApplyAction", null);
-      var Ze = n(48210);
+      var Ze = n(76119);
       let $e = class extends p.Component {
         state = { bLoadingEvent: !0 };
         m_cancelSignal = d().CancelToken.source();
@@ -5863,22 +5863,7 @@
         nt = n(7338);
       function st(e) {
         const [t, n] = (0, p.useState)(!1),
-          [s] = (0, p.useState)(() =>
-            (function () {
-              const e = (0, o.Tc)(
-                "partnerbrowse_webapi_token",
-                "application_config",
-              );
-              (0, tt.wT)(Boolean(e), "require partnerbrowse_webapi_token");
-              const t = new et.D(o.TS.WEBAPI_BASE_URL, e);
-              ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                  e,
-                );
-              return t;
-            })(),
-          ),
+          [s] = (0, p.useState)(() => at()),
           a = (0, p.useMemo)(
             () => ({
               country: o.TS.COUNTRY,
@@ -5909,10 +5894,23 @@
             : null
         );
       }
-      var at = n(90609);
-      const rt = () =>
+      function at() {
+        const e = (0, o.Tc)("partnerbrowse_webapi_token", "application_config");
+        (0, tt.wT)(Boolean(e), "require partnerbrowse_webapi_token");
+        const t = new et.D(o.TS.WEBAPI_BASE_URL, e);
+        return (
+          ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
+              e,
+            ),
+          t
+        );
+      }
+      var rt = n(90609);
+      const it = () =>
         (0, s.jsx)(st, {
-          children: (0, s.jsx)(at.d, {
+          children: (0, s.jsx)(rt.d, {
             children: (0, s.jsxs)(g.dO, {
               children: [
                 (0, s.jsx)(g.qh, {

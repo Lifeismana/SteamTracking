@@ -42,6 +42,7 @@
     chunkid: (module) => {
       module.exports = {
         CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA",
+        CompatIconFrame: "_3E70dZ6hSfFCmskaIzbgJp",
       };
     },
     chunkid: (module) => {
@@ -766,11 +767,17 @@
               return (0, _._)(_, `Unhandled steam os category: ${_}`), null;
           }
         } else {
-          const _ =
-            _ == _._
-              ? _?.steam_machine_compat_category
-              : _?.steam_deck_compat_category;
-          if (void 0 === _) return null;
+          let _;
+          if (
+            ((_ =
+              _ == _._
+                ? _?.steam_machine_compat_category
+                : _ == _._
+                  ? _?.steam_frame_compat_category
+                  : _?.steam_deck_compat_category),
+            void 0 === _)
+          )
+            return null;
           switch (_) {
             case _._:
               _ = _;
@@ -795,6 +802,7 @@
             "fill" == _ && _().Fill,
           ),
           children: [
+            Boolean(_ == _._) && (0, _.jsx)(_, {}),
             Boolean(_ == _._) && (0, _.jsx)(_, {}),
             Boolean(_ == _._) && (0, _.jsx)(_, {}),
             (0, _.jsx)(_, {}),
@@ -983,6 +991,33 @@
       }
       function _() {
         return (0, _.jsx)("span", {
+          title: _._.Localize(
+            "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          className: _()(_().SteamDeckCompatLogo),
+          children: (0, _.jsxs)("svg", {
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, _.jsx)("path", {
+                opacity: "0.84",
+                _: "M16.9997 7.85352C11.9484 7.85352 7.85352 11.9484 7.85352 16.9997H16.9997V7.85352Z",
+                fill: "white",
+              }),
+              (0, _.jsx)("path", {
+                opacity: "0.84",
+                "fill-rule": "evenodd",
+                "clip-rule": "evenodd",
+                _: "M3 3.30201C3 3.13522 3.13522 3 3.30201 3H17V6.02012H6.02012V17H3V3.30201Z",
+                fill: "white",
+              }),
+            ],
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
           title: _._.Localize("#SteamDeckVerified_Category_Verified"),
           className: _().SteamDeckCompatIcon,
           children: (0, _.jsx)("svg", {
@@ -1082,17 +1117,19 @@
       function _(_) {
         const { className: _, _: _ } = _,
           [_, _] = (0, _._)();
-        let _ = _;
+        let _,
+          _ = _;
         return (
           _ == _._ && (_ = _._),
           _
-            ? (0, _.jsx)("div", {
-                className: (0, _._)(_.CompatIcon, _),
+            ? (_ == _._ && (_ = _.CompatIconFrame),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.CompatIcon, _, _),
                 children: (0, _.jsx)(_, {
                   _: _,
                   eHWCompat: _,
                 }),
-              })
+              }))
             : null
         );
       }

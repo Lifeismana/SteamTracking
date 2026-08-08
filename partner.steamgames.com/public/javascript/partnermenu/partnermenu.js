@@ -10917,17 +10917,17 @@
       let m = n[t];
       s
         ? l
-          ? import_google_protobuf$8.Message.setRepeatedWrapperField(
+          ? import_google_protobuf$9.Message.setRepeatedWrapperField(
               o,
               r,
               Array.isArray(m) ? m.map((t) => s.fromObject(t)) : [],
             )
-          : import_google_protobuf$8.Message.setWrapperField(
+          : import_google_protobuf$9.Message.setWrapperField(
               o,
               r,
               s.fromObject(m),
             )
-        : import_google_protobuf$8.Message.setField(o, r, m);
+        : import_google_protobuf$9.Message.setField(o, r, m);
     }
     return o;
   }
@@ -10938,13 +10938,13 @@
       let { n: i, c: l, r: u, d: p, q: m } = o[t];
       if (l)
         if (u)
-          s[t] = import_google_protobuf$8.Message.toObjectList(
-            import_google_protobuf$8.Message.getRepeatedWrapperField(r, l, i),
+          s[t] = import_google_protobuf$9.Message.toObjectList(
+            import_google_protobuf$9.Message.getRepeatedWrapperField(r, l, i),
             l.toObject,
             n,
           );
         else {
-          let o = import_google_protobuf$8.Message.getWrapperField(
+          let o = import_google_protobuf$9.Message.getWrapperField(
             r,
             l,
             i,
@@ -10953,7 +10953,7 @@
           o && (s[t] = l.toObject(n, o));
         }
       else {
-        let n = import_google_protobuf$8.Message.getFieldWithDefault(
+        let n = import_google_protobuf$9.Message.getFieldWithDefault(
           r,
           i,
           p === void 0 ? null : p,
@@ -10972,18 +10972,18 @@
           let i = new o();
           r.readMessage(i, o.deserializeBinaryFromReader),
             s
-              ? import_google_protobuf$8.Message.addToRepeatedWrapperField(
+              ? import_google_protobuf$9.Message.addToRepeatedWrapperField(
                   n,
                   t,
                   i,
                   o,
                 )
-              : import_google_protobuf$8.Message.setWrapperField(n, t, i);
+              : import_google_protobuf$9.Message.setWrapperField(n, t, i);
         } else if (p) {
           let i = p.call(r);
           s
-            ? import_google_protobuf$8.Message.addToRepeatedField(n, t, i)
-            : import_google_protobuf$8.Message.setField(n, t, i);
+            ? import_google_protobuf$9.Message.addToRepeatedField(n, t, i)
+            : import_google_protobuf$9.Message.setField(n, t, i);
         } else
           console.assert(
             !!p,
@@ -11000,7 +11000,7 @@
       let { n: o, c: s, r: l, d: u, q: p, bw: m } = i[t];
       if (s)
         if (l) {
-          let t = import_google_protobuf$8.Message.getRepeatedWrapperField(
+          let t = import_google_protobuf$9.Message.getRepeatedWrapperField(
             n,
             s,
             o,
@@ -11008,7 +11008,7 @@
           ((t && t.length) || p) &&
             r.writeRepeatedMessage(o, t, s.serializeBinaryToWriter);
         } else {
-          let t = import_google_protobuf$8.Message.getWrapperField(
+          let t = import_google_protobuf$9.Message.getWrapperField(
             n,
             s,
             o,
@@ -11017,7 +11017,7 @@
           t && r.writeMessage(o, t, s.serializeBinaryToWriter);
         }
       else if (m) {
-        let t = import_google_protobuf$8.Message.getField(n, o);
+        let t = import_google_protobuf$9.Message.getField(n, o);
         t !== void 0 && m.call(r, o, t);
       } else
         console.assert(
@@ -11033,34 +11033,34 @@
         { n: o, c: s, r: l, d: u, q: p } = i;
       Object.prototype.hasOwnProperty.call(i, `d`)
         ? (n.prototype[r] = MakeBasicGetter(
-            import_google_protobuf$8.Message.getFieldWithDefault,
+            import_google_protobuf$9.Message.getFieldWithDefault,
             o,
             u,
           ))
         : s
           ? l
             ? (n.prototype[r] = MakeBasicGetter(
-                import_google_protobuf$8.Message.getRepeatedWrapperField,
+                import_google_protobuf$9.Message.getRepeatedWrapperField,
                 s,
                 o,
               ))
             : (n.prototype[r] = MakeWrapperGetter(s, o))
           : (n.prototype[r] = MakeBasicGetter(
-              import_google_protobuf$8.Message.getField,
+              import_google_protobuf$9.Message.getField,
               o,
             )),
         s
           ? l
             ? (n.prototype[`set_${r}`] = MakeSetter(
-                import_google_protobuf$8.Message.setRepeatedWrapperField,
+                import_google_protobuf$9.Message.setRepeatedWrapperField,
                 o,
               ))
             : (n.prototype[`set_${r}`] = MakeSetter(
-                import_google_protobuf$8.Message.setWrapperField,
+                import_google_protobuf$9.Message.setWrapperField,
                 o,
               ))
           : (n.prototype[`set_${r}`] = MakeSetter(
-              import_google_protobuf$8.Message.setField,
+              import_google_protobuf$9.Message.setField,
               o,
             )),
         l && (n.prototype[`add_${r}`] = MakeAdder(o, s));
@@ -11073,7 +11073,7 @@
   }
   function MakeWrapperGetter(t, n) {
     return function (r = !0) {
-      return import_google_protobuf$8.Message.getWrapperField(this, t, n, +!!r);
+      return import_google_protobuf$9.Message.getWrapperField(this, t, n, +!!r);
     };
   }
   function MakeSetter(t, n) {
@@ -11084,7 +11084,7 @@
   function MakeAdder(t, n) {
     return n
       ? function (r, i) {
-          return import_google_protobuf$8.Message.addToRepeatedWrapperField(
+          return import_google_protobuf$9.Message.addToRepeatedWrapperField(
             this,
             t,
             r,
@@ -11093,38 +11093,38 @@
           );
         }
       : function (n, r) {
-          import_google_protobuf$8.Message.addToRepeatedField(this, t, n, r);
+          import_google_protobuf$9.Message.addToRepeatedField(this, t, n, r);
         };
   }
-  var import_google_protobuf$8,
+  var import_google_protobuf$9,
     ReaderProto,
     WriterProto,
     init_protohelpers = __esmMin(() => {
-      (import_google_protobuf$8 = __toESM(require_google_protobuf(), 1)),
-        (ReaderProto = import_google_protobuf$8.BinaryReader.prototype),
-        (WriterProto = import_google_protobuf$8.BinaryWriter.prototype);
+      (import_google_protobuf$9 = __toESM(require_google_protobuf(), 1)),
+        (ReaderProto = import_google_protobuf$9.BinaryReader.prototype),
+        (WriterProto = import_google_protobuf$9.BinaryWriter.prototype);
     }),
     k_ESessionDispositionNormal,
     init_steammessages_base_cmsgprotobufheader_esessiondisposition = __esmMin(
       () => {},
     ),
-    import_google_protobuf$7,
+    import_google_protobuf$8,
     CMsgGCRoutingProtoBufHeader,
     CMsgProtoBufHeader,
     UserSystemInformation,
     GamePerformanceSettings,
     init_steammessages_base_pb = __esmMin(() => {
-      (import_google_protobuf$7 = __toESM(require_google_protobuf(), 1)),
+      (import_google_protobuf$8 = __toESM(require_google_protobuf(), 1)),
         init_protohelpers(),
         init_steammessages_base_cmsgprotobufheader_esessiondisposition(),
         (CMsgGCRoutingProtoBufHeader = class t extends (
-          import_google_protobuf$7.Message
+          import_google_protobuf$8.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.dst_gcid_queue || AddAccessors(t.M()),
-              import_google_protobuf$7.Message.initialize(
+              import_google_protobuf$8.Message.initialize(
                 this,
                 n,
                 0,
@@ -11168,7 +11168,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$7.BinaryReader(n),
+            let r = new import_google_protobuf$8.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -11176,14 +11176,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -11192,12 +11192,12 @@
             return `CMsgGCRoutingProtoBufHeader`;
           }
         }),
-        (CMsgProtoBufHeader = class t extends import_google_protobuf$7.Message {
+        (CMsgProtoBufHeader = class t extends import_google_protobuf$8.Message {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.steamid || AddAccessors(t.M()),
-              import_google_protobuf$7.Message.initialize(
+              import_google_protobuf$8.Message.initialize(
                 this,
                 n,
                 0,
@@ -11422,7 +11422,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$7.BinaryReader(n),
+            let r = new import_google_protobuf$8.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -11430,14 +11430,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -11447,13 +11447,13 @@
           }
         }),
         (UserSystemInformation = class t extends (
-          import_google_protobuf$7.Message
+          import_google_protobuf$8.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.manufacturer || AddAccessors(t.M()),
-              import_google_protobuf$7.Message.initialize(
+              import_google_protobuf$8.Message.initialize(
                 this,
                 n,
                 0,
@@ -11582,7 +11582,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$7.BinaryReader(n),
+            let r = new import_google_protobuf$8.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -11590,14 +11590,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -11607,13 +11607,13 @@
           }
         }),
         (GamePerformanceSettings = class t extends (
-          import_google_protobuf$7.Message
+          import_google_protobuf$8.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.setting || AddAccessors(t.M()),
-              import_google_protobuf$7.Message.initialize(
+              import_google_protobuf$8.Message.initialize(
                 this,
                 n,
                 0,
@@ -11662,7 +11662,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$7.BinaryReader(n),
+            let r = new import_google_protobuf$8.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -11670,14 +11670,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$7.BinaryWriter();
+            var n = new import_google_protobuf$8.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -11771,13 +11771,13 @@
       i
     );
   }
-  var import_google_protobuf$6,
+  var import_google_protobuf$7,
     k_uFixedHeaderSize,
     CBaseProtoBufMsg,
     CProtoBufMsg,
     init_msgprotobuf = __esmMin(() => {
       init_src$2(),
-        (import_google_protobuf$6 = __toESM(require_google_protobuf(), 1)),
+        (import_google_protobuf$7 = __toESM(require_google_protobuf(), 1)),
         init_enums_clientserver_pb(),
         init_steammessages_base_pb(),
         init_utlbuffer(),
@@ -11817,7 +11817,7 @@
                   try {
                     CMsgProtoBufHeader.deserializeBinaryFromReader(
                       this.m_header,
-                      new import_google_protobuf$6.BinaryReader(
+                      new import_google_protobuf$7.BinaryReader(
                         this.m_netPacket.GetPacket(),
                         this.m_netPacket.TellGet(),
                         this.m_cubHeader,
@@ -11848,7 +11848,7 @@
             try {
               t.deserializeBinaryFromReader(
                 this.m_body,
-                new import_google_protobuf$6.BinaryReader(
+                new import_google_protobuf$7.BinaryReader(
                   n.GetPacket(),
                   n.TellGet(),
                   n.GetCountBytesRemaining(),
@@ -11946,23 +11946,23 @@
           }
         });
     }),
-    import_google_protobuf$5,
+    import_google_protobuf$6,
     CClientMetrics_ClientBootstrap_RequestInfo,
     CClientMetrics_ClientBootstrap_Summary,
     CClientMetrics_ContentDownloadResponse_Counts,
     CClientMetrics_ContentDownloadResponse_HostCounts,
     CClientMetrics_ContentDownloadResponse_Hosts,
     init_clientmetrics_pb = __esmMin(() => {
-      (import_google_protobuf$5 = __toESM(require_google_protobuf(), 1)),
+      (import_google_protobuf$6 = __toESM(require_google_protobuf(), 1)),
         init_protohelpers(),
         (CClientMetrics_ClientBootstrap_RequestInfo = class t extends (
-          import_google_protobuf$5.Message
+          import_google_protobuf$6.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.original_hostname || AddAccessors(t.M()),
-              import_google_protobuf$5.Message.initialize(
+              import_google_protobuf$6.Message.initialize(
                 this,
                 n,
                 0,
@@ -12046,7 +12046,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$5.BinaryReader(n),
+            let r = new import_google_protobuf$6.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12054,14 +12054,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12071,13 +12071,13 @@
           }
         }),
         (CClientMetrics_ClientBootstrap_Summary = class t extends (
-          import_google_protobuf$5.Message
+          import_google_protobuf$6.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.launcher_type || AddAccessors(t.M()),
-              import_google_protobuf$5.Message.initialize(
+              import_google_protobuf$6.Message.initialize(
                 this,
                 n,
                 0,
@@ -12148,7 +12148,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$5.BinaryReader(n),
+            let r = new import_google_protobuf$6.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12156,14 +12156,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12173,13 +12173,13 @@
           }
         }),
         (CClientMetrics_ContentDownloadResponse_Counts = class t extends (
-          import_google_protobuf$5.Message
+          import_google_protobuf$6.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.class_100 || AddAccessors(t.M()),
-              import_google_protobuf$5.Message.initialize(
+              import_google_protobuf$6.Message.initialize(
                 this,
                 n,
                 0,
@@ -12248,7 +12248,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$5.BinaryReader(n),
+            let r = new import_google_protobuf$6.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12256,14 +12256,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12273,13 +12273,13 @@
           }
         }),
         (CClientMetrics_ContentDownloadResponse_HostCounts = class t extends (
-          import_google_protobuf$5.Message
+          import_google_protobuf$6.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.hostname || AddAccessors(t.M()),
-              import_google_protobuf$5.Message.initialize(
+              import_google_protobuf$6.Message.initialize(
                 this,
                 n,
                 0,
@@ -12327,7 +12327,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$5.BinaryReader(n),
+            let r = new import_google_protobuf$6.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12335,14 +12335,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12352,13 +12352,13 @@
           }
         }),
         (CClientMetrics_ContentDownloadResponse_Hosts = class t extends (
-          import_google_protobuf$5.Message
+          import_google_protobuf$6.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.hosts || AddAccessors(t.M()),
-              import_google_protobuf$5.Message.initialize(
+              import_google_protobuf$6.Message.initialize(
                 this,
                 n,
                 0,
@@ -12398,7 +12398,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$5.BinaryReader(n),
+            let r = new import_google_protobuf$6.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12406,14 +12406,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$5.BinaryWriter();
+            var n = new import_google_protobuf$6.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12423,7 +12423,7 @@
           }
         });
     }),
-    import_google_protobuf$4,
+    import_google_protobuf$5,
     CClientMetrics_AppInterfaceCreation,
     CClientMetrics_AppInterfaceMethodCounts,
     CClientMetrics_AppInterfaceStats_Notification,
@@ -12454,19 +12454,19 @@
     CClientMetrics_ReportLinuxStats_Notification,
     ClientMetricsService,
     init_steammessages_clientmetrics_pb = __esmMin(() => {
-      (import_google_protobuf$4 = __toESM(require_google_protobuf(), 1)),
+      (import_google_protobuf$5 = __toESM(require_google_protobuf(), 1)),
         init_protohelpers(),
         init_msgprotobuf(),
         init_clientmetrics_pb(),
         init_steammessages_base_pb(),
         (CClientMetrics_AppInterfaceCreation = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.raw_version || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -12510,7 +12510,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12518,14 +12518,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12535,13 +12535,13 @@
           }
         }),
         (CClientMetrics_AppInterfaceMethodCounts = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.interface_name || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -12590,7 +12590,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12598,14 +12598,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12615,13 +12615,13 @@
           }
         }),
         (CClientMetrics_AppInterfaceStats_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.game_id || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -12677,7 +12677,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12685,14 +12685,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12702,13 +12702,13 @@
           }
         }),
         (CClientMetrics_IPv6Connectivity_Result = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.protocol_tested || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -12752,7 +12752,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12760,14 +12760,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12777,13 +12777,13 @@
           }
         }),
         (CClientMetrics_IPv6Connectivity_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.cell_id || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -12833,7 +12833,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12841,14 +12841,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12858,13 +12858,13 @@
           }
         }),
         (CClientMetrics_ReportReactUsage_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.product || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -12926,7 +12926,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -12934,14 +12934,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -12951,13 +12951,13 @@
           }
         }),
         (CClientMetrics_ReportReactUsage_Notification_RouteData = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.route || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13001,7 +13001,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13009,14 +13009,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13026,13 +13026,13 @@
           }
         }),
         (CClientMetrics_ReportReactUsage_Notification_ComponentData = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.component || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13076,7 +13076,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13084,14 +13084,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13101,13 +13101,13 @@
           }
         }),
         (CClientMetrics_ReportReactUsage_Notification_ActionData = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.action || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13151,7 +13151,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13159,14 +13159,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13176,13 +13176,13 @@
           }
         }),
         (CClientMetrics_ReportClientError_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.product || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13239,7 +13239,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13247,14 +13247,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13264,13 +13264,13 @@
           }
         }),
         (CClientMetrics_ReportClientError_Notification_Error = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.identifier || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13329,7 +13329,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13337,14 +13337,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13354,13 +13354,13 @@
           }
         }),
         (CClientMetrics_SteamPipeWorkStats_Operation = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.type || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13429,7 +13429,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13437,14 +13437,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13454,13 +13454,13 @@
           }
         }),
         (CClientMetrics_SteamPipeWorkStats_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.appid || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13520,7 +13520,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13528,14 +13528,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13545,13 +13545,13 @@
           }
         }),
         (CClientMetrics_ClientBootstrap_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.summary || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13586,7 +13586,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13594,14 +13594,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13611,13 +13611,13 @@
           }
         }),
         (CClientMetrics_DownloadRates_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.cell_id || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13677,7 +13677,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13685,14 +13685,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13702,13 +13702,13 @@
           }
         }),
         (CClientMetrics_DownloadRates_Notification_StatsInfo = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.source_type || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13812,7 +13812,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13820,14 +13820,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13837,13 +13837,13 @@
           }
         }),
         (CClientMetrics_ContentValidation_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.validation_result || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -13927,7 +13927,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -13935,14 +13935,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -13952,13 +13952,13 @@
           }
         }),
         (CClientMetrics_CloudAppSyncStats_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.app_id || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14097,7 +14097,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14105,14 +14105,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14122,13 +14122,13 @@
           }
         }),
         (CClientMetrics_ContentDownloadResponse_Counts_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.cell_id || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14171,7 +14171,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14179,14 +14179,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14196,13 +14196,13 @@
           }
         }),
         (CClientMetrics_ClipShare_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.eresult || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14262,7 +14262,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14270,14 +14270,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14287,13 +14287,13 @@
           }
         }),
         (CClientMetrics_ClipRange_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.original_range_method || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14350,7 +14350,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14358,14 +14358,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14375,13 +14375,13 @@
           }
         }),
         (CClientMetrics_ClipRange_Notification_RelativeRangeEdge = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.original_range_method || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14430,7 +14430,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14438,14 +14438,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14455,13 +14455,13 @@
           }
         }),
         (CClientMetrics_EndGameRecording_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.recording_type || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14520,7 +14520,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14528,14 +14528,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14545,13 +14545,13 @@
           }
         }),
         (CClientMetrics_GamePerformance_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.frame_rates || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14592,7 +14592,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14600,14 +14600,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14617,13 +14617,13 @@
           }
         }),
         (CClientMetrics_GamePerformance_Notification_FrameRate = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.gameid || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14678,7 +14678,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14686,14 +14686,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14703,13 +14703,13 @@
           }
         }),
         (CClientMetrics_ReportClientArgs_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.client_args || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14795,7 +14795,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14803,14 +14803,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14820,13 +14820,13 @@
           }
         }),
         (CClientMetrics_ReportAccessibilitySettings_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.accessibility_desktop_ui_scale || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14885,7 +14885,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14893,14 +14893,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -14910,13 +14910,13 @@
           }
         }),
         (CClientMetrics_ReportLinuxStats_Notification = class t extends (
-          import_google_protobuf$4.Message
+          import_google_protobuf$5.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.glibc_version_major || AddAccessors(t.M()),
-              import_google_protobuf$4.Message.initialize(
+              import_google_protobuf$5.Message.initialize(
                 this,
                 n,
                 0,
@@ -14980,7 +14980,7 @@
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$4.BinaryReader(n),
+            let r = new import_google_protobuf$5.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -14988,14 +14988,14 @@
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$4.BinaryWriter();
+            var n = new import_google_protobuf$5.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30007,7 +30007,7 @@ Error generating stack: ` +
       }),
         (WebUITransportDefaults = new CWebUITransportDefaults());
     }),
-    import_google_protobuf$3,
+    import_google_protobuf$4,
     CSteamInputService_ControllerButtonStateChanged_Notification,
     ControllerVector2,
     ControllerVector3,
@@ -30065,18 +30065,18 @@ Error generating stack: ` +
     CSteamInputService_ControllerBatteryState_Notification,
     SteamInputManagerService,
     init_webuimessages_steaminput_pb = __esmMin(() => {
-      (import_google_protobuf$3 = __toESM(require_google_protobuf(), 1)),
+      (import_google_protobuf$4 = __toESM(require_google_protobuf(), 1)),
         init_protohelpers(),
         init_msgprotobuf(),
         init_webuitransportdefaults(),
         (CSteamInputService_ControllerButtonStateChanged_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30295,7 +30295,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30303,14 +30303,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30319,12 +30319,12 @@ Error generating stack: ` +
             return `CSteamInputService_ControllerButtonStateChanged_Notification`;
           }
         }),
-        (ControllerVector2 = class t extends import_google_protobuf$3.Message {
+        (ControllerVector2 = class t extends import_google_protobuf$4.Message {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.x || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30368,7 +30368,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30376,14 +30376,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30392,12 +30392,12 @@ Error generating stack: ` +
             return `ControllerVector2`;
           }
         }),
-        (ControllerVector3 = class t extends import_google_protobuf$3.Message {
+        (ControllerVector3 = class t extends import_google_protobuf$4.Message {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.x || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30446,7 +30446,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30454,14 +30454,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30471,13 +30471,13 @@ Error generating stack: ` +
           }
         }),
         (ControllerQuaternion = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.w || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30531,7 +30531,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30539,14 +30539,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30556,13 +30556,13 @@ Error generating stack: ` +
           }
         }),
         (ControllerGyroEulerAngles = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.pitch || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30611,7 +30611,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30619,14 +30619,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30636,13 +30636,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerAxesStateChange_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30706,7 +30706,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30714,14 +30714,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30731,13 +30731,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GyroQuaternionChanged_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30793,7 +30793,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30801,14 +30801,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30818,13 +30818,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GyroSpeedChanged_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30870,7 +30870,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30878,14 +30878,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30895,13 +30895,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GyroAccelerometerChanged_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -30947,7 +30947,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -30955,14 +30955,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -30972,13 +30972,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GyroCalibration_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31052,7 +31052,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31060,14 +31060,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31077,13 +31077,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerStateFlow_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31127,7 +31127,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31135,14 +31135,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31152,12 +31152,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerStateFlow_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -31176,7 +31176,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31184,12 +31184,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31199,13 +31199,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GyroSoftwareCalibration_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31249,7 +31249,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31257,14 +31257,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31274,12 +31274,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GyroSoftwareCalibration_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -31298,7 +31298,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31306,12 +31306,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31321,13 +31321,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_PairDongleTritonConnected_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31376,7 +31376,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31384,14 +31384,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31401,12 +31401,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_PairDongleTritonConnected_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -31425,7 +31425,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31433,12 +31433,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31448,12 +31448,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_SteamDonglesChanged_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -31472,7 +31472,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31480,12 +31480,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31495,13 +31495,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_UnpairedTritonPluggedIn_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31540,7 +31540,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31548,14 +31548,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31565,13 +31565,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_UnpairedTritonDocked_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.docked_puck_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31610,7 +31610,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31618,14 +31618,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31635,13 +31635,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_TritonUndocked_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.docked_puck_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31680,7 +31680,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31688,14 +31688,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31705,13 +31705,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerPairingChanged_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31750,7 +31750,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31758,14 +31758,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31775,13 +31775,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetDongles_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.include_bonds || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31820,7 +31820,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31828,14 +31828,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31845,13 +31845,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetDongles_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.steam_controller_v1 || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31902,7 +31902,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -31910,14 +31910,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -31927,13 +31927,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetDongles_Response_Dongle = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -31992,7 +31992,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32000,14 +32000,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32017,12 +32017,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ShouldTritonPairInOobe_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -32041,7 +32041,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32049,12 +32049,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32064,12 +32064,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_WaitInitialControllerStateEnumerated_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -32088,7 +32088,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32096,12 +32096,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32111,12 +32111,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_WaitInitialControllerStateEnumerated_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -32135,7 +32135,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32143,12 +32143,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32158,13 +32158,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ShouldTritonPairInOobe_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.pair_type || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32213,7 +32213,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32221,14 +32221,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32238,13 +32238,13 @@ Error generating stack: ` +
           }
         }),
         (CControllerOriginKey = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_type || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32298,7 +32298,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32306,14 +32306,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32323,13 +32323,13 @@ Error generating stack: ` +
           }
         }),
         (CControllerAccessibilityString = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.key || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32369,7 +32369,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32377,14 +32377,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32394,12 +32394,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerAccessibilityStrings_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -32418,7 +32418,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32426,12 +32426,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32441,13 +32441,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerAccessibilityStrings_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.strings || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32487,7 +32487,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32495,14 +32495,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32512,13 +32512,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerPowerMenu_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.idx || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32557,7 +32557,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32565,14 +32565,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32582,13 +32582,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerDisconnected_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32627,7 +32627,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32635,14 +32635,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32652,13 +32652,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetTritonPairingInfo_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32697,7 +32697,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32705,14 +32705,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32722,13 +32722,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetTritonPairingInfo_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.slot || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32773,7 +32773,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32781,14 +32781,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32798,13 +32798,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetTritonPairingInfo_Response_Slot = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.serial_number || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32853,7 +32853,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32861,14 +32861,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32878,13 +32878,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ForgetTritonPairingBond_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -32928,7 +32928,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32936,14 +32936,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -32953,12 +32953,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ForgetTritonPairingBond_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -32977,7 +32977,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -32985,12 +32985,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33000,13 +33000,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ForgetDonglePairingBond_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.dongle_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -33045,7 +33045,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33053,14 +33053,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33070,12 +33070,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ForgetDonglePairingBond_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -33094,7 +33094,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33102,12 +33102,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33117,13 +33117,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetControllerName_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.serial_number || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -33162,7 +33162,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33170,14 +33170,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33187,13 +33187,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetControllerName_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_name || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -33232,7 +33232,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33240,14 +33240,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33257,13 +33257,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_EnableDockedInput_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -33307,7 +33307,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33315,14 +33315,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33332,12 +33332,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_EnableDockedInput_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -33356,7 +33356,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33364,12 +33364,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33379,13 +33379,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_RawControllerDetailItem = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -33423,8 +33423,8 @@ Error generating stack: ` +
                   },
                   xinput_index: {
                     n: 5,
-                    br: ReaderProto.readUint32,
-                    bw: WriterProto.writeUint32,
+                    br: ReaderProto.readInt32,
+                    bw: WriterProto.writeInt32,
                   },
                   is_wireless_steam_dongle: {
                     n: 6,
@@ -33666,7 +33666,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33674,14 +33674,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33691,12 +33691,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerListChanged_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -33715,7 +33715,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33723,12 +33723,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33738,12 +33738,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetControllerList_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -33762,7 +33762,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33770,12 +33770,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33785,13 +33785,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_GetControllerList_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controllers || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -33831,7 +33831,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33839,14 +33839,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33856,12 +33856,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_FirstSteamControllerConnection_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -33880,7 +33880,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33888,12 +33888,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -33902,12 +33902,12 @@ Error generating stack: ` +
             return `CSteamInputService_FirstSteamControllerConnection_Notification`;
           }
         }),
-        (CTritonQosStatus = class t extends import_google_protobuf$3.Message {
+        (CTritonQosStatus = class t extends import_google_protobuf$4.Message {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.period_ms || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -33981,7 +33981,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -33989,14 +33989,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -34006,13 +34006,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_TritonQos_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -34052,7 +34052,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -34060,14 +34060,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -34077,13 +34077,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_EnableQosStatus_Request = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -34127,7 +34127,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -34135,14 +34135,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -34152,12 +34152,12 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_EnableQosStatus_Response = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 t,
                 0,
@@ -34176,7 +34176,7 @@ Error generating stack: ` +
             return new t();
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -34184,12 +34184,12 @@ Error generating stack: ` +
             return t;
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(t, n) {}
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -34199,13 +34199,13 @@ Error generating stack: ` +
           }
         }),
         (CSteamInputService_ControllerBatteryState_Notification = class t extends (
-          import_google_protobuf$3.Message
+          import_google_protobuf$4.Message
         ) {
           static ImplementsStaticInterface() {}
           constructor(n = null) {
             super(),
               t.prototype.controller_index || AddAccessors(t.M()),
-              import_google_protobuf$3.Message.initialize(
+              import_google_protobuf$4.Message.initialize(
                 this,
                 n,
                 0,
@@ -34254,7 +34254,7 @@ Error generating stack: ` +
             return FromObject(t.M(), n);
           }
           static deserializeBinary(n) {
-            let r = new import_google_protobuf$3.BinaryReader(n),
+            let r = new import_google_protobuf$4.BinaryReader(n),
               i = new t();
             return t.deserializeBinaryFromReader(i, r);
           }
@@ -34262,14 +34262,14 @@ Error generating stack: ` +
             return DeserializeBinary(t.MBF(), n, r);
           }
           serializeBinary() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
           }
           static serializeBinaryToWriter(n, r) {
             SerializeBinary(t.M(), n, r);
           }
           serializeBase64String() {
-            var n = new import_google_protobuf$3.BinaryWriter();
+            var n = new import_google_protobuf$4.BinaryWriter();
             return (
               t.serializeBinaryToWriter(this, n), n.getResultBase64String()
             );
@@ -36161,6 +36161,152 @@ Error generating stack: ` +
     init_remoteplaytypes = __esmMin(() => {}),
     init_screenshottypes = __esmMin(() => {}),
     init_settingstypes = __esmMin(() => {}),
+    import_google_protobuf$3,
+    SteamAward_Localization,
+    SteamAward,
+    init_steammessages_steamawards_types_pb = __esmMin(() => {
+      (import_google_protobuf$3 = __toESM(require_google_protobuf(), 1)),
+        init_protohelpers(),
+        (SteamAward_Localization = class t extends (
+          import_google_protobuf$3.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.title || AddAccessors(t.M()),
+              import_google_protobuf$3.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  title: {
+                    n: 1,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$3.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$3.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$3.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `SteamAward_Localization`;
+          }
+        }),
+        (SteamAward = class t extends import_google_protobuf$3.Message {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.voteid || AddAccessors(t.M()),
+              import_google_protobuf$3.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  voteid: {
+                    n: 1,
+                    br: ReaderProto.readInt32,
+                    bw: WriterProto.writeInt32,
+                  },
+                  localization: { n: 2, c: SteamAward_Localization },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$3.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$3.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$3.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `SteamAward`;
+          }
+        });
+    }),
     import_google_protobuf$2,
     CStorePageFilter,
     CStorePageFilter_SalePageFilter,
@@ -36569,6 +36715,9 @@ Error generating stack: ` +
           }
         });
     }),
+    k_EStoreAppType_Software,
+    k_EStoreAppType_Video,
+    init_steammessages_storebrowse_estoreapptype = __esmMin(() => {}),
     k_EStoreBrowseFilterFailure_None,
     init_steammessages_storebrowse_estorebrowsefilterfailure = __esmMin(
       () => {},
@@ -36604,6 +36753,10 @@ Error generating stack: ` +
     StoreItem_FreeWeekend,
     StoreItem_Link,
     StoreItem_PackageGroup,
+    StoreItem_Anticheat,
+    StoreItem_Eula,
+    StoreItem_AIGeneratedContentService,
+    StoreItem_ExtraDetails,
     StoreBrowseItemDataRequest,
     StoreBrowseContext,
     StoreItemID,
@@ -36634,7 +36787,9 @@ Error generating stack: ` +
       (import_google_protobuf$1 = __toESM(require_google_protobuf(), 1)),
         init_protohelpers(),
         init_msgprotobuf(),
+        init_steammessages_steamawards_types_pb(),
         init_contenthubs_pb(),
+        init_steammessages_storebrowse_estoreapptype(),
         init_steammessages_storebrowse_estorebrowsefilterfailure(),
         (StoreGameRating = class t extends import_google_protobuf$1.Message {
           static ImplementsStaticInterface() {}
@@ -36925,6 +37080,7 @@ Error generating stack: ` +
                     r: !0,
                     q: !0,
                   },
+                  extra_details: { n: 75, c: StoreItem_ExtraDetails },
                 },
               }),
               t.sm_m
@@ -39587,6 +39743,361 @@ Error generating stack: ` +
             return `StoreItem_PackageGroup`;
           }
         }),
+        (StoreItem_Anticheat = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.kernel_mode || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  kernel_mode: {
+                    n: 1,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  uninstall_completely: {
+                    n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  boot_protection: {
+                    n: 3,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  boot_protection_name: {
+                    n: 4,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  name: {
+                    n: 5,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  name_loc: {
+                    n: 6,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_Anticheat`;
+          }
+        }),
+        (StoreItem_Eula = class t extends import_google_protobuf$1.Message {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.name || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  name: {
+                    n: 1,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  url: {
+                    n: 2,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_Eula`;
+          }
+        }),
+        (StoreItem_AIGeneratedContentService = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.name || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                void 0,
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  name: {
+                    n: 1,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  url: {
+                    n: 2,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_AIGeneratedContentService`;
+          }
+        }),
+        (StoreItem_ExtraDetails = class t extends (
+          import_google_protobuf$1.Message
+        ) {
+          static ImplementsStaticInterface() {}
+          constructor(n = null) {
+            super(),
+              t.prototype.steam_award || AddAccessors(t.M()),
+              import_google_protobuf$1.Message.initialize(
+                this,
+                n,
+                0,
+                -1,
+                [1, 10],
+                null,
+              );
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              (t.sm_m ||= {
+                proto: t,
+                fields: {
+                  steam_award: { n: 1, c: SteamAward, r: !0, q: !0 },
+                  vetted: {
+                    n: 2,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  no_mouse_keyboard_support: {
+                    n: 3,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  controller_wizard_complete: {
+                    n: 4,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  drm_third_party_type: {
+                    n: 5,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  drm_activation_limit: {
+                    n: 6,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  user_account_third_party: {
+                    n: 7,
+                    br: ReaderProto.readString,
+                    bw: WriterProto.writeString,
+                  },
+                  user_account_third_party_link_to_steam: {
+                    n: 8,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  anticheat: { n: 9, c: StoreItem_Anticheat },
+                  eula: { n: 10, c: StoreItem_Eula, r: !0, q: !0 },
+                  ai_generation_service: {
+                    n: 11,
+                    c: StoreItem_AIGeneratedContentService,
+                  },
+                  refund_checks_ea_playtime: {
+                    n: 12,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                },
+              }),
+              t.sm_m
+            );
+          }
+          static MBF() {
+            return (t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf;
+          }
+          toObject(n = !1) {
+            return t.toObject(n, this);
+          }
+          static toObject(n, r) {
+            return ToObject(t.M(), n, r);
+          }
+          static fromObject(n) {
+            return FromObject(t.M(), n);
+          }
+          static deserializeBinary(n) {
+            let r = new import_google_protobuf$1.BinaryReader(n),
+              i = new t();
+            return t.deserializeBinaryFromReader(i, r);
+          }
+          static deserializeBinaryFromReader(n, r) {
+            return DeserializeBinary(t.MBF(), n, r);
+          }
+          serializeBinary() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return t.serializeBinaryToWriter(this, n), n.getResultBuffer();
+          }
+          static serializeBinaryToWriter(n, r) {
+            SerializeBinary(t.M(), n, r);
+          }
+          serializeBase64String() {
+            var n = new import_google_protobuf$1.BinaryWriter();
+            return (
+              t.serializeBinaryToWriter(this, n), n.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return `StoreItem_ExtraDetails`;
+          }
+        }),
         (StoreBrowseItemDataRequest = class t extends (
           import_google_protobuf$1.Message
         ) {
@@ -39688,6 +40199,11 @@ Error generating stack: ` +
                   },
                   include_links: {
                     n: 17,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
+                  include_extra_details: {
+                    n: 18,
                     br: ReaderProto.readBool,
                     bw: WriterProto.writeBool,
                   },
@@ -42028,7 +42544,6 @@ Error generating stack: ` +
           FROM_WEB: !1,
           WEBSITE_ID: `Unknown`,
           IN_STEAMUI: !1,
-          IN_GAMEPADUI: !1,
           FORCED_DISPLAY_MODE: void 0,
           ON_FRAME: !1,
           IS_STEAMOS: !1,
@@ -42074,9 +42589,16 @@ Error generating stack: ` +
         }),
         (EventConfig = { ANNOUNCEMENT_GID: ``, TAKEOVER_ANNOUNCEMENT_GID: `` });
     }),
-    init_mathutils = __esmMin(() => {
-      init_mathutils$1();
-    });
+    import_client = require_client();
+  init_configconstants();
+  function GetClientSteamType() {
+    if (!navigator?.userAgent) return;
+    let t = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
+    if (t && t.length == 2) return t[1];
+  }
+  var init_mathutils = __esmMin(() => {
+    init_mathutils$1();
+  });
   function GetCookie(t) {
     if (!BCanAccessCookies() || !window.document.cookie) return null;
     let n = document.cookie.match(`(^|; )` + t + `=([^;]*)`);
@@ -42086,6 +42608,32 @@ Error generating stack: ` +
     return !!window.document;
   }
   var init_cookies = __esmMin(() => {});
+  function GetConfigJSON(t, n = CONFIG_ELEMENT_ID) {
+    return GetConfigJSONInternal(t, n, !0);
+  }
+  function GetConfigJSONInternal(t, n = CONFIG_ELEMENT_ID, r) {
+    let i;
+    if (((i = typeof n == `string` ? document.getElementById(n) : n), i))
+      try {
+        return i.hasAttribute(`data-` + t)
+          ? JSON.parse(i.getAttribute(`data-` + t))
+          : null;
+      } catch (t) {
+        console.error(
+          `Failed to parse config for ` +
+            UserConfig$1.steamid +
+            ` (` +
+            window.location.href +
+            `)`,
+          t,
+        );
+      }
+    else r && console.error(`Missing config element #`, n);
+  }
+  var CONFIG_ELEMENT_ID,
+    init_configjson = __esmMin(() => {
+      CONFIG_ELEMENT_ID = `webui_config`;
+    });
   function InitConfig(t = CONFIG_ELEMENT_ID) {
     let n = {},
       r = GetConfigJSON(`config`, t);
@@ -42116,28 +42664,6 @@ Error generating stack: ` +
           configLoadWaiters.add(t);
         });
   }
-  function GetConfigJSON(t, n = CONFIG_ELEMENT_ID) {
-    return GetConfigJSONInternal(t, n, !0);
-  }
-  function GetConfigJSONInternal(t, n = CONFIG_ELEMENT_ID, r) {
-    let i;
-    if (((i = typeof n == `string` ? document.getElementById(n) : n), i))
-      try {
-        return i.hasAttribute(`data-` + t)
-          ? JSON.parse(i.getAttribute(`data-` + t))
-          : null;
-      } catch (t) {
-        console.error(
-          `Failed to parse config for ` +
-            UserConfig$1.steamid +
-            ` (` +
-            window.location.href +
-            `)`,
-          t,
-        );
-      }
-    else r && console.error(`Missing config element #`, n);
-  }
   function BIsInPresentationMode() {
     let t = null;
     return (
@@ -42145,23 +42671,56 @@ Error generating stack: ` +
       !!(t && Number.parseInt(t) === 1)
     );
   }
-  var CONFIG_ELEMENT_ID,
-    configLoadWaiters,
+  var configLoadWaiters,
     bAnyConfigLoaded,
     k_PresentationModeCookie,
     init_coreconfig = __esmMin(() => {
       init_mathutils(),
         init_cookies(),
         init_configconstants(),
-        (CONFIG_ELEMENT_ID = `webui_config`),
+        init_configjson(),
         (configLoadWaiters = new Set()),
         (bAnyConfigLoaded = !1),
         (k_PresentationModeCookie = `presentation_mode`);
-    }),
-    import_client = require_client();
+    });
   init_configconstants(), init_configconstants(), init_coreconfig();
   var ConfigContext = import_react$3.createContext({}),
-    import_google_protobuf = __toESM(require_google_protobuf(), 1);
+    useConfigContext = (t) => {
+      let n = import_react$3.useContext(ConfigContext);
+      return (
+        AssertMsg(
+          t?.bSuppressAssert || n.IN_GAMEPADUI !== void 0,
+          `Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application.`,
+        ),
+        n
+      );
+    };
+  function ConfigContextRoot(t) {
+    let { IN_GAMEPADUI: n, IN_DESKTOPUI: r, IN_VR: i, children: o } = t,
+      s = useConfigContext({ bSuppressAssert: !0 }),
+      l = GetClientSteamType()?.startsWith(`Gamepad VR`) ?? !1,
+      u = import_react$3.useMemo(
+        () => ({
+          IN_GAMEPADUI:
+            n ??
+            s?.IN_GAMEPADUI ??
+            GetClientSteamType()?.startsWith(`Gamepad`) ??
+            !1,
+          IN_DESKTOPUI: r ?? s?.IN_DESKTOPUI ?? !1,
+          IN_VR: i ?? s?.IN_VR ?? l,
+        }),
+        [s, n, r, i, l],
+      );
+    return import_react$3.createElement(
+      ConfigContext.Provider,
+      { value: u },
+      o,
+    );
+  }
+  function useInGamepadUI(t) {
+    return useConfigContext(t)?.IN_GAMEPADUI;
+  }
+  var import_google_protobuf = __toESM(require_google_protobuf(), 1);
   init_protohelpers(), init_msgprotobuf();
   var CAccountPrivacyCookiePreferences = class t extends import_google_protobuf.Message {
       static ImplementsStaticInterface() {}
@@ -42871,6 +43430,26 @@ Error generating stack: ` +
       LocalizePlural(t, n, ...r) {
         return l(n === 1 || n === `1` ? t : t + `_Plural`, n, ...r);
       },
+      GetAppTypeLocKey(t, n) {
+        switch (n) {
+          case 6:
+            return t + `_Software`;
+          case 7:
+            return t + `_Video`;
+          default:
+            return t;
+        }
+      },
+      GetAppTypePluralLocKey(t, n) {
+        switch (n) {
+          case 6:
+            return t + `_Software`;
+          case 7:
+            return t + `_Video`;
+          default:
+            return t;
+        }
+      },
       LocalizeInSpecificLang(t, n, ...r) {
         return ReplaceArgumentsInString(s(n, [t]), ...r);
       },
@@ -42879,6 +43458,12 @@ Error generating stack: ` +
       },
       IsReady() {
         return o;
+      },
+      HasKey(t) {
+        return CurrentLocalizationSettings().languages.some((r) => {
+          let i = n.get(r.strLanguage);
+          return i ? i.has(t) : !1;
+        });
       },
     };
   }
@@ -42902,7 +43487,8 @@ Error generating stack: ` +
         init_languages(),
         init_languagesource(),
         init_replacelocarguments(),
-        init_locready();
+        init_locready(),
+        init_steammessages_storebrowse_pb();
     }),
     require_classnames = __commonJSMin((t, n) => {
       (function () {
@@ -43604,20 +44190,20 @@ Error generating stack: ` +
               o === `right`)
             ) {
               let r = _ ? t.left : t.right;
-              u = document.documentElement.clientWidth - (r + n.width);
+              u = document.body.clientWidth - (r + n.width);
             }
             o === void 0 &&
               (u = s
                 ? t.right - n.width
-                : document.documentElement.clientWidth - (t.left + n.width)),
+                : document.body.clientWidth - (t.left + n.width)),
               (u = Math.min(u, 0));
           }
           o === `left`
             ? _
               ? ((l.current.style.left = `unset`),
-                (l.current.style.right = `${document.documentElement.clientWidth - t.right + u}px`))
+                (l.current.style.right = `${document.body.clientWidth - t.right + u}px`))
               : ((l.current.style.left = `unset`),
-                (l.current.style.right = `${document.documentElement.clientWidth - t.left + u}px`))
+                (l.current.style.right = `${document.body.clientWidth - t.left + u}px`))
             : o === `right`
               ? _
                 ? ((l.current.style.left = `${t.left + u}px`),
@@ -43627,7 +44213,7 @@ Error generating stack: ` +
               : o === void 0 &&
                 (s
                   ? ((l.current.style.left = `unset`),
-                    (l.current.style.right = `${document.documentElement.clientWidth - t.right + u}px`))
+                    (l.current.style.right = `${document.body.clientWidth - t.right + u}px`))
                   : ((l.current.style.left = `${t.left + u}px`),
                     (l.current.style.right = `unset`)));
         }
@@ -48299,9 +48885,10 @@ Error generating stack: ` +
         } = t,
         m = n,
         h = useStoreNavEventContext(),
-        g = useRenderContext().manifest;
+        g = useRenderContext().manifest,
+        _ = useInGamepadUI();
       s && (m = GetStoreNavLink(typeof s == `boolean` ? h : { ...h, ...s }, m));
-      let { bIsExternal: _, targetRoute: v } = import_react$3.useMemo(() => {
+      let { bIsExternal: v, targetRoute: y } = import_react$3.useMemo(() => {
         let t = m;
         if (i || r) return { bIsExternal: !0, targetRoute: t };
         if (absoluteUrlRegex.test(t)) {
@@ -48317,13 +48904,15 @@ Error generating stack: ` +
       }, [r, i, m, g?.routes]);
       i &&
         (Config.IN_CLIENT
-          ? (v = CreateSteamClientURL(`openurl/${m}`))
+          ? (y = CreateSteamClientURL(`openurl/${m}`))
           : ((p.target ??= `_blank`), (p.rel ??= `noreferrer noopener`)));
-      let y = useOnClick(v, _, o);
-      return (0, import_jsx_runtime$1.jsx)(
-        l && Config.IN_GAMEPADUI ? FocusableAnchor : `a`,
-        { ref: u, href: m, onClick: y, ...p },
-      );
+      let x = useOnClick(y, v, o);
+      return (0, import_jsx_runtime$1.jsx)(l && _ ? FocusableAnchor : `a`, {
+        ref: u,
+        href: m,
+        onClick: x,
+        ...p,
+      });
     }),
     k_EAppTypeGame = 1,
     k_EAppTypeApplication = 2,
@@ -48331,6 +48920,7 @@ Error generating stack: ` +
     k_EAppTypeDemo = 8,
     k_EAppTypeDLC = 32,
     k_EAppTypeConfig = 256,
+    k_EAppTypeHardware = 512,
     k_EAppTypeVideo = 2048,
     k_EAppTypeMusicAlbum = 8192,
     k_EAppTypeBeta = 65536;
@@ -48395,6 +48985,7 @@ Error generating stack: ` +
     app_DLC = `-WCgItbQf-E-`,
     app_Music = `TUG1nFX-yq8-`,
     app_Beta = `gJJkOluz-M4-`,
+    app_Hardware = `veiwkWgxD2g-`,
     partner_menu_arabic_exports = __exportAll({
       AppType_TitleCase_Advertising: () => AppType_TitleCase_Advertising$30,
       AppType_TitleCase_Application: () => AppType_TitleCase_Application$30,
@@ -66174,6 +66765,8 @@ Error generating stack: ` +
         return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Music`);
       case k_EAppTypeBeta:
         return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Beta`);
+      case 512:
+        return PartnerMenuLocalization.Localize(`#AppType_TitleCase_Hardware`);
     }
   }
   function AppSearchSuggestion(t) {
@@ -66189,6 +66782,7 @@ Error generating stack: ` +
         [app_Movie]: n.app_type === k_EAppTypeVideo,
         [app_Music]: n.app_type === k_EAppTypeMusicAlbum,
         [app_Beta]: n.app_type === k_EAppTypeBeta,
+        [app_Hardware]: n.app_type === 512,
       }),
       ref: i,
       children: [o ? `[${o}] ` : ``, ` `, n.match],
@@ -66369,7 +66963,7 @@ Error generating stack: ` +
   init_config_client();
   function BuildAvatarURLFromHash(t, n) {
     let r = `0000000000000000000000000000000000000000`;
-    typeof t == `string` ? (r = t) : t && (r = ConvertUInt8ToHexString(t));
+    typeof t == `string` ? (r = t) : t && (r = ConvertUInt8ToHexString(t) || r);
     let i = `.jpg`;
     r === `0000000000000000000000000000000000000000` &&
       (r = DEFAULT_AVATAR_HASH),
@@ -66398,7 +66992,14 @@ Error generating stack: ` +
     return (o += i), o;
   }
   function ConvertUInt8ToHexString(t) {
-    return [...t].map((t) => t.toString(16).padStart(2, `0`)).join(``);
+    return t
+      ? (typeof t[Symbol.iterator] == `function`
+          ? Array.from(t)
+          : Object.values(t).filter((t) => typeof t == `number`)
+        )
+          .map((t) => t.toString(16).padStart(2, `0`))
+          .join(``)
+      : ``;
   }
   init_src$1(), init_config_client();
   function StaticSteamAvatar(t) {
@@ -69162,7 +69763,7 @@ Error generating stack: ` +
         (global_menu_view_wallet_with_amount$9 = `Vezi portofelul meu: <1>%1$s</1>`),
         (Cart_CountWidget$9 = `Coș (%1$s)`),
         (responsive_menu_wallet_balance$9 = `Portofel (%1$s)`),
-        (responsive_footer_copyright$9 = `© Valve Corporation. Toate drepturile rezervate. Toate mărcile înregistrate sunt proprietatea deținătorilor respectivi în SUA și celelalte țări.`),
+        (responsive_footer_copyright$9 = `© Valve Corporation. Toate drepturile rezervate. Toate mărcile comerciale sunt proprietatea deținătorilor respectivi în SUA și celelalte țări.`),
         (Common_Footer_PrivacyPolicy$9 = `Politica de confidențialitate`),
         (Common_Footer_Legal$9 = `Mențiuni legale`),
         (Common_Footer_SSA$10 = `Acordul Steam pentru abonați`),
@@ -71555,15 +72156,17 @@ Error generating stack: ` +
     InitConfig(`headerContainer`),
       (0, import_client.createRoot)(container).render(
         (0, import_jsx_runtime$1.jsx)(ReactQueryRoot, {
-          children: (0, import_jsx_runtime$1.jsx)(PartnerMenu, {
-            menuItems: t.menu.mainNav,
-            partnerMenuItems: t.menu.partnerNav,
-            globalActions: t.menu.globalActions,
-            userDetails: t.userDetails,
-            isAdmin: t.menu.bIsAdmin,
-            primaryPublisherName: t.menu.primaryPublisherName,
-            spoof: t.menu.spoof,
-            disableLogin: t.menu.disableLoginButton,
+          children: (0, import_jsx_runtime$1.jsx)(ConfigContextRoot, {
+            children: (0, import_jsx_runtime$1.jsx)(PartnerMenu, {
+              menuItems: t.menu.mainNav,
+              partnerMenuItems: t.menu.partnerNav,
+              globalActions: t.menu.globalActions,
+              userDetails: t.userDetails,
+              isAdmin: t.menu.bIsAdmin,
+              primaryPublisherName: t.menu.primaryPublisherName,
+              spoof: t.menu.spoof,
+              disableLogin: t.menu.disableLoginButton,
+            }),
           }),
         }),
       );

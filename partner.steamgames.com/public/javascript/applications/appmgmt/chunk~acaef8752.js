@@ -46,6 +46,7 @@
         DateWidth: "_2P2kw0vHZogg7Ny7cAjQBo",
         PacificTimeHint: "_18FxDrpsfO5Tt8EFui49hV",
         TimeZone: "-x3Rw6W2fJfWRMs7vKr1I",
+        ClearButton: "TzhaDn0jN2ILks403xqXQ",
         InputBorder: "_1_H1sN2GVTzxSaz55gv03s",
         TimeBlock: "_2xLBsAMYVDoygyWbl2YIzI",
         TimeRowContainer: "BWmgg29ZeDbO6oj7Z1U7T",
@@ -175,6 +176,71 @@
         });
       }
     },
+    95893: (e, t, i) => {
+      "use strict";
+      i.d(t, { p: () => c });
+      var s = i(7850),
+        n = i(78686),
+        o = i(90626),
+        a = i(88997),
+        r = i(38165);
+      function l(e) {
+        const {
+            color: t,
+            onChange: i,
+            onRequestClose: a,
+            disableAlpha: l,
+            strTitle: c,
+          } = e,
+          h = (0, o.useRef)(null);
+        return (
+          (0, o.useEffect)(() => {
+            const e = h.current?.ownerDocument ?? document,
+              t = (e) => {
+                h.current && !h.current.contains(e.target) && a();
+              },
+              i = (e) => {
+                "Escape" === e.key && a();
+              };
+            return (
+              e.addEventListener("pointerdown", t, !0),
+              e.addEventListener("keydown", i, !0),
+              () => {
+                e.removeEventListener("pointerdown", t, !0),
+                  e.removeEventListener("keydown", i, !0);
+              }
+            );
+          }, [a]),
+          (0, s.jsx)("div", {
+            ref: h,
+            children: (0, s.jsx)(r.s, {
+              color: t,
+              disableAlpha: l,
+              strTitle: c ?? n.Z.Localize("#Button_Color"),
+              onChange: i,
+            }),
+          })
+        );
+      }
+      function c() {
+        return {
+          openColorPicker: (0, o.useCallback)((e, t) => {
+            let i = null;
+            i = (0, a.lX)(
+              (0, s.jsx)(l, {
+                color: t.color,
+                disableAlpha: t.disableAlpha,
+                strTitle: t.strTitle,
+                onChange: t.onChange,
+                onRequestClose: () => i?.Hide(),
+              }),
+              e,
+              { bDisablePopTop: !0 },
+            );
+          }, []),
+        };
+      }
+    },
     73744: (e, t, i) => {
       "use strict";
       i.d(t, {
@@ -184,7 +250,7 @@
         Hj: () => r,
         Ho: () => b,
         Kf: () => u,
-        N_: () => I,
+        N_: () => C,
         PL: () => h,
         XY: () => T,
         Yw: () => n,
@@ -527,9 +593,9 @@
         );
       }
       function D(e, t) {
-        return t.filter((t) => I(e, t));
+        return t.filter((t) => C(e, t));
       }
-      function I(e, t) {
+      function C(e, t) {
         return y[t].rgAcceptableTypes.includes(e);
       }
     },
@@ -1050,13 +1116,13 @@
         x = i(64641),
         T = i.n(x),
         D = i(12155),
-        I = i(22797),
-        C = i(68797),
+        C = i(22797),
+        I = i(68797),
         A = i(56011),
         L = i(66331),
         j = i(27344),
-        R = i.n(j),
-        E = i(78511);
+        E = i.n(j),
+        R = i(78511);
       function U(e) {
         const {
             imageUploader: t,
@@ -1097,7 +1163,7 @@
                         window,
                       ));
                 } catch (e) {
-                  let t = (0, C.H)(e);
+                  let t = (0, I.H)(e);
                   console.error(
                     "ImageUploaderPanel.OnDropFiles: " + t.strErrorMsg,
                     t,
@@ -1140,10 +1206,10 @@
           children: [
             (0, s.jsx)(a.Fragment, {
               children: (0, s.jsx)("div", {
-                className: R().UploadPreviewCtn,
+                className: E().UploadPreviewCtn,
                 children: h.map((e) =>
                   (0, s.jsx)(
-                    S,
+                    B,
                     {
                       asset: e,
                       forceResolution: r,
@@ -1177,7 +1243,7 @@
           );
         return (0, s.jsxs)("div", {
           style: { display: "flex" },
-          className: R().UploadPreviewButtonsCtn,
+          className: E().UploadPreviewButtonsCtn,
           children: [
             Boolean(o.length) &&
               (0, s.jsx)(p.$n, {
@@ -1196,7 +1262,7 @@
           ],
         });
       }
-      const S = (0, o.PA)(function (e) {
+      const B = (0, o.PA)(function (e) {
         const { asset: t, fnOnRemove: i, languageRealms: n } = e,
           o = t.ImageOptions?.map((e) => {
             let i,
@@ -1208,7 +1274,7 @@
                 (i = (0, m.we)("#ImageUpload_Deprecated_ttip"))),
               (t.BIsOriginalMinimumDimensions(e) &&
                 t.FileTypeMatchesImageTypes(e)) ||
-                (s = R().ImageDimensionTooSmall);
+                (s = E().ImageDimensionTooSmall);
             return { label: n, data: e, strOptionClass: s, tooltip: i };
           }).filter((e) => !e.data.bHiddenFromDropdown),
           a = {
@@ -1234,14 +1300,14 @@
         b && (w = o?.find((e) => e.data.sKey == b.sKey)?.data);
         w || (w = o?.[0]?.data);
         return (0, s.jsxs)("div", {
-          className: R().UploadPreview,
+          className: E().UploadPreview,
           children: [
             (0, s.jsx)("div", {
-              className: R().UploadPreviewDelete,
+              className: E().UploadPreviewDelete,
               onClick: () => i(t),
               children: (0, s.jsx)(D.sED, {}),
             }),
-            (0, s.jsx)(B, { asset: t }),
+            (0, s.jsx)(S, { asset: t }),
             r &&
               (0, s.jsx)(p.m, {
                 strDropDownClassName: y().DropDownScroll,
@@ -1263,7 +1329,7 @@
               g.warnings?.map((e, t) =>
                 (0, s.jsx)(
                   "div",
-                  { className: R().UploadPreviewWarning, children: e },
+                  { className: E().UploadPreviewWarning, children: e },
                   `warning${t}`,
                 ),
               ),
@@ -1271,32 +1337,32 @@
               g.messages?.map((e, t) =>
                 (0, s.jsx)(
                   "div",
-                  { className: R().UploadPreviewMessage, children: e },
+                  { className: E().UploadPreviewMessage, children: e },
                   `message${t}`,
                 ),
               ),
             (0, s.jsxs)("div", {
               className: (0, u.A)({
                 [y().FlexColumnContainer]: !0,
-                [R().UploadPreviewError]: "failed" == t.status,
+                [E().UploadPreviewError]: "failed" == t.status,
               }),
               children: [
                 _,
-                (0, E.o)(t.status) &&
+                (0, R.o)(t.status) &&
                   (0, s.jsx)("div", {
                     className: T().FlexCenter,
-                    children: (0, s.jsx)(I.t, { size: "small" }),
+                    children: (0, s.jsx)(C.t, { size: "small" }),
                   }),
               ],
             }),
             (0, s.jsx)("div", {
-              className: R().UploadPreviewError,
+              className: E().UploadPreviewError,
               children: t.message,
             }),
             d &&
               g.error &&
               (0, s.jsx)("div", {
-                className: R().UploadPreviewError,
+                className: E().UploadPreviewError,
                 children: g.error,
               }),
             d &&
@@ -1328,16 +1394,16 @@
           ],
         });
       });
-      function B(e) {
+      function S(e) {
         const { asset: t } = e;
         return t.BIsVideo()
           ? (0, s.jsxs)("div", {
-              className: R().PreviewImgCtn,
+              className: E().PreviewImgCtn,
               onClick: (e) =>
                 (0, v.pg)((0, s.jsx)(M, { asset: t }), (0, A.uX)(e)),
               children: [
                 (0, s.jsxs)("span", {
-                  className: R().PreviewImgInfo,
+                  className: E().PreviewImgInfo,
                   children: [t.width, " x ", t.height],
                 }),
                 (0, s.jsx)("video", {
@@ -1351,10 +1417,10 @@
               ],
             })
           : (0, s.jsx)("div", {
-              className: R().PreviewImgCtn,
+              className: E().PreviewImgCtn,
               style: { backgroundImage: `url(${t.dataUrl})` },
               children: (0, s.jsxs)("span", {
-                className: R().PreviewImgInfo,
+                className: E().PreviewImgInfo,
                 children: [t.width, " x ", t.height],
               }),
             });
@@ -1421,25 +1487,27 @@
           className: x,
           strDescToolTip: T,
           strDescription: D,
-          bShowTimeZone: I,
-          strInvalidDateTimeLocalizedMsg: C,
+          bShowTimeZone: C,
+          strInvalidDateTimeLocalizedMsg: I,
           fnIsValidDateTime: A,
           bWeekdaysOnly: L,
           fnSetTimeToUpdate: j,
-          bForce24HourFormat: R,
+          bForce24HourFormat: E,
+          bAllowClear: R,
         } = e;
-        let E =
+        let U =
           (function () {
             const e = w()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
-          })() || R
+          })() || E
             ? f
             : b;
-        const U = o(),
-          [O, S] = n.useState(U > 0 ? w()(1e3 * U) : null),
-          [B, M] = n.useState(),
-          [G, F] = n.useState(),
-          N = (function (e, t, i, s, o) {
+        const O = o(),
+          [B, S] = n.useState(O > 0 ? w()(1e3 * O) : null),
+          [M, G] = n.useState(0),
+          [N, F] = n.useState(),
+          [W, H] = n.useState(),
+          V = (function (e, t, i, s, o) {
             const a = s && s(),
               r = t && !k(t).isValid(),
               l = e && !v(e).isValid();
@@ -1459,32 +1527,32 @@
               }, [c, o]),
               c
             );
-          })(B, G, C, A, c),
-          W = !c && N;
-        let V, H;
+          })(N, W, I, A, c),
+          z = !c && V;
+        let q, Z;
         if (t && i && t == i && i > l.HD.GetTimeNowWithOverride()) {
           const e = w().unix(i);
-          (V = {
+          (q = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (E = f);
+            (U = f);
         }
-        U || !i || P || (H = w().unix(i));
-        const z = w().tz.guess(),
-          q = w().unix(U).tz(z),
-          Z = !!u && z != u && w().unix(U).tz(u),
+        O || !i || P || (Z = w().unix(i));
+        const Y = w().tz.guess(),
+          K = w().unix(O).tz(Y),
+          X = !!u && Y != u && w().unix(O).tz(u),
           {
-            fnOnInput: Y,
-            fnOnInputBlur: K,
-            fnOnChange: J,
+            fnOnInput: J,
+            fnOnInputBlur: $,
+            fnOnChange: Q,
           } = y(
             k,
             (e) => {
               if (_) return;
-              F(null);
+              H(null);
               const t = o(),
                 i = w().unix(t || l.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(i.hour()),
@@ -1493,17 +1561,17 @@
                 j(e.unix()),
                 S(e);
             },
-            F,
+            H,
           ),
           {
-            fnOnInput: X,
-            fnOnInputBlur: $,
-            fnOnChange: Q,
+            fnOnInput: ee,
+            fnOnInputBlur: te,
+            fnOnChange: ie,
           } = y(
             v,
             (e) => {
               if (_) return;
-              M(null);
+              F(null);
               let t = o(),
                 s = 0;
               if (t) {
@@ -1520,8 +1588,9 @@
               }
               j(s), S(w().unix(s));
             },
-            M,
-          );
+            F,
+          ),
+          se = R && !_ && O > 0;
         return (0, s.jsxs)("div", {
           className: (0, g.A)(m().EventTimeSection, x),
           children: [
@@ -1533,10 +1602,10 @@
                   direction: "top",
                   children: Boolean(D) && (0, s.jsx)("span", { children: D }),
                 }),
-                W &&
+                z &&
                   (0, s.jsxs)("span", {
                     className: m().DateErrorCtn,
-                    children: [(0, s.jsx)("img", { src: r.A }), W],
+                    children: [(0, s.jsx)("img", { src: r.A }), z],
                   }),
               ],
             }),
@@ -1546,94 +1615,111 @@
                 (0, s.jsxs)("div", {
                   className: (0, g.A)(h().InputBorder, m().TimeBlock),
                   children: [
-                    (0, s.jsx)(a(), {
-                      onChange: J,
-                      timeFormat: !1,
-                      value: null != G ? G : O,
-                      isValidDate: (e) =>
-                        !_ &&
-                        (function (e, t, i, s) {
-                          const n = w().unix(e).hour(0).seconds(0).minute(0);
-                          let o = s.unix() >= n.unix();
-                          if (o && t && t >= e) {
-                            const e = w()
-                              .unix(t)
-                              .hour(23)
-                              .minute(59)
-                              .seconds(59);
-                            o = s.unix() <= e.unix();
-                          }
-                          o &&
-                            i &&
-                            ((0 != s.weekday() && 6 != s.weekday()) ||
-                              (o = !1));
-                          return o;
-                        })(i, t, L, e),
-                      initialValue: H,
-                      inputProps: {
-                        placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
-                        className: (0, g.A)(
-                          m().DateWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: _,
-                        onChange: (e) => Y(e.currentTarget.value),
-                        onBlur: (e) => K(e.currentTarget.value),
+                    (0, s.jsx)(
+                      a(),
+                      {
+                        onChange: Q,
+                        timeFormat: !1,
+                        value: null != W ? W : B,
+                        isValidDate: (e) =>
+                          !_ &&
+                          (function (e, t, i, s) {
+                            const n = w().unix(e).hour(0).seconds(0).minute(0);
+                            let o = s.unix() >= n.unix();
+                            if (o && t && t >= e) {
+                              const e = w()
+                                .unix(t)
+                                .hour(23)
+                                .minute(59)
+                                .seconds(59);
+                              o = s.unix() <= e.unix();
+                            }
+                            o &&
+                              i &&
+                              ((0 != s.weekday() && 6 != s.weekday()) ||
+                                (o = !1));
+                            return o;
+                          })(i, t, L, e),
+                        initialValue: Z,
+                        inputProps: {
+                          placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
+                          className: (0, g.A)(
+                            m().DateWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: _,
+                          onChange: (e) => J(e.currentTarget.value),
+                          onBlur: (e) => $(e.currentTarget.value),
+                        },
                       },
-                    }),
-                    !!Z &&
+                      "date" + M,
+                    ),
+                    !!X &&
                       (0, s.jsx)("div", {
                         className: m().PacificTimeHint,
-                        children: Z.format("L"),
+                        children: X.format("L"),
                       }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
                   className: (0, g.A)(h().InputBorder, m().TimeBlock),
                   children: [
-                    (0, s.jsx)(a(), {
-                      onChange: Q,
-                      dateFormat: !1,
-                      timeFormat: E,
-                      timeConstraints: V,
-                      value: null != B ? B : O,
-                      inputProps: {
-                        placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
-                        className: (0, g.A)(
-                          m().TimeWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: _,
-                        onChange: (e) => X(e.currentTarget.value),
-                        onBlur: (e) => $(e.currentTarget.value),
+                    (0, s.jsx)(
+                      a(),
+                      {
+                        onChange: ie,
+                        dateFormat: !1,
+                        timeFormat: U,
+                        timeConstraints: q,
+                        value: null != N ? N : B,
+                        inputProps: {
+                          placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
+                          className: (0, g.A)(
+                            m().TimeWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: _,
+                          onChange: (e) => ee(e.currentTarget.value),
+                          onBlur: (e) => te(e.currentTarget.value),
+                        },
                       },
-                    }),
-                    !!Z &&
+                      "time" + M,
+                    ),
+                    !!X &&
                       (0, s.jsx)("div", {
                         className: m().PacificTimeHint,
-                        children: Z.format("LT"),
+                        children: X.format("LT"),
                       }),
                   ],
                 }),
-                I &&
+                C &&
                   (0, s.jsxs)("div", {
                     children: [
                       (0, s.jsx)("div", {
                         className: m().TimeZone,
-                        children: q.zoneAbbr(),
+                        children: K.zoneAbbr(),
                       }),
-                      !!Z &&
+                      !!X &&
                         (0, s.jsx)("div", {
                           className: m().TimeZone,
-                          children: Z.zoneAbbr(),
+                          children: X.zoneAbbr(),
                         }),
                     ],
                   }),
+                se &&
+                  (0, s.jsx)("button", {
+                    type: "button",
+                    className: m().ClearButton,
+                    onClick: () => {
+                      _ || (j(0), S(null), H(null), F(null), G((e) => e + 1));
+                    },
+                    children: (0, d.we)("#Button_Clear"),
+                  }),
               ],
             }),
-            Boolean(V) &&
+            Boolean(q) &&
               (0, s.jsx)("div", {
                 children: (0, d.we)("#DateTimePicker_DateTime_Fixed"),
               }),

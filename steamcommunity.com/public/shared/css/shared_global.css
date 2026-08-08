@@ -3235,8 +3235,8 @@ html.responsive .ds_steam_deck_compat {
 html.responsive .gpfocus .ds_steam_deck_compat {
 	transition: opacity 0.2s ease 0.1s;
 	opacity: 1;
-
 }
+
 .ds_steam_deck_compat.verified {
 	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') 3px no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-verified.svg') 22px no-repeat;
 }
@@ -3261,6 +3261,24 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 }
 .ds_steam_deck_compat.machineunknown {
 	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-machine-logo.svg') 3px no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') 22px no-repeat;
+}
+
+/* making frame verified always visible.  we might instead do a reveal on hover */
+.ds_steam_deck_compat.frameverified {
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') 3px no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-verified.svg') 22px no-repeat;
+	opacity: 1;
+}
+.ds_steam_deck_compat.frameplayable {
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') 3px no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-playable.svg') 22px no-repeat;
+	opacity: 1;
+}
+.ds_steam_deck_compat.frameunsupported {
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') 3px no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-unsupported.svg') 22px no-repeat;
+	opacity: 1;
+}
+.ds_steam_deck_compat.frameunknown {
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') 3px no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') 22px no-repeat;
+	opacity: 1;
 }
 
 .ds_steam_deck_compat.steamoscompatible {
@@ -3321,6 +3339,23 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 .steam_deck_compat.machineunknown {
 	display: inline-block;
 	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-machine-logo.svg') left no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') right no-repeat;
+}
+
+.steam_deck_compat.frameverified {
+	display: inline-block;
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') left no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-verified.svg') right no-repeat;
+}
+.steam_deck_compat.frameplayable {
+	display: inline-block;
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') left no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-playable.svg') right no-repeat;
+}
+.steam_deck_compat.frameunsupported {
+	display: inline-block;
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') left no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-unsupported.svg') right no-repeat;
+}
+.steam_deck_compat.frameunknown {
+	display: inline-block;
+	background: url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-frame-logo.svg') left no-repeat, url('https://community.fastly.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') right no-repeat;
 }
 
 .steam_deck_compat.steamoscompatible {

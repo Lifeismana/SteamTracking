@@ -10,6 +10,23 @@
 	margin: 0;
 }
 
+.dmca_view_page {
+	display: flex;
+	margin: 0px auto;
+	max-width: 1280px;
+}
+.dmca_view_page .leftcol, .rightcol {
+	display: flex;
+	flex-direction: column;
+	float: unset;
+}
+.dmca_view_page .leftcol {
+	width: unset;
+	flex: 1;
+}
+.dmca_view_page .rightcol {
+}
+
 .dmca_takedownnotice_status_bar
 {
 	background: #d19f3e;
@@ -31,6 +48,13 @@
 
 .dmca_takedownnotice_view_section
 {
+	display: flex;
+	flex-direction: column;
+}
+.dmca_takedownnotice_view_section.admin_section
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 .dmca_takedownnotice_workshop_item
@@ -47,19 +71,29 @@
 
 .dmca_takedownnotice_view_plaintiff
 {
-	float: left;
-	width: 300px;
 }
 
 .dmca_takedownnotice_view_defendant
 {
-	float: left;
-	width: 300px;
 }
 
 .dmca_takedownnotice_view_plaintiff_info
 {
 	line-height: 1.5em;
+}
+
+.dmca_takedownnotice_view_plaintiff_links
+{
+    background-color: #2f2f30;
+    padding: 5px;
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 10px;
+	align-items: center;
+}
+.dmca_takedownnotice_view_plaintiff_links .filter_category
+{
+	font-weight: bold;
 }
 
 .dmca_takedownnotice_view_user_link a:hover
@@ -87,7 +121,8 @@ textarea.action_description
 	height: 100px;
 	margin-top: 4px;
 	margin-bottom: 10px;
-	width: 590px;
+	width: 100%;
+	box-sizing: border-box;
 	font-size: 14px;
 	line-height: 20px;
 	background-color: #565658;
@@ -108,19 +143,16 @@ textarea.action_description
 .dmca_takedownnotice_action_idx
 {
 	color: #ffffff;
-	float: left;
 	font-size: 1.25em;
 	padding-right: 10px;
 }
 
 .dmca_takedownnotice_action_content
 {
-	float: left;
 }
 
 .dmca_takedownnotice_action_date
 {
-	float: left;
 	font-size: 1.25em;
 	padding-right: 10px;
 }
@@ -128,7 +160,6 @@ textarea.action_description
 .dmca_takedownnotice_action_status
 {
 	padding-top: 4px;
-	float: left;
 	color: #d19f3e;
 }
 

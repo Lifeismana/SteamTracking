@@ -325,6 +325,7 @@
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
         gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+        dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
         NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
         twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
         DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
@@ -30182,6 +30183,181 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_bUserHasVolumePreference = !1;
+        m_flVolumePreference = 0;
+        BUserHasVolumePreference() {
+          return this.m_bUserHasVolumePreference;
+        }
+        SetVolumePreference(_) {
+          (this.m_flVolumePreference = _),
+            (this.m_bUserHasVolumePreference = !0);
+        }
+        GetVolumePreference() {
+          return this.m_flVolumePreference;
+        }
+        BVolumePreferenceMuted() {
+          return this.m_flVolumePreference < 0.001;
+        }
+        static s_Singleton;
+        static Get() {
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+        }
+      }
+      (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
+        (0, _._)([_._], _.prototype, "SetVolumePreference", null);
+      const _ = (0, _.forwardRef)(function (_, _) {
+        const {
+            video: _,
+            bAutoPlay: _,
+            bControls: _,
+            bLoop: _,
+            bMuted: _,
+            className: _,
+            mediaScale: _,
+            onClick: _,
+            altText: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () =>
+              Boolean(
+                _.rgVideoTracks?.some(
+                  (_) => "subtitles" == _.sKind || "captions" == _.sKind,
+                ),
+              ),
+            [_.rgVideoTracks],
+          ),
+          [_, _] = _.useState(!1);
+        if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
+        const _ = (function (_) {
+          return !(
+            !(0, _._)(_.sPoster) ||
+            (_.rgVideoSources &&
+              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
+            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
+          );
+        })(_);
+        let _;
+        (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
+        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
+          _ = _.sPoster ? _(_.sPoster) : "";
+        return (0, _.jsxs)("video", {
+          width: "100%",
+          height: "auto",
+          autoPlay: _,
+          muted: _,
+          playsInline: !0,
+          controls: _,
+          poster: _,
+          loop: _,
+          crossOrigin: _,
+          onVolumeChange: (_) => {
+            const _ = _.target,
+              _ = _.muted ? 0 : _.volume;
+            _ && _.Get().SetVolumePreference(_);
+          },
+          onPlay: (_) => {
+            const _ = _.target,
+              _ = 0 == _.currentTime,
+              _ = _.Get().BUserHasVolumePreference();
+            if ((_(!0), _))
+              if (_ || _)
+                _ &&
+                  ((_.volume = _.Get().GetVolumePreference()),
+                  (_.muted = _.Get().BVolumePreferenceMuted()));
+              else {
+                const _ = _.muted ? 0 : _.volume;
+                _.Get().SetVolumePreference(_);
+              }
+          },
+          ref: _,
+          className: _,
+          onClick: _,
+          "aria-label": _,
+          style: {
+            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
+          },
+          children: [
+            (0, _.jsx)(_, {
+              rgVideoSources: _.rgVideoSources,
+            }),
+            (0, _.jsx)(_, {
+              rgVideoTracks: _.rgVideoTracks,
+            }),
+          ],
+        });
+      });
+      function _(_) {
+        if (_)
+          try {
+            const _ = new URL(_);
+            return (
+              (_.search =
+                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
+              _.toString()
+            );
+          } catch {
+            return _;
+          }
+      }
+      function _(_) {
+        const { rgVideoSources: _ } = _;
+        return _.filter((_) => Boolean(_.sURL)).map((_) =>
+          (0, _.jsx)(
+            "source",
+            {
+              src: _(_.sURL),
+              type: _.sFormat,
+            },
+            _.sURL,
+          ),
+        );
+      }
+      function _(_) {
+        const { rgVideoTracks: _ } = _;
+        return _
+          ? _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  track: _,
+                  rgVideoTracks: _,
+                },
+                _,
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        const { track: _, rgVideoTracks: _ } = _;
+        let _ = _.eLanguage;
+        if ((0, _._)())
+          if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
+            _ = _._.GetELanguageFallback(_);
+          else {
+            if (_ !== _.NFp) return null;
+            if (
+              __webpack_require__.find(
+                (_) => _._.GetELanguageFallback(_.eLanguage) === _,
+              )
+            )
+              return null;
+          }
+        else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
+          return null;
+        return (0, _.jsx)("track", {
+          src: _(_.sURL),
+          kind: _.sKind,
+          default: _.bDefault,
+          srcLang: (0, _.wwZ)(_),
+          label: (0, _._)(_),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = (0, _._)(_, "poster");
@@ -30230,7 +30406,7 @@
       }
       function _(_) {
         const _ = _(_.args);
-        return (0, _.jsx)(_._, {
+        return (0, _.jsx)(_, {
           video: _,
           bAutoPlay: !0,
           bControls: !1,
@@ -30252,7 +30428,7 @@
           _ = "0" !== _ && "off" !== _ && "false" !== _,
           _ = (0, _._)(_.args, "loop"),
           _ = "0" !== _ && "off" !== _ && "false" !== _;
-        return (0, _.jsx)(_._, {
+        return (0, _.jsx)(_, {
           video: _,
           bAutoPlay: _,
           bControls: _,
@@ -37138,268 +37314,6 @@
       (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
         (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
       const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      const _ = "ː",
-        _ = 604800;
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_bEmoticonListRequested = !1;
-        m_bInitialized = !1;
-        m_rtMostRecentEmoticon = void 0;
-        static sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g");
-        static sm_UnvalidatedEmoticonRegex = new RegExp(
-          `(?:${_}|:)([a-zA-Z0-9_\\-]+)(?:${_}|:)`,
-          "g",
-        );
-        m_rgEmoticons = [];
-        m_setEmoticonOwned = new Set();
-        m_rgFlairs = [];
-        m_rgRecentEmoticons;
-        m_rgStickers = [];
-        m_rgRecentStickers;
-        m_rgEffects = [];
-        m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER;
-        m_emoticonTrackerCallback = null;
-        m_stickerTrackerCallback = null;
-        static GetEmoticonURL(_, _) {
-          return _
-            ? _._.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + _
-            : _._.COMMUNITY_CDN_URL + "economy/emoticon/" + _;
-        }
-        static GetEmoticonReplaceRegex() {
-          return _.sm_EmoticonRegex;
-        }
-        static GetUnvalidatedEmoticonReplaceRegex() {
-          return _.sm_UnvalidatedEmoticonRegex;
-        }
-        static BEmoticonFilterMatch(_, _) {
-          return (
-            -1 !== `:${_.name_normalized || _.name}:`.indexOf(_.toLowerCase())
-          );
-        }
-        static FilterEmoticons(_, _) {
-          return _ && ":" !== _
-            ? _.filter((_) => _.BEmoticonFilterMatch(_, _))
-            : _;
-        }
-        static BStickerFilterMatch(_, _) {
-          return _.name.toLowerCase().indexOf(_.toLowerCase()) > -1;
-        }
-        static FilterStickers(_, _) {
-          return _ ? _.filter((_) => _.BStickerFilterMatch(_, _)) : _;
-        }
-        SearchEmoticons(_, _ = 25, _ = !0) {
-          function _(_) {
-            return _.name_normalized || _.name;
-          }
-          this.UpdateEmoticonList(), (_ = _.toLocaleLowerCase());
-          let _ = this.recent_emoticons.filter((_) => !_ || _(_).startsWith(_)),
-            _ = this.recent_emoticons.filter(
-              (_) => !_ && -1 !== _(_).indexOf(_),
-            ),
-            _ = this.m_rgEmoticons.filter((_) => !_ || _(_).startsWith(_)),
-            _ = this.m_rgEmoticons.filter((_) => !_ && -1 !== _(_).indexOf(_)),
-            _ = new Set(),
-            _ = [];
-          function _(_, _, _) {
-            return (
-              !(_.length >= _) &&
-              (_.has(_) ||
-                (_.add(_),
-                _.push({
-                  name: _(_),
-                  recent: _,
-                  new: _,
-                })),
-              !0)
-            );
-          }
-          function _(_, _, _) {
-            for (let _ of _) if (!_(_, _, __webpack_require__(_))) break;
-          }
-          return (
-            _(_, !0, (_) => !(_.last_used || !_.time_received)),
-            _(_, !1, () => !1),
-            _(_, !0, (_) => !(_.last_used || !_.time_received)),
-            _(_, !1, () => !1),
-            _
-          );
-        }
-        get is_initialized() {
-          return this.m_bInitialized;
-        }
-        async BAwaitInitialized() {
-          return (
-            this.m_bInitialized ||
-              (this.UpdateEmoticonList(),
-              await (0, _._)(() => this.m_bInitialized)),
-            this.m_bInitialized
-          );
-        }
-        GetTimeReceivedNewestEmoticon() {
-          return this.UpdateEmoticonList(), this.m_rtMostRecentEmoticon;
-        }
-        GetTimeReceivedForStickerOrEffect() {
-          return this.m_rtLastStickerOrEffect;
-        }
-        UpdateEmoticonList() {
-          this.m_bInitialized || this.RequestEmoticonList();
-        }
-        get emoticon_list() {
-          return this.UpdateEmoticonList(), this.m_rgEmoticons;
-        }
-        BHasEmoticon(_) {
-          return this.m_setEmoticonOwned.has(_);
-        }
-        get flair_list() {
-          return this.UpdateEmoticonList(), this.m_rgFlairs;
-        }
-        GetStickerList() {
-          return this.m_rgStickers;
-        }
-        GetEffectList() {
-          return this.m_rgEffects;
-        }
-        GetFlairListByGroupID(_) {
-          return this.m_rgFlairs.filter((_) => _.flairGroupID === _);
-        }
-        get recent_emoticons() {
-          return (
-            this.m_rgRecentEmoticons || this.BuildRecentEmoticonList(),
-            this.m_rgRecentEmoticons
-          );
-        }
-        get recent_stickers() {
-          return (
-            this.m_rgRecentStickers || this.BuildRecentStickerList(),
-            this.m_rgRecentStickers
-          );
-        }
-        SetEmoticonTrackerCallback(_) {
-          this.m_emoticonTrackerCallback = _;
-        }
-        SetStickerTrackerCallback(_) {
-          this.m_stickerTrackerCallback = _;
-        }
-        TrackEmoticonUsage(_, _) {
-          if (!this.m_bInitialized) return;
-          this.m_emoticonTrackerCallback &&
-            this.m_emoticonTrackerCallback(_, _);
-          let _,
-            _ = new Map(),
-            _ = /\[emoticon\]([^[]*)/g;
-          for (; (_ = _.exec(_)); ) {
-            let _ = _.get(_[1]) || 0;
-            _.set(_[1], _ + 1);
-          }
-          let _ = !1;
-          if (_.size) {
-            if (void 0 !== this.m_rgRecentEmoticons)
-              for (let _ of this.m_rgRecentEmoticons)
-                _.has(_.name) &&
-                  ((_.last_used = _),
-                  (_.use_count += _.get(_.name)),
-                  _.delete(_.name),
-                  _.time_received && ((_ = !0), delete _.time_received));
-            if (_.size)
-              for (let _ of this.m_rgEmoticons)
-                _.has(_.name) &&
-                  ((_.last_used = _),
-                  (_.use_count += _.get(_.name)),
-                  delete _.time_received,
-                  void 0 !== this.m_rgRecentEmoticons &&
-                    this.m_rgRecentEmoticons.push(_));
-            if (
-              void 0 !== this.m_rgRecentEmoticons &&
-              (this.BuildRecentEmoticonList(), _)
-            ) {
-              this.m_rtMostRecentEmoticon = void 0;
-              for (let _ of this.m_rgRecentEmoticons)
-                !_.last_used &&
-                  _.time_received &&
-                  (!this.m_rtMostRecentEmoticon ||
-                    _.time_received > this.m_rtMostRecentEmoticon) &&
-                  (this.m_rtMostRecentEmoticon = _.time_received);
-            }
-          }
-        }
-        TrackStickerUsage(_, _) {
-          if (!this.m_bInitialized) return;
-          this.m_stickerTrackerCallback && this.m_stickerTrackerCallback(_, _);
-          const _ = this.m_rgStickers.find(({ name: _ }) => _ === _);
-          (_.last_used = _),
-            (_.use_count += 1),
-            delete _.time_received,
-            this.BuildRecentStickerList();
-        }
-        RequestEmoticonList() {
-          !this.m_bEmoticonListRequested &&
-            this.BTransportReady() &&
-            ((this.m_bEmoticonListRequested = !0),
-            this.RequestEmoticonListInternal());
-        }
-        BuildRecentEmoticonList() {
-          this.m_rgRecentEmoticons = this.BuildRecentList(this.m_rgEmoticons);
-        }
-        BuildRecentStickerList() {
-          this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
-        }
-        BuildRecentList(_) {
-          const _ = this.GetServerTime() - _,
-            _ = _.filter(
-              ({ last_used: _, time_received: _ }) => _ || (_ && _ > _),
-            );
-          return (
-            __webpack_require__.sort(
-              (_, _) =>
-                (_.last_used || _.time_received) -
-                (_.last_used || _.time_received),
-            ),
-            __webpack_require__.slice(0, 50)
-          );
-        }
-        OnEmoticonListReceived(_) {
-          (this.m_rgFlairs = []),
-            (this.m_rgEmoticons = []),
-            (this.m_rgRecentEmoticons = void 0),
-            (this.m_rtMostRecentEmoticon = void 0);
-          let _ = this.GetServerTime() - _;
-          for (let _ of _) {
-            let _ = _.name;
-            _.startsWith("^")
-              ? this.m_rgFlairs.push({
-                  name: _.match(new RegExp(/:(.*):/))[1],
-                  flairGroupID: _.match(new RegExp(/\^(.*)\^/))[1],
-                })
-              : (!_.last_used && _.time_received > _
-                  ? (!this.m_rtMostRecentEmoticon ||
-                      _.time_received > this.m_rtMostRecentEmoticon) &&
-                    (this.m_rtMostRecentEmoticon = _.time_received)
-                  : delete _.time_received,
-                this.m_rgEmoticons.push(_));
-          }
-          (this.m_setEmoticonOwned = new Set(
-            this.m_rgEmoticons.map((_) => _.name_normalized || _.name),
-          )),
-            (this.m_bInitialized = !0),
-            (this.m_bEmoticonListRequested = !1);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
-        (0, _._)([_._], _.prototype, "m_rtMostRecentEmoticon", void 0),
-        (0, _._)([_._], _.prototype, "m_rtLastStickerOrEffect", void 0),
-        (0, _._)([_._], _.prototype, "TrackEmoticonUsage", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -50113,6 +50027,7 @@
             bHasGamePrivacy: _,
             bNoMask: _,
             bEllipsisName: _,
+            bDropPadding: _,
             ..._
           } = this.props;
           let _ = null,
@@ -50232,6 +50147,7 @@
                           _().gameName,
                           _ ? _().threeLines : void 0,
                           _().richPresenceLabel,
+                          _ && _().dropPadding,
                           "no-drag",
                         ),
                         children: [
@@ -50246,7 +50162,11 @@
                       }),
                     _ &&
                       (0, _.jsxs)("div", {
-                        className: (0, _._)(_().richPresenceLabel, "no-drag"),
+                        className: (0, _._)(
+                          _().richPresenceLabel,
+                          _ && _().dropPadding,
+                          "no-drag",
+                        ),
                         children: [_, " "],
                       }),
                   ],
@@ -57040,191 +56960,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_bUserHasVolumePreference = !1;
-        m_flVolumePreference = 0;
-        BUserHasVolumePreference() {
-          return this.m_bUserHasVolumePreference;
-        }
-        SetVolumePreference(_) {
-          (this.m_flVolumePreference = _),
-            (this.m_bUserHasVolumePreference = !0);
-        }
-        GetVolumePreference() {
-          return this.m_flVolumePreference;
-        }
-        BVolumePreferenceMuted() {
-          return this.m_flVolumePreference < 0.001;
-        }
-        static s_Singleton;
-        static Get() {
-          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-        }
-      }
-      (0, _._)([_._], _.prototype, "BUserHasVolumePreference", null),
-        (0, _._)([_._], _.prototype, "SetVolumePreference", null);
-      const _ = (0, _.forwardRef)(function (_, _) {
-        const {
-            video: _,
-            bAutoPlay: _,
-            bControls: _,
-            bLoop: _,
-            bMuted: _,
-            className: _,
-            mediaScale: _,
-            onClick: _,
-            altText: _,
-          } = _,
-          _ = (0, _.useMemo)(
-            () =>
-              Boolean(
-                _.rgVideoTracks?.some(
-                  (_) => "subtitles" == _.sKind || "captions" == _.sKind,
-                ),
-              ),
-            [_.rgVideoTracks],
-          ),
-          [_, _] = _.useState(!1);
-        if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
-        const _ = (function (_) {
-          return !(
-            !(0, _._)(_.sPoster) ||
-            (_.rgVideoSources &&
-              _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
-            (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
-          );
-        })(_);
-        let _;
-        (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
-        const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-          _ = _.sPoster ? _(_.sPoster) : "";
-        return (0, _.jsxs)("video", {
-          width: "100%",
-          height: "auto",
-          autoPlay: _,
-          muted: _,
-          playsInline: !0,
-          controls: _,
-          poster: _,
-          loop: _,
-          crossOrigin: _,
-          onVolumeChange: (_) => {
-            const _ = _.target,
-              _ = _.muted ? 0 : _.volume;
-            _ && _.Get().SetVolumePreference(_);
-          },
-          onPlay: (_) => {
-            const _ = _.target,
-              _ = 0 == _.currentTime,
-              _ = _.Get().BUserHasVolumePreference();
-            if ((_(!0), _))
-              if (_ || _)
-                _ &&
-                  ((_.volume = _.Get().GetVolumePreference()),
-                  (_.muted = _.Get().BVolumePreferenceMuted()));
-              else {
-                const _ = _.muted ? 0 : _.volume;
-                _.Get().SetVolumePreference(_);
-              }
-          },
-          ref: _,
-          className: _,
-          onClick: _,
-          "aria-label": _,
-          style: {
-            width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
-          },
-          children: [
-            (0, _.jsx)(_, {
-              rgVideoSources: _.rgVideoSources,
-            }),
-            (0, _.jsx)(_, {
-              rgVideoTracks: _.rgVideoTracks,
-            }),
-          ],
-        });
-      });
-      function _(_) {
-        if (_)
-          try {
-            const _ = new URL(_);
-            return (
-              (_.search =
-                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
-              _.toString()
-            );
-          } catch {
-            return _;
-          }
-      }
-      function _(_) {
-        const { rgVideoSources: _ } = _;
-        return _.filter((_) => Boolean(_.sURL)).map((_) =>
-          (0, _.jsx)(
-            "source",
-            {
-              src: _(_.sURL),
-              type: _.sFormat,
-            },
-            _.sURL,
-          ),
-        );
-      }
-      function _(_) {
-        const { rgVideoTracks: _ } = _;
-        return _
-          ? _.map((_, _) =>
-              (0, _.jsx)(
-                _,
-                {
-                  track: _,
-                  rgVideoTracks: _,
-                },
-                _,
-              ),
-            )
-          : null;
-      }
-      function _(_) {
-        const { track: _, rgVideoTracks: _ } = _;
-        let _ = _.eLanguage;
-        if ((0, _._)())
-          if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
-            _ = _._.GetELanguageFallback(_);
-          else {
-            if (_ !== _.NFp) return null;
-            if (
-              __webpack_require__.find(
-                (_) => _._.GetELanguageFallback(_.eLanguage) === _,
-              )
-            )
-              return null;
-          }
-        else if (!_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal))
-          return null;
-        return (0, _.jsx)("track", {
-          src: _(_.sURL),
-          kind: _.sKind,
-          default: _.bDefault,
-          srcLang: (0, _.wwZ)(_),
-          label: (0, _._)(_),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -57777,10 +57512,20 @@
             document.removeChild(_);
           } catch (_) {}
         }
-        static WriteCSVToFile(_, _, _) {
-          const _ = _().unparse(_, {
-              header: !0,
-            }),
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
             _ = 1 == _ ? ["\ufeff" + _] : [_];
           _.WriteFile(
             new Blob(_, {

@@ -1040,18 +1040,19 @@
         r = n(90626),
         o = n(73964),
         l = n(91254),
-        d = n(68033),
+        d = n(65606),
         c = n(27658),
         m = n(738),
         p = n(73745),
         u = n(19332);
       function h(e) {
-        const { event: t, closeModal: n } = e;
+        const { event: t, closeModal: n } = e,
+          i = (0, d.LJ)();
         return (0, s.jsx)(c.AD, {
           initialEvent: t,
           bShowOnlyInitialEvent: !0,
           partnerEventStore: l.O3,
-          emoticonStore: d.A,
+          emoticonStore: i,
           showAppHeader: !0,
           closeModal: n,
         });
@@ -1085,18 +1086,21 @@
             ref: this.m_refFocus,
             className: u.Main,
             onClick: this.OnBackgroundClick,
-            children: (0, s.jsx)(
-              c.He,
-              {
-                event: e,
-                emoticonStore: d.A,
-                partnerEventStore: o.$.Get(),
-                langOverride: t,
-                isPreview: n,
-                bDisableBroadcastPlayer: !1,
-              },
-              e.GID,
-            ),
+            children: (0, s.jsx)(d.sU, {
+              children: (i) =>
+                (0, s.jsx)(
+                  c.He,
+                  {
+                    event: e,
+                    emoticonStore: i,
+                    partnerEventStore: o.$.Get(),
+                    langOverride: t,
+                    isPreview: n,
+                    bDisableBroadcastPlayer: !1,
+                  },
+                  e.GID,
+                ),
+            }),
           });
         }
       };
@@ -1174,7 +1178,7 @@
         o = n(75844),
         l = n(90626),
         d = n(82429),
-        c = n(68033),
+        c = n(65606),
         m = n(27658),
         p = n(9154),
         u = n(88843),
@@ -1296,18 +1300,21 @@
             C.Fm.Get().BOwnsApp(n.appid) &&
               (v = (e) =>
                 (0, f.EP)(e, "steam://nav/games/details/" + n.appid)));
-          const y = (0, s.jsx)(m.AD, {
-            initialEvent: n,
-            appid: a,
-            clanSteamID: r,
-            partnerEventStore: l,
-            emoticonStore: c.A,
-            closeModal: !u && i,
-            showAppHeader: d,
-            bShowOnlyInitialEvent: e,
-            additionalParams: h,
-            eventClassName: S,
-            onAppIconClick: v,
+          const y = (0, s.jsx)(c.sU, {
+            children: (t) =>
+              (0, s.jsx)(m.AD, {
+                initialEvent: n,
+                appid: a,
+                clanSteamID: r,
+                partnerEventStore: l,
+                emoticonStore: t,
+                closeModal: !u && i,
+                showAppHeader: d,
+                bShowOnlyInitialEvent: e,
+                additionalParams: h,
+                eventClassName: S,
+                onAppIconClick: v,
+              }),
           });
           return u
             ? y
@@ -1336,7 +1343,7 @@
         s = n(97471),
         a = n(81886),
         r = n(22837),
-        o = n(96171),
+        o = n(6824),
         l = n(30894),
         d = n(16021),
         c = n(78327),

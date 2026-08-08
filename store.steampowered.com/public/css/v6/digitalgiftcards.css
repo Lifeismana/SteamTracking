@@ -19,6 +19,12 @@
     font-size: 40px;
     font-weight: bolder;
     color: #FFFFFF;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .giftcard_available {
@@ -56,6 +62,11 @@
 .giftcard_home_cont_physical {
     margin-top: 20px;
     background-image: linear-gradient(to bottom right, #422F2F, #202839);
+}
+
+.steamlogo_image {
+	object-fit: cover;
+    width: 150px;
 }
 
 .giftcard_home_image {

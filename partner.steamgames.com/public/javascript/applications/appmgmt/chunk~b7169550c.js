@@ -88,7 +88,10 @@
       };
     },
     58855: (e) => {
-      e.exports = { CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA" };
+      e.exports = {
+        CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA",
+        CompatIconFrame: "_3E70dZ6hSfFCmskaIzbgJp",
+      };
     },
     67523: (e) => {
       e.exports = { ErrorDiv: "_2FXMECiK-1oag3HieTiKJW" };
@@ -674,7 +677,7 @@
       "use strict";
       n.d(t, { G: () => h });
       var r = n(7850),
-        a = n(96171),
+        a = n(6824),
         s = n(74812),
         i = n(90626),
         o = n(18654),
@@ -820,7 +823,7 @@
           { data: l } = (0, h.F0)(),
           _ = t.length > 0 && t.every((e) => c && c.has(e)),
           S = t.length > 0 && t.every((e) => l && l.has(e)),
-          y = (function (e) {
+          b = (function (e) {
             const { data: t } = m(),
               [n, r] = (0, p.useState)(!1),
               a = (0, o.jE)(),
@@ -847,13 +850,13 @@
               n
             );
           })(t),
-          b = _ && !n,
+          y = _ && !n,
           I = S && !n,
           j = !n && i;
         return (0, r.jsxs)("div", {
           className: (0, v.A)(C().CapsuleDecorators, "CapsuleDecorators"),
           children: [
-            b &&
+            y &&
               (0, r.jsxs)("span", {
                 className: (0, v.A)(C().Banner, C().Blue),
                 children: [
@@ -873,8 +876,8 @@
                   s.Z.Localize("#Sale_OnWishlist"),
                 ],
               }),
-            j && !b && !I && (0, r.jsx)(L, { appids: t }),
-            y && (0, r.jsx)(w.K, {}),
+            j && !y && !I && (0, r.jsx)(L, { appids: t }),
+            b && (0, r.jsx)(w.K, {}),
           ],
         });
       }
@@ -909,7 +912,7 @@
       "use strict";
       n.d(t, { q: () => i });
       var r = n(81393),
-        a = n(96171),
+        a = n(6824),
         s = n(39777);
       function i(e, t, n = !1) {
         const { data: i } = (0, s.J$)(e),
@@ -1112,7 +1115,7 @@
     },
     11577: (e, t, n) => {
       "use strict";
-      n.d(t, { m: () => l });
+      n.d(t, { T: () => u, m: () => l });
       var r = n(90626),
         a = n(96059),
         s = n(16021),
@@ -1121,23 +1124,8 @@
         c = n(63664);
       function l(e) {
         const [t, n] = (0, r.useState)(!1),
-          [l] = (0, r.useState)(() =>
-            (function () {
-              const e = (0, o.Tc)(
-                "partnerbrowse_webapi_token",
-                "application_config",
-              );
-              (0, i.wT)(Boolean(e), "require partnerbrowse_webapi_token");
-              const t = new a.D(o.TS.WEBAPI_BASE_URL, e);
-              ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                  e,
-                );
-              return t;
-            })(),
-          ),
-          u = (0, r.useMemo)(
+          [a] = (0, r.useState)(() => d()),
+          i = (0, r.useMemo)(
             () => ({
               country: o.TS.COUNTRY,
               language: o.TS.LANGUAGE,
@@ -1154,17 +1142,47 @@
                   e.GetServiceTransport(),
                   o.iA.is_partner_member,
                 );
-              })(l)
+              })(a)
             ),
-            [l],
+            [a],
           ),
           t
             ? (0, r.createElement)(c.V3, {
-                context: u,
-                serviceTransportOverride: l.GetServiceTransport(),
+                context: i,
+                serviceTransportOverride: a.GetServiceTransport(),
                 children: e.children,
               })
             : null
+        );
+      }
+      function u(e) {
+        const [t] = (0, r.useState)(() => d()),
+          n = (0, r.useMemo)(
+            () => ({
+              country: o.TS.COUNTRY,
+              language: o.TS.LANGUAGE,
+              bUsePartnerAPI: !0,
+              bIncludeUnpublished: e.bIncludeUnpublished,
+            }),
+            [e.bIncludeUnpublished],
+          );
+        return (0, r.createElement)(c.V3, {
+          context: n,
+          serviceTransportOverride: t.GetServiceTransport(),
+          children: e.children,
+        });
+      }
+      function d() {
+        const e = (0, o.Tc)("partnerbrowse_webapi_token", "application_config");
+        (0, i.wT)(Boolean(e), "require partnerbrowse_webapi_token");
+        const t = new a.D(o.TS.WEBAPI_BASE_URL, e);
+        return (
+          ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
+              e,
+            ),
+          t
         );
       }
     },
@@ -1186,7 +1204,7 @@
         a = n.n(r),
         s = n(90626),
         i = n(37085),
-        o = n(96171),
+        o = n(6824),
         c = n(73745),
         l = n(16021);
       const u = 1,
@@ -1206,8 +1224,8 @@
             include_screenshots: w,
             include_trailers: S,
             include_ratings: L,
-            include_tag_count: y,
-            include_reviews: b,
+            include_tag_count: b,
+            include_reviews: y,
             include_basic_info: I,
             include_supported_languages: j,
             include_full_description: A,
@@ -1215,6 +1233,7 @@
             include_assets_without_overrides: k,
             apply_user_filters: N,
             include_links: G,
+            include_extra_details: T,
           } = n;
         if (
           ((0, s.useEffect)(() => {
@@ -1226,8 +1245,8 @@
               include_screenshots: w,
               include_trailers: S,
               include_ratings: L,
-              include_tag_count: y,
-              include_reviews: b,
+              include_tag_count: b,
+              include_reviews: y,
               include_basic_info: I,
               include_supported_languages: j,
               include_full_description: A,
@@ -1235,6 +1254,7 @@
               include_assets_without_overrides: k,
               apply_user_filters: N,
               include_links: G,
+              include_extra_details: T,
             };
             let s = null;
             return (
@@ -1251,7 +1271,30 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, h, _, C, x, v, w, S, L, y, b, I, j, A, E, k, N, G, g]),
+          }, [
+            e,
+            t,
+            r,
+            h,
+            _,
+            C,
+            x,
+            v,
+            w,
+            S,
+            L,
+            b,
+            y,
+            I,
+            j,
+            A,
+            E,
+            k,
+            N,
+            G,
+            T,
+            g,
+          ]),
           !e)
         )
           return [null, d];
@@ -1285,10 +1328,11 @@
             include_basic_info: w,
             include_supported_languages: S,
             include_full_description: L,
-            include_included_items: y,
-            include_assets_without_overrides: b,
+            include_included_items: b,
+            include_assets_without_overrides: y,
             apply_user_filters: I,
             include_links: j,
+            include_extra_details: A,
           } = n;
         if (
           ((0, s.useEffect)(() => {
@@ -1306,10 +1350,11 @@
                 include_basic_info: w,
                 include_supported_languages: S,
                 include_full_description: L,
-                include_included_items: y,
-                include_assets_without_overrides: b,
+                include_included_items: b,
+                include_assets_without_overrides: y,
                 apply_user_filters: I,
                 include_links: j,
+                include_extra_details: A,
               },
               r = e.filter(
                 (e) =>
@@ -1327,7 +1372,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, i, o, m, g, h, f, _, C, x, v, w, S, L, y, b, I, j]),
+          }, [e, t, r, i, o, m, g, h, f, _, C, x, v, w, S, L, b, y, I, j, A]),
           !e)
         )
           return d;
@@ -1515,7 +1560,7 @@
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => L, CF: () => y, KM: () => x, KT: () => S });
+      n.d(t, { B3: () => L, CF: () => b, KM: () => x, KT: () => S });
       var r = n(41735),
         a = n.n(r),
         s = n(58632),
@@ -1632,7 +1677,7 @@
           }, [n]);
         return r ? null : a;
       }
-      function y(e) {
+      function b(e) {
         return _.L.getQueryData([w, e]);
       }
     },
@@ -1838,7 +1883,7 @@
       "use strict";
       n.d(t, { oj: () => p, nz: () => d });
       var r = n(7850),
-        a = n(96171),
+        a = n(6824),
         s = n(60014),
         i = n(90626);
       const o = i.createContext({
@@ -2007,7 +2052,7 @@
     },
     2240: (e, t, n) => {
       "use strict";
-      n.d(t, { J: () => B });
+      n.d(t, { J: () => R });
       var r = n(7850),
         a = n(93341),
         s = n(52038),
@@ -2039,7 +2084,7 @@
             n && (0, r.jsx)(w, {}),
             a && (0, r.jsx)(S, {}),
             s && (0, r.jsx)(L, {}),
-            i?.vrhmd && (0, r.jsx)(y, {}),
+            i?.vrhmd && (0, r.jsx)(b, {}),
           ],
         });
       });
@@ -2059,7 +2104,7 @@
           if (void 0 === e) return null;
           switch (e) {
             case h.Hi:
-              s = T;
+              s = B;
               break;
             case h.u_:
               s = D;
@@ -2071,17 +2116,23 @@
               return (0, _.z_)(e, `Unhandled steam os category: ${e}`), null;
           }
         } else {
-          const e =
-            n == C.JR
-              ? t?.steam_machine_compat_category
-              : t?.steam_deck_compat_category;
-          if (void 0 === e) return null;
+          let e;
+          if (
+            ((e =
+              n == C.JR
+                ? t?.steam_machine_compat_category
+                : n == C.bY
+                  ? t?.steam_frame_compat_category
+                  : t?.steam_deck_compat_category),
+            void 0 === e)
+          )
+            return null;
           switch (e) {
             case f.I2:
-              s = N;
+              s = G;
               break;
             case f.sd:
-              s = G;
+              s = T;
               break;
             case f.V8:
               s = D;
@@ -2102,6 +2153,7 @@
           children: [
             Boolean(n == C.ZJ) && (0, r.jsx)(E, {}),
             Boolean(n == C.JR) && (0, r.jsx)(k, {}),
+            Boolean(n == C.bY) && (0, r.jsx)(N, {}),
             (0, r.jsx)(s, {}),
           ],
         });
@@ -2110,7 +2162,7 @@
         return (0, r.jsx)("span", {
           className: d()(g().PlatformIndicator, g().Windows),
           title: c.Z.Localize("#Platform_Windows"),
-          children: (0, r.jsx)(b, {}),
+          children: (0, r.jsx)(y, {}),
         });
       }
       function S() {
@@ -2127,14 +2179,14 @@
           children: (0, r.jsx)(j, {}),
         });
       }
-      function y() {
+      function b() {
         return (0, r.jsx)("span", {
           className: g().PlatformIndicator,
           title: c.Z.Localize("#Platform_VR"),
           children: (0, r.jsx)(A, {}),
         });
       }
-      function b() {
+      function y() {
         return (0, r.jsxs)("svg", {
           version: "1.1",
           xmlns: "http://www.w3.org/2000/svg",
@@ -2269,11 +2321,17 @@
             xmlns: "http://www.w3.org/2000/svg",
             children: [
               (0, r.jsx)("path", {
-                d: "M18.6146 1C18.8276 1.00008 19 1.17285 19 1.3858V18.6146C18.9999 18.8275 18.8275 18.9999 18.6146 19H1.3858C1.17287 19 1.00012 18.8275 1 18.6146V1.3858C1 1.1728 1.1728 1 1.3858 1H18.6146ZM10.1133 4.65085C7.09611 4.65093 4.65004 7.09697 4.64996 10.1142C4.64996 13.1315 7.09606 15.5775 10.1133 15.5776C13.1307 15.5776 15.5767 13.1316 15.5767 10.1142C15.5767 7.09693 13.1307 4.65085 10.1133 4.65085Z",
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
                 fill: "white",
               }),
               (0, r.jsx)("path", {
-                d: "M14.125 10.1892C14.125 7.98021 12.3338 6.18945 10.1248 6.18945C7.9158 6.1895 6.12509 7.98025 6.125 10.1892C6.125 12.3292 7.80559 14.077 9.91901 14.1842L10.1248 14.1895C12.2649 14.1895 14.0127 12.5085 14.1197 10.395L14.125 10.1892Z",
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
                 fill: "white",
               }),
             ],
@@ -2281,6 +2339,33 @@
         });
       }
       function N() {
+        return (0, r.jsx)("span", {
+          title: c.Z.Localize(
+            "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          className: d()(g().SteamDeckCompatLogo),
+          children: (0, r.jsxs)("svg", {
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("path", {
+                opacity: "0.84",
+                d: "M16.9997 7.85352C11.9484 7.85352 7.85352 11.9484 7.85352 16.9997H16.9997V7.85352Z",
+                fill: "white",
+              }),
+              (0, r.jsx)("path", {
+                opacity: "0.84",
+                "fill-rule": "evenodd",
+                "clip-rule": "evenodd",
+                d: "M3 3.30201C3 3.13522 3.13522 3 3.30201 3H17V6.02012H6.02012V17H3V3.30201Z",
+                fill: "white",
+              }),
+            ],
+          }),
+        });
+      }
+      function G() {
         return (0, r.jsx)("span", {
           title: c.Z.Localize("#SteamDeckVerified_Category_Verified"),
           className: g().SteamDeckCompatIcon,
@@ -2298,7 +2383,7 @@
           }),
         });
       }
-      function G() {
+      function T() {
         return (0, r.jsx)("span", {
           title: c.Z.Localize("#SteamDeckVerified_Category_Playable"),
           className: g().SteamDeckCompatIcon,
@@ -2352,7 +2437,7 @@
           }),
         });
       }
-      function T() {
+      function B() {
         return (0, r.jsx)("span", {
           title: c.Z.Localize("#SteamOSCompatibility_Category_Compatible"),
           className: g().SteamDeckCompatIcon,
@@ -2370,21 +2455,23 @@
           }),
         });
       }
-      function B(e) {
-        const { bAllowOutsideOfDeck: t } = e;
-        return (0, i.Qn)() || t ? (0, r.jsx)(R, { ...e }) : null;
-      }
       function R(e) {
+        const { bAllowOutsideOfDeck: t } = e;
+        return (0, i.Qn)() || t ? (0, r.jsx)(P, { ...e }) : null;
+      }
+      function P(e) {
         const { className: t, id: n } = e,
           [i, c] = (0, a.FD)();
-        let l = c;
+        let l,
+          u = c;
         return (
-          c == C.iA && (l = C.ZJ),
+          c == C.iA && (u = C.ZJ),
           n
-            ? (0, r.jsx)("div", {
-                className: (0, s.A)(o.CompatIcon, t),
-                children: (0, r.jsx)(x, { id: n, eHWCompat: l }),
-              })
+            ? (c == C.bY && (l = o.CompatIconFrame),
+              (0, r.jsx)("div", {
+                className: (0, s.A)(o.CompatIcon, l, t),
+                children: (0, r.jsx)(x, { id: n, eHWCompat: u }),
+              }))
             : null
         );
       }

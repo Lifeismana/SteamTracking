@@ -2923,6 +2923,12 @@ function IsValidEmailAddress( email )
 	return ( email != '' && email_regex.test(email) );
 }
 
+function IsValidURL( url )
+{
+	var url_regex = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
+	return ( url != '' && url_regex.test( url ) );
+}
+
 
 (function ($) {
   $.deparam = function (params, coerce) {

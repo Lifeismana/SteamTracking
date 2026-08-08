@@ -10,61 +10,26 @@ message AIContentSurvey {
 	optional string desc_external_service_monetization = 7;
 }
 
-message CAppContentDescriptors_DiscardSurveyChanges_Request {
-	optional uint32 appid = 1;
+message AppRating {
+	optional int32 rating_agency = 1 [(.description) = "enum"];
+	optional string rating = 2;
+	optional int32 source = 3 [(.description) = "enum"];
+	optional bool banned = 4;
+	optional uint32 required_age = 5;
+	optional bool use_age_gate = 6;
+	optional .AppRatingAuxData aux_data = 7;
 }
 
-message CAppContentDescriptors_DiscardSurveyChanges_Response {
-}
-
-message CAppContentDescriptors_FinishSurvey_Request {
-	optional uint32 appid = 1;
-}
-
-message CAppContentDescriptors_FinishSurvey_Response {
-}
-
-message CAppContentDescriptors_GetSurvey_Request {
-	optional uint32 appid = 1;
-	optional uint64 surveyid = 2;
-	optional bool include_descriptors = 3;
-	optional bool include_keyvalues = 4;
-	optional bool include_categories = 5;
-	optional bool include_ai_survey = 6;
+message AppRatingAuxData {
+	repeated string descriptors = 1;
+	repeated string interactive_elements = 2;
+	optional string official_id = 3;
+	optional bool esrb_online_music_not_rated = 4;
 }
 
 message CAppContentDescriptors_GetSurvey_Response {
 	optional uint64 surveyid = 1;
 	optional .ContentDescriptorSurvey survey = 2;
-}
-
-message CAppContentDescriptors_GetSurveyHistory_Request {
-	optional uint32 appid = 1;
-	optional int32 state = 2 [(.description) = "enum"];
-	optional bool include_descriptors = 3;
-	optional bool include_keyvalues = 4;
-	optional bool include_categories = 5;
-	optional bool include_ai_survey = 6;
-}
-
-message CAppContentDescriptors_GetSurveyHistory_Response {
-	repeated .ContentDescriptorSurvey surveys = 1;
-}
-
-message CAppContentDescriptors_SaveSurvey_Request {
-	optional uint32 appid = 1;
-	optional string developer_notes = 2;
-	repeated .ContentDescriptor descriptors = 3;
-	optional string keyvalues = 4;
-	repeated int32 categories = 5 [(.description) = "enum"];
-	optional .AIContentSurvey ai_survey = 6;
-	optional string internal_notes = 7;
-}
-
-message CAppContentDescriptors_SaveSurvey_Response {
-	optional uint64 surveyid = 1;
-	optional bool new_survey = 2;
-	optional .GeneratedGameRatings ratings = 3;
 }
 
 message ContentDescriptor {
@@ -85,6 +50,24 @@ message ContentDescriptorSurvey {
 	repeated int32 categories = 11 [(.description) = "enum"];
 	optional .AIContentSurvey ai_survey = 12;
 	optional string internal_notes = 13;
+	repeated .AppRating all_ratings = 14;
+	repeated .SurveySectionReviewed sections_reviewed = 15;
+	optional .ContentSurveyDisclosure disclosure = 16;
+	optional uint64 inherited_surveyid = 17;
+}
+
+message ContentSurveyDisclosure {
+	repeated .ContentSurveyLocalizedText customer_notes = 1;
+	repeated .ContentSurveyLocalizedText customer_notes_ai = 2;
+	repeated int32 mature_tags = 3 [(.description) = "enum"];
+	optional bool has_mature_content = 4;
+	optional string ai_external_service_name = 5;
+	optional string ai_external_service_url = 6;
+}
+
+message ContentSurveyLocalizedText {
+	optional int32 elanguage = 1;
+	optional string text = 2;
 }
 
 message GeneratedGameContent {
@@ -107,20 +90,16 @@ message GeneratedGameRatings {
 	repeated .GeneratedGameContent content_categories = 4;
 }
 
+message SurveySectionReviewed {
+	optional int32 survey_section = 1 [(.description) = "enum"];
+	optional uint32 time_reviewed = 2;
+	optional uint32 accountid_reviewer = 3;
+}
+
 service AppContentDescriptor {
-	// ePrivilege=7
-	rpc DiscardSurveyChanges (.CAppContentDescriptors_DiscardSurveyChanges_Request) returns (.CAppContentDescriptors_DiscardSurveyChanges_Response);
-	// ePrivilege=7
-	rpc FinishSurvey (.CAppContentDescriptors_FinishSurvey_Request) returns (.CAppContentDescriptors_FinishSurvey_Response);
-	// ePrivilege=0
-	rpc GetActiveSurvey (.CAppContentDescriptors_GetSurvey_Request) returns (.CAppContentDescriptors_GetSurvey_Response);
-	// ePrivilege=0
-	rpc GetSurvey (.CAppContentDescriptors_GetSurvey_Request) returns (.CAppContentDescriptors_GetSurvey_Response);
-	// ePrivilege=0
-	rpc GetSurveyHistory (.CAppContentDescriptors_GetSurveyHistory_Request) returns (.CAppContentDescriptors_GetSurveyHistory_Response);
-	// ePrivilege=0
-	rpc GetWorkingSurvey (.CAppContentDescriptors_GetSurvey_Request) returns (.CAppContentDescriptors_GetSurvey_Response);
-	// ePrivilege=7
-	rpc SaveSurvey (.CAppContentDescriptors_SaveSurvey_Request) returns (.CAppContentDescriptors_SaveSurvey_Response);
+	// bConstMethod=true, ePrivilege=7
+	rpc GetActiveSurvey (.NotImplemented) returns (.CAppContentDescriptors_GetSurvey_Response);
+	// bConstMethod=true, ePrivilege=7
+	rpc GetWorkingSurvey (.NotImplemented) returns (.CAppContentDescriptors_GetSurvey_Response);
 }
 

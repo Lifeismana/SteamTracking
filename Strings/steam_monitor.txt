@@ -231,8 +231,8 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
-05:03:21
-05:03:23
+04:01:51
+04:01:53
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
@@ -251,6 +251,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
+Aug  7 2026
 Average %.2f fps, %.2f ms per frame\n
 Bad thread local: Get\n
 Bad thread local: Set\n
@@ -286,6 +287,7 @@ DBG_PATHMATCH
 DONT_BREAK_ON_ASSERT
 Deleting thread object from the thread, this is bad
 DumpMemTrackingStats %d %d \n
+EB5)*
 Encryption
 Error State on string being set.
 Error decoding string1: %s
@@ -317,7 +319,6 @@ Invalid thread id during thread Start()
 IsSpewActive
 JArray
 Jobs/Coroutines
-Jul 23 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n

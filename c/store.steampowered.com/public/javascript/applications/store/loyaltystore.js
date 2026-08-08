@@ -9189,18 +9189,19 @@
         };
       function _(_) {
         const {
-          items: _,
-          renderItem: _,
-          loadMore: _,
-          bLoadingMore: _,
-          style: _,
-        } = _;
+            items: _,
+            renderItem: _,
+            loadMore: _,
+            bLoadingMore: _,
+            style: _,
+          } = _,
+          _ = (0, _._)();
         return (0, _.jsx)(_._, {
           className: _.MobileContainer,
           children: (0, _.jsxs)(_._, {
             "flow-children": "row",
             className: (0, _._)(_.Container, _.Mobile),
-            style: _._.IN_GAMEPADUI ? null : _,
+            style: _ ? null : _,
             children: [
               _.map(_),
               (0, _.jsx)(_._, {
@@ -10035,13 +10036,7 @@
           } = _(),
           _ = (0, _._)(`(min-width: ${_}px)`),
           _ = (0, _._)(`(min-width: ${_}px)`);
-        return _._.IN_GAMEPADUI
-          ? "mobile"
-          : _
-            ? "desktop"
-            : _
-              ? "tablet"
-              : "mobile";
+        return (0, _._)() ? "mobile" : _ ? "desktop" : _ ? "tablet" : "mobile";
       }
       function _(_) {
         return _.children(_());
@@ -11078,7 +11073,7 @@
           if (!_) return !1;
           return (_.hash === _) === _;
         },
-        _ = () => {
+        _ = (_) => {
           const _ = [
               {
                 label: (0, _._)("#FeaturedLabel"),
@@ -11204,7 +11199,7 @@
             _ = (0, _._)(_._.EREALM);
           return (
             _ ||
-              _._.IN_GAMEPADUI ||
+              _ ||
               _[2].items.push({
                 props: {
                   iconComponent: _._,
@@ -11352,7 +11347,8 @@
           : null;
       }
       const _ = () => {
-          const _ = _(),
+          const _ = (0, _._)(),
+            _ = _(_),
             _ = _._.Get().BIsLoggedIn() && _._.Get().GetIsUsingAppIDFilters();
           return (0, _.jsx)(_._, {
             className: _.PrimaryNav,
@@ -11455,14 +11451,15 @@
         });
       }
       const _ = () => {
-        const _ = _(),
+        const _ = (0, _._)(),
+          _ = _(_),
           _ = [];
         return (
           _.forEach((_) => {
             _.items.forEach((_) => {
               if (_.external) {
                 const { iconComponent: _, iconCallout: _, ..._ } = _.props;
-                _.push(
+                __webpack_require__.push(
                   (0, _.createElement)(
                     _._,
                     {
@@ -11481,7 +11478,7 @@
                 const _ = _.props,
                   { iconComponent: _, iconCallout: _, ..._ } = _,
                   _ = "string" == typeof _._ ? _._ : JSON.stringify(_._);
-                _.push(
+                __webpack_require__.push(
                   (0, _.createElement)(
                     _._,
                     {
@@ -11516,7 +11513,6 @@
           __webpack_require__._ +
           "images/applications/store/halloween_2020_pointspage_bg.png?v=valveisgoodatcaching";
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ({ className: _, ..._ }) => {
           const _ = _.useRef(void 0);
@@ -11555,7 +11551,8 @@
             ],
           });
       function _() {
-        return (0, _._)("(max-width: 965px)") || _._.IN_GAMEPADUI;
+        const _ = (0, _._)();
+        return (0, _._)("(max-width: 965px)") || _;
       }
       function _(_) {
         const _ = (0, _._)(["xxsmall", "small", "xxlarge"]),
@@ -13568,8 +13565,9 @@
             itemLink: _,
             appInfo: _,
             onRequestClose: _,
-          }) =>
-            (0, _.jsxs)(_._, {
+          }) => {
+            const _ = (0, _._)();
+            return (0, _.jsxs)(_._, {
               className: _.HeaderContainer,
               children: [
                 (0, _.jsxs)("div", {
@@ -13580,7 +13578,7 @@
                       children: [
                         _,
                         _ &&
-                          !_._.IN_GAMEPADUI &&
+                          !_ &&
                           (0, _.jsx)(_, {
                             link: _,
                             style: {
@@ -13638,7 +13636,8 @@
                     ],
                   }),
               ],
-            }),
+            });
+          },
         ),
         _ = (_) =>
           2 == _.type || 3 == _.type
@@ -14955,6 +14954,19 @@
           });
         }
       }
+      function _(_) {
+        return (0, _._)()
+          ? null
+          : (0, _.jsx)("div", {
+              className: _.PreviewLinkContainer,
+              children: (0, _.jsx)("a", {
+                href: _.strPreviewURL,
+                target: "_blank",
+                className: _.PreviewLink,
+                children: (0, _._)("#ProfileModifier_PreviewLinkText"),
+              }),
+            });
+      }
       class _ extends _.Component {
         constructor(_) {
           super(_),
@@ -15081,16 +15093,9 @@
                   },
                 }),
               }),
-              !_._.IN_GAMEPADUI &&
-                (0, _.jsx)("div", {
-                  className: _.PreviewLinkContainer,
-                  children: (0, _.jsx)("a", {
-                    href: _,
-                    target: "_blank",
-                    className: _.PreviewLink,
-                    children: (0, _._)("#ProfileModifier_PreviewLinkText"),
-                  }),
-                }),
+              (0, _.jsx)(_, {
+                strPreviewURL: _,
+              }),
               (0, _.jsx)("div", {
                 className: _.BundleItemPreviewContainer,
                 children: _,

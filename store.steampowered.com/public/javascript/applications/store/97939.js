@@ -25,6 +25,7 @@
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+        "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
         ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
         Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
         Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
@@ -435,7 +436,7 @@
     },
     71232: (e, t, n) => {
       "use strict";
-      n.d(t, { l6: () => A, WM: () => V });
+      n.d(t, { l6: () => N, WM: () => V });
       var o = n(7850),
         r = n(90626),
         i = n(73788),
@@ -630,7 +631,7 @@
         });
       }
       var L = n(20187);
-      function R(e) {
+      function _(e) {
         return (0, o.jsx)(j.I, {
           ...e,
           viewBoxSize: 12,
@@ -640,7 +641,7 @@
           }),
         });
       }
-      var _ = n(13843);
+      var R = n(13843);
       var O = n(57757),
         k = n(83392),
         z = n(66922);
@@ -872,7 +873,7 @@
               maxSelected: y,
               ...L
             } = U("<SelectTrigger>"),
-            _ = {
+            R = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => i(!r),
@@ -881,7 +882,7 @@
             O = p ? Array.isArray(s) && s.length > 0 : !!s,
             k =
               O && m
-                ? (0, o.jsx)(R, { onClick: f, cursor: "pointer", hitSlop: !0 })
+                ? (0, o.jsx)(_, { onClick: f, cursor: "pointer", hitSlop: !0 })
                 : (0, o.jsx)(P, {}),
             V = (0, z.f)("Select", l),
             F = (0, o.jsx)(C.j, {
@@ -894,7 +895,7 @@
               cursor: "pointer",
               ...L,
             }),
-            T = (0, c.Q)(n, F, _, void 0);
+            T = (0, c.Q)(n, F, R, void 0);
           return (0, o.jsx)(S, { children: T });
         },
         Value: function (e) {
@@ -924,7 +925,7 @@
               ),
               "");
       }
-      const A = Object.assign(function (e) {
+      const N = Object.assign(function (e) {
         const {
             selectedValue: t,
             onSelectionChange: n,
@@ -941,26 +942,26 @@
           }),
           a = null != t,
           d = a ? s(t) : "";
-        return (0, o.jsxs)(A.Root, {
+        return (0, o.jsxs)(N.Root, {
           state: c,
           ...l,
           children: [
-            (0, o.jsxs)(A.Trigger, {
+            (0, o.jsxs)(N.Trigger, {
               children: [
-                a && (0, o.jsx)(A.Value, { children: d }),
-                !a && (0, o.jsx)(A.Placeholder, { children: i }),
+                a && (0, o.jsx)(N.Value, { children: d }),
+                !a && (0, o.jsx)(N.Placeholder, { children: i }),
               ],
             }),
-            (0, o.jsx)(A.Options, {
+            (0, o.jsx)(N.Options, {
               children: c.rgOptions.map((e, t) =>
-                (0, o.jsx)(A.Option, { value: e, children: s(e) }, t),
+                (0, o.jsx)(N.Option, { value: e, children: s(e) }, t),
               ),
             }),
           ],
         });
       }, T);
-      const D = T;
-      const N = Object.assign(function (e) {
+      const A = T;
+      const D = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
@@ -986,28 +987,28 @@
             u =
               "ListFormat" in Intl
                 ? new Intl.ListFormat(
-                    (0, _.A)().languages[0].strISOCode,
+                    (0, R.A)().languages[0].strISOCode,
                   ).format(e)
                 : e.join(", ");
           }
-          return (0, o.jsxs)(N.Root, {
+          return (0, o.jsxs)(D.Root, {
             state: a,
             ...c,
             children: [
-              (0, o.jsxs)(N.Trigger, {
+              (0, o.jsxs)(D.Trigger, {
                 children: [
-                  d && (0, o.jsx)(N.Value, { children: u }),
-                  !d && (0, o.jsx)(N.Placeholder, { children: i }),
+                  d && (0, o.jsx)(D.Value, { children: u }),
+                  !d && (0, o.jsx)(D.Placeholder, { children: i }),
                 ],
               }),
-              (0, o.jsx)(N.Options, {
+              (0, o.jsx)(D.Options, {
                 children: a.rgOptions.map((e, t) =>
-                  (0, o.jsx)(N.Option, { value: e, children: s(e) }, t),
+                  (0, o.jsx)(D.Option, { value: e, children: s(e) }, t),
                 ),
               }),
             ],
           });
-        }, D),
+        }, A),
         B = (0, r.createContext)(null);
       function U(e) {
         const t = (0, r.useContext)(B);

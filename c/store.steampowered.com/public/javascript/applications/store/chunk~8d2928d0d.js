@@ -13,10 +13,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5784,11 +5780,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = new (class {
         async DeleteForumTopic(_, _, _, _, _) {
           let _ =
@@ -6172,7 +6169,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -6411,10 +6407,6 @@
                       (0, _.jsx)(_, {
                         eventModel: _,
                       }),
-                      Boolean(_._.is_support) &&
-                        (0, _.jsx)(_, {
-                          eventModel: _,
-                        }),
                       _ &&
                         (0, _.jsx)("div", {
                           className: _.DisplayAdminPanelClose,
@@ -6452,80 +6444,6 @@
           });
         }
         return (0, _.jsx)("span", {});
-      }
-      function _(_) {
-        const { eventModel: _ } = _,
-          _ = (0, _._)(),
-          [_] = (0, _._)(_._, void 0);
-        return Boolean(
-          _ &&
-            _.jsondata?.bSaleEnabled &&
-            _.jsondata?.sale_sections?.length > 0,
-        )
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("a", {
-                  className: (0, _._)(
-                    _.Button,
-                    _.AdminButton,
-                    _.ValveOnlyBackground,
-                  ),
-                  onClick: () => {
-                    const _ = _.jsondata.sale_sections.find(
-                        (_) => "tabs" == _.section_type,
-                      ),
-                      _ =
-                        _ ||
-                        (_?.tabs?.length > 0 && _.tabs[0].unique_id) ||
-                        null,
-                      _ = new Array();
-                    _.jsondata.sale_sections.forEach((_) => {
-                      (0, _._)(_) &&
-                        _.push({
-                          ..._,
-                          insertion_requirement: null,
-                          sectionID: _.unique_id,
-                          tabID: _,
-                          insertionIndex: 0,
-                          force_preview_mode: !0,
-                        });
-                    }),
-                      (0, _._)(_);
-                  },
-                  children: "(VO) Inject Capsule",
-                }),
-                (0, _.jsx)("a", {
-                  className: (0, _._)(
-                    _.Button,
-                    _.AdminButton,
-                    _.ValveOnlyBackground,
-                  ),
-                  onClick: (_) =>
-                    (0, _._)(
-                      (0, _.jsx)(_._, {
-                        strTitle: "Clear Rewards for Summer 2022",
-                        onOK: async () => {
-                          const _ = new FormData();
-                          _.append("sessionid", (0, _._)()),
-                            _.append("clan_accountid", "" + _._.CLANACCOUNTID),
-                            _.append("event_id", "" + _._._);
-                          const _ = await _().post(
-                            `${_._.STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards`,
-                            _,
-                            {
-                              withCredentials: !0,
-                            },
-                          );
-                          console.log("ajaxgresetopendoorrewards", _);
-                        },
-                      }),
-                      (0, _._)(_),
-                    ),
-                  children: "( VO ) Clear Summer 2022 Rewards",
-                }),
-              ],
-            })
-          : null;
       }
       function _(_) {
         const { eventModel: _ } = _,

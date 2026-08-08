@@ -387,7 +387,7 @@
       r.d(t, { y5: () => y, c2: () => p });
       var i = r(56545),
         s = r(59411),
-        n = r(96171),
+        n = r(6824),
         a = r(58632),
         o = r.n(a),
         l = r(90626),
@@ -1733,6 +1733,11 @@
                   },
                   market_name_inside_group: {
                     n: 38,
+                    br: _e.qM.readString,
+                    bw: _e.gp.writeString,
+                  },
+                  market_bucket_id: {
+                    n: 39,
                     br: _e.qM.readString,
                     bw: _e.gp.writeString,
                   },
@@ -20076,7 +20081,7 @@
       });
       var i = r(90626),
         s = r(17690),
-        n = r(96171);
+        n = r(6824);
       function a(e) {
         return (0, i.useMemo)(
           () =>
@@ -20434,7 +20439,7 @@
         s = r.n(i),
         n = r(90626),
         a = r(37085),
-        o = r(96171),
+        o = r(6824),
         l = r(73745),
         c = r(16021);
       const m = 1,
@@ -20463,6 +20468,7 @@
             include_assets_without_overrides: T,
             apply_user_filters: q,
             include_links: O,
+            include_extra_details: F,
           } = r;
         if (
           ((0, n.useEffect)(() => {
@@ -20483,6 +20489,7 @@
               include_assets_without_overrides: T,
               apply_user_filters: q,
               include_links: O,
+              include_extra_details: F,
             };
             let n = null;
             return (
@@ -20499,15 +20506,38 @@
                   })),
               () => n?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, _, p, y, M, f, w, z, S, h, R, j, v, C, W, T, q, O, B]),
+          }, [
+            e,
+            t,
+            i,
+            _,
+            p,
+            y,
+            M,
+            f,
+            w,
+            z,
+            S,
+            h,
+            R,
+            j,
+            v,
+            C,
+            W,
+            T,
+            q,
+            O,
+            F,
+            B,
+          ]),
           !e)
         )
           return [null, u];
         if (!1 === _) return [void 0, u];
         if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, u];
         if (!c.A.Get().BHasStoreItem(e, t, r)) return [void 0, m];
-        const F = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return F ? [F, d] : [null, u];
+        const I = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return I ? [I, d] : [null, u];
       }
       function B(e, t, r) {
         return g(e, o.c6.qI, t, r);
@@ -20537,6 +20567,7 @@
             include_assets_without_overrides: R,
             apply_user_filters: j,
             include_links: v,
+            include_extra_details: C,
           } = r;
         if (
           ((0, n.useEffect)(() => {
@@ -20558,6 +20589,7 @@
                 include_assets_without_overrides: R,
                 apply_user_filters: j,
                 include_links: v,
+                include_extra_details: C,
               },
               i = e.filter(
                 (e) =>
@@ -20575,7 +20607,7 @@
               }),
               () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, a, o, g, B, _, b, p, y, M, f, w, z, S, h, R, j, v]),
+          }, [e, t, i, a, o, g, B, _, b, p, y, M, f, w, z, S, h, R, j, v, C]),
           !e)
         )
           return u;

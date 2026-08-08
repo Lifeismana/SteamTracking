@@ -1305,8 +1305,8 @@ License: MIT
         $ = n(96001),
         H = n(16676),
         U = n(35239),
-        q = n(26161),
-        V = n(78395),
+        V = n(26161),
+        q = n(78395),
         K = n(21869),
         W = n(22797),
         Y = n(26408),
@@ -1482,7 +1482,7 @@ License: MIT
               p(j.data.email_override ?? ""),
               x(j.data.allow_registration_if_full ?? !1)));
         }, [j.isLoading, j.isSuccess, j.data]);
-        return (0, s.jsxs)(V.o0, {
+        return (0, s.jsxs)(q.o0, {
           strTitle: "Invite User",
           bOKDisabled: !c || r || j.isLoading,
           onOK: async () => {
@@ -1570,7 +1570,7 @@ License: MIT
           [c, d] = (0, i.useState)(null),
           [u, m] = (0, i.useState)(null),
           [g, p] = (0, i.useState)(null);
-        return (0, s.jsxs)(V.o0, {
+        return (0, s.jsxs)(q.o0, {
           strTitle: "Invite Users",
           bOKDisabled: !r || 0 == r.length || null != u,
           strCancelButtonText: null !== u ? "Close" : "Cancel",
@@ -1889,15 +1889,15 @@ License: MIT
             (0, s.jsx)(K.E, {
               active: n,
               children: (0, s.jsx)(u.tH, {
-                children: (0, s.jsx)(V.o0, {
+                children: (0, s.jsx)(q.o0, {
                   closeModal: a,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
                   children: Boolean(null == o)
-                    ? (0, s.jsx)(Ve, { rgEventGIDs: t, fnSelectedEvents: l })
+                    ? (0, s.jsx)(qe, { rgEventGIDs: t, fnSelectedEvents: l })
                     : (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(qe, { rgGidMeetSteamEvents: o }),
+                          (0, s.jsx)(Ve, { rgGidMeetSteamEvents: o }),
                           (0, s.jsx)(H.$n, {
                             onClick: () => l(null),
                             children: "Reset Selection",
@@ -1965,7 +1965,7 @@ License: MIT
           })(r, a);
         return o.filter((e) => !e.isLoading).length == o.length ? s : null;
       }
-      function qe(e) {
+      function Ve(e) {
         const { rgGidMeetSteamEvents: t } = e,
           n = (function () {
             const [e] = (0, i.useState)(() =>
@@ -2079,7 +2079,7 @@ License: MIT
           ],
         });
       }
-      function Ve(e) {
+      function qe(e) {
         const { rgEventGIDs: t, fnSelectedEvents: n } = e,
           [r, a] = (0, i.useState)([]),
           { bShowArchived: o, setShowArchived: l } = le(),
@@ -2143,7 +2143,7 @@ License: MIT
                 : [0, 0],
             [r],
           );
-        return (0, s.jsxs)(V.o0, {
+        return (0, s.jsxs)(q.o0, {
           bAlertDialog: !0,
           bAllowFullSize: !0,
           bDisableBackgroundDismiss: !0,
@@ -2268,7 +2268,7 @@ License: MIT
             );
           }, [o, d]),
           m = c?.filter((e) => u.has(new Ye.b2(e.steamid).GetAccountID()));
-        return (0, s.jsxs)(V.o0, {
+        return (0, s.jsxs)(q.o0, {
           bAlertDialog: !0,
           bAllowFullSize: !0,
           bDisableBackgroundDismiss: !0,
@@ -2486,12 +2486,12 @@ License: MIT
             (0, s.jsx)(K.E, {
               active: n,
               children: (0, s.jsx)(u.tH, {
-                children: (0, s.jsx)(V.o0, {
+                children: (0, s.jsx)(q.o0, {
                   closeModal: a,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
                   children: Boolean(null == o)
-                    ? (0, s.jsx)(Ve, { rgEventGIDs: t, fnSelectedEvents: l })
+                    ? (0, s.jsx)(qe, { rgEventGIDs: t, fnSelectedEvents: l })
                     : (0, s.jsxs)(s.Fragment, {
                         children: [
                           (0, s.jsx)(dt, { rgGidMeetSteamEvents: o }),
@@ -2686,7 +2686,7 @@ License: MIT
         });
       }
       function mt(e) {
-        const t = I.b.InitFromClanID((0, q.H)()),
+        const t = I.b.InitFromClanID((0, V.H)()),
           n = (function () {
             const [e] = (0, i.useState)(() =>
               (0, x.Tc)("event_gids", "application_config"),
@@ -2758,9 +2758,9 @@ License: MIT
       function pt(e) {
         const { oEvent: t } = e,
           n = t.GID,
-          r = I.b.InitFromClanID((0, q.H)()),
+          r = I.b.InitFromClanID((0, V.H)()),
           a = (0, $.a)(),
-          o = (0, G.my)(a, (0, q.H)(), n),
+          o = (0, G.my)(a, (0, V.H)(), n),
           l = o.isSuccess ? o.data : null,
           c = t.GetNameWithFallback(_.Bhc),
           d = (0, i.useMemo)(() => {
@@ -3024,7 +3024,7 @@ License: MIT
                 e.preventDefault(), e.stopPropagation(), a(!0);
                 const s = await (async function (e, t) {
                   const n = j.w.Init(S.VI),
-                    s = I.b.InitFromClanID((0, q.H)());
+                    s = I.b.InitFromClanID((0, V.H)());
                   n.Body().set_clan_event_gid(t),
                     n.Body().set_steamid(s.ConvertTo64BitString());
                   const r = await S.ZK.TestFireEmails(e, n);
@@ -3036,7 +3036,7 @@ License: MIT
             }),
             (0, s.jsx)(K.E, {
               active: r,
-              children: (0, s.jsxs)(V.o0, {
+              children: (0, s.jsxs)(q.o0, {
                 bAlertDialog: !0,
                 strTitle: "Test Emails",
                 closeModal: () => {
@@ -3635,7 +3635,7 @@ License: MIT
       let $t;
       var Ht = n(73745),
         Ut = n(3049);
-      function qt(e) {
+      function Vt(e) {
         const t = (0, $.a)(),
           n = (0, it.qh)(),
           r = (function (e) {
@@ -3709,7 +3709,7 @@ License: MIT
                     }),
                     (0, s.jsx)("tbody", {
                       children: a.map((e) =>
-                        (0, s.jsx)(Vt, { organizer: e }, e.accountid),
+                        (0, s.jsx)(qt, { organizer: e }, e.accountid),
                       ),
                     }),
                   ],
@@ -3718,7 +3718,7 @@ License: MIT
             })
           : (0, s.jsx)(W.t, { string: (0, Z.we)("#Loading"), size: "medium" });
       }
-      function Vt(e) {
+      function qt(e) {
         const { organizer: t } = e,
           n = (0, i.useMemo)(
             () => I.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
@@ -3754,7 +3754,7 @@ License: MIT
             }),
             (0, s.jsx)(K.E, {
               active: r,
-              children: (0, s.jsx)(V.o0, {
+              children: (0, s.jsx)(q.o0, {
                 bAlertDialog: !0,
                 closeModal: a,
                 strTitle: `${t}'s Events`,
@@ -3797,7 +3797,7 @@ License: MIT
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(qt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Vt, {}) }),
               onClick: t,
             },
             {
@@ -4655,31 +4655,32 @@ License: MIT
             measureElement: d,
             className: h,
             forceVirtualizeType: m,
-            initialOffset: p,
-            onOffsetChange: x,
-            ..._
+            hintVirtualizeType: p,
+            initialOffset: x,
+            onOffsetChange: _,
+            ...S
           } = e,
-          [S, y] = (0, u.useState)(m),
-          [w, b] = u.useState(),
-          [E, C] = u.useState(),
-          I = u.useRef(null),
-          D = u.useCallback(
+          [y, w] = (0, u.useState)(m ?? p),
+          [b, E] = u.useState(),
+          [C, I] = u.useState(),
+          D = u.useRef(null),
+          R = u.useCallback(
             (e) => {
               if (!e) return;
               const t = (0, f._f)(e, "y");
               (0, u.startTransition)(() => {
-                "window" != m && b(t || void 0),
-                  C(e.offsetTop),
-                  m || y(t ? "element" : "window");
+                "window" != m && E(t || void 0),
+                  I(e.offsetTop),
+                  m || w(t ? "element" : "window");
               });
             },
             [m],
           ),
-          R =
-            ((A = (e) => {
-              I.current &&
+          A =
+            ((T = (e) => {
+              D.current &&
                 (0, u.startTransition)(() => {
-                  I.current && C(I.current?.offsetTop);
+                  D.current && I(D.current?.offsetTop);
                 });
             }),
             (0, r.QS)(
@@ -4687,7 +4688,7 @@ License: MIT
                 if (!e) return;
                 const t = new e.ownerDocument.defaultView.ResizeObserver(
                   (e) => {
-                    A(e[0]);
+                    T(e[0]);
                   },
                 );
                 let n = [],
@@ -4698,11 +4699,11 @@ License: MIT
                   n.forEach((e) => t.unobserve(e));
                 };
               },
-              [A],
+              [T],
             ));
-        var A;
-        const T = (0, r.Ue)(D, I, R, t),
-          k = {
+        var T;
+        const k = (0, r.Ue)(R, D, A, t),
+          M = {
             nRows: n,
             nItemHeight: i,
             nRowGap: a,
@@ -4711,18 +4712,19 @@ License: MIT
             bDynamic: c,
             measureElement: d,
             forceVirtualizeType: m,
-            initialOffset: p,
-            onOffsetChange: x,
+            hintVirtualizeType: p,
+            initialOffset: x,
+            onOffsetChange: _,
           };
         return (0, s.jsx)(g.Z, {
           className: h,
-          ref: T,
-          ..._,
+          ref: k,
+          ...S,
           children: (0, s.jsxs)(u.Suspense, {
             children: [
-              "element" === S &&
-                (0, s.jsx)(j, { ...k, nScrollMargin: E || 0, elScrollable: w }),
-              "window" === S && (0, s.jsx)(v, { ...k, nScrollMargin: E }),
+              "element" === y &&
+                (0, s.jsx)(j, { ...M, nScrollMargin: C || 0, elScrollable: b }),
+              "window" === y && (0, s.jsx)(v, { ...M, nScrollMargin: C }),
             ],
           }),
         });
@@ -4975,16 +4977,16 @@ License: MIT
             columnResizeMode: "onChange",
           }),
           { rows: H, flatRows: U } = $.getRowModel(),
-          q = H.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
-          V = $.getState().grouping;
+          V = H.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
+          q = $.getState().grouping;
         (0, u.useEffect)(() => {
-          R?.(V);
-        }, [R, V]),
+          R?.(q);
+        }, [R, q]),
           (0, u.useEffect)(() => {
-            A?.(q);
-          }, [A, q.length]);
+            A?.(V);
+          }, [A, V.length]);
         const K = (0, o.Te)({
-            count: q.length,
+            count: V.length,
             scrollMargin: m,
             getScrollElement: u.useCallback(
               () => ("element" === N ? ee.current : window),
@@ -4998,7 +5000,7 @@ License: MIT
             observeElementOffset: w,
             observeElementRect: (e, t) => ("window" === N ? b(e, t) : E(e, t)),
             getItemKey(e) {
-              const t = q[e];
+              const t = V[e];
               return `${t.parentId ?? ""}${_(e, t.original)}`;
             },
           }),
@@ -5023,8 +5025,8 @@ License: MIT
           Z = K.getTotalSize(),
           X = (0, o.Te)({
             estimateSize: (e) =>
-              q[0]?.getVisibleCells()[e].column.getSize() ?? 0,
-            count: q[0]?.getVisibleCells().length ?? 0,
+              V[0]?.getVisibleCells()[e].column.getSize() ?? 0,
+            count: V[0]?.getVisibleCells().length ?? 0,
             overscan: 6,
             horizontal: !0,
             getScrollElement: u.useCallback(
@@ -5034,7 +5036,7 @@ License: MIT
             scrollToFn: (e, t, n) =>
               "window" === N ? (0, l.e8)(e, t, n) : (0, l.Ox)(e, t, n),
             rangeExtractor(e) {
-              const t = q[0]?.getVisibleCells() ?? [],
+              const t = V[0]?.getVisibleCells() ?? [],
                 n = new Set((0, l.vp)(e));
               return (
                 t.forEach((e, t) => {
@@ -5053,7 +5055,7 @@ License: MIT
             t,
             () => ({
               getData: () => U.map((e) => e.original),
-              getVisibleRows: () => q,
+              getVisibleRows: () => V,
               getState: $.getState,
               getColumns: $.getAllColumns,
               getColumnDefs: () => L,
@@ -5069,7 +5071,7 @@ License: MIT
             }),
             [
               U,
-              q,
+              V,
               $.setColumnFilters,
               $.resetColumnFilters,
               $.getState,
@@ -5082,7 +5084,7 @@ License: MIT
         const ee = (0, u.useRef)(null),
           te = x ? (p ?? 0) : 0;
         let ne = 0;
-        const se = q[0]?.getVisibleCells(),
+        const se = V[0]?.getVisibleCells(),
           re = X.getVirtualItems(),
           ie = re[re.length - 1]?.end;
         for (const e of re) {
@@ -5124,7 +5126,7 @@ License: MIT
                   (0, s.jsx)(
                     k,
                     {
-                      row: q[e.index],
+                      row: V[e.index],
                       size: e.size,
                       rowVirtualizer: X,
                       index: e.index,

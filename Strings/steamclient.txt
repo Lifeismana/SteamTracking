@@ -150,6 +150,7 @@
  (repeat period: %lldms)
  (second pass, refresh)
  +%d siblings
+ +0000
  - %-*s : %llu/%llu bytes (%u%%)\n
  - %-*s : %llu/%llu bytes\n
  - %-*s : %s\n
@@ -284,6 +285,7 @@
  Tried to set runtime antidrift value, but we are using hardware calibration, so we're not analysing the raw gyro drift. Skip. ( %f,  %f,  %f ).\n
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
+ Valid parameters\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
  [clone
@@ -6002,7 +6004,6 @@ $steammessages_parental_objects.proto"
 -.CUserAccount_RedeemFriendInviteToken_Request
 -.CUserAccount_RevokeFriendInviteToken_Request
 -0123456789
- +0000
 -1"x\n(CMsgClientUCMUpdatePublishedFileResponse
 -5?KYks
 -;-C-I-M-a-e-q-
@@ -8105,6 +8106,9 @@ $steammessages_parental_objects.proto"
 0 bytes,
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0)AA7A
+0000000000000000000000000000000000000000
+00000000
+0000000000000000
 0.0333
 0.050
 0.125
@@ -8154,9 +8158,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-00000000
-0000000000000000
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -11718,11 +11719,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -25877,6 +25878,7 @@ Fossilize ERROR: Failed to mmap shared block.\n
 Fossilize ERROR: Failed to set FD flags.\n
 Fossilize ERROR: Failed to set IO priority for external replayer!\n
 Fossilize ERROR: Failed to set PGID in child.\n
+Fossilize ERROR: Failed to set PR_SET_PDEATHSIG, aborting child startup.\n
 Fossilize ERROR: Failed to set nice value for external replayer!\n
 Fossilize ERROR: Failed to set scheduling policy for external replayer!\n
 Fossilize ERROR: Failed to start external process %s with execv.\n
@@ -39357,7 +39359,6 @@ Valencian
 Valid
 Valid palette required for paletted images
 Valid parameters:\n
-Valid parameters\n
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -44258,6 +44259,7 @@ aria_ccm_init_key
 aria_gcm_ctrl
 aria_gcm_init_key
 aria_init_key
+arm64
 armenian
 array
 artistname
@@ -48952,6 +48954,7 @@ getnameinfo
 getpeername
 getpgrp
 getpid
+getppid
 getpwuid
 getrandom
 getrlimit
@@ -53586,14 +53589,14 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:487
 low-pri yield - /data/src/clientdll/clientjob.cpp:796
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6966
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2071
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2327
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2594
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3265
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3322
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3335
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3387
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3988
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2074
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2330
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2597
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3304
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3361
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3374
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3426
+low-pri yield - /data/src/clientdll/compatmanager.cpp:4027
 low-pri yield - /data/src/clientdll/csinterface.cpp:223
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3066
@@ -59114,6 +59117,7 @@ pq->q[item->index] == item
 pqualid
 pqueue_new
 pragma
+prctl
 pread64
 precise_frame_rate
 prediction resistance not supported
@@ -59291,6 +59295,7 @@ protocolInformation
 protocol_tested
 protocol_version
 proton
+proton-experimental
 proton-stable
 proton_compat_config
 proton_experimental
@@ -61496,7 +61501,7 @@ stderr
 stdin
 stdout
 steam
-steam Jul 23 2026 05:03:45
+steam Aug  7 2026 04:04:36
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

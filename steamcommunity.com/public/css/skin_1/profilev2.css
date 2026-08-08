@@ -1109,6 +1109,7 @@ background-color: transparent;
 	margin-bottom: 0px;
 	font-size: 13px;
 	overflow: hidden;
+	container-type: inline-size;
 }
 
 .profile_customization_block.customize_replay {

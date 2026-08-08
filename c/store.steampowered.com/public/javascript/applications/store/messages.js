@@ -701,6 +701,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_SteamInterface;
@@ -787,15 +788,10 @@
       class _ {
         m_message;
         m_templateVars = void 0;
-        m_item;
+        m_associatedItemKey;
         constructor(_) {
           (0, _._)(this),
             (this.m_message = _),
-            _.associated_item(!1) &&
-              (this.m_item = _._.Get().ReadItem(
-                _.associated_item(),
-                _.sm_DefaultDataRequest,
-              )),
             (this.m_templateVars = (function (_) {
               if (!_) return null;
               try {
@@ -823,6 +819,13 @@
               }
               return null;
             })(_.template_vars_json()));
+          const _ = _.associated_item(!1);
+          this.m_associatedItemKey = _
+            ? (0, _._)({
+                item_type: _.item_type(),
+                _: _._(),
+              })
+            : void 0;
         }
         get id() {
           return this.m_message.gid();
@@ -840,6 +843,8 @@
               return (0, _._)("#spotlight_daily_deal");
             case _._._:
               return (0, _._)("#msg_available_everywhere");
+            case _._._:
+              return (0, _._)("#msg_new_game");
             case _._._:
               return (0, _._)("#msg_prepurchase_now");
             case _._._:
@@ -997,8 +1002,14 @@
               `© ${new Date().getFullYear()} Valve Corporation${_ ? " and " + _ : ""}. <br/>All trademarks are property of their respective owners in the US and other countries.`);
           var _;
         }
-        get associated_item() {
-          return this.m_item;
+        get associated_item_key() {
+          return this.m_associatedItemKey;
+        }
+        get associated_item_appid() {
+          return this.m_message.associated_item(!1)?.appid();
+        }
+        GetAssociatedItemProto() {
+          return this.m_message.associated_item(!1);
         }
       }
       (0, _._)([_._], _.prototype, "m_templateVars", void 0);
@@ -1032,20 +1043,29 @@
             queryFn: () => _.GetMessageList(_, _),
             ..._,
           }),
-          _ = _.useMemo(() => _?.map((_) => new _(_.message())), [_]);
-        return {
-          rgMessages: _ ? null : _,
-          isError: _,
-        };
+          _ = _.useMemo(() => _?.map((_) => new _(_.message())), [_]),
+          _ = (0, _._)(),
+          _ = _.useRef(new Set());
+        return (
+          _ &&
+            _?.forEach((_) => {
+              if (_.current.has(_._)) return;
+              const _ = _.GetAssociatedItemProto();
+              _ && (_(_, _.sm_DefaultDataRequest), _.current.add(_._));
+            }),
+          {
+            rgMessages: _ ? null : _,
+            isError: _,
+          }
+        );
       }
       function _(_, _, _) {
         const { data: _, isError: _ } = (0, _._)({
-          queryKey: ["MarketingMessages", _ ? "SinglePreivew" : "Single", _],
-          queryFn: () => _.GetSingleMessage(_, _),
-          enabled: !!_,
-        });
-        return {
-          message: _.useMemo(() => {
+            queryKey: ["MarketingMessages", _ ? "SinglePreivew" : "Single", _],
+            queryFn: () => _.GetSingleMessage(_, _),
+            enabled: !!_,
+          }),
+          _ = _.useMemo(() => {
             if (_) {
               const _ = new _(_);
               if (_) {
@@ -1059,6 +1079,14 @@
               return _;
             }
           }, [_, _]),
+          _ = (0, _._)(),
+          _ = _.useRef(new Set());
+        if (_ && _ && !_.current.has(_._)) {
+          const _ = _.GetAssociatedItemProto();
+          _ && (_(_, _.sm_DefaultDataRequest), _.current.add(_._));
+        }
+        return {
+          message: _,
           isError: _,
         };
       }
@@ -1069,206 +1097,6 @@
           _.Body().set_template_type(_),
           _.Body().set_click_location(_),
           _._.MarkMessageClicked(_, _);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1,
-        _ = 2,
-        _ = 3;
-      function _(_, _, _, _) {
-        const _ = (0, _.useRef)(void 0),
-          _ = (0, _.useRef)(void 0),
-          _ = (0, _._)();
-        _.current = _;
-        const [_, _] = (0, _.useState)(void 0),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            const _ = {
-              include_assets: _,
-              include_release: _,
-              include_platforms: _,
-              include_all_purchase_options: _,
-              include_screenshots: _,
-              include_trailers: _,
-              include_ratings: _,
-              include_tag_count: _,
-              include_reviews: _,
-              include_basic_info: _,
-              include_supported_languages: _,
-              include_full_description: _,
-              include_included_items: _,
-              include_assets_without_overrides: _,
-              apply_user_filters: _,
-              include_links: _,
-            };
-            let _ = null;
-            return (
-              !_ ||
-                _ < 0 ||
-                _._.Get().BHasStoreItem(_, _, _) ||
-                (void 0 !== _ && _ && _ == _.current) ||
-                (_ !== _.current && (_(void 0), (_.current = _)),
-                (_ = _().CancelToken.source()),
-                _._.Get()
-                  .QueueStoreItemRequest(_, _, _)
-                  .then((_) => {
-                    _?.token.reason || _.current !== _ || _(_ == _._), _();
-                  })),
-              () => _?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return [null, _];
-        if (!1 === _) return [void 0, _];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
-        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, _] : [null, _];
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        const [_, _] = _(_, _, _);
-        let _;
-        _?.GetStoreItemType() != _._._ ||
-          _.GetAssets()?.GetHeaderURL() ||
-          1 != _?.GetIncludedAppIDs().length ||
-          (_ = _.GetIncludedAppIDs()[0]);
-        const [_, _] = _(_, _);
-        return _ && _?.BIsVisible() ? [_, _] : [_, _];
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)(),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            if (!_ || 0 == _.length) return;
-            const _ = {
-                include_assets: _,
-                include_release: _,
-                include_platforms: _,
-                include_all_purchase_options: _,
-                include_screenshots: _,
-                include_trailers: _,
-                include_ratings: _,
-                include_tag_count: _,
-                include_reviews: _,
-                include_basic_info: _,
-                include_supported_languages: _,
-                include_full_description: _,
-                include_included_items: _,
-                include_assets_without_overrides: _,
-                apply_user_filters: _,
-                include_links: _,
-              },
-              _ = _.filter(
-                (_) =>
-                  !(
-                    _._.Get().BHasStoreItem(_, _, _) ||
-                    _._.Get().BIsStoreItemMissing(_, _)
-                  ),
-              );
-            if (0 == _.length) return;
-            const _ = _().CancelToken.source(),
-              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
-            return (
-              Promise.all(_).then(() => {
-                _.token.reason || _();
-              }),
-              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return _;
-        if (
-          !_.every(
-            (_) =>
-              _._.Get().BHasStoreItem(_, _, _) ||
-              _._.Get().BIsStoreItemMissing(_, _),
-          )
-        )
-          return _;
-        return _.every((_) =>
-          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
-        )
-          ? _
-          : _;
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _() {
-        _.useEffect(
-          () => (
-            _._.Get().SetReturnUnavailableItems(!0),
-            () => _._.Get().SetReturnUnavailableItems(!1)
-          ),
-          [],
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2744,6 +2572,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _.jsx)("div", {
@@ -2812,8 +2642,9 @@
         );
       }
       function _(_) {
-        const { storeItem: _ } = _,
-          _ = _.GetAssets().GetMainCapsuleURL();
+        const { _: _ } = _,
+          { data: _ } = (0, _._)(_),
+          _ = _ ? (0, _._)(_, "main_capsule") : void 0;
         return _
           ? (0, _.jsx)("div", {
               className: (0, _._)(_.MessageImage, _.GameImage, _.IsBlur),
@@ -2824,21 +2655,14 @@
           : null;
       }
       function _(_) {
-        const { storeItem: _, bPreview: _, bPreferAssetWithoutOverride: _ } = _,
-          _ =
-            ((0, _.useMemo)(
-              () => ({
-                _: _.GetID(),
-                type: "game",
-              }),
-              [_],
-            ),
-            (0, _._)()),
-          _ = (0, _._)(_),
+        const { _: _, bPreview: _, bPreferAssetWithoutOverride: _ } = _,
+          { data: _ } = (0, _._)(_),
+          _ = _?.appid,
+          _ = (0, _._)(),
           { bIsOwned: _ } = (0, _._)(_),
-          _ = (0, _._)(_.GetAppID()),
-          _ = (0, _._)(_.GetAppID()),
-          _ = (0, _._)(_.GetAppID()),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_ ?? 0),
           _ = (0, _.useMemo)(() => {
             if (_ && (!_?.playtime_forever || !_?.rtime_last_played)) {
               return {
@@ -2848,11 +2672,12 @@
             }
             return _;
           }, [_, _]);
-        let _ = "steam://openurl/" + _.GetStorePageURL();
+        let _ = "steam://openurl/" + ((0, _._)(_) ?? "");
         _ &&
+          _ &&
           (_ = _
-            ? `steam://open/games/details/${_.GetID()}`
-            : `steam://nav/games/details/${_.GetID()}`);
+            ? `steam://open/games/details/${_}`
+            : `steam://nav/games/details/${_}`);
         const _ = (0, _._)(_, _._._, _);
         return (0, _.jsxs)("div", {
           className: _.BaseCtn,
@@ -2874,7 +2699,7 @@
                   children: (0, _.jsx)(_._, {
                     className: _.GameName,
                     onClick: _,
-                    children: _.GetName(),
+                    children: _?.name,
                   }),
                 }),
                 (0, _.jsxs)("div", {
@@ -2983,11 +2808,9 @@
         });
       }
       function _() {
-        const _ = _().associated_item,
-          _ = (0, _._)(_);
-        return _ &&
-          _.GetBestPurchaseOption() &&
-          _.GetBestPurchaseOption().formatted_final_price
+        const _ = _().associated_item_key,
+          { data: _ } = (0, _._)(_);
+        return _ && _.formatted_final_price
           ? (0, _.jsx)("div", {
               className: _.MessagePriceCtn,
               children: (0, _.jsx)(_._, {
@@ -3027,7 +2850,8 @@
               eventModel: _,
             };
           })(_),
-          _ = _.associated_item.GetStorePageURL(),
+          { data: _ } = (0, _._)(_.associated_item_key),
+          _ = (0, _._)(_) ?? "",
           _ = _(_, _, _._._),
           _ = _(_, _, _._._);
         return (0, _.jsx)(_._, {
@@ -3035,12 +2859,12 @@
           children: (0, _.jsxs)(_, {
             children: [
               (0, _.jsx)(_, {
-                storeItem: _.associated_item,
+                _: _.associated_item_key,
               }),
               (0, _.jsxs)(_, {
                 children: [
                   (0, _.jsx)(_, {
-                    storeItem: _.associated_item,
+                    _: _.associated_item_key,
                     bPreview: _,
                     bPreferAssetWithoutOverride: !1,
                   }),
@@ -3118,6 +2942,7 @@
         return (0, _._)(_, _, !0);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3152,26 +2977,19 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {
-        include_assets: !0,
-      };
       function _(_) {
         const { bPreview: _ } = _,
           _ = _(),
-          [_, _] = (0, _.useMemo)(
-            () => [
-              __webpack_require__.GetDLCAppIDs(),
+          _ = (0, _.useMemo)(
+            () =>
               __webpack_require__.GetDLCAppIDs().map((_) => ({
                 _: _,
                 type: "game",
               })),
-            ],
             [_],
-          );
-        (0, _._)(_, _);
-        const _ = _(_?.associated_item?.GetAppID());
+          ),
+          _ = _(_.associated_item_appid);
         return (
           (0, _.useEffect)(() => {
             if (_) {
@@ -3180,7 +2998,7 @@
                 : (0, _._)("#MarketingMessages_See_All_Items");
               __webpack_require__.OverrideCustomText(_),
                 __webpack_require__.OverrideURL(
-                  `${_._.STORE_BASE_URL}dlc/${_.associated_item.GetAppID()}`,
+                  `${_._.STORE_BASE_URL}dlc/${_.associated_item_appid}`,
                 );
             }
           }, [_, _]),
@@ -3189,12 +3007,12 @@
             children: (0, _.jsxs)(_, {
               children: [
                 (0, _.jsx)(_, {
-                  storeItem: _.associated_item,
+                  _: _.associated_item_key,
                 }),
                 (0, _.jsxs)(_, {
                   children: [
                     (0, _.jsx)(_, {
-                      storeItem: _.associated_item,
+                      _: _.associated_item_key,
                       bPreview: _,
                       bPreferAssetWithoutOverride: !1,
                     }),
@@ -3338,13 +3156,12 @@
         });
       }
       function _(_, _) {
-        const [_] = (0, _._)(_, (0, _._)(_), {
-          include_platforms: !0,
-        });
-        return (0, _._)(
-          _ ? __webpack_require__.GetStorePageURL() : _._.STORE_BASE_URL,
-          _._._,
-        );
+        const _ = (0, _._)({
+            item_type: (0, _._)(_),
+            _: _,
+          }),
+          { data: _ } = (0, _._)(_);
+        return (0, _._)((0, _._)(_) ?? _._.STORE_BASE_URL, _._._);
       }
       function _(_) {
         const { capsule: _, imageType: _ } = _;
@@ -3525,14 +3342,13 @@
         const { bPreview: _, bLowBandwidthMode: _ } = _,
           _ = _(),
           _ = (0, _._)(_.GetTemplateVars().linkurl, _._._),
-          _ = _.associated_item,
-          _ = (0, _._)(_);
+          _ = _.associated_item_key;
         return (0, _.jsx)(_._, {
           submethod: "mm-auto-render",
           children: (0, _.jsxs)(_, {
             children: [
               (0, _.jsx)(_, {
-                storeItem: _,
+                _: _,
               }),
               (0, _.jsx)(_, {
                 children: (0, _.jsxs)("div", {
@@ -3547,12 +3363,12 @@
                         }),
                         (0, _.jsx)(_, {
                           message: _,
-                          storeItem: _,
+                          _: _,
                         }),
                       ],
                     }),
                     (0, _.jsx)(_._, {
-                      appid: _.GetAppID(),
+                      appid: _.associated_item_appid,
                       children: (0, _.jsx)(_._, {
                         _: _,
                         fnOnClickButton: _,
@@ -3573,25 +3389,27 @@
         });
       }
       function _(_) {
-        const { message: _, storeItem: _ } = _,
+        const { message: _, _: _ } = _,
+          { data: _ } = (0, _._)(_),
+          _ = _?.free_weekend,
           [_] = (0, _._)("timezone"),
           [_] = (0, _._)("locale");
         if (_.GetType() == _._._) {
-          if (__webpack_require__?.GetFreeWeekendPlayTextOverride())
+          if (_?.text)
             return (0, _.jsx)("div", {
               className: _.TypeSubTitle,
-              children: __webpack_require__?.GetFreeWeekendPlayTextOverride(),
+              children: _.text,
             });
-          if (__webpack_require__?.GetFreeWeekendEnd()) {
+          if (_?.end_time) {
             _ && _._.SetPreferredLocales([_]);
             const _ = _ || Intl.DateTimeFormat().resolvedOptions().timeZone,
-              _ = __webpack_require__.GetFreeWeekendEnd(),
+              _ = _.end_time,
               _ = _.unix(_)._(_),
-              _ = _.format("z"),
+              _ = __webpack_require__.format("z"),
               _ = _.match(/^-?\d/)
                 ? `UTC${_.unix(_)._(_).format("Z").replace(":00", "")}`
                 : _,
-              _ = (0, _._)(_.unix(), !1, _, _);
+              _ = (0, _._)(__webpack_require__.unix(), !1, _, _);
             return (0, _.jsx)("div", {
               className: _.TypeSubTitle,
               children: (0, _._)("#msg_free_play_until", _),

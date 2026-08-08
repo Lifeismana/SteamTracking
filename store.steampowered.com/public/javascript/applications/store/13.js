@@ -560,7 +560,7 @@
         s = a.n(i),
         r = a(90626),
         n = a(37085),
-        o = a(48210),
+        o = a(76119),
         l = a(84933),
         m = a(16021);
       const u = 1,
@@ -589,6 +589,7 @@
             include_assets_without_overrides: H,
             apply_user_filters: w,
             include_links: D,
+            include_extra_details: E,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -609,6 +610,7 @@
               include_assets_without_overrides: H,
               apply_user_filters: w,
               include_links: D,
+              include_extra_details: E,
             };
             let r = null;
             return (
@@ -625,15 +627,38 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, p, g, S, f, v, B, I, C, P, y, G, b, Q, R, H, w, D, d]),
+          }, [
+            e,
+            t,
+            i,
+            p,
+            g,
+            S,
+            f,
+            v,
+            B,
+            I,
+            C,
+            P,
+            y,
+            G,
+            b,
+            Q,
+            R,
+            H,
+            w,
+            D,
+            E,
+            d,
+          ]),
           !e)
         )
           return [null, c];
         if (!1 === p) return [void 0, c];
         if (m.A.Get().BIsStoreItemMissing(e, t)) return [void 0, c];
         if (!m.A.Get().BHasStoreItem(e, t, a)) return [void 0, u];
-        const E = m.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return E ? [E, _] : [null, c];
+        const U = m.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return U ? [U, _] : [null, c];
       }
       function d(e, t, a) {
         return A(e, o.c6.qI, t, a);
@@ -673,6 +698,7 @@
             include_assets_without_overrides: y,
             apply_user_filters: G,
             include_links: b,
+            include_extra_details: Q,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -694,6 +720,7 @@
                 include_assets_without_overrides: y,
                 apply_user_filters: G,
                 include_links: b,
+                include_extra_details: Q,
               },
               i = e.filter(
                 (e) =>
@@ -711,7 +738,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, n, o, A, d, p, h, g, S, f, v, B, I, C, P, y, G, b]),
+          }, [e, t, i, n, o, A, d, p, h, g, S, f, v, B, I, C, P, y, G, b, Q]),
           !e)
         )
           return c;

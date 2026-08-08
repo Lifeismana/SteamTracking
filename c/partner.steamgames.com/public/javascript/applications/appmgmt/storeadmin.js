@@ -480,6 +480,29 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ModalConfirmDialog: "_1MwR7dU-J2CeRWYt9WfUJw",
+        Header: "Y9lJcGdHP6m4TRcgHnzj2",
+        Buttons: "_1Wq4E7gdTa-fjWrhWFQG7b",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PreventScroll: "ycpazsHLq6lCBFmWPCLCZ",
+        ModalDialog: "_1mPKxUDAZ01x-i7612JIsL",
+        ModalDialogContent: "_79d7mzfWutbJb1DCbh1Du",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
+        SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
+        XButton: "RC4JznqJb34yCm04FKk0I",
+        SimpleModalContentCtn: "_2yRV5HfgoGdJZqs9Fl049T",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
         ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
       };
@@ -676,124 +699,6 @@
         Tilt: "_1NEHd7t-JVZYdk68QMEph-",
         ToolTipControl: "_3vt5rw82YhkhWtu5ld9QeP",
         ToolTipContainer: "_3PRdiJdKKfTnwLnTfbCkEz",
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = [
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-          _._._,
-        ],
-        _ = [
-          "#msg_action_details",
-          "#msg_preload_now",
-          "#msg_preload_now_for_free",
-          "#msg_prepurchase_now",
-          "#msg_play_now",
-          "#msg_play_it_now",
-          "#msg_weekend_play_free",
-          "#msg_action_buy",
-          "#msg_action_info",
-          "#Library_Update_TryItNow2",
-        ];
-      function _(_) {
-        switch (_) {
-          case _._._:
-            return "Now Available";
-          case _._._:
-            return "Weekend Deal";
-          case _._._:
-            return "Pre-Purchase";
-          case _._._:
-            return "Play Now";
-          case _._._:
-            return "General";
-          case _._._:
-            return "on Demo Quit";
-          case _._._:
-            return "EJ's Korner";
-          case _._._:
-            return "Pre-Load Now";
-          case _._._:
-            return "Gifting Message";
-          case _._._:
-            return "Major Update";
-          case _._._:
-            return "Midweek Deal";
-          case _._._:
-            return "Daily Deal";
-          case _._._:
-            return "New DLC";
-          case _._._:
-            return "Free Weekend";
-          case _._._:
-            return "Sale Page";
-          case _._._:
-            return "Play Test";
-          case _._._:
-          default:
-            return "--------------------";
-        }
-      }
-      _._._,
-        _._._,
-        _._._,
-        _._._,
-        _._._,
-        _._._,
-        _._._,
-        _._._,
-        _._._,
-        _._._,
-        _._._;
-      var _;
-      function _(_, _) {
-        let _ = !0;
-        return (
-          _ == _._._
-            ? (_ = _?.startsWith("https://store.steamchina.com/"))
-            : _ == _._._ &&
-              (_ = _?.startsWith("https://store.steampowered.com/")),
-          _
-        );
-      }
-      !(function (_) {
-        (_[(_.k_EMarketingMessageFlagsNone = 0)] =
-          "k_EMarketingMessageFlagsNone"),
-          (_[(_.k_EMarketingMessageFlagsHighPriority = 1)] =
-            "k_EMarketingMessageFlagsHighPriority"),
-          (_[(_.k_EMarketingMessageFlagsPlatformWindows = 2)] =
-            "k_EMarketingMessageFlagsPlatformWindows"),
-          (_[(_.k_EMarketingMessageFlagsPlatformMac = 4)] =
-            "k_EMarketingMessageFlagsPlatformMac"),
-          (_[(_.k_EMarketingMessageFlagsPlatformLinux = 8)] =
-            "k_EMarketingMessageFlagsPlatformLinux"),
-          (_[(_.k_EMarketingMessageFlagsPlatformRestrictions = 14)] =
-            "k_EMarketingMessageFlagsPlatformRestrictions");
-      })(_ || (_ = {}));
-      const _ = {
-        include_assets: !0,
-        include_basic_info: !0,
-        include_release: !0,
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1154,9 +1059,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1187,9 +1092,14 @@
             _.GetUpdateEventClanAccountID(),
             _.GetUpdateEventGID(),
           ]),
-          [_] = (0, _._)(_?._, (0, _._)(_?.item_type), _._),
+          { data: _ } = (0, _._)(
+            (0, _._)({
+              item_type: (0, _._)(_.item_type),
+              _: _._,
+            }),
+          ),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
-          _ = _?.GetAppType() != _._._ ? _?.GetParentAppID() : void 0;
+          _ = _?.type != _._._ ? _?.related_items?.parent_appid : void 0;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
@@ -4812,7 +4722,30 @@
         );
       });
       var _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        const { strOKLabel: _, strCancelLabel: _, onOK: _, onClose: _ } = _;
+        return (0, _.jsxs)(_._, {
+          className: _().Buttons,
+          children: [
+            !!_ &&
+              (0, _.jsx)(_._, {
+                onClick: _ ?? _,
+                children: _,
+              }),
+            !!_ &&
+              (0, _.jsx)(_._, {
+                onClick: _,
+                children: _,
+              }),
+          ],
+        });
+      }
       const _ = _.memo(function (_) {
         const {
             schema: _,
@@ -4873,30 +4806,36 @@
             : (0, _._)(
                 _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
               );
-        return (0, _.jsx)(_, {
-          onOK: _,
-          closeModal: _,
+        return (0, _.jsxs)(_._, {
+          onClose: _,
           strTitle: _,
-          strOKText: _,
-          bOKDisabled: !_ || 0 == _.length,
-          children: (0, _.jsx)(_._, {
-            color: _,
-            strTitle: _,
-            disableAlpha: !0,
-            onChange: (_) =>
-              _(
-                (function (_) {
-                  const _ = _.match(
-                    /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
-                  );
-                  if (_) {
-                    let [, _, _, _, _] = _;
-                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(_, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
-                  }
-                  return "#7e3232";
-                })(_),
-              ),
-          }),
+          children: [
+            (0, _.jsx)(_._, {
+              color: _,
+              disableAlpha: !0,
+              onChange: (_) =>
+                _(
+                  (function (_) {
+                    const _ = _.match(
+                      /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
+                    );
+                    if (_) {
+                      let [, _, _, _, _] = _;
+                      return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(_, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
+                    }
+                    return "#7e3232";
+                  })(_),
+                ),
+            }),
+            (0, _.jsx)(_, {
+              strOKLabel: _,
+              strCancelLabel: (0, _._)("#Button_Cancel"),
+              onOK: () => {
+                _ && _.length > 0 && _();
+              },
+              onClose: _,
+            }),
+          ],
         });
       });
       function _(_) {
@@ -18454,6 +18393,144 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.assign(
+        function (_) {
+          const { children: _, className: _, ..._ } = _;
+          return (0, _.jsx)(_.Root, {
+            ..._,
+            children: (0, _.jsx)(_.Content, {
+              className: _,
+              children: _,
+            }),
+          });
+        },
+        {
+          Root: function (_) {
+            const {
+                onClose: _,
+                className: _,
+                navID: _,
+                children: _,
+                allowScrollBehind: _,
+                ..._
+              } = _,
+              [_, _] = _.useState(!1),
+              _ = _.useCallback((_) => {
+                _ &&
+                  (_.showModal(),
+                  _.ownerDocument.defaultView &&
+                    _(
+                      _.ownerDocument.body.scrollHeight >
+                        _.ownerDocument.defaultView.innerHeight,
+                    ));
+              }, []),
+              _ = _.useCallback(
+                (_) => {
+                  _.target == _.currentTarget && _("backdropclick");
+                },
+                [_],
+              );
+            return (0, _.jsx)(_, {
+              navID: _ ?? "ModalDialog",
+              onClose: _,
+              children: (0, _.jsx)("dialog", {
+                ref: _,
+                className: _()(_.ModalDialog, !_ && _ && _.PreventScroll, _),
+                onClose: () => _("onclose"),
+                onClick: _,
+                ..._,
+                children: (0, _.jsx)(_._, {
+                  children: _,
+                }),
+              }),
+            });
+          },
+          Content: function (_) {
+            const { className: _, children: _ } = _;
+            return (0, _.jsx)("div", {
+              className: _()(_.ModalDialogContent, _),
+              onClick: (_) => _.stopPropagation(),
+              children: _,
+            });
+          },
+        },
+      );
+      function _(_) {
+        const { navID: _, onClose: _, children: _ } = _,
+          _ = _.useCallback(() => __webpack_require__("cancelbutton"), [_]),
+          _ = _.useRef(void 0);
+        (0, _._)(_, !0, !0);
+        return (0, _._)()
+          ? (0, _.jsx)(_._, {
+              navID: _ ?? "ModalDialog",
+              onCancelButton: _,
+              modal: !0,
+              navTreeRef: _,
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          onClose: _,
+          className: _,
+          navID: _,
+          children: _,
+          strTitle: _,
+          ..._
+        } = _;
+        return (0, _.jsx)(_, {
+          onClose: _,
+          navID: _ ?? "SimpleModalDialog",
+          ..._,
+          children: (0, _.jsxs)("div", {
+            className: _()(_, _().SimpleModalDialog),
+            children: [
+              " ",
+              (0, _.jsxs)(_._, {
+                className: _().SimpleModalDialogHeader,
+                children: [
+                  _ &&
+                    (0, _.jsx)("h2", {
+                      className: _().SimpleModalDialogTitle,
+                      children: _,
+                    }),
+                  (0, _.jsx)("button", {
+                    onClick: (_) => (_("xclick"), _.preventDefault(), !1),
+                    className: _().XButton,
+                    children: (0, _.jsx)(_.tmm, {}),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _().SimpleModalContentCtn,
+                children: _,
+              }),
+            ],
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -19029,6 +19106,49 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function _(_, _) {
+        let _ = "0000000000000000000000000000000000000000";
+        "string" == typeof _
+          ? (_ = _)
+          : _ &&
+            (_ =
+              (function (_) {
+                if (!_) return "";
+                return (
+                  "function" == typeof _[Symbol.iterator]
+                    ? Array.from(_)
+                    : Object.values(_).filter((_) => "number" == typeof _)
+                )
+                  .map((_) => _.toString(16).padStart(2, "0"))
+                  .join("");
+              })(_) || _);
+        let _ = ".jpg";
+        "0000000000000000000000000000000000000000" === _ && (_ = _),
+          44 == _.length &&
+            ((_ = __webpack_require__.slice(-4)),
+            (_ = __webpack_require__.slice(0, 40)));
+        let _ = _._.AVATAR_BASE_URL;
+        switch (
+          (_ ||
+            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (_ += __webpack_require__.slice(0, 2) + "/")),
+          (_ += _),
+          _)
+        ) {
+          case "X-Small":
+          case "Small":
+            break;
+          case "Medium":
+          case "MediumLarge":
+            _ += "_medium";
+            break;
+          case "Large":
+          case "X-Large":
+          case "FillArea":
+            _ += "_full";
+        }
+        return (_ += _), _;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19141,43 +19261,7 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (function (_, _) {
-            let _ = "0000000000000000000000000000000000000000";
-            var _;
-            "string" == typeof _
-              ? (_ = _)
-              : _ &&
-                ((_ = _),
-                (_ = [..._]
-                  .map((_) => _.toString(16).padStart(2, "0"))
-                  .join("")));
-            let _ = ".jpg";
-            "0000000000000000000000000000000000000000" === _ && (_ = _),
-              44 == _.length &&
-                ((_ = __webpack_require__.slice(-4)),
-                (_ = __webpack_require__.slice(0, 40)));
-            let _ = _._.AVATAR_BASE_URL;
-            switch (
-              (_ ||
-                ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-                (_ += __webpack_require__.slice(0, 2) + "/")),
-              (_ += _),
-              _)
-            ) {
-              case "X-Small":
-              case "Small":
-                break;
-              case "Medium":
-              case "MediumLarge":
-                _ += "_medium";
-                break;
-              case "Large":
-              case "X-Large":
-              case "FillArea":
-                _ += "_full";
-            }
-            return (_ += _), _;
-          })(_?.clan_avatar, "Medium"),
+        const _ = _(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().BottomCreatorRow, _),

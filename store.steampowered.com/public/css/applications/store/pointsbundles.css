@@ -131,11 +131,8 @@ body.v6.rewards .ModalPosition_Content {
 body.v6.rewards {
   -webkit-overflow-scrolling: touch;
 }
-.responsive_page_template_content {
+body.v6.rewards .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.placeHolder_summerSale2020_promotionDetailsBar {
-  overflow-x: hidden;
 }
 .kOC36pdxn9Y3RbFW9Pe4k {
   background-color: #1e232e;

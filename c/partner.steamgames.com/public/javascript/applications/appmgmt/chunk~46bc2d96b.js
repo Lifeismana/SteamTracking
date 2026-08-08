@@ -3328,11 +3328,12 @@
             measureElement: _,
             className: _,
             forceVirtualizeType: _,
+            hintVirtualizeType: _,
             initialOffset: _,
             onOffsetChange: _,
             ..._
           } = _,
-          [_, _] = (0, _.useState)(_),
+          [_, _] = (0, _.useState)(_ ?? _),
           [_, _] = _.useState(),
           [_, _] = _.useState(),
           _ = _.useRef(null),
@@ -3386,6 +3387,7 @@
             bDynamic: _,
             measureElement: _,
             forceVirtualizeType: _,
+            hintVirtualizeType: _,
             initialOffset: _,
             onOffsetChange: _,
           };

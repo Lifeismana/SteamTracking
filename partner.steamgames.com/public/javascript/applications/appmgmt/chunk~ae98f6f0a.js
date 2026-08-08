@@ -108,7 +108,7 @@
         (n.greek = () => a.e(3924).then(a.t.bind(a, 13924, 19))),
         (n.hungarian = () => a.e(9441).then(a.t.bind(a, 99441, 19))),
         (n.indonesian = () => a.e(2584).then(a.t.bind(a, 42584, 19))),
-        (n.italian = () => a.e(7688).then(a.t.bind(a, 97688, 19))),
+        (n.italian = () => a.e(5307).then(a.t.bind(a, 97688, 19))),
         (n.japanese = () => a.e(5407).then(a.t.bind(a, 5407, 19))),
         (n.koreana = () => a.e(5815).then(a.t.bind(a, 65815, 19))),
         (n.latam = () => a.e(4287).then(a.t.bind(a, 44287, 19))),

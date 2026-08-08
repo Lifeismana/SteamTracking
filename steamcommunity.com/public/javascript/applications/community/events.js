@@ -29,7 +29,7 @@
     },
     59561: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { default: () => K });
+      t.r(n), t.d(n, { default: () => X });
       var a = t(90626),
         o = t(7850),
         i = t(43261),
@@ -59,7 +59,7 @@
         g = t(4796),
         D = t(61859),
         L = t(14947);
-      let A = class extends a.Component {
+      let x = class extends a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -140,14 +140,14 @@
               : (0, o.jsx)("div", {});
         }
       };
-      (0, w.Cg)([f.oI], A.prototype, "HideModal", null),
-        (A = (0, w.Cg)([S.PA], A));
-      var x = t(66418),
-        k = t(25888),
+      (0, w.Cg)([f.oI], x.prototype, "HideModal", null),
+        (x = (0, w.Cg)([S.PA], x));
+      var k = t(66418),
+        A = t(25888),
         b = t(88386),
         j = t(87652),
-        G = t(45699),
-        C = t(76217),
+        C = t(45699),
+        G = t(76217),
         P = t(84143),
         M = t(50433),
         y = t(78686),
@@ -161,7 +161,7 @@
               className: B.LatestUpdateIcon,
               children: (0, o.jsx)(F.UTF, { role: "presentation" }),
             }),
-            (0, o.jsx)(G.ml, {
+            (0, o.jsx)(C.ml, {
               className: B.LatestUpdateButton,
               onClick: e.onClick,
               children: y.Z.Localize(
@@ -182,7 +182,7 @@
             (0, o.jsxs)("h2", {
               children: [
                 (0, D.we)("#EventBrowse_LastUpdateDate", (0, D._l)(n)),
-                (0, o.jsx)(G.ml, {
+                (0, o.jsx)(C.ml, {
                   className: B.SectionButton,
                   onClick: (e) => {
                     null == a || a(), e.stopPropagation(), e.preventDefault();
@@ -192,7 +192,7 @@
               ],
             }),
             !!i &&
-              (0, o.jsx)(C.Z, {
+              (0, o.jsx)(G.Z, {
                 className: B.EventsSummariesCtn,
                 "flow-children": "column",
                 navEntryPreferPosition: P.iU.PREFERRED_CHILD,
@@ -221,17 +221,18 @@
             nSummaryMaxLength: r,
           } = e,
           l = (0, R.d)(),
-          c = (0, O.R7)();
-        let d = 2,
-          p = q + 1;
+          c = (0, O.R7)(),
+          d = (0, _.Qn)();
+        let p = 2,
+          u = q + 1;
         return (
           c.ownerWindow.window
-            ? (p = c.ownerWindow.window.innerWidth)
-            : l.viewportWidth && (p = l.viewportWidth.value),
-          (d = p <= q ? 1 : 2),
+            ? (u = c.ownerWindow.window.innerWidth)
+            : l.viewportWidth && (u = l.viewportWidth.value),
+          (p = u <= q ? 1 : 2),
           t && 0 == t.length && !i
             ? null
-            : (0, o.jsxs)(C.Z, {
+            : (0, o.jsxs)(G.Z, {
                 className: n,
                 "flow-children": "row",
                 children: [
@@ -244,12 +245,12 @@
                           (0, o.jsxs)("h2", {
                             children: [
                               y.Z.Localize("#EventBrowse_RecentEvents"),
-                              !x.TS.IN_GAMEPADUI &&
+                              !d &&
                                 !!t &&
                                 (0, o.jsx)(o.Fragment, {
                                   children:
                                     s && a
-                                      ? (0, o.jsx)(G.ml, {
+                                      ? (0, o.jsx)(C.ml, {
                                           className: B.SectionButton,
                                           onClick: () => a(t[0]),
                                           children: y.Z.Localize(
@@ -269,7 +270,7 @@
                           }),
                           (0, o.jsx)("div", {
                             className: B.EventsSummariesCtn,
-                            children: t.slice(0, d).map((e) => {
+                            children: t.slice(0, p).map((e) => {
                               const n = a
                                 ? (n) => {
                                     a(e),
@@ -419,23 +420,24 @@
           ),
           [r],
         );
-        const g = !!S && !!S.rtime,
-          D =
-            g && !!S.announcement_gid && (!E || 0 == E.length)
+        const g = (0, _.Qn)(),
+          D = !!S && !!S.rtime,
+          L =
+            D && !!S.announcement_gid && (!E || 0 == E.length)
               ? S.announcement_gid
               : void 0;
-        let L;
+        let x;
         return (
-          g && D
-            ? (L = (0, o.jsx)(U, {
+          D && L
+            ? (x = (0, o.jsx)(U, {
                 nUpdateTime: S.rtime,
-                announcementGID: D,
+                announcementGID: L,
                 onClick: I,
               }))
-            : !g ||
-              D ||
-              _.TS.IN_GAMEPADUI ||
-              (L = (0, o.jsx)(N, { nUpdateTime: S.rtime, onClick: I })),
+            : !D ||
+              L ||
+              g ||
+              (x = (0, o.jsx)(N, { nUpdateTime: S.rtime, onClick: I })),
           (0, o.jsxs)(o.Fragment, {
             children: [
               (0, o.jsx)(V.EN, {
@@ -449,7 +451,7 @@
                 }),
               }),
               (0, o.jsx)(W, {
-                elPostRowElement: L,
+                elPostRowElement: x,
                 rgEvents: E,
                 fnEventShowModal: w,
                 bViewAllShowInfiniteScroll: i,
@@ -480,9 +482,9 @@
           closeModal: r,
         });
       }
-      function X(e) {
+      function Q(e) {
         const { appid: n } = e;
-        let t = new Date(1e3 * x.TS.NOW),
+        let t = new Date(1e3 * k.TS.NOW),
           a = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
           s = Math.floor(a.getTime() / 1e3);
         return (0, o.jsx)("div", {
@@ -490,7 +492,7 @@
             "detailBox altFooter greenlight_home_box section announcements_row",
           children: (0, o.jsx)(J, {
             appid: n,
-            partnerEventStore: k.mh,
+            partnerEventStore: A.mh,
             event_customization: {
               require_tags: ["workshop"],
               rtime_oldestevent: s,
@@ -501,7 +503,7 @@
           }),
         });
       }
-      function K(e) {
+      function X(e) {
         const [n, t] = a.useState(!0);
         return (
           a.useEffect(() => {
@@ -528,7 +530,7 @@
                       path: s.g5.Listing(":appid_or_vanity_str"),
                       render: (e) =>
                         (0, o.jsx)(
-                          A,
+                          x,
                           {
                             ...e,
                             bPreventDismiss: !0,
@@ -541,7 +543,7 @@
                       exact: !0,
                       path: s.g5.WorkshopHub(":appid(\\d+)"),
                       render: (e) =>
-                        (0, a.createElement)(X, {
+                        (0, a.createElement)(Q, {
                           ...e,
                           appid: +e.match.params.appid,
                           key: "Workshop" + e.match.params.appid,
@@ -550,7 +552,7 @@
                     (0, o.jsx)(c.qh, {
                       path: s.g5.AppHub(":appid"),
                       render: (e) =>
-                        (0, a.createElement)(A, {
+                        (0, a.createElement)(x, {
                           ...e,
                           key: "InfScroll_App_" + e.match.params.appid,
                           trackingLocation: i.Tc.My,
@@ -559,7 +561,7 @@
                     (0, o.jsx)(c.qh, {
                       path: s.g5.GroupHub(":group_vanity"),
                       render: (e) =>
-                        (0, a.createElement)(A, {
+                        (0, a.createElement)(x, {
                           ...e,
                           key: "InfScroll_App_" + e.match.params.group_vanity,
                           trackingLocation: i.Tc.My,

@@ -121,7 +121,6 @@ message CMsgSteamLearn_GetFetchStatus_Response {
 	optional int32 result = 1 [(.description) = "enum"];
 	optional uint32 fetch_id = 2;
 	optional int32 status = 3 [(.description) = "enum"];
-	repeated .CMsgSteamLearn_GetFetchStatus_Response_Worker workers = 4;
 	optional uint32 total_rows_written = 5;
 	optional uint32 total_rows = 6;
 	optional uint32 start_time = 7;
@@ -137,13 +136,6 @@ message CMsgSteamLearn_GetFetchStatus_Response_Metadata {
 	optional int32 metadata_phase = 1 [(.description) = "enum"];
 	optional string metadata_phase_name = 2;
 	optional uint32 metadata_phase_value = 3;
-}
-
-message CMsgSteamLearn_GetFetchStatus_Response_Worker {
-	optional uint32 rows_written = 1;
-	optional bool complete = 2;
-	optional uint32 rows_processed = 3;
-	optional uint32 rows_total = 4;
 }
 
 message CMsgSteamLearn_GetFetchStatusVersions_Request {

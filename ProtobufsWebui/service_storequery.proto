@@ -105,12 +105,19 @@ message CStoreQueryFilters {
 	optional .CStoreQueryFilters_ReleaseDateFilter release_date_filter = 13;
 	repeated int32 content_descriptors_must_match = 15 [(.description) = "enum"];
 	repeated int32 content_descriptors_excluded = 16 [(.description) = "enum"];
+	optional .CStoreQueryFilters_DiscountedDatesFilter discounted_dates_filter = 17;
 	optional int32 regional_top_n_sellers = 40;
 	optional int32 global_top_n_sellers = 41;
 	optional int32 regional_long_term_top_n_sellers = 42;
 	optional int32 global_long_term_top_n_sellers = 43;
 	optional .CStorePageFilter store_page_filter = 44;
 	repeated uint32 parent_appids = 45;
+}
+
+message CStoreQueryFilters_DiscountedDatesFilter {
+	optional uint32 start_date = 1;
+	optional uint32 end_date = 2;
+	optional bool allow_partial_overlap = 3;
 }
 
 message CStoreQueryFilters_PredefinedFilter {

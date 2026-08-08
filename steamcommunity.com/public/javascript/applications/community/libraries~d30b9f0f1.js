@@ -13673,7 +13673,7 @@
       n.d(t, { A: () => h });
       var r = n(58584),
         o = n(90626),
-        i = n(6592),
+        i = n(74987),
         a = n(39586),
         s = n(54883),
         l = n(2223),
@@ -13815,32 +13815,15 @@
         return o.createElement(i.S, (0, r.A)({ ref: t }, U));
       });
     },
-    6592: (e, t, n) => {
+    74987: (e, t, n) => {
       "use strict";
-      n.d(t, { S: () => ye, b: () => ee, g: () => te });
+      n.d(t, { S: () => ve, b: () => Z, g: () => Q });
       var r = n(58584),
-        o = n(54883);
-      var i = n(53144);
-      function a(e, t) {
-        for (var n = 0; n < t.length; n++) {
-          var r = t[n];
-          (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, (0, i.A)(r.key), r);
-        }
-      }
-      var s = n(71182);
-      function l(e) {
-        return (
-          (l = Object.setPrototypeOf
-            ? Object.getPrototypeOf.bind()
-            : function (e) {
-                return e.__proto__ || Object.getPrototypeOf(e);
-              }),
-          l(e)
-        );
-      }
+        o = n(54883),
+        i = n(30549),
+        a = n(50181),
+        s = n(35549),
+        l = n(61474);
       function c() {
         try {
           var e = !Boolean.prototype.valueOf.call(
@@ -13851,56 +13834,35 @@
           return !!e;
         })();
       }
-      var u = n(11052),
-        p = n(59913);
-      function d(e) {
-        var t = c();
-        return function () {
-          var n,
-            r = l(e);
-          if (t) {
-            var o = l(this).constructor;
-            n = Reflect.construct(r, arguments, o);
-          } else n = r.apply(this, arguments);
-          return (function (e, t) {
-            if (t && ("object" == (0, u.A)(t) || "function" == typeof t))
-              return t;
-            if (void 0 !== t)
-              throw new TypeError(
-                "Derived constructors may only return object or undefined",
-              );
-            return (0, p.A)(e);
-          })(this, n);
-        };
-      }
-      var f = n(2223),
-        h = n(90626),
-        g = n(75970),
-        m = n(74252),
-        v =
+      var u = n(20822);
+      var p = n(2223),
+        d = n(90626),
+        f = n(75970),
+        h = n(74252),
+        g =
           Number.isNaN ||
           function (e) {
             return "number" == typeof e && e != e;
           };
-      function b(e, t) {
-        return e === t || !(!v(e) || !v(t));
+      function m(e, t) {
+        return e === t || !(!g(e) || !g(t));
       }
-      function y(e, t) {
+      function v(e, t) {
         if (e.length !== t.length) return !1;
-        for (var n = 0; n < e.length; n++) if (!b(e[n], t[n])) return !1;
+        for (var n = 0; n < e.length; n++) if (!m(e[n], t[n])) return !1;
         return !0;
       }
-      var w = n(2829);
+      var b = n(2829);
       for (
-        var O = {
+        var y = {
             name: "7pg0cj-a11yText",
             styles:
               "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap",
           },
-          x = function (e) {
-            return (0, m.Y)("span", (0, r.A)({ css: O }, e));
+          w = function (e) {
+            return (0, h.Y)("span", (0, r.A)({ css: y }, e));
           },
-          E = {
+          O = {
             guidance: function (e) {
               var t = e.isSearchable,
                 n = e.isMulti,
@@ -13987,7 +13949,7 @@
               return "".concat(n).concat(t ? " for search term " + t : "", ".");
             },
           },
-          I = function (e) {
+          x = function (e) {
             var t = e.ariaSelection,
               n = e.focusedOption,
               r = e.focusedValue,
@@ -13998,25 +13960,25 @@
               c = e.id,
               u = e.isAppleDevice,
               p = l.ariaLiveMessages,
-              d = l.getOptionLabel,
-              f = l.inputValue,
-              g = l.isMulti,
+              f = l.getOptionLabel,
+              g = l.inputValue,
+              m = l.isMulti,
               v = l.isOptionDisabled,
               b = l.isSearchable,
               y = l.menuIsOpen,
-              w = l.options,
-              O = l.screenReaderStatus,
+              x = l.options,
+              E = l.screenReaderStatus,
               I = l.tabSelectsValue,
               A = l.isLoading,
               D = l["aria-label"],
               C = l["aria-live"],
-              S = (0, h.useMemo)(
+              S = (0, d.useMemo)(
                 function () {
-                  return (0, o.A)((0, o.A)({}, E), p || {});
+                  return (0, o.A)((0, o.A)({}, O), p || {});
                 },
                 [p],
               ),
-              P = (0, h.useMemo)(
+              P = (0, d.useMemo)(
                 function () {
                   var e,
                     n = "";
@@ -14027,9 +13989,9 @@
                       l = t.removedValues,
                       c = t.value,
                       u = a || r || ((e = c), Array.isArray(e) ? null : e),
-                      p = u ? d(u) : "",
-                      f = i || l || void 0,
-                      h = f ? f.map(d) : [],
+                      p = u ? f(u) : "",
+                      d = i || l || void 0,
+                      h = d ? d.map(f) : [],
                       g = (0, o.A)(
                         { isDisabled: u && v(u, s), label: p, labels: h },
                         t,
@@ -14038,9 +14000,9 @@
                   }
                   return n;
                 },
-                [t, S, v, s, d],
+                [t, S, v, s, f],
               ),
-              R = (0, h.useMemo)(
+              R = (0, d.useMemo)(
                 function () {
                   var e = "",
                     t = n || r,
@@ -14048,7 +14010,7 @@
                   if (t && S.onFocus) {
                     var a = {
                       focused: t,
-                      label: d(t),
+                      label: f(t),
                       isDisabled: v(t, s),
                       isSelected: o,
                       options: i,
@@ -14060,21 +14022,21 @@
                   }
                   return e;
                 },
-                [n, r, d, v, S, i, s, u],
+                [n, r, f, v, S, i, s, u],
               ),
-              k = (0, h.useMemo)(
+              k = (0, d.useMemo)(
                 function () {
                   var e = "";
-                  if (y && w.length && !A && S.onFilter) {
-                    var t = O({ count: i.length });
-                    e = S.onFilter({ inputValue: f, resultsMessage: t });
+                  if (y && x.length && !A && S.onFilter) {
+                    var t = E({ count: i.length });
+                    e = S.onFilter({ inputValue: g, resultsMessage: t });
                   }
                   return e;
                 },
-                [i, f, y, S, w, O, A],
+                [i, g, y, S, x, E, A],
               ),
               B = "initial-input-focus" === (null == t ? void 0 : t.action),
-              M = (0, h.useMemo)(
+              M = (0, d.useMemo)(
                 function () {
                   var e = "";
                   if (S.guidance) {
@@ -14083,7 +14045,7 @@
                       "aria-label": D,
                       context: t,
                       isDisabled: n && v(n, s),
-                      isMulti: g,
+                      isMulti: m,
                       isSearchable: b,
                       tabSelectsValue: I,
                       isInitialFocus: B,
@@ -14091,22 +14053,22 @@
                   }
                   return e;
                 },
-                [D, n, r, g, v, b, y, S, s, I, B],
+                [D, n, r, m, v, b, y, S, s, I, B],
               ),
-              N = (0, m.Y)(
-                h.Fragment,
+              N = (0, h.Y)(
+                d.Fragment,
                 null,
-                (0, m.Y)("span", { id: "aria-selection" }, P),
-                (0, m.Y)("span", { id: "aria-focused" }, R),
-                (0, m.Y)("span", { id: "aria-results" }, k),
-                (0, m.Y)("span", { id: "aria-guidance" }, M),
+                (0, h.Y)("span", { id: "aria-selection" }, P),
+                (0, h.Y)("span", { id: "aria-focused" }, R),
+                (0, h.Y)("span", { id: "aria-results" }, k),
+                (0, h.Y)("span", { id: "aria-guidance" }, M),
               );
-            return (0, m.Y)(
-              h.Fragment,
+            return (0, h.Y)(
+              d.Fragment,
               null,
-              (0, m.Y)(x, { id: c }, B && N),
-              (0, m.Y)(
-                x,
+              (0, h.Y)(w, { id: c }, B && N),
+              (0, h.Y)(
+                w,
                 {
                   "aria-live": C,
                   "aria-atomic": "false",
@@ -14117,7 +14079,7 @@
               ),
             );
           },
-          A = [
+          E = [
             { base: "A", letters: "AⒶＡÀÁÂẦẤẪẨÃĀĂẰẮẴẲȦǠÄǞẢÅǺǍȀȂẠẬẶḀĄȺⱯ" },
             { base: "AA", letters: "Ꜳ" },
             { base: "AE", letters: "ÆǼǢ" },
@@ -14209,28 +14171,28 @@
             { base: "y", letters: "yⓨｙỳýŷỹȳẏÿỷẙỵƴɏỿ" },
             { base: "z", letters: "zⓩｚźẑżžẓẕƶȥɀⱬꝣ" },
           ],
-          D = new RegExp(
+          I = new RegExp(
             "[" +
-              A.map(function (e) {
+              E.map(function (e) {
                 return e.letters;
               }).join("") +
               "]",
             "g",
           ),
-          C = {},
-          S = 0;
-        S < A.length;
-        S++
+          A = {},
+          D = 0;
+        D < E.length;
+        D++
       )
-        for (var P = A[S], R = 0; R < P.letters.length; R++)
-          C[P.letters[R]] = P.base;
-      var k = function (e) {
-          return e.replace(D, function (e) {
-            return C[e];
+        for (var C = E[D], S = 0; S < C.letters.length; S++)
+          A[C.letters[S]] = C.base;
+      var P = function (e) {
+          return e.replace(I, function (e) {
+            return A[e];
           });
         },
-        B = (function (e, t) {
-          void 0 === t && (t = y);
+        R = (function (e, t) {
+          void 0 === t && (t = v);
           var n = null;
           function r() {
             for (var r = [], o = 0; o < arguments.length; o++)
@@ -14246,22 +14208,22 @@
             }),
             r
           );
-        })(k),
-        M = function (e) {
+        })(P),
+        k = function (e) {
           return e.replace(/^\s+|\s+$/g, "");
         },
-        N = function (e) {
+        B = function (e) {
           return "".concat(e.label, " ").concat(e.value);
         },
-        _ = ["innerRef"];
-      function T(e) {
+        M = ["innerRef"];
+      function N(e) {
         var t = e.innerRef,
-          n = (0, w.A)(e, _),
-          o = (0, g.r)(n, "onExited", "in", "enter", "exit", "appear");
-        return (0, m.Y)(
+          n = (0, b.A)(e, M),
+          o = (0, f.r)(n, "onExited", "in", "enter", "exit", "appear");
+        return (0, h.Y)(
           "input",
           (0, r.A)({ ref: t }, o, {
-            css: (0, m.AH)(
+            css: (0, h.AH)(
               {
                 label: "dummyInput",
                 background: 0,
@@ -14284,47 +14246,47 @@
           }),
         );
       }
-      var L = ["boxSizing", "height", "overflow", "paddingRight", "position"],
-        j = {
+      var _ = ["boxSizing", "height", "overflow", "paddingRight", "position"],
+        T = {
           boxSizing: "border-box",
           overflow: "hidden",
           position: "relative",
           height: "100%",
         };
-      function F(e) {
+      function L(e) {
         e.cancelable && e.preventDefault();
       }
-      function V(e) {
+      function j(e) {
         e.stopPropagation();
       }
-      function U() {
+      function F() {
         var e = this.scrollTop,
           t = this.scrollHeight,
           n = e + this.offsetHeight;
         0 === e ? (this.scrollTop = 1) : n === t && (this.scrollTop = e - 1);
       }
-      function $() {
+      function V() {
         return "ontouchstart" in window || navigator.maxTouchPoints;
       }
-      var G = !(
+      var U = !(
           "undefined" == typeof window ||
           !window.document ||
           !window.document.createElement
         ),
-        H = 0,
-        q = { capture: !1, passive: !1 };
-      var W = function (e) {
+        $ = 0,
+        G = { capture: !1, passive: !1 };
+      var H = function (e) {
           var t = e.target;
           return (
             t.ownerDocument.activeElement &&
             t.ownerDocument.activeElement.blur()
           );
         },
-        Y = {
+        q = {
           name: "1kfdb0e",
           styles: "position:fixed;left:0;bottom:0;right:0;top:0",
         };
-      function z(e) {
+      function W(e) {
         var t = e.children,
           n = e.lockEnabled,
           r = e.captureEnabled,
@@ -14334,11 +14296,11 @@
               r = e.onBottomLeave,
               o = e.onTopArrive,
               i = e.onTopLeave,
-              a = (0, h.useRef)(!1),
-              s = (0, h.useRef)(!1),
-              l = (0, h.useRef)(0),
-              c = (0, h.useRef)(null),
-              u = (0, h.useCallback)(
+              a = (0, d.useRef)(!1),
+              s = (0, d.useRef)(!1),
+              l = (0, d.useRef)(0),
+              c = (0, d.useRef)(null),
+              u = (0, d.useCallback)(
                 function (e, t) {
                   if (null !== c.current) {
                     var l = c.current,
@@ -14371,44 +14333,44 @@
                 },
                 [n, r, o, i],
               ),
-              p = (0, h.useCallback)(
+              p = (0, d.useCallback)(
                 function (e) {
                   u(e, e.deltaY);
                 },
                 [u],
               ),
-              d = (0, h.useCallback)(function (e) {
+              h = (0, d.useCallback)(function (e) {
                 l.current = e.changedTouches[0].clientY;
               }, []),
-              f = (0, h.useCallback)(
+              g = (0, d.useCallback)(
                 function (e) {
                   var t = l.current - e.changedTouches[0].clientY;
                   u(e, t);
                 },
                 [u],
               ),
-              m = (0, h.useCallback)(
+              m = (0, d.useCallback)(
                 function (e) {
                   if (e) {
-                    var t = !!g.s && { passive: !1 };
+                    var t = !!f.s && { passive: !1 };
                     e.addEventListener("wheel", p, t),
-                      e.addEventListener("touchstart", d, t),
-                      e.addEventListener("touchmove", f, t);
+                      e.addEventListener("touchstart", h, t),
+                      e.addEventListener("touchmove", g, t);
                   }
                 },
-                [f, d, p],
+                [g, h, p],
               ),
-              v = (0, h.useCallback)(
+              v = (0, d.useCallback)(
                 function (e) {
                   e &&
                     (e.removeEventListener("wheel", p, !1),
-                    e.removeEventListener("touchstart", d, !1),
-                    e.removeEventListener("touchmove", f, !1));
+                    e.removeEventListener("touchstart", h, !1),
+                    e.removeEventListener("touchmove", g, !1));
                 },
-                [f, d, p],
+                [g, h, p],
               );
             return (
-              (0, h.useEffect)(
+              (0, d.useEffect)(
                 function () {
                   if (t) {
                     var e = c.current;
@@ -14437,65 +14399,65 @@
             var t = e.isEnabled,
               n = e.accountForScrollbars,
               r = void 0 === n || n,
-              o = (0, h.useRef)({}),
-              i = (0, h.useRef)(null),
-              a = (0, h.useCallback)(
+              o = (0, d.useRef)({}),
+              i = (0, d.useRef)(null),
+              a = (0, d.useCallback)(
                 function (e) {
-                  if (G) {
+                  if (U) {
                     var t = document.body,
                       n = t && t.style;
                     if (
                       (r &&
-                        L.forEach(function (e) {
+                        _.forEach(function (e) {
                           var t = n && n[e];
                           o.current[e] = t;
                         }),
-                      r && H < 1)
+                      r && $ < 1)
                     ) {
                       var i = parseInt(o.current.paddingRight, 10) || 0,
                         a = document.body ? document.body.clientWidth : 0,
                         s = window.innerWidth - a + i || 0;
-                      Object.keys(j).forEach(function (e) {
-                        var t = j[e];
+                      Object.keys(T).forEach(function (e) {
+                        var t = T[e];
                         n && (n[e] = t);
                       }),
                         n && (n.paddingRight = "".concat(s, "px"));
                     }
                     t &&
-                      $() &&
-                      (t.addEventListener("touchmove", F, q),
+                      V() &&
+                      (t.addEventListener("touchmove", L, G),
                       e &&
-                        (e.addEventListener("touchstart", U, q),
-                        e.addEventListener("touchmove", V, q))),
-                      (H += 1);
+                        (e.addEventListener("touchstart", F, G),
+                        e.addEventListener("touchmove", j, G))),
+                      ($ += 1);
                   }
                 },
                 [r],
               ),
-              s = (0, h.useCallback)(
+              s = (0, d.useCallback)(
                 function (e) {
-                  if (G) {
+                  if (U) {
                     var t = document.body,
                       n = t && t.style;
-                    (H = Math.max(H - 1, 0)),
+                    ($ = Math.max($ - 1, 0)),
                       r &&
-                        H < 1 &&
-                        L.forEach(function (e) {
+                        $ < 1 &&
+                        _.forEach(function (e) {
                           var t = o.current[e];
                           n && (n[e] = t);
                         }),
                       t &&
-                        $() &&
-                        (t.removeEventListener("touchmove", F, q),
+                        V() &&
+                        (t.removeEventListener("touchmove", L, G),
                         e &&
-                          (e.removeEventListener("touchstart", U, q),
-                          e.removeEventListener("touchmove", V, q)));
+                          (e.removeEventListener("touchstart", F, G),
+                          e.removeEventListener("touchmove", j, G)));
                   }
                 },
                 [r],
               );
             return (
-              (0, h.useEffect)(
+              (0, d.useEffect)(
                 function () {
                   if (t) {
                     var e = i.current;
@@ -14514,35 +14476,35 @@
               }
             );
           })({ isEnabled: n });
-        return (0, m.Y)(
-          h.Fragment,
+        return (0, h.Y)(
+          d.Fragment,
           null,
-          n && (0, m.Y)("div", { onClick: W, css: Y }),
+          n && (0, h.Y)("div", { onClick: H, css: q }),
           t(function (e) {
             o(e), i(e);
           }),
         );
       }
-      var K = {
+      var Y = {
           name: "1a0ro4n-requiredInput",
           styles:
             "label:requiredInput;opacity:0;pointer-events:none;position:absolute;bottom:0;left:0;right:0;width:100%",
         },
-        J = function (e) {
+        z = function (e) {
           var t = e.name,
             n = e.onFocus;
-          return (0, m.Y)("input", {
+          return (0, h.Y)("input", {
             required: !0,
             name: t,
             tabIndex: -1,
             "aria-hidden": "true",
             onFocus: n,
-            css: K,
+            css: Y,
             value: "",
             onChange: function () {},
           });
         };
-      function X(e) {
+      function K(e) {
         var t;
         return (
           "undefined" != typeof window &&
@@ -14554,46 +14516,46 @@
           )
         );
       }
-      function Z() {
-        return X(/^Mac/i);
+      function J() {
+        return K(/^Mac/i);
       }
-      function Q() {
+      function X() {
         return (
-          X(/^iPhone/i) || X(/^iPad/i) || (Z() && navigator.maxTouchPoints > 1)
+          K(/^iPhone/i) || K(/^iPad/i) || (J() && navigator.maxTouchPoints > 1)
         );
       }
-      var ee = function (e) {
+      var Z = function (e) {
           return e.label;
         },
-        te = function (e) {
+        Q = function (e) {
           return e.value;
         },
-        ne = {
-          clearIndicator: g.a,
-          container: g.b,
-          control: g.d,
-          dropdownIndicator: g.e,
-          group: g.g,
-          groupHeading: g.f,
-          indicatorsContainer: g.i,
-          indicatorSeparator: g.h,
-          input: g.j,
-          loadingIndicator: g.l,
-          loadingMessage: g.k,
-          menu: g.m,
-          menuList: g.n,
-          menuPortal: g.o,
-          multiValue: g.p,
-          multiValueLabel: g.q,
-          multiValueRemove: g.t,
-          noOptionsMessage: g.u,
-          option: g.v,
-          placeholder: g.w,
-          singleValue: g.x,
-          valueContainer: g.y,
+        ee = {
+          clearIndicator: f.a,
+          container: f.b,
+          control: f.d,
+          dropdownIndicator: f.e,
+          group: f.g,
+          groupHeading: f.f,
+          indicatorsContainer: f.i,
+          indicatorSeparator: f.h,
+          input: f.j,
+          loadingIndicator: f.l,
+          loadingMessage: f.k,
+          menu: f.m,
+          menuList: f.n,
+          menuPortal: f.o,
+          multiValue: f.p,
+          multiValueLabel: f.q,
+          multiValueRemove: f.t,
+          noOptionsMessage: f.u,
+          option: f.v,
+          placeholder: f.w,
+          singleValue: f.x,
+          valueContainer: f.y,
         };
-      var re,
-        oe = {
+      var te,
+        ne = {
           borderRadius: 4,
           colors: {
             primary: "#2684FF",
@@ -14616,11 +14578,11 @@
           },
           spacing: { baseUnit: 4, controlHeight: 38, menuGutter: 8 },
         },
-        ie = {
+        re = {
           "aria-live": "polite",
           backspaceRemovesValue: !0,
-          blurInputOnSelect: (0, g.z)(),
-          captureMenuScroll: !(0, g.z)(),
+          blurInputOnSelect: (0, f.z)(),
+          captureMenuScroll: !(0, f.z)(),
           classNames: {},
           closeMenuOnSelect: !0,
           closeMenuOnScroll: !1,
@@ -14633,30 +14595,30 @@
                 {
                   ignoreCase: !0,
                   ignoreAccents: !0,
-                  stringify: N,
+                  stringify: B,
                   trim: !0,
                   matchFrom: "any",
                 },
-                re,
+                te,
               ),
               r = n.ignoreCase,
               i = n.ignoreAccents,
               a = n.stringify,
               s = n.trim,
               l = n.matchFrom,
-              c = s ? M(t) : t,
-              u = s ? M(a(e)) : a(e);
+              c = s ? k(t) : t,
+              u = s ? k(a(e)) : a(e);
             return (
               r && ((c = c.toLowerCase()), (u = u.toLowerCase())),
-              i && ((c = B(c)), (u = k(u))),
+              i && ((c = R(c)), (u = P(u))),
               "start" === l ? u.substr(0, c.length) === c : u.indexOf(c) > -1
             );
           },
           formatGroupLabel: function (e) {
             return e.label;
           },
-          getOptionLabel: ee,
-          getOptionValue: te,
+          getOptionLabel: Z,
+          getOptionValue: Q,
           isDisabled: !1,
           isLoading: !1,
           isMulti: !1,
@@ -14674,7 +14636,7 @@
           menuPlacement: "bottom",
           menuPosition: "absolute",
           menuShouldBlockScroll: !1,
-          menuShouldScrollIntoView: !(0, g.A)(),
+          menuShouldScrollIntoView: !(0, f.A)(),
           noOptionsMessage: function () {
             return "No options";
           },
@@ -14694,44 +14656,44 @@
           tabSelectsValue: !0,
           unstyled: !1,
         };
-      function ae(e, t, n, r) {
+      function oe(e, t, n, r) {
         return {
           type: "option",
           data: t,
-          isDisabled: he(e, t, n),
-          isSelected: ge(e, t, n),
-          label: de(e, t),
-          value: fe(e, t),
+          isDisabled: de(e, t, n),
+          isSelected: fe(e, t, n),
+          label: ue(e, t),
+          value: pe(e, t),
           index: r,
         };
       }
-      function se(e, t) {
+      function ie(e, t) {
         return e.options
           .map(function (n, r) {
             if ("options" in n) {
               var o = n.options
                 .map(function (n, r) {
-                  return ae(e, n, t, r);
+                  return oe(e, n, t, r);
                 })
                 .filter(function (t) {
-                  return ue(e, t);
+                  return le(e, t);
                 });
               return o.length > 0
                 ? { type: "group", data: n, options: o, index: r }
                 : void 0;
             }
-            var i = ae(e, n, t, r);
-            return ue(e, i) ? i : void 0;
+            var i = oe(e, n, t, r);
+            return le(e, i) ? i : void 0;
           })
-          .filter(g.K);
+          .filter(f.K);
       }
-      function le(e) {
+      function ae(e) {
         return e.reduce(function (e, t) {
           return (
             "group" === t.type
               ? e.push.apply(
                   e,
-                  (0, f.A)(
+                  (0, p.A)(
                     t.options.map(function (e) {
                       return e.data;
                     }),
@@ -14742,13 +14704,13 @@
           );
         }, []);
       }
-      function ce(e, t) {
+      function se(e, t) {
         return e.reduce(function (e, n) {
           return (
             "group" === n.type
               ? e.push.apply(
                   e,
-                  (0, f.A)(
+                  (0, p.A)(
                     n.options.map(function (e) {
                       return {
                         data: e.data,
@@ -14765,16 +14727,16 @@
           );
         }, []);
       }
-      function ue(e, t) {
+      function le(e, t) {
         var n = e.inputValue,
           r = void 0 === n ? "" : n,
           o = t.data,
           i = t.isSelected,
           a = t.label,
           s = t.value;
-        return (!ve(e) || !i) && me(e, { label: a, value: s, data: o }, r);
+        return (!ge(e) || !i) && he(e, { label: a, value: s, data: o }, r);
       }
-      var pe = function (e, t) {
+      var ce = function (e, t) {
           var n;
           return (
             (null ===
@@ -14785,59 +14747,56 @@
               : n.id) || null
           );
         },
-        de = function (e, t) {
+        ue = function (e, t) {
           return e.getOptionLabel(t);
         },
-        fe = function (e, t) {
+        pe = function (e, t) {
           return e.getOptionValue(t);
         };
-      function he(e, t, n) {
+      function de(e, t, n) {
         return (
           "function" == typeof e.isOptionDisabled && e.isOptionDisabled(t, n)
         );
       }
-      function ge(e, t, n) {
+      function fe(e, t, n) {
         if (n.indexOf(t) > -1) return !0;
         if ("function" == typeof e.isOptionSelected)
           return e.isOptionSelected(t, n);
-        var r = fe(e, t);
+        var r = pe(e, t);
         return n.some(function (t) {
-          return fe(e, t) === r;
+          return pe(e, t) === r;
         });
       }
-      function me(e, t, n) {
+      function he(e, t, n) {
         return !e.filterOption || e.filterOption(t, n);
       }
-      var ve = function (e) {
+      var ge = function (e) {
           var t = e.hideSelectedOptions,
             n = e.isMulti;
           return void 0 === t ? n : t;
         },
-        be = 1,
-        ye = (function (e) {
-          !(function (e, t) {
-            if ("function" != typeof t && null !== t)
-              throw new TypeError(
-                "Super expression must either be null or a function",
-              );
-            (e.prototype = Object.create(t && t.prototype, {
-              constructor: { value: e, writable: !0, configurable: !0 },
-            })),
-              Object.defineProperty(e, "prototype", { writable: !1 }),
-              t && (0, s.A)(e, t);
-          })(c, e);
+        me = 1,
+        ve = (function (e) {
+          (0, s.A)(g, e);
           var t,
             n,
-            i,
-            l = d(c);
-          function c(e) {
+            h =
+              ((t = g),
+              (n = c()),
+              function () {
+                var e,
+                  r = (0, l.A)(t);
+                if (n) {
+                  var o = (0, l.A)(this).constructor;
+                  e = Reflect.construct(r, arguments, o);
+                } else e = r.apply(this, arguments);
+                return (0, u.A)(this, e);
+              });
+          function g(e) {
             var t;
             if (
-              ((function (e, t) {
-                if (!(e instanceof t))
-                  throw new TypeError("Cannot call a class as a function");
-              })(this, c),
-              ((t = l.call(this, e)).state = {
+              ((0, i.A)(this, g),
+              ((t = h.call(this, e)).state = {
                 ariaSelection: null,
                 focusedOption: null,
                 focusedOptionId: null,
@@ -14860,7 +14819,7 @@
               (t.openAfterFocus = !1),
               (t.scrollToFocusedOptionOnUpdate = !1),
               (t.userIsDragging = void 0),
-              (t.isAppleDevice = Z() || Q()),
+              (t.isAppleDevice = J() || X()),
               (t.controlRef = null),
               (t.getControlRef = function (e) {
                 t.controlRef = e;
@@ -14908,7 +14867,7 @@
                 if (s) {
                   var c = t.getOptionValue(e);
                   t.setValue(
-                    (0, g.B)(
+                    (0, f.B)(
                       a.filter(function (e) {
                         return t.getOptionValue(e) !== c;
                       }),
@@ -14918,18 +14877,18 @@
                   );
                 } else {
                   if (l)
-                    return void t.ariaOnChange((0, g.C)(e), {
+                    return void t.ariaOnChange((0, f.C)(e), {
                       action: "select-option",
                       option: e,
                       name: i,
                     });
                   o
                     ? t.setValue(
-                        (0, g.B)([].concat((0, f.A)(a), [e])),
+                        (0, f.B)([].concat((0, p.A)(a), [e])),
                         "select-option",
                         e,
                       )
-                    : t.setValue((0, g.C)(e), "select-option");
+                    : t.setValue((0, f.C)(e), "select-option");
                 }
                 r && t.blurInput();
               }),
@@ -14940,13 +14899,13 @@
                   i = r.filter(function (e) {
                     return t.getOptionValue(e) !== o;
                   }),
-                  a = (0, g.D)(n, i, i[0] || null);
+                  a = (0, f.D)(n, i, i[0] || null);
                 t.onChange(a, { action: "remove-value", removedValue: e }),
                   t.focusInput();
               }),
               (t.clearValue = function () {
                 var e = t.state.selectValue;
-                t.onChange((0, g.D)(t.props.isMulti, [], null), {
+                t.onChange((0, f.D)(t.props.isMulti, [], null), {
                   action: "clear",
                   removedValues: e,
                 });
@@ -14956,15 +14915,15 @@
                   n = t.state.selectValue,
                   r = n[n.length - 1],
                   o = n.slice(0, n.length - 1),
-                  i = (0, g.D)(e, o, o[0] || null);
+                  i = (0, f.D)(e, o, o[0] || null);
                 r && t.onChange(i, { action: "pop-value", removedValue: r });
               }),
               (t.getFocusedOptionId = function (e) {
-                return pe(t.state.focusableOptionsWithIds, e);
+                return ce(t.state.focusableOptionsWithIds, e);
               }),
               (t.getFocusableOptionsWithIds = function () {
-                return ce(
-                  se(t.props, t.state.selectValue),
+                return se(
+                  ie(t.props, t.state.selectValue),
                   t.getElementId("option"),
                 );
               }),
@@ -14978,17 +14937,17 @@
                   r++
                 )
                   n[r] = arguments[r];
-                return g.E.apply(void 0, [t.props.classNamePrefix].concat(n));
+                return f.E.apply(void 0, [t.props.classNamePrefix].concat(n));
               }),
               (t.getOptionLabel = function (e) {
-                return de(t.props, e);
+                return ue(t.props, e);
               }),
               (t.getOptionValue = function (e) {
-                return fe(t.props, e);
+                return pe(t.props, e);
               }),
               (t.getStyles = function (e, n) {
                 var r = t.props.unstyled,
-                  o = ne[e](n, r);
+                  o = ee[e](n, r);
                 o.boxSizing = "border-box";
                 var i = t.props.styles[e];
                 return i ? i(o, n) : o;
@@ -15004,16 +14963,16 @@
                 return "".concat(t.state.instancePrefix, "-").concat(e);
               }),
               (t.getComponents = function () {
-                return (0, g.F)(t.props);
+                return (0, f.F)(t.props);
               }),
               (t.buildCategorizedOptions = function () {
-                return se(t.props, t.state.selectValue);
+                return ie(t.props, t.state.selectValue);
               }),
               (t.getCategorizedOptions = function () {
                 return t.props.menuIsOpen ? t.buildCategorizedOptions() : [];
               }),
               (t.buildFocusableOptions = function () {
-                return le(t.buildCategorizedOptions());
+                return ae(t.buildCategorizedOptions());
               }),
               (t.getFocusableOptions = function () {
                 return t.props.menuIsOpen ? t.buildFocusableOptions() : [];
@@ -15075,7 +15034,7 @@
               (t.onScroll = function (e) {
                 "boolean" == typeof t.props.closeMenuOnScroll
                   ? e.target instanceof HTMLElement &&
-                    (0, g.G)(e.target) &&
+                    (0, f.G)(e.target) &&
                     t.props.onMenuClose()
                   : "function" == typeof t.props.closeMenuOnScroll &&
                     t.props.closeMenuOnScroll(e) &&
@@ -15162,7 +15121,7 @@
                 }
               }),
               (t.shouldHideSelectedOptions = function () {
-                return ve(t.props);
+                return ge(t.props);
               }),
               (t.onValueInputFocus = function (e) {
                 e.preventDefault(), e.stopPropagation(), t.focus();
@@ -15273,1020 +15232,1041 @@
                 }
               }),
               (t.state.instancePrefix =
-                "react-select-" + (t.props.instanceId || ++be)),
-              (t.state.selectValue = (0, g.H)(e.value)),
+                "react-select-" + (t.props.instanceId || ++me)),
+              (t.state.selectValue = (0, f.H)(e.value)),
               e.menuIsOpen && t.state.selectValue.length)
             ) {
               var n = t.getFocusableOptionsWithIds(),
                 r = t.buildFocusableOptions(),
-                i = r.indexOf(t.state.selectValue[0]);
+                a = r.indexOf(t.state.selectValue[0]);
               (t.state.focusableOptionsWithIds = n),
-                (t.state.focusedOption = r[i]),
-                (t.state.focusedOptionId = pe(n, r[i]));
+                (t.state.focusedOption = r[a]),
+                (t.state.focusedOptionId = ce(n, r[a]));
             }
             return t;
           }
           return (
-            (t = c),
-            (n = [
-              {
-                key: "componentDidMount",
-                value: function () {
-                  this.startListeningComposition(),
-                    this.startListeningToTouch(),
-                    this.props.closeMenuOnScroll &&
-                      document &&
-                      document.addEventListener &&
-                      document.addEventListener("scroll", this.onScroll, !0),
-                    this.props.autoFocus && this.focusInput(),
-                    this.props.menuIsOpen &&
-                      this.state.focusedOption &&
+            (0, a.A)(
+              g,
+              [
+                {
+                  key: "componentDidMount",
+                  value: function () {
+                    this.startListeningComposition(),
+                      this.startListeningToTouch(),
+                      this.props.closeMenuOnScroll &&
+                        document &&
+                        document.addEventListener &&
+                        document.addEventListener("scroll", this.onScroll, !0),
+                      this.props.autoFocus && this.focusInput(),
+                      this.props.menuIsOpen &&
+                        this.state.focusedOption &&
+                        this.menuListRef &&
+                        this.focusedOptionRef &&
+                        (0, f.I)(this.menuListRef, this.focusedOptionRef);
+                  },
+                },
+                {
+                  key: "componentDidUpdate",
+                  value: function (e) {
+                    var t = this.props,
+                      n = t.isDisabled,
+                      r = t.menuIsOpen,
+                      o = this.state.isFocused;
+                    ((o && !n && e.isDisabled) || (o && r && !e.menuIsOpen)) &&
+                      this.focusInput(),
+                      o && n && !e.isDisabled
+                        ? this.setState({ isFocused: !1 }, this.onMenuClose)
+                        : o ||
+                          n ||
+                          !e.isDisabled ||
+                          this.inputRef !== document.activeElement ||
+                          this.setState({ isFocused: !0 }),
                       this.menuListRef &&
-                      this.focusedOptionRef &&
-                      (0, g.I)(this.menuListRef, this.focusedOptionRef);
+                        this.focusedOptionRef &&
+                        this.scrollToFocusedOptionOnUpdate &&
+                        ((0, f.I)(this.menuListRef, this.focusedOptionRef),
+                        (this.scrollToFocusedOptionOnUpdate = !1));
+                  },
                 },
-              },
-              {
-                key: "componentDidUpdate",
-                value: function (e) {
-                  var t = this.props,
-                    n = t.isDisabled,
-                    r = t.menuIsOpen,
-                    o = this.state.isFocused;
-                  ((o && !n && e.isDisabled) || (o && r && !e.menuIsOpen)) &&
-                    this.focusInput(),
-                    o && n && !e.isDisabled
-                      ? this.setState({ isFocused: !1 }, this.onMenuClose)
-                      : o ||
-                        n ||
-                        !e.isDisabled ||
-                        this.inputRef !== document.activeElement ||
-                        this.setState({ isFocused: !0 }),
-                    this.menuListRef &&
-                      this.focusedOptionRef &&
-                      this.scrollToFocusedOptionOnUpdate &&
-                      ((0, g.I)(this.menuListRef, this.focusedOptionRef),
-                      (this.scrollToFocusedOptionOnUpdate = !1));
+                {
+                  key: "componentWillUnmount",
+                  value: function () {
+                    this.stopListeningComposition(),
+                      this.stopListeningToTouch(),
+                      document.removeEventListener("scroll", this.onScroll, !0);
+                  },
                 },
-              },
-              {
-                key: "componentWillUnmount",
-                value: function () {
-                  this.stopListeningComposition(),
-                    this.stopListeningToTouch(),
-                    document.removeEventListener("scroll", this.onScroll, !0);
+                {
+                  key: "onMenuOpen",
+                  value: function () {
+                    this.props.onMenuOpen();
+                  },
                 },
-              },
-              {
-                key: "onMenuOpen",
-                value: function () {
-                  this.props.onMenuOpen();
-                },
-              },
-              {
-                key: "onMenuClose",
-                value: function () {
-                  this.onInputChange("", {
-                    action: "menu-close",
-                    prevInputValue: this.props.inputValue,
-                  }),
-                    this.props.onMenuClose();
-                },
-              },
-              {
-                key: "onInputChange",
-                value: function (e, t) {
-                  this.props.onInputChange(e, t);
-                },
-              },
-              {
-                key: "focusInput",
-                value: function () {
-                  this.inputRef && this.inputRef.focus();
-                },
-              },
-              {
-                key: "blurInput",
-                value: function () {
-                  this.inputRef && this.inputRef.blur();
-                },
-              },
-              {
-                key: "openMenu",
-                value: function (e) {
-                  var t = this,
-                    n = this.state,
-                    r = n.selectValue,
-                    o = n.isFocused,
-                    i = this.buildFocusableOptions(),
-                    a = "first" === e ? 0 : i.length - 1;
-                  if (!this.props.isMulti) {
-                    var s = i.indexOf(r[0]);
-                    s > -1 && (a = s);
-                  }
-                  (this.scrollToFocusedOptionOnUpdate = !(
-                    o && this.menuListRef
-                  )),
-                    this.setState(
-                      {
-                        inputIsHiddenAfterUpdate: !1,
-                        focusedValue: null,
-                        focusedOption: i[a],
-                        focusedOptionId: this.getFocusedOptionId(i[a]),
-                      },
-                      function () {
-                        return t.onMenuOpen();
-                      },
-                    );
-                },
-              },
-              {
-                key: "focusValue",
-                value: function (e) {
-                  var t = this.state,
-                    n = t.selectValue,
-                    r = t.focusedValue;
-                  if (this.props.isMulti) {
-                    this.setState({ focusedOption: null });
-                    var o = n.indexOf(r);
-                    r || (o = -1);
-                    var i = n.length - 1,
-                      a = -1;
-                    if (n.length) {
-                      switch (e) {
-                        case "previous":
-                          a = 0 === o ? 0 : -1 === o ? i : o - 1;
-                          break;
-                        case "next":
-                          o > -1 && o < i && (a = o + 1);
-                      }
-                      this.setState({
-                        inputIsHidden: -1 !== a,
-                        focusedValue: n[a],
-                      });
-                    }
-                  }
-                },
-              },
-              {
-                key: "focusOption",
-                value: function () {
-                  var e =
-                      arguments.length > 0 && void 0 !== arguments[0]
-                        ? arguments[0]
-                        : "first",
-                    t = this.props.pageSize,
-                    n = this.state.focusedOption,
-                    r = this.getFocusableOptions();
-                  if (r.length) {
-                    var o = 0,
-                      i = r.indexOf(n);
-                    n || (i = -1),
-                      "up" === e
-                        ? (o = i > 0 ? i - 1 : r.length - 1)
-                        : "down" === e
-                          ? (o = (i + 1) % r.length)
-                          : "pageup" === e
-                            ? (o = i - t) < 0 && (o = 0)
-                            : "pagedown" === e
-                              ? (o = i + t) > r.length - 1 && (o = r.length - 1)
-                              : "last" === e && (o = r.length - 1),
-                      (this.scrollToFocusedOptionOnUpdate = !0),
-                      this.setState({
-                        focusedOption: r[o],
-                        focusedValue: null,
-                        focusedOptionId: this.getFocusedOptionId(r[o]),
-                      });
-                  }
-                },
-              },
-              {
-                key: "getTheme",
-                value: function () {
-                  return this.props.theme
-                    ? "function" == typeof this.props.theme
-                      ? this.props.theme(oe)
-                      : (0, o.A)((0, o.A)({}, oe), this.props.theme)
-                    : oe;
-                },
-              },
-              {
-                key: "getCommonProps",
-                value: function () {
-                  var e = this.clearValue,
-                    t = this.cx,
-                    n = this.getStyles,
-                    r = this.getClassNames,
-                    o = this.getValue,
-                    i = this.selectOption,
-                    a = this.setValue,
-                    s = this.props,
-                    l = s.isMulti,
-                    c = s.isRtl,
-                    u = s.options;
-                  return {
-                    clearValue: e,
-                    cx: t,
-                    getStyles: n,
-                    getClassNames: r,
-                    getValue: o,
-                    hasValue: this.hasValue(),
-                    isMulti: l,
-                    isRtl: c,
-                    options: u,
-                    selectOption: i,
-                    selectProps: s,
-                    setValue: a,
-                    theme: this.getTheme(),
-                  };
-                },
-              },
-              {
-                key: "hasValue",
-                value: function () {
-                  return this.state.selectValue.length > 0;
-                },
-              },
-              {
-                key: "hasOptions",
-                value: function () {
-                  return !!this.getFocusableOptions().length;
-                },
-              },
-              {
-                key: "isClearable",
-                value: function () {
-                  var e = this.props,
-                    t = e.isClearable,
-                    n = e.isMulti;
-                  return void 0 === t ? n : t;
-                },
-              },
-              {
-                key: "isOptionDisabled",
-                value: function (e, t) {
-                  return he(this.props, e, t);
-                },
-              },
-              {
-                key: "isOptionSelected",
-                value: function (e, t) {
-                  return ge(this.props, e, t);
-                },
-              },
-              {
-                key: "filterOption",
-                value: function (e, t) {
-                  return me(this.props, e, t);
-                },
-              },
-              {
-                key: "formatOptionLabel",
-                value: function (e, t) {
-                  if ("function" == typeof this.props.formatOptionLabel) {
-                    var n = this.props.inputValue,
-                      r = this.state.selectValue;
-                    return this.props.formatOptionLabel(e, {
-                      context: t,
-                      inputValue: n,
-                      selectValue: r,
-                    });
-                  }
-                  return this.getOptionLabel(e);
-                },
-              },
-              {
-                key: "formatGroupLabel",
-                value: function (e) {
-                  return this.props.formatGroupLabel(e);
-                },
-              },
-              {
-                key: "startListeningComposition",
-                value: function () {
-                  document &&
-                    document.addEventListener &&
-                    (document.addEventListener(
-                      "compositionstart",
-                      this.onCompositionStart,
-                      !1,
-                    ),
-                    document.addEventListener(
-                      "compositionend",
-                      this.onCompositionEnd,
-                      !1,
-                    ));
-                },
-              },
-              {
-                key: "stopListeningComposition",
-                value: function () {
-                  document &&
-                    document.removeEventListener &&
-                    (document.removeEventListener(
-                      "compositionstart",
-                      this.onCompositionStart,
-                    ),
-                    document.removeEventListener(
-                      "compositionend",
-                      this.onCompositionEnd,
-                    ));
-                },
-              },
-              {
-                key: "startListeningToTouch",
-                value: function () {
-                  document &&
-                    document.addEventListener &&
-                    (document.addEventListener(
-                      "touchstart",
-                      this.onTouchStart,
-                      !1,
-                    ),
-                    document.addEventListener(
-                      "touchmove",
-                      this.onTouchMove,
-                      !1,
-                    ),
-                    document.addEventListener("touchend", this.onTouchEnd, !1));
-                },
-              },
-              {
-                key: "stopListeningToTouch",
-                value: function () {
-                  document &&
-                    document.removeEventListener &&
-                    (document.removeEventListener(
-                      "touchstart",
-                      this.onTouchStart,
-                    ),
-                    document.removeEventListener("touchmove", this.onTouchMove),
-                    document.removeEventListener("touchend", this.onTouchEnd));
-                },
-              },
-              {
-                key: "renderInput",
-                value: function () {
-                  var e = this.props,
-                    t = e.isDisabled,
-                    n = e.isSearchable,
-                    i = e.inputId,
-                    a = e.inputValue,
-                    s = e.tabIndex,
-                    l = e.form,
-                    c = e.menuIsOpen,
-                    u = e.required,
-                    p = this.getComponents().Input,
-                    d = this.state,
-                    f = d.inputIsHidden,
-                    m = d.ariaSelection,
-                    v = this.commonProps,
-                    b = i || this.getElementId("input"),
-                    y = (0, o.A)(
-                      (0, o.A)(
-                        (0, o.A)(
-                          {
-                            "aria-autocomplete": "list",
-                            "aria-expanded": c,
-                            "aria-haspopup": !0,
-                            "aria-errormessage":
-                              this.props["aria-errormessage"],
-                            "aria-invalid": this.props["aria-invalid"],
-                            "aria-label": this.props["aria-label"],
-                            "aria-labelledby": this.props["aria-labelledby"],
-                            "aria-required": u,
-                            role: "combobox",
-                            "aria-activedescendant": this.isAppleDevice
-                              ? void 0
-                              : this.state.focusedOptionId || "",
-                          },
-                          c && {
-                            "aria-controls": this.getElementId("listbox"),
-                          },
-                        ),
-                        !n && { "aria-readonly": !0 },
-                      ),
-                      this.hasValue()
-                        ? "initial-input-focus" ===
-                            (null == m ? void 0 : m.action) && {
-                            "aria-describedby":
-                              this.getElementId("live-region"),
-                          }
-                        : {
-                            "aria-describedby":
-                              this.getElementId("placeholder"),
-                          },
-                    );
-                  return n
-                    ? h.createElement(
-                        p,
-                        (0, r.A)(
-                          {},
-                          v,
-                          {
-                            autoCapitalize: "none",
-                            autoComplete: "off",
-                            autoCorrect: "off",
-                            id: b,
-                            innerRef: this.getInputRef,
-                            isDisabled: t,
-                            isHidden: f,
-                            onBlur: this.onInputBlur,
-                            onChange: this.handleInputChange,
-                            onFocus: this.onInputFocus,
-                            spellCheck: "false",
-                            tabIndex: s,
-                            form: l,
-                            type: "text",
-                            value: a,
-                          },
-                          y,
-                        ),
-                      )
-                    : h.createElement(
-                        T,
-                        (0, r.A)(
-                          {
-                            id: b,
-                            innerRef: this.getInputRef,
-                            onBlur: this.onInputBlur,
-                            onChange: g.J,
-                            onFocus: this.onInputFocus,
-                            disabled: t,
-                            tabIndex: s,
-                            inputMode: "none",
-                            form: l,
-                            value: "",
-                          },
-                          y,
-                        ),
-                      );
-                },
-              },
-              {
-                key: "renderPlaceholderOrValue",
-                value: function () {
-                  var e = this,
-                    t = this.getComponents(),
-                    n = t.MultiValue,
-                    o = t.MultiValueContainer,
-                    i = t.MultiValueLabel,
-                    a = t.MultiValueRemove,
-                    s = t.SingleValue,
-                    l = t.Placeholder,
-                    c = this.commonProps,
-                    u = this.props,
-                    p = u.controlShouldRenderValue,
-                    d = u.isDisabled,
-                    f = u.isMulti,
-                    g = u.inputValue,
-                    m = u.placeholder,
-                    v = this.state,
-                    b = v.selectValue,
-                    y = v.focusedValue,
-                    w = v.isFocused;
-                  if (!this.hasValue() || !p)
-                    return g
-                      ? null
-                      : h.createElement(
-                          l,
-                          (0, r.A)({}, c, {
-                            key: "placeholder",
-                            isDisabled: d,
-                            isFocused: w,
-                            innerProps: {
-                              id: this.getElementId("placeholder"),
-                            },
-                          }),
-                          m,
-                        );
-                  if (f)
-                    return b.map(function (t, s) {
-                      var l = t === y,
-                        u = ""
-                          .concat(e.getOptionLabel(t), "-")
-                          .concat(e.getOptionValue(t));
-                      return h.createElement(
-                        n,
-                        (0, r.A)({}, c, {
-                          components: { Container: o, Label: i, Remove: a },
-                          isFocused: l,
-                          isDisabled: d,
-                          key: u,
-                          index: s,
-                          removeProps: {
-                            onClick: function () {
-                              return e.removeValue(t);
-                            },
-                            onTouchEnd: function () {
-                              return e.removeValue(t);
-                            },
-                            onMouseDown: function (e) {
-                              e.preventDefault();
-                            },
-                          },
-                          data: t,
-                        }),
-                        e.formatOptionLabel(t, "value"),
-                      );
-                    });
-                  if (g) return null;
-                  var O = b[0];
-                  return h.createElement(
-                    s,
-                    (0, r.A)({}, c, { data: O, isDisabled: d }),
-                    this.formatOptionLabel(O, "value"),
-                  );
-                },
-              },
-              {
-                key: "renderClearIndicator",
-                value: function () {
-                  var e = this.getComponents().ClearIndicator,
-                    t = this.commonProps,
-                    n = this.props,
-                    o = n.isDisabled,
-                    i = n.isLoading,
-                    a = this.state.isFocused;
-                  if (!this.isClearable() || !e || o || !this.hasValue() || i)
-                    return null;
-                  var s = {
-                    onMouseDown: this.onClearIndicatorMouseDown,
-                    onTouchEnd: this.onClearIndicatorTouchEnd,
-                    "aria-hidden": "true",
-                  };
-                  return h.createElement(
-                    e,
-                    (0, r.A)({}, t, { innerProps: s, isFocused: a }),
-                  );
-                },
-              },
-              {
-                key: "renderLoadingIndicator",
-                value: function () {
-                  var e = this.getComponents().LoadingIndicator,
-                    t = this.commonProps,
-                    n = this.props,
-                    o = n.isDisabled,
-                    i = n.isLoading,
-                    a = this.state.isFocused;
-                  return e && i
-                    ? h.createElement(
-                        e,
-                        (0, r.A)({}, t, {
-                          innerProps: { "aria-hidden": "true" },
-                          isDisabled: o,
-                          isFocused: a,
-                        }),
-                      )
-                    : null;
-                },
-              },
-              {
-                key: "renderIndicatorSeparator",
-                value: function () {
-                  var e = this.getComponents(),
-                    t = e.DropdownIndicator,
-                    n = e.IndicatorSeparator;
-                  if (!t || !n) return null;
-                  var o = this.commonProps,
-                    i = this.props.isDisabled,
-                    a = this.state.isFocused;
-                  return h.createElement(
-                    n,
-                    (0, r.A)({}, o, { isDisabled: i, isFocused: a }),
-                  );
-                },
-              },
-              {
-                key: "renderDropdownIndicator",
-                value: function () {
-                  var e = this.getComponents().DropdownIndicator;
-                  if (!e) return null;
-                  var t = this.commonProps,
-                    n = this.props.isDisabled,
-                    o = this.state.isFocused,
-                    i = {
-                      onMouseDown: this.onDropdownIndicatorMouseDown,
-                      onTouchEnd: this.onDropdownIndicatorTouchEnd,
-                      "aria-hidden": "true",
-                    };
-                  return h.createElement(
-                    e,
-                    (0, r.A)({}, t, {
-                      innerProps: i,
-                      isDisabled: n,
-                      isFocused: o,
+                {
+                  key: "onMenuClose",
+                  value: function () {
+                    this.onInputChange("", {
+                      action: "menu-close",
+                      prevInputValue: this.props.inputValue,
                     }),
-                  );
+                      this.props.onMenuClose();
+                  },
                 },
-              },
-              {
-                key: "renderMenu",
-                value: function () {
-                  var e = this,
-                    t = this.getComponents(),
-                    n = t.Group,
-                    o = t.GroupHeading,
-                    i = t.Menu,
-                    a = t.MenuList,
-                    s = t.MenuPortal,
-                    l = t.LoadingMessage,
-                    c = t.NoOptionsMessage,
-                    u = t.Option,
-                    p = this.commonProps,
-                    d = this.state.focusedOption,
-                    f = this.props,
-                    m = f.captureMenuScroll,
-                    v = f.inputValue,
-                    b = f.isLoading,
-                    y = f.loadingMessage,
-                    w = f.minMenuHeight,
-                    O = f.maxMenuHeight,
-                    x = f.menuIsOpen,
-                    E = f.menuPlacement,
-                    I = f.menuPosition,
-                    A = f.menuPortalTarget,
-                    D = f.menuShouldBlockScroll,
-                    C = f.menuShouldScrollIntoView,
-                    S = f.noOptionsMessage,
-                    P = f.onMenuScrollToTop,
-                    R = f.onMenuScrollToBottom;
-                  if (!x) return null;
-                  var k,
-                    B = function (t, n) {
-                      var o = t.type,
-                        i = t.data,
-                        a = t.isDisabled,
-                        s = t.isSelected,
-                        l = t.label,
-                        c = t.value,
-                        f = d === i,
-                        g = a
-                          ? void 0
-                          : function () {
-                              return e.onOptionHover(i);
-                            },
-                        m = a
-                          ? void 0
-                          : function () {
-                              return e.selectOption(i);
-                            },
-                        v = "".concat(e.getElementId("option"), "-").concat(n),
-                        b = {
-                          id: v,
-                          onClick: m,
-                          onMouseMove: g,
-                          onMouseOver: g,
-                          tabIndex: -1,
-                          role: "option",
-                          "aria-selected": e.isAppleDevice ? void 0 : s,
-                        };
-                      return h.createElement(
-                        u,
-                        (0, r.A)({}, p, {
-                          innerProps: b,
-                          data: i,
-                          isDisabled: a,
-                          isSelected: s,
-                          key: v,
-                          label: l,
-                          type: o,
-                          value: c,
-                          isFocused: f,
-                          innerRef: f ? e.getFocusedOptionRef : void 0,
-                        }),
-                        e.formatOptionLabel(t.data, "menu"),
-                      );
-                    };
-                  if (this.hasOptions())
-                    k = this.getCategorizedOptions().map(function (t) {
-                      if ("group" === t.type) {
-                        var i = t.data,
-                          a = t.options,
-                          s = t.index,
-                          l = "".concat(e.getElementId("group"), "-").concat(s),
-                          c = "".concat(l, "-heading");
-                        return h.createElement(
-                          n,
-                          (0, r.A)({}, p, {
-                            key: l,
-                            data: i,
-                            options: a,
-                            Heading: o,
-                            headingProps: { id: c, data: t.data },
-                            label: e.formatGroupLabel(t.data),
-                          }),
-                          t.options.map(function (e) {
-                            return B(e, "".concat(s, "-").concat(e.index));
-                          }),
-                        );
-                      }
-                      if ("option" === t.type) return B(t, "".concat(t.index));
-                    });
-                  else if (b) {
-                    var M = y({ inputValue: v });
-                    if (null === M) return null;
-                    k = h.createElement(l, p, M);
-                  } else {
-                    var N = S({ inputValue: v });
-                    if (null === N) return null;
-                    k = h.createElement(c, p, N);
-                  }
-                  var _ = {
-                      minMenuHeight: w,
-                      maxMenuHeight: O,
-                      menuPlacement: E,
-                      menuPosition: I,
-                      menuShouldScrollIntoView: C,
-                    },
-                    T = h.createElement(g.M, (0, r.A)({}, p, _), function (t) {
-                      var n = t.ref,
-                        o = t.placerProps,
-                        s = o.placement,
-                        l = o.maxHeight;
-                      return h.createElement(
-                        i,
-                        (0, r.A)({}, p, _, {
-                          innerRef: n,
-                          innerProps: {
-                            onMouseDown: e.onMenuMouseDown,
-                            onMouseMove: e.onMenuMouseMove,
-                          },
-                          isLoading: b,
-                          placement: s,
-                        }),
-                        h.createElement(
-                          z,
-                          {
-                            captureEnabled: m,
-                            onTopArrive: P,
-                            onBottomArrive: R,
-                            lockEnabled: D,
-                          },
-                          function (t) {
-                            return h.createElement(
-                              a,
-                              (0, r.A)({}, p, {
-                                innerRef: function (n) {
-                                  e.getMenuListRef(n), t(n);
-                                },
-                                innerProps: {
-                                  role: "listbox",
-                                  "aria-multiselectable": p.isMulti,
-                                  id: e.getElementId("listbox"),
-                                },
-                                isLoading: b,
-                                maxHeight: l,
-                                focusedOption: d,
-                              }),
-                              k,
-                            );
-                          },
-                        ),
-                      );
-                    });
-                  return A || "fixed" === I
-                    ? h.createElement(
-                        s,
-                        (0, r.A)({}, p, {
-                          appendTo: A,
-                          controlElement: this.controlRef,
-                          menuPlacement: E,
-                          menuPosition: I,
-                        }),
-                        T,
-                      )
-                    : T;
+                {
+                  key: "onInputChange",
+                  value: function (e, t) {
+                    this.props.onInputChange(e, t);
+                  },
                 },
-              },
-              {
-                key: "renderFormField",
-                value: function () {
-                  var e = this,
-                    t = this.props,
-                    n = t.delimiter,
-                    r = t.isDisabled,
-                    o = t.isMulti,
-                    i = t.name,
-                    a = t.required,
-                    s = this.state.selectValue;
-                  if (a && !this.hasValue() && !r)
-                    return h.createElement(J, {
-                      name: i,
-                      onFocus: this.onValueInputFocus,
-                    });
-                  if (i && !r) {
-                    if (o) {
-                      if (n) {
-                        var l = s
-                          .map(function (t) {
-                            return e.getOptionValue(t);
-                          })
-                          .join(n);
-                        return h.createElement("input", {
-                          name: i,
-                          type: "hidden",
-                          value: l,
+                {
+                  key: "focusInput",
+                  value: function () {
+                    this.inputRef && this.inputRef.focus();
+                  },
+                },
+                {
+                  key: "blurInput",
+                  value: function () {
+                    this.inputRef && this.inputRef.blur();
+                  },
+                },
+                {
+                  key: "openMenu",
+                  value: function (e) {
+                    var t = this,
+                      n = this.state,
+                      r = n.selectValue,
+                      o = n.isFocused,
+                      i = this.buildFocusableOptions(),
+                      a = "first" === e ? 0 : i.length - 1;
+                    if (!this.props.isMulti) {
+                      var s = i.indexOf(r[0]);
+                      s > -1 && (a = s);
+                    }
+                    (this.scrollToFocusedOptionOnUpdate = !(
+                      o && this.menuListRef
+                    )),
+                      this.setState(
+                        {
+                          inputIsHiddenAfterUpdate: !1,
+                          focusedValue: null,
+                          focusedOption: i[a],
+                          focusedOptionId: this.getFocusedOptionId(i[a]),
+                        },
+                        function () {
+                          return t.onMenuOpen();
+                        },
+                      );
+                  },
+                },
+                {
+                  key: "focusValue",
+                  value: function (e) {
+                    var t = this.state,
+                      n = t.selectValue,
+                      r = t.focusedValue;
+                    if (this.props.isMulti) {
+                      this.setState({ focusedOption: null });
+                      var o = n.indexOf(r);
+                      r || (o = -1);
+                      var i = n.length - 1,
+                        a = -1;
+                      if (n.length) {
+                        switch (e) {
+                          case "previous":
+                            a = 0 === o ? 0 : -1 === o ? i : o - 1;
+                            break;
+                          case "next":
+                            o > -1 && o < i && (a = o + 1);
+                        }
+                        this.setState({
+                          inputIsHidden: -1 !== a,
+                          focusedValue: n[a],
                         });
                       }
-                      var c =
-                        s.length > 0
-                          ? s.map(function (t, n) {
-                              return h.createElement("input", {
-                                key: "i-".concat(n),
+                    }
+                  },
+                },
+                {
+                  key: "focusOption",
+                  value: function () {
+                    var e =
+                        arguments.length > 0 && void 0 !== arguments[0]
+                          ? arguments[0]
+                          : "first",
+                      t = this.props.pageSize,
+                      n = this.state.focusedOption,
+                      r = this.getFocusableOptions();
+                    if (r.length) {
+                      var o = 0,
+                        i = r.indexOf(n);
+                      n || (i = -1),
+                        "up" === e
+                          ? (o = i > 0 ? i - 1 : r.length - 1)
+                          : "down" === e
+                            ? (o = (i + 1) % r.length)
+                            : "pageup" === e
+                              ? (o = i - t) < 0 && (o = 0)
+                              : "pagedown" === e
+                                ? (o = i + t) > r.length - 1 &&
+                                  (o = r.length - 1)
+                                : "last" === e && (o = r.length - 1),
+                        (this.scrollToFocusedOptionOnUpdate = !0),
+                        this.setState({
+                          focusedOption: r[o],
+                          focusedValue: null,
+                          focusedOptionId: this.getFocusedOptionId(r[o]),
+                        });
+                    }
+                  },
+                },
+                {
+                  key: "getTheme",
+                  value: function () {
+                    return this.props.theme
+                      ? "function" == typeof this.props.theme
+                        ? this.props.theme(ne)
+                        : (0, o.A)((0, o.A)({}, ne), this.props.theme)
+                      : ne;
+                  },
+                },
+                {
+                  key: "getCommonProps",
+                  value: function () {
+                    var e = this.clearValue,
+                      t = this.cx,
+                      n = this.getStyles,
+                      r = this.getClassNames,
+                      o = this.getValue,
+                      i = this.selectOption,
+                      a = this.setValue,
+                      s = this.props,
+                      l = s.isMulti,
+                      c = s.isRtl,
+                      u = s.options;
+                    return {
+                      clearValue: e,
+                      cx: t,
+                      getStyles: n,
+                      getClassNames: r,
+                      getValue: o,
+                      hasValue: this.hasValue(),
+                      isMulti: l,
+                      isRtl: c,
+                      options: u,
+                      selectOption: i,
+                      selectProps: s,
+                      setValue: a,
+                      theme: this.getTheme(),
+                    };
+                  },
+                },
+                {
+                  key: "hasValue",
+                  value: function () {
+                    return this.state.selectValue.length > 0;
+                  },
+                },
+                {
+                  key: "hasOptions",
+                  value: function () {
+                    return !!this.getFocusableOptions().length;
+                  },
+                },
+                {
+                  key: "isClearable",
+                  value: function () {
+                    var e = this.props,
+                      t = e.isClearable,
+                      n = e.isMulti;
+                    return void 0 === t ? n : t;
+                  },
+                },
+                {
+                  key: "isOptionDisabled",
+                  value: function (e, t) {
+                    return de(this.props, e, t);
+                  },
+                },
+                {
+                  key: "isOptionSelected",
+                  value: function (e, t) {
+                    return fe(this.props, e, t);
+                  },
+                },
+                {
+                  key: "filterOption",
+                  value: function (e, t) {
+                    return he(this.props, e, t);
+                  },
+                },
+                {
+                  key: "formatOptionLabel",
+                  value: function (e, t) {
+                    if ("function" == typeof this.props.formatOptionLabel) {
+                      var n = this.props.inputValue,
+                        r = this.state.selectValue;
+                      return this.props.formatOptionLabel(e, {
+                        context: t,
+                        inputValue: n,
+                        selectValue: r,
+                      });
+                    }
+                    return this.getOptionLabel(e);
+                  },
+                },
+                {
+                  key: "formatGroupLabel",
+                  value: function (e) {
+                    return this.props.formatGroupLabel(e);
+                  },
+                },
+                {
+                  key: "startListeningComposition",
+                  value: function () {
+                    document &&
+                      document.addEventListener &&
+                      (document.addEventListener(
+                        "compositionstart",
+                        this.onCompositionStart,
+                        !1,
+                      ),
+                      document.addEventListener(
+                        "compositionend",
+                        this.onCompositionEnd,
+                        !1,
+                      ));
+                  },
+                },
+                {
+                  key: "stopListeningComposition",
+                  value: function () {
+                    document &&
+                      document.removeEventListener &&
+                      (document.removeEventListener(
+                        "compositionstart",
+                        this.onCompositionStart,
+                      ),
+                      document.removeEventListener(
+                        "compositionend",
+                        this.onCompositionEnd,
+                      ));
+                  },
+                },
+                {
+                  key: "startListeningToTouch",
+                  value: function () {
+                    document &&
+                      document.addEventListener &&
+                      (document.addEventListener(
+                        "touchstart",
+                        this.onTouchStart,
+                        !1,
+                      ),
+                      document.addEventListener(
+                        "touchmove",
+                        this.onTouchMove,
+                        !1,
+                      ),
+                      document.addEventListener(
+                        "touchend",
+                        this.onTouchEnd,
+                        !1,
+                      ));
+                  },
+                },
+                {
+                  key: "stopListeningToTouch",
+                  value: function () {
+                    document &&
+                      document.removeEventListener &&
+                      (document.removeEventListener(
+                        "touchstart",
+                        this.onTouchStart,
+                      ),
+                      document.removeEventListener(
+                        "touchmove",
+                        this.onTouchMove,
+                      ),
+                      document.removeEventListener(
+                        "touchend",
+                        this.onTouchEnd,
+                      ));
+                  },
+                },
+                {
+                  key: "renderInput",
+                  value: function () {
+                    var e = this.props,
+                      t = e.isDisabled,
+                      n = e.isSearchable,
+                      i = e.inputId,
+                      a = e.inputValue,
+                      s = e.tabIndex,
+                      l = e.form,
+                      c = e.menuIsOpen,
+                      u = e.required,
+                      p = this.getComponents().Input,
+                      h = this.state,
+                      g = h.inputIsHidden,
+                      m = h.ariaSelection,
+                      v = this.commonProps,
+                      b = i || this.getElementId("input"),
+                      y = (0, o.A)(
+                        (0, o.A)(
+                          (0, o.A)(
+                            {
+                              "aria-autocomplete": "list",
+                              "aria-expanded": c,
+                              "aria-haspopup": !0,
+                              "aria-errormessage":
+                                this.props["aria-errormessage"],
+                              "aria-invalid": this.props["aria-invalid"],
+                              "aria-label": this.props["aria-label"],
+                              "aria-labelledby": this.props["aria-labelledby"],
+                              "aria-required": u,
+                              role: "combobox",
+                              "aria-activedescendant": this.isAppleDevice
+                                ? void 0
+                                : this.state.focusedOptionId || "",
+                            },
+                            c && {
+                              "aria-controls": this.getElementId("listbox"),
+                            },
+                          ),
+                          !n && { "aria-readonly": !0 },
+                        ),
+                        this.hasValue()
+                          ? "initial-input-focus" ===
+                              (null == m ? void 0 : m.action) && {
+                              "aria-describedby":
+                                this.getElementId("live-region"),
+                            }
+                          : {
+                              "aria-describedby":
+                                this.getElementId("placeholder"),
+                            },
+                      );
+                    return n
+                      ? d.createElement(
+                          p,
+                          (0, r.A)(
+                            {},
+                            v,
+                            {
+                              autoCapitalize: "none",
+                              autoComplete: "off",
+                              autoCorrect: "off",
+                              id: b,
+                              innerRef: this.getInputRef,
+                              isDisabled: t,
+                              isHidden: g,
+                              onBlur: this.onInputBlur,
+                              onChange: this.handleInputChange,
+                              onFocus: this.onInputFocus,
+                              spellCheck: "false",
+                              tabIndex: s,
+                              form: l,
+                              type: "text",
+                              value: a,
+                            },
+                            y,
+                          ),
+                        )
+                      : d.createElement(
+                          N,
+                          (0, r.A)(
+                            {
+                              id: b,
+                              innerRef: this.getInputRef,
+                              onBlur: this.onInputBlur,
+                              onChange: f.J,
+                              onFocus: this.onInputFocus,
+                              disabled: t,
+                              tabIndex: s,
+                              inputMode: "none",
+                              form: l,
+                              value: "",
+                            },
+                            y,
+                          ),
+                        );
+                  },
+                },
+                {
+                  key: "renderPlaceholderOrValue",
+                  value: function () {
+                    var e = this,
+                      t = this.getComponents(),
+                      n = t.MultiValue,
+                      o = t.MultiValueContainer,
+                      i = t.MultiValueLabel,
+                      a = t.MultiValueRemove,
+                      s = t.SingleValue,
+                      l = t.Placeholder,
+                      c = this.commonProps,
+                      u = this.props,
+                      p = u.controlShouldRenderValue,
+                      f = u.isDisabled,
+                      h = u.isMulti,
+                      g = u.inputValue,
+                      m = u.placeholder,
+                      v = this.state,
+                      b = v.selectValue,
+                      y = v.focusedValue,
+                      w = v.isFocused;
+                    if (!this.hasValue() || !p)
+                      return g
+                        ? null
+                        : d.createElement(
+                            l,
+                            (0, r.A)({}, c, {
+                              key: "placeholder",
+                              isDisabled: f,
+                              isFocused: w,
+                              innerProps: {
+                                id: this.getElementId("placeholder"),
+                              },
+                            }),
+                            m,
+                          );
+                    if (h)
+                      return b.map(function (t, s) {
+                        var l = t === y,
+                          u = ""
+                            .concat(e.getOptionLabel(t), "-")
+                            .concat(e.getOptionValue(t));
+                        return d.createElement(
+                          n,
+                          (0, r.A)({}, c, {
+                            components: { Container: o, Label: i, Remove: a },
+                            isFocused: l,
+                            isDisabled: f,
+                            key: u,
+                            index: s,
+                            removeProps: {
+                              onClick: function () {
+                                return e.removeValue(t);
+                              },
+                              onTouchEnd: function () {
+                                return e.removeValue(t);
+                              },
+                              onMouseDown: function (e) {
+                                e.preventDefault();
+                              },
+                            },
+                            data: t,
+                          }),
+                          e.formatOptionLabel(t, "value"),
+                        );
+                      });
+                    if (g) return null;
+                    var O = b[0];
+                    return d.createElement(
+                      s,
+                      (0, r.A)({}, c, { data: O, isDisabled: f }),
+                      this.formatOptionLabel(O, "value"),
+                    );
+                  },
+                },
+                {
+                  key: "renderClearIndicator",
+                  value: function () {
+                    var e = this.getComponents().ClearIndicator,
+                      t = this.commonProps,
+                      n = this.props,
+                      o = n.isDisabled,
+                      i = n.isLoading,
+                      a = this.state.isFocused;
+                    if (!this.isClearable() || !e || o || !this.hasValue() || i)
+                      return null;
+                    var s = {
+                      onMouseDown: this.onClearIndicatorMouseDown,
+                      onTouchEnd: this.onClearIndicatorTouchEnd,
+                      "aria-hidden": "true",
+                    };
+                    return d.createElement(
+                      e,
+                      (0, r.A)({}, t, { innerProps: s, isFocused: a }),
+                    );
+                  },
+                },
+                {
+                  key: "renderLoadingIndicator",
+                  value: function () {
+                    var e = this.getComponents().LoadingIndicator,
+                      t = this.commonProps,
+                      n = this.props,
+                      o = n.isDisabled,
+                      i = n.isLoading,
+                      a = this.state.isFocused;
+                    if (!e || !i) return null;
+                    return d.createElement(
+                      e,
+                      (0, r.A)({}, t, {
+                        innerProps: { "aria-hidden": "true" },
+                        isDisabled: o,
+                        isFocused: a,
+                      }),
+                    );
+                  },
+                },
+                {
+                  key: "renderIndicatorSeparator",
+                  value: function () {
+                    var e = this.getComponents(),
+                      t = e.DropdownIndicator,
+                      n = e.IndicatorSeparator;
+                    if (!t || !n) return null;
+                    var o = this.commonProps,
+                      i = this.props.isDisabled,
+                      a = this.state.isFocused;
+                    return d.createElement(
+                      n,
+                      (0, r.A)({}, o, { isDisabled: i, isFocused: a }),
+                    );
+                  },
+                },
+                {
+                  key: "renderDropdownIndicator",
+                  value: function () {
+                    var e = this.getComponents().DropdownIndicator;
+                    if (!e) return null;
+                    var t = this.commonProps,
+                      n = this.props.isDisabled,
+                      o = this.state.isFocused,
+                      i = {
+                        onMouseDown: this.onDropdownIndicatorMouseDown,
+                        onTouchEnd: this.onDropdownIndicatorTouchEnd,
+                        "aria-hidden": "true",
+                      };
+                    return d.createElement(
+                      e,
+                      (0, r.A)({}, t, {
+                        innerProps: i,
+                        isDisabled: n,
+                        isFocused: o,
+                      }),
+                    );
+                  },
+                },
+                {
+                  key: "renderMenu",
+                  value: function () {
+                    var e = this,
+                      t = this.getComponents(),
+                      n = t.Group,
+                      o = t.GroupHeading,
+                      i = t.Menu,
+                      a = t.MenuList,
+                      s = t.MenuPortal,
+                      l = t.LoadingMessage,
+                      c = t.NoOptionsMessage,
+                      u = t.Option,
+                      p = this.commonProps,
+                      h = this.state.focusedOption,
+                      g = this.props,
+                      m = g.captureMenuScroll,
+                      v = g.inputValue,
+                      b = g.isLoading,
+                      y = g.loadingMessage,
+                      w = g.minMenuHeight,
+                      O = g.maxMenuHeight,
+                      x = g.menuIsOpen,
+                      E = g.menuPlacement,
+                      I = g.menuPosition,
+                      A = g.menuPortalTarget,
+                      D = g.menuShouldBlockScroll,
+                      C = g.menuShouldScrollIntoView,
+                      S = g.noOptionsMessage,
+                      P = g.onMenuScrollToTop,
+                      R = g.onMenuScrollToBottom;
+                    if (!x) return null;
+                    var k,
+                      B = function (t, n) {
+                        var o = t.type,
+                          i = t.data,
+                          a = t.isDisabled,
+                          s = t.isSelected,
+                          l = t.label,
+                          c = t.value,
+                          f = h === i,
+                          g = a
+                            ? void 0
+                            : function () {
+                                return e.onOptionHover(i);
+                              },
+                          m = a
+                            ? void 0
+                            : function () {
+                                return e.selectOption(i);
+                              },
+                          v = ""
+                            .concat(e.getElementId("option"), "-")
+                            .concat(n),
+                          b = {
+                            id: v,
+                            onClick: m,
+                            onMouseMove: g,
+                            onMouseOver: g,
+                            tabIndex: -1,
+                            role: "option",
+                            "aria-selected": e.isAppleDevice ? void 0 : s,
+                          };
+                        return d.createElement(
+                          u,
+                          (0, r.A)({}, p, {
+                            innerProps: b,
+                            data: i,
+                            isDisabled: a,
+                            isSelected: s,
+                            key: v,
+                            label: l,
+                            type: o,
+                            value: c,
+                            isFocused: f,
+                            innerRef: f ? e.getFocusedOptionRef : void 0,
+                          }),
+                          e.formatOptionLabel(t.data, "menu"),
+                        );
+                      };
+                    if (this.hasOptions())
+                      k = this.getCategorizedOptions().map(function (t) {
+                        if ("group" === t.type) {
+                          var i = t.data,
+                            a = t.options,
+                            s = t.index,
+                            l = ""
+                              .concat(e.getElementId("group"), "-")
+                              .concat(s),
+                            c = "".concat(l, "-heading");
+                          return d.createElement(
+                            n,
+                            (0, r.A)({}, p, {
+                              key: l,
+                              data: i,
+                              options: a,
+                              Heading: o,
+                              headingProps: { id: c, data: t.data },
+                              label: e.formatGroupLabel(t.data),
+                            }),
+                            t.options.map(function (e) {
+                              return B(e, "".concat(s, "-").concat(e.index));
+                            }),
+                          );
+                        }
+                        if ("option" === t.type)
+                          return B(t, "".concat(t.index));
+                      });
+                    else if (b) {
+                      var M = y({ inputValue: v });
+                      if (null === M) return null;
+                      k = d.createElement(l, p, M);
+                    } else {
+                      var N = S({ inputValue: v });
+                      if (null === N) return null;
+                      k = d.createElement(c, p, N);
+                    }
+                    var _ = {
+                        minMenuHeight: w,
+                        maxMenuHeight: O,
+                        menuPlacement: E,
+                        menuPosition: I,
+                        menuShouldScrollIntoView: C,
+                      },
+                      T = d.createElement(
+                        f.M,
+                        (0, r.A)({}, p, _),
+                        function (t) {
+                          var n = t.ref,
+                            o = t.placerProps,
+                            s = o.placement,
+                            l = o.maxHeight;
+                          return d.createElement(
+                            i,
+                            (0, r.A)({}, p, _, {
+                              innerRef: n,
+                              innerProps: {
+                                onMouseDown: e.onMenuMouseDown,
+                                onMouseMove: e.onMenuMouseMove,
+                              },
+                              isLoading: b,
+                              placement: s,
+                            }),
+                            d.createElement(
+                              W,
+                              {
+                                captureEnabled: m,
+                                onTopArrive: P,
+                                onBottomArrive: R,
+                                lockEnabled: D,
+                              },
+                              function (t) {
+                                return d.createElement(
+                                  a,
+                                  (0, r.A)({}, p, {
+                                    innerRef: function (n) {
+                                      e.getMenuListRef(n), t(n);
+                                    },
+                                    innerProps: {
+                                      role: "listbox",
+                                      "aria-multiselectable": p.isMulti,
+                                      id: e.getElementId("listbox"),
+                                    },
+                                    isLoading: b,
+                                    maxHeight: l,
+                                    focusedOption: h,
+                                  }),
+                                  k,
+                                );
+                              },
+                            ),
+                          );
+                        },
+                      );
+                    return A || "fixed" === I
+                      ? d.createElement(
+                          s,
+                          (0, r.A)({}, p, {
+                            appendTo: A,
+                            controlElement: this.controlRef,
+                            menuPlacement: E,
+                            menuPosition: I,
+                          }),
+                          T,
+                        )
+                      : T;
+                  },
+                },
+                {
+                  key: "renderFormField",
+                  value: function () {
+                    var e = this,
+                      t = this.props,
+                      n = t.delimiter,
+                      r = t.isDisabled,
+                      o = t.isMulti,
+                      i = t.name,
+                      a = t.required,
+                      s = this.state.selectValue;
+                    if (a && !this.hasValue() && !r)
+                      return d.createElement(z, {
+                        name: i,
+                        onFocus: this.onValueInputFocus,
+                      });
+                    if (i && !r) {
+                      if (o) {
+                        if (n) {
+                          var l = s
+                            .map(function (t) {
+                              return e.getOptionValue(t);
+                            })
+                            .join(n);
+                          return d.createElement("input", {
+                            name: i,
+                            type: "hidden",
+                            value: l,
+                          });
+                        }
+                        var c =
+                          s.length > 0
+                            ? s.map(function (t, n) {
+                                return d.createElement("input", {
+                                  key: "i-".concat(n),
+                                  name: i,
+                                  type: "hidden",
+                                  value: e.getOptionValue(t),
+                                });
+                              })
+                            : d.createElement("input", {
                                 name: i,
                                 type: "hidden",
-                                value: e.getOptionValue(t),
+                                value: "",
                               });
-                            })
-                          : h.createElement("input", {
-                              name: i,
-                              type: "hidden",
-                              value: "",
-                            });
-                      return h.createElement("div", null, c);
+                        return d.createElement("div", null, c);
+                      }
+                      var u = s[0] ? this.getOptionValue(s[0]) : "";
+                      return d.createElement("input", {
+                        name: i,
+                        type: "hidden",
+                        value: u,
+                      });
                     }
-                    var u = s[0] ? this.getOptionValue(s[0]) : "";
-                    return h.createElement("input", {
-                      name: i,
-                      type: "hidden",
-                      value: u,
-                    });
-                  }
+                  },
                 },
-              },
-              {
-                key: "renderLiveRegion",
-                value: function () {
-                  var e = this.commonProps,
-                    t = this.state,
-                    n = t.ariaSelection,
-                    o = t.focusedOption,
-                    i = t.focusedValue,
-                    a = t.isFocused,
-                    s = t.selectValue,
-                    l = this.getFocusableOptions();
-                  return h.createElement(
-                    I,
-                    (0, r.A)({}, e, {
-                      id: this.getElementId("live-region"),
-                      ariaSelection: n,
-                      focusedOption: o,
-                      focusedValue: i,
-                      isFocused: a,
-                      selectValue: s,
-                      focusableOptions: l,
-                      isAppleDevice: this.isAppleDevice,
-                    }),
-                  );
+                {
+                  key: "renderLiveRegion",
+                  value: function () {
+                    var e = this.commonProps,
+                      t = this.state,
+                      n = t.ariaSelection,
+                      o = t.focusedOption,
+                      i = t.focusedValue,
+                      a = t.isFocused,
+                      s = t.selectValue,
+                      l = this.getFocusableOptions();
+                    return d.createElement(
+                      x,
+                      (0, r.A)({}, e, {
+                        id: this.getElementId("live-region"),
+                        ariaSelection: n,
+                        focusedOption: o,
+                        focusedValue: i,
+                        isFocused: a,
+                        selectValue: s,
+                        focusableOptions: l,
+                        isAppleDevice: this.isAppleDevice,
+                      }),
+                    );
+                  },
                 },
-              },
-              {
-                key: "render",
-                value: function () {
-                  var e = this.getComponents(),
-                    t = e.Control,
-                    n = e.IndicatorsContainer,
-                    o = e.SelectContainer,
-                    i = e.ValueContainer,
-                    a = this.props,
-                    s = a.className,
-                    l = a.id,
-                    c = a.isDisabled,
-                    u = a.menuIsOpen,
-                    p = this.state.isFocused,
-                    d = (this.commonProps = this.getCommonProps());
-                  return h.createElement(
-                    o,
-                    (0, r.A)({}, d, {
-                      className: s,
-                      innerProps: { id: l, onKeyDown: this.onKeyDown },
-                      isDisabled: c,
-                      isFocused: p,
-                    }),
-                    this.renderLiveRegion(),
-                    h.createElement(
-                      t,
-                      (0, r.A)({}, d, {
-                        innerRef: this.getControlRef,
-                        innerProps: {
-                          onMouseDown: this.onControlMouseDown,
-                          onTouchEnd: this.onControlTouchEnd,
-                        },
+                {
+                  key: "render",
+                  value: function () {
+                    var e = this.getComponents(),
+                      t = e.Control,
+                      n = e.IndicatorsContainer,
+                      o = e.SelectContainer,
+                      i = e.ValueContainer,
+                      a = this.props,
+                      s = a.className,
+                      l = a.id,
+                      c = a.isDisabled,
+                      u = a.menuIsOpen,
+                      p = this.state.isFocused,
+                      f = (this.commonProps = this.getCommonProps());
+                    return d.createElement(
+                      o,
+                      (0, r.A)({}, f, {
+                        className: s,
+                        innerProps: { id: l, onKeyDown: this.onKeyDown },
                         isDisabled: c,
                         isFocused: p,
-                        menuIsOpen: u,
                       }),
-                      h.createElement(
-                        i,
-                        (0, r.A)({}, d, { isDisabled: c }),
-                        this.renderPlaceholderOrValue(),
-                        this.renderInput(),
+                      this.renderLiveRegion(),
+                      d.createElement(
+                        t,
+                        (0, r.A)({}, f, {
+                          innerRef: this.getControlRef,
+                          innerProps: {
+                            onMouseDown: this.onControlMouseDown,
+                            onTouchEnd: this.onControlTouchEnd,
+                          },
+                          isDisabled: c,
+                          isFocused: p,
+                          menuIsOpen: u,
+                        }),
+                        d.createElement(
+                          i,
+                          (0, r.A)({}, f, { isDisabled: c }),
+                          this.renderPlaceholderOrValue(),
+                          this.renderInput(),
+                        ),
+                        d.createElement(
+                          n,
+                          (0, r.A)({}, f, { isDisabled: c }),
+                          this.renderClearIndicator(),
+                          this.renderLoadingIndicator(),
+                          this.renderIndicatorSeparator(),
+                          this.renderDropdownIndicator(),
+                        ),
                       ),
-                      h.createElement(
-                        n,
-                        (0, r.A)({}, d, { isDisabled: c }),
-                        this.renderClearIndicator(),
-                        this.renderLoadingIndicator(),
-                        this.renderIndicatorSeparator(),
-                        this.renderDropdownIndicator(),
-                      ),
-                    ),
-                    this.renderMenu(),
-                    this.renderFormField(),
-                  );
+                      this.renderMenu(),
+                      this.renderFormField(),
+                    );
+                  },
                 },
-              },
-            ]),
-            (i = [
-              {
-                key: "getDerivedStateFromProps",
-                value: function (e, t) {
-                  var n = t.prevProps,
-                    r = t.clearFocusValueOnUpdate,
-                    i = t.inputIsHiddenAfterUpdate,
-                    a = t.ariaSelection,
-                    s = t.isFocused,
-                    l = t.prevWasFocused,
-                    c = t.instancePrefix,
-                    u = e.options,
-                    p = e.value,
-                    d = e.menuIsOpen,
-                    f = e.inputValue,
-                    h = e.isMulti,
-                    m = (0, g.H)(p),
-                    v = {};
-                  if (
-                    n &&
-                    (p !== n.value ||
-                      u !== n.options ||
-                      d !== n.menuIsOpen ||
-                      f !== n.inputValue)
-                  ) {
-                    var b = d
-                        ? (function (e, t) {
-                            return le(se(e, t));
-                          })(e, m)
-                        : [],
-                      y = d ? ce(se(e, m), "".concat(c, "-option")) : [],
-                      w = r
-                        ? (function (e, t) {
-                            var n = e.focusedValue,
-                              r = e.selectValue.indexOf(n);
-                            if (r > -1) {
-                              if (t.indexOf(n) > -1) return n;
-                              if (r < t.length) return t[r];
+              ],
+              [
+                {
+                  key: "getDerivedStateFromProps",
+                  value: function (e, t) {
+                    var n = t.prevProps,
+                      r = t.clearFocusValueOnUpdate,
+                      i = t.inputIsHiddenAfterUpdate,
+                      a = t.ariaSelection,
+                      s = t.isFocused,
+                      l = t.prevWasFocused,
+                      c = t.instancePrefix,
+                      u = e.options,
+                      p = e.value,
+                      d = e.menuIsOpen,
+                      h = e.inputValue,
+                      g = e.isMulti,
+                      m = (0, f.H)(p),
+                      v = {};
+                    if (
+                      n &&
+                      (p !== n.value ||
+                        u !== n.options ||
+                        d !== n.menuIsOpen ||
+                        h !== n.inputValue)
+                    ) {
+                      var b = d
+                          ? (function (e, t) {
+                              return ae(ie(e, t));
+                            })(e, m)
+                          : [],
+                        y = d ? se(ie(e, m), "".concat(c, "-option")) : [],
+                        w = r
+                          ? (function (e, t) {
+                              var n = e.focusedValue,
+                                r = e.selectValue.indexOf(n);
+                              if (r > -1) {
+                                if (t.indexOf(n) > -1) return n;
+                                if (r < t.length) return t[r];
+                              }
+                              return null;
+                            })(t, m)
+                          : null,
+                        O = (function (e, t) {
+                          var n = e.focusedOption;
+                          return n && t.indexOf(n) > -1 ? n : t[0];
+                        })(t, b);
+                      v = {
+                        selectValue: m,
+                        focusedOption: O,
+                        focusedOptionId: ce(y, O),
+                        focusableOptionsWithIds: y,
+                        focusedValue: w,
+                        clearFocusValueOnUpdate: !1,
+                      };
+                    }
+                    var x =
+                        null != i && e !== n
+                          ? {
+                              inputIsHidden: i,
+                              inputIsHiddenAfterUpdate: void 0,
                             }
-                            return null;
-                          })(t, m)
-                        : null,
-                      O = (function (e, t) {
-                        var n = e.focusedOption;
-                        return n && t.indexOf(n) > -1 ? n : t[0];
-                      })(t, b);
-                    v = {
-                      selectValue: m,
-                      focusedOption: O,
-                      focusedOptionId: pe(y, O),
-                      focusableOptionsWithIds: y,
-                      focusedValue: w,
-                      clearFocusValueOnUpdate: !1,
-                    };
-                  }
-                  var x =
-                      null != i && e !== n
-                        ? { inputIsHidden: i, inputIsHiddenAfterUpdate: void 0 }
-                        : {},
-                    E = a,
-                    I = s && l;
-                  return (
-                    s &&
-                      !I &&
-                      ((E = {
-                        value: (0, g.D)(h, m, m[0] || null),
-                        options: m,
-                        action: "initial-input-focus",
-                      }),
-                      (I = !l)),
-                    "initial-input-focus" === (null == a ? void 0 : a.action) &&
-                      (E = null),
-                    (0, o.A)(
-                      (0, o.A)((0, o.A)({}, v), x),
-                      {},
-                      { prevProps: e, ariaSelection: E, prevWasFocused: I },
-                    )
-                  );
+                          : {},
+                      E = a,
+                      I = s && l;
+                    return (
+                      s &&
+                        !I &&
+                        ((E = {
+                          value: (0, f.D)(g, m, m[0] || null),
+                          options: m,
+                          action: "initial-input-focus",
+                        }),
+                        (I = !l)),
+                      "initial-input-focus" ===
+                        (null == a ? void 0 : a.action) && (E = null),
+                      (0, o.A)(
+                        (0, o.A)((0, o.A)({}, v), x),
+                        {},
+                        { prevProps: e, ariaSelection: E, prevWasFocused: I },
+                      )
+                    );
+                  },
                 },
-              },
-            ]),
-            n && a(t.prototype, n),
-            i && a(t, i),
-            Object.defineProperty(t, "prototype", { writable: !1 }),
-            c
+              ],
+            ),
+            g
           );
-        })(h.Component);
-      ye.defaultProps = ie;
+        })(d.Component);
+      ve.defaultProps = re;
     },
     75970: (e, t, n) => {
       "use strict";
@@ -17664,7 +17644,7 @@
       var r = n(39586),
         o = n(58584),
         i = n(90626),
-        a = n(6592),
+        a = n(74987),
         s =
           (n(39621),
           n(72739),
@@ -17817,6 +17797,36 @@
       }
       n.d(t, { A: () => r });
     },
+    30549: (e, t, n) => {
+      "use strict";
+      function r(e, t) {
+        if (!(e instanceof t))
+          throw new TypeError("Cannot call a class as a function");
+      }
+      n.d(t, { A: () => r });
+    },
+    50181: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => i });
+      var r = n(53144);
+      function o(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var o = t[n];
+          (o.enumerable = o.enumerable || !1),
+            (o.configurable = !0),
+            "value" in o && (o.writable = !0),
+            Object.defineProperty(e, (0, r.A)(o.key), o);
+        }
+      }
+      function i(e, t, n) {
+        return (
+          t && o(e.prototype, t),
+          n && o(e, n),
+          Object.defineProperty(e, "prototype", { writable: !1 }),
+          e
+        );
+      }
+    },
     55635: (e, t, n) => {
       "use strict";
       n.d(t, { A: () => o });
@@ -17833,6 +17843,36 @@
             : (e[t] = n),
           e
         );
+      }
+    },
+    61474: (e, t, n) => {
+      "use strict";
+      function r(e) {
+        return (
+          (r = Object.setPrototypeOf
+            ? Object.getPrototypeOf.bind()
+            : function (e) {
+                return e.__proto__ || Object.getPrototypeOf(e);
+              }),
+          r(e)
+        );
+      }
+      n.d(t, { A: () => r });
+    },
+    35549: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => o });
+      var r = n(71182);
+      function o(e, t) {
+        if ("function" != typeof t && null !== t)
+          throw new TypeError(
+            "Super expression must either be null or a function",
+          );
+        (e.prototype = Object.create(t && t.prototype, {
+          constructor: { value: e, writable: !0, configurable: !0 },
+        })),
+          Object.defineProperty(e, "prototype", { writable: !1 }),
+          t && (0, r.A)(e, t);
       }
     },
     54883: (e, t, n) => {
@@ -17889,6 +17929,20 @@
                 (i[n] = e[n]);
         }
         return i;
+      }
+    },
+    20822: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => i });
+      var r = n(11052),
+        o = n(59913);
+      function i(e, t) {
+        if (t && ("object" == (0, r.A)(t) || "function" == typeof t)) return t;
+        if (void 0 !== t)
+          throw new TypeError(
+            "Derived constructors may only return object or undefined",
+          );
+        return (0, o.A)(e);
       }
     },
     98465: (e, t, n) => {

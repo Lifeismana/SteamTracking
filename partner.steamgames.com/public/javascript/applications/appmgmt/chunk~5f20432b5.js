@@ -7,7 +7,7 @@
   {
     72839: (e, t, s) => {
       s.d(t, { Bn: () => l, hS: () => r, rV: () => n });
-      var a = s(96171),
+      var a = s(6824),
         i = s(78327);
       s(38516);
       function n(e, t) {
@@ -34,7 +34,7 @@
         l = s(56545),
         o = s(96059),
         u = s(59411),
-        c = s(96171),
+        c = s(6824),
         m = s(81393),
         d = s(68797),
         h = s(78327),
@@ -69,6 +69,8 @@
             t.include_assets_without_overrides,
           apply_user_filters: e.apply_user_filters || t.apply_user_filters,
           include_links: e.include_links || t.include_links,
+          include_extra_details:
+            e.include_extra_details || t.include_extra_details,
         };
       }
       async function f(e, t) {

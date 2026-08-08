@@ -307,18 +307,19 @@
       }
       const _ = (_) => {
           const {
-            sError: _,
-            eLanguage: _,
-            realms: _,
-            fnHasLanguage: _,
-            fnSetLanguage: _,
-            fnGetTitle: _,
-            fnSetTitle: _,
-            fnGetDescription: _,
-            fnSetDescription: _,
-            fnOnPreviewEvent: _,
-            fnApplyLoc: _,
-          } = _;
+              sError: _,
+              eLanguage: _,
+              realms: _,
+              fnHasLanguage: _,
+              fnSetLanguage: _,
+              fnGetTitle: _,
+              fnSetTitle: _,
+              fnGetDescription: _,
+              fnSetDescription: _,
+              fnOnPreviewEvent: _,
+              fnApplyLoc: _,
+            } = _,
+            _ = (0, _._)();
           let _ = "";
           if (_.includes(_._.k_ESteamRealmChina)) {
             const _ = "" !== _(_.ZLm).trim();
@@ -385,7 +386,7 @@
                 fnOnTextChange: (_) => _(_, _.currentTarget.value),
                 fnSetText: (_) => _(_, _),
                 strPlaceholder: (0, _._)("#BuildNotes_DescPlaceholder"),
-                emoticonStore: _._,
+                emoticonStore: _,
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
                 classNameForTextArea: _.BBCodeEditor,

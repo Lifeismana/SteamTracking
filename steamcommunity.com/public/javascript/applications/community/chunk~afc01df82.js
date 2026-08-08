@@ -2177,7 +2177,7 @@
         L = n(40414),
         N = n(68359),
         R = n(7221),
-        T = n(68033),
+        T = n(65606),
         y = n(27658),
         U = n(5058),
         B = n(50433),
@@ -2475,16 +2475,17 @@
       }
       function X(e) {
         const { lang: a, eventModel: n, partnerEventStore: t } = e,
-          [i, o, d, m, u] = (0, r.q3)(() => [
+          i = (0, T.LJ)(),
+          [o, d, m, u, p] = (0, r.q3)(() => [
             n.GetNameWithFallback(a),
             n.GetDescriptionWithFallback(a),
             n.GetSubTitleWithLanguageFallback(a),
             n.type,
             n.AnnouncementGID,
           ]);
-        let p = o
+        let h = d
           ? (0, l.jsx)(U.fh, {
-              text: o || "",
+              text: d || "",
               partnerEventStore: t,
               showErrorInfo: !1,
               event: n,
@@ -2515,17 +2516,17 @@
                         (0, l.jsx)("div", {
                           className: q().TextTitle,
                           children:
-                            i || (0, S.we)("#selectimage_display_event_title"),
+                            o || (0, S.we)("#selectimage_display_event_title"),
                         }),
                         (0, l.jsx)("div", {
                           className: q().TextSubTitle,
                           children:
-                            d ||
+                            m ||
                             (0, S.we)("#selectimage_display_event_subtitle"),
                         }),
                         (0, l.jsx)("div", {
                           className: q().TextBody,
-                          children: p,
+                          children: h,
                         }),
                       ],
                     }),
@@ -2533,7 +2534,7 @@
                 ],
               }),
             }),
-            m != s.Fwr &&
+            u != s.Fwr &&
               (0, l.jsxs)(c.Fragment, {
                 children: [
                   (0, l.jsx)("div", { className: q().ExampleSpacer }),
@@ -2552,13 +2553,13 @@
                         y.He,
                         {
                           event: n,
-                          emoticonStore: T.A,
+                          emoticonStore: i,
                           partnerEventStore: t,
                           headerClassnames: "editor",
                           langOverride: a,
                           bDisableBroadcastPlayer: !0,
                         },
-                        u,
+                        p,
                       ),
                     }),
                   }),

@@ -78,7 +78,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { rgGameProfileColorDefs: _ } = _,
@@ -115,7 +114,8 @@
       function _(_) {
         const { strKVPrepend: _, bWriteAsRGBOnly: _ } = _;
         let [_, _] = _.useState(_.strCurrentColor);
-        const _ = _.useRef(void 0);
+        const _ = _.useRef(void 0),
+          { openColorPicker: _ } = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("input", {
@@ -136,19 +136,11 @@
                 backgroundColor: `${_}`,
               },
               onClick: (_) => {
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    onChange: (_) => {
-                      _(_);
-                    },
-                    color: _,
-                    disableAlpha: _,
-                  }),
-                  _,
-                  {
-                    bDisablePopTop: !0,
-                  },
-                );
+                _(_, {
+                  color: _,
+                  onChange: _,
+                  disableAlpha: _,
+                });
               },
             }),
           ],

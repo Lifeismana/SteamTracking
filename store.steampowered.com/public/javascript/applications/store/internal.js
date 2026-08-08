@@ -260,8 +260,8 @@
           S = e.exact,
           y = e.isActive,
           b = e.location,
-          C = e.sensitive,
-          x = e.strict,
+          x = e.sensitive,
+          C = e.strict,
           I = e.style,
           j = e.to,
           A = e.innerRef,
@@ -289,8 +289,8 @@
               ? (0, r.B6)(s.pathname, {
                   path: w,
                   exact: S,
-                  sensitive: C,
-                  strict: x,
+                  sensitive: x,
+                  strict: C,
                 })
               : null,
             N = !!(y ? y(R, s) : R),
@@ -398,7 +398,7 @@
             } = e,
             [S, y] = (0, a.useState)({}),
             b = (0, a.useCallback)((e, t) => y((s) => ({ ...s, [t]: e })), []),
-            C = (0, a.useCallback)(
+            x = (0, a.useCallback)(
               (e, t) =>
                 y((s) => {
                   const r = { ...s };
@@ -406,26 +406,26 @@
                 }),
               [],
             ),
-            x = (0, u.f)("SegmentedControl", t),
+            C = (0, u.f)("SegmentedControl", t),
             I = (0, a.useMemo)(
               () => ({
                 value: h,
                 onValueChange: f,
                 register: b,
-                unregister: C,
+                unregister: x,
                 radius: s,
                 size: l,
               }),
-              [h, f, b, C, s, l],
+              [h, f, b, x, s, l],
             );
           return (0, r.jsx)(i.j, {
             clickable: !1,
             hoverable: !1,
             focusable: !1,
-            variant: x,
+            variant: C,
             radius: s,
             size: l,
-            className: c()(p.SegmentedControlBox, p[`Variant-${x}`]),
+            className: c()(p.SegmentedControlBox, p[`Variant-${C}`]),
             tabIndex: 0,
             onKeyDown: (e) => {
               let t = 0;
@@ -474,7 +474,7 @@
       s.d(t, { Xh: () => p, cU: () => d, tf: () => m, wl: () => u });
       var r = s(22837),
         a = s(71150),
-        i = s(48210),
+        i = s(76119),
         n = s(30894),
         o = s(16021),
         l = s(62792),
@@ -716,7 +716,7 @@
         a = s.n(r),
         i = s(90626),
         n = s(37085),
-        o = s(48210),
+        o = s(76119),
         l = s(84933),
         c = s(16021);
       const p = 1,
@@ -733,8 +733,8 @@
             include_release: S,
             include_platforms: y,
             include_all_purchase_options: b,
-            include_screenshots: C,
-            include_trailers: x,
+            include_screenshots: x,
+            include_trailers: C,
             include_ratings: I,
             include_tag_count: j,
             include_reviews: A,
@@ -745,6 +745,7 @@
             include_assets_without_overrides: B,
             apply_user_filters: D,
             include_links: M,
+            include_extra_details: P,
           } = s;
         if (
           ((0, i.useEffect)(() => {
@@ -753,8 +754,8 @@
               include_release: S,
               include_platforms: y,
               include_all_purchase_options: b,
-              include_screenshots: C,
-              include_trailers: x,
+              include_screenshots: x,
+              include_trailers: C,
               include_ratings: I,
               include_tag_count: j,
               include_reviews: A,
@@ -765,6 +766,7 @@
               include_assets_without_overrides: B,
               apply_user_filters: D,
               include_links: M,
+              include_extra_details: P,
             };
             let i = null;
             return (
@@ -781,15 +783,38 @@
                   })),
               () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, _, f, S, y, b, C, x, I, j, A, v, w, R, N, B, D, M, h]),
+          }, [
+            e,
+            t,
+            r,
+            _,
+            f,
+            S,
+            y,
+            b,
+            x,
+            C,
+            I,
+            j,
+            A,
+            v,
+            w,
+            R,
+            N,
+            B,
+            D,
+            M,
+            P,
+            h,
+          ]),
           !e)
         )
           return [null, d];
         if (!1 === _) return [void 0, d];
         if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, d];
         if (!c.A.Get().BHasStoreItem(e, t, s)) return [void 0, p];
-        const P = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return P ? [P, u] : [null, d];
+        const O = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return O ? [O, u] : [null, d];
       }
       function h(e, t, s) {
         return m(e, o.c6.qI, t, s);
@@ -822,13 +847,14 @@
             include_ratings: S,
             include_tag_count: y,
             include_reviews: b,
-            include_basic_info: C,
-            include_supported_languages: x,
+            include_basic_info: x,
+            include_supported_languages: C,
             include_full_description: I,
             include_included_items: j,
             include_assets_without_overrides: A,
             apply_user_filters: v,
             include_links: w,
+            include_extra_details: R,
           } = s;
         if (
           ((0, i.useEffect)(() => {
@@ -843,13 +869,14 @@
                 include_ratings: S,
                 include_tag_count: y,
                 include_reviews: b,
-                include_basic_info: C,
-                include_supported_languages: x,
+                include_basic_info: x,
+                include_supported_languages: C,
                 include_full_description: I,
                 include_included_items: j,
                 include_assets_without_overrides: A,
                 apply_user_filters: v,
                 include_links: w,
+                include_extra_details: R,
               },
               r = e.filter(
                 (e) =>
@@ -867,7 +894,7 @@
               }),
               () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, n, o, m, h, _, g, f, S, y, b, C, x, I, j, A, v, w]),
+          }, [e, t, r, n, o, m, h, _, g, f, S, y, b, x, C, I, j, A, v, w, R]),
           !e)
         )
           return d;
@@ -982,12 +1009,12 @@
             onValueSettled: c,
             value: o,
             children: [
-              (0, r.jsx)(C, { children: (0, r.jsx)(x, { start: i, end: t }) }),
+              (0, r.jsx)(x, { children: (0, r.jsx)(C, { start: i, end: t }) }),
               (0, r.jsx)(I, {}),
             ],
           });
         },
-        { Root: y, Track: C, Range: x, Handle: I },
+        { Root: y, Track: x, Range: C, Handle: I },
       );
       const S = (0, u.createContext)(null);
       function y(e) {
@@ -1074,7 +1101,7 @@
         }
         return s;
       }
-      function C(e) {
+      function x(e) {
         const { render: t, ...s } = e;
         return (0, g.Q)(
           t,
@@ -1083,7 +1110,7 @@
           void 0,
         );
       }
-      function x(e) {
+      function C(e) {
         const { start: t, end: s, render: a } = e,
           i = (0, u.useContext)(S);
         (0, m.wT)(i, "SliderRange must be used within a SliderRoot!");
@@ -1120,9 +1147,9 @@
           [d, n],
         );
         const b = f > -1,
-          C = { "--handle-pct": `${v(b ? o[f] : a, a, i)}%` };
-        b || (C.display = "none");
-        const x = {
+          x = { "--handle-pct": `${v(b ? o[f] : a, a, i)}%` };
+        b || (x.display = "none");
+        const C = {
           ref: h,
           role: "slider",
           "aria-valuenow": o[f],
@@ -1164,8 +1191,8 @@
         };
         return (0, g.Q)(
           t,
-          (0, r.jsx)("span", { className: _.SliderHandle, style: C }),
-          x,
+          (0, r.jsx)("span", { className: _.SliderHandle, style: x }),
+          C,
           { value: o[f], bDragActive: s.bDragActive },
         );
       }
@@ -1194,7 +1221,7 @@
         E = s(1146),
         T = s(22687),
         k = s(92757),
-        F = s(48210),
+        F = s(76119),
         G = s(57876);
       function z(e) {
         return `/gameexplorer/${0 == e.arrSelectedAppInfos.length ? "0" : e.arrSelectedAppInfos.map((e) => e.nAppID).join()}/${0 == e.arrSelectedAppInfos.length ? "0" : e.arrSelectedAppInfos.map((e) => e.nWeight.toFixed(0)).join()}/${e.nSelfFactor}/${e.nPopularity}/${e.bSimilar}`;
@@ -1959,8 +1986,8 @@
         S = s(92757),
         y = s(62139),
         b = s(56283),
-        C = s(2160),
-        x = s(75844),
+        x = s(2160),
+        C = s(75844),
         I = s(52038);
       class j extends g.Component {
         state = {
@@ -1996,7 +2023,7 @@
                 const e = {
                     cc: o.TS.COUNTRY,
                     l: o.TS.LANGUAGE,
-                    realm: C.TU.k_ESteamRealmGlobal,
+                    realm: x.TU.k_ESteamRealmGlobal,
                     origin: self.origin,
                     f: "jsonfull",
                     term: t.replace(" ", "+"),
@@ -2288,7 +2315,7 @@
         (0, i.Cg)([c.oI], w.prototype, "OnSelectedApp", null),
         (0, i.Cg)([c.oI], w.prototype, "SetSelectedApp", null),
         (0, i.Cg)([c.oI], w.prototype, "OnModelChanged", null),
-        (w = (0, i.Cg)([x.PA], w));
+        (w = (0, i.Cg)([C.PA], w));
       let R = class extends g.Component {
         selected_app = void 0;
         selected_operator = void 0;
@@ -2339,7 +2366,7 @@
         (0, i.Cg)([l.sH], R.prototype, "selected_operator", void 0),
         (0, i.Cg)([c.oI], R.prototype, "OnSelectedApp", null),
         (0, i.Cg)([c.oI], R.prototype, "OnSelectedOperator", null),
-        (R = (0, i.Cg)([x.PA], R));
+        (R = (0, i.Cg)([C.PA], R));
       let N = class extends g.Component {
         operands = [];
         similarity_model = "default";
@@ -2479,7 +2506,7 @@
         (0, i.Cg)([c.oI], N.prototype, "OnModelChanged", null),
         (0, i.Cg)([c.oI], N.prototype, "OnAddOperand", null),
         (0, i.Cg)([c.oI], N.prototype, "OnOperandChanged", null),
-        (N = (0, i.Cg)([x.PA], N));
+        (N = (0, i.Cg)([C.PA], N));
       let B = class extends g.Component {
         constructor(e) {
           super(e), (0, l.Gn)(this);
@@ -2619,14 +2646,14 @@
         (0, i.Cg)([c.oI], B.prototype, "Pathfind", null),
         (0, i.Cg)([c.oI], B.prototype, "OnSelectedStartApp", null),
         (0, i.Cg)([c.oI], B.prototype, "OnSelectedEndApp", null),
-        (B = (0, i.Cg)([x.PA], B));
+        (B = (0, i.Cg)([C.PA], B));
       var M = s(17720),
         P = s(6144),
         O = s(56545),
         L = s(80613),
         E = s.n(L),
         T = s(89068),
-        k = s(48210);
+        k = s(76119);
       const F = 1,
         G = 2,
         z = 3;
@@ -3607,28 +3634,28 @@
         Se = s.n(fe),
         ye = s(4717),
         be = s(6419);
-      var Ce, xe;
+      var xe, Ce;
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
           (e[(e.AccountName = 1)] = "AccountName"),
           (e[(e.EmailCode = 2)] = "EmailCode"),
           (e[(e.TwoFactorCode = 3)] = "TwoFactorCode"),
           (e[(e.Complete = 4)] = "Complete");
-      })(Ce || (Ce = {})),
+      })(xe || (xe = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"), (e[(e.InvalidCode = 1)] = "InvalidCode");
-        })(xe || (xe = {}));
+        })(Ce || (Ce = {}));
       class Ie {
         m_strBaseURL = "";
         m_strOAuthClientID = "";
         m_fnLoginComplete = null;
         m_bRequestInFlight = !1;
         m_userFields = void 0;
-        m_eCurrentStep = Ce.AccountName;
+        m_eCurrentStep = xe.AccountName;
         m_strErrorMessage = "";
         m_strEmailDomain = "";
         m_strCaptchaURL = "";
-        m_eSteamGuardCodeError = xe.None;
+        m_eSteamGuardCodeError = Ce.None;
         constructor(e, t) {
           (0, l.Gn)(this),
             (this.m_strBaseURL = e),
@@ -3730,7 +3757,7 @@
               ))
             );
           if (e.login_complete) {
-            if (((this.m_eCurrentStep = Ce.Complete), this.m_fnLoginComplete)) {
+            if (((this.m_eCurrentStep = xe.Complete), this.m_fnLoginComplete)) {
               let t = {
                 steamID: e.oauth ? e.oauth.steamid : "",
                 strAccountName: e.oauth ? e.oauth.account_name : "",
@@ -3740,32 +3767,32 @@
             }
           } else
             (this.m_strErrorMessage = e.message || ""),
-              (this.m_eSteamGuardCodeError = xe.None),
+              (this.m_eSteamGuardCodeError = Ce.None),
               e.requires_twofactor
                 ? (this.UpdateCaptchaURL("-1"),
-                  this.m_eCurrentStep != Ce.TwoFactorCode ||
+                  this.m_eCurrentStep != xe.TwoFactorCode ||
                     this.m_strErrorMessage ||
                     ((this.m_strErrorMessage = (0, re.we)(
                       "#MobileLogin_IncorrectSteamGuard",
                     )),
-                    (this.m_eSteamGuardCodeError = xe.InvalidCode),
+                    (this.m_eSteamGuardCodeError = Ce.InvalidCode),
                     (this.m_userFields.strTwoFactorCode = "")),
-                  (this.m_eCurrentStep = Ce.TwoFactorCode))
+                  (this.m_eCurrentStep = xe.TwoFactorCode))
                 : e.captcha_needed && e.captcha_gid
-                  ? ((this.m_eCurrentStep = Ce.AccountName),
+                  ? ((this.m_eCurrentStep = xe.AccountName),
                     this.UpdateCaptchaURL(e.captcha_gid))
                   : e.emailauth_needed
                     ? (e.emaildomain && (this.m_strEmailDomain = e.emaildomain),
                       e.emailsteamid &&
                         (this.m_userFields.emailSteamID = e.emailsteamid),
-                      this.m_eCurrentStep != Ce.EmailCode ||
+                      this.m_eCurrentStep != xe.EmailCode ||
                         this.m_strErrorMessage ||
                         ((this.m_strErrorMessage = (0, re.we)(
                           "#MobileLogin_IncorrectSteamGuard",
                         )),
-                        (this.m_eSteamGuardCodeError = xe.InvalidCode),
+                        (this.m_eSteamGuardCodeError = Ce.InvalidCode),
                         (this.m_userFields.strEmailAuthCode = "")),
-                      (this.m_eCurrentStep = Ce.EmailCode))
+                      (this.m_eCurrentStep = xe.EmailCode))
                     : e.agreement_session_url
                       ? (this.Shutdown(),
                         console.log(window.location.href),
@@ -3830,22 +3857,22 @@
                 className: Se().LoginPanelContent,
                 children: [
                   o && (0, r.jsx)(Ae, { text: o }),
-                  n == Ce.AccountName &&
+                  n == xe.AccountName &&
                     (0, r.jsx)(ve, {
                       manager: this.m_manager,
                       autoFocus: this.props.autoFocus,
                     }),
-                  n == Ce.TwoFactorCode &&
+                  n == xe.TwoFactorCode &&
                     (0, r.jsx)(Re, {
                       manager: this.m_manager,
-                      authtype: Ce.TwoFactorCode,
+                      authtype: xe.TwoFactorCode,
                     }),
-                  n == Ce.EmailCode &&
+                  n == xe.EmailCode &&
                     (0, r.jsx)(Re, {
                       manager: this.m_manager,
-                      authtype: Ce.EmailCode,
+                      authtype: xe.EmailCode,
                     }),
-                  n == Ce.Complete &&
+                  n == xe.Complete &&
                     (0, r.jsx)("div", {
                       className: Se().LoginComplete,
                       children: (0, r.jsx)(se.t, {}),
@@ -3862,7 +3889,7 @@
           children: e.text,
         });
       }
-      je = (0, i.Cg)([x.PA], je);
+      je = (0, i.Cg)([C.PA], je);
       let ve = class extends g.Component {
         constructor(e) {
           super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
@@ -3985,7 +4012,7 @@
         (0, i.Cg)([c.oI], ve.prototype, "OnChangeName", null),
         (0, i.Cg)([c.oI], ve.prototype, "OnChangePassword", null),
         (0, i.Cg)([c.oI], ve.prototype, "OnChangeRememberPass", null),
-        (ve = (0, i.Cg)([x.PA], ve));
+        (ve = (0, i.Cg)([C.PA], ve));
       let we = class extends g.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
@@ -4040,13 +4067,13 @@
       };
       (0, i.Cg)([c.oI], we.prototype, "OnCaptchaText", null),
         (0, i.Cg)([c.oI], we.prototype, "RefreshCaptcha", null),
-        (we = (0, i.Cg)([x.PA], we));
+        (we = (0, i.Cg)([C.PA], we));
       let Re = class extends g.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
         }
         OnChangeAuthCode(e) {
-          this.props.authtype == Ce.TwoFactorCode
+          this.props.authtype == xe.TwoFactorCode
             ? this.props.manager.SetTwoFactorCode(e.target.value)
             : this.props.manager.SetEmailAuthCode(e.target.value);
         }
@@ -4056,15 +4083,15 @@
             s = "",
             a = null,
             i = "",
-            n = t.GetSteamGuardCodeError() == xe.InvalidCode;
+            n = t.GetSteamGuardCodeError() == Ce.InvalidCode;
           switch (this.props.authtype) {
-            case Ce.TwoFactorCode:
+            case xe.TwoFactorCode:
               (s = t.GetTwoFactorCode()),
                 (a = (0, re.we)("#Login_Enter2FA")),
                 (e = (0, r.jsx)(ge.kaY, {})),
                 (i = (0, re.we)("#Login_Enter2FAHelp"));
               break;
-            case Ce.EmailCode:
+            case xe.EmailCode:
               (s = t.GetEmailAuthCode()),
                 (a = (0, re.PP)(
                   "#Login_SentSteamguard",
@@ -4127,7 +4154,7 @@
       };
       (0, i.Cg)([c.oI], Re.prototype, "OnSubmit", null),
         (0, i.Cg)([c.oI], Re.prototype, "OnChangeAuthCode", null),
-        (Re = (0, i.Cg)([x.PA], Re));
+        (Re = (0, i.Cg)([C.PA], Re));
       var Ne = s(23809);
       const Be = [
         {
@@ -4226,7 +4253,7 @@
     },
     1593: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => x });
+      s.r(t), s.d(t, { default: () => C });
       var r = s(7850),
         a = s(39777),
         i = s(41735),
@@ -4345,7 +4372,7 @@
               }),
             ],
           }),
-        C = (e) => {
+        x = (e) => {
           const [t, s] = o.useState(void 0);
           return (
             o.useEffect(() => {
@@ -4384,7 +4411,7 @@
             })
           );
         },
-        x = () => {
+        C = () => {
           const [e, t] = o.useState(!1),
             [s, a] = o.useState(0),
             [i, n] = o.useState(""),
@@ -4493,7 +4520,7 @@
                   strTitle: (0, m.we)("#RecommenderDemos_NextFest"),
                   strSubtitle: (0, m.we)("#RecommenderDemos_NextFestDesc"),
                 }),
-                (0, r.jsx)(C, { nAccountID: s, bExclude: l }),
+                (0, r.jsx)(x, { nAccountID: s, bExclude: l }),
                 (0, r.jsx)(y, {
                   nAccountID: s,
                   bExclude: l,

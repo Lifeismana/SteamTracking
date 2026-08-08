@@ -450,7 +450,7 @@
                         ? "past"
                         : "future";
                   })(_?.session, _)),
-                  (_.rtSesssionTime = _.session.rtime_start),
+                  (_.rtSesssionTime = _?.session?.rtime_start ?? 0),
                   _
                 );
               }),

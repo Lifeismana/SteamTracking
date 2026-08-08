@@ -92,6 +92,7 @@
     chunkid: (module) => {
       module.exports = {
         CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA",
+        CompatIconFrame: "_3E70dZ6hSfFCmskaIzbgJp",
       };
     },
     chunkid: (module) => {
@@ -1223,6 +1224,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1232,22 +1234,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(!1),
-          [_] = (0, _.useState)(() =>
-            (function () {
-              const _ = (0, _._)(
-                "partnerbrowse_webapi_token",
-                "application_config",
-              );
-              (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
-              const _ = new _._(_._.WEBAPI_BASE_URL, _);
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                  _,
-                );
-              return _;
-            })(),
-          ),
+          [_] = (0, _.useState)(() => _()),
           _ = (0, _.useMemo)(
             () => ({
               country: _._.COUNTRY,
@@ -1276,6 +1263,36 @@
                 children: _.children,
               })
             : null
+        );
+      }
+      function _(_) {
+        const [_] = (0, _.useState)(() => _()),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+              bIncludeUnpublished: _.bIncludeUnpublished,
+            }),
+            [_.bIncludeUnpublished],
+          );
+        return (0, _.createElement)(_._, {
+          context: _,
+          serviceTransportOverride: _.GetServiceTransport(),
+          children: _.children,
+        });
+      }
+      function _() {
+        const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
+        (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+        const _ = new _._(_._.WEBAPI_BASE_URL, _);
+        return (
+          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
+              _,
+            ),
+          _
         );
       }
     },
@@ -1326,6 +1343,7 @@
             include_assets_without_overrides: _,
             apply_user_filters: _,
             include_links: _,
+            include_extra_details: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -1346,6 +1364,7 @@
               include_assets_without_overrides: _,
               apply_user_filters: _,
               include_links: _,
+              include_extra_details: _,
             };
             let _ = null;
             return (
@@ -1362,7 +1381,30 @@
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ]),
           !_)
         )
           return [null, _];
@@ -1400,6 +1442,7 @@
             include_assets_without_overrides: _,
             apply_user_filters: _,
             include_links: _,
+            include_extra_details: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -1421,6 +1464,7 @@
                 include_assets_without_overrides: _,
                 apply_user_filters: _,
                 include_links: _,
+                include_extra_details: _,
               },
               _ = _.filter(
                 (_) =>
@@ -1438,7 +1482,7 @@
               }),
               () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
           return _;
@@ -2251,11 +2295,17 @@
               return (0, _._)(_, `Unhandled steam os category: ${_}`), null;
           }
         } else {
-          const _ =
-            _ == _._
-              ? _?.steam_machine_compat_category
-              : _?.steam_deck_compat_category;
-          if (void 0 === _) return null;
+          let _;
+          if (
+            ((_ =
+              _ == _._
+                ? _?.steam_machine_compat_category
+                : _ == _._
+                  ? _?.steam_frame_compat_category
+                  : _?.steam_deck_compat_category),
+            void 0 === _)
+          )
+            return null;
           switch (_) {
             case _._:
               _ = _;
@@ -2280,6 +2330,7 @@
             "fill" == _ && _().Fill,
           ),
           children: [
+            Boolean(_ == _._) && (0, _.jsx)(_, {}),
             Boolean(_ == _._) && (0, _.jsx)(_, {}),
             Boolean(_ == _._) && (0, _.jsx)(_, {}),
             (0, _.jsx)(_, {}),
@@ -2449,11 +2500,44 @@
             xmlns: "http://www.w3.org/2000/svg",
             children: [
               (0, _.jsx)("path", {
-                _: "M18.6146 1C18.8276 1.00008 19 1.17285 19 1.3858V18.6146C18.9999 18.8275 18.8275 18.9999 18.6146 19H1.3858C1.17287 19 1.00012 18.8275 1 18.6146V1.3858C1 1.1728 1.1728 1 1.3858 1H18.6146ZM10.1133 4.65085C7.09611 4.65093 4.65004 7.09697 4.64996 10.1142C4.64996 13.1315 7.09606 15.5775 10.1133 15.5776C13.1307 15.5776 15.5767 13.1316 15.5767 10.1142C15.5767 7.09693 13.1307 4.65085 10.1133 4.65085Z",
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
                 fill: "white",
               }),
               (0, _.jsx)("path", {
-                _: "M14.125 10.1892C14.125 7.98021 12.3338 6.18945 10.1248 6.18945C7.9158 6.1895 6.12509 7.98025 6.125 10.1892C6.125 12.3292 7.80559 14.077 9.91901 14.1842L10.1248 14.1895C12.2649 14.1895 14.0127 12.5085 14.1197 10.395L14.125 10.1892Z",
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
+                fill: "white",
+              }),
+            ],
+          }),
+        });
+      }
+      function _() {
+        return (0, _.jsx)("span", {
+          title: _._.Localize(
+            "#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI",
+          ),
+          className: _()(_().SteamDeckCompatLogo),
+          children: (0, _.jsxs)("svg", {
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, _.jsx)("path", {
+                opacity: "0.84",
+                _: "M16.9997 7.85352C11.9484 7.85352 7.85352 11.9484 7.85352 16.9997H16.9997V7.85352Z",
+                fill: "white",
+              }),
+              (0, _.jsx)("path", {
+                opacity: "0.84",
+                "fill-rule": "evenodd",
+                "clip-rule": "evenodd",
+                _: "M3 3.30201C3 3.13522 3.13522 3 3.30201 3H17V6.02012H6.02012V17H3V3.30201Z",
                 fill: "white",
               }),
             ],
@@ -2561,17 +2645,19 @@
       function _(_) {
         const { className: _, _: _ } = _,
           [_, _] = (0, _._)();
-        let _ = _;
+        let _,
+          _ = _;
         return (
           _ == _._ && (_ = _._),
           _
-            ? (0, _.jsx)("div", {
-                className: (0, _._)(_.CompatIcon, _),
+            ? (_ == _._ && (_ = _.CompatIconFrame),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.CompatIcon, _, _),
                 children: (0, _.jsx)(_, {
                   _: _,
                   eHWCompat: _,
                 }),
-              })
+              }))
             : null
         );
       }

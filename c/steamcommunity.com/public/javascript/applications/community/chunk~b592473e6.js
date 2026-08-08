@@ -11,6 +11,29 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ModalConfirmDialog: "_1MwR7dU-J2CeRWYt9WfUJw",
+        Header: "Y9lJcGdHP6m4TRcgHnzj2",
+        Buttons: "_1Wq4E7gdTa-fjWrhWFQG7b",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PreventScroll: "ycpazsHLq6lCBFmWPCLCZ",
+        ModalDialog: "_1mPKxUDAZ01x-i7612JIsL",
+        ModalDialogContent: "_79d7mzfWutbJb1DCbh1Du",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SimpleModalDialog: "_3ej4mcyhVunlvw3BjUXtel",
+        SimpleModalDialogHeader: "_1w-TUMWBEOX_zsSa-BBhK8",
+        SimpleModalDialogTitle: "_2tpBIlq2yGQqKcloht-UiJ",
+        XButton: "RC4JznqJb34yCm04FKk0I",
+        SimpleModalContentCtn: "_2yRV5HfgoGdJZqs9Fl049T",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Container: "_30v-6zb_axOypIUr5VRHE1",
@@ -1954,7 +1977,157 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.assign(
+        function (_) {
+          const { children: _, className: _, ..._ } = _;
+          return (0, _.jsx)(_.Root, {
+            ..._,
+            children: (0, _.jsx)(_.Content, {
+              className: _,
+              children: _,
+            }),
+          });
+        },
+        {
+          Root: function (_) {
+            const {
+                onClose: _,
+                className: _,
+                navID: _,
+                children: _,
+                allowScrollBehind: _,
+                ..._
+              } = _,
+              [_, _] = _.useState(!1),
+              _ = _.useCallback((_) => {
+                _ &&
+                  (_.showModal(),
+                  _.ownerDocument.defaultView &&
+                    _(
+                      _.ownerDocument.body.scrollHeight >
+                        _.ownerDocument.defaultView.innerHeight,
+                    ));
+              }, []),
+              _ = _.useCallback(
+                (_) => {
+                  _.target == _.currentTarget && _("backdropclick");
+                },
+                [_],
+              );
+            return (0, _.jsx)(_, {
+              navID: null != _ ? _ : "ModalDialog",
+              onClose: _,
+              children: (0, _.jsx)("dialog", {
+                ref: _,
+                className: _()(_.ModalDialog, !_ && _ && _.PreventScroll, _),
+                onClose: () => _("onclose"),
+                onClick: _,
+                ..._,
+                children: (0, _.jsx)(_._, {
+                  children: _,
+                }),
+              }),
+            });
+          },
+          Content: function (_) {
+            const { className: _, children: _ } = _;
+            return (0, _.jsx)("div", {
+              className: _()(_.ModalDialogContent, _),
+              onClick: (_) => _.stopPropagation(),
+              children: _,
+            });
+          },
+        },
+      );
+      function _(_) {
+        const { navID: _, onClose: _, children: _ } = _,
+          _ = _.useCallback(() => __webpack_require__("cancelbutton"), [_]),
+          _ = _.useRef(void 0);
+        (0, _._)(_, !0, !0);
+        return (0, _._)()
+          ? (0, _.jsx)(_._, {
+              navID: null != _ ? _ : "ModalDialog",
+              onCancelButton: _,
+              modal: !0,
+              navTreeRef: _,
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          onClose: _,
+          className: _,
+          navID: _,
+          children: _,
+          strTitle: _,
+          ..._
+        } = _;
+        return (0, _.jsx)(_, {
+          onClose: _,
+          navID: null != _ ? _ : "SimpleModalDialog",
+          ..._,
+          children: (0, _.jsxs)("div", {
+            className: _()(_, _().SimpleModalDialog),
+            children: [
+              " ",
+              (0, _.jsxs)(_._, {
+                className: _().SimpleModalDialogHeader,
+                children: [
+                  _ &&
+                    (0, _.jsx)("h2", {
+                      className: _().SimpleModalDialogTitle,
+                      children: _,
+                    }),
+                  (0, _.jsx)("button", {
+                    onClick: (_) => (_("xclick"), _.preventDefault(), !1),
+                    className: _().XButton,
+                    children: (0, _.jsx)(_.tmm, {}),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _().SimpleModalContentCtn,
+                children: _,
+              }),
+            ],
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { strOKLabel: _, strCancelLabel: _, onOK: _, onClose: _ } = _;
+        return (0, _.jsxs)(_._, {
+          className: _().Buttons,
+          children: [
+            !!_ &&
+              (0, _.jsx)(_._, {
+                onClick: null != _ ? _ : _,
+                children: _,
+              }),
+            !!_ &&
+              (0, _.jsx)(_._, {
+                onClick: _,
+                children: _,
+              }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const [_, _] = _.useState(void 0),
@@ -2100,30 +2273,36 @@
             : (0, _._)(
                 _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
               );
-        return (0, _.jsx)(_._, {
-          onOK: _,
-          closeModal: _,
+        return (0, _.jsxs)(_, {
+          onClose: _,
           strTitle: _,
-          strOKText: _,
-          bOKDisabled: !_ || 0 == _.length,
-          children: (0, _.jsx)(_._, {
-            color: _,
-            strTitle: _,
-            disableAlpha: !0,
-            onChange: (_) =>
-              _(
-                (function (_) {
-                  const _ = _.match(
-                    /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
-                  );
-                  if (_) {
-                    let [, _, _, _, _] = _;
-                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(_, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
-                  }
-                  return "#7e3232";
-                })(_),
-              ),
-          }),
+          children: [
+            (0, _.jsx)(_._, {
+              color: _,
+              disableAlpha: !0,
+              onChange: (_) =>
+                _(
+                  (function (_) {
+                    const _ = _.match(
+                      /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
+                    );
+                    if (_) {
+                      let [, _, _, _, _] = _;
+                      return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(_, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
+                    }
+                    return "#7e3232";
+                  })(_),
+                ),
+            }),
+            (0, _.jsx)(_, {
+              strOKLabel: _,
+              strCancelLabel: (0, _._)("#Button_Cancel"),
+              onOK: () => {
+                _ && _.length > 0 && _();
+              },
+              onClose: _,
+            }),
+          ],
         });
       });
     },

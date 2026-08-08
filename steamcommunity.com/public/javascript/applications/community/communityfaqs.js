@@ -4169,9 +4169,12 @@ License: MIT
             document.removeChild(n);
           } catch (e) {}
         }
-        static WriteCSVToFile(e, t) {
-          const n = a().unparse(e, { header: !0 });
-          s.WriteFile(new Blob([n], { type: "text/csv:charset=utf-8;" }), t);
+        static WriteCSVToFile(e, t, n, i) {
+          const r = i
+              ? a().unparse({ fields: i, data: e }, { header: !0 })
+              : a().unparse(e, { header: !0 }),
+            o = 1 == n ? ["\ufeff" + r] : [r];
+          s.WriteFile(new Blob(o, { type: "text/csv:charset=utf-8;" }), t);
         }
         static WriteXMLToFile(e, t) {
           const n = () =>

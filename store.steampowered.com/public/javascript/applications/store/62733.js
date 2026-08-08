@@ -148,6 +148,7 @@
         DateWidth: "_2P2kw0vHZogg7Ny7cAjQBo",
         PacificTimeHint: "_18FxDrpsfO5Tt8EFui49hV",
         TimeZone: "-x3Rw6W2fJfWRMs7vKr1I",
+        ClearButton: "TzhaDn0jN2ILks403xqXQ",
         InputBorder: "_1_H1sN2GVTzxSaz55gv03s",
         TimeBlock: "_2xLBsAMYVDoygyWbl2YIzI",
         TimeRowContainer: "BWmgg29ZeDbO6oj7Z1U7T",
@@ -1803,19 +1804,21 @@
           bWeekdaysOnly: T,
           fnSetTimeToUpdate: G,
           bForce24HourFormat: P,
+          bAllowClear: k,
         } = e;
-        let k =
+        let L =
           (function () {
             const e = g()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
           })() || P
             ? j
             : x;
-        const L = r(),
-          [E, F] = s.useState(L > 0 ? g()(1e3 * L) : null),
-          [B, R] = s.useState(),
-          [O, M] = s.useState(),
-          W = (function (e, t, n, i, r) {
+        const E = r(),
+          [F, B] = s.useState(E > 0 ? g()(1e3 * E) : null),
+          [R, O] = s.useState(0),
+          [M, W] = s.useState(),
+          [z, U] = s.useState(),
+          H = (function (e, t, n, i, r) {
             const a = i && i(),
               o = t && !I(t).isValid(),
               c = e && !w(e).isValid();
@@ -1835,51 +1838,51 @@
               }, [l, r]),
               l
             );
-          })(B, O, D, A, l),
-          z = !l && W;
-        let U, H;
+          })(M, z, D, A, l),
+          V = !l && H;
+        let Z, K;
         if (t && n && t == n && n > c.HD.GetTimeNowWithOverride()) {
           const e = g().unix(n);
-          (U = {
+          (Z = {
             hours: { max: e.hour(), min: e.hour(), step: 0 },
             minutes: { max: e.minute(), min: e.minute(), step: 0 },
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (k = j);
+            (L = j);
         }
-        L || !n || C || (H = g().unix(n));
-        const V = g().tz.guess(),
-          Z = g().unix(L).tz(V),
-          K = !!p && V != p && g().unix(L).tz(p),
+        E || !n || C || (K = g().unix(n));
+        const q = g().tz.guess(),
+          Y = g().unix(E).tz(q),
+          Q = !!p && q != p && g().unix(E).tz(p),
           {
-            fnOnInput: Y,
-            fnOnInputBlur: q,
-            fnOnChange: Q,
+            fnOnInput: X,
+            fnOnInputBlur: J,
+            fnOnChange: $,
           } = v(
             I,
             (e) => {
               if (h) return;
-              M(null);
+              U(null);
               const t = r(),
                 n = g().unix(t || c.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(n.hour()),
                 e.minute(n.minute()),
                 e.second(0),
                 G(e.unix()),
-                F(e);
+                B(e);
             },
-            M,
+            U,
           ),
           {
-            fnOnInput: J,
-            fnOnInputBlur: X,
-            fnOnChange: $,
+            fnOnInput: ee,
+            fnOnInputBlur: te,
+            fnOnChange: ne,
           } = v(
             w,
             (e) => {
               if (h) return;
-              R(null);
+              W(null);
               let t = r(),
                 i = 0;
               if (t) {
@@ -1894,10 +1897,11 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              G(i), F(g().unix(i));
+              G(i), B(g().unix(i));
             },
-            R,
-          );
+            W,
+          ),
+          ie = k && !h && E > 0;
         return (0, i.jsxs)("div", {
           className: (0, u.A)(f().EventTimeSection, S),
           children: [
@@ -1909,10 +1913,10 @@
                   direction: "top",
                   children: Boolean(N) && (0, i.jsx)("span", { children: N }),
                 }),
-                z &&
+                V &&
                   (0, i.jsxs)("span", {
                     className: f().DateErrorCtn,
-                    children: [(0, i.jsx)("img", { src: o.A }), z],
+                    children: [(0, i.jsx)("img", { src: o.A }), V],
                   }),
               ],
             }),
@@ -1922,74 +1926,82 @@
                 (0, i.jsxs)("div", {
                   className: (0, u.A)(d().InputBorder, f().TimeBlock),
                   children: [
-                    (0, i.jsx)(a(), {
-                      onChange: Q,
-                      timeFormat: !1,
-                      value: null != O ? O : E,
-                      isValidDate: (e) =>
-                        !h &&
-                        (function (e, t, n, i) {
-                          const s = g().unix(e).hour(0).seconds(0).minute(0);
-                          let r = i.unix() >= s.unix();
-                          if (r && t && t >= e) {
-                            const e = g()
-                              .unix(t)
-                              .hour(23)
-                              .minute(59)
-                              .seconds(59);
-                            r = i.unix() <= e.unix();
-                          }
-                          r &&
-                            n &&
-                            ((0 != i.weekday() && 6 != i.weekday()) ||
-                              (r = !1));
-                          return r;
-                        })(n, t, T, e),
-                      initialValue: H,
-                      inputProps: {
-                        placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
-                        className: (0, u.A)(
-                          f().DateWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: h,
-                        onChange: (e) => Y(e.currentTarget.value),
-                        onBlur: (e) => q(e.currentTarget.value),
+                    (0, i.jsx)(
+                      a(),
+                      {
+                        onChange: $,
+                        timeFormat: !1,
+                        value: null != z ? z : F,
+                        isValidDate: (e) =>
+                          !h &&
+                          (function (e, t, n, i) {
+                            const s = g().unix(e).hour(0).seconds(0).minute(0);
+                            let r = i.unix() >= s.unix();
+                            if (r && t && t >= e) {
+                              const e = g()
+                                .unix(t)
+                                .hour(23)
+                                .minute(59)
+                                .seconds(59);
+                              r = i.unix() <= e.unix();
+                            }
+                            r &&
+                              n &&
+                              ((0 != i.weekday() && 6 != i.weekday()) ||
+                                (r = !1));
+                            return r;
+                          })(n, t, T, e),
+                        initialValue: K,
+                        inputProps: {
+                          placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
+                          className: (0, u.A)(
+                            f().DateWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: h,
+                          onChange: (e) => X(e.currentTarget.value),
+                          onBlur: (e) => J(e.currentTarget.value),
+                        },
                       },
-                    }),
-                    !!K &&
+                      "date" + R,
+                    ),
+                    !!Q &&
                       (0, i.jsx)("div", {
                         className: f().PacificTimeHint,
-                        children: K.format("L"),
+                        children: Q.format("L"),
                       }),
                   ],
                 }),
                 (0, i.jsxs)("div", {
                   className: (0, u.A)(d().InputBorder, f().TimeBlock),
                   children: [
-                    (0, i.jsx)(a(), {
-                      onChange: $,
-                      dateFormat: !1,
-                      timeFormat: k,
-                      timeConstraints: U,
-                      value: null != B ? B : E,
-                      inputProps: {
-                        placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
-                        className: (0, u.A)(
-                          f().TimeWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: h,
-                        onChange: (e) => J(e.currentTarget.value),
-                        onBlur: (e) => X(e.currentTarget.value),
+                    (0, i.jsx)(
+                      a(),
+                      {
+                        onChange: ne,
+                        dateFormat: !1,
+                        timeFormat: L,
+                        timeConstraints: Z,
+                        value: null != M ? M : F,
+                        inputProps: {
+                          placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
+                          className: (0, u.A)(
+                            f().TimeWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: h,
+                          onChange: (e) => ee(e.currentTarget.value),
+                          onBlur: (e) => te(e.currentTarget.value),
+                        },
                       },
-                    }),
-                    !!K &&
+                      "time" + R,
+                    ),
+                    !!Q &&
                       (0, i.jsx)("div", {
                         className: f().PacificTimeHint,
-                        children: K.format("LT"),
+                        children: Q.format("LT"),
                       }),
                   ],
                 }),
@@ -1998,18 +2010,27 @@
                     children: [
                       (0, i.jsx)("div", {
                         className: f().TimeZone,
-                        children: Z.zoneAbbr(),
+                        children: Y.zoneAbbr(),
                       }),
-                      !!K &&
+                      !!Q &&
                         (0, i.jsx)("div", {
                           className: f().TimeZone,
-                          children: K.zoneAbbr(),
+                          children: Q.zoneAbbr(),
                         }),
                     ],
                   }),
+                ie &&
+                  (0, i.jsx)("button", {
+                    type: "button",
+                    className: f().ClearButton,
+                    onClick: () => {
+                      h || (G(0), B(null), U(null), W(null), O((e) => e + 1));
+                    },
+                    children: (0, m.we)("#Button_Clear"),
+                  }),
               ],
             }),
-            Boolean(U) &&
+            Boolean(Z) &&
               (0, i.jsx)("div", {
                 children: (0, m.we)("#DateTimePicker_DateTime_Fixed"),
               }),
@@ -2059,7 +2080,7 @@
       "use strict";
       n.d(t, { r: () => u, x: () => m });
       var i = n(56545),
-        s = n(48210),
+        s = n(76119),
         r = n(58632),
         a = n.n(r),
         o = n(80902),
@@ -2115,7 +2136,7 @@
       var i = n(7850),
         s = n(90626),
         r = n(55963),
-        a = n(48210),
+        a = n(76119),
         o = n(62093),
         c = n(60014),
         l = n(3578),
@@ -2172,7 +2193,7 @@
       n.d(t, { $: () => g, g: () => h });
       var i = n(56545),
         s = n(94076),
-        r = n(48210),
+        r = n(76119),
         a = n(68950),
         o = n(80902),
         c = n(90626),
@@ -2298,7 +2319,7 @@
         c = n(56545),
         l = n(3108),
         d = n(35850),
-        u = (n(71430), n(48210)),
+        u = (n(71430), n(76119)),
         m = n(80902),
         _ = n(10247),
         p = n(23809),
@@ -2456,7 +2477,7 @@
         u = n(70343),
         m = n(76217),
         _ = n(3108),
-        p = n(48210),
+        p = n(76119),
         f = n(96006),
         h = n(29008),
         g = n(7338),
@@ -2605,7 +2626,7 @@
       }
       function z(e) {
         const { lineItemID: t, validatedItem: n, storeItem: s } = e,
-          a = q(s),
+          a = Y(s),
           o = (0, r.t)(t),
           c = o.isPending;
         return (0, i.jsxs)(u.Rz, {
@@ -2641,7 +2662,7 @@
                           (0, L.we)("#SteamCharts_UnknownGameTitle"),
                       }),
                     }),
-                    (0, i.jsx)(J, { validatedItem: n }),
+                    (0, i.jsx)(X, { validatedItem: n }),
                     (0, i.jsx)(u.UW, {
                       className: d().LineItemSpaceBetween,
                       children: (0, i.jsx)(m.Z, {
@@ -2707,10 +2728,10 @@
                       }),
                     }),
                     t.BIsComingSoon() && (0, i.jsx)(Q, { storeItem: t }),
-                    (0, i.jsxs)(J, {
+                    (0, i.jsxs)(X, {
                       validatedItem: o,
                       children: [
-                        (0, i.jsx)(X, { item: t }),
+                        (0, i.jsx)(J, { item: t }),
                         (0, i.jsx)($, { item: t }),
                         (0, i.jsx)(ee, { item: t }),
                       ],
@@ -2751,7 +2772,7 @@
       }
       function H(e) {
         const { storeItem: t, displayItem: n, validatedItem: s } = e,
-          r = q(n),
+          r = Y(n),
           a = s?.errors?.adult_content_restricted;
         return (0, i.jsx)("div", {
           className: (0, k.A)(d().LineItemColumn, d().LineItemCapsule),
@@ -2832,7 +2853,7 @@
             (0, i.jsx)("div", {
               className: d().LineItemCol,
               children: g
-                ? (0, i.jsx)(Y, { recipient: g })
+                ? (0, i.jsx)(q, { recipient: g })
                 : (0, i.jsx)(te, {
                     lineItem: t,
                     storeItem: n,
@@ -2882,7 +2903,7 @@
           ],
         });
       }
-      function Y(e) {
+      function q(e) {
         const t = (0, y.js)(e.recipient);
         return (0, i.jsx)("div", {
           className: d().GiftForNotice,
@@ -2897,7 +2918,7 @@
           ),
         });
       }
-      function q(e) {
+      function Y(e) {
         const t = `${E.TS.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
         if (!e) return t;
         const n = e.GetAssets();
@@ -2915,14 +2936,14 @@
           (0, i.jsx)(u.dp, { children: n })
         );
       }
-      function J(e) {
+      function X(e) {
         const { validatedItem: t, children: n } = e;
         return (0, i.jsxs)("div", {
           className: (0, k.A)(d().LineItemSpaceBetween),
           children: [(0, i.jsx)(I.Yz, { lineItem: t }), n],
         });
       }
-      function X(e) {
+      function J(e) {
         const { item: t } = e;
         return t.GetSelfPurchaseOption()?.requires_shipping
           ? (0, i.jsx)(u.dp, { children: (0, i.jsx)(G.r, { item: t }) })
@@ -3615,7 +3636,7 @@
       var i = n(7850),
         s = n(90485),
         r = n(76217),
-        a = n(48210),
+        a = n(76119),
         o = n(13327),
         c = n(64238),
         l = n.n(c),
@@ -3922,17 +3943,17 @@
           ? null
           : (0, i.jsx)(C.Ay, {
               feature: `upsell-${s}`,
-              children: (0, i.jsx)(q, {
+              children: (0, i.jsx)(Y, {
                 className: (0, y.A)(F.Specials),
                 children: t
                   ?.slice(0, 3)
                   .map(({ item_id: e, item: t }) =>
-                    (0, i.jsx)(Y, { item_id: e, item: t }, (0, k.wD)(e)),
+                    (0, i.jsx)(q, { item_id: e, item: t }, (0, k.wD)(e)),
                   ),
               }),
             });
       }
-      function Y(e) {
+      function q(e) {
         const { item: t } = e;
         return (0, i.jsx)(L.W, {
           capsule: { id: t.id, type: (0, k._4)(t.item_type, t.type) },
@@ -3941,7 +3962,7 @@
           bPreferAssetWithoutOverride: !1,
         });
       }
-      function q(e) {
+      function Y(e) {
         const { className: t, children: n } = e;
         return (0, i.jsx)(r.Z, {
           "flow-children": "row",
@@ -3951,8 +3972,8 @@
         });
       }
       var Q = n(53965),
-        J = n(83392),
-        X = n(90534),
+        X = n(83392),
+        J = n(90534),
         $ = n(20187),
         ee = n(28491),
         te = n(13904),
@@ -4233,7 +4254,7 @@
           });
         return s.length < 1
           ? null
-          : (0, i.jsx)(X.az, {
+          : (0, i.jsx)(J.az, {
               flexGrow: "0",
               children: (0, i.jsxs)(ye.l6.Root, {
                 state: a,
@@ -4272,7 +4293,7 @@
               persona: r,
             })
           : (0, i.jsx)(i.Fragment, {});
-        return (0, i.jsxs)(J.s, {
+        return (0, i.jsxs)(X.s, {
           minWidth: "0",
           align: "center",
           justify: "between",
@@ -4280,7 +4301,7 @@
           maxWidth: "600px",
           children: [
             (0, i.jsx)("div", { children: s.GetName() }),
-            (0, i.jsxs)(J.s, { gap: "1", align: "center", children: [c, o] }),
+            (0, i.jsxs)(X.s, { gap: "1", align: "center", children: [c, o] }),
           ],
         });
       }
@@ -4575,7 +4596,7 @@
         const { lineItem: t } = e;
         return (0, i.jsxs)(at, {
           children: [
-            (0, i.jsx)(Xe, { ...e }),
+            (0, i.jsx)(Je, { ...e }),
             (0, i.jsx)(tt, { lineItem: t }),
             (0, i.jsx)(mt, { gifteeAccountID: t.gift_info?.accountid_giftee }),
           ],
@@ -4623,7 +4644,7 @@
           ],
         });
       }
-      function Ye(e) {
+      function qe(e) {
         const { lineItem: t, onClick: n } = e,
           { mutate: s } = (0, te.C)(),
           r = u.useCallback(() => {
@@ -4640,11 +4661,11 @@
           children: (0, w.we)("#Cart_EnterRecipientEmail"),
         });
       }
-      function qe(e) {
+      function Ye(e) {
         const { lineItem: t } = e,
           n = (0, ce.$)(t);
         return n
-          ? (0, i.jsxs)(J.s, {
+          ? (0, i.jsxs)(X.s, {
               align: "center",
               children: [
                 (0, i.jsx)("a", {
@@ -4708,17 +4729,17 @@
           })
         );
       }
-      var Je;
-      function Xe(e) {
+      var Xe;
+      function Je(e) {
         const { lineItem: t } = e,
           [n, s] = u.useState(!1),
           r = u.useMemo(
             () =>
               t.gift_info?.accountid_giftee
-                ? Je.AccountSelected
+                ? Xe.AccountSelected
                 : n || t.gift_info?.email_giftee
-                  ? Je.EmailSelected
-                  : Je.NoRecipientSelected,
+                  ? Xe.EmailSelected
+                  : Xe.NoRecipientSelected,
             [t, n],
           ),
           { mutate: a } = (0, te.C)(),
@@ -4736,7 +4757,7 @@
         return (0, i.jsxs)(ot, {
           children: [
             (0, i.jsx)("div", { className: _e().GiftFormDivider }),
-            (0, i.jsxs)(J.s, {
+            (0, i.jsxs)(X.s, {
               justify: "between",
               gap: "3",
               direction: { initial: "column-reverse", md: "row" },
@@ -4745,21 +4766,21 @@
                 (0, i.jsxs)(ct, {
                   children: [
                     (0, i.jsx)(dt, {
-                      fullWidth: r === Je.EmailSelected,
+                      fullWidth: r === Xe.EmailSelected,
                       children:
-                        r == Je.EmailSelected
+                        r == Xe.EmailSelected
                           ? (0, w.we)("#Cart_GiftRecipientEmail_Label")
                           : (0, w.we)("#Cart_GiftRecipient_Label"),
                     }),
-                    r == Je.AccountSelected && (0, i.jsx)(qe, { lineItem: t }),
-                    r == Je.NoRecipientSelected &&
+                    r == Xe.AccountSelected && (0, i.jsx)(Ye, { lineItem: t }),
+                    r == Xe.NoRecipientSelected &&
                       (0, i.jsx)($e, { onEmailRecipient: () => s(!0), ...e }),
-                    r != Je.NoRecipientSelected &&
+                    r != Xe.NoRecipientSelected &&
                       (0, i.jsxs)(ut, {
                         onClick: o,
                         children: [
                           "(",
-                          r == Je.EmailSelected
+                          r == Xe.EmailSelected
                             ? (0, w.we)("#Cart_EditGiftDelivery")
                             : (0, w.we)("#Cart_Edit"),
                           ")",
@@ -4771,22 +4792,22 @@
               ],
             }),
             (0, i.jsx)("div", {
-              children: r == Je.EmailSelected && (0, i.jsx)(Qe, { ...e }),
+              children: r == Xe.EmailSelected && (0, i.jsx)(Qe, { ...e }),
             }),
-            r == Je.AccountSelected && (0, i.jsx)(et, { lineItem: t }),
+            r == Xe.AccountSelected && (0, i.jsx)(et, { lineItem: t }),
           ],
         });
       }
       function $e(e) {
         const { onEmailRecipient: t, ...n } = e;
-        return (0, i.jsxs)(J.s, {
+        return (0, i.jsxs)(X.s, {
           align: "center",
           gap: "2",
           marginStart: "2",
           wrap: "wrap",
           children: [
             (0, i.jsx)(Ke, { ...n }),
-            (0, i.jsx)(Ye, { onClick: t, ...n }),
+            (0, i.jsx)(qe, { onClick: t, ...n }),
             (0, i.jsx)(Ze, {}),
           ],
         });
@@ -4802,7 +4823,7 @@
         return n
           ? r
             ? null
-            : (0, i.jsx)(X.az, {
+            : (0, i.jsx)(J.az, {
                 marginTop: "3",
                 className: _e().GiftNonFriendWarning,
                 children: (0, i.jsxs)($.EY, {
@@ -4918,7 +4939,7 @@
         (e[(e.NoRecipientSelected = 0)] = "NoRecipientSelected"),
           (e[(e.AccountSelected = 1)] = "AccountSelected"),
           (e[(e.EmailSelected = 2)] = "EmailSelected");
-      })(Je || (Je = {}));
+      })(Xe || (Xe = {}));
       const it = 160,
         st = 330;
       function rt(e) {
@@ -5479,7 +5500,7 @@
             (0, i.jsxs)(x.wC, {
               children: [
                 (0, i.jsx)(Vt, { bDisabled: s, nextStep: r, bGuestOption: a }),
-                (0, i.jsx)(Yt, { disabled: s || n }),
+                (0, i.jsx)(qt, { disabled: s || n }),
                 (0, i.jsx)(Kt, { bDisabled: s }),
               ],
             }),
@@ -5630,7 +5651,7 @@
             })
           : null;
       }
-      function Yt(e) {
+      function qt(e) {
         const { disabled: t } = e,
           n = (0, _.vo)(),
           s = n.data?.family_groupid(),
@@ -5673,7 +5694,7 @@
             })
           : null;
       }
-      var qt = n(50438);
+      var Yt = n(50438);
       function Qt(e) {
         const t = nn(),
           n = (function () {
@@ -5693,7 +5714,7 @@
           (s = t
             ? "replay" == n.type
               ? (0, i.jsx)($t, { cartID: n })
-              : (0, i.jsx)(Xt, { cartID: n, ...e })
+              : (0, i.jsx)(Jt, { cartID: n, ...e })
             : (0, i.jsx)("div", {
                 className: l()(Lt().ShoppingCartPage, Lt().CartPagePlaceholder),
                 children: (0, i.jsx)(v.t, {
@@ -5701,13 +5722,13 @@
                   msDelayAppear: 250,
                 }),
               })),
-          (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(Jt, {}), s] })
+          (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(Xt, {}), s] })
         );
       }
-      function Jt() {
+      function Xt() {
         return (0, o.Pt)(), (0, _.vo)(), null;
       }
-      function Xt(e) {
+      function Jt(e) {
         const { cartID: t, initialStep: n = "initial" } = e,
           [s, r] = u.useState(n),
           a = (0, d.UI)(),
@@ -5834,7 +5855,7 @@
         const [e, t] = u.useState(!1);
         return (
           u.useEffect(() => {
-            e || (0, qt.U)().then(() => t(!0));
+            e || (0, Yt.U)().then(() => t(!0));
           }, [e]),
           e
         );

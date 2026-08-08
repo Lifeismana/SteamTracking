@@ -398,6 +398,34 @@
         "./springcleaning22_turkish.json": [42598, 42598],
         "./springcleaning22_ukrainian.json": [77648, 77648],
         "./springcleaning22_vietnamese.json": [36521, 36521],
+        "./summerscrub2026_brazilian.json": [47174, 47174],
+        "./summerscrub2026_bulgarian.json": [1213, 1213],
+        "./summerscrub2026_czech.json": [72991, 72991],
+        "./summerscrub2026_danish.json": [49393, 49393],
+        "./summerscrub2026_dutch.json": [2770, 2770],
+        "./summerscrub2026_english.json": [27928, 27928],
+        "./summerscrub2026_finnish.json": [33715, 33715],
+        "./summerscrub2026_french.json": [32992, 32992],
+        "./summerscrub2026_german.json": [64654, 64654],
+        "./summerscrub2026_greek.json": [76372, 76372],
+        "./summerscrub2026_hungarian.json": [51521, 51521],
+        "./summerscrub2026_italian.json": [64456, 64456],
+        "./summerscrub2026_japanese.json": [41327, 41327],
+        "./summerscrub2026_koreana.json": [2919, 2919],
+        "./summerscrub2026_latam.json": [74159, 74159],
+        "./summerscrub2026_norwegian.json": [50272, 50272],
+        "./summerscrub2026_polish.json": [59497, 59497],
+        "./summerscrub2026_portuguese.json": [38365, 38365],
+        "./summerscrub2026_romanian.json": [39619, 39619],
+        "./summerscrub2026_russian.json": [75441, 75441],
+        "./summerscrub2026_schinese.json": [40364, 40364],
+        "./summerscrub2026_spanish.json": [93488, 93488],
+        "./summerscrub2026_swedish.json": [32305, 32305],
+        "./summerscrub2026_tchinese.json": [80839, 80839],
+        "./summerscrub2026_thai.json": [86710, 86710],
+        "./summerscrub2026_turkish.json": [70104, 70104],
+        "./summerscrub2026_ukrainian.json": [99422, 99422],
+        "./summerscrub2026_vietnamese.json": [51079, 51079],
         "./templatepage_brazilian.json": [41227, 41227],
         "./templatepage_bulgarian.json": [31364, 31364],
         "./templatepage_czech.json": [13186, 13186],
@@ -4288,6 +4316,8 @@
         SideBySide: "_2b0ikGj4SWcJFLr94dFA2P",
         GuestContainer: "_3MPPCPCiW7R2DxTWhHG6qn",
         GuestLayout: "v2fIszS0AXVt9wq1x1VN_",
+        StandardLayout: "_23HHn9m5G9tvQUQfp0sOQq",
+        Embedded: "uif43-40CZBGcmqvcmjyG",
         GuestText: "_1AQsyQX3sv0iyHpoisWTKg",
         GuestLink: "_20UFsvsjP6hric2eHgBB5J",
         ConfirmCredntialsNag: "mZ-SHhdWQE6_4YJJD4O-H",
@@ -4358,10 +4388,8 @@
         RefreshTitle: "wQfk_quo6JygG5vicjvk7",
         RefreshReason: "_3jOfKzSuqHiEKYSSsbiRKN",
         InsecureComputer: "F_qh_67IO3AfEkhMURMoA",
-        StandardLayout: "_23HHn9m5G9tvQUQfp0sOQq",
         PrimaryHeader: "_3Ze3SGSOy1dqC3b_wRYsVR",
         FormContainer: "_2kJQeei4xfwO6UZnWbiC2m",
-        Embedded: "uif43-40CZBGcmqvcmjyG",
         Compact: "_3tWButFKgziGUfX4mcXdjx",
         HeaderLogo: "_2Xzuj_ksfneoOT9bB5rUoL",
         LogoContainer: "Rp7yOfcjwqlzkFaolrALl",
@@ -5050,7 +5078,9 @@
         EmoticonBow_st0: "_3EB-76Wh1Hssq6hnIWaDX9",
         EmoticonBow_st1: "_2NIMu9-JXJU2fbjL-JM4XJ",
         SteamDeckCompatInfo: "_1t9l5b6H2B7eolbbAtY3jh",
+        SteamMachineCompatLogo: "_3BgSmU0vMcMLerdcBeGtlz",
         SteamDeckCompatLogo: "_1Ly8YGAprqIELn7EazNiny",
+        SteamFrameCompatLogo: "_1feBVMhNUpP5hQ4wLAhvcP",
         SteamDeckCompatIcon: "_1wEdnz5B3QVPD7AJZtQKcK",
         SteamDeckCompatVerified: "_1x-dZngY8r-vKBcvfcOg6Z",
         SteamDeckCompatPlayable: "_1f6j0LU7fvr82QHSjo-KjQ",
@@ -19450,10 +19480,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetVoteDefinitions = function (_, _) {
+        (_.GetVoteDefinitions = function (_, _, _) {
           return _.SendMsg(
             "StoreSales.GetVoteDefinitions#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -19462,23 +19492,28 @@
             },
           );
         }),
-          (_.SetVote = function (_, _) {
-            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _), _, {
+          (_.SetVote = function (_, _, _) {
+            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.GetUserVotes = function (_, _) {
-            return _.SendMsg("StoreSales.GetUserVotes#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetUserVotes = function (_, _, _) {
+            return _.SendMsg(
+              "StoreSales.GetUserVotes#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.GetUserNominations = function (_, _) {
+          (_.GetUserNominations = function (_, _, _) {
             return _.SendMsg(
               "SteamAwards.GetUserNominations#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -19486,10 +19521,10 @@
               },
             );
           }),
-            (_.GetOtherUserNominations = function (_, _) {
+            (_.GetOtherUserNominations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetOtherUserNominations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -19497,16 +19532,16 @@
                 },
               );
             }),
-            (_.Nominate = function (_, _) {
-              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _), _, {
+            (_.Nominate = function (_, _, _) {
+              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _, _), _, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
             }),
-            (_.GetNominationRecommendations = function (_, _) {
+            (_.GetNominationRecommendations = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationRecommendations#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -19514,10 +19549,10 @@
                 },
               );
             }),
-            (_.GetNominationShareLink = function (_, _) {
+            (_.GetNominationShareLink = function (_, _, _) {
               return _.SendMsg(
                 "SteamAwards.GetNominationShareLink#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 1,
@@ -20194,6 +20229,202 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.clan_account_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_account_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  listid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  ignore_dlc: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.apps || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  apps: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  sort_order: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Response_ListApp";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.partnerid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -20380,16 +20611,21 @@
       }
       var _;
       !(function (_) {
-        (_.SetDevPageLink = function (_, _) {
-          return _.SendMsg("StoreCatalog.SetDevPageLink#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-            eWebAPIKeyRequirement: 2,
-          });
+        (_.SetDevPageLink = function (_, _, _) {
+          return _.SendMsg(
+            "StoreCatalog.SetDevPageLink#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            },
+          );
         }),
-          (_.GetDevPageLinks = function (_, _) {
+          (_.GetDevPageLinks = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPageLinks#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -20398,20 +20634,32 @@
               },
             );
           }),
-          (_.GetDevPageAllAppsLinked = function (_, _) {
+          (_.GetDevPageAllAppsLinked = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPageAllAppsLinked#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetDevPagesForPartner = function (_, _) {
+          (_.GetDevPageListApps = function (_, _, _) {
+            return _.SendMsg(
+              "StoreCatalog.GetDevPageListApps#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetDevPagesForPartner = function (_, _, _) {
             return _.SendMsg(
               "StoreCatalog.GetDevPagesForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -21041,17 +21289,17 @@
         }
       }
       !(function (_) {
-        (_.GetLists = function (_, _) {
-          return _.SendMsg("StoreCuration.GetLists#1", (0, _._)(_, _), _, {
+        (_.GetLists = function (_, _, _) {
+          return _.SendMsg("StoreCuration.GetLists#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetListDetails = function (_, _) {
+          (_.GetListDetails = function (_, _, _) {
             return _.SendMsg(
               "StoreCuration.GetListDetails#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -21681,15 +21929,15 @@
       }
       var _;
       !(function (_) {
-        (_.RespondToClanInvite = function (_, _) {
-          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _), _, {
+        (_.RespondToClanInvite = function (_, _, _) {
+          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _, _), _, {
             ePrivilege: 1,
           });
         }),
-          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _) {
+          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _, _) {
             return _.SendMsg(
               "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -21697,10 +21945,10 @@
               },
             );
           }),
-          (_.GetPartnerEventsByBuildIDRange = function (_, _) {
+          (_.GetPartnerEventsByBuildIDRange = function (_, _, _) {
             return _.SendMsg(
               "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -22276,50 +22524,6 @@
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       window.g_CreatorHomeStore = _;
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapListInfo = new Map();
-        m_bLoadedFromConfig = !1;
-        LazyInit() {
-          if (!this.m_bLoadedFromConfig) {
-            const _ = (0, _._)("creator_home_list_info", "application_config");
-            if (this.ValidateCreatorHomeTitles(_))
-              for (const [
-                _,
-                { title: _, description: _, listtileimage: _ },
-              ] of Object.entries(_ ?? {}))
-                _ &&
-                  this.m_mapListInfo.set(_, {
-                    title: _ ?? "",
-                    description: _?.length ? _ : void 0,
-                    imageUrl: _?.length ? _ : void 0,
-                  });
-            this.m_bLoadedFromConfig = !0;
-          }
-        }
-        ValidateCreatorHomeTitles(_) {
-          return null != _ && "object" == typeof _ && !Array.isArray(_);
-        }
-        GetListTitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.title : void 0;
-        }
-        GetListSubtitle(_) {
-          return (
-            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.description : void 0
-          );
-        }
-        GetListtileImage(_) {
-          return (
-            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.imageUrl : void 0
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapListInfo", void 0),
-        (0, _._)([_._], _.prototype, "LazyInit", null);
-      const _ = new _();
-      window.g_CreatorHomeListInfoStore = _;
       var _ = __webpack_require__("chunkid");
       const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
       var _ = __webpack_require__("chunkid"),
@@ -23255,6 +23459,130 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.title || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  title: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "SteamAward_Localization";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.voteid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  voteid: {
+                    _: 1,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  localization: {
+                    _: 2,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "SteamAward";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.sale_filter || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [3], null);
         }
@@ -23944,6 +24272,10 @@
                     _: !0,
                     _: !0,
                   },
+                  extra_details: {
+                    _: 75,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -24194,7 +24526,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.parent_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6], null);
+            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -24246,6 +24578,14 @@
                   related_f2p: {
                     _: 7,
                     _: _,
+                  },
+                  dlc_parent_appids: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -25125,6 +25465,11 @@
                   },
                   steam_frame_compat_category: {
                     _: 13,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  steam_machine_compat_category: {
+                    _: 14,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -26365,6 +26710,67 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.steam_award || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steam_award: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_ExtraDetails";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.include_assets || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -26457,6 +26863,11 @@
                   },
                   include_links: {
                     _: 17,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_extra_details: {
+                    _: 18,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -28171,6 +28582,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  requires_signature: {
+                    _: 28,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -28406,17 +28822,17 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetItems = function (_, _) {
-          return _.SendMsg("StoreBrowse.GetItems#1", (0, _._)(_, _), _, {
+        (_.GetItems = function (_, _, _) {
+          return _.SendMsg("StoreBrowse.GetItems#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetStoreCategories = function (_, _) {
+          (_.GetStoreCategories = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetStoreCategories#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -28425,10 +28841,10 @@
               },
             );
           }),
-          (_.GetContentHubConfig = function (_, _) {
+          (_.GetContentHubConfig = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetContentHubConfig#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -28437,23 +28853,33 @@
               },
             );
           }),
-          (_.GetPriceStops = function (_, _) {
-            return _.SendMsg("StoreBrowse.GetPriceStops#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.GetPriceStops = function (_, _, _) {
+            return _.SendMsg(
+              "StoreBrowse.GetPriceStops#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.GetDLCForApps = function (_, _) {
-            return _.SendMsg("StoreBrowse.GetDLCForApps#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetDLCForApps = function (_, _, _) {
+            return _.SendMsg(
+              "StoreBrowse.GetDLCForApps#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetDLCForAppsSolr = function (_, _) {
+          (_.GetDLCForAppsSolr = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetDLCForAppsSolr#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -28462,10 +28888,10 @@
               },
             );
           }),
-          (_.GetHardwareItems = function (_, _) {
+          (_.GetHardwareItems = function (_, _, _) {
             return _.SendMsg(
               "StoreBrowse.GetHardwareItems#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -28746,16 +29172,21 @@
         }
       }
       !(function (_) {
-        (_.GetItems = function (_, _) {
-          return _.SendMsg("PartnerStoreBrowse.GetItems#1", (0, _._)(_, _), _, {
-            bConstMethod: !0,
-            ePrivilege: 1,
-          });
+        (_.GetItems = function (_, _, _) {
+          return _.SendMsg(
+            "PartnerStoreBrowse.GetItems#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
         }),
-          (_.GetCountryRestrictions = function (_, _) {
+          (_.GetCountryRestrictions = function (_, _, _) {
             return _.SendMsg(
               "PartnerStoreBrowse.GetCountryRestrictions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -28825,6 +29256,10 @@
                   },
                   release_date_filter: {
                     _: 13,
+                    _: _,
+                  },
+                  discounted_dates_filter: {
+                    _: 17,
                     _: _,
                   },
                   content_descriptors_must_match: {
@@ -29304,6 +29739,76 @@
         }
         getClassName() {
           return "CStoreQueryFilters_ReleaseDateFilter";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.start_date || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  start_date: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  end_date: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  allow_partial_overlap: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQueryFilters_DiscountedDatesFilter";
         }
       }
       class _ extends _.Message {
@@ -30534,17 +31039,17 @@
         _.Body().set_data_request(_.fromObject(_));
       }
       !(function (_) {
-        (_.Query = function (_, _) {
-          return _.SendMsg("StoreQuery.Query#1", (0, _._)(_, _), _, {
+        (_.Query = function (_, _, _) {
+          return _.SendMsg("StoreQuery.Query#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.SearchSuggestions = function (_, _) {
+          (_.SearchSuggestions = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.SearchSuggestions#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -30553,17 +31058,22 @@
               },
             );
           }),
-          (_.MoreLikeThis = function (_, _) {
-            return _.SendMsg("StoreQuery.MoreLikeThis#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 1,
-            });
+          (_.MoreLikeThis = function (_, _, _) {
+            return _.SendMsg(
+              "StoreQuery.MoreLikeThis#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
           }),
-          (_.GetItemsByUserRecommendedTags = function (_, _) {
+          (_.GetItemsByUserRecommendedTags = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.GetItemsByUserRecommendedTags#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -30571,10 +31081,10 @@
               },
             );
           }),
-          (_.GetItemByUserCombinedTagsPriority = function (_, _) {
+          (_.GetItemByUserCombinedTagsPriority = function (_, _, _) {
             return _.SendMsg(
               "StoreQuery.GetItemByUserCombinedTagsPriority#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33467,10 +33977,10 @@
       }
       var _, _;
       !(function (_) {
-        (_.GetActiveMarketingMessages = function (_, _) {
+        (_.GetActiveMarketingMessages = function (_, _, _) {
           return _.SendMsg(
             "MarketingMessages.GetActiveMarketingMessages#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -33479,10 +33989,10 @@
             },
           );
         }),
-          (_.GetPastMarketingMessages = function (_, _) {
+          (_.GetPastMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPastMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33490,10 +34000,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForUser = function (_, _) {
+          (_.GetMarketingMessagesForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33501,10 +34011,10 @@
               },
             );
           }),
-          (_.DoesUserHavePendingMarketingMessages = function (_, _) {
+          (_.DoesUserHavePendingMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33512,10 +34022,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessage = function (_, _) {
+          (_.GetDisplayMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33524,10 +34034,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessageForUser = function (_, _) {
+          (_.GetDisplayMarketingMessageForUser = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33535,10 +34045,10 @@
               },
             );
           }),
-          (_.GetDisplayMarketingMessageAdmin = function (_, _) {
+          (_.GetDisplayMarketingMessageAdmin = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33564,10 +34074,10 @@
               },
             );
           }),
-          (_.GetMarketingMessage = function (_, _) {
+          (_.GetMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -33575,80 +34085,80 @@
               },
             );
           }),
-          (_.CreateMarketingMessage = function (_, _) {
+          (_.CreateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.UpdateMarketingMessage = function (_, _) {
+          (_.UpdateMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.DeleteMarketingMessage = function (_, _) {
+          (_.DeleteMarketingMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.FindMarketingMessages = function (_, _) {
+          (_.FindMarketingMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.FindMarketingMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 5,
               },
             );
           }),
-          (_.GetMarketingMessageViewerStats = function (_, _) {
+          (_.GetMarketingMessageViewerStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageViewerStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessagesViewerRangeStats = function (_, _) {
+          (_.GetMarketingMessagesViewerRangeStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetMarketingMessageClickedStats = function (_, _) {
+          (_.GetMarketingMessageClickedStats = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessageClickedStats#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
               },
             );
           }),
-          (_.GetPartnerReadyToPublishMessages = function (_, _) {
+          (_.GetPartnerReadyToPublishMessages = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerReadyToPublishMessages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33657,10 +34167,10 @@
               },
             );
           }),
-          (_.PublishPartnerMessage = function (_, _) {
+          (_.PublishPartnerMessage = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.PublishPartnerMessage#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33669,10 +34179,10 @@
               },
             );
           }),
-          (_.GetPartnerMessagePreview = function (_, _) {
+          (_.GetPartnerMessagePreview = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetPartnerMessagePreview#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33681,10 +34191,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForPartner = function (_, _) {
+          (_.GetMarketingMessagesForPartner = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForPartner#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -33693,10 +34203,10 @@
               },
             );
           }),
-          (_.GetMarketingMessagesForApps = function (_, _) {
+          (_.GetMarketingMessagesForApps = function (_, _, _) {
             return _.SendMsg(
               "MarketingMessages.GetMarketingMessagesForApps#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 4,
@@ -34802,6 +35312,8 @@
             _.include_assets_without_overrides,
           apply_user_filters: _.apply_user_filters || _.apply_user_filters,
           include_links: _.include_links || _.include_links,
+          include_extra_details:
+            _.include_extra_details || _.include_extra_details,
         };
       }
       async function _(_, _) {
@@ -42787,6 +43299,7 @@
             )
           : null;
       }
+      const _ = (0, _.createContext)(!1);
       function _(_) {
         const { ModalManager: _ } = _,
           [_, _] = _.useState(void 0),
@@ -42871,8 +43384,11 @@
               () => _(void 0)
             );
           }, [_, _, _]),
-          (0, _.jsx)(_, {
-            children: _.rctToMeasure,
+          (0, _.jsx)(_.Provider, {
+            value: !0,
+            children: (0, _.jsx)(_, {
+              children: _.rctToMeasure,
+            }),
           })
         );
       }
@@ -45022,6 +45538,8 @@
             "DriverProvidedIPDVisibility_Bool"),
           (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
             "Prop_SupportsVRGamepadMode_Bool"),
+          (_[(_.Prop_AllowHomeApp2Setting_Int32 = 2119)] =
+            "Prop_AllowHomeApp2Setting_Int32"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -45188,7 +45706,7 @@
             (_[(_.SmoothStep = 3)] = "SmoothStep"),
             (_[(_.SmootherStep = 4)] = "SmootherStep");
         })(_ || (_ = {}));
-      var _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -45226,17 +45744,24 @@
             (_[(_.Panel = 2)] = "Panel");
         })(_ || (_ = {})),
         (function (_) {
-          (_[(_.ControllerPairing = 0)] = "ControllerPairing"),
-            (_[(_.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
-            (_[(_.SystemButtonHideDashboard = 2)] =
+          (_[(_.Unknown = 0)] = "Unknown"),
+            (_[(_.LaserMouse = 1)] = "LaserMouse"),
+            (_[(_.Gamepad = 2)] = "Gamepad");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.ControllerPairing = 1)] = "ControllerPairing"),
+            (_[(_.WelcomeToSteamFrame = 2)] = "WelcomeToSteamFrame"),
+            (_[(_.PlayspaceSetup = 3)] = "PlayspaceSetup"),
+            (_[(_.SystemButtonHideDashboard = 4)] =
               "SystemButtonHideDashboard"),
-            (_[(_.SystemButtonDashboardHidden = 3)] =
+            (_[(_.SystemButtonDashboardHidden = 5)] =
               "SystemButtonDashboardHidden"),
-            (_[(_.SystemButtonShowDashboard = 4)] =
+            (_[(_.SystemButtonShowDashboard = 6)] =
               "SystemButtonShowDashboard"),
-            (_[(_.PairWifiDongle = 5)] = "PairWifiDongle"),
-            (_[(_.TourSendOff = 6)] = "TourSendOff"),
-            (_[(_.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
+            (_[(_.PairWifiDongle = 7)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 8)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 9)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
@@ -45980,45 +46505,54 @@
       });
       const _ = _.forwardRef(function (_, _) {
         const {
-          value: _,
-          onChange: _,
-          disabled: _,
-          className: _,
-          focusable: _,
-          children: _,
-          navRef: _,
-          autoFocus: _,
-          ..._
-        } = _;
-        return (0, _.jsxs)(_._, {
-          ..._,
-          autoFocus: _,
-          noFocusRing: !0,
-          className: (0, _._)(_, _().Toggle, {
-            [_().Disabled]: !!_,
-            [_()._]: !!_,
-          }),
-          onClick: () => {
+            value: _,
+            onChange: _,
+            disabled: _,
+            className: _,
+            focusable: _,
+            children: _,
+            navRef: _,
+            autoFocus: _,
+            toggleRef: _,
+            ..._
+          } = _,
+          _ = _.useCallback(() => {
             if (!_ && _) {
               const _ = !_;
               _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
             }
-          },
-          ref: _,
-          navRef: _,
-          focusable: _,
-          role: "checkbox",
-          "aria-checked": !!_,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().ToggleRail,
+          }, [_, _, _]);
+        return (
+          _.useEffect(() => {
+            (0, _._)(_, {
+              toggle: _,
+            });
+          }, [_, _]),
+          (0, _.jsxs)(_._, {
+            ..._,
+            autoFocus: _,
+            noFocusRing: !0,
+            className: (0, _._)(_, _().Toggle, {
+              [_().Disabled]: !!_,
+              [_()._]: !!_,
             }),
-            (0, _.jsx)("div", {
-              className: _().ToggleSwitch,
-            }),
-            _,
-          ],
-        });
+            onClick: _,
+            ref: _,
+            navRef: _,
+            focusable: _,
+            role: "checkbox",
+            "aria-checked": !!_,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().ToggleRail,
+              }),
+              (0, _.jsx)("div", {
+                className: _().ToggleSwitch,
+              }),
+              _,
+            ],
+          })
+        );
       });
       function _(_) {
         const _ = !!_.disabled,
@@ -46661,26 +47195,34 @@
       const _ = _.memo((_) => {
           const [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(0 == _.nAccountID),
-            _ = `${_._.IMG_URL}international2025/players/${_.nAccountID}.png`,
-            _ = `${_._.IMG_URL}player_unknown.png`;
-          return (
-            (0, _.useEffect)(() => {
+            _ = _(),
+            _ = _._.Get().GetEventInfo(_);
+          if (
+            ((0, _.useEffect)(() => {
               __webpack_require__(!1);
             }, [_.nAccountID]),
-            (0, _.jsx)("img", {
-              src: _ ? _ : _,
-              className: (0, _._)(_().TeamLogo, _.className),
-              style: {
-                width: _.nSize,
-                height: _.nSize,
-                minWidth: _.nSize,
-                minHeight: _.nSize,
-                opacity: _ ? 1 : 0,
-              },
-              onError: () => _(!0),
-              onLoad: () => __webpack_require__(!0),
-            })
-          );
+            !_ || !_.event)
+          )
+            return null;
+          let _ = "";
+          _.event == _._.INTERNATIONAL_2025
+            ? (_ = "international2025")
+            : _.event == _._.INTERNATIONAL_2026 && (_ = "international2026");
+          const _ = `${_._.IMG_URL}${_}/players/${_.nAccountID}.png`,
+            _ = `${_._.IMG_URL}player_unknown.png`;
+          return (0, _.jsx)("img", {
+            src: _ ? _ : _,
+            className: (0, _._)(_().TeamLogo, _.className),
+            style: {
+              width: _.nSize,
+              height: _.nSize,
+              minWidth: _.nSize,
+              minHeight: _.nSize,
+              opacity: _ ? 1 : 0,
+            },
+            onError: () => _(!0),
+            onLoad: () => __webpack_require__(!0),
+          });
         }),
         _ = (0, _._)(({ nTeamID: _ }) => {
           const _ = _._.Get().GetTeamInfo(_),
@@ -67258,7 +67800,6 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -67270,7 +67811,6 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -67294,12 +67834,6 @@
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -67315,10 +67849,19 @@
             .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           __webpack_require__
@@ -67650,6 +68193,10 @@
                               }),
                               (0, _.jsx)(_, {
                                 path: _._.darkcarnivalcomic(),
+                                component: _,
+                              }),
+                              (0, _.jsx)(_, {
+                                path: _._.summerscrub2026(),
                                 component: _,
                               }),
                               !1,
@@ -68385,7 +68932,8 @@
 	"personalcalendar-lastmonth": 100800,
 	"personalcalendar-lastweek": 100801,
 	"personalcalendar-calendar": 100802,
-	"personalcalendar-homepage": 100803
+	"personalcalendar-homepage": 100803,
+	"greatonframe": 100804
 }`);
       class _ {
         static InstrumentLink(_, _, _ = null) {
@@ -69606,11 +70154,12 @@
         (0, _._)([_._], _.prototype, "m_nMobileDeviceCount", void 0);
       let _ = new _();
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const _ = _._.guess(),
-          _ = _.unix(_)._(_),
+        const _ = _()._.guess(),
+          _ = _().unix(_)._(_),
           _ = (0, _._)();
         return (
           _ && _.locale(_),
@@ -70000,14 +70549,15 @@
       }
       function _(_, _) {
         return {
-          queryKey: _(_, "default_info"),
+          queryKey: _(_, "default_info", _.cacheScope),
           queryFn: async () => _(await _(_, _, "default_info")),
           staleTime: 216e5,
           enabled: _(_),
         };
       }
-      function _(_, _) {
-        return ["StoreItem", _ && _(_), _];
+      function _(_, _, _) {
+        const _ = ["StoreItem", _ && _(_), _];
+        return _ && _.push(_), _;
       }
       const _ = [
         "assets",
@@ -73737,10 +74287,10 @@
       }
       var _, _, _;
       !(function (_) {
-        (_.GetPasswordRSAPublicKey = function (_, _) {
+        (_.GetPasswordRSAPublicKey = function (_, _, _) {
           return _.SendMsg(
             "Authentication.GetPasswordRSAPublicKey#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -73749,10 +74299,10 @@
             },
           );
         }),
-          (_.BeginAuthSessionViaQR = function (_, _) {
+          (_.BeginAuthSessionViaQR = function (_, _, _) {
             return _.SendMsg(
               "Authentication.BeginAuthSessionViaQR#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -73760,10 +74310,10 @@
               },
             );
           }),
-          (_.BeginAuthSessionViaCredentials = function (_, _) {
+          (_.BeginAuthSessionViaCredentials = function (_, _, _) {
             return _.SendMsg(
               "Authentication.BeginAuthSessionViaCredentials#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -73771,10 +74321,10 @@
               },
             );
           }),
-          (_.PollAuthSessionStatus = function (_, _) {
+          (_.PollAuthSessionStatus = function (_, _, _) {
             return _.SendMsg(
               "Authentication.PollAuthSessionStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -73782,20 +74332,20 @@
               },
             );
           }),
-          (_.GetAuthSessionInfo = function (_, _) {
+          (_.GetAuthSessionInfo = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GetAuthSessionInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAuthSessionRiskInfo = function (_, _) {
+          (_.GetAuthSessionRiskInfo = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GetAuthSessionRiskInfo#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -73811,20 +74361,20 @@
               },
             );
           }),
-          (_.UpdateAuthSessionWithMobileConfirmation = function (_, _) {
+          (_.UpdateAuthSessionWithMobileConfirmation = function (_, _, _) {
             return _.SendMsg(
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdateAuthSessionWithSteamGuardCode = function (_, _) {
+          (_.UpdateAuthSessionWithSteamGuardCode = function (_, _, _) {
             return _.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -73832,10 +74382,10 @@
               },
             );
           }),
-          (_.GenerateAccessTokenForApp = function (_, _) {
+          (_.GenerateAccessTokenForApp = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GenerateAccessTokenForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
@@ -73843,20 +74393,20 @@
               },
             );
           }),
-          (_.EnumerateTokens = function (_, _) {
+          (_.EnumerateTokens = function (_, _, _) {
             return _.SendMsg(
               "Authentication.EnumerateTokens#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetAuthSessionsForAccount = function (_, _) {
+          (_.GetAuthSessionsForAccount = function (_, _, _) {
             return _.SendMsg(
               "Authentication.GetAuthSessionsForAccount#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73864,10 +74414,10 @@
               },
             );
           }),
-          (_.RevokeToken = function (_, _) {
+          (_.RevokeToken = function (_, _, _) {
             return _.SendMsg(
               "Authentication.RevokeToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -73875,10 +74425,10 @@
               },
             );
           }),
-          (_.RevokeRefreshToken = function (_, _) {
+          (_.RevokeRefreshToken = function (_, _, _) {
             return _.SendMsg(
               "Authentication.RevokeRefreshToken#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -73888,10 +74438,10 @@
           });
       })(_ || (_ = {})),
         (function (_) {
-          (_.QueryRefreshTokensByAccount = function (_, _) {
+          (_.QueryRefreshTokensByAccount = function (_, _, _) {
             return _.SendMsg(
               "AuthenticationSupport.QueryRefreshTokensByAccount#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -73899,10 +74449,10 @@
               },
             );
           }),
-            (_.QueryRefreshTokenByID = function (_, _) {
+            (_.QueryRefreshTokenByID = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.QueryRefreshTokenByID#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -73910,20 +74460,20 @@
                 },
               );
             }),
-            (_.RevokeToken = function (_, _) {
+            (_.RevokeToken = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.RevokeToken#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 5,
                 },
               );
             }),
-            (_.GetTokenHistory = function (_, _) {
+            (_.GetTokenHistory = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.GetTokenHistory#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -73931,10 +74481,10 @@
                 },
               );
             }),
-            (_.MarkTokenCompromised = function (_, _) {
+            (_.MarkTokenCompromised = function (_, _, _) {
               return _.SendMsg(
                 "AuthenticationSupport.MarkTokenCompromised#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   ePrivilege: 5,
@@ -73943,16 +74493,21 @@
             });
         })(_ || (_ = {})),
         (function (_) {
-          (_.CreateNonce = function (_, _) {
-            return _.SendMsg("CloudGaming.CreateNonce#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.CreateNonce = function (_, _, _) {
+            return _.SendMsg(
+              "CloudGaming.CreateNonce#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-            (_.GetTimeRemaining = function (_, _) {
+            (_.GetTimeRemaining = function (_, _, _) {
               return _.SendMsg(
                 "CloudGaming.GetTimeRemaining#1",
-                (0, _._)(_, _),
+                (0, _._)(_, _, _),
                 _,
                 {
                   bConstMethod: !0,
@@ -75761,41 +76316,41 @@
         }
       }
       !(function (_) {
-        (_.QueryTime = function (_, _) {
-          return _.SendMsg("TwoFactor.QueryTime#1", (0, _._)(_, _), _, {
+        (_.QueryTime = function (_, _, _) {
+          return _.SendMsg("TwoFactor.QueryTime#1", (0, _._)(_, _, _), _, {
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.QueryStatus = function (_, _) {
-            return _.SendMsg("TwoFactor.QueryStatus#1", (0, _._)(_, _), _, {
+          (_.QueryStatus = function (_, _, _) {
+            return _.SendMsg("TwoFactor.QueryStatus#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
             });
           }),
-          (_.AddAuthenticator = function (_, _) {
+          (_.AddAuthenticator = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.AddAuthenticator#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.FinalizeAddAuthenticator = function (_, _) {
+          (_.FinalizeAddAuthenticator = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.FinalizeAddAuthenticator#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.UpdateTokenVersion = function (_, _) {
+          (_.UpdateTokenVersion = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.UpdateTokenVersion#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 0,
@@ -75803,30 +76358,30 @@
               },
             );
           }),
-          (_.RemoveAuthenticator = function (_, _) {
+          (_.RemoveAuthenticator = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.RemoveAuthenticator#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 9,
               },
             );
           }),
-          (_.RemoveAuthenticatorViaChallengeStart = function (_, _) {
+          (_.RemoveAuthenticatorViaChallengeStart = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 9,
               },
             );
           }),
-          (_.RemoveAuthenticatorViaChallengeContinue = function (_, _) {
+          (_.RemoveAuthenticatorViaChallengeContinue = function (_, _, _) {
             return _.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 9,
@@ -80189,6 +80744,7 @@
         "springcleaning2025",
         "largo",
         "darkcarnival",
+        "summerscrub2026",
         "templatepage",
       ];
       document.addEventListener("DOMContentLoaded", async function () {
@@ -82175,6 +82731,7 @@
         largo_comic: () => "/largocomic",
         darkcarnival: () => "/darkcarnival",
         darkcarnivalcomic: () => "/darkcarnivalcomic",
+        summerscrub2026: () => "/summerscrub2026",
         templatepage: () => "/templatepage",
         dotaplustester: (_, _) => `/dotaplustester/${_}/${_}`,
       };
@@ -86411,7 +86968,7 @@
                   _ = _ ? _._ : _.hero_id,
                   _ = _?.heroes.find((_) => _._ == _),
                   _ = _?.heroes.find((_) => _._ == _);
-                return _._ == _._ && _._ == _._
+                return _ && _ && _._ == _._ && _._ == _._
                   ? _
                     ? 1
                     : _
@@ -87796,11 +88353,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       var _;
-      function _(_) {
-        return _ === _.k_ESteamRealmChina;
-      }
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       }),
         (function (_) {
@@ -88002,6 +88555,87 @@
         _ = 30,
         _ = 31,
         _ = 32;
+      [
+        ["None", "none", -1],
+        ["Afrikaans", "afrikaans", 0],
+        ["Albanian", "albanian", 1],
+        ["Amharic", "amharic", 2],
+        ["Armenian", "armenian", 3],
+        ["Assamese", "assamese", 4],
+        ["Azerbaijani", "azerbaijani", 5],
+        ["Bangla", "bangla", 6],
+        ["Basque", "basque", 7],
+        ["Belarusian", "belarusian", 8],
+        ["Bosnian", "bosnian", 9],
+        ["Catalan", "catalan", 10],
+        ["Cherokee", "cherokee", 11],
+        ["Croatian", "croatian", 12],
+        ["Dari", "dari", 13],
+        ["Estonian", "estonian", 14],
+        ["Filipino", "filipino", 15],
+        ["Galician", "galician", 16],
+        ["Georgian", "georgian", 17],
+        ["Gujarati", "gujarati", 18],
+        ["Punjabi (Gurmukhi)", "gurmukhi", 19],
+        ["Hausa", "hausa", 20],
+        ["Hebrew", "hebrew", 21],
+        ["Hindi", "hindi", 22],
+        ["Icelandic", "icelandic", 23],
+        ["Igbo", "igbo", 24],
+        ["Indonesian", "indonesian", 25],
+        ["Irish", "irish", 26],
+        ["Kannada", "kannada", 27],
+        ["Kazakh", "kazakh", 28],
+        ["Khmer", "khmer", 29],
+        ["K'iche'", "kiche", 30],
+        ["Kinyarwanda", "kinyarwanda", 31],
+        ["Konkani", "konkani", 32],
+        ["Kyrgyz", "kyrgyz", 33],
+        ["Latvian", "latvian", 34],
+        ["Lithuanian", "lithuanian", 35],
+        ["Luxembourgish", "luxembourgish", 36],
+        ["Macedonian", "macedonian", 37],
+        ["Malay", "malay", 38],
+        ["Malayalam", "malayalam", 39],
+        ["Maltese", "maltese", 40],
+        ["Maori", "maori", 41],
+        ["Marathi", "marathi", 42],
+        ["Mongolian", "mongolian", 43],
+        ["Nepali", "nepali", 44],
+        ["Odia", "odia", 45],
+        ["Persian", "persian", 46],
+        ["Quechua", "quechua", 47],
+        ["Scots", "scots", 48],
+        ["Serbian", "serbian", 49],
+        ["Punjabi (Shahmukhi)", "shahmukhi", 50],
+        ["Sindhi", "sindhi", 51],
+        ["Sinhala", "sinhala", 52],
+        ["Slovak", "slovak", 53],
+        ["Slovenian", "slovenian", 54],
+        ["Sorani", "sorani", 55],
+        ["Sotho", "sotho", 56],
+        ["Swahili", "swahili", 57],
+        ["Tajik", "tajik", 58],
+        ["Tamil", "tamil", 59],
+        ["Tatar", "tatar", 60],
+        ["Telugu", "telugu", 61],
+        ["Tigrinya", "tigrinya", 62],
+        ["Tswana", "tswana", 63],
+        ["Turkmen", "turkmen", 64],
+        ["Urdu", "urdu", 65],
+        ["Uyghur", "uyghur", 66],
+        ["Uzbek", "uzbek", 67],
+        ["Valencian", "valencian", 68],
+        ["Welsh", "welsh", 69],
+        ["Wolof", "wolof", 70],
+        ["Xhosa", "xhosa", 71],
+        ["Yoruba", "yoruba", 72],
+        ["Zulu", "zulu", 73],
+      ].map((_) => ({
+        name: _[0],
+        shortName: _[1],
+        eAdditionalLanguage: _[2],
+      }));
       function _(_, _ = "en") {
         switch (_) {
           case _:
@@ -88476,6 +89110,12 @@
         }),
         (0, _._)("form", {
           bFocusableByDefault: !1,
+        }),
+        (0, _._)("summary", {
+          bActivateByDefault: !0,
+        }),
+        (0, _._)("details", {
+          bFocusableByDefault: !1,
         });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -88523,6 +89163,7 @@
             onGlobalButtonDown: _,
             disableFocusClasses: _,
             disabledRoot: _,
+            excludeFromScrollRegionSearch: _,
             "flow-children": _,
             ..._
           } = _,
@@ -88541,6 +89182,7 @@
               onGlobalButtonDown: _,
               disableFocusClasses: _,
               disabledRoot: _,
+              excludeFromScrollRegionSearch: _,
               "flow-children": _,
               ..._,
               ..._,
@@ -88569,6 +89211,7 @@
             onGlobalButtonDown: _,
             disableFocusClasses: _ = !1,
             disabledRoot: _ = !1,
+            excludeFromScrollRegionSearch: _ = !1,
             "flow-children": _,
             ..._
           } = _,
@@ -88578,6 +89221,7 @@
                 navID: _,
                 parentEmbeddedNavTree: _,
                 disabledRoot: _,
+                excludeFromScrollRegionSearch: _,
                 enabled: _,
                 navTreeRef: _,
                 onGlobalButtonDown: _,
@@ -88601,6 +89245,9 @@
               ),
               _.useEffect(() => {
                 _.SetIsEnabled(_);
+              }, [_, _]),
+              _.useEffect(() => {
+                _.SetExcludeFromScrollRegionSearch(_);
               }, [_, _]),
               _.useEffect(() => {
                 if (!_)
@@ -88628,6 +89275,7 @@
             virtualFocus: _,
             modal: _,
             historyMode: _,
+            excludeFromScrollRegionSearch: _,
           });
         (0, _._)(_.OnActivateCallbacks, _),
           (0, _._)(_.OnDeactivateCallbacks, _),
@@ -88716,6 +89364,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -88862,6 +89511,32 @@
         );
       }
       function _(_) {
+        const _ = _.useRef(null),
+          _ = _.useRef(null);
+        _.useEffect(
+          () => () => {
+            __webpack_require__.current?.();
+          },
+          [],
+        );
+        return _.useCallback(
+          (_) => {
+            _.current !== _ &&
+              ((_.current = _),
+              __webpack_require__.current?.(),
+              (_.current = null),
+              _ &&
+                (_.current = (0, _._)(
+                  _,
+                  (_) =>
+                    !(!_ || "none" == _.GetFocusable()) &&
+                    _.BTakeFocus(void 0, _.detail.button),
+                )));
+          },
+          [_],
+        );
+      }
+      function _(_) {
         const {
             onButtonDown: _,
             onButtonUp: _,
@@ -88929,6 +89604,7 @@
             fnScrollIntoViewHandler: _,
             scrollIntoViewType: _,
             resetNavOnEntry: _,
+            scrollRegionToStartOrEnd: _,
             ..._
           } = _,
           { gamepadEvents: _, actionDescriptions: _, props: _ } = _(_);
@@ -88956,6 +89632,7 @@
             fnScrollIntoViewHandler: _,
             scrollIntoViewType: _,
             resetNavOnEntry: _,
+            scrollRegionToStartOrEnd: _,
             actionDescriptionMap: {
               ..._,
               ..._,
@@ -89039,7 +89716,8 @@
             ? (_.tabIndex = _.tabIndex || 0)
             : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
           (0, _._)(_, _);
-        const _ = (0, _._)(_, _),
+        const _ = _(_),
+          _ = (0, _._)(_, _, _),
           _ = (0, _.useContext)(_)?.Component;
         let _ = {
           ..._,
@@ -89251,7 +89929,8 @@
           _ = (0, _._)();
         (_.className = _()(_.className, "Panel", _ && "Focusable")),
           (0, _._)(_, _);
-        const _ = (0, _._)(_, _.ref);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _.ref, _);
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
@@ -89277,6 +89956,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -89349,6 +90029,9 @@
       }
       function _(_, _) {
         return _(_, "vgp_onblur", _);
+      }
+      function _(_, _) {
+        return _(_, "vgp_requestfocus", _(_));
       }
       function _(_) {
         return (_) => {
@@ -90030,6 +90713,128 @@
       const _ = new _._("ScrollSnap").Debug;
       let _ = !1;
       let _;
+      function _(_, _, _, _, _) {
+        const _ = _.Element;
+        if (!_) return;
+        let _ = [
+          {
+            node: _,
+            eScrollType: _.m_Properties?.scrollIntoViewType,
+          },
+        ];
+        for (let _ = _.Parent; _; _ = _.Parent) {
+          const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+            _ = _.m_Properties?.scrollIntoViewType;
+          if (_) {
+            const _ = {
+              node: _,
+              eScrollType: _,
+            };
+            "force" === _ ? (_ = [_]) : _.push(_);
+          }
+          if (void 0 !== _)
+            for (
+              let _ = _.length - 1;
+              _ >= 0 && void 0 === _[_].eScrollType;
+              _--
+            )
+              _[_].eScrollType = _;
+        }
+        for (; _.length; ) {
+          let { node: _, eScrollType: _ } = _.pop(),
+            _ = 0 == _.length;
+          if (
+            (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+            _?.m_Properties?.fnScrollIntoViewHandler)
+          ) {
+            if (!1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
+              continue;
+          }
+          const _ = _.m_element,
+            _ = _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
+          if (_ || _ === _._.GAMEPAD) {
+            const _ = _ ? _(_) : _.getBoundingClientRect(),
+              _ = _.ownerDocument.defaultView.innerHeight,
+              _ = 40,
+              _ = _ ? _ : Math.max(0.4 * _, _);
+            let _ = !1;
+            const _ = _ && performance.now() - _ < 500;
+            (_ || _.bottom < -_ || _.top > _ + _) &&
+              ((_ = !0),
+              _ ||
+                _(
+                  `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_} + ${_} `,
+                ));
+            let _ = _ ? "auto" : "smooth";
+            _ && (_ = performance.now()),
+              _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+              _
+                ? _(_, _, _)
+                : (_(
+                    `Scrolling Into View ('${_}' via browser scrollIntoView):`,
+                    _,
+                  ),
+                  _.scrollIntoView({
+                    behavior: _,
+                    block: "nearest",
+                  }));
+          } else
+            _("No previous element for scrolling, will jump"),
+              _
+                ? _(_, _, "auto")
+                : (_(
+                    "Scrolling Into View ('auto' via browser scrollIntoView):",
+                    _,
+                  ),
+                  _?.scrollIntoView({
+                    behavior: "auto",
+                    block: "nearest",
+                    inline: "nearest",
+                  }));
+        }
+        !(function (_, _) {
+          const _ = (0, _._)(_);
+          if (!_) return;
+          let _ = null;
+          for (let _ = _; _; _ = _.GetNavParentCrossingTrees())
+            _.m_Properties?.scrollRegionToStartOrEnd && (_ = _);
+          if (!_) return;
+          for (
+            let _ = _;
+            _ &&
+            !_.BHasNavTargetInDirection(_, !0) &&
+            (_ != _ &&
+              _.Element &&
+              _.m_Properties?.scrollRegionToStartOrEnd &&
+              _(_.Element, _, _),
+            _ != _);
+            _ = _.GetNavParentCrossingTrees()
+          );
+        })(_, _);
+      }
+      function _(_, _, _) {
+        let _ = _,
+          _ = _.ownerDocument;
+        if (
+          (_ == _.body && _.defaultView && !_(_, _) && (_ = _.defaultView),
+          !_(_, _))
+        )
+          return;
+        const _ = _(_);
+        if ("y" == _) {
+          const _ = _ == _._.DIR_DOWN ? _.MaxScrollTop() : 0;
+          _.scrollTo({
+            top: _,
+            behavior: "smooth",
+          });
+        } else {
+          const _ = _ == _._.DIR_RIGHT ? _.MaxScrollLeft() : 0;
+          _.scrollTo({
+            left: _,
+            behavior: "smooth",
+          });
+        }
+      }
       function _(_) {
         if (!_)
           return {
@@ -90433,6 +91238,16 @@
         get Parent() {
           return this.m_Parent;
         }
+        GetNavParentCrossingTrees() {
+          return this.m_Parent
+            ? this.m_Parent
+            : this.m_Tree.GetParentEmbeddedNavTree() && this.Element
+              ? (this.Element.__nav_wrapper ?? null)
+              : null;
+        }
+        GetWrappedTree() {
+          return null;
+        }
         SetProperties(_) {
           const _ =
             ((_ = this.m_Properties?.actionDescriptionMap),
@@ -90690,8 +91505,8 @@
             (this.m_rgChildren.sort((_, _) => {
               const _ = _.m_element,
                 _ = _.m_element;
-              if (!_) return _ ? 1 : 0;
-              if (!_) return -1;
+              if (!_ || !_.isConnected) return _ && _.isConnected ? 1 : 0;
+              if (!_ || !_.isConnected) return -1;
               const _ = __webpack_require__.compareDocumentPosition(_);
               return _ & Node.DOCUMENT_POSITION_PRECEDING
                 ? 1
@@ -90918,72 +91733,91 @@
           return _;
         }
         InternalFocusDescendant(_, _, _) {
-          return !!_ && (this.m_Tree.TransferFocus(_, _, (0, _._)(_)), !0);
+          return !!_ && (this.m_Tree.TransferFocus(_, _, _, !1), !0);
         }
-        BTryInternalNavigation(_, _) {
-          const _ = this.GetLayout();
-          let _,
+        BHasNavTargetInDirection(_, _) {
+          if (this.HasMovementHandler(_)) return !0;
+          let _ = this.FindNextFocusableChild(_);
+          if (_ && _) {
+            let _ = __webpack_require__.GetWrappedTree();
+            if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+          }
+          return !!_;
+        }
+        HasMovementHandler(_) {
+          switch (_) {
+            case _._.DIR_UP:
+              return !!this.m_Properties?.onMoveUp;
+            case _._.DIR_DOWN:
+              return !!this.m_Properties?.onMoveDown;
+            case _._.DIR_LEFT:
+              return !!this.m_Properties?.onMoveLeft;
+            case _._.DIR_RIGHT:
+              return !!this.m_Properties?.onMoveRight;
+          }
+          return !1;
+        }
+        FindNextFocusableChild(_) {
+          const _ = this.GetLayout(),
             _ = this.ComputeRelativeDirection(_, _);
-          if (
-            (_(
-              `Handling navigation event ${_._[_]} - ${_[_]} - ${_[_]}`,
-              this.m_element,
-            ),
-            _ == _.INVALID)
-          )
-            return !1;
-          if (this.m_Properties?.focusable && this.BHasFocus())
-            return _("Skipping navigation within focused element"), !1;
+          if (_ == _.INVALID) return null;
+          if (this.m_Properties?.focusable && this.BHasFocus()) return null;
           if ((this.EnsureChildrenSorted(!0), _ == _.GRID))
-            _ = this.FindNextFocusableChildInGrid(
+            return this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               _,
               _,
             );
-          else if (_ == _.GEOMETRIC)
-            _ = this.FindNextFocusableChildGeometric(_, _);
-          else {
-            let _ = this.GetActiveChildIndex();
+          if (_ == _.GEOMETRIC)
+            return this.FindNextFocusableChildGeometric(_, _);
+          let _ = this.GetActiveChildIndex();
+          return (
             this.IsValidChildIndex(_) ||
               (_ = _ == _.FORWARD ? -1 : this.m_rgChildren.length),
-              (_ = this.FindNextFocusableChildInDirection(_, _, _));
-          }
-          if (_) {
-            const _ = (0, _._)(_);
-            if (
-              this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
-              _.GetScrollIntoViewType() == _.NoTransformSparseContent
-            ) {
-              const _ = _.Element?.ownerDocument.defaultView;
-              if (_) {
-                const _ =
-                    ("y" == _ ? _.innerHeight : _.innerWidth) /
-                    (_ ? 4.5 : 3.33),
-                  _ = _(_.Element);
-                let _ = !1;
-                if (
-                  ("y" == _
-                    ? _ == _.FORWARD
+            this.FindNextFocusableChildInDirection(_, _, _)
+          );
+        }
+        BTryInternalNavigation(_, _) {
+          _(
+            `Handling navigation event ${_._[_]} - ${_[this.GetLayout()]}`,
+            this.m_element,
+          );
+          const _ = this.FindNextFocusableChild(_);
+          if (!_) return !1;
+          const _ = (0, _._)(_),
+            _ = this.ComputeRelativeDirection(_, this.GetLayout());
+          if (
+            this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
+            __webpack_require__.GetScrollIntoViewType() ==
+              _.NoTransformSparseContent
+          ) {
+            const _ = _.Element?.ownerDocument.defaultView;
+            if (_) {
+              const _ =
+                  ("y" == _ ? _.innerHeight : _.innerWidth) / (_ ? 4.5 : 3.33),
+                _ = _(_.Element);
+              let _ = !1;
+              if (
+                ("y" == _
+                  ? _ == _.FORWARD
+                    ? (_ =
+                        _.top > _.innerHeight && _.bottom > _.innerHeight + _)
+                    : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
+                  : "x" == _ &&
+                    (_ == _.FORWARD
                       ? (_ =
-                          _.top > _.innerHeight && _.bottom > _.innerHeight + _)
-                      : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
-                    : "x" == _ &&
-                      (_ == _.FORWARD
-                        ? (_ =
-                            _.left > _.innerWidth && _.right > _.innerWidth + _)
-                        : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
-                  _)
-                )
-                  return (
-                    _(`Element too far away, scrolling ${_} on ${_} axis `),
-                    _(_.Element, _.Element, "smooth", _, _),
-                    !0
-                  );
-              }
+                          _.left > _.innerWidth && _.right > _.innerWidth + _)
+                      : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
+                _)
+              )
+                return (
+                  _(`Element too far away, scrolling ${_} on ${_} axis `),
+                  _(_.Element, _.Element, "smooth", _, _),
+                  !0
+                );
             }
-            return this.m_Tree.TransferFocus(_._.GAMEPAD, _, _), !0;
           }
-          return !1;
+          return this.m_Tree.TransferFocus(_._.GAMEPAD, _, _), !0;
         }
         GetScrollIntoViewType() {
           return void 0 !== this.m_Properties?.scrollIntoViewType &&
@@ -91275,7 +92109,7 @@
             bFocusDescendant: !0,
           });
         }
-        SetDOMFocusAndScroll(_, _) {
+        SetDOMFocusAndScroll(_, _, _, _) {
           this.UpdateParentActiveChild(),
             this.m_Tree.OnChildActivated(_),
             this.m_Tree.BIsActiveFocus()
@@ -91290,89 +92124,7 @@
                 _(
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
-            this.m_Tree.BIsActive() &&
-              (function (_, _, _) {
-                const _ = _.Element;
-                if (!_) return;
-                let _ = [
-                  {
-                    node: _,
-                    eScrollType: _.m_Properties?.scrollIntoViewType,
-                  },
-                ];
-                for (let _ = _.Parent; _; _ = _.Parent) {
-                  const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
-                    _ = _.m_Properties?.scrollIntoViewType;
-                  if (_) {
-                    const _ = {
-                      node: _,
-                      eScrollType: _,
-                    };
-                    "force" === _ ? (_ = [_]) : _.push(_);
-                  }
-                  if (void 0 !== _)
-                    for (
-                      let _ = _.length - 1;
-                      _ >= 0 && void 0 === _[_].eScrollType;
-                      _--
-                    )
-                      _[_].eScrollType = _;
-                }
-                for (; _.length; ) {
-                  let { node: _, eScrollType: _ } = _.pop(),
-                    _ = 0 == _.length;
-                  if (
-                    (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
-                    _?.m_Properties?.fnScrollIntoViewHandler &&
-                      !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
-                  )
-                    continue;
-                  const _ = _.m_element,
-                    _ =
-                      _ == _.NoTransform ||
-                      _ == _.NoTransformSparseContent ||
-                      !_;
-                  if (_ || _ === _._.GAMEPAD) {
-                    const _ = _ ? _(_) : _.getBoundingClientRect();
-                    let _ = !1;
-                    const _ = Math.max(1.4 * (_.bottom - _.top), 40),
-                      _ = _ && performance.now() - _ < 500;
-                    (_ ||
-                      _.bottom < -_ ||
-                      _.top > _.ownerDocument.defaultView.innerHeight + _) &&
-                      ((_ = !0),
-                      _ ||
-                        _(
-                          `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
-                        ));
-                    let _ = _ ? "auto" : "smooth";
-                    _ && (_ = performance.now()),
-                      _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
-                      _
-                        ? _(0, _, _)
-                        : (_(
-                            "Scrolling Into View (via browser scrollIntoView):",
-                            _,
-                          ),
-                          _.scrollIntoView({
-                            behavior: _,
-                            block: "nearest",
-                          }));
-                  } else
-                    _("No previous element for scrolling, will jump"),
-                      _
-                        ? _(0, _, "auto")
-                        : (_(
-                            "Scrolling Into View (via browser scrollIntoView):",
-                            _,
-                          ),
-                          _?.scrollIntoView({
-                            behavior: "auto",
-                            block: "nearest",
-                            inline: "nearest",
-                          }));
-                }
-              })(this, _, _);
+            this.m_Tree.BIsActive() && _(this, _, _, _, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -91422,13 +92174,14 @@
         })(_, (_) => _ == _);
       }
       function _(_, _, _) {
-        return (
-          _ ||
-            console.error(
+        return _
+          ? _.length < _
+            ? _.concat(Array(_ - _.length).fill(_))
+            : _
+          : (console.error(
               "array should be defined for us to fill in the missing indexes",
             ),
-          _.length < _ ? _.concat(Array(_ - _.length).fill(_)) : _
-        );
+            []);
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -95140,8 +95893,14 @@
               : this.Body()[`set_${_}`] && this.Body()[`set_${_}`](_[_]);
         }
       }
-      function _(_, _) {
-        return _ instanceof _ ? _ : _.InitFromObject(_, _);
+      function _(_, _, _) {
+        let _;
+        return (
+          (_ = _ instanceof _ ? _ : _.InitFromObject(_, _)),
+          void 0 !== _?.strDebugSource &&
+            _.Hdr().set_debug_source(_.strDebugSource),
+          _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -97231,6 +97990,360 @@
         }
         getClassName() {
           return "CCommunity_GetCommentThread_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_type: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidfeature: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature2: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidcomment: {
+                    _: 5,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_id: {
+                    _: 6,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetComment_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.comment || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  comment: {
+                    _: 1,
+                    _: _,
+                  },
+                  comment_thread_type: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidfeature: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature2: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetComment_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  comment_thread_id: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidcomment: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  reason: {
+                    _: 4,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  note: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  sanctions: {
+                    _: 6,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sanction || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sanction: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  days: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Request_Sanction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_SanctionComment_Response";
         }
       }
       class _ extends _.Message {
@@ -100862,29 +101975,343 @@
           return "CCommunity_SetRecommendationBotReviewStatus_Response";
         }
       }
-      var _;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.explicit || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  explicit: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  adult: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  toxic: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  spam: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  malicious: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  commercial: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CommentClassification";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.resolve || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [12], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  resolve: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  reportid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  report_action: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gidcomment: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  commentthreadtype: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  steamid: {
+                    _: 6,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidfeature: {
+                    _: 7,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  gidfeature2: {
+                    _: 8,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  classification: {
+                    _: 9,
+                    _: _,
+                  },
+                  reason: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  comment_thread_id: {
+                    _: 11,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  sanctions: {
+                    _: 12,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  note: {
+                    _: 13,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sanction || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sanction: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  days: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  escalate_to: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Request_Sanction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommentModeration_UpdateCommentReportState_Response";
+        }
+      }
+      var _, _;
       !(function (_) {
-        (_.GetApps = function (_, _) {
-          return _.SendMsg("Community.GetApps#1", (0, _._)(_, _), _, {
+        (_.GetApps = function (_, _, _) {
+          return _.SendMsg("Community.GetApps#1", (0, _._)(_, _, _), _, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
-          (_.GetAppRichPresenceLocalization = function (_, _) {
+          (_.GetAppRichPresenceLocalization = function (_, _, _) {
             return _.SendMsg(
               "Community.GetAppRichPresenceLocalization#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetCommentThread = function (_, _) {
+          (_.GetCommentThread = function (_, _, _) {
             return _.SendMsg(
               "Community.GetCommentThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
@@ -100892,50 +102319,66 @@
               },
             );
           }),
-          (_.PostCommentToThread = function (_, _) {
+          (_.GetComment = function (_, _, _) {
+            return _.SendMsg("Community.GetComment#1", (0, _._)(_, _, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 5,
+            });
+          }),
+          (_.SanctionComment = function (_, _, _) {
+            return _.SendMsg(
+              "Community.SanctionComment#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.PostCommentToThread = function (_, _, _) {
             return _.SendMsg(
               "Community.PostCommentToThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.DeleteCommentFromThread = function (_, _) {
+          (_.DeleteCommentFromThread = function (_, _, _) {
             return _.SendMsg(
               "Community.DeleteCommentFromThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.RateCommentThread = function (_, _) {
+          (_.RateCommentThread = function (_, _, _) {
             return _.SendMsg(
               "Community.RateCommentThread#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetCommentThreadRatings = function (_, _) {
+          (_.GetCommentThreadRatings = function (_, _, _) {
             return _.SendMsg(
               "Community.GetCommentThreadRatings#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 2,
               },
             );
           }),
-          (_.VerifyClanMembership = function (_, _) {
+          (_.VerifyClanMembership = function (_, _, _) {
             return _.SendMsg(
               "Community.VerifyClanMembership#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -100944,36 +102387,41 @@
               },
             );
           }),
-          (_.RateClanAnnouncement = function (_, _) {
+          (_.RateClanAnnouncement = function (_, _, _) {
             return _.SendMsg(
               "Community.RateClanAnnouncement#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetClanAnnouncementVoteForUser = function (_, _) {
+          (_.GetClanAnnouncementVoteForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanAnnouncementVoteForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetClanMetadata = function (_, _) {
-            return _.SendMsg("Community.GetClanMetadata#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+          (_.GetClanMetadata = function (_, _, _) {
+            return _.SendMsg(
+              "Community.GetClanMetadata#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
           }),
-          (_.GetClanLocGroupImages = function (_, _) {
+          (_.GetClanLocGroupImages = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanLocGroupImages#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -100981,20 +102429,20 @@
               },
             );
           }),
-          (_.GetAvatarHistory = function (_, _) {
+          (_.GetAvatarHistory = function (_, _, _) {
             return _.SendMsg(
               "Community.GetAvatarHistory#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetClanEventCrowdInMetadata = function (_, _) {
+          (_.GetClanEventCrowdInMetadata = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanEventCrowdInMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -101002,10 +102450,10 @@
               },
             );
           }),
-          (_.GetClanCrowdInMetadata = function (_, _) {
+          (_.GetClanCrowdInMetadata = function (_, _, _) {
             return _.SendMsg(
               "Community.GetClanCrowdInMetadata#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -101013,30 +102461,30 @@
               },
             );
           }),
-          (_.FetchTranslationFromCrowdIn = function (_, _) {
+          (_.FetchTranslationFromCrowdIn = function (_, _, _) {
             return _.SendMsg(
               "Community.FetchTranslationFromCrowdIn#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.HideAndReportComment = function (_, _) {
+          (_.HideAndReportComment = function (_, _, _) {
             return _.SendMsg(
               "Community.HideAndReportComment#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 3,
               },
             );
           }),
-          (_.GetUserPartnerEventNews = function (_, _) {
+          (_.GetUserPartnerEventNews = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventNews#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -101045,10 +102493,10 @@
               },
             );
           }),
-          (_.GetBestEventsForUser = function (_, _) {
+          (_.GetBestEventsForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.GetBestEventsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -101057,20 +102505,20 @@
               },
             );
           }),
-          (_.MarkPartnerEventsForUser = function (_, _) {
+          (_.MarkPartnerEventsForUser = function (_, _, _) {
             return _.SendMsg(
               "Community.MarkPartnerEventsForUser#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserPartnerEventViewStatus = function (_, _) {
+          (_.GetUserPartnerEventViewStatus = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventViewStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 bConstMethod: !0,
@@ -101078,67 +102526,79 @@
               },
             );
           }),
-          (_.PartnerEventsShowMoreForApp = function (_, _) {
+          (_.PartnerEventsShowMoreForApp = function (_, _, _) {
             return _.SendMsg(
               "Community.PartnerEventsShowMoreForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.PartnerEventsShowLessForApp = function (_, _) {
+          (_.PartnerEventsShowLessForApp = function (_, _, _) {
             return _.SendMsg(
               "Community.PartnerEventsShowLessForApp#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClearUserPartnerEventsAppPriorities = function (_, _) {
+          (_.ClearUserPartnerEventsAppPriorities = function (_, _, _) {
             return _.SendMsg(
               "Community.ClearUserPartnerEventsAppPriorities#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.GetUserPartnerEventsAppPriorities = function (_, _) {
+          (_.GetUserPartnerEventsAppPriorities = function (_, _, _) {
             return _.SendMsg(
               "Community.GetUserPartnerEventsAppPriorities#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.ClearSinglePartnerEventsAppPriority = function (_, _) {
+          (_.ClearSinglePartnerEventsAppPriority = function (_, _, _) {
             return _.SendMsg(
               "Community.ClearSinglePartnerEventsAppPriority#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           }),
-          (_.SetRecommendationBotReviewStatus = function (_, _) {
+          (_.SetRecommendationBotReviewStatus = function (_, _, _) {
             return _.SendMsg(
               "Community.SetRecommendationBotReviewStatus#1",
-              (0, _._)(_, _),
+              (0, _._)(_, _, _),
               _,
               {
                 ePrivilege: 1,
               },
             );
           });
-      })(_ || (_ = {}));
+      })(_ || (_ = {})),
+        (function (_) {
+          _.UpdateCommentReportState = function (_, _, _) {
+            return _.SendMsg(
+              "CommentModeration.UpdateCommentReportState#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          };
+        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -101292,21 +102752,20 @@
         );
       }
       function _(_, _) {
+        const [_, _] = _.useState(_);
         return (
-          (function (_, _) {
-            const [_, _] = _.useState(_);
-            return (
-              _.useEffect(() => {
-                if (!_) {
-                  const _ = window.setTimeout(() => _(!1), _);
-                  return () => window.clearTimeout(_);
-                }
-                _(!0);
-              }, [_, _]),
-              _
-            );
-          })(_, _) || _
+          _.useEffect(() => {
+            if (!_) {
+              const _ = window.setTimeout(() => _(!1), _);
+              return () => window.clearTimeout(_);
+            }
+            _(!0);
+          }, [_, _]),
+          _
         );
+      }
+      function _(_, _) {
+        return _(_, _) || _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -104879,7 +106338,7 @@
               requestAnimationFrame(() => {
                 _.style.display = "block";
               }),
-              _.showPopover();
+              _.showPopover && _.showPopover();
             const _ = _.querySelector(".hover_arrow.left"),
               _ = _.querySelector(".hover_arrow.right"),
               _ = _.querySelector(".hover_arrow.top"),
@@ -105045,7 +106504,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { divProps: _, tooltipProps: _ } = _({
           ..._,
@@ -105110,6 +106570,7 @@
             toolTipContent: _,
             nDelayShowMS: _ = 300,
             bDisabled: _,
+            bPortalToBody: _,
             direction: _,
             nBodyAlignment: _,
             nBodyDistance: _,
@@ -105150,6 +106611,7 @@
         const _ = {
           active: _ && !_,
           target: _,
+          bPortalToBody: _,
           nDelayShowMS: _,
           hoverPositionProps: _,
           children: _,
@@ -105184,13 +106646,14 @@
         const {
             active: _,
             target: _,
+            bPortalToBody: _,
             nDelayShowMS: _ = 300,
             hoverPositionProps: _,
             children: _,
           } = _,
           [_, _] = _.useState(_);
-        return (
-          _.useEffect(() => {
+        if (
+          (_.useEffect(() => {
             if (_) {
               if (_) {
                 const _ = window.setTimeout(() => _(!0), _);
@@ -105199,14 +106662,16 @@
               _(!0);
             } else _(!1);
           }, [_]),
-          _ && _ && _
-            ? (0, _.jsx)(_, {
-                target: _,
-                ..._,
-                children: _,
-              })
-            : null
-        );
+          !_)
+        )
+          return null;
+        if (!_ || !_) return null;
+        const _ = (0, _.jsx)(_, {
+          target: _,
+          ..._,
+          children: _,
+        });
+        return _ ? _.createPortal(_, _.ownerDocument.body) : _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -105302,8 +106767,355 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = JSON.parse(`{
+	"h": {
+		"countries": {
+			"AF": "Afghanistan",
+			"AX": "Aland Islands",
+			"AL": "Albania",
+			"DZ": "Algeria",
+			"AS": "American Samoa",
+			"AD": "Andorra",
+			"AO": "Angola",
+			"AI": "Anguilla",
+			"AQ": "Antarctica",
+			"AG": "Antigua and Barbuda",
+			"AR": "Argentina",
+			"AM": "Armenia",
+			"AW": "Aruba",
+			"AU": "Australia",
+			"AT": "Austria",
+			"AZ": "Azerbaijan",
+			"BS": "Bahamas",
+			"BH": "Bahrain",
+			"BD": "Bangladesh",
+			"BB": "Barbados",
+			"BY": "Belarus",
+			"BE": "Belgium",
+			"BZ": "Belize",
+			"BJ": "Benin",
+			"BM": "Bermuda",
+			"BT": "Bhutan",
+			"BO": "Bolivia",
+			"BA": "Bosnia and Herzegovina",
+			"BW": "Botswana",
+			"BV": "Bouvet Island",
+			"BR": "Brazil",
+			"IO": "British Indian Ocean Territory",
+			"BN": "Brunei Darussalam",
+			"BG": "Bulgaria",
+			"BF": "Burkina Faso",
+			"BI": "Burundi",
+			"KH": "Cambodia",
+			"CM": "Cameroon",
+			"CA": "Canada",
+			"CV": "Cabo Verde",
+			"KY": "Cayman Islands",
+			"CF": "Central African Republic",
+			"TD": "Chad",
+			"CL": "Chile",
+			"CN": "China",
+			"XC": "China",
+			"CX": "Christmas Island",
+			"CC": "Cocos (Keeling) Islands",
+			"CO": "Colombia",
+			"KM": "Comoros",
+			"CG": "Congo",
+			"CD": "Congo, the Democratic Republic of the",
+			"CK": "Cook Islands",
+			"CR": "Costa Rica",
+			"CI": "Cote d'Ivoire",
+			"HR": "Croatia",
+			"CY": "Cyprus",
+			"CZ": "Czech Republic",
+			"DK": "Denmark",
+			"DJ": "Djibouti",
+			"DM": "Dominica",
+			"DO": "Dominican Republic",
+			"EC": "Ecuador",
+			"EG": "Egypt",
+			"SV": "El Salvador",
+			"GQ": "Equatorial Guinea",
+			"ER": "Eritrea",
+			"EE": "Estonia",
+			"ET": "Ethiopia",
+			"FK": "Falkland Islands (Malvinas)",
+			"FO": "Faroe Islands",
+			"FJ": "Fiji",
+			"FI": "Finland",
+			"FR": "France",
+			"GF": "French Guiana",
+			"PF": "French Polynesia",
+			"TF": "French Southern Territories",
+			"GA": "Gabon",
+			"GM": "Gambia",
+			"GE": "Georgia",
+			"DE": "Germany",
+			"GH": "Ghana",
+			"GI": "Gibraltar",
+			"GR": "Greece",
+			"GL": "Greenland",
+			"GD": "Grenada",
+			"GP": "Guadeloupe",
+			"GU": "Guam",
+			"GT": "Guatemala",
+			"GN": "Guinea",
+			"GW": "Guinea-Bissau",
+			"GG": "Guernsey",
+			"GY": "Guyana",
+			"HT": "Haiti",
+			"HM": "Heard and Mc Donald Islands",
+			"VA": "Holy See(Vatican City State)",
+			"HN": "Honduras",
+			"HK": "Hong Kong",
+			"HU": "Hungary",
+			"IS": "Iceland",
+			"IN": "India",
+			"ID": "Indonesia",
+			"IQ": "Iraq",
+			"IE": "Ireland",
+			"IM": "Isle of Man",
+			"IL": "Israel",
+			"IT": "Italy",
+			"JM": "Jamaica",
+			"JP": "Japan",
+			"JE": "Jersey",
+			"JO": "Jordan",
+			"KZ": "Kazakhstan",
+			"KE": "Kenya",
+			"KI": "Kiribati",
+			"KR": "Korea, Republic of",
+			"KW": "Kuwait",
+			"KG": "Kyrgyzstan",
+			"LA": "Lao People's Democratic Republic",
+			"LV": "Latvia",
+			"LB": "Lebanon",
+			"LS": "Lesotho",
+			"LR": "Liberia",
+			"LI": "Liechtenstein",
+			"LT": "Lithuania",
+			"LU": "Luxembourg",
+			"LY": "Libya",
+			"MO": "Macau",
+			"MK": "North Macedonia, Republic of",
+			"MG": "Madagascar",
+			"MW": "Malawi",
+			"MY": "Malaysia",
+			"MV": "Maldives",
+			"ML": "Mali",
+			"MT": "Malta",
+			"MH": "Marshall Islands",
+			"MQ": "Martinique",
+			"MR": "Mauritania",
+			"MU": "Mauritius",
+			"YT": "Mayotte",
+			"MX": "Mexico",
+			"FM": "Micronesia, Federated States of",
+			"MD": "Moldova, Republic of",
+			"MC": "Monaco",
+			"MN": "Mongolia",
+			"ME": "Montenegro",
+			"MS": "Montserrat",
+			"MA": "Morocco",
+			"MZ": "Mozambique",
+			"MM": "Myanmar",
+			"NA": "Namibia",
+			"NR": "Nauru",
+			"NP": "Nepal",
+			"NL": "Netherlands",
+			"AN": "Netherlands Antilles",
+			"NC": "New Caledonia",
+			"NZ": "New Zealand",
+			"NI": "Nicaragua",
+			"NE": "Niger",
+			"NG": "Nigeria",
+			"NU": "Niue",
+			"NF": "Norfolk Island",
+			"MP": "Northern Mariana Islands",
+			"NO": "Norway",
+			"OM": "Oman",
+			"PK": "Pakistan",
+			"PW": "Palau",
+			"PS": "Palestinian Territory, Occupied",
+			"PA": "Panama",
+			"PG": "Papua New Guinea",
+			"PY": "Paraguay",
+			"PE": "Peru",
+			"PH": "Philippines",
+			"PN": "Pitcairn",
+			"PL": "Poland",
+			"PT": "Portugal",
+			"PR": "Puerto Rico",
+			"QA": "Qatar",
+			"RE": "Reunion",
+			"RO": "Romania",
+			"RU": "Russian Federation",
+			"RW": "Rwanda",
+			"SH": "Saint Helena",
+			"KN": "Saint Kitts and Nevis",
+			"LC": "Saint Lucia",
+			"PM": "Saint Pierre and Miquelon",
+			"VC": "Saint Vincent and the Grenadines",
+			"WS": "Samoa",
+			"SM": "San Marino",
+			"ST": "Sao Tome and Principe",
+			"SA": "Saudi Arabia",
+			"SN": "Senegal",
+			"RS": "Serbia",
+			"SC": "Seychelles",
+			"SL": "Sierra Leone",
+			"SG": "Singapore",
+			"SK": "Slovakia",
+			"SI": "Slovenia",
+			"SB": "Solomon Islands",
+			"SO": "Somalia",
+			"ZA": "South Africa",
+			"GS": "South Georgia and the South Sandwich Islands",
+			"ES": "Spain",
+			"LK": "Sri Lanka",
+			"SD": "Sudan",
+			"SR": "Suriname",
+			"SJ": "Svalbard and Jan Mayen",
+			"SY": "Syria",
+			"SZ": "Eswatini",
+			"SE": "Sweden",
+			"CH": "Switzerland",
+			"TW": "Taiwan",
+			"TJ": "Tajikistan",
+			"TZ": "Tanzania, United Republic of",
+			"TH": "Thailand",
+			"TL": "Timor-Leste",
+			"TG": "Togo",
+			"TK": "Tokelau",
+			"TO": "Tonga",
+			"TT": "Trinidad and Tobago",
+			"TN": "Tunisia",
+			"TR": "Turkey",
+			"TM": "Turkmenistan",
+			"TC": "Turks and Caicos Islands",
+			"TV": "Tuvalu",
+			"UG": "Uganda",
+			"UA": "Ukraine",
+			"AE": "United Arab Emirates",
+			"GB": "United Kingdom",
+			"US": "United States",
+			"UM": "United States Minor Outlying Islands",
+			"UY": "Uruguay",
+			"UZ": "Uzbekistan",
+			"VU": "Vanuatu",
+			"VE": "Venezuela",
+			"VN": "Viet Nam",
+			"VG": "Virgin Islands, British",
+			"VI": "Virgin Islands, U.S.",
+			"WF": "Wallis and Futuna",
+			"EH": "Western Sahara",
+			"YE": "Yemen",
+			"ZM": "Zambia",
+			"ZW": "Zimbabwe"
+		},
+		"eucountries": {
+			"AT": "Austria",
+			"BE": "Belgium",
+			"BG": "Bulgaria",
+			"HR": "Croatia",
+			"CY": "Cyprus",
+			"CZ": "Czech Republic",
+			"DK": "Denmark",
+			"EE": "Estonia",
+			"FI": "Finland",
+			"FR": "France",
+			"DE": "Germany",
+			"GR": "Greece",
+			"HU": "Hungary",
+			"IE": "Ireland",
+			"IT": "Italy",
+			"LV": "Latvia",
+			"LT": "Lithuania",
+			"LU": "Luxembourg",
+			"MT": "Malta",
+			"NL": "Netherlands",
+			"PL": "Poland",
+			"PT": "Portugal",
+			"RO": "Romania",
+			"SK": "Slovakia",
+			"SI": "Slovenia",
+			"ES": "Spain",
+			"SE": "Sweden",
+			"GB": "United Kingdom"
+		},
+		"eeacountries": {
+			"NO": "Norway",
+			"IS": "Iceland",
+			"LI": "Liechtenstein"
+		},
+		"usstates": {
+			"AL": "Alabama",
+			"AK": "Alaska",
+			"AS": "American Samoa",
+			"AZ": "Arizona",
+			"AR": "Arkansas",
+			"CA": "California",
+			"CO": "Colorado",
+			"CT": "Connecticut",
+			"DE": "Delaware",
+			"DC": "District of Columbia",
+			"FM": "Federated States of Micronesia",
+			"FL": "Florida",
+			"GA": "Georgia",
+			"GU": "Guam",
+			"HI": "Hawaii",
+			"ID": "Idaho",
+			"IL": "Illinois",
+			"IN": "Indiana",
+			"IA": "Iowa",
+			"KS": "Kansas",
+			"KY": "Kentucky",
+			"LA": "Louisiana",
+			"ME": "Maine",
+			"MH": "Marshall Islands",
+			"MD": "Maryland",
+			"MA": "Massachusetts",
+			"MI": "Michigan",
+			"MN": "Minnesota",
+			"MS": "Mississippi",
+			"MO": "Missouri",
+			"MT": "Montana",
+			"NE": "Nebraska",
+			"NV": "Nevada",
+			"NH": "New Hampshire",
+			"NJ": "New Jersey",
+			"NM": "New Mexico",
+			"NY": "New York",
+			"NC": "North Carolina",
+			"ND": "North Dakota",
+			"MP": "Northern Mariana Islands",
+			"OH": "Ohio",
+			"OK": "Oklahoma",
+			"OR": "Oregon",
+			"PW": "Palau",
+			"PA": "Pennsylvania",
+			"PR": "Puerto Rico",
+			"RI": "Rhode Island",
+			"SC": "South Carolina",
+			"SD": "South Dakota",
+			"TN": "Tennessee",
+			"TX": "Texas",
+			"UT": "Utah",
+			"VT": "Vermont",
+			"VI": "U.S. Virgin Islands",
+			"VA": "Virginia",
+			"WA": "Washington",
+			"WV": "West Virginia",
+			"WI": "Wisconsin",
+			"WY": "Wyoming",
+			"AA": "Armed Forces Americas",
+			"AE": "Armed Forces",
+			"AP": "Armed Forces Pacific"
+		}
+	}
+}`)._;
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -105755,10 +107567,10 @@
       }
       var _;
       !(function (_) {
-        _.GetCookiePreferences = function (_, _) {
+        _.GetCookiePreferences = function (_, _, _) {
           return _.SendMsg(
             "AccountPrivacy.GetCookiePreferences#1",
-            (0, _._)(_, _),
+            (0, _._)(_, _, _),
             _,
             {
               bConstMethod: !0,
@@ -105767,375 +107579,26 @@
           );
         };
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       const _ = {
-          name: "cookieSettings",
-          options: {
-            secure: !0,
-            httpOnly: !1,
-            path: "/",
-            sameSite: "none",
-            maxAge: 31536e6,
-          },
-          preferenceControls: {
-            isTechnicallyNecessary: !0,
-          },
+        name: "cookieSettings",
+        options: {
+          secure: !0,
+          httpOnly: !1,
+          path: "/",
+          sameSite: "none",
+          maxAge: 31536e6,
         },
-        _ = JSON.parse(`{
-	"h": {
-		"countries": {
-			"AF": "Afghanistan",
-			"AX": "Aland Islands",
-			"AL": "Albania",
-			"DZ": "Algeria",
-			"AS": "American Samoa",
-			"AD": "Andorra",
-			"AO": "Angola",
-			"AI": "Anguilla",
-			"AQ": "Antarctica",
-			"AG": "Antigua and Barbuda",
-			"AR": "Argentina",
-			"AM": "Armenia",
-			"AW": "Aruba",
-			"AU": "Australia",
-			"AT": "Austria",
-			"AZ": "Azerbaijan",
-			"BS": "Bahamas",
-			"BH": "Bahrain",
-			"BD": "Bangladesh",
-			"BB": "Barbados",
-			"BY": "Belarus",
-			"BE": "Belgium",
-			"BZ": "Belize",
-			"BJ": "Benin",
-			"BM": "Bermuda",
-			"BT": "Bhutan",
-			"BO": "Bolivia",
-			"BA": "Bosnia and Herzegovina",
-			"BW": "Botswana",
-			"BV": "Bouvet Island",
-			"BR": "Brazil",
-			"IO": "British Indian Ocean Territory",
-			"BN": "Brunei Darussalam",
-			"BG": "Bulgaria",
-			"BF": "Burkina Faso",
-			"BI": "Burundi",
-			"KH": "Cambodia",
-			"CM": "Cameroon",
-			"CA": "Canada",
-			"CV": "Cabo Verde",
-			"KY": "Cayman Islands",
-			"CF": "Central African Republic",
-			"TD": "Chad",
-			"CL": "Chile",
-			"CN": "China",
-			"XC": "China",
-			"CX": "Christmas Island",
-			"CC": "Cocos (Keeling) Islands",
-			"CO": "Colombia",
-			"KM": "Comoros",
-			"CG": "Congo",
-			"CD": "Congo, the Democratic Republic of the",
-			"CK": "Cook Islands",
-			"CR": "Costa Rica",
-			"CI": "Cote d'Ivoire",
-			"HR": "Croatia",
-			"CY": "Cyprus",
-			"CZ": "Czech Republic",
-			"DK": "Denmark",
-			"DJ": "Djibouti",
-			"DM": "Dominica",
-			"DO": "Dominican Republic",
-			"EC": "Ecuador",
-			"EG": "Egypt",
-			"SV": "El Salvador",
-			"GQ": "Equatorial Guinea",
-			"ER": "Eritrea",
-			"EE": "Estonia",
-			"ET": "Ethiopia",
-			"FK": "Falkland Islands (Malvinas)",
-			"FO": "Faroe Islands",
-			"FJ": "Fiji",
-			"FI": "Finland",
-			"FR": "France",
-			"GF": "French Guiana",
-			"PF": "French Polynesia",
-			"TF": "French Southern Territories",
-			"GA": "Gabon",
-			"GM": "Gambia",
-			"GE": "Georgia",
-			"DE": "Germany",
-			"GH": "Ghana",
-			"GI": "Gibraltar",
-			"GR": "Greece",
-			"GL": "Greenland",
-			"GD": "Grenada",
-			"GP": "Guadeloupe",
-			"GU": "Guam",
-			"GT": "Guatemala",
-			"GN": "Guinea",
-			"GW": "Guinea-Bissau",
-			"GG": "Guernsey",
-			"GY": "Guyana",
-			"HT": "Haiti",
-			"HM": "Heard and Mc Donald Islands",
-			"VA": "Holy See(Vatican City State)",
-			"HN": "Honduras",
-			"HK": "Hong Kong",
-			"HU": "Hungary",
-			"IS": "Iceland",
-			"IN": "India",
-			"ID": "Indonesia",
-			"IQ": "Iraq",
-			"IE": "Ireland",
-			"IM": "Isle of Man",
-			"IL": "Israel",
-			"IT": "Italy",
-			"JM": "Jamaica",
-			"JP": "Japan",
-			"JE": "Jersey",
-			"JO": "Jordan",
-			"KZ": "Kazakhstan",
-			"KE": "Kenya",
-			"KI": "Kiribati",
-			"KR": "Korea, Republic of",
-			"KW": "Kuwait",
-			"KG": "Kyrgyzstan",
-			"LA": "Lao People's Democratic Republic",
-			"LV": "Latvia",
-			"LB": "Lebanon",
-			"LS": "Lesotho",
-			"LR": "Liberia",
-			"LI": "Liechtenstein",
-			"LT": "Lithuania",
-			"LU": "Luxembourg",
-			"LY": "Libya",
-			"MO": "Macau",
-			"MK": "North Macedonia, Republic of",
-			"MG": "Madagascar",
-			"MW": "Malawi",
-			"MY": "Malaysia",
-			"MV": "Maldives",
-			"ML": "Mali",
-			"MT": "Malta",
-			"MH": "Marshall Islands",
-			"MQ": "Martinique",
-			"MR": "Mauritania",
-			"MU": "Mauritius",
-			"YT": "Mayotte",
-			"MX": "Mexico",
-			"FM": "Micronesia, Federated States of",
-			"MD": "Moldova, Republic of",
-			"MC": "Monaco",
-			"MN": "Mongolia",
-			"ME": "Montenegro",
-			"MS": "Montserrat",
-			"MA": "Morocco",
-			"MZ": "Mozambique",
-			"MM": "Myanmar",
-			"NA": "Namibia",
-			"NR": "Nauru",
-			"NP": "Nepal",
-			"NL": "Netherlands",
-			"AN": "Netherlands Antilles",
-			"NC": "New Caledonia",
-			"NZ": "New Zealand",
-			"NI": "Nicaragua",
-			"NE": "Niger",
-			"NG": "Nigeria",
-			"NU": "Niue",
-			"NF": "Norfolk Island",
-			"MP": "Northern Mariana Islands",
-			"NO": "Norway",
-			"OM": "Oman",
-			"PK": "Pakistan",
-			"PW": "Palau",
-			"PS": "Palestinian Territory, Occupied",
-			"PA": "Panama",
-			"PG": "Papua New Guinea",
-			"PY": "Paraguay",
-			"PE": "Peru",
-			"PH": "Philippines",
-			"PN": "Pitcairn",
-			"PL": "Poland",
-			"PT": "Portugal",
-			"PR": "Puerto Rico",
-			"QA": "Qatar",
-			"RE": "Reunion",
-			"RO": "Romania",
-			"RU": "Russian Federation",
-			"RW": "Rwanda",
-			"SH": "Saint Helena",
-			"KN": "Saint Kitts and Nevis",
-			"LC": "Saint Lucia",
-			"PM": "Saint Pierre and Miquelon",
-			"VC": "Saint Vincent and the Grenadines",
-			"WS": "Samoa",
-			"SM": "San Marino",
-			"ST": "Sao Tome and Principe",
-			"SA": "Saudi Arabia",
-			"SN": "Senegal",
-			"RS": "Serbia",
-			"SC": "Seychelles",
-			"SL": "Sierra Leone",
-			"SG": "Singapore",
-			"SK": "Slovakia",
-			"SI": "Slovenia",
-			"SB": "Solomon Islands",
-			"SO": "Somalia",
-			"ZA": "South Africa",
-			"GS": "South Georgia and the South Sandwich Islands",
-			"ES": "Spain",
-			"LK": "Sri Lanka",
-			"SD": "Sudan",
-			"SR": "Suriname",
-			"SJ": "Svalbard and Jan Mayen",
-			"SY": "Syria",
-			"SZ": "Eswatini",
-			"SE": "Sweden",
-			"CH": "Switzerland",
-			"TW": "Taiwan",
-			"TJ": "Tajikistan",
-			"TZ": "Tanzania, United Republic of",
-			"TH": "Thailand",
-			"TL": "Timor-Leste",
-			"TG": "Togo",
-			"TK": "Tokelau",
-			"TO": "Tonga",
-			"TT": "Trinidad and Tobago",
-			"TN": "Tunisia",
-			"TR": "Turkey",
-			"TM": "Turkmenistan",
-			"TC": "Turks and Caicos Islands",
-			"TV": "Tuvalu",
-			"UG": "Uganda",
-			"UA": "Ukraine",
-			"AE": "United Arab Emirates",
-			"GB": "United Kingdom",
-			"US": "United States",
-			"UM": "United States Minor Outlying Islands",
-			"UY": "Uruguay",
-			"UZ": "Uzbekistan",
-			"VU": "Vanuatu",
-			"VE": "Venezuela",
-			"VN": "Viet Nam",
-			"VG": "Virgin Islands, British",
-			"VI": "Virgin Islands, U.S.",
-			"WF": "Wallis and Futuna",
-			"EH": "Western Sahara",
-			"YE": "Yemen",
-			"ZM": "Zambia",
-			"ZW": "Zimbabwe"
-		},
-		"eucountries": {
-			"AT": "Austria",
-			"BE": "Belgium",
-			"BG": "Bulgaria",
-			"HR": "Croatia",
-			"CY": "Cyprus",
-			"CZ": "Czech Republic",
-			"DK": "Denmark",
-			"EE": "Estonia",
-			"FI": "Finland",
-			"FR": "France",
-			"DE": "Germany",
-			"GR": "Greece",
-			"HU": "Hungary",
-			"IE": "Ireland",
-			"IT": "Italy",
-			"LV": "Latvia",
-			"LT": "Lithuania",
-			"LU": "Luxembourg",
-			"MT": "Malta",
-			"NL": "Netherlands",
-			"PL": "Poland",
-			"PT": "Portugal",
-			"RO": "Romania",
-			"SK": "Slovakia",
-			"SI": "Slovenia",
-			"ES": "Spain",
-			"SE": "Sweden",
-			"GB": "United Kingdom"
-		},
-		"eeacountries": {
-			"NO": "Norway",
-			"IS": "Iceland",
-			"LI": "Liechtenstein"
-		},
-		"usstates": {
-			"AL": "Alabama",
-			"AK": "Alaska",
-			"AS": "American Samoa",
-			"AZ": "Arizona",
-			"AR": "Arkansas",
-			"CA": "California",
-			"CO": "Colorado",
-			"CT": "Connecticut",
-			"DE": "Delaware",
-			"DC": "District of Columbia",
-			"FM": "Federated States of Micronesia",
-			"FL": "Florida",
-			"GA": "Georgia",
-			"GU": "Guam",
-			"HI": "Hawaii",
-			"ID": "Idaho",
-			"IL": "Illinois",
-			"IN": "Indiana",
-			"IA": "Iowa",
-			"KS": "Kansas",
-			"KY": "Kentucky",
-			"LA": "Louisiana",
-			"ME": "Maine",
-			"MH": "Marshall Islands",
-			"MD": "Maryland",
-			"MA": "Massachusetts",
-			"MI": "Michigan",
-			"MN": "Minnesota",
-			"MS": "Mississippi",
-			"MO": "Missouri",
-			"MT": "Montana",
-			"NE": "Nebraska",
-			"NV": "Nevada",
-			"NH": "New Hampshire",
-			"NJ": "New Jersey",
-			"NM": "New Mexico",
-			"NY": "New York",
-			"NC": "North Carolina",
-			"ND": "North Dakota",
-			"MP": "Northern Mariana Islands",
-			"OH": "Ohio",
-			"OK": "Oklahoma",
-			"OR": "Oregon",
-			"PW": "Palau",
-			"PA": "Pennsylvania",
-			"PR": "Puerto Rico",
-			"RI": "Rhode Island",
-			"SC": "South Carolina",
-			"SD": "South Dakota",
-			"TN": "Tennessee",
-			"TX": "Texas",
-			"UT": "Utah",
-			"VT": "Vermont",
-			"VI": "U.S. Virgin Islands",
-			"VA": "Virginia",
-			"WA": "Washington",
-			"WV": "West Virginia",
-			"WI": "Wisconsin",
-			"WY": "Wyoming",
-			"AA": "Armed Forces Americas",
-			"AE": "Armed Forces",
-			"AP": "Armed Forces Pacific"
-		}
-	}
-}`)._;
-      async function _(_) {
-        if ((0, _._)(_._.EREALM))
+        preferenceControls: {
+          isTechnicallyNecessary: !0,
+        },
+      };
+      async function _(_, _, _, _) {
+        if (_)
           return {
             version: _,
             preference_state: _,
           };
-        if (_._.logged_in) {
+        if (_) {
           const _ = (await _.GetCookiePreferences(_, {}))
             .Body()
             .toObject().preferences;
@@ -106152,7 +107615,6 @@
             if (_ && void 0 !== _.version && _.version != _) return _;
           }
         } catch (_) {}
-        const _ = _._.COUNTRY;
         return _ in _.eucountries || _ in _.eeacountries || "CH" === _
           ? {
               version: _,
@@ -106164,6 +107626,7 @@
             };
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
@@ -106171,7 +107634,7 @@
           (function (_) {
             return {
               queryKey: ["CookiePreferences"],
-              queryFn: () => _(_),
+              queryFn: () => _(_, _._.logged_in, _._.COUNTRY, _._.EREALM),
             };
           })(_),
         );
@@ -107503,6 +108966,7 @@
         async LoadSettings() {
           const _ = (_, _) => {
             try {
+              0;
               const _ = localStorage.getItem(_);
               return _ ? JSON.parse(_) : _;
             } catch {
@@ -108138,6 +109602,43 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "webui_config";
+      function _(_, _ = _) {
+        return _(_, _, !0);
+      }
+      function _(_, _ = _) {
+        return _(_, _, !1);
+      }
+      function _(_, _ = _, _) {
+        let _;
+        if (
+          ((_ =
+            "string" == typeof _
+              ? {
+                  NODE_ENV: "production",
+                  STEAM_BUILD: "buildbot",
+                }.MOBILE_BUILD
+                ? null
+                : document.getElementById(_)
+              : _),
+          _)
+        )
+          try {
+            if (_.hasAttribute("data-" + _)) {
+              return JSON.parse(_.getAttribute("data-" + _));
+            }
+            return null;
+          } catch (_) {
+            console.error(
+              "Failed to parse config for " +
+                _._.steamid +
+                " (" +
+                window.location.href +
+                ")",
+              _,
+            );
+          }
+        else _ && console.error("Missing config element #", _);
+      }
       let _;
       function _() {
         if (!(0, _._)()) return _ || (_ = _()), _;
@@ -108182,43 +109683,6 @@
               _.add(_);
             });
       }
-      function _(_, _ = _) {
-        return _(_, _, !0);
-      }
-      function _(_, _ = _) {
-        return _(_, _, !1);
-      }
-      function _(_, _ = _, _) {
-        let _;
-        if (
-          ((_ =
-            "string" == typeof _
-              ? {
-                  NODE_ENV: "production",
-                  STEAM_BUILD: "buildbot",
-                }.MOBILE_BUILD
-                ? null
-                : document.getElementById(_)
-              : _),
-          _)
-        )
-          try {
-            if (_.hasAttribute("data-" + _)) {
-              return JSON.parse(_.getAttribute("data-" + _));
-            }
-            return null;
-          } catch (_) {
-            console.error(
-              "Failed to parse config for " +
-                _._.steamid +
-                " (" +
-                window.location.href +
-                ")",
-              _,
-            );
-          }
-        else _ && console.error("Missing config element #", _);
-      }
       const _ = "presentation_mode";
       function _() {
         let _ = null;
@@ -108241,7 +109705,7 @@
   },
   (_) => {
     _._(0, [78997], () => {
-      return (_ = 92693), _((_._ = _));
+      return (_ = 69440), _((_._ = _));
       var _;
     });
     _._();

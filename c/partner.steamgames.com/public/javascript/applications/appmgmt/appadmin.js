@@ -1941,6 +1941,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  market_bucket_id: {
+                    _: 39,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -22161,6 +22166,7 @@
             include_assets_without_overrides: _,
             apply_user_filters: _,
             include_links: _,
+            include_extra_details: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -22181,6 +22187,7 @@
               include_assets_without_overrides: _,
               apply_user_filters: _,
               include_links: _,
+              include_extra_details: _,
             };
             let _ = null;
             return (
@@ -22197,7 +22204,30 @@
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ]),
           !_)
         )
           return [null, _];
@@ -22235,6 +22265,7 @@
             include_assets_without_overrides: _,
             apply_user_filters: _,
             include_links: _,
+            include_extra_details: _,
           } = _;
         if (
           ((0, _.useEffect)(() => {
@@ -22256,6 +22287,7 @@
                 include_assets_without_overrides: _,
                 apply_user_filters: _,
                 include_links: _,
+                include_extra_details: _,
               },
               _ = _.filter(
                 (_) =>
@@ -22273,7 +22305,7 @@
               }),
               () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
           return _;

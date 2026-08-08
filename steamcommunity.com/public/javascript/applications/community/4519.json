@@ -283,5 +283,14 @@
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "يجب عليك تفعيل خدمة Steam Guard في حسابك. يُرجى التأكد من تفعيل بريدك الإلكتروني وتسجيل دخولك إلى حسابك مرتين بعد تفعيل خدمة Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "يجب أن يكون حسابك محمي بواسطة Steam Guard لمدة لا تقل عن %1$s يوم.",
     "Economy_Market_HeaderTip_TimeCanUse": "إذا لم يحدث أي شيء آخر يقيد وصولك إلى سوق المجتمع، سيكون بإمكانك استخدامه في %1$s",
-    "Economy_Market_TopLevelReason_TradeCooldown": "حسابك في حالة توقف مؤقت عن استخدام ميزات المقايضة والسوق."
+    "Economy_Market_TopLevelReason_TradeCooldown": "حسابك في حالة توقف مؤقت عن استخدام ميزات المقايضة والسوق.",
+    "MyHistory_Title_ItemNameBlock": "الاسم",
+    "MyHistory_Title_TransactedPrice": "السعر",
+    "MyHistory_Title_Action": "الإجراء",
+    "MyBuyOrders_QuantityPurchased": "%1$s / %2$s",
+    "MyHistory_NoResults": "لم يتم العثور على نتائج",
+    "MyHistory_Action_Sold": "تم بيعه",
+    "MyHistory_Action_Purchased": "تم شراؤه",
+    "Breadcrumbs_Label_History": "سجّلي",
+    "Breadcrumbs_Label_Listings": "العروض الخاصة بي"
 }

@@ -523,6 +523,8 @@
           queryFn: async () => {
             const _ = {
                 tag: _,
+                days_backward: _,
+                days_forward: _,
               },
               _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
                 params: _,
@@ -1295,8 +1297,11 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = (0, _._)(0, 14, 21),
-          _ = (0, _._)(14, 21, !0, !0).flat(),
+          _ = new Date().getDay(),
+          _ = 13 + _,
+          _ = 22 - _,
+          _ = (0, _._)(0, _, _),
+          _ = (0, _._)(_, _, !0, !0).flat(),
           _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
           { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
         if (!_.data)

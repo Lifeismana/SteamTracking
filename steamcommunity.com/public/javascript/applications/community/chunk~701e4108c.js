@@ -376,6 +376,7 @@
             P = (0, a.mz)(
               {
                 onClick: h,
+                "aria-disabled": t,
                 ...N,
                 variant: g,
                 size: e,

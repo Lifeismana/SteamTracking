@@ -9555,7 +9555,7 @@
       }
       var Or = r(6313),
         Ar = r(55963),
-        Fr = r(96171),
+        Fr = r(6824),
         Pr = r(55263),
         kr = r(18654),
         Er = r(94095),
@@ -15076,52 +15076,6 @@
         (0, i.Cg)([g.o], L.prototype, "OnUserInputNeeded", null);
       const G = new W();
       window.uiBroadcastWatchStore = G;
-    },
-    68033: (e, t, r) => {
-      "use strict";
-      r.d(t, { A: () => l, T: () => o });
-      var i = r(30193),
-        s = r(78327),
-        a = r(41735),
-        n = r.n(a);
-      class o extends i.pN {
-        constructor() {
-          super();
-        }
-        BTransportReady() {
-          return !0;
-        }
-        GetServerTime() {
-          return s.TS.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
-        }
-        async RequestEmoticonListInternal() {
-          let e = [];
-          try {
-            let t = await n().get(s.TS.CHAT_BASE_URL + "actions/EmoticonData", {
-              withCredentials: !0,
-            });
-            if (t.data.emoticons)
-              for (let r of t.data.emoticons) {
-                let t = r.name;
-                if (t.startsWith("^")) e.push({ name: t });
-                else {
-                  let i = { name: t.substr(1, t.length - 2) },
-                    s = i.name.toLowerCase();
-                  s != i.name && (i.name_normalized = s),
-                    r.time_last_used && (i.last_used = r.time_last_used),
-                    r.use_count && (i.use_count = r.use_count),
-                    r.time_received && (i.time_received = r.time_received),
-                    r.appid && (i.appid = r.appid),
-                    e.push(i);
-                }
-              }
-          } catch (e) {
-            console.error("error loading emoticon list", e);
-          }
-          this.OnEmoticonListReceived(e);
-        }
-      }
-      const l = new o();
     },
     81363: (e, t, r) => {
       "use strict";

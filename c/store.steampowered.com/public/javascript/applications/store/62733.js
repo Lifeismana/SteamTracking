@@ -146,6 +146,7 @@
         DateWidth: "_2P2kw0vHZogg7Ny7cAjQBo",
         PacificTimeHint: "_18FxDrpsfO5Tt8EFui49hV",
         TimeZone: "-x3Rw6W2fJfWRMs7vKr1I",
+        ClearButton: "TzhaDn0jN2ILks403xqXQ",
         InputBorder: "_1_H1sN2GVTzxSaz55gv03s",
         TimeBlock: "_2xLBsAMYVDoygyWbl2YIzI",
         TimeRowContainer: "BWmgg29ZeDbO6oj7Z1U7T",
@@ -1922,6 +1923,7 @@
           bWeekdaysOnly: _,
           fnSetTimeToUpdate: _,
           bForce24HourFormat: _,
+          bAllowClear: _,
         } = _;
         let _ =
           (function () {
@@ -1932,6 +1934,7 @@
             : _;
         const _ = _(),
           [_, _] = _.useState(_ > 0 ? _()(1e3 * _) : null),
+          [_, _] = _.useState(0),
           [_, _] = _.useState(),
           [_, _] = _.useState(),
           _ = (function (_, _, _, _, _) {
@@ -2030,7 +2033,8 @@
               _(_), _(_().unix(_));
             },
             _,
-          );
+          ),
+          _ = _ && !_ && _ > 0;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().EventTimeSection, _),
           children: [
@@ -2064,42 +2068,46 @@
                 (0, _.jsxs)("div", {
                   className: (0, _._)(_().InputBorder, _().TimeBlock),
                   children: [
-                    (0, _.jsx)(_(), {
-                      onChange: _,
-                      timeFormat: !1,
-                      value: null != _ ? _ : _,
-                      isValidDate: (_) =>
-                        !_ &&
-                        (function (_, _, _, _) {
-                          const _ = _().unix(_).hour(0).seconds(0).minute(0);
-                          let _ = _.unix() >= _.unix();
-                          if (_ && _ && _ >= _) {
-                            const _ = _()
-                              .unix(_)
-                              .hour(23)
-                              .minute(59)
-                              .seconds(59);
-                            _ = _.unix() <= _.unix();
-                          }
-                          _ &&
+                    (0, _.jsx)(
+                      _(),
+                      {
+                        onChange: _,
+                        timeFormat: !1,
+                        value: null != _ ? _ : _,
+                        isValidDate: (_) =>
+                          !_ &&
+                          (function (_, _, _, _) {
+                            const _ = _().unix(_).hour(0).seconds(0).minute(0);
+                            let _ = _.unix() >= _.unix();
+                            if (_ && _ && _ >= _) {
+                              const _ = _()
+                                .unix(_)
+                                .hour(23)
+                                .minute(59)
+                                .seconds(59);
+                              _ = _.unix() <= _.unix();
+                            }
                             _ &&
-                            ((0 != _.weekday() && 6 != _.weekday()) ||
-                              (_ = !1));
-                          return _;
-                        })(_, _, _, _),
-                      initialValue: _,
-                      inputProps: {
-                        placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
-                        className: (0, _._)(
-                          _().DateWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: _,
-                        onChange: (_) => _(_.currentTarget.value),
-                        onBlur: (_) => _(_.currentTarget.value),
+                              _ &&
+                              ((0 != _.weekday() && 6 != _.weekday()) ||
+                                (_ = !1));
+                            return _;
+                          })(_, _, _, _),
+                        initialValue: _,
+                        inputProps: {
+                          placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
+                          className: (0, _._)(
+                            _().DateWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: _,
+                          onChange: (_) => _(_.currentTarget.value),
+                          onBlur: (_) => _(_.currentTarget.value),
+                        },
                       },
-                    }),
+                      "date" + _,
+                    ),
                     !!_ &&
                       (0, _.jsx)("div", {
                         className: _().PacificTimeHint,
@@ -2110,24 +2118,28 @@
                 (0, _.jsxs)("div", {
                   className: (0, _._)(_().InputBorder, _().TimeBlock),
                   children: [
-                    (0, _.jsx)(_(), {
-                      onChange: _,
-                      dateFormat: !1,
-                      timeFormat: _,
-                      timeConstraints: _,
-                      value: null != _ ? _ : _,
-                      inputProps: {
-                        placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
-                        className: (0, _._)(
-                          _().TimeWidth,
-                          "DialogInput",
-                          "DialogTextInputBase",
-                        ),
-                        disabled: _,
-                        onChange: (_) => _(_.currentTarget.value),
-                        onBlur: (_) => _(_.currentTarget.value),
+                    (0, _.jsx)(
+                      _(),
+                      {
+                        onChange: _,
+                        dateFormat: !1,
+                        timeFormat: _,
+                        timeConstraints: _,
+                        value: null != _ ? _ : _,
+                        inputProps: {
+                          placeholder: (0, _._)("#DateTimePicker_Enter_Time"),
+                          className: (0, _._)(
+                            _().TimeWidth,
+                            "DialogInput",
+                            "DialogTextInputBase",
+                          ),
+                          disabled: _,
+                          onChange: (_) => _(_.currentTarget.value),
+                          onBlur: (_) => _(_.currentTarget.value),
+                        },
                       },
-                    }),
+                      "time" + _,
+                    ),
                     !!_ &&
                       (0, _.jsx)("div", {
                         className: _().PacificTimeHint,
@@ -2148,6 +2160,15 @@
                           children: _.zoneAbbr(),
                         }),
                     ],
+                  }),
+                _ &&
+                  (0, _.jsx)("button", {
+                    type: "button",
+                    className: _().ClearButton,
+                    onClick: () => {
+                      _ || (_(0), _(null), _(null), _(null), _((_) => _ + 1));
+                    },
+                    children: (0, _._)("#Button_Clear"),
                   }),
               ],
             }),

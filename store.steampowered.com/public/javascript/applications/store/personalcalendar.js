@@ -357,7 +357,7 @@
       t.d(r, { C0: () => n, Ck: () => f, mj: () => m });
       var n,
         s = t(7850),
-        l = t(48210),
+        l = t(76119),
         i = t(66418),
         a = t(39777),
         o = t(64238),
@@ -477,15 +477,15 @@
         return {
           queryKey: ["personalcalendar", e, r, t],
           queryFn: async () => {
-            const r = { tag: e },
-              t = await s().get(`${l.TS.STORE_BASE_URL}personalcalendardata`, {
-                params: r,
+            const n = { tag: e, days_backward: r, days_forward: t },
+              i = await s().get(`${l.TS.STORE_BASE_URL}personalcalendardata`, {
+                params: n,
                 timeout: 2e4,
               });
             return {
-              arrAppInfos: t.data.arrAppInfos,
-              strResultMessage: t.data.strResultMessage,
-              bUsesWishlistedGames: t.data.bUsesWishlistedGames,
+              arrAppInfos: i.data.arrAppInfos,
+              strResultMessage: i.data.strResultMessage,
+              bUsesWishlistedGames: i.data.bUsesWishlistedGames,
             };
           },
           placeholderData: (e) => e,
@@ -1159,8 +1159,8 @@
         N = t(2589),
         E = t(42834),
         R = t(84933),
-        T = t(75933),
-        D = t(66973);
+        D = t(75933),
+        T = t(66973);
       const k = {
         name: "personalcalendarPrefs",
         options: { path: "/personalcalendar", secure: !0, maxAge: 31536e6 },
@@ -1170,22 +1170,25 @@
       function M() {
         const e = (0, s.j_)(k),
           r = e ? JSON.parse(e) : void 0,
-          t = (0, T.a4)(940),
+          t = (0, D.a4)(940),
           l = (0, _.n9)(),
           o = (0, C.w)(),
           d = (0, j.Qn)(),
-          u = (0, v.GZ)(0, 14, 21),
-          h = (0, v.Gd)(14, 21, !0, !0).flat(),
-          p = (0, S.It)(`${c.TS.STORE_BASE_URL}personalcalendar`, l, o),
-          { bShowSeeMoreHint: f, panelProps: g } = (0, m.i)(p);
-        if (!u.data)
+          u = new Date().getDay(),
+          h = 13 + u,
+          p = 22 - u,
+          f = (0, v.GZ)(0, h, p),
+          g = (0, v.Gd)(h, p, !0, !0).flat(),
+          b = (0, S.It)(`${c.TS.STORE_BASE_URL}personalcalendar`, l, o),
+          { bShowSeeMoreHint: x, panelProps: y } = (0, m.i)(b);
+        if (!f.data)
           return (0, n.jsx)(i.Z, { className: I.PersonalCalendarWidget });
-        let b = u.data.arrAppInfos;
+        let N = f.data.arrAppInfos;
         return (
           r &&
-            ((b = b.filter((e) => !r.bHideOwned || !e.bIsOwned)),
-            (b = b.filter((e) => !r.bHideEarlyAccess || !e.bIsEarlyAccess)),
-            (b = b.filter((e) => {
+            ((N = N.filter((e) => !r.bHideOwned || !e.bIsOwned)),
+            (N = N.filter((e) => !r.bHideEarlyAccess || !e.bIsEarlyAccess)),
+            (N = N.filter((e) => {
               switch (r.eWishlistDisplay) {
                 case F.Show:
                   return !0;
@@ -1198,7 +1201,7 @@
           (0, n.jsxs)(i.Z, {
             className: I.PersonalCalendarWidget,
             navEntryPreferPosition: a.iU.PREFERRED_CHILD,
-            ...g,
+            ...y,
             children: [
               (0, n.jsxs)("div", {
                 className: "title_grid",
@@ -1217,7 +1220,7 @@
                     className: "home_section_subtitle",
                     children: (0, A.we)("#PersonalCalendar_Subtitle"),
                   }),
-                  !d && (0, n.jsx)(G, { calendarURL: p, location: "desktop" }),
+                  !d && (0, n.jsx)(G, { calendarURL: b, location: "desktop" }),
                 ],
               }),
               (0, n.jsx)(w.F, {
@@ -1228,25 +1231,25 @@
                 screenIsWide: t,
                 startingSlide: 10,
                 className: d ? void 0 : "fiveElementEightGap",
-                children: h.map((e, t) =>
+                children: g.map((e, t) =>
                   (0, n.jsx)(
                     H,
                     {
                       bInitialFocus: 10 === t,
                       nTimestamp: e,
-                      nNextTimestamp: t < h.length - 1 ? h[t + 1] : e + 86400,
-                      arrAppInfos: b,
+                      nNextTimestamp: t < g.length - 1 ? g[t + 1] : e + 86400,
+                      arrAppInfos: N,
                       nRankThreshold: r?.nResultsToShow,
                     },
                     e,
                   ),
                 ),
               }),
-              !d && (0, n.jsx)(G, { calendarURL: p, location: "mobile" }),
+              !d && (0, n.jsx)(G, { calendarURL: b, location: "mobile" }),
               d &&
                 (0, n.jsx)(m.o, {
                   label: (0, A.we)("#PersonalCalendar_Full"),
-                  shown: f,
+                  shown: x,
                 }),
             ],
           })
@@ -1299,7 +1302,7 @@
                   : e.nRank - r.nRank,
             ),
           R = u ?? 100,
-          T = E.filter((e) => e.nRank <= R).length - 2,
+          D = E.filter((e) => e.nRank <= R).length - 2,
           k = 0 == E.length,
           [F, M] = g.useState(!1),
           G = (0, j.Qn)(),
@@ -1349,7 +1352,7 @@
                     k &&
                       (0, n.jsx)("div", {
                         className: I.EmptyDay,
-                        children: (0, D.i)(
+                        children: (0, T.i)(
                           (0, A.we)("#PersonalCalendar_EmptyDay"),
                           (0, n.jsx)("a", { href: m }),
                         ),
@@ -1358,11 +1361,11 @@
                 }),
               }),
               !G &&
-                T > 0 &&
+                D > 0 &&
                 (0, n.jsx)(l.Ii, {
                   href: m,
                   className: I.MoreGames,
-                  children: (0, A.we)("#PersonalCalendar_More", T),
+                  children: (0, A.we)("#PersonalCalendar_More", D),
                 }),
             ],
           })
@@ -1370,7 +1373,7 @@
       }
       function P(e) {
         const r = (0, f.lv)({ appid: e.nAppID }),
-          t = (0, T.a4)(940),
+          t = (0, D.a4)(940),
           [s, l] = g.useState(!1),
           a = g.useRef(null),
           o = (0, b.l)(r.data, t ? "main_capsule" : "hero_capsule"),

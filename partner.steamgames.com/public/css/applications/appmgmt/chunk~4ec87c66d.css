@@ -22,10 +22,12 @@
   outline: 2px solid #fff;
   outline-offset: -2px;
 }
-._0BH1ydyFmSnUvoVK2hIc:disabled {
+._0BH1ydyFmSnUvoVK2hIc:disabled,
+._0BH1ydyFmSnUvoVK2hIc[aria-disabled="true"] {
   opacity: 0.35;
 }
-._0BH1ydyFmSnUvoVK2hIc:disabled:hover {
+._0BH1ydyFmSnUvoVK2hIc:disabled:hover,
+._0BH1ydyFmSnUvoVK2hIc[aria-disabled="true"]:hover {
   background: var(--background);
   cursor: default;
 }
@@ -394,6 +396,24 @@ table._3sBXwILYFyzoFqxMG_Q5yE td {
 ._1YPyflvb4EvPJV9IKbG3CI {
   padding-left: 30px;
   margin-top: 24px;
+}
+._3QCPp5tB0gqImVkvsNBONz {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-left: 3px solid #e5a33c;
+  background: rgba(229, 163, 60, 0.12);
+  font-size: 13px;
+  line-height: 18px;
+  color: #e5c48f;
+}
+._1aJucl2-IjQwXAk6lR1n05 {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: #88c6fd;
+  text-decoration: underline;
+  cursor: pointer;
 }
 @keyframes NB2T8xbO5KSdw1jQWC0aq {
   from {
@@ -2639,6 +2659,22 @@ button.DialogButton.Primary._1SeDTJwMXlTMLLf2zBlrG0 {
 }
 .-x3Rw6W2fJfWRMs7vKr1I {
   padding: 10px;
+}
+.TzhaDn0jN2ILks403xqXQ {
+  align-self: center;
+  margin-left: 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #67c1f5;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+.TzhaDn0jN2ILks403xqXQ:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 ._1_H1sN2GVTzxSaz55gv03s._2xLBsAMYVDoygyWbl2YIzI {
   margin-right: 8px;
@@ -5903,70 +5939,6 @@ html.responsive.touch
   margin-top: 12px;
   margin-bottom: 8px;
   font-size: 14px;
-}
-._1cKuIWVnzQyoBqcjbmQej8 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1em;
-}
-.ur8Kb4QFgfep75jIe6Cdz {
-  font-weight: 600;
-  margin-top: 10px;
-  color: #e6c32c;
-}
-._1sTpucKBB_H5jsSx1uDFGS {
-  font-size: 18px;
-  font-weight: 300;
-  padding-bottom: 0.8em;
-  color: #e6c32c;
-}
-._15_aOIWD_1U_J_zwCK1U1Q {
-  font-size: 18px;
-  font-weight: 300;
-  padding-top: 0.8em;
-  color: #e6c32c;
-}
-._1ZBOVc-VGXMnDpiwyh7ju4 {
-  width: 80px;
-  height: 80px;
-}
-.SummerSale2022 .ModalPosition_TopBar {
-  height: 4px;
-  background: #fb5034;
-}
-.SummerSale2022 .DialogContent {
-  background: #2d3194;
-  box-shadow: 4px 4px 0px #2be742;
-}
-.SummerSale2022 .DialogContent .DialogHeader {
-  background: #fb5034;
-  color: #e7c42b;
-  box-shadow: 4px 4px 0px #e7c42b;
-  padding-left: 6px;
-  padding-bottom: 2px;
-  font-weight: 500;
-}
-.SummerSale2022 .DialogContent ._DialogColLayout {
-  padding-bottom: 4px;
-}
-.SummerSale2022 .DialogContent button.DialogButton {
-  background: #4247b4;
-  color: #dadee5;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.SummerSale2022 .DialogContent button.DialogButton.Primary {
-  background: #2be742;
-  color: #2d3194;
-  box-shadow: 4px 2px 0px #0097c9;
-  border-radius: 0px;
-}
-.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:hover,
-.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:active {
-  background: #2be742;
-  box-shadow: 4px 4px 0px #0097c9;
-  color: #0097c9;
 }
 ._9H6b5yfaxlmcnHvkqtwDK {
   margin-top: 8vw;
@@ -10704,6 +10676,7 @@ textarea._3793xvP87t1rZYbAQDC1pG {
 ._2pZVu5uwOWvVnfNisJPOB9 {
   display: flex;
   flex-grow: 1;
+  min-width: 0;
 }
 ._3N5be2rmYYNMGufXaKpBSb {
   box-sizing: border-box;

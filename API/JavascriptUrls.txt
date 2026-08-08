@@ -288,6 +288,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
+${COMMUNITY_BASE_URL}miniprofile/${}/json/
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
 ${COMMUNITY_BASE_URL}moderation/subject/${type}-${group_id}
 ${COMMUNITY_BASE_URL}my
@@ -391,9 +392,17 @@ ${COMMUNITY_BASE_URL}search/users/
 ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/ban
 ${COMMUNITY_BASE_URL}sharedfiles/banupvoters
+${COMMUNITY_BASE_URL}sharedfiles/edititem/${appid}/11/
+${COMMUNITY_BASE_URL}sharedfiles/edititem/?appid=${}&filetype=${}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${published_file_id}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/changelog/?id=${}${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/managechildren/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/managepreviews/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/merchartwork/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/itemdetails/stats/?id=${}
 ${COMMUNITY_BASE_URL}sharedfiles/itemsetvisibility
 ${COMMUNITY_BASE_URL}sharedfiles/markassuspicious
 ${COMMUNITY_BASE_URL}sharedfiles/moderationqueueview/?appid=${appid}
@@ -417,11 +426,11 @@ ${COMMUNITY_BASE_URL}workshop/about/?appid=${appid}
 ${COMMUNITY_BASE_URL}workshop/browse/?appid=${appid}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}workshop/discussions/?appid=${appid}
 ${COMMUNITY_BASE_URL}workshop/editcollection/?appid=${appid}
-${COMMUNITY_BASE_URL}workshop/edititem/${appid}/11/
 ${COMMUNITY_CDN_ASSET_URL}${imgHeadshot}
 ${COMMUNITY_CDN_ASSET_URL}${screenshot}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/${}/${}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/96px/${}.png
+${COMMUNITY_CDN_ASSET_URL}home/daily_deal_example.jpg
 ${COMMUNITY_CDN_ASSET_URL}prettify/prettify.js
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/96px/flake_${}.png
 ${COMMUNITY_CDN_URL}
@@ -515,6 +524,7 @@ ${IMG_URL}${}
 ${IMG_URL}${}.png
 ${IMG_URL}${}.png 
 ${IMG_URL}${}/icons/scroll_arrow.png
+${IMG_URL}${}/players/${nAccountID}.png
 ${IMG_URL}${}/river_vials/river_vial_${}1.jpg
 ${IMG_URL}${}/river_vials/river_vial_icon_${}.png
 ${IMG_URL}/${image_path}
@@ -846,7 +856,6 @@ ${IMG_URL}international2023/icons/social_yt.png
 ${IMG_URL}international2023/ti_logo_full_color.png
 ${IMG_URL}international2024/esports_site/footer_bg01.png
 ${IMG_URL}international2024/esports_site/logo_ti_gold.png
-${IMG_URL}international2025/players/${nAccountID}.png
 ${IMG_URL}international2025/ti2025_logo.png
 ${IMG_URL}international2026/ti2026_logo.png
 ${IMG_URL}items/${}.png
@@ -1321,16 +1330,12 @@ ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
-${STORE_BASE_URL}/ajaxappreviews/${}?${}
 ${STORE_BASE_URL}/curator/${}/
 ${STORE_BASE_URL}/curator/${}/admin/ajaxdeletecreatorhomeevent
 ${STORE_BASE_URL}/curator/${}/admin/ajaxgetcreatorhomeevents
 ${STORE_BASE_URL}/curator/${}/admin/ajaxselectcreatorhome
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
-${STORE_BASE_URL}/userreviews/ajaxgetvotes/
-${STORE_BASE_URL}/userreviews/rate/${}
-${STORE_BASE_URL}/userreviews/votetag/${}
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
 ${STORE_BASE_URL}account
@@ -1368,6 +1373,7 @@ ${STORE_BASE_URL}actions/ajaxgetstoretags?origin=${origin}
 ${STORE_BASE_URL}actions/ajaxgetwatchvodtoken
 ${STORE_BASE_URL}actions/ajaxresolvepackages
 ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
+${STORE_BASE_URL}ajaxappreviews/${}?${}
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/addtowishlist
@@ -1380,6 +1386,7 @@ ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${completed_appid}
 ${STORE_BASE_URL}app/${id}
 ${STORE_BASE_URL}app/${m_strAppId}
+${STORE_BASE_URL}app/${nID}
 ${STORE_BASE_URL}app/${takeoverAppID}
 ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/
@@ -1392,7 +1399,7 @@ ${STORE_BASE_URL}broadcast/ajaxgetstreamersforpreview
 ${STORE_BASE_URL}broadcast/ajaxgetuserbroadcastpreferences
 ${STORE_BASE_URL}bundle/${bundleid}
 ${STORE_BASE_URL}bundle/${id}
-${STORE_BASE_URL}bundle/${}
+${STORE_BASE_URL}bundle/${nID}
 ${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
@@ -1445,6 +1452,7 @@ ${STORE_BASE_URL}developer/${m_strVanity}/
 ${STORE_BASE_URL}developer/${vanity}/
 ${STORE_BASE_URL}digitalgiftcards/
 ${STORE_BASE_URL}digitalgiftcards/selectgiftcard
+${STORE_BASE_URL}dlc/${associated_item_appid}
 ${STORE_BASE_URL}dlc/${}
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
@@ -1603,7 +1611,6 @@ ${STORE_BASE_URL}sale/${strSalePage}
 ${STORE_BASE_URL}sale/${strVanity}
 ${STORE_BASE_URL}sale/${vanity}
 ${STORE_BASE_URL}sale/${}
-${STORE_BASE_URL}sale/clorthax_quest
 ${STORE_BASE_URL}sale/nextfest/
 ${STORE_BASE_URL}sale/steamawards/
 ${STORE_BASE_URL}saleaction/
@@ -1626,7 +1633,6 @@ ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts
 ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatlist
 ${STORE_BASE_URL}saleaction/ajaxgetusergiveawayregistration
 ${STORE_BASE_URL}saleaction/ajaxgetwishlistonsale
-${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search
@@ -1658,8 +1664,8 @@ ${STORE_BASE_URL}steamawards/nominations/
 ${STORE_BASE_URL}steamawards/nominations/${}/${steamid}?k=${code}
 ${STORE_BASE_URL}steamdeck?utm_source=verifiedpage
 ${STORE_BASE_URL}sub/${id}
+${STORE_BASE_URL}sub/${nID}
 ${STORE_BASE_URL}sub/${packageid}
-${STORE_BASE_URL}sub/${}
 ${STORE_BASE_URL}subscriber_agreement
 ${STORE_BASE_URL}subscriber_agreement/
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}
@@ -1674,6 +1680,9 @@ ${STORE_BASE_URL}twofactor/manage_action
 ${STORE_BASE_URL}twofactor/remove?step=promptdevice
 ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
+${STORE_BASE_URL}userreviews/ajaxgetvotes/
+${STORE_BASE_URL}userreviews/rate/${}
+${STORE_BASE_URL}userreviews/votetag/${}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist
@@ -3256,6 +3265,7 @@ steam://url/SteamIDMyProfile
 steam://url/SteamPreferences
 steam://url/StoreAccount
 steam://url/StoreAddFundsPage
+url( "${BASE_URL_SHARED_CDN}community/${}" )
 url( ${CDN_URL}apps/dota2/images/leagues/${league_id}/images/image_8.png
 url( ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png )
 url( ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png ), linear-gradient( to right, ${} 49%, ${} 51% )

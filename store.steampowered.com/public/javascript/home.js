@@ -2679,6 +2679,11 @@ GHomepage = {
 			cTagBlocksShown++;
 		}
 
+		if ( cTagBlocksShown === 1 )
+		{
+			$Parent.find( '.home_discount_games_ctn' ).addClass( 'single_row' );
+		}
+
 		this.InitGamepadMoreSections();
 
 		$Parent.css( { minHeight: '' } );

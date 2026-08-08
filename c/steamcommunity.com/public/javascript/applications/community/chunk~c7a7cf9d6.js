@@ -1062,12 +1062,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { event: _, closeModal: _ } = _;
+        const { event: _, closeModal: _ } = _,
+          _ = (0, _._)();
         return (0, _.jsx)(_._, {
           initialEvent: _,
           bShowOnlyInitialEvent: !0,
           partnerEventStore: _._,
-          emoticonStore: _._,
+          emoticonStore: _,
           showAppHeader: !0,
           closeModal: _,
         });
@@ -1106,18 +1107,21 @@
             ref: this.m_refFocus,
             className: _.Main,
             onClick: this.OnBackgroundClick,
-            children: (0, _.jsx)(
-              _._,
-              {
-                event: _,
-                emoticonStore: _._,
-                partnerEventStore: _._.Get(),
-                langOverride: _,
-                isPreview: _,
-                bDisableBroadcastPlayer: !1,
-              },
-              _.GID,
-            ),
+            children: (0, _.jsx)(_._, {
+              children: (_) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    event: _,
+                    emoticonStore: _,
+                    partnerEventStore: _._.Get(),
+                    langOverride: _,
+                    isPreview: _,
+                    bDisableBroadcastPlayer: !1,
+                  },
+                  _.GID,
+                ),
+            }),
           });
         }
       };
@@ -1344,17 +1348,20 @@
             _._.Get().BOwnsApp(_.appid) &&
               (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
           const _ = (0, _.jsx)(_._, {
-            initialEvent: _,
-            appid: _,
-            clanSteamID: _,
-            partnerEventStore: _,
-            emoticonStore: _._,
-            closeModal: !_ && _,
-            showAppHeader: _,
-            bShowOnlyInitialEvent: _,
-            additionalParams: _,
-            eventClassName: _,
-            onAppIconClick: _,
+            children: (_) =>
+              (0, _.jsx)(_._, {
+                initialEvent: _,
+                appid: _,
+                clanSteamID: _,
+                partnerEventStore: _,
+                emoticonStore: _,
+                closeModal: !_ && _,
+                showAppHeader: _,
+                bShowOnlyInitialEvent: _,
+                additionalParams: _,
+                eventClassName: _,
+                onAppIconClick: _,
+              }),
           });
           return _
             ? _

@@ -4156,24 +4156,25 @@
                     language: _,
                   }),
                 })
-              : (0, _.jsx)(_.Fragment, {
-                  children: (0, _.jsx)(_._, {
-                    event: _,
-                    lang: _,
-                    partnerEventStore: _._,
-                    emoticonStore: _._,
-                    adminPanel: (0, _.jsx)(_._, {
-                      eventModel: _,
+              : (0, _.jsx)(_._, {
+                  children: (_) =>
+                    (0, _.jsx)(_._, {
+                      event: _,
+                      lang: _,
                       partnerEventStore: _._,
+                      emoticonStore: _,
+                      adminPanel: (0, _.jsx)(_._, {
+                        eventModel: _,
+                        partnerEventStore: _._,
+                      }),
+                      otherEventRow: (0, _.jsx)(_._, {
+                        clanAccountID: _.clanSteamID.GetAccountID(),
+                        trackingLocation: _._._,
+                        gidAnnouncement: _.AnnouncementGID,
+                        partnerEventStore: _._,
+                        bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
+                      }),
                     }),
-                    otherEventRow: (0, _.jsx)(_._, {
-                      clanAccountID: _.clanSteamID.GetAccountID(),
-                      trackingLocation: _._._,
-                      gidAnnouncement: _.AnnouncementGID,
-                      partnerEventStore: _._,
-                      bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
-                    }),
-                  }),
                 });
           }
           return (0, _.jsx)(_._, {
@@ -5177,10 +5178,10 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { model: _, fnOnDirty: _ } = _,
+          { openColorPicker: _ } = (0, _._)(),
           [_, _] = (0, _._)(() => [
             _.sale_background_color,
             _.sale_background_repeat,
@@ -5200,19 +5201,13 @@
                     (0, _.jsx)(_._, {
                       className: _().BackgroundColorBtn,
                       onClick: (_) => {
-                        (0, _._)(
-                          (0, _.jsx)(_._, {
-                            color: _,
-                            onChange: (_) => {
-                              (_.sale_background_color = _),
-                                __webpack_require__();
-                            },
-                          }),
-                          _,
-                          {
-                            bDisablePopTop: !0,
+                        _(_, {
+                          color: _,
+                          onChange: (_) => {
+                            (_.sale_background_color = _),
+                              __webpack_require__();
                           },
-                        );
+                        });
                       },
                       style: {
                         backgroundColor: _,
@@ -5246,22 +5241,16 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { strArrowColor: _, fnUpdateArrowColor: _, arrowStyle: _ } = _,
+          { openColorPicker: _ } = (0, _._)(),
           [_, _] = _.useState(null == _);
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)(_._, {
             className: _().BackgroundColorBtn,
-            onClick: (_) => {
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  color: _,
-                  onChange: _,
-                }),
-                _,
-                {
-                  bDisablePopTop: !0,
-                },
-              );
-            },
+            onClick: (_) =>
+              _(_, {
+                color: _,
+                onChange: _,
+              }),
             children: [
               (0, _.jsx)(_._, {
                 direction: "left",
@@ -5282,22 +5271,16 @@
         });
       }
       function _(_) {
-        const { label: _, fnUpdateColor: _, strColorToChange: _ } = _;
+        const { label: _, fnUpdateColor: _, strColorToChange: _ } = _,
+          { openColorPicker: _ } = (0, _._)();
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)(_._, {
             className: _().BackgroundColorBtn,
-            onClick: (_) => {
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  color: _,
-                  onChange: _,
-                }),
-                _,
-                {
-                  bDisablePopTop: !0,
-                },
-              );
-            },
+            onClick: (_) =>
+              _(_, {
+                color: _,
+                onChange: _,
+              }),
             children: [
               _,
               (0, _.jsx)(_._, {
@@ -8813,6 +8796,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = () => _.closeModal && _.closeModal(),
@@ -11438,6 +11422,7 @@
       );
       function _(_) {
         const { editModel: _, refOnInsertImage: _ } = _,
+          _ = (0, _._)(),
           [_, _] = (function () {
             const _ = "partnerEventsRichEditorOptIn",
               _ = "1",
@@ -11524,7 +11509,7 @@
                     "#EventEditor_Description_PlaceHolder",
                   ),
                   ref: _,
-                  emoticonStore: _._,
+                  emoticonStore: _,
                   bSupportHTMLImport: !0,
                   showFormatHelp: "PartnerEvents",
                   limitBBCode: _,
@@ -11986,12 +11971,14 @@
       function _(_) {
         var _;
         const { editModel: _, mode: _ } = _,
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetEventType(),
             __webpack_require__.GetEventModel().clanSteamID,
             __webpack_require__.GetEventModel().GID,
+            __webpack_require__.GetEventModel().jsondata
+              .sale_creator_home_filter_listid,
           ]),
-          { data: _ } = (0, _._)((0, _._)(_.GetAccountID())),
+          _ = (0, _._)(_.GetAccountID(), _),
           {
             bLoading: _,
             strExternalSaleEventType: _,
@@ -12200,6 +12187,7 @@
             _.sale_browsemore_bgcolor,
             _.sale_browse_more_button,
           ]),
+          { openColorPicker: _ } = (0, _._)(),
           _ = (_, _) => {
             (_.GetEventModel().jsondata[_] = _), _.SetDirty(_._.jsondata_sales);
           };
@@ -12230,16 +12218,10 @@
                   }),
                   (0, _.jsx)(_._, {
                     onClick: (_) => {
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          onChange: (_) => _(_, "sale_browsemore_color"),
-                          color: _,
-                        }),
-                        _,
-                        {
-                          bDisablePopTop: !0,
-                        },
-                      );
+                      _(_, {
+                        color: _,
+                        onChange: (_) => _(_, "sale_browsemore_color"),
+                      });
                     },
                     className: _.EventEditorTextTitle,
                     style: {
@@ -12250,20 +12232,12 @@
                   }),
                   (0, _.jsx)(_._, {
                     onClick: (_) => {
-                      const {
-                        sale_browsemore_color: _,
-                        sale_browsemore_bgcolor: _,
-                      } = _.GetEventModel().jsondata;
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          onChange: (_) => _(_, "sale_browsemore_bgcolor"),
-                          color: _,
-                        }),
-                        _,
-                        {
-                          bDisablePopTop: !0,
-                        },
-                      );
+                      const { sale_browsemore_bgcolor: _ } =
+                        _.GetEventModel().jsondata;
+                      _(_, {
+                        color: _,
+                        onChange: (_) => _(_, "sale_browsemore_bgcolor"),
+                      });
                     },
                     className: _.EventEditorTextTitle,
                     style: {
@@ -13011,28 +12985,19 @@
             this.props.editModel.SetDirty(_._.jsondata_sales);
         }
         OnOpenGradientInnerColor(_) {
-          (0, _._)(
-            (0, _.jsx)(_._, {
-              onChange: (_) =>
-                this.OnSaleColorChange(_, "broadcast_gradient_inner_color"),
-              color:
-                this.props.editModel.GetEventModel().jsondata
-                  .broadcast_gradient_inner_color,
-            }),
-            _,
-            {
-              bDisablePopTop: !0,
-            },
-          );
+          this.OpenColorPopover(_, "broadcast_gradient_inner_color");
         }
         OnOpenGradientOuterColor(_) {
-          (0, _._)(
+          this.OpenColorPopover(_, "broadcast_gradient_outer_color");
+        }
+        OpenColorPopover(_, _) {
+          const _ = this.props.editModel.GetEventModel().jsondata[_];
+          let _ = null;
+          _ = (0, _._)(
             (0, _.jsx)(_._, {
-              onChange: (_) =>
-                this.OnSaleColorChange(_, "broadcast_gradient_outer_color"),
-              color:
-                this.props.editModel.GetEventModel().jsondata
-                  .broadcast_gradient_outer_color,
+              color: _,
+              onChange: (_) => this.OnSaleColorChange(_, _),
+              onRequestClose: () => (null == _ ? void 0 : _.Hide()),
             }),
             _,
             {
@@ -16378,7 +16343,14 @@
                         (0, _._)(_.rtime_stop_firing),
                       ),
                     }),
-                  "queued" != _.state &&
+                  "window_closed" == _.state &&
+                    (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#EventEmail_Stats_WindowClosed",
+                        (0, _._)(_.rtime_stop_firing),
+                      ),
+                    }),
+                  Boolean(_.rtime_last_update_time) &&
                     (0, _.jsxs)(_.Fragment, {
                       children: [
                         (0, _.jsx)("div", {

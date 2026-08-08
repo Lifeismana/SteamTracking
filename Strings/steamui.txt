@@ -14925,6 +14925,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
+Aug  7 2026 04:02:16
 August
 Aura
 Australia/Adelaide
@@ -23960,7 +23961,6 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 23 2026 05:03:45
 July
 JumpList
 Jumplist
@@ -28268,6 +28268,7 @@ PowerA Xbox Series X Controller
 PowerOff
 PowerState
 Powered
+Powersave
 Pq?A6
 Pragma
 Preallocating
@@ -50613,6 +50614,7 @@ nv->name->len > 0
 nxBT6
 nytimes.com
 o&1m&
+o&hM-
 o-\vBs
 o2i_ECPublicKey
 o2i_SCT
@@ -52128,6 +52130,9 @@ postid
 posttime
 power-state
 powered
+powersaveGamescopeFrameratelimit
+powersaveGamescopeResolution
+powersaveSteamOSManagerCustomProfile
 powf
 ppBasis
 pp\rk

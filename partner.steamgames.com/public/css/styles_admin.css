@@ -1389,6 +1389,11 @@ a.applink {
 	color: #999999;
 }
 
+.popup_menu .popup_menu_item.app_Hardware,
+.app_Hardware {
+	color: #1A9FFF;
+}
+
 .popup_menu .popup_menu_item.app_Hidden,
 .app_Hidden, a.app_Hidden {
 	color: #999999;

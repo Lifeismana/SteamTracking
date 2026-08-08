@@ -468,6 +468,7 @@ __xstat
 __xstat64
 _edata
 _end
+_exit
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -601,6 +602,7 @@ correlationMasks
 covariant return thunk to
 cullMode
 customBorderColor
+customResolve
 d6\f6
 data
 data error
@@ -730,6 +732,7 @@ get_nprocs
 getenv
 getpgrp
 getpid
+getppid
 gettext
 global constructors keyed to
 global destructors keyed to
@@ -883,6 +886,7 @@ pipelineFragmentShadingRate
 pipelineLayouts
 polygonMode
 posix_fadvise
+prctl
 preserveAttachments
 primitiveFragmentShadingRate
 primitiveFragmentShadingRateMeshShader

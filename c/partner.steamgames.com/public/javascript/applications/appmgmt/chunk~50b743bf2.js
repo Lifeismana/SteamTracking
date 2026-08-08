@@ -24,6 +24,7 @@
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
+        "Variant-bare": "_3vxqpebgJYIYNTcigTXx21",
         ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
         Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
         Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
@@ -1074,10 +1075,20 @@
             document.removeChild(_);
           } catch (_) {}
         }
-        static WriteCSVToFile(_, _, _) {
-          const _ = _().unparse(_, {
-              header: !0,
-            }),
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
             _ = 1 == _ ? ["\ufeff" + _] : [_];
           _.WriteFile(
             new Blob(_, {

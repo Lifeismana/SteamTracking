@@ -2069,6 +2069,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2078,22 +2079,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(!1),
-          [_] = (0, _.useState)(() =>
-            (function () {
-              const _ = (0, _._)(
-                "partnerbrowse_webapi_token",
-                "application_config",
-              );
-              (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
-              const _ = new _._(_._.WEBAPI_BASE_URL, _);
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                  _,
-                );
-              return _;
-            })(),
-          ),
+          [_] = (0, _.useState)(() => _()),
           _ = (0, _.useMemo)(
             () => ({
               country: _._.COUNTRY,
@@ -2122,6 +2108,36 @@
                 children: _.children,
               })
             : null
+        );
+      }
+      function _(_) {
+        const [_] = (0, _.useState)(() => _()),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+              bIncludeUnpublished: _.bIncludeUnpublished,
+            }),
+            [_.bIncludeUnpublished],
+          );
+        return (0, _.createElement)(_._, {
+          context: _,
+          serviceTransportOverride: _.GetServiceTransport(),
+          children: _.children,
+        });
+      }
+      function _() {
+        const _ = (0, _._)("partnerbrowse_webapi_token", "application_config");
+        (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+        const _ = new _._(_._.WEBAPI_BASE_URL, _);
+        return (
+          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
+              _,
+            ),
+          _
         );
       }
     },
@@ -2166,10 +2182,20 @@
             document.removeChild(_);
           } catch (_) {}
         }
-        static WriteCSVToFile(_, _, _) {
-          const _ = _().unparse(_, {
-              header: !0,
-            }),
+        static WriteCSVToFile(_, _, _, _) {
+          const _ = _
+              ? _().unparse(
+                  {
+                    fields: _,
+                    data: _,
+                  },
+                  {
+                    header: !0,
+                  },
+                )
+              : _().unparse(_, {
+                  header: !0,
+                }),
             _ = 1 == _ ? ["\ufeff" + _] : [_];
           _.WriteFile(
             new Blob(_, {

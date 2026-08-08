@@ -50,7 +50,7 @@
     },
     11577: (e, a, t) => {
       "use strict";
-      t.d(a, { m: () => o });
+      t.d(a, { T: () => m, m: () => o });
       var r = t(90626),
         i = t(96059),
         s = t(16021),
@@ -59,23 +59,8 @@
         l = t(63664);
       function o(e) {
         const [a, t] = (0, r.useState)(!1),
-          [o] = (0, r.useState)(() =>
-            (function () {
-              const e = (0, c.Tc)(
-                "partnerbrowse_webapi_token",
-                "application_config",
-              );
-              (0, n.wT)(Boolean(e), "require partnerbrowse_webapi_token");
-              const a = new i.D(c.TS.WEBAPI_BASE_URL, e);
-              ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
-                console.log(
-                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                  e,
-                );
-              return a;
-            })(),
-          ),
-          m = (0, r.useMemo)(
+          [i] = (0, r.useState)(() => d()),
+          n = (0, r.useMemo)(
             () => ({
               country: c.TS.COUNTRY,
               language: c.TS.LANGUAGE,
@@ -92,23 +77,53 @@
                   e.GetServiceTransport(),
                   c.iA.is_partner_member,
                 );
-              })(o)
+              })(i)
             ),
-            [o],
+            [i],
           ),
           a
             ? (0, r.createElement)(l.V3, {
-                context: m,
-                serviceTransportOverride: o.GetServiceTransport(),
+                context: n,
+                serviceTransportOverride: i.GetServiceTransport(),
                 children: e.children,
               })
             : null
         );
       }
+      function m(e) {
+        const [a] = (0, r.useState)(() => d()),
+          t = (0, r.useMemo)(
+            () => ({
+              country: c.TS.COUNTRY,
+              language: c.TS.LANGUAGE,
+              bUsePartnerAPI: !0,
+              bIncludeUnpublished: e.bIncludeUnpublished,
+            }),
+            [e.bIncludeUnpublished],
+          );
+        return (0, r.createElement)(l.V3, {
+          context: t,
+          serviceTransportOverride: a.GetServiceTransport(),
+          children: e.children,
+        });
+      }
+      function d() {
+        const e = (0, c.Tc)("partnerbrowse_webapi_token", "application_config");
+        (0, n.wT)(Boolean(e), "require partnerbrowse_webapi_token");
+        const a = new i.D(c.TS.WEBAPI_BASE_URL, e);
+        return (
+          ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Constructing partner store-browse WebAPI interface with access token",
+              e,
+            ),
+          a
+        );
+      }
     },
     42103: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { HardwarePerformance: () => y, default: () => v });
+      t.r(a), t.d(a, { HardwarePerformance: () => P, default: () => v });
       var r = t(7850),
         i = t(90626),
         s = t(7878),
@@ -123,36 +138,36 @@
         p = t(58661),
         h = t(90865),
         u = t(6083),
-        x = t(39832),
-        b = t(11577),
+        b = t(39832),
+        x = t(11577),
         g = t(52038),
-        j = t(26408),
-        k = t(78686),
-        S = t(84811);
+        S = t(26408),
+        j = t(78686),
+        k = t(84811);
       function v(e) {
         const { dataprops: a, appId: t } = e;
         return a?.framerate || a?.feedback
-          ? (0, r.jsx)(b.m, {
-              children: (0, r.jsx)(S.tH, {
-                children: (0, r.jsx)(y, { appId: t, dataprops: a }),
+          ? (0, r.jsx)(x.m, {
+              children: (0, r.jsx)(k.tH, {
+                children: (0, r.jsx)(P, { appId: t, dataprops: a }),
               }),
             })
           : (0, r.jsx)(r.Fragment, {});
       }
-      function y(e) {
+      function P(e) {
         const { dataprops: a, appName: t } = e;
         return a?.framerate || a?.feedback
           ? (0, r.jsxs)("div", {
               className: s.PerformanceContainer,
               children: [
                 Boolean(a?.framerate) &&
-                  (0, r.jsx)(P, {
+                  (0, r.jsx)(F, {
                     appId: Number(e.appId),
                     appName: t,
                     frameRateData: a.framerate,
                   }),
                 Boolean(a?.feedback) &&
-                  (0, r.jsx)(F, {
+                  (0, r.jsx)(y, {
                     appId: Number(e.appId),
                     feedbackData: a.feedback,
                   }),
@@ -160,7 +175,7 @@
             })
           : (0, r.jsx)(r.Fragment, {});
       }
-      function F(e) {
+      function y(e) {
         const { feedbackData: a } = e;
         if (!a || !a.daily?.length)
           return (0, r.jsx)("div", {
@@ -170,12 +185,12 @@
               children: [
                 (0, r.jsx)("div", {
                   className: s.PerformanceSectionTitle,
-                  children: k.Z.Localize(
+                  children: j.Z.Localize(
                     "#GamePerformanceStats_CustomerFeedback",
                   ),
                 }),
                 (0, r.jsx)("div", {
-                  children: k.Z.Localize("#GamePerformanceStats_NoData"),
+                  children: j.Z.Localize("#GamePerformanceStats_NoData"),
                 }),
               ],
             }),
@@ -184,27 +199,27 @@
             {
               fill: "#ffc82c",
               key: "disagree_performance",
-              name: k.Z.Localize("#GamePerformanceStats_Performance"),
+              name: j.Z.Localize("#GamePerformanceStats_Performance"),
             },
             {
               fill: "#59bf40",
               key: "disagree_legibility",
-              name: k.Z.Localize("#GamePerformanceStats_Legibility"),
+              name: j.Z.Localize("#GamePerformanceStats_Legibility"),
             },
             {
               fill: "#1a9fff",
               key: "disagree_stability",
-              name: k.Z.Localize("#GamePerformanceStats_Stability"),
+              name: j.Z.Localize("#GamePerformanceStats_Stability"),
             },
             {
               fill: "#ad66bb",
               key: "disagree_input",
-              name: k.Z.Localize("#GamePerformanceStats_Input"),
+              name: j.Z.Localize("#GamePerformanceStats_Input"),
             },
             {
               fill: "#dcdedf",
               key: "disagree_other",
-              name: k.Z.Localize("#GamePerformanceStats_Other"),
+              name: j.Z.Localize("#GamePerformanceStats_Other"),
             },
           ],
           i = Number(a.total?.agree) + Number(a.total?.disagree),
@@ -218,13 +233,13 @@
               children: [
                 (0, r.jsx)("div", {
                   className: s.PerformanceSectionTitle,
-                  children: k.Z.Localize(
+                  children: j.Z.Localize(
                     "#GamePerformanceStats_CustomerFeedback",
                   ),
                 }),
-                (0, r.jsx)(L, { nAgreePercent: _ }),
+                (0, r.jsx)(T, { nAgreePercent: _ }),
                 (0, r.jsx)("div", {
-                  children: k.Z.Localize(
+                  children: j.Z.Localize(
                     "#GamePerformanceStats_NumberOfReports",
                     (0, u.D)(i),
                     a.daily.length,
@@ -232,15 +247,15 @@
                 }),
                 (0, r.jsx)("div", {
                   className: s.DescriptionSection,
-                  children: k.Z.LocalizeReact(
+                  children: j.Z.LocalizeReact(
                     "#GamePerformanceStats_WhyDisagree",
                     (0, r.jsx)("span", {
-                      children: k.Z.Localize(
+                      children: j.Z.Localize(
                         "#GamePerformanceStats_DidNotAgree",
                       ),
                     }),
                     (0, r.jsx)("span", {
-                      children: k.Z.Localize(
+                      children: j.Z.Localize(
                         "#SteamDeckVerified_Category_Verified",
                       ),
                     }),
@@ -272,7 +287,7 @@
                     (0, r.jsx)(
                       d.y,
                       {
-                        shape: (0, r.jsx)(T, { fill: e.fill }),
+                        shape: (0, r.jsx)(L, { fill: e.fill }),
                         fill: e.fill,
                         dataKey: e.key,
                         stackId: "day",
@@ -288,7 +303,7 @@
           ],
         });
       }
-      function P(e) {
+      function F(e) {
         const { appId: a, appName: t, frameRateData: c } = e,
           d = i.useMemo(() => {
             let e = [];
@@ -315,27 +330,27 @@
               children: [
                 (0, r.jsx)("div", {
                   className: s.PerformanceSectionTitle,
-                  children: k.Z.Localize(
+                  children: j.Z.Localize(
                     "#GamePerformanceStats_AverageFrameRate_Title",
                   ),
                 }),
                 (0, r.jsx)("div", {
-                  children: k.Z.Localize("#GamePerformanceStats_NoData"),
+                  children: j.Z.Localize("#GamePerformanceStats_NoData"),
                 }),
               ],
             }),
           });
         const f = c.frame_rate_clusters[0],
           u = Number(f.mean_frame_rate).toFixed(0),
-          x = (0, r.jsx)("span", {
+          b = (0, r.jsx)("span", {
             className: s.FrameRateValue,
-            children: k.Z.Localize("#GamePerformanceStats_FPS", u),
+            children: j.Z.Localize("#GamePerformanceStats_FPS", u),
           }),
-          b = t
-            ? k.Z.LocalizeReact("#GamePerformanceStats_AverageFrameRate", t, x)
-            : k.Z.LocalizeReact(
+          x = t
+            ? j.Z.LocalizeReact("#GamePerformanceStats_AverageFrameRate", t, b)
+            : j.Z.LocalizeReact(
                 "#GamePerformanceStats_AverageFrameRate_ThisGame",
-                x,
+                b,
               );
         return (0, r.jsxs)("div", {
           className: s.FrameRateContainer,
@@ -346,26 +361,26 @@
                 (0, r.jsxs)("div", {
                   className: s.PerformanceSectionTitle,
                   children: [
-                    k.Z.Localize(
+                    j.Z.Localize(
                       "#GamePerformanceStats_AverageFrameRate_Title",
                     ),
                     (0, r.jsx)("span", {
                       className: s.Beta,
-                      children: k.Z.Localize("#NewToolTitleSuffix_Beta"),
+                      children: j.Z.Localize("#NewToolTitleSuffix_Beta"),
                     }),
                   ],
                 }),
-                (0, r.jsx)("div", { children: b }),
+                (0, r.jsx)("div", { children: x }),
                 (0, r.jsx)("div", {
                   className: s.DescriptionSection,
-                  children: k.Z.Localize(
+                  children: j.Z.Localize(
                     "#GamePerformanceStats_FrameRateDataBasedOn",
                     f.report_days,
                   ),
                 }),
                 (0, r.jsx)("div", {
                   className: s.DescriptionSection,
-                  children: k.Z.Localize(
+                  children: j.Z.Localize(
                     "#GamePerformanceStats_FrameRateMoreInfo",
                   ),
                 }),
@@ -401,29 +416,29 @@
         });
       }
       function N(e) {
-        return (0, x._l)(e);
+        return (0, b._l)(e);
       }
-      function L(e) {
+      function T(e) {
         const { nAgreePercent: a } = e;
         return (0, r.jsxs)("div", {
           className: s.FeedbackAgree,
           children: [
-            k.Z.LocalizeReact(
+            j.Z.LocalizeReact(
               "#GamePerformanceStats_Feedback_Agree",
               (0, r.jsx)("span", {
                 className: (0, g.A)(s.Percentage, s.DescriptionEmphasis),
-                children: k.Z.LocalizeReact(
+                children: j.Z.LocalizeReact(
                   "#GamePerformanceStats_Feedback_AgreePercentage",
                   a.toFixed(0),
                 ),
               }),
               (0, r.jsx)("span", {
-                children: k.Z.Localize("#SteamDeckVerified_Category_Verified"),
+                children: j.Z.Localize("#SteamDeckVerified_Category_Verified"),
               }),
             ),
-            (0, r.jsx)(j.o, {
+            (0, r.jsx)(S.o, {
               tooltip: (0, r.jsx)("div", {
-                children: k.Z.Localize(
+                children: j.Z.Localize(
                   "#GamePerformanceStats_Feedback_PercentageTooltip",
                 ),
               }),
@@ -435,27 +450,27 @@
         const { feedback: a } = e;
         let t = new Array(
           {
-            display: k.Z.Localize("#GamePerformanceStats_Input"),
+            display: j.Z.Localize("#GamePerformanceStats_Input"),
             value: a.total.disagree_input,
             class: s.FeedbackInput,
           },
           {
-            display: k.Z.Localize("#GamePerformanceStats_Legibility"),
+            display: j.Z.Localize("#GamePerformanceStats_Legibility"),
             value: a.total.disagree_legibility,
             class: s.FeedbackLegibility,
           },
           {
-            display: k.Z.Localize("#GamePerformanceStats_Performance"),
+            display: j.Z.Localize("#GamePerformanceStats_Performance"),
             value: a.total.disagree_performance,
             class: s.FeedbackPerformance,
           },
           {
-            display: k.Z.Localize("#GamePerformanceStats_Stability"),
+            display: j.Z.Localize("#GamePerformanceStats_Stability"),
             value: a.total.disagree_stability,
             class: s.FeedbackStability,
           },
           {
-            display: k.Z.Localize("#GamePerformanceStats_Other"),
+            display: j.Z.Localize("#GamePerformanceStats_Other"),
             value: a.total.disagree_other,
             class: s.FeedbackOther,
           },
@@ -469,11 +484,11 @@
             children: [
               (0, r.jsx)("div", {
                 className: s.FeedbackTableHeader,
-                children: k.Z.Localize("#GamePerformance_Reason"),
+                children: j.Z.Localize("#GamePerformance_Reason"),
               }),
               (0, r.jsx)("div", {
                 className: s.FeedbackTableHeader,
-                children: k.Z.Localize("#GamePerformance_NumResponses"),
+                children: j.Z.Localize("#GamePerformance_NumResponses"),
               }),
               t.map((e, a) =>
                 (0, r.jsxs)(
@@ -494,7 +509,7 @@
           })
         );
       }
-      const T = (e) => {
+      const L = (e) => {
         const { fill: a, x: t, y: i, width: s, height: n } = e;
         return (0, r.jsx)("rect", { x: t, y: i, width: s, height: n, fill: a });
       };
