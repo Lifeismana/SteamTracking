@@ -37241,6 +37241,11 @@ Error generating stack: ` +
                     _: 2,
                     _: SteamAward_Localization,
                   },
+                  award_year: {
+                    _: 3,
+                    _: ReaderProto.readInt32,
+                    _: WriterProto.writeInt32,
+                  },
                 },
               }),
               _.sm_m
@@ -41300,6 +41305,12 @@ Error generating stack: ` +
                     _: ReaderProto.readBool,
                     _: WriterProto.writeBool,
                   },
+                  include_best_purchase_option: {
+                    _: 19,
+                    _: !0,
+                    _: ReaderProto.readBool,
+                    _: WriterProto.writeBool,
+                  },
                 },
               }),
               _.sm_m
@@ -44658,10 +44669,17 @@ Error generating stack: ` +
         return _;
       },
       HasKey(_) {
-        return CurrentLocalizationSettings().languages.some((_) => {
-          let _ = _.get(_.strLanguage);
-          return _ ? _.has(_) : !1;
-        });
+        let _ = CurrentLocalizationSettings().languages,
+          _ = [
+            ..._.map((_) => _.strLanguage),
+            GetFallbackForLanguage(_[0].strLanguage),
+          ];
+        for (let _ of _) {
+          if (!_) continue;
+          let _ = _.get(_);
+          if (_ && _.has(_)) return !0;
+        }
+        return !1;
       },
     };
   }
@@ -50259,6 +50277,7 @@ Error generating stack: ` +
       bFocusableByDefault: !1,
     });
   init_src$1(), init_config_client(), init_rendercontext();
+  var TopFrameNavigationContext = import_react$3.createContext(!1);
   function useOnClick(_, _, _) {
     return (0, import_react$3.useMemo)(() => _, [_, _, _]);
   }
@@ -50281,7 +50300,8 @@ Error generating stack: ` +
         _ = _,
         _ = useStoreNavEventContext(),
         _ = useRenderContext().manifest,
-        _ = useInGamepadUI();
+        _ = useInGamepadUI(),
+        _ = import_react$3.useContext(TopFrameNavigationContext);
       _ &&
         (_ = GetStoreNavLink(
           typeof _ == `boolean`
@@ -50294,7 +50314,7 @@ Error generating stack: ` +
         ));
       let { bIsExternal: _, targetRoute: _ } = import_react$3.useMemo(() => {
         let _ = _;
-        if (_ || _)
+        if (_ || _ || _)
           return {
             bIsExternal: !0,
             targetRoute: _,
@@ -50319,11 +50339,12 @@ Error generating stack: ` +
               bIsExternal: !0,
               targetRoute: _,
             };
-      }, [_, _, _, _?.routes]);
-      _ &&
-        (Config.IN_CLIENT
-          ? (_ = CreateSteamClientURL(`openurl/${_}`))
-          : ((_.target ??= `_blank`), (_.rel ??= `noreferrer noopener`)));
+      }, [_, _, _, _?.routes, _]);
+      _ && !_ && (_.target ??= `_top`),
+        _ &&
+          (Config.IN_CLIENT
+            ? (_ = CreateSteamClientURL(`openurl/${_}`))
+            : ((_.target ??= `_blank`), (_.rel ??= `noreferrer noopener`)));
       let _ = useOnClick(_, _, _);
       return (0, import_jsx_runtime$1.jsx)(_ && _ ? FocusableAnchor : `a`, {
         ref: _,
@@ -71584,7 +71605,7 @@ Error generating stack: ` +
     beta_tag$6,
     global_header_spanish_default,
     init_global_header_spanish = __esmMin(() => {
-      (language$6 = `español`),
+      (language$6 = `spanish`),
         (Aria_Steam_Home_Link$6 = `Enlace a la página principal de Steam`),
         (global_menu_install_steam$6 = `Instalar Steam`),
         (global_menu_login$6 = `iniciar sesión`),

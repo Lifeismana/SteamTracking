@@ -2300,23 +2300,25 @@
             onDismiss: i,
             className: r,
             modalClassName: c,
-            children: d,
-            ...m
+            bGamepadUIScrollWithin: d,
+            children: m,
+            ...u
           } = e,
-          { headerId: u, context: p } = l({ labelledBy: e["aria-labelledby"] });
+          { headerId: p, context: h } = l({ labelledBy: e["aria-labelledby"] });
         return (0, s.jsx)(n.t6.Provider, {
-          value: p,
+          value: h,
           children: (0, s.jsx)(a.E, {
             active: t,
             children: (0, s.jsx)(o.x_, {
               onEscKeypress: i,
               className: c,
+              bGamepadUIScrollWithin: d,
               children: (0, s.jsx)(n.UC, {
                 role: "dialog",
-                "aria-labelledby": u,
+                "aria-labelledby": p,
                 className: r,
-                ...m,
-                children: d,
+                ...u,
+                children: m,
               }),
             }),
           }),

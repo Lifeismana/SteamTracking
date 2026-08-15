@@ -499,6 +499,7 @@ message ReportedContentCoordinates {
 	optional uint32 chat_message_ordinal = 9;
 	optional uint64 chat_group_id = 10;
 	optional uint64 chat_room_id = 11;
+	optional uint32 receiver_account_id = 12;
 }
 
 service ContentModeration {

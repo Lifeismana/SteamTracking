@@ -126,6 +126,12 @@
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        CodeBlock: "OkZ2olcxw9WPWea9VGVr6",
+        ClearFloat: "RRZZP47ujIKbmOpZ61w_T",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -877,6 +883,7 @@
             clickable: _ = !0,
             disabled: _,
             className: _,
+            status: _,
             ..._
           } = _,
           _ = "underline" === _ ? "none" : _;
@@ -884,6 +891,7 @@
           {
             ..._,
             radius: _,
+            "data-status": _,
             className: _()(
               _.ControlBox,
               _ && !_ && _.Focusable,
@@ -1559,6 +1567,7 @@
               variant: _,
               radius: _,
               size: _,
+              status: _,
               children: _,
               value: _,
               onValueChange: _,
@@ -1601,6 +1610,7 @@
             variant: _,
             radius: _,
             size: _,
+            status: _,
             className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
             tabIndex: 0,
             onKeyDown: (_) => {
@@ -1830,6 +1840,7 @@
               variant: _,
               size: _,
               radius: _,
+              status: _,
               rgOptions: _,
               multiselect: _,
               onClear: _,
@@ -1866,6 +1877,7 @@
               variant: _,
               size: _,
               radius: _,
+              status: _,
               hasValue: _,
               tabIndex: 0,
               cursor: "pointer",
@@ -2053,6 +2065,7 @@
             ref: _,
             disabled: _,
             gamepadFocusable: _ = !0,
+            status: _,
             ..._
           } = _,
           _ = (0, _._)(),
@@ -2071,6 +2084,7 @@
             variant: (0, _._)("TextInput", _),
             size: _,
             radius: _,
+            status: _,
             beforeContent: _,
             afterContent: _,
             ref: _,
@@ -2520,7 +2534,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = {
         _: {
           Constructor: function (_) {
@@ -2549,6 +2565,7 @@
         code: {
           Constructor: function (_) {
             return (0, _.jsx)("pre", {
+              className: _().CodeBlock,
               children: (0, _.jsx)("code", {
                 children: _.children,
               }),
@@ -2579,31 +2596,80 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
-        let _ =
+        const _ =
           null !== (_ = (0, _._)(_.args)) && void 0 !== _
             ? _
             : (0, _._)(_.args, "href");
-        return (
-          __webpack_require__.startsWith("steamcommunity.com/") &&
-            (_ = "https://" + _),
-          _ && __webpack_require__.match(/^https?:\/\//)
-            ? ((0, _._)(_) && (_ = (0, _._)(_)),
-              (0, _.jsx)(_._, {
-                target: "_blank",
-                href: _,
-                underline: "auto",
-                contrast: "title",
-                children: _.children,
-              }))
-            : _.children
-        );
+        if (_)
+          return (function (_, _) {
+            if (!_) return;
+            const _ = _.startsWith("steamcommunity.com/") ? "https://" + _ : _;
+            return __webpack_require__.match(/^https?:\/\//)
+              ? {
+                  strURL: _,
+                  bFromBody: !1,
+                  bHasCustomText: !(null == _
+                    ? void 0
+                    : _.match(/^https?:\/\//i)),
+                }
+              : void 0;
+          })(
+            _,
+            (function (_) {
+              const _ = _.Children.toArray(_)[0];
+              return "string" == typeof _ ? _ : void 0;
+            })(_.children),
+          );
+        if ("string" == typeof _.children) {
+          const _ = _.children.trim(),
+            _ = _._.exec(_);
+          if ((null == _ ? void 0 : _[0]) == _)
+            return {
+              strURL: _,
+              bFromBody: !0,
+              bHasCustomText: !1,
+            };
+        }
+      }
+      function _(_) {
+        const _ = _(_);
+        if (!_) return _.children;
+        if (_.bFromBody)
+          return (0, _.jsx)(_, {
+            strURL: _.strURL,
+          });
+        const _ = (0, _._)(_.strURL) ? (0, _._)(_.strURL) : _.strURL;
+        return (0, _.jsx)(_._, {
+          target: "_blank",
+          href: _,
+          underline: "auto",
+          contrast: "title",
+          children: _.children,
+        });
+      }
+      function _(_) {
+        const _ = _.strURL.match(/^[a-z][a-z0-9+.-]*:/i)
+            ? _.strURL
+            : "http://" + _.strURL,
+          _ = (0, _._)(_) ? (0, _._)(_) : _;
+        return (0, _.jsx)(_._, {
+          target: "_blank",
+          href: _,
+          underline: "auto",
+          contrast: "title",
+          children: _.strURL,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2620,6 +2686,7 @@
             });
           },
           skipInternalNewline: !0,
+          skipFollowingNewline: !0,
         },
         olist: {
           Constructor: function (_) {
@@ -2628,6 +2695,7 @@
             });
           },
           skipInternalNewline: !0,
+          skipFollowingNewline: !0,
         },
         "*": {
           Constructor: function (_) {

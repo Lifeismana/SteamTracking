@@ -183,13 +183,15 @@
                 clickable: c = !0,
                 disabled: u,
                 className: p,
-                ...f
+                status: f,
+                ...h
               } = e,
-              h = "underline" === t ? "none" : o;
+              x = "underline" === t ? "none" : o;
             return (0, d.mz)(
               {
-                ...f,
-                radius: h,
+                ...h,
+                radius: x,
+                "data-status": f,
                 className: i()(
                   s.ControlBox,
                   r && !u && s.Focusable,
@@ -858,45 +860,47 @@
               variant: l,
               size: a,
               radius: d,
-              rgOptions: u,
-              multiselect: p,
-              onClear: f,
-              focusedValue: h,
-              onFocusChange: x,
-              onSelectionChange: g,
-              clearable: m,
-              focusedIndex: v,
-              onItemSelectionChange: b,
-              onFocusedIndexChange: I,
-              refPopover: w,
-              placeholder: j,
-              maxSelected: y,
-              ...L
+              status: u,
+              rgOptions: p,
+              multiselect: f,
+              onClear: h,
+              focusedValue: x,
+              onFocusChange: g,
+              onSelectionChange: m,
+              clearable: v,
+              focusedIndex: b,
+              onItemSelectionChange: I,
+              onFocusedIndexChange: w,
+              refPopover: j,
+              placeholder: y,
+              maxSelected: L,
+              ...R
             } = U("<SelectTrigger>"),
-            R = {
+            O = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => i(!r),
               children: t,
             },
-            O = p ? Array.isArray(s) && s.length > 0 : !!s,
-            k =
-              O && m
-                ? (0, o.jsx)(_, { onClick: f, cursor: "pointer", hitSlop: !0 })
+            k = f ? Array.isArray(s) && s.length > 0 : !!s,
+            V =
+              k && v
+                ? (0, o.jsx)(_, { onClick: h, cursor: "pointer", hitSlop: !0 })
                 : (0, o.jsx)(P, {}),
-            V = (0, z.f)("Select", l),
-            F = (0, o.jsx)(C.j, {
-              afterContent: k,
-              variant: V,
+            F = (0, z.f)("Select", l),
+            T = (0, o.jsx)(C.j, {
+              afterContent: V,
+              variant: F,
               size: a,
               radius: d,
-              hasValue: O,
+              status: u,
+              hasValue: k,
               tabIndex: 0,
               cursor: "pointer",
-              ...L,
+              ...R,
             }),
-            T = (0, c.Q)(n, F, R, void 0);
-          return (0, o.jsx)(S, { children: T });
+            H = (0, c.Q)(n, T, O, void 0);
+          return (0, o.jsx)(S, { children: H });
         },
         Value: function (e) {
           return (0, o.jsx)(L.EY, {

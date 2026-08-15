@@ -24,6 +24,19 @@ function SteamClientShowPopOut()
 	$J( '#PopOutBtn' ).show();
 }
 
+function BMediaSourceExtensionsSupported()
+{
+	var bSupported = false;
+	try
+	{
+		bSupported = MediaSource.isTypeSupported( 'video/mp4;codecs="avc1.4d4032,mp4a.40.2"' );
+	}
+	catch (e)
+	{
+	}
+
+	return bSupported;
+}
 
 var CBroadcastWatch = function( strBaseURL, broadcastAccountID, steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS, eWatchLocation )
 {

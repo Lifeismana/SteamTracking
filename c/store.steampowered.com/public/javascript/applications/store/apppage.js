@@ -151,6 +151,46 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
+        RecommendationReasonsDisplay: "_8A-vhpEBdS-qVF5Jl9jc7",
+        Header: "_37F_eUYhbVWVvWWgkfRkqf",
+        ReviewScore: "DpGN2-UG7sEXIZDAb2xtu",
+        Positive: "_1kiOvqf3wN3kBFxMVI8w-3",
+        Negative: "_1UTMsJhG80MMvkig6Pw7UN",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        AppList: "_12s81WYtM0B0CmDPB6BMY0",
+        AppCapsule: "_1xFqZ9k4L6hexIjqUH4NiW",
+        AppCapsuleImage: "_1OeHsRdZA7wM7FLqDNiq7Q",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        AvatarList: "fIVYEi9n1QY4vaQuxZYW0",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        Reason: "_2m2v9tWbf72NndX7vCQd3D",
+        TopLine: "_1-A6rmFS2woZVY0AjEpaRx",
+        Icon: "_2DPsFVf6FeqLONYXI_xame",
+        Positive: "_2JQ3YzNKEfGoIo7Y4JIPZo",
+        Negative: "_3vjAexY4vrU7H4bRPWQS1P",
+        Additional: "A9r5gdP2l607_aZQG4U0f",
+        Divider: "QsaD3B8iBvo8FI0s8Heyb",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TagList: "_3jV1ymbnCcg8o3qq78ndN7",
+        Tag: "gctfUSqAf4-wM1_s7LW7C",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
         Summary: "_3Prm5m5vhL6ZyDzq9BAi-Q",
         FeatureList: "_3Vfkk-MdImFuKEOrcb0-iS",
         CategoryIcon: "_3q4P9LQHRxDb5N6xxg2cno",
@@ -953,6 +993,65 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _?.public_data?.profile_url
+          ? `${_._.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
+          : (function (_) {
+              return _ ? `${_._.COMMUNITY_BASE_URL}profiles/${_}` : "";
+            })(_?.public_data?.steamid || _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1;
+      function _(_) {
+        return ["PlayerLinkDetails", _];
+      }
+      function _(_, _) {
+        const _ =
+          "number" == typeof _
+            ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
+            : _;
+        return {
+          queryKey: _(_),
+          queryFn: async () => {
+            if (_) {
+              return (function (_) {
+                return (
+                  delete _?.private_data?.account_name,
+                  delete _?.public_data?.account_flags,
+                  delete _?.public_data?.ban_expires_time,
+                  delete _?.public_data?.privacy_state,
+                  _?.public_data?.profile_state !== _ && delete _?.private_data,
+                  _
+                );
+              })(await _.load(_));
+            }
+            return null;
+          },
+          enabled: !!_,
+        };
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_);
+        return (0, _._)(_(_, _));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
@@ -1004,6 +1103,104 @@
           _.push(_);
         }
         return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return ["AppRelevanceStore", "FriendsRecommended", _];
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: _(_),
+          queryFn: () =>
+            (async function (_, _) {
+              const _ = _._.Init(_._);
+              __webpack_require__.Body().set_appid(_);
+              const _ = await _._.GetFriendsRecommendedApp(_, _),
+                _ = _.GetEResult();
+              if (_ == _._) return _.Body().toObject();
+              throw `Error ${_} failed to call GetFriendsRecommendedApp ${_}`;
+            })(_, _),
+          enabled: _._.logged_in,
+        });
+      }
+      function _() {
+        const _ = (0, _._)();
+        return _.useCallback(
+          (_, _) => {
+            _.setQueryData(_(_), _);
+          },
+          [_],
+        );
+      }
+      function _(_) {
+        return (0, _._)({
+          queryKey: ["AppRelevanceStore", "StoreRelevance", _],
+          queryFn: () =>
+            (async function (_) {
+              let _ = {
+                  appid: _,
+                },
+                _ = {
+                  arrSimilarPlayedApps: [],
+                  bRecommendedByIR: !1,
+                };
+              const _ = (
+                await _().get(
+                  `${_._.STORE_BASE_URL}explore/ajaxgetstorerelevancedata`,
+                  {
+                    params: _,
+                    withCredentials: !0,
+                    timeout: 1e4,
+                  },
+                )
+              ).data;
+              _ &&
+                _.success == _._ &&
+                (_.results.similar_played_apps &&
+                  (_.arrSimilarPlayedApps = _.results.similar_played_apps.map(
+                    (_) => ({
+                      appid: _.appid,
+                      playtimeForever: _.playtime_forever,
+                    }),
+                  )),
+                _.results.recommended_by_ir && (_.bRecommendedByIR = !0));
+              return _;
+            })(_),
+          enabled: _._.logged_in,
+        });
+      }
+      function _() {
+        return (0, _._)("App Relevance Store Top Sellers", {
+          sort: _._._,
+          start: 0,
+          count: 100,
+        });
+      }
+      function _() {
+        const { data: _ } = _();
+        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -8941,24 +9138,10 @@
             });
       }
       function _(_) {
-        const {
+        const { appid: _, rgCategories: _, controllersUsed: _ } = _,
+          { data: _ } = (0, _._)({
             appid: _,
-            rgCategories: _,
-            bVetted: _,
-            controllersUsed: _,
-            bControllerOnlySupport: _,
-            bControllerWizardComplete: _,
-            drmThirdPartyType: _,
-            drmActivationLimit: _,
-            aiGeneratedContentExternalService: _,
-            anticheat: _,
-            eulas: _,
-            rgMasterAppEulas: _,
-            strMasterAppName: _,
-            bRefundChecksEAPlaytime: _,
-            userAccountThirdParty: _,
-            userAccountThirdPartyLinktoSteam: _,
-          } = _,
+          }),
           { data: _ } = (0, _._)({
             appid: _,
           }),
@@ -8971,97 +9154,100 @@
               _?.categories?.controller_categoryids?.forEach((_) => _.add(_)),
               _
             );
-          }, [_]);
+          }, [_]),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = _?.purchase_options?.find(
+            (_) =>
+              _.free_with_master_sub_appid &&
+              _.free_with_master_sub_appid != _._,
+          ),
+          _ = _?.free_with_master_sub_appid ?? _._;
         if (
           (_.use(_.Ready()),
           _.use(_._.Ready()),
           !_ || null == _.type || _?.type == _._._)
         )
           return null;
+        if (!_) return null;
         const _ = __webpack_require__.filter((_) => _.has(_.categoryid ?? 0));
-        return _.type == _._._ && 0 == _.length
-          ? null
-          : (0, _.jsxs)(_._, {
-              className: _().CategorySection,
-              "flow-children": "column",
+        if (_.type == _._._ && 0 == _.length) return null;
+        const { vetted: _ } = _;
+        return (0, _.jsxs)(_._, {
+          className: _().CategorySection,
+          "flow-children": "column",
+          children: [
+            (0, _.jsx)(_._, {
+              className: _().FeaturesHeader,
+              children: _.Localize("#AppPage_Features"),
+            }),
+            (0, _.jsxs)(_._, {
+              color: "blue-8",
+              size: "2",
               children: [
-                (0, _.jsx)(_._, {
-                  className: _().FeaturesHeader,
-                  children: _.Localize("#AppPage_Features"),
+                _.length > 0 &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)(_._, {
+                      className: _().CategoryLinks,
+                      "flow-children": "column",
+                      children: _.map((_, _) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            category: _,
+                          },
+                          _,
+                        ),
+                      ),
+                    }),
+                  }),
+                !_ &&
+                  (0, _.jsx)(_, {
+                    appid: _,
+                  }),
+                (0, _.jsx)(_.AccessibilityFeatureDisplay, {
+                  features: (0, _.AccessibilityFeaturesFromCategories)(
+                    _?.categories?.feature_categoryids ?? [],
+                  ),
+                }),
+                (0, _.jsx)(_, {
+                  appid: _,
+                }),
+                (0, _.jsx)(_, {
+                  ..._(_, _, _, _),
                 }),
                 (0, _.jsxs)(_._, {
-                  color: "blue-8",
-                  size: "2",
+                  color: "gold-11",
                   children: [
-                    _.length > 0 &&
-                      (0, _.jsx)(_.Fragment, {
-                        children: (0, _.jsx)(_._, {
-                          className: _().CategoryLinks,
-                          "flow-children": "column",
-                          children: _.map((_, _) =>
-                            (0, _.jsx)(
-                              _,
-                              {
-                                category: _,
-                              },
-                              _,
-                            ),
-                          ),
-                        }),
-                      }),
-                    !_ &&
+                    (0, _.jsx)(_, {
+                      extraDetails: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      extraDetails: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      extraDetails: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      eulas: _.eula ?? [],
+                    }),
+                    _ != _._ &&
                       (0, _.jsx)(_, {
                         appid: _,
                       }),
-                    (0, _.jsx)(_.AccessibilityFeatureDisplay, {
-                      features: (0, _.AccessibilityFeaturesFromCategories)(
-                        _?.categories?.feature_categoryids ?? [],
-                      ),
+                    (0, _.jsx)(_, {
+                      extraDetails: _,
                     }),
                     (0, _.jsx)(_, {
-                      appid: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      ..._(_, _, _, _, _),
-                    }),
-                    (0, _.jsxs)(_._, {
-                      color: "gold-11",
-                      children: [
-                        _ &&
-                          (0, _.jsx)(_, {
-                            drmType: _,
-                            activationLimit: _,
-                          }),
-                        (0, _.jsx)(_, {
-                          thirdPartyAccountService: _,
-                          supportsLinkToSteam: _,
-                        }),
-                        _ &&
-                          (0, _.jsx)(_, {
-                            ..._,
-                          }),
-                        (0, _.jsx)(_, {
-                          eulas: _,
-                        }),
-                        _ &&
-                          _ &&
-                          (0, _.jsx)(_, {
-                            eulas: _,
-                            title: _.Localize(
-                              "#feature_master_sub_app_eula",
-                              _,
-                            ),
-                          }),
-                        _ && (0, _.jsx)(_, {}),
-                        (0, _.jsx)(_, {
-                          service: _,
-                        }),
-                      ],
+                      extraDetails: _,
                     }),
                   ],
                 }),
               ],
-            });
+            }),
+          ],
+        });
       }
       function _(_) {
         const { category: _ } = _,
@@ -9166,13 +9352,15 @@
           ],
         });
       }
-      function _(_, _, _, _, _) {
-        const _ = !(
-          !_.has_any_controller ||
-          _.has_ps4_controller ||
-          _.has_ps5_controller ||
-          _.has_xbox_controller
-        );
+      function _(_, _, _, _) {
+        const { controller_wizard_complete: _, no_mouse_keyboard_support: _ } =
+            _,
+          _ = !(
+            !_.has_any_controller ||
+            _.has_ps4_controller ||
+            _.has_ps5_controller ||
+            _.has_xbox_controller
+          );
         return {
           unAppID: _,
           bFullXboxControllerSupport: _.has(_.mv5),
@@ -9208,26 +9396,32 @@
           : null;
       }
       function _(_) {
-        const { drmType: _, activationLimit: _ } = _;
-        return (0, _.jsx)("div", {
-          className: _().ThirdPartyNotice,
-          children: (0, _.jsxs)(_._, {
-            children: [
-              _.Localize("#feature_third_party_drm", _),
-              (0, _.jsx)(_, {
-                activationLimit: _,
+        const { extraDetails: _ } = _,
+          { drm_third_party_type: _, drm_activation_limit: _ } = _;
+        return _
+          ? (0, _.jsx)("div", {
+              className: _().ThirdPartyNotice,
+              children: (0, _.jsxs)(_._, {
+                children: [
+                  _.Localize("#feature_third_party_drm", _),
+                  (0, _.jsx)(_, {
+                    activationLimit: _,
+                  }),
+                ],
               }),
-            ],
-          }),
-        });
+            })
+          : null;
       }
       function _(_) {
+        const { extraDetails: _ } = _,
+          { anticheat: _ } = _;
+        if (!_) return null;
         const {
-          bKernelMode: _,
-          bBootProtection: _,
-          bUninstallsCompletely: _,
-          strName: _,
-          strBootProtection: _,
+          kernel_mode: _,
+          boot_protection: _,
+          uninstall_completely: _,
+          name: _,
+          boot_protection_name: _,
         } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().ThirdPartyNotice, _().Anticheat),
@@ -9273,6 +9467,30 @@
         var _;
       }
       function _(_) {
+        const { appid: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        return _ && _.name
+          ? (0, _.jsx)(_, {
+              appid: _,
+              title: _.Localize("#feature_master_sub_app_eula", _.name),
+            })
+          : null;
+      }
+      function _(_) {
+        const { appid: _, title: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        return _
+          ? (0, _.jsx)(_, {
+              eulas: _.eula ?? [],
+              title: _,
+            })
+          : null;
+      }
+      function _(_) {
         const { eulas: _, title: _ } = _;
         if (!_?.length) return null;
         const _ = _ || _.Localize("#feature_third_party_eula");
@@ -9300,15 +9518,21 @@
         });
       }
       function _(_) {
-        return (0, _.jsx)("div", {
-          className: _().ThirdPartyNotice,
-          children: (0, _.jsx)(_._, {
-            children: _.Localize("#feature_third_party_refund_playtime"),
-          }),
-        });
+        return _.extraDetails.refund_checks_ea_playtime
+          ? (0, _.jsx)("div", {
+              className: _().ThirdPartyNotice,
+              children: (0, _.jsx)(_._, {
+                children: _.Localize("#feature_third_party_refund_playtime"),
+              }),
+            })
+          : null;
       }
       function _(_) {
-        const { thirdPartyAccountService: _, supportsLinkToSteam: _ } = _;
+        const { extraDetails: _ } = _,
+          {
+            user_account_third_party: _,
+            user_account_third_party_link_to_steam: _,
+          } = _;
         return _
           ? (0, _.jsx)("div", {
               className: (0, _._)(_().ThirdPartyNotice, _().ThirdPartyAccount),
@@ -9327,18 +9551,19 @@
           : null;
       }
       function _(_) {
-        const { service: _ } = _;
-        return _
+        const { extraDetails: _ } = _,
+          { ai_generation_service: _ } = _;
+        return _ && _.name
           ? (0, _.jsx)("div", {
               className: _().ThirdPartyNotice,
               children: (0, _.jsx)(_._, {
                 children: (0, _._)(
                   _.Localize(
                     "#feature_ai_generated_content_external_account_service",
-                    _.external_service_name,
+                    _.name,
                   ),
                   (0, _.jsx)(_._, {
-                    href: _.external_service_url,
+                    href: _.url,
                   }),
                 ),
               }),
@@ -9974,6 +10199,816 @@
           }),
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _._)({
+          queryKey: ["UserCurations" + _._.accountid],
+          queryFn: async () =>
+            (async function (_, _) {
+              const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+                _ = await fetch(_),
+                _ = (await _.json()).rgCurations[_] || {};
+              return Object.entries(_).map((_) => ({
+                clan_accountid: Number(_[0]),
+                recommendation: _[1],
+              }));
+            })(_, _._.accountid),
+          enabled: !!_._.accountid,
+        });
+      }
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { type: _, description: _, children: _ } = _;
+        let _ = (0, _.jsx)(_.$$j, {});
+        return (
+          _ == _.Positive
+            ? (_ = (0, _.jsx)(_.MGO, {
+                className: _().Positive,
+              }))
+            : _ == _.Negative &&
+              (_ = (0, _.jsx)(_.tmm, {
+                className: _().Negative,
+              })),
+          (0, _.jsxs)("div", {
+            className: _().Reason,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().TopLine,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Icon,
+                    children: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Description,
+                    children: _,
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().Additional,
+                  children: _,
+                }),
+              (0, _.jsx)("div", {
+                className: _().Divider,
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { description: _, children: _ } = _;
+        return (0, _.jsx)(_, {
+          type: _.Info,
+          description: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { description: _, children: _ } = _;
+        return (0, _.jsx)(_, {
+          type: _.Positive,
+          description: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { description: _, children: _ } = _;
+        return (0, _.jsx)(_, {
+          type: _.Negative,
+          description: _,
+          children: _,
+        });
+      }
+      !(function (_) {
+        (_[(_.Info = 0)] = "Info"),
+          (_[(_.Positive = 1)] = "Positive"),
+          (_[(_.Negative = 2)] = "Negative");
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { children: _ } = _;
+        return (0, _.jsx)(_._, {
+          className: _().AvatarList,
+          children: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { accountid: _, appid: _, bLinkToReview: _ } = _,
+          _ = (0, _._)(_);
+        if (!_.data || !_.data.public_data) return null;
+        const _ = (0, _._)(_.data),
+          _ = _ ? `${_}/recommended/${_}` : _;
+        return (0, _.jsx)(_._, {
+          href: _,
+          "data-miniprofile": _,
+          children: (0, _.jsx)(_._, {
+            playerLinkDetails: _.data,
+            alt: _.data.public_data.persona_name,
+          }),
+        });
+      }
+      function _(_) {
+        const { rgFriends: _, appid: _, bLinkToReview: _ } = _;
+        return (0, _.jsx)(_, {
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                accountid: _,
+                appid: _,
+                bLinkToReview: _,
+              },
+              _,
+            ),
+          ),
+        });
+      }
+      function _(_) {
+        const {
+            type: _,
+            appid: _,
+            strLocTag: _,
+            rgFriends: _,
+            nMax: _ = 5,
+            bLinkToReview: _,
+          } = _,
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_) + `/friendsthatplay/${_}`;
+        if (!_ || 0 == _.length) return null;
+        let _ = (0, _._)(
+          _.LocalizePlural(_, _.length),
+          (0, _.jsx)(_._, {
+            href: _,
+          }),
+        );
+        return (0, _.jsx)(_, {
+          type: _,
+          description: _,
+          children: (0, _.jsx)(_, {
+            rgFriends: _.slice(0, _),
+            appid: _,
+            bLinkToReview: _,
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { url: _, avatarUrl: _, alt: _ } = _;
+        return (0, _.jsx)(_._, {
+          toolTipContent: _,
+          children: (0, _.jsx)(_._, {
+            href: _,
+            children: (0, _.jsx)(_._, {
+              avatarURL: _,
+              alt: _,
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const { accountid: _, appid: _, fnURLGenerator: _ } = _,
+          _ = (0, _._)(_);
+        if (!_.data) return null;
+        const _ = _(_.data, _);
+        return (0, _.jsx)(_, {
+          url: _,
+          avatarUrl: _.data.avatar_full_url,
+          alt: _.data.group_name,
+        });
+      }
+      function _(_) {
+        const { rgCurators: _, appid: _, fnURLGenerator: _ } = _;
+        return (0, _.jsx)(_, {
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                accountid: _,
+                appid: _,
+                fnURLGenerator: _,
+              },
+              _,
+            ),
+          ),
+        });
+      }
+      function _(_) {
+        const {
+            type: _,
+            fnURLGenerator: _,
+            appid: _,
+            strLocTag: _,
+            rgCurators: _,
+            nMax: _ = 6,
+          } = _,
+          _ = (0, _._)(
+            _._.STORE_BASE_URL + `curators/mycuratorsreviewing/?appid=${_}`,
+          );
+        if (!_ || 0 == _.length) return null;
+        let _ = (0, _._)(
+          _.Localize(_),
+          (0, _.jsx)(_._, {
+            href: _,
+          }),
+        );
+        return (0, _.jsx)(_, {
+          type: _,
+          description: _,
+          children: (0, _.jsx)(_, {
+            rgCurators: _.slice(0, _),
+            appid: _,
+            fnURLGenerator: _,
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { tag: _ } = _;
+        return (0, _.jsx)(_._, {
+          className: _().Tag,
+          href: `${_._.STORE_BASE_URL}tags/${(0, _.wwZ)((0, _.sfN)(_._.LANGUAGE))}/${_.name}`,
+          children: _.name,
+        });
+      }
+      function _(_) {
+        const { rgTags: _ } = _;
+        return 0 == _.length
+          ? null
+          : (0, _.jsx)("div", {
+              className: _().TagList,
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    tag: _,
+                  },
+                  _.tagid,
+                ),
+              ),
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _, playtime: _ } = _,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        if (!_ || !_) return null;
+        const _ = (_ / 60).toFixed(_ >= 1200 ? 0 : 1);
+        return (0, _.jsx)(_._, {
+          _: {
+            appid: _,
+          },
+          hoverProps: {
+            direction: "overlay",
+            nBodyAlignment: 1,
+            style: {
+              minWidth: "320px",
+              zIndex: 5e3,
+            },
+          },
+          children: (0, _.jsxs)("div", {
+            className: _().AppCapsule,
+            children: [
+              (0, _.jsx)("img", {
+                className: _().AppCapsuleImage,
+                src: (0, _._)(_, "small_capsule"),
+                alt: _.name,
+              }),
+              _ > 0 &&
+                (0, _.jsx)("div", {
+                  className: _().Playtime,
+                  children: _.Localize(
+                    "#AppPage_RecommendationReason_AppPlaytime",
+                    _,
+                  ),
+                }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { rgApps: _ } = _;
+        return 0 == _.length
+          ? null
+          : (0, _.jsx)("div", {
+              className: _().AppList,
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    appid: _.appid,
+                    playtime: _.playtimeForever,
+                  },
+                  _.appid,
+                ),
+              ),
+            });
+      }
+      function _(_) {
+        const { appid: _, friendsRecommended: _, recommendedTags: _ } = _,
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (
+          _.useEffect(() => {
+            _(_, _), _(_), _(!0);
+          }, [_, _, _, _, _]),
+          _.use(_.Ready()),
+          _.use(_._.Ready()),
+          _
+            ? (0, _.jsx)(_.Suspense, {
+                children: (0, _.jsx)(_, {
+                  appid: _,
+                }),
+              })
+            : null
+        );
+      }
+      function _(_, _) {
+        const { data: _ } = (0, _._)({
+          appid: _.appid,
+        });
+        return _.GetAppTypePluralLocKey(_, _?.type || _._._);
+      }
+      function _(_, _) {
+        const _ = (function (_, _) {
+          const { data: _ } = (0, _._)({
+            appid: _.appid,
+          });
+          return _.GetAppTypeLocKey(_, _?.type || _._._);
+        })(_, _);
+        return _.Localize(_);
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          _ = (function (_) {
+            const { data: _ } = (0, _._)({
+                appid: _,
+              }),
+              { data: _ } = (0, _._)({
+                appid: _,
+              }),
+              { data: _ } = (0, _._)({
+                appid: _,
+              }),
+              { data: _ } = (0, _._)({
+                appid: _,
+              }),
+              { data: _ } = (0, _._)({
+                appid: _,
+              }),
+              { data: _ } = (0, _._)(_),
+              { data: _ } = (0, _._)(),
+              { data: _ } = (0, _._)(_),
+              { data: _ } = (0, _._)(),
+              { data: _ } = (0, _._)(_),
+              { data: _ } = (0, _._)(),
+              { data: _ } = (0, _._)(_._.steamid),
+              { data: _ } = (0, _._)(),
+              { data: _ } = _(_);
+            return _.useMemo(() => {
+              if (
+                !(
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _ &&
+                  _
+                )
+              )
+                return null;
+              const _ = {
+                appid: _,
+              };
+              (_.nCurrentUserPlaytimeMins =
+                _.your_info?.minutes_played_forever || 0),
+                (_.bCurrentUserOwns = !!_.your_info?.owned),
+                (_.bFromInteractiveRecommender = _.bRecommendedByIR),
+                _.bCurrentUserOwns ||
+                  ((_.rgSimilarApps = _.arrSimilarPlayedApps || []),
+                  0 == _.rgSimilarApps?.length &&
+                    (_.rgMatchingTagsPlayed =
+                      _.filter((_) => _?.find((_) => _.tagid == _.tagid)) ||
+                      []));
+              let _ =
+                (_.preferences?.review_score_preference == _._._ &&
+                  _.summary_unfiltered) ||
+                _.summary_filtered;
+              const _ = _?.review_score || _._._;
+              (_.bPositiveReviews = _ > _._._),
+                (_.bNegativeReviews = _ > _._._ && _ < _._._),
+                (_.eReviewScore = _),
+                (_.strReviewScoreLabel = _?.review_score_label),
+                _.type != _._._ && _.type != _._._
+                  ? (_.bUserLanguageSupported = !!_.find(
+                      (_) => _.elanguage == _.preferences?.primary_language,
+                    ))
+                  : (_.bUserLanguageSupported = !0);
+              const _ = _.GetItems().findIndex((_) => _.GetAppID() == _);
+              -1 != _ && (_ < 25 ? (_.bTopSeller = !0) : (_.bPopular = !0));
+              const _ = !!_.items.find((_) => _.appid == _);
+              (_.bWishlisted = _),
+                (_.rgExcludedTags =
+                  _.tag_preferences?.tags_to_exclude?.filter((_) =>
+                    _?.find((_) => _.tagid == _.tagid),
+                  ) || []),
+                (_.rgPublishersFollowed = _.publishers?.filter(
+                  (_) =>
+                    _.creator_clan_account_id &&
+                    _?.get(_.creator_clan_account_id)?.is_creator,
+                )),
+                (_.rgDevelopersFollowed = _.developers?.filter(
+                  (_) =>
+                    _.creator_clan_account_id &&
+                    _?.get(_.creator_clan_account_id)?.is_creator,
+                )),
+                (_.rgFranchisesFollowed = _.franchises?.filter(
+                  (_) =>
+                    _.creator_clan_account_id &&
+                    _?.get(_.creator_clan_account_id)?.is_creator,
+                )),
+                (_.rgPublishersFollowed = _.rgPublishersFollowed?.filter(
+                  (_) =>
+                    !_.rgDevelopersFollowed?.find(
+                      (_) =>
+                        _.creator_clan_account_id == _.creator_clan_account_id,
+                    ),
+                )),
+                (_.rgCuratorsPositive = _.filter(
+                  (_) => _.recommendation == _._._,
+                ).map((_) => _.clan_accountid)),
+                (_.rgCuratorsNegative = _.filter(
+                  (_) => _.recommendation == _._._,
+                ).map((_) => _.clan_accountid)),
+                (_.rgFriendsRecommended = _.accountids_recommended || []),
+                (_.rgFriendsDisrecommended =
+                  _.accountids_not_recommended || []),
+                (_.rgFriendsWishlisted =
+                  _.in_wishlist?.map((_) => _._.ToAccountID(_.steamid)) || []);
+              let _ = (_.played_recently || []).concat(
+                _.played_ever || [],
+                _.owns || [],
+              );
+              return (
+                (_.rgFriendsOwned = _.map((_) => _._.ToAccountID(_.steamid))), _
+              );
+            }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
+          })(_);
+        return _
+          ? (0, _.jsxs)(_._, {
+              className: _().RecommendationReasonsDisplay,
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              children: [
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+                (0, _.jsx)(_, {
+                  reasons: _,
+                }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { reasons: _ } = _,
+          _ = _("#AppPage_RecommendationReason_Header", _);
+        return (0, _.jsx)("div", {
+          className: _().Header,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        if (_.nCurrentUserPlaytimeMins > 0) {
+          let _ =
+            _.nCurrentUserPlaytimeMins >= 1200
+              ? Math.round(_.nCurrentUserPlaytimeMins / 60)
+              : Math.round((10 * _.nCurrentUserPlaytimeMins) / 60) / 10;
+          return (0, _.jsx)(_, {
+            description: _.Localize(
+              "#AppPage_RecommendationReason_Playtime",
+              _,
+            ),
+          });
+        }
+        return _.bCurrentUserOwns
+          ? (0, _.jsx)(_, {
+              description: _.Localize(
+                "#AppPage_RecommendationReason_InLibrary",
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { reasons: _ } = _,
+          _ = _("#AppPage_RecommendationReason_MatchingApps", _);
+        return (0, _.jsx)(_, {
+          description: _,
+          children: (0, _.jsx)(_, {
+            rgApps: _.rgSimilarApps,
+          }),
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _,
+          _ = _("#AppPage_RecommendationReason_MatchingTags", _);
+        return (0, _.jsx)(_, {
+          description: _,
+          children: (0, _.jsx)(_, {
+            rgTags: _.rgMatchingTagsPlayed,
+          }),
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return _.rgSimilarApps && _.rgSimilarApps.length > 0
+          ? (0, _.jsx)(_, {
+              reasons: _,
+            })
+          : _.rgMatchingTagsPlayed && _.rgMatchingTagsPlayed.length > 0
+            ? (0, _.jsx)(_, {
+                reasons: _,
+              })
+            : null;
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return _.bFromInteractiveRecommender
+          ? (0, _.jsx)(_, {
+              description: _.Localize(
+                "#AppPage_RecommendationReason_FromInteractiveRecommender",
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return _.bPositiveReviews || _.bNegativeReviews
+          ? (0, _.jsx)(_, {
+              type: _.bPositiveReviews ? _.Positive : _.Negative,
+              description: (0, _._)(
+                _.Localize(
+                  "#AppPage_RecommendationReason_UserReviews",
+                  _.strReviewScoreLabel,
+                ),
+                (0, _.jsx)("span", {
+                  className: (0, _._)(
+                    _().ReviewScore,
+                    _.bPositiveReviews ? _().Positive : _().Negative,
+                  ),
+                }),
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return _.bTopSeller || _.bPopular
+          ? (0, _.jsx)(_, {
+              description: _.Localize(
+                _.bTopSeller
+                  ? "#AppPage_RecommendationReason_TopSeller"
+                  : "#AppPage_RecommendationReason_Popular",
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return _.bUserLanguageSupported
+          ? null
+          : (0, _.jsx)(_, {
+              description: (0, _._)(
+                _.Localize("#AppPage_RecommendationReason_LanguageUnsupported"),
+                (0, _.jsx)(_._, {
+                  href: `${_._.STORE_BASE_URL}account/languagepreferences/`,
+                }),
+              ),
+            });
+      }
+      function _(_) {
+        const { reasons: _ } = _,
+          _ = (0, _._)(_._.STORE_BASE_URL + "wishlist");
+        return _.bWishlisted
+          ? (0, _.jsx)(_, {
+              description: (0, _._)(
+                _.Localize("#AppPage_RecommendationReason_Wishlisted"),
+                (0, _.jsx)(_._, {
+                  href: _,
+                }),
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return _.rgExcludedTags && 0 != _.rgExcludedTags.length
+          ? (0, _.jsx)(_, {
+              description: (0, _._)(
+                _.Localize("#AppPage_RecommendationReason_ExcludedTags"),
+                (0, _.jsx)(_._, {
+                  href: `${_._.STORE_BASE_URL}account/preferences`,
+                }),
+              ),
+              children: (0, _.jsx)(_, {
+                rgTags: _.rgExcludedTags,
+              }),
+            })
+          : null;
+      }
+      function _(_, _, _) {
+        return `${(function (_, _) {
+          return _.vanity_url
+            ? `${_._.STORE_BASE_URL}${_}/${_.vanity_url}`
+            : `${_._.STORE_BASE_URL}curator/${_.clanAccountID}`;
+        })(_, _)}?appid=${_}`;
+      }
+      function _(_, _) {
+        return `${(function (_) {
+          return _.vanity_url
+            ? `${_._.COMMUNITY_BASE_URL}groups/${_.vanity_url}`
+            : `${_._.COMMUNITY_BASE_URL}gid/${_.clanSteamID?.ConvertTo64BitString()}`;
+        })(_)}/curation/app/${_}`;
+      }
+      function _(_) {
+        const { reasons: _, type: _, strLocTag: _, rgCreators: _ } = _;
+        if (!_ || 0 == _.length) return null;
+        return (0, _.jsx)(_, {
+          appid: _.appid,
+          type: _.Positive,
+          fnURLGenerator: (_, _) => _(_, _, _),
+          strLocTag: _,
+          rgCurators: _.map((_) => _.creator_clan_account_id),
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return (0, _.jsx)(_, {
+          reasons: _,
+          type: "developer",
+          strLocTag: "#AppPage_RecommendationReason_FollowedDeveloper",
+          rgCreators: _?.rgDevelopersFollowed,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return (0, _.jsx)(_, {
+          reasons: _,
+          type: "publisher",
+          strLocTag: "#AppPage_RecommendationReason_FollowedPublisher",
+          rgCreators: _?.rgPublishersFollowed,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return (0, _.jsx)(_, {
+          reasons: _,
+          type: "franchise",
+          strLocTag: "#AppPage_RecommendationReason_FollowedFranchise",
+          rgCreators: _?.rgFranchisesFollowed,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return (0, _.jsx)(_, {
+          appid: _.appid,
+          type: _.Positive,
+          fnURLGenerator: _,
+          strLocTag: "#AppPage_RecommendationReason_CuratorRecommended",
+          rgCurators: _.rgCuratorsPositive,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return (0, _.jsx)(_, {
+          appid: _.appid,
+          type: _.Negative,
+          fnURLGenerator: _,
+          strLocTag: "#AppPage_RecommendationReason_CuratorDisrecommended",
+          rgCurators: _.rgCuratorsNegative,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return (0, _.jsx)(_, {
+          appid: _.appid,
+          type: _.Positive,
+          strLocTag: "#AppPage_RecommendationReason_FriendsRecommended",
+          rgFriends: _.rgFriendsRecommended,
+          bLinkToReview: !0,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _;
+        return (0, _.jsx)(_, {
+          appid: _.appid,
+          type: _.Negative,
+          strLocTag: "#AppPage_RecommendationReason_FriendsDisrecommended",
+          rgFriends: _.rgFriendsDisrecommended,
+          bLinkToReview: !0,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _,
+          _ = _("#AppPage_RecommendationReason_FriendsWishlisted", _);
+        return (0, _.jsx)(_, {
+          appid: _.appid,
+          type: _.Info,
+          strLocTag: _,
+          rgFriends: _.rgFriendsWishlisted,
+        });
+      }
+      function _(_) {
+        const { reasons: _ } = _,
+          _ = _("#AppPage_RecommendationReason_FriendsOwned", _);
+        return (0, _.jsx)(_, {
+          appid: _.appid,
+          type: _.Info,
+          strLocTag: _,
+          rgFriends: _.rgFriendsOwned,
+        });
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -10189,6 +11224,11 @@
                       appid: _,
                     }),
                   "interest-buttons": (_) =>
+                    (0, _.jsx)(_, {
+                      ..._,
+                      appid: _,
+                    }),
+                  "recommendation-reasons": (_) =>
                     (0, _.jsx)(_, {
                       ..._,
                       appid: _,

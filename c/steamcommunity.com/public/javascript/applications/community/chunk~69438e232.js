@@ -435,7 +435,6 @@
         DialogTitle: "_2WJTd3a8tzPCkIBmvfBD79",
         AppTitleCategory: "_23sFZwpTqnM3Ameqew-ZuX",
         CompatibilityDetailsStillLearning: "_1WWwtz2-hqx1OnhlEOCTLl",
-        CompatibilityDetailsContainerDesktop: "_2ADsvLBScO2pMzUxFUg-_g",
         CompatibilityDetailsContainer: "_1-O8t3AxzpNsipTPfHVktW",
         CompatibilityDetailsInterior_NoScroll: "_3oQPVwTgG0CmSxwl3e1cI4",
         CompatibilityDetailsInterior_Scroll: "_2uCLczcyA7K90OppYPMeBA",
@@ -1701,6 +1700,48 @@
           _ = _ ? " " : "",
           _ = _ ? "-" : "";
         return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsxs)("a", {
+          href: _.strURL,
+          className: _._.Box,
+          "data-modal-content-sizetofit": !!_.bSizeToFit,
+          "data-appid": _.appid,
+          "data-publishedfileid": _.publishedfileid,
+          children: [
+            (0, _.jsx)(_._, {
+              strURL: _.strPreviewURL,
+            }),
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  children: _.strTitle,
+                }),
+                (0, _.jsx)("div", {
+                  children: (0, _.jsx)("span", {
+                    className: _._.Type,
+                    children: _.strType,
+                  }),
+                }),
+                _.author &&
+                  (0, _.jsx)(_._, {
+                    children: _.author,
+                  }),
+                (0, _.jsx)(_._, {
+                  children: _.strDescription,
+                }),
+              ],
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -27540,8 +27581,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -27580,6 +27624,38 @@
                 ),
               this.m_mapPromises.get(_))
             : _._;
+        }
+        async ReloadCommunityInventory(_) {
+          if (!_) return _._;
+          let _ = this.m_mapReloadPromises.get(_);
+          if (!_) {
+            (_ = this.InternalLoadCommunityInventory(_)),
+              this.m_mapReloadPromises.set(_, _),
+              this.m_mapPromises.set(_, _);
+            const _ = _;
+            _.finally(() => {
+              this.m_mapReloadPromises.get(_) == _ &&
+                this.m_mapReloadPromises.delete(_);
+            });
+          }
+          return _;
+        }
+        async RefreshInventoryAfterGrant(_, _) {
+          if (_ && !this.m_setRefreshInProgress.has(_)) {
+            this.m_setRefreshInProgress.add(_);
+            try {
+              const _ = [0, 3e3, 5e3 + Math.floor(1e4 * Math.random())];
+              for (const _ of _)
+                if (
+                  (_ > 0 && (await (0, _._)(_)),
+                  await this.ReloadCommunityInventory(_),
+                  _(this.GetInventoryForApp(_)))
+                )
+                  return;
+            } finally {
+              this.m_setRefreshInProgress.delete(_);
+            }
+          }
         }
         async InternalLoadCommunityInventory(_) {
           const _ = _._.Init(_._);
@@ -27629,6 +27705,8 @@
         constructor() {
           (this.m_mapInventoryByApp = new Map()),
             (this.m_mapPromises = new Map()),
+            (this.m_mapReloadPromises = new Map()),
+            (this.m_setRefreshInProgress = new Set()),
             (this.m_listChangeCallback = new Map()),
             (this.m_SteamInterface = null);
         }
@@ -27640,6 +27718,12 @@
           ),
             (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
         }
+      }
+      function _(_, _) {
+        return _.Get().RefreshInventoryAfterGrant(_, _);
+      }
+      function _(_) {
+        return _.Get().GetInventoryForApp(_);
       }
       function _(_) {
         const [_, _] = (0, _.useState)(_.Get().GetInventoryForApp(_));
@@ -30286,7 +30370,7 @@
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
-                  (0, _.jsx)(_.xoK, {
+                  (0, _.jsx)(_.lRD, {
                     className: _().SteamDeckDeviceIcon,
                   }),
                   (0, _.jsx)(_, {
@@ -30307,7 +30391,7 @@
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
-                  (0, _.jsx)(_.LO_, {
+                  (0, _.jsx)(_.fhy, {
                     className: _().SteamMachineDeviceIcon,
                   }),
                   (0, _.jsx)(_, {
@@ -30349,7 +30433,7 @@
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
-                  (0, _.jsx)(_._, {
+                  (0, _.jsx)(_.Ves, {
                     className: _().SteamFrameDeviceIcon,
                   }),
                   (0, _.jsx)(_, {
@@ -30387,8 +30471,8 @@
           } = _,
           [_, _] = _.useState(!1),
           _ = _.useCallback(() => _, [_]),
-          _ = _.useRef(null),
-          _ = (0, _._)();
+          _ = _.useRef(null);
+        (0, _._)();
         let _ = null != _ ? _ : {};
         return (
           _.useEffect(() => {
@@ -30411,9 +30495,7 @@
               );
           }, []),
           (0, _.jsxs)(_._, {
-            className: _
-              ? _().CompatibilityDetailsContainer
-              : _().CompatibilityDetailsContainerDesktop,
+            className: _().CompatibilityDetailsContainer,
             ..._,
             children: [
               (0, _.jsxs)("div", {
@@ -44139,7 +44221,7 @@
             (_) =>
               new _._(
                 new _._(
-                  new _._(new _._(new _._(), 0), _, (0, _._)(), {
+                  new _._(new _._(new _._()), _, (0, _._)(), {
                     partnerEventStore: _,
                     event: _,
                   }),
@@ -44409,6 +44491,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { sharedFileID: _ } = _,
@@ -44445,48 +44529,23 @@
           })();
         }, [_, _]);
         let _ = void 0 !== _.personnaname && _.personnaname.length > 0;
-        return (0, _.jsxs)("a", {
-          href: _.url,
-          className: _().DynamicLinkBox,
-          "data-modal-content-sizetofit": !!_.bSizeToFit,
-          "data-appid": _.appid,
-          "data-publishedfileid": _,
-          children: [
-            (0, _.jsx)("img", {
-              className: _().DynamicLink_Preview,
-              src: _.previewurl,
-            }),
-            (0, _.jsxs)("div", {
-              className: _().DynamicLink_Content,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().DynamicLink_Name,
-                  children: _.title,
-                }),
-                (0, _.jsx)("div", {
-                  children: (0, _.jsx)("span", {
-                    className: _().DynamicLink_Type,
-                    children: _.type,
-                  }),
-                }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().DynamicLink_Author,
-                    children: (0, _._)(
-                      "#EventEditor_Author",
-                      (0, _.jsx)("span", {
-                        className: _().DynamicLink_AuthorName,
-                        children: _.personnaname,
-                      }),
-                    ),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _().DynamicLink_Description,
-                  children: _.description,
-                }),
-              ],
-            }),
-          ],
+        return (0, _.jsx)(_._, {
+          strURL: _.url,
+          strTitle: _.title,
+          strPreviewURL: _.previewurl,
+          strType: _.type,
+          strDescription: _.description,
+          author:
+            _ &&
+            (0, _._)(
+              "#EventEditor_Author",
+              (0, _.jsx)(_._, {
+                children: _.personnaname,
+              }),
+            ),
+          publishedfileid: _,
+          appid: _.appid,
+          bSizeToFit: _.bSizeToFit,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -44607,7 +44666,7 @@
           return (0, _.jsxs)(_._, {
             eventModel: _,
             route: _._.k_eView,
-            className: _().DynamicLinkBox,
+            className: _._.Box,
             "data-modal-content-sizetofit": !0,
             "data-appid": _,
             children: [
@@ -44615,11 +44674,9 @@
                 ...this.props,
                 event: _,
               }),
-              (0, _.jsxs)("div", {
-                className: _().DynamicLink_Content,
+              (0, _.jsxs)(_._, {
                 children: [
-                  (0, _.jsxs)("div", {
-                    className: _().DynamicLink_Author,
+                  (0, _.jsxs)(_._, {
                     children: [
                       (0, _._)(
                         _.type == _.uYK
@@ -44627,21 +44684,18 @@
                           : "#EventDisplay_Share_Event",
                         _,
                       ),
-                      (0, _.jsx)("span", {
-                        className: _().DynamicLink_Date,
+                      (0, _.jsx)(_._, {
                         children: _,
                       }),
                     ],
                   }),
-                  (0, _.jsx)("div", {
-                    className: _().DynamicLink_Name,
+                  (0, _.jsx)(_._, {
                     children: (0, _.jsx)("div", {
-                      className: _().DynamicLink_Type,
+                      className: _._.Type,
                       children: _,
                     }),
                   }),
-                  (0, _.jsx)("div", {
-                    className: _().DynamicLink_Description,
+                  (0, _.jsx)(_._, {
                     children: _,
                   }),
                 ],
@@ -44666,7 +44720,7 @@
         return (
           _ && _ && (_ = _(_)),
           (0, _.jsx)(_._, {
-            className: _().DynamicLink_Preview,
+            className: _._.Preview,
             rgSources: null != _ ? _ : [],
             onIncrementalError: (_, _, _) => _ && _(_),
           })

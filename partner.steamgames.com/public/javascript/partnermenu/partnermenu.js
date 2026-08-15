@@ -36264,6 +36264,11 @@ Error generating stack: ` +
                     bw: WriterProto.writeInt32,
                   },
                   localization: { n: 2, c: SteamAward_Localization },
+                  award_year: {
+                    n: 3,
+                    br: ReaderProto.readInt32,
+                    bw: WriterProto.writeInt32,
+                  },
                 },
               }),
               t.sm_m
@@ -40207,6 +40212,12 @@ Error generating stack: ` +
                     br: ReaderProto.readBool,
                     bw: WriterProto.writeBool,
                   },
+                  include_best_purchase_option: {
+                    n: 19,
+                    d: !0,
+                    br: ReaderProto.readBool,
+                    bw: WriterProto.writeBool,
+                  },
                 },
               }),
               t.sm_m
@@ -43460,10 +43471,17 @@ Error generating stack: ` +
         return o;
       },
       HasKey(t) {
-        return CurrentLocalizationSettings().languages.some((r) => {
-          let i = n.get(r.strLanguage);
-          return i ? i.has(t) : !1;
-        });
+        let r = CurrentLocalizationSettings().languages,
+          i = [
+            ...r.map((t) => t.strLanguage),
+            GetFallbackForLanguage(r[0].strLanguage),
+          ];
+        for (let r of i) {
+          if (!r) continue;
+          let i = n.get(r);
+          if (i && i.has(t)) return !0;
+        }
+        return !1;
       },
     };
   }
@@ -48864,6 +48882,7 @@ Error generating stack: ` +
     PanelSummary = FocusableElement(`summary`, { bActivateByDefault: !0 }),
     PanelDetails = FocusableElement(`details`, { bFocusableByDefault: !1 });
   init_src$1(), init_config_client(), init_rendercontext();
+  var TopFrameNavigationContext = import_react$3.createContext(!1);
   function useOnClick(t, n, r) {
     return (0, import_react$3.useMemo)(() => r, [t, n, r]);
   }
@@ -48886,11 +48905,12 @@ Error generating stack: ` +
         m = n,
         h = useStoreNavEventContext(),
         g = useRenderContext().manifest,
-        _ = useInGamepadUI();
+        _ = useInGamepadUI(),
+        v = import_react$3.useContext(TopFrameNavigationContext);
       s && (m = GetStoreNavLink(typeof s == `boolean` ? h : { ...h, ...s }, m));
-      let { bIsExternal: v, targetRoute: y } = import_react$3.useMemo(() => {
+      let { bIsExternal: y, targetRoute: x } = import_react$3.useMemo(() => {
         let t = m;
-        if (i || r) return { bIsExternal: !0, targetRoute: t };
+        if (i || r || v) return { bIsExternal: !0, targetRoute: t };
         if (absoluteUrlRegex.test(t)) {
           let n = new URL(location.href),
             r = new URL(m.startsWith(`//`) ? n.protocol + m : m);
@@ -48901,16 +48921,17 @@ Error generating stack: ` +
           g?.routes.some((n) => t.match(new RegExp(n.regex, `i`)))
           ? { bIsExternal: !1, targetRoute: t }
           : { bIsExternal: !0, targetRoute: t };
-      }, [r, i, m, g?.routes]);
-      i &&
-        (Config.IN_CLIENT
-          ? (y = CreateSteamClientURL(`openurl/${m}`))
-          : ((p.target ??= `_blank`), (p.rel ??= `noreferrer noopener`)));
-      let x = useOnClick(y, v, o);
+      }, [r, i, m, g?.routes, v]);
+      v && !i && (p.target ??= `_top`),
+        i &&
+          (Config.IN_CLIENT
+            ? (x = CreateSteamClientURL(`openurl/${m}`))
+            : ((p.target ??= `_blank`), (p.rel ??= `noreferrer noopener`)));
+      let S = useOnClick(x, y, o);
       return (0, import_jsx_runtime$1.jsx)(l && _ ? FocusableAnchor : `a`, {
         ref: u,
         href: m,
-        onClick: x,
+        onClick: S,
         ...p,
       });
     }),
@@ -70161,7 +70182,7 @@ Error generating stack: ` +
     beta_tag$6,
     global_header_spanish_default,
     init_global_header_spanish = __esmMin(() => {
-      (language$6 = `español`),
+      (language$6 = `spanish`),
         (Aria_Steam_Home_Link$6 = `Enlace a la página principal de Steam`),
         (global_menu_install_steam$6 = `Instalar Steam`),
         (global_menu_login$6 = `iniciar sesión`),

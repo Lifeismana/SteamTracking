@@ -36,6 +36,7 @@
     chunkid: (module) => {
       module.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
+        Disabled: "_21NiFCkZFlTZ8WrrrxX0BX",
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
       };
     },
@@ -1390,15 +1391,17 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ..._ } = _;
+        const { children: _, className: _, bDisabled: _, ..._ } = _;
         return (0, _.jsxs)(_._, {
           cursor: "default",
           gap: "2",
-          className: _.Option,
+          className: _()(_.Option, _ && _.Disabled),
           ..._,
           children: [
             (0, _.jsx)("div", {
@@ -1417,11 +1420,13 @@
               onValueChange: _,
               options: _,
               getOptionLabel: _,
+              disabled: _,
               ..._
             } = _;
             return (0, _.jsx)(_.Root, {
               value: _,
               onValueChange: _,
+              disabled: _,
               ..._,
               children: _.map((_) => {
                 const _ = _ ? _(_) : _;
@@ -1438,7 +1443,13 @@
           },
           {
             Root: function (_) {
-              const { value: _, onValueChange: _, render: _, ..._ } = _,
+              const {
+                  value: _,
+                  onValueChange: _,
+                  disabled: _,
+                  render: _,
+                  ..._
+                } = _,
                 _ = (0, _.useRef)(null),
                 _ = (0, _.useCallback)((_, _) => {
                   if (!_.current) return;
@@ -1459,13 +1470,15 @@
                   () => ({
                     value: _,
                     onValueChange: _,
+                    bDisabled: _,
                     onSelectNext: _,
                     onSelectPrev: _,
                   }),
-                  [_, _, _, _],
+                  [_, _, _, _, _],
                 ),
                 _ = {
                   role: "radiogroup",
+                  "aria-disabled": _,
                   ref: _,
                   ..._,
                 },
@@ -1473,6 +1486,7 @@
                   direction: "column",
                   gap: "2",
                   role: "radiogroup",
+                  "aria-disabled": _,
                   ..._,
                 }),
                 _ = (0, _._)(_, _, _);
@@ -1495,39 +1509,45 @@
               const {
                   value: _,
                   onValueChange: _,
+                  bDisabled: _,
                   onSelectNext: _,
                   onSelectPrev: _,
                 } = _,
                 _ = _ === _,
                 _ = () => {
-                  _ || _(_);
+                  _ || _ || _(_);
                 },
                 _ = {
                   role: "radio",
                   "aria-checked": _,
+                  "aria-disabled": _,
                   "data-radio-id": _,
                   onClick: _,
                   onKeyDown: (_) => {
-                    switch (_.key) {
-                      case " ":
-                        _(), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowRight":
-                      case "ArrowDown":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowLeft":
-                      case "ArrowUp":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                    }
+                    if (!_)
+                      switch (_.key) {
+                        case " ":
+                          _(), _.preventDefault(), _.stopPropagation();
+                          break;
+                        case "ArrowRight":
+                        case "ArrowDown":
+                          _(_), _.preventDefault(), _.stopPropagation();
+                          break;
+                        case "ArrowLeft":
+                        case "ArrowUp":
+                          _(_), _.preventDefault(), _.stopPropagation();
+                      }
                   },
                   tabIndex: _ ? 0 : -1,
                   ref: _,
                   children: _,
                 },
-                _ = (0, _.jsx)(_, {});
+                _ = (0, _.jsx)(_, {
+                  bDisabled: _,
+                });
               return (0, _._)(_, _, _, {
                 bSelected: _,
+                bDisabled: _,
               });
             },
           },
@@ -1903,6 +1923,179 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.descriptors || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  descriptors: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  interactive_elements: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                  official_id: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  esrb_online_music_not_rated: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  esrb_online_interactions_not_rated: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "AppRatingAuxData";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.rating_agency || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  rating_agency: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  rating: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  source: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  banned: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  required_age: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  use_age_gate: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  aux_data: {
+                    _: 7,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "AppRating";
+        }
+      }
       const _ = 1,
         _ = 2,
         _ = 3;
@@ -2043,174 +2236,6 @@
         }
         getClassName() {
           return "GeneratedGameContent";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.descriptors || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  descriptors: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readString,
-                    _: _._.writeRepeatedString,
-                  },
-                  interactive_elements: {
-                    _: 2,
-                    _: !0,
-                    _: !0,
-                    _: _._.readString,
-                    _: _._.writeRepeatedString,
-                  },
-                  official_id: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  esrb_online_music_not_rated: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "AppRatingAuxData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.rating_agency || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  rating_agency: {
-                    _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  rating: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  source: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  banned: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  required_age: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  use_age_gate: {
-                    _: 6,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  aux_data: {
-                    _: 7,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "AppRating";
         }
       }
       class _ extends _.Message {
@@ -2779,6 +2804,11 @@
                     _: 17,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
+                  },
+                  started_from_scratch: {
+                    _: 18,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),

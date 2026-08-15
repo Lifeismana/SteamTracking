@@ -281,23 +281,25 @@
             onDismiss: t,
             className: s,
             modalClassName: c,
-            children: d,
-            ...p
+            bGamepadUIScrollWithin: d,
+            children: p,
+            ...h
           } = e,
-          { headerId: h, context: u } = l({ labelledBy: e["aria-labelledby"] });
+          { headerId: u, context: m } = l({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(o.t6.Provider, {
-          value: u,
+          value: m,
           children: (0, i.jsx)(r.E, {
             active: n,
             children: (0, i.jsx)(a.x_, {
               onEscKeypress: t,
               className: c,
+              bGamepadUIScrollWithin: d,
               children: (0, i.jsx)(o.UC, {
                 role: "dialog",
-                "aria-labelledby": h,
+                "aria-labelledby": u,
                 className: s,
-                ...p,
-                children: d,
+                ...h,
+                children: p,
               }),
             }),
           }),
@@ -400,15 +402,15 @@
           j = (0, p.R7)(),
           v = j?.ownerWindow,
           T = (0, d.yk)(),
-          B = { ...(0, r.h3)(S), onClose: x };
-        let C = 0;
-        e.resizable && (C |= p.Wf.Resizable),
+          W = { ...(0, r.h3)(S), onClose: x };
+        let B = 0;
+        e.resizable && (B |= p.Wf.Resizable),
           (e.minWidth || e.minHeight) &&
-            (C |= p.Wf.ApplyBrowserScaleToDimensions),
-          e.fullscreen && (C |= p.Wf.FullScreen);
-        const O = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
-          { popup: z, element: W } = (0, r.OJ)(
-            O,
+            (B |= p.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (B |= p.Wf.FullScreen);
+        const C = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
+          { popup: O, element: z } = (0, r.OJ)(
+            C,
             {
               title: t,
               dimensions: { width: h, height: u },
@@ -420,30 +422,30 @@
               minHeight: e.minHeight,
               replace_existing_popup: !0,
               center_on_window: T?.BCenterPopupsOnWindow() ? v : void 0,
-              eCreationFlags: C,
+              eCreationFlags: B,
               target_browser: T?.GetBrowserInfo(),
             },
-            B,
+            W,
           );
         if (
           (s.useEffect(
-            () => ((0, c.cZ)(f, z), () => (0, c.cZ)(f, void 0)),
-            [f, z],
+            () => ((0, c.cZ)(f, O), () => (0, c.cZ)(f, void 0)),
+            [f, O],
           ),
           s.useEffect(() => {
-            z && (z.document.title = t ?? n);
-          }, [z, t, n]),
-          !W)
+            O && (O.document.title = t ?? n);
+          }, [O, t, n]),
+          !z)
         )
           return null;
-        const N = e.modal ?? e.onlyPopoutIfNeeded,
-          k = !e.resizable;
+        const I = e.modal ?? e.onlyPopoutIfNeeded,
+          N = !e.resizable;
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            N && (0, i.jsx)(w, { popup: z }),
+            I && (0, i.jsx)(w, { popup: O }),
             o.createPortal(
               (0, i.jsxs)(p.kc, {
-                ownerWindow: z,
+                ownerWindow: O,
                 children: [
                   (0, i.jsxs)("div", {
                     className: "PopupFullWindow",
@@ -451,9 +453,9 @@
                     children: [
                       (0, i.jsx)(l.c, {
                         className: g,
-                        hideMin: k,
-                        hideMax: k,
-                        popup: z,
+                        hideMin: N,
+                        hideMax: N,
+                        popup: O,
                         hideActions: !x,
                       }),
                       (0, i.jsx)(d.EO, {
@@ -463,10 +465,10 @@
                       }),
                     ],
                   }),
-                  e.resizable && (0, i.jsx)(b, { popup: z }),
+                  e.resizable && (0, i.jsx)(b, { popup: O }),
                 ],
               }),
-              W,
+              z,
             ),
           ],
         });

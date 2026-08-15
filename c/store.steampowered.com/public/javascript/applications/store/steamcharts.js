@@ -7333,7 +7333,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -7842,6 +7841,43 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)();
+        return _.useCallback(
+          (_, _) => {
+            _?.bReplace ? _.replace(_, _?.state) : _.push(_, _?.state);
+          },
+          [_],
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          _: _,
+          exact: _,
+          activeClassName: _,
+          className: _,
+          children: _,
+          ..._
+        } = _;
+        return (0, _.jsx)(_._, {
+          _: _,
+          exact: _,
+          activeClassName: _,
+          className: _,
+          ..._,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { _: _, children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          _: _,
+          ..._,
+          children: _,
+        });
+      }
       function _(_) {
         const { salePageName: _, TopMonthlyReleasesStore: _ } = _,
           _ = (0, _._)(),
@@ -8048,7 +8084,7 @@
         _ = 1063584e3;
       function _(_) {
         const { nMonth: _, nYear: _ } = _,
-          _ = (0, _._)(),
+          _ = _(),
           _ = (0, _._)() || (0, _._)(window),
           _ = (0, _._)(),
           _ = _ > 0 ? _ : _ - 1,
@@ -8064,8 +8100,8 @@
             (_) => {
               _.active_modal ||
                 (_ && _
-                  ? _.push(_.TopNewReleases(_))
-                  : !_ && _ && _.push(_.TopNewReleases(_)));
+                  ? _(_.TopNewReleases(_))
+                  : !_ && _ && _(_.TopNewReleases(_)));
             },
             [_.active_modal, _, _, _, _, _],
           );
@@ -8103,7 +8139,7 @@
                         [_().Disabled]: !_,
                       }),
                       children: _
-                        ? (0, _.jsx)(_._, {
+                        ? (0, _.jsx)(_, {
                             _: _ ? _.TopNewReleases(_) : void 0,
                             className: _().ChartNavHitArea,
                             children: (0, _.jsx)("div", {
@@ -8128,7 +8164,7 @@
                         [_().Disabled]: !_,
                       }),
                       children: _
-                        ? (0, _.jsx)(_._, {
+                        ? (0, _.jsx)(_, {
                             _: _.TopNewReleases(_),
                             className: _().ChartNavHitArea,
                             children: (0, _.jsx)("div", {
@@ -8155,7 +8191,7 @@
                     fnOnUpdate: (_) => {
                       const _ = new Date(1e3 * _),
                         _ = _(_.getFullYear(), _.getMonth());
-                      _.push(_.TopNewReleases(_));
+                      _(_.TopNewReleases(_));
                     },
                   }),
                 ],
@@ -8252,7 +8288,7 @@
         );
       }
       function _(_, _, _, _) {
-        const _ = (0, _._)();
+        const _ = _();
         return (
           _.useEffect(() => {
             if (
@@ -8263,7 +8299,9 @@
               (_ = _.BIsValidTopSellersCountry(_._.COUNTRY)
                 ? _._.COUNTRY
                 : "global"),
-                _.replace(_(_(_)));
+                _(_(_(_)), {
+                  bReplace: !0,
+                });
             }
           }, [_, _, _, _, _]),
           _ && ("global" == _ || _.BIsValidTopSellersCountry(_))
@@ -8438,8 +8476,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
         const { SteamCharts: _ } = _;
         return (0, _.jsx)(_._, {
@@ -8490,7 +8527,7 @@
                           strTopItemDesc: (0, _._)(
                             "#SteamCharts_OverviewGraph_Desc_TopSelling",
                           ),
-                          children: (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_, {
                             className: _().ChartMoreBtn,
                             _: _.TopSelling(_._.COUNTRY),
                             children: (0, _._)(
@@ -8514,7 +8551,7 @@
                           strTopItemDesc: (0, _._)(
                             "#SteamCharts_OverviewGraph_Desc_MostPlayed",
                           ),
-                          children: (0, _.jsx)(_._, {
+                          children: (0, _.jsx)(_, {
                             className: _().ChartMoreBtn,
                             _: _.MostPlayed(),
                             children: (0, _._)(
@@ -8757,7 +8794,7 @@
           range: (0, _._)("#SteamCharts_Overview_Title_Weekly"),
           rgItems: _?.rgRanks.map((_) => _.Item),
           renderLink: () =>
-            (0, _.jsx)(_._, {
+            (0, _.jsx)(_, {
               className: _().ImageButtonLink,
               _: _.TopSellers(_(_._.COUNTRY), _(_.GetCurrentWeek())),
               children: (0, _._)("#SteamCharts_TopSellers_PageTitle"),
@@ -8784,7 +8821,7 @@
           range: (0, _._)("#SteamCharts_Overview_Title_Monthly"),
           rgItems: _,
           renderLink: () =>
-            (0, _.jsx)(_._, {
+            (0, _.jsx)(_, {
               className: _().ImageButtonLink,
               _: _,
               children: (0, _._)("#SteamCharts_Overview_Title_MonthlyTop"),
@@ -8880,7 +8917,7 @@
                     _,
                   ],
                 }),
-                (0, _.jsxs)(_._, {
+                (0, _.jsxs)(_, {
                   _: _.BestOfYear("" + _),
                   className: _().BestOfYearButton,
                   children: [
@@ -8962,7 +8999,7 @@
                         className: _().MenuGroup,
                         children: (0, _.jsx)("div", {
                           className: _().MenuLinks,
-                          children: (0, _.jsxs)(_._, {
+                          children: (0, _.jsxs)(_, {
                             _: _.Overview(),
                             exact: !0,
                             activeClassName: _().ActiveLink,
@@ -9023,7 +9060,7 @@
             (0, _.jsxs)(_._, {
               className: _().MenuLinks,
               children: [
-                (0, _.jsxs)(_._, {
+                (0, _.jsxs)(_, {
                   className: _().MenuItemIcon,
                   _: _.TopSelling(_._.COUNTRY),
                   activeClassName: _().ActiveLink,
@@ -9032,7 +9069,7 @@
                     (0, _._)("#SteamCharts_Menu_TopSelling"),
                   ],
                 }),
-                (0, _.jsxs)(_._, {
+                (0, _.jsxs)(_, {
                   className: _().MenuItemIcon,
                   _: _.MostPlayed(),
                   activeClassName: _().ActiveLink,
@@ -9041,7 +9078,7 @@
                     (0, _._)("#SteamCharts_Menu_MostPlayed"),
                   ],
                 }),
-                (0, _.jsxs)(_._, {
+                (0, _.jsxs)(_, {
                   className: _().MenuItemIcon,
                   _: _.MostPlayedOnSteamDeck(),
                   activeClassName: _().ActiveLink,
@@ -9071,7 +9108,7 @@
           const _ = _ - 60 * _ * 60 * 24 * 7;
           _.push(
             (0, _.jsxs)(
-              _._,
+              _,
               {
                 _: _.TopSellers(_, _(_)),
                 activeClassName: _().ActiveLink,
@@ -9124,7 +9161,7 @@
                   _ = _.TopNewReleases(_),
                   _ = Boolean(window.location.pathname === _);
                 return (0, _.jsxs)(
-                  _._,
+                  _,
                   {
                     className: _ ? _().ActiveLink : "",
                     _: _,
@@ -9162,7 +9199,7 @@
                 const _ = _.BestOfYear("" + _),
                   _ = window.location.pathname === _;
                 return (0, _.jsxs)(
-                  _._,
+                  _,
                   {
                     className: (0, _._)(_ ? _().ActiveLink : ""),
                     _: _,
@@ -10197,11 +10234,13 @@
       function _(_) {
         const { TopSellersStore: _, overrideCountry: _ } = _,
           _ = _(_),
-          _ = (0, _._)(),
+          _ = _(),
           _ = _.useCallback(
             (_) => {
               const _ = _.data;
-              _.replace(_.TopSelling(_(_)));
+              _(_.TopSelling(_(_)), {
+                bReplace: !0,
+              });
             },
             [_],
           ),
@@ -10357,11 +10396,15 @@
         _ && (!_ || _ > _) && (_ = _), _ < _ && (_ = _);
         const _ = _.useCallback((_) => _.TopSellers(_, _(_)), [_]),
           _ = _(_, _, _, _),
-          _ = (0, _._)(),
+          _ = _(),
           _ = _ && _(_) == _;
         return (
           (0, _.useEffect)(() => {
-            _ && !_ && _.replace(_.TopSellers(_, _(_)));
+            _ &&
+              !_ &&
+              _(_.TopSellers(_, _(_)), {
+                bReplace: !0,
+              });
           }, [_, _, _, _, _]),
           _ && _ && _
             ? (0, _.jsx)(_._, {
@@ -10462,7 +10505,7 @@
         const { strLink: _, children: _ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().ChartNavCtn, _ ? "" : _().Disabled),
-          children: (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_, {
             _: _ ?? _.Overview(),
             onClick: _ ? void 0 : (_) => _.preventDefault(),
             className: _().ChartNavHitArea,
@@ -10473,6 +10516,7 @@
       function _(_) {
         const { TopSellersStore: _, strCountryCode: _, rtWeekStart: _ } = _,
           _ = _.GetCountryList(),
+          _ = _(),
           _ = (0, _._)(),
           _ = _.useMemo(
             () => [
@@ -10490,9 +10534,12 @@
           _ = _.useCallback(
             (_) => {
               const _ = _.data;
-              _.replace(_.TopSellers(_(_), _(_)), _.location.state);
+              _(_.TopSellers(_(_), _(_)), {
+                bReplace: !0,
+                state: _.location.state,
+              });
             },
-            [_, _],
+            [_, _, _],
           );
         return (0, _.jsx)("div", {
           className: _().CountryControl,
@@ -10699,7 +10746,7 @@
       }
       function _(_) {
         const { selected: _ } = _,
-          _ = (0, _._)(),
+          _ = _(),
           _ = [
             {
               data: "pastweek",
@@ -10716,7 +10763,7 @@
           ],
           _ = _.useCallback(
             (_) => {
-              __webpack_require__.push(_.MostPlayedOnSteamDeck(_.data));
+              __webpack_require__(_.MostPlayedOnSteamDeck(_.data));
             },
             [_],
           );
@@ -11091,13 +11138,15 @@
         const { salePageName: _, TopYearlyReleasesStore: _ } = _,
           _ = (0, _._)(),
           _ = Number.parseInt(_),
-          _ = (0, _._)();
+          _ = _();
         return _(_, _, !0)
           ? (0, _.jsx)(_, {
               nYear: _,
               TopYearlyReleasesStore: _,
             })
-          : (_.replace(_.Overview()),
+          : (_(_.Overview(), {
+              bReplace: !0,
+            }),
             (0, _.jsx)("div", {
               children: (0, _._)("#SteamCharts_Yearly_Unavailable"),
             }));
@@ -11331,7 +11380,7 @@
       }
       function _(_) {
         const { nYear: _ } = _,
-          _ = (0, _._)(),
+          _ = _(),
           _ = (0, _._)(),
           [_] = (0, _._)("tab", 1),
           _ = _ + 1,
@@ -11343,8 +11392,8 @@
             (_) => {
               _.active_modal ||
                 (_ && _
-                  ? __webpack_require__.push(_.BestOfYear("" + _))
-                  : !_ && _ && __webpack_require__.push(_.BestOfYear("" + _)));
+                  ? __webpack_require__(_.BestOfYear("" + _))
+                  : !_ && _ && __webpack_require__(_.BestOfYear("" + _)));
             },
             [_.active_modal, _, _, _, _, _],
           );
@@ -11391,7 +11440,7 @@
                       [_().Disabled]: !_,
                     }),
                     children: _
-                      ? (0, _.jsx)(_._, {
+                      ? (0, _.jsx)(_, {
                           _: _.BestOfYear("" + _) + _,
                           className: _().ChartNavHitArea,
                           children: (0, _.jsx)("div", {
@@ -11416,7 +11465,7 @@
                       [_().Disabled]: !_,
                     }),
                     children: _
-                      ? (0, _.jsx)(_._, {
+                      ? (0, _.jsx)(_, {
                           _: _.BestOfYear("" + _) + _,
                           className: _().ChartNavHitArea,
                           children: (0, _.jsx)("div", {

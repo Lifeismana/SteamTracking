@@ -3121,6 +3121,13 @@ message CVRGamepadUI_Frame_FrameMenu_Item_SteamMainMenuOptions {
 	optional bool allow_show_as_active = 1;
 }
 
+message CVRGamepadUI_Message_CycleDashboardFocus_Request {
+	optional uint32 target_frame_id = 1;
+}
+
+message CVRGamepadUI_Message_CycleDashboardFocus_Response {
+}
+
 message CVRGamepadUI_Message_DashboardActionInvoked_Request {
 	optional uint32 action_id = 1;
 	optional bool toggle_value = 2;
@@ -3474,6 +3481,7 @@ message CVRGamepadUIShared_PathProperty_DashboardState {
 	optional bool dashboard_bar_or_child_popup_focused = 2;
 	optional int32 vrlink_role = 3 [(.description) = "enum"];
 	optional bool vrlink_unified_dashboard = 4;
+	optional string cycle_dashboard_focus_label = 5;
 }
 
 message CVRGamepadUIShared_PathProperty_DashboardTabs {
@@ -3622,6 +3630,7 @@ message LoyaltyRewardDefinition_CommunityItemData {
 message SteamAward {
 	optional int32 voteid = 1;
 	optional .SteamAward_Localization localization = 2;
+	optional int32 award_year = 3;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3676,6 +3685,7 @@ message StoreBrowseItemDataRequest {
 	optional bool apply_user_filters = 16;
 	optional bool include_links = 17;
 	optional bool include_extra_details = 18;
+	optional bool include_best_purchase_option = 19 [default = true];
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

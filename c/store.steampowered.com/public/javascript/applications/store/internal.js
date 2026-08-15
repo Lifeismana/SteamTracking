@@ -407,6 +407,7 @@
               variant: _,
               radius: _,
               size: _,
+              status: _,
               children: _,
               value: _,
               onValueChange: _,
@@ -449,6 +450,7 @@
             variant: _,
             radius: _,
             size: _,
+            status: _,
             className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
             tabIndex: 0,
             onKeyDown: (_) => {

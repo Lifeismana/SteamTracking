@@ -14925,7 +14925,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug  7 2026 04:02:16
+Aug 10 2026 13:11:53
 August
 Aura
 Australia/Adelaide
@@ -17572,6 +17572,7 @@ CRemoteDeviceJobStartStreaming
 CRemotePlayController::OnCheckStreamingDriverSupport
 CRemotePlayController::OnPlaceholderStateChange
 CRemotePlayController::OnPostLogonState
+CRemotePlayController::OnRemoteClientAppStateChanged
 CRemotePlayController::OnRemoteClientAvailable
 CRemotePlayController::OnRemoteClientConnected
 CRemotePlayController::OnRemoteClientDisconnected
@@ -23302,6 +23303,8 @@ IVRSteamPrivate_026
 IVRSteamPrivate_027
 IVRSteamPrivate_028
 IVRSteamPrivate_029
+IVRSteamPrivate_030
+IVRSteamPrivate_031
 IVRSystem_022
 I\cv
 I\n\finvite_links
@@ -26067,6 +26070,7 @@ N21CRemotePlayController44CCallbackInternal_OnStreamingClientConnectedE
 N21CRemotePlayController44CCallbackInternal_OnStreamingClientUsedInputE
 N21CRemotePlayController46CCallbackInternal_OnRemoteClientStreamLifetimeE
 N21CRemotePlayController47CCallbackInternal_OnCheckStreamingDriverSupportE
+N21CRemotePlayController47CCallbackInternal_OnRemoteClientAppStateChangedE
 N21CRemotePlayController47CCallbackInternal_OnRemoteClientDongleConnectedE
 N21CRemotePlayController47CCallbackInternal_OnRemoteClientDonglePlugEventE
 N21CRemotePlayController47CCallbackInternal_OnStreamingClientDisconnectedE
@@ -26378,6 +26382,8 @@ N2vr19IVRSteamPrivate_026E
 N2vr19IVRSteamPrivate_027E
 N2vr19IVRSteamPrivate_028E
 N2vr19IVRSteamPrivate_029E
+N2vr19IVRSteamPrivate_030E
+N2vr19IVRSteamPrivate_031E
 N30CGetControllerConfigWorkerBase46CCallbackInternal_OnReceivedDownloadItemResultE
 N30CSteamUICloudStorageController34CCallbackInternal_OnPostLogonStateE
 N30CStreamingClientGameController30CCallback_OnStreamClientResultE
@@ -26517,7 +26523,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_029EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_031EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -26548,6 +26554,8 @@ N5vrapi33CVRSteamPrivateAdapter_025_as_026E
 N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N5vrapi33CVRSteamPrivateAdapter_027_as_028E
 N5vrapi33CVRSteamPrivateAdapter_028_as_029E
+N5vrapi33CVRSteamPrivateAdapter_029_as_030E
+N5vrapi33CVRSteamPrivateAdapter_030_as_031E
 N6C;
 N6detail10ClosurePtrIMNS_12GenericClassEFP14IHTMLResponsesRKN11IHTMLWindow22PopupHTMLWindowEvent_tEEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFbRKN11IHTMLWindow23OpenFileDialogRequest_tEEEE
@@ -27528,6 +27536,7 @@ OpenVR.DeviceProperties.RegisterForDevicePropertyChange
 OpenVR.ExtendActivityTimeout
 OpenVR.GetMutualCapabilities
 OpenVR.GetWebSecret
+OpenVR.GetWebServerAddress
 OpenVR.InstallVR
 OpenVR.Keyboard.RegisterForStatus
 OpenVR.Keyboard.SendText
@@ -36809,7 +36818,7 @@ bCanChangeInstallFolder
 bCanClose
 bCanMoveInstallFolder
 bCanPairViaWifiAP
-bCanSteamVR
+bCanStreamVR
 bCanSuspend
 bCaptureButton
 bCenterTrackpad
@@ -36874,10 +36883,12 @@ bHasCaptureButton
 bHasDifferentCopies
 bHasGameCubeLayout
 bHasInput
+bHasLocalConnection
 bHasLockedPrivateBetas
 bHasMultipleInputs
 bHasNintendoLayout
 bHasOutput
+bHasSteamVRInstalled
 bHasTwoFactor
 bHasUnpairedWifiAP
 bHdmiCecActive
@@ -50614,7 +50625,6 @@ nv->name->len > 0
 nxBT6
 nytimes.com
 o&1m&
-o&hM-
 o-\vBs
 o2i_ECPublicKey
 o2i_SCT
@@ -54739,6 +54749,7 @@ strHeaderImage_2x
 strHeroBlurImage
 strHeroImage
 strHomepageURL
+strHost
 strID
 strIconData
 strIconDataBase64
@@ -56109,6 +56120,7 @@ unNewPacketSize == cubExtHdrSize + unOldBodySize + sizeof( ProtoBufMsgHeader_t )
 unNow > m_unLastSpew
 unOldBodySize >= 0
 unPID
+unPort
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unRequestingAppID

@@ -3773,7 +3773,7 @@ License: MIT
       function x(e) {
         var t, n;
         const { editModel: u } = e,
-          [x, w] = a.useState(g.FH6),
+          [x, w] = a.useState(g.xPp),
           [A, C] = a.useState(!1),
           [j, b] = a.useState(null),
           E = u.GetClanSteamID(),

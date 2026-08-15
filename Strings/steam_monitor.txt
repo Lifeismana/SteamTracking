@@ -231,9 +231,9 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
-04:01:51
-04:01:53
 12CStdMemAlloc
+13:11:30
+13:11:33
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
@@ -251,7 +251,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug  7 2026
+Aug 10 2026
 Average %.2f fps, %.2f ms per frame\n
 Bad thread local: Get\n
 Bad thread local: Set\n
@@ -287,7 +287,6 @@ DBG_PATHMATCH
 DONT_BREAK_ON_ASSERT
 Deleting thread object from the thread, this is bad
 DumpMemTrackingStats %d %d \n
-EB5)*
 Encryption
 Error State on string being set.
 Error decoding string1: %s
@@ -992,6 +991,7 @@ write
 x86_64
 xlocale
 xmemory
+y1Vbj$Y
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
 {default arg#

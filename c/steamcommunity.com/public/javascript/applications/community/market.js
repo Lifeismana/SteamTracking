@@ -136,179 +136,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _ = _._.LANGUAGE) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          ..._(_, _, _, _),
-          enabled: !!_,
-        });
-      }
-      function _(_, _, _, _) {
-        return {
-          queryKey: ["AssetPropertySchemaMap", _, _],
-          queryFn: async () => {
-            const _ = await _.fetchQuery(_(_, _, _)),
-              _ = new Map();
-            return _.property_schemas.forEach((_) => _.set(_._, _)), _;
-          },
-        };
-      }
-      function _(_, _, _) {
-        return {
-          queryKey: ["AssetPropertySchema", _, _],
-          queryFn: async () => {
-            var _;
-            const _ = await _._.GetAssetPropertySchema(_, {
-              appid: _,
-              language: _,
-            });
-            if (!_.BSuccess() && _.GetEResult() != _._)
-              throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
-            return {
-              property_schemas:
-                null !== (_ = _.Body().toObject().property_schemas) &&
-                void 0 !== _
-                  ? _
-                  : [],
-            };
-          },
-        };
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 11992, 19))),
-        (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 92087, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 41472, 19))),
-        (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 17430, 19))),
-        (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 37498, 19))),
-        (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 16847, 19))),
-        (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 87093, 19))),
-        (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 610, 19))),
-        (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 84731, 19))),
-        (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3385, 19))),
-        (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 6389, 19))),
-        (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 34100, 19))),
-        (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 21559, 19))),
-        (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 22965, 19))),
-        (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 19732, 19))),
-        (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 76766, 19))),
-        (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 40182, 19))),
-        (_.malay = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 88597, 19))),
-        (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 5353, 19))),
-        (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58926, 19))),
-        (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 8374, 19))),
-        (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 77752, 19))),
-        (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 28128, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 55610, 19))),
-        (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62787, 19))),
-        (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 28549, 19))),
-        (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 56052, 19))),
-        (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 2352, 19))),
-        (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 19365, 19))),
-        (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 90125, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 61071, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 61716, 19)));
-      const _ = (0, _._)(async function (_) {
-          if (_[_]) return _[_]();
-        }),
-        _ = _.Localize;
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-        Label: function (_) {
-          const { appid: _, property: _ } = _,
-            { data: _ } = _(_),
-            _ = null == _ ? void 0 : _.get(_.propertyid);
-          return _ ? _.localized_label : null;
-        },
-        Value: _,
-      };
-      const _ = Object.assign(function (_) {
-        const { appid: _, property: _, ..._ } = _,
-          { data: _ } = _(_),
-          _ = null == _ ? void 0 : _.get(_.propertyid);
-        return !_ || _.hide_from_description
-          ? null
-          : (0, _.jsx)(_._, {
-              _: "div",
-              ..._,
-              children: _.LocalizeReact(
-                "#ItemDescription_AssetPropertyLabelColonValue",
-                _.localized_label,
-                (0, _.jsx)(_._, {
-                  whiteSpace: "pre-wrap",
-                  children: (0, _.jsx)(_, {
-                    property: _,
-                  }),
-                }),
-              ),
-            });
-      }, _);
-      function _(_) {
-        const { property: _ } = _;
-        if (void 0 !== _.float_value) {
-          const _ =
-            "string" == typeof _.float_value
-              ? parseFloat(_.float_value)
-              : _.float_value;
-          let _ = 9;
-          return (
-            _ > 0 &&
-              (_ < 1e-28
-                ? (_ = 47)
-                : _ < 1e-18
-                  ? (_ = 35)
-                  : _ < 1e-12
-                    ? (_ = 21)
-                    : _ < 1e-5 && (_ = 15)),
-            _.toLocaleString((0, _._)(), {
-              maximumFractionDigits: _,
-            })
-          );
-        }
-        return void 0 !== _.int_value
-          ? Number(_.int_value).toLocaleString((0, _._)())
-          : void 0 !== _.string_value
-            ? _.string_value
-            : null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { icon_url: _, icon_url_large: _ } = _;
@@ -316,6 +143,10 @@
         var _;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -448,6 +279,175 @@
               }),
             })
           : null;
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _ = _._.LANGUAGE) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          ..._(_, _, _, _),
+          enabled: !!_,
+        });
+      }
+      function _(_, _, _, _) {
+        return {
+          queryKey: ["AssetPropertySchemaMap", _, _],
+          queryFn: async () => {
+            const _ = await _.fetchQuery(_(_, _, _)),
+              _ = new Map();
+            return _.property_schemas.forEach((_) => _.set(_._, _)), _;
+          },
+        };
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["AssetPropertySchema", _, _],
+          queryFn: async () => {
+            var _;
+            const _ = await _._.GetAssetPropertySchema(_, {
+              appid: _,
+              language: _,
+            });
+            if (!_.BSuccess() && _.GetEResult() != _._)
+              throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
+            return {
+              property_schemas:
+                null !== (_ = _.Body().toObject().property_schemas) &&
+                void 0 !== _
+                  ? _
+                  : [],
+            };
+          },
+        };
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 11992, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 92087, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 41472, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 17430, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 37498, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 16847, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 87093, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 610, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 84731, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 3385, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 6389, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 34100, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 21559, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 22965, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 19732, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 76766, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 40182, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 88597, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 5353, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 58926, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 8374, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 77752, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 28128, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 55610, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 62787, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 28549, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 56052, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 2352, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 19365, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 90125, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 61071, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 61716, 19)));
+      const _ = (0, _._)(async function (_) {
+          if (_[_]) return _[_]();
+        }),
+        _ = _.Localize;
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+        Label: function (_) {
+          const { appid: _, property: _ } = _,
+            { data: _ } = _(_),
+            _ = null == _ ? void 0 : _.get(_.propertyid);
+          return _ ? _.localized_label : null;
+        },
+        Value: _,
+      };
+      const _ = Object.assign(function (_) {
+        const { appid: _, property: _, ..._ } = _,
+          { data: _ } = _(_),
+          _ = null == _ ? void 0 : _.get(_.propertyid);
+        return !_ || _.hide_from_description
+          ? null
+          : (0, _.jsx)(_._, {
+              _: "div",
+              ..._,
+              children: _.LocalizeReact(
+                "#ItemDescription_AssetPropertyLabelColonValue",
+                _.localized_label,
+                (0, _.jsx)(_._, {
+                  whiteSpace: "pre-wrap",
+                  children: (0, _.jsx)(_, {
+                    property: _,
+                  }),
+                }),
+              ),
+            });
+      }, _);
+      function _(_) {
+        const { property: _ } = _;
+        if (void 0 !== _.float_value) {
+          const _ =
+            "string" == typeof _.float_value
+              ? parseFloat(_.float_value)
+              : _.float_value;
+          let _ = 9;
+          return (
+            _ > 0 &&
+              (_ < 1e-28
+                ? (_ = 47)
+                : _ < 1e-18
+                  ? (_ = 35)
+                  : _ < 1e-12
+                    ? (_ = 21)
+                    : _ < 1e-5 && (_ = 15)),
+            _.toLocaleString((0, _._)(), {
+              maximumFractionDigits: _,
+            })
+          );
+        }
+        return void 0 !== _.int_value
+          ? Number(_.int_value).toLocaleString((0, _._)())
+          : void 0 !== _.string_value
+            ? _.string_value
+            : null;
       }
       function _(_) {
         const { appid: _, accessory: _ } = _,
@@ -1095,6 +1095,24 @@
         }
       }
       var _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _.jsxs)(_._, {
+          position: "relative",
+          title: _("#ItemDescription_ListedItemTooltip"),
+          children: [
+            (0, _.jsx)(_._, {
+              className: _.ListedItemLabel,
+              children: _("#ItemDescription_ListedItem"),
+            }),
+            (0, _.jsx)(_._, {
+              className: _.ListedItemIcon,
+              alt: _("#ItemDescription_ListedItem"),
+              src: `${_._.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             eWalletCurrency: _,
@@ -1219,24 +1237,6 @@
               className: _.TradeProtectionIcon,
               alt: _("#ItemDescription_TradeProtected"),
               src: `${_._.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        return (0, _.jsxs)(_._, {
-          position: "relative",
-          title: _("#ItemDescription_ListedItemTooltip"),
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.ListedItemLabel,
-              children: _("#ItemDescription_ListedItem"),
-            }),
-            (0, _.jsx)(_._, {
-              className: _.ListedItemIcon,
-              alt: _("#ItemDescription_ListedItem"),
-              src: `${_._.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
             }),
           ],
         });
@@ -5009,7 +5009,7 @@
           _ = _.length > 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           popoverMaxHeight: 500,
@@ -6344,7 +6344,7 @@
         }
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6441,7 +6441,7 @@
             : void 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6567,7 +6567,7 @@
         }
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6859,7 +6859,7 @@
           _ = _.length > 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -6916,7 +6916,7 @@
           _ = _.length > 0;
         return (0, _.jsxs)(_._.Root, {
           state: _,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [

@@ -18384,7 +18384,7 @@
         Td = a(99487),
         Id = a(38677),
         Gd = a(39199),
-        Ad = a(30211),
+        Ad = a(28241),
         Nd = a(40353);
       function Md(e) {
         const { eventModel: t, nEventBadgeID: a } = e,
@@ -19021,7 +19021,7 @@
       function S(e) {
         var t, a;
         const { editModel: _ } = e,
-          [S, x] = i.useState(h.FH6),
+          [S, x] = i.useState(h.xPp),
           [j, b] = i.useState(!1),
           [w, C] = i.useState(null),
           f = _.GetClanSteamID(),

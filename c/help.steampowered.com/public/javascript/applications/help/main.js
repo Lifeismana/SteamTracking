@@ -174,6 +174,23 @@
     },
     chunkid: (module) => {
       module.exports = {
+        DynamicLinkBox: "_3OFDUxRty2ooEGGBg8vLNM",
+        DynamicLink_Preview: "_4x92ciMecfHsd6LXEp3zX",
+        DynamicLink_Author: "_2CrHQnyBFUGqFf-6TbIsUA",
+        DynamicLink_Description: "_1iv64lWG6UxhSX400UsU1S",
+        DynamicLink_YouTubeEmbed: "_3Jd9PKMuBGuSbDBCsV03Oo",
+        DynamicLink_StoreWidget: "uvn7ESAm1Jwm-SOwZmBWO",
+        DynamicLink_Content: "_29vvBvtM17Ec_19L9VJZdk",
+        DynamicLink_Name: "_25KAQjQwrv2EL8tnlLeTB7",
+        DynamicLink_YoutubeViews: "_3ZgvwxMMqbe_8wVfRiQ9kq",
+        Dynamiclink_Content: "_3UUlLNsS9oZt2zNHM5T76z",
+        DynamicLink_URL: "_9135FDWNKXjIolFAo7Gub",
+        DynamicLink_AuthorName: "_6R7Q24Jlkhs_t0fYUHxQx",
+        DynamicLink_Date: "_15wEuEj-SyCZ4J4hJqtmgD",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         FocusRingRoot: "_3FIjYetykQsFYR08l1v7Ls",
         FocusRing: "_1wPplsegQqCoe06wXPhzKT",
         flash: "_1RqM3Kl3-lPbdsdw6xcEm9",
@@ -336,17 +353,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        DynamicLinkBox: "_1IGURymjmwZOxJLS-9BWKA",
-        DynamicLink_Preview: "_3ZK9RP26kmOzqRdQKxWxsM",
-        DynamicLink_Author: "_3z0n0rpIPJRdV1QY5n0KaR",
-        DynamicLink_Description: "eMdGA7SU6zikUSu6rf7Pr",
-        DynamicLink_Content: "_2FhVXotuJg4O0NN4qA07vU",
-        DynamicLink_Name: "_1R7Ngck7T0RkTPGRUaq6Gr",
-        DynamicLink_YoutubeViews: "_3clz2a9swd9PcLG0xSDhHt",
-        Dynamiclink_Content: "_1EYgVQdGSl6VonVuGGfDuy",
-        DynamicLink_URL: "_3otyzgmxRyTsMj5ALOf07p",
-        DynamicLink_AuthorName: "_2DML9COLsaSXjOzYcbtFXP",
-        DynamicLink_Date: "_281DhmZR9c9ZDwpNqPc5_3",
         PreviewYouTubeVideo: "rUASsQgg0rvqoACIDRygZ",
         sizeThumb: "_3dy3KtMG10uNhU2HRfwx3A",
         sizeFull: "_14CxWorQ1RNkZvdhXYWAh-",
@@ -14486,18 +14492,13 @@
         }
       }
       class _ extends _ {
-        m_nStartCursor = 1;
-        constructor(_, _, _) {
-          super(_), (this.m_nStartCursor = void 0 !== _ ? _ : 1);
+        constructor(_) {
+          super(_);
         }
         AppendText(_) {
           let _ = _;
           const _ = [];
-          for (
-            let _ = _.indexOf("\n", this.m_nStartCursor);
-            -1 !== _;
-            _ = _.indexOf("\n")
-          )
+          for (let _ = _.indexOf("\n"); -1 !== _; _ = _.indexOf("\n"))
             __webpack_require__.push(_.substr(0, _)),
               __webpack_require__.push(_.createElement("br")),
               (_ = _.substr(_ + 1));
@@ -16145,7 +16146,44 @@
         (0, _._)([_._], _.prototype, "OnPlayerLeftView", null),
         (0, _._)([_._], _.prototype, "PlayVideo", null);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        Box: _.DynamicLinkBox,
+        Preview: _.DynamicLink_Preview,
+        Type: _.DynamicLink_Type,
+      };
+      function _(_) {
+        return (0, _.jsx)("img", {
+          className: _.DynamicLink_Preview,
+          src: _.strURL,
+          alt: _.strAlt ?? "",
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: _.DynamicLink_Content,
+          children: _.children,
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: _.DynamicLink_Name,
+          children: _.children,
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: _.DynamicLink_YoutubeViews,
+          children: _.children,
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: _.Dynamiclink_Content,
+          children: _.children,
+        });
+      }
       function _(_) {
         const {
             videoID: _,
@@ -16189,29 +16227,24 @@
             _ = _.views,
             _ = _.description;
           return (0, _.jsxs)("div", {
-            className: _().DynamicLinkBox,
+            className: _.Box,
             onClick: () => _(!1),
             children: [
-              (0, _.jsx)("img", {
-                className: _().DynamicLink_Preview,
-                src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
+              (0, _.jsx)(_, {
+                strURL: "https://img.youtube.com/vi/" + _ + "/0.jpg",
               }),
-              (0, _.jsxs)("div", {
-                className: _().DynamicLink_Content,
+              (0, _.jsxs)(_, {
                 children: [
-                  (0, _.jsx)("div", {
-                    className: _().DynamicLink_Name,
+                  (0, _.jsx)(_, {
                     children: (0, _._)("#EventEditor_YouTubeVideoTitle", _),
                   }),
-                  (0, _.jsx)("div", {
-                    className: _().DynamicLink_YoutubeViews,
+                  (0, _.jsx)(_, {
                     children: (0, _._)(
                       "#EventEditor_YouTubeVideoViews",
                       _(Number(_)),
                     ),
                   }),
-                  (0, _.jsxs)("div", {
-                    className: _().Dynamiclink_Content,
+                  (0, _.jsxs)(_, {
                     children: [
                       _ && _,
                       !_ &&
@@ -18350,7 +18383,8 @@
               reject: _,
             };
           })();
-          let _ = new Image();
+          let _,
+            _ = new Image();
           (_.crossOrigin = "anonymous"),
             (_.onerror = (_) => {
               const _ = {
@@ -18370,23 +18404,32 @@
               const _ = {
                 success: _._,
               };
-              (_.width = _.width),
+              if (
+                ((_.width = _.width),
                 (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
-                ),
-                (_.success = _._),
-                _.resolve(_);
+                !(_.width > 0 && _.height > 0))
+              )
+                return (
+                  (0, _._)(
+                    !1,
+                    "unexpected image resolution discovered for strURL: " + _,
+                  ),
+                  (_.err_msg = "No resolution reported for url " + _),
+                  void _.resolve(_)
+                );
+              (_.success = _._), _.resolve(_);
             }),
             (_.src = _),
             _.token.promise.catch(() => {
-              const _ = {
-                success: _._,
-              };
-              return (_.onload = () => {}), (_.success = _._), _;
+              (_.onload = () => {}),
+                (_.onerror = () => {}),
+                _.resolve({
+                  success: _._,
+                });
             });
-          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+          const _ = new Promise((_, _) => {
+            _ = setTimeout(() => _(), 1e4);
+          });
           let _;
           try {
             _ = await Promise.race([_, _.promise]);
@@ -18395,6 +18438,8 @@
               success: _._,
               err_msg: "We timed out processing images",
             };
+          } finally {
+            clearTimeout(_);
           }
           return _;
         },
@@ -32430,7 +32475,7 @@
               (_) =>
                 new _(
                   new _(
-                    new _(new _(), 0),
+                    new _(new _()),
                     _,
                     [
                       {
@@ -32984,7 +33029,13 @@
           defaultTextSize: _,
           accentColor: _ = "blue",
           dullColor: _ = "greyneutral",
+          successColor: _ = "green",
+          warningColor: _ = "yellow",
+          errorColor: _ = "red",
           bodyTextColor: _ = "text-light",
+          successTextColor: _ = "text-green",
+          warningTextColor: _ = "text-red",
+          errorTextColor: _ = "text-red",
           breakpoints: _,
           variants: _,
           children: _,
@@ -33008,7 +33059,13 @@
                   children: (0, _.jsxs)(_._, {
                     accentColor: _,
                     dullColor: _,
+                    successColor: _,
+                    warningColor: _,
+                    errorColor: _,
                     bodyTextColor: _,
+                    successTextColor: _,
+                    warningTextColor: _,
+                    errorTextColor: _,
                     variants: _,
                     children: [_, !1],
                   }),
@@ -33236,14 +33293,22 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      const _ = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+      const _ = ["title", "subtitle", "body", "description", "note"];
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             accentColor: _,
             dullColor: _,
             bodyTextColor: _,
+            successColor: _,
+            warningColor: _,
+            errorColor: _,
+            successTextColor: _,
+            warningTextColor: _,
+            errorTextColor: _,
             children: _,
             breakpoints: _,
             variants: _,
@@ -33254,13 +33319,13 @@
         let _, _, _;
         "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
           "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
-          "string" == typeof _
-            ? (_ = _)
-            : _ &&
-              (function (_, _) {
-                for (const [_, _] of Object.entries(_))
-                  _[`--color-text-body-${_}`] = _;
-              })(_, _);
+          "string" == typeof _ ? (_ = _) : _ && _(_, "body", _),
+          _ && _(_, "success", _),
+          _ && _(_, "warning", _),
+          _ && _(_, "error", _),
+          _ && _(_, "success", _),
+          _ && _(_, "warning", _),
+          _ && _(_, "error", _);
         const _ = (0, _.jsx)(_._, {
           variants: _,
           children: (0, _.jsx)("div", {
@@ -33285,7 +33350,17 @@
           : _;
       }
       function _(_, _, _) {
-        for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+        if ("string" == typeof _)
+          for (const _ of _) _[`--color-${_}-${_}`] = `var(--color-${_}-${_})`;
+        else for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+      }
+      function _(_, _, _) {
+        if ("string" == typeof _)
+          for (const _ of _)
+            _[`--color-text-${_}-${_}`] = `var(--color-${_}-${_})`;
+        else
+          for (const [_, _] of Object.entries(_))
+            _[`--color-text-${_}-${_}`] = _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -34761,7 +34836,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(function (_) {
         return {
@@ -34848,7 +34922,8 @@
           _
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.createContext(null),
         _ = _.createContext(_._);
       function _(_) {
@@ -41481,11 +41556,19 @@
             LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
             Ready: () => _,
             IsReady: () => _,
-            HasKey: (_) =>
-              _().languages.some((_) => {
-                const _ = _.get(_.strLanguage);
-                return !!_ && _.has(_);
-              }),
+            HasKey(_) {
+              const _ = _().languages,
+                _ = [
+                  ...__webpack_require__.map((_) => _.strLanguage),
+                  (0, _._)(_[0].strLanguage),
+                ];
+              for (const _ of _) {
+                if (!_) continue;
+                const _ = _.get(_);
+                if (_ && _.has(_)) return !0;
+              }
+              return !1;
+            },
           }
         );
       }
@@ -61414,6 +61497,11 @@
                     _: 2,
                     _,
                   },
+                  award_year: {
+                    _: 3,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -64674,6 +64762,12 @@
                   },
                   include_extra_details: {
                     _: 18,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_best_purchase_option: {
+                    _: 19,
+                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -69292,6 +69386,10 @@
                 "supported_languages",
                 _,
               );
+            })(_, _, _, _),
+          _.include_extra_details &&
+            (function (_, _, _, _) {
+              _(_, _, _, "include_extra_details", "extra_details", _);
             })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -83964,7 +84062,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 72815), _((_._ = _));
+      return (_ = 77699), _((_._ = _));
       var _;
     });
     _._();

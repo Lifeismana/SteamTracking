@@ -594,6 +594,7 @@
             onDismiss: _,
             className: _,
             modalClassName: _,
+            bGamepadUIScrollWithin: _,
             children: _,
             ..._
           } = _,
@@ -607,6 +608,7 @@
             children: (0, _.jsx)(_._, {
               onEscKeypress: _,
               className: _,
+              bGamepadUIScrollWithin: _,
               children: (0, _.jsx)(_._, {
                 role: "dialog",
                 "aria-labelledby": _,

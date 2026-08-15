@@ -1607,11 +1607,11 @@ div._3GQSHzQ_gLmxZXo_aRkgdu {
   --text-color: #e3e3e3;
   --text-muted-color: #afafaf;
   --padding: 0;
-  border-bottom: 1px solid var(--color-dull-11);
+  border-bottom: 1px solid var(--status-outline-color, var(--color-dull-11));
 }
 :where(.yV_Aq5WutzzittgbOJ1R-)._1cd-wdIp5lIWsydAxII-vY:focus,
 :where(.yV_Aq5WutzzittgbOJ1R-)._1cd-wdIp5lIWsydAxII-vY:focus-within {
-  border-color: var(--color-accent-8);
+  border-color: var(--status-outline-color, var(--color-accent-8));
 }
 :where(._2qQgKJgeeqc9lEI-i7HdsM) {
   --bg-color: var(--color-dull-6);
@@ -1706,6 +1706,22 @@ div._3GQSHzQ_gLmxZXo_aRkgdu {
   --font-size: var(--text-size-4);
   --line-height: var(--line-height-4);
   --letter-spacing: var(--letter-spacing-4);
+}
+:where([data-status="highlight"]) {
+  --status-outline-color: var(--color-accent-8);
+}
+:where([data-status="error"]) {
+  --status-outline-color: var(--color-error-9);
+}
+:where([data-status="warning"]) {
+  --status-outline-color: var(--color-warning-9);
+}
+:where([data-status="success"]) {
+  --status-outline-color: var(--color-success-9);
+}
+:where([data-status]:not(.yV_Aq5WutzzittgbOJ1R-)) {
+  outline: 1px solid var(--status-outline-color);
+  outline-offset: -1px;
 }
 ._2Vc3a-PM4tOhJcD72NEq1U {
   color: var(--icon-color);

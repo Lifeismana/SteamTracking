@@ -114,9 +114,10 @@
         },
         async AsyncGetImageResolutionInternal(e, t, n) {
           const r = (0, a.x0)();
-          let s = new Image();
-          (s.crossOrigin = "anonymous"),
-            (s.onerror = (t) => {
+          let s,
+            i = new Image();
+          (i.crossOrigin = "anonymous"),
+            (i.onerror = (t) => {
               const s = { success: o.zi };
               n ||
                 ((s.err_msg =
@@ -128,30 +129,41 @@
                 (s.success = o.zi),
                 r.resolve(s);
             }),
-            (s.onload = () => {
+            (i.onload = () => {
               const t = { success: o.zi };
-              (t.width = s.width),
-                (t.height = s.height),
-                (0, u.wT)(
-                  t.width > 0 && t.height > 0,
-                  "unexpected image resolution discovered for strURL: " + e,
-                ),
-                (t.success = o.R),
-                r.resolve(t);
+              if (
+                ((t.width = i.width),
+                (t.height = i.height),
+                !(i.width > 0 && i.height > 0))
+              )
+                return (
+                  (0, u.wT)(
+                    !1,
+                    "unexpected image resolution discovered for strURL: " + e,
+                  ),
+                  (t.err_msg = "No resolution reported for url " + e),
+                  void r.resolve(t)
+                );
+              (t.success = o.R), r.resolve(t);
             }),
-            (s.src = e),
+            (i.src = e),
             t.token.promise.catch(() => {
-              const e = { success: o.zi };
-              return (s.onload = () => {}), (e.success = o.e9), e;
+              (i.onload = () => {}),
+                (i.onerror = () => {}),
+                r.resolve({ success: o.e9 });
             });
-          const i = new Promise((e, t) => setTimeout(() => t(), 1e4));
-          let l;
+          const l = new Promise((e, t) => {
+            s = setTimeout(() => t(), 1e4);
+          });
+          let d;
           try {
-            l = await Promise.race([i, r.promise]);
+            d = await Promise.race([l, r.promise]);
           } catch {
-            l = { success: o._3, err_msg: "We timed out processing images" };
+            d = { success: o._3, err_msg: "We timed out processing images" };
+          } finally {
+            clearTimeout(s);
           }
-          return l;
+          return d;
         },
         BIsClanImageVideo: (e) =>
           e.file_type == l.bg.nn || e.file_type == l.bg.pJ,

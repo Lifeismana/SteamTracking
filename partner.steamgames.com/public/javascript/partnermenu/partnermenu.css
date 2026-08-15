@@ -30,6 +30,7 @@
   padding: 3px;
   font-family:
     Motiva Sans,
+    Motiva Sans fallback,
     sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -550,6 +551,7 @@
 .fpNWm3zuqLw- {
   font-family:
     Motiva Sans,
+    Motiva Sans fallback,
     sans-serif;
 }
 .mLkCqW8GD1s- {

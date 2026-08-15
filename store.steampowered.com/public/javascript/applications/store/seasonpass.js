@@ -96,7 +96,7 @@
         G = t(78327),
         E = t(79613);
       function B(e) {
-        return new j.OJ(new j.R8(), 0);
+        return new j.OJ(new j.R8());
       }
       function C(e) {
         const { text: s, languageOverride: t } = e,

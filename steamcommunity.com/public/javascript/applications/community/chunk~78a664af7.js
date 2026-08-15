@@ -590,8 +590,8 @@
         });
       }
       var N = r(64115),
-        I = r(98580),
-        E = r.n(I),
+        E = r(98580),
+        I = r.n(E),
         U = r(59884),
         F = r.n(U),
         O = r(55388);
@@ -1300,15 +1300,18 @@
           [y, B] = (0, S.useState)(!1),
           [w, T] = (0, S.useState)(A.HH),
           [M, k] = (0, S.useState)(""),
-          z = c || d || h || _ || j || x || y,
-          L =
-            ((R = e.authorSteamID),
+          z =
+            void 0 !== e.rtContentCreatedAt &&
+            (Date.now() / 1e3 - e.rtContentCreatedAt) / 2592e3,
+          L = c || d || h || _ || j || x || y,
+          R =
+            ((E = e.authorSteamID),
             (0, K.I)({
-              queryKey: ["get_primary_language_for_user", R],
+              queryKey: ["get_primary_language_for_user", E],
               queryFn: async () => {
-                if ("0" === R || !R) throw new Error("Invalid steamid");
+                if ("0" === E || !E) throw new Error("Invalid steamid");
                 const e = await fetch(
-                    `${m.TS.COMMUNITY_BASE_URL}profiles/${R}/ajaxlanguagepreferences`,
+                    `${m.TS.COMMUNITY_BASE_URL}profiles/${E}/ajaxlanguagepreferences`,
                   ),
                   t = await e.json();
                 if (t.success === V.R) return t.preferences;
@@ -1317,17 +1320,17 @@
                 );
               },
             }));
-        var R;
-        let I = G.Bhc;
-        if (L.isSuccess) {
-          const e = L.data;
+        var E;
+        let U = G.Bhc;
+        if (R.isSuccess) {
+          const e = R.data;
           void 0 !== e.pref_primary_language && -1 !== e.pref_primary_language
-            ? (I = e.pref_primary_language)
+            ? (U = e.pref_primary_language)
             : void 0 !== e.last_logon_langauge &&
               -1 !== e.last_logon_langauge &&
-              (I = e.last_logon_langauge);
+              (U = e.last_logon_langauge);
         }
-        const U = (function (e, t) {
+        const F = (function (e, t) {
           const r = (0, ae.KV)();
           return (0, K.I)({
             queryKey: ["get_quick_text", e, t],
@@ -1345,7 +1348,7 @@
             },
             enabled: void 0 !== e,
           });
-        })((0, i.AH)(t), I);
+        })((0, i.AH)(t), U);
         (0, S.useEffect)(() => {
           var e, t, r, n, s, i, a;
           k(
@@ -1357,7 +1360,7 @@
                       (r =
                         null ===
                           (t =
-                            null === (e = U.data) || void 0 === e
+                            null === (e = F.data) || void 0 === e
                               ? void 0
                               : e.quicktext) || void 0 === t
                           ? void 0
@@ -1367,7 +1370,7 @@
                   ? n
                   : null ===
                         (i =
-                          null === (s = U.data) || void 0 === s
+                          null === (s = F.data) || void 0 === s
                             ? void 0
                             : s.english_reference) || void 0 === i
                     ? void 0
@@ -1375,10 +1378,10 @@
               ? a
               : "",
           );
-        }, [U.data, L.data]);
-        const F = !1,
-          Q = !1,
-          H = !1;
+        }, [F.data, R.data]);
+        const Q = !1,
+          H = !1,
+          J = !1;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             "reason" === a &&
@@ -1392,11 +1395,11 @@
               (0, n.jsxs)(C.Z, {
                 children: [
                   (0, n.jsxs)(C.Z, {
-                    className: E().SanctionForm,
+                    className: I().SanctionForm,
                     children: [
                       e.sanctionMutation.isError &&
                         (0, n.jsxs)("div", {
-                          className: (0, W.A)(E().OneColumn, E().ErrorMessage),
+                          className: (0, W.A)(I().OneColumn, I().ErrorMessage),
                           children: [
                             (0, n.jsx)(oe.Q9b, {}),
                             " Error: ",
@@ -1409,7 +1412,7 @@
                       }),
                       (0, n.jsx)("button", {
                         id: "reason",
-                        className: E().ClickableText,
+                        className: I().ClickableText,
                         onClick: () => o("reason"),
                         children:
                           null === t
@@ -1419,7 +1422,7 @@
                             : (0, i.Jt)(t),
                       }),
                       (0, n.jsxs)("label", {
-                        className: E().OneColumn,
+                        className: I().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
@@ -1430,7 +1433,7 @@
                         ],
                       }),
                       (0, n.jsxs)("label", {
-                        className: E().OneColumn,
+                        className: I().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
@@ -1440,6 +1443,15 @@
                           " Issue Warning",
                         ],
                       }),
+                      z &&
+                        !!h &&
+                        (0, n.jsxs)("div", {
+                          className: (0, W.A)(I().OneColumn, I().ErrorMessage),
+                          children: [
+                            (0, n.jsx)(oe.Q9b, {}),
+                            " Content is older than 30 days. Are you sure you want to ban?",
+                          ],
+                        }),
                       e.clanSteamID &&
                         (0, n.jsxs)(n.Fragment, {
                           children: [
@@ -1495,7 +1507,16 @@
                                 }),
                               ],
                             }),
-                            F,
+                            Q,
+                          ],
+                        }),
+                      z &&
+                        !!_ &&
+                        (0, n.jsxs)("div", {
+                          className: (0, W.A)(I().OneColumn, I().ErrorMessage),
+                          children: [
+                            (0, n.jsx)(oe.Q9b, {}),
+                            " Content is older than 30 days. Are you sure you want to ban?",
                           ],
                         }),
                       (0, n.jsx)("label", {
@@ -1550,7 +1571,7 @@
                           }),
                         ],
                       }),
-                      Q,
+                      H,
                       (0, n.jsx)("label", {
                         htmlFor: "deletecomments",
                         children: "Delete comments since:",
@@ -1593,7 +1614,7 @@
                         ],
                       }),
                       (0, n.jsxs)("span", {
-                        className: E().OneColumn,
+                        className: I().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
@@ -1603,9 +1624,9 @@
                           " Permanent trade ban",
                         ],
                       }),
-                      H,
+                      J,
                       (0, n.jsxs)("span", {
-                        className: E().OneColumn,
+                        className: I().OneColumn,
                         children: [
                           (0, n.jsx)("input", {
                             type: "checkbox",
@@ -1639,7 +1660,7 @@
                         ],
                       }),
                       (0, n.jsx)("textarea", {
-                        className: (0, W.A)(E().OneColumn, E().MessageTextArea),
+                        className: (0, W.A)(I().OneColumn, I().MessageTextArea),
                         placeholder: "Message to send (required)",
                         value: M,
                         onChange: (e) => k(e.target.value),
@@ -1647,7 +1668,7 @@
                     ],
                   }),
                   (0, n.jsxs)(C.Z, {
-                    className: E().BottomButtons,
+                    className: I().BottomButtons,
                     children: [
                       e.sanctionMutation.isPending &&
                         (0, n.jsx)(u.t, { size: "small" }),
@@ -1690,7 +1711,7 @@
                                   e.onSanction();
                               },
                               disabled:
-                                null === t || !z || 0 === M.trim().length,
+                                null === t || !L || 0 === M.trim().length,
                               children: "Sanction",
                             }),
                           ],
@@ -2630,7 +2651,8 @@
             await s.fL.SustainModeration(e, r);
           },
           onSuccess: async (e, r) => {
-            await m(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
+            await t.invalidateQueries({ queryKey: ["get_claimed"] }),
+              await m(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
           },
         });
       }

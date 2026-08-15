@@ -51,19 +51,13 @@
         }
       }
       class c extends a {
-        constructor(e, t, n) {
-          super(e),
-            (this.m_nStartCursor = 1),
-            (this.m_nStartCursor = void 0 !== t ? t : 1);
+        constructor(e) {
+          super(e);
         }
         AppendText(e) {
           let t = e;
           const n = [];
-          for (
-            let e = t.indexOf("\n", this.m_nStartCursor);
-            -1 !== e;
-            e = t.indexOf("\n")
-          )
+          for (let e = t.indexOf("\n"); -1 !== e; e = t.indexOf("\n"))
             n.push(t.substr(0, e)),
               n.push(o.createElement("br")),
               (t = t.substr(e + 1));
@@ -238,11 +232,12 @@
           return n.GetElements();
         }
       }
-      function o(e, t) {
-        let n = "[" + e;
-        (null == t ? void 0 : t[""]) && (n += `=${s("" + t[""])}`);
-        for (const e in t) "" !== e && (n += ` ${a(e)}=${s("" + t[e])}`);
-        return (n += "]"), n;
+      function o(e, t, n = !1) {
+        let r = "[" + e;
+        (null == t ? void 0 : t[""]) &&
+          (r += `=${n ? "" + t[""] : s("" + t[""])}`);
+        for (const e in t) "" !== e && (r += ` ${a(e)}=${s("" + t[e])}`);
+        return (r += "]"), r;
       }
       function s(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;

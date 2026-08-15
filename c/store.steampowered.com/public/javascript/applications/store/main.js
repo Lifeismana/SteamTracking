@@ -1272,14 +1272,22 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      const _ = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+      const _ = ["title", "subtitle", "body", "description", "note"];
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             accentColor: _,
             dullColor: _,
             bodyTextColor: _,
+            successColor: _,
+            warningColor: _,
+            errorColor: _,
+            successTextColor: _,
+            warningTextColor: _,
+            errorTextColor: _,
             children: _,
             breakpoints: _,
             variants: _,
@@ -1290,13 +1298,13 @@
         let _, _, _;
         "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
           "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
-          "string" == typeof _
-            ? (_ = _)
-            : _ &&
-              (function (_, _) {
-                for (const [_, _] of Object.entries(_))
-                  _[`--color-text-body-${_}`] = _;
-              })(_, _);
+          "string" == typeof _ ? (_ = _) : _ && _(_, "body", _),
+          _ && _(_, "success", _),
+          _ && _(_, "warning", _),
+          _ && _(_, "error", _),
+          _ && _(_, "success", _),
+          _ && _(_, "warning", _),
+          _ && _(_, "error", _);
         const _ = (0, _.jsx)(_._, {
           variants: _,
           children: (0, _.jsx)("div", {
@@ -1321,7 +1329,17 @@
           : _;
       }
       function _(_, _, _) {
-        for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+        if ("string" == typeof _)
+          for (const _ of _) _[`--color-${_}-${_}`] = `var(--color-${_}-${_})`;
+        else for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+      }
+      function _(_, _, _) {
+        if ("string" == typeof _)
+          for (const _ of _)
+            _[`--color-text-${_}-${_}`] = `var(--color-${_}-${_})`;
+        else
+          for (const [_, _] of Object.entries(_))
+            _[`--color-text-${_}-${_}`] = _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1483,7 +1501,13 @@
           defaultTextSize: _,
           accentColor: _ = "blue",
           dullColor: _ = "greyneutral",
+          successColor: _ = "green",
+          warningColor: _ = "yellow",
+          errorColor: _ = "red",
           bodyTextColor: _ = "text-light",
+          successTextColor: _ = "text-green",
+          warningTextColor: _ = "text-red",
+          errorTextColor: _ = "text-red",
           breakpoints: _,
           variants: _,
           children: _,
@@ -1507,7 +1531,13 @@
                   children: (0, _.jsxs)(_._, {
                     accentColor: _,
                     dullColor: _,
+                    successColor: _,
+                    warningColor: _,
+                    errorColor: _,
                     bodyTextColor: _,
+                    successTextColor: _,
+                    warningTextColor: _,
+                    errorTextColor: _,
                     variants: _,
                     children: [_, !1],
                   }),
@@ -2108,6 +2138,7 @@
         $ys: () => _,
         A2g: () => _,
         A4L: () => _,
+        ADn: () => _,
         Aav: () => _,
         Aqr: () => _,
         B3I: () => _,
@@ -2116,6 +2147,7 @@
         C$4: () => _,
         C0f: () => _,
         CII: () => _,
+        CvG: () => _,
         DEQ: () => _,
         DFD: () => _,
         DOG: () => _,
@@ -2126,6 +2158,7 @@
         FH6: () => _,
         FHN: () => _,
         Fa4: () => _,
+        Fcm: () => _,
         FpT: () => _,
         Fwr: () => _,
         GXE: () => _,
@@ -2150,6 +2183,7 @@
         LS$: () => _,
         LgB: () => _,
         Lzz: () => _,
+        Me_: () => _,
         MhR: () => _,
         NFp: () => _,
         Ner: () => _,
@@ -2163,6 +2197,7 @@
         Pn1: () => _,
         PrD: () => _,
         Pw_: () => _,
+        QPp: () => _,
         QT4: () => _,
         R2g: () => _,
         RhO: () => _,
@@ -2270,6 +2305,7 @@
         _: () => _,
         yhO: () => _,
         yrU: () => _,
+        z41: () => _,
         _: () => _,
         zWR: () => _,
         zcX: () => _,
@@ -2286,7 +2322,13 @@
         _ = 5,
         _ = 6,
         _ = 7,
-        _ = 5;
+        _ = 0,
+        _ = 1,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 9,
+        _ = 10;
       var _, _, _;
       !(function (_) {
         (_[(_.kPFIFlag_MicroTransactionFile = 1)] =
@@ -9047,9 +9089,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.createContext(null),
         _ = _.createContext(_._);
       function _(_) {
@@ -16666,11 +16708,19 @@
             LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
             Ready: () => _,
             IsReady: () => _,
-            HasKey: (_) =>
-              _().languages.some((_) => {
-                const _ = _.get(_.strLanguage);
-                return !!_ && _.has(_);
-              }),
+            HasKey(_) {
+              const _ = _().languages,
+                _ = [
+                  ...__webpack_require__.map((_) => _.strLanguage),
+                  (0, _._)(_[0].strLanguage),
+                ];
+              for (const _ of _) {
+                if (!_) continue;
+                const _ = _.get(_);
+                if (_ && _.has(_)) return !0;
+              }
+              return !1;
+            },
           }
         );
       }
@@ -45019,6 +45069,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = {};
       __webpack_require__._(_),
@@ -45037,6 +45088,11 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
           _: () => _,
         });
       var _ = {};
@@ -45075,6 +45131,7 @@
         _ = 1,
         _ = 2,
         _ = 3,
+        _ = 1,
         _ = 1003,
         _ = 1004,
         _ = 1005,
@@ -50704,6 +50761,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
       var _ = {};
       __webpack_require__._(_),
@@ -50847,6 +50905,11 @@
                     _: 2,
                     _: _,
                   },
+                  award_year: {
+                    _: 3,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -50910,6 +50973,7 @@
         _ = 12,
         _ = 13,
         _ = 14,
+        _ = 0,
         _ = 5,
         _ = 6,
         _ = 7,
@@ -54161,6 +54225,12 @@
                   },
                   include_extra_details: {
                     _: 18,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_best_purchase_option: {
+                    _: 19,
+                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -61766,6 +61836,7 @@
         _: () => _,
         _: () => _,
         _: () => _._,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -61892,6 +61963,23 @@
             }),
           _.current.value
         );
+      }
+      function _(_, ..._) {
+        let _,
+          _ = [],
+          _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs"),
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          (_ += _[0].length), _.push(_[1]);
+          let _ = parseInt(_[2]),
+            _ = _[3] || "",
+            _ = _(_, ..._),
+            _ = (_ >= 1 && _ <= _.length ? _[_ - 1] : null)
+              ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
+              : _;
+          _.push(_);
+        }
+        return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
       }
       function _(_) {
         const _ = _.useRef(_);
@@ -62627,8 +62715,14 @@
         static InitFromClanID(_, _) {
           return new _(Number(_), _, _.P3F, 0);
         }
+        static ToAccountID(_) {
+          return _.ExtractAccountID(_._.fromString(_, !0));
+        }
+        static ExtractAccountID(_) {
+          return _.getLowBitsUnsigned();
+        }
         GetAccountID() {
-          return this.m_ulSteamID.getLowBitsUnsigned();
+          return _.ExtractAccountID(this.m_ulSteamID);
         }
         GetInstance() {
           return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
@@ -64286,6 +64380,61 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          ..._(_, _),
+          enabled: !!_,
+          initialData: _ ? void 0 : [],
+        });
+      }
+      function _(_, _) {
+        return ["RecommendedTagsForUser", _, _];
+      }
+      function _(_, _) {
+        return {
+          queryKey: _(_.country, _.language),
+          queryFn: () =>
+            (async function (_, _) {
+              const _ = _._.Init(_._);
+              __webpack_require__.Body().set_language(_.language),
+                __webpack_require__.Body().set_country_code(_.country),
+                __webpack_require__.Body().set_favor_rarer_tags(!0);
+              const _ = await _._.GetRecommendedTagsForUser(_, _);
+              if (!_.BSuccess())
+                throw `Error loading recommended tags: ${_.GetErrorMessage()}`;
+              return _.Body().toObject().tags || [];
+            })(_, _),
+          staleTime: 864e5,
+        };
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return _.useCallback(
+          (_) => {
+            _.setQueryData(_(_.country, _.language), _);
+          },
+          [_, _],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -64318,6 +64467,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -64512,6 +64662,14 @@
           })(_, _),
         );
       }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "include_extra_details", "extra_details");
+          })(_, _),
+        );
+      }
       function _(_, _) {
         return _(_, _, "include_full_description", "full_description_bbcode");
       }
@@ -64677,6 +64835,10 @@
                 "supported_languages",
                 _,
               );
+            })(_, _, _, _),
+          _.include_extra_details &&
+            (function (_, _, _, _) {
+              _(_, _, _, "include_extra_details", "extra_details", _);
             })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -84207,7 +84369,6 @@
         KKS: () => _,
         L0X: () => _,
         LDq: () => _,
-        LO_: () => _,
         Lh2: () => _,
         MOk: () => _,
         MQO: () => _,
@@ -84262,7 +84423,6 @@
         bPr: () => _,
         bcZ: () => _,
         bfp: () => _,
-        _: () => _,
         c9e: () => _,
         ccb: () => _,
         d1w: () => _,
@@ -84330,7 +84490,6 @@
         wB_: () => _,
         wC1: () => _,
         ww0: () => _,
-        xoK: () => _,
         xv8: () => _,
         yHA: () => _,
         y_e: () => _,
@@ -86523,7 +86682,10 @@
         });
       }
       function _(_) {
-        const { fullcolor: _, ..._ } = _,
+        const { fullcolor: _, gradient: _ = !1, inset: _ = !1, ..._ } = _,
+          [_, _] = (0, _._)(),
+          [_, _] = (0, _._)(),
+          [_, _] = (0, _._)(),
           [_, _] = (0, _._)(),
           [_, _] = (0, _._)();
         return _
@@ -86592,19 +86754,97 @@
               fill: "none",
               ..._,
               children: [
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  _: "M9.64304 9.49988L6.39294 12.8055L9.64304 16.1112V20.8333H14.2858L18.0001 24.6111L21.7143 20.8333H26.3573V16.111L29.6072 12.8055L26.3573 9.50012V4.77777H21.7143L18.0001 1L14.2858 4.77777H9.64304V9.49988ZM22.6432 12.8056C22.6432 15.4136 20.5645 17.5278 18.0004 17.5278C15.4362 17.5278 13.3575 15.4136 13.3575 12.8056C13.3575 10.1976 15.4362 8.08334 18.0004 8.08334C20.5645 8.08334 22.6432 10.1976 22.6432 12.8056Z",
+                (0, _.jsxs)("defs", {
+                  children: [
+                    _ &&
+                      (0, _.jsx)(_.Fragment, {
+                        children: (0, _.jsxs)("filter", {
+                          _: _,
+                          children: [
+                            (0, _.jsx)("feGaussianBlur", {
+                              _: "SourceAlpha",
+                              stdDeviation: "0.5",
+                              result: "blur",
+                            }),
+                            (0, _.jsx)("feOffset", {
+                              _: "1",
+                              _: "1",
+                              result: "offset",
+                            }),
+                            (0, _.jsx)("feComposite", {
+                              operator: "out",
+                              _: "SourceAlpha",
+                              in2: "offset",
+                              result: "inverse",
+                            }),
+                            (0, _.jsx)("feFlood", {
+                              "flood-color": "#000000",
+                              "flood-opacity": "0.6",
+                              result: "color",
+                            }),
+                            (0, _.jsx)("feComposite", {
+                              operator: "in",
+                              _: "color",
+                              in2: "inverse",
+                              result: "shadow",
+                            }),
+                            (0, _.jsx)("feComposite", {
+                              operator: "in",
+                              _: "shadow",
+                              in2: "SourceAlpha",
+                              result: "finalShadow",
+                            }),
+                            (0, _.jsxs)("feMerge", {
+                              children: [
+                                (0, _.jsx)("feMergeNode", {
+                                  _: "SourceGraphic",
+                                }),
+                                (0, _.jsx)("feMergeNode", {
+                                  _: "finalShadow",
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      }),
+                    _ &&
+                      (0, _.jsxs)("linearGradient", {
+                        _: _,
+                        _: "0",
+                        _: "1",
+                        _: "0",
+                        _: "0",
+                        children: [
+                          (0, _.jsx)("stop", {
+                            offset: "0%",
+                            "stop-color": "var(--gradient-from, black)",
+                          }),
+                          (0, _.jsx)("stop", {
+                            offset: "100%",
+                            "stop-color": "var(--gradient-to, white)",
+                          }),
+                        ],
+                      }),
+                  ],
                 }),
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  _: "M5 30.2778L8.25 24.6111H12.4286L15.6786 27.9167L11.5 35L9.17857 30.2778H5Z",
-                }),
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  _: "M30.9999 30.2778L27.7499 24.6111H23.5713L20.3213 27.9167L24.4999 35L26.8213 30.2778H30.9999Z",
+                (0, _.jsxs)("g", {
+                  filter: _ ? _ : void 0,
+                  children: [
+                    (0, _.jsx)("path", {
+                      fill: _ ? _ : "currentColor",
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      _: "M9.64304 9.49988L6.39294 12.8055L9.64304 16.1112V20.8333H14.2858L18.0001 24.6111L21.7143 20.8333H26.3573V16.111L29.6072 12.8055L26.3573 9.50012V4.77777H21.7143L18.0001 1L14.2858 4.77777H9.64304V9.49988ZM22.6432 12.8056C22.6432 15.4136 20.5645 17.5278 18.0004 17.5278C15.4362 17.5278 13.3575 15.4136 13.3575 12.8056C13.3575 10.1976 15.4362 8.08334 18.0004 8.08334C20.5645 8.08334 22.6432 10.1976 22.6432 12.8056Z",
+                    }),
+                    (0, _.jsx)("path", {
+                      fill: _ ? _ : "currentColor",
+                      _: "M5 30.2778L8.25 24.6111H12.4286L15.6786 27.9167L11.5 35L9.17857 30.2778H5Z",
+                    }),
+                    (0, _.jsx)("path", {
+                      fill: _ ? _ : "currentColor",
+                      _: "M30.9999 30.2778L27.7499 24.6111H23.5713L20.3213 27.9167L24.4999 35L26.8213 30.2778H30.9999Z",
+                    }),
+                  ],
                 }),
               ],
             });
@@ -88545,42 +88785,6 @@
         });
       }
       function _(_) {
-        const [_, _] = (0, _._)();
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: [
-            (0, _.jsxs)("g", {
-              clipPath: _,
-              children: [
-                (0, _.jsx)("path", {
-                  fill: "#199FFF",
-                  _: "M35.9982 12.4814C23.0097 12.4814 12.4805 23.0107 12.4805 35.9991H35.9982V12.4814Z",
-                }),
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  _: "M0 0.776571C0 0.34768 0.347683 0 0.776571 0H35.9984V7.76572H7.76571V35.9984H0V0.776571Z",
-                }),
-              ],
-            }),
-            (0, _.jsx)("defs", {
-              children: (0, _.jsx)("clipPath", {
-                _: _,
-                children: (0, _.jsx)("rect", {
-                  fill: "currentColor",
-                  width: "36",
-                  height: "36",
-                }),
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
         const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: (0, _._)(_().SteamFrameCompatLogo, _),
@@ -88591,12 +88795,12 @@
           children: [
             (0, _.jsx)("path", {
               opacity: "0.84",
-              fill: "white",
+              fill: "currentColor",
               _: "M18.0001 7.54712C12.2272 7.54712 7.54736 12.227 7.54736 17.9998H18.0001V7.54712Z",
             }),
             (0, _.jsx)("path", {
               opacity: "0.84",
-              fill: "white",
+              fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               _: "M2 2.34516C2 2.15453 2.15453 2 2.34516 2H17.9999V5.45157H5.45157V17.9999H2V2.34516Z",
@@ -88618,71 +88822,14 @@
               fillRule: "evenodd",
               clipRule: "evenodd",
               _: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
-              fill: "white",
+              fill: "currentColor",
             }),
             (0, _.jsx)("path", {
               opacity: "0.84",
               fillRule: "evenodd",
               clipRule: "evenodd",
               _: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
-              fill: "white",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const [_, _] = (0, _._)();
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: [
-            (0, _.jsxs)("g", {
-              clipPath: _,
-              children: [
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  _: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
-                }),
-                (0, _.jsx)("path", {
-                  fill: "#199FFF",
-                  _: "M26.2788 18.2288C26.2787 13.7823 22.6734 10.1777 18.2268 10.1777C13.7804 10.1778 10.176 13.7824 10.1758 18.2288C10.1758 22.5363 13.5586 26.0544 17.8127 26.2701L18.2268 26.2807C22.5347 26.2807 26.0527 22.8973 26.2681 18.643L26.2788 18.2288Z",
-                }),
-              ],
-            }),
-            (0, _.jsx)("defs", {
-              children: (0, _.jsx)("clipPath", {
-                _: _,
-                children: (0, _.jsx)("rect", {
-                  fill: "currentColor",
-                  width: "36",
-                  height: "36",
-                }),
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
-          children: [
-            (0, _.jsx)("path", {
               fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M24.5384 18C24.5384 11.6275 19.3725 6.46154 13 6.46154V0C22.9411 0 30.9999 8.05887 30.9999 18C30.9999 27.9411 22.9411 36 13 36V29.5385C19.3725 29.5385 24.5384 24.3725 24.5384 18Z",
-            }),
-            (0, _.jsx)("ellipse", {
-              fill: "#1A9FFF",
-              _: "13",
-              _: "18.0195",
-              _: "8.99996",
-              _: "9",
             }),
           ],
         });
@@ -88700,7 +88847,7 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
-            fill: "white",
+            fill: "currentColor",
           }),
         });
       }
@@ -95034,13 +95181,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _, _, _) {
+      function _(_, _, _, _, _, _) {
         return {
-          queryKey: ["StoreQuery", _],
+          queryKey: ["StoreQuery", _, _],
           queryFn: () =>
-            (async function (_, _, _, _, _) {
+            (async function (_, _, _, _, _, _) {
               const _ = _._.Init(_._);
               (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
+              _ && _.Body().set_override_country_code(_);
               _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
               const _ = await _._.Query(_, _);
               if (_.GetEResult() != _._)
@@ -95053,7 +95201,7 @@
                 rgItemIDs: _.Body().ids().map(_._),
                 metadata: _.Body().metadata().toObject(),
               };
-            })(_, _, _, _, _),
+            })(_, _, _, _, _, _),
           staleTime: 6e5,
         };
       }
@@ -96554,33 +96702,7 @@
           strName: _(_.strLocToken),
         }));
       }
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          ..._(_, _),
-          enabled: !!_,
-          initialData: _ ? void 0 : [],
-        });
-      }
-      function _(_, _) {
-        return {
-          queryKey: ["RecommendedTagsForUser", _.country, _.language],
-          queryFn: () =>
-            (async function (_, _) {
-              const _ = _._.Init(_._);
-              __webpack_require__.Body().set_language(_.language),
-                __webpack_require__.Body().set_country_code(_.country),
-                __webpack_require__.Body().set_favor_rarer_tags(!0);
-              const _ = await _._.GetRecommendedTagsForUser(_, _);
-              if (!_.BSuccess())
-                throw `Error loading recommended tags: ${_.GetErrorMessage()}`;
-              return _.Body().toObject().tags || [];
-            })(_, _),
-          staleTime: 864e5,
-        };
-      }
+      var _ = __webpack_require__("chunkid");
       const _ = JSON.parse(`[
 	{
 		"groups": [
@@ -97307,12 +97429,12 @@
         });
       }
       function _() {
-        return (0, _._)(_._.LANGUAGE), _(_._.logged_in), _(), null;
+        return (0, _._)(_._.LANGUAGE), _(_._.logged_in), (0, _._)(), null;
       }
       const _ = _.memo(function () {
           const [_, _] = (function () {
             const { data: _, isError: _ } = _(),
-              { data: _, isError: _ } = _(),
+              { data: _, isError: _ } = (0, _._)(),
               _ = _(_),
               { data: _ } = (0, _._)(_._.LANGUAGE),
               { data: _ } = (0, _._)(),
@@ -102803,7 +102925,7 @@
   },
   (_) => {
     _._(0, [78997], () => {
-      return (_ = 71203), _((_._ = _));
+      return (_ = 92033), _((_._ = _));
       var _;
     });
     _._();

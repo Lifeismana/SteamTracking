@@ -9,19 +9,26 @@ var g_strGroupURL;
 var g_rgPageContentCache = {};
 var g_oRecommendedApps = null;
 var g_IntersectionObserver = null;
+var g_regexpSupportedMethods = null;
 function InitGroupPage( strGroupBaseURL, strActiveTab, rgAJAXSupportedMethods )
 {
 	g_strGroupURL = strGroupBaseURL;
 	g_strActiveTab = strActiveTab;
 	g_strActiveURL = '';
 
-	var regexpSupported = new RegExp( '^(?:' + rgAJAXSupportedMethods.join( '|' ) + ')(?:\\W|$)' );
+	var regexpSupported = g_regexpSupportedMethods = new RegExp( '^(?:' + rgAJAXSupportedMethods.join( '|' ) + ')(?:\\W|$)' );
 
 	var initial_group_url = '';
 	if ( window.location.hash )
 	{
 		initial_group_url = window.location.hash.substr( 1 );
 	}
+
+	// Don't hand an unvalidated hash to replaceState. Besides showing a path we never serve, it
+	// becomes the base that the relative URLs below resolve against.
+	if ( initial_group_url && !BIsSupportedGroupSubURL( initial_group_url ) )
+		initial_group_url = '';
+
 	history.replaceState( {group_url: initial_group_url}, '', initial_group_url ? g_strGroupURL + '/' + initial_group_url : g_strGroupURL );
 	OnGroupHashChange( initial_group_url, true );
 
@@ -64,6 +71,20 @@ function ValidateURLRoot( url, base )
 	return elAnchor.href.startsWith( base );
 }
 
+function BIsSupportedGroupSubURL( url )
+{
+	var iQuery = url.search( /[?#]/ );
+	var strPath = iQuery == -1 ? url : url.substr( 0, iQuery );
+
+	if ( !/^[a-zA-Z0-9_\-\/]+$/.test( strPath ) )
+		return false;
+
+	if ( strPath.indexOf( '//' ) != -1 )
+		return false;
+
+	return !!g_regexpSupportedMethods && g_regexpSupportedMethods.test( strPath );
+}
+
 function OnGroupHashChange( group_url, bInitialLoad, bIsPopState )
 {
 	var strTab = 'overview';
@@ -74,8 +95,16 @@ function OnGroupHashChange( group_url, bInitialLoad, bIsPopState )
 	if ( rgMatches && rgMatches[ 0 ] )
 	{
 		url = rgMatches[ 0 ];
-		url = url.replace ( /(\.|%2E)+([\/\\]|%2F|%5C)/gi, '' );	//clean out any ./ or ../ in the URL
 		strTab = url.match ( /^[a-zA-Z]*/ )[ 0 ];
+	}
+
+	if ( url == '/' || url == 'overview' )
+		url = '';
+
+	if ( url != '' && !BIsSupportedGroupSubURL( url ) )
+	{
+		console.log("Failed to load URL: %s", url );
+		return;
 	}
 
 	if ( !ValidateURLRoot ( url, "https:\/\/steamcommunity.com\/groups\/") )
@@ -83,9 +112,6 @@ function OnGroupHashChange( group_url, bInitialLoad, bIsPopState )
 		console.log("Failed to load URL: %s", url );
 		return;
 	}
-
-	if ( url == '/' || url == 'overview' )
-		url = '';
 
 
 	if ( url != g_strActiveURL )
@@ -152,6 +178,12 @@ function LoadURL( strTab, url )
 	}
 }
 
+function BIsHTMLResponse( transport )
+{
+	var strContentType = transport.getHeader( 'Content-Type' ) || '';
+	return /^\s*text\/html\s*(?:;|$)/i.test( strContentType );
+}
+
 function OnGroupContentLoadComplete( strTab, url, transport )
 {
 	g_bLoadingGroupPage = false;
@@ -161,7 +193,7 @@ function OnGroupContentLoadComplete( strTab, url, transport )
 	ScrollToIfNotInView( 'group_tab_overview', 20, 150 );
 
 
-		if ( transport.responseJSON == null )
+		if ( transport.responseJSON == null && BIsHTMLResponse( transport ) )
 	{
 		var elContent = new Element( 'div' );
 		$('group_page_dynamic_content').appendChild( elContent );
@@ -583,7 +615,7 @@ function Curator_Follow( groupid, bFollow )
 function Curator_DeleteReview( groupid, appid, appname )
 {
 	var prompt_text = 'Do you want to delete your review of %s?';
-	prompt_text = prompt_text.replace( '%s', appname );
+	prompt_text = prompt_text.replace( '%s', V_EscapeHTML( appname ) );
 	var dialog = ShowConfirmDialog( 'Delete review', prompt_text, 'Delete review' );
 	dialog.done( function( reason ) {
 		$J.ajax({
@@ -618,7 +650,7 @@ function Curator_DeleteReview( groupid, appid, appname )
 function Curator_DeleteRecommendation( groupid, appid, appname )
 {
 	var prompt_text = 'Do you want to delete your recommendation of %s?';
-	prompt_text = prompt_text.replace( '%s', appname );
+	prompt_text = prompt_text.replace( '%s', V_EscapeHTML( appname ) );
 	var dialog = ShowConfirmDialog( 'Delete recommendation', prompt_text, 'Delete recommendation' );
 	dialog.done( function( reason ) {
 		$J.ajax({

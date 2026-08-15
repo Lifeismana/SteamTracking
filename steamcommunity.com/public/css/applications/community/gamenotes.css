@@ -225,6 +225,7 @@ th._3rLIt0O8F7iG6B2RmC3cYa:first-of-type {
   align-items: center;
   width: fit-content;
   background-color: hsla(0, 0%, 100%, 0.11);
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   cursor: pointer;

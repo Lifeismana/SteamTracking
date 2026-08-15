@@ -1223,9 +1223,6 @@ $d`D-laM
 0 Umv
 0)AA7A
 0000000000000000000000000000000000000000
-1000
-1024
-1536
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
@@ -1236,7 +1233,6 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-04:02:04
 08bX
 0A/8
 0F`8
@@ -1267,6 +1263,8 @@ $d`D-laM
 1&x=%i&y=%i&w=%i&h=%i%s%s
 1.2.11
 1.6.37
+1000
+1024
 10CCEFThread
 10CCookieSet
 10CMsgGoBack
@@ -1453,6 +1451,7 @@ $d`D-laM
 12CefSSLStatus
 12CefV8Context
 12CefV8Handler
+13:11:41
 13CCallbackBase
 13CCallbackImplILi16EE
 13CHistoryEntry
@@ -1544,6 +1543,7 @@ $d`D-laM
 14CefV8Exception
 14CefValueCToCpp
 14ConCommandBase
+1536
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 15CChatMemberInfo
@@ -2267,9 +2267,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
+32767
 32CefDevToolsMessageObserverCppToC
 3333
-32767
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2910,7 +2910,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug  7 2026
+Aug 10 2026
 August
 Aura
 AuthANY
@@ -6394,6 +6394,8 @@ IVRSteamPrivate_026
 IVRSteamPrivate_027
 IVRSteamPrivate_028
 IVRSteamPrivate_029
+IVRSteamPrivate_030
+IVRSteamPrivate_031
 IVRSystem_022
 I\nlQ
 I\tHA\t981G'dc
@@ -7188,6 +7190,8 @@ N2vr19IVRSteamPrivate_026E
 N2vr19IVRSteamPrivate_027E
 N2vr19IVRSteamPrivate_028E
 N2vr19IVRSteamPrivate_029E
+N2vr19IVRSteamPrivate_030E
+N2vr19IVRSteamPrivate_031E
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -7214,7 +7218,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_029EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_031EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -7245,6 +7249,8 @@ N5vrapi33CVRSteamPrivateAdapter_025_as_026E
 N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N5vrapi33CVRSteamPrivateAdapter_027_as_028E
 N5vrapi33CVRSteamPrivateAdapter_028_as_029E
+N5vrapi33CVRSteamPrivateAdapter_029_as_030E
+N5vrapi33CVRSteamPrivateAdapter_030_as_031E
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -9702,7 +9708,6 @@ VIDEOTEXSTRING
 VISIBLE
 VISIBLESTRING
 VISTA
-VJ-:Q
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 VR API not loaded (%d)
@@ -18004,6 +18009,7 @@ local
 localKeyID
 locale::facet::_S_create_c_locale name not valid
 localeconv
+localhost
 localhost/
 localityName
 localization

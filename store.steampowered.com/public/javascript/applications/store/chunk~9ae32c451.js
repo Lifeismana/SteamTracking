@@ -251,14 +251,14 @@
     },
     35400: (e, t, n) => {
       n.d(t, {
-        DV: () => D,
-        OC: () => _,
-        OM: () => S,
-        Sp: () => v,
-        Tn: () => C,
-        W3: () => I,
-        hH: () => p,
-        my: () => b,
+        DV: () => S,
+        OC: () => D,
+        OM: () => C,
+        Sp: () => b,
+        Tn: () => I,
+        W3: () => v,
+        hH: () => _,
+        my: () => w,
       });
       var o = n(34629),
         s = n(41735),
@@ -272,7 +272,10 @@
         m = n(78327),
         h = n(44165);
       const g = -1;
-      class p {
+      function p() {
+        return "dev" == m.TS.WEB_UNIVERSE || "beta" == m.TS.WEB_UNIVERSE;
+      }
+      class _ {
         m_userData;
         m_bLoadedDuringInit = !1;
         m_strLastDoorOpenKey = "video_noneset";
@@ -284,6 +287,7 @@
         m_doorInitializedChangedCallback = new c.lu();
         m_largestDoorChangeCallback = new c.lu();
         m_bIsAnyDoorOpenChangeCallback = new c.lu();
+        m_doorOpenedCallback = new c.lu();
         GetLastDoorOpen() {
           return this.m_strLastDoorOpenKey;
         }
@@ -333,6 +337,9 @@
         GetDoorStateInitializedChangeCallback() {
           return this.m_doorInitializedChangedCallback;
         }
+        GetDoorOpenedCallback() {
+          return this.m_doorOpenedCallback;
+        }
         BIsInitialized() {
           return this.m_bLoadedDuringInit;
         }
@@ -370,29 +377,53 @@
               this.GetLargestDoorIndexChange().Dispatch(e));
         }
         async OpenDoor(e, t = !0, n = "", o = !1) {
-          return !m.iA.logged_in ||
+          return (
+            p() &&
+              console.log(
+                "CDoorStore.OpenDoor: attempting door " + e,
+                "open:",
+                t,
+                "preview:",
+                o,
+              ),
+            !m.iA.logged_in ||
             !this.m_userData ||
             e > this.m_userData.length ||
             e < 0
-            ? ("dev" == m.TS.WEB_UNIVERSE &&
-                console.log(
-                  "CDoorStore.OpenDoor Early fail settings:",
-                  m.iA.logged_in,
-                  this.m_userData,
-                  e,
-                  this.m_userData?.length,
-                ),
-              null)
-            : this.m_mapDoorOpenPromise.has(e)
-              ? this.m_mapDoorOpenPromise.get(e)
-              : this.m_userData[e].opened == t
-                ? {}
-                : (this.m_mapDoorOpenPromise.has(e) ||
-                    this.m_mapDoorOpenPromise.set(
-                      e,
-                      this.InternalOpenDoor(e, t, n, o),
+              ? (p() &&
+                  console.log(
+                    "CDoorStore.OpenDoor Early fail settings:",
+                    m.iA.logged_in,
+                    this.m_userData,
+                    e,
+                    this.m_userData?.length,
+                  ),
+                null)
+              : this.m_mapDoorOpenPromise.has(e)
+                ? (p() &&
+                    console.log(
+                      "CDoorStore.OpenDoor: door " +
+                        e +
+                        " was already requested this session; reusing that result",
                     ),
-                  this.m_mapDoorOpenPromise.get(e));
+                  this.m_mapDoorOpenPromise.get(e))
+                : this.m_userData[e].opened == t
+                  ? (p() &&
+                      console.log(
+                        "CDoorStore.OpenDoor: door " +
+                          e +
+                          " is already " +
+                          (t ? "open" : "closed") +
+                          "; nothing sent to the server",
+                      ),
+                    {})
+                  : (this.m_mapDoorOpenPromise.has(e) ||
+                      this.m_mapDoorOpenPromise.set(
+                        e,
+                        this.InternalOpenDoor(e, t, n, o),
+                      ),
+                    this.m_mapDoorOpenPromise.get(e))
+          );
         }
         async InternalOpenDoor(e, t = !0, n, o = !1) {
           let s = m.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
@@ -409,9 +440,18 @@
             if (200 == n?.status && n?.data?.success == l.R)
               return (
                 (this.m_userData[e].opened = t),
+                p() &&
+                  console.log(
+                    "CDoorStore.OpenDoor: door " +
+                      e +
+                      (t ? " opened" : " closed"),
+                    "rewards returned:",
+                    n.data?.rewards?.length || 0,
+                  ),
                 (this.m_strLastDoorOpenKey = "door_" + (t ? e : e - 1)),
                 this.GetDoorStateChangeCallback(e).Dispatch(t),
                 this.RecomputeState(),
+                t && !o && this.GetDoorOpenedCallback().Dispatch(e),
                 n.data
               );
             i = (0, d.H)(n);
@@ -495,12 +535,12 @@
         static s_Singleton;
         static Get() {
           return (
-            p.s_Singleton ||
-              ((p.s_Singleton = new p()),
-              p.s_Singleton.Init(),
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
               "dev" == m.TS.WEB_UNIVERSE &&
-                (window.g_EventDoorStore = p.s_Singleton)),
-            p.s_Singleton
+                (window.g_EventDoorStore = _.s_Singleton)),
+            _.s_Singleton
           );
         }
         constructor() {
@@ -515,44 +555,44 @@
                 console.log("CDoorStore Loading - ", this.m_userData));
         }
       }
-      function _() {
-        return { fnOpenDoor: p.Get().OpenDoor };
-      }
       function D() {
-        const [e, t] = (0, i.useState)(p.Get().BIsInitialized());
+        return { fnOpenDoor: _.Get().OpenDoor };
+      }
+      function S() {
+        const [e, t] = (0, i.useState)(_.Get().BIsInitialized());
         return (
           (0, i.useEffect)(() => {
-            e || p.Get().LoadDoorData();
+            e || _.Get().LoadDoorData();
           }, [e]),
-          (0, u.hL)(p.Get().GetDoorStateInitializedChangeCallback(), t),
+          (0, u.hL)(_.Get().GetDoorStateInitializedChangeCallback(), t),
           e
         );
       }
-      function S(e) {
-        const t = D(),
-          [n, o] = (0, i.useState)(t ? p.Get().BIsDoorOpened(e) : void 0);
-        return (0, u.hL)(p.Get().GetDoorStateChangeCallback(e), o), n;
-      }
-      function C() {
-        const e = D(),
-          [t, n] = (0, i.useState)(e ? p.Get().GetLargestDoorOpenIndex() : g);
-        return (0, u.hL)(p.Get().GetLargestDoorIndexChange(), n), t;
+      function C(e) {
+        const t = S(),
+          [n, o] = (0, i.useState)(t ? _.Get().BIsDoorOpened(e) : void 0);
+        return (0, u.hL)(_.Get().GetDoorStateChangeCallback(e), o), n;
       }
       function I() {
-        const e = D(),
-          [t, n] = (0, i.useState)(!!e && p.Get().BIsAnyDoorOpened());
-        return (0, u.hL)(p.Get().GetIsAnyDoorOpenChange(), n), t;
+        const e = S(),
+          [t, n] = (0, i.useState)(e ? _.Get().GetLargestDoorOpenIndex() : g);
+        return (0, u.hL)(_.Get().GetLargestDoorIndexChange(), n), t;
       }
-      function v(e) {
-        p.Get().SetInMemoryUpdateDoorOpenUpto(e);
+      function v() {
+        const e = S(),
+          [t, n] = (0, i.useState)(!!e && _.Get().BIsAnyDoorOpened());
+        return (0, u.hL)(_.Get().GetIsAnyDoorOpenChange(), n), t;
       }
-      function b(e, t) {
-        p.Get().SetInMemorySpecificDoorState(e, t);
+      function b(e) {
+        _.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
-      (0, o.Cg)([r.sH], p.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, o.Cg)([r.sH], p.prototype, "m_nHighestDoorOpened", void 0),
-        (0, o.Cg)([u.oI], p.prototype, "BIsDoorOpened", null),
-        (0, o.Cg)([u.oI], p.prototype, "OpenDoor", null);
+      function w(e, t) {
+        _.Get().SetInMemorySpecificDoorState(e, t);
+      }
+      (0, o.Cg)([r.sH], _.prototype, "m_bIsAnyDoorOpened", void 0),
+        (0, o.Cg)([r.sH], _.prototype, "m_nHighestDoorOpened", void 0),
+        (0, o.Cg)([u.oI], _.prototype, "BIsDoorOpened", null),
+        (0, o.Cg)([u.oI], _.prototype, "OpenDoor", null);
     },
     32541: (e, t, n) => {
       n.d(t, { LG: () => v, hA: () => I });
@@ -584,8 +624,8 @@
             bMinimalDisplay: w,
           } = e,
           { creatorHome: f } = (0, a.FV)(t.clan_account_id),
-          [A] = (0, r.L2)();
-        if (A || !f)
+          [O] = (0, r.L2)();
+        if (O || !f)
           return (0, o.jsx)("div", {
             className: D.DevSummaryWidgetCtn,
             children: (0, o.jsx)(_.t, {
@@ -594,15 +634,15 @@
               position: "center",
             }),
           });
-        const y = t.type,
-          G =
+        const A = t.type,
+          y =
             "developer" == t.type
               ? (0, c.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, c.we)("#CreatorHome_PublishedBy")
                 : (0, c.we)("#CreatorHome_InFranchise"),
-          O = f.GetCreatorHomeURL(y),
-          B = f.GetNumFollowers();
+          G = f.GetCreatorHomeURL(A),
+          E = f.GetNumFollowers();
         return (0, o.jsx)(g.tH, {
           children: (0, o.jsx)(p.Ay, {
             feature: "salecreatorhome",
@@ -614,7 +654,7 @@
               ),
               "flow-children": "row",
               children: [
-                !i && (0, o.jsx)("span", { className: D.Title, children: G }),
+                !i && (0, o.jsx)("span", { className: D.Title, children: y }),
                 (0, o.jsxs)("div", {
                   className: D.DevSummaryWidgetCtn,
                   children: [
@@ -631,7 +671,7 @@
                           className: C.FlexRowContainer,
                           children: [
                             (0, o.jsx)(l.m, {
-                              href: (0, m.k2)(O),
+                              href: (0, m.k2)(G),
                               className: D.AvatarLink,
                               bAllowFocuseableAnchor: !0,
                               children: (0, o.jsx)("img", {
@@ -652,7 +692,7 @@
                                   ),
                                   children: [
                                     (0, o.jsx)(l.m, {
-                                      href: (0, m.k2)(O),
+                                      href: (0, m.k2)(G),
                                       className: D.CreatorNameName,
                                       children: f.GetName(),
                                     }),
@@ -692,7 +732,7 @@
                                           }),
                                           (0, o.jsx)("span", {
                                             className: D.FollowerCount,
-                                            children: (0, u.Dq)(B),
+                                            children: (0, u.Dq)(E),
                                           }),
                                         ],
                                       }),

@@ -8562,10 +8562,11 @@
             ref: b,
             disabled: S,
             gamepadFocusable: N = !0,
-            ...I
+            status: I,
+            ...T
           } = n,
-          T = (0, v.Qn)(),
-          D =
+          D = (0, v.Qn)(),
+          k =
             r && x
               ? (0, i.jsx)(u.g, {
                   onClick: () => {
@@ -8575,26 +8576,27 @@
                   hitSlop: !0,
                 })
               : E,
-          k = {
+          B = {
             ...t,
             variant: (0, h.f)("TextInput", A),
             size: w,
             radius: j,
+            status: I,
             beforeContent: y,
-            afterContent: D,
+            afterContent: k,
             ref: b,
             disabled: S,
           },
-          B = (0, s.useRef)(null),
-          R = N && T ? m.BA : "input";
+          R = (0, s.useRef)(null),
+          G = N && D ? m.BA : "input";
         return (0, i.jsx)(d.j, {
           cursor: "text",
-          ...k,
+          ...B,
           onClick: (e) => {
-            B.current && e.target !== B.current && B.current.focus();
+            R.current && e.target !== R.current && R.current.focus();
           },
-          children: (0, i.jsx)(R, {
-            ref: (0, p.Ue)(C, B),
+          children: (0, i.jsx)(G, {
+            ref: (0, p.Ue)(C, R),
             type: "text",
             "aria-disabled": S,
             readOnly: S,
@@ -8603,7 +8605,7 @@
             onChange: (e) => {
               S || (_(e.target.value), f && f(e));
             },
-            ...I,
+            ...T,
           }),
         });
       }

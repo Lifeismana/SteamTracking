@@ -2415,18 +2415,20 @@ enum UnnamedEnum322f4518bf470232
 	StandaloneContextMenu = 4;
 }
 
+enum UnnamedEnum323da3ee58c3d5c9
+{
+	NoHosts = 0;
+	HostAvailable = 1;
+	StreamingAvailable = 2;
+	ActiveSingleLink = 3;
+	ActiveMultiLink = 4;
+}
+
 enum UnnamedEnum32d9c79bb287cb61
 {
 	Hidden = 0;
 	Create = 1;
 	Edit = 2;
-}
-
-enum UnnamedEnum3317efc8e937e6f6
-{
-	NO_HOSTS_OR_CONNECTIONS = 0;
-	SHOW_CONNECTIONS = 1;
-	SHOW_HOSTS = 2;
 }
 
 enum UnnamedEnum336a74c93bcf88cc
@@ -4129,6 +4131,13 @@ enum UnnamedEnumb4c56acde5c1c2a0
 	TextDefined = 0;
 	LF = 1;
 	CRLF = 2;
+}
+
+enum UnnamedEnumb4d6addf724df0d6
+{
+	Info = 0;
+	Positive = 1;
+	Negative = 2;
 }
 
 enum UnnamedEnumb58cf35b311fefd7

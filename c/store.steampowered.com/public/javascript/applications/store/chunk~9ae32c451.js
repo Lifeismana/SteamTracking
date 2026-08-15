@@ -292,6 +292,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = -1;
+      function _() {
+        return "dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE;
+      }
       class _ {
         m_userData;
         m_bLoadedDuringInit = !1;
@@ -304,6 +307,7 @@
         m_doorInitializedChangedCallback = new _._();
         m_largestDoorChangeCallback = new _._();
         m_bIsAnyDoorOpenChangeCallback = new _._();
+        m_doorOpenedCallback = new _._();
         GetLastDoorOpen() {
           return this.m_strLastDoorOpenKey;
         }
@@ -353,6 +357,9 @@
         GetDoorStateInitializedChangeCallback() {
           return this.m_doorInitializedChangedCallback;
         }
+        GetDoorOpenedCallback() {
+          return this.m_doorOpenedCallback;
+        }
         BIsInitialized() {
           return this.m_bLoadedDuringInit;
         }
@@ -390,29 +397,53 @@
               this.GetLargestDoorIndexChange().Dispatch(_));
         }
         async OpenDoor(_, _ = !0, _ = "", _ = !1) {
-          return !_._.logged_in ||
+          return (
+            _() &&
+              console.log(
+                "CDoorStore.OpenDoor: attempting door " + _,
+                "open:",
+                _,
+                "preview:",
+                _,
+              ),
+            !_._.logged_in ||
             !this.m_userData ||
             _ > this.m_userData.length ||
             _ < 0
-            ? ("dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CDoorStore.OpenDoor Early fail settings:",
-                  _._.logged_in,
-                  this.m_userData,
-                  _,
-                  this.m_userData?.length,
-                ),
-              null)
-            : this.m_mapDoorOpenPromise.has(_)
-              ? this.m_mapDoorOpenPromise.get(_)
-              : this.m_userData[_].opened == _
-                ? {}
-                : (this.m_mapDoorOpenPromise.has(_) ||
-                    this.m_mapDoorOpenPromise.set(
-                      _,
-                      this.InternalOpenDoor(_, _, _, _),
+              ? (_() &&
+                  console.log(
+                    "CDoorStore.OpenDoor Early fail settings:",
+                    _._.logged_in,
+                    this.m_userData,
+                    _,
+                    this.m_userData?.length,
+                  ),
+                null)
+              : this.m_mapDoorOpenPromise.has(_)
+                ? (_() &&
+                    console.log(
+                      "CDoorStore.OpenDoor: door " +
+                        _ +
+                        " was already requested this session; reusing that result",
                     ),
-                  this.m_mapDoorOpenPromise.get(_));
+                  this.m_mapDoorOpenPromise.get(_))
+                : this.m_userData[_].opened == _
+                  ? (_() &&
+                      console.log(
+                        "CDoorStore.OpenDoor: door " +
+                          _ +
+                          " is already " +
+                          (_ ? "open" : "closed") +
+                          "; nothing sent to the server",
+                      ),
+                    {})
+                  : (this.m_mapDoorOpenPromise.has(_) ||
+                      this.m_mapDoorOpenPromise.set(
+                        _,
+                        this.InternalOpenDoor(_, _, _, _),
+                      ),
+                    this.m_mapDoorOpenPromise.get(_))
+          );
         }
         async InternalOpenDoor(_, _ = !0, _, _ = !1) {
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
@@ -431,9 +462,18 @@
             if (200 == _?.status && _?.data?.success == _._)
               return (
                 (this.m_userData[_].opened = _),
+                _() &&
+                  console.log(
+                    "CDoorStore.OpenDoor: door " +
+                      _ +
+                      (_ ? " opened" : " closed"),
+                    "rewards returned:",
+                    _.data?.rewards?.length || 0,
+                  ),
                 (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
                 this.GetDoorStateChangeCallback(_).Dispatch(_),
                 this.RecomputeState(),
+                _ && !_ && this.GetDoorOpenedCallback().Dispatch(_),
                 _.data
               );
             _ = (0, _._)(_);

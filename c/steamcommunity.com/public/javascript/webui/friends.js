@@ -1112,6 +1112,28 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module) => {
         _.exports = {
+          DynamicLinkBox: "dynamiclinkcard_DynamicLinkBox_3OFDU",
+          DynamicLink_Preview: "dynamiclinkcard_DynamicLink_Preview_4x92c",
+          DynamicLink_Author: "dynamiclinkcard_DynamicLink_Author_2CrHQ",
+          DynamicLink_Description:
+            "dynamiclinkcard_DynamicLink_Description_1iv64",
+          DynamicLink_YouTubeEmbed:
+            "dynamiclinkcard_DynamicLink_YouTubeEmbed_3Jd9P",
+          DynamicLink_StoreWidget:
+            "dynamiclinkcard_DynamicLink_StoreWidget_uvn7E",
+          DynamicLink_Content: "dynamiclinkcard_DynamicLink_Content_29vvB",
+          DynamicLink_Name: "dynamiclinkcard_DynamicLink_Name_25KAQ",
+          DynamicLink_YoutubeViews:
+            "dynamiclinkcard_DynamicLink_YoutubeViews_3Zgvw",
+          Dynamiclink_Content: "dynamiclinkcard_Dynamiclink_Content_3UUlL",
+          DynamicLink_URL: "dynamiclinkcard_DynamicLink_URL_9135F",
+          DynamicLink_AuthorName:
+            "dynamiclinkcard_DynamicLink_AuthorName_6R7Q2",
+          DynamicLink_Date: "dynamiclinkcard_DynamicLink_Date_15wEu",
+        };
+      },
+      chunkid: (module) => {
+        _.exports = {
           FocusRingRoot: "focusring_FocusRingRoot_3FIjY",
           FocusRing: "focusring_FocusRing_1wPpl",
           flash: "focusring_flash_1RqM3",
@@ -1636,18 +1658,6 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module) => {
         _.exports = {
-          DynamicLinkBox: "youtubeembed_DynamicLinkBox_1IGUR",
-          DynamicLink_Preview: "youtubeembed_DynamicLink_Preview_3ZK9R",
-          DynamicLink_Author: "youtubeembed_DynamicLink_Author_3z0n0",
-          DynamicLink_Description: "youtubeembed_DynamicLink_Description_eMdGA",
-          DynamicLink_Content: "youtubeembed_DynamicLink_Content_2FhVX",
-          DynamicLink_Name: "youtubeembed_DynamicLink_Name_1R7Ng",
-          DynamicLink_YoutubeViews:
-            "youtubeembed_DynamicLink_YoutubeViews_3clz2",
-          Dynamiclink_Content: "youtubeembed_Dynamiclink_Content_1EYgV",
-          DynamicLink_URL: "youtubeembed_DynamicLink_URL_3otyz",
-          DynamicLink_AuthorName: "youtubeembed_DynamicLink_AuthorName_2DML9",
-          DynamicLink_Date: "youtubeembed_DynamicLink_Date_281Dh",
           PreviewYouTubeVideo: "youtubeembed_PreviewYouTubeVideo_rUASs",
           sizeThumb: "youtubeembed_sizeThumb_3dy3K",
           sizeFull: "youtubeembed_sizeFull_14CxW",
@@ -3233,8 +3243,8 @@ var CLSTAMP = "steamdb";
           "./es-do.js": 49338,
           "./es-mx": 51326,
           "./es-mx.js": 51326,
-          "./es-us": 89947,
-          "./es-us.js": 89947,
+          "./es-us": 12328,
+          "./es-us.js": 12328,
           "./es.js": 43350,
           "./et": 18231,
           "./et.js": 18231,
@@ -69206,7 +69216,8 @@ var CLSTAMP = "steamdb";
                 reject: _,
               };
             })();
-            let _ = new Image();
+            let _,
+              _ = new Image();
             (_.crossOrigin = "anonymous"),
               (_.onerror = (_) => {
                 const _ = {
@@ -69226,23 +69237,32 @@ var CLSTAMP = "steamdb";
                 const _ = {
                   success: _._,
                 };
-                (_.width = _.width),
+                if (
+                  ((_.width = _.width),
                   (_.height = _.height),
-                  (0, _._)(
-                    _.width > 0 && _.height > 0,
-                    "unexpected image resolution discovered for strURL: " + _,
-                  ),
-                  (_.success = _._),
-                  _.resolve(_);
+                  !(_.width > 0 && _.height > 0))
+                )
+                  return (
+                    (0, _._)(
+                      !1,
+                      "unexpected image resolution discovered for strURL: " + _,
+                    ),
+                    (_.err_msg = "No resolution reported for url " + _),
+                    void _.resolve(_)
+                  );
+                (_.success = _._), _.resolve(_);
               }),
               (_.src = _),
               _.token.promise.catch(() => {
-                const _ = {
-                  success: _._,
-                };
-                return (_.onload = () => {}), (_.success = _._), _;
+                (_.onload = () => {}),
+                  (_.onerror = () => {}),
+                  _.resolve({
+                    success: _._,
+                  });
               });
-            const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+            const _ = new Promise((_, _) => {
+              _ = setTimeout(() => _(), 1e4);
+            });
             let _;
             try {
               _ = await Promise.race([_, _.promise]);
@@ -69251,6 +69271,8 @@ var CLSTAMP = "steamdb";
                 success: _._,
                 err_msg: "We timed out processing images",
               };
+            } finally {
+              clearTimeout(_);
             }
             return _;
           },
@@ -74859,7 +74881,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = _.createContext(function (_) {
           return {
@@ -74946,7 +74967,8 @@ var CLSTAMP = "steamdb";
             _
           );
         }
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         const _ = _.createContext(null),
           _ = _.createContext(_._);
         function _(_) {
@@ -79376,11 +79398,19 @@ var CLSTAMP = "steamdb";
               },
               Ready: () => _,
               IsReady: () => _,
-              HasKey: (_) =>
-                _().languages.some((_) => {
-                  const _ = _.get(_.strLanguage);
-                  return !!_ && _.has(_);
-                }),
+              HasKey(_) {
+                const _ = _().languages,
+                  _ = [
+                    ...__webpack_require__.map((_) => _.strLanguage),
+                    (0, _._)(_[0].strLanguage),
+                  ];
+                for (const _ of _) {
+                  if (!_) continue;
+                  const _ = _.get(_);
+                  if (_ && _.has(_)) return !0;
+                }
+                return !1;
+              },
             }
           );
         }
@@ -81170,6 +81200,10 @@ var CLSTAMP = "steamdb";
                   "supported_languages",
                   _,
                 );
+              })(_, _, _, _),
+            _.include_extra_details &&
+              (function (_, _, _, _) {
+                _(_, _, _, "include_extra_details", "extra_details", _);
               })(_, _, _, _),
             _.include_included_items &&
               _.included_item_data_request &&
@@ -87284,18 +87318,13 @@ var CLSTAMP = "steamdb";
           }
         }
         class _ extends _ {
-          m_nStartCursor = 1;
-          constructor(_, _, _) {
-            super(_), (this.m_nStartCursor = void 0 !== _ ? _ : 1);
+          constructor(_) {
+            super(_);
           }
           AppendText(_) {
             let _ = _;
             const _ = [];
-            for (
-              let _ = _.indexOf("\n", this.m_nStartCursor);
-              -1 !== _;
-              _ = _.indexOf("\n")
-            )
+            for (let _ = _.indexOf("\n"); -1 !== _; _ = _.indexOf("\n"))
               __webpack_require__.push(_.substr(0, _)),
                 __webpack_require__.push(_.createElement("br")),
                 (_ = _.substr(_ + 1));
@@ -87920,13 +87949,49 @@ var CLSTAMP = "steamdb";
         (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
           (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
         const _ = new _();
-        var _,
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        const _ = {
+          Box: _.DynamicLinkBox,
+          Preview: _.DynamicLink_Preview,
+          Type: _.DynamicLink_Type,
+        };
+        function _(_) {
+          return (0, _.jsx)("img", {
+            className: _.DynamicLink_Preview,
+            src: _.strURL,
+            alt: _.strAlt ?? "",
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.DynamicLink_Content,
+            children: _.children,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.DynamicLink_Name,
+            children: _.children,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.DynamicLink_YoutubeViews,
+            children: _.children,
+          });
+        }
+        function _(_) {
+          return (0, _.jsx)("div", {
+            className: _.Dynamiclink_Content,
+            children: _.children,
+          });
+        }
         function _(_) {
           const {
               videoID: _,
@@ -87962,29 +88027,24 @@ var CLSTAMP = "steamdb";
               _ = _.views,
               _ = _.description;
             return (0, _.jsxs)("div", {
-              className: _().DynamicLinkBox,
+              className: _.Box,
               onClick: () => _(!1),
               children: [
-                (0, _.jsx)("img", {
-                  className: _().DynamicLink_Preview,
-                  src: "https://img.youtube.com/vi/" + _ + "/0.jpg",
+                (0, _.jsx)(_, {
+                  strURL: "https://img.youtube.com/vi/" + _ + "/0.jpg",
                 }),
-                (0, _.jsxs)("div", {
-                  className: _().DynamicLink_Content,
+                (0, _.jsxs)(_, {
                   children: [
-                    (0, _.jsx)("div", {
-                      className: _().DynamicLink_Name,
+                    (0, _.jsx)(_, {
                       children: (0, _._)("#EventEditor_YouTubeVideoTitle", _),
                     }),
-                    (0, _.jsx)("div", {
-                      className: _().DynamicLink_YoutubeViews,
+                    (0, _.jsx)(_, {
                       children: (0, _._)(
                         "#EventEditor_YouTubeVideoViews",
                         (0, _._)(Number(_)),
                       ),
                     }),
-                    (0, _.jsxs)("div", {
-                      className: _().Dynamiclink_Content,
+                    (0, _.jsxs)(_, {
                       children: [
                         _ && _,
                         !_ &&
@@ -88023,6 +88083,7 @@ var CLSTAMP = "steamdb";
             }),
           });
         }
+        var _;
         function _(_) {
           return {
             sizeStr: _ == _.full ? _.sizeFull : _.sizeThumb,
@@ -90412,7 +90473,7 @@ var CLSTAMP = "steamdb";
           );
         }
         function _(_) {
-          return new _(new _(), 0);
+          return new _(new _());
         }
         function _(_) {
           const { text: _, languageOverride: _ } = _,
@@ -93400,8 +93461,14 @@ var CLSTAMP = "steamdb";
           static InitFromClanID(_, _) {
             return new _(Number(_), _, _.P3F, 0);
           }
+          static ToAccountID(_) {
+            return _.ExtractAccountID(_._.fromString(_, !0));
+          }
+          static ExtractAccountID(_) {
+            return _.getLowBitsUnsigned();
+          }
           GetAccountID() {
-            return this.m_ulSteamID.getLowBitsUnsigned();
+            return _.ExtractAccountID(this.m_ulSteamID);
           }
           GetInstance() {
             return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
@@ -123030,6 +123097,7 @@ var CLSTAMP = "steamdb";
               onDismiss: _,
               className: _,
               modalClassName: _,
+              bGamepadUIScrollWithin: _,
               children: _,
               ..._
             } = _,
@@ -123043,6 +123111,7 @@ var CLSTAMP = "steamdb";
               children: (0, _.jsx)(_._, {
                 onEscKeypress: _,
                 className: _,
+                bGamepadUIScrollWithin: _,
                 children: (0, _.jsx)(_._, {
                   role: "dialog",
                   "aria-labelledby": _,
@@ -124948,7 +125017,6 @@ var CLSTAMP = "steamdb";
           Jru: () => _,
           K7s: () => _,
           KOs: () => _,
-          LO_: () => _,
           LeN: () => _,
           MUh: () => _,
           MvQ: () => _,
@@ -124969,6 +125037,7 @@ var CLSTAMP = "steamdb";
           T4m: () => _,
           V5W: () => _,
           _: () => _,
+          Ves: () => _,
           WX$: () => _,
           _: () => _,
           X4B: () => _,
@@ -124989,13 +125058,13 @@ var CLSTAMP = "steamdb";
           apU: () => _,
           bPr: () => _,
           bcZ: () => _,
-          _: () => _,
           c_I: () => _,
           eSy: () => _,
           eTF: () => _,
           f5X: () => _,
           f5w: () => _,
           fSs: () => _,
+          fhy: () => _,
           fpT: () => _,
           gxp: () => _,
           h20: () => _,
@@ -125026,7 +125095,6 @@ var CLSTAMP = "steamdb";
           u9R: () => _,
           vRz: () => _,
           wB_: () => _,
-          xoK: () => _,
           xv8: () => _,
           yFA: () => _,
           yUp: () => _,
@@ -128418,94 +128486,51 @@ var CLSTAMP = "steamdb";
           });
         }
         function _(_) {
-          const [_, _] = (0, _._)();
+          const { className: _, ..._ } = _;
           return (0, _.jsxs)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
+            className: (0, _._)(_().SteamFrameCompatLogo, _),
             ..._,
-            children: [
-              (0, _.jsxs)("g", {
-                clipPath: _,
-                children: [
-                  (0, _.jsx)("path", {
-                    fill: "#199FFF",
-                    _: "M35.9982 12.4814C23.0097 12.4814 12.4805 23.0107 12.4805 35.9991H35.9982V12.4814Z",
-                  }),
-                  (0, _.jsx)("path", {
-                    fill: "currentColor",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    _: "M0 0.776571C0 0.34768 0.347683 0 0.776571 0H35.9984V7.76572H7.76571V35.9984H0V0.776571Z",
-                  }),
-                ],
-              }),
-              (0, _.jsx)("defs", {
-                children: (0, _.jsx)("clipPath", {
-                  _: _,
-                  children: (0, _.jsx)("rect", {
-                    fill: "currentColor",
-                    width: "36",
-                    height: "36",
-                  }),
-                }),
-              }),
-            ],
-          });
-        }
-        function _(_) {
-          const [_, _] = (0, _._)();
-          return (0, _.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
+            viewBox: "0 0 20 20",
             fill: "none",
-            ..._,
-            children: [
-              (0, _.jsxs)("g", {
-                clipPath: _,
-                children: [
-                  (0, _.jsx)("path", {
-                    fill: "currentColor",
-                    _: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
-                  }),
-                  (0, _.jsx)("path", {
-                    fill: "#199FFF",
-                    _: "M26.2788 18.2288C26.2787 13.7823 22.6734 10.1777 18.2268 10.1777C13.7804 10.1778 10.176 13.7824 10.1758 18.2288C10.1758 22.5363 13.5586 26.0544 17.8127 26.2701L18.2268 26.2807C22.5347 26.2807 26.0527 22.8973 26.2681 18.643L26.2788 18.2288Z",
-                  }),
-                ],
-              }),
-              (0, _.jsx)("defs", {
-                children: (0, _.jsx)("clipPath", {
-                  _: _,
-                  children: (0, _.jsx)("rect", {
-                    fill: "currentColor",
-                    width: "36",
-                    height: "36",
-                  }),
-                }),
-              }),
-            ],
-          });
-        }
-        function _(_) {
-          return (0, _.jsxs)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
             children: [
               (0, _.jsx)("path", {
+                opacity: "0.84",
+                fill: "currentColor",
+                _: "M18.0001 7.54712C12.2272 7.54712 7.54736 12.227 7.54736 17.9998H18.0001V7.54712Z",
+              }),
+              (0, _.jsx)("path", {
+                opacity: "0.84",
                 fill: "currentColor",
                 fillRule: "evenodd",
                 clipRule: "evenodd",
-                _: "M24.5384 18C24.5384 11.6275 19.3725 6.46154 13 6.46154V0C22.9411 0 30.9999 8.05887 30.9999 18C30.9999 27.9411 22.9411 36 13 36V29.5385C19.3725 29.5385 24.5384 24.3725 24.5384 18Z",
+                _: "M2 2.34516C2 2.15453 2.15453 2 2.34516 2H17.9999V5.45157H5.45157V17.9999H2V2.34516Z",
               }),
-              (0, _.jsx)("ellipse", {
-                fill: "#1A9FFF",
-                _: "13",
-                _: "18.0195",
-                _: "8.99996",
-                _: "9",
+            ],
+          });
+        }
+        function _(_) {
+          const { className: _, ..._ } = _;
+          return (0, _.jsxs)("svg", {
+            className: (0, _._)(_().SteamMachineCompatLogo, _),
+            ..._,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, _.jsx)("path", {
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
+                fill: "currentColor",
+              }),
+              (0, _.jsx)("path", {
+                opacity: "0.84",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                _: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
+                fill: "currentColor",
               }),
             ],
           });
@@ -128523,7 +128548,7 @@ var CLSTAMP = "steamdb";
               fillRule: "evenodd",
               clipRule: "evenodd",
               _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
-              fill: "white",
+              fill: "currentColor",
             }),
           });
         }
@@ -135198,25 +135223,23 @@ var CLSTAMP = "steamdb";
         43: "8170f2c895e19202cd65",
         133: "82545716ea1a8b82e4d9",
         191: "2f44a701276dca278b19",
-        200: "d19c4846c06154d67855",
+        200: "565b77074de18b644f43",
         277: "a5843aa6d5b4f2aac940",
-        295: "336a9b135aa763f6c3c3",
+        295: "bd39d7bbdf44e4767829",
         316: "b4a4125ab8550ef83a0b",
-        333: "9a16b6fb6d076e440881",
         382: "416dc2c22c72ab0b0084",
         474: "6a9d0b4e2892dded462e",
         496: "fb606fd9941402c4c9fd",
-        559: "34c52b90fa8b26a1c635",
+        559: "4261d8b18a20becab4e2",
         684: "93eb01f9afd9f045929e",
         762: "989dc3b4eff679fe5ec9",
-        815: "6888140329d7bd556c13",
+        815: "e56fc1348319b30a33bb",
         898: "b6a64c82dc169d24fab2",
         902: "c7d1b9914bd76ba5e8e5",
         947: "77123a0d43c051462d19",
         975: "3a1c568c77dec2962779",
         1087: "1b1e874fa0b17e33bd93",
-        1125: "616d252391da6a0082da",
-        1136: "836cff48f9e730cd72bd",
+        1136: "ed55d384a6ee2c8b99e9",
         1144: "896ffa5dbc529d9c48a5",
         1158: "20c08adf29ac06b096f3",
         1224: "8cf7b28930c7b7c56321",
@@ -135224,21 +135247,22 @@ var CLSTAMP = "steamdb";
         1330: "d8ab1ac01d7f47e93aca",
         1499: "63ac62860d966e5978a9",
         1571: "301c37a370bcf304422d",
+        1619: "447c798932ec1fceddc5",
         1639: "48a7008667f0f9b1d559",
         1849: "c211a47bad2b684320fd",
-        1864: "e350ed7cbba674d7b6da",
+        1864: "dd0b23501ea849aec42f",
         1954: "0e55356fd7b14be54c0b",
         1990: "f85ce9a0d9c8bd0dcdf2",
         2116: "9caf93966dc0a0c7202f",
         2177: "77c78758e314a85bc85e",
-        2269: "d397976ea72a0d451d39",
+        2269: "e0a3de7fb6ce7006519e",
         2281: "6496f3d7e4ce6308483c",
         2292: "2648171bbf7a4e541935",
         2506: "3995fb6cb9c524d2af74",
         2520: "1f392503c94a20f48720",
         2532: "81f6c1f1d6e42e913450",
         2687: "fe042a69cfd5cbb58cc1",
-        2889: "bcecf4256e68449a01d0",
+        2889: "5a54c4a13b7fdf97a351",
         2945: "f36eb722d1197b9ccc69",
         2993: "e6827764a5e82e106259",
         3e3: "a020a8a0239eaddd4347",
@@ -135248,84 +135272,85 @@ var CLSTAMP = "steamdb";
         3232: "74edce7d52daf7c1e927",
         3307: "52f9b1de1367f6212ec9",
         3382: "f4dd3d6e1a89705b7fa7",
-        3415: "bdd3dd7cc431e75b2dd9",
+        3415: "afd36ff1abc6e8d3a800",
         3485: "d45be7f2f2c9a5c0f02d",
         3577: "2337465c4bd74edf3412",
         3723: "325ca6fc0ceca5503b85",
         3778: "167dead89774a69d53cc",
         3789: "8c81812abc11a5169e5b",
-        3800: "abf0e9792c15c6580951",
+        3800: "fd6c4a51ee726d7857e1",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
         3898: "90846a9e84c0e34eca45",
-        3907: "517c2dead846273d00e6",
+        3907: "acb570cbe87a45370236",
         4006: "6603ebe760f65431a358",
         4154: "da950d2a24eca80bf91a",
         4227: "b9f7e2337d2bec4eff82",
-        4230: "e1190919e0888bf21125",
-        4289: "68b7a9f0b64962e564ce",
+        4230: "2076923cd0a4c22d72aa",
+        4289: "e33a182b1012718f1f4a",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "6777319b6735c96a6a98",
         4352: "de92a58e851fd1f40a2a",
-        4419: "d5832b2e23944965b86c",
+        4419: "f8e31272a8267560c36d",
         4421: "58fab8f46777762af7e8",
         4434: "06de5f0d3ba8406dd2d0",
         4473: "4f453826b91d887757e2",
         4488: "8dd091f616bb836b799e",
-        4625: "12d71f03cdffd77e1cc7",
-        4750: "b3436560d9c0c0f0dc70",
+        4625: "f11fdc7c2a8637db941c",
+        4750: "6a2548c6f4681e89fbdb",
         4776: "0ff0003552979744c3ee",
         4777: "040c37a660c26d77931d",
         4779: "909f21776039059914ce",
         4787: "ab118cafd413ef8db5d3",
-        4792: "7ea03c2167ad8c04a97e",
+        4792: "2313383fc0e234744aad",
         4844: "9b0a060abc338b33c9ea",
         4976: "11dc50e1825c3ea78b66",
-        4978: "be080baf55ab1c8a8bf9",
-        5040: "28c2c65b91467c8d8051",
+        4978: "cde74231919ac714ed14",
+        5040: "a8387cf2ac73ceabf119",
         5094: "d15c06f400812c0725f0",
         5136: "d873a49dcff7475852a5",
-        5191: "4752709558f32548377e",
-        5233: "fddfcb86ab26564014c4",
+        5191: "ee82b3a8f03316391985",
+        5233: "e916b53d09f578603df8",
         5341: "0050d1d3444cdf99610b",
         5358: "46677bfee5caf20bc8de",
-        5436: "275b440c57715c534d2b",
+        5436: "bec0dd4edebc7ed3d352",
         5480: "819bcdfa36698211a731",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
         5725: "188fd09b6944f1d69b65",
-        5777: "8689d3419c07185245a4",
+        5777: "affabae08fccce5f216e",
         5893: "91f5b813d41dc544101d",
         6059: "e0d80564c1174fd84376",
         6127: "658afba6cdc2a25013d4",
-        6170: "2a530f2478d5a36a3276",
+        6170: "7be014409b29b782ea6f",
         6196: "19444056df361c8ef94a",
         6305: "10b03bb6a5af6137fa3d",
         6385: "641291b44bff14d6f0d7",
         6447: "6571327308708b9cb4a5",
-        6512: "7a7968b059aa2615c129",
+        6512: "a595c994122b25799979",
         6518: "dc5f6ae58364d09cceda",
         6609: "58380bc6920b369df4a7",
         6637: "bee05b6c76a9dd2fe06d",
-        6736: "f4347c70c77ccd97063f",
+        6694: "4fc64104cf7aa5d3993c",
+        6736: "5fac9c35ab88a75e6079",
         6888: "b1d82792ec48c0c9f838",
         6905: "d9316fc5a220e6b4c416",
         6920: "073d861c6b381e481b8f",
         6950: "ec0c8b0d665699ce915b",
         6971: "8bfca381100e06a3c16d",
-        7246: "a438c51a87936df01ffe",
+        7246: "5b769448a62375fd8749",
         7247: "7021b7a5aaf6d7ee9806",
-        7263: "27dd6217cfff48a12f94",
+        7263: "461be645f271400b962f",
         7279: "4fa8dad9d6bcde1d380b",
         7365: "bb74e03060db6e6f780a",
         7418: "7680875bb68efceaf698",
-        7462: "5790f475e6429252e8dc",
+        7462: "993b5311565276946326",
         7464: "d527671518fba684fd01",
         7468: "53e0875c52dff3de164a",
         7487: "49d81d8d15ad6c6cb411",
         7637: "4d32b59b329ef468b7d5",
-        7653: "e08839256492b5573a44",
+        7653: "bf8dd885b82e8df0cf44",
         7673: "065a311d75b3213d4f15",
         7788: "d010383f4ccc1c1b6efb",
         7861: "7b73403c160be056831f",
@@ -135337,7 +135362,7 @@ var CLSTAMP = "steamdb";
         8246: "d8dd4a47668b5bf225ab",
         8311: "410eff68de4d1e8b26d0",
         8366: "fbd35ad496eb7892a424",
-        8476: "2a1a5a0621ee33cce652",
+        8476: "094339eefcf15105c427",
         8566: "cd93e0bf03daf5972185",
         8703: "644cfd9a31d1c4890881",
         8759: "c5da3a31f5e1a781a6b1",
@@ -135350,11 +135375,11 @@ var CLSTAMP = "steamdb";
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
         9457: "03ff4c6f7ee37e164af2",
-        9574: "ee1efd14ab96fa8cae92",
-        9668: "6dd0a225f937e6af2d71",
+        9574: "686eb5b5f196008b0c69",
+        9668: "810a657ba920b191c905",
         9746: "2cfaacb3359ab5b9bd3c",
         9808: "21bf92301f1b8edb7b62",
-        9863: "9c5c03a5b7c37fd2753a",
+        9863: "b84d2101aa968e8529ae",
         9925: "77586f22def2595b9c64",
         9930: "f92544de12d0462e95d3",
         9947: "46317ab7a7ca29c36168",
@@ -135368,7 +135393,7 @@ var CLSTAMP = "steamdb";
       ".css?contenthash=" +
       {
         7462: "72980633e3cf3969529a",
-        7653: "fe8e8bb145f728df7bdd",
+        7653: "b2050965c1ec19922309",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -135602,6 +135627,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(98721));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(41927));
   _ = _._(_);
 })();

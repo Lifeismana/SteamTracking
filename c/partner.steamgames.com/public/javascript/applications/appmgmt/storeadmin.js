@@ -346,6 +346,30 @@
     },
     chunkid: (module) => {
       module.exports = {
+        PriceChangeSummary: "_378al6U3fz_xo26XB9TSaC",
+        Pending: "_9BqgpQmpdILuSOBqbvGmK",
+        LoadFailed: "_34U8ZCDShWlVmzkBSW2w1J",
+        LastChange: "_2l-Xyo8VbJ2d3XET3FSMDA",
+        RecentChange: "_396joK-7sdGrUxSlkMFOSC",
+        ChangeCount: "oj-LqimPIvXVMzu4i_Srk",
+        PriceChangeToolTip: "_1ju10cCVVFddbi9j4GydW7",
+        ToolTipTitle: "_3xk6dJPcAPoyNGwRBsSLYI",
+        ToolTipFooter: "_2lvPhgL4d8BhTp9kzGmqJ9",
+        ChangeTable: "_1KVZXL9V7gdtPB4judbmZT",
+        ChangeHeader: "Tgry6kDtqoo8oLIhLwRlk",
+        ChangeRow: "_1OZc-hjI5dkOl7-5ULCXgQ",
+        TimeSince: "_1kFp7JsD4NPIjtLyWXzHd_",
+        Price: "pCW6qPXp-OAuvel2qwIcT",
+        Currencies: "_3xGwebW9ut7kgLyLjTcBpx",
+        Notes: "_3SUWUxCuHwN3dYEIbtAbja",
+        Increase: "_3hxpTm3SvfgEuBOwXHA3lD",
+        Decrease: "wU80squkMRYFMGxr9CTrZ",
+        NoChange: "yUgWUJgZHovMaAGLLtLA_",
+        FirstPrice: "_24W_O9CqcOeCKh_efWoYl9",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         RadioButtons: "_1o8PeYV1JEHw28jdq0-cZs",
         ActionsCtn: "_3tmYmIJendBOkxYfR5pMSJ",
         NotesField: "hmIKAOq3IUq5OZJGCGodY",
@@ -3288,6 +3312,7 @@
       class _ extends _._ {
         m_schemaConfig;
         m_mapPMBBNodes = new Map();
+        m_bUseBackslashEscapes;
         constructor(_, _) {
           super(_.bbcode_dictionary, (_) => {
             const _ = _?.tag && _.bbcode_dictionary.get(_.tag);
@@ -3298,6 +3323,7 @@
             );
           }),
             (this.m_schemaConfig = _),
+            (this.m_bUseBackslashEscapes = _?.bUseBackslashEscapes ?? !0),
             this.m_schemaConfig.bbcode_dictionary.forEach((_) => {
               "node" in _.Constructor &&
                 this.m_mapPMBBNodes.set(_.Constructor.node.name, _.Constructor);
@@ -3307,7 +3333,11 @@
           return this.m_schemaConfig.pm_schema;
         }
         ParseBBCode(_) {
-          const _ = this.Parse(_, this.BBNodeToPMNode.bind(this), !0);
+          const _ = this.Parse(
+            _,
+            this.BBNodeToPMNode.bind(this),
+            this.m_bUseBackslashEscapes,
+          );
           return this.m_schemaConfig.pm_schema.topNodeType.createChecked(
             {},
             this.ConvertLineBreaksToParagraphs(_._.fromArray(_)),
@@ -3492,33 +3522,33 @@
           );
         }
       }
-      function _(_, _) {
-        return _(_.pm_schema, _.pm_to_bbcode_config, _, []);
+      function _(_, _, _) {
+        return _(
+          {
+            schema: _.pm_schema,
+            config: _.pm_to_bbcode_config,
+            bUseBackslashEscapes: _?.bUseBackslashEscapes ?? !0,
+          },
+          _,
+          [],
+          !1,
+        );
       }
       function _(_, _, _, _) {
+        const { schema: _, config: _ } = _;
         let _ = _.marks,
           _ = "";
         const _ = _.mapNodes.get(_.type),
-          { tag: _, args: _ } = (function (_, _) {
-            if (_ && _.AttrsToBBArgs) {
-              const { tag: _ = _.tag, args: _ = {} } = _.AttrsToBBArgs(
-                _.attrs,
-                _,
-              );
-              return {
-                tag: _,
-                args: _,
-              };
-            }
-            return {
-              tag: _?.tag,
-              args: {},
-            };
-          })(_, _);
+          { tag: _, args: _ } = _(_, _);
+        "emoticon" == _
+          ? (_ += ":")
+          : _ && (_ += (0, _._)(_, _, _?.bVerbatimArgs));
+        const _ = _ || !!_?.bVerbatimContent;
+        let _ = !1;
         return (
-          "emoticon" == _ ? (_ += ":") : _ && (_ += (0, _._)(_, _)),
           _.content.forEach((_) => {
-            ([_, _] = _(_, _, _.marks, _)),
+            if (
+              (([_, _] = _(_, _, _.marks, _)),
               ([_, _] = (function (_, _, _, _) {
                 let _;
                 for (const _ of _)
@@ -3533,11 +3563,22 @@
                   }
                 return [_, _ ?? _];
               })(_, _, _.marks, _)),
-              _.type.isText
-                ? (_ += (0, _._)(_.text || ""))
-                : _.type == _.nodes.hard_break
-                  ? (_ += "\n")
-                  : (_ += _(_, _, _, _));
+              _.type.isText)
+            ) {
+              const _ = _.text || "";
+              _ += _ || !_.bUseBackslashEscapes ? _ : (0, _._)(_);
+            } else {
+              if (_.type != _.nodes.hard_break) {
+                const _ = (function (_, _) {
+                  return _.type.isBlock && !_(_.mapNodes.get(_.type), _).tag;
+                })(_, _);
+                return (
+                  _ && _ && (_ += "\n"), (_ += _(_, _, _, _)), void (_ = _)
+                );
+              }
+              _ += "\n";
+            }
+            _ = !1;
           }),
           ([_] = _(_, _, _, _)),
           "emoticon" == _ ? (_ += ":") : _ && (_ += (0, _._)(_)),
@@ -3575,6 +3616,19 @@
           args: {},
         };
       }
+      function _(_, _) {
+        if (_ && _.AttrsToBBArgs) {
+          const { tag: _ = _.tag, args: _ = {} } = _.AttrsToBBArgs(_.attrs, _);
+          return {
+            tag: _,
+            args: _,
+          };
+        }
+        return {
+          tag: _?.tag,
+          args: {},
+        };
+      }
       const _ = new _._("CProseMirrorState - OnChange");
       class _ {
         m_bbcode;
@@ -3582,14 +3636,19 @@
         m_bHasUncomittedChanges = !1;
         m_schemaConfig;
         m_bbcodeParser;
+        m_bUseBackslashEscapes;
         m_onStateChangedCallbacks = new _._();
         m_fnCommitChanges;
         m_view;
         m_state;
         constructor(_, _, _, _) {
-          const { parser: _ } = _ ?? {};
+          const { parser: _, bUseBackslashEscapes: _ = !0 } = _ ?? {};
           (this.m_schemaConfig = _),
-            (this.m_bbcodeParser = new _(_, _ ?? {})),
+            (this.m_bUseBackslashEscapes = _),
+            (this.m_bbcodeParser = new _(_, {
+              ..._,
+              bUseBackslashEscapes: _,
+            })),
             (this.m_bbcode = _),
             (this.m_fnCommitChanges = _),
             (this.m_state = this.ConstructState());
@@ -3597,7 +3656,9 @@
         CommitChanges() {
           this.m_currentDoc &&
             this.m_bHasUncomittedChanges &&
-            ((this.m_bbcode = _(this.m_currentDoc, this.m_schemaConfig)),
+            ((this.m_bbcode = _(this.m_currentDoc, this.m_schemaConfig, {
+              bUseBackslashEscapes: this.m_bUseBackslashEscapes,
+            })),
             this.m_fnCommitChanges(this.m_bbcode, this.m_currentDoc),
             (this.m_bHasUncomittedChanges = !1));
         }
@@ -3791,16 +3852,27 @@
       }
       class _ {
         dom;
+        contentDOM;
         onPropsChanged;
         node;
         selected;
+        reactHost;
         destroy;
         constructor(_, _, _, _, _) {
           this.node = _;
-          const _ = _.dom.ownerDocument.createElement(
-            _.type.isInline ? "span" : "div",
-          );
+          const _ = _.dom.ownerDocument,
+            _ = _.createElement(_.type.isInline ? "span" : "div");
           this.dom = _;
+          let _ = _;
+          _.bEditableContent &&
+            ((_ = this.reactHost =
+              _.createElement(_.type.isInline ? "span" : "div")),
+            (_.contentEditable = "false"),
+            _.appendChild(_),
+            (this.contentDOM = _.createElement(
+              _.type.inlineContent ? "span" : "div",
+            )),
+            _.appendChild(this.contentDOM));
           const { selection: _ } = _.state;
           this.selected = _() >= _.from && _() + _.nodeSize <= _._;
           const _ = (_) => {
@@ -3832,6 +3904,15 @@
             _.type == this.node.type &&
             ((this.node = _), this.onPropsChanged(), !0)
           );
+        }
+        ignoreMutation(_) {
+          return (
+            (!this.contentDOM || !this.contentDOM.contains(_.target)) &&
+            (!!this.reactHost || "selection" != _.type)
+          );
+        }
+        stopEvent(_) {
+          return !!this.reactHost && this.reactHost.contains(_.target);
         }
         selectNode() {
           (this.selected = !0), this.onPropsChanged();
@@ -4383,14 +4464,15 @@
               (0, _._)(
                 _.useMemo(
                   () =>
-                    _ &&
-                    _._({
-                      View: _,
-                    }),
+                    _
+                      ? _._({
+                          View: _,
+                        })
+                      : void 0,
                   [_],
                 ),
               ),
-              (0, _._)(_.useMemo(() => _ && _._(), [_])),
+              (0, _._)(_.useMemo(() => (_ ? _._() : void 0), [_])),
               null
             );
           }));
@@ -4441,18 +4523,18 @@
             onActivate: _,
             onGamepadDirection: _,
           } = (function (_) {
-            const _ = _.useRef(void 0),
+            const _ = _.useRef(null),
               _ = (0, _._)(),
               _ = _.useCallback(() => {
-                __webpack_require__.ShowVirtualKeyboard();
-                let _ = _?.hasFocus();
-                if (!_) {
+                if ((__webpack_require__.ShowVirtualKeyboard(), !_)) return;
+                if (!_.hasFocus()) {
                   _.focus();
-                  let _ = _.dom.childNodes;
+                  let _ = _.dom.childNodes,
+                    _ = _.current?.scrollTop ?? 0;
                   for (let _ = 0; _ < _.length; ++_) {
                     let _ = _[_],
                       _ = _.offsetTop;
-                    if (void 0 !== _ && _ >= _.current.scrollTop) {
+                    if (void 0 !== _ && _ >= _) {
                       let _ = _.getBoundingClientRect();
                       (0, _._)(_, _.left, _.top);
                       break;
@@ -4461,7 +4543,7 @@
                 }
               }, [_, _]),
               _ = _.useCallback((_) => _.currentTarget == _.target, []),
-              _ = (0, _._)(_, null, null, _);
+              _ = (0, _._)(_, void 0, void 0, _);
             return {
               refDiv: _,
               onActivate: _,
@@ -4558,7 +4640,7 @@
           _ = _.useCallback(() => {
             _ && _(), _();
           }, [_, _]),
-          _ = _ ? void 0 : _;
+          _ = _ ? () => {} : _;
         return (0, _.jsx)(_._, {
           onEscKeypress: _,
           children: (0, _.jsxs)(_._, {
@@ -5020,7 +5102,7 @@
           [_, _] = _.useState(() => (0, _._)(_.state, _, _)),
           _ = _.useCallback((_) => _((0, _._)(_.state, _, _)), [_, _]);
         (0, _._)(_, _);
-        const _ = _.useMemo(() => (0, _._)(_, _), [_, _]),
+        const _ = _.useMemo(() => (0, _._)(_, _ ?? {}), [_, _]),
           _ = !!_;
         return (0, _.jsx)(_._, {
           ..._,
@@ -5286,6 +5368,8 @@
                     BBArgsToAttrs: _,
                     AttrsToBBArgs: _,
                     convertContentToAttr: _,
+                    bVerbatimArgs: _,
+                    bVerbatimContent: _,
                     ..._
                   }) => {
                     this.m_mapBBCodeDictionary.set(_, {
@@ -5300,10 +5384,17 @@
                     });
                   },
                 );
-              const { tag: _, AttrsToBBArgs: _ } = _[0];
+              const {
+                tag: _,
+                AttrsToBBArgs: _,
+                bVerbatimArgs: _,
+                bVerbatimContent: _,
+              } = _[0];
               this.m_PMToBBCodeConfig.mapNodes.set(_, {
                 tag: _,
                 AttrsToBBArgs: _,
+                bVerbatimArgs: _,
+                bVerbatimContent: _,
               });
             }),
             _.forEach((_, _) => {
@@ -9401,6 +9492,81 @@
         );
         return _;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 9e5,
+        _ = "PackagePriceChanges",
+        _ = new Map();
+      const _ = new (_())(
+        (_) =>
+          (async function (_) {
+            const _ = {
+                packageids: _.join(","),
+              },
+              _ = await _().get(
+                `${_._.PARTNER_BASE_URL}pricing/admin/packagepricechanges`,
+                {
+                  params: _,
+                  withCredentials: !0,
+                },
+              );
+            if (!_ || 200 != _.status || _.data?.success != _._)
+              throw `Load package price changes failed ${((0, _._))(_).strErrorMsg}`;
+            const _ = new Map();
+            return (
+              _.data.packages?.forEach((_) => _.set(_.packageid, _)),
+              _.map(
+                (_) =>
+                  _.get(_) || {
+                    packageid: _,
+                    total_changes: 0,
+                    changes: [],
+                  },
+              )
+            );
+          })(_),
+        {
+          cache: !1,
+          maxBatchSize: 20,
+        },
+      );
+      function _(_) {
+        const _ = (0, _.useMemo)(
+            () => Array.from(new Set(_)).filter(Boolean),
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) =>
+              (function (_, _) {
+                const _ = new Map();
+                return (
+                  _.forEach((_, _) => {
+                    _.data
+                      ? __webpack_require__.set(_.data.packageid, _.data)
+                      : _.isError &&
+                        __webpack_require__.set(_[_], {
+                          packageid: _[_],
+                          bLoadFailed: !0,
+                        });
+                  }),
+                  _.size > 0 ? _ : _
+                );
+              })(_, _),
+            [_],
+          );
+        return (0, _._)({
+          queries: _.map((_) => ({
+            queryKey: [_, _],
+            queryFn: () => _.load(_),
+            staleTime: _,
+            retry: 1,
+          })),
+          combine: _,
+        });
+      }
       class _ {
         m_mapPackageToPartners = new Map();
         GetMap() {
@@ -9429,8 +9595,6 @@
         return _;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -9656,6 +9820,239 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 2592e3;
+      function _(_) {
+        const { packageID: _, priceChanges: _ } = _,
+          _ = _?.changes?.[0];
+        return (0, _.jsxs)("div", {
+          className: _.PriceChangeSummary,
+          children: [
+            (0, _.jsx)(_, {
+              priceChanges: _,
+            }),
+            (0, _.jsx)("a", {
+              href: `${_._.PARTNER_BASE_URL}packages/pricehistory/${_}`,
+              target: "_blank",
+              rel: "noreferrer",
+              children: "Show Package Price History",
+            }),
+            Boolean(_) &&
+              (0, _.jsx)(_, {
+                priceChanges: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { priceChanges: _ } = _;
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _.Pending,
+            children: "Looking up published price changes...",
+          });
+        if (_.bLoadFailed)
+          return (0, _.jsx)("div", {
+            className: _.LoadFailed,
+            children: "Could not load published price changes",
+          });
+        const _ = _.changes?.[0];
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _.Pending,
+            children: "No previously published price change",
+          });
+        const _ = Date.now() / 1e3 - _.time < _;
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _.jsx)(_, {
+            priceChanges: _,
+          }),
+          direction: "right",
+          nDelayShowMS: 150,
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_.LastChange, _ && _.RecentChange),
+            children: [
+              "Price last published ",
+              (0, _._)(_.time),
+              " (",
+              (0, _._)(_.time),
+              ")",
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { priceChanges: _ } = _,
+          _ = _.total_changes || 0;
+        return (0, _.jsxs)("div", {
+          className: _.ChangeCount,
+          children: [
+            _,
+            " published price ",
+            1 == _ ? "change" : "changes",
+            " total",
+          ],
+        });
+      }
+      function _(_) {
+        const { priceChanges: _ } = _,
+          _ = _.changes || [];
+        return (0, _.jsxs)("div", {
+          className: _.PriceChangeToolTip,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.ToolTipTitle,
+              children: "Recent published price changes",
+            }),
+            (0, _.jsxs)("table", {
+              className: _.ChangeTable,
+              children: [
+                (0, _.jsx)("thead", {
+                  children: (0, _.jsxs)("tr", {
+                    className: _.ChangeHeader,
+                    children: [
+                      (0, _.jsx)("th", {
+                        children: "Published",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "USD",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Change",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "Currencies",
+                      }),
+                      (0, _.jsx)("th", {
+                        children: "By",
+                      }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)("tbody", {
+                  children: __webpack_require__.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        change: _,
+                      },
+                      `${_.time}_${_}`,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+            Boolean(_.total_changes > _.length) &&
+              (0, _.jsxs)("div", {
+                className: _.ToolTipFooter,
+                children: [
+                  "Showing the last ",
+                  _.length,
+                  " of ",
+                  _.total_changes,
+                  " published changes",
+                ],
+              }),
+            (0, _.jsx)("div", {
+              className: _.ToolTipFooter,
+              children:
+                "Open the package price history for the full per-currency detail.",
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { change: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("tr", {
+              className: _.ChangeRow,
+              children: [
+                (0, _.jsxs)("td", {
+                  children: [
+                    (0, _._)(_.time),
+                    (0, _.jsx)("div", {
+                      className: _.TimeSince,
+                      children: (0, _._)(_.time),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("td", {
+                  className: _.Price,
+                  children: _.usd_amount ? (0, _._)(_.usd_amount, _._) : "--",
+                }),
+                (0, _.jsx)("td", {
+                  children: (0, _.jsx)(_, {
+                    change: _,
+                  }),
+                }),
+                (0, _.jsxs)("td", {
+                  className: _.Currencies,
+                  children: [
+                    _.currency_count || 0,
+                    Boolean(_.country_count) &&
+                      (0, _.jsxs)("span", {
+                        children: [" +", _.country_count, " country"],
+                      }),
+                  ],
+                }),
+                (0, _.jsx)("td", {
+                  children: (0, _.jsx)(_._, {
+                    accountID: _.account,
+                  }),
+                }),
+              ],
+            }),
+            Boolean(_.notes) &&
+              (0, _.jsx)("tr", {
+                className: _.ChangeRow,
+                children: (0, _.jsx)("td", {
+                  className: _.Notes,
+                  colSpan: 5,
+                  children: _.notes,
+                }),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { change: _ } = _;
+        if (!_.usd_amount)
+          return (0, _.jsx)("span", {
+            className: _.NoChange,
+            children: "no USD price",
+          });
+        if (_.first_published)
+          return (0, _.jsx)("span", {
+            className: _.FirstPrice,
+            children: "first published price",
+          });
+        if (!_.usd_previous)
+          return (0, _.jsx)("span", {
+            className: _.NoChange,
+            children: "previous USD price unknown",
+          });
+        if (_.usd_amount == _.usd_previous)
+          return (0, _.jsx)("span", {
+            className: _.NoChange,
+            children: "USD unchanged",
+          });
+        const _ = _.usd_amount > _.usd_previous,
+          _ = Math.round(
+            ((_.usd_amount - _.usd_previous) / _.usd_previous) * 100,
+          );
+        return (0, _.jsxs)("span", {
+          className: _ ? _.Increase : _.Decrease,
+          children: [
+            _ ? "▲" : "▼",
+            " ",
+            Math.abs(_),
+            "% from ",
+            (0, _._)(_.usd_previous, _._),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { proposal: _, mapCurrentPrices: _, oGuideline: _ } = _,
@@ -10697,7 +11094,11 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { proposal: _, mapPartnerPaidByPackage: _ } = _,
+        const {
+            proposal: _,
+            mapPartnerPaidByPackage: _,
+            mapPriceChanges: _,
+          } = _,
           [_] = (0, _._)(_.packageid, _),
           [_] = (0, _._)(_?.GetIncludedAppIDsOrSelf()?.[0], _),
           _ = `${_._.PARTNER_BASE_URL}store/packagelanding/${_.packageid}`;
@@ -10745,9 +11146,9 @@
                     : " No Release date")
                 : "Store Visibility: Hidden",
             }),
-            (0, _.jsx)("a", {
-              href: `${_._.PARTNER_BASE_URL}packages/pricehistory/${_.packageid}`,
-              children: "Show Package Price History",
+            (0, _.jsx)(_, {
+              packageID: _.packageid,
+              priceChanges: _.get(_.packageid),
             }),
             (0, _.jsx)("div", {
               className: _.SubmissionBy,
@@ -10958,6 +11359,7 @@
             oGuideline: _,
             mapCurrentPrices: _,
             mapPartnerPaidByPackage: _,
+            mapPriceChanges: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!0);
@@ -11051,6 +11453,7 @@
                     proposal: _,
                     mapCurrentPrices: _,
                     mapPartnerPaidByPackage: _,
+                    mapPriceChanges: _,
                     bForceShowComparisonRows: _,
                     bShowWithOpenTickets: _,
                   }),
@@ -11436,6 +11839,7 @@
           oGuideline: _,
           mapCurrentPrices: _,
           mapPartnerPaidByPackage: _,
+          mapPriceChanges: _,
         } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -11456,6 +11860,7 @@
                       proposal: _,
                       mapCurrentPrices: _,
                       mapPartnerPaidByPackage: _,
+                      mapPriceChanges: _,
                     }),
                   ],
                 },
@@ -11571,6 +11976,12 @@
           _ = (0, _._)(),
           _ = _(),
           _ = _(),
+          _ = _(
+            (0, _.useMemo)(
+              () => __webpack_require__.map((_) => _.packageid),
+              [_],
+            ),
+          ),
           [_, _] = (0, _._)("tab", "delta");
         if (!_)
           return (0, _.jsx)(_._, {
@@ -11587,6 +11998,7 @@
                   oGuideline: _,
                   mapCurrentPrices: _,
                   mapPartnerPaidByPackage: _,
+                  mapPriceChanges: _,
                 }),
               }),
               onClick: _,
@@ -11600,6 +12012,7 @@
                   oGuideline: _,
                   mapCurrentPrices: _,
                   mapPartnerPaidByPackage: _,
+                  mapPriceChanges: _,
                 }),
               }),
               onClick: _,
@@ -20311,20 +20724,18 @@
       function _(_) {
         const { view: _, refUpdateToolbar: _, children: _ } = _,
           _ = _.useRef(void 0);
-        _.current || (_.current = new _._()),
-          _.useEffect(
-            () => (
-              (0, _._)(_, () => _.current.Dispatch(_)),
-              () => (0, _._)(_, void 0)
-            ),
-            [_, _],
-          );
+        _.current || (_.current = new _._());
+        const _ = _.current;
+        _.useEffect(
+          () => ((0, _._)(_, () => _.Dispatch(_)), () => (0, _._)(_, void 0)),
+          [_, _, _],
+        );
         const _ = _.useMemo(
           () => ({
-            callbacks: _.current,
+            callbacks: _,
             view: _,
           }),
-          [_],
+          [_, _],
         );
         return _
           ? (0, _.jsx)(_.Provider, {
@@ -20460,7 +20871,7 @@
       function _(_) {
         const { keyboardShortcut: _ } = _,
           _ = _.split("-"),
-          _ = __webpack_require__.pop();
+          _ = __webpack_require__.pop() ?? "";
         return (0, _.jsxs)(_.Fragment, {
           children: [
             __webpack_require__.map((_, _) =>

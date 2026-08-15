@@ -3994,7 +3994,7 @@
       function _(_) {
         var _, _;
         const { editModel: _ } = _,
-          [_, _] = _.useState(_.FH6),
+          [_, _] = _.useState(_.xPp),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(null),
           _ = _.GetClanSteamID(),

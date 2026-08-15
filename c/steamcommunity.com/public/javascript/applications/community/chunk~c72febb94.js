@@ -53,19 +53,13 @@
         }
       }
       class _ extends _ {
-        constructor(_, _, _) {
-          super(_),
-            (this.m_nStartCursor = 1),
-            (this.m_nStartCursor = void 0 !== _ ? _ : 1);
+        constructor(_) {
+          super(_);
         }
         AppendText(_) {
           let _ = _;
           const _ = [];
-          for (
-            let _ = _.indexOf("\n", this.m_nStartCursor);
-            -1 !== _;
-            _ = _.indexOf("\n")
-          )
+          for (let _ = _.indexOf("\n"); -1 !== _; _ = _.indexOf("\n"))
             __webpack_require__.push(_.substr(0, _)),
               __webpack_require__.push(_.createElement("br")),
               (_ = _.substr(_ + 1));
@@ -262,9 +256,10 @@
           return __webpack_require__.GetElements();
         }
       }
-      function _(_, _) {
+      function _(_, _, _ = !1) {
         let _ = "[" + _;
-        (null == _ ? void 0 : _[""]) && (_ += `=${_("" + _[""])}`);
+        (null == _ ? void 0 : _[""]) &&
+          (_ += `=${_ ? "" + _[""] : _("" + _[""])}`);
         for (const _ in _) "" !== _ && (_ += ` ${_(_)}=${_("" + _[_])}`);
         return (_ += "]"), _;
       }

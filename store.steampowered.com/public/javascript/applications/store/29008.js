@@ -159,7 +159,6 @@
         DialogTitle: "_2WJTd3a8tzPCkIBmvfBD79",
         AppTitleCategory: "_23sFZwpTqnM3Ameqew-ZuX",
         CompatibilityDetailsStillLearning: "_1WWwtz2-hqx1OnhlEOCTLl",
-        CompatibilityDetailsContainerDesktop: "_2ADsvLBScO2pMzUxFUg-_g",
         CompatibilityDetailsContainer: "_1-O8t3AxzpNsipTPfHVktW",
         CompatibilityDetailsInterior_NoScroll: "_3oQPVwTgG0CmSxwl3e1cI4",
         CompatibilityDetailsInterior_Scroll: "_2uCLczcyA7K90OppYPMeBA",
@@ -1292,8 +1291,8 @@
         CR: () => R,
         CS: () => a,
         Cv: () => T,
-        D4: () => A,
-        D5: () => D,
+        D4: () => D,
+        D5: () => A,
         DP: () => p,
         En: () => _,
         Fq: () => l,
@@ -1362,8 +1361,8 @@
         L = 22,
         j = 23,
         B = 24,
-        D = 25,
-        A = 26,
+        A = 25,
+        D = 26,
         k = 27,
         H = 28,
         I = 29,
@@ -1700,8 +1699,8 @@
       var L = n(66418),
         j = n(42834),
         B = n(52471),
-        D = n(80696),
-        A = n(52541),
+        A = n(80696),
+        D = n(52541),
         k = n(39777),
         H = n(7338),
         I = n(54806),
@@ -1736,8 +1735,8 @@
       }
       function z(e, t) {
         return {
-          stringifyID: `vid_${(0, A.ER)(e)}`,
-          rctImage: (0, r.jsx)(D.mj, { id: e, active: !0 }),
+          stringifyID: `vid_${(0, D.ER)(e)}`,
+          rctImage: (0, r.jsx)(A.mj, { id: e, active: !0 }),
           nDurationMs: Z,
         };
       }
@@ -1745,7 +1744,7 @@
         return n.slice(0, a).map((n, a) => {
           const o = (0, j.bu)(n, "1920x1080");
           return {
-            stringifyID: `screen${a}_${(0, A.ER)(e)}`,
+            stringifyID: `screen${a}_${(0, D.ER)(e)}`,
             rctImage: (0, r.jsx)(
               "img",
               {
@@ -1814,7 +1813,7 @@
                       "beta" != g.TS.WEB_UNIVERSE) ||
                     console.error(
                       "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, A.ER)(e),
+                      (0, D.ER)(e),
                     ),
                   o
                 );
@@ -1853,7 +1852,7 @@
                     "beta" == g.TS.WEB_UNIVERSE) &&
                     console.error(
                       "DEV ONLY OUTPUT: Demo GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, A.ER)(e),
+                      (0, D.ER)(e),
                     ),
                   i
                 );
@@ -2102,10 +2101,10 @@
           } = e,
           [x, v] = (0, d.useState)(!1),
           [L, B] = (0, d.useState)(""),
-          { data: D } = (0, k.J$)(t),
-          { data: A } = (0, k.lv)(n),
+          { data: A } = (0, k.J$)(t),
+          { data: D } = (0, k.lv)(n),
           H = !S && !C && !p,
-          I = D && D.item_type == a.c6.qI;
+          I = A && A.item_type == a.c6.qI;
         return (0, r.jsxs)("div", {
           className: E().BottomShelf,
           style: { transform: h && x ? L : "" },
@@ -2122,7 +2121,7 @@
               },
               "aria-disabled": w,
               children: [
-                A &&
+                D &&
                   (0, r.jsx)("div", {
                     className: E().CapsuleImageAnchorPoint,
                     children: (0, r.jsx)("div", {
@@ -2132,8 +2131,8 @@
                       ),
                       children: (0, r.jsx)("img", {
                         loading: "lazy",
-                        src: (0, j.b0)(A, "header"),
-                        alt: D?.name,
+                        src: (0, j.b0)(D, "header"),
+                        alt: A?.name,
                       }),
                     }),
                   }),
@@ -2161,7 +2160,7 @@
                     "aria-disabled": w,
                     children: (0, r.jsx)("div", {
                       className: E().GameTitle,
-                      children: D?.name || u,
+                      children: A?.name || u,
                     }),
                   }),
                   y && (0, r.jsx)(xe, { id: t }),
@@ -2293,13 +2292,13 @@
             bShowIgnoreButton: f,
             bShowDescription: S,
           },
-          D = (0, r.jsx)(ve, { ...B }),
-          A = j ? (0, r.jsx)("a", { href: j, children: m }) : m;
+          A = (0, r.jsx)(ve, { ...B }),
+          D = j ? (0, r.jsx)("a", { href: j, children: m }) : m;
         return (0, r.jsx)(ce, {
-          hoverContent: D,
+          hoverContent: A,
           nWidthMultiplier: C,
           ...b,
-          children: A,
+          children: D,
         });
       }
     },
@@ -2475,21 +2474,21 @@
                 }),
             ],
           });
-        let D = "#ReviewScore_PercentPositive";
-        if (f.item_type === o.c6.xO) D = "#ReviewScore_PercentPositive_bundle";
+        let A = "#ReviewScore_PercentPositive";
+        if (f.item_type === o.c6.xO) A = "#ReviewScore_PercentPositive_bundle";
         else if (f.item_type === o.c6.qI)
           switch (f.type) {
             case o.uE.Sv:
-              D = "#ReviewScore_PercentPositive_software";
+              A = "#ReviewScore_PercentPositive_software";
               break;
             case o.uE.Wz:
-              D = "#ReviewScore_PercentPositive_video";
+              A = "#ReviewScore_PercentPositive_video";
               break;
             case o.uE.Hk:
-              D = "#ReviewScore_PercentPositive_hardware";
+              A = "#ReviewScore_PercentPositive_hardware";
               break;
             case o.uE.gQ:
-              D = "#ReviewScore_PercentPositive_series";
+              A = "#ReviewScore_PercentPositive_series";
           }
         return (0, r.jsx)(u.q, {
           url: j,
@@ -2498,11 +2497,11 @@
             p &&
             null != w.percent_positive &&
             null != w.review_count &&
-            Boolean(D)
+            Boolean(A)
               ? (0, r.jsx)(d.he, {
                   bTopmost: !0,
                   toolTipContent: _.Z.Localize(
-                    D,
+                    A,
                     w.percent_positive,
                     w.review_count,
                   ),
@@ -2552,11 +2551,11 @@
                 : void 0,
           ),
           B = (0, m.$5)(L),
-          D = (0, c.bB)(L),
-          { bIsOwned: A } = (0, l.ZJ)(B),
+          A = (0, c.bB)(L),
+          { bIsOwned: D } = (0, l.ZJ)(B),
           [k, H] = (0, d.useState)(!1),
           I = (0, C.m)("GameHoverWishlistButton"),
-          { mutateAsync: N } = (0, u.s)(L, !D, n);
+          { mutateAsync: N } = (0, u.s)(L, !A, n);
         (0, d.useEffect)(() => {
           t &&
             "appid" in t &&
@@ -2575,7 +2574,7 @@
           },
           [I.token.reason, v, N],
         );
-        return A && y?.type != o.uE.Hk
+        return D && y?.type != o.uE.Hk
           ? null
           : (0, r.jsxs)(a.Z, {
               className: (0, _.A)(
@@ -2586,7 +2585,7 @@
               onActivate: R,
               style: b,
               children: [
-                D ? (0, r.jsx)(p.qnF, {}) : (0, r.jsx)(p.T4m, {}),
+                A ? (0, r.jsx)(p.qnF, {}) : (0, r.jsx)(p.T4m, {}),
                 (0, r.jsx)("div", {
                   className: (0, _.A)(
                     f().WishlistButtonText,
@@ -2594,7 +2593,7 @@
                     "WishlistButtonText",
                   ),
                   children: S.Z.Localize(
-                    D ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
+                    A ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
                   ),
                 }),
                 x,
@@ -2670,8 +2669,8 @@
         L = n(61859),
         j = n(60155),
         B = n(58579),
-        D = n.n(B);
-      const A = {
+        A = n.n(B);
+      const D = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
@@ -2686,7 +2685,7 @@
                 (0, v.lX)(
                   (0, r.jsx)(H, { sessions: n, setRemoteDownloadClientId: t }),
                   e,
-                  A,
+                  D,
                 );
             },
             [t, n],
@@ -2694,14 +2693,14 @@
         return n?.length
           ? (0, r.jsx)("button", {
               onClick: a,
-              className: D().ClientSelectDropdown,
+              className: A().ClientSelectDropdown,
               children: (0, r.jsx)(N, {}),
             })
           : null;
       }
       function H({ sessions: e, setRemoteDownloadClientId: t }) {
         return (0, r.jsx)("ul", {
-          className: D().ClientListDropdownMenu,
+          className: A().ClientListDropdownMenu,
           children: e.map((e) =>
             (0, r.jsx)(
               j.kt,
@@ -3101,14 +3100,14 @@
             strPriceFormattedClassName: L,
             bPreferWholeNumbers: j,
             bSelfPurchaseOption: B,
-            bHideNewTag: D,
+            bHideNewTag: A,
           } = e,
-          A = _.TS.NOW,
+          D = _.TS.NOW,
           { data: k } = (0, s.by)(c),
           { data: H } = (0, s.J$)(c);
         if (!H) return null;
         const I = d,
-          N = !D && (0, i.fk)(k, A),
+          N = !A && (0, i.fk)(k, D),
           R = (0, p.A)({
             [u().StoreSalePriceWidgetContainer]: !0,
             [u().SingleLineMode]: t,
@@ -4098,6 +4097,7 @@
       n.d(t, {
         Us: () => p,
         xU: () => m,
+        Gw: () => c,
         eT: () => u,
         mQ: () => d,
         BU: () => C,
@@ -4916,8 +4916,8 @@
         L = n(12529),
         j = n(22797),
         B = n(52038),
-        D = n(78686),
-        A = n(41338),
+        A = n(78686),
+        D = n(41338),
         k = n(35111),
         H = n.n(k);
       function I(e) {
@@ -4935,7 +4935,7 @@
               onClick: d,
               children: (0, r.jsx)("span", {
                 className: H().LearnMorePC,
-                children: D.Z.Localize(
+                children: A.Z.Localize(
                   "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
                 ),
               }),
@@ -4965,7 +4965,7 @@
               className: o
                 ? H().DeveloperComments_LinkIcon
                 : H().DeveloperComments_LinkNoIcon,
-              children: D.Z.Localize(
+              children: A.Z.Localize(
                 "#SteamDeckVerified_Store_CompatSection_DeveloperComments",
               ),
             }),
@@ -5003,7 +5003,7 @@
                 : (0, r.jsx)(j.t, {
                     size: "medium",
                     position: "center",
-                    string: D.Z.Localize("#Loading"),
+                    string: A.Z.Localize("#Loading"),
                   }),
             }),
           }),
@@ -5061,11 +5061,11 @@
             id: t,
             className: H().CompatibilityDetailRatingSummary,
             children: a
-              ? D.Z.LocalizeReact(
+              ? A.Z.LocalizeReact(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                  (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 )
-              : D.Z.Localize("#SteamDeckVerified_DescriptionHeader_Unknown"),
+              : A.Z.Localize("#SteamDeckVerified_DescriptionHeader_Unknown"),
           });
         let s = "",
           l = null;
@@ -5084,20 +5084,20 @@
         }
         const c = (0, r.jsx)("span", {
             className: l,
-            children: D.Z.Localize(P(n)),
+            children: A.Z.Localize(P(n)),
           }),
           u = (0, r.jsx)("span", {
             className: H().CompatibilityDetailRatingSummary,
-            children: D.Z.Localize(o || s),
+            children: A.Z.Localize(o || s),
           }),
           d = a
-            ? D.Z.LocalizeReact(
+            ? A.Z.LocalizeReact(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 c,
                 u,
               )
-            : D.Z.LocalizeReact("#SteamDeckVerified_DescriptionHeader", c, u);
+            : A.Z.LocalizeReact("#SteamDeckVerified_DescriptionHeader", c, u);
         return (0, r.jsx)("div", {
           id: t,
           className: H().CompatibilityDetailRatingSummary,
@@ -5110,11 +5110,11 @@
           return (0, r.jsx)("div", {
             className: H().CompatibilityDetailRatingSummary,
             children: a
-              ? D.Z.LocalizeReact(
+              ? A.Z.LocalizeReact(
                   "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
-                  (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                  (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 )
-              : D.Z.Localize("#SteamOSCompatibility_DescriptionHeader_Unknown"),
+              : A.Z.Localize("#SteamOSCompatibility_DescriptionHeader_Unknown"),
           });
         let i = "",
           l = null;
@@ -5129,20 +5129,20 @@
         }
         const c = (0, r.jsx)("span", {
             className: l,
-            children: D.Z.Localize(O(n)),
+            children: A.Z.Localize(O(n)),
           }),
           u = (0, r.jsx)("span", {
             className: H().CompatibilityDetailRatingSummary,
-            children: D.Z.Localize(o || i),
+            children: A.Z.Localize(o || i),
           }),
           d = a
-            ? D.Z.LocalizeReact(
+            ? A.Z.LocalizeReact(
                 "#SteamOSCompatibility_DescriptionHeader_WithAppName",
-                (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 c,
                 u,
               )
-            : D.Z.LocalizeReact(
+            : A.Z.LocalizeReact(
                 "#SteamOSCompatibility_DescriptionHeader",
                 c,
                 u,
@@ -5159,11 +5159,11 @@
           return (0, r.jsx)("div", {
             className: H().CompatibilityDetailRatingSummary,
             children: a
-              ? D.Z.LocalizeReact(
+              ? A.Z.LocalizeReact(
                   "#SteamMachineVerified_DescriptionHeader_Unknown_WithAppName",
-                  (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                  (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 )
-              : D.Z.Localize("#SteamMachineVerified_DescriptionHeader_Unknown"),
+              : A.Z.Localize("#SteamMachineVerified_DescriptionHeader_Unknown"),
           });
         let s = "",
           l = null;
@@ -5182,20 +5182,20 @@
         }
         const c = (0, r.jsx)("span", {
             className: l,
-            children: D.Z.Localize(P(n)),
+            children: A.Z.Localize(P(n)),
           }),
           u = (0, r.jsx)("span", {
             className: H().CompatibilityDetailRatingSummary,
-            children: D.Z.Localize(o || s),
+            children: A.Z.Localize(o || s),
           }),
           d = a
-            ? D.Z.LocalizeReact(
+            ? A.Z.LocalizeReact(
                 "#SteamMachineVerified_DescriptionHeader_WithAppName",
-                (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 c,
                 u,
               )
-            : D.Z.LocalizeReact(
+            : A.Z.LocalizeReact(
                 "#SteamMachineVerified_DescriptionHeader",
                 c,
                 u,
@@ -5212,11 +5212,11 @@
           return (0, r.jsx)("div", {
             className: H().CompatibilityDetailRatingSummary,
             children: a
-              ? D.Z.LocalizeReact(
+              ? A.Z.LocalizeReact(
                   "#SteamFrameVerified_DescriptionHeader_Unknown_WithAppName",
-                  (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                  (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 )
-              : D.Z.Localize("#SteamFrameVerified_DescriptionHeader_Unknown"),
+              : A.Z.Localize("#SteamFrameVerified_DescriptionHeader_Unknown"),
           });
         let s = "",
           l = null;
@@ -5235,20 +5235,20 @@
         }
         const c = (0, r.jsx)("span", {
             className: l,
-            children: D.Z.Localize(P(n)),
+            children: A.Z.Localize(P(n)),
           }),
           u = (0, r.jsx)("span", {
             className: H().CompatibilityDetailRatingSummary,
-            children: D.Z.Localize(o || s),
+            children: A.Z.Localize(o || s),
           }),
           d = a
-            ? D.Z.LocalizeReact(
+            ? A.Z.LocalizeReact(
                 "#SteamFrameVerified_DescriptionHeader_WithAppName",
-                (0, r.jsx)("b", { children: (0, A.EK)(a) }),
+                (0, r.jsx)("b", { children: (0, D.EK)(a) }),
                 c,
                 u,
               )
-            : D.Z.LocalizeReact("#SteamFrameVerified_DescriptionHeader", c, u);
+            : A.Z.LocalizeReact("#SteamFrameVerified_DescriptionHeader", c, u);
         return (0, r.jsx)("div", {
           id: t,
           className: H().CompatibilityDetailRatingSummary,
@@ -5472,8 +5472,8 @@
       }
       var j = n(51272),
         B = n(52038),
-        D = n(78327),
-        A = n(22797),
+        A = n(78327),
+        D = n(22797),
         k = n(82080),
         H = n.n(k),
         I = n(78686);
@@ -5503,7 +5503,7 @@
         if (o.item_type == i.c6.RD)
           if (o.type == i.uE.Hk) {
             if (!_)
-              return (0, a.jsx)(A.t, { size: "small", position: "center" });
+              return (0, a.jsx)(D.t, { size: "small", position: "center" });
             if (!_.inventory_available)
               return (0, a.jsx)("div", {
                 className: (0, B.A)(H().ActionOutOfStock, n),
@@ -5517,8 +5517,8 @@
           if (p.is_coming_soon && !C.packageid) return null;
           if (h && o.type === i.uE.Hk) return null;
           if (!h && C.is_free_to_keep) {
-            if (D.TS.IN_CLIENT || "store" != (0, D.yK)()) {
-              const e = `${D.TS.IN_CLIENT ? "steam://openurl/" : ""}${g}`;
+            if (A.TS.IN_CLIENT || "store" != (0, A.yK)()) {
+              const e = `${A.TS.IN_CLIENT ? "steam://openurl/" : ""}${g}`;
               return (0, a.jsx)("div", {
                 onClick: (t) => (0, j.Id)(t, e),
                 className: (0, B.A)(H().Action, n),
@@ -5531,7 +5531,7 @@
             }
             {
               const e = (0, m.wJ)(
-                `${D.TS.STORE_BASE_URL}freelicense/addfreelicense`,
+                `${A.TS.STORE_BASE_URL}freelicense/addfreelicense`,
                 r,
               );
               return (0, a.jsxs)("form", {
@@ -5546,7 +5546,7 @@
                   (0, a.jsx)("input", {
                     type: "hidden",
                     name: "sessionid",
-                    value: (0, D.KC)(),
+                    value: (0, A.KC)(),
                   }),
                   (0, a.jsx)("button", {
                     className: (0, B.A)(H().Action, n),
@@ -5643,8 +5643,8 @@
         L = n(74568),
         j = n(32754),
         B = n(56524),
-        D = n(86090),
-        A = n(95695);
+        A = n(86090),
+        D = n(95695);
       const k = (e) => {
         const {
             className: t,
@@ -5677,7 +5677,7 @@
                   toolTipContent: n || i ? void 0 : p,
                   children: (0, a.jsxs)(o.ml, {
                     className: (0, x.A)(
-                      A.Button,
+                      D.Button,
                       B.FollowButton,
                       "FollowButton",
                       t,
@@ -5795,7 +5795,7 @@
             }),
             (0, a.jsx)(L.EN, {
               active: x,
-              children: (0, a.jsx)(D.g, { closeModal: j }),
+              children: (0, a.jsx)(A.g, { closeModal: j }),
             }),
           ],
         });
@@ -5977,13 +5977,13 @@
               "aria-label": (0, u.we)("#ControllerButton_R1"),
             });
           case i.g4.LeftTrigger:
-            return (0, o.jsx)(D, {
+            return (0, o.jsx)(A, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_L2"),
             });
           case i.g4.RightTrigger:
-            return (0, o.jsx)(A, {
+            return (0, o.jsx)(D, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_R2"),
@@ -6620,7 +6620,7 @@
               ],
             });
       }
-      function D({ bIsKnockout: e, ...t }) {
+      function A({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -6658,7 +6658,7 @@
               ],
             });
       }
-      function A({ bIsKnockout: e, ...t }) {
+      function D({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -7320,16 +7320,16 @@
         L = n(78327),
         j = n(84811),
         B = n(38135),
-        D = n(56545),
-        A = n(80613),
-        k = n.n(A),
+        A = n(56545),
+        D = n(80613),
+        k = n.n(D),
         H = n(89068);
-      class I extends A.Message {
+      class I extends D.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             I.prototype.appid || H.Sg(I.M()),
-            A.Message.initialize(this, e, 0, -1, void 0, null);
+            D.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -7380,12 +7380,12 @@
           return "CGamePerformanceStats_GetGameFrameRateStats_Request";
         }
       }
-      class N extends A.Message {
+      class N extends D.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             N.prototype.frame_rates || H.Sg(N.M()),
-            A.Message.initialize(this, e, 0, -1, [1], null);
+            D.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -7434,12 +7434,12 @@
           return "CGamePerformanceStats_GetGameFrameRateStats_Response";
         }
       }
-      class R extends A.Message {
+      class R extends D.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             R.prototype.clusterid || H.Sg(R.M()),
-            A.Message.initialize(this, e, 0, -1, void 0, null);
+            D.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -7518,7 +7518,7 @@
         e.GetGameFrameRateStats = function (e, t, n) {
           return e.SendMsg(
             "GamePerformanceStats.GetGameFrameRateStats#1",
-            (0, D.I8)(I, t, n),
+            (0, A.I8)(I, t, n),
             N,
             { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
           );
@@ -7641,12 +7641,12 @@
               "steamdeckcompatibility",
               `?tab=${e.key}`,
             ),
-          D = [
+          A = [
             {
               name: (0, r.jsxs)("div", {
                 className: w().pillContent,
                 children: [
-                  (0, r.jsx)(x.xoK, { className: w().SteamDeckDeviceIcon }),
+                  (0, r.jsx)(x.lRD, { className: w().SteamDeckDeviceIcon }),
                   (0, r.jsx)(h, { className: w().RatingIcon }),
                 ],
               }),
@@ -7660,7 +7660,7 @@
               name: (0, r.jsxs)("div", {
                 className: w().pillContent,
                 children: [
-                  (0, r.jsx)(x.LO_, { className: w().SteamMachineDeviceIcon }),
+                  (0, r.jsx)(x.fhy, { className: w().SteamMachineDeviceIcon }),
                   (0, r.jsx)(b, { className: w().RatingIcon }),
                 ],
               }),
@@ -7685,11 +7685,11 @@
           ];
         return (
           d == T.bY &&
-            D.push({
+            A.push({
               name: (0, r.jsxs)("div", {
                 className: w().pillContent,
                 children: [
-                  (0, r.jsx)(x.bk, { className: w().SteamFrameDeviceIcon }),
+                  (0, r.jsx)(x.Ves, { className: w().SteamFrameDeviceIcon }),
                   (0, r.jsx)(y, { className: w().RatingIcon }),
                 ],
               }),
@@ -7698,7 +7698,7 @@
               onClick: L,
             }),
           (0, r.jsx)(B.V, {
-            tabs: D,
+            tabs: A,
             classNameCtn: w().CompatibilityTabs,
             classNameTabContent: w().CompatibilityTabContent,
             startingTab: d.toString(),
@@ -7719,9 +7719,9 @@
           } = e,
           [m, p] = h.useState(!1),
           C = h.useCallback(() => m, [m]),
-          _ = h.useRef(null),
-          g = (0, L.Qn)();
-        let f = s ?? {};
+          _ = h.useRef(null);
+        (0, L.Qn)();
+        let g = s ?? {};
         return (
           h.useEffect(() => {
             void 0 !== _?.current?.scrollHeight &&
@@ -7729,10 +7729,8 @@
               p(_?.current?.scrollHeight > _?.current?.clientHeight);
           }, []),
           (0, r.jsxs)(a.Z, {
-            className: g
-              ? w().CompatibilityDetailsContainer
-              : w().CompatibilityDetailsContainerDesktop,
-            ...f,
+            className: w().CompatibilityDetailsContainer,
+            ...g,
             children: [
               (0, r.jsxs)("div", {
                 children: [
@@ -8187,8 +8185,8 @@
           ),
           B = t.filter((e) => !e.hidden);
         if (!B.length) return null;
-        const D = l ?? v,
-          A = B.find((e) => e.key === D) || B[0],
+        const A = l ?? v,
+          D = B.find((e) => e.key === A) || B[0],
           k = f ? (i ?? B[0].key) : void 0,
           H = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -8208,14 +8206,14 @@
                       tab: e,
                       OnTabClick: j,
                       classNameTab: _,
-                      active: e.key === A.key,
+                      active: e.key === D.key,
                       preferredFocus: k === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              A && (0, r.jsx)(m.Z, { className: g, children: A.contents }),
+              D && (0, r.jsx)(m.Z, { className: g, children: D.contents }),
             ],
           });
         return S

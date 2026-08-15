@@ -4119,5 +4119,18 @@
     "GamePerformanceStats_FrameRateMoreInfo": "ملاحظة: لا تتوفر بيانات التباين حاليًا، ولكن من المقرر إضافتها خلال المرحلة التجريبية. وعند توفرها ستتمكن من معرفة ما إذا كان معدل الإطارات مستقرًا أم يتقلب بشكل كبير.",
     "GamePerformance_Reason": "السبب",
     "GamePerformance_NumResponses": "عدد المشاركات",
-    "NewToolTitleSuffix_Beta": "الإصدار التجريبي"
+    "NewToolTitleSuffix_Beta": "الإصدار التجريبي",
+    "DynamicLinkType_WorkshopItem": "عنصر ورشة لـ%1$s",
+    "DynamicLinkType_Screenshot": "لقطة شاشة لـ%1$s",
+    "DynamicLinkType_Video": "فيديو لـ%1$s",
+    "DynamicLinkType_Art": "عمل فني تم إنشاؤه بواسطة المجتمع لـ%1$s",
+    "DynamicLinkType_GreenlightGame": "لعبة Greenlight",
+    "DynamicLinkType_GreenlightConcept": "تصوّر Greenlight",
+    "DynamicLinkType_GreenlightSoftware": "برنامج Greenlight",
+    "DynamicLinkType_WebGuide": "دليل لـ%1$s",
+    "DynamicLinkType_YouTubeVideo": "فيديو على YouTube™",
+    "DynamicLinkType_YouTubeVideo_Views": "المشاهدات: %1$s",
+    "Community_RemoveLink_BeWary": "{LINK REMOVED}",
+    "Community_RemoveLink_Tooltip": "تمت إزالة رابط URL الذي تم وضعه هنا بواسطة عوامل التصفية. عادة ما يتم ذلك لمنع الاحتيال والبرامج الضارة.",
+    "DynamicLink_Banned": "{LINK REMOVED TO BANNED CONTENT}"
 }

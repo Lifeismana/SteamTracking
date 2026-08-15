@@ -121,161 +121,31 @@
           l = i.useMemo(() => ({ steamidOwner: c }), [c]);
         return (0, e.jsx)(v.Provider, { value: l, children: n });
       }
-      var h = n(37085),
-        d = n(63215),
-        p = n(66418),
-        u = n(23809),
-        f = n(29385),
-        g = n(88942);
-      function m(t, c = p.TS.LANGUAGE) {
-        const n = (0, u.KV)(),
-          e = (0, f.jE)();
-        return (0, g.I)({ ...x(e, n, t, c), enabled: !!t });
-      }
-      function x(t, c, n, e) {
-        return {
-          queryKey: ["AssetPropertySchemaMap", n, e],
-          queryFn: async () => {
-            const l = await t.fetchQuery(C(c, n, e)),
-              s = new Map();
-            return l.property_schemas.forEach((t) => s.set(t.id, t)), s;
-          },
-        };
-      }
-      function C(t, c, n) {
-        return {
-          queryKey: ["AssetPropertySchema", c, n],
-          queryFn: async () => {
-            var e;
-            const l = await d.tB.GetAssetPropertySchema(t, {
-              appid: c,
-              language: n,
-            });
-            if (!l.BSuccess() && l.GetEResult() != h.p)
-              throw `Error loading asset properties for ${c}: ${l.GetErrorMessage()}`;
-            return {
-              property_schemas:
-                null !== (e = l.Body().toObject().property_schemas) &&
-                void 0 !== e
-                  ? e
-                  : [],
-            };
-          },
-        };
-      }
-      var _ = n(13843);
-      const j = {};
-      (j.arabic = () => n.e(9611).then(n.t.bind(n, 11992, 19))),
-        (j.brazilian = () => n.e(2087).then(n.t.bind(n, 92087, 19))),
-        (j.bulgarian = () => n.e(1472).then(n.t.bind(n, 41472, 19))),
-        (j.czech = () => n.e(7430).then(n.t.bind(n, 17430, 19))),
-        (j.danish = () => n.e(7498).then(n.t.bind(n, 37498, 19))),
-        (j.dutch = () => n.e(6847).then(n.t.bind(n, 16847, 19))),
-        (j.english = () => n.e(9474).then(n.t.bind(n, 87093, 19))),
-        (j.finnish = () => n.e(610).then(n.t.bind(n, 610, 19))),
-        (j.french = () => n.e(7112).then(n.t.bind(n, 84731, 19))),
-        (j.german = () => n.e(3385).then(n.t.bind(n, 3385, 19))),
-        (j.greek = () => n.e(6389).then(n.t.bind(n, 6389, 19))),
-        (j.hungarian = () => n.e(4100).then(n.t.bind(n, 34100, 19))),
-        (j.indonesian = () => n.e(1559).then(n.t.bind(n, 21559, 19))),
-        (j.italian = () => n.e(2965).then(n.t.bind(n, 22965, 19))),
-        (j.japanese = () => n.e(9732).then(n.t.bind(n, 19732, 19))),
-        (j.koreana = () => n.e(6766).then(n.t.bind(n, 76766, 19))),
-        (j.latam = () => n.e(182).then(n.t.bind(n, 40182, 19))),
-        (j.malay = () => n.e(8597).then(n.t.bind(n, 88597, 19))),
-        (j.norwegian = () => n.e(5353).then(n.t.bind(n, 5353, 19))),
-        (j.polish = () => n.e(8926).then(n.t.bind(n, 58926, 19))),
-        (j.portuguese = () => n.e(8374).then(n.t.bind(n, 8374, 19))),
-        (j.romanian = () => n.e(7752).then(n.t.bind(n, 77752, 19))),
-        (j.russian = () => n.e(8128).then(n.t.bind(n, 28128, 19))),
-        (j.sc_schinese = () => n.e(5610).then(n.t.bind(n, 55610, 19))),
-        (j.schinese = () => n.e(2787).then(n.t.bind(n, 62787, 19))),
-        (j.spanish = () => n.e(8549).then(n.t.bind(n, 28549, 19))),
-        (j.swedish = () => n.e(6052).then(n.t.bind(n, 56052, 19))),
-        (j.tchinese = () => n.e(2352).then(n.t.bind(n, 2352, 19))),
-        (j.thai = () => n.e(9365).then(n.t.bind(n, 19365, 19))),
-        (j.turkish = () => n.e(125).then(n.t.bind(n, 90125, 19))),
-        (j.ukrainian = () => n.e(1071).then(n.t.bind(n, 61071, 19))),
-        (j.vietnamese = () => n.e(1716).then(n.t.bind(n, 61716, 19)));
-      const V = (0, _.l)(async function (t) {
-          if (j[t]) return j[t]();
-        }),
-        w = V.Localize;
-      var b = n(20187),
-        y = n(3049);
-      const S = {
-        Label: function (t) {
-          const { appid: c, property: n } = t,
-            { data: e } = m(c),
-            l = null == e ? void 0 : e.get(n.propertyid);
-          return l ? l.localized_label : null;
-        },
-        Value: M,
-      };
-      const z = Object.assign(function (t) {
-        const { appid: c, property: n, ...l } = t,
-          { data: s } = m(c),
-          a = null == s ? void 0 : s.get(n.propertyid);
-        return !a || a.hide_from_description
-          ? null
-          : (0, e.jsx)(b.EY, {
-              as: "div",
-              ...l,
-              children: V.LocalizeReact(
-                "#ItemDescription_AssetPropertyLabelColonValue",
-                a.localized_label,
-                (0, e.jsx)(b.EY, {
-                  whiteSpace: "pre-wrap",
-                  children: (0, e.jsx)(M, { property: n }),
-                }),
-              ),
-            });
-      }, S);
-      function M(t) {
-        const { property: c } = t;
-        if (void 0 !== c.float_value) {
-          const t =
-            "string" == typeof c.float_value
-              ? parseFloat(c.float_value)
-              : c.float_value;
-          let n = 9;
-          return (
-            t > 0 &&
-              (t < 1e-28
-                ? (n = 47)
-                : t < 1e-18
-                  ? (n = 35)
-                  : t < 1e-12
-                    ? (n = 21)
-                    : t < 1e-5 && (n = 15)),
-            t.toLocaleString((0, y.J)(), { maximumFractionDigits: n })
-          );
-        }
-        return void 0 !== c.int_value
-          ? Number(c.int_value).toLocaleString((0, y.J)())
-          : void 0 !== c.string_value
-            ? c.string_value
-            : null;
-      }
-      var L = n(11820),
-        k = n(58256),
-        T = n(67603);
-      function I(t) {
+      var h = n(11820),
+        d = n(58256),
+        p = n(20187),
+        u = n(67603),
+        f = n(66418);
+      function g(t) {
         const { icon_url: c, icon_url_large: n } = t;
-        return (e = n || c), `${p.TS.COMMUNITY_CDN_URL}economy/image/${e}`;
+        return (e = n || c), `${f.TS.COMMUNITY_CDN_URL}economy/image/${e}`;
         var e;
       }
-      var H = n(56545),
-        A = n(49845),
-        O = n(58632),
-        R = n.n(O);
-      function Y(t, c) {
-        const n = (function (t, c, n, e = d.tB.GetAssetClassInfo) {
-          return (0, A.V)(`AssetClassInfo_${c}_${n}`, () =>
-            (function (t, c, n, e = d.tB.GetAssetClassInfo) {
-              return new (R())(async (l) => {
+      var m = n(37085),
+        x = n(56545),
+        C = n(63215),
+        _ = n(23809),
+        j = n(49845),
+        V = n(88942),
+        w = n(58632),
+        b = n.n(w);
+      function y(t, c) {
+        const n = (function (t, c, n, e = C.tB.GetAssetClassInfo) {
+          return (0, j.V)(`AssetClassInfo_${c}_${n}`, () =>
+            (function (t, c, n, e = C.tB.GetAssetClassInfo) {
+              return new (b())(async (l) => {
                 var s;
-                let a = H.w.Init(d.qp);
+                let a = x.w.Init(C.qp);
                 a.Body().set_language(n),
                   a.Body().set_appid(c),
                   l.forEach((t) => {
@@ -284,7 +154,7 @@
                     e.set_classid(c), e.set_instanceid(n);
                   });
                 const i = await e(t, a);
-                if (i.GetEResult() != h.R)
+                if (i.GetEResult() != m.R)
                   throw `Error loading econ items: ${i.GetErrorMessage()}`;
                 return null !== (s = i.Body().toObject().descriptions) &&
                   void 0 !== s
@@ -293,8 +163,8 @@
               });
             })(t, c, n, e),
           );
-        })((0, u.KV)(), t, p.TS.LANGUAGE);
-        return (0, g.I)(
+        })((0, _.KV)(), t, f.TS.LANGUAGE);
+        return (0, V.I)(
           (function (t, c, n) {
             const e = `${null == n ? void 0 : n.classid}_${null == n ? void 0 : n.instanceid}`;
             return {
@@ -305,12 +175,12 @@
           })(n, t, c),
         );
       }
-      var P = n(49560),
-        E = n(86927);
-      function G(t) {
+      var S = n(49560),
+        z = n(86927);
+      function M(t) {
         const { children: c, ...n } = t,
           l = i.useRef(null),
-          a = i.useCallback(() => `${N}px`, []),
+          a = i.useCallback(() => `${L}px`, []),
           v = i.useCallback((t) => {
             const c = l.current;
             if (c && 0 != t.deltaY) {
@@ -319,27 +189,27 @@
                 c.scrollTop != n && t.preventDefault();
             }
           }, []),
-          r = (0, E.xA)("wheel", v, { passive: !1 }),
+          r = (0, z.xA)("wheel", v, { passive: !1 }),
           [o, h] = i.useState(!1);
-        return (0, e.jsxs)(P.A.Root, {
+        return (0, e.jsxs)(S.A.Root, {
           open: o,
           onOpenChange: h,
           width: a,
           placement: "right",
           interactions: { hover: (t) => ({ ...t, delay: 250 }) },
           children: [
-            (0, e.jsx)(P.A.Anchor, { children: i.cloneElement(c, { ref: r }) }),
-            (0, e.jsx)(P.A.Positioner, {
+            (0, e.jsx)(S.A.Anchor, { children: i.cloneElement(c, { ref: r }) }),
+            (0, e.jsx)(S.A.Positioner, {
               children: (0, e.jsx)(s.az, {
                 marginX: "2",
-                children: (0, e.jsx)($, { ...n, refHover: l }),
+                children: (0, e.jsx)(k, { ...n, refHover: l }),
               }),
             }),
           ],
         });
       }
-      const N = 346;
-      function $(t) {
+      const L = 346;
+      function k(t) {
         var c;
         const { description: n, asset: l, bHideImage: s = !1, refHover: a } = t;
         let i,
@@ -347,7 +217,7 @@
         "identifiers" in t &&
           ((i = t.identifiers),
           (v = null !== (c = i.appid) && void 0 !== c ? c : v));
-        const { data: r } = Y(v, n ? void 0 : i),
+        const { data: r } = y(v, n ? void 0 : i),
           o = null != n ? n : r;
         return o
           ? (0, e.jsx)(Bt.Root, {
@@ -383,9 +253,139 @@
             })
           : null;
       }
+      var T = n(29385);
+      function I(t, c = f.TS.LANGUAGE) {
+        const n = (0, _.KV)(),
+          e = (0, T.jE)();
+        return (0, V.I)({ ...H(e, n, t, c), enabled: !!t });
+      }
+      function H(t, c, n, e) {
+        return {
+          queryKey: ["AssetPropertySchemaMap", n, e],
+          queryFn: async () => {
+            const l = await t.fetchQuery(A(c, n, e)),
+              s = new Map();
+            return l.property_schemas.forEach((t) => s.set(t.id, t)), s;
+          },
+        };
+      }
+      function A(t, c, n) {
+        return {
+          queryKey: ["AssetPropertySchema", c, n],
+          queryFn: async () => {
+            var e;
+            const l = await C.tB.GetAssetPropertySchema(t, {
+              appid: c,
+              language: n,
+            });
+            if (!l.BSuccess() && l.GetEResult() != m.p)
+              throw `Error loading asset properties for ${c}: ${l.GetErrorMessage()}`;
+            return {
+              property_schemas:
+                null !== (e = l.Body().toObject().property_schemas) &&
+                void 0 !== e
+                  ? e
+                  : [],
+            };
+          },
+        };
+      }
+      var O = n(13843);
+      const R = {};
+      (R.arabic = () => n.e(9611).then(n.t.bind(n, 11992, 19))),
+        (R.brazilian = () => n.e(2087).then(n.t.bind(n, 92087, 19))),
+        (R.bulgarian = () => n.e(1472).then(n.t.bind(n, 41472, 19))),
+        (R.czech = () => n.e(7430).then(n.t.bind(n, 17430, 19))),
+        (R.danish = () => n.e(7498).then(n.t.bind(n, 37498, 19))),
+        (R.dutch = () => n.e(6847).then(n.t.bind(n, 16847, 19))),
+        (R.english = () => n.e(9474).then(n.t.bind(n, 87093, 19))),
+        (R.finnish = () => n.e(610).then(n.t.bind(n, 610, 19))),
+        (R.french = () => n.e(7112).then(n.t.bind(n, 84731, 19))),
+        (R.german = () => n.e(3385).then(n.t.bind(n, 3385, 19))),
+        (R.greek = () => n.e(6389).then(n.t.bind(n, 6389, 19))),
+        (R.hungarian = () => n.e(4100).then(n.t.bind(n, 34100, 19))),
+        (R.indonesian = () => n.e(1559).then(n.t.bind(n, 21559, 19))),
+        (R.italian = () => n.e(2965).then(n.t.bind(n, 22965, 19))),
+        (R.japanese = () => n.e(9732).then(n.t.bind(n, 19732, 19))),
+        (R.koreana = () => n.e(6766).then(n.t.bind(n, 76766, 19))),
+        (R.latam = () => n.e(182).then(n.t.bind(n, 40182, 19))),
+        (R.malay = () => n.e(8597).then(n.t.bind(n, 88597, 19))),
+        (R.norwegian = () => n.e(5353).then(n.t.bind(n, 5353, 19))),
+        (R.polish = () => n.e(8926).then(n.t.bind(n, 58926, 19))),
+        (R.portuguese = () => n.e(8374).then(n.t.bind(n, 8374, 19))),
+        (R.romanian = () => n.e(7752).then(n.t.bind(n, 77752, 19))),
+        (R.russian = () => n.e(8128).then(n.t.bind(n, 28128, 19))),
+        (R.sc_schinese = () => n.e(5610).then(n.t.bind(n, 55610, 19))),
+        (R.schinese = () => n.e(2787).then(n.t.bind(n, 62787, 19))),
+        (R.spanish = () => n.e(8549).then(n.t.bind(n, 28549, 19))),
+        (R.swedish = () => n.e(6052).then(n.t.bind(n, 56052, 19))),
+        (R.tchinese = () => n.e(2352).then(n.t.bind(n, 2352, 19))),
+        (R.thai = () => n.e(9365).then(n.t.bind(n, 19365, 19))),
+        (R.turkish = () => n.e(125).then(n.t.bind(n, 90125, 19))),
+        (R.ukrainian = () => n.e(1071).then(n.t.bind(n, 61071, 19))),
+        (R.vietnamese = () => n.e(1716).then(n.t.bind(n, 61716, 19)));
+      const Y = (0, O.l)(async function (t) {
+          if (R[t]) return R[t]();
+        }),
+        P = Y.Localize;
+      var E = n(3049);
+      const G = {
+        Label: function (t) {
+          const { appid: c, property: n } = t,
+            { data: e } = I(c),
+            l = null == e ? void 0 : e.get(n.propertyid);
+          return l ? l.localized_label : null;
+        },
+        Value: $,
+      };
+      const N = Object.assign(function (t) {
+        const { appid: c, property: n, ...l } = t,
+          { data: s } = I(c),
+          a = null == s ? void 0 : s.get(n.propertyid);
+        return !a || a.hide_from_description
+          ? null
+          : (0, e.jsx)(p.EY, {
+              as: "div",
+              ...l,
+              children: Y.LocalizeReact(
+                "#ItemDescription_AssetPropertyLabelColonValue",
+                a.localized_label,
+                (0, e.jsx)(p.EY, {
+                  whiteSpace: "pre-wrap",
+                  children: (0, e.jsx)($, { property: n }),
+                }),
+              ),
+            });
+      }, G);
+      function $(t) {
+        const { property: c } = t;
+        if (void 0 !== c.float_value) {
+          const t =
+            "string" == typeof c.float_value
+              ? parseFloat(c.float_value)
+              : c.float_value;
+          let n = 9;
+          return (
+            t > 0 &&
+              (t < 1e-28
+                ? (n = 47)
+                : t < 1e-18
+                  ? (n = 35)
+                  : t < 1e-12
+                    ? (n = 21)
+                    : t < 1e-5 && (n = 15)),
+            t.toLocaleString((0, E.J)(), { maximumFractionDigits: n })
+          );
+        }
+        return void 0 !== c.int_value
+          ? Number(c.int_value).toLocaleString((0, E.J)())
+          : void 0 !== c.string_value
+            ? c.string_value
+            : null;
+      }
       function B(t) {
         const { appid: c, accessory: n } = t,
-          { data: a } = Y(c, {
+          { data: a } = y(c, {
             classid: n.classid,
             instanceid: n.instanceid || "0",
           }),
@@ -393,11 +393,11 @@
         if (!i) return null;
         const v = n.parent_relationship_properties || [],
           r = n.standalone_properties || [];
-        return (0, e.jsx)(G, {
+        return (0, e.jsx)(M, {
           description: i,
           children: (0, e.jsx)("a", {
-            className: (0, L.T)(),
-            href: T.N.Item(c, i.market_bucket_group_id || i.market_hash_name),
+            className: (0, h.T)(),
+            href: u.N.Item(c, i.market_bucket_group_id || i.market_hash_name),
             children: (0, e.jsxs)(l.s, {
               align: "center",
               gap: { initial: "1", sm: "3" },
@@ -407,17 +407,17 @@
               cursor: "pointer",
               "border-radius": "2",
               children: [
-                (0, e.jsx)(k._, {
+                (0, e.jsx)(d._, {
                   maxWidth: "48px",
                   maxHeight: "48px",
                   objectFit: "contain",
-                  src: I(i),
+                  src: g(i),
                   alt: "",
                 }),
                 (0, e.jsxs)(s.az, {
                   minWidth: "0",
                   children: [
-                    (0, e.jsx)(b.EY, { lineClamp: 3, children: i.name }),
+                    (0, e.jsx)(p.EY, { lineClamp: 3, children: i.name }),
                     v.map((t) =>
                       (0, e.jsx)(F, { appid: c, property: t }, t.propertyid),
                     ),
@@ -432,7 +432,7 @@
         });
       }
       function F(t) {
-        return (0, e.jsx)(z, {
+        return (0, e.jsx)(N, {
           ...t,
           size: { initial: "1", sm: "2" },
           contrast: "note",
@@ -463,7 +463,7 @@
             ...i
           } = t,
           v = s || U(c);
-        return (0, e.jsx)(b.EY, {
+        return (0, e.jsx)(p.EY, {
           contrast: "note",
           ...i,
           style: { ...(null != a ? a : {}), color: v },
@@ -519,7 +519,7 @@
         const i = l.appid,
           v = null === (n = t.children) || void 0 === n ? void 0 : n.toString(),
           r = t.context.line.color && `#${t.context.line.color}`,
-          { data: o } = Y(i, a);
+          { data: o } = y(i, a);
         return a
           ? o
             ? (0, e.jsx)(
@@ -538,7 +538,7 @@
       }
       function Q(t) {
         const { appid: c, contained_item: n } = t,
-          { data: l } = Y(c, n);
+          { data: l } = y(c, n);
         return l
           ? (0, e.jsx)("li", {
               children: (0, e.jsx)(tt, { appid: c, description: l }),
@@ -552,13 +552,13 @@
           nameOverride: l,
           colorOverride: s,
         } = t;
-        return (0, e.jsx)(G, {
+        return (0, e.jsx)(M, {
           description: n,
           children:
             n.marketable && n.market_hash_name
               ? (0, e.jsx)(q, {
                   description: n,
-                  href: T.N.Item(
+                  href: u.N.Item(
                     c,
                     n.market_bucket_group_id || n.market_hash_name,
                   ),
@@ -579,9 +579,9 @@
             ? void 0
             : n.profile_url
         )
-          ? `${p.TS.COMMUNITY_BASE_URL}id/${t.public_data.profile_url}`
+          ? `${f.TS.COMMUNITY_BASE_URL}id/${t.public_data.profile_url}`
           : (function (t) {
-              return t ? `${p.TS.COMMUNITY_BASE_URL}profiles/${t}` : "";
+              return t ? `${f.TS.COMMUNITY_BASE_URL}profiles/${t}` : "";
             })(
               (null === (e = null == t ? void 0 : t.public_data) || void 0 === e
                 ? void 0
@@ -601,7 +601,7 @@
               ? n
               : "0",
           ),
-          s = nt.b2.InitFromAccountID(l, p.TS.EUNIVERSE).ConvertTo64BitString(),
+          s = nt.b2.InitFromAccountID(l, f.TS.EUNIVERSE).ConvertTo64BitString(),
           { data: a, isLoading: i } = (0, et.jn)(s);
         if (!a && i) return null;
         const v = ct(a, s);
@@ -624,13 +624,13 @@
               ...it.L,
               ...ot.I,
               ...vt.F,
-              url: { Constructor: rt._ },
+              url: { Constructor: rt._r },
               container_item_list: { Constructor: Z },
               container_item: { Constructor: X },
               persona: { Constructor: lt },
               date: { Constructor: dt },
             };
-            return new st.B(t, (t) => new at.R8(), p.TS.LANGUAGE);
+            return new st.B(t, (t) => new at.R8(), f.TS.LANGUAGE);
           }, []),
           s = i.useMemo(() => ({ itemDescription: c, line: n }), [c, n]);
         return i.useMemo(() => l.ParseBBCode(e, s), [l, e, s]);
@@ -647,7 +647,7 @@
             : "0",
         );
         if (!e) return null;
-        return new Date(1e3 * e).toLocaleString((0, y.J)());
+        return new Date(1e3 * e).toLocaleString((0, E.J)());
       }
       var pt = n(18419);
       const ut = i.createContext(void 0);
@@ -700,7 +700,7 @@
             border_color: r,
           } = t,
           { data: o, isLoading: h } = (function (t, c, n) {
-            return (0, g.I)({
+            return (0, V.I)({
               queryKey: ["GetGooValue", t, c, n],
               queryFn: async () => {
                 const e = new URLSearchParams({
@@ -708,7 +708,7 @@
                     item_type: c.toString(),
                     border_color: n.toString(),
                   }),
-                  l = `${p.TS.COMMUNITY_BASE_URL}auction/ajaxgetgoovalueforitemtype/?${e.toString()}`,
+                  l = `${f.TS.COMMUNITY_BASE_URL}auction/ajaxgetgoovalueforitemtype/?${e.toString()}`,
                   s = await fetch(l, { method: "GET" }),
                   a = await s.json();
                 if ("goo_value" in a) return a.goo_value;
@@ -726,20 +726,20 @@
               align: "start",
               marginTop: "2",
               children: [
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(p.EY, {
                   as: "div",
                   contrast: "body",
-                  children: V.LocalizeReact(
+                  children: Y.LocalizeReact(
                     "#ItemDescription_ThisItemIsWorthGems",
-                    (0, e.jsx)(b.EY, {
+                    (0, e.jsx)(p.EY, {
                       color: "sky-11",
-                      children: V.Localize(
+                      children: Y.Localize(
                         "#ItemDescription_XGems",
                         null !==
                           (c =
                             null == o
                               ? void 0
-                              : o.toLocaleString((0, y.J)())) && void 0 !== c
+                              : o.toLocaleString((0, E.J)())) && void 0 !== c
                           ? c
                           : "",
                       ),
@@ -750,17 +750,17 @@
                   color: "green",
                   onClick: () => window.GrindIntoGoo(i, n, s),
                   size: "1",
-                  children: w("#ItemDescription_TurnIntoGemsButton"),
+                  children: P("#ItemDescription_TurnIntoGemsButton"),
                 }),
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(p.EY, {
                   as: "div",
                   contrast: "body",
                   children: (0, xt.xh)(
-                    w("#ItemDescription_GemDescription"),
+                    P("#ItemDescription_GemDescription"),
                     (0, e.jsx)(W.Y, {
                       underline: "auto",
                       color: "greyneutral-12",
-                      href: `${p.TS.COMMUNITY_BASE_URL}tradingcards/boostercreator/`,
+                      href: `${f.TS.COMMUNITY_BASE_URL}tradingcards/boostercreator/`,
                     }),
                   ),
                 }),
@@ -909,7 +909,7 @@
             : "";
         switch ((r || (r = " "), (r = bt(r, 0, a)), l.type)) {
           case "html":
-            return (0, e.jsx)(b.EY, {
+            return (0, e.jsx)(p.EY, {
               ...v,
               children: (0, e.jsx)("span", {
                 style: { display: "contents" },
@@ -917,7 +917,7 @@
               }),
             });
           case "bbcode":
-            return (0, e.jsx)(b.EY, {
+            return (0, e.jsx)(p.EY, {
               ...v,
               children: (0, e.jsx)(ht, {
                 itemDescription: s,
@@ -926,11 +926,29 @@
               }),
             });
           default:
-            return (0, e.jsx)(b.EY, { ...v, children: r });
+            return (0, e.jsx)(p.EY, { ...v, children: r });
         }
       }
-      var zt = n(72255);
-      function Mt(t) {
+      var zt = n(43694);
+      function Mt() {
+        return (0, e.jsxs)(s.az, {
+          position: "relative",
+          title: P("#ItemDescription_ListedItemTooltip"),
+          children: [
+            (0, e.jsx)(s.az, {
+              className: zt.ListedItemLabel,
+              children: P("#ItemDescription_ListedItem"),
+            }),
+            (0, e.jsx)(d._, {
+              className: zt.ListedItemIcon,
+              alt: P("#ItemDescription_ListedItem"),
+              src: `${f.TS.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
+            }),
+          ],
+        });
+      }
+      var Lt = n(72255);
+      function kt(t) {
         const {
             eWalletCurrency: c,
             appid: n,
@@ -941,27 +959,27 @@
           } = t,
           { data: o, isLoading: h } =
             ((d = c),
-            (u = n),
-            (f = s),
-            (0, g.I)(
+            (p = n),
+            (u = s),
+            (0, V.I)(
               (function (t, c, n) {
                 return {
                   queryKey: ["MarketPriceOverview", t, c, n],
                   queryFn: async () => {
                     const e = new URLSearchParams({
-                        country: p.iA.country_code,
+                        country: f.iA.country_code,
                         currency: t.toString(),
                         appid: c.toString(),
                         market_hash_name: n,
                       }),
-                      l = `${p.TS.COMMUNITY_BASE_URL}market/priceoverview/?${e.toString()}`,
+                      l = `${f.TS.COMMUNITY_BASE_URL}market/priceoverview/?${e.toString()}`,
                       s = await fetch(l, { method: "GET" });
                     return await s.json();
                   },
                 };
-              })(d, u, f),
+              })(d, p, u),
             ));
-        var d, u, f;
+        var d, p, u;
         return i ||
           (null == o ? void 0 : o.lowest_price) ||
           (null == o ? void 0 : o.volume) ||
@@ -974,9 +992,9 @@
                 direction: "column",
                 children: (0, e.jsx)(a.v, {
                   color: "dull",
-                  href: `${p.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}${r ? `?sellorderassetid=${r}` : ""}`,
+                  href: `${f.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}${r ? `?sellorderassetid=${r}` : ""}`,
                   size: "1",
-                  children: w("#SellOnMarket_ViewListing"),
+                  children: P("#SellOnMarket_ViewListing"),
                 }),
               })
             : (0, e.jsxs)(l.s, {
@@ -985,20 +1003,20 @@
                 gapY: "3",
                 direction: "column",
                 children: [
-                  (0, e.jsx)(Lt, { isLoading: h, priceOverview: o }),
+                  (0, e.jsx)(Tt, { isLoading: h, priceOverview: o }),
                   i &&
                     (0, e.jsx)(a.v, {
                       size: "1",
                       color: "dull",
-                      href: `${p.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}`,
-                      children: w("#SellOnMarket_View"),
+                      href: `${f.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}`,
+                      children: P("#SellOnMarket_View"),
                     }),
-                  i && !v && (0, e.jsx)(kt, {}),
+                  i && !v && (0, e.jsx)(It, {}),
                 ],
               })
           : null;
       }
-      function Lt(t) {
+      function Tt(t) {
         const { isLoading: c, priceOverview: n } = t;
         return c ||
           (null == n ? void 0 : n.lowest_price) ||
@@ -1006,67 +1024,49 @@
           ? (0, e.jsxs)(s.az, {
               paddingStart: "3",
               children: [
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(p.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.lowest_price)
-                    ? w("#SellOnMarket_LowestPrice", n.lowest_price)
+                    ? P("#SellOnMarket_LowestPrice", n.lowest_price)
                     : " ",
                 }),
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(p.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.volume)
-                    ? w("#SellOnMarket_Volume", n.volume)
+                    ? P("#SellOnMarket_Volume", n.volume)
                     : " ",
                 }),
               ],
             })
           : null;
       }
-      function kt() {
+      function It() {
         const t = r();
-        return p.iA.logged_in && t && t == p.iA.steamid
+        return f.iA.logged_in && t && t == f.iA.steamid
           ? (0, e.jsx)(s.az, {
               children: (0, e.jsx)(a.$, {
                 color: "green",
                 onClick: () => window.SellCurrentSelection(),
                 size: "1",
-                children: w("#SellOnMarket_SellThisItem"),
+                children: P("#SellOnMarket_SellThisItem"),
               }),
             })
           : null;
       }
-      var Tt = n(11685);
-      function It() {
-        return (0, e.jsxs)(s.az, {
-          position: "relative",
-          title: w("#ItemDescription_TradeProtectedTooltip"),
-          children: [
-            (0, e.jsx)(s.az, {
-              className: Tt.TradeProtectionLabel,
-              children: w("#ItemDescription_TradeProtected"),
-            }),
-            (0, e.jsx)(k._, {
-              className: Tt.TradeProtectionIcon,
-              alt: w("#ItemDescription_TradeProtected"),
-              src: `${p.TS.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
-            }),
-          ],
-        });
-      }
-      var Ht = n(43694);
+      var Ht = n(11685);
       function At() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: w("#ItemDescription_ListedItemTooltip"),
+          title: P("#ItemDescription_TradeProtectedTooltip"),
           children: [
             (0, e.jsx)(s.az, {
-              className: Ht.ListedItemLabel,
-              children: w("#ItemDescription_ListedItem"),
+              className: Ht.TradeProtectionLabel,
+              children: P("#ItemDescription_TradeProtected"),
             }),
-            (0, e.jsx)(k._, {
-              className: Ht.ListedItemIcon,
-              alt: w("#ItemDescription_ListedItem"),
-              src: `${p.TS.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
+            (0, e.jsx)(d._, {
+              className: Ht.TradeProtectionIcon,
+              alt: P("#ItemDescription_TradeProtected"),
+              src: `${f.TS.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
             }),
           ],
         });
@@ -1123,7 +1123,7 @@
           const { bAllowAnimatedIcon: c = !0 } = t,
             n = ft(),
             a =
-              `${p.TS.COMMUNITY_CDN_URL}economy/image/${n.icon_url_large || n.icon_url}/330x192` +
+              `${f.TS.COMMUNITY_CDN_URL}economy/image/${n.icon_url_large || n.icon_url}/330x192` +
               (c ? "?allow_animated=1" : "");
           return (0, e.jsxs)(l.s, {
             height: "196px",
@@ -1137,14 +1137,14 @@
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
-                  children: (0, e.jsx)(It, {}),
+                  children: (0, e.jsx)(At, {}),
                 }),
               !!n.sealed &&
                 1 == n.sealed_type &&
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
-                  children: (0, e.jsx)(At, {}),
+                  children: (0, e.jsx)(Mt, {}),
                 }),
             ],
           });
@@ -1175,7 +1175,7 @@
                 background: "dull-4",
                 children: t.map((t, c) =>
                   (0, e.jsxs)(
-                    b.EY,
+                    p.EY,
                     {
                       color: "red-9",
                       as: "div",
@@ -1207,7 +1207,7 @@
               (0, e.jsx)(Dt, {
                 href: n,
                 children: i
-                  ? (0, e.jsx)(k._, {
+                  ? (0, e.jsx)(d._, {
                       alt: null != a ? a : "",
                       src: i,
                       className: Nt.GameImage,
@@ -1218,7 +1218,7 @@
                 direction: "column",
                 children: [
                   (0, e.jsx)(Wt, { ...t }),
-                  (0, e.jsx)(b.EY, {
+                  (0, e.jsx)(p.EY, {
                     size: "3",
                     contrast: "description",
                     children: c.type,
@@ -1274,11 +1274,11 @@
           const t = ft(),
             { tags: c } = t;
           return c && c.length
-            ? (0, e.jsxs)(b.EY, {
+            ? (0, e.jsxs)(p.EY, {
                 size: "3",
                 contrast: "note",
                 children: [
-                  w("#ItemDescription_Tags"),
+                  P("#ItemDescription_Tags"),
                   " ",
                   " ",
                   c.map((t) => t.localized_tag_name).join(", "),
@@ -1293,7 +1293,7 @@
                 direction: "column",
                 children: t.asset_properties.map((c, n) =>
                   (0, e.jsx)(
-                    z,
+                    N,
                     { appid: t.appid, property: c, contrast: "note" },
                     n,
                   ),
@@ -1309,10 +1309,10 @@
                 direction: "column",
                 gap: "1",
                 children: [
-                  (0, e.jsx)(b.EY, {
+                  (0, e.jsx)(p.EY, {
                     as: "div",
                     size: "4",
-                    children: w("#ItemDescription_AccessoriesList_Title"),
+                    children: P("#ItemDescription_AccessoriesList_Title"),
                   }),
                   t.asset_accessories.map((t, n) =>
                     (0, e.jsx)(B, { appid: c.appid, accessory: t }, n),
@@ -1325,12 +1325,12 @@
           const t = ft(),
             c = gt(),
             n = mt(),
-            l = (0, zt.rt)(p.iA.country_code),
+            l = (0, Lt.rt)(f.iA.country_code),
             s = !!t.sealed && 1 == t.sealed_type;
           if (!t.marketable && 1 != t.sealed_type) return null;
           const a = t.market_hash_name || t.market_name || t.name;
           return a
-            ? (0, e.jsx)(Mt, {
+            ? (0, e.jsx)(kt, {
                 eWalletCurrency: l,
                 appid: t.appid,
                 hashName: a,
@@ -1403,7 +1403,7 @@
               underline: "hover",
               children: n,
             })
-          : (0, e.jsx)(b.EY, {
+          : (0, e.jsx)(p.EY, {
               size: "3",
               contrast: "description",
               children: n,
@@ -1583,7 +1583,7 @@
                 children: [
                   (0, e.jsx)(Bt.Name, {}),
                   (0, e.jsx)(Bt.GameInfo, {
-                    hrefGame: `${p.TS.COMMUNITY_BASE_URL}market/search?appid=${null !== (c = n.appid) && void 0 !== c ? c : 0}`,
+                    hrefGame: `${f.TS.COMMUNITY_BASE_URL}market/search?appid=${null !== (c = n.appid) && void 0 !== c ? c : 0}`,
                   }),
                   (0, e.jsx)(Bt.Descriptions, {}),
                   (0, e.jsx)(Bt.AssetAccessories, {}),
@@ -4454,7 +4454,7 @@
           p = v.length > 0;
         return (0, e.jsxs)(x.PT.Root, {
           state: h,
-          variant: "highlight",
+          status: p ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           popoverMaxHeight: 500,
@@ -5466,7 +5466,7 @@
         }
         return (0, e.jsxs)(m.uh.Root, {
           state: x,
-          variant: "highlight",
+          status: C ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -5554,7 +5554,7 @@
             : void 0;
         return (0, e.jsxs)(m.l6.Root, {
           state: x,
-          variant: "highlight",
+          status: p ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -5668,7 +5668,7 @@
         }
         return (0, e.jsxs)(x.PT.Root, {
           state: C,
-          variant: "highlight",
+          status: _ ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -5903,7 +5903,7 @@
           h = r.length > 0;
         return (0, e.jsxs)(s.uh.Root, {
           state: o,
-          variant: "highlight",
+          status: h ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [
@@ -5954,7 +5954,7 @@
           h = r.length > 0;
         return (0, e.jsxs)(i.PT.Root, {
           state: o,
-          variant: "highlight",
+          status: h ? "highlight" : void 0,
           radius: "sm",
           clearable: !0,
           children: [

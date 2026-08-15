@@ -141,6 +141,7 @@ ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
 ${COMMUNITY_BASE_URL}${}/
+${COMMUNITY_BASE_URL}${}/?id=${}${}
 ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
@@ -177,7 +178,14 @@ ${COMMUNITY_BASE_URL}actions/selectPreviousAvatar
 ${COMMUNITY_BASE_URL}app/${appId}
 ${COMMUNITY_BASE_URL}app/${appid}
 ${COMMUNITY_BASE_URL}app/${appid}/eventcomments/${forumTopicGID}
+${COMMUNITY_BASE_URL}app/${appid}/guides/${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}app/${appid}/workshop/
+${COMMUNITY_BASE_URL}app/${consumer_appid}
+${COMMUNITY_BASE_URL}app/${consumer_appid}/
+${COMMUNITY_BASE_URL}app/${consumer_appid}/guides/
+${COMMUNITY_BASE_URL}app/${consumer_appid}/images/
+${COMMUNITY_BASE_URL}app/${consumer_appid}/screenshots/
+${COMMUNITY_BASE_URL}app/${consumer_appid}/videos/
 ${COMMUNITY_BASE_URL}app/${unAppID}
 ${COMMUNITY_BASE_URL}app/${}
 ${COMMUNITY_BASE_URL}app/${}${}
@@ -261,6 +269,7 @@ ${COMMUNITY_BASE_URL}gid/${}/showclanimage/?image_hash_and_ext=${}
 ${COMMUNITY_BASE_URL}group/${clanAccountID}
 ${COMMUNITY_BASE_URL}groups
 ${COMMUNITY_BASE_URL}groups/${VANITY_ID}
+${COMMUNITY_BASE_URL}groups/${vanity_url}
 ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
@@ -270,6 +279,7 @@ ${COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/301684045430556
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
+${COMMUNITY_BASE_URL}id/${profile_url}/
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
 ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?u=${}
@@ -289,6 +299,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/
+${COMMUNITY_BASE_URL}miniprofile/${}/json/?appid=${}
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
 ${COMMUNITY_BASE_URL}moderation/subject/${type}-${group_id}
 ${COMMUNITY_BASE_URL}my
@@ -393,21 +404,18 @@ ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/ban
 ${COMMUNITY_BASE_URL}sharedfiles/banupvoters
 ${COMMUNITY_BASE_URL}sharedfiles/edititem/${appid}/11/
-${COMMUNITY_BASE_URL}sharedfiles/edititem/?appid=${}&filetype=${}${_ ? _ : ``}
+${COMMUNITY_BASE_URL}sharedfiles/edititem/${appid}/9/
+${COMMUNITY_BASE_URL}sharedfiles/edititem/${}/${}/${}
+${COMMUNITY_BASE_URL}sharedfiles/filedetails/${}/${publishedfileid}/
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${published_file_id}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
-${COMMUNITY_BASE_URL}sharedfiles/itemdetails/?id=${}
-${COMMUNITY_BASE_URL}sharedfiles/itemdetails/changelog/?id=${}${}
-${COMMUNITY_BASE_URL}sharedfiles/itemdetails/managechildren/?id=${}
-${COMMUNITY_BASE_URL}sharedfiles/itemdetails/managepreviews/?id=${}
-${COMMUNITY_BASE_URL}sharedfiles/itemdetails/merchartwork/?id=${}
-${COMMUNITY_BASE_URL}sharedfiles/itemdetails/stats/?id=${}
 ${COMMUNITY_BASE_URL}sharedfiles/itemsetvisibility
 ${COMMUNITY_BASE_URL}sharedfiles/markassuspicious
 ${COMMUNITY_BASE_URL}sharedfiles/moderationqueueview/?appid=${appid}
 ${COMMUNITY_BASE_URL}sharedfiles/reportitem
 ${COMMUNITY_BASE_URL}sharedfiles/updaterestrictedcountries
+${COMMUNITY_BASE_URL}sharedfiles/uploadartwork/?appid=${}
 ${COMMUNITY_BASE_URL}sharedfiles/votingqueue/?appid=${appid}&matchingFileType=17
 ${COMMUNITY_BASE_URL}tempcloud/beginfileupload/
 ${COMMUNITY_BASE_URL}tempcloud/commitfileupload/
@@ -435,8 +443,10 @@ ${COMMUNITY_CDN_ASSET_URL}prettify/prettify.js
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/96px/flake_${}.png
 ${COMMUNITY_CDN_URL}
 ${COMMUNITY_CDN_URL}economy/boosterpack/${}?l=${LANGUAGE}
+${COMMUNITY_CDN_URL}economy/emoticon${_ ? `large` : ``}/${}
 ${COMMUNITY_CDN_URL}economy/emoticon/${}
 ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
+${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/image/${icon_url}
 ${COMMUNITY_CDN_URL}economy/image/${}
@@ -857,6 +867,7 @@ ${IMG_URL}international2023/ti_logo_full_color.png
 ${IMG_URL}international2024/esports_site/footer_bg01.png
 ${IMG_URL}international2024/esports_site/logo_ti_gold.png
 ${IMG_URL}international2025/ti2025_logo.png
+${IMG_URL}international2026/teamlogos/${nTeamID}.png
 ${IMG_URL}international2026/ti2026_logo.png
 ${IMG_URL}items/${}.png
 ${IMG_URL}locked.png
@@ -1162,7 +1173,7 @@ ${PARTNER_BASE_URL}packages/approvepricing
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${}
-${PARTNER_BASE_URL}packages/pricehistory/${packageid}
+${PARTNER_BASE_URL}packages/pricehistory/${}
 ${PARTNER_BASE_URL}packages/rejectpricing
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxcreatemarketingmessagemajorevent
@@ -1172,6 +1183,7 @@ ${PARTNER_BASE_URL}partnerevents/ajaxgetprivatedata
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
 ${PARTNER_BASE_URL}partnerevents/ajaxremovemarketingmessagemajorevent
 ${PARTNER_BASE_URL}partnerevents/ajaxsetprivatedata
+${PARTNER_BASE_URL}pricing/admin/packagepricechanges
 ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
@@ -1252,6 +1264,7 @@ ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/dashboard
 ${PARTNER_BASE_URL}promotion/themesales/dashboard
 ${PARTNER_BASE_URL}promotion/tools/eventimagecopy
+${PARTNER_BASE_URL}promotion/tools/themesalematch
 ${PARTNER_BASE_URL}promotionanalysis/ajaxgetgetpaidpublishersforapp
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
 ${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
@@ -1327,6 +1340,7 @@ ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
+${STORE_BASE_URL}${}/${vanity_url}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
@@ -1427,6 +1441,7 @@ ${STORE_BASE_URL}contenthub/ajaxgetdlcforyouplaytime
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforyoupopular
 ${STORE_BASE_URL}contenthub/ajaxgetdlcstatsforuser
 ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
+${STORE_BASE_URL}curator/${clanAccountID}
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
 ${STORE_BASE_URL}curator/${clanAccountID}/sale/${strVanity}
@@ -1447,6 +1462,7 @@ ${STORE_BASE_URL}curators/
 ${STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}
 ${STORE_BASE_URL}curators/ajaxfindcuratorlists
 ${STORE_BASE_URL}curators/ajaxgetmycuratorsalelists
+${STORE_BASE_URL}curators/mycuratorsreviewing/?appid=${}
 ${STORE_BASE_URL}data_outbound
 ${STORE_BASE_URL}developer/${m_strVanity}/
 ${STORE_BASE_URL}developer/${vanity}/
@@ -1465,6 +1481,7 @@ ${STORE_BASE_URL}events/ajaxgetadjacentpartnerevents/
 ${STORE_BASE_URL}events/ajaxgetbatchedpartnerevent/
 ${STORE_BASE_URL}events/ajaxgetbesteventsforuser
 ${STORE_BASE_URL}events/ajaxgetcreatorhomeidforapp
+${STORE_BASE_URL}events/ajaxgetdynamiceventmetadata?${}
 ${STORE_BASE_URL}events/ajaxgetnewscurators
 ${STORE_BASE_URL}events/ajaxgetpartnerevent
 ${STORE_BASE_URL}events/ajaxgetpartnereventpermissions
@@ -1671,6 +1688,7 @@ ${STORE_BASE_URL}subscriber_agreement/
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
 ${STORE_BASE_URL}tag/browse/
+${STORE_BASE_URL}tags/${}/${name}
 ${STORE_BASE_URL}tags/${}/${tagid}
 ${STORE_BASE_URL}tags/${}/${}
 ${STORE_BASE_URL}trailer/assets/?trailer=${}
@@ -1685,6 +1703,7 @@ ${STORE_BASE_URL}userreviews/rate/${}
 ${STORE_BASE_URL}userreviews/votetag/${}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
+${STORE_BASE_URL}widget/${appid}/?${}
 ${STORE_BASE_URL}wishlist
 ${STORE_BASE_URL}wishlist/
 ${STORE_BASE_URL}wishlist/profiles/${}
@@ -2117,6 +2136,7 @@ ${youtube_trailer_public_url}${}
 /wishlist/id/${profile_url}/
 [url=${HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${}[/url]
 http://
+http://${strURL}
 http://${}
 http://dashif.org/guidelines/thumbnail_tile${}
 http://help.steampowered.com/
@@ -2970,6 +2990,7 @@ https://store.steampowered.com/curators/ajaxfollow
 https://store.steampowered.com/curators/ajaxgetcurators/
 https://store.steampowered.com/curators/ajaxignore
 https://store.steampowered.com/default/home_additional/
+https://store.steampowered.com/default/home_spotlight_recommendations/
 https://store.steampowered.com/default/usabilitytracking/
 https://store.steampowered.com/dev/${vanity_url}
 https://store.steampowered.com/developer/${vanity_url}

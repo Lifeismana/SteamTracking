@@ -81,7 +81,21 @@
     },
     chunkid: (module) => {
       module.exports = {
+        RemovedLink: "_2ZKrmZ5SlaoV1N-tcGBPKA",
+        Revealable: "_28_FeNhGWpoweUaYPdlEA1",
+        RemovedLinkRevealed: "_3qySJJP0YZRLFQ7fwXSgKL",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Spoiler: "_2HIF4E13yuhn3QbY2I5vlt",
+        Content: "mAKc7Jz1JjxojCdLF0rE8",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        BBCodeContent: "_3QloCWvWesFo3QI7yfd8sL",
+        Community: "_3cl9mzgp8WIVuj1VCw9yi0",
       };
     },
     chunkid: (module) => {
@@ -8240,6 +8254,7 @@
             "top_sellers",
             "specials",
             "concurrent",
+            "vr_only",
           ];
           _ = _.filter((_) => this.m_mapMainCarousel.get(_).mapAppLists.has(_));
           const _ = _.map((_) =>
@@ -8344,6 +8359,7 @@
             "top_sellers",
             "popular_new",
             "specials",
+            "vr_only",
             "concurrent",
             "featured",
           ];
@@ -8743,6 +8759,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = -1;
+      function _() {
+        return "dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE;
+      }
       class _ {
         GetLastDoorOpen() {
           return this.m_strLastDoorOpenKey;
@@ -8793,6 +8812,9 @@
         GetDoorStateInitializedChangeCallback() {
           return this.m_doorInitializedChangedCallback;
         }
+        GetDoorOpenedCallback() {
+          return this.m_doorOpenedCallback;
+        }
         BIsInitialized() {
           return this.m_bLoadedDuringInit;
         }
@@ -8834,34 +8856,58 @@
         }
         async OpenDoor(_, _ = !0, _ = "", _ = !1) {
           var _;
-          return !_._.logged_in ||
+          return (
+            _() &&
+              console.log(
+                "CDoorStore.OpenDoor: attempting door " + _,
+                "open:",
+                _,
+                "preview:",
+                _,
+              ),
+            !_._.logged_in ||
             !this.m_userData ||
             _ > this.m_userData.length ||
             _ < 0
-            ? ("dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CDoorStore.OpenDoor Early fail settings:",
-                  _._.logged_in,
-                  this.m_userData,
-                  _,
-                  null === (_ = this.m_userData) || void 0 === _
-                    ? void 0
-                    : _.length,
-                ),
-              null)
-            : this.m_mapDoorOpenPromise.has(_)
-              ? this.m_mapDoorOpenPromise.get(_)
-              : this.m_userData[_].opened == _
-                ? {}
-                : (this.m_mapDoorOpenPromise.has(_) ||
-                    this.m_mapDoorOpenPromise.set(
-                      _,
-                      this.InternalOpenDoor(_, _, _, _),
+              ? (_() &&
+                  console.log(
+                    "CDoorStore.OpenDoor Early fail settings:",
+                    _._.logged_in,
+                    this.m_userData,
+                    _,
+                    null === (_ = this.m_userData) || void 0 === _
+                      ? void 0
+                      : _.length,
+                  ),
+                null)
+              : this.m_mapDoorOpenPromise.has(_)
+                ? (_() &&
+                    console.log(
+                      "CDoorStore.OpenDoor: door " +
+                        _ +
+                        " was already requested this session; reusing that result",
                     ),
-                  this.m_mapDoorOpenPromise.get(_));
+                  this.m_mapDoorOpenPromise.get(_))
+                : this.m_userData[_].opened == _
+                  ? (_() &&
+                      console.log(
+                        "CDoorStore.OpenDoor: door " +
+                          _ +
+                          " is already " +
+                          (_ ? "open" : "closed") +
+                          "; nothing sent to the server",
+                      ),
+                    {})
+                  : (this.m_mapDoorOpenPromise.has(_) ||
+                      this.m_mapDoorOpenPromise.set(
+                        _,
+                        this.InternalOpenDoor(_, _, _, _),
+                      ),
+                    this.m_mapDoorOpenPromise.get(_))
+          );
         }
         async InternalOpenDoor(_, _ = !0, _, _ = !1) {
-          var _;
+          var _, _, _;
           let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const _ = new FormData();
           _.append("sessionid", (0, _._)()),
@@ -8883,9 +8929,24 @@
             )
               return (
                 (this.m_userData[_].opened = _),
+                _() &&
+                  console.log(
+                    "CDoorStore.OpenDoor: door " +
+                      _ +
+                      (_ ? " opened" : " closed"),
+                    "rewards returned:",
+                    (null ===
+                      (_ =
+                        null === (_ = _.data) || void 0 === _
+                          ? void 0
+                          : _.rewards) || void 0 === _
+                      ? void 0
+                      : _.length) || 0,
+                  ),
                 (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
                 this.GetDoorStateChangeCallback(_).Dispatch(_),
                 this.RecomputeState(),
+                _ && !_ && this.GetDoorOpenedCallback().Dispatch(_),
                 _.data
               );
             _ = (0, _._)(_);
@@ -9001,6 +9062,7 @@
             (this.m_doorInitializedChangedCallback = new _._()),
             (this.m_largestDoorChangeCallback = new _._()),
             (this.m_bIsAnyDoorOpenChangeCallback = new _._()),
+            (this.m_doorOpenedCallback = new _._()),
             (0, _._)(this);
         }
         Init() {
@@ -31000,6 +31062,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 0;
       function _(_) {
         var _;
         return (
@@ -31014,8 +31077,8 @@
           _ = (0, _._)(),
           _ = _._.GetELanguageFallback(_),
           _ = (0, _._)(),
-          [_, _, _] = (0, _._)(() => {
-            var _, _, _;
+          [_, _, _, _] = (0, _._)(() => {
+            var _, _, _, _;
             return [
               Boolean(
                 null === (_ = _.quiz) || void 0 === _
@@ -31026,6 +31089,11 @@
               null === (_ = _.quiz) || void 0 === _
                 ? void 0
                 : _.hide_question_type_label,
+              Boolean(
+                null === (_ = _.quiz) || void 0 === _
+                  ? void 0
+                  : _.grant_reward_on_branch_result,
+              ),
             ];
           }),
           [_, _] = (0, _.useState)(
@@ -31061,15 +31129,16 @@
           [_, _],
         );
         (0, _.useEffect)(() => {
-          _ &&
-            !_._.Get().BIsInitialized() &&
+          (!_ && !_) ||
+            _._.Get().BIsInitialized() ||
             _._.Get()
               .LoadDoorData()
               .then(() => {
-                _._.Get().BIsAnyDoorOpened() &&
+                _ &&
+                  _._.Get().BIsAnyDoorOpened() &&
                   _(_._.Get().GetLargestDoorOpenIndex() + 1);
               });
-        }, [_]);
+        }, [_, _]);
         const _ =
             (null === (_ = _.localized_description) || void 0 === _
               ? void 0
@@ -31125,8 +31194,15 @@
                 _._.Get().GetLargestAnswerQuestion() > 0 &&
                 (_._.Get().BHasTerminalAnswerChosen() || !_(_[_.length - 1])),
             ),
-          ),
-          _ =
+          );
+        (0, _.useEffect)(() => {
+          _ &&
+            _ &&
+            _._.Get()
+              .LoadDoorData()
+              .then(() => _._.Get().OpenDoor(_, !0, "", _));
+        }, [_, _, _]);
+        const _ =
             _ &&
             Boolean(
               null === (_ = _.quiz) || void 0 === _
@@ -31373,11 +31449,7 @@
                   (0, _.jsx)(_._, {
                     checked: _ === _,
                     onChange: (_) => {
-                      _.category_ids &&
-                        _._.Get().SetAnswerCategory(
-                          _,
-                          _ ? _.category_ids : null,
-                        ),
+                      _._.Get().SetAnswerCategory(_, _ ? _.category_ids : null),
                         _(_ ? _ : null);
                     },
                     disabled: _ === _,
@@ -31585,7 +31657,10 @@
       function _(_) {
         var _;
         const { quiz_section: _, bPreviewMode: _, fnCorrectlyAnswered: _ } = _,
-          [_] = (0, _._)(() => [null == _ ? void 0 : _.quiz_type]),
+          [_, _] = (0, _._)(() => [
+            null == _ ? void 0 : _.quiz_type,
+            Boolean(null == _ ? void 0 : _.grant_reward_on_branch_result),
+          ]),
           [_, _] = (0, _.useState)(!1);
         return _
           ? (0, _.jsx)("div", {
@@ -31597,9 +31672,10 @@
                 className: (0, _._)("QuizScenarioSubmitCtn"),
                 children: [
                   Boolean(
-                    (null === (_ = _.answer_categories) || void 0 === _
-                      ? void 0
-                      : _.length) > 0,
+                    !_ &&
+                      (null === (_ = _.answer_categories) || void 0 === _
+                        ? void 0
+                        : _.length) > 0,
                   ) &&
                     (0, _.jsx)(_._, {
                       disabled: _,
@@ -31718,6 +31794,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 5;
+      function _(_, _, _) {
+        return _
+          ? __webpack_require__.filter(
+              (_) => _.appid == _ && null != _.item_type && _.has(_.item_type),
+            ).length
+          : 0;
+      }
       function _(_) {
         const { event: _, section: _, language: _ } = _,
           _ = (0, _._)(),
@@ -31725,40 +31808,67 @@
             _.rewards.reward_items,
             _.rewards.only_show_gratned_items,
           ]),
-          _ = (0, _._)(),
-          _ = (0, _.useMemo)(() => {
-            const _ = new Array();
-            let _ = new Array();
-            for (let _ = 0; _ < _.length; ++_) {
-              _ > 0 && _ % _ == 0 && (_.push(_), (_ = new Array()));
-              const _ = _[_];
-              _.push(
-                _._.logged_in
-                  ? (0, _.jsx)(
-                      _,
-                      {
-                        section: _,
-                        rewardDef: _,
-                        language: _,
-                        eventModel: _,
-                        bIsPreview: _,
-                      },
-                      "reward" + _,
+          _ = (0, _._)();
+        !(function (_) {
+          const _ = (0, _.useMemo)(() => {
+              const _ = new Map();
+              return (
+                null == _ ||
+                  _.forEach((_) => {
+                    if (
+                      !(null == _ ? void 0 : _.appid) ||
+                      null == _.community_item_type
                     )
-                  : (0, _.jsx)(
-                      "div",
-                      {
-                        className: "reward_hidden_entry",
-                        children: (0, _.jsx)(_, {
-                          section: _,
-                        }),
-                      },
-                      "hiddenreward" + _,
-                    ),
+                      return;
+                    let _ = _.get(_.appid);
+                    _ || ((_ = new Set()), _.set(_.appid, _)),
+                      __webpack_require__.add(_.community_item_type);
+                  }),
+                _
               );
-            }
-            return _.length > 0 && _.push(_), _;
-          }, [_, _, _, _, _]);
+            }, [_]),
+            _ = (0, _.useCallback)(() => {
+              _._.logged_in &&
+                _.forEach((_, _) => {
+                  _(_, _, (0, _._)(_)) >= _.size ||
+                    (0, _._)(_, (_) => _(_, _, _) >= _.size);
+                });
+            }, [_]);
+          (0, _._)(_._.Get().GetDoorOpenedCallback(), _);
+        })(_);
+        const _ = (0, _.useMemo)(() => {
+          const _ = new Array();
+          let _ = new Array();
+          for (let _ = 0; _ < _.length; ++_) {
+            _ > 0 && _ % _ == 0 && (_.push(_), (_ = new Array()));
+            const _ = _[_];
+            _.push(
+              _._.logged_in
+                ? (0, _.jsx)(
+                    _,
+                    {
+                      section: _,
+                      rewardDef: _,
+                      language: _,
+                      eventModel: _,
+                      bIsPreview: _,
+                    },
+                    "reward" + _,
+                  )
+                : (0, _.jsx)(
+                    "div",
+                    {
+                      className: "reward_hidden_entry",
+                      children: (0, _.jsx)(_, {
+                        section: _,
+                      }),
+                    },
+                    "hiddenreward" + _,
+                  ),
+            );
+          }
+          return _.length > 0 && _.push(_), _;
+        }, [_, _, _, _, _]);
         return _ && !_._.logged_in
           ? null
           : (0, _.jsx)(_._, {
@@ -39833,6 +39943,7 @@
           super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _);
         }
       }
+      Error;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -39968,14 +40079,597 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new Set(["img", "noparse", "url", "dynamiclink"]);
+      class _ extends _._ {
+        constructor(_, _, _) {
+          super(_),
+            (this.m_parentNode = _),
+            (this.m_fnRenderURL =
+              null != _
+                ? _
+                : (_) =>
+                    (0, _.jsx)(_._, {
+                      strURL: _,
+                    }));
+        }
+        AppendText(_, _ = !1) {
+          if (this.m_parentNode && _.has(this.m_parentNode.tag))
+            return void super.AppendText(_, _);
+          let _ = _;
+          for (let _ = _._.exec(_); _; _ = _._.exec(_))
+            _.index > 0 &&
+              super.AppendText(__webpack_require__.slice(0, _.index), _),
+              super.AppendNode(this.m_fnRenderURL(_[0])),
+              (_ = __webpack_require__.slice(_.index + _[0].length));
+          _.length > 0 && super.AppendText(_, _);
+        }
+      }
+      function _(_) {
+        return (0, _.jsx)(_.Fragment, {
+          children: _.children,
+        });
+      }
+      const _ = {
+        URLConstructor: _._,
+      };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { strLabel: _, strTooltip: _, bCanReveal: _ } = _,
+          [_, _] = _.useState(!1);
+        if (_)
+          return (0, _.jsx)("span", {
+            className: _().RemovedLinkRevealed,
+            children: _.children,
+          });
+        const _ = _
+          ? (0, _.jsx)("button", {
+              type: "button",
+              className: (0, _._)(_().RemovedLink, _().Revealable),
+              onClick: () => _(!0),
+              children: _,
+            })
+          : (0, _.jsx)("span", {
+              className: _().RemovedLink,
+              children: _,
+            });
+        return (0, _.jsx)(_._, {
+          toolTipContent: (0, _.jsx)("p", {
+            children: _,
+          }),
+          children: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = [
+        "vimeo.com",
+        "youtu.be",
+        "youtube.com",
+        "steamcdn-a.akamaihd.net",
+        "steamusercontent.com",
+        "steamstatic.com",
+        "steamusercontent-a.akamaihd.net",
+        "steamuserimages-a.akamaihd.net",
+        "steamstore-a.akamaihd.net",
+        "steamcommunity-a.akamaihd.net",
+        "steampowered-a.akamaihd.net",
+      ];
+      function _(_) {
+        if (!_.match(/^https?:\/\//)) return !1;
+        if (!(0, _._)(_)) return !0;
+        const _ = (0, _._)(_).toLowerCase();
+        return _.some((_) => _ == _ || _.endsWith("." + _));
+      }
+      function _(_) {
+        let _ = _.strings.strTooltip;
+        return (
+          _.bCanReveal && (_ += " (Valve/Mod Only) Click to reveal link"),
+          (0, _.jsx)(_, {
+            strLabel: _.strings.strLabel,
+            strTooltip: _,
+            bCanReveal: _.bCanReveal,
+            children: _.children,
+          })
+        );
+      }
+      var _;
+      function _(_, _) {
+        return !!_ && (_ == _ || _.endsWith("." + _));
+      }
+      !(function (_) {
+        (_[(_.k_EURLSite_None = 0)] = "k_EURLSite_None"),
+          (_[(_.k_EURLSite_Store = 1)] = "k_EURLSite_Store"),
+          (_[(_.k_EURLSite_Community = 2)] = "k_EURLSite_Community");
+      })(_ || (_ = {}));
+      const _ = ["steamcommunity.com", "my.steamchina.com"],
+        _ = ["steampowered.com", "store.steamchina.com"];
+      function _(_) {
+        var _, _;
+        return null !==
+          (_ =
+            null === (_ = URL.parse(_)) || void 0 === _
+              ? void 0
+              : _.hostname.toLowerCase()) && void 0 !== _
+          ? _
+          : "";
+      }
+      function _(_, _) {
+        var _;
+        const _ = URL.parse(
+          _.match(/^[a-z][a-z0-9+.-]*:/i) ? _ : "http://" + _,
+        );
+        if (!_) return;
+        if (_.searchParams.get("noPreview")) return;
+        const _ = {
+            strURL: _,
+            url: _,
+            bNoPopup: !!_.searchParams.get("noPopup"),
+          },
+          _ =
+            null ===
+              (_ = _.find(
+                (_) =>
+                  (function (_, _) {
+                    const _ = _.hostname.toLowerCase();
+                    switch (_) {
+                      case _.k_EURLSite_None:
+                        return !0;
+                      case _.k_EURLSite_Store:
+                        return [_(_._.STORE_BASE_URL), ..._].some((_) =>
+                          _(_, _),
+                        );
+                      case _.k_EURLSite_Community:
+                        return [_(_._.COMMUNITY_BASE_URL), ..._].some((_) =>
+                          _(_, _),
+                        );
+                    }
+                    return !1;
+                  })(_, _.site) &&
+                  (!_.regex || _.regex.test(_.pathname)) &&
+                  (!_.fnMatch || _.fnMatch(_)),
+              )) || void 0 === _
+              ? void 0
+              : _.component;
+        return _
+          ? {
+              Card: _,
+              match: _,
+            }
+          : void 0;
+      }
+      function _(_) {
+        let _ = _;
+        return () => !(_ <= 0) && (_--, !0);
+      }
+      const _ = new WeakMap();
+      function _(_, _, _) {
+        if (_.has(_)) return _.get(_);
+        const _ =
+            !_.fnBAllowCard || _.fnBAllowCard(_)
+              ? _(_.rgDynamicLinks, _)
+              : void 0,
+          _ = !_ || (_.fnBTake && !_.fnBTake()) ? void 0 : _;
+        return _.set(_, _), _;
+      }
+      function _(_, _, _) {
+        const _ = (function (_, _) {
+          var _;
+          switch (null !== (_ = _.linkMode) && void 0 !== _ ? _ : "links") {
+            case "bewary":
+              return {
+                URLConstructor: (_) => {
+                  const _ = (0, _._)(_);
+                  return _ && _(_.strURL)
+                    ? (0, _._)(_)
+                    : (0, _.jsx)(_, {
+                        strings: _,
+                        bCanReveal: _.bCanRevealRemovedLinks,
+                        children: _.children,
+                      });
+                },
+                fnRenderBodyURL: (_) =>
+                  _(_)
+                    ? (0, _.jsx)(_._, {
+                        strURL: _,
+                      })
+                    : (0, _.jsx)(_, {
+                        strings: _,
+                        bCanReveal: _.bCanRevealRemovedLinks,
+                        children: _,
+                      }),
+              };
+            case "whitelist":
+              return {
+                URLConstructor: (_) => {
+                  const _ = (0, _._)(_);
+                  return _ && _(_.strURL)
+                    ? (0, _._)(_)
+                    : (0, _.jsx)(_.Fragment, {
+                        children: _.children,
+                      });
+                },
+                fnRenderBodyURL: (_) =>
+                  _(_)
+                    ? (0, _.jsx)(_._, {
+                        strURL: _,
+                      })
+                    : _,
+              };
+            default:
+              return {
+                URLConstructor: _._,
+                fnRenderBodyURL: void 0,
+              };
+          }
+        })(_, _);
+        return _
+          ? (function (_, _ = _) {
+              if (!_.rgDynamicLinks.length) return _;
+              const _ = _.URLConstructor;
+              function _(_) {
+                const _ = _(_, _, _.strURL),
+                  _ = _.fnRenderBodyURL
+                    ? _.fnRenderBodyURL(_.strURL)
+                    : (0, _.jsx)(_._, {
+                        strURL: _.strURL,
+                      });
+                return _
+                  ? (0, _.jsx)(_.Card, {
+                      match: _.match,
+                      children: _,
+                    })
+                  : _;
+              }
+              return {
+                URLConstructor: function (_) {
+                  const _ = (0, _._)(_),
+                    _ = _ && !_.bHasCustomText ? _(_, _, _.strURL) : void 0;
+                  return _
+                    ? (0, _.jsx)(_.Card, {
+                        match: _.match,
+                        children: _.children,
+                      })
+                    : (0, _.jsx)(_, {
+                        ..._,
+                      });
+                },
+                fnRenderBodyURL: (_) =>
+                  (0, _.jsx)(_, {
+                    strURL: _,
+                  }),
+              };
+            })(
+              {
+                ..._,
+                fnBAllowCard: (_) =>
+                  (function (_, _) {
+                    var _;
+                    switch (
+                      null !== (_ = _.linkMode) && void 0 !== _ ? _ : "links"
+                    ) {
+                      case "bewary":
+                      case "whitelist":
+                        return _(_);
+                      default:
+                        return !0;
+                    }
+                  })(_, _),
+              },
+              _,
+            )
+          : _;
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = [
+        "utm_source",
+        "utm_campaign",
+        "utm_medium",
+        "utm_term",
+        "utm_content",
+      ];
+      function _(_) {
+        var _;
+        const _ = new URLSearchParams({
+          dynamiclink: "1",
+          hidebuttons: _.bHideButtons ? "1" : "0",
+        });
+        for (const _ of _) {
+          const _ =
+            null === (_ = _.searchParams) || void 0 === _ ? void 0 : _.get(_);
+          _ && __webpack_require__.set(_, _);
+        }
+        return (0, _.jsx)("iframe", {
+          className: _.DynamicLink_StoreWidget,
+          src: `${_._.STORE_BASE_URL}widget/${_.appid}/?${_}`,
+          loading: "lazy",
+          title: `${_.appid}`,
+          frameBorder: 0,
+        });
+      }
+      const _ = /^\/+app\/(\d+)/i;
+      function _(_) {
+        var _;
+        const _ =
+          null === (_ = _.match.url.pathname.match(_)) || void 0 === _
+            ? void 0
+            : _[1];
+        return _
+          ? (0, _.jsx)(_, {
+              appid: parseInt(_),
+              searchParams: _.match.url.searchParams,
+            })
+          : _.children;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useCard(_.publishedfileid);
+        if (!_) return _.children;
+        if (_.bBanned)
+          return (0, _.jsx)("div", {
+            className: _._.Box,
+            children: _._.Localize("#DynamicLink_Banned"),
+          });
+        let _ = "",
+          _ = _.strTitle,
+          _ = _.strDescription,
+          _ = !1;
+        switch (_.fileType) {
+          case _.Me_:
+          case _.Fcm:
+            _ = _._.Localize("#DynamicLinkType_WorkshopItem", _.strAppName);
+            break;
+          case _.pmA:
+            (_ = _._.Localize("#DynamicLinkType_Screenshot", _.strAppName)),
+              (_ = _),
+              (_ = ""),
+              (_ = !0);
+            break;
+          case _.CvG:
+            (_ = _._.Localize("#DynamicLinkType_Art", _.strAppName)), (_ = !0);
+            break;
+          case _.ADn:
+            _ = _._.Localize("#DynamicLinkType_Video", _.strAppName);
+            break;
+          case _.z41:
+          case _.QPp:
+            _ = _._.Localize("#DynamicLinkType_WebGuide", _.strAppName);
+        }
+        return (
+          (_ = (0, _._)((0, _._)(_), 220)),
+          (0, _.jsx)(_._, {
+            strURL: _.strURL,
+            strTitle: _,
+            strPreviewURL: _.strPreviewURL,
+            strType: _,
+            strDescription: _,
+            author: _.author,
+            publishedfileid: _.publishedfileid,
+            appid: _.appid,
+            bSizeToFit: _,
+          })
+        );
+      }
+      const _ = /^\/+sharedfiles\/filedetails/i;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, _] = _.useState(!1);
+        return _
+          ? (0, _.jsx)(_, {
+              strVideoID: _.strVideoID,
+              bAutoPlay: !0,
+            })
+          : (0, _.jsxs)("div", {
+              className: _._.Box,
+              role: "button",
+              tabIndex: 0,
+              onClick: () => __webpack_require__(!0),
+              onKeyDown: (_) => {
+                ("Enter" != _.key && " " != _.key) ||
+                  (_.preventDefault(), __webpack_require__(!0));
+              },
+              children: [
+                (0, _.jsx)(_._, {
+                  strURL:
+                    ((_ = _.strVideoID),
+                    `https://img.youtube.com/vi/${encodeURIComponent(_)}/0.jpg`),
+                }),
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)("span", {
+                          className: _._.Type,
+                          children: _.strType,
+                        }),
+                        _.strTitle,
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: _.strViews,
+                    }),
+                    (0, _.jsx)(_._, {
+                      children: _.strDescription,
+                    }),
+                  ],
+                }),
+              ],
+            });
+        var _;
+      }
+      function _(_) {
+        const _ =
+          `https://www.youtube-nocookie.com/embed/${encodeURIComponent(_.strVideoID)}?fs=1&modestbranding=1&rel=0&playsinline=1` +
+          (_.bAutoPlay ? "&autoplay=1" : "");
+        return (0, _.jsx)("div", {
+          className: _.DynamicLink_YouTubeEmbed,
+          children: (0, _.jsx)("iframe", {
+            src: _,
+            title: _.strVideoID,
+            allowFullScreen: !0,
+            frameBorder: 0,
+          }),
+        });
+      }
+      const _ = /^[A-Za-z0-9_-]{11}$/,
+        _ = /^\/+(?:embed|shorts|v|live)\/([^/]+)/i;
+      function _(_, _) {
+        return _ == _ || _.endsWith("." + _);
+      }
+      function _(_) {
+        var _, _;
+        const _ = _.hostname.toLowerCase();
+        let _;
+        return (
+          _(_, "youtube.com") || _(_, "youtube-nocookie.com")
+            ? (_ =
+                null !== (_ = _.searchParams.get("v")) && void 0 !== _
+                  ? _
+                  : null === (_ = _.pathname.match(_)) || void 0 === _
+                    ? void 0
+                    : _[1])
+            : _(_, "youtu.be") && (_ = _.pathname.slice(1)),
+          _ && _.test(_) ? _ : void 0
+        );
+      }
+      function _(_) {
+        const { strVideoID: _, useDetails: _, children: _ } = _,
+          _ = __webpack_require__(_);
+        return (0, _._)("youtube") && _
+          ? (0, _.jsx)(_, {
+              strVideoID: _,
+              strType: _._.Localize("#DynamicLinkType_YouTubeVideo") + ": ",
+              strTitle: _.title,
+              strViews: _._.Localize(
+                "#DynamicLinkType_YouTubeVideo_Views",
+                (0, _._)(_.views),
+              ),
+              strDescription: _.description,
+            })
+          : _;
+      }
+      async function _(_) {
+        var _, _, _;
+        const _ = new URLSearchParams({
+            youtubevideoids: _.join(","),
+          }),
+          _ = await fetch(
+            `${_._.STORE_BASE_URL}events/ajaxgetdynamiceventmetadata?${_}`,
+          );
+        if (!_._) throw new Error(`ajaxgetdynamiceventmetadata: ${_.status}`);
+        const _ = await _.json(),
+          _ = new Map();
+        for (const _ of null !== (_ = _.youtube) && void 0 !== _ ? _ : [])
+          _.videoid &&
+            _.set(_.videoid, {
+              title: null !== (_ = _.title) && void 0 !== _ ? _ : "",
+              description:
+                null !== (_ = _.description) && void 0 !== _ ? _ : "",
+              views: Number(_.views) || 0,
+              videoid: _.videoid,
+            });
+        return _;
+      }
+      let _ = [],
+        _ = null;
+      function _(_) {
+        return (0, _._)({
+          queryKey: ["youtube_video_details", _],
+          queryFn: () =>
+            (function (_) {
+              return (
+                _.push(_),
+                null != _ ||
+                  (_ = Promise.resolve().then(async () => {
+                    const _ = [...new Set(_)];
+                    (_ = []), (_ = null);
+                    const _ = new Map();
+                    for (let _ = 0; _ < _.length; _ += 50) {
+                      const _ = await _(_.slice(_, _ + 50));
+                      for (const [_, _] of _) _.set(_, _);
+                    }
+                    return _;
+                  })),
+                _.then((_) => {
+                  var _;
+                  return null !== (_ = _.get(_)) && void 0 !== _ ? _ : null;
+                })
+              );
+            })(_),
+          staleTime: 36e5,
+        });
+      }
+      const _ = 3,
+        _ = (function (_) {
+          const _ = [];
+          var _, _;
+          return (
+            _.useUGCDynamicLinkCard &&
+              _.push(
+                ((_ = _.useUGCDynamicLinkCard),
+                {
+                  site: _.k_EURLSite_Community,
+                  regex: _,
+                  fnMatch: (_) => !!_.url.searchParams.get("id"),
+                  component: function (_) {
+                    const _ = _.match.url.searchParams.get("id");
+                    return _
+                      ? (0, _.jsx)(_, {
+                          publishedfileid: _,
+                          useCard: _,
+                          children: _.children,
+                        })
+                      : _.children;
+                  },
+                }),
+              ),
+            _.bStoreApp &&
+              _.push({
+                site: _.k_EURLSite_Store,
+                regex: _,
+                component: _,
+              }),
+            _.useYouTubeVideoDetails &&
+              _.push(
+                ((_ = _.useYouTubeVideoDetails),
+                {
+                  site: _.k_EURLSite_None,
+                  fnMatch: (_) => !!_(_.url),
+                  component: function (_) {
+                    const _ = _(_.match.url);
+                    return _ && _._.EREALM != _._.k_ESteamRealmChina
+                      ? (0, _.jsx)(_, {
+                          strVideoID: _,
+                          useDetails: _,
+                          children: _.children,
+                        })
+                      : _.children;
+                  },
+                }),
+              ),
+            _
+          );
+        })({
+          bStoreApp: !0,
+          useYouTubeVideoDetails: (_) => _(_).data,
+        });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         return (0, _.jsx)("span", {
           className: _().Spoiler,
-          children: _.children,
+          children: (0, _.jsx)("span", {
+            className: _().Content,
+            children: _.children,
+          }),
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 1;
@@ -41223,59 +41917,9 @@
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { url: _, children: _ } = _;
-        return (0, _.jsx)(_._, {
-          target: "_blank",
-          href: _.href,
-          underline: "auto",
-          contrast: "title",
-          children: _,
-        });
-      }
-      function _(_, _) {
-        switch (_) {
-          case _.k_EURLSite_Store:
-            return _ + "/" == _._.STORE_BASE_URL || !1;
-          case _.k_EURLSite_Community:
-            return _ + "/" == _._.COMMUNITY_BASE_URL || !1;
-        }
-        return !1;
-      }
-      !(function (_) {
-        (_[(_.k_EURLSite_None = 0)] = "k_EURLSite_None"),
-          (_[(_.k_EURLSite_Store = 1)] = "k_EURLSite_Store"),
-          (_[(_.k_EURLSite_Community = 2)] = "k_EURLSite_Community");
-      })(_ || (_ = {}));
-      const _ = _.createContext([]);
-      function _(_) {
-        var _;
-        const _ = _.useContext(_);
-        let _ =
-          null !== (_ = (0, _._)(_.args)) && void 0 !== _
-            ? _
-            : (0, _._)(_.args, "href");
-        if (!_ || !_.match(/^https?:\/\//)) return _.children;
-        (0, _._)(_) && (_ = (0, _._)(_));
-        const _ = URL.parse(_);
-        if (!_) return _.children;
-        const _ = (function (_, _) {
-          for (const _ of _)
-            if (_(_.origin, _.site) && _.regex.exec(_.pathname))
-              return _.component;
-          return _;
-        })(_ || [], _);
-        return (0, _.jsx)(_, {
-          url: _,
-          children: _.children,
-        });
-      }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return `${_.author.profile_url}recommended/${_}`;
@@ -41852,43 +42496,54 @@
         });
       }
       function _(_) {
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-            (0, _.jsx)("br", {}),
-          ],
-        });
-      }
-      function _(_) {
-        const { text: _ = "" } = _,
+        const { text: _ = "", bBeWary: _ } = _,
           _ = _.useMemo(() => {
-            const _ = {
-              ..._._,
-              ..._._,
-              ..._._,
-              spoiler: {
-                Constructor: _,
-              },
-              highlight: {
-                Constructor: _,
-              },
-              url: {
-                Constructor: _,
-              },
-            };
-            return new _._(_, (_) => new _._(new _._()), _._.LANGUAGE);
-          }, []),
-          _ = _.useMemo(() => [], []);
-        return _.useMemo(
-          () =>
-            (0, _.jsx)(_.Provider, {
-              value: _,
-              children: __webpack_require__.ParseBBCode(_, void 0),
-            }),
-          [_, _, _],
-        );
+            const _ = _(
+                {
+                  linkMode: _ ? "bewary" : "links",
+                },
+                {
+                  strLabel: _._.Localize("#Community_RemoveLink_BeWary"),
+                  strTooltip: _._.Localize("#Community_RemoveLink_Tooltip"),
+                },
+                {
+                  rgDynamicLinks: _,
+                  fnBTake: _(_),
+                },
+              ),
+              _ = {
+                ..._._,
+                ..._._,
+                ..._._,
+                spoiler: {
+                  Constructor: _,
+                },
+                highlight: {
+                  Constructor: _,
+                },
+                ...((_ = _),
+                {
+                  url: {
+                    Constructor: _.URLConstructor,
+                  },
+                  noparse: {
+                    Constructor: _,
+                  },
+                }),
+              };
+            var _;
+            return new _._(
+              _,
+              (function (_, _) {
+                return (_) => {
+                  const _ = new _._(new _._());
+                  return new _(_ ? _(_) : _, _, _.fnRenderBodyURL);
+                };
+              })(_),
+              _._.LANGUAGE,
+            );
+          }, [_]);
+        return _.useMemo(() => _.ParseBBCode(_, void 0), [_, _]);
       }
       function _(_) {
         const { review: _ } = _,
@@ -41908,9 +42563,14 @@
               },
               children: [
                 (0, _.jsx)("div", {
-                  className: _().Text,
+                  className: (0, _._)(
+                    _().Text,
+                    _().BBCodeContent,
+                    _().Community,
+                  ),
                   children: (0, _.jsx)(_, {
                     text: _.review,
+                    bBeWary: _.bBeWary,
                   }),
                 }),
                 _ &&

@@ -110,7 +110,7 @@
                       children: (0, t.jsxs)(x.QA, {
                         eAdultOnlyMediaBehavior: "allowed",
                         children: [
-                          (0, t.jsx)(i.u, { cm: e.cm }),
+                          (0, t.jsx)(i.us, { cm: e.cm }),
                           (0, t.jsx)(T, {}),
                         ],
                       }),

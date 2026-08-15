@@ -1874,12 +1874,20 @@
       function _() {
         return (0, _.useContext)(_);
       }
+      const _ = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+      const _ = ["title", "subtitle", "body", "description", "note"];
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             accentColor: _,
             dullColor: _,
             bodyTextColor: _,
+            successColor: _,
+            warningColor: _,
+            errorColor: _,
+            successTextColor: _,
+            warningTextColor: _,
+            errorTextColor: _,
             children: _,
             breakpoints: _,
             variants: _,
@@ -1890,13 +1898,13 @@
         let _, _, _;
         "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
           "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
-          "string" == typeof _
-            ? (_ = _)
-            : _ &&
-              (function (_, _) {
-                for (const [_, _] of Object.entries(_))
-                  _[`--color-text-body-${_}`] = _;
-              })(_, _);
+          "string" == typeof _ ? (_ = _) : _ && _(_, "body", _),
+          _ && _(_, "success", _),
+          _ && _(_, "warning", _),
+          _ && _(_, "error", _),
+          _ && _(_, "success", _),
+          _ && _(_, "warning", _),
+          _ && _(_, "error", _);
         const _ = (0, _.jsx)(_._, {
           variants: _,
           children: (0, _.jsx)("div", {
@@ -1921,14 +1929,30 @@
           : _;
       }
       function _(_, _, _) {
-        for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+        if ("string" == typeof _)
+          for (const _ of _) _[`--color-${_}-${_}`] = `var(--color-${_}-${_})`;
+        else for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
+      }
+      function _(_, _, _) {
+        if ("string" == typeof _)
+          for (const _ of _)
+            _[`--color-text-${_}-${_}`] = `var(--color-${_}-${_})`;
+        else
+          for (const [_, _] of Object.entries(_))
+            _[`--color-text-${_}-${_}`] = _;
       }
       const _ = _.memo(function (_) {
         const {
           defaultTextSize: _,
           accentColor: _ = "blue",
           dullColor: _ = "greyneutral",
+          successColor: _ = "green",
+          warningColor: _ = "yellow",
+          errorColor: _ = "red",
           bodyTextColor: _ = "text-light",
+          successTextColor: _ = "text-green",
+          warningTextColor: _ = "text-red",
+          errorTextColor: _ = "text-red",
           breakpoints: _,
           variants: _,
           children: _,
@@ -1952,7 +1976,13 @@
                   children: (0, _.jsxs)(_, {
                     accentColor: _,
                     dullColor: _,
+                    successColor: _,
+                    warningColor: _,
+                    errorColor: _,
                     bodyTextColor: _,
+                    successTextColor: _,
+                    warningTextColor: _,
+                    errorTextColor: _,
                     variants: _,
                     children: [_, !1],
                   }),
@@ -9683,9 +9713,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.createContext(null),
         _ = _.createContext(_._);
       function _(_) {
@@ -13944,11 +13974,19 @@
             LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
             Ready: () => _,
             IsReady: () => _,
-            HasKey: (_) =>
-              _().languages.some((_) => {
-                const _ = _.get(_.strLanguage);
-                return !!_ && _.has(_);
-              }),
+            HasKey(_) {
+              const _ = _().languages,
+                _ = [
+                  ...__webpack_require__.map((_) => _.strLanguage),
+                  (0, _._)(_[0].strLanguage),
+                ];
+              for (const _ of _) {
+                if (!_) continue;
+                const _ = _.get(_);
+                if (_ && _.has(_)) return !0;
+              }
+              return !1;
+            },
           }
         );
       }
@@ -25170,6 +25208,11 @@
                     _: 2,
                     _: _,
                   },
+                  award_year: {
+                    _: 3,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -28484,6 +28527,12 @@
                   },
                   include_extra_details: {
                     _: 18,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  include_best_purchase_option: {
+                    _: 19,
+                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -33382,8 +33431,14 @@
         static InitFromClanID(_, _) {
           return new _(Number(_), _, _.P3F, 0);
         }
+        static ToAccountID(_) {
+          return _.ExtractAccountID(_._.fromString(_, !0));
+        }
+        static ExtractAccountID(_) {
+          return _.getLowBitsUnsigned();
+        }
         GetAccountID() {
-          return this.m_ulSteamID.getLowBitsUnsigned();
+          return _.ExtractAccountID(this.m_ulSteamID);
         }
         GetInstance() {
           return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
@@ -33845,6 +33900,10 @@
                 "supported_languages",
                 _,
               );
+            })(_, _, _, _),
+          _.include_extra_details &&
+            (function (_, _, _, _) {
+              _(_, _, _, "include_extra_details", "extra_details", _);
             })(_, _, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -45743,6 +45802,7 @@
             onDismiss: _,
             className: _,
             modalClassName: _,
+            bGamepadUIScrollWithin: _,
             children: _,
             ..._
           } = _,
@@ -45756,6 +45816,7 @@
             children: (0, _.jsx)(_._, {
               onEscKeypress: _,
               className: _,
+              bGamepadUIScrollWithin: _,
               children: (0, _.jsx)(_._, {
                 role: "dialog",
                 "aria-labelledby": _,
@@ -47476,7 +47537,6 @@
         KQV: () => _,
         KVe: () => _,
         L0X: () => _,
-        LO_: () => _,
         MUh: () => _,
         MbF: () => _,
         MvQ: () => _,
@@ -47495,6 +47555,7 @@
         V5W: () => _,
         _: () => _,
         VSd: () => _,
+        Ves: () => _,
         Vgk: () => _,
         VnB: () => _,
         Vt2: () => _,
@@ -47523,7 +47584,6 @@
         bPr: () => _,
         bcZ: () => _,
         bfp: () => _,
-        _: () => _,
         c_I: () => _,
         ccb: () => _,
         dJT: () => _,
@@ -47535,6 +47595,7 @@
         fSs: () => _,
         faJ: () => _,
         ffu: () => _,
+        fhy: () => _,
         g$j: () => _,
         hz4: () => _,
         i3G: () => _,
@@ -47567,7 +47628,6 @@
         vRz: () => _,
         wB_: () => _,
         wVV: () => _,
-        xoK: () => _,
         xv8: () => _,
         yCC: () => _,
         y_e: () => _,
@@ -50391,94 +50451,51 @@
         });
       }
       function _(_) {
-        const [_, _] = (0, _._)();
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
+          className: (0, _._)(_().SteamFrameCompatLogo, _),
           ..._,
-          children: [
-            (0, _.jsxs)("g", {
-              clipPath: _,
-              children: [
-                (0, _.jsx)("path", {
-                  fill: "#199FFF",
-                  _: "M35.9982 12.4814C23.0097 12.4814 12.4805 23.0107 12.4805 35.9991H35.9982V12.4814Z",
-                }),
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  _: "M0 0.776571C0 0.34768 0.347683 0 0.776571 0H35.9984V7.76572H7.76571V35.9984H0V0.776571Z",
-                }),
-              ],
-            }),
-            (0, _.jsx)("defs", {
-              children: (0, _.jsx)("clipPath", {
-                _: _,
-                children: (0, _.jsx)("rect", {
-                  fill: "currentColor",
-                  width: "36",
-                  height: "36",
-                }),
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const [_, _] = (0, _._)();
-        return (0, _.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
+          viewBox: "0 0 20 20",
           fill: "none",
-          ..._,
-          children: [
-            (0, _.jsxs)("g", {
-              clipPath: _,
-              children: [
-                (0, _.jsx)("path", {
-                  fill: "currentColor",
-                  _: "M35.2293 0C35.6552 0.000164506 36 0.345701 36 0.771594V35.2293C35.9998 35.655 35.655 35.9998 35.2293 36H0.771594C0.345743 36 0.000232272 35.6551 0 35.2293V0.771594C0 0.3456 0.3456 0 0.771594 0H35.2293ZM18.2267 7.30169C12.1922 7.30187 7.30008 12.1939 7.29992 18.2285C7.29992 24.2631 12.1921 29.1551 18.2267 29.1552C24.2615 29.1552 29.1534 24.2632 29.1534 18.2285C29.1533 12.1939 24.2614 7.30169 18.2267 7.30169Z",
-                }),
-                (0, _.jsx)("path", {
-                  fill: "#199FFF",
-                  _: "M26.2788 18.2288C26.2787 13.7823 22.6734 10.1777 18.2268 10.1777C13.7804 10.1778 10.176 13.7824 10.1758 18.2288C10.1758 22.5363 13.5586 26.0544 17.8127 26.2701L18.2268 26.2807C22.5347 26.2807 26.0527 22.8973 26.2681 18.643L26.2788 18.2288Z",
-                }),
-              ],
-            }),
-            (0, _.jsx)("defs", {
-              children: (0, _.jsx)("clipPath", {
-                _: _,
-                children: (0, _.jsx)("rect", {
-                  fill: "currentColor",
-                  width: "36",
-                  height: "36",
-                }),
-              }),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("svg", {
-          xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 36 36",
-          fill: "none",
-          ..._,
           children: [
             (0, _.jsx)("path", {
+              opacity: "0.84",
+              fill: "currentColor",
+              _: "M18.0001 7.54712C12.2272 7.54712 7.54736 12.227 7.54736 17.9998H18.0001V7.54712Z",
+            }),
+            (0, _.jsx)("path", {
+              opacity: "0.84",
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
-              _: "M24.5384 18C24.5384 11.6275 19.3725 6.46154 13 6.46154V0C22.9411 0 30.9999 8.05887 30.9999 18C30.9999 27.9411 22.9411 36 13 36V29.5385C19.3725 29.5385 24.5384 24.3725 24.5384 18Z",
+              _: "M2 2.34516C2 2.15453 2.15453 2 2.34516 2H17.9999V5.45157H5.45157V17.9999H2V2.34516Z",
             }),
-            (0, _.jsx)("ellipse", {
-              fill: "#1A9FFF",
-              _: "13",
-              _: "18.0195",
-              _: "8.99996",
-              _: "9",
+          ],
+        });
+      }
+      function _(_) {
+        const { className: _, ..._ } = _;
+        return (0, _.jsxs)("svg", {
+          className: (0, _._)(_().SteamMachineCompatLogo, _),
+          ..._,
+          viewBox: "0 0 20 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, _.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M12.9072 9.9993C12.9072 8.39355 11.6052 7.0918 9.99936 7.0918C8.39358 7.09184 7.09186 8.39358 7.0918 9.9993C7.0918 11.555 8.31347 12.8254 9.84978 12.9034L9.99936 12.9072C11.5551 12.9072 12.8256 11.6852 12.9034 10.1489L12.9072 9.9993Z",
+              fill: "currentColor",
+            }),
+            (0, _.jsx)("path", {
+              opacity: "0.84",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M16.7002 3C16.8658 3.00006 16.9999 3.13429 17 3.2998V16.7002C16.9999 16.8658 16.8658 16.9999 16.7002 17H3.2998C3.13431 16.9999 3.0001 16.8657 3 16.7002V3.2998C3.00014 3.13435 3.13435 3.00014 3.2998 3H16.7002ZM10 5.51953C7.52551 5.51953 5.51953 7.52551 5.51953 10C5.51953 12.4745 7.52551 14.4805 10 14.4805C12.4745 14.4805 14.4805 12.4745 14.4805 10C14.4805 7.52551 12.4745 5.51953 10 5.51953Z",
+              fill: "currentColor",
             }),
           ],
         });
@@ -50496,7 +50513,7 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
-            fill: "white",
+            fill: "currentColor",
           }),
         });
       }
@@ -52319,6 +52336,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _,
+        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -52717,12 +52735,16 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _(Date.now() / 1e3 - _, _);
+      }
       function _(_, _, _) {
         let _;
         if ("boolean" == typeof _) {
@@ -54420,7 +54442,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 43137), _((_._ = _));
+      return (_ = 35507), _((_._ = _));
       var _;
     });
     _._();

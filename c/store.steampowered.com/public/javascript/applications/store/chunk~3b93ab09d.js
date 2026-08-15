@@ -119,7 +119,8 @@
         },
         async AsyncGetImageResolutionInternal(_, _, _) {
           const _ = (0, _._)();
-          let _ = new Image();
+          let _,
+            _ = new Image();
           (_.crossOrigin = "anonymous"),
             (_.onerror = (_) => {
               const _ = {
@@ -139,23 +140,32 @@
               const _ = {
                 success: _._,
               };
-              (_.width = _.width),
+              if (
+                ((_.width = _.width),
                 (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
-                ),
-                (_.success = _._),
-                _.resolve(_);
+                !(_.width > 0 && _.height > 0))
+              )
+                return (
+                  (0, _._)(
+                    !1,
+                    "unexpected image resolution discovered for strURL: " + _,
+                  ),
+                  (_.err_msg = "No resolution reported for url " + _),
+                  void _.resolve(_)
+                );
+              (_.success = _._), _.resolve(_);
             }),
             (_.src = _),
             _.token.promise.catch(() => {
-              const _ = {
-                success: _._,
-              };
-              return (_.onload = () => {}), (_.success = _._), _;
+              (_.onload = () => {}),
+                (_.onerror = () => {}),
+                _.resolve({
+                  success: _._,
+                });
             });
-          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+          const _ = new Promise((_, _) => {
+            _ = setTimeout(() => _(), 1e4);
+          });
           let _;
           try {
             _ = await Promise.race([_, _.promise]);
@@ -164,6 +174,8 @@
               success: _._,
               err_msg: "We timed out processing images",
             };
+          } finally {
+            clearTimeout(_);
           }
           return _;
         },

@@ -1445,8 +1445,8 @@
         return ["useEventUserPermissions", y.iA.accountid, e];
       }
       var M = a(78686),
-        L = a(50909),
-        R = a.n(L);
+        R = a(50909),
+        L = a.n(R);
       function E(e) {
         const { eventModel: t } = e,
           { data: a } = B(t.clanSteamID.GetAccountID());
@@ -1470,17 +1470,17 @@
           t.BIsVisibleEvent() && 0 == s.length
             ? void 0
             : (0, n.jsx)("div", {
-                className: R().SalePageHiddenWarning,
+                className: L().SalePageHiddenWarning,
                 children: (0, n.jsxs)("div", {
                   children: [
                     !t.BIsVisibleEvent() &&
                       (0, n.jsx)("div", {
-                        className: R().WarningText,
+                        className: L().WarningText,
                         children: M.Z.Localize("#Sale_SaleEventIsHidden"),
                       }),
                     s.length > 0 &&
                       (0, n.jsxs)("div", {
-                        className: R().WarningText,
+                        className: L().WarningText,
                         children: [
                           M.Z.LocalizePlural(
                             "#Sale_SaleEventIsHidden_Reason",
@@ -1915,8 +1915,8 @@
         Be = a(738),
         Ge = a(48479),
         Me = a(30294),
-        Le = a(6379),
-        Re = a(88997),
+        Re = a(6379),
+        Le = a(88997),
         Ee = a(61257),
         Pe = a(4869),
         Ue = a(27828),
@@ -2886,8 +2886,8 @@
       }
       var Gt = a(34629),
         Mt = a(14947),
-        Lt = a(73744),
-        Rt = a(55263),
+        Rt = a(73744),
+        Lt = a(55263),
         Et = a(25359),
         Pt = a.n(Et),
         Ut = a(1909);
@@ -3365,7 +3365,7 @@
       }
       function ua(e) {
         const { artworkType: t, langOverride: a, eventModel: r } = e,
-          s = Lt.Fj[t],
+          s = Rt.Fj[t],
           o = m.useMemo(
             () =>
               (function (e, t) {
@@ -3521,7 +3521,7 @@
         });
       }
       const ga = (e) => {
-          const [t] = (0, Rt.t7)(e.event.appid, { include_assets: !0 });
+          const [t] = (0, Lt.t7)(e.event.appid, { include_assets: !0 });
           if (!t) return null;
           const a = t.GetName(),
             r = t.GetAssets()?.GetCommunityIconURL();
@@ -3593,7 +3593,7 @@
             fnSetImageURL: m,
             partnerEventStore: p,
           } = e,
-          [g] = (0, Rt.t7)(s, { include_assets: !0 }),
+          [g] = (0, Lt.t7)(s, { include_assets: !0 }),
           [h, _] = (0, u.q3)(() => [
             l?.GetEventType(),
             l?.BHasTag("vo_marketing_message"),
@@ -3954,8 +3954,8 @@
                                           }),
                                         ],
                                       }));
-        const f = Lt.Fj[e.artworkType].width,
-          w = Lt.Fj[e.artworkType].height;
+        const f = Rt.Fj[e.artworkType].width,
+          w = Rt.Fj[e.artworkType].height;
         return (0, n.jsxs)("div", {
           id: e.id,
           className: Pt().ArtworkSelectorContainer,
@@ -4000,8 +4000,8 @@
                         ": ",
                         (0, O.PP)(
                           "#selectimage_tip1",
-                          (0, Lt.qj)(f),
-                          (0, Lt.qj)(w),
+                          (0, Rt.qj)(f),
+                          (0, Rt.qj)(w),
                         ),
                       ],
                     }),
@@ -4387,7 +4387,7 @@
           { openColorPicker: i } = {
             openColorPicker: (0, m.useCallback)((e, t) => {
               let a = null;
-              a = (0, Re.lX)(
+              a = (0, Le.lX)(
                 (0, n.jsx)(He, {
                   color: t.color,
                   disableAlpha: t.disableAlpha,
@@ -4428,7 +4428,7 @@
           eventModel: o,
           clanSteamID: o.clanSteamID,
           closeModal: t,
-          partnerEventStore: Le.O3,
+          partnerEventStore: Re.O3,
           artworkType: "localized_background_art",
           realms: S,
           loc_images: j,
@@ -4929,7 +4929,7 @@
           }),
         });
       });
-      function La(e) {
+      function Ra(e) {
         const { backgroundImageEditModel: t, nTabID: a } = e;
         return (0, n.jsx)("div", {
           className: ze().CtnEditor,
@@ -4946,7 +4946,7 @@
           }),
         });
       }
-      function Ra(e) {
+      function La(e) {
         const {
             nTabID: t,
             nSectionUniqueID: a,
@@ -4956,7 +4956,7 @@
           o = r.mapFirstSectionToGroup.get(a);
         return a == r.nFirstSaleSectionIDWithoutGroup ||
           a == r.nFirstTabSectionIDWithoutGroup
-          ? (0, n.jsx)(La, { backgroundImageEditModel: s, nTabID: t })
+          ? (0, n.jsx)(Ra, { backgroundImageEditModel: s, nTabID: t })
           : o
             ? (0, n.jsx)(Ea, { ...e, groupID: o })
             : null;
@@ -5234,8 +5234,8 @@
                 ? ge.S.EPreviewMode_EditBackground
                 : ge.S.EPreviewMode_Enabled
               : ge.S.EPreviewMode_Disabled,
-            L = N || a.GetEventType() != r.ajI,
-            R = (0, De.m)(a.clanSteamID),
+            R = N || a.GetEventType() != r.ajI,
+            L = (0, De.m)(a.clanSteamID),
             P = u ? o.Yo.NoTransform : o.Yo.NoTransformSparseContent,
             U = (0, C.A)(
               _().SaleOuterContainer,
@@ -5260,12 +5260,12 @@
                     G && (0, n.jsx)(i.Sn, {}),
                     (0, n.jsx)(E, { eventModel: a }),
                     !!p &&
-                      (L || R) &&
+                      (R || L) &&
                       (0, n.jsx)(Ga, {
                         backgroundImageEditModel: p,
                         bBackgroundImgGroupEditMode: k,
                         fnSetBackgroundImgGroupEditMode: T,
-                        bShowAsValveOnly: !L,
+                        bShowAsValveOnly: !R,
                       }),
                     (0, n.jsxs)(s.Z, {
                       style: j ? void 0 : { marginTop: `${b || 0}px` },
@@ -5551,7 +5551,7 @@
                         ? (0, n.jsxs)(n.Fragment, {
                             children: [
                               d,
-                              (0, n.jsx)(Ra, {
+                              (0, n.jsx)(La, {
                                 nSectionUniqueID: t.unique_id || a,
                                 nTabID: r,
                                 salePageBackgroundDerivedConfig: i,
@@ -5810,9 +5810,9 @@
         }, [e]);
       }
     },
-    67309: (e, t, a) => {
+    74225: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { SteamChartsRoutes: () => Tn, default: () => Dn });
+      a.r(t), a.d(t, { SteamChartsRoutes: () => Nn, default: () => Bn });
       var n,
         r = a(7850),
         s = a(43527),
@@ -6307,8 +6307,8 @@
           });
       })(C || (C = {}));
       var M = a(81393),
-        L = a(78327);
-      const R = 20;
+        R = a(78327);
+      const L = 20;
       class E {
         m_WebAPI;
         m_Storage;
@@ -6325,11 +6325,11 @@
             this.m_promiseInitialize ||
               (this.m_promiseInitialize = new Promise((t, a) => {
                 let n;
-                (L.TS.EUNIVERSE != f.Rv && L.TS.EUNIVERSE != f.CII) ||
+                (R.TS.EUNIVERSE != f.Rv && R.TS.EUNIVERSE != f.CII) ||
                   (n = 1539068400),
                   this.LoadCountryList()
                     .then((a) =>
-                      this.LoadTopSellersForWeek(n, e, R).then((e) => {
+                      this.LoadTopSellersForWeek(n, e, L).then((e) => {
                         (this.m_rtCurrentWeek = e.rtWeekStart), t(e);
                       }),
                     )
@@ -6342,7 +6342,7 @@
         static k_nCountryListMaxCacheTime = 864e5;
         async LoadCountryList() {
           if (!this.m_rgCountryList) {
-            const e = "TopSellersCountryList_" + L.TS.LANGUAGE;
+            const e = "TopSellersCountryList_" + R.TS.LANGUAGE;
             if (
               ((this.m_rgCountryList = await this.m_Storage.GetObject(e)),
               !this.m_rgCountryList ||
@@ -6351,7 +6351,7 @@
                   Date.now())
             ) {
               const t = u.w.Init(N);
-              t.Body().set_language(L.TS.LANGUAGE);
+              t.Body().set_language(R.TS.LANGUAGE);
               const a = await C.GetCountryList(
                 this.m_WebAPI.GetServiceTransport(),
                 t,
@@ -6449,7 +6449,7 @@
                 const n = {
                   rtWeekStart: t.rtWeekStart,
                   strCountryCode: t.strCountryCode,
-                  cListSize: R,
+                  cListSize: L,
                 };
                 return (
                   a.setQueryData([P, "Weekly", n], t),
@@ -6466,7 +6466,7 @@
       function O(e, t, a = !1) {
         return t ? "error" : e || a ? "loading" : "loaded";
       }
-      function F(e, t, a, n, r = R, s = !0) {
+      function F(e, t, a, n, r = L, s = !0) {
         const o = {
             rtWeekStart: a,
             strCountryCode: e.BIsCountryListLoaded()
@@ -6499,7 +6499,7 @@
           { TopSellers: s ? g : null, status: O(u, p, m) }
         );
       }
-      function H(e, t, a, n = R, r = !0) {
+      function H(e, t, a, n = L, r = !0) {
         const { rtCurrentWeek: s } = U(e, a);
         return F(e, s, t, a, n, r);
       }
@@ -6724,7 +6724,7 @@
           queryFn: () =>
             (async function () {
               const e = await c().get(
-                  `${L.TS.STORE_BASE_URL}stats/userdata.json?days_back=3`,
+                  `${R.TS.STORE_BASE_URL}stats/userdata.json?days_back=3`,
                 ),
                 t = e.data && e.data[0]?.data;
               if (!t) throw "Failed to load";
@@ -6762,54 +6762,53 @@
         ne = a.n(ae),
         re = a(52431),
         se = a.n(re),
-        oe = a(92757),
-        ie = a(57876),
-        le = a(44165),
-        ce = a(91155),
-        de = a(55263),
-        ue = a(12155),
-        me = a(92298),
-        pe = a.n(me),
-        ge = a(19367),
-        he = a.n(ge),
-        _e = a(88997),
-        xe = a(60155),
-        Se = a(95863),
-        Ce = a.n(Se),
-        je = a(32754),
-        ve = a(52038),
-        be = a(61859),
-        fe = a(91675);
-      function we(e) {
+        oe = a(57876),
+        ie = a(44165),
+        le = a(91155),
+        ce = a(55263),
+        de = a(12155),
+        ue = a(92298),
+        me = a.n(ue),
+        pe = a(19367),
+        ge = a.n(pe),
+        he = a(88997),
+        _e = a(60155),
+        xe = a(95863),
+        Se = a.n(xe),
+        Ce = a(32754),
+        je = a(52038),
+        ve = a(61859),
+        be = a(91675);
+      function fe(e) {
         const { toolTipContent: t } = e,
           a =
             ((n = { ...e }),
             (0, j.useCallback)(
               (e, t) => {
-                const a = (0, r.jsx)(ye, { ...n });
-                (0, _e.lX)(a, e, t);
+                const a = (0, r.jsx)(we, { ...n });
+                (0, he.lX)(a, e, t);
               },
               [n],
             ));
         var n;
-        return (0, r.jsx)(je.Gq, {
+        return (0, r.jsx)(Ce.Gq, {
           toolTipContent: t,
           children: (0, r.jsx)("div", {
-            className: (0, ve.A)(Ce().CalendarBtn),
+            className: (0, je.A)(Se().CalendarBtn),
             onClick: (e) =>
               a(e, { bDisableMouseOverlay: !0, bAlwaysOnTop: !0 }),
-            children: (0, r.jsx)(ue.VvS, { color: "#c6d4df" }),
+            children: (0, r.jsx)(de.VvS, { color: "#c6d4df" }),
           }),
         });
       }
-      function ye(e) {
+      function we(e) {
         const { value: t, fnOnUpdate: a, minDate: n, maxDate: s } = e,
           o = (0, j.useRef)(void 0),
           i = (0, j.useRef)(null),
           l = (0, j.useCallback)(
             (e) => {
-              const t = he().unix(n),
-                a = he().unix(s);
+              const t = ge().unix(n),
+                a = ge().unix(s);
               return (
                 e.isSameOrAfter(t, "month") && e.isSameOrBefore(a, "month")
               );
@@ -6823,30 +6822,30 @@
             [a],
           ),
           d = (0, j.useMemo)(() => {
-            if (!he().locales().includes("YearMonthPickerContextMenu")) {
+            if (!ge().locales().includes("YearMonthPickerContextMenu")) {
               const e = Array.from({ length: 12 }, (e, t) =>
-                  (0, be.Gj)(new Date(2020, t, 1)),
+                  (0, ve.Gj)(new Date(2020, t, 1)),
                 ),
                 t = Array.from({ length: 12 }, (e, t) =>
-                  (0, fe.oL)(new Date(2020, t, 1)),
+                  (0, be.oL)(new Date(2020, t, 1)),
                 );
-              he().defineLocale("YearMonthPickerContextMenu", {
+              ge().defineLocale("YearMonthPickerContextMenu", {
                 months: e,
                 monthsShort: t,
               });
             }
-            return he()().clone().locale("YearMonthPickerContextMenu");
+            return ge()().clone().locale("YearMonthPickerContextMenu");
           }, []);
-        return (0, r.jsx)(xe.tz, {
+        return (0, r.jsx)(_e.tz, {
           refInstance: o,
-          children: (0, r.jsx)(xe.kt, {
+          children: (0, r.jsx)(_e.kt, {
             onSelected: () => {},
-            className: Ce().PickerContainer,
+            className: Se().PickerContainer,
             children: (0, r.jsx)("div", {
               onClick: (e) => {
                 e.preventDefault(), e.stopPropagation();
               },
-              children: (0, r.jsx)(pe(), {
+              children: (0, r.jsx)(me(), {
                 ref: i,
                 value: d,
                 onChange: c,
@@ -6861,13 +6860,13 @@
           }),
         });
       }
-      var Ie = a(52745),
-        ke = a(76222),
-        Te = a(22797),
-        De = a(44691),
-        Ae = a(27221),
-        Ne = a.n(Ae);
-      function Be(e) {
+      var ye = a(52745),
+        Ie = a(76222),
+        ke = a(22797),
+        Te = a(44691),
+        De = a(27221),
+        Ae = a.n(De);
+      function Ne(e) {
         const {
             rgAppIDs: t,
             children: a,
@@ -6884,22 +6883,22 @@
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)("div", {
-              className: (0, ve.A)({
-                [Ne().ImagesCtn]: !0,
-                [Ne().TallCapsules]: s,
-                [Ne().BlurCapsules]: o,
-                [Ne().AnnualChart]: !n,
+              className: (0, je.A)({
+                [Ae().ImagesCtn]: !0,
+                [Ae().TallCapsules]: s,
+                [Ae().BlurCapsules]: o,
+                [Ae().AnnualChart]: !n,
               }),
               children: (0, r.jsx)("div", {
-                className: Ne().AllImagesCtn,
+                className: Ae().AllImagesCtn,
                 children: (0, r.jsx)("div", {
-                  className: Ne().AllImages,
+                  className: Ae().AllImages,
                   children: (0, r.jsx)("div", {
-                    className: (0, ve.A)({
-                      [Ne().ImageTint]: !0,
+                    className: (0, je.A)({
+                      [Ae().ImageTint]: !0,
                       [`Month${n}`]: !0,
-                      [Ne().Wide2]: i.length <= 10,
-                      [Ne().Wide3]: i.length <= 20,
+                      [Ae().Wide2]: i.length <= 10,
+                      [Ae().Wide3]: i.length <= 20,
                     }),
                     children: i.map((e, t) =>
                       s
@@ -6922,7 +6921,7 @@
           ],
         });
       }
-      function Ge(e) {
+      function Be(e) {
         const t = new Date(e > 1e12 ? e : 1e3 * e),
           a =
             (new Intl.DateTimeFormat("en-US", {
@@ -6947,35 +6946,35 @@
         const c = new Date(Date.UTC(l, i, 15, 17, 0));
         return Math.floor(c.getTime() / 1e3);
       }
-      function Me(e, t) {
+      function Ge(e, t) {
         if (t < 0 || t > 11)
           throw new Error("Invalid month index. Must be between 0 and 11.");
         return `${["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][t]}_${e}`;
       }
-      var Le = a(96859),
+      var Me = a(96859),
         Re = a(56330),
-        Ee = a(77626),
-        Pe = a(62490),
-        Ue = a(87853),
-        Oe = a.n(Ue);
-      function Fe(e) {
-        let t = Oe().PlatinumSection;
+        Le = a(77626),
+        Ee = a(62490),
+        Pe = a(87853),
+        Ue = a.n(Pe);
+      function Oe(e) {
+        let t = Ue().PlatinumSection;
         switch (e) {
           case m.s4.NH:
-            t = Oe().GoldSection;
+            t = Ue().GoldSection;
             break;
           case m.s4.U1:
-            t = Oe().SilverSection;
+            t = Ue().SilverSection;
             break;
           case m.s4.DB:
-            t = Oe().BronzeSection;
+            t = Ue().BronzeSection;
         }
         return t;
       }
-      function He(e, t, a, n, r, s, o, i) {
+      function Fe(e, t, a, n, r, s, o, i) {
         t?.length > 25 &&
           e.jsondata.sale_sections.push({
-            ...(0, Le.Sm)("items", "#Sale_default_label_148"),
+            ...(0, Me.Sm)("items", "#Sale_default_label_148"),
             capsules: t.map((e) => ({
               id: e,
               type: n.has(e) ? "dlc" : "game",
@@ -7001,13 +7000,13 @@
             prefer_demo_store_page: Boolean(i),
           });
       }
-      function We(e, t, a, n, r, s, o, i) {
+      function He(e, t, a, n, r, s, o, i) {
         if (K.iA.logged_in) {
           const l = W.Fm.Get(),
             c = t.filter((e) => l.BIsGameWishlisted(e));
           c?.length > 0 &&
             e.jsondata.sale_sections.push({
-              ...(0, Le.Sm)("items", "#Sale_OnWishlist"),
+              ...(0, Me.Sm)("items", "#Sale_OnWishlist"),
               capsules: c.map((e) => ({
                 id: e,
                 type: n.has(e) ? "dlc" : "game",
@@ -7030,7 +7029,7 @@
           if (d?.length > 0) {
             const t = d.length;
             e.jsondata.sale_sections.push({
-              ...(0, Le.Sm)("items", "#Sale_default_label_RecommendedForYou"),
+              ...(0, Me.Sm)("items", "#Sale_default_label_RecommendedForYou"),
               capsules: d.map((e) => ({
                 id: e,
                 type: n.has(e) ? "dlc" : "game",
@@ -7057,7 +7056,7 @@
             });
             t.length > 0 &&
               e.jsondata.sale_sections.push({
-                ...(0, Le.Sm)("dlc_for_you", "#Sale_default_label_246"),
+                ...(0, Me.Sm)("dlc_for_you", "#Sale_default_label_246"),
                 capsules: t.map((e) => ({ id: e, type: "dlc" })),
                 dlc_for_you_data: {
                   group_by_parent_app: !0,
@@ -7074,7 +7073,7 @@
           }
         }
       }
-      function ze(e, t) {
+      function We(e, t) {
         const a = W.Fm.Get(),
           n = [],
           r = [],
@@ -7093,17 +7092,17 @@
                     ? o.push(l)
                     : i.push(l));
         return [
-          ...(0, Pe.fW)(n),
-          ...(0, Pe.fW)(r),
-          ...(0, Pe.fW)(s),
-          ...(0, Pe.fW)(o),
-          ...(0, Pe.fW)(i),
+          ...(0, Ee.fW)(n),
+          ...(0, Ee.fW)(r),
+          ...(0, Ee.fW)(s),
+          ...(0, Ee.fW)(o),
+          ...(0, Ee.fW)(i),
         ];
       }
-      function qe(e, t, a, n, r, s, o, i) {
+      function ze(e, t, a, n, r, s, o, i) {
         e.jsondata.sale_sections.push({
-          ...(0, Le.Sm)("trailercarousel", ""),
-          capsules: ze(t, a).map((e) => ({
+          ...(0, Me.Sm)("trailercarousel", ""),
+          capsules: We(t, a).map((e) => ({
             id: e,
             type: n.has(e) ? "dlc" : "game",
           })),
@@ -7117,26 +7116,26 @@
           prefer_demo_store_page: Boolean(i),
         });
       }
-      var Ye = a(27939);
-      function Ve(e, t, a, n, r) {
+      var qe = a(27939);
+      function Ye(e, t, a, n, r) {
         const { data: s } = (0, i.I)({
           queryKey: ["useMonthEventModel", e],
           queryFn: () => {
             try {
               return (function (e, t, a, n, r) {
-                const s = (0, Le.U)(Ye.wv, f.DRF, e),
+                const s = (0, Me.U)(qe.wv, f.DRF, e),
                   o = !1,
                   i = [...r, ...a],
                   l = new Set(r);
                 if (
                   ((s.jsondata.sale_sections = []),
-                  a.length > 9 && qe(s, a, n, l, o),
+                  a.length > 9 && ze(s, a, n, l, o),
                   a?.length > 25)
                 )
                   for (let e in n) {
                     const t = n[e];
                     s.jsondata.sale_sections.push({
-                      ...(0, Le.Sm)("items", "#SteamCharts_Monthly_Rank_" + e),
+                      ...(0, Me.Sm)("items", "#SteamCharts_Monthly_Rank_" + e),
                       capsules: t.map((e) => ({
                         id: e,
                         type: l.has(e) ? "dlc" : "game",
@@ -7149,14 +7148,14 @@
                       border_width: 1,
                       default_subtitle:
                         "#SteamCharts_Monthly_Rank_" + e + "_subtitle",
-                      sale_section_classname: Fe(Number.parseInt(e)),
+                      sale_section_classname: Oe(Number.parseInt(e)),
                       prefer_assets_without_overrides: o,
                     });
                   }
                 else {
                   const e = Object.values(a).flat();
                   s.jsondata.sale_sections.push({
-                    ...(0, Le.Sm)("items", "#SteamCharts_Monthly_Rank_All"),
+                    ...(0, Me.Sm)("items", "#SteamCharts_Monthly_Rank_All"),
                     capsules: e.map((e) => ({
                       id: e,
                       type: l.has(e) ? "dlc" : "game",
@@ -7166,19 +7165,19 @@
                     single_item_style: a?.length < 9 ? "library" : "bordered",
                     show_as_carousel: !1,
                     use_random_order: !0,
-                    sale_section_classname: Oe().AllTiers,
+                    sale_section_classname: Ue().AllTiers,
                     prefer_assets_without_overrides: o,
                   });
                 }
                 return (
-                  We(s, i, r, l, o),
-                  He(s, a, t, l, o),
+                  He(s, i, r, l, o),
+                  Fe(s, a, t, l, o),
                   s.jsondata.sale_sections.push({
-                    ...(0, Le.Sm)(
+                    ...(0, Me.Sm)(
                       "social_share",
                       "#EventDisplay_Share_WithFriendsHeader",
                     ),
-                    social_share: (0, Le.r3)(),
+                    social_share: (0, Me.r3)(),
                   }),
                   s
                 );
@@ -7192,7 +7191,7 @@
         });
         return s;
       }
-      function Ze(e) {
+      function Ve(e) {
         const {
             rgFilteredDLCsAppIDs: t,
             rgFilteredCombinedAppsAndDLC: a,
@@ -7200,29 +7199,29 @@
             rgFilteredAppIDByTier: s,
             facets: o,
           } = e,
-          i = Ve(n, o, a, s, t),
+          i = Ye(n, o, a, s, t),
           l = (0, f.sfN)(K.TS.LANGUAGE),
-          c = (0, Le.oR)();
+          c = (0, Me.oR)();
         return !i || c
           ? null === i
             ? (0, r.jsx)("div", {
                 className: Re.ErrorStylesWithIcon,
-                children: (0, be.we)("#Error_ErrorCommunicatingWithNetwork"),
+                children: (0, ve.we)("#Error_ErrorCommunicatingWithNetwork"),
               })
-            : (0, r.jsx)(Te.t, {
-                string: (0, be.we)("#Loading"),
+            : (0, r.jsx)(ke.t, {
+                string: (0, ve.we)("#Loading"),
                 position: "center",
               })
-          : (0, r.jsx)(Ee._, {
+          : (0, r.jsx)(Le._, {
               eventModel: i,
               language: l,
               bIsPreview: !1,
               bDynamicallyCreatedSale: !0,
             });
       }
-      function Ke(e, t, a, n) {
+      function Ze(e, t, a, n) {
         (0, j.useEffect)(() => {
-          if (null == e && n != de.Sq && a) {
+          if (null == e && n != ce.Sq && a) {
             const e = (function (e) {
               const t = W.Fm.Get(),
                 a = e
@@ -7243,17 +7242,50 @@
             })(a);
             e?.length > 0
               ? g.A.Get()
-                  .HintLoadStoreApps(e, ie.Xh)
+                  .HintLoadStoreApps(e, oe.Xh)
                   .then(() => t(e))
               : t([]);
           }
         }, [n, a, e, t]);
       }
-      var Qe = a(76217),
-        Xe = a(79333);
-      function Je(e) {
+      var Ke = a(76217),
+        Qe = a(92757);
+      function Xe() {
+        const e = (0, Qe.W6)();
+        return j.useCallback(
+          (t, a) => {
+            a?.bReplace ? e.replace(t, a?.state) : e.push(t, a?.state);
+          },
+          [e],
+        );
+      }
+      var Je = a(45699),
+        $e = a(79333);
+      function et(e) {
+        const {
+          to: t,
+          exact: a,
+          activeClassName: n,
+          className: s,
+          children: o,
+          ...i
+        } = e;
+        return (0, r.jsx)($e.A, {
+          to: t,
+          exact: a,
+          activeClassName: n,
+          className: s,
+          ...i,
+          children: o,
+        });
+      }
+      function tt(e) {
+        const { to: t, children: a, ...n } = e;
+        return (0, r.jsx)($e.X, { to: t, ...n, children: a });
+      }
+      function at(e) {
         const { salePageName: t, TopMonthlyReleasesStore: a } = e,
-          n = (0, le.f1)(),
+          n = (0, ie.f1)(),
           { dtMidMonth: s, dtTestMonth: o } = (function (e) {
             const [t, a] = e.split("_");
             let n = parseInt(a, 10),
@@ -7284,20 +7316,20 @@
           })(t);
         return !s ||
           Math.floor(o.getTime() / 1e3) > n ||
-          s.getFullYear() < nt ||
-          (s.getFullYear() == nt && s.getMonth() < rt)
+          s.getFullYear() < it ||
+          (s.getFullYear() == it && s.getMonth() < lt)
           ? (0, r.jsx)("div", {
-              children: (0, be.we)("#DateTimePicker_Fallback_Invalid_DateTime"),
+              children: (0, ve.we)("#DateTimePicker_Fallback_Invalid_DateTime"),
             })
-          : (0, r.jsx)(tt, {
+          : (0, r.jsx)(st, {
               TopMonthlyReleasesStore: a,
               nMonth: s.getMonth(),
               nYear: s.getFullYear(),
               promotionName: t,
             });
       }
-      const $e = { ...ie.Xh, apply_user_filters: !0 };
-      function et(e, t, a, n) {
+      const nt = { ...oe.Xh, apply_user_filters: !0 };
+      function rt(e, t, a, n) {
         const r = (function (e, t, a) {
             const { data: n } = (0, i.I)({
               queryKey: [Y, t, a],
@@ -7319,10 +7351,10 @@
                 : (n && n(null), []),
             [r, n],
           ),
-          o = (0, de.zX)(s, $e),
+          o = (0, ce.zX)(s, nt),
           l = (0, j.useMemo)(
             () =>
-              r && o != de.Sq
+              r && o != ce.Sq
                 ? r.top_dlc_releases
                     ?.filter((e) => !g.A.Get().BIsAppMissing(e.appid))
                     .map((e) => e.appid)
@@ -7331,7 +7363,7 @@
           ),
           { rgFilteredCombinedAppsAndDLC: c, rgFilteredAppIDByTier: d } = (0,
           j.useMemo)(() => {
-            if (!r || o == de.Sq)
+            if (!r || o == ce.Sq)
               return {
                 rgFilteredCombinedAppsAndDLC: [],
                 rgFilteredAppIDByTier: [],
@@ -7358,7 +7390,7 @@
           loadState: o,
         };
       }
-      function tt(e) {
+      function st(e) {
         const {
             TopMonthlyReleasesStore: t,
             nYear: a,
@@ -7374,21 +7406,21 @@
             rgFilteredCombinedAppsAndDLC: p,
             rgFilteredDLCsAppIDs: g,
             loadState: h,
-          } = et(t, a, n);
+          } = rt(t, a, n);
         return (
           (0, j.useEffect)(() => {
-            o || (0, ce.$R)({ bForceFeatureTagForFullController: !1 }).then(i);
+            o || (0, le.$R)({ bForceFeatureTagForFullController: !1 }).then(i);
           }, [o]),
-          Ke(l, c, g, h),
-          u && h != de.Sq && o && null != l && d
+          Ze(l, c, g, h),
+          u && h != ce.Sq && o && null != l && d
             ? 0 == d.length
-              ? (0, r.jsxs)(Qe.Z, {
+              ? (0, r.jsxs)(Ke.Z, {
                   className: ne().ChartPage,
                   children: [
-                    (0, r.jsx)(ot, { nMonth: n, nYear: a }),
+                    (0, r.jsx)(dt, { nMonth: n, nYear: a }),
                     (0, r.jsx)("div", {
                       className: ne().NoticeBox,
-                      children: (0, be.we)(
+                      children: (0, ve.we)(
                         u.bSQLError
                           ? "#Error_ErrorCommunicatingWithNetwork"
                           : "#SteamCharts_NewMonth_NoRelease",
@@ -7396,16 +7428,16 @@
                     }),
                   ],
                 })
-              : (0, r.jsxs)(Qe.Z, {
+              : (0, r.jsxs)(Ke.Z, {
                   className: ne().ChartPage,
                   children: [
-                    (0, r.jsx)(Be, {
+                    (0, r.jsx)(Ne, {
                       rgAppIDs: p,
                       nMonth: n,
                       bBlurCapsules: !0,
-                      children: (0, r.jsx)(ot, { nMonth: n, nYear: a }),
+                      children: (0, r.jsx)(dt, { nMonth: n, nYear: a }),
                     }),
-                    (0, r.jsx)(Ze, {
+                    (0, r.jsx)(Ve, {
                       promotionName: s,
                       rgFilteredCombinedAppsAndDLC: p,
                       rgFilteredAppIDByTier: m,
@@ -7414,87 +7446,87 @@
                     }),
                   ],
                 })
-            : (0, r.jsxs)(Qe.Z, {
+            : (0, r.jsxs)(Ke.Z, {
                 className: ne().ChartPage,
                 children: [
-                  (0, r.jsx)(ot, { nMonth: n, nYear: a }),
-                  (0, r.jsx)(Te.t, {
-                    string: (0, be.we)("#Loading"),
+                  (0, r.jsx)(dt, { nMonth: n, nYear: a }),
+                  (0, r.jsx)(ke.t, {
+                    string: (0, ve.we)("#Loading"),
                     position: "center",
                   }),
                 ],
               })
         );
       }
-      function at(e, t) {
-        return (0, be.we)(
+      function ot(e, t) {
+        return (0, ve.we)(
           "#SteamCharts_Monthly_Title_wMonthAndYear",
-          (0, be.we)("#Sale_Reservation_MonthNoun_" + (e + 1)),
+          (0, ve.we)("#Sale_Reservation_MonthNoun_" + (e + 1)),
           t,
         );
       }
-      const nt = 2003,
-        rt = 8,
-        st = 1063584e3;
-      function ot(e) {
+      const it = 2003,
+        lt = 8,
+        ct = 1063584e3;
+      function dt(e) {
         const { nMonth: t, nYear: a } = e,
-          n = (0, oe.W6)(),
-          s = (0, Ie.yk)() || (0, ke.tx)(window),
-          o = (0, le.f1)(),
+          n = Xe(),
+          s = (0, ye.yk)() || (0, Ie.tx)(window),
+          o = (0, ie.f1)(),
           i = t > 0 ? a : a - 1,
           l = t > 0 ? t - 1 : 11,
-          c = Me(i, l),
-          d = a > nt || t > rt,
+          c = Ge(i, l),
+          d = a > it || t > lt,
           u = t < 11 ? a : a + 1,
           m = t < 11 ? t + 1 : 0,
-          p = Me(u, m),
+          p = Ge(u, m),
           g = new Date(11 == m ? a + 1 : a, 11 == m ? 0 : m + 1, 15),
           h = Math.floor(g.getTime() / 1e3) < o,
           _ = (0, j.useCallback)(
             (e) => {
               s.active_modal ||
                 (e && h
-                  ? n.push(Tn.TopNewReleases(p))
-                  : !e && d && n.push(Tn.TopNewReleases(c)));
+                  ? n(Nn.TopNewReleases(p))
+                  : !e && d && n(Nn.TopNewReleases(c)));
             },
             [s.active_modal, h, d, n, p, c],
           );
         return (
-          (0, De.E)("ArrowLeft", () => _(!1), !0, !0),
-          (0, De.E)("Left", () => _(!1), !0, !0),
-          (0, De.E)("ArrowRight", () => _(!0), !0, !0),
-          (0, De.E)("Right", () => _(!0), !0, !0),
+          (0, Te.E)("ArrowLeft", () => _(!1), !0, !0),
+          (0, Te.E)("Left", () => _(!1), !0, !0),
+          (0, Te.E)("ArrowRight", () => _(!0), !0, !0),
+          (0, Te.E)("Right", () => _(!0), !0, !0),
           (0, r.jsxs)(r.Fragment, {
             children: [
               (0, r.jsx)("div", {
-                className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
-                children: (0, r.jsx)("h1", { children: at(t, a) }),
+                className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
+                children: (0, r.jsx)("h1", { children: ot(t, a) }),
               }),
               (0, r.jsxs)("div", {
-                className: (0, ve.A)(se().PageSubtitle),
+                className: (0, je.A)(se().PageSubtitle),
                 children: [
-                  (0, be.we)("#SteamCharts_Monthly_SubTitle", z(a)),
+                  (0, ve.we)("#SteamCharts_Monthly_SubTitle", z(a)),
                   (0, r.jsx)("br", {}),
                   (0, r.jsx)("span", {
-                    children: (0, be.we)(
+                    children: (0, ve.we)(
                       "#SteamCharts_Monthly_PublishSchedule",
                     ),
                   }),
                 ],
               }),
-              (0, r.jsxs)(Qe.Z, {
-                className: (0, ve.A)(se().ChartRangeCtn),
+              (0, r.jsxs)(Ke.Z, {
+                className: (0, je.A)(se().ChartRangeCtn),
                 children: [
-                  (0, r.jsx)(je.Gq, {
-                    toolTipContent: at(l, i),
+                  (0, r.jsx)(Ce.Gq, {
+                    toolTipContent: ot(l, i),
                     children: (0, r.jsx)("div", {
-                      className: (0, ve.A)({
+                      className: (0, je.A)({
                         [se().ChartNavCtn]: !0,
                         [se().Disabled]: !d,
                       }),
                       children: d
-                        ? (0, r.jsx)(Xe.X, {
-                            to: d ? Tn.TopNewReleases(c) : void 0,
+                        ? (0, r.jsx)(tt, {
+                            to: d ? Nn.TopNewReleases(c) : void 0,
                             className: se().ChartNavHitArea,
                             children: (0, r.jsx)("div", {
                               className: se().ChartNavPrev,
@@ -7510,16 +7542,16 @@
                           }),
                     }),
                   }),
-                  (0, r.jsx)(je.Gq, {
-                    toolTipContent: at(m, u),
+                  (0, r.jsx)(Ce.Gq, {
+                    toolTipContent: ot(m, u),
                     children: (0, r.jsx)("div", {
-                      className: (0, ve.A)({
+                      className: (0, je.A)({
                         [se().ChartNavCtn]: !0,
                         [se().Disabled]: !h,
                       }),
                       children: h
-                        ? (0, r.jsx)(Xe.X, {
-                            to: Tn.TopNewReleases(p),
+                        ? (0, r.jsx)(tt, {
+                            to: Nn.TopNewReleases(p),
                             className: se().ChartNavHitArea,
                             children: (0, r.jsx)("div", {
                               className: se().ChartNavNext,
@@ -7535,17 +7567,17 @@
                           }),
                     }),
                   }),
-                  (0, r.jsx)(we, {
-                    toolTipContent: (0, be.we)("#SteamCharts_Monthly_Calendar"),
-                    minDate: st,
-                    maxDate: Ge(o),
+                  (0, r.jsx)(fe, {
+                    toolTipContent: (0, ve.we)("#SteamCharts_Monthly_Calendar"),
+                    minDate: ct,
+                    maxDate: Be(o),
                     value: Math.floor(
                       new Date(a, t, 15, 12, 0, 0).getTime() / 1e3,
                     ),
                     fnOnUpdate: (e) => {
                       const t = new Date(1e3 * e),
-                        a = Me(t.getFullYear(), t.getMonth());
-                      n.push(Tn.TopNewReleases(a));
+                        a = Ge(t.getFullYear(), t.getMonth());
+                      n(Nn.TopNewReleases(a));
                     },
                   }),
                 ],
@@ -7554,10 +7586,10 @@
           })
         );
       }
-      const it = 2,
-        lt = 60,
-        ct = 2022;
-      function dt(e, t) {
+      const ut = 2,
+        mt = 60,
+        pt = 2022;
+      function gt(e, t) {
         const a = new Date(1e3 * e),
           n = "America/Los_Angeles",
           r = Number(
@@ -7581,50 +7613,50 @@
             24 * t * 60 * 60 * 1e3;
         return a.getTime() >= s;
       }
-      function ut(e, t, a) {
+      function ht(e, t, a) {
         const n = new Date(1e3 * t).getUTCFullYear();
         return (
-          e >= ct &&
+          e >= pt &&
           e < n + 1 &&
-          (e != n || (a && K.iA.is_support && dt(t, lt)) || dt(t, it))
+          (e != n || (a && K.iA.is_support && gt(t, mt)) || gt(t, ut))
         );
       }
-      function mt(e, t) {
+      function _t(e, t) {
         const a = [];
         for (
           let n = new Date().getUTCFullYear(), r = 0;
-          n >= ct && r < t;
+          n >= pt && r < t;
           n--, r++
         )
-          ut(n, e, !1) ? a.push(n) : r--;
+          ht(n, e, !1) ? a.push(n) : r--;
         return a;
       }
-      const pt = 1079395200;
-      function gt(e) {
-        return (0, be.we)(
+      const xt = 1079395200;
+      function St(e) {
+        return (0, ve.we)(
           "#SteamCharts_TopSellers_WeeklyRange",
-          (0, fe.TW)(e, { timeZone: "UTC" }),
-          (0, fe.TW)(e + 604800, { timeZone: "UTC" }),
+          (0, be.TW)(e, { timeZone: "UTC" }),
+          (0, be.TW)(e + 604800, { timeZone: "UTC" }),
         );
       }
-      function ht(e) {
-        return (0, be.we)(
+      function Ct(e) {
+        return (0, ve.we)(
           "#SteamCharts_TopSellers_WeeklyRangeShort",
-          (0, fe.TW)(e, { timeZone: "UTC" }),
+          (0, be.TW)(e, { timeZone: "UTC" }),
         );
       }
-      function _t(e) {
+      function jt(e) {
         if (!e) return "";
         const t = new Date(1e3 * e);
         return `${t.getUTCFullYear()}-${t.getUTCMonth() + 1}-${t.getUTCDate()}`;
       }
-      function xt(e) {
+      function vt(e) {
         return e || "global";
       }
-      function St(e) {
+      function bt(e) {
         return "global" == e ? "" : e;
       }
-      function Ct(e, t) {
+      function ft(e, t) {
         let a = "",
           n = "";
         return (
@@ -7632,8 +7664,8 @@
           { direction: a, symbol: n }
         );
       }
-      function jt(e, t, a, n) {
-        const r = (0, oe.W6)();
+      function wt(e, t, a, n) {
+        const r = Xe();
         return (
           j.useEffect(() => {
             if (
@@ -7641,61 +7673,61 @@
               !("global" == a || (a && e.BIsValidTopSellersCountry(a)))
             ) {
               let t = "";
-              (t = e.BIsValidTopSellersCountry(L.TS.COUNTRY)
-                ? L.TS.COUNTRY
+              (t = e.BIsValidTopSellersCountry(R.TS.COUNTRY)
+                ? R.TS.COUNTRY
                 : "global"),
-                r.replace(n(xt(t)));
+                r(n(vt(t)), { bReplace: !0 });
             }
           }, [e, t, a, r, n]),
           t && ("global" == a || e.BIsValidTopSellersCountry(a))
         );
       }
-      var vt = a(82227),
-        bt = a(55507),
-        ft = a.n(bt),
-        wt = a(32671),
-        yt = a(61141),
-        It = a(58661),
-        kt = a(73077),
-        Tt = a(30230),
-        Dt = a(20283),
-        At = a(59136),
-        Nt = a(84811),
-        Bt = a(3049);
-      const Gt = j.memo((e) => {
+      var yt = a(82227),
+        It = a(55507),
+        kt = a.n(It),
+        Tt = a(32671),
+        Dt = a(61141),
+        At = a(58661),
+        Nt = a(73077),
+        Bt = a(30230),
+        Gt = a(20283),
+        Mt = a(59136),
+        Rt = a(84811),
+        Lt = a(3049);
+      const Et = j.memo((e) => {
           const t = ee();
           return t.isLoading
             ? (0, r.jsx)("div", {
-                className: (0, ve.A)(
-                  ft().ChartContainerPlaceholder,
+                className: (0, je.A)(
+                  kt().ChartContainerPlaceholder,
                   ne().Placeholder,
                 ),
               })
             : t.data
               ? (0, r.jsxs)("div", {
-                  className: ft().ChartContainer,
+                  className: kt().ChartContainer,
                   children: [
                     (0, r.jsx)("div", {
-                      className: ft().Chart,
-                      children: (0, r.jsx)(Nt.tH, {
-                        children: (0, r.jsx)(Mt, { Data: t.data }),
+                      className: kt().Chart,
+                      children: (0, r.jsx)(Rt.tH, {
+                        children: (0, r.jsx)(Pt, { Data: t.data }),
                       }),
                     }),
                     (0, r.jsxs)("div", {
-                      className: ft().Stats,
+                      className: kt().Stats,
                       children: [
                         (0, r.jsxs)("div", {
-                          className: ft().PeakStats,
+                          className: kt().PeakStats,
                           children: [
                             (0, r.jsx)("div", {
-                              className: ft().StatsTitle,
-                              children: (0, vt.Dq)(t.data.peak),
+                              className: kt().StatsTitle,
+                              children: (0, yt.Dq)(t.data.peak),
                             }),
                             (0, r.jsx)("div", {
-                              className: ft().StatSubtitle,
+                              className: kt().StatSubtitle,
                               children: (0, r.jsx)("span", {
-                                className: ft().Concurrent,
-                                children: (0, be.we)(
+                                className: kt().Concurrent,
+                                children: (0, ve.we)(
                                   "#SteamCharts_Graph_PeakConcurrent",
                                 ),
                               }),
@@ -7703,17 +7735,17 @@
                           ],
                         }),
                         (0, r.jsxs)("div", {
-                          className: ft().CurrentStats,
+                          className: kt().CurrentStats,
                           children: [
                             (0, r.jsx)("div", {
-                              className: ft().StatsTitle,
-                              children: (0, vt.Dq)(t.data.current),
+                              className: kt().StatsTitle,
+                              children: (0, yt.Dq)(t.data.current),
                             }),
                             (0, r.jsx)("div", {
-                              className: ft().StatSubtitle,
+                              className: kt().StatSubtitle,
                               children: (0, r.jsx)("span", {
-                                className: ft().Now,
-                                children: (0, be.we)(
+                                className: kt().Now,
+                                children: (0, ve.we)(
                                   "#SteamCharts_Graph_OnlineNow",
                                 ),
                               }),
@@ -7726,12 +7758,12 @@
                 })
               : null;
         }),
-        Mt = j.memo((e) => {
+        Pt = j.memo((e) => {
           const { Data: t } = e;
-          return (0, r.jsx)(wt.u, {
+          return (0, r.jsx)(Tt.u, {
             width: "100%",
             height: "100%",
-            children: (0, r.jsxs)(yt.X, {
+            children: (0, r.jsxs)(Dt.X, {
               data: t.history,
               margin: { top: 25, left: 0, right: 0, bottom: 0 },
               barGap: 10,
@@ -7762,19 +7794,19 @@
                     ],
                   }),
                 }),
-                (0, r.jsx)(It.d, { vertical: !1, stroke: "#a0aab6" }),
-                (0, r.jsx)(kt.h, {
-                  tickFormatter: vt.NO,
+                (0, r.jsx)(At.d, { vertical: !1, stroke: "#a0aab6" }),
+                (0, r.jsx)(Nt.h, {
+                  tickFormatter: yt.NO,
                   tick: { fill: "white" },
                   axisLine: !1,
                 }),
-                (0, r.jsx)(Tt.m, { content: (0, r.jsx)(Lt, {}) }),
-                (0, r.jsx)(Dt.y, {
+                (0, r.jsx)(Bt.m, { content: (0, r.jsx)(Ut, {}) }),
+                (0, r.jsx)(Gt.y, {
                   dataKey: "users",
                   barSize: 2,
                   fill: "url( #bar_linear )",
                 }),
-                (0, r.jsx)(At.e, {
+                (0, r.jsx)(Mt.e, {
                   y: t.peak,
                   stroke: "#82FF01",
                   strokeDasharray: "6",
@@ -7783,78 +7815,77 @@
             }),
           });
         });
-      function Lt({ active: e, payload: t }) {
+      function Ut({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
-          return (0, r.jsx)(je.t1, {
-            children: (0, be.PP)(
+          return (0, r.jsx)(Ce.t1, {
+            children: (0, ve.PP)(
               "#SteamCharts_OverviewGraph_Tooltip_OnlineAt",
-              (0, r.jsx)("b", { children: (0, vt.Dq)(e.users) }),
-              e.date.toLocaleString((0, Bt.J)()),
+              (0, r.jsx)("b", { children: (0, yt.Dq)(e.users) }),
+              e.date.toLocaleString((0, Lt.J)()),
             ),
           });
         }
         return null;
       }
-      var Rt = a(3734),
-        Et = a(43595),
-        Pt = a(32630),
-        Ut = a(46773),
-        Ot = a(36909),
-        Ft = a.n(Ot),
-        Ht = a(45699);
-      function Wt(e) {
+      var Ot = a(3734),
+        Ft = a(43595),
+        Ht = a(32630),
+        Wt = a(46773),
+        zt = a(36909),
+        qt = a.n(zt);
+      function Yt(e) {
         const { SteamCharts: t } = e;
-        return (0, r.jsx)(Ut.m, {
-          title: (0, be.we)(
+        return (0, r.jsx)(Wt.m, {
+          title: (0, ve.we)(
             "#SteamCharts_Menu_SteamCharts",
-            (0, be.we)("#SteamCharts_Menu_Charts"),
+            (0, ve.we)("#SteamCharts_Menu_Charts"),
           ),
-          children: (0, r.jsxs)(Qe.Z, {
-            className: Ft().PageContainer,
+          children: (0, r.jsxs)(Ke.Z, {
+            className: qt().PageContainer,
             children: [
               (0, r.jsx)("div", {
-                className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
+                className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
                 children: (0, r.jsx)("h1", {
-                  children: (0, be.we)("#SteamCharts_PageTitle_Overview"),
+                  children: (0, ve.we)("#SteamCharts_PageTitle_Overview"),
                 }),
               }),
               (0, r.jsx)("div", {
                 className: se().PageSubtitle,
-                children: (0, be.we)("#SteamCharts_PageSubTitle_Overview"),
+                children: (0, ve.we)("#SteamCharts_PageSubTitle_Overview"),
               }),
-              (0, r.jsxs)(Qe.Z, {
+              (0, r.jsxs)(Ke.Z, {
                 className: ne().PageSection,
                 children: [
                   (0, r.jsx)("div", {
                     className: ne().SectionTitle,
-                    children: (0, be.we)(
+                    children: (0, ve.we)(
                       "#SteamCharts_OverviewGraph_Title_PlayersOnline",
                     ),
                   }),
-                  (0, r.jsx)(Nt.tH, { children: (0, r.jsx)(Gt, {}) }),
+                  (0, r.jsx)(Rt.tH, { children: (0, r.jsx)(Et, {}) }),
                 ],
               }),
-              (0, r.jsxs)(Qe.Z, {
-                className: (0, ve.A)(ne().PageSection, Ft().SideBySideCharts),
+              (0, r.jsxs)(Ke.Z, {
+                className: (0, je.A)(ne().PageSection, qt().SideBySideCharts),
                 children: [
                   (0, r.jsx)("div", {
-                    className: Ft().Chart,
-                    children: (0, r.jsx)(Nt.tH, {
-                      children: (0, r.jsx)(Pt.Ay, {
+                    className: qt().Chart,
+                    children: (0, r.jsx)(Rt.tH, {
+                      children: (0, r.jsx)(Ht.Ay, {
                         feature: "topsellers",
-                        children: (0, r.jsx)(zt, {
+                        children: (0, r.jsx)(Vt, {
                           SteamCharts: t,
-                          name: (0, be.we)(
+                          name: (0, ve.we)(
                             "#SteamCharts_OverviewGraph_Title_TopSellers",
                           ),
-                          strTopItemDesc: (0, be.we)(
+                          strTopItemDesc: (0, ve.we)(
                             "#SteamCharts_OverviewGraph_Desc_TopSelling",
                           ),
-                          children: (0, r.jsx)(Xe.A, {
-                            className: Ft().ChartMoreBtn,
-                            to: Tn.TopSelling(L.TS.COUNTRY),
-                            children: (0, be.we)(
+                          children: (0, r.jsx)(et, {
+                            className: qt().ChartMoreBtn,
+                            to: Nn.TopSelling(R.TS.COUNTRY),
+                            children: (0, ve.we)(
                               "#SteamCharts_OverviewGraph_Button_TopSelling",
                             ),
                           }),
@@ -7863,22 +7894,22 @@
                     }),
                   }),
                   (0, r.jsx)("div", {
-                    className: Ft().Chart,
-                    children: (0, r.jsx)(Nt.tH, {
-                      children: (0, r.jsx)(Pt.Ay, {
+                    className: qt().Chart,
+                    children: (0, r.jsx)(Rt.tH, {
+                      children: (0, r.jsx)(Ht.Ay, {
                         feature: "mostplayed",
-                        children: (0, r.jsx)(qt, {
+                        children: (0, r.jsx)(Zt, {
                           SteamCharts: t,
-                          name: (0, be.we)(
+                          name: (0, ve.we)(
                             "#SteamCharts_OverviewGraph_Title_MostPlayed",
                           ),
-                          strTopItemDesc: (0, be.we)(
+                          strTopItemDesc: (0, ve.we)(
                             "#SteamCharts_OverviewGraph_Desc_MostPlayed",
                           ),
-                          children: (0, r.jsx)(Xe.A, {
-                            className: Ft().ChartMoreBtn,
-                            to: Tn.MostPlayed(),
-                            children: (0, be.we)(
+                          children: (0, r.jsx)(et, {
+                            className: qt().ChartMoreBtn,
+                            to: Nn.MostPlayed(),
+                            children: (0, ve.we)(
                               "#SteamCharts_OverviewGraph_Button_MostPlayed",
                             ),
                           }),
@@ -7888,61 +7919,61 @@
                   }),
                 ],
               }),
-              (0, r.jsxs)(Qe.Z, {
-                className: (0, ve.A)(ne().PageSection, Ft().SideBySideCharts),
+              (0, r.jsxs)(Ke.Z, {
+                className: (0, je.A)(ne().PageSection, qt().SideBySideCharts),
                 children: [
                   (0, r.jsx)("div", {
-                    className: Ft().Chart,
-                    children: (0, r.jsx)(Nt.tH, {
-                      children: (0, r.jsx)(Vt, {
+                    className: qt().Chart,
+                    children: (0, r.jsx)(Rt.tH, {
+                      children: (0, r.jsx)(Qt, {
                         TopSellersStore: t.TopSellersStore,
                       }),
                     }),
                   }),
                   (0, r.jsx)("div", {
-                    className: (0, ve.A)(Ft().Chart, Ft().Monthly),
-                    children: (0, r.jsx)(Nt.tH, {
-                      children: (0, r.jsx)(Zt, {
+                    className: (0, je.A)(qt().Chart, qt().Monthly),
+                    children: (0, r.jsx)(Rt.tH, {
+                      children: (0, r.jsx)(Xt, {
                         TopMonthlyReleasesStore: t.TopMonthlyReleasesStore,
                       }),
                     }),
                   }),
                 ],
               }),
-              (0, r.jsx)(Qe.Z, {
-                children: (0, r.jsx)(Nt.tH, {
-                  children: (0, r.jsx)(Jt, {
+              (0, r.jsx)(Ke.Z, {
+                children: (0, r.jsx)(Rt.tH, {
+                  children: (0, r.jsx)(ta, {
                     TopYearlyReleasesStore: t.TopYearlyReleasesStore,
                   }),
                 }),
               }),
-              (0, r.jsxs)(Qe.Z, {
+              (0, r.jsxs)(Ke.Z, {
                 className: ne().PageSection,
                 children: [
                   (0, r.jsx)("div", {
                     className: ne().SectionTitle,
                     children: (0, r.jsx)("b", {
-                      children: (0, be.we)("#SteamCharts_Overview_Title_More"),
+                      children: (0, ve.we)("#SteamCharts_Overview_Title_More"),
                     }),
                   }),
-                  (0, r.jsxs)(Qe.Z, {
-                    className: Ft().MoreLinksCtn,
+                  (0, r.jsxs)(Ke.Z, {
+                    className: qt().MoreLinksCtn,
                     children: [
-                      (0, r.jsx)(Ht.Ii, {
-                        href: `${L.TS.STORE_BASE_URL}hwsurvey/`,
-                        children: (0, be.we)(
+                      (0, r.jsx)(Je.Ii, {
+                        href: `${R.TS.STORE_BASE_URL}hwsurvey/`,
+                        children: (0, ve.we)(
                           "#SteamCharts_Overview_Link_Hardware",
                         ),
                       }),
-                      (0, r.jsx)(Ht.Ii, {
-                        href: `${L.TS.STORE_BASE_URL}stats/content/`,
-                        children: (0, be.we)(
+                      (0, r.jsx)(Je.Ii, {
+                        href: `${R.TS.STORE_BASE_URL}stats/content/`,
+                        children: (0, ve.we)(
                           "#SteamCharts_Overview_Link_Download",
                         ),
                       }),
-                      (0, r.jsx)(Ht.Ii, {
-                        href: `${L.TS.STORE_BASE_URL}stats/support/`,
-                        children: (0, be.we)(
+                      (0, r.jsx)(Je.Ii, {
+                        href: `${R.TS.STORE_BASE_URL}stats/support/`,
+                        children: (0, ve.we)(
                           "#SteamCharts_Overview_Link_Support",
                         ),
                       }),
@@ -7954,43 +7985,43 @@
           }),
         });
       }
-      function zt(e) {
+      function Vt(e) {
         const { SteamCharts: t, name: a, strTopItemDesc: n, children: s } = e,
-          { data: o } = (0, Rt.PG)(...t.GetRealTimeTopSellersQuery());
+          { data: o } = (0, Ot.PG)(...t.GetRealTimeTopSellersQuery());
         if (!o || !o.GetItems().length)
           return (0, r.jsx)("div", {
-            className: (0, ve.A)(
-              Ft().OverviewChartPlaceholder,
+            className: (0, je.A)(
+              qt().OverviewChartPlaceholder,
               ne().Placeholder,
             ),
           });
         const [i, ...l] = o.GetItems();
-        return (0, r.jsxs)(Qe.Z, {
+        return (0, r.jsxs)(Ke.Z, {
           children: [
             (0, r.jsxs)("div", {
               className: ne().SectionTitle,
               children: [" ", a],
             }),
-            (0, r.jsxs)(Qe.Z, {
-              className: Ft().ChartItemsCtn,
+            (0, r.jsxs)(Ke.Z, {
+              className: qt().ChartItemsCtn,
               children: [
                 (0, r.jsxs)("div", {
-                  className: Ft().TopItem,
+                  className: qt().TopItem,
                   children: [
-                    (0, r.jsx)(Et.p, {
+                    (0, r.jsx)(Ft.p, {
                       item: i,
                       children: (0, r.jsx)("img", {
-                        className: Ft().Capsule,
+                        className: qt().Capsule,
                         src: i.GetAssets().GetMainCapsuleURL(),
                       }),
                     }),
-                    (0, r.jsx)(Yt, { rank: 1, item: i, itemDesc: n }),
+                    (0, r.jsx)(Kt, { rank: 1, item: i, itemDesc: n }),
                   ],
                 }),
                 l
                   .slice(0, 4)
                   .map((e, t) =>
-                    (0, r.jsx)(Yt, { rank: t + 2, item: e }, e.GetUniqueID()),
+                    (0, r.jsx)(Kt, { rank: t + 2, item: e }, e.GetUniqueID()),
                   ),
                 s,
               ],
@@ -7998,42 +8029,42 @@
           ],
         });
       }
-      function qt(e) {
+      function Zt(e) {
         const { SteamCharts: t, name: a, strTopItemDesc: n, children: s } = e,
           o = S(t.MostPlayedStore);
         if (!o || o.isLoading)
           return (0, r.jsx)("div", {
-            className: (0, ve.A)(
-              Ft().OverviewChartPlaceholder,
+            className: (0, je.A)(
+              qt().OverviewChartPlaceholder,
               ne().Placeholder,
             ),
           });
         const [i, ...l] = o.data.rgRanks;
-        return (0, r.jsxs)(Qe.Z, {
+        return (0, r.jsxs)(Ke.Z, {
           children: [
             (0, r.jsxs)("div", {
               className: ne().SectionTitle,
               children: [" ", a],
             }),
-            (0, r.jsxs)(Qe.Z, {
-              className: Ft().ChartItemsCtn,
+            (0, r.jsxs)(Ke.Z, {
+              className: qt().ChartItemsCtn,
               children: [
                 (0, r.jsxs)("div", {
-                  className: Ft().TopItem,
+                  className: qt().TopItem,
                   children: [
-                    (0, r.jsx)(Et.p, {
+                    (0, r.jsx)(Ft.p, {
                       item: i.Item,
                       children: (0, r.jsx)("img", {
-                        className: Ft().Capsule,
+                        className: qt().Capsule,
                         src: i.Item.GetAssets().GetMainCapsuleURL(),
                       }),
                     }),
-                    (0, r.jsx)(Yt, {
+                    (0, r.jsx)(Kt, {
                       rank: 1,
                       item: i.Item,
                       itemDesc: n,
-                      addData: (0, vt.Dq)(i.nConcurrentInGame),
-                      addDataDesc: (0, be.we)(
+                      addData: (0, yt.Dq)(i.nConcurrentInGame),
+                      addDataDesc: (0, ve.we)(
                         "#SteamCharts_OverviewGraph_Desc_InGame",
                       ),
                     }),
@@ -8043,11 +8074,11 @@
                   .slice(0, 4)
                   .map((e, t) =>
                     (0, r.jsx)(
-                      Yt,
+                      Kt,
                       {
                         rank: t + 2,
                         item: e.Item,
-                        addData: (0, vt.Dq)(e.nConcurrentInGame),
+                        addData: (0, yt.Dq)(e.nConcurrentInGame),
                       },
                       e.Item.GetUniqueID(),
                     ),
@@ -8058,39 +8089,39 @@
           ],
         });
       }
-      function Yt(e) {
+      function Kt(e) {
         const { rank: t, item: a, itemDesc: n, addData: s, addDataDesc: o } = e;
         return (0, r.jsxs)(
-          Et.p,
+          Ft.p,
           {
-            className: Ft().ItemRow,
+            className: qt().ItemRow,
             item: a,
             depth: t,
-            component: Ht.Ii,
+            component: Je.Ii,
             children: [
-              (0, r.jsx)("div", { className: Ft().Rank, children: t }),
+              (0, r.jsx)("div", { className: qt().Rank, children: t }),
               (0, r.jsxs)("div", {
-                className: Ft().ItemNameCtn,
+                className: qt().ItemNameCtn,
                 children: [
                   (0, r.jsx)("div", {
-                    className: Ft().ItemName,
+                    className: qt().ItemName,
                     children: a.GetName(),
                   }),
                   n &&
                     (0, r.jsx)("div", {
-                      className: Ft().ItemDesc,
+                      className: qt().ItemDesc,
                       children: n,
                     }),
                 ],
               }),
               (0, r.jsxs)("div", {
-                className: Ft().TopReason,
+                className: qt().TopReason,
                 children: [
                   s &&
-                    (0, r.jsx)("div", { className: Ft().AddData, children: s }),
+                    (0, r.jsx)("div", { className: qt().AddData, children: s }),
                   o &&
                     (0, r.jsx)("div", {
-                      className: Ft().AddDataDesc,
+                      className: qt().AddDataDesc,
                       children: o,
                     }),
                 ],
@@ -8100,31 +8131,31 @@
           a.GetUniqueID(),
         );
       }
-      function Vt(e) {
+      function Qt(e) {
         const { TopSellersStore: t } = e,
-          { TopSellers: a } = (function (e, t, a = R) {
+          { TopSellers: a } = (function (e, t, a = L) {
             const { rtCurrentWeek: n } = U(e, t);
             return F(e, n, n, t, a);
-          })(t, L.TS.COUNTRY);
-        return (0, r.jsx)(Qt, {
-          name: a ? (0, be.$z)(a.rtWeekStart) : "",
-          range: (0, be.we)("#SteamCharts_Overview_Title_Weekly"),
+          })(t, R.TS.COUNTRY);
+        return (0, r.jsx)($t, {
+          name: a ? (0, ve.$z)(a.rtWeekStart) : "",
+          range: (0, ve.we)("#SteamCharts_Overview_Title_Weekly"),
           rgItems: a?.rgRanks.map((e) => e.Item),
           renderLink: () =>
-            (0, r.jsx)(Xe.A, {
-              className: Ft().ImageButtonLink,
-              to: Tn.TopSellers(xt(L.TS.COUNTRY), _t(t.GetCurrentWeek())),
-              children: (0, be.we)("#SteamCharts_TopSellers_PageTitle"),
+            (0, r.jsx)(et, {
+              className: qt().ImageButtonLink,
+              to: Nn.TopSellers(vt(R.TS.COUNTRY), jt(t.GetCurrentWeek())),
+              children: (0, ve.we)("#SteamCharts_TopSellers_PageTitle"),
             }),
         });
       }
-      function Zt(e) {
+      function Xt(e) {
         const { TopMonthlyReleasesStore: t } = e,
-          a = Ge((0, le.f1)()),
+          a = Be((0, ie.f1)()),
           n = new Date(1e3 * a),
-          s = Me(n.getFullYear(), n.getMonth()),
-          o = Tn.TopNewReleases(s),
-          { rgFilteredCombinedAppsAndDLC: i, loadState: l } = et(
+          s = Ge(n.getFullYear(), n.getMonth()),
+          o = Nn.TopNewReleases(s),
+          { rgFilteredCombinedAppsAndDLC: i, loadState: l } = rt(
             t,
             n.getFullYear(),
             n.getMonth(),
@@ -8133,24 +8164,24 @@
             () => (i ? i.map((e) => g.A.Get().GetApp(e)).filter(Boolean) : []),
             [i],
           );
-        return (0, r.jsx)(Qt, {
-          name: (0, fe.CC)(a),
-          range: (0, be.we)("#SteamCharts_Overview_Title_Monthly"),
+        return (0, r.jsx)($t, {
+          name: (0, be.CC)(a),
+          range: (0, ve.we)("#SteamCharts_Overview_Title_Monthly"),
           rgItems: c,
           renderLink: () =>
-            (0, r.jsx)(Xe.A, {
-              className: Ft().ImageButtonLink,
+            (0, r.jsx)(et, {
+              className: qt().ImageButtonLink,
               to: o,
-              children: (0, be.we)("#SteamCharts_Overview_Title_MonthlyTop"),
+              children: (0, ve.we)("#SteamCharts_Overview_Title_MonthlyTop"),
             }),
         });
       }
-      const Kt = 9;
-      function Qt(e) {
+      const Jt = 9;
+      function $t(e) {
         const { name: t, range: a, rgItems: n, renderLink: s } = e,
           o = j.useMemo(() => {
-            const e = n?.slice(0, Kt) || [];
-            for (; e.length < Kt; ) e.push(void 0);
+            const e = n?.slice(0, Jt) || [];
+            for (; e.length < Jt; ) e.push(void 0);
             return [
               e[5],
               e[2],
@@ -8173,10 +8204,10 @@
               children: [(0, r.jsx)("b", { children: a }), " ", t],
             }),
             (0, r.jsxs)("div", {
-              className: Ft().ImageButtonCtn,
+              className: qt().ImageButtonCtn,
               children: [
                 (0, r.jsx)("div", {
-                  className: Ft().ImageGridCtn,
+                  className: qt().ImageGridCtn,
                   children: o.map(
                     (e, t) =>
                       e &&
@@ -8193,10 +8224,10 @@
           ],
         });
       }
-      const Xt = { include_assets: !0, apply_user_filters: !0 };
-      function Jt(e) {
+      const ea = { include_assets: !0, apply_user_filters: !0 };
+      function ta(e) {
         const { TopYearlyReleasesStore: t } = e,
-          a = mt((0, le.f1)(), 1)[0],
+          a = _t((0, ie.f1)(), 1)[0],
           n = J(t, a),
           s = (0, j.useMemo)(
             () =>
@@ -8205,11 +8236,11 @@
                 .map((e) => e.appid),
             [n],
           ),
-          o = (0, de.zX)(s, Xt);
+          o = (0, ce.zX)(s, ea);
         return n &&
           n.top_combined_app_and_dlc_releases &&
           0 != n.top_combined_app_and_dlc_releases.length &&
-          o == de.ik
+          o == ce.ik
           ? (0, r.jsxs)("div", {
               className: ne().PageSection,
               children: [
@@ -8217,7 +8248,7 @@
                   className: ne().SectionTitle,
                   children: [
                     (0, r.jsx)("b", {
-                      children: (0, be.we)(
+                      children: (0, ve.we)(
                         "#SteamCharts_Overview_Title_Yearly",
                       ),
                     }),
@@ -8225,18 +8256,18 @@
                     a,
                   ],
                 }),
-                (0, r.jsxs)(Xe.X, {
-                  to: Tn.BestOfYear("" + a),
-                  className: Ft().BestOfYearButton,
+                (0, r.jsxs)(tt, {
+                  to: Nn.BestOfYear("" + a),
+                  className: qt().BestOfYearButton,
                   children: [
-                    (0, r.jsx)($t, { rgAppIDs: s }),
+                    (0, r.jsx)(aa, { rgAppIDs: s }),
                     (0, r.jsx)("div", {
-                      className: Ft().Headline,
-                      children: (0, be.we)("#SteamCharts_Yearly_Title", a),
+                      className: qt().Headline,
+                      children: (0, ve.we)("#SteamCharts_Yearly_Title", a),
                     }),
                     (0, r.jsx)("div", {
-                      className: Ft().Subtitle,
-                      children: (0, be.we)("#SteamCharts_Yearly_BannerDesc"),
+                      className: qt().Subtitle,
+                      children: (0, ve.we)("#SteamCharts_Yearly_BannerDesc"),
                     }),
                   ],
                 }),
@@ -8244,14 +8275,14 @@
             })
           : null;
       }
-      function $t(e) {
+      function aa(e) {
         const { rgAppIDs: t } = e,
           a = (0, j.useMemo)(
             () => t.map((e) => g.A.Get().GetApp(e)).filter(Boolean),
             [t],
           );
         return (0, r.jsx)("div", {
-          className: Ft().ImageGrid,
+          className: qt().ImageGrid,
           children: a
             .slice(0, 20)
             .map((e, t) =>
@@ -8265,9 +8296,9 @@
             ),
         });
       }
-      var ea = a(65946),
-        ta = a(72148);
-      function aa(e) {
+      var na = a(65946),
+        ra = a(72148);
+      function sa(e) {
         const {
           TopSellersStore: t,
           SteamInterface: a,
@@ -8275,9 +8306,9 @@
           DynamicUserStore: s,
           children: o,
         } = e;
-        (0, Ut.Y)(se().SteamChartsPage);
+        (0, Wt.Y)(se().SteamChartsPage);
         const i = (function (e) {
-          return (0, ea.q3)(() => e.ExcludedContentDescriptor);
+          return (0, na.q3)(() => e.ExcludedContentDescriptor);
         })(s);
         let l = j.useMemo(() => ({ content_descriptors_excluded: i }), [i]);
         const c = j.useRef(null);
@@ -8285,7 +8316,7 @@
           j.useEffect(() => {
             c.current && c.current.NavTree()?.Activate(!0);
           }, []),
-          (0, r.jsxs)(Qe.Z, {
+          (0, r.jsxs)(Ke.Z, {
             className: se().SteamChartsRootPanel,
             navRef: c,
             children: [
@@ -8293,48 +8324,48 @@
                 className: se().SteamChartsRootPosition,
                 children: (0, r.jsx)("div", {
                   className: se().AlignWithMenu,
-                  children: (0, r.jsxs)(Qe.Z, {
+                  children: (0, r.jsxs)(Ke.Z, {
                     className: se().SteamChartsMenu,
                     children: [
-                      (0, r.jsx)(Qe.Z, {
+                      (0, r.jsx)(Ke.Z, {
                         className: se().MenuGroup,
                         children: (0, r.jsx)("div", {
                           className: se().MenuLinks,
-                          children: (0, r.jsxs)(Xe.A, {
-                            to: Tn.Overview(),
+                          children: (0, r.jsxs)(et, {
+                            to: Nn.Overview(),
                             exact: !0,
                             activeClassName: se().ActiveLink,
                             children: [
                               (0, r.jsx)("span", {
-                                className: (0, ve.A)(se().MenuItemIcon),
-                                children: (0, r.jsx)(ue.ww0, {}),
+                                className: (0, je.A)(se().MenuItemIcon),
+                                children: (0, r.jsx)(de.ww0, {}),
                               }),
-                              (0, be.we)("#SteamCharts_Menu_Overview"),
+                              (0, ve.we)("#SteamCharts_Menu_Overview"),
                             ],
                           }),
                         }),
                       }),
-                      (0, r.jsx)(Nt.tH, { children: (0, r.jsx)(na, {}) }),
-                      (0, r.jsx)(Nt.tH, {
-                        children: (0, r.jsx)(ra, { TopSellersStore: t }),
+                      (0, r.jsx)(Rt.tH, { children: (0, r.jsx)(oa, {}) }),
+                      (0, r.jsx)(Rt.tH, {
+                        children: (0, r.jsx)(ia, { TopSellersStore: t }),
                       }),
-                      (0, r.jsx)(Nt.tH, {
-                        children: (0, r.jsx)(sa, {
+                      (0, r.jsx)(Rt.tH, {
+                        children: (0, r.jsx)(la, {
                           TopMonthlyReleasesStore: n,
                         }),
                       }),
-                      (0, r.jsx)(Nt.tH, { children: (0, r.jsx)(oa, {}) }),
+                      (0, r.jsx)(Rt.tH, { children: (0, r.jsx)(ca, {}) }),
                     ],
                   }),
                 }),
               }),
               (0, r.jsx)("div", {
-                className: (0, ve.A)(se().SteamChartsShell, "SteamChartsShell"),
+                className: (0, je.A)(se().SteamChartsShell, "SteamChartsShell"),
                 children: (0, r.jsx)("div", {
                   className: se().SteamChartsContent,
-                  children: (0, r.jsx)(Rt.E2, {
+                  children: (0, r.jsx)(Ot.E2, {
                     defaultOptions: l,
-                    children: (0, r.jsx)(Nt.tH, { children: o }),
+                    children: (0, r.jsx)(Rt.tH, { children: o }),
                   }),
                 }),
               }),
@@ -8342,42 +8373,42 @@
           })
         );
       }
-      function na() {
-        return (0, r.jsxs)(Qe.Z, {
+      function oa() {
+        return (0, r.jsxs)(Ke.Z, {
           className: se().MenuGroup,
           children: [
             (0, r.jsx)("div", {
               className: se().MenuHeader,
-              children: (0, be.we)("#SteamCharts_Menu_LiveCharts"),
+              children: (0, ve.we)("#SteamCharts_Menu_LiveCharts"),
             }),
-            (0, r.jsxs)(Qe.Z, {
+            (0, r.jsxs)(Ke.Z, {
               className: se().MenuLinks,
               children: [
-                (0, r.jsxs)(Xe.A, {
+                (0, r.jsxs)(et, {
                   className: se().MenuItemIcon,
-                  to: Tn.TopSelling(L.TS.COUNTRY),
+                  to: Nn.TopSelling(R.TS.COUNTRY),
                   activeClassName: se().ActiveLink,
                   children: [
-                    (0, r.jsx)(ue.t1X, {}),
-                    (0, be.we)("#SteamCharts_Menu_TopSelling"),
+                    (0, r.jsx)(de.t1X, {}),
+                    (0, ve.we)("#SteamCharts_Menu_TopSelling"),
                   ],
                 }),
-                (0, r.jsxs)(Xe.A, {
+                (0, r.jsxs)(et, {
                   className: se().MenuItemIcon,
-                  to: Tn.MostPlayed(),
+                  to: Nn.MostPlayed(),
                   activeClassName: se().ActiveLink,
                   children: [
-                    (0, r.jsx)(ue.N3h, {}),
-                    (0, be.we)("#SteamCharts_Menu_MostPlayed"),
+                    (0, r.jsx)(de.N3h, {}),
+                    (0, ve.we)("#SteamCharts_Menu_MostPlayed"),
                   ],
                 }),
-                (0, r.jsxs)(Xe.A, {
+                (0, r.jsxs)(et, {
                   className: se().MenuItemIcon,
-                  to: Tn.MostPlayedOnSteamDeck(),
+                  to: Nn.MostPlayedOnSteamDeck(),
                   activeClassName: se().ActiveLink,
                   children: [
-                    (0, r.jsx)(ue.lRD, {}),
-                    (0, be.we)("#SteamCharts_Menu_MostPlayedOnDeck"),
+                    (0, r.jsx)(de.lRD, {}),
+                    (0, ve.we)("#SteamCharts_Menu_MostPlayedOnDeck"),
                   ],
                 }),
               ],
@@ -8385,79 +8416,79 @@
           ],
         });
       }
-      function ra(e) {
+      function ia(e) {
         const { TopSellersStore: t } = e,
-          a = (0, oe.W5)(Tn.TopSellers(":country", ":week?"));
-        let n = L.TS.COUNTRY;
-        a && a.params && a.params.country && (n = St(a.params.country));
+          a = (0, Qe.W5)(Nn.TopSellers(":country", ":week?"));
+        let n = R.TS.COUNTRY;
+        a && a.params && a.params.country && (n = bt(a.params.country));
         const { rtCurrentWeek: s, bCountryListInitialized: o } = U(
           t,
-          L.TS.COUNTRY,
+          R.TS.COUNTRY,
         );
         if (!s || !o) return null;
-        const i = xt(t.BIsValidTopSellersCountry(n) ? n : "");
+        const i = vt(t.BIsValidTopSellersCountry(n) ? n : "");
         let l = [];
         for (let e = 0; e < 3; e++) {
           const t = s - 60 * e * 60 * 24 * 7;
           l.push(
             (0, r.jsxs)(
-              Xe.A,
+              et,
               {
-                to: Tn.TopSellers(i, _t(t)),
+                to: Nn.TopSellers(i, jt(t)),
                 activeClassName: se().ActiveLink,
-                fnCanTakeFocus: ta.Nw,
+                fnCanTakeFocus: ra.Nw,
                 children: [
                   (0, r.jsx)("span", {
-                    className: (0, ve.A)(se().MenuItemIcon),
-                    children: (0, r.jsx)(ue.VvS, { color: "#C3D3D8" }),
+                    className: (0, je.A)(se().MenuItemIcon),
+                    children: (0, r.jsx)(de.VvS, { color: "#C3D3D8" }),
                   }),
-                  (0, be.$z)(t, { timeZone: "UTC" }),
+                  (0, ve.$z)(t, { timeZone: "UTC" }),
                 ],
               },
               t,
             ),
           );
         }
-        return (0, r.jsxs)(Qe.Z, {
-          className: (0, ve.A)(se().MenuGroup, se().Weekly),
+        return (0, r.jsxs)(Ke.Z, {
+          className: (0, je.A)(se().MenuGroup, se().Weekly),
           children: [
             (0, r.jsx)("div", {
               className: se().MenuHeader,
-              children: (0, be.we)("#SteamCharts_Menu_WeeklyCharts"),
+              children: (0, ve.we)("#SteamCharts_Menu_WeeklyCharts"),
             }),
-            (0, r.jsx)(Qe.Z, { className: se().MenuLinks, children: l }),
+            (0, r.jsx)(Ke.Z, { className: se().MenuLinks, children: l }),
           ],
         });
       }
-      function sa(e) {
-        const t = Ge((0, le.f1)()),
+      function la(e) {
+        const t = Be((0, ie.f1)()),
           a = [t, t - 2592e3, t - 5184e3];
-        return (0, r.jsxs)(Qe.Z, {
-          className: (0, ve.A)(se().MenuGroup, se().Monthly),
+        return (0, r.jsxs)(Ke.Z, {
+          className: (0, je.A)(se().MenuGroup, se().Monthly),
           children: [
             (0, r.jsx)("div", {
               className: se().MenuHeader,
-              children: (0, be.we)("#SteamCharts_Menu_MonthlyCharts"),
+              children: (0, ve.we)("#SteamCharts_Menu_MonthlyCharts"),
             }),
-            (0, r.jsx)(Qe.Z, {
+            (0, r.jsx)(Ke.Z, {
               className: se().MenuLinks,
               children: a.map((e) => {
                 const t = new Date(1e3 * e),
-                  a = Me(t.getFullYear(), t.getMonth()),
-                  n = Tn.TopNewReleases(a),
+                  a = Ge(t.getFullYear(), t.getMonth()),
+                  n = Nn.TopNewReleases(a),
                   s = Boolean(window.location.pathname === n);
                 return (0, r.jsxs)(
-                  Xe.A,
+                  et,
                   {
                     className: s ? se().ActiveLink : "",
                     to: n,
-                    fnCanTakeFocus: ta.Nw,
+                    fnCanTakeFocus: ra.Nw,
                     children: [
                       (0, r.jsx)("span", {
-                        className: (0, ve.A)(se().MenuItemIcon),
-                        children: (0, r.jsx)(ue.VvS, { color: "#C3D3D8" }),
+                        className: (0, je.A)(se().MenuItemIcon),
+                        children: (0, r.jsx)(de.VvS, { color: "#C3D3D8" }),
                       }),
-                      (0, fe.CC)(e),
+                      (0, be.CC)(e),
                     ],
                   },
                   "month_" + e,
@@ -8467,31 +8498,31 @@
           ],
         });
       }
-      function oa(e) {
-        const t = (0, le.f1)(),
-          a = (0, j.useMemo)(() => mt(t, 3), [t]);
-        return (0, r.jsxs)(Qe.Z, {
-          className: (0, ve.A)(se().MenuGroup, se().Monthly),
+      function ca(e) {
+        const t = (0, ie.f1)(),
+          a = (0, j.useMemo)(() => _t(t, 3), [t]);
+        return (0, r.jsxs)(Ke.Z, {
+          className: (0, je.A)(se().MenuGroup, se().Monthly),
           children: [
             (0, r.jsx)("div", {
               className: se().MenuHeader,
-              children: (0, be.we)("#SteamCharts_Menu_YearlyCharts"),
+              children: (0, ve.we)("#SteamCharts_Menu_YearlyCharts"),
             }),
-            (0, r.jsx)(Qe.Z, {
+            (0, r.jsx)(Ke.Z, {
               className: se().MenuLinks,
               children: a.map((e) => {
-                const t = Tn.BestOfYear("" + e),
+                const t = Nn.BestOfYear("" + e),
                   a = window.location.pathname === t;
                 return (0, r.jsxs)(
-                  Xe.X,
+                  tt,
                   {
-                    className: (0, ve.A)(a ? se().ActiveLink : ""),
+                    className: (0, je.A)(a ? se().ActiveLink : ""),
                     to: t,
-                    fnCanTakeFocus: ta.Nw,
+                    fnCanTakeFocus: ra.Nw,
                     children: [
                       (0, r.jsx)("span", {
-                        className: (0, ve.A)(se().MenuItemIcon),
-                        children: (0, r.jsx)(ue.VvS, { color: "#C3D3D8" }),
+                        className: (0, je.A)(se().MenuItemIcon),
+                        children: (0, r.jsx)(de.VvS, { color: "#C3D3D8" }),
                       }),
                       e,
                     ],
@@ -8503,55 +8534,55 @@
           ],
         });
       }
-      var ia = a(16767),
-        la = a.n(ia),
-        ca = a(98403),
-        da = a(90865),
-        ua = a(90150),
-        ma = a(12260),
-        pa = (0, ca.gu)({
+      var da = a(16767),
+        ua = a.n(da),
+        ma = a(98403),
+        pa = a(90865),
+        ga = a(90150),
+        ha = a(12260),
+        _a = (0, ma.gu)({
           chartName: "LineChart",
-          GraphicalChild: da.N,
+          GraphicalChild: pa.N,
           axisComponents: [
-            { axisType: "xAxis", AxisComp: ua.W },
-            { axisType: "yAxis", AxisComp: kt.h },
+            { axisType: "xAxis", AxisComp: ga.W },
+            { axisType: "yAxis", AxisComp: Nt.h },
           ],
-          formatAxisMap: ma.pr,
+          formatAxisMap: ha.pr,
         }),
-        ga = a(75620);
-      function ha() {
+        xa = a(75620);
+      function Sa() {
         const e = (0, i.I)({
           queryKey: ["SupportStatsPage"],
           queryFn: async () => {
             const e = await c().get(
-              `${L.TS.STORE_BASE_URL}stats/support?json=1`,
+              `${R.TS.STORE_BASE_URL}stats/support?json=1`,
             );
             if ("string" == typeof e.data) throw "Error loading release status";
             return e.data;
           },
           staleTime: 9e5,
         });
-        return (0, r.jsx)(Ut.m, {
-          title: (0, be.we)("#SteamCharts_SupportStats"),
+        return (0, r.jsx)(Wt.m, {
+          title: (0, ve.we)("#SteamCharts_SupportStats"),
           children: (0, r.jsxs)("div", {
             className: ne().ChartPage,
             children: [
               (0, r.jsx)("div", {
-                className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
+                className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
                 children: (0, r.jsx)("h1", {
-                  children: (0, be.we)("#SteamCharts_SupportStats"),
+                  children: (0, ve.we)("#SteamCharts_SupportStats"),
                 }),
               }),
               (0, r.jsx)("div", {
                 className: se().PageSubtitle,
-                children: (0, r.jsx)(_a, {
+                children: (0, r.jsx)(Ca, {
                   rtLastUpdated: e.data?.rtLastUpdated,
                 }),
               }),
               (0, r.jsx)("div", {
                 className: ne().PageSection,
                 children: (0, r.jsx)("p", {
-                  children: (0, be.oW)(
+                  children: (0, ve.oW)(
                     "#SupportStats_Header_Desc",
                     (0, r.jsx)("a", {
                       href: "http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549",
@@ -8560,36 +8591,36 @@
                 }),
               }),
               (0, r.jsx)("div", {
-                className: (0, ve.A)(ne().PageSection),
+                className: (0, je.A)(ne().PageSection),
                 children: (0, r.jsxs)("div", {
-                  className: (0, ve.A)(ne().SectionTitle),
+                  className: (0, je.A)(ne().SectionTitle),
                   children: [
                     (0, r.jsx)("b", {
-                      children: (0, be.we)(
+                      children: (0, ve.we)(
                         "#SupportStats_RequestsAndBacklog_Title",
                       ),
                     }),
                     " ",
-                    (0, be.we)("#SuportStats_MostRecent90Days"),
-                    (0, r.jsx)(Nt.tH, { children: (0, r.jsx)(xa, {}) }),
+                    (0, ve.we)("#SuportStats_MostRecent90Days"),
+                    (0, r.jsx)(Rt.tH, { children: (0, r.jsx)(ja, {}) }),
                   ],
                 }),
               }),
               (0, r.jsxs)("div", {
-                className: (0, ve.A)(ne().PageSection),
+                className: (0, je.A)(ne().PageSection),
                 children: [
                   (0, r.jsx)("div", {
-                    className: (0, ve.A)(ne().SectionTitle),
+                    className: (0, je.A)(ne().SectionTitle),
                     children: (0, r.jsx)("b", {
-                      children: (0, be.we)(
+                      children: (0, ve.we)(
                         "#SupportStats_RecentSupportActivity_Title",
                       ),
                     }),
                   }),
                   (0, r.jsx)("div", {
-                    className: (0, ve.A)(la().CategoryBlock),
-                    children: (0, r.jsx)(Nt.tH, {
-                      children: (0, r.jsx)(va, { SupportStats: e.data }),
+                    className: (0, je.A)(ua().CategoryBlock),
+                    children: (0, r.jsx)(Rt.tH, {
+                      children: (0, r.jsx)(wa, { SupportStats: e.data }),
                     }),
                   }),
                 ],
@@ -8598,13 +8629,13 @@
           }),
         });
       }
-      const _a = j.memo(function (e) {
+      const Ca = j.memo(function (e) {
         const t = new Date(1e3 * e.rtLastUpdated);
         return (0, r.jsx)("span", {
-          children: (0, be.we)(
+          children: (0, ve.we)(
             "#SupportStats_Header_Title_Updated",
             e.rtLastUpdated
-              ? t.toLocaleString(be.pf.GetPreferredLocales(), {
+              ? t.toLocaleString(ve.pf.GetPreferredLocales(), {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
@@ -8616,12 +8647,12 @@
           ),
         });
       });
-      function xa() {
+      function ja() {
         const e = (0, i.I)({
           queryKey: ["HelpRequestChartData"],
           queryFn: async () => {
             const e = await c().get(
-              `${L.TS.STORE_BASE_URL}stats/supportdata.json`,
+              `${R.TS.STORE_BASE_URL}stats/supportdata.json`,
             );
             if ("string" == typeof e.data) throw "Error loading release status";
             const t = new Map(),
@@ -8642,34 +8673,34 @@
           staleTime: 216e5,
         });
         return (0, r.jsx)("div", {
-          className: (0, ve.A)(
-            la().HelpRequestChartContainer,
+          className: (0, je.A)(
+            ua().HelpRequestChartContainer,
             !e.data && ne().Placeholder,
           ),
-          children: e.data && (0, r.jsx)(Sa, { ChartData: e.data }),
+          children: e.data && (0, r.jsx)(va, { ChartData: e.data }),
         });
       }
-      const Sa = j.memo(function (e) {
+      const va = j.memo(function (e) {
         const { ChartData: t } = e,
           { rgSeries: a, data: n } = t;
-        return (0, r.jsx)(wt.u, {
+        return (0, r.jsx)(Tt.u, {
           width: "100%",
           height: "100%",
-          children: (0, r.jsxs)(pa, {
+          children: (0, r.jsxs)(_a, {
             data: n,
             margin: { top: 20, left: 30, right: 30, bottom: 0 },
             children: [
-              (0, r.jsx)(ua.W, {
+              (0, r.jsx)(ga.W, {
                 dataKey: "date",
-                tickFormatter: ja,
+                tickFormatter: fa,
                 interval: 7,
               }),
-              (0, r.jsx)(kt.h, { type: "number", tickFormatter: vt.Dq }),
-              (0, r.jsx)(Tt.m, { content: (0, r.jsx)(Ca, {}) }),
-              (0, r.jsx)(ga.s, {}),
+              (0, r.jsx)(Nt.h, { type: "number", tickFormatter: yt.Dq }),
+              (0, r.jsx)(Bt.m, { content: (0, r.jsx)(ba, {}) }),
+              (0, r.jsx)(xa.s, {}),
               a.map((e) =>
                 (0, r.jsx)(
-                  da.N,
+                  pa.N,
                   {
                     type: "monotone",
                     dataKey: e.dataKey,
@@ -8683,17 +8714,17 @@
           }),
         });
       });
-      function Ca(e) {
+      function ba(e) {
         const { active: t, payload: a } = e;
         if (t && a && a.length) {
           const { date: e, ...t } = a[0].payload;
-          return (0, r.jsxs)(je.t1, {
+          return (0, r.jsxs)(Ce.t1, {
             children: [
-              (0, r.jsxs)("div", { children: [ja(e), ":"] }),
+              (0, r.jsxs)("div", { children: [fa(e), ":"] }),
               Object.keys(t).map((e) =>
                 (0, r.jsxs)(
                   "div",
-                  { children: [e, ": ", (0, vt.Dq)(t[e])] },
+                  { children: [e, ": ", (0, yt.Dq)(t[e])] },
                   e,
                 ),
               ),
@@ -8702,13 +8733,13 @@
         }
         return null;
       }
-      function ja(e) {
-        return e.toLocaleString(be.pf.GetPreferredLocales(), {
+      function fa(e) {
+        return e.toLocaleString(ve.pf.GetPreferredLocales(), {
           month: "short",
           day: "numeric",
         });
       }
-      function va(e) {
+      function wa(e) {
         const t = e.SupportStats?.rgReportData;
         return t
           ? (0, r.jsxs)("table", {
@@ -8719,110 +8750,110 @@
                   children: (0, r.jsxs)("tr", {
                     children: [
                       (0, r.jsx)("th", {
-                        className: la().Category,
+                        className: ua().Category,
                         children: (0, r.jsx)("span", {
-                          children: (0, be.we)(
+                          children: (0, ve.we)(
                             "#SupportStats_TicketsByCategory",
                           ),
                         }),
                       }),
                       (0, r.jsx)("th", {
-                        className: la().Submitted24h,
+                        className: ua().Submitted24h,
                         children: (0, r.jsx)("span", {
-                          children: (0, be.we)(
+                          children: (0, ve.we)(
                             "#SupportStats_TicketsLast24Hours",
                           ),
                         }),
                       }),
                       (0, r.jsx)("th", {
-                        className: la().ResponseTimes,
+                        className: ua().ResponseTimes,
                         children: (0, r.jsx)("span", {
-                          children: (0, be.we)("#SupportStats_TimeToResponse"),
+                          children: (0, ve.we)("#SupportStats_TimeToResponse"),
                         }),
                       }),
                     ],
                   }),
                 }),
                 (0, r.jsx)("tbody", {
-                  children: t.map((e) => (0, r.jsx)(ba, { row: e }, e.name)),
+                  children: t.map((e) => (0, r.jsx)(ya, { row: e }, e.name)),
                 }),
               ],
             })
           : (0, r.jsx)("div", {
-              className: (0, ve.A)(ne().Placeholder, la().Placeholder),
+              className: (0, je.A)(ne().Placeholder, ua().Placeholder),
             });
       }
-      function ba(e) {
+      function ya(e) {
         const { row: t } = e;
         return (0, r.jsxs)("tr", {
-          className: (0, ve.A)(ne().TableRow, la().TableRow),
+          className: (0, je.A)(ne().TableRow, ua().TableRow),
           children: [
-            (0, r.jsx)("td", { className: la().Category, children: t.name }),
+            (0, r.jsx)("td", { className: ua().Category, children: t.name }),
             (0, r.jsx)("td", {
-              className: la().Submitted24h,
-              children: (0, vt.Dq)(t.last24),
+              className: ua().Submitted24h,
+              children: (0, yt.Dq)(t.last24),
             }),
             (0, r.jsx)("td", {
-              className: la().ResponseTimes,
-              children: (0, be.we)(
+              className: ua().ResponseTimes,
+              children: (0, ve.we)(
                 "#SupportStats_RecentWaitTimeData",
-                fa(t["30pct"]),
-                fa(t["90pct"]),
+                Ia(t["30pct"]),
+                Ia(t["90pct"]),
               ),
             }),
           ],
         });
       }
-      function fa(e) {
-        return (0, be.Hq)(e, { eSuffix: fe.a8.None, bAllowDecimal: !0 });
+      function Ia(e) {
+        return (0, ve.Hq)(e, { eSuffix: be.a8.None, bAllowDecimal: !0 });
       }
-      var wa = a(3740),
-        ya = a(60014),
-        Ia = a(55963),
-        ka = a(75279),
-        Ta = a(51680),
-        Da = a(29008),
-        Aa = a(58918),
-        Na = a(17376),
-        Ba = a(51535),
-        Ga = a.n(Ba);
-      function Ma(e) {
+      var ka = a(3740),
+        Ta = a(60014),
+        Da = a(55963),
+        Aa = a(75279),
+        Na = a(51680),
+        Ba = a(29008),
+        Ga = a(58918),
+        Ma = a(17376),
+        Ra = a(51535),
+        La = a.n(Ra);
+      function Ea(e) {
         const { Item: t } = e,
-          a = (0, Ta.Z)(t),
+          a = (0, Na.Z)(t),
           n = t.BIsVisible() && !a;
-        return (0, r.jsx)(Et.p, {
+        return (0, r.jsx)(Ft.p, {
           item: t,
           feature: "topchartlist",
-          className: Ga().TopChartItem,
-          component: Ht.Ii,
+          className: La().TopChartItem,
+          component: Je.Ii,
           children: n
-            ? (0, r.jsx)(La, { Item: t })
-            : (0, r.jsx)(Ra, {
+            ? (0, r.jsx)(Pa, { Item: t })
+            : (0, r.jsx)(Ua, {
                 strName: t.GetName(),
                 bExcludedByPreferences: a,
               }),
         });
       }
-      function La(e) {
+      function Pa(e) {
         const { Item: t } = e,
           a = t.GetAppID(),
-          n = (0, ka.DJ)(t),
-          { bIsOwned: s } = (0, Aa.ZJ)(n),
-          o = (0, Na.bB)(a);
+          n = (0, Aa.DJ)(t),
+          { bIsOwned: s } = (0, Ga.ZJ)(n),
+          o = (0, Ma.bB)(a);
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (s || o) &&
               (0, r.jsx)("div", {
-                className: Ga().CapsuleDecorator,
+                className: La().CapsuleDecorator,
                 children: (0, r.jsxs)("span", {
-                  className: (0, ve.A)(Ga().Banner),
+                  className: (0, je.A)(La().Banner),
                   children: [
                     s
-                      ? (0, r.jsx)(ue.oQr, { className: Ga().LinesImg })
-                      : (0, r.jsx)(ue.qnF, { className: Ga().LinesImg }),
+                      ? (0, r.jsx)(de.oQr, { className: La().LinesImg })
+                      : (0, r.jsx)(de.qnF, { className: La().LinesImg }),
                     (0, r.jsx)("div", {
-                      className: Ga().BannerText,
-                      children: (0, be.we)(
+                      className: La().BannerText,
+                      children: (0, ve.we)(
                         s ? "#Sale_InLibrary" : "#Sale_OnWishlist",
                       ),
                     }),
@@ -8830,128 +8861,128 @@
                 }),
               }),
             (0, r.jsx)("img", {
-              className: Ga().CapsuleArt,
+              className: La().CapsuleArt,
               src: t.GetAssets().GetSmallCapsuleURL(),
             }),
             (0, r.jsx)("div", {
-              className: Ga().GameName,
+              className: La().GameName,
               children: t.GetName(),
             }),
           ],
         });
       }
-      function Ra(e) {
+      function Ua(e) {
         const { strName: t, bExcludedByPreferences: a } = e;
         return (0, r.jsxs)("div", {
-          className: Ga().GameName,
+          className: La().GameName,
           children: [
-            t || (0, be.we)("#SteamCharts_UnknownGameTitle"),
+            t || (0, ve.we)("#SteamCharts_UnknownGameTitle"),
             (0, r.jsx)("span", {
-              className: Ga().GameUnavailable,
+              className: La().GameUnavailable,
               children: a
-                ? (0, be.we)("#SteamCharts_BlockedByPreferences")
-                : (0, be.we)("#SteamCharts_UnavailableCountryRestriction"),
+                ? (0, ve.we)("#SteamCharts_BlockedByPreferences")
+                : (0, ve.we)("#SteamCharts_UnavailableCountryRestriction"),
             }),
           ],
         });
       }
-      function Ea(e) {
+      function Oa(e) {
         const { children: t, mostPlayedOption: a } = e;
         return (0, r.jsxs)("table", {
-          className: Ga().ChartTable,
+          className: La().ChartTable,
           children: [
             (0, r.jsx)("thead", {
-              className: Ga().ColumnHeaders,
+              className: La().ColumnHeaders,
               children: (0, r.jsxs)("tr", {
                 children: [
-                  (0, r.jsx)("th", { className: Ga().HoverCell }),
+                  (0, r.jsx)("th", { className: La().HoverCell }),
                   (0, r.jsx)("th", {
-                    className: Ga().Rank,
+                    className: La().Rank,
                     colSpan: 2,
                     children: (0, r.jsx)("span", {
-                      children: (0, be.we)("#SteamCharts_TopSellers_TableRank"),
+                      children: (0, ve.we)("#SteamCharts_TopSellers_TableRank"),
                     }),
                   }),
                   (0, r.jsx)("th", {
-                    className: (0, ve.A)(Ga().RightCell, Ga().Price),
-                    children: (0, be.we)("#SteamCharts_TopSellers_TablePrice"),
+                    className: (0, je.A)(La().RightCell, La().Price),
+                    children: (0, ve.we)("#SteamCharts_TopSellers_TablePrice"),
                   }),
-                  (0, r.jsx)(Pa, { mostPlayedOption: a }),
+                  (0, r.jsx)(Fa, { mostPlayedOption: a }),
                   (0, r.jsx)("th", {
-                    className: (0, ve.A)(Ga().RightCell, Ga().PeakInGame),
-                    children: (0, r.jsxs)(je.he, {
-                      className: Ga().Tooltip,
-                      toolTipContent: (0, be.we)(
+                    className: (0, je.A)(La().RightCell, La().PeakInGame),
+                    children: (0, r.jsxs)(Ce.he, {
+                      className: La().Tooltip,
+                      toolTipContent: (0, ve.we)(
                         "#SteamCharts_TopSellers_TablePeakInGame_Tooltip",
                       ),
                       direction: "top",
                       children: [
-                        (0, be.we)("#SteamCharts_TopSellers_TablePeakInGame"),
+                        (0, ve.we)("#SteamCharts_TopSellers_TablePeakInGame"),
                         " ",
-                        (0, r.jsx)(ue._VW, {}),
+                        (0, r.jsx)(de._VW, {}),
                       ],
                     }),
                   }),
                 ],
               }),
             }),
-            (0, r.jsx)("tbody", { className: Ga().ListRowsCtn, children: t }),
+            (0, r.jsx)("tbody", { className: La().ListRowsCtn, children: t }),
           ],
         });
       }
-      function Pa(e) {
+      function Fa(e) {
         return e.mostPlayedOption === n.DailyActiveUsers
           ? (0, r.jsx)("th", {
-              className: Ga().Change,
+              className: La().Change,
               align: "right",
-              children: (0, r.jsxs)(je.he, {
-                className: Ga().Tooltip,
-                toolTipContent: (0, be.we)(
+              children: (0, r.jsxs)(Ce.he, {
+                className: La().Tooltip,
+                toolTipContent: (0, ve.we)(
                   "#SteamCharts_TopSellers_TableChangeTooltip",
                 ),
                 direction: "top",
                 children: [
                   (0, r.jsx)("span", {
-                    children: (0, be.we)("#SteamCharts_TopSellers_TableChange"),
+                    children: (0, ve.we)("#SteamCharts_TopSellers_TableChange"),
                   }),
                   " ",
-                  (0, r.jsx)(ue._VW, {}),
+                  (0, r.jsx)(de._VW, {}),
                 ],
               }),
             })
           : (0, r.jsx)("th", {
-              className: (0, ve.A)(Ga().RightCell, Ga().Concurrent),
-              children: (0, r.jsxs)(je.he, {
-                className: Ga().Tooltip,
-                toolTipContent: (0, be.we)(
+              className: (0, je.A)(La().RightCell, La().Concurrent),
+              children: (0, r.jsxs)(Ce.he, {
+                className: La().Tooltip,
+                toolTipContent: (0, ve.we)(
                   "#SteamCharts_TopSellers_TableCurrentPlayersTooltip",
                 ),
                 direction: "top",
                 children: [
-                  (0, be.we)("#SteamCharts_TopSellers_TableCurrentPlayers"),
+                  (0, ve.we)("#SteamCharts_TopSellers_TableCurrentPlayers"),
                   " ",
-                  (0, r.jsx)(ue._VW, {}),
+                  (0, r.jsx)(de._VW, {}),
                 ],
               }),
             });
       }
-      function Ua(e) {
+      function Ha(e) {
         const {
             nRank: t,
             Item: a,
             strPeakInGame: n,
             renderOptionBasedCell: s,
           } = e,
-          o = (0, Ta.Z)(a),
-          i = (0, ka.DJ)(a);
+          o = (0, Na.Z)(a),
+          i = (0, Aa.DJ)(a);
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)("td", {
-              className: Ga().HoverCell,
+              className: La().HoverCell,
               children:
                 !o &&
-                (0, r.jsx)(Da.Q, {
-                  className: Ga().HoverSource,
+                (0, r.jsx)(Ba.Q, {
+                  className: La().HoverSource,
                   id: i,
                   hoverProps: {
                     direction: "right",
@@ -8959,147 +8990,147 @@
                     nBodyDistance: 0,
                     style: { width: "400px", height: "250px" },
                   },
-                  children: (0, r.jsx)("div", { className: Ga().HoverMask }),
+                  children: (0, r.jsx)("div", { className: La().HoverMask }),
                 }),
             }),
-            (0, r.jsx)("td", { className: Ga().RankCell, children: t }),
+            (0, r.jsx)("td", { className: La().RankCell, children: t }),
             (0, r.jsx)("td", {
-              className: (0, ve.A)(
-                Ga().CapsuleCell,
-                !a.BIsVisible() && Ga().Unavailable,
+              className: (0, je.A)(
+                La().CapsuleCell,
+                !a.BIsVisible() && La().Unavailable,
               ),
-              children: (0, r.jsx)(Ma, { Item: a }),
+              children: (0, r.jsx)(Ea, { Item: a }),
             }),
             (0, r.jsx)("td", {
-              className: Ga().PriceCell,
+              className: La().PriceCell,
               children: (0, r.jsx)("div", {
-                className: Ga().PriceWidget,
-                children: (0, r.jsx)(wa.NF, { id: i }),
+                className: La().PriceWidget,
+                children: (0, r.jsx)(ka.NF, { id: i }),
               }),
             }),
             s(),
-            (0, r.jsx)("td", { className: Ga().PeakInGameCell, children: n }),
+            (0, r.jsx)("td", { className: La().PeakInGameCell, children: n }),
           ],
         });
       }
-      function Oa(e) {
+      function Wa(e) {
         const { rank: t } = e,
           { nRank: a, Item: n, nRankLastWeek: s, nPeakInGame: o } = t,
-          i = (0, vt.Dq)(o),
-          l = (0, ya.n9)(),
-          c = (0, Ia.wJ)(n.GetStorePageURL(), l);
+          i = (0, yt.Dq)(o),
+          l = (0, Ta.n9)(),
+          c = (0, Da.wJ)(n.GetStorePageURL(), l);
         return (0, r.jsx)("tr", {
           onClick: () => (window.location.href = c),
-          className: Ga().TableRow,
-          children: (0, r.jsx)(Ua, {
+          className: La().TableRow,
+          children: (0, r.jsx)(Ha, {
             nRank: a,
             Item: n,
             strPeakInGame: i,
             renderOptionBasedCell: () =>
-              (0, r.jsx)(Fa, { nRank: a, nRankLastWeek: s }),
+              (0, r.jsx)(za, { nRank: a, nRankLastWeek: s }),
           }),
         });
       }
-      function Fa(e) {
+      function za(e) {
         const { nRank: t, nRankLastWeek: a } = e,
-          { direction: n, symbol: s } = Ct(a, t);
+          { direction: n, symbol: s } = ft(a, t);
         return (0, r.jsx)("td", {
-          className: (0, ve.A)(Ga().ChangeCell, n),
-          children: (0, r.jsx)(je.he, {
-            className: Ga().Tooltip,
-            toolTipContent: (0, be.we)("#SteamCharts_TopSellers_ChangeTooltip"),
+          className: (0, je.A)(La().ChangeCell, n),
+          children: (0, r.jsx)(Ce.he, {
+            className: La().Tooltip,
+            toolTipContent: (0, ve.we)("#SteamCharts_TopSellers_ChangeTooltip"),
             direction: "top",
             children:
               a && a > 0 && a <= 100
                 ? `${s} ${Math.abs(a - t)}`
                 : (0, r.jsx)("span", {
-                    className: Ga().ListWeeksDebut,
-                    children: (0, be.we)("#SteamCharts_TopSellers_TableNew"),
+                    className: La().ListWeeksDebut,
+                    children: (0, ve.we)("#SteamCharts_TopSellers_TableNew"),
                   }),
           }),
         });
       }
-      function Ha(e) {
+      function qa(e) {
         const { rank: t } = e,
           { nRank: a, Item: n, nConcurrentInGame: s, nPeakInGame: o } = t,
-          i = (0, vt.Dq)(s),
-          l = (0, vt.Dq)(o),
-          c = (0, ya.n9)(),
-          d = (0, Ia.wJ)(n.GetStorePageURL(), c);
+          i = (0, yt.Dq)(s),
+          l = (0, yt.Dq)(o),
+          c = (0, Ta.n9)(),
+          d = (0, Da.wJ)(n.GetStorePageURL(), c);
         return (0, r.jsx)("tr", {
           onClick: () => (window.location.href = d),
-          className: Ga().TableRow,
-          children: (0, r.jsx)(Ua, {
+          className: La().TableRow,
+          children: (0, r.jsx)(Ha, {
             nRank: a,
             Item: n,
             strPeakInGame: l,
             renderOptionBasedCell: () =>
               (0, r.jsx)("td", {
-                className: (0, ve.A)(Ga().ConcurrentCell),
+                className: (0, je.A)(La().ConcurrentCell),
                 children: i,
               }),
           }),
         });
       }
-      var Wa = a(56283);
-      function za(e) {
+      var Ya = a(56283);
+      function Va(e) {
         const { src: t } = e;
         return (0, r.jsx)("img", {
           src: t,
           className: ne().ChartTopGameBackground,
         });
       }
-      function qa(e) {
+      function Za(e) {
         const { MostPlayedStore: t } = e,
           [a, s] = j.useState(n.ConcurrentUsers);
-        return (0, r.jsx)(Ut.m, {
-          title: (0, be.we)("#SteamCharts_Menu_MostPlayed"),
-          children: (0, r.jsxs)(Qe.Z, {
+        return (0, r.jsx)(Wt.m, {
+          title: (0, ve.we)("#SteamCharts_Menu_MostPlayed"),
+          children: (0, r.jsxs)(Ke.Z, {
             className: ne().ChartPage,
             children: [
               (0, r.jsx)("div", {
-                className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
+                className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
                 children: (0, r.jsx)("h1", {
-                  children: (0, be.we)("#SteamCharts_Menu_MostPlayed"),
+                  children: (0, ve.we)("#SteamCharts_Menu_MostPlayed"),
                 }),
               }),
               (0, r.jsxs)("div", {
                 className: se().PageSubtitle,
                 children: [
-                  (0, be.we)("#SteamCharts_Menu_MostPlayed_Subtitle"),
-                  (0, r.jsx)(Ya, { selected: a, setOptionState: s }),
+                  (0, ve.we)("#SteamCharts_Menu_MostPlayed_Subtitle"),
+                  (0, r.jsx)(Ka, { selected: a, setOptionState: s }),
                 ],
               }),
-              (0, r.jsx)(Qe.Z, {
-                className: Ga().ChartPlaceholder,
+              (0, r.jsx)(Ke.Z, {
+                className: La().ChartPlaceholder,
                 children:
                   a === n.DailyActiveUsers
-                    ? (0, r.jsx)(Va, { MostPlayedStore: t })
-                    : (0, r.jsx)(Za, { MostPlayedStore: t }),
+                    ? (0, r.jsx)(Qa, { MostPlayedStore: t })
+                    : (0, r.jsx)(Xa, { MostPlayedStore: t }),
               }),
             ],
           }),
         });
       }
-      function Ya(e) {
+      function Ka(e) {
         const { selected: t, setOptionState: a } = e,
           s = [
             {
               data: n.ConcurrentUsers,
-              label: (0, be.we)(
+              label: (0, ve.we)(
                 "#SteamCharts_Menu_ByConcurrentPlayersSubtitle",
               ),
             },
             {
               data: n.DailyActiveUsers,
-              label: (0, be.we)("#SteamCharts_Menu_ByDailyActiveUsersSubtitle"),
+              label: (0, ve.we)("#SteamCharts_Menu_ByDailyActiveUsersSubtitle"),
             },
           ];
         return (0, r.jsx)("div", {
-          className: Ga().MostPlayedOptionsControl,
+          className: La().MostPlayedOptionsControl,
           children: (0, r.jsx)("div", {
-            className: Ga().DropDownContainer,
-            children: (0, r.jsx)(Wa.ZU, {
+            className: La().DropDownContainer,
+            children: (0, r.jsx)(Ya.ZU, {
               rgOptions: s,
               selectedOption: t,
               onChange: (e) => {
@@ -9109,7 +9140,7 @@
           }),
         });
       }
-      function Va(e) {
+      function Qa(e) {
         const { MostPlayedStore: t } = e,
           a = (function (e) {
             return (0, i.I)({
@@ -9118,7 +9149,7 @@
               staleTime: 36e5,
             });
           })(t);
-        if (a.isLoading) return (0, r.jsx)(Te.t, { position: "center" });
+        if (a.isLoading) return (0, r.jsx)(ke.t, { position: "center" });
         if (a.isError)
           return (0, r.jsx)("div", {
             children: (0, r.jsx)("h3", {
@@ -9136,12 +9167,12 @@
                 : s.GetAssets().GetPageBackgroundURL()),
           (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(za, { src: o }),
-              (0, r.jsx)(Ea, {
+              (0, r.jsx)(Va, { src: o }),
+              (0, r.jsx)(Oa, {
                 mostPlayedOption: n.DailyActiveUsers,
                 children: a.data.rgRanks.map((e, t) =>
                   (0, r.jsx)(
-                    Oa,
+                    Wa,
                     {
                       rank: {
                         nRank: t + 1,
@@ -9158,10 +9189,10 @@
           })
         );
       }
-      function Za(e) {
+      function Xa(e) {
         const { MostPlayedStore: t } = e,
           a = S(t);
-        if (a.isLoading) return (0, r.jsx)(Te.t, { position: "center" });
+        if (a.isLoading) return (0, r.jsx)(ke.t, { position: "center" });
         if (a.isError)
           return (0, r.jsx)("div", {
             children: (0, r.jsx)("h3", {
@@ -9179,12 +9210,12 @@
                 : s.GetAssets().GetPageBackgroundURL()),
           (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(za, { src: o }),
-              (0, r.jsx)(Ea, {
+              (0, r.jsx)(Va, { src: o }),
+              (0, r.jsx)(Oa, {
                 mostPlayedOption: n.ConcurrentUsers,
                 children: a.data.rgRanks.map((e, t) =>
                   (0, r.jsx)(
-                    Ha,
+                    qa,
                     {
                       rank: {
                         nRank: t + 1,
@@ -9201,104 +9232,104 @@
           })
         );
       }
-      function Ka(e) {
+      function Ja(e) {
         const { children: t } = e;
         return (0, r.jsxs)("table", {
-          className: Ga().ChartTable,
+          className: La().ChartTable,
           children: [
             (0, r.jsx)("thead", {
-              className: Ga().ColumnHeaders,
+              className: La().ColumnHeaders,
               children: (0, r.jsxs)("tr", {
                 children: [
-                  (0, r.jsx)("th", { className: Ga().HoverCell }),
+                  (0, r.jsx)("th", { className: La().HoverCell }),
                   (0, r.jsx)("th", {
-                    className: Ga().Rank,
+                    className: La().Rank,
                     colSpan: 2,
                     children: (0, r.jsx)("span", {
-                      children: (0, be.we)("#SteamCharts_TopSellers_TableRank"),
+                      children: (0, ve.we)("#SteamCharts_TopSellers_TableRank"),
                     }),
                   }),
                   (0, r.jsx)("th", {
-                    className: (0, ve.A)(Ga().RightCell, Ga().Price),
-                    children: (0, r.jsxs)(je.he, {
-                      className: Ga().Tooltip,
-                      toolTipContent: (0, be.we)(
+                    className: (0, je.A)(La().RightCell, La().Price),
+                    children: (0, r.jsxs)(Ce.he, {
+                      className: La().Tooltip,
+                      toolTipContent: (0, ve.we)(
                         "#SteamCharts_TopSellers_TablePriceTooltip",
                       ),
                       direction: "top",
                       children: [
-                        (0, be.we)("#SteamCharts_TopSellers_TablePrice"),
+                        (0, ve.we)("#SteamCharts_TopSellers_TablePrice"),
                         " ",
-                        (0, r.jsx)(ue._VW, {}),
+                        (0, r.jsx)(de._VW, {}),
                       ],
                     }),
                   }),
                   (0, r.jsx)("th", {
-                    className: Ga().Change,
+                    className: La().Change,
                     align: "right",
-                    children: (0, r.jsxs)(je.he, {
-                      className: Ga().Tooltip,
-                      toolTipContent: (0, be.we)(
+                    children: (0, r.jsxs)(Ce.he, {
+                      className: La().Tooltip,
+                      toolTipContent: (0, ve.we)(
                         "#SteamCharts_TopSellers_TableChangeTooltip",
                       ),
                       direction: "top",
                       children: [
                         (0, r.jsx)("span", {
-                          children: (0, be.we)(
+                          children: (0, ve.we)(
                             "#SteamCharts_TopSellers_TableChange",
                           ),
                         }),
                         " ",
-                        (0, r.jsx)(ue._VW, {}),
+                        (0, r.jsx)(de._VW, {}),
                       ],
                     }),
                   }),
                   (0, r.jsx)("th", {
-                    className: Ga().Weeks,
+                    className: La().Weeks,
                     align: "right",
-                    children: (0, r.jsxs)(je.he, {
-                      className: Ga().Tooltip,
-                      toolTipContent: (0, be.we)(
+                    children: (0, r.jsxs)(Ce.he, {
+                      className: La().Tooltip,
+                      toolTipContent: (0, ve.we)(
                         "#SteamCharts_TopSellers_TableWeeksTooltip",
                       ),
                       direction: "top",
                       children: [
-                        (0, be.we)("#SteamCharts_TopSellers_TableWeeks"),
+                        (0, ve.we)("#SteamCharts_TopSellers_TableWeeks"),
                         " ",
-                        (0, r.jsx)(ue._VW, {}),
+                        (0, r.jsx)(de._VW, {}),
                       ],
                     }),
                   }),
                 ],
               }),
             }),
-            (0, r.jsx)("tbody", { className: Ga().ListRowsCtn, children: t }),
+            (0, r.jsx)("tbody", { className: La().ListRowsCtn, children: t }),
           ],
         });
       }
-      function Qa(e) {
+      function $a(e) {
         const { rank: t } = e,
           { nRank: a, Item: n, nRankLastWeek: s, nConsecutiveWeeks: o } = t,
-          i = (0, Ta.Z)(n),
-          l = (0, ya.n9)(),
-          c = (0, Ia.wJ)(n.GetStorePageURL(), l),
-          d = (0, ka.DJ)(n),
+          i = (0, Na.Z)(n),
+          l = (0, Ta.n9)(),
+          c = (0, Da.wJ)(n.GetStorePageURL(), l),
+          d = (0, Aa.DJ)(n),
           u = n.GetBestPurchaseOption();
         let m = "";
         n.BIsFree()
-          ? (m = (0, be.we)("#SteamCharts_TopSellers_TableFree"))
+          ? (m = (0, ve.we)("#SteamCharts_TopSellers_TableFree"))
           : u && (m = u.formatted_final_price);
-        const p = (0, vt.Dq)(o);
+        const p = (0, yt.Dq)(o);
         return (0, r.jsxs)("tr", {
-          className: Ga().TableRow,
+          className: La().TableRow,
           onClick: () => (window.location.href = c),
           children: [
             (0, r.jsx)("td", {
-              className: Ga().HoverCell,
+              className: La().HoverCell,
               children:
                 !i &&
-                (0, r.jsx)(Da.Q, {
-                  className: Ga().HoverSource,
+                (0, r.jsx)(Ba.Q, {
+                  className: La().HoverSource,
                   id: d,
                   hoverProps: {
                     direction: "right",
@@ -9306,30 +9337,30 @@
                     nBodyDistance: 0,
                     style: { width: "400px", height: "250px" },
                   },
-                  children: (0, r.jsx)("div", { className: Ga().HoverMask }),
+                  children: (0, r.jsx)("div", { className: La().HoverMask }),
                 }),
             }),
-            (0, r.jsx)("td", { className: Ga().RankCell, children: a }),
+            (0, r.jsx)("td", { className: La().RankCell, children: a }),
             (0, r.jsx)("td", {
-              className: (0, ve.A)(
-                Ga().CapsuleCell,
-                !n.BIsVisible() && Ga().Unavailable,
+              className: (0, je.A)(
+                La().CapsuleCell,
+                !n.BIsVisible() && La().Unavailable,
               ),
-              children: (0, r.jsx)(Ma, { Item: n }),
+              children: (0, r.jsx)(Ea, { Item: n }),
             }),
             (0, r.jsx)("td", {
-              className: Ga().PriceCell,
+              className: La().PriceCell,
               children: (0, r.jsx)("div", {
-                className: Ga().PriceWidget,
-                children: (0, r.jsx)(wa.NF, { id: d }),
+                className: La().PriceWidget,
+                children: (0, r.jsx)(ka.NF, { id: d }),
               }),
             }),
-            (0, r.jsx)(Xa, { rank: t }),
+            (0, r.jsx)(en, { rank: t }),
             (0, r.jsx)("td", {
-              className: Ga().WeeksCell,
-              children: (0, r.jsx)(je.he, {
-                className: Ga().Tooltip,
-                toolTipContent: (0, be.we)(
+              className: La().WeeksCell,
+              children: (0, r.jsx)(Ce.he, {
+                className: La().Tooltip,
+                toolTipContent: (0, ve.we)(
                   "#SteamCharts_TopSellers_NumTooltip",
                 ),
                 direction: "top",
@@ -9339,10 +9370,10 @@
           ],
         });
       }
-      function Xa(e) {
+      function en(e) {
         const { rank: t } = e,
           { nRank: a, nRankLastWeek: n, bFirstTop100: s } = t,
-          { direction: o, symbol: i } = Ct(n, a);
+          { direction: o, symbol: i } = ft(n, a);
         let l;
         return (
           (l =
@@ -9350,20 +9381,20 @@
               ? `${i} ${Math.abs(n - a)}`
               : s
                 ? (0, r.jsx)("span", {
-                    className: Ga().ListWeeksDebut,
-                    children: (0, be.we)("#SteamCharts_TopSellers_TableNew"),
+                    className: La().ListWeeksDebut,
+                    children: (0, ve.we)("#SteamCharts_TopSellers_TableNew"),
                   })
                 : (0, r.jsx)("span", {
-                    className: Ga().ListWeeksReturning,
-                    children: (0, be.we)(
+                    className: La().ListWeeksReturning,
+                    children: (0, ve.we)(
                       "#SteamCharts_TopSellers_TableReturning",
                     ),
                   })),
           (0, r.jsx)("td", {
-            className: (0, ve.A)(Ga().ChangeCell, o),
-            children: (0, r.jsx)(je.he, {
-              className: Ga().Tooltip,
-              toolTipContent: (0, be.we)(
+            className: (0, je.A)(La().ChangeCell, o),
+            children: (0, r.jsx)(Ce.he, {
+              className: La().Tooltip,
+              toolTipContent: (0, ve.we)(
                 "#SteamCharts_TopSellers_ChangeTooltip",
               ),
               direction: "top",
@@ -9372,7 +9403,7 @@
           })
         );
       }
-      function Ja(e) {
+      function tn(e) {
         const {
             TopSellersStore: t,
             strCountryCode: a,
@@ -9383,7 +9414,7 @@
             () => [
               {
                 data: "",
-                label: (0, be.we)("#SteamCharts_TopSellers_GlobalTopSellers"),
+                label: (0, ve.we)("#SteamCharts_TopSellers_GlobalTopSellers"),
               },
               ...s.map(({ country_code: e, name: t }) => ({
                 data: e,
@@ -9393,10 +9424,10 @@
             [s],
           );
         return (0, r.jsx)("div", {
-          className: Ga().CountryControl,
+          className: La().CountryControl,
           children: (0, r.jsx)("div", {
-            className: Ga().DropDownContainer,
-            children: (0, r.jsx)(Wa.ZU, {
+            className: La().DropDownContainer,
+            children: (0, r.jsx)(Ya.ZU, {
               rgOptions: o,
               selectedOption: a,
               onChange: n,
@@ -9404,32 +9435,32 @@
           }),
         });
       }
-      function $a(e) {
+      function an(e) {
         const { TopSellersStore: t, overrideCountry: a } = e,
-          n = St(a),
-          s = (0, oe.W6)(),
+          n = bt(a),
+          s = Xe(),
           o = j.useCallback(
             (e) => {
               const t = e.data;
-              s.replace(Tn.TopSelling(xt(t)));
+              s(Nn.TopSelling(vt(t)), { bReplace: !0 });
             },
             [s],
           ),
-          { rtCurrentWeek: i, bCountryListInitialized: l } = U(t, L.TS.COUNTRY),
-          c = jt(t, l, a, Tn.TopSelling);
-        return (0, r.jsx)(Ut.m, {
-          title: (0, be.we)("#SteamCharts_Menu_TopSelling"),
-          children: (0, r.jsxs)(Qe.Z, {
+          { rtCurrentWeek: i, bCountryListInitialized: l } = U(t, R.TS.COUNTRY),
+          c = wt(t, l, a, Nn.TopSelling);
+        return (0, r.jsx)(Wt.m, {
+          title: (0, ve.we)("#SteamCharts_Menu_TopSelling"),
+          children: (0, r.jsxs)(Ke.Z, {
             className: ne().ChartPage,
             children: [
               (0, r.jsxs)("div", {
-                className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
+                className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
                 children: [
                   (0, r.jsx)("h1", {
-                    children: (0, be.we)("#SteamCharts_Menu_TopSelling"),
+                    children: (0, ve.we)("#SteamCharts_Menu_TopSelling"),
                   }),
-                  (0, r.jsx)(Nt.tH, {
-                    children: (0, r.jsx)(Ja, {
+                  (0, r.jsx)(Rt.tH, {
+                    children: (0, r.jsx)(tn, {
                       TopSellersStore: t,
                       strCountryCode: n,
                       onCountryCodeChanged: o,
@@ -9439,25 +9470,25 @@
               }),
               (0, r.jsx)("div", {
                 className: se().PageSubtitle,
-                children: (0, be.we)("#SteamCharts_Menu_TopSelling_Subtitle"),
+                children: (0, ve.we)("#SteamCharts_Menu_TopSelling_Subtitle"),
               }),
-              (0, r.jsx)(Qe.Z, {
-                className: Ga().ChartPlaceholder,
-                children: (0, r.jsx)(Nt.tH, {
+              (0, r.jsx)(Ke.Z, {
+                className: La().ChartPlaceholder,
+                children: (0, r.jsx)(Rt.tH, {
                   children:
                     i &&
                     c &&
-                    (0, r.jsx)(en, { TopSellersStore: t, overrideCountry: n }),
+                    (0, r.jsx)(nn, { TopSellersStore: t, overrideCountry: n }),
                 }),
               }),
             ],
           }),
         });
       }
-      function en(e) {
+      function nn(e) {
         const { TopSellersStore: t, overrideCountry: a } = e,
           { TopSellers: n, status: s } = H(t, t.GetPreviousWeek(), a, 100),
-          i = (0, Rt.PG)(
+          i = (0, Ot.PG)(
             "SteamCharts Live Top Sellers",
             { sort: a ? o.Dq.JB : o.Dq.Rm, start: 0, count: 100 },
             te,
@@ -9485,7 +9516,7 @@
           );
         if (!l)
           return "loading" === s || i.isLoading
-            ? (0, r.jsx)(Te.t, { position: "center" })
+            ? (0, r.jsx)(ke.t, { position: "center" })
             : null;
         const c = l[0]?.Item;
         let d;
@@ -9497,31 +9528,31 @@
                 : c.GetAssets().GetPageBackgroundURL()),
           (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(za, { src: d }),
-              (0, r.jsx)(Ka, {
+              (0, r.jsx)(Va, { src: d }),
+              (0, r.jsx)(Ja, {
                 children: l.map((e) =>
                   (0, r.jsx)(
-                    Nt.tH,
-                    { children: (0, r.jsx)(Qa, { rank: e }) },
+                    Rt.tH,
+                    { children: (0, r.jsx)($a, { rank: e }) },
                     e.nRank,
                   ),
                 ),
               }),
               (0, r.jsx)("div", {
-                className: Ga().BrowseTopSellersButton,
-                children: (0, r.jsx)(Wa.jn, {
+                className: La().BrowseTopSellersButton,
+                children: (0, r.jsx)(Ya.jn, {
                   onClick: () => {
-                    window.location.href = `${L.TS.STORE_BASE_URL}search/?filter=${a ? "topsellers" : "globaltopsellers"}`;
+                    window.location.href = `${R.TS.STORE_BASE_URL}search/?filter=${a ? "topsellers" : "globaltopsellers"}`;
                   },
-                  children: (0, be.we)("#SteamCharts_TopSellers_Browse"),
+                  children: (0, ve.we)("#SteamCharts_TopSellers_Browse"),
                 }),
               }),
             ],
           })
         );
       }
-      var tn = a(76011);
-      function an(e) {
+      var rn = a(76011);
+      function sn(e) {
         const { TopSellersStore: t, week: a, country: n } = e;
         let s = (function (e) {
             if (e) {
@@ -9543,36 +9574,36 @@
               }
             }
           })(a),
-          o = St(n);
+          o = bt(n);
         const { rtCurrentWeek: i, bCountryListInitialized: l } = U(t, o);
-        i && (!s || s > i) && (s = i), s < pt && (s = pt);
-        const c = j.useCallback((e) => Tn.TopSellers(e, _t(s)), [s]),
-          d = jt(t, l, n, c),
-          u = (0, oe.W6)(),
-          m = a && _t(s) == a;
+        i && (!s || s > i) && (s = i), s < xt && (s = xt);
+        const c = j.useCallback((e) => Nn.TopSellers(e, jt(s)), [s]),
+          d = wt(t, l, n, c),
+          u = Xe(),
+          m = a && jt(s) == a;
         return (
           (0, j.useEffect)(() => {
-            d && !m && u.replace(Tn.TopSellers(n, _t(s)));
+            d && !m && u(Nn.TopSellers(n, jt(s)), { bReplace: !0 });
           }, [u, m, s, d, n]),
           s && d && m
-            ? (0, r.jsx)(Ut.m, {
+            ? (0, r.jsx)(Wt.m, {
                 title:
-                  (0, be.we)("#SteamCharts_TopSellers_PageTitle") +
+                  (0, ve.we)("#SteamCharts_TopSellers_PageTitle") +
                   " - " +
-                  gt(s),
-                children: (0, r.jsxs)(Qe.Z, {
+                  St(s),
+                children: (0, r.jsxs)(Ke.Z, {
                   className: ne().ChartPage,
                   children: [
                     (0, r.jsxs)("div", {
-                      className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
+                      className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
                       children: [
                         (0, r.jsx)("h1", {
-                          children: (0, be.we)(
+                          children: (0, ve.we)(
                             "#SteamCharts_TopSellers_PageTitle",
                           ),
                         }),
-                        (0, r.jsx)(Nt.tH, {
-                          children: (0, r.jsx)(sn, {
+                        (0, r.jsx)(Rt.tH, {
+                          children: (0, r.jsx)(cn, {
                             TopSellersStore: t,
                             rtWeekStart: s,
                             strCountryCode: o,
@@ -9583,26 +9614,26 @@
                     (0, r.jsxs)("div", {
                       className: se().PageSubtitle,
                       children: [
-                        (0, be.we)("#SteamCharts_TopSellers_PageSubTitle"),
+                        (0, ve.we)("#SteamCharts_TopSellers_PageSubTitle"),
                         " ",
                         (0, r.jsx)("span", {
-                          children: (0, be.we)(
+                          children: (0, ve.we)(
                             "#SteamCharts_TopSellers_PageSubTitle_subtext",
                           ),
                         }),
                       ],
                     }),
-                    (0, r.jsx)(Nt.tH, {
-                      children: (0, r.jsx)(nn, {
+                    (0, r.jsx)(Rt.tH, {
+                      children: (0, r.jsx)(on, {
                         rtWeekStart: s,
                         strCountryCode: o,
                         rtMaxWeekStart: t.GetCurrentWeek(),
                       }),
                     }),
-                    (0, r.jsx)(Qe.Z, {
-                      className: Ga().ChartPlaceholder,
-                      children: (0, r.jsx)(Nt.tH, {
-                        children: (0, r.jsx)(on, {
+                    (0, r.jsx)(Ke.Z, {
+                      className: La().ChartPlaceholder,
+                      children: (0, r.jsx)(Rt.tH, {
+                        children: (0, r.jsx)(dn, {
                           TopSellersStore: t,
                           rtWeekStart: s,
                           strCountryCode: o,
@@ -9615,24 +9646,24 @@
             : null
         );
       }
-      function nn(e) {
+      function on(e) {
         const { rtWeekStart: t, strCountryCode: a, rtMaxWeekStart: n } = e,
           s = 604800;
         let o, i;
         return (
-          (o = t - s < pt ? void 0 : Tn.TopSellers(xt(a), _t(t - s))),
-          (i = t >= n ? void 0 : Tn.TopSellers(xt(a), _t(t + s))),
-          (0, r.jsxs)(Qe.Z, {
+          (o = t - s < xt ? void 0 : Nn.TopSellers(vt(a), jt(t - s))),
+          (i = t >= n ? void 0 : Nn.TopSellers(vt(a), jt(t + s))),
+          (0, r.jsxs)(Ke.Z, {
             className: se().ChartRangeCtn,
             children: [
-              (0, r.jsx)(rn, {
+              (0, r.jsx)(ln, {
                 strLink: o,
                 children: (0, r.jsx)("div", {
                   className: se().ChartNavPrev,
                   children: " ",
                 }),
               }),
-              (0, r.jsx)(rn, {
+              (0, r.jsx)(ln, {
                 strLink: i,
                 children: (0, r.jsx)("div", {
                   className: se().ChartNavNext,
@@ -9640,38 +9671,39 @@
                 }),
               }),
               (0, r.jsx)("div", {
-                className: (0, ve.A)(se().ChartRangeText, se().LongDate),
-                children: gt(t),
+                className: (0, je.A)(se().ChartRangeText, se().LongDate),
+                children: St(t),
               }),
               (0, r.jsx)("div", {
-                className: (0, ve.A)(se().ChartRangeText, se().ShortDate),
-                children: ht(t),
+                className: (0, je.A)(se().ChartRangeText, se().ShortDate),
+                children: Ct(t),
               }),
             ],
           })
         );
       }
-      function rn(e) {
+      function ln(e) {
         const { strLink: t, children: a } = e;
         return (0, r.jsx)("div", {
-          className: (0, ve.A)(se().ChartNavCtn, t ? "" : se().Disabled),
-          children: (0, r.jsx)(Xe.X, {
-            to: t ?? Tn.Overview(),
+          className: (0, je.A)(se().ChartNavCtn, t ? "" : se().Disabled),
+          children: (0, r.jsx)(tt, {
+            to: t ?? Nn.Overview(),
             onClick: t ? void 0 : (e) => e.preventDefault(),
             className: se().ChartNavHitArea,
             children: a,
           }),
         });
       }
-      function sn(e) {
+      function cn(e) {
         const { TopSellersStore: t, strCountryCode: a, rtWeekStart: n } = e,
           s = t.GetCountryList(),
-          o = (0, oe.W6)(),
-          i = j.useMemo(
+          o = Xe(),
+          i = (0, Qe.W6)(),
+          l = j.useMemo(
             () => [
               {
                 data: "",
-                label: (0, be.we)("#SteamCharts_TopSellers_GlobalTopSellers"),
+                label: (0, ve.we)("#SteamCharts_TopSellers_GlobalTopSellers"),
               },
               ...s.map(({ country_code: e, name: t }) => ({
                 data: e,
@@ -9680,28 +9712,31 @@
             ],
             [s],
           ),
-          l = j.useCallback(
+          c = j.useCallback(
             (e) => {
               const t = e.data;
-              o.replace(Tn.TopSellers(xt(t), _t(n)), o.location.state);
+              o(Nn.TopSellers(vt(t), jt(n)), {
+                bReplace: !0,
+                state: i.location.state,
+              });
             },
-            [o, n],
+            [o, i, n],
           );
         return (0, r.jsx)("div", {
-          className: Ga().CountryControl,
+          className: La().CountryControl,
           children: (0, r.jsx)("div", {
-            className: Ga().DropDownContainer,
-            children: (0, r.jsx)(Wa.ZU, {
-              rgOptions: i,
+            className: La().DropDownContainer,
+            children: (0, r.jsx)(Ya.ZU, {
+              rgOptions: l,
               selectedOption: a,
-              onChange: l,
+              onChange: c,
             }),
           }),
         });
       }
-      function on(e) {
+      function dn(e) {
         const { TopSellersStore: t, rtWeekStart: a, strCountryCode: n } = e,
-          [s, o] = (0, tn.SP)("TopSellersExpanded", !1),
+          [s, o] = (0, rn.SP)("TopSellersExpanded", !1),
           { TopSellers: i, status: l } = H(t, a, n, s ? 100 : 20),
           c = j.useCallback(() => o(!0), [o]);
         return "error" === l
@@ -9712,36 +9747,36 @@
             })
           : (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, r.jsx)(ln, { TopSellers: i }),
+                (0, r.jsx)(un, { TopSellers: i }),
                 i &&
-                  (0, r.jsx)(Ka, {
+                  (0, r.jsx)(Ja, {
                     children: i.rgRanks.map((e) =>
                       (0, r.jsx)(
-                        Nt.tH,
-                        { children: (0, r.jsx)(Qa, { rank: e }) },
+                        Rt.tH,
+                        { children: (0, r.jsx)($a, { rank: e }) },
                         e.nRank,
                       ),
                     ),
                   }),
                 20 === i?.rgRanks?.length &&
                   (0, r.jsx)("div", {
-                    className: Ga().WeeklyFooterControls,
+                    className: La().WeeklyFooterControls,
                     children:
                       ((!s && "loaded" == l) || (s && "loading" == l)) &&
-                      (0, r.jsx)(Wa.jn, {
+                      (0, r.jsx)(Ya.jn, {
                         onClick: c,
                         disabled: "loading" == l,
-                        children: (0, be.we)(
+                        children: (0, ve.we)(
                           "#SteamCharts_TopSellers_SeeAllNTopSellers",
                           100,
                         ),
                       }),
                   }),
-                "loading" == l && (0, r.jsx)(Te.t, { position: "center" }),
+                "loading" == l && (0, r.jsx)(ke.t, { position: "center" }),
               ],
             });
       }
-      const ln = j.memo((e) => {
+      const un = j.memo((e) => {
         const { TopSellers: t } = e,
           a = j.useRef(void 0);
         if (t && t.rgRanks.length) {
@@ -9753,12 +9788,12 @@
                 ? n.Item.GetAssets().GetLibraryHeroURL()
                 : n.Item.GetAssets().GetPageBackgroundURL());
         }
-        return a.current ? (0, r.jsx)(za, { src: a.current }) : null;
+        return a.current ? (0, r.jsx)(Va, { src: a.current }) : null;
       });
-      var cn = a(23809),
-        dn = a(93341),
-        un = a(25489);
-      function mn(e) {
+      var mn = a(23809),
+        pn = a(93341),
+        gn = a(25489);
+      function hn(e) {
         const { MostPlayedOnDeckStore: t, strTimePeriod: a } = e,
           { topPlayedPeriod: n, dateRangeString: s } = j.useMemo(() => {
             let e = m.HN.S6;
@@ -9766,58 +9801,58 @@
               n = t - 518400,
               r = t - 2505600,
               s = t - 31449600;
-            let o = (0, fe.nR)(n, t);
+            let o = (0, be.nR)(n, t);
             if (a)
               switch (a.toLowerCase()) {
                 case "pastmonth":
-                  (e = m.HN._p), (o = (0, fe.nR)(r, t));
+                  (e = m.HN._p), (o = (0, be.nR)(r, t));
                   break;
                 case "pastyear":
-                  (e = m.HN.p4), (o = (0, fe.nR)(s, t));
+                  (e = m.HN.p4), (o = (0, be.nR)(s, t));
                   break;
                 case "pastweek":
-                  (e = m.HN.S6), (o = (0, fe.nR)(n, t));
+                  (e = m.HN.S6), (o = (0, be.nR)(n, t));
               }
             return { topPlayedPeriod: e, dateRangeString: o };
           }, [a]),
-          o = (0, un.Tg)(1, 13),
+          o = (0, gn.Tg)(1, 13),
           i =
-            L.TS.BASE_URL_STORE_CDN_ASSETS +
+            R.TS.BASE_URL_STORE_CDN_ASSETS +
             `steamdeck/steamdeck_promo_0${o}.png?v=4`;
-        return (0, r.jsx)(Ut.m, {
-          title: (0, be.we)("#SteamCharts_MostPlayedDeck_Title"),
-          children: (0, r.jsxs)(Qe.Z, {
-            className: Ga().ChartPage,
+        return (0, r.jsx)(Wt.m, {
+          title: (0, ve.we)("#SteamCharts_MostPlayedDeck_Title"),
+          children: (0, r.jsxs)(Ke.Z, {
+            className: La().ChartPage,
             children: [
               (0, r.jsxs)("div", {
-                className: Ga().TopSectionFlex,
+                className: La().TopSectionFlex,
                 children: [
                   (0, r.jsxs)("div", {
-                    className: Ga().TopSectionCol,
+                    className: La().TopSectionCol,
                     children: [
                       (0, r.jsx)("div", {
-                        className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
+                        className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
                         children: (0, r.jsx)("h1", {
-                          children: (0, be.we)(
+                          children: (0, ve.we)(
                             "#SteamCharts_MostPlayedDeck_Title",
                           ),
                         }),
                       }),
                       (0, r.jsxs)("div", {
-                        className: (0, ve.A)(
+                        className: (0, je.A)(
                           se().PageSubtitle,
                           se().TopDeckSubtitle,
                         ),
                         children: [
-                          (0, be.we)("#SteamCharts_MostPlayedDeck_Subtitle"),
+                          (0, ve.we)("#SteamCharts_MostPlayedDeck_Subtitle"),
                           (0, r.jsx)("div", {
-                            className: Ga().SteamDeckChartDropdown,
-                            children: (0, r.jsx)(pn, { selected: a }),
+                            className: La().SteamDeckChartDropdown,
+                            children: (0, r.jsx)(_n, { selected: a }),
                           }),
                         ],
                       }),
                       (0, r.jsx)("div", {
-                        className: Ga().DeckChartDateRange,
+                        className: La().DeckChartDateRange,
                         children: s,
                       }),
                     ],
@@ -9825,30 +9860,30 @@
                   (0, r.jsx)("a", {
                     href: "https://store.steampowered.com/app/1675200/Steam_Deck/?utm_source=steamdeckcharts",
                     children: (0, r.jsxs)("div", {
-                      className: (0, ve.A)(
-                        Ga().SteamDeckBanner,
-                        Ga().TopSectionCol,
+                      className: (0, je.A)(
+                        La().SteamDeckBanner,
+                        La().TopSectionCol,
                       ),
                       children: [
                         (0, r.jsx)("div", {
-                          className: (0, ve.A)(
-                            Ga().SteamDeckImage,
-                            Ga().TopSectionCol,
+                          className: (0, je.A)(
+                            La().SteamDeckImage,
+                            La().TopSectionCol,
                           ),
                           children: (0, r.jsx)("img", { src: i }),
                         }),
                         (0, r.jsxs)("div", {
-                          className: Ga().SteamDeckBannerWords,
+                          className: La().SteamDeckBannerWords,
                           children: [
                             (0, r.jsx)("div", {
-                              className: Ga().SteamDeckBannerTitle,
-                              children: (0, be.we)(
+                              className: La().SteamDeckBannerTitle,
+                              children: (0, ve.we)(
                                 "#SteamCharts_SteamDeckPromo_Title",
                               ),
                             }),
                             (0, r.jsx)("div", {
-                              className: Ga().SteamDeckBannerDesc,
-                              children: (0, be.we)(
+                              className: La().SteamDeckBannerDesc,
+                              children: (0, ve.we)(
                                 "#SteamCharts_SteamDeckPromo_Desc",
                               ),
                             }),
@@ -9859,9 +9894,9 @@
                   }),
                 ],
               }),
-              (0, r.jsx)(Qe.Z, {
-                className: Ga().ChartPlaceholder,
-                children: (0, r.jsx)(gn, {
+              (0, r.jsx)(Ke.Z, {
+                className: La().ChartPlaceholder,
+                children: (0, r.jsx)(xn, {
                   MostPlayedOnDeckStore: t,
                   eTopPlayedPeriod: n,
                 }),
@@ -9870,34 +9905,34 @@
           }),
         });
       }
-      function pn(e) {
+      function _n(e) {
         const { selected: t } = e,
-          a = (0, oe.W6)(),
+          a = Xe(),
           n = [
             {
               data: "pastweek",
-              label: (0, be.we)("#SteamCharts_MostPlayedDeck_Option_PastWeek"),
+              label: (0, ve.we)("#SteamCharts_MostPlayedDeck_Option_PastWeek"),
             },
             {
               data: "pastmonth",
-              label: (0, be.we)("#SteamCharts_MostPlayedDeck_Option_PastMonth"),
+              label: (0, ve.we)("#SteamCharts_MostPlayedDeck_Option_PastMonth"),
             },
             {
               data: "pastyear",
-              label: (0, be.we)("#SteamCharts_MostPlayedDeck_Option_PastYear"),
+              label: (0, ve.we)("#SteamCharts_MostPlayedDeck_Option_PastYear"),
             },
           ],
           s = j.useCallback(
             (e) => {
-              a.push(Tn.MostPlayedOnSteamDeck(e.data));
+              a(Nn.MostPlayedOnSteamDeck(e.data));
             },
             [a],
           );
         return (0, r.jsx)("div", {
-          className: Ga().MostPlayedOptionsControl,
+          className: La().MostPlayedOptionsControl,
           children: (0, r.jsx)("div", {
-            className: Ga().DropDownContainer,
-            children: (0, r.jsx)(Wa.ZU, {
+            className: La().DropDownContainer,
+            children: (0, r.jsx)(Ya.ZU, {
               rgOptions: n,
               selectedOption: t ?? "pastweek",
               onChange: s,
@@ -9905,7 +9940,7 @@
           }),
         });
       }
-      function gn(e) {
+      function xn(e) {
         const { MostPlayedOnDeckStore: t, eTopPlayedPeriod: a } = e,
           n = (function (e, t) {
             return (0, i.I)({
@@ -9914,7 +9949,7 @@
               staleTime: 36e5,
             });
           })(t, a);
-        if (n.isLoading) return (0, r.jsx)(Te.t, { position: "center" });
+        if (n.isLoading) return (0, r.jsx)(ke.t, { position: "center" });
         if (n.isError)
           return (0, r.jsx)("div", {
             children: (0, r.jsx)("h3", {
@@ -9932,12 +9967,12 @@
                 : s.GetAssets().GetPageBackgroundURL()),
           (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(za, { src: o }),
-              (0, r.jsx)(hn, {
+              (0, r.jsx)(Va, { src: o }),
+              (0, r.jsx)(Sn, {
                 eTopPlayedPeriod: a,
                 children: n.data.rgRanks.map((e, t) =>
                   (0, r.jsx)(
-                    _n,
+                    Cn,
                     {
                       rank: {
                         nRank: t + 1,
@@ -9953,108 +9988,108 @@
           })
         );
       }
-      function hn(e) {
+      function Sn(e) {
         const { children: t, eTopPlayedPeriod: a } = e;
-        let n = (0, be.we)(
+        let n = (0, ve.we)(
           "#SteamCharts_MostPlayedDeck_TableChangeWeek_Tooltip",
         );
         switch (a) {
           case m.HN._p:
-            n = (0, be.we)(
+            n = (0, ve.we)(
               "#SteamCharts_MostPlayedDeck_TableChangeMonth_Tooltip",
             );
             break;
           case m.HN.p4:
-            n = (0, be.we)(
+            n = (0, ve.we)(
               "#SteamCharts_MostPlayedDeck_TableChangeYear_Tooltip",
             );
         }
         return (0, r.jsxs)("table", {
-          className: Ga().ChartTable,
+          className: La().ChartTable,
           children: [
             (0, r.jsx)("thead", {
-              className: Ga().ColumnHeaders,
+              className: La().ColumnHeaders,
               children: (0, r.jsxs)("tr", {
                 children: [
-                  (0, r.jsx)("th", { className: Ga().HoverCell }),
+                  (0, r.jsx)("th", { className: La().HoverCell }),
                   (0, r.jsx)("th", {
-                    className: Ga().Rank,
+                    className: La().Rank,
                     colSpan: 2,
                     children: (0, r.jsx)("span", {
-                      children: (0, be.we)("#SteamCharts_TopSellers_TableRank"),
+                      children: (0, ve.we)("#SteamCharts_TopSellers_TableRank"),
                     }),
                   }),
                   (0, r.jsx)("th", {
-                    className: (0, ve.A)(Ga().RightCell, Ga().Price),
-                    children: (0, be.we)("#SteamCharts_TopSellers_TablePrice"),
+                    className: (0, je.A)(La().RightCell, La().Price),
+                    children: (0, ve.we)("#SteamCharts_TopSellers_TablePrice"),
                   }),
                   (0, r.jsx)("th", {
-                    className: Ga().Change,
+                    className: La().Change,
                     align: "right",
-                    children: (0, r.jsxs)(je.he, {
-                      className: Ga().Tooltip,
+                    children: (0, r.jsxs)(Ce.he, {
+                      className: La().Tooltip,
                       toolTipContent: n,
                       direction: "top",
                       children: [
                         (0, r.jsx)("span", {
-                          children: (0, be.we)(
+                          children: (0, ve.we)(
                             "#SteamCharts_TopSellers_TableChange",
                           ),
                         }),
                         " ",
-                        (0, r.jsx)(ue._VW, {}),
+                        (0, r.jsx)(de._VW, {}),
                       ],
                     }),
                   }),
                   (0, r.jsx)("th", {
-                    className: Ga().Change,
+                    className: La().Change,
                     align: "right",
-                    children: (0, r.jsxs)(je.he, {
-                      className: Ga().Tooltip,
-                      toolTipContent: (0, be.we)(
+                    children: (0, r.jsxs)(Ce.he, {
+                      className: La().Tooltip,
+                      toolTipContent: (0, ve.we)(
                         "#SteamCharts_MostPlayedDeck_TableDeckVerified_Tooltip",
                       ),
                       direction: "top",
                       children: [
-                        (0, be.we)(
+                        (0, ve.we)(
                           "#SteamCharts_MostPlayedDeck_TableDeckVerified",
                         ),
                         " ",
-                        (0, r.jsx)(ue._VW, {}),
+                        (0, r.jsx)(de._VW, {}),
                       ],
                     }),
                   }),
                 ],
               }),
             }),
-            (0, r.jsx)("tbody", { className: Ga().ListRowsCtn, children: t }),
+            (0, r.jsx)("tbody", { className: La().ListRowsCtn, children: t }),
           ],
         });
       }
-      function _n(e) {
+      function Cn(e) {
         const { rank: t } = e,
-          a = (0, ya.n9)(),
-          n = (0, Ia.wJ)(t.Item.GetStorePageURL(), a);
+          a = (0, Ta.n9)(),
+          n = (0, Da.wJ)(t.Item.GetStorePageURL(), a);
         return (0, r.jsx)("tr", {
           onClick: () => (window.location.href = n),
-          className: Ga().TableRow,
-          children: (0, r.jsx)(xn, { rank: t }),
+          className: La().TableRow,
+          children: (0, r.jsx)(jn, { rank: t }),
         });
       }
-      function xn(e) {
+      function jn(e) {
         const { rank: t } = e,
           a = t.Item,
-          n = (0, ka.DJ)(a),
-          s = (0, Ta.Z)(a),
-          o = (0, dn.z5)(a.GetPlatforms().steam_deck_compat_category);
+          n = (0, Aa.DJ)(a),
+          s = (0, Na.Z)(a),
+          o = (0, pn.z5)(a.GetPlatforms().steam_deck_compat_category);
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)("td", {
-              className: Ga().HoverCell,
+              className: La().HoverCell,
               children:
                 !s &&
-                (0, r.jsx)(Da.Q, {
-                  className: Ga().HoverSource,
+                (0, r.jsx)(Ba.Q, {
+                  className: La().HoverSource,
                   id: n,
                   hoverProps: {
                     direction: "right",
@@ -10062,45 +10097,45 @@
                     nBodyDistance: 0,
                     style: { width: "400px", height: "250px" },
                   },
-                  children: (0, r.jsx)("div", { className: Ga().HoverMask }),
+                  children: (0, r.jsx)("div", { className: La().HoverMask }),
                 }),
             }),
-            (0, r.jsx)("td", { className: Ga().RankCell, children: t.nRank }),
+            (0, r.jsx)("td", { className: La().RankCell, children: t.nRank }),
             (0, r.jsx)("td", {
-              className: (0, ve.A)(
-                Ga().CapsuleCell,
-                !a.BIsVisible() && Ga().Unavailable,
+              className: (0, je.A)(
+                La().CapsuleCell,
+                !a.BIsVisible() && La().Unavailable,
               ),
-              children: (0, r.jsx)(Ma, { Item: a }),
+              children: (0, r.jsx)(Ea, { Item: a }),
             }),
             (0, r.jsx)("td", {
-              className: Ga().PriceCell,
+              className: La().PriceCell,
               children: (0, r.jsx)("div", {
-                className: Ga().PriceWidget,
-                children: (0, r.jsx)(wa.NF, { id: n }),
+                className: La().PriceWidget,
+                children: (0, r.jsx)(ka.NF, { id: n }),
               }),
             }),
-            (0, r.jsx)(Fa, {
+            (0, r.jsx)(za, {
               nRank: t.nRank,
               nRankLastWeek: t.nRankLastPeriod,
             }),
             (0, r.jsx)("td", {
-              className: Ga().ChangeCell,
+              className: La().ChangeCell,
               children: (0, r.jsx)(o, {}),
             }),
           ],
         });
       }
-      var Sn = a(95034);
-      function Cn(e, t, a) {
+      var vn = a(95034);
+      function bn(e, t, a) {
         const { data: n } = (0, i.I)({
           queryKey: ["useYearEventModel", e],
           queryFn: () => {
             try {
               return (function (e, t, a) {
-                const n = (0, Le.U)(Ye.yT, f.DRF, "" + e),
+                const n = (0, Me.U)(qe.yT, f.DRF, "" + e),
                   r = !0,
-                  s = { ...(0, Le.Sm)("tabs", ""), tabs: [] };
+                  s = { ...(0, Me.Sm)("tabs", ""), tabs: [] };
                 return (
                   a.forEach((e, t) => {
                     s.tabs.push({
@@ -10120,9 +10155,9 @@
                       d = new Set(c),
                       u = [...c, ...i];
                     n.jsondata.sale_sections.push({
-                      ...(0, Le.Sm)("text_section", ""),
+                      ...(0, Me.Sm)("text_section", ""),
                       text_section_contents: [
-                        (0, be.we)(a.strTabSubTitleToken, e, e + 1),
+                        (0, ve.we)(a.strTabSubTitleToken, e, e + 1),
                       ],
                       show_on_tabs: [o + 1],
                       show_deck_compability_details: Boolean(a.bShowDeckCompat),
@@ -10131,7 +10166,7 @@
                     for (let e in l) {
                       const t = l[e];
                       n.jsondata.sale_sections.push({
-                        ...(0, Le.Sm)("items", "#SteamCharts_Yearly_Rank_" + e),
+                        ...(0, Me.Sm)("items", "#SteamCharts_Yearly_Rank_" + e),
                         capsules: t.map((e) => ({
                           id: e,
                           type: d.has(e) ? "dlc" : "game",
@@ -10146,7 +10181,7 @@
                         default_subtitle:
                           "#SteamCharts_Yearly_Rank_" + e + "_subtitle",
                         show_on_tabs: [s.tabs[o].unique_id],
-                        sale_section_classname: Fe(Number.parseInt(e)),
+                        sale_section_classname: Oe(Number.parseInt(e)),
                         prefer_assets_without_overrides: r,
                         show_deck_compability_details: Boolean(
                           a.bShowDeckCompat,
@@ -10155,7 +10190,7 @@
                         prefer_demo_store_page: Boolean(a.bShowDemoInfo),
                       });
                     }
-                    We(
+                    He(
                       n,
                       u,
                       c,
@@ -10165,7 +10200,7 @@
                       Boolean(a.bShowDeckCompat),
                       Boolean(a.bShowDemoInfo),
                     ),
-                      qe(
+                      ze(
                         n,
                         i,
                         l,
@@ -10175,7 +10210,7 @@
                         Boolean(a.bShowDeckCompat),
                         Boolean(a.bShowDemoInfo),
                       ),
-                      He(
+                      Fe(
                         n,
                         i,
                         t,
@@ -10187,19 +10222,19 @@
                       );
                   }),
                   n.jsondata.sale_sections.push({
-                    ...(0, Le.Sm)("text_section", ""),
+                    ...(0, Me.Sm)("text_section", ""),
                     text_section_contents: [
-                      (0, be.we)("#SteamCharts_Yearly_FAQ") +
+                      (0, ve.we)("#SteamCharts_Yearly_FAQ") +
                         "\n" +
-                        `[url=${K.TS.HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${(0, be.we)("#SteamCharts_Yearly_FAQ_link")}[/url]`,
+                        `[url=${K.TS.HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${(0, ve.we)("#SteamCharts_Yearly_FAQ_link")}[/url]`,
                     ],
                   }),
                   n.jsondata.sale_sections.push({
-                    ...(0, Le.Sm)(
+                    ...(0, Me.Sm)(
                       "social_share",
                       "#EventDisplay_Share_WithFriendsHeader",
                     ),
-                    social_share: (0, Le.r3)(),
+                    social_share: (0, Me.r3)(),
                   }),
                   n
                 );
@@ -10213,46 +10248,46 @@
         });
         return n;
       }
-      function jn(e) {
+      function fn(e) {
         const { rgTabsData: t, nYear: a, facets: n } = e,
-          s = Cn(a, n, t),
+          s = bn(a, n, t),
           o = (0, f.sfN)(K.TS.LANGUAGE),
-          i = (0, Le.oR)();
+          i = (0, Me.oR)();
         return !s || i
           ? null === s
             ? (0, r.jsx)("div", {
                 className: Re.ErrorStylesWithIcon,
-                children: (0, be.we)("#Error_ErrorCommunicatingWithNetwork"),
+                children: (0, ve.we)("#Error_ErrorCommunicatingWithNetwork"),
               })
-            : (0, r.jsx)(Te.t, {
-                string: (0, be.we)("#Loading"),
+            : (0, r.jsx)(ke.t, {
+                string: (0, ve.we)("#Loading"),
                 position: "center",
               })
-          : (0, r.jsx)(Ee._, {
+          : (0, r.jsx)(Le._, {
               eventModel: s,
               language: o,
               bIsPreview: !1,
               bDynamicallyCreatedSale: !0,
             });
       }
-      function vn(e) {
+      function wn(e) {
         const { salePageName: t, TopYearlyReleasesStore: a } = e,
-          n = (0, le.f1)(),
+          n = (0, ie.f1)(),
           s = Number.parseInt(t),
-          o = (0, oe.W6)();
-        return ut(s, n, !0)
-          ? (0, r.jsx)(yn, { nYear: s, TopYearlyReleasesStore: a })
-          : (o.replace(Tn.Overview()),
+          o = Xe();
+        return ht(s, n, !0)
+          ? (0, r.jsx)(Tn, { nYear: s, TopYearlyReleasesStore: a })
+          : (o(Nn.Overview(), { bReplace: !0 }),
             (0, r.jsx)("div", {
-              children: (0, be.we)("#SteamCharts_Yearly_Unavailable"),
+              children: (0, ve.we)("#SteamCharts_Yearly_Unavailable"),
             }));
       }
-      const bn = {
-        ...ie.Xh,
+      const yn = {
+        ...oe.Xh,
         apply_user_filters: !0,
         include_assets_without_overrides: !0,
       };
-      function fn(e, t, a, n) {
+      function In(e, t, a, n) {
         const r = n?.filter((t) => t.type == e),
           s = [],
           o = [],
@@ -10277,7 +10312,7 @@
           rgFilteredDLCsAppIDs: o,
         };
       }
-      function wn(e, t) {
+      function kn(e, t) {
         const a = e + 1,
           n = new Date(Date.UTC(a, 0, t, 1, 0, 0)),
           r = new Intl.DateTimeFormat("en-US", {
@@ -10301,7 +10336,7 @@
           );
         return Math.floor(o / 1e3);
       }
-      function yn(e) {
+      function Tn(e) {
         const { nYear: t, TopYearlyReleasesStore: a } = e,
           [n, s] = (0, j.useState)(null),
           [o, i] = (0, j.useState)(null),
@@ -10311,9 +10346,9 @@
             rgTabsData: d,
             loadState: u,
           } = (function (e, t, a) {
-            const n = (0, le.f1)(),
-              r = n < wn(t, 1),
-              s = n < wn(t, 15),
+            const n = (0, ie.f1)(),
+              r = n < kn(t, 1),
+              s = n < kn(t, 15),
               o = J(e, t),
               i = (0, j.useMemo)(
                 () =>
@@ -10330,9 +10365,9 @@
                     : (a && a(null), []),
                 [o, a],
               ),
-              l = (0, de.zX)(i, bn),
+              l = (0, ce.zX)(i, yn),
               c = (0, j.useMemo)(() => {
-                if (!o || l == de.Sq) return [];
+                if (!o || l == ce.Sq) return [];
                 const e = [],
                   t = (o?.top_combined_app_and_dlc_releases || [])
                     .filter((e) => !g.A.Get().BIsAppMissing(e.appid))
@@ -10359,7 +10394,7 @@
                       rgFilteredAppIDByTier: e,
                     },
                   ],
-                  n = fn(
+                  n = In(
                     m.Cm.Hm,
                     "#SteamCharts_Yearly_Tab_TopSellers",
                     r
@@ -10369,14 +10404,14 @@
                   );
                 return (
                   n.rgFilteredCombinedAppsAndDLC?.length > 0 && a.push(n),
-                  (n = fn(
+                  (n = In(
                     m.Cm.UM,
                     "#SteamCharts_Yearly_Tab_MostPlayed",
                     "#SteamCharts_Yearly_Tab_MostPlayed_desc",
                     o.top_app_list,
                   )),
                   n.rgFilteredCombinedAppsAndDLC?.length > 0 && a.push(n),
-                  (n = fn(
+                  (n = In(
                     m.Cm.IJ,
                     "#SteamCharts_Yearly_Tab_SteamDeck",
                     "#SteamCharts_Yearly_Tab_SteamDeck_desc",
@@ -10384,21 +10419,21 @@
                   )),
                   n.rgFilteredCombinedAppsAndDLC?.length > 0 &&
                     ((n.bShowDeckCompat = !0), a.push(n)),
-                  (n = fn(
+                  (n = In(
                     m.Cm.lu,
                     "#SteamCharts_Yearly_Tab_Controller",
                     "#SteamCharts_Yearly_Tab_Controller_desc",
                     o.top_app_list,
                   )),
                   n.rgFilteredCombinedAppsAndDLC?.length > 0 && a.push(n),
-                  (n = fn(
+                  (n = In(
                     m.Cm.$L,
                     "#SteamCharts_Yearly_Tab_VR",
                     "#SteamCharts_Yearly_Tab_VR_desc",
                     o.top_app_list,
                   )),
                   n.rgFilteredCombinedAppsAndDLC?.length > 0 && a.push(n),
-                  (n = fn(
+                  (n = In(
                     m.Cm.e,
                     "#SteamCharts_Yearly_Tab_Demo",
                     "#SteamCharts_Yearly_Tab_Demo_desc",
@@ -10418,70 +10453,70 @@
           })(a, t);
         return (
           (0, j.useEffect)(() => {
-            o || (0, ce.$R)({ bForceFeatureTagForFullController: !1 }).then(i);
+            o || (0, le.$R)({ bForceFeatureTagForFullController: !1 }).then(i);
           }, [o]),
-          Ke(n, s, d?.[0]?.rgFilteredDLCsAppIDs, u),
-          c && u != de.Sq && o && null != n && l
+          Ze(n, s, d?.[0]?.rgFilteredDLCsAppIDs, u),
+          c && u != ce.Sq && o && null != n && l
             ? 0 == l.length
-              ? (0, r.jsxs)(Qe.Z, {
+              ? (0, r.jsxs)(Ke.Z, {
                   className: ne().ChartPage,
                   children: [
-                    (0, r.jsx)(In, { nYear: t }),
+                    (0, r.jsx)(Dn, { nYear: t }),
                     (0, r.jsx)("div", {
                       className: ne().NoticeBox,
-                      children: (0, be.we)(
+                      children: (0, ve.we)(
                         "#Error_ErrorCommunicatingWithNetwork",
                       ),
                     }),
                   ],
                 })
-              : (0, r.jsxs)(Qe.Z, {
+              : (0, r.jsxs)(Ke.Z, {
                   className: ne().ChartPage,
                   children: [
-                    (0, r.jsx)(Be, {
+                    (0, r.jsx)(Ne, {
                       rgAppIDs: d[0].rgFilteredCombinedAppsAndDLC,
                       bTallCapsule: !0,
                       bBlurCapsules: !1,
-                      children: (0, r.jsx)(In, { nYear: t }),
+                      children: (0, r.jsx)(Dn, { nYear: t }),
                     }),
-                    (0, r.jsx)(jn, { facets: o, nYear: t, rgTabsData: d }),
+                    (0, r.jsx)(fn, { facets: o, nYear: t, rgTabsData: d }),
                   ],
                 })
-            : (0, r.jsxs)(Qe.Z, {
+            : (0, r.jsxs)(Ke.Z, {
                 className: ne().ChartPage,
                 children: [
-                  (0, r.jsx)(In, { nYear: t }),
-                  (0, r.jsx)(Te.t, {
-                    string: (0, be.we)("#Loading"),
+                  (0, r.jsx)(Dn, { nYear: t }),
+                  (0, r.jsx)(ke.t, {
+                    string: (0, ve.we)("#Loading"),
                     position: "center",
                   }),
                 ],
               })
         );
       }
-      function In(e) {
+      function Dn(e) {
         const { nYear: t } = e,
-          a = (0, oe.W6)(),
-          n = (0, le.f1)(),
-          [s] = (0, Sn.QD)("tab", 1),
+          a = Xe(),
+          n = (0, ie.f1)(),
+          [s] = (0, vn.QD)("tab", 1),
           o = t + 1,
-          i = ut(o, n, !0),
+          i = ht(o, n, !0),
           l = t - 1,
-          c = ut(l, n, !0),
-          d = (0, Ie.yk)() || (0, ke.tx)(window),
+          c = ht(l, n, !0),
+          d = (0, ye.yk)() || (0, Ie.tx)(window),
           u = (0, j.useCallback)(
             (e) => {
               d.active_modal ||
                 (e && i
-                  ? a.push(Tn.BestOfYear("" + o))
-                  : !e && c && a.push(Tn.BestOfYear("" + l)));
+                  ? a(Nn.BestOfYear("" + o))
+                  : !e && c && a(Nn.BestOfYear("" + l)));
             },
             [d.active_modal, i, c, a, o, l],
           );
-        (0, De.E)("ArrowLeft", () => u(!1), !0, !0),
-          (0, De.E)("Left", () => u(!1), !0, !0),
-          (0, De.E)("ArrowRight", () => u(!0), !0, !0),
-          (0, De.E)("Right", () => u(!0), !0, !0);
+        (0, Te.E)("ArrowLeft", () => u(!1), !0, !0),
+          (0, Te.E)("Left", () => u(!1), !0, !0),
+          (0, Te.E)("ArrowRight", () => u(!0), !0, !0),
+          (0, Te.E)("Right", () => u(!0), !0, !0);
         const m = 1 != s ? `?tab=${s}` : "";
         return (0, r.jsxs)(r.Fragment, {
           children: [
@@ -10496,33 +10531,33 @@
                   }),
                 }),
                 (0, r.jsx)("div", {
-                  className: (0, ve.A)(se().HeaderCtn, se().WithSubtitle),
+                  className: (0, je.A)(se().HeaderCtn, se().WithSubtitle),
                   children: (0, r.jsx)("h1", {
-                    children: (0, be.we)("#SteamCharts_Yearly_Title", t),
+                    children: (0, ve.we)("#SteamCharts_Yearly_Title", t),
                   }),
                 }),
                 (0, r.jsxs)("div", {
-                  className: (0, ve.A)(se().PageSubtitle),
+                  className: (0, je.A)(se().PageSubtitle),
                   children: [
-                    (0, be.we)("#SteamCharts_Yearly_SubTitle", 100),
+                    (0, ve.we)("#SteamCharts_Yearly_SubTitle", 100),
                     (0, r.jsx)("br", {}),
                   ],
                 }),
               ],
             }),
-            (0, r.jsxs)(Qe.Z, {
-              className: (0, ve.A)(se().ChartRangeCtn, se().AnnualChart),
+            (0, r.jsxs)(Ke.Z, {
+              className: (0, je.A)(se().ChartRangeCtn, se().AnnualChart),
               children: [
-                (0, r.jsx)(je.Gq, {
-                  toolTipContent: (0, be.we)("#SteamCharts_Yearly_Title", l),
+                (0, r.jsx)(Ce.Gq, {
+                  toolTipContent: (0, ve.we)("#SteamCharts_Yearly_Title", l),
                   children: (0, r.jsx)("div", {
-                    className: (0, ve.A)({
+                    className: (0, je.A)({
                       [se().ChartNavCtn]: !0,
                       [se().Disabled]: !c,
                     }),
                     children: c
-                      ? (0, r.jsx)(Xe.X, {
-                          to: Tn.BestOfYear("" + l) + m,
+                      ? (0, r.jsx)(tt, {
+                          to: Nn.BestOfYear("" + l) + m,
                           className: se().ChartNavHitArea,
                           children: (0, r.jsx)("div", {
                             className: se().ChartNavPrev,
@@ -10538,16 +10573,16 @@
                         }),
                   }),
                 }),
-                (0, r.jsx)(je.Gq, {
-                  toolTipContent: (0, be.we)("#SteamCharts_Yearly_Title", o),
+                (0, r.jsx)(Ce.Gq, {
+                  toolTipContent: (0, ve.we)("#SteamCharts_Yearly_Title", o),
                   children: (0, r.jsx)("div", {
-                    className: (0, ve.A)({
+                    className: (0, je.A)({
                       [se().ChartNavCtn]: !0,
                       [se().Disabled]: !i,
                     }),
                     children: i
-                      ? (0, r.jsx)(Xe.X, {
-                          to: Tn.BestOfYear("" + o) + m,
+                      ? (0, r.jsx)(tt, {
+                          to: Nn.BestOfYear("" + o) + m,
                           className: se().ChartNavHitArea,
                           children: (0, r.jsx)("div", {
                             className: se().ChartNavNext,
@@ -10568,8 +10603,8 @@
           ],
         });
       }
-      var kn = a(97058);
-      const Tn = {
+      var An = a(97058);
+      const Nn = {
         Overview: () => `${s.B.SteamCharts()}`,
         MostPlayed: () => `${s.B.SteamCharts()}mostplayed`,
         MostPlayedOnSteamDeck: (e) =>
@@ -10581,10 +10616,10 @@
         SupportStats: () => `${s.B.SteamCharts()}support/`,
         BestOfYear: (e) => `${s.B.SteamCharts()}bestofyear/${e}`,
       };
-      function Dn(e) {
+      function Bn(e) {
         const [t, a] = (0, j.useState)(void 0),
-          n = (0, cn.TR)(),
-          s = (0, cn.rX)();
+          n = (0, mn.TR)(),
+          s = (0, mn.rX)();
         if (
           ((0, j.useEffect)(() => {
             (async function (e, t) {
@@ -10595,7 +10630,7 @@
           !t)
         )
           return null;
-        const o = Tn,
+        const o = Nn,
           {
             TopSellersStore: i,
             MostPlayedStore: l,
@@ -10605,49 +10640,49 @@
             TopMonthlyReleasesStore: m,
             TopYearlyReleasesStore: p,
           } = t;
-        return (0, r.jsxs)(aa, {
+        return (0, r.jsxs)(sa, {
           TopSellersStore: i,
           SteamInterface: c,
           DynamicUserStore: d,
           TopMonthlyReleasesStore: m,
           children: [
-            (0, r.jsx)(An, {}),
-            (0, r.jsx)(Pt.Ay, {
+            (0, r.jsx)(Gn, {}),
+            (0, r.jsx)(Ht.Ay, {
               domain: "store.steampowered.com",
               controller: "steamcharts",
               children: (0, r.jsx)(j.Suspense, {
                 fallback: null,
-                children: (0, r.jsxs)(oe.dO, {
+                children: (0, r.jsxs)(Qe.dO, {
                   children: [
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.MostPlayed()}`,
-                      children: (0, r.jsx)(Pt.Ay, {
+                      children: (0, r.jsx)(Ht.Ay, {
                         method: "mostplayed",
-                        children: (0, r.jsx)(Nt.tH, {
-                          children: (0, r.jsx)(qa, { MostPlayedStore: l }),
+                        children: (0, r.jsx)(Rt.tH, {
+                          children: (0, r.jsx)(Za, { MostPlayedStore: l }),
                         }),
                       }),
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.TopSelling(":country?")}`,
                       render: (e) =>
-                        (0, r.jsx)(Pt.Ay, {
+                        (0, r.jsx)(Ht.Ay, {
                           method: "topselling",
-                          children: (0, r.jsx)(Nt.tH, {
-                            children: (0, r.jsx)($a, {
+                          children: (0, r.jsx)(Rt.tH, {
+                            children: (0, r.jsx)(an, {
                               TopSellersStore: i,
                               overrideCountry: e.match.params.country,
                             }),
                           }),
                         }),
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.TopSellers(":country?", ":week?")}`,
                       render: (e) =>
-                        (0, r.jsx)(Pt.Ay, {
+                        (0, r.jsx)(Ht.Ay, {
                           method: "weeklytopsellers",
-                          children: (0, r.jsx)(Nt.tH, {
-                            children: (0, r.jsx)(an, {
+                          children: (0, r.jsx)(Rt.tH, {
+                            children: (0, r.jsx)(sn, {
                               TopSellersStore: i,
                               week: e.match.params.week,
                               country: e.match.params.country,
@@ -10655,26 +10690,26 @@
                           }),
                         }),
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.Overview()}`,
                       exact: !0,
-                      children: (0, r.jsx)(Pt.Ay, {
+                      children: (0, r.jsx)(Ht.Ay, {
                         method: "overview",
-                        children: (0, r.jsx)(Nt.tH, {
-                          children: (0, r.jsx)(Wt, { SteamCharts: t }),
+                        children: (0, r.jsx)(Rt.tH, {
+                          children: (0, r.jsx)(Yt, { SteamCharts: t }),
                         }),
                       }),
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.SupportStats()}`,
-                      children: (0, r.jsx)(Pt.Ay, {
+                      children: (0, r.jsx)(Ht.Ay, {
                         method: "supportstats",
-                        children: (0, r.jsx)(Nt.tH, {
-                          children: (0, r.jsx)(ha, {}),
+                        children: (0, r.jsx)(Rt.tH, {
+                          children: (0, r.jsx)(Sa, {}),
                         }),
                       }),
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.TopNewReleases(":salePagename")}`,
                       render: (e) => {
                         const {
@@ -10682,10 +10717,10 @@
                             params: { salePagename: t },
                           },
                         } = e;
-                        return (0, r.jsx)(Pt.Ay, {
+                        return (0, r.jsx)(Ht.Ay, {
                           method: "monthlytopreleases",
-                          children: (0, r.jsx)(Nt.tH, {
-                            children: (0, r.jsx)(Je, {
+                          children: (0, r.jsx)(Rt.tH, {
+                            children: (0, r.jsx)(at, {
                               salePageName: t,
                               TopMonthlyReleasesStore: m,
                             }),
@@ -10693,7 +10728,7 @@
                         });
                       },
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.BestOfYear(":salePagename")}`,
                       render: (e) => {
                         const {
@@ -10701,10 +10736,10 @@
                             params: { salePagename: t },
                           },
                         } = e;
-                        return (0, r.jsx)(Pt.Ay, {
+                        return (0, r.jsx)(Ht.Ay, {
                           method: "bestofyear",
-                          children: (0, r.jsx)(Nt.tH, {
-                            children: (0, r.jsx)(vn, {
+                          children: (0, r.jsx)(Rt.tH, {
+                            children: (0, r.jsx)(wn, {
                               salePageName: t,
                               TopYearlyReleasesStore: p,
                             }),
@@ -10712,7 +10747,7 @@
                         });
                       },
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       path: `${o.MostPlayedOnSteamDeck(":timeperiod?")}`,
                       render: (e) => {
                         const {
@@ -10720,10 +10755,10 @@
                             params: { timeperiod: t },
                           },
                         } = e;
-                        return (0, r.jsx)(Pt.Ay, {
+                        return (0, r.jsx)(Ht.Ay, {
                           method: "mostplayedondeck",
-                          children: (0, r.jsx)(Nt.tH, {
-                            children: (0, r.jsx)(mn, {
+                          children: (0, r.jsx)(Rt.tH, {
+                            children: (0, r.jsx)(hn, {
                               MostPlayedOnDeckStore: u,
                               strTimePeriod: t,
                             }),
@@ -10731,11 +10766,11 @@
                         });
                       },
                     }),
-                    (0, r.jsx)(oe.qh, {
+                    (0, r.jsx)(Qe.qh, {
                       children:
                         "dev" == K.TS.WEB_UNIVERSE
-                          ? (0, r.jsx)(kn.a, {})
-                          : (0, r.jsx)(oe.rd, { to: `${o.Overview()}` }),
+                          ? (0, r.jsx)(An.a, {})
+                          : (0, r.jsx)(Qe.rd, { to: `${o.Overview()}` }),
                     }),
                   ],
                 }),
@@ -10744,8 +10779,8 @@
           ],
         });
       }
-      function An() {
-        const { pathname: e } = (0, oe.zy)();
+      function Gn() {
+        const { pathname: e } = (0, Qe.zy)();
         return (
           j.useEffect(() => {
             void 0 !== window.ScrollToTopStoreMobileAware

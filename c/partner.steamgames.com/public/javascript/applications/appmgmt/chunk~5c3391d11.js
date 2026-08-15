@@ -19,7 +19,6 @@
         DialogTitle: "_2WJTd3a8tzPCkIBmvfBD79",
         AppTitleCategory: "_23sFZwpTqnM3Ameqew-ZuX",
         CompatibilityDetailsStillLearning: "_1WWwtz2-hqx1OnhlEOCTLl",
-        CompatibilityDetailsContainerDesktop: "_2ADsvLBScO2pMzUxFUg-_g",
         CompatibilityDetailsContainer: "_1-O8t3AxzpNsipTPfHVktW",
         CompatibilityDetailsInterior_NoScroll: "_3oQPVwTgG0CmSxwl3e1cI4",
         CompatibilityDetailsInterior_Scroll: "_2uCLczcyA7K90OppYPMeBA",
@@ -2708,7 +2707,7 @@
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
-                  (0, _.jsx)(_.xoK, {
+                  (0, _.jsx)(_.lRD, {
                     className: _().SteamDeckDeviceIcon,
                   }),
                   (0, _.jsx)(_, {
@@ -2729,7 +2728,7 @@
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
-                  (0, _.jsx)(_.LO_, {
+                  (0, _.jsx)(_.fhy, {
                     className: _().SteamMachineDeviceIcon,
                   }),
                   (0, _.jsx)(_, {
@@ -2771,7 +2770,7 @@
               name: (0, _.jsxs)("div", {
                 className: _().pillContent,
                 children: [
-                  (0, _.jsx)(_._, {
+                  (0, _.jsx)(_.Ves, {
                     className: _().SteamFrameDeviceIcon,
                   }),
                   (0, _.jsx)(_, {
@@ -2809,8 +2808,8 @@
           } = _,
           [_, _] = _.useState(!1),
           _ = _.useCallback(() => _, [_]),
-          _ = _.useRef(null),
-          _ = (0, _._)();
+          _ = _.useRef(null);
+        (0, _._)();
         let _ = _ ?? {};
         return (
           _.useEffect(() => {
@@ -2819,9 +2818,7 @@
               _(_?.current?.scrollHeight > _?.current?.clientHeight);
           }, []),
           (0, _.jsxs)(_._, {
-            className: _
-              ? _().CompatibilityDetailsContainer
-              : _().CompatibilityDetailsContainerDesktop,
+            className: _().CompatibilityDetailsContainer,
             ..._,
             children: [
               (0, _.jsxs)("div", {

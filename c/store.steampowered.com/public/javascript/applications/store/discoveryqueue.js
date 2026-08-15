@@ -2186,6 +2186,104 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return ["AppRelevanceStore", "FriendsRecommended", _];
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: _(_),
+          queryFn: () =>
+            (async function (_, _) {
+              const _ = _._.Init(_._);
+              __webpack_require__.Body().set_appid(_);
+              const _ = await _._.GetFriendsRecommendedApp(_, _),
+                _ = _.GetEResult();
+              if (_ == _._) return _.Body().toObject();
+              throw `Error ${_} failed to call GetFriendsRecommendedApp ${_}`;
+            })(_, _),
+          enabled: _._.logged_in,
+        });
+      }
+      function _() {
+        const _ = (0, _._)();
+        return _.useCallback(
+          (_, _) => {
+            _.setQueryData(_(_), _);
+          },
+          [_],
+        );
+      }
+      function _(_) {
+        return (0, _._)({
+          queryKey: ["AppRelevanceStore", "StoreRelevance", _],
+          queryFn: () =>
+            (async function (_) {
+              let _ = {
+                  appid: _,
+                },
+                _ = {
+                  arrSimilarPlayedApps: [],
+                  bRecommendedByIR: !1,
+                };
+              const _ = (
+                await _().get(
+                  `${_._.STORE_BASE_URL}explore/ajaxgetstorerelevancedata`,
+                  {
+                    params: _,
+                    withCredentials: !0,
+                    timeout: 1e4,
+                  },
+                )
+              ).data;
+              _ &&
+                _.success == _._ &&
+                (_.results.similar_played_apps &&
+                  (_.arrSimilarPlayedApps = _.results.similar_played_apps.map(
+                    (_) => ({
+                      appid: _.appid,
+                      playtimeForever: _.playtime_forever,
+                    }),
+                  )),
+                _.results.recommended_by_ir && (_.bRecommendedByIR = !0));
+              return _;
+            })(_),
+          enabled: _._.logged_in,
+        });
+      }
+      function _() {
+        return (0, _._)("App Relevance Store Top Sellers", {
+          sort: _._._,
+          start: 0,
+          count: 100,
+        });
+      }
+      function _() {
+        const { data: _ } = _();
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -3595,54 +3693,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        static async LoadFriendsRecommendedApp(_, _) {
-          const _ = _._.Init(_._);
-          __webpack_require__.Body().set_appid(_);
-          const _ = await _._.GetFriendsRecommendedApp(_, _),
-            _ = _.GetEResult();
-          if (_ == _._) return _.Body().toObject();
-          throw `Error ${_} failed to call GetFriendsRecommendedApp ${_}`;
-        }
-        static async LoadStoreRelevanceData(_) {
-          let _ = {
-              appid: _,
-            },
-            _ = {
-              arrSimilarPlayedApps: [],
-              bRecommendedByIR: !1,
-            };
-          const _ = (
-            await _().get(
-              `${_._.STORE_BASE_URL}explore/ajaxgetstorerelevancedata`,
-              {
-                params: _,
-                withCredentials: !0,
-                timeout: 1e4,
-              },
-            )
-          ).data;
-          return (
-            _ &&
-              _.success == _._ &&
-              (_.results.similar_played_apps &&
-                (_.arrSimilarPlayedApps = _.results.similar_played_apps.map(
-                  (_) => ({
-                    appid: _.appid,
-                    playtimeForever: _.playtime_forever,
-                  }),
-                )),
-              _.results.recommended_by_ir && (_.bRecommendedByIR = !0)),
-            _
-          );
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3658,29 +3708,9 @@
             bShowCreatorInfo: _,
           } = _,
           _ = (0, _._)(_),
-          _ = (function (_) {
-            const _ = (0, _._)();
-            return (0, _._)({
-              queryKey: ["AppRelevanceStore", "FriendsRecommended", _],
-              queryFn: () => _.LoadFriendsRecommendedApp(_, _),
-              enabled: _._.logged_in,
-            });
-          })(_),
-          _ = (function (_) {
-            return (0, _._)({
-              queryKey: ["AppRelevanceStore", "StoreRelevance", _],
-              queryFn: () => _.LoadStoreRelevanceData(_),
-              enabled: _._.logged_in,
-            });
-          })(_),
-          _ = (function () {
-            const { data: _ } = (0, _._)("App Relevance Store Top Sellers", {
-              sort: _._._,
-              start: 0,
-              count: 100,
-            });
-            return _;
-          })(),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
           _ = (0, _._)({
             queryKey: ["SimilarPlayedAppsLoad", _],
             queryFn: () =>

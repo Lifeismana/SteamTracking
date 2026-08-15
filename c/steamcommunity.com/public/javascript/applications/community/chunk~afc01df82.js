@@ -751,6 +751,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -784,12 +785,14 @@
           } = _,
           [_, _] = _.useState(),
           [_, _] = _.useState(!0),
+          [_, _] = _.useState(),
           _ = (0, _._)(() => _().CancelToken.source());
         _.useEffect(
           () => () => _.cancel("LocalizedImageDialog component unmounted"),
           [_],
         );
         const _ = _.useCallback(async () => {
+            var _;
             try {
               const _ = _._.InitFromClanID(_.clanAccountID),
                 _ = await _._.AsyncGetImageResolution(
@@ -799,10 +802,24 @@
                   _,
                   !1,
                 );
-              _.token.reason || _(_);
+              if (_.token.reason) return;
+              if (_.success != _._ || !_.width || !_.height)
+                return (
+                  console.error(
+                    "LocalizedImageDialog : failed to determine the primary image resolution. " +
+                      (null !== (_ = _.err_msg) && void 0 !== _ ? _ : ""),
+                  ),
+                  void _({
+                    strMsg: _.err_msg,
+                  })
+                );
+              _(void 0), _(_);
             } catch (_) {
               let _ = (0, _._)(_);
-              console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
+              console.error("LocalizedImageDialog : " + _.strErrorMsg, _),
+                _({
+                  strMsg: _.strErrorMsg,
+                });
             }
           }, [_, _.clanAccountID, _.file_type, _.image_hash]),
           _ = _.useCallback(async () => {
@@ -813,20 +830,25 @@
               let _ = (0, _._)(_);
               console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
             }
+          }, [_]),
+          _ = _.useCallback(() => _().then(_), [_, _]),
+          _ = _.useCallback(() => {
+            _(void 0), _();
           }, [_]);
         _.useEffect(() => {
           _ &&
-            (_._.SetPrimaryImageForImageGroup(_, "localized_image_group"),
-            _(),
-            _());
-        }, [_, _, _, _]);
+            (_._.SetPrimaryImageForImageGroup(_, "localized_image_group"), _());
+        }, [_, _, _]);
         const _ = !_ && _,
           _ = _ ? ` - ${_.width}x${_.height}` : "",
           _ = (0, _._)(_.file_type).slice(1),
-          _ = _ && {
-            width: _.width,
-            height: _.height,
-          },
+          _ =
+            (null == _ ? void 0 : _.width) && (null == _ ? void 0 : _.height)
+              ? {
+                  width: _.width,
+                  height: _.height,
+                }
+              : void 0,
           _ = _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_));
         return (0, _.jsx)(_._, {
           bAllowFullSize: !0,
@@ -859,7 +881,25 @@
                     ],
                   }),
                 }),
+                Boolean(_) &&
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        children: (0, _._)("#Error_Message"),
+                      }),
+                      Boolean(null == _ ? void 0 : _.strMsg) &&
+                        (0, _.jsx)("div", {
+                          children: _.strMsg,
+                        }),
+                      (0, _.jsx)("div", {
+                        className: _().Button,
+                        onClick: _,
+                        children: (0, _._)("#Button_Retry"),
+                      }),
+                    ],
+                  }),
                 !_ &&
+                  !_ &&
                   (0, _.jsx)(_._, {
                     position: "center",
                     string: (0, _._)("#Loading"),

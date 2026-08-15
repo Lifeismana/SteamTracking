@@ -57,6 +57,12 @@ GHomepage = {
 	unBackgroundAppID: 0,
 	unAutoSizeListenerCount: 0,
 
+	// Special offers carousel pages before this one keep what we rendered at page load; personalized
+	// recommendations only rebuild the trailing pages, which the user has to page over to reach.
+	k_iFirstPersonalizedSpotlightPage: 2,
+	bSpotlightSectionRendered: false,
+	rgSpotlightRecommendations: null,
+
 	MainCapCluster: null,
 
 	rgContentHubs: [],
@@ -116,6 +122,8 @@ GHomepage = {
 
 		if ( $J( '#load_addtl_scroll_target' ).length )
 			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this), 1000 );
+
+		GHomepage.LoadSpotlightRecommendations();
 
 		if ( window.Responsive_ReparentItemsInResponsiveMode )
 		{
@@ -2269,6 +2277,8 @@ GHomepage = {
 		// rebuild pages one at a time
 		$Pages.empty();
 
+		let nMaxSpotlightColumns = 2;
+		
 		for ( var iPage = 0; iPage < $Pages.length; iPage++ )
 		{
 			var cColumnsUsed = 0;
@@ -2283,8 +2293,8 @@ GHomepage = {
 				return rgParts.join('_');
 			};
 
-			// put in one or two spotlights
-			while ( rgSpotlights.length && cColumnsUsed < 2 )
+			// put in spotlights
+			while ( rgSpotlights.length && cColumnsUsed < nMaxSpotlightColumns )
 			{
 				// a high priority indicates we wanted to filter it (eg, already owned).  Show at most 1 on first page.
 				if ( cColumnsUsed >= 1 && rgSpotlights[0].priority >= 3 )
@@ -2398,6 +2408,165 @@ GHomepage = {
 		CreateFadingCarousel( $Spotlights, 0, false, null, $Spotlights.hasClass( 'v2' ) );
 		$Parent.css( 'minHeight', '' );
 		$Spotlights.css( 'visibility', '' );
+
+		GHomepage.bSpotlightSectionRendered = true;
+
+		// the recommendations request can land before we get here
+		GHomepage.ApplySpotlightRecommendations();
+	},
+
+	LoadSpotlightRecommendations: function()
+	{
+		if ( g_AccountID == 0 )
+			return;
+
+		// nothing to personalize unless the carousel has pages past the ones we leave alone
+		var $Pages = $J( '#spotlight_carousel > .carousel_items .home_special_offers_group' );
+		if ( $Pages.length <= GHomepage.k_iFirstPersonalizedSpotlightPage )
+			return;
+
+		try {
+			$J.ajax( {
+				url: "https:\/\/store.steampowered.com\/default\/home_spotlight_recommendations\/",
+				data: {
+					v: 1,						u: g_AccountID,
+				},
+				dataType: 'json',
+				type: 'GET'
+			}).done( function( data ) {
+
+				GStoreItemData.AddStoreItemDataSet( data.item_data );
+
+				GHomepage.rgSpotlightRecommendations = data.spotlight_recommendations;
+				GHomepage.ApplySpotlightRecommendations();
+
+			});
+		} catch(e) { OnHomepageException(e); }
+	},
+
+	ApplySpotlightRecommendations: function()
+	{
+		// we rebuild pages this section already rendered, so there's nothing to do until it has
+		if ( !GHomepage.bSpotlightSectionRendered )
+			return;
+
+		var rgRecs = GHomepage.rgSpotlightRecommendations;
+		if ( !rgRecs || !rgRecs.length )
+			return;
+
+		// the specials we're replacing are the fallback for when we don't have enough recommendations
+		GHomepage.FillSpotlightSpecials( GHomepage.k_iFirstPersonalizedSpotlightPage, rgRecs, GHomepage.oDisplayListsRaw.specials );
+	},
+
+	FillSpotlightSpecials: function( iStartPage, rgItems, rgFallbackItems )
+	{
+		var $Spotlights = $J( '#spotlight_carousel' );
+		if ( $Spotlights.length == 0 )
+			return;
+
+		var $Pages = $J( '#spotlight_carousel > .carousel_items .home_special_offers_group' );
+		if ( iStartPage >= $Pages.length )
+			return;
+
+		var Settings = {
+			games_already_in_library: false,
+			localized: true,
+			displayed_elsewhere: false,
+			only_current_platform: true,
+			dlc_for_you: true,
+			include_priority: true
+		};
+
+		// Seed the dedupe set from the pages we're leaving alone so we don't repeat anything already shown.
+		// This only reads the capsules, it doesn't move them.  Server rendered capsules are .store_capsule,
+		// the ones we build client side are .sale_capsule.
+		var oShownItems = {};
+		GDynamicStorePage.FilterAndPrioritizeCapsules(
+			$J( '.home_area_spotlight, .store_capsule, .sale_capsule', $Pages.slice( 0, iStartPage ) ),
+			'spotlights', 'home', Settings, oShownItems, 0 );
+
+		// three columns per page, two capsules per column
+		var cSlots = ( $Pages.length - iStartPage ) * 3 * 2;
+
+		var rgSpecials = GDynamicStorePage.FilterAndPrioritizeItems( rgItems, 'spotlights', 'home', Settings, oShownItems, cSlots );
+
+		// Top up from the fallback list when we come up short.  It gets filtered separately, and afterwards,
+		// rather than as one combined list: the 'spotlights' priority list covers the items we're replacing but
+		// not our recommendations, so sorting the two together orders the whole fallback ahead of everything we
+		// came here to show.  Sharing oShownItems keeps the two lists from repeating each other.
+		if ( rgSpecials.length < cSlots && rgFallbackItems && rgFallbackItems.length )
+		{
+			rgSpecials = rgSpecials.concat( GDynamicStorePage.FilterAndPrioritizeItems( rgFallbackItems, 'spotlights', 'home', Settings, oShownItems, cSlots - rgSpecials.length ) );
+		}
+
+		for ( var iPage = iStartPage; iPage < $Pages.length; iPage++ )
+		{
+			var $Page = $J( $Pages[iPage] );
+
+			// Detach and hold the Spotlight and Daily Deal entries, since we're not changing those and we want to resture them in our rebuild of the panel
+			var $Spotlight = $J( '.home_area_spotlight', $Page ).detach();
+			var $DailyDeals = $J( '.store_capsule.daily_deal', $Page ).detach();
+
+			// Clear the panel
+			$Page.empty();
+
+			// Put Spotlight back
+			$Page.append( $Spotlight );
+
+			var cColumnsUsed = $Spotlight.length;
+			var cItemsInCol = 0;
+			var iDeal = 0;
+			var $Col = null;
+
+			// Put the daily deals back, lazy-creating columns and keeping track of waht we've filled
+			while ( iDeal < $DailyDeals.length && cColumnsUsed < 3 )
+			{
+				if ( !$Col )
+				{
+					$Col = $J('<div/>', { 'class': 'spotlight_col capsules_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
+					$Page.append( $Col );
+				}
+
+				$Col.append( $DailyDeals[ iDeal++ ] );
+
+				if ( ++cItemsInCol >= 2 )
+				{
+					GHomepage.AddMicrotrailersToStaticCaps( $Col );
+					$Col = null;
+					cItemsInCol = 0;
+					cColumnsUsed++;
+				}
+			}
+
+			// Fill the rest with our specials, also lazy-creating columns
+			while ( rgSpecials.length && cColumnsUsed < 3 )
+			{
+				var oItem = rgSpecials.shift();
+				if ( !GStoreItemData.GetCapParamsForItem( 'spotlight_specials', oItem, {} ) )
+					continue;
+
+				if ( !$Col )
+				{
+					$Col = $J('<div/>', { 'class': 'spotlight_col capsules_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
+					$Page.append( $Col );
+				}
+
+				$Col.append( GHomepage.BuildHomePageCapsule( oItem, 'spotlight_specials', {
+					'discount_class': 'daily_deal_discount discount_block_large',
+					'capsule_size': 'header',
+					'disable_autosizer': true,
+				}, iPage + 1 ) );
+
+				if ( ++cItemsInCol >= 2 )
+				{
+					$Col = null;
+					cItemsInCol = 0;
+					cColumnsUsed++;
+				}
+			}
+		}
+
+		GDynamicStore.DecorateDynamicItems( $Spotlights );
 	},
 
 

@@ -916,6 +916,14 @@ input[type=text].inputYouTubeVideo {
 	padding-right: 1em;
 }
 
+/* A left- or right-floated [previewimg] or [previewyoutube] overlaps the band an outside marker is drawn
+   in, so a list beside one loses its bullets. A block formatting context does not overlap a float at all,
+   which keeps them: a list with no float beside it lays out identically either way. */
+.guide .bb_ul, .guide .bb_ol
+{
+	display: flow-root;
+}
+
 
 /* Mini Tabs */
 .editGuideSubSectionMediaSelectionContainer .sectionTab

@@ -2472,6 +2472,12 @@ div.bb_h3, .bb_wysiwyg h3 {
 	clear:both;
 }
 
+/* text resumes below a floated image rather than beside it. The bb_h rules above are otherwise the
+   only thing in the bbcode set that clears. */
+div.bb_clear {
+	clear: both;
+}
+
 .ModernBBStyles .DialogBodyText .tagexample {
     color: #cfd2d3;
     font-size: 14px;
@@ -3426,4 +3432,20 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+}
+
+.ugc_beta_optin_toolbar {
+	margin: 0px auto;
+	display: flex;
+	gap: 8px;
+	max-width: 948px;
+    box-sizing: border-box;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 12px;
+	margin-top: 6px;
+    margin-bottom: 12px;
+	text-align: start;
+}
+.ugc_beta_optin_toolbar > div:nth-child(2) {
+	flex: 1;
 }

@@ -357,7 +357,6 @@ $ORIGIN
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
 0123456789abcdef
-04:01:51
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -371,6 +370,7 @@ $ORIGIN
 11CFileWriter
 11CPathString
 12CStdMemAlloc
+13:11:30
 13CCrashHandler
 13ICrashHandler
 14CUtlLinkedListI10CUtlStringiE
@@ -408,7 +408,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug  7 2026
+Aug 10 2026
 August
 Average %.2f fps, %.2f ms per frame\n
 BCreateDirectory

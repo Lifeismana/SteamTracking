@@ -447,7 +447,10 @@
             await _._.SustainModeration(_, _);
           },
           onSuccess: async (_, _) => {
-            await _(_, _.eSubjectType, _.ulSubjectGroupID, _.ulSubjectID);
+            await _.invalidateQueries({
+              queryKey: ["get_claimed"],
+            }),
+              await _(_, _.eSubjectType, _.ulSubjectGroupID, _.ulSubjectID);
           },
         });
       }

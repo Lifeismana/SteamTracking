@@ -141,20 +141,10 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__._(module_exports),
-        __webpack_require__._(module_exports, {
-          ShoppingCartErrorModal: () => _,
-          default: () => _,
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _?.public_data?.profile_url
           ? `${_._.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
@@ -162,8 +152,13 @@
               return _ ? `${_._.COMMUNITY_BASE_URL}profiles/${_}` : "";
             })(_?.public_data?.steamid || _);
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -197,7 +192,36 @@
           enabled: !!_,
         };
       }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_);
+        return (0, _._)(_(_, _));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          ShoppingCartErrorModal: () => _,
+          default: () => _,
+        });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "giftee-hint-2",
         _ = 600;
@@ -216,11 +240,7 @@
               },
             });
           })(),
-          _ = (function (_) {
-            const _ = (0, _._)(),
-              _ = (0, _._)(_);
-            return (0, _._)(_(_, _));
-          })(_?.nGifteeAccountID);
+          _ = (0, _._)(_?.nGifteeAccountID);
         if (_.isLoading || !_?.nGifteeAccountID)
           return {
             gifteeHint: _,
@@ -404,7 +424,7 @@
         )
           return null;
         const _ = (0, _.jsxs)("a", {
-          href: _(_),
+          href: (0, _._)(_),
           target: "_blank",
           children: [
             (0, _.jsx)(_._, {

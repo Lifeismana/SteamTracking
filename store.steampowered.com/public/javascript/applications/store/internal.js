@@ -392,40 +392,42 @@
               variant: t,
               radius: s,
               size: l,
-              children: d,
-              value: h,
-              onValueChange: f,
+              status: d,
+              children: h,
+              value: f,
+              onValueChange: S,
             } = e,
-            [S, y] = (0, a.useState)({}),
-            b = (0, a.useCallback)((e, t) => y((s) => ({ ...s, [t]: e })), []),
-            x = (0, a.useCallback)(
+            [y, b] = (0, a.useState)({}),
+            x = (0, a.useCallback)((e, t) => b((s) => ({ ...s, [t]: e })), []),
+            C = (0, a.useCallback)(
               (e, t) =>
-                y((s) => {
+                b((s) => {
                   const r = { ...s };
                   return r[t] === e && delete r[t], r;
                 }),
               [],
             ),
-            C = (0, u.f)("SegmentedControl", t),
-            I = (0, a.useMemo)(
+            I = (0, u.f)("SegmentedControl", t),
+            j = (0, a.useMemo)(
               () => ({
-                value: h,
-                onValueChange: f,
-                register: b,
-                unregister: x,
+                value: f,
+                onValueChange: S,
+                register: x,
+                unregister: C,
                 radius: s,
                 size: l,
               }),
-              [h, f, b, x, s, l],
+              [f, S, x, C, s, l],
             );
           return (0, r.jsx)(i.j, {
             clickable: !1,
             hoverable: !1,
             focusable: !1,
-            variant: C,
+            variant: I,
             radius: s,
             size: l,
-            className: c()(p.SegmentedControlBox, p[`Variant-${C}`]),
+            status: d,
+            className: c()(p.SegmentedControlBox, p[`Variant-${I}`]),
             tabIndex: 0,
             onKeyDown: (e) => {
               let t = 0;
@@ -439,11 +441,11 @@
                   t = -1;
               }
               if (t) {
-                const s = Array.from(Object.values(S)).sort(g);
+                const s = Array.from(Object.values(y)).sort(g);
                 let r;
-                if (null === h) r = t > 0 ? 0 : s.length - 1;
+                if (null === f) r = t > 0 ? 0 : s.length - 1;
                 else {
-                  const e = S[h],
+                  const e = y[f],
                     a = s.findIndex((t) => t === e);
                   (0, o.wT)(
                     "number" == typeof a,
@@ -452,18 +454,18 @@
                     (r = a + t);
                 }
                 const a = s[r < 0 ? s.length + r : r % s.length],
-                  i = Object.keys(S).find((e) => S[e] === a);
+                  i = Object.keys(y).find((e) => y[e] === a);
                 "string" != typeof i
                   ? console.error("Could not find next segmeneted value")
-                  : (f(i), e.stopPropagation(), e.preventDefault());
+                  : (S(i), e.stopPropagation(), e.preventDefault());
               }
             },
             children: (0, r.jsx)(m.Provider, {
-              value: I,
+              value: j,
               children: (0, r.jsxs)(n.az, {
                 className: p.SegmentedControl,
                 style: { "--outer-radius": `var(--radius-${s})` },
-                children: [d, null !== h && (0, r.jsx)(_, { radius: s })],
+                children: [h, null !== f && (0, r.jsx)(_, { radius: s })],
               }),
             }),
           });

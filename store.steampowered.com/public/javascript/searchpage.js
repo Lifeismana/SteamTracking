@@ -709,6 +709,14 @@ function InitSearchPage()
 		}
 	}
 
+	$J( document ).on( 'click', '.search_results_spellcheck_suggestion a', function( e ) {
+		if ( e.which > 1 || e.shiftKey || e.ctrlKey || e.metaKey || e.altKey )
+			return;
+
+		e.preventDefault();
+		SearchLinkClick( this );
+	} );
+
 	HandleFilteredResultsWarning();
 	InitInfiniteScroll(g_rgCurrentParameters);
 	DecorateFilterControls();

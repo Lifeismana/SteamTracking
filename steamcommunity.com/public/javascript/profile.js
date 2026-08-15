@@ -464,6 +464,14 @@ function ManageFriendsInviteToGroup( $Form, groupid )
 	}
 }
 
+// submit a bulk action that acts on the whole list rather than the checkbox selection. Posting the
+// form rather than following a link is what carries the anti-CSRF sessionid to the controller.
+function ManageFriendsSubmitBulkAction( $Form, strActionName )
+{
+	$Form.find('input[name=action]').val( strActionName );
+	$Form.submit();
+}
+
 function ManageFriendsExecuteBulkAction( $Form, strActionName )
 {
 	if ( $Form.find('input[type=checkbox]:checked').length == 0 )
@@ -472,8 +480,7 @@ function ManageFriendsExecuteBulkAction( $Form, strActionName )
 		return;
 	}
 
-	$Form.find('input[name=action]').val( strActionName );
-	$Form.submit();
+	ManageFriendsSubmitBulkAction( $Form, strActionName );
 }
 
 function ManageFriendsConfirmBulkAction( $Form, strActionName, strTitle, strSingluarDescription, strPluralDescription )

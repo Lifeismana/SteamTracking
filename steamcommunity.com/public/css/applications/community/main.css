@@ -1118,6 +1118,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: normal;
 }
 @media (prefers-contrast: more) {
   ._2FxbHJzYoH024ko7zqcJOf {
@@ -1955,14 +1956,14 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._1dYQELEFBNFH0IYvXkMftN._127biiI7_uwVm-W_19FgJp ._1Q4DgIEGKtDwXf8mWbYxKN,
 ._1dYQELEFBNFH0IYvXkMftN._127biiI7_uwVm-W_19FgJp .QSXPssIFxIIPQy5pSPIUR,
 ._1dYQELEFBNFH0IYvXkMftN._127biiI7_uwVm-W_19FgJp .fZ4HR_XqSs8jBXWyeSNmk {
-  opacity: 0.45;
+  opacity: var(--vrlink-dim-opacity, 0.45);
 }
 ._1dYQELEFBNFH0IYvXkMftN.lgt4jn3n3i_TC14MNsjfZ ._1FDt0er0XaGOLFzzfp-7Q8,
 ._1dYQELEFBNFH0IYvXkMftN.lgt4jn3n3i_TC14MNsjfZ ._1Q4DgIEGKtDwXf8mWbYxKN {
-  opacity: 0.45;
+  opacity: var(--vrlink-dim-opacity, 0.45);
 }
 ._1dYQELEFBNFH0IYvXkMftN._2yGzWPU6NsqFSAEkvwIF4c ._1Q4DgIEGKtDwXf8mWbYxKN {
-  opacity: 0.45;
+  opacity: var(--vrlink-dim-opacity, 0.45);
 }
 ._1dYQELEFBNFH0IYvXkMftN.ccU_YGs5TgZ5tFm4QkvOd .QSXPssIFxIIPQy5pSPIUR,
 ._1dYQELEFBNFH0IYvXkMftN.ccU_YGs5TgZ5tFm4QkvOd ._21GOsrHjWqo70iIxGr-ds3,

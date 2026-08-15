@@ -237,7 +237,9 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CopyPasteButton: "_2dV3OoJU7qVT0M5K0-i64c",
         CopyPasteButtonComplete: "_1BnzxIM9tpJgUM7fdF0cbA",
+        CopyPasteComplete: "_2wMWnt_URzicnZRo01_FcW",
         CloseButton: "_1VQyIvfDyqsuGfQ2dK-hws",
       };
     },
@@ -615,6 +617,7 @@
     chunkid: (module) => {
       module.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
+        Disabled: "_21NiFCkZFlTZ8WrrrxX0BX",
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
       };
     },
@@ -10893,6 +10896,46 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      const _ = 1500;
+      function _() {
+        const [_, _] = _.useState(void 0),
+          _ = _.useRef(void 0);
+        _.useEffect(() => () => window.clearTimeout(_.current), []);
+        return [
+          _,
+          (0, _.useCallback)((_) => {
+            window.clearTimeout(_.current),
+              _((_) => {
+                var _;
+                return {
+                  eToast: _,
+                  nShowCount:
+                    (null !== (_ = null == _ ? void 0 : _.nShowCount) &&
+                    void 0 !== _
+                      ? _
+                      : 0) + 1,
+                };
+              }),
+              (_.current = window.setTimeout(() => _(void 0), _));
+          }, []),
+        ];
+      }
+      function _(_) {
+        const { toast: _ } = _;
+        return _
+          ? (0, _.jsx)(
+              "div",
+              {
+                className: _().CopyPasteButtonComplete,
+                children:
+                  "copied" == _.eToast
+                    ? (0, _._)("#Button_Copied")
+                    : (0, _._)("#Button_Pasted"),
+              },
+              _.nShowCount,
+            )
+          : null;
+      }
       function _(_) {
         const {
             editModel: _,
@@ -10901,7 +10944,7 @@
             bMinimized: _,
             fnToggleMinimized: _,
           } = _,
-          [_, _] = _.useState(void 0);
+          [_, _] = _();
         return (0, _.jsx)("div", {
           className: (0, _._)(_.CloseSectionTools),
           children: (0, _.jsxs)("div", {
@@ -10925,14 +10968,12 @@
                               contents: _,
                             };
                             await _(_, _);
-                          })(_, _, (_) => _(_)),
+                          })(_, _, () => _("copied")),
                         children: [
                           (0, _.jsx)(_.cKB, {}),
-                          "copied" == _ &&
-                            (0, _.jsx)("div", {
-                              className: _().CopyPasteButtonComplete,
-                              children: (0, _._)("#Button_Copied"),
-                            }),
+                          (0, _.jsx)(_, {
+                            toast: _,
+                          }),
                         ],
                       }),
                     }),
@@ -10987,7 +11028,7 @@
       function _(_) {
         const { dataToCopy: _ } = _,
           _ = (0, _._)(),
-          [_, _] = _.useState(void 0);
+          [_, _] = _();
         return (0, _.jsx)(_._, {
           toolTipContent: (0, _._)("#Button_CopyClipboard"),
           children: (0, _.jsxs)(_._, {
@@ -11004,15 +11045,13 @@
                     contents: _.GetEventModel().jsondata.sale_sub_menu,
                   };
                   await _(_, _);
-                })(_, (_) => _(_));
+                })(_, () => _("copied"));
             },
             children: [
               (0, _.jsx)(_.cKB, {}),
-              "copied" == _ &&
-                (0, _.jsx)("div", {
-                  className: _().CopyPasteButtonComplete,
-                  children: (0, _._)("#Button_Copied"),
-                }),
+              (0, _.jsx)(_, {
+                toast: _,
+              }),
             ],
           }),
         });
@@ -11025,9 +11064,7 @@
         } catch (_) {
           return void console.error("Failed to write to clipboard: ", _);
         }
-        _((0, _._)("#EventEditor_Copied")),
-          await new Promise((_) => setTimeout(_, 1e3)),
-          _(void 0);
+        _();
       }
       function _(_) {
         const { dataToPaste: _ } = _,
@@ -11039,7 +11076,7 @@
       }
       function _(_) {
         const { editModel: _, saleSection: _, dataToPaste: _ } = _,
-          [_, _] = _.useState(void 0),
+          [_, _] = _(),
           _ = (0, _.useCallback)(
             async (_, _) => {
               let _;
@@ -11074,9 +11111,7 @@
                   (_.GetEventModel().jsondata.sale_sections[_] = _),
                   _.SetDirty(_._.jsondata_sales),
                   (0, _._)((0, _._)(_), !1),
-                  _((0, _._)("#EventEditor_Pasted")),
-                  await new Promise((_) => setTimeout(_, 1e3)),
-                  _(void 0),
+                  _("pasted"),
                   _._.is_support &&
                     _.groupAccountID != _.GetClanAccountID() &&
                     (_.universe == _.wLO || _.universe == _._.EUNIVERSE))
@@ -11129,13 +11164,11 @@
                   })(_) &&
                   ((_.GetEventModel().jsondata.sale_sub_menu = _.contents),
                   _.SetDirty(_._.jsondata_sales),
-                  _((0, _._)("#EventEditor_Pasted")),
-                  await new Promise((_) => setTimeout(_, 1e3)),
-                  _(void 0),
+                  _("pasted"),
                   (0, _._)("SalePageEdit_SubMenuEditor", !1));
               var _;
             },
-            [_],
+            [_, _],
           );
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsx)(_._, {
@@ -11145,11 +11178,9 @@
               onClick: () => _(_, _),
               children: [
                 (0, _.jsx)(_.iDD, {}),
-                "pasted" == _ &&
-                  (0, _.jsx)("div", {
-                    className: _().CopyPasteButtonComplete,
-                    children: (0, _._)("#Button_Pasted"),
-                  }),
+                (0, _.jsx)(_, {
+                  toast: _,
+                }),
               ],
             }),
           }),
@@ -19504,8 +19535,8 @@
               questions: [],
             });
         }, [_]);
-        const [_, _, _, _, _] = (0, _._)(() => {
-          var _, _, _, _, _;
+        const [_, _, _, _, _, _, _] = (0, _._)(() => {
+          var _, _, _, _, _, _, _;
           return [
             null === (_ = _.quiz) || void 0 === _
               ? void 0
@@ -19522,6 +19553,10 @@
             null === (_ = _.quiz) || void 0 === _
               ? void 0
               : _.hide_question_type_label,
+            null === (_ = _.quiz) || void 0 === _ ? void 0 : _.quiz_type,
+            null === (_ = _.quiz) || void 0 === _
+              ? void 0
+              : _.grant_reward_on_branch_result,
           ];
         });
         return _.quiz
@@ -19602,18 +19637,31 @@
                         placeholder: "https://<Image URL?",
                         value: _,
                       }),
-                    (0, _.jsx)(_._, {
+                    (0, _.jsxs)(_._, {
                       clanSteamID: __webpack_require__.GetClanSteamID(),
                       requireAdmin: !0,
-                      children: (0, _.jsx)(_._, {
-                        label:
-                          'Track Each Correct Answers with Event "Doors"; you likely do not want this enabled as it will adjust the bits per answered question (requires server side setup)',
-                        checked: _,
-                        onChange: (_) => {
-                          _.quiz.track_with_cozy_cottage_doors != _ &&
-                            ((_.quiz.track_with_cozy_cottage_doors = _), _());
-                        },
-                      }),
+                      children: [
+                        (0, _.jsx)(_._, {
+                          label:
+                            'Track Each Correct Answers with Event "Doors"; you likely do not want this enabled as it will adjust the bits per answered question (requires server side setup)',
+                          checked: _,
+                          onChange: (_) => {
+                            _.quiz.track_with_cozy_cottage_doors != _ &&
+                              ((_.quiz.track_with_cozy_cottage_doors = _), _());
+                          },
+                        }),
+                        Boolean("branching" == _) &&
+                          (0, _.jsx)(_._, {
+                            label:
+                              'Unlock the Reward When a Result is Reached; opens the "quiz completed" door (aka door 0) as soon as any ending is shown, with no response to submit. Replaying for another ending will not grant a second time (requires server side setup)',
+                            checked: _,
+                            onChange: (_) => {
+                              _.quiz.grant_reward_on_branch_result != _ &&
+                                ((_.quiz.grant_reward_on_branch_result = _),
+                                _());
+                            },
+                          }),
+                      ],
                     }),
                     (0, _.jsx)("h2", {
                       children: (0, _._)("#Sale_Section_Quiz_QuestionTitle"),
@@ -22912,6 +22960,18 @@
             (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
         }
       }
+      function _(_) {
+        const [_, _] = (0, _.useState)(_.Get().GetVirtualItemDefsForEventID(_));
+        return (
+          (0, _.useEffect)(() => {
+            _ &&
+              !_.Get().BHasLoadedDef(_) &&
+              _.Get().LoadVirtualItemRewardDef(_);
+          }, [_]),
+          (0, _._)(_.Get().GetVirtualItemDefsChangeForEventID(_), _),
+          _
+        );
+      }
       function _() {
         return {
           fnCreateNewVirtualItemRewardDef:
@@ -23408,22 +23468,28 @@
                 ),
               children: (0, _._)("#Sale_Section_RewardShelf_AddItem"),
             }),
-            (0, _.jsx)(_._, {
+            (0, _.jsxs)(_._, {
               requireAdmin: !0,
               clanSteamID: _.GetClanSteamID(),
               className: (0, _._)(_.ValveOnlyBackground),
-              children: Boolean(_)
-                ? (0, _.jsx)(_, {
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)(_, {
                     virtual_item_reward_event: _,
-                    rgRewardItemDef: _,
-                    fnOnDirty: _,
-                    language: _,
-                    editModel: _,
-                  })
-                : (0, _.jsx)("div", {
-                    children:
-                      "Note: Require virtual item reward event id to setup claimable items by date range.",
                   }),
+                Boolean(_)
+                  ? (0, _.jsx)(_, {
+                      virtual_item_reward_event: _,
+                      rgRewardItemDef: _,
+                      fnOnDirty: _,
+                      language: _,
+                      editModel: _,
+                    })
+                  : (0, _.jsx)("div", {
+                      children:
+                        "Note: Require virtual item reward event id to setup claimable items by date range.",
+                    }),
+              ],
             }),
           ],
         });
@@ -23497,20 +23563,7 @@
                 : _.skip_badge_sync,
             ];
           }),
-          _ = (function (_) {
-            const [_, _] = (0, _.useState)(
-              _.Get().GetVirtualItemDefsForEventID(_),
-            );
-            return (
-              (0, _.useEffect)(() => {
-                _ &&
-                  !_.Get().BHasLoadedDef(_) &&
-                  _.Get().LoadVirtualItemRewardDef(_);
-              }, [_]),
-              (0, _._)(_.Get().GetVirtualItemDefsChangeForEventID(_), _),
-              _
-            );
-          })(_);
+          _ = _(_);
         return (
           (0, _.useEffect)(() => {
             if (_) {
@@ -23733,11 +23786,16 @@
                     ),
                   }),
                 }),
-            (0, _.jsx)("div", {
-              children: (0, _._)(
-                "#Sale_Section_RewardShelf_Granted",
-                _.item_bucket,
+            (0, _.jsx)(_._, {
+              toolTipContent: (0, _._)(
+                "#Sale_Section_RewardShelf_ItemBucket_ttip",
               ),
+              children: (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#Sale_Section_RewardShelf_ItemBucketList",
+                  _.item_bucket,
+                ),
+              }),
             }),
           ],
         });
@@ -23773,7 +23831,67 @@
                 ? void 0
                 : _.item_type) || 0,
             ),
+          _ = (function (_) {
+            var _;
+            return null === (_ = _(_)) || void 0 === _ ? void 0 : _.itemMap;
+          })(_),
           [_, _] = (0, _.useState)(0),
+          _ = _(_),
+          [_, _] = (0, _.useMemo)(() => {
+            const _ = new Set(
+                (null != _ ? _ : [])
+                  .filter((_) => _.active)
+                  .map((_) => `${_.appid}:${_.community_item_type}`),
+              ),
+              _ = new Array(),
+              _ = new Array();
+            return (
+              (null != _ ? _ : []).forEach((_, _) =>
+                (_.has(`${_}:${_.item_type}`) ? _ : _).push({
+                  item: _,
+                  iIndex: _,
+                }),
+              ),
+              [_, _]
+            );
+          }, [_, _, _]),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useMemo)(() => _.map((_) => _.item), [_]),
+          _ = (0, _.useMemo)(
+            () =>
+              (function (_, _, _, _) {
+                if (!((null == _ ? void 0 : _.length) > 0 && _ >= 0))
+                  return null;
+                const _ = new Map(),
+                  _ = new Set();
+                (null != _ ? _ : []).forEach((_) => {
+                  const _ = `${_.appid}:${_.community_item_type}`;
+                  _.has(_) || _.set(_, new Set()),
+                    _.get(_).add(_.item_bucket),
+                    _.active && _.add(_.item_bucket);
+                });
+                const _ = new Array(_.length).fill(-1),
+                  _ = new Set();
+                for (let _ = _; _.size < _.length; ++_) {
+                  if (_ > _) return null;
+                  if (_.has(_)) continue;
+                  const _ = _.findIndex((_, _) => {
+                    var _;
+                    return (
+                      !_.has(_) &&
+                      !(null === (_ = _.get(`${_}:${_.item_type}`)) ||
+                      void 0 === _
+                        ? void 0
+                        : _.has(_))
+                    );
+                  });
+                  if (_ < 0) return null;
+                  (_[_] = _), _.add(_);
+                }
+                return _;
+              })(_, _, _, _),
+            [_, _, _, _],
+          ),
           [_] = (0, _._)(_, {
             include_release: !0,
           }),
@@ -23834,12 +23952,40 @@
                   children: [
                     (0, _.jsx)(_._, {
                       type: "number",
-                      label: "Door Index",
+                      label: (0, _._)("#Sale_Section_RewardShelf_ItemBucket"),
+                      tooltip: (0, _._)(
+                        "#Sale_Section_RewardShelf_ItemBucket_ttip",
+                      ),
                       min: "0",
                       max: "63",
                       value: _,
                       onChange: (_) =>
                         _(Number.parseInt(_.currentTarget.value)),
+                    }),
+                    (0, _.jsx)(_._, {
+                      disabled: !_(_, _) || !_,
+                      onClick: () => {
+                        _.fnSetLoading(!0);
+                        const _ = (_) =>
+                          _ >= _.length
+                            ? Promise.resolve(_._)
+                            : _(
+                                _,
+                                _[_],
+                                (null == _ ? void 0 : _.get(_[_].item_type)) ||
+                                  0,
+                                _[_],
+                              ).then((_) => (_ == _._ ? _(_ + 1) : _));
+                        _(0).then((_) => (0, _._)(_, _));
+                      },
+                      children:
+                        0 == _.length
+                          ? "Add All: every item on this app is already set up"
+                          : _(_, _)
+                            ? _
+                              ? `Add All ${_.length} Remaining Items, One Per Bucket (${_.join(", ")})`
+                              : "Add All: unavailable, could not find a free bucket for every item"
+                            : "Add All: unavailable, some items have no Reward ID and need publishing",
                     }),
                     (0, _.jsx)(_._, {
                       requireAdmin: !0,
@@ -23858,19 +24004,43 @@
                       ),
                     }),
                     (0, _.jsx)("hr", {}),
-                    _.map((_, _) =>
+                    _.map((_) =>
                       (0, _.jsx)(
                         _._,
                         {
-                          checked: _ == _,
-                          onChange: (_) => _(_ ? _ : null),
+                          checked: _ == _.iIndex,
+                          onChange: (_) => _(_ ? _.iIndex : null),
                           label: (0, _.jsx)(_, {
-                            item: _,
+                            item: _.item,
                           }),
                         },
-                        _.item_name,
+                        _.item.item_name,
                       ),
                     ),
+                    Boolean(_.length > 0) &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("hr", {}),
+                          (0, _.jsx)(_._, {
+                            onClick: () => _(!_),
+                            children: `${_ ? "Hide" : "Show"} ${_.length} items already added to this event`,
+                          }),
+                          Boolean(_) &&
+                            _.map((_) =>
+                              (0, _.jsx)(
+                                _._,
+                                {
+                                  checked: _ == _.iIndex,
+                                  onChange: (_) => _(_ ? _.iIndex : null),
+                                  label: (0, _.jsx)(_, {
+                                    item: _.item,
+                                  }),
+                                },
+                                _.item.item_name,
+                              ),
+                            ),
+                        ],
+                      }),
                   ],
                 })
               : (0, _.jsx)("div", {
@@ -23899,6 +24069,147 @@
             }),
           ],
         });
+      }
+      (0, _._)([_._], _.prototype, "SetSaleItemRewardDef", null);
+      const _ = 63;
+      function _(_, _) {
+        return (
+          (null == _ ? void 0 : _.length) > 0 &&
+          _.every((_) => Boolean(null == _ ? void 0 : _.get(_.item_type)))
+        );
+      }
+      function _(_) {
+        const { virtual_item_reward_event: _ } = _,
+          _ = _(_),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useMemo)(
+            () => (null != _ ? _ : []).filter((_) => _.active),
+            [_],
+          ),
+          _ = (0, _.useMemo)(
+            () =>
+              (function (_) {
+                const _ = (null != _ ? _ : []).filter((_) => _.active),
+                  _ = new Array();
+                if (0 == _.length) return _;
+                const _ = new Map();
+                _.forEach((_) => {
+                  var _;
+                  return _.set(
+                    _.item_bucket,
+                    1 +
+                      (null !== (_ = _.get(_.item_bucket)) && void 0 !== _
+                        ? _
+                        : 0),
+                  );
+                }),
+                  _.forEach((_, _) => {
+                    _ > 1 &&
+                      __webpack_require__.push(
+                        `Bucket ${_} holds ${_} items. Opening the door only grants one of them, picked at random.`,
+                      );
+                  });
+                for (let _ = 0; _ < _.size; ++_)
+                  _.has(_) ||
+                    __webpack_require__.push(
+                      `Bucket ${_} is empty. A bucket with no item fails the entire grant, so the door never opens and the user gets nothing.`,
+                    );
+                const _ = new Map();
+                return (
+                  _.forEach((_) => {
+                    var _;
+                    const _ = `${_.appid}:${_.community_item_type}`;
+                    _.set(_, [
+                      ...(null !== (_ = _.get(_)) && void 0 !== _ ? _ : []),
+                      _.item_bucket,
+                    ]);
+                  }),
+                  _.forEach((_, _) => {
+                    _.length > 1 &&
+                      __webpack_require__.push(
+                        `App/item ${_} is in buckets ${_.join(", ")}. The user is granted the same item more than once.`,
+                      );
+                  }),
+                  _
+                );
+              })(_),
+            [_],
+          );
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("h3", {
+              children: "(VO) Reward Bucket Tools",
+            }),
+            (0, _.jsx)("div", {
+              children: `Active reward items: ${_.length}; buckets in use: ${
+                _._(_.map((_) => _.item_bucket))
+                  .sort((_, _) => _ - _)
+                  .join(", ") || "none"
+              }`,
+            }),
+            (0, _.jsx)(_._, {
+              onClick: () => _(!0),
+              children: "Verify Item Buckets",
+            }),
+            Boolean(_) &&
+              (_.length > 0
+                ? (0, _.jsx)("ul", {
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        "li",
+                        {
+                          children: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  })
+                : (0, _.jsx)("div", {
+                    children:
+                      "Buckets look right: one item each, numbered from zero with no gaps, and no item repeated.",
+                  })),
+            (0, _.jsx)(_._, {
+              disabled: 0 == _.length,
+              onClick: (_) =>
+                (0, _._)(
+                  (0, _.jsx)(_, {
+                    eventID: _,
+                    rgActiveDefs: _,
+                  }),
+                  (0, _._)(_),
+                ),
+              children: "Clear All Reward Items",
+            }),
+            (0, _.jsx)("hr", {}),
+          ],
+        });
+      }
+      function _(_) {
+        const { closeModal: _, eventID: _, rgActiveDefs: _ } = _,
+          { fnMarkVirtualItemRewardInactive: _ } = _(),
+          _ = (0, _._)();
+        return _.bLoading
+          ? (0, _.jsx)(_._, {
+              state: _,
+              strDialogTitle: "Clear All Reward Items",
+              closeModal: _,
+            })
+          : (0, _.jsx)(_._, {
+              strTitle: "Clear All Reward Items",
+              strDescription: `Mark all ${_.length} reward items for this event inactive? They stop being granted, but the definitions are kept and anything already handed out stays with the user.`,
+              onCancel: _,
+              bOKDisabled: _.bLoading,
+              onOK: () => {
+                _.fnSetLoading(!0);
+                const _ = (_) =>
+                  _ >= _.length
+                    ? Promise.resolve(_._)
+                    : _(_, _[_].virtual_item_def_id).then((_) =>
+                        _ == _._ ? _(_ + 1) : _,
+                      );
+                _(0).then((_) => (0, _._)(_, _));
+              },
+            });
       }
       function _(_) {
         const { closeModal: _, rewardItemDef: _, eventID: _ } = _,
@@ -23949,7 +24260,6 @@
           label: (0, _._)("#Sale_Section_RewardShelf_VirtualEventID"),
         });
       }
-      (0, _._)([_._], _.prototype, "SetSaleItemRewardDef", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
@@ -35268,15 +35578,17 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ..._ } = _;
+        const { children: _, className: _, bDisabled: _, ..._ } = _;
         return (0, _.jsxs)(_._, {
           cursor: "default",
           gap: "2",
-          className: _.Option,
+          className: _()(_.Option, _ && _.Disabled),
           ..._,
           children: [
             (0, _.jsx)("div", {
@@ -35295,11 +35607,13 @@
               onValueChange: _,
               options: _,
               getOptionLabel: _,
+              disabled: _,
               ..._
             } = _;
             return (0, _.jsx)(_.Root, {
               value: _,
               onValueChange: _,
+              disabled: _,
               ..._,
               children: _.map((_) => {
                 const _ = _ ? _(_) : _;
@@ -35316,7 +35630,13 @@
           },
           {
             Root: function (_) {
-              const { value: _, onValueChange: _, render: _, ..._ } = _,
+              const {
+                  value: _,
+                  onValueChange: _,
+                  disabled: _,
+                  render: _,
+                  ..._
+                } = _,
                 _ = (0, _.useRef)(null),
                 _ = (0, _.useCallback)((_, _) => {
                   if (!_.current) return;
@@ -35337,13 +35657,15 @@
                   () => ({
                     value: _,
                     onValueChange: _,
+                    bDisabled: _,
                     onSelectNext: _,
                     onSelectPrev: _,
                   }),
-                  [_, _, _, _],
+                  [_, _, _, _, _],
                 ),
                 _ = {
                   role: "radiogroup",
+                  "aria-disabled": _,
                   ref: _,
                   ..._,
                 },
@@ -35351,6 +35673,7 @@
                   direction: "column",
                   gap: "2",
                   role: "radiogroup",
+                  "aria-disabled": _,
                   ..._,
                 }),
                 _ = (0, _._)(_, _, _);
@@ -35373,39 +35696,45 @@
               const {
                   value: _,
                   onValueChange: _,
+                  bDisabled: _,
                   onSelectNext: _,
                   onSelectPrev: _,
                 } = _,
                 _ = _ === _,
                 _ = () => {
-                  _ || _(_);
+                  _ || _ || _(_);
                 },
                 _ = {
                   role: "radio",
                   "aria-checked": _,
+                  "aria-disabled": _,
                   "data-radio-id": _,
                   onClick: _,
                   onKeyDown: (_) => {
-                    switch (_.key) {
-                      case " ":
-                        _(), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowRight":
-                      case "ArrowDown":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowLeft":
-                      case "ArrowUp":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                    }
+                    if (!_)
+                      switch (_.key) {
+                        case " ":
+                          _(), _.preventDefault(), _.stopPropagation();
+                          break;
+                        case "ArrowRight":
+                        case "ArrowDown":
+                          _(_), _.preventDefault(), _.stopPropagation();
+                          break;
+                        case "ArrowLeft":
+                        case "ArrowUp":
+                          _(_), _.preventDefault(), _.stopPropagation();
+                      }
                   },
                   tabIndex: _ ? 0 : -1,
                   ref: _,
                   children: _,
                 },
-                _ = (0, _.jsx)(_, {});
+                _ = (0, _.jsx)(_, {
+                  bDisabled: _,
+                });
               return (0, _._)(_, _, _, {
                 bSelected: _,
+                bDisabled: _,
               });
             },
           },

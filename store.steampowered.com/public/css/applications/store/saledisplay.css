@@ -2138,22 +2138,10 @@ p a:hover {
   width: 100%;
   aspect-ratio: 1200 / 460;
   margin: 0 auto;
-  margin-bottom: 0px;
-  margin-top: 67px;
   z-index: 1;
 }
 .BasicUI ._3Rukhd1HqXzPiBrK5hwPT- {
   max-height: 285px;
-  margin-bottom: 0px;
-  margin-top: 65px;
-}
-html.responsive.GamepadMode ._3Rukhd1HqXzPiBrK5hwPT- {
-  margin-top: 4vw;
-}
-@media screen and (max-width: 910px) {
-  html.responsive ._3Rukhd1HqXzPiBrK5hwPT- {
-    margin-top: 4vw;
-  }
 }
 ._3Rukhd1HqXzPiBrK5hwPT- img {
   width: auto;
@@ -2165,12 +2153,6 @@ html.responsive.GamepadMode ._3Rukhd1HqXzPiBrK5hwPT- {
 .BasicUI ._3Rukhd1HqXzPiBrK5hwPT- img {
   max-height: 285px;
   width: auto;
-}
-@media screen and (max-width: 940px) {
-  ._3Rukhd1HqXzPiBrK5hwPT- {
-    margin-top: 45px;
-    margin-bottom: 0px;
-  }
 }
 ._3t5Ysy42auAhLs-ZV5jwdF {
   border-radius: 4px;

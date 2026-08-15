@@ -445,11 +445,11 @@
           return n.GetElements();
         }
       }
-      function a(e, t) {
-        let n = "[" + e;
-        t?.[""] && (n += `=${s("" + t[""])}`);
-        for (const e in t) "" !== e && (n += ` ${i(e)}=${s("" + t[e])}`);
-        return (n += "]"), n;
+      function a(e, t, n = !1) {
+        let r = "[" + e;
+        t?.[""] && (r += `=${n ? "" + t[""] : s("" + t[""])}`);
+        for (const e in t) "" !== e && (r += ` ${i(e)}=${s("" + t[e])}`);
+        return (r += "]"), r;
       }
       function s(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;

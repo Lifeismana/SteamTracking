@@ -643,10 +643,13 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
   --background-color: var(--bg-default);
 }
-._3a3fNdwhCItYEc1SsUNP:hover:not([aria-checked="true"]) {
+._3a3fNdwhCItYEc1SsUNP:hover:not([aria-checked="true"]):not(
+    ._21NiFCkZFlTZ8WrrrxX0BX
+  ) {
   --background-color: var(--bg-focus);
 }
-._3a3fNdwhCItYEc1SsUNP:disabled {
+._3a3fNdwhCItYEc1SsUNP:disabled,
+._3a3fNdwhCItYEc1SsUNP._21NiFCkZFlTZ8WrrrxX0BX {
   --background-color: var(--bg-disabled);
 }
 ._3a3fNdwhCItYEc1SsUNP:focus-visible,

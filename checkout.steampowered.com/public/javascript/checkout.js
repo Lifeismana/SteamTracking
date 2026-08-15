@@ -1176,6 +1176,22 @@ function OnInitializeTransactionFailure( detail, result )
 	}
 }
 
+function HandleMobileAppCheckoutAction( strAction )
+{
+	switch ( strAction )
+	{
+		case 'auth_complete':
+			return OnAuthenticationComplete();
+		case 'auth_fail':
+			return OnAuthenticationFail();
+		case 'paypal_success':
+			return OnPayPalSuccess();
+		case 'paypal_cancel':
+			return OnPayPalCancel();
+		default:
+			console.error( 'Unknown checkout action', strAction );
+	}
+}
 
 function OnAuthenticationComplete( gidTransID )
 {

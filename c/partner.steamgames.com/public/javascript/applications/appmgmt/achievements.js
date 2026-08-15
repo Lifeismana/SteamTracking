@@ -9267,6 +9267,7 @@
             ref: _,
             disabled: _,
             gamepadFocusable: _ = !0,
+            status: _,
             ..._
           } = _,
           _ = (0, _._)(),
@@ -9285,6 +9286,7 @@
             variant: (0, _._)("TextInput", _),
             size: _,
             radius: _,
+            status: _,
             beforeContent: _,
             afterContent: _,
             ref: _,

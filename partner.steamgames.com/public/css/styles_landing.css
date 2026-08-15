@@ -1117,6 +1117,23 @@ p {
 	.buttonRow.disabled .new {
 		color: #6d7967;
 	}
+	.buttonRow .compatSection {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.buttonRow .hardwareCompatibilityStatus {
+		display: grid;
+		grid-template-columns: auto auto auto auto 1fr;
+		column-gap: 10px;
+		grid-template-rows: auto;
+		padding-top: 5px;
+		align-items: center;
+		row-gap: 5px;
+	}
+	.buttonRow .hardwareCompatibilityLabel {
+		color: white;
+	}
 
 
 .greyBox {

@@ -17,42 +17,42 @@
         AvatarFrameImg: "Uk4DBWxeyo7Tn8SAl8afe",
       };
     },
-    98682: (e, a, t) => {
+    98682: (e, t, a) => {
       "use strict";
-      t.d(a, { Ul: () => f, wm: () => Q });
-      var i = t(7850);
+      a.d(t, { Ul: () => f, wm: () => Q });
+      var i = a(7850);
       const n =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
         r =
-          t.p +
+          a.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching",
-        A =
+        s =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
-      var s = t(22837),
-        o = t(90626);
-      function l(e) {
-        const { rgSources: a, onIncrementalError: t, alt: n, ...r } = e,
-          [A, s] = (0, o.useState)(0),
-          l = a[A];
+      var A = a(22837),
+        o = a(90626);
+      function c(e) {
+        const { rgSources: t, onIncrementalError: a, alt: n, ...r } = e,
+          [s, A] = (0, o.useState)(0),
+          c = t[s];
         return (0, i.jsx)("img", {
           onError: (e) => {
-            s((e) => e + 1), t?.(e, l, A);
+            A((e) => e + 1), a?.(e, c, s);
           },
           alt: n,
           ...r,
-          src: l,
+          src: c,
         });
       }
-      var c = t(66418),
-        d = t(64238),
-        u = t.n(d),
-        B = t(16339),
-        g = t(99171);
+      var l = a(66418),
+        d = a(64238),
+        u = a.n(d),
+        B = a(16339),
+        g = a(99171);
       function f(e) {
         const {
-            avatarURL: a,
-            size: t,
-            statusStyle: s,
+            avatarURL: t,
+            size: a,
+            statusStyle: A,
             statusPosition: o,
             className: d,
             children: g,
@@ -64,22 +64,22 @@
           } = e,
           E = [];
         return (
-          a && E.push(a),
+          t && E.push(t),
           E.push(
             (function (e) {
               switch (e) {
                 case "X-Small":
                 case "Small":
-                  return (0, c.YJ)(n);
+                  return (0, l.YJ)(n);
                 case "Medium":
                 case "MediumLarge":
-                  return (0, c.YJ)(A);
+                  return (0, l.YJ)(s);
                 case "Large":
                 case "X-Large":
                 case "FillArea":
-                  return (0, c.YJ)(r);
+                  return (0, l.YJ)(r);
               }
-            })(t ?? "Medium"),
+            })(a ?? "Medium"),
           ),
           (0, i.jsxs)("div", {
             className: u()(
@@ -93,11 +93,11 @@
               },
               d,
             ),
-            "data-size": t,
+            "data-size": a,
             "data-status-position": o,
             children: [
-              (0, i.jsx)("div", { className: B.AvatarStatus, style: s }),
-              (0, i.jsx)(l, {
+              (0, i.jsx)("div", { className: B.AvatarStatus, style: A }),
+              (0, i.jsx)(c, {
                 className: u()(B.Avatar),
                 rgSources: E,
                 draggable: !1,
@@ -110,118 +110,134 @@
       }
       function Q(e) {
         const {
-          playerLinkDetails: a,
-          animatedAvatar: t,
+          playerLinkDetails: t,
+          animatedAvatar: a,
           avatarFrame: n,
           size: r,
-          ...A
+          ...s
         } = e;
-        let o = (0, g.t)(a.public_data?.sha_digest_avatar, r);
+        let o = (0, g.t)(t.public_data?.sha_digest_avatar, r);
         return (
-          t?.image_small?.length &&
-            (o = c.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + t.image_small),
+          a?.image_small?.length &&
+            (o = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small),
           (0, i.jsx)(f, {
             avatarURL: o,
             size: r,
-            isOnline: a.private_data?.persona_state === s.UXk,
-            isInGame: void 0 !== a.private_data?.game_id,
+            isOnline: t.private_data?.persona_state === A.UXk,
+            isInGame: void 0 !== t.private_data?.game_id,
             isWatchingBroadcast:
-              void 0 !== a.private_data?.watching_broadcast_accountid,
+              void 0 !== t.private_data?.watching_broadcast_accountid,
             isAwayOrSnooze:
-              a.private_data?.persona_state === s.PrD ||
-              a.private_data?.persona_state === s.vPz,
-            ...A,
+              t.private_data?.persona_state === A.PrD ||
+              t.private_data?.persona_state === A.vPz,
+            ...s,
           })
         );
       }
     },
-    47352: (e, a, t) => {
+    82861: (e, t, a) => {
       "use strict";
-      t.r(a), t.d(a, { ShoppingCartErrorModal: () => J, default: () => F });
-      var i = t(7850),
-        n = t(98682),
-        r = t(83392),
-        A = t(20187),
-        s = t(53965),
-        o = t(13904),
-        l = t(79443),
-        c = t(38858),
-        d = t(66418);
-      function u(e, a) {
+      a.d(t, { n: () => n });
+      var i = a(66418);
+      function n(e, t) {
         return e?.public_data?.profile_url
-          ? `${d.TS.COMMUNITY_BASE_URL}id/${e.public_data.profile_url}`
+          ? `${i.TS.COMMUNITY_BASE_URL}id/${e.public_data.profile_url}`
           : (function (e) {
-              return e ? `${d.TS.COMMUNITY_BASE_URL}profiles/${e}` : "";
-            })(e?.public_data?.steamid || a);
+              return e ? `${i.TS.COMMUNITY_BASE_URL}profiles/${e}` : "";
+            })(e?.public_data?.steamid || t);
       }
-      var B = t(76217),
-        g = t(2551),
-        f = t(23809),
-        Q = t(29233),
-        C = t(80902),
-        p = t(11333);
-      const m = 1;
-      function E(e) {
+    },
+    18519: (e, t, a) => {
+      "use strict";
+      a.d(t, { jn: () => d });
+      var i = a(66418),
+        n = a(23809),
+        r = a(29233),
+        s = a(80902),
+        A = a(11333);
+      const o = 1;
+      function c(e) {
         return ["PlayerLinkDetails", e];
       }
-      function h(e, a) {
-        const t =
-          "number" == typeof a
-            ? Q.b2.InitFromAccountID(a, d.TS.EUNIVERSE).ConvertTo64BitString()
-            : a;
+      function l(e, t) {
+        const a =
+          "number" == typeof t
+            ? r.b2.InitFromAccountID(t, i.TS.EUNIVERSE).ConvertTo64BitString()
+            : t;
         return {
-          queryKey: E(t),
+          queryKey: c(a),
           queryFn: async () => {
-            if (t) {
+            if (a) {
               return (function (e) {
                 return (
                   delete e?.private_data?.account_name,
                   delete e?.public_data?.account_flags,
                   delete e?.public_data?.ban_expires_time,
                   delete e?.public_data?.privacy_state,
-                  e?.public_data?.profile_state !== m && delete e?.private_data,
+                  e?.public_data?.profile_state !== o && delete e?.private_data,
                   e
                 );
-              })(await e.load(t));
+              })(await e.load(a));
             }
             return null;
           },
-          enabled: !!t,
+          enabled: !!a,
         };
       }
-      var _ = t(75233),
-        v = t(51614);
-      const D = "giftee-hint-2",
-        S = 600;
-      function U() {
+      function d(e) {
+        const t = (0, n.KV)(),
+          a = (0, A.L)(t);
+        return (0, s.I)(l(a, e));
+      }
+    },
+    64908: (e, t, a) => {
+      "use strict";
+      a.r(t), a.d(t, { ShoppingCartErrorModal: () => H, default: () => k });
+      var i = a(7850),
+        n = a(98682),
+        r = a(83392),
+        s = a(20187),
+        A = a(53965),
+        o = a(13904),
+        c = a(79443),
+        l = a(38858),
+        d = a(82861),
+        u = a(76217),
+        B = a(1270),
+        g = a(18519),
+        f = a(66418),
+        Q = a(23809),
+        C = a(29233),
+        p = a(80902),
+        m = a(75233),
+        E = a(51614);
+      const h = "giftee-hint-2",
+        _ = 600;
+      function v() {
         const { data: e } = (function () {
-            const e = (0, f.rX)();
-            return (0, C.I)({
-              queryKey: [D],
+            const e = (0, Q.rX)();
+            return (0, p.I)({
+              queryKey: [h],
               queryFn: async () => {
-                const a = await e.GetObject(D);
-                return a
-                  ? !a.rtCreated || a.rtCreated < Date.now() / 1e3 - S
-                    ? (await e.RemoveObject(D), null)
-                    : a
+                const t = await e.GetObject(h);
+                return t
+                  ? !t.rtCreated || t.rtCreated < Date.now() / 1e3 - _
+                    ? (await e.RemoveObject(h), null)
+                    : t
                   : null;
               },
             });
           })(),
-          a = (function (e) {
-            const a = (0, f.KV)(),
-              t = (0, p.L)(a);
-            return (0, C.I)(h(t, e));
-          })(e?.nGifteeAccountID);
-        if (a.isLoading || !e?.nGifteeAccountID)
+          t = (0, g.jn)(e?.nGifteeAccountID);
+        if (t.isLoading || !e?.nGifteeAccountID)
           return { gifteeHint: e, gifteePlayerDetails: void 0 };
-        if (a.data) return { gifteeHint: e, gifteePlayerDetails: a.data };
+        if (t.data) return { gifteeHint: e, gifteePlayerDetails: t.data };
         return {
           gifteeHint: e,
           gifteePlayerDetails: {
             public_data: {
-              steamid: Q.b2
-                .InitFromAccountID(e.nGifteeAccountID, d.TS.EUNIVERSE)
+              steamid: C.b2
+                .InitFromAccountID(e.nGifteeAccountID, f.TS.EUNIVERSE)
                 .ConvertTo64BitString(),
               persona_name: e.strPersonaName,
               sha_digest_avatar: e.rgAvatarDigest
@@ -231,63 +247,63 @@
           },
         };
       }
-      var j = t(60014),
-        w = t(41515),
-        I = t(90626),
-        K = t(31292),
-        T = t(56283),
-        y = t(74568),
-        R = t(61859),
-        x = t(30470),
-        M = t(48980),
-        k = t(11543),
-        H = t.n(k),
-        N = t(53534);
-      function F(e) {
-        const { closeCart: a, lineItemIDs: t, replacedPackageIDs: n } = e,
-          r = (0, w.UI)(),
-          { data: A } = (0, w.g7)(),
-          s = (0, c.Yj)(t),
-          o = (0, j.aL)(x.TS.STORE_BASE_URL + "cart");
+      var D = a(60014),
+        S = a(41515),
+        U = a(90626),
+        j = a(31292),
+        w = a(56283),
+        I = a(74568),
+        K = a(61859),
+        T = a(30470),
+        y = a(48980),
+        R = a(11543),
+        x = a.n(R),
+        M = a(53534);
+      function k(e) {
+        const { closeCart: t, lineItemIDs: a, replacedPackageIDs: n } = e,
+          r = (0, S.UI)(),
+          { data: s } = (0, S.g7)(),
+          A = (0, l.Yj)(a),
+          o = (0, D.aL)(T.TS.STORE_BASE_URL + "cart");
         if (
-          (I.useEffect(() => {
-            r.isSuccess && s && 0 === s.length && a();
-          }, [r, s, a]),
-          !s)
+          (U.useEffect(() => {
+            r.isSuccess && A && 0 === A.length && t();
+          }, [r, A, t]),
+          !A)
         )
           return null;
-        const l = n?.length > 0;
-        return (0, i.jsx)(N.wW, {
-          validateCart: A,
-          eDisplayType: N.WA.k_ECartDisplayType_Modal,
-          children: (0, i.jsxs)(y.mt, {
+        const c = n?.length > 0;
+        return (0, i.jsx)(M.wW, {
+          validateCart: s,
+          eDisplayType: M.WA.k_ECartDisplayType_Modal,
+          children: (0, i.jsxs)(I.mt, {
             active: !0,
-            className: H().ShoppingCartModal,
-            onDismiss: a,
+            className: x().ShoppingCartModal,
+            onDismiss: t,
             children: [
               (0, i.jsx)("div", {
-                className: H().ShoppingCartHeader,
-                children: (0, R.we)(
-                  l ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
+                className: x().ShoppingCartHeader,
+                children: (0, K.we)(
+                  c ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart",
                 ),
               }),
-              (0, i.jsx)(M.pf, {
-                lineItems: s,
-                cartValidation: A,
+              (0, i.jsx)(y.pf, {
+                lineItems: A,
+                cartValidation: s,
                 scrollable: !0,
               }),
-              (0, i.jsx)(P, { lineItems: s, cartValidation: A }),
-              (0, i.jsxs)(B.Z, {
-                className: H().ShoppingCartModalBtns,
+              (0, i.jsx)(N, { lineItems: A, cartValidation: s }),
+              (0, i.jsxs)(u.Z, {
+                className: x().ShoppingCartModalBtns,
                 children: [
-                  (0, i.jsx)(T.$n, {
-                    onClick: a,
-                    children: (0, R.we)("#Cart_ContinueShopping"),
+                  (0, i.jsx)(w.$n, {
+                    onClick: t,
+                    children: (0, K.we)("#Cart_ContinueShopping"),
                   }),
-                  (0, i.jsx)(T.jn, {
-                    className: H().OpenCartBtn,
+                  (0, i.jsx)(w.jn, {
+                    className: x().OpenCartBtn,
                     onClick: () => (window.location.href = o),
-                    children: (0, R.we)(
+                    children: (0, K.we)(
                       "#Cart_ViewMyCart",
                       r.data?.line_items.length,
                     ),
@@ -298,29 +314,29 @@
           }),
         });
       }
-      function J(e) {
-        const { active: a, result: t, onDismiss: n } = e;
-        return (0, i.jsxs)(y.mt, {
-          active: a,
+      function H(e) {
+        const { active: t, result: a, onDismiss: n } = e;
+        return (0, i.jsxs)(I.mt, {
+          active: t,
           onDismiss: n,
           children: [
-            (0, i.jsx)(T.Y9, { children: (0, R.we)("#Error_Generic") }),
+            (0, i.jsx)(w.Y9, { children: (0, K.we)("#Error_Generic") }),
             (0, i.jsxs)("div", {
-              className: H().ErrorModalContent,
+              className: x().ErrorModalContent,
               children: [
                 (0, i.jsx)("div", {
-                  className: H().ErrorModalMessage,
-                  children: (0, R.we)("#Cart_ErrorUpdating"),
+                  className: x().ErrorModalMessage,
+                  children: (0, K.we)("#Cart_ErrorUpdating"),
                 }),
                 (0, i.jsx)("div", {
-                  className: H().ErrorModalCode,
-                  children: t ? (0, R.we)("#Cart_ErrorCode", t) : "",
+                  className: x().ErrorModalCode,
+                  children: a ? (0, K.we)("#Cart_ErrorCode", a) : "",
                 }),
                 (0, i.jsx)("div", {
-                  className: H().ErrorModalBottom,
-                  children: (0, i.jsx)(T.$n, {
+                  className: x().ErrorModalBottom,
+                  children: (0, i.jsx)(w.$n, {
                     onClick: n,
-                    children: (0, R.we)("#Button_Close"),
+                    children: (0, K.we)("#Button_Close"),
                   }),
                 }),
               ],
@@ -328,58 +344,58 @@
           ],
         });
       }
-      function P(e) {
-        const { cartValidation: a, lineItems: t } = e,
-          c = I.useRef(!1),
-          [d, B] = I.useState(!1),
-          { gifteeHint: Q, gifteePlayerDetails: C } = U(),
-          p = (0, l.EJ)(),
-          m = (function () {
-            const e = (0, _.jE)(),
-              a = (0, f.rX)();
-            return (0, v.n)({
+      function N(e) {
+        const { cartValidation: t, lineItems: a } = e,
+          l = U.useRef(!1),
+          [u, g] = U.useState(!1),
+          { gifteeHint: f, gifteePlayerDetails: C } = v(),
+          p = (0, c.EJ)(),
+          _ = (function () {
+            const e = (0, m.jE)(),
+              t = (0, Q.rX)();
+            return (0, E.n)({
               mutationFn: async (e) => {
                 e
-                  ? await a.StoreObject(D, {
+                  ? await t.StoreObject(h, {
                       ...e,
                       rtCreated: Date.now() / 1e3,
                     })
-                  : await a.RemoveObject(D);
+                  : await t.RemoveObject(h);
               },
-              onMutate: async (a) => {
-                await e.cancelQueries({ queryKey: [D] }),
-                  a && (a = { ...a, rtCreated: Date.now() / 1e3 }),
-                  e.setQueryData([D], a);
+              onMutate: async (t) => {
+                await e.cancelQueries({ queryKey: [h] }),
+                  t && (t = { ...t, rtCreated: Date.now() / 1e3 }),
+                  e.setQueryData([h], t);
               },
             });
           })(),
-          E = (0, o.C)();
-        let h = !(
-          d ||
-          !Q?.nGifteeAccountID ||
+          D = (0, o.C)();
+        let S = !(
+          u ||
+          !f?.nGifteeAccountID ||
           !C?.public_data ||
           p ||
-          !a?.cart_items
+          !t?.cart_items
         );
-        if (h) {
-          const e = new Map(a.cart_items.map((e) => [e.line_item_id, e]));
-          h = !!t.find(
-            (a) =>
-              !a.gift_info?.accountid_giftee &&
-              !!e.get(a.line_item_id)?.can_purchase_as_gift,
+        if (S) {
+          const e = new Map(t.cart_items.map((e) => [e.line_item_id, e]));
+          S = !!a.find(
+            (t) =>
+              !t.gift_info?.accountid_giftee &&
+              !!e.get(t.line_item_id)?.can_purchase_as_gift,
           );
         }
         if (
-          (I.useEffect(() => {
-            h &&
-              !c.current &&
-              ((0, K.D)()?.AddEvent(g.Xm.K4), (c.current = !0));
-          }, [h]),
-          !h)
+          (U.useEffect(() => {
+            S &&
+              !l.current &&
+              ((0, j.D)()?.AddEvent(B.Xm.K4), (l.current = !0));
+          }, [S]),
+          !S)
         )
           return null;
-        const S = (0, i.jsxs)("a", {
-          href: u(C),
+        const w = (0, i.jsxs)("a", {
+          href: (0, d.n)(C),
           target: "_blank",
           children: [
             (0, i.jsx)(n.wm, {
@@ -389,52 +405,52 @@
               alt: C.public_data.persona_name,
             }),
             (0, i.jsx)("div", {
-              className: H().PersonaName,
+              className: x().PersonaName,
               children: C.public_data.persona_name,
             }),
           ],
         });
         return (0, i.jsxs)(r.s, {
-          className: H().GifteeHintCtn,
+          className: x().GifteeHintCtn,
           align: "center",
           gap: "3",
           direction: "row",
           children: [
-            (0, i.jsx)(A.EY, {
+            (0, i.jsx)(s.EY, {
               as: "div",
               align: "center",
-              className: H().GifteeHint,
-              children: (0, R.PP)("#Cart_GifteeHint_Wishlist", S),
+              className: x().GifteeHint,
+              children: (0, K.PP)("#Cart_GifteeHint_Wishlist", w),
             }),
             (0, i.jsxs)(r.s, {
               gap: "2",
               direction: "row",
               align: "center",
               children: [
-                (0, i.jsx)(s.$, {
+                (0, i.jsx)(A.$, {
                   size: "1",
                   color: "dull",
                   onClick: () => {
-                    (0, K.D)()?.AddEvent(g.Xm.En), m.mutate(null);
+                    (0, j.D)()?.AddEvent(B.Xm.En), _.mutate(null);
                   },
-                  children: (0, R.we)("#Button_No"),
+                  children: (0, K.we)("#Button_No"),
                 }),
-                (0, i.jsx)(s.$, {
+                (0, i.jsx)(A.$, {
                   size: "1",
                   onClick: () => {
-                    for (const e of t)
-                      E.mutate({
+                    for (const e of a)
+                      D.mutate({
                         lineItemID: e.line_item_id,
                         lineItemFlags: { is_gift: !0 },
                         giftInfo: {
                           ...e.gift_info,
-                          accountid_giftee: Q.nGifteeAccountID,
+                          accountid_giftee: f.nGifteeAccountID,
                         },
                         gidCoupon: e.gidcoupon_applied,
                       });
-                    m.mutate(Q), B(!0), (0, K.D)()?.AddEvent(g.Xm.xh);
+                    _.mutate(f), g(!0), (0, j.D)()?.AddEvent(B.Xm.xh);
                   },
-                  children: (0, R.we)("#Button_Yes"),
+                  children: (0, K.we)("#Button_Yes"),
                 }),
               ],
             }),

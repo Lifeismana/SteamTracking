@@ -90,9 +90,9 @@
         M = -581,
         w = -580,
         O = -579,
-        j = -578,
-        y = -577,
-        W = -576,
+        W = -578,
+        j = -577,
+        y = -576,
         N = -575,
         v = -574,
         g = -573,
@@ -144,9 +144,9 @@
         Me = -83,
         we = -82,
         Oe = -81,
-        je = -80,
-        ye = -79,
-        We = -75,
+        We = -80,
+        je = -79,
+        ye = -75,
         Ne = -74,
         ve = -70,
         ge = -69,
@@ -253,13 +253,13 @@
             return "MacOS 10.15";
           case Oe:
             return "MacOS 11 (as 10.16)";
-          case We:
+          case ye:
             return "MacOS 12 (as 10.17)";
           case ve:
             return "MacOS 13 (as 10.18)";
-          case je:
+          case We:
             return "MacOS 11";
-          case ye:
+          case je:
             return "MacOS 11.1";
           case Ne:
             return "MacOS 12";
@@ -371,11 +371,11 @@
             return "iOS 10.1";
           case O:
             return "iOS 10.2";
-          case j:
-            return "iOS 10.3";
-          case y:
-            return "iOS 11";
           case W:
+            return "iOS 10.3";
+          case j:
+            return "iOS 11";
+          case y:
             return "iOS 11.1";
           case N:
             return "iOS 11.2";
@@ -574,23 +574,25 @@
             onDismiss: t,
             className: n,
             modalClassName: l,
-            children: u,
-            ...d
+            bGamepadUIScrollWithin: u,
+            children: d,
+            ...p
           } = e,
-          { headerId: p, context: f } = a({ labelledBy: e["aria-labelledby"] });
+          { headerId: f, context: h } = a({ labelledBy: e["aria-labelledby"] });
         return (0, s.jsx)(c.t6.Provider, {
-          value: f,
+          value: h,
           children: (0, s.jsx)(i.E, {
             active: r,
             children: (0, s.jsx)(o.x_, {
               onEscKeypress: t,
               className: l,
+              bGamepadUIScrollWithin: u,
               children: (0, s.jsx)(c.UC, {
                 role: "dialog",
-                "aria-labelledby": p,
+                "aria-labelledby": f,
                 className: n,
-                ...d,
-                children: u,
+                ...p,
+                children: d,
               }),
             }),
           }),
@@ -694,14 +696,14 @@
           M = L?.ownerWindow,
           w = (0, u.yk)(),
           O = { ...(0, i.h3)(T), onClose: m };
-        let j = 0;
-        e.resizable && (j |= d.Wf.Resizable),
+        let W = 0;
+        e.resizable && (W |= d.Wf.Resizable),
           (e.minWidth || e.minHeight) &&
-            (j |= d.Wf.ApplyBrowserScaleToDimensions),
-          e.fullscreen && (j |= d.Wf.FullScreen);
-        const y = "PopupWindow_" + (r ? `${r}_` : "") + n.useId(),
-          { popup: W, element: N } = (0, i.OJ)(
-            y,
+            (W |= d.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (W |= d.Wf.FullScreen);
+        const j = "PopupWindow_" + (r ? `${r}_` : "") + n.useId(),
+          { popup: y, element: N } = (0, i.OJ)(
+            j,
             {
               title: t,
               dimensions: { width: p, height: f },
@@ -713,19 +715,19 @@
               minHeight: e.minHeight,
               replace_existing_popup: !0,
               center_on_window: w?.BCenterPopupsOnWindow() ? M : void 0,
-              eCreationFlags: j,
+              eCreationFlags: W,
               target_browser: w?.GetBrowserInfo(),
             },
             O,
           );
         if (
           (n.useEffect(
-            () => ((0, l.cZ)(b, W), () => (0, l.cZ)(b, void 0)),
-            [b, W],
+            () => ((0, l.cZ)(b, y), () => (0, l.cZ)(b, void 0)),
+            [b, y],
           ),
           n.useEffect(() => {
-            W && (W.document.title = t ?? r);
-          }, [W, t, r]),
+            y && (y.document.title = t ?? r);
+          }, [y, t, r]),
           !N)
         )
           return null;
@@ -733,10 +735,10 @@
           g = !e.resizable;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            v && (0, s.jsx)(k, { popup: W }),
+            v && (0, s.jsx)(k, { popup: y }),
             c.createPortal(
               (0, s.jsxs)(d.kc, {
-                ownerWindow: W,
+                ownerWindow: y,
                 children: [
                   (0, s.jsxs)("div", {
                     className: "PopupFullWindow",
@@ -746,7 +748,7 @@
                         className: S,
                         hideMin: g,
                         hideMax: g,
-                        popup: W,
+                        popup: y,
                         hideActions: !m,
                       }),
                       (0, s.jsx)(u.EO, {
@@ -756,7 +758,7 @@
                       }),
                     ],
                   }),
-                  e.resizable && (0, s.jsx)(_, { popup: W }),
+                  e.resizable && (0, s.jsx)(_, { popup: y }),
                 ],
               }),
               N,

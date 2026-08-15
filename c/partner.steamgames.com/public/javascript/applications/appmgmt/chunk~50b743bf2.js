@@ -196,6 +196,7 @@
             clickable: _ = !0,
             disabled: _,
             className: _,
+            status: _,
             ..._
           } = _,
           _ = "underline" === _ ? "none" : _;
@@ -203,6 +204,7 @@
           {
             ..._,
             radius: _,
+            "data-status": _,
             className: _()(
               _.ControlBox,
               _ && !_ && _.Focusable,
@@ -748,6 +750,7 @@
               variant: _,
               size: _,
               radius: _,
+              status: _,
               rgOptions: _,
               multiselect: _,
               onClear: _,
@@ -784,6 +787,7 @@
               variant: _,
               size: _,
               radius: _,
+              status: _,
               hasValue: _,
               tabIndex: 0,
               cursor: "pointer",

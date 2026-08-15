@@ -287,10 +287,16 @@
     "MyHistory_Title_ItemNameBlock": "الاسم",
     "MyHistory_Title_TransactedPrice": "السعر",
     "MyHistory_Title_Action": "الإجراء",
+    "MyListings_ListingPrice": "%1$s (%2$s)",
+    "MyListings_Tooltip_BuyerPrice": "هذا هو السعر الذي يدفعه المشتري.",
+    "MyListings_Tooltip_ReceiveAmt": "هذا هو المبلغ الذي ستحصل عليه.",
     "MyBuyOrders_QuantityPurchased": "%1$s / %2$s",
+    "MyBuyOrders_CancelButton": "إلغاء",
+    "MyBuyOrders_CancelButton_Canceled": "تم الإلغاء",
     "MyHistory_NoResults": "لم يتم العثور على نتائج",
     "MyHistory_Action_Sold": "تم بيعه",
     "MyHistory_Action_Purchased": "تم شراؤه",
     "Breadcrumbs_Label_History": "سجّلي",
-    "Breadcrumbs_Label_Listings": "العروض الخاصة بي"
+    "Breadcrumbs_Label_Listings": "العروض الخاصة بي",
+    "MyListings_SectionHeader_Button_History": "سجل السوق الخاص بي"
 }

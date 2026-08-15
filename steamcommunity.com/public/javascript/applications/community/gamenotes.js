@@ -5405,11 +5405,12 @@
           return r.GetElements();
         }
       }
-      function n(e, t) {
-        let r = "[" + e;
-        (null == t ? void 0 : t[""]) && (r += `=${s("" + t[""])}`);
-        for (const e in t) "" !== e && (r += ` ${a(e)}=${s("" + t[e])}`);
-        return (r += "]"), r;
+      function n(e, t, r = !1) {
+        let i = "[" + e;
+        (null == t ? void 0 : t[""]) &&
+          (i += `=${r ? "" + t[""] : s("" + t[""])}`);
+        for (const e in t) "" !== e && (i += ` ${a(e)}=${s("" + t[e])}`);
+        return (i += "]"), i;
       }
       function s(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
