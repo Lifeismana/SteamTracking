@@ -1234,7 +1234,7 @@
 "QGV
 "RNwIx
 "S\n&CStoreBrowse_GetHardwareItems_Response
-"SystemInfo"\n{\n\t"OSType"\t\t"%d"\n\t"CPUID"\t\t"%s"\n\t"CPUGhz"\t\t"%f"\n\t"PhysicalCPUCount"\t"%d"\n\t"LogicalCPUCount"\t"%d"\n\t"SystemRAM"\t\t"%d"\n\t"VideoVendorID"\t"%d"\n\t"VideoDeviceID"\t"%d"\n\t"VideoRevision"\t"%d"\n\t"VideoRAM"\t\t"%d"\n\t"VideoDisplayX"\t"%d"\n\t"VideoDisplayY"\t"%d"\n\t"VideoDisplayNameID"\t"%s"\n}\n
+"SystemInfo"\n{\n\t"OSType"\t\t\t\t\t\t"%d"\n\t"CPUID"\t\t\t\t\t\t"%s"\n\t"CPUGhz"\t\t\t\t\t\t"%f"\n\t"PhysicalCPUCount"\t\t\t"%d"\n\t"LogicalCPUCount"\t\t\t\t"%d"\n\t"AvailableLogicalCPUCount"\t"%d"\n\t"SystemRAM"\t\t\t\t\t"%d"\n\t"VideoVendorID"\t\t\t\t"%d"\n\t"VideoDeviceID"\t\t\t\t"%d"\n\t"VideoRevision"\t\t\t\t"%d"\n\t"VideoRAM"\t\t\t\t\t"%d"\n\t"VideoDisplayX"\t\t\t\t"%d"\n\t"VideoDisplayY"\t\t\t\t"%d"\n\t"VideoDisplayNameID"\t\t\t"%s"\n}\n
 "Uve
 "W\taE
 "XNO[p
@@ -4789,8 +4789,8 @@ ${FILENAME}
 139Y
 13:%Bw00sB%:31
 13:%Bz00wB%:31
-13:11:30
-13:11:38
+13:30:17
+13:30:25
 13CCallbackBase
 13CCallbackImplILi16EE
 13CCallbackImplILi1EE
@@ -5561,9 +5561,6 @@ ${FILENAME}
 3265&
 3265''6654#72
 3265'3
-3267
-3267.
-3276
 32654
 32654##
 32654##5
@@ -5599,11 +5596,12 @@ ${FILENAME}
 326554&##
 326554&'
 326654&&#"
+3267
 3267!
 3267!5!&
 3267!5!&&#"
 3267&'^7l
-32675
+3267.
 32675#5!
 32675&&#"
 326754&
@@ -5611,7 +5609,6 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
-32677
 326=
 326B|
 327&
@@ -5619,6 +5616,9 @@ ${FILENAME}
 327'Z
 3275!5!
 3275#5!
+3276
+32675
+32677
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -5992,10 +5992,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-467&&54632
-467.
 4632
 46632
+467&&54632
+467.
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6231,6 +6231,7 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
+5467.
 5467
 54632
 54663
@@ -6242,7 +6243,6 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
-5467.
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -8820,7 +8820,7 @@ Aufgenommen Eingabe abspielen
 Aufnahme
 Aufnahme %d
 Aufnahme fehlgeschlagen
-Aug 10 2026
+Aug 15 2026
 Augmenter la vitesse du contr
 August
 Auktorisering
@@ -24292,6 +24292,8 @@ __newlocale
 __nl_langinfo_l
 __pthread_key_create
 __register_atfork
+__sched_cpualloc
+__sched_cpufree
 __stack_chk_fail
 __stack_chk_guard
 __strcoll_l
@@ -32002,7 +32004,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Aug 10 2026 13:11:36
+lib Aug 15 2026 13:30:23
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -36245,6 +36247,7 @@ scandir64
 scf])i
 sched_get_priority_max
 sched_get_priority_min
+sched_getaffinity
 sched_setaffinity
 sched_yield
 scheme=

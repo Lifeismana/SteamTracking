@@ -1587,6 +1587,20 @@ enum UnnamedEnum0dcb40bf59f915d7
 	OverlayVRGamepadUI = 9;
 }
 
+enum UnnamedEnum0dcf0f0fdc05f935
+{
+	Notifications = 0;
+	RemotePlayTogetherControls = 1;
+	VoiceChat = 2;
+	Friends = 3;
+	Settings = 4;
+	Perf = 5;
+	Help = 6;
+	Soundtrack = 7;
+	VRBatteries = 8;
+	Streaming = 9;
+}
+
 enum UnnamedEnum0edbba0e83cd6a43
 {
 	Header = 0;
@@ -2415,15 +2429,6 @@ enum UnnamedEnum322f4518bf470232
 	StandaloneContextMenu = 4;
 }
 
-enum UnnamedEnum323da3ee58c3d5c9
-{
-	NoHosts = 0;
-	HostAvailable = 1;
-	StreamingAvailable = 2;
-	ActiveSingleLink = 3;
-	ActiveMultiLink = 4;
-}
-
 enum UnnamedEnum32d9c79bb287cb61
 {
 	Hidden = 0;
@@ -3100,6 +3105,15 @@ enum UnnamedEnum6645bbd3618ce340
 {
 	Title = 1;
 	Inline = 2;
+}
+
+enum UnnamedEnum67bdeef5edea793b
+{
+	Hide = 0;
+	NotPresent = 1;
+	Unpaired = 2;
+	PairingInProgress = 3;
+	Ready = 4;
 }
 
 enum UnnamedEnum67c7e176cced8c1b
@@ -4651,6 +4665,15 @@ enum UnnamedEnume6093c05096df8e2
 	BACKWARD = 2;
 }
 
+enum UnnamedEnume73cd9de0da5e024
+{
+	NoHosts = 0;
+	HostAvailable = 1;
+	Active2D = 2;
+	ActiveVRSingleLink = 3;
+	ActiveVRMultiLink = 4;
+}
+
 enum UnnamedEnume99001381424a13a
 {
 	None = 0;
@@ -4875,20 +4898,6 @@ enum UnnamedEnumfdf9542cbb4256c3
 	None = 0;
 	Main = 1;
 	QuickAccess = 2;
-}
-
-enum UnnamedEnumfefb05255c5421eb
-{
-	Notifications = 0;
-	RemotePlayTogetherControls = 1;
-	VoiceChat = 2;
-	Friends = 3;
-	Settings = 4;
-	Perf = 5;
-	Help = 6;
-	Soundtrack = 7;
-	VRBatteries = 8;
-	VRSteamLinkControls = 9;
 }
 
 enum UnnamedEnumff958f9fe631673c

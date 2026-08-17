@@ -47482,8 +47482,10 @@
                 _?.ePhase,
                 _?.eDivision,
                 _?.eRegion,
-              ),
-              _ = _?.team_id_1,
+              );
+            if (1786811785 == _?.scheduled_time && 1786811785 == _?.actual_time)
+              return !1;
+            const _ = _?.team_id_1,
               _ = _?.team_id_2,
               _ = _._.Get().GetTeamStanding(_?.nLeagueID, _?.nNodeGroupID, _),
               _ = _._.Get().GetTeamStanding(_?.nLeagueID, _?.nNodeGroupID, _),
@@ -47712,11 +47714,17 @@
               const _ = _._.Get().GetLeagueNode(_.nLeagueID, _.nNodeID),
                 _ = _?.actual_time ? _?.actual_time : _?.scheduled_time;
               let _ = !1;
-              for (const _ of _)
+              for (const _ of _) {
+                if (
+                  1786811785 == _?.scheduled_time &&
+                  1786811785 == _?.actual_time
+                )
+                  break;
                 if (_ > _ && _ < _ + 86400) {
                   _ = !0;
                   break;
                 }
+              }
               return _;
             });
           let _ = 0;
@@ -49730,6 +49738,11 @@
               .filter((_) => {
                 const _ = _._.Get().GetLeagueNode(_.nLeagueID, _.nNodeID);
                 if (0 == _?.scheduled_time && 0 == _?.actual_time) return !1;
+                if (
+                  1786811785 == _?.scheduled_time &&
+                  1786811785 == _?.actual_time
+                )
+                  return !1;
                 const _ = _._.Get().GetLeagueNodeInfo(_.nLeagueID, _.nNodeID);
                 if (_.eDivision != _._.UNSET && _.eDivision != _.eDivision)
                   return !1;
@@ -51750,6 +51763,9 @@
                       _.arrHighlights?.map((_) => {
                         let _ = 40,
                           _ = 40;
+                        _();
+                        const _ =
+                          19719 == _.nLeagueID && _.ePhase == _._.ELIMINATION;
                         for (const _ of _) {
                           const _ = _._.Get().GetTeamStanding(
                               _.nLeagueID,
@@ -51757,9 +51773,10 @@
                               _,
                             ),
                             _ = 70;
-                          _.wins + _.losses != 0 &&
-                            (_?.standing < _.nMin && (_ += _),
-                            _?.standing <= _.nMax && (_ += _));
+                          _.wins + _.losses != 0
+                            ? (_?.standing < _.nMin && (_ += _),
+                              _?.standing <= _.nMax && (_ += _))
+                            : _ && _.nMin >= 2 && ((_ += _), (_ += _));
                         }
                         return _ == _
                           ? null
@@ -52847,7 +52864,7 @@
                     },
                     {
                       nMin: 2,
-                      nMax: 2,
+                      nMax: 3,
                       strColor: "#922820",
                       strDescription: "#dpc_eliminated",
                     },

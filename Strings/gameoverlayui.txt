@@ -1279,7 +1279,7 @@ $\nY8O
 12CMsgSetFocus
 12CMsgStopFind
 12CMsgStopLoad
-13:11:48
+13:30:37
 13CBoolProperty
 13CCallbackBase
 13CCallbackImplILi12EE
@@ -1933,7 +1933,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 10 2026
+Aug 15 2026
 August
 Aura
 Authorize
@@ -4252,6 +4252,7 @@ LegacyKey
 LegionGoS
 Length Required
 Lepcha
+Lgo3
 Libpng jmp_buf still allocated
 Library
 License Imported From Steam2

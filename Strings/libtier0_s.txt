@@ -101,7 +101,7 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789ABCDEF
 12CStdMemAlloc
-13:11:36
+13:30:20
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
@@ -123,7 +123,7 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-Aug 10 2026
+Aug 15 2026
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock
 BGetLocalFQDN
@@ -722,6 +722,8 @@ __isoc99_sscanf
 __lxstat
 __lxstat64
 __pthread_key_create
+__sched_cpualloc
+__sched_cpufree
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -1002,6 +1004,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_getaffinity
 sched_setaffinity
 sched_yield
 secblock.h

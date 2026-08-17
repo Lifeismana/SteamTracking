@@ -14925,7 +14925,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 10 2026 13:11:53
+Aug 15 2026 13:30:43
 August
 Aura
 Australia/Adelaide
@@ -19504,7 +19504,7 @@ Destroying HTTP/2 server connection inside an nghttp2 callback - not safe
 Destroying a held mutex\n
 Details
 DetectNow failed
-Detected %d logical processors, using %d threads
+Detected %d logical processors (%d available), using %d threads
 Detected file change in %s\n
 Detected leaked fd
 DetectedAppContent
@@ -38162,7 +38162,6 @@ compatible
 complete
 completed
 completed_time
-completed_update
 completion_achievements
 complex
 component
@@ -49917,6 +49916,7 @@ nBytes == pImage->height * pImage->bytes_per_line
 nBytes2 == m_data.NumAllocated()
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nBytesWritten >= 0
+nCPUAvailableLogicalCores
 nCPUHz
 nCPULogicalCores
 nCPUPhysicalCores

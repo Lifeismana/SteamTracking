@@ -297,7 +297,6 @@
 " which is not defined or is not an extension of "
 " which is.
 "!"%"+"1"9"K"O"c"g"s"u"
-""Dmy
 "$0" does not declare $1 as an extension number.
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
@@ -1947,9 +1946,12 @@ $ffn
 0 Umv
 0)AA7A
 00000000
+00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
+0123456789
+0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -1997,10 +1999,7 @@ $ffn
 100 127.0.0.1 stale
 1000
 1024
-00003333
 10000
-0123456789
-0123456789.
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2282,10 +2281,10 @@ $ffn
 12CMessageList
 12CProtoBufMsgIvE
 12CStdMemAlloc
-13:11:30
-13:11:41
-13:11:43
-13:11:44
+13:30:17
+13:30:31
+13:30:34
+13:30:37
 13CHTTPResponse
 13CMsgAppRights
 13CMsgIPAddress
@@ -2696,10 +2695,10 @@ $ffn
 6*Fc7
 6-nn
 6144
-65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -3349,7 +3348,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 10 2026
+Aug 15 2026
 August
 Aura
 AuthANY
@@ -9218,7 +9217,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 10 2026 13:11:41
+Startup - updater built Aug 15 2026 13:30:30
 State
 StaticFileWriterThread()
 Steam
@@ -10954,6 +10953,8 @@ __newlocale
 __nl_langinfo_l
 __pthread_key_create
 __register_atfork
+__sched_cpualloc
+__sched_cpufree
 __stack_chk_fail
 __stack_chk_guard
 __strcoll_l
@@ -18951,6 +18952,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_getaffinity
 sched_setaffinity
 sched_yield
 scheduledItem.m_ulTime

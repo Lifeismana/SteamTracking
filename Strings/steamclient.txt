@@ -285,7 +285,6 @@
  Tried to set runtime antidrift value, but we are using hardware calibration, so we're not analysing the raw gyro drift. Skip. ( %f,  %f,  %f ).\n
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
- Valid parameters\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
  [clone
@@ -7493,13 +7492,13 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/shadercachemanager/../depotreconstruct.h
 /data/src/clientdll/shadercachemanager/../raterecorder.h
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2016
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2114
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2184
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2238
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3840
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3968
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4251
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2021
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2119
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2189
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2243
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3845
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3973
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4256
 /data/src/clientdll/shadercachemanager/shadercontentupdatejob.cpp
 /data/src/clientdll/sitelicenseclient.cpp
 /data/src/clientdll/steamclient.cpp
@@ -11719,11 +11718,11 @@ $steammessages_parental_objects.proto"
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -23297,7 +23296,6 @@ DDDDUUUU
 DDli
 DEADLINE_EXCEEDED
 DEBUG: adding FEX dependency to %s %u
-DEBUG: compat tool = %s
 DEBUG: setting env var: STEAM_COMPAT_FEX_CONFIG = %s
 DEFAULT
 DEFAULT_FOR_TYPE
@@ -23746,6 +23744,7 @@ Disable the glcomposer workaround applied to some video drivers
 Disable the shader manager
 Disable the usage of the safe browser shutdown workaround for Linux+NV
 Disable touch input browser focus workaround
+DisableClientShaderManagement
 DisableDownloads
 DisableLinuxLocaleOverride
 DisableMoveApp
@@ -26687,6 +26686,7 @@ GetGameplayStats
 GetGames
 GetGamesFollowed
 GetGamesFollowedCount
+GetGamingDeviceType
 GetGenericControllers
 GetGlobalAppUpdateBehavior
 GetGlobalStat
@@ -39365,6 +39365,7 @@ Valencian
 Valid
 Valid palette required for paletted images
 Valid parameters:\n
+Valid parameters\n
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -53595,14 +53596,14 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:487
 low-pri yield - /data/src/clientdll/clientjob.cpp:796
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6966
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2074
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2330
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2597
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3304
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3361
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3374
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3426
-low-pri yield - /data/src/clientdll/compatmanager.cpp:4027
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2076
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2332
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2599
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3306
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3363
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3376
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3428
+low-pri yield - /data/src/clientdll/compatmanager.cpp:4029
 low-pri yield - /data/src/clientdll/csinterface.cpp:223
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3066
@@ -61507,7 +61508,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 10 2026 13:12:03
+steam Aug 15 2026 13:30:51
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

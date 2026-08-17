@@ -44914,8 +44914,10 @@
                 c?.ePhase,
                 c?.eDivision,
                 c?.eRegion,
-              ),
-              m = l?.team_id_1,
+              );
+            if (1786811785 == l?.scheduled_time && 1786811785 == l?.actual_time)
+              return !1;
+            const m = l?.team_id_1,
               u = l?.team_id_2,
               _ = Do.E.Get().GetTeamStanding(d?.nLeagueID, d?.nNodeGroupID, m),
               p = Do.E.Get().GetTeamStanding(d?.nLeagueID, d?.nNodeGroupID, u),
@@ -45130,11 +45132,17 @@
               const t = Do.E.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
                 r = t?.actual_time ? t?.actual_time : t?.scheduled_time;
               let i = !1;
-              for (const e of p)
+              for (const e of p) {
+                if (
+                  1786811785 == t?.scheduled_time &&
+                  1786811785 == t?.actual_time
+                )
+                  break;
                 if (r > e && r < e + 86400) {
                   i = !0;
                   break;
                 }
+              }
               return i;
             });
           let h = 0;
@@ -46721,6 +46729,11 @@
               .filter((t) => {
                 const r = Do.E.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
                 if (0 == r?.scheduled_time && 0 == r?.actual_time) return !1;
+                if (
+                  1786811785 == r?.scheduled_time &&
+                  1786811785 == r?.actual_time
+                )
+                  return !1;
                 const i = Do.E.Get().GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
                 if (e.eDivision != Lo.ke.UNSET && i.eDivision != e.eDivision)
                   return !1;
@@ -48699,34 +48712,38 @@
                       ),
                     ),
                     !r &&
-                      e.arrHighlights?.map((e) => {
-                        let t = 40,
-                          r = 40;
-                        for (const i of l) {
-                          const n = Do.E.Get().GetTeamStanding(
+                      e.arrHighlights?.map((t) => {
+                        let r = 40,
+                          i = 40;
+                        kg();
+                        const n =
+                          19719 == a.nLeagueID && e.ePhase == Lo.sI.ELIMINATION;
+                        for (const e of l) {
+                          const o = Do.E.Get().GetTeamStanding(
                               a.nLeagueID,
                               s?.node_group_id,
-                              i,
+                              e,
                             ),
-                            o = 70;
-                          n.wins + n.losses != 0 &&
-                            (n?.standing < e.nMin && (t += o),
-                            n?.standing <= e.nMax && (r += o));
+                            l = 70;
+                          o.wins + o.losses != 0
+                            ? (o?.standing < t.nMin && (r += l),
+                              o?.standing <= t.nMax && (i += l))
+                            : n && t.nMin >= 2 && ((r += l), (i += l));
                         }
-                        return t == r
+                        return r == i
                           ? null
                           : (0, b.jsx)(
                               "div",
                               {
                                 className: G_().HighlightOverlay,
                                 style: {
-                                  background: `linear-gradient( ${e.strColor}33, ${e.strColor}0F )`,
-                                  borderTop: `1px solid ${e.strColor}`,
-                                  top: t,
-                                  height: r - t,
+                                  background: `linear-gradient( ${t.strColor}33, ${t.strColor}0F )`,
+                                  borderTop: `1px solid ${t.strColor}`,
+                                  top: r,
+                                  height: i - r,
                                 },
                               },
-                              `h${t}_${r}`,
+                              `h${r}_${i}`,
                             );
                       }),
                   ],
@@ -49689,7 +49706,7 @@
                     },
                     {
                       nMin: 2,
-                      nMax: 2,
+                      nMax: 3,
                       strColor: "#922820",
                       strDescription: "#dpc_eliminated",
                     },
