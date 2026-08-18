@@ -88741,6 +88741,7 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover {
   pointer-events: none;
   touch-action: none;
   visibility: hidden;
+  border-radius: 1px;
 }
 @keyframes YQXoPy2hn7Zi1S9M_y_1v {
   0% {
@@ -93104,6 +93105,7 @@ div.NarrowWindow .HruWVPwIDh2FFOOH7OiSs .gioyPMOZttYFcnmgLnsWf {
 }
 .MbyhbxIetM7FOAmCQSW83 ._3Jfd85nK4bKoNf_gCSTX6U {
   display: flex;
+  gap: 2px;
   color: #0e141b;
 }
 .MbyhbxIetM7FOAmCQSW83 ._31JnnWnVv7U4VrSuta5yWO {

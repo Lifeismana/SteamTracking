@@ -9374,6 +9374,8 @@
     "VRDashboard_ShowDashboardBar": "Dashboard",
     "VRDashboard_FocusDashboardBar": "Jump to Dashboard Bar",
     "VRDashboard_FocusDashboardFrame": "Jump to %1$s",
+    "VRDashboard_ShowLaserMouse": "Laser Mouse",
+    "VRDashboard_HideLaserMouse": "Hide Laser Mouse",
     "Button_Next": "Next",
     "Button_Prev": "Back",
     "AppDetails_Controller_ControllerRequired": "Controller required",

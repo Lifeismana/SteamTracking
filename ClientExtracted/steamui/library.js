@@ -1,4 +1,4 @@
-var CLSTAMP = "10914849";
+var CLSTAMP = "10919276";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -3151,16 +3151,30 @@ var CLSTAMP = "10914849";
           GetBoundingRect() {
             return this.m_element?.getBoundingClientRect();
           }
+          GetElementForFocusRingMeasure() {
+            const e = this.m_element;
+            return this.m_Properties?.focusRingSizeElementID
+              ? (e?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? e)
+              : e;
+          }
           GetBoundingRectForFocusRing() {
-            let e = this.m_element;
-            return (
-              this.m_Properties?.focusRingSizeElementID &&
-                (e =
-                  e?.ownerDocument?.getElementById(
-                    this.m_Properties.focusRingSizeElementID,
-                  ) ?? this.m_element),
-              e?.getBoundingClientRect()
-            );
+            return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
+          }
+          GetBorderRadiusForFocusRing() {
+            if (!this.m_Properties?.focusRingSizeElementID) return;
+            const e = this.GetElementForFocusRingMeasure();
+            if (!e) return;
+            const t = e.ownerDocument?.defaultView?.getComputedStyle(e);
+            return t
+              ? {
+                  borderTopLeftRadius: t.borderTopLeftRadius,
+                  borderTopRightRadius: t.borderTopRightRadius,
+                  borderBottomRightRadius: t.borderBottomRightRadius,
+                  borderBottomLeftRadius: t.borderBottomLeftRadius,
+                }
+              : void 0;
           }
           SetHasFocus(e) {
             this.m_Focused.Set(e);
@@ -16249,9 +16263,9 @@ var CLSTAMP = "10914849";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 15 2026 : 06:30:15",
-                BUILD_TIME_UTC: "Aug 15 2026 : 13:30:15",
-                BUILD_RTIME_UTC: 1786800615,
+                BUILD_TIME_LOCAL: "Aug 17 2026 : 22:29:42",
+                BUILD_TIME_UTC: "Aug 18 2026 : 05:29:42",
+                BUILD_RTIME_UTC: 1787030982,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -29266,9 +29280,9 @@ var CLSTAMP = "10914849";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 15 2026 : 06:30:15",
-                    BUILD_TIME_UTC: "Aug 15 2026 : 13:30:15",
-                    BUILD_RTIME_UTC: 1786800615,
+                    BUILD_TIME_LOCAL: "Aug 17 2026 : 22:29:42",
+                    BUILD_TIME_UTC: "Aug 18 2026 : 05:29:42",
+                    BUILD_RTIME_UTC: 1787030982,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -29947,7 +29961,7 @@ var CLSTAMP = "10914849";
         3356: "e0597efcc3652ad62dfc",
         3366: "0cdf839969c2cabfbd09",
         3473: "aa2e2c813e7588319881",
-        3569: "95c69ab8389e1c843d9b",
+        3569: "b7c9667405ce129ac4ce",
         3583: "22aaaa36100912e3ed08",
         3585: "8f20f1330a4dc3dc7b4f",
         3589: "fd66d8f7b977b24bb0d2",
@@ -30148,7 +30162,7 @@ var CLSTAMP = "10914849";
         9779: "59ef76674166d4b9e52e",
         9845: "67d8ccf06f062089fbdd",
         9853: "7be45ac954716a4a58c1",
-        9858: "e3cc546124e331e4de22",
+        9858: "de343b54e77db63d0216",
         9861: "28739986a6f0de57d87c",
         9862: "f7642c72003ad4fab6eb",
         9869: "d3b3dea779721d721088",

@@ -3694,6 +3694,10 @@ message StoreGameRating {
 	optional string rating = 2;
 	repeated string descriptors = 3;
 	optional string interactive_elements = 4;
+	optional int32 agency = 5 [(.description) = "enum"];
+	optional bool banned = 6;
+	optional bool esrb_online_music_not_rated = 7;
+	optional bool esrb_online_interactions_not_rated = 8;
 	optional int32 required_age = 10;
 	optional bool use_age_gate = 11;
 	optional string image_url = 20;
@@ -3749,6 +3753,7 @@ message StoreItem {
 	optional string purchase_description_bbcode = 72;
 	repeated .StoreItem_PackageGroup package_groups = 74;
 	optional .StoreItem_ExtraDetails extra_details = 75;
+	optional fixed64 gid = 76;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3840,6 +3845,8 @@ message StoreItem_ExtraDetails {
 	repeated .StoreItem_Eula eula = 10;
 	optional .StoreItem_AIGeneratedContentService ai_generation_service = 11;
 	optional bool refund_checks_ea_playtime = 12;
+	repeated .StoreItem_PageSection section = 13;
+	optional string legal_notice_bbcode = 14;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3870,6 +3877,13 @@ message StoreItem_PackageGroup {
 	optional int32 display_type = 3 [(.description) = "enum"];
 	optional string dropdown_title = 4;
 	optional string dropdown_description_bbcode = 5;
+}
+
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
+message StoreItem_PageSection {
+	optional string label = 1;
+	optional string content_bbcode = 2;
+	optional int32 banner = 3 [(.description) = "enum"];
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -4074,6 +4088,7 @@ message StoreItemID {
 	optional uint32 tagid = 4;
 	optional uint32 creatorid = 5;
 	optional uint32 hubcategoryid = 6;
+	optional fixed64 salepagegid = 7;
 }
 
 // Used by: Player, PlayerClient, Store, StoreClient

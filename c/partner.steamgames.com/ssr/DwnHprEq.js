@@ -85,6 +85,10 @@ function _(_, _, _ = [], _ = !0) {
       return () => clearInterval(_);
     }, [_, _, ..._]);
 }
+function _(_) {
+  let { msInterval: _, bEnabled: _ = !0 } = _;
+  _(_(), _, [], _);
+}
 function _() {
   let [, _] = _.useState(0);
   return _.useCallback(() => _((_) => _ + 1), []);
@@ -3149,6 +3153,7 @@ function _(_ = !0) {
   return _.useContext(_)?.bSupportsFocus ?? _;
 }
 export {
+  _,
   _,
   _,
   _,

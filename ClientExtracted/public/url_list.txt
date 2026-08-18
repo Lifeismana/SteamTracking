@@ -1310,6 +1310,12 @@ StoreGreatOnDeck
 	method		"internal"
 	filter		"store"
 }
+StoreGreatOnFrame
+{
+	url			"%store%/greatonframe"
+	method		"internal"
+	filter		"store"
+}
 StoreVR
 {
 	url			"%store%/vr"
