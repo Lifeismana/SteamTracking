@@ -26,7 +26,7 @@
       }
     },
     16021: (e, t, s) => {
-      s.d(t, { A: () => R });
+      s.d(t, { A: () => b });
       var a = s(34629),
         i = s(14947),
         n = s(37085),
@@ -40,8 +40,9 @@
         h = s(78327),
         _ = s(72839),
         p = s(75279),
-        g = s(6419);
-      function I(e, t) {
+        g = s(6419),
+        I = s(63340);
+      function f(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -73,12 +74,12 @@
             e.include_extra_details || t.include_extra_details,
         };
       }
-      async function f(e, t) {
+      async function R(e, t) {
         const s = await e,
           a = await t;
         return s != n.R ? s : a;
       }
-      class R {
+      class b {
         k_QueueWaitUntilRequestMS = 5;
         k_nMaxBatchSize = 250;
         m_bReturnUnavailableItems = !1;
@@ -123,14 +124,14 @@
         static sm_instance;
         static Get() {
           return (
-            R.sm_instance ||
-              ((R.sm_instance = new R()),
-              (window.StoreItemCache = R.sm_instance)),
-            R.sm_instance
+            b.sm_instance ||
+              ((b.sm_instance = new b()),
+              (0, I.V)("StoreItemCache", b.sm_instance)),
+            b.sm_instance
           );
         }
         static Initialize(e, t) {
-          const s = R.Get();
+          const s = b.Get();
           return (
             (0, m.wT)(
               !s.m_bInitialized,
@@ -189,7 +190,7 @@
             (this.m_bActivelyResettingCache = !1);
         }
         static BIsInitialized() {
-          return R.Get().m_bInitialized;
+          return b.Get().m_bInitialized;
         }
         static k_DataRequest_CommonOnly = {};
         static k_DataRequest_BasicInfo = { include_basic_info: !0 };
@@ -311,7 +312,7 @@
         async QueueStoreItemRequest(e, t, s) {
           if (
             ((0, m.wT)(
-              R.ValidateDataRequest(s),
+              b.ValidateDataRequest(s),
               "Invalid Data Request: " + JSON.stringify(s),
             ),
             "string" == typeof e && (e = parseInt(e)),
@@ -342,7 +343,7 @@
                 () => this.FlushPendingInfo(),
                 this.k_QueueWaitUntilRequestMS,
               ))),
-            (this.m_setPendingDataRequest = I(this.m_setPendingDataRequest, s)),
+            (this.m_setPendingDataRequest = f(this.m_setPendingDataRequest, s)),
             t)
           ) {
             case c.c6.qI:
@@ -446,12 +447,12 @@
             if (t) d.push(t);
             else {
               m.push(c.O4.fromObject({ appid: e }));
-              let t = I(this.GetStoreItemDataRequest(e, c.c6.qI), l);
+              let t = f(this.GetStoreItemDataRequest(e, c.c6.qI), l);
               const s = this.m_mapAppsInFlight.get(e);
-              (t = I(s?.dataRequest, t)),
+              (t = f(s?.dataRequest, t)),
                 s && d.push(s.promise),
                 this.m_mapAppsInFlight.set(e, {
-                  promise: s ? f(s.promise, u) : u,
+                  promise: s ? R(s.promise, u) : u,
                   dataRequest: t,
                 });
             }
@@ -461,12 +462,12 @@
               if (t) d.push(t);
               else {
                 m.push(c.O4.fromObject({ packageid: e }));
-                let t = I(this.GetStoreItemDataRequest(e, c.c6.RD), l);
+                let t = f(this.GetStoreItemDataRequest(e, c.c6.RD), l);
                 const s = this.m_mapPackageInFlight.get(e);
-                (t = I(s?.dataRequest, t)),
+                (t = f(s?.dataRequest, t)),
                   s && d.push(s.promise),
                   this.m_mapPackageInFlight.set(e, {
-                    promise: s ? f(s.promise, u) : u,
+                    promise: s ? R(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -476,12 +477,12 @@
               if (t) d.push(t);
               else {
                 m.push(c.O4.fromObject({ bundleid: e }));
-                let t = I(this.GetStoreItemDataRequest(e, c.c6.xO), l);
+                let t = f(this.GetStoreItemDataRequest(e, c.c6.xO), l);
                 const s = this.m_mapBundleInFlight.get(e);
-                (t = I(s?.dataRequest, t)),
+                (t = f(s?.dataRequest, t)),
                   s && d.push(s.promise),
                   this.m_mapBundleInFlight.set(e, {
-                    promise: s ? f(s.promise, u) : u,
+                    promise: s ? R(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -491,12 +492,12 @@
               if (t) d.push(t);
               else {
                 m.push(c.O4.fromObject({ tagid: e }));
-                let t = I(this.GetStoreItemDataRequest(e, c.c6.je), l);
+                let t = f(this.GetStoreItemDataRequest(e, c.c6.je), l);
                 const s = this.m_mapTagsInFlight.get(e);
-                (t = I(s?.dataRequest, t)),
+                (t = f(s?.dataRequest, t)),
                   s && d.push(s.promise),
                   this.m_mapTagsInFlight.set(e, {
-                    promise: s ? f(s.promise, u) : u,
+                    promise: s ? R(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -506,12 +507,12 @@
               if (t) d.push(t);
               else {
                 m.push(c.O4.fromObject({ creatorid: e }));
-                let t = I(this.GetStoreItemDataRequest(e, c.c6.tp), l);
+                let t = f(this.GetStoreItemDataRequest(e, c.c6.tp), l);
                 const s = this.m_mapCreatorsInFlight.get(e);
-                (t = I(s?.dataRequest, t)),
+                (t = f(s?.dataRequest, t)),
                   s && d.push(s.promise),
                   this.m_mapCreatorsInFlight.set(e, {
-                    promise: s ? f(s.promise, u) : u,
+                    promise: s ? R(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -521,12 +522,12 @@
               if (t) d.push(t);
               else {
                 m.push(c.O4.fromObject({ hubcategoryid: e }));
-                let t = I(this.GetStoreItemDataRequest(e, c.c6.wn), l);
+                let t = f(this.GetStoreItemDataRequest(e, c.c6.wn), l);
                 const s = this.m_mapHubCategoriesInFlight.get(e);
-                (t = I(s?.dataRequest, t)),
+                (t = f(s?.dataRequest, t)),
                   s && d.push(s.promise),
                   this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: s ? f(s.promise, u) : u,
+                    promise: s ? R(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -950,7 +951,7 @@
           return i;
         }
       }
-      (0, a.Cg)([g.o], R.prototype, "ReadItem", null);
+      (0, a.Cg)([g.o], b.prototype, "ReadItem", null);
     },
   },
 ]);

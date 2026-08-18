@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Fortolkning af GIF mislykkedes. Prøv indkodning igen, eller skift formattype, og prøv igen.",
     "MediaConvert_InputError_ImageTooSmall": "Billedet er for lille. Upload et billede på mindst 16 x 16 pixels.",
     "MediaConvert_InputError_AnimationTooSmall": "Animationen eller videoen er for lille. Upload en animation eller video på mindst 16 x 16 pixels.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Filen indeholder mere end ét videospor. Upload en fil med et enkelt videospor.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Dette billede kan ikke animeres. Upload et stillbillede.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Billedfiler kan ikke indeholde et lydspor.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF-output understøttes ikke for videokilder.",
     "MediaConvert_InternalError_FailedToConvert": "Konvertering af filen mislykkedes. Indkod filen igen, før du prøver igen.",

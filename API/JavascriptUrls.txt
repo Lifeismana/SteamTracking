@@ -226,6 +226,7 @@ ${COMMUNITY_BASE_URL}friends/add
 ${COMMUNITY_BASE_URL}games/${_ ? _ : _}/partnerevents/
 ${COMMUNITY_BASE_URL}games/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}games/${}/ajaxgetvanityandclanid/?origin=${}
+${COMMUNITY_BASE_URL}games/593110/announcements/detail/1808664240333155775
 ${COMMUNITY_BASE_URL}gid/${broadcast_item_drops_details_clan_accountid}/partnerevents/view/${broadcast_item_drops_details_event_gid}
 ${COMMUNITY_BASE_URL}gid/${clanSteamId}
 ${COMMUNITY_BASE_URL}gid/${clan_accountid}/partnerevents/view/${clan_event_gid}
@@ -503,6 +504,7 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=fil
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${strISOCode}/
 ${HELP_BASE_URL}${strISOCode}/faqs/view/0CAD-3B4D-B874-A065
+${HELP_BASE_URL}${}
 ${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}/faqs/view/4F8E-AE41-B6B1-F836
 ${HELP_BASE_URL}/wizard/HelpChangePassword
@@ -1279,7 +1281,6 @@ ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/dashboard
 ${PARTNER_BASE_URL}promotion/themesales/dashboard
 ${PARTNER_BASE_URL}promotion/tools/eventimagecopy
-${PARTNER_BASE_URL}promotion/tools/themesalematch
 ${PARTNER_BASE_URL}promotionanalysis/ajaxgetgetpaidpublishersforapp
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
 ${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
@@ -1356,6 +1357,7 @@ ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/${vanity_url}
+${STORE_BASE_URL}${}/${}?${}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
@@ -1382,6 +1384,7 @@ ${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}
 ${STORE_BASE_URL}account/familymanagement?tab=requests
 ${STORE_BASE_URL}account/gatedaccess?appid=${appid}
 ${STORE_BASE_URL}account/gatedaccess?appid=${}
+${STORE_BASE_URL}account/languagepreferences
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
 ${STORE_BASE_URL}account/notificationsettings#notificationgroup_4
@@ -1392,6 +1395,7 @@ ${STORE_BASE_URL}account/preferences#CommunityContentPreferences
 ${STORE_BASE_URL}account/preferences/
 ${STORE_BASE_URL}account/preferences/#store_broadcast_settings
 ${STORE_BASE_URL}account/savepreferences
+${STORE_BASE_URL}account/saveuserreviewscorepreference
 ${STORE_BASE_URL}account/subscriptions/
 ${STORE_BASE_URL}account/verifycards
 ${STORE_BASE_URL}actions/ajaxgetdiscounts
@@ -1592,6 +1596,7 @@ ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/app/1675200
 ${STORE_BASE_URL}news/app/250820
 ${STORE_BASE_URL}news/app/593110
+${STORE_BASE_URL}news/app/593110/view/4326355263805583415
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}news/group/4145017
@@ -2105,7 +2110,6 @@ ${profileUrl}/ajaxlevelup/
 ${profileUrl}/ajaxsetnickname/
 ${profile_url}games/?tab=all
 ${profile_url}recommended
-${profile_url}recommended/${}
 ${rateURL}${gid}
 ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
 ${sc_url}${}

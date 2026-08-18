@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    293: (e, t, r) => {
+    354: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => sn });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(811),
+        a = r(800),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -29,7 +29,9 @@
       function c(e, t) {
         return l(e) && l(t)
           ? e.value === t.value &&
-              Boolean(e.bShowOnLeft) == Boolean(t.bShowOnLeft)
+              Boolean(e.bShowOnLeft) == Boolean(t.bShowOnLeft) &&
+              Boolean(e.bShowOnFloatingVRFooter) ==
+                Boolean(t.bShowOnFloatingVRFooter)
           : e === t;
       }
       !(function (e) {
@@ -93,10 +95,10 @@
         );
       }
       var b = r(629),
-        f = r(380),
-        p = r(559),
-        B = r(884),
-        w = r(883);
+        f = r(538),
+        p = r(253),
+        B = r(738),
+        w = r(481);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -375,8 +377,8 @@
         (0, b.Cg)([f.o], C.prototype, "OnKeyUp", null),
         (0, b.Cg)([f.o], C.prototype, "Reset", null);
       var R,
-        T = r(261),
-        I = r(259);
+        T = r(203),
+        I = r(201);
       class F {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -1852,16 +1854,30 @@
         GetBoundingRect() {
           return this.m_element?.getBoundingClientRect();
         }
+        GetElementForFocusRingMeasure() {
+          const e = this.m_element;
+          return this.m_Properties?.focusRingSizeElementID
+            ? (e?.ownerDocument?.getElementById(
+                this.m_Properties.focusRingSizeElementID,
+              ) ?? e)
+            : e;
+        }
         GetBoundingRectForFocusRing() {
-          let e = this.m_element;
-          return (
-            this.m_Properties?.focusRingSizeElementID &&
-              (e =
-                e?.ownerDocument?.getElementById(
-                  this.m_Properties.focusRingSizeElementID,
-                ) ?? this.m_element),
-            e?.getBoundingClientRect()
-          );
+          return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
+        }
+        GetBorderRadiusForFocusRing() {
+          if (!this.m_Properties?.focusRingSizeElementID) return;
+          const e = this.GetElementForFocusRingMeasure();
+          if (!e) return;
+          const t = e.ownerDocument?.defaultView?.getComputedStyle(e);
+          return t
+            ? {
+                borderTopLeftRadius: t.borderTopLeftRadius,
+                borderTopRightRadius: t.borderTopRightRadius,
+                borderBottomRightRadius: t.borderBottomRightRadius,
+                borderBottomLeftRadius: t.borderBottomLeftRadius,
+              }
+            : void 0;
         }
         SetHasFocus(e) {
           this.m_Focused.Set(e);
@@ -3284,6 +3300,7 @@
         m_NavTreeActivatedOrReactivatedCallbacks = new I.l();
         m_bIsGamepadInputSuppressed = !1;
         m_bVR = !1;
+        m_fnGetNavTreeToActivateOverride;
         constructor(e, t, r, i) {
           (this.m_controller = e),
             (this.m_rootWindow = t),
@@ -3398,16 +3415,26 @@
             ? `(${this.m_rootWindow.name}) > (${e.name})`
             : `(${this.m_rootWindow.name})`;
         }
+        SetNavTreeToActivateOverride(e) {
+          this.m_fnGetNavTreeToActivateOverride = e;
+        }
         FindNavTreeToActivate() {
-          for (
-            let e = this.m_rgGamepadNavigationTrees.length - 1;
-            e >= 0;
-            e--
-          ) {
-            const t = this.m_rgGamepadNavigationTrees[e];
-            if (!t.BIsEnabled()) continue;
-            return t.FindModalDescendant() ?? t;
-          }
+          let e;
+          const t = this.m_fnGetNavTreeToActivateOverride?.();
+          if (t?.BIsEnabled()) e = t;
+          else
+            for (
+              let t = this.m_rgGamepadNavigationTrees.length - 1;
+              t >= 0;
+              t--
+            ) {
+              const r = this.m_rgGamepadNavigationTrees[t];
+              if (r.BIsEnabled()) {
+                e = r;
+                break;
+              }
+            }
+          return e?.FindModalDescendant() ?? e;
         }
         SetActiveNavTree(e, t = !1) {
           if (e && this.m_LastActiveNavTree == e)
@@ -12269,7 +12296,7 @@
               e.BIsEnabled() &&
               (this.BCanActivateContext(r) &&
                 (this.m_LastActiveContext = this.m_ActiveContext = r),
-              r.SetActiveNavTree(e, !0)),
+              r.BIsVR() || r.SetActiveNavTree(e, !0)),
             () => {
               r.UnregisterGamepadNavigationTree(e).then(() => i());
             }
@@ -13083,7 +13110,7 @@
         },
       };
     },
-    559: (e, t, r) => {
+    253: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13096,12 +13123,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    883: (e, t, r) => {
+    481: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(380),
-        s = r(559);
+        n = r(538),
+        s = r(253);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

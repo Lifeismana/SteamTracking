@@ -19,6 +19,8 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
+          _: () => _,
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -30,7 +32,9 @@
         _ = 8,
         _ = 16,
         _ = 32,
-        _ = 64;
+        _ = 64,
+        _ = 128,
+        _ = 256;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -2344,6 +2348,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2490,6 +2495,8 @@
             _ & _._._ && _.push(_._._),
             _ & _._._ && _.push(_._._),
             _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
             _ & _._._ && _.push(_._._);
           let _ = new FormData();
           _.append("sessionid", (0, _._)()),
@@ -2506,6 +2513,7 @@
         (0, _._)([_._], _.prototype, "m_nFollowers", void 0),
         (0, _._)([_._], _.prototype, "m_clanAccountFlags", void 0);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -2674,6 +2682,13 @@
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       function _(_) {
+        if (!_) return null;
+        const _ = _.BHasCreatorHomeLoaded(_.clanSteamID)
+          ? _.GetCreatorHome(_.clanSteamID)
+          : void 0;
+        return _.GetSaleURL(_?.GetCreatorHomeURL("developer"));
+      }
+      function _(_) {
         if (!_) return;
         const _ = (0, _._)("creator_home_list_info", "application_config");
         if (null == _ || "object" != typeof _ || Array.isArray(_)) return;
@@ -2754,7 +2769,7 @@
           enabled: Boolean(_ > 0 && _),
         };
       }
-      window.g_CreatorHomeStore = _;
+      (0, _._)("g_CreatorHomeStore", _);
     },
   },
 ]);

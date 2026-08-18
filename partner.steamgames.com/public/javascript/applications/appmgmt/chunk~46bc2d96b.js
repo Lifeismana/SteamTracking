@@ -3261,7 +3261,7 @@
             estimateSize: d.useCallback(() => m, [m]),
             measureElement: u,
             overscan: s,
-            initialOffset: c,
+            initialOffset: c ?? (() => window.scrollY),
             initialRect: void 0,
             observeElementOffset: y,
             observeElementRect: v,
@@ -3270,6 +3270,8 @@
             },
           });
         return (
+          (p.shouldAdjustScrollPositionOnItemSizeChange = (t) =>
+            void 0 !== e && t.start < (p.scrollOffset ?? 0)),
           d.useEffect(() => {
             (0, d.startTransition)(() => {
               p.measure();

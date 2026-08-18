@@ -195,9 +195,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -418,13 +419,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -439,16 +441,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       class _ {
-        static ParseCSVFile(_) {
+        static ParseCSVFile(_, _) {
           return new Promise((_, _) => {
             const _ = {
               header: !0,
               skipEmptyLines: "greedy",
               complete: _,
               error: (_) =>
-                __webpack_require__({
+                _({
                   errors: [_],
                 }),
+              transformHeader: _,
             };
             _().parse(_, _);
           });
@@ -680,6 +683,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1154,9 +1158,138 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.lazy(() =>
+      const _ = (0, _._)((_) => {
+          const {
+              event: _,
+              lang: _,
+              banner: _,
+              titleBar: _,
+              body: _,
+              postbody: _,
+              footer: _,
+            } = _,
+            _ = (0, _._)(_, "background", _),
+            { data: _ } = (0, _._)(
+              _.appid
+                ? {
+                    appid: _.appid,
+                  }
+                : void 0,
+            ),
+            { data: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
+            _ = _.BIsImageSafeForAllAges("background", _, {
+              bAppHasAgeSafeScreenshots:
+                (_?.all_ages_screenshots?.length ?? 0) > 0,
+              clanInfo: _ ?? void 0,
+            }),
+            _ = "lang_" + (0, _.wwZ)(_),
+            _ = !!_ && _.BImageNeedScreenshotFallback("background", _);
+          return (0, _.jsxs)(_._, {
+            scrollIntoViewType: _._.NoTransformSparseContent,
+            className: (0, _._)(
+              _().EventDetailsPageContainer,
+              _,
+              _().PartnerEventFont,
+              _
+                ? _().DetailArtworkAgeAppropriate
+                : _().DetailArtworkAgeNotAppropriate,
+              !_ && _().NoTitleArtwork,
+              _ && _().ScreenshotInsteadOfCover,
+            ),
+            children: [
+              _,
+              _,
+              (0, _.jsx)(_, {
+                strImageURL: _,
+              }),
+              (0, _.jsx)(_, {
+                strImageURL: _,
+                body: _,
+                postbody: _,
+              }),
+              Boolean(_) &&
+                (0, _.jsx)(_._, {
+                  children: _,
+                }),
+            ],
+          });
+        }),
+        _ = (_) => {
+          const { strImageURL: _ } = _;
+          return (0, _.jsxs)("div", {
+            className: _().EventCoverImageCtn,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().EventCoverImageBlr,
+                children:
+                  _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().EventCoverImageFuzz,
+                        style: {
+                          backgroundColor: "rgb(37, 41, 46)",
+                          backgroundImage: `url(${_})`,
+                        },
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().EventCoverImage,
+                        style: {
+                          backgroundColor: "rgb(37, 41, 46)",
+                          backgroundImage: `url(${_})`,
+                        },
+                      }),
+                    ],
+                  }),
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().CoverImageGradient,
+                }),
+            ],
+          });
+        },
+        _ = (_) => {
+          const { body: _, postbody: _, strImageURL: _ } = _;
+          return (0, _.jsxs)("div", {
+            className: _().EventBodyCtn,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().EventBackgroundBlurCtn,
+              }),
+              (0, _.jsxs)("div", {
+                className: _().EventBodyPosition,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().EventBody,
+                    children: [
+                      Boolean(_) &&
+                        (0, _.jsx)("div", {
+                          className: _().EventBackgroundBlur,
+                          style: {
+                            backgroundImage: `url(${_})`,
+                          },
+                        }),
+                      (0, _.jsx)(_._, {
+                        children: _,
+                      }),
+                    ],
+                  }),
+                  Boolean(_) &&
+                    (0, _.jsx)(_._, {
+                      children: _,
+                    }),
+                ],
+              }),
+            ],
+          });
+        },
+        _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1195,13 +1328,15 @@
             _ = _.appid,
             _ = _.clanSteamID.GetAccountID(),
             _ = (0, _._)(),
-            [_, _] = (0, _._)(_, {
-              include_assets: !0,
-              include_platforms: !0,
-              include_basic_info: !0,
-              include_release: !0,
-            }),
-            [_, _] = (0, _._)(_);
+            _ = (0, _._)(),
+            { data: _, isPending: _ } = (0, _._)(
+              _
+                ? {
+                    appid: _,
+                  }
+                : void 0,
+            ),
+            { data: _ } = (0, _._)(_);
           if (
             (_.useEffect(() => {
               window.scrollTo(0, 0);
@@ -1215,7 +1350,7 @@
             });
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
             _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
-          if (!_.bLoaded || !_ || (_ && !_ && _ !== _._))
+          if (!_.bLoaded || !_ || (_ && _))
             return (0, _.jsx)("div", {
               className: _().FlexCenter,
               style: {
@@ -1231,6 +1366,10 @@
             event: _,
             lang: _,
             titleBar: _,
+            banner: (0, _.jsx)(_._, {
+              appId: _.appid,
+              clanId: _,
+            }),
             body: (0, _.jsxs)(_._, {
               children: [
                 (0, _.jsxs)("div", {
@@ -1245,7 +1384,7 @@
                         {
                           name: (0, _._)(
                             "#BreadCrumbs_GameEvents",
-                            _?.GetName() || _.group_name,
+                            _?.name || _.group_name,
                           ),
                           url: _,
                         },
@@ -1262,7 +1401,7 @@
                       }),
                   ],
                 }),
-                Boolean(_.BEventCanShowBroadcastWidget(_)) &&
+                Boolean(_.BEventCanShowBroadcastWidget(_, _)) &&
                   (0, _.jsx)("div", {
                     className: _().EventBroadcastCtn,
                     children: (0, _.jsx)(_.Suspense, {
@@ -1292,7 +1431,7 @@
                               (0, _.jsx)(_.WinterSaleSteamAwardVoteWrapper, {
                                 appID: _.appid,
                                 bIsEventActionEnabled:
-                                  _.BIsEventActionEnabled(),
+                                  _.BIsEventActionEnabled(_),
                                 voteCategories:
                                   _.GetSteamAwardNomineeCategories(),
                               }),
@@ -1327,7 +1466,7 @@
                                         _().Button,
                                         "LinkButton",
                                       ),
-                                      href: (0, _._)(_.GetSaleURL()),
+                                      href: (0, _._)((0, _._)(_)),
                                       children: (0, _._)(
                                         "#Event_Button_VisitSalePage",
                                       ),
@@ -1418,7 +1557,7 @@
                             ),
                             children: (0, _.jsx)(_._, {
                               _: _.appid,
-                              type: (0, _._)(_.GetAppType()),
+                              type: (0, _._)(_.type),
                               bPreferAssetWithoutOverride: !1,
                             }),
                           }),
@@ -1433,123 +1572,7 @@
               }),
             }),
           });
-        }),
-        _ = (0, _._)((_) => {
-          const {
-              event: _,
-              lang: _,
-              titleBar: _,
-              body: _,
-              postbody: _,
-              footer: _,
-            } = _,
-            _ = (0, _._)(_, "background", _),
-            _ = _.BIsImageSafeForAllAges("background", _),
-            _ = "lang_" + (0, _.wwZ)(_),
-            _ = !!_ && _.BImageNeedScreenshotFallback("background", _);
-          return (0, _.jsxs)(_._, {
-            scrollIntoViewType: _._.NoTransformSparseContent,
-            className: (0, _._)(
-              _().EventDetailsPageContainer,
-              _,
-              _().PartnerEventFont,
-              _
-                ? _().DetailArtworkAgeAppropriate
-                : _().DetailArtworkAgeNotAppropriate,
-              !_ && _().NoTitleArtwork,
-              _ && _().ScreenshotInsteadOfCover,
-            ),
-            children: [
-              (0, _.jsx)(_._, {
-                appId: _.appid,
-                clanId: _.clanSteamID.GetAccountID(),
-              }),
-              _,
-              (0, _.jsx)(_, {
-                strImageURL: _,
-              }),
-              (0, _.jsx)(_, {
-                strImageURL: _,
-                body: _,
-                postbody: _,
-              }),
-              Boolean(_) &&
-                (0, _.jsx)(_._, {
-                  children: _,
-                }),
-            ],
-          });
-        }),
-        _ = (_) => {
-          const { strImageURL: _ } = _;
-          return (0, _.jsxs)("div", {
-            className: _().EventCoverImageCtn,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().EventCoverImageBlr,
-                children:
-                  _ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().EventCoverImageFuzz,
-                        style: {
-                          backgroundColor: "rgb(37, 41, 46)",
-                          backgroundImage: `url(${_})`,
-                        },
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().EventCoverImage,
-                        style: {
-                          backgroundColor: "rgb(37, 41, 46)",
-                          backgroundImage: `url(${_})`,
-                        },
-                      }),
-                    ],
-                  }),
-              }),
-              _ &&
-                (0, _.jsx)("div", {
-                  className: _().CoverImageGradient,
-                }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { body: _, postbody: _, strImageURL: _ } = _;
-          return (0, _.jsxs)("div", {
-            className: _().EventBodyCtn,
-            children: [
-              (0, _.jsx)("div", {
-                className: _().EventBackgroundBlurCtn,
-              }),
-              (0, _.jsxs)("div", {
-                className: _().EventBodyPosition,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _().EventBody,
-                    children: [
-                      Boolean(_) &&
-                        (0, _.jsx)("div", {
-                          className: _().EventBackgroundBlur,
-                          style: {
-                            backgroundImage: `url(${_})`,
-                          },
-                        }),
-                      (0, _.jsx)(_._, {
-                        children: _,
-                      }),
-                    ],
-                  }),
-                  Boolean(_) &&
-                    (0, _.jsx)(_._, {
-                      children: _,
-                    }),
-                ],
-              }),
-            ],
-          });
-        };
+        });
       function _(_) {
         const {
             event: _,
@@ -1557,20 +1580,22 @@
             nOverrideStartTime: _,
             nOverrideEndTime: _,
           } = _,
-          [_, _, _, _, _, _] = (0, _._)(() => [
+          _ = (0, _._)(),
+          [_, _, _, _, _] = (0, _._)(() => [
             _.appid,
             _.clanSteamID,
-            _._.GetTimeNowWithOverride(),
             _ || _.GetStartTimeAndDateUnixSeconds(),
             _.GetCategoryAsString(),
             _.type,
           ]),
-          [_] = (0, _._)(_, {
-            include_assets: !0,
-            include_platforms: !0,
-            include_release: !0,
-          }),
-          [_, _] = (0, _._)(_.GetAccountID());
+          { data: _ } = (0, _._)(
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          ),
+          { data: _ } = (0, _._)(_.GetAccountID());
         return _
           ? _.appid && !_
             ? null
@@ -1638,11 +1663,13 @@
       function _(_) {
         const { appid: _ } = _;
         (0, _._)(_ && 0 != _, "Expected Appid In Game Info Section");
-        const [_] = (0, _._)(_, {
-          include_assets: !0,
-          include_platforms: !0,
-          include_release: !0,
-        });
+        const { data: _ } = (0, _._)(
+          _
+            ? {
+                appid: _,
+              }
+            : void 0,
+        );
         return (0, _.jsxs)("div", {
           className: _().EventDetailGameCallToAction,
           children: [
@@ -1667,8 +1694,8 @@
               children: _
                 ? (0, _.jsx)(_._, {
                     appid: _,
-                    bIsFree: __webpack_require__.BIsFree(),
-                    bIsComingSoon: __webpack_require__.BIsComingSoon(),
+                    bIsFree: _.is_free,
+                    bIsComingSoon: _.is_coming_soon,
                     className: _().ActionButton,
                   })
                 : (0, _.jsx)(_._, {
@@ -1681,183 +1708,123 @@
       }
       function _(_) {
         const { clanSteamID: _ } = _,
-          [_, _] = (0, _._)(_.GetAccountID());
-        return _
-          ? (0, _.jsxs)("div", {
-              className: _().EventDetailGameCallToAction,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().RightSideTitles,
-                  children: _.group_name,
-                }),
-                (0, _.jsx)(_._, {
-                  href: (0, _._)(_._.GetCreatorStoreURL(_)),
-                  children: (0, _.jsx)("div", {
-                    className: _().EventDetailsAvatar,
-                    style: {
-                      backgroundImage: `url(${_.avatar_full_url})`,
-                    },
-                  }),
-                }),
-              ],
-            })
-          : ((0, _._)(
-              _,
-              "EventDetailsRightCreatorInfo - clan info (" +
-                _.GetAccountID() +
-                ") is missing",
-            ),
-            null);
-      }
-      const _ = ["", "en-US", "en-GB", "zh-CN", "es-ES", "br-BR"];
-      let _ = class extends _.Component {
-        GenerateOptions() {
-          let _ = new Array();
+          _ = _.GetAccountID(),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_)
           return (
-            _.forEach((_) =>
-              _.push(
-                (0, _.jsx)(
-                  "option",
-                  {
-                    value: _,
-                    children: _,
-                  },
-                  _,
-                ),
-              ),
+            (0, _._)(
+              _,
+              "EventDetailsRightCreatorInfo - clan info (" + _ + ") is missing",
             ),
-            _
+            null
           );
-        }
-        OnLanguageChange(_) {
-          this.props.fnOverrideLocale(_.currentTarget.value);
-        }
-        render() {
-          if (
-            !_._.Get().GetPartnerEventPermissions(this.props.event.clanSteamID)
-              .valve_admin
-          )
-            return (0, _.jsx)("div", {});
-          let _ = this.GenerateOptions();
-          return (0, _.jsx)("div", {
-            style: {
-              paddingTop: 10,
-            },
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().FlexColumnContainer,
-                _().ValveOnlyBackground,
-              ),
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().EventEditorTextTitle,
-                    _().ValveSupportOnly,
-                  ),
-                  children: "Valve Support Tools (VO)",
-                }),
-                (0, _.jsx)("span", {
-                  children: "Override Locale",
-                }),
-                (0, _.jsx)("select", {
-                  onChange: this.OnLanguageChange,
-                  children: _,
-                }),
-              ],
+        const _ = _
+          ? (0, _._)(_, "developer")
+          : _._.COMMUNITY_BASE_URL +
+            (_.vanity_url
+              ? "groups/" + _.vanity_url
+              : "gid/" + _.ConvertTo64BitString());
+        return (0, _.jsxs)("div", {
+          className: _().EventDetailGameCallToAction,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().RightSideTitles,
+              children: _.group_name,
             }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnLanguageChange", null),
-        (_ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        m_cancelSignal = _().CancelToken.source();
-        componentDidMount() {
-          const { event: _ } = this.props;
-          _.BIsPartnerEvent() &&
-            _.BIsVisibleEvent() &&
-            _._.Get()
-              .LoadSingleAppEventPermissions(_.clanSteamID)
-              .then((_) => {
-                _ &&
-                  _.can_edit &&
-                  _.LoadStatsForEvents(
-                    _.clanSteamID,
-                    [_.GID],
-                    this.m_cancelSignal,
-                  );
-              });
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel("EventDisplayEditorInfo cancelled");
-        }
-        render() {
-          const { event: _, bIsOGG: _ } = this.props;
-          if (!_._.Get().GetPartnerEventPermissions(_.clanSteamID).can_edit)
-            return null;
-          const _ =
-            _.BIsPartnerEvent() &&
-            _.BIsVisibleEvent() &&
-            _.GetStatsFor(_.clanSteamID, _.GID);
-          return (0, _.jsxs)(_._, {
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().EditorStatsCtn,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _().EditorStatsRow,
-                    children: [
-                      (0, _.jsx)("span", {
-                        children: (0, _._)("#EventEditor_Comments"),
-                      }),
-                      (0, _.jsx)("span", {
-                        children: (0, _._)(_.nCommentCount),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().EditorStatsRow,
-                    children: [
-                      (0, _.jsx)("span", {
-                        children: (0, _._)("#EventEditor_UpVotes"),
-                      }),
-                      (0, _.jsx)("span", {
-                        children: _.nVotesUp ? (0, _._)(_.nVotesUp) : 0,
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().EditorStatsRow,
-                    children: [
-                      (0, _.jsx)("span", {
-                        children: (0, _._)("#EventEditor_DownVotes"),
-                      }),
-                      (0, _.jsx)("span", {
-                        children: _.nVotesDown ? (0, _._)(_.nVotesDown) : 0,
-                      }),
-                    ],
-                  }),
-                ],
+            (0, _.jsx)(_._, {
+              href: (0, _._)(_),
+              children: (0, _.jsx)("div", {
+                className: _().EventDetailsAvatar,
+                style: {
+                  backgroundImage: `url(${_.avatar_full_url})`,
+                },
               }),
-              Boolean(_) &&
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { event: _, bIsOGG: _ } = _,
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
+          _ = Boolean(_?.can_edit),
+          _ = _.clanSteamID,
+          _ = _.GID,
+          _ = _ && _.BIsPartnerEvent() && _.BIsVisibleEvent(_);
+        _.useEffect(() => {
+          if (!_) return;
+          const _ = _().CancelToken.source();
+          return (
+            _.LoadStatsForEvents(_, [_], _),
+            () => _.cancel("EventDisplayEditorInfo cancelled")
+          );
+        }, [_, _, _]);
+        const [_, _, _, _] = (0, _._)(() => [
+          _ && _.GetStatsFor(_, _),
+          _.nCommentCount,
+          _.nVotesUp,
+          _.nVotesDown,
+        ]);
+        return _
+          ? (0, _.jsxs)(_._, {
+              children: [
                 (0, _.jsxs)("div", {
                   className: _().EditorStatsCtn,
                   children: [
-                    (0, _._)("#EventDashBoard_SummaryStats_Admin_Title"),
-                    (0, _.jsx)(_, {
-                      summary: _.m_stats,
-                      clanSteamID: _.clanSteamID,
-                      bIsAllowedInLibrary: _,
-                      bEventIsInModerationQueue: (0, _._)(_),
-                      bCompact: !0,
+                    (0, _.jsxs)("div", {
+                      className: _().EditorStatsRow,
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: (0, _._)("#EventEditor_Comments"),
+                        }),
+                        (0, _.jsx)("span", {
+                          children: (0, _._)(_),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().EditorStatsRow,
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: (0, _._)("#EventEditor_UpVotes"),
+                        }),
+                        (0, _.jsx)("span", {
+                          children: _ ? (0, _._)(_) : 0,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().EditorStatsRow,
+                      children: [
+                        (0, _.jsx)("span", {
+                          children: (0, _._)("#EventEditor_DownVotes"),
+                        }),
+                        (0, _.jsx)("span", {
+                          children: _ ? (0, _._)(_) : 0,
+                        }),
+                      ],
                     }),
                   ],
                 }),
-            ],
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
+                Boolean(_) &&
+                  (0, _.jsxs)("div", {
+                    className: _().EditorStatsCtn,
+                    children: [
+                      (0, _._)("#EventDashBoard_SummaryStats_Admin_Title"),
+                      (0, _.jsx)(_, {
+                        summary: _.m_stats,
+                        clanSteamID: _,
+                        bIsAllowedInLibrary: _,
+                        bEventIsInModerationQueue: (0, _._)(_, _),
+                        bCompact: !0,
+                      }),
+                    ],
+                  }),
+              ],
+            })
+          : null;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

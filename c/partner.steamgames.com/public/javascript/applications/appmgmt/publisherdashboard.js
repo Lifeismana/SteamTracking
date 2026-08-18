@@ -836,6 +836,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _(),
           _ = _(),
@@ -1196,7 +1197,7 @@
             _.sale_clan_event_gid,
           );
         (_ ??= !_ && _?.GetImageURL("capsule", _, _._.capsule_main)),
-          (_ ??= !_ && _?.GetSaleURL());
+          (_ ??= !_ && (0, _._)(_));
         const _ = [];
         _.valveOnly &&
           ("seasonalsale" == _.type ||
@@ -1565,7 +1566,7 @@
           ),
           _ = (0, _._)(_.opt_in_id, _.m_partnerId),
           _ = !_ && _?.GetImageURL("capsule", _, _._.capsule_main),
-          _ = !_ && _?.GetSaleURL(),
+          _ = !_ && (0, _._)(_),
           _ = _.opt_in_id?.startsWith("sale_nextfest_")
             ? `${_._.PARTNER_BASE_URL}recap/nextfest/${_.opt_in_id.substring(14)}/${_.m_partnerId}`
             : void 0,

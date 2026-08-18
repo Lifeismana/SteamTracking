@@ -42,6 +42,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (!_) return _;
@@ -127,7 +128,7 @@
           return (
             _.sm_instance ||
               ((_.sm_instance = new _()),
-              (window.StoreItemCache = _.sm_instance)),
+              (0, _._)("StoreItemCache", _.sm_instance)),
             _.sm_instance
           );
         }

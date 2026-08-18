@@ -919,15 +919,16 @@
       var o = n(40323),
         r = n.n(o);
       class i {
-        static ParseCSVFile(e) {
-          return new Promise((t, n) => {
-            const o = {
+        static ParseCSVFile(e, t) {
+          return new Promise((n, o) => {
+            const i = {
               header: !0,
               skipEmptyLines: "greedy",
-              complete: t,
-              error: (e) => n({ errors: [e] }),
+              complete: n,
+              error: (e) => o({ errors: [e] }),
+              transformHeader: t,
             };
-            r().parse(e, o);
+            r().parse(e, i);
           });
         }
         static ReadFile(e) {

@@ -1367,7 +1367,7 @@
                 data: "changed",
               },
               {
-                label: (0, _._)("#PricingDashboard_ShowProposedChanges"),
+                label: (0, _._)("#PricingDashboard_ShowSubmittedChanges"),
                 data: "proposed",
               },
             ],
@@ -2149,16 +2149,17 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       class _ {
-        static ParseCSVFile(_) {
+        static ParseCSVFile(_, _) {
           return new Promise((_, _) => {
             const _ = {
               header: !0,
               skipEmptyLines: "greedy",
               complete: _,
               error: (_) =>
-                __webpack_require__({
+                _({
                   errors: [_],
                 }),
+              transformHeader: _,
             };
             _().parse(_, _);
           });

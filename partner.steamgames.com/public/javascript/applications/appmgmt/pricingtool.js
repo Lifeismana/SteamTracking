@@ -704,15 +704,15 @@ License: MIT
                 D = (h = 0);
               if (!o) return L();
               if (a || (!1 !== a && -1 === o.indexOf(d))) {
-                for (var P = o.split(r), S = 0; S < P.length; S++) {
-                  if (((E = P[S]), (h += E.length), S !== P.length - 1))
+                for (var S = o.split(r), P = 0; P < S.length; P++) {
+                  if (((E = S[P]), (h += E.length), P !== S.length - 1))
                     h += r.length;
                   else if (m) return L();
                   if (!n || E.substring(0, k) !== n) {
                     if (v) {
                       if (((y = []), N(E.split(t)), M(), p)) return L();
                     } else N(E.split(t));
-                    if (s && s <= S) return (y = y.slice(0, s)), L(!0);
+                    if (s && s <= P) return (y = y.slice(0, s)), L(!0);
                   }
                 }
                 return L();
@@ -1261,8 +1261,8 @@ License: MIT
         C = r(52038),
         E = r(33299),
         D = r(74267),
-        P = r(22886),
-        S = r.n(P),
+        S = r(22886),
+        P = r.n(S),
         R = r(10754),
         T = r(96434),
         j = r.n(T),
@@ -1317,7 +1317,7 @@ License: MIT
                 data: "changed",
               },
               {
-                label: (0, b.we)("#PricingDashboard_ShowProposedChanges"),
+                label: (0, b.we)("#PricingDashboard_ShowSubmittedChanges"),
                 data: "proposed",
               },
             ],
@@ -1325,18 +1325,18 @@ License: MIT
           ),
           [g, m, _] = (0, M.uD)();
         return (0, n.jsxs)("div", {
-          className: S().GridHeaderButtons,
+          className: P().GridHeaderButtons,
           children: [
             (0, n.jsx)(f.ZU, {
               rgOptions: p,
               selectedOption: s,
-              strDropDownClassName: S().Test,
+              strDropDownClassName: P().Test,
               onChange: u,
               contextMenuPositionOptions: { bMatchWidth: !1 },
             }),
             Boolean(l || o) &&
               (0, n.jsx)("div", {
-                className: (0, C.A)(S().OptionCtn, S().PriceLowOption),
+                className: (0, C.A)(P().OptionCtn, P().PriceLowOption),
                 children: (0, n.jsx)(f.Yh, {
                   checked: o,
                   onChange: c,
@@ -1344,7 +1344,7 @@ License: MIT
                 }),
               }),
             (0, n.jsx)("div", {
-              className: (0, C.A)(S().OptionCtn, S().CompactOption),
+              className: (0, C.A)(P().OptionCtn, P().CompactOption),
               children: (0, n.jsx)(f.Yh, {
                 checked: t,
                 onChange: r,
@@ -1354,11 +1354,11 @@ License: MIT
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, C.A)(S().OptionCtn),
+              className: (0, C.A)(P().OptionCtn),
               children: (0, n.jsx)(L.J, {}),
             }),
             (0, n.jsxs)("div", {
-              className: (0, C.A)(S().OptionCtn),
+              className: (0, C.A)(P().OptionCtn),
               children: [
                 (0, n.jsx)(f.jn, {
                   onClick: m,
@@ -1391,19 +1391,19 @@ License: MIT
           i = (0, d.XK)(r),
           s = (0, d.YB)(r);
         return (0, n.jsxs)("div", {
-          className: S().CurrencyHeader,
+          className: P().CurrencyHeader,
           children: [
             (0, n.jsx)(y.he, {
               toolTipContent: i,
               direction: "top",
-              className: S().CurrencyAbbreviation,
-              strTooltipClassname: S().HoverToolTip,
+              className: P().CurrencyAbbreviation,
+              strTooltipClassname: P().HoverToolTip,
               children: (0, n.jsxs)("div", {
-                className: S().CurrencyNameCtn,
+                className: P().CurrencyNameCtn,
                 children: [
                   r,
                   (0, n.jsx)("span", {
-                    className: S().CurrencyName,
+                    className: P().CurrencyName,
                     children: i,
                   }),
                 ],
@@ -1412,7 +1412,7 @@ License: MIT
             s > 0 &&
               (0, n.jsx)(D.O, {
                 hoverKey: r,
-                className: S().CurrencyMore,
+                className: P().CurrencyMore,
                 renderHover: () => (0, n.jsx)(Q, { priceKey: r }),
               }),
           ],
@@ -1420,7 +1420,7 @@ License: MIT
       }
       function V(e) {
         const { row: t } = e;
-        return (0, n.jsx)(W.m, {
+        return (0, n.jsx)(W.m2, {
           packageID: t.original.packageID,
           bShowCancel: !0,
         });
@@ -1466,7 +1466,7 @@ License: MIT
         const t = (0, d.Ci)(),
           r = t?.length ?? 0;
         return (0, n.jsx)("div", {
-          className: (0, C.A)(S().PricingGridCtn, r > 0 && "PendingVisible"),
+          className: (0, C.A)(P().PricingGridCtn, r > 0 && "PendingVisible"),
           children: (0, n.jsx)(Y, { ...e }),
         });
       }
@@ -1546,9 +1546,9 @@ License: MIT
                 setFilterToBelowMinPrice: u,
               }),
               (0, n.jsx)("div", {
-                className: S().PricingGridWrapper,
+                className: P().PricingGridWrapper,
                 children: (0, n.jsx)("div", {
-                  className: (0, C.A)(S().PricingGrid, r && "CompactMode"),
+                  className: (0, C.A)(P().PricingGrid, r && "CompactMode"),
                   children: (0, n.jsxs)(v.tH, {
                     children: [
                       (0, n.jsx)(E.rK, {
@@ -1557,7 +1557,7 @@ License: MIT
                         children: (0, n.jsx)(N.k, {
                           ref: s,
                           className: F()(
-                            S().PricingGridTable,
+                            P().PricingGridTable,
                             "noGlobalButtonStyle",
                           ),
                           columns: g,
@@ -2063,15 +2063,16 @@ License: MIT
       var n = r(40323),
         i = r.n(n);
       class s {
-        static ParseCSVFile(e) {
-          return new Promise((t, r) => {
-            const n = {
+        static ParseCSVFile(e, t) {
+          return new Promise((r, n) => {
+            const s = {
               header: !0,
               skipEmptyLines: "greedy",
-              complete: t,
-              error: (e) => r({ errors: [e] }),
+              complete: r,
+              error: (e) => n({ errors: [e] }),
+              transformHeader: t,
             };
-            i().parse(e, n);
+            i().parse(e, s);
           });
         }
         static ReadFile(e) {

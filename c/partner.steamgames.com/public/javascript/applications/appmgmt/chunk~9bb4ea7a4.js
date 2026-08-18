@@ -5860,10 +5860,15 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  completion_achievements: {
+                  completed_achievements: {
                     _: 3,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  is_completed: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),

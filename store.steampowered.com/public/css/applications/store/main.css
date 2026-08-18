@@ -5363,6 +5363,30 @@ a._175B12uOwmeGBNcSaQFe-Z._234vIwVerIU5MqgZwrEcd8,
 button._175B12uOwmeGBNcSaQFe-Z._234vIwVerIU5MqgZwrEcd8 {
   display: none;
 }
+a._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR,
+button._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR {
+  border-radius: 0px 1px 1px 0px;
+  background: #1a9fff;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 4px 0;
+}
+a._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR svg,
+button._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR svg {
+  width: 24px;
+  display: flex;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+a._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR:hover,
+button._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR:hover {
+  background: #45acff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+a._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR:hover svg,
+button._175B12uOwmeGBNcSaQFe-Z.aIR3xXQcbQaxcu3aoEpcR:hover svg {
+  transform: scale(1.1);
+}
 a._175B12uOwmeGBNcSaQFe-Z .BReXgOZvJY6u4htWQn1aF,
 button._175B12uOwmeGBNcSaQFe-Z .BReXgOZvJY6u4htWQn1aF {
   color: #dcdedf;

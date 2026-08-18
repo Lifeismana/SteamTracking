@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Failed to Parse GIF. Please re-encode or change format type and try again.",
     "MediaConvert_InputError_ImageTooSmall": "The image is too small. Please upload an image at least 16x16 pixels.",
     "MediaConvert_InputError_AnimationTooSmall": "The animation or video is too small. Please upload an animation or video at least 16x16 pixels.",
+    "MediaConvert_InputError_MultipleVideoStreams": "The file contains more than one video track. Please upload a file with a single video track.",
+    "MediaConvert_InputError_AnimationNotAllowed": "This image cannot be animated. Please upload a still image.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Image files cannot contain an audio track.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF output is not supported for video sources.",
     "MediaConvert_InternalError_FailedToConvert": "Failed to convert this file. Please re-encode file before trying again.",

@@ -402,8 +402,8 @@
         c = s(56545),
         u = s(41071),
         d = s(96059),
-        h = s(81393),
-        m = s(68797),
+        m = s(81393),
+        h = s(68797),
         _ = s(6144),
         g = s(73745),
         p = s(30470);
@@ -504,9 +504,9 @@
                 !0
               );
             }
-            s = (0, m.H)(n);
+            s = (0, h.H)(n);
           } catch (e) {
-            s = (0, m.H)(e);
+            s = (0, h.H)(e);
           }
           return (
             console.error(
@@ -542,9 +542,9 @@
                 !0
               );
             }
-            s = (0, m.H)(n);
+            s = (0, h.H)(n);
           } catch (e) {
-            s = (0, m.H)(e);
+            s = (0, h.H)(e);
           }
           return (
             console.error(
@@ -579,7 +579,7 @@
             "promotion_operation_token",
             "application_config",
           );
-          (0, h.wT)(Boolean(e), "require promotion_operation_token"),
+          (0, m.wT)(Boolean(e), "require promotion_operation_token"),
             "dev" == p.TS.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CReservationMessagingStore with access token ",
@@ -720,8 +720,8 @@
       var k = s(71298),
         T = s(99637),
         y = s(8905),
-        D = s(9154),
-        R = s(738),
+        R = s(9154),
+        D = s(738),
         C = s(48479),
         A = s(56011),
         P = s(61859),
@@ -730,8 +730,8 @@
         N = s(78686),
         E = s(44165),
         B = (s(78327), s(78603), s(6866)),
-        z = s(12842),
-        G = s.n(z);
+        G = s(12842),
+        z = s.n(G);
       function F(e) {
         const { elReservationMessage: t, strUrlLearnMoreLink: s } = e;
         return s
@@ -740,7 +740,7 @@
                 t,
                 (0, n.jsx)(B.d$, {
                   url: s,
-                  className: G().Link,
+                  className: z().Link,
                   children: N.Z.Localize("#Button_Learn"),
                 }),
               ],
@@ -784,8 +784,8 @@
             }),
           });
         const d = new Date(1e3 * s),
-          h = d.getMonth() + 1;
-        let m = "",
+          m = d.getMonth() + 1;
+        let h = "",
           _ = "",
           g = "",
           p = t;
@@ -793,41 +793,41 @@
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
           case "#Sale_Reservation_ByYear":
-            m = "" + d.getFullYear();
+            h = "" + d.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
           case "#Sale_Reservation_ByMonthYear":
-            (m = (0, P.we)("#Sale_Reservation_MonthNoun_" + h)),
+            (h = (0, P.we)("#Sale_Reservation_MonthNoun_" + m)),
               (_ = "" + d.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (m = (0, P.we)("#Sale_Reservation_MonthNoun_" + Y(h, 1))),
-              (_ = (0, P.we)("#Sale_Reservation_MonthNoun_" + h)),
+            (h = (0, P.we)("#Sale_Reservation_MonthNoun_" + Y(m, 1))),
+              (_ = (0, P.we)("#Sale_Reservation_MonthNoun_" + m)),
               (g = "" + d.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (m = (0, P.we)("#Sale_Reservation_MonthNoun_" + Y(h, 2))),
-              (_ = (0, P.we)("#Sale_Reservation_MonthNoun_" + h)),
+            (h = (0, P.we)("#Sale_Reservation_MonthNoun_" + Y(m, 2))),
+              (_ = (0, P.we)("#Sale_Reservation_MonthNoun_" + m)),
               (g = "" + d.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (m = (0, P.we)("#Sale_Reservation_MonthNoun_" + Y(h, 3))),
-              (_ = (0, P.we)("#Sale_Reservation_MonthNoun_" + h)),
+            (h = (0, P.we)("#Sale_Reservation_MonthNoun_" + Y(m, 3))),
+              (_ = (0, P.we)("#Sale_Reservation_MonthNoun_" + m)),
               (g = "" + d.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
-            (p = "#Sale_Reservation_Quarter" + (Math.floor((h - 1) / 3) + 1)),
-              (m = "" + d.getFullYear());
+            (p = "#Sale_Reservation_Quarter" + (Math.floor((m - 1) / 3) + 1)),
+              (h = "" + d.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
             (p =
-              "#Sale_Reservation_AfterQuarter" + (Math.floor((h - 1) / 3) + 1)),
-              (m = (0, P.we)("#Sale_Reservation_MonthNoun_" + h)),
+              "#Sale_Reservation_AfterQuarter" + (Math.floor((m - 1) / 3) + 1)),
+              (h = (0, P.we)("#Sale_Reservation_MonthNoun_" + m)),
               (_ = "" + d.getFullYear());
             break;
           case "#Sale_Reservation_BetweenNowAndLastDay":
-            (m = (0, P.we)("#Sale_Reservation_MonthNoun_" + h)),
+            (h = (0, P.we)("#Sale_Reservation_MonthNoun_" + m)),
               (_ = "" + new Date(d.getFullYear(), d.getMonth(), 0).getDate()),
               (g = "" + d.getFullYear());
             break;
@@ -838,9 +838,9 @@
               t < 7 ||
                 (t < 28
                   ? ((p = "#Sale_Reservation_RelativeWeekly_Plural"),
-                    (m = "" + Math.floor(t / 7 + 1)))
+                    (h = "" + Math.floor(t / 7 + 1)))
                   : ((p = "#Sale_Reservation_RelativeMonthly"),
-                    (m = "" + Math.floor(t / 28 + 1))));
+                    (h = "" + Math.floor(t / 28 + 1))));
             }
             break;
           case "#Sale_Reservation_AvailabilityUnknown":
@@ -863,7 +863,7 @@
                 ),
             }),
             (0, n.jsx)(F, {
-              elReservationMessage: p ? (0, P.we)(p, m, _, g, "") : c,
+              elReservationMessage: p ? (0, P.we)(p, h, _, g, "") : c,
               strUrlLearnMoreLink: i,
             }),
           ],
@@ -887,7 +887,7 @@
                 "No products with reservation position messages exists.",
             });
       }
-      function H(e) {
+      function V(e) {
         return (0, n.jsxs)("div", {
           children: [
             (0, n.jsx)(w.JU, { children: "instructions:" }),
@@ -906,7 +906,7 @@
           ],
         });
       }
-      function V(e) {
+      function H(e) {
         f();
         return (0, n.jsxs)("div", {
           children: [
@@ -920,7 +920,7 @@
                 "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
             }),
             (0, n.jsx)(w.$n, {
-              onClick: (e) => (0, R.pg)((0, n.jsx)($, {}), (0, A.uX)(e)),
+              onClick: (e) => (0, D.pg)((0, n.jsx)($, {}), (0, A.uX)(e)),
               children: "Force Reload Definitions on Steam Servers",
             }),
           ],
@@ -950,7 +950,7 @@
               children: [
                 (0, n.jsx)(w.$n, {
                   onClick: (e) =>
-                    (0, R.pg)((0, n.jsx)(Z, { productID: t }), (0, A.uX)(e)),
+                    (0, D.pg)((0, n.jsx)(Z, { productID: t }), (0, A.uX)(e)),
                   children: "Add new start position",
                 }),
                 (0, n.jsxs)("table", {
@@ -1024,7 +1024,7 @@
               children: [
                 (0, n.jsx)(w.$n, {
                   onClick: (e) =>
-                    (0, R.pg)(
+                    (0, D.pg)(
                       (0, n.jsx)(Z, { productID: t, existingPositionMsg: t }),
                       (0, A.uX)(e),
                     ),
@@ -1032,7 +1032,7 @@
                 }),
                 (0, n.jsx)(w.$n, {
                   onClick: (e) =>
-                    (0, R.pg)((0, n.jsx)(X, { positionMsg: t }), (0, A.uX)(e)),
+                    (0, D.pg)((0, n.jsx)(X, { positionMsg: t }), (0, A.uX)(e)),
                   children: "Delete",
                 }),
               ],
@@ -1048,14 +1048,14 @@
           [u, d] = (0, i.useState)(
             s?.rtime_estimated_notification || a + 86400,
           ),
-          [h, m] = (0, i.useState)(
+          [m, h] = (0, i.useState)(
             s?.localization_token || "#Sale_Reservation_MonthYear",
           ),
           _ = s ? "Update Queue Range" : "Create Queue Range",
           g = (0, k.vs)();
         return g.bLoading
           ? (0, n.jsx)(k.Hh, { state: g, strDialogTitle: _, closeModal: r })
-          : (0, n.jsx)(D.o0, {
+          : (0, n.jsx)(R.o0, {
               bDisableBackgroundDismiss: !0,
               strTitle: _,
               onCancel: r,
@@ -1065,7 +1065,7 @@
                   ...t,
                   start_queue_position: l,
                   rtime_estimated_notification: u,
-                  localization_token: h,
+                  localization_token: m,
                 };
                 o([e]).then((e) => {
                   e
@@ -1106,8 +1106,8 @@
                   }),
                   (0, n.jsx)("br", {}),
                   (0, n.jsx)(te, {
-                    strToken: h,
-                    fnSetToken: m,
+                    strToken: m,
+                    fnSetToken: h,
                     rtEstimateDate: u,
                   }),
                 ],
@@ -1121,7 +1121,7 @@
           o = (0, k.vs)();
         return o.bLoading
           ? (0, n.jsx)(k.Hh, { state: o, strDialogTitle: r, closeModal: s })
-          : (0, n.jsx)(D.o0, {
+          : (0, n.jsx)(R.o0, {
               strTitle: r,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: s,
@@ -1147,7 +1147,7 @@
           (0, i.useEffect)(() => {
             s().then(() => o(!0));
           }, [s]),
-          (0, n.jsx)(D.o0, {
+          (0, n.jsx)(R.o0, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: r
@@ -1257,11 +1257,11 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: ie().SectionCtn,
-                      children: (0, n.jsx)(H, {}),
+                      children: (0, n.jsx)(V, {}),
                     }),
                     (0, n.jsx)("div", {
                       className: ie().SectionCtn,
-                      children: (0, n.jsx)(V, {}),
+                      children: (0, n.jsx)(H, {}),
                     }),
                     (0, n.jsxs)("div", {
                       className: ie().SectionCtn,
@@ -1286,22 +1286,44 @@
         });
       }
     },
+    83085: (e, t, s) => {
+      "use strict";
+      s.d(t, { Gw: () => a, Lk: () => l, ai: () => o, mm: () => r });
+      var n = s(14947);
+      const i = n.sH.box(void 0);
+      function r() {
+        return i.get();
+      }
+      function o(e) {
+        (0, n.h5)(() => i.set(e));
+      }
+      function a() {
+        const e = i.get();
+        return e || Math.floor(Date.now() / 1e3);
+      }
+      function l() {
+        const e = i.get();
+        return e ? new Date(1e3 * e) : new Date();
+      }
+    },
     44165: (e, t, s) => {
       "use strict";
-      s.d(t, { HD: () => d, P_: () => h, f1: () => j, sB: () => p });
-      var n = s(34629),
-        i = s(14947),
-        r = s(19367),
-        o = s.n(r),
-        a = s(90626),
-        l = s(4434),
-        c = s(78327);
-      class u {
-        constructor() {
-          (0, i.Gn)(this);
-        }
+      s.d(t, { HD: () => u, P_: () => d, f1: () => p, sB: () => g });
+      var n = s(19367),
+        i = s.n(n),
+        r = s(90626),
+        o = s(83085),
+        a = s(4434),
+        l = s(78327),
+        c = s(63340);
+      const u = new (class {
         bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
+        get nOverrideDateNow() {
+          return (0, o.mm)();
+        }
+        set nOverrideDateNow(e) {
+          (0, o.ai)(e);
+        }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -1309,29 +1331,25 @@
           return !0;
         }
         GetTimeNowWithOverride() {
-          return this.nOverrideDateNow
-            ? this.nOverrideDateNow
-            : Math.floor(Date.now() / 1e3);
+          return (0, o.Gw)();
         }
         GetTimeNowWithOverrideAsDate() {
-          return this.nOverrideDateNow
-            ? new Date(1e3 * this.nOverrideDateNow)
-            : new Date();
+          return (0, o.Lk)();
         }
         BHasTimeOverride() {
-          return Boolean(this.nOverrideDateNow);
+          return Boolean((0, o.mm)());
         }
         ParseDevOverrides(e) {
           if (!e || 0 == e.length) return;
           const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             t.has("t") &&
-            ("dev" == c.TS.WEB_UNIVERSE || "beta" == c.TS.WEB_UNIVERSE)
+            ("dev" == l.TS.WEB_UNIVERSE || "beta" == l.TS.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
             let s = /^\d+$/.test(e ?? "")
-              ? o().unix(Number.parseInt(e ?? "0"))
-              : o()(e);
+              ? i().unix(Number.parseInt(e ?? "0"))
+              : i()(e);
             (this.nOverrideDateNow = Math.floor(s.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -1341,17 +1359,15 @@
               );
           }
         }
-      }
-      (0, n.Cg)([i.sH], u.prototype, "nOverrideDateNow", void 0);
-      const d = new u();
-      function h(e = 1) {
-        const [t, s] = a.useState(() => g()),
-          n = (0, l.m)("useTimeNowWithOverride"),
-          i = a.useCallback(() => {
-            n.token.reason || s(g());
+      })();
+      function d(e = 1) {
+        const [t, s] = r.useState(() => _()),
+          n = (0, a.m)("useTimeNowWithOverride"),
+          i = r.useCallback(() => {
+            n.token.reason || s(_());
           }, []);
         return (
-          a.useEffect(() => {
+          r.useEffect(() => {
             const t = 1e3 * e,
               s = t - (Date.now() % t),
               n = window.setTimeout(i, s);
@@ -1362,18 +1378,18 @@
           t
         );
       }
-      window.g_EventCalendarDevFeatures = d;
+      (0, c.V)("g_EventCalendarDevFeatures", u);
       const m = new Date(),
-        _ = Math.floor(m.getTime() / 1e3);
-      function g() {
+        h = Math.floor(m.getTime() / 1e3);
+      function _() {
         const e = Math.floor(Date.now() / 1e3);
-        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - _) : e;
+        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - h) : e;
+      }
+      function g() {
+        return u.nOverrideDateNow ?? h;
       }
       function p() {
-        return d.nOverrideDateNow ?? _;
-      }
-      function j() {
-        return a.useMemo(() => p(), []);
+        return r.useMemo(() => g(), []);
       }
     },
     27144: (e, t, s) => {
@@ -1388,8 +1404,8 @@
         c = s(75233),
         u = s(37085),
         d = s(17720),
-        h = s(68797),
-        m = s(78327),
+        m = s(68797),
+        h = s(78327),
         _ = s(56545),
         g = s(76176),
         p = s(23809),
@@ -1401,7 +1417,7 @@
             queryKey: [f],
             queryFn: async () => {
               const e = new Map();
-              if (m.iA.logged_in) {
+              if (h.iA.logged_in) {
                 const s = _.w.Init(g.w_T),
                   n = (await g.xtC.GetNicknameList(t, s)).Body().toObject();
                 n?.nicknames &&
@@ -1420,9 +1436,9 @@
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, m.yK)()
-                  ? m.TS.COMMUNITY_BASE_URL
-                  : m.TS.STORE_BASE_URL;
+                "community" == (0, h.yK)()
+                  ? h.TS.COMMUNITY_BASE_URL
+                  : h.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const s = { accountid: e[0], origin: self.origin },
                   n = await i().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -1434,7 +1450,7 @@
                   n.data?.success != u.R ||
                   !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, h.H))(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
                 return [n.data.userinfo];
               }
               {
@@ -1448,7 +1464,7 @@
                   n.data?.success != u.R ||
                   !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, h.H))(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
                 const r = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>
@@ -1511,8 +1527,8 @@
         c = s(95695),
         u = s.n(c),
         d = s(52038),
-        h = s(61859),
-        m = s(32754),
+        m = s(61859),
+        h = s(32754),
         _ = s(12916),
         g = s.n(_),
         p = s(87937),
@@ -1532,8 +1548,8 @@
           strDescToolTip: k,
           strDescription: T,
           bShowTimeZone: y,
-          strInvalidDateTimeLocalizedMsg: D,
-          fnIsValidDateTime: R,
+          strInvalidDateTimeLocalizedMsg: R,
+          fnIsValidDateTime: D,
           bWeekdaysOnly: C,
           fnSetTimeToUpdate: A,
           bForce24HourFormat: P,
@@ -1548,7 +1564,7 @@
             : f;
         const N = r(),
           [E, B] = i.useState(N > 0 ? j()(1e3 * N) : null),
-          [z, G] = i.useState(0),
+          [G, z] = i.useState(0),
           [F, U] = i.useState(),
           [O, Y] = i.useState(),
           W = (function (e, t, s, n, r) {
@@ -1557,13 +1573,13 @@
               l = e && !b(e).isValid();
             let c = null;
             (l || a || "string" == typeof o || !1 === o) &&
-              ((c = (0, h.we)(
+              ((c = (0, m.we)(
                 s || "#DateTimePicker_Fallback_Invalid_DateTime",
               )),
               l
-                ? (c = (0, h.we)("#DateTimePicker_Time_CannotParse"))
+                ? (c = (0, m.we)("#DateTimePicker_Time_CannotParse"))
                 : a
-                  ? (c = (0, h.we)("#DateTimePicker_Date_CannotParse"))
+                  ? (c = (0, m.we)("#DateTimePicker_Date_CannotParse"))
                   : "string" == typeof o && (c = o));
             return (
               i.useEffect(() => {
@@ -1571,9 +1587,9 @@
               }, [c, r]),
               c
             );
-          })(F, O, D, R, c),
+          })(F, O, R, D, c),
           q = !c && W;
-        let Q, H;
+        let Q, V;
         if (t && s && t == s && s > l.HD.GetTimeNowWithOverride()) {
           const e = j().unix(s);
           (Q = {
@@ -1584,10 +1600,10 @@
           }),
             (L = v);
         }
-        N || !s || S || (H = j().unix(s));
-        const V = j().tz.guess(),
-          K = j().unix(N).tz(V),
-          J = !!_ && V != _ && j().unix(N).tz(_),
+        N || !s || S || (V = j().unix(s));
+        const H = j().tz.guess(),
+          K = j().unix(N).tz(H),
+          J = !!_ && H != _ && j().unix(N).tz(_),
           {
             fnOnInput: Z,
             fnOnInputBlur: X,
@@ -1641,7 +1657,7 @@
             (0, n.jsxs)("div", {
               className: (0, d.A)(g().EventTimeTitle, "DialogLabel"),
               children: [
-                (0, n.jsx)(m.he, {
+                (0, n.jsx)(h.he, {
                   toolTipContent: k,
                   direction: "top",
                   children: Boolean(T) && (0, n.jsx)("span", { children: T }),
@@ -1684,9 +1700,9 @@
                                 (r = !1));
                             return r;
                           })(s, t, C, e),
-                        initialValue: H,
+                        initialValue: V,
                         inputProps: {
-                          placeholder: (0, h.we)("#DateTimePicker_Enter_Date"),
+                          placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
                           className: (0, d.A)(
                             g().DateWidth,
                             "DialogInput",
@@ -1697,7 +1713,7 @@
                           onBlur: (e) => X(e.currentTarget.value),
                         },
                       },
-                      "date" + z,
+                      "date" + G,
                     ),
                     !!J &&
                       (0, n.jsx)("div", {
@@ -1718,7 +1734,7 @@
                         timeConstraints: Q,
                         value: null != F ? F : E,
                         inputProps: {
-                          placeholder: (0, h.we)("#DateTimePicker_Enter_Time"),
+                          placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
                           className: (0, d.A)(
                             g().TimeWidth,
                             "DialogInput",
@@ -1729,7 +1745,7 @@
                           onBlur: (e) => te(e.currentTarget.value),
                         },
                       },
-                      "time" + z,
+                      "time" + G,
                     ),
                     !!J &&
                       (0, n.jsx)("div", {
@@ -1757,15 +1773,15 @@
                     type: "button",
                     className: g().ClearButton,
                     onClick: () => {
-                      p || (A(0), B(null), Y(null), U(null), G((e) => e + 1));
+                      p || (A(0), B(null), Y(null), U(null), z((e) => e + 1));
                     },
-                    children: (0, h.we)("#Button_Clear"),
+                    children: (0, m.we)("#Button_Clear"),
                   }),
               ],
             }),
             Boolean(Q) &&
               (0, n.jsx)("div", {
-                children: (0, h.we)("#DateTimePicker_DateTime_Fixed"),
+                children: (0, m.we)("#DateTimePicker_DateTime_Fixed"),
               }),
           ],
         });
@@ -1826,9 +1842,9 @@
             bLink: u = !0,
           } = e,
           [d] = (0, o.KT)(t),
-          h = (0, o.KM)(t),
-          m = i.useMemo(() => r.b.InitFromAccountID(t), [t]),
-          _ = `${l.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`,
+          m = (0, o.KM)(t),
+          h = i.useMemo(() => r.b.InitFromAccountID(t), [t]),
+          _ = `${l.TS.COMMUNITY_BASE_URL}profiles/${h.ConvertTo64BitString()}`,
           g = u ? "a" : "span";
         return (0, n.jsx)(n.Fragment, {
           children: Boolean(!d)
@@ -1841,11 +1857,11 @@
                   (0, n.jsx)("img", {
                     className: a.SmallAvatar,
                     src: d.avatar_url,
-                    "data-miniprofile": "s" + m.ConvertTo64BitString(),
+                    "data-miniprofile": "s" + h.ConvertTo64BitString(),
                   }),
                   Boolean(!c) &&
                     (0, n.jsx)("span", {
-                      children: h ? `${h} (${d.persona_name})` : d.persona_name,
+                      children: m ? `${m} (${d.persona_name})` : d.persona_name,
                     }),
                 ],
               }),
@@ -1864,8 +1880,8 @@
         c = s(95695),
         u = s(84811),
         d = s(64734),
-        h = s(65946),
-        m = s(26408);
+        m = s(65946),
+        h = s(26408);
       function _(e) {
         const {
             title: t,
@@ -1876,7 +1892,7 @@
             children: a,
             elAdditionalButtons: _,
           } = e,
-          g = (0, h.q3)(() => i());
+          g = (0, m.q3)(() => i());
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
@@ -1892,7 +1908,7 @@
                     c.CollapsableSectionTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: [t, Boolean(s) && (0, n.jsx)(m.o, { tooltip: s })],
+                  children: [t, Boolean(s) && (0, n.jsx)(h.o, { tooltip: s })],
                 }),
                 (0, n.jsxs)("div", {
                   className: d.SectionTitleButtons,
@@ -1927,6 +1943,13 @@
             : (0, n.jsx)(o.Xjb, {}),
         });
       }
+    },
+    63340: (e, t, s) => {
+      "use strict";
+      function n(e, t) {
+        "undefined" != typeof window && (window[e] = t);
+      }
+      s.d(t, { V: () => n });
     },
     44894: (e, t, s) => {
       "use strict";

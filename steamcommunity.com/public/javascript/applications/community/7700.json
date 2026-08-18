@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "GIF çözümlenemedi. Lütfen yeniden kodlayın veya biçimini değiştirin ve tekrar deneyin.",
     "MediaConvert_InputError_ImageTooSmall": "Görsel çok küçük. Lütfen en az 16x16 piksel boyutunda bir görsel yükleyin.",
     "MediaConvert_InputError_AnimationTooSmall": "Animasyon veya video çok küçük. Lütfen en az 16x16 piksel boyutunda bir animasyon veya video yükleyin.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Dosya birden fazla video parçası içeriyor. Lütfen tek bir video parçası içeren bir dosya yükleyin.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Bu görsel hareketli olamaz. Lütfen sabit bir görsel yükleyin.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Görsel dosyaları ses parçası içeremez.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF çıktısı video kaynakları için desteklenmiyor.",
     "MediaConvert_InternalError_FailedToConvert": "Bu dosya dönüştürülemedi. Tekrar denemeden önce lütfen dosyayı yeniden kodlayın.",

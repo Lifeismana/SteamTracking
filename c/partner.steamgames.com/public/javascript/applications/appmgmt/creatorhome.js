@@ -114,5 +114,14 @@
         });
       }
     },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_, _) {
+        "undefined" != typeof window && (window[_] = _);
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
   },
 ]);

@@ -10,12 +10,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        StoreImage: "_1XiTdhCGWl9dUCWd6Eg89o",
-        StoreVideo: "_1Nwn2Vf2AjZ4McbxZX9P8V",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SeasonPass: "oa0Mg649faNiGrRBlXZ7b",
         Description: "_3ZmgNZ5nbBbDojlnZLRkgc",
         Title: "_1PoePgbQRAy0Sbtz2Po_R7",
@@ -85,145 +79,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = new URL(window.location.href),
-          _ = _.pathname.split("/"),
-          _ = _?.[2];
-        _.searchParams.get("beta");
-        return `${_._.STORE_ICON_BASE_URL}${_}/`;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return new _._(new _._());
-      }
-      function _(_) {
-        const { text: _, languageOverride: _ } = _,
-          [_] = (0, _.useState)(
-            new _._(
-              new Map([
-                ...Array.from(_._.entries()),
-                [
-                  "img",
-                  {
-                    Constructor: _,
-                    autocloses: !1,
-                  },
-                ],
-              ]),
-              _,
-              _ || _.Bhc,
-            ),
-          );
-        return (0, _.jsx)(_.Fragment, {
-          children: _.ParseBBCode(_, {}, !0),
-        });
-      }
-      function _(_) {
-        const { showErrorInfo: _ } = _.context;
-        let _ = _?.children?.toString();
-        if (
-          (null == _ || null == _ || 0 == _.length) &&
-          ((_ = _?.args?.[""] || _?.args?.src),
-          null == _ || null == _ || 0 == _.length)
-        )
-          return "";
-        const _ = (0, _._)("store_page_asset_url", "application_config"),
-          _ = (0, _._)("store_page_extra_assets_url", "application_config"),
-          _ = (0, _._)("store_page_extra_assets_map", "application_config");
-        if (_ && __webpack_require__.startsWith(_._ + "/")) {
-          const _ = __webpack_require__.replace(_._ + "/", ""),
-            _ = _[_];
-          if (_) {
-            const _ = [];
-            let _ = !1;
-            for (const _ of _) {
-              const _ = _.urlPart;
-              _.push({
-                url: _.replace("%s", _),
-                extension: _.extension,
-                alt_text: _.alt_text ?? null,
-              }),
-                (_ = _ || ["mp4", "webm"].includes(_.extension));
-            }
-            if (_) {
-              const _ = _.find((_) => "webm" === _.extension)?.url,
-                _ = _.find((_) => "mp4" === _.extension)?.url,
-                _ = _.find(
-                  (_) =>
-                    ".poster.webp" === _.extension ||
-                    ".poster.avif" === _.extension,
-                )?.url,
-                _ = _.find(
-                  (_) =>
-                    _.alt_text?.length > 0 &&
-                    ("webm" === _.extension || "webm" === _.extension),
-                )?.alt_text,
-                _ = (0, _._)() || (0, _._)(),
-                _ = (_) => {
-                  const _ = _.currentTarget;
-                  _.paused ? _.play() : _.pause();
-                };
-              return (0, _.jsxs)("video", {
-                className: _().StoreVideo,
-                poster: _,
-                "aria-label": _,
-                autoPlay: !0,
-                muted: !0,
-                loop: !0,
-                playsInline: !0,
-                onClick: _,
-                children: [
-                  _ &&
-                    !_ &&
-                    (0, _.jsx)("source", {
-                      src: _,
-                      type: "video/webm",
-                    }),
-                  _ &&
-                    !_._.IN_CLIENT &&
-                    (0, _.jsx)("source", {
-                      src: _,
-                      type: "video/mp4",
-                    }),
-                ],
-              });
-            }
-            {
-              const _ = _[0]?.alt_text,
-                _ = _[0]?.url;
-              return (0, _.jsx)("img", {
-                className: _().StoreImage,
-                src: _,
-                alt: _,
-              });
-            }
-          }
-          _ = _.replace("%s", _);
-        } else
-          _ = __webpack_require__
-            .replace(_._, _())
-            .replace("http://", "https://");
-        return _
-          ? (0, _.jsx)(_._, {
-              className: _().StoreImage,
-              src: _,
-            })
-          : (0, _.jsx)("img", {
-              className: _().StoreImage,
-              src: _,
-              alt: (0, _._)("#EventEditor_InsertImage_URL"),
-            });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -322,7 +177,7 @@
             (0, _.jsxs)("div", {
               className: _().Description,
               children: [
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   text: _,
                 }),
                 Boolean(_.shipped) &&

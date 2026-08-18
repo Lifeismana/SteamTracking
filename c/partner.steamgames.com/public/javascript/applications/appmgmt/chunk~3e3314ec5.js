@@ -52,6 +52,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -139,6 +140,10 @@
       function _(_) {
         let _ = _.Get().m_mapPackageData.get(_);
         return _ ? _.package_name : _.toString();
+      }
+      function _(_) {
+        let _ = _.Get().m_mapPackageData.get(_);
+        return !_ || !!_.released;
       }
       function _() {
         return _.useCallback((_) => _.Get().UpdateVisiblePackageList(_), []);

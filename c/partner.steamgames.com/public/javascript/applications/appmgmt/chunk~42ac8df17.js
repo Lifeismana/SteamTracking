@@ -460,8 +460,18 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -470,6 +480,7 @@
         const _ = await fetch(_, {
           method: "GET",
         });
+        if (404 == _.status) return null;
         if (!_._) throw new Error(`Server returned ${_.status}`);
         const _ = await _.json();
         return _.success != _._ ? null : _;
@@ -480,39 +491,175 @@
           : "ssr_server";
       }
       function _(_) {
-        const _ = (0, _._)();
-        return (0, _._)(_(_, _));
-      }
-      function _(_, _) {
-        return {
-          queryKey: _(_),
-          queryFn: async () => {
-            const _ = await (async function (_) {
-              const _ = _._.InitFromClanID(_);
-              return _(
-                `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
-              );
-            })(_);
-            if (_) {
-              _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
-                _.vanity_url &&
-                  _.setQueryData(_(_.vanity_url), _.clanAccountID);
-              const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
-              return _;
-            }
-            return null;
-          },
-          enabled: !!_,
-        };
-      }
-      function _(_) {
         return ["clantoclaninfo", _];
       }
       function _(_) {
         return ["apptoclanid", _];
       }
+      function _(_, _ = "group") {
+        return ["vanitytoclanid", _, _?.toLocaleLowerCase()];
+      }
       function _(_) {
-        return ["vanitytoclanid", _];
+        const _ = _?.[0];
+        return (
+          "clantoclaninfo" == _ || "apptoclanid" == _ || "vanitytoclanid" == _
+        );
+      }
+      const _ = new WeakSet();
+      function _(_) {
+        if (!_.has(_)) {
+          _.add(_);
+          for (const _ of [
+            ["clantoclaninfo"],
+            ["apptoclanid"],
+            ["vanitytoclanid"],
+          ])
+            _.setQueryDefaults(_, {
+              staleTime: 1 / 0,
+              gcTime: 1 / 0,
+              retry: !1,
+            });
+        }
+      }
+      const _ = new WeakMap();
+      function _(_) {
+        if (!_) return null;
+        let _ = _.get(_);
+        return (
+          _ ||
+            ((_ = {
+              ..._,
+              clanSteamID: _.clanSteamIDString
+                ? new _._(_.clanSteamIDString)
+                : _._.InitFromClanID(_.clanAccountID),
+            }),
+            _.set(_, _)),
+          _
+        );
+      }
+      function _(_, _) {
+        if (!_) return null;
+        _(_);
+        const _ = (function (_) {
+          const { msg: _, success: _, ..._ } = _;
+          return {
+            ..._,
+            rss_language: _.rss_language ? _.rss_language : _.Bhc,
+          };
+        })(_);
+        return (
+          _.setQueryData(_(_.clanAccountID), _),
+          _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
+          _.vanity_url &&
+            _.setQueryData(_(_.vanity_url, "group"), _.clanAccountID),
+          _
+        );
+      }
+      function _(_, _) {
+        for (const _ of _) _(_, _);
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
+      function _(_, _) {
+        return (
+          _(_),
+          {
+            queryKey: _(_ ?? null),
+            queryFn: async () =>
+              _
+                ? _(
+                    _,
+                    await (async function (_) {
+                      const _ = _._.InitFromClanID(_);
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_),
+                  )
+                : null,
+            enabled: void 0 !== _,
+            select: _,
+          }
+        );
+      }
+      function _(_, _) {
+        return (
+          _(_),
+          {
+            queryKey: _(_),
+            queryFn: async () =>
+              _(
+                _,
+                await (async function (_) {
+                  return _(
+                    `${_._.COMMUNITY_BASE_URL}ogg/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                  );
+                })(_),
+              )?.clanAccountID ?? null,
+            enabled: !!_,
+          }
+        );
+      }
+      function _(_, _, _ = "group") {
+        return (
+          _(_),
+          {
+            queryKey: _(_, _),
+            queryFn: async () => {
+              if ("store" == _) {
+                const _ = _.getQueryData(_(_, "group"));
+                if (_) return _;
+              }
+              const _ =
+                "store" == _
+                  ? await (async function (_) {
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}games/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_)
+                  : await (async function (_) {
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}groups/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_);
+              return _(_, _)?.clanAccountID ?? null;
+            },
+            enabled: !!_,
+          }
+        );
+      }
+      function _(_) {
+        return _.isPending ? void 0 : (_.data ?? null);
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_(_, _));
+        return _(_ ? _(_) : void 0);
+      }
+      function _(_, _) {
+        if (_) return _(_.getQueryData(_(_))) ?? void 0;
+      }
+      function _(_, _) {
+        if (_) return _(_.getQueryData(_(_)), _);
+      }
+      function _(_, _, _) {
+        if (!_) return;
+        const _ = _ ? [_] : ["store", "group"];
+        for (const _ of _) {
+          const _ = _(_.getQueryData(_(_, _)), _);
+          if (_) return _;
+        }
+      }
+      async function _(_, _) {
+        return _ ? _(await _.fetchQuery(_(_, _))) : null;
+      }
+      async function _(_, _) {
+        return _ ? _(await _.fetchQuery(_(_, _)), _) : null;
+      }
+      async function _(_, _, _ = "group") {
+        return _ ? _(await _.fetchQuery(_(_, _, _)), _) : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4621,39 +4768,42 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _._)({
-          queryKey: _(_),
-          queryFn: async () => {
-            const _ = await (async function (_) {
-              let _ = {
-                get_appids: !0,
-                _: _._.LANGUAGE,
-              };
-              const _ = new URLSearchParams(_).toString(),
-                _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
-                _ = await fetch(_, {
-                  method: "GET",
-                });
-              if (!_._) throw new Error(`Server returned ${_.status}`);
-              const _ = await _.json();
-              return _.success != _._ ? null : _;
-            })(_);
-            if (_) {
-              const {
-                success: _,
-                err_msg: _,
-                warning: _,
-                warning_msg: _,
-                ..._
-              } = _;
-              return _;
-            }
-            return null;
-          },
-          enabled: !!_,
-        });
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await (async function (_) {
+                  let _ = {
+                    get_appids: !0,
+                    _: _._.LANGUAGE,
+                  };
+                  const _ = new URLSearchParams(_).toString(),
+                    _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
+                    _ = await fetch(_, {
+                      method: "GET",
+                    });
+                  if (!_._) throw new Error(`Server returned ${_.status}`);
+                  const _ = await _.json();
+                  return _.success != _._ ? null : _;
+                })(_);
+                if (_) {
+                  const {
+                    success: _,
+                    err_msg: _,
+                    warning: _,
+                    warning_msg: _,
+                    ..._
+                  } = _;
+                  return _;
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_),
+        );
       }
       function _(_) {
         return ["creatorhomebyaccount", _];
@@ -4716,6 +4866,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9974,62 +10125,81 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapAppIDToClanInfo = new Map();
-        m_mapVanityToClanInfo = new Map();
-        m_mapClanAccountIDToClanInfo = new Map();
-        m_mapPromisesLoading = new Map();
-        m_rgQueuedEventsClanIDs = new Array();
-        m_bLoadedFromConfig = !1;
+      const _ = new WeakSet();
+      function _(_ = _._) {
+        if ("undefined" == typeof window) return;
+        if (_.has(_)) return;
+        const _ = (0, _._)("groupvanityinfo", "application_config");
+        (void 0 === _ && "complete" != document.readyState) ||
+          (_.add(_), _(_) && (0, _._)(_, _));
+      }
+      function _(_) {
+        const _ = _;
+        return (
+          !!(
+            _ &&
+            Array.isArray(_) &&
+            _.length > 0 &&
+            "object" == typeof _[0]
+          ) &&
+          "number" == typeof _[0].clanAccountID &&
+          ("number" == typeof _[0].appid || "string" == typeof _[0].vanity_url)
+        );
+      }
+      function _(_) {
+        return "string" == typeof _ ? parseInt(_) : _;
+      }
+      function _(_) {
+        return "string" == typeof _ ? Number.parseInt(_) : _;
+      }
+      const _ = new (class {
+        m_queryClient = _._;
+        m_boxCacheVersion = _._.box(0);
+        m_bWatchingCache = !1;
+        m_bBumpScheduled = !1;
         Init() {
           this.LazyInit();
         }
         LazyInit() {
-          this.m_bLoadedFromConfig ||
-            ((0, _._)(() => {
-              let _ = (0, _._)("groupvanityinfo", "application_config");
-              this.ValidateClanConfig(_) &&
-                _.forEach((_) => {
-                  this.InternalSetupValue(_);
-                });
-            }),
-            (this.m_bLoadedFromConfig = !0));
+          _(this.m_queryClient),
+            this.m_bWatchingCache ||
+              ((this.m_bWatchingCache = !0),
+              this.m_queryClient.getQueryCache().subscribe((_) => {
+                ("added" != _?.type &&
+                  "updated" != _?.type &&
+                  "removed" != _?.type) ||
+                  ((0, _._)(_.query?.queryKey) &&
+                    this.ScheduleCacheVersionBump());
+              }));
+        }
+        ScheduleCacheVersionBump() {
+          this.m_bBumpScheduled ||
+            ((this.m_bBumpScheduled = !0),
+            queueMicrotask(() => {
+              (this.m_bBumpScheduled = !1),
+                (0, _._)(() =>
+                  this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
+                );
+            }));
+        }
+        ReadCache() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient
+          );
         }
         AddGroupVanities(_) {
-          (0, _._)(() => {
-            this.ValidateClanConfig(_) &&
-              _.forEach((_) => {
-                this.InternalSetupValue(_);
-              });
-          });
-        }
-        ValidateClanConfig(_) {
-          const _ = _;
-          return (
-            !!(
-              _ &&
-              Array.isArray(_) &&
-              _.length > 0 &&
-              "object" == typeof _[0]
-            ) &&
-            "number" == typeof _[0].clanAccountID &&
-            ("number" == typeof _[0].appid ||
-              "string" == typeof _[0].vanity_url)
-          );
+          this.LazyInit(), _(_) && (0, _._)(this.m_queryClient, _);
         }
         BHasClanInfoLoaded(_) {
           return (
@@ -10038,217 +10208,65 @@
               _.BIsClanAccount(),
               "Clan SteamID is not a clan account id when requesting clan info ",
             ),
-            this.m_mapClanAccountIDToClanInfo.has(_.GetAccountID())
+            this.BHasClanInfoLoadedByAccountID(_.GetAccountID())
           );
         }
         BHasClanInfoLoadedByAccountID(_) {
-          return this.m_mapClanAccountIDToClanInfo.has(_);
+          return Boolean((0, _._)(_(_), this.ReadCache()));
         }
         RegisterClanData(_) {
-          for (const _ of _) this.InternalSetupValue(_);
-        }
-        InternalSetupValue(_) {
-          const _ = {
-            clanAccountID: _.clanAccountID,
-            clanSteamID: new _._(_.clanSteamIDString),
-            appid: _.appid,
-            vanity_url: _.vanity_url,
-            member_count: _.member_count,
-            is_ogg: _.is_ogg,
-            is_creator_home: _.is_creator_home,
-            is_curator: _.is_curator,
-            has_visible_store_page: _.has_visible_store_page,
-            has_rss_feed: _.has_rss_feed,
-            rss_language: _.rss_language ? _.rss_language : _.Bhc,
-            avatar_full_url: _.avatar_full_url,
-            avatar_medium_url: _.avatar_medium_url,
-            group_name: _.group_name,
-            creator_page_bg_url: _.creator_page_bg_url,
-            curator_title: _.curator_title,
-            curator_description: _.curator_description,
-            partner_events_enabled: _.partner_events_enabled,
-          };
-          0 != _.appid && this.m_mapAppIDToClanInfo.set(_.appid, _),
-            _.vanity_url &&
-              _.vanity_url.length > 0 &&
-              this.m_mapVanityToClanInfo.set(
-                _.vanity_url.toLocaleLowerCase(),
-                _,
-              ),
-            this.m_mapClanAccountIDToClanInfo.set(_.clanAccountID, _);
-        }
-        GetRequestParam() {
-          return {
-            origin: self.origin,
-          };
+          this.LazyInit(), (0, _._)(this.m_queryClient, _);
         }
         async LoadOGGClanInfoForAppID(_) {
-          if (
-            (this.LazyInit(),
-            "string" == typeof _ && (_ = parseInt(_)),
+          return (
+            this.LazyInit(),
+            (_ = _(_)),
             (0, _._)(
               0 != _,
               "LoadOGGClanInfoForAppID called with appid of zero",
             ),
-            0 == _)
-          )
-            return null;
-          if (this.m_mapAppIDToClanInfo.has(_))
-            return this.m_mapAppIDToClanInfo.get(_);
-          let _ = "appid_" + _;
-          return (
-            this.m_mapPromisesLoading.has(_) ||
-              this.m_mapPromisesLoading.set(
-                _,
-                this.InternalLoadOGGClanInfoForAppID(_),
-              ),
-            this.m_mapPromisesLoading.get(_)
+            0 == _ ? null : (0, _._)(_, this.m_queryClient).catch(() => null)
           );
-        }
-        async InternalLoadOGGClanInfoForAppID(_) {
-          const _ =
-            _._.COMMUNITY_BASE_URL + "ogg/" + _ + "/ajaxgetvanityandclanid/";
-          let _ = null;
-          try {
-            _ = (
-              await _().get(_, {
-                params: this.GetRequestParam(),
-              })
-            ).data;
-          } catch (_) {}
-          return _
-            ? (this.InternalSetupValue(_), this.m_mapAppIDToClanInfo.get(_))
-            : null;
         }
         async LoadOGGClanInfoForIdentifier(_) {
-          if (
-            (this.LazyInit(),
-            this.m_mapVanityToClanInfo.has(_?.toLocaleLowerCase()))
-          )
-            return this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase());
-          let _ = "storevanity_" + _?.toLocaleLowerCase();
-          return (
-            this.m_mapPromisesLoading.has(_) ||
-              this.m_mapPromisesLoading.set(
-                _,
-                this.InternalLoadOGGClanInfoForIdentifier(_),
-              ),
-            this.m_mapPromisesLoading.get(_)
-          );
-        }
-        async InternalLoadOGGClanInfoForIdentifier(_) {
-          const _ =
-            _._.COMMUNITY_BASE_URL + "games/" + _ + "/ajaxgetvanityandclanid/";
-          let _ = await _().get(_, {
-            params: this.GetRequestParam(),
-          });
-          return (
-            this.InternalSetupValue(_.data),
-            this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase())
-          );
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "store");
         }
         async LoadOGGClanInfoForGroupVanity(_) {
-          if (
-            (this.LazyInit(),
-            this.m_mapVanityToClanInfo.has(_?.toLocaleLowerCase()))
-          )
-            return this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase());
-          let _ = "community_name_" + _;
-          return (
-            this.m_mapPromisesLoading.has(_) ||
-              this.m_mapPromisesLoading.set(
-                _,
-                this.InternalLoadOGGClanInfoForGroupVanity(
-                  _?.toLocaleLowerCase(),
-                ),
-              ),
-            this.m_mapPromisesLoading.get(_)
-          );
-        }
-        async InternalLoadOGGClanInfoForGroupVanity(_) {
-          const _ =
-            _._.COMMUNITY_BASE_URL + "groups/" + _ + "/ajaxgetvanityandclanid/";
-          let _ = await _().get(_, {
-            params: this.GetRequestParam(),
-          });
-          return (
-            this.InternalSetupValue(_.data),
-            this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase())
-          );
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "group");
         }
         async LoadClanInfoForClanSteamID(_) {
-          this.LazyInit();
-          let _ = _.GetAccountID();
-          if (this.m_mapClanAccountIDToClanInfo.has(_))
-            return this.m_mapClanAccountIDToClanInfo.get(_);
-          let _ = "clanaccountid_" + _;
-          return (
-            this.m_mapPromisesLoading.has(_) ||
-              this.m_mapPromisesLoading.set(
-                _,
-                this.InternalLoadClanInfoForClanSteamID(_),
-              ),
-            this.m_mapPromisesLoading.get(_)
-          );
+          return this.LoadClanInfoForClanAccountID(_.GetAccountID());
         }
         async LoadClanInfoForClanAccountID(_) {
-          const _ = _._.InitFromClanID(_);
-          return this.LoadClanInfoForClanSteamID(_);
-        }
-        async InternalLoadClanInfoForClanSteamID(_) {
-          let _ = _.GetAccountID();
-          const _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.ConvertTo64BitString() +
-            "/ajaxgetvanityandclanid/";
-          let _ = await _().get(_, {
-            params: this.GetRequestParam(),
-          });
-          return (
-            this.InternalSetupValue(_.data),
-            this.m_mapClanAccountIDToClanInfo.get(_)
-          );
+          return this.LazyInit(), (0, _._)(_(_), this.m_queryClient);
         }
         GetOGGClanInfo(_) {
-          return "string" == typeof _
-            ? this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase())
-            : this.m_mapAppIDToClanInfo.get(_);
+          const _ = this.ReadCache();
+          return "string" == typeof _ ? (0, _._)(_, _) : (0, _._)(_, _);
         }
         GetClanSteamIDForAppID(_) {
-          if ((this.LazyInit(), this.m_mapAppIDToClanInfo.has(_)))
-            return _._.InitFromClanID(
-              this.m_mapAppIDToClanInfo.get(_).clanAccountID,
-            );
+          const _ = (0, _._)(_(_), this.ReadCache());
+          return _ ? _._.InitFromClanID(_.clanAccountID) : void 0;
         }
         GetClanVanityForAppID(_) {
-          if ((this.LazyInit(), this.m_mapAppIDToClanInfo.has(_)))
-            return this.m_mapAppIDToClanInfo.get(_).vanity_url;
+          return (0, _._)(_(_), this.ReadCache())?.vanity_url;
         }
         GetClanVanityForClanSteamID(_) {
-          if (
-            (this.LazyInit(),
-            this.m_mapClanAccountIDToClanInfo.has(_.GetAccountID()))
-          )
-            return this.m_mapClanAccountIDToClanInfo.get(_.GetAccountID())
-              .vanity_url;
+          return (0, _._)(_.GetAccountID(), this.ReadCache())?.vanity_url;
         }
         HasLoadedClanAccountID(_) {
-          return this.LazyInit(), this.m_mapClanAccountIDToClanInfo.has(_);
+          return this.BHasClanInfoLoadedByAccountID(_);
         }
         GetClanMemberCount(_) {
-          return this.m_mapAppIDToClanInfo.has(_)
-            ? this.m_mapAppIDToClanInfo.get(_).member_count
-            : 0;
+          return (0, _._)(_(_), this.ReadCache())?.member_count ?? 0;
         }
         GetClanInfoByClanAccountID(_) {
           return (
-            this.LazyInit(),
             (0, _._)(
               !!_,
               "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
             ),
-            this.m_mapClanAccountIDToClanInfo.get(_)
+            (0, _._)(_(_), this.ReadCache())
           );
         }
         GetCreatorStoreURL(_) {
@@ -10262,60 +10280,26 @@
               : "gid/" + _.ConvertTo64BitString())
           );
         }
-      }
-      (0, _._)([_._], _.prototype, "m_mapAppIDToClanInfo", void 0),
-        (0, _._)([_._], _.prototype, "m_mapVanityToClanInfo", void 0),
-        (0, _._)([_._], _.prototype, "m_mapClanAccountIDToClanInfo", void 0),
-        (0, _._)([_._], _.prototype, "RegisterClanData", null),
-        (0, _._)([_._], _.prototype, "InternalSetupValue", null);
-      const _ = new _();
-      function _(_) {
-        const [_, _] = (0, _.useState)(
-            _ ? _.GetClanInfoByClanAccountID(_) : void 0,
-          ),
-          [_, _] = (0, _.useState)(!!_ && !_.BHasClanInfoLoadedByAccountID(_));
-        return (
-          (0, _.useEffect)(() => {
-            if (_)
-              if (_.BHasClanInfoLoadedByAccountID(_))
-                __webpack_require__(_.GetClanInfoByClanAccountID(_)), _(!1);
-              else {
-                _(!0);
-                const _ = _._.InitFromClanID(
-                  "string" == typeof _ ? Number.parseInt(_) : _,
-                );
-                _.LoadClanInfoForClanSteamID(_)
-                  .then((_) => {
-                    __webpack_require__(_ ?? void 0), _(!1);
-                  })
-                  .catch((_) =>
-                    console.error(`Failed to load clan info ${_}`, _),
-                  );
-              }
-            else __webpack_require__(void 0), _(!1);
-          }, [_]),
-          [_, _]
-        );
+      })();
+      function _() {
+        const _ = (0, _._)();
+        return _(_), _;
       }
       function _(_) {
-        const [_, _] = (0, _.useState)(() => !_.GetOGGClanInfo(_)),
-          [_, _] = (0, _.useState)(() => _.GetOGGClanInfo(_));
-        return (
-          (0, _.useEffect)(() => {
-            !_ ||
-              (_ && _.appid == _) ||
-              (__webpack_require__(!0),
-              _.LoadOGGClanInfoForAppID(_)
-                .then(_)
-                .finally(() => __webpack_require__(!1)));
-          }, [_, _]),
-          {
-            bLoadingClanInfo: _,
-            clanInfo: _,
-          }
-        );
+        _();
+        const { data: _, isPending: _ } = (0, _._)(_ ? _(_) : void 0);
+        return [Boolean(_) && _, _ ?? void 0];
       }
-      window.g_ClanStore = _;
+      function _(_) {
+        _();
+        const _ = _ ? _(_) : void 0,
+          { data: _, isPending: _ } = (0, _._)(_);
+        return {
+          bLoadingClanInfo: Boolean(_) && _,
+          clanInfo: _ ?? null,
+        };
+      }
+      (0, _._)("g_ClanStore", _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -10325,8 +10309,10 @@
       });
       var _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10354,331 +10340,325 @@
           (_[(_.SteamControllerTriton = 10)] = "SteamControllerTriton");
       })(_ || (_ = {}));
       const _ = {
-          any_controller: _.AnyController,
-          xbox_controller: _.XboxController,
-          ps3_controller: _.Ps3Controller,
-          ps4_controller: _.Ps4Controller,
-          ps5_controller: _.Ps5Controller,
-          switch_controller: _.SwitchController,
-          steam_controller: _.SteamController,
-          steam_deck_neptune: _.SteamDeckNeptune,
-          steam_deck_galileo: _.SteamDeckGalileo,
-          switch2_controller: _.Switch2Controller,
-          steam_controller_triton: _.SteamControllerTriton,
-        },
-        _ = "unUserdataVersion";
+        any_controller: _.AnyController,
+        xbox_controller: _.XboxController,
+        ps3_controller: _.Ps3Controller,
+        ps4_controller: _.Ps4Controller,
+        ps5_controller: _.Ps5Controller,
+        switch_controller: _.SwitchController,
+        steam_controller: _.SteamController,
+        steam_deck_neptune: _.SteamDeckNeptune,
+        steam_deck_galileo: _.SteamDeckGalileo,
+        switch2_controller: _.Switch2Controller,
+        steam_controller_triton: _.SteamControllerTriton,
+      };
+      function _() {
+        const _ = [..._._.excluded_content_descriptors];
+        return {
+          bLoaded: !1,
+          setWishlist: new Set(),
+          rgWishlistInOrder: [],
+          setOwnedApps: new Set(),
+          setOwnedPackages: new Set(),
+          setExcludedTagIDs: new Set(),
+          rgExcludedTagIDsSorted: [],
+          setExcludedContentDescriptors: new Set(_),
+          rgExcludedContentDescriptors: _,
+          setRecommendedApps: new Set(),
+          rgRecommendedAppsInOrder: [],
+          mapIgnoredApps: new Map(),
+          mapIgnoredPackages: new Map(),
+          setCuratorsFollowed: new Set(),
+          rgCuratorsFollowed: [],
+          setCuratorsIgnored: new Set(),
+          mapRecommendingCuratorsForApp: new Map(),
+          setPreferredPlatforms: new Set(),
+          setHardwareUsed: new Set(),
+          rgRecommendedTags: [],
+          ePrimaryLanguage: _.xPp,
+          setSecondaryLanguages: new Set(),
+          bShowFilteredUserReviewScores: !0,
+          bAllowAppImpressions: !1,
+        };
+      }
+      let _;
+      function _() {
+        return Boolean((0, _._)("wants_mature_content"));
+      }
+      function _(_) {
+        const _ = new Map();
+        for (const _ in _) _.set(Number(_), Number(_[_]));
+        return _;
+      }
+      const _ = "dynamicuserdata";
+      function _(_) {
+        return [_, _];
+      }
+      async function _(_) {
+        try {
+          const _ = await fetch(
+            (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+            {
+              credentials: "include",
+            },
+          );
+          if (!_._) throw new Error(`Server returned ${_.status}`);
+          return (function (_) {
+            const _ = _();
+            if (
+              ((_.bLoaded = !0),
+              _.rgCurators &&
+                ((_.rgCuratorsFollowed = Object.keys(_.rgCurators).map(Number)),
+                (_.setCuratorsFollowed = new Set(_.rgCuratorsFollowed))),
+              _.rgCuratorsIgnored &&
+                (_.setCuratorsIgnored = new Set(
+                  _.rgCuratorsIgnored.map(Number),
+                )),
+              _.rgWishlist &&
+                ((_.rgWishlistInOrder = _.rgWishlist.map(Number)),
+                (_.setWishlist = new Set(_.rgWishlistInOrder))),
+              _.rgOwnedApps &&
+                (_.setOwnedApps = new Set(_.rgOwnedApps.map(Number))),
+              _.rgOwnedPackages &&
+                (_.setOwnedPackages = new Set(_.rgOwnedPackages.map(Number))),
+              _.rgIgnoredApps && (_.mapIgnoredApps = _(_.rgIgnoredApps)),
+              _.rgIgnoredPackages &&
+                (_.mapIgnoredPackages = _(_.rgIgnoredPackages)),
+              _.rgExcludedTags &&
+                ((_.setExcludedTagIDs = new Set(
+                  _.rgExcludedTags.map((_) => Number(_.tagid)),
+                )),
+                (_.rgExcludedTagIDsSorted = Array.from(
+                  _.setExcludedTagIDs,
+                ).sort())),
+              _()
+                ? ((_.setExcludedContentDescriptors = new Set()),
+                  (_.rgExcludedContentDescriptors = []))
+                : _.rgExcludedContentDescriptorIDs &&
+                  ((_.rgExcludedContentDescriptors =
+                    _.rgExcludedContentDescriptorIDs.map((_) => Number(_))),
+                  (_.setExcludedContentDescriptors = new Set(
+                    _.rgExcludedContentDescriptors,
+                  ))),
+              _.rgRecommendedApps &&
+                ((_.rgRecommendedAppsInOrder = _.rgRecommendedApps.map(Number)),
+                (_.setRecommendedApps = new Set(_.rgRecommendedAppsInOrder))),
+              _.rgPreferredPlatforms &&
+                (_.setPreferredPlatforms = new Set(_.rgPreferredPlatforms)),
+              _.bAllowAppImpressions &&
+                (_.bAllowAppImpressions = _.bAllowAppImpressions),
+              (_.bShowFilteredUserReviewScores =
+                !!_.bShowFilteredUserReviewScores),
+              void 0 !== _.rgPrimaryLanguage &&
+                (_.ePrimaryLanguage = _.rgPrimaryLanguage),
+              _.rgSecondaryLanguages &&
+                (_.setSecondaryLanguages = new Set(_.rgSecondaryLanguages)),
+              _.rgRecommendedTags &&
+                (_.rgRecommendedTags = _.rgRecommendedTags.map((_) => _.tagid)),
+              _.rgCurations)
+            )
+              for (const _ of Object.keys(_.rgCurations)) {
+                const _ = [];
+                for (const _ of Object.keys(_.rgCurations[_]))
+                  _.rgCurations[_][_] === _._._ && _.push(Number(_));
+                _.mapRecommendingCuratorsForApp.set(Number(_), _);
+              }
+            if (_.rgHardwareUsed)
+              for (const _ of _.rgHardwareUsed) {
+                const _ = _[_];
+                void 0 !== _ && _.setHardwareUsed.add(_);
+              }
+            return _;
+          })(await _.json());
+        } catch (_) {
+          return (
+            console.warn("LoadDynamicUserData", _),
+            (0, _._)().ReportError(new Error(`LoadDynamicUserData ${_}`), {
+              bIncludeMessageInIdentifier: !0,
+            }),
+            _()
+          );
+        }
+      }
+      function _() {
+        const _ = _._.accountid;
+        return {
+          queryKey: _(_),
+          queryFn: () => _(_),
+          staleTime: 1 / 0,
+          gcTime: 1 / 0,
+          retry: !1,
+          enabled: !0,
+        };
+      }
+      function _(_) {
+        return _.getQueryData(_(_._.accountid)) ?? (_ ??= _());
+      }
+      function _(_, _) {
+        _.setQueryData(_(_._.accountid), (_) => {
+          if (!_) return;
+          const _ = _(_);
+          return _
+            ? {
+                ..._,
+                ..._,
+              }
+            : _;
+        });
+      }
+      var _ = __webpack_require__("chunkid");
       class _ {
-        m_setWishList = new Set();
-        m_wishlistInOrder = Array();
-        m_setOwnedPackages = new Set();
-        m_setOwnedApps = new Set();
-        m_setFollowedApps = new Set();
-        m_setExcludedTagsIds = new Set();
-        m_setExcludedContentDescriptors = new Set(
-          _._.excluded_content_descriptors,
-        );
-        m_setRecommendedApps = new Set();
-        m_recAppInOrder = new Array();
-        m_mapIgnoredApps = new Map();
-        m_mapIgnoredPackages = new Map();
-        m_setCuratorsFollowed = new Set();
-        m_setCuratorsIgnored = new Set();
-        m_bShowFilteredUserReviewScores = !0;
-        m_setPreferredPlatforms = new Set();
-        m_bAllowAppImpressions = !1;
-        m_primaryLanguage = _.xPp;
-        m_secondaryLanguages = new Set();
-        m_rgRecommendedTags = [];
-        m_mapRecommendingCuratorsForApp = new Map();
-        m_setPackagesInCart = new Set();
-        m_setAppsInCart = new Set();
-        m_nCartLineItemCount = 0;
-        m_rgHardwareUsed = new Set();
-        m_bIsLoaded = !1;
-        m_promise;
-        m_bAjaxInFlight = !1;
+        m_queryClient = _._;
+        m_boxCacheVersion = _._.box(0);
+        m_bInitialized = !1;
+        m_boxAjaxInFlight = _._.box(!1);
+        LazyInit() {
+          this.m_bInitialized ||
+            ((this.m_bInitialized = !0),
+            this.m_queryClient.getQueryCache().subscribe((_) => {
+              var _;
+              ("added" != _?.type &&
+                "updated" != _?.type &&
+                "removed" != _?.type) ||
+                ((_ = _.query?.queryKey),
+                _?.[0] == _ &&
+                  (0, _._)(() =>
+                    this.m_boxCacheVersion.set(
+                      this.m_boxCacheVersion.get() + 1,
+                    ),
+                  ));
+            }));
+        }
+        ReadData() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), _(this.m_queryClient)
+          );
+        }
         BIsLoaded() {
-          return this.m_bIsLoaded;
+          return this.ReadData().bLoaded;
         }
         GetWishlistGamesInUserOrder() {
-          return this.m_wishlistInOrder;
-        }
-        GetWishlistGameCount() {
-          return this.m_setWishList.size;
+          return this.ReadData().rgWishlistInOrder;
         }
         GetRecommendedGamesInIRPriorityOrder() {
-          return this.m_recAppInOrder;
+          return this.ReadData().rgRecommendedAppsInOrder;
         }
         GetFollowedCuratorCount() {
-          return this.m_setCuratorsFollowed.size;
+          return this.ReadData().setCuratorsFollowed.size;
         }
         GetFollowedCuratorsAccountID() {
-          return Array.from(this.m_setCuratorsFollowed);
-        }
-        GetPackagesInCartCount() {
-          return this.m_setPackagesInCart.size;
-        }
-        GetAppInCartCount() {
-          return this.m_setAppsInCart.size;
-        }
-        GetCartLineItemCount() {
-          return this.m_nCartLineItemCount;
-        }
-        GetIgnoredAppsCount() {
-          return this.m_mapIgnoredApps.size;
+          return this.ReadData().rgCuratorsFollowed;
         }
         BIsFollowingCurator(_) {
-          const _ =
-            "object" == typeof _ && "GetAccountID" in _ ? _.GetAccountID() : _;
-          return this.m_setCuratorsFollowed.has(_);
-        }
-        BIsFollowingCreator(_) {
-          return this.BIsFollowingCurator(_);
+          return this.ReadData().setCuratorsFollowed.has(_(_));
         }
         BIsIgnoringCurator(_) {
-          const _ =
-            "object" == typeof _ && "GetAccountID" in _ ? _.GetAccountID() : _;
-          return this.m_setCuratorsIgnored.has(_);
+          return this.ReadData().setCuratorsIgnored.has(_(_));
         }
         get ExcludedContentDescriptor() {
-          return Array.from(this.m_setExcludedContentDescriptors);
-        }
-        BExcludesTag(_) {
-          return _.some((_) => this.m_setExcludedTagsIds.has(Number(_.tagid)));
+          return this.ReadData().rgExcludedContentDescriptors;
         }
         BExcludeTagIDs(_) {
-          return _.some((_) => this.m_setExcludedTagsIds.has(_));
+          const _ = this.ReadData().setExcludedTagIDs;
+          return _.some((_) => _.has(_));
         }
         GetExcludedTagsSortedByID() {
-          return Array.from(this.m_setExcludedTagsIds).sort();
+          return this.ReadData().rgExcludedTagIDsSorted;
         }
         BExcludesContentDescriptor(_) {
-          return _.some((_) => this.m_setExcludedContentDescriptors.has(_));
+          const _ = this.ReadData().setExcludedContentDescriptors;
+          return _.some((_) => _.has(_));
         }
         BIncludesContentDescriptor(_) {
-          return !this.m_setExcludedContentDescriptors.has(_);
+          return !this.ReadData().setExcludedContentDescriptors.has(_);
         }
         BIsGameWishlisted(_) {
-          return this.m_setWishList.has(Number(_));
+          return this.ReadData().setWishlist.has(Number(_));
         }
         BIsGameRecommended(_) {
-          return this.m_setRecommendedApps.has(Number(_));
+          return this.ReadData().setRecommendedApps.has(Number(_));
         }
         BIsGameIgnored(_) {
-          return this.m_mapIgnoredApps && this.m_mapIgnoredApps.has(_);
-        }
-        BIsGameFollowed(_) {
-          return this.m_setFollowedApps && this.m_setFollowedApps.has(_);
+          return this.ReadData().mapIgnoredApps.has(Number(_));
         }
         BIsPackageIgnored(_) {
-          return this.m_mapIgnoredPackages?.has(_);
+          return this.ReadData().mapIgnoredPackages.has(Number(_));
         }
         BIsGameOwned(_) {
-          return !!_ && this.m_setOwnedApps.has(Number(_));
+          return !!_ && this.ReadData().setOwnedApps.has(Number(_));
         }
         BIsStoreItemOwned(_) {
           switch (_.GetStoreItemType()) {
             case _._._:
-              if (_.Get().BIsGameOwned(_.GetAppID())) return !0;
+              if (this.BIsGameOwned(_.GetAppID())) return !0;
               break;
             case _._._:
             case _._._:
-              if (_.GetIncludedAppIDs().every((_) => _.Get().BIsGameOwned(_)))
+              if (_.GetIncludedAppIDs().every((_) => this.BIsGameOwned(_)))
                 return !0;
           }
           return !1;
         }
         BOwnsApp(_) {
-          return Boolean(_) && this.m_setOwnedApps.has(Number(_));
-        }
-        BFollowsApp(_) {
-          return this.m_setFollowedApps.has(Number(_));
+          return Boolean(_) && this.ReadData().setOwnedApps.has(Number(_));
         }
         BOwnsPackage(_) {
-          return this.m_setOwnedPackages.has(Number(_));
+          return this.ReadData().setOwnedPackages.has(Number(_));
         }
         BHasUsedHardware(_) {
-          return this.m_rgHardwareUsed.has(_);
+          return this.ReadData().setHardwareUsed.has(_);
         }
         BShowFilteredUserReviewScores() {
-          return this.m_bShowFilteredUserReviewScores;
+          return this.ReadData().bShowFilteredUserReviewScores;
         }
         BAppImpressionsAllowed() {
-          return this.m_bAllowAppImpressions;
+          return this.ReadData().bAllowAppImpressions;
         }
         GetPrimaryLanguage() {
-          return this.m_primaryLanguage;
+          return this.ReadData().ePrimaryLanguage;
         }
         GetSecondaryLanguages() {
-          return this.m_secondaryLanguages;
+          return this.ReadData().setSecondaryLanguages;
         }
         BIsAnyLanguageEnabled(_) {
+          const { ePrimaryLanguage: _, setSecondaryLanguages: _ } =
+            this.ReadData();
           return (
-            null == this.m_primaryLanguage ||
-            this.m_primaryLanguage <= _.xPp ||
-              _.bP9 <= this.m_primaryLanguage ||
-            _.some(
-              (_) =>
-                this.m_primaryLanguage === _ ||
-                this.m_secondaryLanguages.has(_),
-            )
+            null == _ ||
+            _ <= _.xPp || _.bP9 <= _ ||
+            _.some((_) => _ === _ || __webpack_require__.has(_))
           );
         }
         GetRecommendedTags() {
-          return this.m_rgRecommendedTags;
+          return this.ReadData().rgRecommendedTags;
         }
         BIsAjaxInFlight() {
-          return this.m_bAjaxInFlight;
+          return this.m_boxAjaxInFlight.get();
         }
         BIsAppRecommendedBySomeCurator(_) {
-          return this.m_mapRecommendingCuratorsForApp.has(_);
+          return this.ReadData().mapRecommendingCuratorsForApp.has(Number(_));
         }
         GetRecommendingCuratorsForApp(_) {
-          return this.m_mapRecommendingCuratorsForApp.get(_);
+          return this.ReadData().mapRecommendingCuratorsForApp.get(Number(_));
         }
-        GetOwnedApps() {
-          return this.m_setOwnedApps;
+        BHasPlatformPreferenceSet() {
+          const _ = this.ReadData().setPreferredPlatforms.size;
+          return _ > 0 && _ < 3;
+        }
+        BIsPreferredPlatform(_) {
+          return this.ReadData().setPreferredPlatforms.has(_);
         }
         async HintLoad() {
           return (
-            this.m_promise || (this.m_promise = this.InternalLoad()),
-            this.m_promise
+            this.LazyInit(),
+            await (async function (_) {
+              return _.fetchQuery(_());
+            })(this.m_queryClient),
+            this
           );
         }
-        async InternalLoad() {
-          let _ = window.localStorage.getItem(_) || "0",
-            _ = {
-              _: "0" == _ ? void 0 : _,
-              _: "" + _._.accountid,
-              _: "" + _._.COUNTRY,
-              origin: self.origin,
-            },
-            _ = _._.STORE_BASE_URL + "dynamicstore/userdata/";
-          try {
-            let _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-            });
-            _ &&
-              200 == _.status &&
-              (0, _._)(() => {
-                if (((this.m_bIsLoaded = !0), _.data.rgCurators)) {
-                  this.m_setCuratorsFollowed = new Set();
-                  for (const _ in _.data.rgCurators)
-                    this.m_setCuratorsFollowed.add(Number(_));
-                }
-                if (
-                  (_.data.rgCuratorsIgnored &&
-                    (this.m_setCuratorsIgnored = new Set(
-                      _.data.rgCuratorsIgnored.map((_) => Number(_)),
-                    )),
-                  _.data.rgWishlist &&
-                    ((this.m_wishlistInOrder = _.data.rgWishlist.map((_) =>
-                      Number(_),
-                    )),
-                    (this.m_setWishList = new Set(
-                      _.data.rgWishlist.map((_) => Number(_)),
-                    ))),
-                  _.data.rgFollowedApps &&
-                    (this.m_setFollowedApps = new Set(
-                      _.data.rgFollowedApps.map((_) => Number(_)),
-                    )),
-                  _.data.rgOwnedApps &&
-                    (this.m_setOwnedApps = new Set(
-                      _.data.rgOwnedApps.map((_) => Number(_)),
-                    )),
-                  _.data.rgOwnedPackages &&
-                    (this.m_setOwnedPackages = new Set(
-                      _.data.rgOwnedPackages.map((_) => Number(_)),
-                    )),
-                  _.data.rgIgnoredApps)
-                ) {
-                  const _ = _.data.rgIgnoredApps;
-                  this.m_mapIgnoredApps = new Map();
-                  for (const _ in _)
-                    this.m_mapIgnoredApps.set(Number(_), Number(_[_]));
-                }
-                if (_.data.rgIgnoredPackages) {
-                  const _ = _.data.rgIgnoredPackages;
-                  this.m_mapIgnoredPackages = new Map();
-                  for (const _ in _)
-                    this.m_mapIgnoredPackages.set(Number(_), Number(_[_]));
-                }
-                if (
-                  (_.data.rgExcludedTags &&
-                    (this.m_setExcludedTagsIds = new Set(
-                      _.data.rgExcludedTags.map((_) => Number(_.tagid)),
-                    )),
-                  _.BConfirmedAdultContentAgeGate()
-                    ? (this.m_setExcludedContentDescriptors = new Set())
-                    : (this.m_setExcludedContentDescriptors = new Set(
-                        _.data.rgExcludedContentDescriptorIDs?.map((_) =>
-                          Number(_),
-                        ),
-                      )),
-                  _.data.rgRecommendedApps &&
-                    ((this.m_recAppInOrder = _.data.rgRecommendedApps.map((_) =>
-                      Number(_),
-                    )),
-                    (this.m_setRecommendedApps = new Set(
-                      _.data.rgRecommendedApps.map((_) => Number(_)),
-                    ))),
-                  _.data.rgPreferredPlatforms &&
-                    (this.m_setPreferredPlatforms = new Set(
-                      _.data.rgPreferredPlatforms,
-                    )),
-                  _.data.bAllowAppImpressions &&
-                    (this.m_bAllowAppImpressions = _.data.bAllowAppImpressions),
-                  (this.m_bShowFilteredUserReviewScores =
-                    !!_.data.bShowFilteredUserReviewScores),
-                  void 0 !== _.data.rgPrimaryLanguage &&
-                    (this.m_primaryLanguage = _.data.rgPrimaryLanguage),
-                  _.data.rgSecondaryLanguages &&
-                    (this.m_secondaryLanguages = new Set(
-                      _.data.rgSecondaryLanguages,
-                    )),
-                  _.data.rgRecommendedTags &&
-                    (this.m_rgRecommendedTags = _.data.rgRecommendedTags.map(
-                      (_) => _.tagid,
-                    )),
-                  _.data.rgAppsInCart &&
-                    (this.m_setAppsInCart = new Set(_.data.rgAppsInCart)),
-                  _.data.rgPackagesInCart &&
-                    (this.m_setPackagesInCart = new Set(
-                      _.data.rgPackagesInCart,
-                    )),
-                  _.data.nCartLineItemCount &&
-                    (this.m_nCartLineItemCount = _.data.nCartLineItemCount),
-                  _.data.rgCurations)
-                )
-                  for (const _ of Object.keys(_.data.rgCurations)) {
-                    const _ = [];
-                    for (const _ of Object.keys(_.data.rgCurations[_]))
-                      _.data.rgCurations[_][_] === _._._ &&
-                        __webpack_require__.push(Number(_));
-                    this.m_mapRecommendingCuratorsForApp.set(Number(_), _);
-                  }
-                if (_.data.rgHardwareUsed)
-                  for (const _ of _.data.rgHardwareUsed) {
-                    const _ = _[_];
-                    _ && this.m_rgHardwareUsed.add(_);
-                  }
-              });
-          } catch (_) {
-            let _ = (0, _._)(_);
-            console.warn("CDynamicStore.InternalLoad", _.strErrorMsg, _),
-              (0, _._)().ReportError(
-                new Error(
-                  `CDynamicStore.InternalLoad ${_.strErrorMsg}, ${JSON.stringify(_)}`,
-                ),
-                {
-                  bIncludeMessageInIdentifier: !0,
-                },
-              );
-          }
-          return this;
-        }
         async UpdateFollowOrIgnoreCurator(_, _, _) {
+          this.LazyInit();
           let _ =
             _._.STORE_BASE_URL +
             "curators/" +
@@ -10691,16 +10671,31 @@
           let _ = await _().post(_, _, {
             withCredentials: !0,
           });
-          if (_ && 200 == _.status) {
-            this.InvalidateCache();
-            const _ = _
-              ? this.m_setCuratorsFollowed
-              : this.m_setCuratorsIgnored;
-            _ ? _.add(_) : _.delete(_);
-          }
-          return _.data;
+          return (
+            _ &&
+              200 == _.status &&
+              (this.InvalidateCache(),
+              _(this.m_queryClient, (_) => {
+                const _ = new Set(
+                  _ ? _.setCuratorsFollowed : _.setCuratorsIgnored,
+                );
+                return (
+                  _ ? _.add(_) : _.delete(_),
+                  _
+                    ? {
+                        setCuratorsFollowed: _,
+                        rgCuratorsFollowed: Array.from(_),
+                      }
+                    : {
+                        setCuratorsIgnored: _,
+                      }
+                );
+              })),
+            _.data
+          );
         }
         async UpdateAppIgnore(_, _, _, _ = _._._) {
+          this.LazyInit();
           let _ = _._.STORE_BASE_URL + "recommended/ignorerecommendation";
           const _ = new FormData();
           _.append("sessionid", (0, _._)()),
@@ -10709,76 +10704,34 @@
             _.append("snr", _),
             _.append("ignore_reason", "" + _);
           try {
-            this.m_bAjaxInFlight = !0;
+            (0, _._)(() => this.m_boxAjaxInFlight.set(!0));
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
             return (
               _ &&
                 200 == _.status &&
-                (0, _._)(() => {
-                  this.InvalidateCache(),
-                    _
-                      ? this.m_mapIgnoredApps.set(_, _)
-                      : this.m_mapIgnoredApps.delete(_);
-                }),
-              (this.m_bAjaxInFlight = !1),
+                (this.InvalidateCache(),
+                _(this.m_queryClient, (_) => {
+                  const _ = new Map(_.mapIgnoredApps);
+                  return (
+                    _ ? _.set(Number(_), _) : _.delete(Number(_)),
+                    {
+                      mapIgnoredApps: _,
+                    }
+                  );
+                })),
               _.data
             );
           } catch (_) {
             let _ = (0, _._)(_);
             console.error("UpdateAppIgnore", _.strErrorMsg, _);
+          } finally {
+            (0, _._)(() => this.m_boxAjaxInFlight.set(!1));
           }
-          return (
-            (this.m_bAjaxInFlight = !1),
-            {
-              success: _._,
-            }
-          );
-        }
-        async UpdateGameWishlist(_, _, _, _) {
-          let _ =
-            _._.STORE_BASE_URL +
-            "api/" +
-            (_ ? "addtowishlist" : "removefromwishlist");
-          const _ = new FormData();
-          _.append("appid", "" + _),
-            _.append("sessionid", (0, _._)()),
-            _ && _.append("snr", _);
-          const _ = this.m_setWishList.has(_)
-            ? this.m_wishlistInOrder.findIndex((_) => _ == _)
-            : -1;
-          this.ApplyWishlistUpdate(_, _), (this.m_bAjaxInFlight = !0);
-          let _ = await _().post(_, _, {
-            withCredentials: !0,
-            cancelToken: _ ? _.token : void 0,
-          });
-          return (
-            (this.m_bAjaxInFlight = !1),
-            _ && _.token.reason
-              ? {
-                  success: _._,
-                }
-              : ((_.data.success = 1 == _.data.success ? _._ : _._),
-                _.data.success != _._ &&
-                  this.ApplyWishlistUpdate(_, -1 != _, _),
-                _.data)
-          );
-        }
-        ApplyWishlistUpdate(_, _, _ = -1) {
-          if ((this.InvalidateCache(), (_ = Number(_)), _))
-            this.m_setWishList.has(_) ||
-              (-1 == _
-                ? this.m_wishlistInOrder.push(_)
-                : this.m_wishlistInOrder.splice(_, 0, _)),
-              this.m_setWishList.add(_);
-          else {
-            if (this.m_setWishList.has(_)) {
-              const _ = this.m_wishlistInOrder.findIndex((_) => _ == _);
-              -1 != _ && this.m_wishlistInOrder.splice(_, 1);
-            }
-            this.m_setWishList.delete(_);
-          }
+          return {
+            success: _._,
+          };
         }
         async AddToCart(_, _, _, _, _, _, _) {
           if (
@@ -10810,42 +10763,8 @@
           }
           return !0;
         }
-        async UpdateFollowingApp(_, _) {
-          try {
-            const _ = _._.STORE_BASE_URL + "explore/followgame",
-              _ = new FormData();
-            _.append("appid", "" + _),
-              _.append("sessionid", (0, _._)()),
-              _ || _.append("unfollow", "1");
-            const _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            if (!_.data) return _._;
-            this.InvalidateCache(),
-              _
-                ? this.m_setFollowedApps.add(Number(_))
-                : this.m_setFollowedApps.delete(Number(_));
-          } catch (_) {
-            return console.log("Follow game request failed"), _._;
-          }
-          return _._;
-        }
-        BHasPlatformPreferenceSet() {
-          return (
-            this.m_setPreferredPlatforms.size > 0 &&
-            this.m_setPreferredPlatforms.size < 3
-          );
-        }
-        BIsPreferredPlatform(_) {
-          return this.m_setPreferredPlatforms.has(_);
-        }
         InvalidateCache() {
-          window.localStorage.setItem(
-            _,
-            (
-              Number.parseInt(window.localStorage.getItem(_) || "0") + 1
-            ).toString(),
-          );
+          (0, _._)();
         }
         static s_globalSingletonStore;
         static Get() {
@@ -10853,52 +10772,24 @@
             _.s_globalSingletonStore ||
               ((_.s_globalSingletonStore = new _()),
               "dev" == _._.WEB_UNIVERSE &&
-                (window.DUS = _.s_globalSingletonStore)),
+                (0, _._)("DUS", _.s_globalSingletonStore)),
             _.s_globalSingletonStore
           );
         }
         static BConfirmedAdultContentAgeGate() {
-          return (0, _._)("wants_mature_content");
+          return _();
         }
-        constructor() {
-          (0, _._)(this);
-        }
+        constructor() {}
+      }
+      function _(_) {
+        return "object" == typeof _ && "GetAccountID" in _
+          ? _.GetAccountID()
+          : Number(_);
       }
       function _() {
-        const [_, _] = (0, _.useState)(!_.Get().BIsLoaded());
-        return (
-          (0, _.useEffect)(() => {
-            _ &&
-              _.Get()
-                .HintLoad()
-                .finally(() => _(!_.Get().BIsLoaded()));
-          }, [_]),
-          [_, _.Get()]
-        );
+        const { isPending: _ } = (0, _._)(_());
+        return [_, _.Get()];
       }
-      (0, _._)([_._], _.prototype, "m_setWishList", void 0),
-        (0, _._)([_._], _.prototype, "m_setOwnedPackages", void 0),
-        (0, _._)([_._], _.prototype, "m_setOwnedApps", void 0),
-        (0, _._)([_._], _.prototype, "m_setFollowedApps", void 0),
-        (0, _._)([_._], _.prototype, "m_setExcludedTagsIds", void 0),
-        (0, _._)([_._], _.prototype, "m_setExcludedContentDescriptors", void 0),
-        (0, _._)([_._], _.prototype, "m_setRecommendedApps", void 0),
-        (0, _._)([_._], _.prototype, "m_mapIgnoredApps", void 0),
-        (0, _._)([_._], _.prototype, "m_mapIgnoredPackages", void 0),
-        (0, _._)([_._], _.prototype, "m_setCuratorsFollowed", void 0),
-        (0, _._)([_._], _.prototype, "m_setCuratorsIgnored", void 0),
-        (0, _._)([_._], _.prototype, "m_bShowFilteredUserReviewScores", void 0),
-        (0, _._)([_._], _.prototype, "m_primaryLanguage", void 0),
-        (0, _._)([_._], _.prototype, "m_secondaryLanguages", void 0),
-        (0, _._)([_._], _.prototype, "m_rgRecommendedTags", void 0),
-        (0, _._)([_._], _.prototype, "m_mapRecommendingCuratorsForApp", void 0),
-        (0, _._)([_._], _.prototype, "m_setPackagesInCart", void 0),
-        (0, _._)([_._], _.prototype, "m_setAppsInCart", void 0),
-        (0, _._)([_._], _.prototype, "m_nCartLineItemCount", void 0),
-        (0, _._)([_._], _.prototype, "m_rgHardwareUsed", void 0),
-        (0, _._)([_._], _.prototype, "m_bAjaxInFlight", void 0),
-        (0, _._)([_._], _.prototype, "ExcludedContentDescriptor", null),
-        (0, _._)([_._], _.prototype, "UpdateAppIgnore", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

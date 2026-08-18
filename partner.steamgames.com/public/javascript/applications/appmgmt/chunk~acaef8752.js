@@ -252,14 +252,14 @@
         Kf: () => u,
         N_: () => C,
         PL: () => h,
-        XY: () => T,
+        XY: () => x,
         Yw: () => n,
         _d: () => l,
         cV: () => g,
         dM: () => p,
         on: () => c,
         qj: () => d,
-        s4: () => x,
+        s4: () => T,
         tW: () => a,
         vz: () => D,
         x: () => f,
@@ -497,6 +497,26 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: w,
           },
+          sale_store_capsule_header: {
+            width: 920,
+            height: 430,
+            rgAcceptableTypes: w,
+          },
+          sale_store_capsule_small: {
+            width: 462,
+            height: 174,
+            rgAcceptableTypes: w,
+          },
+          sale_store_capsule_main: {
+            width: 1232,
+            height: 706,
+            rgAcceptableTypes: w,
+          },
+          sale_store_capsule_vertical: {
+            width: 748,
+            height: 896,
+            rgAcceptableTypes: w,
+          },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: _ },
           spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: w },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: _ },
@@ -572,7 +592,7 @@
           (n.bDisableEnforceDimensions ? !!s : k(e, t, n.width, n.height))
         );
       }
-      function x(e, t, i) {
+      function T(e, t, i) {
         const s = y[i];
         if (!s) return !1;
         if (s.bDisableEnforceDimensions) return !0;
@@ -585,7 +605,7 @@
         } else if (t < s.height) return !1;
         return !0;
       }
-      function T(e) {
+      function x(e) {
         const t = y[e];
         return (
           t.rgAcceptableTypes.includes(s.bg.k7) ||
@@ -1113,8 +1133,8 @@
         y = i.n(P),
         k = i(9154),
         v = i(738),
-        x = i(64641),
-        T = i.n(x),
+        T = i(64641),
+        x = i.n(T),
         D = i(12155),
         C = i(22797),
         I = i(68797),
@@ -1350,7 +1370,7 @@
                 _,
                 (0, R.o)(t.status) &&
                   (0, s.jsx)("div", {
-                    className: T().FlexCenter,
+                    className: x().FlexCenter,
                     children: (0, s.jsx)(C.t, { size: "small" }),
                   }),
               ],
@@ -1484,8 +1504,8 @@
           strAlsoShowTimeZone: u,
           disabled: _,
           bNoDefaultDate: P,
-          className: x,
-          strDescToolTip: T,
+          className: T,
+          strDescToolTip: x,
           strDescription: D,
           bShowTimeZone: C,
           strInvalidDateTimeLocalizedMsg: I,
@@ -1592,13 +1612,13 @@
           ),
           se = R && !_ && O > 0;
         return (0, s.jsxs)("div", {
-          className: (0, g.A)(m().EventTimeSection, x),
+          className: (0, g.A)(m().EventTimeSection, T),
           children: [
             (0, s.jsxs)("div", {
               className: (0, g.A)(m().EventTimeTitle, "DialogLabel"),
               children: [
                 (0, s.jsx)(p.he, {
-                  toolTipContent: T,
+                  toolTipContent: x,
                   direction: "top",
                   children: Boolean(D) && (0, s.jsx)("span", { children: D }),
                 }),

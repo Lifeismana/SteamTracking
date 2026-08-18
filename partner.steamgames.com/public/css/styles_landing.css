@@ -1073,6 +1073,14 @@ p {
 		background-color: #444b55;
 		border: 1px solid #545d69;
 	}
+	.buttonRow.valveArea {
+		background-color: #351e18;
+		border: 1px solid #542f26;
+	}
+	.buttonRow.valveArea:hover {
+		background-color: #4a2a21;
+		border: 1px solid #7a453a;
+	}
 	.buttonRow.disabled, .buttonRow.disabled .subText, .buttonRow.ttip.disabled {
 		color: #555555;
         background-color: #2b2f36;

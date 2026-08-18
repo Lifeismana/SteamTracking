@@ -69,6 +69,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
@@ -180,6 +181,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -487,7 +489,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { nPackageID: _ } = _,
@@ -496,40 +497,50 @@
           _ = (0, _._)(_),
           [_, _] = (0, _.useState)(!1);
         return _
-          ? (0, _.jsx)("div", {
+          ? (0, _.jsxs)("div", {
               className: (0, _._)(_().ToolbarInfo, _().Visible),
-              children: (0, _.jsxs)("div", {
-                className: _().Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().ProposalStatus,
+                  children: (0, _.jsx)(_._, {
                     packageID: _,
-                    bShowCancel: !1,
                   }),
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    className: (0, _._)(_().Button),
-                    children: (0, _._)("#PricingDashboard_CancelPriceProposal"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    active: _,
-                    children: (0, _.jsx)(_._, {
-                      strTitle: (0, _._)(
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().Buttons,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      packageID: _,
+                      bShowCancel: !1,
+                    }),
+                    (0, _.jsx)(_._, {
+                      onClick: _,
+                      className: (0, _._)(_().Button),
+                      children: (0, _._)(
                         "#PricingDashboard_CancelPriceProposal",
                       ),
-                      strDescription: (0, _._)("#Dialog_AreYouSure"),
-                      closeModal: _,
-                      onOK: async () => {
-                        _(!0), await _(), _(!1), window.location.reload();
-                      },
-                      children:
-                        _ &&
-                        (0, _.jsx)(_._, {
-                          string: (0, _._)("#ImageUpload_Processing"),
-                        }),
                     }),
-                  }),
-                ],
-              }),
+                    (0, _.jsx)(_._, {
+                      active: _,
+                      children: (0, _.jsx)(_._, {
+                        strTitle: (0, _._)(
+                          "#PricingDashboard_CancelPriceProposal",
+                        ),
+                        strDescription: (0, _._)("#Dialog_AreYouSure"),
+                        closeModal: _,
+                        onOK: async () => {
+                          _(!0), await _(), _(!1), window.location.reload();
+                        },
+                        children:
+                          _ &&
+                          (0, _.jsx)(_._, {
+                            string: (0, _._)("#ImageUpload_Processing"),
+                          }),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
             })
           : null;
       }
@@ -669,7 +680,9 @@
               };
             }, [_, _, _, _, _]);
           })(_, _, _),
-          _ = !!(0, _._)(_),
+          _ = (0, _._)(_),
+          _ = !!_,
+          _ = _?.eState == _._,
           { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
         (0, _.useEffect)(() => {
           (0, _._)([_]);
@@ -684,7 +697,11 @@
             cell: _,
           }),
           _.accessor(_ ? "nProposedPrice" : "strPriceKey", {
-            header: (0, _._)("#PackagePricing_Col_Proposal"),
+            header: (0, _._)(
+              _
+                ? "#PackagePricing_Col_Approved"
+                : "#PackagePricing_Col_Proposal",
+            ),
             meta: {
               cellClassname: _()(_().ProposedPrice),
             },
@@ -712,11 +729,7 @@
                       children: (0, _.jsx)("div", {
                         className: "colSection",
                         children: (0, _.jsx)(_._, {
-                          size: "4",
-                          color: "green-9",
-                          children: (0, _._)(
-                            "#PricingDashboard_ProposedPrice_CallOut",
-                          ),
+                          packageID: _,
                         }),
                       }),
                     })

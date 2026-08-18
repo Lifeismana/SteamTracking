@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "No se pudo procesar el GIF. Vuelve a codificarlo o cambia el tipo de formato e inténtalo de nuevo.",
     "MediaConvert_InputError_ImageTooSmall": "La imagen es demasiado pequeña. Carga una imagen de al menos 16 × 16 píxeles.",
     "MediaConvert_InputError_AnimationTooSmall": "La animación o el video son demasiado pequeños. Carga una animación o video de al menos 16 × 16 píxeles.",
+    "MediaConvert_InputError_MultipleVideoStreams": "El archivo incluye más de una pista de video. Sube un archivo con una sola pista de video.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Esta imagen no se puede animar. Sube una imagen fija.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Los archivos de imagen no pueden contener una pista de audio.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "La salida AVIF no se admite para fuentes de video.",
     "MediaConvert_InternalError_FailedToConvert": "No se pudo convertir este archivo. Vuelve a codificarlo e inténtalo de nuevo.",

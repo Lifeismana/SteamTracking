@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Fehler beim Parsen des GIF. Bitte codieren Sie es neu oder ändern Sie das Format und versuchen Sie es erneut.",
     "MediaConvert_InputError_ImageTooSmall": "Dieses Bild ist zu klein. Bitte laden Sie ein Bild mit mindestens 16 × 16 Pixeln hoch.",
     "MediaConvert_InputError_AnimationTooSmall": "Diese Animation oder dieses Video ist zu klein. Bitte laden Sie eine Animation oder ein Video mit mindestens 16 × 16 Pixeln hoch.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Diese Datei enthält mehrere Videospuren. Bitte laden Sie eine Datei mit nur einer Videospur hoch.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Dieses Bild kann nicht animiert werden. Bitte laden Sie ein Standbild hoch.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Bilddateien dürfen keine Audiospur enthalten.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF-Ausgabe wird für Videoquellen nicht unterstützt.",
     "MediaConvert_InternalError_FailedToConvert": "Die Datei konnte nicht konvertiert werden. Bitte codieren Sie diese neu und versuchen Sie es erneut.",

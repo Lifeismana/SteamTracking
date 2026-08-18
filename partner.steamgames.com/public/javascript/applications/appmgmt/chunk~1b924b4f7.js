@@ -82,16 +82,17 @@
             nPriceInCents: i,
             nPublishedPriceInCents: s,
             nProposedPriceInCents: o,
-            nSuggestedPriceInCents: a,
-            fnSetPrice: c,
+            nSuggestedPriceInCents: c,
+            fnSetPrice: d,
           } = (0, l.xQ)(n, t),
-          { nPriceInCents: d } = (0, l.xQ)(n, "USD"),
-          u = !(!o || (s && o == s)),
-          h = (0, l.d$)(n),
-          g = h && L(h.rtSubmitted),
-          { data: f } = (0, D.js)(h?.submitterID),
-          C = f ? f.m_strPlayerName : h?.submitterID;
-        return (s || u || a) && x == n + t
+          { nPriceInCents: u } = (0, l.xQ)(n, "USD"),
+          h = !(!o || (s && o == s)),
+          g = (0, l.d$)(n),
+          f = g && L(g.rtSubmitted),
+          { data: C } = (0, D.js)(g?.submitterID),
+          w = C ? C.m_strPlayerName : g?.submitterID,
+          v = g?.eState == a.Zo;
+        return (s || h || c) && x == n + t
           ? (0, r.jsxs)("div", {
               className: _().PricePopout,
               children: [
@@ -118,7 +119,7 @@
                           _().DetailButton,
                           s == i && _().Disabled,
                         ),
-                        onClick: () => c(s),
+                        onClick: () => d(s),
                         bDisabled: s == i,
                         toolTipContent: (0, b.we)(
                           "#PricingDashboard_UseThisOldPrice_ttip",
@@ -129,19 +130,21 @@
                       }),
                     ],
                   }),
-                u &&
+                h &&
                   (0, r.jsxs)(P.he, {
                     className: _().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, b.we)(
-                      "#PricingDashboard_ProposedPrice_ttip",
-                      C,
-                      g,
-                    ),
+                    toolTipContent: v
+                      ? (0, b.we)("#PricingDashboard_ApprovedPrice_ttip")
+                      : (0, b.we)("#PricingDashboard_ProposedPrice_ttip", w, f),
                     children: [
                       (0, r.jsx)("div", {
                         className: _().DetailLabel,
-                        children: (0, b.we)("#PricingDashboard_ProposedPrice"),
+                        children: (0, b.we)(
+                          v
+                            ? "#PricingDashboard_ApprovedPrice"
+                            : "#PricingDashboard_ProposedPrice",
+                        ),
                       }),
                       (0, r.jsx)("div", {
                         className: _().DetailPrice,
@@ -152,7 +155,7 @@
                           _().DetailButton,
                           o == i && _().Disabled,
                         ),
-                        onClick: () => c(o),
+                        onClick: () => d(o),
                         bDisabled: o == i,
                         toolTipContent: (0, b.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
@@ -163,13 +166,13 @@
                       }),
                     ],
                   }),
-                !!a &&
+                !!c &&
                   (0, r.jsxs)(P.he, {
                     className: _().DetailRow,
                     direction: "left",
                     toolTipContent: m.g.Localize(
                       "#PricingDashboard_Method_SuggestedPrice_ttip",
-                      (0, l.Wx)(d, "USD").join(""),
+                      (0, l.Wx)(u, "USD").join(""),
                     ),
                     children: [
                       (0, r.jsx)("div", {
@@ -180,15 +183,15 @@
                       }),
                       (0, r.jsx)("div", {
                         className: _().DetailPrice,
-                        children: (0, l.Wx)(a, t).join(""),
+                        children: (0, l.Wx)(c, t).join(""),
                       }),
                       (0, r.jsx)(P.he, {
                         className: (0, p.A)(
                           _().DetailButton,
-                          a == i && _().Disabled,
+                          c == i && _().Disabled,
                         ),
-                        onClick: () => c(a),
-                        bDisabled: a == i,
+                        onClick: () => d(c),
+                        bDisabled: c == i,
                         toolTipContent: (0, b.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
                         ),

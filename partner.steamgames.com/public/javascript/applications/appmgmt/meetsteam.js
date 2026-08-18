@@ -13,6 +13,9 @@
         StartDate: "_6accgtG1qR7tHFL1wnO58",
         TitleLine: "_3VdcJeFNzpiS6C6nzlzZfv",
         ActionLine: "_2T7-EVSiD7wt3kh-UtbFwJ",
+        SearchLine: "_3WR8L9DXe8JRgcUuBlzxCV",
+        SearchSummary: "_2ZYKXsT05br_fBl6Al_Ok2",
+        SearchMatch: "_3NPtUvJyTjDkKKBkXpmMMh",
         CapacityBarMax: "_1LKv33ip1CbofO_817Nx6_",
         CapacityBarCurrent: "_3lS1D6vNLfl6RVGdhdgWTY",
         Full: "ndEhtgivpXhCilYDnAAVe",
@@ -1200,9 +1203,9 @@ License: MIT
         void 0 === (r = "function" == typeof n ? n.apply(t, s) : n) ||
           (e.exports = r);
     },
-    20153: (e, t, n) => {
+    53822: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => vn, default: () => jn });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => wn, default: () => bn });
       var s = n(7850),
         r = n(43527),
         i = n(90626),
@@ -2685,7 +2688,62 @@ License: MIT
           children: "Download CSV",
         });
       }
-      function mt(e) {
+      const mt = i.createContext(void 0);
+      function gt(e) {
+        const { children: t } = e,
+          [n, r] = ie("search", ""),
+          [a, o] = (0, i.useState)(() => n || ""),
+          l = (0, i.useCallback)(
+            (e) => {
+              o(e), r(e || void 0, !0);
+            },
+            [r],
+          ),
+          c = (0, i.useMemo)(() => ({ strSearch: a, setSearch: l }), [a, l]);
+        return (0, s.jsx)(mt.Provider, { value: c, children: t });
+      }
+      const pt = () => {
+        const e = (0, i.useContext)(mt);
+        if (!e)
+          throw new Error(
+            "useMeetSteamSearch must be used within MeetSteamSearchProvider",
+          );
+        return e;
+      };
+      function ft(e) {
+        const { text: t } = e,
+          { strSearch: n } = pt(),
+          r = (0, i.useMemo)(
+            () =>
+              (function (e, t) {
+                const n = t?.trim().toLowerCase();
+                if (!e || !n) return [{ strText: e || "", bMatch: !1 }];
+                const s = new Array(),
+                  r = e.toLowerCase();
+                let i = 0;
+                for (let t = r.indexOf(n); t >= 0; t = r.indexOf(n, i))
+                  t > i && s.push({ strText: e.slice(i, t), bMatch: !1 }),
+                    s.push({ strText: e.slice(t, t + n.length), bMatch: !0 }),
+                    (i = t + n.length);
+                return (
+                  i < e.length && s.push({ strText: e.slice(i), bMatch: !1 }), s
+                );
+              })(t, n),
+            [t, n],
+          );
+        return (0, s.jsx)(s.Fragment, {
+          children: r.map((e, t) =>
+            e.bMatch
+              ? (0, s.jsx)(
+                  "span",
+                  { className: ne().SearchMatch, children: e.strText },
+                  t,
+                )
+              : (0, s.jsx)(i.Fragment, { children: e.strText }, t),
+          ),
+        });
+      }
+      function xt(e) {
         const t = I.b.InitFromClanID((0, V.H)()),
           n = (function () {
             const [e] = (0, i.useState)(() =>
@@ -2694,21 +2752,74 @@ License: MIT
             return e;
           })(),
           { bShowArchived: r, setShowArchived: a } = le(),
-          { bIsLoading: o, events: l } = (0, L.PB)(n),
-          c = i.useMemo(() => {
-            if (!l) return null;
+          { strSearch: o, setSearch: l } = pt(),
+          { bIsLoading: c, events: d } = (0, L.PB)(n),
+          {
+            rgEventsByMonth: u,
+            cEvents: h,
+            cMatchingEvents: m,
+          } = i.useMemo(() => {
+            if (!d)
+              return { rgEventsByMonth: null, cEvents: 0, cMatchingEvents: 0 };
             const e =
-                r && l
-                  ? [...l]
-                  : l?.filter((e) => e.endTime >= new Date().getTime() / 1e3),
-              t = Array.from(
-                (0, Q.bv)(e, (e) => (0, Q.J2)(new Date(1e3 * e.startTime))),
+                r && d
+                  ? [...d]
+                  : d?.filter((e) => e.endTime >= new Date().getTime() / 1e3),
+              t = e.filter((e) =>
+                (function (e, t) {
+                  if (!t?.trim()) return !0;
+                  const n = [
+                    e.GID,
+                    e.GetNameWithFallback(_.Bhc),
+                    e.GetDescriptionWithFallback(_.Bhc),
+                  ];
+                  return (
+                    e.jsondata.meet_steam_groups?.forEach((e) => {
+                      n.push(
+                        Z.NT.GetWithFallback(e.localized_session_title, _.Bhc),
+                      ),
+                        n.push(
+                          Z.NT.GetWithFallback(
+                            e.localized_session_description,
+                            _.Bhc,
+                          ),
+                        ),
+                        n.push(
+                          Z.NT.GetWithFallback(
+                            e.localized_intended_audience,
+                            _.Bhc,
+                          ),
+                        ),
+                        n.push(
+                          Z.NT.GetWithFallback(e.localized_sesssion_faq, _.Bhc),
+                        );
+                    }),
+                    n.some((e) =>
+                      (function (e, t) {
+                        const n = t?.trim().toLowerCase();
+                        return (
+                          !n || (Boolean(e) && e.toLowerCase().includes(n))
+                        );
+                      })(e, t),
+                    )
+                  );
+                })(e, o),
+              ),
+              n = Array.from(
+                (0, Q.bv)(t, (e) => (0, Q.J2)(new Date(1e3 * e.startTime))),
               );
-            return t?.sort((e) => -e[0]), t;
-          }, [l, r]);
-        return o
+            return (
+              n?.sort((e) => -e[0]),
+              {
+                rgEventsByMonth: n,
+                cEvents: e.length,
+                cMatchingEvents: t.length,
+              }
+            );
+          }, [d, r, o]);
+        return c
           ? (0, s.jsx)(W.t, {})
-          : c
+          : u
             ? (0, s.jsxs)("div", {
                 children: [
                   (0, s.jsxs)("div", {
@@ -2726,10 +2837,41 @@ License: MIT
                     onChange: a,
                     label: "Show Past Events",
                   }),
+                  (0, s.jsxs)("div", {
+                    className: ne().SearchLine,
+                    children: [
+                      (0, s.jsx)(H.pd, {
+                        type: "text",
+                        placeholder: "Search events",
+                        tooltip:
+                          "In-memory search of the event id, title and description, and of the session group titles, descriptions and intended audience",
+                        value: o,
+                        onChange: (e) => l(e?.currentTarget?.value || ""),
+                      }),
+                      Boolean(o.trim()) &&
+                        (0, s.jsxs)("div", {
+                          className: ne().SearchSummary,
+                          children: [
+                            "Showing ",
+                            m,
+                            " of ",
+                            h,
+                            " events  ",
+                            (0, s.jsx)("a", {
+                              href: "#",
+                              onClick: (e) => {
+                                e.preventDefault(), l("");
+                              },
+                              children: "Clear",
+                            }),
+                          ],
+                        }),
+                    ],
+                  }),
                   (0, s.jsx)("hr", {}),
-                  c.map((e) =>
+                  u.map((e) =>
                     (0, s.jsx)(
-                      gt,
+                      _t,
                       { month: new Date(1e3 * e[0]), events: e[1] },
                       e[0],
                     ),
@@ -2738,7 +2880,7 @@ License: MIT
               })
             : null;
       }
-      function gt(e) {
+      function _t(e) {
         const { month: t, events: n } = e,
           r = i.useMemo(() => [...n].sort((e) => -e.startTime), [n]),
           a = new Intl.DateTimeFormat(navigator.language, {
@@ -2750,12 +2892,12 @@ License: MIT
             (0, s.jsx)("div", { className: ne().MonthTitle, children: a }),
             (0, s.jsx)("div", {
               className: ne().MonthEvents,
-              children: r.map((e) => (0, s.jsx)(pt, { oEvent: e }, e.GID)),
+              children: r.map((e) => (0, s.jsx)(vt, { oEvent: e }, e.GID)),
             }),
           ],
         });
       }
-      function pt(e) {
+      function vt(e) {
         const { oEvent: t } = e,
           n = t.GID,
           r = I.b.InitFromClanID((0, V.H)()),
@@ -2783,7 +2925,10 @@ License: MIT
                 (0, s.jsxs)("div", {
                   className: ne().TitleLine,
                   children: [
-                    (0, s.jsx)("div", { className: ne().Title, children: c }),
+                    (0, s.jsx)("div", {
+                      className: ne().Title,
+                      children: (0, s.jsx)(ft, { text: c }),
+                    }),
                     (0, s.jsx)("div", {
                       className: ne().StartDate,
                       children: (0, Z.TW)(t?.startTime),
@@ -2814,7 +2959,7 @@ License: MIT
                     ) &&
                       (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(jt, { gid: n }),
+                          (0, s.jsx)(bt, { gid: n }),
                           " | ",
                           (0, s.jsx)("a", {
                             href: `${ee.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${ee.iA.accountid}`,
@@ -2825,10 +2970,10 @@ License: MIT
                             href: `${ee.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${n}`,
                             children: "Attendance List",
                           }),
-                          (0, s.jsx)(ft, { gid: n }),
-                          (0, s.jsx)(_t, { gid: n }),
-                          (0, s.jsx)(xt, { gid: n }),
-                          (0, s.jsx)(vt, { gid: n }),
+                          (0, s.jsx)(jt, { gid: n }),
+                          (0, s.jsx)(yt, { gid: n }),
+                          (0, s.jsx)(St, { gid: n }),
+                          (0, s.jsx)(wt, { gid: n }),
                         ],
                       }),
                   ],
@@ -2867,7 +3012,7 @@ License: MIT
                         children: [
                           Boolean(d.length > 0)
                             ? (0, s.jsx)(
-                                yt,
+                                Ct,
                                 {
                                   gid: n,
                                   group: d[0].group,
@@ -2905,7 +3050,7 @@ License: MIT
                           (0, s.jsx)(
                             "tr",
                             {
-                              children: (0, s.jsx)(yt, {
+                              children: (0, s.jsx)(Ct, {
                                 group: e.group,
                                 gid: n,
                                 session: e.session,
@@ -2924,7 +3069,7 @@ License: MIT
           ],
         });
       }
-      function ft(e) {
+      function jt(e) {
         const { gid: t } = e,
           n = re();
         return Array.from(n.keys()).includes(t)
@@ -2939,7 +3084,7 @@ License: MIT
             })
           : null;
       }
-      function xt(e) {
+      function St(e) {
         const { gid: t } = e,
           [n, r, i] = (0, y.uD)();
         return (0, s.jsxs)("div", {
@@ -2967,7 +3112,7 @@ License: MIT
           ],
         });
       }
-      function _t(e) {
+      function yt(e) {
         const { gid: t } = e,
           [n, r, i] = (0, y.uD)();
         return (0, s.jsxs)("div", {
@@ -2989,7 +3134,7 @@ License: MIT
           ],
         });
       }
-      function vt(e) {
+      function wt(e) {
         const { gid: t } = e,
           [n, r, i] = (0, y.uD)();
         return (0, s.jsxs)("div", {
@@ -3011,7 +3156,7 @@ License: MIT
           ],
         });
       }
-      function jt(e) {
+      function bt(e) {
         const { gid: t } = e,
           n = (0, $.a)(),
           [r, a] = (0, i.useState)(!1),
@@ -3062,7 +3207,7 @@ License: MIT
           ],
         });
       }
-      function St(e, t) {
+      function Et(e, t) {
         const n = P().unix(e),
           s = P().unix(e).tz(t),
           r = s.utcOffset() - n.utcOffset(),
@@ -3070,7 +3215,7 @@ License: MIT
           a = new Date();
         return `${i.getFullYear() == a.getFullYear() ? ((0, X.$w))(i, !1, !1) : ((0, X._9))(i, !1, !1)} ${(0, X.KC)(e + 60 * r)} ${s.format("z")}`;
       }
-      function yt(e) {
+      function Ct(e) {
         const {
             gid: t,
             group: n,
@@ -3097,14 +3242,17 @@ License: MIT
             a && Boolean(n)
               ? (0, s.jsxs)("td", {
                   children: [
-                    o,
+                    (0, s.jsx)(ft, { text: o }),
                     (0, s.jsx)(Y.o, { tooltip: l }),
-                    Boolean(c) && (0, s.jsx)("div", { children: c }),
+                    Boolean(c) &&
+                      (0, s.jsx)("div", {
+                        children: (0, s.jsx)(ft, { text: c }),
+                      }),
                   ],
                 })
               : (0, s.jsx)("td", {}),
             (0, s.jsx)("td", {
-              children: (0, s.jsx)("span", { children: St(i.rtime_start, S) }),
+              children: (0, s.jsx)("span", { children: Et(i.rtime_start, S) }),
             }),
             (0, s.jsx)("td", {
               children: (0, X.IH)(i.rtime_end - i.rtime_start),
@@ -3163,13 +3311,13 @@ License: MIT
           ],
         });
       }
-      var wt = n(39777),
-        bt = n(35380),
-        Et = n(14336),
-        Ct = n(16021),
-        It = n(65522),
-        Dt = n(48479);
-      function Rt(e) {
+      var It = n(39777),
+        Dt = n(35380),
+        Rt = n(14336),
+        At = n(16021),
+        Tt = n(65522),
+        kt = n(48479);
+      function Mt(e) {
         const { rgEvents: t } = M(),
           n = (function () {
             const [e] = (0, i.useState)(() =>
@@ -3217,7 +3365,7 @@ License: MIT
               )
               .map((e) =>
                 (0, s.jsx)(
-                  At,
+                  Nt,
                   {
                     conf: e,
                     nInterestCount: l.get(e.id) ?? 0,
@@ -3226,19 +3374,19 @@ License: MIT
                   e.id,
                 ),
               ),
-            (0, s.jsx)(Ot, { rgSurveyInterest: n }),
+            (0, s.jsx)($t, { rgSurveyInterest: n }),
           ],
         });
       }
-      function At(e) {
+      function Nt(e) {
         const { conf: t, nInterestCount: n, rgSurveyInterest: r } = e;
-        return (0, s.jsx)(Dt.qx, {
+        return (0, s.jsx)(kt.qx, {
           title: `${t.name} in ${t.place} around ${t.time}: Interest: ${(0, _e.D)(n)}`,
           bStartMinimized: !0,
-          children: (0, s.jsx)(kt, { conf: t, rgSurveyInterest: r }),
+          children: (0, s.jsx)(zt, { conf: t, rgSurveyInterest: r }),
         });
       }
-      function Tt(e) {
+      function Bt(e) {
         if ("number" == typeof e) return e;
         const t = e.slice(-1).toUpperCase(),
           n = parseFloat(e.slice(0, -1));
@@ -3253,7 +3401,7 @@ License: MIT
             return parseFloat(e);
         }
       }
-      function kt(e) {
+      function zt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           r = (0, i.useMemo)(
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
@@ -3291,7 +3439,7 @@ License: MIT
         return o
           ? a?.length
             ? r && 0 != r.length
-              ? (0, s.jsx)(Mt, { conf: t, rgSurveyInterest: r })
+              ? (0, s.jsx)(Ft, { conf: t, rgSurveyInterest: r })
               : (0, s.jsx)("div", { children: "No users with interest" })
             : (0, s.jsx)(W.t, {
                 position: "center",
@@ -3302,7 +3450,7 @@ License: MIT
               string: `Loading ${l} of ${r.length}`,
             });
       }
-      function Mt(e) {
+      function Ft(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           r = (0, b.jE)();
         return (0, s.jsxs)("div", {
@@ -3332,7 +3480,7 @@ License: MIT
                     const n = [],
                       s = new Ye.b2(t.steamid);
                     n.push("" + s.GetAccountID());
-                    const i = (0, Et.z0)(s.GetAccountID()),
+                    const i = (0, Rt.z0)(s.GetAccountID()),
                       a = t.results.partner_id;
                     n.push("" + a);
                     const o = (0, A.N6)(a).map(
@@ -3366,9 +3514,9 @@ License: MIT
                     n.push(d ? d.name : "");
                     const u = z(r, a);
                     u
-                      ? (n.push("" + Tt(u.strGrossUSD)),
+                      ? (n.push("" + Bt(u.strGrossUSD)),
                         n.push("" + u.nBestAppID),
-                        n.push(Ct.A.Get().GetApp(u.nBestAppID)?.GetName()),
+                        n.push(At.A.Get().GetApp(u.nBestAppID)?.GetName()),
                         n.push("" + u.nBestAppLongTermSalesRank))
                       : (n.push(""), n.push(""), n.push(""), n.push("")),
                       e.push(n);
@@ -3401,7 +3549,7 @@ License: MIT
                 (0, s.jsx)("tbody", {
                   children: n.map((e) =>
                     (0, s.jsx)(
-                      Nt,
+                      Ot,
                       {
                         strsteamid: e.steamid,
                         partnerID: e.results.partner_id,
@@ -3416,13 +3564,13 @@ License: MIT
           ],
         });
       }
-      function Nt(e) {
+      function Ot(e) {
         const { partnerID: t, registration: n } = e;
         return (0, s.jsxs)("tr", {
           children: [
-            (0, s.jsx)("td", { children: (0, s.jsx)(Bt, { ...e }) }),
+            (0, s.jsx)("td", { children: (0, s.jsx)(Pt, { ...e }) }),
             (0, s.jsx)("td", { children: n.have_you_met_steam ? "" : "NO" }),
-            (0, s.jsx)(zt, { nPartnerID: t }),
+            (0, s.jsx)(Lt, { nPartnerID: t }),
             (0, s.jsx)("td", { children: n.attending.length }),
             (0, s.jsx)("td", {
               children:
@@ -3435,9 +3583,9 @@ License: MIT
           ],
         });
       }
-      function Bt(e) {
+      function Pt(e) {
         const { strsteamid: t, partnerID: n, registration: r } = e,
-          i = (0, Et.hW)(t),
+          i = (0, Rt.hW)(t),
           a = Be(new Ye.b2(t).GetAccountID(), n),
           o = a?.realname || i.data?.m_strPlayerName;
         return (0, s.jsxs)(s.Fragment, {
@@ -3448,7 +3596,7 @@ License: MIT
           ],
         });
       }
-      function zt(e) {
+      function Lt(e) {
         const { nPartnerID: t } = e,
           [n] = (0, R.UA)(t),
           r = (function (e) {
@@ -3473,23 +3621,23 @@ License: MIT
             (0, s.jsx)("td", {
               children:
                 r?.nBestAppID > 0
-                  ? (0, s.jsx)(Ft, { appid: r?.nBestAppID })
+                  ? (0, s.jsx)(Gt, { appid: r?.nBestAppID })
                   : "N/A",
             }),
             (0, s.jsx)("td", { children: r?.nBestAppLongTermSalesRank }),
           ],
         });
       }
-      function Ft(e) {
+      function Gt(e) {
         const { appid: t } = e,
-          n = (0, bt.$5)(t),
-          { data: r } = (0, wt.J$)(n);
-        return (0, s.jsx)(It.Q, {
+          n = (0, Dt.$5)(t),
+          { data: r } = (0, It.J$)(n);
+        return (0, s.jsx)(Tt.Q, {
           id: n,
           children: (0, s.jsx)("span", { children: r?.name || t }),
         });
       }
-      function Ot(e) {
+      function $t(e) {
         const { rgSurveyInterest: t } = e,
           n = (0, b.jE)(),
           r =
@@ -3501,7 +3649,7 @@ License: MIT
                 ),
               [t],
             ));
-        return (0, s.jsxs)(Dt.qx, {
+        return (0, s.jsxs)(kt.qx, {
           title: `Alternative Suggestions (${r.length})`,
           bStartMinimized: !0,
           children: [
@@ -3527,7 +3675,7 @@ License: MIT
                     const s = [],
                       r = new Ye.b2(t.steamid);
                     s.push("" + r.GetAccountID());
-                    const i = (0, Et.z0)(r.GetAccountID()),
+                    const i = (0, Rt.z0)(r.GetAccountID()),
                       a = t.results.partner_id;
                     s.push("" + a);
                     const o = t.results.email_override || "";
@@ -3546,7 +3694,7 @@ License: MIT
                     s.push(c ? c.name : "");
                     const d = z(n, a);
                     d
-                      ? (s.push("" + Tt(d.strGrossUSD)),
+                      ? (s.push("" + Bt(d.strGrossUSD)),
                         s.push("" + d.nBestAppID),
                         s.push("" + d.nBestAppLongTermSalesRank))
                       : (s.push(""), s.push(""), s.push("")),
@@ -3575,7 +3723,7 @@ License: MIT
                 }),
                 (0, s.jsx)("tbody", {
                   children: r.map((e) =>
-                    (0, s.jsx)(Pt, { survey: e }, "suggested" + e.steamid),
+                    (0, s.jsx)(Ht, { survey: e }, "suggested" + e.steamid),
                   ),
                 }),
               ],
@@ -3583,28 +3731,28 @@ License: MIT
           ],
         });
       }
-      function Pt(e) {
+      function Ht(e) {
         const { survey: t } = e;
         new Ye.b2(t.steamid);
         return (0, s.jsxs)("tr", {
           children: [
             (0, s.jsx)("td", {
-              children: (0, s.jsx)(Bt, {
+              children: (0, s.jsx)(Pt, {
                 strsteamid: t.steamid,
                 partnerID: t.results.partner_id,
                 registration: t.results,
               }),
             }),
-            (0, s.jsx)(zt, { nPartnerID: t.results.partner_id }),
+            (0, s.jsx)(Lt, { nPartnerID: t.results.partner_id }),
             (0, s.jsx)("td", { children: t.results.suggestion.trim() }),
           ],
         });
       }
-      const Lt = i.createContext({
+      const Ut = i.createContext({
         loadUserEmailAndLangs: async (e) =>
           await (function () {
-            $t ||
-              ($t = new (De())(
+            qt ||
+              (qt = new (De())(
                 async (e) => {
                   const t = `${D.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
                     n = { sessionid: (0, D.KC)(), strAccountIDs: e.join(",") },
@@ -3622,20 +3770,20 @@ License: MIT
                 },
                 { maxBatchSize: 100 },
               ));
-            return $t;
+            return qt;
           })().load(e),
       });
-      function Gt(e, t) {
+      function Vt(e, t) {
         return {
           queryKey: ["UserEmailAndLangs", t],
           queryFn: () => e.loadUserEmailAndLangs(t),
           enabled: !!t,
         };
       }
-      let $t;
-      var Ht = n(73745),
-        Ut = n(3049);
-      function Vt(e) {
+      let qt;
+      var Kt = n(73745),
+        Wt = n(3049);
+      function Yt(e) {
         const t = (0, $.a)(),
           n = (0, it.qh)(),
           r = (function (e) {
@@ -3674,7 +3822,7 @@ License: MIT
                     const e = [];
                     e.push(["User Name", "account id", "Email", "Event Count"]),
                       a.forEach((t) => {
-                        const n = (0, Et.z0)(t.accountid),
+                        const n = (0, Rt.z0)(t.accountid),
                           s =
                             ((r = t.accountid),
                             Ne.L.getQueryData(["UserEmailAndLangs", r]));
@@ -3683,7 +3831,7 @@ License: MIT
                           n?.m_strPlayerName || "",
                           "" + t.accountid,
                           s?.email_address || "",
-                          t.clan_event_gids?.length.toLocaleString((0, Ut.J)()),
+                          t.clan_event_gids?.length.toLocaleString((0, Wt.J)()),
                         ]);
                       });
                     he.g.WriteCSVToFile(e, "sale_operators.csv");
@@ -3709,7 +3857,7 @@ License: MIT
                     }),
                     (0, s.jsx)("tbody", {
                       children: a.map((e) =>
-                        (0, s.jsx)(qt, { organizer: e }, e.accountid),
+                        (0, s.jsx)(Jt, { organizer: e }, e.accountid),
                       ),
                     }),
                   ],
@@ -3718,16 +3866,16 @@ License: MIT
             })
           : (0, s.jsx)(W.t, { string: (0, Z.we)("#Loading"), size: "medium" });
       }
-      function qt(e) {
+      function Jt(e) {
         const { organizer: t } = e,
           n = (0, i.useMemo)(
             () => I.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
             [t],
           ),
-          r = (0, Et.hW)(n),
+          r = (0, Rt.hW)(n),
           a = (function (e) {
-            const t = i.useContext(Lt);
-            return (0, w.I)(Gt(t, e));
+            const t = i.useContext(Ut);
+            return (0, w.I)(Vt(t, e));
           })(t.accountid),
           o = r.data?.m_strPlayerName || "";
         return (0, s.jsxs)("tr", {
@@ -3735,7 +3883,7 @@ License: MIT
             (0, s.jsxs)("td", { children: [o, " (", t.accountid, ")"] }),
             (0, s.jsx)("td", { children: a?.data?.email_address }),
             (0, s.jsx)("td", {
-              children: (0, s.jsx)(Kt, {
+              children: (0, s.jsx)(Qt, {
                 name: o,
                 rgClanEventGIDs: t.clan_event_gids,
               }),
@@ -3743,9 +3891,9 @@ License: MIT
           ],
         });
       }
-      function Kt(e) {
+      function Qt(e) {
         const { name: t, rgClanEventGIDs: n } = e,
-          [r, i, a] = (0, Ht.uD)();
+          [r, i, a] = (0, Kt.uD)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsxs)(H.$n, {
@@ -3758,13 +3906,13 @@ License: MIT
                 bAlertDialog: !0,
                 closeModal: a,
                 strTitle: `${t}'s Events`,
-                children: n.map((e) => (0, s.jsx)(Wt, { gid: e }, e)),
+                children: n.map((e) => (0, s.jsx)(Zt, { gid: e }, e)),
               }),
             }),
           ],
         });
       }
-      function Wt(e) {
+      function Zt(e) {
         const { gid: t } = e,
           n = (0, L.RR)(t);
         return n
@@ -3778,26 +3926,26 @@ License: MIT
             })
           : (0, s.jsxs)("div", { children: ["Loading ", t] });
       }
-      function Yt(e) {
+      function Xt(e) {
         const t = (e) =>
             window.sessionStorage.setItem("meetsteamadmin", `?tab=${e.key}`),
           n = [
             {
               name: "Interest Survey Results",
               key: "survey",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Rt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Mt, {}) }),
               onClick: t,
             },
             {
               name: "Event Management",
               key: "event",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(mt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(xt, {}) }),
               onClick: t,
             },
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Vt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Yt, {}) }),
               onClick: t,
             },
             {
@@ -3808,31 +3956,33 @@ License: MIT
             },
           ];
         return (0, s.jsx)(oe, {
-          children: (0, s.jsxs)("div", {
-            className: f().AdminPageCtn,
-            children: [
-              (0, s.jsxs)("div", {
-                className: f().PageTitle,
-                children: [
-                  "Meet Steam Admin Dashboard ",
-                  (0, x.Fd)("current_year", "application_config"),
-                ],
-              }),
-              (0, s.jsx)("hr", {}),
-              (0, s.jsx)(g.V, { tabs: n }),
-              (0, s.jsx)("div", { className: m().ClearThings }),
-              (0, s.jsx)("br", {}),
-            ],
+          children: (0, s.jsx)(gt, {
+            children: (0, s.jsxs)("div", {
+              className: f().AdminPageCtn,
+              children: [
+                (0, s.jsxs)("div", {
+                  className: f().PageTitle,
+                  children: [
+                    "Meet Steam Admin Dashboard ",
+                    (0, x.Fd)("current_year", "application_config"),
+                  ],
+                }),
+                (0, s.jsx)("hr", {}),
+                (0, s.jsx)(g.V, { tabs: n }),
+                (0, s.jsx)("div", { className: m().ClearThings }),
+                (0, s.jsx)("br", {}),
+              ],
+            }),
           }),
         });
       }
-      var Jt = n(65946),
-        Qt = n(79645),
-        Zt = n(1909),
-        Xt = n(56330),
-        en = n(85761),
-        tn = n.n(en);
-      function nn(e) {
+      var en = n(65946),
+        tn = n(79645),
+        nn = n(1909),
+        sn = n(56330),
+        rn = n(85761),
+        an = n.n(rn);
+      function on(e) {
         const t = (function () {
             const [e] = (0, i.useState)(() =>
               (0, D.Tc)("registration_open", "application_config"),
@@ -3845,7 +3995,7 @@ License: MIT
             );
             return e;
           })(),
-          { data: r } = (0, Et.js)(D.iA.accountid),
+          { data: r } = (0, Rt.js)(D.iA.accountid),
           [a, o] = (0, i.useState)(!1),
           [l, c] = (0, i.useState)(!1),
           [d, u] = (0, i.useState)(!1),
@@ -3858,7 +4008,7 @@ License: MIT
                 string: (0, Z.we)("#Loading"),
               })
             : (0, s.jsxs)("div", {
-                className: (0, J.A)(f().AdminPageCtn, tn().Ctn),
+                className: (0, J.A)(f().AdminPageCtn, an().Ctn),
                 children: [
                   (0, s.jsx)("div", {
                     className: f().PageTitle,
@@ -3891,14 +4041,14 @@ License: MIT
                         }),
                         (0, s.jsx)("div", {
                           className: f().SectionCtn,
-                          children: (0, s.jsx)(on, {
+                          children: (0, s.jsx)(un, {
                             oRegistration: h,
                             fnSetRegistration: m,
                           }),
                         }),
                         (0, s.jsx)("div", {
                           className: f().SectionCtn,
-                          children: (0, s.jsx)(sn, {
+                          children: (0, s.jsx)(ln, {
                             oRegistration: h,
                             fnSetRegistration: m,
                           }),
@@ -3949,7 +4099,7 @@ License: MIT
                               }),
                             a &&
                               (0, s.jsx)("div", {
-                                className: Xt.ErrorStylesWithIcon,
+                                className: sn.ErrorStylesWithIcon,
                                 children: (0, Z.we)(
                                   "#Error_ErrorCommunicatingWithNetwork",
                                 ),
@@ -3962,11 +4112,11 @@ License: MIT
                 ],
               })
           : (0, s.jsx)("div", {
-              className: tn().Ctn,
+              className: an().Ctn,
               children: (0, Z.we)("#MeetSteam_closed"),
             });
       }
-      function sn(e) {
+      function ln(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
           { rgEvents: r, rgOldEvents: i, selectConference: a } = M();
         return (0, s.jsxs)(s.Fragment, {
@@ -3983,7 +4133,7 @@ License: MIT
             (0, s.jsxs)("p", {
               children: [
                 (0, s.jsx)("span", {
-                  className: tn().Indicator,
+                  className: an().Indicator,
                   children: "*",
                 }),
                 " ",
@@ -3997,7 +4147,7 @@ License: MIT
                   (0, s.jsx)("p", {
                     children: (0, Z.we)("#MeetSteam_ConferenceOrg"),
                   }),
-                  (0, s.jsx)(rn, { ...e, rgConference: [a] }),
+                  (0, s.jsx)(cn, { ...e, rgConference: [a] }),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("hr", {}),
@@ -4006,7 +4156,7 @@ License: MIT
                   }),
                 ],
               }),
-            (0, s.jsx)(rn, { ...e, rgConference: r }),
+            (0, s.jsx)(cn, { ...e, rgConference: r }),
             (0, s.jsx)("br", {}),
             (0, s.jsx)(H.pd, {
               type: "text",
@@ -4015,15 +4165,15 @@ License: MIT
               label: (0, Z.we)("#MeetSteam_others"),
             }),
             Boolean(i?.length > 0) &&
-              (0, s.jsx)(Dt.qx, {
+              (0, s.jsx)(kt.qx, {
                 bStartMinimized: !0,
                 title: (0, Z.we)("#MeetSteam_PastEvents", i.length),
-                children: (0, s.jsx)(rn, { ...e, rgConference: i }),
+                children: (0, s.jsx)(cn, { ...e, rgConference: i }),
               }),
           ],
         });
       }
-      function rn(e) {
+      function cn(e) {
         const { rgConference: t } = e;
         return (0, s.jsxs)("table", {
           children: [
@@ -4046,7 +4196,7 @@ License: MIT
                       (0, s.jsx)("td", {
                         children: t.attending
                           ? (0, s.jsx)("span", {
-                              className: tn().Indicator,
+                              className: an().Indicator,
                               children: "*",
                             })
                           : "",
@@ -4061,7 +4211,7 @@ License: MIT
                         children: (0, s.jsx)("div", { children: t.time }),
                       }),
                       (0, s.jsx)("td", {
-                        children: (0, s.jsx)(an, { ...e, conf: t }),
+                        children: (0, s.jsx)(dn, { ...e, conf: t }),
                       }),
                     ],
                   },
@@ -4072,7 +4222,7 @@ License: MIT
           ],
         });
       }
-      function an(e) {
+      function dn(e) {
         const { oRegistration: t, fnSetRegistration: n, conf: r } = e;
         return (0, s.jsx)(H.Yh, {
           checked: t.attending?.includes(r.id),
@@ -4087,9 +4237,9 @@ License: MIT
           tooltip: (0, Z.we)("#MeetSteam_attend_ttip"),
         });
       }
-      function on(e) {
+      function un(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          r = (0, Et.js)(D.iA.accountid),
+          r = (0, Rt.js)(D.iA.accountid),
           a = (function (e) {
             const t = (function () {
                 const [e] = (0, i.useState)(
@@ -4110,7 +4260,7 @@ License: MIT
           [o, l] = (0, i.useState)(() =>
             Boolean((t.email_override && t.email_override != a) || !a),
           ),
-          [c, d, u] = (0, Jt.q3)(() => [
+          [c, d, u] = (0, en.q3)(() => [
             !Boolean(t.have_you_met_steam),
             Boolean(t.english_not_good),
             t.preferred_language,
@@ -4120,16 +4270,16 @@ License: MIT
               children: [
                 (0, s.jsx)("h1", { children: (0, Z.we)("#MeetSteam_You") }),
                 (0, s.jsx)("p", { children: (0, Z.we)("#MeetSteam_You_Desc") }),
-                (0, s.jsx)(ln, {
+                (0, s.jsx)(hn, {
                   nPartnerID: t.partner_id,
                   label: (0, Z.we)("#MeetSteam_You_Company"),
                   setPartnerID: (e) => n({ ...t, partner_id: e }),
                 }),
                 (0, s.jsxs)("div", {
-                  className: tn().EmailInfoRow,
+                  className: an().EmailInfoRow,
                   children: [
                     (0, s.jsx)("div", {
-                      className: tn().EmailField,
+                      className: an().EmailField,
                       children: (0, s.jsx)(H.pd, {
                         type: "string",
                         label: (0, Z.we)("#MeetSteam_You_Email"),
@@ -4162,10 +4312,10 @@ License: MIT
                   children: (0, Z.we)("#MeetSteam_CapabableEnglish"),
                 }),
                 (0, s.jsxs)("div", {
-                  className: tn().RadioButtonCtn,
+                  className: an().RadioButtonCtn,
                   children: [
                     (0, s.jsx)(H.Od, {
-                      className: tn().RadioButtons,
+                      className: an().RadioButtons,
                       checked: !d,
                       onChange: (e) =>
                         e &&
@@ -4177,7 +4327,7 @@ License: MIT
                       label: (0, Z.we)("#MeetSteam_CapabableEnglish_Yes"),
                     }),
                     (0, s.jsx)(H.Od, {
-                      className: tn().RadioButtons,
+                      className: an().RadioButtons,
                       checked: d,
                       onChange: (e) =>
                         e &&
@@ -4197,7 +4347,7 @@ License: MIT
                       (0, s.jsx)(H.JU, {
                         children: (0, Z.we)("#MeetSteam_LanguagePref"),
                       }),
-                      (0, s.jsx)(Zt.Ng, {
+                      (0, s.jsx)(nn.Ng, {
                         selectedLang: u,
                         bAllowUnsetOption: !1,
                         strTooltip: (0, Z.we)("#MeetSteam_LanguagePref_ttip"),
@@ -4214,9 +4364,9 @@ License: MIT
               string: (0, Z.we)("#Loading"),
             });
       }
-      function ln(e) {
+      function hn(e) {
         const { nPartnerID: t, setPartnerID: n, label: r } = e,
-          i = (0, Qt.c)(D.iA.accountid);
+          i = (0, tn.c)(D.iA.accountid);
         if (!i)
           return (0, s.jsx)(W.t, {
             size: "small",
@@ -4240,11 +4390,11 @@ License: MIT
           })
         );
       }
-      var cn = n(20587),
-        dn = n(13038),
-        un = n.n(dn);
-      function hn(e) {
-        const { data: t } = (0, Et.js)(D.iA.accountid),
+      var mn = n(20587),
+        gn = n(13038),
+        pn = n.n(gn);
+      function fn(e) {
+        const { data: t } = (0, Rt.js)(D.iA.accountid),
           n = (function () {
             const [e] = (0, i.useState)(
               () => (0, D.Tc)("survey_event_name", "application_config") || "",
@@ -4269,7 +4419,7 @@ License: MIT
               string: (0, Z.we)("#Loading"),
             })
           : (0, s.jsxs)("div", {
-              className: (0, J.A)(f().AdminPageCtn, un().Ctn),
+              className: (0, J.A)(f().AdminPageCtn, pn().Ctn),
               children: [
                 (0, s.jsx)("div", {
                   className: f().PageTitle,
@@ -4348,7 +4498,7 @@ License: MIT
                             }),
                           d &&
                             (0, s.jsx)("div", {
-                              className: Xt.ErrorStylesWithIcon,
+                              className: sn.ErrorStylesWithIcon,
                               children: (0, Z.we)(
                                 "#Error_ErrorCommunicatingWithNetwork",
                               ),
@@ -4361,9 +4511,9 @@ License: MIT
               ],
             });
       }
-      var mn = n(27144),
-        gn = n(5695);
-      function pn(e) {
+      var xn = n(27144),
+        _n = n(5695);
+      function vn(e) {
         const t = (function () {
             const [e] = (0, i.useState)(
               () => (0, D.Tc)("event_gids", "application_config") || [],
@@ -4425,17 +4575,17 @@ License: MIT
             [r, n],
           ),
           h = (0, R.vh)(d),
-          m = (0, mn.B3)(u);
+          m = (0, xn.B3)(u);
         return !l && h && m
-          ? (0, s.jsx)(xn, {
+          ? (0, s.jsx)(Sn, {
               rgSurveyResults: n,
               mapAccountsToReg: r,
               meetSteamEvents: c,
             })
           : (0, s.jsx)(W.t, { string: "Loading Event, Partner and User Info" });
       }
-      const fn = (0, be.FB)();
-      function xn(e) {
+      const jn = (0, be.FB)();
+      function Sn(e) {
         const {
             rgSurveyResults: t,
             mapAccountsToReg: n,
@@ -4474,7 +4624,7 @@ License: MIT
                       }
                     });
                 } else {
-                  const e = (0, mn.CF)(i.GetAccountID());
+                  const e = (0, xn.CF)(i.GetAccountID());
                   e && (a.name = e.persona_name);
                 }
                 s.push(a);
@@ -4484,20 +4634,20 @@ License: MIT
           }, [n, r, t]),
           o = (0, i.useMemo)(
             () => [
-              fn.accessor("name", { header: "Name", size: 150 }),
-              fn.accessor("feedback", {
+              jn.accessor("name", { header: "Name", size: 150 }),
+              jn.accessor("feedback", {
                 header: "Feedback",
                 size: 500,
-                cell: gn.Gb,
+                cell: _n.Gb,
               }),
-              fn.accessor("registrations", {
+              jn.accessor("registrations", {
                 header: "Sessions",
                 size: 200,
-                cell: _n,
+                cell: yn,
               }),
-              fn.accessor("accountid", { header: "Account ID", size: 150 }),
-              fn.accessor("email", { header: "Email", size: 150 }),
-              fn.accessor("partner_name", {
+              jn.accessor("accountid", { header: "Account ID", size: 150 }),
+              jn.accessor("email", { header: "Email", size: 150 }),
+              jn.accessor("partner_name", {
                 header: "Partner Name",
                 size: 200,
               }),
@@ -4545,22 +4695,22 @@ License: MIT
             })
           : (0, s.jsx)(W.t, { string: (0, Z.we)("#Loading") });
       }
-      function _n(e) {
+      function yn(e) {
         const t = e.getValue();
         return t?.length > 0
-          ? (0, s.jsx)(gn.DP, { text: e.getValue(), regExp: /\|/ })
+          ? (0, s.jsx)(_n.DP, { text: e.getValue(), regExp: /\|/ })
           : "";
       }
-      const vn = {
+      const wn = {
         YearlySurvery: (e = ":year") => `/${e}`,
         PostEventSurvey: (e = ":surveyGID") => `/survey/${e}`,
         AdminDashboard: () => "/admin",
         PostEventSurveyResults: (e = ":surveyGID") => `/surveyresults/${e}`,
       };
-      function jn(e) {
+      function bn(e) {
         return (
           (0, i.useEffect)(() => {
-            cn.O3.Init();
+            mn.O3.Init();
           }, []),
           (0, s.jsx)(l.m, {
             children: (0, s.jsx)(a.Kd, {
@@ -4578,23 +4728,23 @@ License: MIT
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: vn.AdminDashboard(),
-                    component: Yt,
+                    path: wn.AdminDashboard(),
+                    component: Xt,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: vn.YearlySurvery(":year(\\d+)"),
-                    component: nn,
+                    path: wn.YearlySurvery(":year(\\d+)"),
+                    component: on,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: vn.PostEventSurvey(":surveyGID(\\d+)"),
-                    component: hn,
+                    path: wn.PostEventSurvey(":surveyGID(\\d+)"),
+                    component: fn,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: vn.PostEventSurveyResults(":surveyGID(\\d+)"),
-                    component: pn,
+                    path: wn.PostEventSurveyResults(":surveyGID(\\d+)"),
+                    component: vn,
                   }),
                   (0, s.jsx)(o.qh, { component: d.a }),
                 ],
@@ -4747,7 +4897,7 @@ License: MIT
             estimateSize: u.useCallback(() => h, [h]),
             measureElement: d,
             overscan: a,
-            initialOffset: l,
+            initialOffset: l ?? (() => window.scrollY),
             initialRect: void 0,
             observeElementOffset: w,
             observeElementRect: b,
@@ -4756,6 +4906,8 @@ License: MIT
             },
           });
         return (
+          (m.shouldAdjustScrollPositionOnItemSizeChange = (e) =>
+            void 0 !== t && e.start < (m.scrollOffset ?? 0)),
           u.useEffect(() => {
             (0, u.startTransition)(() => {
               m.measure();

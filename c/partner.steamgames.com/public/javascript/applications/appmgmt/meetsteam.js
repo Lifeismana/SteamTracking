@@ -11,6 +11,9 @@
         StartDate: "_6accgtG1qR7tHFL1wnO58",
         TitleLine: "_3VdcJeFNzpiS6C6nzlzZfv",
         ActionLine: "_2T7-EVSiD7wt3kh-UtbFwJ",
+        SearchLine: "_3WR8L9DXe8JRgcUuBlzxCV",
+        SearchSummary: "_2ZYKXsT05br_fBl6Al_Ok2",
+        SearchMatch: "_3NPtUvJyTjDkKKBkXpmMMh",
         CapacityBarMax: "_1LKv33ip1CbofO_817Nx6_",
         CapacityBarCurrent: "_3lS1D6vNLfl6RVGdhdgWTY",
         Full: "ndEhtgivpXhCilYDnAAVe",
@@ -2926,6 +2929,97 @@
           children: "Download CSV",
         });
       }
+      const _ = _.createContext(void 0);
+      function _(_) {
+        const { children: _ } = _,
+          [_, _] = _("search", ""),
+          [_, _] = (0, _.useState)(() => _ || ""),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(_), _(_ || void 0, !0);
+            },
+            [_],
+          ),
+          _ = (0, _.useMemo)(
+            () => ({
+              strSearch: _,
+              setSearch: _,
+            }),
+            [_, _],
+          );
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _,
+        });
+      }
+      const _ = () => {
+        const _ = (0, _.useContext)(_);
+        if (!_)
+          throw new Error(
+            "useMeetSteamSearch must be used within MeetSteamSearchProvider",
+          );
+        return _;
+      };
+      function _(_) {
+        const { text: _ } = _,
+          { strSearch: _ } = _(),
+          _ = (0, _.useMemo)(
+            () =>
+              (function (_, _) {
+                const _ = _?.trim().toLowerCase();
+                if (!_ || !_)
+                  return [
+                    {
+                      strText: _ || "",
+                      bMatch: !1,
+                    },
+                  ];
+                const _ = new Array(),
+                  _ = _.toLowerCase();
+                let _ = 0;
+                for (let _ = _.indexOf(_); _ >= 0; _ = _.indexOf(_, _))
+                  _ > _ &&
+                    _.push({
+                      strText: _.slice(_, _),
+                      bMatch: !1,
+                    }),
+                    _.push({
+                      strText: _.slice(_, _ + _.length),
+                      bMatch: !0,
+                    }),
+                    (_ = _ + _.length);
+                return (
+                  _ < _.length &&
+                    _.push({
+                      strText: _.slice(_),
+                      bMatch: !1,
+                    }),
+                  _
+                );
+              })(_, _),
+            [_, _],
+          );
+        return (0, _.jsx)(_.Fragment, {
+          children: _.map((_, _) =>
+            _.bMatch
+              ? (0, _.jsx)(
+                  "span",
+                  {
+                    className: _().SearchMatch,
+                    children: _.strText,
+                  },
+                  _,
+                )
+              : (0, _.jsx)(
+                  _.Fragment,
+                  {
+                    children: _.strText,
+                  },
+                  _,
+                ),
+          ),
+        });
+      }
       function _(_) {
         const _ = _._.InitFromClanID((0, _._)()),
           _ = (function () {
@@ -2935,18 +3029,75 @@
             return _;
           })(),
           { bShowArchived: _, setShowArchived: _ } = _(),
+          { strSearch: _, setSearch: _ } = _(),
           { bIsLoading: _, events: _ } = (0, _._)(_),
-          _ = _.useMemo(() => {
-            if (!_) return null;
+          {
+            rgEventsByMonth: _,
+            cEvents: _,
+            cMatchingEvents: _,
+          } = _.useMemo(() => {
+            if (!_)
+              return {
+                rgEventsByMonth: null,
+                cEvents: 0,
+                cMatchingEvents: 0,
+              };
             const _ =
                 _ && _
                   ? [..._]
                   : _?.filter((_) => _.endTime >= new Date().getTime() / 1e3),
+              _ = _.filter((_) =>
+                (function (_, _) {
+                  if (!_?.trim()) return !0;
+                  const _ = [
+                    _.GID,
+                    _.GetNameWithFallback(_.Bhc),
+                    _.GetDescriptionWithFallback(_.Bhc),
+                  ];
+                  return (
+                    _.jsondata.meet_steam_groups?.forEach((_) => {
+                      __webpack_require__.push(
+                        _._.GetWithFallback(_.localized_session_title, _.Bhc),
+                      ),
+                        __webpack_require__.push(
+                          _._.GetWithFallback(
+                            _.localized_session_description,
+                            _.Bhc,
+                          ),
+                        ),
+                        __webpack_require__.push(
+                          _._.GetWithFallback(
+                            _.localized_intended_audience,
+                            _.Bhc,
+                          ),
+                        ),
+                        __webpack_require__.push(
+                          _._.GetWithFallback(_.localized_sesssion_faq, _.Bhc),
+                        );
+                    }),
+                    __webpack_require__.some((_) =>
+                      (function (_, _) {
+                        const _ = _?.trim().toLowerCase();
+                        return (
+                          !_ || (Boolean(_) && _.toLowerCase().includes(_))
+                        );
+                      })(_, _),
+                    )
+                  );
+                })(_, _),
+              ),
               _ = Array.from(
                 (0, _._)(_, (_) => (0, _._)(new Date(1e3 * _.startTime))),
               );
-            return _?.sort((_) => -_[0]), _;
-          }, [_, _]);
+            return (
+              __webpack_require__?.sort((_) => -_[0]),
+              {
+                rgEventsByMonth: _,
+                cEvents: _.length,
+                cMatchingEvents: _.length,
+              }
+            );
+          }, [_, _, _]);
         return _
           ? (0, _.jsx)(_._, {})
           : _
@@ -2970,6 +3121,37 @@
                     checked: _,
                     onChange: _,
                     label: "Show Past Events",
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().SearchLine,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        type: "text",
+                        placeholder: "Search events",
+                        tooltip:
+                          "In-memory search of the event id, title and description, and of the session group titles, descriptions and intended audience",
+                        value: _,
+                        onChange: (_) => _(_?.currentTarget?.value || ""),
+                      }),
+                      Boolean(_.trim()) &&
+                        (0, _.jsxs)("div", {
+                          className: _().SearchSummary,
+                          children: [
+                            "Showing ",
+                            _,
+                            " of ",
+                            _,
+                            " events  ",
+                            (0, _.jsx)("a", {
+                              href: "#",
+                              onClick: (_) => {
+                                _.preventDefault(), _("");
+                              },
+                              children: "Clear",
+                            }),
+                          ],
+                        }),
+                    ],
                   }),
                   (0, _.jsx)("hr", {}),
                   _.map((_) =>
@@ -3048,7 +3230,9 @@
                   children: [
                     (0, _.jsx)("div", {
                       className: _().Title,
-                      children: _,
+                      children: (0, _.jsx)(_, {
+                        text: _,
+                      }),
                     }),
                     (0, _.jsx)("div", {
                       className: _().StartDate,
@@ -3402,13 +3586,17 @@
             _ && Boolean(_)
               ? (0, _.jsxs)("td", {
                   children: [
-                    _,
+                    (0, _.jsx)(_, {
+                      text: _,
+                    }),
                     (0, _.jsx)(_._, {
                       tooltip: _,
                     }),
                     Boolean(_) &&
                       (0, _.jsx)("div", {
-                        children: _,
+                        children: (0, _.jsx)(_, {
+                          text: _,
+                        }),
                       }),
                   ],
                 })
@@ -4275,25 +4463,27 @@
             },
           ];
         return (0, _.jsx)(_, {
-          children: (0, _.jsxs)("div", {
-            className: _().AdminPageCtn,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().PageTitle,
-                children: [
-                  "Meet Steam Admin Dashboard ",
-                  (0, _._)("current_year", "application_config"),
-                ],
-              }),
-              (0, _.jsx)("hr", {}),
-              (0, _.jsx)(_._, {
-                tabs: _,
-              }),
-              (0, _.jsx)("div", {
-                className: _().ClearThings,
-              }),
-              (0, _.jsx)("br", {}),
-            ],
+          children: (0, _.jsx)(_, {
+            children: (0, _.jsxs)("div", {
+              className: _().AdminPageCtn,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().PageTitle,
+                  children: [
+                    "Meet Steam Admin Dashboard ",
+                    (0, _._)("current_year", "application_config"),
+                  ],
+                }),
+                (0, _.jsx)("hr", {}),
+                (0, _.jsx)(_._, {
+                  tabs: _,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().ClearThings,
+                }),
+                (0, _.jsx)("br", {}),
+              ],
+            }),
           }),
         });
       }
@@ -5308,7 +5498,7 @@
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
             overscan: _,
-            initialOffset: _,
+            initialOffset: _ ?? (() => window.scrollY),
             initialRect: void 0,
             observeElementOffset: _,
             observeElementRect: _,
@@ -5317,6 +5507,8 @@
             },
           });
         return (
+          (_.shouldAdjustScrollPositionOnItemSizeChange = (_) =>
+            void 0 !== _ && _.start < (_.scrollOffset ?? 0)),
           _.useEffect(() => {
             (0, _.startTransition)(() => {
               _.measure();

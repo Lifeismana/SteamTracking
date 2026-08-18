@@ -47,14 +47,14 @@
       i.d(e, {
         Ek: () => d,
         Fj: () => p,
-        Ho: () => g,
+        Ho: () => c,
         Kf: () => o,
-        N_: () => b,
+        N_: () => w,
         XY: () => _,
         dM: () => n,
         qj: () => a,
         s4: () => u,
-        vz: () => f,
+        vz: () => b,
         yu: () => m,
       });
       var s = i(34214);
@@ -71,8 +71,8 @@
       const r = [s.bg.iS, s.bg.dU, s.bg.CK, s.bg.wD],
         l = [s.bg.iS, s.bg.dU, s.bg.CK],
         h = [s.bg.iS, s.bg.dU],
-        g = [s.bg.pJ, s.bg.nn],
-        c =
+        c = [s.bg.pJ, s.bg.nn],
+        g =
           (s.bg.pi,
           s.bg.k7,
           [s.bg.iS, s.bg.dU, s.bg.CK, s.bg.wD, s.bg.pJ, s.bg.nn]),
@@ -258,12 +258,32 @@
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: c,
+            rgAcceptableTypes: g,
           },
           user_poll_background: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: h,
+          },
+          sale_store_capsule_header: {
+            width: 920,
+            height: 430,
+            rgAcceptableTypes: h,
+          },
+          sale_store_capsule_small: {
+            width: 462,
+            height: 174,
+            rgAcceptableTypes: h,
+          },
+          sale_store_capsule_main: {
+            width: 1232,
+            height: 706,
+            rgAcceptableTypes: h,
+          },
+          sale_store_capsule_vertical: {
+            width: 748,
+            height: 896,
             rgAcceptableTypes: h,
           },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: l },
@@ -361,10 +381,10 @@
           e.rgAcceptableTypes.includes(s.bg.pi)
         );
       }
-      function f(t, e) {
-        return e.filter((e) => b(t, e));
-      }
       function b(t, e) {
+        return e.filter((e) => w(t, e));
+      }
+      function w(t, e) {
         return p[e].rgAcceptableTypes.includes(t);
       }
     },
@@ -421,7 +441,7 @@
     },
     28954: (t, e, i) => {
       "use strict";
-      i.d(e, { bT: () => L, zO: () => T });
+      i.d(e, { bT: () => T, zO: () => L });
       var s = i(34629),
         a = i(22837),
         n = i(81393),
@@ -429,21 +449,21 @@
         r = i(41735),
         l = i.n(r),
         h = i(14947),
-        g = i(90626),
-        c = i(73744),
+        c = i(90626),
+        g = i(73744),
         p = i(86355),
         d = i(68797),
         m = i(6419),
         u = i(56011),
         _ = i(61859),
-        f = i(78327),
-        b = i(82817),
-        w = i(40414),
+        b = i(78327),
+        w = i(82817),
+        f = i(40414),
         I = i(64953),
         y = i(69343);
       function P(t, e, i) {
-        const s = (0, c.Kf)(e.width, i),
-          a = (0, c.Kf)(e.height, i);
+        const s = (0, g.Kf)(e.width, i),
+          a = (0, g.Kf)(e.height, i);
         return {
           sKey: `${t}_${s}x${a}`,
           width: s,
@@ -475,7 +495,7 @@
             (this.m_rgImageOptions =
               ((a = e),
               a?.flatMap((t) => {
-                const e = c.Fj[t];
+                const e = g.Fj[t];
                 if (
                   ((0, n.wT)(Boolean(e), `Artwork Type not in Map ${t}`),
                   "number" == typeof e.width && "number" == typeof e.height)
@@ -500,9 +520,9 @@
           return this.AddImageForLanguage(t, i);
         }
         async AddImageForLanguage(t, e) {
-          if (!((0, b.aL)(t.type) || (f.iA.is_support && (0, b.Uz)(t.type))))
+          if (!((0, w.aL)(t.type) || (b.iA.is_support && (0, w.Uz)(t.type))))
             return !1;
-          const i = await (0, b.zB)(t, (0, b.Uz)(t.type));
+          const i = await (0, w.zB)(t, (0, w.Uz)(t.type));
           if (!i) return !1;
           const s = new I.M7(
             t,
@@ -510,16 +530,16 @@
             e,
             this.m_rgImageOptions,
             i.src,
-            (0, b.II)(i),
+            (0, w.II)(i),
             i,
             this.m_localizedImageGroupPrimaryImage,
           );
           return (this.m_filesToUpload = [...this.m_filesToUpload, s]), !0;
         }
         async AddExistingClanImage(t, e = a.Bhc) {
-          const i = w.zU.GetHashAndExt(t);
+          const i = f.zU.GetHashAndExt(t);
           if (!i) return !1;
-          const s = w.zU.GenerateEditableURLFromHashAndExt(
+          const s = f.zU.GenerateEditableURLFromHashAndExt(
               this.m_clanSteamID,
               i,
             ),
@@ -585,7 +605,7 @@
             o = t.GetResizeDimension(),
             r = new FormData();
           r.append("clanimage", a, e),
-            r.append("sessionid", (0, f.KC)()),
+            r.append("sessionid", (0, b.KC)()),
             this.m_clanImagesV2 && r.append("clan_images_v2", "1"),
             n?.artworkType && r.append("arttype", n.artworkType),
             o &&
@@ -595,20 +615,20 @@
                 o.map((t) => t.width + "x" + t.height).join(","),
               );
           let h = "/uploadimage/";
-          const g = this.m_localizedImageGroupPrimaryImage;
-          g &&
+          const c = this.m_localizedImageGroupPrimaryImage;
+          c &&
             ((h = "/ajaxuploadlocalizedimage/"),
-            r.append("origimagehash", g.image_hash),
-            g.thumbnail_hash && r.append("thumbhash", g.thumbnail_hash),
-            r.append("extension", "" + g.file_type),
+            r.append("origimagehash", c.image_hash),
+            c.thumbnail_hash && r.append("thumbhash", c.thumbnail_hash),
+            r.append("extension", "" + c.file_type),
             r.append("language", "" + i));
-          const c = e.split(".").pop()?.toLocaleLowerCase();
-          ("webm" != c && "mp4" != c) ||
+          const g = e.split(".").pop()?.toLocaleLowerCase();
+          ("webm" != g && "mp4" != g) ||
             (r.append("video_width", "" + t.width),
             r.append("video_height", "" + t.height));
           let p,
             m =
-              f.TS.COMMUNITY_BASE_URL +
+              b.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               this.m_clanSteamID.ConvertTo64BitString() +
               h,
@@ -630,7 +650,7 @@
               (p = t.response);
           }
           return (
-            g || (await this.handleUploadRefresh(s)),
+            c || (await this.handleUploadRefresh(s)),
             { bSuccess: _, result: p.data }
           );
         }
@@ -648,9 +668,9 @@
           super(t, e, i, !1);
         }
       }
-      async function L(t, e, i, s, a) {
+      async function T(t, e, i, s, a) {
         let n =
-            f.TS.COMMUNITY_BASE_URL +
+            b.TS.COMMUNITY_BASE_URL +
             "/gid/" +
             e.ConvertTo64BitString() +
             "/resizeimage/",
@@ -659,14 +679,14 @@
           o.append("imagehash", i),
           o.append("extension", s),
           o.append("resize", a.map((t) => t.width + "x" + t.height).join(",")),
-          o.append("sessionid", (0, f.KC)()),
+          o.append("sessionid", (0, b.KC)()),
           (await l().post(n, o, { cancelToken: t })).data.count
         );
       }
-      function T(t, e, i) {
+      function L(t, e, i) {
         const s = (0, o.wm)(e instanceof Array ? e : [e]),
           a = t.ConvertTo64BitString();
-        return g.useMemo(() => new k(t, s, i), [a, s]);
+        return c.useMemo(() => new k(t, s, i), [a, s]);
       }
     },
     64953: (t, e, i) => {
@@ -679,8 +699,8 @@
         r = i(78511),
         l = i(66331),
         h = i(82817);
-      const g = 960,
-        c = 311,
+      const c = 960,
+        g = 311,
         p = 480,
         d = 156;
       class m extends r.q {
@@ -708,8 +728,8 @@
               (s = t.height),
               (a = !t.bDisableEnforceDimensions));
           }
-          const g = this.width >= (0, n.dM)(i) && this.height >= (0, n.dM)(s),
-            c = a ? (0, n.Ek)(this.width, this.height, i, s) : g,
+          const c = this.width >= (0, n.dM)(i) && this.height >= (0, n.dM)(s),
+            g = a ? (0, n.Ek)(this.width, this.height, i, s) : c,
             p = e && e != this.fileType,
             d =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
@@ -721,7 +741,7 @@
             m = Boolean((0, l.t)(this.fileType));
           let u,
             _ = "",
-            f = !1;
+            b = !1;
           return (
             r
               ? d
@@ -731,15 +751,15 @@
                       "#ImageUpload_InvalidFormat",
                       (0, h.EG)(e) ?? "",
                     ))
-                  : c || m
-                    ? g
-                      ? !c && m
+                  : g || m
+                    ? c
+                      ? !g && m
                         ? ((_ = (0, o.we)(
                             "#ImageUpload_InvalidDimensions",
                             (0, n.qj)(i),
                             (0, n.qj)(s),
                           )),
-                          (f = !0))
+                          (b = !0))
                         : ((Array.isArray(i) && this.width != (0, n.qj)(i)) ||
                             (Array.isArray(s) &&
                               this.height != (0, n.qj)(s))) &&
@@ -765,7 +785,7 @@
             {
               error: _,
               warnings: u,
-              needsCrop: f,
+              needsCrop: b,
               match: this.GetCurrentImageOption(),
             }
           );
@@ -780,8 +800,8 @@
             this.fileType,
             this.m_rgImageOptions?.map((t) => t.artworkType),
           );
-          let e = f(this.width, this.height, t, !1);
-          if ((void 0 === e && (e = f(this.width, this.height, t, !0)), e)) {
+          let e = b(this.width, this.height, t, !1);
+          if ((void 0 === e && (e = b(this.width, this.height, t, !0)), e)) {
             const t = this.m_rgImageOptions.find(
               (t) =>
                 t.artworkType == e &&
@@ -847,7 +867,7 @@
       function _(t) {
         return "background" === t
           ? [
-              { width: g, height: c },
+              { width: c, height: g },
               { width: p, height: d },
             ]
           : "capsule" === t || "spotlight" === t
@@ -859,7 +879,7 @@
               ]
             : void 0;
       }
-      function f(t, e, i, s = !1) {
+      function b(t, e, i, s = !1) {
         if (i)
           for (let a of i) {
             if (s ? (0, n.s4)(t, e, a) : (0, n.yu)(t, e, a)) return a;
@@ -869,7 +889,7 @@
     },
     69343: (t, e, i) => {
       "use strict";
-      i.d(e, { PD: () => p, Vr: () => c, jj: () => d });
+      i.d(e, { PD: () => p, Vr: () => g, jj: () => d });
       var s = i(2160),
         a = i(22837),
         n = i(61859),
@@ -888,14 +908,14 @@
           s
         );
       }
-      async function g(t, e, i, s, n, o) {
+      async function c(t, e, i, s, n, o) {
         const r = h(t, s, n),
           l = [];
-        let g = 0;
-        const c = Array.from({ length: Math.floor(e) }, () =>
+        let c = 0;
+        const g = Array.from({ length: Math.floor(e) }, () =>
           (async () => {
-            for (; g < r.length; ) {
-              const t = g++,
+            for (; c < r.length; ) {
+              const t = c++,
                 e = r[t];
               e.status = "uploading";
               const s = await i(e, e.filename, e.language ?? a.xPp, o);
@@ -907,7 +927,7 @@
           })(),
         );
         return (
-          await Promise.all(c),
+          await Promise.all(g),
           l.map((t) => ({
             bSuccess: t.uploadResult.bSuccess,
             image: t.image,
@@ -915,7 +935,7 @@
           }))
         );
       }
-      class c extends l {
+      class g extends l {
         m_cancel = void 0;
         async UploadAllImages(t, e) {
           this.m_cancel = r().CancelToken.source();
@@ -925,7 +945,7 @@
           return (
             (s =
               i > 1
-                ? await g(
+                ? await c(
                     this.GetUploadImages(),
                     i,
                     n,
@@ -994,7 +1014,7 @@
     },
     86355: (t, e, i) => {
       "use strict";
-      i.d(e, { mr: () => b, n9: () => f, pU: () => _ });
+      i.d(e, { mr: () => w, n9: () => b, pU: () => _ });
       var s = i(34629),
         a = i(37085),
         n = i(41735),
@@ -1002,8 +1022,8 @@
         r = i(14947),
         l = i(90626),
         h = i(17720),
-        g = i(4434),
-        c = i(81393),
+        c = i(4434),
+        g = i(81393),
         p = i(6144),
         d = i(84933),
         m = i(78327);
@@ -1062,7 +1082,7 @@
         async InternalLoadClanImages(t, e, i) {
           let s = t.GetAccountID();
           if (
-            ((0, c.wT)(t && 0 != s, "ClanSteamID missing:" + t),
+            ((0, g.wT)(t && 0 != s, "ClanSteamID missing:" + t),
             t && (!this.m_mapClanToImages.has(s) || e))
           ) {
             let e,
@@ -1167,13 +1187,13 @@
       (0, s.Cg)([r.sH], u.prototype, "m_mapClanToImages", void 0),
         (0, s.Cg)([r.sH], u.prototype, "m_mapClanImageLoadState", void 0);
       const _ = new u();
-      function f(t) {
+      function b(t) {
         const [e, i] = (0, l.useState)(_.GetClanImagesByAccount(t));
         return (0, d.hL)(_.GetImageListCallbackForClanAccountID(t), i), e;
       }
-      function b(t) {
+      function w(t) {
         const e = h.b.InitFromClanID(t),
-          i = (0, g.m)("useLoadClanImages"),
+          i = (0, c.m)("useLoadClanImages"),
           [s, a] = (0, l.useState)(() => _.BHasLoadedClanImages(e));
         return (
           (0, l.useEffect)(() => {
@@ -1226,8 +1246,8 @@
         r = i(84933),
         l = i(75844),
         h = i(6144),
-        g = i(61859),
-        c = i(56283),
+        c = i(61859),
+        g = i(56283),
         p = i(12155),
         d = i(81315),
         m = i.n(d),
@@ -1636,23 +1656,23 @@
                   (0, n.jsxs)("div", {
                     className: m().LinkRegionInfo,
                     children: [
-                      (0, n.jsx)(c.pd, {
+                      (0, n.jsx)(g.pd, {
                         className: m().LinkRegionInput,
                         type: "text",
                         name: "link_url",
                         value: this.state.text_link_url,
-                        label: (0, g.we)("#SteamTV_LinkURL"),
+                        label: (0, c.we)("#SteamTV_LinkURL"),
                         placeholder: "https://www.example.com",
                         onChange: this.OnSetLinkURLChange,
                         mustBeURL: !0,
                       }),
-                      (0, n.jsx)(c.pd, {
+                      (0, n.jsx)(g.pd, {
                         className: m().LinkRegionInput,
                         type: "text",
                         name: "link_description",
                         value: this.state.text_link_description,
-                        label: (0, g.we)("#SteamTV_LinkDescription"),
-                        placeholder: (0, g.we)(
+                        label: (0, c.we)("#SteamTV_LinkDescription"),
+                        placeholder: (0, c.we)(
                           "#SteamTV_LinkDescription_Placeholder",
                         ),
                         onChange: this.OnSetLinkDescriptionChange,
@@ -1660,14 +1680,14 @@
                       (0, n.jsxs)("div", {
                         className: m().LinkRegionButtonContainer,
                         children: [
-                          (0, n.jsxs)(c.$n, {
+                          (0, n.jsxs)(g.$n, {
                             disabled: !this.state.valid_link,
                             onClick: this.OnSaveLink,
-                            children: [" ", (0, g.we)("#Button_OK"), " "],
+                            children: [" ", (0, c.we)("#Button_OK"), " "],
                           }),
-                          (0, n.jsxs)(c.$n, {
+                          (0, n.jsxs)(g.$n, {
                             onClick: this.OnEditLink,
-                            children: [" ", (0, g.we)("#Button_Cancel")],
+                            children: [" ", (0, c.we)("#Button_Cancel")],
                           }),
                         ],
                       }),
@@ -1691,7 +1711,7 @@
     },
     66331: (t, e, i) => {
       "use strict";
-      i.d(e, { q: () => _, t: () => f });
+      i.d(e, { q: () => _, t: () => b });
       var s = i(34629),
         a = i(7850),
         n = i(90626),
@@ -1699,8 +1719,8 @@
         r = i(34214),
         l = i(56283),
         h = i(81416),
-        g = i(74568),
-        c = i(52038),
+        c = i(74568),
+        g = i(52038),
         p = i(61859),
         d = i(84933),
         m = i(50666),
@@ -1719,19 +1739,19 @@
           const t = this.props.uploadFile.GetCanvasImageSource();
           t &&
             (await (async function (t, e, i, s, a, n, o, l, h) {
-              return new Promise((g, c) => {
-                const p = f(h);
-                if (!p) return void c("Invalid format provided");
+              return new Promise((c, g) => {
+                const p = b(h);
+                if (!p) return void g("Invalid format provided");
                 const d = document.createElement("canvas");
                 (d.width = o), (d.height = l);
                 const m = 0,
                   _ = 0,
-                  b = d.getContext("2d");
-                b?.drawImage(e, i, s, a, n, m, _, o, l),
+                  w = d.getContext("2d");
+                w?.drawImage(e, i, s, a, n, m, _, o, l),
                   d.toBlob((e) => {
                     const i = d.toDataURL(p);
                     h !== r.bg.dU && i.startsWith("data:image/png")
-                      ? c("Unable to encode into the requested file format")
+                      ? g("Unable to encode into the requested file format")
                       : e
                         ? ((t.file = (0, u.pE)(e, t.filename)),
                           (t.width = o),
@@ -1739,8 +1759,8 @@
                           (t.dataUrl = i),
                           (t.uploadTime = Date.now()),
                           (t.bCropped = !0),
-                          g())
-                        : c("Unable to apply crop into image");
+                          c())
+                        : g("Unable to apply crop into image");
                   });
               });
             })(
@@ -1815,11 +1835,11 @@
               800,
               500,
             );
-          return (0, a.jsx)(g.x_, {
+          return (0, a.jsx)(c.x_, {
             onEscKeypress: this.props.closeModal,
             bDisableBackgroundDismiss: !0,
             children: (0, a.jsxs)("div", {
-              className: (0, c.A)("DialogContent", "_DialogCenterVertically"),
+              className: (0, g.A)("DialogContent", "_DialogCenterVertically"),
               children: [
                 (0, a.jsx)(l.iK, {
                   children: (0, p.we)(
@@ -1829,7 +1849,7 @@
                   ),
                 }),
                 (0, a.jsx)("div", {
-                  className: (0, c.A)("DialogBodyText"),
+                  className: (0, g.A)("DialogBodyText"),
                   children: (0, p.we)("#ImageUpload_CropModalDescription"),
                 }),
                 (0, a.jsxs)("div", {
@@ -1877,7 +1897,7 @@
           });
         }
       }
-      function f(t) {
+      function b(t) {
         switch (t) {
           case r.bg.dU:
             return "image/png";

@@ -1009,6 +1009,8 @@
         AppGroupContainer: "_1h_liRAveMPJfzuAIcZaYM",
         CountryList: "_17dzIUq2f_CSOR1Eug7HUe",
         OwnerLimit: "LDwRnmtVW5slGcNhaiHPs",
+        AttributesAndType: "_2wn3w6xWO3J2CSrb1I_Hlu",
+        AttributeSlot: "_234oIvLFA7bBfwNHjzZRFO",
         CapsulePlatform: "_2OJsE_nWOGFfZwO3NXSNsz",
         LiveStatsCtn: "_3fKCbgfnhUnHqZuYR_DA8h",
         ViewsCtn: "qbvhk46RDj72WOCxtxodV",
@@ -2673,6 +2675,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2861,6 +2864,9 @@
             ((_.no_filters_required = !1), _(_, _.user_filters)),
           _
         );
+      }
+      function _(_) {
+        return Number(_?.sale_clan_account) > 0;
       }
       function _(_, _) {
         switch (_) {
@@ -9364,6 +9370,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("DailyDealAdmin"),
         _ = 7,
@@ -9421,7 +9428,7 @@
           _ && ((_ = _.sale_clan_account), (_ = _.sale_clan_event_gid));
         }
         const { eventModel: _, bLoading: _ } = (0, _._)(_, _);
-        return !_ && _?.GetSaleURL();
+        return !_ && (0, _._)(_);
       }
       !(function (_) {
         (_[(_.k_BlockDate = 1)] = "k_BlockDate"),
@@ -20706,7 +20713,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (
+          ((0, _._)("steamops_base_url", "application_config") ?? "") +
+          "localllm/themesalematch"
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20714,7 +20728,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -21438,10 +21451,7 @@
                       }),
                       (0, _.jsx)(_._, {
                         color: "dull",
-                        onClick: (_) =>
-                          (window.location.href =
-                            _._.PARTNER_BASE_URL +
-                            "promotion/tools/themesalematch"),
+                        onClick: (_) => (0, _._)(_, _()),
                         children: "Theme Sale Determination",
                       }),
                       (0, _.jsx)(_._, {
@@ -23217,8 +23227,7 @@
                   children: [
                     "The same eligibility criteria written for a model instead of a person: what the sale is looking for, phrased so it can be judged against a game's store description and tags. Keep appeals and process instructions out of it. Test it against real apps on the ",
                     (0, _.jsx)("a", {
-                      href:
-                        _._.PARTNER_BASE_URL + "promotion/tools/themesalematch",
+                      href: _(),
                       target: "_blank",
                       children: "Theme Sale Determination page",
                     }),
@@ -59953,12 +59962,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { marketingMessageID: _, bForceShowYear: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_),
-          { bReady: _ } = (0, _._)(_, null);
+          { bReady: _ } = (0, _._)(_, null),
+          _ = (0, _.useMemo)(
+            () => (0, _._)(_?.gid, _?.additional_restrictions_json),
+            [_?.gid, _?.additional_restrictions_json],
+          );
         if (!_)
           return (0, _.jsx)(_._, {
             string: _,
@@ -60003,20 +60017,30 @@
                       }),
                   ],
                 }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)({
-                    [_.Col]: !0,
-                    [_.Type]: !0,
-                    [_.Deal]: Boolean(
-                      _.type == _._._ ||
-                        _.type == _._._ ||
-                        _.type == _._._ ||
-                        _.type == _._._,
-                    ),
-                  }),
-                  children: (0, _.jsx)("span", {
-                    children: (0, _._)(_.type),
-                  }),
+                (0, _.jsxs)("div", {
+                  className: _.AttributesAndType,
+                  children: [
+                    (0, _.jsx)(_, {
+                      bSet: (0, _._)(_),
+                      strTooltip: "Linked to a partner sale event",
+                      children: (0, _.jsx)(_.XH_, {}),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)({
+                        [_.Col]: !0,
+                        [_.Type]: !0,
+                        [_.Deal]: Boolean(
+                          _.type == _._._ ||
+                            _.type == _._._ ||
+                            _.type == _._._ ||
+                            _.type == _._._,
+                        ),
+                      }),
+                      children: (0, _.jsx)("span", {
+                        children: (0, _._)(_.type),
+                      }),
+                    }),
+                  ],
                 }),
                 (0, _.jsx)("div", {
                   className: (0, _._)(_.Col, _.Date),
@@ -60093,6 +60117,18 @@
             }),
           ],
         });
+      }
+      function _(_) {
+        const { bSet: _, strTooltip: _, children: _ } = _;
+        return _
+          ? (0, _.jsx)(_._, {
+              className: _.AttributeSlot,
+              toolTipContent: _,
+              children: _,
+            })
+          : (0, _.jsx)("div", {
+              className: _.AttributeSlot,
+            });
       }
       function _(_) {
         const { gid: _ } = _,
@@ -75253,6 +75289,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
           {
@@ -75484,7 +75521,7 @@
               name: __webpack_require__.GetSaleVanity(),
               type: "Sale Store Page",
               _: __webpack_require__.GetSaleVanity(),
-              fnGetURL: (_) => __webpack_require__.GetSaleURL(),
+              fnGetURL: (_) => (0, _._)(_),
             })
           : null;
       }
@@ -82872,7 +82909,7 @@
               }),
               (0, _.jsx)(_, {
                 saleDesc: _,
-                strSaleURL: _.GetSaleURL(),
+                strSaleURL: (0, _._)(_),
                 strEventName: _.GetNameWithFallback(_),
               }),
               (0, _.jsxs)("div", {
@@ -82940,7 +82977,7 @@
       }
       function _(_) {
         const { eventModel: _, eLanguage: _ } = _,
-          _ = _.GetSaleURL(),
+          _ = (0, _._)(_),
           _ = (0, _._)(_, "capsule", _, _._.capsule_main);
         return (0, _.jsx)(_._, {
           toolTipContent: _.GetSummaryWithFallback(_),
@@ -83088,7 +83125,7 @@
           _ = (0, _._)(_.clanSteamID.GetAccountID()),
           _ = _.clanSteamID.GetAccountID(),
           _ = _.GID,
-          _ = __webpack_require__.GetSaleURL(),
+          _ = (0, _._)(_),
           _ =
             _._.COMMUNITY_BASE_URL +
             "gid/" +
@@ -96904,262 +96941,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const [_, _] = (0, _.useState)({}),
-          _ = (0, _._)("useEventHeaderData");
-        return (
-          (0, _.useEffect)(() => {
-            if (_)
-              _._.Get()
-                .QueueAppRequest(_, {
-                  include_assets: !0,
-                  include_screenshots: !0,
-                })
-                .then(() => {
-                  const _ = _._.Get().GetApp(_);
-                  _ &&
-                    !_?.token?.reason &&
-                    _({
-                      strCapsuleUrl: _.GetAssets().GetHeaderURL(),
-                      strGroupTitle: _.GetName(),
-                      _: _,
-                      strStoreURL:
-                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                        _.GetStorePageURL(),
-                      strCommunityURL:
-                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                        _.GetCommunityPageURL(),
-                      strForumURL:
-                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                        _.GetCommunityDiscussionForumsURL(),
-                    });
-                });
-            else if (_) {
-              const _ = _._.InitFromClanID(_);
-              _._.LoadClanInfoForClanSteamID(_).then((_) => {
-                _?.token?.reason ||
-                  _({
-                    strCapsuleUrl: _.avatar_full_url,
-                    strGroupTitle: _.group_name,
-                    _: _,
-                    strStoreURL:
-                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                      _._.STORE_BASE_URL +
-                      "curator/" +
-                      _ +
-                      "/",
-                    strCommunityURL:
-                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                      _._.COMMUNITY_BASE_URL +
-                      "gid/" +
-                      _.ConvertTo64BitString(),
-                    strExtraBannerGroupStyle: _().ClanBanner,
-                  });
-              });
-            }
-          }, [_, _?.token?.reason, _]),
-          _
-        );
-      }
-      function _(_) {
-        const { appId: _, clanId: _, bShowRSSFeed: _ } = _,
-          { strStoreURL: _, strCommunityURL: _, strForumURL: _ } = _(_, _),
-          _ = (0, _._)(),
-          _ =
-            _._.STORE_BASE_URL +
-            "feeds/" +
-            (0, _._)() +
-            (_ ? "/app/" + _ : "/group/" + _) +
-            "/?cc=" +
-            _._.COUNTRY +
-            "&l=" +
-            _._.LANGUAGE,
-          _ = _._.Get().GetPartnerEventPermissions(_._.InitFromClanID(_)),
-          _ = _ && (_.can_edit || _.support_user),
-          _ = _._.Get().BOwnsApp(_),
-          _ = (0, _.useMemo)(() => {
-            const _ = [];
-            return (
-              _._.IN_CLIENT &&
-                _ &&
-                _.push({
-                  label: (0, _._)("#EventDisplay_ViewInLibrary_ExtraShort"),
-                  data: "steam://nav/games/details/" + _,
-                }),
-              _.push({
-                label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
-                data: (0, _._)(_),
-              }),
-              _ ||
-                (_.push({
-                  label: (0, _._)("#EventDisplay_ViewCommunityPage_ExtraShort"),
-                  data: (0, _._)(_),
-                }),
-                _ &&
-                  _.push({
-                    label: (0, _._)("#EventDisplay_ViewForum_ExtraShort"),
-                    data: (0, _._)(_),
-                  }),
-                _ &&
-                  _.push({
-                    label: (0, _.jsxs)("div", {
-                      className: _().RssRow,
-                      children: [
-                        (0, _.jsx)(_.ZPc, {}),
-                        (0, _._)("#EventDisplay_RSSFeed_ExtraShort"),
-                      ],
-                    }),
-                    data: _,
-                  })),
-              _ &&
-                _.push({
-                  label: (0, _._)("#EventDisplay_Admin_ExtraShort"),
-                  data: (0, _._)(_, _._.InitFromClanID(_), "admin"),
-                }),
-              _
-            );
-          }, [_, _, _, _, _, _, _, _, _, _]);
-        return (0, _.jsx)(_._, {
-          strDefaultLabel: (0, _._)("#EventDisplay_LinksDropDown_ExtraShort"),
-          strClassName: _().AppBannerLinkDD,
-          strDropDownButtonClassName: _().AppBannerLinkDDButton,
-          strDropDownMenuCtnClass: _().AppBannerLinkDDContainer,
-          contextMenuPositionOptions: {
-            bMatchWidth: !1,
-          },
-          arrowClassName: _().DDButtonArrow,
-          rgOptions: _,
-          onChange: (_, _, _) => (0, _._)(_, _.data),
-        });
-      }
-      const _ = (0, _._)((_) => {
-        const { appId: _, clanId: _ } = _,
-          {
-            strCapsuleUrl: _,
-            strGroupTitle: _,
-            _: _,
-            strExtraBannerGroupStyle: _,
-          } = _(_, _),
-          _ = (0, _.useMemo)(
-            () =>
-              _
-                ? {
-                    appid: _,
-                  }
-                : {
-                    creatorid: _,
-                  },
-            [_, _],
-          ),
-          { data: _ } = (0, _._)(_),
-          _ = _._.Get().BOwnsApp(_);
-        let _ = Boolean(_ !== _._);
-        const _ = (0, _.jsx)("img", {
-          className: _().AppBannerLogo,
-          src: _,
-        });
-        return (0, _._)()
-          ? null
-          : (0, _.jsxs)("div", {
-              className: _().AppBannerCtn,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().AppBannerBackground,
-                  style: {
-                    backgroundImage: `url(${_})`,
-                  },
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().AppBannerGroup, _),
-                  children: [
-                    _
-                      ? Boolean(_)
-                        ? (0, _.jsx)(_._, {
-                            _: _,
-                            className: _().AppBannerLogoCtn,
-                            hoverProps: {
-                              direction: "overlay",
-                              style: {
-                                minWidth: "320px",
-                              },
-                            },
-                            children: _,
-                          })
-                        : (0, _.jsx)(_._, {
-                            _: _,
-                            hoverClassName: _().AppBannerLogoCtn,
-                            children: _,
-                          })
-                      : (0, _.jsxs)("div", {
-                          className: _().AppBannerLogoCtn,
-                          children: [_, " "],
-                        }),
-                    (0, _.jsxs)("div", {
-                      className: _().AppBannerTitle,
-                      children: [
-                        _,
-                        (0, _.jsx)("div", {
-                          className: _().NewsHubSubTitle,
-                          children: (0, _._)("#EventDisplay_NewsHubSubtitle"),
-                        }),
-                      ],
-                    }),
-                    _ &&
-                      (0, _.jsxs)("div", {
-                        className: _().AppBannerLinks,
-                        children: [
-                          Boolean(!_ && _) &&
-                            (0, _.jsx)("div", {
-                              className: _().HeaderWishlistButton,
-                              children: (0, _.jsx)(_._, {
-                                appid: _,
-                                bIsFree: Boolean(_?.is_free),
-                                bIsComingSoon: Boolean(_?.is_coming_soon),
-                                className: (0, _._)(
-                                  _().ActionButton,
-                                  _().WishlistBtnShort,
-                                ),
-                              }),
-                            }),
-                          (0, _.jsx)("div", {
-                            className: _().HeaderFollowButton,
-                            children: Boolean(_)
-                              ? (0, _.jsx)(_._, {
-                                  appid: _,
-                                  className: _().HeaderButtonDark,
-                                })
-                              : (0, _.jsx)(_._, {
-                                  clanAccountID: _,
-                                  className: _().HeaderButtonDark,
-                                }),
-                          }),
-                          (0, _.jsx)(_, {
-                            ..._,
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-              ],
-            });
-      });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -97296,7 +97077,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -97488,249 +97275,202 @@
           .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
+        const [_, _] = _.useState(() =>
+            _._.Get().BHasMyVote(_)
+              ? _(_._.Get().GetPreviouslyLoadedVote(_))
+              : void 0,
+          ),
+          [_, _] = _.useState(() => !!_._.Get().BHasMyVote(_)),
+          _ = _.useRef(_),
+          _ = _.GID;
+        _.useEffect(() => {
+          const _ = _.current || !_._.Get().BIsUserLoggedIn();
+          if (((_.current = !1), _)) return;
+          const _ = _().CancelToken.source();
+          return (
+            _._.Get()
+              .LoadMyVote(_, _)
+              .then((_) => {
+                __webpack_require__(_(_)), _(!0);
+              })
+              .catch((_) => {
+                const _ = (0, _._)(_);
+                console.error("EventDiscussionWidget = " + _.strErrorMsg);
+              }),
+            () => _.cancel("EventDiscussionWidget is being unmounted")
+          );
+        }, [_]);
+        const _ = _.useCallback(
+          (_) => {
+            (function (_, _) {
+              return _.BIsUserLoggedIn()
+                ? !_.GetPartnerEventPermissions(_.clanSteamID).limited_user ||
+                    ((0, _._)((0, _.jsx)(_._, {}), window), !1)
+                : (_._.IN_CLIENT
+                    ? console.log(
+                        "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.",
+                      )
+                    : (0, _._)(
+                        (0, _.jsx)(_._, {
+                          strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
+                          strDescription: (0, _._)(
+                            "#EventDisplay_Share_NotLoggedIn_Description",
+                          ),
+                          strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
+                          onOK: () => (0, _._)(),
+                        }),
+                        window,
+                      ),
+                  !1);
+            })(_, _._.Get()) &&
+              _ != _ &&
+              null != _ &&
+              _ &&
+              (_._.Get()
+                .Vote(_, "up" === _, _().CancelToken.source())
+                .catch((_) => {
+                  const _ = (0, _._)(_);
+                  console.error(
+                    "EventDiscussionWidget.OnVote" + _ + " " + _.strErrorMsg,
+                    _,
+                  );
+                }),
+              __webpack_require__(_));
+          },
+          [_, _, _],
+        );
+        return {
+          myVote: _,
+          Vote: _,
+        };
+      }
+      function _(_) {
         let _;
         return !0 === _ ? (_ = "up") : !1 === _ && (_ = "down"), _;
       }
-      const _ = (_) => {
-        const _ = (0, _._)();
-        return (0, _.jsx)(_, {
-          ..._,
-          bInGamepadUI: _,
-        });
-      };
-      let _ = class extends _.Component {
-        m_cancelSignal = _().CancelToken.source();
-        constructor(_) {
-          super(_);
-          const _ = _._.Get().BHasMyVote(_.eventModel);
-          let _;
-          _ && (_ = _(_._.Get().GetPreviouslyLoadedVote(_.eventModel))),
-            (this.state = {
-              bLoadedVote: !!_,
-              myVote: _,
-            });
-        }
-        async HandleRefreshMyVotingInformation() {
-          const { eventModel: _, partnerEventStore: _ } = this.props;
-          _._.Get().BIsUserLoggedIn() &&
-            (_._.Get()
-              .LoadMyVote(_, this.m_cancelSignal)
-              .then((_) => {
-                let _ = _(_);
-                this.setState({
-                  myVote: _,
-                  bLoadedVote: !0,
-                });
-              })
-              .catch((_) => {
-                let _ = (0, _._)(_);
-                console.error("EventDiscussionWidget = " + _.strErrorMsg);
-              }),
-            _._.LoadClanInfoForClanSteamID(_.clanSteamID).catch((_) => {
-              let _ = (0, _._)(_);
-              console.error("EventDiscussionWidget = " + _.strErrorMsg);
-            }));
-        }
-        componentDidMount() {
-          this.state.bLoadedVote || this.HandleRefreshMyVotingInformation();
-        }
-        componentDidUpdate(_) {
-          this.props.eventModel.GID != _.eventModel.GID &&
-            this.HandleRefreshMyVotingInformation();
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "EventDiscussionWidget is being unmounted",
-          );
-        }
-        OnVoteUp() {
-          this.Vote("up");
-        }
-        OnVoteDown() {
-          this.Vote("down");
-        }
-        Vote(_) {
-          const { eventModel: _ } = this.props;
-          (function (_, _) {
-            return _.BIsUserLoggedIn()
-              ? !_.GetPartnerEventPermissions(_.clanSteamID).limited_user ||
-                  ((0, _._)((0, _.jsx)(_._, {}), window), !1)
-              : (_._.IN_CLIENT
-                  ? console.log(
-                      "EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.",
-                    )
-                  : (0, _._)(
-                      (0, _.jsx)(_._, {
-                        strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                        strDescription: (0, _._)(
-                          "#EventDisplay_Share_NotLoggedIn_Description",
-                        ),
-                        strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                        onOK: () => (0, _._)(),
+      function _(_) {
+        const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
+          _ = (0, _._)(),
+          { myVote: _, Vote: _ } = _(_),
+          [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
+          [_, _, _, _] = (0, _._)(() => [
+            (0, _._)(_.nVotesUp - _.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
+            (0, _._)(_.GetForumTopicURL(_?.vanity_url)),
+            _.BIsUnlistedEvent(),
+            _.nCommentCount,
+          ]),
+          _ = (0, _._)(),
+          _ = _._.logged_in && _.Get().BCanRepostPartnerEvent();
+        return (0, _.jsxs)(_._, {
+          className: _().Container,
+          "flow-children": "row",
+          focusable: !1,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().InnerContainer,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().VoteContainer,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().VoteCount,
+                      children: [
+                        (0, _.jsx)(_.bfp, {
+                          className: _().VoteUpStaticIcon,
+                        }),
+                        (0, _._)(_),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
+                      focusable: !0,
+                      className: (0, _._)(
+                        _().Button,
+                        _().Icon,
+                        _().DiscussionButton,
+                        "up" == _ ? _().VoteButtonSelected : "",
+                      ),
+                      onActivate: () => _("up"),
+                      children: [
+                        (0, _.jsx)(_.bfp, {
+                          className:
+                            "up" == _ ? _().VoteUpSelectedIcon : _().VoteUpIcon,
+                        }),
+                        (0, _.jsx)("span", {
+                          className: _().DiscussionButtonText,
+                          children: (0, _._)("#Button_RateUp"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      focusable: !0,
+                      className: (0, _._)(
+                        _().Button,
+                        _().Icon,
+                        _().DiscussionButton,
+                        "down" == _ ? _().VoteButtonSelected : "",
+                      ),
+                      onActivate: () => _("down"),
+                      "aria-label": (0, _._)("#Button_RateDown"),
+                      children: (0, _.jsx)(_.bfp, {
+                        className:
+                          "down" == _
+                            ? _().VoteDownSelectedIcon
+                            : _().VoteDownIcon,
                       }),
-                      window,
-                    ),
-                !1);
-          })(_, _._.Get()) &&
-            this.state.myVote != _ &&
-            null != _ &&
-            this.state.bLoadedVote &&
-            this.setState(
-              {
-                bVotingUp: "up" == _,
-                bVotingDown: "down" == _,
-              },
-              () => {
-                _._.Get()
-                  .Vote(_, "up" === _, this.m_cancelSignal)
-                  .catch((_) => {
-                    let _ = (0, _._)(_);
-                    console.error(
-                      "EventDiscussionWidget.OnVote" + _ + " " + _.strErrorMsg,
-                      _,
-                    ),
-                      this.setState({
-                        bVotingDown: !1,
-                        bVotingUp: !1,
-                      });
+                    }),
+                  ],
+                }),
+                Boolean(!_ && !_) &&
+                  (0, _.jsx)(_, {
+                    commentCount: _,
+                    discussionURL: _,
+                    gotoDiscussion: (_) => {
+                      (0, _._)(
+                        (0, _.jsx)(_._, {
+                          strDescription: (0, _._)(
+                            "#EventDisplay_Share_CommentMigrationInProcess",
+                          ),
+                        }),
+                        (0, _._)(_),
+                      );
+                    },
                   }),
-                  this.setState({
-                    myVote: _,
-                    bVotingDown: !1,
-                    bVotingUp: !1,
-                  });
-              },
-            );
-        }
-        GotoDiscussion(_) {
-          (0, _._)(
-            (0, _.jsx)(_._, {
-              strDescription: (0, _._)(
-                "#EventDisplay_Share_CommentMigrationInProcess",
-              ),
-            }),
-            (0, _._)(_),
-          );
-        }
-        OpenRepostDialogs(_) {
-          (0, _._)(
-            (0, _.jsx)(_, {
-              eventModel: this.props.eventModel,
-            }),
-            (0, _._)(_),
-          );
-        }
-        render() {
-          const { eventModel: _ } = this.props,
-            _ = (0, _._)(_.nVotesUp - _.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
-            _ = _.GetForumTopicURL(),
-            _ = (0, _._)(_),
-            _ = (0, _._)(),
-            _ = _.BIsUnlistedEvent(),
-            _ = _._.logged_in && _.Get().BCanRepostPartnerEvent();
-          return (0, _.jsxs)(_._, {
-            className: _().Container,
-            "flow-children": "row",
-            focusable: !1,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().InnerContainer,
-                children: [
-                  (0, _.jsxs)("div", {
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _().VoteContainer,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: _().VoteCount,
-                        children: [
-                          (0, _.jsx)(_.bfp, {
-                            className: _().VoteUpStaticIcon,
+                    children: (0, _.jsx)(_._, {
+                      focusable: !0,
+                      className: (0, _._)(
+                        _().Button,
+                        _().Icon,
+                        _().DiscussionButton,
+                        "down" == _ ? _().VoteButtonSelected : "",
+                      ),
+                      onActivate: (_) => {
+                        (0, _._)(
+                          (0, _.jsx)(_, {
+                            eventModel: _,
                           }),
                           (0, _._)(_),
-                        ],
-                      }),
-                      (0, _.jsxs)(_._, {
-                        focusable: !0,
-                        className: (0, _._)(
-                          _().Button,
-                          _().Icon,
-                          _().DiscussionButton,
-                          "up" == this.state.myVote
-                            ? _().VoteButtonSelected
-                            : "",
-                        ),
-                        onActivate: this.OnVoteUp,
-                        children: [
-                          (0, _.jsx)(_.bfp, {
-                            className:
-                              "up" == this.state.myVote
-                                ? _().VoteUpSelectedIcon
-                                : _().VoteUpIcon,
-                          }),
-                          (0, _.jsx)("span", {
-                            className: _().DiscussionButtonText,
-                            children: (0, _._)("#Button_RateUp"),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)(_._, {
-                        focusable: !0,
-                        className: (0, _._)(
-                          _().Button,
-                          _().Icon,
-                          _().DiscussionButton,
-                          "down" == this.state.myVote
-                            ? _().VoteButtonSelected
-                            : "",
-                        ),
-                        onActivate: this.OnVoteDown,
-                        "aria-label": (0, _._)("#Button_RateDown"),
-                        children: (0, _.jsx)(_.bfp, {
-                          className:
-                            "down" == this.state.myVote
-                              ? _().VoteDownSelectedIcon
-                              : _().VoteDownIcon,
-                        }),
-                      }),
-                    ],
-                  }),
-                  Boolean(!_ && !_) &&
-                    (0, _.jsx)(_, {
-                      commentCount: _.nCommentCount,
-                      discussionURL: _,
-                      gotoDiscussion: this.GotoDiscussion,
+                        );
+                      },
+                      children: (0, _._)("#EventRepost_Dialog_Title"),
                     }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _().VoteContainer,
-                      children: (0, _.jsx)(_._, {
-                        focusable: !0,
-                        className: (0, _._)(
-                          _().Button,
-                          _().Icon,
-                          _().DiscussionButton,
-                          "down" == this.state.myVote
-                            ? _().VoteButtonSelected
-                            : "",
-                        ),
-                        onActivate: this.OpenRepostDialogs,
-                        children: (0, _._)("#EventRepost_Dialog_Title"),
-                      }),
-                    }),
-                ],
-              }),
-              !this.props.bInGamepadUI &&
-                (0, _.jsx)("div", {
-                  className: _().ShareContainer,
-                  children: (0, _.jsx)(_, {
-                    eventModel: _,
-                    emoticonStore: this.props.emoticonStore,
-                    partnerEventStore: this.props.partnerEventStore,
                   }),
+              ],
+            }),
+            !_ &&
+              (0, _.jsx)("div", {
+                className: _().ShareContainer,
+                children: (0, _.jsx)(_, {
+                  eventModel: _,
+                  emoticonStore: _,
+                  partnerEventStore: _,
                 }),
-            ],
-          });
-        }
-      };
+              }),
+          ],
+        });
+      }
       function _(_) {
         const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
           [_, _, _] = (0, _._)(),
@@ -97813,15 +97553,17 @@
           ],
         });
       }
-      (0, _._)([_._], _.prototype, "OnVoteUp", null),
-        (0, _._)([_._], _.prototype, "OnVoteDown", null),
-        (0, _._)([_._], _.prototype, "GotoDiscussion", null),
-        (0, _._)([_._], _.prototype, "OpenRepostDialogs", null),
-        (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(void 0);
+      function _() {
+        return _.useContext(_) ?? (0, _._)();
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -97856,7 +97598,7 @@
           _ = {
             rgCategories: _,
             _:
-              ((_ = _._.GetTimeNowWithOverride()),
+              ((_ = (0, _._)()),
               new Date(1e3 * _).toISOString().slice(0, 19).replace("T", " ")),
           };
         var _;
@@ -97879,12 +97621,17 @@
         return null;
       }
       const _ = {
-        include_assets: !0,
-      };
+          include_assets: !0,
+        },
+        _ = {
+          include_basic_info: !0,
+        };
       function _(_) {
-        const { event: _, lang: _, previewMode: _ } = _,
+        const { event: _, previewMode: _ } = _,
           [_] = (0, _._)(() => [_.GetSteamAwardCategory()]),
           _ = (0, _._)("EventDisplaySteamAwardNomination"),
+          _ = _(),
+          [_] = (0, _._)(_.appid, _),
           [_, _] = (0, _.useState)(null),
           { currentNomination: _, bLoadingNominationForCategory: _ } = (0, _._)(
             _,
@@ -97903,7 +97650,6 @@
             position: "center",
             string: (0, _._)("#Loading"),
           });
-        const _ = _._.GetTimeNowWithOverride();
         if (!_ && !_.bIsAutumnSaleActive) return null;
         let _ = {};
         _.strBackgroundCSS?.length && (_.backgroundColor = _.strBackgroundCSS),
@@ -97912,7 +97658,8 @@
           _.strTextColor?.length && (_.color = _.strTextColor);
         const _ = 1 == _.rgAwardCategoryDetails?.length,
           _ =
-            _.BIsEventActionEnabled() || _ < _.GetStartTimeAndDateUnixSeconds(),
+            _.BIsEventActionEnabled(_) ||
+            _ < _.GetStartTimeAndDateUnixSeconds(),
           _ = new Date().getFullYear();
         return (0, _.jsxs)("div", {
           style: _,
@@ -97958,7 +97705,7 @@
                         ? _
                           ? (0, _._)(
                               "#SteamAwards_EventNominateGamePrompt_Long",
-                              _.GetGameTitle(_),
+                              _?.GetName(),
                             )
                           : (0, _.jsx)("a", {
                               className: _().LinkText,
@@ -97967,7 +97714,7 @@
                               ),
                               children: (0, _._)(
                                 "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                                _.GetGameTitle(_),
+                                _?.GetName(),
                               ),
                             })
                         : (0, _._)("#SteamAwards_Event_NominationsClosed"),
@@ -97987,6 +97734,7 @@
       function _(_) {
         const { event: _, nominationEventDetails: _, currentNomination: _ } = _,
           [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
+          _ = _(),
           _ = _?.appid,
           _ = (0, _._)(_, _, _._._),
           _ = Boolean(_?.appid == _ && _?.category_id == _),
@@ -98014,10 +97762,10 @@
             },
             [_, _, _],
           ),
-          _ = _._.GetTimeNowWithOverride(),
           _ = 1 == _.rgAwardCategoryDetails?.length,
           _ =
-            _.BIsEventActionEnabled() || _ < _.GetStartTimeAndDateUnixSeconds();
+            _.BIsEventActionEnabled(_) ||
+            _ < _.GetStartTimeAndDateUnixSeconds();
         return _ && (_ || _)
           ? (0, _.jsxs)("div", {
               className: (0, _._)(
@@ -98476,25 +98224,289 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const [_, _] = (0, _.useState)({}),
+          _ = (0, _._)("useEventHeaderData");
+        return (
+          (0, _.useEffect)(() => {
+            if (_)
+              _._.Get()
+                .QueueAppRequest(_, {
+                  include_assets: !0,
+                  include_screenshots: !0,
+                })
+                .then(() => {
+                  const _ = _._.Get().GetApp(_);
+                  _ &&
+                    !_?.token?.reason &&
+                    _({
+                      strCapsuleUrl: _.GetAssets().GetHeaderURL(),
+                      strGroupTitle: _.GetName(),
+                      _: _,
+                      strStoreURL:
+                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                        _.GetStorePageURL(),
+                      strCommunityURL:
+                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                        _.GetCommunityPageURL(),
+                      strForumURL:
+                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                        _.GetCommunityDiscussionForumsURL(),
+                    });
+                });
+            else if (_) {
+              const _ = _._.InitFromClanID(_);
+              _._.LoadClanInfoForClanSteamID(_).then((_) => {
+                _?.token?.reason ||
+                  _({
+                    strCapsuleUrl: _.avatar_full_url,
+                    strGroupTitle: _.group_name,
+                    _: _,
+                    strStoreURL:
+                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                      _._.STORE_BASE_URL +
+                      "curator/" +
+                      _ +
+                      "/",
+                    strCommunityURL:
+                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                      _._.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      _.ConvertTo64BitString(),
+                    strExtraBannerGroupStyle: _().ClanBanner,
+                  });
+              });
+            }
+          }, [_, _?.token?.reason, _]),
+          _
+        );
+      }
+      function _(_) {
+        const { appId: _, clanId: _, bShowRSSFeed: _ } = _,
+          { strStoreURL: _, strCommunityURL: _, strForumURL: _ } = _(_, _),
+          _ = (0, _._)(),
+          _ =
+            _._.STORE_BASE_URL +
+            "feeds/" +
+            (0, _._)() +
+            (_ ? "/app/" + _ : "/group/" + _) +
+            "/?cc=" +
+            _._.COUNTRY +
+            "&l=" +
+            _._.LANGUAGE,
+          _ = _._.Get().GetPartnerEventPermissions(_._.InitFromClanID(_)),
+          _ = _ && (_.can_edit || _.support_user),
+          _ = _._.Get().BOwnsApp(_),
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            return (
+              _._.IN_CLIENT &&
+                _ &&
+                _.push({
+                  label: (0, _._)("#EventDisplay_ViewInLibrary_ExtraShort"),
+                  data: "steam://nav/games/details/" + _,
+                }),
+              _.push({
+                label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
+                data: (0, _._)(_),
+              }),
+              _ ||
+                (_.push({
+                  label: (0, _._)("#EventDisplay_ViewCommunityPage_ExtraShort"),
+                  data: (0, _._)(_),
+                }),
+                _ &&
+                  _.push({
+                    label: (0, _._)("#EventDisplay_ViewForum_ExtraShort"),
+                    data: (0, _._)(_),
+                  }),
+                _ &&
+                  _.push({
+                    label: (0, _.jsxs)("div", {
+                      className: _().RssRow,
+                      children: [
+                        (0, _.jsx)(_.ZPc, {}),
+                        (0, _._)("#EventDisplay_RSSFeed_ExtraShort"),
+                      ],
+                    }),
+                    data: _,
+                  })),
+              _ &&
+                _.push({
+                  label: (0, _._)("#EventDisplay_Admin_ExtraShort"),
+                  data: (0, _._)(_, _._.InitFromClanID(_), "admin"),
+                }),
+              _
+            );
+          }, [_, _, _, _, _, _, _, _, _, _]);
+        return (0, _.jsx)(_._, {
+          strDefaultLabel: (0, _._)("#EventDisplay_LinksDropDown_ExtraShort"),
+          strClassName: _().AppBannerLinkDD,
+          strDropDownButtonClassName: _().AppBannerLinkDDButton,
+          strDropDownMenuCtnClass: _().AppBannerLinkDDContainer,
+          contextMenuPositionOptions: {
+            bMatchWidth: !1,
+          },
+          arrowClassName: _().DDButtonArrow,
+          rgOptions: _,
+          onChange: (_, _, _) => (0, _._)(_, _.data),
+        });
+      }
+      const _ = (0, _._)((_) => {
+        const { appId: _, clanId: _ } = _,
+          {
+            strCapsuleUrl: _,
+            strGroupTitle: _,
+            _: _,
+            strExtraBannerGroupStyle: _,
+          } = _(_, _),
+          _ = (0, _.useMemo)(
+            () =>
+              _
+                ? {
+                    appid: _,
+                  }
+                : {
+                    creatorid: _,
+                  },
+            [_, _],
+          ),
+          { data: _ } = (0, _._)(_),
+          _ = _._.Get().BOwnsApp(_);
+        let _ = Boolean(_ !== _._);
+        const _ = (0, _.jsx)("img", {
+          className: _().AppBannerLogo,
+          src: _,
+        });
+        return (0, _._)()
+          ? null
+          : (0, _.jsxs)("div", {
+              className: _().AppBannerCtn,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().AppBannerBackground,
+                  style: {
+                    backgroundImage: `url(${_})`,
+                  },
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().AppBannerGroup, _),
+                  children: [
+                    _
+                      ? Boolean(_)
+                        ? (0, _.jsx)(_._, {
+                            _: _,
+                            className: _().AppBannerLogoCtn,
+                            hoverProps: {
+                              direction: "overlay",
+                              style: {
+                                minWidth: "320px",
+                              },
+                            },
+                            children: _,
+                          })
+                        : (0, _.jsx)(_._, {
+                            _: _,
+                            hoverClassName: _().AppBannerLogoCtn,
+                            children: _,
+                          })
+                      : (0, _.jsxs)("div", {
+                          className: _().AppBannerLogoCtn,
+                          children: [_, " "],
+                        }),
+                    (0, _.jsxs)("div", {
+                      className: _().AppBannerTitle,
+                      children: [
+                        _,
+                        (0, _.jsx)("div", {
+                          className: _().NewsHubSubTitle,
+                          children: (0, _._)("#EventDisplay_NewsHubSubtitle"),
+                        }),
+                      ],
+                    }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _().AppBannerLinks,
+                        children: [
+                          Boolean(!_ && _) &&
+                            (0, _.jsx)("div", {
+                              className: _().HeaderWishlistButton,
+                              children: (0, _.jsx)(_._, {
+                                appid: _,
+                                bIsFree: Boolean(_?.is_free),
+                                bIsComingSoon: Boolean(_?.is_coming_soon),
+                                className: (0, _._)(
+                                  _().ActionButton,
+                                  _().WishlistBtnShort,
+                                ),
+                              }),
+                            }),
+                          (0, _.jsx)("div", {
+                            className: _().HeaderFollowButton,
+                            children: Boolean(_)
+                              ? (0, _.jsx)(_._, {
+                                  appid: _,
+                                  className: _().HeaderButtonDark,
+                                })
+                              : (0, _.jsx)(_._, {
+                                  clanAccountID: _,
+                                  className: _().HeaderButtonDark,
+                                }),
+                          }),
+                          (0, _.jsx)(_, {
+                            ..._,
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+              ],
+            });
+      });
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().AppPartnerEventsBanner,
+            "AppPartnerEventsBanner",
+          ),
+          children: (0, _.jsx)(_, {
+            ..._,
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _ } = _,
           _ = (0, _._)(() => _.jsondata?.referenced_appids || []),
-          [_, _] = _.useState(!1);
-        if (
-          (_.useEffect(() => {
-            _._.Get()
-              .QueueMultipleAppRequests(_, {})
-              .then(() => _(!0));
-          }, [_]),
-          !_.length || !_)
-        )
-          return null;
-        const _ = __webpack_require__
-            .map((_) => _._.Get().GetApp(_))
-            .filter(Boolean)
-            .map((_) => `[url="${_.GetStorePageURL()}"]${_.GetName()}[/url]`)
+          _ = (0, _._)(),
+          _ = (0, _._)({
+            queries: __webpack_require__.map((_) =>
+              (0, _._)(_, {
+                appid: _,
+              }),
+            ),
+            combine: (_) => ({
+              bLoaded: _.every((_) => !_.isPending),
+              data: _.map((_) => _.data),
+            }),
+          });
+        if (!_.length || !_.bLoaded) return null;
+        const _ = _.data
+            .filter((_) => _?.store_url_path && _?.name)
+            .map((_) => `[url="${(0, _._)(_)}"]${_.name}[/url]`)
             .join((0, _._)("#EventDisplay_ReferencedApps_Joiner")),
           _ = (0, _._)("#EventDisplay_ReferencedApps", _.length, _);
         return (0, _.jsx)("div", {
@@ -98505,8 +98517,8 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _;
         return (0, _._)() && !_._.IN_STEAMUI
@@ -98534,12 +98546,9 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [_] = (0, _._)(_, {
-            include_basic_info: !0,
-            include_links: !0,
+          { data: _ } = (0, _._)({
+            appid: _,
           });
-        if (!_) return null;
-        const _ = __webpack_require__.GetLinks();
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
               children: [
@@ -99329,7 +99338,7 @@
                           }),
                           (0, _.jsx)("a", {
                             className: (0, _._)(_().Button, "LinkButton"),
-                            href: (0, _._)(_.GetSaleURL()),
+                            href: (0, _._)((0, _._)(_)),
                             children: (0, _._)("#Event_Button_VisitSalePage"),
                           }),
                         ],
@@ -99510,17 +99519,6 @@
       (0, _._)([_._.shallow], _.prototype, "m_rgEvents", void 0),
         (0, _._)([_._], _.prototype, "m_eOlderDirection", void 0),
         (0, _._)([_._], _.prototype, "m_eNewerDirection", void 0);
-      const _ = (0, _._)((_) =>
-        (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().AppPartnerEventsBanner,
-            "AppPartnerEventsBanner",
-          ),
-          children: (0, _.jsx)(_, {
-            ..._,
-          }),
-        }),
-      );
       var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         m_refFocus = _.createRef();
@@ -99578,7 +99576,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
@@ -100818,6 +100816,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { gidEvent: _ } = _,
@@ -100846,7 +100845,7 @@
           }, [_]);
         return _?.length > 0 && _?.length > 0
           ? (0, _.jsxs)("a", {
-              href: (0, _._)(__webpack_require__.GetSaleURL()),
+              href: (0, _._)((0, _._)(_)),
               className: _.Link,
               children: [
                 (0, _.jsx)("img", {
@@ -100900,6 +100899,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -100958,7 +100958,7 @@
                 ? _._.STORE_BASE_URL + "charts/steamdecktopplayed"
                 : _.label_link;
             })(_) ||
-            _?.GetSaleURL();
+            (0, _._)(_);
         if (
           (_.useEffect(() => {
             _?.(_);

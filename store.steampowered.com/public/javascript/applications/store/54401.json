@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Het parseren van het GIF-bestand is mislukt. Hercodeer het bestand of wijzig het bestandsformaat en probeer het opnieuw.",
     "MediaConvert_InputError_ImageTooSmall": "De afbeelding is te klein. Upload een afbeelding van minimaal 16x16 pixels.",
     "MediaConvert_InputError_AnimationTooSmall": "De animatie of video is te klein. Upload een animatie of video van minimaal 16x16 pixels.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Het bestand bevat meerdere videosporen. Upload een bestand dat maar één videospoor bevat.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Deze afbeelding mag niet bewegen. Upload een statische afbeelding.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Afbeeldingsbestanden mogen geen audiospoor bevatten.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF-uitvoer wordt niet ondersteund voor videobronnen.",
     "MediaConvert_InternalError_FailedToConvert": "Het converteren van dit bestand is mislukt. Hercodeer je bestand en probeer het opnieuw.",

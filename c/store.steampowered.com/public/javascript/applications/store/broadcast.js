@@ -314,57 +314,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Header1: "SPYFj8pCLpNmnuQJEDobC",
-        Header2: "QuKtTJ4LCPUlQeWYfLNyX",
-        Header3: "_3s7cUqglDds9wzcWb7OLz6",
-        Link: "_29bMZB6BOQfTQ_3za-w60I",
-        LinkHost: "_16eO9LHnJuheylkB3Fdrpn",
-        LinkButton: "_2HnDgHQT_3ehcs4WgskKG5",
-        LinkPill: "_3nRRZ1AKPWQnyWTcT1RDt9",
-        UnorderedList: "_2FoSxA1yCqpvxdOJnu8N8Z",
-        OrderedList: "vV4IwOV-RuzelptiRQ_ZS",
-        StoreWidget: "_36Y-loIMvxDKY9RIVxecCp",
-        MedalTVWidget: "_1j2vixiqbbe8GqxA-cmlhA",
-        LoyaltyRewardCtn: "_14p7R6qC1Kkyg4Qal1UJZu",
-        SaleSectionCtn: "_39HWXhhjsbML7K9sme9ItV",
-        SaleTextCtn: "_2Tqq0UDtuHw6otaE2Ww46g",
-        ReminderCtn: "_25AZkxZYa3ROp8PHchCq-k",
-        BlockQuote: "_2cY7bYMGmnuPPhM3aMQMfa",
-        SocialLink: "_2LAnc-M7XILk5D72Qy7V6q",
-        SocialIcon: "dDjYNUHT-jcb_B0VGK6CP",
-        LocalizeBlock: "_1oBceu_yGnJHhqsA8fmA7P",
-        CheckMark: "_24AtTon5otxGQGBY3P6ATR",
-        ScreenshotCarousel: "_3uA0hv9La9Do6XtRycM0RX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        FlexColumnContainer: "_15ufNax9QUSW3N7J3t5TmY",
-        FullStartTime: "_1YLHWZHuAxRYOyv0nq0a3Z",
-        ReminderDialog: "_3YUEYUcuh0PTxYsV6Fecqq",
-        ReminderOptions: "_1Tp8K4gynWBOBpC9tS_xXV",
-        ReminderBackground: "TNf9_B9OYDQXSleTS1gAS",
-        ReminderExpandsLeft: "_38Xly-p-GTyBu1lVv1KF79",
-        ReminderOption: "_26nnhy-kEQVG1EJvwt-YOG",
-        Unverified: "_1dcmAZnqCMpEs3PXIajJIN",
-        CheckboxWrapper: "_1xuKEdr0rNMBRK_vYraObm",
-        ReminderCheckBox: "vPo2jxLA9iAVrt49Ic3c1",
-        IconMode: "_1YjsRp8XbwoXVWYYvWD7iv",
-        RemindBell: "_3-_M2IUSKHovaZaejfEH3E",
-        RemindCheck: "_2qaPrk1hI1cvMDPYnXO-kj",
-        ReminderDefault: "_19p2Qdr48bduJICtjBoXVv",
-        TextMode: "_553rCUt4qxX8_S5jBNMrv",
-        ReminderCheck: "_3fMhCIg2SQlEWyw9rHKGCe",
-        ReminderOpennedOptions: "vBuhkIZJzVjB-gDKqhho8",
-        ReminderOptionsHeader: "_2oOZCpUHJOjdt7D5zkx0Ed",
-        ReminderCalendarOptions: "VO6FStOkQjIXr-aZW1JBx",
-        ReminderSettings: "_2Pn59J0keCBE-RnAuaUUVx",
-        ReminderNotes: "_3qE0wUvpzn1HTPrT3R_wOv",
-        RpcThrobber: "_3F3aByA4Tw1mRbNiiVtXP-",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SpeakerOuter: "_3rRqPJdGrYx9YMtQMciIFY",
         Speaker: "_3F7-FkJu8-JstT7SouP8XJ",
         SpeakerPopup: "_3y7kVhhGmtbSgbZdte0EuV",
@@ -381,11 +330,6 @@
         Banner: "_2bT8irkKNnA5sxFG3MUXzH",
         Big: "sGy-bB7uqEt4Hoe7U5iA1",
         Mobile: "mhii5hgMCQvO2tXOUdWPQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ErrorDiv: "XeZExtCZ_zIcbkPRCqsnV",
       };
     },
     chunkid: (module) => {
@@ -434,18 +378,300 @@
         LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        DateAndTime: "_2V6GLdiU4guy4ND3n4Usgg",
-        DateAndTimeInline: "HZ6b2d4r4EFnT_1BeU5vo",
-        _: "Fn5EUtWkwSAw_gbbiySKN",
-        ActiveEvent: "rT7EkJjqw27KBB7HxAAWk",
-        ActiveEventCallOut: "_2pJftSRjT_UngZZ4BJimwg",
-        RightSideTitles: "_4LAnPYKRPeF-QDReu_VGm",
-        DateToolTip: "_2E5LHvnVEF3dSVV3wrDflm",
-        ShortDateAndTime: "MBkkhT4wei3tWetnWbiqn",
-        ShortDateRange: "_3CN6I3krBRNzD7kCuKQ_w7",
+    chunkid: (module, module_exports, __webpack_require__) => {
+      var _ = {
+        "./af": 30911,
+        "./af.js": 30911,
+        "./ar": 63595,
+        "./ar-dz": 99358,
+        "./ar-dz.js": 99358,
+        "./ar-kw": 46830,
+        "./ar-kw.js": 46830,
+        "./ar-ly": 26067,
+        "./ar-ly.js": 26067,
+        "./ar-ma": 64154,
+        "./ar-ma.js": 64154,
+        "./ar-ps": 90753,
+        "./ar-ps.js": 90753,
+        "./ar-sa": 53616,
+        "./ar-sa.js": 53616,
+        "./ar-tn": 19026,
+        "./ar-tn.js": 19026,
+        "./ar.js": 63595,
+        "./az": 87043,
+        "./az.js": 87043,
+        "./be": 28437,
+        "./be.js": 28437,
+        "./bg": 29843,
+        "./bg.js": 29843,
+        "./bm": 39421,
+        "./bm.js": 39421,
+        "./bn": 41300,
+        "./bn-bd": 54487,
+        "./bn-bd.js": 54487,
+        "./bn.js": 41300,
+        "./bo": 40827,
+        "./bo.js": 40827,
+        "./br": 35120,
+        "./br.js": 35120,
+        "./bs": 41991,
+        "./bs.js": 41991,
+        "./ca": 47504,
+        "./ca.js": 47504,
+        "./cs": 98346,
+        "./cs.js": 98346,
+        "./cv": 17525,
+        "./cv.js": 17525,
+        "./cy": 80872,
+        "./cy.js": 80872,
+        "./da": 48787,
+        "./da.js": 48787,
+        "./de": 30199,
+        "./de-at": 33461,
+        "./de-at.js": 33461,
+        "./de-ch": 97995,
+        "./de-ch.js": 97995,
+        "./de.js": 30199,
+        "./dv": 14682,
+        "./dv.js": 14682,
+        "./el": 52549,
+        "./el.js": 52549,
+        "./en-au": 5706,
+        "./en-au.js": 5706,
+        "./en-ca": 50584,
+        "./en-ca.js": 50584,
+        "./en-gb": 41685,
+        "./en-gb.js": 41685,
+        "./en-ie": 32050,
+        "./en-ie.js": 32050,
+        "./en-il": 35545,
+        "./en-il.js": 35545,
+        "./en-in": 42551,
+        "./en-in.js": 42551,
+        "./en-nz": 10620,
+        "./en-nz.js": 10620,
+        "./en-sg": 16222,
+        "./en-sg.js": 16222,
+        "./eo": 88124,
+        "./eo.js": 88124,
+        "./es": 59784,
+        "./es-do": 30300,
+        "./es-do.js": 30300,
+        "./es-mx": 47292,
+        "./es-mx.js": 47292,
+        "./es-us": 36469,
+        "./es-us.js": 36469,
+        "./es.js": 59784,
+        "./et": 56349,
+        "./et.js": 56349,
+        "./eu": 6782,
+        "./eu.js": 6782,
+        "./fa": 86749,
+        "./fa.js": 86749,
+        "./fi": 52469,
+        "./fi.js": 52469,
+        "./fil": 2989,
+        "./fil.js": 2989,
+        "./fo": 50743,
+        "./fo.js": 50743,
+        "./fr": 34916,
+        "./fr-ca": 96853,
+        "./fr-ca.js": 96853,
+        "./fr-ch": 81566,
+        "./fr-ch.js": 81566,
+        "./fr.js": 34916,
+        "./fy": 82949,
+        "./fy.js": 82949,
+        "./ga": 80932,
+        "./ga.js": 80932,
+        "./gd": 82671,
+        "./gd.js": 82671,
+        "./gl": 95687,
+        "./gl.js": 95687,
+        "./gom-deva": 67330,
+        "./gom-deva.js": 67330,
+        "./gom-latn": 7021,
+        "./gom-latn.js": 7021,
+        "./gu": 78728,
+        "./gu.js": 78728,
+        "./he": 28211,
+        "./he.js": 28211,
+        "./hi": 15487,
+        "./hi.js": 15487,
+        "./hr": 94106,
+        "./hr.js": 94106,
+        "./hu": 14147,
+        "./hu.js": 14147,
+        "./hy-am": 23862,
+        "./hy-am.js": 23862,
+        "./id": 78825,
+        "./id.js": 78825,
+        "./is": 57612,
+        "./is.js": 57612,
+        "./it": 9497,
+        "./it-ch": 75653,
+        "./it-ch.js": 75653,
+        "./it.js": 9497,
+        "./ja": 2209,
+        "./ja.js": 2209,
+        "./jv": 85668,
+        "./jv.js": 85668,
+        "./ka": 6904,
+        "./ka.js": 6904,
+        "./kk": 2138,
+        "./kk.js": 2138,
+        "./km": 81660,
+        "./km.js": 81660,
+        "./kn": 88613,
+        "./kn.js": 88613,
+        "./ko": 57894,
+        "./ko.js": 57894,
+        "./ku": 28468,
+        "./ku-kmr": 57123,
+        "./ku-kmr.js": 57123,
+        "./ku.js": 28468,
+        "./ky": 91808,
+        "./ky.js": 91808,
+        "./lb": 47070,
+        "./lb.js": 47070,
+        "./lo": 56505,
+        "./lo.js": 56505,
+        "./lt": 53656,
+        "./lt.js": 53656,
+        "./lv": 83746,
+        "./lv.js": 83746,
+        "./me": 42486,
+        "./me.js": 42486,
+        "./mi": 82,
+        "./mi.js": 82,
+        "./mk": 14792,
+        "./mk.js": 14792,
+        "./ml": 10845,
+        "./ml.js": 10845,
+        "./mn": 46939,
+        "./mn.js": 46939,
+        "./mr": 5575,
+        "./mr.js": 5575,
+        "./ms": 81424,
+        "./ms-my": 43179,
+        "./ms-my.js": 43179,
+        "./ms.js": 81424,
+        "./mt": 30341,
+        "./mt.js": 30341,
+        "./my": 72834,
+        "./my.js": 72834,
+        "./nb": 75292,
+        "./nb.js": 75292,
+        "./ne": 23753,
+        "./ne.js": 23753,
+        "./nl": 53922,
+        "./nl-be": 77542,
+        "./nl-be.js": 77542,
+        "./nl.js": 53922,
+        "./nn": 81304,
+        "./nn.js": 81304,
+        "./oc-lnc": 41156,
+        "./oc-lnc.js": 41156,
+        "./pa-in": 17851,
+        "./pa-in.js": 17851,
+        "./pl": 66636,
+        "./pl.js": 66636,
+        "./pt": 13252,
+        "./pt-br": 95189,
+        "./pt-br.js": 95189,
+        "./pt.js": 13252,
+        "./ro": 5451,
+        "./ro.js": 5451,
+        "./ru": 981,
+        "./ru.js": 981,
+        "./sd": 49139,
+        "./sd.js": 49139,
+        "./se": 24684,
+        "./se.js": 24684,
+        "./si": 85448,
+        "./si.js": 85448,
+        "./sk": 61682,
+        "./sk.js": 61682,
+        "./sl": 17595,
+        "./sl.js": 17595,
+        "./sq": 61360,
+        "./sq.js": 61360,
+        "./sr": 45897,
+        "./sr-cyrl": 80616,
+        "./sr-cyrl.js": 80616,
+        "./sr.js": 45897,
+        "./ss": 15034,
+        "./ss.js": 15034,
+        "./sv": 78213,
+        "./sv.js": 78213,
+        "./sw": 47494,
+        "./sw.js": 47494,
+        "./ta": 48387,
+        "./ta.js": 48387,
+        "./te": 90951,
+        "./te.js": 90951,
+        "./tet": 83675,
+        "./tet.js": 83675,
+        "./tg": 99753,
+        "./tg.js": 99753,
+        "./th": 59844,
+        "./th.js": 59844,
+        "./tk": 84429,
+        "./tk.js": 84429,
+        "./tl-ph": 54645,
+        "./tl-ph.js": 54645,
+        "./tlh": 56946,
+        "./tlh.js": 56946,
+        "./tr": 8630,
+        "./tr.js": 8630,
+        "./tzl": 79480,
+        "./tzl.js": 79480,
+        "./tzm": 13839,
+        "./tzm-latn": 36313,
+        "./tzm-latn.js": 36313,
+        "./tzm.js": 13839,
+        "./ug-cn": 26648,
+        "./ug-cn.js": 26648,
+        "./uk": 24192,
+        "./uk.js": 24192,
+        "./ur": 8335,
+        "./ur.js": 8335,
+        "./uz": 21351,
+        "./uz-latn": 60785,
+        "./uz-latn.js": 60785,
+        "./uz.js": 21351,
+        "./vi": 9541,
+        "./vi.js": 9541,
+        "./x-pseudo": 309,
+        "./x-pseudo.js": 309,
+        "./yo": 21512,
+        "./yo.js": 21512,
+        "./zh-cn": 98562,
+        "./zh-cn.js": 98562,
+        "./zh-hk": 7374,
+        "./zh-hk.js": 7374,
+        "./zh-mo": 87107,
+        "./zh-mo.js": 87107,
+        "./zh-tw": 34518,
+        "./zh-tw.js": 34518,
       };
+      function _(_) {
+        var _ = _(_);
+        return __webpack_require__(_);
+      }
+      function _(_) {
+        if (!__webpack_require__._(_, _)) {
+          var _ = new Error("Cannot find module '" + _ + "'");
+          throw ((_.code = "MODULE_NOT_FOUND"), _);
+        }
+        return _[_];
+      }
+      (_.keys = function () {
+        return Object.keys(_);
+      }),
+        (_.resolve = _),
+        (module.exports = _),
+        (_._ = 61738);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -924,316 +1150,6 @@
           className: _.Dynamiclink_Content,
           children: _.children,
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.k_eView = "view"),
-          (_.k_eViewWebSiteHub = "websitehub"),
-          (_.k_eCommunityView = "communityview"),
-          (_.k_eCommunityEdit = "edit"),
-          (_.k_eCommunityEditBroadcast = "editBroadcast"),
-          (_.k_eCommunityAdminPage = "admin"),
-          (_.k_eCommunityPublish = "publish"),
-          (_.k_eCommunityMigrate = "migrate"),
-          (_.k_eCommunityPreview = "preview"),
-          (_.k_eCommunityPreviewSale = "previewsale"),
-          (_.k_eCommunityAnnouncementHub = "community_announcehub"),
-          (_.k_eStoreView = "storeview"),
-          (_.k_eStoreNewsHub = "newshub"),
-          (_.k_eStoreOwnerPage = "store"),
-          (_.k_eStoreSalePage = "sale"),
-          (_.k_eStoreUsersNewsHub = "usernewshub");
-      })(_ || (_ = {}));
-      const _ =
-        /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-      function _(_, _) {
-        if (!_) return !1;
-        const _ = "store" === (0, _._)(),
-          _ = (function (_) {
-            const _ = _.match(_);
-            return _?.[1];
-          })(window.location.href),
-          _ = _ && "news" == _,
-          _ = _.GetEventType() == _.ajI,
-          _ = "community" === (0, _._)(),
-          _ = _.appid ? "games" : "groups",
-          _ =
-            _ &&
-            _ == _ &&
-            ((_.appid && _.appid === _._.APPID) ||
-              (!_.appid && _.clanSteamID.GetAccountID() === _._.CLANACCOUNTID));
-        switch (_) {
-          case _.k_eView:
-            return _ || _;
-          case _.k_eCommunityView:
-          case _.k_eCommunityEdit:
-          case _.k_eCommunityEditBroadcast:
-          case _.k_eCommunityPublish:
-          case _.k_eCommunityMigrate:
-          case _.k_eCommunityPreview:
-          case _.k_eCommunityPreviewSale:
-          case _.k_eCommunityAnnouncementHub:
-            return _;
-          case _.k_eCommunityAdminPage:
-            return !_ && _;
-          case _.k_eViewWebSiteHub:
-            return _ || _;
-          case _.k_eStoreView:
-          case _.k_eStoreNewsHub:
-          case _.k_eStoreOwnerPage:
-          case _.k_eStoreUsersNewsHub:
-            return _;
-          case _.k_eStoreSalePage:
-            return !1;
-          default:
-            return (0, _._)(!1, "Unknown route specified for link: " + _), !1;
-        }
-      }
-      function _(_) {
-        const _ =
-          _._.COMMUNITY_BASE_URL +
-          "gid/" +
-          _.clanSteamID.ConvertTo64BitString() +
-          "/announcements/share/" +
-          _.AnnouncementGID;
-        return {
-          strFacebookUrl: _ + "?site=facebook&t=" + Math.random(),
-          strTwitterUrl: _ + "?site=twitter",
-          strRedditUrl: _ + "?site=reddit",
-        };
-      }
-      function _(_) {
-        return _(_, _.k_eStoreSalePage, "absolute");
-      }
-      function _(_) {
-        return _(_, _.k_eStoreView, "absolute");
-      }
-      function _(_, _, _) {
-        if (_)
-          return (
-            (_ ? "/games/" + _._.VANITY_ID : "/groups/" + _._.VANITY_ID) + "/"
-          );
-        const _ = _ ? "ogg/" + _ : "gid/" + _.ConvertTo64BitString();
-        return _._.COMMUNITY_BASE_URL + _ + "/";
-      }
-      function _() {
-        return "news";
-      }
-      function _(_, _, _) {
-        const { data: _ } = (0, _._)(
-          _?.appid
-            ? {
-                appid: _.appid,
-              }
-            : void 0,
-        );
-        if (_) return _(_, _, _, _);
-      }
-      function _(_, _, _, _) {
-        const _ = "relative" === _,
-          _ = "community" === (0, _._)(),
-          _ = _ ? "/" : _._.STORE_BASE_URL,
-          _ = _(_.appid, _.clanSteamID, _);
-        _ === _.k_eView
-          ? (_ = _ ? _.k_eCommunityView : _.k_eStoreView)
-          : _ === _.k_eViewWebSiteHub &&
-            (_ = _ ? _.k_eCommunityAnnouncementHub : _.k_eStoreNewsHub);
-        const _ = _.GID ? _.GID : "",
-          _ = _.AnnouncementGID ? _.AnnouncementGID : "",
-          _ =
-            _.BIsOGGEvent() &&
-            _.appid &&
-            _ &&
-            _.BHasSaleUpdateLandingPageVanity(),
-          _ = _.GetEventType() == _.ajI;
-        switch (_) {
-          case _.k_eCommunityPublish:
-            return (
-              _ +
-              (_.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + _
-                : "partnerevents/publish/" + _ + "?tab=publishing")
-            );
-          case _.k_eCommunityEdit:
-            return (
-              _ +
-              (_.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + _
-                : "partnerevents/edit/" + _)
-            );
-          case _.k_eCommunityEditBroadcast:
-            return (
-              _ +
-              (_.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + _
-                : "partnerevents/edit/" + _) +
-              "?tab=broadcast"
-            );
-          case _.k_eCommunityMigrate:
-            return _ + "partnerevents/migrate_announcement/" + _;
-          case _.k_eCommunityPreview:
-            return _
-              ? _ + "partnerevents/previewsale/" + _
-              : _ +
-                  (_.bOldAnnouncement
-                    ? "partnerevents/preview_old_announcement/" + _
-                    : "partnerevents/preview/" + _);
-          case _.k_eCommunityPreviewSale:
-            return _ + "partnerevents/previewsale/" + _;
-          case _.k_eCommunityAdminPage:
-            return _
-              ? `${_}curator/${_.clanSteamID.GetAccountID()}/admin/creatorhome_link`
-              : _ + "partnerevents";
-          case _.k_eCommunityAnnouncementHub:
-            return _ + "announcements";
-          case _.k_eStoreNewsHub:
-            return (
-              _ +
-              `news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}`
-            );
-          case _.k_eStoreOwnerPage:
-            return (
-              _ +
-              (_.appid
-                ? "app/" + _.appid
-                : "curator/" + _.clanSteamID.GetAccountID())
-            );
-          case _.k_eStoreSalePage:
-            return _.jsondata.bSaleEnabled
-              ? _.clanSteamID.GetAccountID() == _._
-                ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : _.clanSteamID.GetAccountID() == _._
-                  ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
-                  : _
-                    ? `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`
-                    : _
-                      ? `${_}curator/${_.clanSteamID.GetAccountID()}`
-                      : _ +
-                        (_.jsondata
-                          .sale_vanity_id_valve_approved_for_sale_subpath
-                          ? "sale/"
-                          : "curator/" +
-                            _.clanSteamID.GetAccountID() +
-                            "/sale/") +
-                        _.jsondata.sale_vanity_id
-              : _;
-          case _.k_eCommunityView:
-            return _ + "announcements/detail/" + _;
-          case _.k_eStoreView:
-            if (_.clanSteamID.GetAccountID() == (0, _._)())
-              return `${_._.STORE_BASE_URL}meetsteam/${_}`;
-            if (_)
-              return `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`;
-            if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
-            return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
-          case _.k_eStoreUsersNewsHub:
-            return `${_}news/`;
-          default:
-            return (0, _._)(!1, "Unknown route specified for link"), "";
-        }
-      }
-      function _(_, _, _) {
-        return _(
-          _,
-          _,
-          "forceAbsolute" === _ || !_(_, _) ? "absolute" : "relative",
-        );
-      }
-      function _(_) {
-        const { eventModel: _, route: _, bPopup: _ = !0 } = _,
-          _ = _(_, _),
-          _ = _(_, _, _ ? "relative" : "absolute");
-        return (
-          _.useEffect(() => {
-            _ && (_ ? window.open(_) : window.location.assign(_));
-          }, [_, _]),
-          _ && _
-            ? (0, _.jsx)(_._, {
-                push: !0,
-                _: _,
-              })
-            : null
-        );
-      }
-      function _(_, _, _) {
-        const _ = _(_, _, !1);
-        return "admin" === _ ? _ + "partnerevents" : "";
-      }
-      function _(_) {
-        const { eventModel: _, preferredFocus: _ } = _,
-          { bCanUseLink: _ } = _.useContext(_._),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _ && _(_.route, _),
-          _ = _(_, _.route, _ ? "relative" : "absolute"),
-          _ = !_ && _ ? (0, _._)(_) : _,
-          _ = _ || !_ ? _ : (0, _._)(_, _),
-          _ = _(_, _.k_eViewWebSiteHub, "absolute"),
-          _ = Boolean(_.route != _.k_eViewWebSiteHub)
-            ? _._.Localize("#EventBrowse_MoreEventsBtn")
-            : "",
-          _ = _.useCallback(() => {
-            _ && window.location.assign(_);
-          }, [_]);
-        return _
-          ? _
-            ? (0, _.jsx)(_._, {
-                style: _.style,
-                className: _.className,
-                href: _.createHref({
-                  pathname: _,
-                }),
-                onClick: (_) => {
-                  _ && (_.onClick?.(_), _.push(_), _.preventDefault());
-                },
-                onOptionsActionDescription: _,
-                onOptionsButton: _ ? _ : void 0,
-                preferredFocus: _,
-                children: _.children,
-              })
-            : (0, _.jsx)(_._, {
-                href: _,
-                style: _.style,
-                className: _.className,
-                onClick: _.onClick,
-                preferredFocus: _,
-                onOptionsActionDescription: _,
-                onOptionsButton: _ ? _ : void 0,
-                children: _.children,
-              })
-          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -8475,8 +8391,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map([
         [
@@ -8897,29 +8811,6 @@
             autocloses: !1,
             skipInternalNewline: !0,
             allowWrapTextForCopying: !0,
-          },
-        ],
-        [
-          "remindme",
-          {
-            Constructor: function (_) {
-              const { event: _, showErrorInfo: _ } = _.context,
-                _ = _(_.args);
-              if (_)
-                return (0, _.jsx)(_._, {
-                  eventGID: _,
-                  bPreviewMode: _,
-                });
-              if (_) {
-                const _ = (0, _.sfN)(_._.LANGUAGE);
-                return (0, _.jsx)(_._, {
-                  eventModel: _,
-                  lang: _,
-                });
-              }
-              return null;
-            },
-            autocloses: !1,
           },
         ],
         [
@@ -20129,94 +20020,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
-          (_[(_.k_eWishlist = 2)] = "k_eWishlist"),
-          (_[(_.k_eFollowing = 4)] = "k_eFollowing"),
-          (_[(_.k_eRecommended = 8)] = "k_eRecommended"),
-          (_[(_.k_eSteam = 16)] = "k_eSteam"),
-          (_[(_.k_eRequired = 32)] = "k_eRequired"),
-          (_[(_.k_eFeatured = 64)] = "k_eFeatured"),
-          (_[(_.k_eCurator = 128)] = "k_eCurator"),
-          (_[(_.k_eReposted = 256)] = "k_eReposted");
-      })(_ || (_ = {}));
-      class _ {
-        clanid;
-        unique_id;
-        event_type;
-        appid;
-        start_time;
-        appInfo;
-        clanInfo;
-        score;
-        GetSource() {
-          return this.appInfo ? this.appInfo.source : this.clanInfo.source;
-        }
-        static GetEntityNameForID(_, _) {
-          if (_) return _._.Get().GetApp(_)?.GetName();
-          if (_) {
-            const _ = _._.GetClanInfoByClanAccountID(_);
-            if (_) return _.group_name;
-          }
-          return (0, _._)("#EventCalendar_MuteApp_Unknown");
-        }
-        static BHasEntityNameForID(_, _) {
-          return _
-            ? Boolean(_._.Get().GetApp(_)?.GetName())
-            : !!_ && !!_._.GetClanInfoByClanAccountID(_)?.group_name;
-        }
-        GetEntityName() {
-          return _.GetEntityNameForID(this.appid, this.clanid);
-        }
-        GetGameCapsule() {
-          if (this.appInfo)
-            return _._.Get()
-              .GetApp(this.appInfo.appid)
-              ?.GetAssets()
-              ?.GetMainCapsuleURL();
-          if (this.clanInfo) {
-            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-            if (_) return _.avatar_full_url;
-          }
-          return (0, _._)("#EventCalendar_MuteApp_Unknown");
-        }
-        GetGameIcon() {
-          if (this.appInfo)
-            return _._.Get()
-              .GetApp(this.appInfo.appid)
-              ?.GetAssets()
-              ?.GetCommunityIconURL();
-          if (this.clanInfo) {
-            let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-            if (_) return _.avatar_full_url;
-          }
-          return (0, _._)("#EventCalendar_MuteApp_Unknown");
-        }
-      }
-      class _ {
-        appid;
-        source;
-        playtime;
-        last_played;
-        wishlist_added;
-      }
-      class _ {
-        clanid;
-        source;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20311,435 +20114,71 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_eDiscussions = 0)] = "k_eDiscussions"),
-          (_[(_.k_eThumbsUp = 1)] = "k_eThumbsUp"),
-          (_[(_.k_eClickThrough = 2)] = "k_eClickThrough"),
-          (_[(_.k_eMuted = 3)] = "k_eMuted"),
-          (_[(_.k_ePlayedVideo = 4)] = "k_ePlayedVideo"),
-          (_[(_.k_eReminder_Opened = 5)] = "k_eReminder_Opened"),
-          (_[(_.k_eReminder_MobilePush = 6)] = "k_eReminder_MobilePush"),
-          (_[(_.k_eReminder_Email = 7)] = "k_eReminder_Email"),
-          (_[(_.k_eReminder_CalendarApple = 8)] = "k_eReminder_CalendarApple"),
-          (_[(_.k_eReminder_CalendarGoogle = 9)] =
-            "k_eReminder_CalendarGoogle"),
-          (_[(_.k_eReminder_CalendarOutlook = 10)] =
-            "k_eReminder_CalendarOutlook"),
-          (_[(_.k_eReminder_EmailUnverified = 11)] =
-            "k_eReminder_EmailUnverified"),
-          (_[(_.k_eReminder_MobilePushMissing = 12)] =
-            "k_eReminder_MobilePushMissing");
-      })(_ || (_ = {}));
       const _ = new (class {
-        m_nPastViewedIndex = 0;
-        m_nPastViewedDays = 0;
-        m_nFutureViewedIndex = 0;
-        m_nFutureViewableEvents = 0;
-        m_nLastRecordedFilter = 0;
-        m_sBrowserID = void 0;
-        m_scheduledFilterChange = new _._();
-        m_scheduledFutureStats = new _._();
-        m_scheduledPastStats = new _._();
-        RecordViewedEvent(_, _) {
-          const _ = _.GetStoreInitializationTimestamp().getTime() / 1e3;
-          this.m_nFutureViewableEvents = 0;
-          let _,
-            _ = 0,
-            _ = null;
-          const _ = _.GetCurrentlyLoadedItemsForStats();
-          for (const _ of _) {
-            const _ = _.start_time > _;
-            if ((_.unique_id == _ && ((_ = _), (_ = _)), _))
-              this.m_nFutureViewableEvents++;
-            else if (void 0 !== _) break;
-            _++;
+        bIncludeFeaturedAsGameSource = !0;
+        get nOverrideDateNow() {
+          return (0, _._)();
+        }
+        set nOverrideDateNow(_) {
+          (0, _._)(_);
+        }
+        get bRequireAllEventsLoadedInTimeBlock() {
+          return !1;
+        }
+        get bIncludeCurators() {
+          return !0;
+        }
+        GetTimeNowWithOverride() {
+          return (0, _._)();
+        }
+        GetTimeNowWithOverrideAsDate() {
+          return (0, _._)();
+        }
+        BHasTimeOverride() {
+          return Boolean((0, _._)());
+        }
+        ParseDevOverrides(_) {
+          if (!_ || 0 == _.length) return;
+          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
+          if (
+            _.has("t") &&
+            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
+          ) {
+            const _ = _.get("t");
+            let _ = /^\d+$/.test(_ ?? "")
+              ? _().unix(Number.parseInt(_ ?? "0"))
+              : _()(_);
+            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
+              console.log(
+                "CEventCalendarDevFeatures overriding partner event time: " +
+                  this.nOverrideDateNow +
+                  " " +
+                  __webpack_require__.format(),
+              );
           }
-          if (void 0 !== _)
-            if (_ < this.m_nFutureViewableEvents) {
-              const _ = this.m_nFutureViewableEvents - _;
-              if (this.m_nFutureViewedIndex < _) {
-                this.m_nFutureViewedIndex = _;
-                const _ = () => {
-                    const _ =
-                      Math.min(this.m_nFutureViewedIndex, 4095) |
-                      (Math.min(this.m_nFutureViewableEvents, 255) << 12) |
-                      (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                    _.SendExperimentEventToSteam(_._._, _);
-                  },
-                  _ = 500;
-                this.m_scheduledFutureStats.Schedule(_, _);
-              }
-            } else {
-              const _ = _ - this.m_nFutureViewableEvents;
-              if (this.m_nPastViewedIndex < _) {
-                (this.m_nPastViewedIndex = _),
-                  (this.m_nPastViewedDays = Math.floor(
-                    (_ - _.start_time) / 86400,
-                  ));
-                const _ = () => {
-                    const _ =
-                      Math.min(this.m_nPastViewedIndex, 4095) |
-                      (Math.min(this.m_nPastViewedDays, 255) << 12) |
-                      (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                    _.SendExperimentEventToSteam(_._._, _);
-                  },
-                  _ = 500;
-                this.m_scheduledPastStats.Schedule(_, _);
-              }
-            }
-        }
-        RecordFilterChangeEvent(_) {
-          this.m_scheduledFilterChange.Schedule(1e3, () => {
-            let _ = 0;
-            _.BIsGameSourceAllowed(_._.k_ELibrary) && (_ |= 1),
-              _.BIsGameSourceAllowed(_._.k_EWishlist) && (_ |= 2),
-              _.BIsGameSourceAllowed(_._.k_EFollowing) && (_ |= 4),
-              _.BIsGameSourceAllowed(_._.k_ERecommended) && (_ |= 8),
-              _.BIsGameSourceAllowed(_._.k_ESteam) && (_ |= 16),
-              _.BIsGameSourceAllowed(_._.k_EFeatured) && (_ |= 32),
-              _.BIsGameSourceAllowed(_._.k_ERecent) && (_ |= 64),
-              _.BIsEventTypeGroupAllowed(_._.k_ENews) && (_ |= 1024),
-              _.BIsEventTypeGroupAllowed(_._.k_EEvents) && (_ |= 2048),
-              _.BIsEventTypeGroupAllowed(_._.k_EStreaming) && (_ |= 4096),
-              _.BIsEventTypeGroupAllowed(_._.k_EUpdates) && (_ |= 8192),
-              _.BIsEventTypeGroupAllowed(_._.k_EReleases) && (_ |= 16384),
-              _.BIsEventTypeGroupAllowed(_._.k_ESales) && (_ |= 32768),
-              _ != this.m_nLastRecordedFilter &&
-                ((this.m_nLastRecordedFilter = _),
-                this.SendExperimentEventToSteam(_._._, _));
-          });
-        }
-        GetTimeSpentOnPageS(_) {
-          const _ = _.GetStoreInitializationTimestamp(),
-            _ = new Date();
-          return Math.max(
-            0,
-            Math.floor((__webpack_require__.getTime() - _.getTime()) / 1e3),
-          );
-        }
-        RecordAppInteractionEvent(_, _) {
-          this.SendExperimentEventToSteam(_._._, _);
-        }
-        SendExperimentEventToSteam(_, _) {
-          this.InitBrowserID();
-          const _ = _._.STORE_BASE_URL + "events/ajaxreportnewshubstats/",
-            _ = new URLSearchParams();
-          _.append("page_action", "" + _),
-            _.append("snr", _._.SNR),
-            _.append("uint_data", "" + _),
-            _.append("str_data", this.m_sBrowserID),
-            _().post(_, _);
-        }
-        InitBrowserID() {
-          if (void 0 === this.m_sBrowserID)
-            if (_._.IN_CLIENT) this.m_sBrowserID = "steam";
-            else {
-              const _ = navigator.userAgent;
-              /iPhone|iPad|iPod/i.test(_) ||
-              (/Macintosh/i.test(_) && /Safari/i.test(_))
-                ? (this.m_sBrowserID = "ios")
-                : /Android/i.test(_)
-                  ? (this.m_sBrowserID = "android")
-                  : (this.m_sBrowserID = "");
-            }
         }
       })();
-      window.g_EventCalendarTrackingStore = _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.k_ERecent = "recent"),
-          (_.k_ELibrary = "library"),
-          (_.k_EWishlist = "wishlist"),
-          (_.k_EFollowing = "following"),
-          (_.k_ERecommended = "recommended"),
-          (_.k_ESteam = "steam"),
-          (_.k_EFeatured = "featured"),
-          (_.k_ECurator = "curator");
-      })(_ || (_ = {}));
-      const _ = [
-          _.k_ELibrary,
-          _.k_EWishlist,
-          _.k_EFollowing,
-          _.k_ERecommended,
-          _.k_ESteam,
-          _.k_ECurator,
-        ],
-        _ = [..._, _.k_EFeatured],
-        _ = [_.k_EFeatured];
-      var _;
-      !(function (_) {
-        (_.k_ENews = "news"),
-          (_.k_EEvents = "events"),
-          (_.k_EStreaming = "streaming"),
-          (_.k_EUpdates = "updates"),
-          (_.k_EReleases = "releases"),
-          (_.k_ESales = "sales");
-      })(_ || (_ = {}));
-      const _ = [
-          _.k_ENews,
-          _.k_EEvents,
-          _.k_EStreaming,
-          _.k_EUpdates,
-          _.k_EReleases,
-          _.k_ESales,
-        ],
-        _ = new Map([
-          [_.k_ENews, [_.uYK]],
-          [_.k_EEvents, [_.L0X, _.I5b, _._, _._, _.hGl, _.WNR, _.pIh, _.izQ]],
-          [_.k_EStreaming, [_.KDJ]],
-          [_.k_EUpdates, [_.Fwr, _._, _.zeJ]],
-          [_.k_EReleases, [_.yhO, _.Aqr, _.DEQ, _.f4X, _.zcX]],
-          [_.k_ESales, [_.HRy, _.C$4, _.LOv, _.HFK]],
-        ]);
-      function _(_) {
-        return new Map(_.map((_) => [_, !0]));
+      (0, _._)("g_EventCalendarDevFeatures", _);
+      const _ = new Date(),
+        _ = Math.floor(_.getTime() / 1e3);
+      function _() {
+        return _.nOverrideDateNow ?? _;
       }
-      class _ {
-        m_mapEventTypeGroupsAllowed = new Map();
-        m_mapGameSources = new Map();
-        m_bCuratorUnhideOnFollowDialogDismissed = !1;
-        m_mapHiddenApps = new Map();
-        m_mapHiddenClans = new Map();
-        m_bInitializedForUpdatesOnly;
-        m_eStorageType = "session";
-        m_strStorageKey;
-        constructor(_) {
-          (0, _._)(this),
-            (0, _._)(() => {
-              _?.rgHiddenApps &&
-                _.rgHiddenApps.forEach((_) => this.m_mapHiddenApps.set(_, !0)),
-                _?.rgHiddenClans &&
-                  _.rgHiddenClans.forEach((_) =>
-                    this.m_mapHiddenClans.set(_, !0),
-                  );
-            });
-        }
-        GetGameSources() {
-          return Array.from(this.m_mapGameSources.keys());
-        }
-        GetStorageObject() {
-          return this.m_strStorageKey
-            ? "session" === this.m_eStorageType
-              ? window.sessionStorage
-              : window.localStorage
-            : null;
-        }
-        GetPreferencesStorageKey() {
-          return `${this.m_strStorageKey}-event-calendar-prefs`;
-        }
-        get enabledEventTypeSet() {
-          const _ = new Set();
-          for (const _ of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
-            _.get(_).forEach((_) => _.add(_));
-          return _;
-        }
-        MapClanEventTypeToGroup(_) {
-          let _ = null;
-          return (
-            _.forEach((_, _) => {
-              -1 !== __webpack_require__.indexOf(_) && (_ = _);
-            }),
-            _ || _.k_EEvents
-          );
-        }
-        InitDefaultCheckboxes(_, _, _) {
-          (this.m_bInitializedForUpdatesOnly = _),
-            (this.m_mapEventTypeGroupsAllowed = _(_ ? [_.k_EUpdates] : _));
-          const _ = (0, _._)() ? _ : _;
-          (this.m_mapGameSources = _(_ ? _ : _)),
-            _ && this.m_mapGameSources.set(_.k_EFeatured, !0);
-        }
-        Init(_, _, _, _, _) {
-          (this.m_eStorageType = _), (this.m_strStorageKey = _);
-          const _ = this.GetStorageObject(),
-            _ = _ ? _.getItem(this.GetPreferencesStorageKey()) : null;
-          if (_) {
-            const _ = JSON.parse(_);
-            if (_.rgEventTypeGroupsAllowed && _.rgGameSources) {
-              const { rgEventTypeGroupsAllowed: _, rgGameSources: _ } = _;
-              return (
-                (this.m_mapEventTypeGroupsAllowed = _(_)),
-                (this.m_mapGameSources = _(_)),
-                void (
-                  void 0 !== _.bCuratorUnhideOnFollowDismissed &&
-                  (this.m_bCuratorUnhideOnFollowDialogDismissed =
-                    _.bCuratorUnhideOnFollowDismissed)
-                )
-              );
-            }
-          }
-          this.InitDefaultCheckboxes(_, _, _);
-        }
-        SaveFilterPreferences() {
-          const _ = this.GetStorageObject();
-          if (!_) return;
-          const _ = {
-            rgEventTypeGroupsAllowed: Array.from(
-              this.m_mapEventTypeGroupsAllowed.keys(),
-            ),
-            rgGameSources: Array.from(this.m_mapGameSources.keys()),
-            bCuratorUnhideOnFollowDismissed:
-              this.m_bCuratorUnhideOnFollowDialogDismissed,
-          };
-          _.setItem(this.GetPreferencesStorageKey(), JSON.stringify(_));
-        }
-        BCuratorUnhideOnFollowDialogDismissed() {
-          return this.m_bCuratorUnhideOnFollowDialogDismissed;
-        }
-        SetCuratorUnhideOnFollowDialogDismissed(_) {
-          (this.m_bCuratorUnhideOnFollowDialogDismissed = _),
-            this.SaveFilterPreferences();
-        }
-        BIsEventTypeGroupAllowed(_) {
-          return this.m_mapEventTypeGroupsAllowed.has(_);
-        }
-        BIsGameSourceAllowed(_) {
-          return (
-            !(_ === _.k_EFollowing && !(0, _._)()) &&
-            !(_ === _.k_ECurator && !(0, _._)()) &&
-            this.m_mapGameSources.has(_)
-          );
-        }
-        SetEventTypeGroupAllowed(_, _) {
-          _
-            ? this.m_mapEventTypeGroupsAllowed.set(_, !0)
-            : this.m_mapEventTypeGroupsAllowed.delete(_),
-            this.SaveFilterPreferences(),
-            _._.RecordFilterChangeEvent(this);
-        }
-        SetGameSourceAllowed(_, _) {
-          _
-            ? (this.m_mapGameSources.set(_, !0),
-              _ == _.k_ERecent
-                ? this.m_mapGameSources.delete(_.k_ELibrary)
-                : _ == _.k_ELibrary &&
-                  ((0, _._)(
-                    !this.m_mapGameSources.has(_.k_ERecent),
-                    "Setting Library although Recent already set - illusion was broken",
-                  ),
-                  this.m_mapGameSources.delete(_.k_ERecent)))
-            : (this.m_mapGameSources.delete(_),
-              _ == _.k_ERecent
-                ? this.m_mapGameSources.set(_.k_ELibrary, !0)
-                : _ == _.k_ELibrary &&
-                  this.m_mapGameSources.delete(_.k_ERecent)),
-            this.SaveFilterPreferences(),
-            _._.RecordFilterChangeEvent(this);
-        }
-        BShouldDisplayEvent(_) {
-          const _ = _.GetSource(),
-            _ = Boolean(
-              _.appInfo &&
-                _.appInfo.last_played &&
-                _.appInfo.last_played + 15552e3 >= _._.GetTimeNowWithOverride(),
-            );
-          return (
-            !!(
-              this.enabledEventTypeSet.has(_.event_type) ||
-              (this.m_bInitializedForUpdatesOnly &&
-                this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
-                _.event_type == _.uYK &&
-                _.start_time < 1599202800)
-            ) &&
-            !this.m_mapHiddenApps.has(_.appid) &&
-              !this.m_mapHiddenClans.has(_.clanid) &&
-            (!!(_ & _._.k_eRequired || _ & _._.k_eReposted) ||
-              Boolean(
-                (this.BIsGameSourceAllowed(_.k_ERecent) && _) ||
-                  (this.BIsGameSourceAllowed(_.k_ELibrary) &&
-                    _ & _._.k_eLibrary) ||
-                  (this.BIsGameSourceAllowed(_.k_EWishlist) &&
-                    _ & _._.k_eWishlist) ||
-                  (this.BIsGameSourceAllowed(_.k_EFollowing) &&
-                    _ & _._.k_eFollowing) ||
-                  (this.BIsGameSourceAllowed(_.k_ERecommended) &&
-                    _ & _._.k_eRecommended) ||
-                  (this.BIsGameSourceAllowed(_.k_ESteam) && _ & _._.k_eSteam) ||
-                  (this.BIsGameSourceAllowed(_.k_EFeatured) &&
-                    _ & _._.k_eFeatured) ||
-                  (this.BIsGameSourceAllowed(_.k_ECurator) &&
-                    _ & _._.k_eCurator),
-              ))
-          );
-        }
-        BAreAllEventsHidden() {
-          return (
-            0 == this.m_mapEventTypeGroupsAllowed.size ||
-            0 == this.m_mapGameSources.size
-          );
-        }
-        BAreAnyEventsFiltered(_) {
-          const _ = (0, _._)() ? _ : _;
-          return (
-            (_ ? _ : _).some((_) => !this.BIsGameSourceAllowed(_)) ||
-            _.some((_) => !this.BIsEventTypeGroupAllowed(_))
-          );
-        }
-        BIsClanVisible(_) {
-          return !this.m_mapHiddenClans.has(_);
-        }
-        SetClanVisibility(_, _) {
-          _
-            ? this.m_mapHiddenClans.has(_) && this.m_mapHiddenClans.delete(_)
-            : this.m_mapHiddenClans.has(_) || this.m_mapHiddenClans.set(_, !0);
-        }
-        BIsAppVisible(_) {
-          return !this.m_mapHiddenApps.has(_);
-        }
-        SetAppVisibility(_, _) {
-          _
-            ? this.m_mapHiddenApps.has(_) && this.m_mapHiddenApps.delete(_)
-            : this.m_mapHiddenApps.has(_) || this.m_mapHiddenApps.set(_, !0);
-        }
+      function _() {
+        return _.useMemo(() => _(), []);
       }
-      (0, _._)([_._], _.prototype, "m_mapEventTypeGroupsAllowed", void 0),
-        (0, _._)([_._], _.prototype, "m_mapGameSources", void 0),
-        (0, _._)(
-          [_._],
-          _.prototype,
-          "m_bCuratorUnhideOnFollowDialogDismissed",
-          void 0,
-        ),
-        (0, _._)([_._], _.prototype, "m_mapHiddenApps", void 0),
-        (0, _._)([_._], _.prototype, "m_mapHiddenClans", void 0),
-        (0, _._)(
-          [
-            (0, _._)({
-              keepAlive: !0,
-              equals: _._.structural,
-            }),
-          ],
-          _.prototype,
-          "enabledEventTypeSet",
-          null,
-        ),
-        (0, _._)([_._], _.prototype, "SetEventTypeGroupAllowed", null),
-        (0, _._)([_._], _.prototype, "SetGameSourceAllowed", null);
+      function _() {
+        return _.useMemo(() => _.GetTimeNowWithOverrideAsDate(), []);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -22478,9 +21917,9 @@
       function _(_) {
         const { emoticon: _, large: _ } = _,
           [_, _] = (0, _._)(),
-          [_, _] = _.useState(),
+          [_, _] = _.useState(null),
           _ = `:${_}:`,
-          _ = _._.GetEmoticonURL(_, _);
+          _ = (0, _._)(_, _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -22496,6 +21935,7 @@
               }),
             }),
             _ &&
+              _ &&
               (0, _.jsx)(_, {
                 target: _,
                 emoticon: _,
@@ -22574,573 +22014,6 @@
       }
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_bValidatedEmail = !1;
-        m_nMobileDeviceCount = 0;
-        m_bIsLoaded = !1;
-        m_promise;
-        m_bLoadedFromConfig = !1;
-        LazyInit() {
-          if (!this.m_bLoadedFromConfig) {
-            let _ = (0, _._)("notificationstore", "application_config");
-            this.ValidateStoreDefault(_) &&
-              (0, _._)(() => {
-                (this.m_bIsLoaded = !0),
-                  (this.m_bValidatedEmail = _.email_validated),
-                  (this.m_nMobileDeviceCount = _.mobile_device_count);
-              }),
-              (this.m_bLoadedFromConfig = !0);
-          }
-        }
-        ValidateStoreDefault(_) {
-          return (
-            _ &&
-            "object" == typeof _ &&
-            "number" == typeof _.mobile_device_count
-          );
-        }
-        BIsLoaded() {
-          return this.m_bIsLoaded;
-        }
-        BHasValidatedEmail() {
-          return this.m_bValidatedEmail;
-        }
-        BHasPushNotification() {
-          return this.m_nMobileDeviceCount > 0;
-        }
-        async HintLoad() {
-          return (
-            this.LazyInit(),
-            this.m_bIsLoaded
-              ? _._
-              : _._.logged_in
-                ? (this.m_promise || (this.m_promise = this.InternalLoad()),
-                  this.m_promise)
-                : _._
-          );
-        }
-        async InternalLoad() {
-          const _ = _._.STORE_BASE_URL + "notification/ajaxusersettings",
-            _ = await _().get(_, {
-              withCredentials: !0,
-            });
-          return (
-            _.data.success == _._ &&
-              (0, _._)(() => {
-                (this.m_bIsLoaded = !0),
-                  (this.m_bValidatedEmail = _.data.email_validated),
-                  (this.m_nMobileDeviceCount = _.data.mobile_device_count);
-              }),
-            _.data.success
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_bValidatedEmail", void 0),
-        (0, _._)([_._], _.prototype, "m_nMobileDeviceCount", void 0);
-      let _ = new _();
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = class extends _.Component {
-        m_iMenuInstance;
-        m_elDropDownRef = _.createRef();
-        m_bLoadWasCancelled = !1;
-        state = {
-          bIsOpen: !1,
-          bIsLoadingNotificationSettings: !_.BIsLoaded(),
-        };
-        componentDidMount() {
-          this.state.bIsLoadingNotificationSettings &&
-            _.HintLoad()
-              .catch(
-                (_) => (
-                  console.error(
-                    "EventReminderWidget load fail: " + (0, _._)(_).strErrorMsg,
-                  ),
-                  _._
-                ),
-              )
-              .then((_) => {
-                _ != _._ ||
-                  this.m_bLoadWasCancelled ||
-                  this.setState({
-                    bIsLoadingNotificationSettings: !1,
-                  });
-              }),
-            !this.props.eventModel.appid &&
-              this.props.eventModel.clanSteamID &&
-              _._.LoadClanInfoForClanSteamID(this.props.eventModel.clanSteamID);
-        }
-        componentWillUnmount() {
-          this.m_bLoadWasCancelled = !0;
-        }
-        ToggleMenu(_) {
-          const _ = _._.Get().BIsUserLoggedIn();
-          _ || _._.IN_CLIENT
-            ? (!_ &&
-                _._.IN_CLIENT &&
-                console.log(
-                  "EventReminderWidget: In Client: Cannot use login widget. We expect to be already logged in.",
-                ),
-              this.state.bIsOpen ? this.HideMenu() : this.ShowMenu(),
-              _.stopPropagation(),
-              _.preventDefault())
-            : (0, _._)(
-                (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: (0, _._)(
-                    "#EventDisplay_Share_NotLoggedIn_Description",
-                  ),
-                  strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                  onOK: () => (0, _._)(),
-                }),
-                window,
-              );
-        }
-        ShowMenu() {
-          let _ = (0, _.jsx)(_, {
-              ...this.props,
-              fnHasReminderSet: (_) => this.BHasSomeNotificationSetting(_),
-              fnHidePanel: this.HideMenu,
-            }),
-            _ = {
-              bOverlapHorizontal: !0,
-              bOverlapVertical: !0,
-              bDisablePopTop: !0,
-              bMatchWidth: !0,
-              strClassName: (0, _._)(
-                _.ReminderDialog,
-                _.ReminderOptions,
-                _.contextMenu,
-              ),
-            };
-          (this.m_iMenuInstance = (0, _._)(_, this.m_elDropDownRef.current, _)),
-            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu),
-            this.setState({
-              bIsOpen: !0,
-            }),
-            _._.RecordAppInteractionEvent(
-              this.props.eventModel.appid,
-              _._.k_eReminder_Opened,
-            );
-        }
-        HideMenu() {
-          this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
-            this.setState({
-              bIsOpen: !1,
-            });
-        }
-        BHasSomeNotificationSetting(_) {
-          const _ = _.GID;
-          return (
-            (_.BHasValidatedEmail() &&
-              _._.Get().BFollowsEventAndNotifiedBy(
-                _.clanSteamID,
-                _,
-                _._.k_ENotifyFlagByEmail,
-              )) ||
-            (_.BHasPushNotification() &&
-              _._.Get().BFollowsEventAndNotifiedBy(
-                _.clanSteamID,
-                _,
-                _._.k_ENotifyFlagByPush,
-              ))
-          );
-        }
-        render() {
-          const _ = this.props.bOnlyShowIcon && !this.state.bIsOpen,
-            _ = this.BHasSomeNotificationSetting(this.props.eventModel),
-            _ = (0, _._)();
-          return this.props.eventModel.startTime < _ ||
-            this.props.eventModel.BIsUnlistedEvent()
-            ? null
-            : (0, _.jsxs)("div", {
-                className: (0, _._)({
-                  [_.ReminderCheckBox]: !0,
-                  [_().ReminderCtn]: !0,
-                  [_.IconMode]: _,
-                  [_.TextMode]: !_,
-                  ReminderSet: _,
-                  RemindMeWidget: !0,
-                }),
-                onClick: this.ToggleMenu,
-                ref: this.m_elDropDownRef,
-                children: [
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _.RemindCheck,
-                      children: (0, _.jsx)(_.Jlk, {}),
-                    }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _.RemindBell,
-                      children: (0, _.jsx)(_.IrQ, {}),
-                    }),
-                  (0, _.jsx)("div", {
-                    className: _.ReminderDefault,
-                    children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.ReminderOptions,
-                  }),
-                ],
-              });
-        }
-      };
-      function _(_) {
-        const { bPreviewMode: _, eventGID: _, ..._ } = _,
-          _ = (0, _._)(_);
-        if (!_)
-          return _
-            ? (0, _.jsx)("div", {
-                className: _.ErrorDiv,
-                children: (0, _._)("#EventDidplay_Reminder_EventNotVisible", _),
-              })
-            : null;
-        const _ = (0, _.sfN)(_._.LANGUAGE);
-        return (0, _.jsx)(_, {
-          lang: _,
-          ..._,
-          eventModel: _,
-        });
-      }
-      function _(_) {
-        return _.unix(_).utc().format("YYYYMMDD[T]HHmmss[Z]");
-      }
-      (0, _._)([_._], _.prototype, "ToggleMenu", null),
-        (0, _._)([_._], _.prototype, "ShowMenu", null),
-        (0, _._)([_._], _.prototype, "HideMenu", null),
-        (_ = (0, _._)([_._], _));
-      const _ = (0, _._)((_) => {
-        const {
-            eventModel: _,
-            bShowStartTime: _,
-            bExpandLeft: _,
-            bOnlyShowIcon: _,
-            fnHasReminderSet: _,
-            fnHidePanel: _,
-            lang: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          _ = async (_, _, _) => {
-            const _ = _?.GID;
-            if (_ && _ != _.kFb) {
-              _(!0);
-              try {
-                await _._.Get().SetFollowOrUnfollowEvent(
-                  !_,
-                  _,
-                  _.clanSteamID,
-                  _,
-                  _,
-                ),
-                  _ &&
-                    (_ === _._.k_ENotifyFlagByEmail
-                      ? _(_._.k_eReminder_Email)
-                      : _ === _._.k_ENotifyFlagByPush &&
-                        _(_._.k_eReminder_MobilePush));
-              } catch (_) {
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    strTitle: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                        : "#EventDisplay_Reminder_FollowEvent_Error",
-                    ),
-                    strDescription: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                    ),
-                    children: (0, _._)(_).strErrorMsg,
-                  }),
-                  window,
-                );
-              }
-              _(!1);
-            }
-          },
-          _ = (_) => {
-            _._.RecordAppInteractionEvent(_.appid, _);
-          },
-          _ = _.jsondata.bSaleEnabled ? _._.k_eStoreSalePage : _._.k_eStoreView,
-          _ = (0, _._)(_, _, "forceAbsolute"),
-          _ = (_) => {
-            const _ = _.appid
-                ? "app/" + _.appid
-                : "group/" + _.clanSteamID.GetAccountID(),
-              _ = "l=" + (0, _.LgB)(_);
-            return `${_._.STORE_BASE_URL}${(0, _._)()}/download/${_}/${_}/${_.GID}?${_}`;
-          },
-          _ = _.BHasValidatedEmail(),
-          _ = _.BHasPushNotification(),
-          _ = _ && _.GetStartTimeAndDateUnixSeconds();
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.ReminderCheckBox,
-                _ ? _.IconMode : _.TextMode,
-                "RemindMeWidget",
-              ),
-              onClick: _,
-              children: [
-                _(_) &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindCheck,
-                    children: (0, _.jsx)(_.Jlk, {}),
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.RemindBell,
-                    children: (0, _.jsx)(_.IrQ, {}),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderDefault,
-                  children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderOpennedOptions,
-                }),
-              ],
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.FlexColumnContainer,
-                _.ReminderBackground,
-                _ && _.ReminderExpandsLeft,
-              ),
-              children: [
-                _ &&
-                  (0, _.jsx)(_._, {
-                    className: _.RpcThrobber,
-                    size: "xlarge",
-                    position: "center",
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _.FullStartTime,
-                    children: (0, _._)(
-                      "#EventDisplay_EventUpcoming_WithDateAndTime",
-                      (0, _._)(
-                        _,
-                        (0, _._)(
-                          new Date(1e3 * _),
-                          _._.GetTimeNowWithOverrideAsDate(),
-                        ),
-                      ),
-                      (0, _._)(_, !0),
-                    ),
-                  }),
-                (0, _.jsx)("div", {
-                  className: _.ReminderOptionsHeader,
-                  children: (0, _._)(
-                    "#EventDisplay_Reminder_GetNotification_Via",
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                  children: [
-                    (0, _.jsx)(_._, {
-                      className: _.CheckboxWrapper,
-                      bTopmost: !0,
-                      toolTipContent: (0, _._)(
-                        _
-                          ? "#EventReminder_NotifyByEmail_ttip"
-                          : "#EventReminder_NotifyByEmail_Missing",
-                      ),
-                      children: (0, _.jsx)(_._, {
-                        label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                        disabled: !_,
-                        checked: _._.Get().BFollowsEventAndNotifiedBy(
-                          _.clanSteamID,
-                          _.GID,
-                          _._.k_ENotifyFlagByEmail,
-                        ),
-                        onChange: (_) => {
-                          _(_, !1, _._.k_ENotifyFlagByEmail);
-                        },
-                      }),
-                    }),
-                    !_ &&
-                      (0, _.jsx)("div", {
-                        className: _.FlexColumnContainer,
-                        children: (0, _.jsx)("a", {
-                          href: _._.STORE_BASE_URL + "account/",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () => _(_._.k_eReminder_EmailUnverified),
-                          children: (0, _._)(
-                            "#EventReminder_NotifyByEmail_Missing_Add",
-                          ),
-                        }),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                  children: [
-                    (0, _.jsx)(_._, {
-                      className: _.CheckboxWrapper,
-                      bTopmost: !0,
-                      toolTipContent: (0, _._)(
-                        _
-                          ? "#EventReminder_NotifyByMobile_ttip"
-                          : "#EventReminder_NotifyByMobile_Missing",
-                      ),
-                      children: (0, _.jsx)(_._, {
-                        label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                        disabled: !_,
-                        checked: _._.Get().BFollowsEventAndNotifiedBy(
-                          _.clanSteamID,
-                          _.GID,
-                          _._.k_ENotifyFlagByPush,
-                        ),
-                        onChange: (_) => {
-                          _(_, !1, _._.k_ENotifyFlagByPush);
-                        },
-                      }),
-                    }),
-                    !_ &&
-                      (0, _.jsx)("div", {
-                        className: _.FlexColumnContainer,
-                        children: (0, _.jsx)("a", {
-                          href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () => _(_._.k_eReminder_MobilePushMissing),
-                          children: (0, _._)(
-                            "#EventReminder_NotifyByMobile_Install",
-                          ),
-                        }),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _.ReminderOptionsHeader,
-                      children: (0, _._)(
-                        "#EventDisplay_Reminder_AddToCalendar",
-                      ),
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.ReminderCalendarOptions,
-                      children: [
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          href: _("ics"),
-                          onClick: () => _(_._.k_eReminder_CalendarApple),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_AppleCalendar_Short",
-                          ),
-                        }),
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          target: _._.IN_CLIENT ? void 0 : "_blank",
-                          href: (() => {
-                            const _ = encodeURIComponent(
-                                (() => {
-                                  const _ = _.GetNameWithFallback(_);
-                                  if (
-                                    _._.BHasEntityNameForID(
-                                      _.appid,
-                                      _.clanSteamID.GetAccountID(),
-                                    )
-                                  )
-                                    return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-                                  return _;
-                                })(),
-                              ),
-                              _ = encodeURIComponent(
-                                (() => {
-                                  let _ = _.GetSubTitleWithLanguageFallback(_);
-                                  return (
-                                    (_ = _ ? `${_}\n\n\n` : ""),
-                                    `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
-                                  );
-                                })(),
-                              ),
-                              _ = _.GetStartTimeAndDateUnixSeconds(),
-                              _ = _(_),
-                              _ = _(
-                                _.GetEndTimeAndDateUnixSeconds() ||
-                                  _ + _._.PerHour,
-                              ),
-                              _ =
-                                (_._.IN_CLIENT
-                                  ? "steam://openurl_external/"
-                                  : "") +
-                                `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-                            return (0, _._)(_);
-                          })(),
-                          onClick: () => _(_._.k_eReminder_CalendarGoogle),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_GoogleCalendar_Short",
-                          ),
-                        }),
-                        (0, _.jsx)("a", {
-                          className: _.ReminderOption,
-                          href: _("outlook"),
-                          onClick: () => _(_._.k_eReminder_CalendarOutlook),
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_OutlookCalendar_Short",
-                          ),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                !1,
-              ],
-            }),
-          ],
-        });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -23934,6 +22807,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { gidEvent: _ } = _,
@@ -23962,7 +22836,7 @@
           }, [_]);
         return _?.length > 0 && _?.length > 0
           ? (0, _.jsxs)("a", {
-              href: (0, _._)(__webpack_require__.GetSaleURL()),
+              href: (0, _._)((0, _._)(_)),
               className: _.Link,
               children: [
                 (0, _.jsx)("img", {
@@ -24897,368 +23771,6 @@
         (0, _._)([_._], _.prototype, "OnSaveLink", null),
         (0, _._)([_._], _.prototype, "OnEditLink", null),
         (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const _ = _()._.guess(),
-          _ = _().unix(_)._(_),
-          _ = (0, _._)();
-        return (
-          _ && __webpack_require__.locale(_), __webpack_require__.format("LT")
-        );
-      }
-      function _(_, _) {
-        const _ = _()._.guess(),
-          _ = _().unix(_)._(_),
-          _ = (0, _._)();
-        return (
-          _ && _.locale(_),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              _.format("LT"),
-              _
-                ? (0, _.jsx)(_._, {
-                    toolTipContent: _.format("Z") + ", " + _,
-                    children: (0, _.jsxs)("span", {
-                      children: [" ", _.zoneAbbr()],
-                    }),
-                  })
-                : null,
-            ],
-          })
-        );
-      }
-      const _ = (0, _._)((_) => {
-          const {
-              dateAndTime: _,
-              bSingleLine: _,
-              bOnlyTime: _,
-              bOnlyDate: _,
-            } = _,
-            _ = !_ && Boolean(_),
-            _ = !_ && Boolean(_),
-            _ = _ && (0, _._)(_),
-            _ = _.stylesmodule
-              ? {
-                  ..._(),
-                  ..._.stylesmodule,
-                }
-              : _();
-          return _
-            ? (0, _.jsxs)("span", {
-                className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
-                children: [
-                  _ && _,
-                  _ && _
-                    ? (0, _.jsx)("span", {
-                        children: " ",
-                      })
-                    : void 0,
-                  Boolean(_ && _) && _(_, _),
-                ],
-              })
-            : (0, _.jsxs)("div", {
-                className: _.DateAndTime,
-                children: [
-                  _ &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.LocalizedDate,
-                          children: _,
-                        }),
-                        " ",
-                        (0, _.jsx)("span", {
-                          className: _._,
-                          children: (0, _._)(
-                            "#EventDisplay_DateAndTimeCombiner",
-                          ),
-                        }),
-                      ],
-                    }),
-                  (0, _.jsx)("div", {
-                    className: _.LocalizedTime,
-                    children: Boolean(_ && _) && _(_, _),
-                  }),
-                ],
-              });
-        }),
-        _ = (_) => {
-          const _ = (0, _.jsx)("div", {
-            className: _.stylesmodule?.DateToolTip,
-            children: (0, _.jsx)(_, {
-              dateAndTime: _.rtFullDate,
-              bSingleLine: !0,
-              stylesmodule: _.stylesmodule,
-            }),
-          });
-          return (0, _.jsx)(_._, {
-            toolTipContent: _,
-            direction: "top",
-            className: _.className,
-            bTopmost: !0,
-            children: _.children,
-          });
-        };
-      let _ = class extends _.Component {
-        render() {
-          const { startDateAndTime: _, endDateAndTime: _ = 0 } = this.props,
-            _ = this.props.stylesmodule
-              ? {
-                  ..._(),
-                  ...this.props.stylesmodule,
-                }
-              : _();
-          let _ =
-            this.props.bHideEndTime ||
-            null == this.props.endDateAndTime ||
-            this.props.endDateAndTime < 1;
-          if (null == _ || 0 == _)
-            return (0, _.jsxs)("div", {
-              className: _.DateAndTime,
-              children: [
-                (0, _.jsx)("span", {
-                  className: _.RightSideTitles,
-                  children: (0, _._)("#EventDisplay_TimeRange"),
-                }),
-                (0, _._)("#EventDisplay_TimeDisplayNone"),
-              ],
-            });
-          let _ = _._.GetTimeNowWithOverride();
-          if (_)
-            return (0, _.jsxs)("div", {
-              className: _.StartDate,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _.RightSideTitles,
-                  children: [
-                    (0, _._)(
-                      _ < _
-                        ? "#EventDisplay_TimeInPast"
-                        : "#EventDisplay_TimeUpcoming",
-                    ),
-                    " ",
-                  ],
-                }),
-                (0, _.jsx)(_, {
-                  stylesmodule: _,
-                  dateAndTime: _,
-                }),
-              ],
-            });
-          let _ = _ <= _ && _ <= _;
-          const _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
-          return (0, _.jsxs)("div", {
-            className: _.MultiDateAndTime,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.StartDate,
-                children: [
-                  (0, _.jsx)("span", {
-                    className: _.RightSideTitles,
-                    children: (0, _._)(
-                      _ >= _
-                        ? "#EventDisplay_TimeBeginsOn"
-                        : _ >= _
-                          ? "#EventDisplay_TimeBeginsOn_Past"
-                          : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                    ),
-                  }),
-                  (0, _.jsx)(_, {
-                    stylesmodule: _,
-                    bSingleLine: !0,
-                    dateAndTime: _,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.EndDate,
-                children: [
-                  (0, _.jsx)("span", {
-                    className: _.RightSideTitles,
-                    children: (0, _._)(
-                      _ < _
-                        ? "#EventDisplay_TimeEndsOn_Past"
-                        : "#EventDisplay_TimeEndsOn",
-                    ),
-                  }),
-                  (0, _.jsx)(_, {
-                    stylesmodule: _,
-                    bSingleLine: !0,
-                    bOnlyTime: _,
-                    dateAndTime: _,
-                  }),
-                ],
-              }),
-              _ &&
-                (0, _.jsx)("span", {
-                  className: _.ActiveEvent,
-                  children: (0, _.jsx)("span", {
-                    className: (0, _._)(
-                      _.RightSideTitles,
-                      _.ActiveEventCallOut,
-                    ),
-                    children: (0, _._)("#Time_Now"),
-                  }),
-                }),
-            ],
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        render() {
-          const {
-              startDateAndTime: _,
-              endDateAndTime: _,
-              bHideEndTime: _,
-            } = this.props,
-            _ = this.props.stylesmodule
-              ? {
-                  ..._(),
-                  ...this.props.stylesmodule,
-                }
-              : _();
-          if (null == _ || 0 == _)
-            return (0, _.jsxs)("div", {
-              className: _.DateAndTime,
-              children: [
-                (0, _.jsx)("span", {
-                  className: _.RightSideTitles,
-                  children: (0, _._)("#EventDisplay_TimeRange"),
-                }),
-                (0, _._)("#EventDisplay_TimeDisplayNone"),
-              ],
-            });
-          const _ = _._.GetTimeNowWithOverrideAsDate(),
-            _ = _._.GetTimeNowWithOverride(),
-            _ = (0, _._)(new Date(1e3 * _), _),
-            _ = (0, _.jsx)("div", {
-              className: _.ShortDateAndTime,
-              children: (0, _._)(_, _),
-            });
-          let _ = (0, _.jsxs)(_, {
-            rtFullDate: _,
-            stylesmodule: _,
-            children: [
-              (0, _.jsx)("div", {
-                className: _.RightSideTitles,
-                children: (0, _._)(
-                  _ < _
-                    ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming",
-                ),
-              }),
-              _,
-            ],
-          });
-          if (
-            (_ < _ &&
-              _ < _ + _._.PerWeek &&
-              (_ = (0, _.jsx)(_, {
-                rtFullDate: _,
-                stylesmodule: _,
-                children: (0, _.jsx)("div", {
-                  className: _.RightSideTitles,
-                  children: (0, _._)(
-                    "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    _,
-                    (0, _.jsxs)("div", {
-                      className: _.ShortDateAndTime,
-                      children: [_(_), " "],
-                    }),
-                  ),
-                }),
-              })),
-            _ || null == _ || _ < 1)
-          )
-            return _;
-          const _ = _ <= _ && _ <= _;
-          _ &&
-            (_ = (0, _.jsx)(_, {
-              rtFullDate: _,
-              className: _.ActiveEvent,
-              stylesmodule: _,
-              children: (0, _.jsx)("span", {
-                className: _.ActiveEventCallOut,
-                children: (0, _._)("#Time_Now"),
-              }),
-            }));
-          let _ = null;
-          const _ = _ ? _ - _ : _ - _;
-          if (_ <= _._.PerDay) {
-            const _ = (0, _.jsx)("div", {
-              className: _.ShortDateAndTime,
-              children: (0, _._)(_, !0),
-            });
-            _ =
-              _ < _
-                ? (0, _.jsxs)("div", {
-                    className: _.RightSideTitles,
-                    children: [(0, _._)("#EventDisplay_TimeEndsOn_Ran"), _],
-                  })
-                : (0, _.jsx)("div", {
-                    className: _.RightSideTitles,
-                    children: (0, _._)(
-                      _
-                        ? "#EventDisplay_TimeLeft"
-                        : "#EventDisplay_RunsForDuration",
-                      _,
-                    ),
-                  });
-          } else {
-            const _ = _.getFullYear() == new Date(1e3 * _).getFullYear();
-            _ = (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.RightSideTitles,
-                  children: (0, _._)(
-                    _ < _
-                      ? "#EventDisplay_TimeEndsOn_Past"
-                      : "#EventDisplay_TimeEndsOn",
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: _.ShortDateAndTime,
-                  children: (0, _._)(_, _),
-                }),
-              ],
-            });
-          }
-          const _ = (0, _.jsx)(_, {
-            rtFullDate: _,
-            stylesmodule: _,
-            children: _,
-          });
-          return (0, _.jsxs)("div", {
-            className: _.ShortDateRange,
-            children: [_, _],
-          });
-        }
-      };
-      _ = (0, _._)([_._], _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

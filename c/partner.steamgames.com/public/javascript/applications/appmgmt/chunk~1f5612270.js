@@ -36,6 +36,7 @@
         ToolbarInfo: "_1bPMNcsgqa-akKYfelwilP",
         Visible: "CLKT9CFoyEByzdSrgSzE2",
         ChangeCount: "_1fN8w-ElZiiZadq4F6P5wa",
+        ProposalStatus: "_1IKd3SFdr5z6DcVWi1hpQC",
         Buttons: "_1krNhBmPJ7AUIp1iDga0kZ",
         Button: "_2JjzuIkHTgXpX-jui_X86Y",
         SaveButton: "_16sHrIsuZRMMARr_H1gSdR",
@@ -60,6 +61,7 @@
         RadioButtons: "_3lsh2Yw2Hmc3kamU1eJyJJ",
         PublishError: "k_qc0NeY8sBathGlH4yet",
         PublishWarning: "_3uUgrMwDoXiX2PEyRHiF9g",
+        StageNote: "dpMou_xbI8FCjsLTXKet7",
         PublishErrorDialog: "_381pEpkUlOe9X-z-1msxGm",
         HoverToolTip: "_1yXHpORUurTNRsHpzalvwp",
         PriceChangeSaveWarning: "_2lTJ7-iyFOMpIaZ-p6yDvd",
@@ -303,9 +305,12 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -474,9 +479,16 @@
                   (0, _._)(
                     _
                       ? "#PricingDashboard_PriceProposal_Publish_Explanation"
-                      : "#PricingDashboard_StageNewPrices_desc",
+                      : "#PricingDashboard_StageNewPrices_desc_Timing",
                     _.length,
                   ),
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _().StageNote,
+                      children: (0, _._)(
+                        "#PricingDashboard_StageNewPrices_NoStoreChange",
+                      ),
+                    }),
                   _ &&
                     _ &&
                     (0, _.jsx)("div", {
@@ -598,12 +610,65 @@
         });
       }
       function _(_) {
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_);
+        return _
+          ? _.eState == _._
+            ? _
+              ? {
+                  bApproved: !0,
+                  strLabel: "#PricingDashboard_ProposedPrice_Status_Approved",
+                  strMessage:
+                    "#PricingDashboard_ProposedPrice_CallOut_Approved",
+                }
+              : {
+                  bApproved: !0,
+                  strLabel:
+                    "#PricingDashboard_ProposedPrice_Status_Approved_Stage",
+                  strMessage:
+                    "#PricingDashboard_ProposedPrice_CallOut_Approved_Stage",
+                }
+            : _.bPartnerWillPublish
+              ? {
+                  bApproved: !1,
+                  strLabel: "#PricingDashboard_ProposedPrice_Status_InReview",
+                  strMessage: _
+                    ? "#PricingDashboard_ProposedPrice_CallOut_InReview"
+                    : "#PricingDashboard_ProposedPrice_CallOut_InReview_Stage",
+                }
+              : {
+                  bApproved: !1,
+                  strLabel:
+                    "#PricingDashboard_ProposedPrice_Status_InReview_AutoPublish",
+                  strMessage:
+                    "#PricingDashboard_ProposedPrice_CallOut_InReview_AutoPublish",
+                }
+          : null;
+      }
+      function _(_) {
+        const _ = _(_.packageID);
+        return _
+          ? (0, _.jsx)(_._, {
+              size: "4",
+              color: _.bApproved ? "text-success" : "text-warning",
+              children: (0, _._)(_.strMessage),
+            })
+          : null;
+      }
+      function _(_) {
+        const _ = _(_.packageID);
+        return _
+          ? (0, _.jsx)(_._, {
+              size: "3",
+              color: _.bApproved ? "text-success" : "text-warning",
+              children: (0, _._)(_.strLabel),
+            })
+          : null;
+      }
+      function _(_) {
         const { packageID: _ } = _,
           [_, _, _] = (0, _._)(),
-          { data: _ } = (0, _._)({
-            packageid: _,
-          }),
-          _ = Boolean(_);
+          _ = (0, _._)(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {

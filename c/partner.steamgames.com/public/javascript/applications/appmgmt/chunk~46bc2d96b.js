@@ -3430,7 +3430,7 @@
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
             overscan: _,
-            initialOffset: _,
+            initialOffset: _ ?? (() => window.scrollY),
             initialRect: void 0,
             observeElementOffset: _,
             observeElementRect: _,
@@ -3439,6 +3439,8 @@
             },
           });
         return (
+          (_.shouldAdjustScrollPositionOnItemSizeChange = (_) =>
+            void 0 !== _ && _.start < (_.scrollOffset ?? 0)),
           _.useEffect(() => {
             (0, _.startTransition)(() => {
               _.measure();

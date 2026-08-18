@@ -1064,141 +1064,145 @@
           _.useEffect(() => {
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
               _._.Init(),
-              _ &&
-                _._.AddDictionary(
-                  (null == _ &&
-                    (_ = new Map([
-                      [
-                        "itemdef",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                          skipInternalNewline: !0,
-                          allowWrapTextForCopying: !0,
-                        },
-                      ],
-                      [
-                        "wishlist",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "followgame",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "followgroup",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "deckcompatcount",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "deckcompatuserlibrarycount",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "giveawayinfo",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "price",
-                        {
-                          Constructor: _._,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "pricesavings",
-                        {
-                          Constructor: _._,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "eventdoorvisibility",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "chooseaccount",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "badgecurrentlevel",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "optindoorquest",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "classname",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "localize",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "salesection",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "reservationbutton",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                    ])),
-                  _),
-                ),
               _._.InitGlobal().then(() => _(!0));
-          }, [_]),
+          }, []),
           _.useEffect(() => {
             const _ = (0, _._)();
             _ && _.locale(_);
           }, []),
-          _ ? _.children : null
+          _
+            ? _
+              ? (0, _.jsx)(_._, {
+                  dictionary:
+                    (null == _ &&
+                      (_ = new Map([
+                        [
+                          "itemdef",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                            skipInternalNewline: !0,
+                            allowWrapTextForCopying: !0,
+                          },
+                        ],
+                        [
+                          "wishlist",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "followgame",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "followgroup",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "deckcompatcount",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "deckcompatuserlibrarycount",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "giveawayinfo",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "price",
+                          {
+                            Constructor: _._,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "pricesavings",
+                          {
+                            Constructor: _._,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "eventdoorvisibility",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "chooseaccount",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "badgecurrentlevel",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "optindoorquest",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "classname",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "localize",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "salesection",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "reservationbutton",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                      ])),
+                    _),
+                  children: _.children,
+                })
+              : _.children
+            : null
         );
       }
     },

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10908265";
+var CLSTAMP = "10921149";
 (() => {
   var e,
     t,
@@ -102,12 +102,12 @@ var CLSTAMP = "10908265";
         }
         (r.keys = () => Object.keys(i)), (r.id = 48516), (e.exports = r);
       },
-      97854: (e, t, n) => {
+      76377: (e, t, n) => {
         "use strict";
-        n(35735);
+        n(92158);
         var i = n(63696),
           r = n(7470),
-          s = n(32031);
+          s = n(16316);
         const a = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -165,8 +165,6 @@ var CLSTAMP = "10908265";
             IS_STEAMOS: !1,
             ON_STEAMOS_CLIENT_BRANCH: !1,
             IN_GAMESCOPE: !1,
-            IN_LOGIN: !1,
-            IN_LOGIN_REFRESH: !1,
             USE_LONGEST_LOC_STRING: !1,
             SILENT_STARTUP: !1,
             DEV_MODE: !1,
@@ -750,7 +748,7 @@ var CLSTAMP = "10908265";
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        var V = n(64297);
+        var V = n(7407);
         function W(e, t, n, i) {
           var r,
             s = arguments.length,
@@ -1002,7 +1000,7 @@ var CLSTAMP = "10908265";
         let te;
         te ??= new Set();
         let ne = null;
-        var ie = n(73304);
+        var ie = n(23582);
         function re() {
           if (((e = q.LANGUAGE), !Q.has(e)))
             throw `unknown language ${q.LANGUAGE}`;
@@ -1118,6 +1116,18 @@ var CLSTAMP = "10908265";
                   : o(e + "_Plural", t, ...n),
               GetAppTypeLocKey(e, t) {
                 switch (t) {
+                  case ie.uE.XP:
+                    return e + "_Guide";
+                  case ie.uE.Hk:
+                    return e + "_Hardware";
+                  case ie.uE._i:
+                    return e + "_DLC";
+                  case ie.uE.Ov:
+                    return e + "_Music";
+                  case ie.uE.gQ:
+                    return e + "_Series";
+                  case ie.uE.ue:
+                    return e + "_Demo";
                   case ie.uE.Sv:
                     return e + "_Software";
                   case ie.uE.Wz:
@@ -1797,12 +1807,12 @@ var CLSTAMP = "10908265";
               })();
           });
       },
-      21964: (e, t, n) => {
+      6091: (e, t, n) => {
         "use strict";
         n.d(t, { R: () => i });
         const i = 1;
       },
-      64297: (e, t, n) => {
+      7407: (e, t, n) => {
         "use strict";
         async function i(e, t = "SHA-256") {
           let n;
@@ -1819,8 +1829,8 @@ var CLSTAMP = "10908265";
           })(await window.crypto.subtle.digest(t, n));
         }
         n.d(t, { aj: () => F });
-        var r = n(65166),
-          s = n(90133),
+        var r = n(21023),
+          s = n(73808),
           a = n(63696);
         const o =
           window.addEventListener ||
@@ -2213,15 +2223,15 @@ var CLSTAMP = "10908265";
           return 1e4;
         }
       },
-      65166: (e, t, n) => {
+      21023: (e, t, n) => {
         "use strict";
         n.d(t, { I8: () => u, w: () => d });
-        var i = n(64297),
-          r = n(21964),
+        var i = n(7407),
+          r = n(6091),
           s = n(58663),
-          a = n(87522),
-          o = n(18996),
-          c = n(29625);
+          a = n(9867),
+          o = n(12343),
+          c = n(49120);
         class l {
           static InitHeaderFromPacket(e) {
             return new l(void 0, e);
@@ -2397,7 +2407,7 @@ var CLSTAMP = "10908265";
           );
         }
       },
-      62461: (e, t, n) => {
+      36134: (e, t, n) => {
         "use strict";
         n.d(t, {
           BT: () => c,
@@ -2565,7 +2575,7 @@ var CLSTAMP = "10908265";
               };
         }
       },
-      29625: (e, t, n) => {
+      49120: (e, t, n) => {
         "use strict";
         n.d(t, { pV: () => i });
         class i {
@@ -2641,7 +2651,7 @@ var CLSTAMP = "10908265";
           }
         }
       },
-      35735: (e, t, n) => {
+      92158: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2751,17 +2761,17 @@ var CLSTAMP = "10908265";
       ".js?contenthash=" +
       {
         43: "8170f2c895e19202cd65",
-        200: "565b77074de18b644f43",
-        295: "bd39d7bbdf44e4767829",
-        559: "4261d8b18a20becab4e2",
+        200: "97d6b91f251d530583ca",
+        295: "f7b5346af4c9748e7713",
+        559: "1d22d9eb5f270dbceb86",
         762: "989dc3b4eff679fe5ec9",
-        815: "e56fc1348319b30a33bb",
-        1136: "ed55d384a6ee2c8b99e9",
+        815: "2a4bb53c1fe590458db2",
+        1136: "4e4da813c110e065dacc",
         1499: "63ac62860d966e5978a9",
-        1864: "dd0b23501ea849aec42f",
-        2269: "e0a3de7fb6ce7006519e",
+        1864: "fb474b692ff5a3a7b978",
+        2269: "021fa72192e6af3ee4b9",
         2532: "81f6c1f1d6e42e913450",
-        2889: "5a54c4a13b7fdf97a351",
+        2889: "c4bff9e981ee19b8099e",
         2945: "f36eb722d1197b9ccc69",
         3e3: "a020a8a0239eaddd4347",
         3016: "1e84930d3e0b90c7a6b5",
@@ -2770,50 +2780,50 @@ var CLSTAMP = "10908265";
         3485: "d45be7f2f2c9a5c0f02d",
         3723: "325ca6fc0ceca5503b85",
         3789: "8c81812abc11a5169e5b",
-        3800: "fd6c4a51ee726d7857e1",
-        3907: "acb570cbe87a45370236",
+        3800: "2d1d2bc9065b30317066",
+        3907: "9831fc2c8061997a120e",
         4154: "da950d2a24eca80bf91a",
-        4230: "2076923cd0a4c22d72aa",
-        4289: "e33a182b1012718f1f4a",
+        4230: "c754e42acf5b62d9864f",
+        4289: "7165ad723758272236ac",
         4302: "6777319b6735c96a6a98",
-        4419: "f8e31272a8267560c36d",
+        4419: "2960803dc8add8035fa5",
         4434: "06de5f0d3ba8406dd2d0",
         4488: "8dd091f616bb836b799e",
-        4625: "f11fdc7c2a8637db941c",
-        4750: "6a2548c6f4681e89fbdb",
+        4625: "0c085f23233161b6967c",
+        4750: "68ef05a294eac730031a",
         4776: "0ff0003552979744c3ee",
         4787: "ab118cafd413ef8db5d3",
-        4792: "2313383fc0e234744aad",
-        4978: "cde74231919ac714ed14",
-        5040: "a8387cf2ac73ceabf119",
-        5191: "ee82b3a8f03316391985",
-        5233: "e916b53d09f578603df8",
+        4792: "8afa4089111384fd8fd8",
+        4978: "129bbbea251f001e5217",
+        5040: "5bb81e685060aa4cb72e",
+        5191: "4101ad929f40adda52cd",
+        5233: "deea4292298564390360",
         5341: "0050d1d3444cdf99610b",
-        5436: "bec0dd4edebc7ed3d352",
+        5436: "dfaf7667a2137111d5f1",
         5480: "819bcdfa36698211a731",
-        5777: "affabae08fccce5f216e",
+        5777: "c13935ed6e44c943448c",
         6127: "658afba6cdc2a25013d4",
-        6170: "7be014409b29b782ea6f",
+        6170: "6ac0cee5f5bbb0edb8ee",
         6385: "641291b44bff14d6f0d7",
-        6512: "a595c994122b25799979",
+        6512: "0b430f99536d62213824",
         6518: "dc5f6ae58364d09cceda",
         6609: "58380bc6920b369df4a7",
-        6736: "5fac9c35ab88a75e6079",
+        6736: "039a2ae091edc9de5b4b",
         6888: "b1d82792ec48c0c9f838",
         6971: "8bfca381100e06a3c16d",
-        7246: "5b769448a62375fd8749",
-        7263: "461be645f271400b962f",
+        7246: "775446676728b8b935f4",
+        7263: "49cbbe96eb3e47dccfa2",
         7487: "49d81d8d15ad6c6cb411",
         7861: "7b73403c160be056831f",
         8194: "cee76cc3439b0428bedd",
         8476: "094339eefcf15105c427",
         8759: "c5da3a31f5e1a781a6b1",
         8766: "99861106e88eb68fe3ec",
-        9574: "686eb5b5f196008b0c69",
-        9668: "810a657ba920b191c905",
+        9574: "b06958ce8157e1ca49e0",
+        9668: "ff1ba593ee8ffe24db1f",
         9746: "2cfaacb3359ab5b9bd3c",
         9808: "21bf92301f1b8edb7b62",
-        9863: "b84d2101aa968e8529ae",
+        9863: "623f14a66142e7451d8d",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2950,6 +2960,6 @@ var CLSTAMP = "10908265";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [3987, 9489, 1068], () => o(97854));
+  var c = o.O(void 0, [3987, 9489, 1068], () => o(76377));
   c = o.O(c);
 })();

@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Gagal mengurai GIF. Kodekan ulang atau ubah jenis format dan coba lagi.",
     "MediaConvert_InputError_ImageTooSmall": "Gambar terlalu kecil. Harap unggah gambar dengan ukuran minimal 16 x 16 piksel.",
     "MediaConvert_InputError_AnimationTooSmall": "Animasi atau video terlalu kecil. Harap unggah animasi atau video dengan ukuran minimal 16 x 16 piksel.",
+    "MediaConvert_InputError_MultipleVideoStreams": "File berisi lebih dari satu trek video. Harap unggah file berisi satu trek video saja.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Gambar ini tidak dapat dianimasikan. Silakan unggah gambar statis.",
     "MediaConvert_InputError_ImageTypeWithAudio": "File gambar tidak boleh berisi trek audio.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "Output AVIF tidak didukung untuk sumber video.",
     "MediaConvert_InternalError_FailedToConvert": "Gagal mengonversi file ini. Silakan kodekan ulang file sebelum mencoba lagi.",

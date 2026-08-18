@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "解析 GIF 檔失敗。請重新編碼或更改格式類型後再試一次。",
     "MediaConvert_InputError_ImageTooSmall": "圖片太小。請上傳至少為 16x16 像素的圖片。",
     "MediaConvert_InputError_AnimationTooSmall": "動畫或影片太小。請上傳尺寸至少為 16x16 像素的動畫或影片。",
+    "MediaConvert_InputError_MultipleVideoStreams": "檔案包含不只一個影像軌。請上傳包含單一影像軌的檔案。",
+    "MediaConvert_InputError_AnimationNotAllowed": "此圖像無法為動畫。請上傳靜態圖像。",
     "MediaConvert_InputError_ImageTypeWithAudio": "圖片檔案不能包含音軌。",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "影片來源不支援 AVIF 輸出。",
     "MediaConvert_InternalError_FailedToConvert": "轉換此檔案失敗。請重新編碼檔案後再試一次。",

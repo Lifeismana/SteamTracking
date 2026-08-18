@@ -1488,11 +1488,12 @@
         });
       }
       function _(_) {
-        let { player: _, uiMode: _, category: _, title: _, focus: _ } = _,
+        let { player: _, uiMode: _, category: _, title: _, focus: _ } = _;
+        const _ = (0, _._)(),
           _ = (0, _._)();
         return (
           (_ && "auto" != _) ||
-            (_ = (0, _._)() ? "touch" : _ ? "gamepad" : "desktop"),
+            (_ = (0, _._)() || _ ? "touch" : _ ? "gamepad" : "desktop"),
           "touch" == _
             ? (0, _.jsx)(_, {
                 player: _,
@@ -2136,14 +2137,20 @@
         _ = 130,
         _ = !1,
         _ = _.forwardRef(function (_, _) {
-          let { tooltip: _, onActivate: _, size: _, children: _ } = _,
+          let {
+              tooltip: _,
+              onActivate: _,
+              size: _,
+              children: _,
+              disableTooltip: _,
+            } = _,
             _ = (0, _._)(),
             _ = (0, _._)(_);
           return (0, _.jsx)(_._, {
             toolTipContent: _,
             direction: "top",
             usePointerEvents: !0,
-            bDisabled: _,
+            bDisabled: _ || _,
             children: (0, _.jsx)("div", {
               ref: _,
               className: _().PlaybackButton,
@@ -2214,8 +2221,9 @@
         let { player: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(() => _(!1), [_]),
-          _ = (0, _.useRef)(null),
-          _ = (0, _.useCallback)(() => {
+          _ = (0, _.useRef)(null);
+        const _ = (0, _._)();
+        let _ = (0, _.useCallback)(() => {
             _((_) => !_);
           }, [_]),
           _ = (0, _._)(_().SettingsButton, _ && _().Rotated);
@@ -2227,6 +2235,7 @@
                 ref: _,
                 onActivate: _,
                 tooltip: _._.Localize("#TrailerPlayer_Settings_Tooltip"),
+                disableTooltip: _,
                 children: (0, _.jsx)(_.wB_, {
                   className: _,
                 }),
@@ -2553,6 +2562,7 @@
         let { player: _ } = _,
           [_, _, _, _] = (0, _._)(_);
         _.use(_._.Ready());
+        const _ = (0, _._)();
         let _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
           _ = _._.Localize(
             _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
@@ -2560,6 +2570,7 @@
         return (0, _.jsx)(_, {
           onActivate: _,
           tooltip: _,
+          disableTooltip: _,
           children: _,
         });
       }

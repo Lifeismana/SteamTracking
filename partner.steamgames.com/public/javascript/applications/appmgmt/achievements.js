@@ -510,29 +510,30 @@
       n.a(e, async (e, i) => {
         try {
           n.d(t, {
-            $j: () => S,
-            Bx: () => te,
-            Er: () => H,
-            F0: () => W,
-            FK: () => D,
-            FM: () => N,
-            J3: () => I,
-            L3: () => w,
-            Q4: () => b,
-            SN: () => ne,
-            Xe: () => P,
-            aR: () => A,
-            iF: () => K,
-            kb: () => T,
-            kk: () => G,
-            mb: () => U,
-            nf: () => x,
-            q4: () => X,
-            sJ: () => V,
-            ts: () => B,
-            vd: () => M,
+            $j: () => N,
+            Bx: () => ne,
+            Er: () => W,
+            F0: () => Y,
+            FK: () => k,
+            FM: () => I,
+            J3: () => T,
+            L3: () => y,
+            Q4: () => S,
+            SN: () => ie,
+            Xe: () => z,
+            aR: () => w,
+            iF: () => J,
+            kb: () => D,
+            kk: () => L,
+            l7: () => x,
+            mb: () => H,
+            nf: () => f,
+            q4: () => ee,
+            sJ: () => O,
+            ts: () => R,
+            vd: () => F,
             yu: () => s,
-            zG: () => Q,
+            zG: () => q,
           });
           var s,
             r = n(37085),
@@ -553,24 +554,25 @@
                 (e[(e.GameServer = 1)] = "GameServer"),
                 (e[(e.OfficialGameServer = 2)] = "OfficialGameServer");
             })(s || (s = {}));
-          function x(e) {
+          const x = ["Client", "GameServer", "OfficialGameServer"];
+          function f(e) {
             return `${e.statID}.${e.bitID}`;
           }
-          function f(e) {
+          function j(e) {
             return "ACHIEVEMENTS" === e[1].type;
           }
-          function j(e) {
+          function A(e) {
             return "ACHIEVEMENTS" !== e[1].type;
           }
-          const A = (0, p.createContext)(null);
-          function w() {
-            return (0, p.useContext)(A);
+          const w = (0, p.createContext)(null);
+          function y() {
+            return (0, p.useContext)(w);
           }
-          const y = "Stats",
-            E = "StatSchema";
-          function C(e, t = !1) {
+          const E = "Stats",
+            C = "StatSchema";
+          function b(e, t = !1) {
             const n = (0, a.I)({
-              queryKey: [y, E, e, t],
+              queryKey: [E, C, e, t],
               queryFn: async () => {
                 let n = t ? { version: "live" } : {};
                 const i = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetstatsschema/${e}`,
@@ -583,16 +585,16 @@
             });
             return n.isLoading ? null : n.data;
           }
-          function b(e, t = !1) {
-            const n = C(e, t);
+          function S(e, t = !1) {
+            const n = b(e, t);
             return n?.groups;
           }
-          function S(e, t, n = !1) {
-            const i = b(e, n);
+          function N(e, t, n = !1) {
+            const i = S(e, n);
             return i?.[t];
           }
-          function N(e) {
-            const t = b(e);
+          function I(e) {
+            const t = S(e);
             if (!t) return [];
             return Object.keys(t)
               .map((e) => ({
@@ -603,19 +605,19 @@
               .sort((e, t) => e.sortid - t.sortid)
               .map((e) => e);
           }
-          function I(e, t = !1) {
-            const n = C(e, t);
+          function T(e, t = !1) {
+            const n = b(e, t);
             return n?.stats
               ? Object.entries(n.stats)
-                  .filter(j)
+                  .filter(A)
                   .map(([e, t]) => ({ ...t, statID: e }))
               : void 0;
           }
-          function T(e, t = !1) {
-            const n = C(e, t);
+          function D(e, t = !1) {
+            const n = b(e, t);
             return n?.stats
               ? Object.entries(n.stats)
-                  .filter(f)
+                  .filter(j)
                   .flatMap(([e, t]) =>
                     Object.entries(t.bits).map(([t, n]) => ({
                       ...n,
@@ -625,11 +627,11 @@
                   )
               : void 0;
           }
-          function D(e, t, n = !1) {
-            const i = C(e, n);
+          function k(e, t, n = !1) {
+            const i = b(e, n);
             return i?.stats
               ? Object.entries(i.stats)
-                  .filter(f)
+                  .filter(j)
                   .flatMap(([e, n]) =>
                     Object.entries(n.bits)
                       .filter(([e, n]) => (!t && !n.groupid) || t === n.groupid)
@@ -637,10 +639,10 @@
                   )
               : void 0;
           }
-          const k = "AppLanguageList";
-          function B(e) {
+          const B = "AppLanguageList";
+          function R(e) {
             const t = (0, a.I)({
-              queryKey: [y, k, e],
+              queryKey: [E, B, e],
               queryFn: async () => {
                 const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguagelist/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -651,7 +653,7 @@
             });
             return t.isLoading ? ["english"] : t.data;
           }
-          async function R(e, t) {
+          async function G(e, t) {
             const n = `${h.TS.PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${e}`,
               i = new FormData();
             i.append("languages", JSON.stringify(t));
@@ -664,19 +666,19 @@
               console.error("updateLanguageList failed: ", t.strErrorMsg, t);
             }
           }
-          function G(e) {
+          function L(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => await R(e, t),
+              mutationFn: async (t) => await G(e, t),
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [y, k, e] });
+                await t.invalidateQueries({ queryKey: [E, B, e] });
               },
             });
           }
-          const L = "AppLanguageOptionsList";
-          function M(e) {
+          const M = "AppLanguageOptionsList";
+          function F(e) {
             const t = (0, a.I)({
-              queryKey: [y, L, e],
+              queryKey: [E, M, e],
               queryFn: async () => {
                 const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -689,10 +691,10 @@
             });
             return t.isLoading ? ["english"] : t.data;
           }
-          const F = "AppDLCList";
-          function V(e) {
+          const V = "AppDLCList";
+          function O(e) {
             const t = (0, a.I)({
-              queryKey: [y, F, e],
+              queryKey: [E, V, e],
               queryFn: async () => {
                 const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetdlc/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -702,10 +704,10 @@
             });
             return t.isLoading ? [] : t.data;
           }
-          const O = "AppInfo";
-          function P(e) {
+          const P = "AppInfo";
+          function z(e) {
             const t = (0, a.I)({
-              queryKey: [y, O, e],
+              queryKey: [E, P, e],
               queryFn: async () => {
                 const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxgetappinfo/${e}`,
                   n = await d().get(t, { withCredentials: !0 });
@@ -725,7 +727,7 @@
             });
             return t.isLoading ? null : t.data;
           }
-          async function z(e, t, n) {
+          async function U(e, t, n) {
             const i = `${h.TS.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${e}`,
               s = new FormData();
             s.append("groupid", t),
@@ -746,30 +748,30 @@
               console.error("useStatGroupMutation failed: ", t.strErrorMsg, t);
             }
           }
-          function U(e, t) {
+          function H(e, t) {
             const n = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (n) => await z(e, t, n),
+              mutationFn: async (n) => await U(e, t, n),
               onSuccess: async () => {
-                await n.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await n.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          function H(e) {
+          function W(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (t) => {
                 for (const n of t) {
-                  if (void 0 === (await z(e, n.groupid, n.group))) return !1;
+                  if (void 0 === (await U(e, n.groupid, n.group))) return !1;
                 }
                 return !0;
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          function W(e, t) {
+          function Y(e, t) {
             const n = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async () => {
@@ -787,11 +789,11 @@
                 return !1;
               },
               onSuccess: async () => {
-                await n.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await n.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          async function Y(e, t) {
+          async function K(e, t) {
             const n = new FormData();
             n.append("appid", e.toString()),
               n.append("groupids", JSON.stringify(t));
@@ -806,17 +808,17 @@
             }
             return !1;
           }
-          function K(e) {
-            b(e);
+          function J(e) {
+            S(e);
             const t = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async (t) => await Y(e, t),
+              mutationFn: async (t) => await K(e, t),
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          async function J(e, t, n) {
+          async function Q(e, t, n) {
             const i = new FormData();
             i.append("appid", e.toString()),
               i.append("groupid", (t ?? 0).toString()),
@@ -832,20 +834,20 @@
             }
             return !1;
           }
-          function Q(e) {
+          function q(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (t) => {
                 const { groupid: n, api_names: i } = t;
-                return await J(e, n, i);
+                return await Q(e, n, i);
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
           var g;
-          async function q(e, t, n, i, s) {
+          async function Z(e, t, n, i, s) {
             const [a, o, c] = s.match(/data:(image\/\w+);base64,(.*)/),
               l = u.hp.from(c, "base64"),
               p = "image/png" === o ? "png" : "jpg",
@@ -874,22 +876,22 @@
             }
             return !1;
           }
-          async function Z(e, t, n, i, s) {
+          async function $(e, t, n, i, s) {
             let r = !0;
             if (
               (i &&
                 i.startsWith("data:") &&
-                (r = r && (await q(e, t, n, g.Achieved, i))),
+                (r = r && (await Z(e, t, n, g.Achieved, i))),
               s &&
                 s.startsWith("data:") &&
-                (r = r && (await q(e, t, n, g.Unachieved, s))),
+                (r = r && (await Z(e, t, n, g.Unachieved, s))),
               !r)
             )
               throw new Error(
                 `Failed to save images for achievement with stat id ${t} and bit id ${n}`,
               );
           }
-          async function $(e, t) {
+          async function X(e, t) {
             const {
               statID: n,
               bitID: i,
@@ -899,7 +901,7 @@
             } = t;
             if (!s && n && i)
               return (
-                await Z(e, n, i, a, o), { success: r.R, statid: n, bitid: i }
+                await $(e, n, i, a, o), { success: r.R, statid: n, bitid: i }
               );
             const c = new FormData();
             n && c.append("statid", n),
@@ -924,7 +926,7 @@
               if (s?.data?.success == r.R) {
                 const t = s.data.statid,
                   n = s.data.bitid;
-                return await Z(e, t, n, a, o), s.data;
+                return await $(e, t, n, a, o), s.data;
               }
               throw new Error(
                 `failed to save achievement with stat id ${n} and bit id ${i}`,
@@ -938,17 +940,17 @@
               );
             }
           }
-          function X(e, t, n) {
+          function ee(e, t, n) {
             const i = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (i) =>
-                await $(e, { statID: t, bitID: n, ...i }),
+                await X(e, { statID: t, bitID: n, ...i }),
               onSuccess: async () => {
-                await i.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await i.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          async function ee(e, t) {
+          async function te(e, t) {
             const { statID: n, bitID: i } = t;
             try {
               const t = `${h.TS.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${e}`,
@@ -967,29 +969,29 @@
             }
             return !1;
           }
-          function te(e, t, n) {
+          function ne(e, t, n) {
             const i = (0, o.jE)();
             return (0, c.n)({
-              mutationFn: async () => await ee(e, { statID: t, bitID: n }),
+              mutationFn: async () => await te(e, { statID: t, bitID: n }),
               onSuccess: async () => {
-                await i.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await i.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
-          function ne(e) {
+          function ie(e) {
             const t = (0, o.jE)();
             return (0, c.n)({
               mutationFn: async (t) => {
                 for (const n of t.addOrUpdate ?? []) {
-                  if ((await $(e, n)).success != r.R) return !1;
+                  if ((await X(e, n)).success != r.R) return !1;
                 }
                 for (const n of t.delete ?? []) {
-                  if (!(await ee(e, n))) return !1;
+                  if (!(await te(e, n))) return !1;
                 }
                 return !0;
               },
               onSuccess: async () => {
-                await t.invalidateQueries({ queryKey: [y, E, e, !1] });
+                await t.invalidateQueries({ queryKey: [E, C, e, !1] });
               },
             });
           }
@@ -997,8 +999,8 @@
             (e.Achieved = "achievement"), (e.Unachieved = "achievement_gray");
           })(g || (g = {})),
             i();
-        } catch (ie) {
-          i(ie);
+        } catch (se) {
+          i(se);
         }
       });
     },
@@ -2720,19 +2722,19 @@
         try {
           n.d(t, {
             B6: () => w,
-            CD: () => S,
-            EO: () => G,
-            JP: () => W,
+            CD: () => B,
+            EO: () => P,
+            JP: () => Z,
             K1: () => _,
-            Lq: () => R,
-            NJ: () => z,
-            OB: () => Y,
-            Rr: () => B,
+            Lq: () => O,
+            NJ: () => J,
+            OB: () => $,
+            Rr: () => V,
             Wk: () => C,
-            Yc: () => k,
-            f4: () => I,
-            jF: () => K,
-            le: () => b,
+            Yc: () => F,
+            f4: () => G,
+            jF: () => X,
+            le: () => k,
             oK: () => j,
             pC: () => E,
           });
@@ -2800,14 +2802,14 @@
                     ),
                   ),
                   "INT" == r.type &&
-                    (a.Whr().safeParse(e.progress_stat_min) ||
+                    (a.Whr().safeParse(e.progress_stat_min).success ||
                       i(
                         "progress_stat_min",
                         (0, l.we)(
                           "#AchievementEditor_Validator_Error_MinMaxMustBeInteger",
                         ),
                       ),
-                    a.Whr().safeParse(e.progress_stat_max) ||
+                    a.Whr().safeParse(e.progress_stat_max).success ||
                       i(
                         "progress_stat_max",
                         (0, l.we)(
@@ -2952,7 +2954,7 @@
             ];
           }
           async function C(e) {
-            const t = await c.g.ParseCSVFile(e);
+            const t = await c.g.ParseCSVFile(e, N);
             return t.errors && t.errors.length > 0
               ? {
                   fields: void 0,
@@ -2961,27 +2963,112 @@
                 }
               : { fields: t.meta.fields, data: t.data, errors: void 0 };
           }
-          function b(e, t) {
-            const n = `${e}-achievements-definitions.csv`;
-            c.g.WriteCSVToFile(
-              t
-                .map(j)
-                .map((e) => ({
-                  ...e,
-                  permission: o.yu[e.permission ?? o.yu.Client],
-                })),
-              n,
-              !0,
-              Object.keys(m.shape),
-            );
+          function b() {
+            return {
+              api_name: (0, l.we)("#AchievementEditor_Csv_Hint_LocApiName"),
+              field: (0, l.we)("#AchievementEditor_Csv_Hint_LocField"),
+              groupid: (0, l.we)("#AchievementEditor_Csv_Hint_LocGroupID"),
+            };
           }
           function S(e, t, n) {
-            const i = `${e}-achievements-localization.csv`,
-              s = t.map((e) => E(e, n)).reduce((e, t) => (e.push(...t), e), []),
-              r = [...Object.keys(h.shape), ...n];
-            c.g.WriteCSVToFile(s, i, !0, r);
+            const i = t.reduce(
+              (e, t) => ((e[t] = n[t] ? `${t} (${n[t]})` : t), e),
+              {},
+            );
+            return {
+              fields: t.map((e) => i[e]),
+              rows: e.map((e) =>
+                Object.keys(e).reduce((t, n) => ((t[i[n] ?? n] = e[n]), t), {}),
+              ),
+            };
           }
-          function N(e, t, n) {
+          function N(e) {
+            return e.replace(/\s*\(.*$/, "").trim();
+          }
+          const I = "EXAMPLE_",
+            T = [`${I}FIRST_WIN`, `${I}HUNDRED_WINS`];
+          function D(e) {
+            const t = y(e),
+              n = [
+                { name: "First Victory", description: "Win your first match." },
+                { name: "100 Wins", description: "Win 100 different matches." },
+              ];
+            return T.map((e, i) => [
+              { api_name: e, field: "name", ...t, english: n[i].name },
+              {
+                api_name: e,
+                field: "description",
+                ...t,
+                english: n[i].description,
+              },
+            ]);
+          }
+          function k(e, t) {
+            const n = `${e}-achievements-definitions.csv`,
+              i = (
+                t.length > 0
+                  ? t.map(j)
+                  : [
+                      {
+                        api_name: T[0],
+                        groupid: "",
+                        permission: o.yu.Client,
+                        spoiler: !1,
+                        archived: !1,
+                        progress_stat_name: "",
+                        progress_stat_min: 0,
+                        progress_stat_max: 0,
+                      },
+                      {
+                        api_name: T[1],
+                        groupid: "",
+                        permission: o.yu.Client,
+                        spoiler: !0,
+                        archived: !1,
+                        progress_stat_name: "",
+                        progress_stat_min: 0,
+                        progress_stat_max: 0,
+                      },
+                    ]
+              ).map((e) => ({
+                ...e,
+                permission: o.yu[e.permission ?? o.yu.Client],
+              })),
+              { fields: s, rows: r } = S(i, Object.keys(m.shape), {
+                api_name: (0, l.we)("#AchievementEditor_Csv_Hint_ApiName"),
+                groupid: (0, l.we)("#AchievementEditor_Csv_Hint_GroupID"),
+                permission: (0, l.we)(
+                  "#AchievementEditor_Csv_Hint_Permission",
+                  o.l7.join(", "),
+                ),
+                spoiler: (0, l.we)("#AchievementEditor_Csv_Hint_Bool"),
+                archived: (0, l.we)("#AchievementEditor_Csv_Hint_Bool"),
+                progress_stat_name: (0, l.we)(
+                  "#AchievementEditor_Csv_Hint_ProgressStatName",
+                ),
+                progress_stat_min: (0, l.we)(
+                  "#AchievementEditor_Csv_Hint_ProgressStatMin",
+                ),
+                progress_stat_max: (0, l.we)(
+                  "#AchievementEditor_Csv_Hint_ProgressStatMax",
+                ),
+              });
+            c.g.WriteCSVToFile(r, n, !0, s);
+          }
+          function B(e, t, n) {
+            const i = `${e}-achievements-localization.csv`,
+              s = (t.length > 0 ? t.map((e) => E(e, n)) : D(n)).reduce(
+                (e, t) => (e.push(...t), e),
+                [],
+              ),
+              { fields: r, rows: a } = S(
+                s,
+                [...Object.keys(h.shape), ...n],
+                b(),
+              );
+            c.g.WriteCSVToFile(a, i, !0, r);
+          }
+          function R(e, t, n) {
             if (!t) return {};
             const i = t.find((e) => "name" == e.field),
               s = t.find((e) => "description" == e.field),
@@ -2999,7 +3086,7 @@
               );
             return { name: i ? w(r, i) : void 0, desc: s ? w(a, s) : void 0 };
           }
-          function I(e, t, n) {
+          function G(e, t, n) {
             return {
               name: e.api_name,
               groupid: e.groupid,
@@ -3011,7 +3098,7 @@
                 desc: void 0,
                 icon: void 0,
                 icon_gray: void 0,
-                ...N(e?.api_name, t, n),
+                ...R(e?.api_name, t, n),
               },
               progress: e.progress_stat_name
                 ? {
@@ -3022,7 +3109,7 @@
                 : void 0,
             };
           }
-          function T(e, t, n) {
+          function L(e, t, n) {
             const i = a.auy.number().safeParse(t.path[0])?.data,
               s = void 0 !== i && e.data.length > i,
               r = s ? e.data[i][n] : void 0,
@@ -3035,31 +3122,31 @@
               message: t.message,
             };
           }
-          function D(e, t, n) {
+          function M(e, t, n) {
             return {
               errors: t
                 ?.filter((e) => e.path.length <= 1)
                 .map((e) => e.message),
               fieldErrors: t
                 ?.filter((e) => e.path.length > 1)
-                .map((t) => T(e, t, n)),
+                .map((t) => L(e, t, n)),
             };
           }
-          function k(e) {
+          function F(e) {
             const t = new Set(e.fields);
             return Object.keys(m.shape).every((e) => t.has(e));
           }
-          function B(e, t, n, i) {
+          function V(e, t, n, i) {
             const s = f({ groups: t, stats: n, achievements: i }).safeParse(
               e.data,
             );
-            return { ...s.data, ...D(e, s.error?.issues, "api_name") };
+            return { ...s.data, ...M(e, s.error?.issues, "api_name") };
           }
-          function R(e) {
+          function O(e) {
             const t = new Set(e.fields);
             return Object.keys(h.shape).every((e) => t.has(e));
           }
-          function G(e) {
+          function P(e) {
             const t = a.YOg(v).safeParse(e.data);
             return {
               localization:
@@ -3071,34 +3158,34 @@
                   ),
                   {},
                 ) ?? {},
-              ...D(e, t.error?.issues, "api_name"),
+              ...M(e, t.error?.issues, "api_name"),
             };
           }
-          const L = a.Ikc({ groupid: a.YjP().min(1) }),
-            M = L.catchall(a.YjP());
-          function F(e) {
+          const z = a.Ikc({ groupid: a.YjP().min(1) }),
+            U = z.catchall(a.YjP());
+          function H(e) {
             return e.reduce((e, t) => ((e[t.groupid] = t), e), {});
           }
-          function V(e) {
+          function W(e) {
             const t = e?.name;
             return "string" == typeof t ? { english: t } : (t ?? {});
           }
-          function O(e) {
+          function Y(e) {
             return Object.keys(e)
               .filter((t) => "token" == t || !!e[t])
               .reduce((t, n) => ((t[n] = e[n]), t), {});
           }
-          function P(e, t) {
+          function K(e, t) {
             return { groupid: e.groupid, ...y(t), ...A(e.name, t) };
           }
-          function z(e, t) {
+          function J(e, t) {
             const { groupid: n, ...i } = e;
-            return O({ ...V(t), ...i });
+            return Y({ ...W(t), ...i });
           }
-          function U(e) {
+          function Q(e) {
             const { groups: t, validLanguages: n } = e,
               i = new Set(t.map((e) => e.groupid));
-            return M.superRefine((e, t) => {
+            return U.superRefine((e, t) => {
               function s(n, i) {
                 t.addIssue({
                   code: "custom",
@@ -3141,10 +3228,10 @@
                   );
             });
           }
-          function H(e) {
+          function q(e) {
             const { groups: t } = e;
             return a
-              .YOg(U(e))
+              .YOg(Q(e))
               .superRefine((e, t) =>
                 x(
                   e,
@@ -3157,14 +3244,14 @@
               )
               .transform((e) => {
                 const n = e.reduce((e, t) => ((e[t.groupid] = t), e), {}),
-                  i = F(t);
+                  i = H(t);
                 return Object.keys(n).reduce(
                   (e, t) => {
                     var s, a;
                     return (
                       (s = n[t]),
                       (a = i[t]),
-                      r()(z(s, a), O(V(a)))
+                      r()(J(s, a), Y(W(a)))
                         ? e.unmodified.push(t)
                         : e.modified.push(t),
                       e
@@ -3174,25 +3261,29 @@
                 );
               });
           }
-          function W(e) {
+          function Z(e) {
             const t = new Set(e.fields);
             return (
-              Object.keys(L.shape).every((e) => t.has(e)) && !t.has("api_name")
+              Object.keys(z.shape).every((e) => t.has(e)) && !t.has("api_name")
             );
           }
-          function Y(e, t, n) {
-            const i = H({ groups: t, validLanguages: n }).safeParse(e.data);
-            return { ...i.data, ...D(e, i.error?.issues, "groupid") };
+          function $(e, t, n) {
+            const i = q({ groups: t, validLanguages: n }).safeParse(e.data);
+            return { ...i.data, ...M(e, i.error?.issues, "groupid") };
           }
-          function K(e, t, n) {
+          function X(e, t, n) {
             const i = `${e}-achievement-groups-localization.csv`,
-              s = t.map((e) => P(e, n)),
-              r = [...Object.keys(L.shape), ...n];
-            c.g.WriteCSVToFile(s, i, !0, r);
+              s = t.map((e) => K(e, n)),
+              { fields: r, rows: a } = S(
+                s,
+                [...Object.keys(z.shape), ...n],
+                b(),
+              );
+            c.g.WriteCSVToFile(a, i, !0, r);
           }
           i();
-        } catch (J) {
-          i(J);
+        } catch (ee) {
+          i(ee);
         }
       });
     },
@@ -7461,7 +7552,7 @@
                   archived: !1,
                   developeronly: !1,
                   ispublic: !0,
-                  dlcappid: t,
+                  dlcappid: 0,
                   order: -1,
                   achievements: [],
                 }),
@@ -7470,14 +7561,14 @@
                     .Body()
                     .groups()
                     .forEach((e) => {
-                      const n = e.groupid();
-                      s[n] = {
-                        id: n,
+                      const t = e.groupid();
+                      s[t] = {
+                        id: t,
                         name: e.localized_name(),
                         archived: e.archived() ?? !1,
                         ispublic: e.ispublic() ?? !0,
                         developeronly: e.developeronly() ?? !1,
-                        dlcappid: e.dlcappid() ?? t,
+                        dlcappid: e.dlcappid() ?? 0,
                         order: e.order() ?? 0,
                         achievements: [],
                       };

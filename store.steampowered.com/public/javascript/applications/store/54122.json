@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "GIF-ul nu a putut fi analizat. Te rugăm să recodezi sau să modifici tipul formatului și să încerci din nou.",
     "MediaConvert_InputError_ImageTooSmall": "Imaginea este prea mică. Te rugăm să încarci o imagine de cel puțin 16x16 pixeli.",
     "MediaConvert_InputError_AnimationTooSmall": "Animația sau videoclipul este prea mic. Te rugăm să încarci o animație sau un videoclip cu o rezoluție de minim 16x16 pixeli.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Fișierul conține mai mult de o pistă video. Te rugăm să încarci un fișier cu o singură pistă video.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Această imagine nu poate fi animată. Te rugăm să încarci o imagine statică.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Fișierele de imagine nu pot conține o pistă audio.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "Outputul AVIF nu este acceptat pentru sursele video.",
     "MediaConvert_InternalError_FailedToConvert": "Acest fișier nu a putut fi convertit. Te rugăm să recodezi fișierul înainte de a încerca din nou.",

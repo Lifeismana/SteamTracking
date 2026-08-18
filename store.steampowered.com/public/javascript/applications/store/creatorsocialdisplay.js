@@ -141,338 +141,109 @@
     28194: (e) => {
       e.exports = { Ctn: "_2ZSkHhlXwxpsIInroemxBn" };
     },
-    55263: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        G6: () => p,
-        Gg: () => L,
-        Ow: () => j,
-        Sq: () => u,
-        YM: () => f,
-        eR: () => _,
-        ik: () => d,
-        mZ: () => x,
-        t7: () => m,
-        zX: () => S,
-      });
-      var i = n(41735),
-        r = n.n(i),
-        s = n(90626),
-        l = n(37085),
-        a = n(76119),
-        c = n(84933),
-        o = n(16021);
-      const u = 1,
-        _ = 2,
-        d = 3;
-      function p(e, t, n, i) {
-        const a = (0, s.useRef)(void 0),
-          p = (0, s.useRef)(void 0),
-          m = (0, c.CH)();
-        a.current = e;
-        const [j, L] = (0, s.useState)(void 0),
-          {
-            include_assets: x,
-            include_release: v,
-            include_platforms: S,
-            include_all_purchase_options: f,
-            include_screenshots: k,
-            include_trailers: I,
-            include_ratings: E,
-            include_tag_count: b,
-            include_reviews: g,
-            include_basic_info: h,
-            include_supported_languages: A,
-            include_full_description: C,
-            include_included_items: B,
-            include_assets_without_overrides: w,
-            apply_user_filters: T,
-            include_links: y,
-            include_extra_details: G,
-          } = n;
-        if (
-          ((0, s.useEffect)(() => {
-            const n = {
-              include_assets: x,
-              include_release: v,
-              include_platforms: S,
-              include_all_purchase_options: f,
-              include_screenshots: k,
-              include_trailers: I,
-              include_ratings: E,
-              include_tag_count: b,
-              include_reviews: g,
-              include_basic_info: h,
-              include_supported_languages: A,
-              include_full_description: C,
-              include_included_items: B,
-              include_assets_without_overrides: w,
-              apply_user_filters: T,
-              include_links: y,
-              include_extra_details: G,
-            };
-            let s = null;
-            return (
-              !e ||
-                e < 0 ||
-                o.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== j && i && i == p.current) ||
-                (i !== p.current && (L(void 0), (p.current = i)),
-                (s = r().CancelToken.source()),
-                o.A.Get()
-                  .QueueStoreItemRequest(e, t, n)
-                  .then((t) => {
-                    s?.token.reason || a.current !== e || L(t == l.R), m();
-                  })),
-              () => s?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [
-            e,
-            t,
-            i,
-            j,
-            x,
-            v,
-            S,
-            f,
-            k,
-            I,
-            E,
-            b,
-            g,
-            h,
-            A,
-            C,
-            B,
-            w,
-            T,
-            y,
-            G,
-            m,
-          ]),
-          !e)
-        )
-          return [null, _];
-        if (!1 === j) return [void 0, _];
-        if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, _];
-        if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, u];
-        const D = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return D ? [D, d] : [null, _];
-      }
-      function m(e, t, n) {
-        return p(e, a.c6.qI, t, n);
-      }
-      function j(e, t, n) {
-        return p(e, a.c6.xO, t, n);
-      }
-      function L(e, t, n) {
-        return p(e, a.c6.RD, t, n);
-      }
-      function x(e, t, n) {
-        const [i, r] = p(e, t, n);
-        let s;
-        i?.GetStoreItemType() != a.c6.RD ||
-          i.GetAssets()?.GetHeaderURL() ||
-          1 != i?.GetIncludedAppIDs().length ||
-          (s = i.GetIncludedAppIDs()[0]);
-        const [l, c] = m(s, n);
-        return s && l?.BIsVisible() ? [l, c] : [i, r];
-      }
-      function v(e, t, n, i) {
-        const l = (0, c.CH)(),
-          {
-            include_assets: a,
-            include_release: p,
-            include_platforms: m,
-            include_all_purchase_options: j,
-            include_screenshots: L,
-            include_trailers: x,
-            include_ratings: v,
-            include_tag_count: S,
-            include_reviews: f,
-            include_basic_info: k,
-            include_supported_languages: I,
-            include_full_description: E,
-            include_included_items: b,
-            include_assets_without_overrides: g,
-            apply_user_filters: h,
-            include_links: A,
-            include_extra_details: C,
-          } = n;
-        if (
-          ((0, s.useEffect)(() => {
-            if (!e || 0 == e.length) return;
-            const n = {
-                include_assets: a,
-                include_release: p,
-                include_platforms: m,
-                include_all_purchase_options: j,
-                include_screenshots: L,
-                include_trailers: x,
-                include_ratings: v,
-                include_tag_count: S,
-                include_reviews: f,
-                include_basic_info: k,
-                include_supported_languages: I,
-                include_full_description: E,
-                include_included_items: b,
-                include_assets_without_overrides: g,
-                apply_user_filters: h,
-                include_links: A,
-                include_extra_details: C,
-              },
-              i = e.filter(
-                (e) =>
-                  !(
-                    o.A.Get().BHasStoreItem(e, t, n) ||
-                    o.A.Get().BIsStoreItemMissing(e, t)
-                  ),
-              );
-            if (0 == i.length) return;
-            const s = r().CancelToken.source(),
-              c = i.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
-            return (
-              Promise.all(c).then(() => {
-                s.token.reason || l();
-              }),
-              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [e, t, i, l, a, p, m, j, L, x, v, S, f, k, I, E, b, g, h, A, C]),
-          !e)
-        )
-          return _;
-        if (
-          !e.every(
-            (e) =>
-              o.A.Get().BHasStoreItem(e, t, n) ||
-              o.A.Get().BIsStoreItemMissing(e, t),
-          )
-        )
-          return u;
-        return e.every((e) =>
-          o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
-        )
-          ? d
-          : _;
-      }
-      function S(e, t, n) {
-        return v(e, a.c6.qI, t, n);
-      }
-      function f() {
-        s.useEffect(
-          () => (
-            o.A.Get().SetReturnUnavailableItems(!0),
-            () => o.A.Get().SetReturnUnavailableItems(!1)
-          ),
-          [],
-        );
-      }
-    },
     18663: (e, t, n) => {
       "use strict";
-      n.d(t, { D1: () => E, lS: () => v, lz: () => k, nK: () => f });
-      var i = n(7850),
-        r = n(76119),
-        s = n(90626);
-      function l(e) {
+      n.d(t, { D1: () => C, lS: () => S, lz: () => v, nK: () => k });
+      var r = n(7850),
+        a = n(76119),
+        i = n(90626);
+      function o(e) {
         switch (e) {
           case "discord_server":
-            return r.jL.Eb;
+            return a.jL.Eb;
           case "youtube":
-            return r.jL.lQ;
+            return a.jL.lQ;
           case "facebook":
-            return r.jL.GO;
+            return a.jL.GO;
           case "twitter":
-            return r.jL.jG;
+            return a.jL.jG;
           case "twitch":
-            return r.jL.F7;
+            return a.jL.F7;
           case "reddit":
-            return r.jL.uw;
+            return a.jL.uw;
           case "instagram":
-            return r.jL.sP;
+            return a.jL.sP;
           case "tumblr":
-            return r.jL.u5;
+            return a.jL.u5;
           case "qq":
-            return r.jL.EK;
+            return a.jL.EK;
           case "qqlink":
-            return r.jL.M0;
+            return a.jL.M0;
           case "qqchannel":
-            return r.jL.$3;
+            return a.jL.$3;
           case "bilibili":
-            return r.jL.Ow;
+            return a.jL.Ow;
           case "weibo":
-            return r.jL.Ib;
+            return a.jL.Ib;
           case "wechat":
-            return r.jL.Or;
+            return a.jL.Or;
           case "tieba":
-            return r.jL.db;
+            return a.jL.db;
           case "tiktok":
-            return r.jL.Yu;
+            return a.jL.Yu;
           case "douyin":
-            return r.jL.qe;
+            return a.jL.qe;
           case "bluesky":
-            return r.jL.H5;
+            return a.jL.H5;
           case "mastodon":
-            return r.jL.Xm;
+            return a.jL.Xm;
           case "threads":
-            return r.jL.DB;
+            return a.jL.DB;
           case "vk":
-            return r.jL.a$;
+            return a.jL.a$;
           case "telegram":
-            return r.jL.JN;
+            return a.jL.JN;
           case "linkedin":
-            return r.jL.EM;
+            return a.jL.EM;
           case "rednote":
-            return r.jL.Lk;
+            return a.jL.Lk;
         }
-        return r.jL.I0;
+        return a.jL.I0;
       }
-      var a = n(55263),
-        c = n(95695),
-        o = n.n(c),
+      var s = n(39777),
+        l = n(95695),
+        c = n.n(l),
         u = n(12155),
         _ = n(52038),
         d = n(61859),
-        p = n(61336),
-        m = n(78327),
-        j = n(32754),
-        L = n(12443),
-        x = n.n(L);
-      function v(e) {
+        j = n(61336),
+        p = n(78327),
+        L = n(32754),
+        m = n(12443),
+        x = n.n(m);
+      function S(e) {
         const { appid: t } = e;
-        return (0, i.jsx)("div", {
+        return (0, r.jsx)("div", {
           className: x().AppSocialLinksCtn,
-          children: (0, i.jsx)(S, { appid: t }),
+          children: (0, r.jsx)(E, { appid: t }),
         });
       }
-      function S(e) {
+      function E(e) {
         const { appid: t } = e,
-          [n] = (0, a.t7)(t, { include_basic_info: !0, include_links: !0 });
-        if (!n) return null;
-        const r = n.GetLinks();
-        return r && 0 != r.length && m.TS.IMG_URL
-          ? (0, i.jsxs)(i.Fragment, {
+          { data: n } = (0, s.bg)({ appid: t });
+        return n && 0 != n.length && p.TS.IMG_URL
+          ? (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, i.jsx)("div", {
+                (0, r.jsx)("div", {
                   className: (0, _.A)(
-                    o().EventEditorTextTitle,
+                    c().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
                   children: (0, d.we)("#EventDisplay_SocialTitle"),
                 }),
-                (0, i.jsx)(E, { id: "" + t, rgSocialMedia: r }),
+                (0, r.jsx)(C, { id: "" + t, rgSocialMedia: n }),
               ],
             })
           : null;
       }
-      function f(e) {
-        return (0, s.useMemo)(
+      function k(e) {
+        return (0, i.useMemo)(
           () =>
             e
               ? e.map((e) => {
-                  const t = { link_type: l(e.type) };
+                  const t = { link_type: o(e.type) };
                   return (
-                    t.link_type == r.jL.EK || t.link_type == r.jL.Or
+                    t.link_type == a.jL.EK || t.link_type == a.jL.Or
                       ? (t.text = e.link)
                       : (t.url = e.link),
                     t
@@ -482,73 +253,73 @@
           [e],
         );
       }
-      function k(e) {
-        const { gidClanEvent: t, rgSocial: n, bIsCreatorHomeEvent: r } = e,
-          s = f(n);
-        return s && 0 != s.length && m.TS.IMG_URL
-          ? (0, i.jsxs)(i.Fragment, {
+      function v(e) {
+        const { gidClanEvent: t, rgSocial: n, bIsCreatorHomeEvent: a } = e,
+          i = k(n);
+        return i && 0 != i.length && p.TS.IMG_URL
+          ? (0, r.jsxs)(r.Fragment, {
               children: [
-                (0, i.jsx)("div", {
+                (0, r.jsx)("div", {
                   className: (0, _.A)(
-                    o().EventEditorTextTitle,
+                    c().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: r
+                  children: a
                     ? (0, d.we)("#EventDisplay_Sale_SocialTitle_Dev")
                     : (0, d.we)("#EventDisplay_Sale_SocialTitle"),
                 }),
-                (0, i.jsx)(E, { id: t, rgSocialMedia: s }),
+                (0, r.jsx)(C, { id: t, rgSocialMedia: i }),
               ],
             })
           : null;
       }
-      const I = [r.jL.EK, r.jL.$3, r.jL.M0, r.jL.Ow, r.jL.Ib, r.jL.qe, r.jL.Lk];
-      function E(e) {
-        const { id: t, rgSocialMedia: n, className: s } = e,
-          l = (0, m.Y2)();
-        return (0, i.jsx)("div", {
-          className: (0, _.A)(x().AppSocialLinks, s),
+      const b = [a.jL.EK, a.jL.$3, a.jL.M0, a.jL.Ow, a.jL.Ib, a.jL.qe, a.jL.Lk];
+      function C(e) {
+        const { id: t, rgSocialMedia: n, className: i } = e,
+          o = (0, p.Y2)();
+        return (0, r.jsx)("div", {
+          className: (0, _.A)(x().AppSocialLinks, i),
           children: n
-            .filter((e) => !l || I.includes(e.link_type || r.jL.I0))
+            .filter((e) => !o || b.includes(e.link_type || a.jL.I0))
             .map((e) =>
               e.url
-                ? (0, i.jsx)(
-                    b,
+                ? (0, r.jsx)(
+                    B,
                     { social: e },
                     "app_social_link_" + t + "_" + e.link_type,
                   )
-                : (0, i.jsx)(
-                    g,
+                : (0, r.jsx)(
+                    I,
                     { social: e },
                     "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
                   ),
             ),
         });
       }
-      function b(e) {
+      function B(e) {
         const { social: t } = e;
         return t.url
-          ? (0, i.jsx)("a", {
-              href: (0, p.NT)(t.url, !0),
-              target: m.TS.IN_CLIENT ? void 0 : "_blank",
+          ? (0, r.jsx)("a", {
+              href: (0, j.NT)(t.url, !0),
+              target: p.TS.IN_CLIENT ? void 0 : "_blank",
               rel: "noopener noreferrer",
-              children: (0, i.jsx)(j.he, {
+              children: (0, r.jsx)(L.he, {
                 toolTipContent: t.url,
-                children: (0, i.jsx)(h, { social: t }),
+                children: (0, r.jsx)(h, { social: t }),
               }),
             })
           : null;
       }
-      function g(e) {
+      function I(e) {
         const { social: t } = e;
-        return (0, i.jsxs)("div", {
+        return (0, r.jsxs)("div", {
           className: x().AppSocialLinkWithText,
           children: [
-            (0, i.jsx)(j.he, {
+            (0, r.jsx)(L.he, {
               toolTipContent: t.text,
-              children: (0, i.jsx)(h, { social: t }),
+              children: (0, r.jsx)(h, { social: t }),
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
               className: x().AppSocialText,
               children: t.text,
             }),
@@ -557,81 +328,81 @@
       }
       function h(e) {
         const { social: t } = e;
-        return (0, i.jsx)(A, {
-          linkType: t.link_type || r.jL.I0,
+        return (0, r.jsx)(A, {
+          linkType: t.link_type || a.jL.I0,
           className: x().AppSocialLinkIcon,
         });
       }
       function A(e) {
         const { linkType: t, ...n } = e;
         switch (t) {
-          case r.jL.lQ:
-            return (0, i.jsx)(u.agV, { ...n });
-          case r.jL.GO:
-            return (0, i.jsx)(u.ZnA, { ...n });
-          case r.jL.jG:
-            return (0, i.jsx)(u.oy, { ...n });
-          case r.jL.F7:
-            return (0, i.jsx)(u.ofN, { ...n });
-          case r.jL.Eb:
-            return (0, i.jsx)(u.Bki, { ...n });
-          case r.jL.EK:
-          case r.jL.M0:
-          case r.jL.$3:
-            return (0, i.jsx)(u.$vK, { ...n });
-          case r.jL.a$:
-            return (0, i.jsx)(u.OSJ, { ...n });
-          case r.jL.Ow:
-            return (0, i.jsx)(u.nm_, { ...n });
-          case r.jL.Ib:
-            return (0, i.jsx)(u.tIO, { ...n });
-          case r.jL.uw:
-            return (0, i.jsx)(u.Vt2, { ...n });
-          case r.jL.sP:
-            return (0, i.jsx)(u.Vgk, { ...n });
-          case r.jL.u5:
-            return (0, i.jsx)(u.VSd, { ...n });
-          case r.jL.db:
-            return (0, i.jsx)(u.ccb, { ...n });
-          case r.jL.Yu:
-            return (0, i.jsx)(u.rNt, { ...n });
-          case r.jL.JN:
-            return (0, i.jsx)(u.g$j, { ...n });
-          case r.jL.EM:
-            return (0, i.jsx)(u.BQz, { ...n });
-          case r.jL.Or:
-            return (0, i.jsx)(u.jdP, { ...n });
-          case r.jL.qe:
-            return (0, i.jsx)(u.bKN, { ...n });
-          case r.jL.H5:
-            return (0, i.jsx)(u.sDU, { ...n });
-          case r.jL.Xm:
-            return (0, i.jsx)(u.MbF, { ...n });
-          case r.jL.DB:
-            return (0, i.jsx)(u.emH, { ...n });
-          case r.jL.Lk:
-            return (0, i.jsx)(u.Yoo, { ...n });
-          case r.jL.wu:
-          case r.jL.I0:
+          case a.jL.lQ:
+            return (0, r.jsx)(u.agV, { ...n });
+          case a.jL.GO:
+            return (0, r.jsx)(u.ZnA, { ...n });
+          case a.jL.jG:
+            return (0, r.jsx)(u.oy, { ...n });
+          case a.jL.F7:
+            return (0, r.jsx)(u.ofN, { ...n });
+          case a.jL.Eb:
+            return (0, r.jsx)(u.Bki, { ...n });
+          case a.jL.EK:
+          case a.jL.M0:
+          case a.jL.$3:
+            return (0, r.jsx)(u.$vK, { ...n });
+          case a.jL.a$:
+            return (0, r.jsx)(u.OSJ, { ...n });
+          case a.jL.Ow:
+            return (0, r.jsx)(u.nm_, { ...n });
+          case a.jL.Ib:
+            return (0, r.jsx)(u.tIO, { ...n });
+          case a.jL.uw:
+            return (0, r.jsx)(u.Vt2, { ...n });
+          case a.jL.sP:
+            return (0, r.jsx)(u.Vgk, { ...n });
+          case a.jL.u5:
+            return (0, r.jsx)(u.VSd, { ...n });
+          case a.jL.db:
+            return (0, r.jsx)(u.ccb, { ...n });
+          case a.jL.Yu:
+            return (0, r.jsx)(u.rNt, { ...n });
+          case a.jL.JN:
+            return (0, r.jsx)(u.g$j, { ...n });
+          case a.jL.EM:
+            return (0, r.jsx)(u.BQz, { ...n });
+          case a.jL.Or:
+            return (0, r.jsx)(u.jdP, { ...n });
+          case a.jL.qe:
+            return (0, r.jsx)(u.bKN, { ...n });
+          case a.jL.H5:
+            return (0, r.jsx)(u.sDU, { ...n });
+          case a.jL.Xm:
+            return (0, r.jsx)(u.MbF, { ...n });
+          case a.jL.DB:
+            return (0, r.jsx)(u.emH, { ...n });
+          case a.jL.Lk:
+            return (0, r.jsx)(u.Yoo, { ...n });
+          case a.jL.wu:
+          case a.jL.I0:
             return "invalid social media type";
         }
       }
     },
     44899: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => a });
-      var i = n(7850),
-        r = n(18663),
-        s = n(28194),
-        l = n.n(s);
-      function a(e) {
+      n.r(t), n.d(t, { default: () => s });
+      var r = n(7850),
+        a = n(18663),
+        i = n(28194),
+        o = n.n(i);
+      function s(e) {
         const { clanAccountID: t, items: n } = e,
-          s = (0, r.nK)(n);
-        return s
-          ? (0, i.jsx)(r.D1, {
+          i = (0, a.nK)(n);
+        return i
+          ? (0, r.jsx)(a.D1, {
               id: "social_" + t,
-              rgSocialMedia: s,
-              className: l().Ctn,
+              rgSocialMedia: i,
+              className: o().Ctn,
             })
           : null;
       }
