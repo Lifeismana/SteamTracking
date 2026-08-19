@@ -1,303 +1,8 @@
+"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [63089],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
-      var _ = {
-        "./af": 30911,
-        "./af.js": 30911,
-        "./ar": 63595,
-        "./ar-dz": 99358,
-        "./ar-dz.js": 99358,
-        "./ar-kw": 46830,
-        "./ar-kw.js": 46830,
-        "./ar-ly": 26067,
-        "./ar-ly.js": 26067,
-        "./ar-ma": 64154,
-        "./ar-ma.js": 64154,
-        "./ar-ps": 90753,
-        "./ar-ps.js": 90753,
-        "./ar-sa": 53616,
-        "./ar-sa.js": 53616,
-        "./ar-tn": 19026,
-        "./ar-tn.js": 19026,
-        "./ar.js": 63595,
-        "./az": 87043,
-        "./az.js": 87043,
-        "./be": 28437,
-        "./be.js": 28437,
-        "./bg": 29843,
-        "./bg.js": 29843,
-        "./bm": 39421,
-        "./bm.js": 39421,
-        "./bn": 41300,
-        "./bn-bd": 54487,
-        "./bn-bd.js": 54487,
-        "./bn.js": 41300,
-        "./bo": 40827,
-        "./bo.js": 40827,
-        "./br": 35120,
-        "./br.js": 35120,
-        "./bs": 41991,
-        "./bs.js": 41991,
-        "./ca": 47504,
-        "./ca.js": 47504,
-        "./cs": 98346,
-        "./cs.js": 98346,
-        "./cv": 17525,
-        "./cv.js": 17525,
-        "./cy": 80872,
-        "./cy.js": 80872,
-        "./da": 48787,
-        "./da.js": 48787,
-        "./de": 30199,
-        "./de-at": 33461,
-        "./de-at.js": 33461,
-        "./de-ch": 97995,
-        "./de-ch.js": 97995,
-        "./de.js": 30199,
-        "./dv": 14682,
-        "./dv.js": 14682,
-        "./el": 52549,
-        "./el.js": 52549,
-        "./en-au": 5706,
-        "./en-au.js": 5706,
-        "./en-ca": 50584,
-        "./en-ca.js": 50584,
-        "./en-gb": 41685,
-        "./en-gb.js": 41685,
-        "./en-ie": 32050,
-        "./en-ie.js": 32050,
-        "./en-il": 35545,
-        "./en-il.js": 35545,
-        "./en-in": 42551,
-        "./en-in.js": 42551,
-        "./en-nz": 10620,
-        "./en-nz.js": 10620,
-        "./en-sg": 16222,
-        "./en-sg.js": 16222,
-        "./eo": 88124,
-        "./eo.js": 88124,
-        "./es": 59784,
-        "./es-do": 30300,
-        "./es-do.js": 30300,
-        "./es-mx": 47292,
-        "./es-mx.js": 47292,
-        "./es-us": 36469,
-        "./es-us.js": 36469,
-        "./es.js": 59784,
-        "./et": 56349,
-        "./et.js": 56349,
-        "./eu": 6782,
-        "./eu.js": 6782,
-        "./fa": 86749,
-        "./fa.js": 86749,
-        "./fi": 52469,
-        "./fi.js": 52469,
-        "./fil": 2989,
-        "./fil.js": 2989,
-        "./fo": 50743,
-        "./fo.js": 50743,
-        "./fr": 34916,
-        "./fr-ca": 96853,
-        "./fr-ca.js": 96853,
-        "./fr-ch": 81566,
-        "./fr-ch.js": 81566,
-        "./fr.js": 34916,
-        "./fy": 82949,
-        "./fy.js": 82949,
-        "./ga": 80932,
-        "./ga.js": 80932,
-        "./gd": 82671,
-        "./gd.js": 82671,
-        "./gl": 95687,
-        "./gl.js": 95687,
-        "./gom-deva": 67330,
-        "./gom-deva.js": 67330,
-        "./gom-latn": 7021,
-        "./gom-latn.js": 7021,
-        "./gu": 78728,
-        "./gu.js": 78728,
-        "./he": 28211,
-        "./he.js": 28211,
-        "./hi": 15487,
-        "./hi.js": 15487,
-        "./hr": 94106,
-        "./hr.js": 94106,
-        "./hu": 14147,
-        "./hu.js": 14147,
-        "./hy-am": 23862,
-        "./hy-am.js": 23862,
-        "./id": 78825,
-        "./id.js": 78825,
-        "./is": 57612,
-        "./is.js": 57612,
-        "./it": 9497,
-        "./it-ch": 75653,
-        "./it-ch.js": 75653,
-        "./it.js": 9497,
-        "./ja": 2209,
-        "./ja.js": 2209,
-        "./jv": 85668,
-        "./jv.js": 85668,
-        "./ka": 6904,
-        "./ka.js": 6904,
-        "./kk": 2138,
-        "./kk.js": 2138,
-        "./km": 81660,
-        "./km.js": 81660,
-        "./kn": 88613,
-        "./kn.js": 88613,
-        "./ko": 57894,
-        "./ko.js": 57894,
-        "./ku": 28468,
-        "./ku-kmr": 57123,
-        "./ku-kmr.js": 57123,
-        "./ku.js": 28468,
-        "./ky": 91808,
-        "./ky.js": 91808,
-        "./lb": 47070,
-        "./lb.js": 47070,
-        "./lo": 56505,
-        "./lo.js": 56505,
-        "./lt": 53656,
-        "./lt.js": 53656,
-        "./lv": 83746,
-        "./lv.js": 83746,
-        "./me": 42486,
-        "./me.js": 42486,
-        "./mi": 82,
-        "./mi.js": 82,
-        "./mk": 14792,
-        "./mk.js": 14792,
-        "./ml": 10845,
-        "./ml.js": 10845,
-        "./mn": 46939,
-        "./mn.js": 46939,
-        "./mr": 5575,
-        "./mr.js": 5575,
-        "./ms": 81424,
-        "./ms-my": 43179,
-        "./ms-my.js": 43179,
-        "./ms.js": 81424,
-        "./mt": 30341,
-        "./mt.js": 30341,
-        "./my": 72834,
-        "./my.js": 72834,
-        "./nb": 75292,
-        "./nb.js": 75292,
-        "./ne": 23753,
-        "./ne.js": 23753,
-        "./nl": 53922,
-        "./nl-be": 77542,
-        "./nl-be.js": 77542,
-        "./nl.js": 53922,
-        "./nn": 81304,
-        "./nn.js": 81304,
-        "./oc-lnc": 41156,
-        "./oc-lnc.js": 41156,
-        "./pa-in": 17851,
-        "./pa-in.js": 17851,
-        "./pl": 66636,
-        "./pl.js": 66636,
-        "./pt": 13252,
-        "./pt-br": 95189,
-        "./pt-br.js": 95189,
-        "./pt.js": 13252,
-        "./ro": 5451,
-        "./ro.js": 5451,
-        "./ru": 981,
-        "./ru.js": 981,
-        "./sd": 49139,
-        "./sd.js": 49139,
-        "./se": 24684,
-        "./se.js": 24684,
-        "./si": 85448,
-        "./si.js": 85448,
-        "./sk": 61682,
-        "./sk.js": 61682,
-        "./sl": 17595,
-        "./sl.js": 17595,
-        "./sq": 61360,
-        "./sq.js": 61360,
-        "./sr": 45897,
-        "./sr-cyrl": 80616,
-        "./sr-cyrl.js": 80616,
-        "./sr.js": 45897,
-        "./ss": 15034,
-        "./ss.js": 15034,
-        "./sv": 78213,
-        "./sv.js": 78213,
-        "./sw": 47494,
-        "./sw.js": 47494,
-        "./ta": 48387,
-        "./ta.js": 48387,
-        "./te": 90951,
-        "./te.js": 90951,
-        "./tet": 83675,
-        "./tet.js": 83675,
-        "./tg": 99753,
-        "./tg.js": 99753,
-        "./th": 59844,
-        "./th.js": 59844,
-        "./tk": 84429,
-        "./tk.js": 84429,
-        "./tl-ph": 54645,
-        "./tl-ph.js": 54645,
-        "./tlh": 56946,
-        "./tlh.js": 56946,
-        "./tr": 8630,
-        "./tr.js": 8630,
-        "./tzl": 79480,
-        "./tzl.js": 79480,
-        "./tzm": 13839,
-        "./tzm-latn": 36313,
-        "./tzm-latn.js": 36313,
-        "./tzm.js": 13839,
-        "./ug-cn": 26648,
-        "./ug-cn.js": 26648,
-        "./uk": 24192,
-        "./uk.js": 24192,
-        "./ur": 8335,
-        "./ur.js": 8335,
-        "./uz": 21351,
-        "./uz-latn": 60785,
-        "./uz-latn.js": 60785,
-        "./uz.js": 21351,
-        "./vi": 9541,
-        "./vi.js": 9541,
-        "./x-pseudo": 309,
-        "./x-pseudo.js": 309,
-        "./yo": 21512,
-        "./yo.js": 21512,
-        "./zh-cn": 98562,
-        "./zh-cn.js": 98562,
-        "./zh-hk": 7374,
-        "./zh-hk.js": 7374,
-        "./zh-mo": 87107,
-        "./zh-mo.js": 87107,
-        "./zh-tw": 34518,
-        "./zh-tw.js": 34518,
-      };
-      function _(_) {
-        var _ = _(_);
-        return __webpack_require__(_);
-      }
-      function _(_) {
-        if (!__webpack_require__._(_, _)) {
-          var _ = new Error("Cannot find module '" + _ + "'");
-          throw ((_.code = "MODULE_NOT_FOUND"), _);
-        }
-        return _[_];
-      }
-      (_.keys = function () {
-        return Object.keys(_);
-      }),
-        (_.resolve = _),
-        (module.exports = _),
-        (_._ = 61738);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -407,7 +112,6 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -2155,7 +1859,30 @@
         })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = _._.box(void 0);
+      function _() {
+        return _.get();
+      }
+      function _(_) {
+        (0, _._)(() => _.set(_));
+      }
+      function _() {
+        const _ = _.get();
+        return _ || Math.floor(Date.now() / 1e3);
+      }
+      function _() {
+        const _ = _.get();
+        return _ ? new Date(1e3 * _) : new Date();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -2211,10 +1938,6 @@
         broadcast_whitelist: [],
       };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2298,12 +2021,12 @@
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
       }
-      function _(_) {
+      function _(_, _ = (0, _._)()) {
         const _ = 60 * _._.PerDay;
         return (
-          _.BIsVisibleEvent() &&
+          _.BIsVisibleEvent(_) &&
           _.BIsOGGEvent() &&
-          (_.rtime32_last_modified ?? 0) > _._.GetTimeNowWithOverride() - _ &&
+          (_.rtime32_last_modified ?? 0) > _ - _ &&
           !_(_)
         );
       }
@@ -2659,6 +2382,7 @@
         has_live_stream;
         live_stream_viewer_count;
         m_overrideCurrentDay = void 0;
+        fnGetLocalizedGroupImages;
         BIsPartnerEvent() {
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
@@ -2669,7 +2393,7 @@
             Object.assign(_, _),
             (_.name = new Map(_.name)),
             (_.description = new Map(_.description)),
-            (_.vecTags = new Array(_.vecTags)),
+            (_.vecTags = [...(_.vecTags ?? _.tags ?? [])]),
             (_.clanSteamID = new _._(_.clanSteamID)),
             (0, _._)(
               _.clanSteamID && _.clanSteamID.BIsValid(),
@@ -2735,7 +2459,8 @@
             Object.assign(_, this),
             (_.name = Array.from(this.name)),
             (_.description = Array.from(this.description)),
-            (_.tags = Array.from(this.vecTags)),
+            (_.vecTags = Array.from(this.vecTags)),
+            (_.tags = _.vecTags),
             (_.clanSteamID = this.clanSteamID.ConvertTo64BitString()),
             this.broadcaster &&
               (_.broadcaster = this.broadcaster.ConvertTo64BitString()),
@@ -2834,9 +2559,8 @@
             _
           );
         }
-        GetDayIndexFromEventStart() {
+        GetDayIndexFromEventStart(_ = (0, _._)()) {
           let _ = 0;
-          const _ = _._.GetTimeNowWithOverride();
           void 0 !== this.startTime &&
             _ >= this.startTime &&
             (_ = Math.floor((_ - this.startTime) / 86400)),
@@ -2849,9 +2573,6 @@
         GetNameWithFallback(_) {
           const _ = _._.GetELanguageFallback(_);
           return this.name.get(_) || this.name.get(_);
-        }
-        GetGameTitle(_) {
-          return _._.Get().GetApp(this.appid)?.GetName();
         }
         BInRealmGlobal() {
           return !this.BHasTag("disable_steam_global");
@@ -2903,7 +2624,7 @@
               : "sale_overlay" === _
                 ? (_ = this.jsondata.localized_sale_overlay)
                 : _._.includes(_)
-                  ? (_ = _._.GetAllLocalizedGroupImageHashAndExts())
+                  ? (_ = this.fnGetLocalizedGroupImages?.())
                   : "product_banner" === _
                     ? (_ = this.jsondata.localized_sale_product_banner)
                     : "product_mobile_banner" === _
@@ -2965,42 +2686,32 @@
             this.forumTopicGID.length > 1
           );
         }
-        GetForumTopicURL() {
-          if (!this.BHasForumTopicGID()) return "";
-          if (this.appid)
-            return (
-              _._.COMMUNITY_BASE_URL +
-              "app/" +
-              this.appid +
-              "/eventcomments/" +
-              this.forumTopicGID
-            );
-          {
-            const _ = _._.GetClanInfoByClanAccountID(
-              this.clanSteamID.GetAccountID(),
-            );
-            if (_ && _.vanity_url)
-              return (
-                _._.COMMUNITY_BASE_URL +
-                "groups/" +
-                _.vanity_url +
+        GetForumTopicURL(_) {
+          return this.BHasForumTopicGID()
+            ? this.appid
+              ? _._.COMMUNITY_BASE_URL +
+                "app/" +
+                this.appid +
                 "/eventcomments/" +
                 this.forumTopicGID
-              );
-          }
-          return (
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            this.clanSteamID.ConvertTo64BitString() +
-            "/eventcomments/" +
-            this.forumTopicGID
-          );
+              : _
+                ? _._.COMMUNITY_BASE_URL +
+                  "groups/" +
+                  _ +
+                  "/eventcomments/" +
+                  this.forumTopicGID
+                : _._.COMMUNITY_BASE_URL +
+                  "gid/" +
+                  this.clanSteamID.ConvertTo64BitString() +
+                  "/eventcomments/" +
+                  this.forumTopicGID
+            : "";
         }
-        BIsEventInFuture() {
-          return _._.GetTimeNowWithOverride() < (this.startTime ?? 0);
+        BIsEventInFuture(_ = (0, _._)()) {
+          return _ < (this.startTime ?? 0);
         }
-        BHasEventEnded() {
-          return (this.endTime ?? 0) < _._.GetTimeNowWithOverride();
+        BHasEventEnded(_ = (0, _._)()) {
+          return (this.endTime ?? 0) < _;
         }
         UpdateVoteCount(_, _) {
           "up" == _
@@ -3048,23 +2759,20 @@
           const _ = _._.GetELanguageFallback(_);
           return this.description.get(_) || this.description.get(_);
         }
-        BIsImageSafeForAllAges(_, _) {
-          const _ = _._.GetClanInfoByClanAccountID(
-              this.clanSteamID.GetAccountID(),
-            ),
-            _ = _._.GetELanguageFallback(_);
+        BIsImageSafeForAllAges(_, _, _ = {}) {
+          const _ = _._.GetELanguageFallback(_);
           return (
             null != this.GetImageURL(_, _) ||
             (_ != _ && null != this.GetImageURL(_, _)) ||
-            (this.appid &&
-              _._.Get().GetApp(this.appid)?.BHasAgeSafeScreenshots()) ||
+            (this.appid && _.bAppHasAgeSafeScreenshots) ||
             (!this.appid &&
-              _ &&
-              ((_.is_creator_home && !_.is_ogg) || _.is_curator))
+              _.clanInfo &&
+              ((_.clanInfo.is_creator_home && !_.clanInfo.is_ogg) ||
+                _.clanInfo.is_curator))
           );
         }
-        BIsVisibleEvent() {
-          let _ = Math.floor(_._.GetTimeNowWithOverride());
+        BIsVisibleEvent(_ = (0, _._)()) {
+          let _ = Math.floor(_);
           return (
             this.visibility_state == _.k_EEventStateUnlisted ||
             (this.visibility_state == _.k_EEventStateVisible &&
@@ -3091,12 +2799,11 @@
         GetVisibilityStartTimeAndDateUnixSeconds() {
           return this.visibilityStartTime ?? 0;
         }
-        BIsEventActionEnabled() {
+        BIsEventActionEnabled(_ = (0, _._)()) {
           return (
             !!this.jsondata.action_end_time &&
-            (this.jsondata.action_end_time > _._.GetTimeNowWithOverride() ||
-              (1575396e3 == this.jsondata.action_end_time &&
-                1606845600 > _._.GetTimeNowWithOverride()))
+            (this.jsondata.action_end_time > _ ||
+              (1575396e3 == this.jsondata.action_end_time && 1606845600 > _))
           );
         }
         BHasSubTitle(_) {
@@ -3187,10 +2894,9 @@
         BHasBroadcastEnabled() {
           return !!this.jsondata.bBroadcastEnabled;
         }
-        BEventCanShowBroadcastWidget(_) {
+        BEventCanShowBroadcastWidget(_, _ = (0, _._)()) {
           if (this.jsondata.bSaleEnabled) return this.BHasBroadcastEnabled();
-          const _ = _._.GetTimeNowWithOverride(),
-            _ = this.endTime ? this.endTime : _ + 3600;
+          const _ = this.endTime ? this.endTime : _ + 3600;
           return (
             this.BHasBroadcastEnabled() &&
             !!this.jsondata.broadcast_whitelist &&
@@ -3263,7 +2969,7 @@
         GetSaleUpdateLandingPageVanity() {
           return this.jsondata.sale_update_landing_page_vanity_id ?? "";
         }
-        GetSaleURL() {
+        GetSaleURL(_) {
           if (!this.jsondata.bSaleEnabled) return null;
           if (this.jsondata.sale_update_landing_page_vanity_id)
             return (
@@ -3300,24 +3006,15 @@
                         : _._.STORE_BASE_URL + _.type
               : _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
           }
-          if (!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath) {
-            if (_._.BHasCreatorHomeLoaded(this.clanSteamID)) {
-              const _ = _._.GetCreatorHome(this.clanSteamID);
-              return (
-                _?.GetCreatorHomeURL("developer") +
-                "sale/" +
-                this.jsondata.sale_vanity_id
-              );
-            }
-            return (
-              _._.STORE_BASE_URL +
-              "curator/" +
-              this.clanSteamID.GetAccountID() +
-              "/sale/" +
-              this.jsondata.sale_vanity_id
-            );
-          }
-          return _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
+          return this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+            ? _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
+            : _
+              ? _ + "sale/" + this.jsondata.sale_vanity_id
+              : _._.STORE_BASE_URL +
+                "curator/" +
+                this.clanSteamID.GetAccountID() +
+                "/sale/" +
+                this.jsondata.sale_vanity_id;
         }
         BHasEmailEnabled() {
           return (
@@ -3327,7 +3024,7 @@
         GetSaleSections() {
           return this.jsondata.sale_sections ?? [];
         }
-        GenerateDynamicSaleSections(_, _, _, _, _) {
+        GenerateDynamicSaleSections(_, _, _, _, _, _) {
           const _ = [],
             _ = {
               section_type: "unselected_empty",
@@ -3353,7 +3050,9 @@
                 unique_id: _++,
               }),
             _ &&
-              _.push(this.GenerateDynamicCreatorHomeItemBrowserSection(_++, _)),
+              _.push(
+                this.GenerateDynamicCreatorHomeItemBrowserSection(_++, _, _),
+              ),
             _ &&
               _.push({
                 ..._,
@@ -3369,7 +3068,7 @@
             _
           );
         }
-        GetSaleSectionIncludingFooterSections() {
+        GetSaleSectionIncludingFooterSections(_ = 0) {
           const _ = this.jsondata?.sale_show_creator,
             _ = this.jsondata.sale_browse_more_button,
             _ =
@@ -3379,15 +3078,15 @@
             _ = this.BShowNextFestHeader(!0);
           return _ || _ || _ || _ || _
             ? [
-                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
+                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _, _),
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1, _),
               ]
             : this.GetSaleSections();
         }
-        GetSaleSectionByID(_) {
+        GetSaleSectionByID(_, _ = 0) {
           if (_ > _) {
-            return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0).find(
+            return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0, _).find(
               (_) => _.unique_id == _,
             );
           }
@@ -3675,7 +3374,7 @@
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }
-        GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
+        GenerateDynamicCreatorHomeItemBrowserSection(_, _, _) {
           return {
             ..._,
             section_type: "sale_item_browser",
@@ -3691,9 +3390,7 @@
               prefer_assets_without_overrides: !1,
             },
             prefer_assets_without_overrides: !1,
-            enable_faceted_browsing:
-              (_._.GetCreatorHome(this.clanSteamID)?.GetAppIDList().length ??
-                0) >= 7,
+            enable_faceted_browsing: _ >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
             background_gradient_top: "#0000006b",
@@ -3777,7 +3474,6 @@
         (0, _._)([_._], _.prototype, "m_overrideCurrentDay", void 0);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -3883,225 +3579,6 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_curLocImageGroup = null;
-        m_curLocImageGroupType = null;
-        constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
-        }
-        static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
-          let _ =
-              _._.COMMUNITY_BASE_URL +
-              "gid/" +
-              _.ConvertTo64BitString() +
-              "/hasclanimagefile",
-            _ = {
-              image_hash_and_ext: _,
-              lang: "" + _,
-            };
-          return (
-            (
-              await _().get(_, {
-                params: _,
-                cancelToken: _ && _.token,
-              })
-            ).data.success == _._
-          );
-        }
-        SetPrimaryImageForImageGroup(_, _) {
-          (this.m_curLocImageGroup &&
-            this.m_curLocImageGroup.primaryImage.imageid == _.imageid &&
-            _ == this.m_curLocImageGroupType) ||
-            ((this.m_curLocImageGroup = {
-              primaryImage: _,
-              localized_images: [],
-            }),
-            (this.m_curLocImageGroupType = _),
-            (this.m_curLocImageGroup.localized_images = (0, _._)(
-              this.m_curLocImageGroup.localized_images,
-              _.bP9,
-              null,
-            )));
-        }
-        GetPrimaryImageForImageGroup() {
-          return this.m_curLocImageGroup?.primaryImage;
-        }
-        ClearImageGroup() {
-          (this.m_curLocImageGroup = null),
-            (this.m_curLocImageGroupType = null);
-        }
-        GetLocalizedImageGroupForEdit() {
-          return this.m_curLocImageGroup;
-        }
-        GetLocalizedImageGroupForEditAsURL(_, _) {
-          if (this.m_curLocImageGroup) {
-            let _ = this.m_curLocImageGroup.primaryImage;
-            return this.m_curLocImageGroup.localized_images[_]
-              ? this.m_curLocImageGroup.localized_images[_]
-              : _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_) ?? "");
-          }
-          return null;
-        }
-        async DetermineAvailableLocalizationForGroup(_) {
-          if (!this.m_curLocImageGroup) return;
-          const _ = this.m_curLocImageGroup.primaryImage,
-            _ = _._.InitFromClanID(_.clanAccountID),
-            _ = _._.GetHashAndExt(_) ?? "",
-            _ = [];
-          for (let _ = _.Bhc; _ < _.bP9; ++_)
-            _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
-          const _ = await Promise.all(_);
-          (0, _._)(() => {
-            for (let _ = _.Bhc; _ < _.bP9; ++_)
-              _[_] &&
-                (this.m_curLocImageGroup.localized_images[_] =
-                  _._.GenerateURLFromHashAndExtAndLang(
-                    _,
-                    _,
-                    _._.full,
-                    _,
-                    this.m_curLocImageGroupType ?? void 0,
-                  ));
-          });
-        }
-        SetLocalizedImageGroupAtLang(_, _, _) {
-          this.m_curLocImageGroup &&
-            (this.m_curLocImageGroup.localized_images[_] = _
-              ? _._.GenerateURLFromHashAndExtAndLang(
-                  _,
-                  _,
-                  _._.full,
-                  _,
-                  this.m_curLocImageGroupType ?? void 0,
-                )
-              : null);
-        }
-        AddLocalizeImageUploaded(_, _) {
-          if (!this.m_curLocImageGroup) return;
-          let _ = this.m_curLocImageGroup.primaryImage;
-          if (_?.image_hash == _) {
-            const _ = _._.InitFromClanID(_.clanAccountID),
-              _ = _._.GetHashAndExt(_);
-            _ &&
-              (this.m_curLocImageGroup.localized_images[_] =
-                _._.GenerateURLFromHashAndExtAndLang(
-                  _,
-                  _,
-                  _._.full,
-                  _,
-                  this.m_curLocImageGroupType ?? void 0,
-                ));
-          }
-        }
-        GetAllLocalizedGroupImages() {
-          return (
-            (this.m_curLocImageGroup &&
-              this.m_curLocImageGroup.localized_images) ||
-            []
-          );
-        }
-        GetAllLocalizedGroupImageHashAndExts() {
-          return this.GetAllLocalizedGroupImages()
-            .filter(Boolean)
-            .map((_) => _._.GetHashAndExtFromURL(_));
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
-      const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
-        get bRequireAllEventsLoadedInTimeBlock() {
-          return !1;
-        }
-        get bIncludeCurators() {
-          return !0;
-        }
-        GetTimeNowWithOverride() {
-          return this.nOverrideDateNow
-            ? this.nOverrideDateNow
-            : Math.floor(Date.now() / 1e3);
-        }
-        GetTimeNowWithOverrideAsDate() {
-          return this.nOverrideDateNow
-            ? new Date(1e3 * this.nOverrideDateNow)
-            : new Date();
-        }
-        BHasTimeOverride() {
-          return Boolean(this.nOverrideDateNow);
-        }
-        ParseDevOverrides(_) {
-          if (!_ || 0 == _.length) return;
-          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-          if (
-            _.has("t") &&
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-          ) {
-            const _ = _.get("t");
-            let _ = /^\d+$/.test(_ ?? "")
-              ? _().unix(Number.parseInt(_ ?? "0"))
-              : _()(_);
-            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  __webpack_require__.format(),
-              );
-          }
-        }
-      }
-      (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
-      const _ = new _();
-      window.g_EventCalendarDevFeatures = _;
-      const _ = new Date(),
-        _ = Math.floor(_.getTime() / 1e3);
-      function _() {
-        return _.nOverrideDateNow ?? _;
-      }
-      function _() {
-        return _.useMemo(() => _(), []);
-      }
-      function _() {
-        return _.useMemo(() => _.GetTimeNowWithOverrideAsDate(), []);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,

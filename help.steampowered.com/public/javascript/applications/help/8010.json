@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "GIFの解析に失敗しました。再エンコードするか、ファイルの形式を変更して、もう一度お試しください。",
     "MediaConvert_InputError_ImageTooSmall": "画像が小さすぎます。16×16ピクセル以上の画像をアップロードしてください。",
     "MediaConvert_InputError_AnimationTooSmall": "アニメーションまたは動画が小さすぎます。16x16ピクセル以上のアニメーションまたは動画をアップロードしてください。",
+    "MediaConvert_InputError_MultipleVideoStreams": "このファイルには複数の動画トラックが含まれています。動画トラックを1つだけ含むファイルをアップロードしてください。",
+    "MediaConvert_InputError_AnimationNotAllowed": "この画像にアニメーションは使用できません。静止画像をアップロードしてください。",
     "MediaConvert_InputError_ImageTypeWithAudio": "画像ファイルに音声トラックを含めることはできません。",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF出力はビデオソースとしてサポートされていません。",
     "MediaConvert_InternalError_FailedToConvert": "このファイルの変換に失敗しました。再試行する前にファイルを再エンコードしてください。",

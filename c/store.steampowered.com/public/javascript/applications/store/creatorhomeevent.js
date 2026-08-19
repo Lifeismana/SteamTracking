@@ -1035,88 +1035,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      async function _(_, _, _) {
-        const _ = (0, _._)("partnereventpermissions", "application_config");
-        if (
-          (function (_) {
-            const _ = _;
-            if (
-              _ &&
-              Array.isArray(_) &&
-              _.length > 0 &&
-              "object" == typeof _[0]
-            )
-              return (
-                "number" == typeof _[0].clanid && "number" == typeof _[0].appid
-              );
-            return !1;
-          })(_)
-        ) {
-          const _ = _.find((_) => (_.clanid = _));
-          if (_) {
-            let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-            return _;
-          }
-        }
-        if (_._.logged_in) {
-          const _ = _._.InitFromClanID(_);
-          let _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
-          "partnerweb" == (0, _._)()
-            ? (_ = `${_._.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
-            : "store" == (0, _._)() &&
-              (_ = `${_._.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
-          const _ = await fetch(_, {
-            method: "GET",
-            credentials: "include",
-          });
-          if (200 == _.status) {
-            const _ = await _.json();
-            if (_) {
-              let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-              return _;
-            }
-          }
-        }
-        return (function (_, _) {
-          return {
-            clanid: _,
-            appid: _,
-            can_edit: !1,
-            owns_app: !1,
-            event_followed: [],
-            event_followed_flags: [],
-            event_ignored: [],
-            follows_app: !1,
-            valve_admin: !1,
-            support_user: !1,
-            limited_user: !0,
-          };
-        })(_, void 0);
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        (0, _._)(), (0, _._)();
-        return (0, _._)(
-          (function (_) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => await _(_),
-              enabled: !!_,
-            };
-          })(_),
-        );
-      }
-      function _(_) {
-        return ["useEventUserPermissions", _._.accountid, _];
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { eventModel: _ } = _,
-          { data: _ } = _(_.clanSteamID.GetAccountID());
+          { data: _ } = (0, _._)(_.clanSteamID.GetAccountID());
         if (!_ || (!_.can_edit && !_.support_user) || "community" == (0, _._)())
           return;
         const _ = _.GetAllTags(),
@@ -1263,6 +1185,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1709,6 +1632,138 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_curLocImageGroup = null;
+        m_curLocImageGroupType = null;
+        constructor() {
+          (0, _._)(this),
+            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+        }
+        static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
+          let _ =
+              _._.COMMUNITY_BASE_URL +
+              "gid/" +
+              _.ConvertTo64BitString() +
+              "/hasclanimagefile",
+            _ = {
+              image_hash_and_ext: _,
+              lang: "" + _,
+            };
+          return (
+            (
+              await _().get(_, {
+                params: _,
+                cancelToken: _ && _.token,
+              })
+            ).data.success == _._
+          );
+        }
+        SetPrimaryImageForImageGroup(_, _) {
+          (this.m_curLocImageGroup &&
+            this.m_curLocImageGroup.primaryImage.imageid == _.imageid &&
+            _ == this.m_curLocImageGroupType) ||
+            ((this.m_curLocImageGroup = {
+              primaryImage: _,
+              localized_images: [],
+            }),
+            (this.m_curLocImageGroupType = _),
+            (this.m_curLocImageGroup.localized_images = (0, _._)(
+              this.m_curLocImageGroup.localized_images,
+              _.bP9,
+              null,
+            )));
+        }
+        GetPrimaryImageForImageGroup() {
+          return this.m_curLocImageGroup?.primaryImage;
+        }
+        ClearImageGroup() {
+          (this.m_curLocImageGroup = null),
+            (this.m_curLocImageGroupType = null);
+        }
+        GetLocalizedImageGroupForEdit() {
+          return this.m_curLocImageGroup;
+        }
+        GetLocalizedImageGroupForEditAsURL(_, _) {
+          if (this.m_curLocImageGroup) {
+            let _ = this.m_curLocImageGroup.primaryImage;
+            return this.m_curLocImageGroup.localized_images[_]
+              ? this.m_curLocImageGroup.localized_images[_]
+              : _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_) ?? "");
+          }
+          return null;
+        }
+        async DetermineAvailableLocalizationForGroup(_) {
+          if (!this.m_curLocImageGroup) return;
+          const _ = this.m_curLocImageGroup.primaryImage,
+            _ = _._.InitFromClanID(_.clanAccountID),
+            _ = _._.GetHashAndExt(_) ?? "",
+            _ = [];
+          for (let _ = _.Bhc; _ < _.bP9; ++_)
+            _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
+          const _ = await Promise.all(_);
+          (0, _._)(() => {
+            for (let _ = _.Bhc; _ < _.bP9; ++_)
+              _[_] &&
+                (this.m_curLocImageGroup.localized_images[_] =
+                  _._.GenerateURLFromHashAndExtAndLang(
+                    _,
+                    _,
+                    _._.full,
+                    _,
+                    this.m_curLocImageGroupType ?? void 0,
+                  ));
+          });
+        }
+        SetLocalizedImageGroupAtLang(_, _, _) {
+          this.m_curLocImageGroup &&
+            (this.m_curLocImageGroup.localized_images[_] = _
+              ? _._.GenerateURLFromHashAndExtAndLang(
+                  _,
+                  _,
+                  _._.full,
+                  _,
+                  this.m_curLocImageGroupType ?? void 0,
+                )
+              : null);
+        }
+        AddLocalizeImageUploaded(_, _) {
+          if (!this.m_curLocImageGroup) return;
+          let _ = this.m_curLocImageGroup.primaryImage;
+          if (_?.image_hash == _) {
+            const _ = _._.InitFromClanID(_.clanAccountID),
+              _ = _._.GetHashAndExt(_);
+            _ &&
+              (this.m_curLocImageGroup.localized_images[_] =
+                _._.GenerateURLFromHashAndExtAndLang(
+                  _,
+                  _,
+                  _._.full,
+                  _,
+                  this.m_curLocImageGroupType ?? void 0,
+                ));
+          }
+        }
+        GetAllLocalizedGroupImages() {
+          return (
+            (this.m_curLocImageGroup &&
+              this.m_curLocImageGroup.localized_images) ||
+            []
+          );
+        }
+        GetAllLocalizedGroupImageHashAndExts() {
+          return this.GetAllLocalizedGroupImages()
+            .filter(Boolean)
+            .map((_) => _._.GetHashAndExtFromURL(_));
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
+      const _ = new _();
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2204,8 +2259,7 @@
           }),
         });
       }
-      var _,
-        _ = __webpack_require__("chunkid");
+      var _;
       !(function (_) {
         (_[(_.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
           (_[(_.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
@@ -2626,7 +2680,7 @@
               const _ = _.uploadResult;
               if (_?.origimagehash) {
                 const _ = (0, _._)(_.language, _, _);
-                _._.AddLocalizeImageUploaded(_.origimagehash, _);
+                _.AddLocalizeImageUploaded(_.origimagehash, _);
               } else {
                 const _ = _._.GetClanImageByImageHash(_, _?.image_hash ?? ""),
                   _ = _.image.GetCurrentImageOption();
@@ -2640,8 +2694,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -2693,7 +2745,6 @@
         return -1 === _ ? _ : _.substring(0, _);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3136,7 +3187,7 @@
                 _._.includes(_) &&
                   (0, _.jsx)("img", {
                     className: _.PreviewImg,
-                    src: _._.GetLocalizedImageGroupForEditAsURL(_, _) ?? void 0,
+                    src: _.GetLocalizedImageGroupForEditAsURL(_, _) ?? void 0,
                   }),
                 "product_banner" === _ &&
                   (0, _.jsx)(_, {
@@ -4092,15 +4143,15 @@
           ]);
         (0, _.useEffect)(() => {
           _(!1),
-            _._.ClearImageGroup(),
+            _.ClearImageGroup(),
             _?.forEach((_, _) => {
               const _ = _._.InitFromClanID(_);
-              if (0 == _._.GetAllLocalizedGroupImages().length) {
+              if (0 == _.GetAllLocalizedGroupImages().length) {
                 const _ = _ && _._.GetHashFromHashAndExt(_),
                   _ = _ && _._.GetClanImageByImageHash(_, _);
-                _ && _._.SetPrimaryImageForImageGroup(_, _);
+                _ && _.SetPrimaryImageForImageGroup(_, _);
               }
-              _._.SetLocalizedImageGroupAtLang(_, _, _ ?? null);
+              _.SetLocalizedImageGroupAtLang(_, _, _ ?? null);
             }),
             _(!0);
         }, [_, _, _]);
@@ -4108,17 +4159,17 @@
             (_, _, _ = _.Bhc) => {
               const _ = _._.InitFromClanID(_),
                 _ = _._.GetHashAndExt(_ ?? null);
-              if (0 == _._.GetAllLocalizedGroupImages().length) {
+              if (0 == _.GetAllLocalizedGroupImages().length) {
                 const _ = _ && _._.GetHashFromHashAndExt(_),
                   _ = _ && _._.GetClanImageByImageHash(_, _);
-                _ && _._.SetPrimaryImageForImageGroup(_, _);
+                _ && _.SetPrimaryImageForImageGroup(_, _);
               }
-              _._.SetLocalizedImageGroupAtLang(_, _, _);
+              _.SetLocalizedImageGroupAtLang(_, _, _);
             },
             [_],
           ),
           _ = (0, _.useCallback)((_, _) => {
-            const _ = _._.GetLocalizedImageGroupForEdit(),
+            const _ = _.GetLocalizedImageGroupForEdit(),
               _ = _?.localized_images[_];
             return _ ? _.split("/").pop() : _;
           }, []);
@@ -4132,7 +4183,7 @@
           strDescription: _.strLocalizedDescription,
           bOKDisabled: _ > 0,
           onOK: () => {
-            const _ = _._.GetLocalizedImageGroupForEdit();
+            const _ = _.GetLocalizedImageGroupForEdit();
             for (let _ = _.Bhc; _ < _.bP9; ++_) {
               const _ = _?.localized_images[_];
               if (_) {
@@ -4149,7 +4200,7 @@
                 );
               } else _(_, null, _);
             }
-            _._.ClearImageGroup(), _.onOK ? _.onOK() : _?.();
+            _.ClearImageGroup(), _.onOK ? _.onOK() : _?.();
           },
           strOKButtonText:
             _ > 0 ? (0, _._)("#ImagePickerLoc_DismissWarning") : void 0,
@@ -4177,7 +4228,7 @@
                       title: null,
                       appid: _,
                       realms: _,
-                      fnRemoveAllArtwork: () => _._.ClearImageGroup(),
+                      fnRemoveAllArtwork: () => _.ClearImageGroup(),
                       fnSetImageURL: _,
                       fnGetImageHashAndExt: _,
                       fnLangHasData: _,
@@ -5294,7 +5345,9 @@
           },
           [_, _] = (0, _._)("controller"),
           [_, _] = (0, _._)(() => {
-            const _ = _.GetSaleSectionIncludingFooterSections();
+            const _ =
+                _._.GetCreatorHome(_.clanSteamID)?.GetAppIDList().length ?? 0,
+              _ = _.GetSaleSectionIncludingFooterSections(_);
             return [
               _(
                 _.jsondata.sale_background_img_groups,

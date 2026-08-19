@@ -3,6 +3,52 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5836],
   {
+    20978: (e) => {
+      e.exports = {
+        LoadingWrapper: "_2wAKy-0ZkO_vhbiQCP9MgE",
+        Static: "_1QfwpLmLTSuiIRLDzdY_7l",
+        none: "_1F0lzP-Krz_y5P9ewZEvBD",
+        bottomCircle: "_2qjZm0dB7I6lcRkZhNTqvD",
+        noString: "_1Sy0pXVZOdWbgouFyD2zJj",
+        Throbber: "lYUEjD8Qh3GM_ZrZeLwpI",
+        throbber_small: "_2zbyh5jEDlV5HVD3iUve-k",
+        throbber_medium: "_2CphUsHNDgIWItNIzeIldY",
+        throbber_large: "_1x18vR7Qop8v8_G8qSR6CL",
+        throbber_center_wrapper: "_3IYPzqtvB2ZE7x710d5x2C",
+        ThrobberText: "_21nVi2jNuF_prxLY1mAaKK",
+        blur: "_1ctjA2yjeB21eCDj_r1mVz",
+        ThrobberRoundLoop: "_1O-cWE6nuIVO3x6-Onw0IU",
+        roundOuterOutline: "_1Vv--mA6PueyEKXXMTwljt",
+        roundOuter: "_2K0LzwjOXDopMHoqY_v_CO",
+        roundFill: "_3sQFkavAEPhliH6DiFmHRH",
+        ThrobberFillLoop: "ofdi9VLSRZ5W98WsXVHiq",
+        topCircle: "_1LZffuoDq-N25wNHckxsf",
+        circlePulse: "_1XN6ZJ1l8nVoUxp1WnOBqw",
+        ThrobberTopCircleLoop: "_1jALk36CiS_T9Pg7vBjpIQ",
+        ThrobberBottomCircleLoop: "_1KvOgdKiNE9XuSYUau3hKW",
+        roundThrobber15: "_2LGHpu_-ihfOhQwdfR3Kiy",
+        roundThrobber14: "_2FGCneH2AemMrIrZnZskw_",
+        roundThrobber13: "_1X-5j16jaQntVrZfadibyc",
+        roundThrobber12: "_1pj1Q3Ef4FdHDdl9QEtpxp",
+        roundThrobber11: "xFmZaMe5nZpoTc5PQBKn3",
+        roundThrobber10: "_3MGYowzMQ6TwbH3fu9SVjt",
+        roundThrobber09: "ktVJ42jiVhWEVV9O6z2FK",
+        roundThrobber08: "_3s_7my869lIOj-1vnqJ39y",
+        roundThrobber07: "_11MVp53Me_frOuaJfsQ4FE",
+        roundThrobber06: "_2cl-maglen-RF0YQjShgqG",
+        roundThrobber05: "_3-JE0FpIzECzeqtd5cyjGI",
+        roundThrobber04: "_1xNIKvHdzLhBldONo6yIZs",
+        roundThrobber03: "_1S17yicfcrPc11m83ydGp3",
+        roundThrobber02: "_1-oUJqmCLOoGqVJz5dgj6J",
+        roundThrobber01: "_2tXgejjqNKy6cSX1Lv7PrG",
+        ThrobberRoundLoopThickness: "_1fs4RGcMBRzbQQirDBiFoM",
+        throbber_xlarge: "_1gYeZMYKBDqNpVuw58_LCl",
+        throbber_xxlarge: "_3j-p4JOqdpaF4obGtIeAB",
+        ThrobberDelayAppear: "I3aEq3lbK7Pm8ujENvtri",
+        Visible: "_2SwSJd-DlX2dRiDGxZWHI5",
+        NewThrobber: "_1m8iQOSVziKDHiInrfskv_",
+      };
+    },
     64734: (e) => {
       e.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
@@ -10,645 +56,511 @@
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
-    45048: (e, t, i) => {
+    45048: (e, r, t) => {
       "use strict";
-      i.r(t), i.d(t, { QAndARoutes: () => m, default: () => _ });
-      var n = i(7850),
-        r = i(28579),
-        a = i(92757),
-        s = i(6813),
-        o = i(97058);
-      const m = {
+      t.r(r), t.d(r, { QAndARoutes: () => l, default: () => a });
+      var c = t(7850),
+        s = t(28579),
+        o = t(92757),
+        i = t(6813),
+        n = t(97058);
+      const l = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
-        FullPageView: (e, t) => `/questions/${e}/view/${t}`,
+        FullPageView: (e, r) => `/questions/${e}/view/${r}`,
       };
-      const _ = function (e) {
-        return (0, n.jsxs)(a.dO, {
+      const a = function (e) {
+        return (0, c.jsxs)(o.dO, {
           children: [
-            (0, n.jsx)(a.qh, {
-              path: m.Dashboard(":vanity_str"),
+            (0, c.jsx)(o.qh, {
+              path: l.Dashboard(":vanity_str"),
               render: (e) =>
-                (0, n.jsx)(s.X, {
+                (0, c.jsx)(i.X, {
                   config: {
                     "qanda-root": () => {
-                      const { vanity_str: t } = e.match.params;
-                      return (0, n.jsx)(r.xh, { vanity_str: t });
+                      const { vanity_str: r } = e.match.params;
+                      return (0, c.jsx)(s.xh, { vanity_str: r });
                     },
                   },
                 }),
             }),
-            (0, n.jsx)(a.qh, {
-              path: m.FullPageView(":vanity_str", ":session_gid"),
+            (0, c.jsx)(o.qh, {
+              path: l.FullPageView(":vanity_str", ":session_gid"),
               render: (e) =>
-                (0, n.jsx)(s.X, {
+                (0, c.jsx)(i.X, {
                   config: {
                     "qanda-root": () => {
-                      const { vanity_str: t, session_gid: i } = e.match.params;
-                      return (0, n.jsx)(r.AC, { gidSession: i });
+                      const { vanity_str: r, session_gid: t } = e.match.params;
+                      return (0, c.jsx)(s.AC, { gidSession: t });
                     },
                   },
                 }),
             }),
-            (0, n.jsx)(a.qh, { component: o.a }),
+            (0, c.jsx)(o.qh, { component: n.a }),
           ],
         });
       };
     },
-    11333: (e, t, i) => {
+    6083: (e, r, t) => {
       "use strict";
-      i.d(t, { L: () => m, c: () => o });
-      var n = i(78619),
-        r = i(49845),
-        a = i(58632),
-        s = i.n(a);
-      function o(e, t) {
-        return new (s())(
-          async (t) => {
-            const i = [...t],
-              r = await n.xtC.GetPlayerLinkDetails(e, { steamids: i }),
-              a = new Map();
-            return (
-              r
-                .Body()
-                .accounts()
-                .forEach((e) => {
-                  const t = e.toObject();
-                  a.set(t.public_data.steamid, t);
-                }),
-              i.map((e) => {
-                var t;
-                return null !== (t = a.get(e)) && void 0 !== t ? t : null;
-              })
-            );
-          },
-          { maxBatchSize: 100, cache: !1, ...t },
-        );
-      }
-      function m(e) {
-        return (0, r.V)("PlayerLinkDetails", () => o(e));
+      t.d(r, { D: () => s });
+      var c = t(3049);
+      function s(e) {
+        return e.toLocaleString((0, c.J)());
       }
     },
-    6083: (e, t, i) => {
+    3049: (e, r, t) => {
       "use strict";
-      i.d(t, { D: () => r });
-      var n = i(3049);
-      function r(e) {
-        return e.toLocaleString((0, n.J)());
-      }
-    },
-    3049: (e, t, i) => {
-      "use strict";
-      i.d(t, { J: () => a });
-      var n = i(66418),
-        r = i(13843);
-      function a() {
-        return (0, r.A)().languages.map((e) => {
-          return 2 == (t = e.strISOCode).length && n.TS.COUNTRY
-            ? `${t}-${n.TS.COUNTRY}`
-            : t;
-          var t;
+      t.d(r, { J: () => o });
+      var c = t(66418),
+        s = t(13843);
+      function o() {
+        return (0, s.A)().languages.map((e) => {
+          return 2 == (r = e.strISOCode).length && c.TS.COUNTRY
+            ? `${r}-${c.TS.COUNTRY}`
+            : r;
+          var r;
         });
       }
     },
-    38924: (e, t, i) => {
+    42248: (e, r, t) => {
       "use strict";
-      i.d(t, {
-        Fj: () => n,
-        R$: () => s,
-        Zx: () => r,
-        hs: () => m,
-        o5: () => a,
-        sr: () => o,
-      });
-      const n = 2,
-        r = 4,
-        a = 8,
-        s = 512,
-        o = 1024,
-        m = 2048;
-    },
-    49845: (e, t, i) => {
-      "use strict";
-      function n(e) {
-        return "[object Object]" === Object.prototype.toString.call(e);
-      }
-      function r(...e) {
-        return JSON.stringify(e, (e, t) => {
-          if (
-            (function (e) {
-              if (!n(e)) return !1;
-              const t = e.constructor;
-              if (void 0 === t) return !0;
-              const i = t.prototype;
-              return (
-                !!n(i) &&
-                !!Object.prototype.hasOwnProperty.call(i, "isPrototypeOf")
-              );
-            })(t)
-          ) {
-            const e = {};
-            return (
-              Object.keys(t)
-                .sort()
-                .forEach((i) => {
-                  e[i] = t[i];
-                }),
-              e
-            );
-          }
-          return t;
-        });
-      }
-      i.d(t, { V: () => o });
-      var a = i(90626);
-      i(7850);
-      const s = (0, a.createContext)({ instances: {}, factories: {} });
-      function o(e, t) {
-        var i;
-        const n = (0, a.useContext)(s),
-          o = "string" == typeof e ? e : r(...e);
-        let m = n;
-        for (; m; ) {
-          if (o in m.instances) return m.instances[o];
-          if (o in m.factories) break;
-          m = m.parent;
-        }
-        const _ = (
-          null !== (i = null == m ? void 0 : m.factories[o]) && void 0 !== i
-            ? i
-            : t
-        )();
-        return ((null != m ? m : n).instances[o] = _), _;
+      t.d(r, { q: () => o });
+      var c = t(78327),
+        s = t(22837);
+      function o() {
+        return c.TS.IN_CLIENT && (0, s.DOG)(c.TS.LAUNCHER_TYPE);
       }
     },
-    10622: (e, t, i) => {
+    22797: (e, r, t) => {
       "use strict";
-      i.d(t, { Z: () => d, dV: () => l.d, rO: () => u, tp: () => l.t });
-      var n = i(34629),
-        r = i(14947),
-        a = i(31561),
-        s = i(51006),
-        o = i(61859),
-        m = i(22837),
-        _ = i(38924),
-        c = i(78327),
-        l = i(85044);
-      function u(e) {
-        let t = "offline";
+      t.d(r, { t: () => d });
+      var c = t(7850),
+        s = t(90626),
+        o = t(52038),
+        i = t(20978),
+        n = t.n(i);
+      const l =
+        t.p +
+        "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
+      var a = t(42248),
+        f = t(66418);
+      const d = s.memo(function (e) {
+        const {
+          className: r,
+          size: t,
+          string: i,
+          position: d,
+          static: b,
+          msDelayAppear: h,
+        } = e;
+        let m = [n().LoadingWrapper, "SteamLogoThrobber", u(t)];
+        const [p, k] = s.useState(!h),
+          x = !(0, a.q)();
         return (
-          e &&
-            (e.is_ingame
-              ? (t = "ingame")
-              : e.m_broadcastAccountId
-                ? (t = "watchingbroadcast")
-                : e.is_online && (t = "online"),
-            e.is_awayOrSnooze && (t += " awayOrSnooze")),
-          t
+          (0, s.useEffect)(() => {
+            if (p) return;
+            const e = setTimeout(() => k(!0), h);
+            return () => clearTimeout(e);
+          }, [h, p]),
+          void 0 === i && m.push(n().noString),
+          r && m.push(r),
+          b && m.push(n().Static),
+          (0, c.jsxs)("div", {
+            className: (0, o.A)(
+              "center" == d && n().throbber_center_wrapper,
+              !!h && n().ThrobberDelayAppear,
+              p && n().Visible,
+            ),
+            children: [
+              p &&
+                x &&
+                (0, c.jsx)("div", {
+                  className: m.join(" "),
+                  children: (0, c.jsx)("div", {
+                    className: n().NewThrobber,
+                    children: (0, c.jsx)("img", { src: (0, f.YJ)(l) }),
+                  }),
+                }),
+              Boolean(i) &&
+                (0, c.jsx)("div", { className: n().ThrobberText, children: i }),
+            ],
+          })
+        );
+      });
+      s.memo(function (e) {
+        const {
+          className: r,
+          size: t,
+          string: i,
+          position: l,
+          static: a,
+          msDelayAppear: f,
+        } = e;
+        let d = [n().LoadingWrapper, "SteamLogoThrobber", u(t)];
+        const [h, m] = s.useState(!f);
+        return (
+          (0, s.useEffect)(() => {
+            if (h) return;
+            const e = setTimeout(() => m(!0), f);
+            return () => clearTimeout(e);
+          }, [f, h]),
+          void 0 === i && d.push(n().noString),
+          r && d.push(r),
+          a && d.push(n().Static),
+          (0, c.jsxs)("div", {
+            className: (0, o.A)(
+              "center" == l && n().throbber_center_wrapper,
+              !!f && n().ThrobberDelayAppear,
+              h && n().Visible,
+            ),
+            children: [
+              h &&
+                (0, c.jsx)("div", {
+                  className: d.join(" "),
+                  children: (0, c.jsxs)("div", {
+                    className: n().Throbber,
+                    children: [
+                      (0, c.jsx)(b, { className: n().base }),
+                      (0, c.jsx)(b, { className: n().blur }),
+                    ],
+                  }),
+                }),
+              Boolean(i) &&
+                (0, c.jsx)("div", { className: n().ThrobberText, children: i }),
+            ],
+          })
+        );
+      });
+      function u(e) {
+        switch (e) {
+          case "small":
+            return n().throbber_small;
+          case "medium":
+            return n().throbber_medium;
+          case "xlarge":
+            return n().throbber_xlarge;
+          case "xxlarge":
+            return n().throbber_xxlarge;
+          default:
+            return n().throbber_large;
+        }
+      }
+      function b(e) {
+        let r = "SVGIcon_Button SVGIcon_Throbber ";
+        return (
+          e.className && (r += e.className),
+          (0, c.jsxs)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: r,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, c.jsxs)("g", {
+                className: n().partCircle,
+                children: [
+                  (0, c.jsx)("path", {
+                    className: n().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M201.432,101.166",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                  }),
+                ],
+              }),
+              (0, c.jsxs)("g", {
+                className: n().mainOutline,
+                children: [
+                  (0, c.jsx)("path", {
+                    className: n().roundFill,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundOuterOutline,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber01,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber02,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber03,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber04,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber05,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber06,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber07,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber08,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber09,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber10,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber11,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber12,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber13,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber14,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, c.jsx)("path", {
+                    className: n().roundThrobber15,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                ],
+              }),
+              (0, c.jsx)("g", {
+                className: n().bottomCircle,
+                children: (0, c.jsx)("path", {
+                  fill: "#ffffff",
+                  d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                }),
+              }),
+              (0, c.jsx)("g", {
+                className: n().topCircle,
+                children: (0, c.jsx)("circle", {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  cx: "161.731",
+                  cy: "101.274",
+                  r: "23.019",
+                }),
+              }),
+            ],
+          })
         );
       }
-      class d {
-        constructor(e) {
-          (this.m_bInitialized = !1),
-            (this.m_ePersonaState = m.cU3),
-            (this.m_unGamePlayedAppID = 0),
-            (this.m_gameid = "0"),
-            (this.m_unPersonaStateFlags = 0),
-            (this.m_strPlayerName = ""),
-            (this.m_strAvatarHash = l.d),
-            (this.m_strAccountName = ""),
-            (this.m_rtLastSeenOnline = 0),
-            (this.m_strGameExtraInfo = ""),
-            (this.m_unGameServerIP = 0),
-            (this.m_unGameServerPort = 0),
-            (this.m_game_lobby_id = ""),
-            (this.m_bPlayerNamePending = !1),
-            (this.m_bAvatarPending = !1),
-            (this.m_broadcastId = void 0),
-            (this.m_broadcastAccountId = void 0),
-            (this.m_broadcastAppId = void 0),
-            (this.m_broadcastViewerCount = void 0),
-            (this.m_strBroadcastTitle = void 0),
-            (this.m_bCommunityBanned = void 0),
-            (this.m_eGamingDeviceType = m.eSB),
-            (this.m_mapRichPresence = r.sH.map()),
-            (this.m_bNameInitialized = !1),
-            (this.m_bStatusInitialized = !1),
-            (this.m_strProfileURL = void 0),
-            (0, r.Gn)(this),
-            (this.m_steamid = e);
-        }
-        Reset() {
-          (this.m_ePersonaState = m.cU3),
-            (this.m_unGamePlayedAppID = 0),
-            (this.m_gameid = "0"),
-            (this.m_strGameExtraInfo = ""),
-            (this.m_unGameServerIP = 0),
-            (this.m_unGameServerPort = 0),
-            (this.m_game_lobby_id = ""),
-            this.m_mapRichPresence.clear(),
-            (this.m_broadcastId = void 0),
-            (this.m_broadcastAccountId = void 0),
-            (this.m_broadcastAppId = void 0),
-            (this.m_broadcastViewerCount = void 0),
-            (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = m.eSB);
-        }
-        GetAccountID() {
-          return this.m_steamid.GetAccountID();
-        }
-        GetSteamIDAsString() {
-          return this.m_steamid.ConvertTo64BitString();
-        }
-        get is_online() {
-          return this.m_ePersonaState != m.cU3 && this.m_ePersonaState != m._3b;
-        }
-        get is_ingame() {
-          return (
-            this.is_online &&
-            (0 != this.m_unGamePlayedAppID || "0" != this.m_gameid)
-          );
-        }
-        get is_watchingbroadcast() {
-          return !!this.m_broadcastAccountId;
-        }
-        get is_in_nonsteam_game() {
-          return 0 == this.m_unGamePlayedAppID && "0" != this.m_gameid;
-        }
-        get is_in_joinable_game() {
-          return (
-            this.has_joinable_game_flag ||
-            this.is_in_valid_lobby ||
-            this.has_server_ip
-          );
-        }
-        get has_joinable_game_flag() {
-          var e;
-          return (
-            0 !=
-            ((null !== (e = this.m_unPersonaStateFlags) && void 0 !== e
-              ? e
-              : 0) &
-              _.Fj)
-          );
-        }
-        get connect_string() {
-          return this.m_mapRichPresence.get("connect");
-        }
-        get is_in_valid_lobby() {
-          return null != this.m_game_lobby_id && "0" != this.m_game_lobby_id;
-        }
-        get has_server_ip() {
-          return 0 != this.m_unGameServerIP;
-        }
-        get is_awayOrSnooze() {
-          return this.m_ePersonaState == m.PrD || this.m_ePersonaState == m.vPz;
-        }
-        HasStateFlag(e) {
-          var t;
-          return (
-            0 !=
-            ((null !== (t = this.m_unPersonaStateFlags) && void 0 !== t
-              ? t
-              : 0) &
-              e)
-          );
-        }
-        get last_seen_online() {
-          return this.m_rtLastSeenOnline;
-        }
-        ClearStateOnDisconnect() {
-          this.m_ePersonaState != m.cU3 && this.Reset();
-        }
-        get is_golden() {
-          return this.HasStateFlag(_.Zx);
-        }
-        GetCurrentGameName() {
-          return this.m_strGameExtraInfo
-            ? this.m_strGameExtraInfo
-            : this.m_unGamePlayedAppID
-              ? s.Vw.GetAppInfo(this.m_unGamePlayedAppID).name
-              : "";
-        }
-        GetCurrentGameIconURL() {
-          return this.m_unGamePlayedAppID
-            ? s.Vw.GetAppInfo(this.m_unGamePlayedAppID).icon_url
-            : "";
-        }
-        BIsAppInfoReady() {
-          return (
-            !this.m_unGamePlayedAppID ||
-            s.Vw.GetAppInfo(this.m_unGamePlayedAppID).is_initialized
-          );
-        }
-        HasCurrentGameRichPresence() {
-          return this.m_mapRichPresence.has("steam_display");
-        }
-        HasRichPresenceForViewGameInfo() {
-          return !!(
-            this.m_mapRichPresence.has("status") ||
-            this.m_mapRichPresence.has("connect") ||
-            this.m_mapRichPresence.has("connect_private")
-          );
-        }
-        GetCurrentGameRichPresence() {
-          if (this.HasCurrentGameRichPresence()) {
-            let e = s.Vw.GetRichPresenceLoc(this.m_unGamePlayedAppID);
-            if (e) {
-              let t = this.m_mapRichPresence.get("steam_display");
-              return e.Localize(t, this.m_mapRichPresence);
-            }
-          } else if (this.HasStateFlag(_.o5))
-            return (0, o.we)("#PersonaStateRemotePlayTogether");
-          return "";
-        }
-        GetCurrentGameStatus() {
-          return (
-            this.GetCurrentGameRichPresence() ||
-            this.m_mapRichPresence.get("status") ||
-            ""
-          );
-        }
-        GetOfflineStatusUpdateRate() {
-          if (0 == this.last_seen_online) return 3e4;
-          const e = 3600;
-          let t = 1e3;
-          const i = s.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return (t *= i > 86400 ? e : i > 7200 ? 60 : 15), t;
-        }
-        GetOfflineStatusTime() {
-          if (0 == this.last_seen_online)
-            return (0, o.we)("#PersonaStateOffline");
-          let e = this.GetOfflineStatusUpdateRate();
-          (!c.TS.IN_MOBILE || e <= 60) && (0, a.tB)(e);
-          let t = s.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return t < 60
-            ? (0, o.we)("#PersonaStateLastSeen_JustNow")
-            : (0, o.we)("#PersonaStateLastSeen", (0, o.Hq)(t));
-        }
-        GetLocalizedOnlineStatus() {
-          switch (this.m_ePersonaState) {
-            case m.cU3:
-            case m._3b:
-              return this.GetOfflineStatusTime();
-            case m.UXk:
-              return (0, o.we)("#PersonaStateOnline");
-            case m.wcG:
-              return (0, o.we)("#PersonaStateBusy");
-            case m.PrD:
-              return (0, o.we)("#PersonaStateAway");
-            case m.vPz:
-              return (0, o.we)("#PersonaStateSnooze");
-            case m.Hrn:
-              return (0, o.we)("#PersonaStateLookingToTrade");
-            case m.HAb:
-              return (0, o.we)("#PersonaStateLookingToPlay");
-            default:
-              return "";
-          }
-        }
-        get has_public_party_beacon() {
-          return this.m_mapRichPresence.has("__beacon") && this.is_ingame;
-        }
-        get player_group() {
-          return this.m_mapRichPresence.has("steam_player_group")
-            ? this.m_mapRichPresence.get("steam_player_group")
-            : "";
-        }
-        get player_group_size() {
-          return this.m_mapRichPresence.has("steam_player_group_size")
-            ? Number.parseInt(
-                this.m_mapRichPresence.get("steam_player_group_size"),
-              )
-            : 0;
-        }
-        get online_state() {
-          return this.is_online
-            ? this.is_ingame
-              ? "in-game"
-              : this.m_broadcastAccountId
-                ? "watchingbroadcast"
-                : "online"
-            : "offline";
-        }
-        BHasAvatarSet() {
-          return this.m_strAvatarHash != l.d;
-        }
-        get avatar_url() {
-          return (0, l.t)(this.m_strAvatarHash);
-        }
-        get avatar_url_medium() {
-          return (0, l.t)(this.m_strAvatarHash, "medium");
-        }
-        get avatar_url_full() {
-          return (0, l.t)(this.m_strAvatarHash, "full");
-        }
-        static SortStatusComparator(e, t, i) {
-          if (t.has_public_party_beacon) {
-            if (!i.has_public_party_beacon) return -1;
-          } else {
-            if (i.has_public_party_beacon) return 1;
-            if (t.is_ingame) {
-              if (!i.is_ingame) return -1;
-              if (!e) return 0;
-              if (t.is_awayOrSnooze) {
-                if (!i.is_awayOrSnooze) return 1;
-              } else if (i.is_awayOrSnooze) return -1;
-            } else if (i.is_ingame) return 1;
-          }
-          if (t.is_online) {
-            if (!i.is_online) return -1;
-          } else if (i.is_online) return 1;
-          if (e)
-            if (t.is_awayOrSnooze) {
-              if (!i.is_awayOrSnooze) return 1;
-            } else if (i.is_awayOrSnooze) return -1;
-          return 0;
-        }
-        GetCommunityProfileURL() {
-          return this.m_strProfileURL
-            ? `${c.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${c.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
-        }
-      }
-      (0, n.Cg)([r.sH], d.prototype, "m_bInitialized", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_ePersonaState", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_unGamePlayedAppID", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_gameid", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_unPersonaStateFlags", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_strPlayerName", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_strAvatarHash", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_strAccountName", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_rtLastSeenOnline", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_strGameExtraInfo", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_unGameServerIP", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_unGameServerPort", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_game_lobby_id", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_bPlayerNamePending", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_bAvatarPending", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_broadcastId", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_broadcastAccountId", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_broadcastAppId", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_broadcastViewerCount", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_strBroadcastTitle", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_bCommunityBanned", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_eGamingDeviceType", void 0),
-        (0, n.Cg)([r.sH], d.prototype, "m_bNameInitialized", void 0);
     },
-    41471: (e, t, i) => {
+    48479: (e, r, t) => {
       "use strict";
-      i.d(t, { hW: () => u, js: () => l });
-      var n = i(90626),
-        r = i(88942),
-        a = i(22837),
-        s = i(23809),
-        o = i(44654),
-        m = i(10622),
-        _ = i(17720),
-        c = i(11333);
-      function l(e) {
-        const t = (0, s.KV)(),
-          i = n.useContext(d);
-        return (0, r.I)(h(i, t, e));
-      }
-      function u(e) {
-        const t = n.useRef(void 0),
-          i = l(e);
-        return i.data
-          ? i
-          : (t.current ||
-              (t.current = new m.Z(
-                "string" == typeof e ? new _.b(e) : _.b.InitFromAccountID(e),
-              )),
-            { ...i, data: t.current });
-      }
-      const d = n.createContext({
-        loadPersonaState: async (e, t) => {
-          if (null == e) return null;
-          const i = await (function (e) {
-            return null != p ? p : (p = (0, c.c)(e));
-          })(t).load(_.b.InitFromAccountID(e).ConvertTo64BitString());
-          return (function (e, t) {
-            var i, n;
-            let r = new m.Z(e);
-            const s = null == t ? void 0 : t.public_data,
-              _ = null == t ? void 0 : t.private_data;
-            (r.m_bInitialized = !!t),
-              (r.m_ePersonaState =
-                null !== (i = null == _ ? void 0 : _.persona_state) &&
-                void 0 !== i
-                  ? i
-                  : a.cU3),
-              (r.m_strAvatarHash = (null == s ? void 0 : s.sha_digest_avatar)
-                ? (0, o.Kx)(s.sha_digest_avatar)
-                : m.dV),
-              (r.m_strPlayerName =
-                null !== (n = null == s ? void 0 : s.persona_name) &&
-                void 0 !== n
-                  ? n
-                  : e.ConvertTo64BitString()),
-              (r.m_strAccountName = null == _ ? void 0 : _.account_name),
-              (null == _ ? void 0 : _.persona_state_flags) &&
-                (r.m_unPersonaStateFlags =
-                  null == _ ? void 0 : _.persona_state_flags);
-            (null == _ ? void 0 : _.game_id) &&
-              (r.m_gameid = null == _ ? void 0 : _.game_id);
-            (null == _ ? void 0 : _.game_server_ip_address) &&
-              (r.m_unGameServerIP =
-                null == _ ? void 0 : _.game_server_ip_address);
-            (null == _ ? void 0 : _.lobby_steam_id) &&
-              (r.m_game_lobby_id = null == _ ? void 0 : _.lobby_steam_id);
-            (null == _ ? void 0 : _.game_extra_info) &&
-              (r.m_strGameExtraInfo = null == _ ? void 0 : _.game_extra_info);
-            (null == s ? void 0 : s.profile_url) &&
-              (r.m_strProfileURL = s.profile_url);
-            return r;
-          })(_.b.InitFromAccountID(e), i);
-        },
-      });
-      function h(e, t, i) {
-        const n = "string" == typeof i ? new _.b(i).GetAccountID() : i;
-        return {
-          queryKey: ["PlayerSummary", n],
-          queryFn: () => e.loadPersonaState(n, t),
-          enabled: !!n,
-        };
-      }
-      let p;
-    },
-    48479: (e, t, i) => {
-      "use strict";
-      i.d(t, { AQ: () => h, pn: () => g, qx: () => p });
-      var n = i(7850),
-        r = i(68255),
-        a = i(61859),
-        s = i(12155),
-        o = i(90626),
-        m = i(52038),
-        _ = i(95695),
-        c = i(84811),
-        l = i(64734),
-        u = i(65946),
-        d = i(26408);
+      t.d(r, { AQ: () => h, pn: () => p, qx: () => m });
+      var c = t(7850),
+        s = t(68255),
+        o = t(61859),
+        i = t(12155),
+        n = t(90626),
+        l = t(52038),
+        a = t(95695),
+        f = t(84811),
+        d = t(64734),
+        u = t(65946),
+        b = t(26408);
       function h(e) {
         const {
-            title: t,
-            tooltip: i,
-            getMinimized: r,
-            toggleMinimized: a,
-            className: s,
-            children: o,
+            title: r,
+            tooltip: t,
+            getMinimized: s,
+            toggleMinimized: o,
+            className: i,
+            children: n,
             elAdditionalButtons: h,
           } = e,
-          p = (0, u.q3)(() => r());
-        return (0, n.jsxs)(n.Fragment, {
+          m = (0, u.q3)(() => s());
+        return (0, c.jsxs)(c.Fragment, {
           children: [
-            (0, n.jsxs)("div", {
-              className: (0, m.A)(
-                s,
-                l.SectionTitleHeader,
-                l.required_title,
+            (0, c.jsxs)("div", {
+              className: (0, l.A)(
+                i,
+                d.SectionTitleHeader,
+                d.required_title,
                 "SectionTitleHeader",
               ),
               children: [
-                (0, n.jsxs)("div", {
-                  className: (0, m.A)(
-                    _.CollapsableSectionTitle,
+                (0, c.jsxs)("div", {
+                  className: (0, l.A)(
+                    a.CollapsableSectionTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: [t, Boolean(i) && (0, n.jsx)(d.o, { tooltip: i })],
+                  children: [r, Boolean(t) && (0, c.jsx)(b.o, { tooltip: t })],
                 }),
-                (0, n.jsxs)("div", {
-                  className: l.SectionTitleButtons,
+                (0, c.jsxs)("div", {
+                  className: d.SectionTitleButtons,
                   children: [
                     h,
-                    (0, n.jsx)(g, { bIsMinimized: p, fnToggleMinimize: a }),
+                    (0, c.jsx)(p, { bIsMinimized: m, fnToggleMinimize: o }),
                   ],
                 }),
               ],
             }),
-            !p && (0, n.jsx)(c.tH, { children: o }),
+            !m && (0, c.jsx)(f.tH, { children: n }),
           ],
         });
       }
-      function p(e) {
-        const [t, i] = o.useState(Boolean(e.bStartMinimized));
-        return (0, n.jsx)(h, {
+      function m(e) {
+        const [r, t] = n.useState(Boolean(e.bStartMinimized));
+        return (0, c.jsx)(h, {
           ...e,
-          getMinimized: () => t,
-          toggleMinimized: () => i(!t),
+          getMinimized: () => r,
+          toggleMinimized: () => t(!r),
           children: e.children,
         });
       }
-      function g(e) {
-        const { bIsMinimized: t, fnToggleMinimize: i } = e,
-          o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return (0, n.jsx)(r.$n, {
-          "data-tooltip-text": (0, a.we)(o),
-          onClick: i,
+      function p(e) {
+        const { bIsMinimized: r, fnToggleMinimize: t } = e,
+          n = r ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return (0, c.jsx)(s.$n, {
+          "data-tooltip-text": (0, o.we)(n),
+          onClick: t,
           children: e.bIsMinimized
-            ? (0, n.jsx)(s.hz4, {})
-            : (0, n.jsx)(s.Xjb, {}),
+            ? (0, c.jsx)(i.hz4, {})
+            : (0, c.jsx)(i.Xjb, {}),
         });
+      }
+    },
+    4434: (e, r, t) => {
+      "use strict";
+      t.d(r, { m: () => i });
+      var c = t(41735),
+        s = t.n(c),
+        o = t(90626);
+      function i(e) {
+        const r = o.useRef(s().CancelToken.source());
+        return (
+          o.useEffect(() => {
+            const t = r.current;
+            return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          r.current
+        );
       }
     },
   },

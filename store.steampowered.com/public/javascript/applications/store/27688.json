@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "GIF-tiedoston jäsentäminen epäonnistui. Koodaa se uudestaan tai muuta tiedostotyyppiä ja yritä uudelleen.",
     "MediaConvert_InputError_ImageTooSmall": "Kuva on liian pieni. Lataa kuva, jonka koko on vähintään 16 x 16 pikseliä.",
     "MediaConvert_InputError_AnimationTooSmall": "Animaatio tai video on liian pieni. Lataa animaatio tai video, jonka koko on vähintään 16 x 16 pikseliä.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Tiedosto sisältää useamman kuin yhden videoraidan. Lähetä tiedosto, jossa on vain yksi videoraita.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Kuvaa ei voi animoida. Lataa pysäytetty kuva.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Kuvatiedostoihin ei voi sisältyä ääniraitaa.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF-ulostuloa ei tueta videolähteille.",
     "MediaConvert_InternalError_FailedToConvert": "Tiedoston muuntaminen epäonnistui. Koodaa tiedosto uudestaan ja yritä sitten uudelleen.",

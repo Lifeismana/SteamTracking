@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Không thể phân tích GIF. Vui lòng mã hóa lần nữa hoặc chuyển đổi định dạng và thử lại.",
     "MediaConvert_InputError_ImageTooSmall": "Ảnh quá nhỏ. Vui lòng tải lên ảnh có kích thước ít nhất 16x16 pixel.",
     "MediaConvert_InputError_AnimationTooSmall": "Ảnh động hoặc video quá nhỏ. Vui lòng tải lên ảnh động hoặc video có kích thước ít nhất 16x16 pixel.",
+    "MediaConvert_InputError_MultipleVideoStreams": "File này có nhiều hơn một track video. Vui lòng tải lên một file chỉ với một track video.",
+    "MediaConvert_InputError_AnimationNotAllowed": "This image cannot be animated. Please upload a still image.",
     "MediaConvert_InputError_ImageTypeWithAudio": "File hình ảnh không được chứa track âm thanh.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "Nguồn video không hỗ trợ định dạng đầu ra AVIF.",
     "MediaConvert_InternalError_FailedToConvert": "Không thể chuyển đổi file này. Vui lòng mã hóa file lần nữa trước khi thử lại.",

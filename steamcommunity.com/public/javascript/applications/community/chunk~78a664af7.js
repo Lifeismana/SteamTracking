@@ -108,92 +108,46 @@
         StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
-    20978: (e) => {
-      e.exports = {
-        LoadingWrapper: "_2wAKy-0ZkO_vhbiQCP9MgE",
-        Static: "_1QfwpLmLTSuiIRLDzdY_7l",
-        none: "_1F0lzP-Krz_y5P9ewZEvBD",
-        bottomCircle: "_2qjZm0dB7I6lcRkZhNTqvD",
-        noString: "_1Sy0pXVZOdWbgouFyD2zJj",
-        Throbber: "lYUEjD8Qh3GM_ZrZeLwpI",
-        throbber_small: "_2zbyh5jEDlV5HVD3iUve-k",
-        throbber_medium: "_2CphUsHNDgIWItNIzeIldY",
-        throbber_large: "_1x18vR7Qop8v8_G8qSR6CL",
-        throbber_center_wrapper: "_3IYPzqtvB2ZE7x710d5x2C",
-        ThrobberText: "_21nVi2jNuF_prxLY1mAaKK",
-        blur: "_1ctjA2yjeB21eCDj_r1mVz",
-        ThrobberRoundLoop: "_1O-cWE6nuIVO3x6-Onw0IU",
-        roundOuterOutline: "_1Vv--mA6PueyEKXXMTwljt",
-        roundOuter: "_2K0LzwjOXDopMHoqY_v_CO",
-        roundFill: "_3sQFkavAEPhliH6DiFmHRH",
-        ThrobberFillLoop: "ofdi9VLSRZ5W98WsXVHiq",
-        topCircle: "_1LZffuoDq-N25wNHckxsf",
-        circlePulse: "_1XN6ZJ1l8nVoUxp1WnOBqw",
-        ThrobberTopCircleLoop: "_1jALk36CiS_T9Pg7vBjpIQ",
-        ThrobberBottomCircleLoop: "_1KvOgdKiNE9XuSYUau3hKW",
-        roundThrobber15: "_2LGHpu_-ihfOhQwdfR3Kiy",
-        roundThrobber14: "_2FGCneH2AemMrIrZnZskw_",
-        roundThrobber13: "_1X-5j16jaQntVrZfadibyc",
-        roundThrobber12: "_1pj1Q3Ef4FdHDdl9QEtpxp",
-        roundThrobber11: "xFmZaMe5nZpoTc5PQBKn3",
-        roundThrobber10: "_3MGYowzMQ6TwbH3fu9SVjt",
-        roundThrobber09: "ktVJ42jiVhWEVV9O6z2FK",
-        roundThrobber08: "_3s_7my869lIOj-1vnqJ39y",
-        roundThrobber07: "_11MVp53Me_frOuaJfsQ4FE",
-        roundThrobber06: "_2cl-maglen-RF0YQjShgqG",
-        roundThrobber05: "_3-JE0FpIzECzeqtd5cyjGI",
-        roundThrobber04: "_1xNIKvHdzLhBldONo6yIZs",
-        roundThrobber03: "_1S17yicfcrPc11m83ydGp3",
-        roundThrobber02: "_1-oUJqmCLOoGqVJz5dgj6J",
-        roundThrobber01: "_2tXgejjqNKy6cSX1Lv7PrG",
-        ThrobberRoundLoopThickness: "_1fs4RGcMBRzbQQirDBiFoM",
-        throbber_xlarge: "_1gYeZMYKBDqNpVuw58_LCl",
-        throbber_xxlarge: "_3j-p4JOqdpaF4obGtIeAB",
-        ThrobberDelayAppear: "I3aEq3lbK7Pm8ujENvtri",
-        Visible: "_2SwSJd-DlX2dRiDGxZWHI5",
-        NewThrobber: "_1m8iQOSVziKDHiInrfskv_",
-      };
-    },
-    25215: (e, t, r) => {
+    25215: (e, t, n) => {
       "use strict";
-      r.d(t, { l: () => xe });
-      var n = r(7850),
-        s = r(43224),
-        i = r(63987),
-        a = r(55184),
-        o = r(90314),
-        c = r(4340),
-        l = r(90182),
-        u = r(22797),
-        d = r(18519),
-        p = r(39832),
-        m = r(78327),
-        h = r(98682),
-        b = r(20609),
-        _ = r.n(b);
-      function f(e) {
+      n.d(t, { l: () => be });
+      var s = n(7850),
+        r = n(43224),
+        i = n(63987),
+        a = n(55184),
+        o = n(90314),
+        l = n(4340),
+        c = n(90182),
+        u = n(22797),
+        d = n(18519),
+        p = n(39832),
+        m = n(78327),
+        h = n(98682),
+        _ = n(20609),
+        j = n.n(_);
+      function g(e) {
         const { subject: t } = e;
-        return t ? (0, n.jsx)(g, { ...e }) : (0, n.jsx)(j, {});
+        return t ? (0, s.jsx)(y, { ...e }) : (0, s.jsx)(v, {});
       }
-      function j(e) {
-        return (0, n.jsx)("div", {
-          children: (0, n.jsxs)("table", {
+      function v(e) {
+        return (0, s.jsx)("div", {
+          children: (0, s.jsxs)("table", {
             children: [
-              (0, n.jsx)("thead", {
-                children: (0, n.jsxs)("tr", {
+              (0, s.jsx)("thead", {
+                children: (0, s.jsxs)("tr", {
                   children: [
-                    (0, n.jsx)("th", { children: "Date" }),
-                    (0, n.jsx)("th", { children: "Actor" }),
-                    (0, n.jsx)("th", { children: "Action" }),
-                    (0, n.jsx)("th", { children: "Details" }),
+                    (0, s.jsx)("th", { children: "Date" }),
+                    (0, s.jsx)("th", { children: "Actor" }),
+                    (0, s.jsx)("th", { children: "Action" }),
+                    (0, s.jsx)("th", { children: "Details" }),
                   ],
                 }),
               }),
-              (0, n.jsx)("tbody", {
-                children: (0, n.jsx)("tr", {
-                  children: (0, n.jsx)("td", {
+              (0, s.jsx)("tbody", {
+                children: (0, s.jsx)("tr", {
+                  children: (0, s.jsx)("td", {
                     colSpan: 4,
-                    children: s.T.Localize("#subjectauditlog_noentries"),
+                    children: r.T.Localize("#subjectauditlog_noentries"),
                   }),
                 }),
               }),
@@ -201,24 +155,24 @@
           }),
         });
       }
-      function g(e) {
-        var t, r, i, a, o;
-        const { subject: c } = e,
-          d = (0, l.Kt)(
-            null == c ? void 0 : c.subject_type,
-            null == c ? void 0 : c.subject_group_id,
-            null == c ? void 0 : c.subject_id,
+      function y(e) {
+        var t, n, i, a, o;
+        const { subject: l } = e,
+          d = (0, c.Kt)(
+            null == l ? void 0 : l.subject_type,
+            null == l ? void 0 : l.subject_group_id,
+            null == l ? void 0 : l.subject_id,
           ),
           p =
             null !==
               (i =
                 null ===
-                  (r =
+                  (n =
                     null === (t = null == d ? void 0 : d.data) || void 0 === t
                       ? void 0
-                      : t.entries) || void 0 === r
+                      : t.entries) || void 0 === n
                   ? void 0
-                  : r.length) && void 0 !== i
+                  : n.length) && void 0 !== i
               ? i
               : 0,
           m =
@@ -230,57 +184,57 @@
               : [];
         return (
           m.sort((e, t) => t.timestamp - e.timestamp),
-          (0, n.jsx)("div", {
+          (0, s.jsx)("div", {
             children:
               p > 0 &&
-              (0, n.jsxs)("table", {
+              (0, s.jsxs)("table", {
                 children: [
-                  (0, n.jsx)("thead", {
-                    children: (0, n.jsxs)("tr", {
+                  (0, s.jsx)("thead", {
+                    children: (0, s.jsxs)("tr", {
                       children: [
-                        (0, n.jsx)("th", { children: "Date" }),
-                        (0, n.jsx)("th", { children: "Actor" }),
-                        (0, n.jsx)("th", { children: "Action" }),
-                        (0, n.jsx)("th", { children: "Details" }),
+                        (0, s.jsx)("th", { children: "Date" }),
+                        (0, s.jsx)("th", { children: "Actor" }),
+                        (0, s.jsx)("th", { children: "Action" }),
+                        (0, s.jsx)("th", { children: "Details" }),
                       ],
                     }),
                   }),
-                  (0, n.jsxs)("tbody", {
+                  (0, s.jsxs)("tbody", {
                     children: [
                       void 0 === d &&
-                        (0, n.jsx)("tr", {
-                          children: (0, n.jsx)("td", {
+                        (0, s.jsx)("tr", {
+                          children: (0, s.jsx)("td", {
                             colSpan: 4,
-                            children: s.T.Localize(
+                            children: r.T.Localize(
                               "#subjectauditlog_noentries",
                             ),
                           }),
                         }),
                       d &&
-                        (0, n.jsxs)(n.Fragment, {
+                        (0, s.jsxs)(s.Fragment, {
                           children: [
                             d.isLoading &&
-                              (0, n.jsx)("tr", {
-                                children: (0, n.jsx)("td", {
+                              (0, s.jsx)("tr", {
+                                children: (0, s.jsx)("td", {
                                   colSpan: 4,
-                                  children: (0, n.jsx)(u.t, {}),
+                                  children: (0, s.jsx)(u.t, {}),
                                 }),
                               }),
                             d.isError &&
-                              (0, n.jsx)("tr", {
-                                children: (0, n.jsx)("td", {
+                              (0, s.jsx)("tr", {
+                                children: (0, s.jsx)("td", {
                                   colSpan: 4,
-                                  children: s.T.Localize(
+                                  children: r.T.Localize(
                                     "#subjectauditlog_error",
                                   ),
                                 }),
                               }),
                             d.isSuccess &&
                               0 === p &&
-                              (0, n.jsx)("tr", {
-                                children: (0, n.jsx)("td", {
+                              (0, s.jsx)("tr", {
+                                children: (0, s.jsx)("td", {
                                   colSpan: 4,
-                                  children: s.T.Localize(
+                                  children: r.T.Localize(
                                     "#subjectauditlog_noentries",
                                   ),
                                 }),
@@ -288,7 +242,7 @@
                             d.isSuccess &&
                               p > 0 &&
                               m.map((e) =>
-                                (0, n.jsx)(x, { entry: e }, e.timestamp),
+                                (0, s.jsx)(b, { entry: e }, e.timestamp),
                               ),
                           ],
                         }),
@@ -299,217 +253,217 @@
           })
         );
       }
-      function x(e) {
-        var t, r;
-        const { entry: s } = e,
-          a = (0, d.jn)(s.actor_steamid);
+      function b(e) {
+        var t, n;
+        const { entry: r } = e,
+          a = (0, d.jn)(r.actor_steamid);
         return a.isSuccess && a.data
-          ? (0, n.jsxs)("tr", {
+          ? (0, s.jsxs)("tr", {
               children: [
-                (0, n.jsx)("td", { children: (0, p.P0)(s.timestamp, !1, "") }),
-                (0, n.jsxs)("td", {
+                (0, s.jsx)("td", { children: (0, p.P0)(r.timestamp, !1, "") }),
+                (0, s.jsxs)("td", {
                   children: [
-                    (0, n.jsx)("a", {
-                      href: `${m.TS.COMMUNITY_BASE_URL}profiles/${s.actor_steamid}`,
-                      children: (0, n.jsx)("span", {
+                    (0, s.jsx)("a", {
+                      href: `${m.TS.COMMUNITY_BASE_URL}profiles/${r.actor_steamid}`,
+                      children: (0, s.jsx)("span", {
                         children:
                           null ===
-                            (r =
+                            (n =
                               null === (t = a.data) || void 0 === t
                                 ? void 0
-                                : t.public_data) || void 0 === r
+                                : t.public_data) || void 0 === n
                             ? void 0
-                            : r.persona_name,
+                            : n.persona_name,
                       }),
                     }),
                     " ",
                     "(",
-                    (0, n.jsx)("a", {
-                      href: `/moderation/activity/${s.actor_steamid}`,
+                    (0, s.jsx)("a", {
+                      href: `/moderation/activity/${r.actor_steamid}`,
                       children: "activity",
                     }),
                     ")",
                   ],
                 }),
-                (0, n.jsxs)("td", {
+                (0, s.jsxs)("td", {
                   children: [
-                    (0, i.fg)(s.action),
-                    s.automated_action &&
-                      (0, n.jsx)(n.Fragment, { children: " (Automated)" }),
+                    (0, i.fg)(r.action),
+                    r.automated_action &&
+                      (0, s.jsx)(s.Fragment, { children: " (Automated)" }),
                   ],
                 }),
-                (0, n.jsx)("td", {
-                  children: (0, n.jsx)(v, {
-                    eAction: s.action,
-                    jsonData: s.additional_json_data,
+                (0, s.jsx)("td", {
+                  children: (0, s.jsx)(B, {
+                    eAction: r.action,
+                    jsonData: r.additional_json_data,
                   }),
                 }),
               ],
             })
           : null;
       }
-      function v(e) {
-        const { eAction: t, jsonData: r } = e;
-        let s = {};
-        switch ((r && (s = JSON.parse(r)), t)) {
+      function B(e) {
+        const { eAction: t, jsonData: n } = e;
+        let r = {};
+        switch ((n && (r = JSON.parse(n)), t)) {
           case a.Hd:
-            return (0, n.jsxs)(n.Fragment, {
-              children: ["Report ID: ", s.report_id],
+            return (0, s.jsxs)(s.Fragment, {
+              children: ["Report ID: ", r.report_id],
             });
           case a._F:
-            return (0, n.jsxs)(n.Fragment, {
+            return (0, s.jsxs)(s.Fragment, {
               children: [
                 "Reason: ",
-                (0, i.Jt)(s.reason),
-                s.resolution !== o.CC &&
-                  s.resolution !== o.S6 &&
-                  (0, n.jsxs)(n.Fragment, {
+                (0, i.Jt)(r.reason),
+                r.resolution !== o.CC &&
+                  r.resolution !== o.S6 &&
+                  (0, s.jsxs)(s.Fragment, {
                     children: [
-                      (0, n.jsx)("br", {}),
+                      (0, s.jsx)("br", {}),
                       "Resolution: ",
-                      (0, i.l)(s.resolution),
+                      (0, i.l)(r.resolution),
                     ],
                   }),
-                s.sanctions &&
-                  (0, n.jsxs)(n.Fragment, {
+                r.sanctions &&
+                  (0, s.jsxs)(s.Fragment, {
                     children: [
-                      (0, n.jsx)("br", {}),
+                      (0, s.jsx)("br", {}),
                       "Sanctions: ",
-                      s.sanctions.map(i.cB).join(", "),
+                      r.sanctions.map(i.cB).join(", "),
                     ],
                   }),
               ],
             });
           case a.Nu:
-            return (0, n.jsxs)(n.Fragment, {
-              children: ["Report ID: ", s.report_id],
+            return (0, s.jsxs)(s.Fragment, {
+              children: ["Report ID: ", r.report_id],
             });
           case a.XP:
-            return (0, n.jsx)(n.Fragment, {
-              children: JSON.stringify(s, null, "\t"),
+            return (0, s.jsx)(s.Fragment, {
+              children: JSON.stringify(r, null, "\t"),
             });
           case a.YI:
-            return (0, n.jsxs)(n.Fragment, {
-              children: ["New level: ", (0, i.ar)(s.level)],
+            return (0, s.jsxs)(s.Fragment, {
+              children: ["New level: ", (0, i.ar)(r.level)],
             });
           case a._7:
-            return (0, n.jsxs)(n.Fragment, {
-              children: ["Report ID: ", s.report_id],
+            return (0, s.jsxs)(s.Fragment, {
+              children: ["Report ID: ", r.report_id],
             });
           default:
             return null;
         }
       }
-      function y(e) {
+      function x(e) {
         var t;
-        const { subject: r } = e,
-          i = r && r.reports && r.reports.length > 0;
-        return (0, n.jsx)("table", {
-          className: _().ContentReportsTable,
-          children: (0, n.jsxs)("tbody", {
+        const { subject: n } = e,
+          i = n && n.reports && n.reports.length > 0;
+        return (0, s.jsx)("table", {
+          className: j().ContentReportsTable,
+          children: (0, s.jsxs)("tbody", {
             children: [
               !i &&
-                (0, n.jsx)("tr", {
-                  children: (0, n.jsx)("td", {
+                (0, s.jsx)("tr", {
+                  children: (0, s.jsx)("td", {
                     colSpan: 4,
-                    children: s.T.Localize("#contentreportslist_noreports"),
+                    children: r.T.Localize("#contentreportslist_noreports"),
                   }),
                 }),
               i &&
-                (null === (t = r.reports) || void 0 === t
+                (null === (t = n.reports) || void 0 === t
                   ? void 0
-                  : t.map((e) => (0, n.jsx)(B, { report: e }, e.report_id))),
+                  : t.map((e) => (0, s.jsx)(f, { report: e }, e.report_id))),
             ],
           }),
         });
       }
-      function B(e) {
-        var t, r;
+      function f(e) {
+        var t, n;
         const { report: a } = e,
-          l = (0, d.jn)(a.reporter_steamid);
-        if (!l.isSuccess) return null;
-        if (!(null === (t = l.data) || void 0 === t ? void 0 : t.public_data))
+          c = (0, d.jn)(a.reporter_steamid);
+        if (!c.isSuccess) return null;
+        if (!(null === (t = c.data) || void 0 === t ? void 0 : t.public_data))
           return null;
         const u = !!a.time_disputed && a.dispute_resolved === o.z_,
-          b =
+          _ =
             a.resolved !== o.z_ &&
             (!a.time_disputed || a.dispute_resolved !== o.z_),
-          _ = 0 !== a.time_dispute_resolved,
-          f = a.resolved === o.CC;
-        return (0, n.jsxs)("tr", {
+          j = 0 !== a.time_dispute_resolved,
+          g = a.resolved === o.CC;
+        return (0, s.jsxs)("tr", {
           children: [
-            (0, n.jsx)("td", { children: (0, p.P0)(a.time_reported, !1, "") }),
-            (0, n.jsxs)("td", {
+            (0, s.jsx)("td", { children: (0, p.P0)(a.time_reported, !1, "") }),
+            (0, s.jsxs)("td", {
               children: [
-                (0, n.jsx)("a", {
+                (0, s.jsx)("a", {
                   href: `${m.TS.COMMUNITY_BASE_URL}profiles/${a.reporter_steamid}`,
-                  children: (0, n.jsx)(h.wm, {
-                    playerLinkDetails: l.data,
+                  children: (0, s.jsx)(h.wm, {
+                    playerLinkDetails: c.data,
                     size: "X-Small",
                     alt: "Reporter",
                   }),
                 }),
                 " ",
-                (0, n.jsx)("a", {
+                (0, s.jsx)("a", {
                   href: `${m.TS.COMMUNITY_BASE_URL}profiles/${a.reporter_steamid}`,
-                  children: (0, n.jsx)("span", {
+                  children: (0, s.jsx)("span", {
                     children:
-                      null === (r = l.data.public_data) || void 0 === r
+                      null === (n = c.data.public_data) || void 0 === n
                         ? void 0
-                        : r.persona_name,
+                        : n.persona_name,
                   }),
                 }),
               ],
             }),
-            (0, n.jsx)("td", {
+            (0, s.jsx)("td", {
               children:
-                a.report_reason !== c.OQ &&
-                (0, n.jsx)("span", { children: (0, i.Jt)(a.report_reason) }),
+                a.report_reason !== l.OQ &&
+                (0, s.jsx)("span", { children: (0, i.Jt)(a.report_reason) }),
             }),
-            (0, n.jsxs)("td", {
+            (0, s.jsxs)("td", {
               children: [
-                f &&
+                g &&
                   !u &&
-                  !_ &&
-                  (0, n.jsx)("span", {
-                    children: s.T.Localize(
+                  !j &&
+                  (0, s.jsx)("span", {
+                    children: r.T.Localize(
                       "#contentreportslist_acquitted_at",
                       (0, p.P0)(a.time_resolved, !1, ""),
                     ),
                   }),
-                b &&
-                  !f &&
+                _ &&
+                  !g &&
                   !u &&
-                  !_ &&
-                  (0, n.jsx)("span", {
-                    children: s.T.Localize(
+                  !j &&
+                  (0, s.jsx)("span", {
+                    children: r.T.Localize(
                       "#contentreportslist_resolved_at",
                       (0, p.P0)(a.time_resolved, !1, ""),
                     ),
                   }),
                 u &&
-                  !_ &&
-                  (0, n.jsx)("span", {
-                    children: s.T.Localize(
+                  !j &&
+                  (0, s.jsx)("span", {
+                    children: r.T.Localize(
                       "#contentreportslist_disputed_at",
                       (0, p.P0)(a.time_disputed, !1, ""),
                     ),
                   }),
-                _ &&
-                  (0, n.jsx)("span", {
-                    children: s.T.Localize(
+                j &&
+                  (0, s.jsx)("span", {
+                    children: r.T.Localize(
                       "#contentreportslist_dispute_resolved_at",
                       (0, p.P0)(a.time_dispute_resolved, !1, ""),
                     ),
                   }),
-                !u && (0, n.jsx)("span", { children: a.report_text }),
+                !u && (0, s.jsx)("span", { children: a.report_text }),
                 u &&
-                  (0, n.jsxs)("span", {
+                  (0, s.jsxs)("span", {
                     children: [
-                      (0, n.jsx)("br", {}),
+                      (0, s.jsx)("br", {}),
                       "Original: ",
                       a.report_text,
-                      (0, n.jsx)("br", {}),
+                      (0, s.jsx)("br", {}),
                       "Dispute: ",
                       a.dispute_details,
                     ],
@@ -519,191 +473,191 @@
           ],
         });
       }
-      var A = r(15993),
-        S = r(90626),
-        w = r(65843),
-        T = r(30770),
-        M = r.n(T),
-        k = r(45699),
-        C = r(76217),
-        z = r(83392),
-        L = r(48474);
-      function R(e) {
-        const { subject: t, onClose: r } = e,
+      var A = n(15993),
+        S = n(90626),
+        w = n(65843),
+        M = n(30770),
+        T = n.n(M),
+        C = n(45699),
+        z = n(76217),
+        R = n(83392),
+        k = n(48474);
+      function U(e) {
+        const { subject: t, onClose: n } = e,
           [i, a] = (0, S.useState)(A.PV),
-          o = (0, l.lY)(t.subject_type, t.subject_group_id, t.subject_id),
-          c = (0, S.useRef)(null);
-        return (0, n.jsxs)(C.Z, {
-          className: M().EscalateSubjectDialogCtn,
+          o = (0, c.lY)(t.subject_type, t.subject_group_id, t.subject_id),
+          l = (0, S.useRef)(null);
+        return (0, s.jsxs)(z.Z, {
+          className: T().EscalateSubjectDialogCtn,
           children: [
-            (0, n.jsx)(C.Z, {
-              children: s.T.Localize("#moderation_escalation_description"),
+            (0, s.jsx)(z.Z, {
+              children: r.T.Localize("#moderation_escalation_description"),
             }),
-            (0, n.jsxs)("select", {
-              className: M().EscalationLevelSelect,
+            (0, s.jsxs)("select", {
+              className: T().EscalationLevelSelect,
               value: i,
               onChange: (e) => a(parseInt(e.target.value)),
               children: [
-                (0, n.jsx)("option", {
+                (0, s.jsx)("option", {
                   value: A.HH,
-                  children: s.T.Localize("#moderation_escalationlevel_any"),
+                  children: r.T.Localize("#moderation_escalationlevel_any"),
                 }),
-                (0, n.jsx)("option", {
+                (0, s.jsx)("option", {
                   value: A.lp,
-                  children: s.T.Localize(
+                  children: r.T.Localize(
                     "#moderation_escalationlevel_supervisor",
                   ),
                 }),
-                (0, n.jsx)("option", {
+                (0, s.jsx)("option", {
                   value: A.PV,
-                  children: s.T.Localize("#moderation_escalationlevel_valve"),
+                  children: r.T.Localize("#moderation_escalationlevel_valve"),
                 }),
               ],
             }),
-            (0, n.jsx)("label", {
-              children: s.T.Localize("#moderation_escalation_escalationnote"),
+            (0, s.jsx)("label", {
+              children: r.T.Localize("#moderation_escalation_escalationnote"),
             }),
-            (0, n.jsx)(k.dO, { className: M().ReasonTextArea, ref: c }),
-            (0, n.jsxs)(z.s, {
+            (0, s.jsx)(C.dO, { className: T().ReasonTextArea, ref: l }),
+            (0, s.jsxs)(R.s, {
               direction: "row",
               justify: "end",
               children: [
-                (0, n.jsx)(k.fu, {
-                  onClick: r,
+                (0, s.jsx)(C.fu, {
+                  onClick: n,
                   children: w.u.Localize("#moderation_cancel"),
                 }),
-                (0, n.jsx)(L.$, {
+                (0, s.jsx)(k.$, {
                   onClick: async () => {
                     var e;
                     const t =
-                      null === (e = c.current) || void 0 === e
+                      null === (e = l.current) || void 0 === e
                         ? void 0
                         : e.value;
-                    await o.mutateAsync({ eNewLevel: i, strNote: t }), r();
+                    await o.mutateAsync({ eNewLevel: i, strNote: t }), n();
                   },
                   loading: o.isPending,
-                  children: s.T.Localize("#moderation_escalation_escalate"),
+                  children: r.T.Localize("#moderation_escalation_escalate"),
                 }),
               ],
             }),
           ],
         });
       }
-      var N = r(64115),
-        E = r(98580),
-        I = r.n(E),
-        U = r(59884),
-        F = r.n(U),
-        O = r(55388);
-      function q(e) {
-        const [t, r] = (0, S.useState)(null),
-          [s, a] = (0, S.useState)([]),
-          [o, c] = (0, S.useState)(!1),
-          [l, u] = (0, S.useState)(!1);
+      var E = n(64115),
+        I = n(98580),
+        L = n.n(I),
+        F = n(59884),
+        q = n.n(F),
+        O = n(55388);
+      function Q(e) {
+        const [t, n] = (0, S.useState)(null),
+          [r, a] = (0, S.useState)([]),
+          [o, l] = (0, S.useState)(!1),
+          [c, u] = (0, S.useState)(!1);
         let d = e.reasons;
-        for (const e of s) d = d[e].children;
+        for (const e of r) d = d[e].children;
         const p = null !== t ? (0, i.V$)(t) : null,
           m = null !== t ? (0, i.GA)(t) : null,
           h = () => {
             null !== t
-              ? r(null)
-              : 0 === s.length
+              ? n(null)
+              : 0 === r.length
                 ? e.onSelect(null)
-                : a(s.slice(0, -1));
+                : a(r.slice(0, -1));
           };
-        return (0, n.jsxs)("div", {
+        return (0, s.jsxs)("div", {
           children: [
             null === t &&
-              (0, n.jsxs)(n.Fragment, {
+              (0, s.jsxs)(s.Fragment, {
                 children: [
-                  (0, n.jsx)("div", {
-                    className: F().BlockList,
+                  (0, s.jsx)("div", {
+                    className: q().BlockList,
                     children: d.map((t, o) => {
-                      const c = () => {
+                      const l = () => {
                         if ((0, i.Ju)(t)) {
-                          const e = [...s];
+                          const e = [...r];
                           e.push(o), a(e);
                         } else {
                           if (!(0, i.X$)(t))
                             throw new Error("This should be unreachable.");
                           (0, i.V$)(t.value) || (0, i.GA)(t.value)
-                            ? r(t.value)
+                            ? n(t.value)
                             : e.onSelect(t.value);
                         }
                       };
                       return (0, i.Ur)(t)
-                        ? (0, n.jsx)(
-                            k.Ii,
+                        ? (0, s.jsx)(
+                            C.Ii,
                             {
-                              className: F().BlockListItem,
+                              className: q().BlockListItem,
                               href: t.url,
                               children: w.u.Localize(t.strLocToken),
                             },
                             t.url,
                           )
-                        : (0, n.jsxs)(
-                            C.Z,
+                        : (0, s.jsxs)(
+                            z.Z,
                             {
-                              onActivate: c,
-                              className: F().BlockListItem,
+                              onActivate: l,
+                              className: q().BlockListItem,
                               children: [
-                                (0, n.jsx)("span", {
+                                (0, s.jsx)("span", {
                                   children: (0, i.Ju)(t)
                                     ? w.u.Localize(t.strLocToken)
                                     : (0, i.Jt)(t.value),
                                 }),
                                 (0, i.Ju)(t) &&
-                                  (0, n.jsx)("span", { children: "▶" }),
+                                  (0, s.jsx)("span", { children: "▶" }),
                               ],
                             },
                             o,
                           );
                     }),
                   }),
-                  (0, n.jsx)(O.n9, { onClick: h, children: "Back" }),
+                  (0, s.jsx)(O.n9, { onClick: h, children: "Back" }),
                 ],
               }),
             null !== t &&
-              (0, n.jsxs)("div", {
-                className: F().BlockList,
+              (0, s.jsxs)("div", {
+                className: q().BlockList,
                 children: [
-                  (0, n.jsx)("div", {
-                    className: F().BlockListItem,
+                  (0, s.jsx)("div", {
+                    className: q().BlockListItem,
                     children: (0, i.Jt)(t),
                   }),
                   null !== p &&
-                    (0, n.jsxs)("label", {
+                    (0, s.jsxs)("label", {
                       children: [
-                        (0, n.jsx)("input", {
+                        (0, s.jsx)("input", {
                           type: "checkbox",
                           checked: o,
-                          onChange: (e) => c(e.target.checked),
+                          onChange: (e) => l(e.target.checked),
                         }),
                         " Targeted at women",
                       ],
                     }),
                   null !== m &&
-                    (0, n.jsxs)("label", {
+                    (0, s.jsxs)("label", {
                       children: [
-                        (0, n.jsx)("input", {
+                        (0, s.jsx)("input", {
                           type: "checkbox",
-                          checked: l,
+                          checked: c,
                           onChange: (e) => u(e.target.checked),
                         }),
                         " Deepfake",
                       ],
                     }),
-                  (0, n.jsxs)("div", {
-                    className: F().BottomButtons,
+                  (0, s.jsxs)("div", {
+                    className: q().BottomButtons,
                     children: [
-                      (0, n.jsx)(O.n9, { onClick: h, children: "Back" }),
-                      (0, n.jsx)(O.n9, {
+                      (0, s.jsx)(O.n9, { onClick: h, children: "Back" }),
+                      (0, s.jsx)(O.n9, {
                         onClick: () => {
-                          let r = t;
-                          null !== r &&
-                            (o && null !== (0, i.V$)(r) && (r = (0, i.V$)(r)),
-                            l && null !== (0, i.GA)(r) && (r = (0, i.GA)(r)),
-                            e.onSelect(r));
+                          let n = t;
+                          null !== n &&
+                            (o && null !== (0, i.V$)(n) && (n = (0, i.V$)(n)),
+                            c && null !== (0, i.GA)(n) && (n = (0, i.GA)(n)),
+                            e.onSelect(n));
                         },
                         children: "Continue",
                       }),
@@ -714,23 +668,23 @@
           ],
         });
       }
-      var D,
-        Q,
-        W = r(52038),
-        P = r(81393),
-        V = r(37085),
-        K = r(88942),
-        G = r(22837),
-        H = r(80613),
-        J = r.n(H),
-        Z = r(89068),
-        X = r(56545);
-      class Y extends H.Message {
+      var N,
+        D,
+        W = n(52038),
+        P = n(81393),
+        K = n(37085),
+        G = n(88942),
+        H = n(22837),
+        V = n(80613),
+        J = n.n(V),
+        Z = n(89068),
+        X = n(56545);
+      class Y extends V.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Y.prototype.quicktext_id || Z.Sg(Y.M()),
-            H.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
+            V.Message.initialize(this, e, 0, -1, [6, 10, 11], null);
         }
         static M() {
           return (
@@ -811,8 +765,8 @@
         }
         static deserializeBinary(e) {
           let t = new (J().BinaryReader)(e),
-            r = new Y();
-          return Y.deserializeBinaryFromReader(r, t);
+            n = new Y();
+          return Y.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return Z.zj(Y.MBF(), e, t);
@@ -832,12 +786,12 @@
           return "CSupportData_QuickText";
         }
       }
-      class $ extends H.Message {
+      class $ extends V.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             $.prototype.content || Z.Sg($.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
+            V.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -882,8 +836,8 @@
         }
         static deserializeBinary(e) {
           let t = new (J().BinaryReader)(e),
-            r = new $();
-          return $.deserializeBinaryFromReader(r, t);
+            n = new $();
+          return $.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return Z.zj($.MBF(), e, t);
@@ -903,12 +857,12 @@
           return "CSupportData_QuickTextContent";
         }
       }
-      class ee extends H.Message {
+      class ee extends V.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ee.prototype.quicktext_id || Z.Sg(ee.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
+            V.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -942,8 +896,8 @@
         }
         static deserializeBinary(e) {
           let t = new (J().BinaryReader)(e),
-            r = new ee();
-          return ee.deserializeBinaryFromReader(r, t);
+            n = new ee();
+          return ee.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return Z.zj(ee.MBF(), e, t);
@@ -963,12 +917,12 @@
           return "CSupportAgents_GetQuickText_Request";
         }
       }
-      class te extends H.Message {
+      class te extends V.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             te.prototype.quicktext || Z.Sg(te.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
+            V.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -997,8 +951,8 @@
         }
         static deserializeBinary(e) {
           let t = new (J().BinaryReader)(e),
-            r = new te();
-          return te.deserializeBinaryFromReader(r, t);
+            n = new te();
+          return te.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return Z.zj(te.MBF(), e, t);
@@ -1018,18 +972,18 @@
           return "CSupportAgents_GetQuickText_Response";
         }
       }
-      class re extends H.Message {
+      class ne extends V.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            re.prototype.appid || Z.Sg(re.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
+            ne.prototype.appid || Z.Sg(ne.M()),
+            V.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            re.sm_m ||
-              (re.sm_m = {
-                proto: re,
+            ne.sm_m ||
+              (ne.sm_m = {
+                proto: ne,
                 fields: {
                   appid: { n: 1, br: Z.qM.readUint32, bw: Z.gp.writeUint32 },
                   log_type: { n: 2, br: Z.qM.readString, bw: Z.gp.writeString },
@@ -1045,64 +999,6 @@
                   },
                   request_id: {
                     n: 5,
-                    br: Z.qM.readUint64String,
-                    bw: Z.gp.writeUint64String,
-                  },
-                },
-              }),
-            re.sm_m
-          );
-        }
-        static MBF() {
-          return re.sm_mbf || (re.sm_mbf = Z.w0(re.M())), re.sm_mbf;
-        }
-        toObject(e = !1) {
-          return re.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return Z.BT(re.M(), e, t);
-        }
-        static fromObject(e) {
-          return Z.Uq(re.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (J().BinaryReader)(e),
-            r = new re();
-          return re.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return Z.zj(re.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (J().BinaryWriter)();
-          return re.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          Z.i0(re.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (J().BinaryWriter)();
-          return re.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CHelpRequestLogs_UploadUserApplicationLog_Request";
-        }
-      }
-      class ne extends H.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            ne.prototype.id || Z.Sg(ne.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ne.sm_m ||
-              (ne.sm_m = {
-                proto: ne,
-                fields: {
-                  id: {
-                    n: 1,
                     br: Z.qM.readUint64String,
                     bw: Z.gp.writeUint64String,
                   },
@@ -1125,8 +1021,8 @@
         }
         static deserializeBinary(e) {
           let t = new (J().BinaryReader)(e),
-            r = new ne();
-          return ne.deserializeBinaryFromReader(r, t);
+            n = new ne();
+          return ne.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return Z.zj(ne.MBF(), e, t);
@@ -1143,15 +1039,15 @@
           return ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CHelpRequestLogs_UploadUserApplicationLog_Response";
+          return "CHelpRequestLogs_UploadUserApplicationLog_Request";
         }
       }
-      class se extends H.Message {
+      class se extends V.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            se.prototype.appid || Z.Sg(se.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
+            se.prototype.id || Z.Sg(se.M()),
+            V.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1159,7 +1055,11 @@
               (se.sm_m = {
                 proto: se,
                 fields: {
-                  appid: { n: 1, br: Z.qM.readUint32, bw: Z.gp.writeUint32 },
+                  id: {
+                    n: 1,
+                    br: Z.qM.readUint64String,
+                    bw: Z.gp.writeUint64String,
+                  },
                 },
               }),
             se.sm_m
@@ -1179,8 +1079,8 @@
         }
         static deserializeBinary(e) {
           let t = new (J().BinaryReader)(e),
-            r = new se();
-          return se.deserializeBinaryFromReader(r, t);
+            n = new se();
+          return se.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return Z.zj(se.MBF(), e, t);
@@ -1197,15 +1097,69 @@
           return se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CHelpRequestLogs_UploadUserApplicationLog_Response";
+        }
+      }
+      class re extends V.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            re.prototype.appid || Z.Sg(re.M()),
+            V.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            re.sm_m ||
+              (re.sm_m = {
+                proto: re,
+                fields: {
+                  appid: { n: 1, br: Z.qM.readUint32, bw: Z.gp.writeUint32 },
+                },
+              }),
+            re.sm_m
+          );
+        }
+        static MBF() {
+          return re.sm_mbf || (re.sm_mbf = Z.w0(re.M())), re.sm_mbf;
+        }
+        toObject(e = !1) {
+          return re.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return Z.BT(re.M(), e, t);
+        }
+        static fromObject(e) {
+          return Z.Uq(re.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (J().BinaryReader)(e),
+            n = new re();
+          return re.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return Z.zj(re.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (J().BinaryWriter)();
+          return re.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          Z.i0(re.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (J().BinaryWriter)();
+          return re.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CHelpRequestLogs_GetApplicationLogDemand_Request";
         }
       }
-      class ie extends H.Message {
+      class ie extends V.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ie.prototype.request_id || Z.Sg(ie.M()),
-            H.Message.initialize(this, e, 0, -1, void 0, null);
+            V.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -1237,8 +1191,8 @@
         }
         static deserializeBinary(e) {
           let t = new (J().BinaryReader)(e),
-            r = new ie();
-          return ie.deserializeBinaryFromReader(r, t);
+            n = new ie();
+          return ie.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return Z.zj(ie.MBF(), e, t);
@@ -1259,183 +1213,183 @@
         }
       }
       !(function (e) {
-        e.GetQuickText = function (e, t, r) {
+        e.GetQuickText = function (e, t, n) {
           return e.SendMsg(
             "SupportAgents.GetQuickText#1",
-            (0, X.I8)(ee, t, r),
+            (0, X.I8)(ee, t, n),
             te,
             { bConstMethod: !0, ePrivilege: 5 },
           );
         };
-      })(D || (D = {})),
+      })(N || (N = {})),
         (function (e) {
-          (e.UploadUserApplicationLog = function (e, t, r) {
+          (e.UploadUserApplicationLog = function (e, t, n) {
             return e.SendMsg(
               "HelpRequestLogs.UploadUserApplicationLog#1",
-              (0, X.I8)(re, t, r),
-              ne,
+              (0, X.I8)(ne, t, n),
+              se,
               { ePrivilege: 1 },
             );
           }),
-            (e.GetApplicationLogDemand = function (e, t, r) {
+            (e.GetApplicationLogDemand = function (e, t, n) {
               return e.SendMsg(
                 "HelpRequestLogs.GetApplicationLogDemand#1",
-                (0, X.I8)(se, t, r),
+                (0, X.I8)(re, t, n),
                 ie,
                 { ePrivilege: 1 },
               );
             });
-        })(Q || (Q = {}));
-      var ae = r(23809),
-        oe = r(4869);
-      function ce(e) {
-        const [t, r] = (0, S.useState)(null),
+        })(D || (D = {}));
+      var ae = n(23809),
+        oe = n(4869);
+      function le(e) {
+        const [t, n] = (0, S.useState)(null),
           [a, o] = (0, S.useState)("main"),
-          [c, l] = (0, S.useState)(!1),
+          [l, c] = (0, S.useState)(!1),
           [d, p] = (0, S.useState)(!1),
-          [h, b] = (0, S.useState)(null),
-          [_, f] = (0, S.useState)(null),
+          [h, _] = (0, S.useState)(null),
           [j, g] = (0, S.useState)(null),
-          [x, v] = (0, S.useState)(!1),
-          [y, B] = (0, S.useState)(!1),
-          [w, T] = (0, S.useState)(A.HH),
-          [M, k] = (0, S.useState)(""),
-          z =
+          [v, y] = (0, S.useState)(null),
+          [b, B] = (0, S.useState)(!1),
+          [x, f] = (0, S.useState)(!1),
+          [w, M] = (0, S.useState)(A.HH),
+          [T, C] = (0, S.useState)(""),
+          R =
             void 0 !== e.rtContentCreatedAt &&
             (Date.now() / 1e3 - e.rtContentCreatedAt) / 2592e3,
-          L = c || d || h || _ || j || x || y,
-          R =
-            ((E = e.authorSteamID),
-            (0, K.I)({
-              queryKey: ["get_primary_language_for_user", E],
+          k = l || d || h || j || v || b || x,
+          U =
+            ((I = e.authorSteamID),
+            (0, G.I)({
+              queryKey: ["get_primary_language_for_user", I],
               queryFn: async () => {
-                if ("0" === E || !E) throw new Error("Invalid steamid");
+                if ("0" === I || !I) throw new Error("Invalid steamid");
                 const e = await fetch(
-                    `${m.TS.COMMUNITY_BASE_URL}profiles/${E}/ajaxlanguagepreferences`,
+                    `${m.TS.COMMUNITY_BASE_URL}profiles/${I}/ajaxlanguagepreferences`,
                   ),
                   t = await e.json();
-                if (t.success === V.R) return t.preferences;
+                if (t.success === K.R) return t.preferences;
                 throw new Error(
                   "Failed GetPrimaryLanguageForUser. EResult: " + t.success,
                 );
               },
             }));
-        var E;
-        let U = G.Bhc;
-        if (R.isSuccess) {
-          const e = R.data;
+        var I;
+        let F = H.Bhc;
+        if (U.isSuccess) {
+          const e = U.data;
           void 0 !== e.pref_primary_language && -1 !== e.pref_primary_language
-            ? (U = e.pref_primary_language)
+            ? (F = e.pref_primary_language)
             : void 0 !== e.last_logon_langauge &&
               -1 !== e.last_logon_langauge &&
-              (U = e.last_logon_langauge);
+              (F = e.last_logon_langauge);
         }
-        const F = (function (e, t) {
-          const r = (0, ae.KV)();
-          return (0, K.I)({
+        const q = (function (e, t) {
+          const n = (0, ae.KV)();
+          return (0, G.I)({
             queryKey: ["get_quick_text", e, t],
             queryFn: async () => {
               if (null == e || void 0 === t) return null;
-              const n = X.w.Init(ee);
-              n.Body().set_quicktext_id(e),
-                n.Body().set_language((0, G.LgB)(t));
-              const s = await D.GetQuickText(r, n);
-              if (s.GetEResult() !== V.R)
+              const s = X.w.Init(ee);
+              s.Body().set_quicktext_id(e),
+                s.Body().set_language((0, H.LgB)(t));
+              const r = await N.GetQuickText(n, s);
+              if (r.GetEResult() !== K.R)
                 throw new Error(
-                  "useQuickText failed with EResult " + s.GetEResult(),
+                  "useQuickText failed with EResult " + r.GetEResult(),
                 );
-              return s.Body().toObject();
+              return r.Body().toObject();
             },
             enabled: void 0 !== e,
           });
-        })((0, i.AH)(t), U);
+        })((0, i.AH)(t), F);
         (0, S.useEffect)(() => {
-          var e, t, r, n, s, i, a;
-          k(
+          var e, t, n, s, r, i, a;
+          C(
             null !==
               (a =
                 null !==
-                  (n =
+                  (s =
                     null ===
-                      (r =
+                      (n =
                         null ===
                           (t =
-                            null === (e = F.data) || void 0 === e
+                            null === (e = q.data) || void 0 === e
                               ? void 0
                               : e.quicktext) || void 0 === t
                           ? void 0
-                          : t.content) || void 0 === r
+                          : t.content) || void 0 === n
                       ? void 0
-                      : r.content) && void 0 !== n
-                  ? n
+                      : n.content) && void 0 !== s
+                  ? s
                   : null ===
                         (i =
-                          null === (s = F.data) || void 0 === s
+                          null === (r = q.data) || void 0 === r
                             ? void 0
-                            : s.english_reference) || void 0 === i
+                            : r.english_reference) || void 0 === i
                     ? void 0
                     : i.content) && void 0 !== a
               ? a
               : "",
           );
-        }, [F.data, R.data]);
-        const Q = !1,
-          H = !1,
+        }, [q.data, U.data]);
+        const D = !1,
+          V = !1,
           J = !1;
-        return (0, n.jsxs)(n.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
           children: [
             "reason" === a &&
-              (0, n.jsx)(q, {
+              (0, s.jsx)(Q, {
                 reasons: i.UL,
                 onSelect: (e) => {
-                  r(e), o("main");
+                  n(e), o("main");
                 },
               }),
             "main" === a &&
-              (0, n.jsxs)(C.Z, {
+              (0, s.jsxs)(z.Z, {
                 children: [
-                  (0, n.jsxs)(C.Z, {
-                    className: I().SanctionForm,
+                  (0, s.jsxs)(z.Z, {
+                    className: L().SanctionForm,
                     children: [
                       e.sanctionMutation.isError &&
-                        (0, n.jsxs)("div", {
-                          className: (0, W.A)(I().OneColumn, I().ErrorMessage),
+                        (0, s.jsxs)("div", {
+                          className: (0, W.A)(L().OneColumn, L().ErrorMessage),
                           children: [
-                            (0, n.jsx)(oe.Q9b, {}),
+                            (0, s.jsx)(oe.Q9b, {}),
                             " Error: ",
                             e.sanctionMutation.error.message,
                           ],
                         }),
-                      (0, n.jsx)("label", {
+                      (0, s.jsx)("label", {
                         htmlFor: "reason",
                         children: "Reason:",
                       }),
-                      (0, n.jsx)("button", {
+                      (0, s.jsx)("button", {
                         id: "reason",
-                        className: I().ClickableText,
+                        className: L().ClickableText,
                         onClick: () => o("reason"),
                         children:
                           null === t
-                            ? s.T.Localize(
+                            ? r.T.Localize(
                                 "#commentsanctiondialog_selectreason",
                               )
                             : (0, i.Jt)(t),
                       }),
-                      (0, n.jsxs)("label", {
-                        className: I().OneColumn,
+                      (0, s.jsxs)("label", {
+                        className: L().OneColumn,
                         children: [
-                          (0, n.jsx)("input", {
+                          (0, s.jsx)("input", {
                             type: "checkbox",
-                            checked: c,
-                            onChange: (e) => l(e.target.checked),
+                            checked: l,
+                            onChange: (e) => c(e.target.checked),
                           }),
                           " Delete",
                         ],
                       }),
-                      (0, n.jsxs)("label", {
-                        className: I().OneColumn,
+                      (0, s.jsxs)("label", {
+                        className: L().OneColumn,
                         children: [
-                          (0, n.jsx)("input", {
+                          (0, s.jsx)("input", {
                             type: "checkbox",
                             checked: d,
                             onChange: (e) => p(e.target.checked),
@@ -1443,275 +1397,275 @@
                           " Issue Warning",
                         ],
                       }),
-                      z &&
+                      R &&
                         !!h &&
-                        (0, n.jsxs)("div", {
-                          className: (0, W.A)(I().OneColumn, I().ErrorMessage),
+                        (0, s.jsxs)("div", {
+                          className: (0, W.A)(L().OneColumn, L().ErrorMessage),
                           children: [
-                            (0, n.jsx)(oe.Q9b, {}),
+                            (0, s.jsx)(oe.Q9b, {}),
                             " Content is older than 30 days. Are you sure you want to ban?",
                           ],
                         }),
                       e.clanSteamID &&
-                        (0, n.jsxs)(n.Fragment, {
+                        (0, s.jsxs)(s.Fragment, {
                           children: [
-                            (0, n.jsx)("label", {
+                            (0, s.jsx)("label", {
                               htmlFor: "hubban",
                               children: "Ban from hub:",
                             }),
-                            (0, n.jsxs)("select", {
+                            (0, s.jsxs)("select", {
                               id: "hubban",
                               onChange: (e) =>
-                                b(
+                                _(
                                   "0" === e.target.value
                                     ? null
                                     : parseInt(e.target.value),
                                 ),
                               value: null != h ? h : 0,
                               children: [
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "0",
                                   children: "Do not ban",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "1",
                                   children: "1 day",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "3",
                                   children: "3 days",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "7",
                                   children: "7 days",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "14",
                                   children: "14 days",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "30",
                                   children: "30 days",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "90",
                                   children: "3 months",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "365",
                                   children: "1 year",
                                 }),
-                                (0, n.jsx)("option", {
+                                (0, s.jsx)("option", {
                                   value: "-1",
                                   children: "Permanent",
                                 }),
                               ],
                             }),
-                            Q,
+                            D,
                           ],
                         }),
-                      z &&
-                        !!_ &&
-                        (0, n.jsxs)("div", {
-                          className: (0, W.A)(I().OneColumn, I().ErrorMessage),
+                      R &&
+                        !!j &&
+                        (0, s.jsxs)("div", {
+                          className: (0, W.A)(L().OneColumn, L().ErrorMessage),
                           children: [
-                            (0, n.jsx)(oe.Q9b, {}),
+                            (0, s.jsx)(oe.Q9b, {}),
                             " Content is older than 30 days. Are you sure you want to ban?",
                           ],
                         }),
-                      (0, n.jsx)("label", {
+                      (0, s.jsx)("label", {
                         htmlFor: "communityban",
                         children: "Ban from community:",
                       }),
-                      (0, n.jsxs)("select", {
+                      (0, s.jsxs)("select", {
                         id: "communityban",
                         onChange: (e) =>
-                          f(
+                          g(
                             "0" === e.target.value
                               ? null
                               : parseInt(e.target.value),
                           ),
-                        value: null != _ ? _ : 0,
+                        value: null != j ? j : 0,
                         children: [
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "0",
                             children: "Do not ban",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "1",
                             children: "1 day",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "3",
                             children: "3 days",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "7",
                             children: "7 days",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "14",
                             children: "14 days",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "30",
                             children: "30 days",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "90",
                             children: "3 months",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "365",
                             children: "1 year",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "-1",
                             children: "Permanent",
                           }),
                         ],
                       }),
-                      H,
-                      (0, n.jsx)("label", {
+                      V,
+                      (0, s.jsx)("label", {
                         htmlFor: "deletecomments",
                         children: "Delete comments since:",
                       }),
-                      (0, n.jsxs)("select", {
+                      (0, s.jsxs)("select", {
                         id: "deletecomments",
-                        disabled: y,
+                        disabled: x,
                         onChange: (e) =>
-                          g(
+                          y(
                             "-1" === e.target.value
                               ? null
                               : parseInt(e.target.value),
                           ),
-                        value: null != j ? j : -1,
+                        value: null != v ? v : -1,
                         children: [
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "-1",
                             children: "Do not delete",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "1",
                             children: "1 day",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "7",
                             children: "7 days",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "14",
                             children: "14 days",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "30",
                             children: "30 days",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: "0",
                             children: "All comments",
                           }),
                         ],
                       }),
-                      (0, n.jsxs)("span", {
-                        className: I().OneColumn,
+                      (0, s.jsxs)("span", {
+                        className: L().OneColumn,
                         children: [
-                          (0, n.jsx)("input", {
+                          (0, s.jsx)("input", {
                             type: "checkbox",
-                            checked: x,
-                            onChange: (e) => v(e.target.checked),
+                            checked: b,
+                            onChange: (e) => B(e.target.checked),
                           }),
                           " Permanent trade ban",
                         ],
                       }),
                       J,
-                      (0, n.jsxs)("span", {
-                        className: I().OneColumn,
+                      (0, s.jsxs)("span", {
+                        className: L().OneColumn,
                         children: [
-                          (0, n.jsx)("input", {
+                          (0, s.jsx)("input", {
                             type: "checkbox",
-                            checked: y,
-                            onChange: (e) => B(e.target.checked),
+                            checked: x,
+                            onChange: (e) => f(e.target.checked),
                           }),
                           " Mark as suspicious",
                         ],
                       }),
-                      (0, n.jsx)("label", {
+                      (0, s.jsx)("label", {
                         htmlFor: "escalateto",
                         children: "Escalate to",
                       }),
-                      (0, n.jsxs)("select", {
+                      (0, s.jsxs)("select", {
                         id: "escalateto",
-                        onChange: (e) => T(parseInt(e.target.value)),
+                        onChange: (e) => M(parseInt(e.target.value)),
                         value: w,
                         children: [
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: A.HH,
                             children: "Do not escalate",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: A.lp,
                             children: "Supervisor",
                           }),
-                          (0, n.jsx)("option", {
+                          (0, s.jsx)("option", {
                             value: A.PV,
                             children: "Valve",
                           }),
                         ],
                       }),
-                      (0, n.jsx)("textarea", {
-                        className: (0, W.A)(I().OneColumn, I().MessageTextArea),
+                      (0, s.jsx)("textarea", {
+                        className: (0, W.A)(L().OneColumn, L().MessageTextArea),
                         placeholder: "Message to send (required)",
-                        value: M,
-                        onChange: (e) => k(e.target.value),
+                        value: T,
+                        onChange: (e) => C(e.target.value),
                       }),
                     ],
                   }),
-                  (0, n.jsxs)(C.Z, {
-                    className: I().BottomButtons,
+                  (0, s.jsxs)(z.Z, {
+                    className: L().BottomButtons,
                     children: [
                       e.sanctionMutation.isPending &&
-                        (0, n.jsx)(u.t, { size: "small" }),
+                        (0, s.jsx)(u.t, { size: "small" }),
                       !e.sanctionMutation.isPending &&
-                        (0, n.jsxs)(n.Fragment, {
+                        (0, s.jsxs)(s.Fragment, {
                           children: [
-                            (0, n.jsx)(O.Oh, {
+                            (0, s.jsx)(O.Oh, {
                               onClick: e.onCancel,
                               children: "Cancel",
                             }),
-                            (0, n.jsx)(O.n9, {
+                            (0, s.jsx)(O.n9, {
                               onClick: async () => {
                                 (0, P.wT)(
                                   null !== t,
                                   "eReason must be non-null to sanction",
                                 );
-                                const r = [];
-                                c && r.push({ sanction: N.EF }),
-                                  d && r.push({ sanction: N.Cv }),
-                                  h && r.push({ sanction: N.ME, days: h }),
-                                  _ && r.push({ sanction: N.sR, days: _ }),
-                                  j && r.push({ sanction: N.bX, days: j }),
-                                  x && r.push({ sanction: N.Fh, days: -1 }),
-                                  y && r.push({ sanction: N.X5 }),
+                                const n = [];
+                                l && n.push({ sanction: E.EF }),
+                                  d && n.push({ sanction: E.Cv }),
+                                  h && n.push({ sanction: E.ME, days: h }),
+                                  j && n.push({ sanction: E.sR, days: j }),
+                                  v && n.push({ sanction: E.bX, days: v }),
+                                  b && n.push({ sanction: E.Fh, days: -1 }),
+                                  x && n.push({ sanction: E.X5 }),
                                   w === A.lp
-                                    ? r.push({
-                                        sanction: N.nw,
+                                    ? n.push({
+                                        sanction: E.nw,
                                         escalate_to: A.lp,
                                       })
                                     : w === A.PV &&
-                                      r.push({
-                                        sanction: N.nw,
+                                      n.push({
+                                        sanction: E.nw,
                                         escalate_to: A.PV,
                                       }),
                                   await e.sanctionMutation.mutateAsync({
-                                    sanctions: r,
-                                    message: M.trim(),
+                                    sanctions: n,
+                                    message: T.trim(),
                                     reason: t,
                                   }),
                                   e.onSanction();
                               },
                               disabled:
-                                null === t || !L || 0 === M.trim().length,
+                                null === t || !k || 0 === T.trim().length,
                               children: "Sanction",
                             }),
                           ],
@@ -1723,58 +1677,58 @@
           ],
         });
       }
-      var le = r(32754),
-        ue = r(62490),
-        de = r(84670),
-        pe = r.n(de),
-        me = r(84811),
-        he = r(9154),
-        be = r(37049),
-        _e = r(38135),
-        fe = r(68255),
-        je = r(12155),
-        ge = r(28491);
-      function xe(e) {
+      var ce = n(32754),
+        ue = n(62490),
+        de = n(84670),
+        pe = n.n(de),
+        me = n(84811),
+        he = n(9154),
+        _e = n(37049),
+        je = n(38135),
+        ge = n(68255),
+        ve = n(12155),
+        ye = n(28491);
+      function be(e) {
         const { subject: t } = e,
-          [r, i] = (0, S.useState)(!1),
+          [n, i] = (0, S.useState)(!1),
           a =
             t &&
             (t.unresolved_report_count > 0 || t.unresolved_dispute_count > 0),
-          o = (0, n.jsx)(ge.W, {
+          o = (0, s.jsx)(ye.W, {
             onClick: () => i(!0),
-            children: (0, n.jsxs)(z.s, {
+            children: (0, s.jsxs)(R.s, {
               direction: "row",
               justify: "between",
               align: "baseline",
               gap: "1",
               children: [
                 a &&
-                  (0, n.jsx)("img", {
+                  (0, s.jsx)("img", {
                     className: pe().Flag,
                     src: `${m.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
                   }),
-                s.T.Localize("#commentsanctiondialog_moderate"),
+                r.T.Localize("#commentsanctiondialog_moderate"),
                 t &&
                   t.required_moderator_level === A.PV &&
-                  (0, n.jsx)("span", {
+                  (0, s.jsx)("span", {
                     className: pe().ValveOnly,
                     children: "(VO)",
                   }),
                 t &&
                   t.required_moderator_level === A.lp &&
-                  (0, n.jsx)("span", {
+                  (0, s.jsx)("span", {
                     className: pe().SupervisorOnly,
                     children: "(Supervisor)",
                   }),
               ],
             }),
           });
-        return (0, n.jsxs)(n.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            r && (0, n.jsx)(ye, { onClose: () => i(!1), ...e }),
+            n && (0, s.jsx)(xe, { onClose: () => i(!1), ...e }),
             t &&
-              (0, n.jsx)(le.Gq, {
-                toolTipContent: (0, n.jsx)(ve, { subject: t }),
+              (0, s.jsx)(ce.Gq, {
+                toolTipContent: (0, s.jsx)(Be, { subject: t }),
                 direction: "bottom",
                 nDelayShowMS: 0,
                 children: o,
@@ -1783,30 +1737,30 @@
           ],
         });
       }
-      function ve(e) {
+      function Be(e) {
         const { subject: t } = e,
-          r = (0, S.useMemo)(() => {
+          n = (0, S.useMemo)(() => {
             var e;
-            const r = (0, ue.D5)(
+            const n = (0, ue.D5)(
               null !== (e = null == t ? void 0 : t.reports) && void 0 !== e
                 ? e
                 : [],
               (e) => e.report_reason,
             );
-            return r.sort((e, t) => e[1] - t[1]), r;
+            return n.sort((e, t) => e[1] - t[1]), n;
           }, [t.reports]);
-        return 0 === r.length
+        return 0 === n.length
           ? null
-          : (0, n.jsxs)(n.Fragment, {
+          : (0, s.jsxs)(s.Fragment, {
               children: [
-                (0, n.jsx)("div", {
-                  children: s.T.Localize("#reasonlist_title"),
+                (0, s.jsx)("div", {
+                  children: r.T.Localize("#reasonlist_title"),
                 }),
-                r.map(([e, t]) =>
-                  (0, n.jsx)(
+                n.map(([e, t]) =>
+                  (0, s.jsx)(
                     "div",
                     {
-                      children: s.T.Localize(
+                      children: r.T.Localize(
                         "#reasonlist_reasonwithcount",
                         (0, i.Jt)(e),
                         t,
@@ -1818,149 +1772,149 @@
               ],
             });
       }
-      function ye(e) {
-        var t, r, i;
+      function xe(e) {
+        var t, n, i;
         const {
             sanctionMutation: a,
-            acquitMutation: c,
-            subject: l,
+            acquitMutation: l,
+            subject: c,
             subjectKey: u,
             clanSteamID: d,
             authorSteamID: p,
             onClose: h,
           } = e,
-          [b, _] = (0, S.useState)("main"),
-          j = [
+          [_, j] = (0, S.useState)("main"),
+          v = [
             {
               name: "Reports",
               key: "reports",
-              contents: (0, n.jsx)(me.tH, {
-                children: (0, n.jsx)(y, { subject: l }),
+              contents: (0, s.jsx)(me.tH, {
+                children: (0, s.jsx)(x, { subject: c }),
               }),
             },
             {
               name: "History",
               key: "history",
-              contents: (0, n.jsx)(me.tH, {
-                children: (0, n.jsx)(f, { subject: l }),
+              contents: (0, s.jsx)(me.tH, {
+                children: (0, s.jsx)(g, { subject: c }),
               }),
             },
             {
               name: "Details",
               key: "details",
-              contents: (0, n.jsx)(me.tH, { children: e.children }),
+              contents: (0, s.jsx)(me.tH, { children: e.children }),
             },
           ];
-        let g = 0,
-          x = 0;
-        if (l)
-          for (const e of l.reports)
-            e.time_resolved && !e.time_disputed && g++,
-              e.time_dispute_resolved && x++;
-        const v = void 0 !== l && !l.owner_dispute_time && l.resolved === o.S6,
-          B = void 0 !== l && !!l.owner_dispute_time;
-        return (0, n.jsx)(be.w, {
+        let y = 0,
+          b = 0;
+        if (c)
+          for (const e of c.reports)
+            e.time_resolved && !e.time_disputed && y++,
+              e.time_dispute_resolved && b++;
+        const B = void 0 !== c && !c.owner_dispute_time && c.resolved === o.S6,
+          f = void 0 !== c && !!c.owner_dispute_time;
+        return (0, s.jsx)(_e.w, {
           onlyPopoutIfNeeded: !0,
           popupHeight: 340,
           popupWidth: 640,
           strTitle: "Moderate subject",
-          children: (0, n.jsx)(he.eV, {
+          children: (0, s.jsx)(he.eV, {
             bAllowFullSize: !0,
             title: "Moderate",
             "aria-describedby": "moderate",
             onCancel: e.onClose,
             className: pe().ModerateDialog,
-            children: (0, n.jsx)(fe.f3, {
-              children: (0, n.jsx)(fe.a3, {
-                children: (0, n.jsxs)("div", {
+            children: (0, s.jsx)(ge.f3, {
+              children: (0, s.jsx)(ge.a3, {
+                children: (0, s.jsxs)("div", {
                   className: pe().ModerateDialogCtn,
                   children: [
-                    "main" === b &&
-                      (0, n.jsxs)("div", {
+                    "main" === _ &&
+                      (0, s.jsxs)("div", {
                         className: pe().ModerateCtn,
                         children: [
-                          (0, n.jsxs)("div", {
+                          (0, s.jsxs)("div", {
                             className: pe().ModerationData,
                             children: [
-                              (0, n.jsxs)("div", {
+                              (0, s.jsxs)("div", {
                                 children: [
                                   null !==
                                     (t =
-                                      null == l
+                                      null == c
                                         ? void 0
-                                        : l.unresolved_report_count) &&
+                                        : c.unresolved_report_count) &&
                                   void 0 !== t
                                     ? t
                                     : 0,
                                   " unresolved / ",
-                                  g,
+                                  y,
                                   " resolved / ",
                                   null !==
-                                    (r =
-                                      null == l
+                                    (n =
+                                      null == c
                                         ? void 0
-                                        : l.unresolved_dispute_count) &&
-                                  void 0 !== r
-                                    ? r
+                                        : c.unresolved_dispute_count) &&
+                                  void 0 !== n
+                                    ? n
                                     : 0,
                                   " disputed / ",
-                                  x,
+                                  b,
                                   " disputes resolved",
                                 ],
                               }),
-                              (0, n.jsx)(_e.V, { tabs: j }),
+                              (0, s.jsx)(je.V, { tabs: v }),
                             ],
                           }),
-                          (0, n.jsxs)("div", {
+                          (0, s.jsxs)("div", {
                             className: pe().ModerationActionButtons,
                             children: [
-                              (0, n.jsx)("button", {
-                                onClick: () => _("sanction"),
-                                children: (0, n.jsxs)(z.s, {
+                              (0, s.jsx)("button", {
+                                onClick: () => j("sanction"),
+                                children: (0, s.jsxs)(R.s, {
                                   direction: "row",
                                   justify: "center",
                                   align: "center",
                                   children: [
-                                    (0, n.jsx)(je.X, {
+                                    (0, s.jsx)(ve.X, {
                                       className: pe().SanctionIcon,
                                     }),
                                     " Sanction",
                                   ],
                                 }),
                               }),
-                              (0, n.jsx)(Se, {
-                                subject: l,
-                                acquitMutation: c,
+                              (0, s.jsx)(Se, {
+                                subject: c,
+                                acquitMutation: l,
                                 onClose: h,
                               }),
-                              (0, n.jsx)(we, { ...e, subject: l, onClose: h }),
-                              (0, n.jsx)(k.fu, {
+                              (0, s.jsx)(we, { ...e, subject: c, onClose: h }),
+                              (0, s.jsx)(C.fu, {
                                 disabled: !e.subject,
-                                onClick: () => _("escalate"),
-                                children: s.T.Localize(
+                                onClick: () => j("escalate"),
+                                children: r.T.Localize(
                                   "#moderation_escalation_escalate",
                                 ),
                               }),
-                              !B &&
-                                (0, n.jsx)("button", {
-                                  disabled: !v,
-                                  onClick: () => _("ownerdispute"),
+                              !f &&
+                                (0, s.jsx)("button", {
+                                  disabled: !B,
+                                  onClick: () => j("ownerdispute"),
                                   children: "Owner Dispute",
                                 }),
-                              B &&
-                                (0, n.jsxs)("span", {
+                              f &&
+                                (0, s.jsxs)("span", {
                                   children: [
-                                    (0, n.jsx)("a", {
-                                      href: `${m.TS.HELP_BASE_URL}tickermaster/ticket/${l.owner_dispute_details}`,
-                                      children: s.T.Localize(
+                                    (0, s.jsx)("a", {
+                                      href: `${m.TS.HELP_BASE_URL}tickermaster/ticket/${c.owner_dispute_details}`,
+                                      children: r.T.Localize(
                                         "#moderation_already_owner_disputed",
                                       ),
                                     }),
-                                    (0, n.jsx)("button", {
+                                    (0, s.jsx)("button", {
                                       onClick: () =>
-                                        _("editownerdisputedetails"),
+                                        j("editownerdisputedetails"),
                                       className: pe().EditButton,
-                                      children: (0, n.jsx)(je.ffu, {}),
+                                      children: (0, s.jsx)(ve.ffu, {}),
                                     }),
                                   ],
                                 }),
@@ -1968,10 +1922,10 @@
                           }),
                         ],
                       }),
-                    "escalate" === b &&
-                      (0, n.jsx)(R, { subject: u, onClose: () => _("main") }),
-                    "sanction" === b &&
-                      (0, n.jsx)(ce, {
+                    "escalate" === _ &&
+                      (0, s.jsx)(U, { subject: u, onClose: () => j("main") }),
+                    "sanction" === _ &&
+                      (0, s.jsx)(le, {
                         subject: u,
                         clanSteamID: d,
                         authorSteamID: p,
@@ -1983,22 +1937,22 @@
                               (window.location.href += "#c" + u.subject_id),
                             window.location.reload();
                         },
-                        onCancel: () => _("main"),
+                        onCancel: () => j("main"),
                       }),
-                    "ownerdispute" === b &&
-                      (0, n.jsx)(Ae, {
+                    "ownerdispute" === _ &&
+                      (0, s.jsx)(Ae, {
                         subject: u,
                         authorSteamId: p,
-                        onClose: () => _("main"),
+                        onClose: () => j("main"),
                       }),
-                    "editownerdisputedetails" === b &&
-                      (0, n.jsx)(Be, {
+                    "editownerdisputedetails" === _ &&
+                      (0, s.jsx)(fe, {
                         subject: u,
-                        onClose: () => _("main"),
+                        onClose: () => j("main"),
                         currentDetails:
                           null !==
                             (i =
-                              null == l ? void 0 : l.owner_dispute_details) &&
+                              null == c ? void 0 : c.owner_dispute_details) &&
                           void 0 !== i
                             ? i
                             : "",
@@ -2010,38 +1964,38 @@
           }),
         });
       }
-      function Be(e) {
-        const { subject: t, onClose: r, currentDetails: i } = e,
+      function fe(e) {
+        const { subject: t, onClose: n, currentDetails: i } = e,
           [a, o] = (0, S.useState)(i),
-          c = (0, l.wy)(t.subject_type, t.subject_group_id, t.subject_id, a);
-        return (0, n.jsxs)(n.Fragment, {
+          l = (0, c.wy)(t.subject_type, t.subject_group_id, t.subject_id, a);
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, n.jsxs)("label", {
+            (0, s.jsxs)("label", {
               children: [
-                s.T.Localize("#moderation_editownerdisputedetails_label"),
-                (0, n.jsx)("input", {
+                r.T.Localize("#moderation_editownerdisputedetails_label"),
+                (0, s.jsx)("input", {
                   type: "text",
                   value: a,
                   onChange: (e) => o(e.target.value),
                 }),
               ],
             }),
-            (0, n.jsxs)(z.s, {
+            (0, s.jsxs)(R.s, {
               justify: "between",
               direction: "row",
               children: [
-                (0, n.jsx)(k.fu, {
+                (0, s.jsx)(C.fu, {
                   onClick: async () => {
-                    await c.mutateAsync(), r();
+                    await l.mutateAsync(), n();
                   },
-                  children: s.T.Localize(
+                  children: r.T.Localize(
                     "#moderation_editownerdisputedetails_save",
                   ),
                 }),
-                (0, n.jsx)(L.$, {
-                  onClick: r,
-                  loading: c.isPending,
-                  children: s.T.Localize("#moderation_ownerdispute_cancel"),
+                (0, s.jsx)(k.$, {
+                  onClick: n,
+                  loading: l.isPending,
+                  children: r.T.Localize("#moderation_ownerdispute_cancel"),
                 }),
               ],
             }),
@@ -2049,39 +2003,39 @@
         });
       }
       function Ae(e) {
-        const { authorSteamId: t, subject: r, onClose: i } = e,
+        const { authorSteamId: t, subject: n, onClose: i } = e,
           [a, o] = (0, S.useState)(""),
-          c = (0, l.y4)(t, r.subject_type, r.subject_group_id, r.subject_id, a);
-        return (0, n.jsxs)(C.Z, {
+          l = (0, c.y4)(t, n.subject_type, n.subject_group_id, n.subject_id, a);
+        return (0, s.jsxs)(z.Z, {
           className: pe().OwnerDisputeCtn,
           children: [
-            (0, n.jsx)("div", {
-              children: s.T.Localize("#moderation_ownerdispute_description"),
+            (0, s.jsx)("div", {
+              children: r.T.Localize("#moderation_ownerdispute_description"),
             }),
-            (0, n.jsxs)("label", {
+            (0, s.jsxs)("label", {
               children: [
-                s.T.Localize("#moderation_ownerdispute_ticketmastercode"),
+                r.T.Localize("#moderation_ownerdispute_ticketmastercode"),
                 " ",
-                (0, n.jsx)("input", {
+                (0, s.jsx)("input", {
                   type: "text",
                   value: a,
                   onChange: (e) => o(e.target.value),
                 }),
               ],
             }),
-            (0, n.jsxs)(z.s, {
+            (0, s.jsxs)(R.s, {
               justify: "between",
               direction: "row",
               children: [
-                (0, n.jsx)(k.fu, {
+                (0, s.jsx)(C.fu, {
                   onClick: async () => {
-                    await c.mutateAsync(), i();
+                    await l.mutateAsync(), i();
                   },
-                  children: s.T.Localize("#moderation_ownerdispute_dispute"),
+                  children: r.T.Localize("#moderation_ownerdispute_dispute"),
                 }),
-                (0, n.jsx)(k.fu, {
+                (0, s.jsx)(C.fu, {
                   onClick: i,
-                  children: s.T.Localize("#moderation_ownerdispute_cancel"),
+                  children: r.T.Localize("#moderation_ownerdispute_cancel"),
                 }),
               ],
             }),
@@ -2089,59 +2043,59 @@
         });
       }
       function Se(e) {
-        const { acquitMutation: t, onClose: r, subject: i } = e,
+        const { acquitMutation: t, onClose: n, subject: i } = e,
           a =
             i &&
             (i.unresolved_report_count > 0 || i.unresolved_dispute_count > 0);
-        return (0, n.jsx)("button", {
+        return (0, s.jsx)("button", {
           onClick: async () => {
-            await t.mutateAsync(void 0), r();
+            await t.mutateAsync(void 0), n();
           },
           disabled: !a,
-          children: (0, n.jsxs)(z.s, {
+          children: (0, s.jsxs)(R.s, {
             direction: "row",
             justify: "center",
             align: "center",
             children: [
-              (0, n.jsx)(je.jlt, { className: pe().AcquitIcon }),
+              (0, s.jsx)(ve.jlt, { className: pe().AcquitIcon }),
               " ",
-              s.T.Localize("#moderation_actions_acquit"),
+              r.T.Localize("#moderation_actions_acquit"),
             ],
           }),
         });
       }
       function we(e) {
-        const { subject: t, subjectKey: r, onClose: i } = e,
+        const { subject: t, subjectKey: n, onClose: i } = e,
           a =
             t &&
             t.resolved !== o.z_ &&
             (t.unresolved_dispute_count > 0 || t.unresolved_report_count > 0),
-          c = (0, l.N8)();
-        return (0, n.jsx)("button", {
+          l = (0, c.N8)();
+        return (0, s.jsx)("button", {
           onClick: async () => {
-            await c.mutateAsync({
-              eSubjectType: r.subject_type,
-              ulSubjectGroupID: r.subject_group_id,
-              ulSubjectID: r.subject_id,
+            await l.mutateAsync({
+              eSubjectType: n.subject_type,
+              ulSubjectGroupID: n.subject_group_id,
+              ulSubjectID: n.subject_id,
             }),
               i();
           },
           disabled: !a,
-          children: s.T.Localize("#moderation_actions_sustain"),
+          children: r.T.Localize("#moderation_actions_sustain"),
         });
       }
     },
-    99171: (e, t, r) => {
+    99171: (e, t, n) => {
       "use strict";
-      r.d(t, { t: () => i });
-      var n = r(66418);
-      const s = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      n.d(t, { t: () => i });
+      var s = n(66418);
+      const r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function i(e, t) {
-        let r = "0000000000000000000000000000000000000000";
+        let n = "0000000000000000000000000000000000000000";
         "string" == typeof e
-          ? (r = e)
+          ? (n = e)
           : e &&
-            (r =
+            (n =
               (function (e) {
                 if (!e) return "";
                 return (
@@ -2151,16 +2105,16 @@
                 )
                   .map((e) => e.toString(16).padStart(2, "0"))
                   .join("");
-              })(e) || r);
+              })(e) || n);
         let i = ".jpg";
-        "0000000000000000000000000000000000000000" === r && (r = s),
-          44 == r.length && ((i = r.slice(-4)), (r = r.slice(0, 40)));
-        let a = n.TS.AVATAR_BASE_URL;
+        "0000000000000000000000000000000000000000" === n && (n = r),
+          44 == n.length && ((i = n.slice(-4)), (n = n.slice(0, 40)));
+        let a = s.TS.AVATAR_BASE_URL;
         switch (
           (a ||
-            ((a = n.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (a += r.slice(0, 2) + "/")),
-          (a += r),
+            ((a = s.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (a += n.slice(0, 2) + "/")),
+          (a += n),
           t)
         ) {
           case "X-Small":
@@ -2178,60 +2132,60 @@
         return (a += i), a;
       }
     },
-    98682: (e, t, r) => {
+    98682: (e, t, n) => {
       "use strict";
-      r.d(t, { Ul: () => b, wm: () => _ });
-      var n = r(7850);
-      const s =
+      n.d(t, { Ul: () => _, wm: () => j });
+      var s = n(7850);
+      const r =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
         i =
-          r.p +
+          n.p +
           "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching",
         a =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
-      var o = r(22837),
-        c = r(90626);
-      function l(e) {
-        const { rgSources: t, onIncrementalError: r, alt: s, ...i } = e,
-          [a, o] = (0, c.useState)(0),
-          l = t[a];
-        return (0, n.jsx)("img", {
+      var o = n(22837),
+        l = n(90626);
+      function c(e) {
+        const { rgSources: t, onIncrementalError: n, alt: r, ...i } = e,
+          [a, o] = (0, l.useState)(0),
+          c = t[a];
+        return (0, s.jsx)("img", {
           onError: (e) => {
-            o((e) => e + 1), null == r || r(e, l, a);
+            o((e) => e + 1), null == n || n(e, c, a);
           },
-          alt: s,
+          alt: r,
           ...i,
-          src: l,
+          src: c,
         });
       }
-      var u = r(66418),
-        d = r(64238),
-        p = r.n(d),
-        m = r(16339),
-        h = r(99171);
-      function b(e) {
+      var u = n(66418),
+        d = n(64238),
+        p = n.n(d),
+        m = n(16339),
+        h = n(99171);
+      function _(e) {
         const {
             avatarURL: t,
-            size: r,
+            size: n,
             statusStyle: o,
-            statusPosition: c,
+            statusPosition: l,
             className: d,
             children: h,
-            isOnline: b,
-            isInGame: _,
-            isWatchingBroadcast: f,
-            isAwayOrSnooze: j,
-            alt: g,
+            isOnline: _,
+            isInGame: j,
+            isWatchingBroadcast: g,
+            isAwayOrSnooze: v,
+            alt: y,
           } = e,
-          x = [];
+          b = [];
         return (
-          t && x.push(t),
-          x.push(
+          t && b.push(t),
+          b.push(
             (function (e) {
               switch (e) {
                 case "X-Small":
                 case "Small":
-                  return (0, u.YJ)(s);
+                  return (0, u.YJ)(r);
                 case "Medium":
                 case "MediumLarge":
                   return (0, u.YJ)(a);
@@ -2240,62 +2194,62 @@
                 case "FillArea":
                   return (0, u.YJ)(i);
               }
-            })(null != r ? r : "Medium"),
+            })(null != n ? n : "Medium"),
           ),
-          (0, n.jsxs)("div", {
+          (0, s.jsxs)("div", {
             className: p()(
               m.AvatarHolder,
               {
-                [m.Offline]: !b,
-                [m.Online]: b,
-                [m.InGame]: _,
-                [m.WatchingBroadcast]: f,
-                [m.AwayOrSnooze]: j,
+                [m.Offline]: !_,
+                [m.Online]: _,
+                [m.InGame]: j,
+                [m.WatchingBroadcast]: g,
+                [m.AwayOrSnooze]: v,
               },
               d,
             ),
-            "data-size": r,
-            "data-status-position": c,
+            "data-size": n,
+            "data-status-position": l,
             children: [
-              (0, n.jsx)("div", { className: m.AvatarStatus, style: o }),
-              (0, n.jsx)(l, {
+              (0, s.jsx)("div", { className: m.AvatarStatus, style: o }),
+              (0, s.jsx)(c, {
                 className: p()(m.Avatar),
-                rgSources: x,
+                rgSources: b,
                 draggable: !1,
-                alt: g,
+                alt: y,
               }),
               h,
             ],
           })
         );
       }
-      function _(e) {
-        var t, r, s, i, a, c, l;
+      function j(e) {
+        var t, n, r, i, a, l, c;
         const {
           playerLinkDetails: d,
           animatedAvatar: p,
           avatarFrame: m,
-          size: _,
-          ...f
+          size: j,
+          ...g
         } = e;
-        let j = (0, h.t)(
+        let v = (0, h.t)(
           null === (t = d.public_data) || void 0 === t
             ? void 0
             : t.sha_digest_avatar,
-          _,
+          j,
         );
         return (
-          (null === (r = null == p ? void 0 : p.image_small) || void 0 === r
+          (null === (n = null == p ? void 0 : p.image_small) || void 0 === n
             ? void 0
-            : r.length) &&
-            (j = u.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + p.image_small),
-          (0, n.jsx)(b, {
-            avatarURL: j,
-            size: _,
+            : n.length) &&
+            (v = u.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + p.image_small),
+          (0, s.jsx)(_, {
+            avatarURL: v,
+            size: j,
             isOnline:
-              (null === (s = d.private_data) || void 0 === s
+              (null === (r = d.private_data) || void 0 === r
                 ? void 0
-                : s.persona_state) === o.UXk,
+                : r.persona_state) === o.UXk,
             isInGame:
               void 0 !==
               (null === (i = d.private_data) || void 0 === i
@@ -2307,59 +2261,59 @@
                 ? void 0
                 : a.watching_broadcast_accountid),
             isAwayOrSnooze:
-              (null === (c = d.private_data) || void 0 === c
-                ? void 0
-                : c.persona_state) === o.PrD ||
               (null === (l = d.private_data) || void 0 === l
                 ? void 0
-                : l.persona_state) === o.vPz,
-            ...f,
+                : l.persona_state) === o.PrD ||
+              (null === (c = d.private_data) || void 0 === c
+                ? void 0
+                : c.persona_state) === o.vPz,
+            ...g,
           })
         );
       }
     },
-    20187: (e, t, r) => {
+    20187: (e, t, n) => {
       "use strict";
-      r.d(t, { Ae: () => p, EY: () => u, U6: () => d });
-      var n = r(7850),
-        s = r(55348),
-        i = r(11526),
-        a = r(75659),
-        o = r(64238),
-        c = r.n(o),
-        l = r(65274);
+      n.d(t, { Ae: () => p, EY: () => u, U6: () => d });
+      var s = n(7850),
+        r = n(55348),
+        i = n(11526),
+        a = n(75659),
+        o = n(64238),
+        l = n.n(o),
+        c = n(65274);
       function u(e) {
-        const { as: t = "span", ref: r, className: s, ...a } = e,
+        const { as: t = "span", ref: n, className: r, ...a } = e,
           o = t;
-        return (0, n.jsx)(o, {
-          ref: r,
-          ...(0, i.mz)({ ...a, className: c()(l.Text, s) }, p),
+        return (0, s.jsx)(o, {
+          ref: n,
+          ...(0, i.mz)({ ...a, className: l()(c.Text, r) }, p),
         });
       }
       const d = [
           {
             prop: "weight",
             responsive: !0,
-            className: l.TextWeight,
+            className: c.TextWeight,
             cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: l.TextAlign,
+            className: c.TextAlign,
             cssProperty: "--text-align",
           },
           {
             prop: "color",
             responsive: !0,
-            cssProperty: (e, t, r) => {
-              var n;
+            cssProperty: (e, t, n) => {
+              var s;
               return [
                 "--text-color",
                 (0, i.To)(
                   e,
-                  null !== (n = (0, s.I)(t.contrast, r)) && void 0 !== n
-                    ? n
+                  null !== (s = (0, r.I)(t.contrast, n)) && void 0 !== s
+                    ? s
                     : "body",
                 ),
               ];
@@ -2368,29 +2322,29 @@
           {
             prop: "contrast",
             responsive: !0,
-            cssProperty: (e, t, r) => {
-              var n;
+            cssProperty: (e, t, n) => {
+              var s;
               return [
                 "--text-color",
                 (0, i.To)(
-                  null !== (n = (0, s.I)(t.color, r)) && void 0 !== n
-                    ? n
+                  null !== (s = (0, r.I)(t.color, n)) && void 0 !== s
+                    ? s
                     : "text-body",
                   e,
                 ),
               ];
             },
           },
-          { prop: "truncate", className: l.Truncate },
+          { prop: "truncate", className: c.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: l.LineClamp,
+            className: c.LineClamp,
             cssProperty: "--line-clamp",
           },
           {
             prop: "whiteSpace",
-            className: l.WhiteSpace,
+            className: c.WhiteSpace,
             cssProperty: "--white-space",
           },
         ],
@@ -2400,81 +2354,81 @@
           {
             prop: "size",
             responsive: !0,
-            className: (e) => l[`TextSize-${e}`],
+            className: (e) => c[`TextSize-${e}`],
           },
         ];
     },
-    28491: (e, t, r) => {
+    28491: (e, t, n) => {
       "use strict";
-      r.d(t, { W: () => p, Y: () => u });
-      var n = r(7850),
-        s = r(50122),
-        i = r(20187),
-        a = r(11526),
-        o = r(45699),
-        c = r(39479),
-        l = r(78327);
+      n.d(t, { W: () => p, Y: () => u });
+      var s = n(7850),
+        r = n(50122),
+        i = n(20187),
+        a = n(11526),
+        o = n(45699),
+        l = n(39479),
+        c = n(78327);
       function u(e) {
         var t;
-        const { underline: r = "auto", focusable: i, navProps: c, ...u } = e,
-          p = (0, l.Qn)(),
+        const { underline: n = "auto", focusable: i, navProps: l, ...u } = e,
+          p = (0, c.Qn)(),
           m =
-            null !== (t = null != i ? i : null == c ? void 0 : c.focusable) &&
+            null !== (t = null != i ? i : null == l ? void 0 : l.focusable) &&
             void 0 !== t
               ? t
               : !!u.href,
-          h = (0, a.mz)({ ...u, underline: r, className: s.TextLink }, d);
-        return p && (m || c)
-          ? (0, n.jsx)(o.Ii, { ...h, ...(c || {}), focusable: m })
-          : (0, n.jsx)("a", { ...h });
+          h = (0, a.mz)({ ...u, underline: n, className: r.TextLink }, d);
+        return p && (m || l)
+          ? (0, s.jsx)(o.Ii, { ...h, ...(l || {}), focusable: m })
+          : (0, s.jsx)("a", { ...h });
       }
       const d = [
         ...i.Ae,
-        { prop: "underline", className: (e) => s[`Underline-${e}`] },
+        { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];
       function p(e) {
         var t;
-        const { underline: r = "auto", focusable: i, navProps: o, ...u } = e,
-          p = (0, l.Qn)(),
+        const { underline: n = "auto", focusable: i, navProps: o, ...u } = e,
+          p = (0, c.Qn)(),
           m =
             null !== (t = null != i ? i : null == o ? void 0 : o.focusable) &&
             void 0 !== t
               ? t
               : !!u.onClick,
-          h = (0, n.jsx)("span", {
+          h = (0, s.jsx)("span", {
             role: "button",
             ...(0, a.mz)(
-              { ...u, underline: r, className: s.TextLinkButton },
+              { ...u, underline: n, className: r.TextLinkButton },
               d,
             ),
           });
         return p && (m || o)
-          ? (0, n.jsx)(c.J, { ...(o || {}), focusable: m, children: h })
+          ? (0, s.jsx)(l.J, { ...(o || {}), focusable: m, children: h })
           : h;
       }
     },
-    11333: (e, t, r) => {
+    11333: (e, t, n) => {
       "use strict";
-      r.d(t, { L: () => c, c: () => o });
-      var n = r(78619),
-        s = r(49845),
-        i = r(58632),
-        a = r.n(i);
+      n.d(t, { L: () => l, c: () => o });
+      var s = n(78619),
+        r = n(49845),
+        i = n(58632),
+        a = n.n(i);
       function o(e, t) {
         return new (a())(
           async (t) => {
-            const r = [...t],
-              s = await n.xtC.GetPlayerLinkDetails(e, { steamids: r }),
+            const n = [...t],
+              r = await s.xtC.GetPlayerLinkDetails(e, { steamids: n }),
               i = new Map();
             return (
-              s
+              r
                 .Body()
                 .accounts()
                 .forEach((e) => {
                   const t = e.toObject();
                   i.set(t.public_data.steamid, t);
                 }),
-              r.map((e) => {
+              n.map((e) => {
                 var t;
                 return null !== (t = i.get(e)) && void 0 !== t ? t : null;
               })
@@ -2483,106 +2437,106 @@
           { maxBatchSize: 100, cache: !1, ...t },
         );
       }
-      function c(e) {
-        return (0, s.V)("PlayerLinkDetails", () => o(e));
+      function l(e) {
+        return (0, r.V)("PlayerLinkDetails", () => o(e));
       }
     },
-    18519: (e, t, r) => {
+    18519: (e, t, n) => {
       "use strict";
-      r.d(t, { jn: () => d });
-      var n = r(66418),
-        s = r(23809),
-        i = r(29233),
-        a = r(88942),
-        o = r(11333);
-      const c = 1;
-      function l(e) {
+      n.d(t, { jn: () => d });
+      var s = n(66418),
+        r = n(23809),
+        i = n(29233),
+        a = n(88942),
+        o = n(11333);
+      const l = 1;
+      function c(e) {
         return ["PlayerLinkDetails", e];
       }
       function u(e, t) {
-        const r =
+        const n =
           "number" == typeof t
-            ? i.b2.InitFromAccountID(t, n.TS.EUNIVERSE).ConvertTo64BitString()
+            ? i.b2.InitFromAccountID(t, s.TS.EUNIVERSE).ConvertTo64BitString()
             : t;
         return {
-          queryKey: l(r),
+          queryKey: c(n),
           queryFn: async () => {
-            if (r) {
+            if (n) {
               return (function (e) {
-                var t, r, n, s, i;
+                var t, n, s, r, i;
                 return (
                   null === (t = null == e ? void 0 : e.private_data) ||
                     void 0 === t ||
                     delete t.account_name,
-                  null === (r = null == e ? void 0 : e.public_data) ||
-                    void 0 === r ||
-                    delete r.account_flags,
                   null === (n = null == e ? void 0 : e.public_data) ||
                     void 0 === n ||
-                    delete n.ban_expires_time,
+                    delete n.account_flags,
                   null === (s = null == e ? void 0 : e.public_data) ||
                     void 0 === s ||
-                    delete s.privacy_state,
+                    delete s.ban_expires_time,
+                  null === (r = null == e ? void 0 : e.public_data) ||
+                    void 0 === r ||
+                    delete r.privacy_state,
                   (null === (i = null == e ? void 0 : e.public_data) ||
                   void 0 === i
                     ? void 0
-                    : i.profile_state) !== c &&
+                    : i.profile_state) !== l &&
                     (null == e || delete e.private_data),
                   e
                 );
-              })(await e.load(r));
+              })(await e.load(n));
             }
             return null;
           },
-          enabled: !!r,
+          enabled: !!n,
         };
       }
       function d(e) {
-        const t = (0, s.KV)(),
-          r = (0, o.L)(t);
-        return (0, a.I)(u(r, e));
+        const t = (0, r.KV)(),
+          n = (0, o.L)(t);
+        return (0, a.I)(u(n, e));
       }
     },
-    90182: (e, t, r) => {
+    90182: (e, t, n) => {
       "use strict";
-      r.d(t, {
-        EC: () => v,
-        KQ: () => x,
-        Kt: () => b,
-        N8: () => f,
-        c3: () => y,
+      n.d(t, {
+        EC: () => B,
+        KQ: () => b,
+        Kt: () => _,
+        N8: () => g,
+        c3: () => x,
         iW: () => m,
         kZ: () => h,
-        lY: () => _,
-        wy: () => g,
-        y4: () => j,
+        lY: () => j,
+        wy: () => y,
+        y4: () => v,
       });
-      var n = r(56545),
-        s = r(99164),
-        i = r(23809),
-        a = r(88942),
-        o = r(29385),
-        c = r(61739),
-        l = r(37085),
-        u = r(43261);
+      var s = n(56545),
+        r = n(99164),
+        i = n(23809),
+        a = n(88942),
+        o = n(29385),
+        l = n(61739),
+        c = n(37085),
+        u = n(43261);
       const d = "get_content_report_subject_group",
         p = "get_content_report_subject_audit_log";
-      async function m(e, t, r, n) {
+      async function m(e, t, n, s) {
         return Promise.all([
-          e.invalidateQueries({ queryKey: [d, t, r] }),
-          e.invalidateQueries({ queryKey: [p, t, r, n] }),
+          e.invalidateQueries({ queryKey: [d, t, n] }),
+          e.invalidateQueries({ queryKey: [p, t, n, s] }),
         ]);
       }
       function h(e, t) {
-        const r = (0, i.KV)();
+        const n = (0, i.KV)();
         return (0, a.I)(
-          (function (e, t, r) {
+          (function (e, t, n) {
             return {
-              queryKey: [d, t, r],
+              queryKey: [d, t, n],
               queryFn: async () => {
-                const i = n.w.Init(s.ge);
-                i.Body().set_subject_type(t), i.Body().set_subject_group_id(r);
-                const a = await s.fL.GetContentReportSubjectGroup(e, i);
+                const i = s.w.Init(r.ge);
+                i.Body().set_subject_type(t), i.Body().set_subject_group_id(n);
+                const a = await r.fL.GetContentReportSubjectGroup(e, i);
                 if (!a.BSuccess())
                   throw new Error(
                     "Failed in GetContentReportSubjectGroup, EResult: " +
@@ -2591,117 +2545,117 @@
                 return a.Body().toObject();
               },
             };
-          })(r, e, t),
+          })(n, e, t),
         );
       }
-      function b(e, t, r) {
+      function _(e, t, n) {
         const o = (0, i.KV)();
         return (0, a.I)(
-          (function (e, t, r, i) {
+          (function (e, t, n, i) {
             return {
-              queryKey: [p, t, r, i],
+              queryKey: [p, t, n, i],
               queryFn: async () => {
-                if (void 0 === t || void 0 === r || void 0 === i) return;
-                const a = n.w.Init(s.Ru);
+                if (void 0 === t || void 0 === n || void 0 === i) return;
+                const a = s.w.Init(r.Ru);
                 return (
                   a.Body().set_subject_type(t),
-                  a.Body().set_subject_group_id(r),
+                  a.Body().set_subject_group_id(n),
                   a.Body().set_subject_id(i),
-                  (await s.fL.GetAuditLog(e, a)).Body().toObject()
+                  (await r.fL.GetAuditLog(e, a)).Body().toObject()
                 );
               },
             };
-          })(o, e, t, r),
+          })(o, e, t, n),
         );
       }
-      function _(e, t, r) {
+      function j(e, t, n) {
         const a = (0, i.KV)(),
           u = (0, o.jE)();
-        return (0, c.n)({
+        return (0, l.n)({
           mutationFn: async (i) => {
-            const o = n.w.Init(s.u5);
+            const o = s.w.Init(r.u5);
             o.Body().set_subject_type(e),
               o.Body().set_subject_group_id(t),
-              o.Body().set_subject_id(r),
+              o.Body().set_subject_id(n),
               o.Body().set_required_level(i.eNewLevel),
               i.eReason && o.Body().set_reason(i.eReason),
               i.strNote && o.Body().set_note(i.strNote);
-            const c = await s.fL.EscalateSubject(a, o);
-            if (c.GetEResult() !== l.R)
-              throw new Error(`Failed to escalate subject: ${c.GetEMsg()}`);
+            const l = await r.fL.EscalateSubject(a, o);
+            if (l.GetEResult() !== c.R)
+              throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);
           },
-          onSuccess: async (n, s) => {
+          onSuccess: async (s, r) => {
             await Promise.all([
-              m(u, e, t, r),
+              m(u, e, t, n),
               u.invalidateQueries({ queryKey: ["get_claimed"] }),
               u.invalidateQueries({ queryKey: ["get_subject_overview"] }),
             ]);
           },
         });
       }
-      function f() {
+      function g() {
         const e = (0, i.KV)(),
           t = (0, o.jE)();
-        return (0, c.n)({
+        return (0, l.n)({
           mutationFn: async (t) => {
-            const r = n.w.Init(s.j);
-            r.Body().set_subject_type(t.eSubjectType),
-              r.Body().set_subject_group_id(t.ulSubjectGroupID),
-              r.Body().set_subject_id(t.ulSubjectID);
-            await s.fL.SustainModeration(e, r);
+            const n = s.w.Init(r.j);
+            n.Body().set_subject_type(t.eSubjectType),
+              n.Body().set_subject_group_id(t.ulSubjectGroupID),
+              n.Body().set_subject_id(t.ulSubjectID);
+            await r.fL.SustainModeration(e, n);
           },
-          onSuccess: async (e, r) => {
+          onSuccess: async (e, n) => {
             await t.invalidateQueries({ queryKey: ["get_claimed"] }),
-              await m(t, r.eSubjectType, r.ulSubjectGroupID, r.ulSubjectID);
+              await m(t, n.eSubjectType, n.ulSubjectGroupID, n.ulSubjectID);
           },
         });
       }
-      function j(e, t, r, a, l) {
+      function v(e, t, n, a, c) {
         const u = (0, i.KV)(),
           d = (0, o.jE)();
-        return (0, c.n)({
+        return (0, l.n)({
           mutationFn: async () => {
-            const i = n.w.Init(s.ZV);
+            const i = s.w.Init(r.ZV);
             i.Body().set_steamid(e),
               i.Body().set_subject_type(t),
-              i.Body().set_subject_group_id(r),
+              i.Body().set_subject_group_id(n),
               i.Body().set_subject_id(a),
-              i.Body().set_details(l);
-            await s.fL.DisputeModerationForSubject(u, i);
+              i.Body().set_details(c);
+            await r.fL.DisputeModerationForSubject(u, i);
           },
           onSuccess: async () => {
-            await m(d, t, r, a);
+            await m(d, t, n, a);
           },
         });
       }
-      function g(e, t, r, a) {
-        const l = (0, o.jE)(),
+      function y(e, t, n, a) {
+        const c = (0, o.jE)(),
           u = (0, i.KV)();
-        return (0, c.n)({
+        return (0, l.n)({
           mutationFn: async () => {
-            const i = n.w.Init(s.zF);
+            const i = s.w.Init(r.zF);
             i.Body().set_subject_type(e),
               i.Body().set_subject_group_id(t),
-              i.Body().set_subject_id(r),
+              i.Body().set_subject_id(n),
               i.Body().set_owner_dispute_details(a);
-            const o = await s.fL.UpdateSubject(u, i);
+            const o = await r.fL.UpdateSubject(u, i);
             if (!o.BSuccess()) throw new Error("EResult " + o.GetEResult());
           },
           onSuccess: async () => {
-            await m(l, e, t, r);
+            await m(c, e, t, n);
           },
         });
       }
-      function x(e) {
+      function b(e) {
         const t = (0, i.KV)();
         return (0, a.I)(
           (function (e, t) {
             return {
               queryKey: ["reporterstats", t],
               queryFn: async () => {
-                const r = n.w.Init(s.KD);
-                r.Body().set_steamid(t);
-                const i = await s.fL.GetReporterStats(e, r);
+                const n = s.w.Init(r.KD);
+                n.Body().set_steamid(t);
+                const i = await r.fL.GetReporterStats(e, n);
                 if (!i.BSuccess()) throw new Error("EResult " + i.GetEResult());
                 return i.Body().toObject();
               },
@@ -2709,15 +2663,15 @@
           })(t, e),
         );
       }
-      function v(e, t, r) {
-        const s = (0, i.KV)(),
+      function B(e, t, n) {
+        const r = (0, i.KV)(),
           a = (0, o.jE)();
-        return (0, c.n)({
+        return (0, l.n)({
           mutationFn: async (i) => {
-            const a = n.w.Init(u.Er);
+            const a = s.w.Init(u.Er);
             a.Body().set_steamid(e),
               a.Body().set_comment_thread_id(t),
-              a.Body().set_gidcomment(r),
+              a.Body().set_gidcomment(n),
               a.Body().set_reason(i.reason),
               a.Body().set_note(i.message);
             for (const e of i.sanctions) {
@@ -2726,7 +2680,7 @@
                 e.days && t.set_days(e.days),
                 a.Body().add_sanctions(t);
             }
-            const o = await u.BE.SanctionComment(s, a);
+            const o = await u.BE.SanctionComment(r, a);
             if (!o.BSuccess())
               throw new Error(
                 `SanctionComment failed. EResult: ${o.GetEResult()} (${o.GetErrorMessage()})`,
@@ -2737,18 +2691,18 @@
           },
         });
       }
-      function y(e, t, r) {
-        const s = (0, i.KV)(),
+      function x(e, t, n) {
+        const r = (0, i.KV)(),
           a = (0, o.jE)();
-        return (0, c.n)({
+        return (0, l.n)({
           mutationFn: async () => {
-            const i = n.w.Init(u.RX);
+            const i = s.w.Init(u.RX);
             i.Body().set_steamid(e),
               i.Body().set_comment_thread_id(t),
-              i.Body().set_gidcomment(r),
+              i.Body().set_gidcomment(n),
               i.Body().set_report_action(u.du.Pn),
               i.Body().set_resolve(!0),
-              await u.Vi.UpdateCommentReportState(s, i);
+              await u.Vi.UpdateCommentReportState(r, i);
           },
           onSuccess: async () => {
             await a.invalidateQueries({ queryKey: ["get_claimed"] });
@@ -2756,22 +2710,22 @@
         });
       }
     },
-    49845: (e, t, r) => {
+    49845: (e, t, n) => {
       "use strict";
-      function n(e) {
+      function s(e) {
         return "[object Object]" === Object.prototype.toString.call(e);
       }
-      function s(...e) {
+      function r(...e) {
         return JSON.stringify(e, (e, t) => {
           if (
             (function (e) {
-              if (!n(e)) return !1;
+              if (!s(e)) return !1;
               const t = e.constructor;
               if (void 0 === t) return !0;
-              const r = t.prototype;
+              const n = t.prototype;
               return (
-                !!n(r) &&
-                !!Object.prototype.hasOwnProperty.call(r, "isPrototypeOf")
+                !!s(n) &&
+                !!Object.prototype.hasOwnProperty.call(n, "isPrototypeOf")
               );
             })(t)
           ) {
@@ -2779,8 +2733,8 @@
             return (
               Object.keys(t)
                 .sort()
-                .forEach((r) => {
-                  e[r] = t[r];
+                .forEach((n) => {
+                  e[n] = t[n];
                 }),
               e
             );
@@ -2788,267 +2742,258 @@
           return t;
         });
       }
-      r.d(t, { V: () => o });
-      var i = r(90626);
-      r(7850);
+      n.d(t, { V: () => o });
+      var i = n(90626);
+      n(7850);
       const a = (0, i.createContext)({ instances: {}, factories: {} });
       function o(e, t) {
-        var r;
-        const n = (0, i.useContext)(a),
-          o = "string" == typeof e ? e : s(...e);
-        let c = n;
-        for (; c; ) {
-          if (o in c.instances) return c.instances[o];
-          if (o in c.factories) break;
-          c = c.parent;
+        var n;
+        const s = (0, i.useContext)(a),
+          o = "string" == typeof e ? e : r(...e);
+        let l = s;
+        for (; l; ) {
+          if (o in l.instances) return l.instances[o];
+          if (o in l.factories) break;
+          l = l.parent;
         }
-        const l = (
-          null !== (r = null == c ? void 0 : c.factories[o]) && void 0 !== r
-            ? r
+        const c = (
+          null !== (n = null == l ? void 0 : l.factories[o]) && void 0 !== n
+            ? n
             : t
         )();
-        return ((null != c ? c : n).instances[o] = l), l;
+        return ((null != l ? l : s).instances[o] = c), c;
       }
     },
-    42248: (e, t, r) => {
+    95034: (e, t, n) => {
       "use strict";
-      r.d(t, { q: () => i });
-      var n = r(78327),
-        s = r(22837);
-      function i() {
-        return n.TS.IN_CLIENT && (0, s.DOG)(n.TS.LAUNCHER_TYPE);
-      }
-    },
-    95034: (e, t, r) => {
-      "use strict";
-      r.d(t, {
+      n.d(t, {
         Bm: () => a,
-        QD: () => c,
+        QD: () => l,
         f3: () => i,
         iV: () => u,
-        ip: () => l,
+        ip: () => c,
         le: () => o,
       });
-      var n = r(90626),
-        s = r(92757);
+      var s = n(90626),
+        r = n(92757);
       function i(e, t) {
-        let r;
-        if ("string" == typeof e) r = e;
-        else if ("location" in e) r = e.location.search;
+        let n;
+        if ("string" == typeof e) n = e;
+        else if ("location" in e) n = e.location.search;
         else {
           if (!("search" in e)) return;
-          r = e.search;
+          n = e.search;
         }
-        const n = new URLSearchParams(r.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
+        const s = new URLSearchParams(n.substring(1));
+        if (s.has(t)) {
+          const e = s.getAll(t);
           return e[e.length - 1];
         }
       }
-      function a(e, t, r, n = !1) {
-        const s = new URLSearchParams(e.location.search.substring(1));
-        if (null != r && null != r) {
-          if (s.get(t) == r) return;
-          s.set(t, r);
+      function a(e, t, n, s = !1) {
+        const r = new URLSearchParams(e.location.search.substring(1));
+        if (null != n && null != n) {
+          if (r.get(t) == n) return;
+          r.set(t, n);
         } else {
-          if (!s.has(t)) return;
-          s.delete(t);
+          if (!r.has(t)) return;
+          r.delete(t);
         }
+        s
+          ? e.replace(`?${r.toString()}`, { ...e.location.state })
+          : e.push(`?${r.toString()}`);
+      }
+      function o(e, t, n) {
+        a(e, t, n, !0);
+      }
+      function l(e, t) {
+        const n = (0, r.W6)(),
+          o = (0, r.zy)(),
+          l = (0, s.useMemo)(() => {
+            const n = i(o.search, e);
+            return null != n && null != n
+              ? null != t && null != t
+                ? "boolean" == typeof t
+                  ? t.constructor("false" !== n)
+                  : t.constructor(n)
+                : n
+              : t;
+          }, [o.search, e, t]),
+          c = (0, s.useCallback)(
+            (t, s = !1) => {
+              a(n, e, null != t && null != t ? String(t) : null, s);
+            },
+            [n, e],
+          );
+        return [l, c];
+      }
+      function c(e, t, n = !1) {
+        const s = new URLSearchParams(e.location.search.substring(1));
+        for (const e in t)
+          if (t.hasOwnProperty(e)) {
+            const n = t[e];
+            s.delete(e), null != n && null != n && s.append(e, n);
+          }
         n
           ? e.replace(`?${s.toString()}`, { ...e.location.state })
           : e.push(`?${s.toString()}`);
       }
-      function o(e, t, r) {
-        a(e, t, r, !0);
-      }
-      function c(e, t) {
-        const r = (0, s.W6)(),
-          o = (0, s.zy)(),
-          c = (0, n.useMemo)(() => {
-            const r = i(o.search, e);
-            return null != r && null != r
-              ? null != t && null != t
-                ? "boolean" == typeof t
-                  ? t.constructor("false" !== r)
-                  : t.constructor(r)
-                : r
-              : t;
-          }, [o.search, e, t]),
-          l = (0, n.useCallback)(
-            (t, n = !1) => {
-              a(r, e, null != t && null != t ? String(t) : null, n);
-            },
-            [r, e],
-          );
-        return [c, l];
-      }
-      function l(e, t, r = !1) {
-        const n = new URLSearchParams(e.location.search.substring(1));
-        for (const e in t)
-          if (t.hasOwnProperty(e)) {
-            const r = t[e];
-            n.delete(e), null != r && null != r && n.append(e, r);
-          }
-        r
-          ? e.replace(`?${n.toString()}`, { ...e.location.state })
-          : e.push(`?${n.toString()}`);
-      }
       function u(e, t) {
-        l(e, t, !0);
+        c(e, t, !0);
       }
     },
-    38135: (e, t, r) => {
+    38135: (e, t, n) => {
       "use strict";
-      r.d(t, { V: () => b, a: () => _ });
-      var n = r(7850),
-        s = r(90626),
-        i = r(52038),
-        a = r(61859),
-        o = r(95034),
-        c = r(1990),
-        l = r.n(c),
-        u = r(32754),
-        d = r(51272),
-        p = r(76217),
-        m = r(84143),
-        h = r(92757);
-      function b(e) {
+      n.d(t, { V: () => _, a: () => j });
+      var s = n(7850),
+        r = n(90626),
+        i = n(52038),
+        a = n(61859),
+        o = n(95034),
+        l = n(1990),
+        c = n.n(l),
+        u = n(32754),
+        d = n(51272),
+        p = n(76217),
+        m = n(84143),
+        h = n(92757);
+      function _(e) {
         const {
             tabs: t,
-            bDisableRouting: r,
+            bDisableRouting: n,
             startingTab: a,
-            controlledTab: c,
+            controlledTab: l,
             OnTabChanged: u,
             classNameCtn: d,
-            classNameTab: b,
-            classNameTabContent: _,
-            preferredFocus: j,
-            bVerticalTabs: g,
-            bSticky: x,
-            bChecklistMode: v,
+            classNameTab: _,
+            classNameTabContent: j,
+            preferredFocus: v,
+            bVerticalTabs: y,
+            bSticky: b,
+            bChecklistMode: B,
           } = e,
-          y = (0, h.zy)(),
-          B = (0, h.W6)(),
-          [A, S] = (0, s.useState)(() => {
+          x = (0, h.zy)(),
+          f = (0, h.W6)(),
+          [A, S] = (0, r.useState)(() => {
             var e;
             return (
               a ||
-              (!r &&
-              (0, o.f3)(y, "tab") &&
-              null !== (e = (0, o.f3)(y, "tab")) &&
+              (!n &&
+              (0, o.f3)(x, "tab") &&
+              null !== (e = (0, o.f3)(x, "tab")) &&
               void 0 !== e
                 ? e
                 : "")
             );
           });
-        (0, s.useEffect)(() => {
-          if (!e.bDisableRouting && y) {
-            const e = (0, o.f3)(y, "tab");
+        (0, r.useEffect)(() => {
+          if (!e.bDisableRouting && x) {
+            const e = (0, o.f3)(x, "tab");
             e && S(e);
           }
-        }, [y, y.key, e.bDisableRouting, S]);
-        const w = s.useCallback(
+        }, [x, x.key, e.bDisableRouting, S]);
+        const w = r.useCallback(
             (e) => {
               S(e.key),
-                r || (0, o.Bm)(B, "tab", e.key),
+                n || (0, o.Bm)(f, "tab", e.key),
                 null == u || u(e.key),
                 e.onClick && e.onClick(e);
             },
-            [r, B, u],
+            [n, f, u],
           ),
-          T = t.filter((e) => !e.hidden);
-        if (!T.length) return null;
-        const M = null != c ? c : A,
-          k = T.find((e) => e.key === M) || T[0],
-          C = j ? (null != a ? a : T[0].key) : void 0,
-          z = (0, n.jsxs)(n.Fragment, {
+          M = t.filter((e) => !e.hidden);
+        if (!M.length) return null;
+        const T = null != l ? l : A,
+          C = M.find((e) => e.key === T) || M[0],
+          z = v ? (null != a ? a : M[0].key) : void 0,
+          R = (0, s.jsxs)(s.Fragment, {
             children: [
-              (0, n.jsx)(p.Z, {
+              (0, s.jsx)(p.Z, {
                 className: (0, i.A)(
-                  l().GraphicalAssetsTabs,
-                  g && l().GraphicalAssetsTabsVertical,
-                  v && l().ChecklistMode,
-                  x && l().Sticky,
+                  c().GraphicalAssetsTabs,
+                  y && c().GraphicalAssetsTabsVertical,
+                  B && c().ChecklistMode,
+                  b && c().Sticky,
                   d,
                 ),
-                navEntryPreferPosition: j ? m.iU.PREFERRED_CHILD : m.iU.FIRST,
-                children: T.map((e, t) =>
-                  (0, n.jsx)(
-                    f,
+                navEntryPreferPosition: v ? m.iU.PREFERRED_CHILD : m.iU.FIRST,
+                children: M.map((e, t) =>
+                  (0, s.jsx)(
+                    g,
                     {
                       tab: e,
                       OnTabClick: w,
-                      classNameTab: b,
-                      active: e.key === k.key,
-                      preferredFocus: C === e.key,
+                      classNameTab: _,
+                      active: e.key === C.key,
+                      preferredFocus: z === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              k && (0, n.jsx)(p.Z, { className: _, children: k.contents }),
+              C && (0, s.jsx)(p.Z, { className: j, children: C.contents }),
             ],
           });
-        return g
-          ? (0, n.jsx)(p.Z, {
-              className: (0, i.A)(l().GraphicalAssetsTabsLayoutVertical),
-              children: z,
+        return y
+          ? (0, s.jsx)(p.Z, {
+              className: (0, i.A)(c().GraphicalAssetsTabsLayoutVertical),
+              children: R,
             })
-          : z;
+          : R;
       }
-      function _(e) {
-        const { statusType: t = "success", bShowStatusBox: r, children: s } = e;
+      function j(e) {
+        const { statusType: t = "success", bShowStatusBox: n, children: r } = e;
         let a = "";
         return (
           "success" === t
-            ? (a = l().StatusSuccess)
+            ? (a = c().StatusSuccess)
             : "danger" === t
-              ? (a = l().StatusDanger)
+              ? (a = c().StatusDanger)
               : "caution" === t
-                ? (a = l().StatusCaution)
+                ? (a = c().StatusCaution)
                 : "info" === t
-                  ? (a = l().StatusInfo)
-                  : "incomplete" === t && (a = l().StatusIncomplete),
-          (0, n.jsx)("div", {
+                  ? (a = c().StatusInfo)
+                  : "incomplete" === t && (a = c().StatusIncomplete),
+          (0, s.jsx)("div", {
             className: (0, i.A)(
-              l().GraphicalAssetStatus,
+              c().GraphicalAssetStatus,
               a,
-              r ? l().checklistBox : "",
+              n ? c().checklistBox : "",
             ),
-            children: s,
+            children: r,
           })
         );
       }
-      function f(e) {
+      function g(e) {
         const {
           tab: t,
-          OnTabClick: r,
-          classNameTab: s,
+          OnTabClick: n,
+          classNameTab: r,
           active: o,
-          preferredFocus: c,
+          preferredFocus: l,
         } = e;
-        return (0, n.jsx)(d.e7, {
+        return (0, s.jsx)(d.e7, {
           condition: Boolean(t.statusToolTip || t.tooltip),
           wrap: (e) =>
-            (0, n.jsx)(u.he, {
+            (0, s.jsx)(u.he, {
               toolTipContent: t.statusToolTip || t.tooltip,
               children: e,
             }),
-          children: (0, n.jsxs)(p.Z, {
+          children: (0, s.jsxs)(p.Z, {
             className: (0, i.A)(
-              l().GraphicalAssetsTab,
-              o && l().Active,
+              c().GraphicalAssetsTab,
+              o && c().Active,
               o && "ActiveTab",
-              s,
+              r,
             ),
-            onActivate: () => r(t),
-            preferredFocus: c,
+            onActivate: () => n(t),
+            preferredFocus: l,
             children: [
               Boolean(t.vo_warning) &&
-                (0, n.jsx)(u.he, {
+                (0, s.jsx)(u.he, {
                   toolTipContent: t.vo_warning,
-                  children: (0, n.jsx)("div", {
-                    className: l().VOWarning,
+                  children: (0, s.jsx)("div", {
+                    className: c().VOWarning,
                     children: (0, a.we)("#EventEditor_VOWarning"),
                   }),
                 }),
@@ -3057,345 +3002,6 @@
             ],
           }),
         });
-      }
-    },
-    22797: (e, t, r) => {
-      "use strict";
-      r.d(t, { t: () => d });
-      var n = r(7850),
-        s = r(90626),
-        i = r(52038),
-        a = r(20978),
-        o = r.n(a);
-      const c =
-        r.p +
-        "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
-      var l = r(42248),
-        u = r(66418);
-      const d = s.memo(function (e) {
-        const {
-          className: t,
-          size: r,
-          string: a,
-          position: d,
-          static: m,
-          msDelayAppear: h,
-        } = e;
-        let b = [o().LoadingWrapper, "SteamLogoThrobber", p(r)];
-        const [_, f] = s.useState(!h),
-          j = !(0, l.q)();
-        return (
-          (0, s.useEffect)(() => {
-            if (_) return;
-            const e = setTimeout(() => f(!0), h);
-            return () => clearTimeout(e);
-          }, [h, _]),
-          void 0 === a && b.push(o().noString),
-          t && b.push(t),
-          m && b.push(o().Static),
-          (0, n.jsxs)("div", {
-            className: (0, i.A)(
-              "center" == d && o().throbber_center_wrapper,
-              !!h && o().ThrobberDelayAppear,
-              _ && o().Visible,
-            ),
-            children: [
-              _ &&
-                j &&
-                (0, n.jsx)("div", {
-                  className: b.join(" "),
-                  children: (0, n.jsx)("div", {
-                    className: o().NewThrobber,
-                    children: (0, n.jsx)("img", { src: (0, u.YJ)(c) }),
-                  }),
-                }),
-              Boolean(a) &&
-                (0, n.jsx)("div", { className: o().ThrobberText, children: a }),
-            ],
-          })
-        );
-      });
-      s.memo(function (e) {
-        const {
-          className: t,
-          size: r,
-          string: a,
-          position: c,
-          static: l,
-          msDelayAppear: u,
-        } = e;
-        let d = [o().LoadingWrapper, "SteamLogoThrobber", p(r)];
-        const [h, b] = s.useState(!u);
-        return (
-          (0, s.useEffect)(() => {
-            if (h) return;
-            const e = setTimeout(() => b(!0), u);
-            return () => clearTimeout(e);
-          }, [u, h]),
-          void 0 === a && d.push(o().noString),
-          t && d.push(t),
-          l && d.push(o().Static),
-          (0, n.jsxs)("div", {
-            className: (0, i.A)(
-              "center" == c && o().throbber_center_wrapper,
-              !!u && o().ThrobberDelayAppear,
-              h && o().Visible,
-            ),
-            children: [
-              h &&
-                (0, n.jsx)("div", {
-                  className: d.join(" "),
-                  children: (0, n.jsxs)("div", {
-                    className: o().Throbber,
-                    children: [
-                      (0, n.jsx)(m, { className: o().base }),
-                      (0, n.jsx)(m, { className: o().blur }),
-                    ],
-                  }),
-                }),
-              Boolean(a) &&
-                (0, n.jsx)("div", { className: o().ThrobberText, children: a }),
-            ],
-          })
-        );
-      });
-      function p(e) {
-        switch (e) {
-          case "small":
-            return o().throbber_small;
-          case "medium":
-            return o().throbber_medium;
-          case "xlarge":
-            return o().throbber_xlarge;
-          case "xxlarge":
-            return o().throbber_xxlarge;
-          default:
-            return o().throbber_large;
-        }
-      }
-      function m(e) {
-        let t = "SVGIcon_Button SVGIcon_Throbber ";
-        return (
-          e.className && (t += e.className),
-          (0, n.jsxs)("svg", {
-            version: "1.1",
-            id: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: t,
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-            children: [
-              (0, n.jsxs)("g", {
-                className: o().partCircle,
-                children: [
-                  (0, n.jsx)("path", {
-                    className: o().roundOuter,
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundOuter,
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M201.432,101.166",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundOuter,
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-                  }),
-                ],
-              }),
-              (0, n.jsxs)("g", {
-                className: o().mainOutline,
-                children: [
-                  (0, n.jsx)("path", {
-                    className: o().roundFill,
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundOuterOutline,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber01,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber02,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber03,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber04,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber05,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber06,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber07,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber08,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber09,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber10,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber11,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber12,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber13,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber14,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                  (0, n.jsx)("path", {
-                    className: o().roundThrobber15,
-                    strokeLinecap: "butt",
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "6",
-                    strokeMiterlimit: "10",
-                    d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                  }),
-                ],
-              }),
-              (0, n.jsx)("g", {
-                className: o().bottomCircle,
-                children: (0, n.jsx)("path", {
-                  fill: "#ffffff",
-                  d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
-                }),
-              }),
-              (0, n.jsx)("g", {
-                className: o().topCircle,
-                children: (0, n.jsx)("circle", {
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  cx: "161.731",
-                  cy: "101.274",
-                  r: "23.019",
-                }),
-              }),
-            ],
-          })
-        );
       }
     },
   },

@@ -10201,21 +10201,32 @@
             if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
             let _ = _.GetBoundingRectForFocusRing();
             const _ = _.getBoundingClientRect(),
+              _ = _.GetBorderRadiusForFocusRing(),
               _ = {
                 left: _._ - _._,
                 top: _._ - _._,
                 height: _.height,
                 width: _.width,
+                borderRadius: _,
               };
-            _((_) =>
-              _ &&
-              _.left == _.left &&
-              _.top == _.top &&
-              _.height == _.height &&
-              _.width == _.width
+            _((_) => {
+              return _ &&
+                (_ = _).left == (_ = _).left &&
+                  _.top == _.top &&
+                  _.height == _.height &&
+                  _.width == _.width &&
+                  _.borderRadius?.borderTopLeftRadius ==
+                    _.borderRadius?.borderTopLeftRadius &&
+                  _.borderRadius?.borderTopRightRadius ==
+                    _.borderRadius?.borderTopRightRadius &&
+                  _.borderRadius?.borderBottomRightRadius ==
+                    _.borderRadius?.borderBottomRightRadius &&
+                _.borderRadius?.borderBottomLeftRadius ==
+                  _.borderRadius?.borderBottomLeftRadius
                 ? _
-                : _,
-            );
+                : _;
+              var _, _;
+            });
           }, [_, _, _]);
         _.useLayoutEffect(() => _(), [_]),
           _.useLayoutEffect(() => {
@@ -10251,6 +10262,7 @@
             top: _,
             height: _,
             width: _,
+            borderRadius: _,
             target: _,
           } = _,
           _ = {
@@ -10258,6 +10270,7 @@
             top: (_ ?? 0) - 0 + "px",
             height: _ + "px",
             width: _ + "px",
+            ..._,
           };
         return (0, _.jsx)("div", {
           className: _()(_().FocusRing, _),
@@ -10594,7 +10607,9 @@
       function _(_, _) {
         return _(_) && _(_)
           ? _.value === _.value &&
-              Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft)
+              Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft) &&
+              Boolean(_.bShowOnFloatingVRFooter) ==
+                Boolean(_.bShowOnFloatingVRFooter)
           : _ === _;
       }
       !(function (_) {
@@ -11868,16 +11883,30 @@
         GetBoundingRect() {
           return this.m_element?.getBoundingClientRect();
         }
+        GetElementForFocusRingMeasure() {
+          const _ = this.m_element;
+          return this.m_Properties?.focusRingSizeElementID
+            ? (_?.ownerDocument?.getElementById(
+                this.m_Properties.focusRingSizeElementID,
+              ) ?? _)
+            : _;
+        }
         GetBoundingRectForFocusRing() {
-          let _ = this.m_element;
-          return (
-            this.m_Properties?.focusRingSizeElementID &&
-              (_ =
-                _?.ownerDocument?.getElementById(
-                  this.m_Properties.focusRingSizeElementID,
-                ) ?? this.m_element),
-            _?.getBoundingClientRect()
-          );
+          return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
+        }
+        GetBorderRadiusForFocusRing() {
+          if (!this.m_Properties?.focusRingSizeElementID) return;
+          const _ = this.GetElementForFocusRingMeasure();
+          if (!_) return;
+          const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
+          return _
+            ? {
+                borderTopLeftRadius: _.borderTopLeftRadius,
+                borderTopRightRadius: _.borderTopRightRadius,
+                borderBottomRightRadius: _.borderBottomRightRadius,
+                borderBottomLeftRadius: _.borderBottomLeftRadius,
+              }
+            : void 0;
         }
         SetHasFocus(_) {
           this.m_Focused.Set(_);
@@ -13953,6 +13982,18 @@
               1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._),
             GetAppTypeLocKey(_, _) {
               switch (_) {
+                case _._._:
+                  return _ + "_Guide";
+                case _._._:
+                  return _ + "_Hardware";
+                case _._._:
+                  return _ + "_DLC";
+                case _._._:
+                  return _ + "_Music";
+                case _._._:
+                  return _ + "_Series";
+                case _._._:
+                  return _ + "_Demo";
                 case _._._:
                   return _ + "_Software";
                 case _._._:
@@ -25042,10 +25083,12 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
       var _ = {};
       __webpack_require__._(_),
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -25262,10 +25305,12 @@
         _ = 4,
         _ = 5,
         _ = 6,
+        _ = 7,
         _ = 0,
         _ = 1,
         _ = 2,
         _ = 4,
+        _ = 5,
         _ = 6,
         _ = 7,
         _ = 8,
@@ -25359,6 +25404,26 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  agency: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  banned: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  esrb_online_music_not_rated: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  esrb_online_interactions_not_rated: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                   required_age: {
                     _: 10,
                     _: _._.readInt32,
@@ -25450,6 +25515,11 @@
                     _: 2,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  gid: {
+                    _: 76,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                   success: {
                     _: 3,
@@ -28315,8 +28385,78 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.label || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  label: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  content_bbcode: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  banner: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PageSection";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.steam_award || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 10], null);
+            _.Message.initialize(this, _, 0, -1, [1, 10, 13], null);
         }
         static sm_m;
         static sm_mbf;
@@ -28385,6 +28525,17 @@
                     _: 12,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  section: {
+                    _: 13,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  legal_notice_bbcode: {
+                    _: 14,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -28690,6 +28841,11 @@
                     _: 6,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  salepagegid: {
+                    _: 7,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                 },
               }),
@@ -32636,6 +32792,34 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({
+          ownerWindow: window,
+        }),
+        _ = () => (0, _.useContext)(_);
+      function _(_) {
+        const { ownerWindow: _, children: _ } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              ownerWindow: _,
+            }),
+            [_],
+          );
+        return (0, _.createElement)(
+          _.Provider,
+          {
+            value: _,
+          },
+          _,
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       function _(_) {
         return null != _ && void 0 !== _.focus;
       }
@@ -33004,10 +33188,12 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = "function" == typeof matchMedia ? matchMedia : _,
-          _ = (0, _.useMemo)(() => _(_), [_, _]),
+        const { ownerWindow: _ } = (0, _._)(),
+          _ = "function" == typeof _.matchMedia ? _.matchMedia : _,
+          _ = (0, _.useMemo)(() => __webpack_require__(_), [_, _]),
           [_, _] = (0, _.useState)(!!_ && _.matches);
         return (
           (0, _.useEffect)(() => {
@@ -33017,8 +33203,8 @@
             }
             return (
               _(_.matches),
-              __webpack_require__.addEventListener("change", _),
-              () => __webpack_require__.removeEventListener("change", _)
+              _.addEventListener("change", _),
+              () => _.removeEventListener("change", _)
             );
           }, [_]),
           _
@@ -33616,6 +33802,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33711,6 +33898,14 @@
       function _(_) {
         const _ = (0, _._)();
         return (0, _._)(_(_, _));
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "include_links", "links");
+          })(_, _),
+        );
       }
       function _(_) {
         const _ = (0, _._)();
@@ -33835,6 +34030,10 @@
           _.include_screenshots &&
             (function (_, _, _, _) {
               _(_, _, _, "include_screenshots", "screenshots", _);
+            })(_, _, _, _),
+          _.include_links &&
+            (function (_, _, _, _) {
+              _(_, _, _, "include_links", "links", _);
             })(_, _, _, _),
           _.include_trailers &&
             (function (_, _, _, _) {
@@ -34038,7 +34237,7 @@
               _.Body()
                 .store_items()
                 .forEach((_) => {
-                  _.set((0, _._)(_.item_type(), _._()), _);
+                  _.set((0, _._)(_.item_type(), _.gid() ?? _._()), _);
                 }),
               _ &&
                 (function (_, _, _, _) {
@@ -34182,7 +34381,9 @@
                   ? `creator_${_.creatorid}`
                   : "hubcategoryid" in _
                     ? `hubcategory_${_.hubcategoryid}`
-                    : ((0, _._)(_, "Unknown store item id type"), "");
+                    : "salepagegid" in _
+                      ? `salepage_${_.salepagegid}`
+                      : ((0, _._)(_, "Unknown store item id type"), "");
       }
       function _(_, _) {
         switch (_) {
@@ -34199,6 +34400,8 @@
           case _._._:
             return `hubcategory_${_}`;
           case _._._:
+            return `salepage_${_}`;
+          case _._._:
           case _._._:
             return "";
           default:
@@ -34207,7 +34410,8 @@
             );
         }
       }
-      const _ = /^(app|package|bundle|mtx|tag|creator|hubcategory)_(\d*)$/;
+      const _ =
+        /^(app|package|bundle|mtx|tag|creator|hubcategory|salepage)_(\d*)$/;
       function _(_) {
         const _ = _.match(_);
         if (_)
@@ -34235,6 +34439,10 @@
             case "hubcategory":
               return {
                 hubcategoryid: parseInt(_[2]),
+              };
+            case "salepage":
+              return {
+                salepagegid: _[2],
               };
           }
         (0, _._)(!1, `Failed to parse StoreItemID ${_}`);
@@ -34272,6 +34480,12 @@
               return {
                 item_type: _._._,
                 _: parseInt(_[2]),
+              };
+            case "salepage":
+              return {
+                item_type: _._._,
+                _: 0,
+                gid: _[2],
               };
           }
         return {
@@ -34311,6 +34525,12 @@
               item_type: _._._,
               _: _.hubcategoryid,
             };
+          if ("salepagegid" in _)
+            return {
+              item_type: _._._,
+              _: 0,
+              gid: _.salepagegid,
+            };
           (0, _._)(_, "Unknown store item id type");
         }
         return {
@@ -34346,6 +34566,12 @@
             return {
               hubcategoryid: _,
             };
+          case _._._:
+            return _.gid
+              ? {
+                  salepagegid: _.gid,
+                }
+              : void 0;
           case _._._:
           case _._._:
             return;
@@ -34958,12 +35184,12 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
+        _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -35009,8 +35235,8 @@
           (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher"),
           (_[(_.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = {
         m_unPID: 0,
         m_nBrowserID: -1,
@@ -35066,6 +35292,7 @@
       (0, _._)([_._], _.prototype, "OnLinkLoad", null);
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -35123,7 +35350,7 @@
         }
       }
       function _() {
-        const { ownerWindow: _ } = _(),
+        const { ownerWindow: _ } = (0, _._)(),
           _ = _.GetPopupForWindow(_);
         return _?.browser_info || _;
       }
@@ -35165,26 +35392,6 @@
             (_[(_.PopupContextMenu = 3)] = "PopupContextMenu"),
             (_[(_.StandaloneContextMenu = 4)] = "StandaloneContextMenu");
         })(_ || (_ = {}));
-      const _ = _.createContext({
-          ownerWindow: window,
-        }),
-        _ = () => _.useContext(_);
-      function _(_) {
-        const { ownerWindow: _, children: _ } = _,
-          _ = _.useMemo(
-            () => ({
-              ownerWindow: _,
-            }),
-            [_],
-          );
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
-      }
       class _ {
         m_strName;
         m_strTitle;
@@ -36653,15 +36860,24 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       function _(_, _) {
-        return !!_ && "object" == typeof _.SteamClient && _ in _.SteamClient;
-      }
-      function _(_, _) {
-        if (!_) return !1;
-        const [_, _] = _.split(".", 2);
-        return _ && _ && _(_, _) && _ in _.SteamClient[_];
+        const _ = _.lastIndexOf(".");
+        if (-1 == _) return !1;
+        const _ = _.substring(0, _),
+          _ = _.substring(_ + 1),
+          _ = _(_, _);
+        return null !== _ && "function" == typeof _[_];
       }
       function _(_) {
         return _(window, _);
+      }
+      function _(_, _) {
+        const _ = (_) => _ && "object" == typeof _;
+        let _ = _?.SteamClient;
+        for (const _ of _.split(".")) {
+          if (!__webpack_require__(_) || !(_ in _)) return null;
+          _ = _[_];
+        }
+        return __webpack_require__(_) ? _ : null;
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -36758,9 +36974,7 @@
         m_emoticonTrackerCallback = null;
         m_stickerTrackerCallback = null;
         static GetEmoticonURL(_, _) {
-          return _
-            ? _._.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + _
-            : _._.COMMUNITY_CDN_URL + "economy/emoticon/" + _;
+          return (0, _._)(_, _);
         }
         static GetEmoticonReplaceRegex() {
           return _.sm_EmoticonRegex;
@@ -43516,6 +43730,18 @@
             }),
           ],
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _
+          ? _._.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + _
+          : _._.COMMUNITY_CDN_URL + "economy/emoticon/" + _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -51846,6 +52072,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
         _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
@@ -51947,27 +52174,23 @@
           this.m_rgListeners = [];
         }
       }
-      (0, _._)(
-        [_._],
-        class {
-          m_vecCallbacks = [];
-          Push(_) {
-            this.m_vecCallbacks.push(_);
-          }
-          PushArrayRemove(_, _) {
-            this.m_vecCallbacks.push(() => _._(_, _));
-          }
-          Unregister() {
-            for (const _ of this.m_vecCallbacks) _();
-            this.m_vecCallbacks = [];
-          }
-          GetUnregisterFunc() {
-            return this.Unregister;
-          }
-        }.prototype,
-        "Unregister",
-        null,
-      );
+      class _ {
+        m_vecCallbacks = [];
+        Push(_) {
+          this.m_vecCallbacks.push(_);
+        }
+        PushArrayRemove(_, _) {
+          this.m_vecCallbacks.push(() => _._(_, _));
+        }
+        Unregister() {
+          for (const _ of this.m_vecCallbacks) _();
+          this.m_vecCallbacks = [];
+        }
+        GetUnregisterFunc() {
+          return this.Unregister;
+        }
+      }
+      (0, _._)([_._], _.prototype, "Unregister", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -54042,6 +54265,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _,
+        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -54092,6 +54316,10 @@
       function _(_) {
         const _ = _(_);
         return _?.IN_GAMEPADUI;
+      }
+      function _(_) {
+        const _ = _(_);
+        return _?.IN_VR;
       }
       function _() {
         return _._.EREALM === _._.k_ESteamRealmChina;
@@ -54212,8 +54440,6 @@
           IS_STEAMOS: !1,
           ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
-          IN_LOGIN: !1,
-          IN_LOGIN_REFRESH: !1,
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
           DEV_MODE: !1,

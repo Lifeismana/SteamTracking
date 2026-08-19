@@ -123,6 +123,7 @@
       function _(_) {
         return _(_) ? _._ + _.announcement_body?.gid : _.gid;
       }
+      var _ = __webpack_require__("chunkid");
       class _ {
         appid;
         date;
@@ -517,6 +518,7 @@
                   _.jsondata.localized_title_image[_] = _;
                 }
               }),
+              (_.bLoaded = !0),
               _.published
                 ? _.unlisted
                   ? (_.visibility_state = _._.k_EEventStateUnlisted)
@@ -533,7 +535,6 @@
             _.AnnouncementGID &&
               _.AnnouncementGID.length > 1 &&
               this.m_mapAnnouncementBodyToEvent.set(_.AnnouncementGID, _.GID),
-            (_.bLoaded = !0),
             _
           );
         }
@@ -1288,7 +1289,7 @@
         (0, _._)([_._], _.prototype, "FlushEventFromCache", null),
         (0, _._)([_._], _.prototype, "SavePartnerEventSaleAssets", null);
       const _ = new _();
-      window.g_PartnerEventStore = _;
+      (0, _._)("g_PartnerEventStore", _);
       const _ = new _(!0);
       function _(_, _, _ = !1) {
         const [_, _] = (0, _.useState)(() => _.GetClanEventModel(_)),
@@ -1310,7 +1311,7 @@
           }
         );
       }
-      window.g_PartnerEventSummaryStore = _;
+      (0, _._)("g_PartnerEventSummaryStore", _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       function _(_) {

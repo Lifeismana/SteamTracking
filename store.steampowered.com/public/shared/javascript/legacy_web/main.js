@@ -1,17 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10901820";
+var CLSTAMP = "10921148";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      811: (e, t, n) => {
+      800: (e, t, n) => {
         n.d(t, { UE: () => l, pR: () => r, Vz: () => i, nh: () => p });
         var a,
           r,
           i,
-          o = n(259);
+          o = n(201);
         class s {
           m_ActiveInputId;
           m_ActiveInputTimeout;
@@ -237,7 +237,7 @@ var CLSTAMP = "10901820";
           }
         }
       },
-      261: (e, t, n) => {
+      203: (e, t, n) => {
         function a(e, t) {
           return (function (e, t) {
             const n = e.findIndex(t);
@@ -246,7 +246,7 @@ var CLSTAMP = "10901820";
         }
         n.d(t, { x9: () => a });
       },
-      380: (e, t, n) => {
+      538: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -261,9 +261,9 @@ var CLSTAMP = "10901820";
         }
         n.d(t, { o: () => a });
       },
-      259: (e, t, n) => {
+      201: (e, t, n) => {
         n.d(t, { l: () => r });
-        var a = n(261);
+        var a = n(203);
         class r {
           m_vecCallbacks = [];
           Register(e) {
@@ -294,20 +294,29 @@ var CLSTAMP = "10901820";
           }
         }
       },
-      884: (e, t, n) => {
-        function a(e, t) {
-          return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
-        }
-        function r(e) {
+      738: (e, t, n) => {
+        function a(e) {
           return (function (e, t) {
-            if (!e) return !1;
-            const [n, r] = t.split(".", 2);
-            return n && r && a(e, n) && r in e.SteamClient[n];
+            const n = t.lastIndexOf(".");
+            if (-1 == n) return !1;
+            const a = t.substring(0, n),
+              i = t.substring(n + 1),
+              o = r(e, a);
+            return null !== o && "function" == typeof o[i];
           })(window, e);
         }
-        n.d(t, { Dp: () => r });
+        function r(e, t) {
+          const n = (e) => e && "object" == typeof e;
+          let a = e?.SteamClient;
+          for (const e of t.split(".")) {
+            if (!n(a) || !(e in a)) return null;
+            a = a[e];
+          }
+          return n(a) ? a : null;
+        }
+        n.d(t, { Dp: () => a });
       },
-      565: (e, t, n) => {
+      759: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -372,9 +381,9 @@ var CLSTAMP = "10901820";
       ({ 97: "desktop", 616: "gamepad" }[e] || e) +
       ".js?contenthash=" +
       {
-        97: "cf9ab8dd63d386a4a440",
+        97: "5621624fae96724209d1",
         322: "7f701b122fbddc6331bf",
-        616: "6d0937cc10dc94b05f17",
+        616: "d0bec38ec7db4fda2b16",
       }[e]),
     (r.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=19ddf4825411373681e0"),
@@ -585,12 +594,12 @@ var CLSTAMP = "10901820";
         n = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  r(565);
+  r(759);
   var i = r(669),
     o = r.n(i),
     s = r(629),
-    c = r(811),
-    l = r(380);
+    c = r(800),
+    l = r(538);
   let p = [
     { index: 0, type: c.pR.OK, category: "action" },
     { index: 1, type: c.pR.CANCEL, category: "action" },
@@ -645,12 +654,12 @@ var CLSTAMP = "10901820";
     }
   }
   (0, s.Cg)([l.o], u.prototype, "PollGamepads", null);
-  var d = r(884);
+  var d = r(738);
   async function _(e) {
     const { InitializeGamepadNavigation: t } = await Promise.all([
       r.e(322),
       r.e(616),
-    ]).then(r.bind(r, 293));
+    ]).then(r.bind(r, 354));
     t(e);
   }
   r.p.endsWith("shared/") || (r.p = r.p + "shared/"),
@@ -664,7 +673,7 @@ var CLSTAMP = "10901820";
             ? (async function () {
                 const { InitializeForDesktop: e } = await r
                   .e(97)
-                  .then(r.bind(r, 928));
+                  .then(r.bind(r, 810));
                 e();
               })()
             : e.RegisterForGamepadDetected(() => _(e));

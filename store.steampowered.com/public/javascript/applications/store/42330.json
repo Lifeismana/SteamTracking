@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Nem sikerült feldolgozni a GIF-et. Kérjük, kódold újra, vagy változtasd meg a formátumtípust, és próbáld újra.",
     "MediaConvert_InputError_ImageTooSmall": "A kép túl kicsi. Kérjük, legalább 16 x 16 képpontos képet tölts fel.",
     "MediaConvert_InputError_AnimationTooSmall": "Az animáció vagy videó túl kicsi. Kérjük, legalább 16 x 16 képpontos animációt vagy videót tölts fel.",
+    "MediaConvert_InputError_MultipleVideoStreams": "A fájl egynél több videosávot tartalmaz. Kérjük, egyetlen videosávot tartalmazó fájlt tölts fel.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Ez a kép nem animálható. Kérjük, tölts fel egy állóképet.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Képfájlok nem tartalmazhatnak hangsávot.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "AVIF kimenet nem támogatott videóforrásokhoz.",
     "MediaConvert_InternalError_FailedToConvert": "Nem sikerült konvertálni ezt a fájlt. Kérjük, kódold újra a fájlt, mielőtt újrapróbálkoznál.",

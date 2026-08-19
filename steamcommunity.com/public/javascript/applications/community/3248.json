@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Erro ao interpretar GIF. Recodifica ou altera o tipo de formato e tenta de novo.",
     "MediaConvert_InputError_ImageTooSmall": "A imagem é demasiado pequena. Envia uma imagem com as dimensões de, pelo menos, 16 x 16 pixels.",
     "MediaConvert_InputError_AnimationTooSmall": "A animação ou o vídeo é demasiado pequeno. Envia uma animação ou um vídeo com as dimensões de, pelo menos, 16 x 16 pixels.",
+    "MediaConvert_InputError_MultipleVideoStreams": "O ficheiro contém mais de uma faixa de vídeo. Envia um ficheiro com uma única faixa de vídeo.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Esta imagem não pode ser animada. Envia uma imagem estática.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Ficheiros de imagem não podem conter faixas de áudio.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "Output AVIF não é suportado para fontes de vídeo.",
     "MediaConvert_InternalError_FailedToConvert": "Falha ao converter este ficheiro. Recodifica o ficheiro antes de tentar de novo.",

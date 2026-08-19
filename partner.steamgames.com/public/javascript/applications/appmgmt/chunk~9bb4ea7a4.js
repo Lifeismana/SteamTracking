@@ -5325,11 +5325,12 @@
                     br: n.qM.readBool,
                     bw: n.gp.writeBool,
                   },
-                  completion_achievements: {
+                  completed_achievements: {
                     n: 3,
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
+                  is_completed: { n: 4, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             Ae.sm_m

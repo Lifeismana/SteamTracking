@@ -3,7 +3,7 @@
 (self.webpackChunkHelp = self.webpackChunkHelp || []).push([
   [1574],
   {
-    69041: (e) => {
+    9041: (e) => {
       e.exports = {
         Button: "_0BH1ydyFmSnUvoVK2hIc",
         "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
@@ -20,7 +20,7 @@
         MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
       };
     },
-    73406: (e) => {
+    3406: (e) => {
       e.exports = {
         Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
         LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
@@ -34,10 +34,10 @@
         ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
-    44041: (e) => {
+    4041: (e) => {
       e.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
     },
-    68875: (e) => {
+    8875: (e) => {
       e.exports = {
         Flex: "_3nHL7awgK1Qei1XivGvHMK",
         Direction: "_3JCkAyd9cnB90tRcDLPp4W",
@@ -50,7 +50,7 @@
         Inline: "LOeaKjPDMbdcAB54IFgyX",
       };
     },
-    75180: (e) => {
+    5180: (e) => {
       e.exports = {
         Grid: "_2IVd64AHN6R428cgcPqW7M",
         Display: "_2PUyyAEGuZenuwES7VJvQO",
@@ -68,7 +68,7 @@
         Gap: "c0C2uHpDLCegllhH1rM3M",
       };
     },
-    88122: (e) => {
+    8122: (e) => {
       e.exports = {
         "m-0": "_3NvasCX7YWBZpC8aibkm0E",
         "m-1": "_37cUiZ5UzC1qHmlFJaMIAr",
@@ -288,7 +288,7 @@
         AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
       };
     },
-    39049: (e) => {
+    9049: (e) => {
       e.exports = {
         Heading: "_12ldq1_X5RuLWAAs_ODwt7",
         "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
@@ -302,7 +302,7 @@
         "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
       };
     },
-    65274: (e) => {
+    5274: (e) => {
       e.exports = {
         Text: "f6hU22EA7Z8peFWZVBJU",
         Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
@@ -321,7 +321,7 @@
         WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
       };
     },
-    50122: (e) => {
+    122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
         TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
@@ -332,10 +332,10 @@
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
     },
-    91239: (e) => {
+    1239: (e) => {
       e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
     },
-    74840: (e) => {
+    4840: (e) => {
       e.exports = {
         GlobalFooter: "_291ttHtxyu5obiKzor2G9G",
         LegalNotice: "_1y5BgqyS1zWfS5kYC34pV9",
@@ -343,22 +343,22 @@
         LinkColumnHeading: "g8vToPr0EO3CpytRyimNA",
       };
     },
-    60859: (e) => {
+    859: (e) => {
       e.exports = {
         SteamChinaFooter: "_1xP-wMjwBUZyEOyfSNfAYV",
         FooterContent: "_3yFMcIFF5seXRG2z7Eb08C",
         NavLinks: "_2hZemvW0chMhSn36Vr0RF9",
       };
     },
-    83403: (e, s, r) => {
+    3403: (e, s, r) => {
       "use strict";
       r.r(s), r.d(s, { GlobalFooter: () => Ye });
       var t = r(7850),
         n = r(8871),
-        o = r(90626),
+        o = r(626),
         i = r(7745),
-        a = r(55947),
-        c = r(74882);
+        a = r(5947),
+        c = r(4882);
       function l(e) {
         const { children: s, "flow-children": r, ...l } = e,
           { gamepadEvents: p } = (0, a.C7)(e);
@@ -374,9 +374,9 @@
           children: o.cloneElement(s, { ...s.props, ref: m }),
         });
       }
-      var p = r(64238),
+      var p = r(4238),
         h = r.n(p),
-        d = r(37647);
+        d = r(7647);
       const C = d.IE.reduce((e, s, r) => ((e[s] = r), e), {});
       function m(e, s) {
         if ("object" != typeof e) return e;
@@ -474,7 +474,7 @@
       function g(e, s) {
         return e.startsWith("text") ? `var(--color-${e}-${s})` : x(e);
       }
-      var v = r(88122);
+      var v = r(8122);
       const H = [
           { prop: "margin", responsive: !0, className: (e) => v[`m-${e}`] },
           { prop: "marginX", responsive: !0, className: (e) => v[`mx-${e}`] },
@@ -729,8 +729,8 @@
             cssProperty: "--aspect-ratio",
           },
         ];
-      var y = r(68875),
-        w = r(88272);
+      var y = r(8875),
+        w = r(8272);
       function b(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
           a = (0, w.Qn)(),
@@ -796,8 +796,8 @@
       function L(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
-      var V = r(39049),
-        N = r(65274);
+      var V = r(9049),
+        N = r(5274);
       function z(e) {
         const { as: s = "span", ref: r, className: n, ...o } = e,
           i = s;
@@ -858,7 +858,7 @@
           },
         ];
       const R = o.createContext({ depth: 0 });
-      var T = r(91239);
+      var T = r(1239);
       function k() {
         return T.Reset;
       }
@@ -892,8 +892,8 @@
           className: (e) => V[`HeadingSize-${e}`],
         },
       ];
-      var Z = r(50122),
-        U = r(45699);
+      var Z = r(122),
+        U = r(5699);
       function B(e) {
         const { underline: s = "auto", focusable: r, navProps: n, ...o } = e,
           i = (0, w.Qn)(),
@@ -907,9 +907,9 @@
         ...M,
         { prop: "underline", className: (e) => Z[`Underline-${e}`] },
       ];
-      var W = r(69041),
-        O = r(73406),
-        G = r(44041);
+      var W = r(9041),
+        O = r(3406),
+        G = r(4041);
       function I(e) {
         const { as: s = "div", focusable: r, navProps: n, ref: o, ...i } = e,
           a = (0, w.Qn)(),
@@ -921,7 +921,7 @@
           : d;
       }
       const D = j;
-      var K = r(66922);
+      var K = r(6922);
       function Y(e) {
         const {
             size: s = "3",
@@ -1062,8 +1062,8 @@
             ? (0, t.jsx)(U.Ii, { ...d, ...(c || {}), focusable: a })
             : (0, t.jsx)("a", { ...d });
         };
-      var se = r(44167),
-        re = r(75180);
+      var se = r(4167),
+        re = r(5180);
       function te(e) {
         const { as: s = "div", ref: r, focusable: n, navProps: o, ...i } = e,
           a = (0, w.Qn)(),
@@ -1202,23 +1202,23 @@
         }
         return t.push(e.slice(a)), o.createElement(o.Fragment, null, ...t);
       }
-      var ae = r(91933),
-        ce = r(38861);
+      var ae = r(1933),
+        ce = r(8861);
       function le() {
         return "desktop" === (0, ae.j_)(ce.k1);
       }
       function pe() {
         le() && (0, ae.Y1)(ce.k1), "location" in window && location.reload();
       }
-      var he = r(66418),
-        de = r(60014),
-        Ce = r(74840),
-        me = r(73788),
-        _e = r(38889),
-        fe = r(94621),
-        ue = r(85585),
+      var he = r(6418),
+        de = r(14),
+        Ce = r(4840),
+        me = r(3788),
+        _e = r(8889),
+        fe = r(4621),
+        ue = r(5585),
         xe = r(7445),
-        ge = r(81393);
+        ge = r(1393);
       const ve = (0, o.createContext)(null);
       function He(e) {
         return (0, w.Qn)()
@@ -1421,7 +1421,7 @@
         },
         FocusManager: He,
       };
-      r(42327);
+      r(2327);
       function Se(e) {
         const {
             children: s,
@@ -1449,7 +1449,7 @@
           ],
         });
       }
-      var Le = r(60859),
+      var Le = r(859),
         Ve = r.n(Le);
       function Ne() {
         return (0, t.jsxs)("svg", {
@@ -1722,37 +1722,37 @@
       }
       var Te = r(4038);
       const ke = {};
-      (ke.arabic = () => r.e(2560).then(r.t.bind(r, 42560, 19))),
-        (ke.brazilian = () => r.e(7442).then(r.t.bind(r, 37442, 19))),
-        (ke.bulgarian = () => r.e(9945).then(r.t.bind(r, 39945, 19))),
-        (ke.czech = () => r.e(5059).then(r.t.bind(r, 55059, 19))),
-        (ke.danish = () => r.e(9605).then(r.t.bind(r, 19605, 19))),
-        (ke.dutch = () => r.e(3366).then(r.t.bind(r, 13366, 19))),
-        (ke.english = () => r.e(4468).then(r.t.bind(r, 74468, 19))),
-        (ke.finnish = () => r.e(1655).then(r.t.bind(r, 31655, 19))),
-        (ke.french = () => r.e(1580).then(r.t.bind(r, 21580, 19))),
+      (ke.arabic = () => r.e(2560).then(r.t.bind(r, 2560, 19))),
+        (ke.brazilian = () => r.e(7442).then(r.t.bind(r, 7442, 19))),
+        (ke.bulgarian = () => r.e(9945).then(r.t.bind(r, 9945, 19))),
+        (ke.czech = () => r.e(5059).then(r.t.bind(r, 5059, 19))),
+        (ke.danish = () => r.e(9605).then(r.t.bind(r, 9605, 19))),
+        (ke.dutch = () => r.e(3366).then(r.t.bind(r, 3366, 19))),
+        (ke.english = () => r.e(4468).then(r.t.bind(r, 4468, 19))),
+        (ke.finnish = () => r.e(1655).then(r.t.bind(r, 1655, 19))),
+        (ke.french = () => r.e(1580).then(r.t.bind(r, 1580, 19))),
         (ke.german = () => r.e(5666).then(r.t.bind(r, 5666, 19))),
-        (ke.greek = () => r.e(2936).then(r.t.bind(r, 22936, 19))),
-        (ke.hungarian = () => r.e(2173).then(r.t.bind(r, 52173, 19))),
-        (ke.indonesian = () => r.e(412).then(r.t.bind(r, 80412, 19))),
-        (ke.italian = () => r.e(9468).then(r.t.bind(r, 29468, 19))),
-        (ke.japanese = () => r.e(2811).then(r.t.bind(r, 52811, 19))),
-        (ke.koreana = () => r.e(6139).then(r.t.bind(r, 76139, 19))),
-        (ke.latam = () => r.e(7267).then(r.t.bind(r, 77267, 19))),
-        (ke.malay = () => r.e(8844).then(r.t.bind(r, 88844, 19))),
-        (ke.norwegian = () => r.e(5964).then(r.t.bind(r, 85964, 19))),
-        (ke.polish = () => r.e(6509).then(r.t.bind(r, 26509, 19))),
-        (ke.portuguese = () => r.e(8233).then(r.t.bind(r, 58233, 19))),
-        (ke.romanian = () => r.e(8727).then(r.t.bind(r, 48727, 19))),
-        (ke.russian = () => r.e(8973).then(r.t.bind(r, 98973, 19))),
-        (ke.schinese = () => r.e(9720).then(r.t.bind(r, 49720, 19))),
-        (ke.spanish = () => r.e(1924).then(r.t.bind(r, 31924, 19))),
-        (ke.swedish = () => r.e(7925).then(r.t.bind(r, 17925, 19))),
-        (ke.tchinese = () => r.e(9259).then(r.t.bind(r, 89259, 19))),
-        (ke.thai = () => r.e(5474).then(r.t.bind(r, 25474, 19))),
-        (ke.turkish = () => r.e(2164).then(r.t.bind(r, 12164, 19))),
-        (ke.ukrainian = () => r.e(2626).then(r.t.bind(r, 52626, 19))),
-        (ke.vietnamese = () => r.e(6515).then(r.t.bind(r, 66515, 19)));
+        (ke.greek = () => r.e(2936).then(r.t.bind(r, 2936, 19))),
+        (ke.hungarian = () => r.e(2173).then(r.t.bind(r, 2173, 19))),
+        (ke.indonesian = () => r.e(412).then(r.t.bind(r, 412, 19))),
+        (ke.italian = () => r.e(9468).then(r.t.bind(r, 9468, 19))),
+        (ke.japanese = () => r.e(2811).then(r.t.bind(r, 2811, 19))),
+        (ke.koreana = () => r.e(6139).then(r.t.bind(r, 6139, 19))),
+        (ke.latam = () => r.e(7267).then(r.t.bind(r, 7267, 19))),
+        (ke.malay = () => r.e(8844).then(r.t.bind(r, 8844, 19))),
+        (ke.norwegian = () => r.e(5964).then(r.t.bind(r, 5964, 19))),
+        (ke.polish = () => r.e(6509).then(r.t.bind(r, 6509, 19))),
+        (ke.portuguese = () => r.e(8233).then(r.t.bind(r, 8233, 19))),
+        (ke.romanian = () => r.e(8727).then(r.t.bind(r, 8727, 19))),
+        (ke.russian = () => r.e(8973).then(r.t.bind(r, 8973, 19))),
+        (ke.schinese = () => r.e(9720).then(r.t.bind(r, 9720, 19))),
+        (ke.spanish = () => r.e(1924).then(r.t.bind(r, 1924, 19))),
+        (ke.swedish = () => r.e(7925).then(r.t.bind(r, 7925, 19))),
+        (ke.tchinese = () => r.e(9259).then(r.t.bind(r, 9259, 19))),
+        (ke.thai = () => r.e(5474).then(r.t.bind(r, 5474, 19))),
+        (ke.turkish = () => r.e(2164).then(r.t.bind(r, 2164, 19))),
+        (ke.ukrainian = () => r.e(2626).then(r.t.bind(r, 2626, 19))),
+        (ke.vietnamese = () => r.e(6515).then(r.t.bind(r, 6515, 19)));
       const Ae = (0, Te.l)(async function (e) {
         if (ke[e]) return ke[e]();
       });

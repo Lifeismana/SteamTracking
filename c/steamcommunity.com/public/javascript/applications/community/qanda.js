@@ -3,6 +3,52 @@
   {
     chunkid: (module) => {
       module.exports = {
+        LoadingWrapper: "_2wAKy-0ZkO_vhbiQCP9MgE",
+        Static: "_1QfwpLmLTSuiIRLDzdY_7l",
+        none: "_1F0lzP-Krz_y5P9ewZEvBD",
+        bottomCircle: "_2qjZm0dB7I6lcRkZhNTqvD",
+        noString: "_1Sy0pXVZOdWbgouFyD2zJj",
+        Throbber: "lYUEjD8Qh3GM_ZrZeLwpI",
+        throbber_small: "_2zbyh5jEDlV5HVD3iUve-k",
+        throbber_medium: "_2CphUsHNDgIWItNIzeIldY",
+        throbber_large: "_1x18vR7Qop8v8_G8qSR6CL",
+        throbber_center_wrapper: "_3IYPzqtvB2ZE7x710d5x2C",
+        ThrobberText: "_21nVi2jNuF_prxLY1mAaKK",
+        blur: "_1ctjA2yjeB21eCDj_r1mVz",
+        ThrobberRoundLoop: "_1O-cWE6nuIVO3x6-Onw0IU",
+        roundOuterOutline: "_1Vv--mA6PueyEKXXMTwljt",
+        roundOuter: "_2K0LzwjOXDopMHoqY_v_CO",
+        roundFill: "_3sQFkavAEPhliH6DiFmHRH",
+        ThrobberFillLoop: "ofdi9VLSRZ5W98WsXVHiq",
+        topCircle: "_1LZffuoDq-N25wNHckxsf",
+        circlePulse: "_1XN6ZJ1l8nVoUxp1WnOBqw",
+        ThrobberTopCircleLoop: "_1jALk36CiS_T9Pg7vBjpIQ",
+        ThrobberBottomCircleLoop: "_1KvOgdKiNE9XuSYUau3hKW",
+        roundThrobber15: "_2LGHpu_-ihfOhQwdfR3Kiy",
+        roundThrobber14: "_2FGCneH2AemMrIrZnZskw_",
+        roundThrobber13: "_1X-5j16jaQntVrZfadibyc",
+        roundThrobber12: "_1pj1Q3Ef4FdHDdl9QEtpxp",
+        roundThrobber11: "xFmZaMe5nZpoTc5PQBKn3",
+        roundThrobber10: "_3MGYowzMQ6TwbH3fu9SVjt",
+        roundThrobber09: "ktVJ42jiVhWEVV9O6z2FK",
+        roundThrobber08: "_3s_7my869lIOj-1vnqJ39y",
+        roundThrobber07: "_11MVp53Me_frOuaJfsQ4FE",
+        roundThrobber06: "_2cl-maglen-RF0YQjShgqG",
+        roundThrobber05: "_3-JE0FpIzECzeqtd5cyjGI",
+        roundThrobber04: "_1xNIKvHdzLhBldONo6yIZs",
+        roundThrobber03: "_1S17yicfcrPc11m83ydGp3",
+        roundThrobber02: "_1-oUJqmCLOoGqVJz5dgj6J",
+        roundThrobber01: "_2tXgejjqNKy6cSX1Lv7PrG",
+        ThrobberRoundLoopThickness: "_1fs4RGcMBRzbQQirDBiFoM",
+        throbber_xlarge: "_1gYeZMYKBDqNpVuw58_LCl",
+        throbber_xxlarge: "_3j-p4JOqdpaF4obGtIeAB",
+        ThrobberDelayAppear: "I3aEq3lbK7Pm8ujENvtri",
+        Visible: "_2SwSJd-DlX2dRiDGxZWHI5",
+        NewThrobber: "_1m8iQOSVziKDHiInrfskv_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
         SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
@@ -66,48 +112,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_, _) {
-        return new (_())(
-          async (_) => {
-            const _ = [..._],
-              _ = await _.xtC.GetPlayerLinkDetails(_, {
-                steamids: _,
-              }),
-              _ = new Map();
-            return (
-              _.Body()
-                .accounts()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  _.set(_.public_data.steamid, _);
-                }),
-              __webpack_require__.map((_) => {
-                var _;
-                return null !== (_ = _.get(_)) && void 0 !== _ ? _ : null;
-              })
-            );
-          },
-          {
-            maxBatchSize: 100,
-            cache: !1,
-            ..._,
-          },
-        );
-      }
-      function _(_) {
-        return (0, _._)("PlayerLinkDetails", () => _(_));
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -134,482 +138,365 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
-      const _ = 2,
-        _ = 4,
-        _ = 8,
-        _ = 512,
-        _ = 1024,
-        _ = 2048;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      function _(_) {
-        return "[object Object]" === Object.prototype.toString.call(_);
-      }
-      function _(..._) {
-        return JSON.stringify(_, (_, _) => {
-          if (
-            (function (_) {
-              if (!_(_)) return !1;
-              const _ = _.constructor;
-              if (void 0 === _) return !0;
-              const _ = _.prototype;
-              return (
-                !!_(_) &&
-                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
-              );
-            })(_)
-          ) {
-            const _ = {};
-            return (
-              Object.keys(_)
-                .sort()
-                .forEach((_) => {
-                  _[_] = _[_];
-                }),
-              _
-            );
-          }
-          return _;
-        });
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      const _ = (0, _.createContext)({
-        instances: {},
-        factories: {},
-      });
-      function _(_, _) {
-        var _;
-        const _ = (0, _.useContext)(_),
-          _ = "string" == typeof _ ? _ : _(..._);
-        let _ = _;
-        for (; _; ) {
-          if (_ in _.instances) return _.instances[_];
-          if (_ in _.factories) break;
-          _ = _.parent;
-        }
-        const _ = (
-          null !== (_ = null == _ ? void 0 : _.factories[_]) && void 0 !== _
-            ? _
-            : _
-        )();
-        return ((null != _ ? _ : _).instances[_] = _), _;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _._,
-        _: () => _,
-        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ =
+        __webpack_require__._ +
+        "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        let _ = "offline";
+      const _ = _.memo(function (_) {
+        const {
+          className: _,
+          size: _,
+          string: _,
+          position: _,
+          static: _,
+          msDelayAppear: _,
+        } = _;
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
+        const [_, _] = _.useState(!_),
+          _ = !(0, _._)();
         return (
-          _ &&
-            (_.is_ingame
-              ? (_ = "ingame")
-              : _.m_broadcastAccountId
-                ? (_ = "watchingbroadcast")
-                : _.is_online && (_ = "online"),
-            _.is_awayOrSnooze && (_ += " awayOrSnooze")),
-          _
+          (0, _.useEffect)(() => {
+            if (_) return;
+            const _ = setTimeout(() => _(!0), _);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          void 0 === _ && _.push(_().noString),
+          _ && _.push(_),
+          _ && _.push(_().Static),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
+              _ &&
+                _ &&
+                (0, _.jsx)("div", {
+                  className: _.join(" "),
+                  children: (0, _.jsx)("div", {
+                    className: _().NewThrobber,
+                    children: (0, _.jsx)("img", {
+                      src: (0, _._)(_),
+                    }),
+                  }),
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  className: _().ThrobberText,
+                  children: _,
+                }),
+            ],
+          })
+        );
+      });
+      _.memo(function (_) {
+        const {
+          className: _,
+          size: _,
+          string: _,
+          position: _,
+          static: _,
+          msDelayAppear: _,
+        } = _;
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
+        const [_, _] = _.useState(!_);
+        return (
+          (0, _.useEffect)(() => {
+            if (_) return;
+            const _ = setTimeout(() => _(!0), _);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          void 0 === _ && _.push(_().noString),
+          _ && _.push(_),
+          _ && _.push(_().Static),
+          (0, _.jsxs)("div", {
+            className: (0, _._)(
+              "center" == _ && _().throbber_center_wrapper,
+              !!_ && _().ThrobberDelayAppear,
+              _ && _().Visible,
+            ),
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _.join(" "),
+                  children: (0, _.jsxs)("div", {
+                    className: _().Throbber,
+                    children: [
+                      (0, _.jsx)(_, {
+                        className: _().base,
+                      }),
+                      (0, _.jsx)(_, {
+                        className: _().blur,
+                      }),
+                    ],
+                  }),
+                }),
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  className: _().ThrobberText,
+                  children: _,
+                }),
+            ],
+          })
+        );
+      });
+      function _(_) {
+        switch (_) {
+          case "small":
+            return _().throbber_small;
+          case "medium":
+            return _().throbber_medium;
+          case "xlarge":
+            return _().throbber_xlarge;
+          case "xxlarge":
+            return _().throbber_xxlarge;
+          default:
+            return _().throbber_large;
+        }
+      }
+      function _(_) {
+        let _ = "SVGIcon_Button SVGIcon_Throbber ";
+        return (
+          _.className && (_ += _.className),
+          (0, _.jsxs)("svg", {
+            version: "1.1",
+            _: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: _,
+            _: "0px",
+            _: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, _.jsxs)("g", {
+                className: _().partCircle,
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M201.432,101.166",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuter,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("g", {
+                className: _().mainOutline,
+                children: [
+                  (0, _.jsx)("path", {
+                    className: _().roundFill,
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundOuterOutline,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber01,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber02,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber03,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber04,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber05,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber06,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber07,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber08,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber09,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber10,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber11,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber12,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber13,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber14,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                  (0, _.jsx)("path", {
+                    className: _().roundThrobber15,
+                    strokeLinecap: "butt",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    _: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                  }),
+                ],
+              }),
+              (0, _.jsx)("g", {
+                className: _().bottomCircle,
+                children: (0, _.jsx)("path", {
+                  fill: "#ffffff",
+                  _: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                }),
+              }),
+              (0, _.jsx)("g", {
+                className: _().topCircle,
+                children: (0, _.jsx)("circle", {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  _: "161.731",
+                  _: "101.274",
+                  _: "23.019",
+                }),
+              }),
+            ],
+          })
         );
       }
-      class _ {
-        constructor(_) {
-          (this.m_bInitialized = !1),
-            (this.m_ePersonaState = _.cU3),
-            (this.m_unGamePlayedAppID = 0),
-            (this.m_gameid = "0"),
-            (this.m_unPersonaStateFlags = 0),
-            (this.m_strPlayerName = ""),
-            (this.m_strAvatarHash = _._),
-            (this.m_strAccountName = ""),
-            (this.m_rtLastSeenOnline = 0),
-            (this.m_strGameExtraInfo = ""),
-            (this.m_unGameServerIP = 0),
-            (this.m_unGameServerPort = 0),
-            (this.m_game_lobby_id = ""),
-            (this.m_bPlayerNamePending = !1),
-            (this.m_bAvatarPending = !1),
-            (this.m_broadcastId = void 0),
-            (this.m_broadcastAccountId = void 0),
-            (this.m_broadcastAppId = void 0),
-            (this.m_broadcastViewerCount = void 0),
-            (this.m_strBroadcastTitle = void 0),
-            (this.m_bCommunityBanned = void 0),
-            (this.m_eGamingDeviceType = _.eSB),
-            (this.m_mapRichPresence = _._.map()),
-            (this.m_bNameInitialized = !1),
-            (this.m_bStatusInitialized = !1),
-            (this.m_strProfileURL = void 0),
-            (0, _._)(this),
-            (this.m_steamid = _);
-        }
-        Reset() {
-          (this.m_ePersonaState = _.cU3),
-            (this.m_unGamePlayedAppID = 0),
-            (this.m_gameid = "0"),
-            (this.m_strGameExtraInfo = ""),
-            (this.m_unGameServerIP = 0),
-            (this.m_unGameServerPort = 0),
-            (this.m_game_lobby_id = ""),
-            this.m_mapRichPresence.clear(),
-            (this.m_broadcastId = void 0),
-            (this.m_broadcastAccountId = void 0),
-            (this.m_broadcastAppId = void 0),
-            (this.m_broadcastViewerCount = void 0),
-            (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = _.eSB);
-        }
-        GetAccountID() {
-          return this.m_steamid.GetAccountID();
-        }
-        GetSteamIDAsString() {
-          return this.m_steamid.ConvertTo64BitString();
-        }
-        get is_online() {
-          return this.m_ePersonaState != _.cU3 && this.m_ePersonaState != _._3b;
-        }
-        get is_ingame() {
-          return (
-            this.is_online &&
-            (0 != this.m_unGamePlayedAppID || "0" != this.m_gameid)
-          );
-        }
-        get is_watchingbroadcast() {
-          return !!this.m_broadcastAccountId;
-        }
-        get is_in_nonsteam_game() {
-          return 0 == this.m_unGamePlayedAppID && "0" != this.m_gameid;
-        }
-        get is_in_joinable_game() {
-          return (
-            this.has_joinable_game_flag ||
-            this.is_in_valid_lobby ||
-            this.has_server_ip
-          );
-        }
-        get has_joinable_game_flag() {
-          var _;
-          return (
-            0 !=
-            ((null !== (_ = this.m_unPersonaStateFlags) && void 0 !== _
-              ? _
-              : 0) &
-              _._)
-          );
-        }
-        get connect_string() {
-          return this.m_mapRichPresence.get("connect");
-        }
-        get is_in_valid_lobby() {
-          return null != this.m_game_lobby_id && "0" != this.m_game_lobby_id;
-        }
-        get has_server_ip() {
-          return 0 != this.m_unGameServerIP;
-        }
-        get is_awayOrSnooze() {
-          return this.m_ePersonaState == _.PrD || this.m_ePersonaState == _.vPz;
-        }
-        HasStateFlag(_) {
-          var _;
-          return (
-            0 !=
-            ((null !== (_ = this.m_unPersonaStateFlags) && void 0 !== _
-              ? _
-              : 0) &
-              _)
-          );
-        }
-        get last_seen_online() {
-          return this.m_rtLastSeenOnline;
-        }
-        ClearStateOnDisconnect() {
-          this.m_ePersonaState != _.cU3 && this.Reset();
-        }
-        get is_golden() {
-          return this.HasStateFlag(_._);
-        }
-        GetCurrentGameName() {
-          return this.m_strGameExtraInfo
-            ? this.m_strGameExtraInfo
-            : this.m_unGamePlayedAppID
-              ? _._.GetAppInfo(this.m_unGamePlayedAppID).name
-              : "";
-        }
-        GetCurrentGameIconURL() {
-          return this.m_unGamePlayedAppID
-            ? _._.GetAppInfo(this.m_unGamePlayedAppID).icon_url
-            : "";
-        }
-        BIsAppInfoReady() {
-          return (
-            !this.m_unGamePlayedAppID ||
-            _._.GetAppInfo(this.m_unGamePlayedAppID).is_initialized
-          );
-        }
-        HasCurrentGameRichPresence() {
-          return this.m_mapRichPresence.has("steam_display");
-        }
-        HasRichPresenceForViewGameInfo() {
-          return !!(
-            this.m_mapRichPresence.has("status") ||
-            this.m_mapRichPresence.has("connect") ||
-            this.m_mapRichPresence.has("connect_private")
-          );
-        }
-        GetCurrentGameRichPresence() {
-          if (this.HasCurrentGameRichPresence()) {
-            let _ = _._.GetRichPresenceLoc(this.m_unGamePlayedAppID);
-            if (_) {
-              let _ = this.m_mapRichPresence.get("steam_display");
-              return _.Localize(_, this.m_mapRichPresence);
-            }
-          } else if (this.HasStateFlag(_._))
-            return (0, _._)("#PersonaStateRemotePlayTogether");
-          return "";
-        }
-        GetCurrentGameStatus() {
-          return (
-            this.GetCurrentGameRichPresence() ||
-            this.m_mapRichPresence.get("status") ||
-            ""
-          );
-        }
-        GetOfflineStatusUpdateRate() {
-          if (0 == this.last_seen_online) return 3e4;
-          const _ = 3600;
-          let _ = 1e3;
-          const _ = _._.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return (_ *= _ > 86400 ? _ : _ > 7200 ? 60 : 15), _;
-        }
-        GetOfflineStatusTime() {
-          if (0 == this.last_seen_online)
-            return (0, _._)("#PersonaStateOffline");
-          let _ = this.GetOfflineStatusUpdateRate();
-          (!_._.IN_MOBILE || _ <= 60) && (0, _._)(_);
-          let _ = _._.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return _ < 60
-            ? (0, _._)("#PersonaStateLastSeen_JustNow")
-            : (0, _._)("#PersonaStateLastSeen", (0, _._)(_));
-        }
-        GetLocalizedOnlineStatus() {
-          switch (this.m_ePersonaState) {
-            case _.cU3:
-            case _._3b:
-              return this.GetOfflineStatusTime();
-            case _.UXk:
-              return (0, _._)("#PersonaStateOnline");
-            case _.wcG:
-              return (0, _._)("#PersonaStateBusy");
-            case _.PrD:
-              return (0, _._)("#PersonaStateAway");
-            case _.vPz:
-              return (0, _._)("#PersonaStateSnooze");
-            case _.Hrn:
-              return (0, _._)("#PersonaStateLookingToTrade");
-            case _.HAb:
-              return (0, _._)("#PersonaStateLookingToPlay");
-            default:
-              return "";
-          }
-        }
-        get has_public_party_beacon() {
-          return this.m_mapRichPresence.has("__beacon") && this.is_ingame;
-        }
-        get player_group() {
-          return this.m_mapRichPresence.has("steam_player_group")
-            ? this.m_mapRichPresence.get("steam_player_group")
-            : "";
-        }
-        get player_group_size() {
-          return this.m_mapRichPresence.has("steam_player_group_size")
-            ? Number.parseInt(
-                this.m_mapRichPresence.get("steam_player_group_size"),
-              )
-            : 0;
-        }
-        get online_state() {
-          return this.is_online
-            ? this.is_ingame
-              ? "in-game"
-              : this.m_broadcastAccountId
-                ? "watchingbroadcast"
-                : "online"
-            : "offline";
-        }
-        BHasAvatarSet() {
-          return this.m_strAvatarHash != _._;
-        }
-        get avatar_url() {
-          return (0, _._)(this.m_strAvatarHash);
-        }
-        get avatar_url_medium() {
-          return (0, _._)(this.m_strAvatarHash, "medium");
-        }
-        get avatar_url_full() {
-          return (0, _._)(this.m_strAvatarHash, "full");
-        }
-        static SortStatusComparator(_, _, _) {
-          if (_.has_public_party_beacon) {
-            if (!_.has_public_party_beacon) return -1;
-          } else {
-            if (_.has_public_party_beacon) return 1;
-            if (_.is_ingame) {
-              if (!_.is_ingame) return -1;
-              if (!_) return 0;
-              if (_.is_awayOrSnooze) {
-                if (!_.is_awayOrSnooze) return 1;
-              } else if (_.is_awayOrSnooze) return -1;
-            } else if (_.is_ingame) return 1;
-          }
-          if (_.is_online) {
-            if (!_.is_online) return -1;
-          } else if (_.is_online) return 1;
-          if (_)
-            if (_.is_awayOrSnooze) {
-              if (!_.is_awayOrSnooze) return 1;
-            } else if (_.is_awayOrSnooze) return -1;
-          return 0;
-        }
-        GetCommunityProfileURL() {
-          return this.m_strProfileURL
-            ? `${_._.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${_._.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
-        (0, _._)([_._], _.prototype, "m_ePersonaState", void 0),
-        (0, _._)([_._], _.prototype, "m_unGamePlayedAppID", void 0),
-        (0, _._)([_._], _.prototype, "m_gameid", void 0),
-        (0, _._)([_._], _.prototype, "m_unPersonaStateFlags", void 0),
-        (0, _._)([_._], _.prototype, "m_strPlayerName", void 0),
-        (0, _._)([_._], _.prototype, "m_strAvatarHash", void 0),
-        (0, _._)([_._], _.prototype, "m_strAccountName", void 0),
-        (0, _._)([_._], _.prototype, "m_rtLastSeenOnline", void 0),
-        (0, _._)([_._], _.prototype, "m_strGameExtraInfo", void 0),
-        (0, _._)([_._], _.prototype, "m_unGameServerIP", void 0),
-        (0, _._)([_._], _.prototype, "m_unGameServerPort", void 0),
-        (0, _._)([_._], _.prototype, "m_game_lobby_id", void 0),
-        (0, _._)([_._], _.prototype, "m_bPlayerNamePending", void 0),
-        (0, _._)([_._], _.prototype, "m_bAvatarPending", void 0),
-        (0, _._)([_._], _.prototype, "m_broadcastId", void 0),
-        (0, _._)([_._], _.prototype, "m_broadcastAccountId", void 0),
-        (0, _._)([_._], _.prototype, "m_broadcastAppId", void 0),
-        (0, _._)([_._], _.prototype, "m_broadcastViewerCount", void 0),
-        (0, _._)([_._], _.prototype, "m_strBroadcastTitle", void 0),
-        (0, _._)([_._], _.prototype, "m_bCommunityBanned", void 0),
-        (0, _._)([_._], _.prototype, "m_eGamingDeviceType", void 0),
-        (0, _._)([_._], _.prototype, "m_bNameInitialized", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)(_(_, _, _));
-      }
-      function _(_) {
-        const _ = _.useRef(void 0),
-          _ = _(_);
-        return _.data
-          ? _
-          : (_.current ||
-              (_.current = new _._(
-                "string" == typeof _ ? new _._(_) : _._.InitFromAccountID(_),
-              )),
-            {
-              ..._,
-              data: _.current,
-            });
-      }
-      const _ = _.createContext({
-        loadPersonaState: async (_, _) => {
-          if (null == _) return null;
-          const _ = await (function (_) {
-            return null != _ ? _ : (_ = (0, _._)(_));
-          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
-          return (function (_, _) {
-            var _, _;
-            let _ = new _._(_);
-            const _ = null == _ ? void 0 : _.public_data,
-              _ = null == _ ? void 0 : _.private_data;
-            (_.m_bInitialized = !!_),
-              (_.m_ePersonaState =
-                null !== (_ = null == _ ? void 0 : _.persona_state) &&
-                void 0 !== _
-                  ? _
-                  : _.cU3),
-              (_.m_strAvatarHash = (null == _ ? void 0 : _.sha_digest_avatar)
-                ? (0, _._)(_.sha_digest_avatar)
-                : _._),
-              (_.m_strPlayerName =
-                null !== (_ = null == _ ? void 0 : _.persona_name) &&
-                void 0 !== _
-                  ? _
-                  : _.ConvertTo64BitString()),
-              (_.m_strAccountName = null == _ ? void 0 : _.account_name),
-              (null == _ ? void 0 : _.persona_state_flags) &&
-                (_.m_unPersonaStateFlags =
-                  null == _ ? void 0 : _.persona_state_flags);
-            (null == _ ? void 0 : _.game_id) &&
-              (_.m_gameid = null == _ ? void 0 : _.game_id);
-            (null == _ ? void 0 : _.game_server_ip_address) &&
-              (_.m_unGameServerIP =
-                null == _ ? void 0 : _.game_server_ip_address);
-            (null == _ ? void 0 : _.lobby_steam_id) &&
-              (_.m_game_lobby_id = null == _ ? void 0 : _.lobby_steam_id);
-            (null == _ ? void 0 : _.game_extra_info) &&
-              (_.m_strGameExtraInfo = null == _ ? void 0 : _.game_extra_info);
-            (null == _ ? void 0 : _.profile_url) &&
-              (_.m_strProfileURL = _.profile_url);
-            return _;
-          })(_._.InitFromAccountID(_), _);
-        },
-      });
-      function _(_, _, _) {
-        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
-        return {
-          queryKey: ["PlayerSummary", _],
-          queryFn: () => _.loadPersonaState(_, _),
-          enabled: !!_,
-        };
-      }
-      let _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -701,6 +588,26 @@
             ? (0, _.jsx)(_.hz4, {})
             : (0, _.jsx)(_.Xjb, {}),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
       }
     },
   },

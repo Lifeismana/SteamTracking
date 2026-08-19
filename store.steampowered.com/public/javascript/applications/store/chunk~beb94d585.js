@@ -75,7 +75,7 @@
       }
     },
     6379: (e, t, n) => {
-      n.d(t, { ZQ: () => G, O3: () => b, MX: () => S, dB: () => T });
+      n.d(t, { ZQ: () => b, O3: () => S, MX: () => T, dB: () => P });
       var a = n(34629),
         s = n(41735),
         i = n.n(s),
@@ -105,7 +105,8 @@
       function D(e) {
         return f(e) ? m.cB + e.announcement_body?.gid : e.gid;
       }
-      class C {
+      var C = n(63340);
+      class G {
         appid;
         date;
         can_play;
@@ -123,7 +124,7 @@
             (this.announcementid = e.announcementid);
         }
       }
-      class G {
+      class b {
         constructor(e = !1) {
           (0, o.Gn)(this), (this.m_bOnlySummary = e);
         }
@@ -496,6 +497,7 @@
                   n.jsondata.localized_title_image[t] = s;
                 }
               }),
+              (n.bLoaded = !0),
               t.published
                 ? t.unlisted
                   ? (n.visibility_state = m.zv.k_EEventStateUnlisted)
@@ -512,7 +514,6 @@
             n.AnnouncementGID &&
               n.AnnouncementGID.length > 1 &&
               this.m_mapAnnouncementBodyToEvent.set(n.AnnouncementGID, n.GID),
-            (n.bLoaded = !0),
             n
           );
         }
@@ -1067,7 +1068,7 @@
             a.data.apps &&
               a.data.apps.length > 0 &&
               (0, o.h5)(() => {
-                const e = new Map(a.data.apps?.map((e) => [e.appid, new C(e)]));
+                const e = new Map(a.data.apps?.map((e) => [e.appid, new G(e)]));
                 this.m_mapUpdatedApps = e;
               });
           }
@@ -1215,46 +1216,45 @@
           return this.m_bOnlySummary;
         }
       }
-      (0, a.Cg)([o.sH], G.prototype, "m_mapExistingEvents", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_mapAnnouncementBodyToEvent", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_mapClanToGIDs", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_mapAppIDToGIDs", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_mapUpdatedApps", void 0),
-        (0, a.Cg)([o.XI], G.prototype, "Init", null),
-        (0, a.Cg)([I.oI], G.prototype, "GetPartnerEventChangeCallback", null),
-        (0, a.Cg)([o.XI], G.prototype, "RegisterClanEvents", null),
+      (0, a.Cg)([o.sH], b.prototype, "m_mapExistingEvents", void 0),
+        (0, a.Cg)([o.sH], b.prototype, "m_mapAnnouncementBodyToEvent", void 0),
+        (0, a.Cg)([o.sH], b.prototype, "m_mapClanToGIDs", void 0),
+        (0, a.Cg)([o.sH], b.prototype, "m_mapAppIDToGIDs", void 0),
+        (0, a.Cg)([o.sH], b.prototype, "m_mapUpdatedApps", void 0),
+        (0, a.Cg)([o.XI], b.prototype, "Init", null),
+        (0, a.Cg)([I.oI], b.prototype, "GetPartnerEventChangeCallback", null),
+        (0, a.Cg)([o.XI], b.prototype, "RegisterClanEvents", null),
         (0, a.Cg)(
           [o.XI],
-          G.prototype,
+          b.prototype,
           "InsertEventModelFromClanEventData",
           null,
         ),
-        (0, a.Cg)([o.XI], G.prototype, "DeleteClanEvent", null),
-        (0, a.Cg)([o.XI], G.prototype, "RemoveGIDFromList", null),
-        (0, a.Cg)([o.XI], G.prototype, "FlushEventFromCache", null),
-        (0, a.Cg)([I.oI], G.prototype, "SavePartnerEventSaleAssets", null);
-      const b = new G();
-      window.g_PartnerEventStore = b;
-      const S = new G(!0);
-      function T(e, t, n = !1) {
-        const [a, s] = (0, y.useState)(() => b.GetClanEventModel(t)),
+        (0, a.Cg)([o.XI], b.prototype, "DeleteClanEvent", null),
+        (0, a.Cg)([o.XI], b.prototype, "RemoveGIDFromList", null),
+        (0, a.Cg)([o.XI], b.prototype, "FlushEventFromCache", null),
+        (0, a.Cg)([I.oI], b.prototype, "SavePartnerEventSaleAssets", null);
+      const S = new b();
+      (0, C.V)("g_PartnerEventStore", S);
+      const T = new b(!0);
+      function P(e, t, n = !1) {
+        const [a, s] = (0, y.useState)(() => S.GetClanEventModel(t)),
           [i, o] = (0, y.useState)(!0),
           r = (0, y.useMemo)(() => c.b.InitFromClanID(e), [e]);
         return (
           (0, y.useEffect)(() => {
             !a &&
               e > 0 &&
-              (b.Init(),
-              b
-                .LoadPartnerEventFromClanEventGIDAndClanSteamID(r, t, 0, n)
+              (S.Init(),
+              S.LoadPartnerEventFromClanEventGIDAndClanSteamID(r, t, 0, n)
                 .then(s)
                 .finally(() => o(!1)));
           }, [r, t, a, e, n]),
-          (0, I.hL)(n ? b.GetPartnerEventChangeCallback(t) : void 0, s),
+          (0, I.hL)(n ? S.GetPartnerEventChangeCallback(t) : void 0, s),
           { eventModel: a, bLoading: i }
         );
       }
-      window.g_PartnerEventSummaryStore = S;
+      (0, C.V)("g_PartnerEventSummaryStore", T);
     },
     55563: (e, t, n) => {
       function a(e) {

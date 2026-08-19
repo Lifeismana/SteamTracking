@@ -1253,6 +1253,166 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor() {
+          (this.m_curLocImageGroup = null),
+            (this.m_curLocImageGroupType = null),
+            (0, _._)(this),
+            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+        }
+        static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
+          let _ =
+              _._.COMMUNITY_BASE_URL +
+              "gid/" +
+              _.ConvertTo64BitString() +
+              "/hasclanimagefile",
+            _ = {
+              image_hash_and_ext: _,
+              lang: "" + _,
+            };
+          return (
+            (
+              await _().get(_, {
+                params: _,
+                cancelToken: _ && _.token,
+              })
+            ).data.success == _._
+          );
+        }
+        SetPrimaryImageForImageGroup(_, _) {
+          (this.m_curLocImageGroup &&
+            this.m_curLocImageGroup.primaryImage.imageid == _.imageid &&
+            _ == this.m_curLocImageGroupType) ||
+            ((this.m_curLocImageGroup = {
+              primaryImage: _,
+              localized_images: [],
+            }),
+            (this.m_curLocImageGroupType = _),
+            (this.m_curLocImageGroup.localized_images = (0, _._)(
+              this.m_curLocImageGroup.localized_images,
+              _.bP9,
+              null,
+            )));
+        }
+        GetPrimaryImageForImageGroup() {
+          var _;
+          return null === (_ = this.m_curLocImageGroup) || void 0 === _
+            ? void 0
+            : _.primaryImage;
+        }
+        ClearImageGroup() {
+          (this.m_curLocImageGroup = null),
+            (this.m_curLocImageGroupType = null);
+        }
+        GetLocalizedImageGroupForEdit() {
+          return this.m_curLocImageGroup;
+        }
+        GetLocalizedImageGroupForEditAsURL(_, _) {
+          var _;
+          if (this.m_curLocImageGroup) {
+            let _ = this.m_curLocImageGroup.primaryImage;
+            return this.m_curLocImageGroup.localized_images[_]
+              ? this.m_curLocImageGroup.localized_images[_]
+              : _._.GenerateURLFromHashAndExt(
+                  _,
+                  null !== (_ = _._.GetHashAndExt(_)) && void 0 !== _ ? _ : "",
+                );
+          }
+          return null;
+        }
+        async DetermineAvailableLocalizationForGroup(_) {
+          var _;
+          if (!this.m_curLocImageGroup) return;
+          const _ = this.m_curLocImageGroup.primaryImage,
+            _ = _._.InitFromClanID(_.clanAccountID),
+            _ = null !== (_ = _._.GetHashAndExt(_)) && void 0 !== _ ? _ : "",
+            _ = [];
+          for (let _ = _.Bhc; _ < _.bP9; ++_)
+            _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
+          const _ = await Promise.all(_);
+          (0, _._)(() => {
+            var _;
+            for (let _ = _.Bhc; _ < _.bP9; ++_)
+              _[_] &&
+                (this.m_curLocImageGroup.localized_images[_] =
+                  _._.GenerateURLFromHashAndExtAndLang(
+                    _,
+                    _,
+                    _._.full,
+                    _,
+                    null !== (_ = this.m_curLocImageGroupType) && void 0 !== _
+                      ? _
+                      : void 0,
+                  ));
+          });
+        }
+        SetLocalizedImageGroupAtLang(_, _, _) {
+          var _;
+          this.m_curLocImageGroup &&
+            (this.m_curLocImageGroup.localized_images[_] = _
+              ? _._.GenerateURLFromHashAndExtAndLang(
+                  _,
+                  _,
+                  _._.full,
+                  _,
+                  null !== (_ = this.m_curLocImageGroupType) && void 0 !== _
+                    ? _
+                    : void 0,
+                )
+              : null);
+        }
+        AddLocalizeImageUploaded(_, _) {
+          var _;
+          if (!this.m_curLocImageGroup) return;
+          let _ = this.m_curLocImageGroup.primaryImage;
+          if ((null == _ ? void 0 : _.image_hash) == _) {
+            const _ = _._.InitFromClanID(_.clanAccountID),
+              _ = _._.GetHashAndExt(_);
+            _ &&
+              (this.m_curLocImageGroup.localized_images[_] =
+                _._.GenerateURLFromHashAndExtAndLang(
+                  _,
+                  _,
+                  _._.full,
+                  _,
+                  null !== (_ = this.m_curLocImageGroupType) && void 0 !== _
+                    ? _
+                    : void 0,
+                ));
+          }
+        }
+        GetAllLocalizedGroupImages() {
+          return (
+            (this.m_curLocImageGroup &&
+              this.m_curLocImageGroup.localized_images) ||
+            []
+          );
+        }
+        GetAllLocalizedGroupImageHashAndExts() {
+          return this.GetAllLocalizedGroupImages()
+            .filter(Boolean)
+            .map((_) => _._.GetHashAndExtFromURL(_));
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
+      const _ = new _();
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       function _(_) {
         if (!_) return _;
         const _ = _.lastIndexOf(".");

@@ -2219,210 +2219,6 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module) => {
         _.exports = {
-          Header1: "eventbbcodeparser_Header1_SPYFj",
-          Header2: "eventbbcodeparser_Header2_QuKtT",
-          Header3: "eventbbcodeparser_Header3_3s7cU",
-          Link: "eventbbcodeparser_Link_29bMZ",
-          LinkHost: "eventbbcodeparser_LinkHost_16eO9",
-          LinkButton: "eventbbcodeparser_LinkButton_2HnDg",
-          LinkPill: "eventbbcodeparser_LinkPill_3nRRZ",
-          UnorderedList: "eventbbcodeparser_UnorderedList_2FoSx",
-          OrderedList: "eventbbcodeparser_OrderedList_vV4Iw",
-          StoreWidget: "eventbbcodeparser_StoreWidget_36Y-l",
-          MedalTVWidget: "eventbbcodeparser_MedalTVWidget_1j2vi",
-          LoyaltyRewardCtn: "eventbbcodeparser_LoyaltyRewardCtn_14p7R",
-          SaleSectionCtn: "eventbbcodeparser_SaleSectionCtn_39HWX",
-          SaleTextCtn: "eventbbcodeparser_SaleTextCtn_2Tqq0",
-          ReminderCtn: "eventbbcodeparser_ReminderCtn_25AZk",
-          BlockQuote: "eventbbcodeparser_BlockQuote_2cY7b",
-          SocialLink: "eventbbcodeparser_SocialLink_2LAnc",
-          SocialIcon: "eventbbcodeparser_SocialIcon_dDjYN",
-          LocalizeBlock: "eventbbcodeparser_LocalizeBlock_1oBce",
-          CheckMark: "eventbbcodeparser_CheckMark_24AtT",
-          ScreenshotCarousel: "eventbbcodeparser_ScreenshotCarousel_3uA0h",
-        };
-      },
-      chunkid: (module) => {
-        _.exports = {
-          FlexColumnContainer: "eventreminder_FlexColumnContainer_15ufN",
-          FullStartTime: "eventreminder_FullStartTime_1YLHW",
-          ReminderDialog: "eventreminder_ReminderDialog_3YUEY",
-          ReminderOptions: "eventreminder_ReminderOptions_1Tp8K",
-          ReminderBackground: "eventreminder_ReminderBackground_TNf9_",
-          ReminderExpandsLeft: "eventreminder_ReminderExpandsLeft_38Xly",
-          ReminderOption: "eventreminder_ReminderOption_26nnh",
-          Unverified: "eventreminder_Unverified_1dcmA",
-          CheckboxWrapper: "eventreminder_CheckboxWrapper_1xuKE",
-          ReminderCheckBox: "eventreminder_ReminderCheckBox_vPo2j",
-          IconMode: "eventreminder_IconMode_1YjsR",
-          RemindBell: "eventreminder_RemindBell_3-_M2",
-          RemindCheck: "eventreminder_RemindCheck_2qaPr",
-          ReminderDefault: "eventreminder_ReminderDefault_19p2Q",
-          TextMode: "eventreminder_TextMode_553rC",
-          ReminderCheck: "eventreminder_ReminderCheck_3fMhC",
-          ReminderOpennedOptions: "eventreminder_ReminderOpennedOptions_vBuhk",
-          ReminderOptionsHeader: "eventreminder_ReminderOptionsHeader_2oOZC",
-          ReminderCalendarOptions:
-            "eventreminder_ReminderCalendarOptions_VO6FS",
-          ReminderSettings: "eventreminder_ReminderSettings_2Pn59",
-          ReminderNotes: "eventreminder_ReminderNotes_3qE0w",
-          RpcThrobber: "eventreminder_RpcThrobber_3F3aB",
-        };
-      },
-      chunkid: (module) => {
-        _.exports = {
-          "duration-app-launch": "800ms",
-          narrowWidth: "500px",
-          PartnerEventFont: "partnereventshared_PartnerEventFont_LK4bX",
-          Clear: "partnereventshared_Clear_3UhsQ",
-          Divider: "partnereventshared_Divider_3B5HO",
-          EventDefaultRowContainer:
-            "partnereventshared_EventDefaultRowContainer_3WO6c",
-          EventStartPublic: "partnereventshared_EventStartPublic_2LU_Y",
-          EventOptions: "partnereventshared_EventOptions_2r_Qe",
-          EventStatusContainer: "partnereventshared_EventStatusContainer_vOPSZ",
-          FlexColumnContainer: "partnereventshared_FlexColumnContainer_1qhLq",
-          FlexRowContainer: "partnereventshared_FlexRowContainer_Ke5f1",
-          Centered: "partnereventshared_Centered_qy-9m",
-          VCentered: "partnereventshared_VCentered_2Ke6g",
-          FlexContainSpaceBetween:
-            "partnereventshared_FlexContainSpaceBetween_3nPGW",
-          FlexRowWrapSpaceBetweenContainer:
-            "partnereventshared_FlexRowWrapSpaceBetweenContainer_19CjI",
-          FlexRowWrapFlexStartContainer:
-            "partnereventshared_FlexRowWrapFlexStartContainer_tyP_c",
-          SaveBackground: "partnereventshared_SaveBackground_V0mbI",
-          SupportedGroupLabel: "partnereventshared_SupportedGroupLabel_APmJN",
-          LanguageWithContent: "partnereventshared_LanguageWithContent_2Cd1u",
-          LargeInput: "partnereventshared_LargeInput_fq68I",
-          InputBorder: "partnereventshared_InputBorder_Obyys",
-          RadioOption: "partnereventshared_RadioOption_3iJX1",
-          FlexGrow: "partnereventshared_FlexGrow_1KvZA",
-          EventEditorTextTitleCtn:
-            "partnereventshared_EventEditorTextTitleCtn_htm7d",
-          doclink: "partnereventshared_doclink_1-bAK",
-          EventEditorUnpaddedTextTitle:
-            "partnereventshared_EventEditorUnpaddedTextTitle_9hsCL",
-          EventEditorTextTitle: "partnereventshared_EventEditorTextTitle_18fHx",
-          EventEditorTextTitleLengthInfo:
-            "partnereventshared_EventEditorTextTitleLengthInfo_2nHJ1",
-          CollapsableSectionTitle:
-            "partnereventshared_CollapsableSectionTitle_2zejQ",
-          SectionTitle: "partnereventshared_SectionTitle_7Qc_e",
-          EventSectionTitleCtn: "partnereventshared_EventSectionTitleCtn_onqWK",
-          EventSectionTitle: "partnereventshared_EventSectionTitle_Idd_A",
-          EventSectionSpacer: "partnereventshared_EventSectionSpacer_1Bloe",
-          EventSectionMoreBtn: "partnereventshared_EventSectionMoreBtn_uckBi",
-          EventEditorSpacerPadding:
-            "partnereventshared_EventEditorSpacerPadding_1RBfN",
-          EventEditorVisibilityCtn:
-            "partnereventshared_EventEditorVisibilityCtn_1nqBh",
-          EventEditorTextSubTitle:
-            "partnereventshared_EventEditorTextSubTitle_1i_pY",
-          FloatingTitle: "partnereventshared_FloatingTitle_31XRt",
-          EventEditorEventStatus:
-            "partnereventshared_EventEditorEventStatus_2JGoL",
-          EventHidden: "partnereventshared_EventHidden_2H6fn",
-          EventVisible: "partnereventshared_EventVisible_3Z0Qr",
-          EventBarBackAndTitle: "partnereventshared_EventBarBackAndTitle_2rTjP",
-          EventBarTitleCtn: "partnereventshared_EventBarTitleCtn_WfVze",
-          EventBarTitle: "partnereventshared_EventBarTitle_29kVX",
-          EventEditButtons: "partnereventshared_EventEditButtons_3nYmf",
-          EventStatus: "partnereventshared_EventStatus_1sOFB",
-          EventBarBack: "partnereventshared_EventBarBack_s3r9b",
-          EditPreviewButton: "partnereventshared_EditPreviewButton_1FhZQ",
-          Delete: "partnereventshared_Delete_32kR7",
-          Disabled: "partnereventshared_Disabled_2wVCx",
-          BrowseMoreButton: "partnereventshared_BrowseMoreButton_1Yrcl",
-          Button: "partnereventshared_Button_1ABCO",
-          Icon: "partnereventshared_Icon_1dDpS",
-          Primary: "partnereventshared_Primary_30ipl",
-          ClearThings: "partnereventshared_ClearThings_3x_qL",
-          OnIndicator: "partnereventshared_OnIndicator_1GBsB",
-          OffIndicator: "partnereventshared_OffIndicator_w0I94",
-          IconImage: "partnereventshared_IconImage_2RY89",
-          RightColumnContainer: "partnereventshared_RightColumnContainer_30-E9",
-          FloatRight: "partnereventshared_FloatRight_1bzHf",
-          TTip: "partnereventshared_TTip_2aWuk",
-          ValveSupportOnly: "partnereventshared_ValveSupportOnly_wC6-U",
-          ArtworkAgeNotAppropriate:
-            "partnereventshared_ArtworkAgeNotAppropriate_3V64Z",
-          EventDashboardHeader: "partnereventshared_EventDashboardHeader_2kZr_",
-          ContainerSpaceBetween:
-            "partnereventshared_ContainerSpaceBetween_3gYZG",
-          EventDashboardTitles: "partnereventshared_EventDashboardTitles_1ym4r",
-          EventDashboardActions:
-            "partnereventshared_EventDashboardActions_2z_02",
-          EventDashboardStatsCtn:
-            "partnereventshared_EventDashboardStatsCtn_3IptF",
-          EventDashboardAppCtn: "partnereventshared_EventDashboardAppCtn_2iPrK",
-          maintitle: "partnereventshared_maintitle_vEk_z",
-          AppTitle: "partnereventshared_AppTitle_l-Ow7",
-          subtitle: "partnereventshared_subtitle_2mJfc",
-          ValveOnlyText: "partnereventshared_ValveOnlyText_206sa",
-          ValveOnlyBackground: "partnereventshared_ValveOnlyBackground_Jckrn",
-          ValveOnlyAdminBackground:
-            "partnereventshared_ValveOnlyAdminBackground_3HVu1",
-          DropDownOptionHelpLabel:
-            "partnereventshared_DropDownOptionHelpLabel_2O-Yi",
-          Columns: "partnereventshared_Columns_1oVIR",
-          LeftCol: "partnereventshared_LeftCol_3PPz-",
-          RightCol: "partnereventshared_RightCol_25xel",
-          DropDownScroll: "partnereventshared_DropDownScroll_1CewB",
-          DropDownScrollItem: "partnereventshared_DropDownScrollItem_3D3hC",
-          CloseButton: "partnereventshared_CloseButton_gR2gS",
-          CloseSectionTools: "partnereventshared_CloseSectionTools_1d0D9",
-          HalfColumn: "partnereventshared_HalfColumn_3Xmp4",
-          InsetOption: "partnereventshared_InsetOption_PKGX8",
-          tooltip_Ctn: "partnereventshared_tooltip_Ctn_3nqxI",
-          SaleEditorSpacing: "partnereventshared_SaleEditorSpacing_2ZGwd",
-          InstructionText: "partnereventshared_InstructionText_ktxW5",
-          BackgroundImage: "partnereventshared_BackgroundImage_2wlqO",
-          InEditor: "partnereventshared_InEditor_1qfNC",
-          Blur: "partnereventshared_Blur_1rJkk",
-          SalePageBackground: "partnereventshared_SalePageBackground_2StYO",
-          SaleSectionHeader: "partnereventshared_SaleSectionHeader_2WMiQ",
-          SaleImageCtn: "partnereventshared_SaleImageCtn_1_lNQ",
-          SaleImageHelper: "partnereventshared_SaleImageHelper_12S7L",
-          JumpToButtonCtn: "partnereventshared_JumpToButtonCtn_19bDh",
-          JumpToButton: "partnereventshared_JumpToButton_c4K67",
-          QACtn: "partnereventshared_QACtn_337X4",
-          SaleSectionSubtitle: "partnereventshared_SaleSectionSubtitle_2rIaW",
-          SaleSectionContainer: "partnereventshared_SaleSectionContainer_3gb3J",
-          AddSectionButton: "partnereventshared_AddSectionButton_2_djj",
-          EventElementRequired: "partnereventshared_EventElementRequired_12rm6",
-          EventElementOptional: "partnereventshared_EventElementOptional_1mpG6",
-          EventElementComplete: "partnereventshared_EventElementComplete_1uZCv",
-          PixelOffsetCtn: "partnereventshared_PixelOffsetCtn_3Xk96",
-          PixelOffsetRow: "partnereventshared_PixelOffsetRow_2PtWb",
-          PixelOffsetNote: "partnereventshared_PixelOffsetNote_JjEwa",
-          PixelOffsetCallout: "partnereventshared_PixelOffsetCallout_f5QZT",
-          Error: "partnereventshared_Error_mSSED",
-          GamepadOnlyScrollPanel:
-            "partnereventshared_GamepadOnlyScrollPanel_2NO6w",
-          BackgroundAnimation: "partnereventshared_BackgroundAnimation_3jOnU",
-          "ItemFocusAnim-darkerGrey-nocolor":
-            "partnereventshared_ItemFocusAnim-darkerGrey-nocolor_2J2q_",
-          "ItemFocusAnim-darkerGrey":
-            "partnereventshared_ItemFocusAnim-darkerGrey_hml57",
-          "ItemFocusAnim-darkGreySettings":
-            "partnereventshared_ItemFocusAnim-darkGreySettings_1ex6I",
-          "ItemFocusAnim-darkGrey":
-            "partnereventshared_ItemFocusAnim-darkGrey_3ILf9",
-          "ItemFocusAnim-grey": "partnereventshared_ItemFocusAnim-grey_159SL",
-          "ItemFocusAnim-translucent-white-10":
-            "partnereventshared_ItemFocusAnim-translucent-white-10_2LlOq",
-          "ItemFocusAnim-translucent-white-20":
-            "partnereventshared_ItemFocusAnim-translucent-white-20_oskDW",
-          "ItemFocusAnimBorder-darkGrey":
-            "partnereventshared_ItemFocusAnimBorder-darkGrey_22jWC",
-          "ItemFocusAnim-green": "partnereventshared_ItemFocusAnim-green_3JEJr",
-          focusAnimation: "partnereventshared_focusAnimation_KS3LL",
-          hoverAnimation: "partnereventshared_hoverAnimation_9UqiM",
-        };
-      },
-      chunkid: (module) => {
-        _.exports = {
           SpeakerOuter: "presenterpopup_SpeakerOuter_3rRqP",
           Speaker: "presenterpopup_Speaker_3F7-F",
           SpeakerPopup: "presenterpopup_SpeakerPopup_3y7kV",
@@ -2431,11 +2227,6 @@ var CLSTAMP = "steamdb";
           SpeakerTitle: "presenterpopup_SpeakerTitle_2Vo0l",
           SpeakerBio: "presenterpopup_SpeakerBio_2yP7s",
           SpeakerHover: "presenterpopup_SpeakerHover_16UyH",
-        };
-      },
-      chunkid: (module) => {
-        _.exports = {
-          ErrorDiv: "saleeventbbcodeparser_ErrorDiv_XeZEx",
         };
       },
       chunkid: (module) => {
@@ -2622,19 +2413,6 @@ var CLSTAMP = "steamdb";
             "insetshadow_FriendListInsetShadowTop_1osHa",
           FriendListInsetShadowBottom:
             "insetshadow_FriendListInsetShadowBottom_2OoTJ",
-        };
-      },
-      chunkid: (module) => {
-        _.exports = {
-          DateAndTime: "localdateandtime_DateAndTime_2V6GL",
-          DateAndTimeInline: "localdateandtime_DateAndTimeInline_HZ6b2",
-          _: "localdateandtime_At_Fn5EU",
-          ActiveEvent: "localdateandtime_ActiveEvent_rT7Ek",
-          ActiveEventCallOut: "localdateandtime_ActiveEventCallOut_2pJft",
-          RightSideTitles: "localdateandtime_RightSideTitles_4LAnP",
-          DateToolTip: "localdateandtime_DateToolTip_2E5LH",
-          ShortDateAndTime: "localdateandtime_ShortDateAndTime_MBkkh",
-          ShortDateRange: "localdateandtime_ShortDateRange_3CN6I",
         };
       },
       chunkid: (module) => {
@@ -3243,8 +3021,8 @@ var CLSTAMP = "steamdb";
           "./es-do.js": 49338,
           "./es-mx": 51326,
           "./es-mx.js": 51326,
-          "./es-us": 12328,
-          "./es-us.js": 12328,
+          "./es-us": 89947,
+          "./es-us.js": 89947,
           "./es.js": 43350,
           "./et": 18231,
           "./et.js": 18231,
@@ -18585,7 +18363,7 @@ var CLSTAMP = "steamdb";
           (_.english = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 35617, 19))),
           (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 68246, 19))),
+            __webpack_require__._("chunkid").then(_._.bind(_, 13008, 19))),
           (_.french = () =>
             __webpack_require__._("chunkid").then(_._.bind(_, 74295, 19))),
           (_.german = () =>
@@ -18835,14 +18613,20 @@ var CLSTAMP = "steamdb";
         const _ = parseInt(_().nTimelineHoverEdgePadding),
           _ = !1,
           _ = _.forwardRef(function (_, _) {
-            let { tooltip: _, onActivate: _, size: _, children: _ } = _,
+            let {
+                tooltip: _,
+                onActivate: _,
+                size: _,
+                children: _,
+                disableTooltip: _,
+              } = _,
               _ = _(),
               _ = _(_);
             return (0, _.jsx)(_._, {
               toolTipContent: _,
               direction: "top",
               usePointerEvents: !0,
-              bDisabled: _,
+              bDisabled: _ || _,
               children: (0, _.jsx)("div", {
                 ref: _,
                 className: _().PlaybackButton,
@@ -18913,8 +18697,9 @@ var CLSTAMP = "steamdb";
           let { player: _ } = _,
             [_, _] = (0, _.useState)(!1),
             _ = (0, _.useCallback)(() => _(!1), [_]),
-            _ = (0, _.useRef)(null),
-            _ = (0, _.useCallback)(() => {
+            _ = (0, _.useRef)(null);
+          const _ = (0, _._)();
+          let _ = (0, _.useCallback)(() => {
               _((_) => !_);
             }, [_]),
             _ = (0, _._)(_().SettingsButton, _ && _().Rotated);
@@ -18926,6 +18711,7 @@ var CLSTAMP = "steamdb";
                   ref: _,
                   onActivate: _,
                   tooltip: _.Localize("#TrailerPlayer_Settings_Tooltip"),
+                  disableTooltip: _,
                   children: (0, _.jsx)(_.wB_, {
                     className: _,
                   }),
@@ -19259,6 +19045,7 @@ var CLSTAMP = "steamdb";
           let { player: _ } = _,
             [_, _, _, _] = _(_);
           _.use(_.Ready());
+          const _ = (0, _._)();
           let _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
             _ = _.Localize(
               _
@@ -19268,6 +19055,7 @@ var CLSTAMP = "steamdb";
           return (0, _.jsx)(_, {
             onActivate: _,
             tooltip: _,
+            disableTooltip: _,
             children: _,
           });
         }
@@ -20206,11 +19994,12 @@ var CLSTAMP = "steamdb";
           });
         }
         function _(_) {
-          let { player: _, uiMode: _, category: _, title: _, focus: _ } = _,
+          let { player: _, uiMode: _, category: _, title: _, focus: _ } = _;
+          const _ = (0, _._)(),
             _ = (0, _._)();
           return (
             (_ && "auto" != _) ||
-              (_ = (0, _._)() ? "touch" : _ ? "gamepad" : "desktop"),
+              (_ = (0, _._)() || _ ? "touch" : _ ? "gamepad" : "desktop"),
             "touch" == _
               ? (0, _.jsx)(_, {
                   player: _,
@@ -40644,6 +40433,9 @@ var CLSTAMP = "steamdb";
           return (0, _.jsx)(_._, {
             className: _,
             onButtonDown: (_) => _(_, _?.bInQam, _?.appID),
+            actionDescriptionMap: {
+              [_._.SELECT]: null,
+            },
             preferredFocus: !0,
             navEntryPreferPosition: _._.PREFERRED_CHILD,
             children: _,
@@ -45122,7 +44914,7 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -53399,7 +53191,7 @@ var CLSTAMP = "steamdb";
               : (this.setState({
                   hotkeyCapturing: !0,
                 }),
-                (0, _._)("RegisterForMouseXButtonDown") &&
+                (0, _._)("WebChat.RegisterForMouseXButtonDown") &&
                   SteamClient.WebChat.RegisterForMouseXButtonDown(
                     this.OnXButtonDown,
                   ));
@@ -59969,6 +59761,9 @@ var CLSTAMP = "steamdb";
                       _.stopPropagation());
               },
               navRef: this.m_navRef,
+              actionDescriptionMap: {
+                [_._.SELECT]: null,
+              },
               children: [
                 (0, _.jsx)("div", {
                   className: (0, _._)(
@@ -69309,12 +69104,8 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
         });
         const _ = 39049601,
-          _ = 45559995,
-          _ = 45902273,
           _ = [4145017, 35143931, _, 4, 41316928];
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -69342,14 +69133,12 @@ var CLSTAMP = "steamdb";
           A4L: () => _,
           ADn: () => _,
           Aav: () => _,
-          Aqr: () => _,
           Ass: () => _,
           Bhc: () => _,
           C$4: () => _,
           CII: () => _,
           Cnj: () => _,
           CvG: () => _,
-          DEQ: () => _,
           DOG: () => _,
           DRF: () => _,
           Ec7: () => _,
@@ -69996,7 +69785,6 @@ var CLSTAMP = "steamdb";
           _ = 13,
           _ = 14,
           _ = 15,
-          _ = 16,
           _ = 17,
           _ = 18,
           _ = 19,
@@ -70009,7 +69797,6 @@ var CLSTAMP = "steamdb";
           _ = 26,
           _ = 27,
           _ = 28,
-          _ = 29,
           _ = 31,
           _ = 32,
           _ = 34,
@@ -75459,21 +75246,32 @@ var CLSTAMP = "steamdb";
               if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
               let _ = _.GetBoundingRectForFocusRing();
               const _ = _.getBoundingClientRect(),
+                _ = _.GetBorderRadiusForFocusRing(),
                 _ = {
                   left: _._ - _._,
                   top: _._ - _._,
                   height: _.height,
                   width: _.width,
+                  borderRadius: _,
                 };
-              _((_) =>
-                _ &&
-                _.left == _.left &&
-                _.top == _.top &&
-                _.height == _.height &&
-                _.width == _.width
+              _((_) => {
+                return _ &&
+                  (_ = _).left == (_ = _).left &&
+                    _.top == _.top &&
+                    _.height == _.height &&
+                    _.width == _.width &&
+                    _.borderRadius?.borderTopLeftRadius ==
+                      _.borderRadius?.borderTopLeftRadius &&
+                    _.borderRadius?.borderTopRightRadius ==
+                      _.borderRadius?.borderTopRightRadius &&
+                    _.borderRadius?.borderBottomRightRadius ==
+                      _.borderRadius?.borderBottomRightRadius &&
+                  _.borderRadius?.borderBottomLeftRadius ==
+                    _.borderRadius?.borderBottomLeftRadius
                   ? _
-                  : _,
-              );
+                  : _;
+                var _, _;
+              });
             }, [_, _, _]);
           _.useLayoutEffect(() => _(), [_]),
             _.useLayoutEffect(() => {
@@ -75521,6 +75319,7 @@ var CLSTAMP = "steamdb";
               top: _,
               height: _,
               width: _,
+              borderRadius: _,
               target: _,
             } = _,
             _ = {
@@ -75528,6 +75327,7 @@ var CLSTAMP = "steamdb";
               top: (_ ?? 0) - 0 + "px",
               height: _ + "px",
               width: _ + "px",
+              ..._,
             };
           return (0, _.jsx)("div", {
             className: _()(_().FocusRing, _),
@@ -76145,7 +75945,9 @@ var CLSTAMP = "steamdb";
         function _(_, _) {
           return _(_) && _(_)
             ? _.value === _.value &&
-                Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft)
+                Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft) &&
+                Boolean(_.bShowOnFloatingVRFooter) ==
+                  Boolean(_.bShowOnFloatingVRFooter)
             : _ === _;
         }
         !(function (_) {
@@ -77446,16 +77248,30 @@ var CLSTAMP = "steamdb";
           GetBoundingRect() {
             return this.m_element?.getBoundingClientRect();
           }
+          GetElementForFocusRingMeasure() {
+            const _ = this.m_element;
+            return this.m_Properties?.focusRingSizeElementID
+              ? (_?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? _)
+              : _;
+          }
           GetBoundingRectForFocusRing() {
-            let _ = this.m_element;
-            return (
-              this.m_Properties?.focusRingSizeElementID &&
-                (_ =
-                  _?.ownerDocument?.getElementById(
-                    this.m_Properties.focusRingSizeElementID,
-                  ) ?? this.m_element),
-              _?.getBoundingClientRect()
-            );
+            return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
+          }
+          GetBorderRadiusForFocusRing() {
+            if (!this.m_Properties?.focusRingSizeElementID) return;
+            const _ = this.GetElementForFocusRingMeasure();
+            if (!_) return;
+            const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
+            return _
+              ? {
+                  borderTopLeftRadius: _.borderTopLeftRadius,
+                  borderTopRightRadius: _.borderTopRightRadius,
+                  borderBottomRightRadius: _.borderBottomRightRadius,
+                  borderBottomLeftRadius: _.borderBottomLeftRadius,
+                }
+              : void 0;
           }
           SetHasFocus(_) {
             this.m_Focused.Set(_);
@@ -79375,6 +79191,18 @@ var CLSTAMP = "steamdb";
               GetAppTypeLocKey(_, _) {
                 switch (_) {
                   case _._._:
+                    return _ + "_Guide";
+                  case _._._:
+                    return _ + "_Hardware";
+                  case _._._:
+                    return _ + "_DLC";
+                  case _._._:
+                    return _ + "_Music";
+                  case _._._:
+                    return _ + "_Series";
+                  case _._._:
+                    return _ + "_Demo";
+                  case _._._:
                     return _ + "_Software";
                   case _._._:
                     return _ + "_Video";
@@ -80454,6 +80282,7 @@ var CLSTAMP = "steamdb";
         "use strict";
         __webpack_require__._(_, {
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -80742,29 +80571,6 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        function _(_) {
-          return (
-            !!_ &&
-            Boolean(
-              _.related_items &&
-                _.related_items.standalone_demo_appid &&
-                _.related_items.standalone_demo_appid.length > 0 &&
-                _.related_items.standalone_demo_appid[0],
-            )
-          );
-        }
-        function _(_) {
-          return _ && _.related_items?.standalone_demo_appid
-            ? _.related_items?.standalone_demo_appid
-            : [];
-        }
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
-        });
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
         __webpack_require__._(_, {
           _: () => _,
           _: () => _,
@@ -80873,20 +80679,6 @@ var CLSTAMP = "steamdb";
           }
           let _ = _.steam_release_date;
           return _ || (_ = _.original_release_date), _ ? _(_) : "";
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _ = !1) {
-          if (_)
-            return _ && (0, _._)(_)
-              ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
-              : `${_._.STORE_BASE_URL}${_.store_url_path}`;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -81136,6 +80928,10 @@ var CLSTAMP = "steamdb";
               (function (_, _, _, _) {
                 _(_, _, _, "include_screenshots", "screenshots", _);
               })(_, _, _, _),
+            _.include_links &&
+              (function (_, _, _, _) {
+                _(_, _, _, "include_links", "links", _);
+              })(_, _, _, _),
             _.include_trailers &&
               (function (_, _, _, _) {
                 _(_, _, _, "include_trailers", "trailers", _);
@@ -81363,7 +81159,9 @@ var CLSTAMP = "steamdb";
                     ? `creator_${_.creatorid}`
                     : "hubcategoryid" in _
                       ? `hubcategory_${_.hubcategoryid}`
-                      : ((0, _._)(_, "Unknown store item id type"), "");
+                      : "salepagegid" in _
+                        ? `salepage_${_.salepagegid}`
+                        : ((0, _._)(_, "Unknown store item id type"), "");
         }
         function _(_, _) {
           switch (_) {
@@ -81380,6 +81178,8 @@ var CLSTAMP = "steamdb";
             case _._._:
               return `hubcategory_${_}`;
             case _._._:
+              return `salepage_${_}`;
+            case _._._:
             case _._._:
               return "";
             default:
@@ -81388,7 +81188,8 @@ var CLSTAMP = "steamdb";
               );
           }
         }
-        const _ = /^(app|package|bundle|mtx|tag|creator|hubcategory)_(\d*)$/;
+        const _ =
+          /^(app|package|bundle|mtx|tag|creator|hubcategory|salepage)_(\d*)$/;
         function _(_) {
           const _ = _.match(_);
           if (_)
@@ -81416,6 +81217,10 @@ var CLSTAMP = "steamdb";
               case "hubcategory":
                 return {
                   hubcategoryid: parseInt(_[2]),
+                };
+              case "salepage":
+                return {
+                  salepagegid: _[2],
                 };
             }
           (0, _._)(!1, `Failed to parse StoreItemID ${_}`);
@@ -81454,6 +81259,12 @@ var CLSTAMP = "steamdb";
                   item_type: _._._,
                   _: parseInt(_[2]),
                 };
+              case "salepage":
+                return {
+                  item_type: _._._,
+                  _: 0,
+                  gid: _[2],
+                };
             }
           return {
             item_type: _._._,
@@ -81488,6 +81299,12 @@ var CLSTAMP = "steamdb";
               return {
                 hubcategoryid: _,
               };
+            case _._._:
+              return _.gid
+                ? {
+                    salepagegid: _.gid,
+                  }
+                : void 0;
             case _._._:
             case _._._:
               return;
@@ -81597,7 +81414,7 @@ var CLSTAMP = "steamdb";
                 _.Body()
                   .store_items()
                   .forEach((_) => {
-                    _.set((0, _._)(_.item_type(), _._()), _);
+                    _.set((0, _._)(_.item_type(), _.gid() ?? _._()), _);
                   }),
                 _ &&
                   (function (_, _, _, _) {
@@ -82493,136 +82310,6 @@ var CLSTAMP = "steamdb";
         "use strict";
         __webpack_require__._(_, {
           _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _() {
-          (0, _._)();
-          const _ = _._.accountid;
-          return (0, _._)(
-            (function (_, _) {
-              return {
-                queryKey: _(_),
-                queryFn: async () => {
-                  const _ = new Map();
-                  if (_)
-                    try {
-                      (
-                        await (async function (_, _) {
-                          const _ = (0, _._)(
-                              _._.STORE_BASE_URL,
-                              _,
-                              _._.country_code,
-                            ),
-                            _ = await fetch(_),
-                            _ = await _.json(),
-                            _ = new Set();
-                          _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
-                            _.rgCreatorsFollowed?.forEach((_) => _.add(_));
-                          const _ = new Set();
-                          return (
-                            _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
-                            [
-                              ...(_.rgCuratorsIgnored ?? []),
-                              ...(_.rgCurators
-                                ? Object.values(_.rgCurators ?? {}).map(
-                                    (_) => _.clanid,
-                                  )
-                                : []),
-                            ].map((_) => {
-                              const _ = _.has(_);
-                              return {
-                                clanid: _,
-                                ignored: _,
-                                followed: !_,
-                                is_creator: _.has(_),
-                              };
-                            })
-                          );
-                        })(0, _)
-                      ).forEach((_) => _.set(_.clanid, _));
-                    } catch (_) {
-                      console.error("GetCuratorAffinityQuery", _);
-                    }
-                  return _;
-                },
-                enabled: !!_,
-              };
-            })(0, _),
-          );
-        }
-        function _(_) {
-          const { data: _ } = _();
-          return void 0 === _ || null == _
-            ? void 0
-            : Boolean(_.get(_)?.followed);
-        }
-        function _(_) {
-          const { data: _ } = _();
-          return void 0 === _ || null == _
-            ? void 0
-            : Boolean(_.get(_)?.ignored);
-        }
-        function _() {
-          return _._.EREALM != _._.k_ESteamRealmChina;
-        }
-        function _() {
-          return _._.EREALM != _._.k_ESteamRealmChina;
-        }
-        function _() {
-          const _ = (0, _._)(),
-            _ = _._.accountid;
-          return (_, _, _, _) => {
-            _.setQueryData(_(_), (_) => {
-              if (!_) return;
-              const _ = new Map(_);
-              return (
-                __webpack_require__?.forEach((_) => {
-                  _.has(_.clanAccountID)
-                    ? (_.get(_.clanAccountID).followed = !0)
-                    : _.set(_.clanAccountID, {
-                        clanid: _.clanAccountID,
-                        followed: !0,
-                        ignored: !1,
-                        is_creator: !1,
-                      });
-                }),
-                _?.forEach((_) => {
-                  _.has(_.clanAccountID)
-                    ? (_.get(_.clanAccountID).ignored = !0)
-                    : _.set(_.clanAccountID, {
-                        clanid: _.clanAccountID,
-                        followed: !1,
-                        ignored: !0,
-                        is_creator: !1,
-                      });
-                }),
-                _?.forEach((_) => _.delete(_.clanAccountID)),
-                _?.forEach((_) => {
-                  let _ = _.get(_.clanAccountID);
-                  _ && (_.is_creator = !0);
-                }),
-                _
-              );
-            });
-          };
-        }
-        function _(_) {
-          return ["CuratorAffinityQueryKey", _ ?? 0];
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
         });
         const _ = JSON.parse(`{
 	"h": {
@@ -83135,27 +82822,6 @@ var CLSTAMP = "steamdb";
               _.setQueryData(_, () => new Set(_)), _ && (await _(_, _));
             },
           });
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
-        });
-        const _ = "unUserdataVersion";
-        function _(_, _, _) {
-          const _ = Number.parseInt(window.localStorage.getItem(_) || "0");
-          let _ = `${_}dynamicstore/userdata/?id=${_}&cc=${_}&origin=${self.origin}`;
-          return _ && (_ += `&v=${_}`), _;
-        }
-        function _() {
-          window.localStorage.setItem(
-            _,
-            (
-              Number.parseInt(window.localStorage.getItem(_) || "0") + 1
-            ).toString(),
-          );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -83932,7 +83598,58 @@ var CLSTAMP = "steamdb";
           (0, _._)([_._], _.prototype, "RequestLoop", null),
           (0, _._)([_._], _.prototype, "MuteUserForSession", null);
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = new (class {
+          bIncludeFeaturedAsGameSource = !0;
+          get nOverrideDateNow() {
+            return (0, _._)();
+          }
+          set nOverrideDateNow(_) {
+            (0, _._)(_);
+          }
+          get bRequireAllEventsLoadedInTimeBlock() {
+            return !1;
+          }
+          get bIncludeCurators() {
+            return !0;
+          }
+          GetTimeNowWithOverride() {
+            return (0, _._)();
+          }
+          GetTimeNowWithOverrideAsDate() {
+            return (0, _._)();
+          }
+          BHasTimeOverride() {
+            return Boolean((0, _._)());
+          }
+          ParseDevOverrides(_) {
+            if (!_ || 0 == _.length) return;
+            const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
+            if (
+              _.has("t") &&
+              ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
+            ) {
+              const _ = _.get("t");
+              let _ = /^\d+$/.test(_ ?? "")
+                ? _().unix(Number.parseInt(_ ?? "0"))
+                : _()(_);
+              (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
+                console.log(
+                  "CEventCalendarDevFeatures overriding partner event time: " +
+                    this.nOverrideDateNow +
+                    " " +
+                    __webpack_require__.format(),
+                );
+            }
+          }
+        })();
+        (0, _._)("g_EventCalendarDevFeatures", _);
+        const _ = new Date();
+        Math.floor(_.getTime() / 1e3);
+        var _ = __webpack_require__("chunkid");
         class _ {
           constructor() {
             (0, _._)(this);
@@ -83988,7 +83705,7 @@ var CLSTAMP = "steamdb";
             return _;
           }
           async BuildBroadcasterSteamIDToActiveEventMap(_) {
-            const _ = _._.GetTimeNowWithOverride(),
+            const _ = _.GetTimeNowWithOverride(),
               _ = _.GetCalendarItemsInTimeRange(_ - 3600, _);
             for (const _ of _.rgCalendarItems)
               _._.QueueLoadPartnerEvent(_.clanid, _.unique_id);
@@ -87221,7 +86938,7 @@ var CLSTAMP = "steamdb";
             children: (0, _.jsx)(_._, {}),
           });
         }
-        var _ = __webpack_require__("chunkid");
+        __webpack_require__("chunkid");
         function _(_) {
           return (0, _.jsx)(_._, {
             onEscKeypress: _.closeModal,
@@ -87953,7 +87670,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         const _ = {
@@ -88107,2222 +87823,641 @@ var CLSTAMP = "steamdb";
             (_.full = "full"),
             (_.summary = "summary");
         })(_ || (_ = {}));
-        var _,
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        !(function (_) {
-          (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
-            (_[(_.k_eWishlist = 2)] = "k_eWishlist"),
-            (_[(_.k_eFollowing = 4)] = "k_eFollowing"),
-            (_[(_.k_eRecommended = 8)] = "k_eRecommended"),
-            (_[(_.k_eSteam = 16)] = "k_eSteam"),
-            (_[(_.k_eRequired = 32)] = "k_eRequired"),
-            (_[(_.k_eFeatured = 64)] = "k_eFeatured"),
-            (_[(_.k_eCurator = 128)] = "k_eCurator"),
-            (_[(_.k_eReposted = 256)] = "k_eReposted");
-        })(_ || (_ = {}));
-        class _ {
-          clanid;
-          unique_id;
-          event_type;
-          appid;
-          start_time;
-          appInfo;
-          clanInfo;
-          score;
-          GetSource() {
-            return this.appInfo ? this.appInfo.source : this.clanInfo.source;
-          }
-          static GetEntityNameForID(_, _) {
-            if (_) return _._.Get().GetApp(_)?.GetName();
-            if (_) {
-              const _ = _._.GetClanInfoByClanAccountID(_);
-              if (_) return _.group_name;
-            }
-            return (0, _._)("#EventCalendar_MuteApp_Unknown");
-          }
-          static BHasEntityNameForID(_, _) {
-            return _
-              ? Boolean(_._.Get().GetApp(_)?.GetName())
-              : !!_ && !!_._.GetClanInfoByClanAccountID(_)?.group_name;
-          }
-          GetEntityName() {
-            return _.GetEntityNameForID(this.appid, this.clanid);
-          }
-          GetGameCapsule() {
-            if (this.appInfo)
-              return _._.Get()
-                .GetApp(this.appInfo.appid)
-                ?.GetAssets()
-                ?.GetMainCapsuleURL();
-            if (this.clanInfo) {
-              let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-              if (_) return _.avatar_full_url;
-            }
-            return (0, _._)("#EventCalendar_MuteApp_Unknown");
-          }
-          GetGameIcon() {
-            if (this.appInfo)
-              return _._.Get()
-                .GetApp(this.appInfo.appid)
-                ?.GetAssets()
-                ?.GetCommunityIconURL();
-            if (this.clanInfo) {
-              let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-              if (_) return _.avatar_full_url;
-            }
-            return (0, _._)("#EventCalendar_MuteApp_Unknown");
-          }
-        }
-        var _,
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        !(function (_) {
-          (_.k_ERecent = "recent"),
-            (_.k_ELibrary = "library"),
-            (_.k_EWishlist = "wishlist"),
-            (_.k_EFollowing = "following"),
-            (_.k_ERecommended = "recommended"),
-            (_.k_ESteam = "steam"),
-            (_.k_EFeatured = "featured"),
-            (_.k_ECurator = "curator");
-        })(_ || (_ = {}));
-        const _ = [
-            _.k_ELibrary,
-            _.k_EWishlist,
-            _.k_EFollowing,
-            _.k_ERecommended,
-            _.k_ESteam,
-            _.k_ECurator,
+        const _ = new Map([
+          [
+            "b",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("b", {
+                  className: _().Bold,
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
           ],
-          _ = [..._, _.k_EFeatured],
-          _ = [_.k_EFeatured];
-        var _;
-        !(function (_) {
-          (_.k_ENews = "news"),
-            (_.k_EEvents = "events"),
-            (_.k_EStreaming = "streaming"),
-            (_.k_EUpdates = "updates"),
-            (_.k_EReleases = "releases"),
-            (_.k_ESales = "sales");
-        })(_ || (_ = {}));
-        const _ = [
-            _.k_ENews,
-            _.k_EEvents,
-            _.k_EStreaming,
-            _.k_EUpdates,
-            _.k_EReleases,
-            _.k_ESales,
+          [
+            "i",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("i", {
+                  className: (0, _._)(_().Italic, "BB_Italic"),
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
           ],
-          _ = new Map([
-            [_.k_ENews, [_.uYK]],
-            [_.k_EEvents, [_.L0X, _.I5b, _._, _._, _.hGl, _.WNR, _.pIh, _.izQ]],
-            [_.k_EStreaming, [_.KDJ]],
-            [_.k_EUpdates, [_.Fwr, _._, _.zeJ]],
-            [_.k_EReleases, [_.yhO, _.Aqr, _.DEQ, _.f4X, _.zcX]],
-            [_.k_ESales, [_.HRy, _.C$4, _.LOv, _.HFK]],
-          ]);
-        function _(_) {
-          return new Map(_.map((_) => [_, !0]));
-        }
-        class _ {
-          m_mapEventTypeGroupsAllowed = new Map();
-          m_mapGameSources = new Map();
-          m_bCuratorUnhideOnFollowDialogDismissed = !1;
-          m_mapHiddenApps = new Map();
-          m_mapHiddenClans = new Map();
-          m_bInitializedForUpdatesOnly;
-          m_eStorageType = "session";
-          m_strStorageKey;
-          constructor(_) {
-            (0, _._)(this),
-              (0, _._)(() => {
-                _?.rgHiddenApps &&
-                  _.rgHiddenApps.forEach((_) =>
-                    this.m_mapHiddenApps.set(_, !0),
+          [
+            "h1",
+            {
+              Constructor: function (_) {
+                return _("h1", _, (0, _._)(_().Header1, "BB_Header1"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h2",
+            {
+              Constructor: function (_) {
+                return _("h2", _, (0, _._)(_().Header2, "BB_Header2"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h3",
+            {
+              Constructor: function (_) {
+                return _("h3", _, (0, _._)(_().Header3, "BB_Header3"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h4",
+            {
+              Constructor: function (_) {
+                return _("h4", _, (0, _._)(_().Header4, "BB_Header4"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h5",
+            {
+              Constructor: function (_) {
+                return _("h5", _, (0, _._)(_().Header5, "BB_Header5"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "center",
+            {
+              Constructor: function (_) {
+                let _ = _(_.args, "id");
+                _ &&
+                  "string" == typeof _ &&
+                  _.length > 0 &&
+                  "#" === _[0] &&
+                  (_ = _.substring(1));
+                return (0, _.jsx)("span", {
+                  _: _ || void 0,
+                  className: (0, _._)(_().CenterSpan, "BB_Center"),
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "smalltext",
+            {
+              Constructor: function (_) {
+                return _("div", _, (0, _._)(_().SmallText, "BB_SmallText"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "u",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("u", {
+                  className: _().Underline,
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "strike",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("s", {
+                  className: _().Strike,
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "spoiler",
+            {
+              Constructor: function (_) {
+                let [_, _] = _.useState(!1),
+                  _ = _.useCallback(() => {
+                    __webpack_require__(!_);
+                  }, [_]);
+                return (0, _.jsx)(_._, {
+                  className: (0, _._)(_().Spoiler, _ && _().Revealed),
+                  focusable: !0,
+                  onActivate: _,
+                  onOKActionDescription: (0, _._)(
+                    _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
                   ),
-                  _?.rgHiddenClans &&
-                    _.rgHiddenClans.forEach((_) =>
-                      this.m_mapHiddenClans.set(_, !0),
-                    );
-              });
-          }
-          GetGameSources() {
-            return Array.from(this.m_mapGameSources.keys());
-          }
-          GetStorageObject() {
-            return this.m_strStorageKey
-              ? "session" === this.m_eStorageType
-                ? window.sessionStorage
-                : window.localStorage
-              : null;
-          }
-          GetPreferencesStorageKey() {
-            return `${this.m_strStorageKey}-event-calendar-prefs`;
-          }
-          get enabledEventTypeSet() {
-            const _ = new Set();
-            for (const _ of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
-              _.get(_).forEach((_) => _.add(_));
-            return _;
-          }
-          MapClanEventTypeToGroup(_) {
-            let _ = null;
-            return (
-              _.forEach((_, _) => {
-                -1 !== __webpack_require__.indexOf(_) && (_ = _);
-              }),
-              _ || _.k_EEvents
-            );
-          }
-          InitDefaultCheckboxes(_, _, _) {
-            (this.m_bInitializedForUpdatesOnly = _),
-              (this.m_mapEventTypeGroupsAllowed = _(_ ? [_.k_EUpdates] : _));
-            const _ = (0, _._)() ? _ : _;
-            (this.m_mapGameSources = _(_ ? _ : _)),
-              _ && this.m_mapGameSources.set(_.k_EFeatured, !0);
-          }
-          Init(_, _, _, _, _) {
-            (this.m_eStorageType = _), (this.m_strStorageKey = _);
-            const _ = this.GetStorageObject(),
-              _ = _ ? _.getItem(this.GetPreferencesStorageKey()) : null;
-            if (_) {
-              const _ = JSON.parse(_);
-              if (_.rgEventTypeGroupsAllowed && _.rgGameSources) {
-                const { rgEventTypeGroupsAllowed: _, rgGameSources: _ } = _;
-                return (
-                  (this.m_mapEventTypeGroupsAllowed = _(_)),
-                  (this.m_mapGameSources = _(_)),
-                  void (
-                    void 0 !== _.bCuratorUnhideOnFollowDismissed &&
-                    (this.m_bCuratorUnhideOnFollowDialogDismissed =
-                      _.bCuratorUnhideOnFollowDismissed)
-                  )
-                );
-              }
-            }
-            this.InitDefaultCheckboxes(_, _, _);
-          }
-          SaveFilterPreferences() {
-            const _ = this.GetStorageObject();
-            if (!_) return;
-            const _ = {
-              rgEventTypeGroupsAllowed: Array.from(
-                this.m_mapEventTypeGroupsAllowed.keys(),
-              ),
-              rgGameSources: Array.from(this.m_mapGameSources.keys()),
-              bCuratorUnhideOnFollowDismissed:
-                this.m_bCuratorUnhideOnFollowDialogDismissed,
-            };
-            _.setItem(this.GetPreferencesStorageKey(), JSON.stringify(_));
-          }
-          BCuratorUnhideOnFollowDialogDismissed() {
-            return this.m_bCuratorUnhideOnFollowDialogDismissed;
-          }
-          SetCuratorUnhideOnFollowDialogDismissed(_) {
-            (this.m_bCuratorUnhideOnFollowDialogDismissed = _),
-              this.SaveFilterPreferences();
-          }
-          BIsEventTypeGroupAllowed(_) {
-            return this.m_mapEventTypeGroupsAllowed.has(_);
-          }
-          BIsGameSourceAllowed(_) {
-            return (
-              !(_ === _.k_EFollowing && !(0, _._)()) &&
-              !(_ === _.k_ECurator && !(0, _._)()) &&
-              this.m_mapGameSources.has(_)
-            );
-          }
-          SetEventTypeGroupAllowed(_, _) {
-            _
-              ? this.m_mapEventTypeGroupsAllowed.set(_, !0)
-              : this.m_mapEventTypeGroupsAllowed.delete(_),
-              this.SaveFilterPreferences(),
-              _.RecordFilterChangeEvent(this);
-          }
-          SetGameSourceAllowed(_, _) {
-            _
-              ? (this.m_mapGameSources.set(_, !0),
-                _ == _.k_ERecent
-                  ? this.m_mapGameSources.delete(_.k_ELibrary)
-                  : _ == _.k_ELibrary &&
-                    ((0, _._)(
-                      !this.m_mapGameSources.has(_.k_ERecent),
-                      "Setting Library although Recent already set - illusion was broken",
-                    ),
-                    this.m_mapGameSources.delete(_.k_ERecent)))
-              : (this.m_mapGameSources.delete(_),
-                _ == _.k_ERecent
-                  ? this.m_mapGameSources.set(_.k_ELibrary, !0)
-                  : _ == _.k_ELibrary &&
-                    this.m_mapGameSources.delete(_.k_ERecent)),
-              this.SaveFilterPreferences(),
-              _.RecordFilterChangeEvent(this);
-          }
-          BShouldDisplayEvent(_) {
-            const _ = _.GetSource(),
-              _ = Boolean(
-                _.appInfo &&
-                  _.appInfo.last_played &&
-                  _.appInfo.last_played + 15552e3 >=
-                    _._.GetTimeNowWithOverride(),
-              );
-            return (
-              !!(
-                this.enabledEventTypeSet.has(_.event_type) ||
-                (this.m_bInitializedForUpdatesOnly &&
-                  this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
-                  _.event_type == _.uYK &&
-                  _.start_time < 1599202800)
-              ) &&
-              !this.m_mapHiddenApps.has(_.appid) &&
-                !this.m_mapHiddenClans.has(_.clanid) &&
-              (!!(_ & _.k_eRequired || _ & _.k_eReposted) ||
-                Boolean(
-                  (this.BIsGameSourceAllowed(_.k_ERecent) && _) ||
-                    (this.BIsGameSourceAllowed(_.k_ELibrary) &&
-                      _ & _.k_eLibrary) ||
-                    (this.BIsGameSourceAllowed(_.k_EWishlist) &&
-                      _ & _.k_eWishlist) ||
-                    (this.BIsGameSourceAllowed(_.k_EFollowing) &&
-                      _ & _.k_eFollowing) ||
-                    (this.BIsGameSourceAllowed(_.k_ERecommended) &&
-                      _ & _.k_eRecommended) ||
-                    (this.BIsGameSourceAllowed(_.k_ESteam) && _ & _.k_eSteam) ||
-                    (this.BIsGameSourceAllowed(_.k_EFeatured) &&
-                      _ & _.k_eFeatured) ||
-                    (this.BIsGameSourceAllowed(_.k_ECurator) &&
-                      _ & _.k_eCurator),
-                ))
-            );
-          }
-          BAreAllEventsHidden() {
-            return (
-              0 == this.m_mapEventTypeGroupsAllowed.size ||
-              0 == this.m_mapGameSources.size
-            );
-          }
-          BAreAnyEventsFiltered(_) {
-            const _ = (0, _._)() ? _ : _;
-            return (
-              (_ ? _ : _).some((_) => !this.BIsGameSourceAllowed(_)) ||
-              _.some((_) => !this.BIsEventTypeGroupAllowed(_))
-            );
-          }
-          BIsClanVisible(_) {
-            return !this.m_mapHiddenClans.has(_);
-          }
-          SetClanVisibility(_, _) {
-            _
-              ? this.m_mapHiddenClans.has(_) && this.m_mapHiddenClans.delete(_)
-              : this.m_mapHiddenClans.has(_) ||
-                this.m_mapHiddenClans.set(_, !0);
-          }
-          BIsAppVisible(_) {
-            return !this.m_mapHiddenApps.has(_);
-          }
-          SetAppVisibility(_, _) {
-            _
-              ? this.m_mapHiddenApps.has(_) && this.m_mapHiddenApps.delete(_)
-              : this.m_mapHiddenApps.has(_) || this.m_mapHiddenApps.set(_, !0);
-          }
-        }
-        var _;
-        (0, _._)([_._], _.prototype, "m_mapEventTypeGroupsAllowed", void 0),
-          (0, _._)([_._], _.prototype, "m_mapGameSources", void 0),
-          (0, _._)(
-            [_._],
-            _.prototype,
-            "m_bCuratorUnhideOnFollowDialogDismissed",
-            void 0,
-          ),
-          (0, _._)([_._], _.prototype, "m_mapHiddenApps", void 0),
-          (0, _._)([_._], _.prototype, "m_mapHiddenClans", void 0),
-          (0, _._)(
-            [
-              (0, _._)({
-                keepAlive: !0,
-                equals: _._.structural,
-              }),
-            ],
-            _.prototype,
-            "enabledEventTypeSet",
-            null,
-          ),
-          (0, _._)([_._], _.prototype, "SetEventTypeGroupAllowed", null),
-          (0, _._)([_._], _.prototype, "SetGameSourceAllowed", null),
-          (function (_) {
-            (_[(_.k_eDiscussions = 0)] = "k_eDiscussions"),
-              (_[(_.k_eThumbsUp = 1)] = "k_eThumbsUp"),
-              (_[(_.k_eClickThrough = 2)] = "k_eClickThrough"),
-              (_[(_.k_eMuted = 3)] = "k_eMuted"),
-              (_[(_.k_ePlayedVideo = 4)] = "k_ePlayedVideo"),
-              (_[(_.k_eReminder_Opened = 5)] = "k_eReminder_Opened"),
-              (_[(_.k_eReminder_MobilePush = 6)] = "k_eReminder_MobilePush"),
-              (_[(_.k_eReminder_Email = 7)] = "k_eReminder_Email"),
-              (_[(_.k_eReminder_CalendarApple = 8)] =
-                "k_eReminder_CalendarApple"),
-              (_[(_.k_eReminder_CalendarGoogle = 9)] =
-                "k_eReminder_CalendarGoogle"),
-              (_[(_.k_eReminder_CalendarOutlook = 10)] =
-                "k_eReminder_CalendarOutlook"),
-              (_[(_.k_eReminder_EmailUnverified = 11)] =
-                "k_eReminder_EmailUnverified"),
-              (_[(_.k_eReminder_MobilePushMissing = 12)] =
-                "k_eReminder_MobilePushMissing");
-          })(_ || (_ = {}));
-        const _ = new (class {
-          m_nPastViewedIndex = 0;
-          m_nPastViewedDays = 0;
-          m_nFutureViewedIndex = 0;
-          m_nFutureViewableEvents = 0;
-          m_nLastRecordedFilter = 0;
-          m_sBrowserID = void 0;
-          m_scheduledFilterChange = new _._();
-          m_scheduledFutureStats = new _._();
-          m_scheduledPastStats = new _._();
-          RecordViewedEvent(_, _) {
-            const _ = _.GetStoreInitializationTimestamp().getTime() / 1e3;
-            this.m_nFutureViewableEvents = 0;
-            let _,
-              _ = 0,
-              _ = null;
-            const _ = _.GetCurrentlyLoadedItemsForStats();
-            for (const _ of _) {
-              const _ = _.start_time > _;
-              if ((_.unique_id == _ && ((_ = _), (_ = _)), _))
-                this.m_nFutureViewableEvents++;
-              else if (void 0 !== _) break;
-              _++;
-            }
-            if (void 0 !== _)
-              if (_ < this.m_nFutureViewableEvents) {
-                const _ = this.m_nFutureViewableEvents - _;
-                if (this.m_nFutureViewedIndex < _) {
-                  this.m_nFutureViewedIndex = _;
-                  const _ = () => {
-                      const _ =
-                        Math.min(this.m_nFutureViewedIndex, 4095) |
-                        (Math.min(this.m_nFutureViewableEvents, 255) << 12) |
-                        (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                      _.SendExperimentEventToSteam(_._._, _);
-                    },
-                    _ = 500;
-                  this.m_scheduledFutureStats.Schedule(_, _);
+                  children: (0, _.jsx)("span", {
+                    className: _().SpoilerText,
+                    children: _.children,
+                  }),
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "hr",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("hr", {
+                  className: _()._,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "noparse",
+            {
+              Constructor: function (_) {
+                return _.children;
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "url",
+            {
+              Constructor: function (_) {
+                let _ = _(_(_.args));
+                if (!_) {
+                  const _ = _.children;
+                  "string" == typeof _ && (0, _._)(_) && (_ = _(_));
                 }
-              } else {
-                const _ = _ - this.m_nFutureViewableEvents;
-                if (this.m_nPastViewedIndex < _) {
-                  (this.m_nPastViewedIndex = _),
-                    (this.m_nPastViewedDays = Math.floor(
-                      (_ - _.start_time) / 86400,
-                    ));
-                  const _ = () => {
-                      const _ =
-                        Math.min(this.m_nPastViewedIndex, 4095) |
-                        (Math.min(this.m_nPastViewedDays, 255) << 12) |
-                        (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                      _.SendExperimentEventToSteam(_._._, _);
-                    },
-                    _ = 500;
-                  this.m_scheduledPastStats.Schedule(_, _);
-                }
-              }
-          }
-          RecordFilterChangeEvent(_) {
-            this.m_scheduledFilterChange.Schedule(1e3, () => {
-              let _ = 0;
-              _.BIsGameSourceAllowed(_.k_ELibrary) && (_ |= 1),
-                _.BIsGameSourceAllowed(_.k_EWishlist) && (_ |= 2),
-                _.BIsGameSourceAllowed(_.k_EFollowing) && (_ |= 4),
-                _.BIsGameSourceAllowed(_.k_ERecommended) && (_ |= 8),
-                _.BIsGameSourceAllowed(_.k_ESteam) && (_ |= 16),
-                _.BIsGameSourceAllowed(_.k_EFeatured) && (_ |= 32),
-                _.BIsGameSourceAllowed(_.k_ERecent) && (_ |= 64),
-                _.BIsEventTypeGroupAllowed(_.k_ENews) && (_ |= 1024),
-                _.BIsEventTypeGroupAllowed(_.k_EEvents) && (_ |= 2048),
-                _.BIsEventTypeGroupAllowed(_.k_EStreaming) && (_ |= 4096),
-                _.BIsEventTypeGroupAllowed(_.k_EUpdates) && (_ |= 8192),
-                _.BIsEventTypeGroupAllowed(_.k_EReleases) && (_ |= 16384),
-                _.BIsEventTypeGroupAllowed(_.k_ESales) && (_ |= 32768),
-                _ != this.m_nLastRecordedFilter &&
-                  ((this.m_nLastRecordedFilter = _),
-                  this.SendExperimentEventToSteam(_._._, _));
-            });
-          }
-          GetTimeSpentOnPageS(_) {
-            const _ = _.GetStoreInitializationTimestamp(),
-              _ = new Date();
-            return Math.max(
-              0,
-              Math.floor((__webpack_require__.getTime() - _.getTime()) / 1e3),
-            );
-          }
-          RecordAppInteractionEvent(_, _) {
-            this.SendExperimentEventToSteam(_._._, _);
-          }
-          SendExperimentEventToSteam(_, _) {
-            this.InitBrowserID();
-            const _ = _._.STORE_BASE_URL + "events/ajaxreportnewshubstats/",
-              _ = new URLSearchParams();
-            _.append("page_action", "" + _),
-              _.append("snr", _._.SNR),
-              _.append("uint_data", "" + _),
-              _.append("str_data", this.m_sBrowserID),
-              _().post(_, _);
-          }
-          InitBrowserID() {
-            if (void 0 === this.m_sBrowserID)
-              if (_._.IN_CLIENT) this.m_sBrowserID = "steam";
-              else {
-                const _ = navigator.userAgent;
-                /iPhone|iPad|iPod/i.test(_) ||
-                (/Macintosh/i.test(_) && /Safari/i.test(_))
-                  ? (this.m_sBrowserID = "ios")
-                  : /Android/i.test(_)
-                    ? (this.m_sBrowserID = "android")
-                    : (this.m_sBrowserID = "");
-              }
-          }
-        })();
-        window.g_EventCalendarTrackingStore = _;
-        var _ = __webpack_require__("chunkid");
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_bValidatedEmail = !1;
-          m_nMobileDeviceCount = 0;
-          m_bIsLoaded = !1;
-          m_promise;
-          m_bLoadedFromConfig = !1;
-          LazyInit() {
-            if (!this.m_bLoadedFromConfig) {
-              let _ = (0, _._)("notificationstore", "application_config");
-              this.ValidateStoreDefault(_) &&
-                (0, _._)(() => {
-                  (this.m_bIsLoaded = !0),
-                    (this.m_bValidatedEmail = _.email_validated),
-                    (this.m_nMobileDeviceCount = _.mobile_device_count);
-                }),
-                (this.m_bLoadedFromConfig = !0);
-            }
-          }
-          ValidateStoreDefault(_) {
-            return (
-              _ &&
-              "object" == typeof _ &&
-              "number" == typeof _.mobile_device_count
-            );
-          }
-          BIsLoaded() {
-            return this.m_bIsLoaded;
-          }
-          BHasValidatedEmail() {
-            return this.m_bValidatedEmail;
-          }
-          BHasPushNotification() {
-            return this.m_nMobileDeviceCount > 0;
-          }
-          async HintLoad() {
-            return (
-              this.LazyInit(),
-              this.m_bIsLoaded
-                ? _._
-                : _._.logged_in
-                  ? (this.m_promise || (this.m_promise = this.InternalLoad()),
-                    this.m_promise)
-                  : _._
-            );
-          }
-          async InternalLoad() {
-            const _ = _._.STORE_BASE_URL + "notification/ajaxusersettings",
-              _ = await _().get(_, {
-                withCredentials: !0,
-              });
-            return (
-              _.data.success == _._ &&
-                (0, _._)(() => {
-                  (this.m_bIsLoaded = !0),
-                    (this.m_bValidatedEmail = _.data.email_validated),
-                    (this.m_nMobileDeviceCount = _.data.mobile_device_count);
-                }),
-              _.data.success
-            );
-          }
-        }
-        (0, _._)([_._], _.prototype, "m_bValidatedEmail", void 0),
-          (0, _._)([_._], _.prototype, "m_nMobileDeviceCount", void 0);
-        let _ = new _();
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_, _) {
-          const _ = _()._.guess(),
-            _ = _().unix(_)._(_),
-            _ = (0, _._)();
-          return (
-            _ && _.locale(_),
-            (0, _.jsxs)(_.Fragment, {
-              children: [
-                _.format("LT"),
-                _
-                  ? (0, _.jsx)(_._, {
-                      toolTipContent: _.format("Z") + ", " + _,
-                      children: (0, _.jsxs)("span", {
-                        children: [" ", _.zoneAbbr()],
-                      }),
-                    })
-                  : null,
-              ],
-            })
-          );
-        }
-        const _ = (0, _._)((_) => {
-            const {
-                dateAndTime: _,
-                bSingleLine: _,
-                bOnlyTime: _,
-                bOnlyDate: _,
-              } = _,
-              _ = !_ && Boolean(_),
-              _ = !_ && Boolean(_),
-              _ = _ && (0, _._)(_),
-              _ = _.stylesmodule
-                ? {
-                    ..._(),
-                    ..._.stylesmodule,
-                  }
-                : _();
-            return _
-              ? (0, _.jsxs)("span", {
-                  className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
+                const _ =
+                    "button" == _(_.args, "style") ? _().LinkButton : void 0,
+                  _ = _ && _(_.args, "buttoncolor");
+                let _ = _(_.args, "id");
+                _ &&
+                  "string" == typeof _ &&
+                  _.length > 0 &&
+                  "#" === _[0] &&
+                  (_ = _.substring(1));
+                if (void 0 === _ && !_) return _.children || "";
+                if (
+                  void 0 === _ ||
+                  ("string" == typeof _ && _.length > 0 && "#" == _[0])
+                )
+                  return (0, _.jsx)("a", {
+                    href: _ ?? null,
+                    _: _,
+                    children: _.children,
+                  });
+                return (0, _.jsx)(_, {
+                  className: _,
+                  href: _,
+                  _: _,
+                  style: {
+                    backgroundColor: _,
+                  },
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "quote",
+            {
+              Constructor: function (_) {
+                const _ = _(_.args, "author");
+                return (0, _.jsxs)("blockquote", {
+                  className: (0, _._)(_().BlockQuote, _.className),
                   children: [
-                    _ && _,
-                    _ && _
-                      ? (0, _.jsx)("span", {
-                          children: " ",
-                        })
-                      : void 0,
-                    Boolean(_ && _) && _(_, _),
-                  ],
-                })
-              : (0, _.jsxs)("div", {
-                  className: _.DateAndTime,
-                  children: [
-                    _ &&
-                      (0, _.jsxs)(_.Fragment, {
+                    !!_ &&
+                      (0, _.jsxs)("div", {
+                        className: _().QuoteAuthor,
                         children: [
-                          (0, _.jsx)("div", {
-                            className: _.LocalizedDate,
-                            children: _,
-                          }),
+                          (0, _._)("#Bbcode_Originally_Posted_By") + " ",
                           " ",
-                          (0, _.jsx)("span", {
-                            className: _._,
-                            children: (0, _._)(
-                              "#EventDisplay_DateAndTimeCombiner",
-                            ),
+                          (0, _.jsx)("b", {
+                            children: _ + ":",
                           }),
                         ],
                       }),
-                    (0, _.jsx)("div", {
-                      className: _.LocalizedTime,
-                      children: Boolean(_ && _) && _(_, _),
-                    }),
+                    _.children,
                   ],
                 });
-          }),
-          _ = (_) => {
-            const _ = (0, _.jsx)("div", {
-              className: _.stylesmodule?.DateToolTip,
-              children: (0, _.jsx)(_, {
-                dateAndTime: _.rtFullDate,
-                bSingleLine: !0,
-                stylesmodule: _.stylesmodule,
-              }),
-            });
-            return (0, _.jsx)(_._, {
-              toolTipContent: _,
-              direction: "top",
-              className: _.className,
-              bTopmost: !0,
-              children: _.children,
-            });
-          };
-        let _ = class extends _.Component {
-          render() {
-            const { startDateAndTime: _, endDateAndTime: _ = 0 } = this.props,
-              _ = this.props.stylesmodule
-                ? {
-                    ..._(),
-                    ...this.props.stylesmodule,
-                  }
-                : _();
-            let _ =
-              this.props.bHideEndTime ||
-              null == this.props.endDateAndTime ||
-              this.props.endDateAndTime < 1;
-            if (null == _ || 0 == _)
-              return (0, _.jsxs)("div", {
-                className: _.DateAndTime,
-                children: [
-                  (0, _.jsx)("span", {
-                    className: _.RightSideTitles,
-                    children: (0, _._)("#EventDisplay_TimeRange"),
-                  }),
-                  (0, _._)("#EventDisplay_TimeDisplayNone"),
-                ],
-              });
-            let _ = _._.GetTimeNowWithOverride();
-            if (_)
-              return (0, _.jsxs)("div", {
-                className: _.StartDate,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _.RightSideTitles,
-                    children: [
-                      (0, _._)(
-                        _ < _
-                          ? "#EventDisplay_TimeInPast"
-                          : "#EventDisplay_TimeUpcoming",
-                      ),
-                      " ",
-                    ],
-                  }),
-                  (0, _.jsx)(_, {
-                    stylesmodule: _,
-                    dateAndTime: _,
-                  }),
-                ],
-              });
-            let _ = _ <= _ && _ <= _;
-            const _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
-            return (0, _.jsxs)("div", {
-              className: _.MultiDateAndTime,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _.StartDate,
-                  children: [
-                    (0, _.jsx)("span", {
-                      className: _.RightSideTitles,
-                      children: (0, _._)(
-                        _ >= _
-                          ? "#EventDisplay_TimeBeginsOn"
-                          : _ >= _
-                            ? "#EventDisplay_TimeBeginsOn_Past"
-                            : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                      ),
-                    }),
-                    (0, _.jsx)(_, {
-                      stylesmodule: _,
-                      bSingleLine: !0,
-                      dateAndTime: _,
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.EndDate,
-                  children: [
-                    (0, _.jsx)("span", {
-                      className: _.RightSideTitles,
-                      children: (0, _._)(
-                        _ < _
-                          ? "#EventDisplay_TimeEndsOn_Past"
-                          : "#EventDisplay_TimeEndsOn",
-                      ),
-                    }),
-                    (0, _.jsx)(_, {
-                      stylesmodule: _,
-                      bSingleLine: !0,
-                      bOnlyTime: _,
-                      dateAndTime: _,
-                    }),
-                  ],
-                }),
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "pullquote",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("div", {
+                  className: _().PullQuote,
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "code",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("code", {
+                  className: _().CodeBlock,
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "c",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("code", {
+                  className: _().Code,
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "list",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("ul", {
+                  className: (0, _._)(_().List, "bullets"),
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "olist",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("ol", {
+                  className: _().OrderedList,
+                  children: _.children,
+                });
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "*",
+            {
+              Constructor: function (_) {
+                let _ = _(_.args, "id");
                 _ &&
-                  (0, _.jsx)("span", {
-                    className: _.ActiveEvent,
-                    children: (0, _.jsx)("span", {
-                      className: (0, _._)(
-                        _.RightSideTitles,
-                        _.ActiveEventCallOut,
-                      ),
-                      children: (0, _._)("#Time_Now"),
-                    }),
-                  }),
-              ],
-            });
-          }
-        };
-        _ = (0, _._)([_._], _);
-        let _ = class extends _.Component {
-          render() {
-            const {
-                startDateAndTime: _,
-                endDateAndTime: _,
-                bHideEndTime: _,
-              } = this.props,
-              _ = this.props.stylesmodule
-                ? {
-                    ..._(),
-                    ...this.props.stylesmodule,
-                  }
-                : _();
-            if (null == _ || 0 == _)
-              return (0, _.jsxs)("div", {
-                className: _.DateAndTime,
-                children: [
-                  (0, _.jsx)("span", {
-                    className: _.RightSideTitles,
-                    children: (0, _._)("#EventDisplay_TimeRange"),
-                  }),
-                  (0, _._)("#EventDisplay_TimeDisplayNone"),
-                ],
-              });
-            const _ = _._.GetTimeNowWithOverrideAsDate(),
-              _ = _._.GetTimeNowWithOverride(),
-              _ = (0, _._)(new Date(1e3 * _), _),
-              _ = (0, _.jsx)("div", {
-                className: _.ShortDateAndTime,
-                children: (0, _._)(_, _),
-              });
-            let _ = (0, _.jsxs)(_, {
-              rtFullDate: _,
-              stylesmodule: _,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _.RightSideTitles,
-                  children: (0, _._)(
-                    _ < _
-                      ? "#EventDisplay_TimeInPast"
-                      : "#EventDisplay_TimeUpcoming",
+                  "string" == typeof _ &&
+                  _.length > 0 &&
+                  "#" === _[0] &&
+                  (_ = _.substring(1));
+                return (0, _.jsx)("li", {
+                  className: _().ListItem,
+                  _: _ || void 0,
+                  children: _.children,
+                });
+              },
+              autocloses: !0,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "table",
+            {
+              Constructor: function (_) {
+                const _ = _(_.args, "noborder"),
+                  _ = _(_.args, "equalcells"),
+                  _ = _(_.args, "colwidth");
+                return (0, _.jsxs)("table", {
+                  className: (0, _._)(
+                    _().Table,
+                    "BB_Table",
+                    _ && _().NoBorder,
+                    _ && _().EqualCells,
                   ),
-                }),
-                _,
-              ],
-            });
-            if (
-              (_ < _ &&
-                _ < _ + _._.PerWeek &&
-                (_ = (0, _.jsx)(_, {
-                  rtFullDate: _,
-                  stylesmodule: _,
-                  children: (0, _.jsx)("div", {
-                    className: _.RightSideTitles,
-                    children: (0, _._)(
-                      "#EventDisplay_EventUpcoming_WithDateAndTime",
-                      _,
-                      (0, _.jsxs)("div", {
-                        className: _.ShortDateAndTime,
-                        children: [_(_), " "],
-                      }),
-                    ),
-                  }),
-                })),
-              _ || null == _ || _ < 1)
-            )
-              return _;
-            const _ = _ <= _ && _ <= _;
-            _ &&
-              (_ = (0, _.jsx)(_, {
-                rtFullDate: _,
-                className: _.ActiveEvent,
-                stylesmodule: _,
-                children: (0, _.jsx)("span", {
-                  className: _.ActiveEventCallOut,
-                  children: (0, _._)("#Time_Now"),
-                }),
-              }));
-            let _ = null;
-            const _ = _ ? _ - _ : _ - _;
-            if (_ <= _._.PerDay) {
-              const _ = (0, _.jsx)("div", {
-                className: _.ShortDateAndTime,
-                children: (0, _._)(_, !0),
-              });
-              _ =
-                _ < _
-                  ? (0, _.jsxs)("div", {
-                      className: _.RightSideTitles,
-                      children: [(0, _._)("#EventDisplay_TimeEndsOn_Ran"), _],
-                    })
-                  : (0, _.jsx)("div", {
-                      className: _.RightSideTitles,
-                      children: (0, _._)(
-                        _
-                          ? "#EventDisplay_TimeLeft"
-                          : "#EventDisplay_RunsForDuration",
-                        _,
-                      ),
-                    });
-            } else {
-              const _ = _.getFullYear() == new Date(1e3 * _).getFullYear();
-              _ = (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.RightSideTitles,
-                    children: (0, _._)(
-                      _ < _
-                        ? "#EventDisplay_TimeEndsOn_Past"
-                        : "#EventDisplay_TimeEndsOn",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.ShortDateAndTime,
-                    children: (0, _._)(_, _),
-                  }),
-                ],
-              });
-            }
-            const _ = (0, _.jsx)(_, {
-              rtFullDate: _,
-              stylesmodule: _,
-              children: _,
-            });
-            return (0, _.jsxs)("div", {
-              className: _.ShortDateRange,
-              children: [_, _],
-            });
-          }
-        };
-        _ = (0, _._)([_._], _);
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        _.createContext({
-          bCanUseLink: !1,
-        });
-        var _,
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        !(function (_) {
-          (_.k_eView = "view"),
-            (_.k_eViewWebSiteHub = "websitehub"),
-            (_.k_eCommunityView = "communityview"),
-            (_.k_eCommunityEdit = "edit"),
-            (_.k_eCommunityEditBroadcast = "editBroadcast"),
-            (_.k_eCommunityAdminPage = "admin"),
-            (_.k_eCommunityPublish = "publish"),
-            (_.k_eCommunityMigrate = "migrate"),
-            (_.k_eCommunityPreview = "preview"),
-            (_.k_eCommunityPreviewSale = "previewsale"),
-            (_.k_eCommunityAnnouncementHub = "community_announcehub"),
-            (_.k_eStoreView = "storeview"),
-            (_.k_eStoreNewsHub = "newshub"),
-            (_.k_eStoreOwnerPage = "store"),
-            (_.k_eStoreSalePage = "sale"),
-            (_.k_eStoreUsersNewsHub = "usernewshub");
-        })(_ || (_ = {}));
-        const _ =
-          /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-        function _(_, _) {
-          if (!_) return !1;
-          const _ = "store" === (0, _._)(),
-            _ = (function (_) {
-              const _ = _.match(_);
-              return _?.[1];
-            })(window.location.href),
-            _ = _ && "news" == _,
-            _ = _.GetEventType() == _.ajI,
-            _ = "community" === (0, _._)(),
-            _ = _.appid ? "games" : "groups",
-            _ =
-              _ &&
-              _ == _ &&
-              ((_.appid && _.appid === _._.APPID) ||
-                (!_.appid &&
-                  _.clanSteamID.GetAccountID() === _._.CLANACCOUNTID));
-          switch (_) {
-            case _.k_eView:
-              return _ || _;
-            case _.k_eCommunityView:
-            case _.k_eCommunityEdit:
-            case _.k_eCommunityEditBroadcast:
-            case _.k_eCommunityPublish:
-            case _.k_eCommunityMigrate:
-            case _.k_eCommunityPreview:
-            case _.k_eCommunityPreviewSale:
-            case _.k_eCommunityAnnouncementHub:
-              return _;
-            case _.k_eCommunityAdminPage:
-              return !_ && _;
-            case _.k_eViewWebSiteHub:
-              return _ || _;
-            case _.k_eStoreView:
-            case _.k_eStoreNewsHub:
-            case _.k_eStoreOwnerPage:
-            case _.k_eStoreUsersNewsHub:
-              return _;
-            case _.k_eStoreSalePage:
-              return !1;
-            default:
-              return (0, _._)(!1, "Unknown route specified for link: " + _), !1;
-          }
-        }
-        function _(_, _, _) {
-          if (_)
-            return (
-              (_ ? "/games/" + _._.VANITY_ID : "/groups/" + _._.VANITY_ID) + "/"
-            );
-          const _ = _ ? "ogg/" + _ : "gid/" + _.ConvertTo64BitString();
-          return _._.COMMUNITY_BASE_URL + _ + "/";
-        }
-        function _(_, _, _) {
-          const { data: _ } = (0, _._)(
-            _?.appid
-              ? {
-                  appid: _.appid,
-                }
-              : void 0,
-          );
-          if (_) return _(_, _, _, _);
-        }
-        function _(_, _, _, _) {
-          const _ = "relative" === _,
-            _ = "community" === (0, _._)(),
-            _ = _ ? "/" : _._.STORE_BASE_URL,
-            _ = _(_.appid, _.clanSteamID, _);
-          _ === _.k_eView
-            ? (_ = _ ? _.k_eCommunityView : _.k_eStoreView)
-            : _ === _.k_eViewWebSiteHub &&
-              (_ = _ ? _.k_eCommunityAnnouncementHub : _.k_eStoreNewsHub);
-          const _ = _.GID ? _.GID : "",
-            _ = _.AnnouncementGID ? _.AnnouncementGID : "",
-            _ =
-              _.BIsOGGEvent() &&
-              _.appid &&
-              _ &&
-              _.BHasSaleUpdateLandingPageVanity(),
-            _ = _.GetEventType() == _.ajI;
-          switch (_) {
-            case _.k_eCommunityPublish:
-              return (
-                _ +
-                (_.bOldAnnouncement
-                  ? "partnerevents/migrate_announcement/" + _
-                  : "partnerevents/publish/" + _ + "?tab=publishing")
-              );
-            case _.k_eCommunityEdit:
-              return (
-                _ +
-                (_.bOldAnnouncement
-                  ? "partnerevents/migrate_announcement/" + _
-                  : "partnerevents/edit/" + _)
-              );
-            case _.k_eCommunityEditBroadcast:
-              return (
-                _ +
-                (_.bOldAnnouncement
-                  ? "partnerevents/migrate_announcement/" + _
-                  : "partnerevents/edit/" + _) +
-                "?tab=broadcast"
-              );
-            case _.k_eCommunityMigrate:
-              return _ + "partnerevents/migrate_announcement/" + _;
-            case _.k_eCommunityPreview:
-              return _
-                ? _ + "partnerevents/previewsale/" + _
-                : _ +
-                    (_.bOldAnnouncement
-                      ? "partnerevents/preview_old_announcement/" + _
-                      : "partnerevents/preview/" + _);
-            case _.k_eCommunityPreviewSale:
-              return _ + "partnerevents/previewsale/" + _;
-            case _.k_eCommunityAdminPage:
-              return _
-                ? `${_}curator/${_.clanSteamID.GetAccountID()}/admin/creatorhome_link`
-                : _ + "partnerevents";
-            case _.k_eCommunityAnnouncementHub:
-              return _ + "announcements";
-            case _.k_eStoreNewsHub:
-              return (
-                _ +
-                `news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}`
-              );
-            case _.k_eStoreOwnerPage:
-              return (
-                _ +
-                (_.appid
-                  ? "app/" + _.appid
-                  : "curator/" + _.clanSteamID.GetAccountID())
-              );
-            case _.k_eStoreSalePage:
-              return _.jsondata.bSaleEnabled
-                ? _.clanSteamID.GetAccountID() == _._
-                  ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                  : _.clanSteamID.GetAccountID() == _._
-                    ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
-                    : _
-                      ? `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`
-                      : _
-                        ? `${_}curator/${_.clanSteamID.GetAccountID()}`
-                        : _ +
-                          (_.jsondata
-                            .sale_vanity_id_valve_approved_for_sale_subpath
-                            ? "sale/"
-                            : "curator/" +
-                              _.clanSteamID.GetAccountID() +
-                              "/sale/") +
-                          _.jsondata.sale_vanity_id
-                : _;
-            case _.k_eCommunityView:
-              return _ + "announcements/detail/" + _;
-            case _.k_eStoreView:
-              if (_.clanSteamID.GetAccountID() == (0, _._)())
-                return `${_._.STORE_BASE_URL}meetsteam/${_}`;
-              if (_)
-                return `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`;
-              if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
-              return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
-            case _.k_eStoreUsersNewsHub:
-              return `${_}news/`;
-            default:
-              return (0, _._)(!1, "Unknown route specified for link"), "";
-          }
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        let _ = class extends _.Component {
-          m_iMenuInstance;
-          m_elDropDownRef = _.createRef();
-          m_bLoadWasCancelled = !1;
-          state = {
-            bIsOpen: !1,
-            bIsLoadingNotificationSettings: !_.BIsLoaded(),
-          };
-          componentDidMount() {
-            this.state.bIsLoadingNotificationSettings &&
-              _.HintLoad()
-                .catch(
-                  (_) => (
-                    console.error(
-                      "EventReminderWidget load fail: " +
-                        (0, _._)(_).strErrorMsg,
-                    ),
-                    _._
-                  ),
-                )
-                .then((_) => {
-                  _ != _._ ||
-                    this.m_bLoadWasCancelled ||
-                    this.setState({
-                      bIsLoadingNotificationSettings: !1,
-                    });
-                }),
-              !this.props.eventModel.appid &&
-                this.props.eventModel.clanSteamID &&
-                _._.LoadClanInfoForClanSteamID(
-                  this.props.eventModel.clanSteamID,
-                );
-          }
-          componentWillUnmount() {
-            this.m_bLoadWasCancelled = !0;
-          }
-          ToggleMenu(_) {
-            const _ = _._.Get().BIsUserLoggedIn();
-            _ || _._.IN_CLIENT
-              ? (!_ &&
-                  _._.IN_CLIENT &&
-                  console.log(
-                    "EventReminderWidget: In Client: Cannot use login widget. We expect to be already logged in.",
-                  ),
-                this.state.bIsOpen ? this.HideMenu() : this.ShowMenu(),
-                _.stopPropagation(),
-                _.preventDefault())
-              : (0, _._)(
-                  (0, _.jsx)(_._, {
-                    strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                    strDescription: (0, _._)(
-                      "#EventDisplay_Share_NotLoggedIn_Description",
-                    ),
-                    strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                    onOK: () => _(),
-                  }),
-                  window,
-                );
-          }
-          ShowMenu() {
-            let _ = (0, _.jsx)(_, {
-                ...this.props,
-                fnHasReminderSet: (_) => this.BHasSomeNotificationSetting(_),
-                fnHidePanel: this.HideMenu,
-              }),
-              _ = {
-                bOverlapHorizontal: !0,
-                bOverlapVertical: !0,
-                bDisablePopTop: !0,
-                bMatchWidth: !0,
-                strClassName: (0, _._)(
-                  _.ReminderDialog,
-                  _.ReminderOptions,
-                  _.contextMenu,
-                ),
-              };
-            (this.m_iMenuInstance = (0, _._)(
-              _,
-              this.m_elDropDownRef.current,
-              _,
-            )),
-              this.m_iMenuInstance.SetOnHideCallback(this.HideMenu),
-              this.setState({
-                bIsOpen: !0,
-              }),
-              _.RecordAppInteractionEvent(
-                this.props.eventModel.appid,
-                _.k_eReminder_Opened,
-              );
-          }
-          HideMenu() {
-            this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
-              this.setState({
-                bIsOpen: !1,
-              });
-          }
-          BHasSomeNotificationSetting(_) {
-            const _ = _.GID;
-            return (
-              (_.BHasValidatedEmail() &&
-                _._.Get().BFollowsEventAndNotifiedBy(
-                  _.clanSteamID,
-                  _,
-                  _._.k_ENotifyFlagByEmail,
-                )) ||
-              (_.BHasPushNotification() &&
-                _._.Get().BFollowsEventAndNotifiedBy(
-                  _.clanSteamID,
-                  _,
-                  _._.k_ENotifyFlagByPush,
-                ))
-            );
-          }
-          render() {
-            const _ = this.props.bOnlyShowIcon && !this.state.bIsOpen,
-              _ = this.BHasSomeNotificationSetting(this.props.eventModel),
-              _ = (0, _._)();
-            return this.props.eventModel.startTime < _ ||
-              this.props.eventModel.BIsUnlistedEvent()
-              ? null
-              : (0, _.jsxs)("div", {
-                  className: (0, _._)({
-                    [_.ReminderCheckBox]: !0,
-                    [_().ReminderCtn]: !0,
-                    [_.IconMode]: _,
-                    [_.TextMode]: !_,
-                    ReminderSet: _,
-                    RemindMeWidget: !0,
-                  }),
-                  onClick: this.ToggleMenu,
-                  ref: this.m_elDropDownRef,
                   children: [
                     _ &&
-                      (0, _.jsx)("div", {
-                        className: _.RemindCheck,
-                        children: (0, _.jsx)(_.Jlk, {}),
+                      (0, _.jsx)("colgroup", {
+                        children: _.split(",").map((_, _) =>
+                          (0, _.jsx)(
+                            _,
+                            {
+                              width: _,
+                            },
+                            _,
+                          ),
+                        ),
                       }),
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _.RemindBell,
-                        children: (0, _.jsx)(_.IrQ, {}),
-                      }),
-                    (0, _.jsx)("div", {
-                      className: _.ReminderDefault,
-                      children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.ReminderOptions,
+                    (0, _.jsx)("tbody", {
+                      children: _.children,
                     }),
                   ],
                 });
-          }
-        };
-        function _(_) {
-          const { bPreviewMode: _, eventGID: _, ..._ } = _,
-            _ = (0, _._)(_);
-          if (!_)
-            return _
-              ? (0, _.jsx)("div", {
-                  className: _.ErrorDiv,
-                  children: (0, _._)(
-                    "#EventDidplay_Reminder_EventNotVisible",
-                    _,
-                  ),
-                })
-              : null;
-          const _ = (0, _.sfN)(_._.LANGUAGE);
-          return (0, _.jsx)(_, {
-            lang: _,
-            ..._,
-            eventModel: _,
-          });
-        }
-        function _(_) {
-          return _.unix(_).utc().format("YYYYMMDD[T]HHmmss[Z]");
-        }
-        (0, _._)([_._], _.prototype, "ToggleMenu", null),
-          (0, _._)([_._], _.prototype, "ShowMenu", null),
-          (0, _._)([_._], _.prototype, "HideMenu", null),
-          (_ = (0, _._)([_._], _));
-        const _ = (0, _._)((_) => {
-            const {
-                eventModel: _,
-                bShowStartTime: _,
-                bExpandLeft: _,
-                bOnlyShowIcon: _,
-                fnHasReminderSet: _,
-                fnHidePanel: _,
-                lang: _,
-              } = _,
-              [_, _] = _.useState(!1),
-              _ = async (_, _, _) => {
-                const _ = _?.GID;
-                if (_ && _ != _.kFb) {
-                  _(!0);
-                  try {
-                    await _._.Get().SetFollowOrUnfollowEvent(
-                      !_,
-                      _,
-                      _.clanSteamID,
-                      _,
-                      _,
-                    ),
-                      _ &&
-                        (_ === _._.k_ENotifyFlagByEmail
-                          ? _(_.k_eReminder_Email)
-                          : _ === _._.k_ENotifyFlagByPush &&
-                            _(_.k_eReminder_MobilePush));
-                  } catch (_) {
-                    (0, _._)(
-                      (0, _.jsx)(_._, {
-                        strTitle: (0, _._)(
-                          _
-                            ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                            : "#EventDisplay_Reminder_FollowEvent_Error",
-                        ),
-                        strDescription: (0, _._)(
-                          _
-                            ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                            : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                        ),
-                        children: (0, _._)(_).strErrorMsg,
-                      }),
-                      window,
-                    );
-                  }
-                  _(!1);
-                }
               },
-              _ = (_) => {
-                _.RecordAppInteractionEvent(_.appid, _);
+              autocloses: !1,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "tr",
+            {
+              Constructor: function (_) {
+                return (0, _.jsx)("tr", {
+                  className: (0, _._)(_().TableRow, "BB_TableRow"),
+                  children: _.children,
+                });
               },
-              _ = _.jsondata.bSaleEnabled ? _.k_eStoreSalePage : _.k_eStoreView,
-              _ = (function (_, _, _) {
-                return _(
-                  _,
-                  _,
-                  "forceAbsolute" !== _ && _(_, _) ? "relative" : "absolute",
-                );
-              })(_, _, "forceAbsolute"),
-              _ = (_) => {
-                const _ = _.appid
-                    ? "app/" + _.appid
-                    : "group/" + _.clanSteamID.GetAccountID(),
-                  _ = "l=" + (0, _.LgB)(_);
-                return `${_._.STORE_BASE_URL}news/download/${_}/${_}/${_.GID}?${_}`;
+              autocloses: !1,
+              skipInternalNewline: !0,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "th",
+            {
+              Constructor: function (_) {
+                return _("th", _);
               },
-              _ = _.BHasValidatedEmail(),
-              _ = _.BHasPushNotification(),
-              _ = _ && _.GetStartTimeAndDateUnixSeconds();
-            return (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _.ReminderCheckBox,
-                    _ ? _.IconMode : _.TextMode,
-                    "RemindMeWidget",
-                  ),
-                  onClick: _,
+              autocloses: !1,
+              skipInternalNewline: !0,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "td",
+            {
+              Constructor: function (_) {
+                return _("td", _);
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "expand",
+            {
+              Constructor: function (_) {
+                const _ = Boolean(_(_.args, "expanded")),
+                  [_, _] = _.useState(_),
+                  _ = _(_.args, "title"),
+                  _ = _(_.args, "collapsed_str"),
+                  _ = _(_.args, "expanded_str"),
+                  _ = (function (_, _, _, _) {
+                    switch (_) {
+                      case "details":
+                        return {
+                          collapsed: "#Bbcode_Expand_Details_Collapsed",
+                          expanded: "#Bbcode_Expand_Details_Expanded",
+                          style: _().ExpandSection_Details,
+                        };
+                      case "spoiler":
+                        return {
+                          collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
+                          expanded: "#Bbcode_Expand_Spoiler_Expanded",
+                          style: _().ExpandSection_Spoiler,
+                        };
+                      case "title":
+                        return {
+                          collapsed:
+                            _ || _ || "#Bbcode_Expand_ShowMore_Collapsed",
+                          expanded:
+                            _ || _ || "#Bbcode_Expand_ShowMore_Expanded",
+                          style: _().ExpandSection_WithTitle,
+                        };
+                      default:
+                        return {
+                          collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
+                          expanded: "#Bbcode_Expand_ShowMore_Expanded",
+                          style: _().ExpandSection_ShowMore,
+                        };
+                    }
+                  })(_(_.args, "type"), _, _, _);
+                return (0, _.jsxs)("div", {
+                  className: (0, _._)({
+                    [_().ExpandSectionBlock]: !0,
+                    [_.style ?? ""]: null != _.style,
+                    [_().ExpandSectionExpanded]: _,
+                    [_().ExpandSectionCollapsed]: !_,
+                    BBCodeExpanded: _,
+                    BBCodeCollapsed: !_,
+                  }),
                   children: [
-                    _(_) &&
-                      (0, _.jsx)("div", {
-                        className: _.RemindCheck,
-                        children: (0, _.jsx)(_.Jlk, {}),
-                      }),
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _.RemindBell,
-                        children: (0, _.jsx)(_.IrQ, {}),
-                      }),
-                    (0, _.jsx)("div", {
-                      className: _.ReminderDefault,
-                      children: (0, _._)("#EventDisplay_Reminder_SetReminder"),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.ReminderOpennedOptions,
-                    }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _.FlexColumnContainer,
-                    _.ReminderBackground,
-                    _ && _.ReminderExpandsLeft,
-                  ),
-                  children: [
-                    _ &&
-                      (0, _.jsx)(_._, {
-                        className: _.RpcThrobber,
-                        size: "xlarge",
-                        position: "center",
-                      }),
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _.FullStartTime,
-                        children: (0, _._)(
-                          "#EventDisplay_EventUpcoming_WithDateAndTime",
-                          (0, _._)(
-                            _,
-                            (0, _._)(
-                              new Date(1e3 * _),
-                              _._.GetTimeNowWithOverrideAsDate(),
-                            ),
-                          ),
-                          _(_, !0),
-                        ),
-                      }),
-                    (0, _.jsx)("div", {
-                      className: _.ReminderOptionsHeader,
-                      children: (0, _._)(
-                        "#EventDisplay_Reminder_GetNotification_Via",
-                      ),
-                    }),
                     (0, _.jsxs)("div", {
-                      className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                      className: _().ExpandSectionHeader,
+                      onClick: () => _(!_),
                       children: [
-                        (0, _.jsx)(_._, {
-                          className: _.CheckboxWrapper,
-                          bTopmost: !0,
-                          toolTipContent: (0, _._)(
-                            _
-                              ? "#EventReminder_NotifyByEmail_ttip"
-                              : "#EventReminder_NotifyByEmail_Missing",
-                          ),
-                          children: (0, _.jsx)(_._, {
-                            label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                            disabled: !_,
-                            checked: _._.Get().BFollowsEventAndNotifiedBy(
-                              _.clanSteamID,
-                              _.GID,
-                              _._.k_ENotifyFlagByEmail,
-                            ),
-                            onChange: (_) => {
-                              _(_, !1, _._.k_ENotifyFlagByEmail);
-                            },
-                          }),
-                        }),
-                        !_ &&
-                          (0, _.jsx)("div", {
-                            className: _.FlexColumnContainer,
-                            children: (0, _.jsx)("a", {
-                              href: _._.STORE_BASE_URL + "account/",
-                              target: _._.IN_CLIENT ? void 0 : "_blank",
-                              onClick: () => _(_.k_eReminder_EmailUnverified),
-                              children: (0, _._)(
-                                "#EventReminder_NotifyByEmail_Missing_Add",
-                              ),
-                            }),
-                          }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                      children: [
-                        (0, _.jsx)(_._, {
-                          className: _.CheckboxWrapper,
-                          bTopmost: !0,
-                          toolTipContent: (0, _._)(
-                            _
-                              ? "#EventReminder_NotifyByMobile_ttip"
-                              : "#EventReminder_NotifyByMobile_Missing",
-                          ),
-                          children: (0, _.jsx)(_._, {
-                            label: (0, _._)(
-                              "#EventDisplay_Reminder_ViaMobileApp",
-                            ),
-                            disabled: !_,
-                            checked: _._.Get().BFollowsEventAndNotifiedBy(
-                              _.clanSteamID,
-                              _.GID,
-                              _._.k_ENotifyFlagByPush,
-                            ),
-                            onChange: (_) => {
-                              _(_, !1, _._.k_ENotifyFlagByPush);
-                            },
-                          }),
-                        }),
-                        !_ &&
-                          (0, _.jsx)("div", {
-                            className: _.FlexColumnContainer,
-                            children: (0, _.jsx)("a", {
-                              href:
-                                _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                              target: _._.IN_CLIENT ? void 0 : "_blank",
-                              onClick: () => _(_.k_eReminder_MobilePushMissing),
-                              children: (0, _._)(
-                                "#EventReminder_NotifyByMobile_Install",
-                              ),
-                            }),
-                          }),
-                      ],
-                    }),
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
+                        (0, _._)(_ ? _.expanded : _.collapsed),
                         (0, _.jsx)("div", {
-                          className: _.ReminderOptionsHeader,
-                          children: (0, _._)(
-                            "#EventDisplay_Reminder_AddToCalendar",
-                          ),
-                        }),
-                        (0, _.jsxs)("div", {
-                          className: _.ReminderCalendarOptions,
-                          children: [
-                            (0, _.jsx)("a", {
-                              className: _.ReminderOption,
-                              href: _("ics"),
-                              onClick: () => _(_.k_eReminder_CalendarApple),
-                              children: (0, _._)(
-                                "#EventDisplay_Reminder_AppleCalendar_Short",
-                              ),
-                            }),
-                            (0, _.jsx)("a", {
-                              className: _.ReminderOption,
-                              target: _._.IN_CLIENT ? void 0 : "_blank",
-                              href: (() => {
-                                const _ = encodeURIComponent(
-                                    (() => {
-                                      const _ = _.GetNameWithFallback(_);
-                                      if (
-                                        _.BHasEntityNameForID(
-                                          _.appid,
-                                          _.clanSteamID.GetAccountID(),
-                                        )
-                                      )
-                                        return `${_.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-                                      return _;
-                                    })(),
-                                  ),
-                                  _ = encodeURIComponent(
-                                    (() => {
-                                      let _ =
-                                        _.GetSubTitleWithLanguageFallback(_);
-                                      return (
-                                        (_ = _ ? `${_}\n\n\n` : ""),
-                                        `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
-                                      );
-                                    })(),
-                                  ),
-                                  _ = _.GetStartTimeAndDateUnixSeconds(),
-                                  _ = _(_),
-                                  _ = _(
-                                    _.GetEndTimeAndDateUnixSeconds() ||
-                                      _ + _._.PerHour,
-                                  ),
-                                  _ =
-                                    (_._.IN_CLIENT
-                                      ? "steam://openurl_external/"
-                                      : "") +
-                                    `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-                                return (0, _._)(_);
-                              })(),
-                              onClick: () => _(_.k_eReminder_CalendarGoogle),
-                              children: (0, _._)(
-                                "#EventDisplay_Reminder_GoogleCalendar_Short",
-                              ),
-                            }),
-                            (0, _.jsx)("a", {
-                              className: _.ReminderOption,
-                              href: _("outlook"),
-                              onClick: () => _(_.k_eReminder_CalendarOutlook),
-                              children: (0, _._)(
-                                "#EventDisplay_Reminder_OutlookCalendar_Short",
-                              ),
-                            }),
-                          ],
+                          className: _().EmbedArrow,
+                          children: (0, _.jsx)(_.DK4, {
+                            angle: _ ? 180 : 0,
+                          }),
                         }),
                       ],
                     }),
-                    !1,
-                  ],
-                }),
-              ],
-            });
-          }),
-          _ = new Map([
-            [
-              "b",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("b", {
-                    className: _().Bold,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "i",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("i", {
-                    className: (0, _._)(_().Italic, "BB_Italic"),
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "h1",
-              {
-                Constructor: function (_) {
-                  return _("h1", _, (0, _._)(_().Header1, "BB_Header1"));
-                },
-                autocloses: !1,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "h2",
-              {
-                Constructor: function (_) {
-                  return _("h2", _, (0, _._)(_().Header2, "BB_Header2"));
-                },
-                autocloses: !1,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "h3",
-              {
-                Constructor: function (_) {
-                  return _("h3", _, (0, _._)(_().Header3, "BB_Header3"));
-                },
-                autocloses: !1,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "h4",
-              {
-                Constructor: function (_) {
-                  return _("h4", _, (0, _._)(_().Header4, "BB_Header4"));
-                },
-                autocloses: !1,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "h5",
-              {
-                Constructor: function (_) {
-                  return _("h5", _, (0, _._)(_().Header5, "BB_Header5"));
-                },
-                autocloses: !1,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "center",
-              {
-                Constructor: function (_) {
-                  let _ = _(_.args, "id");
-                  _ &&
-                    "string" == typeof _ &&
-                    _.length > 0 &&
-                    "#" === _[0] &&
-                    (_ = _.substring(1));
-                  return (0, _.jsx)("span", {
-                    _: _ || void 0,
-                    className: (0, _._)(_().CenterSpan, "BB_Center"),
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "smalltext",
-              {
-                Constructor: function (_) {
-                  return _("div", _, (0, _._)(_().SmallText, "BB_SmallText"));
-                },
-                autocloses: !1,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "u",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("u", {
-                    className: _().Underline,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "strike",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("s", {
-                    className: _().Strike,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "spoiler",
-              {
-                Constructor: function (_) {
-                  let [_, _] = _.useState(!1),
-                    _ = _.useCallback(() => {
-                      __webpack_require__(!_);
-                    }, [_]);
-                  return (0, _.jsx)(_._, {
-                    className: (0, _._)(_().Spoiler, _ && _().Revealed),
-                    focusable: !0,
-                    onActivate: _,
-                    onOKActionDescription: (0, _._)(
-                      _ ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
-                    ),
-                    children: (0, _.jsx)("span", {
-                      className: _().SpoilerText,
-                      children: _.children,
-                    }),
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "hr",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("hr", {
-                    className: _()._,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "noparse",
-              {
-                Constructor: function (_) {
-                  return _.children;
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "url",
-              {
-                Constructor: function (_) {
-                  let _ = _(_(_.args));
-                  if (!_) {
-                    const _ = _.children;
-                    "string" == typeof _ && (0, _._)(_) && (_ = _(_));
-                  }
-                  const _ =
-                      "button" == _(_.args, "style") ? _().LinkButton : void 0,
-                    _ = _ && _(_.args, "buttoncolor");
-                  let _ = _(_.args, "id");
-                  _ &&
-                    "string" == typeof _ &&
-                    _.length > 0 &&
-                    "#" === _[0] &&
-                    (_ = _.substring(1));
-                  if (void 0 === _ && !_) return _.children || "";
-                  if (
-                    void 0 === _ ||
-                    ("string" == typeof _ && _.length > 0 && "#" == _[0])
-                  )
-                    return (0, _.jsx)("a", {
-                      href: _ ?? null,
-                      _: _,
-                      children: _.children,
-                    });
-                  return (0, _.jsx)(_, {
-                    className: _,
-                    href: _,
-                    _: _,
-                    style: {
-                      backgroundColor: _,
-                    },
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "quote",
-              {
-                Constructor: function (_) {
-                  const _ = _(_.args, "author");
-                  return (0, _.jsxs)("blockquote", {
-                    className: (0, _._)(_().BlockQuote, _.className),
-                    children: [
-                      !!_ &&
-                        (0, _.jsxs)("div", {
-                          className: _().QuoteAuthor,
-                          children: [
-                            (0, _._)("#Bbcode_Originally_Posted_By") + " ",
-                            " ",
-                            (0, _.jsx)("b", {
-                              children: _ + ":",
-                            }),
-                          ],
-                        }),
-                      _.children,
-                    ],
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "pullquote",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("div", {
-                    className: _().PullQuote,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "code",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("code", {
-                    className: _().CodeBlock,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "c",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("code", {
-                    className: _().Code,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "list",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("ul", {
-                    className: (0, _._)(_().List, "bullets"),
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-                skipInternalNewline: !0,
-              },
-            ],
-            [
-              "olist",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("ol", {
-                    className: _().OrderedList,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-                skipInternalNewline: !0,
-              },
-            ],
-            [
-              "*",
-              {
-                Constructor: function (_) {
-                  let _ = _(_.args, "id");
-                  _ &&
-                    "string" == typeof _ &&
-                    _.length > 0 &&
-                    "#" === _[0] &&
-                    (_ = _.substring(1));
-                  return (0, _.jsx)("li", {
-                    className: _().ListItem,
-                    _: _ || void 0,
-                    children: _.children,
-                  });
-                },
-                autocloses: !0,
-                skipInternalNewline: !0,
-              },
-            ],
-            [
-              "table",
-              {
-                Constructor: function (_) {
-                  const _ = _(_.args, "noborder"),
-                    _ = _(_.args, "equalcells"),
-                    _ = _(_.args, "colwidth");
-                  return (0, _.jsxs)("table", {
-                    className: (0, _._)(
-                      _().Table,
-                      "BB_Table",
-                      _ && _().NoBorder,
-                      _ && _().EqualCells,
-                    ),
-                    children: [
-                      _ &&
-                        (0, _.jsx)("colgroup", {
-                          children: _.split(",").map((_, _) =>
-                            (0, _.jsx)(
-                              _,
-                              {
-                                width: _,
-                              },
-                              _,
-                            ),
-                          ),
-                        }),
-                      (0, _.jsx)("tbody", {
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().ExpandSectionBody,
                         children: _.children,
                       }),
-                    ],
-                  });
-                },
-                autocloses: !1,
-                skipInternalNewline: !0,
+                  ],
+                });
               },
-            ],
-            [
-              "tr",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsx)("tr", {
-                    className: (0, _._)(_().TableRow, "BB_TableRow"),
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
-                skipInternalNewline: !0,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "th",
-              {
-                Constructor: function (_) {
-                  return _("th", _);
-                },
-                autocloses: !1,
-                skipInternalNewline: !0,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "td",
-              {
-                Constructor: function (_) {
-                  return _("td", _);
-                },
-                autocloses: !1,
-                skipInternalNewline: !0,
-                skipFollowingNewline: !0,
-              },
-            ],
-            [
-              "expand",
-              {
-                Constructor: function (_) {
-                  const _ = Boolean(_(_.args, "expanded")),
-                    [_, _] = _.useState(_),
-                    _ = _(_.args, "title"),
-                    _ = _(_.args, "collapsed_str"),
-                    _ = _(_.args, "expanded_str"),
-                    _ = (function (_, _, _, _) {
-                      switch (_) {
-                        case "details":
-                          return {
-                            collapsed: "#Bbcode_Expand_Details_Collapsed",
-                            expanded: "#Bbcode_Expand_Details_Expanded",
-                            style: _().ExpandSection_Details,
-                          };
-                        case "spoiler":
-                          return {
-                            collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
-                            expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                            style: _().ExpandSection_Spoiler,
-                          };
-                        case "title":
-                          return {
-                            collapsed:
-                              _ || _ || "#Bbcode_Expand_ShowMore_Collapsed",
-                            expanded:
-                              _ || _ || "#Bbcode_Expand_ShowMore_Expanded",
-                            style: _().ExpandSection_WithTitle,
-                          };
-                        default:
-                          return {
-                            collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
-                            expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                            style: _().ExpandSection_ShowMore,
-                          };
-                      }
-                    })(_(_.args, "type"), _, _, _);
-                  return (0, _.jsxs)("div", {
-                    className: (0, _._)({
-                      [_().ExpandSectionBlock]: !0,
-                      [_.style ?? ""]: null != _.style,
-                      [_().ExpandSectionExpanded]: _,
-                      [_().ExpandSectionCollapsed]: !_,
-                      BBCodeExpanded: _,
-                      BBCodeCollapsed: !_,
-                    }),
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: _().ExpandSectionHeader,
-                        onClick: () => _(!_),
-                        children: [
-                          (0, _._)(_ ? _.expanded : _.collapsed),
-                          (0, _.jsx)("div", {
-                            className: _().EmbedArrow,
-                            children: (0, _.jsx)(_.DK4, {
-                              angle: _ ? 180 : 0,
-                            }),
-                          }),
-                        ],
-                      }),
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: _().ExpandSectionBody,
-                          children: _.children,
-                        }),
-                    ],
-                  });
-                },
-                autocloses: !1,
-                skipInternalNewline: !0,
-                allowWrapTextForCopying: !0,
-              },
-            ],
-            [
-              "remindme",
-              {
-                Constructor: function (_) {
-                  const { event: _, showErrorInfo: _ } = _.context,
-                    _ = _(_.args);
-                  if (_)
-                    return (0, _.jsx)(_, {
-                      eventGID: _,
-                      bPreviewMode: _,
-                    });
-                  if (_) {
-                    const _ = (0, _.sfN)(_._.LANGUAGE);
-                    return (0, _.jsx)(_, {
-                      eventModel: _,
-                      lang: _,
-                    });
+              autocloses: !1,
+              skipInternalNewline: !0,
+              allowWrapTextForCopying: !0,
+            },
+          ],
+          [
+            "calendarevent",
+            {
+              Constructor: function (_) {
+                const _ = _(_.args, "title"),
+                  _ = _(_.args, "start") ?? _(_.args, "datetime"),
+                  _ = _(_.args, "end") ?? _(_.args, "datetime"),
+                  _ = _(_.args, "body") ?? null,
+                  _ = _(_.args, "location") ?? null,
+                  _ = _(_.args, "id") ?? "",
+                  _ = new Date(_),
+                  _ = _.getUTCFullYear(),
+                  _ = ("0" + (_.getUTCMonth() + 1)).slice(-2),
+                  _ = ("0" + _.getUTCDate()).slice(-2),
+                  _ = ("0" + _.getUTCHours()).slice(-2),
+                  _ = ("0" + _.getUTCMinutes()).slice(-2),
+                  _ = `${_}${_}${_}T${_}${_}00Z`,
+                  _ = new Date(_),
+                  _ = _.getUTCFullYear(),
+                  _ = ("0" + (_.getUTCMonth() + 1)).slice(-2),
+                  _ = ("0" + _.getUTCDate()).slice(-2),
+                  _ = ("0" + _.getUTCHours()).slice(-2),
+                  _ = ("0" + _.getUTCMinutes()).slice(-2),
+                  _ = `${_}${_}${_}T${_}${_}00Z`;
+                let _;
+                try {
+                  let _ = "BEGIN:VCALENDAR\r\n";
+                  (_ += "VERSION:2.0\r\n"),
+                    (_ += "BEGIN:VEVENT\r\n"),
+                    (_ += `DTSTART:${_}\r\n`),
+                    (_ += `DTEND:${_}\r\n`),
+                    (_ += `SUMMARY:${_.replace("\n", "\\n")}\r\n`),
+                    _ && (_ += `DESCRIPTION:${_.replace("\n", "\\n")}\r\n`),
+                    _ && (_ += `LOCATION:${_.replace("\n", "\\n")}\r\n`),
+                    (_ += "END:VEVENT\r\n"),
+                    (_ += "END:VCALENDAR\r\n"),
+                    (_ = `data:text/calendar;charset=utf-8;base64,${_._(new TextEncoder().encode(_))}`);
+                } catch (_) {
+                  console.error(_);
+                }
+                let _ =
+                  "https://calendar.google.com/calendar/render?action=TEMPLATE";
+                (_ += `&text=${encodeURI(_)}`),
+                  (_ += `&details=${encodeURI(_)}`),
+                  (_ += `&dates=${encodeURI(_ + "/" + _)}`);
+                const _ = (_) => {
+                  if ("ReactNativeWebView" in window) {
+                    const _ = window.ReactNativeWebView,
+                      _ = {
+                        event_name: "addcalendarevent",
+                        tsStart: _.getTime(),
+                        tsEnd: _.getTime(),
+                        strTitle: _,
+                        strNotes: _,
+                        strLocation: _,
+                      };
+                    __webpack_require__.postMessage(JSON.stringify(_)),
+                      _.preventDefault();
                   }
-                  return null;
-                },
-                autocloses: !1,
-              },
-            ],
-            [
-              "calendarevent",
-              {
-                Constructor: function (_) {
-                  const _ = _(_.args, "title"),
-                    _ = _(_.args, "start") ?? _(_.args, "datetime"),
-                    _ = _(_.args, "end") ?? _(_.args, "datetime"),
-                    _ = _(_.args, "body") ?? null,
-                    _ = _(_.args, "location") ?? null,
-                    _ = _(_.args, "id") ?? "",
-                    _ = new Date(_),
-                    _ = _.getUTCFullYear(),
-                    _ = ("0" + (_.getUTCMonth() + 1)).slice(-2),
-                    _ = ("0" + _.getUTCDate()).slice(-2),
-                    _ = ("0" + _.getUTCHours()).slice(-2),
-                    _ = ("0" + _.getUTCMinutes()).slice(-2),
-                    _ = `${_}${_}${_}T${_}${_}00Z`,
-                    _ = new Date(_),
-                    _ = _.getUTCFullYear(),
-                    _ = ("0" + (_.getUTCMonth() + 1)).slice(-2),
-                    _ = ("0" + _.getUTCDate()).slice(-2),
-                    _ = ("0" + _.getUTCHours()).slice(-2),
-                    _ = ("0" + _.getUTCMinutes()).slice(-2),
-                    _ = `${_}${_}${_}T${_}${_}00Z`;
-                  let _;
-                  try {
-                    let _ = "BEGIN:VCALENDAR\r\n";
-                    (_ += "VERSION:2.0\r\n"),
-                      (_ += "BEGIN:VEVENT\r\n"),
-                      (_ += `DTSTART:${_}\r\n`),
-                      (_ += `DTEND:${_}\r\n`),
-                      (_ += `SUMMARY:${_.replace("\n", "\\n")}\r\n`),
-                      _ && (_ += `DESCRIPTION:${_.replace("\n", "\\n")}\r\n`),
-                      _ && (_ += `LOCATION:${_.replace("\n", "\\n")}\r\n`),
-                      (_ += "END:VEVENT\r\n"),
-                      (_ += "END:VCALENDAR\r\n"),
-                      (_ = `data:text/calendar;charset=utf-8;base64,${_._(new TextEncoder().encode(_))}`);
-                  } catch (_) {
-                    console.error(_);
-                  }
-                  let _ =
-                    "https://calendar.google.com/calendar/render?action=TEMPLATE";
-                  (_ += `&text=${encodeURI(_)}`),
-                    (_ += `&details=${encodeURI(_)}`),
-                    (_ += `&dates=${encodeURI(_ + "/" + _)}`);
-                  const _ = (_) => {
-                    if ("ReactNativeWebView" in window) {
-                      const _ = window.ReactNativeWebView,
-                        _ = {
-                          event_name: "addcalendarevent",
-                          tsStart: _.getTime(),
-                          tsEnd: _.getTime(),
-                          strTitle: _,
-                          strNotes: _,
-                          strLocation: _,
-                        };
-                      __webpack_require__.postMessage(JSON.stringify(_)),
-                        _.preventDefault();
-                    }
-                  };
-                  return (0, _.jsxs)("div", {
-                    className: (0, _._)(
-                      "SaleSectionCalendarEventContainer",
-                      _().CalendarEventContainer,
-                    ),
-                    _: _,
-                    children: [
-                      _ &&
-                        (0, _.jsx)("a", {
-                          className: (0, _._)(
-                            "SaleSectionCalendarEventLink",
-                            _().CalendarEventLink,
-                          ),
-                          href: _,
-                          onClick: _,
-                          download: "calendar.ics",
-                          children: "Apple",
-                        }),
+                };
+                return (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    "SaleSectionCalendarEventContainer",
+                    _().CalendarEventContainer,
+                  ),
+                  _: _,
+                  children: [
+                    _ &&
                       (0, _.jsx)("a", {
                         className: (0, _._)(
                           "SaleSectionCalendarEventLink",
                           _().CalendarEventLink,
                         ),
                         href: _,
-                        children: "Google",
+                        onClick: _,
+                        download: "calendar.ics",
+                        children: "Apple",
                       }),
-                      _ &&
-                        (0, _.jsx)("a", {
-                          className: (0, _._)(
-                            "SaleSectionCalendarEventLink",
-                            _().CalendarEventLink,
-                          ),
-                          href: _,
-                          onClick: _,
-                          download: "calendar.ics",
-                          children: "Outlook",
-                        }),
-                    ],
-                  });
-                },
-                autocloses: !0,
+                    (0, _.jsx)("a", {
+                      className: (0, _._)(
+                        "SaleSectionCalendarEventLink",
+                        _().CalendarEventLink,
+                      ),
+                      href: _,
+                      children: "Google",
+                    }),
+                    _ &&
+                      (0, _.jsx)("a", {
+                        className: (0, _._)(
+                          "SaleSectionCalendarEventLink",
+                          _().CalendarEventLink,
+                        ),
+                        href: _,
+                        onClick: _,
+                        download: "calendar.ics",
+                        children: "Outlook",
+                      }),
+                  ],
+                });
               },
-            ],
-            [
-              "doclink",
-              {
-                Constructor: function (_) {
-                  const _ = _(_.args),
-                    _ =
-                      "button" == _(_.args, "style") ? _().LinkButton : void 0,
-                    _ = _ && _(_.args, "buttoncolor");
-                  return (0, _.jsx)(_, {
-                    className: _,
-                    style: {
-                      backgroundColor: _,
-                    },
-                    href: `${_._.PARTNER_BASE_URL}doc/${_}`,
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
+              autocloses: !0,
+            },
+          ],
+          [
+            "doclink",
+            {
+              Constructor: function (_) {
+                const _ = _(_.args),
+                  _ = "button" == _(_.args, "style") ? _().LinkButton : void 0,
+                  _ = _ && _(_.args, "buttoncolor");
+                return (0, _.jsx)(_, {
+                  className: _,
+                  style: {
+                    backgroundColor: _,
+                  },
+                  href: `${_._.PARTNER_BASE_URL}doc/${_}`,
+                  children: _.children,
+                });
               },
-            ],
-            [
-              "color",
-              {
-                Constructor: function (_) {
-                  const _ = _(_.args);
-                  return (0, _.jsx)("span", {
-                    style: {
-                      color: _,
-                    },
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
+              autocloses: !1,
+            },
+          ],
+          [
+            "color",
+            {
+              Constructor: function (_) {
+                const _ = _(_.args);
+                return (0, _.jsx)("span", {
+                  style: {
+                    color: _,
+                  },
+                  children: _.children,
+                });
               },
-            ],
-            [
-              "bgcolor",
-              {
-                Constructor: function (_) {
-                  const _ = _(_.args);
-                  return (0, _.jsx)("span", {
-                    style: {
-                      backgroundColor: _,
-                    },
-                    children: _.children,
-                  });
-                },
-                autocloses: !1,
+              autocloses: !1,
+            },
+          ],
+          [
+            "bgcolor",
+            {
+              Constructor: function (_) {
+                const _ = _(_.args);
+                return (0, _.jsx)("span", {
+                  style: {
+                    backgroundColor: _,
+                  },
+                  children: _.children,
+                });
               },
-            ],
-            [
-              "p",
-              {
-                Constructor: function (_) {
-                  return (0, _.jsxs)("p", {
-                    className: _().Paragraph,
-                    children: [_.children, (0, _.jsx)("wbr", {})],
-                  });
-                },
-                autocloses: !1,
-                skipFollowingNewline: !0,
+              autocloses: !1,
+            },
+          ],
+          [
+            "p",
+            {
+              Constructor: function (_) {
+                return (0, _.jsxs)("p", {
+                  className: _().Paragraph,
+                  children: [_.children, (0, _.jsx)("wbr", {})],
+                });
               },
-            ],
-          ]);
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+        ]);
         new Map([
           [
             "looping_media",
@@ -92556,10 +90691,29 @@ var CLSTAMP = "steamdb";
           }
         }
         (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-        var _,
-          _,
-          _ = __webpack_require__("chunkid"),
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = (0, _.createContext)({
+            ownerWindow: window,
+          }),
+          _ = () => (0, _.useContext)(_);
+        function _(_) {
+          const { ownerWindow: _, children: _ } = _,
+            _ = (0, _.useMemo)(
+              () => ({
+                ownerWindow: _,
+              }),
+              [_],
+            );
+          return (0, _.createElement)(
+            _.Provider,
+            {
+              value: _,
+            },
+            _,
+          );
+        }
+        var _, _;
         function _() {
           return (0, _._)() ? _.Composited : _.None;
         }
@@ -92657,26 +90811,6 @@ var CLSTAMP = "steamdb";
               (_[(_.PopupContextMenu = 3)] = "PopupContextMenu"),
               (_[(_.StandaloneContextMenu = 4)] = "StandaloneContextMenu");
           })(_ || (_ = {}));
-        const _ = _.createContext({
-            ownerWindow: window,
-          }),
-          _ = () => _.useContext(_);
-        function _(_) {
-          const { ownerWindow: _, children: _ } = _,
-            _ = _.useMemo(
-              () => ({
-                ownerWindow: _,
-              }),
-              [_],
-            );
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _,
-          );
-        }
         class _ {
           m_strName;
           m_strTitle;
@@ -93755,6 +91889,31 @@ var CLSTAMP = "steamdb";
                 onLoad: _,
               }
             : null;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = _._.box(void 0);
+        function _() {
+          return _.get();
+        }
+        function _(_) {
+          (0, _._)(() => _.set(_));
+        }
+        function _() {
+          const _ = _.get();
+          return _ || Math.floor(Date.now() / 1e3);
+        }
+        function _() {
+          const _ = _.get();
+          return _ ? new Date(1e3 * _) : new Date();
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -96267,19 +94426,30 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
+        function _(_) {
+          return (function (_, _) {
+            return null !== _(_, _);
+          })(window, _);
+        }
         function _(_, _) {
-          return !!_ && "object" == typeof _.SteamClient && _ in _.SteamClient;
+          const _ = _.lastIndexOf(".");
+          if (-1 == _) return !1;
+          const _ = _.substring(0, _),
+            _ = _.substring(_ + 1),
+            _ = _(_, _);
+          return null !== _ && "function" == typeof _[_];
         }
         function _(_) {
           return _(window, _);
         }
         function _(_, _) {
-          if (!_) return !1;
-          const [_, _] = _.split(".", 2);
-          return _ && _ && _(_, _) && _ in _.SteamClient[_];
-        }
-        function _(_) {
-          return _(window, _);
+          const _ = (_) => _ && "object" == typeof _;
+          let _ = _?.SteamClient;
+          for (const _ of _.split(".")) {
+            if (!__webpack_require__(_) || !(_ in _)) return null;
+            _ = _[_];
+          }
+          return __webpack_require__(_) ? _ : null;
         }
         __webpack_require__._(_, {
           _: () => _,
@@ -98434,347 +96604,6 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
           _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid");
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_mapAppIDToClanInfo = new Map();
-          m_mapVanityToClanInfo = new Map();
-          m_mapClanAccountIDToClanInfo = new Map();
-          m_mapPromisesLoading = new Map();
-          m_rgQueuedEventsClanIDs = new Array();
-          m_bLoadedFromConfig = !1;
-          Init() {
-            this.LazyInit();
-          }
-          LazyInit() {
-            this.m_bLoadedFromConfig ||
-              ((0, _._)(() => {
-                let _ = (0, _._)("groupvanityinfo", "application_config");
-                this.ValidateClanConfig(_) &&
-                  _.forEach((_) => {
-                    this.InternalSetupValue(_);
-                  });
-              }),
-              (this.m_bLoadedFromConfig = !0));
-          }
-          AddGroupVanities(_) {
-            (0, _._)(() => {
-              this.ValidateClanConfig(_) &&
-                _.forEach((_) => {
-                  this.InternalSetupValue(_);
-                });
-            });
-          }
-          ValidateClanConfig(_) {
-            const _ = _;
-            return (
-              !!(
-                _ &&
-                Array.isArray(_) &&
-                _.length > 0 &&
-                "object" == typeof _[0]
-              ) &&
-              "number" == typeof _[0].clanAccountID &&
-              ("number" == typeof _[0].appid ||
-                "string" == typeof _[0].vanity_url)
-            );
-          }
-          BHasClanInfoLoaded(_) {
-            return (
-              (0, _._)(_.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
-              (0, _._)(
-                _.BIsClanAccount(),
-                "Clan SteamID is not a clan account id when requesting clan info ",
-              ),
-              this.m_mapClanAccountIDToClanInfo.has(_.GetAccountID())
-            );
-          }
-          BHasClanInfoLoadedByAccountID(_) {
-            return this.m_mapClanAccountIDToClanInfo.has(_);
-          }
-          RegisterClanData(_) {
-            for (const _ of _) this.InternalSetupValue(_);
-          }
-          InternalSetupValue(_) {
-            const _ = {
-              clanAccountID: _.clanAccountID,
-              clanSteamID: new _._(_.clanSteamIDString),
-              appid: _.appid,
-              vanity_url: _.vanity_url,
-              member_count: _.member_count,
-              is_ogg: _.is_ogg,
-              is_creator_home: _.is_creator_home,
-              is_curator: _.is_curator,
-              has_visible_store_page: _.has_visible_store_page,
-              has_rss_feed: _.has_rss_feed,
-              rss_language: _.rss_language ? _.rss_language : _.Bhc,
-              avatar_full_url: _.avatar_full_url,
-              avatar_medium_url: _.avatar_medium_url,
-              group_name: _.group_name,
-              creator_page_bg_url: _.creator_page_bg_url,
-              curator_title: _.curator_title,
-              curator_description: _.curator_description,
-              partner_events_enabled: _.partner_events_enabled,
-            };
-            0 != _.appid && this.m_mapAppIDToClanInfo.set(_.appid, _),
-              _.vanity_url &&
-                _.vanity_url.length > 0 &&
-                this.m_mapVanityToClanInfo.set(
-                  _.vanity_url.toLocaleLowerCase(),
-                  _,
-                ),
-              this.m_mapClanAccountIDToClanInfo.set(_.clanAccountID, _);
-          }
-          GetRequestParam() {
-            return {
-              origin: self.origin,
-            };
-          }
-          async LoadOGGClanInfoForAppID(_) {
-            if (
-              (this.LazyInit(),
-              "string" == typeof _ && (_ = parseInt(_)),
-              (0, _._)(
-                0 != _,
-                "LoadOGGClanInfoForAppID called with appid of zero",
-              ),
-              0 == _)
-            )
-              return null;
-            if (this.m_mapAppIDToClanInfo.has(_))
-              return this.m_mapAppIDToClanInfo.get(_);
-            let _ = "appid_" + _;
-            return (
-              this.m_mapPromisesLoading.has(_) ||
-                this.m_mapPromisesLoading.set(
-                  _,
-                  this.InternalLoadOGGClanInfoForAppID(_),
-                ),
-              this.m_mapPromisesLoading.get(_)
-            );
-          }
-          async InternalLoadOGGClanInfoForAppID(_) {
-            const _ =
-              _._.COMMUNITY_BASE_URL + "ogg/" + _ + "/ajaxgetvanityandclanid/";
-            let _ = null;
-            try {
-              _ = (
-                await _().get(_, {
-                  params: this.GetRequestParam(),
-                })
-              ).data;
-            } catch (_) {}
-            return _
-              ? (this.InternalSetupValue(_), this.m_mapAppIDToClanInfo.get(_))
-              : null;
-          }
-          async LoadOGGClanInfoForIdentifier(_) {
-            if (
-              (this.LazyInit(),
-              this.m_mapVanityToClanInfo.has(_?.toLocaleLowerCase()))
-            )
-              return this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase());
-            let _ = "storevanity_" + _?.toLocaleLowerCase();
-            return (
-              this.m_mapPromisesLoading.has(_) ||
-                this.m_mapPromisesLoading.set(
-                  _,
-                  this.InternalLoadOGGClanInfoForIdentifier(_),
-                ),
-              this.m_mapPromisesLoading.get(_)
-            );
-          }
-          async InternalLoadOGGClanInfoForIdentifier(_) {
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "games/" +
-              _ +
-              "/ajaxgetvanityandclanid/";
-            let _ = await _().get(_, {
-              params: this.GetRequestParam(),
-            });
-            return (
-              this.InternalSetupValue(_.data),
-              this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase())
-            );
-          }
-          async LoadOGGClanInfoForGroupVanity(_) {
-            if (
-              (this.LazyInit(),
-              this.m_mapVanityToClanInfo.has(_?.toLocaleLowerCase()))
-            )
-              return this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase());
-            let _ = "community_name_" + _;
-            return (
-              this.m_mapPromisesLoading.has(_) ||
-                this.m_mapPromisesLoading.set(
-                  _,
-                  this.InternalLoadOGGClanInfoForGroupVanity(
-                    _?.toLocaleLowerCase(),
-                  ),
-                ),
-              this.m_mapPromisesLoading.get(_)
-            );
-          }
-          async InternalLoadOGGClanInfoForGroupVanity(_) {
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "groups/" +
-              _ +
-              "/ajaxgetvanityandclanid/";
-            let _ = await _().get(_, {
-              params: this.GetRequestParam(),
-            });
-            return (
-              this.InternalSetupValue(_.data),
-              this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase())
-            );
-          }
-          async LoadClanInfoForClanSteamID(_) {
-            this.LazyInit();
-            let _ = _.GetAccountID();
-            if (this.m_mapClanAccountIDToClanInfo.has(_))
-              return this.m_mapClanAccountIDToClanInfo.get(_);
-            let _ = "clanaccountid_" + _;
-            return (
-              this.m_mapPromisesLoading.has(_) ||
-                this.m_mapPromisesLoading.set(
-                  _,
-                  this.InternalLoadClanInfoForClanSteamID(_),
-                ),
-              this.m_mapPromisesLoading.get(_)
-            );
-          }
-          async LoadClanInfoForClanAccountID(_) {
-            const _ = _._.InitFromClanID(_);
-            return this.LoadClanInfoForClanSteamID(_);
-          }
-          async InternalLoadClanInfoForClanSteamID(_) {
-            let _ = _.GetAccountID();
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "gid/" +
-              _.ConvertTo64BitString() +
-              "/ajaxgetvanityandclanid/";
-            let _ = await _().get(_, {
-              params: this.GetRequestParam(),
-            });
-            return (
-              this.InternalSetupValue(_.data),
-              this.m_mapClanAccountIDToClanInfo.get(_)
-            );
-          }
-          GetOGGClanInfo(_) {
-            return "string" == typeof _
-              ? this.m_mapVanityToClanInfo.get(_?.toLocaleLowerCase())
-              : this.m_mapAppIDToClanInfo.get(_);
-          }
-          GetClanSteamIDForAppID(_) {
-            if ((this.LazyInit(), this.m_mapAppIDToClanInfo.has(_)))
-              return _._.InitFromClanID(
-                this.m_mapAppIDToClanInfo.get(_).clanAccountID,
-              );
-          }
-          GetClanVanityForAppID(_) {
-            if ((this.LazyInit(), this.m_mapAppIDToClanInfo.has(_)))
-              return this.m_mapAppIDToClanInfo.get(_).vanity_url;
-          }
-          GetClanVanityForClanSteamID(_) {
-            if (
-              (this.LazyInit(),
-              this.m_mapClanAccountIDToClanInfo.has(_.GetAccountID()))
-            )
-              return this.m_mapClanAccountIDToClanInfo.get(_.GetAccountID())
-                .vanity_url;
-          }
-          HasLoadedClanAccountID(_) {
-            return this.LazyInit(), this.m_mapClanAccountIDToClanInfo.has(_);
-          }
-          GetClanMemberCount(_) {
-            return this.m_mapAppIDToClanInfo.has(_)
-              ? this.m_mapAppIDToClanInfo.get(_).member_count
-              : 0;
-          }
-          GetClanInfoByClanAccountID(_) {
-            return (
-              this.LazyInit(),
-              (0, _._)(
-                !!_,
-                "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
-              ),
-              this.m_mapClanAccountIDToClanInfo.get(_)
-            );
-          }
-          GetCreatorStoreURL(_) {
-            let _ = _._.GetCreatorHome(_);
-            if (_) return _.GetCreatorHomeURL("developer");
-            let _ = this.GetClanInfoByClanAccountID(_.GetAccountID());
-            return (
-              _._.COMMUNITY_BASE_URL +
-              (_.vanity_url
-                ? "groups/" + _.vanity_url
-                : "gid/" + _.ConvertTo64BitString())
-            );
-          }
-        }
-        (0, _._)([_._], _.prototype, "m_mapAppIDToClanInfo", void 0),
-          (0, _._)([_._], _.prototype, "m_mapVanityToClanInfo", void 0),
-          (0, _._)([_._], _.prototype, "m_mapClanAccountIDToClanInfo", void 0),
-          (0, _._)([_._], _.prototype, "RegisterClanData", null),
-          (0, _._)([_._], _.prototype, "InternalSetupValue", null);
-        const _ = new _();
-        function _(_) {
-          const [_, _] = (0, _.useState)(
-              _ ? _.GetClanInfoByClanAccountID(_) : void 0,
-            ),
-            [_, _] = (0, _.useState)(
-              !!_ && !_.BHasClanInfoLoadedByAccountID(_),
-            );
-          return (
-            (0, _.useEffect)(() => {
-              if (_)
-                if (_.BHasClanInfoLoadedByAccountID(_))
-                  __webpack_require__(_.GetClanInfoByClanAccountID(_)), _(!1);
-                else {
-                  _(!0);
-                  const _ = _._.InitFromClanID(
-                    "string" == typeof _ ? Number.parseInt(_) : _,
-                  );
-                  _.LoadClanInfoForClanSteamID(_)
-                    .then((_) => {
-                      __webpack_require__(_ ?? void 0), _(!1);
-                    })
-                    .catch((_) =>
-                      console.error(`Failed to load clan info ${_}`, _),
-                    );
-                }
-              else __webpack_require__(void 0), _(!1);
-            }, [_]),
-            [_, _]
-          );
-        }
-        window.g_ClanStore = _;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -99292,342 +97121,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ =
-            (__webpack_require__("chunkid"),
-            __webpack_require__("chunkid"),
-            __webpack_require__("chunkid"),
-            __webpack_require__("chunkid")),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        class _ {
-          m_clanSteamID;
-          m_appidList = new Array();
-          m_strName = "";
-          m_strAvatarURLFullSize = "";
-          m_strTagLineLoc = "";
-          m_nFollowers = 0;
-          m_strVanity = "";
-          m_webLink = void 0;
-          m_linkedEvent = void 0;
-          m_mapListInfo = new Map();
-          m_promise;
-          m_bIsLoaded = !1;
-          m_bIsHidden = !1;
-          m_clanAccountFlags = 0;
-          constructor(_) {
-            (0, _._)(this), (this.m_clanSteamID = _);
-          }
-          Initialize(_) {
-            (this.m_strName = _.name || ""),
-              (this.m_strAvatarURLFullSize =
-                _.avatar_url_full_size ||
-                "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"),
-              (this.m_strTagLineLoc = _.tag_line_localized || ""),
-              (this.m_nFollowers = _.followers || 0),
-              (this.m_strVanity = _.vanity || void 0),
-              (this.m_webLink = _.weblink),
-              (this.m_bIsHidden = _.hidden || !1),
-              (this.m_clanAccountFlags = _.clan_account_flags ?? 0),
-              (this.m_linkedEvent = _.linked_event),
-              (this.m_mapListInfo = new Map(Object.entries(_.list_info ?? {}))),
-              _.appids && _.appids.forEach((_) => this.m_appidList.push(_)),
-              (this.m_bIsLoaded = !0);
-          }
-          GetCreatorHomeIdentifier() {
-            return {
-              name: this.m_strName,
-              clan_account_id: this.m_clanSteamID.GetAccountID(),
-              type: "developer",
-              hidden: this.m_bIsHidden,
-            };
-          }
-          BIsPartnerEventEditorEnabled() {
-            return Boolean(this.m_clanAccountFlags & _._._);
-          }
-          BHasClanAccountFlagSet(_) {
-            return Boolean(this.m_clanAccountFlags & _);
-          }
-          BIsLoaded() {
-            return this.m_bIsLoaded;
-          }
-          GetClanSteamID() {
-            return this.m_clanSteamID;
-          }
-          GetClanAccountID() {
-            return this.m_clanSteamID.GetAccountID();
-          }
-          GetAppIDList() {
-            return this.m_appidList;
-          }
-          GetName() {
-            return this.m_strName;
-          }
-          GetAvatarURLFullSize() {
-            return this.m_strAvatarURLFullSize;
-          }
-          GetTagLine() {
-            return this.m_strTagLineLoc;
-          }
-          GetNumFollowers() {
-            return this.m_nFollowers;
-          }
-          BIsHidden() {
-            return this.m_bIsHidden;
-          }
-          GetCreatorHomeURL(_) {
-            if (this.m_strVanity) {
-              switch (_) {
-                case "publisher":
-                  return (
-                    _._.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
-                  );
-                case "franchise":
-                  return (
-                    _._.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
-                  );
-              }
-              return _._.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
-            }
-            return (
-              _._.STORE_BASE_URL +
-              "curator/" +
-              this.m_clanSteamID.GetAccountID() +
-              "/"
-            );
-          }
-          BHasWebLink() {
-            return void 0 !== this.m_webLink;
-          }
-          GetWebLink() {
-            return this.m_webLink;
-          }
-          GetVanityString() {
-            return this.m_strVanity;
-          }
-          GetLinkedEventGID() {
-            return this.m_linkedEvent;
-          }
-          GetListInfo() {
-            return this.m_mapListInfo;
-          }
-          AdjustFollower(_) {
-            this.m_nFollowers += _;
-          }
-          async EnablePartnerEventEditorFlag() {
-            this.BIsPartnerEventEditorEnabled() ||
-              (await this.UpdateGroupFlagsFeature([_._._, _._._], !0));
-          }
-          async UpdateGroupFlagsFeature(_, _) {
-            let _ = _._.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
-              _ = this.m_clanAccountFlags;
-            if (
-              (_.forEach((_) => {
-                _ ? (_ |= _) : (_ &= ~_);
-              }),
-              _ == this.m_clanAccountFlags)
-            )
-              return;
-            let _ = new Array();
-            _ & _._._ && _.push(_._._),
-              _ & _._._ && _.push(_._._),
-              _ & _._._ && _.push(_._._),
-              _ & _._._ && _.push(_._._),
-              _ & _._._ && _.push(_._._),
-              _ & _._._ && _.push(_._._),
-              _ & _._._ && _.push(_._._);
-            let _ = new FormData();
-            _.append("sessionid", (0, _._)()),
-              _.append("clan_account_id", this.GetClanAccountID().toString()),
-              _.append("accountflags", JSON.stringify(_));
-            let _ = await _().post(_, _);
-            _ &&
-              200 == _.status &&
-              _.data.success == _._ &&
-              (this.m_clanAccountFlags = _);
-          }
-        }
-        (0, _._)([_._], _.prototype, "m_appidList", void 0),
-          (0, _._)([_._], _.prototype, "m_nFollowers", void 0),
-          (0, _._)([_._], _.prototype, "m_clanAccountFlags", void 0);
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_mapClanToCreatorHome = new Map();
-          m_mapAppToCreatorIDList = new Map();
-          m_bLoadedFromConfig = !1;
-          m_serviceTransport = void 0;
-          LazyInit() {
-            if (!this.m_bLoadedFromConfig) {
-              const _ = (0, _._)("creatorhome", "application_config");
-              this.ValidateStoreDefault(_) &&
-                _.forEach((_) => {
-                  const _ = Number(_.creator_clan_id),
-                    _ = _._.InitFromClanID(_),
-                    _ = new _(_);
-                  _.Initialize(_),
-                    (_.m_promise = _.GetAsPromise(_)),
-                    this.m_mapClanToCreatorHome.set(_, _);
-                });
-              const _ = (0, _._)("creatorhomeforapp", "application_config");
-              this.ValidateStoreDefaultAppList(_) &&
-                _.forEach((_) => {
-                  void 0 !== _.appid &&
-                    (this.m_mapAppToCreatorIDList.has(_.appid) ||
-                      this.m_mapAppToCreatorIDList.set(_.appid, new Array()),
-                    this.m_mapAppToCreatorIDList.get(_.appid).push(_));
-                }),
-                (this.m_bLoadedFromConfig = !0);
-            }
-          }
-          GetServiceTransport() {
-            if (!this.m_serviceTransport) {
-              const _ = (0, _._)("loyalty_webapi_token", "application_config"),
-                _ = new _._(_._.WEBAPI_BASE_URL, _ || void 0);
-              this.m_serviceTransport = _.GetServiceTransport();
-            }
-            return this.m_serviceTransport;
-          }
-          static async GetAsPromise(_) {
-            return _;
-          }
-          ValidateStoreDefault(_) {
-            const _ = _;
-            return (
-              !!(
-                _ &&
-                Array.isArray(_) &&
-                _.length > 0 &&
-                "object" == typeof _[0]
-              ) &&
-              "string" == typeof _[0].name &&
-              ("string" == typeof _[0].creator_clan_id ||
-                "number" == typeof _[0].creator_clan_id)
-            );
-          }
-          ValidateStoreDefaultAppList(_) {
-            const _ = _;
-            return (
-              !!(
-                _ &&
-                Array.isArray(_) &&
-                _.length > 0 &&
-                "object" == typeof _[0]
-              ) &&
-              "number" == typeof _[0].clan_account_id &&
-                _[0].clan_account_id > 0 &&
-                "number" == typeof _[0].appid &&
-              _[0].appid > 0
-            );
-          }
-          BHasCreatorHomeLoaded(_) {
-            return (
-              this.m_mapClanToCreatorHome.has(_.GetAccountID()) &&
-              this.m_mapClanToCreatorHome.get(_.GetAccountID()).BIsLoaded()
-            );
-          }
-          GetCreatorHome(_) {
-            return this.m_mapClanToCreatorHome.get(_.GetAccountID());
-          }
-          GetCreatorHomeByID(_) {
-            return this.m_mapClanToCreatorHome.get(_.clan_account_id);
-          }
-          async LoadCreatorHome(_, _ = !1, _) {
-            if (
-              (this.LazyInit(),
-              _ || !this.m_mapClanToCreatorHome.has(_.GetAccountID()))
-            ) {
-              let _ = new _(_);
-              (_.m_promise = this.InternalCreatorHome(_, _)),
-                await _.m_promise,
-                this.m_mapClanToCreatorHome.set(_.GetAccountID(), _);
-            }
-            return this.m_mapClanToCreatorHome.get(_.GetAccountID()).m_promise;
-          }
-          async InternalCreatorHome(_, _) {
-            let _ = {
-                get_appids: !0,
-                _: _._.LANGUAGE,
-              },
-              _ =
-                _._.STORE_BASE_URL +
-                "curator/" +
-                _.GetClanAccountID() +
-                "/ajaxgetcreatorhomeinfo",
-              _ = await _().get(_, {
-                params: _,
-                cancelToken: _ && _.token,
-              });
-            return _.Initialize(_.data), _;
-          }
-          async LoadCreatorHomeListForAppIncludeHiddden(_, _) {
-            if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(_))) {
-              let _ = {
-                  appid: _,
-                },
-                _ = _._.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
-                _ = await _().get(_, {
-                  params: _,
-                  cancelToken: _ && _.token,
-                  withCredentials: !0,
-                });
-              this.m_mapAppToCreatorIDList.set(_, _.data.creator_list);
-            }
-            return this.m_mapAppToCreatorIDList.get(_);
-          }
-          async SearchCreatorHomeStore(_, _, _) {
-            let _ = `${_._.STORE_BASE_URL}curator/0/ajaxsearchcurators`,
-              _ = {
-                term: _.replace(" ", "+"),
-                require_creator: _,
-                _: _._.COUNTRY,
-                _: _._.LANGUAGE,
-                origin: self.origin,
-              },
-              _ = new Array();
-            const _ = await _().get(_, {
-              params: _,
-              cancelToken: _.token,
-            });
-            return (
-              _.data.curators &&
-                (0, _._)(() => {
-                  _.data.curators.forEach((_) => {
-                    if (!this.m_mapClanToCreatorHome.has(_.creator_clan_id)) {
-                      let _ = _._.InitFromClanID(_.creator_clan_id),
-                        _ = new _(_);
-                      __webpack_require__.Initialize(_),
-                        this.m_mapClanToCreatorHome.set(_.creator_clan_id, _);
-                    }
-                    _.push(this.m_mapClanToCreatorHome.get(_.creator_clan_id));
-                  });
-                }),
-              _
-            );
-          }
-          GetCreatorHomeListForAppIncludeHidden(_) {
-            return this.m_mapAppToCreatorIDList.has(_)
-              ? this.m_mapAppToCreatorIDList.get(_)
-              : [];
-          }
-        }
-        (0, _._)([_._], _.prototype, "m_mapClanToCreatorHome", void 0),
-          (0, _._)([_._], _.prototype, "m_mapAppToCreatorIDList", void 0),
-          (0, _._)([_._], _.prototype, "LazyInit", null);
-        const _ = new _();
-        window.g_CreatorHomeStore = _;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         __webpack_require__("chunkid");
@@ -99656,9 +97149,7 @@ var CLSTAMP = "steamdb";
           m_emoticonTrackerCallback = null;
           m_stickerTrackerCallback = null;
           static GetEmoticonURL(_, _) {
-            return _
-              ? _._.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + _
-              : _._.COMMUNITY_CDN_URL + "economy/emoticon/" + _;
+            return (0, _._)(_, _);
           }
           static GetEmoticonReplaceRegex() {
             return _.sm_EmoticonRegex;
@@ -99895,679 +97386,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ =
-            (__webpack_require__("chunkid"),
-            __webpack_require__("chunkid"),
-            __webpack_require__("chunkid"));
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          bIncludeFeaturedAsGameSource = !0;
-          nOverrideDateNow = void 0;
-          get bRequireAllEventsLoadedInTimeBlock() {
-            return !1;
-          }
-          get bIncludeCurators() {
-            return !0;
-          }
-          GetTimeNowWithOverride() {
-            return this.nOverrideDateNow
-              ? this.nOverrideDateNow
-              : Math.floor(Date.now() / 1e3);
-          }
-          GetTimeNowWithOverrideAsDate() {
-            return this.nOverrideDateNow
-              ? new Date(1e3 * this.nOverrideDateNow)
-              : new Date();
-          }
-          BHasTimeOverride() {
-            return Boolean(this.nOverrideDateNow);
-          }
-          ParseDevOverrides(_) {
-            if (!_ || 0 == _.length) return;
-            const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-            if (
-              _.has("t") &&
-              ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-            ) {
-              const _ = _.get("t");
-              let _ = /^\d+$/.test(_ ?? "")
-                ? _().unix(Number.parseInt(_ ?? "0"))
-                : _()(_);
-              (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-                console.log(
-                  "CEventCalendarDevFeatures overriding partner event time: " +
-                    this.nOverrideDateNow +
-                    " " +
-                    __webpack_require__.format(),
-                );
-            }
-          }
-        }
-        (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
-        const _ = new _();
-        window.g_EventCalendarDevFeatures = _;
-        const _ = new Date(),
-          _ = Math.floor(_.getTime() / 1e3);
-        function _() {
-          return _.nOverrideDateNow ?? _;
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        class _ {
-          m_CMInterface;
-          m_setShownEvents = new Set();
-          m_setReadEvents = new Set();
-          m_rgPendingUpload = [];
-          m_schUpload = new _._();
-          m_bUploading = !1;
-          constructor(_) {
-            this.m_CMInterface = _;
-          }
-          RecordEventShown(_, _) {
-            _ &&
-              !_.bOldAnnouncement &&
-              _.GID &&
-              this.MarkEventShown(_.GID, _.clanSteamID.GetAccountID(), _);
-          }
-          RecordEventRead(_, _) {
-            _ &&
-              !_.bOldAnnouncement &&
-              _.GID &&
-              this.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _);
-          }
-          MarkEventShown(_, _, _) {
-            let _ = this.MakeKey(_, _);
-            if (this.m_setShownEvents.has(_)) return !1;
-            this.m_setShownEvents.add(_);
-            let _ = new _._();
-            return (
-              _.set_event_gid(_),
-              _.set_clanid(_),
-              _.set_display_location(_),
-              _.set_mark_shown(!0),
-              this.QueueForUpload(_),
-              !0
-            );
-          }
-          MarkEventRead(_, _, _) {
-            let _ = this.MakeKey(_, _);
-            if (this.m_setReadEvents.has(_)) return !1;
-            this.m_setReadEvents.add(_);
-            let _ = new _._();
-            return (
-              _.set_event_gid(_),
-              _.set_clanid(_),
-              _.set_display_location(_),
-              _.set_mark_read(!0),
-              this.QueueForUpload(_),
-              !0
-            );
-          }
-          MakeKey(_, _) {
-            return `${_}_${_}`;
-          }
-          QueueForUpload(_) {
-            this.m_rgPendingUpload.push(_), this.ScheduleUpload();
-          }
-          ScheduleUpload() {
-            this.m_bUploading ||
-              (this.m_rgPendingUpload.length >= 30
-                ? this.UploadPendingData()
-                : this.m_schUpload.IsScheduled() ||
-                  this.m_schUpload.Schedule(6e4, this.UploadPendingData));
-          }
-          async Flush() {
-            if (!this.m_bUploading) return this.UploadPendingData();
-          }
-          async UploadPendingData() {
-            if (this.m_bUploading) return;
-            this.m_schUpload.Cancel();
-            let _ = this.m_rgPendingUpload.splice(0, 30);
-            if (0 == _.length) return;
-            let _ = !1;
-            if (this.m_CMInterface) {
-              let _ = _._.Init(_._);
-              for (let _ of _) __webpack_require__.Body().add_markings(_);
-              this.m_bUploading = !0;
-              let _ = await _._.MarkPartnerEventsForUser(
-                this.m_CMInterface.GetServiceTransport(),
-                _,
-              );
-              (this.m_bUploading = !1), (_ = _.GetEResult() == _._);
-            } else {
-              if (!_._.logged_in) return;
-              let _ = _.map((_) => _.toObject()),
-                _ = (0, _._)() + "actions/ajaxmarkpartnerevents";
-              const _ = new FormData();
-              _.append("sessionid", (0, _._)()),
-                _.append("request", JSON.stringify(_));
-              try {
-                _ =
-                  (
-                    await _().post(_, _, {
-                      withCredentials: !0,
-                    })
-                  ).data.success == _._;
-              } catch (_) {
-                let _ = (0, _._)(_);
-                console.error(
-                  "CPartnerEventUserTracking.UploadPendingData error " +
-                    _.strErrorMsg,
-                  _,
-                );
-              }
-            }
-            _
-              ? this.m_rgPendingUpload.length > 0 && this.ScheduleUpload()
-              : (console.log(
-                  "Saving news event state failed. Will try again soon!",
-                ),
-                (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(_)),
-                this.m_schUpload.Schedule(6e4, this.UploadPendingData));
-          }
-        }
-        (0, _._)([_._], _.prototype, "UploadPendingData", null);
-        var _,
-          _ = __webpack_require__("chunkid"),
-          _ =
-            (__webpack_require__("chunkid"),
-            __webpack_require__("chunkid"),
-            __webpack_require__("chunkid")),
-          _ = __webpack_require__("chunkid");
-        class _ {
-          clanid = void 0;
-          appid = 0;
-          can_edit = !1;
-          owns_app = !1;
-          follows_app = !1;
-          support_user = !1;
-          valve_admin = !1;
-          limited_user = !1;
-          event_ignored = new Array();
-          event_followed = new Array();
-          event_followed_flags = new Array();
-          constructor(_) {
-            (0, _._)(this), (this.clanid = _);
-          }
-        }
-        (0, _._)([_._], _.prototype, "clanid", void 0),
-          (0, _._)([_._], _.prototype, "appid", void 0),
-          (0, _._)([_._], _.prototype, "can_edit", void 0),
-          (0, _._)([_._], _.prototype, "owns_app", void 0),
-          (0, _._)([_._], _.prototype, "follows_app", void 0),
-          (0, _._)([_._], _.prototype, "support_user", void 0),
-          (0, _._)([_._], _.prototype, "valve_admin", void 0),
-          (0, _._)([_._], _.prototype, "limited_user", void 0),
-          (0, _._)([_._], _.prototype, "event_ignored", void 0),
-          (0, _._)([_._], _.prototype, "event_followed", void 0),
-          (0, _._)([_._], _.prototype, "event_followed_flags", void 0),
-          (function (_) {
-            (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
-              (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
-              (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-          })(_ || (_ = {}));
-        class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_mapClanToUserPermissions = new Map();
-          m_mapAnnounceGIDToVote = new Map();
-          m_setReadEventGIDs = new Set();
-          m_tracker = void 0;
-          m_cm = void 0;
-          static s_EventUserStore;
-          m_bIsPresentationMode = (0, _._)();
-          static Get() {
-            return (
-              (0, _._)(
-                !!_.s_EventUserStore,
-                "Have not yet initialized global EventUserStore",
-              ),
-              _.s_EventUserStore
-            );
-          }
-          static IsInitialized() {
-            return !!_.s_EventUserStore;
-          }
-          static async InitGlobal(_) {
-            if (!_.s_EventUserStore) {
-              const _ = new _();
-              await _.Init(_),
-                (_.s_EventUserStore = _),
-                "dev" == _._.WEB_UNIVERSE && (window.g_EventUserStore = _);
-            }
-          }
-          static BIsInited() {
-            return Boolean(_.s_EventUserStore);
-          }
-          async Init(_) {
-            (this.m_cm = _), (this.m_tracker = new _(_));
-            const _ = (0, _._)("partnereventpermissions", "application_config");
-            this.ValidateStoreDefault(_) &&
-              ((0, _._)(() => {
-                _.forEach((_) => {
-                  let _ = new _(_.clanid),
-                    _ = {
-                      result: _,
-                      promise: _.RemapToPromise(_),
-                      bLoaded: !0,
-                    };
-                  this.CopyFromResponseToTrack(_, _),
-                    this.m_mapClanToUserPermissions.set(_.clanid, _);
-                });
-              }),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "CEventUserStore has loaded",
-                  this.m_mapClanToUserPermissions.size,
-                  this.m_mapClanToUserPermissions,
-                ));
-            let _ = (0, _._)("uservotes", "application_config");
-            _ &&
-              (0, _._)(() => {
-                __webpack_require__.forEach((_) => {
-                  let _ = !!_.voted_up || (!_.voted_down && void 0);
-                  this.m_mapAnnounceGIDToVote.set(_.clanAnnouncementGID, _);
-                });
-              });
-          }
-          GetTracker() {
-            return this.m_tracker;
-          }
-          ValidateStoreDefault(_) {
-            const _ = _;
-            return (
-              !!(
-                _ &&
-                Array.isArray(_) &&
-                _.length > 0 &&
-                "object" == typeof _[0]
-              ) &&
-              "number" == typeof _[0].clanid &&
-              "number" == typeof _[0].appid
-            );
-          }
-          RecordEventShown(_, _) {
-            _ &&
-              !_.bOldAnnouncement &&
-              _.GID &&
-              this.m_tracker.MarkEventShown(
-                _.GID,
-                _.clanSteamID.GetAccountID(),
-                _,
-              );
-          }
-          RecordEventRead(_, _) {
-            _ &&
-              !_.bOldAnnouncement &&
-              _.GID &&
-              (this.HasEventBeenRead(_.GID) ||
-                (this.SetEventAsRead(_.GID),
-                this.m_tracker.MarkEventRead(
-                  _.GID,
-                  _.clanSteamID.GetAccountID(),
-                  _,
-                )));
-          }
-          SetEventAsRead(_) {
-            this.m_setReadEventGIDs.add(_);
-          }
-          HasEventBeenRead(_) {
-            return this.m_setReadEventGIDs.has(_);
-          }
-          static async RemapToPromise(_) {
-            return _;
-          }
-          BIsUserLoggedIn() {
-            return _._.logged_in;
-          }
-          BIsPartnerEventPermissionsLoaded(_) {
-            return (
-              this.m_mapClanToUserPermissions.has(_) &&
-              this.m_mapClanToUserPermissions.get(_).bLoaded
-            );
-          }
-          GetPartnerEventPermissions(_) {
-            if (!_ || !_.BIsValid()) return new _(0);
-            const _ = _.GetAccountID();
-            this.m_mapClanToUserPermissions.has(_) ||
-              this.LoadSingleAppEventPermissions(_);
-            return this.m_mapClanToUserPermissions.get(_).result;
-          }
-          BFollowsEvent(_, _) {
-            return (
-              -1 != this.GetPartnerEventPermissions(_).event_followed.indexOf(_)
-            );
-          }
-          BFollowsEventAndNotifiedBy(_, _, _) {
-            let _ = this.GetPartnerEventPermissions(_),
-              _ = _.event_followed.indexOf(_);
-            return -1 !== _ && (_.event_followed_flags[_] & _) == _;
-          }
-          BIgnoresEvent(_, _) {
-            return (
-              -1 != this.GetPartnerEventPermissions(_).event_ignored.indexOf(_)
-            );
-          }
-          async LoadSingleAppEventPermissions(_) {
-            let _ = _.GetAccountID(),
-              _ = this.m_mapClanToUserPermissions.get(_);
-            return (
-              _ ||
-                ((_ = {
-                  promise: this.InternalLoadSingleAppEventPermissions(_),
-                  result: new _(_),
-                  bLoaded: !1,
-                }),
-                this.m_mapClanToUserPermissions.set(_, _)),
-              _.promise
-            );
-          }
-          CopyFromResponseToTrack(_, _) {
-            (_.result.appid = _.appid ?? 0),
-              (_.result.can_edit = !!_.can_edit),
-              (_.result.clanid = _.appid),
-              (_.result.event_followed = _.event_followed ?? []),
-              (_.result.event_ignored = _.event_ignored ?? []),
-              (_.result.event_followed_flags = _.event_followed_flags ?? []),
-              (_.result.follows_app = !!_.follows_app),
-              (_.result.owns_app = !!_.owns_app),
-              (_.result.limited_user = !!_.limited_user),
-              (_.support_user || _.valve_admin) && this.m_bIsPresentationMode
-                ? ((_.result.can_edit = !0),
-                  (_.result.support_user = !1),
-                  (_.result.valve_admin = !1))
-                : ((_.result.support_user = !!_.support_user),
-                  (_.result.valve_admin = !!_.valve_admin)),
-              (_.bLoaded = !0);
-          }
-          async InternalLoadSingleAppEventPermissions(_) {
-            let _ = null,
-              _ = _.GetAccountID(),
-              _ = !Boolean(_._.logged_in);
-            if (!this.m_mapClanToUserPermissions.has(_)) {
-              let _ = new _(_.GetAccountID());
-              this.m_mapClanToUserPermissions.set(_, {
-                result: _,
-                promise: _.RemapToPromise(_),
-                bLoaded: !1,
-              });
-            }
-            try {
-              if (Boolean(_._.logged_in)) {
-                let _ =
-                    _._.COMMUNITY_BASE_URL +
-                    "gid/" +
-                    _.ConvertTo64BitString() +
-                    "/ajaxgetpartnereventpermissions/",
-                  _ = {};
-                if (
-                  ("partnerweb" == (0, _._)()
-                    ? ((_ =
-                        _._.PARTNER_BASE_URL +
-                        "partnerevents/ajaxgetpartnereventpermissions"),
-                      (_ = {
-                        clanaccountid: _.GetAccountID(),
-                      }))
-                    : "store" == (0, _._)() &&
-                      ((_ =
-                        _._.STORE_BASE_URL +
-                        "events/ajaxgetpartnereventpermissions"),
-                      (_ = {
-                        clanaccountid: _.GetAccountID(),
-                      })),
-                  (_ = await _().get(_, {
-                    params: _,
-                    withCredentials: !0,
-                  })),
-                  _ && _.data.success == _._)
-                ) {
-                  let _ = this.m_mapClanToUserPermissions.get(_);
-                  _ && this.CopyFromResponseToTrack(_, _.data);
-                } else
-                  console.error(
-                    "Partner Events Failed Load:" +
-                      (0, _._)(_?.data).strErrorMsg,
-                  ),
-                    (_ = !0);
-              }
-            } catch (_) {
-              if (
-                ((_ = _.response),
-                (_ = !0),
-                _ &&
-                  void 0 !== _.response &&
-                  void 0 !== _.response.data &&
-                  void 0 !== _.response.data.success &&
-                  _.response.data.success == _._)
-              );
-              else {
-                const _ = (0, _._)(_);
-                console.error(
-                  "InternalLoadSingleAppEventPermissions account: " +
-                    _ +
-                    ": " +
-                    _.strErrorMsg,
-                  _,
-                );
-              }
-            } finally {
-              _ &&
-                (0, _._)(() => {
-                  let _ = this.m_mapClanToUserPermissions.get(_);
-                  (_.result.appid = _?.data.appid ?? 0),
-                    (_.result.can_edit = !1),
-                    (_.result.clanid = _ && _.data ? _.data.clanid : 0),
-                    (_.result.event_followed = new Array()),
-                    (_.result.event_ignored = new Array()),
-                    (_.result.event_followed_flags = new Array()),
-                    (_.result.follows_app = !1),
-                    (_.result.owns_app = !1),
-                    (_.result.support_user = !1),
-                    (_.result.valve_admin = !1),
-                    (_.result.limited_user = !1),
-                    (_.bLoaded = !0);
-                });
-            }
-            return this.m_mapClanToUserPermissions.get(_).result;
-          }
-          async SetFollowOrUnfollowEvent(_, _, _, _, _) {
-            let _ = this.GetPartnerEventPermissions(_),
-              _ = _.event_followed.indexOf(_),
-              _ = 0;
-            -1 !== _ &&
-              ((_ = _.event_followed_flags[_]), _ ? (_ = _ & ~_) : (_ |= _));
-            let _ = 0 == _,
-              _ =
-                ("store" === (0, _._)()
-                  ? _._.STORE_BASE_URL + "events"
-                  : _._.COMMUNITY_BASE_URL +
-                    "/gid/" +
-                    __webpack_require__.ConvertTo64BitString()) +
-                (_ ? "/unfolloworunignoreevent" : "/followorignoreevent"),
-              _ = new URLSearchParams();
-            _.append("sessionid", (0, _._)()),
-              _.append("ignore", "" + _),
-              _.append("gid", _),
-              _.append("notification_flag", "" + _),
-              _.append(
-                "clan_accountid",
-                "" + __webpack_require__.GetAccountID(),
-              );
-            await _().post(_, _, {
-              withCredentials: !0,
-            });
-            (0, _._)(() => {
-              let _ = this.m_mapClanToUserPermissions.get(
-                  __webpack_require__.GetAccountID(),
-                ),
-                _ = null,
-                _ = null,
-                _ = null,
-                _ = null;
-              _
-                ? ((_ = _ ? _.result.event_ignored : _.result.event_followed),
-                  (_ = _ ? null : _.result.event_followed_flags))
-                : _
-                  ? ((_ = _.result.event_followed),
-                    (_ = _.result.event_followed_flags),
-                    (_ = _.result.event_ignored))
-                  : ((_ = _.result.event_ignored),
-                    (_ = _.result.event_followed),
-                    (_ = _.result.event_followed_flags));
-              let _ = _.indexOf(_);
-              if ((_ > -1 && (_.splice(_, 1), _ && _.splice(_, 1)), _)) {
-                let _ = _.indexOf(_);
-                -1 == _ ? (_.push(_), _ && _.push(_)) : _ && (_[_] = _);
-              }
-            });
-          }
-          async Vote(_, _, _) {
-            if (!_ || !_.AnnouncementGID) return !1;
-            const _ = this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
-            if (_ === _) return !0;
-            if (
-              (this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _),
-              (0, _._)(() => {
-                !0 === _ && _.UpdateVoteCount("up", -1),
-                  !1 === _ && _.UpdateVoteCount("down", -1),
-                  !0 === _ && _.UpdateVoteCount("up", 1),
-                  !1 === _ && _.UpdateVoteCount("down", 1);
-              }),
-              this.m_cm)
-            ) {
-              let _ = _._.Init(_._);
-              return (
-                __webpack_require__
-                  .Body()
-                  .set_announcementid(_.AnnouncementGID),
-                __webpack_require__.Body().set_vote_up(!!_),
-                __webpack_require__
-                  .Body()
-                  .set_clan_accountid(_.clanSteamID.GetAccountID()),
-                (
-                  await _._.RateClanAnnouncement(
-                    this.m_cm.GetServiceTransport(),
-                    _,
-                  )
-                ).GetEResult() == _._
-              );
-            }
-            {
-              const _ = (0, _._)(),
-                _ =
-                  "community" == _ || "steamtv" == _
-                    ? _._.COMMUNITY_BASE_URL +
-                      "gid/" +
-                      _.clanSteamID.ConvertTo64BitString() +
-                      "/announcements/rate/" +
-                      _.AnnouncementGID
-                    : _._.STORE_BASE_URL +
-                      "updated/ajaxrateupdate/" +
-                      _.AnnouncementGID,
-                _ = new URLSearchParams();
-              _.append("sessionid", (0, _._)()),
-                _.append("voteup", _ ? "1" : "0"),
-                _.append("clanid", "" + _.clanSteamID.GetAccountID()),
-                _.append("ajax", "1");
-              const _ = {
-                withCredentials: !0,
-                cancelToken: _.token,
-              };
-              return (await _().post(_, _, _)).data.success == _._;
-            }
-          }
-          async LoadMyVote(_, _) {
-            if (_?.AnnouncementGID) {
-              if (this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID))
-                return !!this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
-              let _;
-              if (this.m_cm) {
-                let _ = _._.Init(_._);
-                _.Body().set_announcementid(_.AnnouncementGID);
-                let _ = await _._.GetClanAnnouncementVoteForUser(
-                  this.m_cm.GetServiceTransport(),
-                  _,
-                );
-                _.GetEResult() == _._ &&
-                  (_ =
-                    !!_.Body().voted_up() ||
-                    (!_.Body().voted_down() && void 0));
-              } else {
-                const _ = "store" == (0, _._)(),
-                  _ = _
-                    ? _._.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
-                    : _._.COMMUNITY_BASE_URL +
-                      "gid/" +
-                      _.clanSteamID.ConvertTo64BitString() +
-                      "/announcements/ajaxgetmyvote/" +
-                      _.AnnouncementGID,
-                  _ = {
-                    gid: _ ? _.AnnouncementGID : void 0,
-                  },
-                  _ = await _().get(_, {
-                    withCredentials: !0,
-                    cancelToken: _.token,
-                    params: _,
-                  });
-                _ = !!_.data.voted_up || (!_.data.voted_down && void 0);
-              }
-              return this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _), _;
-            }
-          }
-          SetVote(_, _) {
-            this.m_mapAnnounceGIDToVote.set(_, _);
-          }
-          BHasMyVote(_) {
-            return (
-              !!_.AnnouncementGID &&
-              this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID)
-            );
-          }
-          GetPreviouslyLoadedVote(_) {
-            return _.AnnouncementGID
-              ? this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID)
-              : void 0;
-          }
-          BShowEmailEditorTab(_) {
-            if (_.BHasEmailEnabled()) return !0;
-            if (_.clanSteamID.GetAccountID() == (0, _._)()) return !0;
-            let _ = this.GetPartnerEventPermissions(_.clanSteamID);
-            return (_._.IS_OGG || _._.IS_VALVE_GROUP) && _.valve_admin;
-          }
-        }
-        (0, _._)([_._], _.prototype, "m_mapClanToUserPermissions", void 0),
-          (0, _._)([_._], _.prototype, "m_mapAnnounceGIDToVote", void 0),
-          (0, _._)([_._], _.prototype, "m_setReadEventGIDs", void 0),
-          (0, _._)([_._], _.prototype, "CopyFromResponseToTrack", null);
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
-        });
         let _ = null;
         function _(_) {
           _
@@ -100693,142 +97511,12 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        class _ {
-          m_curLocImageGroup = null;
-          m_curLocImageGroupType = null;
-          constructor() {
-            (0, _._)(this),
-              "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
-          }
-          static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
-            let _ =
-                _._.COMMUNITY_BASE_URL +
-                "gid/" +
-                _.ConvertTo64BitString() +
-                "/hasclanimagefile",
-              _ = {
-                image_hash_and_ext: _,
-                lang: "" + _,
-              };
-            return (
-              (
-                await _().get(_, {
-                  params: _,
-                  cancelToken: _ && _.token,
-                })
-              ).data.success == _._
-            );
-          }
-          SetPrimaryImageForImageGroup(_, _) {
-            (this.m_curLocImageGroup &&
-              this.m_curLocImageGroup.primaryImage.imageid == _.imageid &&
-              _ == this.m_curLocImageGroupType) ||
-              ((this.m_curLocImageGroup = {
-                primaryImage: _,
-                localized_images: [],
-              }),
-              (this.m_curLocImageGroupType = _),
-              (this.m_curLocImageGroup.localized_images = (0, _._)(
-                this.m_curLocImageGroup.localized_images,
-                _.bP9,
-                null,
-              )));
-          }
-          GetPrimaryImageForImageGroup() {
-            return this.m_curLocImageGroup?.primaryImage;
-          }
-          ClearImageGroup() {
-            (this.m_curLocImageGroup = null),
-              (this.m_curLocImageGroupType = null);
-          }
-          GetLocalizedImageGroupForEdit() {
-            return this.m_curLocImageGroup;
-          }
-          GetLocalizedImageGroupForEditAsURL(_, _) {
-            if (this.m_curLocImageGroup) {
-              let _ = this.m_curLocImageGroup.primaryImage;
-              return this.m_curLocImageGroup.localized_images[_]
-                ? this.m_curLocImageGroup.localized_images[_]
-                : _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_) ?? "");
-            }
-            return null;
-          }
-          async DetermineAvailableLocalizationForGroup(_) {
-            if (!this.m_curLocImageGroup) return;
-            const _ = this.m_curLocImageGroup.primaryImage,
-              _ = _._.InitFromClanID(_.clanAccountID),
-              _ = _._.GetHashAndExt(_) ?? "",
-              _ = [];
-            for (let _ = _.Bhc; _ < _.bP9; ++_)
-              _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
-            const _ = await Promise.all(_);
-            (0, _._)(() => {
-              for (let _ = _.Bhc; _ < _.bP9; ++_)
-                _[_] &&
-                  (this.m_curLocImageGroup.localized_images[_] =
-                    _._.GenerateURLFromHashAndExtAndLang(
-                      _,
-                      _,
-                      _._.full,
-                      _,
-                      this.m_curLocImageGroupType ?? void 0,
-                    ));
-            });
-          }
-          SetLocalizedImageGroupAtLang(_, _, _) {
-            this.m_curLocImageGroup &&
-              (this.m_curLocImageGroup.localized_images[_] = _
-                ? _._.GenerateURLFromHashAndExtAndLang(
-                    _,
-                    _,
-                    _._.full,
-                    _,
-                    this.m_curLocImageGroupType ?? void 0,
-                  )
-                : null);
-          }
-          AddLocalizeImageUploaded(_, _) {
-            if (!this.m_curLocImageGroup) return;
-            let _ = this.m_curLocImageGroup.primaryImage;
-            if (_?.image_hash == _) {
-              const _ = _._.InitFromClanID(_.clanAccountID),
-                _ = _._.GetHashAndExt(_);
-              _ &&
-                (this.m_curLocImageGroup.localized_images[_] =
-                  _._.GenerateURLFromHashAndExtAndLang(
-                    _,
-                    _,
-                    _._.full,
-                    _,
-                    this.m_curLocImageGroupType ?? void 0,
-                  ));
-            }
-          }
-          GetAllLocalizedGroupImages() {
-            return (
-              (this.m_curLocImageGroup &&
-                this.m_curLocImageGroup.localized_images) ||
-              []
-            );
-          }
-          GetAllLocalizedGroupImageHashAndExts() {
-            return this.GetAllLocalizedGroupImages()
-              .filter(Boolean)
-              .map((_) => _._.GetHashAndExtFromURL(_));
-          }
-        }
-        (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
-        const _ = new _();
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         (0, _._)(
@@ -101074,6 +97762,7 @@ var CLSTAMP = "steamdb";
           has_live_stream;
           live_stream_viewer_count;
           m_overrideCurrentDay = void 0;
+          fnGetLocalizedGroupImages;
           BIsPartnerEvent() {
             return !this.bOldAnnouncement && Boolean(this.GID);
           }
@@ -101084,7 +97773,7 @@ var CLSTAMP = "steamdb";
               Object.assign(_, _),
               (_.name = new Map(_.name)),
               (_.description = new Map(_.description)),
-              (_.vecTags = new Array(_.vecTags)),
+              (_.vecTags = [...(_.vecTags ?? _.tags ?? [])]),
               (_.clanSteamID = new _._(_.clanSteamID)),
               (0, _._)(
                 _.clanSteamID && _.clanSteamID.BIsValid(),
@@ -101152,7 +97841,8 @@ var CLSTAMP = "steamdb";
               Object.assign(_, this),
               (_.name = Array.from(this.name)),
               (_.description = Array.from(this.description)),
-              (_.tags = Array.from(this.vecTags)),
+              (_.vecTags = Array.from(this.vecTags)),
+              (_.tags = _.vecTags),
               (_.clanSteamID = this.clanSteamID.ConvertTo64BitString()),
               this.broadcaster &&
                 (_.broadcaster = this.broadcaster.ConvertTo64BitString()),
@@ -101255,9 +97945,8 @@ var CLSTAMP = "steamdb";
               _
             );
           }
-          GetDayIndexFromEventStart() {
+          GetDayIndexFromEventStart(_ = (0, _._)()) {
             let _ = 0;
-            const _ = _._.GetTimeNowWithOverride();
             void 0 !== this.startTime &&
               _ >= this.startTime &&
               (_ = Math.floor((_ - this.startTime) / 86400)),
@@ -101270,9 +97959,6 @@ var CLSTAMP = "steamdb";
           GetNameWithFallback(_) {
             const _ = _._.GetELanguageFallback(_);
             return this.name.get(_) || this.name.get(_);
-          }
-          GetGameTitle(_) {
-            return _._.Get().GetApp(this.appid)?.GetName();
           }
           BInRealmGlobal() {
             return !this.BHasTag("disable_steam_global");
@@ -101324,7 +98010,7 @@ var CLSTAMP = "steamdb";
                 : "sale_overlay" === _
                   ? (_ = this.jsondata.localized_sale_overlay)
                   : _._.includes(_)
-                    ? (_ = _.GetAllLocalizedGroupImageHashAndExts())
+                    ? (_ = this.fnGetLocalizedGroupImages?.())
                     : "product_banner" === _
                       ? (_ = this.jsondata.localized_sale_product_banner)
                       : "product_mobile_banner" === _
@@ -101389,42 +98075,32 @@ var CLSTAMP = "steamdb";
               this.forumTopicGID.length > 1
             );
           }
-          GetForumTopicURL() {
-            if (!this.BHasForumTopicGID()) return "";
-            if (this.appid)
-              return (
-                _._.COMMUNITY_BASE_URL +
-                "app/" +
-                this.appid +
-                "/eventcomments/" +
-                this.forumTopicGID
-              );
-            {
-              const _ = _._.GetClanInfoByClanAccountID(
-                this.clanSteamID.GetAccountID(),
-              );
-              if (_ && _.vanity_url)
-                return (
-                  _._.COMMUNITY_BASE_URL +
-                  "groups/" +
-                  _.vanity_url +
+          GetForumTopicURL(_) {
+            return this.BHasForumTopicGID()
+              ? this.appid
+                ? _._.COMMUNITY_BASE_URL +
+                  "app/" +
+                  this.appid +
                   "/eventcomments/" +
                   this.forumTopicGID
-                );
-            }
-            return (
-              _._.COMMUNITY_BASE_URL +
-              "gid/" +
-              this.clanSteamID.ConvertTo64BitString() +
-              "/eventcomments/" +
-              this.forumTopicGID
-            );
+                : _
+                  ? _._.COMMUNITY_BASE_URL +
+                    "groups/" +
+                    _ +
+                    "/eventcomments/" +
+                    this.forumTopicGID
+                  : _._.COMMUNITY_BASE_URL +
+                    "gid/" +
+                    this.clanSteamID.ConvertTo64BitString() +
+                    "/eventcomments/" +
+                    this.forumTopicGID
+              : "";
           }
-          BIsEventInFuture() {
-            return _._.GetTimeNowWithOverride() < (this.startTime ?? 0);
+          BIsEventInFuture(_ = (0, _._)()) {
+            return _ < (this.startTime ?? 0);
           }
-          BHasEventEnded() {
-            return (this.endTime ?? 0) < _._.GetTimeNowWithOverride();
+          BHasEventEnded(_ = (0, _._)()) {
+            return (this.endTime ?? 0) < _;
           }
           UpdateVoteCount(_, _) {
             "up" == _
@@ -101473,23 +98149,20 @@ var CLSTAMP = "steamdb";
             const _ = _._.GetELanguageFallback(_);
             return this.description.get(_) || this.description.get(_);
           }
-          BIsImageSafeForAllAges(_, _) {
-            const _ = _._.GetClanInfoByClanAccountID(
-                this.clanSteamID.GetAccountID(),
-              ),
-              _ = _._.GetELanguageFallback(_);
+          BIsImageSafeForAllAges(_, _, _ = {}) {
+            const _ = _._.GetELanguageFallback(_);
             return (
               null != this.GetImageURL(_, _) ||
               (_ != _ && null != this.GetImageURL(_, _)) ||
-              (this.appid &&
-                _._.Get().GetApp(this.appid)?.BHasAgeSafeScreenshots()) ||
+              (this.appid && _.bAppHasAgeSafeScreenshots) ||
               (!this.appid &&
-                _ &&
-                ((_.is_creator_home && !_.is_ogg) || _.is_curator))
+                _.clanInfo &&
+                ((_.clanInfo.is_creator_home && !_.clanInfo.is_ogg) ||
+                  _.clanInfo.is_curator))
             );
           }
-          BIsVisibleEvent() {
-            let _ = Math.floor(_._.GetTimeNowWithOverride());
+          BIsVisibleEvent(_ = (0, _._)()) {
+            let _ = Math.floor(_);
             return (
               this.visibility_state == _.k_EEventStateUnlisted ||
               (this.visibility_state == _.k_EEventStateVisible &&
@@ -101516,12 +98189,11 @@ var CLSTAMP = "steamdb";
           GetVisibilityStartTimeAndDateUnixSeconds() {
             return this.visibilityStartTime ?? 0;
           }
-          BIsEventActionEnabled() {
+          BIsEventActionEnabled(_ = (0, _._)()) {
             return (
               !!this.jsondata.action_end_time &&
-              (this.jsondata.action_end_time > _._.GetTimeNowWithOverride() ||
-                (1575396e3 == this.jsondata.action_end_time &&
-                  1606845600 > _._.GetTimeNowWithOverride()))
+              (this.jsondata.action_end_time > _ ||
+                (1575396e3 == this.jsondata.action_end_time && 1606845600 > _))
             );
           }
           BHasSubTitle(_) {
@@ -101621,10 +98293,9 @@ var CLSTAMP = "steamdb";
           BHasBroadcastEnabled() {
             return !!this.jsondata.bBroadcastEnabled;
           }
-          BEventCanShowBroadcastWidget(_) {
+          BEventCanShowBroadcastWidget(_, _ = (0, _._)()) {
             if (this.jsondata.bSaleEnabled) return this.BHasBroadcastEnabled();
-            const _ = _._.GetTimeNowWithOverride(),
-              _ = this.endTime ? this.endTime : _ + 3600;
+            const _ = this.endTime ? this.endTime : _ + 3600;
             return (
               this.BHasBroadcastEnabled() &&
               !!this.jsondata.broadcast_whitelist &&
@@ -101699,7 +98370,7 @@ var CLSTAMP = "steamdb";
           GetSaleUpdateLandingPageVanity() {
             return this.jsondata.sale_update_landing_page_vanity_id ?? "";
           }
-          GetSaleURL() {
+          GetSaleURL(_) {
             if (!this.jsondata.bSaleEnabled) return null;
             if (this.jsondata.sale_update_landing_page_vanity_id)
               return (
@@ -101736,24 +98407,15 @@ var CLSTAMP = "steamdb";
                           : _._.STORE_BASE_URL + _.type
                 : _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
             }
-            if (!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath) {
-              if (_._.BHasCreatorHomeLoaded(this.clanSteamID)) {
-                const _ = _._.GetCreatorHome(this.clanSteamID);
-                return (
-                  _?.GetCreatorHomeURL("developer") +
-                  "sale/" +
-                  this.jsondata.sale_vanity_id
-                );
-              }
-              return (
-                _._.STORE_BASE_URL +
-                "curator/" +
-                this.clanSteamID.GetAccountID() +
-                "/sale/" +
-                this.jsondata.sale_vanity_id
-              );
-            }
-            return _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
+            return this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+              ? _._.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id
+              : _
+                ? _ + "sale/" + this.jsondata.sale_vanity_id
+                : _._.STORE_BASE_URL +
+                  "curator/" +
+                  this.clanSteamID.GetAccountID() +
+                  "/sale/" +
+                  this.jsondata.sale_vanity_id;
           }
           BHasEmailEnabled() {
             return (
@@ -101764,7 +98426,7 @@ var CLSTAMP = "steamdb";
           GetSaleSections() {
             return this.jsondata.sale_sections ?? [];
           }
-          GenerateDynamicSaleSections(_, _, _, _, _) {
+          GenerateDynamicSaleSections(_, _, _, _, _, _) {
             const _ = [],
               _ = {
                 section_type: "unselected_empty",
@@ -101791,7 +98453,7 @@ var CLSTAMP = "steamdb";
                 }),
               _ &&
                 _.push(
-                  this.GenerateDynamicCreatorHomeItemBrowserSection(_++, _),
+                  this.GenerateDynamicCreatorHomeItemBrowserSection(_++, _, _),
                 ),
               _ &&
                 _.push({
@@ -101808,7 +98470,7 @@ var CLSTAMP = "steamdb";
               _
             );
           }
-          GetSaleSectionIncludingFooterSections() {
+          GetSaleSectionIncludingFooterSections(_ = 0) {
             const _ = this.jsondata?.sale_show_creator,
               _ = this.jsondata.sale_browse_more_button,
               _ =
@@ -101818,17 +98480,22 @@ var CLSTAMP = "steamdb";
               _ = this.BShowNextFestHeader(!0);
             return _ || _ || _ || _ || _
               ? [
-                  ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
+                  ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _, _),
                   ...this.GetSaleSections(),
-                  ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1),
+                  ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1, _),
                 ]
               : this.GetSaleSections();
           }
-          GetSaleSectionByID(_) {
+          GetSaleSectionByID(_, _ = 0) {
             if (_ > _) {
-              return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0).find(
-                (_) => _.unique_id == _,
-              );
+              return this.GenerateDynamicSaleSections(
+                !0,
+                !0,
+                !0,
+                !0,
+                !0,
+                _,
+              ).find((_) => _.unique_id == _);
             }
             return this.jsondata.sale_sections?.find((_) => _.unique_id == _);
           }
@@ -102119,7 +98786,7 @@ var CLSTAMP = "steamdb";
                   !!this.startTime &&
                   this.startTime > new Date("2026-03-01").getTime() / 1e3;
           }
-          GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
+          GenerateDynamicCreatorHomeItemBrowserSection(_, _, _) {
             return {
               ..._,
               section_type: "sale_item_browser",
@@ -102135,9 +98802,7 @@ var CLSTAMP = "steamdb";
                 prefer_assets_without_overrides: !1,
               },
               prefer_assets_without_overrides: !1,
-              enable_faceted_browsing:
-                (_._.GetCreatorHome(this.clanSteamID)?.GetAppIDList().length ??
-                  0) >= 7,
+              enable_faceted_browsing: _ >= 7,
               min_capsule_matches_for_facet_values: 5,
               max_facet_values_for_facet: 5,
               background_gradient_top: "#0000006b",
@@ -102224,6 +98889,7 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (
@@ -102235,6 +98901,7 @@ var CLSTAMP = "steamdb";
         function _(_) {
           return _(_) ? _ + _.announcement_body?.gid : _.gid;
         }
+        var _ = __webpack_require__("chunkid");
         class _ {
           appid;
           date;
@@ -102633,6 +99300,7 @@ var CLSTAMP = "steamdb";
                     _.jsondata.localized_title_image[_] = _;
                   }
                 }),
+                (_.bLoaded = !0),
                 _.published
                   ? _.unlisted
                     ? (_.visibility_state = _.k_EEventStateUnlisted)
@@ -102649,7 +99317,6 @@ var CLSTAMP = "steamdb";
               _.AnnouncementGID &&
                 _.AnnouncementGID.length > 1 &&
                 this.m_mapAnnouncementBodyToEvent.set(_.AnnouncementGID, _.GID),
-              (_.bLoaded = !0),
               _
             );
           }
@@ -103412,9 +100079,9 @@ var CLSTAMP = "steamdb";
           (0, _._)([_._], _.prototype, "FlushEventFromCache", null),
           (0, _._)([_._], _.prototype, "SavePartnerEventSaleAssets", null);
         const _ = new _();
-        window.g_PartnerEventStore = _;
+        (0, _._)("g_PartnerEventStore", _);
         const _ = new _(!0);
-        window.g_PartnerEventSummaryStore = _;
+        (0, _._)("g_PartnerEventSummaryStore", _);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -104592,6 +101259,12 @@ var CLSTAMP = "steamdb";
                   hubcategoryid: _._,
                 };
               case _._._:
+                return _.gid
+                  ? {
+                      salepagegid: _.gid,
+                    }
+                  : void 0;
+              case _._._:
               case _._._:
                 return;
               default:
@@ -104634,6 +101307,7 @@ var CLSTAMP = "steamdb";
           _.Body().set_data_request(_._.fromObject(_));
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
           if (!_) return _;
@@ -104719,7 +101393,7 @@ var CLSTAMP = "steamdb";
             return (
               _.sm_instance ||
                 ((_.sm_instance = new _()),
-                (window.StoreItemCache = _.sm_instance)),
+                (0, _._)("StoreItemCache", _.sm_instance)),
               _.sm_instance
             );
           }
@@ -106808,6 +103482,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           switch (_) {
@@ -106843,6 +103518,14 @@ var CLSTAMP = "steamdb";
               return _.LeftTrigger;
             case _._.TRIGGER_RIGHT:
               return _.RightTrigger;
+            case _._.REAR_LEFT_UPPER:
+              return _.RearLeftUpper;
+            case _._.REAR_LEFT_LOWER:
+              return _.RearLeftLower;
+            case _._.REAR_RIGHT_UPPER:
+              return _.RearRightUpper;
+            case _._.REAR_RIGHT_LOWER:
+              return _.RearRightLower;
             default:
               return _._;
           }
@@ -106883,10 +103566,21 @@ var CLSTAMP = "steamdb";
           m_globalActionsSubscriptions = [];
           m_actionDescriptionChangedCallbackRegistrations = [];
           static Log = new _._("ActionDescription").Debug;
+          m_nodeForCurrentDescriptions;
           InitContext(_) {
-            return _.FocusChangedCallbacks.Register(
-              this.OnFocusNavigationChanged,
-            ).Unregister;
+            const _ = new _._();
+            return (
+              _.Push(
+                _.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
+                  .Unregister,
+              ),
+              _.Push(
+                _.NavTreeActivatedOrReactivatedCallbacks.Register(
+                  this.OnActiveNavTreeChanged,
+                ).Unregister,
+              ),
+              _.GetUnregisterFunc()
+            );
           }
           BFromActiveNavTree(_, _) {
             let _ = _?.Tree;
@@ -106895,27 +103589,36 @@ var CLSTAMP = "steamdb";
             );
           }
           OnFocusNavigationChanged(_, _, _) {
-            if (this.BFromActiveNavTree(_, _))
-              if (
-                (this.m_actionDescriptionChangedCallbackRegistrations.forEach(
-                  (_) => _.Unregister(),
-                ),
-                (this.m_actionDescriptionChangedCallbackRegistrations = []),
-                _)
-              ) {
-                const _ = () =>
-                  this.SetActionDescriptionsFromMap(
-                    __webpack_require__.GetActiveActionDescriptions() ?? {},
-                  );
-                _();
-                for (let _ = _; null != _; _ = _.Parent)
-                  this.m_actionDescriptionChangedCallbackRegistrations.push(
-                    _.ActionDescriptionChangedCallbackList.Register(() => _()),
-                  );
-              } else
-                this.SetActionDescriptionsFromMap({
-                  [_._._]: null,
-                });
+            this.BFromActiveNavTree(_, _) && this.UpdateForFocusedNode(_);
+          }
+          OnActiveNavTreeChanged(_) {
+            if (!_.Controller.IsActiveFocusNavTree(_)) return;
+            const _ = _.GetLastFocusedNode() ?? _.Root;
+            _ != this.m_nodeForCurrentDescriptions &&
+              this.UpdateForFocusedNode(_);
+          }
+          UpdateForFocusedNode(_) {
+            if (
+              ((this.m_nodeForCurrentDescriptions = _),
+              this.m_actionDescriptionChangedCallbackRegistrations.forEach(
+                (_) => _.Unregister(),
+              ),
+              (this.m_actionDescriptionChangedCallbackRegistrations = []),
+              _)
+            ) {
+              const _ = () =>
+                this.SetActionDescriptionsFromMap(
+                  _.GetActiveActionDescriptions() ?? {},
+                );
+              _();
+              for (let _ = _; null != _; _ = _.Parent)
+                this.m_actionDescriptionChangedCallbackRegistrations.push(
+                  _.ActionDescriptionChangedCallbackList.Register(() => _()),
+                );
+            } else
+              this.SetActionDescriptionsFromMap({
+                [_._._]: null,
+              });
           }
           GetActionDescription(_) {
             let _;
@@ -107007,6 +103710,7 @@ var CLSTAMP = "steamdb";
           }
         }
         (0, _._)([_._], _.prototype, "OnFocusNavigationChanged", null),
+          (0, _._)([_._], _.prototype, "OnActiveNavTreeChanged", null),
           (0, _._)([_._], _.prototype, "SetActionDescriptionsFromMap", null);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -107100,7 +103804,7 @@ var CLSTAMP = "steamdb";
               : (_ && (_ += "\t"),
                 _.includes("msg") && _ && (_ = !0),
                 _.includes("block") && !_ && (_ = !0));
-            let _ = _.getAttribute("data-copytext");
+            let _ = _.getAttribute("data-copytext") ?? "";
             0 == _.length
               ? (_ = _.innerText)
               : _ && _.innerText.length > 0
@@ -107123,7 +103827,7 @@ var CLSTAMP = "steamdb";
           _.selectNode(_),
             (function (_) {
               const _ = _(_);
-              _._(_);
+              null != _ && _._(_);
             })(_);
         }
       },
@@ -114554,9 +111258,9 @@ var CLSTAMP = "steamdb";
         function _(_) {
           const { emoticon: _, large: _ } = _,
             [_, _] = (0, _._)(),
-            [_, _] = _.useState(),
+            [_, _] = _.useState(null),
             _ = `:${_}:`,
-            _ = _._.GetEmoticonURL(_, _);
+            _ = (0, _._)(_, _);
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -114572,6 +111276,7 @@ var CLSTAMP = "steamdb";
                 }),
               }),
               _ &&
+                _ &&
                 (0, _.jsx)(_, {
                   target: _,
                   emoticon: _,
@@ -114635,6 +111340,18 @@ var CLSTAMP = "steamdb";
               }),
             ],
           });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        function _(_, _) {
+          return _
+            ? _._.COMMUNITY_CDN_URL + "economy/emoticonlarge/" + _
+            : _._.COMMUNITY_CDN_URL + "economy/emoticon/" + _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -114797,15 +111514,6 @@ var CLSTAMP = "steamdb";
               },
               children: _,
             });
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -120914,6 +117622,16 @@ var CLSTAMP = "steamdb";
               strPath: "/steaminputglyphs/sd_button_view.svg",
               bPillShapedIcon: !0,
             },
+            {
+              eSource: _._,
+              eInput: _._,
+              strPath: "/steaminputglyphs/sc_lg.svg",
+            },
+            {
+              eSource: _._,
+              eInput: _._,
+              strPath: "/steaminputglyphs/sc_rg.svg",
+            },
           ],
         };
         _._,
@@ -122810,7 +119528,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -122932,20 +119649,6 @@ var CLSTAMP = "steamdb";
           });
         }
         function _(_) {
-          const _ = {
-            strTitle: (0, _._)("#Error_FailureNotice"),
-            strDescription: (0, _._)("#Error_GenericFailureDescription"),
-            bAlertDialog: !0,
-            bDestructiveWarning: !0,
-            onOK: () => {},
-            onCancel: () => {},
-            ..._,
-          };
-          return (0, _.jsx)(_, {
-            ..._,
-          });
-        }
-        function _(_) {
           let _ = {
             onOK: () => {},
             onCancel: () => {},
@@ -123056,7 +119759,6 @@ var CLSTAMP = "steamdb";
         "use strict";
         __webpack_require__._(_, {
           _: () => _,
-          _: () => _._,
           _: () => _._,
           _: () => _._,
           _: () => _._,
@@ -130092,6 +126794,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
           _: () => _._,
         });
         var _ = __webpack_require__("chunkid"),
@@ -130193,27 +126896,23 @@ var CLSTAMP = "steamdb";
             this.m_rgListeners = [];
           }
         }
-        (0, _._)(
-          [_._],
-          class {
-            m_vecCallbacks = [];
-            Push(_) {
-              this.m_vecCallbacks.push(_);
-            }
-            PushArrayRemove(_, _) {
-              this.m_vecCallbacks.push(() => _._(_, _));
-            }
-            Unregister() {
-              for (const _ of this.m_vecCallbacks) _();
-              this.m_vecCallbacks = [];
-            }
-            GetUnregisterFunc() {
-              return this.Unregister;
-            }
-          }.prototype,
-          "Unregister",
-          null,
-        );
+        class _ {
+          m_vecCallbacks = [];
+          Push(_) {
+            this.m_vecCallbacks.push(_);
+          }
+          PushArrayRemove(_, _) {
+            this.m_vecCallbacks.push(() => _._(_, _));
+          }
+          Unregister() {
+            for (const _ of this.m_vecCallbacks) _();
+            this.m_vecCallbacks = [];
+          }
+          GetUnregisterFunc() {
+            return this.Unregister;
+          }
+        }
+        (0, _._)([_._], _.prototype, "Unregister", null);
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -130274,6 +126973,15 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
           _: () => _,
+          _: () => _,
+        });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        function _(_, _) {
+          "undefined" != typeof window && (window[_] = _);
+        }
+        __webpack_require__._(_, {
           _: () => _,
         });
       },
@@ -130598,7 +127306,6 @@ var CLSTAMP = "steamdb";
           _: () => _._,
           _: () => _,
           _: () => _,
-          _: () => _._,
           _: () => _,
           _: () => _._,
           _: () => _,
@@ -130944,7 +127651,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _,
           _ = __webpack_require__("chunkid"),
@@ -131022,25 +127728,6 @@ var CLSTAMP = "steamdb";
               ? (0, _._)(_ + "1Second")
               : (0, _._)(_ + "XSeconds", _)
             : (0, _._)(_ + "LessThanAMinute");
-        }
-        function _(_, _, _) {
-          let _;
-          _ =
-            void 0 === _ || !0 === _ || !1 === _
-              ? {
-                  weekday: _ ? "long" : "short",
-                  year: _ ? void 0 : "numeric",
-                }
-              : _;
-          let _ = new Date(1e3 * _);
-          const _ = {
-            weekday: "short",
-            month: "long",
-            day: "numeric",
-            year: "numeric",
-            ..._,
-          };
-          return _.toLocaleDateString(_._.GetPreferredLocales(), _);
         }
         function _(_, _) {
           const _ = {
@@ -131207,7 +127894,25 @@ var CLSTAMP = "steamdb";
           if (_.bGranularPast)
             return (0, _._)(
               "#Time_Past_At",
-              _(
+              (function (_, _, _) {
+                let _;
+                _ =
+                  void 0 === _ || !0 === _ || !1 === _
+                    ? {
+                        weekday: _ ? "long" : "short",
+                        year: _ ? void 0 : "numeric",
+                      }
+                    : _;
+                let _ = new Date(1e3 * _);
+                const _ = {
+                  weekday: "short",
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                  ..._,
+                };
+                return _.toLocaleDateString(_._.GetPreferredLocales(), _);
+              })(
                 _,
                 __webpack_require__.getFullYear() == _.getFullYear(),
                 !_.bAbbreviateDayOfWeek,
@@ -132098,8 +128803,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
         });
         const _ = {
           PerYear: 31536e3,
@@ -132109,16 +128812,6 @@ var CLSTAMP = "steamdb";
           PerHour: 3600,
           PerMinute: 60,
         };
-        function _(_, _) {
-          return (
-            _.getFullYear() == _.getFullYear() &&
-            _.getMonth() == _.getMonth() &&
-            _.getDate() == _.getDate()
-          );
-        }
-        function _(_, _) {
-          return _.getFullYear() == _.getFullYear();
-        }
         function _(_) {
           return new Promise((_) => setTimeout(_, _));
         }
@@ -133524,6 +130217,7 @@ var CLSTAMP = "steamdb";
           _: () => _._,
           _: () => _,
           _: () => _,
+          _: () => _,
           _: () => _._,
           _: () => _,
           _: () => _,
@@ -133581,6 +130275,10 @@ var CLSTAMP = "steamdb";
         function _(_) {
           const _ = _(_);
           return _?.IN_DESKTOPUI;
+        }
+        function _(_) {
+          const _ = _(_);
+          return _?.IN_VR;
         }
         function _() {
           return _._.EREALM === _._.k_ESteamRealmChina;
@@ -133701,8 +130399,6 @@ var CLSTAMP = "steamdb";
             IS_STEAMOS: !1,
             ON_STEAMOS_CLIENT_BRANCH: !1,
             IN_GAMESCOPE: !1,
-            IN_LOGIN: !1,
-            IN_LOGIN_REFRESH: !1,
             USE_LONGEST_LOC_STRING: !1,
             SILENT_STARTUP: !1,
             DEV_MODE: !1,
@@ -135223,23 +131919,24 @@ var CLSTAMP = "steamdb";
         43: "8170f2c895e19202cd65",
         133: "82545716ea1a8b82e4d9",
         191: "2f44a701276dca278b19",
-        200: "565b77074de18b644f43",
+        200: "97d6b91f251d530583ca",
+        243: "4149b00deb1074b58699",
         277: "a5843aa6d5b4f2aac940",
-        295: "bd39d7bbdf44e4767829",
+        295: "f7b5346af4c9748e7713",
         316: "b4a4125ab8550ef83a0b",
         382: "416dc2c22c72ab0b0084",
         474: "6a9d0b4e2892dded462e",
         496: "fb606fd9941402c4c9fd",
-        559: "4261d8b18a20becab4e2",
+        559: "1d22d9eb5f270dbceb86",
         684: "93eb01f9afd9f045929e",
         762: "989dc3b4eff679fe5ec9",
-        815: "e56fc1348319b30a33bb",
+        815: "2a4bb53c1fe590458db2",
         898: "b6a64c82dc169d24fab2",
-        902: "c7d1b9914bd76ba5e8e5",
+        902: "11f5eb21d0207a89d13a",
         947: "77123a0d43c051462d19",
         975: "3a1c568c77dec2962779",
         1087: "1b1e874fa0b17e33bd93",
-        1136: "ed55d384a6ee2c8b99e9",
+        1136: "4e4da813c110e065dacc",
         1144: "896ffa5dbc529d9c48a5",
         1158: "20c08adf29ac06b096f3",
         1224: "8cf7b28930c7b7c56321",
@@ -135247,22 +131944,21 @@ var CLSTAMP = "steamdb";
         1330: "d8ab1ac01d7f47e93aca",
         1499: "63ac62860d966e5978a9",
         1571: "301c37a370bcf304422d",
-        1619: "447c798932ec1fceddc5",
         1639: "48a7008667f0f9b1d559",
         1849: "c211a47bad2b684320fd",
-        1864: "dd0b23501ea849aec42f",
+        1864: "fb474b692ff5a3a7b978",
         1954: "0e55356fd7b14be54c0b",
         1990: "f85ce9a0d9c8bd0dcdf2",
         2116: "9caf93966dc0a0c7202f",
         2177: "77c78758e314a85bc85e",
-        2269: "e0a3de7fb6ce7006519e",
+        2269: "021fa72192e6af3ee4b9",
         2281: "6496f3d7e4ce6308483c",
         2292: "2648171bbf7a4e541935",
         2506: "3995fb6cb9c524d2af74",
         2520: "1f392503c94a20f48720",
         2532: "81f6c1f1d6e42e913450",
         2687: "fe042a69cfd5cbb58cc1",
-        2889: "5a54c4a13b7fdf97a351",
+        2889: "c4bff9e981ee19b8099e",
         2945: "f36eb722d1197b9ccc69",
         2993: "e6827764a5e82e106259",
         3e3: "a020a8a0239eaddd4347",
@@ -135278,79 +131974,79 @@ var CLSTAMP = "steamdb";
         3723: "325ca6fc0ceca5503b85",
         3778: "167dead89774a69d53cc",
         3789: "8c81812abc11a5169e5b",
-        3800: "fd6c4a51ee726d7857e1",
+        3800: "2d1d2bc9065b30317066",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
         3898: "90846a9e84c0e34eca45",
-        3907: "acb570cbe87a45370236",
+        3907: "9831fc2c8061997a120e",
         4006: "6603ebe760f65431a358",
         4154: "da950d2a24eca80bf91a",
         4227: "b9f7e2337d2bec4eff82",
-        4230: "2076923cd0a4c22d72aa",
-        4289: "e33a182b1012718f1f4a",
+        4230: "c754e42acf5b62d9864f",
+        4289: "7165ad723758272236ac",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "6777319b6735c96a6a98",
         4352: "de92a58e851fd1f40a2a",
-        4419: "f8e31272a8267560c36d",
+        4419: "2960803dc8add8035fa5",
         4421: "58fab8f46777762af7e8",
         4434: "06de5f0d3ba8406dd2d0",
         4473: "4f453826b91d887757e2",
         4488: "8dd091f616bb836b799e",
-        4625: "f11fdc7c2a8637db941c",
-        4750: "6a2548c6f4681e89fbdb",
+        4625: "0c085f23233161b6967c",
+        4750: "68ef05a294eac730031a",
         4776: "0ff0003552979744c3ee",
         4777: "040c37a660c26d77931d",
         4779: "909f21776039059914ce",
         4787: "ab118cafd413ef8db5d3",
-        4792: "2313383fc0e234744aad",
+        4792: "8afa4089111384fd8fd8",
         4844: "9b0a060abc338b33c9ea",
         4976: "11dc50e1825c3ea78b66",
-        4978: "cde74231919ac714ed14",
-        5040: "a8387cf2ac73ceabf119",
+        4978: "129bbbea251f001e5217",
+        5040: "5bb81e685060aa4cb72e",
         5094: "d15c06f400812c0725f0",
         5136: "d873a49dcff7475852a5",
-        5191: "ee82b3a8f03316391985",
-        5233: "e916b53d09f578603df8",
+        5191: "4101ad929f40adda52cd",
+        5233: "deea4292298564390360",
         5341: "0050d1d3444cdf99610b",
         5358: "46677bfee5caf20bc8de",
-        5436: "bec0dd4edebc7ed3d352",
+        5436: "dfaf7667a2137111d5f1",
         5480: "819bcdfa36698211a731",
         5522: "43ef07153506837b9ad7",
         5536: "67277551d20afcb0ab7a",
         5617: "6d58f25bd9f169dac32a",
         5725: "188fd09b6944f1d69b65",
-        5777: "affabae08fccce5f216e",
+        5777: "c13935ed6e44c943448c",
         5893: "91f5b813d41dc544101d",
+        5914: "28db15f708af760740ce",
         6059: "e0d80564c1174fd84376",
         6127: "658afba6cdc2a25013d4",
-        6170: "7be014409b29b782ea6f",
+        6170: "6ac0cee5f5bbb0edb8ee",
         6196: "19444056df361c8ef94a",
         6305: "10b03bb6a5af6137fa3d",
         6385: "641291b44bff14d6f0d7",
         6447: "6571327308708b9cb4a5",
-        6512: "a595c994122b25799979",
+        6512: "0b430f99536d62213824",
         6518: "dc5f6ae58364d09cceda",
         6609: "58380bc6920b369df4a7",
         6637: "bee05b6c76a9dd2fe06d",
-        6694: "4fc64104cf7aa5d3993c",
-        6736: "5fac9c35ab88a75e6079",
+        6736: "039a2ae091edc9de5b4b",
         6888: "b1d82792ec48c0c9f838",
         6905: "d9316fc5a220e6b4c416",
         6920: "073d861c6b381e481b8f",
         6950: "ec0c8b0d665699ce915b",
         6971: "8bfca381100e06a3c16d",
-        7246: "5b769448a62375fd8749",
+        7246: "775446676728b8b935f4",
         7247: "7021b7a5aaf6d7ee9806",
-        7263: "461be645f271400b962f",
+        7263: "49cbbe96eb3e47dccfa2",
         7279: "4fa8dad9d6bcde1d380b",
         7365: "bb74e03060db6e6f780a",
         7418: "7680875bb68efceaf698",
-        7462: "993b5311565276946326",
+        7462: "15eb1f686b7c17b4ca2f",
         7464: "d527671518fba684fd01",
         7468: "53e0875c52dff3de164a",
         7487: "49d81d8d15ad6c6cb411",
         7637: "4d32b59b329ef468b7d5",
-        7653: "bf8dd885b82e8df0cf44",
+        7653: "c947374da67889a4e971",
         7673: "065a311d75b3213d4f15",
         7788: "d010383f4ccc1c1b6efb",
         7861: "7b73403c160be056831f",
@@ -135359,7 +132055,7 @@ var CLSTAMP = "steamdb";
         8106: "9e5de4171728b3824d1d",
         8191: "7c71b0175a3b35434ec8",
         8194: "cee76cc3439b0428bedd",
-        8246: "d8dd4a47668b5bf225ab",
+        8246: "4947c8de6e1af98f950c",
         8311: "410eff68de4d1e8b26d0",
         8366: "fbd35ad496eb7892a424",
         8476: "094339eefcf15105c427",
@@ -135374,12 +132070,12 @@ var CLSTAMP = "steamdb";
         8930: "25153545da6040645366",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
-        9457: "03ff4c6f7ee37e164af2",
-        9574: "686eb5b5f196008b0c69",
-        9668: "810a657ba920b191c905",
+        9457: "29fc2a26fae6d38d2a96",
+        9574: "b06958ce8157e1ca49e0",
+        9668: "ff1ba593ee8ffe24db1f",
         9746: "2cfaacb3359ab5b9bd3c",
         9808: "21bf92301f1b8edb7b62",
-        9863: "b84d2101aa968e8529ae",
+        9863: "623f14a66142e7451d8d",
         9925: "77586f22def2595b9c64",
         9930: "f92544de12d0462e95d3",
         9947: "46317ab7a7ca29c36168",
@@ -135393,7 +132089,7 @@ var CLSTAMP = "steamdb";
       ".css?contenthash=" +
       {
         7462: "72980633e3cf3969529a",
-        7653: "b2050965c1ec19922309",
+        7653: "4f90cd488ec7d0bbdf54",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -135627,6 +132323,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(41927));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(77156));
   _ = _._(_);
 })();

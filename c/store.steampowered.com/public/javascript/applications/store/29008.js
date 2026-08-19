@@ -758,56 +758,58 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_) {
-        const _ = await fetch(_, {
-          method: "GET",
-        });
-        if (!_._) throw new Error(`Server returned ${_.status}`);
-        const _ = await _.json();
-        return _.success != _._ ? null : _;
-      }
-      function _() {
-        return "undefined" != typeof window && "undefined" != typeof self
-          ? self.origin
-          : "ssr_server";
+      function _(_) {
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await (async function (_) {
+                  let _ = {
+                    get_appids: !0,
+                    _: _._.LANGUAGE,
+                  };
+                  const _ = new URLSearchParams(_).toString(),
+                    _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
+                    _ = await fetch(_, {
+                      method: "GET",
+                    });
+                  if (!_._) throw new Error(`Server returned ${_.status}`);
+                  const _ = await _.json();
+                  return _.success != _._ ? null : _;
+                })(_);
+                if (_) {
+                  const {
+                    success: _,
+                    err_msg: _,
+                    warning: _,
+                    warning_msg: _,
+                    ..._
+                  } = _;
+                  return _;
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_),
+        );
       }
       function _(_) {
-        const _ = (0, _._)();
-        return (0, _._)(_(_, _));
+        return ["creatorhomebyaccount", _];
       }
       function _(_, _) {
-        return {
-          queryKey: _(_),
-          queryFn: async () => {
-            const _ = await (async function (_) {
-              const _ = _._.InitFromClanID(_);
-              return _(
-                `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
-              );
-            })(_);
-            if (_) {
-              _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
-                _.vanity_url &&
-                  _.setQueryData(_(_.vanity_url), _.clanAccountID);
-              const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
-              return _;
-            }
-            return null;
-          },
-          enabled: !!_,
-        };
-      }
-      function _(_) {
-        return ["clantoclaninfo", _];
-      }
-      function _(_) {
-        return ["apptoclanid", _];
-      }
-      function _(_) {
-        return ["vanitytoclanid", _];
+        if (_.vanity) {
+          switch (_) {
+            case "publisher":
+              return `${_._.STORE_BASE_URL}publisher/${_.vanity}/`;
+            case "franchise":
+              return `${_._.STORE_BASE_URL}franchise/${_.vanity}/`;
+          }
+          return `${_._.STORE_BASE_URL}developer/${_.vanity}/`;
+        }
+        return `${_._.STORE_BASE_URL}curator/${_.creator_clan_id}/`;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2587,57 +2589,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _._)({
-          queryKey: _(_),
-          queryFn: async () => {
-            const _ = await (async function (_) {
-              let _ = {
-                get_appids: !0,
-                _: _._.LANGUAGE,
-              };
-              const _ = new URLSearchParams(_).toString(),
-                _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
-                _ = await fetch(_, {
-                  method: "GET",
-                });
-              if (!_._) throw new Error(`Server returned ${_.status}`);
-              const _ = await _.json();
-              return _.success != _._ ? null : _;
-            })(_);
-            if (_) {
-              const {
-                success: _,
-                err_msg: _,
-                warning: _,
-                warning_msg: _,
-                ..._
-              } = _;
-              return _;
-            }
-            return null;
-          },
-          enabled: !!_,
-        });
-      }
-      function _(_) {
-        return ["creatorhomebyaccount", _];
-      }
-      function _(_, _) {
-        if (_.vanity) {
-          switch (_) {
-            case "publisher":
-              return `${_._.STORE_BASE_URL}publisher/${_.vanity}/`;
-            case "franchise":
-              return `${_._.STORE_BASE_URL}franchise/${_.vanity}/`;
-          }
-          return `${_._.STORE_BASE_URL}developer/${_.vanity}/`;
-        }
-        return `${_._.STORE_BASE_URL}curator/${_.creator_clan_id}/`;
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -2650,14 +2601,14 @@
             followType: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = _(_);
+          { data: _ } = (0, _._)(_);
         return _ && _
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
               style: _,
               children: [
                 (0, _.jsx)("a", {
-                  href: _(_, "developer"),
+                  href: (0, _._)(_, "developer"),
                   children: (0, _.jsx)("img", {
                     src:
                       null == _
@@ -4206,6 +4157,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4221,6 +4173,11 @@
               : [],
           [_],
         );
+      }
+      function _(_) {
+        if (!_?.length) return [];
+        const _ = _.map((_) => _.creator_clan_account_id).filter((_) => !!_);
+        return Array.from(new Set(_));
       }
       function _(_) {
         const { data: _ } = (0, _._)(_);
@@ -5057,6 +5014,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -5092,6 +5050,14 @@
             return _.LeftTrigger;
           case _._.TRIGGER_RIGHT:
             return _.RightTrigger;
+          case _._.REAR_LEFT_UPPER:
+            return _.RearLeftUpper;
+          case _._.REAR_LEFT_LOWER:
+            return _.RearLeftLower;
+          case _._.REAR_RIGHT_UPPER:
+            return _.RearRightUpper;
+          case _._.REAR_RIGHT_LOWER:
+            return _.RearRightLower;
           default:
             return _._;
         }
@@ -5132,36 +5098,57 @@
         m_globalActionsSubscriptions = [];
         m_actionDescriptionChangedCallbackRegistrations = [];
         static Log = new _._("ActionDescription").Debug;
+        m_nodeForCurrentDescriptions;
         InitContext(_) {
-          return _.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
-            .Unregister;
+          const _ = new _._();
+          return (
+            _.Push(
+              _.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
+                .Unregister,
+            ),
+            _.Push(
+              _.NavTreeActivatedOrReactivatedCallbacks.Register(
+                this.OnActiveNavTreeChanged,
+              ).Unregister,
+            ),
+            _.GetUnregisterFunc()
+          );
         }
         BFromActiveNavTree(_, _) {
           let _ = _?.Tree;
           return _ || (_ = _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
         }
         OnFocusNavigationChanged(_, _, _) {
-          if (this.BFromActiveNavTree(_, _))
-            if (
-              (this.m_actionDescriptionChangedCallbackRegistrations.forEach(
-                (_) => _.Unregister(),
-              ),
-              (this.m_actionDescriptionChangedCallbackRegistrations = []),
-              _)
-            ) {
-              const _ = () =>
-                this.SetActionDescriptionsFromMap(
-                  __webpack_require__.GetActiveActionDescriptions() ?? {},
-                );
-              _();
-              for (let _ = _; null != _; _ = _.Parent)
-                this.m_actionDescriptionChangedCallbackRegistrations.push(
-                  _.ActionDescriptionChangedCallbackList.Register(() => _()),
-                );
-            } else
-              this.SetActionDescriptionsFromMap({
-                [_._._]: null,
-              });
+          this.BFromActiveNavTree(_, _) && this.UpdateForFocusedNode(_);
+        }
+        OnActiveNavTreeChanged(_) {
+          if (!_.Controller.IsActiveFocusNavTree(_)) return;
+          const _ = _.GetLastFocusedNode() ?? _.Root;
+          _ != this.m_nodeForCurrentDescriptions &&
+            this.UpdateForFocusedNode(_);
+        }
+        UpdateForFocusedNode(_) {
+          if (
+            ((this.m_nodeForCurrentDescriptions = _),
+            this.m_actionDescriptionChangedCallbackRegistrations.forEach((_) =>
+              _.Unregister(),
+            ),
+            (this.m_actionDescriptionChangedCallbackRegistrations = []),
+            _)
+          ) {
+            const _ = () =>
+              this.SetActionDescriptionsFromMap(
+                _.GetActiveActionDescriptions() ?? {},
+              );
+            _();
+            for (let _ = _; null != _; _ = _.Parent)
+              this.m_actionDescriptionChangedCallbackRegistrations.push(
+                _.ActionDescriptionChangedCallbackList.Register(() => _()),
+              );
+          } else
+            this.SetActionDescriptionsFromMap({
+              [_._._]: null,
+            });
         }
         GetActionDescription(_) {
           let _;
@@ -5251,6 +5238,7 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnFocusNavigationChanged", null),
+        (0, _._)([_._], _.prototype, "OnActiveNavTreeChanged", null),
         (0, _._)([_._], _.prototype, "SetActionDescriptionsFromMap", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {

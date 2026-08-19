@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Nepodařilo se zpracovat soubor formátu GIF. Opětovně ho zakódujte, nebo změňte jeho formát, a zkuste to znovu.",
     "MediaConvert_InputError_ImageTooSmall": "Obrázek je příliš malý. Nahrajte obrázek s rozměry alespoň 16×16 pixelů.",
     "MediaConvert_InputError_AnimationTooSmall": "Animace nebo video je příliš malé. Nahrajte animaci nebo video s rozměry alespoň 16×16 pixelů.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Soubor obsahuje více než jednu stopu videa. Nahrajte soubor pouze s jednou stopou.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Tento obrázek nemůže být animovaný. Nahrajte prosím nehybný obrázek.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Obrázky nemohou zahrnovat zvukovou stopu.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "Pro videa není podporován výstup ve formátu AVIF.",
     "MediaConvert_InternalError_FailedToConvert": "Tento soubor se nepodařilo konvertovat. Než to zkusíte znovu, soubor opětovně zakódujte.",

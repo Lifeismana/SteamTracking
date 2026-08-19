@@ -16197,7 +16197,7 @@
     },
     69409: (e, t, r) => {
       "use strict";
-      r.d(t, { m: () => h });
+      r.d(t, { m: () => p });
       var i = r(7850),
         s = r(90626),
         a = r(22837),
@@ -16207,11 +16207,12 @@
         c = r(61336),
         d = r(78327),
         m = r(15392),
-        u = r(40414);
-      function h(e) {
+        u = r(40414),
+        h = r(12493);
+      function p(e) {
         const { gidEvent: t } = e,
           r = (0, n.RR)(t),
-          [h, p] = (0, s.useMemo)(() => {
+          [p, _] = (0, s.useMemo)(() => {
             if (
               r?.jsondata?.localized_sale_product_banner?.length > 0 &&
               r?.jsondata?.localized_sale_product_mobile_banner?.length > 0
@@ -16233,17 +16234,17 @@
             }
             return [null, null];
           }, [r]);
-        return h?.length > 0 && p?.length > 0
+        return p?.length > 0 && _?.length > 0
           ? (0, i.jsxs)("a", {
-              href: (0, c.k2)(r.GetSaleURL()),
+              href: (0, c.k2)((0, h.n4)(r)),
               className: m.Link,
               children: [
                 (0, i.jsx)("img", {
-                  src: h,
+                  src: p,
                   className: (0, o.A)(m.Banner, m.Big),
                 }),
                 (0, i.jsx)("img", {
-                  src: p,
+                  src: _,
                   className: (0, o.A)(m.Banner, m.Mobile),
                 }),
               ],

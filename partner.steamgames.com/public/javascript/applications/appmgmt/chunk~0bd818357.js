@@ -2321,8 +2321,8 @@
                   },
                   secondary_languages: {
                     n: 2,
-                    br: o.qM.readUint32,
-                    bw: o.gp.writeUint32,
+                    br: o.qM.readUint64String,
+                    bw: o.gp.writeUint64String,
                   },
                   platform_windows: {
                     n: 3,

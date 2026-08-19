@@ -29,7 +29,9 @@
       function _(_, _) {
         return _(_) && _(_)
           ? _.value === _.value &&
-              Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft)
+              Boolean(_.bShowOnLeft) == Boolean(_.bShowOnLeft) &&
+              Boolean(_.bShowOnFloatingVRFooter) ==
+                Boolean(_.bShowOnFloatingVRFooter)
           : _ === _;
       }
       !(function (_) {
@@ -1975,16 +1977,30 @@
         GetBoundingRect() {
           return this.m_element?.getBoundingClientRect();
         }
+        GetElementForFocusRingMeasure() {
+          const _ = this.m_element;
+          return this.m_Properties?.focusRingSizeElementID
+            ? (_?.ownerDocument?.getElementById(
+                this.m_Properties.focusRingSizeElementID,
+              ) ?? _)
+            : _;
+        }
         GetBoundingRectForFocusRing() {
-          let _ = this.m_element;
-          return (
-            this.m_Properties?.focusRingSizeElementID &&
-              (_ =
-                _?.ownerDocument?.getElementById(
-                  this.m_Properties.focusRingSizeElementID,
-                ) ?? this.m_element),
-            _?.getBoundingClientRect()
-          );
+          return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
+        }
+        GetBorderRadiusForFocusRing() {
+          if (!this.m_Properties?.focusRingSizeElementID) return;
+          const _ = this.GetElementForFocusRingMeasure();
+          if (!_) return;
+          const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
+          return _
+            ? {
+                borderTopLeftRadius: _.borderTopLeftRadius,
+                borderTopRightRadius: _.borderTopRightRadius,
+                borderBottomRightRadius: _.borderBottomRightRadius,
+                borderBottomLeftRadius: _.borderBottomLeftRadius,
+              }
+            : void 0;
         }
         SetHasFocus(_) {
           this.m_Focused.Set(_);
@@ -3463,6 +3479,7 @@
         m_NavTreeActivatedOrReactivatedCallbacks = new _._();
         m_bIsGamepadInputSuppressed = !1;
         m_bVR = !1;
+        m_fnGetNavTreeToActivateOverride;
         constructor(_, _, _, _) {
           (this.m_controller = _),
             (this.m_rootWindow = _),
@@ -3577,16 +3594,26 @@
             ? `(${this.m_rootWindow.name}) > (${_.name})`
             : `(${this.m_rootWindow.name})`;
         }
+        SetNavTreeToActivateOverride(_) {
+          this.m_fnGetNavTreeToActivateOverride = _;
+        }
         FindNavTreeToActivate() {
-          for (
-            let _ = this.m_rgGamepadNavigationTrees.length - 1;
-            _ >= 0;
-            _--
-          ) {
-            const _ = this.m_rgGamepadNavigationTrees[_];
-            if (!_.BIsEnabled()) continue;
-            return _.FindModalDescendant() ?? _;
-          }
+          let _;
+          const _ = this.m_fnGetNavTreeToActivateOverride?.();
+          if (_?.BIsEnabled()) _ = _;
+          else
+            for (
+              let _ = this.m_rgGamepadNavigationTrees.length - 1;
+              _ >= 0;
+              _--
+            ) {
+              const _ = this.m_rgGamepadNavigationTrees[_];
+              if (__webpack_require__.BIsEnabled()) {
+                _ = _;
+                break;
+              }
+            }
+          return _?.FindModalDescendant() ?? _;
         }
         SetActiveNavTree(_, _ = !1) {
           if (_ && this.m_LastActiveNavTree == _)
@@ -13546,7 +13573,8 @@
               _.BIsEnabled() &&
               (this.BCanActivateContext(_) &&
                 (this.m_LastActiveContext = this.m_ActiveContext = _),
-              __webpack_require__.SetActiveNavTree(_, !0)),
+              __webpack_require__.BIsVR() ||
+                __webpack_require__.SetActiveNavTree(_, !0)),
             () => {
               __webpack_require__
                 .UnregisterGamepadNavigationTree(_)

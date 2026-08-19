@@ -45,12 +45,13 @@
     96745: (e, r, t) => {
       "use strict";
       t.d(r, {
+        E1: () => p,
         OM: () => l,
-        Sm: () => g,
-        Yr: () => _,
-        pV: () => p,
+        Sm: () => _,
+        Yr: () => P,
+        pV: () => g,
         uw: () => d,
-        vs: () => P,
+        vs: () => b,
         ww: () => m,
         xi: () => c,
         zt: () => u,
@@ -138,17 +139,21 @@
         let r = o.Get().m_mapPackageData.get(e);
         return r ? r.package_name : e.toString();
       }
-      function p() {
+      function p(e) {
+        let r = o.Get().m_mapPackageData.get(e);
+        return !r || !!r.released;
+      }
+      function g() {
         return i.useCallback((e) => o.Get().UpdateVisiblePackageList(e), []);
       }
-      function g(e) {
+      function _(e) {
         o.Get().SetVisiblePackageList(e);
       }
-      function _() {
+      function P() {
         const [e, r] = i.useState(o.Get().m_rgVisiblePackageIDs);
         return (0, n.hL)(o.Get().m_visiblePackageIDsCallbackList, r), e;
       }
-      function P() {
+      function b() {
         return i.useMemo(
           () => (0, s.Tc)("publisherid", "application_config"),
           [],
@@ -162,7 +167,7 @@
         Ao: () => K,
         Bt: () => ue,
         Ci: () => ne,
-        Dl: () => T,
+        Dl: () => E,
         FR: () => z,
         FX: () => Z,
         Gs: () => M,
@@ -190,7 +195,7 @@
         mv: () => D,
         nT: () => A,
         oL: () => I,
-        oj: () => E,
+        oj: () => T,
         tn: () => N,
         v4: () => Y,
         ww: () => me,
@@ -803,10 +808,10 @@
       function R(e, r) {
         return v.Get().GetProposedPrice(e, r);
       }
-      function T(e, r) {
+      function E(e, r) {
         return v.Get().GetLocalOverridePrice(e, r);
       }
-      function E(e) {
+      function T(e) {
         const r = v.Get().m_strDisplayPriceKey;
         return C(v.Get().GetPrice(e, r), r).join("");
       }

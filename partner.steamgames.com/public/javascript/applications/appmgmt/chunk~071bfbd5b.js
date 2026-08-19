@@ -316,6 +316,26 @@
         o = 1024,
         m = 2048;
     },
+    83085: (e, t, s) => {
+      "use strict";
+      s.d(t, { Gw: () => o, Lk: () => m, ai: () => i, mm: () => n });
+      var a = s(14947);
+      const r = a.sH.box(void 0);
+      function n() {
+        return r.get();
+      }
+      function i(e) {
+        (0, a.h5)(() => r.set(e));
+      }
+      function o() {
+        const e = r.get();
+        return e || Math.floor(Date.now() / 1e3);
+      }
+      function m() {
+        const e = r.get();
+        return e ? new Date(1e3 * e) : new Date();
+      }
+    },
     88241: (e, t, s) => {
       "use strict";
       s.d(t, { Z: () => d, dV: () => c.d, rO: () => l });
@@ -617,20 +637,22 @@
     },
     44165: (e, t, s) => {
       "use strict";
-      s.d(t, { HD: () => c, P_: () => l, f1: () => j, sB: () => g });
-      var a = s(34629),
-        r = s(14947),
-        n = s(19367),
-        i = s.n(n),
-        o = s(90626),
-        m = s(4434),
-        _ = s(78327);
-      class u {
-        constructor() {
-          (0, r.Gn)(this);
-        }
+      s.d(t, { HD: () => u, P_: () => c, f1: () => g, sB: () => p });
+      var a = s(19367),
+        r = s.n(a),
+        n = s(90626),
+        i = s(83085),
+        o = s(4434),
+        m = s(78327),
+        _ = s(63340);
+      const u = new (class {
         bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
+        get nOverrideDateNow() {
+          return (0, i.mm)();
+        }
+        set nOverrideDateNow(e) {
+          (0, i.ai)(e);
+        }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -638,29 +660,25 @@
           return !0;
         }
         GetTimeNowWithOverride() {
-          return this.nOverrideDateNow
-            ? this.nOverrideDateNow
-            : Math.floor(Date.now() / 1e3);
+          return (0, i.Gw)();
         }
         GetTimeNowWithOverrideAsDate() {
-          return this.nOverrideDateNow
-            ? new Date(1e3 * this.nOverrideDateNow)
-            : new Date();
+          return (0, i.Lk)();
         }
         BHasTimeOverride() {
-          return Boolean(this.nOverrideDateNow);
+          return Boolean((0, i.mm)());
         }
         ParseDevOverrides(e) {
           if (!e || 0 == e.length) return;
           const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             t.has("t") &&
-            ("dev" == _.TS.WEB_UNIVERSE || "beta" == _.TS.WEB_UNIVERSE)
+            ("dev" == m.TS.WEB_UNIVERSE || "beta" == m.TS.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
             let s = /^\d+$/.test(e ?? "")
-              ? i().unix(Number.parseInt(e ?? "0"))
-              : i()(e);
+              ? r().unix(Number.parseInt(e ?? "0"))
+              : r()(e);
             (this.nOverrideDateNow = Math.floor(s.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -670,17 +688,15 @@
               );
           }
         }
-      }
-      (0, a.Cg)([r.sH], u.prototype, "nOverrideDateNow", void 0);
-      const c = new u();
-      function l(e = 1) {
-        const [t, s] = o.useState(() => p()),
-          a = (0, m.m)("useTimeNowWithOverride"),
-          r = o.useCallback(() => {
-            a.token.reason || s(p());
+      })();
+      function c(e = 1) {
+        const [t, s] = n.useState(() => h()),
+          a = (0, o.m)("useTimeNowWithOverride"),
+          r = n.useCallback(() => {
+            a.token.reason || s(h());
           }, []);
         return (
-          o.useEffect(() => {
+          n.useEffect(() => {
             const t = 1e3 * e,
               s = t - (Date.now() % t),
               a = window.setTimeout(r, s);
@@ -691,23 +707,23 @@
           t
         );
       }
-      window.g_EventCalendarDevFeatures = c;
-      const d = new Date(),
-        h = Math.floor(d.getTime() / 1e3);
-      function p() {
+      (0, _.V)("g_EventCalendarDevFeatures", u);
+      const l = new Date(),
+        d = Math.floor(l.getTime() / 1e3);
+      function h() {
         const e = Math.floor(Date.now() / 1e3);
-        return c.nOverrideDateNow ? c.nOverrideDateNow + (e - h) : e;
+        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - d) : e;
+      }
+      function p() {
+        return u.nOverrideDateNow ?? d;
       }
       function g() {
-        return c.nOverrideDateNow ?? h;
-      }
-      function j() {
-        return o.useMemo(() => g(), []);
+        return n.useMemo(() => p(), []);
       }
     },
     14336: (e, t, s) => {
       "use strict";
-      s.d(t, { z0: () => f, DW: () => v, js: () => g, hW: () => j });
+      s.d(t, { z0: () => v, DW: () => f, js: () => g, hW: () => j });
       var a = s(90626),
         r = s(20194),
         n = s(54806),
@@ -756,12 +772,12 @@
               )),
             { ...s, data: t.current });
       }
-      function v(e) {
+      function f(e) {
         const t = (0, o.KV)(),
           s = a.useContext(y);
         return (0, n.E)({ queries: e.map((e) => b(s, t, e)) });
       }
-      function f(e) {
+      function v(e) {
         return c.L.getQueryData(["PlayerSummary", e]);
       }
       const y = a.createContext({

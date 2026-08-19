@@ -1111,23 +1111,6 @@
       (0, n.Cg)([o.oI], c.prototype, "HandleRef", null),
         (0, n.Cg)([o.oI], c.prototype, "OnIntersection", null);
     },
-    4434: (e, r, t) => {
-      "use strict";
-      t.d(r, { m: () => i });
-      var n = t(41735),
-        s = t.n(n),
-        l = t(90626);
-      function i(e) {
-        const r = l.useRef(s().CancelToken.source());
-        return (
-          l.useEffect(() => {
-            const t = r.current;
-            return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          r.current
-        );
-      }
-    },
     88916: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, { default: () => W });

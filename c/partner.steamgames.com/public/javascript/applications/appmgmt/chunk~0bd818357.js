@@ -2540,8 +2540,8 @@
                   },
                   secondary_languages: {
                     _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                   platform_windows: {
                     _: 3,

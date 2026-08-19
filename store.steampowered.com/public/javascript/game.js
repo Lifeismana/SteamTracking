@@ -1629,7 +1629,6 @@ function UpdateActiveFilters()
 
 function ShowFilteredReviews()
 {
-	const params = new URLSearchParams( window.location.search );
 	const bLoadReviews = !!g_bUseOldReviewDisplay;
 
 	UpdateActiveFilters();
@@ -1642,60 +1641,6 @@ function ShowFilteredReviews()
 	var defaultDayRange = $J( "#review_default_day_range" ).val();
 	var startDate = $J( "#review_start_date" ).val();
 	var endDate = $J( "#review_end_date" ).val();
-
-	// Notify React of the change to filters. If we haven't rendered React because
-	// we're forcing old-style display, this will still post the message but
-	// nobody's listening.
-	let reviewType = $J( 'input[name="review_type"]:checked' ).val();
-	let purchaseType = $J( 'input[name="purchase_type"]:checked' ).val();
-	let language = $J( 'input[name="review_language"]:checked' ).val();
-	let filterOfftopicActivity = $J( "#reviews_offtopic_activity_checkbox" ).is( ":checked" ) ? 1 : 0;
-	let dateRangeType = $J( 'input[name="review_date_range"]:checked' ).val();
-	let summaryNumPositiveReviews = $J( "#review_summary_num_positive_reviews" ).val();
-	let summaryNumReviews = $J( "#review_summary_num_reviews" ).val();
-	let playtimeFilterMin = $J( "#app_reviews_playtime_range_min" ).val();
-	let playtimeFilterMax = $J( "#app_reviews_playtime_range_max" ).val();
-	let playtimeType = $J( 'input[name="review_playtime_type"]:checked' ).val();
-
-	// hardware
-	let hardwareOS = $J( 'input[name="review_hardware_os"]:checked' ).val();
-	let hardwareCPU = $J( 'input[name="review_hardware_cpu_name"]:checked' ).val();
-	let hardwareGPU = $J( 'input[name="review_hardware_gfx_adapter_description"]:checked' ).val();
-	let hardwareDeviceType = $J( 'input[name="review_hardware_gaming_device_type"]:checked' ).val();
-
-	let topics = [];
-	$J( 'input[name="review_topic"]:checked' ).each( ( index, elem ) =>
-	{
-		topics.push( $J( elem ).val() );
-	});
-
-	var useReviewQuality = $J( 'input[name="use_review_quality"]' ).is( ":checked" ) ? 1 : 0;
-
-	window.postMessage( JSON.stringify( {
-		message: 'ReviewFilterChange',
-		args: {
-			review_type: reviewType,
-			filter: context,
-			day_range: defaultDayRange,
-			start_date: startDate,
-			end_date: endDate,
-			purchase_type: purchaseType,
-			language,
-			filter_offtopic_activity: filterOfftopicActivity,
-			date_range_type: dateRangeType,
-			summary_num_positive_reviews: summaryNumPositiveReviews,
-			summary_num_reviews: summaryNumReviews,
-			playtime_filter_min: playtimeFilterMin,
-			playtime_filter_max: playtimeFilterMax,
-			playtime_type: playtimeType,
-			use_review_quality: useReviewQuality,
-			hardware_os: hardwareOS,
-			hardware_cpu: hardwareCPU,
-			hardware_gpu: hardwareGPU,
-			hardware_device_type: hardwareDeviceType,
-			topics,
-		}
-	} ) );
 
 	if ( bLoadReviews )
 	{

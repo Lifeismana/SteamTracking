@@ -901,6 +901,8 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = 1,
         _ = 2,
@@ -908,7 +910,9 @@ var CLSTAMP = "steamdb";
         _ = 8,
         _ = 16,
         _ = 32,
-        _ = 64;
+        _ = 64,
+        _ = 128,
+        _ = 256;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -1078,18 +1082,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      const _ = 16,
-        _ = 17,
-        _ = 18,
-        _ = 19;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       const _ = 0,
         _ = 1;
@@ -1134,6 +1126,7 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = 7612 != __webpack_require__._ ? -1 : null,
         _ = 0,
@@ -1142,7 +1135,8 @@ var CLSTAMP = "steamdb";
         _ = 3,
         _ = 4,
         _ = 5,
-        _ = 6;
+        _ = 6,
+        _ = 7;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -49502,14 +49496,12 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       if (7612 != __webpack_require__._) var _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -68426,10 +68418,15 @@ var CLSTAMP = "steamdb";
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
-                  completion_achievements: {
+                  completed_achievements: {
                     _: 3,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  is_completed: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -83727,8 +83724,8 @@ var CLSTAMP = "steamdb";
                   },
                   secondary_languages: {
                     _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                   platform_windows: {
                     _: 3,
@@ -86950,6 +86947,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -87090,6 +87088,7 @@ var CLSTAMP = "steamdb";
         _ = 1,
         _ = 2,
         _ = 4,
+        _ = 5,
         _ = 6,
         _ = 7,
         _ = 8,
@@ -87139,6 +87138,26 @@ var CLSTAMP = "steamdb";
                     _: 4,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  agency: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  banned: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  esrb_online_music_not_rated: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  esrb_online_interactions_not_rated: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                   required_age: {
                     _: 10,
@@ -87231,6 +87250,11 @@ var CLSTAMP = "steamdb";
                     _: 2,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  gid: {
+                    _: 76,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                   success: {
                     _: 3,
@@ -90096,8 +90120,78 @@ var CLSTAMP = "steamdb";
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.label || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  label: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  content_bbcode: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  banner: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PageSection";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.steam_award || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 10], null);
+            _.Message.initialize(this, _, 0, -1, [1, 10, 13], null);
         }
         static sm_m;
         static sm_mbf;
@@ -90166,6 +90260,17 @@ var CLSTAMP = "steamdb";
                     _: 12,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  section: {
+                    _: 13,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  legal_notice_bbcode: {
+                    _: 14,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -90471,6 +90576,11 @@ var CLSTAMP = "steamdb";
                     _: 6,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  salepagegid: {
+                    _: 7,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                 },
               }),

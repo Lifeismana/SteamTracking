@@ -533,6 +533,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
           var _,
             _ = __webpack_require__("chunkid"),
@@ -553,6 +554,7 @@
                 (_[(_.GameServer = 1)] = "GameServer"),
                 (_[(_.OfficialGameServer = 2)] = "OfficialGameServer");
             })(_ || (_ = {}));
+          const _ = ["Client", "GameServer", "OfficialGameServer"];
           function _(_) {
             return `${_.statID}.${_.bitID}`;
           }
@@ -3011,14 +3013,14 @@
                     ),
                   ),
                   "INT" == _.type &&
-                    (_.Whr().safeParse(_.progress_stat_min) ||
+                    (_.Whr().safeParse(_.progress_stat_min).success ||
                       _(
                         "progress_stat_min",
                         (0, _._)(
                           "#AchievementEditor_Validator_Error_MinMaxMustBeInteger",
                         ),
                       ),
-                    _.Whr().safeParse(_.progress_stat_max) ||
+                    _.Whr().safeParse(_.progress_stat_max).success ||
                       _(
                         "progress_stat_max",
                         (0, _._)(
@@ -3169,7 +3171,7 @@
             ];
           }
           async function _(_) {
-            const _ = await _._.ParseCSVFile(_);
+            const _ = await _._.ParseCSVFile(_, _);
             return _.errors && _.errors.length > 0
               ? {
                   fields: void 0,
@@ -3182,22 +3184,120 @@
                   errors: void 0,
                 };
           }
+          function _() {
+            return {
+              api_name: (0, _._)("#AchievementEditor_Csv_Hint_LocApiName"),
+              field: (0, _._)("#AchievementEditor_Csv_Hint_LocField"),
+              groupid: (0, _._)("#AchievementEditor_Csv_Hint_LocGroupID"),
+            };
+          }
+          function _(_, _, _) {
+            const _ = _.reduce(
+              (_, _) => ((_[_] = _[_] ? `${_} (${_[_]})` : _), _),
+              {},
+            );
+            return {
+              fields: _.map((_) => _[_]),
+              rows: _.map((_) =>
+                Object.keys(_).reduce((_, _) => ((_[_[_] ?? _] = _[_]), _), {}),
+              ),
+            };
+          }
+          function _(_) {
+            return _.replace(/\s*\(.*$/, "").trim();
+          }
+          const _ = "EXAMPLE_",
+            _ = [`${_}FIRST_WIN`, `${_}HUNDRED_WINS`];
+          function _(_) {
+            const _ = _(_),
+              _ = [
+                {
+                  name: "First Victory",
+                  description: "Win your first match.",
+                },
+                {
+                  name: "100 Wins",
+                  description: "Win 100 different matches.",
+                },
+              ];
+            return _.map((_, _) => [
+              {
+                api_name: _,
+                field: "name",
+                ..._,
+                english: _[_].name,
+              },
+              {
+                api_name: _,
+                field: "description",
+                ..._,
+                english: _[_].description,
+              },
+            ]);
+          }
           function _(_, _) {
-            const _ = `${_}-achievements-definitions.csv`;
-            _._.WriteCSVToFile(
-              _.map(_).map((_) => ({
+            const _ = `${_}-achievements-definitions.csv`,
+              _ = (
+                _.length > 0
+                  ? _.map(_)
+                  : [
+                      {
+                        api_name: _[0],
+                        groupid: "",
+                        permission: _._.Client,
+                        spoiler: !1,
+                        archived: !1,
+                        progress_stat_name: "",
+                        progress_stat_min: 0,
+                        progress_stat_max: 0,
+                      },
+                      {
+                        api_name: _[1],
+                        groupid: "",
+                        permission: _._.Client,
+                        spoiler: !0,
+                        archived: !1,
+                        progress_stat_name: "",
+                        progress_stat_min: 0,
+                        progress_stat_max: 0,
+                      },
+                    ]
+              ).map((_) => ({
                 ..._,
                 permission: _._[_.permission ?? _._.Client],
               })),
-              _,
-              !0,
-              Object.keys(_.shape),
-            );
+              { fields: _, rows: _ } = _(_, Object.keys(_.shape), {
+                api_name: (0, _._)("#AchievementEditor_Csv_Hint_ApiName"),
+                groupid: (0, _._)("#AchievementEditor_Csv_Hint_GroupID"),
+                permission: (0, _._)(
+                  "#AchievementEditor_Csv_Hint_Permission",
+                  _._.join(", "),
+                ),
+                spoiler: (0, _._)("#AchievementEditor_Csv_Hint_Bool"),
+                archived: (0, _._)("#AchievementEditor_Csv_Hint_Bool"),
+                progress_stat_name: (0, _._)(
+                  "#AchievementEditor_Csv_Hint_ProgressStatName",
+                ),
+                progress_stat_min: (0, _._)(
+                  "#AchievementEditor_Csv_Hint_ProgressStatMin",
+                ),
+                progress_stat_max: (0, _._)(
+                  "#AchievementEditor_Csv_Hint_ProgressStatMax",
+                ),
+              });
+            _._.WriteCSVToFile(_, _, !0, _);
           }
           function _(_, _, _) {
             const _ = `${_}-achievements-localization.csv`,
-              _ = _.map((_) => _(_, _)).reduce((_, _) => (_.push(..._), _), []),
-              _ = [...Object.keys(_.shape), ..._];
+              _ = (_.length > 0 ? _.map((_) => _(_, _)) : _(_)).reduce(
+                (_, _) => (_.push(..._), _),
+                [],
+              ),
+              { fields: _, rows: _ } = _(
+                _,
+                [...Object.keys(_.shape), ..._],
+                _(),
+              );
             _._.WriteCSVToFile(_, _, !0, _);
           }
           function _(_, _, _) {
@@ -3442,7 +3542,11 @@
           function _(_, _, _) {
             const _ = `${_}-achievement-groups-localization.csv`,
               _ = _.map((_) => _(_, _)),
-              _ = [...Object.keys(_.shape), ..._];
+              { fields: _, rows: _ } = _(
+                _,
+                [...Object.keys(_.shape), ..._],
+                _(),
+              );
             _._.WriteCSVToFile(_, _, !0, _);
           }
           _();
@@ -7991,7 +8095,7 @@
                   archived: !1,
                   developeronly: !1,
                   ispublic: !0,
-                  dlcappid: _,
+                  dlcappid: 0,
                   order: -1,
                   achievements: [],
                 }),
@@ -8006,7 +8110,7 @@
                         archived: _.archived() ?? !1,
                         ispublic: _.ispublic() ?? !0,
                         developeronly: _.developeronly() ?? !1,
-                        dlcappid: _.dlcappid() ?? _,
+                        dlcappid: _.dlcappid() ?? 0,
                         order: _.order() ?? 0,
                         achievements: [],
                       };

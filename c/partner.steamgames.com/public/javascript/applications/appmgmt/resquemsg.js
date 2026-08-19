@@ -1344,19 +1344,46 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      const _ = _._.box(void 0);
+      function _() {
+        return _.get();
+      }
+      function _(_) {
+        (0, _._)(() => _.set(_));
+      }
+      function _() {
+        const _ = _.get();
+        return _ || Math.floor(Date.now() / 1e3);
+      }
+      function _() {
+        const _ = _.get();
+        return _ ? new Date(1e3 * _) : new Date();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
+      const _ = new (class {
         bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
+        get nOverrideDateNow() {
+          return (0, _._)();
+        }
+        set nOverrideDateNow(_) {
+          (0, _._)(_);
+        }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -1364,17 +1391,13 @@
           return !0;
         }
         GetTimeNowWithOverride() {
-          return this.nOverrideDateNow
-            ? this.nOverrideDateNow
-            : Math.floor(Date.now() / 1e3);
+          return (0, _._)();
         }
         GetTimeNowWithOverrideAsDate() {
-          return this.nOverrideDateNow
-            ? new Date(1e3 * this.nOverrideDateNow)
-            : new Date();
+          return (0, _._)();
         }
         BHasTimeOverride() {
-          return Boolean(this.nOverrideDateNow);
+          return Boolean((0, _._)());
         }
         ParseDevOverrides(_) {
           if (!_ || 0 == _.length) return;
@@ -1396,9 +1419,7 @@
               );
           }
         }
-      }
-      (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
-      const _ = new _();
+      })();
       function _(_ = 1) {
         const [_, _] = _.useState(() => _()),
           _ = (0, _._)("useTimeNowWithOverride"),
@@ -1417,7 +1438,7 @@
           _
         );
       }
-      window.g_EventCalendarDevFeatures = _;
+      (0, _._)("g_EventCalendarDevFeatures", _);
       const _ = new Date(),
         _ = Math.floor(_.getTime() / 1e3);
       function _() {
@@ -2042,6 +2063,15 @@
             : (0, _.jsx)(_.Xjb, {}),
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_, _) {
+        "undefined" != typeof window && (window[_] = _);
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

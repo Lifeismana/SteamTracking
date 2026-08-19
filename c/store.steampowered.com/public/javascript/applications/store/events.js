@@ -2915,12 +2915,7 @@
           _ = (0, _._)(_.GetAppIDOrReferenceAppID());
         (0, _._)(_);
         const _ = (0, _._)(_);
-        _.useEffect(() => {
-          if (_.clanInfo) {
-            let _ = _._.InitFromClanID(_.clanInfo.clanid);
-            _._.LoadClanInfoForClanSteamID(_);
-          }
-        }, [_.clanInfo]);
+        (0, _._)(_.clanInfo?.clanid);
         const _ = _._.Get(),
           _ = (0, _.sfN)(_._.LANGUAGE),
           _ = "capsule",
@@ -3174,7 +3169,7 @@
               });
           }
         }, [_, _]);
-        const _ = _._.GetClanInfoByClanAccountID(_),
+        const [, _] = (0, _._)(_),
           _ = _ && !_.is_ogg;
         let _ = _.GetSummaryWithFallback(_);
         return (
@@ -3419,92 +3414,89 @@
             },
             _,
           );
-      let _ = class extends _.Component {
-        OnPerformVoteUp() {
-          const { eventModel: _ } = this.props,
-            _ = _._.Get();
-          !0 !== _.GetPreviouslyLoadedVote(this.props.eventModel) &&
-            (0, _._)(_, _) &&
-            (_.Vote(_, !0, _().CancelToken.source()),
-            _._.RecordAppInteractionEvent(_.appid, _._.k_eThumbsUp));
-        }
-        OnDiscussionClicked() {
-          const { eventModel: _ } = this.props;
-          _._.RecordAppInteractionEvent(_.appid, _._.k_eDiscussions);
-        }
-        render() {
-          const _ = _._.Get(),
-            { eventModel: _ } = this.props,
-            _ = Math.max(0, _.nVotesUp - _.nVotesDown),
-            _ = _.GetPreviouslyLoadedVote(this.props.eventModel),
-            _ = (function (_, _) {
-              return _.BIsUserLoggedIn()
-                ? _._.is_limited
-                  ? _().Vote_LimitedUser
-                  : !0 === _
-                    ? _().Vote_Positive
-                    : !1 === _
-                      ? _().Vote_Negative
-                      : _().Vote_Ready
-                : _().Vote_NotLoggedIn;
-            })(_, _),
-            _ = _.GetForumTopicURL(),
-            _ = !(0, _._)() && _,
-            _ =
-              _.live_stream_viewer_count > 0
-                ? _.live_stream_viewer_count
-                : void 0;
-          return (0, _.jsx)("div", {
-            className: _().Footer,
-            children: (0, _.jsxs)("div", {
-              className: _().FooterRightSide,
-              children: [
-                Boolean(_) &&
-                  (0, _.jsx)("div", {
-                    className: _().TileViewerCount,
-                    children: (0, _._)(_),
-                  }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().FooterStat, _().Vote, _),
-                  onClick: this.OnPerformVoteUp,
-                  children: [
-                    (0, _.jsx)(_.bfp, {
-                      className: _().RateIcon,
-                    }),
-                    (0, _.jsx)("span", {
-                      children: (0, _._)(Number(_)),
-                    }),
-                  ],
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = _._.Get(),
+          [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
+          [_, _, _, _] = (0, _._)(() => [
+            Math.max(0, _.nVotesUp - _.nVotesDown),
+            __webpack_require__.GetPreviouslyLoadedVote(_),
+            _.GetForumTopicURL(_?.vanity_url),
+            _.nCommentCount,
+          ]),
+          _ = (function (_, _) {
+            return _.BIsUserLoggedIn()
+              ? _._.is_limited
+                ? _().Vote_LimitedUser
+                : !0 === _
+                  ? _().Vote_Positive
+                  : !1 === _
+                    ? _().Vote_Negative
+                    : _().Vote_Ready
+              : _().Vote_NotLoggedIn;
+          })(_, _),
+          _ = !(0, _._)() && _,
+          _ =
+            _.live_stream_viewer_count > 0
+              ? _.live_stream_viewer_count
+              : void 0;
+        return (0, _.jsx)("div", {
+          className: _().Footer,
+          children: (0, _.jsxs)("div", {
+            className: _().FooterRightSide,
+            children: [
+              Boolean(_) &&
+                (0, _.jsx)("div", {
+                  className: _().TileViewerCount,
+                  children: (0, _._)(_),
                 }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().FooterStat,
-                    children: (0, _.jsxs)("a", {
-                      href: _,
-                      className: _().CommentIconCtn,
-                      target: "_blank",
-                      onClick: this.OnDiscussionClicked,
-                      children: [
-                        (0, _.jsx)(_._h6, {
-                          className: _().CommentIcon,
-                        }),
-                        (0, _.jsx)("span", {
-                          children: (0, _._)(Number(_.nCommentCount)),
-                        }),
-                      ],
-                    }),
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_().FooterStat, _().Vote, _),
+                onClick: () => {
+                  !0 !== __webpack_require__.GetPreviouslyLoadedVote(_) &&
+                    (0, _._)(_, _) &&
+                    (__webpack_require__.Vote(_, !0, _().CancelToken.source()),
+                    _._.RecordAppInteractionEvent(_.appid, _._.k_eThumbsUp));
+                },
+                children: [
+                  (0, _.jsx)(_.bfp, {
+                    className: _().RateIcon,
                   }),
-                (0, _.jsx)(_, {
-                  ...this.props,
+                  (0, _.jsx)("span", {
+                    children: (0, _._)(Number(_)),
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().FooterStat,
+                  children: (0, _.jsxs)("a", {
+                    href: _,
+                    className: _().CommentIconCtn,
+                    target: "_blank",
+                    onClick: () => {
+                      _._.RecordAppInteractionEvent(
+                        _.appid,
+                        _._.k_eDiscussions,
+                      );
+                    },
+                    children: [
+                      (0, _.jsx)(_._h6, {
+                        className: _().CommentIcon,
+                      }),
+                      (0, _.jsx)("span", {
+                        children: (0, _._)(Number(_)),
+                      }),
+                    ],
+                  }),
                 }),
-              ],
-            }),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnPerformVoteUp", null),
-        (0, _._)([_._], _.prototype, "OnDiscussionClicked", null),
-        (_ = (0, _._)([_._], _));
+              (0, _.jsx)(_, {
+                ..._,
+              }),
+            ],
+          }),
+        });
+      }
       var _ = __webpack_require__("chunkid");
       const _ = {
         include_assets: !0,
@@ -4029,6 +4021,7 @@
         };
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "global_header";
@@ -4718,7 +4711,7 @@
       function _(_) {
         const { collectionID: _, language: _, eventModel: _ } = _;
         let _ = (0, _._)(_, "capsule", _, _._.capsule_main),
-          _ = _?.GetSaleURL() ?? void 0;
+          _ = (0, _._)(_) ?? void 0;
         const _ = (function (_, _, _, _) {
           if (!_) return null;
           const _ = _().find((_) => _.collection === _);

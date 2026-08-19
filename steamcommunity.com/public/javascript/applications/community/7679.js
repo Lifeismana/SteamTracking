@@ -319,6 +319,26 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: h,
           },
+          sale_store_capsule_header: {
+            width: 920,
+            height: 430,
+            rgAcceptableTypes: h,
+          },
+          sale_store_capsule_small: {
+            width: 462,
+            height: 174,
+            rgAcceptableTypes: h,
+          },
+          sale_store_capsule_main: {
+            width: 1232,
+            height: 706,
+            rgAcceptableTypes: h,
+          },
+          sale_store_capsule_vertical: {
+            width: 748,
+            height: 896,
+            rgAcceptableTypes: h,
+          },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: l },
           spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: h },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: l },

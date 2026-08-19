@@ -300,7 +300,7 @@
         (R.dutch = () => n.e(6847).then(n.t.bind(n, 16847, 19))),
         (R.english = () => n.e(9474).then(n.t.bind(n, 87093, 19))),
         (R.finnish = () => n.e(610).then(n.t.bind(n, 610, 19))),
-        (R.french = () => n.e(7112).then(n.t.bind(n, 84731, 19))),
+        (R.french = () => n.e(4731).then(n.t.bind(n, 84731, 19))),
         (R.german = () => n.e(3385).then(n.t.bind(n, 3385, 19))),
         (R.greek = () => n.e(6389).then(n.t.bind(n, 6389, 19))),
         (R.hungarian = () => n.e(4100).then(n.t.bind(n, 34100, 19))),
@@ -1796,6 +1796,258 @@
         },
       ];
     },
+    38528: (t, c, n) => {
+      "use strict";
+      n.d(c, { F: () => r });
+      var e = n(7850),
+        l = n(90626),
+        s = n(81393),
+        a = n(25489),
+        i = n(75),
+        v = n(80797);
+      Object.assign(
+        function (t) {
+          const {
+              value: c,
+              onValueChange: n,
+              onValueSettled: s,
+              min: a,
+              ...i
+            } = t,
+            v = [c],
+            r = (0, l.useCallback)((t) => n(t[0]), [n]),
+            o = (0, l.useCallback)((t) => (null == s ? void 0 : s(t[0])), [s]);
+          return (0, e.jsxs)(h, {
+            ...i,
+            min: a,
+            onValueChange: r,
+            onValueSettled: o,
+            value: v,
+            children: [
+              (0, e.jsx)(p, { children: (0, e.jsx)(u, { start: a, end: c }) }),
+              (0, e.jsx)(f, {}),
+            ],
+          });
+        },
+        { Root: h, Track: p, Range: u, Handle: f },
+      );
+      function r(t) {
+        const { value: c } = t;
+        return (0, e.jsxs)(h, {
+          ...t,
+          children: [
+            (0, e.jsx)(p, {
+              children: (0, e.jsx)(u, { start: c[0], end: c[1] }),
+            }),
+            (0, e.jsx)(f, {}),
+            (0, e.jsx)(f, {}),
+          ],
+        });
+      }
+      const o = (0, l.createContext)(null);
+      function h(t) {
+        const { children: c, color: n, ...s } = t,
+          {
+            min: a,
+            max: v,
+            onValueChange: r,
+            value: h,
+            step: p = 1,
+            onValueSettled: u,
+          } = t,
+          f = (0, l.useRef)(null),
+          x = (0, l.useRef)(null),
+          [C] = (0, l.useState)(() => new Set()),
+          [_, j] = (0, l.useState)(!1);
+        return (0, e.jsx)(o.Provider, {
+          value: { ...s, handles: C, bDragActive: _ },
+          children: (0, e.jsx)("div", {
+            className: i.SliderRoot,
+            "data-accent-color": n,
+            ref: f,
+            onPointerDown: (t) => {
+              if (f.current) {
+                if (
+                  (t.target.setPointerCapture(t.pointerId),
+                  "number" != typeof h)
+                ) {
+                  const c = f.current.getBoundingClientRect(),
+                    n = g(t.clientX - c.left, [0, c.width], [a, v]);
+                  x.current = { activeValueIndex: d(h, n), bMoved: !1 };
+                } else x.current = { activeValueIndex: 0, bMoved: !1 };
+                j(!0);
+              }
+            },
+            onPointerUp: (t) => {
+              var c;
+              const n = t.target;
+              n.hasPointerCapture(t.pointerId) &&
+                (n.releasePointerCapture(t.pointerId),
+                u &&
+                  (null === (c = x.current) || void 0 === c
+                    ? void 0
+                    : c.bMoved) &&
+                  u(h),
+                j(!1));
+            },
+            onPointerMove: (t) => {
+              if (
+                t.target.hasPointerCapture(t.pointerId) &&
+                f.current &&
+                x.current
+              ) {
+                const c = f.current.getBoundingClientRect(),
+                  n = m({
+                    value: g(t.clientX - c.left, [0, c.width], [a, v]),
+                    min: a,
+                    max: v,
+                    step: p,
+                  }),
+                  e = [...h];
+                (e[x.current.activeValueIndex] = n),
+                  e.sort((t, c) => t - c),
+                  (x.current.activeValueIndex = e.indexOf(n)),
+                  (x.current.bMoved = !0),
+                  r(e);
+              }
+            },
+            onClick: (t) => {
+              var c;
+              if (
+                !f.current ||
+                (null === (c = x.current) || void 0 === c ? void 0 : c.bMoved)
+              )
+                return;
+              const n = f.current.getBoundingClientRect(),
+                e = g(t.clientX - n.left, [0, n.width], [a, v]),
+                l = m({ value: e, min: a, max: v, step: p }),
+                s = d(h, e),
+                i = [...h];
+              (i[s] = l), r(i), u && u(i);
+            },
+            children: (0, e.jsx)("div", { className: i.Inner, children: c }),
+          }),
+        });
+      }
+      function d(t, c) {
+        if (t.length <= 1) return t.length - 1;
+        let n = 0,
+          e = Math.abs(c - t[0]);
+        for (let l = 1; l < t.length; l++) {
+          const s = Math.abs(t[l] - c);
+          s < e && ((n = l), (e = s));
+        }
+        return n;
+      }
+      function p(t) {
+        const { render: c, ...n } = t;
+        return (0, v.Q)(
+          c,
+          (0, e.jsx)("div", { className: i.SliderTrack }),
+          n,
+          void 0,
+        );
+      }
+      function u(t) {
+        const { start: c, end: n, render: a } = t,
+          r = (0, l.useContext)(o);
+        (0, s.wT)(r, "SliderRange must be used within a SliderRoot!");
+        const { min: h, max: d } = r,
+          p = x(c, h, d),
+          u = 100 - x(n, h, d);
+        return (0, v.Q)(
+          a,
+          (0, e.jsx)("div", {
+            className: i.SliderRange,
+            style: { "--pct-left": `${p}%`, "--pct-right": `${u}%` },
+          }),
+          {},
+          void 0,
+        );
+      }
+      function f(t) {
+        const { render: c } = t,
+          n = (0, l.useContext)(o);
+        (0, s.wT)(n, "SliderHandle must be used within a SliderRoot!");
+        const {
+            min: a,
+            max: r,
+            handles: h,
+            value: d,
+            step: p = 1,
+            onValueChange: u,
+            onValueSettled: f,
+          } = n,
+          [g, C] = (0, l.useState)(null),
+          [_, j] = (0, l.useState)(-1);
+        (0, l.useEffect)(
+          () => (g ? (h.add(g), j(h.size - 1), () => h.delete(g)) : () => {}),
+          [g, h],
+        );
+        const V = _ > -1,
+          w = { "--handle-pct": `${x(V ? d[_] : a, a, r)}%` };
+        V || (w.display = "none");
+        const b = {
+          ref: C,
+          role: "slider",
+          "aria-valuenow": d[_],
+          "aria-valuemin": a,
+          "aria-valuemax": r,
+          tabIndex: 0,
+          onKeyDown: (t) => {
+            switch (t.key) {
+              case "ArrowRight":
+              case "ArrowUp":
+              case "ArrowLeft":
+              case "ArrowDown": {
+                const c = "ArrowRight" === t.key || "ArrowUp" === t.key,
+                  n = p * (c ? 1 : -1),
+                  e = m({ value: d[_] + n, min: a, max: r, step: p }),
+                  l = [...d];
+                (l[_] = e),
+                  u(l),
+                  f && f(l),
+                  t.preventDefault(),
+                  t.stopPropagation();
+                break;
+              }
+              case "PageUp":
+              case "PageDown": {
+                const c = "PageUp" === t.key,
+                  n = Math.round((r - a) / 10) * (c ? 1 : -1),
+                  e = m({ value: d[_] + n, min: a, max: r, step: p }),
+                  l = [...d];
+                (l[_] = e),
+                  u(l),
+                  f && f(l),
+                  t.preventDefault(),
+                  t.stopPropagation();
+                break;
+              }
+            }
+          },
+        };
+        return (0, v.Q)(
+          c,
+          (0, e.jsx)("span", { className: i.SliderHandle, style: w }),
+          b,
+          { value: d[_], bDragActive: n.bDragActive },
+        );
+      }
+      function g(t, c, n) {
+        if (c[0] === c[1] || n[0] === n[1]) return n[0];
+        const e = ((n[1] - n[0]) / (c[1] - c[0])) * (t - c[0]) + n[0];
+        return a.OQ(e, n[0], n[1]);
+      }
+      function m(t) {
+        const { value: c, min: n, max: e, step: l } = t,
+          s = Math.round((c - n) / l) / (1 / l);
+        return a.OQ(s + n, n, e);
+      }
+      function x(t, c, n) {
+        return ((t - c) / (n - c)) * 100;
+      }
+    },
     62391: (t, c, n) => {
       "use strict";
       function e(t) {
@@ -2271,7 +2523,7 @@
       }
       var Y = n(50614),
         P = n(19997),
-        E = n(62548);
+        E = n(44846);
       const G = 2;
       function N(t, c, n, e) {
         return (0, l.useMemo)(() => {
@@ -3567,7 +3819,7 @@
         g = n(58256),
         m = n(11967),
         x = n(46562),
-        C = n(62548),
+        C = n(44846),
         _ = n(66418);
       const j =
           n.p +
@@ -6350,277 +6602,32 @@
         return (0, e.wT)(t, "No filter config provider found!"), t;
       }
     },
-    62548: (t, c, n) => {
+    44846: (t, c, n) => {
       "use strict";
-      n.d(c, { $: () => z });
+      n.d(c, { $: () => f });
       var e = n(7850),
         l = n(90626),
         s = n(83392),
         a = n(20187),
-        i = n(81393),
-        v = n(25489),
-        r = n(75),
-        o = n(80797);
-      Object.assign(
-        function (t) {
-          const {
-              value: c,
-              onValueChange: n,
-              onValueSettled: s,
-              min: a,
-              ...i
-            } = t,
-            v = [c],
-            r = (0, l.useCallback)((t) => n(t[0]), [n]),
-            o = (0, l.useCallback)((t) => (null == s ? void 0 : s(t[0])), [s]);
-          return (0, e.jsxs)(p, {
-            ...i,
-            min: a,
-            onValueChange: r,
-            onValueSettled: o,
-            value: v,
-            children: [
-              (0, e.jsx)(f, { children: (0, e.jsx)(g, { start: a, end: c }) }),
-              (0, e.jsx)(m, {}),
-            ],
-          });
-        },
-        { Root: p, Track: f, Range: g, Handle: m },
-      );
-      function h(t) {
-        const { value: c } = t;
-        return (0, e.jsxs)(p, {
-          ...t,
-          children: [
-            (0, e.jsx)(f, {
-              children: (0, e.jsx)(g, { start: c[0], end: c[1] }),
-            }),
-            (0, e.jsx)(m, {}),
-            (0, e.jsx)(m, {}),
-          ],
-        });
-      }
-      const d = (0, l.createContext)(null);
-      function p(t) {
-        const { children: c, color: n, ...s } = t,
-          {
-            min: a,
-            max: i,
-            onValueChange: v,
-            value: o,
-            step: h = 1,
-            onValueSettled: p,
-          } = t,
-          f = (0, l.useRef)(null),
-          g = (0, l.useRef)(null),
-          [m] = (0, l.useState)(() => new Set()),
-          [_, j] = (0, l.useState)(!1);
-        return (0, e.jsx)(d.Provider, {
-          value: { ...s, handles: m, bDragActive: _ },
-          children: (0, e.jsx)("div", {
-            className: r.SliderRoot,
-            "data-accent-color": n,
-            ref: f,
-            onPointerDown: (t) => {
-              if (f.current) {
-                if (
-                  (t.target.setPointerCapture(t.pointerId),
-                  "number" != typeof o)
-                ) {
-                  const c = f.current.getBoundingClientRect(),
-                    n = x(t.clientX - c.left, [0, c.width], [a, i]);
-                  g.current = { activeValueIndex: u(o, n), bMoved: !1 };
-                } else g.current = { activeValueIndex: 0, bMoved: !1 };
-                j(!0);
-              }
-            },
-            onPointerUp: (t) => {
-              var c;
-              const n = t.target;
-              n.hasPointerCapture(t.pointerId) &&
-                (n.releasePointerCapture(t.pointerId),
-                p &&
-                  (null === (c = g.current) || void 0 === c
-                    ? void 0
-                    : c.bMoved) &&
-                  p(o),
-                j(!1));
-            },
-            onPointerMove: (t) => {
-              if (
-                t.target.hasPointerCapture(t.pointerId) &&
-                f.current &&
-                g.current
-              ) {
-                const c = f.current.getBoundingClientRect(),
-                  n = C({
-                    value: x(t.clientX - c.left, [0, c.width], [a, i]),
-                    min: a,
-                    max: i,
-                    step: h,
-                  }),
-                  e = [...o];
-                (e[g.current.activeValueIndex] = n),
-                  e.sort((t, c) => t - c),
-                  (g.current.activeValueIndex = e.indexOf(n)),
-                  (g.current.bMoved = !0),
-                  v(e);
-              }
-            },
-            onClick: (t) => {
-              var c;
-              if (
-                !f.current ||
-                (null === (c = g.current) || void 0 === c ? void 0 : c.bMoved)
-              )
-                return;
-              const n = f.current.getBoundingClientRect(),
-                e = x(t.clientX - n.left, [0, n.width], [a, i]),
-                l = C({ value: e, min: a, max: i, step: h }),
-                s = u(o, e),
-                r = [...o];
-              (r[s] = l), v(r), p && p(r);
-            },
-            children: (0, e.jsx)("div", { className: r.Inner, children: c }),
-          }),
-        });
-      }
-      function u(t, c) {
-        if (t.length <= 1) return t.length - 1;
-        let n = 0,
-          e = Math.abs(c - t[0]);
-        for (let l = 1; l < t.length; l++) {
-          const s = Math.abs(t[l] - c);
-          s < e && ((n = l), (e = s));
-        }
-        return n;
-      }
-      function f(t) {
-        const { render: c, ...n } = t;
-        return (0, o.Q)(
-          c,
-          (0, e.jsx)("div", { className: r.SliderTrack }),
-          n,
-          void 0,
-        );
-      }
-      function g(t) {
-        const { start: c, end: n, render: s } = t,
-          a = (0, l.useContext)(d);
-        (0, i.wT)(a, "SliderRange must be used within a SliderRoot!");
-        const { min: v, max: h } = a,
-          p = _(c, v, h),
-          u = 100 - _(n, v, h);
-        return (0, o.Q)(
-          s,
-          (0, e.jsx)("div", {
-            className: r.SliderRange,
-            style: { "--pct-left": `${p}%`, "--pct-right": `${u}%` },
-          }),
-          {},
-          void 0,
-        );
-      }
-      function m(t) {
-        const { render: c } = t,
-          n = (0, l.useContext)(d);
-        (0, i.wT)(n, "SliderHandle must be used within a SliderRoot!");
-        const {
-            min: s,
-            max: a,
-            handles: v,
-            value: h,
-            step: p = 1,
-            onValueChange: u,
-            onValueSettled: f,
-          } = n,
-          [g, m] = (0, l.useState)(null),
-          [x, j] = (0, l.useState)(-1);
-        (0, l.useEffect)(
-          () => (g ? (v.add(g), j(v.size - 1), () => v.delete(g)) : () => {}),
-          [g, v],
-        );
-        const V = x > -1,
-          w = { "--handle-pct": `${_(V ? h[x] : s, s, a)}%` };
-        V || (w.display = "none");
-        const b = {
-          ref: m,
-          role: "slider",
-          "aria-valuenow": h[x],
-          "aria-valuemin": s,
-          "aria-valuemax": a,
-          tabIndex: 0,
-          onKeyDown: (t) => {
-            switch (t.key) {
-              case "ArrowRight":
-              case "ArrowUp":
-              case "ArrowLeft":
-              case "ArrowDown": {
-                const c = "ArrowRight" === t.key || "ArrowUp" === t.key,
-                  n = p * (c ? 1 : -1),
-                  e = C({ value: h[x] + n, min: s, max: a, step: p }),
-                  l = [...h];
-                (l[x] = e),
-                  u(l),
-                  f && f(l),
-                  t.preventDefault(),
-                  t.stopPropagation();
-                break;
-              }
-              case "PageUp":
-              case "PageDown": {
-                const c = "PageUp" === t.key,
-                  n = Math.round((a - s) / 10) * (c ? 1 : -1),
-                  e = C({ value: h[x] + n, min: s, max: a, step: p }),
-                  l = [...h];
-                (l[x] = e),
-                  u(l),
-                  f && f(l),
-                  t.preventDefault(),
-                  t.stopPropagation();
-                break;
-              }
-            }
-          },
-        };
-        return (0, o.Q)(
-          c,
-          (0, e.jsx)("span", { className: r.SliderHandle, style: w }),
-          b,
-          { value: h[x], bDragActive: n.bDragActive },
-        );
-      }
-      function x(t, c, n) {
-        if (c[0] === c[1] || n[0] === n[1]) return n[0];
-        const e = ((n[1] - n[0]) / (c[1] - c[0])) * (t - c[0]) + n[0];
-        return v.OQ(e, n[0], n[1]);
-      }
-      function C(t) {
-        const { value: c, min: n, max: e, step: l } = t,
-          s = Math.round((c - n) / l) / (1 / l);
-        return v.OQ(s + n, n, e);
-      }
-      function _(t, c, n) {
-        return ((t - c) / (n - c)) * 100;
-      }
-      var j = n(90534),
-        V = n(48906);
-      function w(t) {
+        i = n(38528),
+        v = n(90534),
+        r = n(48906);
+      function o(t) {
         const { defaultValue: c = 0, currency: n, ...l } = t;
-        return (0, e.jsx)(V.I, {
+        return (0, e.jsx)(r.I, {
           valueToString: (t) =>
             (function (t, c) {
               return void 0 === t
                 ? ""
                 : t === 1 / 0
-                  ? b
+                  ? h
                   : c
                     ? Math.round(t / 100).toString()
                     : (t / 100).toFixed(2);
             })(t, n.bWholeUnitsOnly),
           valueFromString: (t) =>
             (function (t, c, n) {
-              return t === b
+              return t === h
                 ? 1 / 0
                 : "" === t
                   ? c
@@ -6628,36 +6635,37 @@
                     ? 100 * parseInt(t)
                     : Math.round(100 * parseFloat(t));
             })(t, c, n.bWholeUnitsOnly),
-          checkValidText: (t, c) => !t || (c !== V.C && !isNaN(c)),
+          checkValidText: (t, c) => !t || (c !== r.C && !isNaN(c)),
           beforeContent: n.bSuffixSymbol ? void 0 : n.strSymbol,
           afterContent: n.bSuffixSymbol ? n.strSymbol : void 0,
           ...l,
         });
       }
-      const b = "∞";
-      var y = n(25258),
-        S = n(16382);
-      function z(t) {
+      const h = "∞";
+      var d = n(25258),
+        p = n(25489),
+        u = n(16382);
+      function f(t) {
         const { state: c, onStateChange: n } = t;
-        return (0, e.jsx)(M, {
+        return (0, e.jsx)(g, {
           price: c.price,
           onPriceChange: (t) => n({ ...c, price: t }, !1),
           onPriceSettled: (t) => n({ ...c, price: t }, !0),
         });
       }
-      function M(t) {
-        const { price: c, onPriceChange: n, onPriceSettled: i } = t,
-          { maxPrice: r, currency: o } = (0, y.GG)(),
-          [d, p] = (0, l.useState)(!1),
-          u = [0, r],
-          f = (t) => (e) => {
+      function g(t) {
+        const { price: c, onPriceChange: n, onPriceSettled: v } = t,
+          { maxPrice: r, currency: o } = (0, d.GG)(),
+          [h, f] = (0, l.useState)(!1),
+          g = [0, r],
+          x = (t) => (e) => {
             const l = [...c];
-            (l[t] = v.OQ(e, u[0], u[1])), n(l), i && i(l), p(!0);
+            (l[t] = p.OQ(e, g[0], g[1])), n(l), v && v(l), f(!0);
           },
           {
-            checkMin: g,
-            checkMax: m,
-            props: x,
+            checkMin: V,
+            checkMax: w,
+            props: b,
           } = (function (t) {
             const {
                 value: c,
@@ -6668,11 +6676,11 @@
                 step: i = 1,
                 ...v
               } = t,
-              r = Math.floor(100 * I(s)) / 100,
-              o = Math.floor(100 * I(a)) / 100,
-              h = T(c, I),
-              d = (0, l.useCallback)((t) => n(T(t, H)), [n]),
-              p = (0, l.useCallback)((t) => e && e(T(t, H)), [e]);
+              r = Math.floor(100 * _(s)) / 100,
+              o = Math.floor(100 * _(a)) / 100,
+              h = C(c, _),
+              d = (0, l.useCallback)((t) => n(C(t, j)), [n]),
+              p = (0, l.useCallback)((t) => e && e(C(t, j)), [e]);
             return {
               checkMax: (t) => Math.abs(t - s) < 100,
               checkMin: (t) => Math.abs(t - a) < 1,
@@ -6688,23 +6696,23 @@
             };
           })({
             value: [c[0], c[1]],
-            min: u[0],
-            max: u[1],
+            min: g[0],
+            max: g[1],
             onValueChange: (t) => {
-              p(!0);
+              f(!0);
               const [c, e] = t,
-                l = [g(c) ? 0 : c, m(e) ? r : e];
+                l = [V(c) ? 0 : c, w(e) ? r : e];
               n(l);
             },
-            onValueSettled: i,
+            onValueSettled: v,
           }),
-          C = g(c[0]),
-          _ = m(c[1]),
-          j = C && _ && !d,
-          V = C && !d ? void 0 : c[0];
-        let w = c[1];
+          y = V(c[0]),
+          S = w(c[1]),
+          z = y && S && !h,
+          M = y && !h ? void 0 : c[0];
+        let L = c[1];
         return (
-          _ && (w = d ? 1 / 0 : void 0),
+          S && (L = h ? 1 / 0 : void 0),
           r <= 0
             ? null
             : (0, e.jsxs)(s.s, {
@@ -6716,11 +6724,11 @@
                     gap: "2",
                     align: "center",
                     children: [
-                      (0, e.jsx)(L, {
+                      (0, e.jsx)(m, {
                         currency: o,
-                        value: V,
-                        onValueChange: f(0),
-                        placeholder: S.K.Localize(
+                        value: M,
+                        onValueChange: x(0),
+                        placeholder: u.K.Localize(
                           "#AdvancedSearch_MinPricePlaceholder",
                         ),
                       }),
@@ -6729,37 +6737,37 @@
                         weight: "medium",
                         children: "-",
                       }),
-                      (0, e.jsx)(L, {
+                      (0, e.jsx)(m, {
                         currency: o,
-                        value: w,
-                        onValueChange: f(1),
-                        placeholder: S.K.Localize(
+                        value: L,
+                        onValueChange: x(1),
+                        placeholder: u.K.Localize(
                           "#AdvancedSearch_MaxPricePlaceholder",
                         ),
-                        defaultValue: u[1],
+                        defaultValue: g[1],
                       }),
                     ],
                   }),
-                  (0, e.jsx)(h, { ...x, color: j ? "dull" : void 0 }),
+                  (0, e.jsx)(i.F, { ...b, color: z ? "dull" : void 0 }),
                 ],
               })
         );
       }
-      function L(t) {
-        return (0, e.jsx)(j.az, {
+      function m(t) {
+        return (0, e.jsx)(v.az, {
           flexGrow: "1",
-          children: (0, e.jsx)(w, { variant: "inset-focus", ...t }),
+          children: (0, e.jsx)(o, { variant: "inset-focus", ...t }),
         });
       }
-      const k = 3;
-      function T(t, c) {
+      const x = 3;
+      function C(t, c) {
         return t.map(c);
       }
-      function I(t) {
-        return Math.pow(t, 1 / k);
+      function _(t) {
+        return Math.pow(t, 1 / x);
       }
-      function H(t) {
-        return Math.round(Math.pow(t, k));
+      function j(t) {
+        return Math.round(Math.pow(t, x));
       }
     },
     16382: (t, c, n) => {

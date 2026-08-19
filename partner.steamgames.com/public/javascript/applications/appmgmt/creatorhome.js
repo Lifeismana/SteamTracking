@@ -7,56 +7,56 @@
     72854: (e) => {
       e.exports = { Table: "_2H4PpVokNS3DA0bvEZgYk3" };
     },
-    3191: (e, s, t) => {
+    3191: (e, t, s) => {
       "use strict";
-      t.r(s), t.d(s, { default: () => h });
-      var r = t(7850),
-        n = t(90626),
-        l = t(84811),
-        a = t(72854),
-        o = t.n(a),
-        c = t(12493),
-        i = t(7860),
-        d = t(22797);
+      s.r(t), s.d(t, { default: () => h });
+      var r = s(7850),
+        n = s(90626),
+        o = s(84811),
+        l = s(72854),
+        a = s.n(l),
+        c = s(12493),
+        i = s(7860),
+        d = s(22797);
       function h(e) {
-        const { creatorHomes: s } = e,
-          [t, a] = n.useState(!0),
+        const { creatorHomes: t } = e,
+          [s, l] = n.useState(!0),
           [h, m] = n.useState(void 0),
-          [x, j] = n.useState(0);
+          [p, x] = n.useState(0);
         return (
           n.useEffect(() => {
-            if (!s) return;
+            if (!t) return;
             (async () => {
               const e = [];
-              for (let t = 0; t < s.length; t += 10) {
-                const r = s
-                    .slice(t, t + 10)
+              for (let s = 0; s < t.length; s += 10) {
+                const r = t
+                    .slice(s, s + 10)
                     .map((e) => i.L.fetchQuery((0, c.A2)(Number(e.accountid)))),
                   n = await Promise.all(r);
                 e.push(...n);
-                const l = [...e].sort(
-                  (e, s) => s.GetNumFollowers() - e.GetNumFollowers(),
+                const o = [...e].sort(
+                  (e, t) => t.GetNumFollowers() - e.GetNumFollowers(),
                 );
-                m(l), j(t);
+                m(o), x(s);
               }
-              a(!1);
+              l(!1);
             })();
-          }, [s]),
-          h && s
-            ? (0, r.jsxs)(l.tH, {
+          }, [t]),
+          h && t
+            ? (0, r.jsxs)(o.tH, {
                 children: [
-                  t &&
+                  s &&
                     (0, r.jsxs)("span", {
                       children: [
                         (0, r.jsx)("span", { children: "Loading: " }),
                         (0, r.jsxs)("span", {
-                          children: [x + 1, " / ", s.length],
+                          children: [p + 1, " / ", t.length],
                         }),
                         (0, r.jsx)(d.t, { size: "small" }),
                       ],
                     }),
                   (0, r.jsxs)("table", {
-                    className: o().Table,
+                    className: a().Table,
                     children: [
                       (0, r.jsx)("thead", {
                         children: (0, r.jsxs)("tr", {
@@ -83,21 +83,28 @@
         );
       }
       function u(e) {
-        const { creatorHome: s } = e;
+        const { creatorHome: t } = e;
         return (0, r.jsxs)("tr", {
           children: [
             (0, r.jsx)("td", {
               children: (0, r.jsx)("a", {
-                href: s.GetCreatorHomeURL("developer"),
+                href: t.GetCreatorHomeURL("developer"),
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: s.GetName(),
+                children: t.GetName(),
               }),
             }),
-            (0, r.jsx)("td", { children: s.GetNumFollowers() }),
+            (0, r.jsx)("td", { children: t.GetNumFollowers() }),
           ],
         });
       }
+    },
+    63340: (e, t, s) => {
+      "use strict";
+      function r(e, t) {
+        "undefined" != typeof window && (window[e] = t);
+      }
+      s.d(t, { V: () => r });
     },
   },
 ]);

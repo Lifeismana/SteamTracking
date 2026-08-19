@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Nie udało się przeanalizować pliku GIF. Zakoduj ponownie lub zmień format i spróbuj jeszcze raz.",
     "MediaConvert_InputError_ImageTooSmall": "Obraz jest za mały. Prześlij obraz o wymiarach co najmniej 16 × 16 pikseli.",
     "MediaConvert_InputError_AnimationTooSmall": "Animacja lub film są za małe. Prześlij animację lub film o wymiarach co najmniej 16 × 16 pikseli.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Plik zawiera więcej niż jedną ścieżkę wideo. Prześlij plik z pojedynczą ścieżką wideo.",
+    "MediaConvert_InputError_AnimationNotAllowed": "Ten obraz nie może być animowany. Prześlij nieruchomy obraz.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Pliki obrazów nie mogą zawierać ścieżki audio.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "Format obrazu AVIF nie jest obsługiwany dla źródeł wideo.",
     "MediaConvert_InternalError_FailedToConvert": "Nie udało się przekonwertować tego pliku. Zakoduj plik ponownie przed kolejną próbą.",

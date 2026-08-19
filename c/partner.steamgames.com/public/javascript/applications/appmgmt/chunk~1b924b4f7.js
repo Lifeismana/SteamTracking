@@ -90,7 +90,8 @@
           _ = (0, _._)(_),
           _ = _ && _(_.rtSubmitted),
           { data: _ } = (0, _._)(_?.submitterID),
-          _ = _ ? _.m_strPlayerName : _?.submitterID;
+          _ = _ ? _.m_strPlayerName : _?.submitterID,
+          _ = _?.eState == _._;
         return (_ || _ || _) && _ == _ + _
           ? (0, _.jsxs)("div", {
               className: _().PricePopout,
@@ -133,15 +134,17 @@
                   (0, _.jsxs)(_._, {
                     className: _().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, _._)(
-                      "#PricingDashboard_ProposedPrice_ttip",
-                      _,
-                      _,
-                    ),
+                    toolTipContent: _
+                      ? (0, _._)("#PricingDashboard_ApprovedPrice_ttip")
+                      : (0, _._)("#PricingDashboard_ProposedPrice_ttip", _, _),
                     children: [
                       (0, _.jsx)("div", {
                         className: _().DetailLabel,
-                        children: (0, _._)("#PricingDashboard_ProposedPrice"),
+                        children: (0, _._)(
+                          _
+                            ? "#PricingDashboard_ApprovedPrice"
+                            : "#PricingDashboard_ProposedPrice",
+                        ),
                       }),
                       (0, _.jsx)("div", {
                         className: _().DetailPrice,

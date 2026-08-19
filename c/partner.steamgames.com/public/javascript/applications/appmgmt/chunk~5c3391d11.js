@@ -753,6 +753,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -788,6 +789,14 @@
             return _.LeftTrigger;
           case _._.TRIGGER_RIGHT:
             return _.RightTrigger;
+          case _._.REAR_LEFT_UPPER:
+            return _.RearLeftUpper;
+          case _._.REAR_LEFT_LOWER:
+            return _.RearLeftLower;
+          case _._.REAR_RIGHT_UPPER:
+            return _.RearRightUpper;
+          case _._.REAR_RIGHT_LOWER:
+            return _.RearRightLower;
           default:
             return _._;
         }
@@ -828,36 +837,57 @@
         m_globalActionsSubscriptions = [];
         m_actionDescriptionChangedCallbackRegistrations = [];
         static Log = new _._("ActionDescription").Debug;
+        m_nodeForCurrentDescriptions;
         InitContext(_) {
-          return _.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
-            .Unregister;
+          const _ = new _._();
+          return (
+            _.Push(
+              _.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
+                .Unregister,
+            ),
+            _.Push(
+              _.NavTreeActivatedOrReactivatedCallbacks.Register(
+                this.OnActiveNavTreeChanged,
+              ).Unregister,
+            ),
+            _.GetUnregisterFunc()
+          );
         }
         BFromActiveNavTree(_, _) {
           let _ = _?.Tree;
           return _ || (_ = _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
         }
         OnFocusNavigationChanged(_, _, _) {
-          if (this.BFromActiveNavTree(_, _))
-            if (
-              (this.m_actionDescriptionChangedCallbackRegistrations.forEach(
-                (_) => _.Unregister(),
-              ),
-              (this.m_actionDescriptionChangedCallbackRegistrations = []),
-              _)
-            ) {
-              const _ = () =>
-                this.SetActionDescriptionsFromMap(
-                  __webpack_require__.GetActiveActionDescriptions() ?? {},
-                );
-              _();
-              for (let _ = _; null != _; _ = _.Parent)
-                this.m_actionDescriptionChangedCallbackRegistrations.push(
-                  _.ActionDescriptionChangedCallbackList.Register(() => _()),
-                );
-            } else
-              this.SetActionDescriptionsFromMap({
-                [_._._]: null,
-              });
+          this.BFromActiveNavTree(_, _) && this.UpdateForFocusedNode(_);
+        }
+        OnActiveNavTreeChanged(_) {
+          if (!_.Controller.IsActiveFocusNavTree(_)) return;
+          const _ = _.GetLastFocusedNode() ?? _.Root;
+          _ != this.m_nodeForCurrentDescriptions &&
+            this.UpdateForFocusedNode(_);
+        }
+        UpdateForFocusedNode(_) {
+          if (
+            ((this.m_nodeForCurrentDescriptions = _),
+            this.m_actionDescriptionChangedCallbackRegistrations.forEach((_) =>
+              _.Unregister(),
+            ),
+            (this.m_actionDescriptionChangedCallbackRegistrations = []),
+            _)
+          ) {
+            const _ = () =>
+              this.SetActionDescriptionsFromMap(
+                _.GetActiveActionDescriptions() ?? {},
+              );
+            _();
+            for (let _ = _; null != _; _ = _.Parent)
+              this.m_actionDescriptionChangedCallbackRegistrations.push(
+                _.ActionDescriptionChangedCallbackList.Register(() => _()),
+              );
+          } else
+            this.SetActionDescriptionsFromMap({
+              [_._._]: null,
+            });
         }
         GetActionDescription(_) {
           let _;
@@ -947,6 +977,7 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnFocusNavigationChanged", null),
+        (0, _._)([_._], _.prototype, "OnActiveNavTreeChanged", null),
         (0, _._)([_._], _.prototype, "SetActionDescriptionsFromMap", null);
       var _,
         _,

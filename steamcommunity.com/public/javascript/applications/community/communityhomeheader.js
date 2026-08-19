@@ -36,81 +36,81 @@
     },
     92598: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => b });
-      var r = n(7850),
-        a = n(90626),
-        i = n(61859),
-        s = n(84202),
-        o = n.n(s),
-        l = n(45699),
-        c = n(78327),
+      n.r(t), n.d(t, { default: () => g });
+      var i = n(7850),
+        s = n(90626),
+        r = n(61859),
+        l = n(84202),
+        a = n.n(l),
+        c = n(45699),
+        o = n(78327),
         u = n(12155),
         d = n(68255),
-        m = n(41735),
-        p = n.n(m),
-        _ = n(55263);
+        _ = n(41735),
+        m = n.n(_),
+        p = n(55263);
       var h = n(52038),
-        S = n(16021),
-        H = n(95034),
-        f = n(92757),
-        C = n(76217);
-      function b() {
-        const e = (0, a.useRef)(void 0);
+        f = n(16021),
+        S = n(95034),
+        v = n(92757),
+        H = n(76217);
+      function g() {
+        const e = (0, s.useRef)(void 0);
         return (
-          (0, a.useEffect)(() => {
+          (0, s.useEffect)(() => {
             e.current && e.current.TakeFocus();
           }, []),
-          (0, r.jsxs)(C.Z, {
+          (0, i.jsxs)(H.Z, {
             navRef: e,
-            className: o().CommunityHomeHeader,
+            className: a().CommunityHomeHeader,
             children: [
-              (0, r.jsxs)("div", {
-                className: o().CommunityHomeHeaderTitleSection,
+              (0, i.jsxs)("div", {
+                className: a().CommunityHomeHeaderTitleSection,
                 children: [
-                  (0, r.jsxs)("div", {
+                  (0, i.jsxs)("div", {
                     children: [
-                      (0, r.jsx)("div", {
-                        className: o().CommunityHomeHeaderTitle,
-                        children: (0, i.we)("#Community_Home_Header_Title"),
+                      (0, i.jsx)("div", {
+                        className: a().CommunityHomeHeaderTitle,
+                        children: (0, r.we)("#Community_Home_Header_Title"),
                       }),
-                      (0, r.jsx)("div", {
-                        className: o().CommunityHomeHeaderSubtitle,
-                        children: (0, i.we)("#Community_Home_Header_Subtitle"),
+                      (0, i.jsx)("div", {
+                        className: a().CommunityHomeHeaderSubtitle,
+                        children: (0, r.we)("#Community_Home_Header_Subtitle"),
                       }),
                     ],
                   }),
-                  (0, r.jsx)(l.Ii, {
-                    className: o().AddFriendBtn,
-                    href: `${c.TS.COMMUNITY_BASE_URL}search/users/`,
-                    children: (0, i.we)(
+                  (0, i.jsx)(c.Ii, {
+                    className: a().AddFriendBtn,
+                    href: `${o.TS.COMMUNITY_BASE_URL}search/users/`,
+                    children: (0, r.we)(
                       "#Community_Home_Header_AddFriend_Button",
                     ),
                   }),
                 ],
               }),
-              (0, r.jsx)(v, {}),
-              (0, r.jsx)(j, {}),
+              (0, i.jsx)(C, {}),
+              (0, i.jsx)(w, {}),
             ],
           })
         );
       }
-      function v() {
-        const [e, t] = (0, a.useState)(""),
-          [n, s] = (0, a.useState)([]),
-          [m, h] = (0, a.useState)(!1),
-          S = (function () {
-            const e = (0, a.useMemo)(
-                () => (0, c.Fd)("personalapps", "application_config") || [],
+      function C() {
+        const [e, t] = (0, s.useState)(""),
+          [n, l] = (0, s.useState)([]),
+          [_, h] = (0, s.useState)(!1),
+          f = (function () {
+            const e = (0, s.useMemo)(
+                () => (0, o.Fd)("personalapps", "application_config") || [],
                 [],
               ),
-              t = (0, a.useMemo)(
-                () => (0, c.Fd)("popularapps", "application_config") || [],
+              t = (0, s.useMemo)(
+                () => (0, o.Fd)("popularapps", "application_config") || [],
                 [],
               ),
               n = [...e, ...t];
             if (n.length)
               return {
-                isLoading: (0, _.zX)(n, { include_assets: !0 }) === _.Sq,
+                isLoading: (0, p.zX)(n, { include_assets: !0 }) === p.Sq,
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {
@@ -118,71 +118,71 @@
               data: { personalAppIds: e, popularAppIds: t },
             };
           })();
-        if (S.isLoading) return null;
-        return (0, r.jsxs)("div", {
-          className: o().CommunityHomeHeaderContent,
+        if (f.isLoading) return null;
+        return (0, i.jsxs)("div", {
+          className: a().CommunityHomeHeaderContent,
           children: [
-            (0, r.jsxs)(C.Z, {
-              className: o().AppHubsCtn,
+            (0, i.jsxs)(H.Z, {
+              className: a().AppHubsCtn,
               children: [
-                (0, r.jsx)(y, {
-                  appShortcuts: S.data.personalAppIds,
-                  sectionTitle: (0, i.we)(
+                (0, i.jsx)(b, {
+                  appShortcuts: f.data.personalAppIds,
+                  sectionTitle: (0, r.we)(
                     "#Community_Home_Header_GameHubs_ForYou",
                   ),
-                  withDivider: S.data.popularAppIds.length > 0,
+                  withDivider: f.data.popularAppIds.length > 0,
                 }),
-                (0, r.jsx)(y, {
-                  appShortcuts: S.data.popularAppIds,
-                  sectionTitle: (0, i.we)(
+                (0, i.jsx)(b, {
+                  appShortcuts: f.data.popularAppIds,
+                  sectionTitle: (0, r.we)(
                     "#Community_Home_Header_GameHubs_Popular",
                   ),
                 }),
               ],
             }),
-            (0, r.jsxs)(C.Z, {
+            (0, i.jsxs)(H.Z, {
               onFocus: () => h(!0),
               onBlur: (e) => {
                 e.currentTarget.contains(e.relatedTarget) || h(!1);
               },
-              className: o().Search,
+              className: a().Search,
               children: [
-                (0, r.jsxs)(C.Z, {
-                  className: o().SearchBar,
+                (0, i.jsxs)(H.Z, {
+                  className: a().SearchBar,
                   children: [
-                    (0, r.jsx)("div", {
-                      className: o().InputContainer,
-                      children: (0, r.jsx)(d.pd, {
+                    (0, i.jsx)("div", {
+                      className: a().InputContainer,
+                      children: (0, i.jsx)(d.pd, {
                         onChange: async (e) => {
                           t(e.target.value);
                           const n = await (async function (e) {
-                            const t = `${c.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
-                            return (await p().get(t)).data;
+                            const t = `${o.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+                            return (await m().get(t)).data;
                           })(e.target.value);
-                          s(n);
+                          l(n);
                         },
                         value: e,
-                        className: o().Input,
-                        placeholder: (0, i.we)(
+                        className: a().Input,
+                        placeholder: (0, r.we)(
                           "#Community_Home_Header_FindGame_Placeholder",
                         ),
                       }),
                     }),
-                    (0, r.jsx)("div", {
-                      className: o().SearchIcon,
-                      children: (0, r.jsx)(u.eSy, {}),
+                    (0, i.jsx)("div", {
+                      className: a().SearchIcon,
+                      children: (0, i.jsx)(u.eSy, {}),
                     }),
                   ],
                 }),
-                m &&
-                  (0, r.jsx)(C.Z, {
-                    className: o().SearchResultsCtn,
+                _ &&
+                  (0, i.jsx)(H.Z, {
+                    className: a().SearchResultsCtn,
                     children: n.map((e) =>
-                      (0, r.jsx)(
-                        l.Ii,
+                      (0, i.jsx)(
+                        c.Ii,
                         {
-                          href: `${c.TS.COMMUNITY_BASE_URL}app/${e.appid}`,
-                          className: o().SearchResult,
+                          href: `${o.TS.COMMUNITY_BASE_URL}app/${e.appid}`,
+                          className: a().SearchResult,
                           children: e.name,
                         },
                         e.appid,
@@ -194,66 +194,66 @@
           ],
         });
       }
-      function y(e) {
-        const { appShortcuts: t, sectionTitle: n, withDivider: a } = e;
+      function b(e) {
+        const { appShortcuts: t, sectionTitle: n, withDivider: s } = e;
         return t && t.length
-          ? (0, r.jsxs)("div", {
-              className: o().AppHubShortcutsCtn,
+          ? (0, i.jsxs)("div", {
+              className: a().AppHubShortcutsCtn,
               children: [
-                (0, r.jsx)("div", { className: o().AppHubTitle, children: n }),
-                (0, r.jsx)("div", {
+                (0, i.jsx)("div", { className: a().AppHubTitle, children: n }),
+                (0, i.jsx)("div", {
                   "flow-children": "row",
                   className: (0, h.A)(
-                    o().AppHubShortcutLinks,
-                    a ? o().Divider : null,
+                    a().AppHubShortcutLinks,
+                    s ? a().Divider : null,
                   ),
-                  children: t.map((e, t) => (0, r.jsx)(w, { appId: e }, t)),
+                  children: t.map((e, t) => (0, i.jsx)(I, { appId: e }, t)),
                 }),
               ],
             })
           : null;
       }
-      function w(e) {
-        const t = S.A.Get().GetApp(e.appId);
+      function I(e) {
+        const t = f.A.Get().GetApp(e.appId);
         return t
-          ? (0, r.jsx)(l.Ii, {
-              className: o().ShortcutLink,
-              href: `${c.TS.COMMUNITY_BASE_URL}app/${e.appId}`,
-              children: (0, r.jsx)("img", {
-                className: o().ShortcutImage,
+          ? (0, i.jsx)(c.Ii, {
+              className: a().ShortcutLink,
+              href: `${o.TS.COMMUNITY_BASE_URL}app/${e.appId}`,
+              children: (0, i.jsx)("img", {
+                className: a().ShortcutImage,
                 src: t.GetAssets().GetLibraryCapsuleURL(),
               }),
             })
           : null;
       }
       const A = "subsection",
-        T = "browsefilter";
-      function j() {
-        const e = (0, f.W6)(),
-          t = (0, H.f3)(e, A),
-          n = (0, H.f3)(e, T);
-        return (0, r.jsxs)("div", {
+        y = "browsefilter";
+      function w() {
+        const e = (0, v.W6)(),
+          t = (0, S.f3)(e, A),
+          n = (0, S.f3)(e, y);
+        return (0, i.jsxs)("div", {
           children: [
-            (0, r.jsx)(x, { activeTab: t, activeSort: n }),
-            (0, r.jsx)(g, { activeTab: t, activeSort: n }),
+            (0, i.jsx)(x, { activeTab: t, activeSort: n }),
+            (0, i.jsx)(T, { activeTab: t, activeSort: n }),
           ],
         });
       }
       function x(e) {
         const { activeTab: t, activeSort: n } = e,
-          s = a.useRef(void 0);
-        a.useEffect(() => {
+          l = s.useRef(void 0);
+        s.useEffect(() => {
           const e = document.getElementById(t);
-          if (e && (null == s ? void 0 : s.current)) {
+          if (e && (null == l ? void 0 : l.current)) {
             const t = e.offsetLeft + e.clientWidth;
             t > window.innerWidth &&
-              s.current.scrollBy(t - window.innerWidth, 0);
+              l.current.scrollBy(t - window.innerWidth, 0);
           }
-        }, [null == s ? void 0 : s.current]);
-        return (0, r.jsx)(C.Z, {
+        }, [null == l ? void 0 : l.current]);
+        return (0, i.jsx)(H.Z, {
           "flow-children": "row",
-          className: o().TabContainer,
-          ref: s,
+          className: a().TabContainer,
+          ref: l,
           children: [
             { label: "#Community_Home_Header_Filter_All", id: "" },
             {
@@ -270,33 +270,33 @@
             { label: "#Community_Home_Header_Filter_News", id: "news" },
             { label: "#Community_Home_Header_Filter_Guides", id: "guides" },
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
-          ].map((e, a) => {
-            const s = t ? t === e.id : 0 === a,
+          ].map((e, s) => {
+            const l = t ? t === e.id : 0 === s,
               u = e.id ? `${A}=${e.id}` : "",
-              d = n ? `${T}=${n}` : "",
-              m = `${c.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
-            return (0, r.jsx)(
-              l.Ii,
+              d = n ? `${y}=${n}` : "",
+              _ = `${o.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
+            return (0, i.jsx)(
+              c.Ii,
               {
                 id: e.id,
-                href: m,
-                className: (0, h.A)(o().Tab, s ? o().ActiveTab : null),
-                children: (0, i.we)(e.label),
+                href: _,
+                className: (0, h.A)(a().Tab, l ? a().ActiveTab : null),
+                children: (0, r.we)(e.label),
               },
               e.id,
             );
           }),
         });
       }
-      function g(e) {
+      function T(e) {
         const { activeTab: t, activeSort: n } = e;
-        return (0, r.jsxs)(C.Z, {
+        return (0, i.jsxs)(H.Z, {
           "flow-children": "row",
-          className: o().SortContainer,
+          className: a().SortContainer,
           children: [
-            (0, r.jsx)("div", {
-              className: o().SortIcon,
-              children: (0, r.jsx)(u.LPs, {}),
+            (0, i.jsx)("div", {
+              className: a().SortIcon,
+              children: (0, i.jsx)(u.LPs, {}),
             }),
             [
               { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -304,17 +304,17 @@
                 label: "#Community_Home_Header_BrowseFilter_Recent",
                 id: "mostrecent",
               },
-            ].map((e, a) => {
-              const s = n ? n === e.id : 0 === a,
+            ].map((e, s) => {
+              const l = n ? n === e.id : 0 === s,
                 u = t ? `${A}=${t}` : "",
-                d = e.id ? `${T}=${e.id}` : "",
-                m = `${c.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
-              return (0, r.jsx)(
-                l.Ii,
+                d = e.id ? `${y}=${e.id}` : "",
+                _ = `${o.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
+              return (0, i.jsx)(
+                c.Ii,
                 {
-                  href: m,
-                  className: (0, h.A)(o().Sort, s ? o().ActiveSort : null),
-                  children: (0, i.we)(e.label),
+                  href: _,
+                  className: (0, h.A)(a().Sort, l ? a().ActiveSort : null),
+                  children: (0, r.we)(e.label),
                 },
                 e.id,
               );
@@ -323,19 +323,239 @@
         });
       }
     },
+    55263: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        G6: () => m,
+        Gg: () => h,
+        Sq: () => u,
+        eR: () => d,
+        ik: () => _,
+        mZ: () => f,
+        t7: () => p,
+        zX: () => v,
+      });
+      var i = n(41735),
+        s = n.n(i),
+        r = n(90626),
+        l = n(37085),
+        a = n(6824),
+        c = n(73745),
+        o = n(16021);
+      const u = 1,
+        d = 2,
+        _ = 3;
+      function m(e, t, n, i) {
+        const a = (0, r.useRef)(void 0),
+          m = (0, r.useRef)(void 0),
+          p = (0, c.CH)();
+        a.current = e;
+        const [h, f] = (0, r.useState)(void 0),
+          {
+            include_assets: S,
+            include_release: v,
+            include_platforms: H,
+            include_all_purchase_options: g,
+            include_screenshots: C,
+            include_trailers: b,
+            include_ratings: I,
+            include_tag_count: A,
+            include_reviews: y,
+            include_basic_info: w,
+            include_supported_languages: x,
+            include_full_description: T,
+            include_included_items: j,
+            include_assets_without_overrides: B,
+            apply_user_filters: N,
+            include_links: k,
+            include_extra_details: G,
+          } = n;
+        if (
+          ((0, r.useEffect)(() => {
+            const n = {
+              include_assets: S,
+              include_release: v,
+              include_platforms: H,
+              include_all_purchase_options: g,
+              include_screenshots: C,
+              include_trailers: b,
+              include_ratings: I,
+              include_tag_count: A,
+              include_reviews: y,
+              include_basic_info: w,
+              include_supported_languages: x,
+              include_full_description: T,
+              include_included_items: j,
+              include_assets_without_overrides: B,
+              apply_user_filters: N,
+              include_links: k,
+              include_extra_details: G,
+            };
+            let r = null;
+            return (
+              !e ||
+                e < 0 ||
+                o.A.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== h && i && i == m.current) ||
+                (i !== m.current && (f(void 0), (m.current = i)),
+                (r = s().CancelToken.source()),
+                o.A.Get()
+                  .QueueStoreItemRequest(e, t, n)
+                  .then((t) => {
+                    (null == r ? void 0 : r.token.reason) ||
+                      a.current !== e ||
+                      f(t == l.R),
+                      p();
+                  })),
+              () =>
+                null == r ? void 0 : r.cancel("useStoreItemCache: unmounting")
+            );
+          }, [
+            e,
+            t,
+            i,
+            h,
+            S,
+            v,
+            H,
+            g,
+            C,
+            b,
+            I,
+            A,
+            y,
+            w,
+            x,
+            T,
+            j,
+            B,
+            N,
+            k,
+            G,
+            p,
+          ]),
+          !e)
+        )
+          return [null, d];
+        if (!1 === h) return [void 0, d];
+        if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, d];
+        if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, u];
+        const R = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return R ? [R, _] : [null, d];
+      }
+      function p(e, t, n) {
+        return m(e, a.c6.qI, t, n);
+      }
+      function h(e, t, n) {
+        return m(e, a.c6.RD, t, n);
+      }
+      function f(e, t, n) {
+        var i;
+        const [s, r] = m(e, t, n);
+        let l;
+        (null == s ? void 0 : s.GetStoreItemType()) != a.c6.RD ||
+          (null === (i = s.GetAssets()) || void 0 === i
+            ? void 0
+            : i.GetHeaderURL()) ||
+          1 != (null == s ? void 0 : s.GetIncludedAppIDs().length) ||
+          (l = s.GetIncludedAppIDs()[0]);
+        const [c, o] = p(l, n);
+        return l && (null == c ? void 0 : c.BIsVisible()) ? [c, o] : [s, r];
+      }
+      function S(e, t, n, i) {
+        const l = (0, c.CH)(),
+          {
+            include_assets: a,
+            include_release: m,
+            include_platforms: p,
+            include_all_purchase_options: h,
+            include_screenshots: f,
+            include_trailers: S,
+            include_ratings: v,
+            include_tag_count: H,
+            include_reviews: g,
+            include_basic_info: C,
+            include_supported_languages: b,
+            include_full_description: I,
+            include_included_items: A,
+            include_assets_without_overrides: y,
+            apply_user_filters: w,
+            include_links: x,
+            include_extra_details: T,
+          } = n;
+        if (
+          ((0, r.useEffect)(() => {
+            if (!e || 0 == e.length) return;
+            const n = {
+                include_assets: a,
+                include_release: m,
+                include_platforms: p,
+                include_all_purchase_options: h,
+                include_screenshots: f,
+                include_trailers: S,
+                include_ratings: v,
+                include_tag_count: H,
+                include_reviews: g,
+                include_basic_info: C,
+                include_supported_languages: b,
+                include_full_description: I,
+                include_included_items: A,
+                include_assets_without_overrides: y,
+                apply_user_filters: w,
+                include_links: x,
+                include_extra_details: T,
+              },
+              i = e.filter(
+                (e) =>
+                  !(
+                    o.A.Get().BHasStoreItem(e, t, n) ||
+                    o.A.Get().BIsStoreItemMissing(e, t)
+                  ),
+              );
+            if (0 == i.length) return;
+            const r = s().CancelToken.source(),
+              c = i.map((e) => o.A.Get().QueueStoreItemRequest(e, t, n));
+            return (
+              Promise.all(c).then(() => {
+                r.token.reason || l();
+              }),
+              () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [e, t, i, l, a, m, p, h, f, S, v, H, g, C, b, I, A, y, w, x, T]),
+          !e)
+        )
+          return d;
+        if (
+          !e.every(
+            (e) =>
+              o.A.Get().BHasStoreItem(e, t, n) ||
+              o.A.Get().BIsStoreItemMissing(e, t),
+          )
+        )
+          return u;
+        return e.every((e) =>
+          o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+        )
+          ? _
+          : d;
+      }
+      function v(e, t, n) {
+        return S(e, a.c6.qI, t, n);
+      }
+    },
     95034: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Bm: () => s,
-        QD: () => l,
-        f3: () => i,
+        Bm: () => l,
+        QD: () => c,
+        f3: () => r,
         iV: () => u,
-        ip: () => c,
-        le: () => o,
+        ip: () => o,
+        le: () => a,
       });
-      var r = n(90626),
-        a = n(92757);
-      function i(e, t) {
+      var i = n(90626),
+        s = n(92757);
+      function r(e, t) {
         let n;
         if ("string" == typeof e) n = e;
         else if ("location" in e) n = e.location.search;
@@ -343,33 +563,33 @@
           if (!("search" in e)) return;
           n = e.search;
         }
-        const r = new URLSearchParams(n.substring(1));
-        if (r.has(t)) {
-          const e = r.getAll(t);
+        const i = new URLSearchParams(n.substring(1));
+        if (i.has(t)) {
+          const e = i.getAll(t);
           return e[e.length - 1];
         }
       }
-      function s(e, t, n, r = !1) {
-        const a = new URLSearchParams(e.location.search.substring(1));
+      function l(e, t, n, i = !1) {
+        const s = new URLSearchParams(e.location.search.substring(1));
         if (null != n && null != n) {
-          if (a.get(t) == n) return;
-          a.set(t, n);
+          if (s.get(t) == n) return;
+          s.set(t, n);
         } else {
-          if (!a.has(t)) return;
-          a.delete(t);
+          if (!s.has(t)) return;
+          s.delete(t);
         }
-        r
-          ? e.replace(`?${a.toString()}`, { ...e.location.state })
-          : e.push(`?${a.toString()}`);
+        i
+          ? e.replace(`?${s.toString()}`, { ...e.location.state })
+          : e.push(`?${s.toString()}`);
       }
-      function o(e, t, n) {
-        s(e, t, n, !0);
+      function a(e, t, n) {
+        l(e, t, n, !0);
       }
-      function l(e, t) {
-        const n = (0, a.W6)(),
-          o = (0, a.zy)(),
-          l = (0, r.useMemo)(() => {
-            const n = i(o.search, e);
+      function c(e, t) {
+        const n = (0, s.W6)(),
+          a = (0, s.zy)(),
+          c = (0, i.useMemo)(() => {
+            const n = r(a.search, e);
             return null != n && null != n
               ? null != t && null != t
                 ? "boolean" == typeof t
@@ -377,28 +597,28 @@
                   : t.constructor(n)
                 : n
               : t;
-          }, [o.search, e, t]),
-          c = (0, r.useCallback)(
-            (t, r = !1) => {
-              s(n, e, null != t && null != t ? String(t) : null, r);
+          }, [a.search, e, t]),
+          o = (0, i.useCallback)(
+            (t, i = !1) => {
+              l(n, e, null != t && null != t ? String(t) : null, i);
             },
             [n, e],
           );
-        return [l, c];
+        return [c, o];
       }
-      function c(e, t, n = !1) {
-        const r = new URLSearchParams(e.location.search.substring(1));
+      function o(e, t, n = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
             const n = t[e];
-            r.delete(e), null != n && null != n && r.append(e, n);
+            i.delete(e), null != n && null != n && i.append(e, n);
           }
         n
-          ? e.replace(`?${r.toString()}`, { ...e.location.state })
-          : e.push(`?${r.toString()}`);
+          ? e.replace(`?${i.toString()}`, { ...e.location.state })
+          : e.push(`?${i.toString()}`);
       }
       function u(e, t) {
-        c(e, t, !0);
+        o(e, t, !0);
       }
     },
   },

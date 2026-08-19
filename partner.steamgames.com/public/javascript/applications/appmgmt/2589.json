@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "Échec de l'analyse du GIF. Veuillez réencoder, ou modifier le format et réessayer.",
     "MediaConvert_InputError_ImageTooSmall": "L'image est trop petite. Veuillez mettre en ligne une image d'au moins 16×16 pixels.",
     "MediaConvert_InputError_AnimationTooSmall": "L'animation ou la vidéo est trop petite. Veuillez mettre en ligne une animation ou une vidéo d'au moins 16 × 16 pixels.",
+    "MediaConvert_InputError_MultipleVideoStreams": "Le fichier contient plus d'une piste vidéo. Veuillez mettre en ligne un fichier avec une seule piste vidéo.",
+    "MediaConvert_InputError_AnimationNotAllowed": "This image cannot be animated. Please upload a still image.",
     "MediaConvert_InputError_ImageTypeWithAudio": "Les fichiers image ne peuvent pas contenir de piste audio.",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "La sortie AVIF n'est pas prise en charge pour les sources vidéos.",
     "MediaConvert_InternalError_FailedToConvert": "Échec de la conversion du fichier. Veuillez réencoder le fichier et réessayer.",

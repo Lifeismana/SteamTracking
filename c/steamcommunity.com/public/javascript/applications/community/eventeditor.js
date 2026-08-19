@@ -70,6 +70,15 @@
     },
     chunkid: (module) => {
       module.exports = {
+        UploaderCtn: "_1B1zXx3Ukh5fPY5eB6F2Ca",
+        CapsuleCtn: "_3K7h_ivhFFa9wmqp1O_e5n",
+        CapsuleTitle: "_1YilvBMh1lDdWYGq5MnmqO",
+        CapsuleDimensions: "_2R7J4mdptFLnMorL9p9WuY",
+        CapsulePreview: "_2eDmRg0urY8jNMPG7lpQ91",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SocialShareCtn: "FFYZQ30ue3bMXnyIP5UrW",
         DefaultSocialOverrideMsg: "DdtTvlKvWgvmBUSKQLgf1",
         DefaultSocialImgCtn: "_10QpUx-xWFinl4cM4hpslY",
@@ -5756,6 +5765,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -5847,6 +5858,7 @@
             void 0 === _
               ? void 0
               : _.length) || 0,
+          _ = (0, _._)(_.GetEventModel().jsondata.sale_logo_url),
           _ = [];
         return (
           _
@@ -5931,6 +5943,9 @@
                         tooltip: (0, _._)(
                           "#EventEditor_ArtworkType_sale_logo_url_tooltip",
                         ),
+                        description: (0, _._)(
+                          "#EventEditor_ArtworkType_sale_logo_url_example",
+                        ),
                         onChange: (_) => {
                           (0, _._)(() => {
                             (_.GetEventModel().jsondata.sale_logo_url =
@@ -5939,6 +5954,11 @@
                           });
                         },
                       }),
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: _.ErrorStylesWithIcon,
+                          children: _,
+                        }),
                     ],
                   }),
                 }),
@@ -7550,7 +7570,6 @@
         ]),
         (_.MapPubRights = _.ConstructPubRightsMap());
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -12522,6 +12541,269 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "vo_sale_store_capsules",
+        _ = [
+          {
+            type: "header_2x",
+            artworkType: "sale_store_capsule_header",
+            strDesignToken: "#EventEditor_SaleStoreCapsule_header_Design",
+            strUsageToken: "#EventEditor_SaleStoreCapsule_header_Usage",
+          },
+          {
+            type: "small_capsule_2x",
+            artworkType: "sale_store_capsule_small",
+            strDesignToken: "#EventEditor_SaleStoreCapsule_small_Design",
+            strUsageToken: "#EventEditor_SaleStoreCapsule_small_Usage",
+          },
+          {
+            type: "main_capsule_2x",
+            artworkType: "sale_store_capsule_main",
+            strDesignToken: "#EventEditor_SaleStoreCapsule_main_Design",
+            strUsageToken: "#EventEditor_SaleStoreCapsule_main_Usage",
+          },
+          {
+            type: "hero_capsule_2x",
+            artworkType: "sale_store_capsule_vertical",
+            strDesignToken: "#EventEditor_SaleStoreCapsule_vertical_Design",
+            strUsageToken: "#EventEditor_SaleStoreCapsule_vertical_Usage",
+          },
+        ],
+        _ = _.map((_) => _.artworkType);
+      function _(_) {
+        return "#EventEditor_ArtworkType_" + _.artworkType;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return _.BHasSaleEnabled() && (0, _._)(_).bVisible;
+      }
+      function _(_) {
+        return (
+          !!_(_.GetEventModel()) &&
+          (_._.Get().GetPartnerEventPermissions(_.GetClanSteamID())
+            .valve_admin ||
+            _.BHasTag(_))
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          _ = (0, _.useCallback)(
+            (_, _, _) => {
+              (0, _._)(() => {
+                const _ = _.GetEventModel().jsondata;
+                (_.sale_store_capsules = (function (_, _, _, _) {
+                  var _;
+                  const _ = _._(
+                    [
+                      ...(null !== (_ = null == _ ? void 0 : _[_]) &&
+                      void 0 !== _
+                        ? _
+                        : []),
+                    ],
+                    _.bP9,
+                    null,
+                  );
+                  return (
+                    (_[_] = _),
+                    {
+                      ..._,
+                      [_]: _,
+                    }
+                  );
+                })(_.sale_store_capsules, _, _, _)),
+                  _.SetDirty(_._.jsondata_image);
+              });
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              (0, _._)(() => {
+                const _ = _.GetEventModel().jsondata;
+                (_.sale_store_capsules = (function (_, _) {
+                  const _ = {
+                    ..._,
+                  };
+                  return delete _[_], _;
+                })(_.sale_store_capsules, _)),
+                  _.SetDirty(_._.jsondata_image);
+              });
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_, _, _, _, _) => {
+              const _ = (function (_) {
+                var _;
+                return null === (_ = _.find((_) => _.artworkType === _)) ||
+                  void 0 === _
+                  ? void 0
+                  : _.type;
+              })(_);
+              if (!_)
+                return void (0, _._)(
+                  !1,
+                  "Unexpected artwork type for a sale store capsule: " + _,
+                );
+              const _ = (0, _._)(_, _);
+              (null == _ ? void 0 : _.image)
+                ? __webpack_require__(_, _, _)
+                : (0, _._)(
+                    !1,
+                    "Sale store capsule conversion produced no image: " + _,
+                  );
+            },
+            [_],
+          ),
+          _ = (0, _._)(() => !_.BHasTag(_));
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().ArtworkSelectorContainer,
+            _ && _().ValveOnlyBackground,
+          ),
+          children: [
+            (0, _.jsx)("div", {
+              className: _().Title,
+              children:
+                (_ ? "(VO) " : "") +
+                (0, _._)("#EventEditor_SaleStoreCapsules_Title"),
+            }),
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_().SelectImageBlock, _().Tips),
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#EventEditor_SaleStoreCapsules_Tip1"),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#EventEditor_SaleStoreCapsules_Tip2"),
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(_().SelectImageBlock, _().UploaderCtn),
+              children: (0, _.jsx)(_._, {
+                rgRealmList: _.GetIncludedRealmList(),
+                rgSupportArtwork: [..._],
+                strUploadAjaxURL: (0, _._)(_.GetClanSteamID()),
+                fnOnUploadSuccess: _,
+                bTwoPhaseUpload: !0,
+                bDirectTempStorageUpload: !0,
+              }),
+            }),
+            _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  editModel: _,
+                  info: _,
+                  fnSetCapsuleMedia: _,
+                  fnClearCapsule: _,
+                },
+                _.type,
+              ),
+            ),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            editModel: _,
+            info: _,
+            fnSetCapsuleMedia: _,
+            fnClearCapsule: _,
+          } = _,
+          _ = (0, _._)(() => _.GetEventModel().jsondata.sale_store_capsules),
+          _ = _.GetClanAccountID(),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ = (function (_, _, _) {
+                var _, _;
+                return null !==
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _[_]) || void 0 === _
+                      ? void 0
+                      : _[_]) && void 0 !== _
+                  ? _
+                  : null;
+              })(_, _.type, _);
+              return _ ? (0, _._)(_, _.image) : null;
+            },
+            [_, _.type, _],
+          ),
+          _ = (0, _.useMemo)(
+            () =>
+              (function (_, _) {
+                const _ = null == _ ? void 0 : _[_];
+                return _
+                  ? Array.from(__webpack_require__.keys()).filter((_) => {
+                      var _;
+                      return Boolean(
+                        null === (_ = _[_]) || void 0 === _ ? void 0 : _.image,
+                      );
+                    })
+                  : [];
+              })(_, _.type),
+            [_, _.type],
+          ),
+          _ = _._[_.artworkType];
+        return (0, _.jsxs)("div", {
+          className: _().CapsuleCtn,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().CapsuleTitle,
+              children: [
+                (0, _._)(_(_)),
+                (0, _.jsxs)("span", {
+                  className: _().CapsuleDimensions,
+                  children: [
+                    (0, _._)(_.width),
+                    "px x ",
+                    (0, _._)(_.height),
+                    "px",
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_().SelectImageBlock, _().Tips),
+              children: [
+                (0, _.jsxs)("p", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: (0, _._)("#selectimage_tip_design_title"),
+                    }),
+                    ": ",
+                    (0, _._)(_.strDesignToken),
+                  ],
+                }),
+                (0, _.jsxs)("p", {
+                  children: [
+                    (0, _.jsx)("b", {
+                      children: (0, _._)("#selectimage_tip_usage_title"),
+                    }),
+                    ": ",
+                    (0, _._)(_.strUsageToken),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              rgAssetLangs: _,
+              fnGetAssetUrl: _,
+              fnDeletAssetLang: (_) => _(_.type, _, null),
+              fnDeleteAllAssets: () => _(_.type),
+              imageClassname: _().CapsulePreview,
+              bVerifyAssets: !0,
+            }),
+          ],
+        });
+      }
       var _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
@@ -13749,8 +14031,7 @@
         (0, _._)([_._], _.prototype, "OnOpenGradientInnerColor", null),
         (0, _._)([_._], _.prototype, "OnOpenGradientOuterColor", null),
         (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         GetDLCForAppID(_) {
           return this.m_mapAppIDToDLCs.get(_);
@@ -16779,6 +17060,15 @@
                         "By default we show sale pages on the events and discount store hub. Turning this on, we will not show this sale page there.",
                     }),
                   }),
+                Boolean(_(_.GetEventModel())) &&
+                  (0, _.jsx)(_._, {
+                    onChange: (_) => _.SetTag(_, _),
+                    label:
+                      "(VO) Let Partners Upload Store Capsules for this Sale",
+                    checked: _.GetEventModel().BHasTag(_),
+                    description:
+                      "Opens the store capsule uploader on the artwork tab to everyone who can edit this event. We can always reach it ourselves without this; turning it off hides it from them again but keeps whatever they uploaded.",
+                  }),
                 (0, _.jsx)(_._, {
                   onChange: (_) => _.SetLibraryHomeSpotlight(_),
                   label: "(VO) Force Spotlight on Library Home",
@@ -18892,7 +19182,7 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [_, _, _, _, _, _, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             return [
               _.GetEventType(),
               Boolean(_.GetEventModel().BHasTag("steam_best_of_year")),
@@ -18904,6 +19194,7 @@
               _ ? _.filter(Boolean).length : 0),
               _.BAllowedSteamStoreSpotlight(),
               _.GetAppID(),
+              _(_),
             ];
             var _;
           }),
@@ -19129,6 +19420,10 @@
                     partnerEventStore: _._,
                   }),
                 ],
+              }),
+            Boolean(_) &&
+              (0, _.jsx)(_, {
+                editModel: _,
               }),
           ],
         });
@@ -19937,133 +20232,6 @@
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
               _._.Init(),
               _._.Init(),
-              _._.AddDictionary(
-                (null == _ &&
-                  (_ = new Map([
-                    [
-                      "itemdef",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                        skipInternalNewline: !0,
-                        allowWrapTextForCopying: !0,
-                      },
-                    ],
-                    [
-                      "wishlist",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "followgame",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "followgroup",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "deckcompatcount",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "deckcompatuserlibrarycount",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "giveawayinfo",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "price",
-                      {
-                        Constructor: _._,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "pricesavings",
-                      {
-                        Constructor: _._,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "eventdoorvisibility",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "chooseaccount",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "badgecurrentlevel",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "optindoorquest",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "classname",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "localize",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "salesection",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                    [
-                      "reservationbutton",
-                      {
-                        Constructor: _,
-                        autocloses: !1,
-                      },
-                    ],
-                  ])),
-                _),
-              ),
               Promise.all([_._.InitGlobal()]).then(() =>
                 __webpack_require__(!1),
               );
@@ -20075,179 +20243,313 @@
                 string: (0, _._)("#Loading"),
               })
             : (0, _.jsx)(_._, {
-                children: (0, _.jsxs)(_._.Provider, {
-                  value: {
-                    bCanUseLink: !0,
-                  },
-                  children: [
-                    (0, _.jsx)(_._, {}),
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Home(":appid_or_vanity_str"),
-                          component: _,
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.List(":appid_or_vanity_str"),
-                          component: _,
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Create(":appid_or_vanity_str"),
-                          component: _._,
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Category(
-                            ":appid_or_vanity_str",
-                            ":gid(\\d+)?",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_._, {
-                              ..._,
-                              key: _.match.params.gid,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.EditRedirectToCategory(
-                            ":appid_or_vanity_str",
-                          ),
-                          render: (_) =>
-                            (0, _.jsx)(_, {
-                              ..._,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Edit(":appid_or_vanity_str", ":gid(\\d+)?"),
-                          render: (_) =>
-                            (0, _.createElement)(_, {
-                              ..._,
-                              key: _.match.params.gid,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Clone(
-                            ":appid_or_vanity_str",
-                            ":gid(\\d+)?",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_, {
-                              ..._,
-                              key: _.match.params.gid,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Publish(
-                            ":appid_or_vanity_str",
-                            ":gid(\\d+)?",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_, {
-                              ..._,
-                              key: _.match.params.gid,
-                              bInitiatePublishDialog: !0,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.PreviewSale(
-                            ":appid_or_vanity_str",
-                            ":gid(\\d+)?",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_, {
-                              ..._,
-                              key: _.match.params.gid,
-                              mode: "previewsale",
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Preview(
-                            ":appid_or_vanity_str",
-                            ":gid(\\d+)?",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_, {
-                              ..._,
-                              key: _.match.params.gid,
-                              mode: "preview",
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.View(":appid_or_vanity_str", ":gid(\\d+)"),
-                          render: (_) =>
-                            (0, _.createElement)(_, {
-                              ..._,
-                              key: _.match.params.gid,
-                              mode: "view",
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.Migrate(
-                            ":appid_or_vanity_str",
-                            ":oldAnnouncementGID(\\d+)",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_, {
-                              ..._,
-                              key: _.match.params.oldAnnouncementGID,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.MigrateCategory(
-                            ":appid_or_vanity_str",
-                            ":oldAnnouncementGID(\\d+)",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_._, {
-                              ..._,
-                              key: _.match.params.oldAnnouncementGID,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.ViewOldAnnouncement(
-                            ":appid_or_vanity_str",
-                            ":oldAnnouncementGID(\\d+)",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_._, {
-                              ..._,
-                              key: _.match.params.oldAnnouncementGID,
-                              bClearDirty: !0,
-                              bPreview: !1,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          exact: !0,
-                          path: _._.PreviewOldAnnouncement(
-                            ":appid_or_vanity_str",
-                            ":oldAnnouncementGID(\\d+)",
-                          ),
-                          render: (_) =>
-                            (0, _.createElement)(_._, {
-                              ..._,
-                              key: _.match.params.oldAnnouncementGID,
-                              bClearDirty: !0,
-                              bPreview: !0,
-                            }),
-                        }),
-                        (0, _.jsx)(_._, {
-                          component: _._,
-                        }),
-                      ],
-                    }),
-                  ],
+                children: (0, _.jsx)(_._, {
+                  dictionary:
+                    (null == _ &&
+                      (_ = new Map([
+                        [
+                          "itemdef",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                            skipInternalNewline: !0,
+                            allowWrapTextForCopying: !0,
+                          },
+                        ],
+                        [
+                          "wishlist",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "followgame",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "followgroup",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "deckcompatcount",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "deckcompatuserlibrarycount",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "giveawayinfo",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "price",
+                          {
+                            Constructor: _._,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "pricesavings",
+                          {
+                            Constructor: _._,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "eventdoorvisibility",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "chooseaccount",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "badgecurrentlevel",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "optindoorquest",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "classname",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "localize",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "salesection",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                        [
+                          "reservationbutton",
+                          {
+                            Constructor: _,
+                            autocloses: !1,
+                          },
+                        ],
+                      ])),
+                    _),
+                  children: (0, _.jsxs)(_._.Provider, {
+                    value: {
+                      bCanUseLink: !0,
+                    },
+                    children: [
+                      (0, _.jsx)(_._, {}),
+                      (0, _.jsxs)(_._, {
+                        children: [
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Home(":appid_or_vanity_str"),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.List(":appid_or_vanity_str"),
+                            component: _,
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Create(":appid_or_vanity_str"),
+                            component: _._,
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Category(
+                              ":appid_or_vanity_str",
+                              ":gid(\\d+)?",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_._, {
+                                ..._,
+                                key: _.match.params.gid,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.EditRedirectToCategory(
+                              ":appid_or_vanity_str",
+                            ),
+                            render: (_) =>
+                              (0, _.jsx)(_, {
+                                ..._,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Edit(
+                              ":appid_or_vanity_str",
+                              ":gid(\\d+)?",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
+                                ..._,
+                                key: _.match.params.gid,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Clone(
+                              ":appid_or_vanity_str",
+                              ":gid(\\d+)?",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
+                                ..._,
+                                key: _.match.params.gid,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Publish(
+                              ":appid_or_vanity_str",
+                              ":gid(\\d+)?",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
+                                ..._,
+                                key: _.match.params.gid,
+                                bInitiatePublishDialog: !0,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.PreviewSale(
+                              ":appid_or_vanity_str",
+                              ":gid(\\d+)?",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
+                                ..._,
+                                key: _.match.params.gid,
+                                mode: "previewsale",
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Preview(
+                              ":appid_or_vanity_str",
+                              ":gid(\\d+)?",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
+                                ..._,
+                                key: _.match.params.gid,
+                                mode: "preview",
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.View(
+                              ":appid_or_vanity_str",
+                              ":gid(\\d+)",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
+                                ..._,
+                                key: _.match.params.gid,
+                                mode: "view",
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.Migrate(
+                              ":appid_or_vanity_str",
+                              ":oldAnnouncementGID(\\d+)",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_, {
+                                ..._,
+                                key: _.match.params.oldAnnouncementGID,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.MigrateCategory(
+                              ":appid_or_vanity_str",
+                              ":oldAnnouncementGID(\\d+)",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_._, {
+                                ..._,
+                                key: _.match.params.oldAnnouncementGID,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.ViewOldAnnouncement(
+                              ":appid_or_vanity_str",
+                              ":oldAnnouncementGID(\\d+)",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_._, {
+                                ..._,
+                                key: _.match.params.oldAnnouncementGID,
+                                bClearDirty: !0,
+                                bPreview: !1,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            exact: !0,
+                            path: _._.PreviewOldAnnouncement(
+                              ":appid_or_vanity_str",
+                              ":oldAnnouncementGID(\\d+)",
+                            ),
+                            render: (_) =>
+                              (0, _.createElement)(_._, {
+                                ..._,
+                                key: _.match.params.oldAnnouncementGID,
+                                bClearDirty: !0,
+                                bPreview: !0,
+                              }),
+                          }),
+                          (0, _.jsx)(_._, {
+                            component: _._,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
                 }),
               })
         );

@@ -579,891 +579,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
-      function _(_) {
-        const { children: _ } = _;
-        return (0, _._)() && !_._.IN_STEAMUI
-          ? (0, _.jsx)(_._, {
-              className: _.GamepadOnlyScrollPanel,
-              children: _,
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: _,
-            });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.lazy(() =>
-        Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-      );
-      function _(_) {
-        const [_, _] = (0, _._)(_.appid, {
-            include_assets: !0,
-          }),
-          [_, _] = (0, _._)(_.clanID);
-        let _ = "";
-        return (
-          _.appid
-            ? (_ = _?.GetAssets()?.GetCommunityIconURL() || "")
-            : _.clanID && (_ = _ ? _.avatar_full_url : ""),
-          (0, _.jsx)("div", {
-            className: (0, _._)(_().ScrollButton, _().GameArt, _().AnimIn),
-            onClick: _.onAppIconClick,
-            children:
-              Boolean(_) &&
-              (0, _.jsx)("img", {
-                src: _,
-              }),
-          })
-        );
-      }
-      let _ = class extends _.Component {
-        m_loader = null;
-        m_refPage = _.createRef();
-        m_refContent = _.createRef();
-        m_refScroll = _.createRef();
-        m_refScrollAnchor = _.createRef();
-        m_scrollAnimation = null;
-        m_nTouchStartClientY;
-        m_nPreviousRenderCount = 0;
-        m_nCurrentRenderCount = 0;
-        constructor(_) {
-          super(_),
-            !this.props.bShowOnlyInitialEvent &&
-              this.props.initialEvent &&
-              ((this.m_loader = new _(this.props.partnerEventStore)),
-              this.m_loader.InitAroundEvent(
-                this.props.initialEvent,
-                this.props.additionalParams,
-              ));
-        }
-        FindCurrentlyViewedEventIndex() {
-          if (!this.m_refContent.current || !this.m_refScroll.current)
-            return -1;
-          let _ = this.m_refContent.current.children,
-            _ = this.GetScrollTopForComparison();
-          for (let _ = 0; _ < _.length; _++) {
-            let _ = _[_],
-              _ = _.offsetTop,
-              _ = _ + _.clientHeight;
-            if (_ <= _ && _ > _) return _;
-          }
-          return -1;
-        }
-        GetPaddingTop() {
-          return this.props.showAppHeader ? 136 : 56;
-        }
-        GetScrollTopForComparison() {
-          return Math.ceil(
-            this.m_refScroll.current.scrollTop + this.GetPaddingTop() + 24,
-          );
-        }
-        ScrollToEvent(_) {
-          let _ = this.m_refContent.current;
-          if (!_) return;
-          if (_ < 0 || _ >= _.children.length) return;
-          if (this.m_scrollAnimation) return;
-          let _ = _.children[_].offsetTop - this.GetPaddingTop();
-          this.ScrollToOffset(_);
-        }
-        ScrollToOffset(_) {
-          let _ = this.m_refScroll.current;
-          if (!_) return;
-          let _ = {
-            msDuration: 500,
-            timing: "cubic-in-out",
-            onComplete: this.OnScrollComplete,
-          };
-          (this.m_scrollAnimation = new _._(
-            _,
-            {
-              scrollTop: _,
-            },
-            _,
-          )),
-            this.m_scrollAnimation.Start();
-        }
-        ScrollToBottom() {
-          this.m_refScroll.current &&
-            this.ScrollToOffset(this.m_refScroll.current.scrollHeight);
-        }
-        ScrollToNextEvent() {
-          let _ = this.m_loader.GetEvents(),
-            _ = this.FindCurrentlyViewedEventIndex() + 1;
-          _ >= _.length
-            ? this.ScrollToBottom()
-            : (this.ScrollToEvent(_),
-              _ == _.length - 1 && this.m_loader.LoadMoreAtEnd());
-        }
-        ScrollToPrevEvent() {
-          let _ = this.FindCurrentlyViewedEventIndex(),
-            _ = _ - 1;
-          if (_ < 0) return void this.ScrollToOffset(0);
-          let _ = this.m_refContent.current;
-          if (_) {
-            let _ = _.children[_],
-              _ = _.offsetTop,
-              _ = _ + _.clientHeight,
-              _ = this.GetScrollTopForComparison();
-            (_ -= 0.3 * (_ - _)), _ <= _ && (_ = _);
-          }
-          this.ScrollToEvent(_);
-        }
-        OnScrollComplete() {
-          this.m_scrollAnimation = null;
-        }
-        Close() {
-          this.props.closeModal && this.props.closeModal();
-        }
-        OnBackgroundClick(_) {
-          _.currentTarget == _.target && this.Close();
-        }
-        OnKeyDown(_) {
-          _.keyCode == _._ && this.Close();
-        }
-        OnScroll(_) {
-          if (this.props.bShowOnlyInitialEvent) return;
-          let _ = this.m_refScroll.current;
-          if (!_) return;
-          let _ = _.clientHeight;
-          _.scrollHeight - (_.scrollTop + _) <= _ &&
-            this.m_loader.LoadMoreAtEnd(),
-            _.scrollTop <= _ && this.m_loader.LoadMoreAtBeginning();
-        }
-        getSnapshotBeforeUpdate(_) {
-          let _ = this.m_nCurrentRenderCount != this.m_nPreviousRenderCount;
-          if (((this.m_nPreviousRenderCount = this.m_nCurrentRenderCount), !_))
-            return null;
-          let _ = this.m_refScroll.current;
-          if (!_ || !this.m_refScrollAnchor.current) return null;
-          let _ = this.m_refScrollAnchor.current.GetDOM();
-          return _ ? _.offsetTop - _.scrollTop : null;
-        }
-        OnTouchStart(_) {
-          1 == _.touches.length &&
-            (this.m_nTouchStartClientY = _.touches[0].clientY);
-        }
-        OnTouchMove(_) {
-          if (!this.m_refScroll.current || 0 == _.touches.length) return;
-          const _ = this.m_nTouchStartClientY - _.touches[0].clientY;
-          this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _);
-        }
-        OnWheel(_) {
-          this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _.deltaY);
-        }
-        SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _) {
-          const _ = _._(_.target) && _._(this.m_refScroll.current, _.target),
-            _ = _ < 0 && this.m_refScroll.current.scrollTop < 1,
-            _ =
-              this.m_refScroll.current.scrollHeight -
-                this.m_refScroll.current.scrollTop <=
-              this.m_refScroll.current.clientHeight;
-          (!_ || _ || (_ > 0 && _)) && _.cancelable && _.preventDefault();
-        }
-        SetGlobalHeaderHidden(_) {
-          const _ = document.getElementsByClassName("responsive_header");
-          (0, _._)(_.length <= 1, "Must have at most one responsive_header"),
-            _.length >= 1 && (_[0].style.display = _ ? "none" : null);
-        }
-        SetFooterPinnedToBottom(_) {
-          const _ = document.getElementById("footer");
-          _ && (_.style.position = _ ? "absolute" : null);
-        }
-        componentDidMount() {
-          const _ = this.m_refScroll.current;
-          _ && !_._(_, _.ownerDocument.activeElement) && _.focus();
-          const _ = this.m_refPage.current;
-          _ &&
-            (_.addEventListener("touchstart", this.OnTouchStart),
-            _.addEventListener("touchmove", this.OnTouchMove, {
-              passive: !1,
-            }),
-            _.addEventListener("wheel", this.OnWheel, {
-              passive: !1,
-            })),
-            this.props.showAppHeader && this.SetGlobalHeaderHidden(!0),
-            this.SetFooterPinnedToBottom(!0);
-        }
-        componentDidUpdate(_, _, _) {
-          if (null !== _) {
-            let _ = this.m_refScroll.current;
-            _ && !_._(_, _.ownerDocument.activeElement) && _.focus();
-            let _ = this.m_refScrollAnchor.current
-              ? this.m_refScrollAnchor.current.GetDOM()
-              : null;
-            _ && (_.scrollTop = _.offsetTop - _);
-          }
-        }
-        componentWillUnmount() {
-          const _ = this.m_refPage.current;
-          _ &&
-            (_.removeEventListener("touchstart", this.OnTouchStart),
-            _.removeEventListener("touchmove", this.OnTouchMove),
-            _.removeEventListener("wheel", this.OnWheel)),
-            this.props.showAppHeader && this.SetGlobalHeaderHidden(!1),
-            this.SetFooterPinnedToBottom(!1);
-        }
-        render() {
-          const { initialEvent: _, bShowOnlyInitialEvent: _ } = this.props,
-            _ = !_,
-            _ = _ ? [] : _ ? [_] : this.m_loader.GetEvents(),
-            _ = [];
-          let _ = this.props.appid,
-            _ = this.props.clanSteamID?.GetAccountID();
-          for (const _ of _) {
-            const _ = _.GID == this.props.initialEvent.GID,
-              _ = _;
-            _.push(
-              (0, _.jsx)(
-                _,
-                {
-                  ref: _ ? this.m_refScrollAnchor : null,
-                  event: _,
-                  emoticonStore: this.props.emoticonStore,
-                  partnerEventStore: this.props.partnerEventStore,
-                  disableReadTracking: _,
-                  fnFilterImageURLsForKnownFailures:
-                    this.props.fnFilterImageURLsForKnownFailures,
-                  fnImageFailureCallback: this.props.fnImageFailureCallback,
-                  bDisableBroadcastPlayer: !_,
-                  className: this.props.eventClassName,
-                },
-                _.GID,
-              ),
-            ),
-              null == _ && (_ = _.appid),
-              null == _ && (_ = _.clanSteamID.GetAccountID());
-          }
-          return (
-            (this.m_nCurrentRenderCount = _.length),
-            (0, _.jsxs)(_._, {
-              onCancelButton: this.props.closeModal,
-              className: _().AppPartnerEventsPage,
-              ref: this.m_refPage,
-              children: [
-                this.props.showAppHeader &&
-                  (0, _.jsx)(_, {
-                    appId: _,
-                    clanId: _,
-                  }),
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(
-                    _().AppPartnerEventsBody,
-                    _().EndlessScroll,
-                  ),
-                  ref: this.m_refScroll,
-                  onScroll: this.OnScroll,
-                  onClick: this.OnBackgroundClick,
-                  tabIndex: -1,
-                  onKeyDown: this.OnKeyDown,
-                  scrollIntoViewType: _._.NoTransformSparseContent,
-                  children: _
-                    ? (0, _.jsx)("div", {
-                        className: _().NoEvents,
-                        children: (0, _._)("#EventDisplay_NoEventsToSee"),
-                      })
-                    : (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: (0, _._)(
-                              _().ControlSection,
-                              !this.props.onAppIconClick && _().NoGameLink,
-                              _ && _().NoScrollArrows,
-                            ),
-                            children: (0, _.jsx)("div", {
-                              className: _().ControlSectionWidth,
-                              children: (0, _.jsxs)("div", {
-                                className: _().ControlSectionRightSide,
-                                children: [
-                                  Boolean(this.props.closeModal) &&
-                                    (0, _.jsx)("div", {
-                                      className: (0, _._)(
-                                        _().CloseButton,
-                                        _().AnimIn,
-                                      ),
-                                      onClick: this.Close,
-                                      children: (0, _.jsx)(_.sED, {}),
-                                    }),
-                                  !_ &&
-                                    (0, _.jsx)("div", {
-                                      className: (0, _._)(
-                                        _().ScrollButton,
-                                        _()._,
-                                        _().AnimIn,
-                                      ),
-                                      onClick: this.ScrollToPrevEvent,
-                                      children: (0, _.jsx)(_.V5W, {
-                                        angle: 0,
-                                      }),
-                                    }),
-                                  !_ &&
-                                    (0, _.jsx)("div", {
-                                      className: (0, _._)(
-                                        _().ScrollButton,
-                                        _().Down,
-                                        _().AnimIn,
-                                      ),
-                                      onClick: this.ScrollToNextEvent,
-                                      children: (0, _.jsx)(_.V5W, {
-                                        angle: 180,
-                                      }),
-                                    }),
-                                  this.props.onAppIconClick &&
-                                    (0, _.jsx)(_, {
-                                      appid: _,
-                                      clanID: _,
-                                      onAppIconClick: this.props.onAppIconClick,
-                                    }),
-                                ],
-                              }),
-                            }),
-                          }),
-                          !_ &&
-                            (0, _.jsx)(_, {
-                              loader: this.m_loader,
-                              location: "top",
-                            }),
-                          (0, _.jsx)("div", {
-                            ref: this.m_refContent,
-                            className: (0, _._)(
-                              _().AppPartnerEventsContainer,
-                              !this.props.onAppIconClick && _().NoGameLink,
-                            ),
-                            children: _,
-                          }),
-                          !_ &&
-                            (0, _.jsx)(_, {
-                              loader: this.m_loader,
-                              location: "bottom",
-                            }),
-                        ],
-                      }),
-                }),
-              ],
-            })
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "ScrollToNextEvent", null),
-        (0, _._)([_._], _.prototype, "ScrollToPrevEvent", null),
-        (0, _._)([_._], _.prototype, "OnScrollComplete", null),
-        (0, _._)([_._], _.prototype, "Close", null),
-        (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
-        (0, _._)([_._], _.prototype, "OnKeyDown", null),
-        (0, _._)([_._], _.prototype, "OnScroll", null),
-        (0, _._)([_._], _.prototype, "OnTouchStart", null),
-        (0, _._)([_._], _.prototype, "OnTouchMove", null),
-        (0, _._)([_._], _.prototype, "OnWheel", null),
-        (_ = (0, _._)([_._], _));
-      const _ = (0, _._)((_) => {
-          let _ = _.loader.GetNewerState(),
-            _ = _.loader.GetOlderState();
-          return _ == _.Loading && _ == _.Loading
-            ? null
-            : ("top" == _.location ? _ : _) == _.Loading
-              ? (0, _.jsx)("div", {
-                  className: _().DirectionState,
-                  children: (0, _.jsx)(_._, {
-                    position: "center",
-                    string: (0, _._)("#Loading"),
-                  }),
-                })
-              : null;
-        }),
-        _ = _.forwardRef(function (_, _) {
-          const _ = (0, _._)(),
-            [_, _] = (0, _._)(_.event.appid, {
-              include_assets: !0,
-            }),
-            _ = (0, _._)(_.event.appid);
-          return (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-            bInGamepadUI: _,
-            bShouldMaskImages: _,
-            storeItem: _,
-          });
-        });
-      let _ = class extends _.Component {
-        m_refContent = _.createRef();
-        m_sendReadInfo = new _._();
-        m_bSentRead = !1;
-        OnEnterVisible() {
-          if (this.m_bSentRead || this.m_sendReadInfo.IsScheduled()) return;
-          this.m_sendReadInfo.Schedule(750, () => {
-            _._.Get().RecordEventRead(this.props.event, _._._),
-              (this.m_bSentRead = !0);
-          });
-        }
-        OnLeaveVisible() {
-          this.m_sendReadInfo.Cancel();
-        }
-        GetDOM() {
-          return this.m_refContent.current;
-        }
-        render() {
-          const {
-              event: _,
-              langOverride: _,
-              partnerEventStore: _,
-              emoticonStore: _,
-              className: _,
-              additionalTypeAndDateElement: _,
-              headerClassnames: _,
-              isPreview: _,
-              bShouldMaskImages: _,
-              storeItem: _,
-            } = this.props,
-            _ = _ || (0, _.sfN)(_._.LANGUAGE),
-            _ = _.GetDescriptionWithFallback(_) || "",
-            _ = _,
-            _ = _.GetCategoryAsString(),
-            _ = _.type;
-          let _ = "";
-          if (_.appid) _ = _?.GetName() || "";
-          else if (_.clanSteamID) {
-            const _ = _._.GetClanInfoByClanAccountID(
-              _.clanSteamID.GetAccountID(),
-            );
-            _ = _ ? _.group_name : "";
-          }
-          const _ = _._.GetTimeNowWithOverride(),
-            _ = _ !== _.uYK && _ < _.GetStartTimeAndDateUnixSeconds() && !_;
-          return (0, _.jsx)(_, {
-            children: (0, _.jsxs)("div", {
-              ref: this.m_refContent,
-              className: (0, _._)(
-                _,
-                _().PartnerEvent,
-                _().InLibraryView,
-                "editor" == _ ? _().InEditor : "",
-              ),
-              children: [
-                (0, _.jsx)(_, {
-                  ...this.props,
-                  eLanguage: _,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().LibraryEventTitleContainer,
-                  children: (0, _.jsxs)("div", {
-                    className: _().EventDetailTitleContainer,
-                    children: [
-                      this.props.headerElement,
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(
-                          _().EventTypeAndTimeRow,
-                          _ && _().WithReminder,
-                        ),
-                        children: [
-                          (0, _.jsxs)("div", {
-                            className: _().TimeandPostedBy,
-                            children: [
-                              (0, _.jsx)("span", {
-                                className: _().EventType,
-                                children: _,
-                              }),
-                              (0, _.jsxs)("span", {
-                                className: _().PostedBy,
-                                children: [
-                                  " ",
-                                  (0, _._)("#EventDisplay_PostedBy"),
-                                  _,
-                                  " ",
-                                ],
-                              }),
-                              (0, _.jsx)(_._, {
-                                event: _,
-                              }),
-                            ],
-                          }),
-                          _ &&
-                            !_ &&
-                            (0, _.jsx)("div", {
-                              className: _().ReminderContainer,
-                              children: (0, _.jsx)(_._, {
-                                eventModel: _,
-                                lang: _,
-                                bExpandLeft: !0,
-                              }),
-                            }),
-                          !_ && _,
-                        ],
-                      }),
-                      !this.props.disableReadTracking &&
-                        !_ &&
-                        (0, _.jsx)(_._, {
-                          onEnter: this.OnEnterVisible,
-                          onLeave: this.OnLeaveVisible,
-                          options: {
-                            rootMargin: "0px 0px -300px 0px",
-                          },
-                        }),
-                      this.props.bInGamepadUI
-                        ? (0, _.jsx)("div", {
-                            className: _().EventDetailTitle,
-                            children: _.GetNameWithFallback(_),
-                          })
-                        : (0, _.jsx)(_._, {
-                            eventModel: _,
-                            route: _._.k_eView,
-                            className: _().EventDetailTitle,
-                            children: _.GetNameWithFallback(_),
-                          }),
-                      _.BHasSubTitle(_) &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(
-                            _().EventDetailsSubTitle,
-                            _().LibraryViewSubtitle,
-                          ),
-                          children: _.GetSubTitle(_),
-                        }),
-                      (0, _.jsx)("div", {
-                        className: _().EventDetailUserType,
-                      }),
-                    ],
-                  }),
-                }),
-                Boolean(
-                  _.BEventCanShowBroadcastWidget() &&
-                    !this.props.bDisableBroadcastPlayer,
-                ) &&
-                  (0, _.jsx)("div", {
-                    className: _().EventBroadcastCtn,
-                    children: (0, _.jsx)(_.Suspense, {
-                      fallback: null,
-                      children: (0, _.jsx)(_, {
-                        event: this.props.event,
-                      }),
-                    }),
-                  }),
-                _.BHasTag("steam_award_nomination_request") &&
-                  (0, _.jsx)(_.EventDisplaySteamAwardNomination, {
-                    event: _,
-                    lang: _,
-                  }),
-                _.BHasTag("steam_award_vote_request") &&
-                  (0, _.jsx)(_.WinterSaleSteamAwardVoteWrapper, {
-                    appID: _.appid,
-                    bIsEventActionEnabled: _.BIsEventActionEnabled(),
-                    voteCategories: _.GetSteamAwardNomineeCategories(),
-                  }),
-                (0, _.jsxs)("div", {
-                  className: _().LibraryEventBodyContainer,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(
-                        _().EventDetailsBody,
-                        _().EventDetailsBody,
-                        _ && _().MaskImages,
-                      ),
-                      onContextMenu: _._.IN_CLIENT ? _._ : void 0,
-                      children: [
-                        (0, _.jsx)(_._, {
-                          text: _,
-                          partnerEventStore: _,
-                          event: _,
-                        }),
-                        (0, _.jsx)("span", {
-                          className: _().Clear,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)(_._, {
-                      event: this.props.event,
-                    }),
-                    Boolean(_.jsondata.read_more_link) &&
-                      (0, _.jsx)("div", {
-                        className: (0, _._)(_().ReadMoreCnt),
-                        children: (0, _.jsx)(_._, {
-                          className: (0, _._)(_().Button),
-                          href: _.jsondata.read_more_link,
-                          children: (0, _._)(
-                            "#EventEmail_Button_ClickForMoreDetails",
-                          ),
-                        }),
-                      }),
-                    Boolean(
-                      _.jsondata.bSaleEnabled && _.jsondata.sale_vanity_id,
-                    ) &&
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().ReadMoreCnt),
-                        children: [
-                          (0, _.jsx)(_._, {
-                            gidEvent: _.GID,
-                          }),
-                          (0, _.jsx)("a", {
-                            className: (0, _._)(_().Button, "LinkButton"),
-                            href: (0, _._)(_.GetSaleURL()),
-                            children: (0, _._)("#Event_Button_VisitSalePage"),
-                          }),
-                        ],
-                      }),
-                    (0, _.jsx)(_._, {
-                      appid: _.appid,
-                    }),
-                  ],
-                }),
-                !Boolean(_) &&
-                  (0, _.jsx)(_._, {
-                    eventModel: _,
-                    partnerEventStore: _,
-                    emoticonStore: _,
-                  }),
-              ],
-            }),
-          });
-        }
-      };
-      function _(_) {
-        const {
-            event: _,
-            fnFilterImageURLsForKnownFailures: _,
-            fnImageFailureCallback: _,
-            eLanguage: _,
-            bShouldMaskImages: _,
-          } = _,
-          _ = _.BImageNeedScreenshotFallback("background", _),
-          _ = _.type;
-        let _ = (0, _._)(_, "background", _, _._.background_main, !_);
-        return (
-          _ && _ && (_ = __webpack_require__(_)),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              _ != _.Fwr &&
-                !_ &&
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(
-                    _().EventCoverImageBackground,
-                    _ && _().MaskImages,
-                  ),
-                  rgSources: _,
-                  onIncrementalError: (_, _, _) => _ && _(_),
-                }),
-              _ &&
-                _.length > 0 &&
-                (0, _.jsx)(_._, {
-                  className: _().EventBackgroundBlur,
-                  rgSources: _,
-                  onIncrementalError: (_, _, _) => _ && _(_),
-                }),
-            ],
-          })
-        );
-      }
-      var _;
-      (0, _._)([_._], _.prototype, "OnEnterVisible", null),
-        (0, _._)([_._], _.prototype, "OnLeaveVisible", null),
-        (_ = (0, _._)([_._], _)),
-        (function (_) {
-          (_[(_.Idle = 1)] = "Idle"),
-            (_[(_.Loading = 2)] = "Loading"),
-            (_[(_.EndOfContent = 3)] = "EndOfContent");
-        })(_ || (_ = {}));
-      class _ {
-        k_nMaxPerDirection = 3;
-        m_nAppID = 0;
-        m_clanSteamID;
-        m_partnerEventStore;
-        m_additionalParams;
-        m_rgEvents = [];
-        m_eOlderDirection = _.Idle;
-        m_eNewerDirection = _.Idle;
-        constructor(_) {
-          (0, _._)(this), (this.m_partnerEventStore = _);
-        }
-        GetEvents() {
-          return this.m_rgEvents;
-        }
-        GetAppID() {
-          return this.m_nAppID;
-        }
-        GetOlderState() {
-          return this.m_eOlderDirection;
-        }
-        GetNewerState() {
-          return this.m_eNewerDirection;
-        }
-        async InitAroundEvent(_, _) {
-          const _ = this.m_partnerEventStore;
-          (this.m_nAppID = _.appid),
-            (this.m_clanSteamID = _.clanSteamID),
-            (this.m_rgEvents = []),
-            (this.m_eOlderDirection = _.Loading),
-            (this.m_eNewerDirection = _.Loading),
-            (this.m_additionalParams = _),
-            this.m_rgEvents.push(_);
-          let _ = null;
-          try {
-            _ = await __webpack_require__.LoadAdjacentPartnerEventsByEvent(
-              _,
-              this.m_clanSteamID,
-              this.m_nAppID,
-              this.k_nMaxPerDirection,
-              this.k_nMaxPerDirection,
-              this.m_additionalParams,
-            );
-          } catch (_) {}
-          (0, _._)(() => {
-            if (!_ || 0 == _.length)
-              return (
-                (this.m_eOlderDirection = _.EndOfContent),
-                void (this.m_eNewerDirection = _.EndOfContent)
-              );
-            let _ = _.findIndex((_) => _.GID == _.GID),
-              _ = _,
-              _ = _ >= 0 ? _.length - _ - 1 : 0;
-            (this.m_eNewerDirection =
-              _ >= this.k_nMaxPerDirection ? _.Idle : _.EndOfContent),
-              (this.m_eOlderDirection =
-                _ >= this.k_nMaxPerDirection ? _.Idle : _.EndOfContent),
-              (this.m_rgEvents = _);
-          });
-        }
-        async LoadMoreAtEnd() {
-          if (this.m_eOlderDirection != _.Idle) return;
-          if (0 == this.m_rgEvents.length) return;
-          let _ = this.m_rgEvents[this.m_rgEvents.length - 1];
-          this.m_eOlderDirection = _.Loading;
-          let _ = null;
-          try {
-            const _ = this.m_partnerEventStore;
-            _ = await __webpack_require__.LoadAdjacentPartnerEventsByEvent(
-              _,
-              this.m_clanSteamID,
-              this.m_nAppID,
-              0,
-              this.k_nMaxPerDirection,
-              this.m_additionalParams,
-            );
-          } catch (_) {}
-          (0, _._)(() => {
-            if (!_) return void (this.m_eOlderDirection = _.Idle);
-            const _ = new Set(this.m_rgEvents.map((_) => _.GID));
-            for (let _ of _)
-              _.has(_.GID) || (this.m_rgEvents.push(_), _.add(_.GID));
-            this.m_eOlderDirection =
-              _.length >= this.k_nMaxPerDirection ? _.Idle : _.EndOfContent;
-          });
-        }
-        async LoadMoreAtBeginning() {
-          if (this.m_eNewerDirection != _.Idle) return;
-          if (0 == this.m_rgEvents.length) return;
-          let _ = this.m_rgEvents[0];
-          this.m_eNewerDirection = _.Loading;
-          let _ = null;
-          try {
-            const _ = this.m_partnerEventStore;
-            _ = await __webpack_require__.LoadAdjacentPartnerEventsByEvent(
-              _,
-              this.m_clanSteamID,
-              this.m_nAppID,
-              this.k_nMaxPerDirection,
-              0,
-            );
-          } catch (_) {}
-          (0, _._)(() => {
-            if (!_) return void (this.m_eNewerDirection = _.Idle);
-            const _ = new Set(this.m_rgEvents.map((_) => _.GID));
-            for (let _ of _.reverse())
-              _.has(_.GID) || (this.m_rgEvents.unshift(_), _.add(_.GID));
-            this.m_eNewerDirection =
-              _.length >= this.k_nMaxPerDirection ? _.Idle : _.EndOfContent;
-          });
-        }
-      }
-      (0, _._)([_._.shallow], _.prototype, "m_rgEvents", void 0),
-        (0, _._)([_._], _.prototype, "m_eOlderDirection", void 0),
-        (0, _._)([_._], _.prototype, "m_eNewerDirection", void 0);
-      const _ = (0, _._)((_) =>
-        (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().AppPartnerEventsBanner,
-            "AppPartnerEventsBanner",
-          ),
-          children: (0, _.jsx)(_._, {
-            ..._,
-          }),
-        }),
-      );
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1740,8 +855,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1888,8 +1003,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2115,226 +1230,181 @@
         let _;
         return !0 === _ ? (_ = "up") : !1 === _ && (_ = "down"), _;
       }
-      const _ = (_) => {
-        const _ = (0, _._)();
-        return (0, _.jsx)(_, {
-          ..._,
-          bInGamepadUI: _,
-        });
-      };
-      let _ = class extends _.Component {
-        m_cancelSignal = _().CancelToken.source();
-        constructor(_) {
-          super(_);
-          const _ = _._.Get().BHasMyVote(_.eventModel);
-          let _;
-          _ && (_ = _(_._.Get().GetPreviouslyLoadedVote(_.eventModel))),
-            (this.state = {
-              bLoadedVote: !!_,
-              myVote: _,
-            });
-        }
-        async HandleRefreshMyVotingInformation() {
-          const { eventModel: _, partnerEventStore: _ } = this.props;
-          _._.Get().BIsUserLoggedIn() &&
-            (_._.Get()
-              .LoadMyVote(_, this.m_cancelSignal)
-              .then((_) => {
-                let _ = _(_);
-                this.setState({
-                  myVote: _,
-                  bLoadedVote: !0,
-                });
-              })
-              .catch((_) => {
-                let _ = (0, _._)(_);
-                console.error("EventDiscussionWidget = " + _.strErrorMsg);
-              }),
-            _._.LoadClanInfoForClanSteamID(_.clanSteamID).catch((_) => {
-              let _ = (0, _._)(_);
-              console.error("EventDiscussionWidget = " + _.strErrorMsg);
-            }));
-        }
-        componentDidMount() {
-          this.state.bLoadedVote || this.HandleRefreshMyVotingInformation();
-        }
-        componentDidUpdate(_) {
-          this.props.eventModel.GID != _.eventModel.GID &&
-            this.HandleRefreshMyVotingInformation();
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "EventDiscussionWidget is being unmounted",
-          );
-        }
-        OnVoteUp() {
-          this.Vote("up");
-        }
-        OnVoteDown() {
-          this.Vote("down");
-        }
-        Vote(_) {
-          const { eventModel: _ } = this.props;
-          _(_, _._.Get()) &&
-            this.state.myVote != _ &&
-            null != _ &&
-            this.state.bLoadedVote &&
-            this.setState(
-              {
-                bVotingUp: "up" == _,
-                bVotingDown: "down" == _,
-              },
-              () => {
-                _._.Get()
-                  .Vote(_, "up" === _, this.m_cancelSignal)
-                  .catch((_) => {
-                    let _ = (0, _._)(_);
-                    console.error(
-                      "EventDiscussionWidget.OnVote" + _ + " " + _.strErrorMsg,
-                      _,
-                    ),
-                      this.setState({
-                        bVotingDown: !1,
-                        bVotingUp: !1,
-                      });
-                  }),
-                  this.setState({
-                    myVote: _,
-                    bVotingDown: !1,
-                    bVotingUp: !1,
-                  });
-              },
-            );
-        }
-        GotoDiscussion(_) {
-          (0, _._)(
-            (0, _.jsx)(_._, {
-              strDescription: (0, _._)(
-                "#EventDisplay_Share_CommentMigrationInProcess",
+      function _(_) {
+        const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
+          _ = (0, _._)(),
+          { myVote: _, Vote: _ } = (function (_) {
+            const [_, _] = _.useState(() =>
+                _._.Get().BHasMyVote(_)
+                  ? _(_._.Get().GetPreviouslyLoadedVote(_))
+                  : void 0,
               ),
-            }),
-            (0, _._)(_),
-          );
-        }
-        OpenRepostDialogs(_) {
-          (0, _._)(
-            (0, _.jsx)(_, {
-              eventModel: this.props.eventModel,
-            }),
-            (0, _._)(_),
-          );
-        }
-        render() {
-          const { eventModel: _ } = this.props,
-            _ = (0, _._)(_.nVotesUp - _.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
-            _ = _.GetForumTopicURL(),
-            _ = (0, _._)(_),
-            _ = (0, _._)(),
-            _ = _.BIsUnlistedEvent(),
-            _ = _._.logged_in && _.Get().BCanRepostPartnerEvent();
-          return (0, _.jsxs)(_._, {
-            className: _().Container,
-            "flow-children": "row",
-            focusable: !1,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().InnerContainer,
-                children: [
-                  (0, _.jsxs)("div", {
+              [_, _] = _.useState(() => !!_._.Get().BHasMyVote(_)),
+              _ = _.useRef(_),
+              _ = _.GID;
+            _.useEffect(() => {
+              const _ = _.current || !_._.Get().BIsUserLoggedIn();
+              if (((_.current = !1), _)) return;
+              const _ = _().CancelToken.source();
+              return (
+                _._.Get()
+                  .LoadMyVote(_, _)
+                  .then((_) => {
+                    __webpack_require__(_(_)), _(!0);
+                  })
+                  .catch((_) => {
+                    const _ = (0, _._)(_);
+                    console.error("EventDiscussionWidget = " + _.strErrorMsg);
+                  }),
+                () => _.cancel("EventDiscussionWidget is being unmounted")
+              );
+            }, [_]);
+            const _ = _.useCallback(
+              (_) => {
+                _(_, _._.Get()) &&
+                  _ != _ &&
+                  null != _ &&
+                  _ &&
+                  (_._.Get()
+                    .Vote(_, "up" === _, _().CancelToken.source())
+                    .catch((_) => {
+                      const _ = (0, _._)(_);
+                      console.error(
+                        "EventDiscussionWidget.OnVote" +
+                          _ +
+                          " " +
+                          _.strErrorMsg,
+                        _,
+                      );
+                    }),
+                  __webpack_require__(_));
+              },
+              [_, _, _],
+            );
+            return {
+              myVote: _,
+              Vote: _,
+            };
+          })(_),
+          [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
+          [_, _, _, _] = (0, _._)(() => [
+            (0, _._)(_.nVotesUp - _.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
+            (0, _._)(_.GetForumTopicURL(_?.vanity_url)),
+            _.BIsUnlistedEvent(),
+            _.nCommentCount,
+          ]),
+          _ = (0, _._)(),
+          _ = _._.logged_in && _.Get().BCanRepostPartnerEvent();
+        return (0, _.jsxs)(_._, {
+          className: _().Container,
+          "flow-children": "row",
+          focusable: !1,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().InnerContainer,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().VoteContainer,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().VoteCount,
+                      children: [
+                        (0, _.jsx)(_.bfp, {
+                          className: _().VoteUpStaticIcon,
+                        }),
+                        (0, _._)(_),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
+                      focusable: !0,
+                      className: (0, _._)(
+                        _().Button,
+                        _().Icon,
+                        _().DiscussionButton,
+                        "up" == _ ? _().VoteButtonSelected : "",
+                      ),
+                      onActivate: () => _("up"),
+                      children: [
+                        (0, _.jsx)(_.bfp, {
+                          className:
+                            "up" == _ ? _().VoteUpSelectedIcon : _().VoteUpIcon,
+                        }),
+                        (0, _.jsx)("span", {
+                          className: _().DiscussionButtonText,
+                          children: (0, _._)("#Button_RateUp"),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)(_._, {
+                      focusable: !0,
+                      className: (0, _._)(
+                        _().Button,
+                        _().Icon,
+                        _().DiscussionButton,
+                        "down" == _ ? _().VoteButtonSelected : "",
+                      ),
+                      onActivate: () => _("down"),
+                      "aria-label": (0, _._)("#Button_RateDown"),
+                      children: (0, _.jsx)(_.bfp, {
+                        className:
+                          "down" == _
+                            ? _().VoteDownSelectedIcon
+                            : _().VoteDownIcon,
+                      }),
+                    }),
+                  ],
+                }),
+                Boolean(!_ && !_) &&
+                  (0, _.jsx)(_, {
+                    commentCount: _,
+                    discussionURL: _,
+                    gotoDiscussion: (_) => {
+                      (0, _._)(
+                        (0, _.jsx)(_._, {
+                          strDescription: (0, _._)(
+                            "#EventDisplay_Share_CommentMigrationInProcess",
+                          ),
+                        }),
+                        (0, _._)(_),
+                      );
+                    },
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
                     className: _().VoteContainer,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: _().VoteCount,
-                        children: [
-                          (0, _.jsx)(_.bfp, {
-                            className: _().VoteUpStaticIcon,
+                    children: (0, _.jsx)(_._, {
+                      focusable: !0,
+                      className: (0, _._)(
+                        _().Button,
+                        _().Icon,
+                        _().DiscussionButton,
+                        "down" == _ ? _().VoteButtonSelected : "",
+                      ),
+                      onActivate: (_) => {
+                        (0, _._)(
+                          (0, _.jsx)(_, {
+                            eventModel: _,
                           }),
                           (0, _._)(_),
-                        ],
-                      }),
-                      (0, _.jsxs)(_._, {
-                        focusable: !0,
-                        className: (0, _._)(
-                          _().Button,
-                          _().Icon,
-                          _().DiscussionButton,
-                          "up" == this.state.myVote
-                            ? _().VoteButtonSelected
-                            : "",
-                        ),
-                        onActivate: this.OnVoteUp,
-                        children: [
-                          (0, _.jsx)(_.bfp, {
-                            className:
-                              "up" == this.state.myVote
-                                ? _().VoteUpSelectedIcon
-                                : _().VoteUpIcon,
-                          }),
-                          (0, _.jsx)("span", {
-                            className: _().DiscussionButtonText,
-                            children: (0, _._)("#Button_RateUp"),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)(_._, {
-                        focusable: !0,
-                        className: (0, _._)(
-                          _().Button,
-                          _().Icon,
-                          _().DiscussionButton,
-                          "down" == this.state.myVote
-                            ? _().VoteButtonSelected
-                            : "",
-                        ),
-                        onActivate: this.OnVoteDown,
-                        "aria-label": (0, _._)("#Button_RateDown"),
-                        children: (0, _.jsx)(_.bfp, {
-                          className:
-                            "down" == this.state.myVote
-                              ? _().VoteDownSelectedIcon
-                              : _().VoteDownIcon,
-                        }),
-                      }),
-                    ],
-                  }),
-                  Boolean(!_ && !_) &&
-                    (0, _.jsx)(_, {
-                      commentCount: _.nCommentCount,
-                      discussionURL: _,
-                      gotoDiscussion: this.GotoDiscussion,
+                        );
+                      },
+                      children: (0, _._)("#EventRepost_Dialog_Title"),
                     }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _().VoteContainer,
-                      children: (0, _.jsx)(_._, {
-                        focusable: !0,
-                        className: (0, _._)(
-                          _().Button,
-                          _().Icon,
-                          _().DiscussionButton,
-                          "down" == this.state.myVote
-                            ? _().VoteButtonSelected
-                            : "",
-                        ),
-                        onActivate: this.OpenRepostDialogs,
-                        children: (0, _._)("#EventRepost_Dialog_Title"),
-                      }),
-                    }),
-                ],
-              }),
-              !this.props.bInGamepadUI &&
-                (0, _.jsx)("div", {
-                  className: _().ShareContainer,
-                  children: (0, _.jsx)(_, {
-                    eventModel: _,
-                    emoticonStore: this.props.emoticonStore,
-                    partnerEventStore: this.props.partnerEventStore,
                   }),
+              ],
+            }),
+            !_ &&
+              (0, _.jsx)("div", {
+                className: _().ShareContainer,
+                children: (0, _.jsx)(_, {
+                  eventModel: _,
+                  emoticonStore: _,
+                  partnerEventStore: _,
                 }),
-            ],
-          });
-        }
-      };
+              }),
+          ],
+        });
+      }
       function _(_) {
         const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
           [_, _, _] = (0, _._)(),
@@ -2417,11 +1487,41 @@
           ],
         });
       }
-      (0, _._)([_._], _.prototype, "OnVoteUp", null),
-        (0, _._)([_._], _.prototype, "OnVoteDown", null),
-        (0, _._)([_._], _.prototype, "GotoDiscussion", null),
-        (0, _._)([_._], _.prototype, "OpenRepostDialogs", null),
-        (_ = (0, _._)([_._], _));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: (0, _._)(
+            _().AppPartnerEventsBanner,
+            "AppPartnerEventsBanner",
+          ),
+          children: (0, _.jsx)(_._, {
+            ..._,
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(void 0);
+      function _() {
+        return _.useContext(_) ?? (0, _._)();
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2441,6 +1541,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2497,7 +1598,7 @@
           _ = {
             rgCategories: _,
             _:
-              ((_ = _._.GetTimeNowWithOverride()),
+              ((_ = (0, _._)()),
               new Date(1e3 * _).toISOString().slice(0, 19).replace("T", " ")),
           };
         var _;
@@ -2520,12 +1621,17 @@
         return null;
       }
       const _ = {
-        include_assets: !0,
-      };
+          include_assets: !0,
+        },
+        _ = {
+          include_basic_info: !0,
+        };
       function _(_) {
-        const { event: _, lang: _, previewMode: _ } = _,
+        const { event: _, previewMode: _ } = _,
           [_] = (0, _._)(() => [_.GetSteamAwardCategory()]),
           _ = (0, _._)("EventDisplaySteamAwardNomination"),
+          _ = (0, _._)(),
+          [_] = (0, _._)(_.appid, _),
           [_, _] = (0, _.useState)(null),
           { currentNomination: _, bLoadingNominationForCategory: _ } = (0, _._)(
             _,
@@ -2544,7 +1650,6 @@
             position: "center",
             string: (0, _._)("#Loading"),
           });
-        const _ = _._.GetTimeNowWithOverride();
         if (!_ && !_.bIsAutumnSaleActive) return null;
         let _ = {};
         _.strBackgroundCSS?.length && (_.backgroundColor = _.strBackgroundCSS),
@@ -2553,7 +1658,8 @@
           _.strTextColor?.length && (_.color = _.strTextColor);
         const _ = 1 == _.rgAwardCategoryDetails?.length,
           _ =
-            _.BIsEventActionEnabled() || _ < _.GetStartTimeAndDateUnixSeconds(),
+            _.BIsEventActionEnabled(_) ||
+            _ < _.GetStartTimeAndDateUnixSeconds(),
           _ = new Date().getFullYear();
         return (0, _.jsxs)("div", {
           style: _,
@@ -2599,7 +1705,7 @@
                         ? _
                           ? (0, _._)(
                               "#SteamAwards_EventNominateGamePrompt_Long",
-                              _.GetGameTitle(_),
+                              _?.GetName(),
                             )
                           : (0, _.jsx)("a", {
                               className: _().LinkText,
@@ -2608,7 +1714,7 @@
                               ),
                               children: (0, _._)(
                                 "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                                _.GetGameTitle(_),
+                                _?.GetName(),
                               ),
                             })
                         : (0, _._)("#SteamAwards_Event_NominationsClosed"),
@@ -2628,6 +1734,7 @@
       function _(_) {
         const { event: _, nominationEventDetails: _, currentNomination: _ } = _,
           [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
+          _ = (0, _._)(),
           _ = _?.appid,
           _ = (0, _._)(_, _, _._._),
           _ = Boolean(_?.appid == _ && _?.category_id == _),
@@ -2655,10 +1762,10 @@
             },
             [_, _, _],
           ),
-          _ = _._.GetTimeNowWithOverride(),
           _ = 1 == _.rgAwardCategoryDetails?.length,
           _ =
-            _.BIsEventActionEnabled() || _ < _.GetStartTimeAndDateUnixSeconds();
+            _.BIsEventActionEnabled(_) ||
+            _ < _.GetStartTimeAndDateUnixSeconds();
         return _ && (_ || _)
           ? (0, _.jsxs)("div", {
               className: (0, _._)(
@@ -3180,24 +2287,28 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _ } = _,
           _ = (0, _._)(() => _.jsondata?.referenced_appids || []),
-          [_, _] = _.useState(!1);
-        if (
-          (_.useEffect(() => {
-            _._.Get()
-              .QueueMultipleAppRequests(_, {})
-              .then(() => _(!0));
-          }, [_]),
-          !_.length || !_)
-        )
-          return null;
-        const _ = __webpack_require__
-            .map((_) => _._.Get().GetApp(_))
-            .filter(Boolean)
-            .map((_) => `[url="${_.GetStorePageURL()}"]${_.GetName()}[/url]`)
+          _ = (0, _._)(),
+          _ = (0, _._)({
+            queries: __webpack_require__.map((_) =>
+              (0, _._)(_, {
+                appid: _,
+              }),
+            ),
+            combine: (_) => ({
+              bLoaded: _.every((_) => !_.isPending),
+              data: _.map((_) => _.data),
+            }),
+          });
+        if (!_.length || !_.bLoaded) return null;
+        const _ = _.data
+            .filter((_) => _?.store_url_path && _?.name)
+            .map((_) => `[url="${(0, _._)(_)}"]${_.name}[/url]`)
             .join((0, _._)("#EventDisplay_ReferencedApps_Joiner")),
           _ = (0, _._)("#EventDisplay_ReferencedApps", _.length, _);
         return (0, _.jsx)("div", {
@@ -3215,6 +2326,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3251,7 +2363,7 @@
           }, [_]);
         return _?.length > 0 && _?.length > 0
           ? (0, _.jsxs)("a", {
-              href: (0, _._)(__webpack_require__.GetSaleURL()),
+              href: (0, _._)((0, _._)(_)),
               className: _.Link,
               children: [
                 (0, _.jsx)("img", {
@@ -3353,12 +2465,9 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [_] = (0, _._)(_, {
-            include_basic_info: !0,
-            include_links: !0,
+          { data: _ } = (0, _._)({
+            appid: _,
           });
-        if (!_) return null;
-        const _ = __webpack_require__.GetLinks();
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
               children: [

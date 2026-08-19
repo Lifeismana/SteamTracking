@@ -347,6 +347,26 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: _,
           },
+          sale_store_capsule_header: {
+            width: 920,
+            height: 430,
+            rgAcceptableTypes: _,
+          },
+          sale_store_capsule_small: {
+            width: 462,
+            height: 174,
+            rgAcceptableTypes: _,
+          },
+          sale_store_capsule_main: {
+            width: 1232,
+            height: 706,
+            rgAcceptableTypes: _,
+          },
+          sale_store_capsule_vertical: {
+            width: 748,
+            height: 896,
+            rgAcceptableTypes: _,
+          },
           spotlight_art: {
             width: 306,
             height: 260,

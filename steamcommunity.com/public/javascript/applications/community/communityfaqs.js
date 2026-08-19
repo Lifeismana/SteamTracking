@@ -4140,15 +4140,16 @@ License: MIT
       var i = n(40323),
         a = n.n(i);
       class s {
-        static ParseCSVFile(e) {
-          return new Promise((t, n) => {
-            const i = {
+        static ParseCSVFile(e, t) {
+          return new Promise((n, i) => {
+            const s = {
               header: !0,
               skipEmptyLines: "greedy",
-              complete: t,
-              error: (e) => n({ errors: [e] }),
+              complete: n,
+              error: (e) => i({ errors: [e] }),
+              transformHeader: t,
             };
-            a().parse(e, i);
+            a().parse(e, s);
           });
         }
         static ReadFile(e) {

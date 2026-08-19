@@ -308,15 +308,24 @@ var CLSTAMP = "steamdb";
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
-        function _(_, _) {
-          return !!_ && "object" == typeof _.SteamClient && _ in _.SteamClient;
-        }
         function _(_) {
           return (function (_, _) {
-            if (!_) return !1;
-            const [_, _] = _.split(".", 2);
-            return _ && _ && _(_, _) && _ in _.SteamClient[_];
+            const _ = _.lastIndexOf(".");
+            if (-1 == _) return !1;
+            const _ = _.substring(0, _),
+              _ = _.substring(_ + 1),
+              _ = _(_, _);
+            return null !== _ && "function" == typeof _[_];
           })(window, _);
+        }
+        function _(_, _) {
+          const _ = (_) => _ && "object" == typeof _;
+          let _ = _?.SteamClient;
+          for (const _ of _.split(".")) {
+            if (!__webpack_require__(_) || !(_ in _)) return null;
+            _ = _[_];
+          }
+          return __webpack_require__(_) ? _ : null;
         }
         __webpack_require__._(_, {
           _: () => _,
@@ -402,9 +411,9 @@ var CLSTAMP = "steamdb";
       }[_] || _) +
       ".js?contenthash=" +
       {
-        97: "cf9ab8dd63d386a4a440",
+        97: "5621624fae96724209d1",
         322: "7f701b122fbddc6331bf",
-        616: "6d0937cc10dc94b05f17",
+        616: "d0bec38ec7db4fda2b16",
       }[_]),
     (_.miniCssF = (_) =>
       "css/legacy_web/gamepad.css?contenthash=19ddf4825411373681e0"),
@@ -624,12 +633,12 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  _(565);
+  _(759);
   var _ = _(669),
     _ = _._(_),
     _ = _(629),
-    _ = _(811),
-    _ = _(380);
+    _ = _(800),
+    _ = _(538);
   let _ = [
     {
       index: 0,
@@ -758,12 +767,12 @@ var CLSTAMP = "steamdb";
     }
   }
   (0, _._)([_._], _.prototype, "PollGamepads", null);
-  var _ = _(884);
+  var _ = _(738);
   async function _(_) {
     const { InitializeGamepadNavigation: _ } = await Promise.all([
       _._(322),
       _._(616),
-    ]).then(_.bind(_, 293));
+    ]).then(_.bind(_, 354));
     _(_);
   }
   _._.endsWith("shared/") || (_._ = _._ + "shared/"),
@@ -776,7 +785,7 @@ var CLSTAMP = "steamdb";
               (0, _._)("BrowserView.PostMessageToParent")
             ? (async function () {
                 const { InitializeForDesktop: _ } = await _._(97).then(
-                  _.bind(_, 928),
+                  _.bind(_, 810),
                 );
                 _();
               })()

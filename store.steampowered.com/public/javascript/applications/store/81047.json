@@ -2964,6 +2964,8 @@
     "MediaConvert_InputError_GifParsingError": "ไม่สามารถวิเคราะห์ไฟล์ GIF ได้ โปรดเข้ารหัสใหม่หรือเปลี่ยนประเภทรูปแบบและลองใหม่อีกครั้ง",
     "MediaConvert_InputError_ImageTooSmall": "ภาพมีขนาดเล็กเกินไป โปรดอัปโหลดภาพที่มีขนาดอย่างน้อย 16x16 พิกเซล",
     "MediaConvert_InputError_AnimationTooSmall": "ภาพแบบเคลื่อนไหวหรือวิดีโอมีขนาดเล็กเกินไป โปรดอัปโหลดภาพแบบเคลื่อนไหวหรือวิดีโอที่มีขนาดอย่างน้อย 16x16 พิกเซล",
+    "MediaConvert_InputError_MultipleVideoStreams": "ไฟล์ดังกล่าวมีแทร็ควิดีโอมากกว่า 1 แทร็ค โปรดอัปโหลดไฟล์ที่มีแทร็ควิดีโอแทร็คเดียว",
+    "MediaConvert_InputError_AnimationNotAllowed": "ภาพนี้ไม่สามารถเป็นภาพแบบเคลื่อนไหวได้ โปรดอัปโหลดภาพนิ่ง",
     "MediaConvert_InputError_ImageTypeWithAudio": "ไฟล์ภาพไม่สามารถมีแทร็กเสียงได้",
     "MediaConvert_InputError_NoAvif_NotSupported_WithVideo": "ไม่รองรับเอาต์พุต AVIF สำหรับแหล่งที่มาที่เป็นวิดีโอ",
     "MediaConvert_InternalError_FailedToConvert": "ไม่สามารถแปลงไฟล์นี้ได้ โปรดเข้ารหัสไฟล์อีกครั้งแล้วลองใหม่",

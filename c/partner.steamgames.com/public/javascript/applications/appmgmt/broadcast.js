@@ -17413,6 +17413,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { gidEvent: _ } = _,
@@ -17441,7 +17442,7 @@
           }, [_]);
         return _?.length > 0 && _?.length > 0
           ? (0, _.jsxs)("a", {
-              href: (0, _._)(__webpack_require__.GetSaleURL()),
+              href: (0, _._)((0, _._)(_)),
               className: _.Link,
               children: [
                 (0, _.jsx)("img", {

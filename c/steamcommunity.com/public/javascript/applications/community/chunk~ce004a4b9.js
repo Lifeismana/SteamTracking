@@ -6,41 +6,235 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_) {
+        const _ = await fetch(_, {
+          method: "GET",
+        });
+        if (404 == _.status) return null;
+        if (!_._) throw new Error(`Server returned ${_.status}`);
+        const _ = await _.json();
+        return _.success != _._ ? null : _;
+      }
+      function _() {
+        return "undefined" != typeof window && "undefined" != typeof self
+          ? self.origin
+          : "ssr_server";
+      }
+      function _(_) {
+        return ["clantoclaninfo", _];
+      }
+      function _(_) {
+        return ["apptoclanid", _];
+      }
+      function _(_, _ = "group") {
+        return [
+          "vanitytoclanid",
+          _,
+          null == _ ? void 0 : _.toLocaleLowerCase(),
+        ];
+      }
+      function _(_) {
+        const _ = null == _ ? void 0 : _[0];
+        return (
+          "clantoclaninfo" == _ || "apptoclanid" == _ || "vanitytoclanid" == _
+        );
+      }
+      const _ = new WeakSet();
+      function _(_) {
+        if (!_.has(_)) {
+          _.add(_);
+          for (const _ of [
+            ["clantoclaninfo"],
+            ["apptoclanid"],
+            ["vanitytoclanid"],
+          ])
+            _.setQueryDefaults(_, {
+              staleTime: 1 / 0,
+              gcTime: 1 / 0,
+              retry: !1,
+            });
+        }
+      }
+      const _ = new WeakMap();
+      function _(_) {
+        if (!_) return null;
+        let _ = _.get(_);
+        return (
+          _ ||
+            ((_ = {
+              ..._,
+              clanSteamID: _.clanSteamIDString
+                ? new _._(_.clanSteamIDString)
+                : _._.InitFromClanID(_.clanAccountID),
+            }),
+            _.set(_, _)),
+          _
+        );
+      }
       function _(_, _) {
-        return new (_())(
-          async (_) => {
-            const _ = [..._],
-              _ = await _.xtC.GetPlayerLinkDetails(_, {
-                steamids: _,
-              }),
-              _ = new Map();
-            return (
-              _.Body()
-                .accounts()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  _.set(_.public_data.steamid, _);
-                }),
-              __webpack_require__.map((_) => {
-                var _;
-                return null !== (_ = _.get(_)) && void 0 !== _ ? _ : null;
-              })
-            );
-          },
-          {
-            maxBatchSize: 100,
-            cache: !1,
+        if (!_) return null;
+        _(_);
+        const _ = (function (_) {
+          const { msg: _, success: _, ..._ } = _;
+          return {
             ..._,
-          },
+            rss_language: _.rss_language ? _.rss_language : _.Bhc,
+          };
+        })(_);
+        return (
+          _.setQueryData(_(_.clanAccountID), _),
+          _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
+          _.vanity_url &&
+            _.setQueryData(_(_.vanity_url, "group"), _.clanAccountID),
+          _
+        );
+      }
+      function _(_, _) {
+        for (const _ of _) _(_, _);
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
+      function _(_, _) {
+        return (
+          _(_),
+          {
+            queryKey: _(null != _ ? _ : null),
+            queryFn: async () =>
+              _
+                ? _(
+                    _,
+                    await (async function (_) {
+                      const _ = _._.InitFromClanID(_);
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_),
+                  )
+                : null,
+            enabled: void 0 !== _,
+            select: _,
+          }
+        );
+      }
+      function _(_, _) {
+        return (
+          _(_),
+          {
+            queryKey: _(_),
+            queryFn: async () => {
+              var _, _;
+              return null !==
+                (_ =
+                  null ===
+                    (_ = _(
+                      _,
+                      await (async function (_) {
+                        return _(
+                          `${_._.COMMUNITY_BASE_URL}ogg/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                        );
+                      })(_),
+                    )) || void 0 === _
+                    ? void 0
+                    : _.clanAccountID) && void 0 !== _
+                ? _
+                : null;
+            },
+            enabled: !!_,
+          }
+        );
+      }
+      function _(_, _, _ = "group") {
+        return (
+          _(_),
+          {
+            queryKey: _(_, _),
+            queryFn: async () => {
+              var _, _;
+              if ("store" == _) {
+                const _ = _.getQueryData(_(_, "group"));
+                if (_) return _;
+              }
+              const _ =
+                "store" == _
+                  ? await (async function (_) {
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}games/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_)
+                  : await (async function (_) {
+                      return _(
+                        `${_._.COMMUNITY_BASE_URL}groups/${_}/ajaxgetvanityandclanid/?origin=${_()}`,
+                      );
+                    })(_);
+              return null !==
+                (_ =
+                  null === (_ = _(_, _)) || void 0 === _
+                    ? void 0
+                    : _.clanAccountID) && void 0 !== _
+                ? _
+                : null;
+            },
+            enabled: !!_,
+          }
         );
       }
       function _(_) {
-        return (0, _._)("PlayerLinkDetails", () => _(_));
+        var _;
+        return _.isPending
+          ? void 0
+          : null !== (_ = _.data) && void 0 !== _
+            ? _
+            : null;
+      }
+      function _(_, _ = "group") {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_(_, _, _));
+        return _(_ ? _(_) : void 0);
+      }
+      function _(_, _) {
+        var _;
+        if (_)
+          return null !== (_ = _(_.getQueryData(_(_)))) && void 0 !== _
+            ? _
+            : void 0;
+      }
+      function _(_, _) {
+        if (_) return _(_.getQueryData(_(_)), _);
+      }
+      function _(_, _, _) {
+        if (!_) return;
+        const _ = _ ? [_] : ["store", "group"];
+        for (const _ of _) {
+          const _ = _(_.getQueryData(_(_, _)), _);
+          if (_) return _;
+        }
+      }
+      async function _(_, _) {
+        return _ ? _(await _.fetchQuery(_(_, _))) : null;
+      }
+      async function _(_, _) {
+        return _ ? _(await _.fetchQuery(_(_, _)), _) : null;
+      }
+      async function _(_, _, _ = "group") {
+        return _ ? _(await _.fetchQuery(_(_, _, _)), _) : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -348,6 +542,670 @@
           return "CartCoupon";
         }
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 4,
+        _ = 8,
+        _ = 16,
+        _ = 32,
+        _ = 64,
+        _ = 128,
+        _ = 256;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  accept: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_RespondToClanInvite_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_RespondToClanInvite_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  rtime_oldest_date: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetDraftAndRecentPartnerEventSnippet_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.snippets || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  snippets: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetDraftAndRecentPartnerEventSnippet_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.gid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  gid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  announcement_gid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  hidden: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  published: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  rtime32_start_time: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  event_name: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  event_type: {
+                    _: 7,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetDraftAndRecentPartnerEventSnippet_Response_CEventSnippetData";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.requests || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  requests: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  cursor: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  count: {
+                    _: 3,
+                    _: 100,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetPartnerEventsByBuildIDRange_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  start_build_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  end_build_id: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  branch: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetPartnerEventsByBuildIDRange_Request_PatchNoteRange";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.matches || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  matches: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  num_total_results: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  next_cursor: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetPartnerEventsByBuildIDRange_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  build_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  branch: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  clan_event_gid: {
+                    _: 4,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  clan_account_id: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClan_GetPartnerEventsByBuildIDRange_Response_PatchNotesDesc";
+        }
+      }
+      var _;
+      !(function (_) {
+        (_.RespondToClanInvite = function (_, _, _) {
+          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _, _), _, {
+            ePrivilege: 1,
+          });
+        }),
+          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _, _) {
+            return _.SendMsg(
+              "Clan.GetDraftAndRecentPartnerEventSnippet#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetPartnerEventsByBuildIDRange = function (_, _, _) {
+            return _.SendMsg(
+              "Clan.GetPartnerEventsByBuildIDRange#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          });
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -5164,7 +6022,7 @@
                   },
                   costwhenadded: {
                     _: 2,
-                    _,
+                    _: _,
                   },
                   is_gift: {
                     _: 3,
@@ -5240,7 +6098,7 @@
                 fields: {
                   walletcredit: {
                     _: 1,
-                    _,
+                    _: _,
                   },
                 },
               }),
@@ -6808,62 +7666,656 @@
       })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      function _(_) {
-        return "[object Object]" === Object.prototype.toString.call(_);
-      }
-      function _(..._) {
-        return JSON.stringify(_, (_, _) => {
-          if (
-            (function (_) {
-              if (!_(_)) return !1;
-              const _ = _.constructor;
-              if (void 0 === _) return !0;
-              const _ = _.prototype;
-              return (
-                !!_(_) &&
-                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
-              );
-            })(_)
-          ) {
-            const _ = {};
-            return (
-              Object.keys(_)
-                .sort()
-                .forEach((_) => {
-                  _[_] = _[_];
-                }),
-              _
-            );
-          }
-          return _;
-        });
-      }
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      const _ = (0, _.createContext)({
-        instances: {},
-        factories: {},
-      });
-      function _(_, _) {
-        var _;
-        const _ = (0, _.useContext)(_),
-          _ = "string" == typeof _ ? _ : _(..._);
-        let _ = _;
-        for (; _; ) {
-          if (_ in _.instances) return _.instances[_];
-          if (_ in _.factories) break;
-          _ = _.parent;
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 0;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
         }
-        const _ = (
-          null !== (_ = null == _ ? void 0 : _.factories[_]) && void 0 !== _
-            ? _
-            : _
-        )();
-        return ((null != _ ? _ : _).instances[_] = _), _;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  clanid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  link_url: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  link_text: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  blurb: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  time_recommended: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  comment_count: {
+                    _: 7,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  upvote_count: {
+                    _: 8,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  accountid_creator: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  recommendation_state: {
+                    _: 10,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  received_compensation: {
+                    _: 11,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  received_for_free: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_RecommendedApp";
+        }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.listid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [10, 12, 13, 14], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  listid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  title: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  blurb: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  link: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  list_state: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  sort_order: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  time_created: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  time_updated: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  accountid: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  apps: {
+                    _: 10,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  list_type: {
+                    _: 11,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  title_localization: {
+                    _: 12,
+                    _: _._,
+                    _: !0,
+                    _: !0,
+                  },
+                  blurb_localization: {
+                    _: 13,
+                    _: _._,
+                    _: !0,
+                    _: !0,
+                  },
+                  link_localization: {
+                    _: 14,
+                    _: _._,
+                    _: !0,
+                    _: !0,
+                  },
+                  sale_clan_steamid: {
+                    _: 15,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  sale_clan_event_gid: {
+                    _: 16,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  list_jsondata: {
+                    _: 17,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  clan_account_id: {
+                    _: 18,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_ListDetails";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.recommended_app || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  recommended_app: {
+                    _: 1,
+                    _: _,
+                  },
+                  blurb: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  sort_order: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_ListDetails_ListItem";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  list_state: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  start: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  count: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  return_total_only: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  return_metadata_only: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  max_apps: {
+                    _: 7,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  sale_clan_event_gid: {
+                    _: 8,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetLists_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.list_details || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  list_details: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  total: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetLists_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  listid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetListDetails_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.list_details || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  list_details: {
+                    _: 1,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetListDetails_Response";
+        }
+      }
+      var _;
+      !(function (_) {
+        (_.GetLists = function (_, _, _) {
+          return _.SendMsg("StoreCuration.GetLists#1", (0, _._)(_, _, _), _, {
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1,
+          });
+        }),
+          (_.GetListDetails = function (_, _, _) {
+            return _.SendMsg(
+              "StoreCuration.GetListDetails#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          });
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -7030,6 +8482,11 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7038,79 +8495,2252 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)(_(_, _, _));
+      const _ = new WeakSet();
+      function _(_ = _._) {
+        if ("undefined" == typeof window) return;
+        if (_.has(_)) return;
+        const _ = (0, _._)("groupvanityinfo", "application_config");
+        (void 0 === _ && "complete" != document.readyState) ||
+          (_.add(_), _(_) && (0, _._)(_, _));
       }
       function _(_) {
-        const _ = _.useRef(void 0),
-          _ = _(_);
-        return _.data
-          ? _
-          : (_.current ||
-              (_.current = new _._(
-                "string" == typeof _ ? new _._(_) : _._.InitFromAccountID(_),
-              )),
-            {
-              ..._,
-              data: _.current,
-            });
+        const _ = _;
+        return (
+          !!(
+            _ &&
+            Array.isArray(_) &&
+            _.length > 0 &&
+            "object" == typeof _[0]
+          ) &&
+          "number" == typeof _[0].clanAccountID &&
+          ("number" == typeof _[0].appid || "string" == typeof _[0].vanity_url)
+        );
       }
-      const _ = _.createContext({
-        loadPersonaState: async (_, _) => {
-          if (null == _) return null;
-          const _ = await (function (_) {
-            return null != _ ? _ : (_ = (0, _._)(_));
-          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
-          return (function (_, _) {
-            var _, _;
-            let _ = new _._(_);
-            const _ = null == _ ? void 0 : _.public_data,
-              _ = null == _ ? void 0 : _.private_data;
-            (_.m_bInitialized = !!_),
-              (_.m_ePersonaState =
-                null !== (_ = null == _ ? void 0 : _.persona_state) &&
-                void 0 !== _
-                  ? _
-                  : _.cU3),
-              (_.m_strAvatarHash = (null == _ ? void 0 : _.sha_digest_avatar)
-                ? (0, _._)(_.sha_digest_avatar)
-                : _._),
-              (_.m_strPlayerName =
-                null !== (_ = null == _ ? void 0 : _.persona_name) &&
-                void 0 !== _
-                  ? _
-                  : _.ConvertTo64BitString()),
-              (_.m_strAccountName = null == _ ? void 0 : _.account_name),
-              (null == _ ? void 0 : _.persona_state_flags) &&
-                (_.m_unPersonaStateFlags =
-                  null == _ ? void 0 : _.persona_state_flags);
-            (null == _ ? void 0 : _.game_id) &&
-              (_.m_gameid = null == _ ? void 0 : _.game_id);
-            (null == _ ? void 0 : _.game_server_ip_address) &&
-              (_.m_unGameServerIP =
-                null == _ ? void 0 : _.game_server_ip_address);
-            (null == _ ? void 0 : _.lobby_steam_id) &&
-              (_.m_game_lobby_id = null == _ ? void 0 : _.lobby_steam_id);
-            (null == _ ? void 0 : _.game_extra_info) &&
-              (_.m_strGameExtraInfo = null == _ ? void 0 : _.game_extra_info);
-            (null == _ ? void 0 : _.profile_url) &&
-              (_.m_strProfileURL = _.profile_url);
-            return _;
-          })(_._.InitFromAccountID(_), _);
-        },
+      function _(_) {
+        return "string" == typeof _ ? parseInt(_) : _;
+      }
+      function _(_) {
+        return "string" == typeof _ ? Number.parseInt(_) : _;
+      }
+      const _ = new (class {
+        constructor() {
+          (this.m_queryClient = _._),
+            (this.m_boxCacheVersion = _._.box(0)),
+            (this.m_bWatchingCache = !1),
+            (this.m_bBumpScheduled = !1);
+        }
+        Init() {
+          this.LazyInit();
+        }
+        LazyInit() {
+          _(this.m_queryClient),
+            this.m_bWatchingCache ||
+              ((this.m_bWatchingCache = !0),
+              this.m_queryClient.getQueryCache().subscribe((_) => {
+                var _;
+                ("added" != (null == _ ? void 0 : _.type) &&
+                  "updated" != (null == _ ? void 0 : _.type) &&
+                  "removed" != (null == _ ? void 0 : _.type)) ||
+                  ((0, _._)(
+                    null === (_ = _.query) || void 0 === _
+                      ? void 0
+                      : _.queryKey,
+                  ) &&
+                    this.ScheduleCacheVersionBump());
+              }));
+        }
+        ScheduleCacheVersionBump() {
+          this.m_bBumpScheduled ||
+            ((this.m_bBumpScheduled = !0),
+            queueMicrotask(() => {
+              (this.m_bBumpScheduled = !1),
+                (0, _._)(() =>
+                  this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
+                );
+            }));
+        }
+        ReadCache() {
+          return (
+            this.LazyInit(), this.m_boxCacheVersion.get(), this.m_queryClient
+          );
+        }
+        AddGroupVanities(_) {
+          this.LazyInit(), _(_) && (0, _._)(this.m_queryClient, _);
+        }
+        BHasClanInfoLoaded(_) {
+          return (
+            (0, _._)(_.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
+            (0, _._)(
+              _.BIsClanAccount(),
+              "Clan SteamID is not a clan account id when requesting clan info ",
+            ),
+            this.BHasClanInfoLoadedByAccountID(_.GetAccountID())
+          );
+        }
+        BHasClanInfoLoadedByAccountID(_) {
+          return Boolean((0, _._)(_(_), this.ReadCache()));
+        }
+        RegisterClanData(_) {
+          this.LazyInit(), (0, _._)(this.m_queryClient, _);
+        }
+        async LoadOGGClanInfoForAppID(_) {
+          return (
+            this.LazyInit(),
+            (_ = _(_)),
+            (0, _._)(
+              0 != _,
+              "LoadOGGClanInfoForAppID called with appid of zero",
+            ),
+            0 == _ ? null : (0, _._)(_, this.m_queryClient).catch(() => null)
+          );
+        }
+        async LoadOGGClanInfoForIdentifier(_) {
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "store");
+        }
+        async LoadOGGClanInfoForGroupVanity(_) {
+          return this.LazyInit(), (0, _._)(_, this.m_queryClient, "group");
+        }
+        async LoadClanInfoForClanSteamID(_) {
+          return this.LoadClanInfoForClanAccountID(_.GetAccountID());
+        }
+        async LoadClanInfoForClanAccountID(_) {
+          return this.LazyInit(), (0, _._)(_(_), this.m_queryClient);
+        }
+        GetOGGClanInfo(_) {
+          const _ = this.ReadCache();
+          return "string" == typeof _ ? (0, _._)(_, _) : (0, _._)(_, _);
+        }
+        GetClanSteamIDForAppID(_) {
+          const _ = (0, _._)(_(_), this.ReadCache());
+          return _ ? _._.InitFromClanID(_.clanAccountID) : void 0;
+        }
+        GetClanVanityForAppID(_) {
+          var _;
+          return null === (_ = (0, _._)(_(_), this.ReadCache())) || void 0 === _
+            ? void 0
+            : _.vanity_url;
+        }
+        GetClanVanityForClanSteamID(_) {
+          var _;
+          return null === (_ = (0, _._)(_.GetAccountID(), this.ReadCache())) ||
+            void 0 === _
+            ? void 0
+            : _.vanity_url;
+        }
+        HasLoadedClanAccountID(_) {
+          return this.BHasClanInfoLoadedByAccountID(_);
+        }
+        GetClanMemberCount(_) {
+          var _, _;
+          return null !==
+            (_ =
+              null === (_ = (0, _._)(_(_), this.ReadCache())) || void 0 === _
+                ? void 0
+                : _.member_count) && void 0 !== _
+            ? _
+            : 0;
+        }
+        GetClanInfoByClanAccountID(_) {
+          return (
+            (0, _._)(
+              !!_,
+              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
+            ),
+            (0, _._)(_(_), this.ReadCache())
+          );
+        }
+        GetCreatorStoreURL(_) {
+          let _ = _._.GetCreatorHome(_);
+          if (_) return _.GetCreatorHomeURL("developer");
+          let _ = this.GetClanInfoByClanAccountID(_.GetAccountID());
+          return (
+            _._.COMMUNITY_BASE_URL +
+            (_.vanity_url
+              ? "groups/" + _.vanity_url
+              : "gid/" + _.ConvertTo64BitString())
+          );
+        }
+      })();
+      function _() {
+        const _ = (0, _._)();
+        return _(_), _;
+      }
+      function _(_) {
+        _();
+        const { data: _, isPending: _ } = (0, _._)(_ ? _(_) : void 0);
+        return [Boolean(_) && _, null != _ ? _ : void 0];
+      }
+      function _(_) {
+        const _ = _();
+        (0, _.useEffect)(() => {
+          _ &&
+            (0, _._)(_(_), _).catch((_) =>
+              console.error(`Failed to hint load clan info ${_}`, _),
+            );
+        }, [_, _]);
+      }
+      function _(_) {
+        var _;
+        return _(), null !== (_ = (0, _._)(_).data) && void 0 !== _ ? _ : null;
+      }
+      function _(_) {
+        const _ = _.BIsOGGEvent(),
+          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
+        if (_)
+          return {
+            bVisible: !1,
+          };
+        if (_.GetEventType() == _.ajI)
+          return {
+            bVisible: !1,
+          };
+        if (_.BHasSaleEnabled())
+          return {
+            bVisible: !0,
+          };
+        if (
+          _.jsondata.clone_from_event_gid &&
+          _.jsondata.clone_from_sale_enabled
+        )
+          return {
+            bVisible: !0,
+          };
+        if (_.clanSteamID.GetAccountID() == (0, _._)())
+          return {
+            bVisible: !1,
+          };
+        const _ = _._.GetCreatorHome(_.clanSteamID);
+        return _ && _.BHasClanAccountFlagSet(_._._)
+          ? {
+              bVisible: !0,
+            }
+          : _
+            ? {
+                bVisible: !0,
+                bValveOnly: !0,
+              }
+            : {
+                bVisible: !1,
+              };
+      }
+      function _(_) {
+        const _ = _.BIsOGGEvent(),
+          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
+        return _
+          ? _.BHasSaleEnabled()
+            ? {
+                bVisible: !0,
+              }
+            : _._.EUNIVERSE == _.wLO
+              ? {
+                  bVisible: !1,
+                }
+              : _ && _.GetEventType() == _.zeJ
+                ? {
+                    bVisible: !0,
+                    bValveOnly: !0,
+                  }
+                : {
+                    bVisible: !1,
+                  }
+          : {
+              bVisible: !1,
+            };
+      }
+      function _(_) {
+        const _ = _.BIsOGGEvent();
+        _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
+        return _ || _.GetEventType() != _.ajI
+          ? {
+              bVisible: !1,
+            }
+          : _.BHasSaleEnabled()
+            ? {
+                bVisible: !0,
+              }
+            : (_.clanSteamID.GetAccountID(),
+              (0, _._)(),
+              {
+                bVisible: !1,
+              });
+      }
+      (0, _._)("g_ClanStore", _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      function _(_, _, _) {
-        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  clan_steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  relation: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  linkname: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  json: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CDeveloperPageLink";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_account_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_account_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  appid_list: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CDeveloperPageToApps";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  link: {
+                    _: 2,
+                    _: _,
+                  },
+                  remove: {
+                    _: 3,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  update_json_only: {
+                    _: 4,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  skip_clan_permissions: {
+                    _: 5,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  partner_id: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_SetDevPageLink_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_SetDevPageLink_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageLinks_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.links || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  links: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageLinks_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_account_ids || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_account_ids: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  ignore_dlc: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageAllAppsLinked_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.results || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  results: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageAllAppsLinked_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_account_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_account_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  listid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  ignore_dlc: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.apps || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  apps: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  sort_order: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPageListApps_Response_ListApp";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.partnerid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  partnerid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPagesForPartner_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.results || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  results: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPagesForPartner_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_accountid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_accountid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  linknames: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPagesForPartner_Response_CDevPageInfo";
+        }
+      }
+      !(function (_) {
+        (_.SetDevPageLink = function (_, _, _) {
+          return _.SendMsg(
+            "StoreCatalog.SetDevPageLink#1",
+            (0, _._)(_, _, _),
+            _,
+            {
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            },
+          );
+        }),
+          (_.GetDevPageLinks = function (_, _, _) {
+            return _.SendMsg(
+              "StoreCatalog.GetDevPageLinks#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
+              },
+            );
+          }),
+          (_.GetDevPageAllAppsLinked = function (_, _, _) {
+            return _.SendMsg(
+              "StoreCatalog.GetDevPageAllAppsLinked#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetDevPageListApps = function (_, _, _) {
+            return _.SendMsg(
+              "StoreCatalog.GetDevPageListApps#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetDevPagesForPartner = function (_, _, _) {
+            return _.SendMsg(
+              "StoreCatalog.GetDevPagesForPartner#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          });
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor(_) {
+          (this.m_appidList = new Array()),
+            (this.m_strName = ""),
+            (this.m_strAvatarURLFullSize = ""),
+            (this.m_strTagLineLoc = ""),
+            (this.m_nFollowers = 0),
+            (this.m_strVanity = ""),
+            (this.m_webLink = void 0),
+            (this.m_linkedEvent = void 0),
+            (this.m_mapListInfo = new Map()),
+            (this.m_bIsLoaded = !1),
+            (this.m_bIsHidden = !1),
+            (this.m_clanAccountFlags = 0),
+            (0, _._)(this),
+            (this.m_clanSteamID = _);
+        }
+        Initialize(_) {
+          var _, _;
+          (this.m_strName = _.name || ""),
+            (this.m_strAvatarURLFullSize =
+              _.avatar_url_full_size ||
+              "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"),
+            (this.m_strTagLineLoc = _.tag_line_localized || ""),
+            (this.m_nFollowers = _.followers || 0),
+            (this.m_strVanity = _.vanity || void 0),
+            (this.m_webLink = _.weblink),
+            (this.m_bIsHidden = _.hidden || !1),
+            (this.m_clanAccountFlags =
+              null !== (_ = _.clan_account_flags) && void 0 !== _ ? _ : 0),
+            (this.m_linkedEvent = _.linked_event),
+            (this.m_mapListInfo = new Map(
+              Object.entries(
+                null !== (_ = _.list_info) && void 0 !== _ ? _ : {},
+              ),
+            )),
+            _.appids && _.appids.forEach((_) => this.m_appidList.push(_)),
+            (this.m_bIsLoaded = !0);
+        }
+        GetCreatorHomeIdentifier() {
+          return {
+            name: this.m_strName,
+            clan_account_id: this.m_clanSteamID.GetAccountID(),
+            type: "developer",
+            hidden: this.m_bIsHidden,
+          };
+        }
+        BIsPartnerEventEditorEnabled() {
+          return Boolean(this.m_clanAccountFlags & _._._);
+        }
+        BHasClanAccountFlagSet(_) {
+          return Boolean(this.m_clanAccountFlags & _);
+        }
+        BIsLoaded() {
+          return this.m_bIsLoaded;
+        }
+        GetClanSteamID() {
+          return this.m_clanSteamID;
+        }
+        GetClanAccountID() {
+          return this.m_clanSteamID.GetAccountID();
+        }
+        GetAppIDList() {
+          return this.m_appidList;
+        }
+        GetName() {
+          return this.m_strName;
+        }
+        GetAvatarURLFullSize() {
+          return this.m_strAvatarURLFullSize;
+        }
+        GetTagLine() {
+          return this.m_strTagLineLoc;
+        }
+        GetNumFollowers() {
+          return this.m_nFollowers;
+        }
+        BIsHidden() {
+          return this.m_bIsHidden;
+        }
+        GetCreatorHomeURL(_) {
+          if (this.m_strVanity) {
+            switch (_) {
+              case "publisher":
+                return (
+                  _._.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
+                );
+              case "franchise":
+                return (
+                  _._.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
+                );
+            }
+            return _._.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
+          }
+          return (
+            _._.STORE_BASE_URL +
+            "curator/" +
+            this.m_clanSteamID.GetAccountID() +
+            "/"
+          );
+        }
+        BHasWebLink() {
+          return void 0 !== this.m_webLink;
+        }
+        GetWebLink() {
+          return this.m_webLink;
+        }
+        GetVanityString() {
+          return this.m_strVanity;
+        }
+        GetLinkedEventGID() {
+          return this.m_linkedEvent;
+        }
+        GetListInfo() {
+          return this.m_mapListInfo;
+        }
+        AdjustFollower(_) {
+          this.m_nFollowers += _;
+        }
+        async EnablePartnerEventEditorFlag() {
+          this.BIsPartnerEventEditorEnabled() ||
+            (await this.UpdateGroupFlagsFeature([_._._, _._._], !0));
+        }
+        async UpdateGroupFlagsFeature(_, _) {
+          let _ = _._.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
+            _ = this.m_clanAccountFlags;
+          if (
+            (_.forEach((_) => {
+              _ ? (_ |= _) : (_ &= ~_);
+            }),
+            _ == this.m_clanAccountFlags)
+          )
+            return;
+          let _ = new Array();
+          _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._),
+            _ & _._._ && _.push(_._._);
+          let _ = new FormData();
+          _.append("sessionid", (0, _._)()),
+            _.append("clan_account_id", this.GetClanAccountID().toString()),
+            _.append("accountflags", JSON.stringify(_));
+          let _ = await _().post(_, _);
+          _ &&
+            200 == _.status &&
+            _.data.success == _._ &&
+            (this.m_clanAccountFlags = _);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_appidList", void 0),
+        (0, _._)([_._], _.prototype, "m_nFollowers", void 0),
+        (0, _._)([_._], _.prototype, "m_clanAccountFlags", void 0);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor() {
+          (this.m_mapClanToCreatorHome = new Map()),
+            (this.m_mapAppToCreatorIDList = new Map()),
+            (this.m_bLoadedFromConfig = !1),
+            (this.m_serviceTransport = void 0),
+            (0, _._)(this);
+        }
+        LazyInit() {
+          if (!this.m_bLoadedFromConfig) {
+            const _ = (0, _._)("creatorhome", "application_config");
+            this.ValidateStoreDefault(_) &&
+              _.forEach((_) => {
+                const _ = Number(_.creator_clan_id),
+                  _ = _._.InitFromClanID(_),
+                  _ = new _(_);
+                _.Initialize(_),
+                  (_.m_promise = _.GetAsPromise(_)),
+                  this.m_mapClanToCreatorHome.set(_, _);
+              });
+            const _ = (0, _._)("creatorhomeforapp", "application_config");
+            this.ValidateStoreDefaultAppList(_) &&
+              _.forEach((_) => {
+                void 0 !== _.appid &&
+                  (this.m_mapAppToCreatorIDList.has(_.appid) ||
+                    this.m_mapAppToCreatorIDList.set(_.appid, new Array()),
+                  this.m_mapAppToCreatorIDList.get(_.appid).push(_));
+              }),
+              (this.m_bLoadedFromConfig = !0);
+          }
+        }
+        GetServiceTransport() {
+          if (!this.m_serviceTransport) {
+            const _ = (0, _._)("loyalty_webapi_token", "application_config"),
+              _ = new _._(_._.WEBAPI_BASE_URL, _ || void 0);
+            this.m_serviceTransport = _.GetServiceTransport();
+          }
+          return this.m_serviceTransport;
+        }
+        static async GetAsPromise(_) {
+          return _;
+        }
+        ValidateStoreDefault(_) {
+          const _ = _;
+          return (
+            !!(
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            ) &&
+            "string" == typeof _[0].name &&
+            ("string" == typeof _[0].creator_clan_id ||
+              "number" == typeof _[0].creator_clan_id)
+          );
+        }
+        ValidateStoreDefaultAppList(_) {
+          const _ = _;
+          return (
+            !!(
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            ) &&
+            "number" == typeof _[0].clan_account_id &&
+              _[0].clan_account_id > 0 &&
+              "number" == typeof _[0].appid &&
+            _[0].appid > 0
+          );
+        }
+        BHasCreatorHomeLoaded(_) {
+          return (
+            this.m_mapClanToCreatorHome.has(_.GetAccountID()) &&
+            this.m_mapClanToCreatorHome.get(_.GetAccountID()).BIsLoaded()
+          );
+        }
+        GetCreatorHome(_) {
+          return this.m_mapClanToCreatorHome.get(_.GetAccountID());
+        }
+        GetCreatorHomeByID(_) {
+          return this.m_mapClanToCreatorHome.get(_.clan_account_id);
+        }
+        async LoadCreatorHome(_, _ = !1, _) {
+          if (
+            (this.LazyInit(),
+            _ || !this.m_mapClanToCreatorHome.has(_.GetAccountID()))
+          ) {
+            let _ = new _(_);
+            (_.m_promise = this.InternalCreatorHome(_, _)),
+              await _.m_promise,
+              this.m_mapClanToCreatorHome.set(_.GetAccountID(), _);
+          }
+          return this.m_mapClanToCreatorHome.get(_.GetAccountID()).m_promise;
+        }
+        async InternalCreatorHome(_, _) {
+          let _ = {
+              get_appids: !0,
+              _: _._.LANGUAGE,
+            },
+            _ =
+              _._.STORE_BASE_URL +
+              "curator/" +
+              _.GetClanAccountID() +
+              "/ajaxgetcreatorhomeinfo",
+            _ = await _().get(_, {
+              params: _,
+              cancelToken: _ && _.token,
+            });
+          return _.Initialize(_.data), _;
+        }
+        async LoadCreatorHomeListForAppIncludeHiddden(_, _) {
+          if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(_))) {
+            let _ = {
+                appid: _,
+              },
+              _ = _._.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
+              _ = await _().get(_, {
+                params: _,
+                cancelToken: _ && _.token,
+                withCredentials: !0,
+              });
+            this.m_mapAppToCreatorIDList.set(_, _.data.creator_list);
+          }
+          return this.m_mapAppToCreatorIDList.get(_);
+        }
+        async SearchCreatorHomeStore(_, _, _) {
+          let _ = `${_._.STORE_BASE_URL}curator/0/ajaxsearchcurators`,
+            _ = {
+              term: _.replace(" ", "+"),
+              require_creator: _,
+              _: _._.COUNTRY,
+              _: _._.LANGUAGE,
+              origin: self.origin,
+            },
+            _ = new Array();
+          const _ = await _().get(_, {
+            params: _,
+            cancelToken: _.token,
+          });
+          return (
+            _.data.curators &&
+              (0, _._)(() => {
+                _.data.curators.forEach((_) => {
+                  if (!this.m_mapClanToCreatorHome.has(_.creator_clan_id)) {
+                    let _ = _._.InitFromClanID(_.creator_clan_id),
+                      _ = new _(_);
+                    __webpack_require__.Initialize(_),
+                      this.m_mapClanToCreatorHome.set(_.creator_clan_id, _);
+                  }
+                  _.push(this.m_mapClanToCreatorHome.get(_.creator_clan_id));
+                });
+              }),
+            _
+          );
+        }
+        GetCreatorHomeListForAppIncludeHidden(_) {
+          return this.m_mapAppToCreatorIDList.has(_)
+            ? this.m_mapAppToCreatorIDList.get(_)
+            : [];
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapClanToCreatorHome", void 0),
+        (0, _._)([_._], _.prototype, "m_mapAppToCreatorIDList", void 0),
+        (0, _._)([_._], _.prototype, "LazyInit", null);
+      const _ = new _();
+      function _(_) {
+        if (!_) return null;
+        const _ = _.BHasCreatorHomeLoaded(_.clanSteamID)
+          ? _.GetCreatorHome(_.clanSteamID)
+          : void 0;
+        return _.GetSaleURL(
+          null == _ ? void 0 : _.GetCreatorHomeURL("developer"),
+        );
+      }
+      function _(_) {
+        var _, _;
+        if (!_) return;
+        const _ = (0, _._)("creator_home_list_info", "application_config");
+        if (null == _ || "object" != typeof _ || Array.isArray(_)) return;
+        const _ = _[_];
+        return _ && _.title
+          ? {
+              title: _.title,
+              description: (
+                null === (_ = _.description) || void 0 === _
+                  ? void 0
+                  : _.length
+              )
+                ? _.description
+                : void 0,
+              imageUrl: (
+                null === (_ = _.listtileimage) || void 0 === _
+                  ? void 0
+                  : _.length
+              )
+                ? _.listtileimage
+                : void 0,
+            }
+          : void 0;
+      }
+      function _(_) {
+        var _;
+        return null === (_ = _(_)) || void 0 === _ ? void 0 : _.title;
+      }
+      function _(_) {
+        var _;
+        return null === (_ = _(_)) || void 0 === _ ? void 0 : _.description;
+      }
+      function _(_) {
+        var _;
+        return null === (_ = _(_)) || void 0 === _ ? void 0 : _.imageUrl;
+      }
+      function _(_) {
+        const _ = _._.InitFromClanID(_);
         return {
-          queryKey: ["PlayerSummary", _],
-          queryFn: () => _.loadPersonaState(_, _),
-          enabled: !!_,
+          queryKey: ["CreatorHome", _],
+          initialData: () => _.GetCreatorHome(_),
+          queryFn: async () => {
+            const _ = _._.InitFromClanID(_);
+            return await _.LoadCreatorHome(_, !0);
+          },
         };
       }
-      let _;
+      function _(_) {
+        const { data: _, isFetching: _, refetch: _ } = (0, _._)(_(_));
+        return {
+          creatorHome: _,
+          isFetching: _,
+          refetch: _,
+        };
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["GetCreatorHomeListAppsQuery", _, _, _],
+          queryFn: async () => {
+            const _ = _.GetServiceTransport(),
+              _ = _._.Init(_);
+            _.Body().set_clan_account_id(_),
+              _.Body().set_listid(_),
+              _ && _.Body().set_ignore_dlc(!0);
+            const _ = await _.GetDevPageListApps(_, _);
+            if (_.GetEResult() != _._)
+              throw new Error(
+                `Error from GetCreatorHomeListAppsQuery: ${_.GetEResult()}`,
+              );
+            return _.Body()
+              .apps()
+              .slice()
+              .sort((_, _) => {
+                var _, _;
+                return (
+                  (null !== (_ = _.sort_order()) && void 0 !== _ ? _ : 0) -
+                  (null !== (_ = _.sort_order()) && void 0 !== _ ? _ : 0)
+                );
+              })
+              .map((_) => {
+                var _;
+                return null !== (_ = _.appid()) && void 0 !== _ ? _ : 0;
+              })
+              .filter((_) => _ > 0);
+          },
+          enabled: Boolean(_ > 0 && _),
+        };
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(_(_, _, _));
+        return (null == _ ? void 0 : _.isLoading) ? null : _.data;
+      }
+      function _(_, _) {
+        return {
+          queryKey: ["GetCreatorHomeGetAllListsQuery", _, _],
+          queryFn: async () => {
+            const _ = _.GetServiceTransport(),
+              _ = _._.Init(_._);
+            _.Body().set_steamid(
+              new _._(_, _._.EUNIVERSE, _.P3F, 0).ConvertTo64BitString(),
+            ),
+              _.Body().set_count(100);
+            const _ = await _._.GetLists(_, _);
+            return _.BSuccess()
+              ? _.Body()
+                  .list_details()
+                  .filter((_) => _ || _.list_state() != _._._)
+              : null;
+          },
+          enabled: _ > 0,
+        };
+      }
+      function _(_, _) {
+        const { data: _, isFetching: _, refetch: _ } = (0, _._)(_(_, _));
+        return {
+          lists: _,
+          isFetching: _,
+          refetch: _,
+        };
+      }
+      function _(_, _) {
+        return {
+          queryKey: ["GetCreatorHomeGetListsDetailsQuery", _, _],
+          queryFn: async () => {
+            var _;
+            const _ = _.GetServiceTransport(),
+              _ = _._.Init(_._);
+            _.Body().set_steamid(
+              new _._(_, _._.EUNIVERSE, _.P3F, 0).ConvertTo64BitString(),
+            ),
+              _.Body().set_listid(_);
+            const _ = await _._.GetListDetails(_, _);
+            return _.BSuccess() &&
+              null !== (_ = _.Body().list_details()) &&
+              void 0 !== _
+              ? _
+              : null;
+          },
+          enabled: _ > 0,
+        };
+      }
+      (0, _._)("g_CreatorHomeStore", _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor(_) {
+          (this.clanid = void 0),
+            (this.appid = 0),
+            (this.can_edit = !1),
+            (this.owns_app = !1),
+            (this.follows_app = !1),
+            (this.support_user = !1),
+            (this.valve_admin = !1),
+            (this.limited_user = !1),
+            (this.event_ignored = new Array()),
+            (this.event_followed = new Array()),
+            (this.event_followed_flags = new Array()),
+            (0, _._)(this),
+            (this.clanid = _);
+        }
+      }
+      (0, _._)([_._], _.prototype, "clanid", void 0),
+        (0, _._)([_._], _.prototype, "appid", void 0),
+        (0, _._)([_._], _.prototype, "can_edit", void 0),
+        (0, _._)([_._], _.prototype, "owns_app", void 0),
+        (0, _._)([_._], _.prototype, "follows_app", void 0),
+        (0, _._)([_._], _.prototype, "support_user", void 0),
+        (0, _._)([_._], _.prototype, "valve_admin", void 0),
+        (0, _._)([_._], _.prototype, "limited_user", void 0),
+        (0, _._)([_._], _.prototype, "event_ignored", void 0),
+        (0, _._)([_._], _.prototype, "event_followed", void 0),
+        (0, _._)([_._], _.prototype, "event_followed_flags", void 0),
+        (function (_) {
+          (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
+            (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
+            (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
+        })(_ || (_ = {}));
+      class _ {
+        constructor() {
+          (this.m_mapClanToUserPermissions = new Map()),
+            (this.m_mapAnnounceGIDToVote = new Map()),
+            (this.m_setReadEventGIDs = new Set()),
+            (this.m_tracker = void 0),
+            (this.m_cm = void 0),
+            (this.m_bIsPresentationMode = (0, _._)()),
+            (0, _._)(this);
+        }
+        static Get() {
+          return (
+            (0, _._)(
+              !!_.s_EventUserStore,
+              "Have not yet initialized global EventUserStore",
+            ),
+            _.s_EventUserStore
+          );
+        }
+        static IsInitialized() {
+          return !!_.s_EventUserStore;
+        }
+        static async InitGlobal(_) {
+          if (!_.s_EventUserStore) {
+            const _ = new _();
+            await _.Init(_),
+              (_.s_EventUserStore = _),
+              "dev" == _._.WEB_UNIVERSE && (window.g_EventUserStore = _);
+          }
+        }
+        static BIsInited() {
+          return Boolean(_.s_EventUserStore);
+        }
+        async Init(_) {
+          (this.m_cm = _), (this.m_tracker = new _._(_));
+          const _ = (0, _._)("partnereventpermissions", "application_config");
+          this.ValidateStoreDefault(_) &&
+            ((0, _._)(() => {
+              _.forEach((_) => {
+                let _ = new _(_.clanid),
+                  _ = {
+                    result: _,
+                    promise: _.RemapToPromise(_),
+                    bLoaded: !0,
+                  };
+                this.CopyFromResponseToTrack(_, _),
+                  this.m_mapClanToUserPermissions.set(_.clanid, _);
+              });
+            }),
+            ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "CEventUserStore has loaded",
+                this.m_mapClanToUserPermissions.size,
+                this.m_mapClanToUserPermissions,
+              ));
+          let _ = (0, _._)("uservotes", "application_config");
+          _ &&
+            (0, _._)(() => {
+              __webpack_require__.forEach((_) => {
+                let _ = !!_.voted_up || (!_.voted_down && void 0);
+                this.m_mapAnnounceGIDToVote.set(_.clanAnnouncementGID, _);
+              });
+            });
+        }
+        GetTracker() {
+          return this.m_tracker;
+        }
+        ValidateStoreDefault(_) {
+          const _ = _;
+          return (
+            !!(
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            ) &&
+            "number" == typeof _[0].clanid &&
+            "number" == typeof _[0].appid
+          );
+        }
+        RecordEventShown(_, _) {
+          _ &&
+            !_.bOldAnnouncement &&
+            _.GID &&
+            this.m_tracker.MarkEventShown(
+              _.GID,
+              _.clanSteamID.GetAccountID(),
+              _,
+            );
+        }
+        RecordEventRead(_, _) {
+          _ &&
+            !_.bOldAnnouncement &&
+            _.GID &&
+            (this.HasEventBeenRead(_.GID) ||
+              (this.SetEventAsRead(_.GID),
+              this.m_tracker.MarkEventRead(
+                _.GID,
+                _.clanSteamID.GetAccountID(),
+                _,
+              )));
+        }
+        SetEventAsRead(_) {
+          this.m_setReadEventGIDs.add(_);
+        }
+        HasEventBeenRead(_) {
+          return this.m_setReadEventGIDs.has(_);
+        }
+        static async RemapToPromise(_) {
+          return _;
+        }
+        BIsUserLoggedIn() {
+          return _._.logged_in;
+        }
+        BIsPartnerEventPermissionsLoaded(_) {
+          return (
+            this.m_mapClanToUserPermissions.has(_) &&
+            this.m_mapClanToUserPermissions.get(_).bLoaded
+          );
+        }
+        GetPartnerEventPermissions(_) {
+          if (!_ || !_.BIsValid()) return new _(0);
+          const _ = _.GetAccountID();
+          this.m_mapClanToUserPermissions.has(_) ||
+            this.LoadSingleAppEventPermissions(_);
+          return this.m_mapClanToUserPermissions.get(_).result;
+        }
+        BFollowsEvent(_, _) {
+          return (
+            -1 != this.GetPartnerEventPermissions(_).event_followed.indexOf(_)
+          );
+        }
+        BFollowsEventAndNotifiedBy(_, _, _) {
+          let _ = this.GetPartnerEventPermissions(_),
+            _ = _.event_followed.indexOf(_);
+          return -1 !== _ && (_.event_followed_flags[_] & _) == _;
+        }
+        BIgnoresEvent(_, _) {
+          return (
+            -1 != this.GetPartnerEventPermissions(_).event_ignored.indexOf(_)
+          );
+        }
+        async LoadSingleAppEventPermissions(_) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToUserPermissions.get(_);
+          return (
+            _ ||
+              ((_ = {
+                promise: this.InternalLoadSingleAppEventPermissions(_),
+                result: new _(_),
+                bLoaded: !1,
+              }),
+              this.m_mapClanToUserPermissions.set(_, _)),
+            _.promise
+          );
+        }
+        CopyFromResponseToTrack(_, _) {
+          var _, _, _, _;
+          (_.result.appid = null !== (_ = _.appid) && void 0 !== _ ? _ : 0),
+            (_.result.can_edit = !!_.can_edit),
+            (_.result.clanid = _.appid),
+            (_.result.event_followed =
+              null !== (_ = _.event_followed) && void 0 !== _ ? _ : []),
+            (_.result.event_ignored =
+              null !== (_ = _.event_ignored) && void 0 !== _ ? _ : []),
+            (_.result.event_followed_flags =
+              null !== (_ = _.event_followed_flags) && void 0 !== _ ? _ : []),
+            (_.result.follows_app = !!_.follows_app),
+            (_.result.owns_app = !!_.owns_app),
+            (_.result.limited_user = !!_.limited_user),
+            (_.support_user || _.valve_admin) && this.m_bIsPresentationMode
+              ? ((_.result.can_edit = !0),
+                (_.result.support_user = !1),
+                (_.result.valve_admin = !1))
+              : ((_.result.support_user = !!_.support_user),
+                (_.result.valve_admin = !!_.valve_admin)),
+            (_.bLoaded = !0);
+        }
+        async InternalLoadSingleAppEventPermissions(_) {
+          let _ = null,
+            _ = _.GetAccountID(),
+            _ = !Boolean(_._.logged_in);
+          if (!this.m_mapClanToUserPermissions.has(_)) {
+            let _ = new _(_.GetAccountID());
+            this.m_mapClanToUserPermissions.set(_, {
+              result: _,
+              promise: _.RemapToPromise(_),
+              bLoaded: !1,
+            });
+          }
+          try {
+            if (Boolean(_._.logged_in)) {
+              let _ =
+                  _._.COMMUNITY_BASE_URL +
+                  "gid/" +
+                  _.ConvertTo64BitString() +
+                  "/ajaxgetpartnereventpermissions/",
+                _ = {};
+              if (
+                ("partnerweb" == (0, _._)()
+                  ? ((_ =
+                      _._.PARTNER_BASE_URL +
+                      "partnerevents/ajaxgetpartnereventpermissions"),
+                    (_ = {
+                      clanaccountid: _.GetAccountID(),
+                    }))
+                  : "store" == (0, _._)() &&
+                    ((_ =
+                      _._.STORE_BASE_URL +
+                      "events/ajaxgetpartnereventpermissions"),
+                    (_ = {
+                      clanaccountid: _.GetAccountID(),
+                    })),
+                (_ = await _().get(_, {
+                  params: _,
+                  withCredentials: !0,
+                })),
+                _ && _.data.success == _._)
+              ) {
+                let _ = this.m_mapClanToUserPermissions.get(_);
+                _ && this.CopyFromResponseToTrack(_, _.data);
+              } else
+                console.error(
+                  "Partner Events Failed Load:" +
+                    (0, _._)(null == _ ? void 0 : _.data).strErrorMsg,
+                ),
+                  (_ = !0);
+            }
+          } catch (_) {
+            if (
+              ((_ = _.response),
+              (_ = !0),
+              _ &&
+                void 0 !== _.response &&
+                void 0 !== _.response.data &&
+                void 0 !== _.response.data.success &&
+                _.response.data.success == _._)
+            );
+            else {
+              const _ = (0, _._)(_);
+              console.error(
+                "InternalLoadSingleAppEventPermissions account: " +
+                  _ +
+                  ": " +
+                  _.strErrorMsg,
+                _,
+              );
+            }
+          } finally {
+            _ &&
+              (0, _._)(() => {
+                var _;
+                let _ = this.m_mapClanToUserPermissions.get(_);
+                (_.result.appid =
+                  null !== (_ = null == _ ? void 0 : _.data.appid) &&
+                  void 0 !== _
+                    ? _
+                    : 0),
+                  (_.result.can_edit = !1),
+                  (_.result.clanid = _ && _.data ? _.data.clanid : 0),
+                  (_.result.event_followed = new Array()),
+                  (_.result.event_ignored = new Array()),
+                  (_.result.event_followed_flags = new Array()),
+                  (_.result.follows_app = !1),
+                  (_.result.owns_app = !1),
+                  (_.result.support_user = !1),
+                  (_.result.valve_admin = !1),
+                  (_.result.limited_user = !1),
+                  (_.bLoaded = !0);
+              });
+          }
+          return this.m_mapClanToUserPermissions.get(_).result;
+        }
+        async SetFollowOrUnfollowEvent(_, _, _, _, _) {
+          let _ = this.GetPartnerEventPermissions(_),
+            _ = _.event_followed.indexOf(_),
+            _ = 0;
+          -1 !== _ &&
+            ((_ = _.event_followed_flags[_]), _ ? (_ = _ & ~_) : (_ |= _));
+          let _ = 0 == _,
+            _ =
+              ("store" === (0, _._)()
+                ? _._.STORE_BASE_URL + "events"
+                : _._.COMMUNITY_BASE_URL +
+                  "/gid/" +
+                  __webpack_require__.ConvertTo64BitString()) +
+              (_ ? "/unfolloworunignoreevent" : "/followorignoreevent"),
+            _ = new URLSearchParams();
+          _.append("sessionid", (0, _._)()),
+            _.append("ignore", "" + _),
+            _.append("gid", _),
+            _.append("notification_flag", "" + _),
+            _.append("clan_accountid", "" + __webpack_require__.GetAccountID());
+          await _().post(_, _, {
+            withCredentials: !0,
+          });
+          (0, _._)(() => {
+            let _ = this.m_mapClanToUserPermissions.get(
+                __webpack_require__.GetAccountID(),
+              ),
+              _ = null,
+              _ = null,
+              _ = null,
+              _ = null;
+            _
+              ? ((_ = _ ? _.result.event_ignored : _.result.event_followed),
+                (_ = _ ? null : _.result.event_followed_flags))
+              : _
+                ? ((_ = _.result.event_followed),
+                  (_ = _.result.event_followed_flags),
+                  (_ = _.result.event_ignored))
+                : ((_ = _.result.event_ignored),
+                  (_ = _.result.event_followed),
+                  (_ = _.result.event_followed_flags));
+            let _ = _.indexOf(_);
+            if ((_ > -1 && (_.splice(_, 1), _ && _.splice(_, 1)), _)) {
+              let _ = _.indexOf(_);
+              -1 == _ ? (_.push(_), _ && _.push(_)) : _ && (_[_] = _);
+            }
+          });
+        }
+        async Vote(_, _, _) {
+          if (!_ || !_.AnnouncementGID) return !1;
+          const _ = this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
+          if (_ === _) return !0;
+          if (
+            (this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _),
+            (0, _._)(() => {
+              !0 === _ && _.UpdateVoteCount("up", -1),
+                !1 === _ && _.UpdateVoteCount("down", -1),
+                !0 === _ && _.UpdateVoteCount("up", 1),
+                !1 === _ && _.UpdateVoteCount("down", 1);
+            }),
+            this.m_cm)
+          ) {
+            let _ = _._.Init(_._);
+            return (
+              __webpack_require__.Body().set_announcementid(_.AnnouncementGID),
+              __webpack_require__.Body().set_vote_up(!!_),
+              __webpack_require__
+                .Body()
+                .set_clan_accountid(_.clanSteamID.GetAccountID()),
+              (
+                await _._.RateClanAnnouncement(
+                  this.m_cm.GetServiceTransport(),
+                  _,
+                )
+              ).GetEResult() == _._
+            );
+          }
+          {
+            const _ = (0, _._)(),
+              _ =
+                "community" == _ || "steamtv" == _
+                  ? _._.COMMUNITY_BASE_URL +
+                    "gid/" +
+                    _.clanSteamID.ConvertTo64BitString() +
+                    "/announcements/rate/" +
+                    _.AnnouncementGID
+                  : _._.STORE_BASE_URL +
+                    "updated/ajaxrateupdate/" +
+                    _.AnnouncementGID,
+              _ = new URLSearchParams();
+            _.append("sessionid", (0, _._)()),
+              _.append("voteup", _ ? "1" : "0"),
+              _.append("clanid", "" + _.clanSteamID.GetAccountID()),
+              _.append("ajax", "1");
+            const _ = {
+              withCredentials: !0,
+              cancelToken: _.token,
+            };
+            return (await _().post(_, _, _)).data.success == _._;
+          }
+        }
+        async LoadMyVote(_, _) {
+          if (null == _ ? void 0 : _.AnnouncementGID) {
+            if (this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID))
+              return !!this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
+            let _;
+            if (this.m_cm) {
+              let _ = _._.Init(_._);
+              _.Body().set_announcementid(_.AnnouncementGID);
+              let _ = await _._.GetClanAnnouncementVoteForUser(
+                this.m_cm.GetServiceTransport(),
+                _,
+              );
+              _.GetEResult() == _._ &&
+                (_ =
+                  !!_.Body().voted_up() || (!_.Body().voted_down() && void 0));
+            } else {
+              const _ = "store" == (0, _._)(),
+                _ = _
+                  ? _._.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
+                  : _._.COMMUNITY_BASE_URL +
+                    "gid/" +
+                    _.clanSteamID.ConvertTo64BitString() +
+                    "/announcements/ajaxgetmyvote/" +
+                    _.AnnouncementGID,
+                _ = {
+                  gid: _ ? _.AnnouncementGID : void 0,
+                },
+                _ = await _().get(_, {
+                  withCredentials: !0,
+                  cancelToken: _.token,
+                  params: _,
+                });
+              _ = !!_.data.voted_up || (!_.data.voted_down && void 0);
+            }
+            return this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _), _;
+          }
+        }
+        SetVote(_, _) {
+          this.m_mapAnnounceGIDToVote.set(_, _);
+        }
+        BHasMyVote(_) {
+          return (
+            !!_.AnnouncementGID &&
+            this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID)
+          );
+        }
+        GetPreviouslyLoadedVote(_) {
+          return _.AnnouncementGID
+            ? this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID)
+            : void 0;
+        }
+        BShowEmailEditorTab(_) {
+          if (_.BHasEmailEnabled()) return !0;
+          if (_.clanSteamID.GetAccountID() == (0, _._)()) return !0;
+          let _ = this.GetPartnerEventPermissions(_.clanSteamID);
+          return (_._.IS_OGG || _._.IS_VALVE_GROUP) && _.valve_admin;
+        }
+      }
+      function _(_) {
+        const [_, _] = (0, _.useState)(
+            _.Get().BIsPartnerEventPermissionsLoaded(_),
+          ),
+          _ = _._.InitFromClanID(_),
+          [_, _] = (0, _.useState)(_.Get().GetPartnerEventPermissions(_));
+        return (
+          (0, _.useEffect)(() => {
+            if (!_) {
+              const _ = _._.InitFromClanID(_);
+              _.Get()
+                .LoadSingleAppEventPermissions(_)
+                .then((_) => {
+                  _(_), __webpack_require__(!0);
+                });
+            }
+          }, [_, _]),
+          _
+        );
+      }
+      (0, _._)([_._], _.prototype, "m_mapClanToUserPermissions", void 0),
+        (0, _._)([_._], _.prototype, "m_mapAnnounceGIDToVote", void 0),
+        (0, _._)([_._], _.prototype, "m_setReadEventGIDs", void 0),
+        (0, _._)([_._], _.prototype, "CopyFromResponseToTrack", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
     },
   },
 ]);
