@@ -104,7 +104,6 @@
   what():
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./0123-#w
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !BAllIntraProcessMessagesReceived( %d outstanding )
@@ -2254,6 +2253,7 @@ $steammessages_parental_objects.proto"
 %a, %e-%b-%y %H:%M:%S
 %cdkey%
 %command%
+%d %d %d %d\n
 %d MB avail\n
 %d MB free space\n
 %d MB total space\n
@@ -2609,6 +2609,13 @@ $steammessages_parental_objects.proto"
 %s: Detected unknown headset, app %u, vendor %s, model %s\n
 %s: FW outside known good range: %s < %s
 %s: OS update result: %d
+%s: Unable to find 'delay_on' and 'delay_off' in /sys/class/leds/rtw89-%s-multicolor
+%s: Unable to open 'delay_on' or 'delay_off' files
+%s: Unable to resolve phy path for interface '%s'
+%s: Unable to set 'delay_on' to '%s' or 'delay_off' to '%s'
+%s: Unable to set trigger state to 'timer'
+%s: Unable to write to brightness file!\n
+%s: Unable to write to multi_intensity file!\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: __position (which is %zu) >= _Nb (which is %zu)
 %s: activating: %d
@@ -5387,7 +5394,6 @@ $steammessages_parental_objects.proto"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG}
 +.CAudio_GetBluetoothAudioPreference_Request
 +.CAudio_SetBluetoothAudioPreference_Request
 +.CAuthenticationSupport_RevokeToken_Request
@@ -5603,6 +5609,7 @@ $steammessages_parental_objects.proto"
 , cnonce=
 , fingerprint size is
 , inprocess
+, legacy included
 , nonce=
 , not just within "
 , opaque=
@@ -8000,10 +8007,16 @@ $steammessages_parental_objects.proto"
 /sys/class/drm/card0/device/power_dpm_force_performance_level
 /sys/class/drm/card0/device/pp_od_clk_voltage
 /sys/class/hwmon
+/sys/class/leds/rtw89-%s-multicolor/brightness
+/sys/class/leds/rtw89-%s-multicolor/delay_off
+/sys/class/leds/rtw89-%s-multicolor/delay_on
+/sys/class/leds/rtw89-%s-multicolor/multi_intensity
+/sys/class/leds/rtw89-%s-multicolor/trigger
 /sys/class/net
 /sys/class/net/
 /sys/class/net/%s
 /sys/class/net/%s/address
+/sys/class/net/%s/phy80211
 /sys/class/net/%s/phy80211/rtw89_usb/serial_number
 /sys/class/net/%s/phy80211/rtw89_usb/uuid
 /sys/class/power_supply/BAT%d/%s
@@ -8168,7 +8181,6 @@ $steammessages_parental_objects.proto"
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
 08bX
@@ -13548,7 +13560,6 @@ $steammessages_parental_objects.proto"
 30TransportValidationClient_Stub
 30VanityURLChangedNotification_t
 31500
-32500
 3145728
 31AppProofOfPurchaseKeyResponse_t
 31CAPIJobRequestFriendProfileInfo
@@ -13677,6 +13688,7 @@ $steammessages_parental_objects.proto"
 31VoiceMutingHotKeyStateChanged_t
 32 bit float RGBA video
 32 bit float mono audio
+32500
 32:B\n
 32CAPIGameRecordingClientQueryBaseIbE
 32CAPIGameRecordingClientQueryBaseIyE
@@ -13814,8 +13826,9 @@ $steammessages_parental_objects.proto"
 32UserSubscribedItemsListChanged_t
 32f5h290g53047gv5034nbvt923b
 3333
-333333
 3333UUUU
+360.0
+333333
 333?333?
 33554432
 33AvailableBeaconLocationsUpdated_t
@@ -14239,7 +14252,6 @@ $steammessages_parental_objects.proto"
 35ParentalLockChangeAttemptComplete_t
 35RemoteStoragePublishedFileDeleted_t
 35StoreItem_BasicInfo_CreatorHomeLink
-360.0
 36CAPIJobMatchmakingRequestLobbyStatus
 36CAudio_GetMonoDownmixEnabled_Request
 36CAudio_GetSupportedFeatures_Response
@@ -16048,7 +16060,6 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -16063,6 +16074,7 @@ $steammessages_parental_objects.proto"
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16653,7 +16665,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H(C
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17641,6 +17652,8 @@ ActiveInstances
 Adapter
 AdapterDescription
 AdaptiveTrailer
+Add to Config Cache Request %u %u - adopting binding %u\n
+Add to Config Cache Request %u %u - binding was built for app %u/controller type %d, reloading\n
 Add to Config Cache Request %u %u\n
 AddAllocatedMessage
 AddAppDependency
@@ -21370,6 +21383,7 @@ CRemoteClientDongle: No holo-realtek-firmware-toggles helper script found, low l
 CRemoteClientDongle: Running post-application driver update check.
 CRemoteClientDongle: Successfully set low latency mode %s
 CRemoteClientDongle::OnRemoteClientUSBTriggerHotplug() valid
+CRemoteClientDongle::m_pWorkThreadPool
 CRemoteClientJobGetControllerConfig
 CRemoteClientJobHandleClientAuthorizationCancelRequest
 CRemoteClientJobHandleClientAuthorizationConfirmed
@@ -22943,6 +22957,7 @@ Connection
 Connection Details:\n
 Connection FAILED
 Connection Failed
+Connection State: %d && %d = %d // !%d && %d = %d // %d && !%d && !( %d || %d ) = %d\n
 Connection already has %u bytes pending, cannot queue any more messages\n
 Connection closed
 Connection completed
@@ -23212,6 +23227,7 @@ CreateAudioFileDecoder
 CreateAudioResampler
 CreateBeacon
 CreateBeacon() failed, a beacon already exists for this App. Call DestroyBeacon on that one first.\n
+CreateBindingInstanceForController
 CreateBindingInstanceFromVDFString
 CreateBoundSocket: ::bind couldn't find an open port between %u and %u\n
 CreateBoundSocket: ::bind to port %d returned error %s(%d)\n
@@ -23779,6 +23795,7 @@ DescriptorProto
 DescriptorProtosH
 Deseret
 DeserializeResult
+Desktop
 DesktopDBusIntrospectable
 DesktopDBusIntrospectableProxy
 DesktopDBusIntrospectableSkeleton
@@ -24196,7 +24213,6 @@ Dynamic FPS limiter: %d
 Dynamic refresh in steam support: %d
 Dyp~B\n1
 DzNGXcgyoN
-E!un
 E+E1EAEIESEUEaEwE}E
 E,v\nX
 E-mail Protection
@@ -28307,6 +28323,8 @@ IVRSteamPrivate_026
 IVRSteamPrivate_027
 IVRSteamPrivate_028
 IVRSteamPrivate_029
+IVRSteamPrivate_030
+IVRSteamPrivate_031
 IVRSystem_022
 I\n\finvite_links
 I\n\nSendShader
@@ -29417,8 +29435,8 @@ L SoZU`
 L*NBQJ]zr
 L+5d
 L8-\rHO
-L>0,F
 L?333?
+L?Lr
 LABEL
 LABEL_OPTIONAL
 LABEL_REPEATED
@@ -29653,6 +29671,8 @@ Load failed: %s.
 Load file into cache
 LoadBroadcastSettings
 LoadClientServiceCall: %x
+LoadConfigFromBindingInstance
+LoadConfigFromBindingInstance with invalid binding handle %u
 LoadConfigFromVDFString
 LoadControllerPersonalizationFile
 LoadCurrentEntryFromFile
@@ -29808,6 +29828,7 @@ M5my
 M8MF
 M;;va
 M@WQf
+M@Wp
 MAC
 MANGOHUD_CONFIGFILE
 MARK
@@ -30493,6 +30514,8 @@ N2vr19IVRSteamPrivate_026E
 N2vr19IVRSteamPrivate_027E
 N2vr19IVRSteamPrivate_028E
 N2vr19IVRSteamPrivate_029E
+N2vr19IVRSteamPrivate_030E
+N2vr19IVRSteamPrivate_031E
 N32SteamDatagramCachedCredentials_t11RelayTicketE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
@@ -30529,7 +30552,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_029EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_031EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -30560,6 +30583,8 @@ N5vrapi33CVRSteamPrivateAdapter_025_as_026E
 N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N5vrapi33CVRSteamPrivateAdapter_027_as_028E
 N5vrapi33CVRSteamPrivateAdapter_028_as_029E
+N5vrapi33CVRSteamPrivateAdapter_029_as_030E
+N5vrapi33CVRSteamPrivateAdapter_030_as_031E
 N6TagLib10ByteVector17ByteVectorPrivateE
 N6TagLib10ByteVectorE
 N6TagLib10FileStreamE
@@ -32702,6 +32727,8 @@ PipeWire:Interface:Port
 Piracy or Cheats
 Pitch
 Pkt number lurch by %lld; %04x->%04x
+PlatSetLEDBlink
+PlatSetLEDColor
 Plat_AbsoluteTime
 Plat_AbsoluteTimeToFloat
 Plat_CommandLineParamExists
@@ -40175,7 +40202,10 @@ Zulu
 [AppID %u] Inhibiting sync requests for pending platform change
 [AppID %u] Invalid content folder or file "%s" for item
 [AppID %u] Item %llu was cached as Steampipe manifest %llu, correcting to legacy content
+[AppID %u] Item change feed returned %s (revision %d, cursor %u)
+[AppID %u] Item change feed: revision %d, %d change(s), cursor %u -> %u%s
 [AppID %u] Item file details not available for %llu
+[AppID %u] Item info for %d item(s) (%s): revision %d, %d update(s), %d private, update time %u
 [AppID %u] Job Canceled
 [AppID %u] Loaded schema from disk.
 [AppID %u] Loaded workshop items in "%s" (%u installed, %u needed)
@@ -44314,6 +44344,7 @@ baseline
 baseline_manifest_id
 baseline_manifestid
 baselinemanifest
+basename
 basic
 basicConstraints
 basicOCSPResponse
@@ -46573,6 +46604,7 @@ debug
 debug_get_solr_query
 debug_solr_query
 debug_source_string_index
+debugpdthresh
 decimal128
 decimal32
 decimal64
@@ -48348,10 +48380,12 @@ ftruncate failed\n
 ftruncate64
 fu`z
 full
+full list
 full\n
 full_controller_support
 full_description_bbcode
 full_press
+full_reconcile
 fullname
 func(%lu)
 function_handle
@@ -48820,7 +48854,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggenh)
 ghjkl
 gidlist
 gidparentcomment
@@ -53654,7 +53688,7 @@ low-pri yield - ../clientdll/clientjob.cpp:456
 low-pri yield - ../clientdll/clientjob.cpp:487
 low-pri yield - ../clientdll/clientjob.cpp:796
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - ../clientdll/clientugc.cpp:7059
+low-pri yield - ../clientdll/clientugc.cpp:7073
 low-pri yield - ../clientdll/compatmanager.cpp:2086
 low-pri yield - ../clientdll/compatmanager.cpp:2342
 low-pri yield - ../clientdll/compatmanager.cpp:2609
@@ -54738,6 +54772,7 @@ m_options
 m_p == NULL
 m_pAddConfigRequest
 m_pAdditionalClientArgs
+m_pAdoptedMapping
 m_pAllowSetForegroundCompleteEvent
 m_pAllowSetForegroundEvent
 m_pAppDisableUpdateSerializer
@@ -59668,8 +59703,8 @@ remoteStorageConfig
 remote_address
 remote_candidate_types
 remote_client_dongle
-remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable
-remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable|leddebug|lednodebug
+remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable|[verbose 0|1]|[debugpdthresh thres (default -75)]
+remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable|leddebug|lednodebug|[verbose 0|1]|[debugpdthresh thres (default -75)]
 remote_client_id
 remote_client_name
 remote_client_softapcmd
@@ -61412,7 +61447,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 13 2026 22:41:29
+steam Aug 18 2026 23:29:55
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -62363,6 +62398,7 @@ timelinetime
 timeout
 timeout to requesting appinfo
 timeout/neterror
+timer
 timestamp
 timestamp_action
 timestamp_added
@@ -63499,6 +63535,7 @@ unknown message digest algorithm
 unknown module name
 unknown nid
 unknown object type
+unknown only
 unknown operation
 unknown option
 unknown option bit(s) set
@@ -63703,6 +63740,7 @@ usage: "log_callbacks <first callbackID> [last callbackID]
 usage: "log_ipc [counts|verbose|#maxcount] <filter>" Enables IPC logging. Specifying "counts" or "verbose" is optional, defaulting to counts.
 usage: "p2p_info" Displays the current state of the P2P networking subsystem.
 usage: "render_ipc_connections
+usage: verbose [0|1]
 usages
 usb-over-current
 usb_device

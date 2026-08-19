@@ -5519,7 +5519,7 @@
     },
     82778: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => ui, K: () => oi });
+      n.d(t, { l: () => mi, K: () => li });
       var a = n(7850),
         r = n(90626),
         i = n(76217),
@@ -7916,7 +7916,34 @@
           [1, "year"],
         ],
         Zn = 100;
-      function Kn(e, t) {
+      function Kn(e) {
+        const t = e?.results;
+        if (!t?.rollups?.length) return null;
+        const n = (t.end_date - t.start_date) / Cn.Kp.PerDay;
+        if (n < 7) return null;
+        let a = t.rollups,
+          r = t.rollup_type,
+          i = t.recent?.length ? t.recent : null;
+        return (
+          0 ==
+          (i || []).reduce(
+            (e, t) => e + t.recommendations_up + t.recommendations_down,
+            0,
+          )
+            ? (i = null)
+            : n < 30 && ((a = i), (r = "day"), (i = null)),
+          {
+            rollups: a,
+            rollupType: r,
+            recent: i,
+            pastEvents: e?.past_events || [],
+            bCountAllReviews: !!e?.count_all_reviews,
+            bExpandGraph: !!e?.expand_graph,
+            nTotalDays: n,
+          }
+        );
+      }
+      function Jn(e, t) {
         switch (t) {
           case "week":
             return e + 7 * Cn.Kp.PerDay;
@@ -7928,16 +7955,16 @@
             return e + Cn.Kp.PerDay;
         }
       }
-      function Jn(e, t) {
+      function Xn(e, t) {
         return new Date(1e3 * e).toLocaleDateString((0, xn.J)(), {
           ...t,
           timeZone: "UTC",
         });
       }
-      function Xn(e) {
+      function $n(e) {
         return (0, ne.D)(Math.abs(e));
       }
-      function $n(e) {
+      function ea(e) {
         const [t, n] = r.useState({ nWidth: 0, nHeight: 0 }),
           i = (0, Zt.wY)(
             r.useCallback((e) => {
@@ -7954,13 +7981,13 @@
           }),
         ];
       }
-      function ea(e, t) {
+      function ta(e, t) {
         return t * Math.floor(e / t);
       }
-      function ta(e) {
+      function na(e) {
         return Math.max(1, 0.3 * Math.sqrt(Math.max(1, e)));
       }
-      function na(e) {
+      function aa(e) {
         const { bucket: t } = e,
           n = t.recommendations_up,
           r = t.recommendations_down,
@@ -7973,7 +8000,7 @@
           children: [
             (0, a.jsx)("div", {
               className: wn().TooltipDate,
-              children: Jn(t.date, {
+              children: Xn(t.date, {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
@@ -7997,11 +8024,11 @@
           ],
         });
       }
-      const aa = 10,
-        ra = 10,
-        ia = 8,
-        sa = 1;
-      function oa(e) {
+      const ra = 10,
+        ia = 10,
+        sa = 8,
+        oa = 1;
+      function la(e) {
         const { markers: t, geometry: n, onSelectEvent: r } = e;
         if (!t.length) return null;
         const i = { day: "numeric", month: "long", year: "numeric" };
@@ -8012,13 +8039,13 @@
               "aria-hidden": !0,
               children: t.map((e) => {
                 const t = n.XFromTime(e.nDate),
-                  r = n.nPlotTop + ra,
-                  i = Math.max(r, n.YFromCount(e.nMaxUp) - ia);
+                  r = n.nPlotTop + ia,
+                  i = Math.max(r, n.YFromCount(e.nMaxUp) - sa);
                 return (0, a.jsx)(
                   "polygon",
                   {
                     className: wn().EventSpike,
-                    points: `${t - sa},${r} ${t},${i} ${t + sa},${r}`,
+                    points: `${t - oa},${r} ${t},${i} ${t + oa},${r}`,
                   },
                   e.event.start_date,
                 );
@@ -8029,13 +8056,13 @@
                 C.he,
                 {
                   className: wn().EventMarker,
-                  style: { left: n.XFromTime(e.nDate), top: n.nPlotTop - aa },
+                  style: { left: n.XFromTime(e.nDate), top: n.nPlotTop - ra },
                   direction: "top",
                   usePointerEvents: !0,
                   toolTipContent: Oe.Localize(
                     "#ReviewHistogram_OfftopicActivity",
-                    Jn(e.event.start_date, i),
-                    Jn(e.event.end_date, i),
+                    Xn(e.event.start_date, i),
+                    Xn(e.event.end_date, i),
                   ),
                   onClick: () => r?.(e.event),
                   children: "*",
@@ -8046,7 +8073,7 @@
           ],
         });
       }
-      function la(e) {
+      function ca(e) {
         const {
             buckets: t,
             rollupType: n,
@@ -8077,7 +8104,7 @@
                 if (!n.length || !e.length)
                   return { markers: a, setEventBuckets: r };
                 const i = e[0].date,
-                  s = Kn(e[e.length - 1].date, t);
+                  s = Jn(e[e.length - 1].date, t);
                 for (const o of n) {
                   let n = 0,
                     l = !1;
@@ -8087,7 +8114,7 @@
                       (i = o.start_date),
                         (s = o.end_date),
                         (c = e.date),
-                        (d = Kn(e.date, t) - 1),
+                        (d = Jn(e.date, t) - 1),
                         0 == Math.max(0, Math.max(c - s, i - d)) &&
                           ((l = !0),
                           r.add(a),
@@ -8125,13 +8152,13 @@
               })(n, s),
             [n, s],
           ),
-          [A, I] = $n(
+          [A, I] = ea(
             r.useMemo(
               () =>
                 (function (e) {
                   let t = "";
                   for (let n = 0; n < 12; ++n) {
-                    const a = Jn(Date.UTC(2026, n, 28) / 1e3, e);
+                    const a = Xn(Date.UTC(2026, n, 28) / 1e3, e);
                     a.length > t.length && (t = a);
                   }
                   return t;
@@ -8181,7 +8208,7 @@
               e,
               (function (e, t, n) {
                 if (t <= e) return [0];
-                const a = (t - e) / ta(n);
+                const a = (t - e) / na(n);
                 let r = -Math.floor(Math.log10(a));
                 r > zn && (r = zn);
                 const i = Math.pow(10, -r),
@@ -8195,7 +8222,7 @@
                 const l = Math.max(1, o * i),
                   c = [];
                 for (
-                  let n = ea(e, l);
+                  let n = ta(e, l);
                   c.length < Zn && (c.push(n), !(n >= t));
                   n += l
                 );
@@ -8203,11 +8230,11 @@
               })(e.flMin, e.flMax, p),
             );
           }, [t, b.length, d, p]),
-          [j, B] = $n(
+          [j, B] = ea(
             r.useMemo(
               () =>
                 T.rgTicks
-                  .map(Xn)
+                  .map($n)
                   .reduce((e, t) => (t.length > e.length ? t : e), ""),
               [T.rgTicks],
             ),
@@ -8238,7 +8265,7 @@
                   u = c - l,
                   m = e[0].date,
                   _ = e[e.length - 1].date,
-                  p = Math.max(m + 1, _ + (Kn(_, t) - _) * Mn),
+                  p = Math.max(m + 1, _ + (Jn(_, t) - _) * Mn),
                   h = d / (p - m),
                   g = u / (i.flMax - i.flMin),
                   f = l + i.flMax * g;
@@ -8264,7 +8291,7 @@
             () =>
               (function (e, t, n) {
                 if (t <= e) return [];
-                const a = (t - e) / ta(n);
+                const a = (t - e) / na(n);
                 let r = 0;
                 for (
                   ;
@@ -8289,13 +8316,13 @@
                 const o = i * Qn[s],
                   l = new Date(1e3 * e);
                 "month" == s
-                  ? l.setUTCMonth(ea(l.getUTCMonth(), i))
-                  : "year" == s && l.setUTCFullYear(ea(l.getUTCFullYear(), i)),
+                  ? l.setUTCMonth(ta(l.getUTCMonth(), i))
+                  : "year" == s && l.setUTCFullYear(ta(l.getUTCFullYear(), i)),
                   l.setUTCHours(0, 0, 0, 0),
                   o >= 4 * Cn.Kp.PerDay && l.setUTCDate(1),
                   o >= 2 * Cn.Kp.PerMonth &&
-                    l.setUTCMonth(ea(l.getUTCMonth(), 3)),
-                  o >= 2 * Vn && l.setUTCMonth(ea(l.getUTCMonth(), 6)),
+                    l.setUTCMonth(ta(l.getUTCMonth(), 3)),
+                  o >= 2 * Vn && l.setUTCMonth(ta(l.getUTCMonth(), 6)),
                   o >= Cn.Kp.PerYear && l.setUTCMonth(0);
                 const c = [];
                 let d = NaN,
@@ -8309,7 +8336,7 @@
                       Date.UTC(l.getUTCFullYear(), l.getUTCMonth() + 1, 1) -
                       Date.UTC(l.getUTCFullYear(), l.getUTCMonth(), 1);
                     l.setTime(1e3 * e + u + t * i),
-                      (u = l.getTime() - ea(l.getTime(), 1e3 * Cn.Kp.PerDay)),
+                      (u = l.getTime() - ta(l.getTime(), 1e3 * Cn.Kp.PerDay)),
                       l.setUTCHours(0, 0, 0, 0);
                   } else
                     "month" == s
@@ -8324,7 +8351,7 @@
           ),
           E = (e) => e.clientX - e.currentTarget.getBoundingClientRect().left,
           L = (e, t) => {
-            v.current ? (v.current = !1) : m?.(e.date, Kn(e.date, n), t);
+            v.current ? (v.current = !1) : m?.(e.date, Jn(e.date, n), t);
           },
           N = r.useMemo(() => {
             if (f) {
@@ -8384,7 +8411,7 @@
                           width: R.nPlotLeft - Pn,
                           top: R.YFromCount(e),
                         },
-                        children: Xn(e),
+                        children: $n(e),
                       },
                       e,
                     ),
@@ -8406,7 +8433,7 @@
                     }),
                   t.map((e, t) => {
                     const i = R.XFromTime(e.date),
-                      s = (Kn(e.date, n) - e.date) * R.flPixelsPerSecond,
+                      s = (Jn(e.date, n) - e.date) * R.flPixelsPerSecond,
                       o = Math.max(1, s * Mn),
                       l = e.recommendations_up * R.flPixelsPerReview,
                       c = e.recommendations_down * R.flPixelsPerReview,
@@ -8427,7 +8454,7 @@
                                 width: o,
                                 height: l,
                               },
-                              toolTipContent: (0, a.jsx)(na, { bucket: e }),
+                              toolTipContent: (0, a.jsx)(aa, { bucket: e }),
                               direction: "top",
                               usePointerEvents: !0,
                               nDelayShowMS: 0,
@@ -8447,7 +8474,7 @@
                                 width: o,
                                 height: c,
                               },
-                              toolTipContent: (0, a.jsx)(na, { bucket: e }),
+                              toolTipContent: (0, a.jsx)(aa, { bucket: e }),
                               direction: "bottom",
                               usePointerEvents: !0,
                               nDelayShowMS: 0,
@@ -8468,14 +8495,14 @@
                       top: R.nZeroY,
                     },
                   }),
-                  (0, a.jsx)(oa, { markers: b, geometry: R, onSelectEvent: _ }),
+                  (0, a.jsx)(la, { markers: b, geometry: R, onSelectEvent: _ }),
                   k.map((e) =>
                     (0, a.jsx)(
                       "div",
                       {
                         className: wn().XAxisLabel,
                         style: { left: R.XFromTime(e) },
-                        children: Jn(e, x),
+                        children: Xn(e, x),
                       },
                       e,
                     ),
@@ -8495,7 +8522,7 @@
           ],
         });
       }
-      function ca(e) {
+      function da(e) {
         const {
             appid: t,
             onSelectDateRange: n,
@@ -8506,37 +8533,7 @@
             className: c,
           } = e,
           d = An(t, e.eReviewScorePreference ?? vn.Wf.SL),
-          m = r.useMemo(
-            () =>
-              (function (e) {
-                const t = e?.results;
-                if (!t?.rollups?.length) return null;
-                const n = (t.end_date - t.start_date) / Cn.Kp.PerDay;
-                if (n < 7) return null;
-                let a = t.rollups,
-                  r = t.rollup_type,
-                  i = t.recent?.length ? t.recent : null;
-                return (
-                  0 ==
-                  (i || []).reduce(
-                    (e, t) => e + t.recommendations_up + t.recommendations_down,
-                    0,
-                  )
-                    ? (i = null)
-                    : n < 30 && ((a = i), (r = "day"), (i = null)),
-                  {
-                    rollups: a,
-                    rollupType: r,
-                    recent: i,
-                    pastEvents: e?.past_events || [],
-                    bCountAllReviews: !!e?.count_all_reviews,
-                    bExpandGraph: !!e?.expand_graph,
-                    nTotalDays: n,
-                  }
-                );
-              })(d.data),
-            [d.data],
-          ),
+          m = r.useMemo(() => Kn(d.data), [d.data]),
           _ = (function () {
             const [e, t] = r.useState(""),
               n = r.useRef(null),
@@ -8606,7 +8603,7 @@
           B = I
             ? {
                 nStartDate: I[0].date,
-                nEndDate: Kn(I[I.length - 1].date, "day"),
+                nEndDate: Jn(I[I.length - 1].date, "day"),
               }
             : void 0;
         return (0, a.jsxs)("div", {
@@ -8615,7 +8612,7 @@
           children: [
             (0, a.jsx)("div", {
               className: Yt()(wn().HistogramSection, !I && wn().FullWidth),
-              children: (0, a.jsx)(la, {
+              children: (0, a.jsx)(ca, {
                 buckets: x,
                 rollupType: A,
                 pastEvents: T,
@@ -8633,7 +8630,7 @@
               (0, a.jsx)("div", {
                 className: Yt()(wn().HistogramSection, wn().Recent),
                 ref: _.refRecentSection,
-                children: (0, a.jsx)(la, {
+                children: (0, a.jsx)(ca, {
                   buckets: I,
                   rollupType: "day",
                   pastEvents: T,
@@ -8671,11 +8668,11 @@
           ],
         });
       }
-      var da = n(64368),
-        ua = n.n(da),
-        ma = n(91934),
-        _a = n(56011),
-        pa = n(65697);
+      var ua = n(64368),
+        ma = n.n(ua),
+        _a = n(91934),
+        pa = n(56011),
+        ha = n(65697);
       !(async function () {
         if (
           "undefined" == typeof HTMLElement ||
@@ -8685,16 +8682,16 @@
           (await n.e(8433).then(n.bind(n, 8433))).apply();
         }
       })();
-      const ha = 0,
-        ga = 1,
-        fa = 2;
-      function Sa(e) {
+      const ga = 0,
+        fa = 1,
+        Sa = 2;
+      function va(e) {
         const {
             direction: t,
             ignoreHorizontal: n,
             ignoreVertical: a,
             dismissOnClick: i,
-            interactionMode: s = ha,
+            interactionMode: s = ga,
           } = e,
           o = (0, r.useRef)(null),
           l = (0, r.useRef)(!1),
@@ -8704,7 +8701,7 @@
           [_, p] = (0, r.useMemo)(
             () =>
               (function (e) {
-                const [t, n] = (0, ma.x)(e, "-");
+                const [t, n] = (0, _a.x)(e, "-");
                 return "left" === t || "right" === t ? [void 0, t] : [t, n];
               })(t),
             [t],
@@ -8778,7 +8775,7 @@
                     )));
           }, [p, n, a, _]),
           g = (0, r.useMemo)(() => {
-            if (d.current) return (0, _a._f)(d.current);
+            if (d.current) return (0, pa._f)(d.current);
           }, [d.current]);
         (0, r.useEffect)(
           () =>
@@ -8846,7 +8843,7 @@
           ),
           T = (0, r.useCallback)(
             (e) => {
-              s === fa && f();
+              s === Sa && f();
             },
             [s, f],
           ),
@@ -8875,16 +8872,16 @@
             [x, i, u, f],
           );
         let R;
-        s !== ha || u
-          ? s === ga && (R = u ? S : f)
+        s !== ga || u
+          ? s === fa && (R = u ? S : f)
           : (R = (e) => {
               e.preventDefault(), f();
             });
         const k = {
             "aria-expanded": u,
             role: "button",
-            onMouseEnter: s === ha ? f : void 0,
-            onMouseLeave: s === ha ? S : void 0,
+            onMouseEnter: s === ga ? f : void 0,
+            onMouseLeave: s === ga ? S : void 0,
             onClick: R,
             ref: d,
             onKeyDown: A,
@@ -8900,7 +8897,7 @@
             onBlur: j,
             onClick: B,
             onKeyDown: D,
-            className: pa.PopoverMenu,
+            className: ha.PopoverMenu,
           };
         return (
           (0, r.useImperativeHandle)(
@@ -8911,16 +8908,16 @@
           { isShowingMenu: u, triggerProps: k, menuProps: E, closeMenu: x }
         );
       }
-      var va = n(7445);
-      function ya(e, t) {
+      var ya = n(7445);
+      function ba(e, t) {
         return (n) => {
           e?.(n), t?.(n);
         };
       }
-      function ba(e) {
+      function wa(e) {
         const {
             direction: t,
-            interactionMode: n = ha,
+            interactionMode: n = ga,
             ignoreHorizontal: s,
             ignoreVertical: o,
             dismissOnClick: l,
@@ -8935,7 +8932,7 @@
             triggerProps: h,
             menuProps: g,
             closeMenu: f,
-          } = Sa(e),
+          } = va(e),
           S = r.useRef(null),
           v = (0, Tn.Ue)(S, c.props.navRef),
           y = r.useRef(null);
@@ -8949,8 +8946,8 @@
             children: [
               r.cloneElement(c, {
                 ...h,
-                onMouseEnter: ya(c.props.onMouseEnter, h.onMouseEnter),
-                onMouseLeave: ya(c.props.onMouseLeave, h.onMouseLeave),
+                onMouseEnter: ba(c.props.onMouseEnter, h.onMouseEnter),
+                onMouseLeave: ba(c.props.onMouseLeave, h.onMouseLeave),
                 navRef: v,
               }),
               (0, a.jsx)(i.Z, {
@@ -8961,45 +8958,45 @@
                 onCancel: f,
                 onFocusWithin: (e) => !e && f(),
                 childFocusDisabled: !p,
-                children: (0, a.jsx)(va.q, { children: (m || p) && u }),
+                children: (0, a.jsx)(ya.q, { children: (m || p) && u }),
               }),
             ],
           })
         );
       }
-      var wa = n(26408),
-        Ca = n(78118),
-        xa = n.n(Ca);
-      function Aa(e) {
+      var Ca = n(26408),
+        xa = n(78118),
+        Aa = n.n(xa);
+      function Ia(e) {
         const { title: t, strFlyoutClassName: n, refMenu: r, children: s } = e,
           o = (0, a.jsxs)(xe.fu, {
             type: "button",
-            className: xa().MenuButton,
+            className: Aa().MenuButton,
             children: [
               t,
               (0, a.jsx)(Fe.GB9, {
-                className: xa().MenuButtonArrow,
+                className: Aa().MenuButtonArrow,
                 role: "presentation",
               }),
             ],
           });
         return (0, a.jsx)(i.Z, {
-          className: xa().Menu,
+          className: Aa().Menu,
           role: "listitem",
-          children: (0, a.jsx)(ba, {
+          children: (0, a.jsx)(wa, {
             menuTarget: o,
             direction: "down",
-            interactionMode: ha,
-            className: Yt()(xa().MenuFlyout, n),
+            interactionMode: ga,
+            className: Yt()(Aa().MenuFlyout, n),
             ref: r,
             children: (0, a.jsx)("div", {
-              className: xa().MenuFlyoutContent,
+              className: Aa().MenuFlyoutContent,
               children: s,
             }),
           }),
         });
       }
-      function Ia(e) {
+      function Ta(e) {
         const {
           name: t,
           value: n,
@@ -9009,7 +9006,7 @@
           children: o,
         } = e;
         return (0, a.jsxs)(xe.nK, {
-          className: Yt()(xa().Option, s && xa().Disabled),
+          className: Yt()(Aa().Option, s && Aa().Disabled),
           children: [
             (0, a.jsx)("input", {
               type: "radio",
@@ -9019,62 +9016,62 @@
               disabled: s,
               onChange: (e) => e.currentTarget.checked && i(),
             }),
-            (0, a.jsx)("span", { className: xa().OptionLabel, children: o }),
+            (0, a.jsx)("span", { className: Aa().OptionLabel, children: o }),
           ],
         });
       }
-      function Ta(e) {
+      function ja(e) {
         const { bChecked: t, onChanged: n, className: r, children: i } = e;
         return (0, a.jsxs)(xe.nK, {
-          className: Yt()(xa().Option, r),
+          className: Yt()(Aa().Option, r),
           children: [
             (0, a.jsx)("input", {
               type: "checkbox",
               checked: t,
               onChange: (e) => n(e.currentTarget.checked),
             }),
-            (0, a.jsx)("span", { className: xa().OptionLabel, children: i }),
+            (0, a.jsx)("span", { className: Aa().OptionLabel, children: i }),
           ],
         });
       }
-      function ja(e) {
+      function Ba(e) {
         const { count: t } = e;
         return (0, a.jsxs)("span", {
-          className: xa().OptionCount,
+          className: Aa().OptionCount,
           children: [" (", (0, Ge.Dq)(t), ")"],
         });
       }
-      function Ba(e) {
-        const { children: t } = e;
-        return (0, a.jsx)("div", { className: xa().Explanation, children: t });
-      }
       function Da(e) {
+        const { children: t } = e;
+        return (0, a.jsx)("div", { className: Aa().Explanation, children: t });
+      }
+      function Ra(e) {
         const { className: t, children: n } = e;
         return (0, a.jsx)("div", {
-          className: Yt()(xa().Section, t),
+          className: Yt()(Aa().Section, t),
           children: n,
         });
       }
-      function Ra(e) {
+      function ka(e) {
         const { tooltip: t } = e;
-        return (0, a.jsx)(wa.o, {
+        return (0, a.jsx)(Ca.o, {
           small: !0,
           tooltip: t,
-          className: xa().HelpTooltip,
+          className: Aa().HelpTooltip,
         });
       }
-      var ka = n(83514),
-        Ea = n.n(ka),
-        La = n(38528),
-        Na = n(21322),
-        Fa = n.n(Na);
-      const Ga = 100;
-      function Ma(e, t) {
+      var Ea = n(83514),
+        La = n.n(Ea),
+        Na = n(38528),
+        Fa = n(21322),
+        Ga = n.n(Fa);
+      const Ma = 100;
+      function Pa(e, t) {
         return e >= t ? 0 : e;
       }
-      function Pa(e) {
+      function Oa(e) {
         const { filters: t, setFilters: n, rgPresetHours: i } = e,
-          s = e.nMaxHours ?? Ga,
+          s = e.nMaxHours ?? Ma,
           [o, l] = r.useState(null),
           c = t.playtime_filter_min,
           d = (function (e, t) {
@@ -9089,16 +9086,16 @@
             u[1] > 0 && u[1] < s
               ? Oe.Localize("#ReviewFilters_PlaytimeMaxHours", (0, Ge.Dq)(u[1]))
               : Oe.Localize("#ReviewFilters_PlaytimeMax");
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_Playtime"),
-          strFlyoutClassName: Fa().PlaytimeFlyout,
+          strFlyoutClassName: Ga().PlaytimeFlyout,
           children: [
-            (0, a.jsx)(Ba, {
+            (0, a.jsx)(Da, {
               children: Oe.Localize("#ReviewFilters_PlaytimeExplanation"),
             }),
             i.map((e) =>
               (0, a.jsx)(
-                Ia,
+                Ta,
                 {
                   name: "review_playtime_preset",
                   value: String(e),
@@ -9119,18 +9116,18 @@
               ),
             ),
             (0, a.jsxs)("div", {
-              className: Fa().RangeText,
+              className: Ga().RangeText,
               children: [
-                (0, a.jsx)("span", { className: Fa().RangeBound, children: m }),
+                (0, a.jsx)("span", { className: Ga().RangeBound, children: m }),
                 " ",
                 Oe.Localize("#ReviewFilters_PlaytimeTo"),
                 " ",
-                (0, a.jsx)("span", { className: Fa().RangeBound, children: _ }),
+                (0, a.jsx)("span", { className: Ga().RangeBound, children: _ }),
               ],
             }),
             (0, a.jsx)("div", {
-              className: Fa().RangeSlider,
-              children: (0, a.jsx)(La.F, {
+              className: Ga().RangeSlider,
+              children: (0, a.jsx)(Na.F, {
                 min: 0,
                 max: s,
                 value: u,
@@ -9139,21 +9136,21 @@
                   l(null),
                     n({
                       playtime_filter_min: e[0],
-                      playtime_filter_max: Ma(e[1], s),
+                      playtime_filter_max: Pa(e[1], s),
                     });
                 },
               }),
             }),
-            (0, a.jsxs)(Da, {
+            (0, a.jsxs)(Ra, {
               children: [
-                (0, a.jsx)(Ia, {
+                (0, a.jsx)(Ta, {
                   name: "review_playtime_type",
                   value: "all",
                   bChecked: "deck" !== t.playtime_type,
                   onSelected: () => n({ playtime_type: "all" }),
                   children: Oe.Localize("#ReviewFilters_PlaytimeTypeAll"),
                 }),
-                (0, a.jsx)(Ia, {
+                (0, a.jsx)(Ta, {
                   name: "review_playtime_type",
                   value: "deck",
                   bChecked: "deck" === t.playtime_type,
@@ -9165,27 +9162,27 @@
           ],
         });
       }
-      var Oa = n(63472),
-        za = n.n(Oa);
-      const Ha = 10;
-      function Ua(e) {
+      var za = n(63472),
+        Ha = n.n(za);
+      const Ua = 10;
+      function Wa(e) {
         const { filters: t, setFilters: n, rgTopics: i } = e,
           [s, o] = r.useState(!1),
           l = i.filter((e) => e.count > 0),
           c = t.topics ?? [],
           d = (e) => c.includes(String(e.id)),
-          u = s ? l : l.filter((e, t) => t < Ha || d(e));
+          u = s ? l : l.filter((e, t) => t < Ua || d(e));
         return 0 === l.length
           ? null
-          : (0, a.jsxs)(Aa, {
+          : (0, a.jsxs)(Ia, {
               title: Oe.Localize("#ReviewFilters_Topic"),
               children: [
-                (0, a.jsx)(Ba, {
+                (0, a.jsx)(Da, {
                   children: Oe.Localize("#ReviewFilters_TopicExplanation"),
                 }),
                 u.map((e) =>
                   (0, a.jsxs)(
-                    Ta,
+                    ja,
                     {
                       bChecked: d(e),
                       onChanged: (t) =>
@@ -9194,7 +9191,7 @@
                             r = t ? [...c, a] : c.filter((e) => e !== a);
                           n({ topics: r });
                         })(e, t),
-                      children: [e.name, (0, a.jsx)(ja, { count: e.count })],
+                      children: [e.name, (0, a.jsx)(Ba, { count: e.count })],
                     },
                     e.id,
                   ),
@@ -9203,72 +9200,72 @@
                   u.length < l.length &&
                   (0, a.jsx)(xe.fu, {
                     type: "button",
-                    className: za().ShowAllTopics,
+                    className: Ha().ShowAllTopics,
                     onClick: () => o(!0),
                     children: Oe.Localize("#ReviewFilters_TopicShowAll"),
                   }),
               ],
             });
       }
-      var Wa = n(76119),
-        qa = n(96762),
-        Va = n(70195),
-        Qa = n.n(Va);
-      const Ya = {
-        [Wa.uE.Sv]: "#ReviewScore_Tooltip_Software",
-        [Wa.uE.Wz]: "#ReviewScore_Tooltip_Video",
-        [Wa.uE.gQ]: "#ReviewScore_Tooltip_Series",
-        [Wa.uE.Hk]: "#ReviewScore_Tooltip_Hardware",
-        [Wa.uE.ue]: "#ReviewScore_Tooltip_Demo",
+      var qa = n(76119),
+        Va = n(96762),
+        Qa = n(70195),
+        Ya = n.n(Qa);
+      const Za = {
+        [qa.uE.Sv]: "#ReviewScore_Tooltip_Software",
+        [qa.uE.Wz]: "#ReviewScore_Tooltip_Video",
+        [qa.uE.gQ]: "#ReviewScore_Tooltip_Series",
+        [qa.uE.Hk]: "#ReviewScore_Tooltip_Hardware",
+        [qa.uE.ue]: "#ReviewScore_Tooltip_Demo",
       };
-      function Za(e, t) {
+      function Ka(e, t) {
         switch (e) {
-          case Wa.j6.T4:
+          case qa.j6.T4:
             return Oe.Localize("#ReviewScore_OverwhelminglyPositive");
-          case Wa.j6.R0:
+          case qa.j6.R0:
             return Oe.Localize("#ReviewScore_VeryPositive");
-          case Wa.j6.NG:
+          case qa.j6.NG:
             return Oe.Localize("#ReviewScore_Positive");
-          case Wa.j6.lo:
+          case qa.j6.lo:
             return Oe.Localize("#ReviewScore_MostlyPositive");
-          case Wa.j6.hc:
+          case qa.j6.hc:
             return Oe.Localize("#ReviewScore_Mixed");
-          case Wa.j6.$L:
+          case qa.j6.$L:
             return Oe.Localize("#ReviewScore_MostlyNegative");
-          case Wa.j6.VI:
+          case qa.j6.VI:
             return Oe.Localize("#ReviewScore_Negative");
-          case Wa.j6.rP:
+          case qa.j6.rP:
             return Oe.Localize("#ReviewScore_VeryNegative");
-          case Wa.j6.Fd:
+          case qa.j6.Fd:
             return Oe.Localize("#ReviewScore_OverwhelminglyNegative");
         }
         return t > 0
           ? Oe.Localize("#ReviewScore_NotEnough", (0, Ge.Dq)(t))
           : Oe.Localize("#ReviewScore_None");
       }
-      function Ka(e, t) {
-        if (!t || !e) return (0, x.A)(Qa().ReviewScore, Qa().NotEnoughReviews);
+      function Ja(e, t) {
+        if (!t || !e) return (0, x.A)(Ya().ReviewScore, Ya().NotEnoughReviews);
         switch (e) {
-          case Wa.j6.T4:
-          case Wa.j6.R0:
-          case Wa.j6.NG:
-          case Wa.j6.lo:
-            return (0, x.A)(Qa().ReviewScore, Qa().Positive);
-          case Wa.j6.hc:
-            return (0, x.A)(Qa().ReviewScore, Qa().Mixed);
+          case qa.j6.T4:
+          case qa.j6.R0:
+          case qa.j6.NG:
+          case qa.j6.lo:
+            return (0, x.A)(Ya().ReviewScore, Ya().Positive);
+          case qa.j6.hc:
+            return (0, x.A)(Ya().ReviewScore, Ya().Mixed);
           default:
-            return Qa().ReviewScore;
+            return Ya().ReviewScore;
         }
       }
-      function Ja(e) {
+      function Xa(e) {
         return e.nReviews
           ? Math.floor((100 * e.nReviewsPositive) / e.nReviews)
           : 0;
       }
-      function Xa(e) {
-        return (0, qa.VD)(e) ? Z.Z.Localize(`#Language_${e}`) : e;
+      function $a(e) {
+        return (0, Va.VD)(e) ? Z.Z.Localize(`#Language_${e}`) : e;
       }
-      function $a(e, t, n) {
+      function er(e, t, n) {
         if (!n) return e;
         const r = Oe.Localize(
           t.bFilteredReviews
@@ -9279,7 +9276,7 @@
           children: [e, (0, a.jsx)("br", {}), (0, a.jsx)("br", {}), r],
         });
       }
-      function er(e, t, n) {
+      function tr(e, t, n) {
         if (!e.nReviews) return Oe.Localize("#ReviewScore_None");
         if (!e.eReviewScore)
           return Oe.Localize("#ReviewScore_TooltipNotEnough");
@@ -9287,7 +9284,7 @@
         switch (e.nAgeInDays) {
           case void 0:
           case 0:
-            a = (void 0 !== t && Ya[t]) || "#ReviewScore_Tooltip";
+            a = (void 0 !== t && Za[t]) || "#ReviewScore_Tooltip";
             break;
           case 7:
             a = "#ReviewScore_TooltipLastWeek";
@@ -9298,10 +9295,10 @@
           default:
             a = "#ReviewScore_TooltipLastDays";
         }
-        return $a(
+        return er(
           Oe.Localize(
             a,
-            Ja(e),
+            Xa(e),
             (0, Ge.Dq)(e.nReviews),
             (0, Ge.Dq)(e.nAgeInDays || 0),
           ),
@@ -9309,42 +9306,42 @@
           n,
         );
       }
-      function tr(e, t, n) {
+      function nr(e, t, n) {
         return e.nReviews
-          ? $a(
+          ? er(
               Oe.Localize(
                 t.length > 1
                   ? "#ReviewScore_TooltipYourLanguages"
                   : "#ReviewScore_TooltipYourLanguage",
-                Ja(e),
+                Xa(e),
                 (0, Ge.Dq)(e.nReviews),
-                t.map(Xa).join(", "),
+                t.map($a).join(", "),
               ),
               e,
               n,
             )
           : "";
       }
-      function nr(e) {
+      function ar(e) {
         const { score: t, tooltip: n, className: r } = e,
           i = (0, a.jsx)("span", {
-            className: (0, x.A)(Ka(t.eReviewScore, t.nReviews), !n && r),
-            children: Za(t.eReviewScore, t.nReviews),
+            className: (0, x.A)(Ja(t.eReviewScore, t.nReviews), !n && r),
+            children: Ka(t.eReviewScore, t.nReviews),
           });
         return n
           ? (0, a.jsx)(C.he, {
               toolTipContent: n,
-              className: (0, x.A)(Qa().ScoreTooltip, r),
+              className: (0, x.A)(Ya().ScoreTooltip, r),
               direction: "top",
               children: i,
             })
           : i;
       }
-      function ar(e) {
+      function rr(e) {
         const { score: t, className: n } = e;
         return t.nReviews
           ? (0, a.jsx)("span", {
-              className: (0, x.A)(Qa().ScoreReviewCount, n),
+              className: (0, x.A)(Ya().ScoreReviewCount, n),
               children: Oe.Localize(
                 "#ReviewSummary_ReviewCount",
                 (0, Ge.Dq)(t.nReviews),
@@ -9352,7 +9349,7 @@
             })
           : null;
       }
-      const rr = [
+      const ir = [
         { category: "hardware_os", strTitleToken: "#ReviewFilters_HardwareOS" },
         {
           category: "hardware_cpu",
@@ -9367,20 +9364,20 @@
           strTitleToken: "#ReviewFilters_HardwareDeviceType",
         },
       ];
-      function ir(e, t) {
+      function sr(e, t) {
         const n = {};
         return (n[e] = t), n;
       }
-      function sr(e, t) {
+      function or(e, t) {
         return r.useCallback((n) => t({ ...e, ...n }), [e, t]);
       }
-      function or() {
+      function lr() {
         return u.TS.EREALM !== te.TU.k_ESteamRealmChina;
       }
-      function lr(e) {
+      function cr(e) {
         return (e ?? []).join(",");
       }
-      function cr(e) {
+      function dr(e) {
         const {
             filters: t,
             onFiltersChanged: n,
@@ -9388,60 +9385,62 @@
             onShowGraph: s,
             bGraphVisible: o,
           } = e,
-          l = sr(t, n),
+          l = or(t, n),
           c = r.nReviewsPositive + r.nReviewsNegative,
-          d = or(),
+          d = lr(),
           u = r.rgTopics ?? [],
           m = r.rgPlaytimePresetHours ?? [],
-          _ = rr.some(({ category: e }) => r.rgHardwareFacets?.[e]?.length);
+          _ = ir.some(({ category: e }) => r.rgHardwareFacets?.[e]?.length);
         return (0, a.jsxs)(i.Z, {
-          className: Ea().ReviewFilters,
+          className: La().ReviewFilters,
           role: "list",
           "aria-label": Oe.Localize("#ReviewFilters_MenuLabel"),
           children: [
-            (0, a.jsx)(ur, {
-              filters: t,
-              setFilters: l,
-              options: r,
-              nReviewsTotal: c,
-            }),
             (0, a.jsx)(mr, {
               filters: t,
               setFilters: l,
               options: r,
               nReviewsTotal: c,
             }),
+            (0, a.jsx)(_r, {
+              filters: t,
+              setFilters: l,
+              options: r,
+              nReviewsTotal: c,
+            }),
             d &&
-              (0, a.jsx)(_r, {
+              (0, a.jsx)(pr, {
                 filters: t,
                 setFilters: l,
                 options: r,
                 nReviewsTotal: c,
               }),
-            (0, a.jsx)(pr, {
-              filters: t,
-              setFilters: l,
-              options: r,
-              bGraphVisible: o,
-              onToggleGraph: s,
-            }),
+            r.bHasReviewHistogram &&
+              (0, a.jsx)(hr, {
+                filters: t,
+                setFilters: l,
+                options: r,
+                bGraphVisible: o,
+                onToggleGraph: s,
+              }),
             m.length > 0 &&
-              (0, a.jsx)(Pa, {
+              (0, a.jsx)(Oa, {
                 filters: t,
                 setFilters: l,
                 rgPresetHours: m,
                 nMaxHours: r.nPlaytimeFilterMaxHours,
               }),
-            (0, a.jsx)(hr, { filters: t, setFilters: l, options: r }),
-            _ && (0, a.jsx)(gr, { filters: t, setFilters: l, options: r }),
+            (0, a.jsx)(gr, { filters: t, setFilters: l, options: r }),
+            _ && (0, a.jsx)(fr, { filters: t, setFilters: l, options: r }),
             u.length > 0 &&
-              (0, a.jsx)(Ua, { filters: t, setFilters: l, rgTopics: u }),
+              (0, a.jsx)(Wa, { filters: t, setFilters: l, rgTopics: u }),
             r.bHasOfftopicActivity &&
-              (0, a.jsx)(fr, { filters: t, setFilters: l }),
-            s &&
+              (0, a.jsx)(Sr, { filters: t, setFilters: l }),
+            r.bHasReviewHistogram &&
+              s &&
               (0, a.jsx)(i.Z, {
-                className: Ea().ToggleGraphContainer,
-                children: (0, a.jsx)(dr, {
+                className: La().ToggleGraphContainer,
+                children: (0, a.jsx)(ur, {
                   bGraphVisible: o,
                   onToggleGraph: s,
                 }),
@@ -9449,100 +9448,100 @@
           ],
         });
       }
-      function dr(e) {
+      function ur(e) {
         const { bGraphVisible: t, onToggleGraph: n } = e;
         return (0, a.jsxs)(De.$n, {
-          className: Ea().ToggleGraph,
+          className: La().ToggleGraph,
           onClick: n,
           children: [
             Oe.Localize(
               t ? "#ReviewFilters_HideGraph" : "#ReviewFilters_ShowGraph",
             ),
             (0, a.jsx)(Fe.F2T, {
-              className: Ea().MenuButtonArrow,
+              className: La().MenuButtonArrow,
               angle: t ? 90 : 270,
               role: "presentation",
             }),
           ],
         });
       }
-      function ur(e) {
+      function mr(e) {
         const { filters: t, setFilters: n, options: r, nReviewsTotal: i } = e;
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_ReviewType"),
           children: [
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "review_type",
               value: "all",
               bChecked: "all" === t.review_type,
               onSelected: () => n({ review_type: "all" }),
               children: [
                 Oe.Localize("#ReviewFilters_ReviewTypeAll"),
-                (0, a.jsx)(ja, { count: i }),
+                (0, a.jsx)(Ba, { count: i }),
               ],
             }),
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "review_type",
               value: "positive",
               bChecked: "positive" === t.review_type,
               onSelected: () => n({ review_type: "positive" }),
               children: [
                 Oe.Localize("#ReviewFilters_ReviewTypePositive"),
-                (0, a.jsx)(ja, { count: r.nReviewsPositive }),
+                (0, a.jsx)(Ba, { count: r.nReviewsPositive }),
               ],
             }),
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "review_type",
               value: "negative",
               bChecked: "negative" === t.review_type,
               onSelected: () => n({ review_type: "negative" }),
               children: [
                 Oe.Localize("#ReviewFilters_ReviewTypeNegative"),
-                (0, a.jsx)(ja, { count: r.nReviewsNegative }),
+                (0, a.jsx)(Ba, { count: r.nReviewsNegative }),
               ],
             }),
           ],
         });
       }
-      function mr(e) {
+      function _r(e) {
         const { filters: t, setFilters: n, options: r, nReviewsTotal: i } = e;
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_PurchaseType"),
           children: [
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "purchase_type",
               value: "all",
               bChecked: "all" === t.purchase_type,
               onSelected: () => n({ purchase_type: "all" }),
               children: [
                 Oe.Localize("#ReviewFilters_PurchaseTypeAll"),
-                (0, a.jsx)(ja, { count: i }),
+                (0, a.jsx)(Ba, { count: i }),
               ],
             }),
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "purchase_type",
               value: "steam",
               bChecked: "steam" === t.purchase_type,
               onSelected: () => n({ purchase_type: "steam" }),
               children: [
                 Oe.Localize("#ReviewFilters_PurchaseTypeSteam"),
-                (0, a.jsx)(ja, { count: r.nReviewsSteamPurchase }),
-                (0, a.jsx)(Ra, {
+                (0, a.jsx)(Ba, { count: r.nReviewsSteamPurchase }),
+                (0, a.jsx)(ka, {
                   tooltip: Oe.Localize(
                     "#ReviewFilters_PurchaseTypeSteamTooltip",
                   ),
                 }),
               ],
             }),
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "purchase_type",
               value: "non_steam_purchase",
               bChecked: "non_steam_purchase" === t.purchase_type,
               onSelected: () => n({ purchase_type: "non_steam_purchase" }),
               children: [
                 Oe.Localize("#ReviewFilters_PurchaseTypeOther"),
-                (0, a.jsx)(ja, { count: r.nReviewsNonSteamPurchase }),
-                (0, a.jsx)(Ra, {
+                (0, a.jsx)(Ba, { count: r.nReviewsNonSteamPurchase }),
+                (0, a.jsx)(ka, {
                   tooltip: Oe.Localize(
                     "#ReviewFilters_PurchaseTypeOtherTooltip",
                   ),
@@ -9552,11 +9551,11 @@
           ],
         });
       }
-      function _r(e) {
+      function pr(e) {
         const { filters: t, setFilters: n, options: r, nReviewsTotal: i } = e,
           s = r.rgLanguageOutliers ?? [],
-          o = lr(r.rgLanguagePreferences),
-          l = (r.rgLanguagePreferences ?? []).map(Xa),
+          o = cr(r.rgLanguagePreferences),
+          l = (r.rgLanguagePreferences ?? []).map($a),
           c = (0, a.jsxs)(a.Fragment, {
             children: [
               Oe.Localize(
@@ -9568,59 +9567,59 @@
               Oe.Localize("#ReviewFilters_LanguageYoursTooltip_Line2"),
             ],
           });
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_Language"),
           children: [
             s.length > 0 &&
-              (0, a.jsx)(Ba, {
+              (0, a.jsx)(Da, {
                 children: Oe.Localize(
                   "#ReviewFilters_LanguageOutliersExplanation",
                 ),
               }),
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "review_language",
               value: "all",
               bChecked: "all" === t.language,
               onSelected: () => n({ language: "all" }),
               children: [
                 Oe.Localize("#ReviewFilters_LanguageAll"),
-                (0, a.jsx)(ja, { count: i }),
+                (0, a.jsx)(Ba, { count: i }),
               ],
             }),
-            (0, a.jsxs)(Ia, {
+            (0, a.jsxs)(Ta, {
               name: "review_language",
               value: o,
               bChecked: t.language === o,
               onSelected: () => n({ language: o }),
               children: [
                 Oe.Localize("#ReviewFilters_LanguageYours"),
-                (0, a.jsx)(ja, { count: r.nReviewsYourLanguages }),
-                (0, a.jsx)(Ra, { tooltip: c }),
+                (0, a.jsx)(Ba, { count: r.nReviewsYourLanguages }),
+                (0, a.jsx)(ka, { tooltip: c }),
               ],
             }),
             (0, a.jsx)("div", {
-              className: Ea().CustomizeLanguages,
+              className: La().CustomizeLanguages,
               children: (0, a.jsx)(xe.Ii, {
-                className: Ea().FlyoutButton,
+                className: La().FlyoutButton,
                 href: `${u.TS.STORE_BASE_URL}account/languagepreferences`,
                 children: Oe.Localize("#ReviewFilters_LanguageCustomize"),
               }),
             }),
             s.length > 0 &&
-              (0, a.jsx)(Da, {
+              (0, a.jsx)(Ra, {
                 children: s.map((e) =>
                   (0, a.jsxs)(
-                    Ia,
+                    Ta,
                     {
                       name: "review_language",
                       value: e.strLanguage,
                       bChecked: t.language === e.strLanguage,
                       onSelected: () => n({ language: e.strLanguage }),
                       children: [
-                        Xa(e.strLanguage),
+                        $a(e.strLanguage),
                         " ",
-                        (0, a.jsx)(nr, { score: e }),
-                        (0, a.jsx)(ja, { count: e.nReviews }),
+                        (0, a.jsx)(ar, { score: e }),
+                        (0, a.jsx)(Ba, { count: e.nReviews }),
                       ],
                     },
                     e.strLanguage,
@@ -9630,7 +9629,7 @@
           ],
         });
       }
-      function pr(e) {
+      function hr(e) {
         const {
             filters: t,
             setFilters: n,
@@ -9640,19 +9639,19 @@
           } = e,
           l = t.start_date > 0 && t.end_date > 0,
           c = r.useRef(null);
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_DateRange"),
           refMenu: c,
           children: [
-            (0, a.jsxs)(Ba, {
+            (0, a.jsxs)(Da, {
               children: [
                 Oe.Localize("#ReviewFilters_DateRangeExplanation"),
                 o &&
                   (0, a.jsx)("div", {
-                    className: Ea().ShowGraph,
+                    className: La().ShowGraph,
                     children: (0, a.jsx)(xe.fu, {
                       type: "button",
-                      className: Ea().FlyoutButton,
+                      className: La().FlyoutButton,
                       onClick: () => {
                         c.current?.close(), o?.();
                       },
@@ -9665,7 +9664,7 @@
                   }),
               ],
             }),
-            (0, a.jsx)(Ia, {
+            (0, a.jsx)(Ta, {
               name: "review_date_range",
               value: "all",
               bChecked: "all" === t.date_range_type,
@@ -9673,7 +9672,7 @@
                 n({ date_range_type: "all", start_date: -1, end_date: -1 }),
               children: Oe.Localize("#ReviewFilters_DateRangeLifetime"),
             }),
-            (0, a.jsx)(Ia, {
+            (0, a.jsx)(Ta, {
               name: "review_date_range",
               value: "include",
               bChecked: "include" === t.date_range_type,
@@ -9681,7 +9680,7 @@
               onSelected: () => n({ date_range_type: "include" }),
               children: Oe.Localize("#ReviewFilters_DateRangeHistogram"),
             }),
-            (0, a.jsx)(Ia, {
+            (0, a.jsx)(Ta, {
               name: "review_date_range",
               value: "exclude",
               bChecked: "exclude" === t.date_range_type,
@@ -9692,36 +9691,36 @@
           ],
         });
       }
-      function hr(e) {
+      function gr(e) {
         const { filters: t, setFilters: n, options: r } = e;
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_Display"),
           children: [
-            (0, a.jsx)(Ba, {
+            (0, a.jsx)(Da, {
               children: Oe.Localize("#ReviewFilters_DisplayExplanation"),
             }),
-            (0, a.jsx)(Ia, {
+            (0, a.jsx)(Ta, {
               name: "review_context",
               value: "summary",
               bChecked: "summary" === t.filter,
               onSelected: () => n({ filter: "summary" }),
               children: Oe.Localize("#ReviewFilters_DisplaySummary"),
             }),
-            (0, a.jsx)(Ia, {
+            (0, a.jsx)(Ta, {
               name: "review_context",
               value: "all",
               bChecked: "all" === t.filter,
               onSelected: () => n({ filter: "all" }),
               children: Oe.Localize("#ReviewFilters_DisplayMostHelpful"),
             }),
-            (0, a.jsx)(Ia, {
+            (0, a.jsx)(Ta, {
               name: "review_context",
               value: "recent",
               bChecked: "recent" === t.filter,
               onSelected: () => n({ filter: "recent" }),
               children: Oe.Localize("#ReviewFilters_DisplayRecent"),
             }),
-            (0, a.jsx)(Ia, {
+            (0, a.jsx)(Ta, {
               name: "review_context",
               value: "funny",
               bChecked: "funny" === t.filter,
@@ -9729,10 +9728,10 @@
               children: Oe.Localize("#ReviewFilters_DisplayFunny"),
             }),
             r.bCanFilterByReviewQuality &&
-              (0, a.jsxs)(Da, {
-                className: Ea().ReviewQuality,
+              (0, a.jsxs)(Ra, {
+                className: La().ReviewQuality,
                 children: [
-                  (0, a.jsx)(Ta, {
+                  (0, a.jsx)(ja, {
                     bChecked: t.use_review_quality,
                     onChanged: (e) => n({ use_review_quality: e }),
                     children: Oe.Localize("#ReviewFilters_ReviewQuality"),
@@ -9748,47 +9747,47 @@
           ],
         });
       }
-      function gr(e) {
+      function fr(e) {
         const { filters: t, setFilters: n, options: r } = e;
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_HardwareSpecs"),
-          strFlyoutClassName: Ea().HardwareFlyout,
+          strFlyoutClassName: La().HardwareFlyout,
           children: [
-            (0, a.jsx)(Ba, {
+            (0, a.jsx)(Da, {
               children: Oe.Localize("#ReviewFilters_HardwareSpecsExplanation"),
             }),
-            rr.map(({ category: e, strTitleToken: i }) => {
+            ir.map(({ category: e, strTitleToken: i }) => {
               const s =
                 r.rgHardwareFacets?.[e]?.filter((e) => e.nCount > 0) ?? [];
               if (0 === s.length) return null;
               const o = t[e] ?? "all";
               return (0, a.jsxs)(
-                Da,
+                Ra,
                 {
-                  className: Ea().HardwareCategory,
+                  className: La().HardwareCategory,
                   children: [
                     (0, a.jsx)("div", {
-                      className: Ea().HardwareCategoryTitle,
+                      className: La().HardwareCategoryTitle,
                       children: Oe.Localize(i),
                     }),
-                    (0, a.jsx)(Ia, {
+                    (0, a.jsx)(Ta, {
                       name: `review_${e}`,
                       value: "all",
                       bChecked: "all" === o,
-                      onSelected: () => n(ir(e, "all")),
+                      onSelected: () => n(sr(e, "all")),
                       children: Oe.Localize("#ReviewFilters_HardwareAny"),
                     }),
                     s.map((t) =>
                       (0, a.jsxs)(
-                        Ia,
+                        Ta,
                         {
                           name: `review_${e}`,
                           value: t.strValue,
                           bChecked: o === t.strValue,
-                          onSelected: () => n(ir(e, t.strValue)),
+                          onSelected: () => n(sr(e, t.strValue)),
                           children: [
                             t.strValue,
-                            (0, a.jsx)(ja, { count: t.nCount }),
+                            (0, a.jsx)(Ba, { count: t.nCount }),
                           ],
                         },
                         t.strValue,
@@ -9802,21 +9801,21 @@
           ],
         });
       }
-      function fr(e) {
+      function Sr(e) {
         const { filters: t, setFilters: n } = e,
           r = (0, a.jsx)(xe.Ii, {
             href: `${u.TS.COMMUNITY_BASE_URL}games/593110/announcements/detail/1808664240333155775`,
           });
-        return (0, a.jsxs)(Aa, {
+        return (0, a.jsxs)(Ia, {
           title: Oe.Localize("#ReviewFilters_OfftopicActivity"),
           children: [
-            (0, a.jsx)(Ba, {
+            (0, a.jsx)(Da, {
               children: (0, je.xh)(
                 Oe.Localize("#ReviewFilters_OfftopicActivityExplanation"),
                 r,
               ),
             }),
-            (0, a.jsx)(Ta, {
+            (0, a.jsx)(ja, {
               bChecked: t.filter_offtopic_activity,
               onChanged: (e) => n({ filter_offtopic_activity: e }),
               children: Oe.Localize("#ReviewFilters_OfftopicActivityEnabled"),
@@ -9824,33 +9823,33 @@
           ],
         });
       }
-      const Sr = { month: "short", day: "numeric", year: "numeric" };
-      function vr(e) {
+      const vr = { month: "short", day: "numeric", year: "numeric" };
+      function yr(e) {
         const { onClear: t, children: n } = e;
         return t
           ? (0, a.jsxs)(xe.fu, {
               type: "button",
-              className: ua().ActiveFilter,
+              className: ma().ActiveFilter,
               onClick: t,
               children: [
                 n,
-                (0, a.jsx)(Fe.tmm, { className: ua().DismissIcon }),
+                (0, a.jsx)(Fe.tmm, { className: ma().DismissIcon }),
               ],
             })
           : (0, a.jsx)("div", {
-              className: Yt()(ua().ActiveFilter, ua().NoDismiss),
+              className: Yt()(ma().ActiveFilter, ma().NoDismiss),
               children: n,
             });
       }
-      function yr(e) {
+      function br(e) {
         const { filters: t, onFiltersChanged: n, options: r, className: s } = e,
-          o = sr(t, n),
+          o = or(t, n),
           l = [];
         if (
           (("positive" !== t.review_type && "negative" !== t.review_type) ||
             l.push(
               (0, a.jsx)(
-                vr,
+                yr,
                 {
                   onClear: () => o({ review_type: "all" }),
                   children: Oe.Localize(
@@ -9866,7 +9865,7 @@
             "non_steam_purchase" !== t.purchase_type) ||
             l.push(
               (0, a.jsx)(
-                vr,
+                yr,
                 {
                   onClear: () => o({ purchase_type: "all" }),
                   children: Oe.Localize(
@@ -9878,17 +9877,17 @@
                 "purchase_type",
               ),
             ),
-          or())
+          lr())
         ) {
           if ("all" !== t.language) {
-            const e = lr(r.rgLanguagePreferences),
+            const e = cr(r.rgLanguagePreferences),
               n =
                 t.language === e
                   ? Oe.Localize("#ReviewFilters_LanguageYours")
-                  : Xa(t.language);
+                  : $a(t.language);
             l.push(
               (0, a.jsx)(
-                vr,
+                yr,
                 { onClear: () => o({ language: "all" }), children: n },
                 "language",
               ),
@@ -9897,8 +9896,8 @@
         } else
           l.push(
             (0, a.jsx)(
-              vr,
-              { children: Xa(r.rgLanguagePreferences?.[0] ?? t.language) },
+              yr,
+              { children: $a(r.rgLanguagePreferences?.[0] ?? t.language) },
               "language",
             ),
           );
@@ -9911,10 +9910,10 @@
                 ? "#ReviewFilters_DateRangeViewOnly"
                 : "#ReviewFilters_DateRangeExclude",
             ),
-            n = `${Jn(t.start_date, Sr)} - ${Jn(t.end_date, Sr)}`;
+            n = `${Xn(t.start_date, vr)} - ${Xn(t.end_date, vr)}`;
           l.push(
             (0, a.jsxs)(
-              vr,
+              yr,
               {
                 onClear: () =>
                   o({ date_range_type: "all", start_date: -1, end_date: -1 }),
@@ -9929,7 +9928,7 @@
             t.filter_offtopic_activity &&
             l.push(
               (0, a.jsx)(
-                vr,
+                yr,
                 {
                   onClear: () => o({ filter_offtopic_activity: !1 }),
                   children: Oe.Localize("#ReviewFilters_ActiveFilterOfftopic"),
@@ -9953,7 +9952,7 @@
                 );
           l.push(
             (0, a.jsxs)(
-              vr,
+              yr,
               {
                 onClear: () =>
                   o({ playtime_filter_min: 0, playtime_filter_max: 0 }),
@@ -9969,7 +9968,7 @@
         "deck" === t.playtime_type &&
           l.push(
             (0, a.jsx)(
-              vr,
+              yr,
               {
                 onClear: () => o({ playtime_type: "all" }),
                 children: Oe.Localize("#ReviewFilters_PlaytimeFilterDeck"),
@@ -9977,15 +9976,15 @@
               "playtime_type",
             ),
           );
-        for (const { category: e, strTitleToken: n } of rr) {
+        for (const { category: e, strTitleToken: n } of ir) {
           const r = t[e];
           r &&
             "all" !== r &&
             l.push(
               (0, a.jsxs)(
-                vr,
+                yr,
                 {
-                  onClear: () => o(ir(e, "all")),
+                  onClear: () => o(sr(e, "all")),
                   children: [Oe.Localize(n), ": ", r],
                 },
                 e,
@@ -9996,7 +9995,7 @@
           const n = r.rgTopics?.find((t) => String(t.id) === e);
           l.push(
             (0, a.jsx)(
-              vr,
+              yr,
               {
                 onClear: () =>
                   o({ topics: (t.topics ?? []).filter((t) => t !== e) }),
@@ -10009,17 +10008,17 @@
         return 0 === l.length
           ? null
           : (0, a.jsxs)(i.Z, {
-              className: Yt()(ua().ReviewActiveFilters, s),
+              className: Yt()(ma().ReviewActiveFilters, s),
               children: [
                 (0, a.jsx)("div", {
-                  className: ua().Title,
+                  className: ma().Title,
                   children: Oe.Localize("#ReviewFilters_ActiveFilters"),
                 }),
                 l,
               ],
             });
       }
-      function br(e) {
+      function wr(e) {
         return (0, ue.I)({
           queryKey: ["languagereviewscores", e],
           queryFn: () =>
@@ -10029,66 +10028,66 @@
           enabled: !!e,
         });
       }
-      var wr = n(40002),
-        Cr = n.n(wr);
-      const xr = "faqs/view/2DA6-9CB3-F84A-643E",
-        Ar = "account/preferences/#review_score_preferences",
-        Ir = 7;
-      function Tr(e) {
+      var Cr = n(40002),
+        xr = n.n(Cr);
+      const Ar = "faqs/view/2DA6-9CB3-F84A-643E",
+        Ir = "account/preferences/#review_score_preferences",
+        Tr = 7;
+      function jr(e) {
         const { strTitle: t, strDescription: n, strDisplayedToYou: r } = e;
         return (0, a.jsxs)("div", {
-          className: Cr().GroupHeader,
+          className: xr().GroupHeader,
           children: [
             (0, a.jsxs)("div", {
-              className: Cr().GroupCategory,
+              className: xr().GroupCategory,
               children: [
                 t,
                 r &&
                   (0, a.jsx)("div", {
-                    className: Cr().DisplayedToYou,
+                    className: xr().DisplayedToYou,
                     children: r,
                   }),
               ],
             }),
             (0, a.jsx)("div", {
-              className: Cr().GroupCategoryDesc,
+              className: xr().GroupCategoryDesc,
               children: n,
             }),
           ],
         });
       }
-      function jr(e) {
+      function Br(e) {
         const { score: t, tooltip: n, children: r } = e;
         return (0, a.jsxs)("div", {
-          className: Cr().GroupLanguages,
+          className: xr().GroupLanguages,
           children: [
             (0, a.jsxs)("div", {
-              className: Cr().Score,
+              className: xr().Score,
               children: [
-                (0, a.jsx)(nr, {
+                (0, a.jsx)(ar, {
                   score: t,
                   tooltip: n,
-                  className: Cr().ScoreValue,
+                  className: xr().ScoreValue,
                 }),
                 " ",
-                (0, a.jsx)(ar, { score: t }),
+                (0, a.jsx)(rr, { score: t }),
               ],
             }),
             r,
           ],
         });
       }
-      function Br(e) {
+      function Dr(e) {
         const { rgLanguages: t } = e,
           [n, i] = r.useState(!1),
-          s = t.length - Ir,
-          o = n ? t : t.slice(0, Ir),
+          s = t.length - Tr,
+          o = n ? t : t.slice(0, Tr),
           l = r.useCallback(() => i(!0), []);
         return (0, a.jsxs)("div", {
-          className: Cr().GroupLanguages,
+          className: xr().GroupLanguages,
           children: [
             (0, a.jsx)("div", {
-              className: Cr().Languages,
+              className: xr().Languages,
               children: o.map((e) => {
                 return (0, a.jsx)(
                   C.he,
@@ -10098,15 +10097,15 @@
                       t.nReviews
                         ? Oe.Localize(
                             "#ReviewScore_TooltipLanguage",
-                            Ja(t),
+                            Xa(t),
                             (0, Ge.Dq)(t.nReviews),
-                            Za(t.eReviewScore, t.nReviews),
+                            Ka(t.eReviewScore, t.nReviews),
                           )
                         : ""),
                     direction: "top",
                     children: (0, a.jsx)("span", {
-                      className: Cr().Language,
-                      children: Xa(e.strLanguage),
+                      className: xr().Language,
+                      children: $a(e.strLanguage),
                     }),
                   },
                   e.strLanguage,
@@ -10117,9 +10116,9 @@
             !n &&
               s > 0 &&
               (0, a.jsx)("div", {
-                className: Cr().ExpandLanguages,
+                className: xr().ExpandLanguages,
                 children: (0, a.jsx)("button", {
-                  className: Cr().ExpandButton,
+                  className: xr().ExpandButton,
                   onClick: l,
                   children: Oe.Localize(
                     "#ReviewLanguageScores_SeeMoreLanguages",
@@ -10130,9 +10129,9 @@
           ],
         });
       }
-      function Dr(e) {
+      function Rr(e) {
         const { appid: t, ePreference: n, onClose: r } = e,
-          i = br(t),
+          i = wr(t),
           s = i.data,
           o = In(t),
           l = Oe.Localize("#ReviewLanguageScores_Title"),
@@ -10144,21 +10143,21 @@
             (d = Oe.Localize("#ReviewLanguageScores_DisplayedToYouNotEnough"));
         const m = (0, a.jsx)(
             xe.Ii,
-            { href: `${u.TS.STORE_BASE_URL}${Ar}` },
+            { href: `${u.TS.STORE_BASE_URL}${Ir}` },
             "preferences",
           ),
-          _ = (0, a.jsx)(xe.Ii, { href: `${u.TS.HELP_BASE_URL}${xr}` }, "help"),
+          _ = (0, a.jsx)(xe.Ii, { href: `${u.TS.HELP_BASE_URL}${Ar}` }, "help"),
           p = s?.summaryYourLanguages,
-          h = p?.rgLanguages.map(Xa) ?? [],
+          h = p?.rgLanguages.map($a) ?? [],
           g =
             p &&
             (p.rgLanguages.length > 1
-              ? tr(p, p.rgLanguages, o)
-              : er(p, s?.eAppType, o));
+              ? nr(p, p.rgLanguages, o)
+              : tr(p, s?.eAppType, o));
         return (0, a.jsxs)(nt.o0, {
           bAlertDialog: !0,
           bAllowFullSize: !0,
-          className: Cr().ReviewLanguageScoresDialog,
+          className: xr().ReviewLanguageScoresDialog,
           strTitle: l,
           closeModal: r,
           onOK: r,
@@ -10167,12 +10166,12 @@
             i.isPending && (0, a.jsx)(Vt.t, {}),
             i.isError &&
               (0, a.jsx)("div", {
-                className: Cr().LoadError,
+                className: xr().LoadError,
                 children: Oe.Localize("#Review_LoadErrorUnknown"),
               }),
             s &&
               (0, a.jsxs)("div", {
-                className: Cr().Body,
+                className: xr().Body,
                 children: [
                   (0, a.jsx)("p", {
                     children: Oe.Localize(
@@ -10181,7 +10180,7 @@
                     ),
                   }),
                   (0, a.jsx)("p", {
-                    className: Cr().Options,
+                    className: xr().Options,
                     children: (0, je.xh)(
                       Oe.Localize("#ReviewLanguageScores_DescEdit"),
                       m,
@@ -10191,7 +10190,7 @@
                   p &&
                     (0, a.jsxs)(a.Fragment, {
                       children: [
-                        (0, a.jsx)(Tr, {
+                        (0, a.jsx)(jr, {
                           strTitle:
                             h.length > 1
                               ? Oe.Localize(
@@ -10216,13 +10215,13 @@
                                 "#ReviewLanguageScores_DisplayedToYouYourLanguage",
                               ),
                         }),
-                        (0, a.jsx)(jr, { score: p, tooltip: g }),
+                        (0, a.jsx)(Br, { score: p, tooltip: g }),
                       ],
                     }),
                   s.rgOtherLanguages.length > 0 &&
                     (0, a.jsxs)(a.Fragment, {
                       children: [
-                        (0, a.jsx)(Tr, {
+                        (0, a.jsx)(jr, {
                           strTitle: Oe.Localize(
                             "#ReviewLanguageScores_OtherLanguages",
                           ),
@@ -10230,21 +10229,21 @@
                             "#ReviewLanguageScores_OtherLanguagesDesc",
                           ),
                         }),
-                        (0, a.jsx)(Br, { rgLanguages: s.rgOtherLanguages }),
+                        (0, a.jsx)(Dr, { rgLanguages: s.rgOtherLanguages }),
                       ],
                     }),
-                  (0, a.jsx)(Tr, {
+                  (0, a.jsx)(jr, {
                     strTitle: Oe.Localize("#ReviewLanguageScores_CategoryAll"),
                     strDescription: Oe.Localize(
                       "#ReviewLanguageScores_CategoryAllDesc",
                     ),
                     strDisplayedToYou: d,
                   }),
-                  (0, a.jsx)(jr, {
+                  (0, a.jsx)(Br, {
                     score: s.summaryGlobal,
-                    tooltip: er(s.summaryGlobal, s.eAppType, o),
+                    tooltip: tr(s.summaryGlobal, s.eAppType, o),
                     children: (0, a.jsx)("div", {
-                      className: Cr().AllLanguagesTotal,
+                      className: xr().AllLanguagesTotal,
                       children: Oe.Localize(
                         "#ReviewLanguageScores_AllLanguagesTotal",
                         (0, Ge.Dq)(s.nTotalLanguages),
@@ -10256,24 +10255,24 @@
           ],
         });
       }
-      var Rr = n(4544),
-        kr = n.n(Rr);
-      const Er = "account/preferences/#review_score_preferences",
-        Lr = "public/shared/images/userreviews/language_outlier_icon.svg",
-        Nr = { day: "numeric", month: "long", year: "numeric" };
-      function Fr() {
+      var kr = n(4544),
+        Er = n.n(kr);
+      const Lr = "account/preferences/#review_score_preferences",
+        Nr = "public/shared/images/userreviews/language_outlier_icon.svg",
+        Fr = { day: "numeric", month: "long", year: "numeric" };
+      function Gr() {
         const e = (0, a.jsx)(
           xe.Ii,
-          { href: `${u.TS.STORE_BASE_URL}${Er}` },
+          { href: `${u.TS.STORE_BASE_URL}${Lr}` },
           "preferences",
         );
         return (0, a.jsx)("div", {
-          className: kr().DisclaimerCtn,
+          className: Er().DisclaimerCtn,
           children: (0, a.jsxs)("div", {
-            className: kr().ShowAllDisclaimer,
+            className: Er().ShowAllDisclaimer,
             children: [
               (0, a.jsx)("img", {
-                src: `${u.TS.STORE_BASE_URL}${Lr}`,
+                src: `${u.TS.STORE_BASE_URL}${Nr}`,
                 alt: "",
               }),
               (0, je.xh)(
@@ -10284,7 +10283,7 @@
           }),
         });
       }
-      function Gr(e) {
+      function Mr(e) {
         const { appid: t, ePreference: n } = e,
           r = An(t, vn.Wf.SL),
           i = r.data?.past_events;
@@ -10312,22 +10311,22 @@
           i.length,
         );
         return (0, a.jsxs)("div", {
-          className: Yt()(kr().RecentEvents, kr().HasEvents),
+          className: Yt()(Er().RecentEvents, Er().HasEvents),
           children: [
             (0, a.jsx)("div", {
-              className: kr().EventsIcon,
+              className: Er().EventsIcon,
               "aria-hidden": !0,
               children: "*",
             }),
             (0, a.jsxs)("div", {
-              className: kr().EventsTitle,
+              className: Er().EventsTitle,
               children: [
                 (0, a.jsx)("div", {
-                  className: kr().OutlierTitle,
+                  className: Er().OutlierTitle,
                   children: c,
                 }),
                 (0, a.jsx)("div", {
-                  className: kr().OutlierSubtitle,
+                  className: Er().OutlierSubtitle,
                   children: l,
                 }),
               ],
@@ -10335,55 +10334,55 @@
           ],
         });
       }
-      function Mr(e) {
+      function Pr(e) {
         const { appname: t } = e,
-          n = new Date(1e3 * ot).toLocaleDateString((0, xn.J)(), Nr);
+          n = new Date(1e3 * ot).toLocaleDateString((0, xn.J)(), Fr);
         return (0, a.jsx)("div", {
-          className: Yt()(kr().RecentEvents, kr().CSGO),
+          className: Yt()(Er().RecentEvents, Er().CSGO),
           children: (0, a.jsx)("div", {
-            className: kr().EventsTitle,
+            className: Er().EventsTitle,
             children: Oe.Localize("#ReviewSummary_CSGODisclaimer", n, t),
           }),
         });
       }
-      function Pr(e) {
+      function Or(e) {
         const { appid: t, appname: n, ePreference: r } = e,
           i = r == vn.Wf.Yy;
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            i && (0, a.jsx)(Fr, {}),
-            (0, a.jsx)(Gr, { appid: t, ePreference: r }),
-            lt(t) && (0, a.jsx)(Mr, { appname: n }),
+            i && (0, a.jsx)(Gr, {}),
+            (0, a.jsx)(Mr, { appid: t, ePreference: r }),
+            lt(t) && (0, a.jsx)(Pr, { appname: n }),
           ],
         });
       }
-      var Or = n(17933),
-        zr = n.n(Or);
-      function Hr(e) {
+      var zr = n(17933),
+        Hr = n.n(zr);
+      function Ur(e) {
         return (0, a.jsx)("span", {
-          className: zr().BreakdownCount,
+          className: Hr().BreakdownCount,
           children: (0, Ge.Dq)(e.n),
         });
       }
-      function Ur(e) {
+      function Wr(e) {
         const { strTitle: t, score: n, tooltip: r } = e;
         return (0, a.jsx)("div", {
-          className: zr().ScoreBox,
+          className: Hr().ScoreBox,
           children: (0, a.jsxs)("div", {
-            className: zr().ScoreBoxText,
+            className: Hr().ScoreBoxText,
             children: [
-              (0, a.jsx)("div", { className: zr().Title, children: t }),
-              (0, a.jsx)(nr, {
+              (0, a.jsx)("div", { className: Hr().Title, children: t }),
+              (0, a.jsx)(ar, {
                 score: n,
                 tooltip: r,
-                className: zr().BoxScore,
+                className: Hr().BoxScore,
               }),
-              (0, a.jsx)(ar, { score: n, className: zr().BoxCount }),
+              (0, a.jsx)(rr, { score: n, className: Hr().BoxCount }),
             ],
           }),
         });
       }
-      function Wr(e) {
+      function qr(e) {
         const {
             options: t,
             eAppType: n,
@@ -10397,33 +10396,33 @@
             summaryYourLanguage: c,
           } = t,
           d = t.rgDisplayedScoreLanguages ?? [],
-          m = Xa(u.TS.LANGUAGE);
+          m = $a(u.TS.LANGUAGE);
         let _ = null;
         if (i && l)
           _ = (0, a.jsx)("div", {
-            className: zr().BreakdownRow,
+            className: Hr().BreakdownRow,
             children: Oe.LocalizeReact(
               "#ReviewSummary_OutlierAllReviews",
-              (0, a.jsx)(Hr, { n: l.nReviews }, "count"),
+              (0, a.jsx)(Ur, { n: l.nReviews }, "count"),
               (0, a.jsx)(
-                nr,
-                { className: zr().RowScore, score: l, tooltip: er(l, n, r) },
+                ar,
+                { className: Hr().RowScore, score: l, tooltip: tr(l, n, r) },
                 "score",
               ),
             ),
           });
         else if (t.bIsReviewLanguageOutlier && s) {
-          const e = tr(s, d, r);
+          const e = nr(s, d, r);
           _ = (0, a.jsx)("div", {
-            className: zr().BreakdownRow,
+            className: Hr().BreakdownRow,
             children: Oe.LocalizeReact(
               d.length > 1
                 ? "#ReviewSummary_OutlierYourLanguages"
                 : "#ReviewSummary_OutlierYourLanguage",
-              (0, a.jsx)(Hr, { n: s.nReviews }, "count"),
+              (0, a.jsx)(Ur, { n: s.nReviews }, "count"),
               (0, a.jsx)(
-                nr,
-                { className: zr().RowScore, score: s, tooltip: e },
+                ar,
+                { className: Hr().RowScore, score: s, tooltip: e },
                 "score",
               ),
               m,
@@ -10431,36 +10430,36 @@
           });
         } else
           _ = (0, a.jsx)("div", {
-            className: zr().BreakdownRow,
+            className: Hr().BreakdownRow,
             children: Oe.LocalizeReact(
               "#ReviewSummary_OutlierNotEnoughReviews",
-              (0, a.jsx)(Hr, { n: c?.nReviews ?? 0 }, "count"),
+              (0, a.jsx)(Ur, { n: c?.nReviews ?? 0 }, "count"),
               m,
             ),
           });
         return (0, a.jsxs)("div", {
-          className: zr().LanguageBreakdown,
+          className: Hr().LanguageBreakdown,
           children: [
             _,
             o &&
               (0, a.jsxs)("div", {
-                className: zr().BreakdownRow,
+                className: Hr().BreakdownRow,
                 children: [
                   Oe.LocalizeReact(
                     "#ReviewSummary_RecentInAllLanguages",
-                    (0, a.jsx)(Hr, { n: o.nReviews }, "count"),
+                    (0, a.jsx)(Ur, { n: o.nReviews }, "count"),
                   ),
-                  (0, a.jsx)(nr, {
-                    className: zr().RowScore,
+                  (0, a.jsx)(ar, {
+                    className: Hr().RowScore,
                     score: o,
-                    tooltip: er(o, n, r),
+                    tooltip: tr(o, n, r),
                   }),
                 ],
               }),
           ],
         });
       }
-      function qr(e) {
+      function Vr(e) {
         const {
             options: t,
             eAppType: n,
@@ -10477,38 +10476,38 @@
         _ = c
           ? m.length > 1
             ? Oe.Localize("#ReviewSummary_YourLanguagesReviews")
-            : Oe.Localize("#ReviewSummary_LanguageReviews", Xa(u.TS.LANGUAGE))
+            : Oe.Localize("#ReviewSummary_LanguageReviews", $a(u.TS.LANGUAGE))
           : Oe.Localize("#ReviewSummary_OverallReviews");
-        const p = c ? tr(s, m, i) : er(s, n, i);
+        const p = c ? nr(s, m, i) : tr(s, n, i);
         return (0, a.jsxs)("div", {
-          className: zr().ReviewScoreSummaries,
+          className: Hr().ReviewScoreSummaries,
           children: [
-            (0, a.jsx)("div", { className: zr().Rule }),
-            (0, a.jsx)(Ur, { strTitle: _, score: s, tooltip: p }),
+            (0, a.jsx)("div", { className: Hr().Rule }),
+            (0, a.jsx)(Wr, { strTitle: _, score: s, tooltip: p }),
             o &&
               !d &&
-              (0, a.jsx)(Ur, {
+              (0, a.jsx)(Wr, {
                 strTitle: Oe.Localize("#ReviewSummary_RecentReviews"),
                 score: o,
-                tooltip: er(o, n, i),
+                tooltip: tr(o, n, i),
               }),
             d &&
-              (0, a.jsx)(Wr, {
+              (0, a.jsx)(qr, {
                 options: t,
                 eAppType: n,
                 bHasReviewBombs: i,
                 bShowingLanguageScore: c,
               }),
-            (0, a.jsx)("div", { className: zr().Rule }),
+            (0, a.jsx)("div", { className: Hr().Rule }),
           ],
         });
       }
-      var Vr = n(30933),
-        Qr = n.n(Vr);
-      const Yr = "faqs/view/2DA6-9CB3-F84A-643E",
-        Zr = "account/preferences/#review_score_preferences",
-        Kr = "doc/store/reviews#ReviewBombing";
-      function Jr(e) {
+      var Qr = n(30933),
+        Yr = n.n(Qr);
+      const Zr = "faqs/view/2DA6-9CB3-F84A-643E",
+        Kr = "account/preferences/#review_score_preferences",
+        Jr = "doc/store/reviews#ReviewBombing";
+      function Xr(e) {
         const {
             appid: t,
             appname: n,
@@ -10534,19 +10533,19 @@
             [t],
           );
         return (0, a.jsxs)(i.Z, {
-          className: Qr().ReviewsHeader,
+          className: Yr().ReviewsHeader,
           "flow-children": "row",
           children: [
             (0, a.jsx)("h2", {
-              className: Qr().Title,
+              className: Yr().Title,
               children: Oe.Localize("#ReviewSummary_Header", n),
             }),
             (0, a.jsxs)("span", {
-              className: Qr().HeaderLinks,
+              className: Yr().HeaderLinks,
               children: [
                 s.bCanManageReviewBombs &&
                   (0, a.jsxs)("span", {
-                    className: Qr().AdminLinks,
+                    className: Yr().AdminLinks,
                     children: [
                       (0, a.jsx)(xe.Ii, {
                         href: "#",
@@ -10572,26 +10571,26 @@
                         ),
                       }),
                     (0, a.jsx)(xe.Ii, {
-                      href: `${u.TS.HELP_BASE_URL}${Yr}`,
+                      href: `${u.TS.HELP_BASE_URL}${Zr}`,
                       children: Oe.Localize("#ReviewSummary_AboutLink"),
                     }),
                     (0, a.jsx)(xe.Ii, {
-                      href: `${u.TS.STORE_BASE_URL}${Zr}`,
+                      href: `${u.TS.STORE_BASE_URL}${Kr}`,
                       children: Oe.Localize("#ReviewSummary_PreferencesLink"),
                     }),
                   ],
                 }),
                 s.bCanEditApp &&
                   (0, a.jsxs)("span", {
-                    className: Qr().PartnerHelp,
+                    className: Yr().PartnerHelp,
                     children: [
                       (0, a.jsx)("span", {
-                        className: Qr().PartnerHelpNote,
+                        className: Yr().PartnerHelpNote,
                         children: Oe.Localize("#ReviewSummary_PartnerHelpNote"),
                       }),
                       (0, a.jsx)(xe.Ii, {
-                        className: Qr().PartnerHelpLink,
-                        href: `${u.TS.PARTNER_BASE_URL}${Kr}`,
+                        className: Yr().PartnerHelpLink,
+                        href: `${u.TS.PARTNER_BASE_URL}${Jr}`,
                         children: Oe.Localize("#ReviewSummary_PartnerHelpLink"),
                       }),
                     ],
@@ -10601,7 +10600,7 @@
           ],
         });
       }
-      function Xr(e) {
+      function $r(e) {
         const { options: t } = e,
           { appid: n, appname: i, app_type: s } = r.useContext(st.S),
           [o, l] = r.useState(!1),
@@ -10615,15 +10614,15 @@
             vn.Wf.SL;
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(Jr, {
+            (0, a.jsx)(Xr, {
               appid: n,
               appname: i,
               options: t,
               onShowLanguageBreakdown: t.bHasLanguageOutliers ? c : void 0,
             }),
-            (0, a.jsx)(Pr, { appid: n, appname: i, ePreference: _ }),
+            (0, a.jsx)(Or, { appid: n, appname: i, ePreference: _ }),
             !d &&
-              (0, a.jsx)(qr, {
+              (0, a.jsx)(Vr, {
                 options: t,
                 eAppType: s,
                 ePreference: _,
@@ -10631,7 +10630,7 @@
               }),
             (0, a.jsx)(nt.EN, {
               active: o,
-              children: (0, a.jsx)(Dr, {
+              children: (0, a.jsx)(Rr, {
                 appid: n,
                 ePreference: _,
                 onClose: () => l(!1),
@@ -10640,30 +10639,30 @@
           ],
         });
       }
-      var $r = n(82861),
-        ei = n(18519),
-        ti = n(31669),
-        ni = n.n(ti);
-      function ai(e) {
+      var ei = n(82861),
+        ti = n(18519),
+        ni = n(31669),
+        ai = n.n(ni);
+      function ri(e) {
         const { nLinkAppID: t, bHasOwnReview: n } = e,
-          r = (0, ei.jn)(n ? u.iA.steamid : void 0),
-          i = n ? _((0, $r.n)(r.data, u.iA.steamid), t) : void 0;
+          r = (0, ti.jn)(n ? u.iA.steamid : void 0),
+          i = n ? _((0, ei.n)(r.data, u.iA.steamid), t) : void 0;
         return (0, a.jsxs)("div", {
-          className: ni().ReviewBox,
+          className: ai().ReviewBox,
           children: [
             (0, a.jsx)("div", {
-              className: ni().NoReviewsTitle,
+              className: ai().NoReviewsTitle,
               children: Oe.Localize("#ReviewSummary_NoReviewsTitle"),
             }),
             i
               ? (0, a.jsxs)(a.Fragment, {
                   children: [
                     (0, a.jsx)("div", {
-                      className: ni().NoReviewsSub,
+                      className: ai().NoReviewsSub,
                       children: Oe.Localize("#ReviewSummary_NoReviewsShareOne"),
                     }),
                     (0, a.jsx)("div", {
-                      className: ni().NoReviewsLink,
+                      className: ai().NoReviewsLink,
                       children: (0, a.jsx)(xe.Ii, {
                         href: i,
                         children: Oe.Localize(
@@ -10674,7 +10673,7 @@
                   ],
                 })
               : (0, a.jsx)("div", {
-                  className: ni().NoReviewsSub,
+                  className: ai().NoReviewsSub,
                   children: (0, a.jsx)("p", {
                     children: Oe.Localize("#ReviewSummary_NoReviewsWriteOne"),
                   }),
@@ -10682,7 +10681,7 @@
           ],
         });
       }
-      function ri(e) {
+      function ii(e) {
         const { data: t, bFilteredReviews: n, bHasReviewBombs: i } = e,
           { app_type: s } = r.useContext(st.S),
           o = t?.query_summary;
@@ -10706,15 +10705,15 @@
           children: Oe.LocalizeReact(
             l,
             (0, a.jsx)("b", { children: (0, Ge.Dq)(o.total_reviews) }),
-            (0, a.jsx)(nr, {
+            (0, a.jsx)(ar, {
               score: c,
-              tooltip: er(c, s, i),
+              tooltip: tr(c, s, i),
               className: Sn().Score,
             }),
           ),
         });
       }
-      function ii(e) {
+      function si(e) {
         const {
             title: t,
             className: n,
@@ -10750,7 +10749,7 @@
             })
           : null;
       }
-      function si(e) {
+      function oi(e) {
         const { error: t } = e,
           n = t instanceof ze.x ? t.eResult : void 0;
         return (0, a.jsx)("div", {
@@ -10761,7 +10760,7 @@
               : Oe.Localize("#Review_LoadErrorUnknown"),
         });
       }
-      function oi(e) {
+      function li(e) {
         const { rgLanguagePreferences: t, options: n } = e,
           { appid: i } = r.useContext(st.S),
           [s, o] = r.useState(!1),
@@ -10771,19 +10770,20 @@
           u = In(i),
           [m, _] = r.useState(void 0),
           p = m ?? Boolean(d.data?.expand_graph),
-          h = (0, Zt.BL)(
+          h = r.useMemo(() => !!Kn(d.data), [d.data]),
+          g = (0, Zt.BL)(
             r.useCallback((e) => {
               e.isIntersecting && o(!0);
             }, []),
             { threshold: 0, rootMargin: "0px 0px 1000px 0px" },
           ),
-          [g, f] = r.useState({
+          [f, S] = r.useState({
             ...Ze(),
-            language: lr(t),
+            language: cr(t),
             filter_offtopic_activity:
               l.data?.preferences?.review_score_preference != vn.Wf.Yy,
           }),
-          S = (function (e, t, n) {
+          v = (function (e, t, n) {
             const a = (0, Ue.jE)();
             return (0, We.q)({
               queryKey: et(e, t),
@@ -10795,13 +10795,13 @@
               retry: (e, t) =>
                 t instanceof ze.x ? t.eResult != He.nO && e < 3 : e < 3,
             });
-          })(i, g, s),
-          v = S?.data?.pages?.[0],
-          y =
-            (S?.data?.pages?.[S.data.pages.length - 1],
-            new Map(v?.rgReviewTags.map((e) => [e.id, e]))),
-          b = r.useCallback((e, t, n) => {
-            f((a) => ({
+          })(i, f, s),
+          y = v?.data?.pages?.[0],
+          b =
+            (v?.data?.pages?.[v.data.pages.length - 1],
+            new Map(y?.rgReviewTags.map((e) => [e.id, e]))),
+          w = r.useCallback((e, t, n) => {
+            S((a) => ({
               ...a,
               start_date: e,
               end_date: t,
@@ -10810,8 +10810,8 @@
               review_type: n,
             }));
           }, []),
-          w = r.useCallback((e, t) => {
-            f((n) => ({
+          C = r.useCallback((e, t) => {
+            S((n) => ({
               ...n,
               start_date: e,
               end_date: t,
@@ -10820,82 +10820,83 @@
               filter_offtopic_activity: !1,
             }));
           }, []),
-          C = r.useCallback((e) => {
-            f((t) => ({
+          x = r.useCallback((e) => {
+            S((t) => ({
               ...t,
               topics: Array.from(new Set(t.topics).add(String(e))),
             }));
           }, []),
-          x = r.useCallback(() => {
+          A = r.useCallback(() => {
             _(!p);
           }, [p]),
-          A = g.start_date > 0 && g.end_date > 0,
-          I = r.useMemo(
-            () =>
-              A ? { nStartDate: g.start_date, nEndDate: g.end_date } : void 0,
-            [A, g.start_date, g.end_date],
-          ),
+          I = f.start_date > 0 && f.end_date > 0,
           T = r.useMemo(
+            () =>
+              I ? { nStartDate: f.start_date, nEndDate: f.end_date } : void 0,
+            [I, f.start_date, f.end_date],
+          ),
+          j = r.useMemo(
             () =>
               n && {
                 ...n,
-                rgTopics: v?.rgReviewTags,
+                rgTopics: y?.rgReviewTags,
                 bHasOfftopicActivity: u,
+                bHasReviewHistogram: h,
                 rgLanguagePreferences: t,
               },
-            [n, v?.rgReviewTags, u, t],
+            [n, y?.rgReviewTags, u, h, t],
           );
         return (0, a.jsxs)(st.M.Provider, {
-          value: { fnSetTopicFilter: C },
+          value: { fnSetTopicFilter: x },
           children: [
             !1,
             c &&
-              T &&
+              j &&
               (0, a.jsxs)(a.Fragment, {
                 children: [
-                  (0, a.jsx)(ca, {
+                  (0, a.jsx)(da, {
                     appid: i,
-                    onSelectDateRange: b,
-                    onSelectOffTopicActivity: w,
-                    selectedRange: I,
+                    onSelectDateRange: w,
+                    onSelectOffTopicActivity: C,
+                    selectedRange: T,
                     bCollapsed: !p,
                   }),
-                  (0, a.jsx)(cr, {
-                    filters: g,
-                    onFiltersChanged: f,
-                    options: T,
+                  (0, a.jsx)(dr, {
+                    filters: f,
+                    onFiltersChanged: S,
+                    options: j,
                     bGraphVisible: !!p,
-                    onShowGraph: x,
+                    onShowGraph: A,
                   }),
-                  g &&
-                    (0, a.jsx)(yr, {
-                      filters: g,
-                      onFiltersChanged: f,
-                      options: T,
+                  f &&
+                    (0, a.jsx)(br, {
+                      filters: f,
+                      onFiltersChanged: S,
+                      options: j,
                     }),
                 ],
               }),
             (0, a.jsxs)("div", {
-              ref: h,
+              ref: g,
               className: Sn().StatusLine,
               children: [
-                S.isFetching && (0, a.jsx)(Vt.t, { size: "small" }),
-                (0, a.jsx)(ri, {
-                  data: v,
-                  bFilteredReviews: g.filter_offtopic_activity,
+                v.isFetching && (0, a.jsx)(Vt.t, { size: "small" }),
+                (0, a.jsx)(ii, {
+                  data: y,
+                  bFilteredReviews: f.filter_offtopic_activity,
                   bHasReviewBombs: u,
                 }),
               ],
             }),
-            "summary" == v?.reviewFilter &&
-              (0, a.jsx)(di, { summary: v, mapTags: y }),
-            "summary" != v?.reviewFilter &&
-              (0, a.jsx)(li, { queryReviews: S, mapTags: y }),
-            S.isError && (0, a.jsx)(si, { error: S.error }),
+            "summary" == y?.reviewFilter &&
+              (0, a.jsx)(ui, { summary: y, mapTags: b }),
+            "summary" != y?.reviewFilter &&
+              (0, a.jsx)(ci, { queryReviews: v, mapTags: b }),
+            v.isError && (0, a.jsx)(oi, { error: v.error }),
           ],
         });
       }
-      function li(e) {
+      function ci(e) {
         const { queryReviews: t, mapTags: n } = e,
           r = (t?.data?.pages || []).map((e) => e.reviews).flat(1),
           i =
@@ -10909,7 +10910,7 @@
             ? (0, a.jsx)(pn, { ...e, loadMore: s })
             : (0, a.jsxs)(a.Fragment, {
                 children: [
-                  (0, a.jsx)(ii, { reviews: r, mapTags: n }),
+                  (0, a.jsx)(si, { reviews: r, mapTags: n }),
                   i &&
                     (0, a.jsx)(De.$n, {
                       disabled: t.isFetching,
@@ -10920,7 +10921,7 @@
                 ],
               });
       }
-      function ci(e) {
+      function di(e) {
         const { summary: t, className: n } = e,
           i = r.useContext(st.S);
         return t?.query_summary?.total_reviews_unfiltered
@@ -10937,7 +10938,7 @@
           : null;
         var s;
       }
-      function di(e) {
+      function ui(e) {
         const { summary: t, mapTags: n } = e,
           r = (0, Ve.Qn)();
         return t
@@ -10946,7 +10947,7 @@
                 children: [
                   (0, a.jsx)(hn, { ...e }),
                   (0, a.jsx)(gn.k, {
-                    children: (0, a.jsx)(ci, {
+                    children: (0, a.jsx)(di, {
                       className: Sn().GamepadBrowseAll,
                       summary: t,
                     }),
@@ -10960,20 +10961,20 @@
                     (0, a.jsxs)(i.Z, {
                       className: Sn().Left,
                       children: [
-                        (0, a.jsx)(ii, {
+                        (0, a.jsx)(si, {
                           title: "#Review_SectionTitle_Friends",
                           className: Sn().Friends,
                           bIsFriend: !0,
                           reviews: t?.friendreviews,
                           mapTags: n,
                         }),
-                        (0, a.jsx)(ii, {
+                        (0, a.jsx)(si, {
                           title: "#Review_SectionTitle_Top",
                           className: Sn().TopReviews,
                           reviews: t?.reviews,
                           mapTags: n,
                         }),
-                        (0, a.jsx)(ci, {
+                        (0, a.jsx)(di, {
                           className: Sn().LeftColumn,
                           summary: t,
                         }),
@@ -10982,14 +10983,14 @@
                     (0, a.jsxs)(i.Z, {
                       className: Sn().Right,
                       children: [
-                        (0, a.jsx)(ii, {
+                        (0, a.jsx)(si, {
                           title: "#Review_SectionTitle_Recent",
                           className: Sn().Recent,
                           bShortPresentation: !0,
                           reviews: t?.recentreviews,
                           mapTags: n,
                         }),
-                        (0, a.jsx)(ci, {
+                        (0, a.jsx)(di, {
                           className: Sn().RightColumn,
                           summary: t,
                         }),
@@ -11000,7 +11001,7 @@
               })
           : null;
       }
-      function ui(e) {
+      function mi(e) {
         const { filter_options: t, summary_options: n } = e,
           i = (0, yn.qc)(),
           o = r.useMemo(
@@ -11010,7 +11011,7 @@
         return n && !n.bHasAnyReviews
           ? (0, a.jsx)(st.S.Provider, {
               value: e,
-              children: (0, a.jsx)(ai, {
+              children: (0, a.jsx)(ri, {
                 nLinkAppID: m(e),
                 bHasOwnReview: n.bHasOwnReview,
               }),
@@ -11018,9 +11019,9 @@
           : (0, a.jsxs)(st.S.Provider, {
               value: e,
               children: [
-                n && (0, a.jsx)(Xr, { options: n }),
+                n && (0, a.jsx)($r, { options: n }),
                 o.length > 0 &&
-                  (0, a.jsx)(oi, { rgLanguagePreferences: o, options: t }),
+                  (0, a.jsx)(li, { rgLanguagePreferences: o, options: t }),
               ],
             });
       }

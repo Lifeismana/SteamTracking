@@ -942,7 +942,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1@E7
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1215,9 +1214,10 @@ $ffn
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG;pt
+++CCUNG`xt
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{pt
 +2Hp
 +HpXhE
 +QQ 3K%
@@ -1684,11 +1684,14 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+0.8.3
 00000000
 0.15
-0.8.3
 00:00:00
 01/01/00
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -1738,9 +1741,6 @@ $ffn
 1000
 1024
 10000
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2242,7 +2242,6 @@ $ffn
 21CUtlCStringConversion
 21UserSystemInformation
 21VideoRepresentation_t
-22:41:20
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2252,6 +2251,7 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
+23:29:50
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2442,9 +2442,9 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
+64CK\vH
 65536
 60000000
-64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -3328,7 +3328,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 13 2026
+Aug 18 2026
 August
 Aura
 AuthANY
@@ -5062,6 +5062,7 @@ Depot
 Descending
 DescriptorProto
 DescriptorProtosH
+Desktop
 Destination
 Destination buffer is too small
 Destination buffer is wrong
@@ -10321,7 +10322,6 @@ WINDOWS
 WINDOW_UPADATE to reserved stream
 WINDOW_UPDATE to idle stream
 WINDOW_UPDATE: window_size_increment == 0
-WNOI
 WON CD-Key
 WORKAROUND_GdbSymbolLoadHook
 WPACKET_start_sub_packet_len__
@@ -13905,7 +13905,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenh
 givenName
 glibcxx.eh_pool
 global constructors keyed to

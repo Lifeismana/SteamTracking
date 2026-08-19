@@ -114,7 +114,7 @@ $ORIGIN
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-22:41:24
+23:29:52
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -133,7 +133,7 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-Aug 13 2026
+Aug 18 2026
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock
@@ -1088,7 +1088,6 @@ reinterpret_cast
 rename
 rewind
 rmdir
-s-8q
 s_dev_urandom_fd >= 0
 scandir
 scandir64

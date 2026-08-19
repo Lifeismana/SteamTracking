@@ -895,7 +895,6 @@ $d`D-laM
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG$~
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -1315,6 +1314,7 @@ $d`D-laM
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFP
 0123456789abcdef
 08bX
 0A/8
@@ -2187,7 +2187,6 @@ $d`D-laM
 21CefV8StackFrameCToCpp
 21CefV8StackTraceCToCpp
 21CefWriteHandlerCppToC
-22:41:29
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -2209,6 +2208,7 @@ $d`D-laM
 22CefRenderHandlerCppToC
 22CefStringVisitorCppToC
 22CefV8InterceptorCppToC
+23:29:55
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -2382,9 +2382,9 @@ $d`D-laM
 31CefResourceRequestHandlerCppToC
 31CefRunContextMenuCallbackCToCpp
 31CefV8ArrayBufferReleaseCallback
-3333
 32767
 32CefDevToolsMessageObserverCppToC
+3333
 3333UUUU
 33CMsgDuplicateControllerSourceMode
 33CMsgVerticalScrollBarSizeResponse
@@ -2497,7 +2497,6 @@ $d`D-laM
 60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
 6144
 64CK\vH
-8192
 666666666666666666666666666666666666666666666666
 6CefApp
 6ConVar
@@ -2540,6 +2539,7 @@ $d`D-laM
 8 Mbps
 8/A0
 80 Mbps
+8192
 82\n:XPH
 83L3
 83N6
@@ -3066,7 +3066,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 13 2026
+Aug 18 2026
 August
 Aura
 AuthANY
@@ -4738,6 +4738,7 @@ Depot
 Descending
 DescriptorProto
 DescriptorProtosH
+Desktop
 Desktop portal not supported, falling back to a different file picker\n
 DesktopDBusIntrospectable
 DesktopDBusIntrospectableProxy
@@ -6926,6 +6927,8 @@ IVRSteamPrivate_026
 IVRSteamPrivate_027
 IVRSteamPrivate_028
 IVRSteamPrivate_029
+IVRSteamPrivate_030
+IVRSteamPrivate_031
 IVRSystem_022
 I\nlQ
 I\tHA\t981G'dc
@@ -7821,6 +7824,8 @@ N2vr19IVRSteamPrivate_026E
 N2vr19IVRSteamPrivate_027E
 N2vr19IVRSteamPrivate_028E
 N2vr19IVRSteamPrivate_029E
+N2vr19IVRSteamPrivate_030E
+N2vr19IVRSteamPrivate_031E
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -7847,7 +7852,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_029EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_031EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -7878,6 +7883,8 @@ N5vrapi33CVRSteamPrivateAdapter_025_as_026E
 N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N5vrapi33CVRSteamPrivateAdapter_027_as_028E
 N5vrapi33CVRSteamPrivateAdapter_028_as_029E
+N5vrapi33CVRSteamPrivateAdapter_029_as_030E
+N5vrapi33CVRSteamPrivateAdapter_030_as_031E
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -15537,7 +15544,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(f_
+ggenhz_
 givenName
 gizmodo.com
 glAccumxOES
@@ -20199,6 +20206,7 @@ locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
 localeconv
+localhost
 localhost/
 localityName
 localization

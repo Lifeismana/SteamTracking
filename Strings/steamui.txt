@@ -5146,7 +5146,7 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8\t
+++CCUNG8
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAudio_GetBluetoothAudioPreference_Request
@@ -9188,6 +9188,9 @@ ${LANGUAGE}
 16StoreItem_Assets
 16UserAccount_Stub
 16VideoClient_Stub
+2000
+2019
+2048
 1724792014
 17Achievements_Stub
 17CCaptureFailedMsg
@@ -9630,10 +9633,7 @@ ${LANGUAGE}
 20.GamePerformanceSettings.EGamePerformanceSetting
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 200 Mbps
-2000
 200M
-2019
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13043,6 +13043,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+6144
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -13055,7 +13056,6 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13529,7 +13529,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hh0F
+9Hh<F
 9IGv
 9Inventory
 9PE,$
@@ -13602,6 +13602,7 @@ ${LANGUAGE}
 :EXTERNAL TYPE %s\n
 :LBN
 :L\n\rsetting_store
+:Wc3
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
@@ -15072,7 +15073,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 13 2026 22:41:31
+Aug 18 2026 23:29:58
 August
 Aura
 Australia/Adelaide
@@ -23740,6 +23741,8 @@ IVRSteamPrivate_026
 IVRSteamPrivate_027
 IVRSteamPrivate_028
 IVRSteamPrivate_029
+IVRSteamPrivate_030
+IVRSteamPrivate_031
 IVRSystem_022
 I\cv
 I\n\finvite_links
@@ -26027,6 +26030,8 @@ N2vr19IVRSteamPrivate_026E
 N2vr19IVRSteamPrivate_027E
 N2vr19IVRSteamPrivate_028E
 N2vr19IVRSteamPrivate_029E
+N2vr19IVRSteamPrivate_030E
+N2vr19IVRSteamPrivate_031E
 N30CGetControllerConfigWorkerBase46CCallbackInternal_OnReceivedDownloadItemResultE
 N30CSteamUICloudStorageController34CCallbackInternal_OnPostLogonStateE
 N30CStreamingClientGameController30CCallback_OnStreamClientResultE
@@ -26166,7 +26171,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_029EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_031EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -26197,6 +26202,8 @@ N5vrapi33CVRSteamPrivateAdapter_025_as_026E
 N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N5vrapi33CVRSteamPrivateAdapter_027_as_028E
 N5vrapi33CVRSteamPrivateAdapter_028_as_029E
+N5vrapi33CVRSteamPrivateAdapter_029_as_030E
+N5vrapi33CVRSteamPrivateAdapter_030_as_031E
 N6C;
 N6detail10ClosurePtrIMNS_12GenericClassEFP14IHTMLResponsesRKN11IHTMLWindow22PopupHTMLWindowEvent_tEEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFbRKN11IHTMLWindow23OpenFileDialogRequest_tEEEE
@@ -27242,6 +27249,7 @@ OpenVR.DeviceProperties.RegisterForDevicePropertyChange
 OpenVR.ExtendActivityTimeout
 OpenVR.GetMutualCapabilities
 OpenVR.GetWebSecret
+OpenVR.GetWebServerAddress
 OpenVR.InstallVR
 OpenVR.Keyboard.RegisterForStatus
 OpenVR.Keyboard.SendText
@@ -41263,6 +41271,7 @@ full
 full_audio
 full_controller_support
 full_description_bbcode
+full_reconcile
 fullname
 fullpath
 func
@@ -41781,7 +41790,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -55410,6 +55419,7 @@ strHeaderImage_2x
 strHeroBlurImage
 strHeroImage
 strHomepageURL
+strHost
 strID
 strIconData
 strIconDataBase64
@@ -56811,6 +56821,7 @@ unNewPacketSize == cubExtHdrSize + unOldBodySize + sizeof( ProtoBufMsgHeader_t )
 unNow > m_unLastSpew
 unOldBodySize >= 0
 unPID
+unPort
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unRequestingAppID

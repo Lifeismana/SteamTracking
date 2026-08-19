@@ -3171,153 +3171,8 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_, _, _) {
-          const _ = [],
-            [_, _] = _.GetChildren(),
-            _ = _.GetActiveChild();
-          let _;
-          const _ = _ ? _.Element?.getBoundingClientRect() : null;
-          if (_) {
-            const _ = _(_, _, _);
-            if (
-              _ &&
-              !_.offScreen &&
-              ((_ = _(_, _, _.overlap, _)), _ && !_.visibility.offScreen)
-            )
-              return _;
-            _ &&
-              _.push({
-                child: _,
-                visibility: _,
-              });
-          }
-          const _ = _ || _;
-          for (let _ = 0; _ < _.length; _++) {
-            const _ = _[_];
-            if (_ == _) continue;
-            const _ = _(_, _, _ ?? void 0);
-            _ &&
-              _.push({
-                child: _,
-                visibility: _,
-              });
-          }
-          let _;
-          _.sort(_);
-          for (const _ of _) {
-            const { child: _, visibility: _ } = _;
-            if (_.offScreen && _) {
-              if (!_.visibility.offScreen) break;
-              if (_.distance && _.distance > _.visibility.distance) break;
-            }
-            const _ = _ == _ ? _ : _(_, _, _.overlap || _, _ ?? void 0);
-            _ && (!_ || _(_, _) < 0) && (_ = _);
-          }
-          return _;
-        }
-        function _(_, _, _, _) {
-          switch (_.GetFocusable()) {
-            case "none":
-              return;
-            case "children":
-              return _(_, _.overlap || _, _);
-            case "self":
-              return {
-                child: _,
-                visibility: _,
-              };
-          }
-        }
-        function _(_, _) {
-          const _ = _.visibility,
-            _ = _.visibility;
-          return _.offScreen
-            ? _.offScreen
-              ? _.distance - _.distance
-              : 1
-            : _.offScreen
-              ? -1
-              : _.distance - _.distance;
-        }
-        function _(_, _, _) {
-          const _ = _.Element?.getBoundingClientRect(),
-            _ = _.GetFocusable();
-          let _;
-          if ("none" == _ || !_ || !_) return null;
-          if ("self" == _) {
-            if (
-              _.top < _.top ||
-              _.right > _.right ||
-              _.bottom > _.bottom ||
-              _.left < _.left
-            ) {
-              const _ = _.top + _.height / 2,
-                _ = _.left + _.width / 2;
-              if (_ < _.top)
-                return {
-                  offScreen: "top",
-                  distance: _.top - _,
-                };
-              if (_ > _.right)
-                return {
-                  offScreen: "right",
-                  distance: _ - _.right,
-                };
-              if (_ > _.bottom)
-                return {
-                  offScreen: "bottom",
-                  distance: _ - _.bottom,
-                };
-              if (_ < _.left)
-                return {
-                  offScreen: "left",
-                  distance: _.left - _,
-                };
-            }
-            _ && (_ = (0, _._)(_, _));
-          } else if ("children" == _) {
-            const _ = _.Element;
-            if (!_) return null;
-            if (_.scrollHeight > _.height || _.scrollWidth > _.width) {
-              const _ = _.ownerDocument.defaultView.getComputedStyle(_);
-              if ("visible" == _.overflowX || "visible" == _.overflowY)
-                return {
-                  overlap: _,
-                };
-            }
-            if (_.bottom < _.top)
-              return {
-                offScreen: "top",
-                distance: _.top - _.bottom,
-              };
-            if (_.left > _.right)
-              return {
-                offScreen: "right",
-                distance: _.left - _.right,
-              };
-            if (_.top > _.bottom)
-              return {
-                offScreen: "bottom",
-                distance: _.top - _.bottom,
-              };
-            if (_.right < _.left)
-              return {
-                offScreen: "left",
-                distance: _.left - _.right,
-              };
-          }
-          return {
-            overlap: {
-              top: Math.max(_.top, _.top),
-              right: Math.min(_.right, _.right),
-              bottom: Math.min(_.bottom, _.bottom),
-              left: Math.max(_.left, _.left),
-            },
-            distance: _,
-          };
-        }
-        var _ = __webpack_require__("chunkid");
         const _ = new _._("FocusNavigationMovement"),
           _ = _.Debug;
         var _, _, _, _;
@@ -3440,16 +3295,30 @@ var CLSTAMP = "steamdb";
           GetBoundingRect() {
             return this.m_element?.getBoundingClientRect();
           }
+          GetElementForFocusRingMeasure() {
+            const _ = this.m_element;
+            return this.m_Properties?.focusRingSizeElementID
+              ? (_?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? _)
+              : _;
+          }
           GetBoundingRectForFocusRing() {
-            let _ = this.m_element;
-            return (
-              this.m_Properties?.focusRingSizeElementID &&
-                (_ =
-                  _?.ownerDocument?.getElementById(
-                    this.m_Properties.focusRingSizeElementID,
-                  ) ?? this.m_element),
-              _?.getBoundingClientRect()
-            );
+            return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
+          }
+          GetBorderRadiusForFocusRing() {
+            if (!this.m_Properties?.focusRingSizeElementID) return;
+            const _ = this.GetElementForFocusRingMeasure();
+            if (!_) return;
+            const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
+            return _
+              ? {
+                  borderTopLeftRadius: _.borderTopLeftRadius,
+                  borderTopRightRadius: _.borderTopRightRadius,
+                  borderBottomRightRadius: _.borderBottomRightRadius,
+                  borderBottomLeftRadius: _.borderBottomLeftRadius,
+                }
+              : void 0;
           }
           SetHasFocus(_) {
             this.m_Focused.Set(_);
@@ -3845,12 +3714,13 @@ var CLSTAMP = "steamdb";
           }
           BVisibleChildTakeFocus(_) {
             const _ = this.Element?.ownerDocument?.defaultView ?? window,
-              _ = _(this, {
+              _ = {
                 top: 0,
                 left: 0,
                 right: _.innerWidth,
                 bottom: _.innerHeight,
-              });
+              },
+              _ = (0, _._)(this, _);
             return (
               _(
                 `Focusing visible child, best child match is ${_?.child?.Element?.className} - ${JSON.stringify(_?.visibility)}`,
@@ -4318,6 +4188,158 @@ var CLSTAMP = "steamdb";
             default:
               return (0, _._)(_, `Unhandled flow-children: ${_}`), _._.NONE;
           }
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        function _(_, _, _) {
+          const _ = [],
+            [_, _] = _.GetChildren(),
+            _ = _.GetActiveChild();
+          let _;
+          const _ = _ ? _.Element?.getBoundingClientRect() : null;
+          if (_) {
+            const _ = _(_, _, _);
+            if (
+              _ &&
+              !_.offScreen &&
+              ((_ = _(_, _, _.overlap, _)), _ && !_.visibility.offScreen)
+            )
+              return _;
+            _ &&
+              _.push({
+                child: _,
+                visibility: _,
+              });
+          }
+          const _ = _ || _;
+          for (let _ = 0; _ < _.length; _++) {
+            const _ = _[_];
+            if (_ == _) continue;
+            const _ = _(_, _, _ ?? void 0);
+            _ &&
+              _.push({
+                child: _,
+                visibility: _,
+              });
+          }
+          let _;
+          _.sort(_);
+          for (const _ of _) {
+            const { child: _, visibility: _ } = _;
+            if (_.offScreen && _) {
+              if (!_.visibility.offScreen) break;
+              if (_.distance && _.distance > _.visibility.distance) break;
+            }
+            const _ = _ == _ ? _ : _(_, _, _.overlap || _, _ ?? void 0);
+            _ && (!_ || _(_, _) < 0) && (_ = _);
+          }
+          return _;
+        }
+        function _(_, _, _, _) {
+          switch (_.GetFocusable()) {
+            case "none":
+              return;
+            case "children":
+              return _(_, _.overlap || _, _);
+            case "self":
+              return {
+                child: _,
+                visibility: _,
+              };
+          }
+        }
+        function _(_, _) {
+          const _ = _.visibility,
+            _ = _.visibility;
+          return _.offScreen
+            ? _.offScreen
+              ? _.distance - _.distance
+              : 1
+            : _.offScreen
+              ? -1
+              : _.distance - _.distance;
+        }
+        function _(_, _, _) {
+          const _ = _.Element?.getBoundingClientRect(),
+            _ = _.GetFocusable();
+          let _;
+          if ("none" == _ || !_ || !_) return null;
+          if ("self" == _) {
+            if (
+              _.top < _.top ||
+              _.right > _.right ||
+              _.bottom > _.bottom ||
+              _.left < _.left
+            ) {
+              const _ = _.top + _.height / 2,
+                _ = _.left + _.width / 2;
+              if (_ < _.top)
+                return {
+                  offScreen: "top",
+                  distance: _.top - _,
+                };
+              if (_ > _.right)
+                return {
+                  offScreen: "right",
+                  distance: _ - _.right,
+                };
+              if (_ > _.bottom)
+                return {
+                  offScreen: "bottom",
+                  distance: _ - _.bottom,
+                };
+              if (_ < _.left)
+                return {
+                  offScreen: "left",
+                  distance: _.left - _,
+                };
+            }
+            _ && (_ = (0, _._)(_, _));
+          } else if ("children" == _) {
+            const _ = _.Element;
+            if (!_) return null;
+            if (_.scrollHeight > _.height || _.scrollWidth > _.width) {
+              const _ = _.ownerDocument.defaultView.getComputedStyle(_);
+              if ("visible" == _.overflowX || "visible" == _.overflowY)
+                return {
+                  overlap: _,
+                };
+            }
+            if (_.bottom < _.top)
+              return {
+                offScreen: "top",
+                distance: _.top - _.bottom,
+              };
+            if (_.left > _.right)
+              return {
+                offScreen: "right",
+                distance: _.left - _.right,
+              };
+            if (_.top > _.bottom)
+              return {
+                offScreen: "bottom",
+                distance: _.top - _.bottom,
+              };
+            if (_.right < _.left)
+              return {
+                offScreen: "left",
+                distance: _.left - _.right,
+              };
+          }
+          return {
+            overlap: {
+              top: Math.max(_.top, _.top),
+              right: Math.min(_.right, _.right),
+              bottom: Math.min(_.bottom, _.bottom),
+              left: Math.max(_.left, _.left),
+            },
+            distance: _,
+          };
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -17968,9 +17990,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 13 2026 : 12:43:31",
-                BUILD_TIME_UTC: "Aug 13 2026 : 19:43:31",
-                BUILD_RTIME_UTC: 1786650211,
+                BUILD_TIME_LOCAL: "Aug 18 2026 : 15:32:45",
+                BUILD_TIME_UTC: "Aug 18 2026 : 22:32:45",
+                BUILD_RTIME_UTC: 1787092365,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -31505,9 +31527,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 13 2026 : 12:43:31",
-                    BUILD_TIME_UTC: "Aug 13 2026 : 19:43:31",
-                    BUILD_RTIME_UTC: 1786650211,
+                    BUILD_TIME_LOCAL: "Aug 18 2026 : 15:32:45",
+                    BUILD_TIME_UTC: "Aug 18 2026 : 22:32:45",
+                    BUILD_RTIME_UTC: 1787092365,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -32448,14 +32470,14 @@ var CLSTAMP = "steamdb";
         9536: "4367f32b4c6562afa768",
         9558: "1a876ab77e9ebdb86a7f",
         9637: "706882d30a629adc3ca3",
-        9672: "bf453ced8e451d66859f",
+        9672: "4799148f8fee64e7eb52",
         9711: "c299e2fab8790c7c37d0",
         9737: "9c09658e5d7c7eca2cee",
         9740: "0ee8267c02b587cacc4f",
         9779: "59ef76674166d4b9e52e",
         9845: "67d8ccf06f062089fbdd",
         9853: "7be45ac954716a4a58c1",
-        9858: "432154cd3d0cc858acb1",
+        9858: "cb625fc9721aa250087a",
         9861: "28739986a6f0de57d87c",
         9862: "f7642c72003ad4fab6eb",
         9869: "d3b3dea779721d721088",

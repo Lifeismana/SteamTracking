@@ -8732,6 +8732,33 @@
           [1, "year"],
         ],
         _ = 100;
+      function _(_) {
+        const _ = _?.results;
+        if (!_?.rollups?.length) return null;
+        const _ = (_.end_date - _.start_date) / _._.PerDay;
+        if (_ < 7) return null;
+        let _ = _.rollups,
+          _ = _.rollup_type,
+          _ = _.recent?.length ? _.recent : null;
+        return (
+          0 ==
+          (_ || []).reduce(
+            (_, _) => _ + _.recommendations_up + _.recommendations_down,
+            0,
+          )
+            ? (_ = null)
+            : _ < 30 && ((_ = _), (_ = "day"), (_ = null)),
+          {
+            rollups: _,
+            rollupType: _,
+            recent: _,
+            pastEvents: _?.past_events || [],
+            bCountAllReviews: !!_?.count_all_reviews,
+            bExpandGraph: !!_?.expand_graph,
+            nTotalDays: _,
+          }
+        );
+      }
       function _(_, _) {
         switch (_) {
           case "week":
@@ -9388,37 +9415,7 @@
             className: _,
           } = _,
           _ = _(_, _.eReviewScorePreference ?? _._._),
-          _ = _.useMemo(
-            () =>
-              (function (_) {
-                const _ = _?.results;
-                if (!_?.rollups?.length) return null;
-                const _ = (_.end_date - _.start_date) / _._.PerDay;
-                if (_ < 7) return null;
-                let _ = _.rollups,
-                  _ = _.rollup_type,
-                  _ = _.recent?.length ? _.recent : null;
-                return (
-                  0 ==
-                  (_ || []).reduce(
-                    (_, _) => _ + _.recommendations_up + _.recommendations_down,
-                    0,
-                  )
-                    ? (_ = null)
-                    : _ < 30 && ((_ = _), (_ = "day"), (_ = null)),
-                  {
-                    rollups: _,
-                    rollupType: _,
-                    recent: _,
-                    pastEvents: _?.past_events || [],
-                    bCountAllReviews: !!_?.count_all_reviews,
-                    bExpandGraph: !!_?.expand_graph,
-                    nTotalDays: _,
-                  }
-                );
-              })(_.data),
-            [_.data],
-          ),
+          _ = _.useMemo(() => _(_.data), [_.data]),
           _ = (function () {
             const [_, _] = _.useState(""),
               _ = _.useRef(null),
@@ -10358,13 +10355,14 @@
                 options: _,
                 nReviewsTotal: _,
               }),
-            (0, _.jsx)(_, {
-              filters: _,
-              setFilters: _,
-              options: _,
-              bGraphVisible: _,
-              onToggleGraph: _,
-            }),
+            _.bHasReviewHistogram &&
+              (0, _.jsx)(_, {
+                filters: _,
+                setFilters: _,
+                options: _,
+                bGraphVisible: _,
+                onToggleGraph: _,
+              }),
             _.length > 0 &&
               (0, _.jsx)(_, {
                 filters: _,
@@ -10394,7 +10392,8 @@
                 filters: _,
                 setFilters: _,
               }),
-            _ &&
+            _.bHasReviewHistogram &&
+              _ &&
               (0, _.jsx)(_._, {
                 className: _().ToggleGraphContainer,
                 children: (0, _.jsx)(_, {
@@ -11918,6 +11917,7 @@
           _ = _(_),
           [_, _] = _.useState(void 0),
           _ = _ ?? Boolean(_.data?.expand_graph),
+          _ = _.useMemo(() => !!_(_.data), [_.data]),
           _ = (0, _._)(
             _.useCallback((_) => {
               _.isIntersecting && _(!0);
@@ -11996,9 +11996,10 @@
                 ..._,
                 rgTopics: _?.rgReviewTags,
                 bHasOfftopicActivity: _,
+                bHasReviewHistogram: _,
                 rgLanguagePreferences: _,
               },
-            [_, _?.rgReviewTags, _, _],
+            [_, _?.rgReviewTags, _, _, _],
           );
         return (0, _.jsxs)(_._.Provider, {
           value: {
