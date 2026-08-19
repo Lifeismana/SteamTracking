@@ -12441,15 +12441,15 @@ e161c41c steamui/9862.js
 1159a3c3 steamui/awardicon.js
 57ccc486 steamui/broadcast.js
 b88cce17 steamui/broadcastapp.js
-ce635df3 steamui/changelist.txt
+6f7016ce steamui/changelist.txt
 c70be3f0 steamui/chunk~1a96cdf59.js
-d4275da5 steamui/chunk~2dcc5aaf7.js
+1cb84f93 steamui/chunk~2dcc5aaf7.js
 41b13bdc steamui/css/9441.css
 db726bfd steamui/css/awardicon.css
 be20d6cc steamui/css/broadcast.css
 a7902e33 steamui/css/broadcastapp.css
 18f90266 steamui/css/chunk~1a96cdf59.css
-7b67ab53 steamui/css/chunk~2dcc5aaf7.css
+57cd2d33 steamui/css/chunk~2dcc5aaf7.css
 db40fab8 steamui/css/discoveryqueue.css
 f06ff478 steamui/css/gamenotes.css
 103a4a9f steamui/css/gamerecording.css
@@ -12819,6 +12819,7 @@ f823b18b steamui/images/mobile_login_tools.png
 31f448a0 steamui/images/nonverified_3.png
 9eecd040 steamui/images/osk2.png
 6b99f571 steamui/images/rebroadcast.png
+5c5cf682 steamui/images/startup_frame.png
 5c9416dd steamui/images/startup_machine.png
 775c003f steamui/images/startup_newbp.png
 da2fee86 steamui/images/startup_steamos.png
@@ -12836,9 +12837,9 @@ f11d799e steamui/images/tvnoise.png
 6c038289 steamui/images/whatsnew_playnext.jpg
 ee9f76ea steamui/images/workshopbackground.png
 26108669 steamui/index.html
-48ae964a steamui/libraries/libraries~00299a408.js
+dc9f0944 steamui/libraries/libraries~00299a408.js
 dab67466 steamui/libraries/libraries~2dcc5aaf7.js
-462e509b steamui/library.js
+6466f4fd steamui/library.js
 c8975a72 steamui/licenses.js
 47c0c50e steamui/licenses.txt
 64cfeb42 steamui/localization/friendsui_arabic-json.js
@@ -12944,7 +12945,7 @@ b6d3ab2b steamui/localization/steamui_brazilian-json.js
 32c227fc steamui/localization/steamui_czech-json.js
 629a2b7a steamui/localization/steamui_danish-json.js
 3e5a0269 steamui/localization/steamui_dutch-json.js
-02dd9ea3 steamui/localization/steamui_english-json.js
+f953aa31 steamui/localization/steamui_english-json.js
 add0c0e4 steamui/localization/steamui_finnish-json.js
 739cedcf steamui/localization/steamui_french-json.js
 9d9cfdce steamui/localization/steamui_german-json.js
