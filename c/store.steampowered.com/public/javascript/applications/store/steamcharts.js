@@ -7894,42 +7894,85 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = ["topnewreleases", "bestofyear"];
+      function _(_) {
+        return _.split(/[?#]/)[0];
+      }
+      function _(_) {
+        const _ = _(_);
+        return _.length > 1 && _.endsWith("/") ? _.slice(0, -1) : _;
+      }
+      function _(_) {
+        if (!_) return !1;
+        const _ = _._.SteamCharts(),
+          _ = _(_);
+        if (_(_) == _(_)) return !0;
+        if (!__webpack_require__.startsWith(_)) return !1;
+        const _ = __webpack_require__.slice(_.length).split("/")[0];
+        return !_.includes(_);
+      }
       function _() {
         const _ = (0, _._)();
         return _.useCallback(
           (_, _) => {
-            _?.bReplace ? _.replace(_, _?.state) : _.push(_, _?.state);
+            _(_)
+              ? _?.bReplace
+                ? window.location.replace(_)
+                : window.location.assign(_)
+              : _?.bReplace
+                ? _.replace(_, _?.state)
+                : _.push(_, _?.state);
           },
           [_],
         );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          _: _,
-          exact: _,
-          activeClassName: _,
-          className: _,
-          children: _,
-          ..._
-        } = _;
-        return (0, _.jsx)(_._, {
-          _: _,
-          exact: _,
-          activeClassName: _,
-          className: _,
-          ..._,
-          children: _,
-        });
+      function _(_, _) {
+        const _ = _(window.location.pathname),
+          _ = _(_);
+        return _ ? _ == _ : _ == _ || __webpack_require__.startsWith(_ + "/");
       }
       function _(_) {
-        const { _: _, children: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          _: _,
-          ..._,
-          children: _,
-        });
+        const {
+            _: _,
+            exact: _,
+            activeClassName: _,
+            className: _,
+            children: _,
+            ..._
+          } = _,
+          _ = "string" == typeof _ ? _ : void 0;
+        return _(_)
+          ? (0, _.jsx)(_._, {
+              href: _,
+              className: (0, _._)(_, _(_, Boolean(_)) ? _ : void 0),
+              ..._,
+              children: _,
+            })
+          : (0, _.jsx)(_._, {
+              _: _,
+              exact: _,
+              activeClassName: _,
+              className: _,
+              ..._,
+              children: _,
+            });
+      }
+      function _(_) {
+        const { _: _, children: _, ..._ } = _,
+          _ = "string" == typeof _ ? _ : void 0;
+        return _(_)
+          ? (0, _.jsx)(_._, {
+              href: _,
+              ..._,
+              children: _,
+            })
+          : (0, _.jsx)(_._, {
+              _: _,
+              ..._,
+              children: _,
+            });
       }
       function _(_) {
         const { salePageName: _, TopMonthlyReleasesStore: _ } = _,

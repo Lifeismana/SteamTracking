@@ -66905,7 +66905,8 @@
               if (
                 _ &&
                 _.preferences &&
-                void 0 !== _.preferences.primary_language
+                void 0 !== _.preferences.primary_language &&
+                _.preferences.primary_language !== _.xPp
               ) {
                 const { primary_language: _, secondary_languages: _ } =
                   _.preferences;
@@ -95408,8 +95409,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = !("undefined" == typeof window || !window.navigation);
+      let _,
+        _ = new Set();
+      function _() {
+        location.href !== _ &&
+          _.forEach((_) => {
+            try {
+              _();
+            } catch (_) {}
+          }),
+          (_ = location.href),
+          _.size > 0 && requestAnimationFrame(_);
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -96380,7 +96394,7 @@
           },
           _,
         );
-        let _ = "charts/topselling";
+        let _ = "charts/topselling/";
         return (
           _._.EREALM == _._.k_ESteamRealmChina &&
             (_ = "search/?filter=topsellers"),
@@ -100582,7 +100596,30 @@
             _ = _.useCallback(() => _("more"), [_]);
           (0, _.useEffect)(() => {
             _ && _();
-          }, [_, _]);
+          }, [_, _]),
+            (0, _.useEffect)(
+              () =>
+                (function (_) {
+                  const _ = () => {
+                    _();
+                  };
+                  return _
+                    ? (window.navigation.addEventListener(
+                        "currententrychange",
+                        _,
+                      ),
+                      () =>
+                        window.navigation.removeEventListener(
+                          "currententrychange",
+                          _,
+                        ))
+                    : ((_ = location.href),
+                      requestAnimationFrame(_),
+                      _.add(_),
+                      () => _.delete(_));
+                })(_),
+              [_],
+            );
           const _ = _.useRef(null),
             _ = _.useRef(null);
           return (0, _.jsxs)(_._, {
@@ -103191,7 +103228,7 @@
   },
   (_) => {
     _._(0, [78997], () => {
-      return (_ = 92033), _((_._ = _));
+      return (_ = 12873), _((_._ = _));
       var _;
     });
     _._();
