@@ -1,3 +1,28 @@
+var _ = _(_());
+function _() {
+  return (
+    (_ = Object.assign
+      ? Object.assign.bind()
+      : function (_) {
+          for (var _ = 1; _ < arguments.length; _++) {
+            var _ = arguments[_];
+            for (var _ in _) ({}).hasOwnProperty.call(_, _) && (_[_] = _[_]);
+          }
+          return _;
+        }),
+    _.apply(null, arguments)
+  );
+}
+function _(_, _) {
+  if (_ == null) return {};
+  var _ = {};
+  for (var _ in _)
+    if ({}.hasOwnProperty.call(_, _)) {
+      if (_.indexOf(_) !== -1) continue;
+      _[_] = _[_];
+    }
+  return _;
+}
 function _(_, _) {
   return (
     (_ = Object.setPrototypeOf
@@ -13,22 +38,7 @@ function _(_, _) {
     (_.prototype.constructor = _),
     _(_, _);
 }
-var _ = _(_()),
-  _ = _(_());
-function _() {
-  return (
-    (_ = Object.assign
-      ? Object.assign.bind()
-      : function (_) {
-          for (var _ = 1; _ < arguments.length; _++) {
-            var _ = arguments[_];
-            for (var _ in _) ({}).hasOwnProperty.call(_, _) && (_[_] = _[_]);
-          }
-          return _;
-        }),
-    _.apply(null, arguments)
-  );
-}
+var _ = _(_());
 function _(_) {
   return _.charAt(0) === `/`;
 }
@@ -835,19 +845,7 @@ var _ = _((_, _) => {
   _ = _((_, _) => {
     _.exports = _();
   }),
-  _ = _(_());
-_();
-function _(_, _) {
-  if (_ == null) return {};
-  var _ = {};
-  for (var _ in _)
-    if ({}.hasOwnProperty.call(_, _)) {
-      if (_.indexOf(_) !== -1) continue;
-      _[_] = _[_];
-    }
-  return _;
-}
-var _ = _((_) => {
+  _ = _((_) => {
     var _ = typeof Symbol == `function` && Symbol.for,
       _ = _ ? Symbol.for(`react.element`) : 60103,
       _ = _ ? Symbol.for(`react.portal`) : 60106,
@@ -1049,8 +1047,9 @@ var _ = _((_) => {
       return _;
     }
     _.exports = _;
-  });
-_();
+  }),
+  _ = _(_());
+_(), _();
 var _ = 1073741823,
   _ =
     typeof globalThis < `u`

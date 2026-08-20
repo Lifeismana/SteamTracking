@@ -64877,7 +64877,10 @@
       }
       function R(e) {
         const t = new Map();
-        for (const r in e) t.set(Number(r), Number(e[r]));
+        for (const [r, i] of Object.entries(e)) {
+          const e = Number(r);
+          e && t.set(e, Number(i));
+        }
         return t;
       }
       const z = "dynamicuserdata";
@@ -65062,10 +65065,12 @@
           return this.ReadData().setRecommendedApps.has(Number(e));
         }
         BIsGameIgnored(e) {
-          return this.ReadData().mapIgnoredApps.has(Number(e));
+          return Boolean(e) && this.ReadData().mapIgnoredApps.has(Number(e));
         }
         BIsPackageIgnored(e) {
-          return this.ReadData().mapIgnoredPackages.has(Number(e));
+          return (
+            Boolean(e) && this.ReadData().mapIgnoredPackages.has(Number(e))
+          );
         }
         BIsGameOwned(e) {
           return !!e && this.ReadData().setOwnedApps.has(Number(e));

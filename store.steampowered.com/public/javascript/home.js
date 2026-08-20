@@ -62,6 +62,7 @@ GHomepage = {
 	k_iFirstPersonalizedSpotlightPage: 2,
 	bSpotlightSectionRendered: false,
 	rgSpotlightRecommendations: null,
+	oSpotlightRecsDebug: null,
 
 	MainCapCluster: null,
 
@@ -2438,6 +2439,7 @@ GHomepage = {
 				GStoreItemData.AddStoreItemDataSet( data.item_data );
 
 				GHomepage.rgSpotlightRecommendations = data.spotlight_recommendations;
+				GHomepage.oSpotlightRecsDebug = data._debug_spotlight_recs;
 				GHomepage.ApplySpotlightRecommendations();
 
 			});
@@ -2488,7 +2490,12 @@ GHomepage = {
 		// three columns per page, two capsules per column
 		var cSlots = ( $Pages.length - iStartPage ) * 3 * 2;
 
+		var cSent = rgItems.length;
 		var rgSpecials = GDynamicStorePage.FilterAndPrioritizeItems( rgItems, 'spotlights', 'home', Settings, oShownItems, cSlots );
+
+		// Everything past this point in rgSpecials came from the fallback, which lets us tell apart the capsules
+		// we came here to show from the ones we are trying to replace.
+		var cAfterFilter = rgSpecials.length;
 
 		// Top up from the fallback list when we come up short.  It gets filtered separately, and afterwards,
 		// rather than as one combined list: the 'spotlights' priority list covers the items we're replacing but
@@ -2498,6 +2505,11 @@ GHomepage = {
 		{
 			rgSpecials = rgSpecials.concat( GDynamicStorePage.FilterAndPrioritizeItems( rgFallbackItems, 'spotlights', 'home', Settings, oShownItems, cSlots - rgSpecials.length ) );
 		}
+
+		var cShifted = 0;
+		var cPlaced = 0;
+		var cPlacedRecs = 0;
+		var cNoCapParams = 0;
 
 		for ( var iPage = iStartPage; iPage < $Pages.length; iPage++ )
 		{
@@ -2542,8 +2554,13 @@ GHomepage = {
 			while ( rgSpecials.length && cColumnsUsed < 3 )
 			{
 				var oItem = rgSpecials.shift();
+				var bFromRecs = ( cShifted++ < cAfterFilter );
+
 				if ( !GStoreItemData.GetCapParamsForItem( 'spotlight_specials', oItem, {} ) )
+				{
+					cNoCapParams++;
 					continue;
+				}
 
 				if ( !$Col )
 				{
@@ -2557,6 +2574,12 @@ GHomepage = {
 					'disable_autosizer': true,
 				}, iPage + 1 ) );
 
+				cPlaced++;
+				if ( bFromRecs )
+				{
+					cPlacedRecs++;
+				}
+
 				if ( ++cItemsInCol >= 2 )
 				{
 					$Col = null;
@@ -2564,6 +2587,23 @@ GHomepage = {
 					cColumnsUsed++;
 				}
 			}
+		}
+
+		// The rest of the funnel, to go with the numbers the endpoint reports about the draw itself.  'placed' is
+		// well under 'slot_budget' whenever the pages we rebuild kept spotlights or daily deals of their own,
+		// since those take their slots first.  Anything we come up short by is made up from the fallback, so
+		// placed_from_fallback counts capsules showing the items we are trying to replace.
+		if ( GHomepage.oSpotlightRecsDebug )
+		{
+			console.log( 'spotlight recs', $J.extend( {}, GHomepage.oSpotlightRecsDebug, {
+				sent: cSent,
+				slot_budget: cSlots,
+				after_filter: cAfterFilter,
+				placed: cPlaced,
+				placed_from_recs: cPlacedRecs,
+				placed_from_fallback: cPlaced - cPlacedRecs,
+				skipped_no_cap_params: cNoCapParams
+			} ) );
 		}
 
 		GDynamicStore.DecorateDynamicItems( $Spotlights );

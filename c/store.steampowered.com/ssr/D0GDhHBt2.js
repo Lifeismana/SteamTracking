@@ -1,38 +1,6 @@
-var _ = _(_(), 1),
-  _ = _(_());
-function _(_, _, _) {
-  let _ = `${_}_HistoryValue`,
-    _ = _(),
-    _ = _(),
-    _ = (_.state && _.state[_]) ?? _,
-    _ = _.useRef(!1),
-    _ = _.useRef(void 0),
-    _ = _.useRef(void 0),
-    _ = _.useCallback(
-      (_) => {
-        if (_.current && ((_.current = _), !_.current)) {
-          let _ = _.location.pathname;
-          _.current = window.setTimeout(() => {
-            _.location.pathname == _ &&
-              (!_.location.state || _.location.state[_] != _.current) &&
-              _.replace(_.location.pathname, {
-                ...(_.location.state || {}),
-                [_]: _.current,
-              }),
-              (_.current = void 0);
-          }, _);
-        }
-      },
-      [_, _, _],
-    );
-  return (
-    _.useEffect(() => {
-      _.current = !0;
-    }, []),
-    [_, _]
-  );
-}
-var _ = class {
+var _ = _(_()),
+  _ = _(_(), 1),
+  _ = class {
     m_options;
     m_msStart;
     m_msEnd;
@@ -136,8 +104,40 @@ var _ = class {
         this.m_object[_] = _;
       }
     }
-  },
-  _ = new _(`ScrollSnap`).Debug;
+  };
+function _(_, _, _) {
+  let _ = `${_}_HistoryValue`,
+    _ = _(),
+    _ = _(),
+    _ = (_.state && _.state[_]) ?? _,
+    _ = _.useRef(!1),
+    _ = _.useRef(void 0),
+    _ = _.useRef(void 0),
+    _ = _.useCallback(
+      (_) => {
+        if (_.current && ((_.current = _), !_.current)) {
+          let _ = _.location.pathname;
+          _.current = window.setTimeout(() => {
+            _.location.pathname == _ &&
+              (!_.location.state || _.location.state[_] != _.current) &&
+              _.replace(_.location.pathname, {
+                ...(_.location.state || {}),
+                [_]: _.current,
+              }),
+              (_.current = void 0);
+          }, _);
+        }
+      },
+      [_, _, _],
+    );
+  return (
+    _.useEffect(() => {
+      _.current = !0;
+    }, []),
+    [_, _]
+  );
+}
+var _ = new _(`ScrollSnap`).Debug;
 function _(_, _) {
   let _ = _.useRef(void 0);
   return _.useCallback(
