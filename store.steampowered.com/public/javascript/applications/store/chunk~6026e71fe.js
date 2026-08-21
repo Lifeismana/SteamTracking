@@ -6199,7 +6199,10 @@
         const i = (function (e) {
           const t = Object.entries(e)
               .filter((e) => "topics" != e[0])
-              .map((e) => [e[0], String(e[1])]),
+              .map((e) => [
+                e[0],
+                "boolean" == typeof e[1] ? (e[1] ? "1" : "0") : String(e[1]),
+              ]),
             n = new URLSearchParams(t);
           return (
             e.topics && e.topics.forEach((e) => n.append("topics[]", e)), n
@@ -6218,8 +6221,10 @@
           ...(o.friendreviews?.map((e) => e.recommendationid) || []),
         ];
         try {
-          const t = await Xe(l);
-          for (const n of t) e.setQueryData($e(n.recommendationid), n);
+          if (l.length > 0) {
+            const t = await Xe(l);
+            for (const n of t) e.setQueryData($e(n.recommendationid), n);
+          }
         } catch (e) {
           console.warn("Error from GetUserVotes", e);
         }

@@ -6847,7 +6847,10 @@
         const _ = (function (_) {
           const _ = Object.entries(_)
               .filter((_) => "topics" != _[0])
-              .map((_) => [_[0], String(_[1])]),
+              .map((_) => [
+                _[0],
+                "boolean" == typeof _[1] ? (_[1] ? "1" : "0") : String(_[1]),
+              ]),
             _ = new URLSearchParams(_);
           return (
             _.topics &&
@@ -6872,8 +6875,10 @@
           ...(_.friendreviews?.map((_) => _.recommendationid) || []),
         ];
         try {
-          const _ = await _(_);
-          for (const _ of _) _.setQueryData(_(_.recommendationid), _);
+          if (_.length > 0) {
+            const _ = await _(_);
+            for (const _ of _) _.setQueryData(_(_.recommendationid), _);
+          }
         } catch (_) {
           console.warn("Error from GetUserVotes", _);
         }
