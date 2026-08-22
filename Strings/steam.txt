@@ -1949,6 +1949,9 @@ $ffn
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
+00:05:05
+00:05:14
+00:05:17
 01/01/00
 0123456789
 0123456789.
@@ -2281,10 +2284,6 @@ $ffn
 12CMessageList
 12CProtoBufMsgIvE
 12CStdMemAlloc
-13:30:17
-13:30:31
-13:30:34
-13:30:37
 13CHTTPResponse
 13CMsgAppRights
 13CMsgIPAddress
@@ -2673,6 +2672,8 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
+6144
+65536
 524288
 52F*
 55Ly
@@ -2694,11 +2695,9 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
-65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -3348,7 +3347,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 15 2026
+Aug 22 2026
 August
 Aura
 AuthANY
@@ -9217,7 +9216,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 15 2026 13:30:30
+Startup - updater built Aug 22 2026 00:05:14
 State
 StaticFileWriterThread()
 Steam

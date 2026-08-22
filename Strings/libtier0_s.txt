@@ -99,9 +99,9 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
+00:05:09
 0123456789ABCDEF
 12CStdMemAlloc
-13:30:20
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
@@ -123,7 +123,7 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-Aug 15 2026
+Aug 22 2026
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock
 BGetLocalFQDN

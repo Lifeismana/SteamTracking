@@ -229,11 +229,11 @@ $ORIGIN
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
+00:05:05
+00:05:07
 0123456789ABCDEF
 0123456789abcdef
 12CStdMemAlloc
-13:30:17
-13:30:20
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
@@ -251,7 +251,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug 15 2026
+Aug 22 2026
 Average %.2f fps, %.2f ms per frame\n
 Bad thread local: Get\n
 Bad thread local: Set\n
