@@ -1949,9 +1949,6 @@ $ffn
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:05:05
-00:05:14
-00:05:17
 01/01/00
 0123456789
 0123456789.
@@ -1959,6 +1956,9 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+07:51:38
+07:51:50
+07:51:52
 08bX
 0?0L
 0A/8
@@ -3347,7 +3347,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 22 2026
+Aug 24 2026
 August
 Aura
 AuthANY
@@ -9216,7 +9216,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 22 2026 00:05:14
+Startup - updater built Aug 24 2026 07:51:50
 State
 StaticFileWriterThread()
 Steam

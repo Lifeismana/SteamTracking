@@ -7492,13 +7492,13 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/shadercachemanager/../depotreconstruct.h
 /data/src/clientdll/shadercachemanager/../raterecorder.h
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2021
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2119
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2189
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2243
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3845
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3973
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4256
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2019
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2117
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2187
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2241
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3843
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3971
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4254
 /data/src/clientdll/shadercachemanager/shadercontentupdatejob.cpp
 /data/src/clientdll/sitelicenseclient.cpp
 /data/src/clientdll/steamclient.cpp
@@ -8105,10 +8105,13 @@ $steammessages_parental_objects.proto"
 0 bytes,
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0)AA7A
+0000000000000000000000000000000000000000
+0000000000000000
 0.0333
 0.050
 0.125
 0.13.15.106
+00000000
 0.15
 0.3.19
 0.65
@@ -8154,9 +8157,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-00000000
-0000000000000000
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -23679,7 +23679,7 @@ Destroying relay '%s' because %s\n
 Details
 DetectNow failed
 DetectUsbEntities
-Detected %d-bit RADV Vulkan driver %s / %s
+Detected %d-bit Mesa Vulkan driver %s / %s
 Detected Gyro Deflection: %f seconds to turn %f degrees\n
 Detected OpenCache transparent proxy: %s
 Detected leaked fd
@@ -25116,6 +25116,7 @@ FLAG_MAYBE_MORE_ALT_ADDRESSES
 FLAG_MAYBE_MORE_DATA_CENTERS
 FLOAT
 FLOW_CONTROL_ERROR
+FNE%B
 FNM5T?Y
 FOC+
 FONTCONFIG_PATH
@@ -38578,6 +38579,7 @@ TurnOffController
 Turning off HORI device before suspending\n
 Turning off all controllers\n
 Turning on early CRC checks for all received data.
+Turnip
 Two-factor activation code mismatch
 Two-factor code mismatch
 TwoFactor.QueryStatus#1
@@ -61508,7 +61510,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 22 2026 00:05:27
+steam Aug 24 2026 07:52:00
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

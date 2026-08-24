@@ -353,11 +353,11 @@ $ORIGIN
 /tmp/dumps
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
-00:05:05
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
 0123456789abcdef
+07:51:38
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -408,7 +408,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug 22 2026
+Aug 24 2026
 August
 Average %.2f fps, %.2f ms per frame\n
 BCreateDirectory

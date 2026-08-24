@@ -60,8 +60,32 @@ GHomepage = {
 	// Special offers carousel pages before this one keep what we rendered at page load; personalized
 	// recommendations only rebuild the trailing pages, which the user has to page over to reach.
 	k_iFirstPersonalizedSpotlightPage: 2,
+
+	// How many of the carousel's large panels fit on one of its pages, and how many of its leading pages we top
+	// up with generated ones.  The server sizes the list it sends us off the product of the two, so they have
+	// to agree with k_nSpotlightPanelItems.
+	k_nMaxSpotlightColumns: 2,
+	k_nSpotlightPanelPages: 3,
+
+	// The carousel gives every page three columns, and a column of capsules holds two of them.
+	k_nSpotlightColumnsPerPage: 3,
+	k_nSpotlightCapsulesPerColumn: 2,
+
+	// Banner across a generated panel, where a curated one carries whatever was typed into it.  #spotlight_weekend_deal
+	// is the sibling token to move to if these run over a weekend instead.
+	k_strSpotlightPanelBanner: 'MIDWEEK DEAL',
+
 	bSpotlightSectionRendered: false,
 	rgSpotlightRecommendations: null,
+	rgSpotlightPanels: null,
+	cSpotlightPanelsPlaced: 0,
+	rgSpotlightPanelsKept: [],
+	rgSpotlightPanelDailyDeals: [],
+	cSpotlightPanelsDuplicate: 0,
+
+	// Daily deals the leading pages had no room for once the panels went in.  FillSpotlightSpecials() places
+	// these on the pages it rebuilds, ahead of any spotlight specials.
+	rgSpotlightCarryDeals: [],
 	oSpotlightRecsDebug: null,
 
 	MainCapCluster: null,
@@ -2278,8 +2302,8 @@ GHomepage = {
 		// rebuild pages one at a time
 		$Pages.empty();
 
-		let nMaxSpotlightColumns = 2;
-		
+		let nMaxSpotlightColumns = GHomepage.k_nMaxSpotlightColumns;
+
 		for ( var iPage = 0; iPage < $Pages.length; iPage++ )
 		{
 			var cColumnsUsed = 0;
@@ -2430,7 +2454,7 @@ GHomepage = {
 			$J.ajax( {
 				url: "https:\/\/store.steampowered.com\/default\/home_spotlight_recommendations\/",
 				data: {
-					v: 1,						u: g_AccountID,
+					v: 2,						u: g_AccountID,
 				},
 				dataType: 'json',
 				type: 'GET'
@@ -2439,6 +2463,7 @@ GHomepage = {
 				GStoreItemData.AddStoreItemDataSet( data.item_data );
 
 				GHomepage.rgSpotlightRecommendations = data.spotlight_recommendations;
+				GHomepage.rgSpotlightPanels = data.spotlight_panels;
 				GHomepage.oSpotlightRecsDebug = data._debug_spotlight_recs;
 				GHomepage.ApplySpotlightRecommendations();
 
@@ -2452,12 +2477,224 @@ GHomepage = {
 		if ( !GHomepage.bSpotlightSectionRendered )
 			return;
 
-		var rgRecs = GHomepage.rgSpotlightRecommendations;
-		if ( !rgRecs || !rgRecs.length )
+		// The panels come first: FillSpotlightSpecials() dedupes against the pages it is leaving alone, which is
+		// where the panels are, so it has to see them in place before it picks its capsules.
+		var rgPanels = GHomepage.rgSpotlightPanels;
+		if ( rgPanels && rgPanels.length )
+			GHomepage.ApplySpotlightPanels( rgPanels );
+
+		// Still worth going through even with no recommendations to place, if the panels left us daily deals to
+		// carry on to the trailing pages: they have already come off the leading ones by now.
+		var rgRecs = GHomepage.rgSpotlightRecommendations || [];
+		if ( !rgRecs.length && !GHomepage.rgSpotlightCarryDeals.length )
 			return;
 
 		// the specials we're replacing are the fallback for when we don't have enough recommendations
 		GHomepage.FillSpotlightSpecials( GHomepage.k_iFirstPersonalizedSpotlightPage, rgRecs, GHomepage.oDisplayListsRaw.specials );
+	},
+
+	// Purpose: top the carousel's large panel slots up with recommendations, alongside whatever spotlights are
+	// already scheduled there rather than in place of them.
+	// Each page has to be laid out again rather than added to: a page whose panel columns aren't all taken has
+	// given them over to capsules, so those have to be repacked to make room.
+	ApplySpotlightPanels: function( rgPanels )
+	{
+		var $Pages = $J( '#spotlight_carousel > .carousel_items .home_special_offers_group' );
+		if ( !$Pages.length )
+			return;
+
+		var cPages = Math.min( $Pages.length, GHomepage.k_nSpotlightPanelPages );
+
+		// Everything the carousel is going to keep, so a recommendation is never placed as a panel while the same
+		// game is also sitting in a capsule somewhere.  RenderSpotlightSection() chose the capsules on the leading
+		// pages before the recommendations existed, so they were never filtered against them, and it attributes
+		// them as spotlight specials - a game in both places reports under both features.
+		// The capsules past k_iFirstPersonalizedSpotlightPage are left out on purpose: FillSpotlightSpecials()
+		// throws those away and picks again, deduping against our panels as it goes.
+		var $Kept = $J( '.home_area_spotlight, .store_capsule.daily_deal', $Pages )
+			.add( $J( '.store_capsule, .sale_capsule', $Pages.slice( 0, GHomepage.k_iFirstPersonalizedSpotlightPage ) ) );
+
+		var oShownAppIDs = {};
+		$Kept.each( function() {
+			// A package or bundle capsule lists every app it holds, which is what catches a game we would
+			// otherwise duplicate inside one
+			var strAppIDs = $J( this ).data( 'ds-appid' );
+			if ( !strAppIDs )
+				return;
+
+			String( strAppIDs ).split( ',' ).forEach( function( strAppID ) { oShownAppIDs[ strAppID ] = true; } );
+		} );
+
+		var iPanel = 0;
+		GHomepage.cSpotlightPanelsPlaced = 0;
+		GHomepage.cSpotlightPanelsDuplicate = 0;
+		GHomepage.rgSpotlightPanelsKept = [];
+		GHomepage.rgSpotlightPanelDailyDeals = [];
+
+		for ( var iPage = 0; iPage < cPages; iPage++ )
+		{
+			var $Page = $J( $Pages[ iPage ] );
+			var $Existing = $J( '.home_area_spotlight', $Page );
+
+			// Note the spotlights already here, so the debug log can say what was scheduled against what we
+			// added.  A spotlight can be associated with a package or a bundle rather than an app, and one that
+			// is just a link has no association at all, which is why the id is reported as we find it.
+			$Existing.each( function() {
+				var itemid = GDynamicStorePage.ItemIDFromCapsule( $J( this ) );
+
+				var rgData = null;
+				if ( itemid && itemid.appid )
+					rgData = GStoreItemData.rgAppData[ itemid.appid ];
+				else if ( itemid && itemid.packageid )
+					rgData = GStoreItemData.rgPackageData[ itemid.packageid ];
+				else if ( itemid && itemid.bundleid )
+					rgData = GStoreItemData.rgBundleData[ itemid.bundleid ];
+
+				GHomepage.rgSpotlightPanelsKept.push( $J.extend(
+					{ page: iPage + 1, name: rgData ? rgData.name : null }, itemid ) );
+			} );
+
+			var $DailyDeals = $J( '.store_capsule.daily_deal', $Page );
+			GHomepage.rgSpotlightPanelDailyDeals.push( $DailyDeals.length );
+
+			// Build before tearing anything down, so the page is left as it was if none of the recommendations
+			// we had earmarked for it turn out to be buildable
+			var rgBuilt = [];
+			while ( rgBuilt.length < GHomepage.k_nMaxSpotlightColumns - $Existing.length && iPanel < rgPanels.length )
+			{
+				var oRec = rgPanels[ iPanel++ ];
+				if ( oShownAppIDs[ oRec.appid ] )
+				{
+					GHomepage.cSpotlightPanelsDuplicate++;
+					continue;
+				}
+
+				var $Panel = GHomepage.BuildSpotlightPanel( oRec, iPage + 1 );
+				if ( !$Panel )
+					continue;
+
+				rgBuilt.push( $Panel );
+				oShownAppIDs[ oRec.appid ] = true;
+			}
+
+			// FillSpotlightSpecials() lays the pages from k_iFirstPersonalizedSpotlightPage on out again below and
+			// takes the carried over deals off us, so on those pages all we have to do is get the panels in.
+			if ( iPage >= GHomepage.k_iFirstPersonalizedSpotlightPage )
+			{
+				for ( var iAppend = 0; iAppend < rgBuilt.length; iAppend++ )
+					$Page.append( rgBuilt[ iAppend ] );
+
+				GHomepage.cSpotlightPanelsPlaced += rgBuilt.length;
+				continue;
+			}
+
+			if ( !rgBuilt.length && !GHomepage.rgSpotlightCarryDeals.length )
+				continue;
+
+			// Everything comes off the page so it can be laid out again around the panels.  Detaching the deals
+			// first is what leaves the second selector holding only the specials.
+			var rgDeals = GHomepage.rgSpotlightCarryDeals.concat( $DailyDeals.detach().get() );
+			var rgSpecials = $J( '.store_capsule, .sale_capsule', $Page ).detach().get();
+
+			$Existing.detach();
+
+			$Page.empty();
+			$Page.removeClass( 'spotlight_single_column spotlight_double_column' );
+
+			// The scheduled spotlights keep the lead; the recommendations take the columns they left free
+			$Page.append( $Existing );
+
+			for ( var iBuilt = 0; iBuilt < rgBuilt.length; iBuilt++ )
+				$Page.append( rgBuilt[ iBuilt ] );
+
+			var cColumnsUsed = $Existing.length + rgBuilt.length;
+			GHomepage.cSpotlightPanelsPlaced += rgBuilt.length;
+
+			if ( cColumnsUsed === 1 )
+			{
+				$Page.addClass( 'spotlight_single_column' );
+			}
+			else if ( cColumnsUsed === 2 )
+			{
+				$Page.addClass( 'spotlight_double_column' );
+			}
+
+			// Daily deals fill the half height slots the panels left, then the specials take whatever is still
+			// free.  Deals this page has no room for move on to the next one rather than being dropped, so the
+			// thing that actually gives way to a panel is a special.
+			var cSlotsFree = ( GHomepage.k_nSpotlightColumnsPerPage - cColumnsUsed ) * GHomepage.k_nSpotlightCapsulesPerColumn;
+
+			var rgCapsules = rgDeals.slice( 0, cSlotsFree );
+			GHomepage.rgSpotlightCarryDeals = rgDeals.slice( rgCapsules.length );
+
+			if ( rgCapsules.length < cSlotsFree )
+				rgCapsules = rgCapsules.concat( rgSpecials.slice( 0, cSlotsFree - rgCapsules.length ) );
+
+			var $Col = null;
+			var cItemsInCol = 0;
+			for ( var iCapsule = 0; iCapsule < rgCapsules.length; iCapsule++ )
+			{
+				if ( !$Col )
+				{
+					$Col = $J('<div/>', { 'class': 'spotlight_col capsules_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
+					$Page.append( $Col );
+				}
+
+				$Col.append( rgCapsules[ iCapsule ] );
+
+				if ( ++cItemsInCol >= GHomepage.k_nSpotlightCapsulesPerColumn )
+				{
+					GHomepage.AddMicrotrailersToStaticCaps( $Col );
+					$Col = null;
+					cItemsInCol = 0;
+				}
+			}
+		}
+
+		GDynamicStore.DecorateDynamicItems( $J( '#spotlight_carousel' ) );
+	},
+
+	// Purpose: build one of the carousel's large panels for an app, matching what the server renders for a
+	// curated spotlight that has no artwork of its own.
+	BuildSpotlightPanel: function( item, nDepth )
+	{
+		// The feature and depth are what land these in the same 'spotlight' bucket as the curated panels they
+		// stand in for, so the two are measured against each other.
+		var params = { 'class': 'home_area_spotlight responsive_scroll_snap_start' };
+		var rgItemData = GStoreItemData.GetCapParamsForItem( 'spotlight', item, params, nDepth );
+		if ( !rgItemData )
+			return null;
+
+		// A curated spotlight with no assets falls back to the app's hero capsule, so an app without one has
+		// nothing to draw at this size
+		var strImage = rgItemData.hero_capsule_2x || rgItemData.hero_capsule;
+		if ( !strImage )
+			return null;
+
+		var strHref = params.href;
+		delete params.href;
+
+		var $Panel = $J( '<div/>', $J.extend( {}, params, {
+			'role': 'link',
+			'data-panel': '{"clickOnActivate":"firstChild","flow-children":"column"}'		} ) );
+
+		GStoreItemData.BindHoverEventsForItem( $Panel, item );
+
+		var $Link = $J( '<a/>', { 'href': strHref } );
+		$Link.append( $J( '<img/>', { 'src': strImage, 'alt': rgItemData.name, 'border': 0 } ) );
+		$Link.append( $J( '<div/>', { 'class': 'home_capsule_banner' } ).text( GHomepage.k_strSpotlightPanelBanner ) );
+
+		$Panel.append( $J( '<div/>', { 'class': 'spotlight_img' } ).append( $Link ) );
+
+		if ( rgItemData.discount_block )
+		{
+			var $Price = $J( '<div/>', { 'class': 'spotlight_body spotlight_price price' } )
+				.append( $J( rgItemData.discount_block ).addClass( 'discount_block_spotlight discount_block_large' ) );
+
+			$Panel.append( $J( '<div/>', { 'class': 'spotlight_bottom_ctn' } ).append( $Price ) );
+		}
+
+		return $Panel;
 	},
 
 	FillSpotlightSpecials: function( iStartPage, rgItems, rgFallbackItems )
@@ -2479,12 +2716,23 @@ GHomepage = {
 			include_priority: true
 		};
 
+		// Daily deals are placed from one queue for the whole range rather than page by page, so the ones the
+		// leading pages had no room for after the panels went in land here instead of being dropped.
+		var rgDeals = GHomepage.rgSpotlightCarryDeals.concat(
+			$J( '.store_capsule.daily_deal', $Pages.slice( iStartPage ) ).detach().get() );
+
+		GHomepage.rgSpotlightCarryDeals = [];
+
 		// Seed the dedupe set from the pages we're leaving alone so we don't repeat anything already shown.
+		// Panels and daily deals are seeded wherever they are rather than only from those pages: the rebuild
+		// below keeps every one of them, so they are all already-shown items.
 		// This only reads the capsules, it doesn't move them.  Server rendered capsules are .store_capsule,
 		// the ones we build client side are .sale_capsule.
 		var oShownItems = {};
 		GDynamicStorePage.FilterAndPrioritizeCapsules(
-			$J( '.home_area_spotlight, .store_capsule, .sale_capsule', $Pages.slice( 0, iStartPage ) ),
+			$J( '.store_capsule, .sale_capsule', $Pages.slice( 0, iStartPage ) ).get()
+				.concat( $J( '.home_area_spotlight', $Pages ).get() )
+				.concat( rgDeals ),
 			'spotlights', 'home', Settings, oShownItems, 0 );
 
 		// three columns per page, two capsules per column
@@ -2515,9 +2763,9 @@ GHomepage = {
 		{
 			var $Page = $J( $Pages[iPage] );
 
-			// Detach and hold the Spotlight and Daily Deal entries, since we're not changing those and we want to resture them in our rebuild of the panel
+			// Detach and hold the Spotlight entries, since we're not changing those and we want to restore them in
+			// our rebuild of the panel.  The daily deals came off every page already, into rgDeals.
 			var $Spotlight = $J( '.home_area_spotlight', $Page ).detach();
-			var $DailyDeals = $J( '.store_capsule.daily_deal', $Page ).detach();
 
 			// Clear the panel
 			$Page.empty();
@@ -2527,11 +2775,10 @@ GHomepage = {
 
 			var cColumnsUsed = $Spotlight.length;
 			var cItemsInCol = 0;
-			var iDeal = 0;
 			var $Col = null;
 
 			// Put the daily deals back, lazy-creating columns and keeping track of waht we've filled
-			while ( iDeal < $DailyDeals.length && cColumnsUsed < 3 )
+			while ( rgDeals.length && cColumnsUsed < 3 )
 			{
 				if ( !$Col )
 				{
@@ -2539,7 +2786,7 @@ GHomepage = {
 					$Page.append( $Col );
 				}
 
-				$Col.append( $DailyDeals[ iDeal++ ] );
+				$Col.append( rgDeals.shift() );
 
 				if ( ++cItemsInCol >= 2 )
 				{
@@ -2602,7 +2849,12 @@ GHomepage = {
 				placed: cPlaced,
 				placed_from_recs: cPlacedRecs,
 				placed_from_fallback: cPlaced - cPlacedRecs,
-				skipped_no_cap_params: cNoCapParams
+				skipped_no_cap_params: cNoCapParams,
+				panels_sent: GHomepage.rgSpotlightPanels ? GHomepage.rgSpotlightPanels.length : 0,
+				panels_placed: GHomepage.cSpotlightPanelsPlaced,
+				panels_skipped_duplicate: GHomepage.cSpotlightPanelsDuplicate,
+				panels_kept: GHomepage.rgSpotlightPanelsKept,
+				daily_deals_by_page: GHomepage.rgSpotlightPanelDailyDeals
 			} ) );
 		}
 

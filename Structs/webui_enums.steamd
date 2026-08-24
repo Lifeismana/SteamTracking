@@ -3705,6 +3705,21 @@ enum UnnamedEnum904a3ce99bfd1fb9
 	ForceBrowserVisible = 16777216;
 }
 
+enum UnnamedEnum909cfb3b97589424
+{
+	Invalid = 0;
+	ControllerPairing = 1;
+	WelcomeToSteamFrame = 2;
+	PlayspaceSetup = 3;
+	LaserMouse = 4;
+	SystemButtonHideDashboard = 5;
+	SystemButtonDashboardHidden = 6;
+	SystemButtonShowDashboard = 7;
+	PairWifiDongle = 8;
+	TourSendOff = 9;
+	SteamGuidedTourFinished = 10;
+}
+
 enum UnnamedEnum91788a9e6e102512
 {
 	Client = 0;
